@@ -2,10 +2,11 @@
 import websocket
 import threading
 import json
+import FindSpam
 
 def checkifspam(data):
   d=json.loads(json.loads(data)["data"])
-  if ("the" in d["bodySummary"]):
+  if (FindSpam.testtitle(d["titleEncodeFancy"]):
     return True
   return False
 
