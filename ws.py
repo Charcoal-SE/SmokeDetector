@@ -21,7 +21,9 @@ wrap.login(username,password)
 
 def checkifspam(data):
   d=json.loads(json.loads(data)["data"])
-  if (0<len(FindSpam.testtitle(d["titleEncodedFancy"]))):
+  test=FindSpam.testtitle(d["titleEncodedFancy"])
+  print test
+  if (0<len(test)):
     return True
   return False
 
@@ -30,7 +32,7 @@ def handlespam(data):
   d=json.loads(json.loads(data)["data"])
   s="Possible spam: [%s](%s)" % (d["titleEncodedFancy"],d["url"])
   print s
-  wrap.sendMessage("11540",s)
+  #wrap.sendMessage("11540",s)
 
 ws = websocket.create_connection("ws://sockets.ny.stackexchange.com/")
 ws.send("155-questions-active")
