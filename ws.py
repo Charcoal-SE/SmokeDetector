@@ -1,25 +1,34 @@
 #requires https://pypi.python.org/pypi/websocket-client/
 import websocket
 import threading
-import json
+import json,os,sys
 from findspam import FindSpam
 from ChatExchange.SEChatWrapper import *
-username =""
-password=""
+
+if("ChatExchangeU" in os.environ):
+  username=os.environ["ChatExchangeU"]
+else:
+  print "Username: "
+  username=raw_input()
+if("ChatExchangeP" in os.environ):
+  password=os.environ["ChatExchangeP"]
+else:
+  password=getpass.getpass("Password: ")
+
 
 wrap=SEChatWrapper("SE")
 wrap.login(username,password)
 
 def checkifspam(data):
   d=json.loads(json.loads(data)["data"])
-  if (True or FindSpam.testtitle(d["titleEncodeFancy"])):
+  if (0<len(FindSpam.testtitle(d["titleEncodedFancy"]))):
     return True
   return False
 
 
 def handlespam(data):
   d=json.loads(json.loads(data)["data"])
-  s="Possible spam: [%s](%s)" % (d["titleEncodeFancy"],d["url"])
+  s="Possible spam: [%s](%s)" % (d["titleEncodedFancy"],d["url"])
   print s
   wrap.sendMessage("11540",s)
 
