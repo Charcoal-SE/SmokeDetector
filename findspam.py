@@ -11,3 +11,4 @@ class FindSpam:
     elif title.upper() == title:
       result.append('All caps title')
       # magic if all caps
+    return result
