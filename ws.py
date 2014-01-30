@@ -2,17 +2,26 @@
 import websocket
 import threading
 import json
-import FindSpam
+from findspam import FindSpam
+from ChatExchange.SEChatWrapper import *
+username =""
+password=""
+
+wrap=SEChatWrapper("SE")
+wrap.login(username,password)
 
 def checkifspam(data):
   d=json.loads(json.loads(data)["data"])
-  if (FindSpam.testtitle(d["titleEncodeFancy"]):
+  if (True or FindSpam.testtitle(d["titleEncodeFancy"])):
     return True
   return False
 
 
 def handlespam(data):
-  print data
+  d=json.loads(json.loads(data)["data"])
+  s="Possible spam: [%s](%s)" % (d["titleEncodeFancy"],d["url"])
+  print s
+  wrap.sendMessage("11540",s)
 
 ws = websocket.create_connection("ws://sockets.ny.stackexchange.com/")
 ws.send("155-questions-active")
