@@ -5,7 +5,7 @@ class FindSpam:
     result = []
     p = re.compile('\d{10}')
     m = p.match(title)
-    if 'vashikaran' in title or 'baba' in title or p:
+    if 'vashikaran' in title or 'baba' in title or m:
       result.append('Matched keyword')
       # magic if matches word
     elif title.upper() == title:
