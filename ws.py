@@ -21,8 +21,11 @@ wrap.login(username,password)
 
 def checkifspam(data):
   d=json.loads(json.loads(data)["data"])
-  test=FindSpam.testtitle(d["titleEncodedFancy"])
-  print test
+  s= d["titleEncodedFancy"]
+  s=s.encode("ascii",errors="xmlcharrefreplace")
+  print s
+  sys.stdout.flush()
+  test=FindSpam.testtitle(s)
   if (0<len(test)):
     return True
   return False
@@ -30,7 +33,7 @@ def checkifspam(data):
 
 def handlespam(data):
   d=json.loads(json.loads(data)["data"])
-  s="Possible spam: [%s](%s)" % (d["titleEncodedFancy"],d["url"])
+  s="Possible spam: [%s](%s)" % (d["titleEncodedFancy"].encode("ascii","xmlcharrefreplace"),d["url"])
   print s
   #wrap.sendMessage("11540",s)
 
@@ -39,7 +42,6 @@ ws.send("155-questions-active")
 while True:
   a=ws.recv()
   if(a!= None and a!= ""):
-    print "a found"
     if(checkifspam(a)):
       threading.Thread(target=handlespam,args=(a,)).start()
 
