@@ -4,6 +4,7 @@ import re
 class FindSpam:
   @staticmethod
   def testtitle(title):
+    #Some regexes from Jan Dvorak's script at https://github.com/honnza/se-spam-helper/blob/master/se-spam-helper.user.js
     regexes=["\\b(baba(ji?)|live|watch|free|cheap|online|download|nike|training|dress|fashion|buy|here is|porn)\\b","\\+\\d{10}","\\+?\\d{2}\\s?\\d{8}","\\b(asshole|crap|damn|fag|fuck|idiot|shit|whore)s?\\b"]
     result = []
     p = [not not re.compile(s).search(title) for s in regexes]
