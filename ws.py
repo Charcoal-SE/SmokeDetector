@@ -18,6 +18,8 @@ else:
 
 wrap=SEChatWrapper("SE")
 wrap.login(username,password)
+wrapm=SEChatWrapper("MSO")
+wrapm.login(username,password)
 
 def checkifspam(data):
   d=json.loads(json.loads(data)["data"])
@@ -33,9 +35,10 @@ def checkifspam(data):
 
 def handlespam(data):
   d=json.loads(json.loads(data)["data"])
-  s="Possible spam: [%s](%s)" % (d["titleEncodedFancy"].encode("ascii","xmlcharrefreplace"),d["url"])
+  s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Possible spam: [%s](%s)" % (d["titleEncodedFancy"].encode("ascii","xmlcharrefreplace"),d["url"])
   print s
   wrap.sendMessage("11540",s)
+  wrapm.sendMessage("89",s)
 
 ws = websocket.create_connection("ws://sockets.ny.stackexchange.com/")
 ws.send("155-questions-active")
