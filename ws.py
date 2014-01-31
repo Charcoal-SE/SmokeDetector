@@ -35,7 +35,7 @@ def handlespam(data):
   d=json.loads(json.loads(data)["data"])
   s="Possible spam: [%s](%s)" % (d["titleEncodedFancy"].encode("ascii","xmlcharrefreplace"),d["url"])
   print s
-  #wrap.sendMessage("11540",s)
+  wrap.sendMessage("11540",s)
 
 ws = websocket.create_connection("ws://sockets.ny.stackexchange.com/")
 ws.send("155-questions-active")

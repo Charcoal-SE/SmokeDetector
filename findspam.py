@@ -3,8 +3,8 @@ class FindSpam:
   @staticmethod
   def testtitle(title):
     result = []
-    p = re.compile('\d{10}')
-    m = p.match(title)
+    p = re.compile("\\d{10}")
+    m = p.search(title)
     if 'vashikaran' in title or 'baba' in title or m:
       result.append('Matched keyword')
       # magic if matches word
