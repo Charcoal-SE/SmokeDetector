@@ -1,11 +1,13 @@
 import re
+
+
 class FindSpam:
   @staticmethod
   def testtitle(title):
+    regexes=["\\b(vs?|baba(ji?)|live|watch|free|cheap|online|download|nike|training|dress|fashion|buy|here is|porn)\\b","\\+\\d{10}","\\+?\\d{2}\\s?\\d{8}","\\b(asshole|crap|damn|fag|fuck|idiot|shit|whore)s?\\b"]
     result = []
-    p = re.compile("\\+\\d{10}")
-    m = p.search(title)
-    if 'vashikaran' in title or 'baba' in title or m:
+    p = [not not re.compile(s).search(title) for s in regexes]
+    if 'vashikaran' in title or 'baba' in title or True in p:
       result.append('Matched keyword')
       # magic if matches word
     elif title.upper() == title:
