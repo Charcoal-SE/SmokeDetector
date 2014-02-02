@@ -1,7 +1,7 @@
 #requires https://pypi.python.org/pypi/websocket-client/
 import websocket
 import threading
-import json,os,sys
+import json,os,sys,getpass
 from findspam import FindSpam
 from ChatExchange.SEChatWrapper import *
 
@@ -15,6 +15,8 @@ if("ChatExchangeP" in os.environ):
 else:
   password=getpass.getpass("Password: ")
 
+lasthost=""
+lastid=""
 
 wrap=SEChatWrapper("SE")
 wrap.login(username,password)
@@ -35,10 +37,14 @@ def checkifspam(data):
 
 def handlespam(data):
   d=json.loads(json.loads(data)["data"])
+  if(lastid==d["id"] and lasthost == d["siteBaseHostAddress"]):
+    return
   s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Possible spam: [%s](%s)" % (d["titleEncodedFancy"].encode("ascii","xmlcharrefreplace"),d["url"])
   print s
   wrap.sendMessage("11540",s)
   wrapm.sendMessage("89",s)
+  lastid=d["id"]
+  lasthost = d["siteBaseHostAddress"]
 
 ws = websocket.create_connection("ws://sockets.ny.stackexchange.com/")
 ws.send("155-questions-active")
