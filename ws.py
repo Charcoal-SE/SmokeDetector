@@ -15,8 +15,8 @@ if("ChatExchangeP" in os.environ):
 else:
   password=getpass.getpass("Password: ")
 
-lasthost=""
-lastid=""
+lasthost=None
+lastid=None
 
 wrap=SEChatWrapper("SE")
 wrap.login(username,password)
@@ -24,6 +24,7 @@ wrapm=SEChatWrapper("MSO")
 wrapm.login(username,password)
 
 def checkifspam(data):
+  global lasthost,lastid
   d=json.loads(json.loads(data)["data"])
   s= d["titleEncodedFancy"]
   s=s.encode("ascii",errors="xmlcharrefreplace")
