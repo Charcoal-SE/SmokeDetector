@@ -31,6 +31,10 @@ def checkifspam(data):
   sys.stdout.flush()
   test=FindSpam.testtitle(s)
   if (0<len(test)):
+    if(lastid==d["id"] and lasthost == d["siteBaseHostAddress"]):
+      return False # Don't repost. Reddit will hate you.
+    lastid=d["id"]
+    lasthost = d["siteBaseHostAddress"]
     return True
   return False
 
@@ -38,15 +42,11 @@ def checkifspam(data):
 def handlespam(data):
   try:
     d=json.loads(json.loads(data)["data"])
-    #if(lastid==d["id"] and lasthost == d["siteBaseHostAddress"]):
-    #  return
     reason=",".join(FindSpam.testtitle(d["titleEncodedFancy"]))
     s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s)" % (reason,d["titleEncodedFancy"].encode("ascii","xmlcharrefreplace"),d["url"])
     print s
     wrap.sendMessage("11540",s)
     wrapm.sendMessage("89",s)
-    #lastid=d["id"]
-    #lasthost = d["siteBaseHostAddress"]
   except UnboundLocalError:
     print "NOP"
 ws = websocket.create_connection("ws://sockets.ny.stackexchange.com/")
