@@ -41,7 +41,7 @@ def handlespam(data):
     #if(lastid==d["id"] and lasthost == d["siteBaseHostAddress"]):
     #  return
     reason=",".join(FindSpam.testtitle(d["titleEncodedFancy"]))
-    s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Possible spam (%s): [%s](%s)" % (reason,d["titleEncodedFancy"].encode("ascii","xmlcharrefreplace"),d["url"])
+    s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s)" % (reason,d["titleEncodedFancy"].encode("ascii","xmlcharrefreplace"),d["url"])
     print s
     wrap.sendMessage("11540",s)
     wrapm.sendMessage("89",s)

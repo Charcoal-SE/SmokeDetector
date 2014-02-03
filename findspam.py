@@ -8,7 +8,7 @@ class FindSpam:
     result = []
     p = [not not re.compile(s).search(title) for s in regexes]
     if 'vashikaran' in title or 'baba' in title or True in p:
-      result.append('Matched keyword')
+      result.append('Possible spam')
       # magic if matches word
     elif title.upper() == title:
       result.append('All caps title')
