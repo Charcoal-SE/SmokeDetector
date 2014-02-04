@@ -2,6 +2,14 @@ import re
 
 
 class FindSpam:
+  rules = [
+     {'regex': "\\b(baba(ji)?|vashikaran|fashion|here is|porn)\\b", 'all': true,
+      'sites': [], 'reason': "bad keyword detected"},
+     {'regex': "\\+\\d{10}|\\+?\\d{2}\\s?\\d{8}", 'all': true, 
+      'sites': ["patents.stackexchange.com"], 'reason': "phone number detected"},
+     {'regex': "\\b(asshole|crap|fag|fuck|idiot|shit|whore)s?\\b", 'all': true,
+      'sites': [], 'reason': "Offensive title detected"}
+  ]
 
   @staticmethod
     def testpost(title, site):
@@ -9,12 +17,12 @@ class FindSpam:
     for rule in rules:
       if rule['all'] != (site in rule['sites']):
         if re.compile(rule['regex']).search(title):
-          result.append(rule['result'])
+          result.append(rule['reason'])
     return result
 
   @staticmethod
   def testtitle(title):
-    regexes=["\\b(baba(ji?)|vashikaran|fashion|here is|porn)\\b","\\+\\d{10}","\\+?\\d{2}\\s?\\d{8}","\\b(asshole|crap|fag|fuck|idiot|shit|whore)s?\\b"]
+    regexes=["\\b(baba(ji)?|vashikaran|fashion|here is|porn)\\b","\\+\\d{10}","\\+?\\d{2}\\s?\\d{8}","\\b(asshole|crap|fag|fuck|idiot|shit|whore)s?\\b"]
     result = []
     p = [not not re.compile(s).search(title) for s in regexes]
     if 'vashikaran' in title or 'baba' in title or True in p:
