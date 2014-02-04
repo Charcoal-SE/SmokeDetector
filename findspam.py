@@ -3,12 +3,12 @@ import re
 
 class FindSpam:
   rules = [
-     {'regex': "\\b(baba(ji)?|vashikaran|fashion|here is|porn)\\b", 'all': true,
-      'sites': [], 'reason': "bad keyword detected"},
-     {'regex': "\\+\\d{10}|\\+?\\d{2}\\s?\\d{8}", 'all': true, 
-      'sites': ["patents.stackexchange.com"], 'reason': "phone number detected"},
-     {'regex': "\\b(asshole|crap|fag|fuck|idiot|shit|whore)s?\\b", 'all': true,
-      'sites': [], 'reason': "Offensive title detected"}
+   {'regex': "\\b(baba(ji)?|vashikaran|fashion|here is|porn)\\b", 'all': True,
+    'sites': [], 'reason': "bad keyword detected"},
+   {'regex': "\\+\\d{10}|\\+?\\d{2}\\s?\\d{8}", 'all': True, 
+    'sites': ["patents.stackexchange.com"], 'reason': "phone number detected"},
+   {'regex': "\\b(asshole|crap|fag|fuck|idiot|shit|whore)s?\\b", 'all': True,
+    'sites': [], 'reason': "Offensive title detected"}
   ]
 
   @staticmethod
