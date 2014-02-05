@@ -1,7 +1,7 @@
 #requires https://pypi.python.org/pypi/websocket-client/
 import websocket
 import threading
-import json,os,sys,getpass
+import json,os,sys,getpass,time
 from findspam import FindSpam
 from ChatExchange.SEChatWrapper import *
 
@@ -30,7 +30,7 @@ def checkifspam(data):
   d=json.loads(json.loads(data)["data"])
   s= d["titleEncodedFancy"]
   s=s.encode("ascii",errors="xmlcharrefreplace")
-  print s
+  print time.strftime("%Y-%m-%d %H:%M:%S"),s
   site = d["siteBaseHostAddress"]
   site=site.encode("ascii",errors="xmlcharrefreplace")
   sys.stdout.flush()
