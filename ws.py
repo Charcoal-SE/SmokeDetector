@@ -22,6 +22,8 @@ wrap=SEChatWrapper("SE")
 wrap.login(username,password)
 wrapm=SEChatWrapper("MSO")
 wrapm.login(username,password)
+s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started"
+wrap.sendMessage("11540",s)
 
 def checkifspam(data):
   global lasthost,lastid
@@ -29,8 +31,10 @@ def checkifspam(data):
   s= d["titleEncodedFancy"]
   s=s.encode("ascii",errors="xmlcharrefreplace")
   print s
+  site = d["siteBaseHostAddress"]
+  site=site.encode("ascii",errors="xmlcharrefreplace")
   sys.stdout.flush()
-  test=FindSpam.testtitle(s)
+  test=FindSpam.testpost(s,site)
   if (0<len(test)):
     if(lastid==d["id"] and lasthost == d["siteBaseHostAddress"]):
       return False # Don't repost. Reddit will hate you.
@@ -58,3 +62,5 @@ while True:
     if(checkifspam(a)):
       threading.Thread(target=handlespam,args=(a,)).start()
 
+s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector aborted"
+wrap.sendMessage("11540",s)

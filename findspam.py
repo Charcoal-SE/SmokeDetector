@@ -13,9 +13,9 @@ class FindSpam:
   ]
 
   @staticmethod
-    def testpost(title, site):
+  def testpost(title, site):
     result = [];
-    for rule in rules:
+    for rule in FindSpam.rules:
       if rule['all'] != (site in rule['sites']):
         if re.compile(rule['regex']).search(title):
           result.append(rule['reason'])
