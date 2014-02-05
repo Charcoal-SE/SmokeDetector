@@ -47,7 +47,7 @@ def checkifspam(data):
 def handlespam(data):
   try:
     d=json.loads(json.loads(data)["data"])
-    reason=",".join(FindSpam.testtitle(d["titleEncodedFancy"]))
+    reason=",".join(FindSpam.testpost(d["titleEncodedFancy"],d["siteBaseHostAddress"]))
     s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s)" % (reason,d["titleEncodedFancy"].encode("ascii","xmlcharrefreplace"),d["url"])
     print s
     wrap.sendMessage("11540",s)
