@@ -5,11 +5,11 @@ class FindSpam:
   rules = [
    {'regex': "\\b(baba(ji)?|vashikaran|fashion|here is|porn)\\b", 'all': True,
     'sites': [], 'reason': "Bad keyword detected"},
-   {'regex': "\\+\\d{10}|\\+?\\d{2}\\s?\\d{8}", 'all': True, 
+   {'regex': "\\+\\d{10}|\\+?\\d{2}[\\s\\-]?\\d{8,11}", 'all': True, 
     'sites': ["patents.stackexchange.com"], 'reason': "Phone number detected"},
    {'regex': "\\b(asshole|crap|fag|fuck|idiot|shit|whore)s?\\b", 'all': True,
     'sites': [], 'reason': "Offensive title detected"},
-   {'regex': "^[A-Z0-9\.\?\\s]*$", 'all': True, 'sites': [], 'reason': "All-caps title"}
+   {'regex': "^[A-Z0-9\\.\\?\\s]*$", 'all': True, 'sites': [], 'reason': "All-caps title"}
   ]
 
   @staticmethod
