@@ -57,7 +57,7 @@ def handlespam(data):
     print "NOP"                              
     
 def handlesocket:
-  nonlocal lasttime
+  global lasttime
   ws = websocket.create_connection("ws://sockets.ny.stackexchange.com/")
   ws.send("155-questions-active")
   while True:
