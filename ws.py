@@ -17,6 +17,7 @@ else:
 
 lasthost=None
 lastid=None
+lasttime=time.time()
 
 wrap=SEChatWrapper("SE")
 wrap.login(username,password)
@@ -53,14 +54,29 @@ def handlespam(data):
     wrap.sendMessage("11540",s)
     wrapm.sendMessage("89",s)
   except UnboundLocalError:
-    print "NOP"
-ws = websocket.create_connection("ws://sockets.ny.stackexchange.com/")
-ws.send("155-questions-active")
+    print "NOP"                              
+    
+def handlesocket:
+  nonlocal lasttime
+  ws = websocket.create_connection("ws://sockets.ny.stackexchange.com/")
+  ws.send("155-questions-active")
+  while True:
+    a=ws.recv()
+    lasttime = time.time()
+    if(a!= None and a!= ""):
+      if(checkifspam(a)):
+        threading.Thread(target=handlespam,args=(a,)).start()
+
+
 while True:
-  a=ws.recv()
-  if(a!= None and a!= ""):
-    if(checkifspam(a)):
-      threading.Thread(target=handlespam,args=(a,)).start()
+  threading.Thread(target=handlesocket).start()
+  while True:
+    timeout = (lasttime + 60) - time.time();
+    if timeout <= 0: break
+    time.sleep(timeout)
+  
+  
+    
 
 s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector aborted"
 wrap.sendMessage("11540",s)
