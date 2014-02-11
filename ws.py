@@ -29,10 +29,10 @@ def checkifspam(data):
   global lasthost,lastid
   d=json.loads(json.loads(data)["data"])
   s= d["titleEncodedFancy"]
-  s=s.encode("ascii",errors="xmlcharrefreplace")
+  s=s.encode("ascii",errors="replace")
   print time.strftime("%Y-%m-%d %H:%M:%S"),s
   site = d["siteBaseHostAddress"]
-  site=site.encode("ascii",errors="xmlcharrefreplace")
+  site=site.encode("ascii",errors="replace")
   sys.stdout.flush()
   test=FindSpam.testpost(s,site)
   if (0<len(test)):
@@ -48,7 +48,7 @@ def handlespam(data):
   try:
     d=json.loads(json.loads(data)["data"])
     reason=",".join(FindSpam.testpost(d["titleEncodedFancy"],d["siteBaseHostAddress"]))
-    s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s)" % (reason,d["titleEncodedFancy"].encode("ascii","xmlcharrefreplace"),d["url"])
+    s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s)" % (reason,d["titleEncodedFancy"].encode("ascii","replace"),d["url"])
     print s
     wrap.sendMessage("11540",s)
     wrapm.sendMessage("89",s)
