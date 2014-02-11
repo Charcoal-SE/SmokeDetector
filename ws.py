@@ -4,6 +4,9 @@ import threading
 import json,os,sys,getpass,time
 from findspam import FindSpam
 from ChatExchange.SEChatWrapper import *
+import HTMLParser
+
+parser=HTMLParser.HTMLParser()
 
 if("ChatExchangeU" in os.environ):
   username=os.environ["ChatExchangeU"]
@@ -29,7 +32,7 @@ def checkifspam(data):
   global lasthost,lastid
   d=json.loads(json.loads(data)["data"])
   s= d["titleEncodedFancy"]
-  s=s.encode("ascii",errors="replace")
+  s=parser.unescape(s).encode("ascii",errors="replace")
   print time.strftime("%Y-%m-%d %H:%M:%S"),s
   site = d["siteBaseHostAddress"]
   site=site.encode("ascii",errors="replace")
@@ -48,7 +51,7 @@ def handlespam(data):
   try:
     d=json.loads(json.loads(data)["data"])
     reason=",".join(FindSpam.testpost(d["titleEncodedFancy"],d["siteBaseHostAddress"]))
-    s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s)" % (reason,d["titleEncodedFancy"].encode("ascii","replace"),d["url"])
+    s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s)" % (reason,parser.unescape(d["titleEncodedFancy"]).encode("ascii","replace"),d["url"])
     print s
     wrap.sendMessage("11540",s)
     wrapm.sendMessage("89",s)
