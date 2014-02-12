@@ -29,7 +29,4 @@ class FindSpam:
     if 'vashikaran' in title or 'baba' in title or True in p:
       result.append('Possible spam')
       # magic if matches word
-    elif title.upper() == title:
-      result.append('All caps title')
-      # magic if all caps
     return result
