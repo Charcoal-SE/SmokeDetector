@@ -32,8 +32,7 @@ def checkifspam(data):
   global lasthost,lastid
   d=json.loads(json.loads(data)["data"])
   s= d["titleEncodedFancy"]
-  s=parser.unescape(s).encode("ascii",errors="replace")
-  print time.strftime("%Y-%m-%d %H:%M:%S"),s
+  print time.strftime("%Y-%m-%d %H:%M:%S"),parser.unescape(s).encode("ascii",errors="replace")
   site = d["siteBaseHostAddress"]
   site=site.encode("ascii",errors="replace")
   sys.stdout.flush()
@@ -51,8 +50,8 @@ def handlespam(data):
   try:
     d=json.loads(json.loads(data)["data"])
     reason=",".join(FindSpam.testpost(d["titleEncodedFancy"],d["siteBaseHostAddress"]))
-    s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s)" % (reason,parser.unescape(d["titleEncodedFancy"]).encode("ascii","replace"),d["url"])
-    print s
+    s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s)" % (reason,d["titleEncodedFancy"],d["url"])
+    print parser.unescape(s).encode('ascii',errors='replace')
     wrap.sendMessage("11540",s)
     wrapm.sendMessage("89",s)
   except UnboundLocalError:
