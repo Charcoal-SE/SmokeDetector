@@ -13,12 +13,12 @@ else:
   password=getpass.getpass("Password: ")
 
 
-#wrap=SEChatWrapper("SE")
-wrap=SEChatWrapper("MSO")
+#wrap=SEChatWrapper("MSO")
+wrap=SEChatWrapper("SE")
 wrap.login(username,password)
 s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s" % sys.argv[1] 
 print s
-#wrap.sendMessage("11540",s)
-wrap.sendMessage("89",s)
+wrap.sendMessage("11540",s)
+#wrap.sendMessage("89",s)
 import time
-time.sleep(2000)
+time.sleep(5)
