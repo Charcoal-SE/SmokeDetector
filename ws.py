@@ -58,6 +58,14 @@ def handlespam(data):
     print "NOP"
 ws = websocket.create_connection("ws://sockets.ny.stackexchange.com/")
 ws.send("155-questions-active")
+wrap.joinRoom("11540")
+def watcher(msg,wrap2):
+  if(msg["content"].startswith("!!/stappit")):
+    if(str(msg["user_id"]) in ["31768","103081","73046"]):
+      wrap2.sendMessage("11540","Goodbye, cruel world")
+      os._exit(1)
+
+wrap.watchRoom("11540",watcher,300)
 while True:
   a=ws.recv()
   if(a!= None and a!= ""):
