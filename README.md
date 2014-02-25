@@ -14,6 +14,7 @@ git submodule init
 git submodule update
 sudo pip install beautifulsoup
 sudo pip install requests --upgrade
+sudo pip install websocket-client
 ```
 
 To run: `python ws.py`, preferably in a daemon-able mode. Like in a `screen` session.
