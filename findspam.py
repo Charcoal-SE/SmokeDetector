@@ -1,4 +1,5 @@
 import re
+import phonenumbers
 
 
 class FindSpam:
@@ -6,7 +7,7 @@ class FindSpam:
    {'regex': "(?i)\\b(baba(ji)?|nike|vashikaran|here is|porn)\\b", 'all': True,
     'sites': [], 'reason': "Bad keyword detected"},
    {'regex': "\\+\\d{10}|\\+?\\d{2}[\\s\\-]?\\d{8,11}", 'all': True, 
-    'sites': ["patents.stackexchange.com"], 'reason': "Phone number detected"},
+    'sites': ["patents.stackexchange.com"], 'reason': "Phone number detected", 'validation_method': 'phonenumbers'},
    {'regex': "(?i)\\b([Nn]igga|[Nn]igger|niga|[Aa]sshole|crap|fag|[Ff]uck|idiot|[Ss]hit|[Ww]hore)s?\\b", 'all': True,
     'sites': [], 'reason': "Offensive title detected",'insensitive':True},
    {'regex': "^[A-Z0-9\\(\\)\\.\\-\\?\\s'\"]*$", 'all': True, 'sites': [], 'reason': "All-caps title"}
@@ -18,7 +19,11 @@ class FindSpam:
     for rule in FindSpam.rules:
       if rule['all'] != (site in rule['sites']):
         if re.compile(rule['regex']).search(title):
-          result.append(rule['reason'])
+          try:
+            if getattr(TestClass, "%s" % rule['validation_method'])(title):
+              result.append(rule['reason'])
+          except KeyError:        # There is no special logic for this rule
+            result.append(rule['reason'])
     return result
 
   @staticmethod
@@ -30,3 +35,13 @@ class FindSpam:
       result.append('Possible spam')
       # magic if matches word
     return result
+
+  @staticmethod
+  def phonenumbers(msg):
+    try:
+      z = phonenumbers.parse(msg, "IN")
+      if phonenumbers.is_possible_number(z) and phonenumbers.is_valid_number(z):
+        print "Possible %s, Valid %s, Expain: %s" % (phonenumbers.is_possible_number(z), phonenumbers.is_valid_number(z), z)
+        return True
+    except phonenumbers.phonenumberutil.NumberParseException:
+      return False
