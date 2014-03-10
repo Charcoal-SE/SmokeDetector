@@ -5,7 +5,7 @@ class FindSpam:
   rules = [
    {'regex': "(?i)\\b(baba(ji)?|nike|vashikaran|porn)\\b", 'all': True,
     'sites': [], 'reason': "Bad keyword detected"},
-   {'regex': "\\+\\d{10}|\\+?\\d{2}[\\s\\-]?\\d{8,11}", 'all': True, 
+   {'regex': "\\+\\d{10}|\\+?\\d{2}[\\s\\-]?\\d{8,1o}", 'all': True, 
     'sites': ["patents.stackexchange.com"], 'reason': "Phone number detected"},
    {'regex': "(?i)\\b([Nn]igga|[Nn]igger|niga|[Aa]sshole|crap|fag|[Ff]uck|idiot|[Ss]hit|[Ww]hore)s?\\b", 'all': True,
     'sites': [], 'reason': "Offensive title detected",'insensitive':True},
