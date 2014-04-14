@@ -56,7 +56,7 @@ def handlespam(data):
     wrapm.sendMessage("89",s)
   except UnboundLocalError:
     print "NOP"
-ws = websocket.create_connection("ws://sockets.ny.stackexchange.com/")
+ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
 ws.send("155-questions-active")
 wrap.joinRoom("11540")
 def watcher(msg,wrap2):
