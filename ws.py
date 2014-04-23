@@ -23,7 +23,7 @@ lastid=None
 
 wrap=SEChatWrapper("SE")
 wrap.login(username,password)
-wrapm=SEChatWrapper("MSO")
+wrapm=SEChatWrapper("MSE")
 wrapm.login(username,password)
 s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started"
 wrap.sendMessage("11540",s)
