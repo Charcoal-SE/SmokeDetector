@@ -1,6 +1,6 @@
 #requires https://pypi.python.org/pypi/websocket-client/
 import json,os,sys,getpass
-from ChatExchange.SEChatWrapper import *
+from ChatExchange.src.chatexchange.wrapper import *
 
 if("ChatExchangeU" in os.environ):
   username=os.environ["ChatExchangeU"]

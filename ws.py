@@ -3,7 +3,7 @@ import websocket
 import threading
 import json,os,sys,getpass,time
 from findspam import FindSpam
-from ChatExchange.SEChatWrapper import *
+from ChatExchange.src.chatexchange.wrapper import *
 import HTMLParser
 
 parser=HTMLParser.HTMLParser()
