@@ -31,6 +31,7 @@ roomm = wrapm.get_room("89")
 room.send_message(s)
 
 def checkifspam(data):
+  return True
   global lasthost,lastid
   d=json.loads(json.loads(data)["data"])
   s= d["titleEncodedFancy"]
@@ -54,8 +55,8 @@ def handlespam(data):
     reason=",".join(FindSpam.testpost(d["titleEncodedFancy"],d["siteBaseHostAddress"]))
     s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) on `%s`" % (reason,d["titleEncodedFancy"],d["url"],d["siteBaseHostAddress"])
     print parser.unescape(s).encode('ascii',errors='replace')
-    wrap.sendMessage("11540",s)
-    wrapm.sendMessage("89",s)
+    room.send_message(s)
+    roomm.send_message(s)
   except UnboundLocalError:
     print "NOP"
 ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
@@ -64,9 +65,9 @@ room.join()
 def watcher(ev,wrap2):
   if ev.type_id != 1:
     return;
-  if(msg.content.startswith("!!/stappit")):
-    if(str(msg.data["user_id"]) in ["31768","103081","73046"]):
-      room.send_message("11540","Goodbye, cruel world")
+  if(ev.content.startswith("!!/stappit")):
+    if(str(ev.data["user_id"]) in ["31768","103081","73046"]):
+      room.send_message("Goodbye, cruel world")
       os._exit(1)
 
 room.watch_socket(watcher)
