@@ -3,7 +3,7 @@ import websocket
 import threading
 import json,os,sys,getpass,time
 from findspam import FindSpam
-from ChatExchange.src.chatexchange.wrapper import *
+from ChatExchange.chatexchange.client import *
 import HTMLParser
 
 parser=HTMLParser.HTMLParser()
@@ -21,12 +21,14 @@ else:
 lasthost=None
 lastid=None
 
-wrap=SEChatWrapper("SE")
+wrap=Client("stackexchange.com")
 wrap.login(username,password)
-wrapm=SEChatWrapper("MSE")
+wrapm=Client("meta.stackexchange.com")
 wrapm.login(username,password)
 s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started"
-wrap.sendMessage("11540",s)
+room = wrap.get_room("11540")
+roomm = wrapm.get_room("89")
+room.send_message(s)
 
 def checkifspam(data):
   global lasthost,lastid
@@ -58,14 +60,16 @@ def handlespam(data):
     print "NOP"
 ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
 ws.send("155-questions-active")
-wrap.joinRoom("11540")
-def watcher(msg,wrap2):
-  if(msg["content"].startswith("!!/stappit")):
-    if(str(msg["user_id"]) in ["31768","103081","73046"]):
-      wrap2.sendMessage("11540","Goodbye, cruel world")
+room.join()
+def watcher(ev,wrap2):
+  if ev.type_id != 1:
+    return;
+  if(msg.content.startswith("!!/stappit")):
+    if(str(msg.data["user_id"]) in ["31768","103081","73046"]):
+      room.send_message("11540","Goodbye, cruel world")
       os._exit(1)
 
-wrap.watchRoom("11540",watcher,300)
+room.watch_socket(watcher)
 while True:
   a=ws.recv()
   if(a!= None and a!= ""):
@@ -73,4 +77,4 @@ while True:
       threading.Thread(target=handlespam,args=(a,)).start()
 
 s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector aborted"
-wrap.sendMessage("11540",s)
+room.sendMessage(s)
