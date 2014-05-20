@@ -31,7 +31,6 @@ roomm = wrapm.get_room("89")
 room.send_message(s)
 
 def checkifspam(data):
-  return True
   global lasthost,lastid
   d=json.loads(json.loads(data)["data"])
   s= d["titleEncodedFancy"]
