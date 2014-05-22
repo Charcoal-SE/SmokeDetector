@@ -3,7 +3,7 @@ import re
 
 class FindSpam:
   rules = [
-   {'regex': "(?i)\\b(baba|nike|vashikaran|porn|ji)\\b", 'all': True,
+   {'regex': "(?i)\\b(baba(ji)?|nike|vashikaran|porn|ji)\\b", 'all': True,
     'sites': [], 'reason': "Bad keyword detected"},
    {'regex': "\\+\\d{10}|\\+?\\d{2}[\\s\\-]?\\d{8,1o}", 'all': True, 
     'sites': ["patents.stackexchange.com"], 'reason': "Phone number detected"},
