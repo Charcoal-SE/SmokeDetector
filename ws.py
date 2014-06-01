@@ -70,11 +70,13 @@ def watcher(ev,wrap2):
       os._exit(1)
 
 room.watch_socket(watcher)
-while True:
-  a=ws.recv()
-  if(a!= None and a!= ""):
-    if(checkifspam(a)):
-      threading.Thread(target=handlespam,args=(a,)).start()
-
+try:
+  while True:
+    a=ws.recv()
+    if(a!= None and a!= ""):
+      if(checkifspam(a)):
+        threading.Thread(target=handlespam,args=(a,)).start()
+except Exception, e:
+  print sys.exc_info()[0]
 s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector aborted"
 room.sendMessage(s)
