@@ -79,4 +79,4 @@ try:
 except Exception, e:
   print sys.exc_info()[0]
 s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector aborted"
-room.sendMessage(s)
+room.send_message(s)
