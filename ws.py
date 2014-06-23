@@ -31,7 +31,7 @@ roomm = wrapm.get_room("89")
 room.send_message(s)
 
 def checkifspam(data):
-  global lasthost,lastid
+  global lasthost,lastid # Make this take ~4 last hosts
   d=json.loads(json.loads(data)["data"])
   s= d["titleEncodedFancy"]
   print time.strftime("%Y-%m-%d %H:%M:%S"),parser.unescape(s).encode("ascii",errors="replace")
