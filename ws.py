@@ -25,7 +25,7 @@ wrap=Client("stackexchange.com")
 wrap.login(username,password)
 wrapm=Client("meta.stackexchange.com")
 wrapm.login(username,password)
-s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started"
+s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started (@Manishearth)"
 room = wrap.get_room("11540")
 roomm = wrapm.get_room("89")
 room.send_message(s)
