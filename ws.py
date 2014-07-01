@@ -5,6 +5,10 @@ import json,os,sys,getpass,time
 from findspam import FindSpam
 from ChatExchange.chatexchange.client import *
 import HTMLParser
+import ConfigParser
+
+Config = ConfigParser.ConfigParser()
+Config.read("config.ini")
 
 parser=HTMLParser.HTMLParser()
 
@@ -25,7 +29,7 @@ wrap=Client("stackexchange.com")
 wrap.login(username,password)
 wrapm=Client("meta.stackexchange.com")
 wrapm.login(username,password)
-s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started (@Manishearth)"
+s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started (@" + Config.get("Config", "Owner") + ")"
 room = wrap.get_room("11540")
 roomm = wrapm.get_room("89")
 room.send_message(s)
@@ -64,7 +68,7 @@ room.join()
 def watcher(ev,wrap2):
   if ev.type_id != 1:
     return;
-  if(ev.content.startswith("!!/stappit")):
+  if(ev.content.startswith("~~stappit")):
     if(str(ev.data["user_id"]) in ["31768","103081","73046"]):
       room.send_message("Goodbye, cruel world")
       os._exit(1)

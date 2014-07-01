@@ -9,7 +9,8 @@ class FindSpam:
     'sites': ["patents.stackexchange.com"], 'reason': "Phone number detected"},
    {'regex': "(?i)\\b([Nn]igga|[Nn]igger|niga|[Aa]sshole|crap|fag|[Ff]uck|idiot|[Ss]hit|[Ww]hore)s?\\b", 'all': True,
     'sites': [], 'reason': "Offensive title detected",'insensitive':True},
-   {'regex': "^(?=.*[A-Z])[^a-z]*$", 'all': True, 'sites': [], 'reason': "All-caps title"}
+   {'regex': "^(?=.*[A-Z])[^a-z]*$", 'all': True, 'sites': [], 'reason': "All-caps title"},
+   {'regex': "(?i)\\b(diet|body|weight|aging)s?\\b", 'all': True, 'sites': [], 'reason': "anti-aging spam"}
   ]
 
   @staticmethod
