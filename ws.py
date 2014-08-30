@@ -51,8 +51,10 @@ def checkifspam(data):
 def handlespam(data):
   try:
     d=json.loads(json.loads(data)["data"])
-    reason=",".join(FindSpam.testpost(d["titleEncodedFancy"],d["siteBaseHostAddress"]))
-    s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) on `%s`" % (reason,d["titleEncodedFancy"],d["url"],d["siteBaseHostAddress"])
+    title = d["titleEncodedFancy"]
+    reason=",".join(FindSpam.testpost(title,d["siteBaseHostAddress"]))
+    escapedTitle = re.sub(r"([_*\\`\[\]])", r"\\\1", title)
+    s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) on `%s`" % (reason,escapedTitle,d["url"],d["siteBaseHostAddress"])
     print parser.unescape(s).encode('ascii',errors='replace')
     room.send_message(s)
     roomm.send_message(s)
