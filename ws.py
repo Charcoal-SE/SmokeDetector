@@ -29,6 +29,7 @@ s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetect
 room = wrap.get_room("11540")
 roomm = wrapm.get_room("89")
 room.send_message(s)
+roomm.send_message(s)
 
 def checkifspam(data):
   global lasthost,lastid # Make this take ~4 last hosts
