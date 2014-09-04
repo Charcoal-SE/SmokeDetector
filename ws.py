@@ -18,8 +18,7 @@ if("ChatExchangeP" in os.environ):
 else:
   password=getpass.getpass("Password: ")
 
-lasthost=None
-lastid=None
+latest_questions = []
 
 wrap=Client("stackexchange.com")
 wrap.login(username,password)
@@ -31,8 +30,18 @@ roomm = wrapm.get_room("89")
 room.send_message(s)
 roomm.send_message(s)
 
+def append_to_latest_questions(host, post_id, title):
+	latest_questions.insert(0, (host, post_id, title))
+	if len(latest_questions) > 15:
+		latest_questions.pop()
+
+def has_already_been_posted(host, post_id, title):
+	for post in latest_questions:
+		if post[0] == host and post[1] == post_id and post[2] == title:
+			return True
+	return False
+
 def checkifspam(data):
-  global lasthost,lastid # Make this take ~4 last hosts
   d=json.loads(json.loads(data)["data"])
   s= d["titleEncodedFancy"]
   print time.strftime("%Y-%m-%d %H:%M:%S"),parser.unescape(s).encode("ascii",errors="replace")
@@ -41,10 +50,10 @@ def checkifspam(data):
   sys.stdout.flush()
   test=FindSpam.testpost(s,site)
   if (0<len(test)):
-    if(lastid==d["id"] and lasthost == d["siteBaseHostAddress"]):
+  	post_id = d["id"]
+    if(has_already_been_posted(site, post_id, s):
       return False # Don't repost. Reddit will hate you.
-    lastid=d["id"]
-    lasthost = d["siteBaseHostAddress"]
+    append_to_latest_questions(site, post_id, s)
     return True
   return False
 
