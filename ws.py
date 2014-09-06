@@ -50,7 +50,7 @@ def checkifspam(data):
   sys.stdout.flush()
   test=FindSpam.testpost(s,site)
   if (0<len(test)):
-  	post_id = d["id"]
+    post_id = d["id"]
     if(has_already_been_posted(site, post_id, s):
       return False # Don't repost. Reddit will hate you.
     append_to_latest_questions(site, post_id, s)
