@@ -4,4 +4,4 @@ git submodule init
 git submodule update
 sudo pip install beautifulsoup
 sudo pip install requests --upgrade
-sudo pip installwebsocket-client --upgrade
+sudo pip install websocket-client --upgrade
