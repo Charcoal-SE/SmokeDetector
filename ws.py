@@ -19,6 +19,7 @@ else:
   password=getpass.getpass("Password: ")
 
 latest_questions = []
+isblocked = False
 
 wrap=Client("stackexchange.com")
 wrap.login(username,password)
@@ -66,8 +67,9 @@ def handlespam(data):
     titleToPost = parser.unescape(re.sub(r"([_*\\`\[\]])", r"\\\1", title)).strip()
     s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) on `%s`" % (reason,titleToPost,d["url"],d["siteBaseHostAddress"])
     print parser.unescape(s).encode('ascii',errors='replace')
-    room.send_message(s)
-    roomm.send_message(s)
+    if isblocked == False:
+      room.send_message(s)
+      roomm.send_message(s)
   except UnboundLocalError:
     print "NOP"
 ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
@@ -80,6 +82,14 @@ def watcher(ev,wrap2):
     if(str(ev.data["user_id"]) in ["31768","103081","73046"]):
       room.send_message("Goodbye, cruel world")
       os._exit(1)
+  if(ev.content.startswith("!!/block")):
+    if(str(ev.data["user_id"]) in ["31768","103081","73046"]):
+      room.send_message("blocked")
+      isblocked = True
+  if(ev.content.startswith("!!/unblock")):
+    if(str(ev.data["user_id"]) in ["31768","103081","73046"]):
+      isblocked = False
+      room.send_message("unblocked")
 
 room.watch_socket(watcher)
 try:
