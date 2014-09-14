@@ -85,7 +85,7 @@ def watcher(ev,wrap2):
   if(ev.content.startswith("!!/block")):
     if(str(ev.data["user_id"]) in ["31768","103081","73046"]):
       room.send_message("blocked")
-      timeToBlock = ev[9:].strip()
+      timeToBlock = ev.data[9:].strip()
       timeToBlock = int(timeToBlock) if timeToBlock else 0
       if (0 < timeToBlock < 14400):
         blockedTime = time.time() + timeToBlock
