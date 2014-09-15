@@ -106,7 +106,7 @@ def isAliveWatcher(ev,wrap2):
   if ev.type_id != 1:
     return;
   if(ev.content.startswith("!!/alive?")):
-    room.send_message(':'+str(ev.data["message_id"])+' Of course')
+    roomm.send_message(':'+str(ev.data["message_id"])+' Of course')
 
 room.watch_socket(watcher)
 roomm.watch_socket(isAliveWatcher)
