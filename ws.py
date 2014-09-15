@@ -81,11 +81,11 @@ def watcher(ev,wrap2):
   if ev.type_id != 1:
     return;
   if(ev.content.startswith("!!/stappit")):
-    if(str(ev.data["user_id"]) in ["31768","103081","73046","88521"]):
+    if(str(ev.data["user_id"]) in ["31768","103081","73046","88521","59776"]):
       room.send_message("Goodbye, cruel world")
       os._exit(1)
   if(ev.content.startswith("!!/block")):
-    if(str(ev.data["user_id"]) in ["31768","103081","73046","88521"]):
+    if(str(ev.data["user_id"]) in ["31768","103081","73046","88521","59776"]):
       room.send_message("blocked")
       timeToBlock = ev.content[9:].strip()
       timeToBlock = int(timeToBlock) if timeToBlock else 0
@@ -94,7 +94,7 @@ def watcher(ev,wrap2):
       else:
         blockedTime = time.time() + 900
   if(ev.content.startswith("!!/unblock")):
-    if(str(ev.data["user_id"]) in ["31768","103081","73046","88521"]):
+    if(str(ev.data["user_id"]) in ["31768","103081","73046","88521","59776"]):
       blockedTime = time.time()
       room.send_message("unblocked")
 
