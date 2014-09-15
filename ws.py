@@ -70,7 +70,7 @@ def handlespam(data):
     print parser.unescape(s).encode('ascii',errors='replace')
     if time.time() >= blockedTime:
       room.send_message(s)
-#      roomm.send_message(s)
+      roomm.send_message(s)
   except UnboundLocalError:
     print "NOP"
 ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
