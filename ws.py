@@ -19,6 +19,7 @@ else:
   password=getpass.getpass("Password: ")
 
 latest_questions = []
+global blockedTime
 blockedTime = 0
 
 wrap=Client("stackexchange.com")
@@ -29,7 +30,8 @@ s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetect
 room = wrap.get_room("11540")
 roomm = wrapm.get_room("89")
 room.send_message(s)
-roomm.send_message(s)
+#roomm.send_message(s)
+#Commented out because the Tavern folk don't really need to see when it starts
 
 def append_to_latest_questions(host, post_id, title):
 	latest_questions.insert(0, (host, post_id, title))
@@ -65,11 +67,11 @@ def handlespam(data):
     title = d["titleEncodedFancy"]
     reason=", ".join(FindSpam.testpost(title,d["siteBaseHostAddress"]))
     titleToPost = parser.unescape(re.sub(r"([_*\\`\[\]])", r"\\\1", title)).strip()
-    s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) on `%s`" % (reason,titleToPost,d["url"],d["siteBaseHostAddress"])
+    s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) on `%s` (blockedTime: `%s` | time.time(): `%s`)" % (reason,titleToPost,d["url"],d["siteBaseHostAddress"],blockedTime,time.time())
     print parser.unescape(s).encode('ascii',errors='replace')
     if time.time() >= blockedTime:
       room.send_message(s)
-      roomm.send_message(s)
+#      roomm.send_message(s)
   except UnboundLocalError:
     print "NOP"
 ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
