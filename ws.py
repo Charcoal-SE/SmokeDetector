@@ -100,8 +100,15 @@ def watcher(ev,wrap2):
     if(str(ev.data["user_id"]) in ["31768","103081","73046","88521","59776"]):
       blockedTime = time.time()
       room.send_message("unblocked")
+      
+def isAliveWatcher(ev,wrap2):
+  if ev.type_id != 1:
+    return;
+  if(ev.content.startswith("!!/alive?")):
+    room.send_message(':'+str(ev.data["message_id"])+' Of course')
 
 room.watch_socket(watcher)
+roomm.watch_socket(isAliveWatcher)
 try:
   while True:
     a=ws.recv()
