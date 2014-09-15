@@ -76,6 +76,7 @@ def handlespam(data):
 ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
 ws.send("155-questions-active")
 room.join()
+roomm.join()
 def watcher(ev,wrap2):
   global blockedTime
   if ev.type_id != 1:
