@@ -66,7 +66,7 @@ def handlespam(data):
     title = d["titleEncodedFancy"]
     reason=", ".join(FindSpam.testpost(title,d["siteBaseHostAddress"]))
     titleToPost = parser.unescape(re.sub(r"([_*\\`\[\]])", r"\\\1", title)).strip()
-    s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) on `%s` (blockedTime: `%s` | time.time(): `%s`)" % (reason,titleToPost,d["url"],d["siteBaseHostAddress"],blockedTime,time.time())
+    s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) on `%s`" % (reason,titleToPost,d["url"],d["siteBaseHostAddress"])
     print parser.unescape(s).encode('ascii',errors='replace')
     if time.time() >= blockedTime:
       room.send_message(s)
