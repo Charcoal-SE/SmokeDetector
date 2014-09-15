@@ -19,7 +19,6 @@ else:
   password=getpass.getpass("Password: ")
 
 latest_questions = []
-global blockedTime
 blockedTime = 0
 
 wrap=Client("stackexchange.com")
@@ -78,6 +77,7 @@ ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
 ws.send("155-questions-active")
 room.join()
 def watcher(ev,wrap2):
+  global blockedTime
   if ev.type_id != 1:
     return;
   if(ev.content.startswith("!!/stappit")):
