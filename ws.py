@@ -5,6 +5,7 @@ import json,os,sys,getpass,time
 from findspam import FindSpam
 from ChatExchange.chatexchange.client import *
 import HTMLParser
+import random
 
 parser=HTMLParser.HTMLParser()
 
@@ -106,7 +107,7 @@ def isAliveWatcher(ev,wrap2):
   if ev.type_id != 1:
     return;
   if(ev.content.startswith("!!/alive?")):
-    roomm.send_message(':'+str(ev.data["message_id"])+' Of course')
+    roomm.send_message(':'+str(ev.data["message_id"]) + ' ' + random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee', 'watching this endless list of new questions *never* gets boring', 'kinda sorta']))
 
 room.watch_socket(watcher)
 roomm.watch_socket(isAliveWatcher)
