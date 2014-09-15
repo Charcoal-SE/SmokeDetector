@@ -19,6 +19,7 @@ else:
   password=getpass.getpass("Password: ")
 
 latest_questions = []
+blockedTime = 0
 
 wrap=Client("stackexchange.com")
 wrap.login(username,password)
@@ -28,7 +29,8 @@ s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetect
 room = wrap.get_room("11540")
 roomm = wrapm.get_room("89")
 room.send_message(s)
-roomm.send_message(s)
+#roomm.send_message(s)
+#Commented out because the Tavern folk don't really need to see when it starts
 
 def append_to_latest_questions(host, post_id, title):
 	latest_questions.insert(0, (host, post_id, title))
@@ -66,20 +68,35 @@ def handlespam(data):
     titleToPost = parser.unescape(re.sub(r"([_*\\`\[\]])", r"\\\1", title)).strip()
     s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) on `%s`" % (reason,titleToPost,d["url"],d["siteBaseHostAddress"])
     print parser.unescape(s).encode('ascii',errors='replace')
-    room.send_message(s)
-    roomm.send_message(s)
+    if time.time() >= blockedTime:
+      room.send_message(s)
+#      roomm.send_message(s)
   except UnboundLocalError:
     print "NOP"
 ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
 ws.send("155-questions-active")
 room.join()
 def watcher(ev,wrap2):
+  global blockedTime
   if ev.type_id != 1:
     return;
   if(ev.content.startswith("!!/stappit")):
     if(str(ev.data["user_id"]) in ["31768","103081","73046"]):
       room.send_message("Goodbye, cruel world")
       os._exit(1)
+  if(ev.content.startswith("!!/block")):
+    if(str(ev.data["user_id"]) in ["31768","103081","73046"]):
+      room.send_message("blocked")
+      timeToBlock = ev.content[9:].strip()
+      timeToBlock = int(timeToBlock) if timeToBlock else 0
+      if (0 < timeToBlock < 14400):
+        blockedTime = time.time() + timeToBlock
+      else:
+        blockedTime = time.time() + 900
+  if(ev.content.startswith("!!/unblock")):
+    if(str(ev.data["user_id"]) in ["31768","103081","73046"]):
+      blockedTime = time.time()
+      room.send_message("unblocked")
 
 room.watch_socket(watcher)
 try:
