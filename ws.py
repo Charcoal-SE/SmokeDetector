@@ -80,6 +80,9 @@ def watcher(ev,wrap2):
   global blockedTime
   if ev.type_id != 1:
     return;
+  print(ev)
+  if(ev.content.startswith("!!/alive?")):
+    room.send_message("Of course")
   if(ev.content.startswith("!!/stappit")):
     if(str(ev.data["user_id"]) in ["31768","103081","73046","88521","59776"]):
       room.send_message("Goodbye, cruel world")
