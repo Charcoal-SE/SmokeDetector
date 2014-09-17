@@ -85,7 +85,7 @@ def watcher(ev,wrap2):
   print(ev)
   if(ev.content.startswith("!!/alive?")):
     room.send_message(':'+str(ev.data["message_id"])+' Of course')
-  if(ev.content.startswith("!!/stappit")):
+  if(ev.content.startswith("!!/reboot")):
     if(str(ev.data["user_id"]) in ["31768","103081","73046","88521","59776"]):
       room.send_message("Goodbye, cruel world")
       os._exit(1)
