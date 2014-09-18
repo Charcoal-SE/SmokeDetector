@@ -6,6 +6,7 @@ from findspam import FindSpam
 from ChatExchange.chatexchange.client import *
 import HTMLParser
 import random
+from bayesian.classify import Classify
 
 parser=HTMLParser.HTMLParser()
 
@@ -44,10 +45,18 @@ def has_already_been_posted(host, post_id, title):
 			return True
 	return False
 
+def bayesian_score(title):
+  c=Classify()
+  c.validate(["","",title,"good","bad"])
+  output = c.execute()
+  return output
+
 def checkifspam(data):
   d=json.loads(json.loads(data)["data"])
   s= d["titleEncodedFancy"]
   print time.strftime("%Y-%m-%d %H:%M:%S"),parser.unescape(s).encode("ascii",errors="replace")
+  quality_score = bayesian_score(s)
+  print quality_score
   site = d["siteBaseHostAddress"]
   site=site.encode("ascii",errors="replace")
   sys.stdout.flush()
