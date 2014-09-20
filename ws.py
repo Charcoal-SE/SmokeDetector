@@ -22,6 +22,7 @@ else:
 
 latest_questions = []
 blockedTime = 0
+privileged_users = { "11540": ["31768","103081","73046","88521","59776"], "89": ["178438","237685","215468","229438","180276"] }
 
 wrap=Client("stackexchange.com")
 wrap.login(username,password)
@@ -92,17 +93,22 @@ def watcher(ev,wrap2):
   if ev.type_id != 1:
     return;
   print(ev)
+  ev_room = str(ev.data["room_id"])
+  ev_user_id = str(ev.data["user_id"])
   if(ev.content.startswith("!!/alive?")):
-    room.send_message(':'+str(ev.data["message_id"])+' Of course')
+    if(ev_room == "11540"):
+      room.send_message(':'+str(ev.data["message_id"])+' Of course')
+    elif(ev_room == "89"):
+      roomm.send_message(':'+str(ev.data["message_id"]) + ' ' + random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee', 'watching this endless list of new questions *never* gets boring', 'kinda sorta']))
   if(ev.content.startswith("!!/rev?")):
     room.send_message(':'+str(ev.data["message_id"])+' '+os.popen("git log --pretty=format:'%h' -n 1").read())
   if(ev.content.startswith("!!/reboot")):
-    if(str(ev.data["user_id"]) in ["31768","103081","73046","88521","59776"]):
-      room.send_message("Goodbye, cruel world")
+    if(isPrivileged(ev_room, ev_user_id)):
+      postMessageInRoom(ev_room, "Goodbye, cruel world")
       os._exit(1)
   if(ev.content.startswith("!!/block")):
-    if(str(ev.data["user_id"]) in ["31768","103081","73046","88521","59776"]):
-      room.send_message("blocked")
+    if(isPrivileged(ev_room, ev_user_id)):
+      postMessageInRoom(ev_room, "blocked")
       timeToBlock = ev.content[9:].strip()
       timeToBlock = int(timeToBlock) if timeToBlock else 0
       if (0 < timeToBlock < 14400):
@@ -110,18 +116,21 @@ def watcher(ev,wrap2):
       else:
         blockedTime = time.time() + 900
   if(ev.content.startswith("!!/unblock")):
-    if(str(ev.data["user_id"]) in ["31768","103081","73046","88521","59776"]):
+    if(isPrivileged(ev_room, ev_user_id)):
       blockedTime = time.time()
-      room.send_message("unblocked")
-      
-def isAliveWatcher(ev,wrap2):
-  if ev.type_id != 1:
-    return;
-  if(ev.content.startswith("!!/alive?")):
-    roomm.send_message(':'+str(ev.data["message_id"]) + ' ' + random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee', 'watching this endless list of new questions *never* gets boring', 'kinda sorta']))
+      postMessageInRoom(ev_room, "unblocked")
+
+def isPrivileged(room_id_str, user_id_str):
+  return room_id_str in privileged_users and user_id_str in privileged_users[room_id_str]
+
+def postMessageInRoom(room_id_str, msg):
+  if room_id_str == "11540":
+    room.send_message(msg)
+  elif room_id_str == "89":
+    roomm.send_message(msg)
 
 room.watch_socket(watcher)
-roomm.watch_socket(isAliveWatcher)
+roomm.watch_socket(watcher)
 try:
   while True:
     a=ws.recv()
