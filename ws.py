@@ -53,7 +53,7 @@ def bayesian_score(title):
     output = c.execute()
     return output
   except:
-    return 1 # can be changed
+    return 0.1
 
 def checkifspam(data):
   d=json.loads(json.loads(data)["data"])
