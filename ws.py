@@ -47,10 +47,13 @@ def has_already_been_posted(host, post_id, title):
 	return False
 
 def bayesian_score(title):
-  c=Classify()
-  c.validate(["","",title,"good","bad"])
-  output = c.execute()
-  return output
+  try:
+    c=Classify()
+    c.validate(["","",title,"good","bad"])
+    output = c.execute()
+    return output
+  except:
+    return 1 # can be changed
 
 def checkifspam(data):
   d=json.loads(json.loads(data)["data"])
