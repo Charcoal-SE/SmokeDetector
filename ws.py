@@ -30,6 +30,8 @@ wrapm.login(username,password)
 s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started at rev " + os.popen("git log --pretty=format:'%h' -n 1").read() + " (@Undo)"
 room = wrap.get_room("11540")
 roomm = wrapm.get_room("89")
+bayesian_testroom = wrap.get_room("17251")
+print bayesian_testroom.send_message(s)
 room.send_message(s)
 #roomm.send_message(s)
 #Commented out because the Tavern folk don't really need to see when it starts
@@ -57,6 +59,8 @@ def checkifspam(data):
   print time.strftime("%Y-%m-%d %H:%M:%S"),parser.unescape(s).encode("ascii",errors="replace")
   quality_score = bayesian_score(s)
   print quality_score
+  if(quality_score < 0.3 and d["siteBaseHostAddress"] == "stackoverflow.com"):
+    print bayesian_testroom.send_message("[ SmokeDetector | BayesianBeta ] Quality score " + str(quality_score*100) + ": [" + s + "](" + d["url"] + ")")
   site = d["siteBaseHostAddress"]
   site=site.encode("ascii",errors="replace")
   sys.stdout.flush()
