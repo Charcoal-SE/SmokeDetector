@@ -7,6 +7,7 @@ from ChatExchange.chatexchange.client import *
 import HTMLParser
 import random
 from bayesian.classify import Classify
+import re
 
 parser=HTMLParser.HTMLParser()
 
@@ -22,15 +23,17 @@ else:
 
 latest_questions = []
 blockedTime = 0
-privileged_users = { "11540": ["31768","103081","73046","88521","59776"], "89": ["178438","237685","215468","229438","180276"] }
+charcoal_room_id = "11540"
+meta_tavern_room_id = "89"
+privileged_users = { charcoal_room_id: ["31768","103081","73046","88521","59776"], meta_tavern_room_id: ["178438","237685","215468","229438","180276"] }
 
 wrap=Client("stackexchange.com")
 wrap.login(username,password)
 wrapm=Client("meta.stackexchange.com")
 wrapm.login(username,password)
 s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started at rev " + os.popen("git log --pretty=format:'%h' -n 1").read() + " (@Undo)"
-room = wrap.get_room("11540")
-roomm = wrapm.get_room("89")
+room = wrap.get_room(charcoal_room_id)
+roomm = wrapm.get_room(meta_tavern_room_id)
 bayesian_testroom = wrap.get_room("17251")
 print bayesian_testroom.send_message(s)
 room.send_message(s)
@@ -97,15 +100,28 @@ room.join()
 roomm.join()
 def watcher(ev,wrap2):
   global blockedTime
-  if ev.type_id != 1:
+  if ev.type_id != 1 and ev.type_id != 18:
     return;
   print(ev)
   ev_room = str(ev.data["room_id"])
   ev_user_id = str(ev.data["user_id"])
+  message_parts = ev.message.content_source.split(" ")
+  if(re.compile(":[0-9]+").search(message_parts[0])):
+    if(message_parts[1] == "delete" and isPrivileged(ev_room, ev_user_id)):
+      try:
+        msg_id = int(message_parts[0][1:])
+        if(ev_room == charcoal_room_id):
+          msg_to_delete = wrap.get_message(msg_id)
+          msg_to_delete.delete()
+        elif(ev_room == meta_tavern_room_id):
+          msg_to_delete = wrapm.get_message(msg_id)
+          msg_to_delete.delete()
+      except:
+        pass # couldn't delete message
   if(ev.content.startswith("!!/alive?")):
-    if(ev_room == "11540"):
+    if(ev_room == charcoal_room_id):
       room.send_message(':'+str(ev.data["message_id"])+' Of course')
-    elif(ev_room == "89"):
+    elif(ev_room == meta_tavern_room_id):
       roomm.send_message(':'+str(ev.data["message_id"]) + ' ' + random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee', 'watching this endless list of new questions *never* gets boring', 'kinda sorta']))
   if(ev.content.startswith("!!/rev?")):
     room.send_message(':'+str(ev.data["message_id"])+' '+os.popen("git log --pretty=format:'%h' -n 1").read())
@@ -131,9 +147,9 @@ def isPrivileged(room_id_str, user_id_str):
   return room_id_str in privileged_users and user_id_str in privileged_users[room_id_str]
 
 def postMessageInRoom(room_id_str, msg):
-  if room_id_str == "11540":
+  if room_id_str == charcoal_room_id:
     room.send_message(msg)
-  elif room_id_str == "89":
+  elif room_id_str == meta_tavern_room_id:
     roomm.send_message(msg)
 
 room.watch_socket(watcher)
