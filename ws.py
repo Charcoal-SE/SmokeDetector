@@ -100,7 +100,7 @@ room.join()
 roomm.join()
 def watcher(ev,wrap2):
   global blockedTime
-  if ev.type_id != 1 and ev.type_id != 18:
+  if ev.type_id != 1:
     return;
   print(ev)
   ev_room = str(ev.data["room_id"])
