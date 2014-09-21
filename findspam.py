@@ -3,8 +3,10 @@ import re
 
 class FindSpam:
   rules = [
-   {'regex': "(?i)\\b(baba(ji)?|nike|vashikaran|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai)\\b", 'all': True,
+   {'regex': "(?i)\\b(baba(ji)?|nike|vashikaran|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care)\\b", 'all': True,
     'sites': [], 'reason': "Bad keyword detected"},
+   {'regex': "(?i)\\b(weight loss)\\b", 'all': True,
+    'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword detected"},
    {'regex': "\\d(?:_*\\d){9}|\\+?\\d_*\\d[\\s\\-]?(_*\\d){8,10}", 'all': True,
     'sites': ["patents.stackexchange.com"], 'reason': "Phone number detected"},
    {'regex': "(?i)\\b(nigg?(a|er)|asshole|crap|fag|fuck(ing?)?|idiot|shit|whore)s?\\b", 'all': True,
