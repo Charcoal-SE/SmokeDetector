@@ -8,6 +8,7 @@ import HTMLParser
 import random
 from bayesian.classify import Classify
 import re
+import time
 
 parser=HTMLParser.HTMLParser()
 
@@ -40,16 +41,22 @@ room.send_message(s)
 #roomm.send_message(s)
 #Commented out because the Tavern folk don't really need to see when it starts
 
+def restart_automatically(time_in_seconds):
+  time.sleep(time_in_seconds)
+  os._exit(1)
+
+threading.Thread(target=restart_automatically,args=(3600,)).start()
+
 def append_to_latest_questions(host, post_id, title):
-	latest_questions.insert(0, (host, post_id, title))
-	if len(latest_questions) > 15:
-		latest_questions.pop()
+  latest_questions.insert(0, (host, post_id, title))
+  if len(latest_questions) > 15:
+    latest_questions.pop()
 
 def has_already_been_posted(host, post_id, title):
-	for post in latest_questions:
-		if post[0] == host and post[1] == post_id and post[2] == title:
-			return True
-	return False
+  for post in latest_questions:
+    if post[0] == host and post[1] == post_id and post[2] == title:
+      return True
+  return False
 
 def bayesian_score(title):
   try:
