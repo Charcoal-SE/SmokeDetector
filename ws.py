@@ -26,13 +26,13 @@ latest_questions = []
 blockedTime = 0
 charcoal_room_id = "11540"
 meta_tavern_room_id = "89"
-privileged_users = { charcoal_room_id: ["31768","103081","73046","88521","59776"], meta_tavern_room_id: ["178438","237685","215468","229438","180276"] }
+privileged_users = { charcoal_room_id: ["66258", "31768","103081","73046","88521","59776"], meta_tavern_room_id: ["178438","237685","215468","229438","180276", "161974", "244382", "186281"] }
 
 wrap=Client("stackexchange.com")
 wrap.login(username,password)
 wrapm=Client("meta.stackexchange.com")
 wrapm.login(username,password)
-s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started at rev " + os.popen("git log --pretty=format:'%h' -n 1").read() + " (@Undo)"
+s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started at rev " + os.popen("git log --pretty=format:'%h' -n 1").read() + " (owned by Undo)"
 room = wrap.get_room(charcoal_room_id)
 roomm = wrapm.get_room(meta_tavern_room_id)
 bayesian_testroom = wrap.get_room("17251")
