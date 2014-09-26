@@ -21,7 +21,7 @@ class FindSpam:
       if rule['all'] != (site in rule['sites']):
         if re.compile(rule['regex']).search(title):
           try:
-            if getattr(TestClass, "%s" % rule['validation_method'])(title):
+            if getattr(FindSpam, "%s" % rule['validation_method'])(title):
               result.append(rule['reason'])
           except KeyError:        # There is no special logic for this rule
             result.append(rule['reason'])
