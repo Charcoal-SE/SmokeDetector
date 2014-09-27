@@ -3,7 +3,7 @@ import phonenumbers
 
 class FindSpam:
   rules = [
-   {'regex': "(?i)\\b(baba(ji)?|nike|vashikaran|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|me2.do)\\b", 'all': True,
+   {'regex': "(?i)\\b(baba(ji)?|nike|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|me2.do|black magic)\\b", 'all': True,
     'sites': [], 'reason': "Bad keyword detected"},
    {'regex': "(?i)\\b(weight loss)\\b", 'all': True,
     'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword detected"},
