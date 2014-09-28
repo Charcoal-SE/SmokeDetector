@@ -131,7 +131,10 @@ def watcher(ev,wrap2):
     elif(ev_room == meta_tavern_room_id):
       roomm.send_message(':'+str(ev.data["message_id"]) + ' ' + random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee', 'watching this endless list of new questions *never* gets boring', 'kinda sorta']))
   if(ev.content.startswith("!!/rev?")):
-    room.send_message(':'+str(ev.data["message_id"])+' '+os.popen("git log --pretty=format:'%h' -n 1").read())
+    if(ev_room == charcoal_room_id):
+      room.send_message(':'+str(ev.data["message_id"])+' '+os.popen("git log --pretty=format:'%h' -n 1").read())
+    elif(ev_room == meta_tavern_room_id):
+      roomm.send_message(':'+str(ev.data["message_id"])+' '+os.popen("git log --pretty=format:'%h' -n 1").read())
   if(ev.content.startswith("!!/reboot")):
     if(isPrivileged(ev_room, ev_user_id)):
       postMessageInRoom(ev_room, "Goodbye, cruel world")
