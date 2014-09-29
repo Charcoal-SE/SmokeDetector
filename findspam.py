@@ -3,13 +3,13 @@ import phonenumbers
 
 class FindSpam:
   rules = [
-   {'regex': "(?i)\\b(baba(ji)?|nike|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|me2.do|black magic|ಌ)\\b", 'all': True,
+   {'regex': "(?i)\\b(baba(ji)?|nike|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|me2.do|black magic)\\b", 'all': True,
     'sites': [], 'reason': "Bad keyword detected"},
    {'regex': "(?i)\\b(weight loss)\\b", 'all': True,
     'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword detected"},
    {'regex': "\\d(?:_*\\d){9}|\\+?\\d_*\\d[\\s\\-]?(_*\\d){8,10}", 'all': True,
     'sites': ["patents.stackexchange.com"], 'reason': "Phone number detected", 'validation_method': 'checkphonenumbers'},
-   {'regex': "(?i)\\b(nigg?(a|er)|asshole|crap|fag|fuck(ing?)?|idiot|shit|whore)s?\\b", 'all': True,
+   {'regex': "(?i)\\b(nigg?(a|er)|asshole|crap|fag|fuck(ing?)?|idiot|shit|whore)s?\\b|ಌ", 'all': True,
     'sites': [], 'reason': "Offensive title detected",'insensitive':True},
    {'regex': "^(?=.*[A-Z])[^a-z]*$", 'all': True, 'sites': [], 'reason': "All-caps title"}
   ]
