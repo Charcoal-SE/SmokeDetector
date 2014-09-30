@@ -3,15 +3,15 @@ import phonenumbers
 
 class FindSpam:
   rules = [
-   {'regex': "(?i)\\b(baba(ji)?|nike|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|me2.do|black magic|bam2u)\\b", 'all': True,
+   {'regex': u"(?i)\\b(baba(ji)?|nike|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|me2.do|black magic|bam2u)\\b|ಌ", 'all': True,
     'sites': [], 'reason': "Bad keyword detected"},
-   {'regex': "(?i)\\b(weight loss)\\b", 'all': True,
+   {'regex': u"(?i)\\b(weight loss)\\b", 'all': True,
     'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword detected"},
-   {'regex': "\\d(?:_*\\d){9}|\\+?\\d_*\\d[\\s\\-]?(?:_*\\d){8,10}", 'all': True,
+   {'regex': u"\\d(?:_*\\d){9}|\\+?\\d_*\\d[\\s\\-]?(?:_*\\d){8,10}", 'all': True,
     'sites': ["patents.stackexchange.com"], 'reason': "Phone number detected", 'validation_method': 'checkphonenumbers'},
-   {'regex': "(?i)\\b(nigg?(a|er)|asshole|crap|fag|fuck(ing?)?|idiot|shit|whore)s?\\b", 'all': True,
+   {'regex': u"(?i)\\b(nigg?(a|er)|asshole|crap|fag|fuck(ing?)?|idiot|shit|whore)s?\\b", 'all': True,
     'sites': [], 'reason': "Offensive title detected",'insensitive':True},
-   {'regex': "^(?=.*[A-Z])[^a-z]*$", 'all': True, 'sites': [], 'reason': "All-caps title"}
+   {'regex': u"^(?=.*[A-Z])[^a-z]*$", 'all': True, 'sites': [], 'reason': "All-caps title"}
   ]
 
   @staticmethod
@@ -19,7 +19,7 @@ class FindSpam:
     result = [];
     for rule in FindSpam.rules:
       if rule['all'] != (site in rule['sites']):
-        matched = re.compile(rule['regex']).findall(title)
+        matched = re.compile(rule['regex'], re.UNICODE).findall(title)
         if matched:
           try:
             if getattr(FindSpam, "%s" % rule['validation_method'])(matched):
