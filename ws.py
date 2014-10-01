@@ -26,7 +26,7 @@ latest_questions = []
 blockedTime = 0
 charcoal_room_id = "11540"
 meta_tavern_room_id = "89"
-privileged_users = { charcoal_room_id: ["66258", "31768","103081","73046","88521","59776"], meta_tavern_room_id: ["178438","237685","215468","229438","180276", "161974", "244382", "186281"] }
+privileged_users = { charcoal_room_id: ["66258", "31768","103081","73046","88521","59776"], meta_tavern_room_id: ["178438","237685","215468","229438","180276", "161974", "244382", "186281", "266094"] }
 smokeDetector_user_id = { charcoal_room_id: "120914", meta_tavern_room_id: "266345" }
 
 wrap=Client("stackexchange.com")
