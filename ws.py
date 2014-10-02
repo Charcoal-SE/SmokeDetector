@@ -109,7 +109,7 @@ def handlespam(data):
     print parser.unescape(s).encode('ascii',errors='replace')
     if time.time() >= blockedTime:
       room.send_message(s)
-      #roomm.send_message(s)
+      roomm.send_message(s)
       for specialroom in specialrooms:
         sites = specialroom["sites"]
         if d["siteBaseHostAddress"] in sites:
