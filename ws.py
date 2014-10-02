@@ -37,7 +37,8 @@ s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetect
 room = wrap.get_room(charcoal_room_id)
 roomm = wrapm.get_room(meta_tavern_room_id)
 
-specialrooms = [{ "sites": ["english.stackexchange.com"], "room": wrap.get_room("95") }]
+#specialrooms = [{ "sites": ["english.stackexchange.com"], "room": wrap.get_room("95") }]
+specialrooms = [{ "sites": ["english.stackexchange.com"], "room": wrap.get_room("95"), "unwantedReasons": [] }, { "sites": ["askubuntu.com"], "room": wrap.get_room("201"), "unwantedReasons": ["All-caps title"] }]
 
 bayesian_testroom = wrap.get_room("17251")
 print bayesian_testroom.send_message(s)
@@ -112,7 +113,7 @@ def handlespam(data):
       roomm.send_message(s)
       for specialroom in specialrooms:
         sites = specialroom["sites"]
-        if d["siteBaseHostAddress"] in sites:
+        if d["siteBaseHostAddress"] in sites and reason not in specialroom["unwantedReasons"]:
           specialroom["room"].send_message(s)
   except UnboundLocalError:
     print "NOP"
