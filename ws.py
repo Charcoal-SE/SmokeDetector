@@ -36,6 +36,9 @@ wrapm.login(username,password)
 s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started at rev " + os.popen("git log --pretty=format:'%h' -n 1").read() + " (owned by Undo)"
 room = wrap.get_room(charcoal_room_id)
 roomm = wrapm.get_room(meta_tavern_room_id)
+
+specialrooms = [{ "sites": ["english.stackexchange.com"], "room": wrap.get_room("95") }]
+
 bayesian_testroom = wrap.get_room("17251")
 print bayesian_testroom.send_message(s)
 room.send_message(s)
@@ -106,7 +109,11 @@ def handlespam(data):
     print parser.unescape(s).encode('ascii',errors='replace')
     if time.time() >= blockedTime:
       room.send_message(s)
-      roomm.send_message(s)
+      #roomm.send_message(s)
+      for specialroom in specialrooms:
+        sites = specialroom["sites"]
+        if d["siteBaseHostAddress"] in sites:
+          specialroom["room"].send_message(s)
   except UnboundLocalError:
     print "NOP"
 ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
