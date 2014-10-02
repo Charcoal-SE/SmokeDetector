@@ -79,14 +79,14 @@ def checkifspam(data):
   site = d["siteBaseHostAddress"]
   site=site.encode("ascii",errors="replace")
   sys.stdout.flush()
-  test=FindSpam.testpost(s,site)
-  owner = d["ownerUrl"]
+  test=FindSpam.testpost(s,site) 
   if (0<len(test)):
     post_id = d["id"]
     if(has_already_been_posted(site, post_id, s)):
       return False # Don't repost. Reddit will hate you.
     append_to_latest_questions(site, post_id, s)
     try:
+      owner = d["ownerUrl"]
       users_file = open("users.txt", "a")
       users_file.write(site + " " + owner + "\n")
       users_file.close()
