@@ -1,4 +1,4 @@
-Transposing sql table in java
+﻿Transposing sql table in java
 MVC Identity 2.0 and managing roles
 Git - Client and Server Repos
 How to compare two (non-zero-terminated) character arrays

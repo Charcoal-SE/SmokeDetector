@@ -1,4 +1,4 @@
-Display MYSQL results into PHP/HTML
+﻿Display MYSQL results into PHP/HTML
 How do i make a header file for this code?
 Uncaught SyntaxError: Unexpected token )
 i need some script to perform google autocomplete

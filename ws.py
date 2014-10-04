@@ -28,6 +28,9 @@ charcoal_room_id = "11540"
 meta_tavern_room_id = "89"
 privileged_users = { charcoal_room_id: ["66258", "31768","103081","73046","88521","59776"], meta_tavern_room_id: ["178438","237685","215468","229438","180276", "161974", "244382", "186281", "266094"] }
 smokeDetector_user_id = { charcoal_room_id: "120914", meta_tavern_room_id: "266345" }
+site_filename = { "electronics.stackexchange.com" : "ElectronicsGood.txt", "gaming.stackexchange.com" : "GamingGood.txt", "german.stackexchange.com" : "GermanGood.txt",
+                  "italian.stackexchange.com" : "ItalianGood.txt", "math.stackexchange.com" : "MathematicsGood.txt", "spanish.stackexchange.com" : "SpanishGood.txt",
+                  "stats.stackexchange.com" : "StatsGood.txt" }
 
 wrap=Client("stackexchange.com")
 wrap.login(username,password)
@@ -142,6 +145,45 @@ def watcher(ev,wrap2):
             msg_to_delete.delete()
       except:
         pass # couldn't delete message
+    if((message_parts[1] == "bad" or message_parts[1] == "lq" or message_parts[1] == "good") and isPrivileged(ev_room, ev_user_id)):
+      try:
+        msg_id = int(message_parts[0][1:])
+        msg_content = ""
+        msg_is_smokedetectors_message = False
+        if (ev_room == charcoal_room_id):
+          msg_to_load = wrap.get_message(msg_id)
+          if(str(msg_to_load.owner.id) == smokeDetector_user_id[charcoal_room_id]):
+            msg_is_smokedetectors_message = True
+            msg_content = msg_to_load.content_source
+        elif(ev_room == tavern_room_id):
+          msg_to_load = wrapm.get_message(msg_id)
+          if(str(msg_to_load.owner.id) == smokeDetector_user_id[tavern_room_id]):
+            msg_is_smokedetectors_message = True
+            msg_content = msg_to_load.content_source
+        if (msg_is_smokedetectors_message):
+          command = message_parts[1]
+          post_title = re.compile(r": \[(.+)\]").findall(msg_content)[0]
+          post_site = re.compile(r"\) on `((?:[a-z]+\.com)|(?:[a-z]+\.[a-z]+\.com))`").findall(msg_content)[-1]
+          if(command == "bad"):
+            with open(os.path.join("bayesian", "bad.txt"), "a") as f:
+              f.write("\r\n%s" % post_title)
+            ev.message.reply("Registred as bad.")
+          elif(command == "lq"):
+            if(post_site == "stackoverflow.com"):
+              with open(os.path.join("bayesian", "SOLowQuality.txt"), "a") as f:
+                f.write("\r\n%s" % post_title)
+              ev.message.reply("Registred as low quality.")
+            else:
+              ev.message.reply("`lq` command not available for `%s`." % post_site)
+          elif(command == "good"):
+            if(post_site in site_filename):
+              with open(os.path.join("bayesian", site_filename[post_site]), "a") as f:
+                f.write("\r\n%s" % post_title)
+              ev.message.reply("Registred as good.")
+            else:
+              ev.message.reply("`good` command not available for `%s`." % post_site)
+      except:
+        pass
   if(ev.content.startswith("!!/alive?")):
     if(ev_room == charcoal_room_id):
       room.send_message(':'+str(ev.data["message_id"])+' Of course')
