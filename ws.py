@@ -41,8 +41,7 @@ roomm = wrapm.get_room(meta_tavern_room_id)
 specialrooms = [{ "sites": ["english.stackexchange.com"], "room": wrap.get_room("95"), "unwantedReasons": [] }, { "sites": ["askubuntu.com"], "room": wrap.get_room("201"), "unwantedReasons": ["All-caps title"] }]
 
 bayesian_testroom = wrap.get_room("17251")
-if len(sys.argv) >=2:
-  if sys.argv[1] == "first_start":
+if "first_start" in sys.argv:
     bayesian_testroom.send_message(s)
     room.send_message(s)
 #roomm.send_message(s)
