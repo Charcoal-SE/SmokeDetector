@@ -163,7 +163,7 @@ def watcher(ev,wrap2):
         if (msg_is_smokedetectors_message):
           command = message_parts[1]
           post_title = re.compile(r": \[(.+)\]").findall(msg_content)[0]
-          post_site = re.compile(r"\) on `((?:[a-z]+\.com)|(?:[a-z]+\.[a-z]+\.com))`").findall(msg_content)[-1]
+          post_site = re.compile(r"\) on `((?:[a-z]+\.(?:com|net))|(?:[a-z]+\.[a-z]+\.com))`").findall(msg_content)[-1]
           if(command == "bad"):
             with open(os.path.join("bayesian", "bad.txt"), "a") as f:
               f.write("\r\n%s" % post_title)
