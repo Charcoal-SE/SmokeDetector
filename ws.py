@@ -1,5 +1,6 @@
 #requires https://pypi.python.org/pypi/websocket-client/
 import websocket
+import sys
 import threading
 import json,os,sys,getpass,time
 from findspam import FindSpam
@@ -40,8 +41,10 @@ roomm = wrapm.get_room(meta_tavern_room_id)
 specialrooms = [{ "sites": ["english.stackexchange.com"], "room": wrap.get_room("95"), "unwantedReasons": [] }, { "sites": ["askubuntu.com"], "room": wrap.get_room("201"), "unwantedReasons": ["All-caps title"] }]
 
 bayesian_testroom = wrap.get_room("17251")
-print bayesian_testroom.send_message(s)
-room.send_message(s)
+if len(sys.argv) >=2:
+  if sys.argv[1] == "first_start":
+    bayesian_testroom.send_message(s)
+    room.send_message(s)
 #roomm.send_message(s)
 #Commented out because the Tavern folk don't really need to see when it starts
 
