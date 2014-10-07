@@ -93,7 +93,7 @@ def checkifspam(data):
     try:
       owner = d["ownerUrl"]
       users_file = open("users.txt", "a")
-      users_file.write(site + " " + owner + "\n")
+      users_file.write(site + " " + owner + " " + d["titleEncodedFancy"] + "\n")
       users_file.close()
     except Exception as e:
       print e
