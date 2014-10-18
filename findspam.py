@@ -6,7 +6,7 @@ class FindSpam:
   rules = [
    {'regex': u"(?i)\\b(baba(ji)?|nike|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|me2.do|black magic|bam2u|Neuro3X)\\b|ಌ", 'all': True,
     'sites': [], 'reason': "Bad keyword detected"},
-   {'regex': u"(?i)\\b(weight loss|muscles? build(ing)?)\\b", 'all': True,
+   {'regex': u"(?i)\\b(weight loss|muscles? build(ing)?|muscles? grow(th)?)\\b", 'all': True,
     'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword detected"},
    {'regex': u"\\d(?:_*\\d){9}|\\+?\\d_*\\d[\\s\\-]?(?:_*\\d){8,10}", 'all': True,
     'sites': ["patents.stackexchange.com"], 'reason': "Phone number detected", 'validation_method': 'checkphonenumbers'},
