@@ -12,6 +12,12 @@ import re
 import pickle
 import os.path
 
+deleted_so_do_not_post_again = []
+def load_deleted_posts():
+  if(os.path.isfile("deletedPosts.txt")):
+    with open("deletedPosts.txt", "r") as f:
+      deleted_so_do_not_post_again = pickle.load(f)
+
 parser=HTMLParser.HTMLParser()
 
 if("ChatExchangeU" in os.environ):
@@ -35,7 +41,6 @@ smokeDetector_user_id = { charcoal_room_id: "120914", meta_tavern_room_id: "2663
 site_filename = { "electronics.stackexchange.com" : "ElectronicsGood.txt", "gaming.stackexchange.com" : "GamingGood.txt", "german.stackexchange.com" : "GermanGood.txt",
                   "italian.stackexchange.com" : "ItalianGood.txt", "math.stackexchange.com" : "MathematicsGood.txt", "spanish.stackexchange.com" : "SpanishGood.txt",
                   "stats.stackexchange.com" : "StatsGood.txt" }
-deleted_so_do_not_post_again = []
 
 wrap=Client("stackexchange.com")
 wrap.login(username,password)
@@ -79,6 +84,12 @@ def bayesian_score(title):
     return output
   except:
     return 0.1
+
+def is_once_deleted(post_id, site_name):
+  if((str(post_id), site_name) in deleted_so_do_not_post_again):
+    return True
+  else:
+    return False
 
 def checkifspam(data):
   d=json.loads(json.loads(data)["data"])
@@ -125,17 +136,6 @@ def store_site_and_post_id(site_post_id_tuple):
   deleted_so_do_not_post_again.append(site_post_id_tuple)
   with open("deletedPosts.txt", "w") as f:
     pickle.dump(deleted_so_do_not_post_again, f)
-
-def load_deleted_posts():
-  if(os.path.isfile("deletedPosts.txt")):
-    with open("deletedPosts.txt", "r") as f:
-      deleted_so_do_not_post_again = pickle.load(f)
-
-def is_once_deleted(post_id, site_name):
-  if((str(post_id), site_name) in deleted_so_do_not_post_again):
-    return True
-  else:
-    return False
 
 def handlespam(data):
   try:
