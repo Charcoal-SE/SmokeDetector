@@ -13,7 +13,7 @@ class FindSpam:
    {'regex': u"(?i)\\b(nigg?(a|er)|asshole|crap|fag|fuck(ing?)?|shit|whore)s?\\b", 'all': True,
     'sites': [], 'reason': "Offensive title detected",'insensitive':True},
    {'regex': u"^(?=.*[A-Z])[^a-z]*$", 'all': True, 'sites': [], 'reason': "All-caps title"},
-   {'regex': u"https?://[a-zA-Z0-9_.-]+\\.[a-zA-Z]{2,4}(/[a-zA-Z0-9_/?=.-])?", 'all': True, 'sites': [], 'reason': "URL in title"}
+   {'regex': u"https?://[a-zA-Z0-9_.-]+\\.[a-zA-Z]{2,4}(/[a-zA-Z0-9_/?=.-])?", 'all': True, 'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com"], 'reason': "URL in title"}
   ]
 
   @staticmethod
