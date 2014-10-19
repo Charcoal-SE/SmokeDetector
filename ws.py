@@ -47,7 +47,8 @@ wrap.login(username,password)
 wrapm=Client("meta.stackexchange.com")
 wrapm.login(username,password)
 commit = os.popen("git log --pretty=format:'%h' -n 1").read()
-s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started at [rev " + commit + "](https://github.com/Charcoal-SE/SmokeDetector/commit/"+ commit +") (owned by Undo)"
+commit_with_author = os.popen("git log --pretty=format:'%h (%cn: *%s*)' -n 1").read()
+s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started at [rev " + commit_with_author + "](https://github.com/Charcoal-SE/SmokeDetector/commit/"+ commit +") (owned by Undo)"
 room = wrap.get_room(charcoal_room_id)
 roomm = wrapm.get_room(meta_tavern_room_id)
 
@@ -233,7 +234,7 @@ def watcher(ev,wrap2):
     elif(ev_room == meta_tavern_room_id):
       roomm.send_message(':'+str(ev.data["message_id"]) + ' ' + random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee', 'watching this endless list of new questions *never* gets boring', 'kinda sorta']))
   if(ev.content.startswith("!!/rev?")):
-      postMessageInRoom(ev_room, ':'+str(ev.data["message_id"])+' [' + commit + '](https://github.com/Charcoal-SE/SmokeDetector/commit/'+ commit +')')
+      postMessageInRoom(ev_room, ':'+str(ev.data["message_id"])+' [' + commit_with_author + '](https://github.com/Charcoal-SE/SmokeDetector/commit/'+ commit +')')
   if(ev.content.startswith("!!/reboot")):
     if(isPrivileged(ev_room, ev_user_id)):
       postMessageInRoom(ev_room, "Goodbye, cruel world")
