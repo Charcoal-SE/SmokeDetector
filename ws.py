@@ -184,7 +184,7 @@ def watcher(ev,wrap2):
   ev_user_id = str(ev.data["user_id"])
   message_parts = ev.message.content_source.split(" ")
   if(re.compile(":[0-9]+").search(message_parts[0])):
-    if((lower(message_parts[1]) == "false" or lower(message_parts[1]) == "fp") and isPrivileged(ev_room, ev_user_id)):
+    if((message_parts[1].lower() == "false" or message_parts[1].lower() == "fp") and isPrivileged(ev_room, ev_user_id)):
       try:
         msg_id = int(message_parts[0][1:])
         if(ev_room == charcoal_room_id):
