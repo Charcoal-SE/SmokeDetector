@@ -213,7 +213,7 @@ def watcher(ev,wrap2):
             msg_to_delete.delete()
       except:
         pass # couldn't delete message
-    if((lower(message_parts[1]) == "true" or lower(message_parts[1]) == "tp") and isPrivileged(ev_room, ev_user_id)):
+    if((message_parts[1].lower() == "true" or message_parts[1].lower() == "tp") and isPrivileged(ev_room, ev_user_id)):
       try:
         msg_id = int(message_parts[0][1:])
         msg_content = None
