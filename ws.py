@@ -221,7 +221,7 @@ def watcher(ev,wrap2):
           msg_true_positive = wrap.get_message(msg_id)
           if(str(msg_true_positive.owner.id) == smokeDetector_user_id[charcoal_room_id]):
             msg_content = msg_true_positive.content_source
-        elif(ev_room = meta_tavern_room_id):
+        elif(ev_room == meta_tavern_room_id):
           msg_true_positive = wrapm.get_message(msg_id)
           if(str(msg_true_positive.owner.id) == smokeDetector_user_id[meta_tavern_room_id]):
             msg_content = msg_true_positive.content_source
