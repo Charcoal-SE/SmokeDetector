@@ -233,7 +233,7 @@ def watcher(ev,wrap2):
     elif(ev_room == meta_tavern_room_id):
       roomm.send_message(':'+str(ev.data["message_id"]) + ' ' + random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee', 'watching this endless list of new questions *never* gets boring', 'kinda sorta']))
   if(ev.content.startswith("!!/rev?")):
-      postMessageInRoom(ev_room, ':'+str(ev.data["message_id"])+' '+os.popen("git log --pretty=format:'%h' -n 1").read())
+      postMessageInRoom(ev_room, ':'+str(ev.data["message_id"])+' [' + commit + '](https://github.com/Charcoal-SE/SmokeDetector/commit/'+ commit +')')
   if(ev.content.startswith("!!/reboot")):
     if(isPrivileged(ev_room, ev_user_id)):
       postMessageInRoom(ev_room, "Goodbye, cruel world")
