@@ -46,7 +46,8 @@ wrap=Client("stackexchange.com")
 wrap.login(username,password)
 wrapm=Client("meta.stackexchange.com")
 wrapm.login(username,password)
-s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started at rev " + os.popen("git log --pretty=format:'%h' -n 1").read() + " (owned by Undo)"
+commit = os.popen("git log --pretty=format:'%h' -n 1").read()
+s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started at [rev " + commit + "](https://github.com/Charcoal-SE/SmokeDetector/commit/"+ commit +") (owned by Undo)"
 room = wrap.get_room(charcoal_room_id)
 roomm = wrapm.get_room(meta_tavern_room_id)
 
