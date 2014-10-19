@@ -178,6 +178,7 @@ def watcher(ev,wrap2):
             msg_content = msg_to_delete.content_source
             site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
             store_site_and_post_id(site_post_id)
+            ev.message.reply("Registered as false positive.")
             msg_to_delete.delete()
         elif(ev_room == meta_tavern_room_id):
           msg_to_delete = wrapm.get_message(msg_id)
@@ -185,6 +186,7 @@ def watcher(ev,wrap2):
             msg_content = msg_to_delete.content_source
             site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
             store_site_and_post_id(site_post_id)
+            ev.message.reply("Registered as false positive.")
             msg_to_delete.delete()
       except:
         pass # couldn't delete message
