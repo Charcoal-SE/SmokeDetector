@@ -12,11 +12,11 @@ import re
 import pickle
 import os.path
 
-deleted_so_do_not_post_again = []
-def load_deleted_posts():
-  if(os.path.isfile("deletedPosts.txt")):
-    with open("deletedPosts.txt", "r") as f:
-      deleted_so_do_not_post_again = pickle.load(f)
+false_positives = []
+def load_false_positives():
+  if(os.path.isfile("falsePositives.txt")):
+    with open("falsePositives.txt", "r") as f:
+      false_positives = pickle.load(f)
 
 parser=HTMLParser.HTMLParser()
 
@@ -30,7 +30,7 @@ if("ChatExchangeP" in os.environ):
 else:
   password=getpass.getpass("Password: ")
 
-load_deleted_posts()
+load_false_positives()
 
 latest_questions = []
 blockedTime = 0
@@ -87,8 +87,8 @@ def bayesian_score(title):
   except:
     return 0.1
 
-def is_once_deleted(post_id, site_name):
-  if((str(post_id), site_name) in deleted_so_do_not_post_again):
+def is_false_positive(post_id, site_name):
+  if((str(post_id), site_name) in false_positives):
     return True
   else:
     return False
@@ -107,7 +107,7 @@ def checkifspam(data):
   test=FindSpam.testpost(s,site) 
   if (0<len(test)):
     post_id = d["id"]
-    if(has_already_been_posted(site, post_id, s) and not is_once_deleted(post_id, site)):
+    if(has_already_been_posted(site, post_id, s) and not is_false_positive(post_id, site)):
       return False # Don't repost. Reddit will hate you.
     append_to_latest_questions(site, post_id, s)
     try:
@@ -133,11 +133,11 @@ def fetch_post_id_and_site_from_msg_content(content):
     return None # message is not a report
 
 def store_site_and_post_id(site_post_id_tuple):
-  if(site_post_id_tuple is None or site_post_id_tuple in deleted_so_do_not_post_again):
+  if(site_post_id_tuple is None or site_post_id_tuple in false_positives):
     return
-  deleted_so_do_not_post_again.append(site_post_id_tuple)
-  with open("deletedPosts.txt", "w") as f:
-    pickle.dump(deleted_so_do_not_post_again, f)
+  false_positives.append(site_post_id_tuple)
+  with open("falsePositives.txt", "w") as f:
+    pickle.dump(false_positives, f)
 
 def handlespam(data):
   try:
@@ -169,10 +169,9 @@ def watcher(ev,wrap2):
   ev_user_id = str(ev.data["user_id"])
   message_parts = ev.message.content_source.split(" ")
   if(re.compile(":[0-9]+").search(message_parts[0])):
-    if(message_parts[1] == "delete" and isPrivileged(ev_room, ev_user_id)):
+    if(message_parts[1] == "false" and isPrivileged(ev_room, ev_user_id)):
       try:
         msg_id = int(message_parts[0][1:])
-        msg_content = ""
         if(ev_room == charcoal_room_id):
           msg_to_delete = wrap.get_message(msg_id)
           if(str(msg_to_delete.owner.id) == smokeDetector_user_id[charcoal_room_id]):
@@ -186,6 +185,19 @@ def watcher(ev,wrap2):
             msg_content = msg_to_delete.content_source
             site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
             store_site_and_post_id(site_post_id)
+            msg_to_delete.delete()
+      except:
+        pass # couldn't delete message
+    if(message_parts[1] == "delete" and isPrivileged(ev_room, ev_user_id)):
+      try:
+        msg_id = int(message_parts[0][1:])
+        if(ev_room == charcoal_room_id):
+          msg_to_delete = wrap.get_message(msg_id)
+          if(str(msg_to_delete.owner.id) == smokeDetector_user_id[charcoal_room_id]):
+            msg_to_delete.delete()
+        elif(ev_room == meta_tavern_room_id):
+          msg_to_delete = wrapm.get_message(msg_id)
+          if(str(msg_to_delete.owner.id) == smokeDetector_user_id[meta_tavern_room_id]):
             msg_to_delete.delete()
       except:
         pass # couldn't delete message
