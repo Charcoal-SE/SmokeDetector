@@ -206,10 +206,10 @@ def watcher(ev,wrap2):
             site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
             store_site_and_post_id(site_post_id)
             learned = bayesian_learn_title(msg_content, "good")
-            if learned == True:
+            if(learned):
               ev.message.reply("Registered as false positive and added title to Bayesian doctype 'good'.")
             else:
-              ev.message.reply(str(learned))
+              ev.message.reply("Registered as false positive, but could not add the title to the Bayesian doctype 'good'.")
             msg_to_delete.delete()
       except:
         pass # couldn't delete message
