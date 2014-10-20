@@ -141,11 +141,11 @@ def store_site_and_post_id(site_post_id_tuple):
     pickle.dump(false_positives, f)
 
 def fetch_title_from_msg_content(content):
-  return re.compile(r": \[(.+)\]").findall(msg_content)[0]
+  return re.compile(r": \[(.+)\]").findall(content)[0]
 
 def bayesian_learn_title(message_content, doctype):
   try:
-    bayesian_learn = bayesian.Learn()
+    bayesian_learn = Learn()
     bayesian_learn.file_contents = fetch_title_from_msg_content(message_content)
     bayesian_learn.count = 1
     bayesian_learn.doc_type = doctype
@@ -206,10 +206,10 @@ def watcher(ev,wrap2):
             site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
             store_site_and_post_id(site_post_id)
             learned = bayesian_learn_title(msg_content, "good")
-            if learned:
+            if learned == True:
               ev.message.reply("Registered as false positive and added title to Bayesian doctype 'good'.")
             else:
-              ev.message.reply("Registered as false positive, but could not add the title to the Bayesian doctype 'good'.")
+              ev.message.reply(str(learned))
             msg_to_delete.delete()
       except:
         pass # couldn't delete message
