@@ -2,7 +2,7 @@
 import websocket
 import sys
 import threading
-import json,os,sys,getpass,time
+import json,os,getpass,time
 from findspam import FindSpam
 from ChatExchange.chatexchange.client import *
 import HTMLParser
@@ -16,8 +16,8 @@ import os.path
 false_positives = []
 def load_false_positives():
     if(os.path.isfile("falsePositives.txt")):
-    with open("falsePositives.txt", "r") as f:
-        false_positives = pickle.load(f)
+        with open("falsePositives.txt", "r") as f:
+            false_positives = pickle.load(f)
 
 parser=HTMLParser.HTMLParser()
 
