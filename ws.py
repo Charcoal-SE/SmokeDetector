@@ -100,7 +100,8 @@ def is_false_positive(post_id, site_name):
 def checkifspam(data):
     d=json.loads(json.loads(data)["data"])
     s= d["titleEncodedFancy"]
-    poster = d["owner"]
+    print(d.keys())
+    poster = d["ownerDisplayName"]
     print time.strftime("%Y-%m-%d %H:%M:%S"),parser.unescape(s).encode("ascii",errors="replace")
     quality_score = bayesian_score(s)
     print quality_score
@@ -162,7 +163,7 @@ def handlespam(data):
     try:
         d=json.loads(json.loads(data)["data"])
         title = d["titleEncodedFancy"]
-        poster = d["owner"]
+        poster = d["ownerDisplayName"]
         reason=", ".join(FindSpam.testpost(title,poster,d["siteBaseHostAddress"]))
         titleToPost = parser.unescape(re.sub(r"([_*\\`\[\]])", r"\\\1", title)).strip()
         s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by `%s` on `%s`" % (reason,titleToPost,d["url"],poster,d["siteBaseHostAddress"])
