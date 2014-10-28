@@ -251,12 +251,12 @@ def watcher(ev,wrap2):
                         msg_to_delete.delete()
             except:
                 pass # couldn't delete message
-    if(ev.content.startswith("!!/alive?")):
+    if(ev.content.startswith("!!/alive")):
         if(ev_room == charcoal_room_id):
             room.send_message(':'+str(ev.data["message_id"])+' Of course')
         elif(ev_room == meta_tavern_room_id):
             roomm.send_message(':'+str(ev.data["message_id"]) + ' ' + random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee', 'watching this endless list of new questions *never* gets boring', 'kinda sorta']))
-    if(ev.content.startswith("!!/rev?")):
+    if(ev.content.startswith("!!/rev")):
             postMessageInRoom(ev_room, ':'+str(ev.data["message_id"])+' [' + commit_with_author + '](https://github.com/Charcoal-SE/SmokeDetector/commit/'+ commit +')')
     if(ev.content.startswith("!!/status")):
             postMessageInRoom(ev_room, ':'+str(ev.data["message_id"])+' Running since %s UTC' % startup_utc)
