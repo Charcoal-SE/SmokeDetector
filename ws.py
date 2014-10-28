@@ -100,7 +100,6 @@ def is_false_positive(post_id, site_name):
 def checkifspam(data):
     d=json.loads(json.loads(data)["data"])
     s= d["titleEncodedFancy"]
-    print(d.keys())
     poster = d["ownerDisplayName"]
     print time.strftime("%Y-%m-%d %H:%M:%S"),parser.unescape(s).encode("ascii",errors="replace")
     quality_score = bayesian_score(s)
