@@ -15,8 +15,7 @@ import os.path
 from datetime import datetime
 
 false_positives = []
-startup_utc = datetime.utcnow()
-startup_utc_str = "%i:%i:%i" % (startup_utc.hour, startup_utc.minute, startup_utc.second)
+startup_utc = datetime.utcnow().strftime("%H:%M:%S")
 
 def load_false_positives():
     if(os.path.isfile("falsePositives.txt")):
@@ -258,7 +257,7 @@ def watcher(ev,wrap2):
     if(ev.content.startswith("!!/rev?")):
             postMessageInRoom(ev_room, ':'+str(ev.data["message_id"])+' [' + commit_with_author + '](https://github.com/Charcoal-SE/SmokeDetector/commit/'+ commit +')')
     if(ev.content.startswith("!!/status")):
-            postMessageInRoom(ev_room, ':'+str(ev.data["message_id"])+' Running since %s UTC' % startup_utc_str)
+            postMessageInRoom(ev_room, ':'+str(ev.data["message_id"])+' Running since %s UTC' % startup_utc)
     if(ev.content.startswith("!!/reboot")):
         if(isPrivileged(ev_room, ev_user_id)):
             postMessageInRoom(ev_room, "Goodbye, cruel world")
