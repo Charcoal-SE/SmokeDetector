@@ -5,29 +5,37 @@ import phonenumbers
 class FindSpam:
     rules = [
      {'regex': u"(?i)(baba(ji)?|nike|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|me2.do|black magic|bam2u|Neuro3X|Xtreme Antler)|ಌ", 'all': True,
-        'sites': [], 'reason': "Bad keyword detected"},
+        'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'username': True},
      {'regex': u"(?i)(weight loss|muscles? build(ing)?|muscles? grow(th)?)", 'all': True,
-        'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword detected"},
+        'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'username': True},
      {'regex': u"\\d(?:_*\\d){9}|\\+?\\d_*\\d[\\s\\-]?(?:_*\\d){8,10}", 'all': True,
-        'sites': ["patents.stackexchange.com"], 'reason': "Phone number detected", 'validation_method': 'checkphonenumbers'},
+        'sites': ["patents.stackexchange.com"], 'reason': "Phone number detected", 'validation_method': 'checkphonenumbers', 'title': True, 'username': False},
      {'regex': u"(?i)(nigg?(a|er)|asshole|crap|fag|fuck(ing?)?|shit|whore)s?", 'all': True,
-        'sites': [], 'reason': "Offensive title detected",'insensitive':True},
-     {'regex': u"^(?=.*[A-Z])[^a-z]*$", 'all': True, 'sites': [], 'reason': "All-caps title"},
-     {'regex': u"https?://[a-zA-Z0-9_.-]+\\.[a-zA-Z]{2,4}(/[a-zA-Z0-9_/?=.-])?", 'all': True, 'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com"], 'reason': "URL in title"}
+        'sites': [], 'reason': "Offensive {} detected",'insensitive':True, 'title': True, 'username': False},
+     {'regex': u"^(?=.*[A-Z])[^a-z]*$", 'all': True, 'sites': [], 'reason': "All-caps title", 'title': True, 'username': False},
+     {'regex': u"https?://[a-zA-Z0-9_.-]+\\.[a-zA-Z]{2,4}(/[a-zA-Z0-9_/?=.-])?", 'all': True,
+        'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com"], 'reason': "URL in title", 'title': True, 'username': False}
     ]
 
     @staticmethod
-    def testpost(title, site):
+    def testpost(title, user_name, site):
         result = [];
         for rule in FindSpam.rules:
             if rule['all'] != (site in rule['sites']):
-                matched = re.compile(rule['regex'], re.UNICODE).findall(title)
-                if matched:
+                matched_title = re.compile(rule['regex'], re.UNICODE).findall(title)
+                matched_username = re.compile(rule['regex'], re.UNICODE).findall(user_name)
+                if matched_title and rule['title']:
                     try:
-                        if getattr(FindSpam, "%s" % rule['validation_method'])(matched):
+                        if getattr(FindSpam, "%s" % rule['validation_method'])(matched_title):
                             result.append(rule['reason'])
                     except KeyError:                # There is no special logic for this rule
-                        result.append(rule['reason'])
+                        result.append(rule['reason'].replace("{}", "title"))
+                if matched_username and rule['username']:
+                    try:
+                        if getattr(FindSpam, "%s" % rule['validation_method'])(matched_username):
+                            result.append(rule['reason'])
+                    except KeyError:                # There is no special logic for this rule
+                        result.append(rule['reason'].replace("{}", "username"))                 
         return result
 
     @staticmethod

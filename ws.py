@@ -100,6 +100,7 @@ def is_false_positive(post_id, site_name):
 def checkifspam(data):
     d=json.loads(json.loads(data)["data"])
     s= d["titleEncodedFancy"]
+    poster = d["owner"]
     print time.strftime("%Y-%m-%d %H:%M:%S"),parser.unescape(s).encode("ascii",errors="replace")
     quality_score = bayesian_score(s)
     print quality_score
@@ -108,7 +109,7 @@ def checkifspam(data):
     site = d["siteBaseHostAddress"]
     site=site.encode("ascii",errors="replace")
     sys.stdout.flush()
-    test=FindSpam.testpost(s,site) 
+    test=FindSpam.testpost(s,poster,site) 
     if (0<len(test)):
         post_id = d["id"]
         if(has_already_been_posted(site, post_id, s) or is_false_positive(post_id, site)):
@@ -125,7 +126,7 @@ def checkifspam(data):
     return False
 
 def fetch_post_id_and_site_from_msg_content(content):
-    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w ]+: \[.+]\(http:\/\/[\w.]+\/questions\/(\d+)\/.+\) on `([\w.]+)`$"
+    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w ]+: \[.+]\(http:\/\/[\w.]+\/questions\/(\d+)\/.+\) by `.+` on `([\w.]+)`$"
     m = re.compile(search_regex).search(content)
     if m is None:
         return None
@@ -161,9 +162,10 @@ def handlespam(data):
     try:
         d=json.loads(json.loads(data)["data"])
         title = d["titleEncodedFancy"]
-        reason=", ".join(FindSpam.testpost(title,d["siteBaseHostAddress"]))
+        poster = d["owner"]
+        reason=", ".join(FindSpam.testpost(title,poster,d["siteBaseHostAddress"]))
         titleToPost = parser.unescape(re.sub(r"([_*\\`\[\]])", r"\\\1", title)).strip()
-        s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) on `%s`" % (reason,titleToPost,d["url"],d["siteBaseHostAddress"])
+        s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by `%s` on `%s`" % (reason,titleToPost,d["url"],poster,d["siteBaseHostAddress"])
         print parser.unescape(s).encode('ascii',errors='replace')
         if time.time() >= blockedTime:
             room.send_message(s)
