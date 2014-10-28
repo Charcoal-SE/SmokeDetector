@@ -4,13 +4,13 @@ import phonenumbers
 
 class FindSpam:
     rules = [
-     {'regex': u"(?i)(baba(ji)?|nike|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|me2.do|black magic|bam2u|Neuro3X|Xtreme Antler)|ಌ", 'all': True,
+     {'regex': u"(?i)\\b(baba(ji)?|nike|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|me2.do|black magic|bam2u|Neuro3X|Xtreme Antler)\\b|ಌ", 'all': True,
         'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'username': True},
-     {'regex': u"(?i)(weight loss|muscles? build(ing)?|muscles? grow(th)?)", 'all': True,
+     {'regex': u"(?i)\\b(weight loss|muscles? build(ing)?|muscles? grow(th)?)\\b", 'all': True,
         'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'username': True},
      {'regex': u"\\d(?:_*\\d){9}|\\+?\\d_*\\d[\\s\\-]?(?:_*\\d){8,10}", 'all': True,
         'sites': ["patents.stackexchange.com"], 'reason': "Phone number detected", 'validation_method': 'checkphonenumbers', 'title': True, 'username': False},
-     {'regex': u"(?i)(nigg?(a|er)|asshole|crap|fag|fuck(ing?)?|shit|whore)s?", 'all': True,
+     {'regex': u"(?i)\\b(nigg?(a|er)|asshole|crap|fag|fuck(ing?)?|shit|whore)s?\\b", 'all': True,
         'sites': [], 'reason': "Offensive {} detected",'insensitive':True, 'title': True, 'username': False},
      {'regex': u"^(?=.*[A-Z])[^a-z]*$", 'all': True, 'sites': [], 'reason': "All-caps title", 'title': True, 'username': False},
      {'regex': u"https?://[a-zA-Z0-9_.-]+\\.[a-zA-Z]{2,4}(/[a-zA-Z0-9_/?=.-])?", 'all': True,
