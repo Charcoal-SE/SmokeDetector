@@ -325,20 +325,20 @@ def watcher(ev,wrap2):
                 pass # couldn't delete message
     if(ev.content.startswith("!!/alive")):
         if(ev_room == charcoal_room_id):
-            room.send_message(':'+str(ev.data["message_id"])+' Of course')
+            ev.message.reply('Of course')
         elif(ev_room == meta_tavern_room_id):
-            roomm.send_message(':'+str(ev.data["message_id"]) + ' ' + random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee', 'watching this endless list of new questions *never* gets boring', 'kinda sorta']))
+            ev.message.reply(random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee', 'watching this endless list of new questions *never* gets boring', 'kinda sorta']))
     if(ev.content.startswith("!!/rev")):
-            postMessageInRoom(ev_room, ':'+str(ev.data["message_id"])+' [' + commit_with_author + '](https://github.com/Charcoal-SE/SmokeDetector/commit/'+ commit +')')
+            ev.message.reply('[' + commit_with_author + '](https://github.com/Charcoal-SE/SmokeDetector/commit/'+ commit +')')
     if(ev.content.startswith("!!/status")):
-            postMessageInRoom(ev_room, ':'+str(ev.data["message_id"])+' Running since %s UTC' % startup_utc)
+            ev.message.reply('Running since %s UTC' % startup_utc)
     if(ev.content.startswith("!!/reboot")):
         if(isPrivileged(ev_room, ev_user_id)):
             postMessageInRoom(ev_room, "Goodbye, cruel world")
             os._exit(1)
     if(ev.content.startswith("!!/block")):
         if(isPrivileged(ev_room, ev_user_id)):
-            postMessageInRoom(ev_room, "blocked")
+            ev.message.reply("blocked")
             timeToBlock = ev.content[9:].strip()
             timeToBlock = int(timeToBlock) if timeToBlock else 0
             if (0 < timeToBlock < 14400):
@@ -348,7 +348,7 @@ def watcher(ev,wrap2):
     if(ev.content.startswith("!!/unblock")):
         if(isPrivileged(ev_room, ev_user_id)):
             blockedTime = time.time()
-            postMessageInRoom(ev_room, "unblocked")
+            ev.message.reply("unblocked")
 
 def isPrivileged(room_id_str, user_id_str):
     return room_id_str in privileged_users and user_id_str in privileged_users[room_id_str]
