@@ -15,12 +15,24 @@ import os.path
 from datetime import datetime
 
 false_positives = []
+whitelisted_users = []
+blacklisted_users = []
 startup_utc = datetime.utcnow().strftime("%H:%M:%S")
 
 def load_false_positives():
     if(os.path.isfile("falsePositives.txt")):
         with open("falsePositives.txt", "r") as f:
             false_positives = pickle.load(f)
+
+def load_whitelisted_users():
+    if(os.path.isfile("whitelistedUsers.txt")):
+        with open("whitelistedUsers.txt", "r") as f:
+            whitelisted_users = pickle.load(f)
+
+def load_blacklisted_users():
+    if(os.path.isfile("blacklistedUsers.txt")):
+        with open("blacklistedUsers.txt", "r") as f:
+            blacklisted_users = pickle.load(f)
 
 parser=HTMLParser.HTMLParser()
 
@@ -38,10 +50,13 @@ load_false_positives()
 
 latest_questions = []
 blockedTime = 0
-charcoal_room_id = "11540"
-meta_tavern_room_id = "89"
+#charcoal_room_id = "11540"
+#meta_tavern_room_id = "89"
+charcoal_room_id = "1"
+meta_tavern_room_id = "651"
 privileged_users = { charcoal_room_id: ["66258", "31768","103081","73046","88521","59776"], meta_tavern_room_id: ["244519","244382","194047","158100","178438","237685","215468","229438","180276", "161974", "244382", "186281", "266094"] }
-smokeDetector_user_id = { charcoal_room_id: "120914", meta_tavern_room_id: "266345" }
+#smokeDetector_user_id = { charcoal_room_id: "120914", meta_tavern_room_id: "266345" }
+smokeDetector_user_id = { charcoal_room_id: "118010", meta_tavern_room_id: "261079"}
 site_filename = { "electronics.stackexchange.com" : "ElectronicsGood.txt", "gaming.stackexchange.com" : "GamingGood.txt", "german.stackexchange.com" : "GermanGood.txt",
                                     "italian.stackexchange.com" : "ItalianGood.txt", "math.stackexchange.com" : "MathematicsGood.txt", "spanish.stackexchange.com" : "SpanishGood.txt",
                                     "stats.stackexchange.com" : "StatsGood.txt" }
@@ -70,6 +85,28 @@ def restart_automatically(time_in_seconds):
     os._exit(1)
 
 threading.Thread(target=restart_automatically,args=(3600,)).start()
+
+def get_user_from_url(url):
+    m = re.compile(r"https?://([\w.]+)/users/(\d+)/[\w-]/?").search(url)
+    site = m.group(1)
+    user_id = m.group(2)
+    return (user_id, site)
+
+def is_whitelisted_user(user):
+    return user in whitelisted_users
+
+def is_blacklisted_user(user):
+    return user in blacklisted_users
+
+def add_whitelisted_user(user):
+    whitelisted_users.append(user)
+    with open("whitelistedUsers.txt", "w") as f:
+        pickle.dump(whitelisted_users, f)
+
+def add_blacklisted_user(user):
+    blacklisted_users.append(user)
+    with open("blacklistedUsers.txt", "w") as f:
+        pickle.dump(blacklisted_users, f)
 
 def append_to_latest_questions(host, post_id, title):
     latest_questions.insert(0, (host, post_id, title))
@@ -109,10 +146,15 @@ def checkifspam(data):
     site = d["siteBaseHostAddress"]
     site=site.encode("ascii",errors="replace")
     sys.stdout.flush()
-    test=FindSpam.testpost(s,poster,site) 
+    test=FindSpam.testpost(s,poster,site)
+    if(is_blacklisted_user(get_user_from_url(d["ownerUrl"]))):
+        if(len(test) == 0):
+            test = "Blacklisted user"
+        else:
+            test += ", Blacklisted user"
     if (0<len(test)):
         post_id = d["id"]
-        if(has_already_been_posted(site, post_id, s) or is_false_positive(post_id, site)):
+        if(has_already_been_posted(site, post_id, s) or is_false_positive(post_id, site) or is_whitelisted_user(get_user_from_url(d["ownerUrl"]))):
             return False # Don't repost. Reddit will hate you.
         append_to_latest_questions(site, post_id, s)
         try:
@@ -126,7 +168,7 @@ def checkifspam(data):
     return False
 
 def fetch_post_id_and_site_from_msg_content(content):
-    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w ]+: \[.+]\(http:\/\/[\w.]+\/questions\/(\d+)\/.+\) by `.+` on `([\w.]+)`$"
+    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w ]+: \[.+]\(http:\/\/[\w.]+\/questions\/(\d+)\/.+\) by \[.+\]\((?:.+)\) on `([\w.]+)`$"
     m = re.compile(search_regex).search(content)
     if m is None:
         return None
@@ -136,6 +178,17 @@ def fetch_post_id_and_site_from_msg_content(content):
         return (post_id, site_name)
     except:
         return None # message is not a report
+
+def fetch_owner_url_from_msg_content(content):
+    search_regex = "^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w ]+: \[.+]\(http:\/\/[\w.]+\/questions\/\d+\/.+\) by \[.+\]\((.+)\) on `[\w.]+`$"
+    m = re.compile(search_regex).search(content)
+    if m is None:
+        return None
+    try:
+        owner_url = m.group(1)
+        return owner_url
+    except:
+        return None
 
 def store_site_and_post_id(site_post_id_tuple):
     if(site_post_id_tuple is None or site_post_id_tuple in false_positives):
@@ -165,7 +218,7 @@ def handlespam(data):
         poster = d["ownerDisplayName"]
         reason=", ".join(FindSpam.testpost(title,poster,d["siteBaseHostAddress"]))
         titleToPost = parser.unescape(re.sub(r"([_*\\`\[\]])", r"\\\1", title)).strip()
-        s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by `%s` on `%s`" % (reason,titleToPost,d["url"],poster,d["siteBaseHostAddress"])
+        s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % (reason,titleToPost,d["url"],poster,d["ownerUrl"],d["siteBaseHostAddress"])
         print parser.unescape(s).encode('ascii',errors='replace')
         if time.time() >= blockedTime:
             room.send_message(s)
@@ -189,7 +242,7 @@ def watcher(ev,wrap2):
     ev_user_id = str(ev.data["user_id"])
     message_parts = ev.message.content_source.split(" ")
     if(re.compile(":[0-9]+").search(message_parts[0])):
-        if((message_parts[1].lower() == "false" or message_parts[1].lower() == "fp") and isPrivileged(ev_room, ev_user_id)):
+        if((message_parts[1].lower().startswith("false") or message_parts[1].lower().startswith("fp")) and isPrivileged(ev_room, ev_user_id)):
             try:
                 msg_id = int(message_parts[0][1:])
                 if(ev_room == charcoal_room_id):
@@ -198,11 +251,23 @@ def watcher(ev,wrap2):
                         msg_content = msg_to_delete.content_source
                         site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
                         store_site_and_post_id(site_post_id)
+                        user_added = False
+                        if(message_parts[1].lower().startswith("falseu") or message_parts[1].lower().startswith("fpu")):
+                            url_from_msg = fetch_owner_url_from_msg_content(msg_content)
+                            user = get_user_from_url(url_from_msg)
+                            add_whitelisted_user(user)
+                            user_added = True
                         learned = bayesian_learn_title(msg_content, "good")
                         if learned:
-                            ev.message.reply("Registered as false positive and added title to Bayesian doctype 'good'.")
+                            if user_added:
+                                ev.message.reply("Registered as false positive, added title to Bayesian doctype 'good', whitelisted user.")
+                            else:
+                                ev.message.reply("Registered as false positive and added title to Bayesian doctype 'good'.")
                         else:
-                            ev.message.reply("Registered as false positive, but could not add the title to the Bayesian doctype 'good'.")
+                            if user_added:
+                                ev.message.reply("Registered as false positive and whitelisted user, but could not add the title to the Bayesian doctype 'good'.")
+                            else:
+                                ev.message.reply("Registered as false positive, but could not add the title to the Bayesian doctype 'good'.")
                         msg_to_delete.delete()
                 elif(ev_room == meta_tavern_room_id):
                     msg_to_delete = wrapm.get_message(msg_id)
@@ -210,15 +275,27 @@ def watcher(ev,wrap2):
                         msg_content = msg_to_delete.content_source
                         site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
                         store_site_and_post_id(site_post_id)
+                        user_added = False
+                        if(message_parts[1].lower().startswith("falseu") or message_parts[1].lower().startswith("fpu")):
+                            url_from_msg = fetch_owner_url_from_msg_content(msg_content)
+                            user = get_user_from_url(url_from_msg)
+                            add_whitelisted_user(user)
+                            user_added = True
                         learned = bayesian_learn_title(msg_content, "good")
-                        if(learned):
-                            ev.message.reply("Registered as false positive and added title to Bayesian doctype 'good'.")
+                        if learned:
+                            if user_added:
+                                ev.message.reply("Registered as false positive, added title to Bayesian doctype 'good', whitelisted user.")
+                            else:
+                                ev.message.reply("Registered as false positive and added title to Bayesian doctype 'good'.")
                         else:
-                            ev.message.reply("Registered as false positive, but could not add the title to the Bayesian doctype 'good'.")
+                            if user_added:
+                                ev.message.reply("Registered as false positive and whitelisted user, but could not add the title to the Bayesian doctype 'good'.")
+                            else:
+                                ev.message.reply("Registered as false positive, but could not add the title to the Bayesian doctype 'good'.")
                         msg_to_delete.delete()
             except:
                 pass # couldn't delete message
-        if((message_parts[1].lower() == "true" or message_parts[1].lower() == "tp") and isPrivileged(ev_room, ev_user_id)):
+        if((message_parts[1].lower().startswith("true") or message_parts[1].lower().startswith("tp")) and isPrivileged(ev_room, ev_user_id)):
             try:
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
@@ -232,10 +309,22 @@ def watcher(ev,wrap2):
                         msg_content = msg_true_positive.content_source
                 if(msg_content is not None):
                     learned = bayesian_learn_title(msg_content, "bad")
+                    user_added = False
+                    if(message_parts[1].lower().startswith("trueu") or message_parts[1].lower().startswith("tpu")):
+                        url_from_msg = fetch_owner_url_from_msg_content(msg_content)
+                        user = get_user_from_url(url_from_msg)
+                        add_blacklisted_user(user)
+                        user_added = True
                     if(learned):
-                        ev.message.reply("Registered as true positive: added title to Bayesian doctype 'bad'.")
+                        if user_added:
+                            ev.message.reply("Registered as true positive: added title to Bayesian doctype 'bad' and blacklisted user.")
+                        else:
+                            ev.message.reply("Registered as true positive: added title to Bayesian doctype 'bad'.")   
                     else:
-                        ev.message.reply("Something went wrong when registering title as true positive.")
+                        if user_added:
+                            ev.message.reply("User blacklisted, but something went wrong when registering title as true positive.")
+                        else:
+                            ev.message.reply("Something went wrong when registering title as true positive.")
             except:
                 pass
         if(message_parts[1] == "delete" and isPrivileged(ev_room, ev_user_id)):
