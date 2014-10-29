@@ -98,11 +98,15 @@ def is_blacklisted_user(user):
     return user in blacklisted_users
 
 def add_whitelisted_user(user):
+    if user in whitelisted_users or user is None:
+        return
     whitelisted_users.append(user)
     with open("whitelistedUsers.txt", "w") as f:
         pickle.dump(whitelisted_users, f)
 
 def add_blacklisted_user(user):
+    if user in blacklisted_users or user is None:
+        return
     blacklisted_users.append(user)
     with open("blacklistedUsers.txt", "w") as f:
         pickle.dump(blacklisted_users, f)
