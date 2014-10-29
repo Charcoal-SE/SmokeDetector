@@ -19,17 +19,13 @@ whitelisted_users = []
 blacklisted_users = []
 startup_utc = datetime.utcnow().strftime("%H:%M:%S")
 
-def load_false_positives():
+def load_files():
     if(os.path.isfile("falsePositives.txt")):
         with open("falsePositives.txt", "r") as f:
             false_positives = pickle.load(f)
-
-def load_whitelisted_users():
     if(os.path.isfile("whitelistedUsers.txt")):
         with open("whitelistedUsers.txt", "r") as f:
             whitelisted_users = pickle.load(f)
-
-def load_blacklisted_users():
     if(os.path.isfile("blacklistedUsers.txt")):
         with open("blacklistedUsers.txt", "r") as f:
             blacklisted_users = pickle.load(f)
@@ -46,9 +42,7 @@ if("ChatExchangeP" in os.environ):
 else:
     password=getpass.getpass("Password: ")
 
-load_false_positives()
-load_whitelisted_users()
-load_blacklisted_users()
+load_files()
 
 latest_questions = []
 blockedTime = 0
