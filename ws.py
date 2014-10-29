@@ -47,6 +47,8 @@ else:
     password=getpass.getpass("Password: ")
 
 load_false_positives()
+load_whitelisted_users()
+load_blacklisted_users()
 
 latest_questions = []
 blockedTime = 0
