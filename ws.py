@@ -246,33 +246,17 @@ def watcher(ev,wrap2):
         if((message_parts[1].lower().startswith("false") or message_parts[1].lower().startswith("fp")) and isPrivileged(ev_room, ev_user_id)):
             try:
                 msg_id = int(message_parts[0][1:])
+                msg_content = None
                 if(ev_room == charcoal_room_id):
                     msg_to_delete = wrap.get_message(msg_id)
                     if(str(msg_to_delete.owner.id) == smokeDetector_user_id[charcoal_room_id]):
                         msg_content = msg_to_delete.content_source
-                        site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
-                        store_site_and_post_id(site_post_id)
-                        user_added = False
-                        if(message_parts[1].lower().startswith("falseu") or message_parts[1].lower().startswith("fpu")):
-                            url_from_msg = fetch_owner_url_from_msg_content(msg_content)
-                            user = get_user_from_url(url_from_msg)
-                            add_whitelisted_user(user)
-                            user_added = True
-                        learned = bayesian_learn_title(msg_content, "good")
-                        if learned:
-                            if user_added:
-                                ev.message.reply("Registered as false positive, added title to Bayesian doctype 'good', whitelisted user.")
-                            else:
-                                ev.message.reply("Registered as false positive and added title to Bayesian doctype 'good'.")
-                        else:
-                            if user_added:
-                                ev.message.reply("Registered as false positive and whitelisted user, but could not add the title to the Bayesian doctype 'good'.")
-                            else:
-                                ev.message.reply("Registered as false positive, but could not add the title to the Bayesian doctype 'good'.")
-                        msg_to_delete.delete()
                 elif(ev_room == meta_tavern_room_id):
                     msg_to_delete = wrapm.get_message(msg_id)
                     if(str(msg_to_delete.owner.id) == smokeDetector_user_id[meta_tavern_room_id]):
+                        msg_content = msg_to_delete.content_source
+                if (msg_content is not None):
+                    if(str(msg_to_delete.owner.id) == smokeDetector_user_id[current_room_id]):
                         msg_content = msg_to_delete.content_source
                         site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
                         store_site_and_post_id(site_post_id)
@@ -316,7 +300,7 @@ def watcher(ev,wrap2):
                         user = get_user_from_url(url_from_msg)
                         add_blacklisted_user(user)
                         user_added = True
-                    if(learned):
+                    if learned:
                         if user_added:
                             ev.message.reply("Registered as true positive: added title to Bayesian doctype 'bad' and blacklisted user.")
                         else:
