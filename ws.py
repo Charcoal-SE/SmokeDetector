@@ -135,6 +135,10 @@ def is_false_positive(post_id, site_name):
 
 def checkifspam(data):
     d=json.loads(json.loads(data)["data"])
+    try:
+        _ = d["ownerUrl"]
+    except:
+        return False # owner's account doesn't exist anymore, no need to post it in chat: http://chat.stackexchange.com/transcript/message/18380776#18380776
     s= d["titleEncodedFancy"]
     poster = d["ownerDisplayName"]
     print time.strftime("%Y-%m-%d %H:%M:%S"),parser.unescape(s).encode("ascii",errors="replace")
