@@ -234,7 +234,7 @@ def handlespam(data):
                 sites = specialroom["sites"]
                 if d["siteBaseHostAddress"] in sites and reason not in specialroom["unwantedReasons"]:
                     specialroom["room"].send_message(s)
-    except UnboundLocalError:
+    except:
         print "NOP"
 ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
 ws.send("155-questions-active")
