@@ -81,7 +81,7 @@ def restart_automatically(time_in_seconds):
 threading.Thread(target=restart_automatically,args=(3600,)).start()
 
 def get_user_from_url(url):
-    m = re.compile(r"https?://([\w.]+)/users/(\d+)/[\w-]/?").search(url)
+    m = re.compile(r"https?://([\w.]+)/users/(\d+)/.+/?").search(url)
     site = m.group(1)
     user_id = m.group(2)
     return (user_id, site)
