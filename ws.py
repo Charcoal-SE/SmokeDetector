@@ -13,6 +13,7 @@ import re
 import pickle
 import os.path
 from datetime import datetime
+import traceback
 
 false_positives = []
 whitelisted_users = []
@@ -368,6 +369,10 @@ try:
             if(checkifspam(a)):
                 threading.Thread(target=handlespam,args=(a,)).start()
 except Exception, e:
-    print sys.exc_info()[0]
+    tr = traceback.format_exc()
+    print(tr)
+    with open("errorLogs.txt", "a") as f:
+        f.write(tr + os.linesep + os.linesep)
+
 s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector aborted"
 room.send_message(s)
