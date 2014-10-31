@@ -69,8 +69,8 @@ specialrooms = [{ "sites": ["english.stackexchange.com"], "room": wrap.get_room(
 
 bayesian_testroom = wrap.get_room("17251")
 if "first_start" in sys.argv:
-        bayesian_testroom.send_message(s)
-        room.send_message(s)
+    bayesian_testroom.send_message(s)
+    room.send_message(s)
 #roomm.send_message(s)
 #Commented out because the Tavern folk don't really need to see when it starts
 
@@ -93,6 +93,7 @@ def is_blacklisted_user(user):
     return user in blacklisted_users
 
 def add_whitelisted_user(user):
+    global whitelisted_users
     if user in whitelisted_users or user is None:
         return
     whitelisted_users.append(user)
@@ -100,6 +101,7 @@ def add_whitelisted_user(user):
         pickle.dump(whitelisted_users, f)
 
 def add_blacklisted_user(user):
+    global blacklisted_users
     if user in blacklisted_users or user is None:
         return
     blacklisted_users.append(user)
@@ -193,6 +195,7 @@ def fetch_owner_url_from_msg_content(content):
         return None
 
 def store_site_and_post_id(site_post_id_tuple):
+    global false_positives
     if(site_post_id_tuple is None or site_post_id_tuple in false_positives):
         return
     false_positives.append(site_post_id_tuple)
