@@ -15,23 +15,44 @@ import os.path
 from datetime import datetime
 import traceback
 
-false_positives = []
-whitelisted_users = []
-blacklisted_users = []
-startup_utc = datetime.utcnow().strftime("%H:%M:%S")
+class GlobalVars:
+    false_positives = []
+    whitelisted_users = []
+    blacklisted_users = []
+    startup_utc = datetime.utcnow().strftime("%H:%M:%S")
+    latest_questions = []
+    blockedTime = 0
+    charcoal_room_id = "11540"
+    meta_tavern_room_id = "89"
+    privileged_users = {}
+    smokeDetector_user_id = {}
+    site_filename = { "electronics.stackexchange.com" : "ElectronicsGood.txt", "gaming.stackexchange.com" : "GamingGood.txt", "german.stackexchange.com" : "GermanGood.txt",
+                      "italian.stackexchange.com" : "ItalianGood.txt", "math.stackexchange.com" : "MathematicsGood.txt", "spanish.stackexchange.com" : "SpanishGood.txt",
+                      "stats.stackexchange.com" : "StatsGood.txt" }
+    parser=HTMLParser.HTMLParser()
+    wrap=Client("stackexchange.com")
+    wrapm=Client("meta.stackexchange.com")
+    commit = os.popen("git log --pretty=format:'%h' -n 1").read()
+    commit_with_author = os.popen("git log --pretty=format:'%h (%cn: *%s*)' -n 1").read()
+    room = None
+    roomm = None
+    s = ""
+    specialrooms = []
+    bayesian_testroom = None
+
+GlobalVars.privileged_users = { GlobalVars.charcoal_room_id: ["66258", "31768","103081","73046","88521","59776"], GlobalVars.meta_tavern_room_id: ["244519","244382","194047","158100","178438","237685","215468","229438","180276", "161974", "244382", "186281", "266094", "245167"] }
+GlobalVars.smokeDetector_user_id = { GlobalVars.charcoal_room_id: "120914", GlobalVars.meta_tavern_room_id: "266345" }
 
 def load_files():
     if(os.path.isfile("falsePositives.txt")):
         with open("falsePositives.txt", "r") as f:
-            false_positives = pickle.load(f)
+            GlobalVars.false_positives = pickle.load(f)
     if(os.path.isfile("whitelistedUsers.txt")):
         with open("whitelistedUsers.txt", "r") as f:
-            whitelisted_users = pickle.load(f)
+            GlobalVars.whitelisted_users = pickle.load(f)
     if(os.path.isfile("blacklistedUsers.txt")):
         with open("blacklistedUsers.txt", "r") as f:
-            blacklisted_users = pickle.load(f)
-
-parser=HTMLParser.HTMLParser()
+            GlobalVars.blacklisted_users = pickle.load(f)
 
 if("ChatExchangeU" in os.environ):
     username=os.environ["ChatExchangeU"]
@@ -45,33 +66,19 @@ else:
 
 load_files()
 
-latest_questions = []
-blockedTime = 0
-charcoal_room_id = "11540"
-meta_tavern_room_id = "89"
-privileged_users = { charcoal_room_id: ["66258", "31768","103081","73046","88521","59776"], meta_tavern_room_id: ["244519","244382","194047","158100","178438","237685","215468","229438","180276", "161974", "244382", "186281", "266094", "245167"] }
-smokeDetector_user_id = { charcoal_room_id: "120914", meta_tavern_room_id: "266345" }
-site_filename = { "electronics.stackexchange.com" : "ElectronicsGood.txt", "gaming.stackexchange.com" : "GamingGood.txt", "german.stackexchange.com" : "GermanGood.txt",
-                                    "italian.stackexchange.com" : "ItalianGood.txt", "math.stackexchange.com" : "MathematicsGood.txt", "spanish.stackexchange.com" : "SpanishGood.txt",
-                                    "stats.stackexchange.com" : "StatsGood.txt" }
+GlobalVars.wrap.login(username,password)
+GlobalVars.wrapm.login(username,password)
+GlobalVars.s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started at [rev " + GlobalVars.commit_with_author + "](https://github.com/Charcoal-SE/SmokeDetector/commit/"+ GlobalVars.commit +") (owned by Undo)"
+GlobalVars.room = GlobalVars.wrap.get_room(GlobalVars.charcoal_room_id)
+GlobalVars.roomm = GlobalVars.wrapm.get_room(GlobalVars.meta_tavern_room_id)
 
-wrap=Client("stackexchange.com")
-wrap.login(username,password)
-wrapm=Client("meta.stackexchange.com")
-wrapm.login(username,password)
-commit = os.popen("git log --pretty=format:'%h' -n 1").read()
-commit_with_author = os.popen("git log --pretty=format:'%h (%cn: *%s*)' -n 1").read()
-s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started at [rev " + commit_with_author + "](https://github.com/Charcoal-SE/SmokeDetector/commit/"+ commit +") (owned by Undo)"
-room = wrap.get_room(charcoal_room_id)
-roomm = wrapm.get_room(meta_tavern_room_id)
+GlobalVars.specialrooms = [{ "sites": ["english.stackexchange.com"], "room": GlobalVars.wrap.get_room("95"), "unwantedReasons": [] }, { "sites": ["askubuntu.com"], "room": GlobalVars.wrap.get_room("201"), "unwantedReasons": ["All-caps title"] }]
 
-specialrooms = [{ "sites": ["english.stackexchange.com"], "room": wrap.get_room("95"), "unwantedReasons": [] }, { "sites": ["askubuntu.com"], "room": wrap.get_room("201"), "unwantedReasons": ["All-caps title"] }]
-
-bayesian_testroom = wrap.get_room("17251")
+GlobalVars.bayesian_testroom = GlobalVars.wrap.get_room("17251")
 if "first_start" in sys.argv:
-    bayesian_testroom.send_message(s)
-    room.send_message(s)
-#roomm.send_message(s)
+    GlobalVars.bayesian_testroom.send_message(GlobalVars.s)
+    GlobalVars.room.send_message(GlobalVars.s)
+#GlobalVars.roomm.send_message(GlobalVars.s)
 #Commented out because the Tavern folk don't really need to see when it starts
 
 def restart_automatically(time_in_seconds):
@@ -87,34 +94,32 @@ def get_user_from_url(url):
     return (user_id, site)
 
 def is_whitelisted_user(user):
-    return user in whitelisted_users
+    return user in GlobalVars.whitelisted_users
 
 def is_blacklisted_user(user):
-    return user in blacklisted_users
+    return user in GlobalVars.blacklisted_users
 
 def add_whitelisted_user(user):
-    global whitelisted_users
-    if user in whitelisted_users or user is None:
+    if user in GlobalVars.whitelisted_users or user is None:
         return
-    whitelisted_users.append(user)
+    GlobalVars.whitelisted_users.append(user)
     with open("whitelistedUsers.txt", "w") as f:
-        pickle.dump(whitelisted_users, f)
+        pickle.dump(GlobalVars.whitelisted_users, f)
 
 def add_blacklisted_user(user):
-    global blacklisted_users
-    if user in blacklisted_users or user is None:
+    if user in GlobalVars.blacklisted_users or user is None:
         return
-    blacklisted_users.append(user)
+    GlobalVars.blacklisted_users.append(user)
     with open("blacklistedUsers.txt", "w") as f:
-        pickle.dump(blacklisted_users, f)
+        pickle.dump(GlobalVars.blacklisted_users, f)
 
 def append_to_latest_questions(host, post_id, title):
-    latest_questions.insert(0, (host, post_id, title))
-    if len(latest_questions) > 15:
-        latest_questions.pop()
+    GlobalVars.latest_questions.insert(0, (host, post_id, title))
+    if len(GlobalVars.latest_questions) > 15:
+        GlobalVars.latest_questions.pop()
 
 def has_already_been_posted(host, post_id, title):
-    for post in latest_questions:
+    for post in GlobalVars.latest_questions:
         if post[0] == host and post[1] == post_id and post[2] == title:
             return True
     return False
@@ -129,7 +134,7 @@ def bayesian_score(title):
         return 0.1
 
 def is_false_positive(post_id, site_name):
-    if((str(post_id), site_name) in false_positives):
+    if((str(post_id), site_name) in GlobalVars.false_positives):
         return True
     else:
         return False
@@ -142,11 +147,11 @@ def checkifspam(data):
         return False # owner's account doesn't exist anymore, no need to post it in chat: http://chat.stackexchange.com/transcript/message/18380776#18380776
     s= d["titleEncodedFancy"]
     poster = d["ownerDisplayName"]
-    print time.strftime("%Y-%m-%d %H:%M:%S"),parser.unescape(s).encode("ascii",errors="replace")
+    print time.strftime("%Y-%m-%d %H:%M:%S"),GlobalVars.parser.unescape(s).encode("ascii",errors="replace")
     quality_score = bayesian_score(s)
     print quality_score
     if(quality_score < 0.3 and d["siteBaseHostAddress"] == "stackoverflow.com"):
-        print bayesian_testroom.send_message("[ SmokeDetector | BayesianBeta ] Quality score " + str(quality_score*100) + ": [" + s + "](" + d["url"] + ")")
+        print GlobalVars.bayesian_testroom.send_message("[ SmokeDetector | BayesianBeta ] Quality score " + str(quality_score*100) + ": [" + s + "](" + d["url"] + ")")
     site = d["siteBaseHostAddress"]
     site=site.encode("ascii",errors="replace")
     sys.stdout.flush()
@@ -195,12 +200,11 @@ def fetch_owner_url_from_msg_content(content):
         return None
 
 def store_site_and_post_id(site_post_id_tuple):
-    global false_positives
-    if(site_post_id_tuple is None or site_post_id_tuple in false_positives):
+    if(site_post_id_tuple is None or site_post_id_tuple in GlobalVars.false_positives):
         return
-    false_positives.append(site_post_id_tuple)
+    GlobalVars.false_positives.append(site_post_id_tuple)
     with open("falsePositives.txt", "w") as f:
-        pickle.dump(false_positives, f)
+        pickle.dump(GlobalVars.false_positives, f)
 
 def fetch_title_from_msg_content(content):
     return re.compile(r": \[(.+)\]").findall(content)[0]
@@ -222,13 +226,13 @@ def handlespam(data):
         title = d["titleEncodedFancy"]
         poster = d["ownerDisplayName"]
         reason=", ".join(FindSpam.testpost(title,poster,d["siteBaseHostAddress"]))
-        titleToPost = parser.unescape(re.sub(r"([_*\\`\[\]])", r"\\\1", title)).strip()
+        titleToPost = GlobalVars.parser.unescape(re.sub(r"([_*\\`\[\]])", r"\\\1", title)).strip()
         s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % (reason,titleToPost,d["url"],poster,d["ownerUrl"],d["siteBaseHostAddress"])
-        print parser.unescape(s).encode('ascii',errors='replace')
-        if time.time() >= blockedTime:
-            room.send_message(s)
-            roomm.send_message(s)
-            for specialroom in specialrooms:
+        print GlobalVars.parser.unescape(s).encode('ascii',errors='replace')
+        if time.time() >= GlobalVars.blockedTime:
+            GlobalVars.room.send_message(s)
+            GlobalVars.roomm.send_message(s)
+            for specialroom in GlobalVars.specialrooms:
                 sites = specialroom["sites"]
                 if d["siteBaseHostAddress"] in sites and reason not in specialroom["unwantedReasons"]:
                     specialroom["room"].send_message(s)
@@ -236,10 +240,9 @@ def handlespam(data):
         print "NOP"
 ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
 ws.send("155-questions-active")
-room.join()
-roomm.join()
+GlobalVars.room.join()
+GlobalVars.roomm.join()
 def watcher(ev,wrap2):
-    global blockedTime
     if ev.type_id != 1:
         return;
     print(ev)
@@ -251,13 +254,13 @@ def watcher(ev,wrap2):
             try:
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
-                if(ev_room == charcoal_room_id):
-                    msg_to_delete = wrap.get_message(msg_id)
-                    if(str(msg_to_delete.owner.id) == smokeDetector_user_id[charcoal_room_id]):
+                if(ev_room == GlobalVars.charcoal_room_id):
+                    msg_to_delete = GlobalVars.wrap.get_message(msg_id)
+                    if(str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[GlobalVars.charcoal_room_id]):
                         msg_content = msg_to_delete.content_source
-                elif(ev_room == meta_tavern_room_id):
-                    msg_to_delete = wrapm.get_message(msg_id)
-                    if(str(msg_to_delete.owner.id) == smokeDetector_user_id[meta_tavern_room_id]):
+                elif(ev_room == GlobalVars.meta_tavern_room_id):
+                    msg_to_delete = GlobalVars.wrapm.get_message(msg_id)
+                    if(str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[GlobalVars.meta_tavern_room_id]):
                         msg_content = msg_to_delete.content_source
                 if (msg_content is not None):
                     site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
@@ -286,13 +289,13 @@ def watcher(ev,wrap2):
             try:
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
-                if(ev_room == charcoal_room_id):
-                    msg_true_positive = wrap.get_message(msg_id)
-                    if(str(msg_true_positive.owner.id) == smokeDetector_user_id[charcoal_room_id]):
+                if(ev_room == GlobalVars.charcoal_room_id):
+                    msg_true_positive = GlobalVars.wrap.get_message(msg_id)
+                    if(str(msg_true_positive.owner.id) == GlobalVars.smokeDetector_user_id[GlobalVars.charcoal_room_id]):
                         msg_content = msg_true_positive.content_source
-                elif(ev_room == meta_tavern_room_id):
-                    msg_true_positive = wrapm.get_message(msg_id)
-                    if(str(msg_true_positive.owner.id) == smokeDetector_user_id[meta_tavern_room_id]):
+                elif(ev_room == GlobalVars.meta_tavern_room_id):
+                    msg_true_positive = GlobalVars.wrapm.get_message(msg_id)
+                    if(str(msg_true_positive.owner.id) == GlobalVars.smokeDetector_user_id[GlobalVars.meta_tavern_room_id]):
                         msg_content = msg_true_positive.content_source
                 if(msg_content is not None):
                     learned = bayesian_learn_title(msg_content, "bad")
@@ -317,25 +320,25 @@ def watcher(ev,wrap2):
         if(message_parts[1] == "delete" and isPrivileged(ev_room, ev_user_id)):
             try:
                 msg_id = int(message_parts[0][1:])
-                if(ev_room == charcoal_room_id):
-                    msg_to_delete = wrap.get_message(msg_id)
-                    if(str(msg_to_delete.owner.id) == smokeDetector_user_id[charcoal_room_id]):
+                if(ev_room == GlobalVars.charcoal_room_id):
+                    msg_to_delete = GlobalVars.wrap.get_message(msg_id)
+                    if(str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[GlobalVars.charcoal_room_id]):
                         msg_to_delete.delete()
-                elif(ev_room == meta_tavern_room_id):
-                    msg_to_delete = wrapm.get_message(msg_id)
-                    if(str(msg_to_delete.owner.id) == smokeDetector_user_id[meta_tavern_room_id]):
+                elif(ev_room == GlobalVars.meta_tavern_room_id):
+                    msg_to_delete = GlobalVars.wrapm.get_message(msg_id)
+                    if(str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[GlobalVars.meta_tavern_room_id]):
                         msg_to_delete.delete()
             except:
                 pass # couldn't delete message
     if(ev.content.startswith("!!/alive")):
-        if(ev_room == charcoal_room_id):
+        if(ev_room == GlobalVars.charcoal_room_id):
             ev.message.reply('Of course')
-        elif(ev_room == meta_tavern_room_id):
+        elif(ev_room == GlobalVars.meta_tavern_room_id):
             ev.message.reply(random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee', 'watching this endless list of new questions *never* gets boring', 'kinda sorta']))
     if(ev.content.startswith("!!/rev")):
-            ev.message.reply('[' + commit_with_author + '](https://github.com/Charcoal-SE/SmokeDetector/commit/'+ commit +')')
+            ev.message.reply('[' + GlobalVars.commit_with_author + '](https://github.com/Charcoal-SE/SmokeDetector/commit/'+ GlobalVars.commit +')')
     if(ev.content.startswith("!!/status")):
-            ev.message.reply('Running since %s UTC' % startup_utc)
+            ev.message.reply('Running since %s UTC' % GlobalVars.startup_utc)
     if(ev.content.startswith("!!/reboot")):
         if(isPrivileged(ev_room, ev_user_id)):
             postMessageInRoom(ev_room, "Goodbye, cruel world")
@@ -346,25 +349,25 @@ def watcher(ev,wrap2):
             timeToBlock = ev.content[9:].strip()
             timeToBlock = int(timeToBlock) if timeToBlock else 0
             if (0 < timeToBlock < 14400):
-                blockedTime = time.time() + timeToBlock
+                GlobalVars.blockedTime = time.time() + timeToBlock
             else:
-                blockedTime = time.time() + 900
+                GlobalVars.blockedTime = time.time() + 900
     if(ev.content.startswith("!!/unblock")):
         if(isPrivileged(ev_room, ev_user_id)):
-            blockedTime = time.time()
+            GlobalVars.blockedTime = time.time()
             ev.message.reply("unblocked")
 
 def isPrivileged(room_id_str, user_id_str):
-    return room_id_str in privileged_users and user_id_str in privileged_users[room_id_str]
+    return room_id_str in GlobalVars.privileged_users and user_id_str in GlobalVars.privileged_users[room_id_str]
 
 def postMessageInRoom(room_id_str, msg):
-    if room_id_str == charcoal_room_id:
-        room.send_message(msg)
-    elif room_id_str == meta_tavern_room_id:
-        roomm.send_message(msg)
+    if room_id_str == GlobalVars.charcoal_room_id:
+        GlobalVars.room.send_message(msg)
+    elif room_id_str == GlobalVars.meta_tavern_room_id:
+        GlobalVars.roomm.send_message(msg)
 
-room.watch_socket(watcher)
-roomm.watch_socket(watcher)
+GlobalVars.room.watch_socket(watcher)
+GlobalVars.roomm.watch_socket(watcher)
 try:
     while True:
         a=ws.recv()
@@ -378,4 +381,4 @@ except Exception, e:
         f.write(tr + os.linesep + os.linesep)
 
 s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector aborted"
-room.send_message(s)
+GlobalVars.room.send_message(s)
