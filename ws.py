@@ -334,7 +334,7 @@ def watcher(ev,wrap2):
         if(ev_room == GlobalVars.charcoal_room_id):
             ev.message.reply('Of course')
         elif(ev_room == GlobalVars.meta_tavern_room_id):
-            ev.message.reply(random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee', 'watching this endless list of new questions *never* gets boring', 'kinda sorta']))
+            ev.message.reply(random.choice(['Yup', 'You doubt me?', 'Of course', '...did I miss something?', 'plz send teh coffee', 'Watching this endless list of new questions *never* gets boring', 'Kinda sorta']))
     if(ev.content.startswith("!!/rev")):
             ev.message.reply('[' + GlobalVars.commit_with_author + '](https://github.com/Charcoal-SE/SmokeDetector/commit/'+ GlobalVars.commit +')')
     if(ev.content.startswith("!!/status")):
