@@ -370,7 +370,15 @@ GlobalVars.room.watch_socket(watcher)
 GlobalVars.roomm.watch_socket(watcher)
 try:
     while True:
-        a=ws.recv()
+        try: 
+            a=ws.recv()
+        except Exception, e:
+            ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
+            ws.send("155-questions-active")
+            tr = traceback.format_exc()
+            print(tr)
+            with open("errorLogs.txt", "a") as f:
+                f.write("recovered, but still: " + tr + os.linesep + os.linesep)
         if(a!= None and a!= ""):
             if(checkifspam(a)):
                 threading.Thread(target=handlespam,args=(a,)).start()
