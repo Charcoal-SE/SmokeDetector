@@ -379,6 +379,8 @@ while True:
         ws.send("155-questions-active")
         tr = traceback.format_exc()
         print(tr)
+        exception_only = ''.join(traceback.format_exception_only(type(e), e)).strip()
+        GlobalVars.room.send_message("Recovered from `" + exception_only + "`")
         with open("errorLogs.txt", "a") as f:
             f.write(tr + os.linesep + os.linesep)
 
