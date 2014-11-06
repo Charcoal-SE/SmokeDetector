@@ -368,25 +368,19 @@ def postMessageInRoom(room_id_str, msg):
 
 GlobalVars.room.watch_socket(watcher)
 GlobalVars.roomm.watch_socket(watcher)
-try:
-    while True:
-        try: 
-            a=ws.recv()
-        except Exception, e:
-            ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
-            ws.send("155-questions-active")
-            tr = traceback.format_exc()
-            print(tr)
-            with open("errorLogs.txt", "a") as f:
-                f.write("recovered, but still: " + tr + os.linesep + os.linesep)
+while True:
+    try:
+        a=ws.recv()
         if(a!= None and a!= ""):
             if(checkifspam(a)):
                 threading.Thread(target=handlespam,args=(a,)).start()
-except Exception, e:
-    tr = traceback.format_exc()
-    print(tr)
-    with open("errorLogs.txt", "a") as f:
-        f.write(tr + os.linesep + os.linesep)
+    except Exception, e:
+        ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
+        ws.send("155-questions-active")
+        tr = traceback.format_exc()
+        print(tr)
+        with open("errorLogs.txt", "a") as f:
+            f.write(tr + os.linesep + os.linesep)
 
 s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector aborted"
 GlobalVars.room.send_message(s)
