@@ -8,7 +8,7 @@ class FindSpam:
         'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'username': True},
      {'regex': u"(?i)\\b(weight loss|muscles? build(ing)?|muscles?( (grow(th)?|diets?))?)\\b", 'all': True,
         'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'username': True},
-     {'regex': u"(?i)^(?:(?=.*?\\b(?:online|hd)\\b)(?=.*?(?:free|full|unlimited)).*?movies?\\b|(?=.*?\\b(acai|kisn)\\b)(?=.*?care).*products?\\b|(?=.*?packer)(?=.*?and).*mover)", 'all': True,
+     {'regex': u"(?i)^(?:(?=.*?\\b(?:online|hd)\\b)(?=.*?(?:free|full|unlimited)).*?movies?\\b|(?=.*?\\b(?:acai|kisn)\\b)(?=.*?care).*products?\\b|(?=.*?packer)(?=.*?and).*mover)", 'all': True,
         'sites': [], 'reason': "Bad keywords in {}", 'title': True, 'username': True},
      {'regex': u"\\d(?:_*\\d){9}|\\+?\\d_*\\d[\\s\\-]?(?:_*\\d){8,10}", 'all': True,
         'sites': ["patents.stackexchange.com"], 'reason': "Phone number detected", 'validation_method': 'checkphonenumbers', 'title': True, 'username': False},
