@@ -68,7 +68,7 @@ load_files()
 
 GlobalVars.wrap.login(username,password)
 GlobalVars.wrapm.login(username,password)
-GlobalVars.s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started at [rev " + GlobalVars.commit_with_author + "](https://github.com/Charcoal-SE/SmokeDetector/commit/"+ GlobalVars.commit +") (owned by Undo)"
+GlobalVars.s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started at [rev " + GlobalVars.commit_with_author + "](https://github.com/Charcoal-SE/SmokeDetector/commit/"+ GlobalVars.commit +") (hosted by Undo)"
 GlobalVars.room = GlobalVars.wrap.get_room(GlobalVars.charcoal_room_id)
 GlobalVars.roomm = GlobalVars.wrapm.get_room(GlobalVars.meta_tavern_room_id)
 
