@@ -273,15 +273,19 @@ def watcher(ev,wrap2):
                         user_added = True
                     learned = bayesian_learn_title(msg_content, "good")
                     if learned:
-                        if user_added:
+                        if user_added and site_post_id is not None:
                             ev.message.reply("Registered as false positive, added title to Bayesian doctype 'good', whitelisted user.")
-                        else:
+                        elif site_post_id is not None:
                             ev.message.reply("Registered as false positive and added title to Bayesian doctype 'good'.")
-                    else:
-                        if user_added:
-                            ev.message.reply("Registered as false positive and whitelisted user, but could not add the title to the Bayesian doctype 'good'.")
                         else:
+                        	ev.message.reply("Could not register title as false positive.")
+                    else:
+                        if user_added and site_post_id is not None:
+                            ev.message.reply("Registered as false positive and whitelisted user, but could not add the title to the Bayesian doctype 'good'.")
+                        elif site_post_id is not None:
                             ev.message.reply("Registered as false positive, but could not add the title to the Bayesian doctype 'good'.")
+                        else:
+                        	ev.message.reply("Could not register title as false positive.")
                     msg_to_delete.delete()
             except:
                 pass # couldn't delete message
