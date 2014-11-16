@@ -34,8 +34,8 @@ class GlobalVars:
     wrapm=Client("meta.stackexchange.com")
     commit = os.popen("git log --pretty=format:'%h' -n 1").read()
     commit_with_author = os.popen("git log --pretty=format:'%h (%cn: *%s*)' -n 1").read()
-    room = None
-    roomm = None
+    charcoal_hq = None
+    tavern_on_the_meta = None
     s = ""
     specialrooms = []
     bayesian_testroom = None
@@ -69,16 +69,16 @@ load_files()
 GlobalVars.wrap.login(username,password)
 GlobalVars.wrapm.login(username,password)
 GlobalVars.s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started at [rev " + GlobalVars.commit_with_author + "](https://github.com/Charcoal-SE/SmokeDetector/commit/"+ GlobalVars.commit +") (hosted by Undo)"
-GlobalVars.room = GlobalVars.wrap.get_room(GlobalVars.charcoal_room_id)
-GlobalVars.roomm = GlobalVars.wrapm.get_room(GlobalVars.meta_tavern_room_id)
+GlobalVars.charcoal_hq = GlobalVars.wrap.get_room(GlobalVars.charcoal_room_id)
+GlobalVars.tavern_on_the_meta = GlobalVars.wrapm.get_room(GlobalVars.meta_tavern_room_id)
 
 GlobalVars.specialrooms = [{ "sites": ["english.stackexchange.com"], "room": GlobalVars.wrap.get_room("95"), "unwantedReasons": [] }, { "sites": ["askubuntu.com"], "room": GlobalVars.wrap.get_room("201"), "unwantedReasons": ["All-caps title"] }]
 
 GlobalVars.bayesian_testroom = GlobalVars.wrap.get_room("17251")
 if "first_start" in sys.argv:
     GlobalVars.bayesian_testroom.send_message(GlobalVars.s)
-    GlobalVars.room.send_message(GlobalVars.s)
-#GlobalVars.roomm.send_message(GlobalVars.s)
+    GlobalVars.charcoal_hq.send_message(GlobalVars.s)
+#GlobalVars.tavern_on_the_meta.send_message(GlobalVars.s)
 #Commented out because the Tavern folk don't really need to see when it starts
 
 def restart_automatically(time_in_seconds):
@@ -230,8 +230,8 @@ def handlespam(data):
         s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % (reason,titleToPost,d["url"],poster,d["ownerUrl"],d["siteBaseHostAddress"])
         print GlobalVars.parser.unescape(s).encode('ascii',errors='replace')
         if time.time() >= GlobalVars.blockedTime:
-            GlobalVars.room.send_message(s)
-            GlobalVars.roomm.send_message(s)
+            GlobalVars.charcoal_hq.send_message(s)
+            GlobalVars.tavern_on_the_meta.send_message(s)
             for specialroom in GlobalVars.specialrooms:
                 sites = specialroom["sites"]
                 if d["siteBaseHostAddress"] in sites and reason not in specialroom["unwantedReasons"]:
@@ -240,8 +240,8 @@ def handlespam(data):
         print "NOP"
 ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
 ws.send("155-questions-active")
-GlobalVars.room.join()
-GlobalVars.roomm.join()
+GlobalVars.charcoal_hq.join()
+GlobalVars.tavern_on_the_meta.join()
 def watcher(ev,wrap2):
     if ev.type_id != 1:
         return;
@@ -366,12 +366,12 @@ def isPrivileged(room_id_str, user_id_str):
 
 def postMessageInRoom(room_id_str, msg):
     if room_id_str == GlobalVars.charcoal_room_id:
-        GlobalVars.room.send_message(msg)
+        GlobalVars.charcoal_hq.send_message(msg)
     elif room_id_str == GlobalVars.meta_tavern_room_id:
-        GlobalVars.roomm.send_message(msg)
+        GlobalVars.tavern_on_the_meta.send_message(msg)
 
-GlobalVars.room.watch_socket(watcher)
-GlobalVars.roomm.watch_socket(watcher)
+GlobalVars.charcoal_hq.watch_socket(watcher)
+GlobalVars.tavern_on_the_meta.watch_socket(watcher)
 while True:
     try:
         a=ws.recv()
@@ -384,9 +384,9 @@ while True:
         tr = traceback.format_exc()
         print(tr)
         exception_only = ''.join(traceback.format_exception_only(type(e), e)).strip()
-        GlobalVars.room.send_message("Recovered from `" + exception_only + "`")
+        GlobalVars.charcoal_hq.send_message("Recovered from `" + exception_only + "`")
         with open("errorLogs.txt", "a") as f:
             f.write(tr + os.linesep + os.linesep)
 
 s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector aborted"
-GlobalVars.room.send_message(s)
+GlobalVars.charcoal_hq.send_message(s)
