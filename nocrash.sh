@@ -15,5 +15,8 @@ do
    else
     python ws.py
    fi
+
+   echo "exit code: $?"
+
    count=$((count+1))
 done
