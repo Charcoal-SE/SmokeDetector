@@ -360,9 +360,6 @@ def watcher(ev,wrap2):
         if(isPrivileged(ev_room, ev_user_id)):
             GlobalVars.blockedTime = time.time()
             ev.message.reply("unblocked")
-    if(ev.content.startswith("!!/test")):
-        if(isPrivileged(ev_room, ev_user_id)):
-            ev.message.reply("it works")
 
 def isPrivileged(room_id_str, user_id_str):
     return room_id_str in GlobalVars.privileged_users and user_id_str in GlobalVars.privileged_users[room_id_str]
