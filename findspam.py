@@ -12,7 +12,7 @@ class FindSpam:
         'sites': [], 'reason': "Bad keywords in {}", 'title': True, 'username': True},
      {'regex': u"\\d(?:_*\\d){9}|\\+?\\d_*\\d[\\s\\-]?(?:_*\\d){8,10}", 'all': True,
         'sites': ["patents.stackexchange.com"], 'reason': "Phone number detected", 'validation_method': 'checkphonenumbers', 'title': True, 'username': False},
-     {'regex': u"(?i)\\b(nigg?(a|er)|asshole|crap|fag|fuck(ing?)?|shit|whore)s?\\b", 'all': True,
+     {'regex': u"(?i)\\b(nigg(a|er)|asshole|crap|fag|fuck(ing?)?|shit|whore)s?\\b", 'all': True,
         'sites': [], 'reason': "Offensive {} detected",'insensitive':True, 'title': True, 'username': False},
      {'regex': u"^(?=.*[A-Z])[^a-z]*$", 'all': True, 'sites': [], 'reason': "All-caps title", 'title': True, 'username': False},
      {'regex': u"https?://[a-zA-Z0-9_.-]+\\.[a-zA-Z]{2,4}(/[a-zA-Z0-9_/?=.-])?", 'all': True,
