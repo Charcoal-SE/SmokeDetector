@@ -6,8 +6,14 @@ stty -echo
 read -p "Password: " p
 export ChatExchangeP=$p
 stty echo
-python ws.py first_start
+count=0
 while :
 do
-   python ws.py
+   if [ "$count" -eq "0" ]
+   then
+    python ws.py first_start
+   else
+    python ws.py
+   fi
+   count=$((count+1))
 done
