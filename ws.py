@@ -360,7 +360,7 @@ def watcher(ev,wrap2):
         if(isPrivileged(ev_room, ev_user_id)):
             GlobalVars.blockedTime = time.time()
             ev.message.reply("unblocked")
-    if(ev.content.startswith("!!/killwith3"))
+    if(ev.content.startswith("!!/killwith3")):
         if isPrivileged(ev_room. ev_user_id)):
             os._exit(3)
 
