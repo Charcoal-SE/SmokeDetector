@@ -18,5 +18,10 @@ do
 
    echo "exit code: $?"
 
+   if [ "$?" -eq "3" ]
+   then
+     echo "exit code 3"
+   fi
+
    count=$((count+1))
 done
