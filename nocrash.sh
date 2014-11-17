@@ -18,8 +18,9 @@ do
 
    if [ "$?" -eq "3" ]
    then
-     echo "exit code 3"
+    git pull
+    count=0
+   else
+    count=$((count+1))
    fi
-
-   count=$((count+1))
 done
