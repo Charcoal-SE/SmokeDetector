@@ -16,8 +16,6 @@ do
     python ws.py
    fi
 
-   echo "exit code: $?"
-
    if [ "$?" -eq "3" ]
    then
      echo "exit code 3"
