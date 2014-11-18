@@ -287,7 +287,8 @@ def watcher(ev,wrap2):
                         elif site_post_id is not None:
                             ev.message.reply("Registered as false positive, but could not add the title to the Bayesian doctype 'good'.")
                         else:
-                        	ev.message.reply("Could not register title as false positive.")
+                            ev.message.reply("Could not register title as false positive.")
+                            should_delete=0
                     if(should_delete==1):
                         msg_to_delete.delete()
             except:
