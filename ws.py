@@ -252,6 +252,7 @@ def watcher(ev,wrap2):
     if(re.compile(":[0-9]+").search(message_parts[0])):
         if((message_parts[1].lower().startswith("false") or message_parts[1].lower().startswith("fp")) and isPrivileged(ev_room, ev_user_id)):
             try:
+                should_delete = 1
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
                 if(ev_room == GlobalVars.charcoal_room_id):
@@ -278,7 +279,8 @@ def watcher(ev,wrap2):
                         elif site_post_id is not None:
                             ev.message.reply("Registered as false positive and added title to Bayesian doctype 'good'.")
                         else:
-                        	ev.message.reply("Could not register title as false positive.")
+                            ev.message.reply("Could not register title as false positive.")
+                            should_delete=0
                     else:
                         if user_added and site_post_id is not None:
                             ev.message.reply("Registered as false positive and whitelisted user, but could not add the title to the Bayesian doctype 'good'.")
@@ -286,7 +288,8 @@ def watcher(ev,wrap2):
                             ev.message.reply("Registered as false positive, but could not add the title to the Bayesian doctype 'good'.")
                         else:
                         	ev.message.reply("Could not register title as false positive.")
-                    msg_to_delete.delete()
+                    if(should_delete==1):
+                        msg_to_delete.delete()
             except:
                 pass # couldn't delete message
         if((message_parts[1].lower().startswith("true") or message_parts[1].lower().startswith("tp")) and isPrivileged(ev_room, ev_user_id)):
