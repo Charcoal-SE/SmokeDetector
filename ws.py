@@ -76,8 +76,8 @@ GlobalVars.specialrooms = [{ "sites": ["english.stackexchange.com"], "room": Glo
 
 GlobalVars.bayesian_testroom = GlobalVars.wrap.get_room("17251")
 if "first_start" in sys.argv:
-    GlobalVars.bayesian_testroom.send_message(GlobalVars.s)
     GlobalVars.charcoal_hq.send_message(GlobalVars.s)
+    GlobalVars.bayesian_testroom.send_message(GlobalVars.s)
 #GlobalVars.tavern_on_the_meta.send_message(GlobalVars.s)
 #Commented out because the Tavern folk don't really need to see when it starts
 
