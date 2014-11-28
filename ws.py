@@ -260,7 +260,7 @@ def watcher(ev,wrap2):
     if(re.compile(":[0-9]+").search(message_parts[0])):
         if((message_parts[1].lower().startswith("false") or message_parts[1].lower().startswith("fp")) and isPrivileged(ev_room, ev_user_id)):
             if not GlobalVars.on_master:
-                ev.message.reply("Sorry, that command cannot be used in [Reverted Mode](https://github.com/Charcoal-SE/RevertedMode.md).")
+                ev.message.reply("Sorry, that command cannot be used in [Reverted Mode](https://github.com/Charcoal-SE/SmokeDetector/blob/master/RevertedMode.md).")
                 return
             try:
                 should_delete = 1
@@ -306,7 +306,7 @@ def watcher(ev,wrap2):
                 pass # couldn't delete message
         if((message_parts[1].lower().startswith("true") or message_parts[1].lower().startswith("tp")) and isPrivileged(ev_room, ev_user_id)):
             if(not GlobalVars.on_master):
-                ev.message.reply("[Reverted Mode](https://github.com/Charcoal-SE/RevertedMode.md)")
+                ev.message.reply("[Reverted Mode](https://github.com/Charcoal-SE/SmokeDetector/blob/master/RevertedMode.md)")
             try:
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
