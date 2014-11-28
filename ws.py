@@ -79,9 +79,9 @@ GlobalVars.tavern_on_the_meta = GlobalVars.wrapm.get_room(GlobalVars.meta_tavern
 GlobalVars.specialrooms = [{ "sites": ["english.stackexchange.com"], "room": GlobalVars.wrap.get_room("95"), "unwantedReasons": [] }, { "sites": ["askubuntu.com"], "room": GlobalVars.wrap.get_room("201"), "unwantedReasons": ["All-caps title"] }]
 
 GlobalVars.bayesian_testroom = GlobalVars.wrap.get_room("17251")
-if "first_start" in sys.argv and not "just_reverted" in sys.argv:
-    GlobalVars.bayesian_testroom.send_message(GlobalVars.s)
+if "first_start" in sys.argv:
     GlobalVars.charcoal_hq.send_message(GlobalVars.s)
+    GlobalVars.bayesian_testroom.send_message(GlobalVars.s)
     #GlobalVars.tavern_on_the_meta.send_message(GlobalVars.s)
     #Commented out because the Tavern folk don't really need to see when it starts
 elif "first_start" in sys.argv and "just_reverted" in sys.argv:
@@ -263,6 +263,7 @@ def watcher(ev,wrap2):
                 ev.message.reply("Sorry, that command cannot be used in reverted mode.")
                 return
             try:
+                should_delete = 1
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
                 if(ev_room == GlobalVars.charcoal_room_id):
@@ -290,6 +291,7 @@ def watcher(ev,wrap2):
                             ev.message.reply("Registered as false positive and added title to Bayesian doctype 'good'.")
                         else:
                             ev.message.reply("Could not register title as false positive.")
+                            should_delete=0
                     else:
                         if user_added and site_post_id is not None:
                             ev.message.reply("Registered as false positive and whitelisted user, but could not add the title to the Bayesian doctype 'good'.")
@@ -297,7 +299,9 @@ def watcher(ev,wrap2):
                             ev.message.reply("Registered as false positive, but could not add the title to the Bayesian doctype 'good'.")
                         else:
                             ev.message.reply("Could not register title as false positive.")
-                    msg_to_delete.delete()
+                            should_delete=0
+                    if(should_delete==1):
+                        msg_to_delete.delete()
             except:
                 pass # couldn't delete message
         if((message_parts[1].lower().startswith("true") or message_parts[1].lower().startswith("tp")) and isPrivileged(ev_room, ev_user_id)):

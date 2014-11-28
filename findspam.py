@@ -6,7 +6,7 @@ class FindSpam:
     rules = [
      {'regex': u"(?i)\\b(baba(ji)?|nike|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|me2.do|black magic|bam2u|Neuro3X|Xtreme Antler|fake (passports?|driver'?s? licen[cs]e|ID cards?))\\b|ಌ", 'all': True,
         'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'username': True},
-     {'regex': u"(?i)\\b(weight loss|muscles? build(ing)?|muscles?( (grow(th)?|diets?))?)\\b", 'all': True,
+     {'regex': u"(?i)\\b(weight loss|muscles? build(ing)?|muscles?( (grow(th)?|diets?))?|anti aging|SkinCentric|weight reduction)\\b", 'all': True,
         'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'username': True},
      {'regex': u"(?i)^(?:(?=.*?\\b(?:online|hd)\\b)(?=.*?(?:free|full|unlimited)).*?movies?\\b|(?=.*?\\b(?:acai|kisn)\\b)(?=.*?care).*products?\\b|(?=.*?packer)(?=.*?and).*mover)", 'all': True,
         'sites': [], 'reason': "Bad keywords in {}", 'title': True, 'username': True},
@@ -15,6 +15,7 @@ class FindSpam:
      {'regex': u"(?i)\\b(nigg(a|er)|asshole|crap|fag|fuck(ing?)?|shit|whore)s?\\b", 'all': True,
         'sites': [], 'reason': "Offensive {} detected",'insensitive':True, 'title': True, 'username': False},
      {'regex': u"^(?=.*[A-Z])[^a-z]*$", 'all': True, 'sites': [], 'reason': "All-caps title", 'title': True, 'username': False},
+     {'regex': u"^(?=.*[0-9])[^a-zA-Z]*$", 'all': True, 'sites': [], 'reason': "Numbers-only title", 'title': True, 'username': False},
      {'regex': u"https?://[a-zA-Z0-9_.-]+\\.[a-zA-Z]{2,4}(/[a-zA-Z0-9_/?=.-])?", 'all': True,
         'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com"], 'reason': "URL in title", 'title': True, 'username': False}
     ]
