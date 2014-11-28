@@ -79,14 +79,14 @@ GlobalVars.tavern_on_the_meta = GlobalVars.wrapm.get_room(GlobalVars.meta_tavern
 GlobalVars.specialrooms = [{ "sites": ["english.stackexchange.com"], "room": GlobalVars.wrap.get_room("95"), "unwantedReasons": [] }, { "sites": ["askubuntu.com"], "room": GlobalVars.wrap.get_room("201"), "unwantedReasons": ["All-caps title"] }]
 
 GlobalVars.bayesian_testroom = GlobalVars.wrap.get_room("17251")
-if "first_start" in sys.argv and not "just_reverted" in sys.argv:
+if "first_start" in sys.argv and GlobalVars.on_master:
     GlobalVars.charcoal_hq.send_message(GlobalVars.s)
     GlobalVars.bayesian_testroom.send_message(GlobalVars.s)
     #GlobalVars.tavern_on_the_meta.send_message(GlobalVars.s)
     #Commented out because the Tavern folk don't really need to see when it starts
-elif "first_start" in sys.argv and "just_reverted" in sys.argv:
-    GlobalVars.bayesian_testroom.send_message(GlobalVars.s_reverted)
+elif "first_start" in sys.argv and not GlobalVars.on_master:
     GlobalVars.charcoal_hq.send_message(GlobalVars.s_reverted)
+    GlobalVars.bayesian_testroom.send_message(GlobalVars.s_reverted)
 
 
 def restart_automatically(time_in_seconds):
@@ -260,7 +260,7 @@ def watcher(ev,wrap2):
     if(re.compile(":[0-9]+").search(message_parts[0])):
         if((message_parts[1].lower().startswith("false") or message_parts[1].lower().startswith("fp")) and isPrivileged(ev_room, ev_user_id)):
             if not GlobalVars.on_master:
-                ev.message.reply("Sorry, that command cannot be used in reverted mode.")
+                ev.message.reply("Sorry, that command cannot be used in [Reverted Mode](https://github.com/Charcoal-SE/RevertedMode.md).")
                 return
             try:
                 should_delete = 1
@@ -306,7 +306,7 @@ def watcher(ev,wrap2):
                 pass # couldn't delete message
         if((message_parts[1].lower().startswith("true") or message_parts[1].lower().startswith("tp")) and isPrivileged(ev_room, ev_user_id)):
             if(not GlobalVars.on_master):
-                ev.message.reply("Sorry, that command cannot be used in reverted mode.")
+                ev.message.reply("[Reverted Mode](https://github.com/Charcoal-SE/RevertedMode.md)")
             try:
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
