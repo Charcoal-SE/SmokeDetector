@@ -79,7 +79,7 @@ GlobalVars.tavern_on_the_meta = GlobalVars.wrapm.get_room(GlobalVars.meta_tavern
 GlobalVars.specialrooms = [{ "sites": ["english.stackexchange.com"], "room": GlobalVars.wrap.get_room("95"), "unwantedReasons": [] }, { "sites": ["askubuntu.com"], "room": GlobalVars.wrap.get_room("201"), "unwantedReasons": ["All-caps title"] }]
 
 GlobalVars.bayesian_testroom = GlobalVars.wrap.get_room("17251")
-if "first_start" in sys.argv:
+if "first_start" in sys.argv and not "just_reverted" in sys.argv:
     GlobalVars.charcoal_hq.send_message(GlobalVars.s)
     GlobalVars.bayesian_testroom.send_message(GlobalVars.s)
     #GlobalVars.tavern_on_the_meta.send_message(GlobalVars.s)
