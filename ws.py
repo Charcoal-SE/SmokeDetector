@@ -20,6 +20,7 @@ class GlobalVars:
     whitelisted_users = []
     blacklisted_users = []
     startup_utc = datetime.utcnow().strftime("%H:%M:%S")
+    startup_utc_date = datetime.utcnow()
     latest_questions = []
     blockedTime = 0
     charcoal_room_id = "11540"
@@ -34,9 +35,11 @@ class GlobalVars:
     wrapm=Client("meta.stackexchange.com")
     commit = os.popen("git log --pretty=format:'%h' -n 1").read()
     commit_with_author = os.popen("git log --pretty=format:'%h (%cn: *%s*)' -n 1").read()
+    on_master = os.popen("git rev-parse --abbrev-ref HEAD").read().strip() == "master"
     charcoal_hq = None
     tavern_on_the_meta = None
     s = ""
+    s_reverted = ""
     specialrooms = []
     bayesian_testroom = None
 
@@ -69,17 +72,22 @@ load_files()
 GlobalVars.wrap.login(username,password)
 GlobalVars.wrapm.login(username,password)
 GlobalVars.s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started at [rev " + GlobalVars.commit_with_author + "](https://github.com/Charcoal-SE/SmokeDetector/commit/"+ GlobalVars.commit +") (hosted by Undo)"
+GlobalVars.s_reverted="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started in reverted mode at [rev " + GlobalVars.commit_with_author + "](https://github.com/Charcoal-SE/SmokeDetector/commit/"+ GlobalVars.commit +") (hosted by Undo)"
 GlobalVars.charcoal_hq = GlobalVars.wrap.get_room(GlobalVars.charcoal_room_id)
 GlobalVars.tavern_on_the_meta = GlobalVars.wrapm.get_room(GlobalVars.meta_tavern_room_id)
 
 GlobalVars.specialrooms = [{ "sites": ["english.stackexchange.com"], "room": GlobalVars.wrap.get_room("95"), "unwantedReasons": [] }, { "sites": ["askubuntu.com"], "room": GlobalVars.wrap.get_room("201"), "unwantedReasons": ["All-caps title"] }]
 
 GlobalVars.bayesian_testroom = GlobalVars.wrap.get_room("17251")
-if "first_start" in sys.argv:
+if "first_start" in sys.argv and not "just_reverted" in sys.argv:
     GlobalVars.bayesian_testroom.send_message(GlobalVars.s)
     GlobalVars.charcoal_hq.send_message(GlobalVars.s)
-#GlobalVars.tavern_on_the_meta.send_message(GlobalVars.s)
-#Commented out because the Tavern folk don't really need to see when it starts
+    #GlobalVars.tavern_on_the_meta.send_message(GlobalVars.s)
+    #Commented out because the Tavern folk don't really need to see when it starts
+elif "first_start" in sys.argv and "just_reverted" in sys.argv:
+    GlobalVars.bayesian_testroom.send_message(GlobalVars.s_reverted)
+    GlobalVars.charcoal_hq.send_message(GlobalVars.s_reverted)
+
 
 def restart_automatically(time_in_seconds):
     time.sleep(time_in_seconds)
@@ -251,6 +259,9 @@ def watcher(ev,wrap2):
     message_parts = ev.message.content_source.split(" ")
     if(re.compile(":[0-9]+").search(message_parts[0])):
         if((message_parts[1].lower().startswith("false") or message_parts[1].lower().startswith("fp")) and isPrivileged(ev_room, ev_user_id)):
+            if not GlobalVars.on_master:
+                ev.message.reply("Sorry, that command cannot be used in reverted mode.")
+                return
             try:
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
@@ -278,18 +289,20 @@ def watcher(ev,wrap2):
                         elif site_post_id is not None:
                             ev.message.reply("Registered as false positive and added title to Bayesian doctype 'good'.")
                         else:
-                        	ev.message.reply("Could not register title as false positive.")
+                            ev.message.reply("Could not register title as false positive.")
                     else:
                         if user_added and site_post_id is not None:
                             ev.message.reply("Registered as false positive and whitelisted user, but could not add the title to the Bayesian doctype 'good'.")
                         elif site_post_id is not None:
                             ev.message.reply("Registered as false positive, but could not add the title to the Bayesian doctype 'good'.")
                         else:
-                        	ev.message.reply("Could not register title as false positive.")
+                            ev.message.reply("Could not register title as false positive.")
                     msg_to_delete.delete()
             except:
                 pass # couldn't delete message
         if((message_parts[1].lower().startswith("true") or message_parts[1].lower().startswith("tp")) and isPrivileged(ev_room, ev_user_id)):
+            if(not GlobalVars.on_master):
+                ev.message.reply("Sorry, that command cannot be used in reverted mode.")
             try:
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
@@ -382,6 +395,11 @@ while True:
             if(checkifspam(a)):
                 threading.Thread(target=handlespam,args=(a,)).start()
     except Exception, e:
+        now = datetime.utcnow()
+        delta = GlobalVars.startup_utc_date - now
+        seconds = delta.total_seconds()
+        if(seconds<60):
+            os._exit(4)
         ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
         ws.send("155-questions-active")
         tr = traceback.format_exc()
@@ -391,5 +409,10 @@ while True:
         with open("errorLogs.txt", "a") as f:
             f.write(tr + os.linesep + os.linesep)
 
+now = datetime.utcnow()
+delta = GlobalVars.startup_utc_date - now
+seconds = delta.total_seconds()
+if(seconds<60):
+    os._exit(4)
 s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector aborted"
 GlobalVars.charcoal_hq.send_message(s)
