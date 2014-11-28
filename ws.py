@@ -15,8 +15,6 @@ import os.path
 from datetime import datetime
 import traceback
 
-Gobblyde"gook", for teh crashes!
-
 class GlobalVars:
     false_positives = []
     whitelisted_users = []
