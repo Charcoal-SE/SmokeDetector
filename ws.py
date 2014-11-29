@@ -20,18 +20,20 @@ class UtcDate:
 
 # !! Important! Be careful when adding code before the add_custom_print_exception function. Any errors thrown there won't be catched, so only insert code here if you are really sure it works fine.
 
-def add_custom_print_exception(): # thanks to Brad Barrows: http://stackoverflow.com/questions/1508467/how-to-log-my-traceback-error/9929970#9929970
-    old_print_exception = traceback.print_exception
-    def custom_print_exception(etype, value, tb, limit=None, file=None):
-        now = datetime.utcnow()
-        delta = UtcDate.startup_utc_date - now
-        seconds = delta.total_seconds()
-        if(seconds<60):
-            os._exit(4)
-        old_print_exception(etype, value, tb, limit=None, file=None)
-    traceback.print_exception = custom_print_exception
+def uncaught_exception(exctype, value, tb):
+    now = datetime.utcnow()
+    delta = UtcDate.startup_utc_date - now
+    seconds = delta.total_seconds()
+    tr = os.linesep.join(traceback.format_tb(tb))
+    print(tr)
+    with open("errorLogs.txt", "a") as f:
+        f.write(tr + os.linesep + os.linesep)
+    if(seconds<60):
+        os._exit(4)
+    else:
+        os._exit(1)
 
-add_custom_print_exception()
+sys.excepthook = uncaught_exception
 
 class GlobalVars:
     false_positives = []
