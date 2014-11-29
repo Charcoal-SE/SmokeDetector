@@ -35,8 +35,6 @@ def uncaught_exception(exctype, value, tb):
 
 sys.excepthook = uncaught_exception
 
-raise Exception("ProgramFOX testing the auto-reverter.")
-
 class GlobalVars:
     false_positives = []
     whitelisted_users = []
