@@ -15,12 +15,29 @@ import os.path
 from datetime import datetime
 import traceback
 
+class UtcDate:
+    startup_utc_date = datetime.utcnow()
+
+# !! Important! Be careful when adding code before the add_custom_print_exception function. Any errors thrown there won't be catched, so only insert code here if you are really sure it works fine.
+
+def add_custom_print_exception(): # thanks to Brad Barrows: http://stackoverflow.com/questions/1508467/how-to-log-my-traceback-error/9929970#9929970
+    old_print_exception = traceback.print_exception
+    def custom_print_exception(etype, value, tb, limit=None, file=None):
+        now = datetime.utcnow()
+        delta = UtcDate.startup_utc_date - now
+        seconds = delta.total_seconds()
+        if(seconds<60):
+            os._exit(4)
+        old_print_exception(etype, value, tb, limit=None, file=None)
+    traceback.print_exception = custom_print_exception
+
+add_custom_print_exception()
+
 class GlobalVars:
     false_positives = []
     whitelisted_users = []
     blacklisted_users = []
     startup_utc = datetime.utcnow().strftime("%H:%M:%S")
-    startup_utc_date = datetime.utcnow()
     latest_questions = []
     blockedTime = 0
     charcoal_room_id = "11540"
@@ -87,7 +104,6 @@ if "first_start" in sys.argv and GlobalVars.on_master:
 elif "first_start" in sys.argv and not GlobalVars.on_master:
     GlobalVars.charcoal_hq.send_message(GlobalVars.s_reverted)
     GlobalVars.bayesian_testroom.send_message(GlobalVars.s_reverted)
-
 
 def restart_automatically(time_in_seconds):
     time.sleep(time_in_seconds)
@@ -400,7 +416,7 @@ while True:
                 threading.Thread(target=handlespam,args=(a,)).start()
     except Exception, e:
         now = datetime.utcnow()
-        delta = GlobalVars.startup_utc_date - now
+        delta = UtcDate.startup_utc_date - now
         seconds = delta.total_seconds()
         if(seconds<60):
             os._exit(4)
@@ -414,7 +430,7 @@ while True:
             f.write(tr + os.linesep + os.linesep)
 
 now = datetime.utcnow()
-delta = GlobalVars.startup_utc_date - now
+delta = UtcDate.startup_utc_date - now
 seconds = delta.total_seconds()
 if(seconds<60):
     os._exit(4)
