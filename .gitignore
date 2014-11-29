@@ -42,3 +42,6 @@ blacklistedUsers.txt
 
 # Settings files
 .settings/
+
+# Error logs
+errorLogs.txt
