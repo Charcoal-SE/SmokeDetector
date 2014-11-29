@@ -382,6 +382,10 @@ def watcher(ev,wrap2):
         if(isPrivileged(ev_room, ev_user_id)):
             postMessageInRoom(ev_room, "Goodbye, cruel world")
             os._exit(5)
+    if(ev.content.startswith("!!/stappit")):
+        if(isPrivileged(ev_room, ev_user_id)):
+            postMessageInRoom(ev_room, "Goodbye, cruel world")
+            os._exit(6)
     if(ev.content.startswith("!!/block")):
         if(isPrivileged(ev_room, ev_user_id)):
             ev.message.reply("blocked")

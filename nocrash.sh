@@ -8,7 +8,8 @@ export ChatExchangeP=$p
 stty echo
 count=0
 crashcount=0
-while :
+stoprunning=0
+while [ "$stoprunning" -eq "0" ] :
 do
    if [ "$count" -eq "0" ]
    then
@@ -38,6 +39,9 @@ do
    elif [ "$ecode" -eq "5" ]
    then
     count=0
+   elif [ "$ecode" -eq "6" ]
+   then
+    stoprunning=1
    else
     count=$((count+1))
    fi
