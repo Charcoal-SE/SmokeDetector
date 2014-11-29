@@ -6,4 +6,4 @@ SmokeDetector switches to Reverted Mode when it detects that errors occur in the
 
 ## Are there commands I cannot run in Reverted Mode? ##
 
-Yes, you cannot run the commands that change files: `true`, `tp`, `false`, `fp`, `trueu`, `falseu`, `tpu` and `fpu`.
+Yes, you cannot run the following commands: `true`, `tp`, `false`, `fp`, `trueu`, `falseu`, `tpu`, `fpu` and `updatesubmodule`.
