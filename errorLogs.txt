@@ -1,0 +1,11 @@
+None
+
+
+  File "ws.py", line 38, in <module>
+    raise Exception("Test.")
+
+
+  File "ws.py", line 38, in <module>
+    raise Exception("Test.")
+
+

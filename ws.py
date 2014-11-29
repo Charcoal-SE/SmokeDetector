@@ -381,7 +381,7 @@ def watcher(ev,wrap2):
     if(ev.content.startswith("!!/reboot")):
         if(isPrivileged(ev_room, ev_user_id)):
             postMessageInRoom(ev_room, "Goodbye, cruel world")
-            os._exit(1)
+            os._exit(5)
     if(ev.content.startswith("!!/block")):
         if(isPrivileged(ev_room, ev_user_id)):
             ev.message.reply("blocked")

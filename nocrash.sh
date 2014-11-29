@@ -35,6 +35,9 @@ do
     else
      crashcount=$((crashcount+1))
     fi
+   elif [ "$ecode" -eq "5" ]
+   then
+    count=0
    else
     count=$((count+1))
    fi
