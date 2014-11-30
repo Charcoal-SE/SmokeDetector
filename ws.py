@@ -91,7 +91,7 @@ load_files()
 GlobalVars.wrap.login(username,password)
 GlobalVars.wrapm.login(username,password)
 GlobalVars.s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started at [rev " + GlobalVars.commit_with_author + "](https://github.com/Charcoal-SE/SmokeDetector/commit/"+ GlobalVars.commit +") (hosted by Undo)"
-GlobalVars.s_reverted="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started in reverted mode at [rev " + GlobalVars.commit_with_author + "](https://github.com/Charcoal-SE/SmokeDetector/commit/"+ GlobalVars.commit +") (hosted by Undo)"
+GlobalVars.s_reverted="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started in [reverted mode](https://github.com/Charcoal-SE/SmokeDetector/blob/master/RevertedMode.md) at [rev " + GlobalVars.commit_with_author + "](https://github.com/Charcoal-SE/SmokeDetector/commit/"+ GlobalVars.commit +") (hosted by Undo)"
 GlobalVars.charcoal_hq = GlobalVars.wrap.get_room(GlobalVars.charcoal_room_id)
 GlobalVars.tavern_on_the_meta = GlobalVars.wrapm.get_room(GlobalVars.meta_tavern_room_id)
 
@@ -277,9 +277,6 @@ def watcher(ev,wrap2):
     message_parts = ev.message.content_source.split(" ")
     if(re.compile(":[0-9]+").search(message_parts[0])):
         if((message_parts[1].lower().startswith("false") or message_parts[1].lower().startswith("fp")) and isPrivileged(ev_room, ev_user_id)):
-            if not GlobalVars.on_master:
-                ev.message.reply("Sorry, that command cannot be used in [Reverted Mode](https://github.com/Charcoal-SE/SmokeDetector/blob/master/RevertedMode.md).")
-                return
             try:
                 should_delete = 1
                 msg_id = int(message_parts[0][1:])
@@ -323,8 +320,6 @@ def watcher(ev,wrap2):
             except:
                 pass # couldn't delete message
         if((message_parts[1].lower().startswith("true") or message_parts[1].lower().startswith("tp")) and isPrivileged(ev_room, ev_user_id)):
-            if(not GlobalVars.on_master):
-                ev.message.reply("[Reverted Mode](https://github.com/Charcoal-SE/SmokeDetector/blob/master/RevertedMode.md)")
             try:
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
@@ -388,11 +383,8 @@ def watcher(ev,wrap2):
             os._exit(6)
     if(ev.content.startswith("!!/updatesubmodule")):
         if(isPrivileged(ev_room, ev_user_id)):
-            if(GlobalVars.on_master):
-                ev.message.reply("Updating submodules, will reboot after finished.")
-                os._exit(7)
-            else:
-                ev.message.reply("Sorry, that command cannot be used in [Reverted Mode](https://github.com/Charcoal-SE/SmokeDetector/blob/master/RevertedMode.md).")
+            ev.message.reply("Updating submodules, will reboot after finished.")
+            os._exit(7)
     if(ev.content.startswith("!!/block")):
         if(isPrivileged(ev_room, ev_user_id)):
             ev.message.reply("blocked")
