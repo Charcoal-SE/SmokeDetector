@@ -275,8 +275,10 @@ def watcher(ev,wrap2):
     ev_room = str(ev.data["room_id"])
     ev_user_id = str(ev.data["user_id"])
     message_parts = ev.message.content_source.split(" ")
+    second_part_lower = message_parts[1].lower()
+    content_lower = ev.content.lower()
     if(re.compile(":[0-9]+").search(message_parts[0])):
-        if((message_parts[1].lower().startswith("false") or message_parts[1].lower().startswith("fp")) and isPrivileged(ev_room, ev_user_id)):
+        if((second_part_lower.startswith("false") or second_part_lower.startswith("fp")) and isPrivileged(ev_room, ev_user_id)):
             try:
                 should_delete = 1
                 msg_id = int(message_parts[0][1:])
@@ -319,7 +321,7 @@ def watcher(ev,wrap2):
                         msg_to_delete.delete()
             except:
                 pass # couldn't delete message
-        if((message_parts[1].lower().startswith("true") or message_parts[1].lower().startswith("tp")) and isPrivileged(ev_room, ev_user_id)):
+        if((second_part_lower.startswith("true") or second_part_lower.startswith("tp")) and isPrivileged(ev_room, ev_user_id)):
             try:
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
@@ -351,7 +353,7 @@ def watcher(ev,wrap2):
                             ev.message.reply("Something went wrong when registering title as true positive.")
             except:
                 pass
-        if(message_parts[1] == "delete" and isPrivileged(ev_room, ev_user_id)):
+        if(second_part_lower == "delete" and isPrivileged(ev_room, ev_user_id)):
             try:
                 msg_id = int(message_parts[0][1:])
                 if(ev_room == GlobalVars.charcoal_room_id):
@@ -364,28 +366,28 @@ def watcher(ev,wrap2):
                         msg_to_delete.delete()
             except:
                 pass # couldn't delete message
-    if(ev.content.startswith("!!/alive")):
+    if(content_lower.startswith("!!/alive")):
         if(ev_room == GlobalVars.charcoal_room_id):
             ev.message.reply('Of course')
         elif(ev_room == GlobalVars.meta_tavern_room_id):
             ev.message.reply(random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee', 'Watching this endless list of new questions *never* gets boring', 'Kinda sorta']))
-    if(ev.content.startswith("!!/rev")):
+    if(content_lower.startswith("!!/rev")):
             ev.message.reply('[' + GlobalVars.commit_with_author + '](https://github.com/Charcoal-SE/SmokeDetector/commit/'+ GlobalVars.commit +')')
-    if(ev.content.startswith("!!/status")):
+    if(content_lower.startswith("!!/status")):
             ev.message.reply('Running since %s UTC' % GlobalVars.startup_utc)
-    if(ev.content.startswith("!!/reboot")):
+    if(content_lower.startswith("!!/reboot")):
         if(isPrivileged(ev_room, ev_user_id)):
             postMessageInRoom(ev_room, "Goodbye, cruel world")
             os._exit(5)
-    if(ev.content.startswith("!!/stappit")):
+    if(content_lower.startswith("!!/stappit")):
         if(isPrivileged(ev_room, ev_user_id)):
             postMessageInRoom(ev_room, "Goodbye, cruel world")
             os._exit(6)
-    if(ev.content.startswith("!!/updatesubmodule")):
+    if(content_lower.startswith("!!/updatesubmodule")):
         if(isPrivileged(ev_room, ev_user_id)):
             ev.message.reply("Updating submodules, will reboot after finished.")
             os._exit(7)
-    if(ev.content.startswith("!!/block")):
+    if(content_lower.startswith("!!/block")):
         if(isPrivileged(ev_room, ev_user_id)):
             ev.message.reply("blocked")
             timeToBlock = ev.content[9:].strip()
@@ -394,11 +396,11 @@ def watcher(ev,wrap2):
                 GlobalVars.blockedTime = time.time() + timeToBlock
             else:
                 GlobalVars.blockedTime = time.time() + 900
-    if(ev.content.startswith("!!/unblock")):
+    if(content_lower.startswith("!!/unblock")):
         if(isPrivileged(ev_room, ev_user_id)):
             GlobalVars.blockedTime = time.time()
             ev.message.reply("unblocked")
-    if(ev.content.startswith("!!/pull")):
+    if(content_lower.startswith("!!/pull")):
         if(isPrivileged(ev_room, ev_user_id)):
             os._exit(3)
 
