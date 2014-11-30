@@ -275,7 +275,7 @@ def watcher(ev,wrap2):
     ev_room = str(ev.data["room_id"])
     ev_user_id = str(ev.data["user_id"])
     message_parts = ev.message.content_source.split(" ")
-    second_part_lower = message_parts[1].lower()
+    second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
     content_lower = ev.content.lower()
     if(re.compile(":[0-9]+").search(message_parts[0])):
         if((second_part_lower.startswith("false") or second_part_lower.startswith("fp")) and isPrivileged(ev_room, ev_user_id)):
