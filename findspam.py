@@ -4,7 +4,7 @@ import phonenumbers
 
 class FindSpam:
     rules = [
-     {'regex': u"(?i)\\b(baba(ji)?|nike|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|me2.do|black magic|bam2u|Neuro3X|Xtreme Antler|fake (passports?|driver'?s? licen[cs]e|ID cards?)|support phone number)\\b|ಌ", 'all': True,
+     {'regex': u"(?i)\\b(baba(ji)?|nike|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|me2.do|black magic|bam2u|Neuro3X|Xtreme Antler|fake (passports?|driver'?s? licen[cs]e|ID cards?)|support phone number|bagprada)\\b|ಌ", 'all': True,
         'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'username': True},
      {'regex': u"(?i)\\b(weight loss|muscles? build(ing)?|muscles?( (grow(th)?|diets?))?|anti aging|SkinCentric|weight reduction)\\b", 'all': True,
         'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'username': True},
