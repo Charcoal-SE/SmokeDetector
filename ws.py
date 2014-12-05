@@ -27,7 +27,7 @@ def uncaught_exception(exctype, value, tb):
     tr = os.linesep.join(traceback.format_tb(tb))
     print(tr)
     with open("errorLogs.txt", "a") as f:
-        f.write(tr + os.linesep + os.linesep)
+        f.write(str(now) + " UTC" + os.linesep + tr + os.linesep + os.linesep)
     if(seconds<60):
         os._exit(4)
     else:
@@ -461,7 +461,7 @@ while True:
         exception_only = ''.join(traceback.format_exception_only(type(e), e)).strip()
         GlobalVars.charcoal_hq.send_message("Recovered from `" + exception_only + "`")
         with open("errorLogs.txt", "a") as f:
-            f.write(tr + os.linesep + os.linesep)
+            f.write(str(now) + " UTC" + os.linesep + tr + os.linesep + os.linesep)
 
 now = datetime.utcnow()
 delta = UtcDate.startup_utc_date - now
