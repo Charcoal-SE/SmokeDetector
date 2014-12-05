@@ -6,7 +6,7 @@ class FindSpam:
     rules = [
      {'regex': u"(?i)\\b(baba(ji)?|nike|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|me2.do|black magic|bam2u|Neuro3X|Xtreme Antler|fake (passports?|driver'?s? licen[cs]e|ID cards?)|support phone number|bagprada)\\b|ಌ", 'all': True,
         'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'username': True},
-     {'regex': u"(?i)\\b(weight loss|muscles? build(ing)?|muscles?( (grow(th)?|diets?))?|anti aging|SkinCentric|weight reduction)\\b", 'all': True,
+     {'regex': u"(?i)\\b(weight (los[es]|reduction)|muscles? build(ing)?|muscles?( (grow(th)?|diets?))?|anti aging|SkinCentric|lose weight)\\b", 'all': True,
         'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'username': True},
      {'regex': u"(?i)^(?:(?=.*?\\b(?:online|hd)\\b)(?=.*?(?:free|full|unlimited)).*?movies?\\b|(?=.*?\\b(?:acai|kisn)\\b)(?=.*?care).*products?\\b|(?=.*?packer).*mover)", 'all': True,
         'sites': [], 'reason': "Bad keywords in {}", 'title': True, 'username': True},
