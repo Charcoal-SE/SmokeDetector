@@ -11,7 +11,6 @@ from bayesian.classify import Classify
 from bayesian.learn import Learn
 import re
 import pickle
-import os.path
 from datetime import datetime
 import traceback
 
@@ -28,7 +27,7 @@ def uncaught_exception(exctype, value, tb):
     print(tr)
     with open("errorLogs.txt", "a") as f:
         f.write(str(now) + " UTC" + os.linesep + tr + os.linesep + os.linesep)
-    if(seconds<60):
+    if(seconds < 60):
         os._exit(4)
     else:
         os._exit(1)
@@ -39,9 +38,8 @@ def installThreadExcepthook():
     """
     Workaround for sys.excepthook thread bug
     From
-http://spyced.blogspot.com/2007/06/workaround-for-sysexcepthook-bug.html
-   
-(https://sourceforge.net/tracker/?func=detail&atid=105470&aid=1230540&group_id=5470).
+    http://spyced.blogspot.com/2007/06/workaround-for-sysexcepthook-bug.html
+    (https://sourceforge.net/tracker/?func=detail&atid=105470&aid=1230540&group_id=5470).
     Call once from __main__ before creating any threads.
     If using psyco, call psyco.cannotcompile(threading.Thread.run)
     since this replaces a new-style class method.
@@ -307,7 +305,7 @@ def watcher(ev,wrap2):
     if(re.compile(":[0-9]+").search(message_parts[0])):
         if((second_part_lower.startswith("false") or second_part_lower.startswith("fp")) and isPrivileged(ev_room, ev_user_id)):
             try:
-                should_delete = 1
+                should_delete = True
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
                 if(ev_room == GlobalVars.charcoal_room_id):
@@ -335,7 +333,7 @@ def watcher(ev,wrap2):
                             ev.message.reply("Registered as false positive and added title to Bayesian doctype 'good'.")
                         else:
                             ev.message.reply("Could not register title as false positive.")
-                            should_delete=0
+                            should_delete = False
                     else:
                         if user_added and site_post_id is not None:
                             ev.message.reply("Registered as false positive and whitelisted user, but could not add the title to the Bayesian doctype 'good'.")
@@ -343,8 +341,8 @@ def watcher(ev,wrap2):
                             ev.message.reply("Registered as false positive, but could not add the title to the Bayesian doctype 'good'.")
                         else:
                             ev.message.reply("Could not register title as false positive.")
-                            should_delete=0
-                    if(should_delete==1):
+                            should_delete = False
+                    if should_delete:
                         msg_to_delete.delete()
             except:
                 pass # couldn't delete message
@@ -452,7 +450,7 @@ while True:
         now = datetime.utcnow()
         delta = UtcDate.startup_utc_date - now
         seconds = delta.total_seconds()
-        if(seconds<60):
+        if(seconds < 60):
             os._exit(4)
         ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
         ws.send("155-questions-active")
@@ -466,7 +464,7 @@ while True:
 now = datetime.utcnow()
 delta = UtcDate.startup_utc_date - now
 seconds = delta.total_seconds()
-if(seconds<60):
+if(seconds < 60):
     os._exit(4)
 s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector aborted"
 GlobalVars.charcoal_hq.send_message(s)
