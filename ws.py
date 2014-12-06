@@ -391,6 +391,8 @@ def watcher(ev,wrap2):
                         msg_to_delete.delete()
             except:
                 pass # couldn't delete message
+    if(content_lower.startswith("!!/lick")):
+      ev.message.reply("*licks ice cream cone*")
     if(content_lower.startswith("!!/alive")):
         if(ev_room == GlobalVars.charcoal_room_id):
             ev.message.reply('Of course')
