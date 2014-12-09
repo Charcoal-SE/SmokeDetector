@@ -4,8 +4,7 @@ python:
 install:
   - pip install .
 script:
-  - python test.py
+  - python -W default::Warning -m pytest test
 branches:
   only:
-    - master
     - travis
