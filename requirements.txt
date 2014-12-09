@@ -3,3 +3,4 @@ requests
 websocket-client
 coverage
 pytest
+phonenumbers
