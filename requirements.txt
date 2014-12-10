@@ -1,6 +1,0 @@
-beautifulsoup4
-requests
-websocket-client
-coverage
-pytest
-phonenumbers
