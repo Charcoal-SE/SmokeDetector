@@ -120,7 +120,7 @@ GlobalVars.s_reverted="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDet
 GlobalVars.charcoal_hq = GlobalVars.wrap.get_room(GlobalVars.charcoal_room_id)
 GlobalVars.tavern_on_the_meta = GlobalVars.wrapm.get_room(GlobalVars.meta_tavern_room_id)
 
-GlobalVars.specialrooms = [{ "sites": ["english.stackexchange.com"], "room": GlobalVars.wrap.get_room("95"), "unwantedReasons": [] }, { "sites": ["askubuntu.com"], "room": GlobalVars.wrap.get_room("201"), "unwantedReasons": ["All-caps title"] }]
+GlobalVars.specialrooms = [{ "sites": ["english.stackexchange.com"], "room": GlobalVars.wrap.get_room("95"), "unwantedReasons": [] }, { "sites": ["askubuntu.com"], "room": GlobalVars.wrap.get_room("201"), "unwantedReasons": ["All-caps title", "Phone number detected"] }]
 
 GlobalVars.bayesian_testroom = GlobalVars.wrap.get_room("17251")
 if "first_start" in sys.argv and GlobalVars.on_master:
