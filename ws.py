@@ -278,7 +278,7 @@ def handlespam(data):
         poster = d["ownerDisplayName"]
         reason=", ".join(FindSpam.testpost(title,poster,d["siteBaseHostAddress"]))
         titleToPost = GlobalVars.parser.unescape(re.sub(r"([_*\\`\[\]])", r"\\\1", title)).strip()
-        s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % (reason,titleToPost,d["url"],poster,d["ownerUrl"],d["siteBaseHostAddress"])
+        s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % (reason,titleToPost.strip(),d["url"],poster.strip(),d["ownerUrl"],d["siteBaseHostAddress"])
         print GlobalVars.parser.unescape(s).encode('ascii',errors='replace')
         if time.time() >= GlobalVars.blockedTime:
             GlobalVars.charcoal_hq.send_message(s)
