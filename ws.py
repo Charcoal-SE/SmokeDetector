@@ -378,7 +378,7 @@ def watcher(ev,wrap2):
                             ev.message.reply("Something went wrong when registering title as true positive.")
             except:
                 pass
-        if((second_part_lower == "delete" or second_part_lower == "remove") and isPrivileged(ev_room, ev_user_id)):
+        if((second_part_lower == "delete" or second_part_lower == "remove" or second_part_lower == "gone") and isPrivileged(ev_room, ev_user_id)):
             try:
                 msg_id = int(message_parts[0][1:])
                 if(ev_room == GlobalVars.charcoal_room_id):
