@@ -278,7 +278,7 @@ def handlespam(data):
         poster = d["ownerDisplayName"]
         reason=", ".join(FindSpam.testpost(title,poster,d["siteBaseHostAddress"]))
         titleToPost = GlobalVars.parser.unescape(re.sub(r"([_*\\`\[\]])", r"\\\1", title)).strip()
-        s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % (reason,titleToPost,d["url"],poster,d["ownerUrl"],d["siteBaseHostAddress"])
+        s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % (reason,titleToPost.strip(),d["url"],poster.strip(),d["ownerUrl"],d["siteBaseHostAddress"])
         print GlobalVars.parser.unescape(s).encode('ascii',errors='replace')
         if time.time() >= GlobalVars.blockedTime:
             GlobalVars.charcoal_hq.send_message(s)
@@ -378,7 +378,7 @@ def watcher(ev,wrap2):
                             ev.message.reply("Something went wrong when registering title as true positive.")
             except:
                 pass
-        if((second_part_lower == "delete" or second_part_lower == "remove") and isPrivileged(ev_room, ev_user_id)):
+        if((second_part_lower == "delete" or second_part_lower == "remove" or second_part_lower == "gone") and isPrivileged(ev_room, ev_user_id)):
             try:
                 msg_id = int(message_parts[0][1:])
                 if(ev_room == GlobalVars.charcoal_room_id):
