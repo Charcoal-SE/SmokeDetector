@@ -419,11 +419,20 @@ def watcher(ev,wrap2):
             except:
                 pass # couldn't delete message
     if(content_lower.startswith("!!/wut")):
-      ev.message.reply("Whaddya mean, 'wut'? Humans...")
+        ev.message.reply("Whaddya mean, 'wut'? Humans...")
     if(content_lower.startswith("!!/lick")):
-      ev.message.reply("*licks ice cream cone*")
+        ev.message.reply("*licks ice cream cone*")
     if(content_lower.startswith("!!/hats")):
-      ev.message.reply('HATS ARE AWESOME. This was going to show how long until hats start, but it was too hard and I gave up.')
+        wb_start = datetime(2014, 12, 15, 0, 0, 0)
+        now = datetime.utcnow()
+        diff = now - wb_start
+        hours, remainder = divmod(diff.seconds, 3600)
+        minutes, seconds = divmod(remainder, 60)
+        daystr = "days" if diff.days != 1 else "day"
+        hourstr = "hours" if hours != 1 else "hour"
+        minutestr = "minutes" if minutes != 1 else "minute"
+        secondstr = "seconds" if seconds != 1 else "second"
+        ev.message.reply("HATS ARE AWESOME. Winter Bash started %s %s, %s %s, %s %s and %s %s ago." % (diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr))
     if(content_lower.startswith("!!/alive")):
         if(ev_room == GlobalVars.charcoal_room_id):
             ev.message.reply('Of course')
