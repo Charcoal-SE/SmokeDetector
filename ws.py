@@ -64,6 +64,7 @@ class GlobalVars:
     false_positives = []
     whitelisted_users = []
     blacklisted_users = []
+    ignored_posts = []
     startup_utc = datetime.utcnow().strftime("%H:%M:%S")
     latest_questions = []
     blockedTime = 0
@@ -88,7 +89,8 @@ class GlobalVars:
     bayesian_testroom = None
 
 GlobalVars.privileged_users = { GlobalVars.charcoal_room_id: ["66258", "31768","103081","73046","88521","59776"], GlobalVars.meta_tavern_room_id: ["244519","244382","194047","158100","178438","237685","215468","229438","180276", "161974", "244382", "186281", "266094", "245167", "230261", "213575", "241919"] }
-GlobalVars.smokeDetector_user_id = { GlobalVars.charcoal_room_id: "120914", GlobalVars.meta_tavern_room_id: "266345" }
+#GlobalVars.smokeDetector_user_id = { GlobalVars.charcoal_room_id: "120914", GlobalVars.meta_tavern_room_id: "266345" }
+GlobalVars.smokeDetector_user_id = { GlobalVars.charcoal_room_id: "118010", GlobalVars.meta_tavern_room_id: "266345" }
 
 def load_files():
     if(os.path.isfile("falsePositives.txt")):
@@ -100,6 +102,9 @@ def load_files():
     if(os.path.isfile("blacklistedUsers.txt")):
         with open("blacklistedUsers.txt", "r") as f:
             GlobalVars.blacklisted_users = pickle.load(f)
+    if(os.path.isfile("ignoredPosts.txt")):
+        with open("ignoredPosts.txt", "r") as f:
+            GlobalVars.ignored_posts = pickle.load(f)
 
 if("ChatExchangeU" in os.environ):
     username=os.environ["ChatExchangeU"]
@@ -149,6 +154,9 @@ def is_whitelisted_user(user):
 
 def is_blacklisted_user(user):
     return user in GlobalVars.blacklisted_users
+
+def is_ignored_post(postid_site_tuple):
+    return postid_site_tuple in GlobalVars.ignored_posts
 
 def add_whitelisted_user(user):
     if user in GlobalVars.whitelisted_users or user is None:
@@ -214,7 +222,7 @@ def checkifspam(data):
             test += ", Blacklisted user"
     if (0<len(test)):
         post_id = d["id"]
-        if(has_already_been_posted(site, post_id, s) or is_false_positive(post_id, site) or is_whitelisted_user(get_user_from_url(d["ownerUrl"]))):
+        if(has_already_been_posted(site, post_id, s) or is_false_positive(post_id, site) or is_whitelisted_user(get_user_from_url(d["ownerUrl"])) or is_ignored_post((str(post_id), site))):
             return False # Don't repost. Reddit will hate you.
         append_to_latest_questions(site, post_id, s)
         try:
@@ -256,6 +264,13 @@ def store_site_and_post_id(site_post_id_tuple):
     GlobalVars.false_positives.append(site_post_id_tuple)
     with open("falsePositives.txt", "w") as f:
         pickle.dump(GlobalVars.false_positives, f)
+
+def add_ignored_post(postid_site_tuple):
+    if(postid_site_tuple is None or postid_site_tuple in GlobalVars.ignored_posts):
+        return
+    GlobalVars.ignored_posts.append(postid_site_tuple)
+    with open("ignoredPosts.txt", "w") as f:
+        pickle.dump(GlobalVars.ignored_posts, f)
 
 def fetch_title_from_msg_content(content):
     return re.compile(r": \[(.+)\]").findall(content)[0]
@@ -376,6 +391,19 @@ def watcher(ev,wrap2):
                             ev.message.reply("User blacklisted, but something went wrong when registering title as true positive.")
                         else:
                             ev.message.reply("Something went wrong when registering title as true positive.")
+            except:
+                pass
+        if(second_part_lower.startswith("ignore") and isPrivileged(ev_room, ev_user_id)):
+            try:
+                msg_id = int(message_parts[0][1:])
+                msg_content = None
+                msg_ignore = wrap2.get_message(msg_id)
+                if(str(msg_ignore.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]):
+                    msg_content = msg_ignore.content_source
+                if(msg_content is not None):
+                    post_id_site = fetch_post_id_and_site_from_msg_content(msg_content)
+                    add_ignored_post(post_id_site)
+                    ev.message.reply("Post ignored; alerts about it will not longer be posted.")
             except:
                 pass
         if((second_part_lower == "delete" or second_part_lower == "remove" or second_part_lower == "gone") and isPrivileged(ev_room, ev_user_id)):

@@ -35,10 +35,11 @@ nosetests.xml
 .project
 .pydevproject
 
-# False positives and white/blacklisted users
+# False positives, whitelisted/blacklisted users, ignored posts
 falsePositives.txt
 whitelistedUsers.txt
 blacklistedUsers.txt
+ignoredPosts.txt
 
 # Settings files
 .settings/
