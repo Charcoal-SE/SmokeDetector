@@ -43,12 +43,14 @@ class FindSpam:
 
     @staticmethod
     def checkphonenumbers(matched):
+        test_formats = [ None, "US", "IN" ]
         for phone_number in matched:
-            try:
-                z = phonenumbers.parse(phone_number, "IN")
-                if phonenumbers.is_possible_number(z) and phonenumbers.is_valid_number(z):
-                    print "Possible %s, Valid %s, Explain: %s" % (phonenumbers.is_possible_number(z), phonenumbers.is_valid_number(z), z)
-                    return True
-            except phonenumbers.phonenumberutil.NumberParseException:
-                pass
+            for testf in test_formats:
+                try:
+                    z = phonenumbers.parse(phone_number, testf)
+                    if phonenumbers.is_possible_number(z) and phonenumbers.is_valid_number(z):
+                        print "Possible %s, Valid %s, Explain: %s" % (phonenumbers.is_possible_number(z), phonenumbers.is_valid_number(z), z)
+                        return True
+                except phonenumbers.phonenumberutil.NumberParseException:
+                    pass
         return False
