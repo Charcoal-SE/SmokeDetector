@@ -322,14 +322,9 @@ def watcher(ev,wrap2):
                 should_delete = True
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
-                if(ev_room == GlobalVars.charcoal_room_id):
-                    msg_to_delete = GlobalVars.wrap.get_message(msg_id)
-                    if(str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[GlobalVars.charcoal_room_id]):
-                        msg_content = msg_to_delete.content_source
-                elif(ev_room == GlobalVars.meta_tavern_room_id):
-                    msg_to_delete = GlobalVars.wrapm.get_message(msg_id)
-                    if(str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[GlobalVars.meta_tavern_room_id]):
-                        msg_content = msg_to_delete.content_source
+                msg_to_delete = wrap2.get_message(msg_id)
+                if(str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]):
+                    msg_content = msg_to_delete.content_source
                 if (msg_content is not None):
                     site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
                     store_site_and_post_id(site_post_id)
@@ -364,14 +359,9 @@ def watcher(ev,wrap2):
             try:
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
-                if(ev_room == GlobalVars.charcoal_room_id):
-                    msg_true_positive = GlobalVars.wrap.get_message(msg_id)
-                    if(str(msg_true_positive.owner.id) == GlobalVars.smokeDetector_user_id[GlobalVars.charcoal_room_id]):
-                        msg_content = msg_true_positive.content_source
-                elif(ev_room == GlobalVars.meta_tavern_room_id):
-                    msg_true_positive = GlobalVars.wrapm.get_message(msg_id)
-                    if(str(msg_true_positive.owner.id) == GlobalVars.smokeDetector_user_id[GlobalVars.meta_tavern_room_id]):
-                        msg_content = msg_true_positive.content_source
+                msg_true_positive = wrap2.get_message(msg_id)
+                if(str(msg_true_positive.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]):
+                    msg_content = msg_true_positive.content_source
                 if(msg_content is not None):
                     learned = bayesian_learn_title(msg_content, "bad")
                     user_added = False
@@ -408,14 +398,9 @@ def watcher(ev,wrap2):
         if((second_part_lower == "delete" or second_part_lower == "remove" or second_part_lower == "gone") and isPrivileged(ev_room, ev_user_id)):
             try:
                 msg_id = int(message_parts[0][1:])
-                if(ev_room == GlobalVars.charcoal_room_id):
-                    msg_to_delete = GlobalVars.wrap.get_message(msg_id)
-                    if(str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[GlobalVars.charcoal_room_id]):
-                        msg_to_delete.delete()
-                elif(ev_room == GlobalVars.meta_tavern_room_id):
-                    msg_to_delete = GlobalVars.wrapm.get_message(msg_id)
-                    if(str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[GlobalVars.meta_tavern_room_id]):
-                        msg_to_delete.delete()
+                msg_to_delete = wrap2.get_message(msg_id)
+                if(str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]):
+                    msg_to_delete.delete()
             except:
                 pass # couldn't delete message
     if(content_lower.startswith("!!/wut")):
