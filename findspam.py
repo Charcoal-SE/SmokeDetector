@@ -4,7 +4,7 @@ import phonenumbers
 
 class FindSpam:
     rules = [
-     {'regex': u"(?i)\\b(baba(ji)?|nike|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|me2.do|black magic|bam2u|Neuro(3X|flexyn)|Nutra|Bowtrol|Forskolin|Blackline Elite|TestCore Pro|Xtreme Antler|fake (passports?|driver'?s? licen[cs]e|ID cards?)|bagprada)\\b|ಌ|(support|service|helpline)( phone)? number|1[ -]?866[ -]?978[ -]?6819", 'all': True,
+     {'regex': u"(?i)\\b(baba(ji)?|nike|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|swtor2credits|me2.do|black magic|bam2u|Neuro(3X|flexyn)|Nutra|Bowtrol|Forskolin|Blackline Elite|TestCore Pro|Xtreme Antler|fake (passports?|driver'?s? licen[cs]e|ID cards?)|bagprada)\\b|ಌ|(support|service|helpline)( phone)? number|1[ -]?866[ -]?978[ -]?6819", 'all': True,
         'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'username': True},
      {'regex': u"(?i)\\b(weight (los[es]|reduction)|muscles? build(ing)?|muscles?( (grow(th)?|diets?))?|anti aging|SkinCentric|los[es] weight)\\b", 'all': True,
         'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'username': True},
