@@ -43,7 +43,7 @@ class FindSpam:
 
     @staticmethod
     def checkphonenumbers(matched):
-        test_formats = [ None, "US", "IN" ]
+        test_formats = [ "IN", "US", None ]
         for phone_number in matched:
             for testf in test_formats:
                 try:
