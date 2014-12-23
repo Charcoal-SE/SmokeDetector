@@ -28,6 +28,7 @@ do
    elif [ "$ecode" -eq "4" ]
    then
     count=$((count+1))
+    sleep 5
     if [ "$crashcount" -eq "2" ]
     then
      git checkout HEAD~1
