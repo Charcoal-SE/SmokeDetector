@@ -439,6 +439,10 @@ def watcher(ev,wrap2):
         if(isPrivileged(ev_room, ev_user_id)):
             ev.message.reply("Updating submodules, will reboot after finished.")
             os._exit(7)
+    if(content_lower.startswith("!!/master")):
+        if(isPrivileged(ev_room, ev_user_id)):
+            ev.message.reply("Cheking out to master and restarting...")
+            os._exit(8)
     if(content_lower.startswith("!!/block")):
         if(isPrivileged(ev_room, ev_user_id)):
             ev.message.reply("blocked")

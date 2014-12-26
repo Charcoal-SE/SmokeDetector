@@ -48,6 +48,11 @@ do
     git submodule update
     count=0
     crashcount=0
+   elif [ "$ecode" -eq "8" ]
+   then
+    git checkout master
+    count=0
+    crashcount=0
    else
     count=$((count+1))
    fi
