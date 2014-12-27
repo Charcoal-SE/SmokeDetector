@@ -429,7 +429,20 @@ def watcher(ev,wrap2):
             ev.message.reply("unblocked")
     if(content_lower.startswith("!!/pull")):
         if(isPrivileged(ev_room, ev_user_id)):
-            os._exit(3)
+            r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
+            latest_sha = r.json()["object"]["sha"]
+            r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/statuses/' + latest_sha)
+            states = []
+            for status in r.json():
+                state = status["state"]
+                states.append(state)
+            if ("succeeded" in states):
+                ev.message.reply("Pulling latest from master -- CI build passed.")
+                os._exit(3)
+            elif ("error" in states or "failure" in states):
+                ev.message.reply("CI build failed! :( Please check your commit.")
+            elif ("pending" in states or not states):
+                ev.message.reply("CI build is still pending, wait until the build has finished and then pull again.")
 
 def isPrivileged(room_id_str, user_id_str):
     return room_id_str in GlobalVars.privileged_users and user_id_str in GlobalVars.privileged_users[room_id_str]
