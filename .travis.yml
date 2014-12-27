@@ -7,5 +7,5 @@ script:
   - python -W default::Warning -m pytest test
 branches:
   only:
-  	- master
+    - master
     - travis

@@ -13,6 +13,7 @@ import re
 import pickle
 from datetime import datetime
 import traceback
+import requests
 
 class UtcDate:
     startup_utc_date = datetime.utcnow()
