@@ -466,7 +466,7 @@ def watcher(ev,wrap2):
             for status in r.json():
                 state = status["state"]
                 states.append(state)
-            if ("succeeded" in states):
+            if ("success" in states):
                 ev.message.reply("Pulling latest from master -- CI build passed.")
                 os._exit(3)
             elif ("error" in states or "failure" in states):
