@@ -1,0 +1,11 @@
+language: python
+python:
+  - '2.7'
+install:
+  - pip install beautifulsoup4 requests websocket-client coverage pytest phonenumbers
+script:
+  - python -W default::Warning -m pytest test
+branches:
+  only:
+    - master
+    - travis
