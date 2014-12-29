@@ -409,7 +409,7 @@ def watcher(ev,wrap2):
     if(content_lower.startswith("!!/lick")):
         ev.message.reply("*licks ice cream cone*")
     if(content_lower.startswith("!!/hats")):
-        wb_start = datetime(2014, 12, 15, 0, 0, 0)
+        wb_start = datetime(2015, 1, 5, 0, 0, 0)
         now = datetime.utcnow()
         diff = now - wb_start
         hours, remainder = divmod(diff.seconds, 3600)
@@ -418,7 +418,7 @@ def watcher(ev,wrap2):
         hourstr = "hours" if hours != 1 else "hour"
         minutestr = "minutes" if minutes != 1 else "minute"
         secondstr = "seconds" if seconds != 1 else "second"
-        ev.message.reply("HATS ARE AWESOME. Winter Bash started %s %s, %s %s, %s %s and %s %s ago." % (diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr))
+        ev.message.reply("HATS ARE AWESOME. Winter Bash will end in %s %s, %s %s, %s %s and %s %s. :(" % (diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr))
     if(content_lower.startswith("!!/alive")):
         if(ev_room == GlobalVars.charcoal_room_id):
             ev.message.reply('Of course')
