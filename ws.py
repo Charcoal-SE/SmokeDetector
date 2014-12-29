@@ -409,9 +409,9 @@ def watcher(ev,wrap2):
     if(content_lower.startswith("!!/lick")):
         ev.message.reply("*licks ice cream cone*")
     if(content_lower.startswith("!!/hats")):
-        wb_start = datetime(2015, 1, 5, 0, 0, 0)
+        wb_end = datetime(2015, 1, 5, 0, 0, 0)
         now = datetime.utcnow()
-        diff = now - wb_start
+        diff = wb_end - now
         hours, remainder = divmod(diff.seconds, 3600)
         minutes, seconds = divmod(remainder, 60)
         daystr = "days" if diff.days != 1 else "day"
