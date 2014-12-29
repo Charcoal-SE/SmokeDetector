@@ -28,7 +28,7 @@ def uncaught_exception(exctype, value, tb):
     print(tr)
     with open("errorLogs.txt", "a") as f:
         f.write(str(now) + " UTC" + os.linesep + tr + os.linesep + os.linesep)
-    if(seconds < 60):
+    if(seconds < 180):
         os._exit(4)
     else:
         os._exit(1)
