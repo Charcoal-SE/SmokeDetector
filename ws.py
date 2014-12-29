@@ -461,7 +461,7 @@ def watcher(ev,wrap2):
         if(isPrivileged(ev_room, ev_user_id)):
             r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
             latest_sha = r.json()["object"]["sha"]
-            r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/statuses/' + latest_sha)
+            r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/' + latest_sha + '/statuses')
             states = []
             for status in r.json():
                 state = status["state"]
