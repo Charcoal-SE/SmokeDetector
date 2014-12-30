@@ -89,7 +89,7 @@ class GlobalVars:
     specialrooms = []
     bayesian_testroom = None
 
-GlobalVars.privileged_users = { GlobalVars.charcoal_room_id: ["117490", "66258", "31768","103081","73046","88521","59776"], GlobalVars.meta_tavern_room_id: ["259867", "244519","244382","194047","158100","178438","237685","215468","229438","180276", "161974", "244382", "186281", "266094", "245167", "230261", "213575", "241919"] }
+GlobalVars.privileged_users = { GlobalVars.charcoal_room_id: ["117490", "66258", "31768","103081","73046","88521","59776", "31465"], GlobalVars.meta_tavern_room_id: ["259867", "244519","244382","194047","158100","178438","237685","215468","229438","180276", "161974", "244382", "186281", "266094", "245167", "230261", "213575", "241919", "203389"] }
 GlobalVars.smokeDetector_user_id = { GlobalVars.charcoal_room_id: "120914", GlobalVars.meta_tavern_room_id: "266345" }
 
 def load_files():
