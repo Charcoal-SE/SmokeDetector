@@ -450,9 +450,6 @@ def watcher(ev,wrap2):
         if(isPrivileged(ev_room, ev_user_id)):
             ev.message.reply("Checking out to master and restarting...")
             os._exit(8)
-    if(content_lower.startswith("!!/gimmehat")):
-        if(isPrivileged(ev_room, ev_user_id)):
-            postMessageInRoom(GlobalVars.meta_tavern_room_id, "I'm tired of not having a hat...")
     if(content_lower.startswith("!!/block")):
         if(isPrivileged(ev_room, ev_user_id)):
             ev.message.reply("blocked")
