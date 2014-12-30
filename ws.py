@@ -70,7 +70,7 @@ class GlobalVars:
     latest_questions = []
     blockedTime = 0
     charcoal_room_id = "11540"
-    meta_tavern_room_id = "89"
+    meta_tavern_room_id = "651"#"89"
     privileged_users = {}
     smokeDetector_user_id = {}
     site_filename = { "electronics.stackexchange.com" : "ElectronicsGood.txt", "gaming.stackexchange.com" : "GamingGood.txt", "german.stackexchange.com" : "GermanGood.txt",
@@ -148,6 +148,12 @@ def get_user_from_url(url):
     site = m.group(1)
     user_id = m.group(2)
     return (user_id, site)
+
+def postMessageInRoom(room_id_str, msg):
+    if room_id_str == GlobalVars.charcoal_room_id:
+        GlobalVars.charcoal_hq.send_message(msg)
+    elif room_id_str == GlobalVars.meta_tavern_room_id:
+        GlobalVars.tavern_on_the_meta.send_message(msg)
 
 def is_whitelisted_user(user):
     return user in GlobalVars.whitelisted_users
@@ -444,7 +450,7 @@ def watcher(ev,wrap2):
         if(isPrivileged(ev_room, ev_user_id)):
             ev.message.reply("Checking out to master and restarting...")
             os._exit(8)
-    if(content.lower.startswith("!!/gimmehat")):
+    if(content_lower.startswith("!!/gimmehat")):
         if(isPrivileged(ev_room, ev_user_id)):
             postMessageInRoom(GlobalVars.meta_tavern_room_id, "I'm tired of not having a hat...")
     if(content_lower.startswith("!!/block")):
@@ -479,12 +485,6 @@ def watcher(ev,wrap2):
 
 def isPrivileged(room_id_str, user_id_str):
     return room_id_str in GlobalVars.privileged_users and user_id_str in GlobalVars.privileged_users[room_id_str]
-
-def postMessageInRoom(room_id_str, msg):
-    if room_id_str == GlobalVars.charcoal_room_id:
-        GlobalVars.charcoal_hq.send_message(msg)
-    elif room_id_str == GlobalVars.meta_tavern_room_id:
-        GlobalVars.tavern_on_the_meta.send_message(msg)
 
 GlobalVars.charcoal_hq.watch_socket(watcher)
 GlobalVars.tavern_on_the_meta.watch_socket(watcher)
