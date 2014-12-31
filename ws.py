@@ -450,6 +450,14 @@ def watcher(ev,wrap2):
         if(isPrivileged(ev_room, ev_user_id)):
             ev.message.reply("Checking out to master and restarting...")
             os._exit(8)
+    if(content_lower.startswith("!!/clearbl")):
+        if(isPrivileged(ev_room, ev_user_id)):
+            if(os.path.isfile("blacklistedUsers.txt")):
+                os.remove("blacklistedUsers.txt")
+                GlobalVars.blacklisted_users = []
+                ev.message.reply("Kaboom, blacklisted users cleared.")
+            else:
+                ev.message.reply("There are no blacklisted users at the moment.")
     if(content_lower.startswith("!!/block")):
         if(isPrivileged(ev_room, ev_user_id)):
             ev.message.reply("blocked")
