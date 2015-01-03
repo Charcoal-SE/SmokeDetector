@@ -445,10 +445,6 @@ def watcher(ev,wrap2):
         if(isPrivileged(ev_room, ev_user_id)):
             postMessageInRoom(ev_room, "Goodbye, cruel world")
             os._exit(6)
-    if(content_lower.startswith("!!/updatesubmodule")):
-        if(isPrivileged(ev_room, ev_user_id)):
-            ev.message.reply("Updating submodules, will reboot after finished.")
-            os._exit(7)
     if(content_lower.startswith("!!/master")):
         if(isPrivileged(ev_room, ev_user_id)):
             ev.message.reply("Checking out to master and restarting...")

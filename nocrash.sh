@@ -24,7 +24,9 @@ do
    then
     git checkout master
     git pull
+    git submodule update
     count=0
+    crashcount=0
    elif [ "$ecode" -eq "4" ]
    then
     count=$((count+1))
@@ -43,11 +45,6 @@ do
    elif [ "$ecode" -eq "6" ]
    then
     stoprunning=1
-   elif [ "$ecode" -eq "7" ]
-   then
-    git submodule update
-    count=0
-    crashcount=0
    elif [ "$ecode" -eq "8" ]
    then
     git checkout master
