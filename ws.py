@@ -66,6 +66,7 @@ class GlobalVars:
     whitelisted_users = []
     blacklisted_users = []
     ignored_posts = []
+    auto_ignored_posts = []
     startup_utc = datetime.utcnow().strftime("%H:%M:%S")
     latest_questions = []
     blockedTime = 0
@@ -105,6 +106,22 @@ def load_files():
     if(os.path.isfile("ignoredPosts.txt")):
         with open("ignoredPosts.txt", "r") as f:
             GlobalVars.ignored_posts = pickle.load(f)
+    if(os.path.isfile("autoIgnoredPosts.txt")):
+        with open("autoIgnoredPosts.txt", "r") as f:
+            GlobalVars.auto_ignored_posts = pickle.load(f)
+
+def filter_auto_ignored_posts():
+    todayDate = datetime.today()
+    to_remove = []
+    for aip in GlobalVars.auto_ignored_posts:
+        dayIgnored = aip[2]
+        dayDiff = (todayDate - dayIgnored).days
+        if(dayDiff > 7):
+            to_remove.append(aip)
+    for tr in to_remove:
+        GlobalVars.auto_ignored_posts.remove(tr)
+    with open("autoIgnoredPosts.txt", "w") as f:
+        pickle.dump(GlobalVars.auto_ignored_posts, f)
 
 if("ChatExchangeU" in os.environ):
     username=os.environ["ChatExchangeU"]
@@ -117,6 +134,7 @@ else:
     password=getpass.getpass("Password: ")
 
 load_files()
+filter_auto_ignored_posts()
 
 GlobalVars.wrap.login(username,password)
 GlobalVars.wrapm.login(username,password)
@@ -164,6 +182,12 @@ def is_blacklisted_user(user):
 def is_ignored_post(postid_site_tuple):
     return postid_site_tuple in GlobalVars.ignored_posts
 
+def is_auto_ignored_post(postid_site_tuple):
+    for p in GlobalVars.auto_ignored_posts:
+        if p[0] == postid_site_tuple[0] and p[1] == postid_site_tuple[1]:
+            return True
+    return False
+
 def add_whitelisted_user(user):
     if user in GlobalVars.whitelisted_users or user is None:
         return
@@ -177,6 +201,13 @@ def add_blacklisted_user(user):
     GlobalVars.blacklisted_users.append(user)
     with open("blacklistedUsers.txt", "w") as f:
         pickle.dump(GlobalVars.blacklisted_users, f)
+
+def add_auto_ignored_post(postid_site_tuple):
+    if(postid_site_tuple is None or is_auto_ignored_post(postid_site_tuple)):
+        return
+    GlobaVars.auto_ignored_posts.append(postid_site_tuple)
+    with open("autoIgnoredPosts.txt", "w") as f:
+        pickle.dump(GlobalVars.auto_ignored_posts, f)
 
 def append_to_latest_questions(host, post_id, title):
     GlobalVars.latest_questions.insert(0, (host, post_id, title))
@@ -228,9 +259,11 @@ def checkifspam(data):
             test += ", Blacklisted user"
     if (0<len(test)):
         post_id = d["id"]
-        if(has_already_been_posted(site, post_id, s) or is_false_positive(post_id, site) or is_whitelisted_user(get_user_from_url(d["ownerUrl"])) or is_ignored_post((str(post_id), site))):
+        if(has_already_been_posted(site, post_id, s) or is_false_positive(post_id, site) or is_whitelisted_user(get_user_from_url(d["ownerUrl"])) or is_ignored_post((str(post_id), site)) or is_auto_ignored_post((str(post_id), site))):
             return False # Don't repost. Reddit will hate you.
         append_to_latest_questions(site, post_id, s)
+        if(test.strip().lower() == "all-caps title"):
+            add_auto_ignored_post( (str(post_id), site, datetime.now()) )
         try:
             owner = d["ownerUrl"]
             users_file = open("users.txt", "a")
