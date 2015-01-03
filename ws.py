@@ -418,13 +418,16 @@ def watcher(ev,wrap2):
         wb_end = datetime(2015, 1, 5, 0, 0, 0)
         now = datetime.utcnow()
         diff = wb_end - now
-        hours, remainder = divmod(diff.seconds, 3600)
-        minutes, seconds = divmod(remainder, 60)
-        daystr = "days" if diff.days != 1 else "day"
-        hourstr = "hours" if hours != 1 else "hour"
-        minutestr = "minutes" if minutes != 1 else "minute"
-        secondstr = "seconds" if seconds != 1 else "second"
-        ev.message.reply("HATS ARE AWESOME. Winter Bash will end in %s %s, %s %s, %s %s and %s %s. :(" % (diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr))
+        if (diff > 0):
+            hours, remainder = divmod(diff.seconds, 3600)
+            minutes, seconds = divmod(remainder, 60)
+            daystr = "days" if diff.days != 1 else "day"
+            hourstr = "hours" if hours != 1 else "hour"
+            minutestr = "minutes" if minutes != 1 else "minute"
+            secondstr = "seconds" if seconds != 1 else "second"
+            ev.message.reply("HATS ARE AWESOME. Winter Bash will end in %s %s, %s %s, %s %s and %s %s. :(" % (diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr))
+        else:
+            ev.message.reply("WINTERBASH IS OVER! :(")
     if(content_lower.startswith("!!/alive")):
         if(ev_room == GlobalVars.charcoal_room_id):
             ev.message.reply('Of course')
