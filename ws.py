@@ -253,16 +253,13 @@ def checkifspam(data):
     sys.stdout.flush()
     test=FindSpam.testpost(s,poster,site)
     if(is_blacklisted_user(get_user_from_url(d["ownerUrl"]))):
-        if(len(test) == 0):
-            test = "Blacklisted user"
-        else:
-            test += ", Blacklisted user"
+        test.append("Blacklisted user")
     if (0<len(test)):
         post_id = d["id"]
         if(has_already_been_posted(site, post_id, s) or is_false_positive(post_id, site) or is_whitelisted_user(get_user_from_url(d["ownerUrl"])) or is_ignored_post((str(post_id), site)) or is_auto_ignored_post((str(post_id), site))):
             return False # Don't repost. Reddit will hate you.
         append_to_latest_questions(site, post_id, s)
-        if(test.strip().lower() == "all-caps title"):
+        if("All-caps title" in test):
             add_auto_ignored_post( (str(post_id), site, datetime.now()) )
         try:
             owner = d["ownerUrl"]
@@ -533,7 +530,7 @@ while True:
                 threading.Thread(target=handlespam,args=(a,)).start()
     except Exception, e:
         now = datetime.utcnow()
-        delta = UtcDate.startup_utc_date - now
+        delta = now - UtcDate.startup_utc_date
         seconds = delta.total_seconds()
         if(seconds < 60):
             os._exit(4)
