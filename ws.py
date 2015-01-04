@@ -183,10 +183,7 @@ def is_ignored_post(postid_site_tuple):
     return postid_site_tuple in GlobalVars.ignored_posts
 
 def is_auto_ignored_post(postid_site_tuple):
-    for p in GlobalVars.auto_ignored_posts:
-        if p[0] == postid_site_tuple[0] and p[1] == postid_site_tuple[1]:
-            return True
-    return False
+    return postid_site_tuple in GlobalVars.auto_ignored_posts
 
 def add_whitelisted_user(user):
     if user in GlobalVars.whitelisted_users or user is None:
