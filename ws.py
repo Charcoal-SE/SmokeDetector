@@ -205,7 +205,7 @@ def add_blacklisted_user(user):
 def add_auto_ignored_post(postid_site_tuple):
     if(postid_site_tuple is None or is_auto_ignored_post(postid_site_tuple)):
         return
-    GlobaVars.auto_ignored_posts.append(postid_site_tuple)
+    GlobalVars.auto_ignored_posts.append(postid_site_tuple)
     with open("autoIgnoredPosts.txt", "w") as f:
         pickle.dump(GlobalVars.auto_ignored_posts, f)
 
