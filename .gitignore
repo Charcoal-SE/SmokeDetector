@@ -34,6 +34,7 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+.idea/
 
 # False positives, whitelisted/blacklisted users, ignored posts
 falsePositives.txt
