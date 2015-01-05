@@ -22,7 +22,7 @@ class UtcDate:
 
 def uncaught_exception(exctype, value, tb):
     now = datetime.utcnow()
-    delta = UtcDate.startup_utc_date - now
+    delta = now - UtcDate.startup_utc_date
     seconds = delta.total_seconds()
     tr = os.linesep.join(traceback.format_tb(tb))
     print(tr)
@@ -532,16 +532,16 @@ while True:
         now = datetime.utcnow()
         delta = now - UtcDate.startup_utc_date
         seconds = delta.total_seconds()
-        if(seconds < 60):
+        tr = traceback.format_exc()
+        print(tr)
+        with open("errorLogs.txt", "a") as f:
+            f.write(str(now) + " UTC" + os.linesep + tr + os.linesep + os.linesep)
+        if(seconds < 180):
             os._exit(4)
         ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
         ws.send("155-questions-active")
-        tr = traceback.format_exc()
-        print(tr)
         exception_only = ''.join(traceback.format_exception_only(type(e), e)).strip()
         GlobalVars.charcoal_hq.send_message("Recovered from `" + exception_only + "`")
-        with open("errorLogs.txt", "a") as f:
-            f.write(str(now) + " UTC" + os.linesep + tr + os.linesep + os.linesep)
 
 now = datetime.utcnow()
 delta = UtcDate.startup_utc_date - now
