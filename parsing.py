@@ -34,4 +34,12 @@ def fetch_owner_url_from_msg_content(content):
 
 
 def fetch_title_from_msg_content(content):
-    return re.compile(r": \[(.+)\]").findall(content)[0]
+    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w\s,-]+: \[(.+)]\(http:\/\/[\w.]+\/questions\/\d+\/.+\) by \[.+\]\(.+\) on `[\w.]+`$"
+    m = re.compile(search_regex).search(content)
+    if m is None:
+        return None
+    try:
+        title = m.group(1)
+        return title
+    except:
+        return None
