@@ -8,7 +8,9 @@ from spamhandling import *
 from chatcommunicate import *
 
 # !! Important! Be careful when adding code before this point.
-# Any errors thrown there won't be caught, so only insert code here if you are really sure it works fine.
+# Our except hook will be installed here, so any errors before this point won't be caught if they're not in a
+# try-except block. Hence, please avoid adding code before this comment, but if it's necessary,
+# test it thoroughly.
 
 sys.excepthook = uncaught_exception
 installThreadExcepthook()
