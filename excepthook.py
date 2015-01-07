@@ -11,10 +11,12 @@ def uncaught_exception(exctype, value, tb):
     delta = now - UtcDate.startup_utc_date
     seconds = delta.total_seconds()
     tr = os.linesep.join(traceback.format_tb(tb))
-    print(tr)
+    exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
+    logged_msg = exception_only + os.linesep + str(now) + " UTC" + os.linesep + tr + os.linesep + os.linesep
+    print(logged_msg)
     with open("errorLogs.txt", "a") as f:
-        f.write(str(now) + " UTC" + os.linesep + tr + os.linesep + os.linesep)
-    if seconds < 180 :
+        f.write(logged_msg)
+    if seconds < 180:
         os._exit(4)
     else:
         os._exit(1)

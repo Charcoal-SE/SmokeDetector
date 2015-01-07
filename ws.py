@@ -71,14 +71,15 @@ while True:
         delta = now - UtcDate.startup_utc_date
         seconds = delta.total_seconds()
         tr = traceback.format_exc()
-        print(tr)
+        exception_only = ''.join(traceback.format_exception_only(type(e), e)).strip()
+        logged_msg = str(now) + " UTC" + os.linesep + exception_only + os.linesep + tr + os.linesep + os.linesep
+        print(logged_msg)
         with open("errorLogs.txt", "a") as f:
-            f.write(str(now) + " UTC" + os.linesep + tr + os.linesep + os.linesep)
+            f.write(logged_msg)
         if seconds < 180:
             os._exit(4)
         ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
         ws.send("155-questions-active")
-        exception_only = ''.join(traceback.format_exception_only(type(e), e)).strip()
         GlobalVars.charcoal_hq.send_message("Recovered from `" + exception_only + "`")
 
 now = datetime.utcnow()
