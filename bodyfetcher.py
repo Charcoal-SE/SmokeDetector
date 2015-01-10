@@ -35,7 +35,7 @@ class BodyFetcher:
 
     def makeApiCallForSite(self, site):
         posts = self.queue.pop(site)
-        url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts)  + "?site=" + site + "&filter=!)Q2A3(bojAapKo*S5jsdVAhh&key=IAkbitmze4B8KpacUfLqkw(("
+        url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts)  + "?site=" + site + "&filter=!-Kh)95tdb6R0joni_wabz(1g(16eESDja&key=IAkbitmze4B8KpacUfLqkw(("
         response = requests.get(url).json()
 
         for post in response["items"]:
