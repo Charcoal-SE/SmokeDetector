@@ -22,7 +22,7 @@ class FindSpam:
 
     @staticmethod
     def testpost(title, user_name, site):
-        result = [];
+        result = []
         for rule in FindSpam.rules:
             if rule['all'] != (site in rule['sites']):
                 matched_title = re.compile(rule['regex'], re.UNICODE).findall(title)

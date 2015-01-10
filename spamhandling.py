@@ -8,7 +8,7 @@ from parsing import get_user_from_url
 from bayesianfuncs import *
 
 def checkifspam(data):
-    d=json.loads(json.loads(data)["data"])
+    d = json.loads(json.loads(data)["data"])
     try:
         _ = d["ownerUrl"]
     except:
@@ -27,7 +27,7 @@ def checkifspam(data):
     test=FindSpam.testpost(s,poster,site)
     if is_blacklisted_user(get_user_from_url(d["ownerUrl"])):
         test.append("Blacklisted user")
-    if 0<len(test):
+    if 0 < len(test):
         post_id = d["id"]
         if has_already_been_posted(site, post_id, s) or is_false_positive(post_id, site) \
                 or is_whitelisted_user(get_user_from_url(d["ownerUrl"])) or is_ignored_post((str(post_id), site)) \
@@ -54,7 +54,7 @@ def handlespam(data):
         poster = d["ownerDisplayName"]
         reason = ", ".join(FindSpam.testpost(title,poster,d["siteBaseHostAddress"]))
         title_to_post = GlobalVars.parser.unescape(re.sub(r"([_*\\`\[\]])", r"\\\1", title)).strip()
-        s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % \
+        s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % \
           (reason,title_to_post.strip(), d["url"],poster.strip(), d["ownerUrl"], d["siteBaseHostAddress"])
         print GlobalVars.parser.unescape(s).encode('ascii',errors='replace')
         if time.time() >= GlobalVars.blockedTime:
