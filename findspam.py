@@ -5,7 +5,7 @@ import phonenumbers
 class FindSpam:
     rules = [
      {'regex': u"(?i)\\b(baba(ji)?|nike|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|LifeForce|swtor2credits|me2.do|black magic|bam2u|Neuro(3X|flexyn)|Nutra|TesteroneXL|Bowtrol|Slim Genix|Forskolin|Blackline Elite|TestCore Pro|Xtreme Antler|Maxx Test 3000|Cheap Wigs?|(Improve )?Brain Power|aging skin|acne( prone)? skin|(skin )?eye serum|skin (serum|eye)|fake (passports?|driver'?s? licen[cs]e|ID cards?)|bagprada)\\b|ಌ|(support|service|helpline)( phone)? number|1[ -]?866[ -]?978[ -]?6819", 'all': True,
-        'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True},
+        'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True},
      {'regex': u"(?i)\\b(weight (loo?s[es]|reduction)|muscles? build(ing)?|muscles?( (grow(th)?|diets?))?|anti aging|SkinCentric|loo?s[es] weight|wrinkles?)\\b", 'all': True,
         'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True},
      {'regex': u"(?i)^(?:(?=.*?\\b(?:online|hd)\\b)(?=.*?(?:free|full|unlimited)).*?movies?\\b|(?=.*?\\b(?:acai|kisn)\\b)(?=.*?care).*products?\\b|(?=.*?packer).*mover)", 'all': True,
@@ -17,8 +17,7 @@ class FindSpam:
      {'regex': u"^(?=.*[A-Z])[^a-z]*$", 'all': True, 'sites': [], 'reason': "All-caps title", 'title': True, 'username': False},
      {'regex': u"^(?=.*[0-9])[^a-zA-Z]*$", 'all': True, 'sites': [], 'reason': "Numbers-only title", 'title': True, 'body': False, 'username': False},
      {'regex': u"https?://[a-zA-Z0-9_.-]+\\.[a-zA-Z]{2,4}(/[a-zA-Z0-9_/?=.-])?", 'all': True,
-        'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com"], 'reason': "URL in title", 'title': True, 'body': False, 'username': False},
-     {'regex': u"(?i)\\b(the)\\b", 'all': True, 'sites': [], 'reason': "{} contains 'the'", 'title': False, 'body': True, 'username': False}
+        'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com"], 'reason': "URL in title", 'title': True, 'body': False, 'username': False}
     ]
 
     @staticmethod
