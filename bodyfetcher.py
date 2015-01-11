@@ -56,6 +56,6 @@ class BodyFetcher:
                         for specialroom in GlobalVars.specialrooms:
                             sites = specialroom["sites"]
                             if site in sites and reason not in specialroom["unwantedReasons"]:
-                                # specialroom["room"].send_message(s)
+                                specialroom["room"].send_message(s)
                 except:
                     print "NOP"
