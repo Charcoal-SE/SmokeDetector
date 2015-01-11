@@ -1,5 +1,9 @@
 import json
 import requests
+from spamhandling import *
+from chatcommunicate import *
+from datahandling import *
+from parsing import get_user_from_url
 
 class BodyFetcher:
     queue = {}
@@ -39,4 +43,19 @@ class BodyFetcher:
         response = requests.get(url).json()
 
         for post in response["items"]:
-            print post["owner"]["display_name"]
+            result = FindSpam.testbody(post["body"],site)
+            if result != []:
+                try:
+                    reason = ", ".join(result)
+                    s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % \
+                      (reason,post["title"].strip(), post["link"],post["owner"]["display_name"].strip(), post["owner"]["link"], site)
+                    print GlobalVars.parser.unescape(s).encode('ascii',errors='replace')
+                    if time.time() >= GlobalVars.blockedTime:
+                        GlobalVars.charcoal_hq.send_message(s)
+                        GlobalVars.tavern_on_the_meta.send_message(s)
+                        for specialroom in GlobalVars.specialrooms:
+                            sites = specialroom["sites"]
+                            if site in sites and reason not in specialroom["unwantedReasons"]:
+                                # specialroom["room"].send_message(s)
+                except:
+                    print "NOP"
