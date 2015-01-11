@@ -5,6 +5,7 @@ import getpass
 from ChatExchange.chatexchange.client import *
 import traceback
 from spamhandling import *
+from bodyfetcher import *
 from chatcommunicate import *
 
 # !! Important! Be careful when adding code before this point.
@@ -28,6 +29,7 @@ else:
 load_files()
 filter_auto_ignored_posts()
 
+b=BodyFetcher()
 GlobalVars.wrap.login(username, password)
 GlobalVars.wrapm.login(username, password)
 GlobalVars.s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector started at [rev " + GlobalVars.commit_with_author + "](https://github.com/Charcoal-SE/SmokeDetector/commit/"+ GlobalVars.commit +") (hosted by Undo)"
@@ -66,6 +68,8 @@ while True:
         if a is not None and a != "":
             if checkifspam(a):
                 threading.Thread(target=handlespam,args=(a,)).start()
+            else:
+                threading.Thread(target=b.addToQueue,args=(a,)).start()
     except Exception, e:
         now = datetime.utcnow()
         delta = now - UtcDate.startup_utc_date
