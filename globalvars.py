@@ -15,8 +15,6 @@ class GlobalVars:
     blockedTime = 0
     charcoal_room_id = "11540"
     meta_tavern_room_id = "89"
-    privileged_users = {}
-    smokeDetector_user_id = {}
     site_filename = { "electronics.stackexchange.com" : "ElectronicsGood.txt",
                       "gaming.stackexchange.com" : "GamingGood.txt", "german.stackexchange.com" : "GermanGood.txt",
                       "italian.stackexchange.com" : "ItalianGood.txt", "math.stackexchange.com" : "MathematicsGood.txt",

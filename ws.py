@@ -16,12 +16,12 @@ from chatcommunicate import *
 sys.excepthook = uncaught_exception
 installThreadExcepthook()
 
-if("ChatExchangeU" in os.environ):
+if "ChatExchangeU" in os.environ:
     username=os.environ["ChatExchangeU"]
 else:
     print "Username: "
     username=raw_input()
-if("ChatExchangeP" in os.environ):
+if "ChatExchangeP" in os.environ:
     password=os.environ["ChatExchangeP"]
 else:
     password=getpass.getpass("Password: ")
