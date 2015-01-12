@@ -45,7 +45,7 @@ class BodyFetcher:
 
     def makeApiCallForSite(self, site):
         posts = self.queue.pop(site)
-        url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts)  + "?site=" + site + "&filter=!fropZQEgOBR_s)xbu4arzjZ4TYsfbuitxKT&key=IAkbitmze4B8KpacUfLqkw(("
+        url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts)  + "?site=" + site + "&filter=!4y_-sca-)pfAwlmP_1FxC6e5yzutRIcQvonAiP&key=IAkbitmze4B8KpacUfLqkw(("
         response = requests.get(url).json()
 
         GlobalVars.apiquota = response["quota_remaining"]
@@ -59,8 +59,13 @@ class BodyFetcher:
                 owner_link = post["owner"]["link"]
             except:
                 owner_link = ""
+            try:
+                owner_rep = post["owner"]["reputation"]
+            except:
+                owner_rep = 0
             q_id = post["question_id"]
-            if checkifspam(title, body, owner_name, owner_link, site, q_id, link):
+
+            if owner_rep <= 50 and checkifspam(title, body, owner_name, owner_link, site, q_id, link):
                 try:
                     handlespam(title, body, owner_name, site, link, owner_link)
                 except:
@@ -74,7 +79,12 @@ class BodyFetcher:
                     link = answer["link"]
                     owner_link = answer["owner"]["link"]
                     a_id = answer["answer_id"]
-                    if checkifspam(answer_title, body, owner_name, owner_link, site, a_id, link):
+                    try:
+                        owner_rep = answer["owner"]["reputation"]
+                    except:
+                        owner_rep = 0
+
+                    if owner_rep <= 50 and checkifspam(answer_title, body, owner_name, owner_link, site, a_id, link):
                         try:
                             handlespam(title, body, owner_name, site, link, owner_link)
                         except:
