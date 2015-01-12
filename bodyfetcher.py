@@ -10,6 +10,8 @@ class BodyFetcher:
 
     specialCases = {"stackoverflow.com" : 5, "serverfault.com" : 5, "superuser.com" : 5}
 
+    threshold = 2
+
     def addToQueue(self, post):
         d=json.loads(json.loads(post)["data"])
         sitebase = d["siteBaseHostAddress"]
@@ -32,7 +34,7 @@ class BodyFetcher:
 
         # if we don't have any sites with their queue filled, take the first one without a special case
         for site, values in self.queue.iteritems():
-            if site not in self.specialCases:
+            if site not in self.specialCases and len(values) >= self.threshold:
                 self.makeApiCallForSite(site)
                 return
 
