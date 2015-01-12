@@ -50,9 +50,10 @@ def checkifspam_json(data):
         return False # owner's account doesn't exist anymore, no need to post it in chat:
                      # http://chat.stackexchange.com/transcript/message/18380776#18380776
     title = d["titleEncodedFancy"]
+    title = GlobalVars.parser.unescape(re.sub(r"([_*\\`\[\]])", r"\\\1", title))
     poster = d["ownerDisplayName"]
     url = d["url"]
-    print time.strftime("%Y-%m-%d %H:%M:%S"),GlobalVars.parser.unescape(title).encode("ascii",errors="replace")
+    print time.strftime("%Y-%m-%d %H:%M:%S"),title.encode("ascii",errors="replace")
     quality_score = bayesian_score(title)
     print quality_score
     if quality_score < 0.3 and d["siteBaseHostAddress"] == "stackoverflow.com":
