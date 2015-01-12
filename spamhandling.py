@@ -30,7 +30,7 @@ def checkifspam(title, body, user_name, user_url, post_site, post_id, post_url):
                 return False # Don't repost. Reddit will hate you.
             append_to_latest_questions(post_site, post_id, title)
             if len(test) == 1 and "All-caps title" in test:
-                add_auto_ignored_post(post_id, post_site, datetime.now())
+                add_auto_ignored_post((post_id, post_site, datetime.now()))
             try:
                 owner = user_url
                 users_file = open("users.txt", "a")
