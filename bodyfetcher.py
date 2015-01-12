@@ -51,8 +51,8 @@ class BodyFetcher:
         GlobalVars.apiquota = response["quota_remaining"]
 
         for post in response["items"]:
-            title = post["title"]
-            body = post["body"]
+            title = GlobalVars.parser.unescape(post["title"])
+            body = GlobalVars.parser.unescape(post["body"])
             owner_name = post["owner"]["display_name"]
             link = post["link"]
             owner_link = post["owner"]["link"]
