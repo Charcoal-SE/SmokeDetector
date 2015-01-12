@@ -37,3 +37,4 @@ class GlobalVars:
     specialrooms = []
     bayesian_testroom = None
     apiquota = -1
+    bodyfetcher = None

@@ -197,3 +197,5 @@ def watcher(ev, wrap2):
         ev.message.reply("I'm [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector), a bot that detects spam and low-quality posts on the network and posts alerts to chat.")
     if content_lower.startswith("!!/apiquota"):
         ev.message.reply(GlobalVars.apiquota)
+    if content_lower.startswith("!!/queuestatus"):
+        ev.message.reply(GlobalVars.bodyfetcher.printQueue())

@@ -38,6 +38,12 @@ class BodyFetcher:
                 self.makeApiCallForSite(site)
                 return
 
+    def printQueue(self):
+        string = ""
+        for site, values in self.queue.iteritems():
+            string = string + "\n" + site + ": " + str(len(values))
+
+        return string
 
     def makeApiCallForSite(self, site):
         posts = self.queue.pop(site)

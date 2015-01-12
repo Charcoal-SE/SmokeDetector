@@ -69,7 +69,7 @@ while True:
             if checkifspam(a):
                 threading.Thread(target=handlespam,args=(a,)).start()
             else:
-                threading.Thread(target=b.addToQueue,args=(a,)).start()
+                threading.Thread(target=GlobalVars.bodyfetcher.addToQueue,args=(a,)).start()
     except Exception, e:
         now = datetime.utcnow()
         delta = now - UtcDate.startup_utc_date
