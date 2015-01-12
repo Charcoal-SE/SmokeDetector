@@ -1,9 +1,7 @@
-import json
-import requests
 from spamhandling import *
 from chatcommunicate import *
 from datahandling import *
-from parsing import get_user_from_url
+from spamhandling import handlespam
 
 class BodyFetcher:
     queue = {}
@@ -47,25 +45,20 @@ class BodyFetcher:
 
     def makeApiCallForSite(self, site):
         posts = self.queue.pop(site)
-        url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts)  + "?site=" + site + "&filter=!-Kh)95tdb6R0joni_wabz(1g(16eESDja&key=IAkbitmze4B8KpacUfLqkw(("
+        url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts)  + "?site=" + site + "&filter=!fropZQEgOBR_s)xbu4arzjZ4bIZkiP7kQwX&key=IAkbitmze4B8KpacUfLqkw(("
         response = requests.get(url).json()
 
         GlobalVars.apiquota = response["quota_remaining"]
 
         for post in response["items"]:
-            result = FindSpam.testbody(post["body"],site)
-            if result != []:
+            title = post["title"]
+            body = post["body"]
+            owner_name = post["owner"]["display_name"]
+            link = post["link"]
+            owner_link = post["owner"]["link"]
+            q_id = post["question_id"]
+            if checkifspam(title, body, owner_name, owner_link, site, q_id, link):
                 try:
-                    reason = ", ".join(result)
-                    s="[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % \
-                      (reason,post["title"].strip(), post["link"],post["owner"]["display_name"].strip(), post["owner"]["link"], site)
-                    print GlobalVars.parser.unescape(s).encode('ascii',errors='replace')
-                    if time.time() >= GlobalVars.blockedTime:
-                        GlobalVars.charcoal_hq.send_message(s)
-                        GlobalVars.tavern_on_the_meta.send_message(s)
-                        for specialroom in GlobalVars.specialrooms:
-                            sites = specialroom["sites"]
-                            if site in sites and reason not in specialroom["unwantedReasons"]:
-                                specialroom["room"].send_message(s)
+                    handlespam(title, body, owner_name, site, link, owner_link)
                 except:
                     print "NOP"
