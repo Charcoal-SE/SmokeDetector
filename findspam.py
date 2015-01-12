@@ -20,7 +20,7 @@ class FindSpam:
      {'regex': u"^(?=.*[0-9])[^a-zA-Z]*$", 'all': True, 'sites': [], 'reason': "Numbers-only title", 'title': True, 'body': False, 'username': False},
      {'regex': u"https?://[a-zA-Z0-9_.-]+\\.[a-zA-Z]{2,4}(/[a-zA-Z0-9_/?=.-])?", 'all': True,
         'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com"], 'reason': "URL in title", 'title': True, 'body': False, 'username': False},
-     {'regex': u"(?i)\\b(optimalstackfacts\.org|maletestosteronebooster\.org|x4facts\.com|tripleeffectseyeserum\.org|healthcaresup\.com|garciniacambogiaprofacts\.com|filerepairforum\.com)\\b", 'sites': [], 'all': True, 'reason': "Blacklisted website", 'title': True, 'body': True, 'username': True}
+     {'regex': u"(?i)\\b(cfpchampionship2015playofflive|optimalstackfacts\.org|maletestosteronebooster\.org|x4facts\.com|tripleeffectseyeserum\.org|healthcaresup\.com|garciniacambogiaprofacts\.com|filerepairforum\.com)\\b", 'sites': [], 'all': True, 'reason': "Blacklisted website", 'title': True, 'body': True, 'username': True}
     ]
 
     @staticmethod
