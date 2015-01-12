@@ -55,7 +55,10 @@ class BodyFetcher:
             body = post["body"]
             owner_name = post["owner"]["display_name"]
             link = post["link"]
-            owner_link = post["owner"]["link"]
+            try:
+                owner_link = post["owner"]["link"]
+            except:
+                owner_link = ""
             q_id = post["question_id"]
             if checkifspam(title, body, owner_name, owner_link, site, q_id, link):
                 try:
