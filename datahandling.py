@@ -42,11 +42,8 @@ def filter_auto_ignored_posts():
 # methods to check whether a post/user is whitelisted/blacklisted/...
 
 
-def is_false_positive(post_id, site_name):
-    if (str(post_id), site_name) in GlobalVars.false_positives:
-        return True
-    else:
-        return False
+def is_false_positive(postid_site_tuple):
+    return postid_site_tuple in GlobalVars.false_positives
 
 
 def is_whitelisted_user(user):
