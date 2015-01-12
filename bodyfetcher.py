@@ -8,7 +8,7 @@ from parsing import get_user_from_url
 class BodyFetcher:
     queue = {}
 
-    specialCases = {"stackoverflow.com" : 5, "serverfault.com" : 5, "superuser.com" : 5, "drupal.stackexchange.com" : 1}
+    specialCases = {"stackoverflow.com" : 5, "serverfault.com" : 5, "superuser.com" : 5, "drupal.stackexchange.com" : 1, "meta.stackexchange.com" : 1}
 
     threshold = 2
 
