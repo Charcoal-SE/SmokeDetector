@@ -45,7 +45,7 @@ class BodyFetcher:
 
     def makeApiCallForSite(self, site):
         posts = self.queue.pop(site)
-        url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts)  + "?site=" + site + "&filter=!fropZQEgOBR_s)xbu4arzjZ4bIZkiP7kQwX&key=IAkbitmze4B8KpacUfLqkw(("
+        url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts)  + "?site=" + site + "&filter=!fropZQEgOBR_s)xbu4arzjZ4TYsfbuitxKT&key=IAkbitmze4B8KpacUfLqkw(("
         response = requests.get(url).json()
 
         GlobalVars.apiquota = response["quota_remaining"]
@@ -65,3 +65,19 @@ class BodyFetcher:
                     handlespam(title, body, owner_name, site, link, owner_link)
                 except:
                     print "NOP"
+            try:
+                for answer in post["answers"]:
+                    answer_title = ""
+                    body = answer["body"]
+                    owner_name = answer["owner"]["display_name"]
+                    print "got answer from owner with name " + owner_name
+                    link = answer["link"]
+                    owner_link = answer["owner"]["link"]
+                    a_id = answer["answer_id"]
+                    if checkifspam(answer_title, body, owner_name, owner_link, site, a_id, link):
+                        try:
+                            handlespam(title, body, owner_name, site, link, owner_link)
+                        except:
+                            print "NOP"
+            except:
+                print "no answers"
