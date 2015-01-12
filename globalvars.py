@@ -36,3 +36,4 @@ class GlobalVars:
     s_reverted = ""
     specialrooms = []
     bayesian_testroom = None
+    apiquota = -1

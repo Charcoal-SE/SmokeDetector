@@ -42,6 +42,8 @@ class BodyFetcher:
         url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts)  + "?site=" + site + "&filter=!-Kh)95tdb6R0joni_wabz(1g(16eESDja&key=IAkbitmze4B8KpacUfLqkw(("
         response = requests.get(url).json()
 
+        GlobalVars.apiquota = response["quota_remaining"]
+
         for post in response["items"]:
             result = FindSpam.testbody(post["body"],site)
             if result != []:
