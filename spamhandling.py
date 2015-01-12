@@ -25,7 +25,7 @@ def checkifspam(title, body, user_name, user_url, post_site, post_id, post_url):
         if 0 < len(test):
             if has_already_been_posted(post_site, post_id, title) or is_false_positive(post_id, post_site) \
                     or is_whitelisted_user(get_user_from_url(user_url)) \
-                    or is_ignored_post(post_id, post_site) \
+                    or is_ignored_post((post_id, post_site)) \
                     or is_auto_ignored_post((post_id, post_site)):
                 return False # Don't repost. Reddit will hate you.
             append_to_latest_questions(post_site, post_id, title)
