@@ -114,13 +114,13 @@ def add_ignored_post(postid_site_tuple):
 
 
 def append_to_latest_questions(host, post_id, title):
-    GlobalVars.latest_questions.insert(0, (host, post_id, title))
+    GlobalVars.latest_questions.insert(0, (host, str(post_id), title))
     if len(GlobalVars.latest_questions) > 15:
         GlobalVars.latest_questions.pop()
 
 
 def has_already_been_posted(host, post_id, title):
     for post in GlobalVars.latest_questions:
-        if post[0] == host and post[1] == post_id and post[2] == title:
+        if post[0] == host and post[1] == str(post_id) and post[2] == title:
             return True
     return False

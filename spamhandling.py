@@ -1,5 +1,4 @@
 import json
-import re
 import sys
 import time
 from findspam import FindSpam
@@ -60,13 +59,14 @@ def checkifspam_json(data):
     return checkifspam(title, None, poster, d["ownerUrl"], site, str(d["id"]), url)
 
 
-def handlespam(title, body, poster, site, post_url, poster_url):
+def handlespam(title, body, poster, site, post_url, poster_url, post_id):
     try:
         reason = ", ".join(get_spam_reasons(title, body, poster, site))
         s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % \
           (reason, title.strip(), post_url, poster.strip(), poster_url, site)
         print GlobalVars.parser.unescape(s).encode('ascii',errors='replace')
         if time.time() >= GlobalVars.blockedTime:
+            append_to_latest_questions(site, post_id, title)
             GlobalVars.charcoal_hq.send_message(s)
             GlobalVars.tavern_on_the_meta.send_message(s)
             for specialroom in GlobalVars.specialrooms:
@@ -85,7 +85,8 @@ def handlespam_json(data):
         site = d["siteBaseHostAddress"]
         url = d["url"]
         poster_url = d["ownerUrl"]
+        post_id = d["id"]
         title_to_post = fetch_unescaped_title_from_encoded(title)
-        handlespam(title_to_post, None, poster, site, url, poster_url)
+        handlespam(title_to_post, None, poster, site, url, poster_url, post_id)
     except:
         print "NOP"
