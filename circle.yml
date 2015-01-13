@@ -1,0 +1,12 @@
+machine:
+  python:
+    version: 2.7.7
+checkout:
+  post:
+    - git submodule update
+dependencies:
+  post:
+    - pip install pytest
+test:
+  override:
+    - python -W default::Warning -m pytest test
