@@ -9,12 +9,9 @@ from bayesianfuncs import *
 
 
 def get_spam_reasons(title, body, user_name, site):
-    reasons = []
-    if title is not None:
-        reasons += FindSpam.testpost(title, user_name, site)
-    if body is not None:
-        reasons += FindSpam.testbody(body, site)
-    return reasons
+    if not body:
+        body = ""
+    return FindSpam.testpost(title, body, user_name, site)
 
 
 def checkifspam(title, body, user_name, user_url, post_site, post_id, post_url):

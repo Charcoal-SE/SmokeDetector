@@ -24,12 +24,13 @@ class FindSpam:
     ]
 
     @staticmethod
-    def testpost(title, user_name, site):
+    def testpost(title, body, user_name, site):
         result = []
         for rule in FindSpam.rules:
             if rule['all'] != (site in rule['sites']):
                 matched_title = re.compile(rule['regex'], re.UNICODE).findall(title)
                 matched_username = re.compile(rule['regex'], re.UNICODE).findall(user_name)
+                matched_body = re.compile(rule['regex'], re.UNICODE).findall(body)
                 if matched_title and rule['title']:
                     try:
                         if getattr(FindSpam, "%s" % rule['validation_method'])(matched_title):
@@ -42,14 +43,6 @@ class FindSpam:
                             result.append(rule['reason'])
                     except KeyError:                # There is no special logic for this rule
                         result.append(rule['reason'].replace("{}", "username"))
-        return result
-
-    @staticmethod
-    def testbody(body,site):
-        result = [];
-        for rule in FindSpam.rules:
-            if rule['all'] != (site in rule['sites']):
-                matched_body = re.compile(rule['regex'], re.UNICODE).findall(body)
                 if matched_body and rule['body']:
                     try:
                         if getattr(FindSpam, "%s" % rule['validation_method'])(matched_body):
