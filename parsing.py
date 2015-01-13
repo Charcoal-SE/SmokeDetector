@@ -1,4 +1,5 @@
 import re
+from globalvars import GlobalVars
 
 
 def get_user_from_url(url):
@@ -43,3 +44,7 @@ def fetch_title_from_msg_content(content):
         return title
     except:
         return None
+
+
+def fetch_unescaped_title_from_encoded(title_encoded):
+    return GlobalVars.parser.unescape(re.sub(r"([_*\\`\[\]])", r"\\\1", title_encoded)).strip()

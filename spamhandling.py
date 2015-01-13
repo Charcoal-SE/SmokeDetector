@@ -4,7 +4,7 @@ import sys
 import time
 from findspam import FindSpam
 from datahandling import *
-from parsing import get_user_from_url
+from parsing import get_user_from_url, fetch_unescaped_title_from_encoded
 from bayesianfuncs import *
 
 
@@ -46,7 +46,7 @@ def checkifspam_json(data):
         return False # owner's account doesn't exist anymore, no need to post it in chat:
                      # http://chat.stackexchange.com/transcript/message/18380776#18380776
     title = d["titleEncodedFancy"]
-    title = GlobalVars.parser.unescape(re.sub(r"([_*\\`\[\]])", r"\\\1", title))
+    title = fetch_unescaped_title_from_encoded(title)
     poster = d["ownerDisplayName"]
     url = d["url"]
     print time.strftime("%Y-%m-%d %H:%M:%S"),title.encode("ascii",errors="replace")
@@ -85,7 +85,7 @@ def handlespam_json(data):
         site = d["siteBaseHostAddress"]
         url = d["url"]
         poster_url = d["ownerUrl"]
-        title_to_post = GlobalVars.parser.unescape(re.sub(r"([_*\\`\[\]])", r"\\\1", title)).strip()
+        title_to_post = fetch_unescaped_title_from_encoded(title)
         handlespam(title_to_post, None, poster, site, url, poster_url)
     except:
         print "NOP"
