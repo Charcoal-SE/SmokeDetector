@@ -7,7 +7,7 @@ checkout:
     - git submodule update
 dependencies:
   post:
-    - pip install pytest
+    - pip install beautifulsoup4 requests websocket-client coverage pytest phonenumbers
 test:
   override:
     - python -W default::Warning -m pytest test
