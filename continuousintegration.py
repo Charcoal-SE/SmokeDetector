@@ -2,6 +2,7 @@ import socket
 import requests
 import re
 from globalvars import GlobalVars
+import datetime
 
 def watchCi():
     HOST = ''
