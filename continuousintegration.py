@@ -31,7 +31,7 @@ def watchCi():
         r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/' + latest_sha + '/statuses')
         for status in r.json():
             state = status["state"]
-            if state = "success":
+            if state == "success":
                 if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > datetime.datetime.now()-datetime.timedelta(seconds=10):
                     GlobalVars.charcoal_hq.send_message("CI build passed. Ready to pull!")
                 return
