@@ -40,4 +40,4 @@ def watchCi():
                 if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > datetime.datetime.now()-datetime.timedelta(seconds=10):
                     GlobalVars.charcoal_hq.send_message("CI build failed, *someone* (prolly Undo) borked something!")
                     continue
-        s.close()
+    s.close()
