@@ -22,7 +22,7 @@ def watchCi():
     while 1:
         conn, addr = s.accept()
         circleci_addr = socket.getaddrinfo("circleci.com", 80, 0, 0, socket.IPPROTO_TCP)[0][4][0]
-        is_circleci = addr == circleci_addr
+        is_circleci = addr == circleci_addr or addr == "circleci.com"
         print 'Received request from ' + addr[0] + " ; " + "verified as CircleCI" if is_circleci else "NOT verified as CircleCI!"
         if not is_circleci:
             GlobalVars.charcoal_hq.send_message("WARNING: got socket that doesn't come from CircleCI")
