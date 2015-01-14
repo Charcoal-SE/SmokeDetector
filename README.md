@@ -25,4 +25,4 @@ To run, use `python ws.py` (preferably in a daemon-able mode). Like in a `screen
 
 You can run `. ChatExchange/setp.sh` to set local environment variables so that you don't have to log in every time. 
 
-Only supports Stack Exchange OpenIDs for now.
+Smoke Detector only supports Stack Exchange OpenIDs for now.
