@@ -34,9 +34,9 @@ def watchCi():
             if state == "success":
                 if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > datetime.datetime.now()-datetime.timedelta(seconds=10):
                     GlobalVars.charcoal_hq.send_message("CI build passed. Ready to pull!")
-                return
+                    return
             elif state == "error" or state == "failure":
-                    if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > datetime.datetime.now()-datetime.timedelta(seconds=10):
-                GlobalVars.charcoal_hq.send_message("CI build failed, *someone* (prolly Undo) borked something!")
-                return
+                if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > datetime.datetime.now()-datetime.timedelta(seconds=10):
+                    GlobalVars.charcoal_hq.send_message("CI build failed, *someone* (prolly Undo) borked something!")
+                    return
         s.close()
