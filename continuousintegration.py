@@ -22,10 +22,10 @@ def watchCi():
     while 1:
         conn, addr = s.accept()
         circleci_addr = socket.getaddrinfo("circleci.com", 80, 0, 0, socket.IPPROTO_TCP)[0][4][0]
-        is_circleci = addr == circleci_addr or addr == "circleci.com"
+        is_circleci = addr[0] == circleci_addr or addr[0] == "circleci.com"
         print 'Received request from ' + addr[0] + " ; " + "verified as CircleCI" if is_circleci else "NOT verified as CircleCI!"
         if not is_circleci:
-            GlobalVars.charcoal_hq.send_message("WARNING: got socket that doesn't come from CircleCI; %s" % (addr,))
+            GlobalVars.charcoal_hq.send_message("WARNING: got socket that doesn't come from CircleCI")
             continue
         r=requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
         latest_sha = r.json()["object"]["sha"]
