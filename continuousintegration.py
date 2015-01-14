@@ -32,5 +32,5 @@ def watchCi():
         if "success" in states:
             GlobalVars.charcoal_hq.send_message("CI build passed. Ready to pull!")
         elif "error" in states or "failure" in states:
-            GlobarVars.charcoal_hq.send_message("CI build failed, *someone* (prolly Undo) borked something!")
+            GlobalVars.charcoal_hq.send_message("CI build failed, *someone* (prolly Undo) borked something!")
     s.close()
