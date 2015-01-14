@@ -4,9 +4,14 @@ from globalvars import GlobalVars
 
 def get_user_from_url(url):
     m = re.compile(r"https?://([\w.]+)/users/(\d+)/.+/?").search(url)
-    site = m.group(1)
-    user_id = m.group(2)
-    return (user_id, site)
+    if m is None:
+        return None
+    try:
+        site = m.group(1)
+        user_id = m.group(2)
+        return (user_id, site)
+    except:
+        return None
 
 
 def fetch_post_id_and_site_from_msg_content(content):
