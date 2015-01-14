@@ -29,12 +29,14 @@ def watchCi():
         r=requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
         latest_sha = r.json()["object"]["sha"]
         r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/' + latest_sha + '/statuses')
-        states = []
         for status in r.json():
             state = status["state"]
-            states.append(state)
-        if "success" in states:
-            GlobalVars.charcoal_hq.send_message("CI build passed. Ready to pull!")
-        elif "error" in states or "failure" in states:
-            GlobalVars.charcoal_hq.send_message("CI build failed, *someone* (prolly Undo) borked something!")
-    s.close()
+            if state = "success":
+                if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > datetime.datetime.now()-datetime.timedelta(seconds=10):
+                    GlobalVars.charcoal_hq.send_message("CI build passed. Ready to pull!")
+                return
+            elif state == "error" or state == "failure":
+                    if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > datetime.datetime.now()-datetime.timedelta(seconds=10):
+                GlobalVars.charcoal_hq.send_message("CI build failed, *someone* (prolly Undo) borked something!")
+                return
+        s.close()
