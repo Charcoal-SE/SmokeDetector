@@ -7,6 +7,7 @@ import traceback
 from spamhandling import *
 from bodyfetcher import *
 from chatcommunicate import *
+from continuousintegration import *
 
 # !! Important! Be careful when adding code before this point.
 # Our except hook will be installed here, so any errors before this point won't be caught if they're not in a
@@ -54,6 +55,7 @@ def restart_automatically(time_in_seconds):
 
 threading.Thread(target=restart_automatically,args=(3600,)).start()
 
+threading.Thread(target=watchCi,args=()).start()
 
 ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
 ws.send("155-questions-active")
