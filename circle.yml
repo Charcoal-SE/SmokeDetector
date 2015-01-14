@@ -13,4 +13,4 @@ test:
     - python -W default::Warning -m pytest test
 notify:
   webhooks:
-    - url: http://erwaysoftware.com:49494
+    - url: http://erwaysoftware.com:49494/circlecifinished
