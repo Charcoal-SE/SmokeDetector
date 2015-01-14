@@ -48,3 +48,6 @@ autoIgnoredPosts.txt
 
 # Error logs
 errorLogs.txt
+
+# Swap files
+*.swp
