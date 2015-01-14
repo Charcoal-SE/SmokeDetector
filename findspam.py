@@ -45,12 +45,12 @@ class FindSpam:
                     except KeyError:                # There is no special logic for this rule
                         result.append(rule['reason'].replace("{}", "username"))
                 if matched_body and rule['body']:
+                    type_of_post = "answer" if is_answer else "body"
                     try:
                         if getattr(FindSpam, "%s" % rule['validation_method'])(matched_body):
-                            type_of_post = "answer" if is_answer else "body"
                             result.append(rule['reason'].replace("{}", type_of_post))
                     except KeyError:                # There is no special logic for this rule
-                        result.append(rule['reason'].replace("{}", "body"))
+                        result.append(rule['reason'].replace("{}", type_of_post))
         return result
 
     @staticmethod
