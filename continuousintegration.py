@@ -1,6 +1,6 @@
 import socket
 import requests
-import sys
+import re
 from globalvars import GlobalVars
 
 def watchCi():
@@ -21,8 +21,8 @@ def watchCi():
 
     while 1:
         conn, addr = s.accept()
-        circleci_addr = socket.getaddrinfo("circleci.com", 80, 0, 0, socket.IPPROTO_TCP)[0][4][0]
-        is_circleci = addr[0] == circleci_addr or addr[0] == "circleci.com"
+        addr_host = socket.gethostbyaddr(addr[0])[0]
+        is_circleci = True if re.compile(r"ec2-\d{1,3}-\d{1,3}-\d{1,3}-\d{1,3}.compute-1.amazonaws.com").search(addr_host) else False
         print 'Received request from ' + addr[0] + " ; " + "verified as CircleCI" if is_circleci else "NOT verified as CircleCI!"
         if not is_circleci:
             GlobalVars.charcoal_hq.send_message("WARNING: got socket that doesn't come from CircleCI")
