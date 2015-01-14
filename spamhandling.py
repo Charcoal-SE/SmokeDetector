@@ -7,14 +7,14 @@ from parsing import get_user_from_url, fetch_unescaped_title_from_encoded
 from bayesianfuncs import *
 
 
-def get_spam_reasons(title, body, user_name, site):
+def get_spam_reasons(title, body, user_name, site, is_answer):
     if not body:
         body = ""
-    return FindSpam.testpost(title, body, user_name, site)
+    return FindSpam.testpost(title, body, user_name, site, is_answer)
 
 
-def checkifspam(title, body, user_name, user_url, post_site, post_id, post_url):
-    test = get_spam_reasons(title, body, user_name, post_site)
+def checkifspam(title, body, user_name, user_url, post_site, post_id, post_url, is_answer):
+    test = get_spam_reasons(title, body, user_name, post_site, is_answer)
     if is_blacklisted_user(get_user_from_url(user_url)):
         test.append("Blacklisted user")
     if 0 < len(test):
@@ -56,12 +56,12 @@ def checkifspam_json(data):
     site = d["siteBaseHostAddress"]
     site = site.encode("ascii",errors="replace")
     sys.stdout.flush()
-    return checkifspam(title, None, poster, d["ownerUrl"], site, str(d["id"]), url)
+    return checkifspam(title, None, poster, d["ownerUrl"], site, str(d["id"]), url, False)
 
 
-def handlespam(title, body, poster, site, post_url, poster_url, post_id):
+def handlespam(title, body, poster, site, post_url, poster_url, post_id, is_answer):
     try:
-        reason = ", ".join(get_spam_reasons(title, body, poster, site))
+        reason = ", ".join(get_spam_reasons(title, body, poster, site, is_answer))
         s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % \
           (reason, title.strip(), post_url, poster.strip(), poster_url, site)
         print GlobalVars.parser.unescape(s).encode('ascii',errors='replace')
@@ -87,6 +87,6 @@ def handlespam_json(data):
         poster_url = d["ownerUrl"]
         post_id = d["id"]
         title_to_post = fetch_unescaped_title_from_encoded(title)
-        handlespam(title_to_post, None, poster, site, url, poster_url, post_id)
+        handlespam(title_to_post, None, poster, site, url, poster_url, post_id, False)
     except:
         print "NOP"

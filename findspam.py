@@ -24,7 +24,7 @@ class FindSpam:
     ]
 
     @staticmethod
-    def testpost(title, body, user_name, site):
+    def testpost(title, body, user_name, site, is_answer):
         result = []
         for rule in FindSpam.rules:
             if rule['all'] != (site in rule['sites']):
@@ -46,7 +46,8 @@ class FindSpam:
                 if matched_body and rule['body']:
                     try:
                         if getattr(FindSpam, "%s" % rule['validation_method'])(matched_body):
-                            result.append(rule['reason'].replace("{}", "body"))
+                            type_of_post = "answer" if is_answer else "body"
+                            result.append(rule['reason'].replace("{}", type_of_post))
                     except KeyError:                # There is no special logic for this rule
                         result.append(rule['reason'].replace("{}", "body"))
         return result
