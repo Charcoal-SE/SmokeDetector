@@ -26,7 +26,6 @@ def watchCi():
         print 'Received request from ' + addr[0] + " ; " + "verified as CircleCI" if is_circleci else "NOT verified as CircleCI!"
         if not is_circleci:
             GlobalVars.charcoal_hq.send_message("WARNING: got socket that doesn't come from CircleCI")
-            s.close()
             continue
         r=requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
         latest_sha = r.json()["object"]["sha"]
