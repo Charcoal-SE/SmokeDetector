@@ -18,7 +18,8 @@ import pytest
      ('How to avoid objects when traveling at greater than .75 light speed. or How Not to Go SPLAT?', '', 'bowlturner', '', False),
      ('Is it unfair to regrade prior work after detecting cheating?', '', 'Village', '', False),
      ('Inner workings of muscles', '', '', 'fitness.stackexchange.com', False),
-     ('Cannot access http://stackoverflow.com/ with proxy enabled', '', '', 'superuser.com', False)
+     ('Cannot access http://stackoverflow.com/ with proxy enabled', '', '', 'superuser.com', False),
+     ('kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '<p>bbbbbbbbbbbbbbbbbbbbbb</p>', '', 'stackoverflow.com', True)
 ])
 
 def test_regexes(title, body, username, site, match):
