@@ -4,9 +4,9 @@ import phonenumbers
 
 class FindSpam:
     rules = [
-     {'regex': u"(?i)\\b(baba(ji)?|nike|bajotz|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|LifeForce|swtor2credits|me2.do|black magic|bam2u|Neuro(3X|flexyn)|Nutra|TesteroneXL|Bowtrol|Slim ?Genix|Cleanse EFX|Babyliss ?Pro|Forskolin|Blackline Elite|TestCore Pro|Xtreme Antler|Maxx Test 3000|Cheap Wigs?|(Improve )?Brain Power|aging skin|acne( prone)? skin|(skin )?eye serum|skin (serum|eye)|fake (passports?|driver'?s? licen[cs]e|ID cards?)|bagprada)\\b|ಌ|(support|service|helpline)( phone)? number|1[ -]?866[ -]?978[ -]?6819", 'all': True,
+     {'regex': u"(?i)\\b(baba(ji)?|fifa.*coin|nike|bajotz|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|LifeForce|swtor2credits|me2.do|black magic|bam2u|Neuro(3X|flexyn)|Nutra|TesteroneXL|Bowtrol|Slim ?Genix|Cleanse EFX|Babyliss ?Pro|Forskolin|Blackline Elite|TestCore Pro|Xtreme Antler|Maxx Test 3000|Cheap Wigs?|(Improve )?Brain Power|aging skin|acne( prone)? skin|(skin )?eye serum|skin (serum|eye)|fake (passports?|driver'?s? licen[cs]e|ID cards?)|bagprada)\\b|ಌ|(support|service|helpline)( phone)? number|1[ -]?866[ -]?978[ -]?6819", 'all': True,
         'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True},
-     {'regex': u"(?i)\\b(fifabay|fifa 15)\\b", 'all': True, 'reason': "Bad keyword in {}", 'sites': ["gaming.stackexchange.com"], 'title': True, 'body': True, 'username': True},
+     {'regex': u"(?i)\\b(fifabay)\\b", 'all': True, 'reason': "Bad keyword in {}", 'sites': [], 'title': True, 'body': True, 'username': True},
      {'regex': u"(?i)\\b(weight (loo?s[es]|reduction)|muscles? build(ing)?|muscles?( (grow(th)?|diets?))?|anti aging|SkinCentric|loo?s[es] weight|wrinkles?)\\b", 'all': True,
         'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True},
      {'regex': u"(?i)^(?:(?=.*?\\b(?:online|hd)\\b)(?=.*?(?:free|full|unlimited)).*?movies?\\b|(?=.*?\\b(?:acai|kisn)\\b)(?=.*?care).*products?\\b|(?=.*?packer).*mover)", 'all': True,
