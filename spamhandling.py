@@ -24,7 +24,7 @@ def checkifspam(title, body, user_name, user_url, post_site, post_id, post_url, 
                 or is_auto_ignored_post((post_id, post_site)):
             return False # Don't repost. Reddit will hate you.
         append_to_latest_questions(post_site, post_id, title)
-        if len(test) == 1 and "All-caps title" in test:
+        if len(test) == 1 and ("All-caps title" in test or "Repeating characters" in test):
             add_auto_ignored_post((post_id, post_site, datetime.now()))
         try:
             owner = user_url
