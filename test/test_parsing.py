@@ -21,7 +21,10 @@ with open("test/data_test_parsing.txt", "r") as f:
     (test_data_inputs[0], fetch_title_from_msg_content, 'Best Weight Loss Tips For Fast Results'),
     (test_data_inputs[1], fetch_post_id_and_site_from_msg_content, ('0', 'stackoverflow.com')),
     (test_data_inputs[1], fetch_owner_url_from_msg_content, 'http://stackoverflow.com/users/0/test-test'),
-    (test_data_inputs[1], fetch_title_from_msg_content, 'TEST TEST TEST ]]])))')
+    (test_data_inputs[1], fetch_title_from_msg_content, 'TEST TEST TEST ]]])))'),
+    (test_data_inputs[2], fetch_post_id_and_site_from_msg_content, ('27954020', 'stackoverflow.com')),
+    (test_data_inputs[2], fetch_owner_url_from_msg_content, 'http://stackoverflow.com/users/3754535/user3754535'),
+    (test_data_inputs[2], fetch_title_from_msg_content, "Why I can't insert data in a model from a custom controller?")
 ])
 
 def test_parsing(input_data, parse_method, expected):
