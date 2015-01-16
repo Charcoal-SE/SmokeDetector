@@ -13,7 +13,7 @@ def get_spam_reasons(title, body, user_name, site, is_answer):
     return FindSpam.test_post(title, body, user_name, site, is_answer)
 
 
-def check_if_spam(title, body, user_name, user_url, post_site, post_id, post_url, is_answer):
+def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer):
     test = get_spam_reasons(title, body, user_name, post_site, is_answer)
     if is_blacklisted_user(get_user_from_url(user_url)):
         test.append("Blacklisted user")
@@ -23,16 +23,6 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, post_url
                 or is_ignored_post((post_id, post_site)) \
                 or is_auto_ignored_post((post_id, post_site)):
             return False # Don't repost. Reddit will hate you.
-        append_to_latest_questions(post_site, post_id, title)
-        if len(test) == 1 and ("All-caps title" in test or "Repeating characters" in test):
-            add_auto_ignored_post((post_id, post_site, datetime.now()))
-        try:
-            owner = user_url
-            users_file = open("users.txt", "a")
-            users_file.write(post_site + " " + owner + " " + title + " " + post_url + "\n")
-            users_file.close()
-        except Exception as e:
-            print e
         return True
     return False
 
@@ -47,7 +37,6 @@ def check_if_spam_json(data):
     title = d["titleEncodedFancy"]
     title = fetch_unescaped_title_from_encoded(title)
     poster = d["ownerDisplayName"]
-    url = d["url"]
     print time.strftime("%Y-%m-%d %H:%M:%S"),title.encode("ascii",errors="replace")
     quality_score = bayesian_score(title)
     print quality_score
@@ -56,12 +45,23 @@ def check_if_spam_json(data):
     site = d["siteBaseHostAddress"]
     site = site.encode("ascii",errors="replace")
     sys.stdout.flush()
-    return check_if_spam(title, None, poster, d["ownerUrl"], site, str(d["id"]), url, False)
+    return check_if_spam(title, None, poster, d["ownerUrl"], site, str(d["id"]), False)
 
 
 def handle_spam(title, body, poster, site, post_url, poster_url, post_id, is_answer):
+    test = get_spam_reasons(title, body, poster, site, is_answer)
+    reason = ", ".join(test)
+    append_to_latest_questions(site, post_id, title)
+    if len(test) == 1 and ("All-caps title" in test or "Repeating characters" in test):
+        add_auto_ignored_post((post_id, site, datetime.now()))
     try:
-        reason = ", ".join(get_spam_reasons(title, body, poster, site, is_answer))
+        owner = poster_url
+        users_file = open("users.txt", "a")
+        users_file.write(site + " " + owner + " " + title + " " + post_url + "\n")
+        users_file.close()
+    except Exception as e:
+        print e
+    try:
         s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % \
           (reason, title.strip(), post_url, poster.strip(), poster_url, site)
         print GlobalVars.parser.unescape(s).encode('ascii',errors='replace')
