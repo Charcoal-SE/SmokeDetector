@@ -8,6 +8,7 @@ from spamhandling import *
 from bodyfetcher import *
 from chatcommunicate import *
 from continuousintegration import *
+from datetime import datetime
 
 # !! Important! Be careful when adding code before this point.
 # Our except hook will be installed here, so any errors before this point won't be caught if they're not in a
