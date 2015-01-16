@@ -12,7 +12,7 @@ class FindSpam:
      {'regex': u"(?i)^(?:(?=.*?\\b(?:online|hd)\\b)(?=.*?(?:free|full|unlimited)).*?movies?\\b|(?=.*?\\b(?:acai|kisn)\\b)(?=.*?care).*products?\\b|(?=.*?packer).*mover)", 'all': True,
         'sites': [], 'reason': "Bad keywords in {}", 'title': True, 'body': False, 'username': True},
      {'regex': u"\\d(?:_*\\d){9}|\\+?\\d_*\\d[\\s\\-]?(?:_*\\d){8,10}|\\d[ -]?\\d{3}[ -]?\\d{3}[ -]?\\d{4}", 'all': True,
-        'sites': ["patents.stackexchange.com"], 'reason': "Phone number detected", 'validation_method': 'checkphonenumbers', 'title': True, 'body': False, 'username': False},
+        'sites': ["patents.stackexchange.com"], 'reason': "Phone number detected", 'validation_method': 'check_phone_numbers', 'title': True, 'body': False, 'username': False},
      {'regex': u"(?i)\\b(nigg(a|er)|asshole|fag|fuck(ing?)?|shit|whore)s?\\b", 'all': True,
         'sites': [], 'reason': "Offensive {} detected",'insensitive':True, 'title': True, 'body': True, 'username': False},
      {'regex': u"(?i)\\b(crap)\\b", 'all': True, 'sites': [], 'reason': "Offensive {} detected", 'insensitive': True, 'title': True, 'body': False, 'username': False},
@@ -25,7 +25,7 @@ class FindSpam:
     ]
 
     @staticmethod
-    def testpost(title, body, user_name, site, is_answer):
+    def test_post(title, body, user_name, site, is_answer):
         result = []
         for rule in FindSpam.rules:
             if rule['all'] != (site in rule['sites']):
@@ -54,7 +54,7 @@ class FindSpam:
         return result
 
     @staticmethod
-    def checkphonenumbers(matched):
+    def check_phone_numbers(matched):
         test_formats = [ "IN", "US", None ]
         for phone_number in matched:
             for testf in test_formats:
