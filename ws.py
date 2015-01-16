@@ -56,7 +56,7 @@ def restart_automatically(time_in_seconds):
 
 threading.Thread(target=restart_automatically,args=(3600,)).start()
 
-threading.Thread(target=watchCi,args=()).start()
+threading.Thread(target=watch_ci,args=()).start()
 
 ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
 ws.send("155-questions-active")
@@ -72,7 +72,7 @@ while True:
             if checkifspam_json(a):
                 threading.Thread(target=handlespam_json,args=(a,)).start()
             else:
-                threading.Thread(target=GlobalVars.bodyfetcher.addToQueue,args=(a,)).start()
+                threading.Thread(target=GlobalVars.bodyfetcher.add_to_queue,args=(a,)).start()
     except Exception, e:
         now = datetime.utcnow()
         delta = now - UtcDate.startup_utc_date

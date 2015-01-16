@@ -205,4 +205,4 @@ def watcher(ev, wrap2):
     if content_lower.startswith("!!/apiquota"):
         ev.message.reply(GlobalVars.apiquota)
     if content_lower.startswith("!!/queuestatus"):
-        ev.message.reply(GlobalVars.bodyfetcher.printQueue())
+        ev.message.reply(GlobalVars.bodyfetcher.print_queue())

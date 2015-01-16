@@ -10,7 +10,7 @@ class BodyFetcher:
 
     threshold = 2
 
-    def addToQueue(self, post):
+    def add_to_queue(self, post):
         d=json.loads(json.loads(post)["data"])
         sitebase = d["siteBaseHostAddress"]
         postid = d["id"]
@@ -20,30 +20,30 @@ class BodyFetcher:
             self.queue[sitebase] = [postid]
 
         print self.queue
-        self.checkQueue()
+        self.check_queue()
 
-    def checkQueue(self):
+    def check_queue(self):
         for site, values in self.queue.iteritems():
             if site in self.specialCases:
                 if len(self.queue[site]) >= self.specialCases[site]:
                     print "site " + site + " met special case quota, fetching..."
-                    self.makeApiCallForSite(site)
+                    self.make_api_call_for_site(site)
                     return
 
         # if we don't have any sites with their queue filled, take the first one without a special case
         for site, values in self.queue.iteritems():
             if site not in self.specialCases and len(values) >= self.threshold:
-                self.makeApiCallForSite(site)
+                self.make_api_call_for_site(site)
                 return
 
-    def printQueue(self):
+    def print_queue(self):
         string = ""
         for site, values in self.queue.iteritems():
             string = string + "\n" + site + ": " + str(len(values))
 
         return string
 
-    def makeApiCallForSite(self, site):
+    def make_api_call_for_site(self, site):
         posts = self.queue.pop(site)
         url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts)  + "?site=" + site + "&filter=!4y_-sca-)pfAwlmP_1FxC6e5yzutRIcQvonAiP&key=IAkbitmze4B8KpacUfLqkw(("
         response = requests.get(url).json()

@@ -5,7 +5,7 @@ from globalvars import GlobalVars
 import datetime
 import json
 
-def watchCi():
+def watch_ci():
     HOST = ''
     PORT = 49494
 
