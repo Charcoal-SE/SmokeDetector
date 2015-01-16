@@ -4,11 +4,11 @@ import pytest
 test_data_inputs = []
 with open("test/data_test_parsing.txt", "r") as f:
     test_data_inputs = f.readlines()
-print(test_data_inputs[2])
 
 # Large inputs should go to that file.
 # Only inputs should go there, not the parsing method and the expected output,
 # because the input is always a string and `parse_method` and `expected` are not.
+
 
 @pytest.mark.parametrize("input_data, parse_method, expected", [
     ('http://physics.stackexchange.com/users/7433/manishearth', get_user_from_url, ('7433', 'physics.stackexchange.com')),
@@ -26,7 +26,10 @@ print(test_data_inputs[2])
     (test_data_inputs[1], fetch_title_from_msg_content, 'TEST TEST TEST ]]])))'),
     (test_data_inputs[2], fetch_post_url_from_msg_content, 'http://stackoverflow.com/questions/0/test-test/42#42'),
     (test_data_inputs[2], fetch_post_id_and_site_from_msg_content, ('42', 'stackoverflow.com', 'answer')),
-    (test_data_inputs[2], fetch_owner_url_from_msg_content, 'http://stackoverflow.com/users/0/test-test')
+    (test_data_inputs[2], fetch_owner_url_from_msg_content, 'http://stackoverflow.com/users/0/test-test'),
+    (test_data_inputs[3], fetch_post_id_and_site_from_msg_content, ('27954020', 'stackoverflow.com', 'question')),
+    (test_data_inputs[3], fetch_owner_url_from_msg_content, 'http://stackoverflow.com/users/3754535/user3754535'),
+    (test_data_inputs[3], fetch_title_from_msg_content, "Why I can't insert data in a model from a custom controller?")
 ])
 
 def test_parsing(input_data, parse_method, expected):
