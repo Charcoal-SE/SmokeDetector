@@ -35,30 +35,32 @@ def watcher(ev, wrap2):
                     msg_content = msg_to_delete.content_source
                 if msg_content is not None:
                     site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
-                    add_false_positive(site_post_id)
+                    if site_post_id is None:
+                        ev.message.reply("Could not register title as false positive.")
+                        return
+                    post_type = site_post_id[2]
+                    add_false_positive((site_post_id[0], site_post_id[1]))
                     user_added = False
                     if message_parts[1].lower().startswith("falseu") or message_parts[1].lower().startswith("fpu"):
                         url_from_msg = fetch_owner_url_from_msg_content(msg_content)
                         user = get_user_from_url(url_from_msg)
                         add_whitelisted_user(user)
                         user_added = True
-                    learned = bayesian_learn_title(msg_content, "good")
-                    if learned:
-                        if user_added and site_post_id is not None:
-                            ev.message.reply("Registered as false positive, added title to Bayesian doctype 'good', whitelisted user.")
-                        elif site_post_id is not None:
-                            ev.message.reply("Registered as false positive and added title to Bayesian doctype 'good'.")
+                    learned = False
+                    if post_type == "question":
+                        learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "good")
+                    if post_type == "question":
+                        if learned and user_added:
+                            ev.message.reply("Registered question as false positive, whitelisted user and added title to Bayesian doctype 'good'.")
+                        elif learned:
+                            ev.message.reply("Registered question as false positive and added title to Bayesian doctype 'good'.")
                         else:
-                            ev.message.reply("Could not register title as false positive.")
-                            should_delete = False
-                    else:
-                        if user_added and site_post_id is not None:
-                            ev.message.reply("Registered as false positive and whitelisted user, but could not add the title to the Bayesian doctype 'good'.")
-                        elif site_post_id is not None:
-                            ev.message.reply("Registered as false positive, but could not add the title to the Bayesian doctype 'good'.")
+                            ev.message.reply("Registered question as false positive, but could not add title to Bayesian doctype 'good'.")
+                    elif post_type == "answer":
+                        if user_added:
+                            ev.message.reply("Registered answer as false positive and whitelisted user.")
                         else:
-                            ev.message.reply("Could not register title as false positive.")
-                            should_delete = False
+                            ev.message.reply("Registered answer as false positive.")
                     if should_delete:
                         msg_to_delete.delete()
             except:
@@ -72,23 +74,28 @@ def watcher(ev, wrap2):
                 if str(msg_true_positive.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]:
                     msg_content = msg_true_positive.content_source
                 if msg_content is not None:
-                    learned = bayesian_learn_title(msg_content, "bad")
+                    post_type = fetch_post_id_and_site_from_msg_content(msg_content)[2]
+                    learned = False
+                    if post_type == "question":
+                        learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "bad")
                     user_added = False
                     if message_parts[1].lower().startswith("trueu") or message_parts[1].lower().startswith("tpu"):
                         url_from_msg = fetch_owner_url_from_msg_content(msg_content)
                         user = get_user_from_url(url_from_msg)
                         add_blacklisted_user(user)
                         user_added = True
-                    if learned:
-                        if user_added:
-                            ev.message.reply("Registered as true positive: added title to Bayesian doctype 'bad' and blacklisted user.")
+                    if post_type == "question":
+                        if learned and user_added:
+                            ev.message.reply("Blacklisted user and registered question as true positive: added title to the Bayesian doctype 'bad'.")
+                        elif learned:
+                            ev.message.reply("Registered question as true positive: added title to the Bayesian doctype 'bad'.")
                         else:
-                            ev.message.reply("Registered as true positive: added title to Bayesian doctype 'bad'.")
-                    else:
+                            ev.message.reply("Something went wrong when registering question as true positive.")
+                    elif post_type == "answer":
                         if user_added:
-                            ev.message.reply("User blacklisted, but something went wrong when registering title as true positive.")
+                            ev.message.reply("Blacklisted user.")
                         else:
-                            ev.message.reply("Something went wrong when registering title as true positive.")
+                            ev.message.reply("`true`/`tp` cannot be used for answers because their job is to add the title of the *question* to the Bayesian doctype 'bad'. If you want to blacklist the poster of the answer, use `trueu` or `tpu`.")
             except:
                 pass
         if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id):
