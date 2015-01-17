@@ -1,6 +1,10 @@
 from spamhandling import *
 import pytest
 
+test_data_inputs = []
+with open("test/data_test_spamhandling.txt", "r") as f:
+    test_data_inputs = f.readlines()
+
 @pytest.mark.parametrize("title, body, username, site, match", [
      ('18669786819 gmail customer service number 1866978-6819 gmail support number', '', '', '', True),
      ('Is there any http://www.hindawi.com/ template for Cloud-Oriented Data Center Networking?', '', '', '', True),
@@ -30,4 +34,12 @@ def test_check_if_spam(title, body, username, site, match):
     is_answer = False
     is_spam, reason = check_if_spam(title, body, username, user_url, site, post_id, is_answer)
     print title
+    assert match == is_spam
+
+@pytest.mark.parametrize("data, match", [
+     (test_data_inputs[0], False)
+])
+
+def test_check_if_spam_json(data, match):
+    is_spam, reason = check_if_spam_json(data)
     assert match == is_spam
