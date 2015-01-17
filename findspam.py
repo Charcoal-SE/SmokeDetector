@@ -27,6 +27,7 @@ class FindSpam:
     @staticmethod
     def test_post(title, body, user_name, site, is_answer):
         result = []
+        body = re.sub("<code>[^<]*</code>", "", body)
         for rule in FindSpam.rules:
             if rule['all'] != (site in rule['sites']):
                 matched_title = re.compile(rule['regex'], re.UNICODE).findall(title)
