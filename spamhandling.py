@@ -7,14 +7,10 @@ from parsing import get_user_from_url, fetch_unescaped_title_from_encoded
 from bayesianfuncs import *
 
 
-def get_spam_reasons(title, body, user_name, site, is_answer):
+def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer):
     if not body:
         body = ""
-    return FindSpam.test_post(title, body, user_name, site, is_answer)
-
-
-def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer):
-    test = get_spam_reasons(title, body, user_name, post_site, is_answer)
+    test = FindSpam.test_post(title, body, user_name, post_site, is_answer)
     if is_blacklisted_user(get_user_from_url(user_url)):
         test.append("Blacklisted user")
     if 0 < len(test):
@@ -22,9 +18,9 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
                 or is_whitelisted_user(get_user_from_url(user_url)) \
                 or is_ignored_post((post_id, post_site)) \
                 or is_auto_ignored_post((post_id, post_site)):
-            return False # Don't repost. Reddit will hate you.
-        return True
-    return False
+            return False, None # Don't repost. Reddit will hate you.
+        return True, test
+    return False, None
 
 
 def check_if_spam_json(data):
@@ -48,11 +44,10 @@ def check_if_spam_json(data):
     return check_if_spam(title, None, poster, d["ownerUrl"], site, str(d["id"]), False)
 
 
-def handle_spam(title, body, poster, site, post_url, poster_url, post_id, is_answer):
-    test = get_spam_reasons(title, body, poster, site, is_answer)
-    reason = ", ".join(test)
+def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons):
+    reason = ", ".join(reasons)
     append_to_latest_questions(site, post_id, title)
-    if len(test) == 1 and ("All-caps title" in test or "Repeating characters" in test):
+    if len(reasons) == 1 and ("All-caps title" in reasons or "Repeating characters" in reasons):
         add_auto_ignored_post((post_id, site, datetime.now()))
     try:
         owner = poster_url
@@ -77,7 +72,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, is_ans
         print "NOP"
 
 
-def handle_spam_json(data):
+def handle_spam_json(data, reason):
     try:
         d=json.loads(json.loads(data)["data"])
         title = d["titleEncodedFancy"]
@@ -87,6 +82,6 @@ def handle_spam_json(data):
         poster_url = d["ownerUrl"]
         post_id = d["id"]
         title_to_post = fetch_unescaped_title_from_encoded(title)
-        handle_spam(title_to_post, None, poster, site, url, poster_url, post_id, False)
+        handle_spam(title_to_post, poster, site, url, poster_url, post_id, reason)
     except:
         print "NOP"

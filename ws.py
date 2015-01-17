@@ -69,8 +69,9 @@ while True:
     try:
         a = ws.recv()
         if a is not None and a != "":
-            if check_if_spam_json(a):
-                threading.Thread(target=handle_spam_json,args=(a,)).start()
+            is_spam, reason = check_if_spam_json(a)
+            if is_spam:
+                threading.Thread(target=handle_spam_json,args=(a,reason)).start()
             else:
                 threading.Thread(target=GlobalVars.bodyfetcher.add_to_queue,args=(a,)).start()
     except Exception, e:
