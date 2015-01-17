@@ -28,8 +28,8 @@ def check_if_spam_json(data):
     try:
         _ = d["ownerUrl"]
     except:
-        return False # owner's account doesn't exist anymore, no need to post it in chat:
-                     # http://chat.stackexchange.com/transcript/message/18380776#18380776
+        return False, None # owner's account doesn't exist anymore, no need to post it in chat:
+                           # http://chat.stackexchange.com/transcript/message/18380776#18380776
     title = d["titleEncodedFancy"]
     title = fetch_unescaped_title_from_encoded(title)
     poster = d["ownerDisplayName"]
