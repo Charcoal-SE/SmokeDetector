@@ -1,5 +1,4 @@
 #requires https://pypi.python.org/pypi/websocket-client/
-
 from excepthook import *
 import websocket
 import getpass
