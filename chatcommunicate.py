@@ -10,8 +10,8 @@ from globalvars import GlobalVars
 def post_message_in_room(room_id_str, msg):
     if room_id_str == GlobalVars.charcoal_room_id:
         GlobalVars.charcoal_hq.send_message(msg)
-    #elif room_id_str == GlobalVars.meta_tavern_room_id:
-    #    GlobalVars.tavern_on_the_meta.send_message(msg)
+    elif room_id_str == GlobalVars.meta_tavern_room_id:
+        GlobalVars.tavern_on_the_meta.send_message(msg)
 
 
 def watcher(ev, wrap2):
