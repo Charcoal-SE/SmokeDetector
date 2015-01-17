@@ -1,6 +1,7 @@
 import socket
 import requests
 import re
+import os
 from globalvars import GlobalVars
 import datetime
 import json
