@@ -41,7 +41,8 @@ def check_if_spam_json(data):
     site = d["siteBaseHostAddress"]
     site = site.encode("ascii",errors="replace")
     sys.stdout.flush()
-    return check_if_spam(title, None, poster, d["ownerUrl"], site, str(d["id"]), False)
+    is_spam, reason = check_if_spam(title, None, poster, d["ownerUrl"], site, str(d["id"]), False)
+    return is_spam, reason
 
 
 def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons):
