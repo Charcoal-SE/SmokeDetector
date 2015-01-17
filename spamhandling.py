@@ -33,6 +33,7 @@ def check_if_spam_json(data):
     title = d["titleEncodedFancy"]
     title = fetch_unescaped_title_from_encoded(title)
     poster = d["ownerDisplayName"]
+    url = d["url"]
     print time.strftime("%Y-%m-%d %H:%M:%S"),title.encode("ascii",errors="replace")
     quality_score = bayesian_score(title)
     print quality_score
