@@ -5,6 +5,7 @@ import os
 from globalvars import GlobalVars
 import datetime
 import json
+import time
 
 def watch_ci():
     HOST = ''
@@ -43,7 +44,7 @@ def watch_ci():
 
                     if "autopull" in commit_message:
                         GlobalVars.charcoal_hq.send_message("[CI build passed](%s). Commit message contains 'autopull', pulling..." % target_url)
-                        wait(.5)
+                        time.sleep(2)
                         os._exit(3)
                     else:
                         GlobalVars.charcoal_hq.send_message("[CI build passed](%s). Ready to pull!" % target_url)
