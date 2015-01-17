@@ -13,10 +13,9 @@ def bayesian_score(title):
         return 0.1
 
 
-def bayesian_learn_title(message_content, doctype):
+def bayesian_learn_title(title, doctype):
     try:
         bayesian_learn = Learn()
-        title = fetch_title_from_msg_content(message_content)
         if title is None:
             return False
         bayesian_learn.file_contents = title
