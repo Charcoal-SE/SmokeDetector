@@ -77,7 +77,7 @@ def watcher(ev, wrap2):
                     post_type = fetch_post_id_and_site_from_msg_content(msg_content)[2]
                     learned = False
                     if post_type == "question":
-                        learned = bayesian_learn_title(msg_content, "bad")
+                        learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "bad")
                     user_added = False
                     if message_parts[1].lower().startswith("trueu") or message_parts[1].lower().startswith("tpu"):
                         url_from_msg = fetch_owner_url_from_msg_content(msg_content)
