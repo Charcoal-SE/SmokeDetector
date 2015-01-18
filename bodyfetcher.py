@@ -53,7 +53,7 @@ class BodyFetcher:
         for post in response["items"]:
             title = GlobalVars.parser.unescape(post["title"])
             body = GlobalVars.parser.unescape(post["body"])
-            owner_name = post["owner"]["display_name"]
+            owner_name = GlobalVars.parser.unescape(post["owner"]["display_name"])
             link = post["link"]
             try:
                 owner_link = post["owner"]["link"]
@@ -75,7 +75,7 @@ class BodyFetcher:
                 for answer in post["answers"]:
                     answer_title = ""
                     body = answer["body"]
-                    owner_name = answer["owner"]["display_name"]
+                    owner_name = GlobalVars.parser.unescape(answer["owner"]["display_name"])
                     print "got answer from owner with name " + owner_name
                     link = answer["link"]
                     owner_link = answer["owner"]["link"]
