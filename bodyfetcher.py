@@ -63,7 +63,7 @@ class BodyFetcher:
                 owner_rep = post["owner"]["reputation"]
             except:
                 owner_rep = 0
-            q_id = post["question_id"]
+            q_id = str(post["question_id"])
 
             is_spam, reason = check_if_spam(title, body, owner_name, owner_link, site, q_id, False)
             if owner_rep <= 50 and is_spam:
@@ -79,7 +79,7 @@ class BodyFetcher:
                     print "got answer from owner with name " + owner_name
                     link = answer["link"]
                     owner_link = answer["owner"]["link"]
-                    a_id = answer["answer_id"]
+                    a_id = str(answer["answer_id"])
                     try:
                         owner_rep = answer["owner"]["reputation"]
                     except:
