@@ -46,9 +46,9 @@ def check_if_spam_json(data):
     return is_spam, reason
 
 
-def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons):
+def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_answer):
     reason = ", ".join(reasons)
-    append_to_latest_questions(site, post_id, title)
+    append_to_latest_questions(site, post_id, title if not is_answer else "")
     if len(reasons) == 1 and ("All-caps title" in reasons or "Repeating characters" in reasons):
         add_auto_ignored_post((post_id, site, datetime.now()))
     try:
@@ -84,6 +84,6 @@ def handle_spam_json(data, reason):
         poster_url = d["ownerUrl"]
         post_id = d["id"]
         title_to_post = fetch_unescaped_title_from_encoded(title)
-        handle_spam(title_to_post, poster, site, url, poster_url, post_id, reason)
+        handle_spam(title_to_post, poster, site, url, poster_url, post_id, reason, False)
     except:
         print "NOP"

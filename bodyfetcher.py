@@ -68,7 +68,7 @@ class BodyFetcher:
             is_spam, reason = check_if_spam(title, body, owner_name, owner_link, site, q_id, False)
             if owner_rep <= 50 and is_spam:
                 try:
-                    handle_spam(title, owner_name, site, link, owner_link, q_id, reason)
+                    handle_spam(title, owner_name, site, link, owner_link, q_id, reason, False)
                 except:
                     print "NOP"
             try:
@@ -88,7 +88,7 @@ class BodyFetcher:
                     is_spam, reason = check_if_spam(answer_title, body, owner_name, owner_link, site, a_id, True)
                     if owner_rep <= 50 and is_spam:
                         try:
-                            handle_spam(title, owner_name, site, link, owner_link, a_id, reason)
+                            handle_spam(title, owner_name, site, link, owner_link, a_id, reason, True)
                         except:
                             print "NOP"
             except:
