@@ -49,7 +49,6 @@ def watcher(ev, wrap2):
                     learned = False
                     if post_type == "question":
                         learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "good")
-                    if post_type == "question":
                         if learned and user_added:
                             ev.message.reply("Registered question as false positive, whitelisted user and added title to Bayesian doctype 'good'.")
                         elif learned:
@@ -76,8 +75,6 @@ def watcher(ev, wrap2):
                 if msg_content is not None:
                     post_type = fetch_post_id_and_site_from_msg_content(msg_content)[2]
                     learned = False
-                    if post_type == "question":
-                        learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "bad")
                     user_added = False
                     if message_parts[1].lower().startswith("trueu") or message_parts[1].lower().startswith("tpu"):
                         url_from_msg = fetch_owner_url_from_msg_content(msg_content)
@@ -85,6 +82,7 @@ def watcher(ev, wrap2):
                         add_blacklisted_user(user)
                         user_added = True
                     if post_type == "question":
+                        learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "bad")
                         if learned and user_added:
                             ev.message.reply("Blacklisted user and registered question as true positive: added title to the Bayesian doctype 'bad'.")
                         elif learned:
