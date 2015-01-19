@@ -34,6 +34,7 @@ def check_if_spam_json(data):
     title = fetch_unescaped_title_from_encoded(title)
     poster = d["ownerDisplayName"]
     url = d["url"]
+    post_id = str(d["id"])
     print time.strftime("%Y-%m-%d %H:%M:%S"),title.encode("ascii",errors="replace")
     quality_score = bayesian_score(title)
     print quality_score
@@ -42,7 +43,7 @@ def check_if_spam_json(data):
     site = d["siteBaseHostAddress"]
     site = site.encode("ascii",errors="replace")
     sys.stdout.flush()
-    is_spam, reason = check_if_spam(title, None, poster, d["ownerUrl"], site, str(d["id"]), False)
+    is_spam, reason = check_if_spam(title, None, poster, url, site, post_id, False)
     return is_spam, reason
 
 
@@ -82,7 +83,7 @@ def handle_spam_json(data, reason):
         site = d["siteBaseHostAddress"]
         url = d["url"]
         poster_url = d["ownerUrl"]
-        post_id = d["id"]
+        post_id = str(d["id"])
         title_to_post = fetch_unescaped_title_from_encoded(title)
         handle_spam(title_to_post, poster, site, url, poster_url, post_id, reason, False)
     except:
