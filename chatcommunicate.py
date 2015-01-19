@@ -104,7 +104,7 @@ def watcher(ev, wrap2):
                 if(str(msg_ignore.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]):
                     msg_content = msg_ignore.content_source
                 if(msg_content is not None):
-                    post_id_site = fetch_post_id_and_site_from_msg_content(msg_content)
+                    post_id_site = fetch_post_id_and_site_from_msg_content(msg_content)[0:2]
                     add_ignored_post(post_id_site)
                     ev.message.reply("Post ignored; alerts about it will no longer be posted.")
             except:
