@@ -1,5 +1,6 @@
 from spamhandling import *
 import pytest
+import os
 
 test_data_inputs = []
 with open("test/data_test_spamhandling.txt", "r") as f:
@@ -43,3 +44,25 @@ def test_check_if_spam(title, body, username, site, match):
 def test_check_if_spam_json(data, match):
     is_spam, reason = check_if_spam_json(data)
     assert match == is_spam
+
+@pytest.mark.skipif(os.path.isfile("blacklistedUsers.txt"),
+                    reason="shouldn't overwrite file")
+def test_blacklisted_user():
+    user_url = 'http://stackoverflow.com/users/1/jeff-atwood'
+    user = get_user_from_url(user_url)
+    add_blacklisted_user(user)
+    is_spam, reason = check_if_spam("", "", "", user_url, "stackoverflow.com", "1", False)
+    assert is_spam == True
+    # cleanup
+    os.remove("blacklistedUsers.txt")
+
+@pytest.mark.skipif(os.path.isfile("whitelistedUsers.txt"),
+                reason="shouldn't overwrite file")
+def test_whitelisted_user():
+    user_url = 'http://stackoverflow.com/users/2/geoff-dalgas'
+    user = get_user_from_url(user_url)
+    add_whitelisted_user(user)
+    is_spam, reason = check_if_spam("", "", "", user_url, "stackoverflow.com", "1", False)
+    assert is_spam == False
+    # cleanup
+    os.remove("whitelistedUsers.txt")
