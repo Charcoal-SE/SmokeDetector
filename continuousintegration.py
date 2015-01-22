@@ -21,7 +21,7 @@ def watch_ci():
         return
 
     s.listen(10)
-    print 'listening for ci changes'
+    print 'listening for CI changes'
 
     while 1:
         conn, addr = s.accept()
