@@ -25,7 +25,7 @@ def watch_ci():
 
     while 1:
         conn, addr = s.accept()
-        conn.sendall('200')
+        conn.sendall('\nHTTP/1.x 200 OK\n')
         
         addr_host = socket.gethostbyaddr(addr[0])[0]
         is_circleci = True if re.compile(r"ec2-\d{1,3}-\d{1,3}-\d{1,3}-\d{1,3}.compute-1.amazonaws.com").search(addr_host) else False
