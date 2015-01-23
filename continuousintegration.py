@@ -25,7 +25,6 @@ def watch_ci():
 
     while 1:
         conn, addr = s.accept()
-        conn.sendall('\nHTTP/1.x 200 OK\n')
         
         addr_host = socket.gethostbyaddr(addr[0])[0]
         is_circleci = True if re.compile(r"ec2-\d{1,3}-\d{1,3}-\d{1,3}-\d{1,3}.compute-1.amazonaws.com").search(addr_host) else False
@@ -33,6 +32,8 @@ def watch_ci():
         if not is_circleci:
             conn.close()
             continue
+        conn.send('HTTP/1.1 200 OK\nContent-Type: text/plain\n\nOK\n')
+        conn.close()
         r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
         latest_sha = r.json()["object"]["sha"]
         r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/' + latest_sha + '/statuses')
@@ -58,5 +59,4 @@ def watch_ci():
                 if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > datetime.datetime.now()-datetime.timedelta(seconds=10):
                     GlobalVars.charcoal_hq.send_message("[CI build failed](%s), *someone* (prolly Undo) borked something!" % target_url)
                     continue
-        conn.close()
     s.close()
