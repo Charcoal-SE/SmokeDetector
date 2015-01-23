@@ -27,6 +27,7 @@ class FindSpam:
     @staticmethod
     def test_post(title, body, user_name, site, is_answer):
         result = []
+        body = re.sub("<pre>.*?</pre>", "", body, flags=re.DOTALL)
         body = re.sub("<code>.*?</code>", "", body, flags=re.DOTALL)
         for rule in FindSpam.rules:
             if rule['all'] != (site in rule['sites']):
