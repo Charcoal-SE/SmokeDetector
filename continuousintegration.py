@@ -32,7 +32,7 @@ def watch_ci():
         if not is_circleci:
             conn.close()
             continue
-        conn.send('HTTP/1.1 200 OK\nContent-Type: text/plain\n\nOK\n')
+        conn.send('HTTP/1.1 200 OK\nContent-Type: text/plain\nContent-Length: 2\n\nOK\n')
         conn.close()
         r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
         latest_sha = r.json()["object"]["sha"]
