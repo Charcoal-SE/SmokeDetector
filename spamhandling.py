@@ -60,6 +60,7 @@ def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_
     except Exception as e:
         print e
     try:
+        title.replace(']', '\]')
         s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % \
           (reason, title.strip(), post_url, poster.strip(), poster_url, site)
         print GlobalVars.parser.unescape(s).encode('ascii',errors='replace')
