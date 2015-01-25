@@ -1,4 +1,7 @@
-from parsing import *
+from parsing import fetch_post_id_and_site_from_msg_content, \
+    escape_special_chars_in_title, unescape_title, get_user_from_url, \
+    fetch_owner_url_from_msg_content, fetch_title_from_msg_content, \
+    fetch_post_url_from_msg_content
 import pytest
 
 test_data_inputs = []
@@ -33,6 +36,5 @@ with open("test/data_test_parsing.txt", "r") as f:
     (test_data_inputs[3], fetch_owner_url_from_msg_content, 'http://stackoverflow.com/users/3754535/user3754535'),
     (test_data_inputs[3], fetch_title_from_msg_content, "Why I can't insert data in a model from a custom controller?")
 ])
-
 def test_parsing(input_data, parse_method, expected):
     assert parse_method(input_data) == expected

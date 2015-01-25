@@ -1,6 +1,5 @@
 from bayesian.classify import Classify
 from bayesian.learn import Learn
-from parsing import fetch_title_from_msg_content
 
 
 def bayesian_score(title):

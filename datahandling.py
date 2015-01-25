@@ -64,6 +64,7 @@ def is_auto_ignored_post(postid_site_tuple):
             return True
     return False
 
+
 def is_privileged(room_id_str, user_id_str):
     return room_id_str in GlobalVars.privileged_users and user_id_str in GlobalVars.privileged_users[room_id_str]
 

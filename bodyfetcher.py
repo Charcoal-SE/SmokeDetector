@@ -1,16 +1,23 @@
-from spamhandling import *
-from chatcommunicate import *
-from datahandling import *
+from spamhandling import handle_spam, check_if_spam
+from globalvars import GlobalVars
+import json
+import time
+import requests
+
 
 class BodyFetcher:
     queue = {}
 
-    specialCases = {"stackoverflow.com" : 5, "serverfault.com" : 5, "superuser.com" : 5, "drupal.stackexchange.com" : 1, "meta.stackexchange.com" : 1}
+    specialCases = {"stackoverflow.com": 5,
+                    "serverfault.com": 5,
+                    "superuser.com": 5,
+                    "drupal.stackexchange.com": 1,
+                    "meta.stackexchange.com": 1}
 
     threshold = 2
 
     def add_to_queue(self, post):
-        d=json.loads(json.loads(post)["data"])
+        d = json.loads(json.loads(post)["data"])
         sitebase = d["siteBaseHostAddress"]
         postid = d["id"]
         if sitebase in self.queue:
@@ -44,7 +51,7 @@ class BodyFetcher:
 
     def make_api_call_for_site(self, site):
         posts = self.queue.pop(site)
-        url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts)  + "?site=" + site + "&filter=!4y_-sca-)pfAwlmP_1FxC6e5yzutRIcQvonAiP&key=IAkbitmze4B8KpacUfLqkw(("
+        url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts) + "?site=" + site + "&filter=!4y_-sca-)pfAwlmP_1FxC6e5yzutRIcQvonAiP&key=IAkbitmze4B8KpacUfLqkw(("
         # wait to make sure API has/updates post data
         time.sleep(30)
         response = requests.get(url).json()
