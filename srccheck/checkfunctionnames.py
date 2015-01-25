@@ -25,7 +25,7 @@ def check_indentation():
                         print(("FUNCTION NAME CHECK FAILED in %s at line %s. " +
                                "SmokeDetector uses snake_case (and lowercase) function names. This tool detected " +
                                "a function name that has a capitalized letter, which is inconsistent with the " +
-                               "other function names") % (filename[len(smokedetector_root):], current_line))
+                               "other function names.") % (filename[len(smokedetector_root):], current_line))
                         sys.exit(1)
     print("FUNCTION NAME CHECK PASSED.")
 
