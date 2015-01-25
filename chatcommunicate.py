@@ -1,10 +1,16 @@
 import random
 import requests
 import time
-from parsing import *
-from datahandling import *
-from bayesianfuncs import *
+from parsing import fetch_post_id_and_site_from_msg_content,\
+    get_user_from_url, fetch_owner_url_from_msg_content,\
+    fetch_title_from_msg_content
+from datahandling import add_false_positive, is_privileged,\
+    add_whitelisted_user, add_blacklisted_user, add_ignored_post
+from bayesianfuncs import bayesian_learn_title
 from globalvars import GlobalVars
+import os
+import re
+from datetime import datetime
 
 
 def post_message_in_room(room_id_str, msg):
@@ -63,7 +69,7 @@ def watcher(ev, wrap2):
                     if should_delete:
                         msg_to_delete.delete()
             except:
-                pass # couldn't delete message
+                pass  # couldn't delete message
         if (second_part_lower.startswith("true") or second_part_lower.startswith("tp")) \
                 and is_privileged(ev_room, ev_user_id):
             try:
@@ -117,7 +123,7 @@ def watcher(ev, wrap2):
                 if str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]:
                     msg_to_delete.delete()
             except:
-                pass # couldn't delete message
+                pass  # couldn't delete message
     if content_lower.startswith("!!/wut"):
         ev.message.reply("Whaddya mean, 'wut'? Humans...")
     if content_lower.startswith("!!/lick"):
@@ -146,7 +152,13 @@ def watcher(ev, wrap2):
                                             'Watching this endless list of new questions *never* gets boring',
                                             'Kinda sorta']))
     if content_lower.startswith("!!/rev"):
-            ev.message.reply('[' + GlobalVars.commit_with_author + '](https://github.com/Charcoal-SE/SmokeDetector/commit/'+ GlobalVars.commit +')')
+            ev.message.reply(
+                '[' +
+                GlobalVars.commit_with_author +
+                '](https://github.com/Charcoal-SE/SmokeDetector/commit/' +
+                GlobalVars.commit +
+                ')'
+            )
     if content_lower.startswith("!!/status"):
             ev.message.reply('Running since %s UTC' % GlobalVars.startup_utc)
     if content_lower.startswith("!!/reboot"):

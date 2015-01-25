@@ -84,7 +84,7 @@ elif "first_start" in sys.argv and not GlobalVars.on_master:
 
 def restart_automatically(time_in_seconds):
     time.sleep(time_in_seconds)
-    sys.exit(1)
+    os._exit(1)
 
 Thread(target=restart_automatically, args=(3600,)).start()
 
@@ -122,7 +122,7 @@ while True:
         with open("errorLogs.txt", "a") as f:
             f.write(logged_msg)
         if seconds < 180:
-            sys.exit(4)
+            os._exit(4)
         ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
         ws.send("155-questions-active")
         GlobalVars.charcoal_hq.send_message("Recovered from `" + exception_only + "`")
@@ -131,6 +131,6 @@ now = datetime.utcnow()
 delta = UtcDate.startup_utc_date - now
 seconds = delta.total_seconds()
 if seconds < 60:
-    sys.exit(4)
+    os._exit(4)
 s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector aborted"
 GlobalVars.charcoal_hq.send_message(s)

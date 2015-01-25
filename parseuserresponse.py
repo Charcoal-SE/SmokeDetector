@@ -1,4 +1,5 @@
-import sys, json; 
+import sys
+import json
 
 array = json.load(sys.stdin)["items"]
 
