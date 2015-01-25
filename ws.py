@@ -116,8 +116,8 @@ while True:
         tr = traceback.format_exc()
         exception_only = ''.join(traceback.format_exception_only(type(e), e))\
                            .strip()
-        logged_msg = str(now) + " UTC" + os.linesep + exception_only + \
-                                os.linesep + tr + os.linesep + os.linesep
+        n = os.linesep
+        logged_msg = str(now) + " UTC" + n + exception_only + n + tr + n + n
         print(logged_msg)
         with open("errorLogs.txt", "a") as f:
             f.write(logged_msg)
@@ -125,15 +125,12 @@ while True:
             sys.exit(4)
         ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
         ws.send("155-questions-active")
-        GlobalVars.charcoal_hq.send_message("Recovered from `" +
-                                            exception_only +
-                                            "`")
+        GlobalVars.charcoal_hq.send_message("Recovered from `" + exception_only + "`")
 
 now = datetime.utcnow()
 delta = UtcDate.startup_utc_date - now
 seconds = delta.total_seconds()
 if seconds < 60:
     sys.exit(4)
-s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] " \
-    "SmokeDetector aborted"
+s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector aborted"
 GlobalVars.charcoal_hq.send_message(s)
