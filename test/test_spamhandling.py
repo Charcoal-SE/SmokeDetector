@@ -6,6 +6,7 @@ test_data_inputs = []
 with open("test/data_test_spamhandling.txt", "r") as f:
     test_data_inputs = f.readlines()
 
+
 @pytest.mark.parametrize("title, body, username, site, match", [
      ('18669786819 gmail customer service number 1866978-6819 gmail support number', '', '', '', True),
      ('Is there any http://www.hindawi.com/ template for Cloud-Oriented Data Center Networking?', '', '', '', True),
@@ -26,7 +27,6 @@ with open("test/data_test_spamhandling.txt", "r") as f:
      ('Cannot access http://stackoverflow.com/ with proxy enabled', '', '', 'superuser.com', False),
      ('kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '<p>bbbbbbbbbbbbbbbbbbbbbb</p>', '', 'stackoverflow.com', True)
 ])
-
 def test_check_if_spam(title, body, username, site, match):
     # We can't check blacklists/whitelists in tests, so these are set to their default values
     user_url = ""
@@ -37,13 +37,14 @@ def test_check_if_spam(title, body, username, site, match):
     print title
     assert match == is_spam
 
+
 @pytest.mark.parametrize("data, match", [
      (test_data_inputs[0], False)
 ])
-
 def test_check_if_spam_json(data, match):
     is_spam, reason = check_if_spam_json(data)
     assert match == is_spam
+
 
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.txt"),
                     reason="shouldn't overwrite file")
@@ -55,6 +56,7 @@ def test_blacklisted_user():
     assert is_spam == True
     # cleanup
     os.remove("blacklistedUsers.txt")
+
 
 @pytest.mark.skipif(os.path.isfile("whitelistedUsers.txt"),
                 reason="shouldn't overwrite file")

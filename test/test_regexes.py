@@ -21,7 +21,6 @@ import pytest
      ('Cannot access http://stackoverflow.com/ with proxy enabled', '', '', 'superuser.com', False),
      ('kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '<p>bbbbbbbbbbbbbbbbbbbbbb</p>', '', 'stackoverflow.com', True)
 ])
-
 def test_regexes(title, body, username, site, match):
     # If we want to test answers separatly, this should be changed
     is_answer = False

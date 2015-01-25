@@ -5,8 +5,10 @@
 from srccheckbase import *
 import pytest
 
+
 def fail_with_message(message):
     pytest.fail(message)
+
 
 def test_check_function_names():
     found, smokedetector_root = get_smokedetector_root()
