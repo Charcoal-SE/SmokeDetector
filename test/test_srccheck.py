@@ -5,6 +5,7 @@
 from srccheckbase import get_smokedetector_root, list_python_files
 import pytest
 
+
 def fail_with_message(message):
     pytest.fail(message)
 
