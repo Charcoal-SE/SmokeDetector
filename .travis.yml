@@ -5,7 +5,6 @@ python:
 install:
   - pip install beautifulsoup4 requests websocket-client coverage pytest phonenumbers
 script:
-  - python srccheck/checkall.py
   - python -W default::Warning -m pytest test
 branches:
   only:

@@ -10,7 +10,6 @@ dependencies:
     - pip install beautifulsoup4 requests websocket-client coverage pytest phonenumbers
 test:
   override:
-    - python srccheck/checkall.py
     - python -W default::Warning -m pytest test
 notify:
   webhooks:
