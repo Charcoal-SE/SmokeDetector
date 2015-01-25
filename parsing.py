@@ -74,5 +74,8 @@ def fetch_title_from_msg_content(content):
         return None
 
 
-def fetch_unescaped_title_from_encoded(title_encoded):
-    return GlobalVars.parser.unescape(re.sub(r"([_*\\`\[\]])", r"\\\1", title_encoded)).strip()
+def unescape_title(title_escaped):
+    return GlobalVars.parser.unescape(title_escaped).strip()
+
+def escape_special_chars_in_title(title_unescaped):
+    return re.sub(r"([_*\\`\[\]])", r"\\\1", title_unescaped)

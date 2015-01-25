@@ -3,7 +3,7 @@ import sys
 import time
 from findspam import FindSpam
 from datahandling import *
-from parsing import get_user_from_url, fetch_unescaped_title_from_encoded
+from parsing import get_user_from_url, unescape_title, escape_special_chars_in_title
 from bayesianfuncs import *
 
 
@@ -31,7 +31,7 @@ def check_if_spam_json(data):
         return False, None # owner's account doesn't exist anymore, no need to post it in chat:
                            # http://chat.stackexchange.com/transcript/message/18380776#18380776
     title = d["titleEncodedFancy"]
-    title = fetch_unescaped_title_from_encoded(title)
+    title = unescape_title(title)
     poster = d["ownerDisplayName"]
     url = d["url"]
     post_id = str(d["id"])
@@ -60,7 +60,7 @@ def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_
     except Exception as e:
         print e
     try:
-        title.replace(']', '\]')
+        title = escape_special_chars_in_title(title)
         s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % \
           (reason, title.strip(), post_url, poster.strip(), poster_url, site)
         print GlobalVars.parser.unescape(s).encode('ascii',errors='replace')
@@ -79,13 +79,12 @@ def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_
 def handle_spam_json(data, reason):
     try:
         d=json.loads(json.loads(data)["data"])
-        title = d["titleEncodedFancy"]
+        title = unescape_title(d["titleEncodedFancy"])
         poster = d["ownerDisplayName"]
         site = d["siteBaseHostAddress"]
         url = d["url"]
         poster_url = d["ownerUrl"]
         post_id = str(d["id"])
-        title_to_post = fetch_unescaped_title_from_encoded(title)
-        handle_spam(title_to_post, poster, site, url, poster_url, post_id, reason, False)
+        handle_spam(title, poster, site, url, poster_url, post_id, reason, False)
     except:
         print "NOP"
