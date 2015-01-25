@@ -16,7 +16,7 @@ from datetime import datetime
 # test it thoroughly.
 
 sys.excepthook = uncaught_exception
-installThreadExcepthook()
+install_thread_excepthook()
 
 if "ChatExchangeU" in os.environ:
     username=os.environ["ChatExchangeU"]

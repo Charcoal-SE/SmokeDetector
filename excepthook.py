@@ -22,7 +22,7 @@ def uncaught_exception(exctype, value, tb):
         os._exit(1)
 
 
-def installThreadExcepthook():
+def install_thread_excepthook():
     """
     Workaround for sys.excepthook thread bug
     From
