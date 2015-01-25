@@ -11,6 +11,8 @@ with open("test/data_test_parsing.txt", "r") as f:
 
 
 @pytest.mark.parametrize("input_data, parse_method, expected", [
+    ('Testing * escaping of ] special [ characters', escape_special_chars_in_title, 'Testing \* escaping of \] special \[ characters'),
+    ('HTML &#39; unescaping&lt;', unescape_title, 'HTML \' unescaping<'),
     ('http://physics.stackexchange.com/users/7433/manishearth', get_user_from_url, ('7433', 'physics.stackexchange.com')),
     ('http://softwarerecs.stackexchange.com/users/46/undo', get_user_from_url, ('46', 'softwarerecs.stackexchange.com')),
     ('http://earthscience.stackexchange.com/users/20/hichris123', get_user_from_url, ('20', 'earthscience.stackexchange.com')),
