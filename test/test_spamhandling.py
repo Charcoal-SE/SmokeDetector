@@ -66,7 +66,7 @@ def test_whitelisted_user():
     user_url = 'http://stackoverflow.com/users/2/geoff-dalgas'
     user = get_user_from_url(user_url)
     add_whitelisted_user(user)
-    is_spam, reason = check_if_spam("", "", "", user_url, "stackoverflow.com", "1", False)
+    is_spam, reason = check_if_spam("", "", "bagprada", user_url, "stackoverflow.com", "1", False)
     assert is_spam is False
     # cleanup
     os.remove("whitelistedUsers.txt")
