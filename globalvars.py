@@ -26,7 +26,7 @@ class GlobalVars:
                         meta_tavern_room_id: ["259867", "244519", "244382", "194047", "158100", "178438", "237685",
                                               "215468", "229438", "180276", "161974", "244382", "186281", "266094",
                                               "245167", "230261", "213575", "241919", "203389", "202832", "160017",
-                                              "201151"]}
+                                              "201151", "188558"]}
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345"}
     commit = os.popen("git log --pretty=format:'%h' -n 1").read()
     commit_with_author = os.popen("git log --pretty=format:'%h (%cn: *%s*)' -n 1").read()
