@@ -20,7 +20,10 @@ import pytest
     ('Is it unfair to regrade prior work after detecting cheating?', '', 'Village', '', False),
     ('Inner workings of muscles', '', '', 'fitness.stackexchange.com', False),
     ('Cannot access http://stackoverflow.com/ with proxy enabled', '', '', 'superuser.com', False),
-    ('kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '<p>bbbbbbbbbbbbbbbbbbbbbb</p>', '', 'stackoverflow.com', True)
+    ('kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '<p>bbbbbbbbbbbbbbbbbbbbbb</p>', '', 'stackoverflow.com', True),
+    ('This is a title.', 'This is a body.<pre>bbbbbbbbbbbbbb</pre>', '', 'stackoverflow.com', False),
+    ('This is another title.', 'This is another body. <code>bbbbbbbbbbbb</code>', '', 'stackoverflow.com', False),
+    ('Non-spammy title', 'baba', '', 'stackoverflow.com', True)
 ])
 def test_regexes(title, body, username, site, match):
     # If we want to test answers separatly, this should be changed
