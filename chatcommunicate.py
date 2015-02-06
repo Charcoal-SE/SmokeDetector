@@ -134,7 +134,7 @@ def watcher(ev, wrap2):
             add_blacklisted_user((uid, site))
             ev.message.reply("User blacklisted.")
         else:
-            ev.message.reply("Invalid format. Valid format: `!!/addblu user_id site_name` where `site_name` is the full site name, such as `stackoverflow.com`, `communitybuilding.stackexchange.com`, `mathoverflow.net`, ...")
+            ev.message.reply("Invalid format. Valid format: `!!/addblu userid sitename` where `sitename` is the full site name, such as `stackoverflow.com`, `communitybuilding.stackexchange.com`, `mathoverflow.net`, ...")
     if content_lower.startswith("!!/wut"):
         ev.message.reply("Whaddya mean, 'wut'? Humans...")
     if content_lower.startswith("!!/lick"):
