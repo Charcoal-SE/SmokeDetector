@@ -126,15 +126,26 @@ def watcher(ev, wrap2):
                 pass  # couldn't delete message
     if content_lower.startswith("!!/addblu") \
             and is_privileged(ev_room, ev_user_id):
-        uid = message_parts[1]
-        site = message_parts[2]
-        digit_re = re.compile("^[0-9]+$")
-        site_re = re.compile(r"^(\w+\.stackexchange\.com|\w+\.(com|net))$")
-        if digit_re.match(uid) and site_re.match(site):
+        uid = -1
+        site = ""
+        if len(message_parts) == 2:
+            uid_site = get_user_from_url(message_parts[1])
+            if uid_site is not None:
+                uid = uid_site[0]
+                site = uid_site[1]
+        elif len(message_parts) == 3:
+            uid = message_parts[1]
+            site = message_parts[2]
+            digit_re = re.compile("^[0-9]+$")
+            site_re = re.compile(r"^(\w+\.stackexchange\.com|\w+\.(com|net))$")
+            if not (digit_re.match(uid) and site_re.match(site)):
+                uid = -1
+                site = ""
+        if uid != -1 and site != "":
             add_blacklisted_user((uid, site))
             ev.message.reply("User blacklisted.")
         else:
-            ev.message.reply("Invalid format. Valid format: `!!/addblu userid sitename` where `sitename` is the full site name, such as `stackoverflow.com`, `communitybuilding.stackexchange.com`, `mathoverflow.net`, ...")
+            ev.message.reply("Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename` where `sitename` is the full site name, such as `stackoverflow.com`, `communitybuilding.stackexchange.com`, `mathoverflow.net`, ...")
     if content_lower.startswith("!!/wut"):
         ev.message.reply("Whaddya mean, 'wut'? Humans...")
     if content_lower.startswith("!!/lick"):
