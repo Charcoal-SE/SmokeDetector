@@ -2,7 +2,6 @@ import os
 from datetime import datetime
 from ChatExchange.chatexchange.client import Client
 import HTMLParser
-import re
 
 
 class GlobalVars:
