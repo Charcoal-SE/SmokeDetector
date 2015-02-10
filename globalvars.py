@@ -2,6 +2,7 @@ import os
 from datetime import datetime
 from ChatExchange.chatexchange.client import Client
 import HTMLParser
+import md5
 
 
 class GlobalVars:
@@ -29,8 +30,16 @@ class GlobalVars:
                                               "245167", "230261", "213575", "241919", "203389", "202832", "160017",
                                               "201151", "188558", "229166"]}
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345"}
+
+    censored_committers = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
+
     commit = os.popen('git log --pretty=format:"%h" -n 1').read()
-    commit_with_author = os.popen('git log --pretty=format:"%h (%cn: *%s*)" -n 1').read()
+    commit_author = os.popen('git log --pretty=format:"%cn" -n 1').read()
+
+    if md5.new(commit_author).hexdigest() in censored_committers:
+        commit_author = censored_committers[md5.new(commit_author).hexdigest()]
+
+    commit_with_author = os.popen('git log --pretty=format:"%h (' + commit_author + ': *%s*)" -n 1').read()
     on_master = os.popen("git rev-parse --abbrev-ref HEAD").read().strip() == "master"
     charcoal_hq = None
     tavern_on_the_meta = None
