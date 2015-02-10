@@ -31,13 +31,13 @@ class GlobalVars:
                                               "201151", "188558", "229166"]}
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345"}
 
-    censored_committers = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
+    censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
 
     commit = os.popen('git log --pretty=format:"%h" -n 1').read()
     commit_author = os.popen('git log --pretty=format:"%cn" -n 1').read()
 
-    if md5.new(commit_author).hexdigest() in censored_committers:
-        commit_author = censored_committers[md5.new(commit_author).hexdigest()]
+    if md5.new(commit_author).hexdigest() in censored_committer_names:
+        commit_author = censored_committer_names[md5.new(commit_author).hexdigest()]
 
     commit_with_author = os.popen('git log --pretty=format:"%h (' + commit_author + ': *%s*)" -n 1').read()
     on_master = os.popen("git rev-parse --abbrev-ref HEAD").read().strip() == "master"
