@@ -3,7 +3,7 @@ machine:
     version: 2.7.7
 checkout:
   post:
-    - git submodule --force deinit ChatExchange
+    - git submodule deinit --force ChatExchange
     - git submodule init
     - git submodule sync
     - git submodule update
