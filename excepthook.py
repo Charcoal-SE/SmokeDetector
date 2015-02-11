@@ -6,6 +6,7 @@ import sys
 from utcdate import UtcDate
 from websocket import WebSocketConnectionClosedException
 
+
 def uncaught_exception(exctype, value, tb):
     now = datetime.utcnow()
     delta = now - UtcDate.startup_utc_date
