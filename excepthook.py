@@ -4,7 +4,7 @@ import traceback
 import threading
 import sys
 from utcdate import UtcDate
-
+from websocket import WebSocketConnectionClosedException
 
 def uncaught_exception(exctype, value, tb):
     now = datetime.utcnow()
@@ -16,7 +16,8 @@ def uncaught_exception(exctype, value, tb):
     print(logged_msg)
     with open("errorLogs.txt", "a") as f:
         f.write(logged_msg)
-    if seconds < 180:
+    if seconds < 180 and exctype != WebSocketConnectionClosedException\
+            and exctype != KeyboardInterrupt and exctype != SystemExit:
         os._exit(4)
     else:
         os._exit(1)

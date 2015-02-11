@@ -110,6 +110,7 @@ while True:
                            args=(a,))
                 t.start()
     except Exception, e:
+        exc_type, exc_obj, exc_tb = sys.exc_info()
         now = datetime.utcnow()
         delta = now - UtcDate.startup_utc_date
         seconds = delta.total_seconds()
@@ -121,7 +122,8 @@ while True:
         print(logged_msg)
         with open("errorLogs.txt", "a") as f:
             f.write(logged_msg)
-        if seconds < 180:
+        if seconds < 180 and exc_type != websocket.WebSocketConnectionClosedException\
+                and exc_type != KeyboardInterrupt and exc_type != SystemExit:
             os._exit(4)
         ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
         ws.send("155-questions-active")

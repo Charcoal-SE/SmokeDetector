@@ -51,6 +51,7 @@ do
     count=0
     crashcount=0
    else
+    sleep 5
     count=$((count+1))
    fi
 
