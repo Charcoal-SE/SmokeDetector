@@ -5,7 +5,8 @@ from parsing import fetch_post_id_and_site_from_msg_content,\
     get_user_from_url, fetch_owner_url_from_msg_content,\
     fetch_title_from_msg_content
 from datahandling import add_false_positive, is_privileged,\
-    add_whitelisted_user, add_blacklisted_user, add_ignored_post
+    add_whitelisted_user, add_blacklisted_user, add_ignored_post,\
+    fetch_lines_from_error_log
 from bayesianfuncs import bayesian_learn_title
 from globalvars import GlobalVars
 import os
@@ -216,6 +217,21 @@ def watcher(ev, wrap2):
         if is_privileged(ev_room, ev_user_id):
             GlobalVars.blockedTime = time.time()
             ev.message.reply("unblocked")
+    if content_lower.startswith("!!/errorlogs"):
+        if is_privileged(ev_room, ev_user_id):
+            count = -1
+            if len(message_parts) != 2:
+                ev.message.reply("The !!/errorlogs command requires 1 argument.")
+                return
+            try:
+                count = int(message_parts[1])
+            except ValueError:
+                pass
+            if count == -1:
+                ev.message.reply("Invalid argument.")
+                return
+            logs_part = fetch_lines_from_error_log(count)
+            post_message_in_room(ev_room, logs_part)
     if content_lower.startswith("!!/pull"):
         if is_privileged(ev_room, ev_user_id):
             r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')

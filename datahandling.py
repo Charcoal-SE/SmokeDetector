@@ -125,3 +125,23 @@ def has_already_been_posted(host, post_id, title):
         if post[0] == host and post[1] == str(post_id) and post[2] == title:
             return True
     return False
+
+
+# method to get data from the error log:
+
+
+def fetch_lines_from_error_log(line_count):
+    if not os.path.isfile("errorLogs.txt"):
+        return "The error log file does not exist."
+    if line_count <= 0:
+        return "Please request a line count greater than zero."
+    lines = []
+    with open("errorLogs.txt", "r") as f:
+        lines = f.readlines()[-line_count:]
+    formatted_lines = []
+    for line in lines:
+        formatted_lines.append("    " + line.rstrip())
+    fetched = os.linesep.join(formatted_lines)
+    if fetched == "":
+        return "The fetched part is empty. Please try another line count."
+    return fetched
