@@ -20,7 +20,7 @@ class FindSpam:
         {'regex': u"^(?=.*[0-9])[^a-zA-Z]*$", 'all': True, 'sites': [], 'reason': "Numbers-only title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False},
         {'regex': u"https?://[a-zA-Z0-9_.-]+\\.[a-zA-Z]{2,4}(/[a-zA-Z0-9_/?=.-])?", 'all': True,
          'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com"], 'reason': "URL in title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False},
-        {'regex': u"(?i)(online ?kelas|wowtoes|ipubsoft|orabank|powerigfaustralia|cfpchampionship2015playofflive|optimalstackfacts|maletestosteronebooster|x4facts|tripleeffectseyeserum|healthcaresup|garciniacambogiaprofacts|filerepairforum|lxwpro-t|casque-beatsbydre|tenderpublish|elliskinantiaging|funmac|lovebiscuits|Eglobalfitness|musclezx90site|fifapal)", 'all': True,
+        {'regex': u"(?i)(online ?kelas|careyourhealths|wowtoes|ipubsoft|orabank|powerigfaustralia|cfpchampionship2015playofflive|optimalstackfacts|maletestosteronebooster|x4facts|tripleeffectseyeserum|healthcaresup|garciniacambogiaprofacts|filerepairforum|lxwpro-t|casque-beatsbydre|tenderpublish|elliskinantiaging|funmac|lovebiscuits|Eglobalfitness|musclezx90site|fifapal)", 'all': True,
          'sites': [], 'reason': "Blacklisted website", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False},
         {'regex': u"([a-zA-Z])\\1{10,}", 'all': True, 'sites': [], 'reason': "Repeating characters in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True},
         {'regex': u"(?i)(?P<word>\w+).*((\\b| )+(?P=word)){5,}", 'all': True, 'sites': [], 'reason': "Repeating words in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True},
