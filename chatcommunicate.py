@@ -14,11 +14,11 @@ import re
 from datetime import datetime
 
 
-def post_message_in_room(room_id_str, msg):
+def post_message_in_room(room_id_str, msg, length_check=True):
     if room_id_str == GlobalVars.charcoal_room_id:
-        GlobalVars.charcoal_hq.send_message(msg)
+        GlobalVars.charcoal_hq.send_message(msg, length_check)
     elif room_id_str == GlobalVars.meta_tavern_room_id:
-        GlobalVars.tavern_on_the_meta.send_message(msg)
+        GlobalVars.tavern_on_the_meta.send_message(msg, length_check)
 
 
 def watcher(ev, wrap2):
@@ -231,7 +231,7 @@ def watcher(ev, wrap2):
                 ev.message.reply("Invalid argument.")
                 return
             logs_part = fetch_lines_from_error_log(count)
-            post_message_in_room(ev_room, logs_part)
+            post_message_in_room(ev_room, logs_part, False)
     if content_lower.startswith("!!/pull"):
         if is_privileged(ev_room, ev_user_id):
             r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
