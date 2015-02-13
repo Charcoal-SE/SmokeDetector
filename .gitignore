@@ -42,6 +42,7 @@ whitelistedUsers.txt
 blacklistedUsers.txt
 ignoredPosts.txt
 autoIgnoredPosts.txt
+users.txt
 
 # Settings files
 .settings/
