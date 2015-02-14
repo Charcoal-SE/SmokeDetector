@@ -80,3 +80,23 @@ def unescape_title(title_escaped):
 
 def escape_special_chars_in_title(title_unescaped):
     return re.sub(r"([_*\\`\[\]])", r"\\\1", title_unescaped)
+
+
+def get_user_from_list_command(cmd):  # for example, !!/addblu is a list command
+    cmd_parts = cmd.split(" ")
+    uid = -1
+    site = ""
+    if len(cmd_parts) == 2:
+        uid_site = get_user_from_url(cmd_parts[1])
+        if uid_site is not None:
+            uid = uid_site[0]
+            site = uid_site[1]
+    elif len(cmd_parts) == 3:
+        uid = cmd_parts[1]
+        site = cmd_parts[2]
+        digit_re = re.compile("^[0-9]+$")
+        site_re = re.compile(r"^(\w+\.stackexchange\.com|\w+\.(com|net))$")
+        if not (digit_re.match(uid) and site_re.match(site)):
+            uid = -1
+            site = ""
+    return uid, site

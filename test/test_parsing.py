@@ -1,7 +1,4 @@
-from parsing import fetch_post_id_and_site_from_msg_content, \
-    escape_special_chars_in_title, unescape_title, get_user_from_url, \
-    fetch_owner_url_from_msg_content, fetch_title_from_msg_content, \
-    fetch_post_url_from_msg_content
+from parsing import *
 import pytest
 
 test_data_inputs = []
@@ -22,6 +19,14 @@ with open("test/data_test_parsing.txt", "r") as f:
     ('http://codegolf.stackexchange.com/users/9275/programfox', get_user_from_url, ('9275', 'codegolf.stackexchange.com')),
     ('http://stackoverflow.com/users/1/jeff-atwood', get_user_from_url, ('1', 'stackoverflow.com')),
     ('http://mathoverflow.net/users/66/ben-webster', get_user_from_url, ('66', 'mathoverflow.net')),
+    ('!!/addblu http://stackoverflow.com/users/0/test', get_user_from_list_command, ('0', 'stackoverflow.com')),
+    ('!!/rmblu http://stackoverflow.com/users/0/test', get_user_from_list_command, ('0', 'stackoverflow.com')),
+    ('!!/addwlu http://stackoverflow.com/users/0/test', get_user_from_list_command, ('0', 'stackoverflow.com')),
+    ('!!/rmwlu http://stackoverflow.com/users/0/test', get_user_from_list_command, ('0', 'stackoverflow.com')),
+    ('!!/addwlu http://codegolf.stackexchange.com/users/9275/programfox', get_user_from_list_command, ('9275', 'codegolf.stackexchange.com')),
+    ('!!/addwlu http://mathoverflow.net/users/66/ben-webster', get_user_from_list_command, ('66', 'mathoverflow.net')),
+    ('!!/rmblu 1234 stackoverflow.com', get_user_from_list_command, ('1234', 'stackoverflow.com')),
+    ('!!/rmwlu 4321 communitybuilding.stackexchange.com', get_user_from_list_command, ('4321', 'communitybuilding.stackexchange.com')),
     (test_data_inputs[0], fetch_post_id_and_site_from_msg_content, ('246651', 'meta.stackexchange.com', 'question')),
     (test_data_inputs[0], fetch_owner_url_from_msg_content, 'http://meta.stackexchange.com/users/279263/lisa-usher'),
     (test_data_inputs[0], fetch_title_from_msg_content, 'Best Weight Loss Tips For Fast Results'),
