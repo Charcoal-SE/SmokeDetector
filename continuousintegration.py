@@ -52,7 +52,6 @@ def watch_ci():
                     if "autopull" in commit_message:
                         GlobalVars.charcoal_hq.send_message("[CI build passed](%s). Commit message contains 'autopull', pulling..." % target_url)
                         time.sleep(2)
-                        conn.close()
                         os._exit(3)
                     else:
                         GlobalVars.charcoal_hq.send_message("[CI build passed](%s). Ready to pull!" % target_url)
