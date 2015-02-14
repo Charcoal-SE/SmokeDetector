@@ -6,7 +6,7 @@ from parsing import fetch_post_id_and_site_from_msg_content,\
     fetch_title_from_msg_content
 from datahandling import add_false_positive, is_privileged,\
     add_whitelisted_user, add_blacklisted_user, add_ignored_post,\
-    fetch_lines_from_error_log
+    fetch_lines_from_error_log, remove_blacklisted_user
 from bayesianfuncs import bayesian_learn_title
 from globalvars import GlobalVars
 import os
@@ -147,6 +147,30 @@ def watcher(ev, wrap2):
             ev.message.reply("User blacklisted.")
         else:
             ev.message.reply("Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename` where `sitename` is the full site name, such as `stackoverflow.com`, `communitybuilding.stackexchange.com`, `mathoverflow.net`, ...")
+    if content_lower.startswith("!!/rmblu") \
+            and is_privileged(ev_room, ev_user_id):
+        uid = -1
+        site = ""
+        if len(message_parts) == 2:
+            uid_site = get_user_from_url(message_parts[1])
+            if uid_site is not None:
+                uid = uid_site[0]
+                site = uid_site[1]
+        elif len(message_parts) == 3:
+            uid = message_parts[1]
+            site = message_parts[2]
+            digit_re = re.compile("^[0-9]+$")
+            site_re = re.compile(r"^(\w+\.stackexchange\.com|\w+\.(com|net))$")
+            if not (digit_re.match(uid) and site_re.match(site)):
+                uid = -1
+                site = ""
+        if uid != -1 and site != "":
+            if remove_blacklisted_user((uid, site)):
+                ev.message.reply("User removed from blacklist.")
+            else:
+                ev.message.reply("User is not blacklisted.")
+        else:
+            ev.message.reply("Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename` where `sitename` is the full site name, such as `stackoverflow.com`, `communitybuilding.stackexchange.com`, `mathoverflow.net`, ...")
     if content_lower.startswith("!!/wut"):
         ev.message.reply("Whaddya mean, 'wut'? Humans...")
     if content_lower.startswith("!!/lick"):

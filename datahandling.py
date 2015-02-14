@@ -68,7 +68,7 @@ def is_auto_ignored_post(postid_site_tuple):
 def is_privileged(room_id_str, user_id_str):
     return room_id_str in GlobalVars.privileged_users and user_id_str in GlobalVars.privileged_users[room_id_str]
 
-# methods to add whitelisted/blacklisted users, ignored posts, ...
+# methods to add/remove whitelisted/blacklisted users, ignored posts, ...
 
 
 def add_whitelisted_user(user):
@@ -110,6 +110,14 @@ def add_ignored_post(postid_site_tuple):
     with open("ignoredPosts.txt", "w") as f:
         pickle.dump(GlobalVars.ignored_posts, f)
 
+
+def remove_blacklisted_user(user):
+    if user not in GlobalVars.blacklisted_users:
+        return False
+    GlobalVars.blacklisted_users.remove(user)
+    with open("blacklistedUsers.txt", "w") as f:
+        pickle.dump(GlobalVars.blacklisted_users, f)
+    return True
 
 # methods that help avoiding reposting alerts:
 
