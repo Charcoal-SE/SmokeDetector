@@ -4,8 +4,34 @@ import phonenumbers
 
 
 class FindSpam:
+    bad_keywords = ["baba(ji)?", "fifa.*coins?", "fifabay", "Long Path Tool",
+                    "brianfo", "nike", "tosterone", "bajotz",
+                    "vashi?k[ae]r[ae]n", "sumer", "kolcak"
+                    "porn", "molvi", "judi bola", "ituBola.com", "lost lover",
+                    "11s", "acai", "skin care", "rejuvenated skin",
+                    "LifeForce", "swtor2credits", "me2.do", "black magic",
+                    "bam2u", "Neuro(3X|flexyn)", "Nutra", "TesteroneXL",
+                    "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Babyliss ?Pro",
+                    "Forskolin", "Blackline Elite", "TestCore Pro",
+                    "Xtreme Antler", "Maxx Test 3000", "orvigomax",
+                    "Cheap Wigs?", "jivam", "(Improve )?Brain Power",
+                    "aging skin", "acne( prone)? skin", "(skin )?eye serum",
+                    "skin (serum|eye)", "bagprada", "6611165613",
+                    "(fake|original) (passports?|driver'?s? licen[cs]e|ID cards?)",
+                    "(support|service|helpline)( phone)? number|1[ -]?[ -]?[ -]?866[ -]?978[ -]?(6819|6762)",
+                    "(hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number"]
+    blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
+                            "ipubsoft", "orabank", "powerigfaustralia",
+                            "cfpchampionship2015playofflive", "optimalstackfacts",
+                            "maletestosteronebooster", "x4facts",
+                            "tripleeffectseyeserum", "healthcaresup",
+                            "garciniacambogiaprofacts", "filerepairforum",
+                            "lxwpro-t", "casque-beatsbydre", "tenderpublish",
+                            "elliskinantiaging", "funmac", "lovebiscuits",
+                            "Eglobalfitness", "musclezx90site", "fifapal",
+                            "hits4slim"]
     rules = [
-        {'regex': u"(?i)\\b(baba(ji)?|fifa.*coins?|fifabay|Long Path Tool|brianfo|(hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number|nike|tosterone|bajotz|vashi?k[ae]r[ae]n|sumer|kolcak|porn|molvi|judi bola|ituBola.com|lost lover|11s|acai|skin care|rejuvenated skin|LifeForce|swtor2credits|me2.do|black magic|bam2u|Neuro(3X|flexyn)|Nutra|TesteroneXL|Bowtrol|Slim ?Genix|Cleanse EFX|Babyliss ?Pro|Forskolin|Blackline Elite|TestCore Pro|Xtreme Antler|Maxx Test 3000|orvigomax|Cheap Wigs?|jivam|(Improve )?Brain Power|aging skin|acne( prone)? skin|(skin )?eye serum|skin (serum|eye)|(fake|original) (passports?|driver'?s? licen[cs]e|ID cards?)|bagprada|6611165613)\\b|ಌ|(support|service|helpline)( phone)? number|1[ -]?[ -]?[ -]?866[ -]?978[ -]?(6819|6762)|(>>>>|===>|==>>>)(?s).*http", 'all': True,
+        {'regex': u"(?i)\\b(%s)\\b|ಌ(>>>>|===>|==>>>)(?s).*http" % "|".join(bad_keywords), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False},
         {'regex': u"(?i)\\b(weight (body ?builder|loo?s[es]|reduction)|muscles? build(ing)?|muscles?( (grow(th)?|diets?))?|anti aging|SkinCentric|loo?s[es] weight|wrinkles?)\\b", 'all': True,
          'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False},
@@ -20,7 +46,7 @@ class FindSpam:
         {'regex': u"^(?=.*[0-9])[^a-zA-Z]*$", 'all': True, 'sites': [], 'reason': "Numbers-only title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False},
         {'regex': u"https?://[a-zA-Z0-9_.-]+\\.[a-zA-Z]{2,4}(/[a-zA-Z0-9_/?=.-])?", 'all': True,
          'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com"], 'reason': "URL in title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False},
-        {'regex': u"(?i)(online ?kelas|careyourhealths|wowtoes|ipubsoft|orabank|powerigfaustralia|cfpchampionship2015playofflive|optimalstackfacts|maletestosteronebooster|x4facts|tripleeffectseyeserum|healthcaresup|garciniacambogiaprofacts|filerepairforum|lxwpro-t|casque-beatsbydre|tenderpublish|elliskinantiaging|funmac|lovebiscuits|Eglobalfitness|musclezx90site|fifapal|hits4slim)", 'all': True,
+        {'regex': u"(?i)(%s)" % "|".join(blacklisted_websites), 'all': True,
          'sites': [], 'reason': "Blacklisted website", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False},
         {'regex': u"([a-zA-Z])\\1{10,}", 'all': True, 'sites': [], 'reason': "Repeating characters in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True},
         {'regex': u"(?i)(?P<word>\w+).*((\\b| )+(?P=word)){5,}", 'all': True, 'sites': [], 'reason': "Repeating words in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True},
