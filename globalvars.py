@@ -49,3 +49,4 @@ class GlobalVars:
     bayesian_testroom = None
     apiquota = -1
     bodyfetcher = None
+    se_sites = []

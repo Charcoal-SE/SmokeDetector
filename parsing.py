@@ -1,5 +1,6 @@
 import re
 from globalvars import GlobalVars
+from datahandling import check_site_and_get_full_name
 
 
 def get_user_from_url(url):
@@ -96,7 +97,13 @@ def get_user_from_list_command(cmd):  # for example, !!/addblu is a list command
         site = cmd_parts[2]
         digit_re = re.compile("^[0-9]+$")
         site_re = re.compile(r"^(\w+\.stackexchange\.com|\w+\.(com|net))$")
-        if not (digit_re.match(uid) and site_re.match(site)):
+        if not digit_re.match(uid):
             uid = -1
             site = ""
+        elif not site_re.match(site):
+            exists, name = check_site_and_get_full_name(site)
+            if exists:
+                return uid, name
+            else:
+                return -2, name
     return uid, site

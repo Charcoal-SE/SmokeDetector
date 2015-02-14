@@ -123,40 +123,48 @@ def watcher(ev, wrap2):
                 pass  # couldn't delete message
     if content_lower.startswith("!!/addblu") \
             and is_privileged(ev_room, ev_user_id):
-        uid, site = get_user_from_list_command(content_lower)
-        if uid != -1 and site != "":
-            add_blacklisted_user((uid, site))
-            ev.message.reply("User blacklisted.")
+        uid, val = get_user_from_list_command(content_lower)
+        if uid > -1 and val != "":
+            add_blacklisted_user((uid, val))
+            ev.message.reply("User blacklisted (`%s` on `%s`)." % (uid, val))
+        elif uid == -2:
+            ev.message.reply("Error: %s" % val)
         else:
-            ev.message.reply("Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename` where `sitename` is the full site name, such as `stackoverflow.com`, `communitybuilding.stackexchange.com`, `mathoverflow.net`, ...")
+            ev.message.reply("Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`.")
     if content_lower.startswith("!!/rmblu") \
             and is_privileged(ev_room, ev_user_id):
-        uid, site = get_user_from_list_command(content_lower)
-        if uid != -1 and site != "":
-            if remove_blacklisted_user((uid, site)):
-                ev.message.reply("User removed from blacklist.")
+        uid, val = get_user_from_list_command(content_lower)
+        if uid > -1 and val != "":
+            if remove_blacklisted_user((uid, val)):
+                ev.message.reply("User removed from blacklist (`%s` on `%s`)." % (uid, val))
             else:
                 ev.message.reply("User is not blacklisted.")
+        elif uid == -2:
+            ev.message.reply("Error: %s" % val)
         else:
-            ev.message.reply("Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename` where `sitename` is the full site name, such as `stackoverflow.com`, `communitybuilding.stackexchange.com`, `mathoverflow.net`, ...")
+            ev.message.reply("Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`.")
     if content_lower.startswith("!!/addwlu") \
             and is_privileged(ev_room, ev_user_id):
-        uid, site = get_user_from_list_command(content_lower)
-        if uid != -1 and site != "":
-            add_whitelisted_user((uid, site))
-            ev.message.reply("User whitelisted.")
+        uid, val = get_user_from_list_command(content_lower)
+        if uid > -1 and val != "":
+            add_whitelisted_user((uid, val))
+            ev.message.reply("User whitelisted (`%s` on `%s`)." % (uid, val))
+        elif uid == -2:
+            ev.message.reply("Error: %s" % val)
         else:
-            ev.message.reply("Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename` where `sitename` is the full site name, such as `stackoverflow.com`, `communitybuilding.stackexchange.com`, `mathoverflow.net`, ...")
+            ev.message.reply("Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`.")
     if content_lower.startswith("!!/rmwlu") \
             and is_privileged(ev_room, ev_user_id):
-        uid, site = get_user_from_list_command(content_lower)
-        if uid != -1 and site != "":
-            if remove_whitelisted_user((uid, site)):
-                ev.message.reply("User removed from whitelist.")
+        uid, val = get_user_from_list_command(content_lower)
+        if uid != -1 and val != "":
+            if remove_whitelisted_user((uid, val)):
+                ev.message.reply("User removed from whitelist (`%s` on `%s`)." % (uid, val))
             else:
                 ev.message.reply("User is not whitelisted.")
+        elif uid == -2:
+            ev.message.reply("Error: %s" % val)
         else:
-            ev.message.reply("Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename` where `sitename` is the full site name, such as `stackoverflow.com`, `communitybuilding.stackexchange.com`, `mathoverflow.net`, ...")
+            ev.message.reply("Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`.")
     if content_lower.startswith("!!/wut"):
         ev.message.reply("Whaddya mean, 'wut'? Humans...")
     if content_lower.startswith("!!/lick"):

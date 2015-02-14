@@ -2,6 +2,8 @@ import os
 import pickle
 from datetime import datetime
 from globalvars import GlobalVars
+import requests
+import json
 
 
 # methods to load files and filter data in them:
@@ -162,3 +164,37 @@ def fetch_lines_from_error_log(line_count):
     if fetched == "":
         return "The fetched part is empty. Please try another line count."
     return fetched
+
+
+# method to check whether a SE site exists:
+
+
+def refresh_sites():
+    has_more = True
+    page = 1
+    while has_more:
+        resp = requests.get("https://api.stackexchange.com/2.2/sites?filter=!%29Qpa1bTB_jCkeaZsqiQ8pDwI&pagesize=500&page=" + str(page))
+        data = json.loads(resp.text)
+        if "error_message" in data:
+            return False, data["error_message"]
+        if "items" not in data:
+            return False, "`items` not in JSON data"
+        if "has_more" not in data:
+            return False, "`has_more` not in JSON data"
+        GlobalVars.se_sites.extend(data["items"])
+        has_more = data["has_more"]
+        page += 1
+    return True, "OK"
+
+
+def check_site_and_get_full_name(site):
+    if len(GlobalVars.se_sites) == 0:
+        refreshed, msg = refresh_sites()
+        if not refreshed:
+            return False, "Could not fetch sites: " + msg
+    for item in GlobalVars.se_sites:
+        full_name = item["site_url"].replace("http://", "")
+        short_name = item["api_site_parameter"]
+        if site == full_name or site == short_name:
+            return True, full_name
+    return False, "Could not find the given site."

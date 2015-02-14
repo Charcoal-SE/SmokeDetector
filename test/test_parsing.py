@@ -27,6 +27,7 @@ with open("test/data_test_parsing.txt", "r") as f:
     ('!!/addwlu http://mathoverflow.net/users/66/ben-webster', get_user_from_list_command, ('66', 'mathoverflow.net')),
     ('!!/rmblu 1234 stackoverflow.com', get_user_from_list_command, ('1234', 'stackoverflow.com')),
     ('!!/rmwlu 4321 communitybuilding.stackexchange.com', get_user_from_list_command, ('4321', 'communitybuilding.stackexchange.com')),
+    ('!!/addblu 1 stackoverflow', get_user_from_list_command, ('1', 'stackoverflow.com')),
     (test_data_inputs[0], fetch_post_id_and_site_from_msg_content, ('246651', 'meta.stackexchange.com', 'question')),
     (test_data_inputs[0], fetch_owner_url_from_msg_content, 'http://meta.stackexchange.com/users/279263/lisa-usher'),
     (test_data_inputs[0], fetch_title_from_msg_content, 'Best Weight Loss Tips For Fast Results'),
