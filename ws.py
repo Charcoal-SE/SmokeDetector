@@ -21,7 +21,6 @@ import time
 # won't be caught if they're not in a try-except block.
 # Hence, please avoid adding code before this comment, but if it's necessary,
 # test it thoroughly.
-# yahooooooooo to test the CI socket
 
 sys.excepthook = uncaught_exception
 install_thread_excepthook()
