@@ -39,16 +39,18 @@ def watch_ci():
         conn.close()
         r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
         latest_sha = r.json()["object"]["sha"]
+        print latest_sha
         r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/' + latest_sha + '/statuses')
         for status in r.json():
             state = status["state"]
             target_url = status["target_url"]
+            print state
             if state == "success":
-                if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > datetime.datetime.now() - datetime.timedelta(seconds=10):
+                if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > datetime.datetime.now() - datetime.timedelta(seconds=60):
 
                     r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/' + latest_sha)
                     commit_message = r.json()["commit"]["message"]
-
+                    print commit_message
                     if "autopull" in commit_message:
                         GlobalVars.charcoal_hq.send_message("[CI build passed](%s). Commit message contains 'autopull', pulling..." % target_url)
                         time.sleep(2)
