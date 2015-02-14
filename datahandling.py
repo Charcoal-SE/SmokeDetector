@@ -119,6 +119,15 @@ def remove_blacklisted_user(user):
         pickle.dump(GlobalVars.blacklisted_users, f)
     return True
 
+
+def remove_whitelisted_user(user):
+    if user not in GlobalVars.whitelisted_users:
+        return False
+    GlobalVars.whitelisted_users.remove(user)
+    with open("whitelistedUsers.txt", "w") as f:
+        pickle.dump(GlobalVars.whitelisted_users, f)
+    return True
+
 # methods that help avoiding reposting alerts:
 
 
