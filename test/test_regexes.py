@@ -36,7 +36,8 @@ import pytest
     ('Inner workings of muscles', '', '', 'fitness.stackexchange.com', False),
     ('Cannot access http://stackoverflow.com/ with proxy enabled', '', '', 'superuser.com', False),
     ('This is a title.', 'This is a body.<pre>bbbbbbbbbbbbbb</pre>', '', 'stackoverflow.com', False),
-    ('This is another title.', 'This is another body. <code>bbbbbbbbbbbb</code>', '', 'stackoverflow.com', False)
+    ('This is another title.', 'This is another body. <code>bbbbbbbbbbbb</code>', '', 'stackoverflow.com', False),
+    ('Yet another title.', 'many whitespace             .', '', 'stackoverflow.com', False)
 ])
 def test_regexes(title, body, username, site, match):
     # If we want to test answers separatly, this should be changed
