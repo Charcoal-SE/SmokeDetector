@@ -11,6 +11,8 @@ import pytest
     ('support for yahoo mail 18669786819 @call for helpline number', '', '', '', True),
     ('yahoo email tech support 1 866 978 6819 Yahoo Customer Phone Number ,Shortest Wait', '', '', '', True),
     ('kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '<p>bbbbbbbbbbbbbbbbbbbbbb</p>', '', 'stackoverflow.com', True),
+    ('99999999999', '', '', 'stackoverflow.com', True),
+    ('Random title', '$$$$$$$$$$$$', '', 'superuser.com', True),
     ('Non-spammy title', 'baba', '', 'stackoverflow.com', True),
     ('Gmail Tech Support (1-844-202-5571) Gmail tech support number[Toll Free Number]?', '', '', 'stackoverflow.com', True),
     ('<>1 - 866-978-6819<>gmail password reset//gmail contact number//gmail customer service//gmail help number', '', '', 'stackoverflow.com', True),
