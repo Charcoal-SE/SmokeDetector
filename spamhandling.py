@@ -56,13 +56,13 @@ def check_if_spam_json(data):
 def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_answer):
     reason = ", ".join(reasons)
     append_to_latest_questions(site, post_id, title if not is_answer else "")
-    if len(reasons) == 1 and ("All-caps title" in reasons
-                              or "Repeating characters in title" in reasons
-                              or "Repeating characters in body" in reasons
-                              or "Repeating characters in answer" in reasons
-                              or "Repeating words in title" in reasons
-                              or "Repeating words in body" in reasons
-                              or "Repeating words in answer" in reasons):
+    if len(reasons) == 1 and ("All-caps title" in reasons or
+                              "Repeating characters in title" in reasons or
+                              "Repeating characters in body" in reasons or
+                              "Repeating characters in answer" in reasons or
+                              "Repeating words in title" in reasons or
+                              "Repeating words in body" in reasons or
+                              "Repeating words in answer" in reasons):
         add_auto_ignored_post((post_id, site, datetime.now()))
     try:
         owner = poster_url
