@@ -14,7 +14,7 @@ class FindSpam:
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Babyliss ?Pro",
                     "Forskolin", "Blackline Elite", "TestCore Pro",
                     "Xtreme Antler", "Maxx Test 3000", "orvigomax",
-                    "Cheap Wigs?", "jivam", "(Improve )?Brain Power",
+                    "Cheap Wigs?", "jivam", "(Improve )?Brain Power", "Maximum ?Shred",
                     "aging skin", "acne( prone)? skin", "(skin )?eye serum",
                     "skin (serum|eye)", "bagprada", "6611165613" "Apowersoft",
                     "(fake|original) (passports?|driver'?s? licen[cs]e|ID cards?)",
@@ -29,7 +29,8 @@ class FindSpam:
                             "lxwpro-t", "casque-beatsbydre", "tenderpublish",
                             "elliskinantiaging", "funmac", "lovebiscuits",
                             "Eglobalfitness", "musclezx90site", "fifapal",
-                            "hits4slim", "screenshot.net", "downloadavideo.net"]
+                            "hits4slim", "screenshot.net", "downloadavideo.net",
+                            "strongmenmuscle"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|ಌ(>>>>|===>|==>>>)(?s).*http" % "|".join(bad_keywords), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False},
