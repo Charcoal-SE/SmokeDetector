@@ -8,7 +8,7 @@ class FindSpam:
                     "brianfo", "nike", "tosterone", "bajotz",
                     "vashi?k[ae]r[ae]n", "sumer", "kolcak"
                     "porn", "molvi", "judi bola", "ituBola.com", "lost lover",
-                    "11s", "acai", "skin care", "rejuvenated skin",
+                    "acai", "skin care", "rejuvenated skin",
                     "LifeForce", "swtor2credits", "me2.do", "black magic",
                     "bam2u", "Neuro(3X|flexyn)", "Nutra", "TesteroneXL",
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Babyliss ?Pro",
