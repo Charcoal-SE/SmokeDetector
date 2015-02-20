@@ -78,8 +78,11 @@ def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_
         print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
         if time.time() >= GlobalVars.blockedTime:
             append_to_latest_questions(site, post_id, title)
-            GlobalVars.charcoal_hq.send_message(s)
-            GlobalVars.tavern_on_the_meta.send_message(s)
+
+            if reason not in GlobalVars.experimental_reasons:
+                GlobalVars.charcoal_hq.send_message(s)
+                GlobalVars.tavern_on_the_meta.send_message(s)
+
             for specialroom in GlobalVars.specialrooms:
                 sites = specialroom["sites"]
                 if site in sites and reason not in specialroom["unwantedReasons"]:
