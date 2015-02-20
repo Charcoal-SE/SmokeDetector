@@ -21,7 +21,7 @@ class GlobalVars:
                      "italian.stackexchange.com": "ItalianGood.txt", "math.stackexchange.com": "MathematicsGood.txt",
                      "spanish.stackexchange.com": "SpanishGood.txt", "stats.stackexchange.com": "StatsGood.txt"}
 
-    experimental_reasons = ["Code block"] #Don't widely report these
+    experimental_reasons = ["Code block"]  # Don't widely report these
 
     parser = HTMLParser.HTMLParser()
     wrap = Client("stackexchange.com")
