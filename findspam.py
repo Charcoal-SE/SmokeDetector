@@ -10,7 +10,7 @@ class FindSpam:
                     "porn", "molvi", "judi bola", "ituBola.com", "lost lover",
                     "acai", "skin care", "rejuvenated skin",
                     "LifeForce", "swtor2credits", "me2.do", "black magic",
-                    "bam2u", "Neuro(3X|flexyn)", "Nutra", "TesteroneXL",
+                    "bam2u", "Neuro(3X|flexyn|fuse)", "Nutra", "TesteroneXL",
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Babyliss ?Pro",
                     "Forskolin", "Blackline Elite", "TestCore Pro",
                     "Xtreme Antler", "Maxx Test 3000", "orvigomax",
