@@ -17,7 +17,7 @@ class FindSpam:
                     "Cheap Wigs?", "jivam", "(Improve )?Brain Power", "Maximum ?Shred",
                     "aging skin", "acne( prone)? skin", "(skin )?eye serum",
                     "skin (serum|eye)", "bagprada", "6611165613" "Apowersoft",
-                    "Service Solahart",
+                    "Service Solahart", "junisse",
                     "(fake|original) (passports?|driver'?s? licen[cs]e|ID cards?)",
                     "(support|service|helpline)( phone)? number|1[ -]?[ -]?[ -]?866[ -]?978[ -]?(6819|6762)",
                     "(hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number"]
@@ -31,7 +31,8 @@ class FindSpam:
                             "elliskinantiaging", "funmac", "lovebiscuits",
                             "Eglobalfitness", "musclezx90site", "fifapal",
                             "hits4slim", "screenshot\\.net", "downloadavideo\\.net",
-                            "strongmenmuscle", "sh\\.st/", "musclehealthfitness"]
+                            "strongmenmuscle", "sh\\.st/", "musclehealthfitness",
+                            "svelmeblog"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|ಌ(>>>>|===>|==>>>)(?s).*http" % "|".join(bad_keywords), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False},
