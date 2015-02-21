@@ -32,7 +32,7 @@ class FindSpam:
                             "Eglobalfitness", "musclezx90site", "fifapal",
                             "hits4slim", "screenshot\\.net", "downloadavideo\\.net",
                             "strongmenmuscle", "sh\\.st/", "musclehealthfitness",
-                            "svelmeblog", "preply\\.com]
+                            "svelmeblog", "preply\\.com"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|ಌ(>>>>|===>|==>>>)(?s).*http" % "|".join(bad_keywords), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False},
