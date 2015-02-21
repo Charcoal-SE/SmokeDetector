@@ -15,6 +15,7 @@ from globalvars import GlobalVars
 from datahandling import load_files, filter_auto_ignored_posts
 import os
 import time
+import requests
 
 # !! Important! Be careful when adding code before this point.
 # Our except hook will be installed here, so any errors before this point
@@ -127,7 +128,7 @@ while True:
         with open("errorLogs.txt", "a") as f:
             f.write(logged_msg)
         if seconds < 180 and exc_type != websocket.WebSocketConnectionClosedException\
-                and exc_type != KeyboardInterrupt and exc_type != SystemExit:
+                and exc_type != KeyboardInterrupt and exc_type != SystemExit and exc_type != requests.ConnectionError:
             os._exit(4)
         ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
         ws.send("155-questions-active")

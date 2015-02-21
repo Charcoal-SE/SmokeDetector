@@ -5,6 +5,7 @@ import threading
 import sys
 from utcdate import UtcDate
 from websocket import WebSocketConnectionClosedException
+import requests
 
 
 def uncaught_exception(exctype, value, tb):
@@ -18,7 +19,7 @@ def uncaught_exception(exctype, value, tb):
     with open("errorLogs.txt", "a") as f:
         f.write(logged_msg)
     if seconds < 180 and exctype != WebSocketConnectionClosedException\
-            and exctype != KeyboardInterrupt and exctype != SystemExit:
+            and exctype != KeyboardInterrupt and exctype != SystemExit and exctype != requests.ConnectionError:
         os._exit(4)
     else:
         os._exit(1)
