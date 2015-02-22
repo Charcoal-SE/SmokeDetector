@@ -38,6 +38,7 @@ def check_if_spam_json(data):
         return False, None
     title = d["titleEncodedFancy"]
     title = unescape_title(title)
+    body = d["bodySummary"]
     poster = d["ownerDisplayName"]
     url = d["url"]
     post_id = str(d["id"])
@@ -49,7 +50,7 @@ def check_if_spam_json(data):
     site = d["siteBaseHostAddress"]
     site = site.encode("ascii", errors="replace")
     sys.stdout.flush()
-    is_spam, reason = check_if_spam(title, None, poster, url, site, post_id, False)
+    is_spam, reason = check_if_spam(title, body, poster, url, site, post_id, False)
     return is_spam, reason
 
 
