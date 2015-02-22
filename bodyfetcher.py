@@ -53,7 +53,7 @@ class BodyFetcher:
         posts = self.queue.pop(site)
         url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts) + "?site=" + site + "&filter=!4y_-sca-)pfAwlmP_1FxC6e5yzutRIcQvonAiP&key=IAkbitmze4B8KpacUfLqkw(("
         # wait to make sure API has/updates post data
-        time.sleep(30)
+        time.sleep(60)
         response = requests.get(url).json()
 
         GlobalVars.apiquota = response["quota_remaining"]
