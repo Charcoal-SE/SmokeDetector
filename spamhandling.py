@@ -12,10 +12,10 @@ from globalvars import GlobalVars
 from datetime import datetime
 
 
-def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer):
+def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer, body_is_summary):
     if not body:
         body = ""
-    test = FindSpam.test_post(title, body, user_name, post_site, is_answer)
+    test = FindSpam.test_post(title, body, user_name, post_site, is_answer, body_is_summary)
     if is_blacklisted_user(get_user_from_url(user_url)):
         test.append("Blacklisted user")
     if 0 < len(test):
@@ -50,7 +50,7 @@ def check_if_spam_json(data):
     site = d["siteBaseHostAddress"]
     site = site.encode("ascii", errors="replace")
     sys.stdout.flush()
-    is_spam, reason = check_if_spam(title, body, poster, url, site, post_id, False)
+    is_spam, reason = check_if_spam(title, body, poster, url, site, post_id, False, False)
     return is_spam, reason
 
 

@@ -35,7 +35,7 @@ def test_check_if_spam(title, body, username, site, match):
     post_id = 0
     # If we want to test answers separatly, this should be changed
     is_answer = False
-    is_spam, reason = check_if_spam(title, body, username, user_url, site, post_id, is_answer)
+    is_spam, reason = check_if_spam(title, body, username, user_url, site, post_id, is_answer, False)
     print title
     assert match == is_spam
 
@@ -54,7 +54,7 @@ def test_blacklisted_user():
     user_url = 'http://stackoverflow.com/users/1/jeff-atwood'
     user = get_user_from_url(user_url)
     add_blacklisted_user(user)
-    is_spam, reason = check_if_spam("", "", "", user_url, "stackoverflow.com", "1", False)
+    is_spam, reason = check_if_spam("", "", "", user_url, "stackoverflow.com", "1", False, False)
     assert is_spam is True
     # cleanup
     os.remove("blacklistedUsers.txt")
@@ -66,7 +66,7 @@ def test_whitelisted_user():
     user_url = 'http://stackoverflow.com/users/2/geoff-dalgas'
     user = get_user_from_url(user_url)
     add_whitelisted_user(user)
-    is_spam, reason = check_if_spam("", "", "bagprada", user_url, "stackoverflow.com", "1", False)
+    is_spam, reason = check_if_spam("", "", "bagprada", user_url, "stackoverflow.com", "1", False, False)
     assert is_spam is False
     # cleanup
     os.remove("whitelistedUsers.txt")
