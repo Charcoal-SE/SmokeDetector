@@ -61,15 +61,14 @@ class BodyFetcher:
         for post in response["items"]:
             title = GlobalVars.parser.unescape(post["title"])
             body = GlobalVars.parser.unescape(post["body"])
-            owner_name = GlobalVars.parser.unescape(post["owner"]["display_name"])
             link = post["link"]
             try:
+                owner_name = GlobalVars.parser.unescape(post["owner"]["display_name"])
                 owner_link = post["owner"]["link"]
-            except:
-                owner_link = ""
-            try:
                 owner_rep = post["owner"]["reputation"]
             except:
+                owner_name = ""
+                owner_link = ""
                 owner_rep = 0
             q_id = str(post["question_id"])
 
@@ -83,14 +82,16 @@ class BodyFetcher:
                 for answer in post["answers"]:
                     answer_title = ""
                     body = answer["body"]
-                    owner_name = GlobalVars.parser.unescape(answer["owner"]["display_name"])
                     print "got answer from owner with name " + owner_name
                     link = answer["link"]
-                    owner_link = answer["owner"]["link"]
                     a_id = str(answer["answer_id"])
                     try:
+                        owner_name = GlobalVars.parser.unescape(answer["owner"]["display_name"])
+                        owner_link = answer["owner"]["link"]
                         owner_rep = answer["owner"]["reputation"]
                     except:
+                        owner_name = ""
+                        owner_link = ""
                         owner_rep = 0
 
                     is_spam, reason = check_if_spam(answer_title, body, owner_name, owner_link, site, a_id, True, False)
