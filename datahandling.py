@@ -161,7 +161,7 @@ def fetch_lines_from_error_log(line_count):
     for line in lines:
         formatted_lines.append("    " + line.rstrip())
     fetched = os.linesep.join(formatted_lines)
-    if fetched == "":
+    if fetched.rstrip() == "":
         return "The fetched part is empty. Please try another line count."
     return fetched
 
