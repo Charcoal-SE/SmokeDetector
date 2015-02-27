@@ -5,7 +5,7 @@ import phonenumbers
 
 class FindSpam:
     bad_keywords = ["baba(ji)?", "fifa.*coins?", "fifabay", "Long Path Tool",
-                    "brianfo", "nike", "tosterone", "bajotz",
+                    "fifaodell", "brianfo", "nike", "tosterone", "bajotz",
                     "vashi?k[ae]r[ae]n", "sumer", "kolcak"
                     "porn", "molvi", "judi bola", "ituBola.com", "lost lover",
                     "acai", "skin care", "rejuvenated skin",
@@ -33,7 +33,8 @@ class FindSpam:
                             "Eglobalfitness", "musclezx90site", "fifapal",
                             "hits4slim", "screenshot\\.net", "downloadavideo\\.net",
                             "strongmenmuscle", "sh\\.st/", "musclehealthfitness",
-                            "svelmeblog", "preply\\.com"]
+                            "svelmeblog", "preply\\.com", "hellofifa",
+                            "fifa15online"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|ಌ(>>>>|===>|==>>>)(?s).*http" % "|".join(bad_keywords), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
