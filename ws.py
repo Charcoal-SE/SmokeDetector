@@ -71,7 +71,8 @@ GlobalVars.specialrooms = [{
                            "sites": ["askubuntu.com"],
                            "room": GlobalVars.wrap.get_room("201"),
                            "unwantedReasons": ["All-caps title",
-                                               "Phone number detected"]
+                                               "Phone number detected",
+                                               "Repeating characters"]
                            }, {
                            "sites": ["puzzling.stackexchange.com"],
                            "room": GlobalVars.wrap.get_room("21276"),
