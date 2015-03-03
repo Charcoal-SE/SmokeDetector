@@ -72,7 +72,9 @@ GlobalVars.specialrooms = [{
                            "room": GlobalVars.wrap.get_room("201"),
                            "unwantedReasons": ["All-caps title",
                                                "Phone number detected",
-                                               "Repeating characters"]
+                                               "Repeating characters in title",
+                                               "Repeating characters in body",
+                                               "Repeating characters in answer"]
                            }, {
                            "sites": ["puzzling.stackexchange.com"],
                            "room": GlobalVars.wrap.get_room("21276"),
