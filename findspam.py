@@ -35,7 +35,7 @@ class FindSpam:
                             "strongmenmuscle", "sh\\.st/", "musclehealthfitness",
                             "svelmeblog", "preply\\.com", "hellofifa",
                             "fifa15online", "wearepropeople.com", "tagwitty",
-                            "axsoccertours", "ragednablog"]
+                            "axsoccertours", "ragednablog", "ios8easyjailbreak"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|ಌ|(>>>>|===>|==>>>)(?s).*http" % "|".join(bad_keywords), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
