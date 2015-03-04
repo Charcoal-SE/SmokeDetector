@@ -58,7 +58,7 @@ class BodyFetcher:
         try:
             response = requests.get(url, timeout=20).json()
         except requests.exceptions.Timeout, socket.timeout as e:
-            return # could add some retrying logic here, but eh.
+            return  # could add some retrying logic here, but eh.
 
         GlobalVars.apiquota = response["quota_remaining"]
 
