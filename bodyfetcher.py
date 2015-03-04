@@ -17,7 +17,7 @@ class BodyFetcher:
     threshold = 2
 
     def add_to_queue(self, post):
-        return #Disabled, see http://chat.stackexchange.com/transcript/message/20369565#20369565
+        return # Disabled, see http://chat.stackexchange.com/transcript/message/20369565#20369565
         d = json.loads(json.loads(post)["data"])
         sitebase = d["siteBaseHostAddress"]
         postid = d["id"]
