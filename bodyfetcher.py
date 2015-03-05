@@ -28,6 +28,7 @@ class BodyFetcher:
 
         print self.queue
         self.check_queue()
+        return
 
     def check_queue(self):
         for site, values in self.queue.iteritems():
@@ -106,3 +107,4 @@ class BodyFetcher:
                             print "NOP"
             except:
                 print "no answers"
+        return
