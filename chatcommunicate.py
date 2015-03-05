@@ -202,7 +202,7 @@ def watcher(ev, wrap2):
             )
     if content_lower.startswith("!!/status"):
             now = datetime.utcnow()
-            diff = now - GlobalVars.UtcDate.startup_utc_date
+            diff = now - UtcDate.startup_utc_date
             hours, remainder = divmod(diff.seconds, 60)
             ev.message.reply('Running since %s UTC (%s minutes)' % GlobalVars.startup_utc, hours)
     if content_lower.startswith("!!/reboot"):
