@@ -205,7 +205,7 @@ def watcher(ev, wrap2):
             now = datetime.utcnow()
             diff = now - UtcDate.startup_utc_date
             hours, remainder = divmod(diff.seconds, 60)
-            ev.message.reply('Running since %s UTC (%s minutes)' % GlobalVars.startup_utc, hours)
+            ev.message.reply('Running since %s UTC (%s minutes)' % (GlobalVars.startup_utc, hours))
     if content_lower.startswith("!!/reboot"):
         if is_privileged(ev_room, ev_user_id):
             post_message_in_room(ev_room, "Goodbye, cruel world")
