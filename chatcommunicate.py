@@ -98,8 +98,8 @@ def watcher(ev, wrap2):
                             ev.message.reply("Blacklisted user.")
                         else:
                             ev.message.reply("`true`/`tp` cannot be used for answers because their job is to add the title of the *question* to the Bayesian doctype 'bad'. If you want to blacklist the poster of the answer, use `trueu` or `tpu`.")
-            except:
-                pass
+            except Exception, e:
+                GlobalVars.charcoal_hq.send_message("Exception message: %s" % e.message)
         if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id):
             try:
                 msg_id = int(message_parts[0][1:])
