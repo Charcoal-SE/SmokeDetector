@@ -37,8 +37,10 @@ class FindSpam:
                             "fifa15online", "wearepropeople.com", "tagwitty",
                             "axsoccertours", "ragednablog", "ios8easyjailbreak"]
     rules = [
-        {'regex': u"(?i)\\b(%s)\\b|ಌ|(>>>>|===>|==>>>)(?s).*http" % "|".join(bad_keywords), 'all': True,
+        {'regex': u"(?i)\\b(%s)\\b|ಌ" % "|".join(bad_keywords), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
+        {'regex': u"(?i)(>>>>|===>|==>>>)(?s).*http", 'all': True,
+         'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': u"(?i)\\b(weight (body ?builder|loo?s[es]|reduction)|muscles? build(ing)?|muscles?( (grow(th)?|diets?))?|anti aging|SkinCentric|loo?s[es] weight|wrinkles?)\\b", 'all': True,
          'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u"(?i)^(?:(?=.*?\\b(?:online|hd)\\b)(?=.*?(?:free|full|unlimited)).*?movies?\\b|(?=.*?\\b(?:acai|kisn)\\b)(?=.*?care).*products?\\b|(?=.*?packer).*mover)", 'all': True,
