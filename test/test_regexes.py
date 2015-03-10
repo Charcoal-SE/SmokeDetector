@@ -46,6 +46,7 @@ import pytest
     ('This is another title.', 'This is another body. <code>bbbbbbbbbbbb</code>', '', 'stackoverflow.com', False, False),
     ('Yet another title.', 'many whitespace             .', '', 'stackoverflow.com', False, False),
     ('Perfectly valid title.', 'bbbbbbbbbbbbbbbbbbbbbb', '', 'stackoverflow.com', True, False),
+    ('Long double', 'I have this value: 9999999999999999', '', 'stackoverflow.com', False, False),
     ('Another valid title.', 'asdf asdf asdf asdf asdf asdf asdf asdf asdf', '', 'stackoverflow.com', True, False)
 ])
 def test_regexes(title, body, username, site, body_is_summary, match):
