@@ -47,7 +47,9 @@ import pytest
     ('Yet another title.', 'many whitespace             .', '', 'stackoverflow.com', False, False),
     ('Perfectly valid title.', 'bbbbbbbbbbbbbbbbbbbbbb', '', 'stackoverflow.com', True, False),
     ('Long double', 'I have this value: 9999999999999999', '', 'stackoverflow.com', False, False),
-    ('Another valid title.', 'asdf asdf asdf asdf asdf asdf asdf asdf asdf', '', 'stackoverflow.com', True, False)
+    ('Another valid title.', 'asdf asdf asdf asdf asdf asdf asdf asdf asdf', '', 'stackoverflow.com', True, False),
+    ('Array question', 'I have an array with these values: 10 10 10 10 10 10 10 10 10 10 10 10', '', 'stackoverflow.com', False, False),
+    ('Array question', 'I have an array with these values: 0 0 0 0 0 0 0 0 0 0 0 0', '', 'stackoverflow.com', False, False),
 ])
 def test_regexes(title, body, username, site, body_is_summary, match):
     # If we want to test answers separatly, this should be changed
