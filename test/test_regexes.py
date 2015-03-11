@@ -14,6 +14,8 @@ import pytest
     ('kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '<p>bbbbbbbbbbbbbbbbbbbbbb</p>', '', 'stackoverflow.com', False, True),
     ('kkkkkkkkkkkkkkkkkkkkkkkkkkkk', 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbb', '', 'stackoverflow.com', True, True),
     ('99999999999', '', '', 'stackoverflow.com', False, True),
+    ('Question', '111111111111', '', 'stackoverflow.com', False, True),
+    ('Question', 'I have this number: 111111111111111', '', 'stackoverflow.com', False, False),
     ('Random title', '$$$$$$$$$$$$', '', 'superuser.com', False, True),
     ('Non-spammy title', 'baba', '', 'stackoverflow.com', False, True),
     ('Gmail Tech Support (1-844-202-5571) Gmail tech support number[Toll Free Number]?', '', '', 'stackoverflow.com', False, True),
@@ -52,7 +54,7 @@ import pytest
     ('Array question', 'I have an array with these values: 0 0 0 0 0 0 0 0 0 0 0 0', '', 'stackoverflow.com', False, False),
 ])
 def test_regexes(title, body, username, site, body_is_summary, match):
-    # If we want to test answers separatly, this should be changed
+    # If we want to test answers separately, this should be changed
     is_answer = False
     result = FindSpam.test_post(title, body, username, site, is_answer, body_is_summary)
     print title
