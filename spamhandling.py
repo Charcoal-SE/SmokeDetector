@@ -16,10 +16,12 @@ def should_whitelist_prevent_alert(user_url, reasons):
     is_whitelisted = is_whitelisted_user(get_user_from_url(user_url))
     if not is_whitelisted:
         return False
-    prevent_alert = False
-    for reason in reasons:
-        prevent_alert = prevent_alert or "username" not in reason.lower()
-    return prevent_alert
+    reasons_copy = list(reasons)
+    for reason in reasons_copy:
+        if "username" in reason:
+            reasons_copy.remove(reason)
+    return len(reasons_copy) == 0
+
 
 def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer, body_is_summary):
     if not body:
