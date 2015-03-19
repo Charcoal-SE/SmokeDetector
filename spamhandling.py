@@ -12,6 +12,15 @@ from globalvars import GlobalVars
 from datetime import datetime
 
 
+def should_whitelist_prevent_alert(user_url, reasons):
+    is_whitelisted = is_whitelisted_user(get_user_from_url(user_url))
+    if not is_whitelisted:
+        return False
+    prevent_alert = False
+    for reason in reasons:
+        prevent_alert = prevent_alert or "username" not in reason.lower()
+    return prevent_alert
+
 def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer, body_is_summary):
     if not body:
         body = ""
@@ -20,7 +29,7 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
         test.append("Blacklisted user")
     if 0 < len(test):
         if has_already_been_posted(post_site, post_id, title) or is_false_positive((post_id, post_site)) \
-                or is_whitelisted_user(get_user_from_url(user_url)) \
+                or should_whitelist_prevent_alert(user_url, test) \
                 or is_ignored_post((post_id, post_site)) \
                 or is_auto_ignored_post((post_id, post_site)):
             return False, None  # Don't repost. Reddit will hate you.
