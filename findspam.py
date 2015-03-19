@@ -11,7 +11,7 @@ class FindSpam:
                     "acai", "skin care", "rejuvenated skin",
                     "LifeForce", "swtor2credits", "me2.do", "black magic",
                     "bam2u", "Neuro(3X|flexyn|fuse)", "Nutra", "TesteroneXL",
-                    "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Babyliss ?Pro",
+                    "Bowtrol", "Slim ?Genix", "Cleanse EFX",
                     "Forskolin", "Blackline Elite", "TestCore Pro",
                     "Xtreme Antler", "Maxx Test 3000", "orvigomax",
                     "Cheap Wigs?", "jivam", "(Improve )?Brain Power", "Maximum ?Shred",
@@ -22,6 +22,7 @@ class FindSpam:
                     "(support|service|helpline)( phone)? number|1[ -]?[ -]?[ -]?866[ -]?978[ -]?(6819|6762)",
                     "(hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number",
                     "kitchen for sale", "dolphin porn"]
+    bad_keywords_nwb = [u"ಌ", "babyliss"]  # "nwb" == "no word boundary"
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "optimalstackfacts",
@@ -39,7 +40,7 @@ class FindSpam:
                             "totalfitnesspoint", "trustessaywriting",
                             "trustmyessay", "faasoft", "besttvshows"]
     rules = [
-        {'regex': u"(?i)\\b(%s)\\b|ಌ" % "|".join(bad_keywords), 'all': True,
+        {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)(>>>>|===>|==>>>)(?s).*http", 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False},

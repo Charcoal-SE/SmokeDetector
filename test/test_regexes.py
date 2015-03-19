@@ -14,6 +14,7 @@ import pytest
     ('kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '<p>bbbbbbbbbbbbbbbbbbbbbb</p>', '', 'stackoverflow.com', False, True),
     ('kkkkkkkkkkkkkkkkkkkkkkkkkkkk', 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbb', '', 'stackoverflow.com', True, True),
     ('99999999999', '', '', 'stackoverflow.com', False, True),
+    ('Spam spam spam', '', 'babylisscurl', 'stackoverflow.com', False, True),
     ('Question', '111111111111', '', 'stackoverflow.com', False, True),
     ('Question', 'I have this number: 111111111111111', '', 'stackoverflow.com', False, False),
     ('Random title', '$$$$$$$$$$$$', '', 'superuser.com', False, True),
