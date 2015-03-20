@@ -39,7 +39,7 @@ class FindSpam:
                             "axsoccertours", "ragednablog", "ios8easyjailbreak",
                             "totalfitnesspoint", "trustessaywriting",
                             "trustmyessay", "faasoft", "besttvshows", "mytechlabs",
-                            "giikers", "pagetube", "myenv"]
+                            "giikers", "pagetube", "myenv\\.org"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
