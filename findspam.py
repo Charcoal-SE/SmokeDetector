@@ -1,5 +1,5 @@
 ﻿# -*- coding: utf-8 -*-
-import re
+import regex
 import phonenumbers
 
 
@@ -59,7 +59,7 @@ class FindSpam:
         {'regex': u"(?i)\\b(nigg(a|er)|asshole|fag|fuck(ing?)?|shit|whore|cunt)s?\\b", 'all': True,
          'sites': [], 'reason': "Offensive {} detected", 'insensitive':True, 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)\\b(crap)\\b", 'all': True, 'sites': [], 'reason': "Offensive {} detected", 'insensitive': True, 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
-        {'regex': u"^(?=.*[A-Z])[^a-z]*$", 'all': True, 'sites': [], 'reason': "All-caps title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
+        {'regex': ur"^(?=.*\p{upper})\P{lower}*$", 'all': True, 'sites': [], 'reason': "All-caps title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u"^(?=.*[0-9])[^a-zA-Z]*$", 'all': True, 'sites': [], 'reason': "Numbers-only title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u"https?://[a-zA-Z0-9_.-]+\\.[a-zA-Z]{2,4}(/[a-zA-Z0-9_/?=.-])?", 'all': True,
          'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com"], 'reason': "URL in title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
@@ -78,12 +78,12 @@ class FindSpam:
         for rule in FindSpam.rules:
             body_to_check = body
             if rule['stripcodeblocks']:
-                body_to_check = re.sub("<pre>.*?</pre>", "", body, flags=re.DOTALL)
-                body_to_check = re.sub("<code>.*?</code>", "", body_to_check, flags=re.DOTALL)
+                body_to_check = regex.sub("<pre>.*?</pre>", "", body, flags=regex.DOTALL)
+                body_to_check = regex.sub("<code>.*?</code>", "", body_to_check, flags=regex.DOTALL)
             if rule['all'] != (site in rule['sites']):
-                matched_title = re.compile(rule['regex'], re.UNICODE).findall(title)
-                matched_username = re.compile(rule['regex'], re.UNICODE).findall(user_name)
-                matched_body = re.compile(rule['regex'], re.UNICODE).findall(body_to_check)
+                matched_title = regex.compile(rule['regex'], regex.UNICODE).findall(title)
+                matched_username = regex.compile(rule['regex'], regex.UNICODE).findall(user_name)
+                matched_body = regex.compile(rule['regex'], regex.UNICODE).findall(body_to_check)
                 if matched_title and rule['title']:
                     try:
                         if getattr(FindSpam, "%s" % rule['validation_method'])(matched_title):

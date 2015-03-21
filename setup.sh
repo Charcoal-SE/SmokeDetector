@@ -7,3 +7,4 @@ sudo pip install requests --upgrade
 sudo pip install websocket-client --upgrade
 sudo pip install phonenumbers
 sudo pip install flake8
+sudo pip install regex
