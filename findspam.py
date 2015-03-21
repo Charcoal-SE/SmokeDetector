@@ -39,7 +39,12 @@ class FindSpam:
                             "axsoccertours", "ragednablog", "ios8easyjailbreak",
                             "totalfitnesspoint", "trustessaywriting",
                             "trustmyessay", "faasoft", "besttvshows", "mytechlabs",
-                            "giikers", "pagetube", "myenv\\.org"]
+                            "giikers", "pagetube", "myenv\\.org",
+                            "supertestoboostsfacts", "idolizeadvancedeyeserumfacts", "pelevoniface",
+                            "skinphysiciantips", "fifa2coins", "xtrememusclerecoveryrev",
+                            "diabacordoesitwork", "thehealthyadvise", "supracleanse350facts",
+                            "premiumpureforskolinrev", "hyperglycemiaabout", "dietandhealthguide"
+                            ]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
