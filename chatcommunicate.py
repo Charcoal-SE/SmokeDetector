@@ -10,8 +10,9 @@ import re
 from datetime import datetime
 from utcdate import UtcDate
 
-# Please note: If new !!/ commands are added or existing ones are modified, don't forget to 
-# update the command list response to !!/commands. 
+# Please note: If new !!/ commands are added or existing ones are modified, don't forget to
+# update the command list response to !!/commands.
+
 
 def post_message_in_room(room_id_str, msg, length_check=True):
     if room_id_str == GlobalVars.charcoal_room_id:
