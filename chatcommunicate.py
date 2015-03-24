@@ -10,6 +10,8 @@ import re
 from datetime import datetime
 from utcdate import UtcDate
 
+# Please note: If new !!/ commands are added or existing ones are modified, don't forget to 
+# update the command list response to !!/commands. 
 
 def post_message_in_room(room_id_str, msg, length_check=True):
     if room_id_str == GlobalVars.charcoal_room_id:
@@ -272,8 +274,10 @@ def watcher(ev, wrap2):
             elif "pending" in states or not states:
                 ev.message.reply("CI build is still pending, wait until the build has finished and then pull again.")
     if content_lower.startswith("!!/help"):
-        ev.message.reply("I'm [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector), a bot that detects spam and low-quality posts on the network and posts alerts to chat.")
+        ev.message.reply("I'm [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector), a bot that detects spam and low-quality posts on the network and posts alerts to chat. Type !!/commands for a command list.")
     if content_lower.startswith("!!/apiquota"):
         ev.message.reply(GlobalVars.apiquota)
     if content_lower.startswith("!!/queuestatus"):
         ev.message.reply(GlobalVars.bodyfetcher.print_queue())
+    if content_lower.startswith("!!/commands"):
+	    ev.message.reply("addblu, rmblu, addwlu, rmwlu, wut, lick, hats, alive, rev, status, reboot, stappit, master, clearbl, block, unblock, errorlogs, pull, help, apiquota, queuestatus, commands")
