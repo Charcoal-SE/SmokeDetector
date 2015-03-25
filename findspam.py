@@ -21,8 +21,9 @@ class FindSpam:
                     "(fake|original|uk) (passports?|driver'?s? licen[cs]e|ID cards?)",
                     "(support|service|helpline)( phone)? number|1[ -]?[ -]?[ -]?866[ -]?978[ -]?(6819|6762)",
                     "(hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number",
-                    "kitchen for sale", "dolphin porn"]
-    bad_keywords_nwb = [u"ಌ", "babyliss"]  # "nwb" == "no word boundary"
+                    "kitchen for sale", "dolphin porn", "pdftoexcelconverter", "keepbrowsersafe", "SpyHunter",
+                    "pcerror-fix", "filerepairtool", "combatpcviruses"]
+    bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia"]  # "nwb" == "no word boundary"
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "optimalstackfacts",
@@ -43,8 +44,8 @@ class FindSpam:
                             "supertestoboostsfacts", "idolizeadvancedeyeserumfacts", "pelevoniface",
                             "skinphysiciantips", "fifa2coins", "xtrememusclerecoveryrev",
                             "diabacordoesitwork", "thehealthyadvise", "supracleanse350facts",
-                            "premiumpureforskolinrev", "hyperglycemiaabout", "dietandhealthguide"
-                            ]
+                            "premiumpureforskolinrev", "hyperglycemiaabout", "dietandhealthguide",
+                            "health350"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
