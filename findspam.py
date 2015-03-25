@@ -4,7 +4,7 @@ import phonenumbers
 
 
 class FindSpam:
-    bad_keywords = ["baba(ji)?", "fifa.*coins?", "fifabay", "Long Path Tool",
+    bad_keywords = ["baba ?ji", "fifa.*coins?", "fifabay", "Long Path Tool",
                     "fifaodell", "brianfo", "nike", "tosterone", "bajotz",
                     "vashi?k[ae]r[ae]n", "sumer", "kolcak"
                     "porn", "molvi", "judi bola", "ituBola.com", "lost lover",
@@ -49,6 +49,8 @@ class FindSpam:
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
+        {'regex': u"(?i)\\bbaba\\b", 'all': True,
+         'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)(>>>>|===>|==>>>)(?s).*http", 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': u"(?i)\\b(weight (body ?builder|loo?s[es]|reduction)|muscles? build(ing)?|muscles?( (grow(th)?|diets?))?|anti aging|SkinCentric|loo?s[es] weight|wrinkles?)\\b", 'all': True,
