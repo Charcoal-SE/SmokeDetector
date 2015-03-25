@@ -116,7 +116,7 @@ def watcher(ev, wrap2):
                     ev.message.reply("Post ignored; alerts about it will no longer be posted.")
             except:
                 pass
-        if (second_part_lower == "delete" or second_part_lower == "remove" or second_part_lower == "gone") \
+        if second_part_lower.startswith("delete") or second_part_lower.startswith("remove") or second_part_lower.startswith("gone") \
                 and is_privileged(ev_room, ev_user_id):
             try:
                 msg_id = int(message_parts[0][1:])
