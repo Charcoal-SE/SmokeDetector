@@ -1,5 +1,16 @@
 # requires https://pypi.python.org/pypi/websocket-client/
+
 from excepthook import uncaught_exception, install_thread_excepthook
+import sys
+sys.excepthook = uncaught_exception
+install_thread_excepthook()
+
+# !! Important! Be careful when adding code/imports before this point.
+# Our except hook is installed here, so any errors before this point
+# won't be caught if they're not in a try-except block.
+# Hence, please avoid adding code before this comment, but if it's necessary,
+# test it thoroughly.
+
 import websocket
 import getpass
 from threading import Thread
@@ -8,7 +19,6 @@ from bodyfetcher import BodyFetcher
 from chatcommunicate import watcher
 from continuousintegration import watch_ci
 from datetime import datetime
-import sys
 from utcdate import UtcDate
 from spamhandling import check_if_spam_json, handle_spam_json
 from globalvars import GlobalVars
@@ -16,15 +26,6 @@ from datahandling import load_files, filter_auto_ignored_posts
 import os
 import time
 import requests
-
-# !! Important! Be careful when adding code before this point.
-# Our except hook will be installed here, so any errors before this point
-# won't be caught if they're not in a try-except block.
-# Hence, please avoid adding code before this comment, but if it's necessary,
-# test it thoroughly.
-
-sys.excepthook = uncaught_exception
-install_thread_excepthook()
 
 if "ChatExchangeU" in os.environ:
     username = os.environ["ChatExchangeU"]
