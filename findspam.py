@@ -45,7 +45,7 @@ class FindSpam:
                             "skinphysiciantips", "fifa2coins", "xtrememusclerecoveryrev",
                             "diabacordoesitwork", "thehealthyadvise", "supracleanse350facts",
                             "premiumpureforskolinrev", "hyperglycemiaabout", "dietandhealthguide",
-                            "health350", "sourceforge.net/projects/freepdftojpgconverter/", "pdftoexel.wordpress.com/"]
+                            "health350", "sourceforge\\.net/projects/freepdftojpgconverter", "pdftoexel\\.wordpress\\.com"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
