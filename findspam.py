@@ -7,7 +7,7 @@ class FindSpam:
     bad_keywords = ["baba ?ji", "fifa.*coins?", "fifabay", "Long Path Tool",
                     "fifaodell", "brianfo", "nike", "tosterone", "bajotz",
                     "vashi?k[ae]r[ae]n", "sumer", "kolcak"
-                    "porn", "molvi", "judi bola", "ituBola.com", "lost lover",
+                    "porn", "molvi", "judi bola", "ituBola.com", "lost lovers?",
                     "acai", "skin care", "rejuvenated skin",
                     "LifeForce", "swtor2credits", "me2.do", "black magic",
                     "bam2u", "Neuro(3X|flexyn|fuse)", "Nutra", "TesteroneXL",
@@ -45,8 +45,8 @@ class FindSpam:
                             "skinphysiciantips", "fifa2coins", "xtrememusclerecoveryrev",
                             "diabacordoesitwork", "thehealthyadvise", "supracleanse350facts",
                             "premiumpureforskolinrev", "hyperglycemiaabout", "dietandhealthguide",
-                            "health350", "sourceforge\\.net/projects/freepdftojpgconverter", "pdftoexel\\.wordpress\\.com",
-                            "best7th\\.in"]
+                            "health350", "sourceforge\\.net/projects/freepdftojpgconverter",
+                            "pdftoexel\\.wordpress\\.com", "best7th\\.in"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
