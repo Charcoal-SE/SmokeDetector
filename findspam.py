@@ -7,7 +7,7 @@ class FindSpam:
     bad_keywords = ["baba ?ji", "fifa.*coins?", "fifabay", "Long Path Tool",
                     "fifaodell", "brianfo", "nike", "tosterone", "bajotz",
                     "vashi?k[ae]r[ae]n", "sumer", "kolcak"
-                    "porn", "molvi", "judi bola", "ituBola.com", "lost lovers?",
+                    "porn", "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
                     "acai", "skin care", "rejuvenated skin",
                     "LifeForce", "swtor2credits", "me2.do", "black magic",
                     "bam2u", "Neuro(3X|flexyn|fuse)", "Nutra", "TesteroneXL",
