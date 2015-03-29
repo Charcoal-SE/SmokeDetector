@@ -22,7 +22,7 @@ class FindSpam:
                     "(support|service|helpline)( phone)? number|1[ -]?[ -]?[ -]?866[ -]?978[ -]?(6819|6762)",
                     "(hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number",
                     "kitchen for sale", "dolphin porn", "pdftoexcelconverter", "keepbrowsersafe", "SpyHunter",
-                    "pcerror-fix", "filerepairtool", "combatpcviruses"]
+                    "pcerror-fix", "filerepairtool", "combatpcviruses", "SkinCentric"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia"]  # "nwb" == "no word boundary"
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
@@ -54,8 +54,8 @@ class FindSpam:
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)(>>>>|===>|==>>>)(?s).*http", 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False},
-        {'regex': u"(?i)\\b(weight (body ?builder|loo?s[es]|reduction)|muscles? build(ing)?|muscles?( (grow(th)?|diets?))?|anti aging|SkinCentric|loo?s[es] weight|wrinkles?)\\b", 'all': True,
-         'sites': ["fitness.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
+        {'regex': u"(?i)\\b(weight (body ?builder|loo?s[es]|reduction)|muscles?|anti aging|loo?s[es] weight|wrinkles?)\\b", 'all': True,
+         'sites': ["fitness.stackexchange.com", "biology.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u"(?i)^(?:(?=.*?\\b(?:online|hd)\\b)(?=.*?(?:free|full|unlimited)).*?movies?\\b|(?=.*?\\b(?:acai|kisn)\\b)(?=.*?care).*products?\\b|(?=.*?packer).*mover)", 'all': True,
          'sites': [], 'reason': "Bad keywords in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u"\\d(?:_*\\d){9}|\\+?\\d_*\\d[\\s\\-]?(?:_*\\d){8,11}|\\d[ -]?\\d{3}[ -]?\\d{3}[ -]?\\d{4}", 'all': True,
