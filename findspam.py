@@ -48,7 +48,7 @@ class FindSpam:
                             "premiumpureforskolinrev", "hyperglycemiaabout", "dietandhealthguide",
                             "health350", "sourceforge\\.net/projects/freepdftojpgconverter",
                             "pdftoexel\\.wordpress\\.com", "best7th\\.in", "any-data-recovery\\.com",
-                            "recoverytoolbox\\.com"]
+                            "recoverytoolbox\\.com", "mkmk9"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
