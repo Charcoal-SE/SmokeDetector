@@ -24,7 +24,7 @@ class FindSpam:
                     "kitchen for sale", "dolphin porn", "pdftoexcelconverter", "keepbrowsersafe", "SpyHunter",
                     "pcerror-fix", "filerepairtool", "combatpcviruses", "SkinCentric",
                     "JobsTribune", "join the illuminati"]
-    bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia"]  # "nwb" == "no word boundary"
+    bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry"]  # "nwb" == "no word boundary"
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "optimalstackfacts",
@@ -53,7 +53,8 @@ class FindSpam:
                             "evomailserver\\.com", "gameart\\.net", "any-data-recovery\\.com",
                             "recoverytoolbox\\.com", "sofotex\\.com",
                             "mybloggingmoney\\.com", "windows-techsupport\\.com",
-                            "supplementsdeal\\.com"]
+                            "supplementsdeal\\.com", "drivethelife\\.com", "testolimitfacts\\.com",
+                            "lafozi\\.com", "hipslimgarcinia\\.com"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
@@ -63,7 +64,7 @@ class FindSpam:
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': u"<blockquote>[^\/]*<blockquote>", 'all': True,
          'sites': [], 'reason': "Nested quote blocks in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
-        {'regex': u"(?i)\\b(weight (body ?builder|loo?s[es]|reduction)|muscles?|anti aging|loo?s[es] weight|wrinkles?)\\b", 'all': True,
+        {'regex': u"(?i)\\b(weight (body ?builder|loo?s[es]|reduction)|muscles?|anti aging|loo?s[es] weight|wrinkles?|diet ?plan)\\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u"(?i)^(?:(?=.*?\\b(?:online|hd)\\b)(?=.*?(?:free|full|unlimited)).*?movies?\\b|(?=.*?\\b(?:acai|kisn)\\b)(?=.*?care).*products?\\b|(?=.*?packer).*mover)", 'all': True,
          'sites': [], 'reason': "Bad keywords in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
