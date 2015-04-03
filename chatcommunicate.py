@@ -50,9 +50,10 @@ def watcher(ev, wrap2):
                     user_added = False
                     if message_parts[1].lower().startswith("falseu") or message_parts[1].lower().startswith("fpu"):
                         url_from_msg = fetch_owner_url_from_msg_content(msg_content)
-                        user = get_user_from_url(url_from_msg)
-                        add_whitelisted_user(user)
-                        user_added = True
+                        if url_from_msg is not None:
+                            user = get_user_from_url(url_from_msg)
+                            add_whitelisted_user(user)
+                            user_added = True
                     learned = False
                     if post_type == "question":
                         learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "good")
@@ -85,9 +86,10 @@ def watcher(ev, wrap2):
                     user_added = False
                     if message_parts[1].lower().startswith("trueu") or message_parts[1].lower().startswith("tpu"):
                         url_from_msg = fetch_owner_url_from_msg_content(msg_content)
-                        user = get_user_from_url(url_from_msg)
-                        add_blacklisted_user(user)
-                        user_added = True
+                        if url_from_msg is not None:
+                            user = get_user_from_url(url_from_msg)
+                            add_blacklisted_user(user)
+                            user_added = True
                     if post_type == "question":
                         learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "bad")
                         if learned and user_added:
