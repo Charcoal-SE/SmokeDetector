@@ -52,7 +52,8 @@ class FindSpam:
                             "webbuildersguide\\.com", "idealshare.net", "lankabpoacademy\\.com",
                             "evomailserver\\.com", "gameart\\.net", "any-data-recovery\\.com",
                             "recoverytoolbox\\.com", "sofotex\\.com",
-                            "mybloggingmoney\\.com", "windows-techsupport\\.com"]
+                            "mybloggingmoney\\.com", "windows-techsupport\\.com",
+                            "supplementsdeal\\.com"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
