@@ -20,6 +20,7 @@ sudo pip install beautifulsoup4
 sudo pip install requests --upgrade
 sudo pip install websocket-client --upgrade
 sudo pip install phonenumbers
+sudo pip install regex
 ```
 
 To run, use `nocrash.sh` (preferably in a daemon-able mode). Like in a `screen` session.
