@@ -85,8 +85,12 @@ def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_
         print e
     try:
         title = escape_special_chars_in_title(title)
-        s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % \
-            (reason, title.strip(), post_url, poster.strip(), poster_url, site)
+        if not poster.strip():
+            s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by a deleted user on `%s`" % \
+                (reason, title.strip(), post_url, site)
+        else:
+            s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % \
+                (reason, title.strip(), post_url, poster.strip(), poster_url, site)
         print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
         if time.time() >= GlobalVars.blockedTime:
             append_to_latest_questions(site, post_id, title)
