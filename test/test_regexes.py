@@ -30,6 +30,8 @@ import pytest
     ('1 - 844-780-6762 outlook phone number-outlook telephone number-outlook customer care helpline number', '', '', 'stackoverflow.com', False, True),
     ('Repeating word word word word word word word word word', '', '', 'stackoverflow.com', False, True),
     ('Visit this website: optimalstackfacts', '', '', 'stackoverflow.com', False, True),
+    ('his email address is (SOMEONE@GMAIL.COM)', '', '', 'meta.stackexchange.com', False, True),
+    ('something', 'his email address is (SOMEONE@GMAIL.COM)', '', 'meta.stackexchange.com', False, True),
     ('asdf asdf asdf asdf asdf asdf asdf asdf', '', '', 'stackoverflow.com', True, True),
     ('A title', '>>>>  http://', '', 'stackoverflow.com', False, True),
     ('spam', '>>>> http://', '', 'stackoverflow.com', True, False),
@@ -53,6 +55,8 @@ import pytest
     ('Another valid title.', 'asdf asdf asdf asdf asdf asdf asdf asdf asdf', '', 'stackoverflow.com', True, False),
     ('Array question', 'I have an array with these values: 10 10 10 10 10 10 10 10 10 10 10 10', '', 'stackoverflow.com', False, False),
     ('Array question', 'I have an array with these values: 0 0 0 0 0 0 0 0 0 0 0 0', '', 'stackoverflow.com', False, False),
+    ('his email address is (SOMEONE@GMAIL.COM)', '', '', 'stackoverflow.com', False, False),
+    ('something', 'his email address is (SOMEONE@GMAIL.COM)', '', 'stackoverflow.com', False, False),
 ])
 def test_regexes(title, body, username, site, body_is_summary, match):
     # If we want to test answers separately, this should be changed
