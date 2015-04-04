@@ -55,7 +55,7 @@ class FindSpam:
                             "mybloggingmoney\\.com", "windows-techsupport\\.com",
                             "supplementsdeal\\.com", "drivethelife\\.com", "testolimitfacts\\.com",
                             "lafozi\\.com", "hipslimgarcinia\\.com", "open-swiss-bank\\.com",
-                            "originalgarciniacambogiafacts"]
+                            "originalgarciniacambogiafacts", "healthy-weight-loss-tips\\.com"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
