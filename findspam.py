@@ -23,7 +23,7 @@ class FindSpam:
                     "(hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number",
                     "kitchen for sale", "dolphin porn", "pdftoexcelconverter", "keepbrowsersafe", "SpyHunter",
                     "pcerror-fix", "filerepairtool", "combatpcviruses", "SkinCentric",
-                    "JobsTribune", "join the illuminati"]
+                    "JobsTribune", "join the illuminati", "Brorsoft", "Remo Recover"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry"]  # "nwb" == "no word boundary"
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
@@ -55,7 +55,31 @@ class FindSpam:
                             "mybloggingmoney\\.com", "windows-techsupport\\.com",
                             "supplementsdeal\\.com", "drivethelife\\.com", "testolimitfacts\\.com",
                             "lafozi\\.com", "hipslimgarcinia\\.com", "open-swiss-bank\\.com",
-                            "originalgarciniacambogiafacts", "healthy-weight-loss-tips\\.com"]
+                            "originalgarciniacambogiafacts", "healthy-weight-loss-tips\\.com",
+                            "tenorshare\\.com", "advancedpdfconverter\\.com",
+                            "androiddatarecoverypro\\.com", "card-data-recovery\\.com",
+                            "excel-password-recovery\\.com", "fix-computer\\.net",
+                            "lost-password\\.net", "lostwindowspassword\\.com",
+                            "macvideoconverterpro\\.com", "password-master\\.net",
+                            "photorecovery-formac\\.com", "powerpointpasswordrecovery\\.net",
+                            "rarpasswordunlocker\\.net", "recover-windows-password\\.net",
+                            "recoverlostpassword\\.com", "sqlpassword-recovery\\.com",
+                            "windows7-password-reset\\.net", "windowspasswordcracker\\.com"
+                            "windowspasswordreset\\.net", "windowspasswordsrecovery\\.com",
+                            "wordpassword-recovery\\.com", "youtubedownloaderconverter\\.net",
+                            "smartpcfixer\\.com", "1fix\\.org", "cardrecoverypro\\.com",
+                            "drivertuner\\.com", "easyfix\\.org", "errorsfixer\\.org",
+                            "faq800\\.com", "fix1\\.org", "guru4pc\\.net", "howto4pc\\.org",
+                            "official-drivers\\.com", "pceasynow\\.com", "photorecoverypro\\.net",
+                            "regeasypro\\.com", "registryware\\.org", "smartfixer\\.net",
+                            "smartfixer\\.org", "wisefixer\\.com", "wisefixer\\.net",
+                            "wiserecovery\\.com", "passwordunlocker\\.com",
+                            "password-unlocker\\.com", "passwordtech\\.com", "goshareware\\.com",
+                            "nemopdf\\.com", "apowersoft\\.com", "downloaddailymotion\\.com",
+                            "free-download-youtube\\.com", "free-music-downloader\\.com",
+                            "video-download-capture\\.com", "videograbber\\.net",
+                            "recoverwindowspassword\\.com", "password-buster\\.com",
+                            "remorecover\\.com", "remosoftware\\.com"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
