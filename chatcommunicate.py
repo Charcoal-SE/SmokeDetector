@@ -201,7 +201,7 @@ def watcher(ev, wrap2):
             hourstr = "hours" if hours != 1 else "hour"
             minutestr = "minutes" if minutes != 1 else "minute"
             secondstr = "seconds" if seconds != 1 else "second"
-            ev.message.reply("Yay for the [2015 Stack Overflow Moderator Election](http://stackoverflow.com/election/6)! Nominations start in %s %s, %s %s, %s %s and %s %s." % diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
+            ev.message.reply("Yay for the [2015 Stack Overflow Moderator Election](http://stackoverflow.com/election/6)! Nominations start in %s %s, %s %s, %s %s and %s %s." % (diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr))
     if content_lower.startswith("!!/alive"):
         if ev_room == GlobalVars.charcoal_room_id:
             ev.message.reply('Of course')
