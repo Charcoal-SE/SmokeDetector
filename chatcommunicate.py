@@ -203,7 +203,7 @@ def watcher(ev, wrap2):
             minutestr = "minutes" if minutes != 1 else "minute"
             secondstr = "seconds" if seconds != 1 else "second"
             ev.message.reply("Yay for the [2015 Stack Overflow Moderator Election](http://stackoverflow.com/election/6)! Nominations start in %s %s, %s %s, %s %s and %s %s." % (diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr))
-        else if election_start > now:
+        elif election_start > now:
             diff = election_start - now
             hours, remainder = divmod(diff.seconds, 3600)
             minutes, seconds = divmod(remainder, 60)
