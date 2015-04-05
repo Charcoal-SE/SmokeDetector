@@ -190,6 +190,18 @@ def watcher(ev, wrap2):
                              (diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr))
         else:
             ev.message.reply("WINTERBASH IS OVER! :(")
+    if content_lower.startswith("!!/so2015"):
+        election_start = datetime(2015, 4, 6, 20, 0, 0)
+        now = datetime.utcnow()
+        if election_start > now:
+            diff = election_start - now
+            hours, remainder = divmod(diff.seconds, 3600)
+            minutes, seconds = divmod(remainder, 60)
+            daystr = "days" if diff.days != 1 else "day"
+            hourstr = "hours" if hours != 1 else "hour"
+            minutestr = "minutes" if minutes != 1 else "minute"
+            secondstr = "seconds" if seconds != 1 else "second"
+            ev.message.reply("Yay for the [2015 Stack Overflow Moderator Election](http://stackoverflow.com/election/6)! Nominations start in %s %s, %s %s, %s %s and %s %s." % diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr))
     if content_lower.startswith("!!/alive"):
         if ev_room == GlobalVars.charcoal_room_id:
             ev.message.reply('Of course')
