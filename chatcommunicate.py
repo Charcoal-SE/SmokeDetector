@@ -299,7 +299,7 @@ def watcher(ev, wrap2):
             elif "pending" in states or not states:
                 ev.message.reply("CI build is still pending, wait until the build has finished and then pull again.")
     if content_lower.startswith("!!/help"):
-        ev.message.reply("I'm [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector), a bot that detects spam and low-quality posts on the network and posts alerts to chat. A command list is available [here](https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands).")
+        ev.message.reply("I'm [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector), a bot that detects spam and low-quality posts on the network and posts alerts to chat. [A command list is available here](https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands).")
     if content_lower.startswith("!!/apiquota"):
         ev.message.reply(GlobalVars.apiquota)
     if content_lower.startswith("!!/queuestatus"):
