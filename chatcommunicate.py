@@ -305,4 +305,4 @@ def watcher(ev, wrap2):
     if content_lower.startswith("!!/queuestatus"):
         ev.message.reply(GlobalVars.bodyfetcher.print_queue())
     if content_lower.startswith("!!/commands"):
-        ev.message.reply("[Commands](https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands): addblu, rmblu, addwlu, rmwlu, wut, lick, hats, alive, rev, status, reboot, stappit, master, clearbl, block, unblock, errorlogs, pull, help, apiquota, queuestatus, commands")
+        ev.message.reply("[Commands](https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands): addblu, rmblu, addwlu, rmwlu, wut, lick, hats, alive, rev, status, reboot, stappit, master, clearbl, block, unblock, errorlogs, pull, help, apiquota, queuestatus, so2015, commands")
