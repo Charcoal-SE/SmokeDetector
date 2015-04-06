@@ -23,7 +23,8 @@ class FindSpam:
                     "(hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number",
                     "kitchen for sale", "dolphin porn", "pdftoexcelconverter", "keepbrowsersafe", "SpyHunter",
                     "pcerror-fix", "filerepairtool", "combatpcviruses", "SkinCentric",
-                    "JobsTribune", "join the illuminati", "Brorsoft", "Remo Recover"]
+                    "JobsTribune", "join the illuminati", "Brorsoft", "Remo Recover",
+                    "kinnaristeel"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry"]  # "nwb" == "no word boundary"
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
