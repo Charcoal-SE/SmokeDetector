@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from findspam import FindSpam
 import pytest
 
@@ -19,6 +20,7 @@ import pytest
     ('Question', 'I have this number: 111111111111111', '', 'stackoverflow.com', False, False),
     ('Random title', '$$$$$$$$$$$$', '', 'superuser.com', False, True),
     ('Non-spammy title', 'baba', '', 'stackoverflow.com', False, True),
+    ('Title here', '11111111111111', '', 'communitybuilding.stackexchange.com', False, True),
     ('Gmail Tech Support (1-844-202-5571) Gmail tech support number[Toll Free Number]?', '', '', 'stackoverflow.com', False, True),
     ('<>1 - 866-978-6819<>gmail password reset//gmail contact number//gmail customer service//gmail help number', '', '', 'stackoverflow.com', False, True),
     ('Hotmail technical support1 - 844-780-67 62 telephone number Hotmail support helpline number', '', '', 'stackoverflow.com', False, True),
@@ -58,7 +60,8 @@ import pytest
     ('his email address is (SOMEONE@GMAIL.COM)', '', '', 'stackoverflow.com', False, False),
     ('something', 'his email address is (SOMEONE@GMAIL.COM)', '', 'stackoverflow.com', False, False),
     ('something', 'URL: &email=someone@gmail.com', '', 'meta.stackexchange.com', False, False),
-    ('random title', 'URL: page.html#someone@gmail.com', '', 'rpg.stackexchange.com', False, False)
+    ('random title', 'URL: page.html#someone@gmail.com', '', 'rpg.stackexchange.com', False, False),
+    (u'Как рандомно получать числа 1 и 2?', 'Body here', u'Сашка', 'ru.stackoverflow.com', False, False)
 ])
 def test_regexes(title, body, username, site, body_is_summary, match):
     # If we want to test answers separately, this should be changed
