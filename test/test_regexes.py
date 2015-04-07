@@ -57,6 +57,8 @@ import pytest
     ('Array question', 'I have an array with these values: 0 0 0 0 0 0 0 0 0 0 0 0', '', 'stackoverflow.com', False, False),
     ('his email address is (SOMEONE@GMAIL.COM)', '', '', 'stackoverflow.com', False, False),
     ('something', 'his email address is (SOMEONE@GMAIL.COM)', '', 'stackoverflow.com', False, False),
+    ('something', 'URL: &email=someone@gmail.com', '', 'meta.stackexchange.com', False, False),
+    ('random title', 'URL: page.html#someone@gmail.com', '', 'rpg.stackexchange.com', False, False)
 ])
 def test_regexes(title, body, username, site, body_is_summary, match):
     # If we want to test answers separately, this should be changed
