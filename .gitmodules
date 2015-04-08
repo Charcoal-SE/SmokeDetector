@@ -1,3 +1,6 @@
 [submodule "ChatExchange"]
 	path = ChatExchange
 	url = https://github.com/ManishEarth/ChatExchange.git
+[submodule "GibberishClassifier"]
+	path = GibberishClassifier
+	url = https://github.com/ProgramFOX/GibberishClassifier-Python
