@@ -91,7 +91,7 @@ class BodyFetcher:
             gibberish_score = gibberishclassifier.classify(body_no_code)
             if gibberish_score >= 50:
                 GlobalVars.bayesian_testroom.send_message(
-                    "[ SmokeDetector | GibberishClassifierBeta ]"
+                    "[ SmokeDetector | GibberishClassifierBeta ] "
                     "Potential gibberish body (%s%%): [%s](%s) on `%s`"
                     % (gibberish_score, title, link, site)
                 )
@@ -123,8 +123,8 @@ class BodyFetcher:
                     gibberish_score = gibberishclassifier.classify(body_no_code)
                     if gibberish_score >= 50:
                         GlobalVars.bayesian_testroom.send_message(
-                            "[ SmokeDetector | GibberishClassifierBeta ]"
-                            "Potential gibberish body (%s%%): [%s](%s) on `%s`"
+                            "[ SmokeDetector | GibberishClassifierBeta ] "
+                            "Potential gibberish answer (%s%%): [%s](%s) on `%s`"
                             % (gibberish_score, title, link, site)
                         )
             except:
