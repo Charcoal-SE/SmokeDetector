@@ -88,7 +88,7 @@ class BodyFetcher:
 
             body_no_code = regex.sub("<pre>.*?</pre>", "", body, flags=regex.DOTALL)
             body_no_code = regex.sub("<code>.*?</code>", "", body_no_code, flags=regex.DOTALL)
-            body_no_html = regex.sub("</?[a-zA-Z0-9_:/%?=\"'\.,-]>", "", body_no_code)
+            body_no_html = regex.sub("</?[a-zA-Z0-9_:/%?=\"'\\.,\\s-]>", "", body_no_code)
             gibberish_score = gibberishclassifier.classify(body_no_html)
             if gibberish_score >= 50 and site != "math.stackexchange.com"\
                     and site != "ru.stackoverflow.com":
@@ -122,7 +122,7 @@ class BodyFetcher:
 
                     body_no_code = regex.sub("<pre>.*?</pre>", "", body, flags=regex.DOTALL)
                     body_no_code = regex.sub("<code>.*?</code>", "", body_no_code, flags=regex.DOTALL)
-                    body_no_html = regex.sub("</?[a-zA-Z0-9_:/%?=\"'\.,-]>", "", body_no_code)
+                    body_no_html = regex.sub("</?[a-zA-Z0-9_:/%?=\"'\\.,\\s-]>", "", body_no_code)
                     gibberish_score = gibberishclassifier.classify(body_no_html)
                     if gibberish_score >= 50 and site != "math.stackexchange.com"\
                             and site != "ru.stackoverflow.com":
