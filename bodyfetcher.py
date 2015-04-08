@@ -89,7 +89,7 @@ class BodyFetcher:
             body_no_code = regex.sub("<pre>.*?</pre>", "", body, flags=regex.DOTALL)
             body_no_code = regex.sub("<code>.*?</code>", "", body_no_code, flags=regex.DOTALL)
             gibberish_score = gibberishclassifier.classify(body_no_code)
-            if gibberish_score >= 50:
+            if gibberish_score >= 50 and site != "math.stackexchange.com":
                 GlobalVars.bayesian_testroom.send_message(
                     "[ SmokeDetector | GibberishClassifierBeta ] "
                     "Potential gibberish body (%s%%): [%s](%s) on `%s`"
@@ -121,7 +121,7 @@ class BodyFetcher:
                     body_no_code = regex.sub("<pre>.*?</pre>", "", body, flags=regex.DOTALL)
                     body_no_code = regex.sub("<code>.*?</code>", "", body_no_code, flags=regex.DOTALL)
                     gibberish_score = gibberishclassifier.classify(body_no_code)
-                    if gibberish_score >= 50:
+                    if gibberish_score >= 50 and site != "math.stackexchange.com":
                         GlobalVars.bayesian_testroom.send_message(
                             "[ SmokeDetector | GibberishClassifierBeta ] "
                             "Potential gibberish answer (%s%%): [%s](%s) on `%s`"
