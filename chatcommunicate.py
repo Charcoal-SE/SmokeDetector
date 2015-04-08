@@ -307,7 +307,7 @@ def watcher(ev, wrap2):
     if content_lower.startswith("!!/apiquota"):
         ev.message.reply(GlobalVars.apiquota)
     if content_lower.startswith("!!/queuestatus"):
-        ev.message.reply(GlobalVars.bodyfetcher.print_queue())
+        post_message_in_room(ev_room, GlobalVars.bodyfetcher.print_queue(), False)
     if content_lower.startswith("!!/blame") and ev_room == GlobalVars.meta_tavern_room_id:
         GlobalVars.tavern_users_chatting = list(set(GlobalVars.tavern_users_chatting))  # Make unique
         user_to_blame = random.choice(GlobalVars.tavern_users_chatting)
