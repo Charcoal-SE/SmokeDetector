@@ -4,6 +4,7 @@ import json
 import time
 import requests
 from GibberishClassifier import gibberishclassifier
+import regex
 
 
 class BodyFetcher:
@@ -85,7 +86,9 @@ class BodyFetcher:
                 except:
                     print "NOP"
 
-            gibberish_score = gibberishclassifier.classify(body)
+            body_no_code = regex.sub("<pre>.*?</pre>", "", body, flags=regex.DOTALL)
+            body_no_code = regex.sub("<code>.*?</code>", "", body_no_code, flags=regex.DOTALL)
+            gibberish_score = gibberishclassifier.classify(body_no_code)
             if gibberish_score >= 50:
                 GlobalVars.bayesian_testroom.send(
                     "[ SmokeDetector | GibberishClassifierBeta ]"
@@ -115,7 +118,9 @@ class BodyFetcher:
                         except:
                             print "NOP"
 
-                    gibberish_score = gibberishclassifier.classify(body)
+                    body_no_code = regex.sub("<pre>.*?</pre>", "", body, flags=regex.DOTALL)
+                    body_no_code = regex.sub("<code>.*?</code>", "", body_no_code, flags=regex.DOTALL)
+                    gibberish_score = gibberishclassifier.classify(body_no_code)
                     if gibberish_score >= 50:
                         GlobalVars.bayesian_testroom.send(
                             "[ SmokeDetector | GibberishClassifierBeta ]"
