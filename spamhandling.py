@@ -66,7 +66,9 @@ def check_if_spam_json(data):
 
 
 def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_answer):
-    reason = ", ".join(reasons)
+    reasons = list(set(reasons))
+    reasons.sort()
+    reason = ", ".join(reasons).capitalize()
     append_to_latest_questions(site, post_id, title if not is_answer else "")
     if len(reasons) == 1 and ("All-caps title" in reasons or
                               "Repeating characters in title" in reasons or
