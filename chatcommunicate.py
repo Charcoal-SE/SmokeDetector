@@ -30,6 +30,10 @@ def watcher(ev, wrap2):
     message_parts = ev.message.content_source.split(" ")
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
     content_lower = ev.content.lower()
+
+    ev_user_name = ev.data["user_name"].encode('utf-8')
+    GlobalVars.tavern_users_chatting.append(ev_user_name)
+
     if re.compile(":[0-9]+").search(message_parts[0]):
         if (second_part_lower.startswith("false") or second_part_lower.startswith("fp")) \
                 and is_privileged(ev_room, ev_user_id):
@@ -303,4 +307,8 @@ def watcher(ev, wrap2):
     if content_lower.startswith("!!/apiquota"):
         ev.message.reply(GlobalVars.apiquota)
     if content_lower.startswith("!!/queuestatus"):
-        ev.message.reply(GlobalVars.bodyfetcher.print_queue())
+        post_message_in_room(ev_room, GlobalVars.bodyfetcher.print_queue(), False)
+    if content_lower.startswith("!!/blame") and ev_room == GlobalVars.meta_tavern_room_id:
+        GlobalVars.tavern_users_chatting = list(set(GlobalVars.tavern_users_chatting))  # Make unique
+        user_to_blame = random.choice(GlobalVars.tavern_users_chatting)
+        ev.message.reply("It's " + user_to_blame + "'s fault.")

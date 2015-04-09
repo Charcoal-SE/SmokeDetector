@@ -54,3 +54,4 @@ class GlobalVars:
     apiquota = -1
     bodyfetcher = None
     se_sites = []
+    tavern_users_chatting = []
