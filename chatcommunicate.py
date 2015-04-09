@@ -312,3 +312,5 @@ def watcher(ev, wrap2):
         GlobalVars.tavern_users_chatting = list(set(GlobalVars.tavern_users_chatting))  # Make unique
         user_to_blame = random.choice(GlobalVars.tavern_users_chatting)
         ev.message.reply("It's " + user_to_blame + "'s fault.")
+    if "smokedetector" in content_lower and "fault" in content_lower and "xkcdbot" in ev_user_name.lower():
+        ev.message.reply("Liar")
