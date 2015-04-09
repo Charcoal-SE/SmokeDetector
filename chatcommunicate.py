@@ -31,7 +31,7 @@ def watcher(ev, wrap2):
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
     content_lower = ev.content.lower()
 
-    ev_user_name = str(ev.data["user_name"])
+    ev_user_name = ev.data["user_name"].encode('utf-8')
     GlobalVars.tavern_users_chatting.append(ev_user_name)
 
     if re.compile(":[0-9]+").search(message_parts[0]):
