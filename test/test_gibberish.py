@@ -46,3 +46,5 @@ def test_gibberish_classification():
         == classify_gibberish("This is code:", "superuser.com")
     assert classify_gibberish("", "stackoverflow.com") == (False, 1)
     assert classify_gibberish("asaaasaadsapgoeaaaaafallppppp", "stackoverflow.com")[0] is True
+    assert classify_gibberish("Try this\n<pre><code>some code here</code></pre>", "stackoverflow.com") \
+        == (False, 1)

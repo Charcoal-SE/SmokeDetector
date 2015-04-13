@@ -28,7 +28,9 @@ def load_files():
             GlobalVars.auto_ignored_posts = pickle.load(f)
     if os.path.isfile("frequentSentences.txt"):
         with open("frequentSentences.txt", "r") as f:
-            GlobalVars.frequent_sentences = f.readlines()
+            lines = f.readlines()
+            for line in lines:
+                GlobalVars.frequent_sentences.append(line.strip())
 
 
 def filter_auto_ignored_posts():
