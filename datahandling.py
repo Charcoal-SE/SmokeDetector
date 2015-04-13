@@ -4,6 +4,7 @@ from datetime import datetime
 from globalvars import GlobalVars
 import requests
 import json
+import regex
 
 
 # methods to load files and filter data in them:
@@ -25,6 +26,9 @@ def load_files():
     if os.path.isfile("autoIgnoredPosts.txt"):
         with open("autoIgnoredPosts.txt", "r") as f:
             GlobalVars.auto_ignored_posts = pickle.load(f)
+    if os.path.isfile("frequentSentences.txt"):
+        with open("frequentSentences.txt", "r") as f:
+            GlobalVars.frequent_sentences = f.readlines()
 
 
 def filter_auto_ignored_posts():
@@ -198,3 +202,11 @@ def check_site_and_get_full_name(site):
         if site == full_name or site == short_name:
             return True, full_name
     return False, "Could not find the given site."
+
+# method to check whether a sentence is frequent of occurrence:
+
+
+def is_frequent_sentence(sentence):
+    no_punctuation = regex.sub(r"[^a-zA-Z0-9\s]", "", sentence).lower()
+    merged_whitespace = regex.sub(r"\s+", " ", no_punctuation).strip()
+    return merged_whitespace in GlobalVars.frequent_sentences

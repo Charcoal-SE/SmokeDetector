@@ -55,3 +55,4 @@ class GlobalVars:
     bodyfetcher = None
     se_sites = []
     tavern_users_chatting = []
+    frequent_sentences = []

@@ -3,7 +3,7 @@ from globalvars import GlobalVars
 import json
 import time
 import requests
-from GibberishClassifier import gibberishclassifier
+from gibberish import classify_gibberish
 import regex
 
 
@@ -86,18 +86,13 @@ class BodyFetcher:
                 except:
                     print "NOP"
 
-            body_no_code = regex.sub("<pre>.*?</pre>", "", body, flags=regex.DOTALL)
-            body_no_code = regex.sub("<code>.*?</code>", "", body_no_code, flags=regex.DOTALL)
-            body_no_html = regex.sub("</?[a-zA-Z0-9_:/%?=\"'\\.,\\s-]>", "", body_no_code).strip()
-            if body_no_html != "":
-                gibberish_score = gibberishclassifier.classify(body_no_html)
-                if gibberish_score >= 65 and site != "math.stackexchange.com"\
-                        and site != "ru.stackoverflow.com":
-                    GlobalVars.bayesian_testroom.send_message(
-                        "[ SmokeDetector | GibberishClassifierBeta ] "
-                        "Potential gibberish body (%s%%): [%s](%s) on `%s`"
-                        % (gibberish_score, title, link, site)
-                    )
+            classified, gibberish_score = classify_gibberish(body, site)
+            if classified and gibberish_score >= 65:
+                GlobalVars.bayesian_testroom.send_message(
+                    "[ SmokeDetector | GibberishClassifierBeta ] "
+                    "Potential gibberish body (%s%%): [%s](%s) on `%s`"
+                    % (gibberish_score, title, link, site)
+                )
             try:
                 for answer in post["answers"]:
                     answer_title = ""
@@ -121,18 +116,13 @@ class BodyFetcher:
                         except:
                             print "NOP"
 
-                    body_no_code = regex.sub("<pre>.*?</pre>", "", body, flags=regex.DOTALL)
-                    body_no_code = regex.sub("<code>.*?</code>", "", body_no_code, flags=regex.DOTALL)
-                    body_no_html = regex.sub("</?[a-zA-Z0-9_:/%?=\"'\\.,\\s-]>", "", body_no_code).strip()
-                    if body_no_html != "":
-                        gibberish_score = gibberishclassifier.classify(body_no_html)
-                        if gibberish_score >= 65 and site != "math.stackexchange.com"\
-                                and site != "ru.stackoverflow.com":
-                            GlobalVars.bayesian_testroom.send_message(
-                                "[ SmokeDetector | GibberishClassifierBeta ] "
-                                "Potential gibberish answer (%s%%): [%s](%s) on `%s`"
-                                % (gibberish_score, title, link, site)
-                            )
+                    classified, gibberish_score = classify_gibberish(body, site)
+                    if classified and gibberish_score >= 65:
+                        GlobalVars.bayesian_testroom.send_message(
+                            "[ SmokeDetector | GibberishClassifierBeta ] "
+                            "Potential gibberish answer (%s%%): [%s](%s) on `%s`"
+                            % (gibberish_score, title, link, site)
+                        )
             except:
                 print "no answers"
         return
