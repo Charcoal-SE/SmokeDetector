@@ -4,7 +4,6 @@ import json
 import time
 import requests
 from gibberish import classify_gibberish
-import regex
 
 
 class BodyFetcher:
