@@ -24,7 +24,9 @@ class FindSpam:
                     "kitchen for sale", "dolphin porn", "pdftoexcelconverter", "keepbrowsersafe", "SpyHunter",
                     "pcerror-fix", "filerepairtool", "combatpcviruses", "SkinCentric",
                     "JobsTribune", "join the illuminati", "Brorsoft", "Remo Recover",
-                    "kinnaristeel", "clash of (clan|stone)s? (cheats?|tricks?|gems?)"]
+                    "kinnaristeel", "clash of (clan|stone)s? (cheats?|tricks?|gems?)",
+                    "\p{script=Hangul}",
+                    r"(?ix)\b B [\s_]* A  [\s_]* M  \W{0,5} W [\s_]* A  [\s_]* R  [\s_]* \.? [\s_]* C [\s_]* O [\s_]* M \b"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "aging ?cream", u"오피", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
