@@ -26,13 +26,51 @@ class GlobalVars:
     parser = HTMLParser.HTMLParser()
     wrap = Client("stackexchange.com")
     wrapm = Client("meta.stackexchange.com")
-    privileged_users = {charcoal_room_id: ["117490", "66258", "31768", "103081", "73046", "88521", "59776", "31465",
-                                           "88577", "34124", "32436"],
-                        meta_tavern_room_id: ["259867", "244519", "244382", "194047", "158100", "178438", "237685",
-                                              "215468", "229438", "180276", "161974", "244382", "186281", "266094",
-                                              "245167", "230261", "213575", "241919", "203389", "202832", "160017",
-                                              "201151", "188558", "229166", "159034", "203972", "188673", "258672",
-                                              "227577", "255735", "279182", "271104", "220428", "153355", "238426"]}
+    privileged_users = {charcoal_room_id: ["117490",  # pizza
+                                           "66258",  # Andy
+                                           "31768",  # ManishEarth
+                                           "103081",  # hichris123
+                                           "73046",  # Undo
+                                           "88521",  # ProgramFOX
+                                           "59776",  # Doorknob
+                                           "31465",  # Seth
+                                           "88577",  # Santa Claus
+                                           "34124",  # Andrew Leach
+                                           "32436"],  # tchrist
+                        meta_tavern_room_id: ["259867",  # pizza
+                                              "244519",  # Roombatron5000
+                                              "244382",  # TGMCians
+                                              "194047",  # Jan Dvorak
+                                              "158100",  # rene
+                                              "178438",  # Manishearth
+                                              "237685",  # hichris123
+                                              "215468",  # Undo
+                                              "229438",  # ProgramFOX
+                                              "180276",  # Doorknob
+                                              "161974",  # Lynn Crumbling
+                                              "186281",  # Andy
+                                              "266094",  # Unihedro
+                                              "245167",  # Infinite Recursion
+                                              "230261",  # Jason C
+                                              "213575",  # Braiam
+                                              "241919",  # Andrew T.
+                                              "203389",  # backwards-Seth
+                                              "202832",  # Mooseman
+                                              "160017",  # DragonLord the Fiery
+                                              "201151",  # bummi
+                                              "188558",  # Frank
+                                              "229166",  # Santa Claus
+                                              "159034",  # Kevin Brown
+                                              "203972",  # PeterJ
+                                              "188673",  # Alexis King
+                                              "258672",  # AstroCB
+                                              "227577",  # Sam
+                                              "255735",  # cybermonkey
+                                              "279182",  # Ixrec
+                                              "271104",  # James
+                                              "220428",  # Qantas 94 Heavy
+                                              "153355",  # tchrist
+                                              "238426"]}  # Ed Cottrell
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345"}
 
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
