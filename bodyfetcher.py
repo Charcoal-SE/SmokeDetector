@@ -62,7 +62,11 @@ class BodyFetcher:
         except requests.exceptions.Timeout:
             return  # could add some retrying logic here, but eh.
 
-        GlobalVars.apiquota = response["quota_remaining"]
+        if "quota_remaining" in response:
+            GlobalVars.apiquota = response["quota_remaining"]
+        else:
+            GlobalVars.apiquota = 0
+            return
 
         for post in response["items"]:
             title = GlobalVars.parser.unescape(post["title"])
