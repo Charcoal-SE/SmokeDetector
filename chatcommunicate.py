@@ -195,20 +195,12 @@ def watcher(ev, wrap2):
         else:
             ev.message.reply("WINTERBASH IS OVER! :(")
     if content_lower.startswith("!!/so2015"):
-        primary_start = datetime(2015, 4, 13, 20, 0, 0)
         election_start = datetime(2015, 4, 17, 20, 0, 0)
+        election_end = datetime(2015, 4, 21, 20, 0, 0)
 
         now = datetime.utcnow()
-        if primary_start > now:
-            diff = primary_start - now
-            hours, remainder = divmod(diff.seconds, 3600)
-            minutes, seconds = divmod(remainder, 60)
-            daystr = "days" if diff.days != 1 else "day"
-            hourstr = "hours" if hours != 1 else "hour"
-            minutestr = "minutes" if minutes != 1 else "minute"
-            secondstr = "seconds" if seconds != 1 else "second"
-            ev.message.reply("Yay for the [2015 Stack Overflow Moderator Election](http://stackoverflow.com/election/6)! Primaries begin in %s %s, %s %s, %s %s and %s %s." % (diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr))
-        elif election_start > now:
+
+        if election_start > now:
             diff = election_start - now
             hours, remainder = divmod(diff.seconds, 3600)
             minutes, seconds = divmod(remainder, 60)
@@ -217,6 +209,17 @@ def watcher(ev, wrap2):
             minutestr = "minutes" if minutes != 1 else "minute"
             secondstr = "seconds" if seconds != 1 else "second"
             ev.message.reply("Yay for the [2015 Stack Overflow Moderator Election](http://stackoverflow.com/election/6)! Election voting begins in %s %s, %s %s, %s %s and %s %s." % (diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr))
+        elif election_end > now:
+            diff = election_end - now
+            hours, remainder = divmod(diff.seconds, 3600)
+            minutes, seconds = divmod(remainder, 60)
+            daystr = "days" if diff.days != 1 else "day"
+            hourstr = "hours" if hours != 1 else "hour"
+            minutestr = "minutes" if minutes != 1 else "minute"
+            secondstr = "seconds" if seconds != 1 else "second"
+            ev.message.reply("Yay for the [2015 Stack Overflow Moderator Election](http://stackoverflow.com/election/6)! Election voting ends in %s %s, %s %s, %s %s and %s %s." % (diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr))
+        elif now < election_end:
+            ev.message.reply("Congrats to Martijn Pieters, someone else, and someone else!")
     if content_lower.startswith("!!/alive"):
         if ev_room == GlobalVars.charcoal_room_id:
             ev.message.reply('Of course')
