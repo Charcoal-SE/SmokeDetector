@@ -69,6 +69,8 @@ class BodyFetcher:
             return
 
         for post in response["items"]:
+            if "title" not in post or "body" not in post:
+                continue
             title = GlobalVars.parser.unescape(post["title"])
             body = GlobalVars.parser.unescape(post["body"])
             link = post["link"]
