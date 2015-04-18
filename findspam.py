@@ -28,7 +28,7 @@ class FindSpam:
                     r"(?x:B [\s_]* A [\s_]* M \W{0,5} W [\s_]* A [\s_]* R [\s_]* \.? [\s_]* C [\s_]* O [\s_]* M)",
                     "slumber pm", "1-844-400-7325"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
-                        "aging ?cream", u"오피", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "\p{script=Hangul}"]
+                        "aging ?cream", u"오피", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "optimalstackfacts",
