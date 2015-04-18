@@ -25,7 +25,8 @@ class FindSpam:
                     "pcerror-fix", "filerepairtool", "combatpcviruses", "SkinCentric",
                     "JobsTribune", "join the illuminati", "Brorsoft", "Remo Recover",
                     "kinnaristeel", "clash of (clan|stone)s? (cheats?|tricks?|gems?)",
-                    r"(?x:B [\s_]* A [\s_]* M \W{0,5} W [\s_]* A [\s_]* R [\s_]* \.? [\s_]* C [\s_]* O [\s_]* M)"]
+                    r"(?x:B [\s_]* A [\s_]* M \W{0,5} W [\s_]* A [\s_]* R [\s_]* \.? [\s_]* C [\s_]* O [\s_]* M)",
+                    "slumber pm"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "aging ?cream", u"오피", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "\p{script=Hangul}"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
@@ -88,7 +89,7 @@ class FindSpam:
                             "bestcelebritiesvideo\\.com", "shopnhlbruins\\.com",
                             "repairpstrecovery\\.com", "downloadscanpst\\.com",
                             "listoffreeware\\.com", "bigasoft\\.com", "opclub07\\.com",
-                            "allavsoft", "vpnranks\\.com"]
+                            "allavsoft", "vpnranks\\.com", "garciniasecretdietabout\\.com"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
