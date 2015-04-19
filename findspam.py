@@ -84,7 +84,7 @@ class FindSpam:
                             "video-download-capture\\.com", "videograbber\\.net",
                             "recoverwindowspassword\\.com", "password-buster\\.com",
                             "remorecover\\.com", "remosoftware\\.com", "crazybulkreviewsz\\.com",
-                            "patch\\.com", "ajgilworld\\.com", "santomais", "viilms",
+                            "\\bpatch\\.com\\b", "ajgilworld\\.com", "santomais", "viilms",
                             "clashofclansastucegemmes\\.com", "mothersday-2014\\.org",
                             "bestcelebritiesvideo\\.com", "shopnhlbruins\\.com",
                             "repairpstrecovery\\.com", "downloadscanpst\\.com",
