@@ -21,7 +21,7 @@ class FindSpam:
                     "(fake|original|uk) (passports?|driver'?s? licen[cs]e|ID cards?)",
                     "(support|service|helpline)( phone)? number|1[ -]?[ -]?[ -]?866[ -]?978[ -]?(6819|6762)",
                     "(hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number",
-                    "kitchen for sale", "dolphin porn", "pdftoexcelconverter", "keepbrowsersafe", "SpyHunter",
+                    "kitchen for sale", "pdftoexcelconverter", "keepbrowsersafe", "SpyHunter",
                     "pcerror-fix", "filerepairtool", "combatpcviruses", "SkinCentric",
                     "JobsTribune", "join the illuminati", "Brorsoft", "Remo Recover",
                     "kinnaristeel", "clash of (clan|stone)s? (cheats?|tricks?|gems?)",
