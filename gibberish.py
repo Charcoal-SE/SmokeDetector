@@ -9,7 +9,7 @@ def strip_unwanted(body, site):
     body_no_code = regex.sub("<pre>.*?</pre>", "", body, flags=regex.DOTALL)
     body_no_code = regex.sub("<code>.*?</code>", "", body_no_code, flags=regex.DOTALL)
     body_html_stripped = regex.sub("</?[a-zA-Z0-9_:/%?=\"'\\.,\\s-]+>", "", body_no_code)
-    if site in ["math.stackexchange.com", "puzzling.stackexchange.com", "mathoverflow.net"]:
+    if site in ["math.stackexchange.com", "puzzling.stackexchange.com", "mathoverflow.net", "crypto.stackexchange.com"]:
         body_no_mathjax = regex.sub(r"(?<!\\)(\$\$?).+?(?<!\\)\1", "", body_html_stripped, flags=regex.DOTALL)
     else:
         body_no_mathjax = body_html_stripped
