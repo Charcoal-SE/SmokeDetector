@@ -70,7 +70,8 @@ class GlobalVars:
                                               "271104",  # James
                                               "220428",  # Qantas 94 Heavy
                                               "153355",  # tchrist
-                                              "238426"]}  # Ed Cottrell
+                                              "238426",  # Ed Cottrell
+                                              "166899"]}  # Second Rikudo
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345"}
 
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
