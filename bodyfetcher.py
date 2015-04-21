@@ -12,6 +12,7 @@ class BodyFetcher:
     specialCases = {"stackoverflow.com": 5,
                     "serverfault.com": 5,
                     "superuser.com": 5,
+                    "math.stackexchange.com": 5,
                     "drupal.stackexchange.com": 1,
                     "meta.stackexchange.com": 1}
 
