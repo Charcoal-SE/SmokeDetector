@@ -112,8 +112,7 @@ while True:
         if a is not None and a != "":
             is_spam, reason = check_if_spam_json(a)
             if is_spam:
-                t = Thread(target=handle_spam_json, args=(a, reason))
-                t.start()
+                handle_spam_json(a, reason)
             else:
                 t = Thread(target=GlobalVars.bodyfetcher.add_to_queue,
                            args=(a,))
