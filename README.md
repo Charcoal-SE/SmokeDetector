@@ -24,7 +24,7 @@ sudo pip install regex
 ```
 
 To run, use `nocrash.sh` (preferably in a daemon-able mode). Like in a `screen` session.
-You can also use `python ws.py`, but then SmokeDetector will get shutted down after an hour; when running from `nocrash.sh`, it will get restarted. (It does this shutting down to be sure that closed websockets, if any, are open again)
+You can also use `python ws.py`, but then SmokeDetector will get shutted down after 6 hours; when running from `nocrash.sh`, it will get restarted. (It does this shutting down to be sure that closed websockets, if any, are open again)
 
 
 You can run `. ChatExchange/setp.sh` to set local environment variables so that you don't have to log in every time. 
