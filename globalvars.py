@@ -37,7 +37,7 @@ class GlobalVars:
                                            "88577",  # Santa Claus
                                            "34124",  # Andrew Leach
                                            "32436"],  # tchrist
-                        meta_tavern_room_id: ["259867",  # pizza
+                        meta_tavern_room_id: ["259867",  # 2mkgz
                                               "244519",  # Roombatron5000
                                               "244382",  # TGMCians
                                               "194047",  # Jan Dvorak
@@ -71,7 +71,8 @@ class GlobalVars:
                                               "220428",  # Qantas 94 Heavy
                                               "153355",  # tchrist
                                               "238426",  # Ed Cottrell
-                                              "166899"]}  # Second Rikudo
+                                              "166899",  # Second Rikudo
+                                              "287999"]}  # ASCIIThenANSI
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345"}
 
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
