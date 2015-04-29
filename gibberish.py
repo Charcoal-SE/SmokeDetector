@@ -25,7 +25,8 @@ def classify_gibberish(body, site):
     # Don't classify if the only text is a "frequent sentence", because
     # these are very short so they give inaccurate results when classifying.
     if body_plain_text == "" or is_frequent_sentence(body_plain_text)\
-            or site in ["ja.stackoverflow.com", "ru.stackoverflow.com", "pt.stackoverflow.com"]:
+            or site in ["ja.stackoverflow.com", "ru.stackoverflow.com", "pt.stackoverflow.com",
+                        "rus.stackexchange.com"]:
         return False, 1
     score = gibberishclassifier.classify(body_plain_text)
     return True, score
