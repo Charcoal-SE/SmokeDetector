@@ -63,7 +63,8 @@ import pytest
     ('random title', 'URL: page.html#someone@gmail.com', '', 'rpg.stackexchange.com', False, False),
     (u'Как рандомно получать числа 1 и 2?', 'Body here', u'Сашка', 'ru.stackoverflow.com', False, False),
     ('Should not be caught: http://example.com', '', '', 'drupal.stackexchange.com', False, False),
-    ('Should not be caught: https://www.example.com', '', '', 'drupal.stackexchange.com', False, False)
+    ('Should not be caught: https://www.example.com', '', '', 'drupal.stackexchange.com', False, False),
+    ('Should not be caught: something@example.com', '', '', 'drupal.stackexchange.com', False, False)
 ])
 def test_regexes(title, body, username, site, body_is_summary, match):
     # If we want to test answers separately, this should be changed
