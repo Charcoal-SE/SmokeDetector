@@ -3,7 +3,7 @@ from datetime import datetime
 from ChatExchange.chatexchange.client import Client
 import HTMLParser
 import md5
-
+import ConfigParser
 
 class GlobalVars:
     false_positives = []
@@ -96,3 +96,9 @@ class GlobalVars:
     se_sites = []
     tavern_users_chatting = []
     frequent_sentences = []
+
+    config = ConfigParser.RawConfigParser()
+    config.read('config')
+ 
+    location = config.get("Config", "location")
+    print location

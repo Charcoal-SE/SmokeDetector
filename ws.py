@@ -48,14 +48,19 @@ GlobalVars.s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) 
                GlobalVars.commit_with_author +\
                "](https://github.com/Charcoal-SE/SmokeDetector/commit/" +\
                GlobalVars.commit +\
-               ") (hosted by Undo)"
+               ") (running on " +\
+               GlobalVars.location +\
+               ")"
 GlobalVars.s_reverted = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] " \
                         "SmokeDetector started in [reverted mode](https://github.com/Charcoal-SE/SmokeDetector/blob/master/RevertedMode.md) " \
                         "at [rev " + \
                         GlobalVars.commit_with_author + \
                         "](https://github.com/Charcoal-SE/SmokeDetector/commit/" + \
                         GlobalVars.commit + \
-                        ") (hosted by Undo)"
+                        ") (running on" +\
+                        GlobalVars.location +\
+                        ")"
+
 GlobalVars.charcoal_hq = GlobalVars.wrap.get_room(GlobalVars.charcoal_room_id)
 tavern_id = GlobalVars.meta_tavern_room_id
 GlobalVars.tavern_on_the_meta = GlobalVars.wrapm.get_room(tavern_id)
