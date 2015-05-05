@@ -5,6 +5,7 @@ import HTMLParser
 import md5
 import ConfigParser
 
+
 class GlobalVars:
     false_positives = []
     whitelisted_users = []
@@ -99,6 +100,6 @@ class GlobalVars:
 
     config = ConfigParser.RawConfigParser()
     config.read('config')
- 
+
     location = config.get("Config", "location")
     print location
