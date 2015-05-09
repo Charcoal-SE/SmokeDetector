@@ -99,7 +99,8 @@ class FindSpam:
                             "vpnfaqs\\.com", "vpnanswers\\.com", "bestcheapvpnservice\\.com",
                             "unblockingtwitter\\.com", "openingblockedsite\\.com",
                             "arabicdownloads\\.com", "arabicsoftdownload\\.com",
-                            "repairtoolbox\\.com", "couchsurfing\\.com"]
+                            "repairtoolbox\\.com", "couchsurfing\\.com",
+                            "gta5codes\\.fr"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
