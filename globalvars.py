@@ -73,7 +73,8 @@ class GlobalVars:
                                               "153355",  # tchrist
                                               "238426",  # Ed Cottrell
                                               "166899",  # Second Rikudo
-                                              "287999"]}  # ASCIIThenANSI
+                                              "287999",  # ASCIIThenANSI
+                                              "208518"]}  # JNat
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345"}
 
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
