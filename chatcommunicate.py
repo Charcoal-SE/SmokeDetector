@@ -36,7 +36,7 @@ def watcher(ev, wrap2):
 
     if re.compile(":[0-9]+").search(message_parts[0]):
         if (second_part_lower.startswith("false") or second_part_lower.startswith("fp")) \
-                and is_privileged(ev_room, ev_user_id):
+                and is_privileged(ev_room, ev_user_id, wrap2):
             try:
                 should_delete = True
                 msg_id = int(message_parts[0][1:])
@@ -77,7 +77,7 @@ def watcher(ev, wrap2):
             except:
                 pass  # couldn't delete message
         if (second_part_lower.startswith("true") or second_part_lower.startswith("tp")) \
-                and is_privileged(ev_room, ev_user_id):
+                and is_privileged(ev_room, ev_user_id, wrap2):
             try:
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
@@ -109,7 +109,7 @@ def watcher(ev, wrap2):
                             ev.message.reply("`true`/`tp` cannot be used for answers because their job is to add the title of the *question* to the Bayesian doctype 'bad'. If you want to blacklist the poster of the answer, use `trueu` or `tpu`.")
             except:
                 pass
-        if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id):
+        if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id, wrap2):
             try:
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
@@ -123,7 +123,7 @@ def watcher(ev, wrap2):
             except:
                 pass
         if second_part_lower.startswith("delete") or second_part_lower.startswith("remove") or second_part_lower.startswith("gone") \
-                and is_privileged(ev_room, ev_user_id):
+                and is_privileged(ev_room, ev_user_id, wrap2):
             try:
                 msg_id = int(message_parts[0][1:])
                 msg_to_delete = wrap2.get_message(msg_id)
@@ -132,7 +132,7 @@ def watcher(ev, wrap2):
             except:
                 pass  # couldn't delete message
     if content_lower.startswith("!!/addblu") \
-            and is_privileged(ev_room, ev_user_id):
+            and is_privileged(ev_room, ev_user_id, wrap2):
         uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
             add_blacklisted_user((uid, val))
@@ -142,7 +142,7 @@ def watcher(ev, wrap2):
         else:
             ev.message.reply("Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`.")
     if content_lower.startswith("!!/rmblu") \
-            and is_privileged(ev_room, ev_user_id):
+            and is_privileged(ev_room, ev_user_id, wrap2):
         uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
             if remove_blacklisted_user((uid, val)):
@@ -154,7 +154,7 @@ def watcher(ev, wrap2):
         else:
             ev.message.reply("Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`.")
     if content_lower.startswith("!!/addwlu") \
-            and is_privileged(ev_room, ev_user_id):
+            and is_privileged(ev_room, ev_user_id, wrap2):
         uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
             add_whitelisted_user((uid, val))
@@ -164,7 +164,7 @@ def watcher(ev, wrap2):
         else:
             ev.message.reply("Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`.")
     if content_lower.startswith("!!/rmwlu") \
-            and is_privileged(ev_room, ev_user_id):
+            and is_privileged(ev_room, ev_user_id, wrap2):
         uid, val = get_user_from_list_command(content_lower)
         if uid != -1 and val != "":
             if remove_whitelisted_user((uid, val)):
@@ -243,19 +243,19 @@ def watcher(ev, wrap2):
             minutestr = "minutes" if minutes != 1 else "minute"
             ev.message.reply('Running since %s UTC (%s %s)' % (GlobalVars.startup_utc, minutes, minutestr))
     if content_lower.startswith("!!/reboot"):
-        if is_privileged(ev_room, ev_user_id):
+        if is_privileged(ev_room, ev_user_id, wrap2):
             post_message_in_room(ev_room, "Goodbye, cruel world")
             os._exit(5)
     if content_lower.startswith("!!/stappit"):
-        if is_privileged(ev_room, ev_user_id):
+        if is_privileged(ev_room, ev_user_id, wrap2):
             post_message_in_room(ev_room, "Goodbye, cruel world")
             os._exit(6)
     if content_lower.startswith("!!/master"):
-        if is_privileged(ev_room, ev_user_id):
+        if is_privileged(ev_room, ev_user_id, wrap2):
             ev.message.reply("Checking out to master and restarting...")
             os._exit(8)
     if content_lower.startswith("!!/clearbl"):
-        if is_privileged(ev_room, ev_user_id):
+        if is_privileged(ev_room, ev_user_id, wrap2):
             if os.path.isfile("blacklistedUsers.txt"):
                 os.remove("blacklistedUsers.txt")
                 GlobalVars.blacklisted_users = []
@@ -263,7 +263,7 @@ def watcher(ev, wrap2):
             else:
                 ev.message.reply("There are no blacklisted users at the moment.")
     if content_lower.startswith("!!/block"):
-        if is_privileged(ev_room, ev_user_id):
+        if is_privileged(ev_room, ev_user_id, wrap2):
             ev.message.reply("blocked")
             timeToBlock = ev.content[9:].strip()
             timeToBlock = int(timeToBlock) if timeToBlock else 0
@@ -272,11 +272,11 @@ def watcher(ev, wrap2):
             else:
                 GlobalVars.blockedTime = time.time() + 900
     if content_lower.startswith("!!/unblock"):
-        if is_privileged(ev_room, ev_user_id):
+        if is_privileged(ev_room, ev_user_id, wrap2):
             GlobalVars.blockedTime = time.time()
             ev.message.reply("unblocked")
     if content_lower.startswith("!!/errorlogs"):
-        if is_privileged(ev_room, ev_user_id):
+        if is_privileged(ev_room, ev_user_id, wrap2):
             count = -1
             if len(message_parts) != 2:
                 ev.message.reply("The !!/errorlogs command requires 1 argument.")
@@ -291,7 +291,7 @@ def watcher(ev, wrap2):
             logs_part = fetch_lines_from_error_log(count)
             post_message_in_room(ev_room, logs_part, False)
     if content_lower.startswith("!!/pull"):
-        if is_privileged(ev_room, ev_user_id):
+        if is_privileged(ev_room, ev_user_id, wrap2):
             r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
             latest_sha = r.json()["object"]["sha"]
             r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/' + latest_sha + '/statuses')

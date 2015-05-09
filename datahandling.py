@@ -73,8 +73,11 @@ def is_auto_ignored_post(postid_site_tuple):
     return False
 
 
-def is_privileged(room_id_str, user_id_str):
-    return room_id_str in GlobalVars.privileged_users and user_id_str in GlobalVars.privileged_users[room_id_str]
+def is_privileged(room_id_str, user_id_str, wrap2):
+    if room_id_str in GlobalVars.privileged_users and user_id_str in GlobalVars.privileged_users[room_id_str]:
+        return True
+    user = wrap2.get_user(user_id_str)
+    return user.is_moderator
 
 # methods to add/remove whitelisted/blacklisted users, ignored posts, ...
 
