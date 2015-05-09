@@ -20,6 +20,7 @@ import pytest
     ('Question', 'I have this number: 111111111111111', '', 'stackoverflow.com', False, False),
     ('Random title', '$$$$$$$$$$$$', '', 'superuser.com', False, True),
     ('Non-spammy title', 'baba', '', 'stackoverflow.com', False, True),
+    ('Enhance SD Male Enhancement Supplements', '', '', '', False, True),
     ('Title here', '11111111111111', '', 'communitybuilding.stackexchange.com', False, True),
     ('Gmail Tech Support (1-844-202-5571) Gmail tech support number[Toll Free Number]?', '', '', 'stackoverflow.com', False, True),
     ('<>1 - 866-978-6819<>gmail password reset//gmail contact number//gmail customer service//gmail help number', '', '', 'stackoverflow.com', False, True),

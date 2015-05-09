@@ -27,7 +27,8 @@ with open("test/data_test_spamhandling.txt", "r") as f:
     ('Is it unfair to regrade prior work after detecting cheating?', '', 'Village', '', False),
     ('Inner workings of muscles', '', '', 'fitness.stackexchange.com', False),
     ('Cannot access http://stackoverflow.com/ with proxy enabled', '', '', 'superuser.com', False),
-    ('kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '<p>bbbbbbbbbbbbbbbbbbbbbb</p>', '', 'stackoverflow.com', True)
+    ('kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '<p>bbbbbbbbbbbbbbbbbbbbbb</p>', '', 'stackoverflow.com', True),
+    ('Enhance SD Male Enhancement Supplements', '', '', '', True)
 ])
 def test_check_if_spam(title, body, username, site, match):
     # We can't check blacklists/whitelists in tests, so these are set to their default values
