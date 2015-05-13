@@ -16,7 +16,7 @@ def get_user_from_url(url):
 
 
 def fetch_post_url_from_msg_content(content):
-    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w\s,-]+: \[.+]\((http:\/\/[\w.]+\/questions\/\d+\/.+)\) by \[?.*\]?\(?(?:.*)\)? on `[\w.]+`$"
+    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w\s,-]+: \[.+]\((http:\/\/[\w.]+\/questions\/\d+\/.+|http:\/\/[\w.]+\/[qa]\/\d+)\) by \[?.*\]?\(?(?:.*)\)? on `[\w.]+`$"
     m = regex.compile(search_regex).search(content)
     if m is None:
         return None
@@ -40,11 +40,21 @@ def fetch_post_id_and_site_from_url(url):
         post_type = "question"
         search_regex = r"^https?:\/\/([\w.]+)/questions/(\d+)/.+$"
     found = regex.compile(search_regex).search(url)
+    if found is not None:
+        try:
+            post_id = found.group(2)
+            post_site = found.group(1)
+            return (post_id, post_site, post_type)
+        except:
+            return None
+    search_regex = r"^https?:\/\/([\w.]+)/(q|a)/(\d+)"
+    found = regex.compile(search_regex).search(url)
     if found is None:
         return None
     try:
-        post_id = found.group(2)
+        post_id = found.group(3)
         post_site = found.group(1)
+        post_type = "question" if found.group(2) == "q" else "answer"
         return (post_id, post_site, post_type)
     except:
         return None
@@ -56,7 +66,7 @@ def fetch_post_id_and_site_from_msg_content(content):
 
 
 def fetch_owner_url_from_msg_content(content):
-    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w\s,-]+: \[.+]\(http:\/\/[\w.]+\/questions\/\d+\/.+\) by \[.+\]\((.+)\) on `[\w.]+`$"
+    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w\s,-]+: \[.+]\((?:http:\/\/[\w.]+\/questions\/\d+\/.+|http:\/\/[\w.]+\/[qa]\/\d+)\) by \[.+\]\((.+)\) on `[\w.]+`$"
     m = regex.compile(search_regex).search(content)
     if m is None:
         return None
@@ -68,7 +78,7 @@ def fetch_owner_url_from_msg_content(content):
 
 
 def fetch_title_from_msg_content(content):
-    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w\s,-]+: \[(.+)]\(http:\/\/[\w.]+\/questions\/\d+\/.+\) by \[?.*\]?\(?.*\)? on `[\w.]+`$"
+    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w\s,-]+: \[(.+)]\((?:http:\/\/[\w.]+\/questions\/\d+\/.+|http:\/\/[\w.]+\/[qa]\/\d+)\) by \[?.*\]?\(?.*\)? on `[\w.]+`$"
     m = regex.compile(search_regex).search(content)
     if m is None:
         return None
