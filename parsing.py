@@ -27,8 +27,7 @@ def fetch_post_url_from_msg_content(content):
         return None
 
 
-def fetch_post_id_and_site_from_msg_content(content):
-    url = fetch_post_url_from_msg_content(content)
+def fetch_post_id_and_site_from_url(url):
     if url is None:
         return None
     post_type_regex = r"\/\d+#\d+$"
@@ -49,6 +48,11 @@ def fetch_post_id_and_site_from_msg_content(content):
         return (post_id, post_site, post_type)
     except:
         return None
+
+
+def fetch_post_id_and_site_from_msg_content(content):
+    url = fetch_post_url_from_msg_content(content)
+    return fetch_post_id_and_site_from_url(url)
 
 
 def fetch_owner_url_from_msg_content(content):
@@ -107,3 +111,13 @@ def get_user_from_list_command(cmd):  # for example, !!/addblu is a list command
             else:
                 return -2, name
     return uid, site
+
+
+def url_to_shortlink(url):
+    id_and_site = fetch_post_id_and_site_from_url(url)
+    if id_and_site is None:
+        return url
+    if id_and_site[2] == "question":
+        return "http://%s/q/%s" % (id_and_site[1], id_and_site[0])
+    else:
+        return "http://%s/a/%s" % (id_and_site[1], id_and_site[0])

@@ -10,6 +10,7 @@ from parsing import get_user_from_url, unescape_title,\
 from bayesianfuncs import bayesian_score
 from globalvars import GlobalVars
 from datetime import datetime
+from parsing import url_to_shortlink
 
 
 def should_whitelist_prevent_alert(user_url, reasons):
@@ -66,6 +67,7 @@ def check_if_spam_json(data):
 
 
 def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_answer):
+    post_url = url_to_shortlink(post_url)
     reasons = list(set(reasons))
     reasons.sort()
     reason = ", ".join(reasons).capitalize()
