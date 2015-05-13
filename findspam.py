@@ -27,7 +27,7 @@ class FindSpam:
                     "kinnaristeel", "clash of (clan|stone)s? (cheats?|tricks?|gems?)",
                     r"(?x:B [\s_]* A [\s_]* M \W{0,5} W [\s_]* A [\s_]* R [\s_]* \.? [\s_]* C [\s_]* O [\s_]* M)",
                     "slumber pm", "1-844-400-7325", "male enhancement",
-                    "\p{script=Hangul}"]
+                    "\p{script=Hangul}", "abam26"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "aging ?cream", u"오피", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
