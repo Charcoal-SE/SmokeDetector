@@ -26,10 +26,10 @@ class FindSpam:
                     "JobsTribune", "join the illuminati", "Brorsoft", "Remo Recover",
                     "kinnaristeel", "clash of (clan|stone)s? (cheats?|tricks?|gems?)",
                     r"(?x:B [\s_]* A [\s_]* M \W{0,5} W [\s_]* A [\s_]* R [\s_]* \.? [\s_]* C [\s_]* O [\s_]* M)",
-                    "slumber pm", "1-844-400-7325", "male enhancement",
-                    "\p{script=Hangul}", "abam26"]
+                    "slumber pm", "1-844-400-7325", "male enhancement"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
-                        "aging ?cream", u"오피", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))"]
+                        "aging ?cream", u"오피", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))",
+                        "abam26", "\\p{Script=Hangul}"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "optimalstackfacts",
@@ -101,7 +101,7 @@ class FindSpam:
                             "unblockingtwitter\\.com", "openingblockedsite\\.com",
                             "arabicdownloads\\.com", "arabicsoftdownload\\.com",
                             "repairtoolbox\\.com", "couchsurfing\\.com",
-                            "gta5codes\\.fr", "musclezx90au\\.com", "abam26\\.com"]
+                            "gta5codes\\.fr", "musclezx90au\\.com"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
