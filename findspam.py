@@ -113,7 +113,7 @@ class FindSpam:
         {'regex': u"<blockquote>[^\/]*<blockquote>", 'all': True,
          'sites': [], 'reason': "Nested quote blocks in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': u"(?i)\\b(weight (body ?builder|loo?s[es]|reduction)|muscles?|anti aging|loo?s[es] weight|wrinkles?|diet ?plan)\\b", 'all': True,
-         'sites': ["fitness.stackexchange.com", "biology.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
+         'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u"(?i)^(?:(?=.*?\\b(?:online|hd)\\b)(?=.*?(?:free|full|unlimited)).*?movies?\\b|(?=.*?\\b(?:acai|kisn)\\b)(?=.*?care).*products?\\b|(?=.*?packer).*mover)", 'all': True,
          'sites': [], 'reason': "Bad keywords in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u"\\d(?:_*\\d){9}|\\+?\\d_*\\d[\\s\\-]?(?:_*\\d){8,11}|\\d[ -]?\\d{3}[ -]?\\d{3}[ -]?\\d{4}", 'all': True,
