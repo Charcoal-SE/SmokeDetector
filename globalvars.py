@@ -27,7 +27,7 @@ class GlobalVars:
     parser = HTMLParser.HTMLParser()
     wrap = Client("stackexchange.com")
     wrapm = Client("meta.stackexchange.com")
-    privileged_users = {charcoal_room_id: ["117490",  # pizza
+    privileged_users = {charcoal_room_id: ["117490",  # Yes
                                            "66258",  # Andy
                                            "31768",  # ManishEarth
                                            "103081",  # hichris123
@@ -38,7 +38,7 @@ class GlobalVars:
                                            "88577",  # Santa Claus
                                            "34124",  # Andrew Leach
                                            "32436"],  # tchrist
-                        meta_tavern_room_id: ["259867",  # 2mkgz
+                        meta_tavern_room_id: ["259867",  # Yes
                                               "244519",  # Roombatron5000
                                               "244382",  # TGMCians
                                               "194047",  # Jan Dvorak
@@ -51,7 +51,7 @@ class GlobalVars:
                                               "161974",  # Lynn Crumbling
                                               "186281",  # Andy
                                               "266094",  # Unihedro
-                                              "245167",  # Infinite Recursion
+                                              "245167",  # Infinite Recursion (No.)
                                               "230261",  # Jason C
                                               "213575",  # Braiam
                                               "241919",  # Andrew T.
@@ -74,7 +74,8 @@ class GlobalVars:
                                               "238426",  # Ed Cottrell
                                               "166899",  # Second Rikudo
                                               "287999",  # ASCIIThenANSI
-                                              "208518"]}  # JNat
+                                              "208518",  # JNat
+                                              "284141"]}  # michaelpri 
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345"}
 
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
