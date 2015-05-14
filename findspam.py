@@ -103,7 +103,10 @@ class FindSpam:
                             "repairtoolbox\\.com", "couchsurfing\\.com",
                             "gta5codes\\.fr", "musclezx90au\\.com",
                             "fallclassicrun\\.com", "forgrams\\.com",
-                            "tophealthresource\\.com"]
+                            "tophealthresource\\.com", "cloudinsights\\.net",
+                            "(premium|priceless)-inkjet\\.com", "antivirus\\.comodo\\.com",
+                            "clusterlinks\\.com", "connectify\\.me", "liftserump\\.com",
+                            "freeiphonedatarecovery\\.com", "kizi1000\\.in"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
