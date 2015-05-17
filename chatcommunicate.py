@@ -153,6 +153,17 @@ def watcher(ev, wrap2):
             ev.message.reply("Error: %s" % val)
         else:
             ev.message.reply("Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`.")
+    if content_lower.startswith("!!/isblu"):
+        uid, val = get_user_from_list_command(content_lower)
+        if uid > -1 and val != "":
+            if is_blacklisted_user((uid, val)):
+                ev.message.reply("User is blacklisted. (`%s` on `%s`)." % (uid, val))
+            else:
+                ev.message.reply("User is not blacklisted. (`%s` on `%s`)." % (uid, val))
+        elif uid == -2:
+            ev.message.reply("Error: %s" % val)
+        else:
+            ev.message.reply("Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`.")
     if content_lower.startswith("!!/addwlu") \
             and is_privileged(ev_room, ev_user_id, wrap2):
         uid, val = get_user_from_list_command(content_lower)
@@ -175,6 +186,17 @@ def watcher(ev, wrap2):
             ev.message.reply("Error: %s" % val)
         else:
             ev.message.reply("Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`.")
+    if content_lower.startswith("!!/iswlu"):
+        uid, val = get_user_from_list_command(content_lower)
+        if uid > -1 and val != "":
+            if is_whitelisted_user((uid, val)):
+                ev.message.reply("User is whitelisted. (`%s` on `%s`)." % (uid, val))
+            else:
+                ev.message.reply("User is not whitelisted. (`%s` on `%s`)." % (uid, val))
+        elif uid == -2:
+            ev.message.reply("Error: %s" % val)
+        else:
+            ev.message.reply("Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`.")
     if content_lower.startswith("!!/wut"):
         ev.message.reply("Whaddya mean, 'wut'? Humans...")
     if content_lower.startswith("!!/lick"):
