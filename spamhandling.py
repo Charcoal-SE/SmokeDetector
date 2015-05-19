@@ -17,11 +17,12 @@ def should_whitelist_prevent_alert(user_url, reasons):
     is_whitelisted = is_whitelisted_user(get_user_from_url(user_url))
     if not is_whitelisted:
         return False
-    reasons_copy = list(reasons)
+    reasons_copy = list(set(reasons))
+    reasons_copy_copy = list(reasons_copy)
     for reason in reasons_copy:
         if "username" in reason:
-            reasons_copy.remove(reason)
-    return len(reasons_copy) == 0
+            reasons_copy_copy.remove(reason)
+    return len(reasons_copy_copy) == 0
 
 
 def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer, body_is_summary):
