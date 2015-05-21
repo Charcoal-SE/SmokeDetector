@@ -82,6 +82,7 @@ def watcher(ev, wrap2):
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
                 msg_true_positive = wrap2.get_message(msg_id)
+                quiet_action = ("-" in message_parts[1].lower())
                 if str(msg_true_positive.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]:
                     msg_content = msg_true_positive.content_source
                 if msg_content is not None:
@@ -97,14 +98,17 @@ def watcher(ev, wrap2):
                     if post_type == "question":
                         learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "bad")
                         if learned and user_added:
-                            ev.message.reply("Blacklisted user and registered question as true positive: added title to the Bayesian doctype 'bad'.")
+                            if not quiet_action:
+                                ev.message.reply("Blacklisted user and registered question as true positive: added title to the Bayesian doctype 'bad'.")
                         elif learned:
-                            ev.message.reply("Registered question as true positive: added title to the Bayesian doctype 'bad'.")
+                            if not quiet_action:
+                                ev.message.reply("Registered question as true positive: added title to the Bayesian doctype 'bad'.")
                         else:
                             ev.message.reply("Something went wrong when registering question as true positive.")
                     elif post_type == "answer":
                         if user_added:
-                            ev.message.reply("Blacklisted user.")
+                            if not quiet_action:
+                                ev.message.reply("Blacklisted user.")
                         else:
                             ev.message.reply("`true`/`tp` cannot be used for answers because their job is to add the title of the *question* to the Bayesian doctype 'bad'. If you want to blacklist the poster of the answer, use `trueu` or `tpu`.")
             except:
