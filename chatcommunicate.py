@@ -123,12 +123,14 @@ def watcher(ev, wrap2):
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
                 msg_ignore = wrap2.get_message(msg_id)
+                quiet_action = ("-" in second_part_lower)
                 if(str(msg_ignore.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]):
                     msg_content = msg_ignore.content_source
                 if(msg_content is not None):
                     post_id_site = fetch_post_id_and_site_from_msg_content(msg_content)[0:2]
                     add_ignored_post(post_id_site)
-                    ev.message.reply("Post ignored; alerts about it will no longer be posted.")
+                    if not quiet_action:
+                        ev.message.reply("Post ignored; alerts about it will no longer be posted.")
             except:
                 pass
         if second_part_lower.startswith("delete") or second_part_lower.startswith("remove") or second_part_lower.startswith("gone") \
