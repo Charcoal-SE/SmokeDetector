@@ -42,6 +42,7 @@ def watcher(ev, wrap2):
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
                 msg_to_delete = wrap2.get_message(msg_id)
+                quiet_action = ("-" in message_parts[1].lower())
                 if str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]:
                     msg_content = msg_to_delete.content_source
                 if msg_content is not None:
@@ -62,16 +63,20 @@ def watcher(ev, wrap2):
                     if post_type == "question":
                         learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "good")
                         if learned and user_added:
-                            ev.message.reply("Registered question as false positive, whitelisted user and added title to Bayesian doctype 'good'.")
+                            if not quiet_action:
+                                ev.message.reply("Registered question as false positive, whitelisted user and added title to Bayesian doctype 'good'.")
                         elif learned:
-                            ev.message.reply("Registered question as false positive and added title to Bayesian doctype 'good'.")
+                            if not quiet_action:
+                                ev.message.reply("Registered question as false positive and added title to Bayesian doctype 'good'.")
                         else:
                             ev.message.reply("Registered question as false positive, but could not add title to Bayesian doctype 'good'.")
                     elif post_type == "answer":
                         if user_added:
-                            ev.message.reply("Registered answer as false positive and whitelisted user.")
+                            if not quiet_action:
+                                ev.message.reply("Registered answer as false positive and whitelisted user.")
                         else:
-                            ev.message.reply("Registered answer as false positive.")
+                            if not quiet_action:
+                                ev.message.reply("Registered answer as false positive.")
                     if should_delete:
                         msg_to_delete.delete()
             except:
