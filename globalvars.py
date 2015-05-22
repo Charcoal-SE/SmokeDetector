@@ -75,7 +75,8 @@ class GlobalVars:
                                               "166899",  # Second Rikudo
                                               "287999",  # ASCIIThenANSI
                                               "208518",  # JNat
-                                              "284141"]}  # michaelpri
+                                              "284141",  # michaelpri
+                                              "244062"]}  # SouravGhosh
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345"}
 
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
