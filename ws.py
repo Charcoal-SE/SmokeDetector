@@ -14,6 +14,7 @@ install_thread_excepthook()
 import websocket
 import getpass
 import threading
+from theading import Thread
 import traceback
 from bodyfetcher import BodyFetcher
 from chatcommunicate import watcher
