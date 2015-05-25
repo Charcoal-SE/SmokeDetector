@@ -13,7 +13,7 @@ install_thread_excepthook()
 
 import websocket
 import getpass
-from threading import Thread
+import threading
 import traceback
 from bodyfetcher import BodyFetcher
 from chatcommunicate import watcher
@@ -122,6 +122,7 @@ while True:
                 t = Thread(target=GlobalVars.bodyfetcher.add_to_queue,
                            args=(a,))
                 t.start()
+                print("Active threads: " + threading.active_count())
     except Exception, e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         now = datetime.utcnow()
