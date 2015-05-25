@@ -123,7 +123,7 @@ while True:
                 t = Thread(target=GlobalVars.bodyfetcher.add_to_queue,
                            args=(a,))
                 t.start()
-                print("Active threads: " + threading.active_count())
+                print("Active threads: " + str(threading.active_count()))
     except Exception, e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         now = datetime.utcnow()
