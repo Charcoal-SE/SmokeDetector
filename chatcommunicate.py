@@ -343,6 +343,8 @@ def watcher(ev, wrap2):
         ev.message.reply("I'm [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector), a bot that detects spam and low-quality posts on the network and posts alerts to chat. [A command list is available here](https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands).")
     if content_lower.startswith("!!/apiquota"):
         ev.message.reply(GlobalVars.apiquota)
+    if content_lower.startswith("!!/location"):
+        ev.message.reply(GlobalVars.location)
     if content_lower.startswith("!!/queuestatus"):
         post_message_in_room(ev_room, GlobalVars.bodyfetcher.print_queue(), False)
     if content_lower.startswith("!!/blame") and ev_room == GlobalVars.meta_tavern_room_id:
