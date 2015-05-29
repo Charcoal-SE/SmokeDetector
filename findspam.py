@@ -110,7 +110,7 @@ class FindSpam:
                             "freeiphonedatarecovery\\.com", "kizi1000\\.in", "weightruinations\\.com",
                             "facts\\.(com|net|org)", "products\\.odosta\\.com",
                             "rackons\\.com", "imonitorsoft\\.com",
-                            "analec\\.com",
+                            "analec\\.com", "livesportstv\\.us",
                             "gojivitafacts\\.com", "dermaessencecreamblog\\.com", "stadtbett\\.com",
                             "eyeluminousfacts\\.com", "healthcaresdiscussion\\.com"]
     rules = [
