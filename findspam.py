@@ -111,7 +111,7 @@ class FindSpam:
                             "facts\\.(com|net|org)", "products\\.odosta\\.com",
                             "rackons\\.com", "imonitorsoft\\.com",
                             "analec\\.com",
-                            "gojivitafacts\\.com", "dermaessencecreamblog\\.com", "stadtbett\\.com", 
+                            "gojivitafacts\\.com", "dermaessencecreamblog\\.com", "stadtbett\\.com",
                             "eyeluminousfacts\\.com", "healthcaresdiscussion\\.com"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
