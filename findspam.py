@@ -111,7 +111,7 @@ class FindSpam:
                             "dermaessencecreamblog\\.com", "stadtbett\\.com",
                             "healthcaresdiscussion\\.com",
                             "recovery(pro)?\\.(com|net|org)", "password\\.(com|net|org)",
-                            "\\.repair\\b"]
+                            "\\.repair\\b", "optimalstackfacts", "x4facts"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
