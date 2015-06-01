@@ -32,7 +32,7 @@ import pytest
     ('hotmail customer <*<*<*[*[ 1 - 844-780-6762 *** support toll free number Hotmail Phone Number hotmail account recovery phone number', '', '', 'stackoverflow.com', False, True),
     ('1 - 844-780-6762 outlook phone number-outlook telephone number-outlook customer care helpline number', '', '', 'stackoverflow.com', False, True),
     ('Repeating word word word word word word word word word', '', '', 'stackoverflow.com', False, True),
-    ('Visit this website: optimalstackfacts', '', '', 'stackoverflow.com', False, True),
+    ('Visit this website: optimalstackfacts.net', '', '', 'stackoverflow.com', False, True),
     ('his email address is (SOMEONE@GMAIL.COM)', '', '', 'meta.stackexchange.com', False, True),
     ('something', 'his email address is (SOMEONE@GMAIL.COM)', '', 'meta.stackexchange.com', False, True),
     ('asdf asdf asdf asdf asdf asdf asdf asdf', '', '', 'stackoverflow.com', True, True),
