@@ -105,7 +105,7 @@ class FindSpam:
                             "(premium|priceless)-inkjet\\.com", "antivirus\\.comodo\\.com",
                             "clusterlinks\\.com", "connectify\\.me", "liftserump\\.com",
                             "kizi1000\\.in", "weightruinations\\.com",
-                            "facts\\.(com|net|org)", "products\\.odosta\\.com",
+                            "\\Bfacts\\.(com|net|org)", "products\\.odosta\\.com",
                             "rackons\\.com", "imonitorsoft\\.com",
                             "analec\\.com", "livesportstv\\.us",
                             "dermaessencecreamblog\\.com", "stadtbett\\.com",
