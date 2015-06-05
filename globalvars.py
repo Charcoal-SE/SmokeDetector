@@ -76,6 +76,7 @@ class GlobalVars:
                                               "287999",  # ASCIIThenANSI
                                               "208518",  # JNat
                                               "284141",  # michaelpri
+                                              "260312",  # vaultah
                                               "244062"]}  # SouravGhosh
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345"}
 
