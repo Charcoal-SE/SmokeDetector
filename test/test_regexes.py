@@ -65,7 +65,10 @@ import pytest
     (u'Как рандомно получать числа 1 и 2?', 'Body here', u'Сашка', 'ru.stackoverflow.com', False, False),
     ('Should not be caught: http://example.com', '', '', 'drupal.stackexchange.com', False, False),
     ('Should not be caught: https://www.example.com', '', '', 'drupal.stackexchange.com', False, False),
-    ('Should not be caught: something@example.com', '', '', 'drupal.stackexchange.com', False, False)
+    ('Should not be caught: something@example.com', '', '', 'drupal.stackexchange.com', False, False),
+    ('Title here', '<img src="http://example.com/11111111111.jpg" alt="my image">', '', 'stackoverflow.com', False, False),
+    ('Title here', '<img src="http://example.com/11111111111111.jpg" alt="my image" />', '', 'stackoverflow.com', False, False),
+    ('Title here', '<a href="http://example.com/11111111111111.html">page</a>', '', 'stackoverflow.com', False, False)
 ])
 def test_regexes(title, body, username, site, body_is_summary, match):
     # If we want to test answers separately, this should be changed

@@ -155,6 +155,9 @@ class FindSpam:
             if rule['stripcodeblocks']:
                 body_to_check = regex.sub("<pre>.*?</pre>", "", body, flags=regex.DOTALL)
                 body_to_check = regex.sub("<code>.*?</code>", "", body_to_check, flags=regex.DOTALL)
+            if rule['reason'] == 'Phone number detected':
+                body_to_check = regex.sub("<img[^>]+>", "", body_to_check)
+                body_to_check = regex.sub("<a[^>]+>", "", body_to_check)
             if rule['all'] != (site in rule['sites']):
                 matched_title = regex.compile(rule['regex'], regex.UNICODE).findall(title)
                 matched_username = regex.compile(rule['regex'], regex.UNICODE).findall(user_name)
