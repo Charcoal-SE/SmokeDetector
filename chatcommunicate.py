@@ -34,10 +34,7 @@ def watcher(ev, wrap2):
     ev_user_id = str(ev.data["user_id"])
     content_source = ev.message.content_source
     if is_message_a_report(content_source, ev_user_id, ev_room):
-        GlobalVars.latest_smokedetector_reports.append(content_source)
-        l = len(GlobalVars.latest_smokedetector_reports)
-        if l > 3:
-            GlobalVars.latest_smokedetector_reports = GlobalVars.latest_smokedetector_reports[l - 3:]
+        GlobalVars.latest_smokedetector_report = content_source
     message_parts = content_source.split(" ")
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
     content_lower = ev.content.lower()
@@ -57,10 +54,10 @@ def watcher(ev, wrap2):
                     msg_content = msg_to_delete.content_source
             else:
                 msg_to_delete = None
-                if len(GlobalVars.latest_smokedetector_reports) < 1:
+                if len(GlobalVars.latest_smokedetector_report) < 1:
                     ev.message.reply("I don't have any reports posted after latest reboot.")
                     return
-                msg_content = GlobalVars.latest_smokedetector_reports[-1]
+                msg_content = GlobalVars.latest_smokedetector_report[-1]
             quiet_action = ("-" in message_parts[1].lower())
             if msg_content is None:
                 return
@@ -110,10 +107,10 @@ def watcher(ev, wrap2):
                 if str(msg_true_positive.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]:
                     msg_content = msg_true_positive.content_source
             else:
-                if len(GlobalVars.latest_smokedetector_reports) < 1:
+                if len(GlobalVars.latest_smokedetector_report) < 1:
                     ev.message.reply("I don't have any reports posted after latest reboot.")
                     return
-                msg_content = GlobalVars.latest_smokedetector_reports[-1]
+                msg_content = GlobalVars.latest_smokedetector_report[-1]
             quiet_action = ("-" in message_parts[1].lower())
             if msg_content is None:
                 return
