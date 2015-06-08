@@ -57,7 +57,7 @@ def watcher(ev, wrap2):
                 if len(GlobalVars.latest_smokedetector_report) < 1:
                     ev.message.reply("I don't have any reports posted after latest reboot.")
                     return
-                msg_content = GlobalVars.latest_smokedetector_report[-1]
+                msg_content = GlobalVars.latest_smokedetector_report
             quiet_action = ("-" in message_parts[1].lower())
             if msg_content is None:
                 return
@@ -110,7 +110,7 @@ def watcher(ev, wrap2):
                 if len(GlobalVars.latest_smokedetector_report) < 1:
                     ev.message.reply("I don't have any reports posted after latest reboot.")
                     return
-                msg_content = GlobalVars.latest_smokedetector_report[-1]
+                msg_content = GlobalVars.latest_smokedetector_report
             quiet_action = ("-" in message_parts[1].lower())
             if msg_content is None:
                 return
