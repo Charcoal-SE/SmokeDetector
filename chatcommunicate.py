@@ -21,103 +21,128 @@ def post_message_in_room(room_id_str, msg, length_check=True):
         GlobalVars.tavern_on_the_meta.send_message(msg, length_check)
 
 
+def is_message_a_report(message_content, user_id, room_id):
+    return user_id == GlobalVars.smokeDetector_user_id[room_id] and \
+        message_content.startswith("[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] ")
+
+
 def watcher(ev, wrap2):
     if ev.type_id != 1:
         return
     print(ev)
     ev_room = str(ev.data["room_id"])
     ev_user_id = str(ev.data["user_id"])
-    message_parts = ev.message.content_source.split(" ")
+    content_source = ev.message.content_source
+    if is_message_a_report(content_source, ev_user_id, ev_room):
+        GlobalVars.latest_smokedetector_reports.append(content_source)
+        l = len(GlobalVars.latest_smokedetector_reports)
+        if l > 3:
+            GlobalVars.latest_smokedetector_reports = GlobalVars.latest_smokedetector_reports[l - 3:]
+    message_parts = content_source.split(" ")
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
     content_lower = ev.content.lower()
 
     ev_user_name = ev.data["user_name"].encode('utf-8')
     GlobalVars.tavern_users_chatting.append(ev_user_name)
 
-    if re.compile(":[0-9]+").search(message_parts[0]):
+    if re.compile(":[0-9]+").search(message_parts[0]) or message_parts[0].lower() == "sd":
         if (second_part_lower.startswith("false") or second_part_lower.startswith("fp")) \
                 and is_privileged(ev_room, ev_user_id, wrap2):
-            try:
-                should_delete = True
+            should_delete = True
+            if not content_lower.startswith("sd f"):
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
                 msg_to_delete = wrap2.get_message(msg_id)
-                quiet_action = ("-" in message_parts[1].lower())
                 if str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]:
                     msg_content = msg_to_delete.content_source
-                if msg_content is not None:
-                    site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
-                    if site_post_id is None:
-                        ev.message.reply("Could not register title as false positive.")
-                        return
-                    post_type = site_post_id[2]
-                    add_false_positive((site_post_id[0], site_post_id[1]))
-                    user_added = False
-                    if message_parts[1].lower().startswith("falseu") or message_parts[1].lower().startswith("fpu"):
-                        url_from_msg = fetch_owner_url_from_msg_content(msg_content)
-                        if url_from_msg is not None:
-                            user = get_user_from_url(url_from_msg)
-                            add_whitelisted_user(user)
-                            user_added = True
-                    learned = False
-                    if post_type == "question":
-                        learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "good")
-                        if learned and user_added:
-                            if not quiet_action:
-                                ev.message.reply("Registered question as false positive, whitelisted user and added title to Bayesian doctype 'good'.")
-                        elif learned:
-                            if not quiet_action:
-                                ev.message.reply("Registered question as false positive and added title to Bayesian doctype 'good'.")
-                        else:
-                            ev.message.reply("Registered question as false positive, but could not add title to Bayesian doctype 'good'.")
-                    elif post_type == "answer":
-                        if user_added:
-                            if not quiet_action:
-                                ev.message.reply("Registered answer as false positive and whitelisted user.")
-                        else:
-                            if not quiet_action:
-                                ev.message.reply("Registered answer as false positive.")
-                    if should_delete:
-                        msg_to_delete.delete()
-            except:
-                pass  # couldn't delete message
+            else:
+                msg_to_delete = None
+                if len(GlobalVars.latest_smokedetector_reports) < 1:
+                    ev.message.reply("I don't have any reports posted after latest reboot.")
+                    return
+                msg_content = GlobalVars.latest_smokedetector_reports[-1]
+            quiet_action = ("-" in message_parts[1].lower())
+            if msg_content is None:
+                return
+            site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
+            if site_post_id is None:
+                ev.message.reply("Could not register title as false positive.")
+                return
+            post_type = site_post_id[2]
+            add_false_positive((site_post_id[0], site_post_id[1]))
+            user_added = False
+            if message_parts[1].lower().startswith("falseu") or message_parts[1].lower().startswith("fpu"):
+                url_from_msg = fetch_owner_url_from_msg_content(msg_content)
+                if url_from_msg is not None:
+                    user = get_user_from_url(url_from_msg)
+                    if user is not None:
+                        add_whitelisted_user(user)
+                        user_added = True
+            learned = False
+            if post_type == "question":
+                learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "good")
+                if learned and user_added:
+                    if not quiet_action:
+                        ev.message.reply("Registered question as false positive, whitelisted user and added title to Bayesian doctype 'good'.")
+                elif learned:
+                    if not quiet_action:
+                        ev.message.reply("Registered question as false positive and added title to Bayesian doctype 'good'.")
+                else:
+                    ev.message.reply("Registered question as false positive, but could not add title to Bayesian doctype 'good'.")
+            elif post_type == "answer":
+                if user_added:
+                    if not quiet_action:
+                        ev.message.reply("Registered answer as false positive and whitelisted user.")
+                else:
+                    if not quiet_action:
+                        ev.message.reply("Registered answer as false positive.")
+            if should_delete:
+                try:
+                    msg_to_delete.delete()
+                except:
+                    pass
         if (second_part_lower.startswith("true") or second_part_lower.startswith("tp")) \
                 and is_privileged(ev_room, ev_user_id, wrap2):
-            try:
+            if not content_lower.startswith("sd t"):
                 msg_id = int(message_parts[0][1:])
                 msg_content = None
                 msg_true_positive = wrap2.get_message(msg_id)
-                quiet_action = ("-" in message_parts[1].lower())
                 if str(msg_true_positive.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]:
                     msg_content = msg_true_positive.content_source
-                if msg_content is not None:
-                    post_type = fetch_post_id_and_site_from_msg_content(msg_content)[2]
-                    learned = False
-                    user_added = False
-                    if message_parts[1].lower().startswith("trueu") or message_parts[1].lower().startswith("tpu"):
-                        url_from_msg = fetch_owner_url_from_msg_content(msg_content)
-                        if url_from_msg is not None:
-                            user = get_user_from_url(url_from_msg)
-                            add_blacklisted_user(user)
-                            user_added = True
-                    if post_type == "question":
-                        learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "bad")
-                        if learned and user_added:
-                            if not quiet_action:
-                                ev.message.reply("Blacklisted user and registered question as true positive: added title to the Bayesian doctype 'bad'.")
-                        elif learned:
-                            if not quiet_action:
-                                ev.message.reply("Registered question as true positive: added title to the Bayesian doctype 'bad'.")
-                        else:
-                            ev.message.reply("Something went wrong when registering question as true positive.")
-                    elif post_type == "answer":
-                        if user_added:
-                            if not quiet_action:
-                                ev.message.reply("Blacklisted user.")
-                        else:
-                            ev.message.reply("`true`/`tp` cannot be used for answers because their job is to add the title of the *question* to the Bayesian doctype 'bad'. If you want to blacklist the poster of the answer, use `trueu` or `tpu`.")
-            except:
-                pass
+            else:
+                if len(GlobalVars.latest_smokedetector_reports) < 1:
+                    ev.message.reply("I don't have any reports posted after latest reboot.")
+                    return
+                msg_content = GlobalVars.latest_smokedetector_reports[-1]
+            quiet_action = ("-" in message_parts[1].lower())
+            if msg_content is None:
+                return
+            post_type = fetch_post_id_and_site_from_msg_content(msg_content)[2]
+            learned = False
+            user_added = False
+            if message_parts[1].lower().startswith("trueu") or message_parts[1].lower().startswith("tpu"):
+                url_from_msg = fetch_owner_url_from_msg_content(msg_content)
+                if url_from_msg is not None:
+                    user = get_user_from_url(url_from_msg)
+                    if user is not None:
+                        add_blacklisted_user(user)
+                        user_added = True
+            if post_type == "question":
+                learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "bad")
+                if learned and user_added:
+                    if not quiet_action:
+                        ev.message.reply("Blacklisted user and registered question as true positive: added title to the Bayesian doctype 'bad'.")
+                elif learned:
+                    if not quiet_action:
+                        ev.message.reply("Registered question as true positive: added title to the Bayesian doctype 'bad'.")
+                else:
+                    ev.message.reply("Something went wrong when registering question as true positive.")
+            elif post_type == "answer":
+                if user_added:
+                    if not quiet_action:
+                        ev.message.reply("Blacklisted user.")
+                else:
+                    ev.message.reply("`true`/`tp` cannot be used for answers because their job is to add the title of the *question* to the Bayesian doctype 'bad'. If you want to blacklist the poster of the answer, use `trueu` or `tpu`.")
         if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id, wrap2):
             try:
                 msg_id = int(message_parts[0][1:])
