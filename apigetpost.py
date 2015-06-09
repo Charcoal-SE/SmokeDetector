@@ -25,7 +25,7 @@ def api_get_post(post_url):
         assert post_type == "question"
 
         api_filter = "!gB6tXYzgnc3pG)x0n*03eR9*kZWXReH54Qb"
-        req_url = "https://api.stackexchange.com/2.2/questions/" + post_id +\
+        req_url = "http://api.stackexchange.com/2.2/questions/" + post_id +\
             "?site=" + site + "&filter=" + api_filter
         resp_json = requests.get(req_url).json()
     if 'items' not in resp_json or len(resp_json['items']) == 0:
