@@ -38,7 +38,7 @@ def fetch_post_id_and_site_from_url(url):
         search_regex = r"^https?:\/\/([\w.]+)/questions/\d+/.+/(\d+)#\d+$"
     else:
         post_type = "question"
-        search_regex = r"^https?:\/\/([\w.]+)/questions/(\d+)/.+$"
+        search_regex = r"^https?:\/\/([\w.]+)/questions/(\d+)(?:/.+)?$"
     found = regex.compile(search_regex).search(url)
     if found is not None:
         try:
@@ -47,7 +47,7 @@ def fetch_post_id_and_site_from_url(url):
             return (post_id, post_site, post_type)
         except:
             return None
-    search_regex = r"^https?:\/\/([\w.]+)/(q|a)/(\d+)"
+    search_regex = r"^https?:\/\/([\w.]+)/(q|a)/(\d+)(?:/\d+)?"
     found = regex.compile(search_regex).search(url)
     if found is None:
         return None

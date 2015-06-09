@@ -1,5 +1,4 @@
 import random
-import requests
 import time
 from parsing import *
 from datahandling import *
@@ -9,6 +8,8 @@ import os
 import re
 from datetime import datetime
 from utcdate import UtcDate
+from apigetpost import api_get_post
+from spamhandling import handle_spam
 
 # Please note: If new !!/ commands are added or existing ones are modified, don't forget to
 # update the wiki at https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands.
@@ -230,6 +231,19 @@ def watcher(ev, wrap2):
             ev.message.reply("Error: %s" % val)
         else:
             ev.message.reply("Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`.")
+    if content_lower.startswith("!!/report") \
+            and is_privileged(ev_room, ev_user_id, wrap2):
+        if len(message_parts) < 2:
+            ev.message.reply("Not enough arguments.")
+            return
+        url = message_parts[1]
+        post_data = api_get_post(url)
+        if post_data is False:
+            ev.message.reply("Could not find data for this post in the API. Check whether the post is not deleted yet.")
+            return
+        handle_spam(post_data.title, post_data.owner_name, post_data.site, post_data.post_url,
+                    post_data.owner_url, post_data.post_id, ["Manually reported " + post_data.post_type],
+                    post_data.post_type == "answer")
     if content_lower.startswith("!!/wut"):
         ev.message.reply("Whaddya mean, 'wut'? Humans...")
     if content_lower.startswith("!!/lick"):
