@@ -19,14 +19,16 @@ def api_get_post(post_url):
     if post_type == "answer":
         api_filter = "!1zSl_EE)(nuF4Xn(2sDLC"
         req_url = "http://api.stackexchange.com/2.2/answers/" + post_id +\
-                  "?site=" + site + "&filter=" + api_filter
+                  "?site=" + site + "&filter=" + api_filter +\
+                  "&key=IAkbitmze4B8KpacUfLqkw(("
         resp_json = requests.get(req_url).json()
     else:
         assert post_type == "question"
 
         api_filter = "!gB6tXYzgnc3pG)x0n*03eR9*kZWXReH54Qb"
         req_url = "http://api.stackexchange.com/2.2/questions/" + post_id +\
-            "?site=" + site + "&filter=" + api_filter
+            "?site=" + site + "&filter=" + api_filter +\
+            "&key=IAkbitmze4B8KpacUfLqkw(("
         resp_json = requests.get(req_url).json()
     if 'items' not in resp_json or len(resp_json['items']) == 0:
         return False
