@@ -18,7 +18,7 @@ def api_get_post(post_url):
     post_id, site, post_type = fetch_post_id_and_site_from_url(post_url)
     if post_type == "answer":
         api_filter = "!1zSl_EE)(nuF4Xn(2sDLC"
-        req_url = "https://api.stackexchange.com/2.2/answers/" + post_id +\
+        req_url = "http://api.stackexchange.com/2.2/answers/" + post_id +\
                   "?site=" + site + "&filter=" + api_filter
         resp_json = requests.get(req_url).json()
     else:
