@@ -28,7 +28,7 @@ def api_get_post(post_url):
         req_url = "https://api.stackexchange.com/2.2/questions/" + post_id +\
             "?site=" + site + "&filter=" + api_filter
         resp_json = requests.get(req_url).json()
-    if len(resp_json['items']) == 0:
+    if 'items' not in resp_json or len(resp_json['items']) == 0:
         return False
     item = resp_json['items'][0]
     post_data = PostData()
