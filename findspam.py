@@ -111,12 +111,14 @@ class FindSpam:
                             "dermaessencecreamblog\\.com", "stadtbett\\.com",
                             "healthcaresdiscussion\\.com",
                             "recovery(pro)?\\.(com|net|org)", "password\\.(com|net|org)",
-                            "\\.repair\\b", "optimalstackfacts", "x4facts"]
+                            "\\.repair\\b", "optimalstackfacts", "x4facts", "endomondo\\.com"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)\\b(baba|nike)\\b", 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
+        {'regex': u"(?i)\\bgratis\\b", 'all': True,
+         'sites': ['softwarerecs.stackexchange.com'], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)\\p{Script=Hangul}", 'all': True,
          'sites': [], 'reason': "Korean character in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)(>>>>|===>|==>>>)(?s).*http", 'all': True,
