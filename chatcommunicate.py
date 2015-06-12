@@ -22,9 +22,8 @@ def post_message_in_room(room_id_str, msg, length_check=True):
         GlobalVars.tavern_on_the_meta.send_message(msg, length_check)
 
 
-def is_message_a_report(message_content, user_id, room_id):
-    return user_id == GlobalVars.smokeDetector_user_id[room_id] and \
-        message_content.startswith("[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] ")
+def is_smokedetector_message(user_id, room_id):
+    return user_id == GlobalVars.smokeDetector_user_id[room_id]
 
 
 def watcher(ev, wrap2):
@@ -34,8 +33,8 @@ def watcher(ev, wrap2):
     ev_room = str(ev.data["room_id"])
     ev_user_id = str(ev.data["user_id"])
     content_source = ev.message.content_source
-    if is_message_a_report(content_source, ev_user_id, ev_room):
-        GlobalVars.latest_smokedetector_report = content_source
+    if is_smokedetector_message(ev_user_id, ev_room):
+        GlobalVars.latest_smokedetector_message[ev_room] = ev.message.id
     message_parts = content_source.split(" ")
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
     content_lower = ev.content.lower()
@@ -43,28 +42,26 @@ def watcher(ev, wrap2):
     ev_user_name = ev.data["user_name"].encode('utf-8')
     GlobalVars.tavern_users_chatting.append(ev_user_name)
 
-    if re.compile(":[0-9]+").search(message_parts[0]) or message_parts[0].lower() == "sd":
+    if message_parts[0].lower() == "sd":
+        if GlobalVars.latest_smokedetector_message[ev_room] == -1:
+            ev.message.reply("I don't have any messages posted after the latest reboot.")
+            return
+        message_parts[0] = ":" + str(GlobalVars.latest_smokedetector_message[ev_room])
+    if re.compile(":[0-9]+").search(message_parts[0]):
         if (second_part_lower.startswith("false") or second_part_lower.startswith("fp")) \
                 and is_privileged(ev_room, ev_user_id, wrap2):
             should_delete = True
-            if not content_lower.startswith("sd f"):
-                msg_id = int(message_parts[0][1:])
-                msg_content = None
-                msg_to_delete = wrap2.get_message(msg_id)
-                if str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]:
-                    msg_content = msg_to_delete.content_source
-            else:
-                msg_to_delete = None
-                if len(GlobalVars.latest_smokedetector_report) < 1:
-                    ev.message.reply("I don't have any reports posted after latest reboot.")
-                    return
-                msg_content = GlobalVars.latest_smokedetector_report
+            msg_id = int(message_parts[0][1:])
+            msg_content = None
+            msg_to_delete = wrap2.get_message(msg_id)
+            if str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]:
+                msg_content = msg_to_delete.content_source
             quiet_action = ("-" in message_parts[1].lower())
             if msg_content is None:
                 return
             site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
             if site_post_id is None:
-                ev.message.reply("Could not register title as false positive.")
+                ev.message.reply("That message is not a report.")
                 return
             post_type = site_post_id[2]
             add_false_positive((site_post_id[0], site_post_id[1]))
@@ -101,21 +98,19 @@ def watcher(ev, wrap2):
                     pass
         if (second_part_lower.startswith("true") or second_part_lower.startswith("tp")) \
                 and is_privileged(ev_room, ev_user_id, wrap2):
-            if not content_lower.startswith("sd t"):
-                msg_id = int(message_parts[0][1:])
-                msg_content = None
-                msg_true_positive = wrap2.get_message(msg_id)
-                if str(msg_true_positive.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]:
-                    msg_content = msg_true_positive.content_source
-            else:
-                if len(GlobalVars.latest_smokedetector_report) < 1:
-                    ev.message.reply("I don't have any reports posted after latest reboot.")
-                    return
-                msg_content = GlobalVars.latest_smokedetector_report
+            msg_id = int(message_parts[0][1:])
+            msg_content = None
+            msg_true_positive = wrap2.get_message(msg_id)
+            if str(msg_true_positive.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]:
+                msg_content = msg_true_positive.content_source
             quiet_action = ("-" in message_parts[1].lower())
             if msg_content is None:
                 return
-            post_type = fetch_post_id_and_site_from_msg_content(msg_content)[2]
+            data = fetch_post_id_and_site_from_msg_content(msg_content)
+            if data is None:
+                ev.message.reply("That message is not a report.")
+                return
+            post_type = data[2]
             learned = False
             user_added = False
             if message_parts[1].lower().startswith("trueu") or message_parts[1].lower().startswith("tpu"):
