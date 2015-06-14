@@ -30,7 +30,7 @@ class FindSpam:
                     "bbwdesire", "rsorder"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "aging ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))",
-                        "abam26"]
+                        "abam26", "watch2live", "WATCH™"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive",
