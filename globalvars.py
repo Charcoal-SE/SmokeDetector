@@ -106,7 +106,7 @@ class GlobalVars:
     config = ConfigParser.RawConfigParser()
     config.read('config')
 
-    latest_smokedetector_message = {meta_tavern_room_id: -1, charcoal_room_id: -1}
+    latest_smokedetector_messages = {meta_tavern_room_id: [], charcoal_room_id: []}
 
     location = config.get("Config", "location")
     print location
