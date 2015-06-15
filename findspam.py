@@ -168,13 +168,13 @@ class FindSpam:
                 if matched_title and rule['title']:
                     try:
                         if getattr(FindSpam, "%s" % rule['validation_method'])(matched_title):
-                            result.append(rule['reason'])
+                            result.append(rule['reason'].replace("{}", "title"))
                     except KeyError:  # There is no special logic for this rule
                         result.append(rule['reason'].replace("{}", "title"))
                 if matched_username and rule['username']:
                     try:
                         if getattr(FindSpam, "%s" % rule['validation_method'])(matched_username):
-                            result.append(rule['reason'])
+                            result.append(rule['reason'].replace("{}", "username"))
                     except KeyError:  # There is no special logic for this rule
                         result.append(rule['reason'].replace("{}", "username"))
                 if matched_body and rule['body'] and (not body_is_summary or rule['body_summary']):
