@@ -27,7 +27,7 @@ class FindSpam:
                     "kinnaristeel", "clash of (clan|stone)s? (cheats?|tricks?|gems?)",
                     r"(?x:B [\s_]* A [\s_]* M \W{0,5} W [\s_]* A [\s_]* R [\s_]* \.? [\s_]* C [\s_]* O [\s_]* M)",
                     "slumber pm", "1-844-400-7325", "male enhancement", "bestcollegechina",
-                    "bbwdesire", "rsorder", "Shopping ?Cart ?Elite"]
+                    "bbwdesire", "rsorder", "Shopping ?Cart ?Elite", "Easy ?Data ?Feed"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "aging ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))",
                         "abam26", "watch2live"]
@@ -112,7 +112,7 @@ class FindSpam:
                             "healthcaresdiscussion\\.com",
                             "recovery(pro)?\\.(com|net|org)", "password\\.(com|net|org)",
                             "\\.repair\\b", "optimalstackfacts", "x4facts", "endomondo\\.com",
-                            "litindia\\.in", "shoppingcartelite\\.com", "easydatafeed\\.com"]
+                            "litindia\\.in", "shoppingcartelite\\.com"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
