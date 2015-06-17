@@ -35,8 +35,8 @@ def watcher(ev, wrap2):
     content_source = ev.message.content_source
     if is_smokedetector_message(ev_user_id, ev_room):
         GlobalVars.latest_smokedetector_messages[ev_room].append(ev.message.id)
-        if len(GlobalVars.latest_smokedetector_messages[ev_room]) > 3:
-            GlobalVars.latest_smokedetector_messages[ev_room] = GlobalVars.latest_smokedetector_messages[ev_room][-3:]
+        if len(GlobalVars.latest_smokedetector_messages[ev_room]) > 5:
+            GlobalVars.latest_smokedetector_messages[ev_room] = GlobalVars.latest_smokedetector_messages[ev_room][-5:]
     message_parts = content_source.split(" ")
 
     ev_user_name = ev.data["user_name"].encode('utf-8')
@@ -50,8 +50,8 @@ def watcher(ev, wrap2):
             ev.message.reply("I don't have any messages posted after the latest reboot.")
             return
         commands = message_parts[1:]
-        if len(commands) > 3:
-            ev.message.reply("You can only execute three commands at one time.")
+        if len(commands) > 5:
+            ev.message.reply("You can only execute five commands at one time.")
             return
         if len(commands) > len(GlobalVars.latest_smokedetector_messages[ev_room]):
             ev.message.reply("I haven't posted enough messages after the latest reboot to execute all commands.")
