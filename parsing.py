@@ -131,3 +131,19 @@ def url_to_shortlink(url):
         return "http://%s/q/%s" % (id_and_site[1], id_and_site[0])
     else:
         return "http://%s/a/%s" % (id_and_site[1], id_and_site[0])
+
+
+def preprocess_shortcut_command(cmd):
+    parts = cmd.split(" ")
+    new_cmd = ["sd"]
+    for i in range(1, len(parts)):
+        curr = parts[i]
+        if curr == "":
+            continue
+        if not curr[0].isdigit():
+            new_cmd.append(curr)
+        else:
+            t = int(curr[0])
+            for j in range(0, t):
+                new_cmd.append(curr[1:])
+    return " ".join(new_cmd)

@@ -46,6 +46,7 @@ def watcher(ev, wrap2):
     shortcut_messages = []
     if message_parts[0].lower() == "sd":
         shortcut = True
+        message_parts = preprocess_shortcut_command(content_source).split(" ")
         if len(GlobalVars.latest_smokedetector_messages[ev_room]) == 0:
             ev.message.reply("I don't have any messages posted after the latest reboot.")
             return
