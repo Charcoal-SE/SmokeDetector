@@ -112,7 +112,8 @@ class FindSpam:
                             "healthcaresdiscussion\\.com",
                             "recovery(pro)?\\.(com|net|org)", "password\\.(com|net|org)",
                             "\\.repair\\b", "optimalstackfacts", "x4facts", "endomondo\\.com",
-                            "litindia\\.in", "shoppingcartelite\\.com"]
+                            "litindia\\.in", "shoppingcartelite\\.com",
+                            "customizedwallpaper\\.com"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
