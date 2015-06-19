@@ -4,7 +4,6 @@ import pytest
 test_data_inputs = []
 with open("test/data_test_parsing.txt", "r") as f:
     test_data_inputs = f.readlines()
-print("Length of input collection: " + str(len(test_data_inputs)))
 
 # Large inputs should go to that file.
 # Only inputs should go there, not the parsing method and the expected output,

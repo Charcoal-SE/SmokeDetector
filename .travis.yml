@@ -11,3 +11,4 @@ branches:
   only:
     - master
     - travis
+    - debugging
