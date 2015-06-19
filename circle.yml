@@ -7,7 +7,8 @@ checkout:
     - git submodule update
 dependencies:
   post:
-    - pip install beautifulsoup4 requests websocket-client coverage pytest phonenumbers flake8 regex --upgrade
+    - pip install beautifulsoup4 requests websocket-client coverage pytest phonenumbers flake8 --upgrade
+    - pip install regex==2015.06.15
 test:
   override:
     - flake8 ./
