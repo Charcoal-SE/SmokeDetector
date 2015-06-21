@@ -93,10 +93,10 @@ def watcher(ev, wrap2):
 
 def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_name, wrap2):
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
-    msg_id = int(message_parts[0][1:])
     if re.compile(":[0-9]+").search(message_parts[0]):
         if (second_part_lower.startswith("false") or second_part_lower.startswith("fp")) \
                 and is_privileged(ev_room, ev_user_id, wrap2):
+            msg_id = int(message_parts[0][1:])
             msg_content = None
             msg_to_delete = wrap2.get_message(msg_id)
             if str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]:
@@ -137,6 +137,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
                 pass
         if (second_part_lower.startswith("true") or second_part_lower.startswith("tp")) \
                 and is_privileged(ev_room, ev_user_id, wrap2):
+            msg_id = int(message_parts[0][1:])
             msg_content = None
             msg_true_positive = wrap2.get_message(msg_id)
             if str(msg_true_positive.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]:
@@ -172,6 +173,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
                     return "`true`/`tp` cannot be used for answers because their job is to add the title of the *question* to the Bayesian doctype 'bad'. If you want to blacklist the poster of the answer, use `trueu` or `tpu`."
         if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id, wrap2):
             try:
+                msg_id = int(message_parts[0][1:])
                 msg_content = None
                 msg_ignore = wrap2.get_message(msg_id)
                 quiet_action = ("-" in second_part_lower)
@@ -187,6 +189,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         if second_part_lower.startswith("delete") or second_part_lower.startswith("remove") or second_part_lower.startswith("gone") \
                 and is_privileged(ev_room, ev_user_id, wrap2):
             try:
+                msg_id = int(message_parts[0][1:])
                 msg_to_delete = wrap2.get_message(msg_id)
                 if str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]:
                     msg_to_delete.delete()
