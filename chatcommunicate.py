@@ -96,7 +96,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
     if re.compile(":[0-9]+").search(message_parts[0]):
         if (second_part_lower.startswith("false") or second_part_lower.startswith("fp")) \
                 and is_privileged(ev_room, ev_user_id, wrap2):
-            should_delete = True
             msg_id = int(message_parts[0][1:])
             msg_content = None
             msg_to_delete = wrap2.get_message(msg_id)
@@ -121,26 +120,21 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
             learned = False
             if post_type == "question":
                 learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "good")
-                if learned and user_added:
-                    if not quiet_action:
-                        return "Registered question as false positive, whitelisted user and added title to Bayesian doctype 'good'."
-                elif learned:
-                    if not quiet_action:
-                        return "Registered question as false positive and added title to Bayesian doctype 'good'."
-                else:
+                if learned and user_added and not quiet_action:
+                    return "Registered question as false positive, whitelisted user and added title to Bayesian doctype 'good'."
+                elif learned and not quiet_action:
+                    return "Registered question as false positive and added title to Bayesian doctype 'good'."
+                elif not learned:
                     return "Registered question as false positive, but could not add title to Bayesian doctype 'good'."
             elif post_type == "answer":
-                if user_added:
-                    if not quiet_action:
-                        return "Registered answer as false positive and whitelisted user."
-                else:
-                    if not quiet_action:
-                        return "Registered answer as false positive."
-            if should_delete:
-                try:
-                    msg_to_delete.delete()
-                except:
-                    pass
+                if user_added and not quiet_action:
+                    return "Registered answer as false positive and whitelisted user."
+                elif not quiet_action:
+                    return "Registered answer as false positive."
+            try:
+                msg_to_delete.delete()
+            except:
+                pass
         if (second_part_lower.startswith("true") or second_part_lower.startswith("tp")) \
                 and is_privileged(ev_room, ev_user_id, wrap2):
             msg_id = int(message_parts[0][1:])
@@ -166,19 +160,16 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
                         user_added = True
             if post_type == "question":
                 learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "bad")
-                if learned and user_added:
-                    if not quiet_action:
-                        return "Blacklisted user and registered question as true positive: added title to the Bayesian doctype 'bad'."
-                elif learned:
-                    if not quiet_action:
-                        return "Registered question as true positive: added title to the Bayesian doctype 'bad'."
-                else:
+                if learned and user_added and not quiet_action:
+                    return "Blacklisted user and registered question as true positive: added title to the Bayesian doctype 'bad'."
+                elif learned and not quiet_action:
+                    return "Registered question as true positive: added title to the Bayesian doctype 'bad'."
+                elif not learned:
                     return "Something went wrong when registering question as true positive."
             elif post_type == "answer":
-                if user_added:
-                    if not quiet_action:
-                        return "Blacklisted user."
-                else:
+                if user_added and not quiet_action:
+                    return "Blacklisted user."
+                elif not user_added:
                     return "`true`/`tp` cannot be used for answers because their job is to add the title of the *question* to the Bayesian doctype 'bad'. If you want to blacklist the poster of the answer, use `trueu` or `tpu`."
         if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id, wrap2):
             try:
