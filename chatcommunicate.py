@@ -102,7 +102,10 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         if str(msg.owner.id) != GlobalVars.smokeDetector_user_id[ev_room] or msg_content is None:
             return
         post_site_id = fetch_post_id_and_site_from_msg_content(msg_content)
-        post_type = post_site_id[2]
+        if post_site_id is not None:
+            post_type = post_site_id[2]
+        else:
+            post_type = None
         if (second_part_lower.startswith("false") or second_part_lower.startswith("fp")) \
                 and is_privileged(ev_room, ev_user_id, wrap2):
             if post_site_id is None:
