@@ -95,19 +95,18 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
     if re.compile(":[0-9]+").search(message_parts[0]):
         msg_id = int(message_parts[0][1:])
+        msg = wrap2.get_message(msg_id)
+        msg_content = None
+        msg_content = msg.content_source
+        quiet_action = ("-" in message_parts[1].lower())
+        if str(msg.owner.id) != GlobalVars.smokeDetector_user_id[ev_room] or msg_content is None:
+            return
+        site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
+        post_type = site_post_id[2]
         if (second_part_lower.startswith("false") or second_part_lower.startswith("fp")) \
                 and is_privileged(ev_room, ev_user_id, wrap2):
-            msg_content = None
-            msg_to_delete = wrap2.get_message(msg_id)
-            if str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]:
-                msg_content = msg_to_delete.content_source
-            quiet_action = ("-" in message_parts[1].lower())
-            if msg_content is None:
-                return
-            site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
             if site_post_id is None:
                 return "That message is not a report."
-            post_type = site_post_id[2]
             add_false_positive((site_post_id[0], site_post_id[1]))
             user_added = False
             if message_parts[1].lower().startswith("falseu") or message_parts[1].lower().startswith("fpu"):
@@ -132,22 +131,13 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
                 elif not quiet_action:
                     return "Registered answer as false positive."
             try:
-                msg_to_delete.delete()
+                msg.delete()
             except:
                 pass
         if (second_part_lower.startswith("true") or second_part_lower.startswith("tp")) \
                 and is_privileged(ev_room, ev_user_id, wrap2):
-            msg_content = None
-            msg_true_positive = wrap2.get_message(msg_id)
-            if str(msg_true_positive.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]:
-                msg_content = msg_true_positive.content_source
-            quiet_action = ("-" in message_parts[1].lower())
-            if msg_content is None:
-                return
-            data = fetch_post_id_and_site_from_msg_content(msg_content)
-            if data is None:
+            if site_post_id is None:
                 return "That message is not a report."
-            post_type = data[2]
             learned = False
             user_added = False
             if message_parts[1].lower().startswith("trueu") or message_parts[1].lower().startswith("tpu"):
@@ -171,25 +161,13 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
                 elif not user_added:
                     return "`true`/`tp` cannot be used for answers because their job is to add the title of the *question* to the Bayesian doctype 'bad'. If you want to blacklist the poster of the answer, use `trueu` or `tpu`."
         if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id, wrap2):
-            try:
-                msg_content = None
-                msg_ignore = wrap2.get_message(msg_id)
-                quiet_action = ("-" in second_part_lower)
-                if(str(msg_ignore.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]):
-                    msg_content = msg_ignore.content_source
-                if(msg_content is not None):
-                    post_id_site = fetch_post_id_and_site_from_msg_content(msg_content)[0:2]
-                    add_ignored_post(post_id_site)
-                    if not quiet_action:
-                        return "Post ignored; alerts about it will no longer be posted."
-            except:
-                pass
+            add_ignored_post(site_post_id[0:2])
+            if not quiet_action:
+                return "Post ignored; alerts about it will no longer be posted."
         if second_part_lower.startswith("delete") or second_part_lower.startswith("remove") or second_part_lower.startswith("gone") \
                 and is_privileged(ev_room, ev_user_id, wrap2):
             try:
-                msg_to_delete = wrap2.get_message(msg_id)
-                if str(msg_to_delete.owner.id) == GlobalVars.smokeDetector_user_id[ev_room]:
-                    msg_to_delete.delete()
+                msg.delete()
             except:
                 pass  # couldn't delete message
     if content_lower.startswith("!!/addblu") \
