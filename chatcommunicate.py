@@ -101,13 +101,13 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         quiet_action = ("-" in message_parts[1].lower())
         if str(msg.owner.id) != GlobalVars.smokeDetector_user_id[ev_room] or msg_content is None:
             return
-        site_post_id = fetch_post_id_and_site_from_msg_content(msg_content)
-        post_type = site_post_id[2]
+        post_site_id = fetch_post_id_and_site_from_msg_content(msg_content)
+        post_type = post_site_id[2]
         if (second_part_lower.startswith("false") or second_part_lower.startswith("fp")) \
                 and is_privileged(ev_room, ev_user_id, wrap2):
-            if site_post_id is None:
+            if post_site_id is None:
                 return "That message is not a report."
-            add_false_positive((site_post_id[0], site_post_id[1]))
+            add_false_positive((post_site_id[0], post_site_id[1]))
             user_added = False
             if message_parts[1].lower().startswith("falseu") or message_parts[1].lower().startswith("fpu"):
                 url_from_msg = fetch_owner_url_from_msg_content(msg_content)
@@ -136,7 +136,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
                 pass
         if (second_part_lower.startswith("true") or second_part_lower.startswith("tp")) \
                 and is_privileged(ev_room, ev_user_id, wrap2):
-            if site_post_id is None:
+            if post_site_id is None:
                 return "That message is not a report."
             learned = False
             user_added = False
@@ -161,7 +161,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
                 elif not user_added:
                     return "`true`/`tp` cannot be used for answers because their job is to add the title of the *question* to the Bayesian doctype 'bad'. If you want to blacklist the poster of the answer, use `trueu` or `tpu`."
         if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id, wrap2):
-            add_ignored_post(site_post_id[0:2])
+            add_ignored_post(post_site_id[0:2])
             if not quiet_action:
                 return "Post ignored; alerts about it will no longer be posted."
         if second_part_lower.startswith("delete") or second_part_lower.startswith("remove") or second_part_lower.startswith("gone") \
