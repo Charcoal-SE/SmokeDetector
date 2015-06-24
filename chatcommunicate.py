@@ -164,6 +164,8 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
                 elif not user_added:
                     return "`true`/`tp` cannot be used for answers because their job is to add the title of the *question* to the Bayesian doctype 'bad'. If you want to blacklist the poster of the answer, use `trueu` or `tpu`."
         if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id, wrap2):
+            if post_site_id is None:
+                return "That message is not a report."
             add_ignored_post(post_site_id[0:2])
             if not quiet_action:
                 return "Post ignored; alerts about it will no longer be posted."
