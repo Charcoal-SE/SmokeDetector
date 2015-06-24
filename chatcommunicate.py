@@ -76,12 +76,12 @@ def watcher(ev, wrap2):
             if current_message.split(" ")[1] != "-":
                 result = handle_commands(current_message.lower(), current_message.split(" "), ev_room, ev_user_id, ev_user_name, wrap2)
                 if result is not None:
-                    reply += result + " "
+                    reply += result + os.linesep
                 else:
-                    reply += "<no return value> "
+                    reply += "<no return value>" + os.linesep
                     amount_none += 1
             else:
-                reply += "<skipped> "
+                reply += "<skipped>" + os.linesep
                 amount_skipped += 1
         if amount_none + amount_skipped == length:
             reply = ""
