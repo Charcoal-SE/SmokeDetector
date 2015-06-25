@@ -247,6 +247,8 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
             return "Not enough arguments."
         url = message_parts[1]
         post_data = api_get_post(url)
+        if post_data is None:
+            return "That does not look like a valid post URL."
         if post_data is False:
             return "Could not find data for this post in the API. Check whether the post is not deleted yet."
         user = get_user_from_url(post_data.owner_url)
