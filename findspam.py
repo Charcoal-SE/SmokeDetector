@@ -28,10 +28,11 @@ class FindSpam:
                     r"(?x:B [\s_]* A [\s_]* M \W{0,5} W [\s_]* A [\s_]* R [\s_]* \.? [\s_]* C [\s_]* O [\s_]* M)",
                     "slumber pm", "1-844-400-7325", "male enhancement", "bestcollegechina",
                     "bbwdesire", "rsorder", "Shopping ?Cart ?Elite", "Easy ?Data ?Feed",
-                    "breasts? enlargement", "best property management", "examguidez"]
+                    "breasts? enlargement", "best property management", "examguidez",
+                    "maxman ?power"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "aging ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))",
-                        "abam26", "watch2live"]
+                        "abam26", "watch2live", "cogniq"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive",
@@ -118,7 +119,9 @@ class FindSpam:
                             "mirahealthgarciniablog\\.com", "garciniaresearches\\.com",
                             "crevalorsite\\.com", "loseweightgarcinianow\\.com",
                             "macfixz\\.com", "moviesexplore\\.com",
-                            "iphoneunlocking\\.org", "wrinklerewindblog\\.net"]
+                            "iphoneunlocking\\.org", "wrinklerewindblog\\.net",
+                            "thehealthvictory\\.com", "goldenhealthreview\\.com",
+                            "tophealthysolutions\\.com"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
