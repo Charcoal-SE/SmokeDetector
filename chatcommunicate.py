@@ -356,4 +356,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         return "It's " + user_to_blame + "'s fault."
     if "smokedetector" in content_lower and "fault" in content_lower and ("xkcdbot" in ev_user_name.lower() or "bjb568" in ev_user_name.lower()):
         return "Liar"
+    if content_lower.startswith("!!/coffee"):
+        return "*brews coffee for @" + ev_user_name.replace(" ", "") + "*"
     return None
