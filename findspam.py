@@ -29,7 +29,7 @@ class FindSpam:
                     "slumber pm", "1-844-400-7325", "male enhancement", "bestcollegechina",
                     "bbwdesire", "rsorder", "Shopping ?Cart ?Elite", "Easy ?Data ?Feed",
                     "breasts? enlargement", "best property management", "examguidez",
-                    "maxman ?power"]
+                    "maxman ?power", "niagen"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "aging ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))",
                         "abam26", "watch2live", "cogniq"]
