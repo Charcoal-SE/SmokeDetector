@@ -90,7 +90,7 @@ class FindSpam:
                             "bestcelebritiesvideo\\.com", "shopnhlbruins\\.com",
                             "downloadscanpst\\.com",
                             "listoffreeware\\.com", "bigasoft\\.com", "opclub07\\.com",
-                            "allavsoft", "vpnranks\\.com", 
+                            "allavsoft", "vpnranks\\.com",
                             "musclebuildingproducts\\.info", "magichealthandwellness\\.com",
                             "vanskeys\\.com", "cheapessaywritingservice", "edbtopsts\\.com",
                             "texts\\.io", "writage\\.com", "mobitsolutions\\.com",
