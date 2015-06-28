@@ -8,7 +8,7 @@ class FindSpam:
                     "fifaodell", "brianfo", "tosterone", "bajotz",
                     "vashi?k[ae]r[ae]n", "kolcak"
                     "porn", "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
-                    "acai", "skin care", "rejuvenated skin",
+                    "acai", "skin ?care", "rejuvenated skin",
                     "LifeForce", "swtor2credits", "me2.do", "black magic",
                     "bam2u", "Neuro(3X|flexyn|fuse)", "Nutra", "TesteroneXL",
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX",
@@ -90,7 +90,7 @@ class FindSpam:
                             "bestcelebritiesvideo\\.com", "shopnhlbruins\\.com",
                             "downloadscanpst\\.com",
                             "listoffreeware\\.com", "bigasoft\\.com", "opclub07\\.com",
-                            "allavsoft", "vpnranks\\.com", "garciniasecretdietabout\\.com",
+                            "allavsoft", "vpnranks\\.com",
                             "musclebuildingproducts\\.info", "magichealthandwellness\\.com",
                             "vanskeys\\.com", "cheapessaywritingservice", "edbtopsts\\.com",
                             "texts\\.io", "writage\\.com", "mobitsolutions\\.com",
@@ -116,9 +116,7 @@ class FindSpam:
                             "\\.repair\\b", "optimalstackfacts", "x4facts", "endomondo\\.com",
                             "litindia\\.in", "shoppingcartelite\\.com",
                             "customizedwallpaper\\.com", "cracksofts\\.com",
-                            "mirahealthgarciniablog\\.com", "garciniaresearches\\.com",
-                            "crevalorsite\\.com", "loseweightgarcinianow\\.com",
-                            "macfixz\\.com", "moviesexplore\\.com",
+                            "crevalorsite\\.com", "macfixz\\.com", "moviesexplore\\.com",
                             "iphoneunlocking\\.org", "wrinklerewindblog\\.net",
                             "thehealthvictory\\.com", "goldenhealthreview\\.com",
                             "tophealthysolutions\\.com"]
