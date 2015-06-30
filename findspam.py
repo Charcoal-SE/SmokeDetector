@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import regex
 import phonenumbers
 
@@ -10,12 +10,12 @@ class FindSpam:
                     "porn", "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
                     "acai", "skin ?care", "rejuvenated skin",
                     "LifeForce", "swtor2credits", "me2.do", "black magic",
-                    "bam2u", "Neuro(3X|flexyn|fuse)", "Nutra", "TesteroneXL",
+                    "bam2u", "Neuro(3X|flexyn|fuse|luma)", "Nutra", "TesteroneXL",
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX",
                     "Forskolin", "Blackline Elite", "TestCore Pro",
                     "Xtreme Antler", "Maxx Test 3000", "orvigomax",
                     "Cheap Wigs?", "jivam", "(Improve )?Brain Power", "Maximum ?Shred",
-                    "aging skin", "acne( prone)? skin", "(skin )?eye serum",
+                    "aging skin", "acne( prone)? skin",
                     "skin (serum|eye)", "bagprada", "6611165613", "Apowersoft",
                     "Service Solahart", "junisse",
                     "(fake|original|uk|novelty) (passports?|driver'?s? licen[cs]e|ID cards?)",
@@ -32,13 +32,12 @@ class FindSpam:
                     "maxman ?power", "niagen"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "aging ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))",
-                        "abam26", "watch2live", "cogniq"]
+                        "abam26", "watch2live", "cogniq", "eye ?serum", "tophealth"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive",
                             "maletestosteronebooster",
-                            "tripleeffectseyeserum", "healthcaresup",
-                            "filerepairforum",
+                            "healthcaresup", "filerepairforum",
                             "lxwpro-t", "casque-beatsbydre", "tenderpublish",
                             "elliskinantiaging", "funmac", "lovebiscuits",
                             "Eglobalfitness", "musclezx90site", "fifapal",
@@ -54,7 +53,7 @@ class FindSpam:
                             "skinphysiciantips", "fifa2coins", "xtrememusclerecoveryrev",
                             "diabacordoesitwork", "thehealthyadvise",
                             "premiumpureforskolinrev", "hyperglycemiaabout", "dietandhealthguide",
-                            "health350", "sourceforge\\.net/projects/freepdftojpgconverter",
+                            "health\\d{3,}", "sourceforge\\.net/projects/freepdftojpgconverter",
                             "pdftoexel\\.wordpress\\.com", "best7th\\.in",
                             "recoverytoolbox\\.com", "mkmk9", "malwaretips", "intellipaat\\.com",
                             "webbuildersguide\\.com", "idealshare.net", "lankabpoacademy\\.com",
@@ -62,7 +61,7 @@ class FindSpam:
                             "sofotex\\.com",
                             "mybloggingmoney\\.com", "windows-techsupport\\.com",
                             "supplementsdeal\\.com", "drivethelife\\.com",
-                            "lafozi\\.com", "hipslimgarcinia\\.com", "open-swiss-bank\\.com",
+                            "lafozi\\.com", "open-swiss-bank\\.com",
                             "healthy-weight-loss-tips\\.com",
                             "tenorshare\\.com", "advancedpdfconverter\\.com",
                             "fix-computer\\.net",
@@ -103,7 +102,7 @@ class FindSpam:
                             "repairtoolbox\\.com", "couchsurfing\\.com",
                             "gta5codes\\.fr", "musclezx90au\\.com",
                             "fallclassicrun\\.com", "forgrams\\.com",
-                            "tophealthresource\\.com", "cloudinsights\\.net",
+                            "cloudinsights\\.net",
                             "(premium|priceless)-inkjet\\.com", "antivirus\\.comodo\\.com",
                             "clusterlinks\\.com", "connectify\\.me", "liftserump\\.com",
                             "kizi1000\\.in", "weightruinations\\.com",
@@ -119,7 +118,7 @@ class FindSpam:
                             "crevalorsite\\.com", "macfixz\\.com", "moviesexplore\\.com",
                             "iphoneunlocking\\.org", "wrinklerewindblog\\.net",
                             "thehealthvictory\\.com", "goldenhealthreview\\.com",
-                            "tophealthysolutions\\.com", "bloggermaking\\.com", "supportphonenumber\\.com"]
+                            "bloggermaking\\.com", "supportphonenumber\\.com"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
