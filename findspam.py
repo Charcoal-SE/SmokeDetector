@@ -112,7 +112,7 @@ class FindSpam:
                             "dermaessencecreamblog\\.com", "stadtbett\\.com",
                             "healthcaresdiscussion\\.com",
                             "recovery(pro)?\\.(com|net|org)", "password\\.(com|net|org)",
-                            "\\.repair\\b", "optimalstackfacts", "x4facts", "endomondo\\.com",
+                            "\\.repair\"", "optimalstackfacts", "x4facts", "endomondo\\.com",
                             "litindia\\.in", "shoppingcartelite\\.com",
                             "customizedwallpaper\\.com", "cracksofts\\.com",
                             "crevalorsite\\.com", "macfixz\\.com", "moviesexplore\\.com",
