@@ -172,9 +172,10 @@ class FindSpam:
                 body_to_check = regex.sub("<img[^>]+>", "", body_to_check)
                 body_to_check = regex.sub("<a[^>]+>", "", body_to_check)
             if rule['all'] != (site in rule['sites']):
-                matched_title = regex.compile(rule['regex'], regex.UNICODE).findall(title)
-                matched_username = regex.compile(rule['regex'], regex.UNICODE).findall(user_name)
-                matched_body = regex.compile(rule['regex'], regex.UNICODE).findall(body_to_check)
+                compiled_regex = regex.compile(rule['regex'], regex.UNICODE)
+                matched_title = compiled_regex.findall(title)
+                matched_username = compiled_regex.findall(user_name)
+                matched_body = compiled_regex.findall(body_to_check)
                 if matched_title and rule['title']:
                     try:
                         if getattr(FindSpam, "%s" % rule['validation_method'])(matched_title):
