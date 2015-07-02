@@ -59,7 +59,11 @@ class BodyFetcher:
         # wait to make sure API has/updates post data
         time.sleep(60)
         try:
+            jsonstart = time.time()
             response = requests.get(url, timeout=20).json()
+            jsonend = time.time()
+            print "Fetch benchmark: "
+            print jsonend - jsonstart
         except requests.exceptions.Timeout:
             return  # could add some retrying logic here, but eh.
 
