@@ -10,7 +10,8 @@ from datetime import datetime
 from utcdate import UtcDate
 from apigetpost import api_get_post
 from spamhandling import handle_spam
-from termcolor import colored, cprint
+from termcolor import colored
+
 
 # Please note: If new !!/ commands are added or existing ones are modified, don't forget to
 # update the wiki at https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands.
@@ -26,12 +27,14 @@ def post_message_in_room(room_id_str, msg, length_check=True):
 def is_smokedetector_message(user_id, room_id):
     return user_id == GlobalVars.smokeDetector_user_id[room_id]
 
+
 def print_chat_message(ev):
     message = colored("Chat message in " + ev.data["room_name"] + " (" + str(ev.data["room_id"]) + "): \"", attrs=['bold'])
     message += ev.data['content']
     message += "\""
     message += colored(" - " + ev.data['user_name'], attrs=['bold'])
     print message
+
 
 def watcher(ev, wrap2):
     if ev.type_id != 1:
