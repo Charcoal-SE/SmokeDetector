@@ -10,7 +10,7 @@ class FindSpam:
                     "porn", "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
                     "acai", "skin ?care", "rejuvenated skin",
                     "LifeForce", "swtor2credits", "me2.do", "black magic",
-                    "bam2u", "Neuro(3X|flexyn|fuse|luma|plex)", "Nutra", "TesteroneXL",
+                    "bam2u", "Neuro(3X|flexyn|fuse|luma|plex)", "Nutra", "TesteroneXL", "Nitroxin",
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX",
                     "Forskolin", "Blackline Elite", "TestCore Pro",
                     "Xtreme Antler", "Maxx Test 3000", "orvigomax",
@@ -119,7 +119,9 @@ class FindSpam:
                             "iphoneunlocking\\.org", "wrinklerewindblog\\.net",
                             "thehealthvictory\\.com", "goldenhealthreview\\.com",
                             "bloggermaking\\.com", "supportphonenumber\\.com",
-                            "healthsupreviews", "slimbodyketone"]
+                            "healthsupreviews", "slimbodyketone", "prinenidz\\.com",
+                            "maddenmobilehack", "supplements4help", "cheaproduct\\.com",
+                            "cacherealestate\\.com", "Matrixhackka007"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
