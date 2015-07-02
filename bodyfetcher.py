@@ -70,6 +70,7 @@ class BodyFetcher:
             return
 
         for post in response["items"]:
+            start = time.time()
             if "title" not in post or "body" not in post:
                 continue
             title = GlobalVars.parser.unescape(post["title"])
@@ -133,4 +134,7 @@ class BodyFetcher:
                         )
             except:
                 print "no answers"
+            end = time.time()
+            print "benchmark"
+            print end - start
         return
