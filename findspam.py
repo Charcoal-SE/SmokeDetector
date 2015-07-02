@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import regex
 import phonenumbers
-import time
 
 
 class FindSpam:
@@ -161,7 +160,6 @@ class FindSpam:
 
     @staticmethod
     def test_post(title, body, user_name, site, is_answer, body_is_summary):
-        start = time.time()
         result = []
         for rule in FindSpam.rules:
             body_to_check = body
@@ -194,8 +192,6 @@ class FindSpam:
                             result.append(rule['reason'].replace("{}", type_of_post))
                     except KeyError:  # There is no special logic for this rule
                         result.append(rule['reason'].replace("{}", type_of_post))
-        end = time.time()
-        print end - start
         return result
 
     @staticmethod
