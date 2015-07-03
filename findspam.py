@@ -3,6 +3,22 @@ import regex
 import phonenumbers
 
 
+def has_repeated_words(s):
+    words = regex.split("\\W", s)
+    words = [w for w in words if w != "" and not w.isdigit()]
+    curr = 0
+    prev = ""
+    for w in words:
+        if w == prev:
+            curr += 1
+        else:
+            curr = 0
+        prev = w
+        if curr >= 5:
+            return True
+    return curr >= 5
+
+
 class FindSpam:
     bad_keywords = ["baba ?ji", "fifa.*coins?", "fifabay", "Long Path Tool",
                     "fifaodell", "brianfo", "tosterone", "bajotz",
@@ -152,7 +168,7 @@ class FindSpam:
         {'regex': u"(?i)(%s)" % "|".join(blacklisted_websites), 'all': True,
          'sites': [], 'reason': "Blacklisted website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"([^\\s_.?!=0-9-])\\1{10,}", 'all': True, 'sites': [], 'reason': "Repeating characters in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
-        {'regex': u"(?i)(?P<word>[a-zA-Z]+).*((\\b| )+(?P=word)){5,}", 'all': True, 'sites': [], 'reason': "Repeating words in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
+        {'method': has_repeated_words, 'all': True, 'sites': [], 'reason': "Repeating words in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': u"^(.)\\1+$", 'all': True, 'sites': [], 'reason': "{} has only one unique char", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': u"(?<![=#/])\\b[A-z0-9_.%+-]+@(?!example\\.com)[A-z0-9_.%+-]+\\.[A-z]{2,4}\\b", 'all': True,
          'sites': ["stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com"], 'reason': "Email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
@@ -173,12 +189,22 @@ class FindSpam:
                 body_to_check = regex.sub("<img[^>]+>", "", body_to_check)
                 body_to_check = regex.sub("<a[^>]+>", "", body_to_check)
             if rule['all'] != (site in rule['sites']):
-                compiled_regex = regex.compile(rule['regex'], regex.UNICODE)
-                matched_title = compiled_regex.findall(title)
-                matched_username = compiled_regex.findall(user_name)
-                matched_body = None
+                compiled_regex = None
+                if 'regex' in rule:
+                    compiled_regex = regex.compile(rule['regex'], regex.UNICODE)
+                    matched_title = compiled_regex.findall(title)
+                    matched_username = compiled_regex.findall(user_name)
+                    matched_body = None
+                else:
+                    assert 'method' in rule
+                    matched_title = rule['method'](title)
+                    matched_username = rule['method'](user_name)
+                    matched_body = None
                 if not body_is_summary or rule['body_summary']:
-                    matched_body = compiled_regex.findall(body_to_check)
+                    if 'regex' in rule:
+                        matched_body = compiled_regex.findall(body_to_check)
+                    else:
+                        matched_body = rule['method'](body_to_check)
                 if matched_title and rule['title']:
                     try:
                         if getattr(FindSpam, "%s" % rule['validation_method'])(matched_title):
