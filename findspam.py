@@ -176,7 +176,9 @@ class FindSpam:
                 compiled_regex = regex.compile(rule['regex'], regex.UNICODE)
                 matched_title = compiled_regex.findall(title)
                 matched_username = compiled_regex.findall(user_name)
-                matched_body = compiled_regex.findall(body_to_check)
+                matched_body = None
+                if not body_is_summary or rule['body_summary']:
+                    matched_body = compiled_regex.findall(body_to_check)
                 if matched_title and rule['title']:
                     try:
                         if getattr(FindSpam, "%s" % rule['validation_method'])(matched_title):
@@ -189,7 +191,7 @@ class FindSpam:
                             result.append(rule['reason'].replace("{}", "username"))
                     except KeyError:  # There is no special logic for this rule
                         result.append(rule['reason'].replace("{}", "username"))
-                if matched_body and rule['body'] and (not body_is_summary or rule['body_summary']):
+                if matched_body and rule['body']:
                     type_of_post = "answer" if is_answer else "body"
                     try:
                         if getattr(FindSpam, "%s" % rule['validation_method'])(matched_body):
