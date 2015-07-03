@@ -54,7 +54,7 @@ import pytest
     ('This is another title.', 'This is another body. <code>bbbbbbbbbbbb</code>', '', 'stackoverflow.com', False, False),
     ('Yet another title.', 'many whitespace             .', '', 'stackoverflow.com', False, False),
     ('Perfectly valid title.', 'bbbbbbbbbbbbbbbbbbbbbb', '', 'stackoverflow.com', True, False),
-    # ('Long double', 'I have this value: 9999999999999999', '', 'stackoverflow.com', False, False),
+    ('Long double', 'I have this value: 9999999999999999', '', 'stackoverflow.com', False, False),
     ('Another valid title.', 'asdf asdf asdf asdf asdf asdf asdf asdf asdf', '', 'stackoverflow.com', True, False),
     ('Array question', 'I have an array with these values: 10 10 10 10 10 10 10 10 10 10 10 10', '', 'stackoverflow.com', False, False),
     ('Array question', 'I have an array with these values: 0 0 0 0 0 0 0 0 0 0 0 0', '', 'stackoverflow.com', False, False),
