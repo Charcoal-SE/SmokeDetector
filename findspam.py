@@ -189,21 +189,18 @@ class FindSpam:
                 body_to_check = regex.sub("<img[^>]+>", "", body_to_check)
                 body_to_check = regex.sub("<a[^>]+>", "", body_to_check)
             if rule['all'] != (site in rule['sites']):
-                compiled_regex = None
+                matched_body = None
                 if 'regex' in rule:
                     compiled_regex = regex.compile(rule['regex'], regex.UNICODE)
                     matched_title = compiled_regex.findall(title)
                     matched_username = compiled_regex.findall(user_name)
-                    matched_body = None
+                    if not body_is_summary or rule['body_summary']:
+                        matched_body = compiled_regex.findall(body_to_check)
                 else:
                     assert 'method' in rule
                     matched_title = rule['method'](title)
                     matched_username = rule['method'](user_name)
-                    matched_body = None
-                if not body_is_summary or rule['body_summary']:
-                    if 'regex' in rule:
-                        matched_body = compiled_regex.findall(body_to_check)
-                    else:
+                    if not body_is_summary or rule['body_summary']:
                         matched_body = rule['method'](body_to_check)
                 if matched_title and rule['title']:
                     try:
