@@ -5,11 +5,11 @@ import phonenumbers
 
 def has_repeated_words(s):
     words = regex.split("\\W", s)
-    words = [w for w in words if w != "" and not w.isdigit()]
+    words = [w for w in words if w != ""]
     curr = 0
     prev = ""
     for w in words:
-        if w == prev:
+        if w == prev and not w.isdigit():
             curr += 1
         else:
             curr = 0
