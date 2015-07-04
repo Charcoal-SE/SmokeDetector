@@ -23,6 +23,7 @@ def has_repeated_words(s):
 def has_duplicate_links(s):
     soup = BeautifulSoup(s)
     links = soup.findAll('a', href=True)
+    links = [link['href'] for link in links]
     return len(links) != len(set(links))
 
 
