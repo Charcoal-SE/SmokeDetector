@@ -72,6 +72,8 @@ def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_
     reasons = list(set(reasons))
     reasons.sort()
     reason = ", ".join(reasons).capitalize()
+    if "Url" in reason:
+        reason = reason.replace("Url", "URL")
     append_to_latest_questions(site, post_id, title if not is_answer else "")
     if len(reasons) == 1 and ("All-caps title" in reasons or
                               "Repeating characters in title" in reasons or
