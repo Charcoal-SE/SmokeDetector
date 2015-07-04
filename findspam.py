@@ -146,7 +146,7 @@ class FindSpam:
                             "healthsupreviews", "slimbodyketone", "prinenidz\\.com",
                             "maddenmobilehack", "supplements4help", "cheaproduct\\.com",
                             "cacherealestate\\.com", "Matrixhackka007", "aoatech\\.com",
-                            "pharaohtools"]
+                            "pharaohtools", "msoutlooktools\\.com"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
