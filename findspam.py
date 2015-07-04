@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import regex
 import phonenumbers
+from bs4 import BeautifulSoup
 
 
 def has_repeated_words(s):
@@ -17,6 +18,12 @@ def has_repeated_words(s):
         if curr >= 5:
             return True
     return curr >= 5
+
+
+def has_duplicate_links(s):
+    soup = BeautifulSoup(s)
+    links = soup.findAll('a', href=True)
+    return len(links) != len(set(links))
 
 
 class FindSpam:
@@ -169,6 +176,7 @@ class FindSpam:
          'sites': [], 'reason': "Blacklisted website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"([^\\s_.?!=0-9-])\\1{10,}", 'all': True, 'sites': [], 'reason': "Repeating characters in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'method': has_repeated_words, 'all': True, 'sites': [], 'reason': "Repeating words in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
+        {'method': has_duplicate_links, 'all': True, 'sites': [], 'reason': "Duplicate links in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True},
         {'regex': u"^(.)\\1+$", 'all': True, 'sites': [], 'reason': "{} has only one unique char", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': u"(?<![=#/])\\b[A-z0-9_.%+-]+@(?!example\\.com)[A-z0-9_.%+-]+\\.[A-z]{2,4}\\b", 'all': True,
          'sites': ["stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com"], 'reason': "Email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
