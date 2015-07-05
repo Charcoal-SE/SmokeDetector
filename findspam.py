@@ -213,7 +213,7 @@ class FindSpam:
                     assert 'method' in rule
                     matched_title = rule['method'](title)
                     matched_username = rule['method'](user_name)
-                    if not body_is_summary or rule['body_summary']:
+                    if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer):
                         matched_body = rule['method'](body_to_check)
                 if matched_title and rule['title']:
                     try:
