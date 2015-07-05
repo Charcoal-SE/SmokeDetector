@@ -55,7 +55,12 @@ class BodyFetcher:
 
     def make_api_call_for_site(self, site):
         posts = self.queue.pop(site)
-        url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts) + "?site=" + site + "&filter=!4y_-sca-)pfAwlmP_1FxC6e5yzutRIcQvonAiP&key=IAkbitmze4B8KpacUfLqkw(("
+        if site == "stackoverflow.com":
+            # Not all SO questions are shown in the realtime feed. We now
+            # fetch all recently modified SO questions to work around that.
+            url = "http://api.stackexchange.com/2.2/questions?site=stackoverflow&filter=!4y_-sca-)pfAwlmP_1FxC6e5yzutRIcQvonAiP&key=IAkbitmze4B8KpacUfLqkw((&pagesize=25"
+        else:
+            url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts) + "?site=" + site + "&filter=!4y_-sca-)pfAwlmP_1FxC6e5yzutRIcQvonAiP&key=IAkbitmze4B8KpacUfLqkw(("
         # wait to make sure API has/updates post data
         time.sleep(60)
         try:
