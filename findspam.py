@@ -10,7 +10,7 @@ def has_repeated_words(s, site):
     curr = 0
     prev = ""
     for w in words:
-        if w == prev and not w.isdigit():
+        if w == prev and w.isalpha():
             curr += 1
         else:
             curr = 0
