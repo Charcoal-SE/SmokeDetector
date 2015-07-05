@@ -177,7 +177,7 @@ class FindSpam:
          'sites': [], 'reason': "Blacklisted website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"([^\\s_.?!=0-9-])\\1{10,}", 'all': True, 'sites': [], 'reason': "Repeating characters in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'method': has_repeated_words, 'all': True, 'sites': [], 'reason': "Repeating words in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
-        {'method': has_duplicate_links, 'all': True, 'sites': [], 'reason': "Duplicate links in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True},
+        {'method': has_duplicate_links, 'all': True, 'sites': [], 'reason': "Duplicate links in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'answers': False},
         {'regex': u"^(.)\\1+$", 'all': True, 'sites': [], 'reason': "{} has only one unique char", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': u"(?<![=#/])\\b[A-z0-9_.%+-]+@(?!example\\.com)[A-z0-9_.%+-]+\\.[A-z]{2,4}\\b", 'all': True,
          'sites': ["stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com"], 'reason': "Email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
@@ -191,6 +191,10 @@ class FindSpam:
         result = []
         for rule in FindSpam.rules:
             body_to_check = body
+            try:
+                check_if_answer = rule['answers']
+            except KeyError:
+                check_if_answer = True
             if rule['stripcodeblocks']:
                 body_to_check = regex.sub("<pre>.*?</pre>", "", body, flags=regex.DOTALL)
                 body_to_check = regex.sub("<code>.*?</code>", "", body_to_check, flags=regex.DOTALL)
@@ -203,7 +207,7 @@ class FindSpam:
                     compiled_regex = regex.compile(rule['regex'], regex.UNICODE)
                     matched_title = compiled_regex.findall(title)
                     matched_username = compiled_regex.findall(user_name)
-                    if not body_is_summary or rule['body_summary']:
+                    if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer):
                         matched_body = compiled_regex.findall(body_to_check)
                 else:
                     assert 'method' in rule
