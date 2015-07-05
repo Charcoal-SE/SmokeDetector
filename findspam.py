@@ -4,7 +4,7 @@ import phonenumbers
 from bs4 import BeautifulSoup
 
 
-def has_repeated_words(s):
+def has_repeated_words(s, site):
     words = regex.split(r"[\s.,:;!/\()\[\]+_-]", s)
     words = [w for w in words if w != ""]
     curr = 0
@@ -20,11 +20,13 @@ def has_repeated_words(s):
     return curr >= 5
 
 
-def has_duplicate_links(s):
+def has_duplicate_links(s, site):
     soup = BeautifulSoup(s)
     links = soup.findAll('a', href=True)
     links = [link['href'] for link in links]
-    return len(links) != len(set(links))
+    if site == "patents.stackexchange.com":
+        return len(links) != len(set(links))
+    return len(links) == 2 and len(set(links)) == 1
 
 
 class FindSpam:
@@ -211,10 +213,10 @@ class FindSpam:
                         matched_body = compiled_regex.findall(body_to_check)
                 else:
                     assert 'method' in rule
-                    matched_title = rule['method'](title)
-                    matched_username = rule['method'](user_name)
+                    matched_title = rule['method'](title, site)
+                    matched_username = rule['method'](user_name, site)
                     if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer):
-                        matched_body = rule['method'](body_to_check)
+                        matched_body = rule['method'](body_to_check, site)
                 if matched_title and rule['title']:
                     try:
                         if getattr(FindSpam, "%s" % rule['validation_method'])(matched_title):
