@@ -18,6 +18,8 @@ class BodyFetcher:
 
     threshold = 2
 
+    last_activity_date = 0
+
     def add_to_queue(self, post):
         #  return  # Disabled, see http://chat.stackexchange.com/transcript/message/20369565#20369565
         d = json.loads(json.loads(post)["data"])
@@ -58,7 +60,13 @@ class BodyFetcher:
         if site == "stackoverflow.com":
             # Not all SO questions are shown in the realtime feed. We now
             # fetch all recently modified SO questions to work around that.
-            url = "http://api.stackexchange.com/2.2/questions?site=stackoverflow&filter=!4y_-sca-)pfAwlmP_1FxC6e5yzutRIcQvonAiP&key=IAkbitmze4B8KpacUfLqkw((&pagesize=25"
+            min_query = ""
+            if last_activity_date != 0:
+                min_query = "&min=" + str(last_activity_date)
+                pagesize = "50"
+            else:
+                pagesize = "25"
+            url = "http://api.stackexchange.com/2.2/questions?site=stackoverflow&filter=!4y_-sca-)pfAwlmP_1FxC6e5yzutRIcQvonAiP&key=IAkbitmze4B8KpacUfLqkw((&pagesize=" + pagesize + min_query
         else:
             url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts) + "?site=" + site + "&filter=!4y_-sca-)pfAwlmP_1FxC6e5yzutRIcQvonAiP&key=IAkbitmze4B8KpacUfLqkw(("
         # wait to make sure API has/updates post data
@@ -73,6 +81,9 @@ class BodyFetcher:
         else:
             GlobalVars.apiquota = 0
             return
+
+        if site == "stackoverflow.com":
+            last_activity_date = response["items"][0]["last_activity_date"]
 
         for post in response["items"]:
             if "title" not in post or "body" not in post:
