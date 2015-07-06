@@ -16,7 +16,7 @@ def get_user_from_url(url):
 
 
 def fetch_post_url_from_msg_content(content):
-    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w\s,-]+: \[.+]\(((?:http:)?\/\/[\w.]+\/questions\/\d+\/.+|(?:http:)?\/\/[\w.]+\/[qa]\/\d+)\) by \[?.*\]?\(?(?:.*)\)? on `[\w.]+`$"
+    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w\s,-]+: \[.+]\(((?:http:)?\/\/[\w.]+\/questions\/\d+(?:\/.+)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+)\) by \[?.*\]?\(?(?:.*)\)? on `[\w.]+`$"
     m = regex.compile(search_regex).search(content)
     if m is None:
         return None
@@ -66,7 +66,7 @@ def fetch_post_id_and_site_from_msg_content(content):
 
 
 def fetch_owner_url_from_msg_content(content):
-    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w\s,-]+: \[.+]\((?:(?:http:)?\/\/[\w.]+\/questions\/\d+\/.+|(?:http:)?\/\/[\w.]+\/[qa]\/\d+)\) by \[.+\]\((.+)\) on `[\w.]+`$"
+    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w\s,-]+: \[.+]\((?:(?:http:)?\/\/[\w.]+\/questions\/\d+(?:\/.+)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+)\) by \[.+\]\((.+)\) on `[\w.]+`$"
     m = regex.compile(search_regex).search(content)
     if m is None:
         return None
@@ -78,7 +78,7 @@ def fetch_owner_url_from_msg_content(content):
 
 
 def fetch_title_from_msg_content(content):
-    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w\s,-]+: \[(.+)]\((?:(?:http:)?\/\/[\w.]+\/questions\/\d+\/.+|(?:http:)?\/\/[\w.]+\/[qa]\/\d+)\) by \[?.*\]?\(?.*\)? on `[\w.]+`$"
+    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w\s,-]+: \[(.+)]\((?:(?:http:)?\/\/[\w.]+\/questions\/\d+(?:\/.+)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+)\) by \[?.*\]?\(?.*\)? on `[\w.]+`$"
     m = regex.compile(search_regex).search(content)
     if m is None:
         return None
@@ -128,7 +128,11 @@ def url_to_shortlink(url):
     if id_and_site is None:
         return url
     if id_and_site[2] == "question":
-        return "http://%s/q/%s" % (id_and_site[1], id_and_site[0])
+        return "http://%s/questions/%s" % (id_and_site[1], id_and_site[0])
+        # We're using "/questions" and not "/q" here because when the URL
+        # is made protocol-relative, /q would redirect to http even if the
+        # shortlink is https. Same for /a. But there we still use /a because
+        # there is no /answers or something like that.
     else:
         return "http://%s/a/%s" % (id_and_site[1], id_and_site[0])
 

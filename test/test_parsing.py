@@ -29,11 +29,11 @@ with open("test/data_test_parsing.txt", "r") as f:
     ('!!/rmblu 1234 stackoverflow.com', get_user_from_list_command, ('1234', 'stackoverflow.com')),
     ('!!/rmwlu 4321 communitybuilding.stackexchange.com', get_user_from_list_command, ('4321', 'communitybuilding.stackexchange.com')),
     ('!!/addblu 1 stackoverflow', get_user_from_list_command, ('1', 'stackoverflow.com')),
-    ('http://stackoverflow.com/questions/1/title-here', url_to_shortlink, 'http://stackoverflow.com/q/1'),
+    ('http://stackoverflow.com/questions/1/title-here', url_to_shortlink, 'http://stackoverflow.com/questions/1'),
     ('http://stackoverflow.com/questions/1/title-here/2#2', url_to_shortlink, 'http://stackoverflow.com/a/2'),
-    ('http://writers.stackexchange.com/questions/1/%2f%2f', url_to_shortlink, 'http://writers.stackexchange.com/q/1'),
+    ('http://writers.stackexchange.com/questions/1/%2f%2f', url_to_shortlink, 'http://writers.stackexchange.com/questions/1'),
     ('http://writers.stackexchange.com/questions/1/%2f%2f/2#2', url_to_shortlink, 'http://writers.stackexchange.com/a/2'),
-    ('http://mathoverflow.net/q/1', url_to_shortlink, 'http://mathoverflow.net/q/1'),
+    ('http://mathoverflow.net/q/1', url_to_shortlink, 'http://mathoverflow.net/questions/1'),
     ('http://stackexchange.com', to_protocol_relative, '//stackexchange.com'),
     ('https://stackexchange.com', to_protocol_relative, '//stackexchange.com'),
     ('//stackexchange.com', to_protocol_relative, '//stackexchange.com'),
@@ -79,7 +79,10 @@ with open("test/data_test_parsing.txt", "r") as f:
     (test_data_inputs[9], fetch_title_from_msg_content, "Why I can't insert data in a model from a custom controller?"),
     (test_data_inputs[10], fetch_post_id_and_site_from_msg_content, ('27954020', 'stackoverflow.com', 'question')),
     (test_data_inputs[10], fetch_owner_url_from_msg_content, '//stackoverflow.com/users/3754535/user3754535'),
-    (test_data_inputs[10], fetch_title_from_msg_content, "Why I can't insert data in a model from a custom controller?")
+    (test_data_inputs[10], fetch_title_from_msg_content, "Why I can't insert data in a model from a custom controller?"),
+    (test_data_inputs[11], fetch_post_id_and_site_from_msg_content, ('27954020', 'stackoverflow.com', 'question')),
+    (test_data_inputs[11], fetch_owner_url_from_msg_content, '//stackoverflow.com/users/3754535/user3754535'),
+    (test_data_inputs[11], fetch_title_from_msg_content, "Why I can't insert data in a model from a custom controller?")
 ])
 def test_parsing(input_data, parse_method, expected):
     assert parse_method(input_data.strip()) == expected
