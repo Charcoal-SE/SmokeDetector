@@ -61,8 +61,8 @@ class BodyFetcher:
             # Not all SO questions are shown in the realtime feed. We now
             # fetch all recently modified SO questions to work around that.
             min_query = ""
-            if last_activity_date != 0:
-                min_query = "&min=" + str(last_activity_date)
+            if self.last_activity_date != 0:
+                min_query = "&min=" + str(self.last_activity_date)
                 pagesize = "50"
             else:
                 pagesize = "25"
@@ -83,7 +83,7 @@ class BodyFetcher:
             return
 
         if site == "stackoverflow.com":
-            last_activity_date = response["items"][0]["last_activity_date"]
+            self.last_activity_date = response["items"][0]["last_activity_date"]
 
         for post in response["items"]:
             if "title" not in post or "body" not in post:
