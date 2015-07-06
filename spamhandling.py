@@ -6,7 +6,7 @@ from datahandling import add_auto_ignored_post, is_blacklisted_user, \
     is_whitelisted_user, has_already_been_posted, is_false_positive, \
     is_auto_ignored_post, is_ignored_post, append_to_latest_questions
 from parsing import get_user_from_url, unescape_title,\
-    escape_special_chars_in_title
+    escape_special_chars_in_title, to_protocol_relative
 from bayesianfuncs import bayesian_score
 from globalvars import GlobalVars
 from datetime import datetime
@@ -68,7 +68,8 @@ def check_if_spam_json(data):
 
 
 def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_answer):
-    post_url = url_to_shortlink(post_url)
+    post_url = to_protocol_relative(url_to_shortlink(post_url))
+    poster_url = to_protocol_relative(poster_url)
     reasons = list(set(reasons))
     reasons.sort()
     reason = ", ".join(reasons).capitalize()
