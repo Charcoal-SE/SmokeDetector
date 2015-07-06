@@ -39,6 +39,8 @@ with open("test/data_test_parsing.txt", "r") as f:
     ('sd tpu fp ignore delete', preprocess_shortcut_command, 'sd tpu fp ignore delete'),
     ('sd 5-', preprocess_shortcut_command, 'sd - - - - -'),
     ('sd  tpu', preprocess_shortcut_command, 'sd tpu'),
+    ('sd 2 tpu', preprocess_shortcut_command, 'sd tpu tpu'),
+    ('sd fp 3   tpu', preprocess_shortcut_command, 'sd fp tpu tpu tpu'),
     (test_data_inputs[0], fetch_post_id_and_site_from_msg_content, ('246651', 'meta.stackexchange.com', 'question')),
     (test_data_inputs[0], fetch_owner_url_from_msg_content, 'http://meta.stackexchange.com/users/279263/lisa-usher'),
     (test_data_inputs[0], fetch_title_from_msg_content, 'Best Weight Loss Tips For Fast Results'),

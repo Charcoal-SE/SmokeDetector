@@ -134,6 +134,7 @@ def url_to_shortlink(url):
 
 
 def preprocess_shortcut_command(cmd):
+    cmd = regex.sub(r"(\d)\s+", r"\1", cmd)
     parts = cmd.split(" ")
     new_cmd = ["sd"]
     for i in range(1, len(parts)):
