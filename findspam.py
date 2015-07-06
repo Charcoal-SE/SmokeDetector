@@ -55,15 +55,15 @@ class FindSpam:
                     "slumber pm", "1-844-400-7325", "male enhancement", "bestcollegechina",
                     "bbwdesire", "rsorder", "Shopping ?Cart ?Elite", "Easy ?Data ?Feed",
                     "breasts? enlargement", "best property management", "examguidez",
-                    "maxman ?power", "niagen"]
+                    "maxman ?power", "niagen", "Testo[ -]?Xplode"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "aging ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))",
                         "abam26", "watch2live", "cogniq", "eye ?serum", "tophealth"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
-                            "cfpchampionship2015playofflive",
-                            "maletestosteronebooster",
-                            "healthcaresup", "filerepairforum",
+                            "cfpchampionship2015playofflive", "rankassured\\.com",
+                            "maletestosteronebooster", "menintalk", "king-steroid"
+                            "healthcaresup", "filerepairforum", "beautyskin",
                             "lxwpro-t", "casque-beatsbydre", "tenderpublish",
                             "elliskinantiaging", "funmac", "lovebiscuits",
                             "Eglobalfitness", "musclezx90site", "fifapal",
