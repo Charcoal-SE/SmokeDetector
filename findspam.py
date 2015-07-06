@@ -160,7 +160,7 @@ class FindSpam:
          'sites': [], 'reason': "Korean character in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)(>>>>|===>|==>>>)(?s).*http", 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False},
-        {'regex': u"<blockquote>[^\/]*<blockquote>", 'all': True,
+        {'regex': u"<blockquote>[^\/]*<blockquote>[^\/]*<blockquote>", 'all': True,
          'sites': [], 'reason': "Nested quote blocks in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': u"(?i)\\b(weight (body ?builder|loo?s[es]|reduction)|muscles?|anti aging|loo?s[es] weight|wrinkles?|diet ?plan|supplements?)\\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
