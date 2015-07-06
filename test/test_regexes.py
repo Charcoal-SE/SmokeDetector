@@ -37,7 +37,7 @@ import pytest
     ('something', 'his email address is (SOMEONE@GMAIL.COM)', '', 'meta.stackexchange.com', False, True),
     ('asdf asdf asdf asdf asdf asdf asdf asdf', '', '', 'stackoverflow.com', True, True),
     ('A title', '>>>>  http://', '', 'stackoverflow.com', False, True),
-    ('Title', '<a href="http://myspam.com/spam"/> yay <a href="http://myspam.com/spam"/>', '', 'stackoverflow.com', False, True),
+    ('Title', '<a href="http://myspam.com/spam"/> yay <a href="http://myspam.com/spam"/>', '', 'patents.stackexchange.com', False, True),
     ('spam', '>>>> http://', '', 'stackoverflow.com', True, False),
     ('Another title', '<code>>>>>http://</code>', '', 'stackoverflow.com', False, False),
     ('This asdf should asdf not asdf be asdf matched asdf because asdf the asdf words do not asdf follow on each asdf other.', '', '', 'stackoverflow.com', False, False),
