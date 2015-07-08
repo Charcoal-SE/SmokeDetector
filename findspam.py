@@ -73,7 +73,7 @@ class FindSpam:
                             "totalfitnesspoint", "trustessaywriting",
                             "trustmyessay", "faasoft", "besttvshows", "mytechlabs",
                             "giikers", "pagetube", "myenv\\.org",
-                            "pelevoniface",
+                            "pelevoniface", "herintalk",
                             "skinphysiciantips", "fifa2coins", "xtrememusclerecoveryrev",
                             "diabacordoesitwork", "thehealthyadvise",
                             "premiumpureforskolinrev", "hyperglycemiaabout", "dietandhealthguide",
