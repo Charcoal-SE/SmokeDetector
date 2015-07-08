@@ -56,7 +56,7 @@ class FindSpam:
                     "maxman ?power", "niagen", "Testo[ -]?Xplode"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "aging ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))",
-                        "abam26", "watch2live", "cogniq", "eye ?serum", "tophealth"]
+                        "abam26", "watch2live", "cogniq", "eye ?serum", "tophealth", "poker ?online"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
@@ -73,7 +73,7 @@ class FindSpam:
                             "totalfitnesspoint", "trustessaywriting",
                             "trustmyessay", "faasoft", "besttvshows", "mytechlabs",
                             "giikers", "pagetube", "myenv\\.org",
-                            "pelevoniface", "herintalk",
+                            "pelevoniface", "herintalk", "menshealth",
                             "skinphysiciantips", "fifa2coins", "xtrememusclerecoveryrev",
                             "diabacordoesitwork", "thehealthyadvise",
                             "premiumpureforskolinrev", "hyperglycemiaabout", "dietandhealthguide",
