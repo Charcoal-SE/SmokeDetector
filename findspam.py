@@ -35,7 +35,7 @@ class FindSpam:
                     "acai", "skin ?care", "rejuvenated skin",
                     "LifeForce", "swtor2credits", "me2.do", "black magic",
                     "bam2u", "Neuro(3X|flexyn|fuse|luma|plex)", "Nutra", "TesteroneXL", "Nitroxin",
-                    "Bowtrol", "Slim ?Genix", "Cleanse EFX",
+                    "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha Rush",
                     "Forskolin", "Blackline Elite", "TestCore Pro",
                     "Xtreme Antler", "Maxx Test 3000", "orvigomax",
                     "Cheap Wigs?", "jivam", "Brain Power", "Maximum ?Shred",
