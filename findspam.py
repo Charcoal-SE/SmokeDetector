@@ -26,6 +26,7 @@ def has_duplicate_links(s, site):
     links = [link['href'] for link in links]
     return len(links) != len(set(links))
 
+
 def has_repeating_characters(s, site):
     if s is None or len(s) == 0:
         return False
