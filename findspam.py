@@ -26,6 +26,14 @@ def has_duplicate_links(s, site):
     links = [link['href'] for link in links]
     return len(links) != len(set(links))
 
+def has_repeating_characters(s, site):
+    if s is None or len(s) == 0:
+        return False
+    matches = regex.compile("([^\\s_.?!=~*/0-9-])(\\1{10,})", regex.UNICODE).findall(s)
+    matches = ["".join(match) for match in matches]
+    match = "".join(matches)
+    return (100 * len(match) / len(s)) >= 20
+
 
 class FindSpam:
     bad_keywords = ["baba ?ji", "fifa.*coins?", "fifabay", "Long Path Tool",
@@ -176,7 +184,7 @@ class FindSpam:
          'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com"], 'reason': "URL in title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u"(?i)(%s)" % "|".join(blacklisted_websites), 'all': True,
          'sites': [], 'reason': "Blacklisted website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
-        {'regex': u"([^\\s_.?!=~*/0-9-])\\1{10,}", 'all': True, 'sites': [], 'reason': "Repeating characters in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
+        {'method': has_repeating_characters, 'all': True, 'sites': [], 'reason': "Repeating characters in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'method': has_repeated_words, 'all': True, 'sites': [], 'reason': "Repeating words in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'method': has_duplicate_links, 'all': False, 'sites': ["patents.stackexchange.com"], 'reason': "Duplicate links in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'answers': False},
         {'regex': u"^(.)\\1+$", 'all': True, 'sites': [], 'reason': "{} has only one unique char", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
