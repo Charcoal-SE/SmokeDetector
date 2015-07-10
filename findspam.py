@@ -161,7 +161,7 @@ class FindSpam:
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': u"<blockquote>[^\/]*<blockquote>[^\/]*<blockquote>", 'all': True,
          'sites': [], 'reason': "Nested quote blocks in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
-        {'regex': u"(?i)\\b(weight (body ?builder|loo?s[es]|reduction)|muscles?|anti aging|loo?s[es] weight|wrinkles?|diet ?plan|supplements?)\\b", 'all': True,
+        {'regex': u"(?i)\\b(weight (loo?s[es]|reduction)|body ?build(er|ing)|.*workouts?\\.com|muscles?|anti aging|loo?s[es] weight|wrinkles?|diet ?plan|supplements?)\\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u"(?i)^(?:(?=.*?\\b(?:online|hd)\\b)(?=.*?(?:free|full|unlimited)).*?movies?\\b|(?=.*?\\b(?:acai|kisn)\\b)(?=.*?care).*products?\\b|(?=.*?packer).*mover)", 'all': True,
          'sites': [], 'reason': "Bad keywords in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
