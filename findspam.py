@@ -167,7 +167,7 @@ class FindSpam:
         {'regex': u"(?i)\\bgratis\\b", 'all': True,
          'sites': ['softwarerecs.stackexchange.com'], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)\\p{Script=Hangul}", 'all': True,
-         'sites': [], 'reason': "Korean character in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
+         'sites': [], 'reason': "Korean character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u"(?i)(>>>>|===>|==>>>)(?s).*http", 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': u"<blockquote>[^\/]*<blockquote>[^\/]*<blockquote>", 'all': True,
