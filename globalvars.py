@@ -78,7 +78,8 @@ class GlobalVars:
                                               "284141",  # michaelpri
                                               "260312",  # vaultah
                                               "244062",  # SouravGhosh
-                                              "152859"]}  # Shadow Wizard
+                                              "152859",  # Shadow Wizard
+                                              "200235"]}  # durron597
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345"}
 
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
