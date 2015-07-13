@@ -66,7 +66,7 @@ class FindSpam:
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "aging ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?serum", "tophealth", "poker ?online"
-                        "caralluma", "male\\Wperf"]
+                        "caralluma", "male\\Wperf", "anti[- ]?aging"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
@@ -144,7 +144,7 @@ class FindSpam:
                             "rackons\\.com", "imonitorsoft\\.com",
                             "analec\\.com", "livesportstv\\.us",
                             "dermaessencecreamblog\\.com", "stadtbett\\.com",
-                            "healthcaresdiscussion\\.com",
+                            "healthcaresdiscussion\\.com", "jetcheats\\.com",
                             "recovery(pro)?\\.(com|net|org)", "password\\.(com|net|org)",
                             "\\.repair\"", "optimalstackfacts", "x4facts", "endomondo\\.com",
                             "litindia\\.in", "shoppingcartelite\\.com",
@@ -158,7 +158,7 @@ class FindSpam:
                             "cacherealestate\\.com", "Matrixhackka007", "aoatech\\.com",
                             "pharaohtools", "msoutlooktools\\.com", "softwarezee",
                             "i-hire\\.pro", "pandamw\\.com", "buy[\\w-]{6,}\\.(com|net|org)",
-                            "(testo|cleanse|supplement)[\\w-]*\\.(com|net|org)"]
+                            "(testo|cleanse|supplement|serum)[\\w-]*\\.(com|net|org)"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
@@ -172,7 +172,7 @@ class FindSpam:
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': u"<blockquote>[^\/]*<blockquote>[^\/]*<blockquote>", 'all': True,
          'sites': [], 'reason': "Nested quote blocks in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
-        {'regex': u"(?i)\\b(weight (loo?s[es]|reduction)|body ?build(er|ing)|.*workouts?\\.com|muscles?|anti aging|loo?s[es] weight|wrinkles?|diet ?plan|supplements?)\\b", 'all': True,
+        {'regex': u"(?i)muscle|\\b(weight (loo?s[es]|reduction)|body ?build(er|ing)|.*(workout|fitness)[\\w-]*\\.(com|net)|loo?s[es] weight|wrinkles?|diet ?plan|supplements?)\\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u"(?i)^(?:(?=.*?\\b(?:online|hd)\\b)(?=.*?(?:free|full|unlimited)).*?movies?\\b|(?=.*?\\b(?:acai|kisn)\\b)(?=.*?care).*products?\\b|(?=.*?packer).*mover)", 'all': True,
          'sites': [], 'reason': "Bad keywords in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
