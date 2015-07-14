@@ -162,7 +162,7 @@ class FindSpam:
                             "(natural|pro|magic)[\\w-]*health[\\w-]*\\.(com|net|org)",
                             "health[\\w-]*(natural|pro|review|blog|advise|discussion)[\\w-]*\\.(com|net|org)",
                             "scampunch\\.com", "multipelife\\.com", "seasoncars\\.com",
-                            "eltima\\.com", "flexihub\\.com"]
+                            "eltima\\.com", "flexihub\\.com", "easydatafeed\\.com"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
