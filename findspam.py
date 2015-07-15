@@ -50,7 +50,7 @@ class FindSpam:
                     "Cheap Wigs?", "jivam", "Brain Power", "Maximum ?Shred",
                     "aging skin", "acne( prone)? skin",
                     "skin (serum|eye)", "bagprada", "6611165613", "Apowersoft",
-                    "Service Solahart", "junisse", 
+                    "Service Solahart", "junisse",
                     "(fake|original|uk|novelty) (passports?|driver'?s? licen[cs]e|ID cards?)",
                     "(support|service|helpline)( phone)? number|1[ -]?[ -]?[ -]?866[ -]?978[ -]?(6819|6762)",
                     "(mcafee|hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number",
