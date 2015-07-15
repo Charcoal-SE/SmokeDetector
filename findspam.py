@@ -161,7 +161,7 @@ class FindSpam:
                             "(natural|pro|magic)[\\w-]*health[\\w-]*\\.(com|net|org)",
                             "health[\\w-]*(pro|tips|review|blog|guide|advise|discussion|solution)[\\w-]*\\.(com|net|org)",
                             "scampunch\\.com", "multipelife\\.com", "seasoncars\\.com",
-                            "eltima\\.com", "flexihub\\.com", "\\.debt\\.com", "evomailserver\\.com",
+                            "eltima\\.com", "flexihub\\.com", "\\.debt\\.com",
                             "hotfrog\\.ca", "snorg(content|tees)\\.com", "webtechcoupons",
                             "(\\.|best)cheap[\\w-]+\\.com"]
     rules = [
