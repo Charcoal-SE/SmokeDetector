@@ -145,7 +145,7 @@ class FindSpam:
                             "dermaessencecreamblog\\.com", "stadtbett\\.com",
                             "jetcheats\\.com",
                             "(recovery(pro)?|password)\\.(com|net|org)",
-                            "(buy|premium)[\\w-]{6,})\\.(com|net|org)",
+                            "(buy|premium)[\\w-]{7,})\\.(com|net|org)",
                             "\\.repair\"", "optimalstackfacts", "x4facts", "endomondo\\.com",
                             "litindia\\.in", "shoppingcartelite\\.com",
                             "customizedwallpaper\\.com", "cracksofts\\.com",
