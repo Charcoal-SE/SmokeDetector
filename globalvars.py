@@ -27,6 +27,7 @@ class GlobalVars:
     parser = HTMLParser.HTMLParser()
     wrap = Client("stackexchange.com")
     wrapm = Client("meta.stackexchange.com")
+    wrapso = Client("stackoverflow.com")
     privileged_users = {charcoal_room_id: ["117490",  # Yes aka Pizza aka 1999
                                            "66258",  # Andy
                                            "31768",  # ManishEarth

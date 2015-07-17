@@ -44,6 +44,7 @@ filter_auto_ignored_posts()
 GlobalVars.bodyfetcher = BodyFetcher()
 GlobalVars.wrap.login(username, password)
 GlobalVars.wrapm.login(username, password)
+GlobalVars.wrapso.login(username, password)
 GlobalVars.s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] " \
                "SmokeDetector started at [rev " +\
                GlobalVars.commit_with_author +\
@@ -85,6 +86,10 @@ GlobalVars.specialrooms = [{
                            }, {
                            "sites": ["puzzling.stackexchange.com"],
                            "room": GlobalVars.wrap.get_room("21276"),
+                           "unwantedReasons": []
+                           }, {
+                           "sites": ['stackoverflow.com'],
+                           "room": GlobalVars.wrapso.get_room(""),
                            "unwantedReasons": []
                            }]
 
