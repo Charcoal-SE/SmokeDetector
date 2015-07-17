@@ -52,7 +52,8 @@ def watcher(ev, wrap2):
     message_parts = content_source.split(" ")
 
     ev_user_name = ev.data["user_name"].encode('utf-8')
-    GlobalVars.tavern_users_chatting.append(ev_user_name)
+    if ev_user_name != "SmokeDetector":
+        GlobalVars.tavern_users_chatting.append(ev_user_name)
 
     shortcut = False
     shortcut_messages = []
