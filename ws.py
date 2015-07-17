@@ -89,7 +89,7 @@ GlobalVars.specialrooms = [{
                            "unwantedReasons": []
                            }, {
                            "sites": ['stackoverflow.com'],
-                           "room": GlobalVars.wrapso.get_room(""),
+                           "room": GlobalVars.wrapso.get_room("41570"),
                            "unwantedReasons": []
                            }]
 
