@@ -164,7 +164,7 @@ class FindSpam:
                             "scampunch\\.com", "multipelife\\.com", "seasoncars\\.com",
                             "eltima\\.com", "flexihub\\.com", "\\.debt\\.com",
                             "hotfrog\\.ca", "snorg(content|tees)\\.com", "webtechcoupons",
-                            "(\\.|best)cheap[\\w-]+\\.com", "[\\w-]{10,}reviews?\\.com"]
+                            "(\\.|best)cheap[\\w-]+\\.com", "[\\w-]{10,}reviews?\\.com", "architecturedesign\\.tk"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
