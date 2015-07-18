@@ -50,7 +50,7 @@ class FindSpam:
                     "Cheap Wigs?", "jivam", "Brain Power", "Maximum ?Shred",
                     "aging skin", "acne( prone)? skin",
                     "skin (serum|eye)", "bagprada", "6611165613", "Apowersoft",
-                    "Service Solahart", "junisse",
+                    "Service Solahart", "junisse", "Profactor[ -]?T"
                     "(fake|original|uk|novelty) (passports?|driver'?s? licen[cs]e|ID cards?)",
                     "(support|service|helpline)( phone)? number|1[ -]?[ -]?[ -]?866[ -]?978[ -]?(6819|6762)",
                     "(mcafee|hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number",
@@ -158,14 +158,14 @@ class FindSpam:
                             "cacherealestate\\.com", "Matrixhackka007", "aoatech\\.com",
                             "pharaohtools", "msoutlooktools\\.com", "softwarezee",
                             "i-hire\\.pro", "pandamw\\.com", "hariraya2015\\.net",
-                            "(testo|cleanse|supplement|serum|fatloss|wrinkle)[\\w-]*\\.(com|net|org)",
+                            "(testo|cleanse|supplement|serum|wrinkle|topcare)[\\w-]*\\.(com|net|org)",
                             "(natural|pro|magic)[\\w-]*health[\\w-]*\\.(com|net|org)",
                             "health[\\w-]*(pro|tips|review|blog|guide|advise|discussion|solution)[\\w-]*\\.(com|net|org)",
                             "scampunch\\.com", "multipelife\\.com", "seasoncars\\.com",
                             "eltima\\.com", "flexihub\\.com", "\\.debt\\.com",
                             "hotfrog\\.ca", "snorg(content|tees)\\.com", "webtechcoupons",
                             "(\\.|best)cheap[\\w-]+\\.com", "[\\w-]{10,}reviews?\\.com", "architecturedesign\\.tk",
-                            "fatburnxonline\\.com"]
+                            "fat(burn|loss)[\\w-]*\\.(com|net|org)"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
