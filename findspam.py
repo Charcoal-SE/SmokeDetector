@@ -39,7 +39,7 @@ def has_repeating_characters(s, site):
 class FindSpam:
     bad_keywords = ["baba ?ji", "fifa.*coins?", "fifabay", "Long Path Tool",
                     "fifaodell", "brianfo", "tosterone", "bajotz",
-                    "vashi?k[ae]r[ae]n", "kolcak", "Zapyo",
+                    "vashi?k[ae]r[ae]n", "kolcak", "Zapyo", "we (offer|give out) loans",
                     "porn", "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
                     "acai", "skin ?care", "rejuvenated skin",
                     "LifeForce", "swtor2credits", "me2.do", "black magic",
@@ -48,7 +48,7 @@ class FindSpam:
                     "Forskolin", "Blackline Elite", "TestCore Pro",
                     "Xtreme Antler", "Maxx Test 3000", "orvigomax",
                     "Cheap Wigs?", "jivam", "Brain Power", "Maximum ?Shred",
-                    "aging skin", "acne( prone)? skin",
+                    "aging skin", "acne( prone)? skin", "black[ -]label[ -]no",
                     "skin (serum|eye)", "bagprada", "6611165613", "Apowersoft",
                     "Service Solahart", "junisse", "Profactor[ -]?T"
                     "(fake|original|uk|novelty) (passports?|driver'?s? licen[cs]e|ID cards?)",
@@ -73,7 +73,7 @@ class FindSpam:
                             "maletestosteronebooster", "menintalk", "king-steroid"
                             "healthcaresup", "filerepairforum", "beautyskin",
                             "lxwpro-t", "casque-beatsbydre", "tenderpublish",
-                            "funmac", "lovebiscuits",
+                            "funmac", "lovebiscuits", "z-data.blogspot.com",
                             "Eglobalfitness", "musclezx90site", "fifapal",
                             "hits4slim", "screenshot\\.net", "downloadavideo\\.net",
                             "strongmenmuscle", "sh\\.st/", "musclehealthfitness",
