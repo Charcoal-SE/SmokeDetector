@@ -256,6 +256,8 @@ class FindSpam:
                             result.append(rule['reason'].replace("{}", type_of_post))
                     except KeyError:  # There is no special logic for this rule
                         result.append(rule['reason'].replace("{}", type_of_post))
+        result = list(set(result))
+        result.sort()
         return result
 
     @staticmethod

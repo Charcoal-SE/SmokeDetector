@@ -70,8 +70,6 @@ def check_if_spam_json(data):
 def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_answer):
     post_url = to_protocol_relative(url_to_shortlink(post_url))
     poster_url = to_protocol_relative(poster_url)
-    reasons = list(set(reasons))
-    reasons.sort()
     reason = ", ".join(reasons).capitalize()
     if "Url" in reason:
         reason = reason.replace("Url", "URL")
