@@ -41,7 +41,7 @@ class FindSpam:
                     "fifaodell", "brianfo", "tosterone", "bajotz",
                     "vashi?k[ae]r[ae]n", "kolcak", "Zapyo", "we (offer|give out) loans",
                     "porn", "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
-                    "acai", "skin ?care", "rejuvenated skin",
+                    "acai", "rejuvenated skin",
                     "LifeForce", "swtor2credits", "me2.do", "black magic",
                     "bam2u", "Neuro(3X|flexyn|fuse|luma|plex)", "Nutra", "TesteroneXL", "Nitroxin",
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha Rush",
@@ -59,14 +59,15 @@ class FindSpam:
                     "JobsTribune", "join the illuminati", "Brorsoft", "Remo Recover",
                     "kinnaristeel", "clash of (clan|stone)s? (cheats?|tricks?|gems?)",
                     r"(?x:B [\s_]* A [\s_]* M \W{0,5} W [\s_]* A [\s_]* R [\s_]* \.? [\s_]* C [\s_]* O [\s_]* M)",
-                    "slumber pm", "1-844-400-7325", "male enhancement", "bestcollegechina",
+                    "slumber pm", "1-844-400-7325", "(male|penile) enhancement", "bestcollegechina",
                     "bbwdesire", "rsorder", "Shopping ?Cart ?Elite", "Easy ?Data ?Feed",
                     "breasts? enlargement", "best property management", "examguidez", "eduCBA",
                     "maxman ?power", "niagen", "Testo[ -]?Xplode", "day ?trading ?academy", " %uh "]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "aging ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?serum", "tophealth", "poker ?online"
-                        "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse"]
+                        "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse", "ultra[ -]?ketone",
+                        "oro[ -]?lift", "skin ?care"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
@@ -179,7 +180,7 @@ class FindSpam:
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': u"<blockquote>\\s*(<blockquote>\\s*)+\\s*<a", 'all': True,
          'sites': [], 'reason': "Nested quote blocks with link", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
-        {'regex': u"(?i)muscle|testo|\\b(weight (loo?s[es]|reduction)|body ?build(er|ing)|loo?s[es] weight|wrinkles?|diet ?plan|supplements?)\\b", 'all': True,
+        {'regex': u"(?i)muscle|\\b(testo\\w*|weight (loo?s[es]|reduction)|body ?build(er|ing)|loo?s[es] weight|wrinkles?|diet ?plan|supplements?)\\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u"(?i)(workout|fitness|diet)[\\w-]*\\.(co|net|info)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "Blacklisted website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
