@@ -376,14 +376,14 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         string_to_test = content_lower[8:]
         if len(string_to_test) == 0:
             return "Nothing to test"
-        is_spam_body, reasons_body = FindSpam.test_post("", string_to_test, "", "", False, False)
+        reasons_body = FindSpam.test_post("", string_to_test, "", "", False, False)
         result = ""
-        if is_spam_body:
+        if len(reasons_body) > 0:
             result += "Body: blacklisted: " + ", ".join(reasons_body).capitalize() + " ; "
         else:
             return "Body: not blacklisted ; "
-        is_spam_title, reasons_title = FindSpam.test_post(string_to_test, "", "", "", False, False)
-        if is_spam_title:
+        reasons_title = FindSpam.test_post(string_to_test, "", "", "", False, False)
+        if len(reasons_title) > 0:
             result += "Title: blacklisted: " + ", ".join(reasons_body).capitalize()
         else:
             result += "Title: not blacklisted"
