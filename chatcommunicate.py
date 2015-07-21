@@ -9,8 +9,9 @@ import re
 from datetime import datetime
 from utcdate import UtcDate
 from apigetpost import api_get_post
-from spamhandling import handle_spam, check_if_spam
+from spamhandling import handle_spam
 from termcolor import colored
+from findspam import FindSpam
 
 
 # Please note: If new !!/ commands are added or existing ones are modified, don't forget to
@@ -375,10 +376,17 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         string_to_test = content_lower[8:]
         if len(string_to_test) == 0:
             return "Nothing to test"
-        is_spam, reasons = check_if_spam("", string_to_test, "", "", None, None, False, False)
-        if is_spam:
-            return "Blacklisted: " + ", ".join(reasons).capitalize()
+        is_spam_body, reasons_body = FindSpam.test_post("", string_to_test, "", "", False, False)
+        result = ""
+        if is_spam_body:
+            result += "Body: blacklisted: " + ", ".join(reasons_body).capitalize() + " ; "
         else:
-            return "Not blacklisted"
+            return "Body: not blacklisted ; "
+        is_spam_title, reasons_title = FindSpam.test_post(string_to_test, "", "", "", False, False)
+        if is_spam_title:
+            result += "Title: blacklisted: " + ", ".join(reasons_body).capitalize()
+        else:
+            result += "Title: not blacklisted"
+        return result
 
     return None
