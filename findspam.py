@@ -41,7 +41,7 @@ class FindSpam:
                     "fifaodell", "brianfo", "tosterone", "bajotz",
                     "vashi?k[ae]r[ae]n", "kolcak", "Zapyo", "we (offer|give out) loans",
                     "porn", "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
-                    "acai", "skin ?care", "rejuvenated skin",
+                    "acai", "rejuvenated skin",
                     "LifeForce", "swtor2credits", "me2.do", "black magic",
                     "bam2u", "Neuro(3X|flexyn|fuse|luma|plex)", "Nutra", "TesteroneXL", "Nitroxin",
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha Rush",
@@ -67,7 +67,7 @@ class FindSpam:
                         "aging ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?serum", "tophealth", "poker ?online"
                         "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse", "ultra[ -]?ketone",
-                        "oro[ -]?lift"]
+                        "oro[ -]?lift", "skin ?care"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
