@@ -82,7 +82,8 @@ class BodyFetcher:
             return
 
         if site == "stackoverflow.com":
-            self.last_activity_date = response["items"][0]["last_activity_date"]
+            if len(response["items"]) > 0 and "last_activity_date" in response["items"][0]:
+                self.last_activity_date = response["items"][0]["last_activity_date"]
 
         for post in response["items"]:
             if "title" not in post or "body" not in post:
