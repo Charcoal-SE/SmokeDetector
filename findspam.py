@@ -159,7 +159,7 @@ class FindSpam:
                             "cacherealestate\\.com", "Matrixhackka007", "aoatech\\.com",
                             "pharaohtools", "msoutlooktools\\.com", "softwarezee",
                             "i-hire\\.pro", "pandamw\\.com", "hariraya2015\\.net",
-                            "(testo|cleanse|supplement|serum|wrinkle|topcare|skincare)[\\w-]*\\.(co|net|org|info)",
+                            "(testo|cleanse|supplement|serum|wrinkle|topcare)[\\w-]*\\.(co|net|org|info)",
                             "(natural|pro|magic)[\\w-]*health[\\w-]*\\.(co|net|org|info)",
                             "health[\\w-]*(pro|tips|review|blog|guide|advise|discussion|solution)[\\w-]*\\.(co|net|org|info)",
                             "scampunch\\.com", "multipelife\\.com", "seasoncars\\.com",
