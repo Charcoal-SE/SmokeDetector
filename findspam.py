@@ -62,9 +62,10 @@ class FindSpam:
                     "slumber pm", "1-844-400-7325", "(male|penile) enhancement", "bestcollegechina",
                     "bbwdesire", "rsorder", "Shopping ?Cart ?Elite", "Easy ?Data ?Feed",
                     "breasts? enlargement", "best property management", "examguidez", "eduCBA",
-                    "maxman ?power", "niagen", "Testo[ -]?Xplode", "day ?trading ?academy", " %uh "]
+                    "maxman ?power", "niagen", "Testo[ -]?Xplode", "day ?trading ?academy", " %uh ",
+                    "skinology", "folliplex", "ProDermagenix", "yafei ?cable"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
-                        "aging ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
+                        "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?serum", "tophealth", "poker ?online"
                         "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse", "ultra[ -]?ketone",
                         "oro[ -]?lift", "skin ?care"]
@@ -166,7 +167,8 @@ class FindSpam:
                             "eltima\\.com", "flexihub\\.com", "\\.debt\\.com",
                             "hotfrog\\.ca", "snorg(content|tees)\\.com", "webtechcoupons",
                             "(\\.|best)cheap[\\w-]+\\.co", "[\\w-]{10,}(sale|reviews?)\\.co", "architecturedesign\\.tk",
-                            "fat(burn|loss)[\\w-]*\\.(co|net|org|info)"]
+                            "fat(burn|loss)[\\w-]*\\.(co|net|org|info)", "(corrupt|repair)[\\w-]*.blogspot",
+                            "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
