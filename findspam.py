@@ -63,7 +63,7 @@ class FindSpam:
                     "bbwdesire", "rsorder", "Shopping ?Cart ?Elite", "Easy ?Data ?Feed",
                     "breasts? enlargement", "best property management", "examguidez", "eduCBA",
                     "maxman ?power", "niagen", "Testo[ -]?Xplode", "day ?trading ?academy", " %uh ",
-                    "skinology", "folliplex", "ProDermagenix", "yafei ?cable"]
+                    "skinology", "folliplex", "ProDermagenix", "yafei ?cable", "MSP ?Hack ?Tool"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?serum", "tophealth", "poker ?online"
