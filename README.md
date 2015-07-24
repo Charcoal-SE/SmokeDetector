@@ -21,6 +21,7 @@ sudo pip install requests --upgrade
 sudo pip install websocket-client --upgrade
 sudo pip install phonenumbers
 sudo pip install regex
+sudo pip install termcolor
 ```
 
 To run, use `nocrash.sh` (preferably in a daemon-able mode, like a `screen` session.)
