@@ -44,6 +44,16 @@ def watch_ci():
         for status in r.json():
             state = status["state"]
             target_url = status["target_url"]
+
+            ci_platform = ""
+
+            if status["context"] == "ci/circleci":
+                ci_platform = "Circle"
+            elif status["context"] == "continuous-integration/travis-ci/push":
+                ci_platform = "Travis"
+            else:
+                ci_platform = "some unrecognized test service"
+
             print state
             if state == "success":
                 if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > datetime.datetime.now() - datetime.timedelta(seconds=60):
@@ -52,11 +62,11 @@ def watch_ci():
                     commit_message = r.json()["commit"]["message"]
                     print commit_message
                     if "autopull" in commit_message:
-                        GlobalVars.charcoal_hq.send_message("[CI build passed](%s). Commit message contains 'autopull', pulling..." % target_url)
+                        GlobalVars.charcoal_hq.send_message("[CI build passed](%s) on %s. Commit message contains 'autopull', pulling..." % (target_url, ci_platform))
                         time.sleep(2)
                         os._exit(3)
                     else:
-                        GlobalVars.charcoal_hq.send_message("[CI build passed](%s). Ready to pull!" % target_url)
+                        GlobalVars.charcoal_hq.send_message("[CI build passed](%s) on %s. Ready to pull!" % (target_url, ci_platform))
 
                     continue
             elif state == "error" or state == "failure":
