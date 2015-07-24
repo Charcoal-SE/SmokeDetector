@@ -170,7 +170,7 @@ class FindSpam:
                             "architecturedesign\\.tk",
                             "fat(burn|loss)[\\w-]*\\.(co|net|org|info)", "(corrupt|repair)[\\w-]*.blogspot",
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
-                            "statesmovie"]
+                            "statesmovie", "cleanlean"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
@@ -186,7 +186,7 @@ class FindSpam:
          'sites': [], 'reason': "Nested quote blocks with link", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': u"(?i)muscle|\\b(testo\\w*|weight (loo?s[es]|reduction)|body ?build(er|ing)|loo?s[es] weight|wrinkles?|diet ?plan|supplements?)\\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
-        {'regex': u"(?i)(weight|fat) (loss|reduction)|(workout|fitness|diet)[\\w-]*\\.(co|net|info)", 'all': True,
+        {'regex': u"(?i)diet ?plan|(weight|fat) (loss|reduction)|(workout|fitness|diet)[\\w-]*\\.(co|net|info)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': False, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)^(?:(?=.*?\\b(?:online|hd)\\b)(?=.*?(?:free|full|unlimited)).*?movies?\\b|(?=.*?\\b(?:acai|kisn)\\b)(?=.*?care).*products?\\b|(?=.*?packer).*mover)", 'all': True,
          'sites': [], 'reason': "Bad keywords in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
