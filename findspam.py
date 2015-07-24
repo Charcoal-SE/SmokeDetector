@@ -41,7 +41,7 @@ class FindSpam:
                     "fifaodell", "brianfo", "tosterone", "bajotz",
                     "vashi?k[ae]r[ae]n", "kolcak", "Zapyo", "we (offer|give out) loans",
                     "porn", "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
-                    "acai", "rejuvenated skin", "ProBrain",
+                    "acai", "rejuvenated skin", "ProBrain", "restore[ -]?samsung[ -]?data",
                     "LifeForce", "swtor2credits", "me2.do", "black magic",
                     "bam2u", "Neuro(3X|flexyn|fuse|luma|plex)", "Nutra", "TesteroneXL", "Nitroxin",
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha Rush",
@@ -167,7 +167,7 @@ class FindSpam:
                             "eltima\\.com", "flexihub\\.com", "\\.debt\\.com",
                             "hotfrog\\.ca", "snorg(content|tees)\\.com", "webtechcoupons",
                             "(\\.|best)cheap[\\w-]+\\.co", "[\\w-]{10,}(sale|reviews?|advices?)\\.co",
-                            "architecturedesign\\.tk",
+                            "architecturedesign\\.tk", "training[\\w-]{10,}\\.in",
                             "fat(burn|loss)[\\w-]*\\.(co|net|org|info)", "(corrupt|repair)[\\w-]*.blogspot",
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
                             "statesmovie", "cleanlean", "iFoneMate"]
