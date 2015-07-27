@@ -118,7 +118,7 @@ class FindSpam:
                             "nemopdf\\.com", "apowersoft\\.com", "downloaddailymotion\\.com",
                             "free-download-youtube\\.com", "free-music-downloader\\.com",
                             "video-download-capture\\.com", "videograbber\\.net",
-                            "password-buster\\.com",
+                            "password-buster\\.com", "(file|photo)recovery[\\w-]*\\.(co|net|org|in)",
                             "remorecover\\.com", "remosoftware\\.com", "crazybulkreviewsz\\.com",
                             "\\bpatch\\.com\\b", "ajgilworld\\.com", "santomais", "viilms",
                             "clashofclansastucegemmes\\.com", "mothersday-2014\\.org",
