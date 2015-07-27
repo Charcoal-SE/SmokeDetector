@@ -161,17 +161,18 @@ class FindSpam:
                             "cacherealestate\\.com", "Matrixhackka007", "aoatech\\.com",
                             "pharaohtools", "msoutlooktools\\.com", "softwarezee",
                             "i-hire\\.pro", "pandamw\\.com", "hariraya2015\\.net",
-                            "(testo|cleanse|supplement|serum|wrinkle|topcare)[\\w-]*\\.(co|net|org|info)",
-                            "(natural|pro|magic)[\\w-]*health[\\w-]*\\.(co|net|org|info)",
-                            "health[\\w-]*(pro|tips|review|blog|guide|advise|discussion|solution)[\\w-]*\\.(co|net|org|info)",
+                            "(testo|cleanse|supplement|serum|wrinkle|topcare)[\\w-]*\\.(co|net|org|in)",
+                            "(natural|pro|magic)[\\w-]*health[\\w-]*\\.(co|net|org|in)",
+                            "health[\\w-]*(pro|tips|review|blog|guide|advise|discussion|solution)[\\w-]*\\.(co|net|org|in)",
                             "scampunch\\.com", "multipelife\\.com", "seasoncars\\.com",
                             "eltima\\.com", "flexihub\\.com", "\\.debt\\.com",
                             "hotfrog\\.ca", "snorg(content|tees)\\.com", "webtechcoupons",
                             "(\\.|best)cheap[\\w-]+\\.co", "[\\w-]{10,}(sale|reviews?|advices?)\\.co",
                             "architecturedesign\\.tk", "training[\\w-]{10,}\\.in",
-                            "fat(burn|loss)[\\w-]*\\.(co|net|org|info)", "(corrupt|repair)[\\w-]*.blogspot",
+                            "fat(burn|loss)[\\w-]*\\.(co|net|org|in)", "(corrupt|repair)[\\w-]*.blogspot",
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
-                            "statesmovie", "cleanlean", "iFoneMate"]
+                            "statesmovie", "cleanlean", "iFoneMate",
+                            "online(training|solution)[\\w-]*\\.(co|net|org|in)]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
