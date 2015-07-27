@@ -172,7 +172,7 @@ class FindSpam:
                             "fat(burn|loss)[\\w-]*\\.(co|net|org|in)", "(corrupt|repair)[\\w-]*.blogspot",
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
                             "statesmovie", "cleanlean", "iFoneMate",
-                            "online(training|solution)[\\w-]*\\.(co|net|org|in)]
+                            "online(training|solution)[\\w-]*\\.(co|net|org|in)"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
