@@ -121,9 +121,9 @@ while True:
     try:
         a = ws.recv()
         if a is not None and a != "":
-            is_spam, reason = check_if_spam_json(a)
+            is_spam, reason, why = check_if_spam_json(a)
             if is_spam:
-                handle_spam_json(a, reason)
+                handle_spam_json(a, reason, why)
             else:
                 t = Thread(target=GlobalVars.bodyfetcher.add_to_queue,
                            args=(a,))
