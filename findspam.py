@@ -218,6 +218,7 @@ class FindSpam:
     @staticmethod
     def test_post(title, body, user_name, site, is_answer, body_is_summary):
         result = []
+        why = ""
         for rule in FindSpam.rules:
             body_to_check = body
             try:
@@ -232,6 +233,7 @@ class FindSpam:
                 body_to_check = regex.sub("<a[^>]+>", "", body_to_check)
             if rule['all'] != (site in rule['sites']):
                 matched_body = None
+                compiled_regex = None
                 if 'regex' in rule:
                     compiled_regex = regex.compile(rule['regex'], regex.UNICODE)
                     matched_title = compiled_regex.findall(title)
@@ -245,18 +247,33 @@ class FindSpam:
                     if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer):
                         matched_body = rule['method'](body_to_check, site)
                 if matched_title and rule['title']:
+                    if 'regex' in rule:
+                        search = compiled_regex.search(title)
+                        span = search.span()
+                        group = search.group()
+                        why += "Title - Position %i-%i: %s\n" % (span[0] + 1, span[1] + 1, group)
                     try:
                         if getattr(FindSpam, "%s" % rule['validation_method'])(matched_title):
                             result.append(rule['reason'].replace("{}", "title"))
                     except KeyError:  # There is no special logic for this rule
                         result.append(rule['reason'].replace("{}", "title"))
                 if matched_username and rule['username']:
+                    if 'regex' in rule:
+                        search = compiled_regex.search(user_name)
+                        span = search.span()
+                        group = search.group()
+                        why += "Username - Position %i-%i: %s\n" % (span[0] + 1, span[1] + 1, group)
                     try:
                         if getattr(FindSpam, "%s" % rule['validation_method'])(matched_username):
                             result.append(rule['reason'].replace("{}", "username"))
                     except KeyError:  # There is no special logic for this rule
                         result.append(rule['reason'].replace("{}", "username"))
                 if matched_body and rule['body']:
+                    if 'regex' in rule:
+                        search = compiled_regex.search(body)
+                        span = search.span()
+                        group = search.group()
+                        why += "Body - Position %i-%i: %s\n" % (span[0] + 1, span[1] + 1, group)
                     type_of_post = "answer" if is_answer else "body"
                     try:
                         if getattr(FindSpam, "%s" % rule['validation_method'])(matched_body):
@@ -265,7 +282,8 @@ class FindSpam:
                         result.append(rule['reason'].replace("{}", type_of_post))
         result = list(set(result))
         result.sort()
-        return result
+        why = why.strip()
+        return result, why
 
     @staticmethod
     def check_phone_numbers(matched):

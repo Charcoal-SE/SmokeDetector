@@ -104,6 +104,7 @@ class GlobalVars:
     se_sites = []
     tavern_users_chatting = []
     frequent_sentences = []
+    why_data = []
 
     config = ConfigParser.RawConfigParser()
     config.read('config')

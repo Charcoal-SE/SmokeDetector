@@ -189,6 +189,13 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
                 msg.delete()
             except:
                 pass  # couldn't delete message
+        if second_part_lower.startswith("why"):
+            post_id, site, _ = fetch_post_id_and_site_from_msg_content(msg_content)
+            why = get_why(site, post_id)
+            if why is None or why == "":
+                return "There is no `why` data for that post (anymore)."
+            else:
+                return why
     if content_lower.startswith("!!/addblu") \
             and is_privileged(ev_room, ev_user_id, wrap2):
         uid, val = get_user_from_list_command(content_lower)
@@ -376,22 +383,16 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         string_to_test = content_lower[8:]
         if len(string_to_test) == 0:
             return "Nothing to test"
-        reasons_body = FindSpam.test_post("", string_to_test, "", "", False, False)
         result = "> "
-        if len(reasons_body) > 0:
-            result += "Body: blacklisted - " + ", ".join(reasons_body).capitalize()
-        else:
-            result += "Body: not blacklisted ; "
-        reasons_title = FindSpam.test_post(string_to_test, "", "", "", False, False)
-        if len(reasons_title) > 0:
-            result += "\nTitle: blacklisted - " + ", ".join(reasons_title).capitalize()
-        else:
-            result += "\nTitle: not blacklisted"
-        reasons_username = FindSpam.test_post("", "", string_to_test, "", False, False)
-        if len(reasons_title) > 0:
-            result += "\nUsername: blacklisted - " + ", ".join(reasons_username).capitalize()
-        else:
-            result += "\nUsername: not blacklisted"
+        reasons, why = FindSpam.test_post(string_to_test, string_to_test, string_to_test, "", False, False)
+        if len(reasons) == 0:
+            result += "Would not be caught for title, body and username."
+            return result
+        result += ", ".join(reasons).capitalize()
+        if why is not None and len(why) > 0:
+            result += "\n----------\n"
+            result += why
         return result
+
 
     return None

@@ -76,7 +76,7 @@ import pytest
 def test_regexes(title, body, username, site, body_is_summary, match):
     # If we want to test answers separately, this should be changed
     is_answer = False
-    result = FindSpam.test_post(title, body, username, site, is_answer, body_is_summary)
+    result = FindSpam.test_post(title, body, username, site, is_answer, body_is_summary)[0]
     print title
     print result
     isspam = False

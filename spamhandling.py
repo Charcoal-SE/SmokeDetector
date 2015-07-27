@@ -2,9 +2,7 @@ import json
 import sys
 import time
 from findspam import FindSpam
-from datahandling import add_auto_ignored_post, is_blacklisted_user, \
-    is_whitelisted_user, has_already_been_posted, is_false_positive, \
-    is_auto_ignored_post, is_ignored_post, append_to_latest_questions
+from datahandling import *
 from parsing import get_user_from_url, unescape_title,\
     escape_special_chars_in_title, to_protocol_relative
 from bayesianfuncs import bayesian_score
@@ -28,7 +26,7 @@ def should_whitelist_prevent_alert(user_url, reasons):
 def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer, body_is_summary):
     if not body:
         body = ""
-    test = FindSpam.test_post(title, body, user_name, post_site, is_answer, body_is_summary)
+    test, why = FindSpam.test_post(title, body, user_name, post_site, is_answer, body_is_summary)
     if is_blacklisted_user(get_user_from_url(user_url)):
         test.append("Blacklisted user")
     if 0 < len(test):
@@ -36,9 +34,9 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
                 or should_whitelist_prevent_alert(user_url, test) \
                 or is_ignored_post((post_id, post_site)) \
                 or is_auto_ignored_post((post_id, post_site)):
-            return False, None  # Don't repost. Reddit will hate you.
-        return True, test
-    return False, None
+            return False, None, ""  # Don't repost. Reddit will hate you.
+        return True, test, why
+    return False, None, ""
 
 
 def check_if_spam_json(data):
@@ -63,11 +61,11 @@ def check_if_spam_json(data):
     site = d["siteBaseHostAddress"]
     site = site.encode("ascii", errors="replace")
     sys.stdout.flush()
-    is_spam, reason = check_if_spam(title, body, poster, url, site, post_id, False, True)
-    return is_spam, reason
+    is_spam, reason, why = check_if_spam(title, body, poster, url, site, post_id, False, True)
+    return is_spam, reason, why
 
 
-def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_answer):
+def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_answer, why=""):
     post_url = to_protocol_relative(url_to_shortlink(post_url))
     poster_url = to_protocol_relative(poster_url)
     reason = ", ".join(reasons).capitalize()
@@ -82,6 +80,8 @@ def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_
                               "Repeating words in body" in reasons or
                               "Repeating words in answer" in reasons):
         add_auto_ignored_post((post_id, site, datetime.now()))
+    if why is not None and why != "":
+        add_why(site, post_id, why)
     try:
         owner = poster_url
         users_file = open("users.txt", "a")
@@ -113,7 +113,7 @@ def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_
         print "NOP"
 
 
-def handle_spam_json(data, reason):
+def handle_spam_json(data, reason, why=""):
     try:
         d = json.loads(json.loads(data)["data"])
         title = unescape_title(d["titleEncodedFancy"])
@@ -122,6 +122,6 @@ def handle_spam_json(data, reason):
         url = d["url"]
         poster_url = d["ownerUrl"]
         post_id = str(d["id"])
-        handle_spam(title, poster, site, url, poster_url, post_id, reason, False)
+        handle_spam(title, poster, site, url, poster_url, post_id, reason, False, why)
     except:
         print "NOP"

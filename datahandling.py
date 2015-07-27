@@ -139,6 +139,26 @@ def remove_whitelisted_user(user):
         pickle.dump(GlobalVars.whitelisted_users, f)
     return True
 
+
+def add_why(site, post_id, why):
+    key = site + "/" + str(post_id)
+    t = (key, why)
+    GlobalVars.why_data.append(t)
+    filter_why()
+
+
+def get_why(site, post_id):
+    key = site + "/" + str(post_id)
+    for w in GlobalVars.why_data:
+        if w[0] == key:
+            return w[1]
+    return None
+
+
+def filter_why(max_size=50):
+    GlobalVars.why_data = GlobalVars.why_data[-max_size:]
+
+
 # methods that help avoiding reposting alerts:
 
 
