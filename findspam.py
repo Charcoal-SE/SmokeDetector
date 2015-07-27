@@ -97,7 +97,7 @@ class FindSpam:
                             "evomailserver\\.com", "gameart\\.net",
                             "sofotex\\.com", "erecteentry", "fairharvardfund",
                             "mybloggingmoney\\.com", "windows-techsupport\\.com",
-                            "drivethelife\\.com",
+                            "drivethelife\\.com", "singlerank\\.com", "sayeureqa\\.com"
                             "lafozi\\.com", "open-swiss-bank\\.com",
                             "tenorshare\\.com", "advancedpdfconverter\\.com",
                             "fix-computer\\.net",
