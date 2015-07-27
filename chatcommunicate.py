@@ -394,5 +394,4 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
             result += why
         return result
 
-
     return None
