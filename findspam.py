@@ -95,7 +95,7 @@ class FindSpam:
                             "recoverytoolbox\\.com", "mkmk9", "malwaretips", "intellipaat\\.com",
                             "webbuildersguide\\.com", "idealshare.net", "lankabpoacademy\\.com",
                             "evomailserver\\.com", "gameart\\.net",
-                            "sofotex\\.com",
+                            "sofotex\\.com", "erecteentry", "fairharvardfund",
                             "mybloggingmoney\\.com", "windows-techsupport\\.com",
                             "drivethelife\\.com",
                             "lafozi\\.com", "open-swiss-bank\\.com",
