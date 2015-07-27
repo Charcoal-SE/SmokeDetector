@@ -162,7 +162,7 @@ class FindSpam:
                             "scampunch\\.com", "multipelife\\.com", "seasoncars\\.com",
                             "eltima\\.com", "flexihub\\.com", "\\.debt\\.com",
                             "hotfrog\\.ca", "snorg(content|tees)\\.com", "webtechcoupons",
-                            "architecturedesign\\.tk", 
+                            "architecturedesign\\.tk",
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
                             "statesmovie", "cleanlean", "iFoneMate"]
     pattern_websites = ["health\\d{3,}", "(recovery(pro)?|password)\\.(co|net|org|in)",
@@ -173,7 +173,7 @@ class FindSpam:
                         "[\\w-]{10,}(sale|reviews?|advices?)\\.co", "training[\\w-]{10,}\\.in",
                         "(\\.|best)cheap[\\w-]+\\.co", "online(training|solution)[\\w-]*\\.(co|net|org|in)"
                         "fat(burn|loss)[\\w-]*\\.(co|net|org|in)", "(corrupt|repair)[\\w-]*.blogspot",
-                        "\\Bfacts\\.(com|net|org)", "(file|photo)recovery[\\w-]*\\.(co|net|org|in)"] 
+                        "\\Bfacts\\.(com|net|org)", "(file|photo)recovery[\\w-]*\\.(co|net|org|in)"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
