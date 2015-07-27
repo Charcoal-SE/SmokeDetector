@@ -190,7 +190,10 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
             except:
                 pass  # couldn't delete message
         if second_part_lower.startswith("why"):
-            post_id, site, _ = fetch_post_id_and_site_from_msg_content(msg_content)
+            t = fetch_post_id_and_site_from_msg_content(msg_content)
+            if t is None:
+                return "That's not a report."
+            post_id, site, _ = t
             why = get_why(site, post_id)
             if why is None or why == "":
                 return "There is no `why` data for that post (anymore)."
