@@ -46,7 +46,7 @@ def check_if_spam_json(data):
     except:
         # owner's account doesn't exist anymore, no need to post it in chat:
         # http://chat.stackexchange.com/transcript/message/18380776#18380776
-        return False, None
+        return False, None, ""
     title = d["titleEncodedFancy"]
     title = unescape_title(title)
     body = d["bodySummary"]
