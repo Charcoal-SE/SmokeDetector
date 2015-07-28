@@ -104,7 +104,8 @@ def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_
             if reason not in GlobalVars.experimental_reasons:
                 GlobalVars.charcoal_hq.send_message(s)
                 GlobalVars.tavern_on_the_meta.send_message(s)
-                GlobalVars.socvr.send_message(s)
+                if site == "stackoverflow.com":
+                    GlobalVars.socvr.send_message(s)
 
             for specialroom in GlobalVars.specialrooms:
                 sites = specialroom["sites"]
