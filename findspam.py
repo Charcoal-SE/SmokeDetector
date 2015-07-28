@@ -165,7 +165,7 @@ class FindSpam:
                             "architecturedesign\\.tk",
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
                             "statesmovie", "cleanlean", "iFoneMate"]
-    pattern_websites = ["health\\d{3,}", "\\.repair\"",
+    pattern_websites = ["health\\d{3,}", "\\.repair\"", "repair\\.com",
                         "(recovery(pro)?|password|\\Bfacts)\\.(co|net|org|in)",
                         "(buy|premium|training)[\\w-]{10,}\\.(co|net|org|in)",
                         "(escort|testo|cleanse|supplement|serum|wrinkle|topcare)[\\w-]*\\.(co|net|org|in)",
