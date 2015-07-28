@@ -6,10 +6,13 @@ def test_globalvars():
     # pushing, there should be made sure that the values are correct.
     assert GlobalVars.charcoal_room_id == "11540"
     assert GlobalVars.meta_tavern_room_id == "89"
+    assert GlobalVars.socvr_room_id == "41570"
     assert GlobalVars.smokeDetector_user_id["11540"] == "120914"
     assert GlobalVars.smokeDetector_user_id["89"] == "266345"
+    assert GlobalVars.smokeDetector_user_id["41570"] == "3735529"
     assert len(GlobalVars.privileged_users["11540"]) > 0
     assert len(GlobalVars.privileged_users["89"]) > 0
+    assert len(GlobalVars.privileged_users["41570"]) > 0
     assert GlobalVars.blockedTime == 0
     # The following lists must be empty in globalvars.py, because
     # they will be filled later.

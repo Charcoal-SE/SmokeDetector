@@ -17,6 +17,7 @@ class GlobalVars:
     blockedTime = 0
     charcoal_room_id = "11540"
     meta_tavern_room_id = "89"
+    socvr_room_id = "41570"
     site_filename = {"electronics.stackexchange.com": "ElectronicsGood.txt",
                      "gaming.stackexchange.com": "GamingGood.txt", "german.stackexchange.com": "GermanGood.txt",
                      "italian.stackexchange.com": "ItalianGood.txt", "math.stackexchange.com": "MathematicsGood.txt",
@@ -80,8 +81,24 @@ class GlobalVars:
                                               "260312",  # vaultah
                                               "244062",  # SouravGhosh
                                               "152859",  # Shadow Wizard
-                                              "200235"]}  # durron597
-    smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345"}
+                                              "200235"],  # durron597
+                        socvr_room_id: [
+                            "1849664",  # Undo
+                            "2581872",  # hichris123
+                            "1198729",  # Manishearth
+                            "3717023",  # Normal Human aka 1999
+                            "2619912",  # ProgramFOX
+                            "578411",   # rene
+                            "1043380",  # gunr2171
+                            "2246344",  # Sam
+                            "2756409",  # TylerH
+                            "1768232",  # durron597
+                            "359284",   # Kevin Brown
+                            "258400",   # easwee
+                            "3622940"]  # Unihedron
+                        }
+    smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
+                             socvr_room_id: "3735529"}
 
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
 
@@ -95,6 +112,7 @@ class GlobalVars:
     on_master = os.popen("git rev-parse --abbrev-ref HEAD").read().strip() == "master"
     charcoal_hq = None
     tavern_on_the_meta = None
+    socvr = None
     s = ""
     s_reverted = ""
     specialrooms = []
@@ -109,7 +127,8 @@ class GlobalVars:
     config = ConfigParser.RawConfigParser()
     config.read('config')
 
-    latest_smokedetector_messages = {meta_tavern_room_id: [], charcoal_room_id: []}
+    latest_smokedetector_messages = {meta_tavern_room_id: [], charcoal_room_id: [],
+                                     socvr_room_id: []}
 
     location = config.get("Config", "location")
     print location

@@ -66,6 +66,7 @@ GlobalVars.s_reverted = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeD
 GlobalVars.charcoal_hq = GlobalVars.wrap.get_room(GlobalVars.charcoal_room_id)
 tavern_id = GlobalVars.meta_tavern_room_id
 GlobalVars.tavern_on_the_meta = GlobalVars.wrapm.get_room(tavern_id)
+GlobalVars.socvr = GlobalVars.wrapso.get_room(GlobalVars.socvr_room_id)
 
 GlobalVars.specialrooms = [{
                            "sites": ["math.stackexchange.com"],
@@ -86,10 +87,6 @@ GlobalVars.specialrooms = [{
                            }, {
                            "sites": ["puzzling.stackexchange.com"],
                            "room": GlobalVars.wrap.get_room("21276"),
-                           "unwantedReasons": []
-                           }, {
-                           "sites": ['stackoverflow.com'],
-                           "room": GlobalVars.wrapso.get_room("41570"),
                            "unwantedReasons": []
                            }]
 
@@ -114,9 +111,11 @@ ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
 ws.send("155-questions-active")
 GlobalVars.charcoal_hq.join()
 GlobalVars.tavern_on_the_meta.join()
+GlobalVars.socvr.join()
 
 GlobalVars.charcoal_hq.watch_socket(watcher)
 GlobalVars.tavern_on_the_meta.watch_socket(watcher)
+GlobalVars.socvr.watch_socket(watcher)
 while True:
     try:
         a = ws.recv()

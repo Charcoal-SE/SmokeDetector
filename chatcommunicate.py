@@ -23,6 +23,8 @@ def post_message_in_room(room_id_str, msg, length_check=True):
         GlobalVars.charcoal_hq.send_message(msg, length_check)
     elif room_id_str == GlobalVars.meta_tavern_room_id:
         GlobalVars.tavern_on_the_meta.send_message(msg, length_check)
+    elif room_id_str == GlobalVars.socvr_room_id:
+        GlobalVars.socvr.send_message(msg, length_check)
 
 
 def is_smokedetector_message(user_id, room_id):
@@ -289,7 +291,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
     if content_lower.startswith("!!/alive"):
         if ev_room == GlobalVars.charcoal_room_id:
             return 'Of course'
-        elif ev_room == GlobalVars.meta_tavern_room_id:
+        elif ev_room == GlobalVars.meta_tavern_room_id or ev_room == GlobalVars.socvr_room_id:
             return random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?',
                                   'plz send teh coffee',
                                   'Watching this endless list of new questions *never* gets boring',
