@@ -165,7 +165,7 @@ class FindSpam:
                             "architecturedesign\\.tk",
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
                             "statesmovie", "cleanlean", "iFoneMate"]
-    pattern_websites = ["health\\d{3,}", "\\.repair\"", "repair\\.com",
+    pattern_websites = ["health\\d{3,}", "\\.repair\"", "repair\\.(co|net|org|in)",
                         "(recovery(pro)?|password|\\Bfacts)\\.(co|net|org|in)",
                         "(buy|premium|training)[\\w-]{10,}\\.(co|net|org|in)",
                         "(escort|testo|cleanse|supplement|serum|wrinkle|topcare)[\\w-]*\\.(co|net|org|in)",
@@ -191,7 +191,7 @@ class FindSpam:
         {'regex': u"(?i)\\b(muscles?|testo\\w*|body ?build(er|ing)|wrinkles?|supplements?)\\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u"(?i)diet ?plan|\\b(pro)?derma(?!tolog)|(fat|weight) (loo?s[es]|reduction)|loo?s[es] weight", 'all': True,
-         'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
+         'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)(workout|fitness|diet)[\\w-]*\\.(co|net|org|in)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "Pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)^(?:(?=.*?\\b(?:online|hd)\\b)(?=.*?(?:free|full|unlimited)).*?movies?\\b|(?=.*?\\b(?:acai|kisn)\\b)(?=.*?care).*products?\\b|(?=.*?packer).*mover)|online training", 'all': True,
