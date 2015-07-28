@@ -165,15 +165,16 @@ class FindSpam:
                             "architecturedesign\\.tk",
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
                             "statesmovie", "cleanlean", "iFoneMate"]
-    pattern_websites = ["health\\d{3,}", "(recovery(pro)?|password)\\.(co|net|org|in)",
-                        "(buy|premium)[\\w-]{10,}\\.(co|net|org|in)", "\\.repair\"",
-                        "(testo|cleanse|supplement|serum|wrinkle|topcare)[\\w-]*\\.(co|net|org|in)",
+    pattern_websites = ["health\\d{3,}", "\\.repair\"",
+                        "(recovery(pro)?|password|\\Bfacts)\\.(co|net|org|in)",
+                        "(buy|premium|training)[\\w-]{10,}\\.(co|net|org|in)",
+                        "(escort|testo|cleanse|supplement|serum|wrinkle|topcare)[\\w-]*\\.(co|net|org|in)",
                         "(natural|pro|magic)[\\w-]*health[\\w-]*\\.(co|net|org|in)",
                         "health[\\w-]*(pro|tips|review|blog|guide|advise|discussion|solution)[\\w-]*\\.(co|net|org|in)",
-                        "[\\w-]{10,}(sale|reviews?|advices?)\\.co", "training[\\w-]{10,}\\.in",
-                        "(\\.|best)cheap[\\w-]+\\.co", "online(training|solution)[\\w-]*\\.(co|net|org|in)"
-                        "fat(burn|loss)[\\w-]*\\.(co|net|org|in)", "(corrupt|repair)[\\w-]*.blogspot",
-                        "\\Bfacts\\.(com|net|org)", "(file|photo)recovery[\\w-]*\\.(co|net|org|in)"]
+                        "[\\w-]{10,}(sale|reviews?|advices?)\\.(co|net|org|in)",
+                        "fat(burn|loss)|(\\.|best)cheap|online(training|solution)[\\w-]*\\.(co|net|org|in)",
+                        "(corrupt|repair)[\\w-]*.blogspot",
+                        "(file|photo)recovery[\\w-]*\\.(co|net|org|in)"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
