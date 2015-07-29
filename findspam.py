@@ -62,7 +62,7 @@ class FindSpam:
                     "slumber pm", "1-844-400-7325", "(male|penile) enhancement", "bestcollegechina",
                     "bbwdesire", "rsorder", "Shopping ?Cart ?Elite", "Easy ?Data ?Feed",
                     "breasts? enlargement", "best property management", "examguidez", "eduCBA",
-                    "maxman ?power", "niagen", "Testo[ -]?Xplode", "day ?trading ?academy", " %uh ",
+                    "maxman ?power", "niagen", "Testo (X|Black)", "day ?trading ?academy", " %uh ",
                     "skinology", "folliplex", "ProDermagenix", "yafei ?cable", "MSP ?Hack ?Tool",
                     "kidney[ -]?bean[ -]?extract"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
@@ -184,7 +184,7 @@ class FindSpam:
          'sites': ['softwarerecs.stackexchange.com'], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)\\p{Script=Hangul}", 'all': True,
          'sites': [], 'reason': "Korean character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
-        {'regex': u"(?i)(>>>>|===>|==>>>)(?s).*http", 'all': True,
+        {'regex': u"(?i)(>>>>|===>|==>>>|Read More\\s*>>)(?s).*http", 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': u"<blockquote>\\s*(<blockquote>\\s*)+\\s*<a", 'all': True,
          'sites': [], 'reason': "Nested quote blocks with link", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
@@ -192,7 +192,7 @@ class FindSpam:
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u"(?i)diet ?plan|\\b(pro)?derma(?!tolog)|(fat|weight) (loo?s[es]|reduction)|loo?s[es] weight", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
-        {'regex': u"(?i)(workout|fitness|diet)[\\w-]*\\.(co|net|org|in)", 'all': True,
+        {'regex': u"(?i)(workout|fitness|diet|perfecthealth)[\\w-]*\\.(co|net|org|in)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "Pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)^(?:(?=.*?\\b(?:online|hd)\\b)(?=.*?(?:free|full|unlimited)).*?movies?\\b|(?=.*?\\b(?:acai|kisn)\\b)(?=.*?care).*products?\\b|(?=.*?packer).*mover)|online training", 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
