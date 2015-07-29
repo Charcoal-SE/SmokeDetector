@@ -164,7 +164,8 @@ class FindSpam:
                             "hotfrog\\.ca", "snorg(content|tees)\\.com", "webtechcoupons",
                             "architecturedesign\\.tk",
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
-                            "statesmovie", "cleanlean", "iFoneMate"]
+                            "statesmovie", "cleanlean", "iFoneMate", "babygames5\\.com",
+                            "replacementlaptopkeys\\.com"]
     pattern_websites = ["health\\d{3,}", "\\.repair\"", "repair\\.(co|net|org|in)",
                         "(recovery(pro)?|password|\\Bfacts)\\.(co|net|org|in)",
                         "(buy|premium|training)[\\w-]{10,}\\.(co|net|org|in)",
