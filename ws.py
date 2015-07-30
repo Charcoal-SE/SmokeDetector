@@ -91,8 +91,9 @@ GlobalVars.specialrooms = [{
                            }]
 
 GlobalVars.bayesian_testroom = GlobalVars.wrap.get_room("17251")
+GlobalVars.charcoal_hq.send_message(GlobalVars.s)
+
 if "first_start" in sys.argv and GlobalVars.on_master:
-    GlobalVars.charcoal_hq.send_message(GlobalVars.s)
     GlobalVars.bayesian_testroom.send_message(GlobalVars.s)
 elif "first_start" in sys.argv and not GlobalVars.on_master:
     GlobalVars.charcoal_hq.send_message(GlobalVars.s_reverted)
