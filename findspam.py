@@ -165,7 +165,7 @@ class FindSpam:
                             "statesmovie", "cleanlean", "iFoneMate", "babygames5\\.com",
                             "replacementlaptopkeys\\.com"]
     pattern_websites = ["health\\d{3,}", "\\.repair\"", "repair\\.(co|net|org|in)",
-                        "(password|\\Bfacts)\\.(co|net|org|in)", "\Brecovery(pro)?\\.com",
+                        "([\\w-]password|\\Bfacts)\\.(co|net|org|in)", "[\\w-]recovery(pro)?\\.com",
                         "(buy|premium|training|thebest)[\\w-]{10,}\\.(co|net|org|in)",
                         "(escort|testo|cleanse|supplement|serum|wrinkle|topcare)[\\w-]*\\.(co|net|org|in)",
                         "(natural|pro|magic)[\\w-]*health[\\w-]*\\.(co|net|org|in)",
@@ -207,7 +207,7 @@ class FindSpam:
         {'regex': u"(?i)(%s)" % "|".join(blacklisted_websites), 'all': True,
          'sites': [], 'reason': "Blacklisted website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)(%s)" % "|".join(pattern_websites), 'all': True,
-         'sites': [], 'reason': "Pattern-matching website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
+         'sites': [], 'reason': "Pattern-matching website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True},
         {'method': has_repeating_characters, 'all': True, 'sites': [], 'reason': "Repeating characters in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'method': has_repeated_words, 'all': True, 'sites': [], 'reason': "Repeating words in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'method': has_duplicate_links, 'all': False, 'sites': ["patents.stackexchange.com"], 'reason': "Duplicate links in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'answers': False},
