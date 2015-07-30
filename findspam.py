@@ -126,7 +126,6 @@ class FindSpam:
                             "downloadscanpst\\.com", "downloadgames",
                             "listoffreeware\\.com", "bigasoft\\.com", "opclub07\\.com",
                             "allavsoft", "vpnranks\\.com",
-                            "musclebuilding(products|base)",
                             "vanskeys\\.com", "cheapessaywritingservice", "edbtopsts\\.com",
                             "texts\\.io", "writage\\.com", "mobitsolutions\\.com",
                             "askpcexperts\\.com", "anonymousvpnsoftware\\.com",
@@ -138,7 +137,7 @@ class FindSpam:
                             "repairtoolbox\\.com", "couchsurfing\\.com",
                             "gta5codes\\.fr", "musclezx90au\\.com",
                             "fallclassicrun\\.com", "forgrams\\.com",
-                            "cloudinsights\\.net",
+                            "cloudinsights\\.net", "xtremenitro",
                             "(premium|priceless)-inkjet\\.com", "antivirus\\.comodo\\.com",
                             "clusterlinks\\.com", "connectify\\.me", "liftserump\\.com",
                             "kizi1000\\.in", "weightruinations\\.com",
@@ -174,7 +173,7 @@ class FindSpam:
                         "health[\\w-]*(pro|tips|review|blog|guide|advi[sc]|discussion|solution)[\\w-]*\\.(co|net|org|in)",
                         "[\\w-]{10,}(sale|reviews?|advices?)\\.(co|net|org|in)",
                         "fat(burn|loss)|(\\.|best)cheap|online(training|solution)[\\w-]*\\.(co|net|org|in)",
-                        "(corrupt|repair)[\\w-]*.blogspot",
+                        "(corrupt|repair)[\\w-]*.blogspot", "musclebuilding(products|base)",
                         "(file|photo)recovery[\\w-]*\\.(co|net|org|in)"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
