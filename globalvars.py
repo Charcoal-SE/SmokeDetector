@@ -95,7 +95,8 @@ class GlobalVars:
                             "1768232",  # durron597
                             "359284",   # Kevin Brown
                             "258400",   # easwee
-                            "3622940"]  # Unihedron
+                            "3622940",  # Unihedron
+                            "3204551"]  # Deduplicator
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
