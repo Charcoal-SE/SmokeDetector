@@ -170,7 +170,7 @@ class FindSpam:
                         "(escort|testo|cleanse|supplement|serum|wrinkle|topcare)[\\w-]*\\.(co|net|org|in)",
                         "(natural|pro|magic)[\\w-]*health[\\w-]*\\.(co|net|org|in)",
                         "health[\\w-]*(pro|tips|review|blog|guide|advi[sc]|discussion|solution)[\\w-]*\\.(co|net|org|in)",
-                        "[\\w-]{10,}(sale|reviews?|advices?)\\.(co|net|org|in)",
+                        "[\\w-]{11,}(income|sale|reviews?|advices?)\\.(co|net|org|in)",
                         "fat(burn|loss)|(\\.|best)cheap|online(training|solution)[\\w-]*\\.(co|net|org|in)",
                         "(corrupt|repair)[\\w-]*.blogspot", "musclebuilding(products|base)",
                         "(file|photo)recovery[\\w-]*\\.(co|net|org|in)"]
