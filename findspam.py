@@ -163,7 +163,7 @@ class FindSpam:
                             "architecturedesign\\.tk", "playerhot\\.com",
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
                             "statesmovie", "cleanlean", "iFoneMate", "babygames5\\.com",
-                            "replacementlaptopkeys\\.com"]
+                            "replacementlaptopkeys\\.com", "safewiper\\.com"]
     pattern_websites = ["health\\d{3,}", "\\.repair\"", "repair\\.(co|net|org|in)",
                         "([\\w-]password|\\Bfacts|\\Btoyshop)\\.(co|net|org|in)",
                         "[\\w-]recovery(pro)?\\.com",
