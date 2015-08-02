@@ -299,6 +299,8 @@ class FindSpam:
     def check_phone_numbers(matched):
         test_formats = ["IN", "US", None]
         for phone_number in matched:
+            if regex.compile(r"^21474672[56]\d$").search(phone_number):
+                return False
             for testf in test_formats:
                 try:
                     z = phonenumbers.parse(phone_number, testf)

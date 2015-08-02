@@ -71,7 +71,8 @@ import pytest
     ('Should not be caught: something@example.com', '', '', 'drupal.stackexchange.com', False, False),
     ('Title here', '<img src="http://example.com/11111111111.jpg" alt="my image">', '', 'stackoverflow.com', False, False),
     ('Title here', '<img src="http://example.com/11111111111111.jpg" alt="my image" />', '', 'stackoverflow.com', False, False),
-    ('Title here', '<a href="http://example.com/11111111111111.html">page</a>', '', 'stackoverflow.com', False, False)
+    ('Title here', '<a href="http://example.com/11111111111111.html">page</a>', '', 'stackoverflow.com', False, False),
+    ('Error: 2147467259', '', '', 'stackoverflow.com', False, False)
 ])
 def test_regexes(title, body, username, site, body_is_summary, match):
     # If we want to test answers separately, this should be changed
