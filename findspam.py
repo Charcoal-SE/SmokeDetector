@@ -164,17 +164,17 @@ class FindSpam:
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
                             "statesmovie", "cleanlean", "iFoneMate", "babygames5\\.com",
                             "replacementlaptopkeys\\.com", "safewiper\\.com"]
-    pattern_websites = ["health\\d{3,}", "\\.repair\"", "repair\\.(co|net|org|in)",
-                        "([\\w-]password|\\Bfacts|\\Btoyshop)\\.(co|net|org|in)",
-                        "[\\w-]recovery(pro)?\\.com",
-                        "(buy|premium|training|thebest)[\\w-]{10,}\\.(co|net|org|in)",
-                        "(escort|testo|cleanse|supplement|serum|wrinkle|topcare)[\\w-]*\\.(co|net|org|in)",
-                        "(natural|pro|magic)[\\w-]*health[\\w-]*\\.(co|net|org|in)",
-                        "health[\\w-]*(pro|tips|review|blog|guide|advi[sc]|discussion|solution)[\\w-]*\\.(co|net|org|in)",
-                        "[\\w-]{11,}(income|sale|reviews?|advices?)\\.(co|net|org|in)",
-                        "fat(burn|loss)|(\\.|best)cheap|online(training|solution)[\\w-]*\\.(co|net|org|in)",
-                        "(corrupt|repair)[\\w-]*.blogspot", "musclebuilding(products|base)",
-                        "(file|photo)recovery[\\w-]*\\.(co|net|org|in)"]
+    pattern_websites = [r"health\d{3,}", "\\.repair\"", r"repair\.(co|net|org|in)",
+                        r"([\w-]password|\Bfacts|\Btoyshop)\.(co|net|org|in)",
+                        r"[\w-]recovery(pro)?\.com",
+                        r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in)",
+                        r"(escort|testo|cleanse|supplement|serum|wrinkle|topcare)[\w-]*\.(co|net|org|in)",
+                        r"(natural|pro|magic)[\w-]*health[\w-]*\.(co|net|org|in)",
+                        r"health[\w-]*(pro|tips|review|blog|guide|advi[sc]|discussion|solution)[\w-]*\.(co|net|org|in)",
+                        r"[\w-]{11,}(income|sale|reviews?|advices?|problog)\.(co|net|org|in)",
+                        r"fat(burn|loss)|(\.|best)cheap|online(training|solution)[\w-]*\.(co|net|org|in)",
+                        r"(corrupt|repair)[\w-]*.blogspot", "musclebuilding(products|base)",
+                        r"(file|photo)recovery[\w-]*\.(co|net|org|in)"]
     rules = [
         {'regex': u"(?i)\\b(%s)\\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
