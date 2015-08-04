@@ -100,7 +100,7 @@ class FindSpam:
                             "drivethelife\\.com", "singlerank\\.com", "sayeureqa\\.com"
                             "lafozi\\.com", "open-swiss-bank\\.com",
                             "tenorshare\\.com", "advancedpdfconverter\\.com",
-                            "fix-computer\\.net",
+                            "fix-computer\\.net", "drillpressselect",
                             "macvideoconverterpro\\.com", "password-master\\.net",
                             "photorecovery-formac\\.com",
                             "rarpasswordunlocker\\.net",
