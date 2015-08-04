@@ -69,7 +69,7 @@ class FindSpam:
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?serum", "tophealth", "poker ?online"
                         "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse", "ultra[ -]?ketone",
-                        "oro[ -]?lift", "skin ?care", "diabazole"]
+                        "oro[ -]?lift", "skin ?care", "diabazole", "forskolin"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
