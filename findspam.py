@@ -47,7 +47,7 @@ class FindSpam:
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha Rush",
                     "Forskolin", "Blackline Elite", "TestCore Pro",
                     "Xtreme Antler", "Maxx Test 3000", "orvigomax",
-                    "Cheap Wigs?", "jivam", "Brain Power", "Maximum ?Shred",
+                    "Cheap Wigs?", "jivam", "Brain (Power|Peak)", "Maximum ?Shred",
                     "aging skin", "acne( prone)? skin", "black[ -]label[ -]no",
                     "skin (serum|eye)", "bagprada", "6611165613", "Apowersoft",
                     "Service Solahart", "junisse", "Profactor[ -]?T"
@@ -69,7 +69,7 @@ class FindSpam:
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?serum", "tophealth", "poker ?online"
                         "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse", "ultra[ -]?ketone",
-                        "oro[ -]?lift", "skin ?care", "diabazole", "forskolin"]
+                        "oro[ -]?lift", "skin ?care", "diabazole", "forskolin", "tonaderm", "lumagenex"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
