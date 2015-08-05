@@ -83,7 +83,7 @@ class FindSpam:
                             "svelmeblog", "preply\\.com", "hellofifa",
                             "fifa15online", "wearepropeople.com", "tagwitty",
                             "axsoccertours", "ragednablog", "ios8easyjailbreak",
-                            "totalfitnesspoint", "trustessaywriting",
+                            "totalfitnesspoint", "trustessaywriting", "thesispaperwriters",
                             "trustmyessay", "faasoft", "besttvshows", "mytechlabs",
                             "giikers", "pagetube", "myenv\\.org", "testkiz\\.com",
                             "pelevoniface", "herintalk", "menshealth", "examguidez",
