@@ -61,7 +61,7 @@ class FindSpam:
                     r"(?x:B [\s_]* A [\s_]* M \W{0,5} W [\s_]* A [\s_]* R [\s_]* \.? [\s_]* C [\s_]* O [\s_]* M)",
                     "slumber pm", "1-844-400-7325", "(male|penile) enhancement", "bestcollegechina",
                     "bbwdesire", "rsorder", "Shopping ?Cart ?Elite", "Easy ?Data ?Feed",
-                    "breasts? enlargement", "best property management", "eduCBA",
+                    "breasts? enlargement", "best property management", "eduCBA", "Solid[ -]?SEO[ -]?Tools",
                     "maxman ?power", "niagen", "Testo (X|Black)", "day ?trading ?academy", " %uh ",
                     "skinology", "folliplex", "ProDermagenix", "yafei ?cable", "MSP ?Hack ?Tool",
                     "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015"]
@@ -175,7 +175,7 @@ class FindSpam:
                         r"health[\w-]*(pro|tips|review|blog|guide|advi[sc]|discussion|solution)[\w-]*\.(co|net|org|in)",
                         r"[\w-]{11,}(income|sale|reviews?|advices?|problog)\.(co|net|org|in)",
                         r"[\w-]{6,}analysis\.(co|net)", "-poker\\.com",
-                        r"serum|onsale|fat(burn|loss)|(\.|best)cheap|online(training|solution)[\w-]*\.(co|net|org|in)",
+                        r"seotools|serum|onsale|fat(burn|loss)|(\.|best)cheap|online(training|solution)[\w-]*\.(co|net|org|in)",
                         r"(corrupt|repair)[\w-]*.blogspot", "musclebuilding(products|base)",
                         r"(file|photo)recovery[\w-]*\.(co|net|org|in)"]
     rules = [
