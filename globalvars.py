@@ -29,7 +29,7 @@ class GlobalVars:
     wrap = Client("stackexchange.com")
     wrapm = Client("meta.stackexchange.com")
     wrapso = Client("stackoverflow.com")
-    privileged_users = {charcoal_room_id: ["117490",  # Yes aka Pizza aka 1999
+    privileged_users = {charcoal_room_id: ["117490",  # Normal Human
                                            "66258",  # Andy
                                            "31768",  # ManishEarth
                                            "103081",  # hichris123
@@ -40,7 +40,7 @@ class GlobalVars:
                                            "88577",  # Santa Claus
                                            "34124",  # Andrew Leach
                                            "32436"],  # tchrist
-                        meta_tavern_room_id: ["259867",  # Yes
+                        meta_tavern_room_id: ["259867",  # Normal Human
                                               "244519",  # Roombatron5000
                                               "244382",  # TGMCians
                                               "194047",  # Jan Dvorak
@@ -81,6 +81,7 @@ class GlobalVars:
                                               "260312",  # vaultah
                                               "244062",  # SouravGhosh
                                               "152859",  # Shadow Wizard
+                                              "201314",  # apnorton
                                               "200235"],  # durron597
                         socvr_room_id: [
                             "1849664",  # Undo
