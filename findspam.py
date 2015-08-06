@@ -64,7 +64,7 @@ class FindSpam:
                     "breasts? enlargement", "best property management", "eduCBA",
                     "maxman ?power", "niagen", "Testo (X|Black)", "day ?trading ?academy", " %uh ",
                     "skinology", "folliplex", "ProDermagenix", "yafei ?cable", "MSP ?Hack ?Tool",
-                    "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale"]
+                    "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale", "PhenQ"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
@@ -89,7 +89,7 @@ class FindSpam:
                             "giikers", "pagetube", "myenv\\.org", "testkiz\\.com",
                             "pelevoniface", "herintalk", "menshealth", "examguidez",
                             "skinphysiciantips", "fifa2coins", "xtrememusclerecoveryrev",
-                            "diabacordoesitwork", "thehealthyadvise",
+                            "diabacordoesitwork", "thehealthyadvise", "mixresult\\.com",
                             "premiumpureforskolinrev", "hyperglycemiaabout", "dietandhealthguide",
                             "sourceforge\\.net/projects/freepdftojpgconverter",
                             "pdftoexel\\.wordpress\\.com", "best7th\\.in",
