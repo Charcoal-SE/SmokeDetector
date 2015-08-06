@@ -67,7 +67,7 @@ class FindSpam:
                     "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
-                        "abam26", "watch2live", "cogniq", "eye ?serum", "tophealth", "poker ?online"
+                        "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
                         "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse", "ultra[ -]?ketone",
                         "oro[ -]?lift", "skin ?care", "diabazole", "forskolin", "tonaderm", "lumagenex"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
@@ -173,7 +173,8 @@ class FindSpam:
                         r"(natural|pro|magic)[\w-]*health[\w-]*\.(co|net|org|in)",
                         r"health[\w-]*(pro|tips|review|blog|guide|advi[sc]|discussion|solution)[\w-]*\.(co|net|org|in)",
                         r"[\w-]{11,}(income|sale|reviews?|advices?|problog)\.(co|net|org|in)",
-                        r"onsale|fat(burn|loss)|(\.|best)cheap|online(training|solution)[\w-]*\.(co|net|org|in)",
+                        r"[\w-]{6,}analysis\.(co|net)",
+                        r"serum|onsale|fat(burn|loss)|(\.|best)cheap|online(training|solution)[\w-]*\.(co|net|org|in)",
                         r"(corrupt|repair)[\w-]*.blogspot", "musclebuilding(products|base)",
                         r"(file|photo)recovery[\w-]*\.(co|net|org|in)"]
     rules = [
