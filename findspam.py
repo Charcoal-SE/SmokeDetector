@@ -69,7 +69,8 @@ class FindSpam:
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
                         "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse", "ultra[ -]?ketone",
-                        "oro[ -]?lift", "skin ?care", "diabazole", "forskolin", "tonaderm", "lumagenex"]
+                        "oro[ -]?lift", "skin ?care", "diabazole", "forskolin", "tonaderm", "lumagenex",
+                        "nuando"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
@@ -125,7 +126,7 @@ class FindSpam:
                             "bestcelebritiesvideo\\.com", "shopnhlbruins\\.com",
                             "downloadscanpst\\.com", "downloadgames",
                             "listoffreeware\\.com", "bigasoft\\.com", "opclub07\\.com",
-                            "allavsoft", "vpnranks\\.com",
+                            "allavsoft", "vpnranks\\.com", "tryapext\\.com",
                             "vanskeys\\.com", "cheapessaywritingservice", "edbtopsts\\.com",
                             "texts\\.io", "writage\\.com", "mobitsolutions\\.com",
                             "askpcexperts\\.com", "anonymousvpnsoftware\\.com",
@@ -173,7 +174,7 @@ class FindSpam:
                         r"(natural|pro|magic)[\w-]*health[\w-]*\.(co|net|org|in)",
                         r"health[\w-]*(pro|tips|review|blog|guide|advi[sc]|discussion|solution)[\w-]*\.(co|net|org|in)",
                         r"[\w-]{11,}(income|sale|reviews?|advices?|problog)\.(co|net|org|in)",
-                        r"[\w-]{6,}analysis\.(co|net)",
+                        r"[\w-]{6,}analysis\.(co|net)", "-poker\\.com",
                         r"serum|onsale|fat(burn|loss)|(\.|best)cheap|online(training|solution)[\w-]*\.(co|net|org|in)",
                         r"(corrupt|repair)[\w-]*.blogspot", "musclebuilding(products|base)",
                         r"(file|photo)recovery[\w-]*\.(co|net|org|in)"]
