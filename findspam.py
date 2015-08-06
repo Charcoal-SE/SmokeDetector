@@ -103,7 +103,7 @@ class FindSpam:
                             "fix-computer\\.net", "drillpressselect",
                             "macvideoconverterpro\\.com", "password-master\\.net",
                             "photorecovery-formac\\.com",
-                            "rarpasswordunlocker\\.net",
+                            "rarpasswordunlocker\\.net", "hackerscontent\\.com",
                             "windows7-password-reset\\.net", "windowspasswordcracker\\.com"
                             "windowspasswordreset\\.net", "officialdriverdownload",
                             "youtubedownloaderconverter\\.net",
