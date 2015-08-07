@@ -372,6 +372,11 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         return "I'm [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector), a bot that detects spam and low-quality posts on the network and posts alerts to chat. [A command list is available here](https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands)."
     if content_lower.startswith("!!/apiquota"):
         return GlobalVars.apiquota
+    if content_lower.startswith("!!/whoami"):
+        if (ev_room in GlobalVars.smokeDetector_user_id):
+            return "My id for this room is {}".format(GlobalVars.smokeDetector_user_id[ev_room])
+        else:
+            return "I don't know my user ID for this room. (Something is wrong, and it's apnorton's fault.)"
     if content_lower.startswith("!!/location"):
         return GlobalVars.location
     if content_lower.startswith("!!/queuestatus"):
