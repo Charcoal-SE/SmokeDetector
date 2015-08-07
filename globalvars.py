@@ -83,6 +83,7 @@ class GlobalVars:
                                               "244062",  # SouravGhosh
                                               "152859",  # Shadow Wizard
                                               "201314",  # apnorton
+                                              "280934",  # M.A.Ramezani
                                               "200235"],  # durron597
                         socvr_room_id: [
                             "1849664",  # Undo
