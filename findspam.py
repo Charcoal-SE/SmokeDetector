@@ -143,7 +143,7 @@ class FindSpam:
                             "(premium|priceless)-inkjet\\.com", "antivirus\\.comodo\\.com",
                             "clusterlinks\\.com", "connectify\\.me", "liftserump\\.com",
                             "kizi1000\\.in", "weightruinations\\.com",
-                            "products\\.odosta\\.com",
+                            "products\\.odosta\\.com", "naturacelhelp",
                             "rackons\\.com", "imonitorsoft\\.com",
                             "analec\\.com", "livesportstv\\.us",
                             "dermaessencecreamblog\\.com", "stadtbett\\.com",
@@ -225,7 +225,7 @@ class FindSpam:
          'sites': ["stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com"], 'reason': "Email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': u"(?i)(tejveer ?iq|ser?vice pemanas?)", 'all': True, 'sites': [], 'reason': "Blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u"(?i)vs", 'all': False, 'sites': ["patents.stackexchange.com"], 'reason': 'Bad keyword in {}', 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
-        {'regex': u"(?<!>)</a>\s*</p>\s*$", 'all': False, 'sites': ["drupal.stackexchange.com", "meta.stackexchange.com"], 'reason': 'Link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'answers': False},
+        {'regex': u"(?<!>)</a>(?:</strong>)?\s*</p>\s*$", 'all': False, 'sites': ["superuser.stackexchange.com", "drupal.stackexchange.com", "meta.stackexchange.com"], 'reason': 'Link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'answers': False},
         {'regex': u".*<pre>.*", 'all': False, 'sites': ["puzzling.stackexchange.com"], 'reason': 'Code block', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'report_everywhere': False, 'body_summary': False}
     ]
 
