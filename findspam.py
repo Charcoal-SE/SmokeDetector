@@ -166,7 +166,7 @@ class FindSpam:
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
                             "statesmovie", "cleanlean", "iFoneMate", "babygames5\\.com",
                             "replacementlaptopkeys\\.com", "safewiper\\.com",
-                            "appsforpcdownloads"]
+                            "appsforpcdownloads", "healthsupplementcare\\.com"]
     pattern_websites = [r"health\d{3,}", "\\.repair\"", r"repair\.(co|net|org|in)",
                         r"([\w-]password|\Bfacts|\Btoyshop)\.(co|net|org|in)",
                         r"[\w-]recovery(pro)?\.com",
