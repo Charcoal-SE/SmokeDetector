@@ -45,6 +45,9 @@ GlobalVars.bodyfetcher = BodyFetcher()
 GlobalVars.wrap.login(username, password)
 GlobalVars.wrapm.login(username, password)
 GlobalVars.wrapso.login(username, password)
+GlobalVars.smokeDetector_user_id[GlobalVars.charcoal_room_id] = str(GlobalVars.wrap.get_me().id)
+GlobalVars.smokeDetector_user_id[GlobalVars.meta_tavern_room_id] = str(GlobalVars.wrapm.get_me().id)
+GlobalVars.smokeDetector_user_id[GlobalVars.socvr_room_id] = str(GlobalVars.wrapso.get_me().id)
 GlobalVars.s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] " \
                "SmokeDetector started at [rev " +\
                GlobalVars.commit_with_author +\

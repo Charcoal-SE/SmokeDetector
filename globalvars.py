@@ -39,6 +39,7 @@ class GlobalVars:
                                            "31465",  # Seth
                                            "88577",  # Santa Claus
                                            "34124",  # Andrew Leach
+                                           "54229",  # apnorton
                                            "32436"],  # tchrist
                         meta_tavern_room_id: ["259867",  # Normal Human
                                               "244519",  # Roombatron5000
