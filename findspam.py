@@ -64,7 +64,8 @@ class FindSpam:
                     "breasts? enlargement", "best property management", "eduCBA", "Solid[ -]?SEO[ -]?Tools",
                     "maxman ?power", "niagen", "Testo (X|Black)", "day ?trading ?academy", " %uh ",
                     "skinology", "folliplex", "ProDermagenix", "yafei ?cable", "MSP ?Hack ?Tool",
-                    "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015"]
+                    "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015",
+                    "Vigoraflo"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
@@ -173,7 +174,7 @@ class FindSpam:
                         r"(escort|testo|cleanse|supplement|serum|wrinkle|topcare)[\w-]*\.(co|net|org|in)",
                         r"(natural|pro|magic)[\w-]*health[\w-]*\.(co|net|org|in)",
                         r"health[\w-]*(pro|tips|review|blog|guide|advi[sc]|discussion|solution)[\w-]*\.(co|net|org|in)",
-                        r"[\w-]{11,}(income|sale|reviews?|advices?|problog)\.(co|net|org|in)",
+                        r"[\w-]{11,}(ideas|income|sale|reviews?|advices?|problog)\.(co|net|org|in)",
                         r"[\w-]{6,}analysis\.(co|net)", "-poker\\.com",
                         r"seotools|serum|onsale|fat(burn|loss)|(\.|best)cheap|online(training|solution)[\w-]*\.(co|net|org|in)",
                         r"(corrupt|repair)[\w-]*.blogspot", "musclebuilding(products|base)",
