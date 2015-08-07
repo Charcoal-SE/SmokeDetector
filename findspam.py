@@ -30,7 +30,7 @@ def has_duplicate_links(s, site):
 def has_repeating_characters(s, site):
     if s is None or len(s) == 0:
         return False
-    matches = regex.compile("([^\\s_.?!=~*/0-9-])(\\1{10,})", regex.UNICODE).findall(s)
+    matches = regex.compile("([^\\s_.,?!=~*/0-9-])(\\1{10,})", regex.UNICODE).findall(s)
     matches = ["".join(match) for match in matches]
     match = "".join(matches)
     return (100 * len(match) / len(s)) >= 20
