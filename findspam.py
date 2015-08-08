@@ -109,7 +109,7 @@ class FindSpam:
                             "windows7-password-reset\\.net", "windowspasswordcracker\\.com"
                             "windowspasswordreset\\.net", "officialdriverdownload",
                             "youtubedownloaderconverter\\.net",
-                            "smartpcfixer", "1fix\\.org",
+                            "smartpcfixer", "1fix\\.org", "code4email\\.com",
                             "drivertuner\\.com", "easyfix\\.org", "errorsfixer\\.org",
                             "faq800\\.com", "fix1\\.org", "guru4pc\\.net", "howto4pc\\.org",
                             "official-drivers\\.com", "pceasynow\\.com",
