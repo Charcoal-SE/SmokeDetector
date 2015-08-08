@@ -43,9 +43,9 @@ class FindSpam:
                     "porn", "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
                     "acai", "rejuvenated skin", "ProBrain", "restore[ -]?samsung[ -]?data",
                     "LifeForce", "swtor2credits", "me2.do", "black magic",
-                    "bam2u", "Neuro(3X|flexyn|fuse|luma|plex)", "Nutra", "TesteroneXL", "Nitroxin",
+                    "bam2u", "Neuro(3X|flexyn|fuse|luma|plex)", "TesteroneXL", "Nitroxin",
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha Rush",
-                    "Forskolin", "Blackline Elite", "TestCore Pro",
+                    "Blackline Elite", "TestCore Pro",
                     "Xtreme Antler", "Maxx Test 3000", "orvigomax",
                     "Cheap Wigs?", "jivam", "Brain (Power|Peak)", "Maximum ?Shred",
                     "aging skin", "acne( prone)? skin", "black[ -]label[ -]no",
@@ -71,7 +71,7 @@ class FindSpam:
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
                         "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse", "ultra[ -]?ketone",
                         "oro[ -]?lift", "skin ?care", "diabazole", "forskolin", "tonaderm", "lumagenex",
-                        "nuando"]
+                        "nuando", "nutra", "nitro[ -]?slim"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
