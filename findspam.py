@@ -171,7 +171,7 @@ class FindSpam:
                         r"([\w-]password|\Bfacts|\Btoyshop)\.(co|net|org|in)",
                         r"[\w-]recovery(pro)?\.com",
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in)",
-                        r"(escort|testo|cleanse|supplement|serum|wrinkle|topcare)[\w-]*\.(co|net|org|in)",
+                        r"(loans|escort|testo|cleanse|supplement|serum|wrinkle|topcare)[\w-]*\.(co|net|org|in)",
                         r"(natural|pro|magic)[\w-]*health[\w-]*\.(co|net|org|in)",
                         r"health[\w-]*(idea|pro|tips|review|blog|guide|advi[sc]|discussion|solution)[\w-]*\.(co|net|org|in)",
                         r"[\w-]{11,}(ideas|income|sale|reviews?|advices?|problog)\.(co|net|org|in)",
