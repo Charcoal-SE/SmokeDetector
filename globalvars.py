@@ -137,12 +137,4 @@ class GlobalVars:
                                      socvr_room_id: []}
 
     location = config.get("Config", "location")
-
-    username = None
-    password = None
-
-    try:
-        username = config.get("Config", "username")
-        password = config.get("Config", "password")
-    except ConfigParser.NoOptionError:
-        print "Username and password couldn't be read from config file. Will fall back on asking..."
+    print location

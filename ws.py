@@ -31,18 +31,12 @@ import requests
 if "ChatExchangeU" in os.environ:
     username = os.environ["ChatExchangeU"]
 else:
-    if GlobalVars.username is not None:
-        username = GlobalVars.username
-    else:
-        print "Username: "
-        username = raw_input()
+    print "Username: "
+    username = raw_input()
 if "ChatExchangeP" in os.environ:
     password = os.environ["ChatExchangeP"]
 else:
-    if GlobalVars.password is not None:
-        password = GlobalVars.password
-    else:
-        password = getpass.getpass("Password: ")
+    password = getpass.getpass("Password: ")
 
 load_files()
 filter_auto_ignored_posts()
