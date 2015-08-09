@@ -167,7 +167,7 @@ class FindSpam:
                             "statesmovie", "cleanlean", "iFoneMate", "babygames5\\.com",
                             "replacementlaptopkeys\\.com", "safewiper\\.com",
                             "appsforpcdownloads", "healthsupplementcare\\.com",
-                            "musclebuilding(products|base)"]
+                            "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com"]
     pattern_websites = [r"health\d{3,}", r"[\w-]recovery(pro)?\.com",
                         "\\.repair\"", r"repair\.(co|net|org|in)",
                         r"([\w-]password|\Bfacts|\Btoyshop|[\w-]cheats?)\.(co|net|org|in)",
