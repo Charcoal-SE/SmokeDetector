@@ -241,8 +241,8 @@ class FindSpam:
             except KeyError:
                 check_if_answer = True
             if rule['stripcodeblocks']:
-                body_to_check = regex.sub("<pre>.*?</pre>", "", body, flags=regex.DOTALL)
-                body_to_check = regex.sub("<code>.*?</code>", "", body_to_check, flags=regex.DOTALL)
+                body_to_check = regex.sub("(?s)<pre>.*?</pre>", "<pre></pre>", body)
+                body_to_check = regex.sub("(?s)<code>.*?</code>", "<code></code>", body_to_check)
             if rule['reason'] == 'Phone number detected in {}':
                 body_to_check = regex.sub("<img[^>]+>", "", body_to_check)
                 body_to_check = regex.sub("<a[^>]+>", "", body_to_check)
