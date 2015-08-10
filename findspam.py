@@ -167,7 +167,8 @@ class FindSpam:
                             "statesmovie", "cleanlean", "iFoneMate", "babygames5\\.com",
                             "replacementlaptopkeys\\.com", "safewiper\\.com",
                             "appsforpcdownloads", "healthsupplementcare\\.com",
-                            "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com"]
+                            "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
+                            "megatachoco", "crazybulkstacks"]
     pattern_websites = [r"health\d{3,}", r"[\w-]recovery(pro)?\.com",
                         "\\.repair\"", r"repair\.(co|net|org|in)",
                         r"([\w-]password|\Bfacts|\Btoyshop|[\w-]cheats?)\.(co|net|org|in)",
@@ -195,6 +196,8 @@ class FindSpam:
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': ur"<blockquote>\s*(<blockquote>\s*)+\s*<a", 'all': True,
          'sites': [], 'reason': "Nested quote blocks with link", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
+        {'regex': ur"(?i)\b(mortgages?|loans)\b", 'all': True,
+         'sites': ["money.stackexchange.com", "math.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': ur"(?i)\b(muscles?|testo\w*|body ?build(er|ing)|wrinkles?|supplements?)\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': ur"(?i)diet ?plan|\b(pro)?derma(?!tolog)|(fat|weight) (loo?s[es]|reduction)|loo?s[es] weight", 'all': True,
