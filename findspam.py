@@ -168,8 +168,7 @@ class FindSpam:
                             "replacementlaptopkeys\\.com", "safewiper\\.com",
                             "appsforpcdownloads", "healthsupplementcare\\.com",
                             "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
-                            "megatachoco", "crazybulkstacks", "sqliterecovery\\.com",
-                            "rhinorx90eveningblog"]
+                            "megatachoco", "crazybulkstacks", "sqliterecovery\\.com"]
     pattern_websites = [r"health\d{3,}", r"[\w-]recovery(pro)?\.com",
                         "\\.repair\"", r"repair\.(co|net|org|in)",
                         r"([\w-]password|\Bfacts|\Btoyshop|[\w-]cheats?)\.(co|net|org|in)",
@@ -177,7 +176,7 @@ class FindSpam:
                         r"(loans|escort|testo|cleanse|supplement|serum|wrinkle|topcare|freetrial)[\w-]*\.(co|net|org|in)",
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in)",
                         r"(natural|pro|magic)[\w-]*health[\w-]*\.(co|net|org|in)",
-                        r"(health|beauty)[\w-]*(idea|pro|tip|review|blog|guide|advi[sc]|discussion|solution)[\w-]*\.(co|net|org|in)",
+                        r"(health|beauty|rx)[\w-]*(try|idea|pro|tip|review|blog|guide|advi[sc]|discussion|solution)[\w-]*\.(co|net|org|in)",
                         r"[\w-]{11,}(ideas?|income|sale|reviews?|advices?|problog)\.(co|net|org|in)",
                         r"[\w-]{6,}analysis\.(co|net)", "-poker\\.com",
                         r"(corrupt|repair)[\w-]*.blogspot",
@@ -201,7 +200,7 @@ class FindSpam:
          'sites': ["money.stackexchange.com", "math.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': ur"(?i)\b(muscles?|testo\w*|body ?build(er|ing)|wrinkles?|supplements?)\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
-        {'regex': ur"(?i)diet ?plan|\b(pro)?derma(?!to)|(fat|weight) ?(loo?s[es]|reduction)|loo?s[es] ?weight", 'all': True,
+        {'regex': ur"(?i)diet ?plan|\b(pro)?derma(?!to)|(fat|weight)[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True},
         {'regex': ur"(?i)(workout|fitness|diet|perfecthealth)[\w-]*\.(co|net|org|in)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "Pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
