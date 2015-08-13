@@ -21,7 +21,7 @@ def has_repeated_words(s, site):
 
 
 def has_few_characters(s, site):
-    return len(s)>36 and len(set(list(s))) < 12  # under 8 chars, discounting < / p > which always appear in post body
+    return len(s) > 36 and len(set(list(s))) < 12  # under 8 chars, discounting < / p > which always appear in post body
 
 
 def has_duplicate_links(s, site):
