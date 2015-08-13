@@ -21,8 +21,8 @@ def has_repeated_words(s, site):
 
 
 def has_few_characters(s, site):
-    return len(set(list(s))) < 14   # under 10 chars, discounting < / p > which always appear in post body
-    
+    return len(s)>36 and len(set(list(s))) < 12  # under 8 chars, discounting < / p > which always appear in post body
+
 
 def has_duplicate_links(s, site):
     soup = BeautifulSoup(s)
@@ -225,7 +225,7 @@ class FindSpam:
          'sites': [], 'reason': "Blacklisted website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)(%s)(?![^>]*<)" % "|".join(pattern_websites), 'all': True,
          'sites': [], 'reason': "Pattern-matching website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True},
-        {'method': has_few_characters, 'all': True, 'sites': [], 'reason': "Few characters in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
+        {'method': has_few_characters, 'all': True, 'sites': [], 'reason': "Few unique characters in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'method': has_repeating_characters, 'all': True, 'sites': [], 'reason': "Repeating characters in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'method': has_repeated_words, 'all': True, 'sites': [], 'reason': "Repeating words in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'method': has_duplicate_links, 'all': False, 'sites': ["patents.stackexchange.com"], 'reason': "Duplicate links in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'answers': False},
