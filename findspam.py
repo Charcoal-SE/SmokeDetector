@@ -112,7 +112,7 @@ class FindSpam:
                             "rarpasswordunlocker\\.net", "hackerscontent\\.com",
                             "windows7-password-reset\\.net", "windowspasswordcracker\\.com"
                             "windowspasswordreset\\.net", "officialdriverdownload",
-                            "youtubedownloaderconverter\\.net",
+                            "youtubedownloaderconverter\\.net", "santerevue", "cheatsumo\\.com",
                             "smartpcfixer", "1fix\\.org", "code4email\\.com",
                             "drivertuner\\.com", "easyfix\\.org", "errorsfixer\\.org",
                             "faq800\\.com", "fix1\\.org", "guru4pc\\.net", "howto4pc\\.org",
@@ -181,6 +181,7 @@ class FindSpam:
                         r"(loans|escort|testo|cleanse|supplement|serum|wrinkle|topcare|freetrial)[\w-]*\.(co|net|org|in)",
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in)",
                         r"(natural|pro|magic)[\w-]*health[\w-]*\.(co|net|org|in)",
+                        r"(eye|skin|age|aging)[\w-]*cream[\w-]*\.(co|net|org|in)",
                         r"(health|beauty|rx)[\w-]*(try|idea|pro|tip|review|blog|guide|advi[sc]|discussion|solution)[\w-]*\.(co|net|org|in)",
                         r"[\w-]{11,}(ideas?|income|sale|reviews?|advices?|problog)\.(co|net|org|in)",
                         r"[\w-]{6,}analysis\.(co|net)", "-poker\\.com", "send[\w-]*india\.(co|net|org|in)",
