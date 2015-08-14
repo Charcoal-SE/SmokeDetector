@@ -106,7 +106,7 @@ class FindSpam:
                             "drivethelife\\.com", "singlerank\\.com", "sayeureqa\\.com"
                             "lafozi\\.com", "open-swiss-bank\\.com",
                             "tenorshare\\.com", "advancedpdfconverter\\.com",
-                            "fix-computer\\.net", "drillpressselect",
+                            "fix-computer\\.net", "drillpressselect", "chinatour\\.com",
                             "macvideoconverterpro\\.com", "password-master\\.net",
                             "photorecovery-formac\\.com", "thecasesolutions\\.com",
                             "rarpasswordunlocker\\.net", "hackerscontent\\.com",
@@ -176,7 +176,7 @@ class FindSpam:
                             "creative-proteomics"]
     pattern_websites = [r"health\d{3,}", r"[\w-]recovery(pro)?\.com",
                         "\\.repair\"", r"repair\.(co|net|org|in)",
-                        r"([\w-]password|\Bfacts|\Btoyshop|[\w-]cheats?)\.(co|net|org|in)",
+                        r"([\w-]password|\Bfacts|\Btoyshop|[\w-]cheats)\.(co|net|org|in)",
                         r"(ketones|seotools|onsale|fat(burn|loss)|(\.|best)cheap|online(training|solution))[\w-]*\.(co|net|org|in)",
                         r"(loans|escort|testo|cleanse|supplement|serum|wrinkle|topcare|freetrial)[\w-]*\.(co|net|org|in)",
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in)",
