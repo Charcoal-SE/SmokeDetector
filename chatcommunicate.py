@@ -389,6 +389,8 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         return "Liar"
     if content_lower.startswith("!!/coffee"):
         return "*brews coffee for @" + ev_user_name.replace(" ", "") + "*"
+    if content_lower.startswith("!!/tea"):
+        return "*brews a cup of " + random.choice(['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint']) + " tea for @" + ev_user_name.replace(" ", "") + "*"
     if content_lower.startswith("!!/test"):
         string_to_test = content_lower[8:]
         if len(string_to_test) == 0:
