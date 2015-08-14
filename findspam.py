@@ -172,17 +172,18 @@ class FindSpam:
                             "replacementlaptopkeys\\.com", "safewiper\\.com",
                             "appsforpcdownloads", "healthsupplementcare\\.com",
                             "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
-                            "megatachoco", "crazybulkstacks", "sqliterecovery\\.com"]
+                            "megatachoco", "crazybulkstacks", "sqliterecovery\\.com",
+                            "creative-proteomics"]
     pattern_websites = [r"health\d{3,}", r"[\w-]recovery(pro)?\.com",
                         "\\.repair\"", r"repair\.(co|net|org|in)",
                         r"([\w-]password|\Bfacts|\Btoyshop|[\w-]cheats?)\.(co|net|org|in)",
-                        r"(seotools|onsale|fat(burn|loss)|(\.|best)cheap|online(training|solution))[\w-]*\.(co|net|org|in)",
+                        r"(ketones|seotools|onsale|fat(burn|loss)|(\.|best)cheap|online(training|solution))[\w-]*\.(co|net|org|in)",
                         r"(loans|escort|testo|cleanse|supplement|serum|wrinkle|topcare|freetrial)[\w-]*\.(co|net|org|in)",
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in)",
                         r"(natural|pro|magic)[\w-]*health[\w-]*\.(co|net|org|in)",
                         r"(health|beauty|rx)[\w-]*(try|idea|pro|tip|review|blog|guide|advi[sc]|discussion|solution)[\w-]*\.(co|net|org|in)",
                         r"[\w-]{11,}(ideas?|income|sale|reviews?|advices?|problog)\.(co|net|org|in)",
-                        r"[\w-]{6,}analysis\.(co|net)", "-poker\\.com",
+                        r"[\w-]{6,}analysis\.(co|net)", "-poker\\.com", "send[\w-]*india\.(co|net|org|in)",
                         r"(corrupt|repair)[\w-]*.blogspot",
                         r"(file|photo)recovery[\w-]*\.(co|net|org|in)"]
     rules = [
