@@ -103,8 +103,8 @@ class FindSpam:
                             "evomailserver\\.com", "gameart\\.net",
                             "sofotex\\.com", "erecteentry", "fairharvardfund",
                             "mybloggingmoney\\.com", "windows-techsupport\\.com",
-                            "drivethelife\\.com", "singlerank\\.com", "sayeureqa\\.com"
-                            "lafozi\\.com", "open-swiss-bank\\.com",
+                            "drivethelife\\.com", "singlerank\\.com", "sayeureqa\\.com",
+                            "lafozi\\.com", "open-swiss-bank\\.com", "kalimadedot\\.blogspot",
                             "tenorshare\\.com", "advancedpdfconverter\\.com",
                             "fix-computer\\.net", "drillpressselect", "chinatour\\.com",
                             "macvideoconverterpro\\.com", "password-master\\.net",
