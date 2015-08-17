@@ -181,7 +181,7 @@ class FindSpam:
                         r"password-?(cracker|unlocker|reset|buster|master)\.(com|net|org)",
                         r"(downloader|pdf)converter\.(com|net)",
                         r"([\w-]password|\Bfacts|\Btoyshop|[\w-]cheats)\.(co|net|org|in\W|info)",
-                        r"(ketones|seotools|onsale|fat(burn|loss)|(\.|best)cheap|online(training|solution))[\w-]*\.(co|net|org|in\W|info)",
+                        r"(ketones|seotools|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*\.(co|net|org|in\W|info)",
                         r"(loans|escort|testo|cleanse|supplement|serum|wrinkle|topcare|freetrial)[\w-]*\.(co|net|org|in\W|info)",
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in\W|info)",
                         r"(natural|pro|magic)[\w-]*health[\w-]*\.(co|net|org|in\W|info)",
