@@ -45,7 +45,7 @@ class FindSpam:
                     "fifaodell", "brianfo", "tosterone", "bajotz",
                     "vashi?k[ae]r[ae]n", "kolcak", "Zapyo", "we (offer|give out) loans",
                     "porn", "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
-                    "acai", "rejuvenated skin", "ProBrain", "restore[ -]?samsung[ -]?data",
+                    "rejuvenated skin", "ProBrain", "restore[ -]?samsung[ -]?data",
                     "LifeForce", "swtor2credits", "me2.do", "black magic",
                     "bam2u", "Neuro(3X|flexyn|fuse|luma|plex)", "TesteroneXL", "Nitroxin",
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha Rush",
@@ -71,7 +71,7 @@ class FindSpam:
                     "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015",
                     "Vigoraflo", "Fonepaw", "Provasil", "(sas|hadoop|mapreduce|oracle|dba) training",
                     "intellipaat"]
-    bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
+    bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
                         "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse", "ultra[ -]?ketone",
