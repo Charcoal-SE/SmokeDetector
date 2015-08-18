@@ -172,7 +172,7 @@ class FindSpam:
                             "appsforpcdownloads", "healthsupplementcare\\.com",
                             "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
                             "megatachoco", "crazybulkstacks", "sqliterecovery\\.com",
-                            "creative-proteomics"]
+                            "creative-proteomics", "biomusclexrrev\\.com"]
     pattern_websites = [r"health\d{3,}", "\\.repair\"", r"filefix(er)?\.com",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*\.(co|net|org|in\W|info)",
                         r"[\w-](recovery|repair|converter)(pro|kit)?\.(com|net)",
