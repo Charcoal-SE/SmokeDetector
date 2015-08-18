@@ -69,13 +69,14 @@ class FindSpam:
                     "maxman ?power", "niagen", "Testo (X|Black)", "day ?trading ?academy", " %uh ",
                     "skinology", "folliplex", "ProDermagenix", "yafei ?cable", "MSP ?Hack ?Tool",
                     "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015",
-                    "Vigoraflo", "Fonepaw", "Provasil"]
+                    "Vigoraflo", "Fonepaw", "Provasil", "(sas|hadoop|mapreduce|oracle|dba) training",
+                    "intellipaat"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
                         "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse", "ultra[ -]?ketone",
                         "oro[ -]?lift", "skin ?care", "diabazole", "forskolin", "tonaderm", "lumagenex",
-                        "nuando[ -]?instant", "nutra", "nitro[ -]?slim", "aimee[ -]?cream"]
+                        "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim", "aimee[ -]?cream"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
@@ -125,7 +126,7 @@ class FindSpam:
                             "free-download-youtube\\.com", "free-music-downloader\\.com",
                             "video-download-capture\\.com", "videograbber\\.net",
                             "password-buster\\.com", "globalvision\\.com\\.vn",
-                            "remorecover\\.com", "remosoftware\\.com", "crazybulkreviewsz\\.com",
+                            "remorecover\\.com", "remosoftware\\.com",
                             "\\bpatch\\.com\\b", "ajgilworld\\.com", "santomais", "viilms",
                             "clashofclansastucegemmes\\.com", "mothersday-2014\\.org",
                             "bestcelebritiesvideo\\.com", "shopnhlbruins\\.com",
@@ -183,7 +184,7 @@ class FindSpam:
                         r"(downloader|pdf)converter\.(com|net)",
                         r"//cheat[\w-]{3,}\.(co|net|org|in\W|info)",
                         r"([\w-]password|\Bfacts|\Btoyshop|[\w-]{6,}cheats)\.(co|net|org|in\W|info)",
-                        r"(ketones|seotools|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*\.(co|net|org|in\W|info)",
+                        r"(ketones|seotools|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*\.(co|net|org|in\W|info)",
                         r"(loans|escort|testo|cleanse|supplement|serum|wrinkle|topcare|freetrial)[\w-]*\.(co|net|org|in\W|info)",
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in\W|info)",
                         r"(natural|pro|magic)[\w-]*health[\w-]*\.(co|net|org|in\W|info)",
