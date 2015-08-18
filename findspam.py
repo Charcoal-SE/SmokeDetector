@@ -69,7 +69,7 @@ class FindSpam:
                     "maxman ?power", "niagen", "Testo (X|Black)", "day ?trading ?academy", " %uh ",
                     "skinology", "folliplex", "ProDermagenix", "yafei ?cable", "MSP ?Hack ?Tool",
                     "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015",
-                    "Vigoraflo", "Fonepaw"]
+                    "Vigoraflo", "Fonepaw", "Provasil"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berry",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
@@ -131,7 +131,7 @@ class FindSpam:
                             "bestcelebritiesvideo\\.com", "shopnhlbruins\\.com",
                             "downloadscanpst\\.com", "downloadgames",
                             "listoffreeware\\.com", "bigasoft\\.com", "opclub07\\.com",
-                            "allavsoft", "tryapext\\.com",
+                            "allavsoft", "tryapext\\.com", "essayscouncil\\.com", "caseism\\.com",
                             "vanskeys\\.com", "cheapessaywritingservice", "edbtopsts\\.com",
                             "texts\\.io", "writage\\.com", "mobitsolutions\\.com",
                             "askpcexperts\\.com", "anonymousvpnsoftware\\.com",
