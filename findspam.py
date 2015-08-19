@@ -70,7 +70,7 @@ class FindSpam:
                     "skinology", "folliplex", "ProDermagenix", "yafei ?cable", "MSP ?Hack ?Tool",
                     "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015",
                     "Vigoraflo", "Fonepaw", "Provasil", "(sas|hadoop|mapreduce|oracle|dba) training",
-                    "intellipaat"]
+                    "intellipaat", "Replennage"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
@@ -174,7 +174,7 @@ class FindSpam:
                             "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
                             "megatachoco", "crazybulkstacks", "sqliterecovery\\.com",
                             "creative-proteomics", "biomusclexrrev\\.com"]
-    pattern_websites = [r"health\d{3,}", "\\.repair\"", r"filefix(er)?\.com",
+    pattern_websites = [r"health\d{3,}", "\\.repair\"", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*\.(co|net|org|in\W|info)",
                         r"[\w-](recovery|repair|converter)(pro|kit)?\.(com|net)",
                         r"fix[\w-]*(files?|tool(box)?)\.com",
