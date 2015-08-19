@@ -158,7 +158,7 @@ class FindSpam:
                             "crevalorsite\\.com", "macfixz\\.com", "moviesexplore\\.com",
                             "iphoneunlocking\\.org", "thehealthvictory\\.com",
                             "bloggermaking\\.com", "supportphonenumber\\.com",
-                            "slimbodyketone", "prinenidz\\.com",
+                            "slimbodyketone", "prinenidz\\.com", "e-priceinbd",
                             "maddenmobilehack", "supplements4help",
                             "cacherealestate\\.com", "Matrixhackka007", "aoatech\\.com",
                             "pharaohtools", "msoutlooktools\\.com", "softwarezee",
