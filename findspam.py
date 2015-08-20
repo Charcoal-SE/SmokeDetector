@@ -175,7 +175,7 @@ class FindSpam:
                             "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
                             "megatachoco", "crazybulkstacks", "sqliterecovery\\.com",
                             "creative-proteomics", "biomusclexrrev\\.com",
-                            "123trainings\\.com", "betacheat\\.com", "surejob\\.in"]
+                            "123trainings\\.com", "(bestof|beta)cheat\\.com", "surejob\\.in"]
     pattern_websites = [r"health\d{3,}", "\\.repair\"", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*\.(co|net|org|in\W|info)",
                         r"[\w-](recovery|repair|converter)(pro|kit)?\.(com|net)",
@@ -212,7 +212,7 @@ class FindSpam:
         {'regex': ur"<blockquote>\s*(<blockquote>\s*)+\s*<a", 'all': True,
          'sites': [], 'reason': "Nested quote blocks with link", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': ur"(?i)\b(mortgages?|loans)\b", 'all': True,
-         'sites': ["money.stackexchange.com", "math.stackexchange.com", "law.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
+         'sites': ["money.stackexchange.com", "math.stackexchange.com", "law.stackexchange.com", "economics.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': ur"(?i)\b(muscles?|testo\w*|body ?build(er|ing)|wrinkles?|supplements?|probiotics?)\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': ur"(?i)diet ?plan|\b(pro)?derma(?!to)|(fat|weight)[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight", 'all': True,
