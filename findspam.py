@@ -21,7 +21,8 @@ def has_repeated_words(s, site):
 
 
 def has_few_characters(s, site):
-    return len(s) > 36 and len(set(list(s))) < 12  # under 8 chars, discounting < / p > which always appear in post body
+    uniques = len(set(list(s))) - 4    # discount < / p > which always appear in post body
+    return (len(s) > 36 and uniques < 8) or (len(s) > 100 and uniques < 16)    # reduce if false reports appear
 
 
 def has_duplicate_links(s, site):
@@ -70,7 +71,7 @@ class FindSpam:
                     "skinology", "folliplex", "ProDermagenix", "yafei ?cable", "MSP ?Hack ?Tool",
                     "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015",
                     "Vigoraflo", "Fonepaw", "Provasil", "(sas|hadoop|mapreduce|oracle|dba) training",
-                    "intellipaat"]
+                    "intellipaat", "Replennage", "Alpha XTRM"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
@@ -88,7 +89,7 @@ class FindSpam:
                             "hits4slim", "screenshot\\.net", "downloadavideo\\.net",
                             "strongmenmuscle", "sh\\.st/", "musclehealthfitness",
                             "svelmeblog", "preply\\.com", "hellofifa",
-                            "fifa15online", "wearepropeople.com", "tagwitty",
+                            "fifa\\d*online", "wearepropeople.com", "tagwitty",
                             "axsoccertours", "ragednablog", "ios8easyjailbreak",
                             "totalfitnesspoint", "trustessaywriting", "thesispaperwriters",
                             "trustmyessay", "faasoft", "besttvshows", "mytechlabs",
@@ -130,7 +131,7 @@ class FindSpam:
                             "\\bpatch\\.com\\b", "ajgilworld\\.com", "santomais", "viilms",
                             "clashofclansastucegemmes\\.com", "mothersday-2014\\.org",
                             "bestcelebritiesvideo\\.com", "shopnhlbruins\\.com",
-                            "downloadscanpst\\.com", "downloadgames",
+                            "downloadscanpst\\.com", "downloadgames", "gameshop4u\\.com",
                             "listoffreeware\\.com", "bigasoft\\.com", "opclub07\\.com",
                             "allavsoft", "tryapext\\.com", "essayscouncil\\.com", "caseism\\.com",
                             "vanskeys\\.com", "cheapessaywritingservice", "edbtopsts\\.com",
@@ -151,14 +152,14 @@ class FindSpam:
                             "rackons\\.com", "imonitorsoft\\.com",
                             "analec\\.com", "livesportstv\\.us",
                             "dermaessencecreamblog\\.com", "stadtbett\\.com",
-                            "jetcheats\\.com", "rsgoldmall",
+                            "jetcheats\\.com", "rsgoldmall", "cheatio\\.com",
                             "optimalstackfacts", "x4facts", "endomondo\\.com",
                             "litindia\\.in", "shoppingcartelite\\.com",
                             "customizedwallpaper\\.com", "cracksofts\\.com",
                             "crevalorsite\\.com", "macfixz\\.com", "moviesexplore\\.com",
                             "iphoneunlocking\\.org", "thehealthvictory\\.com",
                             "bloggermaking\\.com", "supportphonenumber\\.com",
-                            "slimbodyketone", "prinenidz\\.com",
+                            "slimbodyketone", "prinenidz\\.com", "e-priceinbd",
                             "maddenmobilehack", "supplements4help",
                             "cacherealestate\\.com", "Matrixhackka007", "aoatech\\.com",
                             "pharaohtools", "msoutlooktools\\.com", "softwarezee",
@@ -173,8 +174,9 @@ class FindSpam:
                             "appsforpcdownloads", "healthsupplementcare\\.com",
                             "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
                             "megatachoco", "crazybulkstacks", "sqliterecovery\\.com",
-                            "creative-proteomics", "biomusclexrrev\\.com"]
-    pattern_websites = [r"health\d{3,}", "\\.repair\"", r"filefix(er)?\.com",
+                            "creative-proteomics", "biomusclexrrev\\.com",
+                            "123trainings\\.com", "(bestof|beta)cheat\\.com", "surejob\\.in"]
+    pattern_websites = [r"health\d{3,}", "\\.repair\"", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*\.(co|net|org|in\W|info)",
                         r"[\w-](recovery|repair|converter)(pro|kit)?\.(com|net)",
                         r"fix[\w-]*(files?|tool(box)?)\.com",
@@ -189,7 +191,7 @@ class FindSpam:
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in\W|info)",
                         r"(natural|pro|magic)[\w-]*health[\w-]*\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*cream[\w-]*\.(co|net|org|in\W|info)",
-                        r"(health|beauty|rx)[\w-]*(try|idea|pro|tip|review|blog|guide|advi[sc]|discussion|solution)[\w-]*\.(co|net|org|in\W|info)",
+                        r"(medical|health|beauty|rx)[\w-]*(try|idea|pro|tip|review|blog|guide|advi[sc]|discussion|solution|consult)[\w-]*\.(co|net|org|in\W|info)",
                         r"[\w-]{11,}(ideas?|income|sale|reviews?|advices?|problog|analysis)\.(co|net|org|in\W|info)",
                         "-poker\\.com", "send[\w-]*india\.(co|net|org|in\W|info)",
                         r"(corrupt|repair)[\w-]*.blogspot",
@@ -210,8 +212,8 @@ class FindSpam:
         {'regex': ur"<blockquote>\s*(<blockquote>\s*)+\s*<a", 'all': True,
          'sites': [], 'reason': "Nested quote blocks with link", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': ur"(?i)\b(mortgages?|loans)\b", 'all': True,
-         'sites': ["money.stackexchange.com", "math.stackexchange.com", "law.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
-        {'regex': ur"(?i)\b(muscles?|testo\w*|body ?build(er|ing)|wrinkles?|supplements?)\b", 'all': True,
+         'sites': ["money.stackexchange.com", "math.stackexchange.com", "law.stackexchange.com", "economics.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
+        {'regex': ur"(?i)\b(muscles?|testo\w*|body ?build(er|ing)|wrinkles?|supplements?|probiotics?)\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': ur"(?i)diet ?plan|\b(pro)?derma(?!to)|(fat|weight)[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True},
