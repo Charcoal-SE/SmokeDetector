@@ -179,6 +179,7 @@ class FindSpam:
                             "israelbigmarket"]
     pattern_websites = [r"health\d{3,}", "\\.repair\"", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*\.(co|net|org|in\W|info)",
+                        r"fifa\d+[\w-]*\.com",
                         r"[\w-](recovery|repair|converter)(pro|kit)?\.(com|net)",
                         r"fix[\w-]*(files?|tool(box)?)\.com",
                         r"(repair|recovery|fix)tool(box)?\.com",
