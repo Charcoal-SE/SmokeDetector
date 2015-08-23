@@ -102,7 +102,12 @@ class GlobalVars:
                             "3622940",  # Unihedron
                             "3204551",  # Deduplicator
                             "4342498",  # NathanOliver
-                            "4639281"]  # Tiny Giant
+                            "4639281",  # Tiny Giant
+                            "3093387",  # josilber
+                            "1652962",  # cimmanon
+                            "1677912",  # Mogsdad
+                            "656243",   # Lynn Crumbling
+                            "3933332"]  # Rizier123
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
