@@ -1,6 +1,7 @@
 import json
 import sys
 import time
+from threading import Thread
 from findspam import FindSpam
 from datahandling import *
 from parsing import get_user_from_url, unescape_title,\
@@ -9,6 +10,7 @@ from bayesianfuncs import bayesian_score
 from globalvars import GlobalVars
 from datetime import datetime
 from parsing import url_to_shortlink
+from metasmoke import Metasmoke
 
 
 def should_whitelist_prevent_alert(user_url, reasons):
@@ -91,6 +93,11 @@ def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_
         print e
     try:
         title = escape_special_chars_in_title(title)
+
+        t_metasmoke = Thread(target=Metasmoke.send_stats_on_post,
+                             args=(title, reason.split(","), ))
+        t_metasmoke.start()
+
         if not poster.strip():
             s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by a deleted user on `%s`" % \
                 (reason, title.strip(), post_url, site)
