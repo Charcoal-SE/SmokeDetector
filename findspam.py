@@ -71,7 +71,7 @@ class FindSpam:
                     "skinology", "folliplex", "ProDermagenix", "yafei ?cable", "MSP ?Hack ?Tool",
                     "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015",
                     "Vigoraflo", "Fonepaw", "Provasil", "(sas|hadoop|mapreduce|oracle|dba) training",
-                    "intellipaat", "Replennage", "Alpha XTRM"]
+                    "intellipaat", "Replennage", "Alpha XTRM", "Synagen"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
@@ -140,7 +140,7 @@ class FindSpam:
                             "ecouponcode\\.com", "wasel(pro)?\\.com", "i-spire\\.(com|net)",
                             "iwasl\\.com", "vpn(faqs|answers|ranks|4games)\\.com",
                             "unblockingtwitter\\.com", "openingblockedsite\\.com",
-                            "arabic(soft)?downloads?\\.com",
+                            "arabic(soft)?downloads?\\.com", "braindumpsvalid",
                             "repairtoolbox\\.com", "couchsurfing\\.com",
                             "gta5codes\\.fr", "musclezx90au\\.com",
                             "fallclassicrun\\.com", "forgrams\\.com",
@@ -175,9 +175,11 @@ class FindSpam:
                             "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
                             "megatachoco", "crazybulkstacks", "sqliterecovery\\.com",
                             "creative-proteomics", "biomusclexrrev\\.com",
-                            "123trainings\\.com", "(bestof|beta)cheat\\.com", "surejob\\.in"]
+                            "123trainings\\.com", "(bestof|beta)cheat\\.com", "surejob\\.in",
+                            "israelbigmarket"]
     pattern_websites = [r"health\d{3,}", "\\.repair\"", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*\.(co|net|org|in\W|info)",
+                        r"fifa\d+[\w-]*\.com", r"[\w-]giveaway\.com",
                         r"[\w-](recovery|repair|converter)(pro|kit)?\.(com|net)",
                         r"fix[\w-]*(files?|tool(box)?)\.com",
                         r"(repair|recovery|fix)tool(box)?\.com",
@@ -201,7 +203,7 @@ class FindSpam:
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)\\b((?<!['\"])baba(?!['\"])|nike)\\b", 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
-        {'regex': ur"(?i)\bgratis\b", 'all': True,
+        {'regex': ur"(?is)^.{0,400}\bgratis\b.{0,400}$", 'all': True,
          'sites': ['softwarerecs.stackexchange.com'], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': ur"(?i)\p{Script=Hangul}", 'all': True,
          'sites': [], 'reason': "Korean character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
@@ -213,7 +215,7 @@ class FindSpam:
          'sites': [], 'reason': "Nested quote blocks with link", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': ur"(?i)\b(mortgages?|loans)\b", 'all': True,
          'sites': ["money.stackexchange.com", "math.stackexchange.com", "law.stackexchange.com", "economics.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
-        {'regex': ur"(?i)\b(muscles?|testo\w*|body ?build(er|ing)|wrinkles?|supplements?|probiotics?)\b", 'all': True,
+        {'regex': ur"(?i)\b(muscles?|testo ?[sx]\w*|body ?build(er|ing)|wrinkles?|supplements?|probiotics?)\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': ur"(?i)diet ?plan|\b(pro)?derma(?!to)|(fat|weight)[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True},
