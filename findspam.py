@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 
 def has_repeated_words(s, site):
-    words = regex.split(r"[\s.,:;!/\()\[\]+_-]", s)
+    words = regex.split(r"[\s.,;!/\()\[\]+_-]", s)
     words = [w for w in words if w != ""]
     curr = 0
     prev = ""
