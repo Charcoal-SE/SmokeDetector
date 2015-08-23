@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 
 def has_repeated_words(s, site):
-    words = regex.split(r"[\s.,:;!/\()\[\]+_-]", s)
+    words = regex.split(r"[\s.,;!/\()\[\]+_-]", s)
     words = [w for w in words if w != ""]
     curr = 0
     prev = ""
@@ -146,7 +146,7 @@ class FindSpam:
                             "fallclassicrun\\.com", "forgrams\\.com",
                             "cloudinsights\\.net", "xtremenitro",
                             "(premium|priceless)-inkjet\\.com", "antivirus\\.comodo\\.com",
-                            "clusterlinks\\.com", "connectify\\.me", "liftserump\\.com",
+                            "clusterlinks\\.com", "connectify\\.me",
                             "kizi1000\\.in", "weightruinations\\.com",
                             "products\\.odosta\\.com", "naturacelhelp",
                             "rackons\\.com", "imonitorsoft\\.com",
@@ -171,9 +171,9 @@ class FindSpam:
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
                             "statesmovie", "cleanlean", "iFoneMate", "babygames5\\.com",
                             "replacementlaptopkeys\\.com", "safewiper\\.com",
-                            "appsforpcdownloads", "healthsupplementcare\\.com",
+                            "appsforpcdownloads",
                             "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
-                            "megatachoco", "crazybulkstacks", "sqliterecovery\\.com",
+                            "megatachoco", "sqliterecovery\\.com",
                             "creative-proteomics", "biomusclexrrev\\.com",
                             "123trainings\\.com", "(bestof|beta)cheat\\.com", "surejob\\.in",
                             "israelbigmarket"]
@@ -186,7 +186,7 @@ class FindSpam:
                         r"smart(pc)?fixer\.(com|net|org)",
                         r"password-?(cracker|unlocker|reset|buster|master)\.(com|net|org)",
                         r"(downloader|pdf)converter\.(com|net)",
-                        r"//cheat[\w-]{3,}\.(co|net|org|in\W|info)",
+                        r"//(cheat[\w-]{3,}|xtreme[\w-]{5,})\.(co|net|org|in\W|info)",
                         r"([\w-]password|\Bfacts|\Btoyshop|[\w-]{6,}cheats)\.(co|net|org|in\W|info)",
                         r"(ketones|seotools|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*\.(co|net|org|in\W|info)",
                         r"(loans|escort|testo|cleanse|supplement|serum|wrinkle|topcare|freetrial)[\w-]*\.(co|net|org|in\W|info)",
@@ -217,7 +217,7 @@ class FindSpam:
          'sites': ["money.stackexchange.com", "math.stackexchange.com", "law.stackexchange.com", "economics.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': ur"(?i)\b(muscles?|testo ?[sx]\w*|body ?build(er|ing)|wrinkles?|supplements?|probiotics?)\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
-        {'regex': ur"(?i)diet ?plan|\b(pro)?derma(?!to)|(fat|weight)[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight", 'all': True,
+        {'regex': ur"(?i)diet ?plan|\b(pro)?derma(?!t)|(fat|weight)[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True},
         {'regex': ur"(?i)(workout|fitness|diet|perfecthealth)[\w-]*\.(com|co\.|net)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "Pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
