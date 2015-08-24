@@ -71,7 +71,7 @@ class FindSpam:
                     "skinology", "folliplex", "ProDermagenix", "yafei ?cable", "MSP ?Hack ?Tool",
                     "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015",
                     "Vigoraflo", "Fonepaw", "Provasil", "(sas|hadoop|mapreduce|oracle|dba) training",
-                    "intellipaat", "Replennage", "Alpha XTRM", "Synagen"]
+                    "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
@@ -171,7 +171,7 @@ class FindSpam:
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
                             "statesmovie", "cleanlean", "iFoneMate", "babygames5\\.com",
                             "replacementlaptopkeys\\.com", "safewiper\\.com",
-                            "appsforpcdownloads",
+                            "appsforpcdownloads", "svelmeblog\\.com",
                             "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
                             "megatachoco", "sqliterecovery\\.com",
                             "creative-proteomics", "biomusclexrrev\\.com",
@@ -193,7 +193,7 @@ class FindSpam:
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in\W|info)",
                         r"(natural|pro|magic)[\w-]*health[\w-]*\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*cream[\w-]*\.(co|net|org|in\W|info)",
-                        r"(medical|health|beauty|rx)[\w-]*(try|idea|pro|tip|review|blog|guide|advi[sc]|discussion|solution|consult)[\w-]*\.(co|net|org|in\W|info)",
+                        r"(medical|health|beauty|rx)[\w-]*(info|try|idea|pro|tip|review|blog|guide|advi[sc]|discussion|solution|consult)[\w-]*\.(co|net|org|in\W|info)",
                         r"[\w-]{11,}(ideas?|income|sale|reviews?|advices?|problog|analysis)\.(co|net|org|in\W|info)",
                         "-poker\\.com", "send[\w-]*india\.(co|net|org|in\W|info)",
                         r"(corrupt|repair)[\w-]*.blogspot",
