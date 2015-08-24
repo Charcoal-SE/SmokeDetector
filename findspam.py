@@ -47,7 +47,7 @@ class FindSpam:
                     "vashi?k[ae]r[ae]n", "kolcak", "Zapyo", "we (offer|give out) loans",
                     "porn", "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
                     "rejuvenated skin", "ProBrain", "restore[ -]?samsung[ -]?data",
-                    "LifeForce", "swtor2credits", "me2.do", "black magic",
+                    "LifeForce", "swtor2credits", "me2.do", "^(?s).{0,200}black magic",
                     "bam2u", "Neuro(3X|flexyn|fuse|luma|plex)", "TesteroneXL", "Nitroxin",
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha Rush",
                     "Blackline Elite", "TestCore Pro",
