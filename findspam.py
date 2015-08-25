@@ -52,7 +52,7 @@ class FindSpam:
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha Rush",
                     "Blackline Elite", "TestCore Pro",
                     "Xtreme Antler", "Maxx Test 3000", "orvigomax",
-                    "Cheap Wigs?", "jivam", "Brain (Power|Peak)", "Maximum ?Shred",
+                    "Cheap Wigs?", "jivam", "brain peak", "^(?s).{0,200}brain power", "Maximum ?Shred",
                     "aging skin", "acne( prone)? skin", "black[ -]label[ -]no",
                     "skin (serum|eye)", "bagprada", "6611165613", "Apowersoft",
                     "Service Solahart", "junisse", "Profactor[ -]?T"
@@ -150,7 +150,7 @@ class FindSpam:
                             "kizi1000\\.in", "weightruinations\\.com",
                             "products\\.odosta\\.com", "naturacelhelp",
                             "rackons\\.com", "imonitorsoft\\.com",
-                            "analec\\.com", "livesportstv\\.us",
+                            "analec\\.com", "livesportstv\\.us", "batteriedepcportable",
                             "dermaessencecreamblog\\.com", "stadtbett\\.com",
                             "jetcheats\\.com", "rsgoldmall", "cheatio\\.com",
                             "optimalstackfacts", "x4facts", "endomondo\\.com",
