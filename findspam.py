@@ -50,7 +50,7 @@ class FindSpam:
                     "LifeForce", "swtor2credits", "me2.do", "^(?s).{0,200}black magic",
                     "bam2u", "Neuro(3X|flexyn|fuse|luma|plex)", "TesteroneXL", "Nitroxin",
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha Rush",
-                    "Blackline Elite", "TestCore Pro",
+                    "Blackline Elite", "TestCore Pro", "herpes",
                     "Xtreme Antler", "Maxx Test 3000", "orvigomax",
                     "Cheap Wigs?", "jivam", "brain peak", "^(?s).{0,200}brain power", "Maximum ?Shred",
                     "aging skin", "acne( prone)? skin", "black[ -]label[ -]no",
