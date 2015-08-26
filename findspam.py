@@ -72,7 +72,7 @@ class FindSpam:
                     "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015",
                     "Vigoraflo", "Fonepaw", "Provasil", "(sas|hadoop|mapreduce|oracle|dba) training",
                     "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity", "brain ?boost(er)?s?",
-                    "V[ -]?Stamina"]
+                    "V[ -]?Stamina", "Gynectrol"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
