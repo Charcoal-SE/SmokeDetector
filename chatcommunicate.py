@@ -76,7 +76,7 @@ def watcher(ev, wrap2):
         for i in range(0, len(commands)):
             shortcut_messages.append(":" + str(GlobalVars.latest_smokedetector_messages[ev_room][-(i + 1)]) + " " + commands[i])
     if not shortcut:
-        r = handle_commands(content_source.lower(), message_parts, ev_room, ev_user_id, ev_user_name, wrap2)
+        r = handle_commands(content_source.lower(), message_parts, ev_room, ev_user_id, ev_user_name, wrap2, content_source)
         if r is not None:
             ev.message.reply(r)
     else:
@@ -90,7 +90,7 @@ def watcher(ev, wrap2):
                 reply += str(i + 1) + ". "
             reply += "[" + current_message.split(" ")[0] + "] "
             if current_message.split(" ")[1] != "-":
-                result = handle_commands(current_message.lower(), current_message.split(" "), ev_room, ev_user_id, ev_user_name, wrap2)
+                result = handle_commands(current_message.lower(), current_message.split(" "), ev_room, ev_user_id, ev_user_name, wrap2, current_message)
                 if result is not None:
                     reply += result + os.linesep
                 else:
@@ -107,7 +107,7 @@ def watcher(ev, wrap2):
             ev.message.reply(reply)
 
 
-def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_name, wrap2):
+def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_name, wrap2, content):
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
     if re.compile(":[0-9]+").search(message_parts[0]):
         msg_id = int(message_parts[0][1:])
@@ -392,7 +392,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
     if content_lower.startswith("!!/tea"):
         return "*brews a cup of " + random.choice(['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint']) + " tea for @" + ev_user_name.replace(" ", "") + "*"
     if content_lower.startswith("!!/test"):
-        string_to_test = content_lower[8:]
+        string_to_test = content[8:]
         if len(string_to_test) == 0:
             return "Nothing to test"
         result = "> "
