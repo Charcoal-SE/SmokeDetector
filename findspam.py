@@ -178,7 +178,7 @@ class FindSpam:
                             "megatachoco", "sqliterecovery\\.com",
                             "creative-proteomics", "biomusclexrrev\\.com",
                             "123trainings\\.com", "(bestof|beta)cheat\\.com", "surejob\\.in",
-                            "israelbigmarket"]
+                            "israelbigmarket", "angeljackets\\.com"]
     pattern_websites = [r"health\d{3,}", "\\.repair\"", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*\.com", r"[\w-]giveaway\.com",
