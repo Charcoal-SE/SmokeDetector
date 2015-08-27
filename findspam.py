@@ -72,7 +72,7 @@ class FindSpam:
                     "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015",
                     "Vigoraflo", "Fonepaw", "Provasil", "(sas|hadoop|mapreduce|oracle|dba) training",
                     "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity", "brain ?boost(er)?s?",
-                    "V[ -]?Stamina", "Gynectrol"]
+                    "V[ -]?Stamina", "Gynectrol", "Adderin"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
@@ -178,28 +178,28 @@ class FindSpam:
                             "megatachoco", "sqliterecovery\\.com",
                             "creative-proteomics", "biomusclexrrev\\.com",
                             "123trainings\\.com", "(bestof|beta)cheat\\.com", "surejob\\.in",
-                            "israelbigmarket", "angeljackets\\.com", "hdmoviesfair\\.com"]
+                            "israelbigmarket", "hdmoviesfair\\.com"]
     pattern_websites = [r"health\d{3,}", "\\.repair\"", r"filefix(er)?\.com", "\.page\.tl\W",
-                        r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*\.(co|net|org|in\W|info)",
-                        r"fifa\d+[\w-]*\.com", r"[\w-]giveaway\.com",
+                        r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
+                        r"fifa\d+[\w-]*?\.com", r"[\w-]giveaway\.com", r"[\w-]jackets\.com",
                         r"[\w-](recovery|repair|converter)(pro|kit)?\.(com|net)",
-                        r"fix[\w-]*(files?|tool(box)?)\.com",
+                        r"fix[\w-]*?(files?|tool(box)?)\.com",
                         r"(repair|recovery|fix)tool(box)?\.com",
                         r"smart(pc)?fixer\.(com|net|org)",
                         r"password-?(cracker|unlocker|reset|buster|master)\.(com|net|org)",
                         r"(downloader|pdf)converter\.(com|net)",
                         r"//(cheat[\w-]{3,}|xtreme[\w-]{5,})\.(co|net|org|in\W|info)",
                         r"([\w-]password|\Bfacts|\Btoyshop|[\w-]{6,}cheats)\.(co|net|org|in\W|info)",
-                        r"(ketones|seotools|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*\.(co|net|org|in\W|info)",
-                        r"(loans|escort|testo|cleanse|supplement|serum|wrinkle|topcare|freetrial)[\w-]*\.(co|net|org|in\W|info)",
+                        r"(ketones|seotools|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(loans|escort|testo|cleanse|supplement|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in\W|info)",
-                        r"(natural|pro|magic)[\w-]*health[\w-]*\.(co|net|org|in\W|info)",
-                        r"(eye|skin|age|aging)[\w-]*cream[\w-]*\.(co|net|org|in\W|info)",
-                        r"(medical|health|beauty|rx|slim|weight|fat)[\w-]*?(info|try|idea|pro|tip|review|blog|guide|advi[sc]|discussion|solution|consult)[\w-]*\.(co|net|org|in\W|info)",
+                        r"(natural|pro|magic)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(medical|health|beauty|rx|skin|slim|weight|fat)[\w-]*?(info|try|idea|pro|tip|review|blog|guide|advi[sc]|discussion|solution|consult)[\w-]*\.(co|net|org|in\W|info)",
                         r"[\w-]{11,}(ideas?|income|sale|reviews?|advices?|problog|analysis)\.(co|net|org|in\W|info)",
-                        "-poker\\.com", "send[\w-]*india\.(co|net|org|in\W|info)",
-                        r"(corrupt|repair)[\w-]*.blogspot",
-                        r"(file|photo)recovery[\w-]*\.(co|net|org|in\W|info)"]
+                        "-poker\\.com", "send[\w-]*?india\.(co|net|org|in\W|info)",
+                        r"(corrupt|repair)[\w-]*?.blogspot",
+                        r"(file|photo)recovery[\w-]*?\.(co|net|org|in\W|info)"]
     rules = [
         {'regex': ur"(?i)\b(%s)\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
