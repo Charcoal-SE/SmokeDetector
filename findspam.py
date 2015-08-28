@@ -120,7 +120,7 @@ class FindSpam:
                             "smartpcfixer", "1fix\\.org", "code4email\\.com",
                             "drivertuner\\.com", "easyfix\\.org", "errorsfixer\\.org",
                             "faq800\\.com", "fix1\\.org", "guru4pc\\.net", "howto4pc\\.org",
-                            "pceasynow\\.com", "qobul\\.com",
+                            "pceasynow\\.com", "qobul\\.com", "onlinegiftdeal\\.com",
                             "regeasypro\\.com", "registryware\\.org", "smartfixer\\.(net|org)",
                             "dlllibrary\\.net", "wisefixer\\.(com|net|org)",
                             "password-?unlocker\\.com", "dropbox18gb\\.com",
