@@ -175,7 +175,7 @@ class FindSpam:
                             "replacementlaptopkeys\\.com", "safewiper\\.com",
                             "appsforpcdownloads", "svelmeblog\\.com",
                             "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
-                            "megatachoco", "sqliterecovery\\.com",
+                            "megatachoco", "sqliterecovery\\.com", "shtylm\\.com",
                             "creative-proteomics", "biomusclexrrev\\.com",
                             "123trainings\\.com", "(bestof|beta)cheat\\.com", "surejob\\.in",
                             "israelbigmarket", "hdmoviesfair\\.com", "chinatour\\.com"]
@@ -211,7 +211,7 @@ class FindSpam:
          'sites': [], 'reason': "Korean character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': ur"(?i)\p{Script=Han}", 'all': True,
          'sites': ["chinese.stackexchange.com", "japanese.stackexchange.com"], 'reason': "Chinese character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
-        {'regex': ur"(?i)(>>>|===>|==>>>|Read More\s*>>)(?=(?s).{0,20}http)", 'all': True,
+        {'regex': ur"(?i)(>>>|===>|==>>>|(Read|Visit) More\s*(==|>>))(?=(?s).{0,20}http)", 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': ur"<blockquote>\s*(<blockquote>\s*)+\s*<a", 'all': True,
          'sites': [], 'reason': "Nested quote blocks with link", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
