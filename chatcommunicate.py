@@ -294,7 +294,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         if user is not None:
             add_blacklisted_user(user)
         bayesian_learn_title(post_data.title, "bad")
-        handle_spam(post_data.title, post_data.owner_name, post_data.site, post_data.post_url,
+        handle_spam(post_data.title, post_data.body, post_data.owner_name, post_data.site, post_data.post_url,
                     post_data.owner_url, post_data.post_id, ["Manually reported " + post_data.post_type],
                     post_data.post_type == "answer")
     if content_lower.startswith("!!/wut"):

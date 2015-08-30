@@ -12,6 +12,7 @@ class PostData:
         self.owner_url = None
         self.owner_name = None
         self.title = None
+        self.body = None
 
 
 def api_get_post(post_url):
@@ -20,7 +21,7 @@ def api_get_post(post_url):
         return None
     post_id, site, post_type = d
     if post_type == "answer":
-        api_filter = "!1zSl_EE)(nuF4Xn(2sDLC"
+        api_filter = "!SYD2Oot8YGufUM6hpT"
         req_url = "http://api.stackexchange.com/2.2/answers/" + post_id +\
                   "?site=" + site + "&filter=" + api_filter +\
                   "&key=IAkbitmze4B8KpacUfLqkw(("
@@ -28,7 +29,7 @@ def api_get_post(post_url):
     else:
         assert post_type == "question"
 
-        api_filter = "!gB6tXYzgnc3pG)x0n*03eR9*kZWXReH54Qb"
+        api_filter = "!5-dwy(WuZ4NTyJamA*kR8slbR(yU(eC-1U_sEK"
         req_url = "http://api.stackexchange.com/2.2/questions/" + post_id +\
             "?site=" + site + "&filter=" + api_filter +\
             "&key=IAkbitmze4B8KpacUfLqkw(("
@@ -46,4 +47,5 @@ def api_get_post(post_url):
         post_data.owner_name = item['owner']['display_name']
         post_data.owner_url = item['owner']['link']
     post_data.site = site
+    post_data.body = item['body']
     return post_data

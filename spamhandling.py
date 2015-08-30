@@ -67,7 +67,7 @@ def check_if_spam_json(data):
     return is_spam, reason, why
 
 
-def handle_spam(title, poster, site, post_url, poster_url, post_id, reasons, is_answer, why=""):
+def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reasons, is_answer, why=""):
     post_url = to_protocol_relative(url_to_shortlink(post_url))
     poster_url = to_protocol_relative(poster_url)
     reason = ", ".join(reasons).capitalize()
@@ -126,11 +126,12 @@ def handle_spam_json(data, reason, why=""):
     try:
         d = json.loads(json.loads(data)["data"])
         title = unescape_title(d["titleEncodedFancy"])
+        body = d["bodySummary"]
         poster = d["ownerDisplayName"]
         site = d["siteBaseHostAddress"]
         url = d["url"]
         poster_url = d["ownerUrl"]
         post_id = str(d["id"])
-        handle_spam(title, poster, site, url, poster_url, post_id, reason, False, why)
+        handle_spam(title, body, poster, site, url, poster_url, post_id, reason, False, why)
     except:
         print "NOP"
