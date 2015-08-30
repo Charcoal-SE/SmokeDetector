@@ -165,6 +165,11 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
                 and is_privileged(ev_room, ev_user_id, wrap2):
             if post_site_id is None:
                 return "That message is not a report."
+
+            t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
+                                 args=(post_url, second_part_lower, ev_user_name, ))
+            t_metasmoke.start()
+
             learned = False
             user_added = False
             if message_parts[1].lower().startswith("trueu") or message_parts[1].lower().startswith("tpu"):
