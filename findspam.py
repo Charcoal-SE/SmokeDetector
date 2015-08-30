@@ -89,7 +89,7 @@ class FindSpam:
                             "funmac", "lovebiscuits", "z-data.blogspot.com",
                             "Eglobalfitness", "musclezx90site", "fifapal",
                             "hits4slim", "screenshot\\.net", "downloadavideo\\.net",
-                            "strongmenmuscle", "sh\\.st/", "musclehealthfitness",
+                            "strongmenmuscle", "sh\\.st/", "adf\\.ly", "musclehealthfitness",
                             "svelmeblog", "preply\\.com", "hellofifa",
                             "fifa\\d*online", "wearepropeople.com", "tagwitty",
                             "axsoccertours", "ragednablog", "ios8easyjailbreak",
