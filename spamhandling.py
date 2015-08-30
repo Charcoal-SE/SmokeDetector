@@ -95,7 +95,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
         title = escape_special_chars_in_title(title)
 
         t_metasmoke = Thread(target=Metasmoke.send_stats_on_post,
-                             args=(title, post_url, reason.split(", "), ))
+                             args=(title, post_url, reason.split(", "), body,))
         t_metasmoke.start()
 
         if not poster.strip():
