@@ -21,7 +21,7 @@ def api_get_post(post_url):
         return None
     post_id, site, post_type = d
     if post_type == "answer":
-        api_filter = "!SYD2Oot8YGufUM6hpT"
+        api_filter = "!1zsjS8Aa91CUeucj0DTmP"
         req_url = "http://api.stackexchange.com/2.2/answers/" + post_id +\
                   "?site=" + site + "&filter=" + api_filter +\
                   "&key=IAkbitmze4B8KpacUfLqkw(("
