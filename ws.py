@@ -62,7 +62,7 @@ GlobalVars.s_reverted = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeD
                         GlobalVars.commit_with_author + \
                         "](https://github.com/Charcoal-SE/SmokeDetector/commit/" + \
                         GlobalVars.commit + \
-                        ") (running on" +\
+                        ") (running on " +\
                         GlobalVars.location +\
                         ")"
 
