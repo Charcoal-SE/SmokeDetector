@@ -198,8 +198,9 @@ class FindSpam:
                         r"(medical|health|beauty|rx|skin|slim|weight|fat|nutrition|shred)[\w-]*?(info|try|idea|pro|tip|review|critique|blog|guide|advi[sc]|discussion|solution|consult)[\w-]*?\.(co|net|org|in\W|info)",
                         r"[\w-]{11,}(ideas?|income|sale|reviews?|advices?|problog|analysis)\.(co|net|org|in\W|info)",
                         "-poker\\.com", "send[\w-]*?india\.(co|net|org|in\W|info)",
-                        r"(corrupt|repair)[\w-]*?.blogspot",
-                        r"(file|photo)recovery[\w-]*?\.(co|net|org|in\W|info)"]
+                        r"(corrupt|repair)[\w-]*?\.blogspot",
+                        r"(file|photo)recovery[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(videos?|movies?|watch)online[\w-]*?\.", r"hd(video|movie)[\w-]*?\."]
     rules = [
         {'regex': ur"(?i)\b(%s)\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
