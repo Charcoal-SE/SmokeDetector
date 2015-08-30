@@ -1,8 +1,10 @@
 import random
 import time
+from threading import Thread
 from parsing import *
 from datahandling import *
 from bayesianfuncs import bayesian_learn_title
+from metasmoke import Metasmoke
 from globalvars import GlobalVars
 import os
 import re
@@ -117,6 +119,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         quiet_action = ("-" in message_parts[1].lower())
         if str(msg.owner.id) != GlobalVars.smokeDetector_user_id[ev_room] or msg_content is None:
             return
+        post_url = fetch_post_url_from_msg_content(msg_content)
         post_site_id = fetch_post_id_and_site_from_msg_content(msg_content)
         if post_site_id is not None:
             post_type = post_site_id[2]
@@ -126,6 +129,11 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
                 and is_privileged(ev_room, ev_user_id, wrap2):
             if post_site_id is None:
                 return "That message is not a report."
+
+            t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
+                                 args=(post_url, second_part_lower, msg.owner.name, ))
+            t_metasmoke.start()
+
             add_false_positive((post_site_id[0], post_site_id[1]))
             user_added = False
             if message_parts[1].lower().startswith("falseu") or message_parts[1].lower().startswith("fpu"):
