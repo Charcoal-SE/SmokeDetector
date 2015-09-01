@@ -70,7 +70,8 @@ class FindSpam:
                     "maxman ?power", "niagen", "Testo (X|Black)", "day ?trading ?academy", " %uh ", " %ah ",
                     "skinology", "folliplex", "ProDermagenix", "yafei ?cable", "MSP ?Hack ?Tool",
                     "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015",
-                    "Vigoraflo", "Fonepaw", "Provasil", "(sas|hadoop|mapreduce|oracle|dba) training",
+                    "Vigoraflo", "Fonepaw", "Provasil",
+                    "(sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing) training.{0,20}</a>",
                     "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity", "brain ?boost(er)?s?",
                     "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berr",  # "nwb" == "no word boundary"
@@ -178,7 +179,8 @@ class FindSpam:
                             "megatachoco", "sqliterecovery\\.com", "shtylm\\.com",
                             "creative-proteomics", "biomusclexrrev\\.com",
                             "123trainings\\.com", "(bestof|beta)cheat\\.com", "surejob\\.in",
-                            "israelbigmarket", "hdmoviesfair\\.com", "chinatour\\.com", "celebsclothing\\.com"]
+                            "israelbigmarket", "hdmoviesfair\\.com", "chinatour\\.com", "celebsclothing\\.com",
+                            "imeshlab\\.com", "sagacademy.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-]giveaway\.com", r"[\w-]jackets\.com",
@@ -191,7 +193,7 @@ class FindSpam:
                         r"//(cheat[\w-]{3,}|xtreme[\w-]{5,})\.(co|net|org|in\W|info)",
                         r"([\w-]password|[\w-]{5,}facts|\Btoyshop|[\w-]{6,}cheats)\.(co|net|org|in\W|info)",
                         r"(ketones|seotools|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(loans|escort|testo|cleanse|supplement|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(loans|escort|testo|cleanse|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in\W|info)",
                         r"(natural|pro|magic)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
