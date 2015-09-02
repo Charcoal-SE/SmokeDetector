@@ -152,7 +152,7 @@ class FindSpam:
                             "clusterlinks\\.com", "connectify\\.me",
                             "kizi1000\\.in", "weightruinations\\.com",
                             "products\\.odosta\\.com", "naturacelhelp",
-                            "rackons\\.com", "imonitorsoft\\.com",
+                            "rackons\\.com", "imonitorsoft\\.com", "biginfosys\\.com",
                             "analec\\.com", "livesportstv\\.us", "batteriedepcportable",
                             "dermaessencecreamblog\\.com", "stadtbett\\.com",
                             "jetcheats\\.com", "rsgoldmall", "cheatio\\.com",
