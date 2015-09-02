@@ -52,7 +52,7 @@ class FindSpam:
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha Rush",
                     "Blackline Elite", "TestCore Pro",
                     "Xtreme Antler", "Maxx Test 3000", "orvigomax",
-                    "Cheap Wigs?", "jivam", "brain peak", "^(?s).{0,200}brain power", "Maximum ?Shred",
+                    "Cheap Wigs?", "jivam", "brain peak", "^(?s).{0,200}brain[- ]?(power|boost(er)?s?)", "Maximum ?Shred",
                     "aging skin", "acne( prone)? skin", "black[ -]label[ -]no",
                     "skin (serum|eye)", "bagprada", "6611165613", "Apowersoft",
                     "Service Solahart", "junisse", "Profactor[ -]?T"
@@ -72,8 +72,8 @@ class FindSpam:
                     "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015",
                     "Vigoraflo", "Fonepaw", "Provasil",
                     "(sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing) training.{0,20}</a>",
-                    "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity", "brain ?boost(er)?s?",
-                    "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?"]
+                    "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity",
+                    "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?", "intellux"]
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
