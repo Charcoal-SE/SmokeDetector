@@ -67,7 +67,11 @@ def watcher(ev, wrap2):
             ev.message.reply("I don't have any messages posted after the latest reboot.")
             return
         commands = message_parts[1:]
-        if len(commands) > 5:
+        length_without_skips = 0
+        for command in commands:
+            if command == "-":
+                length_without_skips += 1
+        if length_without_skips > 5:
             ev.message.reply("You can only execute five commands at one time.")
             return
         if len(commands) > len(GlobalVars.latest_smokedetector_messages[ev_room]):
