@@ -60,10 +60,8 @@ def watcher(ev, wrap2):
     if ev_user_name != "SmokeDetector":
         GlobalVars.tavern_users_chatting.append(ev_user_name)
 
-    shortcut = False
     shortcut_messages = []
     if message_parts[0].lower() == "sd":
-        shortcut = True
         message_parts = preprocess_shortcut_command(content_source).split(" ")
         if len(GlobalVars.latest_smokedetector_messages[ev_room]) == 0:
             ev.message.reply("I don't have any messages posted after the latest reboot.")
@@ -77,11 +75,6 @@ def watcher(ev, wrap2):
             return
         for i in range(0, len(commands)):
             shortcut_messages.append(":" + str(GlobalVars.latest_smokedetector_messages[ev_room][-(i + 1)]) + " " + commands[i])
-    if not shortcut:
-        r = handle_commands(content_source.lower(), message_parts, ev_room, ev_user_id, ev_user_name, wrap2, content_source)
-        if r is not None:
-            ev.message.reply(r)
-    else:
         reply = ""
         amount_none = 0
         amount_skipped = 0
@@ -107,6 +100,10 @@ def watcher(ev, wrap2):
             reply = reply.strip()
         if reply != "":
             ev.message.reply(reply)
+    else:
+        r = handle_commands(content_source.lower(), message_parts, ev_room, ev_user_id, ev_user_name, wrap2, content_source)
+        if r is not None:
+            ev.message.reply(r)
 
 
 def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_name, wrap2, content):
