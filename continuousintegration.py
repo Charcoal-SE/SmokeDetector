@@ -62,15 +62,15 @@ def watch_ci():
                     commit_message = r.json()["commit"]["message"]
                     print commit_message
                     if "autopull" in commit_message:
-                        GlobalVars.charcoal_hq.send_message("[CI build passed](%s) on %s. Commit message contains 'autopull', pulling..." % (target_url, ci_platform))
+                        GlobalVars.charcoal_hq.send_message("[CI build passed]({}) on {}. Commit message contains 'autopull', pulling...".format(target_url, ci_platform))
                         time.sleep(2)
                         os._exit(3)
                     else:
-                        GlobalVars.charcoal_hq.send_message("[CI build passed](%s) on %s. Ready to pull!" % (target_url, ci_platform))
+                        GlobalVars.charcoal_hq.send_message("[CI build passed]({}) on {}. Ready to pull!".format(target_url, ci_platform))
 
                     continue
             elif state == "error" or state == "failure":
                 if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > datetime.datetime.now() - datetime.timedelta(seconds=10):
-                    GlobalVars.charcoal_hq.send_message("[CI build failed](%s), *someone* (prolly Undo) borked something!" % target_url)
+                    GlobalVars.charcoal_hq.send_message("[CI build failed]({}), *someone* (prolly Undo) borked something!".format(target_url))
                     continue
     s.close()

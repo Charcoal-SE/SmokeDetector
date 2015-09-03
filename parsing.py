@@ -128,13 +128,13 @@ def url_to_shortlink(url):
     if id_and_site is None:
         return url
     if id_and_site[2] == "question":
-        return "http://%s/questions/%s" % (id_and_site[1], id_and_site[0])
+        return "http://{}/questions/{}".format(id_and_site[1], id_and_site[0])
         # We're using "/questions" and not "/q" here because when the URL
         # is made protocol-relative, /q would redirect to http even if the
         # shortlink is https. Same for /a. But there we still use /a because
         # there is no /answers or something like that.
     else:
-        return "http://%s/a/%s" % (id_and_site[1], id_and_site[0])
+        return "http://{}/a/{}".format(id_and_site[1], id_and_site[0])
 
 
 def to_protocol_relative(url):

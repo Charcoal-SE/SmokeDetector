@@ -113,8 +113,7 @@ class BodyFetcher:
             if classified and gibberish_score >= 65:
                 GlobalVars.bayesian_testroom.send_message(
                     "[ SmokeDetector | GibberishClassifierBeta ] "
-                    "Potential gibberish body (%s%%): [%s](%s) on `%s`"
-                    % (gibberish_score, title, link, site)
+                    "Potential gibberish body ({}%): [{}]({}) on `{}`".format(gibberish_score, title, link, site)
                 )
             try:
                 for answer in post["answers"]:
@@ -144,8 +143,7 @@ class BodyFetcher:
                     if classified and gibberish_score >= 65:
                         GlobalVars.bayesian_testroom.send_message(
                             "[ SmokeDetector | GibberishClassifierBeta ] "
-                            "Potential gibberish answer (%s%%): [%s](%s) on `%s`"
-                            % (gibberish_score, title, link, site)
+                            "Potential gibberish answer ({}%): [{}]({}) on `{}`".format(gibberish_score, title, link, site)
                         )
             except:
                 print "no answers"

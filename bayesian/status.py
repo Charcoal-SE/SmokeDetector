@@ -5,7 +5,7 @@ class Status(Mode):
 
 	def validate(self, args):
 		if len(args) != 2:
-			raise ValueError('Usage: %s status' % args[0])
+			raise ValueError('Usage: {} status'.format(args[0]))
 
 	def execute(self):
 		db = Db()
@@ -13,12 +13,12 @@ class Status(Mode):
 
 	def output(self, results):
 		bar = '=' * 40
-		print '%s\nStatus:\n%s\n' % (bar, bar)
+		print '{}\nStatus:\n{}\n'.format(bar, bar)
 
 		if results:
 			for doctype, count in results:
-				print '%s: %s' % (doctype, count)
+				print '{}: {}'.format(doctype, count)
 		else:
 			print 'No data'
 
-		print '\n%s' % bar
+		print '\n{}'.format(bar)

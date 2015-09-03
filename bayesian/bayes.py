@@ -17,7 +17,7 @@ if __name__ == '__main__':
 		register_mode(Status)
 
 		args = sys.argv
-		usage = 'Usage: %s %s <mode specific args>' % (args[0], '|'.join(modes.keys()))
+		usage = 'Usage: {} {} <mode specific args>'.format(args[0], '|'.join(modes.keys()))
 
 		if (len(args) < 2):
 			raise ValueError(usage)

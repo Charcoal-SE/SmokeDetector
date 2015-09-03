@@ -25,10 +25,10 @@ def test_check_function_names():
                 if line.startswith("def "):
                     function_name = line[4:].split("(")[0]
                     if function_name.lower() != function_name:
-                        fail_with_message(("FUNCTION NAME CHECK FAILED in %s at line %s. SmokeDetector uses " +
+                        fail_with_message(("FUNCTION NAME CHECK FAILED in {} at line {}. SmokeDetector uses " +
                                            "snake_case (and lowercase) function names. This tool detected a function " +
                                            "name that has a capitalized letter, which is inconsistent with the other " +
-                                           "function names.") % (filename[len(smokedetector_root):], current_line))
+                                           "function names.").format(filename[len(smokedetector_root):], current_line))
 
 
 def test_check_indentation():
@@ -44,6 +44,6 @@ def test_check_indentation():
                 current_line += 1
                 if "\t" in line:
                     fail_with_message(("INDENTATION CHECK FAILED: " +
-                                       "found tab in %s at line %s. Please use spaces as indentation, " +
+                                       "found tab in {} at line {}. Please use spaces as indentation, " +
                                        "using tabs is inconsistent with the rest of the indentation and might break " +
-                                       "SmokeDetector.") % (filename[len(smokedetector_root):], current_line))
+                                       "SmokeDetector.").format(filename[len(smokedetector_root):], current_line))

@@ -6,7 +6,7 @@ from words import text_to_list
 class Learn(Mode):
 	def validate(self, args):
 		valid_args = False
-		usage = 'Usage: %s learn <doc type> <file> <count>' % args[0]
+		usage = 'Usage: {} learn <doc type> <file> <count>'.format(args[0])
 
 		if len(args) == 5:
 			doc_type = args[2]
@@ -15,7 +15,7 @@ class Learn(Mode):
 			try:
 				file_contents = open(args[3], 'r').read()
 			except Exception as e:
-				raise ValueError(usage + '\nUnable to read specified file "%s", the error message was: %s' % (args[3], e))
+				raise ValueError(usage + '\nUnable to read specified file "{}", the error message was: {}'.format(args[3], e))
 
 			count = 0
 			try:
@@ -39,4 +39,4 @@ class Learn(Mode):
 		return self.count
 
 	def output(self, _):
-		print "Processed %s documents of type '%s'" % (self.count, self.doc_type)
+		print "Processed {} documents of type '{}'".format(self.count, self.doc_type)
