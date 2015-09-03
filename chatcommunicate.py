@@ -220,9 +220,9 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
             add_blacklisted_user((uid, val))
-            return "User blacklisted (`%s` on `%s`)." % (uid, val)
+            return "User blacklisted (`{}` on `{}`).".format(uid, val)
         elif uid == -2:
-            return "Error: %s" % val
+            return "Error: {}".format(val)
         else:
             return "Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`."
     if content_lower.startswith("!!/rmblu") \
@@ -230,22 +230,22 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
             if remove_blacklisted_user((uid, val)):
-                return "User removed from blacklist (`%s` on `%s`)." % (uid, val)
+                return "User removed from blacklist (`{}` on `{}`).".format(uid, val)
             else:
                 return "User is not blacklisted."
         elif uid == -2:
-            return "Error: %s" % val
+            return "Error: {}".format(val)
         else:
             return "Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`."
     if content_lower.startswith("!!/isblu"):
         uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
             if is_blacklisted_user((uid, val)):
-                return "User is blacklisted. (`%s` on `%s`)." % (uid, val)
+                return "User is blacklisted. (`{}` on `{}`).".format(uid, val)
             else:
-                return "User is not blacklisted. (`%s` on `%s`)." % (uid, val)
+                return "User is not blacklisted. (`{}` on `{}`).".format(uid, val)
         elif uid == -2:
-            return "Error: %s" % val
+            return "Error: {}".format(val)
         else:
             return "Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`."
     if content_lower.startswith("!!/addwlu") \
@@ -253,9 +253,9 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
             add_whitelisted_user((uid, val))
-            return "User whitelisted (`%s` on `%s`)." % (uid, val)
+            return "User whitelisted (`{}` on `{}`).".format(uid, val)
         elif uid == -2:
-            return "Error: %s" % val
+            return "Error: {}".format(val)
         else:
             return "Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`."
     if content_lower.startswith("!!/rmwlu") \
@@ -263,22 +263,22 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         uid, val = get_user_from_list_command(content_lower)
         if uid != -1 and val != "":
             if remove_whitelisted_user((uid, val)):
-                return "User removed from whitelist (`%s` on `%s`)." % (uid, val)
+                return "User removed from whitelist (`{}` on `{}`).".format(uid, val)
             else:
                 return "User is not whitelisted."
         elif uid == -2:
-            return "Error: %s" % val
+            return "Error: {}".format(val)
         else:
             return "Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`."
     if content_lower.startswith("!!/iswlu"):
         uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
             if is_whitelisted_user((uid, val)):
-                return "User is whitelisted. (`%s` on `%s`)." % (uid, val)
+                return "User is whitelisted. (`{}` on `{}`).".format(uid, val)
             else:
-                return "User is not whitelisted. (`%s` on `%s`)." % (uid, val)
+                return "User is not whitelisted. (`{}` on `{}`).".format(uid, val)
         elif uid == -2:
-            return "Error: %s" % val
+            return "Error: {}".format(val)
         else:
             return "Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`."
     if content_lower.startswith("!!/report") \
@@ -321,7 +321,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
             diff = now - UtcDate.startup_utc_date
             minutes, remainder = divmod(diff.seconds, 60)
             minutestr = "minutes" if minutes != 1 else "minute"
-            return 'Running since %s UTC (%s %s)' % (GlobalVars.startup_utc, minutes, minutestr)
+            return 'Running since {} UTC ({} {})'.format(GlobalVars.startup_utc, minutes, minutestr)
     if content_lower.startswith("!!/reboot"):
         if is_privileged(ev_room, ev_user_id, wrap2):
             post_message_in_room(ev_room, "Goodbye, cruel world")

@@ -204,7 +204,7 @@ class FindSpam:
                         r"(file|photo)recovery[\w-]*?\.(co|net|org|in\W|info)",
                         r"(videos?|movies?|watch)online[\w-]*?\.", r"hd(video|movie)[\w-]*?\."]
     rules = [
-        {'regex': ur"(?i)\b(%s)\b|%s" % ("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
+        {'regex': ur"(?i)\b({})\b|{}".format("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': u"(?i)\\b((?<!['\"])baba(?!['\"])|nike)\\b", 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
@@ -239,9 +239,9 @@ class FindSpam:
          'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com"], 'reason': "URL in title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': ur"^https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}(/\S*)?$", 'all': False,
          'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com"], 'reason': "URL-only title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
-        {'regex': u"(?i)(%s)" % "|".join(blacklisted_websites), 'all': True,
+        {'regex': u"(?i)({})".format("|".join(blacklisted_websites)), 'all': True,
          'sites': [], 'reason': "Blacklisted website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
-        {'regex': u"(?i)(%s)(?![^>]*<)" % "|".join(pattern_websites), 'all': True,
+        {'regex': u"(?i)({})(?![^>]*<)".format("|".join(pattern_websites)), 'all': True,
          'sites': [], 'reason': "Pattern-matching website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True},
         {'method': has_few_characters, 'all': True, 'sites': [], 'reason': "Few unique characters in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'method': has_repeating_characters, 'all': True, 'sites': [], 'reason': "Repeating characters in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
@@ -292,9 +292,9 @@ class FindSpam:
                         search = compiled_regex.search(title)
                         span = search.span()
                         group = search.group()
-                        why += "Title - Position %i-%i: %s\n" % (span[0] + 1, span[1] + 1, group)
+                        why += "Title - Position {}-{}: {}\n".format(span[0] + 1, span[1] + 1, group)
                     try:
-                        if getattr(FindSpam, "%s" % rule['validation_method'])(matched_title):
+                        if getattr(FindSpam, rule['validation_method'])(matched_title):
                             result.append(rule['reason'].replace("{}", "title"))
                     except KeyError:  # There is no special logic for this rule
                         result.append(rule['reason'].replace("{}", "title"))
@@ -303,9 +303,9 @@ class FindSpam:
                         search = compiled_regex.search(user_name)
                         span = search.span()
                         group = search.group()
-                        why += "Username - Position %i-%i: %s\n" % (span[0] + 1, span[1] + 1, group)
+                        why += "Username - Position {}-{}: {}\n".format(span[0] + 1, span[1] + 1, group)
                     try:
-                        if getattr(FindSpam, "%s" % rule['validation_method'])(matched_username):
+                        if getattr(FindSpam, rule['validation_method'])(matched_username):
                             result.append(rule['reason'].replace("{}", "username"))
                     except KeyError:  # There is no special logic for this rule
                         result.append(rule['reason'].replace("{}", "username"))
@@ -314,10 +314,10 @@ class FindSpam:
                         search = compiled_regex.search(body)
                         span = search.span()
                         group = search.group()
-                        why += "Body - Position %i-%i: %s\n" % (span[0] + 1, span[1] + 1, group)
+                        why += "Body - Position {}-{}: {}\n".format(span[0] + 1, span[1] + 1, group)
                     type_of_post = "answer" if is_answer else "body"
                     try:
-                        if getattr(FindSpam, "%s" % rule['validation_method'])(matched_body):
+                        if getattr(FindSpam, rule['validation_method'])(matched_body):
                             result.append(rule['reason'].replace("{}", type_of_post))
                     except KeyError:  # There is no special logic for this rule
                         result.append(rule['reason'].replace("{}", type_of_post))
@@ -336,7 +336,7 @@ class FindSpam:
                 try:
                     z = phonenumbers.parse(phone_number, testf)
                     if phonenumbers.is_possible_number(z) and phonenumbers.is_valid_number(z):
-                        print "Possible %s, Valid %s, Explain: %s" % (phonenumbers.is_possible_number(z), phonenumbers.is_valid_number(z), z)
+                        print "Possible {}, Valid {}, Explain: {}".format(phonenumbers.is_possible_number(z), phonenumbers.is_valid_number(z), z)
                         return True
                 except phonenumbers.phonenumberutil.NumberParseException:
                     pass

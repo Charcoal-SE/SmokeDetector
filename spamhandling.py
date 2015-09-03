@@ -99,11 +99,11 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
         t_metasmoke.start()
 
         if not poster.strip():
-            s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by a deleted user on `%s`" % \
-                (reason, title.strip(), post_url, site)
+            s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] {}: [{}]({}) by a deleted user on `{}`" \
+                .format(reason, title.strip(), post_url, site)
         else:
-            s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] %s: [%s](%s) by [%s](%s) on `%s`" % \
-                (reason, title.strip(), post_url, poster.strip(), poster_url, site)
+            s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] {}: [{}]({}) by [{}]({}) on `{}`" \
+                .format(reason, title.strip(), post_url, poster.strip(), poster_url, site)
         print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
         if time.time() >= GlobalVars.blockedTime:
             append_to_latest_questions(site, post_id, title)

@@ -5,7 +5,7 @@ from db import Db
 class Reset(Mode):
 	def validate(self, args):
 		if len(args) != 2:
-			raise ValueError('Usage: %s reset' % args[0])
+			raise ValueError('Usage: {} reset'.format(args[0]))
 
 	def execute(self):
 		Db().reset()

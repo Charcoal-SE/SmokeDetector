@@ -31,13 +31,13 @@ def check_dir(d):
 def show_results(results):
 	result_count = len(results)
 	if result_count:
-		print 'Tested with %s document%s' % (result_count, '' if result_count == 1 else 's')
-		print 'Result was %1.2f (0 = %s, 1 = %s)' % (sum(results) / result_count, doctype_other, doctype_expected)
+		print 'Tested with {} document{}'.format(result_count, '' if result_count == 1 else 's')
+		print 'Result was {:1.2f} (0 = {}, 1 = {})'.format(sum(results) / result_count, doctype_other, doctype_expected)
 	else :
 		print 'No documents found'
 
 if __name__ == '__main__':
-	usage = 'Usage: %s <file> <expected doctype> <other doctype>' % sys.argv[0]
+	usage = 'Usage: {} <file> <expected doctype> <other doctype>'.format(sys.argv[0])
 
 	if len(sys.argv) != 4:
 		raise ValueError(usage)
@@ -54,6 +54,6 @@ if __name__ == '__main__':
 	elif os.path.isdir(input_file):	
 		results = check_dir(input_file)
 	else:
-		raise ValueError("Unable to find file/directory '%s'\n%s" % (input_file, usage))
+		raise ValueError("Unable to find file/directory '{}'\n{}".format(input_file, usage))
 
 	show_results(results)

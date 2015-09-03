@@ -121,7 +121,7 @@ class GlobalVars:
     if md5.new(commit_author).hexdigest() in censored_committer_names:
         commit_author = censored_committer_names[md5.new(commit_author).hexdigest()]
 
-    commit_with_author = os.popen('git log --pretty=format:"%h (' + commit_author + ': *%s*)" -n 1').read()
+    commit_with_author = os.popen('git log --pretty=format:"%h (' + commit_author + ': *{}*)" -n 1').read()
     on_master = os.popen("git rev-parse --abbrev-ref HEAD").read().strip() == "master"
     charcoal_hq = None
     tavern_on_the_meta = None

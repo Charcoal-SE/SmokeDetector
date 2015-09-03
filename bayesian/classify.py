@@ -22,7 +22,7 @@ class Classify(Mode):
 			return self.set_text(file_contents)
 
 		except Exception as e:
-			raise ValueError('Unable to read specified file "%s", the error message was: %s' % (file_name, e))
+			raise ValueError('Unable to read specified file "{}", the error message was: {}'.format(file_name, e))
 
 	def set_doctypes(self, doctype1, doctype2):
 		if doctype1 == doctype2:
@@ -40,7 +40,7 @@ class Classify(Mode):
 
 	def validate(self, args):
 		if len(args) != 5:
-			raise ValueError('Usage: %s classify <file> <doctype> <doctype>' % args[0])
+			raise ValueError('Usage: {} classify <file> <doctype> <doctype>'.format(args[0]))
 
 		self.set_text(args[2])
 		self.set_doctypes(args[3], args[4])
@@ -92,4 +92,4 @@ class Classify(Mode):
 		return result
 
 	def output(self, result):
-		print 'Probability that document is %s rather than %s is %1.2f' % (self.doctype1, self.doctype2, result)
+		print 'Probability that document is {} rather than {} is {:1.2f}'.format(self.doctype1, self.doctype2, result)
