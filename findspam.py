@@ -80,7 +80,7 @@ class FindSpam:
                         "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse", "ultra[ -]?ketone",
                         "oro[ -]?lift", "skin ?care", "diabazole", "forskolin", "tonaderm", "lumagenex",
                         "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim", "aimee[ -]?cream",
-                        "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct"]
+                        "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
