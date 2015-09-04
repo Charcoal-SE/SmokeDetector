@@ -292,7 +292,7 @@ class FindSpam:
                         search = compiled_regex.search(title)
                         span = search.span()
                         group = search.group()
-                        why += "Title - Position {}-{}: {}\n".format(span[0] + 1, span[1] + 1, group)
+                        why += u"Title - Position {}-{}: {}\n".format(span[0] + 1, span[1] + 1, group)
                     try:
                         if getattr(FindSpam, rule['validation_method'])(matched_title):
                             result.append(rule['reason'].replace("{}", "title"))
@@ -303,7 +303,7 @@ class FindSpam:
                         search = compiled_regex.search(user_name)
                         span = search.span()
                         group = search.group()
-                        why += "Username - Position {}-{}: {}\n".format(span[0] + 1, span[1] + 1, group)
+                        why += u"Username - Position {}-{}: {}\n".format(span[0] + 1, span[1] + 1, group)
                     try:
                         if getattr(FindSpam, rule['validation_method'])(matched_username):
                             result.append(rule['reason'].replace("{}", "username"))
@@ -314,7 +314,7 @@ class FindSpam:
                         search = compiled_regex.search(body)
                         span = search.span()
                         group = search.group()
-                        why += "Body - Position {}-{}: {}\n".format(span[0] + 1, span[1] + 1, group)
+                        why += u"Body - Position {}-{}: {}\n".format(span[0] + 1, span[1] + 1, group)
                     type_of_post = "answer" if is_answer else "body"
                     try:
                         if getattr(FindSpam, rule['validation_method'])(matched_body):
