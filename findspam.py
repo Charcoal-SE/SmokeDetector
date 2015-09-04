@@ -70,7 +70,7 @@ class FindSpam:
                     "maxman ?power", "niagen", "Testo (X|Black)", "day ?trading ?academy", " %uh ", " %ah ",
                     "skinology", "folliplex", "ProDermagenix", "yafei ?cable", "MSP ?Hack ?Tool",
                     "kidney[ -]?bean[ -]?extract", "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015",
-                    "Vigoraflo", "Fonepaw", "Provasil", "Slimera",
+                    "Vigoraflo", "Fonepaw", "Provasil", "Slimera", "Cerebria",
                     "(sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing) training.{0,20}</a>",
                     "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity",
                     "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?", "intellux"]
