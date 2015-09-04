@@ -63,9 +63,6 @@ def watcher(ev, wrap2):
     shortcut_messages = []
     if message_parts[0].lower() == "sd":
         message_parts = preprocess_shortcut_command(content_source).split(" ")
-        if len(GlobalVars.latest_smokedetector_messages[ev_room]) == 0:
-            ev.message.reply("I don't have any messages posted after the latest reboot.")
-            return
         commands = message_parts[1:]
         length_without_skips = 0
         for command in commands:
@@ -74,22 +71,26 @@ def watcher(ev, wrap2):
         if length_without_skips > 5:
             ev.message.reply("You can only execute five commands at one time.")
             return
-        if len(commands) > len(GlobalVars.latest_smokedetector_messages[ev_room]):
-            ev.message.reply("I haven't posted enough messages after the latest reboot to execute all commands.")
+        messages_since_reboot = GlobalVars.latest_smokedetector_messages[ev_room]
+        if len(commands) > len(messages_since_reboot):
+            ev.message.reply("I've only posted {} messages since the latest reboot; that's not enough to execute all commands.".format(len(messages_since_reboot)))
             return
         for i in range(0, len(commands)):
-            shortcut_messages.append(":" + str(GlobalVars.latest_smokedetector_messages[ev_room][-(i + 1)]) + " " + commands[i])
+            shortcut_messages.append(":" + str(messages_since_reboot[-(i + 1)]) + " " + commands[i])
         reply = ""
         amount_none = 0
         amount_skipped = 0
         length = len(shortcut_messages)
         for i in range(0, length):
             current_message = shortcut_messages[i]
-            if length > 1:
-                reply += str(i + 1) + ". "
-            reply += "[" + current_message.split(" ")[0] + "] "
-            if current_message.split(" ")[1] != "-":
-                result = handle_commands(current_message.lower(), current_message.split(" "), ev_room, ev_user_id, ev_user_name, wrap2, current_message)
+            current_message_parts = current_message.split(" ")
+            # Add link to referenced message, for reference
+            referenced_id = current_message_parts[0][1:]
+            # Yes, this link works, see <http://chat.meta.stackexchange.com/transcript/message/3918662#3918662>
+            referenced_link = "/transcript/message/{0}#{0}".format(referenced_id)
+            reply += "[{}.]({}) ".format(str(i + 1), referenced_link)
+            if current_message_parts[1] != "-":
+                result = handle_commands(current_message.lower(), current_message_parts, ev_room, ev_user_id, ev_user_name, wrap2, current_message)
                 if result is not None:
                     reply += result + os.linesep
                 else:
@@ -99,9 +100,8 @@ def watcher(ev, wrap2):
                 reply += "<skipped>" + os.linesep
                 amount_skipped += 1
         if amount_none + amount_skipped == length:
-            reply = ""
-        else:
-            reply = reply.strip()
+            return
+        reply = reply.strip()
         if reply != "":
             ev.message.reply(reply)
     else:
@@ -115,7 +115,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
     if re.compile(":[0-9]+").search(message_parts[0]):
         msg_id = int(message_parts[0][1:])
         msg = wrap2.get_message(msg_id)
-        msg_content = None
         msg_content = msg.content_source
         quiet_action = ("-" in message_parts[1].lower())
         if str(msg.owner.id) != GlobalVars.smokeDetector_user_id[ev_room] or msg_content is None:
