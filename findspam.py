@@ -182,7 +182,8 @@ class FindSpam:
                             "123trainings\\.com", "(bestof|beta)cheat\\.com", "surejob\\.in",
                             "israelbigmarket", "hdmoviesfair\\.com", "chinatour\\.com", "celebsclothing\\.com",
                             "imeshlab\\.com", "sagacademy\\.com", "moderncar\\.com", "[/.]iwacy\\.com",
-                            "topbartercard\\.com", "couponconnexion\\.com", "npmedicalhome\\.com"]
+                            "topbartercard\\.com", "couponconnexion\\.com", "npmedicalhome\\.com",
+                            "ironbe\\.com", "sedancoupeseriesspecs\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
