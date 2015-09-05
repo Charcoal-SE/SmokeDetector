@@ -147,7 +147,7 @@ class FindSpam:
                             "repairtoolbox\\.com", "couchsurfing\\.com",
                             "gta5codes\\.fr", "musclezx90au\\.com",
                             "fallclassicrun\\.com", "forgrams\\.com",
-                            "cloudinsights\\.net", "xtremenitro",
+                            "cloudinsights\\.net", "xtremenitro", "surfmegeek",
                             "(premium|priceless)-inkjet\\.com", "antivirus\\.comodo\\.com",
                             "clusterlinks\\.com", "connectify\\.me",
                             "kizi1000\\.in", "weightruinations\\.com",
