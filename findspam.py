@@ -185,7 +185,7 @@ class FindSpam:
                             "topbartercard\\.com", "couponconnexion\\.com", "npmedicalhome\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
-                        r"fifa\d+[\w-]*?\.com", r"[\w-]giveaway\.com", r"[\w-]jackets\.com",
+                        r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
                         r"[\w-](recovery|repair|converter)(pro|kit)?\.(com|net)",
                         r"fix[\w-]*?(files?|tool(box)?)\.com",
                         r"(repair|recovery|fix)tool(box)?\.com",
@@ -199,7 +199,7 @@ class FindSpam:
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in\W|info)",
                         r"(natural|pro|magic)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(medical|health|beauty|rx|skin|slim|weight|fat|nutrition|shred)[\w-]*?(info|try|idea|pro|tip|review|report|critique|blog|guide|advi[sc]|discussion|solution|consult)[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(medical|health|beauty|rx|skin|slim|weight|fat|nutrition|shred|alpha)[\w-]*?(info|try|idea|pro|tip|review|report|critique|blog|guide|advi[sc]|discussion|solution|consult)[\w-]*?\.(co|net|org|in\W|info)",
                         r"[\w-]{11,}(ideas?|income|sale|reviews?|advices?|problog|analysis)\.(co|net|org|in\W|info)",
                         "-poker\\.com", "send[\w-]*?india\.(co|net|org|in\W|info)",
                         r"(corrupt|repair)[\w-]*?\.blogspot", r"[\w-]courses.in/",
