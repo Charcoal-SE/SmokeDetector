@@ -81,7 +81,7 @@ class FindSpam:
                         "oro[ -]?lift", "skin ?care", "diabazole", "forskolin", "tonaderm", "lumagenex",
                         "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim", "aimee[ -]?cream",
                         "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
-                        "contact (me|us)\\W*<a "]
+                        "contact (me|us)\\W*<a ", "follicure"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
@@ -182,7 +182,7 @@ class FindSpam:
                             "123trainings\\.com", "(bestof|beta)cheat\\.com", "surejob\\.in",
                             "israelbigmarket", "hdmoviesfair\\.com", "chinatour\\.com", "celebsclothing\\.com",
                             "imeshlab\\.com", "sagacademy\\.com", "moderncar\\.com", "[/.]iwacy\\.com",
-                            "topbartercard\\.com", "couponconnexion\\.com"]
+                            "topbartercard\\.com", "couponconnexion\\.com", "npmedicalhome\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-]giveaway\.com", r"[\w-]jackets\.com",
