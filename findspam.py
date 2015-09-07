@@ -188,6 +188,7 @@ class FindSpam:
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
                         r"[\w-](recovery|repair|converter)(pro|kit)?\.(com|net)",
+                        r"sourceforge\.net[\w/]*convert",
                         r"fix[\w-]*?(files?|tool(box)?)\.com",
                         r"(repair|recovery|fix)tool(box)?\.com",
                         r"smart(pc)?fixer\.(com|net|org)",
