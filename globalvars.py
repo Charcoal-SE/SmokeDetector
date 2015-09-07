@@ -86,6 +86,7 @@ class GlobalVars:
                                               "201314",  # apnorton
                                               "280934",  # M.A.Ramezani
                                               "200235",  # durron597
+                                              "148310",  # Awesome Poodles / Brock Adams
                                               "168333"],  # S.L. Barth
                         socvr_room_id: [
                             "1849664",  # Undo
