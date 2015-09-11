@@ -69,7 +69,7 @@ def watcher(ev, wrap2):
         commands = message_parts[1:]
         length_without_skips = 0
         for command in commands:
-            if command == "-":
+            if command != "-":
                 length_without_skips += 1
         if length_without_skips > 5:
             ev.message.reply("You can only execute five commands at one time.")
