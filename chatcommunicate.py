@@ -70,11 +70,12 @@ def watcher(ev, wrap2):
         if len(commands) > 10:
             ev.message.reply("You can only execute ten commands at one time.")
             return
-        if len(commands) > len(GlobalVars.latest_smokedetector_messages[ev_room]):
-            ev.message.reply("I haven't posted enough messages after the latest reboot to execute all commands.")
+        messages_since_reboot = GlobalVars.latest_smokedetector_messages[ev_room]
+        if len(commands) > len(messages_since_reboot):
+            ev.message.reply("I've only posted {} messages since the latest reboot; that's not enough to execute all commands.".format(len(messages_since_reboot)))
             return
         for i in range(0, len(commands)):
-            shortcut_messages.append(":" + str(GlobalVars.latest_smokedetector_messages[ev_room][-(i + 1)]) + " " + commands[i])
+            shortcut_messages.append(":" + str(messages_since_reboot[-(i + 1)]) + " " + commands[i])
         reply = ""
         amount_none = 0
         amount_skipped = 0
@@ -111,7 +112,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
     if re.compile(":[0-9]+").search(message_parts[0]):
         msg_id = int(message_parts[0][1:])
         msg = wrap2.get_message(msg_id)
-        msg_content = None
         msg_content = msg.content_source
         quiet_action = ("-" in message_parts[1].lower())
         if str(msg.owner.id) != GlobalVars.smokeDetector_user_id[ev_room] or msg_content is None:
