@@ -164,7 +164,7 @@ class FindSpam:
                             "iphoneunlocking\\.org", "thehealthvictory\\.com",
                             "bloggermaking\\.com", "supportphonenumber\\.com",
                             "slimbodyketone", "prinenidz\\.com", "e-priceinbd",
-                            "maddenmobilehack", "supplements4help",
+                            "maddenmobilehack", "supplements4help", "watchtheboxing",
                             "cacherealestate\\.com", "Matrixhackka007", "aoatech\\.com",
                             "pharaohtools", "msoutlooktools\\.com", "softwarezee",
                             "i-hire\\.pro", "pandamw\\.com", "hariraya2015\\.net",
@@ -175,7 +175,7 @@ class FindSpam:
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
                             "statesmovie", "cleanlean", "iFoneMate", "babygames5\\.com",
                             "replacementlaptopkeys\\.com", "safewiper\\.com",
-                            "appsforpcdownloads", "svelmeblog\\.com",
+                            "appsforpcdownloads", "svelmeblog\\.com", "academicservices\\.us",
                             "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
                             "megatachoco", "sqliterecovery\\.com", "shtylm\\.com",
                             "creative-proteomics", "biomusclexrrev\\.com",
@@ -184,7 +184,8 @@ class FindSpam:
                             "imeshlab\\.com", "sagacademy\\.com", "moderncar\\.com", "[/.]iwacy\\.com",
                             "topbartercard\\.com", "couponconnexion\\.com", "npmedicalhome\\.com",
                             "ironbe\\.com", "sedancoupeseriesspecs\\.com", "techvaid\\.com", "pirachaexports\\.com",
-                            "fastunsecured\\.com", "fullchatroom\\.com", "ecartbasiccartlead"]
+                            "fastunsecured\\.com", "fullchatroom\\.com", "ecartbasiccartlead",
+                            "edigitalplace\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
