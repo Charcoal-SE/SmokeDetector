@@ -63,19 +63,19 @@ def watcher(ev, wrap2):
     shortcut_messages = []
     if message_parts[0].lower() == "sd":
         message_parts = preprocess_shortcut_command(content_source).split(" ")
-        if len(GlobalVars.latest_smokedetector_messages[ev_room]) == 0:
+        latest_smokedetector_messages = GlobalVars.latest_smokedetector_messages[ev_room]
+        if len(latest_smokedetector_messages) == 0:
             ev.message.reply("I don't have any messages posted after the latest reboot.")
             return
         commands = message_parts[1:]
         if len(commands) > 10:
             ev.message.reply("You can only execute ten commands at one time.")
             return
-        messages_since_reboot = GlobalVars.latest_smokedetector_messages[ev_room]
-        if len(commands) > len(messages_since_reboot):
-            ev.message.reply("I've only posted {} messages since the latest reboot; that's not enough to execute all commands.".format(len(messages_since_reboot)))
+        if len(commands) > len(latest_smokedetector_messages):
+            ev.message.reply("I've only posted {} messages since the latest reboot; that's not enough to execute all commands.".format(len(latest_smokedetector_messages)))
             return
         for i in range(0, len(commands)):
-            shortcut_messages.append(":" + str(messages_since_reboot[-(i + 1)]) + " " + commands[i])
+            shortcut_messages.append(":" + str(latest_smokedetector_messages[-(i + 1)]) + " " + commands[i])
         reply = ""
         amount_none = 0
         amount_skipped = 0
