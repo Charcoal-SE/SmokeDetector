@@ -63,9 +63,6 @@ def watcher(ev, wrap2):
     shortcut_messages = []
     if message_parts[0].lower() == "sd":
         message_parts = preprocess_shortcut_command(content_source).split(" ")
-        if len(GlobalVars.latest_smokedetector_messages[ev_room]) == 0:
-            ev.message.reply("I don't have any messages posted after the latest reboot.")
-            return
         commands = message_parts[1:]
         if len(commands) > 10:
             ev.message.reply("You can only execute ten commands at one time.")
@@ -82,11 +79,14 @@ def watcher(ev, wrap2):
         length = len(shortcut_messages)
         for i in range(0, length):
             current_message = shortcut_messages[i]
-            if length > 1:
-                reply += str(i + 1) + ". "
-            reply += "[" + current_message.split(" ")[0] + "] "
-            if current_message.split(" ")[1] != "-":
-                result = handle_commands(current_message.lower(), current_message.split(" "), ev_room, ev_user_id, ev_user_name, wrap2, current_message)
+            current_message_parts = current_message.split(" ")
+            # Add link to referenced message, for reference
+            referenced_id = current_message_parts[0][1:]
+            # Yes, this link works, see <http://chat.meta.stackexchange.com/transcript/message/3918662#3918662>
+            referenced_link = "/transcript/message/{0}#{0}".format(referenced_id)
+            reply += "[{}.]({}) ".format(str(i + 1), referenced_link)
+            if current_message_parts[1] != "-":
+                result = handle_commands(current_message.lower(), current_message_parts, ev_room, ev_user_id, ev_user_name, wrap2, current_message)
                 if result is not None:
                     reply += result + os.linesep
                 else:
@@ -96,9 +96,8 @@ def watcher(ev, wrap2):
                 reply += "<skipped>" + os.linesep
                 amount_skipped += 1
         if amount_none + amount_skipped == length:
-            reply = ""
-        else:
-            reply = reply.strip()
+            return
+        reply = reply.strip()
         if reply != "":
             ev.message.reply(reply)
     else:
