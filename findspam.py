@@ -44,7 +44,7 @@ def has_repeating_characters(s, site):
 class FindSpam:
     bad_keywords = ["baba ?ji", "fifa.*coins?", "fifabay", "Long Path Tool",
                     "fifaodell", "brianfo", "tosterone", "bajotz",
-                    "vashi?k[ae]r[ae]n", "kolcak", "Zapyo", "we (offer|give out) loans",
+                    "vashi?k[ae]r[ae]n", "kolcak", "Zapyo", "we (offer|give out) (loans|funds|funding)",
                     "porn", "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
                     "rejuvenated skin", "ProBrain", "restore[ -]?samsung[ -]?data",
                     "LifeForce", "swtor2credits", "me2.do", "^(?s).{0,200}black magic",
