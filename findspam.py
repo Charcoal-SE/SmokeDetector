@@ -52,7 +52,7 @@ class FindSpam:
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha Rush",
                     "Blackline Elite", "TestCore Pro",
                     "Xtreme Antler", "Maxx Test 3000", "orvigomax",
-                    "Cheap Wigs?", "jivam", "brain peak", "^(?s).{0,200}brain[- ]?(power|boost(er)?s?)", "Maximum ?Shred",
+                    "Cheap Wigs?", "jivam", "^(?s).{0,200}brain[- ]?(power|boost(er)?s?)", "Maximum ?Shred",
                     "aging skin", "acne( prone)? skin", "black[ -]label[ -]no",
                     "skin (serum|eye)", "bagprada", "6611165613", "Apowersoft",
                     "Service Solahart", "junisse", "Profactor[ -]?T"
@@ -81,7 +81,7 @@ class FindSpam:
                         "oro[ -]?lift", "skin ?care", "diabazole", "forskolin", "tonaderm", "lumagenex",
                         "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim", "aimee[ -]?cream",
                         "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
-                        "contact (me|us)\\W*<a ", "follicure"]
+                        "contact (me|us)\\W*<a ", "follicure", "brain ?peak"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
@@ -201,9 +201,9 @@ class FindSpam:
                         r"(ketones|seotools|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(loans|escort|testo|cleanse|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in\W|info)",
-                        r"(natural|pro|magic)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(strong|natural|pro|magic)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(medical|health|beauty|rx|skin|slim|weight|fat|nutrition|shred|alpha)[\w-]*?(info|try|idea|pro|tip|review|report|critique|blog|guide|advi[sc]|discussion|solution|consult)[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(medical|health|beauty|rx|skin|slim|weight|fat|nutrition|shred|alpha|brain(?!tree))[\w-]*?(info|try|idea|pro|tip|review|report|critique|blog|guide|advi[sc]|discussion|solution|consult)[\w-]*?\.(co|net|org|in\W|info)",
                         r"[\w-]{11,}(ideas?|income|sale|reviews?|advices?|problog|analysis)\.(co|net|org|in\W|info)",
                         "-poker\\.com", "send[\w-]*?india\.(co|net|org|in\W|info)",
                         r"(corrupt|repair)[\w-]*?\.blogspot", r"[\w-]courses.in/",
