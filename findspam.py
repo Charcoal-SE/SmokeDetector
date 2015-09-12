@@ -201,7 +201,7 @@ class FindSpam:
                         r"(ketones|seotools|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(loans|escort|testo|cleanse|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in\W|info)",
-                        r"(strong|natural|pro|magic)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(strong|natural|pro|magic|beware)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
                         r"(medical|health|beauty|rx|skin|slim|weight|fat|nutrition|shred|alpha|brain(?!tree))[\w-]*?(info|try|idea|pro|tip|review|report|critique|blog|guide|advi[sc]|discussion|solution|consult)[\w-]*?\.(co|net|org|in\W|info)",
                         r"[\w-]{11,}(ideas?|income|sale|reviews?|advices?|problog|analysis)\.(co|net|org|in\W|info)",
