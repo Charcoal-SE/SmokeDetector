@@ -77,7 +77,7 @@ class FindSpam:
     bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
-                        "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse", "ultra[ -]?ketone",
+                        "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse", "(ultra|berry) ?ketone",
                         "oro[ -]?lift", "skin ?care", "diabazole", "forskolin", "tonaderm", "lumagenex",
                         "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim", "aimee[ -]?cream",
                         "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
@@ -198,7 +198,7 @@ class FindSpam:
                         r"(downloader|pdf)converter\.(com|net)",
                         r"//(cheat[\w-]{3,}|xtreme[\w-]{5,})\.(co|net|org|in\W|info)",
                         r"([\w-]password|[\w-]{5,}facts|\Btoyshop|[\w-]{6,}cheats)\.(co|net|org|in\W|info)",
-                        r"(ketones|seotools|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(ketone|seotools|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(loans|escort|testo|cleanse|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in\W|info)",
                         r"(strong|natural|pro|magic|beware)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
@@ -228,7 +228,7 @@ class FindSpam:
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': ur"(?i)virility|diet ?plan|\b(pro)?derma(?!t)|(fat|weight)[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|\bherpes\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True},
-        {'regex': ur"(?i)(workout|fitness|diet|perfecthealth)[\w-]*\.(com|co\.|net)", 'all': True,
+        {'regex': ur"(?i)(workout|fitness|diet|perfecthealth|muscle)[\w-]*\.(com|co\.|net)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "Pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': ur"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|kisn)\b)(?=.*?care).*products?\b|(?=.*?packer).*mover|online.*training| vs .* live|\bxtra\b|♥|◕", 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
