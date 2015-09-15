@@ -196,7 +196,7 @@ class FindSpam:
                         r"smart(pc)?fixer\.(com|net|org)",
                         r"password-?(cracker|unlocker|reset|buster|master)\.(com|net|org)",
                         r"(downloader|pdf)converter\.(com|net)",
-                        r"//(cheat[\w-]{3,}|xtreme[\w-]{5,})\.(co|net|org|in\W|info)",
+                        r"//(cheat[\w-.]{3,}|xtreme[\w-]{5,})\.(co|net|org|in\W|info)",
                         r"([\w-]password|[\w-]{5,}facts|\Btoyshop|[\w-]{6,}cheats)\.(co|net|org|in\W|info)",
                         r"(ketone|seotools|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(loans|escort|testo|cleanse|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
