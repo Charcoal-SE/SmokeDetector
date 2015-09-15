@@ -9,6 +9,9 @@ Example [chat post](http://chat.stackexchange.com/transcript/11540?m=17962164#17
 
 ![Example chat post](http://i.stack.imgur.com/d8pbW.png)
 
+Useful user documentation is in the
+[GitHub wiki](https://github.com/Charcoal-SE/SmokeDetector/wiki)
+
 To set up, use
 
 ```
