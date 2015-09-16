@@ -74,7 +74,7 @@ class FindSpam:
                     "(sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing) training.{0,20}</a>",
                     "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity",
                     "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?", "intellux"]
-    bad_keywords_nwb = [u"ಌ", "babyliss", "garcinia", "acai ?berr",  # "nwb" == "no word boundary"
+    bad_keywords_nwb = [u"ಌ", "babyli(ss|cious)", "garcinia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
                         "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse", "(ultra|berry|body)[ -]?ketone",
@@ -85,14 +85,14 @@ class FindSpam:
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
-                            "maletestosteronebooster", "menintalk", "king-steroid"
+                            "maletestosteronebooster", "menintalk", "king-steroid",
                             "healthcaresup", "filerepairforum", "beautyskin",
                             "lxwpro-t", "casque-beatsbydre", "tenderpublish",
                             "funmac", "lovebiscuits", "z-data.blogspot.com",
                             "Eglobalfitness", "musclezx90site", "fifapal",
                             "hits4slim", "screenshot\\.net", "downloadavideo\\.net",
                             "strongmenmuscle", "sh\\.st/", "adf\\.ly/", "musclehealthfitness",
-                            "svelmeblog", "preply\\.com", "hellofifa",
+                            "svelmeblog", "preply\\.com", "hellofifa", "chinadivision",
                             "fifa\\d*online", "wearepropeople.com", "tagwitty",
                             "axsoccertours", "ragednablog", "ios8easyjailbreak",
                             "totalfitnesspoint", "trustessaywriting", "thesispaperwriters",
@@ -185,11 +185,12 @@ class FindSpam:
                             "topbartercard\\.com", "couponconnexion\\.com", "npmedicalhome\\.com",
                             "ironbe\\.com", "sedancoupeseriesspecs\\.com", "techvaid\\.com", "pirachaexports\\.com",
                             "fastunsecured\\.com", "fullchatroom\\.com", "ecartbasiccartlead",
-                            "edigitalplace\\.com"]
+                            "edigitalplace\\.com", "plagiarismchecker\\.(us|com)"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
                         r"[\w-](recovery|repair|(?<!epoch)converter)(pro|kit)?\.(com|net)",
+                        r"http\S*mail(tech)?support",
                         r"sourceforge\.net[\w/]*convert",
                         r"fix[\w-]*?(files?|tool(box)?)\.com",
                         r"(repair|recovery|fix)tool(box)?\.com",
@@ -202,9 +203,9 @@ class FindSpam:
                         r"(ketone|seotools|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(loans|escort|testo|cleanse|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in\W|info)",
-                        r"(strong|natural|pro|magic|beware)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(strong|natural|pro|magic|beware|top)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(medical|health|beauty|rx|skin|slim|weight|fat|nutrition|shred|alpha|brain(?!tree))[\w-]*?(info|try|idea|pro|tip|review|report|critique|blog|guide|advi[sc]|discussion|solution|consult)[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(medical|health|beauty|rx|skin|slim|weight|fat|nutrition|shred|alpha|brain(?!tree))[\w-]*?(info|try|idea|pro|tip|review|report|critique|blog|guide|advi[sc]|discussion|solution|consult|source|sups)[\w-]*?\.(co|net|org|in\W|info)",
                         r"[\w-]{11,}(ideas?|income|sale|reviews?|advices?|problog|analysis)\.(co|net|org|in\W|info)",
                         "-poker\\.com", "send[\w-]*?india\.(co|net|org|in\W|info)",
                         r"(corrupt|repair)[\w-]*?\.blogspot", r"[\w-]courses.in/",
@@ -231,7 +232,7 @@ class FindSpam:
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True},
         {'regex': ur"(?i)(workout|fitness|diet|perfecthealth|muscle)[\w-]*\.(com|co\.|net)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "Pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
-        {'regex': ur"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|kisn)\b)(?=.*?care).*products?\b|(?=.*?packer).*mover|online.*training| vs .* live|\bxtra\b|♥|◕", 'all': True,
+        {'regex': ur"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|kisn)\b)(?=.*?care).*products?\b|(?=.*?packer).*mover|online.*?training| vs .* live|\bxtra\b|\bwe offer\b", 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': ur"\d(?:_*\d){9}|\+?\d_*\d[\s-]?(?:_*\d){8,11}|\d[ -]?\d{3}[ -]?\d{3}[ -]?\d{4}", 'all': True,
          'sites': ["patents.stackexchange.com", "math.stackexchange.com"], 'reason': "Phone number detected in {}", 'validation_method': 'check_phone_numbers', 'title': True, 'body': False, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
