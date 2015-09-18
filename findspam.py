@@ -71,7 +71,7 @@ class FindSpam:
                     "skinology", "folliplex", "ProDermagenix", "yafei ?cable", "MSP ?Hack ?Tool",
                     "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015",
                     "Vigoraflo", "Fonepaw", "Provasil", "Slimera", "Cerebria", "Xanogen",
-                    "(sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing) training.{0,20}</a>",
+                    "(sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|salesforce) training.{0,20}</a>",
                     "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity",
                     "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?", "intellux", "viooz",
                     "smartican"]
@@ -193,7 +193,7 @@ class FindSpam:
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
                         r"[\w-](recovery|repair|(?<!epoch)converter)(pro|kit)?\.(com|net)",
-                        r"http\S*mail(tech)?support",
+                        r"http\S*?(yahoo|gmail|hotmail|outlook)-?(tech|customer|support|service|phone)-?(support|phone|number)",
                         r"sourceforge\.net[\w/]*convert",
                         r"fix[\w-]*?(files?|tool(box)?)\.com",
                         r"(repair|recovery|fix)tool(box)?\.com",
