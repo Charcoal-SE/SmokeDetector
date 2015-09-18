@@ -15,9 +15,9 @@ def has_repeated_words(s, site):
         else:
             curr = 0
         prev = w
-        if curr >= 5:
+        if curr >= 5 and curr*len(w) >= 0.1*len(s):
             return True
-    return curr >= 5
+    return False
 
 
 def has_few_characters(s, site):
