@@ -217,7 +217,7 @@ class FindSpam:
     rules = [
         {'regex': ur"(?i)\b({})\b|{}".format("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
-        {'regex': u"(?i)\\b((?<!['\"])baba(?!['\"])|nike)\\b", 'all': True,
+        {'regex': u"(?i)\\b((?<!['\"])baba(?![,;'\"])|nike)\\b", 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': ur"(?is)^.{0,400}\bgratis\b.{0,400}$", 'all': True,
          'sites': ['softwarerecs.stackexchange.com'], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
