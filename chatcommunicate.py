@@ -52,8 +52,6 @@ def watcher(ev, wrap2):
     content_source = ev.message.content_source
     if is_smokedetector_message(ev_user_id, ev_room):
         GlobalVars.latest_smokedetector_messages[ev_room].append(ev.message.id)
-        if len(GlobalVars.latest_smokedetector_messages[ev_room]) > 10:
-            GlobalVars.latest_smokedetector_messages[ev_room] = GlobalVars.latest_smokedetector_messages[ev_room][-10:]
     message_parts = content_source.split(" ")
 
     ev_user_name = ev.data["user_name"].encode('utf-8')
@@ -64,12 +62,9 @@ def watcher(ev, wrap2):
     if message_parts[0].lower() == "sd":
         message_parts = preprocess_shortcut_command(content_source).split(" ")
         latest_smokedetector_messages = GlobalVars.latest_smokedetector_messages[ev_room]
+        commands = message_parts[1:]
         if len(latest_smokedetector_messages) == 0:
             ev.message.reply("I don't have any messages posted after the latest reboot.")
-            return
-        commands = message_parts[1:]
-        if len(commands) > 10:
-            ev.message.reply("You can only execute ten commands at one time.")
             return
         if len(commands) > len(latest_smokedetector_messages):
             ev.message.reply("I've only posted {} messages since the latest reboot; that's not enough to execute all commands.".format(len(latest_smokedetector_messages)))
