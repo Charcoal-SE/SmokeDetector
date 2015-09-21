@@ -88,7 +88,8 @@ class FindSpam:
                         "oro[ -]?lift", "skin ?care", "diabazole", "forskolin", "tonaderm", "lumagenex",
                         "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim", "aimee[ -]?cream",
                         "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
-                        "contact (me|us)\\W*<a ", "follicure", "brain ?peak", "kidney[ -]?bean[ -]?extract"]
+                        "contact (me|us)\\W*<a ", "follicure", "brain ?peak", "kidney[ -]?bean[ -]?extract",
+                        "\\brsgold"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
@@ -163,7 +164,7 @@ class FindSpam:
                             "rackons\\.com", "imonitorsoft\\.com", "biginfosys\\.com",
                             "analec\\.com", "livesportstv\\.us", "batteriedepcportable",
                             "dermaessencecreamblog\\.com", "stadtbett\\.com",
-                            "jetcheats\\.com", "rsgoldmall", "cheatio\\.com",
+                            "jetcheats\\.com", "cheatio\\.com",
                             "optimalstackfacts", "x4facts", "endomondo\\.com",
                             "litindia\\.in", "shoppingcartelite\\.com",
                             "customizedwallpaper\\.com", "cracksofts\\.com",
