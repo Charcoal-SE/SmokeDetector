@@ -94,16 +94,21 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
     try:
         title = escape_special_chars_in_title(title)
 
-        t_metasmoke = Thread(target=Metasmoke.send_stats_on_post,
-                             args=(title, post_url, reason.split(", "), body,))
-        t_metasmoke.start()
-
         if not poster.strip():
             s = u"[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] {}: [{}]({}) by a deleted user on `{}`" \
                 .format(reason, title.strip(), post_url, site)
+            username = ""
+            user_link = ""
         else:
             s = u"[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] {}: [{}]({}) by [{}]({}) on `{}`" \
                 .format(reason, title.strip(), post_url, poster.strip(), poster_url, site)
+            username = poster.strip
+            user_link = poster_url
+
+        t_metasmoke = Thread(target=Metasmoke.send_stats_on_post,
+                             args=(title, post_url, reason.split(", "), body, username, user_link))
+        t_metasmoke.start()
+
         print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
         if time.time() >= GlobalVars.blockedTime:
             append_to_latest_questions(site, post_id, title)
