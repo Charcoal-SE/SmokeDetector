@@ -88,7 +88,8 @@ class GlobalVars:
                                               "200235",  # durron597
                                               "148310",  # Awesome Poodles / Brock Adams
                                               "168333",  # S.L. Barth
-                                              "257207"],  # United States of America aka Unicorns are Very Very Yummy
+                                              "257207",  # United States of America aka Unicorns are Very Very Yummy
+                                              "244282"],  # DroidDev
                         socvr_room_id: [
                             "1849664",  # Undo
                             "2581872",  # hichris123
