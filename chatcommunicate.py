@@ -104,7 +104,7 @@ def watcher(ev, wrap2):
 
 def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_name, wrap2, content):
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
-    if re.compile(":[0-9]+").search(message_parts[0]):
+    if re.compile("^:[0-9]+$").search(message_parts[0]):
         msg_id = int(message_parts[0][1:])
         msg = wrap2.get_message(msg_id)
         msg_content = msg.content_source
