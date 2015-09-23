@@ -196,7 +196,8 @@ class FindSpam:
                             "edigitalplace\\.com", "plagiarismchecker\\.(us|com)", "excelanto\\.com",
                             "trylxwprot", "geniusbrain", "clazwork", "doorgrow\\.com", "ibworldacademy",
                             "pdfask\\.com", "bookbrokerz\\.com", "solarismovies", "giftsinmind\\.co",
-                            "eximiussoftsolutions\\.com", "droid4apk\\.", "canwestcellular"]
+                            "eximiussoftsolutions\\.com", "droid4apk\\.", "canwestcellular",
+                            "pages\\.rediff\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
@@ -214,7 +215,7 @@ class FindSpam:
                         r"(ketone|seotools|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(bestmover|loans|escort|testo[-bsx]|cleanse|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in\W|info)",
-                        r"(strong|natural|pro|magic|beware|top)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(strong|natural|pro|magic|beware|top|best)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
                         r"(medical|health|beauty|rx|skin|slim|weight|fat|nutrition|shred|alpha|brain(?!tree))[\w-]*?(info|try|idea|pro|tip|review|report|critique|blog|guide|advi[sc]|discussion|solution|consult|source|sups)[\w-]*?\.(co|net|org|in\W|info)",
                         r"[\w-]{11,}(ideas?|income|sale|reviews?|advices?|problog|analysis)\.(co|net|org|in\W|info)",
