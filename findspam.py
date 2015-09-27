@@ -198,7 +198,7 @@ class FindSpam:
                             "pdfask\\.com", "bookbrokerz\\.com", "solarismovies", "giftsinmind\\.co",
                             "eximiussoftsolutions\\.com", "droid4apk\\.", "canwestcellular",
                             "pages\\.rediff\\.com", "limitlesspill", "eltib2\\.wordpress\\.com",
-                            "access-electronic\\.co"]
+                            "access-electronic\\.co", "guyideas\\.esy\\.es"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
