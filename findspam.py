@@ -187,7 +187,7 @@ class FindSpam:
                             "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
                             "megatachoco", "sqliterecovery\\.com", "shtylm\\.com",
                             "creative-proteomics", "biomusclexrrev\\.com", "revommerce.com",
-                            "123trainings\\.com", "(bestof|beta)cheat\\.com", "surejob\\.in",
+                            "123trainings", "(bestof|beta)cheat\\.com", "surejob\\.in",
                             "israelbigmarket", "hdmoviesfair\\.com", "chinatour\\.com", "celebsclothing\\.com",
                             "imeshlab\\.com", "sagacademy\\.com", "moderncar\\.com", "[/.]iwacy\\.com",
                             "topbartercard\\.com", "couponconnexion\\.com", "npmedicalhome\\.com",
