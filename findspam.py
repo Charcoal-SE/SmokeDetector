@@ -83,9 +83,9 @@ class FindSpam:
                     "smartican"]
     bad_keywords_nwb = [u"ಌ", "babyli(ss|cious)", "garcinia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
-                        "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "tophealth", "poker ?online"
+                        "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "(serum|lift) ?eye", "tophealth", "poker ?online",
                         "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse", "(ultra|berry|body)[ -]?ketone",
-                        "oro[ -]?lift", "skin ?care", "diabazole", "forskolin", "tonaderm", "lumagenex",
+                        "oro[ -]?lift", "skin ?care", "diabazole", "forskolin", "tonaderm", "luma(genex|lift)",
                         "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim", "aimee[ -]?cream",
                         "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
                         "contact (me|us)\\W*<a ", "follicure", "brain ?peak", "kidney[ -]?bean[ -]?extract",
@@ -198,7 +198,7 @@ class FindSpam:
                             "pdfask\\.com", "bookbrokerz\\.com", "solarismovies", "giftsinmind\\.co",
                             "eximiussoftsolutions\\.com", "droid4apk\\.", "canwestcellular",
                             "pages\\.rediff\\.com", "limitlesspill", "eltib2\\.wordpress\\.com",
-                            "access-electronic\\.co", "guyideas\\.esy\\.es"]
+                            "access-electronic\\.co", "guyideas\\.esy\\.es", "alconelectronics\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
