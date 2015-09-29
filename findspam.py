@@ -203,7 +203,7 @@ class FindSpam:
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
                         r"[\w-](recovery|repair|(?<!epoch)converter)(pro|kit)?\.(com|net)",
-                        r"http\S*?(yahoo|gmail|hotmail|outlook)-?(tech|customer|support|service|phone)-?(support|phone|number)",
+                        r"http\S*?(yahoo|gmail|hotmail|outlook)[\w-]*?(tech|customer|support|service|phone|help)[\w-]*?(support|phone|number)",
                         r"sourceforge\.net[\w/]*convert",
                         r"fix[\w-]*?(files?|tool(box)?)\.com",
                         r"(repair|recovery|fix)tool(box)?\.com",
