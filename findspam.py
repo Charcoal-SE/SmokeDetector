@@ -164,7 +164,7 @@ class FindSpam:
                             "rackons\\.com", "imonitorsoft\\.com", "biginfosys\\.com",
                             "analec\\.com", "livesportstv\\.us", "batteriedepcportable",
                             "dermaessencecreamblog\\.com", "stadtbett\\.com",
-                            "jetcheats\\.com", "cheatio\\.com",
+                            "jetcheats\\.com", "cheatio\\.com", "empiremountainbikes",
                             "optimalstackfacts", "x4facts", "endomondo\\.com",
                             "litindia\\.in", "shoppingcartelite\\.com",
                             "customizedwallpaper\\.com", "cracksofts\\.com",
