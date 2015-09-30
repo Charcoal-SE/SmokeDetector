@@ -386,7 +386,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         return GlobalVars.location
     if content_lower.startswith("!!/queuestatus"):
         post_message_in_room(ev_room, GlobalVars.bodyfetcher.print_queue(), False)
-    if content_lower.startswith("!!/blame") and ev_room == GlobalVars.meta_tavern_room_id:
+    if content_lower.startswith("!!/blame") and (ev_room == GlobalVars.meta_tavern_room_id or ev_room == GlobalVars.socvr_room_id):
         GlobalVars.tavern_users_chatting = list(set(GlobalVars.tavern_users_chatting))  # Make unique
         user_to_blame = random.choice(GlobalVars.tavern_users_chatting)
         return "It's " + user_to_blame + "'s fault."
