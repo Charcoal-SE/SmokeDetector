@@ -5,6 +5,7 @@ import os
 from globalvars import GlobalVars
 import datetime
 import time
+import random
 
 
 def watch_ci():
@@ -71,6 +72,6 @@ def watch_ci():
                     continue
             elif state == "error" or state == "failure":
                 if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > datetime.datetime.now() - datetime.timedelta(seconds=10):
-                    GlobalVars.charcoal_hq.send_message("[CI build failed]({}), *someone* (prolly Undo) borked something!".format(target_url))
+                    GlobalVars.charcoal_hq.send_message("[CI build failed]({})".format(target_url) + ", *someone* (prolly " + random.choice(["Undo", "Manish", "ProgramFOX", "hichris", "Normal"]) + ") borked something!")
                     continue
     s.close()
