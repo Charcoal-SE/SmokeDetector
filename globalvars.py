@@ -90,7 +90,7 @@ class GlobalVars:
                                               "168333",  # S.L. Barth
                                               "257207",  # United States of America aka Unicorns are Very Very Yummy
                                               "244282",  # DroidDev
-                                              "163250"], # Cupcake
+                                              "163250"],  # Cupcake
                         socvr_room_id: [
                             "1849664",  # Undo
                             "2581872",  # hichris123
