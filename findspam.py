@@ -80,7 +80,7 @@ class FindSpam:
                     "(sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|salesforce) training.{0,20}</a>",
                     "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity",
                     "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?", "intellux", "viooz",
-                    "smartican"]
+                    "smartican", "essay writing service"]
     bad_keywords_nwb = [u"ಌ", "babyli(ss|cious)", "garcinia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "(serum|lift) ?eye", "tophealth", "poker ?online",
@@ -145,7 +145,7 @@ class FindSpam:
                             "bestcelebritiesvideo\\.com", "shopnhlbruins\\.com",
                             "downloadscanpst\\.com", "downloadgames", "gameshop4u\\.com",
                             "listoffreeware\\.com", "bigasoft\\.com", "opclub07\\.com",
-                            "allavsoft", "tryapext\\.com", "essayscouncil\\.com", "caseism\\.com",
+                            "allavsoft", "tryapext\\.com", "essays(origin|council)\\.com", "caseism\\.com",
                             "vanskeys\\.com", "cheapessaywritingservice", "edbtopsts\\.com",
                             "texts\\.io", "writage\\.com", "mobitsolutions\\.com",
                             "askpcexperts\\.com", "anonymousvpnsoftware\\.com",
@@ -202,6 +202,7 @@ class FindSpam:
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
+                        r"essay\w{6,}\.(co|net|org|in\W|info)",
                         r"[\w-](recovery|repair|(?<!epoch)converter)(pro|kit)?\.(com|net)",
                         r"http\S*?(yahoo|gmail|hotmail|outlook)[\w-]*?(tech|customer|support|service|phone|help)[\w-]*?(support|phone|number)",
                         r"sourceforge\.net[\w/]*convert",
