@@ -31,13 +31,6 @@ def has_few_characters(s, site):
     return (len(s) > 36 and uniques < 6) or (len(s) > 100 and uniques < 12)    # reduce if false reports appear
 
 
-def has_duplicate_links(s, site):
-    soup = BeautifulSoup(s)
-    links = soup.findAll('a', href=True)
-    links = [link['href'] for link in links]
-    return len(links) != len(set(links))
-
-
 def has_repeating_characters(s, site):
     if s is None or len(s) == 0:
         return False
@@ -269,7 +262,6 @@ class FindSpam:
         {'method': has_few_characters, 'all': True, 'sites': [], 'reason': "Few unique characters in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'method': has_repeating_characters, 'all': True, 'sites': [], 'reason': "Repeating characters in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'method': has_repeated_words, 'all': True, 'sites': [], 'reason': "Repeating words in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
-        {'method': has_duplicate_links, 'all': False, 'sites': ["patents.stackexchange.com"], 'reason': "Duplicate links in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'answers': False},
         {'regex': ur"^(.)\1+$", 'all': True, 'sites': [], 'reason': "{} has only one unique char", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain)\.(com|net|org))[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': True,
          'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com", "webmasters.stackexchange.com", "wordpress.stackexchange.com", "magento.stackexchange.com", "elementaryos.stackexchange.com"], 'reason': "Email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
