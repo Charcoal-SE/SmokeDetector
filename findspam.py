@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import regex
 import phonenumbers
-from bs4 import BeautifulSoup
 
 
 def all_caps_title(s, site):
