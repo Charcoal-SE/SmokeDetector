@@ -116,7 +116,8 @@ class GlobalVars:
                             "656243",   # Lynn Crumbling
                             "3933332",  # Rizier123
                             "2422013",  # cybermonkey
-                            "3478852"]  # Nisse Engström
+                            "3478852",  # Nisse Engström
+                            "2302862"]  # Siguza
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
