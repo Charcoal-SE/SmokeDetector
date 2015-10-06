@@ -85,7 +85,7 @@ def watcher(ev, wrap2):
                 if result is not None:
                     reply += result + os.linesep
                 else:
-                    reply += "<no return value>" + os.linesep
+                    reply += "<processed without return value>" + os.linesep
                     amount_none += 1
             else:
                 reply += "<skipped>" + os.linesep
