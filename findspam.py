@@ -81,7 +81,7 @@ class FindSpam:
                         "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim", "aimee[ -]?cream",
                         "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
                         "contact (me|us)\\W*<a ", "follicure", "brain ?peak", "kidney[ -]?bean[ -]?extract",
-                        "\\brsgold"]
+                        "\\brsgold", "bellavei"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
@@ -210,9 +210,9 @@ class FindSpam:
                         r"(ketone|seotools|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(bestmover|loans|escort|testo[-bsx]|cleanse|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in\W|info)",
-                        r"(strong|natural|pro|magic|beware|top|best|free|cheap)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(strong|natural|pro|magic|beware|top|best|free|cheap|allied)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(derma|medical|medicare|health|beauty|rx|skin|slim|weight|fat|nutrition|shred|alpha|brain(?!tree))[\w-]*?(info|program|try|idea|pro|tip|review|assess|report|critique|blog|guide|advi[sc]|discussion|solution|consult|source|sups|cream)[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(derma|medical|medicare|health|beauty|rx|skin|slim|weight|fat|nutrition|shred|alpha|brain(?!tree))[\w-]*?(info|program|try|idea|pro|tip|review|assess|report|critique|blog|guide|advi[sc]|discussion|solution|consult|source|sups|vms|cream)[\w-]*?\.(co|net|org|in\W|info)",
                         r"[\w-]{11,}(ideas?|income|sale|reviews?|advices?|problog|analysis)\.(co|net|org|in\W|info)",
                         "-poker\\.com", "send[\w-]*?india\.(co|net|org|in\W|info)",
                         r"(corrupt|repair)[\w-]*?\.blogspot", r"[\w-]courses.in/",
