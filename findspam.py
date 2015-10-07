@@ -206,7 +206,7 @@ class FindSpam:
                         r"(downloader|pdf)converter\.(com|net)",
                         r"livestreaming|(watch[\w-]*?(live|online))\.(com|net|tv)",
                         r"//(cheat[\w-.]{3,}|xtreme[\w-]{5,})\.(co|net|org|in\W|info)",
-                        r"([\w-]password|[\w-]{5,}facts|\Btoyshop|[\w-]{6,}cheats)\.(co|net|org|in\W|info)",
+                        r"([\w-]password|[\w-]{5,}facts|\Btoyshop|[\w-]{6,}cheats|credits)\.(co|net|org|in\W|info)",
                         r"(ketone|seotools|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(bestmover|loans|escort|testo[-bsx]|cleanse|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in\W|info)",
