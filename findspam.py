@@ -146,7 +146,7 @@ class FindSpam:
                             "unblockingtwitter\\.com", "openingblockedsite\\.com",
                             "arabic(soft)?downloads?\\.com", "braindumpsvalid",
                             "repairtoolbox\\.com", "couchsurfing\\.com",
-                            "gta5codes\\.fr", "musclezx90au\\.com",
+                            "gta5codes\\.fr", "musclezx90au\\.com", "pcsoftpro\\.com",
                             "fallclassicrun\\.com", "forgrams\\.com",
                             "cloudinsights\\.net", "xtremenitro", "surfmegeek",
                             "(premium|priceless)-inkjet\\.com", "antivirus\\.comodo\\.com",
