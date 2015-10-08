@@ -69,10 +69,10 @@ class FindSpam:
                     "skinology", "folliplex", "ProDermagenix", "yafei ?cable", "MSP ?Hack ?Tool",
                     "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015",
                     "Vigoraflo", "Fonepaw", "Provasil", "Slimera", "Cerebria", "Xanogen",
-                    "(sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|salesforce) training.{0,20}</a>",
+                    "(sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|salesforce) training.{0,25}</a>",
                     "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity",
                     "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?", "intellux", "viooz",
-                    "smartican", "essay writing service", "T-complex"]
+                    "smartican", "essay writing service", "T-complex", "packers.{0,15}movers.{0,25}</a>"]
     bad_keywords_nwb = [u"ಌ", "babyli(ss|cious)", "garcinia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "(serum|lift) ?eye", "tophealth", "poker ?online",
@@ -191,7 +191,7 @@ class FindSpam:
                             "eximiussoftsolutions\\.com", "droid4apk\\.", "canwestcellular",
                             "pages\\.rediff\\.com", "limitlesspill", "eltib2\\.wordpress\\.com",
                             "access-electronic\\.co", "guyideas\\.esy\\.es", "alconelectronics\\.com",
-                            "quicksolutionspell", "metaboostsite"]
+                            "quicksolutionspell", "metaboostsite", "top8pm\\.in"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
