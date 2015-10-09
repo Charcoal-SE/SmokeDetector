@@ -191,11 +191,12 @@ class FindSpam:
                             "eximiussoftsolutions\\.com", "droid4apk\\.", "canwestcellular",
                             "pages\\.rediff\\.com", "limitlesspill", "eltib2\\.wordpress\\.com",
                             "access-electronic\\.co", "guyideas\\.esy\\.es", "alconelectronics\\.com",
-                            "quicksolutionspell", "metaboostsite", "top8pm\\.in", "digicheat\\.com"]
+                            "quicksolutionspell", "metaboostsite", "digicheat\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
                         r"essay\w{6,}\.(co|net|org|in\W|info)",
+                        r"top\d\w{2,15}\.in\W",
                         r"[\w-](recovery|repair|(?<!epoch)converter)(pro|kit)?\.(com|net)",
                         r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)[\w-]*?(tech|customer|support|service|phone|help|\d+)[\w-]*?(support|phone|number)",
                         r"sourceforge\.net[\w/]*convert",
