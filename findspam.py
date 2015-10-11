@@ -72,7 +72,7 @@ class FindSpam:
                     "(sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|salesforce) training.{0,25}</a>",
                     "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity",
                     "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?", "intellux", "viooz",
-                    "smartican", "essay writing service", "T-complex", "packers.{0,15}movers.{0,25}</a>"]
+                    "smartican", "essay writing service", "T-complex", "packers.{0,15}movers.{0,25}</a>", "[Rr]etrodynamic [fF]ormula"]
     bad_keywords_nwb = [u"ಌ", "babyli(ss|cious)", "garcinia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "(serum|lift) ?eye", "tophealth", "poker ?online",
