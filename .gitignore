@@ -52,3 +52,6 @@ errorLogs.txt
 
 # Swap files
 *.swp
+
+# Cache
+test/.cache/
