@@ -93,7 +93,8 @@ class GlobalVars:
                                               "257207",  # United States of America aka Unicorns are Very Very Yummy
                                               "244282",  # DroidDev
                                               "163250",  # Cupcake
-                                              "298265"],  # BoomsPlus
+                                              "298265",  # BoomsPlus
+                                              "253560"],  # josilber
                         socvr_room_id: [
                             "1849664",  # Undo
                             "2581872",  # hichris123
