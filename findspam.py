@@ -62,7 +62,7 @@ class FindSpam:
                     "JobsTribune", "join the (great )?illuminati", "Brorsoft", "Remo Recover",
                     "kinnaristeel", "clash of (clan|stone)s? (cheats?|tricks?|gems?)",
                     r"(?x:B [\s_]* A [\s_]* M \W{0,5} W [\s_]* A [\s_]* R [\s_]* \.? [\s_]* C [\s_]* O [\s_]* M)",
-                    "slumber pm", "1-844-400-7325", "(male|penile) enhancement", "bestcollegechina",
+                    "slumber pm", "1-844-400-7325", "bestcollegechina",
                     "bbwdesire", "rsorder", "Shopping ?Cart ?Elite", "Easy ?Data ?Feed",
                     "breasts? enlargement", "best (hotel|property) management", "eduCBA", "Solid[ -]?SEO[ -]?Tools",
                     "maxman ?power", "niagen", "Testo (X|Black)", "day ?trading ?academy", " %uh ", " %ah ",
@@ -72,7 +72,7 @@ class FindSpam:
                     "(sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|salesforce) training.{0,25}</a>",
                     "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity",
                     "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?", "intellux", "viooz",
-                    "smartican", "essay writing service", "T-complex", "packers.{0,15}movers.{0,25}</a>", "[Rr]etrodynamic [fF]ormula"]
+                    "smartican", "essay writing service", "T-complex", "packers.{0,15}movers.{0,25}</a>", "retrodynamic formula"]
     bad_keywords_nwb = [u"ಌ", "babyli(ss|cious)", "garcinia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "(serum|lift) ?eye", "tophealth", "poker ?online",
@@ -81,7 +81,7 @@ class FindSpam:
                         "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim", "aimee[ -]?cream",
                         "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
                         "contact (me|us)\\W*<a ", "follicure", "brain ?peak", "kidney[ -]?bean[ -]?extract",
-                        "\\brsgold", "bellavei", "goji ?xtreme"]
+                        "\\brsgold", "bellavei", "goji ?xtreme", "(male|penile) ?enhancement"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
