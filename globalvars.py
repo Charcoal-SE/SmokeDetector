@@ -94,7 +94,8 @@ class GlobalVars:
                                               "244282",  # DroidDev
                                               "163250",  # Cupcake
                                               "298265",  # BoomsPlus
-                                              "253560"],  # josilber
+                                              "253560",  # josilber
+                                              "244254"],  # misterManSam
                         socvr_room_id: [
                             "1849664",  # Undo
                             "2581872",  # hichris123
