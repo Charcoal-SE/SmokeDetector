@@ -96,7 +96,7 @@ class GlobalVars:
                                               "298265",  # BoomsPlus
                                               "253560",  # josilber
                                               "244254",  # misterManSam
-                                              "188189"], # Robert Longson
+                                              "188189"],  # Robert Longson
                         socvr_room_id: [
                             "1849664",  # Undo
                             "2581872",  # hichris123
