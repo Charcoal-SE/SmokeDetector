@@ -54,7 +54,7 @@ def test_check_if_spam_json(data, match):
 def test_blacklisted_user():
     user_url = 'http://stackoverflow.com/users/1/jeff-atwood'
     user = get_user_from_url(user_url)
-    add_blacklisted_user(user)
+    add_blacklisted_user(user, "", "")
     is_spam, reason, _ = check_if_spam("", "", "", user_url, "stackoverflow.com", "1", False, False)
     assert is_spam is True
     # cleanup

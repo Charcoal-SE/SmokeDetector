@@ -50,8 +50,9 @@ def watcher(ev, wrap2):
     ev_room = str(ev.data["room_id"])
     ev_user_id = str(ev.data["user_id"])
     content_source = ev.message.content_source
+    message_id = ev.message.id
     if is_smokedetector_message(ev_user_id, ev_room):
-        GlobalVars.latest_smokedetector_messages[ev_room].append(ev.message.id)
+        GlobalVars.latest_smokedetector_messages[ev_room].append(message_id)
     message_parts = content_source.split(" ")
 
     ev_user_name = ev.data["user_name"].encode('utf-8')
@@ -81,7 +82,7 @@ def watcher(ev, wrap2):
                 reply += str(i + 1) + ". "
             reply += "[" + current_message.split(" ")[0] + "] "
             if current_message.split(" ")[1] != "-":
-                result = handle_commands(current_message.lower(), current_message.split(" "), ev_room, ev_user_id, ev_user_name, wrap2, current_message)
+                result = handle_commands(current_message.lower(), current_message.split(" "), ev_room, ev_user_id, ev_user_name, wrap2, current_message, message_id)
                 if result is not None:
                     reply += result + os.linesep
                 else:
@@ -97,12 +98,13 @@ def watcher(ev, wrap2):
         if reply != "":
             ev.message.reply(reply)
     else:
-        r = handle_commands(content_source.lower(), message_parts, ev_room, ev_user_id, ev_user_name, wrap2, content_source)
+        r = handle_commands(content_source.lower(), message_parts, ev_room, ev_user_id, ev_user_name, wrap2, content_source, message_id)
         if r is not None:
             ev.message.reply(r)
 
 
-def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_name, wrap2, content):
+def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_name, wrap2, content, message_id):
+    message_url = "//chat." + wrap2.host + "/transcript/message/" + str(message_id)
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
     if re.compile("^:[0-9]+$").search(message_parts[0]):
         msg_id = int(message_parts[0][1:])
@@ -169,7 +171,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
                 if url_from_msg is not None:
                     user = get_user_from_url(url_from_msg)
                     if user is not None:
-                        add_blacklisted_user(user)
+                        add_blacklisted_user(user, message_url, post_url)
                         user_added = True
             if post_type == "question":
                 learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "bad")
@@ -210,7 +212,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
             and is_privileged(ev_room, ev_user_id, wrap2):
         uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
-            add_blacklisted_user((uid, val))
+            add_blacklisted_user((uid, val), message_url, "")
             return "User blacklisted (`{}` on `{}`).".format(uid, val)
         elif uid == -2:
             return "Error: {}".format(val)
@@ -284,7 +286,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
             return "Could not find data for this post in the API. Check whether the post is not deleted yet."
         user = get_user_from_url(post_data.owner_url)
         if user is not None:
-            add_blacklisted_user(user)
+            add_blacklisted_user(user, message_url, post_data.post_url)
         bayesian_learn_title(post_data.title, "bad")
         handle_spam(post_data.title, post_data.body, post_data.owner_name, post_data.site, post_data.post_url,
                     post_data.owner_url, post_data.post_id, ["Manually reported " + post_data.post_type],
