@@ -102,7 +102,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
         else:
             s = u"[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] {}: [{}]({}) by [{}]({}) on `{}`" \
                 .format(reason, title.strip(), post_url, poster.strip(), poster_url, site)
-            username = poster.strip
+            username = poster.strip()
             user_link = poster_url
 
         t_metasmoke = Thread(target=Metasmoke.send_stats_on_post,
