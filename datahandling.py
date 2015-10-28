@@ -59,7 +59,17 @@ def is_whitelisted_user(user):
 
 
 def is_blacklisted_user(user):
-    return user in GlobalVars.blacklisted_users
+    for blacklisted_user in GlobalVars.blacklisted_users:
+        if user == blacklisted_user[0]:
+            return True
+    return False
+
+
+def get_blacklisted_user_data(user):
+    for blacklisted_user in GlobalVars.blacklisted_users:
+        if user == blacklisted_user[0]:
+            return blacklisted_user
+    return ()
 
 
 def is_ignored_post(postid_site_tuple):
@@ -90,10 +100,10 @@ def add_whitelisted_user(user):
         pickle.dump(GlobalVars.whitelisted_users, f)
 
 
-def add_blacklisted_user(user):
-    if user in GlobalVars.blacklisted_users or user is None:
+def add_blacklisted_user(user, message_url, post_url):
+    if is_blacklisted_user(user) or user is None:
         return
-    GlobalVars.blacklisted_users.append(user)
+    GlobalVars.blacklisted_users.append((user, message_url, post_url))
     with open("blacklistedUsers.txt", "w") as f:
         pickle.dump(GlobalVars.blacklisted_users, f)
 
@@ -123,9 +133,10 @@ def add_ignored_post(postid_site_tuple):
 
 
 def remove_blacklisted_user(user):
-    if user not in GlobalVars.blacklisted_users:
+    blacklisted_user_data = get_blacklisted_user_data(user)
+    if not blacklisted_user_data:
         return False
-    GlobalVars.blacklisted_users.remove(user)
+    GlobalVars.blacklisted_users.remove(blacklisted_user_data)
     with open("blacklistedUsers.txt", "w") as f:
         pickle.dump(GlobalVars.blacklisted_users, f)
     return True
