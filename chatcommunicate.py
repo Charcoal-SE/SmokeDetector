@@ -414,5 +414,9 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
             result += "\n----------\n"
             result += why
         return result
-
+    if content_lower.startswith("!!/amiprivileged"):
+        if is_privileged(ev_room, ev_user_id, wrap2):
+            return "Yes, you are a privileged user."
+        else:
+            return "No, you are not a privileged user."
     return None
