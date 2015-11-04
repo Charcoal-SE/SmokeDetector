@@ -194,7 +194,8 @@ class FindSpam:
                             "access-electronic\\.co", "guyideas\\.esy\\.es", "alconelectronics\\.com",
                             "quicksolutionspell", "metaboostsite", "digicheat\\.com", "socialviralize\\.com",
                             "[./]occn\\.org", "illusiongroups\\.com", "varite\\.com", "hooraysoft\\.com",
-                            "gcbxnow\\.com", "godowell\\.net", "place4papers", "tradingqna\\.com"]
+                            "gcbxnow\\.com", "godowell\\.net", "place4papers", "tradingqna\\.com",
+                            "shacamerica\\.net", "nillowpages\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
@@ -217,7 +218,7 @@ class FindSpam:
                         r"\w{10}buy\.(co|net|org|in\W|info)",
                         r"(strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(biotic|male|derma|medical|medicare|health|beauty|rx|skin|trim|slim|weight|fat|nutrition|shred|advance|alpha|beta|brain(?!tree))[\w]{0,20}(max|help|info|program|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|guide|advi[sc]|discussion|solution|consult|source|sups|vms|cream|grow|enhance)[\w-]{0,10}\.(co|net|org|in\W|info)",
+                        r"(biotic|male|derma|medical|medicare|health|beauty|rx|skin|trim|slim|weight|fat|nutrition|shred|advance|alpha|beta|brain(?!tree))[\w]{0,20}(market|max|help|info|program|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|guide|advi[sc]|discussion|solution|consult|source|sups|vms|cream|grow|enhance)[\w-]{0,10}\.(co|net|org|in\W|info)",
                         r"\w{11}(ideas?|income|sale|reviews?|advices?|problog)\.(co|net|org|in\W|info)",
                         "-poker\\.com", "send[\w-]*?india\.(co|net|org|in\W|info)",
                         r"(corrupt|repair)[\w-]*?\.blogspot", r"[\w-]courses.in/",
