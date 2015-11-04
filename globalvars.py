@@ -123,7 +123,8 @@ class GlobalVars:
                             "3478852",  # Nisse Engström
                             "2302862",  # Siguza
                             "1324",     # Paul Roub
-                            "1743880"]  # Tunaki
+                            "1743880",  # Tunaki
+                            "1663001"]  # DavidG
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
