@@ -430,11 +430,13 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         else:
             room_id = int(room_id)
         se_site = message_parts[2]
-        r = add_to_notification_list(user_id, chat_site, room_id, se_site)
-        if r:
-            return "You'll now get pings from me if I report a post of `%s`, in room `%s` on `chat.%s`" % (se_site, room_id, chat_site)
-        else:
+        r, full_site = add_to_notification_list(user_id, chat_site, room_id, se_site)
+        if r == 0:
+            return "You'll now get pings from me if I report a post of `%s`, in room `%s` on `chat.%s`" % (full_site, room_id, chat_site)
+        elif r == -1:
             return "That notification configuration is already registered."
+        elif r == -2:
+            return "The given SE site does not exist."
     if content_lower.startswith("!!/unnotify"):
         if len(message_parts) != 3:
             return "2 arguments expected"

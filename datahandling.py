@@ -256,13 +256,16 @@ def is_frequent_sentence(sentence):
 
 
 def add_to_notification_list(user_id, chat_site, room_id, se_site):
-    t = (int(user_id), chat_site, int(room_id), se_site)
+    site, exists = check_site_and_get_full_name(se_site)
+    if not exists:
+        return -2, None
+    t = (int(user_id), chat_site, int(room_id), site)
     if t in GlobalVars.notifications:
-        return False
+        return -1, None
     GlobalVars.notifications.append(t)
     with open("notifications.txt", "w") as f:
         pickle.dump(GlobalVars.notifications, f)
-    return True
+    return 0, site
 
 
 def remove_from_notification_list(user_id, chat_site, room_id, se_site):
