@@ -256,7 +256,7 @@ def is_frequent_sentence(sentence):
 
 
 def add_to_notification_list(user_id, chat_site, room_id, se_site):
-    site, exists = check_site_and_get_full_name(se_site)
+    exists, site = check_site_and_get_full_name(se_site)
     if not exists:
         return -2, None
     t = (int(user_id), chat_site, int(room_id), site)
