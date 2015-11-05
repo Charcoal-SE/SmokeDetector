@@ -419,4 +419,19 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
             return "Yes, you are a privileged user."
         else:
             return "No, you are not a privileged user."
+    if content_lower.startswith("!!/notify"):
+        if len(message_parts) != 3:
+            return "2 arguments expected"
+        user_id = int(ev_user_id)
+        chat_site = wrap2.host
+        room_id = message_parts[1]
+        if not room_id.isdigit():
+            return "Room ID is invalid."
+        else:
+            room_id = int(room_id)
+        se_site = message_parts[2]
+        r = add_to_notification_list(user_id, chat_site, room_id, se_site)
+        if r:
+            return ""
+
     return None

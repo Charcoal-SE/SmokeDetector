@@ -152,6 +152,7 @@ class GlobalVars:
     tavern_users_chatting = []
     frequent_sentences = []
     why_data = []
+    notifications = []
 
     config = ConfigParser.RawConfigParser()
     config.read('config')

@@ -36,13 +36,14 @@ nosetests.xml
 .pydevproject
 .idea/
 
-# False positives, whitelisted/blacklisted users, ignored posts
+# False positives, whitelisted/blacklisted users, ignored posts, etc.
 falsePositives.txt
 whitelistedUsers.txt
 blacklistedUsers.txt
 ignoredPosts.txt
 autoIgnoredPosts.txt
 users.txt
+notifications.txt
 
 # Settings files
 .settings/

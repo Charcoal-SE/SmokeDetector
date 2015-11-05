@@ -26,6 +26,9 @@ def load_files():
     if os.path.isfile("autoIgnoredPosts.txt"):
         with open("autoIgnoredPosts.txt", "r") as f:
             GlobalVars.auto_ignored_posts = pickle.load(f)
+    if os.path.isfile("notifications.txt"):
+        with open("notifications.txt", "r") as f:
+            GlobalVars.notifications = pickle.load(f)
     if os.path.isfile("frequentSentences.txt"):
         with open("frequentSentences.txt", "r") as f:
             lines = f.readlines()
@@ -246,3 +249,46 @@ def is_frequent_sentence(sentence):
     no_punctuation = regex.sub(r"[^a-zA-Z0-9\s]", "", sentence).lower()
     merged_whitespace = regex.sub(r"\s+", " ", no_punctuation).strip()
     return merged_whitespace in GlobalVars.frequent_sentences
+
+
+# methods to add/remove/check users on the "notification" list
+# (that is, being pinged when Smokey reports something on a specific site)
+
+
+def add_to_notification_list(user_id, chat_site, room_id, se_site):
+    t = (user_id, chat_site, room_id, se_site)
+    if t in GlobalVars.notifications:
+        return False
+    GlobalVars.notifications.add(t)
+    with open("notifications.txt", "w") as f:
+        pickle.dump(GlobalVars.notifications, f)
+    return True
+
+
+def remove_from_notification_list(user_id, chat_site, room_id, se_site):
+    t = (user_id, chat_site, room_id, se_site)
+    if t not in GlobalVars.notifications:
+        return False
+    GlobalVars.notifications.remove(t)
+    with open("notifications.txt", "w") as f:
+        pickle.dump(GlobalVars.notifications, f)
+    return True
+
+
+def get_user_ids_on_notification_list(chat_site, room_id):
+    uids = []
+    for t in GlobalVars.notifications:
+        if t[1] == chat_site and t[2] == room_id:
+            uids.append(t[0])
+    return uids
+
+
+def get_user_names_on_notification_list(chat_site, room_id, client):
+    return [client.get_user(i).name for i in get_user_ids_on_notification_list(chat_site, room_id)]
+
+
+def append_pings(original_message, names):
+    if len(names) == 0:
+        return original_message
+    else:
+        return "{0} ({1})".format(original_message, " ".join(["@" + x.replace(" ", "") for x in names]))

@@ -122,15 +122,26 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             append_to_latest_questions(site, post_id, title)
 
             if reason not in GlobalVars.experimental_reasons:
-                GlobalVars.charcoal_hq.send_message(s)
-                GlobalVars.tavern_on_the_meta.send_message(s)
+                chq_pings = get_user_names_on_notification_list("chat.stackexchange.com", GlobalVars.charcoal_room_id, GlobalVars.wrap)
+                chq_msg = append_pings(s, chq_pings)
+                GlobalVars.charcoal_hq.send_message(chq_msg)
+                tavern_pings = get_user_names_on_notification_list("chat.meta.stackexchange.com", GlobalVars.meta_tavern_room_id, GlobalVars.wrapm)
+                tavern_msg = append_pings(s, tavern_pings)
+                GlobalVars.tavern_on_the_meta.send_message(s, tavern_msg)
                 if site == "stackoverflow.com":
-                    GlobalVars.socvr.send_message(s)
+                    socvr_pings = get_user_names_on_notification_list("chat.stackoverflow.com", GlobalVars.socvr_room_id, GlobalVars.wrapso)
+                    socvr_msg = append_pings(s, socvr_pings)
+                    GlobalVars.socvr.send_message(socvr_msg)
 
             for specialroom in GlobalVars.specialrooms:
                 sites = specialroom["sites"]
                 if site in sites and reason not in specialroom["unwantedReasons"]:
-                    specialroom["room"].send_message(s)
+                    room = specialroom["room"]
+                    room_site = room._client.host
+                    room_id = int(room.id)
+                    room_pings = get_user_names_on_notification_list(room_site, room_id, room._client)
+                    room_msg = append_pings(s, room_pings)
+                    specialroom["room"].send_message(room_msg)
     except:
         print "NOP"
 
