@@ -259,7 +259,7 @@ def add_to_notification_list(user_id, chat_site, room_id, se_site):
     t = (user_id, chat_site, room_id, se_site)
     if t in GlobalVars.notifications:
         return False
-    GlobalVars.notifications.add(t)
+    GlobalVars.notifications.append(t)
     with open("notifications.txt", "w") as f:
         pickle.dump(GlobalVars.notifications, f)
     return True
