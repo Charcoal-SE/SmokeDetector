@@ -124,14 +124,14 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             if reason not in GlobalVars.experimental_reasons:
                 chq_pings = get_user_names_on_notification_list("stackexchange.com", GlobalVars.charcoal_room_id, site, GlobalVars.wrap)
                 chq_msg = append_pings(s, chq_pings)
-                GlobalVars.charcoal_hq.send_message(chq_msg)
+                GlobalVars.charcoal_hq.send_message(chq_msg if len(chq_msg) <= 500 else s)
                 tavern_pings = get_user_names_on_notification_list("meta.stackexchange.com", GlobalVars.meta_tavern_room_id, site, GlobalVars.wrapm)
                 tavern_msg = append_pings(s, tavern_pings)
-                GlobalVars.tavern_on_the_meta.send_message(tavern_msg)
+                GlobalVars.tavern_on_the_meta.send_message(tavern_msg if len(tavern_msg) <= 500 else s)
                 if site == "stackoverflow.com":
                     socvr_pings = get_user_names_on_notification_list("stackoverflow.com", GlobalVars.socvr_room_id, site, GlobalVars.wrapso)
                     socvr_msg = append_pings(s, socvr_pings)
-                    GlobalVars.socvr.send_message(socvr_msg)
+                    GlobalVars.socvr.send_message(socvr_msg if len(socvr_msg) <= 500 else s)
 
             for specialroom in GlobalVars.specialrooms:
                 sites = specialroom["sites"]
@@ -141,7 +141,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                     room_id = int(room.id)
                     room_pings = get_user_names_on_notification_list(room_site, room_id, site, room._client)
                     room_msg = append_pings(s, room_pings)
-                    specialroom["room"].send_message(room_msg)
+                    specialroom["room"].send_message(room_msg if len(room_msg) <= 500 else s)
     except:
         print "NOP"
 
