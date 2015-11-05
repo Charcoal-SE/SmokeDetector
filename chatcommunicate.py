@@ -435,5 +435,21 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
             return "You'll now get pings from me if I report a post of `%s`, in room `%s` on `chat.%s`" % (se_site, room_id, chat_site)
         else:
             return "That notification configuration is already registered."
+    if content_lower.startswith("!!/unnotify"):
+        if len(message_parts) != 2:
+            return "2 arguments expected"
+        user_id = int(ev_user_id)
+        chat_site = wrap2.host
+        room_id = message_parts[1]
+        if not room_id.isdigit():
+            return "Room ID is invalid."
+        else:
+            room_id = int(room_id)
+        se_site = message_parts[2]
+        r = remove_from_notification_list(user_id, chat_site, room_id, se_site)
+        if r:
+            return "I will no longer ping you if I report a post of `%s`, in room `%s` on `chat.%s`" % (se_site, room_id, chat_site)
+        else:
+            return "That configuration doesn't exist."
 
     return None
