@@ -256,7 +256,7 @@ def is_frequent_sentence(sentence):
 
 
 def add_to_notification_list(user_id, chat_site, room_id, se_site):
-    t = (user_id, chat_site, room_id, se_site)
+    t = (int(user_id), chat_site, int(room_id), se_site)
     if t in GlobalVars.notifications:
         return False
     GlobalVars.notifications.append(t)
@@ -266,7 +266,7 @@ def add_to_notification_list(user_id, chat_site, room_id, se_site):
 
 
 def remove_from_notification_list(user_id, chat_site, room_id, se_site):
-    t = (user_id, chat_site, room_id, se_site)
+    t = (int(user_id), chat_site, int(room_id), se_site)
     if t not in GlobalVars.notifications:
         return False
     GlobalVars.notifications.remove(t)
