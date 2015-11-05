@@ -91,6 +91,10 @@ GlobalVars.specialrooms = [{
                            "sites": ["puzzling.stackexchange.com"],
                            "room": GlobalVars.wrap.get_room("21276"),
                            "unwantedReasons": []
+                           }, {
+                           "sites": ["parenting.stackexchange.com"],
+                           "room": GlobalVars.wrap.get_room("21625"),
+                           "unwantedReasons": []
                            }]
 
 GlobalVars.bayesian_testroom = GlobalVars.wrap.get_room("17251")
