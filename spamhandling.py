@@ -122,14 +122,14 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             append_to_latest_questions(site, post_id, title)
 
             if reason not in GlobalVars.experimental_reasons:
-                chq_pings = get_user_names_on_notification_list("chat.stackexchange.com", GlobalVars.charcoal_room_id, GlobalVars.wrap)
+                chq_pings = get_user_names_on_notification_list("stackexchange.com", GlobalVars.charcoal_room_id, GlobalVars.wrap)
                 chq_msg = append_pings(s, chq_pings)
                 GlobalVars.charcoal_hq.send_message(chq_msg)
-                tavern_pings = get_user_names_on_notification_list("chat.meta.stackexchange.com", GlobalVars.meta_tavern_room_id, GlobalVars.wrapm)
+                tavern_pings = get_user_names_on_notification_list("meta.stackexchange.com", GlobalVars.meta_tavern_room_id, GlobalVars.wrapm)
                 tavern_msg = append_pings(s, tavern_pings)
                 GlobalVars.tavern_on_the_meta.send_message(s, tavern_msg)
                 if site == "stackoverflow.com":
-                    socvr_pings = get_user_names_on_notification_list("chat.stackoverflow.com", GlobalVars.socvr_room_id, GlobalVars.wrapso)
+                    socvr_pings = get_user_names_on_notification_list("stackoverflow.com", GlobalVars.socvr_room_id, GlobalVars.wrapso)
                     socvr_msg = append_pings(s, socvr_pings)
                     GlobalVars.socvr.send_message(socvr_msg)
 

@@ -432,7 +432,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         se_site = message_parts[2]
         r = add_to_notification_list(user_id, chat_site, room_id, se_site)
         if r:
-            return "You'll now get pings from me if I report a post of `%s`, in room `%s` on `%s`" % (se_site, room_id, chat_site)
+            return "You'll now get pings from me if I report a post of `%s`, in room `%s` on `chat.%s`" % (se_site, room_id, chat_site)
         else:
             return "That notification configuration is already registered."
 
