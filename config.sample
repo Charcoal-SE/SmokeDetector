@@ -3,3 +3,7 @@ location=location_here
 
 # Set the location for metasmoke here if you're running it. See https://github.com/Charcoal-SE/metasmoke.
 # metasmoke_host=http://path.to.metasmoke
+
+# Set metasmoke_key if Smokey isn't running on the same machine (localhost)
+# that metasmoke is
+# metasmoke_key=gibberish_here

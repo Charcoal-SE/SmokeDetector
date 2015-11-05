@@ -10,8 +10,10 @@ class Metasmoke:
             print "Metasmoke location not defined, not reporting"
             return
 
+        metasmoke_key = GlobalVars.metasmoke_key
+
         try:
-            payload = {'post': {'title': title, 'link': link, 'reasons': reasons, 'body': body, 'username': username, 'user_link': user_link}}
+            payload = {'post': {'title': title, 'link': link, 'reasons': reasons, 'body': body, 'username': username, 'user_link': user_link}, 'key': metasmoke_key}
 
             headers = {'Content-type': 'application/json'}
             requests.post(GlobalVars.metasmoke_host + "/posts.json", data=json.dumps(payload), headers=headers)
@@ -24,8 +26,10 @@ class Metasmoke:
             print "Metasmoke location not defined; not reporting"
             return
 
+        metasmoke_key = GlobalVars.metasmoke_key
+
         try:
-            payload = {'feedback': {'user_name': user_name, 'feedback_type': feedback_type, 'post_link': post_link}}
+            payload = {'feedback': {'user_name': user_name, 'feedback_type': feedback_type, 'post_link': post_link}, 'key': metasmoke_key}
 
             headers = {'Content-type': 'application/json'}
             requests.post(GlobalVars.metasmoke_host + "/feedbacks.json", data=json.dumps(payload), headers=headers)

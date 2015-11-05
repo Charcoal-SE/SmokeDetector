@@ -168,3 +168,9 @@ class GlobalVars:
     except ConfigParser.NoOptionError:
         metasmoke_host = None
         print "metasmoke host not found. Set it as metasmoke_host in the config file. See https://github.com/Charcoal-SE/metasmoke."
+
+    try:
+        metasmoke_key = config.key("Config", "metasmoke_key")
+    except ConfigParser.NoOptionError:
+        metasmoke_key = ""
+        print "No metasmoke key found, which is okay if both are running on the same host"
