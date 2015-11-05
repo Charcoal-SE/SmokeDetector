@@ -278,7 +278,7 @@ def remove_from_notification_list(user_id, chat_site, room_id, se_site):
 def get_user_ids_on_notification_list(chat_site, room_id, se_site):
     uids = []
     for t in GlobalVars.notifications:
-        if t[1] == chat_site and t[2] == room_id and t[3] == se_site:
+        if t[1] == chat_site and t[2] == int(room_id) and t[3] == se_site:
             uids.append(t[0])
     return uids
 
