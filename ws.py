@@ -72,6 +72,8 @@ GlobalVars.tavern_on_the_meta = GlobalVars.wrapm.get_room(tavern_id)
 GlobalVars.socvr = GlobalVars.wrapso.get_room(GlobalVars.socvr_room_id)
 
 GlobalVars.specialrooms = [{
+                           # If you change these sites, please also update the wiki at 
+                           # https://github.com/Charcoal-SE/SmokeDetector/wiki/Chat-Rooms
                            "sites": ["math.stackexchange.com"],
                            "room": GlobalVars.wrap.get_room("2165"),
                            "unwantedReasons": []
