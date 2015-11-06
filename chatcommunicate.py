@@ -429,9 +429,10 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
             return "Room ID is invalid."
         else:
             room_id = int(room_id)
-        se_site = message_parts[2]
+        quiet_action = ("-" in message_parts[2])
+        se_site = message_parts[2].replace('-', '')
         r, full_site = add_to_notification_list(user_id, chat_site, room_id, se_site)
-        if r == 0:
+        if r == 0 and not quiet_action:
             return "You'll now get pings from me if I report a post of `%s`, in room `%s` on `chat.%s`" % (full_site, room_id, chat_site)
         elif r == -1:
             return "That notification configuration is already registered."
@@ -447,9 +448,10 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
             return "Room ID is invalid."
         else:
             room_id = int(room_id)
-        se_site = message_parts[2]
+        quiet_action = ("-" in message_parts[2])
+        se_site = message_parts[2].replace('-', '')
         r = remove_from_notification_list(user_id, chat_site, room_id, se_site)
-        if r:
+        if r and not quiet_action:
             return "I will no longer ping you if I report a post of `%s`, in room `%s` on `chat.%s`" % (se_site, room_id, chat_site)
         else:
             return "That configuration doesn't exist."
