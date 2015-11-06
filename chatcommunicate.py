@@ -424,7 +424,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
             return "2 arguments expected"
         user_id = int(ev_user_id)
         chat_site = wrap2.host
-        # Room id is already known via the ev_room parameter.  Why make the user specify it?
         room_id = message_parts[1]
         if not room_id.isdigit():
             return "Room ID is invalid."
@@ -444,7 +443,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
             return "2 arguments expected"
         user_id = int(ev_user_id)
         chat_site = wrap2.host
-        # Room id is already known via the ev_room parameter.  Why make the user specify it?
         room_id = message_parts[1]
         if not room_id.isdigit():
             return "Room ID is invalid."
