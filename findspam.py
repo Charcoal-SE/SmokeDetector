@@ -45,7 +45,7 @@ class FindSpam:
                     "vashi?k[ae]r[ae]n", "kolcak", "Zapyo", "we (offer|give out) (loans|funds|funding)",
                     "porn", "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
                     "rejuvenated skin", "ProBrain", "restore[ -]?samsung[ -]?data",
-                    "LifeForce", "swtor2credits", "me2.do", "^(?s).{0,200}black magic",
+                    "LifeForce", "swtor2credits", "me2.do",
                     "bam2u", "Neuro(3X|flexyn|fuse|luma|plex)", "TesteroneXL", "Nitroxin",
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha Rush",
                     "Blackline Elite", "TestCore Pro", "blank(ed)? ?ATM(card)?", "ATM Machine Vault",
@@ -227,6 +227,7 @@ class FindSpam:
                         r"(videos?|movies?|watch)online[\w-]*?\.", r"hd(video|movie)[\w-]*?\.",
                         r"backlink(?!(o\.|watch))[\w-]*?\.(co|net|org|in\W|info)"]
     rules = [
+        # Sites in sites[] will be excluded if 'all' == False.
         {'regex': ur"(?i)\b({})\b|{}".format("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': ur"(?is)^.{0,200}\b(baba|nike) ", 'all': True,
@@ -279,7 +280,9 @@ class FindSpam:
         {'regex': ur"http://[A-Za-z0-9-\.]*/?[A-Za-z0-9-]*/?</a>(?:</strong>)?\s*</p>\s*$", 'all': False,
          'sites': ["superuser.com", "drupal.stackexchange.com", "meta.stackexchange.com", "security.stackexchange.com", "patents.stackexchange.com"], 'reason': 'Link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'answers': False},
         {'regex': u".*<pre>.*", 'all': False, 'sites': ["puzzling.stackexchange.com"], 'reason': 'Code block', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'report_everywhere': False, 'body_summary': False},
-        {'regex': u"(?i)(erica|jeff|er1ca|spam|moderator)", 'all': False, 'sites': ["parenting.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True}
+        {'regex': u"(?i)(erica|jeff|er1ca|spam|moderator)", 'all': False, 'sites': ["parenting.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
+        {'regex': ur"^(?is).{0,200}black magic", 'all': False,
+         'sites': [islam.stackexchange.com], 'reason': "Black magic in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True}
     ]
 
     @staticmethod
