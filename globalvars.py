@@ -43,7 +43,8 @@ class GlobalVars:
                                            "34124",  # Andrew Leach
                                            "54229",  # apnorton
                                            "20459",  # S.L. Barth
-                                           "32436"],  # tchrist
+                                           "32436",  # tchrist
+                                           "30477"],  # Brock Adams
                         meta_tavern_room_id: ["259867",  # Normal Human
                                               "244519",  # Roombatron5000
                                               "244382",  # TGMCians
