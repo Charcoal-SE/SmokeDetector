@@ -34,7 +34,7 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
         blacklisted_user_data = get_blacklisted_user_data(get_user_from_url(user_url))
         if len(blacklisted_user_data) > 1:
             message_url = 'http:' + blacklisted_user_data[1]
-            blacklisted_post_url = 'http://' + blacklisted_user_data[2]
+            blacklisted_post_url = blacklisted_user_data[2]
             if blacklisted_post_url:
                 why += u"Blacklisted user - blacklisted for {} by {}\n".format(blacklisted_post_url, message_url)
             else:
