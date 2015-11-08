@@ -282,7 +282,7 @@ class FindSpam:
         {'regex': u".*<pre>.*", 'all': False, 'sites': ["puzzling.stackexchange.com"], 'reason': 'Code block', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'report_everywhere': False, 'body_summary': False},
         {'regex': u"(?i)(erica|jeff|er1ca|spam|moderator)", 'all': False, 'sites': ["parenting.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': ur"^(?is).{0,200}black magic", 'all': False,
-         'sites': [islam.stackexchange.com], 'reason': "Black magic in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True}
+         'sites': ["islam.stackexchange.com"], 'reason': "Black magic in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True}
     ]
 
     @staticmethod
