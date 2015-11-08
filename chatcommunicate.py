@@ -100,7 +100,9 @@ def watcher(ev, wrap2):
     else:
         r = handle_commands(content_source.lower(), message_parts, ev_room, ev_user_id, ev_user_name, wrap2, content_source, message_id)
         if r is not None:
-            ev.message.reply(r)
+            message_with_reply = ":{} {}".format(message_id, r)
+            if len(message_with_reply) <= 500 or "\n" in r:
+                ev.message.reply(r, False)
 
 
 def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_name, wrap2, content, message_id):
