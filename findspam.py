@@ -225,7 +225,8 @@ class FindSpam:
                         r"(corrupt|repair)[\w-]*?\.blogspot", r"[\w-]courses.in/",
                         r"(file|photo)recovery[\w-]*?\.(co|net|org|in\W|info)",
                         r"(videos?|movies?|watch)online[\w-]*?\.", r"hd(video|movie)[\w-]*?\.",
-                        r"backlink(?!(o\.|watch))[\w-]*?\.(co|net|org|in\W|info)"]
+                        r"backlink(?!(o\.|watch))[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(replica[^nt]\w{5,20}|\wrolex)\.com"]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
         {'regex': ur"(?i)\b({})\b|{}".format("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
