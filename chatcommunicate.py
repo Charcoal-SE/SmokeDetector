@@ -49,6 +49,7 @@ def watcher(ev, wrap2):
 
     ev_room = str(ev.data["room_id"])
     ev_user_id = str(ev.data["user_id"])
+    ev_room_name = ev.data["room_name"].encode('utf-8')
     content_source = ev.message.content_source
     message_id = ev.message.id
     if is_smokedetector_message(ev_user_id, ev_room):
@@ -82,7 +83,7 @@ def watcher(ev, wrap2):
                 reply += str(i + 1) + ". "
             reply += "[" + current_message.split(" ")[0] + "] "
             if current_message.split(" ")[1] != "-":
-                result = handle_commands(current_message.lower(), current_message.split(" "), ev_room, ev_user_id, ev_user_name, wrap2, current_message, message_id)
+                result = handle_commands(current_message.lower(), current_message.split(" "), ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, current_message, message_id)
                 if result is not None:
                     reply += result + os.linesep
                 else:
@@ -98,14 +99,14 @@ def watcher(ev, wrap2):
         if reply != "":
             ev.message.reply(reply)
     else:
-        r = handle_commands(content_source.lower(), message_parts, ev_room, ev_user_id, ev_user_name, wrap2, content_source, message_id)
+        r = handle_commands(content_source.lower(), message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content_source, message_id)
         if r is not None:
             message_with_reply = ":{} {}".format(message_id, r)
             if len(message_with_reply) <= 500 or "\n" in r:
                 ev.message.reply(r, False)
 
 
-def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_name, wrap2, content, message_id):
+def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content, message_id):
     message_url = "//chat." + wrap2.host + "/transcript/message/" + str(message_id)
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
     if re.compile("^:[0-9]+$").search(message_parts[0]):
@@ -290,9 +291,10 @@ def handle_commands(content_lower, message_parts, ev_room, ev_user_id, ev_user_n
         if user is not None:
             add_blacklisted_user(user, message_url, post_data.post_url)
         bayesian_learn_title(post_data.title, "bad")
+        why = u"Post manually reported by user *{}* in room *{}*.\n".format(ev_user_name, ev_room_name)
         handle_spam(post_data.title, post_data.body, post_data.owner_name, post_data.site, post_data.post_url,
                     post_data.owner_url, post_data.post_id, ["Manually reported " + post_data.post_type],
-                    post_data.post_type == "answer")
+                    post_data.post_type == "answer", why)
     if content_lower.startswith("!!/wut"):
         return "Whaddya mean, 'wut'? Humans..."
     if content_lower.startswith("!!/lick"):
