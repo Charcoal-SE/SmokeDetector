@@ -82,7 +82,8 @@ class FindSpam:
                         "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim", "aimee[ -]?cream",
                         "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
                         "contact (me|us)\\W*<a ", "follicure", "brain ?peak", "kidney[ -]?bean[ -]?extract",
-                        "\\brsgold", "bellavei", "goji ?xtreme", "(male|penile) ?enhancement", "lumagenex"]
+                        "\\brsgold", "bellavei", "goji ?xtreme", "(male|penile) ?enhancement", "lumagenex",
+                        "renuva(cell|derm)"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
