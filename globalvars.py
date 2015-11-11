@@ -126,7 +126,8 @@ class GlobalVars:
                             "1324",     # Paul Roub
                             "1743880",  # Tunaki
                             "1663001",  # DavidG
-                            "2415822"]  # JAL
+                            "2415822",  # JAL
+                            "4174897"]  # Kyll
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
