@@ -127,7 +127,8 @@ class GlobalVars:
                             "1743880",  # Tunaki
                             "1663001",  # DavidG
                             "2415822",  # JAL
-                            "4174897"]  # Kyll
+                            "4174897",  # Kyll
+                            "5299236"]  # Kevin Guan
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
