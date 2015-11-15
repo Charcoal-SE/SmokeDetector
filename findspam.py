@@ -39,6 +39,13 @@ def has_repeating_characters(s, site):
     return (100 * len(match) / len(s)) >= 20
 
 
+def link_at_end(s, site): 
+    match = regex.compile("http://[A-Za-z0-9-.]*/?[A-Za-z0-9-]*/?</a>(?:</strong>)?\\s*</p>\\s*$", regex.UNICODE).findall(s) 
+    if len(match) > 0: 
+        return not bool(regex.compile("imgur|stackexchange|superuser", regex.UNICODE).search(match[0]))
+    return False
+
+
 class FindSpam:
     bad_keywords = ["baba ?ji", "fifa.*coins?", "fifabay", "Long Path Tool",
                     "fifaodell", "brianfo", "tosterone", "bajotz",
@@ -281,7 +288,7 @@ class FindSpam:
         {'regex': u"(?i)vs", 'all': False, 'sites': ["patents.stackexchange.com"], 'reason': 'Bad keyword in {}', 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u">[^0-9A-Za-z<'\"]{3,}</a>", 'all': True,
          'sites': ["jp.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com", "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com"], 'reason': 'Non-Latin link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
-        {'regex': ur"http://[A-Za-z0-9-\.]*/?[A-Za-z0-9-]*/?</a>(?:</strong>)?\s*</p>\s*$", 'all': False,
+        {'method': link_at_end, 'all': False,
          'sites': ["superuser.com", "drupal.stackexchange.com", "meta.stackexchange.com", "security.stackexchange.com", "patents.stackexchange.com"], 'reason': 'Link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'answers': False},
         {'regex': u".*<pre>.*", 'all': False, 'sites': ["puzzling.stackexchange.com"], 'reason': 'Code block', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'report_everywhere': False, 'body_summary': False},
         {'regex': ur"(?i)\b(erica|jeff|er1ca|spam|moderator)\b", 'all': False, 'sites': ["parenting.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
