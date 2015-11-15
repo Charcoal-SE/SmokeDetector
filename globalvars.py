@@ -97,7 +97,8 @@ class GlobalVars:
                                               "298265",  # BoomsPlus
                                               "253560",  # josilber
                                               "244254",  # misterManSam
-                                              "188189"],  # Robert Longson
+                                              "188189",  # Robert Longson
+                                              "202362"],  # chmod 666 telkitty
                         socvr_room_id: [
                             "1849664",  # Undo
                             "2581872",  # hichris123
@@ -126,7 +127,9 @@ class GlobalVars:
                             "1324",     # Paul Roub
                             "1743880",  # Tunaki
                             "1663001",  # DavidG
-                            "2415822"]  # JAL
+                            "2415822",  # JAL
+                            "4174897",  # Kyll
+                            "5299236"]  # Kevin Guan
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}

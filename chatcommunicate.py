@@ -174,7 +174,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 if url_from_msg is not None:
                     user = get_user_from_url(url_from_msg)
                     if user is not None:
-                        add_blacklisted_user(user, message_url, post_url)
+                        add_blacklisted_user(user, message_url, "http:" + post_url)
                         user_added = True
             if post_type == "question":
                 learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "bad")
