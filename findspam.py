@@ -39,9 +39,9 @@ def has_repeating_characters(s, site):
     return (100 * len(match) / len(s)) >= 20
 
 
-def link_at_end(s, site): 
-    match = regex.compile("http://[A-Za-z0-9-.]*/?[A-Za-z0-9-]*/?</a>(?:</strong>)?\\s*</p>\\s*$", regex.UNICODE).findall(s) 
-    if len(match) > 0: 
+def link_at_end(s, site):
+    match = regex.compile("http://[A-Za-z0-9-.]*/?[A-Za-z0-9-]*/?</a>(?:</strong>)?\\s*</p>\\s*$", regex.UNICODE).findall(s)
+    if len(match) > 0:
         return not bool(regex.compile("imgur|stackexchange|superuser", regex.UNICODE).search(match[0]))
     return False
 
