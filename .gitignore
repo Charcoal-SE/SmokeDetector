@@ -45,6 +45,7 @@ autoIgnoredPosts.txt
 users.txt
 notifications.txt
 whyData.txt
+latestMessages.txt
 
 # Settings files
 .settings/

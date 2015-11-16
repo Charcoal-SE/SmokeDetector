@@ -37,6 +37,9 @@ def load_files():
     if os.path.isfile("whyData.txt"):
         with open("whyData.txt", "r") as f:
             GlobalVars.why_data = pickle.load(f)
+    if os.path.isfile("latestMessages.txt"):
+        with open("latestMessages.txt", "r") as f:
+            GlobalVars.latest_smokedetector_messages = pickle.load(f)
 
 
 def filter_auto_ignored_posts():
@@ -176,6 +179,15 @@ def get_why(site, post_id):
 
 def filter_why(max_size=50):
     GlobalVars.why_data = GlobalVars.why_data[-max_size:]
+
+
+def add_latest_smokedetector_message(room, message_id):
+    GlobalVars.latest_smokedetector_messages[room].append(message_id)
+    # Keep the last 100 messages
+    max_size = 100
+    GlobalVars.latest_smokedetector_messages[room] = GlobalVars.latest_smokedetector_messages[room][-max_size:]
+    with open("latestMessages.txt", "w") as f:
+        pickle.dump(GlobalVars.latest_smokedetector_messages, f)
 
 
 # methods that help avoiding reposting alerts:
