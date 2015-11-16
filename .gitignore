@@ -44,6 +44,7 @@ ignoredPosts.txt
 autoIgnoredPosts.txt
 users.txt
 notifications.txt
+whyData.txt
 
 # Settings files
 .settings/

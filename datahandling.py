@@ -34,6 +34,9 @@ def load_files():
             lines = f.readlines()
             for line in lines:
                 GlobalVars.frequent_sentences.append(line.strip())
+    if os.path.isfile("whyData.txt"):
+        with open("whyData.txt", "r") as f:
+            GlobalVars.why_data = pickle.load(f)
 
 
 def filter_auto_ignored_posts():
@@ -159,6 +162,8 @@ def add_why(site, post_id, why):
     t = (key, why)
     GlobalVars.why_data.append(t)
     filter_why()
+    with open("whyData.txt", "w") as f:
+        pickle.dump(GlobalVars.why_data, f)
 
 
 def get_why(site, post_id):
