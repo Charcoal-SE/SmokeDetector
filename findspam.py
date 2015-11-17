@@ -72,7 +72,7 @@ class FindSpam:
                     "slumber pm", "1-844-400-7325", "bestcollegechina",
                     "bbwdesire", "rsorder", "Shopping ?Cart ?Elite", "Easy ?Data ?Feed",
                     "breasts? enlargement", "best (hotel|property) management", "eduCBA", "Solid[ -]?SEO[ -]?Tools",
-                    "maxman ?power", "niagen", "Testo (X|Black)", "day ?trading ?academy", " %uh ", " %ah ",
+                    "maxman ?power", "niagen", "Testo (X|Black)", "day ?trading ?academy",
                     "skinology", "folliplex", "ProDermagenix", "yafei ?cable", "MSP ?Hack ?Tool",
                     "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015", "ATM hackers?",
                     "Vigoraflo", "Fonepaw", "Provasil", "Slimera", "Cerebria", "Xanogen",
@@ -90,7 +90,7 @@ class FindSpam:
                         "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
                         "contact (me|us)\\W*<a ", "follicure", "brain ?peak", "kidney[ -]?bean[ -]?extract",
                         "\\brsgold", "bellavei", "goji ?xtreme", "(male|penile) ?enhancement", "lumagenex",
-                        "renuva(cell|derm)"]
+                        "renuva(cell|derm)", " %uh ", " %ah "]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
