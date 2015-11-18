@@ -223,7 +223,7 @@ class FindSpam:
                         r"([\w-]password|[\w]{5,}facts|\Btoyshop|[\w-]{6,}cheats|credits)\.(co|net|org|in\W|info)",
                         r"(ketone|seotools|seotrick|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(bestmover|loans|escort|testo[-bsx]|cleanse|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(buy|premium|training|thebest)[\w-]{10,}\.(co|net|org|in\W|info)",
+                        r"(buy|premium|training|thebest|www\.try)[\w]{10,}\.(co|net|org|in\W|info)",
                         r"\w{10}buy\.(co|net|org|in\W|info)",
                         r"(strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
