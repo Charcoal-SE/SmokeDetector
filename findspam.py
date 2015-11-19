@@ -90,7 +90,7 @@ class FindSpam:
                         "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
                         "contact (me|us)\\W*<a ", "follicure", "brain ?peak", "kidney[ -]?bean[ -]?extract",
                         "\\brsgold", "bellavei", "goji ?xtreme", "(male|penile) ?enhancement", "lumagenex",
-                        "renuva(cell|derm)", " %uh ", " %ah "]
+                        "renuva(cell|derm)", " %uh ", " %ah ", "svelme"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
@@ -101,7 +101,7 @@ class FindSpam:
                             "Eglobalfitness", "musclezx90site", "fifapal",
                             "hits4slim", "screenshot\\.net", "downloadavideo\\.net",
                             "strongmenmuscle", "sh\\.st/", "adf\\.ly/", "musclehealthfitness",
-                            "svelmeblog", "preply\\.com", "hellofifa", "chinadivision",
+                            "preply\\.com", "hellofifa", "chinadivision",
                             "fifa\\d*online", "wearepropeople.com", "tagwitty",
                             "axsoccertours", "ragednablog", "ios8easyjailbreak",
                             "totalfitnesspoint", "trustessaywriting", "thesispaperwriters",
