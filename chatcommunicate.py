@@ -404,6 +404,19 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         return "*brews a cup of " + random.choice(['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint']) + " tea for @" + ev_user_name.replace(" ", "") + "*"
     if content_lower.startswith("!!/brownie"):
         return "Brown!"
+    if content_lower.startswith("!!/hats"):
+        wb_start = datetime(2015, 12, 14, 0, 0, 0)
+        now = datetime.utcnow()
+        if wb_start > now:
+            diff = wb_start - now
+            hours, remainder = divmod(diff.seconds, 3600)
+            minutes, seconds = divmod(remainder, 60)
+            daystr = "days" if diff.days != 1 else "day"
+            hourstr = "hours" if hours != 1 else "hour"
+            minutestr = "minutes" if minutes != 1 else "minute"
+            secondstr = "seconds" if seconds != 1 else "second"
+            ev.message.reply("HATS ARE AWESOME. Winter Bash will begin in %s %s, %s %s, %s %s and %s %s. :D" %
+                             (diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr))
     if content_lower.startswith("!!/test"):
         string_to_test = content[8:]
         if len(string_to_test) == 0:
