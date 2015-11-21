@@ -79,7 +79,7 @@ class FindSpam:
                     "(sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|salesforce) training.{0,25}</a>",
                     "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity",
                     "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?", "intellux", "viooz",
-                    "smartican", "essay writing service", "T-complex", "packers.{0,15}movers.{0,25}</a>", "retrodynamic formula",
+                    "smartican", "essay writing service", "T-complex", "retrodynamic formula",
                     "eltima"]
     bad_keywords_nwb = [u"ಌ", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
@@ -89,7 +89,7 @@ class FindSpam:
                         "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim", "aimee[ -]?cream",
                         "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
                         "contact (me|us)\\W*<a ", "follicure", "kidney[ -]?bean[ -]?extract",
-                        "\\brsgold", "bellavei", "goji ?xtreme", "lumagenex",
+                        "\\brsgold", "bellavei", "goji ?xtreme", "lumagenex", "packers.{0,15}movers.{0,25}</a>",
                         "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)",
                         "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
