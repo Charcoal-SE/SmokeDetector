@@ -57,7 +57,7 @@ class FindSpam:
                     "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha Rush",
                     "Blackline Elite", "TestCore Pro", "blank(ed)? ?ATM(card)?", "ATM Machine Vault",
                     "Xtreme Antler", "Maxx Test 3000", "orvigomax",
-                    "Cheap Wigs?", "jivam", "^(?s).{0,200}brain[- ]?(power|boost(er)?s?)", "Maximum ?Shred",
+                    "Cheap Wigs?", "jivam", "^(?s).{0,200}brain[- ]?power", "Maximum ?Shred",
                     "aging skin", "acne( prone)? skin", "black[ -]label[ -]no",
                     "skin (serum|eye)", "bagprada", "6611165613", "Apowersoft",
                     "Service Solahart", "junisse", "Profactor[ -]?T",
@@ -88,9 +88,10 @@ class FindSpam:
                         "(cogni|oro)[ -]?(lift|plex)", "skin ?care", "diabazole", "forskolin", "tonaderm", "luma(genex|lift)",
                         "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim", "aimee[ -]?cream",
                         "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
-                        "contact (me|us)\\W*<a ", "follicure", "brain ?peak", "kidney[ -]?bean[ -]?extract",
+                        "contact (me|us)\\W*<a ", "follicure", "kidney[ -]?bean[ -]?extract",
                         "\\brsgold", "bellavei", "goji ?xtreme", "(male|penile) ?enhancement", "lumagenex",
-                        "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar"]
+                        "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar",
+                        "brain[- ]?(boost|plus|enhance|peak|improve)"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
