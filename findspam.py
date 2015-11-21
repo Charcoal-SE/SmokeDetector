@@ -90,7 +90,7 @@ class FindSpam:
                         "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
                         "contact (me|us)\\W*<a ", "follicure", "brain ?peak", "kidney[ -]?bean[ -]?extract",
                         "\\brsgold", "bellavei", "goji ?xtreme", "(male|penile) ?enhancement", "lumagenex",
-                        "renuva(cell|derm)", " %uh ", " %ah ", "svelme"]
+                        "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
