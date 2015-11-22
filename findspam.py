@@ -46,6 +46,26 @@ def link_at_end(s, site):
     return False
 
 
+def has_phone_number(s, site):
+    if regex.compile(ur"(?i)\b(run[- ]?time|error)\b", regex.UNICODE).search(s):
+        return False  # error code, not phone number
+    s = regex.sub("(?i)O", "0", s)    
+    matched = regex.compile(ur"\d(?:_*\d){9}|\+?\d_*\d[\s-]?(?:_*\d){8,11}|\d[ -.(]{0,2}\d{3}[ -.)]{0,2}\d{3}[ -.]{0,2}\d{4}", regex.UNICODE).findall(deobfuscated)
+    test_formats = ["IN", "US", None]
+    for phone_number in matched:
+        if regex.compile(r"^21474672[56]\d$").search(phone_number):
+            return False  # error code
+        for testf in test_formats:
+            try:
+                z = phonenumbers.parse(phone_number, testf)
+                if phonenumbers.is_possible_number(z) and phonenumbers.is_valid_number(z):
+                    print "Possible {}, Valid {}, Explain: {}".format(phonenumbers.is_possible_number(z), phonenumbers.is_valid_number(z), z)
+                    return True
+            except phonenumbers.phonenumberutil.NumberParseException:
+                pass
+    return False
+
+
 class FindSpam:
     bad_keywords = ["baba ?ji", "fifa.*coins?", "fifabay", "Long Path Tool",
                     "fifaodell", "brianfo", "tosterone", "bajotz",
@@ -265,8 +285,7 @@ class FindSpam:
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com"], 'reason': "Pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': ur"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|kisn)\b)(?=.*?care).*products?\b|(?=.*?packer).*mover|online.*?training| vs .* (live|vivo)|\bxtra\b|\bwe offer\b|;&#x", 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
-        {'regex': ur"\d(?:_*\d){9}|\+?\d_*\d[\s-]?(?:_*\d){8,11}|\d[ -.(]{0,2}\d{3}[ -.)]{0,2}\d{3}[ -.]{0,2}\d{4}", 'all': True,
-         'sites': ["patents.stackexchange.com", "math.stackexchange.com"], 'reason': "Phone number detected in {}", 'validation_method': 'check_phone_numbers', 'title': True, 'body': False, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
+        {'method': has_phone_number, 'all': True, 'sites': ["patents.stackexchange.com", "math.stackexchange.com"], 'reason': "Phone number detected in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': ur"(?i)\b(nigg(a|er)|asshole|fag|fuc?k(ing?)?|shit(t?er|hole)|whore|cunt|deeze? nut[sz])s?\b", 'all': True,
          'sites': [], 'reason': "Offensive {} detected", 'insensitive':True, 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True},
         {'regex': ur"(?i)\bcrap\b", 'all': True, 'sites': [], 'reason': "Offensive {} detected", 'insensitive': True, 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
@@ -335,22 +354,14 @@ class FindSpam:
                         span = search.span()
                         group = search.group()
                         why += u"Title - Position {}-{}: {}\n".format(span[0] + 1, span[1] + 1, group)
-                    try:
-                        if getattr(FindSpam, rule['validation_method'])(matched_title):
-                            result.append(rule['reason'].replace("{}", "title"))
-                    except KeyError:  # There is no special logic for this rule
-                        result.append(rule['reason'].replace("{}", "title"))
+                    result.append(rule['reason'].replace("{}", "title"))
                 if matched_username and rule['username']:
                     if 'regex' in rule:
                         search = compiled_regex.search(user_name)
                         span = search.span()
                         group = search.group()
                         why += u"Username - Position {}-{}: {}\n".format(span[0] + 1, span[1] + 1, group)
-                    try:
-                        if getattr(FindSpam, rule['validation_method'])(matched_username):
-                            result.append(rule['reason'].replace("{}", "username"))
-                    except KeyError:  # There is no special logic for this rule
-                        result.append(rule['reason'].replace("{}", "username"))
+                    result.append(rule['reason'].replace("{}", "username"))
                 if matched_body and rule['body']:
                     if 'regex' in rule:
                         search = compiled_regex.search(body)
@@ -358,28 +369,8 @@ class FindSpam:
                         group = search.group()
                         why += u"Body - Position {}-{}: {}\n".format(span[0] + 1, span[1] + 1, group)
                     type_of_post = "answer" if is_answer else "body"
-                    try:
-                        if getattr(FindSpam, rule['validation_method'])(matched_body):
-                            result.append(rule['reason'].replace("{}", type_of_post))
-                    except KeyError:  # There is no special logic for this rule
-                        result.append(rule['reason'].replace("{}", type_of_post))
+                    result.append(rule['reason'].replace("{}", type_of_post))
         result = list(set(result))
         result.sort()
         why = why.strip()
         return result, why
-
-    @staticmethod
-    def check_phone_numbers(matched):
-        test_formats = ["IN", "US", None]
-        for phone_number in matched:
-            if regex.compile(r"^21474672[56]\d$").search(phone_number):
-                return False
-            for testf in test_formats:
-                try:
-                    z = phonenumbers.parse(phone_number, testf)
-                    if phonenumbers.is_possible_number(z) and phonenumbers.is_valid_number(z):
-                        print "Possible {}, Valid {}, Explain: {}".format(phonenumbers.is_possible_number(z), phonenumbers.is_valid_number(z), z)
-                        return True
-                except phonenumbers.phonenumberutil.NumberParseException:
-                    pass
-        return False
