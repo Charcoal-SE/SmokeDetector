@@ -226,7 +226,8 @@ class FindSpam:
                             "gcbxnow\\.com", "godowell\\.net", "place4papers", "tradingqna\\.com",
                             "shacamerica\\.net", "nillowpages\\.com", "letsnurture\\.com", "healthpeters\\.com",
                             "rozapk\\.com", "jihosoft\\.com", "mahnazmezon\\.com", "technical-care\\.com",
-                            "skyformation\\.com", "shiftingsolutions\\.in", "bandsawjudge\\.com"]
+                            "skyformation\\.com", "shiftingsolutions\\.in", "bandsawjudge\\.com",
+                            "liveestorebuilder\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
@@ -243,7 +244,7 @@ class FindSpam:
                         r"(livestreaming|watch[\w-]*?(live|online))\.(com|net|tv)",
                         r"//(cheat[\w-.]{3,}|xtreme[\w-]{5,})\.(co|net|org|in\W|info)",
                         r"([\w-]password|[\w]{5,}facts|\Btoyshop|[\w-]{6,}cheats|credits)\.(co|net|org|in\W|info)",
-                        r"(ketone|seotools|seotrick|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(profits|ketone|seotools|seotrick|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(bestmover|loans|escort|testo[-bsx]|cleanse|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(buy|premium|training|thebest|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
                         r"\w{10}buy\.(co|net|org|in\W|info)",
