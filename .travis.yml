@@ -3,8 +3,7 @@ sudo: false
 python:
   - '2.7'
 install:
-  - pip install beautifulsoup4 requests websocket-client coverage pytest==2.5.2 phonenumbers flake8 --upgrade
-  - pip install regex==2015.06.15
+  - pip install beautifulsoup4 requests websocket-client coverage pytest phonenumbers flake8 regex==2015.11.22 --upgrade
 script:
   - flake8 ./
   - python -W default::Warning -m pytest test
