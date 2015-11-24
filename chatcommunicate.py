@@ -192,6 +192,11 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id, wrap2):
             if post_site_id is None:
                 return "That message is not a report."
+
+            t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
+                                 args=(post_url, second_part_lower, ev_user_name, ))
+            t_metasmoke.start()
+
             add_ignored_post(post_site_id[0:2])
             if not quiet_action:
                 return "Post ignored; alerts about it will no longer be posted."
