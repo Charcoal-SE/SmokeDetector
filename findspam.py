@@ -230,7 +230,7 @@ class FindSpam:
                             "rozapk\\.com", "jihosoft\\.com", "mahnazmezon\\.com", "technical-care\\.com",
                             "skyformation\\.com", "shiftingsolutions\\.in", "bandsawjudge\\.com",
                             "liveestorebuilder\\.com", "exampracticequestions\\.com", "createspace\\.com",
-                            "healthpeters\\.com"]
+                            "healthpeters\\.com", "fun-flicks\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
