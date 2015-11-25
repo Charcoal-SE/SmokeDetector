@@ -50,6 +50,8 @@ def has_phone_number(s, site):
     if regex.compile(ur"(?i)\b(run[- ]?time|error)\b", regex.UNICODE).search(s):
         return False  # error code, not phone number
     s = regex.sub("(?i)O", "0", s)
+    s = regex.sub("(?i)S", "5", s)
+    s = regex.sub("(?i)I", "1", s)
     matched = regex.compile(ur"\d(?:_*\d){9}|\+?\d_*\d[\s-]?(?:_*\d){8,11}|\d[ -.(]{0,2}\d{3}[ -.)]{0,2}\d{3}[ -.]{0,2}\d{4}", regex.UNICODE).findall(s)
     test_formats = ["IN", "US", None]
     for phone_number in matched:
