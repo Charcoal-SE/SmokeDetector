@@ -335,7 +335,7 @@ class FindSpam:
             try:
                 check_if_question = rule['questions']
             except KeyError:
-                check_if_question = True                
+                check_if_question = True
             if rule['stripcodeblocks']:
                 body_to_check = regex.sub("(?s)<pre>.*?</pre>", "<pre></pre>", body)
                 body_to_check = regex.sub("(?s)<code>.*?</code>", "<code></code>", body_to_check)
@@ -349,13 +349,13 @@ class FindSpam:
                     compiled_regex = regex.compile(rule['regex'], regex.UNICODE)
                     matched_title = compiled_regex.findall(title)
                     matched_username = compiled_regex.findall(user_name)
-                    if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer) and (not is_question or check_if_question):
+                    if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer) and (is_answer or check_if_question):
                         matched_body = compiled_regex.findall(body_to_check)
                 else:
                     assert 'method' in rule
                     matched_title = rule['method'](title, site)
                     matched_username = rule['method'](user_name, site)
-                    if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer) and (not is_question or check_if_question):
+                    if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer) and (is_answer or check_if_question):
                         matched_body = rule['method'](body_to_check, site)
                 if matched_title and rule['title']:
                     if 'regex' in rule:
