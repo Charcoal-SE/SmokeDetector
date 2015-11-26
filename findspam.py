@@ -42,7 +42,7 @@ def has_repeating_characters(s, site):
 def link_at_end(s, site):
     match = regex.compile("http://[A-Za-z0-9-.]*/?[A-Za-z0-9-]*/?</a>(?:</strong>)?\\s*</p>\\s*$", regex.UNICODE).findall(s)
     if len(match) > 0:
-        return not bool(regex.compile("imgur|stackexchange|superuser", regex.UNICODE).search(match[0]))
+        return not bool(regex.compile(r"\b(imgur|stackexchange|superuser|pastebin|dropbox|microsoft|newegg|cnet|google)\b", regex.UNICODE).search(match[0]))
     return False
 
 
@@ -307,8 +307,10 @@ class FindSpam:
         {'method': has_repeating_characters, 'all': True, 'sites': [], 'reason': "Repeating characters in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'method': has_repeated_words, 'all': True, 'sites': [], 'reason': "Repeating words in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'regex': ur"^(.)\1+$", 'all': True, 'sites': [], 'reason': "{} has only one unique char", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
-        {'regex': ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain)\.(com|net|org))[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': True,
-         'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com", "webmasters.stackexchange.com", "wordpress.stackexchange.com", "magento.stackexchange.com", "elementaryos.stackexchange.com", "tex.stackexchange.com"], 'reason': "Email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
+        {'regex': ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain)\.(com|net|org))[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': True,    # email check for answers
+         'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com", "webmasters.stackexchange.com", "wordpress.stackexchange.com", "magento.stackexchange.com", "elementaryos.stackexchange.com", "tex.stackexchange.com"], 'reason': "Email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False},
+        {'regex': ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain)\.(com|net|org))[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s).{0,300}", 'all': True,    # email check for questions: only at the end
+         'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com", "webmasters.stackexchange.com", "wordpress.stackexchange.com", "magento.stackexchange.com", "elementaryos.stackexchange.com", "tex.stackexchange.com"], 'reason': "Email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False},
         {'regex': u"(?i)(tejveer ?iq|ser?vice pemanas?)", 'all': True, 'sites': [], 'reason': "Blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u"(?i)vs", 'all': False, 'sites': ["patents.stackexchange.com"], 'reason': 'Bad keyword in {}', 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False},
         {'regex': u">[^0-9A-Za-z<'\"]{3,}</a>", 'all': True,
