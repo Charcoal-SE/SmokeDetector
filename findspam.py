@@ -260,8 +260,7 @@ class FindSpam:
                         r"(file|photo)recovery[\w-]*?\.(co|net|org|in\W|info)",
                         r"(videos?|movies?|watch)online[\w-]*?\.", r"hd(video|movie)[\w-]*?\.",
                         r"backlink(?!(o\.|watch))[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(replica[^nt]\w{5,20}|\wrolex)\.com",
-                        r"(?s)^.{0,200}://(goo\.gl|bit\.ly|tinyurl\.com|fb\.me)/.{0,150}$"]
+                        r"(replica[^nt]\w{5,20}|\wrolex)\.com"]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
         {'regex': ur"(?i)\b({})\b|{}".format("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
@@ -319,7 +318,8 @@ class FindSpam:
         {'regex': u".*<pre>.*", 'all': False, 'sites': ["puzzling.stackexchange.com"], 'reason': 'Code block', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'report_everywhere': False, 'body_summary': False},
         {'regex': ur"(?i)\b(erica|jeff|er1ca|spam|moderator)\b", 'all': False, 'sites': ["parenting.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': ur"^(?is).{0,200}black magic", 'all': True,
-         'sites': ["islam.stackexchange.com"], 'reason': "Black magic in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True}
+         'sites': ["islam.stackexchange.com"], 'reason': "Black magic in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True},
+        {'regex': ur"(?s)^.{0,200}://(goo\.gl|bit\.ly|tinyurl\.com|fb\.me)/.{0,150}$", 'all': True, 'sites': [], 'reason': "Shortened URL in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False}
     ]
 
     @staticmethod
@@ -332,6 +332,10 @@ class FindSpam:
                 check_if_answer = rule['answers']
             except KeyError:
                 check_if_answer = True
+            try:
+                check_if_question = rule['questions']
+            except KeyError:
+                check_if_question = True                
             if rule['stripcodeblocks']:
                 body_to_check = regex.sub("(?s)<pre>.*?</pre>", "<pre></pre>", body)
                 body_to_check = regex.sub("(?s)<code>.*?</code>", "<code></code>", body_to_check)
@@ -345,13 +349,13 @@ class FindSpam:
                     compiled_regex = regex.compile(rule['regex'], regex.UNICODE)
                     matched_title = compiled_regex.findall(title)
                     matched_username = compiled_regex.findall(user_name)
-                    if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer):
+                    if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer) and (not is_question or check_if_question):
                         matched_body = compiled_regex.findall(body_to_check)
                 else:
                     assert 'method' in rule
                     matched_title = rule['method'](title, site)
                     matched_username = rule['method'](user_name, site)
-                    if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer):
+                    if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer) and (not is_question or check_if_question):
                         matched_body = rule['method'](body_to_check, site)
                 if matched_title and rule['title']:
                     if 'regex' in rule:
