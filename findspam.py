@@ -4,7 +4,7 @@ import phonenumbers
 
 
 def all_caps_text(s, site):
-    if regex.compile(ur"SQL|\b(ERROR|PHP|QUERY|ANDROID|CASE|SELECT|HAVING|COUNT)\b").search(s):
+    if regex.compile(ur"SQL|\b(ERROR|PHP|QUERY|ANDROID|CASE|SELECT|HAVING|COUNT|GROUP|ORDER BY|INNER|OUTER)\b").search(s):
         return False   # common words in non-spam all-caps titles
     return bool(regex.compile(ur"^(?=.*\p{upper})\P{lower}*$", regex.UNICODE).search(s))
 
