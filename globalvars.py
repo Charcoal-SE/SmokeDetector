@@ -44,7 +44,8 @@ class GlobalVars:
                                            "54229",  # apnorton
                                            "20459",  # S.L. Barth
                                            "32436",  # tchrist
-                                           "30477"],  # Brock Adams
+                                           "30477",  # Brock Adams
+                                           "145208"],  # Robert Longson
                         meta_tavern_room_id: ["259867",  # Normal Human
                                               "244519",  # Roombatron5000
                                               "244382",  # TGMCians
