@@ -113,7 +113,7 @@ class FindSpam:
                         "contact (me|us)\\W*<a ", "follicure", "kidney[ -]?bean[ -]?extract",
                         "\\brsgold", "bellavei", "goji ?xtreme", "lumagenex", "packers.{0,15}movers.{0,25}</a>",
                         "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)",
-                        "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar"]
+                        "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
@@ -232,7 +232,7 @@ class FindSpam:
                             "liveestorebuilder\\.com", "exampracticequestions\\.com", "createspace\\.com",
                             "healthpeters\\.com", "fun-flicks\\.com", "smarketingclub\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
-                        r"\.(com|net)/xtra[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
+                        r"\.(com|net)/(xtra|muscle)[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
                         r"essay\w{6,}\.(co|net|org|in\W|info)",
                         r"top\d\w{2,15}\.in\W",
