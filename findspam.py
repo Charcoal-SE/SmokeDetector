@@ -72,8 +72,8 @@ def has_customer_service(s, site):
     s = s[0:200]       # when applied to body, the beginning should be enough: otherwise many false positives
     business = regex.compile(r"(?i)\b(dell|epson|facebook|gmail|hotmail|hp|lexmark|mcafee|out[l1]ook|quickbooks|yahoo)\b").findall(s)
     if (business):
-        keywords = regex.compile(r"(?i)\b(customer|help|helpline|password|phone|recovery|service|support|tech|technical|telephone|number|account|payroll|printer|login|online|solution|specialist|specailist|e?mail|\d{4})\b").findall(s)
-        return len(keywords) >= 2
+        keywords = regex.compile(r"(?i)\b(customer|help|helpline|password|phone|recovery|service|support|tech|technical|telephone|number|account|payroll|printer|login|online|solution|specialist|specailist|e?mail)\b").findall(s)
+        return len(set(keywords)) >= 2
     return False
 
 
