@@ -330,6 +330,7 @@ class FindSpam:
         why = ""
         for rule in FindSpam.rules:
             body_to_check = body
+            is_regex_check = 'regex' in rule
             try:
                 check_if_answer = rule['answers']
             except KeyError:
@@ -347,7 +348,7 @@ class FindSpam:
             if rule['all'] != (site in rule['sites']):
                 matched_body = None
                 compiled_regex = None
-                if 'regex' in rule:
+                if is_regex_check:
                     compiled_regex = regex.compile(rule['regex'], regex.UNICODE)
                     matched_title = compiled_regex.findall(title)
                     matched_username = compiled_regex.findall(user_name)
@@ -360,28 +361,25 @@ class FindSpam:
                     if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer) and (is_answer or check_if_question):
                         matched_body = rule['method'](body_to_check, site)
                 if matched_title and rule['title']:
-                    if 'regex' in rule:
-                        search = compiled_regex.search(title)
-                        span = search.span()
-                        group = search.group()
-                        why += u"Title - Position {}-{}: {}\n".format(span[0] + 1, span[1] + 1, group)
+                    why += FindSpam.generate_why(compiled_regex, title, u"Title", is_regex_check)
                     result.append(rule['reason'].replace("{}", "title"))
                 if matched_username and rule['username']:
-                    if 'regex' in rule:
-                        search = compiled_regex.search(user_name)
-                        span = search.span()
-                        group = search.group()
-                        why += u"Username - Position {}-{}: {}\n".format(span[0] + 1, span[1] + 1, group)
+                    why += FindSpam.generate_why(compiled_regex, user_name, u"Username", is_regex_check)
                     result.append(rule['reason'].replace("{}", "username"))
                 if matched_body and rule['body']:
-                    if 'regex' in rule:
-                        search = compiled_regex.search(body)
-                        span = search.span()
-                        group = search.group()
-                        why += u"Body - Position {}-{}: {}\n".format(span[0] + 1, span[1] + 1, group)
+                    why += FindSpam.generate_why(compiled_regex, body, u"Body", is_regex_check)
                     type_of_post = "answer" if is_answer else "body"
                     result.append(rule['reason'].replace("{}", type_of_post))
         result = list(set(result))
         result.sort()
         why = why.strip()
         return result, why
+
+    @staticmethod
+    def generate_why(compiled_regex, matched_text, type_of_text, is_regex_check):
+        if is_regex_check:
+            search = compiled_regex.search(matched_text)
+            span = search.span()
+            group = search.group()
+            return type_of_text + u" - Position {}-{}: {}\n".format(span[0] + 1, span[1] + 1, group)
+        return ""
