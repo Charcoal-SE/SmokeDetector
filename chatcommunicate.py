@@ -185,10 +185,10 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 elif not learned:
                     return "Something went wrong when registering question as true positive."
             elif post_type == "answer":
-                if user_added and not quiet_action:
-                    return "Blacklisted user."
-                elif not user_added:
-                    return "`true`/`tp` cannot be used for answers because their job is to add the title of the *question* to the Bayesian doctype 'bad'. If you want to blacklist the poster of the answer, use `trueu` or `tpu`."
+                if not quiet_action:
+                    if user_added:
+                        return "Blacklisted user."
+                    return "Recorded answer as true positive. If you want to blacklist the poster of the answer, use `trueu` or `tpu`."
         if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id, wrap2):
             if post_site_id is None:
                 return "That message is not a report."
