@@ -133,7 +133,8 @@ class GlobalVars:
                             "5299236",  # Kevin Guan
                             "4050842",  # Thaillie
                             "1816093",  # Drew
-                            "874188"]  # Triplee
+                            "874188",  # Triplee
+                            "880772"]  # approxiblue 
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
