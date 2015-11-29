@@ -40,7 +40,7 @@ def has_repeating_characters(s, site):
 
 
 def link_at_end(s, site):
-    match = regex.compile("http://[A-Za-z0-9-.]*/?[A-Za-z0-9-]*/?</a>(?:</strong>)?\\s*</p>\\s*$", regex.UNICODE).findall(s)
+    match = regex.compile(ur"http://[A-Za-z0-9-.]*/?[A-Za-z0-9-]*/?</a>(?:</strong>)?\s*</p>\s*$", regex.UNICODE).findall(s)
     if len(match) > 0:
         return not bool(regex.compile(r"\b(imgur|stackexchange|superuser|pastebin|dropbox|microsoft|newegg|cnet|google)\b", regex.UNICODE).search(match[0]))
     return False
@@ -51,12 +51,13 @@ def has_phone_number(s, site):
         return False  # error code, not phone number
     s = regex.sub("(?i)O", "0", s)
     s = regex.sub("(?i)S", "5", s)
-    s = regex.sub("(?i)I", "1", s)
+    s = regex.sub("(?i)[I]", "1", s)
+    s = regex.sub
     matched = regex.compile(ur"\d(?:_*\d){9}|\+?\d_*\d[\s-]?(?:_*\d){8,11}|\d[ -.(]{0,2}\d{3}[ -.)]{0,2}\d{3}[ -.]{0,2}\d{4}", regex.UNICODE).findall(s)
     test_formats = ["IN", "US", None]
     for phone_number in matched:
-        if regex.compile(r"^21474672[56]\d$").search(phone_number):
-            return False  # error code
+        if regex.compile(r"^21474(672[56]|8364)\d$").search(phone_number):  
+            return False  # error code or limit of int size 
         for testf in test_formats:
             try:
                 z = phonenumbers.parse(phone_number, testf)
@@ -327,6 +328,8 @@ class FindSpam:
          'sites': ["jp.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com", "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com"], 'reason': 'Non-Latin link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'method': link_at_end, 'all': False,
          'sites': ["superuser.com", "drupal.stackexchange.com", "meta.stackexchange.com", "security.stackexchange.com", "patents.stackexchange.com"], 'reason': 'Link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'answers': False},
+        {'regex': ur'(?s)^.{0,200}<p>\s*<a href="http://[\w.-]+/?"[^<]*</a>\s*</p>\s*$', 'all': True, 
+         'sites': [], 'reason': 'Link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False},
         {'regex': u".*<pre>.*", 'all': False, 'sites': ["puzzling.stackexchange.com"], 'reason': 'Code block', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'report_everywhere': False, 'body_summary': False},
         {'regex': ur"(?i)\b(erica|jeff|er1ca|spam|moderator)\b", 'all': False, 'sites': ["parenting.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
         {'regex': ur"^(?is).{0,200}black magic", 'all': True,
