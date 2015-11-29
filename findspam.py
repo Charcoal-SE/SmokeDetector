@@ -56,8 +56,8 @@ def has_phone_number(s, site):
     matched = regex.compile(ur"\d(?:_*\d){9}|\+?\d_*\d[\s-]?(?:_*\d){8,11}|\d[ -.(]{0,2}\d{3}[ -.)]{0,2}\d{3}[ -.]{0,2}\d{4}", regex.UNICODE).findall(s)
     test_formats = ["IN", "US", None]
     for phone_number in matched:
-        if regex.compile(r"^21474(672[56]|8364)\d$").search(phone_number):  
-            return False  # error code or limit of int size 
+        if regex.compile(r"^21474(672[56]|8364)\d$").search(phone_number):
+            return False  # error code or limit of int size
         for testf in test_formats:
             try:
                 z = phonenumbers.parse(phone_number, testf)
@@ -71,7 +71,7 @@ def has_phone_number(s, site):
 
 def has_customer_service(s, site):
     s = s[0:200]       # when applied to body, the beginning should be enough: otherwise many false positives
-    business = regex.compile(r"(?i)\b(dell|epson|facebook|gmail|hotmail|hp|lexmark|mcafee|out[l1]ook|quickbooks|yahoo)\b").findall(s)
+    business = regex.compile(r"(?i)\b(dell|epson|facebook|gmail|hotmail|hp|lexmark|mcafee|out[l1]ook|quickbooks|yahoo)\b").search(s)
     if (business):
         keywords = regex.compile(r"(?i)\b(customer|help|helpline|password|phone|recovery|service|support|tech|technical|telephone|number|account|payroll|printer|login|online|solution|specialist|specailist|e?mail)\b").findall(s)
         return len(set(keywords)) >= 2
@@ -328,7 +328,7 @@ class FindSpam:
          'sites': ["jp.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com", "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com"], 'reason': 'Non-Latin link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'method': link_at_end, 'all': False,
          'sites': ["superuser.com", "drupal.stackexchange.com", "meta.stackexchange.com", "security.stackexchange.com", "patents.stackexchange.com"], 'reason': 'Link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'answers': False},
-        {'regex': ur'(?s)^.{0,200}<p>\s*<a href="http://[\w.-]+/?"[^<]*</a>\s*</p>\s*$', 'all': True, 
+        {'regex': ur'(?s)^.{0,200}<p>\s*<a href="http://[\w.-]+/?"[^<]*</a>\s*</p>\s*$', 'all': True,
          'sites': [], 'reason': 'Link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False},
         {'regex': u".*<pre>.*", 'all': False, 'sites': ["puzzling.stackexchange.com"], 'reason': 'Code block', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'report_everywhere': False, 'body_summary': False},
         {'regex': ur"(?i)\b(erica|jeff|er1ca|spam|moderator)\b", 'all': False, 'sites': ["parenting.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
