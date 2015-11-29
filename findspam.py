@@ -5,8 +5,10 @@ import phonenumbers
 
 def all_caps_text(s, site):
     if regex.compile(ur"SQL|\b(ERROR|PHP|QUERY|ANDROID|CASE|SELECT|HAVING|COUNT|GROUP|ORDER BY|INNER|OUTER)\b").search(s):
-        return False   # common words in non-spam all-caps titles
-    return bool(regex.compile(ur"^(?=.*\p{upper})\P{lower}*$", regex.UNICODE).search(s))
+        return False, ""   # common words in non-spam all-caps titles
+    if regex.compile(ur"^(?=.*\p{upper})\P{lower}*$", regex.UNICODE).search(s):
+        return True, "All in caps"
+    return False, ""
 
 
 def has_repeated_words(s, site):
@@ -21,34 +23,38 @@ def has_repeated_words(s, site):
             curr = 0
         prev = w
         if curr >= 5 and curr * len(w) >= 0.1 * len(s):
-            return True
-    return False
+            return True, u"Repeated word {}".format(w)
+    return False, ""
 
 
 def has_few_characters(s, site):
     uniques = len(set(list(s))) - 4    # discount < / p > which always appear in post body
-    return (len(s) > 36 and uniques < 6) or (len(s) > 100 and uniques < 12)    # reduce if false reports appear
+    if (len(s) > 36 and uniques < 6) or (len(s) > 100 and uniques < 12):    # reduce if false reports appear
+        return True, u"Contains {} unique characters".format(uniques)
+    return False, ""
 
 
 def has_repeating_characters(s, site):
     if s is None or len(s) == 0:
-        return False
+        return False, ""
     matches = regex.compile("([^\\s_.,?!=~*/0-9-])(\\1{10,})", regex.UNICODE).findall(s)
     matches = ["".join(match) for match in matches]
     match = "".join(matches)
-    return (100 * len(match) / len(s)) >= 20
+    if (100 * len(match) / len(s)) >= 20:
+        return True, u"Repeated character: {}".format(match)
+    return False, ""
 
 
 def link_at_end(s, site):
     match = regex.compile(ur"http://[A-Za-z0-9-.]*/?[A-Za-z0-9-]*/?</a>(?:</strong>)?\s*</p>\s*$", regex.UNICODE).findall(s)
-    if len(match) > 0:
-        return not bool(regex.compile(r"\b(imgur|stackexchange|superuser|pastebin|dropbox|microsoft|newegg|cnet|google)\b", regex.UNICODE).search(match[0]))
-    return False
+    if len(match) > 0 and not regex.compile(r"\b(imgur|stackexchange|superuser|pastebin|dropbox|microsoft|newegg|cnet|google)\b", regex.UNICODE).search(match[0]):
+        return True, u"Link at end: {}".format(match[0])
+    return False, ""
 
 
 def has_phone_number(s, site):
     if regex.compile(ur"(?i)\b(run[- ]?time|error)\b", regex.UNICODE).search(s):
-        return False  # error code, not phone number
+        return False, ""  # error code, not phone number
     s = regex.sub("(?i)O", "0", s)
     s = regex.sub("(?i)S", "5", s)
     s = regex.sub("(?i)[I]", "1", s)
@@ -56,25 +62,28 @@ def has_phone_number(s, site):
     test_formats = ["IN", "US", None]
     for phone_number in matched:
         if regex.compile(r"^21474(672[56]|8364)\d$").search(phone_number):
-            return False  # error code or limit of int size
+            return False, ""  # error code or limit of int size
         for testf in test_formats:
             try:
                 z = phonenumbers.parse(phone_number, testf)
                 if phonenumbers.is_possible_number(z) and phonenumbers.is_valid_number(z):
                     print "Possible {}, Valid {}, Explain: {}".format(phonenumbers.is_possible_number(z), phonenumbers.is_valid_number(z), z)
-                    return True
+                    return True, u"Phone number: {}".format(phone_number)
             except phonenumbers.phonenumberutil.NumberParseException:
                 pass
-    return False
+    return False, ""
 
 
 def has_customer_service(s, site):
     s = s[0:200]       # when applied to body, the beginning should be enough: otherwise many false positives
-    business = regex.compile(r"(?i)\b(dell|epson|facebook|gmail|hotmail|hp|lexmark|mcafee|out[l1]ook|quickbooks|yahoo)\b").search(s)
+    business = regex.compile(r"(?i)\b(dell|epson|facebook|gmail|hotmail|hp|lexmark|mcafee|out[l1]ook|quickbooks|yahoo)\b").findall(s)
     if (business):
         keywords = regex.compile(r"(?i)\b(customer|help|helpline|password|phone|recovery|service|support|tech|technical|telephone|number|account|payroll|printer|login|online|solution|specialist|specailist|e?mail)\b").findall(s)
-        return len(set(keywords)) >= 2
-    return False
+        if len(set(keywords)) >= 2:
+            matches = ["".join(match) for match in keywords]
+            match = ", ".join(matches)
+            return True, "Possible scam aimed at {} customers. Keywords: {}".format(business[0], match)
+    return False, ""
 
 
 class FindSpam:
@@ -368,10 +377,13 @@ class FindSpam:
                         matched_body = compiled_regex.findall(body_to_check)
                 else:
                     assert 'method' in rule
-                    matched_title = rule['method'](title, site)
-                    matched_username = rule['method'](user_name, site)
+                    matched_title, why_title = rule['method'](title, site)
+                    why += why_title
+                    matched_username, why_username = rule['method'](user_name, site)
+                    why += why_username
                     if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer) and (is_answer or check_if_question):
-                        matched_body = rule['method'](body_to_check, site)
+                        matched_body, why_body = rule['method'](body_to_check, site)
+                        why += why_body
                 if matched_title and rule['title']:
                     why += FindSpam.generate_why(compiled_regex, title, u"Title", is_regex_check)
                     result.append(rule['reason'].replace("{}", "title"))
