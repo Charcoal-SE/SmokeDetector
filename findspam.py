@@ -82,7 +82,7 @@ def has_customer_service(s, site):
         if len(set(keywords)) >= 2:
             matches = ["".join(match) for match in keywords]
             match = ", ".join(matches)
-            return True, "Possible scam aimed at {} customers. Keywords: {}".format(business[0], match)
+            return True, "Scam aimed at {} customers. Keywords: {}".format(business[0], match)
     return False, ""
 
 
@@ -378,12 +378,15 @@ class FindSpam:
                 else:
                     assert 'method' in rule
                     matched_title, why_title = rule['method'](title, site)
-                    why += why_title
+                    if (matched_title):
+                        why += "Title - " + why_title + "\n"
                     matched_username, why_username = rule['method'](user_name, site)
-                    why += why_username
+                    if (matched_username):
+                        why += "Username - " + why_username + "\n"
                     if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer) and (is_answer or check_if_question):
                         matched_body, why_body = rule['method'](body_to_check, site)
-                        why += why_body
+                        if (matched_body): 
+                            why += "Post - " + why_body + "\n"
                 if matched_title and rule['title']:
                     why += FindSpam.generate_why(compiled_regex, title, u"Title", is_regex_check)
                     result.append(rule['reason'].replace("{}", "title"))
