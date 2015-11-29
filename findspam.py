@@ -385,7 +385,7 @@ class FindSpam:
                         why += "Username - " + why_username + "\n"
                     if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer) and (is_answer or check_if_question):
                         matched_body, why_body = rule['method'](body_to_check, site)
-                        if (matched_body): 
+                        if (matched_body):
                             why += "Post - " + why_body + "\n"
                 if matched_title and rule['title']:
                     why += FindSpam.generate_why(compiled_regex, title, u"Title", is_regex_check)
