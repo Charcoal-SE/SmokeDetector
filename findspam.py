@@ -53,7 +53,7 @@ def link_at_end(s, site):
 
 
 def has_phone_number(s, site):
-    if regex.compile(ur"(?i)\b(run[- ]?time|error)\b", regex.UNICODE).search(s):
+    if regex.compile(ur"(?i)\b(run[- ]?time|error|exception)\b", regex.UNICODE).search(s):
         return False, ""  # error code, not phone number
     s = regex.sub("(?i)O", "0", s)
     s = regex.sub("(?i)S", "5", s)
