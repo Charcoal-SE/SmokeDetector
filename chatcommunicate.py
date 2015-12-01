@@ -3,7 +3,6 @@ import time
 from threading import Thread
 from parsing import *
 from datahandling import *
-from bayesianfuncs import bayesian_learn_title
 from metasmoke import Metasmoke
 from globalvars import GlobalVars
 import os
@@ -140,15 +139,11 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                     if user is not None:
                         add_whitelisted_user(user)
                         user_added = True
-            learned = False
             if post_type == "question":
-                learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "good")
-                if learned and user_added and not quiet_action:
-                    return "Registered question as false positive, whitelisted user and added title to Bayesian doctype 'good'."
-                elif learned and not quiet_action:
-                    return "Registered question as false positive and added title to Bayesian doctype 'good'."
-                elif not learned:
-                    return "Registered question as false positive, but could not add title to Bayesian doctype 'good'."
+                if user_added and not quiet_action:
+                    return "Registered question as false positive and whitelisted user."
+                elif not quiet_action:
+                    return "Registered question as false positive."
             elif post_type == "answer":
                 if user_added and not quiet_action:
                     return "Registered answer as false positive and whitelisted user."
@@ -167,7 +162,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                                  args=(post_url, second_part_lower, ev_user_name, ))
             t_metasmoke.start()
 
-            learned = False
             user_added = False
             if message_parts[1].lower().startswith("trueu") or message_parts[1].lower().startswith("tpu"):
                 url_from_msg = fetch_owner_url_from_msg_content(msg_content)
@@ -177,18 +171,15 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                         add_blacklisted_user(user, message_url, "http:" + post_url)
                         user_added = True
             if post_type == "question":
-                learned = bayesian_learn_title(fetch_title_from_msg_content(msg_content), "bad")
-                if learned and user_added and not quiet_action:
+                if user_added and not quiet_action:
                     return "Blacklisted user and registered question as true positive: added title to the Bayesian doctype 'bad'."
-                elif learned and not quiet_action:
-                    return "Registered question as true positive: added title to the Bayesian doctype 'bad'."
-                elif not learned:
-                    return "Something went wrong when registering question as true positive."
+                elif not user_added:
+                    return "`tp` or `true` is obsolete because the Bayesian database doesn't exist anymore. Use `tpu` or `trueu` if you want to blacklist a user."
             elif post_type == "answer":
                 if not quiet_action:
                     if user_added:
                         return "Blacklisted user."
-                    return "Recorded answer as true positive. If you want to blacklist the poster of the answer, use `trueu` or `tpu`."
+                    return "No action taken right now; if you want to blacklist the poster of the answer, use `trueu` or `tpu`."
         if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id, wrap2):
             if post_site_id is None:
                 return "That message is not a report."
@@ -295,7 +286,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         user = get_user_from_url(post_data.owner_url)
         if user is not None:
             add_blacklisted_user(user, message_url, post_data.post_url)
-        bayesian_learn_title(post_data.title, "bad")
         why = u"Post manually reported by user *{}* in room *{}*.\n".format(ev_user_name, ev_room_name)
         handle_spam(post_data.title, post_data.body, post_data.owner_name, post_data.site, post_data.post_url,
                     post_data.owner_url, post_data.post_id, ["Manually reported " + post_data.post_type],

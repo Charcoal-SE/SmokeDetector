@@ -1,4 +1,3 @@
-import json
 import sys
 import time
 from threading import Thread
@@ -6,7 +5,6 @@ from findspam import FindSpam
 from datahandling import *
 from parsing import get_user_from_url, unescape_title,\
     escape_special_chars_in_title, to_protocol_relative
-from bayesianfuncs import bayesian_score
 from globalvars import GlobalVars
 from datetime import datetime
 from parsing import url_to_shortlink
@@ -64,10 +62,6 @@ def check_if_spam_json(data):
     url = d["url"]
     post_id = str(d["id"])
     print time.strftime("%Y-%m-%d %H:%M:%S"), title.encode("ascii", errors="replace")
-    quality_score = bayesian_score(title)
-    print quality_score
-    if quality_score < 0.3 and d["siteBaseHostAddress"] == "stackoverflow.com":
-        print GlobalVars.bayesian_testroom.send_message("[ SmokeDetector | BayesianBeta ] Quality score " + str(quality_score * 100) + ": [" + title + "](" + url + ")")
     site = d["siteBaseHostAddress"]
     site = site.encode("ascii", errors="replace")
     sys.stdout.flush()

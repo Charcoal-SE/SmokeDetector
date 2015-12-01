@@ -3,7 +3,6 @@ from globalvars import GlobalVars
 import json
 import time
 import requests
-from gibberish import classify_gibberish
 
 
 class BodyFetcher:
@@ -108,13 +107,6 @@ class BodyFetcher:
                         handle_spam(title, body, owner_name, site, link, owner_link, q_id, reason, False, why)
                     except:
                         print "NOP"
-
-            classified, gibberish_score = classify_gibberish(body, site)
-            if classified and gibberish_score >= 65:
-                GlobalVars.bayesian_testroom.send_message(
-                    "[ SmokeDetector | GibberishClassifierBeta ] "
-                    u"Potential gibberish body ({}%): [{}]({}) on `{}`".format(gibberish_score, title, link, site)
-                )
             try:
                 for answer in post["answers"]:
                     answer_title = ""
@@ -138,13 +130,6 @@ class BodyFetcher:
                                 handle_spam(title, body, owner_name, site, link, owner_link, a_id, reason, True, why)
                             except:
                                 print "NOP"
-
-                    classified, gibberish_score = classify_gibberish(body, site)
-                    if classified and gibberish_score >= 65:
-                        GlobalVars.bayesian_testroom.send_message(
-                            "[ SmokeDetector | GibberishClassifierBeta ] "
-                            u"Potential gibberish answer ({}%): [{}]({}) on `{}`".format(gibberish_score, title, link, site)
-                        )
             except:
                 print "no answers"
         return
