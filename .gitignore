@@ -52,6 +52,7 @@ latestMessages.txt
 
 # Error logs
 errorLogs.txt
+errorLogs.txt.*
 
 # Swap files
 *.swp
