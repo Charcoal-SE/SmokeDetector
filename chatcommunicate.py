@@ -428,7 +428,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         result = "> "
         reasons, why = FindSpam.test_post(string_to_test, string_to_test, string_to_test, "", False, False)
         if len(reasons) == 0:
-            result += "Would not be caught for title, body and username."
+            result += "Would not be caught for title, body, and username."
             return result
         result += ", ".join(reasons).capitalize()
         if why is not None and len(why) > 0:
