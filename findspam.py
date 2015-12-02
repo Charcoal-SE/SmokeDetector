@@ -249,7 +249,7 @@ class FindSpam:
                             "rozapk\\.com", "jihosoft\\.com", "mahnazmezon\\.com", "technical-care\\.com",
                             "skyformation\\.com", "shiftingsolutions\\.in", "bandsawjudge\\.com",
                             "liveestorebuilder\\.com", "exampracticequestions\\.com", "createspace\\.com",
-                            "healthpeters\\.com", "fun-flicks\\.com", "smarketingclub\\.com"]
+                            "healthpeters\\.com", "fun-flicks\\.com", "smarketingclub\\.com", "cbitss\\.in"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"//xtra[\w-]*?\.(co|net|org|in\W|info)",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
@@ -266,8 +266,8 @@ class FindSpam:
                         r"(livestreaming|watch[\w-]*?(live|online))\.(com|net|tv)",
                         r"//(cheat[\w-.]{3,}|xtreme[\w-]{5,})\.(co|net|org|in\W|info)",
                         r"([\w-]password|[\w]{5,}facts|\Btoyshop|[\w-]{6,}cheats|credits)\.(co|net|org|in\W|info)",
-                        r"(extramoney|spell(caster|specialist)|profits|ketone|seotools|seotrick|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(bestmover|loans|escort|testo[-bsx]|cleanse|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(extramoney|earnathome|spell(caster|specialist)|profits|ketone|seotools|seotrick|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(bestmover|loans|escort|testo[-bsx]|cleanse|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(buy|premium|training|thebest|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
                         r"\w{10}buy\.(co|net|org|in\W|info)",
                         r"(strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
@@ -337,7 +337,7 @@ class FindSpam:
          'sites': ["jp.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com", "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com"], 'reason': 'Non-Latin link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False},
         {'method': link_at_end, 'all': False,
          'sites': ["superuser.com", "drupal.stackexchange.com", "meta.stackexchange.com", "security.stackexchange.com", "patents.stackexchange.com"], 'reason': 'Link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'answers': False},
-        {'regex': ur'(?s)^.{0,200}<p>\s*<a href="http://[\w.-]+/?"[^<]*</a>\s*</p>\s*$', 'all': True,
+        {'regex': ur'(?s)^.{0,200}<p>\s*<a href="http://[\w.-]+\.(com|net|in|co.uk)/?"[^<]*</a>\s*</p>\s*$', 'all': True,
          'sites': [], 'reason': 'Link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False},
         {'regex': u".*<pre>.*", 'all': False, 'sites': ["puzzling.stackexchange.com"], 'reason': 'Code block', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'report_everywhere': False, 'body_summary': False},
         {'regex': ur"(?i)\b(erica|jeff|er1ca|spam|moderator)\b", 'all': False, 'sites': ["parenting.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True},
