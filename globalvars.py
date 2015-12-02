@@ -59,13 +59,13 @@ class GlobalVars:
                                               "161974",  # Lynn Crumbling
                                               "186281",  # Andy
                                               "266094",  # Unihedro
-                                              "245167",  # Infinite Recursion (No.)
+                                              "245167",  # Infinite Recursion
                                               "230261",  # Jason C
                                               "213575",  # Braiam
                                               "241919",  # Andrew T.
                                               "203389",  # backwards-Seth
                                               "202832",  # Mooseman
-                                              "160017",  # DragonLord the Fiery
+                                              "160017",  # bwDraco
                                               "201151",  # bummi
                                               "188558",  # Frank
                                               "229166",  # Santa Claus
@@ -99,6 +99,7 @@ class GlobalVars:
                                               "253560",  # josilber
                                               "244254",  # misterManSam
                                               "188189",  # Robert Longson
+                                              "174699",  # Ilmari Karonen
                                               "202362"],  # chmod 666 telkitty
                         socvr_room_id: [
                             "1849664",  # Undo
