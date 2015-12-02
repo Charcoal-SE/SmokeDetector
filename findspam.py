@@ -255,7 +255,7 @@ class FindSpam:
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
                         r"essay\w{6,}\.(co|net|org|in\W|info)",
                         r"top\d\w{2,15}\.in\W",
-                        r"[\w-](recovery|repair|(?<!epoch)converter)(pro|kit)?\.(com|net)",
+                        r"[\w-](recovery|repair|(?<!epoch|font)converter)(pro|kit)?\.(com|net)",
                         r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)[\w-]*?(tech|customer|support|service|phone|help|\d+)[\w-]*?(support|phone|number)",
                         r"sourceforge\.net[\w/]*convert",
                         r"fix[\w-]*?(files?|tool(box)?)\.com",
