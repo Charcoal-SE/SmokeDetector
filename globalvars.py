@@ -136,7 +136,8 @@ class GlobalVars:
                             "1816093",  # Drew
                             "874188",  # Triplee
                             "880772",  # approxiblue
-                            "1835379"]  # Cerbrus
+                            "1835379",  # Cerbrus
+                            "1843331"]  # Tim Castelijns
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
