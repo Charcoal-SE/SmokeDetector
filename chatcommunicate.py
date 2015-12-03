@@ -302,7 +302,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                                   'plz send teh coffee',
                                   'Watching this endless list of new questions *never* gets boring',
                                   'Kinda sorta'])
-    if content_lower.startswith("!!/rev"):
+    if content_lower.startswith("!!/rev") or content_lower.startswith("!!/ver"):
             return '[' + \
                 GlobalVars.commit_with_author + \
                 '](https://github.com/Charcoal-SE/SmokeDetector/commit/' + \
