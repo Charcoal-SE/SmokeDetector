@@ -28,8 +28,9 @@ def has_repeated_words(s, site):
 
 
 def has_few_characters(s, site):
-    uniques = len(set(list(s))) - 4    # discount < / p > which always appear in post body
-    if (len(s) > 36 and uniques < 6) or (len(s) > 100 and uniques < 12):    # reduce if false reports appear
+    s = regex.sub("(?s)</?p>", "", s)
+    uniques = len(set(list(s)))
+    if (len(s) >= 30 and uniques <= 6) or (len(s) >= 100 and uniques <= 15):    # reduce if false reports appear
         return True, u"Contains {} unique characters".format(uniques)
     return False, ""
 
