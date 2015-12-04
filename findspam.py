@@ -268,7 +268,7 @@ class FindSpam:
                         r"//(cheat[\w-.]{3,}|xtreme[\w-]{5,})\.(co|net|org|in\W|info)",
                         r"([\w-]password|[\w]{5,}facts|\Btoyshop|[\w-]{6,}cheats|credits)\.(co|net|org|in\W|info)",
                         r"(extramoney|earnathome|spell(caster|specialist)|profits|ketone|seotools|seotrick|crazybulk|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(bestmover|\w{6}mortgage|loans|revenue|escort|testo[-bsx]|cleanse|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(bestmover|\w{4}mortgage|loans|revenue|escort|testo[-bsx]|cleanse|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(buy|premium|training|thebest|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
                         r"\w{10}buy\.(co|net|org|in\W|info)",
                         r"(strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
