@@ -171,15 +171,15 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                         add_blacklisted_user(user, message_url, "http:" + post_url)
                         user_added = True
             if post_type == "question":
-                if user_added and not quiet_action:
-                    return "Blacklisted user and registered question as true positive: added title to the Bayesian doctype 'bad'."
-                elif not user_added:
-                    return "`tp` or `true` is obsolete because the Bayesian database doesn't exist anymore. Use `tpu` or `trueu` if you want to blacklist a user."
+                if not quiet_action:
+                    if user_added and not quiet_action:
+                        return "Blacklisted user and registered question as true positive: added title to the Bayesian doctype 'bad'."
+                    return "Recorded question as true positive in metasmoke. Use `tpu` or `trueu` if you want to blacklist a user."
             elif post_type == "answer":
                 if not quiet_action:
                     if user_added:
                         return "Blacklisted user."
-                    return "No action taken right now; if you want to blacklist the poster of the answer, use `trueu` or `tpu`."
+                    return "Recorded answer as true positive in metasmoke. If you want to blacklist the poster of the answer, use `trueu` or `tpu`."
         if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id, wrap2):
             if post_site_id is None:
                 return "That message is not a report."
