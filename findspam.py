@@ -22,7 +22,7 @@ def has_repeated_words(s, site):
         else:
             curr = 0
         prev = w
-        if curr >= 5 and curr * len(w) >= 0.1 * len(s):
+        if curr >= 5 and curr * len(w) >= 0.2 * len(s):
             return True, u"Repeated word {}".format(w)
     return False, ""
 
