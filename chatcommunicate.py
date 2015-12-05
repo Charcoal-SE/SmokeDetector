@@ -172,7 +172,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                         user_added = True
             if post_type == "question":
                 if not quiet_action:
-                    if user_added and not quiet_action:
+                    if user_added:
                         return "Blacklisted user and registered question as true positive: added title to the Bayesian doctype 'bad'."
                     return "Recorded question as true positive in metasmoke. Use `tpu` or `trueu` if you want to blacklist a user."
             elif post_type == "answer":
