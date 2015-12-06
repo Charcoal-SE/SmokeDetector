@@ -75,6 +75,8 @@ class BodyFetcher:
             return  # could add some retrying logic here, but eh.
 
         if "quota_remaining" in response:
+            if response["quota_remaining"] > GlobalVars.apiquota:
+                GlobalVars.charcoal_hq.send_message("API quota rolled over with {} requests remaining.".format(GlobalVars.apiquota))
             GlobalVars.apiquota = response["quota_remaining"]
         else:
             GlobalVars.apiquota = 0
