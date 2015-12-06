@@ -112,7 +112,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         msg_id = int(message_parts[0][1:])
         msg = wrap2.get_message(msg_id)
         msg_content = msg.content_source
-        quiet_action = ("-" in message_parts[1].lower())
+        quiet_action = ("-" in message_parts[1].lower()) or (second_part_lower == "f") or (second_part_lower == "k")
         if str(msg.owner.id) != GlobalVars.smokeDetector_user_id[ev_room] or msg_content is None:
             return
         post_url = fetch_post_url_from_msg_content(msg_content)
@@ -121,7 +121,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             post_type = post_site_id[2]
         else:
             post_type = None
-        if (second_part_lower.startswith("false") or second_part_lower.startswith("fp")) \
+        if (second_part_lower.startswith("false") or second_part_lower.startswith("fp") or second_part_lower == "f") \
                 and is_privileged(ev_room, ev_user_id, wrap2):
             if post_site_id is None:
                 return "That message is not a report."
@@ -132,7 +132,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
 
             add_false_positive((post_site_id[0], post_site_id[1]))
             user_added = False
-            if message_parts[1].lower().startswith("falseu") or message_parts[1].lower().startswith("fpu"):
+            if second_part_lower.startswith("falseu") or second_part_lower.startswith("fpu"):
                 url_from_msg = fetch_owner_url_from_msg_content(msg_content)
                 if url_from_msg is not None:
                     user = get_user_from_url(url_from_msg)
@@ -153,7 +153,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 msg.delete()
             except:
                 pass
-        if (second_part_lower.startswith("true") or second_part_lower.startswith("tp")) \
+        if (second_part_lower.startswith("true") or second_part_lower.startswith("tp") or second_part_lower == "k") \
                 and is_privileged(ev_room, ev_user_id, wrap2):
             if post_site_id is None:
                 return "That message is not a report."
@@ -163,7 +163,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             t_metasmoke.start()
 
             user_added = False
-            if message_parts[1].lower().startswith("trueu") or message_parts[1].lower().startswith("tpu"):
+            if second_part_lower.startswith("trueu") or second_part_lower.startswith("tpu") or second_part_lower == "k":
                 url_from_msg = fetch_owner_url_from_msg_content(msg_content)
                 if url_from_msg is not None:
                     user = get_user_from_url(url_from_msg)
