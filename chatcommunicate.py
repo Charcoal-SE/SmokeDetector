@@ -56,7 +56,7 @@ def watcher(ev, wrap2):
     message_parts = content_source.split(" ")
 
     ev_user_name = ev.data["user_name"].encode('utf-8')
-    ev_user_link = "//chat." + wrap2.host + "/users/" + ev.message.data["owner_user_id"]
+    ev_user_link = "//chat." + wrap2.host + "/users/" + str(ev.user.id)
     if ev_user_name != "SmokeDetector":
         GlobalVars.tavern_users_chatting.append((ev_user_name, ev_user_link))
 
