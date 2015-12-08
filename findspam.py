@@ -299,8 +299,6 @@ class FindSpam:
          'sites': ["chinese.stackexchange.com", "japanese.stackexchange.com"], 'reason': "Chinese character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11},
         {'regex': ur"(?i)\p{Script=Devanagari}", 'all': True,
          'sites': ["hinduism.stackexchange.com"], 'reason': "Hindi character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11},
-        {'regex': ur"(?i)｡|。", 'all': True,
-         'sites': ["chinese.stackexchange.com", "japanese.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11},
         {'regex': ur"(?i)(>>>|===>|==>>>|(Read|Visit) More\s*[=>]{2,})(?=(?s).{0,20}http)", 'all': True,
          'sites': [], 'reason': "Bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 11},
         {'regex': ur"(?i)\b(muscles?|testo ?[sx]\w*|body ?build(er|ing)|wrinkles?|(?<!to )supplements?|probiotics?|acne)\b", 'all': True,
