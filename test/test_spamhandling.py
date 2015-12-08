@@ -36,7 +36,7 @@ def test_check_if_spam(title, body, username, site, match):
     post_id = 0
     # If we want to test answers separatly, this should be changed
     is_answer = False
-    is_spam, reason, _ = check_if_spam(title, body, username, user_url, site, post_id, is_answer, False)
+    is_spam, reason, _ = check_if_spam(title, body, username, user_url, site, post_id, is_answer, False, 1)
     print title
     assert match == is_spam
 

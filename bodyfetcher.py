@@ -102,13 +102,12 @@ class BodyFetcher:
                 owner_rep = 0
             q_id = str(post["question_id"])
 
-            if owner_rep <= 50:
-                is_spam, reason, why = check_if_spam(title, body, owner_name, owner_link, site, q_id, False, False)
-                if is_spam:
-                    try:
-                        handle_spam(title, body, owner_name, site, link, owner_link, q_id, reason, False, why)
-                    except:
-                        print "NOP"
+            is_spam, reason, why = check_if_spam(title, body, owner_name, owner_link, site, q_id, False, False, owner_rep)
+            if is_spam:
+                try:
+                    handle_spam(title, body, owner_name, site, link, owner_link, q_id, reason, False, why)
+                except:
+                    print "NOP"
             try:
                 for answer in post["answers"]:
                     answer_title = ""
@@ -125,13 +124,12 @@ class BodyFetcher:
                         owner_link = ""
                         owner_rep = 0
 
-                    if owner_rep <= 50:
-                        is_spam, reason, why = check_if_spam(answer_title, body, owner_name, owner_link, site, a_id, True, False)
-                        if is_spam:
-                            try:
-                                handle_spam(title, body, owner_name, site, link, owner_link, a_id, reason, True, why)
-                            except:
-                                print "NOP"
+                    is_spam, reason, why = check_if_spam(answer_title, body, owner_name, owner_link, site, a_id, True, False, owner_rep)
+                    if is_spam:
+                        try:
+                            handle_spam(title, body, owner_name, site, link, owner_link, a_id, reason, True, why)
+                        except:
+                            print "NOP"
             except:
                 print "no answers"
         return
