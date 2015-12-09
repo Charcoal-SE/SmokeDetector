@@ -208,7 +208,7 @@ class FindSpam:
                             "products\\.odosta\\.com", "naturacelhelp",
                             "rackons\\.com", "imonitorsoft\\.com", "biginfosys\\.com",
                             "analec\\.com", "livesportstv\\.us", "batteriedepcportable",
-                            "stadtbett\\.com",
+                            "stadtbett\\.com", "tokoterbaik\\.com",
                             "jetcheats\\.com", "cheatio\\.com", "empiremountainbikes",
                             "optimalstackfacts", "x4facts", "endomondo\\.com",
                             "litindia\\.in", "shoppingcartelite\\.com",
