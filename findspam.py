@@ -54,6 +54,17 @@ def link_at_end(s, site):
     return False, ""
 
 
+def non_english_link(s, site):   # non-english link in short answer
+    if len(s) < 400:
+        links = regex.compile(ur"(?<=>)[^<]*(?=</a>)", regex.UNICODE).findall(s)
+        for link_text in links:
+            word_chars = regex.sub(r"(?u)\W", "", link_text)
+            non_latin_chars = regex.sub(r"\w", "", word_chars)
+            if len(non_latin_chars) > 0.2*len(word_chars) and len(non_latin_chars) >= 2:
+                return True, u"Non-English link text {}".format(link_text)
+    return False, ""
+
+
 def has_phone_number(s, site):
     if regex.compile(ur"(?i)\b(run[- ]?time|error|(sp)?exception|1234567)\b", regex.UNICODE).search(s):
         return False, ""  # not a phone number
@@ -339,7 +350,9 @@ class FindSpam:
         {'method': link_at_end, 'all': False,
          'sites': ["superuser.com", "drupal.stackexchange.com", "meta.stackexchange.com", "security.stackexchange.com", "patents.stackexchange.com"], 'reason': 'Link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'answers': False, 'max_rep': 11},
         {'regex': ur'(?s)^.{0,200}<p>\s*<a href="http://[\w.-]+\.(com|net|in|co.uk)/?"[^<]*</a>\s*</p>\s*$', 'all': True,
-         'sites': [], 'reason': 'Link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 11},
+         'sites': [], 'reason': 'Link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1},
+        {'method': link_at_end, 'all': True,
+         'sites': [], 'reason': 'Non-English Link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1},
         {'regex': u".*<pre>.*", 'all': False, 'sites': ["puzzling.stackexchange.com"], 'reason': 'Code block', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'report_everywhere': False, 'body_summary': False, 'max_rep': 50},
         {'regex': ur"(?i)\b(erica|jeff|er1ca|spam|moderator)\b", 'all': False, 'sites': ["parenting.stackexchange.com"], 'reason': "Bad keyword in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50},
         {'regex': ur"^(?is).{0,200}black magic", 'all': True,
