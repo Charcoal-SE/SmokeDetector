@@ -7,7 +7,7 @@ def all_caps_text(s, site):
     s = regex.sub("<[^>]*>", "", s)   # remove HTML tags from posts
     if len(s) <= 150 and regex.compile(ur"SQL|\b(ERROR|PHP|QUERY|ANDROID|CASE|SELECT|HAVING|COUNT|GROUP|ORDER BY|INNER|OUTER)\b").search(s):
         return False, ""   # common words in non-spam all-caps titles
-    if regex.compile(ur"^(?=.*\p{upper})\P{lower}*$", regex.UNICODE).search(s):
+    if len(s) >= 25 and regex.compile(ur"^(?=.*\p{upper})\P{lower}*$", regex.UNICODE).search(s):
         return True, "All in caps"
     return False, ""
 
@@ -29,7 +29,7 @@ def has_repeated_words(s, site):
 
 
 def has_few_characters(s, site):
-    s = regex.sub("<[^>]*>", "", s)    # remove HTML tags from posts
+    s = regex.sub("</?p>", "", s)    # remove HTML paragraph tags from posts
     uniques = len(set(list(s)))
     if (len(s) >= 30 and uniques <= 6) or (len(s) >= 100 and uniques <= 15):    # reduce if false reports appear
         return True, u"Contains {} unique characters".format(uniques)
