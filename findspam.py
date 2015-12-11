@@ -134,7 +134,7 @@ class FindSpam:
                     "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity",
                     "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?", "intellux", "viooz",
                     "smartican", "essay writing service", "T-complex", "retrodynamic formula",
-                    "eltima", "raging lion"]
+                    "eltima", "raging lion", "love.*spell ?caster"]
     bad_keywords_nwb = [u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "eye ?(serum|lift)", "(serum|lift) ?eye", "tophealth", "poker ?online",
@@ -265,11 +265,11 @@ class FindSpam:
                             "healthpeters\\.com", "fun-flicks\\.com", "smarketingclub\\.com", "cbitss\\.in",
                             "o-lovius\\.com", "crackedapkfull\\.com", "aldovmcgregor\\.co", "priredeream\\.com",
                             "adonads\\.com", "uufix\\.com", "slimrootz\\.com", "robomart\\.com", "fedotov\\.co",
-                            "resumewritingservicecleveland\\.us"]
+                            "resumewritingservicecleveland\\.us", "uflysoft\\.net"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
-                        r"essay\w{6,}\.(co|net|org|in\W|info)",
+                        r"(essay|resume)\w{6,}\.(co|net|org|in\W|info|us)",
                         r"top\d\w{2,15}\.in\W",
                         r"[\w-](recovery|repair|(?<!epoch|font)converter)(pro|kit)?\.(com|net)",
                         r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)[\w-]*?(tech|customer|support|service|phone|help|\d+)[\w-]*?(support|phone|number)",
