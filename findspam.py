@@ -265,7 +265,8 @@ class FindSpam:
                             "healthpeters\\.com", "fun-flicks\\.com", "smarketingclub\\.com", "cbitss\\.in",
                             "o-lovius\\.com", "crackedapkfull\\.com", "aldovmcgregor\\.co", "priredeream\\.com",
                             "adonads\\.com", "uufix\\.com", "slimrootz\\.com", "robomart\\.com", "fedotov\\.co",
-                            "resumewritingservicecleveland\\.us", "uflysoft\\.net", "simicart\\.com"]
+                            "resumewritingservicecleveland\\.us", "uflysoft\\.net", "simicart\\.com",
+                            "thereferraltask\\.net"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
