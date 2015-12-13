@@ -416,7 +416,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             hourstr = "hours" if hours != 1 else "hour"
             minutestr = "minutes" if minutes != 1 else "minute"
             secondstr = "seconds" if seconds != 1 else "second"
-            return "HATS ARE AWESOME. Winter Bash will begin in {} {}, {} {}, {} {} and {} {}. :D".format(diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
+            return "HATS ARE AWESOME. Winter Bash will begin in {} {}, {} {}, {} {}, and {} {}. :D".format(diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
         elif wb_end > now:
             diff = wb_end - now
             hours, remainder = divmod(diff.seconds, 3600)
@@ -425,7 +425,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             hourstr = "hours" if hours != 1 else "hour"
             minutestr = "minutes" if minutes != 1 else "minute"
             secondstr = "seconds" if seconds != 1 else "second"
-            return "GO EARN HATS! Winter Bash won't end for {} {}, {} {}, {} {} and {} {}. :D".format(diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
+            return "GO EARN HATS! Winter Bash won't end for {} {}, {} {}, {} {}, and {} {}. :D".format(diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
     if content_lower.startswith("!!/test"):
         string_to_test = content[8:]
         if len(string_to_test) == 0:
