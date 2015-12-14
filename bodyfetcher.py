@@ -23,6 +23,8 @@ class BodyFetcher:
         d = json.loads(json.loads(post)["data"])
         sitebase = d["siteBaseHostAddress"]
         postid = d["id"]
+        if postid == 3122 and sitebase == "meta.stackexchange.com":
+            return  # don't check meta sandbox, it's full of weird posts
         if sitebase in self.queue:
             self.queue[sitebase].append(postid)
         else:
