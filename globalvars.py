@@ -101,6 +101,7 @@ class GlobalVars:
                                               "188189",  # Robert Longson
                                               "174699",  # Ilmari Karonen
                                               "202362",  # chmod 666 telkitty
+                                              "289717",  # Quill
                                               "237813"],  # bjb568
                         socvr_room_id: [
                             "1849664",  # Undo
