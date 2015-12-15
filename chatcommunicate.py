@@ -126,7 +126,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             post_type = post_site_id[2]
         else:
             post_type = None
-        if (second_part_lower.startswith("false") or second_part_lower.startswith("fp")) \
+        if (second_part_lower.startswith("false") or second_part_lower.startswith("fp") or second_part_lower.startswith("ignore")) \
                 and is_privileged(ev_room, ev_user_id, wrap2):
             if post_site_id is None:
                 return "That message is not a report."
@@ -137,7 +137,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
 
             add_false_positive((post_site_id[0], post_site_id[1]))
             user_added = False
-            if second_part_lower.startswith("falseu") or second_part_lower.startswith("fpu"):
+            if second_part_lower.startswith("falseu") or second_part_lower.startswith("fpu") or second_part_lower.startswith("ignoreu"):
                 url_from_msg = fetch_owner_url_from_msg_content(msg_content)
                 if url_from_msg is not None:
                     user = get_user_from_url(url_from_msg)
@@ -146,14 +146,14 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                         user_added = True
             if post_type == "question":
                 if user_added and not quiet_action:
-                    return "Registered question as false positive and whitelisted user."
+                    return "Registered question as false positive and whitelisted user. I will not post any reports anymore about that question, and also not about that user *if they would get reported for their username*."
                 elif not quiet_action:
-                    return "Registered question as false positive."
+                    return "Registered question as false positive. I will not post any reports anymore about that question."
             elif post_type == "answer":
                 if user_added and not quiet_action:
-                    return "Registered answer as false positive and whitelisted user."
+                    return "Registered answer as false positive and whitelisted user. I will not post any reports anymore about that answer, and also not about that user *if they would get reported for their username*."
                 elif not quiet_action:
-                    return "Registered answer as false positive."
+                    return "Registered answer as false positive. I will not post any reports anymore about that answer."
             try:
                 msg.delete()
             except:
@@ -185,17 +185,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                     if user_added:
                         return "Blacklisted user."
                     return "Recorded answer as true positive in metasmoke. If you want to blacklist the poster of the answer, use `trueu` or `tpu`."
-        if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id, wrap2):
-            if post_site_id is None:
-                return "That message is not a report."
-
-            t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
-                                 args=(post_url, second_part_lower, ev_user_name, ))
-            t_metasmoke.start()
-
-            add_ignored_post(post_site_id[0:2])
-            if not quiet_action:
-                return "Post ignored; alerts about it will no longer be posted."
         if (second_part_lower.startswith("delete") or second_part_lower.startswith("remove") or second_part_lower.startswith("gone") or second_part_lower.startswith("poof")
                 or second_part_lower == "del") and is_privileged(ev_room, ev_user_id, wrap2):
             try:
