@@ -89,7 +89,7 @@ def has_phone_number(s, site):
 
 def has_customer_service(s, site):
     s = s[0:200]       # when applied to body, the beginning should be enough: otherwise many false positives
-    business = regex.compile(r"(?i)\b(dell|epson|facebook|gmail|hotmail|hp|lexmark|mcafee|out[l1]ook|quickbooks|yahoo)\b").findall(s)
+    business = regex.compile(r"(?i)\b(dell|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|out[l1]ook|quickbooks|yahoo)\b").findall(s)
     digit = regex.compile(r"\d").search(s)
     if (business and digit):
         keywords = regex.compile(r"(?i)\b(customer|help|helpline|phone|recovery|service|support|tech|technical|telephone|number)\b").findall(s)
@@ -296,7 +296,7 @@ class FindSpam:
                         r"\w{11}(ideas?|income|sale|reviews?|advices?|problog)\.(co|net|org|in\W|info)",
                         "-poker\\.com", "send[\w-]*?india\.(co|net|org|in\W|info)",
                         r"(corrupt|repair)[\w-]*?\.blogspot", r"[\w-]courses.in/",
-                        r"(file|photo)recovery[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(file|photo|android|iphone)recovery[\w-]*?\.(co|net|org|in\W|info)",
                         r"(videos?|movies?|watch)online[\w-]*?\.", r"hd(video|movie)[\w-]*?\.",
                         r"backlink(?!(o\.|watch))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(replica[^nt]\w{5,20}|\wrolex)\.com",
