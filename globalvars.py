@@ -140,7 +140,8 @@ class GlobalVars:
                             "880772",  # approxiblue
                             "1835379",  # Cerbrus
                             "1843331",  # Tim Castelijns
-                            "3956566"]  # Ms Yvette
+                            "3956566",  # JamesENL
+                            "2357233"]  # Ms Yvette
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
