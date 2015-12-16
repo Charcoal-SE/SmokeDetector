@@ -13,6 +13,7 @@ from apigetpost import api_get_post
 from spamhandling import handle_spam
 from termcolor import colored
 from findspam import FindSpam
+from ChatExchange.chatexchange.messages import Message
 
 
 # Please note: If new !!/ commands are added or existing ones are modified, don't forget to
@@ -51,6 +52,8 @@ def watcher(ev, wrap2):
     ev_room = str(ev.data["room_id"])
     ev_user_id = str(ev.data["user_id"])
     ev_room_name = ev.data["room_name"].encode('utf-8')
+    if ev.type_id == 2:
+        ev.message = Message(ev.message.id, wrap2)
     content_source = ev.message.content_source
     message_id = ev.message.id
     if is_smokedetector_message(ev_user_id, ev_room):
