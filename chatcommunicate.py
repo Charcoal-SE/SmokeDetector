@@ -105,13 +105,15 @@ def watcher(ev, wrap2):
             ev.message.reply(reply)
     else:
         r = handle_commands(content_source.lower(), message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content_source, message_id)
-        if r is not None and r is not False:
+        if type(r) != tuple:
+            r = (True, r)
+        if r[1] is not None and r[0] is not False:
             if wrap2.host + str(message_id) in GlobalVars.listen_to_these_if_edited:
                 GlobalVars.listen_to_these_if_edited.remove(wrap2.host + str(message_id))
-            message_with_reply = u":{} {}".format(message_id, r)
-            if len(message_with_reply) <= 500 or "\n" in r:
-                ev.message.reply(r, False)
-        elif r is False:
+            message_with_reply = u":{} {}".format(message_id, r[1])
+            if len(message_with_reply) <= 500 or "\n" in r[1]:
+                ev.message.reply(r[1], False)
+        elif r[0] is False:
             if wrap2.host + str(message_id) not in GlobalVars.listen_to_these_if_edited:
                 GlobalVars.listen_to_these_if_edited.append(wrap2.host + str(message_id))
             if len(GlobalVars.listen_to_these_if_edited) > 500:
@@ -251,7 +253,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         elif uid == -2:
             return "Error: {}".format(val)
         else:
-            return "Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`."
+            return False, "Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`."
     if content_lower.startswith("!!/isblu"):
         uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
@@ -262,7 +264,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         elif uid == -2:
             return "Error: {}".format(val)
         else:
-            return "Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`."
+            return False, "Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`."
     if content_lower.startswith("!!/addwlu") \
             and is_privileged(ev_room, ev_user_id, wrap2):
         uid, val = get_user_from_list_command(content_lower)
@@ -272,7 +274,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         elif uid == -2:
             return "Error: {}".format(val)
         else:
-            return "Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`."
+            return False, "Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`."
     if content_lower.startswith("!!/rmwlu") \
             and is_privileged(ev_room, ev_user_id, wrap2):
         uid, val = get_user_from_list_command(content_lower)
@@ -284,7 +286,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         elif uid == -2:
             return "Error: {}".format(val)
         else:
-            return "Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`."
+            return False, "Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`."
     if content_lower.startswith("!!/iswlu"):
         uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
@@ -295,7 +297,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         elif uid == -2:
             return "Error: {}".format(val)
         else:
-            return "Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`."
+            return False, "Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`."
     if content_lower.startswith("!!/report") \
             and is_privileged(ev_room, ev_user_id, wrap2):
         if len(message_parts) < 2:
@@ -303,7 +305,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         url = message_parts[1]
         post_data = api_get_post(url)
         if post_data is None:
-            return "That does not look like a valid post URL."
+            return False, "That does not look like a valid post URL."
         if post_data is False:
             return "Could not find data for this post in the API. Check whether the post is not deleted yet."
         user = get_user_from_url(post_data.owner_url)
@@ -465,12 +467,12 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             return "No, you are not a privileged user."
     if content_lower.startswith("!!/notify"):
         if len(message_parts) != 3:
-            return "2 arguments expected"
+            return False, "2 arguments expected"
         user_id = int(ev_user_id)
         chat_site = wrap2.host
         room_id = message_parts[1]
         if not room_id.isdigit():
-            return "Room ID is invalid."
+            return False, "Room ID is invalid."
         else:
             room_id = int(room_id)
         quiet_action = ("-" in message_parts[2])
@@ -484,15 +486,15 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         elif r == -1:
             return "That notification configuration is already registered."
         elif r == -2:
-            return "The given SE site does not exist."
+            return False, "The given SE site does not exist."
     if content_lower.startswith("!!/unnotify"):
         if len(message_parts) != 3:
-            return "2 arguments expected"
+            return False, "2 arguments expected"
         user_id = int(ev_user_id)
         chat_site = wrap2.host
         room_id = message_parts[1]
         if not room_id.isdigit():
-            return "Room ID is invalid."
+            return False, "Room ID is invalid."
         else:
             room_id = int(room_id)
         quiet_action = ("-" in message_parts[2])
@@ -506,4 +508,4 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         else:
             return "That configuration doesn't exist."
 
-    return False  # Unrecognized command, can be edited later.
+    return False, False  # Unrecognized command, can be edited later.
