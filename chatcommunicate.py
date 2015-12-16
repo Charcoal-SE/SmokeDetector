@@ -98,7 +98,7 @@ def watcher(ev, wrap2):
                     reply += "<processed without return value>" + os.linesep
                     amount_none += 1
                 elif result is False or r[0] is False:
-                    reply += "<unrecognized command or invalid arguments>" + os.linesep
+                    reply += "<unrecognized command>" + os.linesep
                     amount_none += 1
                     if wrap2.host + str(message_id) not in GlobalVars.listen_to_these_if_edited:
                         GlobalVars.listen_to_these_if_edited.append(wrap2.host + str(message_id))
