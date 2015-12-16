@@ -81,6 +81,7 @@ def watcher(ev, wrap2):
         reply = ""
         amount_none = 0
         amount_skipped = 0
+        amount_unrecognized = 0
         length = len(shortcut_messages)
         for i in range(0, length):
             current_message = shortcut_messages[i]
@@ -99,15 +100,16 @@ def watcher(ev, wrap2):
                     amount_none += 1
                 elif result is False or r[0] is False:
                     reply += "<unrecognized command>" + os.linesep
-                    amount_none += 1
-                    if wrap2.host + str(message_id) not in GlobalVars.listen_to_these_if_edited:
-                        GlobalVars.listen_to_these_if_edited.append(wrap2.host + str(message_id))
-                    if len(GlobalVars.listen_to_these_if_edited) > 500:
-                        GlobalVars.listen_to_these_if_edited = GlobalVars[-500:]
+                    amount_unrecognized += 1
             else:
                 reply += "<skipped>" + os.linesep
                 amount_skipped += 1
-        if amount_none + amount_skipped == length:
+        if amount_unrecognized == length:
+            if wrap2.host + str(message_id) not in GlobalVars.listen_to_these_if_edited:
+                GlobalVars.listen_to_these_if_edited.append(wrap2.host + str(message_id))
+            if len(GlobalVars.listen_to_these_if_edited) > 500:
+                GlobalVars.listen_to_these_if_edited = GlobalVars[-500:]
+        if amount_none + amount_skipped + amount_unrecognized == length:
             reply = ""
         else:
             reply = reply.strip()
