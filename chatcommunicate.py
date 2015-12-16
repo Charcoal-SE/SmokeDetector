@@ -41,7 +41,9 @@ def print_chat_message(ev):
 
 
 def watcher(ev, wrap2):
-    if ev.type_id != 1:
+    if ev.type_id != 1 and ev.type_id != 2:
+        return
+    if ev.type_id == 2 and (wrap2.host + str(ev.message.id)) not in GlobalVars.listen_to_these_if_edited:
         return
 
     print_chat_message(ev)
@@ -100,10 +102,17 @@ def watcher(ev, wrap2):
             ev.message.reply(reply)
     else:
         r = handle_commands(content_source.lower(), message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content_source, message_id)
-        if r is not None:
+        if r is not None and r is not False:
+            if wrap2.host + str(message_id) in GlobalVars.listen_to_these_if_edited:
+                GlobalVars.listen_to_these_if_edited.remove(wrap2.host + str(message_id))
             message_with_reply = u":{} {}".format(message_id, r)
             if len(message_with_reply) <= 500 or "\n" in r:
                 ev.message.reply(r, False)
+        elif r is False:
+            if wrap2.host + str(message_id) not in GlobalVars.listen_to_these_if_edited:
+                GlobalVars.listen_to_these_if_edited.append(wrap2.host + str(message_id))
+            if len(GlobalVars.listen_to_these_if_edited) > 500:
+                GlobalVars.listen_to_these_if_edited = GlobalVars[-500:]
 
 
 def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content, message_id):
@@ -180,11 +189,15 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                     if user_added:
                         return "Blacklisted user and registered question as true positive."
                     return "Recorded question as true positive in metasmoke. Use `tpu` or `trueu` if you want to blacklist a user."
+                else:
+                    return None
             elif post_type == "answer":
                 if not quiet_action:
                     if user_added:
                         return "Blacklisted user."
                     return "Recorded answer as true positive in metasmoke. If you want to blacklist the poster of the answer, use `trueu` or `tpu`."
+                else:
+                    return None
         if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id, wrap2):
             if post_site_id is None:
                 return "That message is not a report."
@@ -196,6 +209,8 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             add_ignored_post(post_site_id[0:2])
             if not quiet_action:
                 return "Post ignored; alerts about it will no longer be posted."
+            else:
+                return None
         if (second_part_lower.startswith("delete") or second_part_lower.startswith("remove") or second_part_lower.startswith("gone") or second_part_lower.startswith("poof")
                 or second_part_lower == "del") and is_privileged(ev_room, ev_user_id, wrap2):
             try:
@@ -488,4 +503,4 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         else:
             return "That configuration doesn't exist."
 
-    return None
+    return False  # Unrecognized command, can be edited later.

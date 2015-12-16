@@ -170,6 +170,7 @@ class GlobalVars:
     frequent_sentences = []
     why_data = []
     notifications = []
+    listen_to_these_if_edited = []
 
     config = ConfigParser.RawConfigParser()
     config.read('config')
