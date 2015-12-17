@@ -28,7 +28,7 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
         body = ""
     test, why = FindSpam.test_post(title, body, user_name, post_site, is_answer, body_is_summary, owner_rep)
     if is_blacklisted_user(get_user_from_url(user_url)):
-        test.append("Blacklisted user")
+        test.append("blacklisted user")
         blacklisted_user_data = get_blacklisted_user_data(get_user_from_url(user_url))
         if len(blacklisted_user_data) > 1:
             message_url = 'http:' + blacklisted_user_data[1]
