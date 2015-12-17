@@ -75,13 +75,13 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
     reason = ", ".join(reasons)
     reason = reason[:1].upper() + reason[1:]
     append_to_latest_questions(site, post_id, title if not is_answer else "")
-    if len(reasons) == 1 and ("All-caps title" in reasons or
-                              "Repeating characters in title" in reasons or
-                              "Repeating characters in body" in reasons or
-                              "Repeating characters in answer" in reasons or
-                              "Repeating words in title" in reasons or
-                              "Repeating words in body" in reasons or
-                              "Repeating words in answer" in reasons):
+    if len(reasons) == 1 and ("all-caps title" in reasons or
+                              "repeating characters in title" in reasons or
+                              "repeating characters in body" in reasons or
+                              "repeating characters in answer" in reasons or
+                              "repeating words in title" in reasons or
+                              "repeating words in body" in reasons or
+                              "repeating words in answer" in reasons):
         add_auto_ignored_post((post_id, site, datetime.now()))
     if why is not None and why != "":
         add_why(site, post_id, why)
