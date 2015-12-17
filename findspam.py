@@ -267,7 +267,7 @@ class FindSpam:
                             "o-lovius\\.com", "crackedapkfull\\.com", "aldovmcgregor\\.co", "priredeream\\.com",
                             "adonads\\.com", "uufix\\.com", "slimrootz\\.com", "robomart\\.com", "fedotov\\.co",
                             "resumewritingservicecleveland\\.us", "uflysoft\\.net", "simicart\\.com",
-                            "thereferraltask\\.net", "ajax2014\\.ir"]
+                            "thereferraltask\\.net", "ajax2014\\.ir", "voxforem\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
