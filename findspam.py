@@ -89,7 +89,7 @@ def has_phone_number(s, site):
 
 def has_customer_service(s, site):
     s = s[0:200]       # when applied to body, the beginning should be enough: otherwise many false positives
-    business = regex.compile(r"(?i)\b(dell|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|out[l1]ook|quickbooks|yahoo)\b").findall(s)
+    business = regex.compile(r"(?i)\b(dell|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|out[l1]ook|quickbooks|yahoo)\b").findall(s)
     digit = regex.compile(r"\d").search(s)
     if (business and digit):
         keywords = regex.compile(r"(?i)\b(customer|help|helpline|phone|recovery|service|support|tech|technical|telephone|number)\b").findall(s)
@@ -322,7 +322,7 @@ class FindSpam:
         {'regex': ur"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|kisn)\b)(?=.*?care).*products?\b|(?=.*?packer).*mover|(online|certification).*?training| vs .* (live|vivo)|\bxtra\b|\bwe offer\b|payday loan", 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11},
         # Fake-customer-service in title
-        {'method': has_customer_service, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11},
+        {'method': has_customer_service, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1},
         # Bad health-related keywords in titles, health sites are exempt
         {'regex': ur"(?i)\b(muscles?|testo ?[sx]\w*|body ?build(er|ing)|wrinkles?|(?<!to )supplements?|probiotics?|acne)\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11},
