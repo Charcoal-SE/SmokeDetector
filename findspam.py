@@ -144,7 +144,7 @@ class FindSpam:
                         "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim", "aimee[ -]?cream",
                         "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
                         "contact (me|us)\\W*<a ", "follicure", "kidney[ -]?bean[ -]?extract", "ecoflex",
-                        "\\brsgold", "bellavei", "goji ?xtreme", "lumagenex", "packers.{0,15}movers.{0,25}</a>",
+                        "\\brs(gold|song)", "bellavei", "goji ?xtreme", "lumagenex", "packers.{0,15}movers.{0,25}</a>",
                         "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)",
                         "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
