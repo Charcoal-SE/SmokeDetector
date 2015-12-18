@@ -321,7 +321,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             return False, "Not enough arguments."
         output = []
         index = 0
-        urls = message_parts[1:]
+        urls = list(set(message_parts[1:]))
         if len(urls) > 5:
             return False, "To avoid that SmokeDetector reports posts too slowly, " \
                           "you can report maximally 5 posts at a time. " \
