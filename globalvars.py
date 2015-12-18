@@ -171,6 +171,7 @@ class GlobalVars:
     why_data = []
     notifications = []
     listen_to_these_if_edited = []
+    multiple_reporters = []
 
     config = ConfigParser.RawConfigParser()
     config.read('config')

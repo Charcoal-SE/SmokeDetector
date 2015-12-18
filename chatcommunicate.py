@@ -1,5 +1,4 @@
 import random
-import time
 from threading import Thread
 from parsing import *
 from datahandling import *
@@ -312,21 +311,45 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             return False, "Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`."
     if content_lower.startswith("!!/report") \
             and is_privileged(ev_room, ev_user_id, wrap2):
+        crn, wait = can_report_now(ev_user_id, wrap2.host)
+        if not crn[0]:
+            return "You can execute the !!/report command again in {} seconds. " \
+                   "To avoid that one user sends loads of reports in a few commands (and slows down SmokeDetector due to rate-limiting), " \
+                   "you have to wait 30 seconds after you reported multiple posts using !!/report, even if your current command just has one URL. " \
+                   "(Note that this timeout won't be applied after you only used !!/report for one post)".format(wait)
         if len(message_parts) < 2:
-            return "Not enough arguments."
-        url = message_parts[1]
-        post_data = api_get_post(url)
-        if post_data is None:
-            return False, "That does not look like a valid post URL."
-        if post_data is False:
-            return "Could not find data for this post in the API. Check whether the post is not deleted yet."
-        user = get_user_from_url(post_data.owner_url)
-        if user is not None:
-            add_blacklisted_user(user, message_url, post_data.post_url)
-        why = u"Post manually reported by user *{}* in room *{}*.\n".format(ev_user_name, ev_room_name)
-        handle_spam(post_data.title, post_data.body, post_data.owner_name, post_data.site, post_data.post_url,
-                    post_data.owner_url, post_data.post_id, ["Manually reported " + post_data.post_type],
-                    post_data.post_type == "answer", why)
+            return False, "Not enough arguments."
+        output = []
+        index = 0
+        urls = message_parts[1:]
+        if len(urls) > 5:
+            return False, "To avoid that SmokeDetector reports posts too slowly, " \
+                          "you can report maximally 5 posts at a time. " \
+                          "This is to avoid that SmokeDetector's chat messages get rate-limited too much, " \
+                          "which would slow down reports."
+        for url in urls:
+            index += 1
+            post_data = api_get_post(url)
+            if post_data is None:
+                output.append("Post {}: That does not look like a valid post URL.".format(index))
+            if post_data is False:
+                output.append("Post {}: Could not find data for this post in the API. Check whether the post is not deleted yet.".format(index))
+            user = get_user_from_url(post_data.owner_url)
+            if user is not None:
+                add_blacklisted_user(user, message_url, post_data.post_url)
+            why = u"Post manually reported by user *{}* in room *{}*.\n".format(ev_user_name, ev_room_name)
+            batch = ""
+            if len(urls) > 1:
+                batch = " (batch report: post {} out of {})".format(index, len(urls))
+            handle_spam(post_data.title, post_data.body, post_data.owner_name, post_data.site, post_data.post_url,
+                        post_data.owner_url, post_data.post_id, ["Manually reported " + post_data.post_type + batch],
+                        post_data.post_type == "answer", why)
+        if 1 < len(urls) < len(output):
+            add_or_update_multiple_reporter(ev_user_id, wrap2.host, time.time())
+        if len(output) > 0:
+            return os.linesep.join(output)
+        else:
+            return None
     if content_lower.startswith("!!/wut"):
         return "Whaddya mean, 'wut'? Humans..."
     if content_lower.startswith("!!/lick"):

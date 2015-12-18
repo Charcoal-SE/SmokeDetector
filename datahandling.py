@@ -5,6 +5,8 @@ from globalvars import GlobalVars
 import requests
 import json
 import regex
+import time
+import math
 
 
 # methods to load files and filter data in them:
@@ -312,3 +314,30 @@ def append_pings(original_message, names):
         return original_message
     else:
         return "{0} ({1})".format(original_message, " ".join(["@" + x.replace(" ", "") for x in names]))
+
+
+# methods to check if someone waited long enough to use another !!/report with multiple URLs
+# (to avoid SmokeDetector's chat messages to be rate-limited too much)
+
+
+def add_or_update_multiple_reporter(user_id, chat_host, time_integer):
+    user_id = str(user_id)
+    for i in range(len(GlobalVars.multiple_reporters)):
+        if GlobalVars.multiple_reporters[i][0] == user_id and GlobalVars.multiple_reporters[i][1] == chat_host:
+            GlobalVars.multiple_reporters[i][2] = time_integer
+            return 1
+    GlobalVars.multiple_reporters.append((user_id, chat_host, time_integer))
+
+
+def can_report_now(user_id, chat_host):
+    user_id = str(user_id)
+    for reporter in GlobalVars.multiple_reporters:
+        if reporter[0] == user_id and reporter[1] == chat_host:
+            now = time.time()
+            latest_report = reporter[2]
+            can_report_again = latest_report + 30
+            if now > can_report_again:
+                return True, True
+            else:
+                return False, math.ceil(can_report_again - now)
+    return True, True
