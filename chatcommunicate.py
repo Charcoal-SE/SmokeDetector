@@ -332,8 +332,10 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             post_data = api_get_post(url)
             if post_data is None:
                 output.append("Post {}: That does not look like a valid post URL.".format(index))
+                continue
             if post_data is False:
                 output.append("Post {}: Could not find data for this post in the API. Check whether the post is not deleted yet.".format(index))
+                continue
             user = get_user_from_url(post_data.owner_url)
             if user is not None:
                 add_blacklisted_user(user, message_url, post_data.post_url)
