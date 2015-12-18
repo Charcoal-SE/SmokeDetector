@@ -305,7 +305,7 @@ class FindSpam:
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
         #
         # Category: Bad keywords
-        # The big list of bad keywords, for titles and posts 
+        # The big list of bad keywords, for titles and posts
         {'regex': ur"(?i)\b({})\b|{}".format("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50},
         # baba and nike are restricted to the beginning of posts: many false positives otherwise
@@ -322,10 +322,10 @@ class FindSpam:
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11},
         # Fake-customer-service in title
         {'method': has_customer_service, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11},
-        # Bad health-related keywords in titles, health sites are exempt 
+        # Bad health-related keywords in titles, health sites are exempt
         {'regex': ur"(?i)\b(muscles?|testo ?[sx]\w*|body ?build(er|ing)|wrinkles?|(?<!to )supplements?|probiotics?|acne)\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11},
-        # Bad health-related keywords in titles and posts, health sites are exempt 
+        # Bad health-related keywords in titles and posts, health sites are exempt
         {'regex': ur"(?i)virility|diet ?(plan|pill)|\b(pro)?derma(?=[a-su-z ]\w)|(fat|(?<![\w-])weight)[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|\bherpes\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 11},
         # "vs" in titles, for sports events, Patents only
@@ -347,7 +347,7 @@ class FindSpam:
         # Suspicious sites
         {'regex': u"(?i)({})(?![^>]*<)".format("|".join(pattern_websites)), 'all': True,
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 11},
-        # Suspicious health-related websites, health sites are exempt 
+        # Suspicious health-related websites, health sites are exempt
         {'regex': ur"(?i)(workout|fitness\w{2,}|diet|perfecthealth|muscle)[\w-]*?\.(com|co\.|net|org|info)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11},
         # Links preceded by arrows >>>
