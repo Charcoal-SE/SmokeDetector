@@ -344,7 +344,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             handle_spam(post_data.title, post_data.body, post_data.owner_name, post_data.site, post_data.post_url,
                         post_data.owner_url, post_data.post_id, ["Manually reported " + post_data.post_type + batch],
                         post_data.post_type == "answer", why)
-        if 1 < len(urls) < len(output):
+        if 1 < len(urls) > len(output):
             add_or_update_multiple_reporter(ev_user_id, wrap2.host, time.time())
         if len(output) > 0:
             return os.linesep.join(output)
