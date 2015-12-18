@@ -312,7 +312,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
     if content_lower.startswith("!!/report") \
             and is_privileged(ev_room, ev_user_id, wrap2):
         crn, wait = can_report_now(ev_user_id, wrap2.host)
-        if not crn[0]:
+        if not crn:
             return "You can execute the !!/report command again in {} seconds. " \
                    "To avoid that one user sends loads of reports in a few commands (and slows down SmokeDetector due to rate-limiting), " \
                    "you have to wait 30 seconds after you reported multiple posts using !!/report, even if your current command just has one URL. " \
