@@ -152,3 +152,18 @@ def handle_spam_json(data, reason, why=""):
         handle_spam(title, body, poster, site, url, poster_url, post_id, reason, False, why)
     except:
         print "NOP"
+
+
+def handle_user_with_all_spam(user_id, site):
+    s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All of this user's posts are spam: [user {} on {}](//{}/u/{}" \
+        .format(user_id, site, site, user_id)
+    print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
+    if time.time() >= GlobalVars.blockedTime:
+        GlobalVars.tavern_on_the_meta.send_message(s)
+        GlobalVars.charcoal_hq.send_message(s)
+        if site == "stackoverflow.com":
+            GlobalVars.socvr.send_message(s)
+        for specialroom in GlobalVars.specialrooms:
+            if site in specialroom["sites"]:
+                room = specialroom["room"]
+                room.send_message(s)

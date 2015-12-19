@@ -9,7 +9,7 @@ import re
 from datetime import datetime
 from utcdate import UtcDate
 from apigetpost import api_get_post
-from spamhandling import handle_spam
+from spamhandling import handle_spam, handle_user_with_all_spam
 from termcolor import colored
 from findspam import FindSpam
 from ChatExchange.chatexchange.messages import Message
@@ -352,6 +352,14 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             return os.linesep.join(output)
         else:
             return None
+    if content_lower.startswith("!!/allspam") and is_privileged(ev_room, ev_user_id, wrap2):
+        if len(message_parts) != 2:
+            return False, "1 argument expected"
+        url = message_parts[1]
+        user = get_user_from_url(url)
+        if user is None:
+            return "That doesn't look like a valid user URL."
+        handle_user_with_all_spam(user[0], user[1])
     if content_lower.startswith("!!/wut"):
         return "Whaddya mean, 'wut'? Humans..."
     if content_lower.startswith("!!/lick"):

@@ -4,13 +4,13 @@ from datahandling import check_site_and_get_full_name
 
 
 def get_user_from_url(url):
-    m = regex.compile(r"(?:https?:)?//([\w.]+)/users/(\d+)/.+/?").search(url)
+    m = regex.compile(r"(?:https?:)?//([\w.]+)/u(?:sers)?/(\d+)(/(?:.+/?)?)?").search(url)
     if m is None:
         return None
     try:
         site = m.group(1)
         user_id = m.group(2)
-        return (user_id, site)
+        return user_id, site
     except:
         return None
 
