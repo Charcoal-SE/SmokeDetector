@@ -324,7 +324,7 @@ def add_or_update_multiple_reporter(user_id, chat_host, time_integer):
     user_id = str(user_id)
     for i in range(len(GlobalVars.multiple_reporters)):
         if GlobalVars.multiple_reporters[i][0] == user_id and GlobalVars.multiple_reporters[i][1] == chat_host:
-            GlobalVars.multiple_reporters[i][2] = time_integer
+            GlobalVars.multiple_reporters[i] = (GlobalVars.multiple_reporters[i][0], GlobalVars.multiple_reporters[1], time_integer)
             return 1
     GlobalVars.multiple_reporters.append((user_id, chat_host, time_integer))
 
