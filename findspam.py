@@ -222,7 +222,7 @@ class FindSpam:
                             "analec\\.com", "livesportstv\\.us", "batteriedepcportable",
                             "stadtbett\\.com", "tokoterbaik\\.com",
                             "jetcheats\\.com", "cheatio\\.com", "empiremountainbikes",
-                            "optimalstackfacts", "x4facts", "endomondo\\.com",
+                            "optimalstack(facts|products)", "x4facts", "endomondo\\.com",
                             "litindia\\.in", "shoppingcartelite\\.com",
                             "customizedwallpaper\\.com", "cracksofts\\.com",
                             "crevalorsite\\.com", "macfixz\\.com", "moviesexplore\\.com",
