@@ -268,7 +268,7 @@ class FindSpam:
                             "adonads\\.com", "uufix\\.com", "slimrootz\\.com", "robomart\\.com", "fedotov\\.co",
                             "resumewritingservicecleveland\\.us", "uflysoft\\.net", "simicart\\.com",
                             "thereferraltask\\.net", "ajax2014\\.ir", "voxforem\\.com", "writeversity\\.com",
-                            "labstech\\.org", "rikshairuym", "zicamagsopt", "how2world\\.com"]
+                            "labstech\\.org", "rikshairuym", "zicamagsopt", "how2world\\.com", "splendyrsite\\.net"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
@@ -324,7 +324,7 @@ class FindSpam:
         # Fake-customer-service in title
         {'method': has_customer_service, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1},
         # Bad health-related keywords in titles, health sites are exempt
-        {'regex': ur"(?i)\b((beauty|skin|face|health|eye) ?(care|tip|shop|store|product|strateg(y|ies)|cream|method|school|kit|expert)|muscle|testo ?[sx]\w*|body ?build(er|ing)|wrinkle|(?<!to )supplement|probiotic|acne|erection)s?\b", 'all': True,
+        {'regex': ur"(?i)\b((beauty|skin|face|health|eye)[- ]?(care|therapy|hydration|tip|renewal|shop|store|lift|product|strateg(y|ies)|gel|lotion|cream|treatment|method|school|kit|expert)|muscle|testo ?[sx]\w*|body ?build(er|ing)|wrinkle|(?<!to )supplement|probiotic|acne|erection|serum)s?\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11},
         # Bad health-related keywords in titles and posts, health sites are exempt
         {'regex': ur"(?i)virility|diet ?(plan|pill)|\b(pro)?derma(?=[a-su-z ]\w)|(fat|(?<![\w-])weight)[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|\bherpes\b", 'all': True,
