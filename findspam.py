@@ -324,7 +324,7 @@ class FindSpam:
         # Fake-customer-service in title
         {'method': has_customer_service, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1},
         # Bad health-related keywords in titles, health sites are exempt
-        {'regex': ur"(?i)\b(muscles?|testo ?[sx]\w*|body ?build(er|ing)|wrinkles?|(?<!to )supplements?|probiotics?|acne|erections?)\b", 'all': True,
+        {'regex': ur"(?i)\b((beauty|skin|face|health|eye) ?(care|tip|shop|store|product|strateg(y|ies)|cream|method|school|kit|expert)|muscle|testo ?[sx]\w*|body ?build(er|ing)|wrinkle|(?<!to )supplement|probiotic|acne|erection)s?\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11},
         # Bad health-related keywords in titles and posts, health sites are exempt
         {'regex': ur"(?i)virility|diet ?(plan|pill)|\b(pro)?derma(?=[a-su-z ]\w)|(fat|(?<![\w-])weight)[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|\bherpes\b", 'all': True,
