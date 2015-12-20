@@ -268,7 +268,8 @@ class FindSpam:
                             "adonads\\.com", "uufix\\.com", "slimrootz\\.com", "robomart\\.com", "fedotov\\.co",
                             "resumewritingservicecleveland\\.us", "uflysoft\\.net", "simicart\\.com",
                             "thereferraltask\\.net", "ajax2014\\.ir", "voxforem\\.com", "writeversity\\.com",
-                            "labstech\\.org", "rikshairuym", "zicamagsopt", "how2world\\.com", "splendyrsite\\.net"]
+                            "labstech\\.org", "rikshairuym", "zicamagsopt", "how2world\\.com", "splendyrsite\\.net",
+                            "3gwith4g\\.com", "xride-hd\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
