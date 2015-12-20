@@ -79,7 +79,11 @@ class BodyFetcher:
         if "quota_remaining" in response:
             if response["quota_remaining"] - GlobalVars.apiquota >= 1000 and GlobalVars.apiquota >= 0:
                 GlobalVars.charcoal_hq.send_message("API quota rolled over with {} requests remaining.".format(GlobalVars.apiquota))
+            elif response["quota_remaining"] == 0:
+                GlobalVars.charcoal_hq.send_message("API reports no quota left!  May be a glitch.")
             GlobalVars.apiquota = response["quota_remaining"]
+        else:
+            GlobalVars.charcoal_hq.send_message("The quota_remaining property was not in the API response.")
 
         if site == "stackoverflow.com":
             if len(response["items"]) > 0 and "last_activity_date" in response["items"][0]:
