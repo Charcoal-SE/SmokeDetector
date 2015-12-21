@@ -116,7 +116,7 @@ class FindSpam:
                     "bagprada", "6611165613", "Apowersoft",
                     "Service Solahart", "junisse", "Profactor[ -]?T",
                     "(fake|original|novelty|quality).{0,5}(passports?|driver'?s? licen[cs]e|ID cards?)",
-                    "(support|service|helpline)( phone)? number|1[ -]?[ -]?[ -]?866[ -]?978[ -]?(6819|6762)",
+                    "^.{0,200}(support|service|helpline)( phone)? number|1[ -]?[ -]?[ -]?866[ -]?978[ -]?(6819|6762)",
                     "(mcafee|hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number",
                     "kitchen for sale", "pdftoexcelconverter", "keepbrowsersafe", "SpyHunter",
                     "pcerror-fix", "filerepairtool", "combatpcviruses", "SkinCentric",
@@ -270,7 +270,7 @@ class FindSpam:
                             "thereferraltask\\.net", "ajax2014\\.ir", "voxforem\\.com", "writeversity\\.com",
                             "labstech\\.org", "rikshairuym", "zicamagsopt", "how2world\\.com", "splendyrsite\\.net",
                             "3gwith4g\\.com", "xride-hd\\.com", "sincycle\\.com", "wcwnetworking\\.com",
-                            "vivaspanish\\.org", "wanglu123\\.com"]
+                            "vivaspanish\\.org", "wanglu123\\.com", "z0download\\.com", "citehr\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
@@ -309,7 +309,7 @@ class FindSpam:
         #
         # Category: Bad keywords
         # The big list of bad keywords, for titles and posts
-        {'regex': ur"(?i)\b({})\b|{}".format("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
+        {'regex': ur"(?is)\b({})\b|{}".format("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50},
         # baba and nike are restricted to the beginning of posts: many false positives otherwise
         {'regex': ur"(?is)^.{0,200}\b(baba|nike) ", 'all': True,
