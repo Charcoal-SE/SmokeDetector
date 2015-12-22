@@ -84,13 +84,11 @@ GlobalVars.specialrooms = [{
                            }, {
                            "sites": ["askubuntu.com"],
                            "room": GlobalVars.wrap.get_room("201"),
-                           "unwantedReasons": ["all-caps title",
-                                               "phone number detected",
-                                               "repeating characters in title",
-                                               "repeating characters in body",
-                                               "repeating characters in answer",
-                                               "link at end of body",
-                                               "link at end of answer"]
+                           "unwantedReasons": ["All-caps title",   # these should be in uppercased form
+                                               "Phone number detected",
+                                               "Repeating characters in title",
+                                               "Repeating characters in body",
+                                               "Repeating characters in answer"]
                            }, {
                            "sites": ["puzzling.stackexchange.com"],
                            "room": GlobalVars.wrap.get_room("21276"),

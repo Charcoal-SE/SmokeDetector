@@ -26,6 +26,7 @@ class GlobalVars:
                      "spanish.stackexchange.com": "SpanishGood.txt", "stats.stackexchange.com": "StatsGood.txt"}
 
     experimental_reasons = ["Code block"]  # Don't widely report these
+    non_tavern_reasons = ["All-caps title"]  # Don't report in the Tavern
 
     parser = HTMLParser.HTMLParser()
     wrap = Client("stackexchange.com")

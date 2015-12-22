@@ -73,7 +73,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
     post_url = to_protocol_relative(url_to_shortlink(post_url))
     poster_url = to_protocol_relative(poster_url)
     reason = ", ".join(reasons)
-    reason = reason[:1].upper() + reason[1:]
+    reason = reason[:1].upper() + reason[1:]  # reason is capitalised, unlike the entries of reasons list
     append_to_latest_questions(site, post_id, title if not is_answer else "")
     if len(reasons) == 1 and ("all-caps title" in reasons or
                               "repeating characters in title" in reasons or
@@ -118,9 +118,10 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                 chq_pings = get_user_names_on_notification_list("stackexchange.com", GlobalVars.charcoal_room_id, site, GlobalVars.wrap)
                 chq_msg = append_pings(s, chq_pings)
                 GlobalVars.charcoal_hq.send_message(chq_msg if len(chq_msg) <= 500 else s)
-                tavern_pings = get_user_names_on_notification_list("meta.stackexchange.com", GlobalVars.meta_tavern_room_id, site, GlobalVars.wrapm)
-                tavern_msg = append_pings(s, tavern_pings)
-                GlobalVars.tavern_on_the_meta.send_message(tavern_msg if len(tavern_msg) <= 500 else s)
+                if reason not in GlobalVars.non_tavern_reasons:
+                    tavern_pings = get_user_names_on_notification_list("meta.stackexchange.com", GlobalVars.meta_tavern_room_id, site, GlobalVars.wrapm)
+                    tavern_msg = append_pings(s, tavern_pings)
+                    GlobalVars.tavern_on_the_meta.send_message(tavern_msg if len(tavern_msg) <= 500 else s)
                 if site == "stackoverflow.com":
                     socvr_pings = get_user_names_on_notification_list("stackoverflow.com", GlobalVars.socvr_room_id, site, GlobalVars.wrapso)
                     socvr_msg = append_pings(s, socvr_pings)
