@@ -88,7 +88,7 @@ def has_phone_number(s, site):
 
 
 def has_customer_service(s, site):
-    s = s[0:200]       # when applied to body, the beginning should be enough: otherwise many false positives
+    s = s[0:200].lower()   # when applied to body, the beginning should be enough: otherwise many false positives
     business = regex.compile(r"(?i)\b(dell|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|out[l1]ook|quickbooks|yahoo)\b").findall(s)
     digit = regex.compile(r"\d").search(s)
     if (business and digit):
