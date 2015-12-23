@@ -26,7 +26,8 @@ class GlobalVars:
                      "spanish.stackexchange.com": "SpanishGood.txt", "stats.stackexchange.com": "StatsGood.txt"}
 
     experimental_reasons = ["Code block"]  # Don't widely report these
-    non_tavern_reasons = ["All-caps title"]  # Don't report in the Tavern
+    non_tavern_reasons = ["All-caps title",
+                          "Repeating characters in body"]  # Don't report in the Tavern
 
     parser = HTMLParser.HTMLParser()
     wrap = Client("stackexchange.com")
@@ -48,7 +49,7 @@ class GlobalVars:
                                            "30477",  # Brock Adams
                                            "145208"],  # Robert Longson
                         meta_tavern_room_id: ["259867",  # Normal Human
-                                              "244519",  # Roombatron5000
+                                              "244519",  # CRABOLO
                                               "244382",  # TGMCians
                                               "194047",  # Jan Dvorak
                                               "158100",  # rene
@@ -93,7 +94,7 @@ class GlobalVars:
                                               "200235",  # durron597
                                               "148310",  # Awesome Poodles / Brock Adams
                                               "168333",  # S.L. Barth
-                                              "257207",  # United States of America aka Unicorns are Very Very Yummy
+                                              "257207",  # Unikitty
                                               "244282",  # DroidDev
                                               "163250",  # Cupcake
                                               "298265",  # BoomsPlus
