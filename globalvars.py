@@ -27,7 +27,8 @@ class GlobalVars:
 
     experimental_reasons = ["Code block"]  # Don't widely report these
     non_tavern_reasons = ["All-caps title",
-                          "Repeating characters in body"]  # Don't report in the Tavern
+                          "Repeating characters in body",
+                          "Repeating characters in title"]  # Don't report in the Tavern
 
     parser = HTMLParser.HTMLParser()
     wrap = Client("stackexchange.com")
