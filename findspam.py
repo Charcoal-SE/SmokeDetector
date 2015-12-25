@@ -87,8 +87,8 @@ def has_phone_number(s, site):
     return False, ""
 
 
-def has_customer_service(s, site):
-    s = s[0:200].lower()   # when applied to body, the beginning should be enough: otherwise many false positives
+def has_customer_service(s, site):  # flexible detection of customer service in titles
+    s = s[0:200].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
     business = regex.compile(r"(?i)\b(dell|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|out[l1]ook|quickbooks|yahoo)\b").findall(s)
     digit = regex.compile(r"\d").search(s)
     if (business and digit):
@@ -97,6 +97,25 @@ def has_customer_service(s, site):
             matches = ["".join(match) for match in keywords]
             match = ", ".join(matches)
             return True, "Scam aimed at {} customers. Keywords: {}".format(business[0], match)
+    return False, ""
+
+
+def has_health(s, site):   # flexible detection of health spam in titles
+    s = s[0:200].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
+    organ = regex.compile(r"(?i)\b(colon|skin|muscle|face|eye|brain|penis|breast|body)s?\b").search(s)
+    condition = regex.compile(r"(?i)\b(weight|constipat(ed|ion)|sensitive|wrinkle|aging|suffer|acne|dry|clog(ged)?|inflam(ed|mation)|fat|age|pound)s?\b").search(s)
+    goal = regex.compile(r"(?i)\b(supple|healthy?|build|los[es]|diminish\w*|beauty|power|renewal|lift|young(er)?|youth(ful)?|eliminate|burn|erection|enhance\w*|improve\w*|enlarge\w*|vital\w*|IQ|slim\w*|lean\w*|mood|boost\w*|strong\w*|strength|energy|tone(d)|shred(ed)?|rip(ped)?|bulk up|get rid|reduc(e|ction)|look(ing)?)s?\b").search(s)
+    remedy = regex.compile(r"(?i)\b(remed(y|ie)|serum|cleans?(e|er|ing)|care|herbal|lotion|cream|gel|cure|formula|solution|therapy|hydration|treatment|supplement|diet|moist\w*|injection|potion|ingredient|aid|exercise|eat(ing)?)s?\b").search(s)
+    boast = regex.compile(r"(?i)\b(most|best|easy|top|pro|mirac(le|ulous)|organic|natural|perfect|fantastic|incredible|amazing|advantag\w*|effective|great\w*|fast|good)\b").search(s)
+    other = regex.compile(r"(?i)\b(product|thing|item|review|make use|you|really|work|tip|shop|store|method|expert|[ae]ffect|instant|buy|fact|consum(e|ption)|baby|male|female|men|women|important|grow|idea|suggest\w*)s?\b").search(s)
+    score = 4*bool(organ) + 2*bool(condition) + 2*bool(goal) + 2*bool(remedy) + bool(boast) + bool(other)
+    if score >= 7:
+        match_objects = [organ, condition, goal, remedy, boast, other]
+        words = []
+        for match in match_objects:
+            if match:
+                words.append(match.group(0))
+        return True, "Health-themed spam (score {}). Keywords: {}".format(score, ", ".join(words))
     return False, ""
 
 
@@ -330,6 +349,9 @@ class FindSpam:
         # Bad health-related keywords in titles, health sites are exempt
         {'regex': ur"(?i)\b((beauty|skin|face|health|eye)[- ]?(care|serum|therapy|hydration|tip|renewal|shop|store|lift|product|strateg(y|ies)|gel|lotion|cream|treatment|method|school|expert)|fat ?burn(er|ing)?|muscle|testo ?[sx]\w*|body ?build(er|ing)|wrinkle|(?<!to )supplement|probiotic|acne|erection)s?\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11},
+        # Bad health-related keywords in titles, health sites are exempt, flexible method
+        {'method': has_health, 'all': True,
+         'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1},
         # Bad health-related keywords in titles and posts, health sites are exempt
         {'regex': ur"(?is)virility|diet ?(plan|pill)|\b(pro)?derma(?=[a-su-z ]\w)|(fat|(?<!dead[ -]?)weight)[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|\bherpes\b|(?<!truth )serum|colon (detox|clean.*))\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 11},
