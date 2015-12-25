@@ -108,7 +108,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
     remedy = regex.compile(r"(?i)\b(remed(y|ie)|serum|cleans?(e|er|ing)|care|herbal|lotion|cream|gel|cure|formula|solution|therapy|hydration|treatment|supplement|diet|moist\w*|injection|potion|ingredient|aid|exercise|eat(ing)?)s?\b").search(s)
     boast = regex.compile(r"(?i)\b(most|best|easy|top|pro|mirac(le|ulous)|organic|natural|perfect|fantastic|incredible|amazing|advantag\w*|effective|great\w*|fast|good)\b").search(s)
     other = regex.compile(r"(?i)\b(product|thing|item|review|make use|you|really|work|tip|shop|store|method|expert|[ae]ffect|instant|buy|fact|consum(e|ption)|baby|male|female|men|women|important|grow|idea|suggest\w*)s?\b").search(s)
-    score = 4*bool(organ) + 2*bool(condition) + 2*bool(goal) + 2*bool(remedy) + bool(boast) + bool(other)
+    score = 4 * bool(organ) + 2 * bool(condition) + 2 * bool(goal) + 2 * bool(remedy) + bool(boast) + bool(other)
     if score >= 7:
         match_objects = [organ, condition, goal, remedy, boast, other]
         words = []
