@@ -106,7 +106,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
     condition = regex.compile(r"(?i)\b(weight|constipat(ed|ion)|sensitive|wrinkle|aging|suffer|acne|pimple|dry|clog(ged)?|inflam(ed|mation)|fat|age|pound)s?\b").search(s)
     goal = regex.compile(r"(?i)\b(supple|healthy?|build|los[es]|diminish\w*|beaut\w*|power|renew\w*|lift|young(er)?|youth(ful)?|eliminate|burn|erection|enhance\w*|improve\w*|enlarge\w*|vital\w*|IQ|slim\w*|lean\w*|mood|boost\w*|strong\w*|strength|energy|tone(d)|shred(ed)?|rip(ped)?|bulk up|get rid|reduc(e|ction)|look(ing)?)s?\b").search(s)
     remedy = regex.compile(r"(?i)\b(remed(y|ie)|serum|cleans?(e|er|ing)|care|(pro)?biotic|herbal|lotion|cream|gel|cure|formula|solution|therapy|hydration|treatment|supplement|diet|moist\w*|injection|potion|ingredient|aid|exercise|eat(ing)?)s?\b").search(s)
-    boast = regex.compile(r"(?i)\b(most|best|easy|top|pro|real|mirac(le|ulous)|organic|natural|perfect|fantastic|incredible|amazing|advantag\w*|effect\w*|great\w*|fast|good)\b").search(s)
+    boast = regex.compile(r"(?i)\b(most|best|easy|top|pro|real|mirac(le|ulous)|organic|natural|perfect|fantastic|incredible|amazing|advantag\w*|effect\w*|great\w*|fast|good|valu(ed|able))\b").search(s)
     other = regex.compile(r"(?i)\b(product|thing|item|review|advi[cs]e|make use|your?|really|work|tip|shop|store|method|expert|instant|buy|fact|consum(e|ption)|baby|male|female|men|women|important|grow|idea|suggest\w*|issue)s?\b").search(s)
     score = 4 * bool(organ) + 2 * bool(condition) + 2 * bool(goal) + 2 * bool(remedy) + bool(boast) + bool(other)
     if score >= 7:
@@ -291,7 +291,7 @@ class FindSpam:
                             "labstech\\.org", "rikshairuym", "zicamagsopt", "how2world\\.com", "splendyrsite\\.net",
                             "3gwith4g\\.com", "xride-hd\\.com", "sincycle\\.com", "wcwnetworking\\.com",
                             "vivaspanish\\.org", "wanglu123\\.com", "z0download\\.com", "citehr\\.com",
-                            "thecreatingexperts\\.com"]
+                            "thecreatingexperts\\.com", "masterm\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
