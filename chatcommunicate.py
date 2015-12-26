@@ -62,7 +62,7 @@ def watcher(ev, wrap2):
     ev_user_name = ev.data["user_name"].encode('utf-8')
     ev_user_link = "//chat." + wrap2.host + "/users/" + str(ev.user.id)
     if ev_user_name != "SmokeDetector":
-        GlobalVars.tavern_users_chatting.append((ev_user_name, ev_user_link))
+        GlobalVars.users_chatting[ev_room].append((ev_user_name, ev_user_link))
 
     shortcut_messages = []
     if message_parts[0].lower() == "sd":
@@ -459,9 +459,9 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         return GlobalVars.location
     if content_lower.startswith("!!/queuestatus"):
         post_message_in_room(ev_room, GlobalVars.bodyfetcher.print_queue(), False)
-    if content_lower.startswith("!!/blame") and (ev_room == GlobalVars.meta_tavern_room_id or ev_room == GlobalVars.socvr_room_id):
-        GlobalVars.tavern_users_chatting = list(set(GlobalVars.tavern_users_chatting))  # Make unique
-        user_to_blame = random.choice(GlobalVars.tavern_users_chatting)
+    if content_lower.startswith("!!/blame"):
+        GlobalVars.users_chatting[ev_room] = list(set(GlobalVars.users_chatting[ev_room]))  # Make unique
+        user_to_blame = random.choice(GlobalVars.users_chatting[ev_room])
         return "It's [{}]({})'s fault.".format(user_to_blame[0], user_to_blame[1])
     if "smokedetector" in content_lower and "fault" in content_lower and ("xkcdbot" in ev_user_name.lower() or "bjb568" in ev_user_name.lower()):
         return "Liar"
