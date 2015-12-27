@@ -90,7 +90,7 @@ def has_phone_number(s, site):
 def has_customer_service(s, site):  # flexible detection of customer service in titles
     s = s[0:200].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
     business = regex.compile(r"(?i)\b(dell|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|out[l1]ook|quickbooks|yahoo)\b").findall(s)
-    digits = len(re.compile(r"\d").findall(s))
+    digits = len(regex.compile(r"\d").findall(s))
     if (business and digits >= 5):
         keywords = regex.compile(r"(?i)\b(customer|help|helpline|phone|recovery|service|support|tech|technical|telephone|number)\b").findall(s)
         if len(set(keywords)) >= 2:
@@ -102,11 +102,11 @@ def has_customer_service(s, site):  # flexible detection of customer service in 
 
 def has_health(s, site):   # flexible detection of health spam in titles
     s = s[0:200].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
-    organ = regex.compile(r"(?i)\b(colon|skin|muscle|fac(e|ial)|eye|brain|peni(s|le)|breast|body|belly|digest\w*)s?\b").search(s)
+    organ = regex.compile(r"(?i)\b(colon|skin|muscle|fac(e|ial)|eye|brain|mind|head|peni(s|le)|breast|body|belly|digest\w*)s?\b").search(s)
     condition = regex.compile(r"(?i)\b(weight|constipat(ed|ion)|swollen|sensitive|wrinkle|aging|suffer|acne|pimple|dry|clog(ged)?|inflam(ed|mation)|fat|age|pound)s?\b").search(s)
-    goal = regex.compile(r"(?i)\b(supple|healthy?|build|los[es]|diminish\w*|beaut\w*|power|renew\w*|lift|young(er)?|youth(ful)?|eliminate|burn|erection|enhance\w*|improve\w*|enlarge\w*|remov\w*|vital\w*|IQ|slim\w*|lean\w*|mood|boost\w*|strong\w*|strength|energy|tone(d)|shred(ed)?|rip(ped)?|bulk up|get rid|reduc(e|ction)|look(ing)?)s?\b").search(s)
-    remedy = regex.compile(r"(?i)\b(remed(y|ie)|serum|cleans?(e|er|ing)|care|(pro)?biotic|herbal|lotion|cream|gel|cure|formula|recipe|solution|therapy|hydration|soap|treatment|supplement|diet|moist\w*|injection|potion|ingredient|aid|exercise|eat(ing)?)s?\b").search(s)
-    boast = regex.compile(r"(?i)\b(most|best|easy|simple|top|pro|real|mirac(le|ulous)|organic|natural|perfect|fantastic|incredible|important|critical|super\w*|hyper\w*|amazing|advantag\w*|effect\w*|great\w*|fast|good|valu\w*)\b").search(s)
+    goal = regex.compile(r"(?i)\b(supple|healthy?|build|los[es]|power|young(er)?|youth(ful)?|burn|erection|IQ|energy|tone(d)|shred(ed)?|rip(ped)?|bulk up|get rid|mood)s?\b|\b(diminish|look|reduc|beaut|renew|lift|eliminat|enhance|improve|enlarge|remov|vital|slim|lean|boost|str[oe]ng)s?").search(s)
+    remedy = regex.compile(r"(?i)\b(remed(y|ie)|serum|cleans?(e|er|ing)|care|(pro)?biotic|herbal|lotion|cream|gel|cure|drug|formula|recipe|solution|therapy|hydration|soap|treatment|supplement|diet|moist\w*|injection|potion|ingredient|aid|exercise|eat(ing)?)s?\b").search(s)
+    boast = regex.compile(r"(?i)\b(most|best|easy|simple|top|pro|real|mirac(le|ulous)|organic|natural|perfect|fantastic|incredible|important|critical|amazing|fast|good)\b|\b(super|hyper|advantag|benefi|effect|great|valu)").search(s)
     other = regex.compile(r"(?i)\b(product|thing|item|review|advi[cs]e|make use|your?|really|work|tip|shop|store|method|expert|instant|buy|fact|consum(e|ption)|baby|male|female|men|women|grow|idea|suggest\w*|issue)s?\b").search(s)
     score = 4 * bool(organ) + 2 * bool(condition) + 2 * bool(goal) + 2 * bool(remedy) + bool(boast) + bool(other)
     if score >= 7:
