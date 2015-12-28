@@ -291,7 +291,7 @@ class FindSpam:
                             "labstech\\.org", "rikshairuym", "zicamagsopt", "how2world\\.com", "splendyrsite\\.net",
                             "3gwith4g\\.com", "xride-hd\\.com", "sincycle\\.com", "wcwnetworking\\.com",
                             "vivaspanish\\.org", "wanglu123\\.com", "z0download\\.com", "citehr\\.com",
-                            "thecreatingexperts\\.com", "masterm\\.com", "ablockplus\\.org"]
+                            "thecreatingexperts\\.com", "masterm\\.com", "ablockplus\\.org", "iseenlab\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
