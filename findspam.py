@@ -37,9 +37,9 @@ def has_few_characters(s, site):
 
 
 def has_repeating_characters(s, site):
+    s = regex.sub('http[^"]*', "", s)    # remove URLs for this check
     if s is None or len(s) == 0:
         return False, ""
-    s = regex.sub('http[^"]*', "", s)    # remove URLs for this check
     matches = regex.compile("([^\\s_.,?!=~*/0-9-])(\\1{10,})", regex.UNICODE).findall(s)
     matches = ["".join(match) for match in matches]
     match = "".join(matches)
