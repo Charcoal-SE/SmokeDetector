@@ -297,6 +297,11 @@ def remove_from_notification_list(user_id, chat_site, room_id, se_site):
     return True
 
 
+def will_i_be_notified(user_id, chat_site, room_id, se_site):
+    t = (int(user_id), chat_site, int(room_id), se_site)
+    return t in GlobalVars.notifications
+
+
 def get_user_ids_on_notification_list(chat_site, room_id, se_site):
     uids = []
     for t in GlobalVars.notifications:

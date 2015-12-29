@@ -554,5 +554,21 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 return None
         else:
             return "That configuration doesn't exist."
+    if content_lower.startswith("!!/willibenotified"):
+        if len(message_parts) != 3:
+            return False, "2 arguments expected"
+        user_id = int(ev_user_id)
+        chat_site = wrap2.host
+        room_id = message_parts[1]
+        if not room_id.isdigit():
+            return False, "Room ID is invalid"
+        else:
+            room_id = int(room_id)
+        se_site = message_parts[2]
+        will_be_notified = will_i_be_notified(user_id, chat_site, room_id, se_site)
+        if will_be_notified:
+            return "Yes, you will be notified for that site in that room."
+        else:
+            return "No, you won't be notified for that site in that room."
 
     return False, False  # Unrecognized command, can be edited later.
