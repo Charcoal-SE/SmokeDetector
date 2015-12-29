@@ -98,7 +98,8 @@ with open("test/data_test_parsing.txt", "r") as f:
     (test_data_inputs[14], fetch_title_from_msg_content, "Why I can't insert data in a model from a custom controller?"),
     (test_data_inputs[15], fetch_post_id_and_site_from_msg_content, ('27954020', 'stackoverflow.com', 'question')),
     (test_data_inputs[15], fetch_owner_url_from_msg_content, '//stackoverflow.com/users/3754535/user3754535'),
-    (test_data_inputs[15], fetch_title_from_msg_content, "Why I can't insert data in a model from a custom controller?")
+    (test_data_inputs[15], fetch_title_from_msg_content, "Why I can't insert data in a model from a custom controller?"),
+    (test_data_inputs[15], edited_message_after_postgone_command, "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Manually reported question (batch report: post 2 out of 3): *(gone)* by [user3754535](//stackoverflow.com/users/3754535/user3754535) on `stackoverflow.com`")
 
 ])
 def test_parsing(input_data, parse_method, expected):

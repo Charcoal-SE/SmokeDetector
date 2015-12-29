@@ -235,6 +235,12 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 msg.delete()
             except:
                 pass  # couldn't delete message
+        if second_part_lower.startswith("postgone") and is_privileged(ev_room, ev_user_id, wrap2):
+            edited = edited_message_after_postgone_command(msg_content)
+            if edited is None:
+                return "That's not a report."
+            msg.edit(edited)
+            return None
         if second_part_lower.startswith("why"):
             t = fetch_post_id_and_site_from_msg_content(msg_content)
             if t is None:

@@ -89,6 +89,18 @@ def fetch_title_from_msg_content(content):
         return None
 
 
+def edited_message_after_postgone_command(content):
+    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w\s,:\(\)-]+: (\[.+]\((?:(?:http:)?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\)) by \[?.*\]?\(?.*\)? on `[\w.]+`(?: \(@.+\))?$"
+    m = regex.compile(search_regex).search(content)
+    if m is None:
+        return None
+    try:
+        link = m.group(1)
+        return content.replace(link, "*(gone)*")
+    except:
+        return None
+
+
 def unescape_title(title_escaped):
     return GlobalVars.parser.unescape(title_escaped).strip()
 
