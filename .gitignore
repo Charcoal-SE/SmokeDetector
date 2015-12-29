@@ -46,6 +46,7 @@ users.txt
 notifications.txt
 whyData.txt
 latestMessages.txt
+apiCalls.txt
 
 # Settings files
 .settings/
