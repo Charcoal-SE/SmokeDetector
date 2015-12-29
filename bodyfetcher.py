@@ -1,6 +1,7 @@
 from spamhandling import handle_spam, check_if_spam
 from datahandling import add_or_update_api_data, clear_api_data
 from globalvars import GlobalVars
+from operator import itemgetter
 import json
 import time
 import requests
@@ -81,9 +82,11 @@ class BodyFetcher:
         if "quota_remaining" in response:
             if response["quota_remaining"] - GlobalVars.apiquota >= 1000 and GlobalVars.apiquota >= 0:
                 GlobalVars.charcoal_hq.send_message("API quota rolled over with {} requests remaining.".format(GlobalVars.apiquota))
+                sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1), reverse=True)
                 api_quota_used_per_site = ""
-                for site, quota_used in GlobalVars.api_calls_per_site.iteritems():
-                    api_quota_used_per_site = api_quota_used_per_site + "\n" + site + ": " + str(quota_used)
+                for site, quota_used in sorted_calls_per_site:
+                    api_quota_used_per_site = api_quota_used_per_site + site + ": " + str(quota_used) + "\n"
+                api_quota_used_per_site = api_quota_used_per_site.strip()
                 GlobalVars.charcoal_hq.send_message(api_quota_used_per_site, False)
                 clear_api_data()
 
