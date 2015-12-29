@@ -42,9 +42,6 @@ def load_files():
     if os.path.isfile("latestMessages.txt"):
         with open("latestMessages.txt", "r") as f:
             GlobalVars.latest_smokedetector_messages = pickle.load(f)
-    if os.path.isfile("apiCalls.txt"):
-        with open("apiCalls.txt", "r") as f:
-            GlobalVars.api_calls_per_site = pickle.load(f)
 
 
 def filter_auto_ignored_posts():
@@ -193,21 +190,6 @@ def add_latest_smokedetector_message(room, message_id):
     GlobalVars.latest_smokedetector_messages[room] = GlobalVars.latest_smokedetector_messages[room][-max_size:]
     with open("latestMessages.txt", "w") as f:
         pickle.dump(GlobalVars.latest_smokedetector_messages, f)
-
-
-def add_or_update_api_data(site):
-    if site in GlobalVars.api_calls_per_site:
-        GlobalVars.api_calls_per_site[site] += 1
-    else:
-        GlobalVars.api_calls_per_site[site] = 1
-    with open("apiCalls.txt", "w") as f:
-        pickle.dump(GlobalVars.api_calls_per_site, f)
-
-
-def clear_api_data():
-    GlobalVars.api_calls_per_site = []
-    with open("apiCalls.txt", "w") as f:
-        pickle.dump(GlobalVars.api_calls_per_site, f)
 
 
 # methods that help avoiding reposting alerts:

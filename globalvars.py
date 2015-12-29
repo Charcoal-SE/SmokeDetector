@@ -177,7 +177,6 @@ class GlobalVars:
     notifications = []
     listen_to_these_if_edited = []
     multiple_reporters = []
-    api_calls_per_site = []
 
     config = ConfigParser.RawConfigParser()
     config.read('config')

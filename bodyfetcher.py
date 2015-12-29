@@ -1,5 +1,4 @@
 from spamhandling import handle_spam, check_if_spam
-from datahandling import add_or_update_api_data, clear_api_data
 from globalvars import GlobalVars
 import json
 import time
@@ -20,6 +19,7 @@ class BodyFetcher:
     last_activity_date = 0
 
     def add_to_queue(self, post):
+        #  return  # Disabled, see http://chat.stackexchange.com/transcript/message/20369565#20369565
         d = json.loads(json.loads(post)["data"])
         sitebase = d["siteBaseHostAddress"]
         postid = d["id"]
@@ -76,17 +76,9 @@ class BodyFetcher:
         except requests.exceptions.Timeout:
             return  # could add some retrying logic here, but eh.
 
-        add_or_update_api_data(site)
-
         if "quota_remaining" in response:
             if response["quota_remaining"] - GlobalVars.apiquota >= 1000 and GlobalVars.apiquota >= 0:
                 GlobalVars.charcoal_hq.send_message("API quota rolled over with {} requests remaining.".format(GlobalVars.apiquota))
-                api_quota_used_per_site = ""
-                for site, quota_used in enumerate(GlobalVars.api_calls_per_site):
-                    api_quota_used_per_site = api_quota_used_per_site + "\n" + site + ": " + quota_used
-                GlobalVars.charcoal_hq.send_message(api_quota_used_per_site, False)
-                clear_api_data()
-
             elif response["quota_remaining"] == 0:
                 GlobalVars.charcoal_hq.send_message("API reports no quota left!  May be a glitch.")
             GlobalVars.apiquota = response["quota_remaining"]
