@@ -39,7 +39,7 @@ class BodyFetcher:
                     "travel.stackexchange.com": 1,
                     "webapps.stackexchange.com": 1,
                     "woodworking.stackexchange.com": 1,
-                    "writers.stackexchange.com": 1,}
+                    "writers.stackexchange.com": 1}
 
     threshold = 2
 
