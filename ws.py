@@ -90,10 +90,6 @@ GlobalVars.specialrooms = [{
                                                "Repeating characters in body",
                                                "Repeating characters in answer"]
                            }, {
-                           "sites": ["puzzling.stackexchange.com"],
-                           "room": GlobalVars.wrap.get_room("21276"),
-                           "unwantedReasons": []
-                           }, {
                            "sites": ["parenting.stackexchange.com"],
                            "room": GlobalVars.wrap.get_room("21625"),
                            "unwantedReasons": []

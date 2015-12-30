@@ -25,7 +25,7 @@ class GlobalVars:
                      "italian.stackexchange.com": "ItalianGood.txt", "math.stackexchange.com": "MathematicsGood.txt",
                      "spanish.stackexchange.com": "SpanishGood.txt", "stats.stackexchange.com": "StatsGood.txt"}
 
-    experimental_reasons = ["Code block"]  # Don't widely report these
+    experimental_reasons = []  # Don't widely report these
     non_tavern_reasons = ["All-caps title",   # Don't report in the Tavern
                           "All-caps body",
                           "All-caps answer",
