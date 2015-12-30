@@ -316,7 +316,7 @@ class FindSpam:
                         r"(acai|buy|premium|thebest|[/.]try)[\w-]{10,}\.(co|net|org|in\W|info)",
                         r"training[\w.-]{6,}\.(co|net|org|in\W|info)",
                         r"\w{10}buy\.(co|net|org|in\W|info)",
-                        r"(strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(love|strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
                         r"(grow|burn|vapor|ecig|formula|biotic|male|derma|medical|medicare|health|beauty|rx|skin|trim|slim|weight|fat|nutrition|shred|advance|perfect|alpha|beta|brain(?!tree))[\w]{0,20}(about|market|max|help|info|policy|program|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|guide|advi[sc]|discussion|solution|consult|source|sups|vms|cream|grow|enhance)[\w-]{0,10}\.(co|net|org|in\W|info)",
                         r"\w{11}(ideas?|income|sale|reviews?|advices?|problog)\.(co|net|org|in\W|info)",
