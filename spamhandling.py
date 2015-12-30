@@ -156,7 +156,7 @@ def handle_spam_json(data, reason, why=""):
 
 
 def handle_user_with_all_spam(user_id, site):
-    s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All of this user's posts are spam: [user {} on {}](//{}/u/{})" \
+    s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All of this user's posts are spam: [user {} on {}](//{}/users/{})" \
         .format(user_id, site, site, user_id)
     print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
     if time.time() >= GlobalVars.blockedTime:
