@@ -130,7 +130,7 @@ def watcher(ev, wrap2):
             if wrap2.host + str(message_id) not in GlobalVars.listen_to_these_if_edited:
                 GlobalVars.listen_to_these_if_edited.append(wrap2.host + str(message_id))
             if len(GlobalVars.listen_to_these_if_edited) > 500:
-                GlobalVars.listen_to_these_if_edited = GlobalVars[-500:]
+                GlobalVars.listen_to_these_if_edited = GlobalVars.listen_to_these_if_edited[-500:]
 
 
 def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content, message_id):
