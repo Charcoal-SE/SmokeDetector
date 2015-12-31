@@ -326,7 +326,7 @@ class FindSpam:
                         r"(file|photo|android|iphone)recovery[\w-]*?\.(co|net|org|in\W|info)",
                         r"(videos?|movies?|watch)online[\w-]*?\.", r"hd(video|movie)[\w-]*?\.",
                         r"backlink(?!(o\.|watch))[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(replica[^nt]\w{5,20}|\wrolex)\.com",
+                        r"(replica[^nt]\w{5,}|\wrolex)\.(co|net|org|in\W|info)",
                         r"customer(service|support)[\w-]*?\.(co|net|info)"]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
