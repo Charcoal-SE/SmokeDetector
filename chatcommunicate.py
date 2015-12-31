@@ -354,7 +354,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             user = get_user_from_url(post_data.owner_url)
             if user is not None:
                 add_blacklisted_user(user, message_url, post_data.post_url)
-            why = u"Post manually reported by user *{}* in room *{}*.\n".format(ev_user_name.decode('utf-8'), ev_room_name.decode('utf-8'))
+            why = u"Post manually reported by user *{}* in room *{}*.\n".format(ev_user_name, ev_room_name.decode('utf-8'))
             batch = ""
             if len(urls) > 1:
                 batch = " (batch report: post {} out of {})".format(index, len(urls))
@@ -374,7 +374,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         user = get_user_from_url(url)
         if user is None:
             return "That doesn't look like a valid user URL."
-        why = u"Post manually reported by user *{}* in room *{}*.\n".format(ev_user_name.decode('utf-8'), ev_room_name.decode('utf-8'))
+        why = u"Post manually reported by user *{}* in room *{}*.\n".format(ev_user_name, ev_room_name.decode('utf-8'))
         handle_user_with_all_spam(user, why)
     if content_lower.startswith("!!/wut"):
         return "Whaddya mean, 'wut'? Humans..."
