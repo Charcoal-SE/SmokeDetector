@@ -59,7 +59,7 @@ def watcher(ev, wrap2):
         add_latest_smokedetector_message(ev_room, message_id)
     message_parts = content_source.split(" ")
 
-    ev_user_name = ev.data["user_name"].encode('utf-8')
+    ev_user_name = ev.data["user_name"]
     ev_user_link = "//chat." + wrap2.host + "/users/" + str(ev.user.id)
     if ev_user_name != "SmokeDetector":
         GlobalVars.users_chatting[ev_room].append((ev_user_name, ev_user_link))
