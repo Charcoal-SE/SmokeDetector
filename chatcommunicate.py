@@ -244,7 +244,14 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         if second_part_lower.startswith("why"):
             t = fetch_post_id_and_site_from_msg_content(msg_content)
             if t is None:
-                return "That's not a report."
+                t = fetch_user_from_allspam_report(msg_content)
+                if t is None:
+                    return "That's not a report."
+                why = get_why_allspam(t)
+                if why is None or why == "":
+                    return "There is no `why` data for that user (anymore)."
+                else:
+                    return why
             post_id, site, _ = t
             why = get_why(site, post_id)
             if why is None or why == "":
@@ -367,7 +374,8 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         user = get_user_from_url(url)
         if user is None:
             return "That doesn't look like a valid user URL."
-        handle_user_with_all_spam(user[0], user[1])
+        why = u"Post manually reported by user *{}* in room *{}*.\n".format(ev_user_name.decode('utf-8'), ev_room_name.decode('utf-8'))
+        handle_user_with_all_spam(user, why)
     if content_lower.startswith("!!/wut"):
         return "Whaddya mean, 'wut'? Humans..."
     if content_lower.startswith("!!/lick"):

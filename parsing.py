@@ -89,6 +89,18 @@ def fetch_title_from_msg_content(content):
         return None
 
 
+def fetch_user_from_allspam_report(content):
+    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] All of this user's posts are spam: \[user \d+ on [\w\.]+\]\((//[\w\.]+/users/\d+)\)$"
+    m = regex.compile(search_regex).search(content)
+    if m is None:
+        return None
+    try:
+        user_link = m.group(1)
+        return get_user_from_url(user_link)
+    except:
+        return None
+
+
 def edited_message_after_postgone_command(content):
     search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] [\w\s,:\(\)-]+: (\[.+]\((?:(?:http:)?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\)) by \[?.*\]?\(?.*\)? on `[\w.]+`(?: \(@.+\))?$"
     m = regex.compile(search_regex).search(content)

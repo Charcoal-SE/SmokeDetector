@@ -174,6 +174,7 @@ class GlobalVars:
     users_chatting = {meta_tavern_room_id: [], socvr_room_id: [], charcoal_room_id: []}
     frequent_sentences = []
     why_data = []
+    why_data_allspam = []
     notifications = []
     listen_to_these_if_edited = []
     multiple_reporters = []
