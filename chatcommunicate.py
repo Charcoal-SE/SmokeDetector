@@ -486,19 +486,9 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
     if content_lower.startswith("!!/brownie"):
         return "Brown!"
     if content_lower.startswith("!!/hats"):
-        wb_start = datetime(2015, 12, 14, 0, 0, 0)
         wb_end = datetime(2016, 1, 4, 0, 0, 0)
         now = datetime.utcnow()
-        if wb_start > now:
-            diff = wb_start - now
-            hours, remainder = divmod(diff.seconds, 3600)
-            minutes, seconds = divmod(remainder, 60)
-            daystr = "days" if diff.days != 1 else "day"
-            hourstr = "hours" if hours != 1 else "hour"
-            minutestr = "minutes" if minutes != 1 else "minute"
-            secondstr = "seconds" if seconds != 1 else "second"
-            return "HATS ARE AWESOME. Winter Bash will begin in {} {}, {} {}, {} {}, and {} {}. :D".format(diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
-        elif wb_end > now:
+        if wb_end > now:
             diff = wb_end - now
             hours, remainder = divmod(diff.seconds, 3600)
             minutes, seconds = divmod(remainder, 60)
@@ -506,7 +496,9 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             hourstr = "hours" if hours != 1 else "hour"
             minutestr = "minutes" if minutes != 1 else "minute"
             secondstr = "seconds" if seconds != 1 else "second"
-            return "GO EARN HATS! Winter Bash won't end for {} {}, {} {}, {} {}, and {} {}. :D".format(diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
+            return "HURRY UP AND EARN MORE HATS! Winterbash will be over in {} {}, {} {}, {} {}, and {} {}. :(".format(diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
+        else:
+            return "Winterbash is over. :("
     if content_lower.startswith("!!/test"):
         string_to_test = content[8:]
         if len(string_to_test) == 0:

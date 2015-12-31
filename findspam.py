@@ -37,9 +37,9 @@ def has_few_characters(s, site):
 
 
 def has_repeating_characters(s, site):
+    s = regex.sub('http[^"]*', "", s)    # remove URLs for this check
     if s is None or len(s) == 0:
         return False, ""
-    s = regex.sub('http[^"]*', "", s)    # remove URLs for this check
     matches = regex.compile("([^\\s_.,?!=~*/0-9-])(\\1{10,})", regex.UNICODE).findall(s)
     matches = ["".join(match) for match in matches]
     match = "".join(matches)
@@ -90,10 +90,10 @@ def has_phone_number(s, site):
 
 def has_customer_service(s, site):  # flexible detection of customer service in titles
     s = s[0:200].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
-    business = regex.compile(r"(?i)\b(dell|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|out[l1]ook|quickbooks|yahoo)\b").findall(s)
+    business = regex.compile(r"(?i)\b(dell|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|out[l1]ook|quickbooks|yahoo|Delta|airlines?)\b").findall(s)
     digits = len(regex.compile(r"\d").findall(s))
     if (business and digits >= 5):
-        keywords = regex.compile(r"(?i)\b(customer|help|helpline|phone|recovery|service|support|tech|technical|telephone|number)\b").findall(s)
+        keywords = regex.compile(r"(?i)\b(customer|help|helpline|reservation|phone|recovery|service|support|tech|technical|telephone|number)\b").findall(s)
         if len(set(keywords)) >= 2:
             matches = ["".join(match) for match in keywords]
             match = ", ".join(matches)
@@ -167,7 +167,7 @@ class FindSpam:
                         "\\brs(gold|song)", "bellavei", "goji ?xtreme", "lumagenex", "packers.{0,15}movers.{0,25}</a>",
                         "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)",
                         "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning",
-                        "unique(doc)?producers", "green ?tone ?pro"]
+                        "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
@@ -293,7 +293,8 @@ class FindSpam:
                             "3gwith4g\\.com", "xride-hd\\.com", "sincycle\\.com", "wcwnetworking\\.com",
                             "vivaspanish\\.org", "wanglu123\\.com", "z0download\\.com", "citehr\\.com",
                             "thecreatingexperts\\.com", "masterm\\.com", "ablockplus\\.org", "iseenlab\\.com",
-                            "whatech\\.com", "crunchbase\\.com", "fileniaz\\.com"]
+                            "whatech\\.com", "crunchbase\\.com", "fileniaz\\.com", "icoolsoft.com",
+                            "replicabreitlingwatches.co", "wonderful-watch.co"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
@@ -315,8 +316,8 @@ class FindSpam:
                         r"(nitro(?!us)|crazybulk|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(acai|buy|premium|thebest|[/.]try)[\w-]{10,}\.(co|net|org|in\W|info)",
                         r"training[\w.-]{6,}\.(co|net|org|in\W|info)",
-                        r"\w{10}buy\.(co|net|org|in\W|info)",
-                        r"(strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
+                        r"\w{9}buy\.(co|net|org|in\W|info)",
+                        r"(love|strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
                         r"(grow|burn|vapor|ecig|formula|biotic|male|derma|medical|medicare|health|beauty|rx|skin|trim|slim|weight|fat|nutrition|shred|advance|perfect|alpha|beta|brain(?!tree))[\w]{0,20}(about|market|max|help|info|policy|program|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|guide|advi[sc]|discussion|solution|consult|source|sups|vms|cream|grow|enhance)[\w-]{0,10}\.(co|net|org|in\W|info)",
                         r"\w{11}(ideas?|income|sale|reviews?|advices?|problog)\.(co|net|org|in\W|info)",
@@ -325,7 +326,7 @@ class FindSpam:
                         r"(file|photo|android|iphone)recovery[\w-]*?\.(co|net|org|in\W|info)",
                         r"(videos?|movies?|watch)online[\w-]*?\.", r"hd(video|movie)[\w-]*?\.",
                         r"backlink(?!(o\.|watch))[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(replica[^nt]\w{5,20}|\wrolex)\.com",
+                        r"(replica[^nt]\w{5,}|\wrolex)\.(co|net|org|in\W|info)",
                         r"customer(service|support)[\w-]*?\.(co|net|info)"]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
@@ -380,8 +381,8 @@ class FindSpam:
         {'regex': ur"(?i)(workout|fitness\w{2,}|diet|perfecthealth|muscle)[\w-]*?\.(com|co\.|net|org|info)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11},
         # Links preceded by arrows >>>
-        {'regex': ur"(?i)(>>>|===>|==>>>|(Read|Visit) More\s*[=>]{2,})(?=(?s).{0,20}http)", 'all': True,
-         'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 11},
+        {'regex': ur"(?is)(>>>|===>|==>>>|(Read|Visit) More\s*[=>]{2,})(?=.{0,20}http.{0,200}$)", 'all': True,
+         'sites': [], 'reason': "link following arrow in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 11},
         # Link at the end of question, selected sites
         {'method': link_at_end, 'all': False,
          'sites': ["superuser.com", "askubuntu.com", "drupal.stackexchange.com", "meta.stackexchange.com", "security.stackexchange.com", "patents.stackexchange.com"], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'answers': False, 'max_rep': 1},
@@ -439,9 +440,7 @@ class FindSpam:
         #
         # Category: other
         # Blacklisted usernames
-        {'regex': u"(?i)(tejveer ?iq|ser?vice pemanas?)", 'all': True, 'sites': [], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 50},
-        # Code block on Puzzling
-        {'regex': u".*<pre>.*", 'all': False, 'sites': ["puzzling.stackexchange.com"], 'reason': 'code block', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'report_everywhere': False, 'body_summary': False, 'max_rep': 50}
+        {'regex': u"(?i)(tejveer ?iq|ser?vice pemanas?)", 'all': True, 'sites': [], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 50}
     ]
 
     @staticmethod

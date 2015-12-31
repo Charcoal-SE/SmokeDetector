@@ -1,5 +1,7 @@
 from spamhandling import handle_spam, check_if_spam
+from datahandling import add_or_update_api_data, clear_api_data
 from globalvars import GlobalVars
+from operator import itemgetter
 import json
 import time
 import requests
@@ -8,18 +10,42 @@ import requests
 class BodyFetcher:
     queue = {}
 
-    specialCases = {"stackoverflow.com": 5,
-                    "serverfault.com": 5,
-                    "math.stackexchange.com": 10,
+    specialCases = {"math.stackexchange.com": 10,
+                    "pt.stackoverflow.com": 10,
+                    "ru.stackoverflow.com": 10,
+                    "serverfault.com": 10,
+                    "blender.stackexchange.com": 5,
+                    "codegolf.stackexchange.com": 5,
+                    "codereview.stackexchange.com": 5,
+                    "es.stackoverflow.com": 5,
+                    "stackoverflow.com": 5,
+                    "tex.stackexchange.com": 5,
+                    "academia.stackexchange.com": 1,
+                    "beer.stackexchange.com": 1,
+                    "craftcms.stackexchange.com": 1,
                     "drupal.stackexchange.com": 1,
-                    "meta.stackexchange.com": 1}
+                    "expatriates.stackexchange.com": 1,
+                    "genealogy.stackexchange.com": 1,
+                    "ham.stackexchange.com": 1,
+                    "health.stackexchange.com": 1,
+                    "history.stackexchange.com": 1,
+                    "meta.stackexchange.com": 1,
+                    "money.stackexchange.com": 1,
+                    "outdoors.stackexchange.com": 1,
+                    "parenting.stackexchange.com": 1,
+                    "patents.stackexchange.com": 1,
+                    "pets.stackexchange.com": 1,
+                    "startups.stackexchange.com": 1,
+                    "travel.stackexchange.com": 1,
+                    "webapps.stackexchange.com": 1,
+                    "woodworking.stackexchange.com": 1,
+                    "writers.stackexchange.com": 1}
 
     threshold = 2
 
     last_activity_date = 0
 
     def add_to_queue(self, post):
-        #  return  # Disabled, see http://chat.stackexchange.com/transcript/message/20369565#20369565
         d = json.loads(json.loads(post)["data"])
         sitebase = d["siteBaseHostAddress"]
         postid = d["id"]
@@ -76,9 +102,19 @@ class BodyFetcher:
         except requests.exceptions.Timeout:
             return  # could add some retrying logic here, but eh.
 
+        add_or_update_api_data(site)
+
         if "quota_remaining" in response:
             if response["quota_remaining"] - GlobalVars.apiquota >= 1000 and GlobalVars.apiquota >= 0:
                 GlobalVars.charcoal_hq.send_message("API quota rolled over with {} requests remaining.".format(GlobalVars.apiquota))
+                sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1), reverse=True)
+                api_quota_used_per_site = ""
+                for site, quota_used in sorted_calls_per_site:
+                    api_quota_used_per_site = api_quota_used_per_site + site + ": " + str(quota_used) + "\n"
+                api_quota_used_per_site = api_quota_used_per_site.strip()
+                GlobalVars.charcoal_hq.send_message(api_quota_used_per_site, False)
+                clear_api_data()
+
             elif response["quota_remaining"] == 0:
                 GlobalVars.charcoal_hq.send_message("API reports no quota left!  May be a glitch.")
             GlobalVars.apiquota = response["quota_remaining"]
