@@ -48,6 +48,9 @@ def load_files():
     if os.path.isfile("apiCalls.txt"):
         with open("apiCalls.txt", "r") as f:
             GlobalVars.api_calls_per_site = pickle.load(f)
+    if os.path.isfile("bodyfetcherQueue.txt"):
+        with open("bodyfetcherQueue.txt", "r") as f:
+            GlobalVars.bodyfetcher.queue = pickle.load(f)
 
 
 def filter_auto_ignored_posts():
@@ -229,6 +232,11 @@ def clear_api_data():
     GlobalVars.api_calls_per_site = {}
     with open("apiCalls.txt", "w") as f:
         pickle.dump(GlobalVars.api_calls_per_site, f)
+
+
+def store_bodyfetcher_queue():
+    with open("bodyfetcherQueue.txt", "w") as f:
+        pickle.dump(GlobalVars.bodyfetcher.queue, f)
 
 
 # methods that help avoiding reposting alerts:

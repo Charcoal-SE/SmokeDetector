@@ -1,5 +1,5 @@
 from spamhandling import handle_spam, check_if_spam
-from datahandling import add_or_update_api_data, clear_api_data
+from datahandling import add_or_update_api_data, clear_api_data, store_bodyfetcher_queue
 from globalvars import GlobalVars
 from operator import itemgetter
 import json
@@ -74,6 +74,9 @@ class BodyFetcher:
                 self.make_api_call_for_site(site)
                 return
 
+        # We're not making an API request, so explicitly store the queue
+        store_bodyfetcher_queue()
+
     def print_queue(self):
         string = ""
         for site, values in self.queue.iteritems():
@@ -83,6 +86,8 @@ class BodyFetcher:
 
     def make_api_call_for_site(self, site):
         posts = self.queue.pop(site)
+        store_bodyfetcher_queue()
+
         if site == "stackoverflow.com":
             # Not all SO questions are shown in the realtime feed. We now
             # fetch all recently modified SO questions to work around that.

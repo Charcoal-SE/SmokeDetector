@@ -48,6 +48,7 @@ whyData.txt
 whyDataAllspam.txt
 latestMessages.txt
 apiCalls.txt
+bodyfetcherQueue.txt
 
 # Settings files
 .settings/

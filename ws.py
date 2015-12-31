@@ -38,10 +38,12 @@ if "ChatExchangeP" in os.environ:
 else:
     password = getpass.getpass("Password: ")
 
+# We need an instance of bodyfetcher before load_files() is called
+GlobalVars.bodyfetcher = BodyFetcher()
+
 load_files()
 filter_auto_ignored_posts()
 
-GlobalVars.bodyfetcher = BodyFetcher()
 GlobalVars.wrap.login(username, password)
 GlobalVars.wrapm.login(username, password)
 GlobalVars.wrapso.login(username, password)
