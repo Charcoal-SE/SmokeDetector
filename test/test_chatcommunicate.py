@@ -12,6 +12,9 @@ def mock_reply(text, length_check=True):
 
 
 def mock_event(content, event_type, room_id, room_name, user_id, user_name, id=28258802, message_id=15249005, time_stamp=1398822427):
+    global reply_value
+
+    reply_value = ""
     event_data = {
         "content": content,
         "event_type": event_type,
@@ -166,8 +169,6 @@ def test_test_command():
 @pytest.mark.skipif(os.path.isfile("notifications.txt"),
                     reason="shouldn't overwrite file")
 def test_notification():
-    global reply_value
-
     event = mock_event("!!/notify", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
     assert reply_value == "2 arguments expected"
@@ -220,12 +221,10 @@ def test_notification():
     watcher(event, client.Client())
     assert reply_value == "That configuration doesn't exist."
 
-    reply_value = ""
     event = mock_event("!!/notify 11540 meta.stackexchange.com-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
     assert reply_value == ""
 
-    reply_value = ""
     event = mock_event("!!/unnotify 11540 meta.stackexchange.com-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
     assert reply_value == ""
@@ -239,9 +238,6 @@ def test_notification():
 
 
 def test_messages_not_sent():
-    global reply_value
-
-    reply_value = ''
     event = mock_event("test message", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
     # If this fails, you have utterly broken something. Do *not* even think of pulling because people will scream and it will be ugly. Bad things will happen, and the world will fall into anarchy. So please, please, please... don't break this test.
