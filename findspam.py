@@ -420,7 +420,7 @@ class FindSpam:
         #
         # Category: Trolling
         # Offensive content in titles and posts
-        {'regex': ur"(?i)\b(nigg(a|er)|asshole|fag(got)?|daf[au][qk]|(mother)?fuc?k+(ing?|e?r)?|shit(t?er|hole|head)|dickhead|whore|cunt|dee[sz]e? nut[sz])s?\b", 'all': True,
+        {'regex': ur"(?i)\b(nigg(a|er)|asshole|fag(got)?|daf[au][qk]|(mother)?fuc?k+(ing?|e?r)?|shit(t?er|hole|head)?|dickhead|whore|cunt|dee[sz]e? nut[sz])s?\b", 'all': True,
          'sites': [], 'reason': "offensive {} detected", 'insensitive':True, 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 101},
         # Offensive content in titles only
         {'regex': ur"(?i)\bcrap\b", 'all': True, 'sites': [], 'reason': "offensive {} detected", 'insensitive': True, 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 101},
