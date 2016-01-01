@@ -427,10 +427,12 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 GlobalVars.blockedTime = time.time() + timeToBlock
             else:
                 GlobalVars.blockedTime = time.time() + 900
+            GlobalVars.charcoal_hq.send_message("Reports blocked for {} seconds.".format(GlobalVars.blockedTime - time.time()))
             return "blocked"
     if content_lower.startswith("!!/unblock"):
         if is_privileged(ev_room, ev_user_id, wrap2):
             GlobalVars.blockedTime = time.time()
+            GlobalVars.charcoal_hq.send_message("Reports unblocked.")
             return "unblocked"
     if content_lower.startswith("!!/errorlogs"):
         if is_privileged(ev_room, ev_user_id, wrap2):
