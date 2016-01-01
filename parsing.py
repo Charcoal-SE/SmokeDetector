@@ -181,8 +181,7 @@ def preprocess_shortcut_command(cmd):
         if not curr[0].isdigit():
             new_cmd.append(curr)
         else:
-            match = regex.search(r"^\d+", curr)
-            t = int(match.group())
+            t = int(curr[0])
             for j in range(0, t):
-                new_cmd.append(curr[match.end():])
+                new_cmd.append(curr[1:])
     return " ".join(new_cmd)
