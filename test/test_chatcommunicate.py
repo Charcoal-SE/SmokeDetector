@@ -1,14 +1,26 @@
 # -*- coding: utf-8 -*-
 from ChatExchange.chatexchange import events, client
 from chatcommunicate import *
+from datahandling import is_false_positive, is_ignored_post
 import pytest
 
+GlobalVars.metasmoke_host = None
+
 reply_value = ""
+messages = {}
+
+# methods to mock parts of SmokeDetector
 
 
 def mock_reply(text, length_check=True):
     global reply_value
     reply_value = text
+
+
+def mock_get_message(msg_id):
+    if msg_id in messages:
+        return mock_event(messages[msg_id], 1, 11540, "Charcoal HQ", 120914, u"SmokeDetector").message
+    return None
 
 
 def mock_event(content, event_type, room_id, room_name, user_id, user_name, id=28258802, message_id=15249005, time_stamp=1398822427):
@@ -31,6 +43,19 @@ def mock_event(content, event_type, room_id, room_name, user_id, user_name, id=2
     event.message.reply = mock_reply
     event.message.content_source = content
     return event
+
+
+def mock_previous_messages(messages_with_ids):
+    global messages
+    messages = messages_with_ids
+
+
+def mock_client_get_message(client):
+    client.get_message = mock_get_message
+    return client
+
+
+# Now starts the tests
 
 
 def test_blame():
@@ -242,3 +267,232 @@ def test_messages_not_sent():
     watcher(event, client.Client())
     # If this fails, you have utterly broken something. Do *not* even think of pulling because people will scream and it will be ugly. Bad things will happen, and the world will fall into anarchy. So please, please, please... don't break this test.
     assert reply_value == ""
+
+
+@pytest.mark.skipif(os.path.isfile("blacklistedUsers.txt"),
+                    reason="shouldn't overwrite file")
+def test_true_positive():
+    mocked_client = mock_client_get_message(client.Client())
+
+    event = mock_event("!!/isblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User is not blacklisted. (`1` on `stackoverflow.com`)."
+
+    event = mock_event(":1234 tp", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == "Recorded question as true positive in metasmoke. Use `tpu` or `trueu` if you want to blacklist a user."
+
+    event = mock_event(":1234 tp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == ""
+
+    event = mock_event(":1234 tpu", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == "Blacklisted user and registered question as true positive."
+
+    event = mock_event(":1234 tpu-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == ""
+
+    event = mock_event("!!/isblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User is blacklisted. (`1` on `stackoverflow.com`)."
+
+    event = mock_event("!!/rmblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User removed from blacklist (`1` on `stackoverflow.com`)."
+
+    event = mock_event(":1234 tpu-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: 'Not a report yay for bots'})
+    watcher(event, mocked_client)
+    assert reply_value == "That message is not a report."
+
+    event = mock_event("!!/isblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User is not blacklisted. (`1` on `stackoverflow.com`)."
+
+    event = mock_event(":1234 tp", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == "Recorded answer as true positive in metasmoke. If you want to blacklist the poster of the answer, use `trueu` or `tpu`."
+
+    event = mock_event(":1234 tp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == ""
+
+    event = mock_event(":1234 tpu", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == "Blacklisted user."
+
+    event = mock_event(":1234 tpu-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == ""
+
+    event = mock_event("!!/rmblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User removed from blacklist (`1` on `stackoverflow.com`)."
+
+    # cleanup
+    os.remove("blacklistedUsers.txt")
+
+
+@pytest.mark.skipif(os.path.isfile("whitelistedUsers.txt") or os.path.isfile("falsePositives.txt"),
+                    reason="shouldn't overwrite file")
+def test_false_positive():
+    mocked_client = mock_client_get_message(client.Client())
+
+    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User is not whitelisted. (`1` on `stackoverflow.com`)."
+
+    event = mock_event(":1234 fp", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == "Registered question as false positive."
+    assert is_false_positive(("1000", "stackoverflow.com"))
+
+    GlobalVars.false_positives = []
+    assert not is_false_positive(("1000", "stackoverflow.com"))
+    event = mock_event(":1234 fp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == ""
+    assert is_false_positive(("1000", "stackoverflow.com"))
+
+    GlobalVars.false_positives = []
+    assert not is_false_positive(("1000", "stackoverflow.com"))
+    event = mock_event(":1234 fpu", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == "Registered question as false positive and whitelisted user."
+    assert is_false_positive(("1000", "stackoverflow.com"))
+    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User is whitelisted. (`1` on `stackoverflow.com`)."
+    event = mock_event("!!/rmwlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User removed from whitelist (`1` on `stackoverflow.com`)."
+
+    GlobalVars.false_positives = []
+    assert not is_false_positive(("1000", "stackoverflow.com"))
+    event = mock_event(":1234 fpu-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == ""
+    assert is_false_positive(("1000", "stackoverflow.com"))
+    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User is whitelisted. (`1` on `stackoverflow.com`)."
+    event = mock_event("!!/rmwlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User removed from whitelist (`1` on `stackoverflow.com`)."
+
+    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User is not whitelisted. (`1` on `stackoverflow.com`)."
+    event = mock_event(":1234 fp", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == "Registered answer as false positive."
+    assert is_false_positive(("1000", "stackoverflow.com"))
+
+    GlobalVars.false_positives = []
+    assert not is_false_positive(("1000", "stackoverflow.com"))
+    event = mock_event(":1234 fp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == ""
+    assert is_false_positive(("1000", "stackoverflow.com"))
+
+    GlobalVars.false_positives = []
+    assert not is_false_positive(("1000", "stackoverflow.com"))
+    event = mock_event(":1234 fpu", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == "Registered answer as false positive and whitelisted user."
+    assert is_false_positive(("1000", "stackoverflow.com"))
+    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User is whitelisted. (`1` on `stackoverflow.com`)."
+    event = mock_event("!!/rmwlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User removed from whitelist (`1` on `stackoverflow.com`)."
+
+    GlobalVars.false_positives = []
+    assert not is_false_positive(("1000", "stackoverflow.com"))
+    event = mock_event(":1234 fpu-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == ""
+    assert is_false_positive(("1000", "stackoverflow.com"))
+    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User is whitelisted. (`1` on `stackoverflow.com`)."
+    event = mock_event("!!/rmwlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User removed from whitelist (`1` on `stackoverflow.com`)."
+
+    event = mock_event(":1234 fpu-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: 'Not a report yay for bots'})
+    watcher(event, mocked_client)
+    assert reply_value == "That message is not a report."
+
+    # cleanup
+    os.remove("whitelistedUsers.txt")
+    os.remove("falsePositives.txt")
+
+
+@pytest.mark.skipif(os.path.isfile("ignoredPosts.txt"),
+                    reason="shouldn't overwrite file")
+def test_ignore():
+    mocked_client = mock_client_get_message(client.Client())
+
+    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User is not whitelisted. (`1` on `stackoverflow.com`)."
+    event = mock_event("!!/isblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User is not blacklisted. (`1` on `stackoverflow.com`)."
+
+    assert not is_ignored_post(("1000", "stackoverflow.com"))
+    event = mock_event(":1234 ignore", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == "Post ignored; alerts about it will no longer be posted."
+    assert is_ignored_post(("1000", "stackoverflow.com"))
+    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User is not whitelisted. (`1` on `stackoverflow.com`)."
+    event = mock_event("!!/isblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User is not blacklisted. (`1` on `stackoverflow.com`)."
+    GlobalVars.ignored_posts = []
+
+    assert not is_ignored_post(("1000", "stackoverflow.com"))
+    event = mock_event(":1234 ignore-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    watcher(event, mocked_client)
+    assert reply_value == ""
+    assert is_ignored_post(("1000", "stackoverflow.com"))
+    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User is not whitelisted. (`1` on `stackoverflow.com`)."
+    event = mock_event("!!/isblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "User is not blacklisted. (`1` on `stackoverflow.com`)."
+    GlobalVars.ignored_posts = []
+
+    event = mock_event(":1234 ignore-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    mock_previous_messages({1234: 'Not a report yay for bots'})
+    watcher(event, mocked_client)
+    assert reply_value == "That message is not a report."
+
+    # cleanup
+    os.remove("ignoredPosts.txt")
