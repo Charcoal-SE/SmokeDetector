@@ -577,4 +577,4 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         else:
             return "No, you won't be notified for that site in that room."
 
-    return False, False  # Unrecognized command, can be edited later.
+    return False, None  # Unrecognized command, can be edited later.
