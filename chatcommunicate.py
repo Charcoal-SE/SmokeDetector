@@ -120,13 +120,13 @@ def watcher(ev, wrap2):
         r = handle_commands(content_source.lower(), message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content_source, message_id)
         if type(r) != tuple:
             r = (True, r)
-        if r[1] is not None:
+        if r[1] is not None and r[0] is not False:
             if wrap2.host + str(message_id) in GlobalVars.listen_to_these_if_edited:
                 GlobalVars.listen_to_these_if_edited.remove(wrap2.host + str(message_id))
             message_with_reply = u":{} {}".format(message_id, r[1])
             if len(message_with_reply) <= 500 or "\n" in r[1]:
                 ev.message.reply(r[1], False)
-        if r[0] is False:
+        elif r[0] is False:
             if wrap2.host + str(message_id) not in GlobalVars.listen_to_these_if_edited:
                 GlobalVars.listen_to_these_if_edited.append(wrap2.host + str(message_id))
             if len(GlobalVars.listen_to_these_if_edited) > 500:
