@@ -241,7 +241,7 @@ def test_notification():
 def test_messages_not_sent():
     global reply_value
 
-    reply_value = '"
+    reply_value = ''
     event = mock_event("test message", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
     # If this fails, you have utterly broken something. Do *not* even think of pulling because people will scream and it will be ugly. Bad things will happen, and the world will fall into anarchy. So please, please, please... don't break this test.
