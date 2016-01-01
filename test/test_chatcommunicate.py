@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from ChatExchange.chatexchange import events, client
 from chatcommunicate import *
-import pytest
 
 reply_value = ""
 
