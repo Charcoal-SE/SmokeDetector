@@ -51,7 +51,7 @@ def test_tea():
     assert u"for @Doorknob冰" in reply_value
 
 
-@pytest.mark.skipif(os.path.isfile("blacklistedUsers.txt"),
+@pytest.mark.skipif(True),
                     reason="shouldn't overwrite file")
 def test_blacklisted_users():
     event = mock_event("!!/isblu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
@@ -94,7 +94,7 @@ def test_blacklisted_users():
     os.remove("blacklistedUsers.txt")
 
 
-@pytest.mark.skipif(os.path.isfile("whitelistedUsers.txt"),
+@pytest.mark.skipif(True,
                     reason="shouldn't overwrite file")
 def test_whitelisted_users():
     event = mock_event("!!/iswlu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
@@ -163,7 +163,7 @@ def test_test_command():
     assert "in username" in reply_value
 
 
-@pytest.mark.skipif(os.path.isfile("notifications.txt"),
+@pytest.mark.skipif(True,
                     reason="shouldn't overwrite file")
 def test_notification():
     global reply_value
