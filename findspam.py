@@ -300,7 +300,7 @@ class FindSpam:
                         r"\.(com|net)/(xtra|muscle)[\w-]",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
                         r"(essay|resume)\w{6,}\.(co|net|org|in\W|info|us)",
-                        r"top\d\w{2,15}\.in\W",
+                        r"(top|best)\d\w{2,15}\.in\W",
                         r"[\w-](recovery|repair|(?<!epoch|font)converter)(pro|kit)?\.(com|net)",
                         r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)[\w-]*?(tech|customer|support|service|phone|help|\d+)[\w-]*?(support|phone|number)",
                         r"sourceforge\.net[\w/]*convert",
