@@ -55,6 +55,29 @@ def mock_client_get_message(client):
     return client
 
 
+# Helper methods
+
+
+def is_user_currently_whitelisted(link, site, id):
+    event = mock_event("!!/iswlu {}".format(link), 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    if reply_value == "User is whitelisted. (`{}` on `{}`).".format(site, id):
+        return True
+    if reply_value == "User is not whitelisted. (`{}` on `{}`).".format(site, id):
+        return False
+    return -1
+
+
+def is_user_currently_blacklisted(link, site, id):
+    event = mock_event("!!/isblu {}".format(link), 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    if reply_value == "User is blacklisted. (`{}` on `{}`).".format(site, id):
+        return True
+    if reply_value == "User is not blacklisted. (`{}` on `{}`).".format(site, id):
+        return False
+    return -1
+
+
 # Now starts the tests
 
 
@@ -82,9 +105,7 @@ def test_tea():
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.txt"),
                     reason="shouldn't overwrite file")
 def test_blacklisted_users():
-    event = mock_event("!!/isblu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is not blacklisted. (`237685` on `meta.stackexchange.com`)."
+    assert is_user_currently_blacklisted("http://meta.stackexchange.com/users/237685/hichris123", "237685", "meta.stackexchange.com") is False
 
     event = mock_event("!!/rmblu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
@@ -93,18 +114,12 @@ def test_blacklisted_users():
     event = mock_event("!!/addblu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
     assert reply_value == "User blacklisted (`237685` on `meta.stackexchange.com`)."
-
-    event = mock_event("!!/isblu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is blacklisted. (`237685` on `meta.stackexchange.com`)."
+    assert is_user_currently_blacklisted("http://meta.stackexchange.com/users/237685/hichris123", "237685", "meta.stackexchange.com")
 
     event = mock_event("!!/rmblu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
     assert reply_value == "User removed from blacklist (`237685` on `meta.stackexchange.com`)."
-
-    event = mock_event("!!/isblu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is not blacklisted. (`237685` on `meta.stackexchange.com`)."
+    assert is_user_currently_blacklisted("http://meta.stackexchange.com/users/237685/hichris123", "237685", "meta.stackexchange.com") is False
 
     event = mock_event("!!/isblu http://meta.stackexchange.com/", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
@@ -125,9 +140,7 @@ def test_blacklisted_users():
 @pytest.mark.skipif(os.path.isfile("whitelistedUsers.txt"),
                     reason="shouldn't overwrite file")
 def test_whitelisted_users():
-    event = mock_event("!!/iswlu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is not whitelisted. (`237685` on `meta.stackexchange.com`)."
+    assert is_user_currently_whitelisted("http://meta.stackexchange.com/users/237685/hichris123", "237685", "meta.stackexchange.com") is False
 
     event = mock_event("!!/rmwlu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
@@ -136,18 +149,12 @@ def test_whitelisted_users():
     event = mock_event("!!/addwlu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
     assert reply_value == "User whitelisted (`237685` on `meta.stackexchange.com`)."
-
-    event = mock_event("!!/iswlu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is whitelisted. (`237685` on `meta.stackexchange.com`)."
+    assert is_user_currently_whitelisted("http://meta.stackexchange.com/users/237685/hichris123", "237685", "meta.stackexchange.com")
 
     event = mock_event("!!/rmwlu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
     assert reply_value == "User removed from whitelist (`237685` on `meta.stackexchange.com`)."
-
-    event = mock_event("!!/iswlu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is not whitelisted. (`237685` on `meta.stackexchange.com`)."
+    assert is_user_currently_whitelisted("http://meta.stackexchange.com/users/237685/hichris123", "237685", "meta.stackexchange.com") is False
 
     event = mock_event("!!/iswlu http://meta.stackexchange.com/", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
@@ -274,9 +281,7 @@ def test_messages_not_sent():
 def test_true_positive():
     mocked_client = mock_client_get_message(client.Client())
 
-    event = mock_event("!!/isblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is not blacklisted. (`1` on `stackoverflow.com`)."
+    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
 
     event = mock_event(":1234 tp", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
@@ -292,28 +297,23 @@ def test_true_positive():
     mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
     watcher(event, mocked_client)
     assert reply_value == "Blacklisted user and registered question as true positive."
+    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com")
 
     event = mock_event(":1234 tpu-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
     watcher(event, mocked_client)
     assert reply_value == ""
-
-    event = mock_event("!!/isblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is blacklisted. (`1` on `stackoverflow.com`)."
+    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com")
 
     event = mock_event("!!/rmblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
     assert reply_value == "User removed from blacklist (`1` on `stackoverflow.com`)."
+    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
 
     event = mock_event(":1234 tpu-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     mock_previous_messages({1234: 'Not a report yay for bots'})
     watcher(event, mocked_client)
     assert reply_value == "That message is not a report."
-
-    event = mock_event("!!/isblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is not blacklisted. (`1` on `stackoverflow.com`)."
 
     event = mock_event(":1234 tp", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
@@ -329,15 +329,18 @@ def test_true_positive():
     mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
     watcher(event, mocked_client)
     assert reply_value == "Blacklisted user."
+    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com")
 
     event = mock_event(":1234 tpu-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
     watcher(event, mocked_client)
     assert reply_value == ""
+    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com")
 
     event = mock_event("!!/rmblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
     assert reply_value == "User removed from blacklist (`1` on `stackoverflow.com`)."
+    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
 
     # cleanup
     os.remove("blacklistedUsers.txt")
@@ -348,9 +351,7 @@ def test_true_positive():
 def test_false_positive():
     mocked_client = mock_client_get_message(client.Client())
 
-    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is not whitelisted. (`1` on `stackoverflow.com`)."
+    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
 
     event = mock_event(":1234 fp", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
@@ -373,12 +374,11 @@ def test_false_positive():
     watcher(event, mocked_client)
     assert reply_value == "Registered question as false positive and whitelisted user."
     assert is_false_positive(("1000", "stackoverflow.com"))
-    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is whitelisted. (`1` on `stackoverflow.com`)."
+    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com")
     event = mock_event("!!/rmwlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
     assert reply_value == "User removed from whitelist (`1` on `stackoverflow.com`)."
+    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
 
     GlobalVars.false_positives = []
     assert not is_false_positive(("1000", "stackoverflow.com"))
@@ -387,16 +387,12 @@ def test_false_positive():
     watcher(event, mocked_client)
     assert reply_value == ""
     assert is_false_positive(("1000", "stackoverflow.com"))
-    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is whitelisted. (`1` on `stackoverflow.com`)."
+    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com")
     event = mock_event("!!/rmwlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
     assert reply_value == "User removed from whitelist (`1` on `stackoverflow.com`)."
+    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
 
-    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is not whitelisted. (`1` on `stackoverflow.com`)."
     event = mock_event(":1234 fp", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
     watcher(event, mocked_client)
@@ -418,12 +414,11 @@ def test_false_positive():
     watcher(event, mocked_client)
     assert reply_value == "Registered answer as false positive and whitelisted user."
     assert is_false_positive(("1000", "stackoverflow.com"))
-    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is whitelisted. (`1` on `stackoverflow.com`)."
+    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com")
     event = mock_event("!!/rmwlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
     assert reply_value == "User removed from whitelist (`1` on `stackoverflow.com`)."
+    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
 
     GlobalVars.false_positives = []
     assert not is_false_positive(("1000", "stackoverflow.com"))
@@ -432,12 +427,11 @@ def test_false_positive():
     watcher(event, mocked_client)
     assert reply_value == ""
     assert is_false_positive(("1000", "stackoverflow.com"))
-    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is whitelisted. (`1` on `stackoverflow.com`)."
+    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com")
     event = mock_event("!!/rmwlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
     assert reply_value == "User removed from whitelist (`1` on `stackoverflow.com`)."
+    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
 
     event = mock_event(":1234 fpu-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     mock_previous_messages({1234: 'Not a report yay for bots'})
@@ -454,12 +448,8 @@ def test_false_positive():
 def test_ignore():
     mocked_client = mock_client_get_message(client.Client())
 
-    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is not whitelisted. (`1` on `stackoverflow.com`)."
-    event = mock_event("!!/isblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is not blacklisted. (`1` on `stackoverflow.com`)."
+    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
+    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
 
     assert not is_ignored_post(("1000", "stackoverflow.com"))
     event = mock_event(":1234 ignore", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
@@ -467,12 +457,8 @@ def test_ignore():
     watcher(event, mocked_client)
     assert reply_value == "Post ignored; alerts about it will no longer be posted."
     assert is_ignored_post(("1000", "stackoverflow.com"))
-    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is not whitelisted. (`1` on `stackoverflow.com`)."
-    event = mock_event("!!/isblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is not blacklisted. (`1` on `stackoverflow.com`)."
+    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
+    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
     GlobalVars.ignored_posts = []
 
     assert not is_ignored_post(("1000", "stackoverflow.com"))
@@ -481,12 +467,8 @@ def test_ignore():
     watcher(event, mocked_client)
     assert reply_value == ""
     assert is_ignored_post(("1000", "stackoverflow.com"))
-    event = mock_event("!!/iswlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is not whitelisted. (`1` on `stackoverflow.com`)."
-    event = mock_event("!!/isblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is not blacklisted. (`1` on `stackoverflow.com`)."
+    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
+    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
     GlobalVars.ignored_posts = []
 
     event = mock_event(":1234 ignore-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
