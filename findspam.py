@@ -294,8 +294,8 @@ class FindSpam:
                             "3gwith4g\\.com", "xride-hd\\.com", "sincycle\\.com", "wcwnetworking\\.com",
                             "vivaspanish\\.org", "wanglu123\\.com", "z0download\\.com", "citehr\\.com",
                             "thecreatingexperts\\.com", "masterm\\.com", "ablockplus\\.org", "iseenlab\\.com",
-                            "whatech\\.com", "crunchbase\\.com", "fileniaz\\.com", "icoolsoft.com",
-                            "replicabreitlingwatches.co", "wonderful-watch.co"]
+                            "whatech\\.com", "crunchbase\\.com", "fileniaz\\.com", "icoolsoft\\.com",
+                            "replicabreitlingwatches\\.co", "wonderful-watch\\.co", "plagiarism-checker\\.me"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
