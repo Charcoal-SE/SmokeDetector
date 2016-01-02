@@ -107,7 +107,8 @@ class GlobalVars:
                                               "174699",  # Ilmari Karonen
                                               "202362",  # chmod 666 telkitty
                                               "289717",  # Quill
-                                              "237813"],  # bjb568
+                                              "237813",  # bjb568
+                                              "311345"],  # Simon Klaver
                         socvr_room_id: [
                             "1849664",  # Undo
                             "2581872",  # hichris123
