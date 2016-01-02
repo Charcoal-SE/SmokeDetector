@@ -168,7 +168,7 @@ class FindSpam:
                         "\\brs(gold|song)", "bellavei", "goji ?xtreme", "lumagenex", "packers.{0,15}movers.{0,25}</a>",
                         "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)",
                         "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning",
-                        "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn"]
+                        "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn", "revolyn"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
