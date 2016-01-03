@@ -313,8 +313,8 @@ class FindSpam:
                         r"(livestreaming|watch[\w-]*?(live|online))\.(com|net|tv)",
                         r"//(cheat[\w-.]{3,}|xtreme[\w-]{5,})\.(co|net|org|in\W|info)",
                         r"([\w-]password|[\w]{5,}facts|\Btoyshop|[\w-]{6,}cheats|credits)\.(co|net|org|in\W|info)",
-                        r"(diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(trainingin|cracked\w{3}|bestmover|\w{4}mortgage|loans|revenue|escort|testo[-bsx]|cleanse|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(trainingin|cracked\w{3}|bestmover|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(nitro(?!us)|crazybulk|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(acai|buy|premium|thebest|[/.]try)[\w-]{10,}\.(co|net|org|in\W|info)",
                         r"training[\w.-]{6,}\.(co|net|org|in\W|info)",
@@ -329,7 +329,8 @@ class FindSpam:
                         r"(videos?|movies?|watch)online[\w-]*?\.", r"hd(video|movie)[\w-]*?\.",
                         r"backlink(?!(o\.|watch))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(replica[^nt]\w{5,}|\wrolex)\.(co|net|org|in\W|info)",
-                        r"customer(service|support)[\w-]*?\.(co|net|info)"]
+                        r"customer(service|support)[\w-]*?\.(co|net|info)",
+                        r"]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
         #
