@@ -156,7 +156,7 @@ class FindSpam:
                     "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?", "intellux", "viooz",
                     "smartican", "essay writing service", "T-complex", "retrodynamic formula",
                     "eltima", "raging lion", "love.*spell ?caster", "08151871776",
-                    "^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$"]
+                    "^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$", "KrojamSoft", "FilesSearch ?Tool"]
     bad_keywords_nwb = [u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "(skin|face|eye) ?(serum|lift)", "(serum|lift) ?eye", "tophealth", "poker ?online",
