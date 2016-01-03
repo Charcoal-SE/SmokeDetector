@@ -296,7 +296,7 @@ class FindSpam:
                             "thecreatingexperts\\.com", "masterm\\.com", "ablockplus\\.org", "iseenlab\\.com",
                             "whatech\\.com", "crunchbase\\.com", "fileniaz\\.com", "icoolsoft\\.com",
                             "replicabreitlingwatches\\.co", "wonderful-watch\\.co", "plagiarism-checker\\.me",
-                            "khannaescorts\\.com"]
+                            "khannaescorts\\.com", "windowslivemailconverter\\.com", "mboxconverter\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
