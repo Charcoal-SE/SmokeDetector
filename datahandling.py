@@ -365,7 +365,7 @@ def append_pings(original_message, names):
     if len(names) == 0:
         return original_message
     else:
-        new_message = "{0} ({1})".format(original_message, " ".join(["@" + x.replace(" ", "") for x in names]))
+        new_message = u"{0} ({1})".format(original_message, " ".join(["@" + x.replace(" ", "") for x in names]))
         if len(new_message) > 500:
             return original_message
         else:
