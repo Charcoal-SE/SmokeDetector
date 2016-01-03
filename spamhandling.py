@@ -8,6 +8,7 @@ from globalvars import GlobalVars
 from datetime import datetime
 from parsing import url_to_shortlink
 from metasmoke import Metasmoke
+import excepthook
 
 
 def should_whitelist_prevent_alert(user_url, reasons):
@@ -89,8 +90,9 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
         users_file = open("users.txt", "a")
         users_file.write(site + " " + owner + " " + title + " " + post_url + "\n")
         users_file.close()
-    except Exception as e:
-        print e
+    except:
+        exc_type, exc_obj, exc_tb = sys.exc_info()
+        excepthook.uncaught_exception(exc_type, exc_obj, exc_tb)
     try:
         title = escape_special_chars_in_title(title)
 
@@ -136,7 +138,8 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                     room_msg = append_pings(s, room_pings)
                     specialroom["room"].send_message(room_msg if len(room_msg) <= 500 else s)
     except:
-        print "NOP"
+        exc_type, exc_obj, exc_tb = sys.exc_info()
+        excepthook.uncaught_exception(exc_type, exc_obj, exc_tb)
 
 
 def handle_spam_json(data, reason, why=""):
@@ -151,7 +154,8 @@ def handle_spam_json(data, reason, why=""):
         post_id = str(d["id"])
         handle_spam(title, body, poster, site, url, poster_url, post_id, reason, False, why)
     except:
-        print "NOP"
+        exc_type, exc_obj, exc_tb = sys.exc_info()
+        excepthook.uncaught_exception(exc_type, exc_obj, exc_tb)
 
 
 def handle_user_with_all_spam(user, why):
