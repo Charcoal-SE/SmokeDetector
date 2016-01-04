@@ -109,7 +109,7 @@ class GlobalVars:
                                               "289717",  # Quill
                                               "237813",  # bjb568
                                               "311345",  # Simon Klaver
-                                              "171881"],  #rekire
+                                              "171881"],  # rekire
                         socvr_room_id: [
                             "1849664",  # Undo
                             "2581872",  # hichris123
