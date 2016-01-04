@@ -591,6 +591,4 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             return "You won't get notified for any sites in that room."
         else:
             return "You will get notified for these sites:\r\n" + ", ".join(sites)
-
-
     return False, None  # Unrecognized command, can be edited later.
