@@ -349,6 +349,16 @@ def will_i_be_notified(user_id, chat_site, room_id, se_site):
     return t in GlobalVars.notifications
 
 
+def get_all_notification_sites(user_id, chat_site, room_id):
+    user_id = int(user_id)
+    room_id = int(room_id)
+    sites = []
+    for n in GlobalVars.notifications:
+        if n[0] == user_id and n[1] == chat_site and n[2] == room_id:
+            sites.append(n[3])
+    return sites
+
+
 def get_user_ids_on_notification_list(chat_site, room_id, se_site):
     uids = []
     for t in GlobalVars.notifications:

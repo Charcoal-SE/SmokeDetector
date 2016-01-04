@@ -578,5 +578,19 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             return "Yes, you will be notified for that site in that room."
         else:
             return "No, you won't be notified for that site in that room."
+    if content_lower.startswith("!!/allnotificationsites"):
+        if len(message_parts) != 2:
+            return False, "2 arguments expected"
+        user_id = int(ev_user_id)
+        chat_site = wrap2.host
+        room_id = message_parts[1]
+        if not room_id.isdigit():
+            return False, "Room ID is invalid."
+        sites = get_all_notification_sites(user_id, chat_site, room_id)
+        if len(sites) == 0:
+            return "You won't get notified for any sites in that room."
+        else:
+            return "You will get notified for these sites:\r\n" + ", ".join(sites)
+
 
     return False, None  # Unrecognized command, can be edited later.
