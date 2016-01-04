@@ -580,7 +580,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             return "No, you won't be notified for that site in that room."
     if content_lower.startswith("!!/allnotificationsites"):
         if len(message_parts) != 2:
-            return False, "2 arguments expected"
+            return False, "1 argument expected"
         user_id = int(ev_user_id)
         chat_site = wrap2.host
         room_id = message_parts[1]
