@@ -50,7 +50,8 @@ def has_repeating_characters(s, site):
 
 
 def link_at_end(s, site):
-    match = regex.compile(ur"http://[A-Za-z0-9-.]*/?[A-Za-z0-9-]*/?</a>(?:</strong>)?\s*</p>\s*$", regex.UNICODE).findall(s)
+    s = regex.sub("</strong>|</em>|</p>", "", s)
+    match = regex.compile(ur"http://[A-Za-z0-9-.]*/?[A-Za-z0-9-]*/?</a>\s*$", regex.UNICODE).findall(s)
     if len(match) > 0 and not regex.compile(r"\b(imgur|stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|google|localhost|ubuntu)\b", regex.UNICODE).search(match[0]):
         return True, u"Link at end: {}".format(match[0])
     return False, ""
