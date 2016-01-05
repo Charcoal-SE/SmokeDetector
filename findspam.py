@@ -92,10 +92,10 @@ def has_phone_number(s, site):
 
 def has_customer_service(s, site):  # flexible detection of customer service in titles
     s = s[0:200].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
-    s = regex.sub(r"[^\w\s]", "", s)   # deobfuscate
-    phrase = regex.compile(r"(support|service|contact|help(line)?) ?(telephone|phone)? ?number").search(s)
+    s = regex.sub(r"[^A-Za-z0-9\s]", "", s)   # deobfuscate
+    phrase = regex.compile(r"(support|service|contact|help(line)?) ?(telephone|phone|number)").search(s)
     if (phrase):
-        return True, u"Keywords: {}".format(phrase[0])
+        return True, u"Key phrase: {}".format(phrase[0])
     business = regex.compile(r"(?i)\b(netflix|dell|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|out[l1]ook|quickbooks|yahoo|Delta|airlines?)\b").findall(s)
     digits = len(regex.compile(r"\d").findall(s))
     if (business and digits >= 5):
