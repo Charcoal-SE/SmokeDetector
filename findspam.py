@@ -168,7 +168,8 @@ class FindSpam:
                         "\\brs(gold|song)", "bellavei", "goji ?xtreme", "lumagenex", "packers.{0,15}movers.{0,25}</a>",
                         "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)",
                         "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning",
-                        "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn", "revolyn"]
+                        "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn", "revolyn",
+                        "training.{0,4}chennai"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
@@ -298,7 +299,7 @@ class FindSpam:
                             "replicabreitlingwatches\\.co", "wonderful-watch\\.co", "plagiarism-checker\\.me",
                             "khannaescorts\\.com", "windowslivemailconverter\\.com", "mboxconverter\\.com",
                             "sapboonline\\.com", "thinkittraining\\.in", "salesforcetrainingexpert\\.in",
-                            "weblogic-trainingchennai\\.in"]
+                            "weblogic-trainingchennai\\.in", "indiaflower"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
