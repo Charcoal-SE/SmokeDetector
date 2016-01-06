@@ -161,7 +161,7 @@ class FindSpam:
                     "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?", "intellux", "viooz",
                     "smartican", "essay writing service", "T-complex", "retrodynamic formula",
                     "eltima", "raging lion", "love.*spell ?caster", "08151871776",
-                    "^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$", "KrojamSoft", "FilesSearch ?Tool"]
+                    "^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$", "Krojam(Soft|Cleaner)?", "FilesSearch ?Tool"]
     bad_keywords_nwb = [u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "(skin|face|eye) ?(serum|lift)", "(serum|lift) ?eye", "tophealth", "poker ?online",
@@ -304,7 +304,7 @@ class FindSpam:
                             "replicabreitlingwatches\\.co", "wonderful-watch\\.co", "plagiarism-checker\\.me",
                             "khannaescorts\\.com", "windowslivemailconverter\\.com", "mboxconverter\\.com",
                             "sapboonline\\.com", "thinkittraining\\.in", "salesforcetrainingexpert\\.in",
-                            "weblogic-trainingchennai\\.in", "indiaflower"]
+                            "weblogic-trainingchennai\\.in", "indiaflower", "krojamcleaner\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
