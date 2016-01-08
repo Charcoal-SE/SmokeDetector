@@ -4,7 +4,6 @@ from datetime import datetime
 from globalvars import GlobalVars
 import requests
 import json
-import regex
 import time
 import math
 
@@ -31,11 +30,6 @@ def load_files():
     if os.path.isfile("notifications.txt"):
         with open("notifications.txt", "r") as f:
             GlobalVars.notifications = pickle.load(f)
-    if os.path.isfile("frequentSentences.txt"):
-        with open("frequentSentences.txt", "r") as f:
-            lines = f.readlines()
-            for line in lines:
-                GlobalVars.frequent_sentences.append(line.strip())
     if os.path.isfile("whyData.txt"):
         with open("whyData.txt", "r") as f:
             GlobalVars.why_data = pickle.load(f)
@@ -307,14 +301,6 @@ def check_site_and_get_full_name(site):
         if site == full_name or site == short_name:
             return True, full_name
     return False, "Could not find the given site."
-
-# method to check whether a sentence is frequent of occurrence:
-
-
-def is_frequent_sentence(sentence):
-    no_punctuation = regex.sub(r"[^a-zA-Z0-9\s]", "", sentence).lower()
-    merged_whitespace = regex.sub(r"\s+", " ", no_punctuation).strip()
-    return merged_whitespace in GlobalVars.frequent_sentences
 
 
 # methods to add/remove/check users on the "notification" list
