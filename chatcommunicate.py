@@ -113,7 +113,7 @@ def watcher(ev, wrap2):
         else:
             reply = reply.strip()
         if reply != "":
-            message_with_reply = ":{} {}".format(message_id, reply)
+            message_with_reply = u":{} {}".format(message_id, reply)
             if len(message_with_reply) <= 500 or "\n" in reply:
                 ev.message.reply(reply, False)
     else:
