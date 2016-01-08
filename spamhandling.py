@@ -34,9 +34,9 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
             message_url = 'http:' + blacklisted_user_data[1]
             blacklisted_post_url = blacklisted_user_data[2]
             if blacklisted_post_url:
-                why += u"Blacklisted user - blacklisted for {} by {}\n".format(blacklisted_post_url, message_url)
+                why += u"\nBlacklisted user - blacklisted for {} by {}".format(blacklisted_post_url, message_url)
             else:
-                why += u"Blacklisted user - blacklisted by {}\n".format(message_url)
+                why += u"\nBlacklisted user - blacklisted by {}".format(message_url)
     if 0 < len(test):
         if has_already_been_posted(post_site, post_id, title) or is_false_positive((post_id, post_site)) \
                 or should_whitelist_prevent_alert(user_url, test) \
