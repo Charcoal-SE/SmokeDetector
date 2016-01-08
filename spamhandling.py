@@ -86,14 +86,6 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
     if why is not None and why != "":
         add_why(site, post_id, why)
     try:
-        owner = poster_url
-        users_file = open("users.txt", "a")
-        users_file.write(site + " " + owner + " " + title + " " + post_url + "\n")
-        users_file.close()
-    except:
-        exc_type, exc_obj, exc_tb = sys.exc_info()
-        excepthook.uncaught_exception(exc_type, exc_obj, exc_tb)
-    try:
         title = escape_special_chars_in_title(title)
 
         if not poster.strip():
