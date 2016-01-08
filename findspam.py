@@ -305,7 +305,7 @@ class FindSpam:
                             "khannaescorts\\.com", "windowslivemailconverter\\.com", "mboxconverter\\.com",
                             "sapboonline\\.com", "thinkittraining\\.in", "salesforcetrainingexpert\\.in",
                             "weblogic-trainingchennai\\.in", "indiaflower", "krojamcleaner\\.com", "achatlaser\\.com",
-                            "latestone\\.com", "iwebsoul\\.com"]
+                            "latestone\\.com", "iwebsoul\\.com", "uttarakhandshadi"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
