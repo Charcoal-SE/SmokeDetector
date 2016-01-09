@@ -109,7 +109,7 @@ def has_customer_service(s, site):  # flexible detection of customer service in 
 
 def has_health(s, site):   # flexible detection of health spam in titles
     s = s[0:200].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
-    organ = regex.compile(r"(?i)\b(colon|skin|muscle|fac(e|ial)|eye|brain|mind|head|hair|peni(s|le)|breast|body|joint|belly|digest\w*)s?\b").search(s)
+    organ = regex.compile(r"(?i)\b(colon|skin|muscle|bicep|fac(e|ial)|eye|brain|IQ|mind|head|hair|peni(s|le)|breast|body|joint|belly|digest\w*)s?\b").search(s)
     condition = regex.compile(r"(?i)\b(weight|constipat(ed|ion)|dysfunction|swollen|sensitive|wrinkle|aging|suffer|acne|pimple|dry|clog(ged)?|inflam(ed|mation)|fat|age|pound)s?\b").search(s)
     goal = regex.compile(r"(?i)\b(supple|build|los[es]|power|burn|erection|IQ|tone(d)|rip(ped)?|bulk up|get rid|mood)s?\b|\b(diminish|look|reduc|beaut|renew|young|youth|lift|eliminat|enhance|energ|shred|health|improve|enlarge|remov|vital|slim|lean|boost|str[oe]ng)").search(s)
     remedy = regex.compile(r"(?i)\b(remed(y|ie)|serum|cleans?(e|er|ing)|care|(pro)?biotic|herbal|lotion|cream|gel|cure|drug|formula|recipe|regimen|solution|therapy|hydration|soap|treatment|supplement|diet|moist\w*|injection|potion|ingredient|aid|exercise|eat(ing)?)s?\b").search(s)
