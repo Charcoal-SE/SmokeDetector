@@ -162,7 +162,7 @@ class FindSpam:
                     "smartican", "essay writing service", "T-complex", "retrodynamic formula",
                     "eltima", "raging lion", "love.*spell ?caster", "08151871776",
                     "^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$", "Krojam(Soft|Cleaner)?", "FilesSearch ?Tool",
-                    "teksonit"]
+                    "teksonit", "Re@d More"]
     bad_keywords_nwb = [u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "(skin|face|eye) ?(serum|lift)", "(serum|lift) ?eye", "tophealth", "poker ?online",
@@ -393,7 +393,7 @@ class FindSpam:
         {'regex': ur"(?i)(workout|fitness\w{2,}|diet|perfecthealth|muscle)[\w-]*?\.(com|co\.|net|org|info)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11},
         # Links preceded by arrows >>>
-        {'regex': ur"(?is)(>>>|===>|==>>|(Re[a@]d|Visit|Click Here) More\W{2,20})(?=.{0,20}http.{0,200}$)", 'all': True,
+        {'regex': ur"(?is)(>>>|===>|==>>|(Read|Visit|Click Here) More\W{2,20})(?=.{0,20}http.{0,200}$)", 'all': True,
          'sites': [], 'reason': "link following arrow in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 11},
         # Link at the end of question, selected sites
         {'method': link_at_end, 'all': False,
