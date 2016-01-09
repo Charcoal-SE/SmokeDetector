@@ -46,7 +46,7 @@ class BodyFetcher:
 
     last_activity_date = 0
 
-    api_calls_lock = threading.Lock()
+    api_data_lock = threading.Lock()
 
     def add_to_queue(self, post):
         d = json.loads(json.loads(post)["data"])
@@ -110,9 +110,9 @@ class BodyFetcher:
         except requests.exceptions.Timeout:
             return  # could add some retrying logic here, but eh.
 
-        self.api_calls_lock.acquire()
+        self.api_data_lock.acquire()
         add_or_update_api_data(site)
-        self.api_calls_lock.release()
+        self.api_data_lock.release()
 
         if "quota_remaining" in response:
             if response["quota_remaining"] - GlobalVars.apiquota >= 1000 and GlobalVars.apiquota >= 0:
