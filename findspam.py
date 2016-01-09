@@ -393,13 +393,13 @@ class FindSpam:
         {'regex': ur"(?i)(workout|fitness\w{2,}|diet|perfecthealth|muscle)[\w-]*?\.(com|co\.|net|org|info)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11},
         # Links preceded by arrows >>>
-        {'regex': ur"(?is)(>>>|===>|==>>>|(Read|Visit) More\s*[=>]{2,})(?=.{0,20}http.{0,200}$)", 'all': True,
+        {'regex': ur"(?is)(>>>|===>|--->|(Read|Visit) More\s*[=>]{2,})(?=.{0,20}http.{0,200}$)", 'all': True,
          'sites': [], 'reason': "link following arrow in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 11},
         # Link at the end of question, selected sites
         {'method': link_at_end, 'all': False,
          'sites': ["superuser.com", "askubuntu.com", "drupal.stackexchange.com", "meta.stackexchange.com", "security.stackexchange.com", "patents.stackexchange.com"], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'answers': False, 'max_rep': 1},
         # Link at the end of a short answer, set as a separate paragraph
-        {'regex': ur'(?s)^.{0,200}<p>\s*<a href="http://[\w.-]+\.(com|net|in|co.uk)/?"[^<]*</a>\s*</p>\s*$', 'all': True,
+        {'regex': ur'(?s)^.{0,200}<p>\s*<a href="http://[\w.-]+\.(com|net|in|com?.\w+)/?"[^<]*</a>\s*</p>\s*$', 'all': True,
          'sites': [], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1},
         # Shortened URL in a short answer
         {'regex': ur"(?s)^.{0,200}://(goo\.gl|bit\.ly|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|wp\.me|alturl\.com|tiny\.cc)/.{0,150}$", 'all': True, 'sites': [], 'reason': "shortened URL in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1},
