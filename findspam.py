@@ -51,8 +51,8 @@ def has_repeating_characters(s, site):
 
 def link_at_end(s, site):
     s = regex.sub("</strong>|</em>|</p>", "", s)
-    match = regex.compile(ur"http://[A-Za-z0-9-.]*/?[A-Za-z0-9-]*/?</a>\s*$", regex.UNICODE).findall(s)
-    if len(match) > 0 and not regex.compile(r"\b(imgur|stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|google|localhost|ubuntu)\b", regex.UNICODE).search(match[0]):
+    match = regex.compile(ur"https?://[A-Za-z0-9-.]*/?[A-Za-z0-9-]*/?</a>\s*$", regex.UNICODE).findall(s)
+    if len(match) > 0 and not regex.compile(r"\b(imgur|stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|(?<!plus\.)google|localhost|ubuntu)\b", regex.UNICODE).search(match[0]):
         return True, u"Link at end: {}".format(match[0])
     return False, ""
 
@@ -111,7 +111,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
     s = s[0:200].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
     organ = regex.compile(r"(?i)\b(colon|skin|muscle|bicep|fac(e|ial)|eye|brain|IQ|mind|head|hair|peni(s|le)|breast|body|joint|belly|digest\w*)s?\b").search(s)
     condition = regex.compile(r"(?i)\b(weight|constipat(ed|ion)|dysfunction|swollen|sensitive|wrinkle|aging|suffer|acne|pimple|dry|clog(ged)?|inflam(ed|mation)|fat|age|pound)s?\b").search(s)
-    goal = regex.compile(r"(?i)\b(supple|build|los[es]|power|burn|erection|IQ|tone(d)|rip(ped)?|bulk up|get rid|mood)s?\b|\b(diminish|look|reduc|beaut|renew|young|youth|lift|eliminat|enhance|energ|shred|health|improve|enlarge|remov|vital|slim|lean|boost|str[oe]ng)").search(s)
+    goal = regex.compile(r"(?i)\b(supple|build|los[es]|power|burn|erection|IQ|tone(d)|rip(ped)?|bulk|get rid|mood)s?\b|\b(diminish|look|reduc|beaut|renew|young|youth|lift|eliminat|enhance|energ|shred|health|improve|enlarge|remov|vital|slim|lean|boost|str[oe]ng)").search(s)
     remedy = regex.compile(r"(?i)\b(remed(y|ie)|serum|cleans?(e|er|ing)|care|(pro)?biotic|herbal|lotion|cream|gel|cure|drug|formula|recipe|regimen|solution|therapy|hydration|soap|treatment|supplement|diet|moist\w*|injection|potion|ingredient|aid|exercise|eat(ing)?)s?\b").search(s)
     boast = regex.compile(r"(?i)\b(most|best|simple|top|pro|real|mirac(le|ulous)|secrets?|organic|natural|perfect|fantastic|incredible|ultimate|important|reliable|critical|amazing|fast|good)\b|\b(super|hyper|advantag|benefi|effect|great|valu|eas[iy])").search(s)
     other = regex.compile(r"(?i)\b(product|thing|item|review|advi[cs]e|myth|make use|your?|really|work|tip|shop|store|method|expert|instant|buy|fact|consum(e|ption)|baby|male|female|men|women|grow|idea|suggest\w*|issue)s?\b").search(s)
