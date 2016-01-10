@@ -63,7 +63,7 @@ def non_english_link(s, site):   # non-english link in short answer
         for link_text in links:
             word_chars = regex.sub(r"(?u)\W", "", link_text)
             non_latin_chars = regex.sub(r"\w", "", word_chars)
-            if len(non_latin_chars) > 0.2 * len(word_chars) and len(non_latin_chars) >= 2:
+            if len(non_latin_chars) > 0.1 * len(word_chars) and len(non_latin_chars) >= 2:
                 return True, u"Non-English link text {}".format(link_text)
     return False, ""
 
