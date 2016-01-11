@@ -22,6 +22,7 @@ class BodyFetcher:
                     "es.stackoverflow.com": 5,
                     "stackoverflow.com": 5,
                     "tex.stackexchange.com": 5,
+                    "stats.stackexchange.com": 5,
                     "academia.stackexchange.com": 1,
                     "beer.stackexchange.com": 1,
                     "craftcms.stackexchange.com": 1,
