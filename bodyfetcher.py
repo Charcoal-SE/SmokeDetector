@@ -2,6 +2,7 @@ from spamhandling import handle_spam, check_if_spam
 from datahandling import add_or_update_api_data, clear_api_data, store_bodyfetcher_queue
 from globalvars import GlobalVars
 from operator import itemgetter
+from datetime import datetime
 import json
 import time
 import threading
@@ -42,6 +43,8 @@ class BodyFetcher:
                     "woodworking.stackexchange.com": 1,
                     "writers.stackexchange.com": 1}
 
+    timeSensitive = ["askubuntu.com", "superuser.com"]
+
     threshold = 2
 
     last_activity_date = 0
@@ -66,8 +69,13 @@ class BodyFetcher:
     def check_queue(self):
         for site, values in self.queue.iteritems():
             if site in self.specialCases:
-                if len(self.queue[site]) >= self.specialCases[site]:
+                if len(values) >= self.specialCases[site]:
                     print "site " + site + " met special case quota, fetching..."
+                    self.make_api_call_for_site(site)
+                    return
+            if site in self.timeSensitive:
+                if len(values) >= 1 and datetime.utcnow().hour in range(4, 12):
+                    print "site " + site + " has activity during peak spam time, fetching..."
                     self.make_api_call_for_site(site)
                     return
 
