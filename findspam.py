@@ -307,7 +307,7 @@ class FindSpam:
                             "sapboonline\\.com", "thinkittraining\\.in", "salesforcetrainingexpert\\.in",
                             "weblogic-trainingchennai\\.in", "indiaflower", "krojamcleaner\\.com", "achatlaser\\.com",
                             "latestone\\.com", "iwebsoul\\.com", "uttarakhandshadi", "kaintek\\.com", "giftcodes\\.net",
-                            "josmprtion\\.com"]
+                            "josmprtion\\.com", "pc-helpp\\.com", "tufflo\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
@@ -340,7 +340,8 @@ class FindSpam:
                         r"(videos?|movies?|watch)online[\w-]*?\.", r"hd(video|movie)[\w-]*?\.",
                         r"backlink(?!(o\.|watch))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(replica[^nt]\w{5,}|\wrolex)\.(co|net|org|in\W|info)",
-                        r"customer(service|support)[\w-]*?\.(co|net|info)"]
+                        r"customer(service|support)[\w-]*?\.(co|net|org|in\W|info)",
+                        r"conferences?alert[\w-]*?\.(co|net|org|in\W|info)"]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
         #
