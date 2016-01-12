@@ -133,6 +133,7 @@ class BodyFetcher:
                 api_quota_used_per_site = api_quota_used_per_site.strip()
                 GlobalVars.charcoal_hq.send_message(api_quota_used_per_site, False)
                 clear_api_data()
+                
             if response["quota_remaining"] == 0:
                 GlobalVars.charcoal_hq.send_message("API reports no quota left!  May be a glitch.")
                 GlobalVars.charcoal_hq.send_message(str(response))  # No code format for now?
