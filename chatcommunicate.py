@@ -32,6 +32,13 @@ def is_smokedetector_message(user_id, room_id):
     return user_id == GlobalVars.smokeDetector_user_id[room_id]
 
 
+def add_to_listen_if_edited(host, message_id):
+    if host + str(message_id) not in GlobalVars.listen_to_these_if_edited:
+        GlobalVars.listen_to_these_if_edited.append(host + str(message_id))
+    if len(GlobalVars.listen_to_these_if_edited) > 500:
+        GlobalVars.listen_to_these_if_edited = GlobalVars.listen_to_these_if_edited[-500:]
+
+
 def print_chat_message(ev):
     message = colored("Chat message in " + ev.data["room_name"] + " (" + str(ev.data["room_id"]) + "): \"", attrs=['bold'])
     message += ev.data['content']
@@ -104,14 +111,11 @@ def watcher(ev, wrap2):
                 reply += "<skipped>" + os.linesep
                 amount_skipped += 1
         if amount_unrecognized == length:
-            if wrap2.host + str(message_id) not in GlobalVars.listen_to_these_if_edited:
-                GlobalVars.listen_to_these_if_edited.append(wrap2.host + str(message_id))
-            if len(GlobalVars.listen_to_these_if_edited) > 500:
-                GlobalVars.listen_to_these_if_edited = GlobalVars[-500:]
+            add_to_listen_if_edited(wrap2.host, message_id)
         if amount_none + amount_skipped + amount_unrecognized == length:
             reply = ""
-        else:
-            reply = reply.strip()
+
+        reply = reply.strip()
         if reply != "":
             message_with_reply = u":{} {}".format(message_id, reply)
             if len(message_with_reply) <= 500 or "\n" in reply:
@@ -127,10 +131,7 @@ def watcher(ev, wrap2):
             if len(message_with_reply) <= 500 or "\n" in r[1]:
                 ev.message.reply(r[1], False)
         if r[0] is False:
-            if wrap2.host + str(message_id) not in GlobalVars.listen_to_these_if_edited:
-                GlobalVars.listen_to_these_if_edited.append(wrap2.host + str(message_id))
-            if len(GlobalVars.listen_to_these_if_edited) > 500:
-                GlobalVars.listen_to_these_if_edited = GlobalVars.listen_to_these_if_edited[-500:]
+            add_to_listen_if_edited(wrap2.host, message_id)
 
 
 def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content, message_id):
