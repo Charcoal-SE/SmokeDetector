@@ -127,7 +127,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
 
 
 class FindSpam:
-    bad_keywords = ["baba ?ji", "fifa.*coins?", "fifabay", "Long Path Tool",
+    bad_keywords = ["baba ?ji", "fifa.{0,20}coins?", "fifabay", "Long Path Tool",
                     "fifaodell", "brianfo", "tosterone", "bajotz",
                     "kolcak", "Zapyo", "we (offer|give out) (loans|funds|funding)",
                     "[- ]porn[. ]", "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
