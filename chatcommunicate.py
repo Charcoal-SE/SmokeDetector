@@ -285,9 +285,9 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
             if is_blacklisted_user((uid, val)):
-                return "User is blacklisted. (`{}` on `{}`).".format(uid, val)
+                return "User is blacklisted (`{}` on `{}`).".format(uid, val)
             else:
-                return "User is not blacklisted. (`{}` on `{}`).".format(uid, val)
+                return "User is not blacklisted (`{}` on `{}`).".format(uid, val)
         elif uid == -2:
             return "Error: {}".format(val)
         else:
@@ -318,9 +318,9 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
             if is_whitelisted_user((uid, val)):
-                return "User is whitelisted. (`{}` on `{}`).".format(uid, val)
+                return "User is whitelisted (`{}` on `{}`).".format(uid, val)
             else:
-                return "User is not whitelisted. (`{}` on `{}`).".format(uid, val)
+                return "User is not whitelisted (`{}` on `{}`).".format(uid, val)
         elif uid == -2:
             return "Error: {}".format(val)
         else:

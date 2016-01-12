@@ -61,9 +61,9 @@ def mock_client_get_message(client):
 def is_user_currently_whitelisted(link, site, id):
     event = mock_event("!!/iswlu {}".format(link), 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
-    if reply_value == "User is whitelisted. (`{}` on `{}`).".format(site, id):
+    if reply_value == "User is whitelisted (`{}` on `{}`).".format(site, id):
         return True
-    if reply_value == "User is not whitelisted. (`{}` on `{}`).".format(site, id):
+    if reply_value == "User is not whitelisted (`{}` on `{}`).".format(site, id):
         return False
     return -1
 
@@ -71,9 +71,9 @@ def is_user_currently_whitelisted(link, site, id):
 def is_user_currently_blacklisted(link, site, id):
     event = mock_event("!!/isblu {}".format(link), 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
-    if reply_value == "User is blacklisted. (`{}` on `{}`).".format(site, id):
+    if reply_value == "User is blacklisted (`{}` on `{}`).".format(site, id):
         return True
-    if reply_value == "User is not blacklisted. (`{}` on `{}`).".format(site, id):
+    if reply_value == "User is not blacklisted (`{}` on `{}`).".format(site, id):
         return False
     return -1
 
