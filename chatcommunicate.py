@@ -230,7 +230,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 return "Post ignored; alerts about it will no longer be posted."
             else:
                 return None
-        if (second_part_lower.startswith("delete") or second_part_lower.startswith("remove") or second_part_lower.startswith("gone") or second_part_lower.startswith("poof") or\
+        if (second_part_lower.startswith("delete") or second_part_lower.startswith("remove") or second_part_lower.startswith("gone") or second_part_lower.startswith("poof") or
                 second_part_lower == "del") and is_privileged(ev_room, ev_user_id, wrap2):
             try:
                 msg.delete()
