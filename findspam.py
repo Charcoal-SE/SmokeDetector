@@ -71,9 +71,10 @@ def non_english_link(s, site):   # non-english link in short answer
 def has_phone_number(s, site):
     if regex.compile(ur"(?i)\b(run[- ]?time|error|(sp)?exception|1234567)\b", regex.UNICODE).search(s):
         return False, ""  # not a phone number
+    s = regex.sub(r"[^A-Za-z0-9\s]", "", s)   # deobfuscate
     s = regex.sub("(?i)O", "0", s)
     s = regex.sub("(?i)S", "5", s)
-    s = regex.sub("(?i)[I]", "1", s)
+    s = regex.sub("(?i)I", "1", s)
     matched = regex.compile(ur"(?<!\d)(?:\d(?:_*\d){9}|\+?\d_*\d[\s-]?(?:_*\d){8,11}|\d[ -.(]{0,2}\d{3}[ -.)]{0,2}\d{3}[ -.]{0,2}\d{4})(?!\d)", regex.UNICODE).findall(s)
     test_formats = ["IN", "US", None]      # ^ don't match parts of too long strings of digits
     for phone_number in matched:
@@ -96,7 +97,7 @@ def has_customer_service(s, site):  # flexible detection of customer service in 
     phrase = regex.compile(r"(support|service|contact|help(line)?) ?(telephone|phone|number)").search(s)
     if (phrase):
         return True, u"Key phrase: {}".format(phrase[0])
-    business = regex.compile(r"(?i)\b(netflix|dell|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|out[l1]ook|quickbooks|yahoo|Delta|airlines?)\b").findall(s)
+    business = regex.compile(r"(?i)\b(BT|netflix|dell|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|out[l1]ook|quickbooks|yahoo|Delta|airlines?)\b").findall(s)
     digits = len(regex.compile(r"\d").findall(s))
     if (business and digits >= 5):
         keywords = regex.compile(r"(?i)\b(customer|help|helpline|reservation|phone|recovery|service|support|tech|technical|telephone|number)\b").findall(s)
