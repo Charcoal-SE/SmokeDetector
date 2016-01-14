@@ -71,7 +71,7 @@ def non_english_link(s, site):   # non-english link in short answer
 def has_phone_number(s, site):
     if regex.compile(ur"(?i)\b(run[- ]?time|error|(sp)?exception|1234567)\b", regex.UNICODE).search(s):
         return False, ""  # not a phone number
-    s = regex.sub(r"[^A-Za-z0-9\s]", "", s)   # deobfuscate
+    s = regex.sub("[^A-Za-z0-9\\s\"',]", "", s)   # deobfuscate
     s = regex.sub("(?i)O", "0", s)
     s = regex.sub("(?i)S", "5", s)
     s = regex.sub("(?i)I", "1", s)
