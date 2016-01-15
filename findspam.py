@@ -381,7 +381,7 @@ class FindSpam:
         {'regex': ur"(?i)\p{Script=Hangul}.*\p{Script=Hangul}.*\p{Script=Hangul}", 'all': True,
          'sites': [], 'reason': "Korean character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11},
         # Chinese characters in title: requires two groups of 3
-        {'regex': ur"(?i)\p{Script=Han}{3}.*\p{Script=Han}{3}", 'all': True,
+        {'regex': ur"(?i)\p{Script=Han}{3}.*\p{Script=Han}{3}|。", 'all': True,
          'sites': ["chinese.stackexchange.com", "japanese.stackexchange.com"], 'reason': "Chinese character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11},
         # Hindi character in title
         {'regex': ur"(?i)\p{Script=Devanagari}", 'all': True,
