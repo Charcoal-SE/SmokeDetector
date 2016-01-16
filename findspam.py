@@ -313,7 +313,7 @@ class FindSpam:
                             "assignmentbay\\.co", "nora777\\.com", "nutpile\\.com", "traffic-bots\\.com",
                             "chatsim\\.com", "mlkblasters\\.org"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
-                        r"\.(com|net)/(xtra|muscle)[\w-]",
+                        r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
                         r"(essay|resume)\w{6,}\.(co|net|org|in\W|info|us)",
                         r"(top|best)\d\w{2,15}\.in\W",
