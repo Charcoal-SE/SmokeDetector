@@ -30,7 +30,9 @@ class GlobalVars:
                           "All-caps body",
                           "All-caps answer",
                           "Repeating characters in body",
-                          "Repeating characters in title"]
+                          "Repeating characters in title",
+                          "Phone number detected in title",
+                          "Offensive body detected"]
 
     parser = HTMLParser.HTMLParser()
     wrap = Client("stackexchange.com")
