@@ -311,7 +311,7 @@ class FindSpam:
                             "latestone\\.com", "iwebsoul\\.com", "uttarakhandshadi", "kaintek\\.com", "giftcodes\\.net",
                             "josmprtion\\.com", "pc-helpp\\.com", "tufflo\\.com", "MobiKin\\.com", "manualbirds\\.com",
                             "assignmentbay\\.co", "nora777\\.com", "nutpile\\.com", "traffic-bots\\.com",
-                            "chatsim\\.com", "mlkblasters\\.org"]
+                            "chatsim\\.com", "mlkblasters\\.org", "champcash\\.com", "scamregister\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
