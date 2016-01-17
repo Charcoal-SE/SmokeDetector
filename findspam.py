@@ -371,8 +371,8 @@ class FindSpam:
         {'regex': ur"(?i)\b((beauty|skin|face|health|eye)[- ]?(care|serum|therapy|hydration|tip|renewal|shop|store|lift|product|strateg(y|ies)|gel|lotion|cream|treatment|method|school|expert)|fat ?burn(er|ing)?|muscle|testo ?[sx]\w*|body ?build(er|ing)|wrinkle|(?<!to )supplement|probiotic|acne|peni(s|le)|erection)s?\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11},
         # Bad health-related keywords in titles, health sites are exempt, flexible method
-        {'method': has_health, 'all': True,
-         'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1},
+        {'method': has_health, 'all': False,
+         'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com", "drupal.stackexchange.com", "meta.stackexchange.com", "webapps.stackexchange.com", "security.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1},
         # Bad health-related keywords in titles and posts, health sites are exempt
         {'regex': ur"(?is)virility|diet ?(plan|pill)|\b(pro)?derma(?=[a-su-z ]\w)|(fat|(?<!dead[ -]?)weight)[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|\bherpes\b|(?<!truth )serum|colon (detox|clean)|\bpenis\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com", "islam.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 11},
