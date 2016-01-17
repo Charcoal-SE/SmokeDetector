@@ -36,6 +36,7 @@ class GlobalVars:
                           "Offensive body detected",
                           "Email in answer",
                           "Email in title"]
+    non_tavern_sites = ["stackoverflow.com"]
 
     parser = HTMLParser.HTMLParser()
     wrap = Client("stackexchange.com")

@@ -111,7 +111,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                 chq_pings = get_user_names_on_notification_list("stackexchange.com", GlobalVars.charcoal_room_id, site, GlobalVars.wrap)
                 chq_msg = append_pings(s, chq_pings)
                 GlobalVars.charcoal_hq.send_message(chq_msg if len(chq_msg) <= 500 else s)
-                if reason not in GlobalVars.non_tavern_reasons:
+                if reason not in GlobalVars.non_tavern_reasons and site not in GlobalVars.non_tavern_sites:
                     tavern_pings = get_user_names_on_notification_list("meta.stackexchange.com", GlobalVars.meta_tavern_room_id, site, GlobalVars.wrapm)
                     tavern_msg = append_pings(s, tavern_pings)
                     GlobalVars.tavern_on_the_meta.send_message(tavern_msg if len(tavern_msg) <= 500 else s)
