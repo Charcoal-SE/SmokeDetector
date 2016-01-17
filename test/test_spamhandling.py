@@ -36,7 +36,7 @@ def test_check_if_spam(title, body, username, site, match):
     post_id = 0
     # If we want to test answers separatly, this should be changed
     is_answer = False
-    is_spam, reason, _ = check_if_spam(title, body, username, user_url, site, post_id, is_answer, False, 1)
+    is_spam, reason, _ = check_if_spam(title, body, username, user_url, site, post_id, is_answer, False, 1, 0)
     print title
     assert match == is_spam
 
@@ -55,7 +55,7 @@ def test_blacklisted_user():
     user_url = 'http://stackoverflow.com/users/1/jeff-atwood'
     user = get_user_from_url(user_url)
     add_blacklisted_user(user, "", "")
-    is_spam, reason, _ = check_if_spam("", "", "", user_url, "stackoverflow.com", "1", False, False, 1)
+    is_spam, reason, _ = check_if_spam("", "", "", user_url, "stackoverflow.com", "1", False, False, 1, 0)
     assert is_spam is True
     # cleanup
     os.remove("blacklistedUsers.txt")
@@ -70,13 +70,13 @@ def test_whitelisted_user():
     user_url2 = 'http://stackoverflow.com/users/0/test'
     user2 = get_user_from_url(user_url2)
     add_whitelisted_user(user2)
-    is_spam, reason, _ = check_if_spam("", "", "bagprada", user_url, "stackoverflow.com", "1", False, False, 1)
+    is_spam, reason, _ = check_if_spam("", "", "bagprada", user_url, "stackoverflow.com", "1", False, False, 1, 0)
     assert is_spam is False
-    is_spam, reason, _ = check_if_spam("baba ji", "", "", user_url, "stackoverflow.com", "2", False, False, 1)
+    is_spam, reason, _ = check_if_spam("baba ji", "", "", user_url, "stackoverflow.com", "2", False, False, 1, 0)
     assert is_spam is True
-    is_spam, reason, _ = check_if_spam("baba ji", "", "bagprada", user_url, "stackoverflow.com", "3", False, False, 1)
+    is_spam, reason, _ = check_if_spam("baba ji", "", "bagprada", user_url, "stackoverflow.com", "3", False, False, 1, 0)
     assert is_spam is True
-    is_spam, reason, _ = check_if_spam("test", "", "baba ji - muscle building", user_url2, "stackoverflow.com", "0", False, False, 1)
+    is_spam, reason, _ = check_if_spam("test", "", "baba ji - muscle building", user_url2, "stackoverflow.com", "0", False, False, 1, 0)
     assert is_spam is False
     # cleanup
     os.remove("whitelistedUsers.txt")

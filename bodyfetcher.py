@@ -156,13 +156,15 @@ class BodyFetcher:
                 owner_name = GlobalVars.parser.unescape(post["owner"]["display_name"])
                 owner_link = post["owner"]["link"]
                 owner_rep = post["owner"]["reputation"]
+                post_score = post["score"]
             except:
                 owner_name = ""
                 owner_link = ""
                 owner_rep = 0
+                post_score = 0
             q_id = str(post["question_id"])
 
-            is_spam, reason, why = check_if_spam(title, body, owner_name, owner_link, site, q_id, False, False, owner_rep)
+            is_spam, reason, why = check_if_spam(title, body, owner_name, owner_link, site, q_id, False, False, owner_rep, post_score)
             if is_spam:
                 try:
                     handle_spam(title, body, owner_name, site, link, owner_link, q_id, reason, False, why)
@@ -179,12 +181,14 @@ class BodyFetcher:
                         owner_name = GlobalVars.parser.unescape(answer["owner"]["display_name"])
                         owner_link = answer["owner"]["link"]
                         owner_rep = answer["owner"]["reputation"]
+                        post_score = post["score"]
                     except:
                         owner_name = ""
                         owner_link = ""
                         owner_rep = 0
+                        post_score = 0
 
-                    is_spam, reason, why = check_if_spam(answer_title, body, owner_name, owner_link, site, a_id, True, False, owner_rep)
+                    is_spam, reason, why = check_if_spam(answer_title, body, owner_name, owner_link, site, a_id, True, False, owner_rep, post_score)
                     if is_spam:
                         try:
                             handle_spam(title, body, owner_name, site, link, owner_link, a_id, reason, True, why)

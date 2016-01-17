@@ -23,10 +23,10 @@ def should_whitelist_prevent_alert(user_url, reasons):
     return len(reasons_copy_copy) == 0
 
 
-def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer, body_is_summary, owner_rep):
+def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer, body_is_summary, owner_rep, post_score):
     if not body:
         body = ""
-    test, why = FindSpam.test_post(title, body, user_name, post_site, is_answer, body_is_summary, owner_rep)
+    test, why = FindSpam.test_post(title, body, user_name, post_site, is_answer, body_is_summary, owner_rep, post_score)
     if is_blacklisted_user(get_user_from_url(user_url)):
         test.append("blacklisted user")
         blacklisted_user_data = get_blacklisted_user_data(get_user_from_url(user_url))
@@ -65,7 +65,7 @@ def check_if_spam_json(data):
     site = d["siteBaseHostAddress"]
     site = site.encode("ascii", errors="replace")
     sys.stdout.flush()
-    is_spam, reason, why = check_if_spam(title, body, poster, url, site, post_id, False, True, 1)
+    is_spam, reason, why = check_if_spam(title, body, poster, url, site, post_id, False, True, 1, 0)
     return is_spam, reason, why
 
 
