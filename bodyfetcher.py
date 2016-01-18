@@ -181,7 +181,7 @@ class BodyFetcher:
                         owner_name = GlobalVars.parser.unescape(answer["owner"]["display_name"])
                         owner_link = answer["owner"]["link"]
                         owner_rep = answer["owner"]["reputation"]
-                        post_score = post["score"]
+                        post_score = answer["score"]
                     except:
                         owner_name = ""
                         owner_link = ""
