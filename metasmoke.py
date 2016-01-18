@@ -5,7 +5,7 @@ from globalvars import GlobalVars
 
 class Metasmoke:
     @classmethod
-    def send_stats_on_post(self, title, link, reasons, body, username, user_link):
+    def send_stats_on_post(self, title, link, reasons, body, username, user_link, why):
         if GlobalVars.metasmoke_host is None:
             print "Metasmoke location not defined, not reporting"
             return
@@ -13,7 +13,7 @@ class Metasmoke:
         metasmoke_key = GlobalVars.metasmoke_key
 
         try:
-            payload = {'post': {'title': title, 'link': link, 'reasons': reasons, 'body': body, 'username': username, 'user_link': user_link}, 'key': metasmoke_key}
+            payload = {'post': {'title': title, 'link': link, 'reasons': reasons, 'body': body, 'username': username, 'user_link': user_link, 'why': why}, 'key': metasmoke_key}
 
             headers = {'Content-type': 'application/json'}
             requests.post(GlobalVars.metasmoke_host + "/posts.json", data=json.dumps(payload), headers=headers)
