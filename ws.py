@@ -21,7 +21,7 @@ from chatcommunicate import watcher
 from continuousintegration import watch_ci
 from datetime import datetime
 from utcdate import UtcDate
-from spamhandling import check_if_spam_json, handle_spam_json
+from spamhandling import check_if_spam_json
 from globalvars import GlobalVars
 from datahandling import load_files, filter_auto_ignored_posts
 import os
@@ -131,7 +131,10 @@ while True:
         if a is not None and a != "":
             is_spam, reason, why = check_if_spam_json(a)
             if is_spam:
-                handle_spam_json(a, reason, why)
+                t = Thread(target=GlobalVars.bodyfetcher.add_to_queue,
+                           args=(a, True))
+                t.start()
+                print("Active threads: " + str(threading.active_count()))
             else:
                 t = Thread(target=GlobalVars.bodyfetcher.add_to_queue,
                            args=(a,))

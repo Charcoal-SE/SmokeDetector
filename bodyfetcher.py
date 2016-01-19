@@ -52,7 +52,7 @@ class BodyFetcher:
 
     api_data_lock = threading.Lock()
 
-    def add_to_queue(self, post):
+    def add_to_queue(self, post, should_check_site=False):
         d = json.loads(json.loads(post)["data"])
         sitebase = d["siteBaseHostAddress"]
         postid = d["id"]
@@ -64,7 +64,10 @@ class BodyFetcher:
             self.queue[sitebase] = [postid]
 
         print self.queue
-        self.check_queue()
+        if should_check_site:
+            self.make_api_call_for_site(sitebase)
+        else:
+            self.check_queue()
         return
 
     def check_queue(self):
