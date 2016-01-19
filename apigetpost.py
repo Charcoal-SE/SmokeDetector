@@ -11,8 +11,12 @@ class PostData:
         self.site = None
         self.owner_url = None
         self.owner_name = None
+        self.owner_rep = None
         self.title = None
         self.body = None
+        self.score = None
+        self.up_vote_count = None
+        self.down_vote_count = None
 
 
 def api_get_post(post_url):
@@ -21,7 +25,7 @@ def api_get_post(post_url):
         return None
     post_id, site, post_type = d
     if post_type == "answer":
-        api_filter = "!)Q7pIaQiHdpLxolL4GBob2gX"
+        api_filter = "!4*SyY(M(4WXjKGVyH"
         req_url = "http://api.stackexchange.com/2.2/answers/" + post_id +\
                   "?site=" + site + "&filter=" + api_filter +\
                   "&key=IAkbitmze4B8KpacUfLqkw(("
@@ -29,7 +33,7 @@ def api_get_post(post_url):
     else:
         assert post_type == "question"
 
-        api_filter = "!5-dwy(WuZ4NTyJamA*kR8slbR(yU(eC-1U_sEK"
+        api_filter = "!)Ehu.SHRfXhu2eCP4p6wd*Wxyw1XouU5qO83b7X5GQK6ciVat"
         req_url = "http://api.stackexchange.com/2.2/questions/" + post_id +\
             "?site=" + site + "&filter=" + api_filter +\
             "&key=IAkbitmze4B8KpacUfLqkw(("
@@ -46,6 +50,10 @@ def api_get_post(post_url):
     if 'owner' in item and 'owner' is not None:
         post_data.owner_name = item['owner']['display_name']
         post_data.owner_url = item['owner']['link']
+        post_data.owner_rep = item['owner']['reputation']
     post_data.site = site
     post_data.body = item['body']
+    post_data.score = item['score']
+    post_data.up_vote_count = item['up_vote_count']
+    post_data.down_vote_count = item['down_vote_count']
     return post_data
