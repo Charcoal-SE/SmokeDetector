@@ -69,7 +69,7 @@ def check_if_spam_json(data):
     return is_spam, reason, why
 
 
-def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reasons, is_answer, why=""):
+def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reasons, is_answer, why="", owner_rep=None, post_score=None):
     post_url = to_protocol_relative(url_to_shortlink(post_url))
     poster_url = to_protocol_relative(poster_url)
     reason = ", ".join(reasons)
@@ -100,7 +100,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             user_link = poster_url
 
         t_metasmoke = Thread(target=Metasmoke.send_stats_on_post,
-                             args=(title, post_url, reason.split(", "), body, username, user_link, why))
+                             args=(title, post_url, reason.split(", "), body, username, user_link, why, owner_rep, post_score))
         t_metasmoke.start()
 
         print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
