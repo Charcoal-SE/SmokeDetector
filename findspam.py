@@ -331,7 +331,7 @@ class FindSpam:
                         r"([\w-]password|[\w]{5,}facts|\Btoyshop|[\w-]{6,}cheats|credits)\.(co|net|org|in\W|info)",
                         r"(escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(trainingin|cracked\w{3}|bestmover|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(nitro(?!us)|crazybulk|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(acai|buy|premium|thebest|[/.]try)[\w-]{10,}\.(co|net|org|in\W|info)",
                         r"training[\w.-]{6,}\.(co|net|org|in\W|info)",
                         r"\w{9}buy\.(co|net|org|in\W|info)",
