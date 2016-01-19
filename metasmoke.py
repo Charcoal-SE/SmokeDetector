@@ -5,7 +5,7 @@ from globalvars import GlobalVars
 
 class Metasmoke:
     @classmethod
-    def send_stats_on_post(self, title, link, reasons, body, username, user_link, why, owner_rep, post_score):
+    def send_stats_on_post(self, title, link, reasons, body, username, user_link, why, owner_rep, post_score, up_vote_count, down_vote_count):
         if GlobalVars.metasmoke_host is None:
             print "Metasmoke location not defined, not reporting"
             return
@@ -13,7 +13,7 @@ class Metasmoke:
         metasmoke_key = GlobalVars.metasmoke_key
 
         try:
-            post = {'title': title, 'link': link, 'reasons': reasons, 'body': body, 'username': username, 'user_link': user_link, 'why': why, 'user_reputation': owner_rep, 'score': post_score}
+            post = {'title': title, 'link': link, 'reasons': reasons, 'body': body, 'username': username, 'user_link': user_link, 'why': why, 'user_reputation': owner_rep, 'score': post_score, 'upvote_count': up_vote_count, 'downvote_count': down_vote_count}
 
             post = dict((k, v) for k, v in post.iteritems() if v)  # Remove None values (if they somehow manage to get through)
 

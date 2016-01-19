@@ -112,9 +112,9 @@ class BodyFetcher:
                 pagesize = "50"
             else:
                 pagesize = "25"
-            url = "http://api.stackexchange.com/2.2/questions?site=stackoverflow&filter=!4y_-sca-)pfAwmT(5-(7PlfynglWBgmXgP3R(H&key=IAkbitmze4B8KpacUfLqkw((&pagesize=" + pagesize + min_query
+            url = "http://api.stackexchange.com/2.2/questions?site=stackoverflow&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw((&pagesize=" + pagesize + min_query
         else:
-            url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts) + "?site=" + site + "&filter=!4y_-sca-)pfAwmT(5-(7PlfynglWBgmXgP3R(H&key=IAkbitmze4B8KpacUfLqkw(("
+            url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts) + "?site=" + site + "&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw(("
 
         # wait to make sure API has/updates post data
         time.sleep(3)
@@ -156,22 +156,23 @@ class BodyFetcher:
             title = GlobalVars.parser.unescape(post["title"])
             body = GlobalVars.parser.unescape(post["body"])
             link = post["link"]
+            post_score = post["score"]
+            up_vote_count = post["up_vote_count"]
+            down_vote_count = post["down_vote_count"]
             try:
                 owner_name = GlobalVars.parser.unescape(post["owner"]["display_name"])
                 owner_link = post["owner"]["link"]
                 owner_rep = post["owner"]["reputation"]
-                post_score = post["score"]
             except:
                 owner_name = ""
                 owner_link = ""
                 owner_rep = 0
-                post_score = 0
             q_id = str(post["question_id"])
 
             is_spam, reason, why = check_if_spam(title, body, owner_name, owner_link, site, q_id, False, False, owner_rep, post_score)
             if is_spam:
                 try:
-                    handle_spam(title, body, owner_name, site, link, owner_link, q_id, reason, False, why, owner_rep, post_score)
+                    handle_spam(title, body, owner_name, site, link, owner_link, q_id, reason, False, why, owner_rep, post_score, up_vote_count, down_vote_count)
                 except:
                     print "NOP"
             try:
@@ -181,21 +182,22 @@ class BodyFetcher:
                     print "got answer from owner with name " + owner_name
                     link = answer["link"]
                     a_id = str(answer["answer_id"])
+                    post_score = answer["score"]
+                    up_vote_count = answer["up_vote_count"]
+                    down_vote_count = answer["down_vote_count"]
                     try:
                         owner_name = GlobalVars.parser.unescape(answer["owner"]["display_name"])
                         owner_link = answer["owner"]["link"]
                         owner_rep = answer["owner"]["reputation"]
-                        post_score = answer["score"]
                     except:
                         owner_name = ""
                         owner_link = ""
                         owner_rep = 0
-                        post_score = 0
 
                     is_spam, reason, why = check_if_spam(answer_title, body, owner_name, owner_link, site, a_id, True, False, owner_rep, post_score)
                     if is_spam:
                         try:
-                            handle_spam(title, body, owner_name, site, link, owner_link, a_id, reason, True, why)
+                            handle_spam(title, body, owner_name, site, link, owner_link, a_id, reason, True, why, owner_rep, post_score, up_vote_count, down_vote_count)
                         except:
                             print "NOP"
             except:
