@@ -1,5 +1,5 @@
 import os
-import pickle
+import cPickle as pickle
 from datetime import datetime
 from globalvars import GlobalVars
 import requests
