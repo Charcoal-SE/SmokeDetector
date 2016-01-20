@@ -134,22 +134,6 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
         excepthook.uncaught_exception(exc_type, exc_obj, exc_tb)
 
 
-def handle_spam_json(data, reason, why=""):
-    try:
-        d = json.loads(json.loads(data)["data"])
-        title = unescape_title(d["titleEncodedFancy"])
-        body = d["bodySummary"]
-        poster = d["ownerDisplayName"]
-        site = d["siteBaseHostAddress"]
-        url = d["url"]
-        poster_url = d["ownerUrl"]
-        post_id = str(d["id"])
-        handle_spam(title, body, poster, site, url, poster_url, post_id, reason, False, why)
-    except:
-        exc_type, exc_obj, exc_tb = sys.exc_info()
-        excepthook.uncaught_exception(exc_type, exc_obj, exc_tb)
-
-
 def handle_user_with_all_spam(user, why):
     user_id = user[0]
     site = user[1]
