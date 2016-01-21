@@ -153,7 +153,7 @@ class BodyFetcher:
         if len(message_hq) > 0:
             GlobalVars.charcoal_hq.send_message(message_hq)
 
-        if not "items" in response:
+        if "items" not in response:
             return
 
         if site == "stackoverflow.com":
