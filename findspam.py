@@ -118,7 +118,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
     boast = regex.compile(r"(?i)\b(most|best|simple|top|pro|real|mirac(le|ulous)|secrets?|organic|natural|perfect|ideal|fantastic|incredible|ultimate|important|reliable|critical|amazing|fast|good)\b|\b(super|hyper|advantag|benefi|effect|great|valu|eas[iy])").search(s)
     other = regex.compile(r"(?i)\b(product|thing|item|review|advi[cs]e|myth|make use|your?|really|work|tip|shop|store|method|expert|instant|buy|fact|consum(e|ption)|baby|male|female|men|women|grow|idea|suggest\w*|issue)s?\b").search(s)
     score = 4 * bool(organ) + 2 * bool(condition) + 2 * bool(goal) + 2 * bool(remedy) + bool(boast) + bool(other) + capitalized
-    if score >= 7:
+    if score >= 8:
         match_objects = [organ, condition, goal, remedy, boast, other]
         words = []
         for match in match_objects:
