@@ -155,7 +155,8 @@ class GlobalVars:
                             "1843331",  # Tim Castelijns
                             "3956566",  # JamesENL
                             "2357233",  # Ms Yvette
-                            "3155639"]  # AlexanderOMara
+                            "3155639",  # AlexanderOMara
+                            "462627"]  # Praveen Kumar
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
