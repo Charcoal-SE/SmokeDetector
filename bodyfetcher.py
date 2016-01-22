@@ -156,7 +156,7 @@ class BodyFetcher:
         if "backoff" in response:
             if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
                 GlobalVars.api_backoff_time = response["backoff"]
-            message_hq = message_hq + "\n" + "Backoff recieved of " + response["backoff"] + " seconds."
+            message_hq = message_hq + "\n" + "Backoff received of " + response["backoff"] + " seconds."
 
         if len(message_hq) > 0:
             GlobalVars.charcoal_hq.send_message(message_hq.strip())
