@@ -1,5 +1,7 @@
 import requests
 from parsing import fetch_post_id_and_site_from_url, url_to_shortlink
+from globalvars import GlobalVars
+import time
 import HTMLParser
 
 
@@ -20,6 +22,9 @@ class PostData:
 
 
 def api_get_post(post_url):
+    # Respect backoff, if we were given one
+    if GlobalVars.api_backoff_time > time.time():
+        time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
     d = fetch_post_id_and_site_from_url(post_url)
     if d is None:
         return None
@@ -38,6 +43,9 @@ def api_get_post(post_url):
             "?site=" + site + "&filter=" + api_filter +\
             "&key=IAkbitmze4B8KpacUfLqkw(("
         resp_json = requests.get(req_url).json()
+    if "backoff" in resp_json:
+        if GlobalVars.api_backoff_time < time.time() + resp_json["backoff"]:
+            GlobalVars.api_backoff_time = resp_json["backoff"]
     if 'items' not in resp_json or len(resp_json['items']) == 0:
         return False
     item = resp_json['items'][0]

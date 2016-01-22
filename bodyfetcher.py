@@ -118,6 +118,9 @@ class BodyFetcher:
 
         # wait to make sure API has/updates post data
         time.sleep(3)
+        # Respect backoff, if we were given one
+        if GlobalVars.api_backoff_time > time.time():
+            time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
         try:
             response = requests.get(url, timeout=20).json()
         except requests.exceptions.Timeout:
@@ -149,6 +152,10 @@ class BodyFetcher:
 
         if "error_message" in response:
             message_hq = message_hq + " Error: {}.".format(response["error_message"])
+
+        if "backoff" in response:
+            if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
+                GlobalVars.api_backoff_time = response["backoff"]
 
         if len(message_hq) > 0:
             GlobalVars.charcoal_hq.send_message(message_hq)
