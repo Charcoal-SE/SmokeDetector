@@ -314,7 +314,7 @@ class FindSpam:
                             "chatsim\\.com", "mlkblasters\\.org", "champcash\\.com", "scamregister\\.com",
                             "bisbury\\.com", "rankyouup\\.com", "reviewanalysis\\.co", "apponfly\\.com",
                             "trutech\\.co", "askmespam\\.com", "imdresses\\.com", "doesitscam\\.com",
-                            "jobsopening\\.co\\.in"]
+                            "jobsopening\\.co\\.in", "androidappsformac\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
@@ -339,7 +339,7 @@ class FindSpam:
                         r"\w{9}buy\.(co|net|org|in\W|info)",
                         r"(love|strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(scam|wellness|grow|rejuven|revive|burn|vapor|ecig|formula|biotic|male|derma|medical|medicare|health|beauty|youth|young|rx|skin|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|alpha|beta|colon|brain(?!tree))[\w]{0,20}(critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|guide|advi[sc]|discussion|solution|consult|source|sups|vms|cream|grow|enhance)[\w-]{0,10}\.(co|net|org|in\W|info)",
+                        r"(scam|wellness|grow|rejuven|revive|burn|vapor|ecig|formula|biotic|male|derma|medical|medicare|health|beauty|youth|young|rx|skin|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|alpha|beta|colon|brain(?!tree))[\w]{0,20}(sweden|genix|critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|guide|advi[sc]|discussion|solution|consult|source|sups|vms|cream|grow|enhance)[\w-]{0,10}\.(co|net|org|in\W|info)",
                         r"\w{11}(ideas?|income|sale|reviews?|advices?|problog)\.(co|net|org|in\W|info)",
                         "-poker\\.com", "send[\w-]*?india\.(co|net|org|in\W|info)",
                         r"(corrupt|repair)[\w-]*?\.blogspot", r"[\w-]courses.in/",
