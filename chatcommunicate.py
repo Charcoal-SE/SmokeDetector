@@ -339,7 +339,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         index = 0
         urls = list(set(message_parts[1:]))
         if len(urls) > 5:
-            return False, "To avoid that SmokeDetector reporting posts too slowly, " \
+            return False, "To avoid SmokeDetector reporting posts too slowly, " \
                           "you can report at most 5 posts at a time. " \
                           "This is to avoid SmokeDetector's chat messages getting rate-limited too much, " \
                           "which would slow down reports."
