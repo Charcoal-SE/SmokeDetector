@@ -30,13 +30,15 @@ class GlobalVars:
     non_tavern_reasons = ["All-caps title",   # Don't report in the Tavern
                           "All-caps body",
                           "All-caps answer",
+                          "All-caps body, all-caps title",
                           "Repeating characters in body",
                           "Repeating characters in title",
                           "Repeating characters in answer",
                           "Phone number detected in title",
                           "Offensive body detected",
                           "Email in answer",
-                          "Email in title"]
+                          "Email in title",
+                          "Link at end of answer"]
     non_tavern_sites = ["stackoverflow.com"]
 
     parser = HTMLParser.HTMLParser()
