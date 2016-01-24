@@ -330,18 +330,18 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         crn, wait = can_report_now(ev_user_id, wrap2.host)
         if not crn:
             return "You can execute the !!/report command again in {} seconds. " \
-                   "To avoid that one user sends loads of reports in a few commands (and slows down SmokeDetector due to rate-limiting), " \
-                   "you have to wait 30 seconds after you reported multiple posts using !!/report, even if your current command just has one URL. " \
-                   "(Note that this timeout won't be applied after you only used !!/report for one post)".format(wait)
+                   "To avoid one user sending lots of reports in a few commands and slowing SmokeDetector down due to rate-limiting, " \
+                   "you have to wait 30 seconds after you've reported multiple posts using !!/report, even if your current command just has one URL. " \
+                   "(Note that this timeout won't be applied if you only used !!/report for one post)".format(wait)
         if len(message_parts) < 2:
             return False, "Not enough arguments."
         output = []
         index = 0
         urls = list(set(message_parts[1:]))
         if len(urls) > 5:
-            return False, "To avoid that SmokeDetector reports posts too slowly, " \
-                          "you can report maximally 5 posts at a time. " \
-                          "This is to avoid that SmokeDetector's chat messages get rate-limited too much, " \
+            return False, "To avoid SmokeDetector reporting posts too slowly, " \
+                          "you can report at most 5 posts at a time. " \
+                          "This is to avoid SmokeDetector's chat messages getting rate-limited too much, " \
                           "which would slow down reports."
         for url in urls:
             index += 1
@@ -350,7 +350,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 output.append("Post {}: That does not look like a valid post URL.".format(index))
                 continue
             if post_data is False:
-                output.append("Post {}: Could not find data for this post in the API. Check whether the post is not deleted yet.".format(index))
+                output.append("Post {}: Could not find data for this post in the API. It may already have been deleted.".format(index))
                 continue
             user = get_user_from_url(post_data.owner_url)
             if user is not None:
@@ -537,7 +537,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         r, full_site = add_to_notification_list(user_id, chat_site, room_id, se_site)
         if r == 0:
             if not quiet_action:
-                return "You'll now get pings from me if I report a post of `%s`, in room `%s` on `chat.%s`" % (full_site, room_id, chat_site)
+                return "You'll now get pings from me if I report a post on `%s`, in room `%s` on `chat.%s`" % (full_site, room_id, chat_site)
             else:
                 return None
         elif r == -1:
@@ -559,7 +559,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         r = remove_from_notification_list(user_id, chat_site, room_id, se_site)
         if r:
             if not quiet_action:
-                return "I will no longer ping you if I report a post of `%s`, in room `%s` on `chat.%s`" % (se_site, room_id, chat_site)
+                return "I will no longer ping you if I report a post on `%s`, in room `%s` on `chat.%s`" % (se_site, room_id, chat_site)
             else:
                 return None
         else:
