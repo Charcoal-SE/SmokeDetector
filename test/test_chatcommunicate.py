@@ -247,7 +247,7 @@ def test_notification():
 
     event = mock_event("!!/unnotify 11540 meta.stackexchange.com", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
-    assert reply_value == "I will no longer ping you if I report a post of `meta.stackexchange.com`, in room `11540` on `chat.stackexchange.com`"
+    assert reply_value == "I will no longer ping you if I report a post on `meta.stackexchange.com`, in room `11540` on `chat.stackexchange.com`"
 
     event = mock_event("!!/unnotify 11540 meta.stackexchange.com", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
