@@ -322,7 +322,7 @@ class FindSpam:
                         r"(essay|resume)\w{6,}\.(co|net|org|in\W|info|us)",
                         r"(top|best)\d\w{2,15}\.in\W",
                         r"[\w-](recovery|repair|(?<!epoch|font)converter)(pro|kit)?\.(com|net)",
-                        r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)[\w-]*?(tech|customer|support|service|phone|help|\d+)[\w-]*?(support|phone|number)",
+                        r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)[\w-]{0,10}(tech|customer|support|service|phone|help|\d{3,})[\w-]{0,10}(support|phone|number)",
                         r"sourceforge\.net[\w/]*convert",
                         r"fix[\w-]*?(files?|tool(box)?)\.com",
                         r"(repair|recovery|fix)tool(box)?\.com",
