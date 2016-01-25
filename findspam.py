@@ -314,7 +314,7 @@ class FindSpam:
                             "chatsim\\.com", "mlkblasters\\.org", "champcash\\.com", "scamregister\\.com",
                             "bisbury\\.com", "rankyouup\\.com", "reviewanalysis\\.co", "apponfly\\.com",
                             "trutech\\.co", "askmespam\\.com", "imdresses\\.com", "doesitscam\\.com",
-                            "jobsopening\\.co\\.in", "androidappsformac\\.com"]
+                            "jobsopening\\.co\\.in", "androidappsformac\\.com", "retersweld\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
