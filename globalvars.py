@@ -161,7 +161,7 @@ class GlobalVars:
                             "2357233",  # Ms Yvette
                             "3155639",  # AlexanderOMara
                             "462627",  # Praveen Kumar
-                            "4490559"]  # intboolstring 
+                            "4490559"]  # intboolstring
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
