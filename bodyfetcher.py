@@ -155,7 +155,7 @@ class BodyFetcher:
 
         if "backoff" in response:
             if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
-                GlobalVars.api_backoff_time = response["backoff"]
+                GlobalVars.api_backoff_time = time.time() + response["backoff"]
             message_hq = message_hq + "\n" + "Backoff received of " + str(response["backoff"]) + " seconds."
 
         if len(message_hq) > 0:
