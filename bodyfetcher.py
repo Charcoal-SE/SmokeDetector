@@ -25,7 +25,7 @@ class BodyFetcher:
                     "stats.stackexchange.com": 5,
                     "academia.stackexchange.com": 1,
                     "beer.stackexchange.com": 1,
-                    "craftcms.stackexchange.com": 1,
+                    "engineering.stackexchange.com": 1,
                     "drupal.stackexchange.com": 1,
                     "expatriates.stackexchange.com": 1,
                     "genealogy.stackexchange.com": 1,
