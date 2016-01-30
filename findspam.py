@@ -63,7 +63,7 @@ def non_english_link(s, site):   # non-english link in short answer
         for link_text in links:
             word_chars = regex.sub(r"(?u)\W", "", link_text)
             non_latin_chars = regex.sub(r"\w", "", word_chars)
-            if len(non_latin_chars) > 0.1 * len(word_chars) and len(non_latin_chars) >= 2:
+            if len(word_chars) <= 20 and len(non_latin_chars) >= 1:
                 return True, u"Non-English link text {}".format(link_text)
     return False, ""
 
@@ -415,7 +415,7 @@ class FindSpam:
         # Link text without Latin characters
         {'regex': u">[^0-9A-Za-z<'\"]{3,}</a>", 'all': True,
          'sites': ["jp.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com", "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com", "codegolf.stackexchange.com"], 'reason': 'non-Latin link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 11, 'max_score': 0},
-        # Link text with many non-Latin characters
+        # Link text with some non-Latin characters
         {'method': non_english_link, 'all': True, 'sites': ["pt.stackoverflow.com", "es.stackoverflow.com", "jp.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com", "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com", "french.stackexchange.com", "portuguese.stackexchange.com", "spanish.stackexchange.com", "codegolf.stackexchange.com"],
          'reason': 'non-English link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # URL in title, some sites are exempt
