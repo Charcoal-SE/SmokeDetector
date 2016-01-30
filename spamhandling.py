@@ -137,7 +137,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
 def handle_user_with_all_spam(user, why):
     user_id = user[0]
     site = user[1]
-    s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All of this user's posts are spam: [user {} on {}](//{}/users/{})" \
+    s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All of this user's posts are spam: [user {} on {}](//{}/users/{}?tab=activity)" \
         .format(user_id, site, site, user_id)
     print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
     if time.time() >= GlobalVars.blockedTime:
