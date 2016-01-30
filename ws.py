@@ -103,6 +103,10 @@ GlobalVars.specialrooms = [{
                            "sites": ["judaism.stackexchange.com"],
                            "room": GlobalVars.wrap.get_room("468"),
                            "unwantedReasons": []
+                           }, {
+                           "sites": ["money.stackexchange.com"],
+                           "room": GlobalVars.wrap.get_room("35068"),
+                           "unwantedReasons": []
                            }
                            ]
 
