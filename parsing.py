@@ -90,7 +90,7 @@ def fetch_title_from_msg_content(content):
 
 
 def fetch_user_from_allspam_report(content):
-    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] All of this user's posts are spam: \[user \d+ on [\w\.]+\]\((//[\w\.]+/users/\d+\?tab=activity)\)$"
+    search_regex = r"^\[ \[SmokeDetector\]\(https:\/\/github.com\/Charcoal-SE\/SmokeDetector\) \] All of this user's posts are spam: \[user \d+ on [\w\.]+\]\((//[\w\.]+/users/\d+\D*)\)$"
     m = regex.compile(search_regex).search(content)
     if m is None:
         return None
