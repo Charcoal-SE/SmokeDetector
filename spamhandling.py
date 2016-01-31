@@ -95,7 +95,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             user_link = ""
         else:
             s = u"[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] {}: [{}]({}) by [{}]({}) on `{}`" \
-                .format(reason, title.strip(), post_url, poster.strip(), poster_url, site)
+                .format(reason, title.strip(), post_url, poster.strip(), poster_url + "?tab=topactivity", site)
             username = poster.strip()
             user_link = poster_url
 
@@ -137,8 +137,9 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
 def handle_user_with_all_spam(user, why):
     user_id = user[0]
     site = user[1]
-    s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All of this user's posts are spam: [user {} on {}](//{}/users/{}?tab=activity)" \
-        .format(user_id, site, site, user_id)
+    tab = "activity" if site == "stackexchange.com" else "topactivity"
+    s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All of this user's posts are spam: [user {} on {}](//{}/users/{}?tab={})" \
+        .format(user_id, site, site, user_id, tab)
     print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
     if time.time() >= GlobalVars.blockedTime:
         add_why_allspam(user, why)
