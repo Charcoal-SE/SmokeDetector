@@ -396,7 +396,7 @@ class FindSpam:
         {'regex': u"(?i)({})".format("|".join(blacklisted_websites)), 'all': True,
          'sites': [], 'reason': "blacklisted website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 5},
         # Suspicious sites
-        {'regex': u"(?i)({})(?![^>]*<)".format("|".join(pattern_websites)), 'all': True,
+        {'regex': ur"(?i)({}|({})[\w-]*?\.(co|net|org|in\W|info))(?![^>]*<)".format("|".join(pattern_websites), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 11, 'max_score': 2},
         # Suspicious health-related websites, health sites are exempt
         {'regex': ur"(?i)(workout|fitness\w{2,}|diet|perfecthealth|muscle|prostate)[\w-]*?\.(com|co\.|net|org|info)", 'all': True,
