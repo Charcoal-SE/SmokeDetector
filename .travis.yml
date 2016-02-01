@@ -5,7 +5,7 @@ python:
 install:
   - pip wheel coverage phonenumbers regex==2015.11.22 -w $HOME/wheelhouse --find-links $HOME/wheelhouse
   - pip install coverage phonenumbers regex==2015.11.22 --no-index  --find-links $HOME/wheelhouse
-  - pip install beautifulsoup4 requests websocket-client pytest termcolor --upgrade
+  - pip install beautifulsoup4 requests websocket-client pytest flake8 termcolor --upgrade
 script:
   - flake8 ./
   - python -W default::Warning -m pytest test
