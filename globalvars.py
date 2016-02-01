@@ -162,7 +162,8 @@ class GlobalVars:
                             "3155639",  # AlexanderOMara
                             "462627",  # Praveen Kumar
                             "4490559",  # intboolstring
-                            "1364007"]  # Wai Ha Lee
+                            "1364007",  # Wai Ha Lee
+                            "1699210"]  # bummi
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
