@@ -376,7 +376,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         user = get_user_from_url(url)
         if user is None:
             return "That doesn't look like a valid user URL."
-        why = u"Post manually reported by user *{}* in room *{}*.\n".format(ev_user_name, ev_room_name.decode('utf-8'))
+        why = u"User manually reported by *{}* in room *{}*.\n".format(ev_user_name, ev_room_name.decode('utf-8'))
         handle_user_with_all_spam(user, why)
     if content_lower.startswith("!!/wut"):
         return "Whaddya mean, 'wut'? Humans..."

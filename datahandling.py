@@ -35,7 +35,7 @@ def load_files():
             GlobalVars.why_data = pickle.load(f)
     if os.path.isfile("whyDataAllspam.txt"):
         with open("whyDataAllspam.txt") as f:
-            GlobalVars.why_data_all_spam = pickle.load(f)
+            GlobalVars.why_data_allspam = pickle.load(f)
     if os.path.isfile("latestMessages.txt"):
         with open("latestMessages.txt", "r") as f:
             GlobalVars.latest_smokedetector_messages = pickle.load(f)
@@ -201,7 +201,7 @@ def get_why_allspam(user):
 
 
 def filter_why_allspam(max_size=50):
-    GlobalVars.why_data_allspam = GlobalVars.why_data[-max_size:]
+    GlobalVars.why_data_allspam = GlobalVars.why_data_allspam[-max_size:]
 
 
 def add_latest_smokedetector_message(room, message_id):
