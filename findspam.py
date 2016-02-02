@@ -177,7 +177,7 @@ class FindSpam:
                         "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)",
                         "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning",
                         "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn", "revolyn",
-                        "training.{0,4}chennai", u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor"]
+                        "training.{0,4}chennai", u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "sunergetic"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
@@ -316,7 +316,8 @@ class FindSpam:
                             "trutech\\.co", "askmespam\\.com", "imdresses\\.com", "doesitscam\\.com",
                             "jobsopening\\.co\\.in", "androidappsformac\\.com", "retersweld\\.com", "mindextra\\.com",
                             "psychicfuguestudio", "softserialhq\\.com", "unstopableshrine\\.webs\\.com",
-                            "softaken\\.com", "lyonstechnologies", "serialkeygeneratorfree\\.com", "routeperfect\\.com"]
+                            "softaken\\.com", "lyonstechnologies", "serialkeygeneratorfree\\.com", "routeperfect\\.com",
+                            "tupely\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
@@ -341,7 +342,7 @@ class FindSpam:
                         r"\w{9}buy\.(co|net|org|in\W|info)",
                         r"(love|strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(natural|testo|scam|wellness|grow|rejuven|revive|burn|vapor|ecig|formula|biotic|male|derma|medical|medicare|health|beauty|youth|young|aging|rx|skin|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|alpha|beta|colon|brain(?!tree))[\w]{0,20}(dose|formula|norway|sweden|genix|critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|care|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|guide|advi[sc]|discussion|solution|consult|source|sups|vms|cream|grow|enhance)[\w-]{0,10}\.(co|net|org|in\W|info)",
+                        r"(ultra|natural|testo|scam|wellness|grow|rejuven|revive|burn|vapor|ecig|formula|biotic|male|derma|medical|medicare|health|beauty|youth|young|aging|rx|skin|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|alpha|beta|colon|brain(?!tree))[\w]{0,20}(jacked|dose|formula|norway|sweden|genix|critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|care|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|guide|advi[sc]|discussion|solution|consult|source|sups|vms|cream|grow|enhance)[\w-]{0,10}\.(co|net|org|in\W|info)",
                         r"\w{11}(ideas?|income|sale|reviews?|advices?|problog)\.(co|net|org|in\W|info)",
                         "-poker\\.com", "send[\w-]*?india\.(co|net|org|in\W|info)",
                         r"(corrupt|repair)[\w-]*?\.blogspot", r"[\w-]courses.in/",
@@ -350,7 +351,8 @@ class FindSpam:
                         r"backlink(?!(o\.|watch))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(replica[^nt]\w{5,}|\wrolex)\.(co|net|org|in\W|info)",
                         r"customer(service|support)[\w-]*?\.(co|net|org|in\W|info)",
-                        r"conferences?alert[\w-]*?\.(co|net|org|in\W|info)"]
+                        r"conferences?alert[\w-]*?\.(co|net|org|in\W|info)",
+                        r"seo\.com(?!/\w)"]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
         #
