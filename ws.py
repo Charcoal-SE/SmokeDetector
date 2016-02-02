@@ -110,8 +110,6 @@ GlobalVars.specialrooms = [{
                            }
                            ]
 
-GlobalVars.bayesian_testroom = GlobalVars.wrap.get_room("17251")
-
 
 def restart_automatically(time_in_seconds):
     time.sleep(time_in_seconds)
@@ -133,10 +131,8 @@ GlobalVars.socvr.watch_socket(watcher)
 
 if "first_start" in sys.argv and GlobalVars.on_master:
     GlobalVars.charcoal_hq.send_message(GlobalVars.s)
-    GlobalVars.bayesian_testroom.send_message(GlobalVars.s)
 elif "first_start" in sys.argv and not GlobalVars.on_master:
     GlobalVars.charcoal_hq.send_message(GlobalVars.s_reverted)
-    GlobalVars.bayesian_testroom.send_message(GlobalVars.s_reverted)
 
 while True:
     try:

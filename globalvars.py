@@ -185,7 +185,6 @@ class GlobalVars:
     s = ""
     s_reverted = ""
     specialrooms = []
-    bayesian_testroom = None
     apiquota = -1
     bodyfetcher = None
     se_sites = []
