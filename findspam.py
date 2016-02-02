@@ -338,7 +338,7 @@ class FindSpam:
                         r"(trainingin|cracked\w{3}|bestmover|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(xtrm|factorx|nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(acai|buy|premium|thebest|[/.]try)[\w-]{10,}\.(co|net|org|in\W|info)",
-                        r"training[\w.-]{6,}\.(co|net|org|in\W|info)",
+                        r"training[\w-]{6,}[\w.-]*?\.(co|net|org|in\W|info)",
                         r"\w{9}buy\.(co|net|org|in\W|info)",
                         r"(love|strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
