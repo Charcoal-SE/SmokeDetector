@@ -51,6 +51,7 @@ class BodyFetcher:
     last_activity_date = 0
 
     api_data_lock = threading.Lock()
+    queue_store_lock = threading.Lock()
 
     def add_to_queue(self, post, should_check_site=False):
         d = json.loads(json.loads(post)["data"])
@@ -90,7 +91,9 @@ class BodyFetcher:
                 return
 
         # We're not making an API request, so explicitly store the queue
+        self.queue_store_lock.acquire()
         store_bodyfetcher_queue()
+        self.queue_store_lock.release()
 
     def print_queue(self):
         string = ""
@@ -101,7 +104,10 @@ class BodyFetcher:
 
     def make_api_call_for_site(self, site):
         posts = self.queue.pop(site)
+
+        self.queue_store_lock.acquire()
         store_bodyfetcher_queue()
+        self.queue_store_lock.release()
 
         if site == "stackoverflow.com":
             # Not all SO questions are shown in the realtime feed. We now
