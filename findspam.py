@@ -449,7 +449,7 @@ class FindSpam:
         # Offensive content in titles only
         {'regex': ur"(?i)\bcrap\b", 'all': True, 'sites': [], 'reason': "offensive {} detected", 'insensitive': True, 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 101, 'max_score': 5},
         # All-caps text
-        {'method': all_caps_text, 'all': True, 'sites': ["pt.stackoverflow.com", "ru.stackoverflow.com"], 'reason': "all-caps {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1000000, 'max_score': 0},
+        {'method': all_caps_text, 'all': True, 'sites': ["pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com"], 'reason': "all-caps {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1000000, 'max_score': 0},
         # Numbers-only title
         {'regex': ur"^(?=.*[0-9])[^\pL]*$", 'all': True, 'sites': [], 'reason': "numbers-only title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 50, 'max_score': 0},
         # Few unique characters
