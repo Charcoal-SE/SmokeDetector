@@ -177,7 +177,8 @@ class FindSpam:
                         "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)",
                         "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning",
                         "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn", "revolyn",
-                        "training.{0,4}chennai", u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "sunergetic", "capilux"]
+                        "training.{0,4}chennai", u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "sunergetic", "capilux",
+                        "sante ?avis"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
                             "ipubsoft", "orabank", "powerigfaustralia",
                             "cfpchampionship2015playofflive", "rankassured\\.com",
@@ -317,7 +318,8 @@ class FindSpam:
                             "jobsopening\\.co\\.in", "androidappsformac\\.com", "retersweld\\.com", "mindextra\\.com",
                             "psychicfuguestudio", "softserialhq\\.com", "unstopableshrine\\.webs\\.com",
                             "softaken\\.com", "lyonstechnologies", "serialkeygeneratorfree\\.com", "routeperfect\\.com",
-                            "tupely\\.com", "apkheart\\.com", "uflysoft\\.net"]
+                            "tupely\\.com", "apkheart\\.com", "uflysoft\\.net", "nimblemessaging\\.com",
+                            "teksonit\\.com", "educba\\.com", "oleville\\.net"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
@@ -333,7 +335,7 @@ class FindSpam:
                         r"(downloader|pdf)converter\.(com|net)",
                         r"(livestreaming|watch[\w-]*?(live|online))\.(com|net|tv)",
                         r"//(cheat[\w-.]{3,}|xtreme[\w-]{5,})\.(co|net|org|in\W|info|ru)",
-                        r"([\w-]password|[\w]{5,}facts|\Btoyshop|[\w-]{6,}cheats|credits)\.(co|net|org|in\W|info)",
+                        r"([\w-]password|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|credits)\.(co|net|org|in\W|info)",
                         r"(escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(trainingin|cracked\w{3}|bestmover|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(xtrm|factorx|nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info)",
@@ -342,7 +344,7 @@ class FindSpam:
                         r"\w{9}buy\.(co|net|org|in\W|info)",
                         r"(love|strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(xplode|ultra|natural|testo|scam|wellness|grow|rejuven|revive|burn|vapor|ecig|formula|biotic|male|derma|medical|medicare|health|beauty|youth|young|aging|rx|skin|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|alpha|beta|colon|brain(?!tree))[\w]{0,20}(jacked|dose|formula|norway|sweden|genix|critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|care|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|guide|advi[sc]|discussion|solution|consult|source|sups|vms|cream|grow|enhance)[\w-]{0,10}\.(co|net|org|in\W|info)",
+                        r"(xplode|ultra|natural|testo|scam|wellness|grow|rejuven|revive|burn|vapor|ecig|formula|biotic|male|derma|medical|medicare|health|beauty|youth|young|aging|rx|skin|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|alpha|beta|colon|brain(?!tree))[\w]{0,20}(congress|jacked|dose|formula|norway|sweden|genix|critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|care|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|guide|advi[sc]|discussion|solution|consult|source|sups|vms|cream|grow|enhance)[\w-]{0,10}\.(co|net|org|in\W|info)",
                         r"\w{11}(ideas?|income|sale|reviews?|advices?|problog)\.(co|net|org|in\W|info)",
                         "-poker\\.com", "send[\w-]*?india\.(co|net|org|in\W|info)",
                         r"(corrupt|repair)[\w-]*?\.blogspot", r"[\w-]courses.in/",
@@ -434,7 +436,7 @@ class FindSpam:
         {'regex': ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': True,
          'sites': ["stackoverflow.com", "es.stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com", "webmasters.stackexchange.com", "wordpress.stackexchange.com", "magento.stackexchange.com", "elementaryos.stackexchange.com", "tex.stackexchange.com", "civicrm.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Combination of keyword and email in answer, for the exempt sites
-        {'regex': ur"(?is)\b(loans?|illuminati|brotherhood|(join|reach) us|spell(caster)?|doctor|passports?|visas?|bless|atm)\b.*?(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': False,
+        {'regex': ur"(?is)\b(loans?|illuminati|brotherhood|(join|reach) us|spell( ?caster)?|doctor|passports?|visas?|bless(ed)?|atm|testimony)\b.*?(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': False,
          'sites': ["stackoverflow.com", "es.stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com", "webmasters.stackexchange.com", "wordpress.stackexchange.com", "magento.stackexchange.com", "elementaryos.stackexchange.com", "tex.stackexchange.com", "civicrm.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Email check for questions: check only at the end
         {'regex': ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s).{0,300}$", 'all': True,
