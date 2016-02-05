@@ -319,7 +319,7 @@ class FindSpam:
                             "psychicfuguestudio", "softserialhq\\.com", "unstopableshrine\\.webs\\.com",
                             "softaken\\.com", "lyonstechnologies", "serialkeygeneratorfree\\.com", "routeperfect\\.com",
                             "tupely\\.com", "apkheart\\.com", "uflysoft\\.net", "nimblemessaging\\.com",
-                            "teksonit\\.com", "educba\\.com", "oleville\\.net", "affairscloud\\.com"]
+                            "teksonit\\.com", "educba\\.com", "oleville\\.net"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys)\.com",
