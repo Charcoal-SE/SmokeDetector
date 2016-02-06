@@ -272,7 +272,7 @@ class FindSpam:
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
                             "statesmovie", "cleanlean", "iFoneMate", "babygames5\\.com",
                             "replacementlaptopkeys\\.com", "safewiper\\.com",
-                            "appsforpcdownloads", "academicservices\\.us",
+                            "appsforpcdownloads", "academicservices\\.us", "writerspk\\.com",
                             "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
                             "megatachoco", "sqliterecovery\\.com", "shtylm\\.com",
                             "creative-proteomics", "biomusclexrrev\\.com", "revommerce.com",
