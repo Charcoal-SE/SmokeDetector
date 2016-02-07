@@ -319,7 +319,7 @@ class FindSpam:
                             "softaken\\.com", "lyonstechnologies", "serialkeygeneratorfree\\.com", "routeperfect\\.com",
                             "tupely\\.com", "apkheart\\.com", "uflysoft\\.net", "nimblemessaging\\.com",
                             "teksonit\\.com", "educba\\.com", "oleville\\.net", "nutribulletrecipes\\.org",
-                            "decalontop\\.com", "urlopener\\.com"]
+                            "decalontop\\.com", "urlopener\\.com", "mobile57\\.com"]
     pattern_websites = [r"health\d{3,}", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
