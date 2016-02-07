@@ -162,7 +162,7 @@ class FindSpam:
                     "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity",
                     "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?", "intellux", "viooz",
                     "smartican", "essay writing service", "T-complex", "retrodynamic formula",
-                    "eltima", "raging lion", "love.*spell ?caster", "08151871776",
+                    "eltima", "raging lion", "(love|miracle).*spell ?casters?", "08151871776",
                     "^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$", "Krojam(Soft|Cleaner)?", "FilesSearch ?Tool",
                     "teksonit", "Re@d More"]
     bad_keywords_nwb = [u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
@@ -437,7 +437,7 @@ class FindSpam:
         {'regex': ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': True,
          'sites': ["stackoverflow.com", "es.stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com", "webmasters.stackexchange.com", "wordpress.stackexchange.com", "magento.stackexchange.com", "elementaryos.stackexchange.com", "tex.stackexchange.com", "civicrm.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Combination of keyword and email in answer, for the exempt sites
-        {'regex': ur"(?is)\b(loans?|illuminati|brotherhood|(join|reach) us|spell( ?caster)?|doctor|passports?|visas?|bless(ed)?|atm|testimony)\b.*?(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': False,
+        {'regex': ur"(?is)\b(loans?|illuminati|brotherhood|(join|reach) us|spell( ?casters?)?|doctor|passports?|visas?|bless(ed)?|atm|miracle|testimony)\b.*?(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': False,
          'sites': ["stackoverflow.com", "es.stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com", "webmasters.stackexchange.com", "wordpress.stackexchange.com", "magento.stackexchange.com", "elementaryos.stackexchange.com", "tex.stackexchange.com", "civicrm.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Email check for questions: check only at the end
         {'regex': ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s).{0,300}$", 'all': True,
