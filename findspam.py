@@ -319,7 +319,7 @@ class FindSpam:
                             "softaken\\.com", "lyonstechnologies", "serialkeygeneratorfree\\.com", "routeperfect\\.com",
                             "tupely\\.com", "apkheart\\.com", "uflysoft\\.net", "nimblemessaging\\.com",
                             "teksonit\\.com", "educba\\.com", "oleville\\.net", "nutribulletrecipes\\.org",
-                            "decalontop\\.com", "urlopener\\.com", "mobile57\\.com"]
+                            "decalontop\\.com", "urlopener\\.com", "mobile57\\.com", "learn(spicy|perfact)"]
     pattern_websites = [r"health\d{3,}\.(com|net)", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
@@ -339,7 +339,7 @@ class FindSpam:
                         r"(escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(trainingin|cracked\w{3}|bestmover|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(xtrm|factorx|nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(acai|buy|premium|thebest|[/.]try)[\w-]{10,}\.(co|net|org|in\W|info)",
+                        r"(acai|buy|premium|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
                         r"(training|institute)[\w-]{6,}[\w.-]*?\.(co|net|org|in\W|info)",
                         r"\w{9}buy\.(co|net|org|in\W|info)",
                         r"(love|strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
@@ -347,7 +347,7 @@ class FindSpam:
                         r"(xplode|ultra|natural|testo|scam|wellness|grow|rejuven|revive|burn|vapor|ecig|formula|biotic|male|derma|medical|medicare|health|beauty|youth|young|aging|rx|skin|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|alpha|beta|colon|brain(?!tree))[\w]{0,20}(congress|jacked|dose|formula|france|norway|sweden|genix|critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|care|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|guide|advi[sc]|discussion|solution|consult|source|sups|vms|cream|grow|enhance)[\w-]{0,10}\.(co|net|org|in\W|info)",
                         r"\w{11}(ideas?|income|sale|reviews?|advices?|problog)\.(co|net|org|in\W|info)",
                         "-poker\\.com", "send[\w-]*?india\.(co|net|org|in\W|info)",
-                        r"(corrupt|repair)[\w-]*?\.blogspot", r"[\w-]courses?.in/",
+                        r"(corrupt|repair)[\w-]*?\.blogspot", r"[\w-](courses?|training)(in\w+)?.in/",
                         r"(file|photo|android|iphone)recovery[\w-]*?\.(co|net|org|in\W|info)",
                         r"(videos?|movies?|watch)online[\w-]*?\.", r"hd(video|movie)[\w-]*?\.",
                         r"backlink(?!(o\.|watch))[\w-]*?\.(co|net|org|in\W|info)",
@@ -355,7 +355,8 @@ class FindSpam:
                         r"customer(service|support)[\w-]*?\.(co|net|org|in\W|info)",
                         r"conferences?alert[\w-]*?\.(co|net|org|in\W|info)",
                         r"seo\.com(?!/\w)",
-                        r"scam[\w-]*?(alert|register|punch)[\w-]*?\.(co|net|org|in\W|info)"]
+                        r"scam[\w-]*?(alert|register|punch)[\w-]*?\.(co|net|org|in\W|info)",
+                        r"https?://[^/\s]{8,}healer"]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
         #
