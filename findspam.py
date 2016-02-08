@@ -264,7 +264,7 @@ class FindSpam:
                             "cacherealestate\\.com", "Matrixhackka007", "aoatech\\.com",
                             "pharaohtools", "msoutlooktools\\.com", "softwarezee",
                             "i-hire\\.pro", "pandamw\\.com", "hariraya2015\\.net",
-                            "scampunch\\.com", "multipelife\\.com", "seasoncars\\.com",
+                            "multipelife\\.com", "seasoncars\\.com",
                             "eltima\\.com", "flexihub\\.com", "\\.debt\\.com",
                             "hotfrog\\.ca", "snorg(content|tees)\\.com", "webtechcoupons",
                             "architecturedesign\\.tk", "playerhot\\.com",
@@ -311,8 +311,8 @@ class FindSpam:
                             "latestone\\.com", "iwebsoul\\.com", "uttarakhandshadi", "kaintek\\.com", "giftcodes\\.net",
                             "josmprtion\\.com", "pc-helpp\\.com", "tufflo\\.com", "MobiKin\\.com", "manualbirds\\.com",
                             "assignmentbay\\.co", "nora777\\.com", "nutpile\\.com", "traffic-bots\\.com",
-                            "chatsim\\.com", "mlkblasters\\.org", "champcash\\.com", "scamregister\\.com",
-                            "bisbury\\.com", "rankyouup\\.com", "reviewanalysis\\.co", "apponfly\\.com",
+                            "chatsim\\.com", "mlkblasters\\.org", "champcash\\.com", "bisbury\\.com",
+                            "rankyouup\\.com", "reviewanalysis\\.co", "apponfly\\.com",
                             "trutech\\.co", "askmespam\\.com", "imdresses\\.com", "doesitscam\\.com",
                             "jobsopening\\.co\\.in", "androidappsformac\\.com", "retersweld\\.com", "mindextra\\.com",
                             "psychicfuguestudio", "softserialhq\\.com", "unstopableshrine\\.webs\\.com",
@@ -354,7 +354,8 @@ class FindSpam:
                         r"(replica[^nt]\w{5,}|\wrolex)\.(co|net|org|in\W|info)",
                         r"customer(service|support)[\w-]*?\.(co|net|org|in\W|info)",
                         r"conferences?alert[\w-]*?\.(co|net|org|in\W|info)",
-                        r"seo\.com(?!/\w)"]
+                        r"seo\.com(?!/\w)",
+                        r"scam[\w-]*?(alert|register|punch)[\w-]*?\.(co|net|org|in\W|info)"]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
         #
