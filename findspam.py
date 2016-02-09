@@ -320,7 +320,7 @@ class FindSpam:
                             "tupely\\.com", "apkheart\\.com", "uflysoft\\.net", "nimblemessaging\\.com",
                             "teksonit\\.com", "educba\\.com", "oleville\\.net", "nutribulletrecipes\\.org",
                             "decalontop\\.com", "urlopener\\.com", "mobile57\\.com", "learn(spicy|perfact)",
-                            "getfitness\\.in"]
+                            "getfitness\\.in", "trustwiko\\.com"]
     pattern_websites = [r"health\d{3,}\.(com|net)", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
