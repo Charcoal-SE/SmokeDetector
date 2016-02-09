@@ -319,7 +319,8 @@ class FindSpam:
                             "softaken\\.com", "lyonstechnologies", "serialkeygeneratorfree\\.com", "routeperfect\\.com",
                             "tupely\\.com", "apkheart\\.com", "uflysoft\\.net", "nimblemessaging\\.com",
                             "teksonit\\.com", "educba\\.com", "oleville\\.net", "nutribulletrecipes\\.org",
-                            "decalontop\\.com", "urlopener\\.com", "mobile57\\.com", "learn(spicy|perfact)"]
+                            "decalontop\\.com", "urlopener\\.com", "mobile57\\.com", "learn(spicy|perfact)",
+                            "getfitness\\.in"]
     pattern_websites = [r"health\d{3,}\.(com|net)", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
@@ -405,7 +406,7 @@ class FindSpam:
         {'regex': ur"(?i)({}|({})[\w-]*?\.(co|net|org|in\W|info))(?![^>]*<)".format("|".join(pattern_websites), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 11, 'max_score': 2},
         # Suspicious health-related websites, health sites are exempt
-        {'regex': ur"(?i)(workout|fitness\w{2,}|diet|perfecthealth|muscle|prostate)[\w-]*?\.(com|co\.|net|org|info)", 'all': True,
+        {'regex': ur"(?i)(workout|fitness\w{2,}|diet|perfecthealth|muscle|prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11, 'max_score': 2},
         # Links preceded by arrows >>>
         {'regex': ur"(?is)(>>>|===>|==>>|(Read|Visit|Click Here) More\W{2,20})(?=.{0,20}http.{0,200}$)", 'all': True,
