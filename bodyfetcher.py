@@ -23,6 +23,7 @@ class BodyFetcher:
                     "stackoverflow.com": 5,
                     "tex.stackexchange.com": 5,
                     "stats.stackexchange.com": 5,
+                    "3dprinting.stackexchange.com": 1,
                     "academia.stackexchange.com": 1,
                     "beer.stackexchange.com": 1,
                     "engineering.stackexchange.com": 1,
