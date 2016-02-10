@@ -166,7 +166,8 @@ class GlobalVars:
                             "1364007",  # Wai Ha Lee
                             "1699210",  # bummi
                             "563532",  # Rob
-                            "5389107"]  # Magisch
+                            "5389107",  # Magisch
+                            "4099593"]  # bhargav-rao
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
