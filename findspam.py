@@ -164,7 +164,7 @@ class FindSpam:
                     "smartican", "essay writing service", "T-complex", "retrodynamic formula",
                     "eltima", "raging lion", "(love|miracle).*spell ?casters?", "08151871776",
                     "^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$", "Krojam(Soft|Cleaner)?", "FilesSearch ?Tool",
-                    "teksonit", "Re@d More"]
+                    "teksonit", "Re@d More", "Live Streaming</a"]
     bad_keywords_nwb = [u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "(skin|face|eye) ?(serum|lift)", "(serum|lift) ?eye", "tophealth", "poker ?online",
@@ -334,7 +334,7 @@ class FindSpam:
                         r"smart(pc)?fixer\.(com|net|org)",
                         r"password-?(cracker|unlocker|reset|buster|master)\.(com|net|org)",
                         r"(downloader|pdf)converter\.(com|net)",
-                        r"(\dlivestream|livestream(ing|s)|watch[\w-]*?(live|online))\.(com|net|tv)",
+                        r"(\dlivestream|livestream(ing|s)|(watch|cup|20)[\w-]*?(live|online))\.(com|net|tv)",
                         r"//(cheat[\w-.]{3,}|xtreme[\w-]{5,})\.(co|net|org|in\W|info|ru)",
                         r"([\w-]password|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|credits)\.(co|net|org|in\W|info)",
                         r"(escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
