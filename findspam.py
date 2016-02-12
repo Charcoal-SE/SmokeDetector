@@ -339,7 +339,7 @@ class FindSpam:
                         r"(\dlivestream|livestream(ing|s)|(watch|cup|20)[\w-]*?(live|online))\.(com|net|tv)",
                         r"//(cheat[\w-.]{3,}|xtreme[\w-]{5,})\.(co|net|org|in\W|info|ru)",
                         r"([\w-]password|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|credits)\.(co|net|org|in\W|info)",
-                        r"(escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
+                        r"(inboxmachine|escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(trainingin|cracked\w{3}|bestmover|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(xtrm|factorx|nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info)",
                         r"(acai|buy|premium|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
@@ -359,7 +359,8 @@ class FindSpam:
                         r"conferences?alert[\w-]*?\.(co|net|org|in\W|info)",
                         r"seo\.com(?!/\w)",
                         r"scam[\w-]*?(alert|register|punch)[\w-]*?\.(co|net|org|in\W|info)",
-                        r"https?://[^/\s]{8,}healer"]
+                        r"https?://[^/\s]{8,}healer",
+                        r"\w{9}rev\.com"]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
         #
