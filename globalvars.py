@@ -167,7 +167,9 @@ class GlobalVars:
                             "1699210",  # bummi
                             "563532",  # Rob
                             "5389107",  # Magisch
-                            "4099593"]  # bhargav-rao
+                            "4099593",  # bhargav-rao
+                            "1542723",  # Ferrybig
+                            "2025923"]  # Tushar
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
