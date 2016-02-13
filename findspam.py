@@ -167,7 +167,7 @@ class FindSpam:
                     "teksonit", "Re@d More", "Live Streaming</a"]
     bad_keywords_nwb = [u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
-                        "abam26", "watch2live", "cogniq", "(serum|lift) ?eye", "tophealth", "poker ?online",
+                        "abam26", "watch2live", "cogniq", "(serum|lift) ?eye", "tophealth", "poker[ -]?online",
                         "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse", "(ultra|berry|body)[ -]?ketone",
                         "(cogni|oro)[ -]?(lift|plex)", "diabazole", "forskolin", "tonaderm", "luma(genex|lift)",
                         "(skin|face|eye)[- ]?(care|serum|therapy|lift|hydration|tip|renewal|gel|lotion|cream)",
@@ -180,9 +180,8 @@ class FindSpam:
                         "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn", "revolyn",
                         "training.{0,4}(bangalore|chennai|delhi|hyderabad|kolkata|mumbai)", u"Ｃ[Ｏ|0]Ｍ",
                         "ecoflex", "no2factor", "sunergetic", "capilux", "sante ?avis"]
-    blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes",
-                            "ipubsoft", "orabank", "powerigfaustralia",
-                            "cfpchampionship2015playofflive", "rankassured\\.com",
+    blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes", "(naga|dewa)poker",
+                            "ipubsoft", "orabank", "powerigfaustralia", "rankassured\\.com",
                             "maletestosteronebooster", "menintalk", "king-steroid",
                             "healthcaresup", "filerepairforum", "beautyskin",
                             "lxwpro-t", "casque-beatsbydre", "tenderpublish",
