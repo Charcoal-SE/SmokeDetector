@@ -322,7 +322,8 @@ class FindSpam:
                             "teksonit\\.com", "educba\\.com", "oleville\\.net", "nutribulletrecipes\\.org",
                             "decalontop\\.com", "urlopener\\.com", "mobile57\\.com", "learn(spicy|perfact)",
                             "getfitness\\.in", "trustwiko\\.com", "attendasoft", "selfybuzz\\.com", "meritcampus\\.com",
-                            "fastindiaservice\\.com", "shharshsajv", "fizyetimusing", "fornatgaex", "shwesanenid"]
+                            "fastindiaservice\\.com", "shharshsajv", "fizyetimusing", "fornatgaex", "shwesanenid",
+                            "eremaxfuncionabr"]
     pattern_websites = [r"health\d{3,}\.(com|net)", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
@@ -447,6 +448,9 @@ class FindSpam:
         # Email check for questions: check only at the end
         {'regex': ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s).{0,300}$", 'all': True,
          'sites': ["stackoverflow.com", "es.stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com", "webmasters.stackexchange.com", "wordpress.stackexchange.com", "magento.stackexchange.com", "elementaryos.stackexchange.com", "tex.stackexchange.com", "civicrm.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
+        # Combination of keyword and email in question, for all sites
+        {'regex': ur"(?is)\b(loans?|illuminati|brotherhood|(join|reach) us|spell( ?casters?)?|doctor|passports?|visas?|bless(ed)?|atm|miracle|testimony|kidneys?|hospitals?)\b.*?(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': True,
+         'sites': [], 'reason': "email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
         #
         # Category: Trolling
         # Offensive content in titles and posts
