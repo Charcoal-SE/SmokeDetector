@@ -52,7 +52,7 @@ def has_repeating_characters(s, site):
 def link_at_end(s, site):
     s = regex.sub("</strong>|</em>|</p>", "", s)
     match = regex.compile(ur"https?://[A-Za-z0-9-.]*/?[A-Za-z0-9-]*/?</a>\s*$", regex.UNICODE).findall(s)
-    if len(match) > 0 and not regex.compile(r"\b(imgur|youtu\.?be|stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|(?<!plus\.)google|localhost|ubuntu)\b", regex.UNICODE).search(match[0]):
+    if len(match) > 0 and not regex.compile(r"\b(imgur|youtu\.?be|stackexchange|superuser|past[ie].*|upload|dropbox|microsoft|newegg|cnet|(?<!plus\.)google|localhost|ubuntu)\b", regex.UNICODE).search(match[0]):
         return True, u"Link at end: {}".format(match[0])
     return False, ""
 
@@ -451,7 +451,7 @@ class FindSpam:
         {'regex': ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s).{0,300}$", 'all': True,
          'sites': ["stackoverflow.com", "es.stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com", "webmasters.stackexchange.com", "wordpress.stackexchange.com", "magento.stackexchange.com", "elementaryos.stackexchange.com", "tex.stackexchange.com", "civicrm.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
         # Combination of keyword and email in question, for all sites
-        {'regex': ur"(?is)\b(loans?|illuminati|brotherhood|(join|reach) us|spell( ?casters?)?|doctor|passports?|visas?|bless(ed)?|atm|miracle|testimony|kidneys?|hospitals?)\b.*?(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': True,
+        {'regex': ur"(?is)\b(loans?|illuminati|brotherhood|(join|reach) us|spell( ?casters?)?|doctor|hackers?|passports?|visas?|bless(ed)?|atm|miracle|testimony|kidneys?|hospitals?)\b.*?(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': True,
          'sites': [], 'reason': "email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
         #
         # Category: Trolling
