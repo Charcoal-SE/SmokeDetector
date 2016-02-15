@@ -359,7 +359,7 @@ class FindSpam:
                         r"customer(service|support)[\w-]*?\.(co|net|org|in\W|info)",
                         r"conferences?alert[\w-]*?\.(co|net|org|in\W|info)",
                         r"seo\.com(?!/\w)",
-                        r"scam[\w-]*?(alert|register|punch)[\w-]*?\.(co|net|org|in\W|info)",
+                        r"scam[\w-]*?(book|alert|register|punch)[\w-]*?\.(co|net|org|in\W|info)",
                         r"https?://[^/\s]{8,}healer",
                         r"\w{9}rev\.com"]
     rules = [
