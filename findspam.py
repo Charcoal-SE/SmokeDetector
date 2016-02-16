@@ -322,11 +322,11 @@ class FindSpam:
                             "decalontop\\.com", "urlopener\\.com", "mobile57\\.com", "learn(spicy|perfact)",
                             "getfitness\\.in", "trustwiko\\.com", "attendasoft", "selfybuzz\\.com", "meritcampus\\.com",
                             "fastindiaservice\\.com", "shharshsajv", "fizyetimusing", "fornatgaex", "shwesanenid",
-                            "accountingassignments\\.help", "phphelponline\\.com", "credit4loan", "eremaxfuncionabr"]
+                            "accountingassignments\\.help", "phphelponline\\.com", "eremaxfuncionabr"]
     pattern_websites = [r"health\d{3,}\.(com|net)", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
-                        r"(essay|resume)\w{6,}\.(co|net|org|in\W|info|us)",
+                        r"((essay|resume)\w{6,}|essays[\w-]*?)\.(co|net|org|in\W|info|us)",
                         r"(top|best|expert)\d\w{2,15}\.in\W",
                         r"[\w-](recovery|repair|(?<!epoch|font)converter)(pro|kit)?\.(com|net)",
                         r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)[\w-]{0,10}(account|tech|customer|support|service|phone|help)[\w-]{0,10}(service|care|help|recovery|support|phone|number)",
@@ -360,7 +360,8 @@ class FindSpam:
                         r"seo\.com(?!/\w)",
                         r"scam[\w-]*?(book|alert|register|punch)[\w-]*?\.(co|net|org|in\W|info)",
                         r"https?://[^/\s]{8,}healer",
-                        r"\w{9}rev\.com"]
+                        r"\w{9}rev\.com",
+                        r"(credit|online)[\w-]*?loan[\w-]*?\.(co|net|org|in\W|info)"]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
         #
