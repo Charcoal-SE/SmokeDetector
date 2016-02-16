@@ -140,7 +140,7 @@ class BodyFetcher:
 
         message_hq = ""
         if "quota_remaining" in response:
-            if response["quota_remaining"] - GlobalVars.apiquota >= 1000 and GlobalVars.apiquota >= 0:
+            if response["quota_remaining"] - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0:
                 GlobalVars.charcoal_hq.send_message("API quota rolled over with {} requests remaining. Current quota: {}.".format(GlobalVars.apiquota, response["quota_remaining"]))
                 sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1), reverse=True)
                 api_quota_used_per_site = ""
