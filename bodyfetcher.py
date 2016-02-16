@@ -12,7 +12,7 @@ import requests
 class BodyFetcher:
     queue = {}
 
-    specialCases = {"math.stackexchange.com": 10,
+    specialCases = {"math.stackexchange.com": 15,
                     "pt.stackoverflow.com": 10,
                     "ru.stackoverflow.com": 10,
                     "serverfault.com": 10,
@@ -20,9 +20,10 @@ class BodyFetcher:
                     "codegolf.stackexchange.com": 5,
                     "codereview.stackexchange.com": 5,
                     "es.stackoverflow.com": 5,
+                    "physics.stackexchange.com": 5,
                     "stackoverflow.com": 5,
-                    "tex.stackexchange.com": 5,
                     "stats.stackexchange.com": 5,
+                    "tex.stackexchange.com": 5,
                     "3dprinting.stackexchange.com": 1,
                     "academia.stackexchange.com": 1,
                     "beer.stackexchange.com": 1,
@@ -140,7 +141,7 @@ class BodyFetcher:
         message_hq = ""
         if "quota_remaining" in response:
             if response["quota_remaining"] - GlobalVars.apiquota >= 1000 and GlobalVars.apiquota >= 0:
-                GlobalVars.charcoal_hq.send_message("API quota rolled over with {} requests remaining.".format(GlobalVars.apiquota))
+                GlobalVars.charcoal_hq.send_message("API quota rolled over with {} requests remaining. Current quota: {}.".format(GlobalVars.apiquota, response["quota_remaining"]))
                 sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1), reverse=True)
                 api_quota_used_per_site = ""
                 for site, quota_used in sorted_calls_per_site:
