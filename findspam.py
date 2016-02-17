@@ -96,15 +96,15 @@ def has_customer_service(s, site):  # flexible detection of customer service in 
     s = regex.sub(r"[^A-Za-z0-9\s]", "", s)   # deobfuscate
     phrase = regex.compile(r"(support|service|contact|help(line)?) ?(telephone|phone|number)").search(s)
     if (phrase):
-        return True, u"Key phrase: {}".format(phrase[0])
-    business = regex.compile(r"(?i)\b(airlines?|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|out[l1]ook|quickbooks|yahoo)\b").findall(s)
+        return True, u"Key phrase: {}".format(phrase.group(0))
+    business = regex.compile(r"(?i)\b(airlines?|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|out[l1]ook|quickbooks|yahoo)\b").search(s)
     digits = len(regex.compile(r"\d").findall(s))
     if (business and digits >= 5):
         keywords = regex.compile(r"(?i)\b(customer|help|care|helpline|reservation|phone|recovery|service|support|tech|technical|telephone|number)\b").findall(s)
         if len(set(keywords)) >= 2:
             matches = ["".join(match) for match in keywords]
             match = ", ".join(matches)
-            return True, u"Scam aimed at {} customers. Keywords: {}".format(business[0], match)
+            return True, u"Scam aimed at {} customers. Keywords: {}".format(business.group(0), match)
     return False, ""
 
 
@@ -125,6 +125,15 @@ def has_health(s, site):   # flexible detection of health spam in titles
             if match:
                 words.append(match.group(0))
         return True, "Health-themed spam (score {}). Keywords: {}".format(score, ", ".join(words).lower())
+    return False, ""
+
+
+def keyword_email(s, site):   # a keyword and an email in the same post
+    keyword = regex.compile(ur"(?i)\b(loan|illuminati|brotherhood|(join|reach) us|spell( ?caster)?|doctor|hack(er)?|passport|license|visa|bless(ed)?|atm|miracle|testimony|kidney|hospital)s?\b").search(s)
+    if keyword:
+        email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
+        if email:
+            return True, u"Keyword {} with email {}".format(keyword.group(0), email.group(0))
     return False, ""
 
 
@@ -450,8 +459,7 @@ class FindSpam:
         {'regex': ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s).{0,300}$", 'all': True,
          'sites': ["stackoverflow.com", "es.stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com", "webmasters.stackexchange.com", "wordpress.stackexchange.com", "magento.stackexchange.com", "elementaryos.stackexchange.com", "tex.stackexchange.com", "civicrm.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
         # Combination of keyword and email in questions and answers, for all sites
-        {'regex': ur"(?is)\b(loan|illuminati|brotherhood|(join|reach) us|spell( ?caster)?|doctor|hack(er)?|passport|license|visa|bless(ed)?|atm|miracle|testimony|kidney|hospital)s?\b.*?(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': True,
-         'sites': [], 'reason': "bad keyword with email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        {'method': keyword_email, 'all': True, 'sites': [], 'reason': "bad keyword with email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         #
         # Category: Trolling
         # Offensive content in titles and posts
