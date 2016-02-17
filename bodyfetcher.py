@@ -66,7 +66,6 @@ class BodyFetcher:
         else:
             self.queue[sitebase] = [postid]
 
-        print self.queue
         if should_check_site:
             self.make_api_call_for_site(sitebase)
         else:
