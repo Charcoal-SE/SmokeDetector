@@ -108,17 +108,21 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             append_to_latest_questions(site, post_id, title)
 
             if reason not in GlobalVars.experimental_reasons:
+                metasmoke_link = " [\[?\]](//metasmoke.erwaysoftware.com/posts/by-url?url=" + post_url + ")"
                 chq_pings = get_user_names_on_notification_list("stackexchange.com", GlobalVars.charcoal_room_id, site, GlobalVars.wrap)
                 chq_msg = append_pings(s, chq_pings)
-                GlobalVars.charcoal_hq.send_message(chq_msg if len(chq_msg) <= 500 else s)
+                chq_msg_ms = chq_msg + metasmoke_link
+                GlobalVars.charcoal_hq.send_message(chq_msg_ms if len(chq_msg_ms) <= 500 else chq_msg if len(chq_msg) <= 500 else s)
                 if reason not in GlobalVars.non_tavern_reasons and site not in GlobalVars.non_tavern_sites:
                     tavern_pings = get_user_names_on_notification_list("meta.stackexchange.com", GlobalVars.meta_tavern_room_id, site, GlobalVars.wrapm)
                     tavern_msg = append_pings(s, tavern_pings)
-                    GlobalVars.tavern_on_the_meta.send_message(tavern_msg if len(tavern_msg) <= 500 else s)
+                    tavern_msg_ms = tavern_msg + metasmoke_link
+                    GlobalVars.tavern_on_the_meta.send_message(tavern_msg_ms if len(tavern_msg_ms) <= 500 else tavern_msg if len(tavern_msg) <= 500 else s)
                 if site == "stackoverflow.com":
                     socvr_pings = get_user_names_on_notification_list("stackoverflow.com", GlobalVars.socvr_room_id, site, GlobalVars.wrapso)
                     socvr_msg = append_pings(s, socvr_pings)
-                    GlobalVars.socvr.send_message(socvr_msg if len(socvr_msg) <= 500 else s)
+                    socvr_msg_ms = socvr_msg + metasmoke_link
+                    GlobalVars.socvr.send_message(socvr_msg_ms if len(socvr_msg_ms) <= 500 else socvr_msg if len(socvr_msg) <= 500 else s)
 
             for specialroom in GlobalVars.specialrooms:
                 sites = specialroom["sites"]
