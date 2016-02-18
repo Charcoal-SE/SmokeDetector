@@ -112,17 +112,17 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                 chq_pings = get_user_names_on_notification_list("stackexchange.com", GlobalVars.charcoal_room_id, site, GlobalVars.wrap)
                 chq_msg = append_pings(s, chq_pings)
                 chq_msg_ms = chq_msg + metasmoke_link
-                GlobalVars.charcoal_hq.send_message(chq_msg_ms if len(chq_msg_ms) <= 500 else chq_msg if len(chq_msg) <= 500 else s)
+                GlobalVars.charcoal_hq.send_message(chq_msg_ms if len(chq_msg_ms) <= 500 else chq_msg if len(chq_msg) <= 500 else s[0:500])
                 if reason not in GlobalVars.non_tavern_reasons and site not in GlobalVars.non_tavern_sites:
                     tavern_pings = get_user_names_on_notification_list("meta.stackexchange.com", GlobalVars.meta_tavern_room_id, site, GlobalVars.wrapm)
                     tavern_msg = append_pings(s, tavern_pings)
                     tavern_msg_ms = tavern_msg + metasmoke_link
-                    GlobalVars.tavern_on_the_meta.send_message(tavern_msg_ms if len(tavern_msg_ms) <= 500 else tavern_msg if len(tavern_msg) <= 500 else s)
+                    GlobalVars.tavern_on_the_meta.send_message(tavern_msg_ms if len(tavern_msg_ms) <= 500 else tavern_msg if len(tavern_msg) <= 500 else s[0:500])
                 if site == "stackoverflow.com":
                     socvr_pings = get_user_names_on_notification_list("stackoverflow.com", GlobalVars.socvr_room_id, site, GlobalVars.wrapso)
                     socvr_msg = append_pings(s, socvr_pings)
                     socvr_msg_ms = socvr_msg + metasmoke_link
-                    GlobalVars.socvr.send_message(socvr_msg_ms if len(socvr_msg_ms) <= 500 else socvr_msg if len(socvr_msg) <= 500 else s)
+                    GlobalVars.socvr.send_message(socvr_msg_ms if len(socvr_msg_ms) <= 500 else socvr_msg if len(socvr_msg) <= 500 else s[0:500])
 
             for specialroom in GlobalVars.specialrooms:
                 sites = specialroom["sites"]
@@ -132,7 +132,8 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                     room_id = int(room.id)
                     room_pings = get_user_names_on_notification_list(room_site, room_id, site, room._client)
                     room_msg = append_pings(s, room_pings)
-                    specialroom["room"].send_message(room_msg if len(room_msg) <= 500 else s)
+                    room_msg_ms = room_msg + metasmoke_link
+                    specialroom["room"].send_message(room_msg_ms if len(room_msg_ms) <= 500 else room_msg if len(room_msg) <= 500 else s[0:500])
     except:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         excepthook.uncaught_exception(exc_type, exc_obj, exc_tb)
