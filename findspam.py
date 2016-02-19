@@ -52,7 +52,7 @@ def has_repeating_characters(s, site):
 def link_at_end(s, site):
     s = regex.sub("</strong>|</em>|</p>", "", s)
     match = regex.compile(ur"https?://[A-Za-z0-9-.]*/?[A-Za-z0-9-]*/?</a>\s*$", regex.UNICODE).findall(s)
-    if len(match) > 0 and not regex.compile(r"upload|\b(imgur|gyazo|youtu\.?be|stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|(?<!plus\.)google|localhost|ubuntu)\b", regex.UNICODE).search(match[0]):
+    if len(match) > 0 and not regex.compile(r"upload|\b(imgur|prntscr|gyazo|youtu\.?be|stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|(?<!plus\.)google|localhost|ubuntu)\b", regex.UNICODE).search(match[0]):
         return True, u"Link at end: {}".format(match[0])
     return False, ""
 
@@ -129,7 +129,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
 
 
 def keyword_email(s, site):   # a keyword and an email in the same post
-    keyword = regex.compile(ur"(?i)\b(loan|illuminati|brotherhood|(join|reach) us|spell( ?caster)?|doctor|hack(er)?|passport|license|visa|bless(ed)?|atm|miracle|testimony|kidney|hospital)s?\b").search(s)
+    keyword = regex.compile(ur"(?i)\b(loan|illuminati|brotherhood|(join|reach) us|spell( ?caster)?|doctor|hack(er)?|passport|visa|bless(ed)?|atm|miracle|testimony|kidney|hospital)s?\b").search(s)
     if keyword:
         email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
         if email:
