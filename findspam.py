@@ -334,8 +334,9 @@ class FindSpam:
                             "fastindiaservice\\.com", "shharshsajv", "fizyetimusing", "fornatgaex", "shwesanenid",
                             "accountingassignments\\.help", "phphelponline\\.com", "eremaxfuncionabr", "zu-rich\\.li",
                             "appsapkfile\\.com", "bandarterbaikterpercaya\\.net", "yourdailymovie\\.com",
-                            "ipinteria\\.com"]
-    pattern_websites = [r"health\d{3,}\.(com|net)", r"http\S*?\.repair\W", r"filefix(er)?\.com", "\.page\.tl\W",
+                            "ipinteria\\.com", "blogines\\.com"]
+    pattern_websites = [r"health\d{3,}\.(com|net)", "https?://[\w-.]*?\.(repair|help)[\W]",
+                        r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
                         r"((essay|resume)\w{6,}|essays[\w-]*?)\.(co|net|org|in\W|info|us)",
@@ -350,7 +351,7 @@ class FindSpam:
                         r"(downloader|pdf)converter\.(com|net)",
                         r"((\d|\w{3})livestream|livestream(ing|s))[\w]*?\.(com|net|tv)",
                         r"(watch|cup|20)[\w-]*?(live|online)\.(com|net|tv)",
-                        r"//(cheat[\w-.]{3,}|xtreme[\w-]{5,})\.(co|net|org|in\W|info|ru)",
+                        r"https?://(\w{5,}tutoring\w*|cheat[\w-.]{3,}|xtreme[\w-]{5,})\.",
                         r"([\w-]password|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|credits)\.(co|net|org|in\W|info)",
                         r"(inboxmachine|escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info)",
                         r"(trainingin|cracked\w{3}|bestmover|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info)",
