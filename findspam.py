@@ -189,7 +189,7 @@ class FindSpam:
                         "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning",
                         "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn", "revolyn",
                         "training.{0,4}(bangalore|chennai|delhi|hyderabad|kolkata|mumbai)", u"Ｃ[Ｏ|0]Ｍ",
-                        "ecoflex", "no2factor", "sunergetic", "capilux", "sante ?avis"]
+                        "ecoflex", "no2factor", "sunergetic", "capilux", "sante ?avis", "enduros"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes", "(naga|dewa)poker",
                             "ipubsoft", "orabank", "powerigfaustralia", "rankassured\\.com",
                             "maletestosteronebooster", "menintalk", "king-steroid",
