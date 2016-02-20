@@ -1,6 +1,7 @@
 import json
 import requests
 from globalvars import GlobalVars
+import threading
 
 
 class Metasmoke:
@@ -37,6 +38,25 @@ class Metasmoke:
 
             headers = {'Content-type': 'application/json'}
             requests.post(GlobalVars.metasmoke_host + "/feedbacks.json", data=json.dumps(payload), headers=headers)
+
+        except Exception as e:
+            print e
+
+    @classmethod
+    def send_status_ping(self):
+        if GlobalVars.metasmoke_host is None:
+            print "Metasmoke location not defined; not sending status ping"
+            return
+
+        threading.Timer(60, Metasmoke.send_status_ping).start()
+
+        metasmoke_key = GlobalVars.metasmoke_key
+
+        try:
+            payload = {'location': GlobalVars.location, 'key': metasmoke_key}
+
+            headers = {'Content-type': 'application/json'}
+            requests.post(GlobalVars.metasmoke_host + "/status-update.json", data=json.dumps(payload), headers=headers)
 
         except Exception as e:
             print e

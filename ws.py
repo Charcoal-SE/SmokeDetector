@@ -23,6 +23,7 @@ from utcdate import UtcDate
 from spamhandling import check_if_spam_json
 from globalvars import GlobalVars
 from datahandling import load_files, filter_auto_ignored_posts
+from metasmoke import Metasmoke
 import os
 import time
 import requests
@@ -132,6 +133,8 @@ if "first_start" in sys.argv and GlobalVars.on_master:
     GlobalVars.charcoal_hq.send_message(GlobalVars.s)
 elif "first_start" in sys.argv and not GlobalVars.on_master:
     GlobalVars.charcoal_hq.send_message(GlobalVars.s_reverted)
+
+Metasmoke.send_status_ping()  # This will call itself every minute or so
 
 while True:
     try:
