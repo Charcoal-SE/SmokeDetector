@@ -334,6 +334,7 @@ class FindSpam:
                             "fastindiaservice\\.com", "shharshsajv", "fizyetimusing", "fornatgaex", "shwesanenid",
                             "accountingassignments\\.help", "phphelponline\\.com", "eremaxfuncionabr", "zu-rich\\.li",
                             "appsapkfile\\.com", "bandarterbaikterpercaya\\.net", "yourdailymovie\\.com",
+                            "getcheaptwitterfollowers\\.org",
                             "ipinteria\\.com", "blogines\\.com"]
     pattern_websites = [r"health\d{3,}\.(com|net)", "https?://[\w-.]*?\.(repair|help)[\W]",
                         r"filefix(er)?\.com", "\.page\.tl\W",
