@@ -53,7 +53,7 @@ class BodyFetcher:
     last_activity_date = 0
 
     api_data_lock = threading.Lock()
-    queue_store_lock = threading.Lock()
+    queue_modify_lock = threading.Lock()
 
     def add_to_queue(self, post, should_check_site=False):
         d = json.loads(json.loads(post)["data"])
@@ -61,10 +61,12 @@ class BodyFetcher:
         postid = d["id"]
         if postid == 3122 and sitebase == "meta.stackexchange.com":
             return  # don't check meta sandbox, it's full of weird posts
+        self.queue_modify_lock.acquire()
         if sitebase in self.queue:
             self.queue[sitebase].append(postid)
         else:
             self.queue[sitebase] = [postid]
+        self.queue_modify_lock.release()
 
         if should_check_site:
             self.make_api_call_for_site(sitebase)
@@ -92,9 +94,9 @@ class BodyFetcher:
                 return
 
         # We're not making an API request, so explicitly store the queue
-        self.queue_store_lock.acquire()
+        self.queue_modify_lock.acquire()
         store_bodyfetcher_queue()
-        self.queue_store_lock.release()
+        self.queue_modify_lock.release()
 
     def print_queue(self):
         string = ""
@@ -104,11 +106,10 @@ class BodyFetcher:
         return string
 
     def make_api_call_for_site(self, site):
+        self.queue_modify_lock.acquire()
         posts = self.queue.pop(site)
-
-        self.queue_store_lock.acquire()
         store_bodyfetcher_queue()
-        self.queue_store_lock.release()
+        self.queue_modify_lock.release()
 
         if site == "stackoverflow.com":
             # Not all SO questions are shown in the realtime feed. We now
