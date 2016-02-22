@@ -60,7 +60,8 @@ class GlobalVars:
                                            "32436",  # tchrist
                                            "30477",  # Brock Adams
                                            "58529",  # ferrybig
-                                           "145208"],  # Robert Longson
+                                           "145208",  # Robert Longson
+                                           "171800"],  # JAL
                         meta_tavern_room_id: ["259867",  # Normal Human
                                               "244519",  # CRABOLO
                                               "244382",  # TGMCians
@@ -120,7 +121,8 @@ class GlobalVars:
                                               "237813",  # bjb568
                                               "311345",  # Simon Klaver
                                               "171881",  # rekire
-                                              "260388"],  # Pandya
+                                              "260388",  # Pandya
+                                              "242209"],  # JAL
                         socvr_room_id: [
                             "1849664",  # Undo
                             "2581872",  # hichris123
