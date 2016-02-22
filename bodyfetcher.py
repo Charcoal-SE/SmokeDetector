@@ -144,8 +144,8 @@ class BodyFetcher:
                 GlobalVars.charcoal_hq.send_message("API quota rolled over with {} requests remaining. Current quota: {}.".format(GlobalVars.apiquota, response["quota_remaining"]))
                 sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1), reverse=True)
                 api_quota_used_per_site = ""
-                for site, quota_used in sorted_calls_per_site:
-                    api_quota_used_per_site = api_quota_used_per_site + site.replace('.com', '').replace('.stackexchange', '') + ": " + str(quota_used) + "\n"
+                for site_name, quota_used in sorted_calls_per_site:
+                    api_quota_used_per_site = api_quota_used_per_site + site_name.replace('.com', '').replace('.stackexchange', '') + ": " + str(quota_used) + "\n"
                 api_quota_used_per_site = api_quota_used_per_site.strip()
                 GlobalVars.charcoal_hq.send_message(api_quota_used_per_site, False)
                 clear_api_data()
