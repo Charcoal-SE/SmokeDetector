@@ -355,7 +355,7 @@ class FindSpam:
                         r"password-?(cracker|unlocker|reset|buster|master)\.(com|net|org)",
                         r"(downloader|pdf)converter\.(com|net)",
                         r"((\d|\w{3})livestream|livestream(ing|s))[\w]*?\.(com|net|tv)",
-                        r"(watch|cup|20)[\w-]*?(live|online)\.(com|net|tv)", 
+                        r"(watch|cup|20)[\w-]*?(live|online)\.(com|net|tv)",
                         r"worldcup\d[\w-]*?\.(com|net|tv|blogspot)",
                         r"https?://(\w{5,}tutoring\w*|cheat[\w-.]{3,}|xtreme[\w-]{5,})\.",
                         r"(acai|buy|premium|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
