@@ -145,7 +145,7 @@ class FindSpam:
                     "rejuvenated skin", "ProBrain", "restore[ -]?samsung[ -]?data",
                     "LifeForce", "swtor2credits", "me2.do",
                     "bam2u", "Neuro(3X|flexyn|fuse|luma|plex)", "TesteroneXL", "Nitroxin",
-                    "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha Rush",
+                    "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha ?(Rush|Fuel)",
                     "Blackline Elite", "TestCore Pro", "blank(ed)? ?ATM\\b( card)?", "ATM Machine Vault",
                     "Xtreme Antler", "Maxx Test 3000", "orvigomax",
                     "Cheap Wigs?", "jivam", "^(?s).{0,200}brain[- ]?power", "Maximum ?Shred",
@@ -173,7 +173,7 @@ class FindSpam:
                     "smartican", "essay writing service", "T-complex", "retrodynamic formula",
                     "eltima", "raging lion", "(love|miracle).*spell ?casters?", "08151871776",
                     "^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$", "Krojam(Soft|Cleaner)?", "FilesSearch ?Tool",
-                    "teksonit", "Re@d More", "Live Streaming</a"]
+                    "teksonit", "Re@d More", "Live Streaming</a", "Blackcore ?Edge"]
     bad_keywords_nwb = [u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "(serum|lift) ?eye", "tophealth", "poker[ -]?online",
