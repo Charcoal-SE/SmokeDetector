@@ -335,7 +335,7 @@ class FindSpam:
                             "accountingassignments\\.help", "phphelponline\\.com", "eremaxfuncionabr", "zu-rich\\.li",
                             "appsapkfile\\.com", "bandarterbaikterpercaya\\.net", "yourdailymovie\\.com",
                             "ipinteria\\.com", "blogines\\.com", "stepupheights\\.com", "gfix\\.in",
-                            "csharpstar\\.com"]
+                            "csharpstar\\.com", "vbscore\\.com"]
     # Patterns: the top few lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(inboxmachine|(get|buy)cheap|escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(trainingin|cracked\w{3}|bestmover|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
@@ -355,6 +355,7 @@ class FindSpam:
                         r"smart(pc)?fixer\.(com|net|org)",
                         r"password-?(cracker|unlocker|reset|buster|master)\.(com|net|org)",
                         r"(downloader|pdf)converter\.(com|net)",
+                        r"ware[\w-]*?download\.(com|net|info|in\W)",
                         r"((\d|\w{3})livestream|livestream(ing|s))[\w]*?\.(com|net|tv)",
                         r"(watch|cup|20)[\w-]*?(live|online)\.(com|net|tv)",
                         r"worldcup\d[\w-]*?\.(com|net|tv|blogspot)",
