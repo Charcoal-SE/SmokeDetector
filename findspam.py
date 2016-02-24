@@ -76,7 +76,7 @@ def has_phone_number(s, site):
     s = regex.sub("S", "5", s)
     s = regex.sub("I", "1", s)
     matched = regex.compile(ur"(?<!\d)(?:\d(?:_*\d){9}|\+?\d_*\d[\s-]?(?:_*\d){8,11}|\d[ -.(]{0,2}\d{3}[ -.)]{0,2}\d{3}[ -.]{0,2}\d{4})(?!\d)", regex.UNICODE).findall(s)
-    test_formats = ["IN", "US", None]      # ^ don't match parts of too long strings of digits
+    test_formats = ["IN", "US", "NG", None]      # ^ don't match parts of too long strings of digits
     for phone_number in matched:
         if regex.compile(r"^21474(672[56]|8364)\d$").search(phone_number):
             return False, ""  # error code or limit of int size
