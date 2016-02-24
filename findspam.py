@@ -335,8 +335,7 @@ class FindSpam:
                             "accountingassignments\\.help", "phphelponline\\.com", "eremaxfuncionabr", "zu-rich\\.li",
                             "appsapkfile\\.com", "bandarterbaikterpercaya\\.net", "yourdailymovie\\.com",
                             "ipinteria\\.com", "blogines\\.com", "stepupheights\\.com", "gfix\\.in",
-                            "aminoprimexl\\.com",
-                            "csharpstar\\.com", "vbscore\\.com"]
+                            "aminoprimexl\\.com", "csharpstar\\.com", "vbscore\\.com", "blueeagleindia\\.com"]
     # Patterns: the top few lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(inboxmachine|(get|buy)cheap|escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(trainingin|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
@@ -346,7 +345,7 @@ class FindSpam:
                         r"filefix(er)?\.com", "\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
-                        r"((essay|resume)\w{6,}|essays[\w-]*?)\.(co|net|org|in\W|info|us)",
+                        r"((essay|resume|click2)\w{6,}|essays[\w-]*?)\.(co|net|org|in\W|info|us)",
                         r"(top|best|expert)\d\w{2,15}\.in\W",
                         r"[\w-](recovery|repair|(?<!epoch|font)converter)(pro|kit)?\.(com|net)",
                         r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)[\w-]{0,10}(account|tech|customer|support|service|phone|help)[\w-]{0,10}(service|care|help|recovery|support|phone|number)",
@@ -366,7 +365,7 @@ class FindSpam:
                         r"\w{9}buy\.(co|net|org|in\W|info)",
                         r"(hike|love|strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(phyto|geniu[sx]|optimal|xplode|ultra|natural|testo|scam|wellness|grow|rejuven|revive|burn|vapor|ecig|formula|biotic|probio|male|derma|medical|medicare|health|beauty|youth|young|aging|rx|skin|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|alpha|beta|colon|brain(?!tree))[\w]{0,20}(l[iy]ft|trial|nutrition|congress|jacked|dose|formula|france|norway|sweden|mexico|genix|critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|care|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|guide|advi[sc]|discussion|solution|consult|source|sups|vms|cream|grow|enhance)[\w-]{0,10}\.(co|net|org|in\W|info)",
+                        r"(phyto|geniu[sx]|optimal|xplode|ultra|natura|testo|scam|wellness|grow|rejuven|revive|burn|vapor|ecig|formula|biotic|probio|male|derma|medical|medicare|health|beauty|youth|young|aging|rx|skin|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|alpha|beta|colon|brain(?!tree))[\w]{0,20}(l[iy]ft|trial|nutrition|congress|jacked|dose|formula|france|norway|sweden|mexico|genix|critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|care|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|guide|advi[sc]|discussion|solution|consult|source|sups|vms|cream|grow|enhance)[\w-]{0,10}\.(co|net|org|in\W|info)",
                         r"\w{11}(ideas?|income|sale|reviews?|advices?|problog)\.(co|net|org|in\W|info)",
                         "-poker\\.com", "send[\w-]*?india\.(co|net|org|in\W|info)",
                         r"(corrupt|repair)[\w-]*?\.blogspot", r"[\w-](courses?|training)(in\w+)?.in/",
