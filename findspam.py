@@ -179,8 +179,8 @@ class FindSpam:
                         "abam26", "watch2live", "cogniq", "(serum|lift) ?eye", "tophealth", "poker[ -]?online",
                         "caralluma", "male\\Wperf", "anti[- ]?aging", "lumisse", "(ultra|berry|body)[ -]?ketone",
                         "(cogni|oro)[ -]?(lift|plex)", "diabazole", "forskolin", "tonaderm", "luma(genex|lift)",
-                        "(skin|face|eye)[- ]?(care|serum|therapy|lift|hydration|tip|renewal|gel|lotion|cream)",
-                        "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim", "aimee[ -]?cream",
+                        "(skin|face|eye)[- ]?(care|serum|therapy|hydration|tip|renewal|gel|lotion|cream)",
+                        "(skin|eye)[- ]?lift", "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim", "aimee[ -]?cream",
                         "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
                         "contact (me|us)\\W*<a ", "follicure", "kidney[ -]?bean[ -]?extract", "ecoflex",
                         "\\brs(gold|song)", "bellavei", "goji ?xtreme", "lumagenex",
@@ -335,7 +335,8 @@ class FindSpam:
                             "accountingassignments\\.help", "phphelponline\\.com", "eremaxfuncionabr", "zu-rich\\.li",
                             "appsapkfile\\.com", "bandarterbaikterpercaya\\.net", "yourdailymovie\\.com",
                             "ipinteria\\.com", "blogines\\.com", "stepupheights\\.com", "gfix\\.in",
-                            "aminoprimexl\\.com", "csharpstar\\.com", "vbscore\\.com", "blueeagleindia\\.com"]
+                            "aminoprimexl\\.com", "csharpstar\\.com", "vbscore\\.com", "blueeagleindia\\.com",
+                            "vizayn\\.com"]
     # Patterns: the top few lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(inboxmachine|(get|buy)cheap|escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(trainingin|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
@@ -403,7 +404,7 @@ class FindSpam:
         # Fake-customer-service in title
         {'method': has_customer_service, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Bad health-related keywords in titles, health sites are exempt
-        {'regex': ur"(?i)\b((beauty|skin|health|face|eye)[- ]?(care|serum|therapy|hydration|tip|renewal|shop|store|l[iy]ft|product|strateg(y|ies)|gel|lotion|cream|treatment|method|school|expert)|fat ?burn(er|ing)?|muscle|testo ?[sx]\w*|body ?build(er|ing)|wrinkle|(?<!to )supplement|probiotic|acne|peni(s|le)|erection)s?\b", 'all': True,
+        {'regex': ur"(?i)\b((beauty|skin|health|face|eye)[- ]?(care|serum|therapy|hydration|tip|renewal|shop|store|lyft|product|strateg(y|ies)|gel|lotion|cream|treatment|method|school|expert)|fat ?burn(er|ing)?|muscle|testo ?[sx]\w*|body ?build(er|ing)|wrinkle|(?<!to )supplement|probiotic|acne|peni(s|le)|erection)s?\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "robotics.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Bad health-related keywords in titles, health sites are exempt, flexible method
         {'method': has_health, 'all': False,
