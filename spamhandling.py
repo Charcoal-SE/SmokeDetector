@@ -9,6 +9,7 @@ from datetime import datetime
 from parsing import url_to_shortlink
 from metasmoke import Metasmoke
 import excepthook
+import regex
 
 
 def should_whitelist_prevent_alert(user_url, reasons):
@@ -95,7 +96,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             user_link = ""
         else:
             s = u"[ [SmokeDetector](//git.io/vgx7b) ] {}: [{}]({}) by [{}]({}) on `{}`" \
-                .format(reason, title.strip(), post_url, poster.strip(), regex.sub(r"/users/(\d+)/.*", r"/u/\1?tab=summary", poster_url), site)
+                .format(reason, title.strip(), post_url, poster.strip(), regex.sub(r"/users/(\d+)/.*", r"/users/\1?tab=summary", poster_url), site)
             username = poster.strip()
             user_link = poster_url
 
