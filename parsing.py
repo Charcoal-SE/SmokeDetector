@@ -161,6 +161,13 @@ def url_to_shortlink(url):
         return "http://{}/a/{}".format(id_and_site[1], id_and_site[0])
 
 
+def user_url_to_shortlink(url):
+    user_id_and_site = get_user_from_url(url)
+    if user_id_and_site is None:
+        return url
+    return "http://{}/u/{}".format(user_id_and_site[1], user_id_and_site[0])
+
+
 def to_protocol_relative(url):
     if url.startswith("http://"):
         return url[5:]

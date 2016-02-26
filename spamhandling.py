@@ -6,10 +6,9 @@ from parsing import get_user_from_url, unescape_title,\
     escape_special_chars_in_title, to_protocol_relative
 from globalvars import GlobalVars
 from datetime import datetime
-from parsing import url_to_shortlink
+from parsing import url_to_shortlink, user_url_to_shortlink
 from metasmoke import Metasmoke
 import excepthook
-import regex
 
 
 def should_whitelist_prevent_alert(user_url, reasons):
@@ -72,7 +71,7 @@ def check_if_spam_json(data):
 
 def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reasons, is_answer, why="", owner_rep=None, post_score=None, up_vote_count=None, down_vote_count=None):
     post_url = to_protocol_relative(url_to_shortlink(post_url))
-    poster_url = to_protocol_relative(poster_url)
+    poster_url = to_protocol_relative(user_url_to_shortlink(poster_url))
     reason = ", ".join(reasons)
     reason = reason[:1].upper() + reason[1:]  # reason is capitalised, unlike the entries of reasons list
     append_to_latest_questions(site, post_id, title if not is_answer else "")
@@ -96,7 +95,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             user_link = ""
         else:
             s = u"[ [SmokeDetector](//git.io/vgx7b) ] {}: [{}]({}) by [{}]({}) on `{}`" \
-                .format(reason, title.strip(), post_url, poster.strip(), regex.sub(r"/users/(\d+)/.*", r"/users/\1?tab=summary", poster_url), site)
+                .format(reason, title.strip(), post_url, poster.strip(), poster_url, site)
             username = poster.strip()
             user_link = poster_url
 
