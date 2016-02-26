@@ -38,6 +38,7 @@ with open("test/data_test_parsing.txt", "r") as f:
     ('http://writers.stackexchange.com/questions/1/%2f%2f', url_to_shortlink, 'http://writers.stackexchange.com/questions/1'),
     ('http://writers.stackexchange.com/questions/1/%2f%2f/2#2', url_to_shortlink, 'http://writers.stackexchange.com/a/2'),
     ('http://mathoverflow.net/q/1', url_to_shortlink, 'http://mathoverflow.net/questions/1'),
+    ('http://stackoverflow.com/user/1234/abcd', user_url_to_shortlink, 'http://stackoverflow.com/u/1234')
     ('http://stackexchange.com', to_protocol_relative, '//stackexchange.com'),
     ('https://stackexchange.com', to_protocol_relative, '//stackexchange.com'),
     ('//stackexchange.com', to_protocol_relative, '//stackexchange.com'),
