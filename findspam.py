@@ -442,9 +442,9 @@ class FindSpam:
         # Link at the end of question, selected sites
         {'method': link_at_end, 'all': False,
          'sites': ["superuser.com", "askubuntu.com", "drupal.stackexchange.com", "meta.stackexchange.com", "security.stackexchange.com", "patents.stackexchange.com", "money.stackexchange.com"], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
-        # Link at the end of a short answer, set as a separate paragraph
-        {'regex': ur'(?s)^.{0,200}<p>\s*<a href="http://[\w.-]+\.(com|net|in|com?\.\w+)/?"[^<]*</a>\s*</p>\s*$', 'all': True,
-         'sites': [], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
+        # Link at the end of a short answer
+        {'regex': ur'(?s)^.{0,350}\s*<a href="http://[\w.-]+\.(com|net|in|com?\.\w+)/?"[^<]*</a>\s*</p>\s*$', 'all': True,
+         'sites': [], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Shortened URL in a short answer
         {'regex': ur"(?s)^.{0,250}://(goo\.gl|bit\.ly|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly)/.{0,250}$", 'all': True, 'sites': [], 'reason': "shortened URL in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Link text without Latin characters
