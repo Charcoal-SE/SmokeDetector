@@ -129,7 +129,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
 
 
 def keyword_email(s, site):   # a keyword and an email in the same post
-    keyword = regex.compile(ur"(?i)\b(loan|lover|illuminati|brotherhood|(join|reach) us|spell(caster)?|doctor|hack(er)?|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital)s?\b").search(s)
+    keyword = regex.compile(ur"(?i)\b(loan|lover|illuminati|brotherhood|(join|reach) us|spell(caster)?|doctor|hack(er)?|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? ").search(s)
     if keyword:
         email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
         if email:
