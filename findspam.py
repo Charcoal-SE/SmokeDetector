@@ -184,7 +184,7 @@ class FindSpam:
                         "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
                         "contact (me|us)\\W*<a ", "follicure", "kidney[ -]?bean[ -]?extract", "ecoflex",
                         "\\brs(gold|song)", "bellavei", "goji ?xtreme", "lumagenex",
-                        "packers.{0,15}(movers|logistic).{0,25}</a>",
+                        "packers.{0,15}(movers|logistic).{0,25}</a>", "guaranteedprofitinvestment",
                         "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)",
                         "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning",
                         "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn", "revolyn",
