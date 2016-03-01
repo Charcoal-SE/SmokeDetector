@@ -87,6 +87,8 @@ GlobalVars.specialrooms = [{
                            "sites": ["askubuntu.com"],
                            "room": GlobalVars.wrap.get_room("201"),
                            "unwantedReasons": ["All-caps title",   # these should be in uppercased form
+                                               "All-caps body",
+                                               "All-caps answer",
                                                "Phone number detected",
                                                "Repeating characters in title",
                                                "Repeating characters in body",
@@ -106,7 +108,7 @@ GlobalVars.specialrooms = [{
                            }, {
                            "sites": ["money.stackexchange.com"],
                            "room": GlobalVars.wrap.get_room("35068"),
-                           "unwantedReasons": []
+                           "unwantedReasons": ["All-caps title", "All-caps body", "All-caps answer"]
                            }
                            ]
 
