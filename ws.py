@@ -92,7 +92,8 @@ GlobalVars.specialrooms = [{
                                                "Phone number detected",
                                                "Repeating characters in title",
                                                "Repeating characters in body",
-                                               "Repeating characters in answer"]
+                                               "Repeating characters in answer",
+                                               "Link at end of answer"]
                            }, {
                            "sites": ["parenting.stackexchange.com"],
                            "room": GlobalVars.wrap.get_room("21625"),
