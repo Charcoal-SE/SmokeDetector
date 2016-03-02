@@ -438,7 +438,7 @@ class FindSpam:
         {'regex': ur"(?i)(workout|fitness\w{2,}|diet|perfecthealth|muscle|\w{2,}nutrition|prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11, 'max_score': 2},
         # Links preceded by arrows >>>
-        {'regex': ur"(?is)(>>>|===>|==>>|(Read More|Visit|Click Here) \W{2,20})(?=.{0,20}http.{0,200}$)", 'all': True,
+        {'regex': ur"(?is)(>>>|===>|==>>|(Read More|Visit|Click Here) \W{2,20}).{0,20}http(?!://i.stack.imgur.com).{0,200}$", 'all': True,
          'sites': [], 'reason': "link following arrow in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 11, 'max_score': 0},
         # Link at the end of question, selected sites
         {'method': link_at_end, 'all': False,
