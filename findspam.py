@@ -337,7 +337,7 @@ class FindSpam:
                             "ipinteria\\.com", "blogines\\.com", "stepupheights\\.com", "gfix\\.in",
                             "aminoprimexl\\.com", "csharpstar\\.com", "vbscore\\.com", "blueeagleindia\\.com",
                             "vizayn\\.com", "health(flyup|buzzer)\\.com", "phenq\\.org", "androidpureapk\\.com",
-                            "upsafe\\.com"]
+                            "upsafe\\.com", "spiritsofts\\.com", "rcptec\\.com"]
     # Patterns: the top few lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(inboxmachine|(get|buy)cheap|escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(trainingin|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
@@ -377,7 +377,7 @@ class FindSpam:
                         r"(replica[^nt]\w{5,}|\wrolex)\.(co|net|org|in\W|info)",
                         r"customer(service|support)[\w-]*?\.(co|net|org|in\W|info)",
                         r"conferences?alert[\w-]*?\.(co|net|org|in\W|info)",
-                        r"seo\.com(?!/\w)",
+                        r"seo\.com(?!/\w)", r"seo[\w-]{12,}\.com",
                         r"(software|developers|packers|movers|logistic|service)[\w-]*?india\.(com|in\W)",
                         r"scam[\w-]*?(book|alert|register|punch)[\w-]*?\.(co|net|org|in\W|info)",
                         r"https?://[^/\s]{8,}healer",
