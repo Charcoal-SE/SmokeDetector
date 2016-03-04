@@ -337,7 +337,7 @@ class FindSpam:
                             "ipinteria\\.com", "blogines\\.com", "stepupheights\\.com", "gfix\\.in",
                             "aminoprimexl\\.com", "csharpstar\\.com", "vbscore\\.com", "blueeagleindia\\.com",
                             "vizayn\\.com", "health(flyup|buzzer)\\.com", "phenq\\.org", "androidpureapk\\.com",
-                            "upsafe\\.com", "spiritsofts\\.com", "rcptec\\.com", "gmax-brasil\\.com"]
+                            "upsafe\\.com", "spiritsofts\\.com", "rcptec\\.com", "gmax-brasil\\.com", "icognix\\.net"]
     # Patterns: the top few lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(inboxmachine|(get|buy)cheap|escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(trainingin|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
@@ -364,7 +364,7 @@ class FindSpam:
                         r"https?://(\w{5,}tutoring\w*|cheat[\w-.]{3,}|xtreme[\w-]{5,})\.",
                         r"(acai|buy|premium|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
                         r"(training|institute)[\w-]{6,}[\w.-]*?\.(co|net|org|in\W|info)",
-                        r"\w{9}buy\.(co|net|org|in\W|info)",
+                        r"\w{9}(buy|roofing)\.(co|net|org|in\W|info)",
                         r"(hike|love|strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
                         r"(phyto|[^s]cream|geniu[sx]|optimal|xplode|ultra|natura|testo|scam|wellness|grow|rejuven|revive|burn|vapor|ecig|formula|biotic|probio|male|derma|medical|medicare|health|beauty|youth|young|aging|rx|skin|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|alpha|beta|colon|brain(?!tree))[\w]{0,20}(plus|l[iy]ft|trial|nutrition|congress|jacked|dose|formula|france|norway|sweden|mexico|genix|critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|center|centre|care|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|guide|advi[sc]|fact|discussion|solution|consult|source|sups|vms|cream|grow|enhance)[\w-]{0,10}\.(co|net|org|in\W|info|wordpress|blogspot)",
