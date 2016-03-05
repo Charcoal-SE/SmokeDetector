@@ -30,7 +30,7 @@ def has_repeated_words(s, site):
 
 
 def has_few_characters(s, site):
-    s = regex.sub("</?p>", "", s)    # remove HTML paragraph tags from posts
+    s = regex.sub("</?p>", "", s).rstrip()    # remove HTML paragraph tags from posts
     uniques = len(set(list(s)))
     if (len(s) >= 30 and uniques <= 6) or (len(s) >= 100 and uniques <= 15):    # reduce if false reports appear
         return True, u"Contains {} unique characters".format(uniques)
