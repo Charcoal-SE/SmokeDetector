@@ -64,6 +64,7 @@ class GlobalVars:
                                            "30477",  # Brock Adams
                                            "58529",  # ferrybig
                                            "145208",  # Robert Longson
+                                           "178825",  # Ms Yvette
                                            "171800"],  # JAL
                         meta_tavern_room_id: ["259867",  # Normal Human
                                               "244519",  # CRABOLO
@@ -125,6 +126,7 @@ class GlobalVars:
                                               "311345",  # Simon Klaver
                                               "171881",  # rekire
                                               "260388",  # Pandya
+                                              "310756",  # Ms Yvette
                                               "242209"],  # JAL
                         socvr_room_id: [
                             "1849664",  # Undo
