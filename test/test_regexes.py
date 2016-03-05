@@ -8,7 +8,6 @@ import pytest
     ('18669786819 gmail customer service number 1866978-6819 gmail support number', '', '', '', True, True),
     ('Is there any http://www.hindawi.com/ template for Cloud-Oriented Data Center Networking?', '', '', '', False, True),
     ('', '', 'bagprada', '', False, True),
-    ('HOW DO YOU SOLVE THIS PROBLEM?', '', '', '', False, True),
     ('12 Month Loans quick @ http://www.quick12monthpaydayloans.co.uk/Elimination of collateral pledging', '', '', '', False, True),
     ('support for yahoo mail 18669786819 @call for helpline number', '', '', '', False, True),
     ('yahoo email tech support 1 866 978 6819 Yahoo Customer Phone Number ,Shortest Wait', '', '', '', False, True),
