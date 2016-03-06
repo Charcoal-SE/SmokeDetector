@@ -230,6 +230,18 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 return "Post ignored; alerts about it will no longer be posted."
             else:
                 return None
+        if second_part_lower.startswith("naa") and is_privileged(ev_room, ev_user_id, wrap2):
+            if post_site_id is None:
+                return "That message is not a report."
+
+            t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
+                                 args=(post_url, second_part_lower, ev_user_name, ))
+            t_metasmoke.start()
+
+            if not quiet_action:
+                return "Recorded answer as an NAA in metasmoke."
+            else:
+                return None
         if (second_part_lower.startswith("delete") or second_part_lower.startswith("remove") or second_part_lower.startswith("gone") or second_part_lower.startswith("poof") or
                 second_part_lower == "del") and is_privileged(ev_room, ev_user_id, wrap2):
             try:
