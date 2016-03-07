@@ -363,7 +363,7 @@ class FindSpam:
                         r"(watch|cup|20)[\w-]*?(live|online)\.(com|net|tv)",
                         r"worldcup\d[\w-]*?\.(com|net|tv|blogspot)",
                         r"https?://(\w{5,}tutoring\w*|cheat[\w-.]{3,}|xtreme[\w-]{5,})\.",
-                        r"(acai|buy|premium|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
+                        r"(paying|acai|buy|premium|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
                         r"(training|institute)[\w-]{6,}[\w.-]*?\.(co|net|org|in\W|info)",
                         r"\w{9}(buy|roofing)\.(co|net|org|in\W|info)",
                         r"(hike|love|strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
@@ -487,7 +487,7 @@ class FindSpam:
         {'regex': ur"^(?=.*[0-9])[^\pL]*$", 'all': True, 'sites': [], 'reason': "numbers-only title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 50, 'max_score': 0},
         # Few unique characters
         {'method': has_few_characters, 'all': True, 'sites': ["pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com", "rus.stackexchange.com"],
-         'reason': "few unique characters in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1000000, 'max_score': 1000000},
+         'reason': "few unique characters in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 10000, 'max_score': 1000000},
         # Repeating characters
         {'method': has_repeating_characters, 'all': True, 'sites': ["pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com", "rus.stackexchange.com"],
          'reason': "repeating characters in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1000000, 'max_score': 1000000},
