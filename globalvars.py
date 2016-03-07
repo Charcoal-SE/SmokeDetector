@@ -127,6 +127,7 @@ class GlobalVars:
                                               "171881",  # rekire
                                               "260388",  # Pandya
                                               "310756",  # Ms Yvette
+                                              "262399",  # Jeffrey Bosboom
                                               "242209"],  # JAL
                         socvr_room_id: [
                             "1849664",  # Undo
