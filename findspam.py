@@ -338,7 +338,8 @@ class FindSpam:
                             "aminoprimexl\\.com", "csharpstar\\.com", "vbscore\\.com", "blueeagleindia\\.com",
                             "vizayn\\.com", "health(flyup|buzzer)\\.com", "phenq\\.org", "androidpureapk\\.com",
                             "upsafe\\.com", "spiritsofts\\.com", "rcptec\\.com", "gmax-brasil\\.com", "icognix\\.net",
-                            "\Wpysoft\\.com"]
+                            "\Wpysoft\\.com", "zescode\\.com", "eserviceshelp\\.in", "captainform\\.com",
+                            "techiphone\\.com"]
     # Patterns: the top few lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(inboxmachine|(get|buy)cheap|escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(trainingin|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
@@ -363,7 +364,7 @@ class FindSpam:
                         r"(watch|cup|20)[\w-]*?(live|online)\.(com|net|tv)",
                         r"worldcup\d[\w-]*?\.(com|net|tv|blogspot)",
                         r"https?://(\w{5,}tutoring\w*|cheat[\w-.]{3,}|xtreme[\w-]{5,})\.",
-                        r"(paying|acai|buy|premium|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
+                        r"(platinum|paying|acai|buy|premium|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
                         r"(training|institute)[\w-]{6,}[\w.-]*?\.(co|net|org|in\W|info)",
                         r"\w{9}(buy|roofing)\.(co|net|org|in\W|info)",
                         r"(hike|love|strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
@@ -378,7 +379,7 @@ class FindSpam:
                         r"(replica[^nt]\w{5,}|\wrolex)\.(co|net|org|in\W|info)",
                         r"customer(service|support)[\w-]*?\.(co|net|org|in\W|info)",
                         r"conferences?alert[\w-]*?\.(co|net|org|in\W|info)",
-                        r"seo\.com(?!/\w)", r"seo[\w-]{12,}\.com",
+                        r"seo\.com(?!/\w)", r"seo[\w-]{12,}\.com", r"backlink[\w-]*?\.(com|net|de|blogspot)",
                         r"(software|developers|packers|movers|logistic|service)[\w-]*?india\.(com|in\W)",
                         r"scam[\w-]*?(book|alert|register|punch)[\w-]*?\.(co|net|org|in\W|info)",
                         r"https?://[^/\s]{8,}healer",
