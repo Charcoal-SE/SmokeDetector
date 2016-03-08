@@ -240,6 +240,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                                  args=(post_url, second_part_lower, ev_user_name, ))
             t_metasmoke.start()
 
+            add_ignored_post(post_site_id[0:2])
             if not quiet_action:
                 return "Recorded answer as an NAA in metasmoke."
             else:
