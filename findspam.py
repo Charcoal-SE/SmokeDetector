@@ -183,7 +183,7 @@ class FindSpam:
                         "(skin|eye)[- ]?lift", "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim", "aimee[ -]?cream",
                         "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
                         "contact (me|us)\\W*<a ", "follicure", "kidney[ -]?bean[ -]?extract", "ecoflex",
-                        "\\brs(gold|song)", "bellavei", "goji ?xtreme", "lumagenex",
+                        "\\brs(gold|song)", "bellavei", "goji ?xtreme", "lumagenex", "ajkobeshoes",
                         "packers.{0,15}(movers|logistic).{0,25}</a>", "guaranteedprofitinvestment",
                         "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)",
                         "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning",
@@ -334,10 +334,11 @@ class FindSpam:
                             "vizayn\\.com", "health(flyup|buzzer)\\.com", "androidpureapk\\.com",
                             "upsafe\\.com", "spiritsofts\\.com", "rcptec\\.com", "gmax-brasil\\.com", "icognix\\.net",
                             "\Wpysoft\\.com", "zescode\\.com", "eserviceshelp\\.in", "captainform\\.com",
-                            "techiphone\\.com", "kmminoaq4yci5woj\\.onion", "BlackListHackers\\.com"]
+                            "techiphone\\.com", "kmminoaq4yci5woj\\.onion", "BlackListHackers\\.com",
+                            "transferphone\\.com"]
     # Patterns: the top few lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(inboxmachine|(get|buy)cheap|escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
-                        r"(trainingin|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
+                        r"(tvstream|trainingin|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"([\w-]password|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|credits)\.(co|net|org|in\W|info)",
                         r"health\d{3,}\.(com|net)", r"https?://[\w-.]*?\.repair\W", r"https?://[\w-.]{10,}\.help\W",
