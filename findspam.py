@@ -129,7 +129,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
 
 
 def keyword_email(s, site):   # a keyword and an email in the same post
-    keyword = regex.compile(ur"(?i)\b(sell|loan|lover|illuminati|brotherhood|(join|reach) us|spell(caster)?|doctor|hack(er)?|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? ").search(s)
+    keyword = regex.compile(ur"(?i)\b(we (offer|develop)|buy|sell|rent|crack|opportunity|candidate|loan|lover|illuminati|brotherhood|(join|reach) us|spell(caster)?|doctor|hack(er)?|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? ").search(s)
     if keyword:
         email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
         if email:
@@ -221,7 +221,7 @@ class FindSpam:
                             "tenorshare\\.com", "thecasesolutions\\.com",
                             "fix-computer\\.net", "drillpressselect", "chinatour\\.com",
                             "windowspasswordcracker\\.com", "windowspasswordreset\\.net", "official-?driver",
-                            "santerevue", "cheatsumo\\.com",
+                            "santerevue", "cheatsumo\\.com", "videostir\\.com",
                             "smartpcfixer", "1fix\\.org", "code4email\\.com",
                             "drivertuner\\.com", "easyfix\\.org", "errorsfixer\\.org",
                             "faq800\\.com", "fix1\\.org", "guru4pc\\.net", "howto4pc\\.org",
@@ -233,7 +233,7 @@ class FindSpam:
                             "nemopdf\\.com", "downloaddailymotion\\.com",
                             "free-download-youtube\\.com", "free-music-downloader\\.com",
                             "video-download-capture\\.com", "videograbber\\.net",
-                            "globalvision\\.com\\.vn",
+                            "globalvision\\.com\\.vn", "csoftglobal\\.com",
                             "remorecover\\.com", "remosoftware\\.com",
                             "\\bpatch\\.com\\b", "ajgilworld\\.com", "santomais", "viilms",
                             "clashofclansastucegemmes\\.com", "mothersday-2014\\.org",
@@ -398,7 +398,7 @@ class FindSpam:
         {'regex': ur"^(?is).{0,200}black magic", 'all': True,
          'sites': ["islam.stackexchange.com"], 'reason': "black magic in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11, 'max_score': 0},
         # Bad keywords in titles only, all sites
-        {'regex': ur"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|kisn)\b)(?=.*?care).*products?\b|(?=.*?packer).*mover|(online|certification).*?training|\bvs\b.*\b(live|vivo)\b|\bxtra\b|\bwe offer\b|payday loan|смотреть онлайн", 'all': True,
+        {'regex': ur"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|kisn)\b)(?=.*?care).*products?\b|(?=.*?packer).*mover|(online|certification).*?training|\bvs\b.*\b(live|vivo)\b|\bxtra\b|\bwe offer\b|payday loan|смотреть.*онлайн|watch\b.{0,50}online", 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 0},
         # Fake-customer-service in title
         {'method': has_customer_service, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
