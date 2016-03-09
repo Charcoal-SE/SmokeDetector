@@ -24,6 +24,8 @@ class BodyFetcher:
                     "stackoverflow.com": 5,
                     "stats.stackexchange.com": 5,
                     "tex.stackexchange.com": 5,
+                    "magento.stackexchange.com": 3,
+                    "gis.stackexchange.com": 3,
                     "3dprinting.stackexchange.com": 1,
                     "academia.stackexchange.com": 1,
                     "beer.stackexchange.com": 1,
@@ -46,7 +48,7 @@ class BodyFetcher:
                     "woodworking.stackexchange.com": 1,
                     "writers.stackexchange.com": 1}
 
-    timeSensitive = ["askubuntu.com", "superuser.com"]
+    timeSensitive = ["askubuntu.com", "superuser.com", "security.stackexchange.com"]
 
     threshold = 2
 
