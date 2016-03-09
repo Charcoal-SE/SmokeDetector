@@ -190,6 +190,10 @@ def preprocess_shortcut_command(cmd):
         else:
             match = regex.search(r"^\d+", curr)
             t = int(match.group())
+            if t > 100:
+                # If someone made an unreasonable request, limit the # of commands (so we don't
+                # have any overflows) but do one more than the max messages we keep so it errors out
+                t = 101
             for j in range(0, t):
                 new_cmd.append(curr[match.end():])
     return " ".join(new_cmd)
