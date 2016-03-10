@@ -13,37 +13,37 @@ import math
 
 def load_files():
     if os.path.isfile("falsePositives.txt"):
-        with open("falsePositives.txt", "r") as f:
+        with open("falsePositives.txt", "rb") as f:
             GlobalVars.false_positives = pickle.load(f)
     if os.path.isfile("whitelistedUsers.txt"):
-        with open("whitelistedUsers.txt", "r") as f:
+        with open("whitelistedUsers.txt", "rb") as f:
             GlobalVars.whitelisted_users = pickle.load(f)
     if os.path.isfile("blacklistedUsers.txt"):
-        with open("blacklistedUsers.txt", "r") as f:
+        with open("blacklistedUsers.txt", "rb") as f:
             GlobalVars.blacklisted_users = pickle.load(f)
     if os.path.isfile("ignoredPosts.txt"):
-        with open("ignoredPosts.txt", "r") as f:
+        with open("ignoredPosts.txt", "rb") as f:
             GlobalVars.ignored_posts = pickle.load(f)
     if os.path.isfile("autoIgnoredPosts.txt"):
-        with open("autoIgnoredPosts.txt", "r") as f:
+        with open("autoIgnoredPosts.txt", "rb") as f:
             GlobalVars.auto_ignored_posts = pickle.load(f)
     if os.path.isfile("notifications.txt"):
-        with open("notifications.txt", "r") as f:
+        with open("notifications.txt", "rb") as f:
             GlobalVars.notifications = pickle.load(f)
     if os.path.isfile("whyData.txt"):
-        with open("whyData.txt", "r") as f:
+        with open("whyData.txt", "rb") as f:
             GlobalVars.why_data = pickle.load(f)
     if os.path.isfile("whyDataAllspam.txt"):
         with open("whyDataAllspam.txt") as f:
             GlobalVars.why_data_allspam = pickle.load(f)
     if os.path.isfile("latestMessages.txt"):
-        with open("latestMessages.txt", "r") as f:
+        with open("latestMessages.txt", "rb") as f:
             GlobalVars.latest_smokedetector_messages = pickle.load(f)
     if os.path.isfile("apiCalls.txt"):
-        with open("apiCalls.txt", "r") as f:
+        with open("apiCalls.txt", "rb") as f:
             GlobalVars.api_calls_per_site = pickle.load(f)
     if os.path.isfile("bodyfetcherQueue.txt"):
-        with open("bodyfetcherQueue.txt", "r") as f:
+        with open("bodyfetcherQueue.txt", "rb") as f:
             GlobalVars.bodyfetcher.queue = pickle.load(f)
 
 
@@ -57,8 +57,8 @@ def filter_auto_ignored_posts():
             to_remove.append(aip)
     for tr in to_remove:
         GlobalVars.auto_ignored_posts.remove(tr)
-    with open("autoIgnoredPosts.txt", "w") as f:
-        pickle.dump(GlobalVars.auto_ignored_posts, f)
+    with open("autoIgnoredPosts.txt", "wb") as f:
+        pickle.dump(GlobalVars.auto_ignored_posts, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 # methods to check whether a post/user is whitelisted/blacklisted/...
@@ -110,40 +110,40 @@ def add_whitelisted_user(user):
     if user in GlobalVars.whitelisted_users or user is None:
         return
     GlobalVars.whitelisted_users.append(user)
-    with open("whitelistedUsers.txt", "w") as f:
-        pickle.dump(GlobalVars.whitelisted_users, f)
+    with open("whitelistedUsers.txt", "wb") as f:
+        pickle.dump(GlobalVars.whitelisted_users, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 def add_blacklisted_user(user, message_url, post_url):
     if is_blacklisted_user(user) or user is None:
         return
     GlobalVars.blacklisted_users.append((user, message_url, post_url))
-    with open("blacklistedUsers.txt", "w") as f:
-        pickle.dump(GlobalVars.blacklisted_users, f)
+    with open("blacklistedUsers.txt", "wb") as f:
+        pickle.dump(GlobalVars.blacklisted_users, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 def add_auto_ignored_post(postid_site_tuple):
     if postid_site_tuple is None or is_auto_ignored_post(postid_site_tuple):
         return
     GlobalVars.auto_ignored_posts.append(postid_site_tuple)
-    with open("autoIgnoredPosts.txt", "w") as f:
-        pickle.dump(GlobalVars.auto_ignored_posts, f)
+    with open("autoIgnoredPosts.txt", "wb") as f:
+        pickle.dump(GlobalVars.auto_ignored_posts, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 def add_false_positive(site_post_id_tuple):
     if site_post_id_tuple is None or site_post_id_tuple in GlobalVars.false_positives:
         return
     GlobalVars.false_positives.append(site_post_id_tuple)
-    with open("falsePositives.txt", "w") as f:
-        pickle.dump(GlobalVars.false_positives, f)
+    with open("falsePositives.txt", "wb") as f:
+        pickle.dump(GlobalVars.false_positives, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 def add_ignored_post(postid_site_tuple):
     if postid_site_tuple is None or postid_site_tuple in GlobalVars.ignored_posts:
         return
     GlobalVars.ignored_posts.append(postid_site_tuple)
-    with open("ignoredPosts.txt", "w") as f:
-        pickle.dump(GlobalVars.ignored_posts, f)
+    with open("ignoredPosts.txt", "wb") as f:
+        pickle.dump(GlobalVars.ignored_posts, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 def remove_blacklisted_user(user):
@@ -151,8 +151,8 @@ def remove_blacklisted_user(user):
     if not blacklisted_user_data:
         return False
     GlobalVars.blacklisted_users.remove(blacklisted_user_data)
-    with open("blacklistedUsers.txt", "w") as f:
-        pickle.dump(GlobalVars.blacklisted_users, f)
+    with open("blacklistedUsers.txt", "wb") as f:
+        pickle.dump(GlobalVars.blacklisted_users, f, protocol=pickle.HIGHEST_PROTOCOL)
     return True
 
 
@@ -160,8 +160,8 @@ def remove_whitelisted_user(user):
     if user not in GlobalVars.whitelisted_users:
         return False
     GlobalVars.whitelisted_users.remove(user)
-    with open("whitelistedUsers.txt", "w") as f:
-        pickle.dump(GlobalVars.whitelisted_users, f)
+    with open("whitelistedUsers.txt", "wb") as f:
+        pickle.dump(GlobalVars.whitelisted_users, f, protocol=pickle.HIGHEST_PROTOCOL)
     return True
 
 
@@ -170,8 +170,8 @@ def add_why(site, post_id, why):
     t = (key, why)
     GlobalVars.why_data.append(t)
     filter_why()
-    with open("whyData.txt", "w") as f:
-        pickle.dump(GlobalVars.why_data, f)
+    with open("whyData.txt", "wb") as f:
+        pickle.dump(GlobalVars.why_data, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 def get_why(site, post_id):
@@ -189,8 +189,8 @@ def filter_why(max_size=50):
 def add_why_allspam(user, why):
     GlobalVars.why_data_allspam.append((user, why))
     filter_why_allspam()
-    with open("whyDataAllspam.txt", "w") as f:
-        pickle.dump(GlobalVars.why_data_allspam, f)
+    with open("whyDataAllspam.txt", "wb") as f:
+        pickle.dump(GlobalVars.why_data_allspam, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 def get_why_allspam(user):
@@ -209,8 +209,8 @@ def add_latest_smokedetector_message(room, message_id):
     # Keep the last 100 messages
     max_size = 100
     GlobalVars.latest_smokedetector_messages[room] = GlobalVars.latest_smokedetector_messages[room][-max_size:]
-    with open("latestMessages.txt", "w") as f:
-        pickle.dump(GlobalVars.latest_smokedetector_messages, f)
+    with open("latestMessages.txt", "wb") as f:
+        pickle.dump(GlobalVars.latest_smokedetector_messages, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 def add_or_update_api_data(site):
@@ -218,19 +218,19 @@ def add_or_update_api_data(site):
         GlobalVars.api_calls_per_site[site] += 1
     else:
         GlobalVars.api_calls_per_site[site] = 1
-    with open("apiCalls.txt", "w") as f:
-        pickle.dump(GlobalVars.api_calls_per_site, f)
+    with open("apiCalls.txt", "wb") as f:
+        pickle.dump(GlobalVars.api_calls_per_site, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 def clear_api_data():
     GlobalVars.api_calls_per_site = {}
-    with open("apiCalls.txt", "w") as f:
-        pickle.dump(GlobalVars.api_calls_per_site, f)
+    with open("apiCalls.txt", "wb") as f:
+        pickle.dump(GlobalVars.api_calls_per_site, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 def store_bodyfetcher_queue():
-    with open("bodyfetcherQueue.txt", "w") as f:
-        pickle.dump(GlobalVars.bodyfetcher.queue, f)
+    with open("bodyfetcherQueue.txt", "wb") as f:
+        pickle.dump(GlobalVars.bodyfetcher.queue, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 # methods that help avoiding reposting alerts:
@@ -315,8 +315,8 @@ def add_to_notification_list(user_id, chat_site, room_id, se_site):
     if t in GlobalVars.notifications:
         return -1, None
     GlobalVars.notifications.append(t)
-    with open("notifications.txt", "w") as f:
-        pickle.dump(GlobalVars.notifications, f)
+    with open("notifications.txt", "wb") as f:
+        pickle.dump(GlobalVars.notifications, f, protocol=pickle.HIGHEST_PROTOCOL)
     return 0, site
 
 
@@ -325,8 +325,8 @@ def remove_from_notification_list(user_id, chat_site, room_id, se_site):
     if t not in GlobalVars.notifications:
         return False
     GlobalVars.notifications.remove(t)
-    with open("notifications.txt", "w") as f:
-        pickle.dump(GlobalVars.notifications, f)
+    with open("notifications.txt", "wb") as f:
+        pickle.dump(GlobalVars.notifications, f, protocol=pickle.HIGHEST_PROTOCOL)
     return True
 
 
