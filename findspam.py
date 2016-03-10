@@ -175,7 +175,7 @@ class FindSpam:
                     "skinology", "folliplex", "yafei ?cable", "MSP ?Hack ?Tool",
                     "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015", "ATM hackers?",
                     "Vigoraflo", "Fonepaw", "Provasil", "Slimera", "Cerebria", "Xanogen",
-                    "(networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|salesforce)( certification)? training.{0,25}</a>",
+                    "(networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|salesforce|joomla)( certification)? training.{0,25}</a>",
                     "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity",
                     "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?", "intellux", "viooz",
                     "smartican", "essay writing service", "T-complex", "retrodynamic formula",
@@ -346,7 +346,7 @@ class FindSpam:
                             "transferphone\\.com", "hindipathshala\\.com"]
     # Patterns: the top few lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(inboxmachine|(get|buy)cheap|escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
-                        r"(tvstream|trainingin|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
+                        r"(fullmovie|tvstream|trainingin|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"([\w-]password|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|credits)\.(co|net|org|in\W|info)",
                         r"health\d{3,}\.(com|net)", r"https?://[\w-.]*?\.repair\W", r"https?://[\w-.]{10,}\.help\W",
@@ -407,7 +407,7 @@ class FindSpam:
         {'regex': ur"^(?is).{0,200}black magic", 'all': True,
          'sites': ["islam.stackexchange.com"], 'reason': "black magic in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11, 'max_score': 0},
         # Bad keywords in titles only, all sites
-        {'regex': ur"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|kisn)\b)(?=.*?care).*products?\b|(?=.*?packer).*mover|(online|certification).*?training|\bvs\b.*\b(live|vivo)\b|\bxtra\b|\bwe offer\b|payday loan|смотреть.*онлайн|watch\b.{0,50}online", 'all': True,
+        {'regex': ur"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|kisn)\b)(?=.*?care).*products?\b|(?=.*?packer).*mover|(online|certification).*?training|\bvs\b.*\b(live|vivo)\b|\bxtra\b|\bwe offer\b|payday loan|смотреть.*онлайн|watch\b.{0,50}(online|episode)|episode.{0,50}\bsub\b", 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 0},
         # Fake-customer-service in title
         {'method': has_customer_service, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
