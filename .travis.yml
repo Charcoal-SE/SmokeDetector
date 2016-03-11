@@ -16,7 +16,7 @@ branches:
     - debugging
 cache:
   directories:
-    - $HOME/virtualenv/python2.7
+    - $HOME/virtualenv/python2.7.9
     - $HOME/.cache/pip
     - $HOME/wheelhouse
 before_cache:
