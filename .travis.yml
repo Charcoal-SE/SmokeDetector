@@ -3,9 +3,7 @@ sudo: false
 python:
   - '2.7'
 install:
-  - pip wheel coverage phonenumbers regex==2015.11.22 -w $HOME/wheelhouse --find-links $HOME/wheelhouse
-  - pip install coverage phonenumbers regex==2015.11.22 --no-index  --find-links $HOME/wheelhouse
-  - pip install beautifulsoup4 requests websocket-client pytest flake8 termcolor --upgrade
+  - pip install coverage phonenumbers regex==2015.11.22 beautifulsoup4 requests websocket-client pytest flake8 termcolor --upgrade
 script:
   - flake8 ./
   - python -W default::Warning -m pytest test
@@ -18,6 +16,5 @@ cache:
   directories:
     - $HOME/virtualenv/python2.7.9
     - $HOME/.cache/pip
-    - $HOME/wheelhouse
 before_cache:
   - rm -f $HOME/.cache/pip/log/debug.log
