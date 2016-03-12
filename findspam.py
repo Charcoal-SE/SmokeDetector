@@ -320,7 +320,7 @@ class FindSpam:
                             "whatech\\.com", "crunchbase\\.com", "fileniaz\\.com", "icoolsoft\\.com",
                             "wonderful-watch\\.co", "plagiarism-checker\\.me",
                             "sapboonline\\.com", "thinkittraining\\.in", "salesforcetrainingexpert\\.in",
-                            "indiaflower", "achatlaser\\.com",
+                            "indiaflower", "achatlaser\\.com", "desimahol\\.com",
                             "latestone\\.com", "iwebsoul\\.com", "uttarakhandshadi", "kaintek\\.com", "giftcodes\\.net",
                             "josmprtion\\.com", "pc-helpp\\.com", "tufflo\\.com", "MobiKin\\.com", "manualbirds\\.com",
                             "assignmentbay\\.co", "nora777\\.com", "nutpile\\.com", "traffic-bots\\.com",
@@ -460,7 +460,7 @@ class FindSpam:
         {'regex': ur'(?s)^.{0,350}\s*<a href="http://[\w.-]+\.(com|net|in|com?\.\w+)/?"[^<]*</a>\s*</p>\s*$', 'all': True,
          'sites': [], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Shortened URL in a short answer
-        {'regex': ur"(?s)^.{0,250}://(goo\.gl|bit\.ly|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly)/.{0,250}$", 'all': True, 'sites': [], 'reason': "shortened URL in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
+        {'regex': ur"(?s)^.{0,250}://(goo\.gl|bit\.ly|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs)/.{0,250}$", 'all': True, 'sites': [], 'reason': "shortened URL in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Link text without Latin characters
         {'regex': u">[^0-9A-Za-z<'\"]{3,}</a>", 'all': True,
          'sites': ["jp.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com", "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com", "codegolf.stackexchange.com"], 'reason': 'non-Latin link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
