@@ -18,6 +18,8 @@ from ChatExchange.chatexchange.messages import Message
 # Please note: If new !!/ commands are added or existing ones are modified, don't forget to
 # update the wiki at https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands.
 
+add_latest_message_lock = threading.Lock()
+
 
 def post_message_in_room(room_id_str, msg, length_check=True):
     if room_id_str == GlobalVars.charcoal_room_id:
@@ -63,7 +65,9 @@ def watcher(ev, wrap2):
     content_source = ev.message.content_source
     message_id = ev.message.id
     if is_smokedetector_message(ev_user_id, ev_room):
+        add_latest_message_lock.acquire()
         add_latest_smokedetector_message(ev_room, message_id)
+        add_latest_message_lock.release()
     message_parts = content_source.split(" ")
 
     ev_user_name = ev.data["user_name"]
