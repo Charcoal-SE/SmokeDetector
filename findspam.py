@@ -564,7 +564,7 @@ class FindSpam:
                     why += FindSpam.generate_why(compiled_regex, user_name, u"Username", is_regex_check)
                     result.append(rule['reason'].replace("{}", "username"))
                 if matched_body and rule['body']:
-                    why += FindSpam.generate_why(compiled_regex, body, u"Body", is_regex_check)
+                    why += FindSpam.generate_why(compiled_regex, body_to_check, u"Body", is_regex_check)
                     type_of_post = "answer" if is_answer else "body"
                     result.append(rule['reason'].replace("{}", type_of_post))
         result = list(set(result))
