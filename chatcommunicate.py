@@ -86,14 +86,14 @@ def watcher(ev, wrap2):
         if len(commands) > len(latest_smokedetector_messages):
             ev.message.reply("I've only posted {} messages since the latest reboot; that's not enough to execute all commands. No commands were executed.".format(len(latest_smokedetector_messages)))
             return
-        for i in range(0, len(commands)):
+        for i in xrange(0, len(commands)):
             shortcut_messages.append(":" + str(latest_smokedetector_messages[-(i + 1)]) + " " + commands[i])
         reply = ""
         amount_none = 0
         amount_skipped = 0
         amount_unrecognized = 0
         length = len(shortcut_messages)
-        for i in range(0, length):
+        for i in xrange(0, length):
             current_message = shortcut_messages[i]
             if length > 1:
                 reply += str(i + 1) + ". "

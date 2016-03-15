@@ -181,7 +181,7 @@ def preprocess_shortcut_command(cmd):
     cmd = regex.sub(r"(\d)\s+", r"\1", cmd)
     parts = cmd.split(" ")
     new_cmd = ["sd"]
-    for i in range(1, len(parts)):
+    for i in xrange(1, len(parts)):
         curr = parts[i]
         if curr == "":
             continue
@@ -194,6 +194,6 @@ def preprocess_shortcut_command(cmd):
                 # If someone made an unreasonable request, limit the # of commands (so we don't
                 # have any overflows) but do one more than the max messages we keep so it errors out
                 t = 101
-            for j in range(0, t):
+            for j in xrange(0, t):
                 new_cmd.append(curr[match.end():])
     return " ".join(new_cmd)
