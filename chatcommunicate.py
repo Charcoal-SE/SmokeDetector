@@ -1,5 +1,5 @@
 import random
-from threading import Thread
+from threading import Thread, Lock
 from parsing import *
 from datahandling import *
 from metasmoke import Metasmoke
@@ -18,7 +18,7 @@ from ChatExchange.chatexchange.messages import Message
 # Please note: If new !!/ commands are added or existing ones are modified, don't forget to
 # update the wiki at https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands.
 
-add_latest_message_lock = threading.Lock()
+add_latest_message_lock = Lock()
 
 
 def post_message_in_room(room_id_str, msg, length_check=True):
