@@ -37,14 +37,26 @@ def load_files():
         with open("whyDataAllspam.txt") as f:
             GlobalVars.why_data_allspam = pickle.load(f)
     if os.path.isfile("latestMessages.txt"):
-        with open("latestMessages.txt", "rb") as f:
-            GlobalVars.latest_smokedetector_messages = pickle.load(f)
+        try:
+            with open("latestMessages.txt", "rb") as f:
+                GlobalVars.latest_smokedetector_messages = pickle.load(f)
+        except EOFError:
+            os.remove("latestMessages.txt")
+            raise
     if os.path.isfile("apiCalls.txt"):
-        with open("apiCalls.txt", "rb") as f:
-            GlobalVars.api_calls_per_site = pickle.load(f)
+        try:
+            with open("apiCalls.txt", "rb") as f:
+                GlobalVars.api_calls_per_site = pickle.load(f)
+        except EOFError:
+            os.remove("apiCalls.txt")
+            raise
     if os.path.isfile("bodyfetcherQueue.txt"):
-        with open("bodyfetcherQueue.txt", "rb") as f:
-            GlobalVars.bodyfetcher.queue = pickle.load(f)
+        try:
+            with open("bodyfetcherQueue.txt", "rb") as f:
+                GlobalVars.bodyfetcher.queue = pickle.load(f)
+        except EOFError:
+            os.remove("bodyfetcherQueue.txt")
+            raise
 
 
 def filter_auto_ignored_posts():
