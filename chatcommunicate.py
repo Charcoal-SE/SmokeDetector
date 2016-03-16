@@ -12,6 +12,7 @@ from apigetpost import api_get_post
 from spamhandling import handle_spam, handle_user_with_all_spam
 from termcolor import colored
 from findspam import FindSpam
+from deletionwatcher import DeletionWatcher
 from ChatExchange.chatexchange.messages import Message
 
 
@@ -68,6 +69,12 @@ def watcher(ev, wrap2):
         add_latest_message_lock.acquire()
         add_latest_smokedetector_message(ev_room, message_id)
         add_latest_message_lock.release()
+
+        post_site_id = fetch_post_id_and_site_from_msg_content(content_source)
+        if post_site_id is not None and post_site_id[2] == "question" and ev_room == "89":
+            t_check_websocket = Thread(target=DeletionWatcher.check_websocket_for_deletion, args=(post_site_id, ev.message))
+            t_check_websocket.daemon = True
+            t_check_websocket.start()
     message_parts = content_source.split(" ")
 
     ev_user_name = ev.data["user_name"]

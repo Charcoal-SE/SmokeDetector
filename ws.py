@@ -24,6 +24,7 @@ from spamhandling import check_if_spam_json
 from globalvars import GlobalVars
 from datahandling import load_files, filter_auto_ignored_posts
 from metasmoke import Metasmoke
+from deletionwatcher import DeletionWatcher
 import os
 import time
 import requests
@@ -121,6 +122,8 @@ def restart_automatically(time_in_seconds):
 Thread(target=restart_automatically, args=(21600,)).start()
 
 Thread(target=watch_ci, args=()).start()
+
+DeletionWatcher.update_site_id_list()
 
 ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
 ws.send("155-questions-active")

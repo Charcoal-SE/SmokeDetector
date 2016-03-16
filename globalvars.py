@@ -217,6 +217,8 @@ class GlobalVars:
     latest_smokedetector_messages = {meta_tavern_room_id: [], charcoal_room_id: [],
                                      socvr_room_id: []}
 
+    site_id_dict = {}
+
     location = config.get("Config", "location")
     print location
 
