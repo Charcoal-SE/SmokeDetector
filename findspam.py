@@ -347,7 +347,7 @@ class FindSpam:
                             "techiphone\\.com", "kmminoaq4yci5woj\\.onion", "BlackListHackers\\.com",
                             "transferphone\\.com", "hindipathshala\\.com"]
     # Patterns: the top few lines are the most straightforward, matching any site with this string in domain name
-    pattern_websites = [r"(inboxmachine|(get|buy)cheap|escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
+    pattern_websites = [r"(wholesale|inboxmachine|(get|buy)cheap|escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(fullmovie|tvstream|trainingin|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"([\w-]password|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|credits)\.(co|net|org|in\W|info)",
