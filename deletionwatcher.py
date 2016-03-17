@@ -41,12 +41,6 @@ class DeletionWatcher:
             a = ws.recv()
             if a is not None and a != "":
                 d = json.loads(json.loads(a)["data"])
-                print d["a"] == "post-deleted"
-                print d["qId"] == question_id
-                print post_type == "answer"
-                print "aId" in d
-                print d["aId"] == post_id
-                print (post_type == "answer" and "aId" in d and d["aId"] == post_id) or post_type == "question"
                 if d["a"] == "post-deleted" and str(d["qId"]) == question_id and ((post_type == "answer" and "aId" in d and str(d["aId"]) == post_id) or post_type == "question"):
                     try:
                         message.delete()
