@@ -33,4 +33,8 @@ class DeletionWatcher:
             if a is not None and a != "":
                 d = json.loads(json.loads(a)["data"])
                 if d["a"] == "post-deleted" and "aId" not in d:
-                    message.delete()
+                    try:
+                        message.delete()
+                    except:
+                        pass
+                    return
