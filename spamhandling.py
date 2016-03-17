@@ -70,7 +70,7 @@ def check_if_spam_json(data):
     return is_spam, reason, why
 
 
-def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reasons, is_answer, why="", owner_rep=None, post_score=None, up_vote_count=None, down_vote_count=None):
+def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reasons, is_answer, why="", owner_rep=None, post_score=None, up_vote_count=None, down_vote_count=None, question_id=None):
     post_url = to_protocol_relative(url_to_shortlink(post_url))
     poster_url = to_protocol_relative(user_url_to_shortlink(poster_url))
     reason = ", ".join(reasons)
@@ -86,6 +86,8 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
         add_auto_ignored_post((post_id, site, datetime.now()))
     if why is not None and why != "":
         add_why(site, post_id, why)
+    if is_answer and question_id is not None:
+        add_post_site_id_link((post_id, site, "answer"), question_id)
     try:
         title = escape_special_chars_in_title(title)
 

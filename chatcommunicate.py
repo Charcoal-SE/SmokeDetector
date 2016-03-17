@@ -71,7 +71,7 @@ def watcher(ev, wrap2):
         add_latest_message_lock.release()
 
         post_site_id = fetch_post_id_and_site_from_msg_content(content_source)
-        if post_site_id is not None and post_site_id[2] == "question" and ev_room == "89":
+        if post_site_id is not None and ev_room == "89":
             t_check_websocket = Thread(target=DeletionWatcher.check_websocket_for_deletion, args=(post_site_id, ev.message))
             t_check_websocket.daemon = True
             t_check_websocket.start()
@@ -390,7 +390,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             handle_spam(post_data.title, post_data.body, post_data.owner_name, post_data.site, post_data.post_url,
                         post_data.owner_url, post_data.post_id, ["Manually reported " + post_data.post_type + batch],
                         post_data.post_type == "answer", why, post_data.owner_rep, post_data.score, post_data.up_vote_count,
-                        post_data.down_vote_count)
+                        post_data.down_vote_count, post_data.question_id)
         if 1 < len(urls) > len(output):
             add_or_update_multiple_reporter(ev_user_id, wrap2.host, time.time())
         if len(output) > 0:

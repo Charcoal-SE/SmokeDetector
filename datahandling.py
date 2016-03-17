@@ -212,6 +212,16 @@ def get_why_allspam(user):
     return None
 
 
+def add_post_site_id_link(post_site_id, question_id):
+    GlobalVars.post_site_id_to_question[post_site_id] = question_id
+
+
+def get_post_site_id_link(post_site_id):
+    if post_site_id in GlobalVars.post_site_id_to_question:
+        return GlobalVars.post_site_id_to_question[post_site_id]
+    return None
+
+
 def filter_why_allspam(max_size=50):
     GlobalVars.why_data_allspam = GlobalVars.why_data_allspam[-max_size:]
 

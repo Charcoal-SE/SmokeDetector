@@ -19,6 +19,7 @@ class PostData:
         self.score = None
         self.up_vote_count = None
         self.down_vote_count = None
+        self.question_id = None
 
 
 def api_get_post(post_url):
@@ -64,4 +65,6 @@ def api_get_post(post_url):
     post_data.score = item['score']
     post_data.up_vote_count = item['up_vote_count']
     post_data.down_vote_count = item['down_vote_count']
+    if post_type == "answer":
+        post_data.question_id = item['question_id']
     return post_data
