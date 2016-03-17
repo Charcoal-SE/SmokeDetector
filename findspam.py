@@ -282,7 +282,7 @@ class FindSpam:
                             "pharaohtools", "msoutlooktools\\.com", "softwarezee",
                             "i-hire\\.pro", "pandamw\\.com", "hariraya2015\\.net",
                             "multipelife\\.com", "seasoncars\\.com",
-                            "flexihub\\.com", "\\.debt\\.com",
+                            "flexihub\\.com", "\\.debt\\.com", "websiteseochecker\\.com",
                             "hotfrog\\.ca", "snorg(content|tees)\\.com", "webtechcoupons",
                             "architecturedesign\\.tk", "playerhot\\.com",
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
