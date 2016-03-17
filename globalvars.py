@@ -130,7 +130,7 @@ class GlobalVars:
                                               "310756",  # Ms Yvette
                                               "262399",  # Jeffrey Bosboom
                                               "242209",  # JAL
-                                              "280883",  # ByteCommander 
+                                              "280883",  # ByteCommander
                                               "302251"],  # kos
                         socvr_room_id: [
                             "1849664",  # Undo
