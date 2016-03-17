@@ -139,7 +139,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
 
 
 def keyword_email(s, site):   # a keyword and an email in the same post
-    keyword = regex.compile(ur"(?i)\b(we (offer|develop)|buy|sell|rent|crack|opportunity|candidate|loan|lover|illuminati|brotherhood|(join|reach) us|spell(caster)?|doctor|hack(er)?|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? ").search(s)
+    keyword = regex.compile(ur"(?i)\b(we (offer|develop)|buy|sell|catalog|rent|crack|opportunity|candidate|loan|lover|illuminati|brotherhood|(join|reach) us|spell(caster)?|doctor|hack(er)?|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? ").search(s)
     if keyword:
         email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
         if email:
@@ -276,7 +276,7 @@ class FindSpam:
                             "crevalorsite\\.com", "macfixz\\.com", "moviesexplore\\.com",
                             "iphoneunlocking\\.org", "thehealthvictory\\.com",
                             "bloggermaking\\.com", "supportphonenumber\\.com",
-                            "prinenidz\\.com", "e-priceinbd",
+                            "prinenidz\\.com", "e-priceinbd", "ecigpre\\.com",
                             "maddenmobilehack", "supplements4help", "watchtheboxing",
                             "cacherealestate\\.com", "Matrixhackka007", "aoatech\\.com",
                             "pharaohtools", "msoutlooktools\\.com", "softwarezee",
@@ -350,7 +350,7 @@ class FindSpam:
     # Patterns: the top few lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(wholesale|inboxmachine|(get|buy)cheap|escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(fullmovie|tvstream|trainingin|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
-                        r"(menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
+                        r"(nitricoxide|menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"([\w-]password|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|credits)\.(co|net|org|in\W|info)",
                         r"health\d{3,}\.(com|net)", r"https?://[\w-.]*?\.repair\W", r"https?://[\w-.]{10,}\.help\W",
                         r"filefix(er)?\.com", r"\.page\.tl\W",
