@@ -65,7 +65,8 @@ class GlobalVars:
                                            "58529",  # ferrybig
                                            "145208",  # Robert Longson
                                            "178825",  # Ms Yvette
-                                           "171800"],  # JAL
+                                           "171800",  # JAL
+                                           "137665"],  # ByteCommander
                         meta_tavern_room_id: ["259867",  # Normal Human
                                               "244519",  # CRABOLO
                                               "244382",  # TGMCians
@@ -128,7 +129,9 @@ class GlobalVars:
                                               "260388",  # Pandya
                                               "310756",  # Ms Yvette
                                               "262399",  # Jeffrey Bosboom
-                                              "242209"],  # JAL
+                                              "242209",  # JAL
+                                              "280883",  # ByteCommander
+                                              "302251"],  # kos
                         socvr_room_id: [
                             "1849664",  # Undo
                             "2581872",  # hichris123
