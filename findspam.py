@@ -198,8 +198,9 @@ class FindSpam:
                         "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)",
                         "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning",
                         "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn", "revolyn",
-                        "training.{0,4}(bangalore|chennai|delhi|hyderabad|kolkata|mumbai)", u"Ｃ[Ｏ|0]Ｍ",
-                        "ecoflex", "no2factor", "sunergetic", "capilux", "sante ?avis", "enduros"]
+                        "(SEO company|training).{0,4}(bangalore|chennai|delhi|hyderabad|kolkata|mumbai)",
+                        u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "sunergetic", "capilux", "sante ?avis",
+                        "enduros"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes", "(naga|dewa)poker",
                             "ipubsoft", "orabank", "powerigfaustralia", "rankassured\\.com",
                             "maletestosteronebooster", "menintalk", "king-steroid",
@@ -258,7 +259,7 @@ class FindSpam:
                             "iwasl\\.com", "vpn(faqs|answers|ranks|4games)\\.com",
                             "unblockingtwitter\\.com", "openingblockedsite\\.com",
                             "arabic(soft)?downloads?\\.com", "braindumpsvalid",
-                            "couchsurfing\\.com",
+                            "couchsurfing\\.com", "sukere\\.com",
                             "gta5codes\\.fr", "pcsoftpro\\.com", "addium\\.info",
                             "fallclassicrun\\.com", "forgrams\\.com", "windowiso\\.com",
                             "cloudinsights\\.net", "xtremenitro", "surfmegeek",
