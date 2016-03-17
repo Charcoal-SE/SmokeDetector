@@ -82,9 +82,9 @@ def has_phone_number(s, site):
     s = regex.sub("[^A-Za-z0-9\\s\"',]", "", s)   # deobfuscate
     if site != 'math.stackexchange.com':
         s = regex.sub(",", "", s)                 # keep commas for Math titles
-    s = regex.sub("O", "0", s)
-    s = regex.sub("S", "5", s)
-    s = regex.sub("I", "1", s)
+    s = regex.sub("[Oo]", "0", s)
+    s = regex.sub("[Ss]", "5", s)
+    s = regex.sub("[Ii]", "1", s)
     matched = regex.compile(ur"(?<!\d)(?:\d{2}\s?\d{8,11}|\d\s{0,2}\d{3}\s{0,2}\d{3}\s{0,2}\d{4}|8\d{2}\s{0,2}\d{3}\s{0,2}\d{4})(?!\d)", regex.UNICODE).findall(s)
     test_formats = ["IN", "US", "NG", None]      # ^ don't match parts of too long strings of digits
     for phone_number in matched:
@@ -107,7 +107,7 @@ def has_customer_service(s, site):  # flexible detection of customer service in 
     phrase = regex.compile(r"(tech(nical)? support)|((support|service|contact|help(line)?) (telephone|phone|number))").search(s)
     if (phrase):
         return True, u"Key phrase: {}".format(phrase.group(0))
-    business = regex.compile(r"(?i)\b(airlines?|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|out[l1]ook|quickbooks|windows|yahoo)\b").search(s)
+    business = regex.compile(r"(?i)\b(airlines?|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|windows|yahoo)\b").search(s)
     digits = len(regex.compile(r"\d").findall(s))
     if (business and digits >= 5):
         keywords = regex.compile(r"(?i)\b(customer|help|care|helpline|reservation|phone|recovery|service|support|contact|tech|technical|telephone|number)\b").findall(s)
