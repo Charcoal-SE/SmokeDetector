@@ -38,7 +38,10 @@ class DeletionWatcher:
         ws.send(site_id + "-question-" + question_id)
 
         while time.time() < time_to_check:
-            a = ws.recv()
+            try:
+                a = ws.recv()
+            except:
+                continue
             if a is not None and a != "":
                 d = json.loads(json.loads(a)["data"])
                 if d["a"] == "post-deleted" and str(d["qId"]) == question_id and ((post_type == "answer" and "aId" in d and str(d["aId"]) == post_id) or post_type == "question"):
