@@ -38,12 +38,12 @@ class DeletionWatcher:
         ws.send(site_id + "-question-" + question_id)
 
         while time.time() < time_to_check:
-            try:
-                a = ws.recv()
-            except:
-                continue
+            a = ws.recv()
             if a is not None and a != "":
-                d = json.loads(json.loads(a)["data"])
+                try:
+                    d = json.loads(json.loads(a)["data"])
+                except:
+                    continue
                 if d["a"] == "post-deleted" and str(d["qId"]) == question_id and ((post_type == "answer" and "aId" in d and str(d["aId"]) == post_id) or post_type == "question"):
                     try:
                         message.delete()
