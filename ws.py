@@ -137,6 +137,7 @@ GlobalVars.tavern_on_the_meta.watch_socket(watcher)
 GlobalVars.socvr.watch_socket(watcher)
 for room in GlobalVars.specialrooms:
     if "watcher" in room:
+        room["room"].join()
         room["room"].watch_socket(special_room_watcher)
 
 if "first_start" in sys.argv and GlobalVars.on_master:
