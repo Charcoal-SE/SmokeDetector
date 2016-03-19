@@ -281,7 +281,7 @@ class FindSpam:
                             "cacherealestate\\.com", "Matrixhackka007", "aoatech\\.com",
                             "pharaohtools", "msoutlooktools\\.com", "softwarezee",
                             "i-hire\\.pro", "pandamw\\.com", "hariraya2015\\.net",
-                            "multipelife\\.com", "seasoncars\\.com",
+                            "multipelife\\.com", "seasoncars\\.com", "evolvedlifevisions\\.com",
                             "flexihub\\.com", "\\.debt\\.com", "websiteseochecker\\.com",
                             "hotfrog\\.ca", "snorg(content|tees)\\.com", "webtechcoupons",
                             "architecturedesign\\.tk", "playerhot\\.com",
