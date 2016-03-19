@@ -4,7 +4,7 @@ import time
 import websocket
 from bs4 import BeautifulSoup
 from globalvars import GlobalVars
-from datahandling import get_post_site_id_link
+from datahandling import get_post_site_id_link, get_special_room_report
 
 
 class DeletionWatcher:
@@ -47,6 +47,9 @@ class DeletionWatcher:
                 if d["a"] == "post-deleted" and str(d["qId"]) == question_id and ((post_type == "answer" and "aId" in d and str(d["aId"]) == post_id) or post_type == "question"):
                     try:
                         message.delete()
+                        special_room_report = get_special_room_report(post_site_id)
+                        if special_room_report is not None:
+                            special_room_report.delete()
                     except:
                         pass
                     return

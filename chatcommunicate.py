@@ -50,6 +50,17 @@ def print_chat_message(ev):
     print message
 
 
+def special_room_watcher(ev, wrap2):
+    if ev.type_id != 1:
+        return
+    ev_user_id = str(ev.data["user_id"])
+    content_source = ev.message.content_source
+    if is_smokedetector_message(ev_user_id, GlobalVars.charcoal_room_id):
+        post_site_id = fetch_post_id_and_site_from_msg_content(content_source)
+        if post_site_id is not None:
+            add_special_room_report(post_site_id, ev.message)
+
+
 def watcher(ev, wrap2):
     if ev.type_id != 1 and ev.type_id != 2:
         return

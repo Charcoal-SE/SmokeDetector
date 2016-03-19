@@ -16,7 +16,7 @@ import getpass
 from threading import Thread
 import traceback
 from bodyfetcher import BodyFetcher
-from chatcommunicate import watcher
+from chatcommunicate import watcher, special_room_watcher
 from continuousintegration import watch_ci
 from datetime import datetime
 from utcdate import UtcDate
@@ -94,7 +94,8 @@ GlobalVars.specialrooms = [{
                                                "Repeating characters in title",
                                                "Repeating characters in body",
                                                "Repeating characters in answer",
-                                               "Link at end of answer"]
+                                               "Link at end of answer"],
+                           "watcher": True
                            }, {
                            "sites": ["parenting.stackexchange.com"],
                            "room": GlobalVars.wrap.get_room("21625"),
@@ -134,6 +135,9 @@ GlobalVars.socvr.join()
 GlobalVars.charcoal_hq.watch_socket(watcher)
 GlobalVars.tavern_on_the_meta.watch_socket(watcher)
 GlobalVars.socvr.watch_socket(watcher)
+for room in GlobalVars.specialrooms:
+    if "watcher" in room:
+        room.watch_socket(special_room_watcher)
 
 if "first_start" in sys.argv and GlobalVars.on_master:
     GlobalVars.charcoal_hq.send_message(GlobalVars.s)
