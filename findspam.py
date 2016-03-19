@@ -435,7 +435,7 @@ class FindSpam:
          'sites': ["hinduism.stackexchange.com"], 'reason': "Hindi character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 0},
         # English text on non-English site
         {'regex': ur"(?i)^[a-z0-9_\W]*[a-z]{3}[a-z0-9_\W]*$", 'all': False,
-         'sites': ["rus.stackexchange.com", "ja.stackoverflow.com"], 'reason': "English text in {} on a localized site", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+         'sites': ["rus.stackexchange.com", "ja.stackoverflow.com"], 'reason': "English text in {} on a localized site", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0, 'answers': False},
         # Roof repair
         {'regex': u"roof repair", 'all': True,
          'sites': ["diy.stackexchange.com", "outdoors.stackexchange.com", "mechanics.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 11, 'max_score': 0},
@@ -534,8 +534,8 @@ class FindSpam:
             except KeyError:
                 check_if_question = True
             if rule['stripcodeblocks']:    # use a placeholder to avoid triggering "few unique characters" when most of post is code
-                body_to_check = regex.sub("(?s)<pre>.*?</pre>", "placeholder for omitted code block", body)
-                body_to_check = regex.sub("(?s)<code>.*?</code>", "placeholder for omitted code block", body_to_check)
+                body_to_check = regex.sub("(?s)<pre>.*?</pre>", u"placeholder for omitted code/код block", body)
+                body_to_check = regex.sub("(?s)<code>.*?</code>", u"placeholder for omitted code/код block", body_to_check)
             if rule['reason'] == 'Phone number detected in {}':
                 body_to_check = regex.sub("<img[^>]+>", "", body_to_check)
                 body_to_check = regex.sub("<a[^>]+>", "", body_to_check)
