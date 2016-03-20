@@ -71,6 +71,7 @@ class GlobalVars:
                                            "54902",   # bummi
                                            "135450",  # M.A.R.
                                            "145604",  # Quill
+                                           "60548",  # rene
                                            "137665"],  # ByteCommander
                         meta_tavern_room_id: ["259867",  # Normal Human
                                               "244519",  # CRABOLO
