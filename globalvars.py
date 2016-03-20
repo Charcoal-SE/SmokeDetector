@@ -66,6 +66,11 @@ class GlobalVars:
                                            "145208",  # Robert Longson
                                            "178825",  # Ms Yvette
                                            "171800",  # JAL
+                                           "64978",   # PeterJ
+                                           "125141",  # Jeffrey Bosboom
+                                           "54902",   # bummi
+                                           "135450",  # M.A.R 
+                                           "145604",  # Quill
                                            "137665"],  # ByteCommander
                         meta_tavern_room_id: ["259867",  # Normal Human
                                               "244519",  # CRABOLO
