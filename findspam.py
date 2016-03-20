@@ -71,7 +71,7 @@ def non_english_link(s, site):   # non-english link in short answer
 def mostly_non_latin(s, site):   # non-english link in short answer
     word_chars = regex.sub(r"(?u)\W", "", s)
     non_latin_chars = regex.sub(r"\w", "", word_chars)
-    if (len(non_latin_chars) > 0.5 * len(word_chars)):
+    if (len(non_latin_chars) > 0.4 * len(word_chars)):
         return True, u"Mostly non-Latin alphabet."
     return False, ""
 
@@ -441,7 +441,8 @@ class FindSpam:
          'sites': ["diy.stackexchange.com", "outdoors.stackexchange.com", "mechanics.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 11, 'max_score': 0},
         # Mostly non-Latin alphabet
         {'method': mostly_non_latin, 'all': True,
-         'sites': ["ja.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com", "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com", "codegolf.stackexchange.com"], 'reason': 'mostly non-Latin {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
+         'sites': ["ja.stackoverflow.com", "pt.stackoverflow.com", "es.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com", "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com", "french.stackexchange.com", "spanish.stackexchange.com", "portuguese.stackexchange.com", "codegolf.stackexchange.com"],
+         'reason': 'mostly non-Latin {}', 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         #
         # Category: Suspicious links
         # Blacklisted sites
