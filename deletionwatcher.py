@@ -4,7 +4,7 @@ import time
 import websocket
 from bs4 import BeautifulSoup
 from globalvars import GlobalVars
-from datahandling import is_false_positive, get_post_site_id_link
+from datahandling import is_false_positive, is_ignored_post, get_post_site_id_link
 
 
 class DeletionWatcher:
@@ -63,6 +63,6 @@ class DeletionWatcher:
 
     @classmethod
     def post_message_if_not_deleted(self, post_site_id, message_text, room):
-        was_report_deleted = self.check_websocket_for_deletion(post_site_id, 600)
-        if not was_report_deleted and not is_false_positive(post_site_id):
+        was_report_deleted = self.check_websocket_for_deletion(post_site_id, 300)
+        if not was_report_deleted and not is_false_positive(post_site_id) and not is_ignored_post(post_site_id):
             room.send_message(message_text)
