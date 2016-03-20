@@ -69,7 +69,7 @@ class GlobalVars:
                                            "64978",   # PeterJ
                                            "125141",  # Jeffrey Bosboom
                                            "54902",   # bummi
-                                           "135450",  # M.A.R 
+                                           "135450",  # M.A.R.
                                            "145604",  # Quill
                                            "137665"],  # ByteCommander
                         meta_tavern_room_id: ["259867",  # Normal Human
