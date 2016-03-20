@@ -19,7 +19,6 @@ import pytest
     ('Question', '111111111111', '', 'stackoverflow.com', False, True),
     ('Question', 'I have this number: 111111111111111', '', 'stackoverflow.com', False, False),
     ('Random title', '$$$$$$$$$$$$', '', 'superuser.com', False, True),
-    ('Non-spammy title', 'Call baba something today at +91 something', '', 'stackoverflow.com', False, True),
     ('Enhance SD Male Enhancement Supplements', '', '', '', False, True),
     ('Title here', '11111111111111', '', 'communitybuilding.stackexchange.com', False, True),
     ('Gmail Tech Support (1-844-202-5571) Gmail tech support number[Toll Free Number]?', '', '', 'stackoverflow.com', False, True),
