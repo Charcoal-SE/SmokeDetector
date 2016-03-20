@@ -120,7 +120,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                     tavern_pings = get_user_names_on_notification_list("meta.stackexchange.com", GlobalVars.meta_tavern_room_id, site, GlobalVars.wrapm)
                     tavern_msg = append_pings(s, tavern_pings)
                     tavern_msg_ms = tavern_msg + metasmoke_link
-                    GlobalVars.tavern_on_the_meta.send_message(tavern_msg_ms if len(tavern_msg_ms) <= 500 else tavern_msg if len(tavern_msg) <= 500 else s[0:500])
+                    # GlobalVars.tavern_on_the_meta.send_message(tavern_msg_ms if len(tavern_msg_ms) <= 500 else tavern_msg if len(tavern_msg) <= 500 else s[0:500])
                 if site == "stackoverflow.com":
                     socvr_pings = get_user_names_on_notification_list("stackoverflow.com", GlobalVars.socvr_room_id, site, GlobalVars.wrapso)
                     socvr_msg = append_pings(s, socvr_pings)
