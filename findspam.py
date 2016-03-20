@@ -402,7 +402,7 @@ class FindSpam:
         {'regex': ur"(?is)\b({})\b|{}".format("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 1},
         # baba and nike are restricted to the beginning of posts: many false positives otherwise
-        {'regex': ur"(?is)^.{0,200}\b(baba|nike) ", 'all': True,
+        {'regex': ur"(?is)^.{0,200}\bnike ", 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11, 'max_score': 0},
         # gratis at the beginning of post, SoftwareRecs is exempt
         {'regex': ur"(?is)^.{0,200}\bgratis\b$", 'all': True,
