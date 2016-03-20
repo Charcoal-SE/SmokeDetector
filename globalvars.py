@@ -228,7 +228,6 @@ class GlobalVars:
 
     site_id_dict = {}
     post_site_id_to_question = {}
-    special_room_reports = {}
 
     location = config.get("Config", "location")
     print location
