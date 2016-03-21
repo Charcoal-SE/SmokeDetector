@@ -71,7 +71,12 @@ class GlobalVars:
                                            "54902",   # bummi
                                            "135450",  # M.A.R.
                                            "145604",  # Quill
-                                           "60548",  # rene
+                                           "60548",   # rene
+                                           "121401",  # michaelpri
+                                           "116218",  # JamesENL
+                                           "82927",   # Braiam
+                                           "11606",   # bwDraco
+                                           "19761",   # Ilmari Karonen
                                            "137665"],  # ByteCommander
                         meta_tavern_room_id: ["259867",  # Normal Human
                                               "244519",  # CRABOLO
