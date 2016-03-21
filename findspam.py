@@ -291,7 +291,7 @@ class FindSpam:
                             "appsforpcdownloads", "academicservices\\.us", "writerspk\\.com",
                             "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
                             "megatachoco", "shtylm\\.com", "drilluobetemple\\.webs",
-                            "creative-proteomics", "revommerce.com",
+                            "creative-proteomics", "revommerce.com", "gronkaffedenmark\\.com",
                             "123trainings", "(bestof|beta)cheat\\.com", "surejob\\.in",
                             "israelbigmarket", "chinatour\\.com", "celebsclothing\\.com",
                             "imeshlab\\.com", "sagacademy\\.com", "moderncar\\.com", "[/.]iwacy\\.com",
