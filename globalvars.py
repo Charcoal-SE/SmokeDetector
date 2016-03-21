@@ -77,6 +77,7 @@ class GlobalVars:
                                            "82927",   # Braiam
                                            "11606",   # bwDraco
                                            "19761",   # Ilmari Karonen
+                                           "108271"   # Andrew T.
                                            "137665"],  # ByteCommander
                         meta_tavern_room_id: ["259867",  # Normal Human
                                               "244519",  # CRABOLO
