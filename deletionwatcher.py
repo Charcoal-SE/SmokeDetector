@@ -64,5 +64,5 @@ class DeletionWatcher:
     @classmethod
     def post_message_if_not_deleted(self, post_site_id, message_text, room):
         was_report_deleted = self.check_websocket_for_deletion(post_site_id, 300)
-        if not was_report_deleted and not is_false_positive(post_site_id) and not is_ignored_post(post_site_id):
+        if not was_report_deleted and not is_false_positive(post_site_id[0:2]) and not is_ignored_post(post_site_id[0:2]):
             room.send_message(message_text)
