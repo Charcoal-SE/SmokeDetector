@@ -200,7 +200,7 @@ class FindSpam:
                         "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn", "revolyn",
                         "(SEO company|training).{0,4}(bangalore|chennai|delhi|hyderabad|kolkata|mumbai)",
                         u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "sunergetic", "capilux", "sante ?avis",
-                        "enduros"]
+                        "enduros", "dianabol"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes", "(naga|dewa)poker",
                             "ipubsoft", "orabank", "powerigfaustralia", "rankassured\\.com",
                             "maletestosteronebooster", "menintalk", "king-steroid",
@@ -224,7 +224,7 @@ class FindSpam:
                             "pdftoexel\\.wordpress\\.com", "best7th\\.in",
                             "mkmk9", "malwaretips", "hackerscontent\\.com",
                             "webbuildersguide\\.com", "idealshare.net", "lankabpoacademy\\.com",
-                            "evomailserver\\.com", "gameart\\.net",
+                            "evomailserver\\.com", "gameart\\.net", "voonik\\.com",
                             "sofotex\\.com", "erecteentry", "fairharvardfund",
                             "mybloggingmoney\\.com", "windows-techsupport\\.com",
                             "drivethelife\\.com", "singlerank\\.com", "sayeureqa\\.com",
