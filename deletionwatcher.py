@@ -38,7 +38,7 @@ class DeletionWatcher:
         ws.send(site_id + "-question-" + question_id)
 
         while time.time() < time_to_check:
-            ws.settimeout(time.time() - time_to_check)
+            ws.settimeout(time_to_check - time.time())
             try:
                 a = ws.recv()
             except websocket.WebSocketTimeoutException:
