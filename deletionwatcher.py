@@ -35,10 +35,10 @@ class DeletionWatcher:
         site_id = GlobalVars.site_id_dict[post_site]
 
         ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
-        ws.settimeout(timeout)
         ws.send(site_id + "-question-" + question_id)
 
         while time.time() < time_to_check:
+            ws.settimeout(time.time() - time_to_check)
             try:
                 a = ws.recv()
             except websocket.WebSocketTimeoutException:
