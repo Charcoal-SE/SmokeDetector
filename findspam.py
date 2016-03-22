@@ -221,7 +221,7 @@ class FindSpam:
                             "diabacordoesitwork", "thehealthyadvise", "mixresult\\.com",
                             "hyperglycemiaabout", "dietandhealthguide", "waffor\\.com",
                             "sourceforge\\.net/projects/freepdftojpgconverter",
-                            "pdftoexel\\.wordpress\\.com", "best7th\\.in",
+                            "pdftoexel\\.wordpress\\.com", "best7th\\.in", "resolit\\.us",
                             "mkmk9", "malwaretips", "hackerscontent\\.com",
                             "webbuildersguide\\.com", "idealshare.net", "lankabpoacademy\\.com",
                             "evomailserver\\.com", "gameart\\.net", "voonik\\.com",
