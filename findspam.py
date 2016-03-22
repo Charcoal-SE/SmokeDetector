@@ -219,7 +219,7 @@ class FindSpam:
                             "pelevoniface", "herintalk", "menshealth", "examguidez",
                             "skinphysiciantips", "xtrememusclerecoveryrev",
                             "diabacordoesitwork", "thehealthyadvise", "mixresult\\.com",
-                            "hyperglycemiaabout", "dietandhealthguide",
+                            "hyperglycemiaabout", "dietandhealthguide", "waffor\\.com",
                             "sourceforge\\.net/projects/freepdftojpgconverter",
                             "pdftoexel\\.wordpress\\.com", "best7th\\.in",
                             "mkmk9", "malwaretips", "hackerscontent\\.com",
