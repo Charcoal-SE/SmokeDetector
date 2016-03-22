@@ -335,7 +335,7 @@ class FindSpam:
                             "psychicfuguestudio", "softserialhq\\.com", "unstopableshrine\\.webs\\.com",
                             "softaken\\.com", "lyonstechnologies", "serialkeygeneratorfree\\.com", "routeperfect\\.com",
                             "tupely\\.com", "apk(heart|safe)\\.com", "uflysoft\\.net", "nimblemessaging\\.com",
-                            "oleville\\.net", "nutribulletrecipes\\.org",
+                            "oleville\\.net", "nutribulletrecipes\\.org", "wirexapp\\.com",
                             "decalontop\\.com", "urlopener\\.com", "mobile57\\.com", "learn(spicy|perfact)",
                             "getfitness\\.in", "trustwiko\\.com", "attendasoft", "selfybuzz\\.com", "meritcampus\\.com",
                             "fastindiaservice\\.com", "shharshsajv", "fizyetimusing", "fornatgaex", "shwesanenid",
