@@ -194,7 +194,8 @@ class GlobalVars:
                             "1542723",  # Ferrybig
                             "2025923",  # Tushar
                             "5292302",  # Petter Friberg
-                            "792066"]  # Braiam
+                            "792066",  # Braiam
+                            "5666987"]  # Ian
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
