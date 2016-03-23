@@ -51,7 +51,8 @@ def has_repeating_characters(s, site):
 
 def link_at_end(s, site):
     s = regex.sub("</strong>|</em>|</p>", "", s)
-    match = regex.compile(ur"https?://[A-Za-z0-9-.]*/?[A-Za-z0-9-]*/?</a>\s*$", regex.UNICODE).findall(s)
+    match = regex.compile(ur"https?://(?:[A-Za-z0-9-.]*/?[A-Za-z0-9-]*/?|plus\.google\.com/[\w/]*)</a>\s*$", regex.UNICODE).findall(s)
+    google_plus = regex.compile(ur"https?://plus.google.com/\s*</a>\s*$", regex.UNICODE).findall(s)
     if len(match) > 0 and not regex.compile(r"upload|\b(imgur|ctrlv|prntscr|gyazo|youtu\.?be|stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|(?<!plus\.)google|localhost|ubuntu)\b", regex.UNICODE).search(match[0]):
         return True, u"Link at end: {}".format(match[0])
     return False, ""
@@ -351,7 +352,7 @@ class FindSpam:
                             "snipercrack\\.tk", "averagemaleheight\\.tk", "educba\\.com"]
     # Patterns: the top few lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(wholesale|inboxmachine|(get|buy)cheap|escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
-                        r"(fullmovie|tvstream|trainingin|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
+                        r"(fullmovie|tvstream|trainingin|cracked\w{3}|cracksoftware|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(nitricoxide|menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"([\w-]password|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|credits)\.(co|net|org|in\W|info)",
                         r"health\d{3,}\.(com|net)", r"https?://[\w-.]*?\.repair\W", r"https?://[\w-.]{10,}\.help\W",
