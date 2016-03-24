@@ -69,10 +69,10 @@ def non_english_link(s, site):   # non-english link in short answer
 
 
 def mostly_non_latin(s, site):   # non-english link in short answer
-    word_chars = regex.sub(r"(?u)\W", "", s)
+    word_chars = regex.sub(r"(?u)[\W0-9]", "", s)
     non_latin_chars = regex.sub(r"\w", "", word_chars)
     if (len(non_latin_chars) > 0.4 * len(word_chars)):
-        return True, u"Mostly non-Latin alphabet."
+        return True, u"Text contains {} non-Latin characters out of {}".format(len(non_latin_chars), len(word_chars))
     return False, ""
 
 
