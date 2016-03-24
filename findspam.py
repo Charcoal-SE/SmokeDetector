@@ -246,7 +246,7 @@ class FindSpam:
                             "free-download-youtube\\.com", "free-music-downloader\\.com",
                             "video-download-capture\\.com", "videograbber\\.net",
                             "globalvision\\.com\\.vn", "csoftglobal\\.com",
-                            "remorecover\\.com", "remosoftware\\.com",
+                            "remorecover\\.com", "remosoftware\\.com", "freethemes\\.co",
                             "\\bpatch\\.com\\b", "ajgilworld\\.com", "santomais", "viilms",
                             "clashofclansastucegemmes\\.com", "mothersday-2014\\.org",
                             "bestcelebritiesvideo\\.com", "shopnhlbruins\\.com",
