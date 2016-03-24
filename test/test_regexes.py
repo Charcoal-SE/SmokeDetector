@@ -62,7 +62,7 @@ import pytest
     ('something', 'his email address is (SOMEONE@GMAIL.COM)', '', 'stackoverflow.com', False, False),
     ('something', 'URL: &email=someone@gmail.com', '', 'meta.stackexchange.com', False, False),
     ('random title', 'URL: page.html#someone@gmail.com', '', 'rpg.stackexchange.com', False, False),
-    (u'Как рандомно получать числа 1 и 2?', 'Body here', u'Сашка', 'ru.stackoverflow.com', False, False),
+    (u'Как рандомно получать числа 1 и 2?', u'Текст вопроса с кодом <code>a = b + 1</code>', u'Сашка', 'ru.stackoverflow.com', False, False),
     ('Should not be caught: http://example.com', '', '', 'drupal.stackexchange.com', False, False),
     ('Should not be caught: https://www.example.com', '', '', 'drupal.stackexchange.com', False, False),
     ('Should not be caught: something@example.com', '', '', 'drupal.stackexchange.com', False, False),
