@@ -266,7 +266,7 @@ class FindSpam:
                             "cloudinsights\\.net", "xtremenitro", "surfmegeek",
                             "(premium|priceless)-inkjet\\.com", "antivirus\\.comodo\\.com",
                             "clusterlinks\\.com", "kizi1000\\.in", "weightruinations\\.com",
-                            "products\\.odosta\\.com", "naturacelhelp",
+                            "products\\.odosta\\.com", "naturacelhelp", "guidemesupss\\.com",
                             "rackons\\.com", "imonitorsoft\\.com", "biginfosys\\.com",
                             "analec\\.com", "livesportstv\\.us", "batteriedepcportable",
                             "stadtbett\\.com", "tokoterbaik\\.com", "\\Welance\\.com"
