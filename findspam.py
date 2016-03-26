@@ -374,7 +374,7 @@ class FindSpam:
                         r"worldcup\d[\w-]*?\.(com|net|tv|blogspot)",
                         r"https?://(\w{5,}tutoring\w*|cheat[\w-.]{3,}|xtreme[\w-]{5,})\.",
                         r"(platinum|paying|acai|buy|premium|ultra|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
-                        r"(training|institute)[\w-]{6,}[\w.-]*?\.(co|net|org|in\W|info)",
+                        r"(training|institute|marketing)[\w-]{6,}[\w.-]*?\.(co|net|org|in\W|info)",
                         r"\w{9}(buy|roofing)\.(co|net|org|in\W|info)",
                         r"(hike|love|strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
