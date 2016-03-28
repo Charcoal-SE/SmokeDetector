@@ -139,7 +139,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
 
 
 def keyword_email(s, site):   # a keyword and an email in the same post
-    keyword = regex.compile(ur"(?i)\b(we (offer|develop)|buy|sell|money|catalog|rent|crack|opportunity|candidate|loan|lover|illuminati|brotherhood|(join|reach) us|spell(caster)?|doctor|hack(er|ing)?|spying|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? ").search(s)
+    keyword = regex.compile(ur"(?i)\b(we (offer|develop)|buy|sell|money|payment|guarantee|catalog|rent|crack|opportunity|candidate|loan|lover|illuminati|brotherhood|(join|reach) us|spell(caster)?|doctor|hack(er|ing)?|spying|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? ").search(s)
     if keyword:
         email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
         if email:
@@ -349,7 +349,7 @@ class FindSpam:
                             "techiphone\\.com", "kmminoaq4yci5woj\\.onion", "BlackListHackers\\.com",
                             "transferphone\\.com", "hindipathshala\\.com", "solwininfotech\\.com",
                             "snipercrack\\.tk", "averagemaleheight\\.tk", "educba\\.com", "neosurftobitcoin\\.net",
-                            "silver-card\\.net", "cards101\\.net", "hakerstars\\.com"]
+                            "silver-card\\.net", "cards101\\.net", "hakerstars\\.com", "king-dumps\\.us"]
     # Patterns: the top few lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(wholesale|inboxmachine|(get|buy)cheap|escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(fullmovie|tvstream|trainingin|infocampus|cracked\w{3}|cracksoftware|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
