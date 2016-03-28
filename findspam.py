@@ -349,7 +349,8 @@ class FindSpam:
                             "techiphone\\.com", "kmminoaq4yci5woj\\.onion", "BlackListHackers\\.com",
                             "transferphone\\.com", "hindipathshala\\.com", "solwininfotech\\.com",
                             "snipercrack\\.tk", "averagemaleheight\\.tk", "educba\\.com", "neosurftobitcoin\\.net",
-                            "silver-card\\.net", "cards101\\.net", "hakerstars\\.com", "king-dumps\\.us"]
+                            "silver-card\\.net", "cards101\\.net", "hakerstars\\.com", "king-dumps\\.us",
+                            "cuidados-saude"]
     # Patterns: the top few lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(wholesale|inboxmachine|(get|buy)cheap|escort|diploma|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(fullmovie|tvstream|trainingin|infocampus|cracked\w{3}|cracksoftware|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
