@@ -360,7 +360,7 @@ class FindSpam:
                         r"filefix(er)?\.com", r"\.page\.tl\W",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
-                        r"((essay|resume|click2)\w{6,}|essays[\w-]*?)\.(co|net|org|in\W|info|us)",
+                        r"((essay|resume|click2)\w{6,}|(essays|termpaper)[\w-]*?)\.(co|net|org|in\W|info|us)",
                         r"(top|best|expert)\d\w{2,15}\.in\W",
                         r"[\w-](recovery|repair|(?<!epoch|font)converter)(pro|kit)?\.(com|net)",
                         r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)[\w-]{0,10}(account|tech|customer|support|service|phone|help)[\w-]{0,10}(service|care|help|recovery|support|phone|number)",
