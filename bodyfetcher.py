@@ -48,7 +48,8 @@ class BodyFetcher:
                     "woodworking.stackexchange.com": 1,
                     "writers.stackexchange.com": 1}
 
-    timeSensitive = ["askubuntu.com", "superuser.com", "security.stackexchange.com", "movies.stackexchange.com", "mathoverflow.net"]
+    timeSensitive = ["askubuntu.com", "superuser.com", "security.stackexchange.com", "movies.stackexchange.com",
+                     "mathoverflow.net", "gaming.stackexchange.com"]
 
     threshold = 2
 
