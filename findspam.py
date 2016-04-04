@@ -347,7 +347,7 @@ class FindSpam:
                             "upsafe\\.com", "spiritsofts\\.com", "rcptec\\.com", "gmax-brasil\\.com", "icognix\\.net",
                             "\\Wpysoft\\.com", "zescode\\.com", "eserviceshelp\\.in", "captainform\\.com",
                             "techiphone\\.com", "kmminoaq4yci5woj\\.onion", "BlackListHackers\\.com",
-                            "transferphone\\.com", "hindipathshala\\.com", "applify\\.co",
+                            "transferphone\\.com", "hindipathshala\\.com", "applify\\.co", "armmlm\\.com",
                             "snipercrack\\.tk", "averagemaleheight\\.tk", "educba\\.com", "neosurftobitcoin\\.net",
                             "silver-card\\.net", "cards101\\.net", "hakerstars\\.com", "king-dumps\\.us",
                             "cuidados-saude", "klereumcol\\.com", "gupshupchatroom\\.com", "petsworld\\.in"]
@@ -361,7 +361,7 @@ class FindSpam:
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
                         r"((essay|resume|click2)\w{6,}|(essays|termpaper|examcollection)[\w-]*?)\.(co|net|org|in\W|info|us)",
-                        r"(top|best|expert)\d\w{2,15}\.in\W",
+                        r"(top|best|expert)\d\w{0,15}\.in\W",
                         r"[\w-](recovery|repair|(?<!epoch|font)converter)(pro|kit)?\.(com|net)",
                         r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)[\w-]{0,10}(account|tech|customer|support|service|phone|help)[\w-]{0,10}(service|care|help|recovery|support|phone|number)",
                         r"sourceforge\.net[\w/]*convert",
