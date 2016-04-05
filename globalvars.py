@@ -80,7 +80,7 @@ class GlobalVars:
                                            "108271",  # Andrew T.
                                            "171054",  # Magisch
                                            "137665"],  # ByteCommander
-                        meta_tavern_room_id: ["259867",  # Normal Human
+                        meta_tavern_room_id: ["315433",  # Normal Human
                                               "244519",  # CRABOLO
                                               "244382",  # TGMCians
                                               "194047",  # Jan Dvorak
