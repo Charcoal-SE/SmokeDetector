@@ -105,7 +105,7 @@ def has_customer_service(s, site):  # flexible detection of customer service in 
     s = s[0:200].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
     s = regex.sub(r"[^A-Za-z0-9\s]", "", s)   # deobfuscate
     phrase = regex.compile(r"(tech(nical)? support)|((support|service|contact|help(line)?) (telephone|phone|number))").search(s)
-    if (phrase):
+    if phrase and site in ["askubuntu.com", "webapps.stackexchange.com", "webmasters.stackexchange.com"]:
         return True, u"Key phrase: {}".format(phrase.group(0))
     business = regex.compile(r"(?i)\b(airlines?|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|windows?|yahoo)\b").search(s)
     digits = len(regex.compile(r"\d").findall(s))
