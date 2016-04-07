@@ -81,6 +81,7 @@ class GlobalVars:
                                            "108271",  # Andrew T.
                                            "171054",  # Magisch
                                            "190011",  # Petter Friberg
+                                           "165661",  # Tunaki
                                            "137665"],  # ByteCommander
                         meta_tavern_room_id: ["315433",  # Normal Human
                                               "244519",  # CRABOLO
