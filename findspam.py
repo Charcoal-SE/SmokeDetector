@@ -324,7 +324,7 @@ class FindSpam:
                             "whatech\\.com", "crunchbase\\.com", "fileniaz\\.com", "icoolsoft\\.com",
                             "wonderful-watch\\.co", "plagiarism-checker\\.me", "asodoneright",
                             "sapboonline\\.com", "thinkittraining\\.in", "salesforcetrainingexpert\\.in",
-                            "indiaflower", "achatlaser\\.com", "desimahol\\.com",
+                            "indiaflower", "achatlaser\\.com", "desimahol\\.com", "independentracingwheel",
                             "latestone\\.com", "iwebsoul\\.com", "uttarakhandshadi", "kaintek\\.com", "giftcodes\\.net",
                             "josmprtion\\.com", "pc-helpp\\.com", "tufflo\\.com", "MobiKin\\.com", "manualbirds\\.com",
                             "assignmentbay\\.co", "nora777\\.com", "nutpile\\.com", "traffic-bots\\.com",
