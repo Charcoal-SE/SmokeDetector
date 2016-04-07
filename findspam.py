@@ -39,7 +39,7 @@ def has_few_characters(s, site):
 
 def has_repeating_characters(s, site):
     s = regex.sub('http[^"]*', "", s)    # remove URLs for this check
-    if s is None or len(s) == 0:
+    if s is None or len(s) == 0 or len(s) >= 300 or regex.compile("<pre>|<code>").search(s):
         return False, ""
     matches = regex.compile(u"([^\\s_\u200b\u200c.,?!=~*/0-9-])(\\1{10,})", regex.UNICODE).findall(s)
     matches = ["".join(match) for match in matches]
@@ -547,8 +547,8 @@ class FindSpam:
             except KeyError:
                 check_if_question = True
             if rule['stripcodeblocks']:    # use a placeholder to avoid triggering "few unique characters" when most of post is code
-                body_to_check = regex.sub("(?s)<pre>.*?</pre>", u"placeholder for omitted code/код block", body)
-                body_to_check = regex.sub("(?s)<code>.*?</code>", u"placeholder for omitted code/код block", body_to_check)
+                body_to_check = regex.sub("(?s)<pre>.*?</pre>", u"<pre><code>placeholder for omitted code/код block</pre></code>", body)
+                body_to_check = regex.sub("(?s)<code>.*?</code>", u"<pre><code>placeholder for omitted code/код block</pre></code>", body_to_check)
             if rule['reason'] == 'Phone number detected in {}':
                 body_to_check = regex.sub("<img[^>]+>", "", body_to_check)
                 body_to_check = regex.sub("<a[^>]+>", "", body_to_check)
