@@ -125,7 +125,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                     t_check_websocket = Thread(target=DeletionWatcher.post_message_if_not_deleted, args=((post_id, site, "answer" if is_answer else "question"), msg_to_send, GlobalVars.tavern_on_the_meta))
                     t_check_websocket.daemon = True
                     t_check_websocket.start()
-                if site == "stackoverflow.com" and reason not in GlobalVars.non_socvr_reasons:
+                if site == "stackoverflow.com" and reason not in GlobalVars.non_socvr_reasons and not is_answer:
                     socvr_pings = get_user_names_on_notification_list("stackoverflow.com", GlobalVars.socvr_room_id, site, GlobalVars.wrapso)
                     socvr_msg = append_pings(s, socvr_pings)
                     socvr_msg_ms = socvr_msg + metasmoke_link
