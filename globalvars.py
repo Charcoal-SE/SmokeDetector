@@ -27,7 +27,7 @@ class GlobalVars:
                      "spanish.stackexchange.com": "SpanishGood.txt", "stats.stackexchange.com": "StatsGood.txt"}
 
     experimental_reasons = []  # Don't widely report these
-    non_socvr_reasons = ["Link at end of answer"]    # Don't report to SOCVR
+    non_socvr_reasons = []    # Don't report to SOCVR
     non_tavern_reasons = ["All-caps title",   # Don't report in the Tavern
                           "All-caps body",
                           "All-caps answer",
