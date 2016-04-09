@@ -337,7 +337,7 @@ class FindSpam:
                             "psychicfuguestudio", "softserialhq\\.com", "unstopableshrine\\.webs\\.com",
                             "softaken\\.com", "lyonstechnologies", "serialkeygeneratorfree\\.com", "routeperfect\\.com",
                             "tupely\\.com", "apk(heart|safe)\\.com", "uflysoft\\.net", "nimblemessaging\\.com",
-                            "oleville\\.net", "nutribulletrecipes\\.org", "wirexapp\\.com",
+                            "oleville\\.net", "nutribulletrecipes\\.org", "wirexapp\\.com", "x4up\\.org",
                             "decalontop\\.com", "urlopener\\.com", "mobile57\\.com", "learn(spicy|perfact)",
                             "getfitness\\.in", "trustwiko\\.com", "attendasoft", "selfybuzz\\.com", "meritcampus\\.com",
                             "fastindiaservice\\.com", "shharshsajv", "fizyetimusing", "fornatgaex", "shwesanenid",
@@ -483,6 +483,9 @@ class FindSpam:
         # Link text with some non-Latin characters
         {'method': non_english_link, 'all': True, 'sites': ["pt.stackoverflow.com", "es.stackoverflow.com", "ja.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com", "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com", "french.stackexchange.com", "portuguese.stackexchange.com", "spanish.stackexchange.com", "codegolf.stackexchange.com"],
          'reason': 'non-English link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
+        # Link text consists of punctuation
+        {'regex': ur'(?u)rel="nofollow">\W</a>', 'all': True,
+         'sites': [], 'reason': 'linked punctuation in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # URL in title, some sites are exempt
         {'regex': ur"https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}|\w{3,}\.(com|net)\b.*\w{3,}\.(com|net)\b", 'all': True,
          'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com", "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com"], 'reason': "URL in title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 0},
