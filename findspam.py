@@ -353,11 +353,11 @@ class FindSpam:
                             "snipercrack\\.tk", "averagemaleheight\\.tk", "educba\\.com", "neosurftobitcoin\\.net",
                             "silver-card\\.net", "cards101\\.net", "hakerstars\\.com", "king-dumps\\.us",
                             "cuidados-saude", "klereumcol\\.com", "gupshupchatroom\\.com", "petsworld\\.in",
-                            "godiabetesrevenge", "reflectivevestsindia"]
-    # Patterns: the top few lines are the most straightforward, matching any site with this string in domain name
+                            "godiabetesrevenge", "reflectivevestsindia", "anyframe\\.net"]
+    # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(phone-?number|fullmovie|tvstream|trainingin|digitalmarketing|infocampus|cracked\w{3}|cracksoftware|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
-                        r"(nitricoxide|menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
+                        r"(nitricoxide|masculin|menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"([\w-]password|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|cheatcode|credits)\.(co|net|org|in\W|info)",
                         r"health\d{3,}\.(com|net)", r"https?://[\w-.]*?\.repair\W", r"https?://[\w-.]{10,}\.help\W",
                         r"filefix(er)?\.com", r"\.page\.tl\W", r"infotech\.(com|net|in)",
@@ -383,7 +383,7 @@ class FindSpam:
                         r"\w{9}(buy|roofing)\.(co|net|org|in\W|info)",
                         r"(hike|love|strong|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(pearl|phyto|[^s]cream|creme|geniu[sx]|optimal|xplode|ultra|natura|testo|scam|wellness|grow|rejuven|revive|burn|vapor|ecig|formula|biotic|probio|male|derma|medical|medicare|health|beauty|youth|young|aging|rx|skin|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|ultra|alpha|beta|colon|brain(?!tree))[\w]{0,20}(plus|l[iy]ft|trial|nutrition|congress|jacked|dose|formula|brazil|france|norway|sweden|mexico|genix|critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|center|centre|care|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|mag|chat|guide|advi[sc]|fact|discussion|solution|consult|source|sups|vms|cream|grow|enhance)[\w-]{0,10}\.(co|net|org|in\W|info|wordpress|blogspot)",
+                        r"(pearl|phyto|[^s]cream|creme|geniu[sx]|optimal|xplode|ultra|natura|testo|scam|wellness|grow|rejuven|revive|vita|burn|vapor|ecig|formula|biotic|probio|male|derma|medical|medicare|health|beauty|youth|young|aging|rx|skin|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|ultra|alpha|beta|colon|brain(?!tree))[\w]{0,20}(plus|l[iy]ft|trial|nutrition|congress|jacked|dose|formula|brazil|france|norway|sweden|mexico|genix|critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|center|centre|care|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|mag|chat|guide|advi[sc]|fact|discussion|solution|consult|source|sups|vms|cream|grow|enhance)[\w-]{0,10}\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"\w{11}(ideas?|income|sale|reviews?|advices?|problog)\.(co|net|org|in\W|info)",
                         "-poker\\.com", "send[\w-]*?india\.(co|net|org|in\W|info)",
                         r"(corrupt|repair)[\w-]*?\.blogspot", r"[\w-](courses?|training)[\w-]*?\.in/",
@@ -485,7 +485,7 @@ class FindSpam:
          'reason': 'non-English link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Link text consists of punctuation, answers only
         {'regex': ur'(?u)rel="nofollow">\W</a>', 'all': True,
-         'sites': [], 'reason': 'linked punctuation in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
+         'sites': [], 'reason': 'linked punctuation in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 11, 'max_score': 1},
         # URL in title, some sites are exempt
         {'regex': ur"https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}|\w{3,}\.(com|net)\b.*\w{3,}\.(com|net)\b", 'all': True,
          'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com", "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com"], 'reason': "URL in title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 0},
