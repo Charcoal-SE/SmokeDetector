@@ -431,11 +431,11 @@ class FindSpam:
         # Bad health-related keywords in titles and posts, health sites are exempt
         {'regex': ur"(?is)virility|diet ?(plan|pill)|\b(pro)?derma(?=[a-su-z ]\w)|(fat|(?<!dead[ -]?)weight)[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|\bherpes\b|(?<!truth )serum|colon (detox|clean)|\bpenis\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com", "islam.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
-        # Korean character in title
+        # Korean character in title: requires 3
         {'regex': ur"(?i)\p{Script=Hangul}.*\p{Script=Hangul}.*\p{Script=Hangul}", 'all': True,
          'sites': [], 'reason': "Korean character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        # Chinese characters in title: requires two groups of 3
-        {'regex': ur"(?i)\p{Script=Han}{3}.*\p{Script=Han}{3}|。|【|】", 'all': True,
+        # Chinese characters in title: requires 3
+        {'regex': ur"(?i)\p{Script=Han}.*\p{Script=Han}.*\p{Script=Han}|。|【|】", 'all': True,
          'sites': ["chinese.stackexchange.com", "japanese.stackexchange.com", "ja.stackoverflow.com"], 'reason': "Chinese character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Hindi character in title
         {'regex': ur"(?i)\p{Script=Devanagari}", 'all': True,
