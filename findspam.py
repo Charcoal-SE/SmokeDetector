@@ -533,7 +533,7 @@ class FindSpam:
         #
         # Category: other
         # Blacklisted usernames
-        {'regex': u"(?i)(tejveer ?iq|ser?vice pemanas?|Barbara Glowa|^[a-z ]+juriya[a-z]?$)", 'all': True, 'sites': [], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0}
+        {'regex': u"(?i)(tejveer ?iq|ser?vice pemanas?|Barbara Glowa|dlqudals|^[a-z ]+juriya[a-z]?$)", 'all': True, 'sites': [], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0}
     ]
 
     @staticmethod
