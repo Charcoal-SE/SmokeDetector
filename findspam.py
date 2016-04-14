@@ -315,7 +315,7 @@ class FindSpam:
                             "skyformation\\.com", "shiftingsolutions\\.in", "bandsawjudge\\.com",
                             "liveestorebuilder\\.com", "exampracticequestions\\.com", "createspace\\.com",
                             "healthpeters\\.com", "fun-flicks\\.com", "smarketingclub\\.com", "cbitss\\.in",
-                            "o-lovius\\.com", "aldovmcgregor\\.co", "priredeream\\.com",
+                            "o-lovius\\.com", "aldovmcgregor\\.co", "priredeream\\.com", "quicksearch\\.in",
                             "adonads\\.com", "uufix\\.com", "slimrootz\\.com", "robomart\\.com", "fedotov\\.co",
                             "uflysoft\\.net", "simicart\\.com", "sellcvv\\.co", "oprfid\\.com",
                             "thereferraltask\\.net", "ajax2014\\.ir", "voxforem\\.com", "writeversity\\.com",
@@ -353,7 +353,7 @@ class FindSpam:
                             "snipercrack\\.tk", "averagemaleheight\\.tk", "educba\\.com", "neosurftobitcoin\\.net",
                             "silver-card\\.net", "cards101\\.net", "hakerstars\\.com", "king-dumps\\.us",
                             "cuidados-saude", "klereumcol\\.com", "gupshupchatroom\\.com", "petsworld\\.in",
-                            "godiabetesrevenge", "reflectivevestsindia", "anyframe\\.net"]
+                            "godiabetesrevenge", "reflectivevestsindia", "anyframe\\.net", "canadianprofits\\.tv"]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(phone-?number|fullmovie|tvstream|trainingin|digitalmarketing|infocampus|cracked\w{3}|cracksoftware|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
