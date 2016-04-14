@@ -544,6 +544,20 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             return "HURRY UP AND EARN MORE HATS! Winterbash will be over in {} {}, {} {}, {} {}, and {} {}. :(".format(diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
         else:
             return "Winterbash is over. :("
+    if content_lower.startswith("!!/test-a"):
+        string_to_test = content[10:]
+        if len(string_to_test) == 0:
+            return "Nothing to test"
+        result = "> "
+        reasons, why = FindSpam.test_post("", string_to_test, "", "", True, False, 1, 0)
+        if len(reasons) == 0:
+            result += "Would not be caught for answer."
+            return result
+        result += ", ".join(reasons).capitalize()
+        if why is not None and len(why) > 0:
+            result += "\n----------\n"
+            result += why
+        return result
     if content_lower.startswith("!!/test"):
         string_to_test = content[8:]
         if len(string_to_test) == 0:
