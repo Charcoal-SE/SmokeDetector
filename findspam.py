@@ -187,7 +187,7 @@ class FindSpam:
                     "eltima", "raging lion", "(love|miracle).*spell ?casters?", "08151871776",
                     "^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$", "Krojam(Soft|Cleaner)?", "FilesSearch ?Tool",
                     "teksonit", "Re@d More", "Live Streaming</a", "Blackcore ?Edge", "Copy Buffett", "Push Money App",
-                    "Volive( Solutions)?", "(meg|test)adrox", "Herbalife"]
+                    "Volive( Solutions)?", "(meg|test)adrox", "Herbalife", "Accumass"]
     bad_keywords_nwb = [u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "(serum|lift) ?eye", "tophealth", "poker[ -]?online",
@@ -226,7 +226,7 @@ class FindSpam:
                             "hyperglycemiaabout", "dietandhealthguide", "waffor\\.com",
                             "sourceforge\\.net/projects/freepdftojpgconverter",
                             "pdftoexel\\.wordpress\\.com", "best7th\\.in", "resolit\\.us",
-                            "mkmk9", "malwaretips", "hackerscontent\\.com",
+                            "mkmk9", "malwaretips", "hackerscontent\\.com", "healthyfinder\\.com",
                             "webbuildersguide\\.com", "idealshare.net", "lankabpoacademy\\.com",
                             "evomailserver\\.com", "gameart\\.net", "voonik\\.com",
                             "sofotex\\.com", "erecteentry", "fairharvardfund", "newfundingpoint\\.com",
@@ -237,7 +237,7 @@ class FindSpam:
                             "fix-computer\\.net", "drillpressselect", "chinatour\\.com",
                             "windowspasswordcracker\\.com", "windowspasswordreset\\.net", "official-?driver",
                             "santerevue", "cheatsumo\\.com", "videostir\\.com",
-                            "smartpcfixer", "1fix\\.org", "code4email\\.com",
+                            "smartpcfixer", "1fix\\.org", "code4email\\.com", "nwgolds\\.com",
                             "drivertuner\\.com", "easyfix\\.org", "errorsfixer\\.org",
                             "faq800\\.com", "fix1\\.org", "guru4pc\\.net", "howto4pc\\.org",
                             "pceasynow\\.com", "qobul\\.com", "onlinegiftdeal\\.com",
