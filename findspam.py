@@ -291,7 +291,7 @@ class FindSpam:
                             "architecturedesign\\.tk", "playerhot\\.com",
                             "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
                             "statesmovie", "cleanlean", "iFoneMate", "babygames5\\.com",
-                            "replacementlaptopkeys\\.com", "safewiper\\.com",
+                            "replacementlaptopkeys\\.com", "safewiper\\.com", "ostoto\\.com",
                             "appsforpcdownloads", "academicservices\\.us", "writerspk\\.com",
                             "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
                             "megatachoco", "shtylm\\.com", "drilluobetemple\\.webs",
@@ -509,7 +509,7 @@ class FindSpam:
         # Combination of keyword and email in questions and answers, for all sites
         {'method': keyword_email, 'all': True, 'sites': [], 'reason': "bad keyword with email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # QQ number, for all sites
-        {'regex': ur"(?i)(?<![a-z0-9/])Q{1,2}(?:(?:[vw]|[^a-z0-9])\D{0,8})?\d{5}[./-]?\d{4,5}(?!\d)", 'all': True, 'sites': [], 'reason': "messaging number in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
+        {'regex': ur'(?i)(?<![a-z0-9])Q{1,2}(?:(?:[vw]|[^a-z0-9])\D{0,8})?\d{5}[./-]?\d{4,5}(?!["\d])', 'all': True, 'sites': [], 'reason': "messaging number in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
         #
         # Category: Trolling
         # Offensive content in titles and posts
