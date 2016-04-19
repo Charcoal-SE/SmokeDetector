@@ -43,6 +43,23 @@ class Metasmoke:
             print e
 
     @classmethod
+    def send_deletion_stats_for_post(self, post_link, is_deleted):
+        if GlobalVars.metasmoke_host is None:
+            print "Metasmoke location not defined; not reporting deletion stats"
+            return
+
+        metasmoke_key = GlobalVars.metasmoke_key
+
+        try:
+            payload = {'deletion_log': {'is_deleted': is_deleted, 'post_link': post_link}, 'key': metasmoke_key}
+
+            headers = {'Content-type': 'application/json'}
+            requests.post(GlobalVars.metasmoke_host + "/deletion_logs.json", data=json.dumps(payload), headers=headers)
+
+        except Exception as e:
+            print e
+
+    @classmethod
     def send_status_ping(self):
         if GlobalVars.metasmoke_host is None:
             print "Metasmoke location not defined; not sending status ping"
