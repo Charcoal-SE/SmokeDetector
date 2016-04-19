@@ -58,7 +58,7 @@ def special_room_watcher(ev, wrap2):
     if is_smokedetector_message(ev_user_id, GlobalVars.charcoal_room_id):
         post_site_id = fetch_post_id_and_site_from_msg_content(content_source)
         post_url = fetch_post_url_from_msg_content(content_source)
-        if post_site_id is not None:
+        if post_site_id is not None and post_url is not None:
             t_check_websocket = Thread(target=DeletionWatcher.check_if_report_was_deleted, args=(post_site_id, post_url, ev.message))
             t_check_websocket.daemon = True
             t_check_websocket.start()
