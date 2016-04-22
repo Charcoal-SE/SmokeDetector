@@ -248,7 +248,7 @@ class FindSpam:
                             "nemopdf\\.com", "downloaddailymotion\\.com", "bharatplaza\\.com",
                             "free-download-youtube\\.com", "free-music-downloader\\.com",
                             "video-download-capture\\.com", "videograbber\\.net",
-                            "globalvision\\.com\\.vn", "csoftglobal\\.com",
+                            "globalvision\\.com\\.vn", "csoftglobal\\.com", "bsscommerce\\.com",
                             "remorecover\\.com", "remosoftware\\.com", "freethemes\\.co",
                             "\\bpatch\\.com\\b", "ajgilworld\\.com", "santomais", "viilms",
                             "clashofclansastucegemmes\\.com", "mothersday-2014\\.org",
