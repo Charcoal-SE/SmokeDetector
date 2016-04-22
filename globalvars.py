@@ -83,7 +83,8 @@ class GlobalVars:
                                            "190011",  # Petter Friberg
                                            "165661",  # Tunaki
                                            "145086",  # Wai Ha Lee
-                                           "137665"],  # ByteCommander
+                                           "137665",  # ByteCommander
+                                           "186395"],  # Åna
                         meta_tavern_room_id: ["315433",  # Normal Human
                                               "244519",  # CRABOLO
                                               "244382",  # TGMCians
