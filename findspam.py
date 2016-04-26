@@ -267,7 +267,7 @@ class FindSpam:
                             "gta5codes\\.fr", "pcsoftpro\\.com", "addium\\.info",
                             "fallclassicrun\\.com", "forgrams\\.com", "windowiso\\.com",
                             "cloudinsights\\.net", "xtremenitro", "surfmegeek",
-                            "(premium|priceless)-inkjet\\.com",
+                            "(premium|priceless)-inkjet\\.com", "meatspin\\.com"
                             "clusterlinks\\.com", "kizi1000\\.in", "weightruinations\\.com",
                             "products\\.odosta\\.com", "naturacelhelp", "guidemesupss\\.com",
                             "rackons\\.com", "imonitorsoft\\.com", "biginfosys\\.com",
