@@ -107,7 +107,7 @@ def has_customer_service(s, site):  # flexible detection of customer service in 
     phrase = regex.compile(r"(tech(nical)? support)|((support|service|contact|help(line)?) (telephone|phone|number))").search(s)
     if phrase and site in ["askubuntu.com", "webapps.stackexchange.com", "webmasters.stackexchange.com"]:
         return True, u"Key phrase: {}".format(phrase.group(0))
-    business = regex.compile(r"(?i)\b(airlines?|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|windows?|yahoo)\b").search(s)
+    business = regex.compile(r"(?i)\b(airlines?|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|sage|windows?|yahoo)\b").search(s)
     digits = len(regex.compile(r"\d").findall(s))
     if (business and digits >= 5):
         keywords = regex.compile(r"(?i)\b(customer|help|care|helpline|reservation|phone|recovery|service|support|contact|tech|technical|telephone|number)\b").findall(s)
@@ -141,7 +141,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
 def keyword_email(s, site):   # a keyword and an email in the same post
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
-    keyword = regex.compile(ur"(?i)\b(training|we (will )?(offer|develop|provide)|buy|sell|money|payment|guarantee|catalog|rent|crack|opportunity|candidate|loan|lover|illuminati|brotherhood|(join|reach) us|spell(caster)?|doctor|hack(er|ing)?|spying|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? ").search(s)
+    keyword = regex.compile(ur"(?i)\b(training|we (will )?(offer|develop|provide)|buy|sell|money|payment|guarantee|catalog|rent|crack|opportunity|candidate|loan|lover|husband|illuminati|brotherhood|(join|reach) us|spell(caster)?|doctor|hack(er|ing)?|spying|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? ").search(s)
     if keyword:
         email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
         if email:
@@ -180,7 +180,7 @@ class FindSpam:
                     "uggs ?on ?sale", "PhenQ", "Hack ?Tool ?2015", "ATM hackers?",
                     "Vigoraflo", "Fonepaw", "Provasil", "Slimera", "Cerebria", "Xanogen",
                     "(?:networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing|salesforce|joomla)( certification)? (courses?|training).{0,25}</a>",
-                    "in (?:bangalore|chennai|delhi|hyderabad|kolkata|mumbai|madurai|coimbatore|rajkot)</a>",
+                    "in (?:bangalore|chennai|delhi|hyderabad|kolkata|mumbai|madurai|coimbatore|rajkot|durgapur)</a>",
                     "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity",
                     "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?", "intellux", "viooz",
                     "smartican", "essay writing service", "T-complex", "retrodynamic formula",
@@ -202,7 +202,7 @@ class FindSpam:
                         "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)",
                         "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning",
                         "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn", "revolyn",
-                        "(compan(y|ies)|training|courses?).{0,4}(bangalore|chennai|delhi|hyderabad|kolkata|mumbai|madurai|coimbatore|rajkot)",
+                        "(compan(y|ies)|training|courses?).{0,4}(bangalore|chennai|delhi|hyderabad|kolkata|mumbai|madurai|coimbatore|rajkot|durgapur)",
                         u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "sunergetic", "capilux", "sante ?avis",
                         "enduros", "dianabol", "ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes", "(naga|dewa)poker",
@@ -507,7 +507,7 @@ class FindSpam:
          'sites': ["stackoverflow.com", "ja.stackoverflow.com", "es.stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com", "webmasters.stackexchange.com", "wordpress.stackexchange.com", "magento.stackexchange.com", "elementaryos.stackexchange.com", "tex.stackexchange.com", "civicrm.stackexchange.com", "apple.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Email check for questions: check only at the end, some sites exempt
         {'regex': ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s).{0,300}$", 'all': True,
-         'sites': ["stackoverflow.com", "ja.stackoverflow.com", "es.stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com", "webmasters.stackexchange.com", "wordpress.stackexchange.com", "magento.stackexchange.com", "elementaryos.stackexchange.com", "tex.stackexchange.com", "civicrm.stackexchange.com", "apple.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
+         'sites': ["stackoverflow.com", "ja.stackoverflow.com", "es.stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com", "webmasters.stackexchange.com", "wordpress.stackexchange.com", "magento.stackexchange.com", "elementaryos.stackexchange.com", "tex.stackexchange.com", "civicrm.stackexchange.com", "apple.stackexchange.com", "android.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
         # Combination of keyword and email in questions and answers, for all sites
         {'method': keyword_email, 'all': True, 'sites': [], 'reason': "bad keyword with email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # QQ number, for all sites
