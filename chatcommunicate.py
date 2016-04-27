@@ -57,8 +57,9 @@ def special_room_watcher(ev, wrap2):
     content_source = ev.message.content_source
     if is_smokedetector_message(ev_user_id, GlobalVars.charcoal_room_id):
         post_site_id = fetch_post_id_and_site_from_msg_content(content_source)
-        if post_site_id is not None:
-            t_check_websocket = Thread(target=DeletionWatcher.check_if_report_was_deleted, args=(post_site_id, ev.message))
+        post_url = fetch_post_url_from_msg_content(content_source)
+        if post_site_id is not None and post_url is not None:
+            t_check_websocket = Thread(target=DeletionWatcher.check_if_report_was_deleted, args=(post_site_id, post_url, ev.message))
             t_check_websocket.daemon = True
             t_check_websocket.start()
 
@@ -84,8 +85,9 @@ def watcher(ev, wrap2):
         add_latest_message_lock.release()
 
         post_site_id = fetch_post_id_and_site_from_msg_content(content_source)
+        post_url = fetch_post_url_from_msg_content(content_source)
         if post_site_id is not None and (ev_room == GlobalVars.meta_tavern_room_id or ev_room == GlobalVars.socvr_room_id):
-            t_check_websocket = Thread(target=DeletionWatcher.check_if_report_was_deleted, args=(post_site_id, ev.message))
+            t_check_websocket = Thread(target=DeletionWatcher.check_if_report_was_deleted, args=(post_site_id, post_url, ev.message))
             t_check_websocket.daemon = True
             t_check_websocket.start()
     message_parts = content_source.split(" ")
