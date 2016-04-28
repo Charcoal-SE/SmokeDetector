@@ -412,7 +412,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             return os.linesep.join(output)
         else:
             return None
-    if content_lower.startswith("!!/allspam") and is_privileged(ev_room, ev_user_id, wrap2):
+    if (content_lower.startswith("!!/allspam") or content_lower.startswith("!!/reportuser")) and is_privileged(ev_room, ev_user_id, wrap2):
         if len(message_parts) != 2:
             return False, "1 argument expected"
         url = message_parts[1]
