@@ -368,6 +368,16 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             return "Error: {}".format(val)
         else:
             return False, "Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`."
+    if (content_lower.startswith("!!/allspam") or content_lower.startswith("!!/reportuser")) and is_privileged(ev_room, ev_user_id, wrap2):
+        if len(message_parts) != 2:
+            return False, "1 argument expected"
+        url = message_parts[1]
+        user = get_user_from_url(url)
+        if user is None:
+            return "That doesn't look like a valid user URL."
+        why = u"User manually reported by *{}* in room *{}*.\n".format(ev_user_name, ev_room_name.decode('utf-8'))
+        handle_user_with_all_spam(user, why)
+        return None
     if content_lower.startswith("!!/report") \
             and is_privileged(ev_room, ev_user_id, wrap2):
         crn, wait = can_report_now(ev_user_id, wrap2.host)
@@ -412,15 +422,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             return os.linesep.join(output)
         else:
             return None
-    if (content_lower.startswith("!!/allspam") or content_lower.startswith("!!/reportuser")) and is_privileged(ev_room, ev_user_id, wrap2):
-        if len(message_parts) != 2:
-            return False, "1 argument expected"
-        url = message_parts[1]
-        user = get_user_from_url(url)
-        if user is None:
-            return "That doesn't look like a valid user URL."
-        why = u"User manually reported by *{}* in room *{}*.\n".format(ev_user_name, ev_room_name.decode('utf-8'))
-        handle_user_with_all_spam(user, why)
     if content_lower.startswith("!!/wut"):
         return "Whaddya mean, 'wut'? Humans..."
     if content_lower.startswith("!!/lick"):
