@@ -136,7 +136,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                 sites = specialroom["sites"]
                 if site in sites and reason not in specialroom["unwantedReasons"]:
                     room = specialroom["room"]
-                    if time.time() >= GlobalVars.blockedTime[room.id]:
+                    if room.id not in GlobalVars.blockedTime or time.time() >= GlobalVars.blockedTime[room.id]:
                         room_site = room._client.host
                         room_id = int(room.id)
                         room_pings = get_user_names_on_notification_list(room_site, room_id, site, room._client)
