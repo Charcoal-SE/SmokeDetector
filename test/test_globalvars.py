@@ -14,13 +14,12 @@ def test_globalvars():
     assert len(GlobalVars.privileged_users["89"]) > 0
     assert len(GlobalVars.privileged_users["41570"]) > 0
     assert GlobalVars.blockedTime["all"] == 0
-    assert GlobalVars.blockedTime[charcoal_room_id] == 0
-    assert GlobalVars.blockedTime[meta_tavern_room_id] == 0
-    assert GlobalVars.blockedTime[socvr_room_id] == 0
+    assert GlobalVars.blockedTime[GlobalVars.charcoal_room_id] == 0
+    assert GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id] == 0
+    assert GlobalVars.blockedTime[GlobalVars.socvr_room_id] == 0
     # The following lists must be empty in globalvars.py, because
     # they will be filled later.
     assert len(GlobalVars.auto_ignored_posts) == 0
     assert len(GlobalVars.ignored_posts) == 0
     assert len(GlobalVars.blacklisted_users) == 0
     assert len(GlobalVars.whitelisted_users) == 0
-
