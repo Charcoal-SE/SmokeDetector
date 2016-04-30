@@ -113,10 +113,10 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
 
             if reason not in GlobalVars.experimental_reasons:
                 metasmoke_link = u" [\u2026](//metasmoke.erwaysoftware.com/posts/by-url?url=" + post_url + ")"
-		if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
+                if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
                     chq_pings = get_user_names_on_notification_list("stackexchange.com", GlobalVars.charcoal_room_id, site, GlobalVars.wrap)
                     chq_msg = append_pings(s, chq_pings)
-               	    chq_msg_ms = chq_msg + metasmoke_link
+                    chq_msg_ms = chq_msg + metasmoke_link
                     GlobalVars.charcoal_hq.send_message(chq_msg_ms if len(chq_msg_ms) <= 500 else chq_msg if len(chq_msg) <= 500 else s[0:500])
                 if reason not in GlobalVars.non_tavern_reasons and site not in GlobalVars.non_tavern_sites and time.time() >= GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id]:
                     tavern_pings = get_user_names_on_notification_list("meta.stackexchange.com", GlobalVars.meta_tavern_room_id, site, GlobalVars.wrapm)
