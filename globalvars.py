@@ -85,7 +85,8 @@ class GlobalVars:
                                            "145086",  # Wai Ha Lee
                                            "137665",  # ByteCommander
                                            "147884",  # wythagoras
-                                           "186395"],  # Åna
+                                           "186395",  # Åna
+                                           "121520"],  # ArtOfCode
                         meta_tavern_room_id: ["315433",  # Normal Human
                                               "244519",  # CRABOLO
                                               "244382",  # TGMCians
@@ -150,7 +151,8 @@ class GlobalVars:
                                               "262399",  # Jeffrey Bosboom
                                               "242209",  # JAL
                                               "280883",  # ByteCommander
-                                              "302251"],  # kos
+                                              "302251",  # kos
+                                              "262823"],  # ArtOfCode
                         socvr_room_id: [
                             "1849664",  # Undo
                             "2581872",  # hichris123
@@ -202,7 +204,8 @@ class GlobalVars:
                             "2025923",  # Tushar
                             "5292302",  # Petter Friberg
                             "792066",  # Braiam
-                            "5666987"]  # Ian
+                            "5666987",  # Ian
+                            "3160466"]  # ArtOfCode
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
