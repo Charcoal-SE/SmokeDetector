@@ -465,21 +465,28 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 return "Kaboom, blacklisted users cleared."
             else:
                 return "There are no blacklisted users at the moment."
-    if content_lower.startswith("!!/block"):
-        if is_privileged(ev_room, ev_user_id, wrap2):
-            timeToBlock = content_lower[9:].strip()
-            timeToBlock = int(timeToBlock) if timeToBlock else 0
-            if 0 < timeToBlock < 14400:
-                GlobalVars.blockedTime = time.time() + timeToBlock
-            else:
-                GlobalVars.blockedTime = time.time() + 900
-            GlobalVars.charcoal_hq.send_message("Reports blocked for {} seconds.".format(GlobalVars.blockedTime - time.time()))
-            return "blocked"
-    if content_lower.startswith("!!/unblock"):
-        if is_privileged(ev_room, ev_user_id, wrap2):
-            GlobalVars.blockedTime = time.time()
-            GlobalVars.charcoal_hq.send_message("Reports unblocked.")
-            return "unblocked"
+    if content_lower.startswith("!!/block") and is_privileged(ev_room, ev_user_id, wrap2):
+        room_id = message_parts[2] if len(message_parts) > 2 else "all"
+        timeToBlock = message_parts[1] if len(message_parts) > 1 else "0"
+        if not timeToBlock.isdigit():
+            return False, "Invalid duration."
+        else:
+            timeToBlock = int(timeToBlock)
+        timeToBlock = timeToBlock if 0 < timeToBlock < 14400 else 900
+        GlobalVars.blockedTime[room_id] = time.time() + timeToBlock
+        which_room = "globally" if room_id == "all" else "in room " + room_id
+        report = "Reports blocked for {} seconds {}.".format(timeToBlock, which_room)
+        if room_id != GlobalVars.charcoal_room_id:
+            GlobalVars.charcoal_hq.send_message(report)
+        return report
+    if content_lower.startswith("!!/unblock") and is_privileged(ev_room, ev_user_id, wrap2):
+        room_id = message_parts[2] if len(message_parts) > 2 else "all"
+        GlobalVars.blockedTime[room_id] = time.time()
+        which_room = "globally" if room_id == "all" else "in room " + room_id
+        report = "Reports unblocked {}.".format(GlobalVars.blockedTime - time.time(), which_room)
+        if room_id != GlobalVars.charcoal_room_id:
+            GlobalVars.charcoal_hq.send_message(report)
+        return report
     if content_lower.startswith("!!/errorlogs"):
         if is_privileged(ev_room, ev_user_id, wrap2):
             count = -1

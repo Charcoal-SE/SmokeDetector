@@ -16,11 +16,11 @@ class GlobalVars:
     auto_ignored_posts = []
     startup_utc = datetime.utcnow().strftime("%H:%M:%S")
     latest_questions = []
-    blockedTime = 0
     api_backoff_time = 0
     charcoal_room_id = "11540"
     meta_tavern_room_id = "89"
     socvr_room_id = "41570"
+    blockedTime = {"all": 0, charcoal_room_id: 0, meta_tavern_room_id: 0, socvr_room_id: 0}
     site_filename = {"electronics.stackexchange.com": "ElectronicsGood.txt",
                      "gaming.stackexchange.com": "GamingGood.txt", "german.stackexchange.com": "GermanGood.txt",
                      "italian.stackexchange.com": "ItalianGood.txt", "math.stackexchange.com": "MathematicsGood.txt",
