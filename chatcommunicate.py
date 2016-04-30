@@ -502,6 +502,9 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             post_message_in_room(ev_room, logs_part, False)
     if content_lower.startswith("!!/pull"):
         if is_privileged(ev_room, ev_user_id, wrap2):
+            if content_lower.startswith("!!/pull-noseriouslyidontcareaboutci-heresabullet-lemmeshootmyselfinthefoot"):
+                os._exit(3)
+                return
             r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
             latest_sha = r.json()["object"]["sha"]
             r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/' + latest_sha + '/statuses')
