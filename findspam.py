@@ -296,7 +296,7 @@ class FindSpam:
                             "replacementlaptopkeys\\.com", "safewiper\\.com", "ostoto\\.com",
                             "appsforpcdownloads", "academicservices\\.us", "writerspk\\.com",
                             "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
-                            "megatachoco", "shtylm\\.com", "drilluobetemple\\.webs",
+                            "megatachoco", "shtylm\\.com", "drilluobetemple\\.webs", "SelfMax30\\.com",
                             "creative-proteomics", "revommerce.com", "opendatascience\\.com",
                             "123trainings", "(bestof|beta)cheat\\.com", "surejob\\.in",
                             "israelbigmarket", "chinatour\\.com", "celebsclothing\\.com",
