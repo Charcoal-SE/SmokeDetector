@@ -360,7 +360,7 @@ class FindSpam:
                             "dcweddingandevents\\.com", "slimdreneavis", "wefix365\\.us", "udemy\\.com", "esofttools\\.com",
                             "wondershare\\.com", "pulsionerotica\\.com", "worldtraveltime\\.net", "antivirus\\.comodo\\.com",
                             "cardvdonline\\.com", "icasnetwork\\.org", "epicresearch\\.co", "\\.soup\\.io", "pccdkeys\\.com",
-                            "hotxt\\.co\\.uk", "rcframecontractors"]
+                            "hotxt\\.co\\.uk", "rcframecontractors", "bsgolds\\.com", "okaygoods\\.com"]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(supportnumber|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|cracksoftware|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
