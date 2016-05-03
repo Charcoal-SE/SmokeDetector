@@ -164,7 +164,7 @@ class FindSpam:
                     "aging skin", "acne( prone)? skin", "black[ -]label[ -]no",
                     "bagprada", "6611165613", "Apowersoft", "ChatSim",
                     "Service Solahart", "junisse", "Profactor[ -]?T",
-                    "(fake|original|novelty|quality).{0,5}(passports?|driver'?s? licen[cs]e|ID cards?)",
+                    "(fake|original|novelty|quality|buy(ing)?|sell(ing)?|offer).{0,5}(passport|driver'?s? licen[cs]e|ID card|green card|residence permit)s?",
                     "^.{0,200}(support|service|helpline)( phone)? number|1[ -]?[ -]?[ -]?866[ -]?978[ -]?(6819|6762)",
                     "(mcafee|hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number",
                     "kitchen for sale", "pdftoexcelconverter", "keepbrowsersafe", "SpyHunter",
