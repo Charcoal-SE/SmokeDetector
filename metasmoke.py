@@ -34,7 +34,7 @@ class Metasmoke:
         metasmoke_key = GlobalVars.metasmoke_key
 
         try:
-            payload = {'feedback': {'user_name': user_name, 'feedback_type': feedback_type, 'post_link': post_link}, 'key': metasmoke_key}
+            payload = {'feedback': {'user_name': user_name, 'chat_user_id': user_id, 'feedback_type': feedback_type, 'post_link': post_link}, 'key': metasmoke_key}
 
             headers = {'Content-type': 'application/json'}
             requests.post(GlobalVars.metasmoke_host + "/feedbacks.json", data=json.dumps(payload), headers=headers)
