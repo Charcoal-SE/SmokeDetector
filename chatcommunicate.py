@@ -188,7 +188,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 return "That message is not a report."
 
             t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
-                                 args=(post_url, second_part_lower, ev_user_name, ))
+                                 args=(post_url, second_part_lower, ev_user_name, ev_user_id, ))
             t_metasmoke.start()
 
             add_false_positive((post_site_id[0], post_site_id[1]))
@@ -220,7 +220,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 return "That message is not a report."
 
             t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
-                                 args=(post_url, second_part_lower, ev_user_name, ))
+                                 args=(post_url, second_part_lower, ev_user_name, ev_user_id, ))
             t_metasmoke.start()
 
             user_added = False
@@ -250,7 +250,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 return "That message is not a report."
 
             t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
-                                 args=(post_url, second_part_lower, ev_user_name, ))
+                                 args=(post_url, second_part_lower, ev_user_name, ev_user_id, ))
             t_metasmoke.start()
 
             add_ignored_post(post_site_id[0:2])
@@ -265,7 +265,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 return "That report was a question; questions cannot be marked as NAAs."
 
             t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
-                                 args=(post_url, second_part_lower, ev_user_name, ))
+                                 args=(post_url, second_part_lower, ev_user_name, ev_user_id, ))
             t_metasmoke.start()
 
             add_ignored_post(post_site_id[0:2])
