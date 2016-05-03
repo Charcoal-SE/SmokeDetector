@@ -253,8 +253,8 @@ class FindSpam:
                             "globalvision\\.com\\.vn", "csoftglobal\\.com", "bsscommerce\\.com",
                             "remorecover\\.com", "remosoftware\\.com", "freethemes\\.co",
                             "\\bpatch\\.com\\b", "ajgilworld\\.com", "santomais", "viilms",
-                            "clashofclansastucegemmes\\.com", "mothersday-2014\\.org",
-                            "bestcelebritiesvideo\\.com", "shopnhlbruins\\.com",
+                            "clashofclansastucegemmes\\.com", "american-writers\\.org", "comaarp.org",
+                            "bestcelebritiesvideo\\.com", "shopnhlbruins\\.com", "mon-rasage.fr",
                             "downloadscanpst\\.com", "downloadgames", "gameshop4u\\.com",
                             "listoffreeware\\.com", "bigasoft\\.com", "opclub07\\.com",
                             "allavsoft", "tryapext\\.com", "essays(origin|council)\\.com", "caseism\\.com",
@@ -363,7 +363,7 @@ class FindSpam:
                             "hotxt\\.co\\.uk", "rcframecontractors", "bsgolds\\.com", "okaygoods\\.com"]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(supportnumber|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
-                        r"(truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|cracksoftware|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
+                        r"(mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|cracksoftware|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(gronkaffe|muskel|nitricoxide|masculin|menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"([\w-]password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits)\.(co|net|org|in\W|info)",
                         r"health\d{3,}\.(com|net)", r"https?://[\w-.]*?\.repair\W", r"https?://[\w-.]{10,}\.help\W",
