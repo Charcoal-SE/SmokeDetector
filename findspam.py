@@ -206,7 +206,7 @@ class FindSpam:
                         "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn", "revolyn",
                         "(compan(y|ies)|training|courses?).{0,4}(bangalore|chennai|delhi|hyderabad|kolkata|mumbai|madurai|coimbatore|rajkot|durgapur|surat|agra)",
                         u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "no2blast", "sunergetic", "capilux", "sante ?avis",
-                        "enduros", "dianabol", "ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres"]
+                        "enduros", "dianabol", "ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes", "(naga|dewa)poker",
                             "ipubsoft", "orabank", "powerigfaustralia", "rankassured\\.com",
                             "maletestosteronebooster", "menintalk", "king-steroid",
@@ -244,7 +244,7 @@ class FindSpam:
                             "faq800\\.com", "fix1\\.org", "guru4pc\\.net", "howto4pc\\.org",
                             "pceasynow\\.com", "qobul\\.com", "onlinegiftdeal\\.com",
                             "regeasypro\\.com", "registryware\\.org", "smartfixer\\.(net|org)",
-                            "dlllibrary\\.net", "wisefixer\\.(com|net|org)",
+                            "dlllibrary\\.net", "wisefixer\\.(com|net|org)", "dojobsonline\\.com",
                             "password-?unlocker\\.com", "dropbox18gb\\.com",
                             "passwordtech\\.com", "goshareware\\.com", "digitalacads\\.in",
                             "nemopdf\\.com", "downloaddailymotion\\.com", "bharatplaza\\.com",
@@ -360,10 +360,10 @@ class FindSpam:
                             "dcweddingandevents\\.com", "slimdreneavis", "wefix365\\.us", "udemy\\.com", "esofttools\\.com",
                             "wondershare\\.com", "pulsionerotica\\.com", "worldtraveltime\\.net", "antivirus\\.comodo\\.com",
                             "cardvdonline\\.com", "icasnetwork\\.org", "epicresearch\\.co", "\\.soup\\.io", "pccdkeys\\.com",
-                            "hotxt\\.co\\.uk", "rcframecontractors", "bsgolds\\.com", "okaygoods\\.com"]
+                            "hotxt\\.co\\.uk", "rcframecontractors", "bsgolds\\.com", "okaygoods\\.com", "thedropnet\\.com"]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
-    pattern_websites = [r"(supportnumber|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo(tool|service|trick)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
-                        r"(mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|cracksoftware|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
+    pattern_websites = [r"(supportnumber|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot)",
+                        r"(e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|cracksoftware|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(gronkaffe|muskel|nitricoxide|masculin|menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"([\w-]password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits)\.(co|net|org|in\W|info)",
                         r"health\d{3,}\.(com|net)", r"https?://[\w-.]*?\.repair\W", r"https?://[\w-.]{10,}\.help\W",
