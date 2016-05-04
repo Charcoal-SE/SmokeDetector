@@ -189,7 +189,7 @@ class FindSpam:
                     "teksonit", "Re@d More", "Live Streaming</a", "Blackcore ?Edge", "Copy Buffett", "Push Money App",
                     "Volive( Solutions)?", "(meg|test)adrox", "Herbalife", "Accumass", "purple rhino male enhancement",
                     "male enhancement supplements", "alpha levo", "digital marketing course", "stark trading system",
-                    "bring back lost lover", "service proposal essay"]
+                    "bring back lost lover", "service proposal essay", "enetdocumentation"]
     bad_keywords_nwb = [u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "(serum|lift) ?eye", "tophealth", "poker[ -]?online",
@@ -207,7 +207,7 @@ class FindSpam:
                         "(compan(y|ies)|training|courses?).{0,4}(bangalore|chennai|delhi|hyderabad|kolkata|mumbai|madurai|coimbatore|rajkot|durgapur|surat|agra)",
                         u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "no2blast", "sunergetic", "capilux", "sante ?avis",
                         "enduros", "dianabol", "ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex"]
-    blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes", "(naga|dewa)poker",
+    blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes", "(naga|dewa)poker", "reshapeready\\.com",
                             "ipubsoft", "orabank", "powerigfaustralia", "rankassured\\.com",
                             "maletestosteronebooster", "menintalk", "king-steroid",
                             "healthcaresup", "filerepairforum", "beautyskin",
