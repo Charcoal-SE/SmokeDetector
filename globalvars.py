@@ -86,6 +86,7 @@ class GlobalVars:
                                            "137665",  # ByteCommander
                                            "147884",  # wythagoras
                                            "186395",  # Åna
+                                           "193364",  # Ashish Ahuja
                                            "121520"],  # ArtOfCode
                         meta_tavern_room_id: ["315433",  # Normal Human
                                               "244519",  # CRABOLO
