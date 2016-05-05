@@ -150,7 +150,7 @@ def keyword_email(s, site):   # a keyword and an email in the same post
 
 
 class FindSpam:
-    bad_keywords = ["baba ?ji", "fifa.{0,20}coins?", "fifabay", "Long Path Tool",
+    bad_keywords = ["baba ji", "fifa.{0,20}coins?", "fifabay", "Long Path Tool",
                     "fifaodell", "brianfo", "tosterone", "bajotz",
                     "kolcak", "Zapyo", "we (offer|give out) (loans|funds|funding)",
                     "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
