@@ -209,7 +209,7 @@ class FindSpam:
                         "enduros", "dianabol", "ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex"]
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes", "(naga|dewa)poker", "reshapeready\\.com",
                             "ipubsoft", "orabank", "powerigfaustralia", "rankassured\\.com", "ewebtonic\\.in",
-                            "maletestosteronebooster", "menintalk", "king-steroid",
+                            "maletestosteronebooster", "menintalk", "king-steroid", "dragonblazewiki\\.com",
                             "healthcaresup", "filerepairforum", "beautyskin",
                             "lxwpro-t", "casque-beatsbydre", "tenderpublish",
                             "funmac", "lovebiscuits", "z-data.blogspot.com",
