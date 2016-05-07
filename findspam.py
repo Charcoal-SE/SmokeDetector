@@ -400,7 +400,7 @@ class FindSpam:
                         r"(replica[^nt]\w{5,}|\wrolex)\.(co|net|org|in\W|info)",
                         r"customer(service|support)[\w-]*?\.(co|net|org|in\W|info)",
                         r"conferences?alert[\w-]*?\.(co|net|org|in\W|info)",
-                        r"seo\.com(?!/\w)", r"seo[\w-]{12,}\.(com|net|in\W)",
+                        r"seo\.com(?!/\w)", r"\Wseo[\w-]{10,}\.(com|net|in\W)",
                         r"backlink[\w-]*?\.(com|net|de|blogspot)",
                         r"(software|developers|packers|movers|logistic|service)[\w-]*?india\.(com|in\W)",
                         r"scam[\w-]*?(book|alert|register|punch)[\w-]*?\.(co|net|org|in\W|info)",
