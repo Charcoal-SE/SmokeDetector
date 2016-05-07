@@ -210,7 +210,7 @@ class FindSpam:
     blacklisted_websites = ["online ?kelas", "careyourhealths", "wowtoes", "(naga|dewa)poker", "reshapeready\\.com",
                             "ipubsoft", "orabank", "powerigfaustralia", "rankassured\\.com", "ewebtonic\\.in",
                             "maletestosteronebooster", "menintalk", "king-steroid", "dragonblazewiki\\.com",
-                            "healthcaresup", "filerepairforum", "beautyskin",
+                            "healthcaresup", "filerepairforum", "beautyskin", "innovativehostingcorp",
                             "lxwpro-t", "casque-beatsbydre", "tenderpublish",
                             "funmac", "lovebiscuits", "z-data.blogspot.com",
                             "Eglobalfitness", "musclezx90site", "fifapal",
