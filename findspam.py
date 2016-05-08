@@ -211,7 +211,7 @@ class FindSpam:
                             "ipubsoft", "orabank", "powerigfaustralia", "rankassured\\.com", "ewebtonic\\.in",
                             "maletestosteronebooster", "menintalk", "king-steroid", "dragonblazewiki\\.com",
                             "healthcaresup", "filerepairforum", "beautyskin", "innovativehostingcorp",
-                            "lxwpro-t", "casque-beatsbydre", "tenderpublish",
+                            "lxwpro-t", "casque-beatsbydre", "tenderpublish", "predictway\\.com",
                             "funmac", "lovebiscuits", "z-data.blogspot.com",
                             "Eglobalfitness", "musclezx90site", "fifapal",
                             "hits4slim", "screenshot\\.net", "downloadavideo\\.net",
@@ -406,7 +406,7 @@ class FindSpam:
                         r"scam[\w-]*?(book|alert|register|punch)[\w-]*?\.(co|net|org|in\W|info)",
                         r"http\S*?crazy(mass|bulk)",
                         r"https?://[^/\s]{8,}healer",
-                        r"\w{9}rev\.com",
+                        r"\w{9}rev\.com", r'reddit\.com/\w{6}/"',
                         r"world[\w-]*?cricket[\w-]*?\.(co|net|org|in\W|info)",
                         r"(credit|online)[\w-]*?loan[\w-]*?\.(co|net|org|in\W|info)",
                         r"worldcup\d+live\.(com?|net|org|in\W|info)"]
