@@ -211,7 +211,7 @@ class FindSpam:
                             "ipubsoft", "orabank", "powerigfaustralia", "rankassured\\.com", "ewebtonic\\.in",
                             "maletestosteronebooster", "menintalk", "king-steroid", "dragonblazewiki\\.com",
                             "healthcaresup", "filerepairforum", "beautyskin", "innovativehostingcorp",
-                            "lxwpro-t", "casque-beatsbydre", "tenderpublish", "predictway\\.com",
+                            "lxwpro-t", "casque-beatsbydre", "tenderpublish", "predictway\\.com", "up24\\.pro",
                             "funmac", "lovebiscuits", "z-data.blogspot.com",
                             "Eglobalfitness", "musclezx90site", "fifapal",
                             "hits4slim", "screenshot\\.net", "downloadavideo\\.net",
