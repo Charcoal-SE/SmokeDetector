@@ -366,7 +366,7 @@ class FindSpam:
                         r"(e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|cracksoftware|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(goatse|gronkaffe|muskel|nitricoxide|masculin|menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"([\w-]password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits)\.(co|net|org|in\W|info)",
-                        r"(health\d{3,}|cashpay\d{2,})\.(com|net)", r"https?://[\w-.]*?\.repair\W", r"https?://[\w-.]{10,}\.help\W",
+                        r"(health|cashpay|today)\d{2,}\.(com|net)", r"https?://[\w-.]*?\.repair\W", r"https?://[\w-.]{10,}\.help\W",
                         r"filefix(er)?\.com", r"\.page\.tl\W", r"infotech\.(com|net|in)",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
                         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
