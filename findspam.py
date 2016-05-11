@@ -410,7 +410,8 @@ class FindSpam:
                         r"\w{9}rev\.com", r'reddit\.com/\w{6}/"',
                         r"world[\w-]*?cricket[\w-]*?\.(co|net|org|in\W|info)",
                         r"(credit|online)[\w-]*?loan[\w-]*?\.(co|net|org|in\W|info)",
-                        r"worldcup\d+live\.(com?|net|org|in\W|info)"]
+                        r"worldcup\d+live\.(com?|net|org|in\W|info)",
+                        r"((concrete|beton)-?mixer|crusher)[\w-]*?\.(co|net)"]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
         #
