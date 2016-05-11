@@ -163,9 +163,9 @@ def watcher(ev, wrap2):
 def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content, message_id):
     message_url = "//chat." + wrap2.host + "/transcript/message/" + str(message_id)
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
-    if second_part_lower == "f":
+    if second_part_lower in ["f", "notspam"]:
         second_part_lower = "fp-"
-    if second_part_lower == "k":
+    if second_part_lower in ["k", "spam", "rude", "abuse", "abusive", "offensive"]:
         second_part_lower = "tpu-"
     if second_part_lower == "n":
         second_part_lower = "naa-"
