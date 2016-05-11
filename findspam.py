@@ -141,7 +141,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
 def keyword_email(s, site):   # a keyword and an email in the same post
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
-    keyword = regex.compile(ur"(?i)\b(training|we (will )?(offer|develop|provide)|sell|money|payment|guarantee|catalog|rent|crack|opportunity|candidate|loan|lover|husband|illuminati|brotherhood|(join|reach) us|spell(caster)?|doctor|hack(er|ing)?|spying|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? ").search(s)
+    keyword = regex.compile(ur"(?i)\b(training|we (will )?(offer|develop|provide)|sell|money|payment|guarantee|catalog|rent|crack|opportunity|candidate|loan|lover|husband|illuminati|brotherhood|(join|reach|contact) (me|us)|spell(caster)?|doctor|hack(er|ing)?|spying|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? ").search(s)
     if keyword:
         email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
         if email:
@@ -212,7 +212,7 @@ class FindSpam:
                             "maletestosteronebooster", "menintalk", "king-steroid", "dragonblazewiki\\.com",
                             "healthcaresup", "filerepairforum", "beautyskin", "innovativehostingcorp",
                             "lxwpro-t", "casque-beatsbydre", "tenderpublish", "predictway\\.com", "up24\\.pro",
-                            "funmac", "lovebiscuits", "z-data.blogspot.com", "pub4sure\\.com",
+                            "funmac", "lovebiscuits", "z-data.blogspot.com", "pub4sure\\.com", "freeprnow\\.com",
                             "Eglobalfitness", "musclezx90site", "fifapal",
                             "hits4slim", "screenshot\\.net", "downloadavideo\\.net",
                             "sh\\.st/", "//adf\\.ly/", "//j\\.gs/",
