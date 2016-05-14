@@ -214,8 +214,8 @@ class FindSpam:
                             "healthcaresup", "filerepairforum", "beautyskin", "innovativehostingcorp",
                             "lxwpro-t", "casque-beatsbydre", "tenderpublish", "predictway\\.com", "up24\\.pro",
                             "funmac", "lovebiscuits", "z-data.blogspot.com", "pub4sure\\.com", "freeprnow\\.com",
-                            "Eglobalfitness", "musclezx90site", "fifapal", "mentorshouse\\.com",
-                            "hits4slim", "screenshot\\.net", "downloadavideo\\.net",
+                            "Eglobalfitness", "musclezx90site", "fifapal", "mentorshouse\\.com", "jobshelp\\.in",
+                            "hits4slim", "screenshot\\.net", "downloadavideo\\.net", "nutirions\\.com",
                             "sh\\.st/", "//adf\\.ly/", "//j\\.gs/",
                             "preply\\.com", "hellofifa", "chinadivision",
                             "fifa\\d*online", "wearepropeople.com", "tagwitty",
@@ -365,7 +365,7 @@ class FindSpam:
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(supportnumber|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot)",
                         r"(e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
-                        r"(goatse|gronkaffe|muskel|nitricoxide|masculin|menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
+                        r"(packers\S{0,3}movers|goatse|gronkaffe|muskel|nitricoxide|masculin|menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"([\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits)\.(co|net|org|in\W|info)",
                         r"(health|cashpay|today|cents)\d{2,}\.(com|net)",
                         r"https?://[\w-.]*?\.repair\W", r"https?://[\w-.]{10,}\.help\W",
@@ -480,6 +480,9 @@ class FindSpam:
         # Country-name domains, travel and expats sites are exempt
         {'regex': ur"(?i)[\w-]{6}(australia|brazil|canada|denmark|france|india|mexico|norway|spain|sweden)\.(com|net)", 'all': True,
          'sites': ["travel.stackexchange.com", "expatriates.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
+        # Iran's TLD in answers
+        {'regex': ur"(?i)http\S*\.ir/", 'all': True,
+         'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0, 'questions': False},
         # Suspicious health-related websites, health sites are exempt
         {'regex': ur"(?i)(bodybuilding|workout|fitness\w{2,}|diet|perfecthealth|muscle|\w{2,}nutrition|prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11, 'max_score': 2},
