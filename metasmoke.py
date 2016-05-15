@@ -73,7 +73,10 @@ class Metasmoke:
             payload = {'location': GlobalVars.location, 'key': metasmoke_key}
 
             headers = {'Content-type': 'application/json'}
-            requests.post(GlobalVars.metasmoke_host + "/status-update.json", data=json.dumps(payload), headers=headers)
+            response = requests.post(GlobalVars.metasmoke_host + "/status-update.json", data=json.dumps(payload), headers=headers)
+
+            if response.status_code == 201:  # 200 = successful status creation; 201 = new commit status
+                print response.json()
 
         except Exception as e:
             print e
