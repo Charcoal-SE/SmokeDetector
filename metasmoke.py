@@ -76,7 +76,9 @@ class Metasmoke:
             response = requests.post(GlobalVars.metasmoke_host + "/status-update.json", data=json.dumps(payload), headers=headers)
 
             if response.status_code == 201:  # 200 = successful status creation; 201 = new commit status
-                print response.json()
+                json = response.json()
+                if json["status"] == "success":
+                    GlobalVars.charcoal_hq.send_message("CI on commit " + json["commit_sha"] + " (*" + json["commit_message"] + "*) succeeded!")
 
         except Exception as e:
             print e
