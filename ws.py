@@ -8,7 +8,7 @@ install_thread_excepthook()
 # !! Important! Be careful when adding code/imports before this point.
 # Our except hook is installed here, so any errors before this point
 # won't be caught if they're not in a try-except block.
-# Hence, please avoid adding code before this comment. If it's necessary,
+# Hence, please avoid adding code before this comment; if it's necessary,
 # test it thoroughly.
 
 import websocket
