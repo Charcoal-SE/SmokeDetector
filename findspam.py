@@ -457,9 +457,7 @@ class FindSpam:
         # Other suspicious characters in title
         {'regex': ur"(?i)\p{Block=EnclosedAlphanumerics}|\p{Block=Cherokee}|\p{Block=Georgian}|\p{Block=MiscellaneousSymbols}|\p{Block=MiscellaneousSymbolsAndPictographs}", 'all': True,
          'sites': [], 'reason': "Bad character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        # English text on non-English site, separate rule for rus.SE to include titles and answers
-        {'regex': ur"(?i)^[a-z0-9_\W]*[a-z]{3}[a-z0-9_\W]*$", 'all': False,
-         'sites': ["ja.stackoverflow.com", "ru.stackoverflow.com"], 'reason': "English text in {} on a localized site", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0, 'answers': False},
+        # English text on non-English site: rus.SE only
         {'regex': ur"(?i)^[a-z0-9_\W]*[a-z]{3}[a-z0-9_\W]*$", 'all': False,
          'sites': ["rus.stackexchange.com"], 'reason': "English text in {} on a localized site", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Roof repair
