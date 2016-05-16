@@ -66,7 +66,7 @@ class DeletionWatcher:
 
     @classmethod
     def check_if_report_was_deleted(self, post_site_id, post_url, message):
-        was_report_deleted = self.check_websocket_for_deletion(post_site_id, post_url, 600)
+        was_report_deleted = self.check_websocket_for_deletion(post_site_id, post_url, 1200)
         if was_report_deleted:
             try:
                 message.delete()
