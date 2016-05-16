@@ -88,8 +88,8 @@ def has_phone_number(s, site):
     matched = regex.compile(ur"(?<!\d)(?:\d{2}\s?\d{8,11}|\d\s{0,2}\d{3}\s{0,2}\d{3}\s{0,2}\d{4}|8\d{2}\s{0,2}\d{3}\s{0,2}\d{4})(?!\d)", regex.UNICODE).findall(s)
     test_formats = ["IN", "US", "NG", None]      # ^ don't match parts of too long strings of digits
     for phone_number in matched:
-        if regex.compile(r"^21474(672[56]|8364)\d$").search(phone_number):
-            return False, ""  # error code or limit of int size
+        if regex.compile(r"^21474(672[56]|8364)|^192168").search(phone_number):
+            return False, ""  # error code or limit of int size, or 192.168 IP
         for testf in test_formats:
             try:
                 z = phonenumbers.parse(phone_number, testf)
@@ -513,7 +513,7 @@ class FindSpam:
         #
         # Category: Suspicious contact information
         # Phone number in title
-        {'method': has_phone_number, 'all': True, 'sites': ["patents.stackexchange.com", "math.stackexchange.com"], 'reason': "phone number detected in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        {'method': has_phone_number, 'all': True, 'sites': ["patents.stackexchange.com", "math.stackexchange.com", "mathoverflow.net"], 'reason': "phone number detected in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Phone number in post
         {'regex': ur"(?s)^.{0,250}\b1 ?[-(.]8\d{2}[-).] ?\d{3}[-. ]\d{4}\b", 'all': True, 'sites': ["math.stackexchange.com"], 'reason': "phone number detected in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Email check for answers, some sites exempt
