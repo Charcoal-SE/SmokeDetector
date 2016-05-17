@@ -207,7 +207,8 @@ class GlobalVars:
                             "792066",  # Braiam
                             "5666987",  # Ian
                             "3160466",  # ArtOfCode
-                            "5735775"]  # Ashish Ahuja
+                            "5735775",  # Ashish Ahuja
+                            "3476191"]  # Nobody Nada
                         }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
