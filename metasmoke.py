@@ -81,11 +81,11 @@ class Metasmoke:
                 json_response = response.json()
                 if json_response["status"] == "success":
                     if "autopull" in json_response["commit_message"]:
-                        GlobalVars.charcoal_hq.send_message("CI on commit " + json_response["commit_sha"] + " (*" + json_response["commit_message"].split("\n")[0] + "*) succeeded! Message contains 'autopull', pulling...")
+                        GlobalVars.charcoal_hq.send_message("CI on commit [" + json_response["commit_sha"][:7] + "](//github.com/Charcoal-SE/SmokeDetector/commit/" + json_response["commit_sha"] + ") (*" + json_response["commit_message"].split("\n")[0] + "*) succeeded! Message contains 'autopull', pulling...")
                         time.sleep(2)
                         os._exit(3)
                     else:
-                        GlobalVars.charcoal_hq.send_message("CI on commit " + json_response["commit_sha"] + " (*" + json_response["commit_message"].split("\n")[0] + "*) succeeded!")
+                        GlobalVars.charcoal_hq.send_message("CI on commit [" + json_response["commit_sha"][:7] + "](//github.com/Charcoal-SE/SmokeDetector/commit/" + json_response["commit_sha"] + ") (*" + json_response["commit_message"].split("\n")[0] + "*) succeeded!")
 
         except Exception as e:
             print e
