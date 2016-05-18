@@ -79,13 +79,14 @@ class Metasmoke:
 
             if response.status_code == 201:  # 200 = successful status creation; 201 = new commit status
                 json_response = response.json()
-                if json_response["status"] == "success":
-                    if "autopull" in json_response["commit_message"]:
-                        GlobalVars.charcoal_hq.send_message("[Continuous integration](" + json_response["ci_url"] + ") on commit [" + json_response["commit_sha"][:7] + "](//github.com/Charcoal-SE/SmokeDetector/commit/" + json_response["commit_sha"] + ") (*" + json_response["commit_message"].split("\n")[0] + "*) succeeded! Message contains 'autopull', pulling...")
+                commit_response = json_response["commit_status"]
+                if commit_response["status"] == "success":
+                    if "autopull" in commit_response["commit_message"]:
+                        GlobalVars.charcoal_hq.send_message("[Continuous integration](" + commit_response["ci_url"] + ") on commit [" + commit_response["commit_sha"][:7] + "](//github.com/Charcoal-SE/SmokeDetector/commit/" + commit_response["commit_sha"] + ") (*" + commit_response["commit_message"].split("\n")[0] + "*) succeeded! Message contains 'autopull', pulling...")
                         time.sleep(2)
                         os._exit(3)
                     else:
-                        GlobalVars.charcoal_hq.send_message("[Continuous integration](" + json_response["ci_url"] + ") on commit [" + json_response["commit_sha"][:7] + "](//github.com/Charcoal-SE/SmokeDetector/commit/" + json_response["commit_sha"] + ") (*" + json_response["commit_message"].split("\n")[0] + "*) succeeded!")
+                        GlobalVars.charcoal_hq.send_message("[Continuous integration](" + commit_response["ci_url"] + ") on commit [" + commit_response["commit_sha"][:7] + "](//github.com/Charcoal-SE/SmokeDetector/commit/" + commit_response["commit_sha"] + ") (*" + commit_response["commit_message"].split("\n")[0] + "*) succeeded!")
 
         except Exception as e:
             print e
