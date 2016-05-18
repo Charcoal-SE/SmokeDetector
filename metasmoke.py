@@ -85,7 +85,7 @@ class Metasmoke:
                         time.sleep(2)
                         os._exit(3)
                     else:
-                        GlobalVars.charcoal_hq.send_message("[Continuous integration](" + json_response["ci_url"] + " on commit [" + json_response["commit_sha"][:7] + "](//github.com/Charcoal-SE/SmokeDetector/commit/" + json_response["commit_sha"] + ") (*" + json_response["commit_message"].split("\n")[0] + "*) succeeded!")
+                        GlobalVars.charcoal_hq.send_message("[Continuous integration](" + json_response["ci_url"] + ") on commit [" + json_response["commit_sha"][:7] + "](//github.com/Charcoal-SE/SmokeDetector/commit/" + json_response["commit_sha"] + ") (*" + json_response["commit_message"].split("\n")[0] + "*) succeeded!")
 
         except Exception as e:
             print e
