@@ -296,7 +296,7 @@ class FindSpam:
                             "replacementlaptopkeys\\.com", "safewiper\\.com", "ostoto\\.com",
                             "appsforpcdownloads", "academicservices\\.us", "writerspk\\.com",
                             "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
-                            "megatachoco", "shtylm\\.com", "drilluobetemple\\.webs", "SelfMax30\\.com",
+                            "megatachoco", "shtylm\\.com", "drilluobetemple\\.webs",
                             "creative-proteomics", "revommerce.com", "opendatascience\\.com",
                             "123trainings", "(bestof|beta)cheat\\.com", "surejob\\.in",
                             "israelbigmarket", "chinatour\\.com", "celebsclothing\\.com",
@@ -368,7 +368,7 @@ class FindSpam:
                         r"(e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(packers\S{0,3}movers|goatse|burnfat|gronkaffe|muskel|nitricoxide|masculin|menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"([\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits)\.(co|net|org|in\W|info)",
-                        r"(health|earn|max|cash|wage|pay|pocket|cents|today)[\w-]{0,6}\d+\.com",
+                        r"(health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
                         r"https?://[\w-.]*?\.repair\W", r"https?://[\w-.]{10,}\.help\W",
                         r"filefix(er)?\.com", r"\.page\.tl\W", r"infotech\.(com|net|in)",
                         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
@@ -492,7 +492,7 @@ class FindSpam:
         {'method': link_at_end, 'all': False,
          'sites': ["superuser.com", "askubuntu.com", "drupal.stackexchange.com", "meta.stackexchange.com", "security.stackexchange.com", "patents.stackexchange.com", "money.stackexchange.com", "gaming.stackexchange.com", "arduino.stackexchange.com"], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
         # Link at the end of a short answer
-        {'regex': ur'(?s)^.{0,350}\s*<a href="https?://(?:[\w.-]+/?\S{0,2}/?|(?:plus\.google|www.facebook)\.com/[\w/]+)"[^<]*</a>(?:</strong>)?\s*</p>\s*$', 'all': True,
+        {'regex': ur'(?s)^.{0,350}<a href="https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,4}/?\w{0,2}/?|(?:plus\.google|www\.facebook)\.com/[\w/]+)"[^<]*</a>(?:</strong>)?\s*</p>\s*$', 'all': True,
          'sites': [], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Shortened URL near the end of question
         {'regex': ur"(?s)://(goo\.gl|bit\.ly|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs)/.{0,200}$", 'all': True, 'sites': ["superuser.com", "askubuntu.com"], 'reason': "shortened URL in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
