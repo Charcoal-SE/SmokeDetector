@@ -326,7 +326,7 @@ class FindSpam:
                             "3gwith4g\\.com", "xride-hd\\.com", "sincycle\\.com", "wcwnetworking\\.com",
                             "vivaspanish\\.org", "wanglu123\\.com", "z0download\\.com", "citehr\\.com",
                             "thecreatingexperts\\.com", "masterm\\.com", "ablockplus\\.org", "iseenlab\\.com",
-                            "whatech\\.com", "crunchbase\\.com", "fileniaz\\.com", "icoolsoft\\.com",
+                            "whatech\\.com", "fileniaz\\.com", "icoolsoft\\.com",
                             "wonderful-watch\\.co", "plagiarism-checker\\.me", "asodoneright",
                             "sapboonline\\.com", "thinkittraining\\.in", "salesforcetrainingexpert\\.in",
                             "indiaflower", "achatlaser\\.com", "desimahol\\.com", "independentracingwheel",
