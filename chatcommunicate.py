@@ -377,7 +377,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             return "That doesn't look like a valid user URL."
         why = u"User manually reported by *{}* in room *{}*.\n".format(ev_user_name, ev_room_name.decode('utf-8'))
         handle_user_with_all_spam(user, why)
-        return None
+        return why
     if content_lower.startswith("!!/report") \
             and is_privileged(ev_room, ev_user_id, wrap2):
         crn, wait = can_report_now(ev_user_id, wrap2.host)
