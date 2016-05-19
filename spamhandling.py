@@ -155,13 +155,14 @@ def handle_user_with_all_spam(user, why):
     s = "[ [SmokeDetector](//git.io/vgx7b) ] All of this user's posts are spam: [user {} on {}](//{}/users/{}?tab={})" \
         .format(user_id, site, site, user_id, tab)
     print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
-    if time.time() >= GlobalVars.blockedTime:
-        add_why_allspam(user, why)
+    add_why_allspam(user, why)
+    if time.time() >= GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id]:
         GlobalVars.tavern_on_the_meta.send_message(s)
+    if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
         GlobalVars.charcoal_hq.send_message(s)
-        if site == "stackoverflow.com":
-            GlobalVars.socvr.send_message(s)
-        for specialroom in GlobalVars.specialrooms:
-            if site in specialroom["sites"]:
-                room = specialroom["room"]
-                room.send_message(s)
+    if site == "stackoverflow.com" and time.time() >= GlobalVars.blockedTime[GlobalVars.socvr_room_id]:
+        GlobalVars.socvr.send_message(s)
+    for specialroom in GlobalVars.specialrooms:
+        room = specialroom["room"]
+        if site in specialroom["sites"] and (room.id not in GlobalVars.blockedTime or time.time() >= GlobalVars.blockedTime[room.id]):
+            room.send_message(s)
