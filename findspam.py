@@ -336,7 +336,7 @@ class FindSpam:
                             "chatsim\\.com", "mlkblasters\\.org", "champcash\\.com", "bisbury\\.com",
                             "rankyouup\\.com", "reviewanalysis\\.co", "apponfly\\.com", "gogames\\.me",
                             "trutech\\.co", "askmespam\\.com", "imdresses\\.com", "doesitscam\\.com",
-                            "jobsopening\\.co\\.in", "androidappsformac\\.com", "retersweld\\.com", "mindextra\\.com",
+                            "jobsopening\\.co\\.in", "retersweld\\.com", "mindextra\\.com",
                             "psychicfuguestudio", "softserialhq\\.com", "unstopableshrine\\.webs\\.com",
                             "softaken\\.com", "lyonstechnologies", "serialkeygeneratorfree\\.com", "routeperfect\\.com",
                             "tupely\\.com", "apk(heart|safe)\\.com", "uflysoft\\.net", "nimblemessaging\\.com",
@@ -415,7 +415,8 @@ class FindSpam:
                         r"world[\w-]*?cricket[\w-]*?\.(co|net|org|in\W|info)",
                         r"(credit|online)[\w-]*?loan[\w-]*?\.(co|net|org|in\W|info)",
                         r"worldcup\d+live\.(com?|net|org|in\W|info)",
-                        r"((concrete|beton)-?mixer|crusher)[\w-]*?\.(co|net)"]
+                        r"((concrete|beton)-?mixer|crusher)[\w-]*?\.(co|net)",
+                        r"\w{7}formac\.(com|net|org)"]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
         #
