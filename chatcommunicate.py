@@ -537,7 +537,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
     if content_lower.startswith("!!/coffee"):
         return "*brews coffee for @" + ev_user_name.replace(" ", "") + "*"
     if content_lower.startswith("!!/tea"):
-        return "*brews a cup of " + random.choice(['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint']) + " tea for @" + ev_user_name.replace(" ", "") + "*"
+        return "*brews a cup of " + random.choice(['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint', 'jasmine']) + " tea for @" + ev_user_name.replace(" ", "") + "*"
     if content_lower.startswith("!!/brownie"):
         return "Brown!"
     if content_lower.startswith("!!/hats"):
