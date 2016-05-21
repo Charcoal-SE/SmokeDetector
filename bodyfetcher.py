@@ -271,7 +271,7 @@ class BodyFetcher:
                         None
                     )
                 except:
-                    print "NOPE"
+                    print "NOP"
             try:
                 for answer in post["answers"]:
                     answer_title = ""
@@ -323,7 +323,7 @@ class BodyFetcher:
                             q_id
                         )
                         except:
-                            print "NOPE"
+                            print "NOP"
             except:
                 print "no answers"
         return
