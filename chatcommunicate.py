@@ -569,7 +569,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             request = requests.get(
                 'https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master'
             )
-            latest_sha = requestjson()["object"]["sha"]
+            latest_sha = request.json()["object"]["sha"]
             request = requests.get(
                 'https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/{0}/statuses'.format(
                     latest_sha
