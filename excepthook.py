@@ -16,7 +16,7 @@ def uncaught_exception(exctype, value, tb):
     exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
     logged_msg = "{exception}\n{now} UTC\n{row}\n\n".format(
         exception=exception_only,
-        now=str(now),
+        now=now,
         row=tr
     )
     print(logged_msg)

@@ -24,6 +24,8 @@ def watch_ci():
     s.listen(10)
     print 'listening for CI changes'
 
+    api_url = 'https://api.github.com/repos/Charcoal-SE/SmokeDetector/'
+
     while True:
         conn, addr = s.accept()
 
@@ -38,13 +40,12 @@ def watch_ci():
                   'Content-Length: 2\n' +
                   '\nOK\n')
         conn.close()
-        request = requests.get(
-            'https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master'
-        )
+        request = requests.get('{0}git/refs/heads/master'.format(api_url))
         latest_sha = request.json()["object"]["sha"]
         print latest_sha
         request = requests.get(
-            'https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/{0}/statuses'.format(
+            '{0}/commits/{1}/statuses'.format(
+                api_url,
                 latest_sha
             )
         )
@@ -66,7 +67,10 @@ def watch_ci():
                 time_to_test = datetime.datetime.now() - datetime.timedelta(seconds=60)
                 if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > time_to_test:
 
-                    request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/' + latest_sha)
+                    request = requests.get('{0}/commits/{1}'.format(
+                        api_url,
+                        latest_sha
+                    )
                     commit_message = request.json()["commit"]["message"]
                     print commit_message
                     if "autopull" in commit_message:
@@ -79,6 +83,6 @@ def watch_ci():
                     continue
             elif state == "error" or state == "failure":
                 if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > datetime.datetime.now() - datetime.timedelta(seconds=10):
-                    GlobalVars.charcoal_hq.send_message("[CI build failed]({})".format(target_url) + ", *someone* (prolly " + random.choice(["Undo", "Manish", "ProgramFOX", "hichris", "Normal"]) + ") borked something!")
+                    GlobalVars.charcoal_hq.send_message("[CI build failed]({})".format(target_url) + ", *someone* (prolly " + random.choice(["Undo", "Manish", "ProgramFOX", "hichris", "Normal") + ") borked something!")
                     continue
     s.close()
