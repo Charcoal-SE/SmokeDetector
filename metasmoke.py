@@ -36,7 +36,15 @@ class Metasmoke:
         metasmoke_key = GlobalVars.metasmoke_key
 
         try:
-            payload = {'feedback': {'user_name': user_name, 'chat_user_id': user_id, 'feedback_type': feedback_type, 'post_link': post_link}, 'key': metasmoke_key}
+            payload = {
+                'feedback': {
+                    'user_name': user_name,
+                    'chat_user_id': user_id,
+                    'feedback_type': feedback_type,
+                    'post_link': post_link
+                },
+                'key': metasmoke_key
+            }
 
             headers = {'Content-type': 'application/json'}
             requests.post(GlobalVars.metasmoke_host + "/feedbacks.json", data=json.dumps(payload), headers=headers)
@@ -53,7 +61,13 @@ class Metasmoke:
         metasmoke_key = GlobalVars.metasmoke_key
 
         try:
-            payload = {'deletion_log': {'is_deleted': is_deleted, 'post_link': post_link}, 'key': metasmoke_key}
+            payload = {
+                'deletion_log': {
+                    'is_deleted': is_deleted,
+                    'post_link': post_link
+                },
+                'key': metasmoke_key
+            }
 
             headers = {'Content-type': 'application/json'}
             requests.post(GlobalVars.metasmoke_host + "/deletion_logs.json", data=json.dumps(payload), headers=headers)
@@ -72,7 +86,10 @@ class Metasmoke:
         metasmoke_key = GlobalVars.metasmoke_key
 
         try:
-            payload = {'location': GlobalVars.location, 'key': metasmoke_key}
+            payload = {
+                'location': GlobalVars.location,
+                'key': metasmoke_key
+            }
 
             headers = {'Content-type': 'application/json'}
             response = requests.post(GlobalVars.metasmoke_host + "/status-update.json", data=json.dumps(payload), headers=headers)
@@ -81,12 +98,21 @@ class Metasmoke:
                 json_response = response.json()
                 commit_response = json_response["commit_status"]
                 if commit_response["status"] == "success":
+                    autopull_message = "Message contains 'autopull', pulling..."
+                    GlobalVars.charcoal_hq.send_message(
+                        "[Continuous integration]({success}) on commit [{commit}](//github.com/Charcoal-SE/SmokeDetector/commit/{sha}) ".format(
+                            status=commit_response["ci_url"],
+                            commit=commit_response["commit_sha"][:7],
+                            sha=commit_response["commit_sha"]
+                        ) +
+                        "(*{0}*) succeeded!{1}".format(
+                            commit_response["commit_message"].split("\n")[0],
+                            autopull_message if "autopull" in commit_response["commit_message"] else ""
+                        )
+                    )
                     if "autopull" in commit_response["commit_message"]:
-                        GlobalVars.charcoal_hq.send_message("[Continuous integration](" + commit_response["ci_url"] + ") on commit [" + commit_response["commit_sha"][:7] + "](//github.com/Charcoal-SE/SmokeDetector/commit/" + commit_response["commit_sha"] + ") (*" + commit_response["commit_message"].split("\n")[0] + "*) succeeded! Message contains 'autopull', pulling...")
                         time.sleep(2)
                         os._exit(3)
-                    else:
-                        GlobalVars.charcoal_hq.send_message("[Continuous integration](" + commit_response["ci_url"] + ") on commit [" + commit_response["commit_sha"][:7] + "](//github.com/Charcoal-SE/SmokeDetector/commit/" + commit_response["commit_sha"] + ") (*" + commit_response["commit_message"].split("\n")[0] + "*) succeeded!")
 
         except Exception as e:
             print e

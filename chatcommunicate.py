@@ -46,8 +46,7 @@ def print_chat_message(ev):
     message = colored("Chat message in " + ev.data["room_name"] + " (" + str(ev.data["room_id"]) + "): \"", attrs=['bold'])
     message += ev.data['content']
     message += "\""
-    message += colored(" - " + ev.data['user_name'], attrs=['bold'])
-    print message
+    print message + colored(" - " + ev.data['user_name'], attrs=['bold'])
 
 
 def special_room_watcher(ev, wrap2):
@@ -59,7 +58,10 @@ def special_room_watcher(ev, wrap2):
         post_site_id = fetch_post_id_and_site_from_msg_content(content_source)
         post_url = fetch_post_url_from_msg_content(content_source)
         if post_site_id is not None and post_url is not None:
-            t_check_websocket = Thread(target=DeletionWatcher.check_if_report_was_deleted, args=(post_site_id, post_url, ev.message))
+            t_check_websocket = Thread(
+                target=DeletionWatcher.check_if_report_was_deleted,
+                args=(post_site_id, post_url, ev.message)
+            )
             t_check_websocket.daemon = True
             t_check_websocket.start()
 
@@ -87,13 +89,19 @@ def watcher(ev, wrap2):
         post_site_id = fetch_post_id_and_site_from_msg_content(content_source)
         post_url = fetch_post_url_from_msg_content(content_source)
         if post_site_id is not None and (ev_room == GlobalVars.meta_tavern_room_id or ev_room == GlobalVars.socvr_room_id):
-            t_check_websocket = Thread(target=DeletionWatcher.check_if_report_was_deleted, args=(post_site_id, post_url, ev.message))
+            t_check_websocket = Thread(
+                target=DeletionWatcher.check_if_report_was_deleted,
+                args=(post_site_id, post_url, ev.message)
+            )
             t_check_websocket.daemon = True
             t_check_websocket.start()
     message_parts = content_source.split(" ")
 
     ev_user_name = ev.data["user_name"]
-    ev_user_link = "//chat." + wrap2.host + "/users/" + str(ev.user.id)
+    ev_user_link = "//chat.{host}/users/{user_id}".format(
+        host=wrap2.host,
+        user_id=str(ev.user.id)
+    )
     if ev_user_name != "SmokeDetector":
         GlobalVars.users_chatting[ev_room].append((ev_user_name, ev_user_link))
 
@@ -106,10 +114,15 @@ def watcher(ev, wrap2):
             ev.message.reply("I don't have any messages posted after the latest reboot.")
             return
         if len(commands) > len(latest_smokedetector_messages):
-            ev.message.reply("I've only posted {} messages since the latest reboot; that's not enough to execute all commands. No commands were executed.".format(len(latest_smokedetector_messages)))
+            ev.message.reply("I've only posted {} messages".format(len(latest_smokedetector_messages)) +
+                "since the latest reboot; that's not enough to execute all commands. No commands were executed."
+            )
             return
         for i in xrange(0, len(commands)):
-            shortcut_messages.append(":" + str(latest_smokedetector_messages[-(i + 1)]) + " " + commands[i])
+            shortcut_messages.append(":{0} {1}".format(
+                str(latest_smokedetector_messages[-(i + 1)]),
+                commands[i]
+            ))
         reply = ""
         amount_none = 0
         amount_skipped = 0
@@ -119,18 +132,27 @@ def watcher(ev, wrap2):
             current_message = shortcut_messages[i]
             if length > 1:
                 reply += str(i + 1) + ". "
-            reply += "[" + current_message.split(" ")[0] + "] "
+            reply += "[{0}] ".format(current_message.split(" ")[0])
             if current_message.split(" ")[1] != "-":
-                r = handle_commands(current_message.lower(), current_message.split(" "), ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, current_message, message_id)
-                result = r
+                pure_result = handle_commands(
+                    current_message.lower(),
+                    current_message.split(" "),
+                    ev_room, ev_room_name,
+                    ev_user_id,
+                    ev_user_name,
+                    wrap2,
+                    current_message,
+                    message_id
+                )
+                result = pure_result
                 if type(result) == tuple:
-                    result = result[1]
+                    result = pure_result[1]
                 if result is not None and result is not False:
                     reply += result + os.linesep
                 elif result is None:
                     reply += "<processed without return value>" + os.linesep
                     amount_none += 1
-                elif result is False or r[0] is False:
+                elif result is False or pure_result[0] is False:
                     reply += "<unrecognized command>" + os.linesep
                     amount_unrecognized += 1
             else:
@@ -147,21 +169,34 @@ def watcher(ev, wrap2):
             if len(message_with_reply) <= 500 or "\n" in reply:
                 ev.message.reply(reply, False)
     else:
-        r = handle_commands(content_source.lower(), message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content_source, message_id)
-        if type(r) != tuple:
-            r = (True, r)
-        if r[1] is not None:
+        result = handle_commands(
+            content_source.lower(),
+            message_parts,
+            ev_room,
+            ev_room_name,
+            ev_user_id,
+            ev_user_name,
+            wrap2,
+            content_source,
+            message_id
+        )
+        if type(result) != tuple:
+            result = (True, result)
+        if result[1] is not None:
             if wrap2.host + str(message_id) in GlobalVars.listen_to_these_if_edited:
                 GlobalVars.listen_to_these_if_edited.remove(wrap2.host + str(message_id))
-            message_with_reply = u":{} {}".format(message_id, r[1])
-            if len(message_with_reply) <= 500 or "\n" in r[1]:
-                ev.message.reply(r[1], False)
-        if r[0] is False:
+            message_with_reply = u":{} {}".format(message_id, result[1])
+            if len(message_with_reply) <= 500 or "\n" in result[1]:
+                ev.message.reply(result[1], False)
+        if result[0] is False:
             add_to_listen_if_edited(wrap2.host, message_id)
 
 
 def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content, message_id):
-    message_url = "//chat." + wrap2.host + "/transcript/message/" + str(message_id)
+    message_url = "//chat.{host}/transcript/message/{id}#{id}".format(
+        host=wrap2.host,
+        id=str(message_id)
+    )
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
     if second_part_lower in ["f", "notspam"]:
         second_part_lower = "fp-"
@@ -232,25 +267,26 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                         add_blacklisted_user(user, message_url, "http:" + post_url)
                         user_added = True
             if post_type == "question":
-                if not quiet_action:
-                    if user_added:
-                        return "Blacklisted user and registered question as true positive."
-                    return "Recorded question as true positive in metasmoke. Use `tpu` or `trueu` if you want to blacklist a user."
-                else:
+                if quiet_action:
                     return None
+                if user_added:
+                    return "Blacklisted user and registered question as true positive."
+                return "Recorded question as true positive in metasmoke. Use `tpu` or `trueu` if you want to blacklist a user."
             elif post_type == "answer":
-                if not quiet_action:
-                    if user_added:
-                        return "Blacklisted user."
-                    return "Recorded answer as true positive in metasmoke. If you want to blacklist the poster of the answer, use `trueu` or `tpu`."
-                else:
+                if quiet_action:
                     return None
+                if user_added:
+                    return "Blacklisted user."
+                return "Recorded answer as true positive in metasmoke. If you want to blacklist the poster of the answer, use `trueu` or `tpu`."
+
         if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id, wrap2):
             if post_site_id is None:
                 return "That message is not a report."
 
-            t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
-                                 args=(post_url, second_part_lower, ev_user_name, ev_user_id, ))
+            t_metasmoke = Thread(
+                target=Metasmoke.send_feedback_for_post,
+                args=(post_url, second_part_lower, ev_user_name, ev_user_id,)
+            )
             t_metasmoke.start()
 
             add_ignored_post(post_site_id[0:2])
@@ -269,12 +305,17 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             t_metasmoke.start()
 
             add_ignored_post(post_site_id[0:2])
-            if not quiet_action:
-                return "Recorded answer as an NAA in metasmoke."
-            else:
+            if quiet_action:
                 return None
-        if (second_part_lower.startswith("delete") or second_part_lower.startswith("remove") or second_part_lower.startswith("gone") or second_part_lower.startswith("poof") or
-                second_part_lower == "del") and is_privileged(ev_room, ev_user_id, wrap2):
+
+            return "Recorded answer as an NAA in metasmoke."
+
+        if (second_part_lower.startswith("delete") \
+            or second_part_lower.startswith("remove") \
+            or second_part_lower.startswith("gone") \
+            or second_part_lower.startswith("poof") \
+            or second_part_lower == "del") \
+        and is_privileged(ev_room, ev_user_id, wrap2):
             try:
                 msg.delete()
             except:
@@ -286,22 +327,22 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             msg.edit(edited)
             return None
         if second_part_lower.startswith("why"):
-            t = fetch_post_id_and_site_from_msg_content(msg_content)
-            if t is None:
-                t = fetch_user_from_allspam_report(msg_content)
-                if t is None:
+            post_info = fetch_post_id_and_site_from_msg_content(msg_content)
+            if post_info is None:
+                post_info = fetch_user_from_allspam_report(msg_content)
+                if post_info is None:
                     return "That's not a report."
-                why = get_why_allspam(t)
-                if why is None or why == "":
-                    return "There is no `why` data for that user (anymore)."
-                else:
+                why = get_why_allspam(post_info)
+                if why is not None or why != "":
                     return why
-            post_id, site, _ = t
-            why = get_why(site, post_id)
-            if why is None or why == "":
-                return "There is no `why` data for that post (anymore)."
+
             else:
-                return why
+                post_id, site, _ = post_info
+                why = get_why(site, post_id)
+                if why is not None or why != "":
+                    return why
+
+            return "There is no `why` data for that user (anymore)."
     if content_lower.startswith("!!/addblu") \
             and is_privileged(ev_room, ev_user_id, wrap2):
         uid, val = get_user_from_list_command(content_lower)
@@ -382,10 +423,12 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             and is_privileged(ev_room, ev_user_id, wrap2):
         crn, wait = can_report_now(ev_user_id, wrap2.host)
         if not crn:
-            return "You can execute the !!/report command again in {} seconds. " \
-                   "To avoid one user sending lots of reports in a few commands and slowing SmokeDetector down due to rate-limiting, " \
-                   "you have to wait 30 seconds after you've reported multiple posts using !!/report, even if your current command just has one URL. " \
-                   "(Note that this timeout won't be applied if you only used !!/report for one post)".format(wait)
+            return "You can execute the !!/report command again in {} seconds. ".format(wait) + \
+                   "To avoid one user sending lots of reports in a few commands " \
+                   "and slowing SmokeDetector down due to rate-limiting, " \
+                   "you have to wait 30 seconds after you've reported multiple posts " \
+                   "using !!/report, even if your current command just has one URL. " \
+                   "(Note that this timeout won't be applied if you only used !!/report for one post)"
         if len(message_parts) < 2:
             return False, "Not enough arguments."
         output = []
@@ -412,16 +455,28 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             batch = ""
             if len(urls) > 1:
                 batch = " (batch report: post {} out of {})".format(index, len(urls))
-            handle_spam(post_data.title, post_data.body, post_data.owner_name, post_data.site, post_data.post_url,
-                        post_data.owner_url, post_data.post_id, ["Manually reported " + post_data.post_type + batch],
-                        post_data.post_type == "answer", why, post_data.owner_rep, post_data.score, post_data.up_vote_count,
-                        post_data.down_vote_count, post_data.question_id)
+            handle_spam(
+                post_data.title,
+                post_data.body,
+                post_data.owner_name,
+                post_data.site,
+                post_data.post_url,
+                post_data.owner_url,
+                post_data.post_id,
+                ["Manually reported " + post_data.post_type + batch],
+                post_data.post_type == "answer",
+                why,
+                post_data.owner_rep,
+                post_data.score,
+                post_data.up_vote_count,
+                post_data.down_vote_count,
+                post_data.question_id
+            )
         if 1 < len(urls) > len(output):
             add_or_update_multiple_reporter(ev_user_id, wrap2.host, time.time())
         if len(output) > 0:
             return os.linesep.join(output)
-        else:
-            return None
+        return None
     if content_lower.startswith("!!/wut"):
         return "Whaddya mean, 'wut'? Humans..."
     if content_lower.startswith("!!/lick"):
@@ -430,22 +485,28 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         if ev_room == GlobalVars.charcoal_room_id:
             return 'Of course'
         elif ev_room == GlobalVars.meta_tavern_room_id or ev_room == GlobalVars.socvr_room_id:
-            return random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?',
-                                  'plz send teh coffee',
-                                  'Watching this endless list of new questions *never* gets boring',
-                                  'Kinda sorta'])
+            return random.choice([
+                'Yup', 'You doubt me?', 'Of course',
+                '... did I miss something?',
+                'plz send teh coffee',
+                'Watching this endless list of new questions *never* gets boring',
+                'Kinda sorta'
+            ])
     if content_lower.startswith("!!/rev") or content_lower.startswith("!!/ver"):
-            return '[' + \
-                GlobalVars.commit_with_author + \
-                '](https://github.com/Charcoal-SE/SmokeDetector/commit/' + \
-                GlobalVars.commit + \
-                ')'
+        return '[{0}](https://github.com/Charcoal-SE/SmokeDetector/commit/{1})'.format(
+            GlobalVars.commit_with_author,
+            GlobalVars.commit
+        )
     if content_lower.startswith("!!/status"):
-            now = datetime.utcnow()
-            diff = now - UtcDate.startup_utc_date
-            minutes, remainder = divmod(diff.seconds, 60)
-            minutestr = "minutes" if minutes != 1 else "minute"
-            return 'Running since {} UTC ({} {})'.format(GlobalVars.startup_utc, minutes, minutestr)
+        now = datetime.utcnow()
+        diff = now - UtcDate.startup_utc_date
+        minutes, remainder = divmod(diff.seconds, 60)
+        minute_str = "minutes" if minutes != 1 else "minute"
+        return 'Running since {} UTC ({} {})'.format(
+            GlobalVars.startup_utc,
+            minutes,
+            minute_str
+        )
     if content_lower.startswith("!!/reboot"):
         if is_privileged(ev_room, ev_user_id, wrap2):
             post_message_in_room(ev_room, "Goodbye, cruel world")
@@ -463,15 +524,15 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 os.remove("blacklistedUsers.txt")
                 GlobalVars.blacklisted_users = []
                 return "Kaboom, blacklisted users cleared."
-            else:
-                return "There are no blacklisted users at the moment."
+
+            return "There are no blacklisted users at the moment."
     if content_lower.startswith("!!/block") and is_privileged(ev_room, ev_user_id, wrap2):
         room_id = message_parts[2] if len(message_parts) > 2 else "all"
         timeToBlock = message_parts[1] if len(message_parts) > 1 else "0"
         if not timeToBlock.isdigit():
             return False, "Invalid duration."
-        else:
-            timeToBlock = int(timeToBlock)
+
+        timeToBlock = int(timeToBlock)
         timeToBlock = timeToBlock if 0 < timeToBlock < 14400 else 900
         GlobalVars.blockedTime[room_id] = time.time() + timeToBlock
         which_room = "globally" if room_id == "all" else "in room " + room_id
@@ -502,11 +563,17 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             post_message_in_room(ev_room, logs_part, False)
     if content_lower.startswith("!!/pull"):
         if is_privileged(ev_room, ev_user_id, wrap2):
-            r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
-            latest_sha = r.json()["object"]["sha"]
-            r = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/' + latest_sha + '/statuses')
+            request = requests.get(
+                'https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master'
+            )
+            latest_sha = requestjson()["object"]["sha"]
+            request = requests.get(
+                'https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/{0}/statuses'.format(
+                    latest_sha
+                )
+            )
             states = []
-            for status in r.json():
+            for status in request.json():
                 state = status["state"]
                 states.append(state)
             if "success" in states:
@@ -515,15 +582,18 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 return "CI build failed! :( Please check your commit."
             elif "pending" in states or not states:
                 return "CI build is still pending, wait until the build has finished and then pull again."
+
     if content_lower.startswith("!!/help") or content_lower.startswith("!!/info"):
-        return "I'm [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector), a bot that detects spam and offensive posts on the network and posts alerts to chat. [A command list is available here](https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands)."
+        return "I'm [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector), a bot "\
+        "that detects spam and offensive posts on the network and posts alerts to chat. "\
+        "[A command list is available here](https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands)."
     if content_lower.startswith("!!/apiquota"):
         return "The current API quota remaining is {}.".format(GlobalVars.apiquota)
     if content_lower.startswith("!!/whoami"):
         if (ev_room in GlobalVars.smokeDetector_user_id):
             return "My id for this room is {}.".format(GlobalVars.smokeDetector_user_id[ev_room])
-        else:
-            return "I don't know my user ID for this room. (Something is wrong, and it's apnorton's fault.)"
+
+        return "I don't know my user ID for this room. (Something is wrong, and it's apnorton's fault.)"
     if content_lower.startswith("!!/location"):
         return GlobalVars.location
     if content_lower.startswith("!!/queuestatus"):
@@ -532,12 +602,26 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         GlobalVars.users_chatting[ev_room] = list(set(GlobalVars.users_chatting[ev_room]))  # Make unique
         user_to_blame = random.choice(GlobalVars.users_chatting[ev_room])
         return u"It's [{}]({})'s fault.".format(user_to_blame[0], user_to_blame[1])
-    if "smokedetector" in content_lower and "fault" in content_lower and ("xkcdbot" in ev_user_name.lower() or "bjb568" in ev_user_name.lower()):
+    if "smokedetector" in content_lower and "fault" in content_lower \
+    and ("xkcdbot" in ev_user_name.lower() \
+        or "bjb568" in ev_user_name.lower()
+    ):
         return "Liar"
     if content_lower.startswith("!!/coffee"):
         return "*brews coffee for @" + ev_user_name.replace(" ", "") + "*"
     if content_lower.startswith("!!/tea"):
-        return "*brews a cup of " + random.choice(['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint', 'jasmine']) + " tea for @" + ev_user_name.replace(" ", "") + "*"
+        return "*brews a cup of {choice} tea for @{user}*".format(
+            choice=random.choice([
+                'earl grey',
+                'green',
+                'chamomile',
+                'lemon',
+                'darjeeling',
+                'mint'
+                , 'jasmine'
+            ]),
+            user=ev_user_name.replace(" ", "")
+        )
     if content_lower.startswith("!!/brownie"):
         return "Brown!"
     if content_lower.startswith("!!/hats"):
@@ -552,8 +636,8 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             minutestr = "minutes" if minutes != 1 else "minute"
             secondstr = "seconds" if seconds != 1 else "second"
             return "HURRY UP AND EARN MORE HATS! Winterbash will be over in {} {}, {} {}, {} {}, and {} {}. :(".format(diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
-        else:
-            return "Winterbash is over. :("
+
+        return "Winterbash is over. :("
     if content_lower.startswith("!!/test-a"):
         string_to_test = content[10:]
         if len(string_to_test) == 0:
@@ -585,8 +669,8 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
     if content_lower.startswith("!!/amiprivileged"):
         if is_privileged(ev_room, ev_user_id, wrap2):
             return "Yes, you are a privileged user."
-        else:
-            return "No, you are not a privileged user."
+
+        return "No, you are not a privileged user."
     if content_lower.startswith("!!/notify"):
         if len(message_parts) != 3:
             return False, "2 arguments expected"
@@ -595,16 +679,21 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         room_id = message_parts[1]
         if not room_id.isdigit():
             return False, "Room ID is invalid."
-        else:
-            room_id = int(room_id)
+
+        room_id = int(room_id)
         quiet_action = ("-" in message_parts[2])
         se_site = message_parts[2].replace('-', '')
         r, full_site = add_to_notification_list(user_id, chat_site, room_id, se_site)
         if r == 0:
-            if not quiet_action:
-                return "You'll now get pings from me if I report a post on `%s`, in room `%s` on `chat.%s`" % (full_site, room_id, chat_site)
-            else:
+            if quiet_action:
                 return None
+
+            return "You'll now get pings from me if I report a post "\
+            "on `{0}`, in room `{1}` on `chat.{2}`".format(
+                full_site,
+                room_id,
+                chat_site
+            )
         elif r == -1:
             return "That notification configuration is already registered."
         elif r == -2:
@@ -617,16 +706,20 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         room_id = message_parts[1]
         if not room_id.isdigit():
             return False, "Room ID is invalid."
-        else:
-            room_id = int(room_id)
+
+        room_id = int(room_id)
         quiet_action = ("-" in message_parts[2])
         se_site = message_parts[2].replace('-', '')
         r = remove_from_notification_list(user_id, chat_site, room_id, se_site)
         if r:
-            if not quiet_action:
-                return "I will no longer ping you if I report a post on `%s`, in room `%s` on `chat.%s`" % (se_site, room_id, chat_site)
-            else:
+            if quiet_action:
                 return None
+            return "I will no longer ping you if I report a post "\
+            "on `{0}`, in room `{1}` on `chat.{2}`".format(
+                full_site,
+                room_id,
+                chat_site
+            )
         else:
             return "That configuration doesn't exist."
     if content_lower.startswith("!!/willibenotified"):
@@ -637,14 +730,14 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         room_id = message_parts[1]
         if not room_id.isdigit():
             return False, "Room ID is invalid"
-        else:
-            room_id = int(room_id)
+
+        room_id = int(room_id)
         se_site = message_parts[2]
         will_be_notified = will_i_be_notified(user_id, chat_site, room_id, se_site)
         if will_be_notified:
             return "Yes, you will be notified for that site in that room."
-        else:
-            return "No, you won't be notified for that site in that room."
+
+        return "No, you won't be notified for that site in that room."
     if content_lower.startswith("!!/allnotificationsites"):
         if len(message_parts) != 2:
             return False, "1 argument expected"
@@ -656,6 +749,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         sites = get_all_notification_sites(user_id, chat_site, room_id)
         if len(sites) == 0:
             return "You won't get notified for any sites in that room."
-        else:
-            return "You will get notified for these sites:\r\n" + ", ".join(sites)
+
+        return "You will get notified for these sites:\r\n" + ", ".join(sites)
     return False, None  # Unrecognized command, can be edited later.

@@ -17,11 +17,8 @@ def should_whitelist_prevent_alert(user_url, reasons):
     if not is_whitelisted:
         return False
     reasons_copy = list(set(reasons))
-    reasons_copy_copy = list(reasons_copy)
-    for reason in reasons_copy:
-        if "username" in reason:
-            reasons_copy_copy.remove(reason)
-    return len(reasons_copy_copy) == 0
+    reasons_comparison = [r for r in list(reasons_copy) if "username" not in r]
+    return len(reasons_comparison) == 0
 
 
 def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer, body_is_summary, owner_rep, post_score):
@@ -36,7 +33,11 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
             blacklisted_post_url = blacklisted_user_data[2]
             if blacklisted_post_url:
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
-                why += u"\n" + u"Blacklisted user - blacklisted for {} (http://metasmoke.erwaysoftware.com/posts/by-url?url={}) by {}".format(blacklisted_post_url, rel_url, message_url)
+                why += u"\nBlacklisted user - blacklisted for {} (http://metasmoke.erwaysoftware.com/posts/by-url?url={}) by {}".format(
+                    blacklisted_post_url,
+                    rel_url,
+                    message_url
+                )
             else:
                 why += u"\n" + u"Blacklisted user - blacklisted by {}".format(message_url)
     if 0 < len(test):
@@ -49,22 +50,20 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
     return False, None, ""
 
 
-def check_if_spam_json(data):
-    d = json.loads(json.loads(data)["data"])
-    try:
-        _ = d["ownerUrl"]  # noqa
-    except:
+def check_if_spam_json(json_data):
+    data = json.loads(json.loads(json_data)["data"])
+    if "ownerUrl" in data:
         # owner's account doesn't exist anymore, no need to post it in chat:
         # http://chat.stackexchange.com/transcript/message/18380776#18380776
         return False, None, ""
-    title = d["titleEncodedFancy"]
+    title = data["titleEncodedFancy"]
     title = unescape_title(title)
-    body = d["bodySummary"]
-    poster = d["ownerDisplayName"]
-    url = d["url"]
-    post_id = str(d["id"])
+    body = data["bodySummary"]
+    poster = data["ownerDisplayName"]
+    url = data["url"]
+    post_id = str(data["id"])
     print time.strftime("%Y-%m-%d %H:%M:%S"), title.encode("ascii", errors="replace")
-    site = d["siteBaseHostAddress"]
+    site = data["siteBaseHostAddress"]
     site = site.encode("ascii", errors="replace")
     sys.stdout.flush()
     is_spam, reason, why = check_if_spam(title, body, poster, url, site, post_id, False, True, 1, 0)
@@ -103,8 +102,21 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             username = poster.strip()
             user_link = poster_url
 
-        t_metasmoke = Thread(target=Metasmoke.send_stats_on_post,
-                             args=(title, post_url, reason.split(", "), body, username, user_link, why, owner_rep, post_score, up_vote_count, down_vote_count))
+        t_metasmoke = Thread(
+            target=Metasmoke.send_stats_on_post,
+            args=(
+                title,
+                post_url,
+                reason.split(", "),
+                body,
+                username,
+                user_link,
+                why, owner_rep,
+                post_score,
+                up_vote_count,
+                down_vote_count
+            )
+        )
         t_metasmoke.start()
 
         print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
@@ -123,7 +135,15 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                     tavern_msg = append_pings(s, tavern_pings)
                     tavern_msg_ms = tavern_msg + metasmoke_link
                     msg_to_send = tavern_msg_ms if len(tavern_msg_ms) <= 500 else tavern_msg if len(tavern_msg) <= 500 else s[0:500]
-                    t_check_websocket = Thread(target=DeletionWatcher.post_message_if_not_deleted, args=((post_id, site, "answer" if is_answer else "question"), post_url, msg_to_send, GlobalVars.tavern_on_the_meta))
+                    t_check_websocket = Thread(
+                        target=DeletionWatcher.post_message_if_not_deleted,
+                        args=(
+                            (post_id, site, "answer" if is_answer else "question"),
+                            post_url,
+                            msg_to_send,
+                            GlobalVars.tavern_on_the_meta
+                        )
+                    )
                     t_check_websocket.daemon = True
                     t_check_websocket.start()
                 if site == "stackoverflow.com" and reason not in GlobalVars.non_socvr_reasons and time.time() >= GlobalVars.blockedTime[GlobalVars.socvr_room_id]:

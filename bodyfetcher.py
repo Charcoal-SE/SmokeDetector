@@ -12,45 +12,50 @@ import requests
 class BodyFetcher:
     queue = {}
 
-    specialCases = {"math.stackexchange.com": 15,
-                    "pt.stackoverflow.com": 10,
-                    "ru.stackoverflow.com": 10,
-                    "serverfault.com": 10,
-                    "blender.stackexchange.com": 5,
-                    "codegolf.stackexchange.com": 5,
-                    "codereview.stackexchange.com": 5,
-                    "es.stackoverflow.com": 5,
-                    "physics.stackexchange.com": 5,
-                    "stackoverflow.com": 5,
-                    "stats.stackexchange.com": 5,
-                    "tex.stackexchange.com": 5,
-                    "magento.stackexchange.com": 3,
-                    "gis.stackexchange.com": 3,
-                    "3dprinting.stackexchange.com": 1,
-                    "academia.stackexchange.com": 1,
-                    "beer.stackexchange.com": 1,
-                    "engineering.stackexchange.com": 1,
-                    "drupal.stackexchange.com": 1,
-                    "expatriates.stackexchange.com": 1,
-                    "genealogy.stackexchange.com": 1,
-                    "ham.stackexchange.com": 1,
-                    "health.stackexchange.com": 1,
-                    "history.stackexchange.com": 1,
-                    "meta.stackexchange.com": 1,
-                    "money.stackexchange.com": 1,
-                    "outdoors.stackexchange.com": 1,
-                    "parenting.stackexchange.com": 1,
-                    "patents.stackexchange.com": 1,
-                    "pets.stackexchange.com": 1,
-                    "startups.stackexchange.com": 1,
-                    "travel.stackexchange.com": 1,
-                    "webapps.stackexchange.com": 1,
-                    "woodworking.stackexchange.com": 1,
-                    "writers.stackexchange.com": 1}
+    special_cases = {
+        "math.stackexchange.com": 15,
+        "pt.stackoverflow.com": 10,
+        "ru.stackoverflow.com": 10,
+        "serverfault.com": 10,
+        "blender.stackexchange.com": 5,
+        "codegolf.stackexchange.com": 5,
+        "codereview.stackexchange.com": 5,
+        "es.stackoverflow.com": 5,
+        "physics.stackexchange.com": 5,
+        "stackoverflow.com": 5,
+        "stats.stackexchange.com": 5,
+        "tex.stackexchange.com": 5,
+        "magento.stackexchange.com": 3,
+        "gis.stackexchange.com": 3,
+        "3dprinting.stackexchange.com": 1,
+        "academia.stackexchange.com": 1,
+        "alcohol.stackexchange.com": 1,
+        "engineering.stackexchange.com": 1,
+        "drupal.stackexchange.com": 1,
+        "expatriates.stackexchange.com": 1,
+        "genealogy.stackexchange.com": 1,
+        "ham.stackexchange.com": 1,
+        "health.stackexchange.com": 1,
+        "history.stackexchange.com": 1,
+        "meta.stackexchange.com": 1,
+        "money.stackexchange.com": 1,
+        "outdoors.stackexchange.com": 1,
+        "parenting.stackexchange.com": 1,
+        "patents.stackexchange.com": 1,
+        "pets.stackexchange.com": 1,
+        "startups.stackexchange.com": 1,
+        "travel.stackexchange.com": 1,
+        "webapps.stackexchange.com": 1,
+        "woodworking.stackexchange.com": 1,
+        "writers.stackexchange.com": 1
+    }
 
-    timeSensitive = ["askubuntu.com", "superuser.com", "security.stackexchange.com", "movies.stackexchange.com",
-                     "mathoverflow.net", "gaming.stackexchange.com", "webmasters.stackexchange.com",
-                     "arduino.stackexchange.com"]
+    time_sensitive = [
+        "askubuntu.com", "superuser.com",
+        "security.stackexchange.com", "movies.stackexchange.com",
+        "mathoverflow.net", "gaming.stackexchange.com",
+        "webmasters.stackexchange.com", "arduino.stackexchange.com"
+    ]
 
     threshold = 2
 
@@ -60,40 +65,41 @@ class BodyFetcher:
     queue_modify_lock = threading.Lock()
 
     def add_to_queue(self, post, should_check_site=False):
+        mse_sandbox_id = 3122
         d = json.loads(json.loads(post)["data"])
-        sitebase = d["siteBaseHostAddress"]
-        postid = d["id"]
-        if postid == 3122 and sitebase == "meta.stackexchange.com":
+        site_base = d["siteBaseHostAddress"]
+        post_id = d["id"]
+        if post_id == mse_sandbox_id and site_base == "meta.stackexchange.com":
             return  # don't check meta sandbox, it's full of weird posts
         self.queue_modify_lock.acquire()
-        if sitebase in self.queue:
-            self.queue[sitebase].append(postid)
+        if site_base in self.queue:
+            self.queue[site_base].append(post_id)
         else:
-            self.queue[sitebase] = [postid]
+            self.queue[site_base] = [post_id]
         self.queue_modify_lock.release()
 
         if should_check_site:
-            self.make_api_call_for_site(sitebase)
+            self.make_api_call_for_site(site_base)
         else:
             self.check_queue()
         return
 
     def check_queue(self):
         for site, values in self.queue.iteritems():
-            if site in self.specialCases:
-                if len(values) >= self.specialCases[site]:
-                    print "site " + site + " met special case quota, fetching..."
+            if site in self.special_cases:
+                if len(values) >= self.special_cases[site]:
+                    print "site {0} met special case quota, fetching...".format(site)
                     self.make_api_call_for_site(site)
                     return
-            if site in self.timeSensitive:
+            if site in self.time_sensitive:
                 if len(values) >= 1 and datetime.utcnow().hour in range(4, 12):
-                    print "site " + site + " has activity during peak spam time, fetching..."
+                    print "site {0} has activity during peak spam time, fetching...".format(site)
                     self.make_api_call_for_site(site)
                     return
 
         # if we don't have any sites with their queue filled, take the first one without a special case
         for site, values in self.queue.iteritems():
-            if site not in self.specialCases and len(values) >= self.threshold:
+            if site not in self.special_cases and len(values) >= self.threshold:
                 self.make_api_call_for_site(site)
                 return
 
@@ -104,8 +110,9 @@ class BodyFetcher:
 
     def print_queue(self):
         string = ""
-        for site, values in self.queue.iteritems():
-            string = string + "\n" + site + ": " + str(len(values))
+        '\n'.join("{0}: {1}".format(
+            k, str(len(values))
+        ) for (k, v) in self.queue.iteritems())
 
         return string
 
@@ -114,6 +121,9 @@ class BodyFetcher:
         posts = self.queue.pop(site)
         store_bodyfetcher_queue()
         self.queue_modify_lock.release()
+
+        question_modifier = ""
+        pagesize_modifier = ""
 
         if site == "stackoverflow.com":
             # Not all SO questions are shown in the realtime feed. We now
@@ -124,9 +134,16 @@ class BodyFetcher:
                 pagesize = "50"
             else:
                 pagesize = "25"
-            url = "http://api.stackexchange.com/2.2/questions?site=stackoverflow&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw((&pagesize=" + pagesize + min_query
+            pagesize_modifier = "&pagesize={0}{1}".format(pagesize, min_query)
         else:
-            url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts) + "?site=" + site + "&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw(("
+            question_modifier = "/{0}".format(";".join(str(x) for x in posts))
+
+        url = "http://api.stackexchange.com/2.2/questions{q_modifier}?site={site}".format(
+            q_modifier=question_modifier,
+            site=site
+        ) + "&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw(({0}".format(
+            pagesize_modifier
+        )
 
         # wait to make sure API has/updates post data
         time.sleep(3)
@@ -145,11 +162,20 @@ class BodyFetcher:
         message_hq = ""
         if "quota_remaining" in response:
             if response["quota_remaining"] - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0:
-                GlobalVars.charcoal_hq.send_message("API quota rolled over with {} requests remaining. Current quota: {}.".format(GlobalVars.apiquota, response["quota_remaining"]))
-                sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1), reverse=True)
+                GlobalVars.charcoal_hq.send_message(
+                    "API quota rolled over with {0} requests remaining.".format(GlobalVars.apiquota) +\
+                    "Current quota: {0}.".format(response["quota_remaining"])
+                )
+                sorted_calls_per_site = sorted(
+                    GlobalVars.api_calls_per_site.items(),
+                    key=itemgetter(1),
+                    reverse=True
+                )
                 api_quota_used_per_site = ""
                 for site_name, quota_used in sorted_calls_per_site:
-                    api_quota_used_per_site = api_quota_used_per_site + site_name.replace('.com', '').replace('.stackexchange', '') + ": " + str(quota_used) + "\n"
+                    api_quota_used_per_site += site_name \
+                        .replace('.com', '') \
+                        .replace('.stackexchange', '') + ": {0}\n".format(str(quota_used))
                 api_quota_used_per_site = api_quota_used_per_site.strip()
                 GlobalVars.charcoal_hq.send_message(api_quota_used_per_site, False)
                 clear_api_data()
@@ -157,13 +183,15 @@ class BodyFetcher:
                 GlobalVars.charcoal_hq.send_message("API reports no quota left!  May be a glitch.")
                 GlobalVars.charcoal_hq.send_message(str(response))  # No code format for now?
             if GlobalVars.apiquota == -1:
-                GlobalVars.charcoal_hq.send_message("Restart: API quota is {}.".format(response["quota_remaining"]))
+                GlobalVars.charcoal_hq.send_message("Restart: API quota is {}.".format(
+                response["quota_remaining"]
+            ))
             GlobalVars.apiquota = response["quota_remaining"]
         else:
             message_hq = "The quota_remaining property was not in the API response."
 
         if "error_message" in response:
-            message_hq = message_hq + " Error: {}.".format(response["error_message"])
+            message_hq += " Error: {}.".format(response["error_message"])
 
         if "backoff" in response:
             if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
@@ -177,7 +205,9 @@ class BodyFetcher:
                 try:
                     cat_picture_link = None
                     while cat_picture_link is None or cat_picture_link.endswith("gif"):
-                        cat_picture_link = requests.get("http://random.cat/meow").json()['file']
+                        cat_picture_link = requests.get("http://random.cat/meow") \
+                            .json()['file'] \
+                            .replace(" ", "%20")
                     GlobalVars.charcoal_hq.send_message(cat_picture_link)
                 except:
                     print("We can't get a cat picture. Grrr")
@@ -186,8 +216,9 @@ class BodyFetcher:
             return
 
         if site == "stackoverflow.com":
-            if len(response["items"]) > 0 and "last_activity_date" in response["items"][0]:
-                self.last_activity_date = response["items"][0]["last_activity_date"]
+            items = response["items"]
+            if len(items) > 0 and "last_activity_date" in items[0]:
+                self.last_activity_date = items[0]["last_activity_date"]
 
         for post in response["items"]:
             if "title" not in post or "body" not in post:
@@ -208,12 +239,39 @@ class BodyFetcher:
                 owner_rep = 0
             q_id = str(post["question_id"])
 
-            is_spam, reason, why = check_if_spam(title, body, owner_name, owner_link, site, q_id, False, False, owner_rep, post_score)
+            is_spam, reason, why = check_if_spam(
+                title,
+                body,
+                owner_name,
+                owner_link,
+                site,
+                q_id,
+                False,
+                False,
+                owner_rep,
+                post_score
+            )
             if is_spam:
                 try:
-                    handle_spam(title, body, owner_name, site, link, owner_link, q_id, reason, False, why, owner_rep, post_score, up_vote_count, down_vote_count, None)
+                    handle_spam(
+                        title,
+                        body,
+                        owner_name,
+                        site,
+                        link,
+                        owner_link,
+                        q_id,
+                        reason,
+                        False,
+                        why,
+                        owner_rep,
+                        post_score,
+                        up_vote_count,
+                        down_vote_count,
+                        None
+                    )
                 except:
-                    print "NOP"
+                    print "NOPE"
             try:
                 for answer in post["answers"]:
                     answer_title = ""
@@ -233,12 +291,39 @@ class BodyFetcher:
                         owner_link = ""
                         owner_rep = 0
 
-                    is_spam, reason, why = check_if_spam(answer_title, body, owner_name, owner_link, site, a_id, True, False, owner_rep, post_score)
+                    is_spam, reason, why = check_if_spam(
+                        answer_title,
+                        body,
+                        owner_name,
+                        owner_link,
+                        site,
+                        a_id,
+                        True,
+                        False,
+                        owner_rep,
+                        post_score
+                    )
                     if is_spam:
                         try:
-                            handle_spam(title, body, owner_name, site, link, owner_link, a_id, reason, True, why, owner_rep, post_score, up_vote_count, down_vote_count, q_id)
+                            handle_spam(
+                            title,
+                            body,
+                            owner_name,
+                            site,
+                            link,
+                            owner_link,
+                            a_id,
+                            reason,
+                            True,
+                            why,
+                            owner_rep,
+                            post_score,
+                            up_vote_count,
+                            down_vote_count,
+                            q_id
+                        )
                         except:
-                            print "NOP"
+                            print "NOPE"
             except:
                 print "no answers"
         return
