@@ -173,15 +173,6 @@ class BodyFetcher:
         if len(message_hq) > 0:
             GlobalVars.charcoal_hq.send_message(message_hq.strip())
 
-            if "backoff" in response:
-                try:
-                    cat_picture_link = None
-                    while cat_picture_link is None or cat_picture_link.endswith("gif"):
-                        cat_picture_link = requests.get("http://random.cat/meow").json()['file']
-                    GlobalVars.charcoal_hq.send_message(cat_picture_link)
-                except:
-                    print("We can't get a cat picture. Grrr")
-
         if "items" not in response:
             return
 
