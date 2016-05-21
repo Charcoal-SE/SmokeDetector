@@ -114,7 +114,8 @@ def watcher(ev, wrap2):
             ev.message.reply("I don't have any messages posted after the latest reboot.")
             return
         if len(commands) > len(latest_smokedetector_messages):
-            ev.message.reply("I've only posted {} messages".format(len(latest_smokedetector_messages)) +
+            ev.message.reply(
+                "I've only posted {} messages".format(len(latest_smokedetector_messages)) +
                 "since the latest reboot; that's not enough to execute all commands. No commands were executed."
             )
             return
@@ -310,12 +311,14 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
 
             return "Recorded answer as an NAA in metasmoke."
 
-        if (second_part_lower.startswith("delete") \
-            or second_part_lower.startswith("remove") \
-            or second_part_lower.startswith("gone") \
-            or second_part_lower.startswith("poof") \
-            or second_part_lower == "del") \
-        and is_privileged(ev_room, ev_user_id, wrap2):
+        if (
+            second_part_lower.startswith("delete") or
+            second_part_lower.startswith("remove") or
+            second_part_lower.startswith("gone") or
+            second_part_lower.startswith("poof") or
+            second_part_lower == "del"
+        ) and is_privileged(ev_room, ev_user_id, wrap2):
+
             try:
                 msg.delete()
             except:
@@ -585,8 +588,8 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
 
     if content_lower.startswith("!!/help") or content_lower.startswith("!!/info"):
         return "I'm [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector), a bot "\
-        "that detects spam and offensive posts on the network and posts alerts to chat. "\
-        "[A command list is available here](https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands)."
+            "that detects spam and offensive posts on the network and posts alerts to chat. "\
+            "[A command list is available here](https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands)."
     if content_lower.startswith("!!/apiquota"):
         return "The current API quota remaining is {}.".format(GlobalVars.apiquota)
     if content_lower.startswith("!!/whoami"):
@@ -603,9 +606,8 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         user_to_blame = random.choice(GlobalVars.users_chatting[ev_room])
         return u"It's [{}]({})'s fault.".format(user_to_blame[0], user_to_blame[1])
     if "smokedetector" in content_lower and "fault" in content_lower \
-    and ("xkcdbot" in ev_user_name.lower() \
-        or "bjb568" in ev_user_name.lower()
-    ):
+            and ("xkcdbot" in ev_user_name.lower() or "bjb568" in ev_user_name.lower()):
+
         return "Liar"
     if content_lower.startswith("!!/coffee"):
         return "*brews coffee for @" + ev_user_name.replace(" ", "") + "*"
@@ -617,8 +619,8 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 'chamomile',
                 'lemon',
                 'darjeeling',
-                'mint'
-                , 'jasmine'
+                'mint',
+                'jasmine'
             ]),
             user=ev_user_name.replace(" ", "")
         )
@@ -689,11 +691,11 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 return None
 
             return "You'll now get pings from me if I report a post "\
-            "on `{0}`, in room `{1}` on `chat.{2}`".format(
-                full_site,
-                room_id,
-                chat_site
-            )
+                "on `{0}`, in room `{1}` on `chat.{2}`".format(
+                    full_site,
+                    room_id,
+                    chat_site
+                )
         elif r == -1:
             return "That notification configuration is already registered."
         elif r == -2:
@@ -715,11 +717,11 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             if quiet_action:
                 return None
             return "I will no longer ping you if I report a post "\
-            "on `{0}`, in room `{1}` on `chat.{2}`".format(
-                full_site,
-                room_id,
-                chat_site
-            )
+                "on `{0}`, in room `{1}` on `chat.{2}`".format(
+                    full_site,
+                    room_id,
+                    chat_site
+                )
         else:
             return "That configuration doesn't exist."
     if content_lower.startswith("!!/willibenotified"):

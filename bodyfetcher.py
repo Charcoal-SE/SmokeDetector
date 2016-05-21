@@ -111,8 +111,8 @@ class BodyFetcher:
     def print_queue(self):
         string = ""
         '\n'.join("{0}: {1}".format(
-            k, str(len(values))
-        ) for (k, v) in self.queue.iteritems())
+            key, str(len(values))
+        ) for (key, values) in self.queue.iteritems())
 
         return string
 
@@ -163,7 +163,7 @@ class BodyFetcher:
         if "quota_remaining" in response:
             if response["quota_remaining"] - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0:
                 GlobalVars.charcoal_hq.send_message(
-                    "API quota rolled over with {0} requests remaining.".format(GlobalVars.apiquota) +\
+                    "API quota rolled over with {0} requests remaining.".format(GlobalVars.apiquota) +
                     "Current quota: {0}.".format(response["quota_remaining"])
                 )
                 sorted_calls_per_site = sorted(
@@ -183,9 +183,11 @@ class BodyFetcher:
                 GlobalVars.charcoal_hq.send_message("API reports no quota left!  May be a glitch.")
                 GlobalVars.charcoal_hq.send_message(str(response))  # No code format for now?
             if GlobalVars.apiquota == -1:
-                GlobalVars.charcoal_hq.send_message("Restart: API quota is {}.".format(
-                response["quota_remaining"]
-            ))
+                GlobalVars.charcoal_hq.send_message(
+                    "Restart: API quota is {}.".format(
+                        response["quota_remaining"]
+                    )
+                )
             GlobalVars.apiquota = response["quota_remaining"]
         else:
             message_hq = "The quota_remaining property was not in the API response."
@@ -306,22 +308,22 @@ class BodyFetcher:
                     if is_spam:
                         try:
                             handle_spam(
-                            title,
-                            body,
-                            owner_name,
-                            site,
-                            link,
-                            owner_link,
-                            a_id,
-                            reason,
-                            True,
-                            why,
-                            owner_rep,
-                            post_score,
-                            up_vote_count,
-                            down_vote_count,
-                            q_id
-                        )
+                                title,
+                                body,
+                                owner_name,
+                                site,
+                                link,
+                                owner_link,
+                                a_id,
+                                reason,
+                                True,
+                                why,
+                                owner_rep,
+                                post_score,
+                                up_vote_count,
+                                down_vote_count,
+                                q_id
+                            )
                         except:
                             print "NOP"
             except:

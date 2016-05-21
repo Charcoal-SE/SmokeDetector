@@ -24,7 +24,10 @@ def uncaught_exception(exctype, value, tb):
         f.write(logged_msg)
     exit_code = 1
     if seconds < 180 and exctype != WebSocketConnectionClosedException\
-        and exctype != KeyboardInterrupt and exctype != SystemExit and exctype != requests.ConnectionError:
+            and exctype != KeyboardInterrupt \
+            and exctype != SystemExit \
+            and exctype != requests.ConnectionError:
+
         exit_code = 4
 
     os._exit(exit_code)

@@ -45,7 +45,7 @@ def api_get_post(post_url):
             api_filter=api_filter
         )
     response = requests.get(request_url).json()
-    if "backoff" in resp_json:
+    if "backoff" in response:
         if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
             GlobalVars.api_backoff_time = time.time() + response["backoff"]
     if 'items' not in response or len(response['items']) == 0:

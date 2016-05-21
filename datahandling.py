@@ -78,14 +78,17 @@ def filter_auto_ignored_posts():
 def is_false_positive(postid_site_tuple):
     return postid_site_tuple in GlobalVars.false_positives
 
+
 def is_whitelisted_user(user):
     return user in GlobalVars.whitelisted_users
+
 
 def is_blacklisted_user(user):
     for blacklisted_user in GlobalVars.blacklisted_users:
         if user == blacklisted_user[0]:
             return True
     return False
+
 
 def get_blacklisted_user_data(user):
     for blacklisted_user in GlobalVars.blacklisted_users:
@@ -112,6 +115,7 @@ def is_privileged(room_id_str, user_id_str, wrap2):
     return user.is_moderator
 
 # methods to add/remove whitelisted/blacklisted users, ignored posts, ...
+
 
 def add_whitelisted_user(user):
     if user in GlobalVars.whitelisted_users or user is None:
@@ -192,6 +196,7 @@ def get_why(site, post_id):
 def filter_why(max_size=50):
     GlobalVars.why_data = GlobalVars.why_data[-max_size:]
 
+
 def add_why_allspam(user, why):
     GlobalVars.why_data_allspam.append((user, why))
     filter_why_allspam()
@@ -205,16 +210,20 @@ def get_why_allspam(user):
             return post[1]
     return None
 
+
 def add_post_site_id_link(post_site_id, question_id):
     GlobalVars.post_site_id_to_question[post_site_id] = question_id
+
 
 def get_post_site_id_link(post_site_id):
     if post_site_id in GlobalVars.post_site_id_to_question:
         return GlobalVars.post_site_id_to_question[post_site_id]
     return None
 
+
 def filter_why_allspam(max_size=50):
     GlobalVars.why_data_allspam = GlobalVars.why_data_allspam[-max_size:]
+
 
 def add_latest_smokedetector_message(room, message_id):
     GlobalVars.latest_smokedetector_messages[room].append(message_id)
@@ -280,14 +289,16 @@ def fetch_lines_from_error_log(line_count):
         return "The fetched part is empty. Please try another line count."
     return fetched
 
+
 # method to check whether a SE site exists:
+
 
 def refresh_sites():
     has_more = True
     page = 1
     while has_more:
         response = requests.get(
-            "https://api.stackexchange.com/2.2/sites?" \
+            "https://api.stackexchange.com/2.2/sites?" +
             "filter=!%29Qpa1bTB_jCkeaZsqiQ8pDwI&pagesize=500&page={}".format(str(page)) +
             "&key=IAkbitmze4B8KpacUfLqkw(("
         )
@@ -351,9 +362,10 @@ def will_i_be_notified(user_id, chat_site, room_id, se_site):
 def get_all_notification_sites(user_id, chat_site, room_id):
     sites = []
     for notification in GlobalVars.notifications:
-        if  notification[0] == int(user_id) \
-        and notification[1] == chat_site \
-        and notification[2] == int(room_id):
+        if notification[0] == int(user_id) \
+                and notification[1] == chat_site \
+                and notification[2] == int(room_id):
+
             sites.append(notification[3])
     return sites
 
@@ -361,9 +373,10 @@ def get_all_notification_sites(user_id, chat_site, room_id):
 def get_user_ids_on_notification_list(chat_site, room_id, se_site):
     uids = []
     for notification in GlobalVars.notifications:
-        if  notification[0] == int(user_id) \
-        and notification[1] == chat_site \
-        and notification[2] == int(room_id):
+        if notification[1] == chat_site \
+                and notification[2] == int(room_id) \
+                and notification[3] == se_site:
+
             uids.append(notification[0])
     return uids
 

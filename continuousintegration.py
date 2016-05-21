@@ -67,7 +67,7 @@ def watch_ci():
                 if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > time_to_test:
 
                     request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/' + latest_sha)
-                    commit_message = r.json()["commit"]["message"]
+                    commit_message = request.json()["commit"]["message"]
                     print commit_message
                     if "autopull" in commit_message:
                         GlobalVars.charcoal_hq.send_message("[CI build passed]({}) on {}. Commit message contains 'autopull', pulling...".format(target_url, ci_platform))

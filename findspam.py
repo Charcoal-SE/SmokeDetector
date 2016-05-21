@@ -41,8 +41,9 @@ def has_few_characters(s, site):
 
 def has_repeating_characters(s, site):
     s = regex.sub('http[^"]*', "", s)    # remove URLs for this check
-    if s is None or len(s) == 0 \
-    or len(s) >= 300 or regex.compile("<pre>|<code>").search(s):
+    if s is None or len(s) == 0 or \
+            len(s) >= 300 or regex.compile("<pre>|<code>").search(s):
+
         return False, ""
     matches = regex.compile(u"([^\\s_\u200b\u200c.,?!=~*/0-9-])(\\1{10,})", regex.UNICODE).findall(s)
     match = "".join(["".join(match) for match in matches])
@@ -119,7 +120,7 @@ def has_customer_service(s, site):  # flexible detection of customer service in 
         keywords = regex.compile(r"(?i)\b(customer|help|care|helpline|reservation|phone|recovery|service|support|contact|tech|technical|telephone|number)\b").findall(s)
         if len(set(keywords)) >= 2:
             matches = ", ".join(["".join(match) for match in keywords])
-            return True, u"Scam aimed at {} customers. Keywords: {}".format(business.group(0), match)
+            return True, u"Scam aimed at {} customers. Keywords: {}".format(business.group(0), matches)
     return False, ""
 
 
@@ -379,7 +380,7 @@ class FindSpam:
         r"(supportnumber|onlineshop|videoclasses|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot)",
         r"(e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
         r"(packers\S{0,3}movers|goatse|burnfat|gronkaffe|muskel|nitricoxide|masculin|menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
-         r"([\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits|research-?paper)\.(co|net|org|in\W|info)",
+        r"([\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits|research-?paper)\.(co|net|org|in\W|info)",
         r"(health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
         r"https?://[\w-.]*?\.repair\W", r"https?://[\w-.]{10,}\.help\W",
         r"filefix(er)?\.com", r"\.page\.tl\W", r"infotech\.(com|net|in)",
