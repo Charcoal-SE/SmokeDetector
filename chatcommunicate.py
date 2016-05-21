@@ -685,14 +685,14 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         room_id = int(room_id)
         quiet_action = ("-" in message_parts[2])
         se_site = message_parts[2].replace('-', '')
-        r, full_site = add_to_notification_list(user_id, chat_site, room_id, se_site)
-        if r == 0:
+        response, full_site = add_to_notification_list(user_id, chat_site, room_id, se_site)
+        if response == 0:
             if quiet_action:
                 return None
 
             return "You'll now get pings from me if I report a post "\
                 "on `{0}`, in room `{1}` on `chat.{2}`".format(
-                    full_site,
+                    se_site,
                     room_id,
                     chat_site
                 )
@@ -712,13 +712,13 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         room_id = int(room_id)
         quiet_action = ("-" in message_parts[2])
         se_site = message_parts[2].replace('-', '')
-        r = remove_from_notification_list(user_id, chat_site, room_id, se_site)
-        if r:
+        response = remove_from_notification_list(user_id, chat_site, room_id, se_site)
+        if response:
             if quiet_action:
                 return None
             return "I will no longer ping you if I report a post "\
                 "on `{0}`, in room `{1}` on `chat.{2}`".format(
-                    full_site,
+                    se_site,
                     room_id,
                     chat_site
                 )
