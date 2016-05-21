@@ -1,4 +1,4 @@
 [Config]
 location=location_here
 
-metasmoke_host=dvsbsbsfb
+metasmoke_host=http://127.0.0.1:3000
