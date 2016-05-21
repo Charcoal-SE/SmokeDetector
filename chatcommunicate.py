@@ -696,9 +696,9 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                     room_id,
                     chat_site
                 )
-        elif r == -1:
+        elif response == -1:
             return "That notification configuration is already registered."
-        elif r == -2:
+        elif response == -2:
             return False, "The given SE site does not exist."
     if content_lower.startswith("!!/unnotify"):
         if len(message_parts) != 3:
@@ -722,8 +722,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                     room_id,
                     chat_site
                 )
-        else:
-            return "That configuration doesn't exist."
+        return "That configuration doesn't exist."
     if content_lower.startswith("!!/willibenotified"):
         if len(message_parts) != 3:
             return False, "2 arguments expected"
