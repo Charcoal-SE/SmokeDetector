@@ -40,13 +40,13 @@ def watch_ci():
                   'Content-Length: 2\n' +
                   '\nOK\n')
         conn.close()
-        request = requests.get('{0}git/refs/heads/master'.format(api_url))
+        request = requests.get('{base_url}git/refs/heads/master'.format(base_url=api_url))
         latest_sha = request.json()["object"]["sha"]
         print latest_sha
         request = requests.get(
-            '{0}/commits/{1}/statuses'.format(
-                api_url,
-                latest_sha
+            '{base_url}/commits/{commit_code}/statuses'.format(
+                base_url=api_url,
+                commit_code=latest_sha
             )
         )
         for status in request.json():
@@ -68,9 +68,9 @@ def watch_ci():
                 if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > time_to_test:
 
                     request = requests.get(
-                        '{0}/commits/{1}'.format(
-                            api_url,
-                            latest_sha
+                        '{base_url}/commits/{commit_code}'.format(
+                            base_url=api_url,
+                            commit_code=latest_sha
                         )
                     )
                     commit_message = request.json()["commit"]["message"]
