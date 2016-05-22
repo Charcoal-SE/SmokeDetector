@@ -183,11 +183,7 @@ class BodyFetcher:
                 GlobalVars.charcoal_hq.send_message("API reports no quota left!  May be a glitch.")
                 GlobalVars.charcoal_hq.send_message(str(response))  # No code format for now?
             if GlobalVars.apiquota == -1:
-                GlobalVars.charcoal_hq.send_message(
-                    "Restart: API quota is {}.".format(
-                        response["quota_remaining"]
-                    )
-                )
+                GlobalVars.charcoal_hq.send_message("Restart: API quota is {quota}.".format(quota=response["quota_remaining"]))
             GlobalVars.apiquota = response["quota_remaining"]
         else:
             message_hq = "The quota_remaining property was not in the API response."
