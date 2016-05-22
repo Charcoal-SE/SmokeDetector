@@ -6,9 +6,7 @@ import phonenumbers
 def all_caps_text(s, site):
     s = regex.sub("<[^>]*>", "", s)   # remove HTML tags
     s = regex.sub("&\w+;", "", s)     # remove HTML entities
-    if len(s) <= 150 and regex.compile(
-        ur"SQL|\b(ERROR|PHP|QUERY|ANDROID|CASE|SELECT|HAVING|COUNT|GROUP|ORDER BY|INNER|OUTER)\b"
-    ).search(s):
+    if len(s) <= 150 and regex.compile(ur"SQL|\b(ERROR|PHP|QUERY|ANDROID|CASE|SELECT|HAVING|COUNT|GROUP|ORDER BY|INNER|OUTER)\b").search(s):
         return False, ""   # common words in non-spam all-caps titles
     if len(s) >= 15 and regex.compile(ur"^(?=.*\p{upper})\P{lower}*$", regex.UNICODE).search(s):
         return True, "All in caps"
