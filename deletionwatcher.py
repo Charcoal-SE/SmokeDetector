@@ -52,8 +52,7 @@ class DeletionWatcher:
                     d = json.loads(json.loads(a)["data"])
                 except:
                     continue
-                if d["a"] == "post-deleted" \
-                        and str(d["qId"]) == question_id \
+                if d["a"] == "post-deleted" and str(d["qId"]) == question_id \
                         and ((post_type == "answer" and "aId" in d and str(d["aId"]) == post_id) or post_type == "question"):
 
                     t_metasmoke = Thread(target=Metasmoke.send_deletion_stats_for_post, args=(post_url, True))
