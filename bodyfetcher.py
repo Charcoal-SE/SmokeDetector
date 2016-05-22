@@ -50,7 +50,6 @@ class BodyFetcher:
         "writers.stackexchange.com": 1
     }
 
-
     timeSensitive = ["askubuntu.com", "superuser.com", "security.stackexchange.com", "movies.stackexchange.com",
                      "mathoverflow.net", "gaming.stackexchange.com", "webmasters.stackexchange.com",
                      "arduino.stackexchange.com"]
@@ -140,7 +139,7 @@ class BodyFetcher:
 
         url = "http://api.stackexchange.com/2.2/questions{q_modifier}?site={site}&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw(({optional_min_query_param}".format(
             q_modifier=question_modifier,
-            site=site
+            site=site,
             optional_min_query_param=pagesize_modifier
         )
 
