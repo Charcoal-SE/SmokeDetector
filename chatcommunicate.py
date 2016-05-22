@@ -126,16 +126,7 @@ def watcher(ev, wrap2):
                 reply += str(i + 1) + ". "
             reply += "[{0}] ".format(current_message.split(" ")[0])
             if current_message.split(" ")[1] != "-":
-                result = handle_commands(
-                    current_message.lower(),
-                    current_message.split(" "),
-                    ev_room, ev_room_name,
-                    ev_user_id,
-                    ev_user_name,
-                    wrap2,
-                    current_message,
-                    message_id
-                )
+                result = handle_commands(current_message.lower(), current_message.split(" "), ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, current_message, message_id)
                 r = result[0]
                 if type(result) == tuple:
                     result = result[1]
