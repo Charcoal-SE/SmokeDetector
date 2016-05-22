@@ -189,7 +189,7 @@ class FindSpam:
                     "teksonit", "Re@d More", "Live Streaming</a", "Blackcore ?Edge", "Copy Buffett", "Push Money App",
                     "Volive( Solutions)?", "(meg|test)adrox", "Herbalife", "Accumass", "purple rhino male enhancement",
                     "male enhancement supplements", "alpha levo", "digital marketing course", "stark trading system",
-                    "bring back lost lover", "service proposal essay", "enetdocumentation"]
+                    "bring back lost lover", "service proposal essay", "enetdocumentation", "okaygoods"]
     bad_keywords_nwb = [u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
                         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
                         "abam26", "watch2live", "cogniq", "(serum|lift) ?eye", "tophealth", "poker[ -]?online",
@@ -360,12 +360,12 @@ class FindSpam:
                             "dcweddingandevents\\.com", "slimdreneavis", "wefix365\\.us", "esofttools\\.com",
                             "wondershare\\.com", "pulsionerotica\\.com", "worldtraveltime\\.net", "antivirus\\.comodo\\.com",
                             "cardvdonline\\.com", "icasnetwork\\.org", "epicresearch\\.co", "\\.soup\\.io", "pccdkeys\\.com",
-                            "hotxt\\.co\\.uk", "rcframecontractors", "bsgolds\\.com", "okaygoods\\.com", "thedropnet\\.com",
+                            "hotxt\\.co\\.uk", "rcframecontractors", "bsgolds\\.com", "thedropnet\\.com",
                             "science\\.misis\\.ru", "pdf\\.ac/", "slotobit\\.com", "thaykinhmanhinhcamung\\.com",
                             "sfdcbot\\.herokuapp\\.com", "technosanatgroup\\.com", "csgostrong\\.com", "freenom\\.com"]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [r"(supportnumber|onlineshop|videoclasses|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot)",
-                        r"(e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
+                        r"(rsgold|rssong|e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(packers\S{0,3}movers|goatse|burnfat|gronkaffe|muskel|nitricoxide|masculin|menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"([\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits|research-?paper)\.(co|net|org|in\W|info)",
                         r"(health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
