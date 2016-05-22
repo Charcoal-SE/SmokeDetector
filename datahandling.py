@@ -366,10 +366,7 @@ def get_all_notification_sites(user_id, chat_site, room_id):
 def get_user_ids_on_notification_list(chat_site, room_id, se_site):
     uids = []
     for notification in GlobalVars.notifications:
-        if notification[1] == chat_site \
-                and notification[2] == int(room_id) \
-                and notification[3] == se_site:
-
+        if notification[1] == chat_site and notification[2] == int(room_id) and notification[3] == se_site:
             uids.append(notification[0])
     return uids
 
