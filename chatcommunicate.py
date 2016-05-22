@@ -92,10 +92,7 @@ def watcher(ev, wrap2):
     message_parts = content_source.split(" ")
 
     ev_user_name = ev.data["user_name"]
-    ev_user_link = "//chat.{host}/users/{user_id}".format(
-        host=wrap2.host,
-        user_id=ev.user.id
-    )
+    ev_user_link = "//chat.{host}/users/{user_id}".format(host=wrap2.host, user_id=ev.user.id)
     if ev_user_name != "SmokeDetector":
         GlobalVars.users_chatting[ev_room].append((ev_user_name, ev_user_link))
 
