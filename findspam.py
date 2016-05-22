@@ -97,11 +97,7 @@ def has_phone_number(s, site):
             try:
                 z = phonenumbers.parse(phone_number, testf)
                 if phonenumbers.is_possible_number(z) and phonenumbers.is_valid_number(z):
-                    print "Possible {}, Valid {}, Explain: {}".format(
-                        phonenumbers.is_possible_number(z),
-                        phonenumbers.is_valid_number(z),
-                        z
-                    )
+                    print "Possible {}, Valid {}, Explain: {}".format(phonenumbers.is_possible_number(z), phonenumbers.is_valid_number(z), z)
                     return True, u"Phone number: {}".format(phone_number)
             except phonenumbers.phonenumberutil.NumberParseException:
                 pass
