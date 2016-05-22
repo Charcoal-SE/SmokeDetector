@@ -214,11 +214,8 @@ class GlobalVars:
             "3476191"   # Nobody Nada
         ]
     }
-    smokeDetector_user_id = {
-        charcoal_room_id: "120914",
-        meta_tavern_room_id: "266345",
-        socvr_room_id: "3735529"
-    }
+    smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
+                             socvr_room_id: "3735529"}
 
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
 
