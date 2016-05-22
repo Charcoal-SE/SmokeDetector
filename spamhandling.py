@@ -101,7 +101,8 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             username = poster.strip()
             user_link = poster_url
 
-        t_metasmoke = Thread(target=Metasmoke.send_stats_on_post, args=(title, post_url, reason.split(", "), body, username, user_link, why, owner_rep, post_score, up_vote_count, down_vote_count))
+        t_metasmoke = Thread(target=Metasmoke.send_stats_on_post,
+                             args=(title, post_url, reason.split(", "), body, username, user_link, why, owner_rep, post_score, up_vote_count, down_vote_count))
         t_metasmoke.start()
 
         print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
