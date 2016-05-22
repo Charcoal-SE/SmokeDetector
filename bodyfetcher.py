@@ -128,21 +128,22 @@ class BodyFetcher:
         if site == "stackoverflow.com":
             # Not all SO questions are shown in the realtime feed. We now
             # fetch all recently modified SO questions to work around that.
-            min_query = ""
             if self.last_activity_date != 0:
-                min_query = "&min=" + str(self.last_activity_date)
                 pagesize = "50"
             else:
                 pagesize = "25"
-            pagesize_modifier = "&pagesize={0}{1}".format(pagesize, min_query)
-        else:
-            question_modifier = "/{0}".format(";".join(str(x) for x in posts))
 
-        url = "http://api.stackexchange.com/2.2/questions{q_modifier}?site={site}".format(
+            pagesize_modifier = "&pagesize={pagesize}&min={time_length}".format(
+                pagesize=pagesize,
+                time_length=str(self.last_activity_date)
+            )
+        else:
+            question_modifier = "/{0}".format(";".join(str(post) for post in posts))
+
+        url = "http://api.stackexchange.com/2.2/questions{q_modifier}?site={site}&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw(({optional_min_query_param}".format(
             q_modifier=question_modifier,
             site=site
-        ) + "&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw(({0}".format(
-            pagesize_modifier
+            optional_min_query_param=pagesize_modifier
         )
 
         # wait to make sure API has/updates post data
