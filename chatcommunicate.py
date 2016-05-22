@@ -472,13 +472,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         if ev_room == GlobalVars.charcoal_room_id:
             return 'Of course'
         elif ev_room == GlobalVars.meta_tavern_room_id or ev_room == GlobalVars.socvr_room_id:
-            return random.choice([
-                'Yup', 'You doubt me?', 'Of course',
-                '... did I miss something?',
-                'plz send teh coffee',
-                'Watching this endless list of new questions *never* gets boring',
-                'Kinda sorta'
-            ])
+            return random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee', 'Watching this endless list of new questions *never* gets boring', 'Kinda sorta'])
     if content_lower.startswith("!!/rev") or content_lower.startswith("!!/ver"):
         return '[{0}](https://github.com/Charcoal-SE/SmokeDetector/commit/{1})'.format(
             GlobalVars.commit_with_author,
