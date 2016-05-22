@@ -648,8 +648,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         if response:
             if quiet_action:
                 return None
-            return "I will no longer ping you if I report a post "\
-                "on `{0}`, in room `{1}` on `chat.{2}`".format(
+            return "I will no longer ping you if I report a post on `{0}`, in room `{1}` on `chat.{2}`".format(
                     se_site,
                     room_id,
                     chat_site
