@@ -20,12 +20,7 @@ class GlobalVars:
     charcoal_room_id = "11540"
     meta_tavern_room_id = "89"
     socvr_room_id = "41570"
-    blockedTime = {
-        "all": 0,
-        charcoal_room_id: 0,
-        meta_tavern_room_id: 0,
-        socvr_room_id: 0
-    }
+    blockedTime = {"all": 0, charcoal_room_id: 0, meta_tavern_room_id: 0, socvr_room_id: 0}
 
     experimental_reasons = []  # Don't widely report these
     non_socvr_reasons = []    # Don't report to SOCVR
