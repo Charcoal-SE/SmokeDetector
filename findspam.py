@@ -141,7 +141,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
 def keyword_email(s, site):   # a keyword and an email in the same post
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
-    keyword = regex.compile(ur"(?i)\b(training|we (will )?(offer|develop|provide)|sell|invest(or|ing|ment)|money|quality|legit|interest(ed)?|guarantee|catalog|rent|crack|opportunity|fundraising|campaign|career|employment|candidate|resume|loan|lover|husband|female|illuminati|brotherhood|(join|reach|contact) (me|us|him)|spell(caster)?|doctor|hack(er|ing)?|spying|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? ").search(s)
+    keyword = regex.compile(ur"(?i)\b(training|we (will )?(offer|develop|provide)|sell|invest(or|ing|ment)|money|quality|legit|interest(ed)?|guarantee|catalog|rent|crack|opportunity|fundraising|campaign|career|employment|candidate|resume|loan|lover|husband|female|illuminati|brotherhood|(join|reach|contact) (me|us|him)|spell(caster)?|doctor|(cheat|hack)(er|ing)?|spying|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? ").search(s)
     if keyword:
         email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
         if email:
@@ -225,7 +225,7 @@ class FindSpam:
                             "giikers", "pagetube", "myenv\\.org", "testkiz\\.com",
                             "pelevoniface", "herintalk", "menshealth", "examguidez",
                             "skinphysiciantips", "xtrememusclerecoveryrev",
-                            "diabacordoesitwork", "healthy(advise|finder|booklet)", "mixresult\\.com",
+                            "diabacordoesitwork", "healthy(advise|finder|booklet|order)", "mixresult\\.com",
                             "hyperglycemiaabout", "dietandhealthguide", "waffor\\.com",
                             "sourceforge\\.net/projects/freepdftojpgconverter",
                             "pdftoexel\\.wordpress\\.com", "best7th\\.in", "resolit\\.us",
@@ -364,7 +364,7 @@ class FindSpam:
                             "science\\.misis\\.ru", "pdf\\.ac/", "slotobit\\.com", "thaykinhmanhinhcamung\\.com",
                             "sfdcbot\\.herokuapp\\.com", "technosanatgroup\\.com", "csgostrong\\.com", "freenom\\.com"]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
-    pattern_websites = [r"(supportnumber|onlineshop|videoclasses|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot)",
+    pattern_websites = [r"(supportnumber|exclusive|onlineshop|videoclasses|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot)",
                         r"(rsgold|rssong|e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(packers\S{0,3}movers|goatse|burnfat|gronkaffe|muskel|nitricoxide|masculin|menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"([\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits|research-?paper)\.(co|net|org|in\W|info)",
@@ -394,7 +394,7 @@ class FindSpam:
                         r"\w{9}(buy|roofing)\.(co|net|org|in\W|info)",
                         r"(hike|love|strong|ideal|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
-                        r"(acai|belle|ripped|pearl|phyto|herbal|[^s]cream|creme|geniu[sx]|optimal|ideal|xplode|ultra|natura|testo|scam|wellness|grow|rejuven|revive|vita|burn|vapor|ecig|formula|biotic|probio|male|derma|medical|medicare|health|beauty|youth|young|aging|rx|face(?!book)|skin|muscle|hair|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|ultra|alpha|beta|colon|brain(?!tree))[\w]{0,20}(plus|l[iy]ft|trial|nutrition|doctor|congress|jacked|dose|formula|complex(?!ity)|cure|canada|brazil|france|norway|sweden|mexico|denmark|world|genix|critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|center|centre|care|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|mag|chat|guide|advi[sc]|fact|discussion|solution|consult|source|sups|vms|cream|stuff|grow|enhance|boost)[.\w-]{0,12}\.(co|net|org|in\W|info|wordpress|blogspot)",
+                        r"(acai|belle|ripped|pearl|phyto|herbal|[^s]cream|creme|geniu[sx]|optimal|ideal|xplode|ultra|natura|testo|scam|wellness|grow|rejuven|revive|vita|burn|vapor|ecig|formula|biotic|probio|male|derma|medical|medicare|health|beauty|youth|young|aging|rx|face(?!book)|skin|muscle|hair|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|ultra|alpha|beta|colon|brain(?!tree))[\w]{0,20}(plus|l[iy]ft|trial|nutrition|doctor|congress|jacked|dose|formula|order|complex(?!ity)|cure|canada|brazil|france|norway|sweden|mexico|denmark|world|genix|critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|center|centre|care|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|mag|chat|guide|advi[sc]|fact|discussion|solution|consult|source|sups|vms|cream|stuff|grow|enhance|boost)[.\w-]{0,12}\.(co|net|org|in\W|info|wordpress|blogspot)",
                         r"(\w{11}(idea|income|sale)|\w{6}(advice|problog|review))s?\.(co|net|in\W|info)",
                         "-poker\\.com", "send[\w-]*?india\.(co|net|org|in\W|info)",
                         r"(corrupt|repair)[\w-]*?\.blogspot", r"[\w-](courses?|training)[\w-]*?\.in/",
