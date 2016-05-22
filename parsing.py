@@ -162,7 +162,6 @@ def url_to_shortlink(url):
     else:
         return "http://{}/a/{}".format(id_and_site[1], id_and_site[0])
 
-
 def user_url_to_shortlink(url):
     user_id_and_site = get_user_from_url(url)
     if user_id_and_site is None:
