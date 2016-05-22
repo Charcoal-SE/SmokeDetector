@@ -506,15 +506,9 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             post_message_in_room(ev_room, logs_part, False)
     if content_lower.startswith("!!/pull"):
         if is_privileged(ev_room, ev_user_id, wrap2):
-            request = requests.get(
-                'https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master'
-            )
+            request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
             latest_sha = request.json()["object"]["sha"]
-            request = requests.get(
-                'https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/{0}/statuses'.format(
-                    latest_sha
-                )
-            )
+            request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/{commit_code}/statuses'.format(commit_code=latest_sha))
             states = []
             for status in request.json():
                 state = status["state"]
