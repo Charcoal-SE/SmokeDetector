@@ -247,11 +247,7 @@ class GlobalVars:
     config = ConfigParser.RawConfigParser()
     config.read('config')
 
-    latest_smokedetector_messages = {
-        meta_tavern_room_id: [],
-        charcoal_room_id: [],
-        socvr_room_id: []
-    }
+    latest_smokedetector_messages = {meta_tavern_room_id: [], charcoal_room_id: [], socvr_room_id: []}
 
     site_id_dict = {}
     post_site_id_to_question = {}
