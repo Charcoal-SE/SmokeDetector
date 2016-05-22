@@ -442,23 +442,10 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             batch = ""
             if len(urls) > 1:
                 batch = " (batch report: post {} out of {})".format(index, len(urls))
-            handle_spam(
-                post_data.title,
-                post_data.body,
-                post_data.owner_name,
-                post_data.site,
-                post_data.post_url,
-                post_data.owner_url,
-                post_data.post_id,
-                ["Manually reported " + post_data.post_type + batch],
-                post_data.post_type == "answer",
-                why,
-                post_data.owner_rep,
-                post_data.score,
-                post_data.up_vote_count,
-                post_data.down_vote_count,
-                post_data.question_id
-            )
+            handle_spam(post_data.title, post_data.body, post_data.owner_name, post_data.site, post_data.post_url,
+                        post_data.owner_url, post_data.post_id, ["Manually reported " + post_data.post_type + batch],
+                        post_data.post_type == "answer", why, post_data.owner_rep, post_data.score, post_data.up_vote_count,
+                        post_data.down_vote_count, post_data.question_id)
         if 1 < len(urls) > len(output):
             add_or_update_multiple_reporter(ev_user_id, wrap2.host, time.time())
         if len(output) > 0:
