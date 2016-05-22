@@ -129,7 +129,7 @@ def watcher(ev, wrap2):
                 reply += str(i + 1) + ". "
             reply += "[{0}] ".format(current_message.split(" ")[0])
             if current_message.split(" ")[1] != "-":
-                pure_result = handle_commands(
+                result = handle_commands(
                     current_message.lower(),
                     current_message.split(" "),
                     ev_room, ev_room_name,
@@ -139,15 +139,15 @@ def watcher(ev, wrap2):
                     current_message,
                     message_id
                 )
-                result = pure_result
+                r = result[0]
                 if type(result) == tuple:
-                    result = pure_result[1]
+                    result = result[1]
                 if result is not None and result is not False:
                     reply += result + os.linesep
                 elif result is None:
                     reply += "<processed without return value>" + os.linesep
                     amount_none += 1
-                elif result is False or pure_result[0] is False:
+                elif result is False or r is False:
                     reply += "<unrecognized command>" + os.linesep
                     amount_unrecognized += 1
             else:
