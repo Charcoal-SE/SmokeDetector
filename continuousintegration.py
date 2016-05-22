@@ -24,8 +24,6 @@ def watch_ci():
     s.listen(10)
     print 'listening for CI changes'
 
-    api_url = 'https://api.github.com/repos/Charcoal-SE/SmokeDetector/'
-
     while True:
         conn, addr = s.accept()
 
@@ -40,15 +38,10 @@ def watch_ci():
                   'Content-Length: 2\n' +
                   '\nOK\n')
         conn.close()
-        request = requests.get('{base_url}git/refs/heads/master'.format(base_url=api_url))
+        request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
         latest_sha = request.json()["object"]["sha"]
         print latest_sha
-        request = requests.get(
-            '{base_url}/commits/{commit_code}/statuses'.format(
-                base_url=api_url,
-                commit_code=latest_sha
-            )
-        )
+        request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/{commit_code}/statuses'.format(commit_code=latest_sha))
         for status in request.json():
             state = status["state"]
             target_url = status["target_url"]
@@ -67,12 +60,7 @@ def watch_ci():
                 time_to_test = datetime.datetime.now() - datetime.timedelta(seconds=60)
                 if datetime.datetime.strptime(status["updated_at"], '%Y-%m-%dT%H:%M:%SZ') > time_to_test:
 
-                    request = requests.get(
-                        '{base_url}/commits/{commit_code}'.format(
-                            base_url=api_url,
-                            commit_code=latest_sha
-                        )
-                    )
+                    request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/{commit_code}'.format(commit_code=latest_sha))
                     commit_message = request.json()["commit"]["message"]
                     print commit_message
                     if "autopull" in commit_message:

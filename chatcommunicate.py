@@ -111,10 +111,7 @@ def watcher(ev, wrap2):
             )
             return
         for i in xrange(0, len(commands)):
-            shortcut_messages.append(":{0} {1}".format(
-                str(latest_smokedetector_messages[-(i + 1)]),
-                commands[i]
-            ))
+            shortcut_messages.append(":{message} {command_name}".format(message=latest_smokedetector_messages[-(i + 1)], command_name=commands[i]))
         reply = ""
         amount_none = 0
         amount_skipped = 0
@@ -253,7 +250,8 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             if post_site_id is None:
                 return "That message is not a report."
 
-            t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post, args=(post_url, second_part_lower, ev_user_name, ev_user_id,))
+            t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
+                                 args=(post_url, second_part_lower, ev_user_name, ev_user_id,))
             t_metasmoke.start()
 
             add_ignored_post(post_site_id[0:2])
@@ -385,12 +383,10 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             and is_privileged(ev_room, ev_user_id, wrap2):
         crn, wait = can_report_now(ev_user_id, wrap2.host)
         if not crn:
-            return "You can execute the !!/report command again in {} seconds. ".format(wait) + \
-                   "To avoid one user sending lots of reports in a few commands " \
-                   "and slowing SmokeDetector down due to rate-limiting, " \
-                   "you have to wait 30 seconds after you've reported multiple posts " \
-                   "using !!/report, even if your current command just has one URL. " \
-                   "(Note that this timeout won't be applied if you only used !!/report for one post)"
+            return "You can execute the !!/report command again in {} seconds. " \
+                   "To avoid one user sending lots of reports in a few commands and slowing SmokeDetector down due to rate-limiting, " \
+                   "you have to wait 30 seconds after you've reported multiple posts using !!/report, even if your current command just has one URL. " \
+                   "(Note that this timeout won't be applied if you only used !!/report for one post)".format(wait)
         if len(message_parts) < 2:
             return False, "Not enough arguments."
         output = []
@@ -445,11 +441,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         diff = now - UtcDate.startup_utc_date
         minutes, remainder = divmod(diff.seconds, 60)
         minute_str = "minutes" if minutes != 1 else "minute"
-        return 'Running since {} UTC ({} {})'.format(
-            GlobalVars.startup_utc,
-            minutes,
-            minute_str
-        )
+        return 'Running since {time} UTC ({minute_count} {plurality})'.format(time=GlobalVars.startup_utc, minute_count=minutes, plurality=minute_str)
     if content_lower.startswith("!!/reboot"):
         if is_privileged(ev_room, ev_user_id, wrap2):
             post_message_in_room(ev_room, "Goodbye, cruel world")
@@ -542,10 +534,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
     if content_lower.startswith("!!/coffee"):
         return "*brews coffee for @" + ev_user_name.replace(" ", "") + "*"
     if content_lower.startswith("!!/tea"):
-        return "*brews a cup of {choice} tea for @{user}*".format(
-            choice=random.choice(['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint', 'jasmine']),
-            user=ev_user_name.replace(" ", "")
-        )
+        return "*brews a cup of {choice} tea for @{user}*".format(choice=random.choice(['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint', 'jasmine']), user=ev_user_name.replace(" ", ""))
     if content_lower.startswith("!!/brownie"):
         return "Brown!"
     if content_lower.startswith("!!/hats"):

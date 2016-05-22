@@ -100,15 +100,8 @@ class Metasmoke:
                 if commit_response["status"] == "success":
                     autopull_message = "Message contains 'autopull', pulling..."
                     GlobalVars.charcoal_hq.send_message(
-                        "[Continuous integration]({success}) on commit [{commit}](//github.com/Charcoal-SE/SmokeDetector/commit/{sha}) ".format(
-                            status=commit_response["ci_url"],
-                            commit=commit_response["commit_sha"][:7],
-                            sha=commit_response["commit_sha"]
-                        ) +
-                        "(*{0}*) succeeded!{1}".format(
-                            commit_response["commit_message"].split("\n")[0],
-                            autopull_message if "autopull" in commit_response["commit_message"] else ""
-                        )
+                        "[Continuous integration]({status}) on commit [{commit}](//github.com/Charcoal-SE/SmokeDetector/commit/{sha}) ".format(status=commit_response["ci_url"], commit=commit_response["commit_sha"][:7], sha=commit_response["commit_sha"]) +
+                        "(*{commit}*) succeeded!{optional_autopull_message}".format(commit=ommit_response["commit_message"].split("\n")[0], optional_autopull_message=autopull_message if "autopull" in commit_response["commit_message"] else "")
                     )
                     if "autopull" in commit_response["commit_message"]:
                         time.sleep(2)
