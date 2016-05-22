@@ -188,10 +188,7 @@ def watcher(ev, wrap2):
 
 
 def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content, message_id):
-    message_url = "//chat.{host}/transcript/message/{id}#{id}".format(
-        host=wrap2.host,
-        id=message_id
-    )
+    message_url = "//chat.{host}/transcript/message/{id}#{id}".format(host=wrap2.host, id=message_id)
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
     if second_part_lower in ["f", "notspam"]:
         second_part_lower = "fp-"
