@@ -22,15 +22,11 @@ def uncaught_exception(exctype, value, tb):
     print(logged_msg)
     with open("errorLogs.txt", "a") as f:
         f.write(logged_msg)
-    exit_code = 1
     if seconds < 180 and exctype != WebSocketConnectionClosedException\
-            and exctype != KeyboardInterrupt \
-            and exctype != SystemExit \
-            and exctype != requests.ConnectionError:
-
-        exit_code = 4
-
-    os._exit(exit_code)
+            and exctype != KeyboardInterrupt and exctype != SystemExit and exctype != requests.ConnectionError:
+        os._exit(4)
+    else:
+        os._exit(1)
 
 
 def install_thread_excepthook():
