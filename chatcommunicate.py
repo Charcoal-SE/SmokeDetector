@@ -648,10 +648,10 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         if response:
             if quiet_action:
                 return None
-            return "I will no longer ping you if I report a post on `{0}`, in room `{1}` on `chat.{2}`".format(
-                    se_site,
-                    room_id,
-                    chat_site
+            return "I will no longer ping you if I report a post on `{site_name}`, in room `{room_id}` on `chat.{chat_domain}`".format(
+                    site_name=se_site,
+                    room_id=room_id,
+                    chat_domain=chat_site
                 )
         return "That configuration doesn't exist."
     if content_lower.startswith("!!/willibenotified"):
