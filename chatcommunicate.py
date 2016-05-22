@@ -58,10 +58,7 @@ def special_room_watcher(ev, wrap2):
         post_site_id = fetch_post_id_and_site_from_msg_content(content_source)
         post_url = fetch_post_url_from_msg_content(content_source)
         if post_site_id is not None and post_url is not None:
-            t_check_websocket = Thread(
-                target=DeletionWatcher.check_if_report_was_deleted,
-                args=(post_site_id, post_url, ev.message)
-            )
+            t_check_websocket = Thread(target=DeletionWatcher.check_if_report_was_deleted, args=(post_site_id, post_url, ev.message))
             t_check_websocket.daemon = True
             t_check_websocket.start()
 
@@ -89,10 +86,7 @@ def watcher(ev, wrap2):
         post_site_id = fetch_post_id_and_site_from_msg_content(content_source)
         post_url = fetch_post_url_from_msg_content(content_source)
         if post_site_id is not None and (ev_room == GlobalVars.meta_tavern_room_id or ev_room == GlobalVars.socvr_room_id):
-            t_check_websocket = Thread(
-                target=DeletionWatcher.check_if_report_was_deleted,
-                args=(post_site_id, post_url, ev.message)
-            )
+            t_check_websocket = Thread(target=DeletionWatcher.check_if_report_was_deleted, args=(post_site_id, post_url, ev.message))
             t_check_websocket.daemon = True
             t_check_websocket.start()
     message_parts = content_source.split(" ")
@@ -284,10 +278,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             if post_site_id is None:
                 return "That message is not a report."
 
-            t_metasmoke = Thread(
-                target=Metasmoke.send_feedback_for_post,
-                args=(post_url, second_part_lower, ev_user_name, ev_user_id,)
-            )
+            t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post, args=(post_url, second_part_lower, ev_user_name, ev_user_id,))
             t_metasmoke.start()
 
             add_ignored_post(post_site_id[0:2])
