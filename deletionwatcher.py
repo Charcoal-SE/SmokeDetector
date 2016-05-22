@@ -44,10 +44,7 @@ class DeletionWatcher:
             try:
                 a = ws.recv()
             except websocket.WebSocketTimeoutException:
-                t_metasmoke = Thread(
-                    target=Metasmoke.send_deletion_stats_for_post,
-                    args=(post_url, False)
-                )
+                t_metasmoke = Thread(target=Metasmoke.send_deletion_stats_for_post, args=(post_url, False))
                 t_metasmoke.start()
                 return False
             if a is not None and a != "":
@@ -59,17 +56,11 @@ class DeletionWatcher:
                         and str(d["qId"]) == question_id \
                         and ((post_type == "answer" and "aId" in d and str(d["aId"]) == post_id) or post_type == "question"):
 
-                    t_metasmoke = Thread(
-                        target=Metasmoke.send_deletion_stats_for_post,
-                        args=(post_url, True)
-                    )
+                    t_metasmoke = Thread(target=Metasmoke.send_deletion_stats_for_post, args=(post_url, True))
                     t_metasmoke.start()
                     return True
 
-        t_metasmoke = Thread(
-            target=Metasmoke.send_deletion_stats_for_post,
-            args=(post_url, False)
-        )
+        t_metasmoke = Thread(target=Metasmoke.send_deletion_stats_for_post, args=(post_url, False))
         t_metasmoke.start()
         return False
 

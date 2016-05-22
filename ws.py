@@ -129,15 +129,9 @@ def restart_automatically(time_in_seconds):
     time.sleep(time_in_seconds)
     os._exit(1)
 
-Thread(
-    target=restart_automatically,
-    args=(21600,)
-).start()
+Thread(target=restart_automatically, args=(21600,)).start()
 
-Thread(
-    target=watch_ci,
-    args=()
-).start()
+Thread(target=watch_ci, args=()).start()
 
 DeletionWatcher.update_site_id_list()
 
@@ -168,16 +162,10 @@ while True:
         if a is not None and a != "":
             is_spam, reason, why = check_if_spam_json(a)
             if is_spam:
-                t = Thread(
-                    target=GlobalVars.bodyfetcher.add_to_queue,
-                    args=(a, True)
-                )
+                t = Thread(target=GlobalVars.bodyfetcher.add_to_queue, args=(a, True))
                 t.start()
             else:
-                t = Thread(
-                    target=GlobalVars.bodyfetcher.add_to_queue,
-                    args=(a,)
-                )
+                t = Thread(target=GlobalVars.bodyfetcher.add_to_queue, args=(a,))
                 t.start()
     except Exception, e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
