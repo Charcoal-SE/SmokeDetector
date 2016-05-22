@@ -545,10 +545,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         GlobalVars.users_chatting[ev_room] = list(set(GlobalVars.users_chatting[ev_room]))  # Make unique
         user_to_blame = random.choice(GlobalVars.users_chatting[ev_room])
         return u"It's [{}]({})'s fault.".format(user_to_blame[0], user_to_blame[1])
-    if "smokedetector" in content_lower and "fault" in content_lower \
-            and ("xkcdbot" in ev_user_name.lower() or "bjb568" in ev_user_name.lower()):
-
-        return "Liar"
     if content_lower.startswith("!!/coffee"):
         return "*brews coffee for @" + ev_user_name.replace(" ", "") + "*"
     if content_lower.startswith("!!/tea"):
