@@ -236,11 +236,7 @@ class GlobalVars:
     apiquota = -1
     bodyfetcher = None
     se_sites = []
-    users_chatting = {
-        meta_tavern_room_id: [],
-        charcoal_room_id: [],
-        socvr_room_id: []
-    }
+    users_chatting = {meta_tavern_room_id: [], charcoal_room_id: [], socvr_room_id: []}
     why_data = []
     why_data_allspam = []
     notifications = []
