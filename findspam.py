@@ -68,7 +68,9 @@ def non_english_link(s, site):   # non-english link in short answer
     return False, ""
 
 
-def mostly_non_latin(s, site):   # non-english link in short answer
+def mostly_non_latin(s, site):   # majority of post is non-english
+    if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
+        return False, ""
     word_chars = regex.sub(r'(?u)[\W0-9]|\http[^"]*', "", s)
     non_latin_chars = regex.sub(r"\w", "", word_chars)
     if (len(non_latin_chars) > 0.4 * len(word_chars)):
