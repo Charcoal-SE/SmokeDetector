@@ -51,8 +51,8 @@ class BodyFetcher:
     }
 
     time_sensitive = ["askubuntu.com", "superuser.com", "security.stackexchange.com", "movies.stackexchange.com",
-                     "mathoverflow.net", "gaming.stackexchange.com", "webmasters.stackexchange.com",
-                     "arduino.stackexchange.com"]
+                      "mathoverflow.net", "gaming.stackexchange.com", "webmasters.stackexchange.com",
+                      "arduino.stackexchange.com"]
 
     threshold = 2
 
