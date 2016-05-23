@@ -67,7 +67,9 @@ def non_english_link(s, site):   # non-english link in short answer
     return False, ""
 
 
-def mostly_non_latin(s, site):   # non-english link in short answer
+def mostly_non_latin(s, site):   # majority of post is non-english
+    if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
+        return False, ""
     word_chars = regex.sub(r'(?u)[\W0-9]|\http[^"]*', "", s)
     non_latin_chars = regex.sub(r"\w", "", word_chars)
     if (len(non_latin_chars) > 0.4 * len(word_chars)):
@@ -139,7 +141,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
 def keyword_email(s, site):   # a keyword and an email in the same post
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
-    keyword = regex.compile(ur"(?i)\b(training|we (will )?(offer|develop|provide)|sell|invest(or|ing|ment)|money|quality|legit|interest(ed)?|guarantee|catalog|rent|crack|opportunity|fundraising|campaign|career|employment|candidate|resume|loan|lover|husband|female|illuminati|brotherhood|(join|reach|contact) (me|us|him)|spell(caster)?|doctor|hack(er|ing)?|spying|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? ").search(s)
+    keyword = regex.compile(ur"(?i)\b(training|we (will )?(offer|develop|provide)|sell|invest(or|ing|ment)|money|quality|legit|interest(ed)?|guarantee|catalog|rent|crack|opportunity|fundraising|campaign|career|employment|candidate|resume|loan|lover|husband|female|illuminati|brotherhood|(join|reach|contact) (me|us|him)|spell(caster)?|doctor|(cheat|hack)(er|ing)?|spying|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? ").search(s)
     if keyword:
         email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
         if email:
@@ -188,7 +190,7 @@ class FindSpam:
         "teksonit", "Re@d More", "Live Streaming</a", "Blackcore ?Edge", "Copy Buffett", "Push Money App",
         "Volive( Solutions)?", "(meg|test)adrox", "Herbalife", "Accumass", "purple rhino male enhancement",
         "male enhancement supplements", "alpha levo", "digital marketing course", "stark trading system",
-        "bring back lost lover", "service proposal essay", "enetdocumentation"
+        "bring back lost lover", "service proposal essay", "enetdocumentation", "okaygoods"
     ]
     bad_keywords_nwb = [
         u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
@@ -228,7 +230,7 @@ class FindSpam:
         "giikers", "pagetube", "myenv\\.org", "testkiz\\.com",
         "pelevoniface", "herintalk", "menshealth", "examguidez",
         "skinphysiciantips", "xtrememusclerecoveryrev",
-        "diabacordoesitwork", "healthy(advise|finder|booklet)", "mixresult\\.com",
+        "diabacordoesitwork", "healthy(advise|finder|booklet|order)", "mixresult\\.com",
         "hyperglycemiaabout", "dietandhealthguide", "waffor\\.com",
         "sourceforge\\.net/projects/freepdftojpgconverter",
         "pdftoexel\\.wordpress\\.com", "best7th\\.in", "resolit\\.us",
@@ -339,7 +341,7 @@ class FindSpam:
         "chatsim\\.com", "mlkblasters\\.org", "champcash\\.com", "bisbury\\.com",
         "rankyouup\\.com", "reviewanalysis\\.co", "apponfly\\.com", "gogames\\.me",
         "trutech\\.co", "askmespam\\.com", "imdresses\\.com", "doesitscam\\.com",
-        "jobsopening\\.co\\.in", "androidappsformac\\.com", "retersweld\\.com", "mindextra\\.com",
+        "jobsopening\\.co\\.in", "retersweld\\.com", "mindextra\\.com",
         "psychicfuguestudio", "softserialhq\\.com", "unstopableshrine\\.webs\\.com",
         "softaken\\.com", "lyonstechnologies", "serialkeygeneratorfree\\.com", "routeperfect\\.com",
         "tupely\\.com", "apk(heart|safe)\\.com", "uflysoft\\.net", "nimblemessaging\\.com",
@@ -363,14 +365,14 @@ class FindSpam:
         "dcweddingandevents\\.com", "slimdreneavis", "wefix365\\.us", "esofttools\\.com",
         "wondershare\\.com", "pulsionerotica\\.com", "worldtraveltime\\.net", "antivirus\\.comodo\\.com",
         "cardvdonline\\.com", "icasnetwork\\.org", "epicresearch\\.co", "\\.soup\\.io", "pccdkeys\\.com",
-        "hotxt\\.co\\.uk", "rcframecontractors", "bsgolds\\.com", "okaygoods\\.com", "thedropnet\\.com",
+        "hotxt\\.co\\.uk", "rcframecontractors", "bsgolds\\.com", "thedropnet\\.com",
         "science\\.misis\\.ru", "pdf\\.ac/", "slotobit\\.com", "thaykinhmanhinhcamung\\.com",
         "sfdcbot\\.herokuapp\\.com", "technosanatgroup\\.com", "csgostrong\\.com", "freenom\\.com"
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
-        r"(supportnumber|onlineshop|videoclasses|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot)",
-        r"(e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
+        r"(supportnumber|exclusive|onlineshop|videoclasses|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot)",
+        r"(rsgold|rssong|e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
         r"(packers\S{0,3}movers|goatse|burnfat|gronkaffe|muskel|nitricoxide|masculin|menhealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|crazy(bulk|mass)|nauseam|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
         r"([\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits|research-?paper)\.(co|net|org|in\W|info)",
         r"(health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
@@ -399,7 +401,7 @@ class FindSpam:
         r"\w{9}(buy|roofing)\.(co|net|org|in\W|info)",
         r"(hike|love|strong|ideal|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
-        r"(acai|belle|ripped|pearl|phyto|herbal|[^s]cream|creme|geniu[sx]|optimal|ideal|xplode|ultra|natura|testo|scam|wellness|grow|rejuven|revive|vita|burn|vapor|ecig|formula|biotic|probio|male|derma|medical|medicare|health|beauty|youth|young|aging|rx|face(?!book)|skin|muscle|hair|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|ultra|alpha|beta|colon|brain(?!tree))[\w]{0,20}(plus|l[iy]ft|trial|nutrition|doctor|congress|jacked|dose|formula|complex(?!ity)|cure|canada|brazil|france|norway|sweden|mexico|denmark|world|genix|critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|center|centre|care|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|mag|chat|guide|advi[sc]|fact|discussion|solution|consult|source|sups|vms|cream|stuff|grow|enhance|boost)[.\w-]{0,12}\.(co|net|org|in\W|info|wordpress|blogspot)",
+        r"(acai|belle|ripped|pearl|phyto|herbal|[^s]cream|creme|geniu[sx]|optimal|ideal|xplode|ultra|natura|testo|scam|wellness|grow|rejuven|revive|vita|burn|vapor|ecig|formula|biotic|probio|male|derma|medical|medicare|health|beauty|youth|young|aging|rx|face(?!book)|skin|muscle|hair|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|ultra|alpha|beta|colon|brain(?!tree))[\w]{0,20}(plus|l[iy]ft|trial|nutrition|doctor|congress|jacked|dose|formula|order|complex(?!ity)|cure|canada|brazil|france|norway|sweden|mexico|denmark|world|genix|critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|center|centre|care|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|mag|chat|guide|advi[sc]|fact|discussion|solution|consult|source|sups|vms|cream|stuff|grow|enhance|boost)[.\w-]{0,12}\.(co|net|org|in\W|info|wordpress|blogspot)",
         r"(\w{11}(idea|income|sale)|\w{6}(advice|problog|review))s?\.(co|net|in\W|info)",
         "-poker\\.com", "send[\w-]*?india\.(co|net|org|in\W|info)",
         r"(corrupt|repair)[\w-]*?\.blogspot", r"[\w-](courses?|training)[\w-]*?\.in/",
@@ -420,7 +422,8 @@ class FindSpam:
         r"world[\w-]*?cricket[\w-]*?\.(co|net|org|in\W|info)",
         r"(credit|online)[\w-]*?loan[\w-]*?\.(co|net|org|in\W|info)",
         r"worldcup\d+live\.(com?|net|org|in\W|info)",
-        r"((concrete|beton)-?mixer|crusher)[\w-]*?\.(co|net)"
+        r"((concrete|beton)-?mixer|crusher)[\w-]*?\.(co|net)",
+        r"\w{7}formac\.(com|net|org)"
     ]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
@@ -538,7 +541,7 @@ class FindSpam:
         #
         # Category: Trolling
         # Offensive content in titles and posts
-        {'regex': ur"(?is)\b((yo)?u suck|nigg(a|er)|asshole|fag(got)?|daf[au][qk]|(mother)?fuc?k+(ing?|e?r)?|shit(t?er|head)|dickhead|pedo|whore|cunt|suck\b.{0,10}\bdick|dee[sz]e? nut[sz])s?\b|^.{0,250}\bshit\b.{0,250}$", 'all': True,
+        {'regex': ur"(?is)\b((yo)?u suck|nigg(a|er)|asshole|fag(got)?|daf[au][qk]|(mother)?fuc?k+(ing?|e?r)?|shit(t?er|head)|dickhead|pedo|whore|cunt|suck\b.{0,10}\bdick|dee[sz]e? nut[sz])s?\b|^.{0,250}\bshit\b.{0,100}$", 'all': True,
          'sites': [], 'reason': "offensive {} detected", 'insensitive':True, 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 101, 'max_score': 5},
         # All-caps text
         {'method': all_caps_text, 'all': True, 'sites': ["pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com", "ja.stackoverflow.com", "rus.stackexchange.com"],
