@@ -432,10 +432,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         elif ev_room == GlobalVars.meta_tavern_room_id or ev_room == GlobalVars.socvr_room_id:
             return random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee', 'Watching this endless list of new questions *never* gets boring', 'Kinda sorta'])
     if content_lower.startswith("!!/rev") or content_lower.startswith("!!/ver"):
-        return '[{0}](https://github.com/Charcoal-SE/SmokeDetector/commit/{1})'.format(
-            GlobalVars.commit_with_author,
-            GlobalVars.commit
-        )
+        return '[{commit_name}](https://github.com/Charcoal-SE/SmokeDetector/commit/{commit_code})'.format(commit_name=GlobalVars.commit_with_author, commit_code=GlobalVars.commit)
     if content_lower.startswith("!!/status"):
         now = datetime.utcnow()
         diff = now - UtcDate.startup_utc_date
@@ -601,12 +598,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             if quiet_action:
                 return None
 
-            return "You'll now get pings from me if I report a post "\
-                "on `{0}`, in room `{1}` on `chat.{2}`".format(
-                    se_site,
-                    room_id,
-                    chat_site
-                )
+            return "You'll now get pings from me if I report a post on `{site_name}`, in room `{room_id}` on `chat.{chat_domain}`".format(site_name=se_site, room_id=room_id, chat_domain=chat_site)
         elif response == -1:
             return "That notification configuration is already registered."
         elif response == -2:
@@ -627,11 +619,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         if response:
             if quiet_action:
                 return None
-            return "I will no longer ping you if I report a post on `{site_name}`, in room `{room_id}` on `chat.{chat_domain}`".format(
-                site_name=se_site,
-                room_id=room_id,
-                chat_domain=chat_site
-            )
+            return "I will no longer ping you if I report a post on `{site_name}`, in room `{room_id}` on `chat.{chat_domain}`".format(site_name=se_site, room_id=room_id, chat_domain=chat_site)
         return "That configuration doesn't exist."
     if content_lower.startswith("!!/willibenotified"):
         if len(message_parts) != 3:
