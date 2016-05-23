@@ -12,41 +12,43 @@ import requests
 class BodyFetcher:
     queue = {}
 
-    specialCases = {"math.stackexchange.com": 15,
-                    "pt.stackoverflow.com": 10,
-                    "ru.stackoverflow.com": 10,
-                    "serverfault.com": 10,
-                    "blender.stackexchange.com": 5,
-                    "codegolf.stackexchange.com": 5,
-                    "codereview.stackexchange.com": 5,
-                    "es.stackoverflow.com": 5,
-                    "physics.stackexchange.com": 5,
-                    "stackoverflow.com": 5,
-                    "stats.stackexchange.com": 5,
-                    "tex.stackexchange.com": 5,
-                    "magento.stackexchange.com": 3,
-                    "gis.stackexchange.com": 3,
-                    "3dprinting.stackexchange.com": 1,
-                    "academia.stackexchange.com": 1,
-                    "beer.stackexchange.com": 1,
-                    "engineering.stackexchange.com": 1,
-                    "drupal.stackexchange.com": 1,
-                    "expatriates.stackexchange.com": 1,
-                    "genealogy.stackexchange.com": 1,
-                    "ham.stackexchange.com": 1,
-                    "health.stackexchange.com": 1,
-                    "history.stackexchange.com": 1,
-                    "meta.stackexchange.com": 1,
-                    "money.stackexchange.com": 1,
-                    "outdoors.stackexchange.com": 1,
-                    "parenting.stackexchange.com": 1,
-                    "patents.stackexchange.com": 1,
-                    "pets.stackexchange.com": 1,
-                    "startups.stackexchange.com": 1,
-                    "travel.stackexchange.com": 1,
-                    "webapps.stackexchange.com": 1,
-                    "woodworking.stackexchange.com": 1,
-                    "writers.stackexchange.com": 1}
+    special_cases = {
+        "math.stackexchange.com": 15,
+        "pt.stackoverflow.com": 10,
+        "ru.stackoverflow.com": 10,
+        "serverfault.com": 10,
+        "blender.stackexchange.com": 5,
+        "codegolf.stackexchange.com": 5,
+        "codereview.stackexchange.com": 5,
+        "es.stackoverflow.com": 5,
+        "physics.stackexchange.com": 5,
+        "stackoverflow.com": 5,
+        "stats.stackexchange.com": 5,
+        "tex.stackexchange.com": 5,
+        "magento.stackexchange.com": 3,
+        "gis.stackexchange.com": 3,
+        "3dprinting.stackexchange.com": 1,
+        "academia.stackexchange.com": 1,
+        "alcohol.stackexchange.com": 1,
+        "engineering.stackexchange.com": 1,
+        "drupal.stackexchange.com": 1,
+        "expatriates.stackexchange.com": 1,
+        "genealogy.stackexchange.com": 1,
+        "ham.stackexchange.com": 1,
+        "health.stackexchange.com": 1,
+        "history.stackexchange.com": 1,
+        "meta.stackexchange.com": 1,
+        "money.stackexchange.com": 1,
+        "outdoors.stackexchange.com": 1,
+        "parenting.stackexchange.com": 1,
+        "patents.stackexchange.com": 1,
+        "pets.stackexchange.com": 1,
+        "startups.stackexchange.com": 1,
+        "travel.stackexchange.com": 1,
+        "webapps.stackexchange.com": 1,
+        "woodworking.stackexchange.com": 1,
+        "writers.stackexchange.com": 1
+    }
 
     timeSensitive = ["askubuntu.com", "superuser.com", "security.stackexchange.com", "movies.stackexchange.com",
                      "mathoverflow.net", "gaming.stackexchange.com", "webmasters.stackexchange.com",
@@ -60,40 +62,41 @@ class BodyFetcher:
     queue_modify_lock = threading.Lock()
 
     def add_to_queue(self, post, should_check_site=False):
+        mse_sandbox_id = 3122
         d = json.loads(json.loads(post)["data"])
-        sitebase = d["siteBaseHostAddress"]
-        postid = d["id"]
-        if postid == 3122 and sitebase == "meta.stackexchange.com":
+        site_base = d["siteBaseHostAddress"]
+        post_id = d["id"]
+        if post_id == mse_sandbox_id and site_base == "meta.stackexchange.com":
             return  # don't check meta sandbox, it's full of weird posts
         self.queue_modify_lock.acquire()
-        if sitebase in self.queue:
-            self.queue[sitebase].append(postid)
+        if site_base in self.queue:
+            self.queue[site_base].append(post_id)
         else:
-            self.queue[sitebase] = [postid]
+            self.queue[site_base] = [post_id]
         self.queue_modify_lock.release()
 
         if should_check_site:
-            self.make_api_call_for_site(sitebase)
+            self.make_api_call_for_site(site_base)
         else:
             self.check_queue()
         return
 
     def check_queue(self):
         for site, values in self.queue.iteritems():
-            if site in self.specialCases:
-                if len(values) >= self.specialCases[site]:
-                    print "site " + site + " met special case quota, fetching..."
+            if site in self.special_cases:
+                if len(values) >= self.special_cases[site]:
+                    print "site {0} met special case quota, fetching...".format(site)
                     self.make_api_call_for_site(site)
                     return
-            if site in self.timeSensitive:
+            if site in self.time_sensitive:
                 if len(values) >= 1 and datetime.utcnow().hour in range(4, 12):
-                    print "site " + site + " has activity during peak spam time, fetching..."
+                    print "site {0} has activity during peak spam time, fetching...".format(site)
                     self.make_api_call_for_site(site)
                     return
 
         # if we don't have any sites with their queue filled, take the first one without a special case
         for site, values in self.queue.iteritems():
-            if site not in self.specialCases and len(values) >= self.threshold:
+            if site not in self.special_cases and len(values) >= self.threshold:
                 self.make_api_call_for_site(site)
                 return
 
@@ -103,11 +106,7 @@ class BodyFetcher:
         self.queue_modify_lock.release()
 
     def print_queue(self):
-        string = ""
-        for site, values in self.queue.iteritems():
-            string = string + "\n" + site + ": " + str(len(values))
-
-        return string
+        return '\n'.join("{0}: {1}".format(key, str(len(values))) for (key, values) in self.queue.iteritems())
 
     def make_api_call_for_site(self, site):
         self.queue_modify_lock.acquire()
@@ -115,18 +114,22 @@ class BodyFetcher:
         store_bodyfetcher_queue()
         self.queue_modify_lock.release()
 
+        question_modifier = ""
+        pagesize_modifier = ""
+
         if site == "stackoverflow.com":
             # Not all SO questions are shown in the realtime feed. We now
             # fetch all recently modified SO questions to work around that.
-            min_query = ""
             if self.last_activity_date != 0:
-                min_query = "&min=" + str(self.last_activity_date)
                 pagesize = "50"
             else:
                 pagesize = "25"
-            url = "http://api.stackexchange.com/2.2/questions?site=stackoverflow&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw((&pagesize=" + pagesize + min_query
+
+            pagesize_modifier = "&pagesize={pagesize}&min={time_length}".format(pagesize=pagesize, time_length=str(self.last_activity_date))
         else:
-            url = "http://api.stackexchange.com/2.2/questions/" + ";".join(str(x) for x in posts) + "?site=" + site + "&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw(("
+            question_modifier = "/{0}".format(";".join(str(post) for post in posts))
+
+        url = "http://api.stackexchange.com/2.2/questions{q_modifier}?site={site}&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw(({optional_min_query_param}".format(q_modifier=question_modifier, site=site, optional_min_query_param=pagesize_modifier)
 
         # wait to make sure API has/updates post data
         time.sleep(3)
@@ -145,11 +148,11 @@ class BodyFetcher:
         message_hq = ""
         if "quota_remaining" in response:
             if response["quota_remaining"] - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0:
-                GlobalVars.charcoal_hq.send_message("API quota rolled over with {} requests remaining. Current quota: {}.".format(GlobalVars.apiquota, response["quota_remaining"]))
+                GlobalVars.charcoal_hq.send_message("API quota rolled over with {0} requests remaining.".format(GlobalVars.apiquota) + "Current quota: {0}.".format(response["quota_remaining"]))
                 sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1), reverse=True)
                 api_quota_used_per_site = ""
                 for site_name, quota_used in sorted_calls_per_site:
-                    api_quota_used_per_site = api_quota_used_per_site + site_name.replace('.com', '').replace('.stackexchange', '') + ": " + str(quota_used) + "\n"
+                    api_quota_used_per_site += site_name.replace('.com', '').replace('.stackexchange', '') + ": {0}\n".format(str(quota_used))
                 api_quota_used_per_site = api_quota_used_per_site.strip()
                 GlobalVars.charcoal_hq.send_message(api_quota_used_per_site, False)
                 clear_api_data()
@@ -157,13 +160,13 @@ class BodyFetcher:
                 GlobalVars.charcoal_hq.send_message("API reports no quota left!  May be a glitch.")
                 GlobalVars.charcoal_hq.send_message(str(response))  # No code format for now?
             if GlobalVars.apiquota == -1:
-                GlobalVars.charcoal_hq.send_message("Restart: API quota is {}.".format(response["quota_remaining"]))
+                GlobalVars.charcoal_hq.send_message("Restart: API quota is {quota}.".format(quota=response["quota_remaining"]))
             GlobalVars.apiquota = response["quota_remaining"]
         else:
             message_hq = "The quota_remaining property was not in the API response."
 
         if "error_message" in response:
-            message_hq = message_hq + " Error: {}.".format(response["error_message"])
+            message_hq += " Error: {}.".format(response["error_message"])
 
         if "backoff" in response:
             if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
@@ -177,8 +180,9 @@ class BodyFetcher:
             return
 
         if site == "stackoverflow.com":
-            if len(response["items"]) > 0 and "last_activity_date" in response["items"][0]:
-                self.last_activity_date = response["items"][0]["last_activity_date"]
+            items = response["items"]
+            if len(items) > 0 and "last_activity_date" in items[0]:
+                self.last_activity_date = items[0]["last_activity_date"]
 
         for post in response["items"]:
             if "title" not in post or "body" not in post:

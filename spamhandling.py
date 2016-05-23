@@ -16,12 +16,8 @@ def should_whitelist_prevent_alert(user_url, reasons):
     is_whitelisted = is_whitelisted_user(get_user_from_url(user_url))
     if not is_whitelisted:
         return False
-    reasons_copy = list(set(reasons))
-    reasons_copy_copy = list(reasons_copy)
-    for reason in reasons_copy:
-        if "username" in reason:
-            reasons_copy_copy.remove(reason)
-    return len(reasons_copy_copy) == 0
+    reasons_comparison = [r for r in set(reasons) if "username" not in r]
+    return len(reasons_comparison) == 0
 
 
 def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer, body_is_summary, owner_rep, post_score):
@@ -36,7 +32,7 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
             blacklisted_post_url = blacklisted_user_data[2]
             if blacklisted_post_url:
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
-                why += u"\n" + u"Blacklisted user - blacklisted for {} (http://metasmoke.erwaysoftware.com/posts/by-url?url={}) by {}".format(blacklisted_post_url, rel_url, message_url)
+                why += u"\nBlacklisted user - blacklisted for {} (http://metasmoke.erwaysoftware.com/posts/by-url?url={}) by {}".format(blacklisted_post_url, rel_url, message_url)
             else:
                 why += u"\n" + u"Blacklisted user - blacklisted by {}".format(message_url)
     if 0 < len(test):
@@ -49,22 +45,20 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
     return False, None, ""
 
 
-def check_if_spam_json(data):
-    d = json.loads(json.loads(data)["data"])
-    try:
-        _ = d["ownerUrl"]  # noqa
-    except:
+def check_if_spam_json(json_data):
+    data = json.loads(json.loads(json_data)["data"])
+    if "ownerUrl" in data:
         # owner's account doesn't exist anymore, no need to post it in chat:
         # http://chat.stackexchange.com/transcript/message/18380776#18380776
         return False, None, ""
-    title = d["titleEncodedFancy"]
+    title = data["titleEncodedFancy"]
     title = unescape_title(title)
-    body = d["bodySummary"]
-    poster = d["ownerDisplayName"]
-    url = d["url"]
-    post_id = str(d["id"])
+    body = data["bodySummary"]
+    poster = data["ownerDisplayName"]
+    url = data["url"]
+    post_id = str(data["id"])
     print time.strftime("%Y-%m-%d %H:%M:%S"), title.encode("ascii", errors="replace")
-    site = d["siteBaseHostAddress"]
+    site = data["siteBaseHostAddress"]
     site = site.encode("ascii", errors="replace")
     sys.stdout.flush()
     is_spam, reason, why = check_if_spam(title, body, poster, url, site, post_id, False, True, 1, 0)

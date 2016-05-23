@@ -4,12 +4,12 @@ from datahandling import check_site_and_get_full_name
 
 
 def get_user_from_url(url):
-    m = regex.compile(r"(?:https?:)?//([\w.]+)/u(?:sers)?/(\d+)(/(?:.+/?)?)?").search(url)
-    if m is None:
+    match = regex.compile(r"(?:https?:)?//([\w.]+)/u(?:sers)?/(\d+)(/(?:.+/?)?)?").search(url)
+    if match is None:
         return None
     try:
-        site = m.group(1)
-        user_id = m.group(2)
+        site = match.group(1)
+        user_id = match.group(2)
         return user_id, site
     except:
         return None
@@ -17,11 +17,11 @@ def get_user_from_url(url):
 
 def fetch_post_url_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\) \] [\w\s,:\(\)-]+: \[.+]\(((?:http:)?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\) by \[?.*\]?\(?(?:.*)\)? on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
-    m = regex.compile(search_regex).search(content)
-    if m is None:
+    match = regex.compile(search_regex).search(content)
+    if match is None:
         return None
     try:
-        url = m.group(1)
+        url = match.group(1)
         return url
     except:
         return None
@@ -67,11 +67,11 @@ def fetch_post_id_and_site_from_msg_content(content):
 
 def fetch_owner_url_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\) \] [\w\s,:\(\)-]+: \[.+]\((?:(?:http:)?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\) by \[.+\]\((.+)\) on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
-    m = regex.compile(search_regex).search(content)
-    if m is None:
+    match = regex.compile(search_regex).search(content)
+    if match is None:
         return None
     try:
-        owner_url = m.group(1)
+        owner_url = match.group(1)
         return owner_url
     except:
         return None
@@ -79,11 +79,11 @@ def fetch_owner_url_from_msg_content(content):
 
 def fetch_title_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\) \] [\w\s,:\(\)-]+: \[(.+)]\((?:(?:http:)?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\) by \[?.*\]?\(?.*\)? on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
-    m = regex.compile(search_regex).search(content)
-    if m is None:
+    match = regex.compile(search_regex).search(content)
+    if match is None:
         return None
     try:
-        title = m.group(1)
+        title = match.group(1)
         return title
     except:
         return None
@@ -91,11 +91,11 @@ def fetch_title_from_msg_content(content):
 
 def fetch_user_from_allspam_report(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\) \] All of this user's posts are spam: \[user \d+ on [\w\.]+\]\((//[\w\.]+/users/\d+\D*)\)(?: \[.+\]\(.+\))?$"
-    m = regex.compile(search_regex).search(content)
-    if m is None:
+    match = regex.compile(search_regex).search(content)
+    if match is None:
         return None
     try:
-        user_link = m.group(1)
+        user_link = match.group(1)
         return get_user_from_url(user_link)
     except:
         return None
@@ -103,11 +103,11 @@ def fetch_user_from_allspam_report(content):
 
 def edited_message_after_postgone_command(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\) \] [\w\s,:\(\)-]+: (\[.+]\((?:(?:http:)?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\)) by \[?.*\]?\(?.*\)? on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
-    m = regex.compile(search_regex).search(content)
-    if m is None:
+    match = regex.compile(search_regex).search(content)
+    if match is None:
         return None
     try:
-        link = m.group(1)
+        link = match.group(1)
         return content.replace(link, "*(gone)*")
     except:
         return None
@@ -182,18 +182,18 @@ def preprocess_shortcut_command(cmd):
     parts = cmd.split(" ")
     new_cmd = ["sd"]
     for i in xrange(1, len(parts)):
-        curr = parts[i]
-        if curr == "":
+        current = parts[i]
+        if current == "":
             continue
-        if not curr[0].isdigit():
-            new_cmd.append(curr)
+        if not current[0].isdigit():
+            new_cmd.append(current)
         else:
-            match = regex.search(r"^\d+", curr)
+            match = regex.search(r"^\d+", current)
             t = int(match.group())
             if t > 100:
                 # If someone made an unreasonable request, limit the # of commands (so we don't
                 # have any overflows) but do one more than the max messages we keep so it errors out
                 t = 101
             for j in xrange(0, t):
-                new_cmd.append(curr[match.end():])
+                new_cmd.append(current[match.end():])
     return " ".join(new_cmd)

@@ -32,8 +32,7 @@ import requests
 if "ChatExchangeU" in os.environ:
     username = os.environ["ChatExchangeU"]
 else:
-    print "Username: "
-    username = raw_input()
+    username = raw_input("Username: ")
 if "ChatExchangeP" in os.environ:
     password = os.environ["ChatExchangeP"]
 else:
@@ -74,46 +73,56 @@ tavern_id = GlobalVars.meta_tavern_room_id
 GlobalVars.tavern_on_the_meta = GlobalVars.wrapm.get_room(tavern_id)
 GlobalVars.socvr = GlobalVars.wrapso.get_room(GlobalVars.socvr_room_id)
 
-GlobalVars.specialrooms = [{
-                           # If you change these sites, please also update the wiki at
-                           # https://github.com/Charcoal-SE/SmokeDetector/wiki/Chat-Rooms
-                           "sites": ["math.stackexchange.com"],
-                           "room": GlobalVars.wrap.get_room("2165"),
-                           "unwantedReasons": []
-                           }, {
-                           "sites": ["english.stackexchange.com"],
-                           "room": GlobalVars.wrap.get_room("95"),
-                           "unwantedReasons": []
-                           }, {
-                           "sites": ["askubuntu.com"],
-                           "room": GlobalVars.wrap.get_room("201"),
-                           "unwantedReasons": ["All-caps title",   # these should be in uppercased form
-                                               "All-caps body",
-                                               "All-caps answer",
-                                               "Phone number detected",
-                                               "Repeating characters in title",
-                                               "Repeating characters in body",
-                                               "Repeating characters in answer",
-                                               "Link at end of answer"],
-                           "watcher": True
-                           }, {
-                           "sites": ["parenting.stackexchange.com"],
-                           "room": GlobalVars.wrap.get_room("21625"),
-                           "unwantedReasons": []
-                           }, {
-                           "sites": ["bitcoin.stackexchange.com"],
-                           "room": GlobalVars.wrap.get_room("8089"),
-                           "unwantedReasons": []
-                           }, {
-                           "sites": ["judaism.stackexchange.com"],
-                           "room": GlobalVars.wrap.get_room("468"),
-                           "unwantedReasons": []
-                           }, {
-                           "sites": ["money.stackexchange.com"],
-                           "room": GlobalVars.wrap.get_room("35068"),
-                           "unwantedReasons": ["All-caps title", "All-caps body", "All-caps answer"]
-                           }
-                           ]
+# If you change these sites, please also update the wiki at
+# https://github.com/Charcoal-SE/SmokeDetector/wiki/Chat-Rooms
+
+GlobalVars.specialrooms = [
+    {
+        "sites": ["math.stackexchange.com"],
+        "room": GlobalVars.wrap.get_room("2165"),
+        "unwantedReasons": []
+    },
+    {
+        "sites": ["english.stackexchange.com"],
+        "room": GlobalVars.wrap.get_room("95"),
+        "unwantedReasons": []
+    },
+    {
+        "sites": ["askubuntu.com"],
+        "room": GlobalVars.wrap.get_room("201"),
+        "unwantedReasons": [
+            "All-caps title",   # these should be in uppercased form
+            "All-caps body",
+            "All-caps answer",
+            "Phone number detected",
+            "Repeating characters in title",
+            "Repeating characters in body",
+            "Repeating characters in answer",
+            "Link at end of answer"
+        ],
+        "watcher": True
+    },
+    {
+        "sites": ["parenting.stackexchange.com"],
+        "room": GlobalVars.wrap.get_room("21625"),
+        "unwantedReasons": []
+    },
+    {
+        "sites": ["bitcoin.stackexchange.com"],
+        "room": GlobalVars.wrap.get_room("8089"),
+        "unwantedReasons": []
+    },
+    {
+        "sites": ["judaism.stackexchange.com"],
+        "room": GlobalVars.wrap.get_room("468"),
+        "unwantedReasons": []
+    },
+    {
+        "sites": ["money.stackexchange.com"],
+        "room": GlobalVars.wrap.get_room("35068"),
+        "unwantedReasons": ["All-caps title", "All-caps body", "All-caps answer"]
+    }
+]
 
 
 def restart_automatically(time_in_seconds):
@@ -153,12 +162,10 @@ while True:
         if a is not None and a != "":
             is_spam, reason, why = check_if_spam_json(a)
             if is_spam:
-                t = Thread(target=GlobalVars.bodyfetcher.add_to_queue,
-                           args=(a, True))
+                t = Thread(target=GlobalVars.bodyfetcher.add_to_queue, args=(a, True))
                 t.start()
             else:
-                t = Thread(target=GlobalVars.bodyfetcher.add_to_queue,
-                           args=(a,))
+                t = Thread(target=GlobalVars.bodyfetcher.add_to_queue, args=(a,))
                 t.start()
     except Exception, e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
