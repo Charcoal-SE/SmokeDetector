@@ -111,6 +111,9 @@ class BodyFetcher:
 
     def make_api_call_for_site(self, site):
         self.queue_modify_lock.acquire()
+        if site not in self.queue:
+            GlobalVars.charcoal_hq.send_message("Attempted API call to {} but there are no posts to fetch.".format(site))
+            return
         posts = self.queue.pop(site)
         store_bodyfetcher_queue()
         self.queue_modify_lock.release()
@@ -174,7 +177,7 @@ class BodyFetcher:
                 GlobalVars.api_backoff_time = time.time() + response["backoff"]
             match = regex.compile('/2.2/([^.]*)').search(url)
             url_part = match.group(1) if match else url
-            message_hq = message_hq + "\nBackoff received of {} seconds on request to `{}`".format(str(response["backoff"]), url_part)
+            message_hq += "\nBackoff received of {} seconds on request to `{}`".format(str(response["backoff"]), url_part)
 
         if len(message_hq) > 0:
             GlobalVars.charcoal_hq.send_message(message_hq.strip())
