@@ -1,5 +1,7 @@
 import json
 import requests
+import os
+import time
 from globalvars import GlobalVars
 import threading
 
@@ -90,7 +92,20 @@ class Metasmoke:
             }
 
             headers = {'Content-type': 'application/json'}
-            requests.post(GlobalVars.metasmoke_host + "/status-update.json", data=json.dumps(payload), headers=headers)
+            response = requests.post(GlobalVars.metasmoke_host + "/status-update.json", data=json.dumps(payload), headers=headers)
+
+            if response.status_code == 201:  # 200 = successful status creation; 201 = new commit status
+                json_response = response.json()
+                commit_response = json_response["commit_status"]
+                if commit_response["status"] == "success":
+                    autopull_message = "Message contains 'autopull', pulling..."
+                    GlobalVars.charcoal_hq.send_message(
+                        "[Continuous integration]({status}) on commit [{commit}](//github.com/Charcoal-SE/SmokeDetector/commit/{sha}) ".format(status=commit_response["ci_url"], commit=commit_response["commit_sha"][:7], sha=commit_response["commit_sha"]) +
+                        "(*{commit}*) succeeded!{optional_autopull_message}".format(commit=commit_response["commit_message"].split("\n")[0], optional_autopull_message=autopull_message if "autopull" in commit_response["commit_message"] else "")
+                    )
+                    if "autopull" in commit_response["commit_message"]:
+                        time.sleep(2)
+                        os._exit(3)
 
         except Exception as e:
             print e
