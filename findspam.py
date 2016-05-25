@@ -224,7 +224,7 @@ class FindSpam:
         "sh\\.st/", "//adf\\.ly/", "//j\\.gs/", "centerweb10", "okaygoods\\.com",
         "preply\\.com", "hellofifa", "chinadivision", "driverdr\\.com", "rsgp4u\\.com",
         "fifa\\d*online", "wearepropeople.com", "tagwitty", "codetoils\\.com",
-        "axsoccertours", "ragednablog", "ios8easyjailbreak",
+        "axsoccertours", "ragednablog", "ios8easyjailbreak", "webforpc\\.com",
         "totalfitnesspoint", "trustessaywriting", "thesispaperwriters",
         "trustmyessay", "faasoft", "besttvshows", "mytechlabs",
         "giikers", "pagetube", "myenv\\.org", "testkiz\\.com",
