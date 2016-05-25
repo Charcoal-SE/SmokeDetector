@@ -190,7 +190,7 @@ class FindSpam:
         "teksonit", "Re@d More", "Live Streaming</a", "Blackcore ?Edge", "Copy Buffett", "Push Money App",
         "Volive( Solutions)?", "(meg|test)adrox", "Herbalife", "Accumass", "purple rhino male enhancement",
         "male enhancement supplements", "alpha levo", "digital marketing course", "stark trading system",
-        "bring back lost lover", "service proposal essay", "enetdocumentation", "okaygoods"
+        "bring back lost lover", "service proposal essay", "enetdocumentation", "okaygoods", "bojiter"
     ]
     bad_keywords_nwb = [
         u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
