@@ -17,7 +17,6 @@ from threading import Thread
 import traceback
 from bodyfetcher import BodyFetcher
 from chatcommunicate import watcher, special_room_watcher
-from continuousintegration import watch_ci
 from datetime import datetime
 from utcdate import UtcDate
 from spamhandling import check_if_spam_json
@@ -130,8 +129,6 @@ def restart_automatically(time_in_seconds):
     os._exit(1)
 
 Thread(target=restart_automatically, args=(21600,)).start()
-
-Thread(target=watch_ci, args=()).start()
 
 DeletionWatcher.update_site_id_list()
 
