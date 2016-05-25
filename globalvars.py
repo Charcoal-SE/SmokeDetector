@@ -24,19 +24,20 @@ class GlobalVars:
 
     experimental_reasons = []  # Don't widely report these
     non_socvr_reasons = []    # Don't report to SOCVR
-    non_tavern_reasons = [
-        "All-caps title",   # Don't report in the Tavern
+    non_tavern_reasons = [    # Don't report in the Tavern
         "All-caps body",
         "All-caps answer",
-        "All-caps body, all-caps title",
         "Repeating characters in body",
         "Repeating characters in title",
         "Repeating characters in answer",
         "Few unique characters in body",
         "Few unique characters in answer",
+        "Few unique characters in body, repeating characters in body",
+        "Few unique characters in title, repeating characters in title",
         "Title has only one unique char",
         "Phone number detected in title",
         "Offensive body detected",
+        "Email in body",
         "Email in answer",
         "Email in title",
         "Link at end of answer"
