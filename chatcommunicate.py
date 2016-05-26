@@ -201,7 +201,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 if user is not None:
                     add_whitelisted_user(user)
                     user_added = True
-            if "Blacklisted user:" in message_content:
+            if "Blacklisted user:" in msg_content:
                 if user is not None:
                     remove_blacklisted_user(user)
                     user_removed = True
