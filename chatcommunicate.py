@@ -192,21 +192,31 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
 
             add_false_positive((post_site_id[0], post_site_id[1]))
             user_added = False
+            user_removed = False
+            url_from_msg = fetch_owner_url_from_msg_content(msg_content)
+            user = None
+            if url_from_msg is not None:
+                user = get_user_from_url(url_from_msg)
             if second_part_lower.startswith("falseu") or second_part_lower.startswith("fpu"):
-                url_from_msg = fetch_owner_url_from_msg_content(msg_content)
-                if url_from_msg is not None:
-                    user = get_user_from_url(url_from_msg)
-                    if user is not None:
-                        add_whitelisted_user(user)
-                        user_added = True
+                if user is not None:
+                    add_whitelisted_user(user)
+                    user_added = True
+            if "Blacklisted user:" in message_content:
+                if user is not None:
+                    remove_blacklisted_user(user)
+                    user_removed = True
             if post_type == "question":
                 if user_added and not quiet_action:
                     return "Registered question as false positive and whitelisted user."
+                elif user_removed and not quiet_action:
+                    return "Registered question as false positive and removed user from the blacklist."
                 elif not quiet_action:
                     return "Registered question as false positive."
             elif post_type == "answer":
                 if user_added and not quiet_action:
                     return "Registered answer as false positive and whitelisted user."
+                elif user_removed and not quiet_action:
+                    return "Registered answer as false positive and removed user from the blacklist."
                 elif not quiet_action:
                     return "Registered answer as false positive."
             try:
