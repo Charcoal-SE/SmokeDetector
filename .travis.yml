@@ -18,5 +18,4 @@ cache:
     - $HOME/.cache/pip
 before_cache:
   - rm -f $HOME/.cache/pip/log/debug.log
-  - rm -r $HOME/.cache/pip/http
-  - ls -l $HOME/.cache/pip/http
+  - rm -rf $HOME/.cache/pip/http
