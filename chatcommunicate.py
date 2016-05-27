@@ -108,7 +108,7 @@ def watcher(ev, wrap2):
             ev.message.reply("I've only posted {} messages since the latest reboot; that's not enough to execute all commands. No commands were executed.".format(len(latest_smokedetector_messages)))
             return
         for i in xrange(0, len(commands)):
-            shortcut_messages.append(":{message} {command_name}".format(message=latest_smokedetector_messages[-(i + 1)], command_name=commands[i]))
+            shortcut_messages.append(u":{message} {command_name}".format(message=latest_smokedetector_messages[-(i + 1)], command_name=commands[i]))
         reply = ""
         amount_none = 0
         amount_skipped = 0
@@ -118,7 +118,7 @@ def watcher(ev, wrap2):
             current_message = shortcut_messages[i]
             if length > 1:
                 reply += str(i + 1) + ". "
-            reply += "[{0}] ".format(current_message.split(" ")[0])
+            reply += u"[{0}] ".format(current_message.split(" ")[0])
             if current_message.split(" ")[1] != "-":
                 result = handle_commands(current_message.lower(), current_message.split(" "), ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, current_message, message_id)
                 r = result
