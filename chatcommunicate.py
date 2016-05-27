@@ -168,7 +168,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         second_part_lower = "tpu-"
     if second_part_lower == "n":
         second_part_lower = "naa-"
-    if re.compile("^:[0-9]{6,}$").search(message_parts[0]):
+    if re.compile("^:[0-9]{4,}$").search(message_parts[0]):
         msg_id = int(message_parts[0][1:])
         msg = wrap2.get_message(msg_id)
         msg_content = msg.content_source
