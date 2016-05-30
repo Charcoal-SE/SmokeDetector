@@ -164,21 +164,6 @@ while True:
             else:
                 t = Thread(target=GlobalVars.bodyfetcher.add_to_queue, args=(a,))
                 t.start()
-
-            with open("stacktrace.txt", "a") as f:
-                f.write("\n*** STACKTRACE - START ***\n")
-                code = []
-                for threadId, stack in sys._current_frames().items():
-                    code.append("\n# ThreadID: %s" % threadId)
-                    for filename, lineno, name, line in traceback.extract_stack(stack):
-                        code.append('File: "%s", line %d, in %s' % (filename,
-                                                                    lineno, name))
-                        if line:
-                            code.append("  %s" % (line.strip()))
-
-                for line in code:
-                    f.write(line + "\n")
-                f.write("\n*** STACKTRACE - END ***\n")
     except Exception, e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         now = datetime.utcnow()
