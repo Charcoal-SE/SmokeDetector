@@ -207,8 +207,8 @@ class FindSpam:
         "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning",
         "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn", "revolyn",
         "(?:networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing|salesforce|joomla)( certification)? (courses?|training).{0,25}</a>",
-        "(?:design|compan(y|ies)|training|courses?).{0,8}(?:bangalore|chennai|delhi|hyderabad|kolkata|mumbai|madurai|coimbatore|rajkot|durgapur|surat|agra|patna|ghaziabad|jaipur)",
-        "\\bin (?:bangalore|chennai|delhi|hyderabad|kolkata|mumbai|madurai|coimbatore|rajkot|durgapur|surat|agra|patna|ghaziabad|jaipur)</a>",
+        "(?:design|compan(y|ies)|training|courses?).{0,8}(?:bangalore|chennai|delhi|hyderabad|kolkata|mumbai|madurai|coimbatore|rajkot|durgapur|surat|agra|patna|ghaziabad|jaipur|dubai)",
+        "\\bin (?:bangalore|chennai|delhi|hyderabad|kolkata|mumbai|madurai|coimbatore|rajkot|durgapur|surat|agra|patna|ghaziabad|jaipur|dubai)</a>",
         u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "no2blast", "sunergetic", "capilux", "sante ?avis",
         "enduros", "dianabol", "ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex", "revimax",
         "celluria", "viatropin"
