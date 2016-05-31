@@ -369,7 +369,8 @@ class FindSpam:
         "cardvdonline\\.com", "icasnetwork\\.org", "epicresearch\\.co", "\\.soup\\.io", "pccdkeys\\.com",
         "hotxt\\.co\\.uk", "rcframecontractors", "bsgolds\\.com", "thedropnet\\.com",
         "science\\.misis\\.ru", "pdf\\.ac/", "slotobit\\.com", "thaykinhmanhinhcamung\\.com",
-        "sfdcbot\\.herokuapp\\.com", "technosanatgroup\\.com", "csgostrong\\.com", "freenom\\.com"
+        "sfdcbot\\.herokuapp\\.com", "technosanatgroup\\.com", "csgostrong\\.com", "freenom\\.com",
+        "emget\\.net"
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
