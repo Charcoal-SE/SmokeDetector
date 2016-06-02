@@ -149,6 +149,23 @@ def keyword_email(s, site):   # a keyword and an email in the same post
     return False, ""
 
 
+def is_offensive_post(s, site):
+    if s is None or len(s) == 0:
+        return False, ""
+
+    offensive = regex.compile(ur"(?is)\b((yo)?u suck|nigg(a|er)|ass ?hole|kiss my ass|fag(got)?|daf[au][qk]|(mother)?fuc?k+(ing?|e?(r|d)| off+| y(ou|e)(rself)?| u+|tard)?|shit(t?er|head)|dickhead|pedo|whore|(is a )?cunt|cocksucker|ejaculated?|butthurt|(private|pussy) show|lesbo|bitches|suck\b.{0,20}\bdick|dee[sz]e? nut[sz])s?\b|^.{0,250}\b(shit)\b.{0,100}$")
+    matches = offensive.finditer(s)
+    len_of_match = 0
+    text_matched = []
+    for match in matches:
+        len_of_match += match.end() - match.start()
+        text_matched.append(match.group(0))
+
+    if (1000 * len_of_match / len(s)) >= 15:  # currently at 1.5%, this can change if it needs to
+        return True, u"Offensive keyword{}: {}".format("s" if len(text_matched) > 1 else "", ", ".join(text_matched))
+    return False, ""
+
+
 class FindSpam:
     bad_keywords = [
         "baba ji", "fifa.{0,20}coins?", "fifabay", "Long Path Tool",
@@ -545,8 +562,8 @@ class FindSpam:
         #
         # Category: Trolling
         # Offensive content in titles and posts
-        {'regex': ur"(?is)\b((yo)?u suck|nigg(a|er)|asshole|fag(got)?|daf[au][qk]|(mother)?fuc?k+(ing?|e?r)?|shit(t?er|head)|dickhead|pedo|whore|cunt|suck\b.{0,10}\bdick|dee[sz]e? nut[sz])s?\b|^.{0,250}\bshit\b.{0,100}$", 'all': True,
-         'sites': [], 'reason': "offensive {} detected", 'insensitive':True, 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 101, 'max_score': 5},
+        {'method': is_offensive_post, 'all': True, 'sites': [], 'reason': "offensive {} detected", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True,
+         'max_rep': 101, 'max_score': 5},
         # All-caps text
         {'method': all_caps_text, 'all': True, 'sites': ["pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com", "ja.stackoverflow.com", "rus.stackexchange.com"],
          'reason': "all-caps {}", 'title': False, 'body': True, 'questions': False, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
