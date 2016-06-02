@@ -134,7 +134,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
         for match in match_objects:
             if match:
                 words.append(match.group(0))
-        return True, "Health-themed spam (score {}). Keywords: {}".format(score, ", ".join(words).lower())
+        return True, u"Health-themed spam (score {}). Keywords: {}".format(score, ", ".join(words).lower())
     return False, ""
 
 
@@ -607,14 +607,14 @@ class FindSpam:
                     assert 'method' in rule
                     matched_title, why_title = rule['method'](title, site)
                     if (matched_title) and rule['title']:
-                        why += "Title - {}\n".format(why_title)
+                        why += u"Title - {}\n".format(why_title)
                     matched_username, why_username = rule['method'](user_name, site)
                     if (matched_username) and rule['username']:
-                        why += "Username - {}\n".format(why_username)
+                        why += u"Username - {}\n".format(why_username)
                     if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer) and (is_answer or check_if_question):
                         matched_body, why_body = rule['method'](body_to_check, site)
                         if (matched_body) and rule['body']:
-                            why += "Post - {}\n".format(why_body)
+                            why += u"Post - {}\n".format(why_body)
                 if matched_title and rule['title']:
                     why += FindSpam.generate_why(compiled_regex, title, u"Title", is_regex_check)
                     result.append(rule['reason'].replace("{}", "title"))
