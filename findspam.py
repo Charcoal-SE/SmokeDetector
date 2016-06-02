@@ -229,7 +229,7 @@ class FindSpam:
         "totalfitnesspoint", "trustessaywriting", "thesispaperwriters", "homeworkhelponline",
         "trustmyessay", "faasoft", "besttvshows", "mytechlabs", "Housecarbike\\.com",
         "giikers", "pagetube", "myenv\\.org", "testkiz\\.com", "nebusconitirk",
-        "pelevoniface", "herintalk", "menshealth", "examguidez",
+        "pelevoniface", "herintalk", "menshealth", "examguidez", "kynix\\.com",
         "skinphysiciantips", "xtrememusclerecoveryrev",
         "diabacordoesitwork", "mixresult\\.com",
         "healthy?(advise|finder|booklet|order|rewind|flyup|buzzer|victory|peters|guide)",
