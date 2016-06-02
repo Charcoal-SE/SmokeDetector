@@ -46,7 +46,10 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
 
 
 def check_if_spam_json(json_data):
-    data = json.loads(json.loads(json_data)["data"])
+    try:
+        data = json.loads(json.loads(json_data)["data"])
+    except ValueError:
+        GlobalVars.charcoal_hq.send_message(u"Encountered ValueError parsing the following:\n{0}".format(json_data), False)
     if "ownerUrl" not in data:
         # owner's account doesn't exist anymore, no need to post it in chat:
         # http://chat.stackexchange.com/transcript/message/18380776#18380776
