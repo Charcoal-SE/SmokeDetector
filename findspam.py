@@ -230,7 +230,7 @@ class FindSpam:
         "trustmyessay", "faasoft", "besttvshows", "mytechlabs", "Housecarbike\\.com",
         "giikers", "pagetube", "myenv\\.org", "testkiz\\.com", "nebusconitirk",
         "pelevoniface", "herintalk", "menshealth", "examguidez", "kynix\\.com",
-        "skinphysiciantips", "xtrememusclerecoveryrev",
+        "skinphysiciantips", "xtrememusclerecoveryrev", "xtgenixau\\.com",
         "diabacordoesitwork", "mixresult\\.com",
         "healthy?(advise|finder|booklet|order|rewind|flyup|buzzer|victory|peters|guide)",
         "hyperglycemiaabout", "waffor\\.com",
