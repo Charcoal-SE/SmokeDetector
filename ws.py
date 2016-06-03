@@ -120,6 +120,11 @@ GlobalVars.specialrooms = [
         "sites": ["money.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("35068"),
         "unwantedReasons": ["All-caps title", "All-caps body", "All-caps answer"]
+    },
+    {
+        "sites": ["movies.stackexchange.com"],
+        "room": GlobalVars.wrap.get_room("40705"),
+        "unwantedReasons": []
     }
 ]
 
