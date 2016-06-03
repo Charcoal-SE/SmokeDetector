@@ -89,7 +89,7 @@ def watcher(ev, wrap2):
             t_check_websocket = Thread(target=DeletionWatcher.check_if_report_was_deleted, args=(post_site_id, post_url, ev.message))
             t_check_websocket.daemon = True
             t_check_websocket.start()
-    message_parts = content_source.split(" ")
+    message_parts = re.split('[ ,]+', content_source)
 
     ev_user_name = ev.data["user_name"]
     ev_user_link = "//chat.{host}/users/{user_id}".format(host=wrap2.host, user_id=ev.user.id)
