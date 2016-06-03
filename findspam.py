@@ -647,7 +647,7 @@ class FindSpam:
                     result.append(rule['reason'].replace("{}", type_of_post))
         result = list(set(result))
         result.sort()
-        why = "\n".join(why["title"] + why["body"] + why["username"]).strip()
+        why = "\n".join(filter(None, why["title"]) + filter(None, why["body"]) + filter(None, why["username"])).strip()
         return result, why
 
     @staticmethod
