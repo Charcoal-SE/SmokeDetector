@@ -248,7 +248,7 @@ class FindSpam:
         "giikers", "pagetube", "myenv\\.org", "testkiz\\.com", "nebusconitirk",
         "pelevoniface", "herintalk", "menshealth", "examguidez", "kynix\\.com",
         "skinphysiciantips", "xtrememusclerecoveryrev", "xtgenixau\\.com",
-        "diabacordoesitwork", "mixresult\\.com",
+        "diabacordoesitwork", "mixresult\\.com", "win-ipad\\.",
         "healthy?(advise|finder|booklet|order|rewind|flyup|buzzer|victory|peters|guide)",
         "hyperglycemiaabout", "waffor\\.com",
         "sourceforge\\.net/projects/freepdftojpgconverter",
