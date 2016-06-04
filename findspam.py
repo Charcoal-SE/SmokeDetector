@@ -446,7 +446,7 @@ class FindSpam:
         r"worldcup\d+live\.(com?|net|org|in\W|info)",
         r"((concrete|beton)-?mixer|crusher)[\w-]*?\.(co|net)",
         r"\w{7}formac\.(com|net|org)",
-        r"sex\.(com|net|info)"
+        r"sex\.(com|net|info)", r"https?://(www\.)?sex"
     ]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
