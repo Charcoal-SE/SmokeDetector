@@ -166,6 +166,14 @@ def is_offensive_post(s, site):
     return False, ""
 
 
+def has_eltima(s, site):
+    if s is None or len(s) == 0:
+        return False, ""
+
+    reg = regex.compile(ur"(?is)\beltima")
+    return len(reg.findall(s)) > 0 and len(s) <= 750
+
+
 class FindSpam:
     bad_keywords = [
         "baba ji", "fifa.{0,20}coins?", "fifabay", "Long Path Tool",
@@ -200,7 +208,7 @@ class FindSpam:
         "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity",
         "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?", "intellux", "viooz",
         "smartican", "essay writing service", "T-complex", "retrodynamic formula",
-        "eltima", "raging lion", "(love|miracle).*spell ?casters?", "08151871776",
+        "raging lion", "(love|miracle).*spell ?casters?", "08151871776",
         "^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$", "Krojam(Soft|Cleaner)?", "FilesSearch ?Tool",
         "teksonit", "Re@d More", "Live Streaming</a", "Blackcore ?Edge", "Copy Buffett", "Push Money App",
         "Volive( Solutions)?", "(meg|test)adrox", "Herbalife", "Accumass", "purple rhino male enhancement",
@@ -465,6 +473,8 @@ class FindSpam:
         # Bad keywords in titles only, all sites
         {'regex': ur"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|kisn)\b)(?=.*?care).*products?\b|(?=.*?packer).*mover|(online|certification).*?training|\bvs\b.*\b(live|vivo)\b|(?<!can |uld )\bwe offer\b|payday loan|смотреть.*онлайн|watch\b.{0,50}(online|episode)|episode.{0,50}\bsub\b", 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 0},
+        # Eltima: separated into its own method so we can constrain length
+        {'method': has_eltima, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stipcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 0},
         # Fake-customer-service in title
         {'method': has_customer_service, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Bad health-related keywords in titles, health sites are exempt
