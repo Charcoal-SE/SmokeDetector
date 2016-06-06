@@ -451,7 +451,7 @@ class FindSpam:
         # Category: Bad keywords
         # The big list of bad keywords, for titles and posts
         {'regex': ur"(?is)\b({})\b|{}".format("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
-         'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 1},
+         'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1},
         # baba and nike are restricted to the beginning of posts: many false positives otherwise
         {'regex': ur"(?is)^.{0,200}\bnike ", 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11, 'max_score': 0},
@@ -516,7 +516,7 @@ class FindSpam:
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0, 'questions': False},
         # Suspicious health-related websites, health sites are exempt
         {'regex': ur"(?i)(bodybuilding|workout|fitness\w{2,}|diet|perfecthealth|muscle|\w{2,}nutrition|prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)", 'all': True,
-         'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11, 'max_score': 2},
+         'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 2},
         # Links preceded by arrows >>>
         {'regex': ur"(?is)(>>>|==\s*>>|====|===>|==>>|(Read More|Click Here) \W{2,20}).{0,20}http(?!://i.stack.imgur.com).{0,200}$", 'all': True,
          'sites': [], 'reason': "link following arrow in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 11, 'max_score': 0},
