@@ -474,7 +474,7 @@ class FindSpam:
         {'regex': ur"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|kisn)\b)(?=.*?care).*products?\b|(?=.*?packer).*mover|(online|certification).*?training|\bvs\b.*\b(live|vivo)\b|(?<!can |uld )\bwe offer\b|payday loan|смотреть.*онлайн|watch\b.{0,50}(online|episode)|episode.{0,50}\bsub\b", 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 0},
         # Eltima: separated into its own method so we can constrain length
-        {'method': has_eltima, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stipcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 0},
+        {'method': has_eltima, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 0},
         # Fake-customer-service in title
         {'method': has_customer_service, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Bad health-related keywords in titles, health sites are exempt
