@@ -171,7 +171,10 @@ def has_eltima(s, site):
         return False, ""
 
     reg = regex.compile(ur"(?is)\beltima")
-    return len(reg.findall(s)) > 0 and len(s) <= 750
+    if len(reg.findall(s)) > 0 and len(s) <= 750:
+        return True, u"Bad keyword 'eltima' and body length under 750 chars"
+
+    return False, ""
 
 
 class FindSpam:
