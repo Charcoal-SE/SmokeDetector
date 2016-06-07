@@ -261,10 +261,10 @@ class FindSpam:
         "skinphysiciantips", "xtrememusclerecoveryrev", "xtgenixau\\.com",
         "diabacordoesitwork", "mixresult\\.com", "win-ipad\\.", "mecharithm\\.com",
         "healthy?(advise|finder|booklet|order|rewind|flyup|buzzer|victory|peters|guide)",
-        "hyperglycemiaabout", "waffor\\.com",
-        "sourceforge\\.net/projects/freepdftojpgconverter",
+        "hyperglycemiaabout", "waffor\\.com", "feedcabal\\.com", "koohenoorgroup\\.com",
+        "sourceforge\\.net/projects/freepdftojpgconverter", "latestdatabase\\.com",
         "pdftoexel\\.wordpress\\.com", "best7th\\.in", "resolit\\.us",
-        "malwaretips", "hackerscontent\\.com",
+        "malwaretips", "hackerscontent\\.com", "hrsoftwaresolution\\.com",
         "webbuildersguide\\.com", "idealshare.net", "lankabpoacademy\\.com",
         "evomailserver\\.com", "gameart\\.net", "voonik\\.com",
         "sofotex\\.com", "erecteentry", "fairharvardfund", "newfundingpoint\\.com",
@@ -405,7 +405,7 @@ class FindSpam:
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
         r"(supportnumber|exclusive|onlineshop|videoclasses|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot)",
-        r"(rsgold|rssong|e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
+        r"(rs\d?gold|rssong|e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
         r"(packers\S{0,3}movers|goatse|burnfat|gronkaffe|muskel|nitricoxide|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
         r"([\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits|research-?paper)\.(co|net|org|in\W|info)",
         r"(health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
