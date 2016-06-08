@@ -356,7 +356,7 @@ class FindSpam:
         "o-lovius\\.com", "aldovmcgregor\\.co", "priredeream\\.com", "quicksearch\\.in",
         "adonads\\.com", "uufix\\.com", "slimrootz\\.com", "robomart\\.com", "fedotov\\.co",
         "uflysoft\\.net", "simicart\\.com", "sellcvv\\.co", "oprfid\\.com",
-        "thereferraltask\\.net", "ajax2014\\.ir", "voxforem\\.com", "writeversity\\.com",
+        "thereferraltask\\.net", "voxforem\\.com", "writeversity\\.com",
         "labstech\\.org", "rikshairuym", "zicamagsopt", "how2world\\.com", "splendyrsite\\.net",
         "3gwith4g\\.com", "xride-hd\\.com", "sincycle\\.com", "wcwnetworking\\.com",
         "vivaspanish\\.org", "wanglu123\\.com", "z0download\\.com", "citehr\\.com",
@@ -529,8 +529,8 @@ class FindSpam:
         # Country-name domains, travel and expats sites are exempt
         {'regex': ur"(?i)[\w-]{6}(australia|brazil|canada|denmark|france|india|mexico|norway|spain|sweden)\.(com|net)", 'all': True,
          'sites': ["travel.stackexchange.com", "expatriates.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
-        # Iran's TLD in answers
-        {'regex': ur"(?i)http\S*\.ir/", 'all': True,
+        # The TLDs of Iran and Tokelau in answers
+        {'regex': ur"(?i)http\S*\.(ir|tk)/", 'all': True,
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0, 'questions': False},
         # Suspicious health-related websites, health sites are exempt
         {'regex': ur"(?i)(bodybuilding|workout|fitness\w{2,}|diet|perfecthealth|muscle|\w{2,}nutrition|prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)", 'all': True,
