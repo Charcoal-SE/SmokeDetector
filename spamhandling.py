@@ -10,6 +10,7 @@ from parsing import url_to_shortlink, user_url_to_shortlink
 from metasmoke import Metasmoke
 from deletionwatcher import DeletionWatcher
 import excepthook
+import regex
 
 
 def should_whitelist_prevent_alert(user_url, reasons):
@@ -92,15 +93,16 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
         add_post_site_id_link((post_id, site, "answer"), question_id)
     try:
         title = escape_special_chars_in_title(title)
+        sanitized_title = regex.sub('https?://', '', title)
 
         if not poster.strip():
             s = u"[ [SmokeDetector](//git.io/vgx7b) ] {}: [{}]({}) by a deleted user on `{}`" \
-                .format(reason, title.strip(), post_url, site)
+                .format(reason, sanitized_title.strip(), post_url, site)
             username = ""
             user_link = ""
         else:
             s = u"[ [SmokeDetector](//git.io/vgx7b) ] {}: [{}]({}) by [{}]({}) on `{}`" \
-                .format(reason, title.strip(), post_url, poster.strip(), poster_url, site)
+                .format(reason, sanitized_title.strip(), post_url, poster.strip(), poster_url, site)
             username = poster.strip()
             user_link = poster_url
 
