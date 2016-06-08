@@ -266,7 +266,7 @@ class FindSpam:
         "pdftoexel\\.wordpress\\.com", "best7th\\.in", "resolit\\.us",
         "malwaretips", "hackerscontent\\.com", "hrsoftwaresolution\\.com",
         "webbuildersguide\\.com", "idealshare.net", "lankabpoacademy\\.com",
-        "evomailserver\\.com", "gameart\\.net", "voonik\\.com",
+        "evomailserver\\.com", "gameart\\.net", "voonik\\.com", "pulsenight\\.com",
         "sofotex\\.com", "erecteentry", "fairharvardfund", "newfundingpoint\\.com",
         "mybloggingmoney\\.com", "windows-techsupport\\.com",
         "drivethelife\\.com", "singlerank\\.com", "sayeureqa\\.com",
