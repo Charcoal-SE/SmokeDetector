@@ -404,9 +404,9 @@ class FindSpam:
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
-        r"(supportnumber|exclusive|onlineshop|videoclasses|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot)",
-        r"(rs\d?gold|rssong|e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
-        r"(packers\S{0,3}movers|goatse|burnfat|gronkaffe|muskel|nitricoxide|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
+        r"(supportnumber|exclusive|onlineshop|videoclasses|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot|tumblr|webs\.)",
+        r"(rs\d?gold|rssong|e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
+        r"(packers\S{0,3}movers|goatse|burnfat|gronkaffe|muskel|nitricoxide|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"([\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits|research-?paper)\.(co|net|org|in\W|info)",
         r"(health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
         r"(//|www\.)healthy?\w{5,7}\.com",
@@ -430,9 +430,9 @@ class FindSpam:
         r"(platinum|paying|acai|buy|premium|ultra|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
         r"(training|institute|marketing)[\w-]{6,}[\w.-]*?\.(co|net|org|in\W|info)", r"[\w-](courses?|training)[\w-]*?\.in/",
         r"\w{9}(buy|roofing)\.(co|net|org|in\W|info)",
-        r"(dive|hike|love|strong|ideal|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot)",
-        r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info)",
-        r"(acai|belle|ripped|pearl|phyto|herbal|[^s]cream|creme|geniu[sx]|optimal|ideal|xplode|ultra|natura|testo|scam|wellness|grow|rejuven|revive|vita|burn|vapor|ecig|formula|biotic|probio|male|derma|medical|medicare|health|beauty|youth|young|aging|rx|face(?!book)|skin|muscle|hair|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|ultra|alpha|beta|colon|brain(?!tree))[\w]{0,20}(plus|l[iy]ft|trial|nutrition|doctor|congress|jacked|dose|formula|order|complex(?!ity)|cure|canada|brazil|france|norway|sweden|mexico|denmark|world|genix|critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|center|centre|care|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|mag|chat|guide|advi[sc]|fact|discussion|solution|consult|source|sups|vms|cream|stuff|grow|enhance|boost)[.\w-]{0,12}\.(co|net|org|in\W|info|wordpress|blogspot)",
+        r"(dive|hike|love|strong|ideal|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
+        r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
+        r"(acai|belle|ripped|pearl|phyto|herbal|[^s]cream|creme|geniu[sx]|optimal|ideal|xplode|ultra|natura|testo|scam|wellness|grow|rejuven|revive|vita|burn|vapor|ecig|formula|biotic|probio|male|derma|medical|medicare|health|beauty|youth|young|aging|rx|face(?!book)|skin|muscle|hair|trim|slim|weight|fat|nutrition|shred|advance|perfect|top|super|ultra|alpha|beta|colon|brain(?!tree))[\w]{0,20}(plus|l[iy]ft|trial|nutrition|doctor|congress|jacked|dose|formula|order|complex(?!ity)|cure|canada|brazil|france|norway|sweden|mexico|denmark|world|genix|critic|funct?ion|power|rewind|points|essence|essential|about|market|max|help|info|policy|program|center|centre|care|try|slim|idea|pro|tip|review|assess|report|critique|blog|site|mag|chat|guide|advi[sc]|fact|discussion|solution|consult|source|sups|vms|cream|stuff|grow|enhance|boost)[.\w-]{0,12}\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(\w{11}(idea|income|sale)|\w{6}(advice|problog|review))s?\.(co|net|in\W|info)",
         r"-(poker|jobs)\.com",
         r"send[\w-]*?india\.(co|net|org|in\W|info)",
@@ -455,7 +455,8 @@ class FindSpam:
         r"worldcup\d+live\.(com?|net|org|in\W|info)",
         r"((concrete|beton)-?mixer|crusher)[\w-]*?\.(co|net)",
         r"\w{7}formac\.(com|net|org)",
-        r"sex\.(com|net|info)", r"https?://(www\.)?sex"
+        r"sex\.(com|net|info)", r"https?://(www\.)?sex",
+        r"[\w-]{12}\.webs\.com"
     ]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
@@ -487,7 +488,7 @@ class FindSpam:
         {'method': has_health, 'all': False,
          'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com", "drupal.stackexchange.com", "meta.stackexchange.com", "webapps.stackexchange.com", "security.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Bad health-related keywords in titles and posts, health sites are exempt
-        {'regex': ur"(?is)virility|diet ?(plan|pill)|\b(pro)?derma(?=[a-su-z ]\w)|(fat|(?<!dead[ -]?)weight)[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|\bherpes\b|colon (detox|clean)|\bpenis\b", 'all': True,
+        {'regex': ur"(?is)virility|diet ?(plan|pill)|\b(pro)?derma(?=[a-su-z ]\w)|(fat|(?<!dead[ -]?)weight)[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|erectile|\bherpes\b|colon ?(detox|clean)|\bpenis\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com", "islam.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Korean character in title: requires 3
         {'regex': ur"(?i)\p{Script=Hangul}.*\p{Script=Hangul}.*\p{Script=Hangul}", 'all': True,
