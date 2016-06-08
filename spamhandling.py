@@ -46,8 +46,11 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
 
 
 def check_if_spam_json(json_data):
+    text_data = json.loads(json_data)["data"]
+    if text_data == "hb":
+        return False, None, ""
     try:
-        data = json.loads(json.loads(json_data)["data"])
+        data = json.loads(text_data)
     except ValueError:
         GlobalVars.charcoal_hq.send_message(u"Encountered ValueError parsing the following:\n{0}".format(json_data), False)
         return False, None, ""
