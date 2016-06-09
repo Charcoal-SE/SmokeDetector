@@ -268,7 +268,7 @@ class FindSpam:
         "webbuildersguide\\.com", "idealshare.net", "lankabpoacademy\\.com",
         "evomailserver\\.com", "gameart\\.net", "voonik\\.com", "pulsenight\\.com",
         "sofotex\\.com", "erecteentry", "fairharvardfund", "newfundingpoint\\.com",
-        "mybloggingmoney\\.com", "windows-techsupport\\.com",
+        "mybloggingmoney\\.com", "windows-techsupport\\.com", "visaadvicecentre\\.com",
         "drivethelife\\.com", "singlerank\\.com", "sayeureqa\\.com",
         "lafozi\\.com", "open-swiss-bank\\.com", "kalimadedot\\.blogspot",
         "tenorshare\\.com", "thecasesolutions\\.com", "3dollarlogos\\.com",
