@@ -577,7 +577,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         if is_privileged(ev_room, ev_user_id, wrap2):
             return "Yes, you are a privileged user."
 
-        return "No, you are not a privileged user."
+        return "No, you are not a privileged user. See [the Privileges wiki page](//github.com/Charcoal-SE/SmokeDetector/wiki/Privileges) for information on what privileges are and what is expected."
     if content_lower.startswith("!!/notify"):
         if len(message_parts) != 3:
             return False, "2 arguments expected"
