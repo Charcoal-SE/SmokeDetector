@@ -5,6 +5,7 @@ import time
 from globalvars import GlobalVars
 import threading
 import websocket
+from collections import Iterable
 import sys
 import traceback
 
@@ -24,7 +25,7 @@ class Metasmoke:
                 if "message" in data:
                     message = data['message']
 
-                    if "message" in message:
+                    if isinstance(message, Iterable) and "message" in message:
                         GlobalVars.charcoal_hq.send_message("{ [metasmoke](https://github.com/Charcoal-SE/metasmoke) } " + message['message'])
             except Exception, e:
                 GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
