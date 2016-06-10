@@ -157,7 +157,9 @@ class GlobalVars:
             "242209",   # JAL
             "280883",   # ByteCommander
             "302251",   # kos
-            "262823"    # ArtOfCode
+            "262823",   # ArtOfCode
+            "215067",   # Ferrybig
+            "308386"    # Magisch
         ],
         socvr_room_id: [
             "1849664",  # Undo
