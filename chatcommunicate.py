@@ -459,11 +459,11 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         return 'Running since {time} UTC ({minute_count} {plurality})'.format(time=GlobalVars.startup_utc, minute_count=minutes, plurality=minute_str)
     if content_lower.startswith("!!/reboot"):
         if is_privileged(ev_room, ev_user_id, wrap2):
-            post_message_in_room(ev_room, "Goodbye, cruel world")
+            post_message_in_room(room_id_str=ev_room, msg="Goodbye, cruel world")
             os._exit(5)
     if content_lower.startswith("!!/stappit"):
         if is_privileged(ev_room, ev_user_id, wrap2):
-            post_message_in_room(ev_room, "Goodbye, cruel world")
+            post_message_in_room(room_id_str=ev_room, msg="Goodbye, cruel world")
             os._exit(6)
     if content_lower.startswith("!!/master"):
         if is_privileged(ev_room, ev_user_id, wrap2):
@@ -510,7 +510,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             if count == -1:
                 return "Invalid argument."
             logs_part = fetch_lines_from_error_log(count)
-            post_message_in_room(ev_room, logs_part, False)
+            post_message_in_room(room_id_str=ev_room, msg=logs_part, length_check=False)
     if content_lower.startswith("!!/pull"):
         if is_privileged(ev_room, ev_user_id, wrap2):
             request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
@@ -541,7 +541,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
     if content_lower.startswith("!!/location"):
         return GlobalVars.location
     if content_lower.startswith("!!/queuestatus"):
-        post_message_in_room(ev_room, GlobalVars.bodyfetcher.print_queue(), False)
+        post_message_in_room(room_id_str=ev_room, msg=GlobalVars.bodyfetcher.print_queue(), length_check=False)
     if content_lower.startswith("!!/blame"):
         GlobalVars.users_chatting[ev_room] = list(set(GlobalVars.users_chatting[ev_room]))  # Make unique
         user_to_blame = random.choice(GlobalVars.users_chatting[ev_room])
