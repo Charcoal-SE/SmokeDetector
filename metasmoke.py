@@ -19,10 +19,13 @@ class Metasmoke:
             try:
                 a = GlobalVars.metasmoke_ws.recv()
                 print(a)
-                message = json.loads(a)["message"]
+                data = json.loads(a)
 
-                if "message" in message:
-                    GlobalVars.charcoal_hq.send_message("{ [metasmoke](https://github.com/Charcoal-SE/metasmoke) } " + message['message'])
+                if "message" in data:
+                    message = data['message']
+
+                    if "message" in message:
+                        GlobalVars.charcoal_hq.send_message("{ [metasmoke](https://github.com/Charcoal-SE/metasmoke) } " + message['message'])
             except Exception, e:
                 GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
                 GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"}))
