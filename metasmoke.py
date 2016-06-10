@@ -9,7 +9,7 @@ import websocket
 
 class Metasmoke:
     @classmethod
-    def init_websocket():
+    def init_websocket(self):
         GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
         GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\",\"key\":\"" + GlobalVars.metasmoke_key + "\"}"}))
 
