@@ -516,7 +516,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             elif "pending" in states or not states:
                 return "CI build is still pending, wait until the build has finished and then pull again."
 
-    if content_lower.startswith("!!/help") or content_lower.startswith("!!/info"):
+    if content_lower.startswith("!!/help") or content_lower.startswith("!!/info") or content_lower.startswith("!!/commands"):
         return "I'm [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector), a bot "\
             "that detects spam and offensive posts on the network and posts alerts to chat. "\
             "[A command list is available here](https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands)."
