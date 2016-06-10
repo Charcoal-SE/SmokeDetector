@@ -5,6 +5,8 @@ import time
 from globalvars import GlobalVars
 import threading
 import websocket
+import sys
+import traceback
 
 
 class Metasmoke:
@@ -21,9 +23,15 @@ class Metasmoke:
 
                 if "message" in message:
                     GlobalVars.charcoal_hq.send_message("{ [metasmoke](https://github.com/Charcoal-SE/metasmoke) } " + message['message'])
-            except:
+            except Exception, e:
                 GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
                 GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"}))
+                print e
+                try:
+                    exc_info = sys.exc_info()
+                    traceback.print_exception(*exc_info)
+                except:
+                    print "meh"
 
     @classmethod
     def send_stats_on_post(self, title, link, reasons, body, username, user_link, why, owner_rep, post_score, up_vote_count, down_vote_count):
