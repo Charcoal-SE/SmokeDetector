@@ -259,6 +259,8 @@ class GlobalVars:
     location = config.get("Config", "location")
     print location
 
+    metasmoke_ws = None
+
     try:
         metasmoke_host = config.get("Config", "metasmoke_host")
         print metasmoke_host
@@ -271,3 +273,9 @@ class GlobalVars:
     except ConfigParser.NoOptionError:
         metasmoke_key = ""
         print "No metasmoke key found, which is okay if both are running on the same host"
+
+    try:
+        metasmoke_ws_host = config.get("Config", "metasmoke_ws_host")
+    except ConfigParser.NoOptionError:
+        metasmoke_key = ""
+        print "No metasmoke websocket host found, which is okay if you're anti-websocket"

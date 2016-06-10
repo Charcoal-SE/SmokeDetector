@@ -4,9 +4,23 @@ import os
 import time
 from globalvars import GlobalVars
 import threading
+import websocket
 
 
 class Metasmoke:
+    @classmethod
+    def init_websocket():
+        GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
+        GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\",\"key\":\"" + GlobalVars.metasmoke_key + "\"}"}))
+
+        while True:
+            try:
+                a = GlobalVars.metasmoke_ws.recv()
+                print(a)
+            except:
+                GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
+                GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"}))
+
     @classmethod
     def send_stats_on_post(self, title, link, reasons, body, username, user_link, why, owner_rep, post_score, up_vote_count, down_vote_count):
         if GlobalVars.metasmoke_host is None:
