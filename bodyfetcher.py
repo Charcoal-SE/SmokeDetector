@@ -212,7 +212,21 @@ class BodyFetcher:
             is_spam, reason, why = check_if_spam(title, body, owner_name, owner_link, site, q_id, False, False, owner_rep, post_score)
             if is_spam:
                 try:
-                    handle_spam(title, body, owner_name, site, link, owner_link, q_id, reason, False, why, owner_rep, post_score, up_vote_count, down_vote_count, None)
+                    handle_spam(title=title,
+                                body=body,
+                                poster=owner_name,
+                                site=site,
+                                post_url=link,
+                                poster_url=owner_link,
+                                post_id=q_id,
+                                reasons=reason,
+                                is_answer=False,
+                                why=why,
+                                owner_rep=owner_rep,
+                                post_score=post_score,
+                                up_vote_count=up_vote_count,
+                                down_vote_count=down_vote_count,
+                                question_id=None)
                 except:
                     print "NOP"
             try:
@@ -237,7 +251,21 @@ class BodyFetcher:
                     is_spam, reason, why = check_if_spam(answer_title, body, owner_name, owner_link, site, a_id, True, False, owner_rep, post_score)
                     if is_spam:
                         try:
-                            handle_spam(title, body, owner_name, site, link, owner_link, a_id, reason, True, why, owner_rep, post_score, up_vote_count, down_vote_count, q_id)
+                            handle_spam(title=title,
+                                        body=body,
+                                        poster=owner_name,
+                                        site=site,
+                                        post_url=link,
+                                        poster_url=owner_link,
+                                        post_id=a_id,
+                                        reasons=reason,
+                                        is_answer=True,
+                                        why=why,
+                                        owner_rep=owner_rep,
+                                        post_score=post_score,
+                                        up_vote_count=up_vote_count,
+                                        down_vote_count=down_vote_count,
+                                        question_id=q_id)
                         except:
                             print "NOP"
             except:
