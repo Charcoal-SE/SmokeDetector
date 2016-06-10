@@ -401,7 +401,8 @@ class FindSpam:
         "emget\\.net", "gevezemirc\\.com", "divinenutrions\\.com", "ace23\\.tk", "fbsparta\\.com",
         "delhigurgaon\\.in", "gurgaonsex\\.com", "mehedi399blog", "myfundbucket\\.com",
         "zaputra\\.com", "ok8uk\\.org\\.uk", "visitdevonandcornwall\\.co\\.uk",
-        "discussfact\\.com", "sirabhinavjain\\.com"
+        "discussfact\\.com", "sirabhinavjain\\.com", "moneytransfercomparison\\.co",
+        "exchangeratetoday\\.co", "currencysolutions\\.co"
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
