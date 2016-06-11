@@ -258,7 +258,7 @@ class FindSpam:
         "trustmyessay", "faasoft", "besttvshows", "mytechlabs", "Housecarbike\\.com",
         "giikers", "pagetube", "myenv\\.org", "testkiz\\.com", "nebusconitirk",
         "pelevoniface", "herintalk", "menshealth", "examguidez", "kynix\\.com",
-        "skinphysiciantips", "xtrememusclerecoveryrev", "xtgenixau\\.com",
+        "skinphysiciantips", "xtrememusclerecoveryrev", "xtgenixau\\.com", "orignalsoft\\.com",
         "diabacordoesitwork", "mixresult\\.com", "win-ipad\\.", "mecharithm\\.com",
         "healthy?(advise|finder|booklet|order|rewind|flyup|buzzer|victory|peters|guide)",
         "hyperglycemiaabout", "waffor\\.com", "feedcabal\\.com", "koohenoorgroup\\.com",
@@ -533,7 +533,7 @@ class FindSpam:
         {'regex': ur"(?i)[\w-]{6}(australia|brazil|canada|denmark|france|india|mexico|norway|spain|sweden)\.(com|net)", 'all': True,
          'sites': ["travel.stackexchange.com", "expatriates.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # The TLDs of Iran and Tokelau in answers
-        {'regex': ur"(?i)http\S*\.(ir|tk)/", 'all': True,
+        {'regex': ur'(?i)http\S*\.(ir|tk)[/"]', 'all': True,
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0, 'questions': False},
         # Suspicious health-related websites, health sites are exempt
         {'regex': ur"(?i)(bodybuilding|workout|fitness\w{2,}|diet|perfecthealth|muscle|\w{2,}nutrition|prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)", 'all': True,
