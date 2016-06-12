@@ -120,7 +120,15 @@ def watcher(ev, wrap2):
                 reply += str(i + 1) + ". "
             reply += u"[{0}] ".format(current_message.split(" ")[0])
             if current_message.split(" ")[1] != "-":
-                result = handle_commands(current_message.lower(), current_message.split(" "), ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, current_message, message_id)
+                result = handle_commands(content_lower=current_message.lower(),
+                                         message_parts=current_message.split(" "),
+                                         ev_room=ev_room,
+                                         ev_room_name=ev_room_name,
+                                         ev_user_id=ev_user_id,
+                                         ev_user_name=ev_user_name,
+                                         wrap2=wrap2,
+                                         content=current_message,
+                                         message_id=message_id)
                 r = result
                 if type(result) == tuple:
                     result = result[1]
@@ -420,10 +428,21 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             batch = ""
             if len(urls) > 1:
                 batch = " (batch report: post {} out of {})".format(index, len(urls))
-            handle_spam(post_data.title, post_data.body, post_data.owner_name, post_data.site, post_data.post_url,
-                        post_data.owner_url, post_data.post_id, ["Manually reported " + post_data.post_type + batch],
-                        post_data.post_type == "answer", why, post_data.owner_rep, post_data.score, post_data.up_vote_count,
-                        post_data.down_vote_count, post_data.question_id)
+            handle_spam(title=post_data.title,
+                        body=post_data.body,
+                        poster=post_data.owner_name,
+                        site=post_data.site,
+                        post_url=post_data.post_url,
+                        poster_url=post_data.owner_url,
+                        post_id=post_data.post_id,
+                        reasons=["Manually reported " + post_data.post_type + batch],
+                        is_answer=post_data.post_type == "answer",
+                        why=why,
+                        owner_rep=post_data.owner_rep,
+                        post_score=post_data.score,
+                        up_vote_count=post_data.up_vote_count,
+                        down_vote_count=post_data.down_vote_count,
+                        question_id=post_data.question_id)
         if 1 < len(urls) > len(output):
             add_or_update_multiple_reporter(ev_user_id, wrap2.host, time.time())
         if len(output) > 0:
@@ -448,11 +467,11 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         return 'Running since {time} UTC ({minute_count} {plurality})'.format(time=GlobalVars.startup_utc, minute_count=minutes, plurality=minute_str)
     if content_lower.startswith("!!/reboot"):
         if is_privileged(ev_room, ev_user_id, wrap2):
-            post_message_in_room(ev_room, "Goodbye, cruel world")
+            post_message_in_room(room_id_str=ev_room, msg="Goodbye, cruel world")
             os._exit(5)
     if content_lower.startswith("!!/stappit"):
         if is_privileged(ev_room, ev_user_id, wrap2):
-            post_message_in_room(ev_room, "Goodbye, cruel world")
+            post_message_in_room(room_id_str=ev_room, msg="Goodbye, cruel world")
             os._exit(6)
     if content_lower.startswith("!!/master"):
         if is_privileged(ev_room, ev_user_id, wrap2):
@@ -499,7 +518,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             if count == -1:
                 return "Invalid argument."
             logs_part = fetch_lines_from_error_log(count)
-            post_message_in_room(ev_room, logs_part, False)
+            post_message_in_room(room_id_str=ev_room, msg=logs_part, length_check=False)
     if content_lower.startswith("!!/pull"):
         if is_privileged(ev_room, ev_user_id, wrap2):
             request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
@@ -530,7 +549,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
     if content_lower.startswith("!!/location"):
         return GlobalVars.location
     if content_lower.startswith("!!/queuestatus"):
-        post_message_in_room(ev_room, GlobalVars.bodyfetcher.print_queue(), False)
+        post_message_in_room(room_id_str=ev_room, msg=GlobalVars.bodyfetcher.print_queue(), length_check=False)
     if content_lower.startswith("!!/blame"):
         GlobalVars.users_chatting[ev_room] = list(set(GlobalVars.users_chatting[ev_room]))  # Make unique
         user_to_blame = random.choice(GlobalVars.users_chatting[ev_room])
