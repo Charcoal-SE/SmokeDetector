@@ -13,29 +13,32 @@ import traceback
 class Metasmoke:
     @classmethod
     def init_websocket(self):
-        GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
-        GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\",\"key\":\"" + GlobalVars.metasmoke_key + "\"}"}))
+        try:
+            GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
+            GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\",\"key\":\"" + GlobalVars.metasmoke_key + "\"}"}))
 
-        while True:
-            try:
-                a = GlobalVars.metasmoke_ws.recv()
-                print(a)
-                data = json.loads(a)
-
-                if "message" in data:
-                    message = data['message']
-
-                    if isinstance(message, Iterable) and "message" in message:
-                        GlobalVars.charcoal_hq.send_message("{ [metasmoke](https://github.com/Charcoal-SE/metasmoke) } " + message['message'])
-            except Exception, e:
-                GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
-                GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"}))
-                print e
+            while True:
                 try:
-                    exc_info = sys.exc_info()
-                    traceback.print_exception(*exc_info)
-                except:
-                    print "meh"
+                    a = GlobalVars.metasmoke_ws.recv()
+                    print(a)
+                    data = json.loads(a)
+
+                    if "message" in data:
+                        message = data['message']
+
+                        if isinstance(message, Iterable) and "message" in message:
+                            GlobalVars.charcoal_hq.send_message("{ [metasmoke](https://github.com/Charcoal-SE/metasmoke) } " + message['message'])
+                except Exception, e:
+                    GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
+                    GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"}))
+                    print e
+                    try:
+                        exc_info = sys.exc_info()
+                        traceback.print_exception(*exc_info)
+                    except:
+                        print "meh"
+        except:
+            print "Couldn't bind to MS websocket"
 
     @classmethod
     def send_stats_on_post(self, title, link, reasons, body, username, user_link, why, owner_rep, post_score, up_vote_count, down_vote_count):
