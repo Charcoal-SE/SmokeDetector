@@ -216,7 +216,8 @@ class GlobalVars:
             "5666987",  # Ian
             "3160466",  # ArtOfCode
             "5735775",  # Ashish Ahuja
-            "3476191"   # Nobody Nada
+            "3476191",  # Nobody Nada
+            "2227743"  # Eric D
         ]
     }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
