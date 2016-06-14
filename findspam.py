@@ -275,7 +275,7 @@ class FindSpam:
         "fix-computer\\.net", "drillpressselect", "chinatour\\.com", "official-?driver",
         "santerevue", "cheatsumo\\.com", "videostir\\.com", "focusitlabs\\.com",
         "smartpcfixer", "1fix\\.org", "code4email\\.com", "nwgolds\\.com",
-        "drivertuner\\.com", "easyfix\\.org", "errorsfixer\\.org",
+        "drivertuner\\.com", "easyfix\\.org", "errorsfixer\\.org", "diligentwriters\\.com",
         "faq800\\.com", "fix1\\.org", "guru4pc\\.net", "howto4pc\\.org",
         "pceasynow\\.com", "qobul\\.com", "onlinegiftdeal\\.com",
         "regeasypro\\.com", "registryware\\.org", "smartfixer\\.(net|org)",
