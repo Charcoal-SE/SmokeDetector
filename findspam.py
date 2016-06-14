@@ -217,7 +217,7 @@ class FindSpam:
         "Volive( Solutions)?", "(meg|test)adrox", "Herbalife", "Accumass", "purple rhino male enhancement",
         "male enhancement supplements", "alpha levo", "digital marketing course", "stark trading system",
         "bring back lost lover", "service proposal essay", "enetdocumentation", "okaygoods", "bojiter",
-        "dr ?eziza", "(spell(home)?|temple)@gmail\\.com"
+        "dr ?eziza", "(spell(home)?|temple|classes)@gmail\\.com"
     ]
     bad_keywords_nwb = [
         u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
@@ -273,7 +273,7 @@ class FindSpam:
         "lafozi\\.com", "open-swiss-bank\\.com", "kalimadedot\\.blogspot",
         "tenorshare\\.com", "thecasesolutions\\.com", "3dollarlogos\\.com",
         "fix-computer\\.net", "drillpressselect", "chinatour\\.com", "official-?driver",
-        "santerevue", "cheatsumo\\.com", "videostir\\.com",
+        "santerevue", "cheatsumo\\.com", "videostir\\.com", "focusitlabs\\.com",
         "smartpcfixer", "1fix\\.org", "code4email\\.com", "nwgolds\\.com",
         "drivertuner\\.com", "easyfix\\.org", "errorsfixer\\.org",
         "faq800\\.com", "fix1\\.org", "guru4pc\\.net", "howto4pc\\.org",
@@ -406,7 +406,7 @@ class FindSpam:
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
-        r"(supportnumber|exclusive|onlineshop|videoclasses|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot|tumblr|webs\.)",
+        r"(supportnumber|exclusive|onlineshop|videoclasses||videotutorial(?!s)|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot|tumblr|webs\.)",
         r"(rs\d?gold|rssong|e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertation|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(meatspin|packers\S{0,3}movers|goatse|burnfat|gronkaffe|muskel|nitricoxide|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(\w{10}spell|[\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits|research-?paper)\.(co|net|org|in\W|info)",
