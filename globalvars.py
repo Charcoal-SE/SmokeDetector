@@ -89,6 +89,7 @@ class GlobalVars:
             "186395",   # Åna
             "193364",   # Ashish Ahuja
             "163686",   # Gothdo
+            "145827",   # angussidney
             "121520",   # ArtOfCode
             "215783"    # KarmaBot (ArtOfCode's sock to test things with)
         ],
