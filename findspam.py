@@ -280,7 +280,7 @@ class FindSpam:
         "pceasynow\\.com", "qobul\\.com", "onlinegiftdeal\\.com",
         "regeasypro\\.com", "registryware\\.org", "smartfixer\\.(net|org)",
         "dlllibrary\\.net", "wisefixer\\.(com|net|org)", "dojobsonline\\.com",
-        "password-?unlocker\\.com", "dropbox18gb\\.com",
+        "password-?unlocker\\.com", "dropbox18gb\\.com", "mysocialpromos\\.com",
         "passwordtech\\.com", "goshareware\\.com", "digitalacads\\.in",
         "nemopdf\\.com", "downloaddailymotion\\.com", "bharatplaza\\.com",
         "free-download-youtube\\.com", "free-music-downloader\\.com",
