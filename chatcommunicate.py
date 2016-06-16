@@ -21,6 +21,17 @@ from ChatExchange.chatexchange.messages import Message
 
 add_latest_message_lock = Lock()
 
+command_aliases = {
+    "f": "fp-",
+    "notspam": "fp-",
+    "k": "tpu-",
+    "spam": "tpu-",
+    "rude": "tpu-",
+    "abuse": "tpu-",
+    "abusive": "tpu-",
+    "offensive": "tpu-",
+    "n": "naa",
+}
 
 def post_message_in_room(room_id_str, msg, length_check=True):
     if room_id_str == GlobalVars.charcoal_room_id:
@@ -170,12 +181,8 @@ def watcher(ev, wrap2):
 def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content, message_id):
     message_url = "//chat.{host}/transcript/message/{id}#{id}".format(host=wrap2.host, id=message_id)
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
-    if second_part_lower in ["f", "notspam"]:
-        second_part_lower = "fp-"
-    if second_part_lower in ["k", "spam", "rude", "abuse", "abusive", "offensive"]:
-        second_part_lower = "tpu-"
-    if second_part_lower == "n":
-        second_part_lower = "naa-"
+    if command_aliases.get(second_part_lower):
+        second_part_lower = command_aliases.get(second_part_lower)
     if re.compile("^:[0-9]{4,}$").search(message_parts[0]):
         msg_id = int(message_parts[0][1:])
         msg = wrap2.get_message(msg_id)
