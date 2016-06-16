@@ -91,7 +91,8 @@ class GlobalVars:
             "163686",   # Gothdo
             "145827",   # angussidney
             "121520",   # ArtOfCode
-            "215783"    # KarmaBot (ArtOfCode's sock to test things with)
+            "215783",   # KarmaBot (ArtOfCode's sock to test things with)
+            "137388"    # QPaysTaxes
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
@@ -218,8 +219,7 @@ class GlobalVars:
             "3160466",  # ArtOfCode
             "5735775",  # Ashish Ahuja
             "3476191",  # Nobody Nada
-            "2227743",  # Eric D
-            "1863564"  # QPaysTaxes
+            "2227743"  # Eric D
         ]
     }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
