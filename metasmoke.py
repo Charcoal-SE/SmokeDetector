@@ -49,6 +49,9 @@ class Metasmoke:
         metasmoke_key = GlobalVars.metasmoke_key
 
         try:
+            if len(why) > 1024:
+                why = why[:512] + '...' + why[-512:]
+            
             post = {'title': title, 'link': link, 'reasons': reasons, 'body': body, 'username': username, 'user_link': user_link, 'why': why, 'user_reputation': owner_rep, 'score': post_score, 'upvote_count': up_vote_count, 'downvote_count': down_vote_count}
 
             post = dict((k, v) for k, v in post.iteritems() if v)  # Remove None values (if they somehow manage to get through)
