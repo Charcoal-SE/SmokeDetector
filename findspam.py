@@ -536,7 +536,7 @@ class FindSpam:
         {'regex': ur'(?i)http\S*\.(ir|tk)[/"<]', 'all': True,
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0, 'questions': False},
         # Suspicious health-related websites, health sites are exempt
-        {'regex': ur"(?i)(bodybuilding|workout|fitness\w{2,}|diet|perfecthealth|muscle|\w{2,}nutrition|prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)", 'all': True,
+        {'regex': ur"(?i)(bodybuilding|workout|fitness\w{2,}|diet|perfecthealth|muscle|nutrition|prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 2},
         # Links preceded by arrows >>>
         {'regex': ur"(?is)(>>>|==\s*>>|====|===>|==>>|(Read More|Click Here) \W{2,20}).{0,20}http(?!://i.stack.imgur.com).{0,200}$", 'all': True,
