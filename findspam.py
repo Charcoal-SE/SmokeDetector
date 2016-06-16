@@ -309,7 +309,7 @@ class FindSpam:
         "products\\.odosta\\.com", "naturacelhelp", "guidemesupss\\.com",
         "rackons\\.com", "imonitorsoft\\.com", "biginfosys\\.com",
         "analec\\.com", "livesportstv\\.us", "batteriedepcportable",
-        "stadtbett\\.com", "tokoterbaik\\.com", "\\Welance\\.com"
+        "stadtbett\\.com", "tokoterbaik\\.com", "\\Welance\\.com",
         "jetcheats\\.com", "cheatio\\.com", "empiremountainbikes",
         "optimalstack(facts|products)", "x4facts", "endomondo\\.com",
         "litindia\\.in", "egovtjobs\\.in", "tipsntrick\\.in", "techstack\\.in",
