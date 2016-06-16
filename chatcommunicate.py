@@ -33,6 +33,7 @@ command_aliases = {
     "n": "naa",
 }
 
+
 def post_message_in_room(room_id_str, msg, length_check=True):
     if room_id_str == GlobalVars.charcoal_room_id:
         GlobalVars.charcoal_hq.send_message(msg, length_check)
