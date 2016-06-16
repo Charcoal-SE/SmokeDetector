@@ -153,7 +153,7 @@ def is_offensive_post(s, site):
     if s is None or len(s) == 0:
         return False, ""
 
-    offensive = regex.compile(ur"(?is)\b((yo)?u suck|8={3,}D|nigg(a|er)|ass ?hole|kiss my ass|fag(got)?|daf[au][qk]|(mother)?fuc?k+(ing?|e?(r|d)| off+| y(ou|e)(rself)?| u+|tard)?|shit(t?er|head)|dickhead|pedo|whore|(is a )?cunt|cocksucker|ejaculated?|butthurt|(private|pussy) show|lesbo|bitches|suck\b.{0,20}\bdick|dee[sz]e? nut[sz])s?\b|shit")
+    offensive = regex.compile(ur"(?is)\b((yo)?u suck|8={3,}D|nigg(a|er)|ass ?hole|fag(got)?|daf[au][qk]|(mother)?fuc?k+(ing?|e?(r|d)| off+| y(ou|e)(rself)?| u+|tard)?|shit(t?er|head)|dickhead|pedo|whore|(is a )?cunt|cocksucker|ejaculated?|butthurt|(private|pussy) show|lesbo|bitches|suck\b.{0,20}\bdick|dee[sz]e? nut[sz])s?\b")
     matches = offensive.finditer(s)
     len_of_match = 0
     text_matched = []
