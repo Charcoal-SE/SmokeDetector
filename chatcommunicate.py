@@ -568,20 +568,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         return "*brews a cup of {choice} tea for @{user}*".format(choice=random.choice(['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint', 'jasmine']), user=ev_user_name.replace(" ", ""))
     if content_lower.startswith("!!/brownie"):
         return "Brown!"
-    if content_lower.startswith("!!/hats"):
-        wb_end = datetime(2016, 1, 4, 0, 0, 0)
-        now = datetime.utcnow()
-        if wb_end > now:
-            diff = wb_end - now
-            hours, remainder = divmod(diff.seconds, 3600)
-            minutes, seconds = divmod(remainder, 60)
-            daystr = "days" if diff.days != 1 else "day"
-            hourstr = "hours" if hours != 1 else "hour"
-            minutestr = "minutes" if minutes != 1 else "minute"
-            secondstr = "seconds" if seconds != 1 else "second"
-            return "HURRY UP AND EARN MORE HATS! Winterbash will be over in {} {}, {} {}, {} {}, and {} {}. :(".format(diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
-
-        return "Winterbash is over. :("
     if content_lower.startswith("!!/test"):
         string_to_test = content[8:]
         test_as_answer = False
