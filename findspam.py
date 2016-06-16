@@ -402,7 +402,8 @@ class FindSpam:
         "delhigurgaon\\.in", "gurgaonsex\\.com", "mehedi399blog", "myfundbucket\\.com",
         "zaputra\\.com", "ok8uk\\.org\\.uk", "visitdevonandcornwall\\.co\\.uk",
         "discussfact\\.com", "sirabhinavjain\\.com", "moneytransfercomparison\\.co",
-        "exchangeratetoday\\.co", "currencysolutions\\.co", "accudb\\.com"
+        "exchangeratetoday\\.co", "currencysolutions\\.co", "accudb\\.com",
+        "grey-areaweed\\.com"
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
