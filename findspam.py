@@ -167,13 +167,9 @@ def is_offensive_post(s, site):
 
 
 def has_eltima(s, site):
-    if s is None or len(s) == 0:
-        return False, ""
-
     reg = regex.compile(ur"(?is)\beltima")
-    if len(reg.findall(s)) > 0 and len(s) <= 750:
+    if reg.search(s) and len(s) <= 750:
         return True, u"Bad keyword 'eltima' and body length under 750 chars"
-
     return False, ""
 
 
