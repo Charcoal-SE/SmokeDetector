@@ -89,7 +89,10 @@ class GlobalVars:
             "186395",   # Åna
             "193364",   # Ashish Ahuja
             "163686",   # Gothdo
-            "121520"    # ArtOfCode
+            "145827",   # angussidney
+            "121520",   # ArtOfCode
+            "215783",   # KarmaBot (ArtOfCode's sock to test things with)
+            "137388"    # QPaysTaxes
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
@@ -215,7 +218,8 @@ class GlobalVars:
             "5666987",  # Ian
             "3160466",  # ArtOfCode
             "5735775",  # Ashish Ahuja
-            "3476191"   # Nobody Nada
+            "3476191",  # Nobody Nada
+            "2227743"  # Eric D
         ]
     }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
@@ -224,7 +228,7 @@ class GlobalVars:
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
 
     commit = os.popen('git log --pretty=format:"%h" -n 1').read()
-    commit_author = os.popen('git log --pretty=format:"%cn" -n 1').read()
+    commit_author = os.popen('git log --pretty=format:"%an" -n 1').read()
 
     if md5.new(commit_author).hexdigest() in censored_committer_names:
         commit_author = censored_committer_names[md5.new(commit_author).hexdigest()]
@@ -259,6 +263,8 @@ class GlobalVars:
     location = config.get("Config", "location")
     print location
 
+    metasmoke_ws = None
+
     try:
         metasmoke_host = config.get("Config", "metasmoke_host")
         print metasmoke_host
@@ -271,3 +277,9 @@ class GlobalVars:
     except ConfigParser.NoOptionError:
         metasmoke_key = ""
         print "No metasmoke key found, which is okay if both are running on the same host"
+
+    try:
+        metasmoke_ws_host = config.get("Config", "metasmoke_ws_host")
+    except ConfigParser.NoOptionError:
+        metasmoke_key = ""
+        print "No metasmoke websocket host found, which is okay if you're anti-websocket"

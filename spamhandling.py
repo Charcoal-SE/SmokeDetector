@@ -69,7 +69,16 @@ def check_if_spam_json(json_data):
     site = data["siteBaseHostAddress"]
     site = site.encode("ascii", errors="replace")
     sys.stdout.flush()
-    is_spam, reason, why = check_if_spam(title, body, poster, url, site, post_id, False, True, 1, 0)
+    is_spam, reason, why = check_if_spam(title=title,
+                                         body=body,
+                                         user_name=poster,
+                                         user_url=url,
+                                         post_site=site,
+                                         post_id=post_id,
+                                         is_answer=False,
+                                         body_is_summary=True,
+                                         owner_rep=1,
+                                         post_score=0)
     return is_spam, reason, why
 
 

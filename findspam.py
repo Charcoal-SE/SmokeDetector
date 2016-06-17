@@ -153,7 +153,7 @@ def is_offensive_post(s, site):
     if s is None or len(s) == 0:
         return False, ""
 
-    offensive = regex.compile(ur"(?is)\b((yo)?u suck|8={3,}D|nigg(a|er)|ass ?hole|kiss my ass|fag(got)?|daf[au][qk]|(mother)?fuc?k+(ing?|e?(r|d)| off+| y(ou|e)(rself)?| u+|tard)?|shit(t?er|head)|dickhead|pedo|whore|(is a )?cunt|cocksucker|ejaculated?|butthurt|(private|pussy) show|lesbo|bitches|suck\b.{0,20}\bdick|dee[sz]e? nut[sz])s?\b|^.{0,250}\b(shit)\b.{0,100}$")
+    offensive = regex.compile(ur"(?is)\b((yo)?u suck|8={3,}D|nigg(a|er)|ass ?hole|fag(got)?|daf[au][qk]|(mother)?fuc?k+(ing?|e?(r|d)| off+| y(ou|e)(rself)?| u+|tard)?|shit(t?er|head)|dickhead|pedo|whore|(is a )?cunt|cocksucker|ejaculated?|butthurt|(private|pussy) show|lesbo|bitches|suck\b.{0,20}\bdick|dee[sz]e? nut[sz])s?\b")
     matches = offensive.finditer(s)
     len_of_match = 0
     text_matched = []
@@ -167,19 +167,15 @@ def is_offensive_post(s, site):
 
 
 def has_eltima(s, site):
-    if s is None or len(s) == 0:
-        return False, ""
-
     reg = regex.compile(ur"(?is)\beltima")
-    if len(reg.findall(s)) > 0 and len(s) <= 750:
+    if reg.search(s) and len(s) <= 750:
         return True, u"Bad keyword 'eltima' and body length under 750 chars"
-
     return False, ""
 
 
 class FindSpam:
     bad_keywords = [
-        "baba ji", "fifa.{0,20}coins?", "fifabay", "Long Path Tool",
+        "baba ji", "fifa.{0,20}coins?", "fifabay", "Long ?Path ?Tool",
         "fifaodell", "brianfo", "tosterone", "bajotz",
         "kolcak", "Zapyo", "we (offer|give out) (loans|funds|funding)",
         "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
@@ -217,7 +213,7 @@ class FindSpam:
         "Volive( Solutions)?", "(meg|test)adrox", "Herbalife", "Accumass", "purple rhino male enhancement",
         "male enhancement supplements", "alpha levo", "digital marketing course", "stark trading system",
         "bring back lost lover", "service proposal essay", "enetdocumentation", "okaygoods", "bojiter",
-        "dr ?eziza", "(spell(home)?|temple)@gmail\\.com"
+        "dr ?eziza", "(spell(home)?|temple|classes)@gmail\\.com",
     ]
     bad_keywords_nwb = [
         u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
@@ -239,7 +235,7 @@ class FindSpam:
         "\\bin (?:bangalore|chennai|delhi|hyderabad|kolkata|mumbai|madurai|coimbatore|rajkot|durgapur|surat|agra|patna|ghaziabad|jaipur|dubai)</a>",
         u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "no2blast", "sunergetic", "capilux", "sante ?avis",
         "enduros", "dianabol", "ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex", "revimax",
-        "celluria", "viatropin"
+        "celluria", "viatropin",
     ]
     blacklisted_websites = [
         "online ?kelas", "careyourhealths", "wowtoes", "(naga|dewa)poker", "reshapeready\\.com",
@@ -258,7 +254,7 @@ class FindSpam:
         "trustmyessay", "faasoft", "besttvshows", "mytechlabs", "Housecarbike\\.com",
         "giikers", "pagetube", "myenv\\.org", "testkiz\\.com", "nebusconitirk",
         "pelevoniface", "herintalk", "menshealth", "examguidez", "kynix\\.com",
-        "skinphysiciantips", "xtrememusclerecoveryrev", "xtgenixau\\.com",
+        "skinphysiciantips", "xtrememusclerecoveryrev", "xtgenixau\\.com", "orignalsoft\\.com",
         "diabacordoesitwork", "mixresult\\.com", "win-ipad\\.", "mecharithm\\.com",
         "healthy?(advise|finder|booklet|order|rewind|flyup|buzzer|victory|peters|guide)",
         "hyperglycemiaabout", "waffor\\.com", "feedcabal\\.com", "koohenoorgroup\\.com",
@@ -269,18 +265,18 @@ class FindSpam:
         "evomailserver\\.com", "gameart\\.net", "voonik\\.com", "pulsenight\\.com",
         "sofotex\\.com", "erecteentry", "fairharvardfund", "newfundingpoint\\.com",
         "mybloggingmoney\\.com", "windows-techsupport\\.com", "visaadvicecentre\\.com",
-        "drivethelife\\.com", "singlerank\\.com", "sayeureqa\\.com",
+        "drivethelife\\.com", "singlerank\\.com", "sayeureqa\\.com", "callpcexpert\\.com",
         "lafozi\\.com", "open-swiss-bank\\.com", "kalimadedot\\.blogspot",
         "tenorshare\\.com", "thecasesolutions\\.com", "3dollarlogos\\.com",
         "fix-computer\\.net", "drillpressselect", "chinatour\\.com", "official-?driver",
-        "santerevue", "cheatsumo\\.com", "videostir\\.com",
+        "santerevue", "cheatsumo\\.com", "videostir\\.com", "focusitlabs\\.com",
         "smartpcfixer", "1fix\\.org", "code4email\\.com", "nwgolds\\.com",
-        "drivertuner\\.com", "easyfix\\.org", "errorsfixer\\.org",
+        "drivertuner\\.com", "easyfix\\.org", "errorsfixer\\.org", "diligentwriters\\.com",
         "faq800\\.com", "fix1\\.org", "guru4pc\\.net", "howto4pc\\.org",
         "pceasynow\\.com", "qobul\\.com", "onlinegiftdeal\\.com",
         "regeasypro\\.com", "registryware\\.org", "smartfixer\\.(net|org)",
         "dlllibrary\\.net", "wisefixer\\.(com|net|org)", "dojobsonline\\.com",
-        "password-?unlocker\\.com", "dropbox18gb\\.com",
+        "password-?unlocker\\.com", "dropbox18gb\\.com", "mysocialpromos\\.com",
         "passwordtech\\.com", "goshareware\\.com", "digitalacads\\.in",
         "nemopdf\\.com", "downloaddailymotion\\.com", "bharatplaza\\.com",
         "free-download-youtube\\.com", "free-music-downloader\\.com",
@@ -309,7 +305,7 @@ class FindSpam:
         "products\\.odosta\\.com", "naturacelhelp", "guidemesupss\\.com",
         "rackons\\.com", "imonitorsoft\\.com", "biginfosys\\.com",
         "analec\\.com", "livesportstv\\.us", "batteriedepcportable",
-        "stadtbett\\.com", "tokoterbaik\\.com", "\\Welance\\.com"
+        "stadtbett\\.com", "tokoterbaik\\.com", "\\Welance\\.com",
         "jetcheats\\.com", "cheatio\\.com", "empiremountainbikes",
         "optimalstack(facts|products)", "x4facts", "endomondo\\.com",
         "litindia\\.in", "egovtjobs\\.in", "tipsntrick\\.in", "techstack\\.in",
@@ -402,13 +398,14 @@ class FindSpam:
         "delhigurgaon\\.in", "gurgaonsex\\.com", "mehedi399blog", "myfundbucket\\.com",
         "zaputra\\.com", "ok8uk\\.org\\.uk", "visitdevonandcornwall\\.co\\.uk",
         "discussfact\\.com", "sirabhinavjain\\.com", "moneytransfercomparison\\.co",
-        "exchangeratetoday\\.co", "currencysolutions\\.co"
+        "exchangeratetoday\\.co", "currencysolutions\\.co", "accudb\\.com",
+        "grey-areaweed\\.com", "360musicng\\.co",
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
-        r"(supportnumber|exclusive|onlineshop|videoclasses|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot|tumblr|webs\.)",
-        r"(rs\d?gold|rssong|e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertationclub|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
-        r"(packers\S{0,3}movers|goatse|burnfat|gronkaffe|muskel|nitricoxide|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
+        r"(supportnumber|exclusive|onlineshop|video(course|classes|tutorial(?!s))|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot|tumblr|webs\.)",
+        r"(rs\d?gold|rssong|e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertation|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
+        r"(heathcare|meatspin|packers\S{0,3}movers|(buy|sell)\S{0,12}cvv|goatse|burnfat|gronkaffe|muskel|nitricoxide|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(\w{10}spell|[\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits|research-?paper)\.(co|net|org|in\W|info)",
         r"(health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
         r"(//|www\.)healthy?\w{5,7}\.com",
@@ -449,7 +446,7 @@ class FindSpam:
         r"backlink[\w-]*?\.(com|net|de|blogspot)",
         r"(software|developers|packers|movers|logistic|service)[\w-]*?india\.(com|in\W)",
         r"scam[\w-]*?(book|alert|register|punch)[\w-]*?\.(co|net|org|in\W|info)",
-        r"http\S*?crazy(mass|bulk)",
+        r"http\S*?crazy(mass|bulk)", r'http\S*\.com\.com[/"<]',
         r"https?://[^/\s]{8,}healer",
         r"\w{9}rev\.com", r'reddit\.com/\w{6}/"',
         r"world[\w-]*?cricket[\w-]*?\.(co|net|org|in\W|info)",
@@ -458,7 +455,7 @@ class FindSpam:
         r"((concrete|beton)-?mixer|crusher)[\w-]*?\.(co|net)",
         r"\w{7}formac\.(com|net|org)",
         r"sex\.(com|net|info)", r"https?://(www\.)?sex",
-        r"[\w-]{12}\.webs\.com"
+        r"[\w-]{12}\.webs\.com",
     ]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
@@ -494,9 +491,9 @@ class FindSpam:
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com", "islam.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Korean character in title: requires 3
         {'regex': ur"(?i)\p{Script=Hangul}.*\p{Script=Hangul}.*\p{Script=Hangul}", 'all': True,
-         'sites': [], 'reason': "Korean character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+         'sites': ["korean.stackexchange.com"], 'reason': "Korean character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Chinese characters in title: requires 3
-        {'regex': ur"(?i)\p{Script=Han}.*\p{Script=Han}.*\p{Script=Han}|。|【|】", 'all': True,
+        {'regex': ur"(?i)\p{Script=Han}.*\p{Script=Han}.*\p{Script=Han}", 'all': True,
          'sites': ["chinese.stackexchange.com", "japanese.stackexchange.com", "ja.stackoverflow.com"], 'reason': "Chinese character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Hindi character in title
         {'regex': ur"(?i)\p{Script=Devanagari}", 'all': True,
@@ -533,10 +530,10 @@ class FindSpam:
         {'regex': ur"(?i)[\w-]{6}(australia|brazil|canada|denmark|france|india|mexico|norway|spain|sweden)\.(com|net)", 'all': True,
          'sites': ["travel.stackexchange.com", "expatriates.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # The TLDs of Iran and Tokelau in answers
-        {'regex': ur"(?i)http\S*\.(ir|tk)/", 'all': True,
+        {'regex': ur'(?i)http\S*\.(ir|tk)[/"<]', 'all': True,
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0, 'questions': False},
         # Suspicious health-related websites, health sites are exempt
-        {'regex': ur"(?i)(bodybuilding|workout|fitness\w{2,}|diet|perfecthealth|muscle|\w{2,}nutrition|prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)", 'all': True,
+        {'regex': ur"(?i)(bodybuilding|workout|fitness|diet|perfecthealth|muscle|nutrition|prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com", "skeptics.stackexchange.com", "bicycles.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 2},
         # Links preceded by arrows >>>
         {'regex': ur"(?is)(>>>|==\s*>>|====|===>|==>>|(Read More|Click Here) \W{2,20}).{0,20}http(?!://i.stack.imgur.com).{0,200}$", 'all': True,
@@ -545,12 +542,12 @@ class FindSpam:
         {'method': link_at_end, 'all': False,
          'sites': ["superuser.com", "askubuntu.com", "drupal.stackexchange.com", "meta.stackexchange.com", "security.stackexchange.com", "patents.stackexchange.com", "money.stackexchange.com", "gaming.stackexchange.com", "arduino.stackexchange.com", "workplace.stackexchange.com"], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
         # Link at the end of a short answer
-        {'regex': ur'(?s)^.{0,350}<a href="https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,4}/?\w{0,2}/?|(?:plus\.google|www\.facebook)\.com/[\w/]+)"[^<]*</a>(?:</strong>)?\s*</p>\s*$', 'all': True,
+        {'regex': ur'(?is)^.{0,350}<a href="https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,4}/?\w{0,2}/?|(?:plus\.google|www\.facebook)\.com/[\w/]+)"[^<]*</a>(?:</strong>)?\s*</p>\s*$', 'all': True,
          'sites': [], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Shortened URL near the end of question
-        {'regex': ur"(?s)://(goo\.gl|bit\.ly|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw)/.{0,200}$", 'all': True, 'sites': ["superuser.com", "askubuntu.com"], 'reason': "shortened URL in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
+        {'regex': ur"(?is)://(goo\.gl|bit\.ly|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to)/.{0,200}$", 'all': True, 'sites': ["superuser.com", "askubuntu.com"], 'reason': "shortened URL in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
         # Shortened URL in a short answer
-        {'regex': ur"(?s)://(goo\.gl|bit\.ly|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw)/$", 'all': True, 'sites': [], 'reason': "shortened URL in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
+        {'regex': ur"(?is)://(goo\.gl|bit\.ly|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to)/$", 'all': True, 'sites': [], 'reason': "shortened URL in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Link text without Latin characters
         {'regex': u">[^0-9A-Za-z<'\"]{3,}</a>", 'all': True,
          'sites': ["ja.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com", "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com", "codegolf.stackexchange.com"], 'reason': 'non-Latin link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
@@ -561,10 +558,10 @@ class FindSpam:
         {'regex': ur'(?u)rel="nofollow">\W</a>', 'all': True,
          'sites': [], 'reason': 'linked punctuation in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 11, 'max_score': 1},
         # URL in title, some sites are exempt
-        {'regex': ur"https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}|\w{3,}\.(com|net)\b.*\w{3,}\.(com|net)\b", 'all': True,
+        {'regex': ur"(?i)https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}|\w{3,}\.(com|net)\b.*\w{3,}\.(com|net)\b", 'all': True,
          'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com", "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com"], 'reason': "URL in title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 0},
         # URL-only title, for the exempt sites
-        {'regex': ur"^https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}(/\S*)?$", 'all': False,
+        {'regex': ur"(?i)^https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}(/\S*)?$", 'all': False,
          'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com", "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com"], 'reason': "URL-only title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 0},
         #
         # Category: Suspicious contact information
@@ -573,10 +570,10 @@ class FindSpam:
         # Phone number in post
         {'regex': ur"(?s)^.{0,250}\b1 ?[-(.]8\d{2}[-).] ?\d{3}[-. ]\d{4}\b", 'all': True, 'sites': ["math.stackexchange.com"], 'reason': "phone number detected in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Email check for answers, some sites exempt
-        {'regex': ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': True,
+        {'regex': ur"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': True,
          'sites': ["stackoverflow.com", "ja.stackoverflow.com", "es.stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com", "webmasters.stackexchange.com", "wordpress.stackexchange.com", "magento.stackexchange.com", "elementaryos.stackexchange.com", "tex.stackexchange.com", "civicrm.stackexchange.com", "apple.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Email check for questions: check only at the end, some sites exempt
-        {'regex': ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s).{0,100}$", 'all': True,
+        {'regex': ur"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s).{0,100}$", 'all': True,
          'sites': ["stackoverflow.com", "ja.stackoverflow.com", "es.stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "superuser.com", "serverfault.com", "askubuntu.com", "webapps.stackexchange.com", "salesforce.stackexchange.com", "unix.stackexchange.com", "webmasters.stackexchange.com", "wordpress.stackexchange.com", "magento.stackexchange.com", "elementaryos.stackexchange.com", "tex.stackexchange.com", "civicrm.stackexchange.com", "apple.stackexchange.com", "android.stackexchange.com", "drupal.stackexchange.com", "dba.stackexchange.com", "math.stackexchange.com", "sharepoint.stackexchange.com", "security.stackexchange.com", "stats.stackexchange.com", "programmers.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
         # Combination of keyword and email in questions and answers, for all sites
         {'method': keyword_email, 'all': True, 'sites': [], 'reason': "bad keyword with email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
@@ -605,7 +602,7 @@ class FindSpam:
         # Parenting troll
         {'regex': ur"(?i)\b(erica|jeff|er1ca|spam|moderator)\b", 'all': False, 'sites': ["parenting.stackexchange.com"], 'reason': "bad keyword in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 0},
         # Academia kangaroos
-        {'regex': ur"kangaroos", 'all': False, 'sites': ["academia.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 10, 'max_score': 1},
+        {'regex': ur"(?i)kangaroos", 'all': False, 'sites': ["academia.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 10, 'max_score': 1},
         #
         # Category: other
         # Blacklisted usernames
