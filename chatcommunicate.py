@@ -30,7 +30,7 @@ command_aliases = {
     "abuse": "tpu-",
     "abusive": "tpu-",
     "offensive": "tpu-",
-    "n": "naa",
+    "n": "naa-"
 }
 
 
