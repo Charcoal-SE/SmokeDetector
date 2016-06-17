@@ -544,9 +544,9 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 return "CI build is still pending, wait until the build has finished and then pull again."
 
     if content_lower.startswith("!!/help") or content_lower.startswith("!!/info") or content_lower.startswith("!!/commands"):
-        return "I'm [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector), a bot "\
-            "that detects spam and offensive posts on the network and posts alerts to chat. "\
-            "[A command list is available here](https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands)."
+        return "I'm [SmokeDetector](https://git.io/vgx7b), a bot that detects spam and offensive posts on the network " \
+            "and posts alerts to chat. For more information, you can read the guidance about [privileges](https://git.io/voC8N), " \
+            "[available commands](https://git.io/voC4m), and [what feedback to use in different situations](https://git.io/voC4s)"
     if content_lower.startswith("!!/apiquota"):
         return "The current API quota remaining is {}.".format(GlobalVars.apiquota)
     if content_lower.startswith("!!/whoami"):
