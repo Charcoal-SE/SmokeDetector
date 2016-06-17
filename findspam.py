@@ -446,7 +446,7 @@ class FindSpam:
         r"backlink[\w-]*?\.(com|net|de|blogspot)",
         r"(software|developers|packers|movers|logistic|service)[\w-]*?india\.(com|in\W)",
         r"scam[\w-]*?(book|alert|register|punch)[\w-]*?\.(co|net|org|in\W|info)",
-        r"http\S*?crazy(mass|bulk)",
+        r"http\S*?crazy(mass|bulk)", r'http\S*\.com\.com[/"<]',
         r"https?://[^/\s]{8,}healer",
         r"\w{9}rev\.com", r'reddit\.com/\w{6}/"',
         r"world[\w-]*?cricket[\w-]*?\.(co|net|org|in\W|info)",
