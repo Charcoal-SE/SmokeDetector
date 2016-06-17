@@ -14,6 +14,7 @@ from termcolor import colored
 from findspam import FindSpam
 from deletionwatcher import DeletionWatcher
 from ChatExchange.chatexchange.messages import Message
+import chatcommands
 
 
 # Please note: If new !!/ commands are added or existing ones are modified, don't forget to
@@ -30,9 +31,11 @@ command_aliases = {
     "abuse": "tpu-",
     "abusive": "tpu-",
     "offensive": "tpu-",
-    "n": "naa-"
+    "n": "naa",
 }
 
+
+cmds = chatcommands.command_dict
 
 def post_message_in_room(room_id_str, msg, length_check=True):
     if room_id_str == GlobalVars.charcoal_room_id:
@@ -184,6 +187,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
     if command_aliases.get(second_part_lower):
         second_part_lower = command_aliases.get(second_part_lower)
+    command = content_lower.split()[0]
     if re.compile("^:[0-9]{4,}$").search(message_parts[0]):
         msg_id = int(message_parts[0][1:])
         msg = wrap2.get_message(msg_id)
@@ -199,7 +203,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             post_type = None
         if (second_part_lower.startswith("false") or second_part_lower.startswith("fp")) \
                 and is_privileged(ev_room, ev_user_id, wrap2):
-            if post_site_id is None:
+            if not chatcommands.is_report(post_site_id):
                 return "That message is not a report."
 
             t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
@@ -241,7 +245,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 pass
         if (second_part_lower.startswith("true") or second_part_lower.startswith("tp")) \
                 and is_privileged(ev_room, ev_user_id, wrap2):
-            if post_site_id is None:
+            if not chatcommands.is_report(post_site_id):
                 return "That message is not a report."
 
             t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
@@ -270,7 +274,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 return "Recorded answer as true positive in metasmoke. If you want to blacklist the poster of the answer, use `trueu` or `tpu`."
 
         if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id, wrap2):
-            if post_site_id is None:
+            if not chatcommands.is_report(post_site_id):
                 return "That message is not a report."
 
             t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
@@ -283,7 +287,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             else:
                 return None
         if second_part_lower.startswith("naa") and is_privileged(ev_room, ev_user_id, wrap2):
-            if post_site_id is None:
+            if not chatcommands.is_report(post_site_id):
                 return "That message is not a report."
             if post_type != "answer":
                 return "That report was a question; questions cannot be marked as NAAs."
@@ -392,16 +396,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             return "Error: {}".format(val)
         else:
             return False, "Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`."
-    if (content_lower.startswith("!!/allspam") or content_lower.startswith("!!/reportuser")) and is_privileged(ev_room, ev_user_id, wrap2):
-        if len(message_parts) != 2:
-            return False, "1 argument expected"
-        url = message_parts[1]
-        user = get_user_from_url(url)
-        if user is None:
-            return "That doesn't look like a valid user URL."
-        why = u"User manually reported by *{}* in room *{}*.\n".format(ev_user_name, ev_room_name.decode('utf-8'))
-        handle_user_with_all_spam(user, why)
-        return None
     if content_lower.startswith("!!/report") \
             and is_privileged(ev_room, ev_user_id, wrap2):
         crn, wait = can_report_now(ev_user_id, wrap2.host)
@@ -456,64 +450,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         if len(output) > 0:
             return os.linesep.join(output)
         return None
-    if content_lower.startswith("!!/wut"):
-        return "Whaddya mean, 'wut'? Humans..."
-    if content_lower.startswith("!!/lick"):
-        return "*licks ice cream cone*"
-    if content_lower.startswith("!!/alive"):
-        if ev_room == GlobalVars.charcoal_room_id:
-            return 'Of course'
-        elif ev_room == GlobalVars.meta_tavern_room_id or ev_room == GlobalVars.socvr_room_id:
-            return random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee', 'Watching this endless list of new questions *never* gets boring', 'Kinda sorta'])
-    if content_lower.startswith("!!/rev") or content_lower.startswith("!!/ver"):
-        return '[{commit_name}](https://github.com/Charcoal-SE/SmokeDetector/commit/{commit_code})'.format(commit_name=GlobalVars.commit_with_author, commit_code=GlobalVars.commit)
-    if content_lower.startswith("!!/status"):
-        now = datetime.utcnow()
-        diff = now - UtcDate.startup_utc_date
-        minutes, remainder = divmod(diff.seconds, 60)
-        minute_str = "minutes" if minutes != 1 else "minute"
-        return 'Running since {time} UTC ({minute_count} {plurality})'.format(time=GlobalVars.startup_utc, minute_count=minutes, plurality=minute_str)
-    if content_lower.startswith("!!/reboot"):
-        if is_privileged(ev_room, ev_user_id, wrap2):
-            post_message_in_room(room_id_str=ev_room, msg="Goodbye, cruel world")
-            os._exit(5)
-    if content_lower.startswith("!!/stappit"):
-        if is_privileged(ev_room, ev_user_id, wrap2):
-            post_message_in_room(room_id_str=ev_room, msg="Goodbye, cruel world")
-            os._exit(6)
-    if content_lower.startswith("!!/master"):
-        if is_privileged(ev_room, ev_user_id, wrap2):
-            os._exit(8)
-    if content_lower.startswith("!!/clearbl"):
-        if is_privileged(ev_room, ev_user_id, wrap2):
-            if os.path.isfile("blacklistedUsers.txt"):
-                os.remove("blacklistedUsers.txt")
-                GlobalVars.blacklisted_users = []
-                return "Kaboom, blacklisted users cleared."
-
-            return "There are no blacklisted users at the moment."
-    if content_lower.startswith("!!/block") and is_privileged(ev_room, ev_user_id, wrap2):
-        room_id = message_parts[2] if len(message_parts) > 2 else "all"
-        timeToBlock = message_parts[1] if len(message_parts) > 1 else "0"
-        if not timeToBlock.isdigit():
-            return False, "Invalid duration."
-
-        timeToBlock = int(timeToBlock)
-        timeToBlock = timeToBlock if 0 < timeToBlock < 14400 else 900
-        GlobalVars.blockedTime[room_id] = time.time() + timeToBlock
-        which_room = "globally" if room_id == "all" else "in room " + room_id
-        report = "Reports blocked for {} seconds {}.".format(timeToBlock, which_room)
-        if room_id != GlobalVars.charcoal_room_id:
-            GlobalVars.charcoal_hq.send_message(report)
-        return report
-    if content_lower.startswith("!!/unblock") and is_privileged(ev_room, ev_user_id, wrap2):
-        room_id = message_parts[2] if len(message_parts) > 2 else "all"
-        GlobalVars.blockedTime[room_id] = time.time()
-        which_room = "globally" if room_id == "all" else "in room " + room_id
-        report = "Reports unblocked {}.".format(GlobalVars.blockedTime - time.time(), which_room)
-        if room_id != GlobalVars.charcoal_room_id:
-            GlobalVars.charcoal_hq.send_message(report)
-        return report
     if content_lower.startswith("!!/errorlogs"):
         if is_privileged(ev_room, ev_user_id, wrap2):
             count = -1
@@ -527,137 +463,20 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                 return "Invalid argument."
             logs_part = fetch_lines_from_error_log(count)
             post_message_in_room(room_id_str=ev_room, msg=logs_part, length_check=False)
-    if content_lower.startswith("!!/pull"):
-        if is_privileged(ev_room, ev_user_id, wrap2):
-            request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
-            latest_sha = request.json()["object"]["sha"]
-            request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/{commit_code}/statuses'.format(commit_code=latest_sha))
-            states = []
-            for status in request.json():
-                state = status["state"]
-                states.append(state)
-            if "success" in states:
-                os._exit(3)
-            elif "error" in states or "failure" in states:
-                return "CI build failed! :( Please check your commit."
-            elif "pending" in states or not states:
-                return "CI build is still pending, wait until the build has finished and then pull again."
 
-    if content_lower.startswith("!!/help") or content_lower.startswith("!!/info") or content_lower.startswith("!!/commands"):
-        return "I'm [SmokeDetector](https://git.io/vgx7b), a bot that detects spam and offensive posts on the network " \
-            "and posts alerts to chat. For more information, you can read the guidance about [privileges](https://git.io/voC8N), " \
-            "[available commands](https://git.io/voC4m), and [what feedback to use in different situations](https://git.io/voC4s)"
-    if content_lower.startswith("!!/apiquota"):
-        return "The current API quota remaining is {}.".format(GlobalVars.apiquota)
-    if content_lower.startswith("!!/whoami"):
-        if (ev_room in GlobalVars.smokeDetector_user_id):
-            return "My id for this room is {}.".format(GlobalVars.smokeDetector_user_id[ev_room])
+    parameters = {
+        'content': content,
+        'content_lower': content_lower,
+        'ev_room': ev_room,
+        'ev_room_name': ev_room_name,
+        'ev_user_id': ev_user_id,
+        'ev_user_name': ev_user_name,
+        'message_parts': message_parts,
+        'wrap2': wrap2,
+    }
+    try:
+        return cmds[command](**parameters)
+    except KeyError:
+        return False, None  # Unrecognized command, can be edited later.
 
-        return "I don't know my user ID for this room. (Something is wrong, and it's apnorton's fault.)"
-    if content_lower.startswith("!!/location"):
-        return GlobalVars.location
-    if content_lower.startswith("!!/queuestatus"):
-        post_message_in_room(room_id_str=ev_room, msg=GlobalVars.bodyfetcher.print_queue(), length_check=False)
-    if content_lower.startswith("!!/blame"):
-        GlobalVars.users_chatting[ev_room] = list(set(GlobalVars.users_chatting[ev_room]))  # Make unique
-        user_to_blame = random.choice(GlobalVars.users_chatting[ev_room])
-        return u"It's [{}]({})'s fault.".format(user_to_blame[0], user_to_blame[1])
-    if content_lower.startswith("!!/coffee"):
-        return "*brews coffee for @" + ev_user_name.replace(" ", "") + "*"
-    if content_lower.startswith("!!/tea"):
-        return "*brews a cup of {choice} tea for @{user}*".format(choice=random.choice(['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint', 'jasmine']), user=ev_user_name.replace(" ", ""))
-    if content_lower.startswith("!!/brownie"):
-        return "Brown!"
-    if content_lower.startswith("!!/test"):
-        string_to_test = content[8:]
-        test_as_answer = False
-        if content_lower.startswith("!!/test-a"):
-            string_to_test = content[10:]
-            test_as_answer = True
-        if len(string_to_test) == 0:
-            return "Nothing to test"
-        result = "> "
-        reasons, why = FindSpam.test_post(string_to_test, string_to_test, string_to_test, "", test_as_answer, False, 1, 0)
-        if len(reasons) == 0:
-            result += "Would not be caught for title, {}, and username.".format("answer" if test_as_answer else "body")
-            return result
-        result += ", ".join(reasons).capitalize()
-        if why is not None and len(why) > 0:
-            result += "\n----------\n"
-            result += why
-        return result
-    if content_lower.startswith("!!/amiprivileged"):
-        if is_privileged(ev_room, ev_user_id, wrap2):
-            return "Yes, you are a privileged user."
 
-        return "No, you are not a privileged user. See [the Privileges wiki page](//github.com/Charcoal-SE/SmokeDetector/wiki/Privileges) for information on what privileges are and what is expected."
-    if content_lower.startswith("!!/notify"):
-        if len(message_parts) != 3:
-            return False, "2 arguments expected"
-        user_id = int(ev_user_id)
-        chat_site = wrap2.host
-        room_id = message_parts[1]
-        if not room_id.isdigit():
-            return False, "Room ID is invalid."
-
-        room_id = int(room_id)
-        quiet_action = ("-" in message_parts[2])
-        se_site = message_parts[2].replace('-', '')
-        response, full_site = add_to_notification_list(user_id, chat_site, room_id, se_site)
-        if response == 0:
-            if quiet_action:
-                return None
-
-            return "You'll now get pings from me if I report a post on `{site_name}`, in room `{room_id}` on `chat.{chat_domain}`".format(site_name=se_site, room_id=room_id, chat_domain=chat_site)
-        elif response == -1:
-            return "That notification configuration is already registered."
-        elif response == -2:
-            return False, "The given SE site does not exist."
-    if content_lower.startswith("!!/unnotify"):
-        if len(message_parts) != 3:
-            return False, "2 arguments expected"
-        user_id = int(ev_user_id)
-        chat_site = wrap2.host
-        room_id = message_parts[1]
-        if not room_id.isdigit():
-            return False, "Room ID is invalid."
-
-        room_id = int(room_id)
-        quiet_action = ("-" in message_parts[2])
-        se_site = message_parts[2].replace('-', '')
-        response = remove_from_notification_list(user_id, chat_site, room_id, se_site)
-        if response:
-            if quiet_action:
-                return None
-            return "I will no longer ping you if I report a post on `{site_name}`, in room `{room_id}` on `chat.{chat_domain}`".format(site_name=se_site, room_id=room_id, chat_domain=chat_site)
-        return "That configuration doesn't exist."
-    if content_lower.startswith("!!/willibenotified"):
-        if len(message_parts) != 3:
-            return False, "2 arguments expected"
-        user_id = int(ev_user_id)
-        chat_site = wrap2.host
-        room_id = message_parts[1]
-        if not room_id.isdigit():
-            return False, "Room ID is invalid"
-
-        room_id = int(room_id)
-        se_site = message_parts[2]
-        will_be_notified = will_i_be_notified(user_id, chat_site, room_id, se_site)
-        if will_be_notified:
-            return "Yes, you will be notified for that site in that room."
-
-        return "No, you won't be notified for that site in that room."
-    if content_lower.startswith("!!/allnotificationsites"):
-        if len(message_parts) != 2:
-            return False, "1 argument expected"
-        user_id = int(ev_user_id)
-        chat_site = wrap2.host
-        room_id = message_parts[1]
-        if not room_id.isdigit():
-            return False, "Room ID is invalid."
-        sites = get_all_notification_sites(user_id, chat_site, room_id)
-        if len(sites) == 0:
-            return "You won't get notified for any sites in that room."
-
-        return "You will get notified for these sites:\r\n" + ", ".join(sites)
-    return False, None  # Unrecognized command, can be edited later.
