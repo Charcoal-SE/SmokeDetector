@@ -259,7 +259,7 @@ class FindSpam:
         "healthy?(advise|finder|booklet|order|rewind|flyup|buzzer|victory|peters|guide)",
         "hyperglycemiaabout", "waffor\\.com", "feedcabal\\.com", "koohenoorgroup\\.com",
         "sourceforge\\.net/projects/freepdftojpgconverter", "latestdatabase\\.com",
-        "pdftoexel\\.wordpress\\.com", "best7th\\.in", "resolit\\.us",
+        "pdftoexel\\.wordpress\\.com", "best7th\\.in", "resolit\\.us", "techinpost\\.com",
         "malwaretips", "hackerscontent\\.com", "hrsoftwaresolution\\.com",
         "webbuildersguide\\.com", "idealshare.net", "lankabpoacademy\\.com",
         "evomailserver\\.com", "gameart\\.net", "voonik\\.com", "pulsenight\\.com",
