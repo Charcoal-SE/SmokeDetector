@@ -484,14 +484,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
     if content_lower.startswith("!!/master"):
         if is_privileged(ev_room, ev_user_id, wrap2):
             os._exit(8)
-    if content_lower.startswith("!!/clearbl"):
-        if is_privileged(ev_room, ev_user_id, wrap2):
-            if os.path.isfile("blacklistedUsers.txt"):
-                os.remove("blacklistedUsers.txt")
-                GlobalVars.blacklisted_users = []
-                return "Kaboom, blacklisted users cleared."
-
-            return "There are no blacklisted users at the moment."
     if content_lower.startswith("!!/block") and is_privileged(ev_room, ev_user_id, wrap2):
         room_id = message_parts[2] if len(message_parts) > 2 else "all"
         timeToBlock = message_parts[1] if len(message_parts) > 1 else "0"
