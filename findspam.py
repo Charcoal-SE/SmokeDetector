@@ -67,11 +67,11 @@ def non_english_link(s, site):   # non-english link in short answer
     return False, ""
 
 
-def mostly_non_latin(s, site):   # majority of post is non-english
+def mostly_non_latin(s, site):   # majority of post is in non-Latin, non-Cyrillic characters
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
     word_chars = regex.sub(r'(?u)[\W0-9]|\http[^"]*', "", s)
-    non_latin_chars = regex.sub(r"\w", "", word_chars)
+    non_latin_chars = regex.sub(r"(?u)\p{script=Latin}|\p{script=Cyrillic}", "", word_chars)
     if (len(non_latin_chars) > 0.4 * len(word_chars)):
         return True, u"Text contains {} non-Latin characters out of {}".format(len(non_latin_chars), len(word_chars))
     return False, ""
@@ -512,7 +512,7 @@ class FindSpam:
          'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Mostly non-Latin alphabet
         {'method': mostly_non_latin, 'all': True,
-         'sites': ["stackoverflow.com", "ja.stackoverflow.com", "pt.stackoverflow.com", "es.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com", "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com", "french.stackexchange.com", "spanish.stackexchange.com", "portuguese.stackexchange.com", "codegolf.stackexchange.com"],
+         'sites': ["stackoverflow.com", "ja.stackoverflow.com", "pt.stackoverflow.com", "es.stackoverflow.com", "islam.stackexchange.com", "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com", "french.stackexchange.com", "spanish.stackexchange.com", "portuguese.stackexchange.com", "codegolf.stackexchange.com"],
          'reason': 'mostly non-Latin {}', 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Mostly non-Latin alphabet, SO answers only
         {'method': mostly_non_latin, 'all': False,
