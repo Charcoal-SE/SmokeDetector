@@ -455,7 +455,7 @@ class FindSpam:
         r"((concrete|beton)-?mixer|crusher)[\w-]*?\.(co|net)",
         r"\w{7}formac\.(com|net|org)",
         r"sex\.(com|net|info)", r"https?://(www\.)?sex",
-        r"[\w-]{12}\.webs\.com",
+        r"[\w-]{12}\.webs\.com", r'online\.us[/"<]',
     ]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
