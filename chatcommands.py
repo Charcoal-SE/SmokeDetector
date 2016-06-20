@@ -2,9 +2,12 @@ from globalvars import GlobalVars
 from findspam import FindSpam
 from datetime import datetime
 from utcdate import UtcDate
+from apigetpost import api_get_post
 from datahandling import add_blacklisted_user
+from datahandling import add_or_update_multiple_reporter
 from datahandling import add_to_notification_list
 from datahandling import add_whitelisted_user
+from datahandling import can_report_now
 from datahandling import fetch_lines_from_error_log
 from datahandling import get_all_notification_sites
 from datahandling import is_blacklisted_user
@@ -17,6 +20,7 @@ from datahandling import will_i_be_notified
 from chatcommunicate import post_message_in_room
 from parsing import get_user_from_list_command
 from parsing import get_user_from_url
+from spamhandling import handle_spam
 from spamhandling import handle_user_with_all_spam
 import random
 import requests
@@ -424,6 +428,71 @@ def command_remove_whitelist_user(*args, **kwargs):
             return False, "Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`."
 
 
+def command_report_post(*args, **kwargs):
+    """
+    Report a post (or posts)
+    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2', 'message_parts', 'message_url' is passed as kwarg
+    :return: A string (or None)
+    """
+    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+        crn, wait = can_report_now(kwargs['ev_user_id'], kwargs['wrap2'].host)
+        if not crn:
+            return "You can execute the !!/report command again in {} seconds. " \
+                   "To avoid one user sending lots of reports in a few commands and slowing SmokeDetector down " \
+                   "due to rate-limiting, you have to wait 30 seconds after you've reported multiple posts using " \
+                   "!!/report, even if your current command just has one URL. (Note that this timeout won't be " \
+                   "applied if you only used !!/report for one post)".format(wait)
+        if len(kwargs['message_parts']) < 2:
+            return False, "Not enough arguments."
+        output = []
+        index = 0
+        urls = list(set(kwargs['message_parts'][1:]))
+        if len(urls) > 5:
+            return False, "To avoid SmokeDetector reporting posts too slowly, " \
+                          "you can report at most 5 posts at a time. " \
+                          "This is to avoid SmokeDetector's chat messages getting rate-limited too much, " \
+                          "which would slow down reports."
+        for url in urls:
+            index += 1
+            post_data = api_get_post(url)
+            if post_data is None:
+                output.append("Post {}: That does not look like a valid post URL.".format(index))
+                continue
+            if post_data is False:
+                output.append("Post {}: Could not find data for this post in the API. "
+                              "It may already have been deleted.".format(index))
+                continue
+            user = get_user_from_url(post_data.owner_url)
+            if user is not None:
+                add_blacklisted_user(user, kwargs['message_url'], post_data.post_url)
+            why = u"Post manually reported by user *{}* in room *{}*.\n".format(kwargs['ev_user_name'],
+                                                                                kwargs['ev_room_name'].decode('utf-8'))
+            batch = ""
+            if len(urls) > 1:
+                batch = " (batch report: post {} out of {})".format(index, len(urls))
+            handle_spam(title=post_data.title,
+                        body=post_data.body,
+                        poster=post_data.owner_name,
+                        site=post_data.site,
+                        post_url=post_data.post_url,
+                        poster_url=post_data.owner_url,
+                        post_id=post_data.post_id,
+                        reasons=["Manually reported " + post_data.post_type + batch],
+                        is_answer=post_data.post_type == "answer",
+                        why=why,
+                        owner_rep=post_data.owner_rep,
+                        post_score=post_data.score,
+                        up_vote_count=post_data.up_vote_count,
+                        down_vote_count=post_data.down_vote_count,
+                        question_id=post_data.question_id)
+        if 1 < len(urls) > len(output):
+            add_or_update_multiple_reporter(kwargs['ev_user_id'], kwargs['wrap2'].host, time.time())
+        if len(output) > 0:
+            return os.linesep.join(output)
+        return None
+
+
+
 def command_stappit(*args, **kwargs):
     """
     Forces a system exit with exit code = 6
@@ -612,6 +681,7 @@ command_dict = {
     "!!/reportuser": command_allspam,
     "!!/rmblu": command_remove_blacklist_user,
     "!!/rmwlu": command_remove_whitelist_user,
+    "!!/report": command_report_post,
     "!!/rev": command_version,
     "!!/stappit": command_stappit,
     "!!/status": command_status,
