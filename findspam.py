@@ -67,11 +67,11 @@ def non_english_link(s, site):   # non-english link in short answer
     return False, ""
 
 
-def mostly_non_latin(s, site):   # majority of post is non-english
+def mostly_non_latin(s, site):   # majority of post is in non-Latin, non-Cyrillic characters
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
     word_chars = regex.sub(r'(?u)[\W0-9]|\http[^"]*', "", s)
-    non_latin_chars = regex.sub(r"\w", "", word_chars)
+    non_latin_chars = regex.sub(r"(?u)\p{script=Latin}|\p{script=Cyrillic}", "", word_chars)
     if (len(non_latin_chars) > 0.4 * len(word_chars)):
         return True, u"Text contains {} non-Latin characters out of {}".format(len(non_latin_chars), len(word_chars))
     return False, ""
@@ -235,7 +235,7 @@ class FindSpam:
         "\\bin (?:bangalore|chennai|delhi|hyderabad|kolkata|mumbai|madurai|coimbatore|rajkot|durgapur|surat|agra|patna|ghaziabad|jaipur|dubai)</a>",
         u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "no2blast", "sunergetic", "capilux", "sante ?avis",
         "enduros", "dianabol", "ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex", "revimax",
-        "celluria", "viatropin",
+        "celluria", "viatropin", "viagra", "cialis",
     ]
     blacklisted_websites = [
         "online ?kelas", "careyourhealths", "wowtoes", "(naga|dewa)poker", "reshapeready\\.com",
@@ -259,7 +259,7 @@ class FindSpam:
         "healthy?(advise|finder|booklet|order|rewind|flyup|buzzer|victory|peters|guide)",
         "hyperglycemiaabout", "waffor\\.com", "feedcabal\\.com", "koohenoorgroup\\.com",
         "sourceforge\\.net/projects/freepdftojpgconverter", "latestdatabase\\.com",
-        "pdftoexel\\.wordpress\\.com", "best7th\\.in", "resolit\\.us",
+        "pdftoexel\\.wordpress\\.com", "best7th\\.in", "resolit\\.us", "techinpost\\.com",
         "malwaretips", "hackerscontent\\.com", "hrsoftwaresolution\\.com",
         "webbuildersguide\\.com", "idealshare.net", "lankabpoacademy\\.com",
         "evomailserver\\.com", "gameart\\.net", "voonik\\.com", "pulsenight\\.com",
@@ -272,7 +272,7 @@ class FindSpam:
         "santerevue", "cheatsumo\\.com", "videostir\\.com", "focusitlabs\\.com",
         "smartpcfixer", "1fix\\.org", "code4email\\.com", "nwgolds\\.com",
         "drivertuner\\.com", "easyfix\\.org", "errorsfixer\\.org", "diligentwriters\\.com",
-        "faq800\\.com", "fix1\\.org", "guru4pc\\.net", "howto4pc\\.org",
+        "faq800\\.com", "fix1\\.org", "guru4pc\\.net", "howto4pc\\.org", "isaura\\.info",
         "pceasynow\\.com", "qobul\\.com", "onlinegiftdeal\\.com",
         "regeasypro\\.com", "registryware\\.org", "smartfixer\\.(net|org)",
         "dlllibrary\\.net", "wisefixer\\.(com|net|org)", "dojobsonline\\.com",
@@ -399,17 +399,18 @@ class FindSpam:
         "zaputra\\.com", "ok8uk\\.org\\.uk", "visitdevonandcornwall\\.co\\.uk",
         "discussfact\\.com", "sirabhinavjain\\.com", "moneytransfercomparison\\.co",
         "exchangeratetoday\\.co", "currencysolutions\\.co", "accudb\\.com",
-        "grey-areaweed\\.com", "360musicng\\.co",
+        "grey-areaweed\\.com", "360musicng\\.co", "oyetrade\\.com",
+        "trickspaid\\.com",
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
         r"(supportnumber|exclusive|onlineshop|video(course|classes|tutorial(?!s))|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot|tumblr|webs\.)",
         r"(rs\d?gold|rssong|e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertation|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(heathcare|meatspin|packers\S{0,3}movers|(buy|sell)\S{0,12}cvv|goatse|burnfat|gronkaffe|muskel|nitricoxide|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
-        r"(\w{10}spell|[\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits|research-?paper)\.(co|net|org|in\W|info)",
+        r"(\w{10}spell|[\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits|research-?paper|-wallet)\.(co|net|org|in\W|info)",
         r"(health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
         r"(//|www\.)healthy?\w{5,7}\.com",
-        r"https?://[\w-.]*?\.(repair|top)\W", r"https?://[\w-.]{10,}\.help\W",
+        r"https?://[\w-.]\.repair\W", r"https?://[\w-.]{10,}\.(top|help)\W", r'https?://[\w-.]*-[\w-.]*\.pro[/"<]',
         r"filefix(er)?\.com", r"\.page\.tl\W", r"infotech\.(com|net|in)",
         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
@@ -455,7 +456,7 @@ class FindSpam:
         r"((concrete|beton)-?mixer|crusher)[\w-]*?\.(co|net)",
         r"\w{7}formac\.(com|net|org)",
         r"sex\.(com|net|info)", r"https?://(www\.)?sex",
-        r"[\w-]{12}\.webs\.com",
+        r"[\w-]{12}\.(webs|66ghz)\.com", r'online\.us[/"<]',
     ]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
@@ -512,7 +513,7 @@ class FindSpam:
          'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Mostly non-Latin alphabet
         {'method': mostly_non_latin, 'all': True,
-         'sites': ["stackoverflow.com", "ja.stackoverflow.com", "pt.stackoverflow.com", "es.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com", "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com", "french.stackexchange.com", "spanish.stackexchange.com", "portuguese.stackexchange.com", "codegolf.stackexchange.com"],
+         'sites': ["stackoverflow.com", "ja.stackoverflow.com", "pt.stackoverflow.com", "es.stackoverflow.com", "islam.stackexchange.com", "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com", "french.stackexchange.com", "spanish.stackexchange.com", "portuguese.stackexchange.com", "codegolf.stackexchange.com"],
          'reason': 'mostly non-Latin {}', 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Mostly non-Latin alphabet, SO answers only
         {'method': mostly_non_latin, 'all': False,
@@ -559,10 +560,10 @@ class FindSpam:
          'sites': [], 'reason': 'linked punctuation in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 11, 'max_score': 1},
         # URL in title, some sites are exempt
         {'regex': ur"(?i)https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}|\w{3,}\.(com|net)\b.*\w{3,}\.(com|net)\b", 'all': True,
-         'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com", "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com"], 'reason': "URL in title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 0},
+         'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com", "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com", "unix.stackexchange.com", "webmasters.stackexchange.com"], 'reason': "URL in title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 0},
         # URL-only title, for the exempt sites
         {'regex': ur"(?i)^https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}(/\S*)?$", 'all': False,
-         'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com", "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com"], 'reason': "URL-only title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 0},
+         'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com", "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com", "unix.stackexchange.com", "webmasters.stackexchange.com"], 'reason': "URL-only title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 0},
         #
         # Category: Suspicious contact information
         # Phone number in title
@@ -578,7 +579,7 @@ class FindSpam:
         # Combination of keyword and email in questions and answers, for all sites
         {'method': keyword_email, 'all': True, 'sites': [], 'reason': "bad keyword with email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # QQ number, for all sites
-        {'regex': ur'(?i)(?<![a-z0-9])Q{1,2}(?:(?:[vw]|[^a-z0-9])\D{0,8})?\d{5}[./-]?\d{4,5}(?!["\d])', 'all': True, 'sites': [], 'reason': "messaging number in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
+        {'regex': ur'(?i)(?<![a-z0-9])Q{1,2}(?:(?:[vw]|[^a-z0-9])\D{0,8})?\d{5}[./-]?\d{4,5}(?!["\d])|\bICQ[ :]{0,5}\d{9}\b', 'all': True, 'sites': [], 'reason': "messaging number in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
         #
         # Category: Trolling
         # Offensive content in titles and posts
