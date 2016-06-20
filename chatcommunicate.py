@@ -330,72 +330,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
                     return why
 
             return "There is no `why` data for that user (anymore)."
-    if content_lower.startswith("!!/addblu") \
-            and is_privileged(ev_room, ev_user_id, wrap2):
-        uid, val = get_user_from_list_command(content_lower)
-        if uid > -1 and val != "":
-            add_blacklisted_user((uid, val), message_url, "")
-            return "User blacklisted (`{}` on `{}`).".format(uid, val)
-        elif uid == -2:
-            return "Error: {}".format(val)
-        else:
-            return "Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`."
-    if content_lower.startswith("!!/rmblu") \
-            and is_privileged(ev_room, ev_user_id, wrap2):
-        uid, val = get_user_from_list_command(content_lower)
-        if uid > -1 and val != "":
-            if remove_blacklisted_user((uid, val)):
-                return "User removed from blacklist (`{}` on `{}`).".format(uid, val)
-            else:
-                return "User is not blacklisted."
-        elif uid == -2:
-            return "Error: {}".format(val)
-        else:
-            return False, "Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`."
-    if content_lower.startswith("!!/isblu"):
-        uid, val = get_user_from_list_command(content_lower)
-        if uid > -1 and val != "":
-            if is_blacklisted_user((uid, val)):
-                return "User is blacklisted (`{}` on `{}`).".format(uid, val)
-            else:
-                return "User is not blacklisted (`{}` on `{}`).".format(uid, val)
-        elif uid == -2:
-            return "Error: {}".format(val)
-        else:
-            return False, "Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`."
-    if content_lower.startswith("!!/addwlu") \
-            and is_privileged(ev_room, ev_user_id, wrap2):
-        uid, val = get_user_from_list_command(content_lower)
-        if uid > -1 and val != "":
-            add_whitelisted_user((uid, val))
-            return "User whitelisted (`{}` on `{}`).".format(uid, val)
-        elif uid == -2:
-            return "Error: {}".format(val)
-        else:
-            return False, "Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`."
-    if content_lower.startswith("!!/rmwlu") \
-            and is_privileged(ev_room, ev_user_id, wrap2):
-        uid, val = get_user_from_list_command(content_lower)
-        if uid != -1 and val != "":
-            if remove_whitelisted_user((uid, val)):
-                return "User removed from whitelist (`{}` on `{}`).".format(uid, val)
-            else:
-                return "User is not whitelisted."
-        elif uid == -2:
-            return "Error: {}".format(val)
-        else:
-            return False, "Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`."
-    if content_lower.startswith("!!/iswlu"):
-        uid, val = get_user_from_list_command(content_lower)
-        if uid > -1 and val != "":
-            if is_whitelisted_user((uid, val)):
-                return "User is whitelisted (`{}` on `{}`).".format(uid, val)
-            else:
-                return "User is not whitelisted (`{}` on `{}`).".format(uid, val)
-        elif uid == -2:
-            return "Error: {}".format(val)
-        else:
-            return False, "Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`."
     if content_lower.startswith("!!/report") \
             and is_privileged(ev_room, ev_user_id, wrap2):
         crn, wait = can_report_now(ev_user_id, wrap2.host)
@@ -450,19 +384,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         if len(output) > 0:
             return os.linesep.join(output)
         return None
-    if content_lower.startswith("!!/errorlogs"):
-        if is_privileged(ev_room, ev_user_id, wrap2):
-            count = -1
-            if len(message_parts) != 2:
-                return "The !!/errorlogs command requires 1 argument."
-            try:
-                count = int(message_parts[1])
-            except ValueError:
-                pass
-            if count == -1:
-                return "Invalid argument."
-            logs_part = fetch_lines_from_error_log(count)
-            post_message_in_room(room_id_str=ev_room, msg=logs_part, length_check=False)
 
     parameters = {
         'content': content,
@@ -472,6 +393,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         'ev_user_id': ev_user_id,
         'ev_user_name': ev_user_name,
         'message_parts': message_parts,
+        'message_url': message_url,
         'wrap2': wrap2,
     }
     try:

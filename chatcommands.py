@@ -2,12 +2,20 @@ from globalvars import GlobalVars
 from findspam import FindSpam
 from datetime import datetime
 from utcdate import UtcDate
-from datahandling import is_privileged
-from datahandling import will_i_be_notified
-from datahandling import get_all_notification_sites
-from datahandling import remove_from_notification_list
+from datahandling import add_blacklisted_user
 from datahandling import add_to_notification_list
+from datahandling import add_whitelisted_user
+from datahandling import fetch_lines_from_error_log
+from datahandling import get_all_notification_sites
+from datahandling import is_blacklisted_user
+from datahandling import is_privileged
+from datahandling import is_whitelisted_user
+from datahandling import remove_from_notification_list
+from datahandling import remove_blacklisted_user
+from datahandling import remove_whitelisted_user
+from datahandling import will_i_be_notified
 from chatcommunicate import post_message_in_room
+from parsing import get_user_from_list_command
 from parsing import get_user_from_url
 from spamhandling import handle_user_with_all_spam
 import random
@@ -19,7 +27,7 @@ import time
 # TODO: pull out code block to get user_id, chat_site, room_id into function
 # TODO: Order functions by groups
 # TODO: Return result for all functions should be similar (tuple/named tuple?)
-# TODO: Do we need uid == -2 check?
+# TODO: Do we need uid == -2 check?  Turn into "is_user_valid" check
 
 # Functions go before the final dictionary of command to function mappings
 
@@ -48,6 +56,40 @@ def single_random_user(ev_room):
 # System command functions below here
 # Each of these should take the *args and **kwargs parameters. This allows us to create functions that
 # don't accept any parameters but still use the `command_dict` mappings
+
+
+def command_add_blacklist_user(*args, **kwargs):
+    """
+    Adds a user to the site blacklist
+    :param kwargs: Requires that 'content_lower', 'message_url', 'ev_room', 'ev_user_id', and 'wrap2' is passed as kwarg
+    :return: A string
+    """
+    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+        uid, val = get_user_from_list_command(kwargs['content_lower'])
+    if uid > -1 and val != "":
+        add_blacklisted_user((uid, val), kwargs['message_url'], "")
+        return "User blacklisted (`{}` on `{}`).".format(uid, val)
+    elif uid == -2:
+        return "Error: {}".format(val)
+    else:
+        return "Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`."
+
+
+def command_add_whitelist_user(*args, **kwargs):
+    """
+    Adds a user to site whitelist
+    :param kwargs: Requires that 'content_lower', 'ev_room', 'ev_user_id', and 'wrap2' is passed as kwarg
+    :return: A string
+    """
+    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+        uid, val = get_user_from_list_command(kwargs['content_lower'])
+        if uid > -1 and val != "":
+            add_whitelisted_user((uid, val))
+            return "User whitelisted (`{}` on `{}`).".format(uid, val)
+        elif uid == -2:
+            return "Error: {}".format(val)
+        else:
+            return False, "Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`."
 
 
 def command_alive(*args, **kwargs):
@@ -142,18 +184,54 @@ def command_block(*args, **kwargs):
         return report
 
 
-def command_clean_blacklist(*args, **kwargs):
+# def command_clean_blacklist(*args, **kwargs):
+#     """
+#     Clears the existing black list
+#     :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2' is passed as kwarg
+#     :return: A string
+#     """
+#     if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+#         if os.path.isfile("blacklistedUsers.txt"):
+#             os.remove("blacklistedUsers.txt")
+#             GlobalVars.blacklisted_users = []
+#             return "Kaboom, blacklisted users cleared."
+#         return "There are no blacklisted users at the moment."
+
+
+def command_check_blacklist(*args, **kwargs):
     """
-    Clears the existing black list
-    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2' is passed as kwarg
+    Checks if a user is blacklisted
+    :param kwargs: Requires 'content_lower' is passed as a kwarg
     :return: A string
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
-        if os.path.isfile("blacklistedUsers.txt"):
-            os.remove("blacklistedUsers.txt")
-            GlobalVars.blacklisted_users = []
-            return "Kaboom, blacklisted users cleared."
-        return "There are no blacklisted users at the moment."
+    uid, val = get_user_from_list_command(kwargs['content_lower'])
+    if uid > -1 and val != "":
+        if is_blacklisted_user((uid, val)):
+            return "User is blacklisted (`{}` on `{}`).".format(uid, val)
+        else:
+            return "User is not blacklisted (`{}` on `{}`).".format(uid, val)
+    elif uid == -2:
+        return "Error: {}".format(val)
+    else:
+        return False, "Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`."
+
+
+def command_check_whitelist(*args, **kwargs):
+    """
+    Checks if a user is whitelisted
+    :param kwargs: Requires 'content_lower' is passed as a kwarg
+    :return: A string
+    """
+    uid, val = get_user_from_list_command(kwargs['content_lower'])
+    if uid > -1 and val != "":
+        if is_whitelisted_user((uid, val)):
+            return "User is whitelisted (`{}` on `{}`).".format(uid, val)
+        else:
+            return "User is not whitelisted (`{}` on `{}`).".format(uid, val)
+    elif uid == -2:
+        return "Error: {}".format(val)
+    else:
+        return False, "Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`."
 
 
 def command_coffee(*args, **kwargs):
@@ -164,6 +242,26 @@ def command_coffee(*args, **kwargs):
     """
     return "*brews coffee for @" + kwargs['ev_user_name'].replace(" ", "") + "*"
 
+
+def command_errorlogs(*args, **kwargs):
+    """
+    Shows the most recent lines in the error logs
+    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2', 'message_parts' is passed as kwarg
+    :return:
+    """
+    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+        count = -1
+        if len(kwargs['message_parts']) != 2:
+            return "The !!/errorlogs command requires 1 argument."
+        try:
+            count = int(kwargs['message_parts'][1])
+        except ValueError:
+            pass
+        if count == -1:
+            return "Invalid argument."
+        logs_part = fetch_lines_from_error_log(count)
+        post_message_in_room(room_id_str=kwargs['ev_room'], msg=logs_part, length_check=False)
+    # TODO: NEEDS A RETURN
 
 def command_help(*args, **kwargs):
     """
@@ -288,6 +386,44 @@ def command_quota(*args, **kwargs):
     return "The current API quota remaining is {}.".format(GlobalVars.apiquota)
 
 
+def command_remove_blacklist_user(*args, **kwargs):
+    """
+    Removes user from site blacklist
+    :param kwargs: Requires 'content_lower', 'ev_room', 'ev_user_id' and 'wrap2' is passed as kwarg
+    :return: A string
+    """
+    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+        uid, val = get_user_from_list_command(kwargs['content_lower'])
+        if uid > -1 and val != "":
+            if remove_blacklisted_user((uid, val)):
+                return "User removed from blacklist (`{}` on `{}`).".format(uid, val)
+            else:
+                return "User is not blacklisted."
+        elif uid == -2:
+            return "Error: {}".format(val)
+        else:
+            return False, "Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`."
+
+
+def command_remove_whitelist_user(*args, **kwargs):
+    """
+    Removes a user from site whitelist
+    :param kwargs: Requires 'content_lower', 'ev_room', 'ev_user_id' and 'wrap2' is passed as kwarg
+    :return: A string
+    """
+    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+        uid, val = get_user_from_list_command(kwargs['content_lower'])
+        if uid != -1 and val != "":
+            if remove_whitelisted_user((uid, val)):
+                return "User removed from whitelist (`{}` on `{}`).".format(uid, val)
+            else:
+                return "User is not whitelisted."
+        elif uid == -2:
+            return "Error: {}".format(val)
+        else:
+            return False, "Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`."
+
+
 def command_stappit(*args, **kwargs):
     """
     Forces a system exit with exit code = 6
@@ -363,6 +499,7 @@ def command_unblock(*args, *kwargs):
             GlobalVars.charcoal_hq.send_message(report)
         return report
 
+
 def command_unnotify(*args, **kwargs):
     """
     Unsubscribes a user to specific events
@@ -396,6 +533,7 @@ def command_version(*args, **kwargs):
     """
     return '[{commit_name}](https://github.com/Charcoal-SE/SmokeDetector/commit/{commit_code})'.format(
         commit_name=GlobalVars.commit_with_author, commit_code=GlobalVars.commit)
+
 
 def command_willbenotified(*args, **kwargs):
     """
@@ -447,6 +585,8 @@ def command_wut(*args, **kwargs):
 # Each key can have a different set of parameters so 'command1' could look like this
 #    command_dict['command1'](paramer1)
 command_dict = {
+    "!//addblu": command_add_blacklist_user,
+    "!!/addwlu": command_add_whitelist_user,
     "!!/alive": command_alive,
     "!!/allnotificationsites": command_allnotifications,
     "!!/allspam": command_allspam,
@@ -455,11 +595,14 @@ command_dict = {
     "!!/blame": command_blame,
     "!!/block": command_block,
     "!!/brownie": command_brownie,
-    "!!/clearbl": command_clean_blacklist,
+#    "!!/clearbl": command_clean_blacklist,
     "!!/commands": command_help,
     "!!/coffee": command_coffee,
+    "!!/errorlogs": command_errorlogs,
     "!!/help": command_help,
     "!!/info": command_help,
+    "!!/isblu": command_check_blacklist,
+    "!!/iswlu": command_check_whitelist,
     "!!/lick": command_lick,
     "!!/location": command_location,
     "!!/master": command_master,
@@ -467,6 +610,8 @@ command_dict = {
     "!!/pull": command_pull,
     "!!/reboot": command_reboot,
     "!!/reportuser": command_allspam,
+    "!!/rmblu": command_remove_blacklist_user,
+    "!!/rmwlu": command_remove_whitelist_user,
     "!!/rev": command_version,
     "!!/stappit": command_stappit,
     "!!/status": command_status,
