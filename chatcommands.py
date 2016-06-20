@@ -3,25 +3,13 @@ from findspam import FindSpam
 from datetime import datetime
 from utcdate import UtcDate
 from apigetpost import api_get_post
-from datahandling import add_blacklisted_user
-from datahandling import add_or_update_multiple_reporter
-from datahandling import add_to_notification_list
-from datahandling import add_whitelisted_user
-from datahandling import can_report_now
-from datahandling import fetch_lines_from_error_log
-from datahandling import get_all_notification_sites
-from datahandling import is_blacklisted_user
-from datahandling import is_privileged
-from datahandling import is_whitelisted_user
-from datahandling import remove_from_notification_list
-from datahandling import remove_blacklisted_user
-from datahandling import remove_whitelisted_user
-from datahandling import will_i_be_notified
+from datahandling import *
 from chatcommunicate import post_message_in_room
-from parsing import get_user_from_list_command
-from parsing import get_user_from_url
+from metasmoke import Metasmoke
+from parsing import *
 from spamhandling import handle_spam
 from spamhandling import handle_user_with_all_spam
+from threading import Thread, Lock
 import random
 import requests
 import os
@@ -31,8 +19,11 @@ import time
 # TODO: pull out code block to get user_id, chat_site, room_id into function
 # TODO: Return result for all functions should be similar (tuple/named tuple?)
 # TODO: Do we need uid == -2 check?  Turn into "is_user_valid" check
+# TODO: Metasmoke function
+# TODO: Consistant return
+#   if return...else return vs if return...return
 
-# Functions go before the final dictionary of command to function mappings
+# Functions go before the final dictionaries of command to function mappings
 
 def is_report(post_site_id):
     """
@@ -43,6 +34,20 @@ def is_report(post_site_id):
     if post_site_id is None:
         return False
     return True
+
+
+def send_metasmoke_feedback(post_url, second_part_lower, ev_user_name, ev_user_id):
+    """
+    Sends feedback to MetaSmoke
+    :param post_url: The post url we are sending
+    :param second_part_lower: Feedback
+    :param ev_username: User name supplying the feedback
+    :param ev_user_id: User ID supplying the feedback
+    :return: None
+    """
+    t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
+                         args=(post_url, second_part_lower, ev_user_name, ev_user_id,))
+    t_metasmoke.start()
 
 
 def single_random_user(ev_room):
@@ -636,6 +641,199 @@ def command_report_post(*args, **kwargs):
             return os.linesep.join(output)
         return None
 
+
+#
+#
+# Subcommands go below here
+def subcommand_delete(*args, **kwargs):
+    """
+    Attempts to delete a post from room
+    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2' and 'msg' is passed as kwargs
+    :return: None
+    """
+    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+        try:
+            kwargs['msg'].delete()
+        except:
+            pass  # couldn't delete message
+
+
+def subcommand_editlink(*args, **kwargs):
+    """
+    Removes link from a marked report message
+    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2', 'msg_content' and 'msg' is passed as kwargs
+    :return: None
+    """
+    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+        edited = edited_message_after_postgone_command(kwargs['msg_content'])
+        if edited is None:
+            return "That's not a report."
+        kwargs['msg'].edit(edited)
+        return None
+
+
+def subcommand_falsepositive(*args, *kwargs):
+    """
+    Marks a post as a false positive
+    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2', 'post_site_id', 'post_url', 'quiet_action', 'post_type'
+        and 'msg' is passed as kwargs
+    :return: None or a string
+    """
+    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+        if not is_report(kwargs['post_site_id']):
+            return "That message is not a report."
+
+        send_metasmoke_feedback(post_url=kwargs['post_url'],
+                                second_part_lower=kwargs['second_part_lower'],
+                                ev_user_name=kwargs['ev_user_name'],
+                                ev_user_id=kwargs['ev_user_id'])
+
+        add_false_positive((kwargs['post_site_id'][0], kwargs['post_site_id'][1]))
+        user_added = False
+        user_removed = False
+        url_from_msg = fetch_owner_url_from_msg_content(kwargs['msg_content'])
+        user = None
+        if url_from_msg is not None:
+            user = get_user_from_url(url_from_msg)
+
+        if kwargs['second_part_lower'].startswith("falseu") or kwargs['second_part_lower'].startswith("fpu"):
+            if user is not None:
+                add_whitelisted_user(user)
+                user_added = True
+        if "Blacklisted user:" in kwargs['msg_content']:
+            if user is not None:
+                remove_blacklisted_user(user)
+                user_removed = True
+        if kwargs['post_type'] == "question":
+            if user_added and not kwargs['quiet_action']:
+                return "Registered question as false positive and whitelisted user."
+            elif user_removed and not kwargs['quiet_action']:
+                return "Registered question as false positive and removed user from the blacklist."
+            elif not kwargs['quiet_action']:
+                return "Registered question as false positive."
+        elif kwargs['post_type'] == "answer":
+            if user_added and not kwargs['quiet_action']:
+                return "Registered answer as false positive and whitelisted user."
+            elif user_removed and not kwargs['quiet_action']:
+                return "Registered answer as false positive and removed user from the blacklist."
+            elif not kwargs['quiet_action']:
+                return "Registered answer as false positive."
+        try:
+            kwargs['msg'].delete()
+        except:
+            pass
+
+
+def subcommand_ignore(*args, **kwargs):
+    """
+    Marks a post to be ignored
+    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2', 'post_site_id', 'post_url', 'quiet_action' is passed
+        as kwargs
+    :return: String or None
+    """
+    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+        if not is_report(kwargs['post_site_id']):
+            return "That message is not a report."
+
+        send_metasmoke_feedback(post_url=kwargs['post_url'],
+                                second_part_lower=kwargs['second_part_lower'],
+                                ev_user_name=kwargs['ev_user_name'],
+                                ev_user_id=kwargs['ev_user_id'])
+
+        add_ignored_post(kwargs['post_site_id'][0:2])
+        if not kwargs['quiet_action']:
+            return "Post ignored; alerts about it will no longer be posted."
+        else:
+            return None
+
+
+def subcommand_naa(*args, **kwargs):
+    """
+    Marks a post as NAA
+    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2', 'post_site_id', 'post_url', 'quiet_action' is passed
+        as kwargs
+    :return: String or None
+    :return:
+    """
+    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+        if not is_report(kwargs['post_site_id']):
+            return "That message is not a report."
+        if kwargs['post_type'] != "answer":
+            return "That report was a question; questions cannot be marked as NAAs."
+
+        send_metasmoke_feedback(post_url=kwargs['post_url'],
+                                second_part_lower=kwargs['second_part_lower'],
+                                ev_user_name=kwargs['ev_user_name'],
+                                ev_user_id=kwargs['ev_user_id'])
+
+        add_ignored_post(kwargs['post_site_id'][0:2])
+        if kwargs['quiet_action']:
+            return None
+        return "Recorded answer as an NAA in metasmoke."
+
+
+def subcommand_truepositive(*args, **kwargs):
+    """
+    Marks a post as a true positive
+    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2', 'post_site_id', 'post_url', 'quiet_action', 'post_type'
+        'message_url', and 'msg' is passed as kwargs
+    :return: None or a string
+    """
+    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+        if not is_report(kwargs['post_site_id']):
+            return "That message is not a report."
+
+        send_metasmoke_feedback(post_url=kwargs['post_url'],
+                                second_part_lower=kwargs['second_part_lower'],
+                                ev_user_name=kwargs['ev_user_name'],
+                                ev_user_id=kwargs['ev_user_id'])
+
+        user_added = False
+        if kwargs['second_part_lower'].startswith("trueu") or kwargs['second_part_lower'].startswith("tpu"):
+            url_from_msg = fetch_owner_url_from_msg_content(kwargs['msg_content'])
+            if url_from_msg is not None:
+                user = get_user_from_url(url_from_msg)
+                if user is not None:
+                    add_blacklisted_user(user, kwargs['message_url'], "http:" + kwargs['post_url'])
+                    user_added = True
+        if kwargs['post_type'] == "question":
+            if kwargs['quiet_action']:
+                return None
+            if user_added:
+                return "Blacklisted user and registered question as true positive."
+            return "Recorded question as true positive in metasmoke. Use `tpu` or `trueu` if you want to " \
+                   "blacklist a user."
+        elif kwargs['post_type'] == "answer":
+            if kwargs['quiet_action']:
+                return None
+            if user_added:
+                return "Blacklisted user."
+            return "Recorded answer as true positive in metasmoke. If you want to blacklist the poster of the " \
+                   "answer, use `trueu` or `tpu`."
+
+
+def subcommand_why(*args, **kwargs):
+    """
+    Returns reasons a post was reported
+    :param kwargs: Requires 'msg_content' is passed as a kwarg
+    :return: A string
+    """
+    post_info = fetch_post_id_and_site_from_msg_content(kwargs['msg_content'])
+    if post_info is None:
+        post_info = fetch_user_from_allspam_report(kwargs['msg_content'])
+        if post_info is None:
+            return "That's not a report."
+        why = get_why_allspam(post_info)
+        if why is not None or why != "":
+            return why
+    else:
+        post_id, site, _ = post_info
+        why = get_why(site, post_id)
+        if why is not None or why != "":
+            return why
+    return "There is no `why` data for that user (anymore)."
+
+
 #
 #
 #
@@ -644,6 +842,10 @@ def command_report_post(*args, **kwargs):
 #    command_dict['command'](paramer1, parameter2, ...)
 # Each key can have a different set of parameters so 'command1' could look like this
 #    command_dict['command1'](paramer1)
+# Triggering input:
+#        !!/alive
+# Hardcoded key example of above input:
+#    command_dict["!//alive"]()
 command_dict = {
     "!//addblu": command_add_blacklist_user,
     "!!/addwlu": command_add_whitelist_user,
@@ -683,4 +885,52 @@ command_dict = {
     "!!/willibenotified": command_willbenotified,
     "!!/whoami": command_whoami,
     "!!/wut": command_wut,
+}
+
+
+# This dictionary defines our subcommands and the associated function to call
+# To use this your calling code will look like this
+#    second_part_dict['command'](paramer1, parameter2, ...)
+# Each key can have a different set of parameters so 'command1' could look like this
+#    second_part_dict['command1'](paramer1)
+# Triggering input:
+#        sd false
+# Hardcoded key example of above input:
+#    command_dict["!//alive"]()
+
+subcommand_dict = {
+    "false": subcommand_falsepositive,
+    "fp": subcommand_falsepositive,
+    "falseu": subcommand_falsepositive,
+    "fpu": subcommand_falsepositive,
+    "false-": subcommand_falsepositive,
+    "fp-": subcommand_falsepositive,
+    "falseu-": subcommand_falsepositive,
+    "fpu-": subcommand_falsepositive,
+
+    "true": subcommand_truepositive,
+    "tp": subcommand_truepositive,
+    "trueu": subcommand_truepositive,
+    "tpu": subcommand_truepositive,
+    "true-": subcommand_truepositive,
+    "tp-": subcommand_truepositive,
+    "trueu-": subcommand_truepositive,
+    "tpu-": subcommand_truepositive,
+
+    "ignore": subcommand_ignore,
+    "ignore-": subcommand_ignore,
+
+    "naa": subcommand_naa,
+    "naa-": subcommand_naa,
+
+    "delete": subcommand_delete,
+    "remove": subcommand_delete,
+    "gone": subcommand_delete,
+    "poof": subcommand_delete,
+    "del": subcommand_delete,
+
+    "postgone": subcommand_editlink,
+
+    "why": subcommand_why,
+    "why?":subcommand_why,
 }

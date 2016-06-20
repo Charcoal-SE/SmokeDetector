@@ -31,11 +31,12 @@ command_aliases = {
     "abuse": "tpu-",
     "abusive": "tpu-",
     "offensive": "tpu-",
-    "n": "naa",
+    "n": "naa-",
 }
 
 
 cmds = chatcommands.command_dict
+subcmds = chatcommands.subcommand_dict
 
 def post_message_in_room(room_id_str, msg, length_check=True):
     if room_id_str == GlobalVars.charcoal_room_id:
@@ -201,137 +202,30 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             post_type = post_site_id[2]
         else:
             post_type = None
-        if (second_part_lower.startswith("false") or second_part_lower.startswith("fp")) \
-                and is_privileged(ev_room, ev_user_id, wrap2):
-            if not chatcommands.is_report(post_site_id):
-                return "That message is not a report."
 
-            t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
-                                 args=(post_url, second_part_lower, ev_user_name, ev_user_id, ))
-            t_metasmoke.start()
+        subcommand_parameters = {
+            'msg_content': msg_content,
+            'ev_room': ev_room,
+            'ev_room_name': ev_room_name,
+            'ev_user_id': ev_user_id,
+            'ev_user_name': ev_user_name,
+            'message_url': message_url,
+            'msg': msg,
+            'post_site_id': post_site_id,
+            'post_type': post_type,
+            'post_url': post_url,
+            'quiet_action': quiet_action,
+            'second_part_lower': second_part_lower,
+            'wrap2': wrap2,
+        }
 
-            add_false_positive((post_site_id[0], post_site_id[1]))
-            user_added = False
-            user_removed = False
-            url_from_msg = fetch_owner_url_from_msg_content(msg_content)
-            user = None
-            if url_from_msg is not None:
-                user = get_user_from_url(url_from_msg)
-            if second_part_lower.startswith("falseu") or second_part_lower.startswith("fpu"):
-                if user is not None:
-                    add_whitelisted_user(user)
-                    user_added = True
-            if "Blacklisted user:" in msg_content:
-                if user is not None:
-                    remove_blacklisted_user(user)
-                    user_removed = True
-            if post_type == "question":
-                if user_added and not quiet_action:
-                    return "Registered question as false positive and whitelisted user."
-                elif user_removed and not quiet_action:
-                    return "Registered question as false positive and removed user from the blacklist."
-                elif not quiet_action:
-                    return "Registered question as false positive."
-            elif post_type == "answer":
-                if user_added and not quiet_action:
-                    return "Registered answer as false positive and whitelisted user."
-                elif user_removed and not quiet_action:
-                    return "Registered answer as false positive and removed user from the blacklist."
-                elif not quiet_action:
-                    return "Registered answer as false positive."
-            try:
-                msg.delete()
-            except:
-                pass
-        if (second_part_lower.startswith("true") or second_part_lower.startswith("tp")) \
-                and is_privileged(ev_room, ev_user_id, wrap2):
-            if not chatcommands.is_report(post_site_id):
-                return "That message is not a report."
+        try:
+            return subcmds[second_part_lower](**subcommand_parameters)
+        except KeyError:
+            pass    # Not a valid subcommand, skip
 
-            t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
-                                 args=(post_url, second_part_lower, ev_user_name, ev_user_id, ))
-            t_metasmoke.start()
-
-            user_added = False
-            if second_part_lower.startswith("trueu") or second_part_lower.startswith("tpu"):
-                url_from_msg = fetch_owner_url_from_msg_content(msg_content)
-                if url_from_msg is not None:
-                    user = get_user_from_url(url_from_msg)
-                    if user is not None:
-                        add_blacklisted_user(user, message_url, "http:" + post_url)
-                        user_added = True
-            if post_type == "question":
-                if quiet_action:
-                    return None
-                if user_added:
-                    return "Blacklisted user and registered question as true positive."
-                return "Recorded question as true positive in metasmoke. Use `tpu` or `trueu` if you want to blacklist a user."
-            elif post_type == "answer":
-                if quiet_action:
-                    return None
-                if user_added:
-                    return "Blacklisted user."
-                return "Recorded answer as true positive in metasmoke. If you want to blacklist the poster of the answer, use `trueu` or `tpu`."
-
-        if second_part_lower.startswith("ignore") and is_privileged(ev_room, ev_user_id, wrap2):
-            if not chatcommands.is_report(post_site_id):
-                return "That message is not a report."
-
-            t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
-                                 args=(post_url, second_part_lower, ev_user_name, ev_user_id,))
-            t_metasmoke.start()
-
-            add_ignored_post(post_site_id[0:2])
-            if not quiet_action:
-                return "Post ignored; alerts about it will no longer be posted."
-            else:
-                return None
-        if second_part_lower.startswith("naa") and is_privileged(ev_room, ev_user_id, wrap2):
-            if not chatcommands.is_report(post_site_id):
-                return "That message is not a report."
-            if post_type != "answer":
-                return "That report was a question; questions cannot be marked as NAAs."
-
-            t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
-                                 args=(post_url, second_part_lower, ev_user_name, ev_user_id, ))
-            t_metasmoke.start()
-
-            add_ignored_post(post_site_id[0:2])
-            if quiet_action:
-                return None
-
-            return "Recorded answer as an NAA in metasmoke."
-
-        if (second_part_lower.startswith("delete") or second_part_lower.startswith("remove") or second_part_lower.startswith("gone") or second_part_lower.startswith("poof") or second_part_lower == "del") and is_privileged(ev_room, ev_user_id, wrap2):
-            try:
-                msg.delete()
-            except:
-                pass  # couldn't delete message
-        if second_part_lower.startswith("postgone") and is_privileged(ev_room, ev_user_id, wrap2):
-            edited = edited_message_after_postgone_command(msg_content)
-            if edited is None:
-                return "That's not a report."
-            msg.edit(edited)
-            return None
-        if second_part_lower.startswith("why"):
-            post_info = fetch_post_id_and_site_from_msg_content(msg_content)
-            if post_info is None:
-                post_info = fetch_user_from_allspam_report(msg_content)
-                if post_info is None:
-                    return "That's not a report."
-                why = get_why_allspam(post_info)
-                if why is not None or why != "":
-                    return why
-
-            else:
-                post_id, site, _ = post_info
-                why = get_why(site, post_id)
-                if why is not None or why != "":
-                    return why
-
-            return "There is no `why` data for that user (anymore)."
-
-    parameters = {
+    # Process additional commands
+    command_parameters = {
         'content': content,
         'content_lower': content_lower,
         'ev_room': ev_room,
@@ -343,7 +237,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         'wrap2': wrap2,
     }
     try:
-        return cmds[command](**parameters)
+        return cmds[command](**command_parameters)
     except KeyError:
         return False, None  # Unrecognized command, can be edited later.
 
