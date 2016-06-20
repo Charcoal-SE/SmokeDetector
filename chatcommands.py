@@ -19,8 +19,7 @@ import time
 # TODO: pull out code block to get user_id, chat_site, room_id into function
 # TODO: Return result for all functions should be similar (tuple/named tuple?)
 # TODO: Do we need uid == -2 check?  Turn into "is_user_valid" check
-# TODO: Metasmoke function
-# TODO: Consistant return
+# TODO: Consistant return structure
 #   if return...else return vs if return...return
 
 # Functions go before the final dictionaries of command to function mappings
