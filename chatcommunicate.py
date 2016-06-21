@@ -212,11 +212,8 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             'second_part_lower': second_part_lower,
             'wrap2': wrap2,
         }
-
-        try:
+        if second_part_lower in subcmds:
             return subcmds[second_part_lower](**subcommand_parameters)
-        except KeyError:
-            pass    # Not a valid subcommand, skip
 
     # Process additional commands
     command_parameters = {
@@ -230,7 +227,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         'message_url': message_url,
         'wrap2': wrap2,
     }
-    try:
-        return cmds[command](**command_parameters)
-    except KeyError:
+    if command not in cmds:
         return False, None  # Unrecognized command, can be edited later.
+
+    return cmds[command](**command_parameters)
