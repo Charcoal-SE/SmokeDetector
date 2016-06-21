@@ -9,7 +9,7 @@ from metasmoke import Metasmoke
 from parsing import *
 from spamhandling import handle_spam
 from spamhandling import handle_user_with_all_spam
-from threading import Thread, Lock
+from threading import Thread
 import random
 import requests
 import os
