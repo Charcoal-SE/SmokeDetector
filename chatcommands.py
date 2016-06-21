@@ -73,13 +73,13 @@ def command_add_blacklist_user(*args, **kwargs):
     """
     if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
         uid, val = get_user_from_list_command(kwargs['content_lower'])
-    if uid > -1 and val != "":
-        add_blacklisted_user((uid, val), kwargs['message_url'], "")
-        return "User blacklisted (`{}` on `{}`).".format(uid, val)
-    elif uid == -2:
-        return "Error: {}".format(val)
-    else:
-        return "Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`."
+        if uid > -1 and val != "":
+            add_blacklisted_user((uid, val), kwargs['message_url'], "")
+            return "User blacklisted (`{}` on `{}`).".format(uid, val)
+        elif uid == -2:
+            return "Error: {}".format(val)
+        else:
+            return "Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`."
 
 
 def command_check_blacklist(*args, **kwargs):
@@ -846,7 +846,7 @@ def subcommand_why(*args, **kwargs):
 # Hardcoded key example of above input:
 #    command_dict["!//alive"]()
 command_dict = {
-    "!//addblu": command_add_blacklist_user,
+    "!!/addblu": command_add_blacklist_user,
     "!!/addwlu": command_add_whitelist_user,
     "!!/alive": command_alive,
     "!!/allnotificationsites": command_allnotifications,

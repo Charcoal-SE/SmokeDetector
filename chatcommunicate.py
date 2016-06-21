@@ -1,4 +1,4 @@
-from threading import Thread
+from threading import Thread, Lock
 from parsing import *
 from datahandling import *
 from globalvars import GlobalVars
