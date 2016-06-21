@@ -931,5 +931,5 @@ subcommand_dict = {
     "postgone": subcommand_editlink,
 
     "why": subcommand_why,
-    "why?":subcommand_why,
+    "why?": subcommand_why,
 }

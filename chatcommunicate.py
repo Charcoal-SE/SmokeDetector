@@ -1,17 +1,10 @@
-import random
-from threading import Thread, Lock
+from threading import Thread
 from parsing import *
 from datahandling import *
-from metasmoke import Metasmoke
 from globalvars import GlobalVars
 import os
 import re
-from datetime import datetime
-from utcdate import UtcDate
-from apigetpost import api_get_post
-from spamhandling import handle_spam, handle_user_with_all_spam
 from termcolor import colored
-from findspam import FindSpam
 from deletionwatcher import DeletionWatcher
 from ChatExchange.chatexchange.messages import Message
 import chatcommands
@@ -241,5 +234,3 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         return cmds[command](**command_parameters)
     except KeyError:
         return False, None  # Unrecognized command, can be edited later.
-
-
