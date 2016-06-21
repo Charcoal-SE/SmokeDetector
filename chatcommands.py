@@ -38,6 +38,7 @@ def is_report(post_site_id):
 def send_metasmoke_feedback(post_url, second_part_lower, ev_user_name, ev_user_id):
     """
     Sends feedback to MetaSmoke
+    :param ev_user_name:
     :param post_url: The post url we are sending
     :param second_part_lower: Feedback
     :param ev_username: User name supplying the feedback
@@ -65,16 +66,21 @@ def single_random_user(ev_room):
 
 
 # --- Blacklist Functions --- #
-def command_add_blacklist_user(*args, **kwargs):
+def command_add_blacklist_user(content_lower, message_url, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Adds a user to the site blacklist
-    :param kwargs: Requires that 'content_lower', 'message_url', 'ev_room', 'ev_user_id', and 'wrap2' is passed as kwarg
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param message_url:
+    :param content_lower:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
-        uid, val = get_user_from_list_command(kwargs['content_lower'])
+    if is_privileged(ev_room, ev_user_id, wrap2):
+        uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
-            add_blacklisted_user((uid, val), kwargs['message_url'], "")
+            add_blacklisted_user((uid, val), message_url, "")
             return "User blacklisted (`{}` on `{}`).".format(uid, val)
         elif uid == -2:
             return "Error: {}".format(val)
@@ -82,13 +88,14 @@ def command_add_blacklist_user(*args, **kwargs):
             return "Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`."
 
 
-def command_check_blacklist(*args, **kwargs):
+def command_check_blacklist(content_lower, *args, **kwargs):
     """
     Checks if a user is blacklisted
-    :param kwargs: Requires 'content_lower' is passed as a kwarg
+    :param content_lower:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    uid, val = get_user_from_list_command(kwargs['content_lower'])
+    uid, val = get_user_from_list_command(content_lower)
     if uid > -1 and val != "":
         if is_blacklisted_user((uid, val)):
             return "User is blacklisted (`{}` on `{}`).".format(uid, val)
@@ -100,14 +107,18 @@ def command_check_blacklist(*args, **kwargs):
         return False, "Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`."
 
 
-def command_remove_blacklist_user(*args, **kwargs):
+def command_remove_blacklist_user(content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Removes user from site blacklist
-    :param kwargs: Requires 'content_lower', 'ev_room', 'ev_user_id' and 'wrap2' is passed as kwarg
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param content_lower:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
-        uid, val = get_user_from_list_command(kwargs['content_lower'])
+    if is_privileged(ev_room, ev_user_id, wrap2):
+        uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
             if remove_blacklisted_user((uid, val)):
                 return "User removed from blacklist (`{}` on `{}`).".format(uid, val)
@@ -120,14 +131,18 @@ def command_remove_blacklist_user(*args, **kwargs):
 
 
 # --- Whitelist functions --- #
-def command_add_whitelist_user(*args, **kwargs):
+def command_add_whitelist_user(content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Adds a user to site whitelist
-    :param kwargs: Requires that 'content_lower', 'ev_room', 'ev_user_id', and 'wrap2' is passed as kwarg
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param content_lower:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
-        uid, val = get_user_from_list_command(kwargs['content_lower'])
+    if is_privileged(ev_room, ev_user_id, wrap2):
+        uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
             add_whitelisted_user((uid, val))
             return "User whitelisted (`{}` on `{}`).".format(uid, val)
@@ -137,13 +152,14 @@ def command_add_whitelist_user(*args, **kwargs):
             return False, "Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`."
 
 
-def command_check_whitelist(*args, **kwargs):
+def command_check_whitelist(content_lower, *args, **kwargs):
     """
     Checks if a user is whitelisted
-    :param kwargs: Requires 'content_lower' is passed as a kwarg
+    :param content_lower:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    uid, val = get_user_from_list_command(kwargs['content_lower'])
+    uid, val = get_user_from_list_command(content_lower)
     if uid > -1 and val != "":
         if is_whitelisted_user((uid, val)):
             return "User is whitelisted (`{}` on `{}`).".format(uid, val)
@@ -155,14 +171,18 @@ def command_check_whitelist(*args, **kwargs):
         return False, "Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`."
 
 
-def command_remove_whitelist_user(*args, **kwargs):
+def command_remove_whitelist_user(content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Removes a user from site whitelist
-    :param kwargs: Requires 'content_lower', 'ev_room', 'ev_user_id' and 'wrap2' is passed as kwarg
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param content_lower:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
-        uid, val = get_user_from_list_command(kwargs['content_lower'])
+    if is_privileged(ev_room, ev_user_id, wrap2):
+        uid, val = get_user_from_list_command(content_lower)
         if uid != -1 and val != "":
             if remove_whitelisted_user((uid, val)):
                 return "User removed from whitelist (`{}` on `{}`).".format(uid, val)
@@ -175,14 +195,15 @@ def command_remove_whitelist_user(*args, **kwargs):
 
 
 # --- Joke Commands --- #
-def command_blame(*args, **kwargs):
+def command_blame(ev_room, *args, **kwargs):
     """
     Returns a string with a user to blame (This is a joke command)
-    :param kwargs: Requires that 'ev_room' is passed as a kwarg
+    :param ev_room:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    GlobalVars.users_chatting[kwargs['ev_room']] = list(set(GlobalVars.users_chatting[kwargs['ev_room']]))
-    user_to_blame = single_random_user(kwargs['ev_room'])
+    GlobalVars.users_chatting[ev_room] = list(set(GlobalVars.users_chatting[ev_room]))
+    user_to_blame = single_random_user(ev_room)
     return u"It's [{}]({})'s fault.".format(user_to_blame[0], user_to_blame[1])
 
 
@@ -194,13 +215,14 @@ def command_brownie(*args, **kwargs):
     return "Brown!"
 
 
-def command_coffee(*args, **kwargs):
+def command_coffee(ev_user_name, *args, **kwargs):
     """
     Returns a string stating who the coffee is for (This is a joke command)
-    :param kwargs: Requires that 'ev_user_name' is passed as a kwarg
+    :param ev_user_name:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    return "*brews coffee for @" + kwargs['ev_user_name'].replace(" ", "") + "*"
+    return "*brews coffee for @" + ev_user_name.replace(" ", "") + "*"
 
 
 def command_lick(*args, **kwargs):
@@ -211,15 +233,16 @@ def command_lick(*args, **kwargs):
     return "*licks ice cream cone*"
 
 
-def command_tea(*args, **kwargs):
+def command_tea(ev_user_name, *args, **kwargs):
     """
     Returns a string stating who the tea is for (This is a joke command)
-    :param kwargs: Requires that 'ev_user_name' is passed as a kwarg
+    :param ev_user_name:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
     return "*brews a cup of {choice} tea for @{user}*".format(
         choice=random.choice(['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint', 'jasmine']),
-        user=kwargs['ev_user_name'].replace(" ", ""))
+        user=ev_user_name.replace(" ", ""))
 
 
 def command_wut(*args, **kwargs):
@@ -231,15 +254,19 @@ def command_wut(*args, **kwargs):
 
 
 # --- Block application from posting functions --- #
-def command_block(*args, **kwargs):
+def command_block(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Blocks posts from application for a period of time
-    :param kwargs: Requires that 'message_parts', 'ev_user_id' and 'wrap2' be passed as kwarg
+    :param ev_room:
+    :param wrap2:
+    :param ev_user_id:
+    :param message_parts:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
-        room_id = kwargs['message_parts'][2] if len(kwargs['message_parts']) > 2 else "all"
-        time_to_block = kwargs['message_parts'][1] if len(kwargs['message_parts']) > 1 else "0"
+    if is_privileged(ev_room, ev_user_id, wrap2):
+        room_id = message_parts[2] if len(message_parts) > 2 else "all"
+        time_to_block = message_parts[1] if len(message_parts) > 1 else "0"
         if not time_to_block.isdigit():
             return False, "Invalid duration."
 
@@ -253,14 +280,18 @@ def command_block(*args, **kwargs):
         return report
 
 
-def command_unblock(*args, **kwargs):
+def command_unblock(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Unblocks posting to a room
-    :param kwargs: Requires that 'message_parts', 'ev_user_id' and 'wrap2' be passed as a kwarg
+    :param ev_room:
+    :param wrap2:
+    :param ev_user_id:
+    :param message_parts:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
-        room_id = kwargs['message_parts'][2] if len(kwargs['message_parts']) > 2 else "all"
+    if is_privileged(ev_room, ev_user_id, wrap2):
+        room_id = message_parts[2] if len(message_parts) > 2 else "all"
         GlobalVars.blockedTime[room_id] = time.time()
         which_room = "globally" if room_id == "all" else "in room " + room_id
         report = "Reports unblocked {}.".format(GlobalVars.blockedTime - time.time(), which_room)
@@ -270,62 +301,73 @@ def command_unblock(*args, **kwargs):
 
 
 # --- Administration Commands --- #
-def command_alive(*args, **kwargs):
+def command_alive(ev_room, *args, **kwargs):
     """
     Returns a string indicating the process is still active
-    :param kwargs: Requires that 'ev_room' be passed as kwarg
+    :param ev_room:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    if kwargs['ev_room'] == GlobalVars.charcoal_room_id:
+    if ev_room == GlobalVars.charcoal_room_id:
         return 'Of course'
-    elif kwargs['ev_room'] == GlobalVars.meta_tavern_room_id or kwargs['ev_room'] == GlobalVars.socvr_room_id:
+    elif ev_room == GlobalVars.meta_tavern_room_id or ev_room == GlobalVars.socvr_room_id:
         return random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee',
                               'Watching this endless list of new questions *never* gets boring', 'Kinda sorta'])
 
 
-def command_allspam(*args, **kwargs):
+def command_allspam(message_parts, ev_room, ev_user_id, wrap2, ev_user_name, ev_room_name, *args, **kwargs):
     """
     Reports all of a user's posts as spam
-    :param kwargs: Requires that 'message_parts', 'ev_user_id', 'ev_room_name' and 'wrap2' be passed as kwarg
+    :param ev_room_name:
+    :param ev_user_name:
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param message_parts:
+    :param kwargs: No additional arguments expected
     :return:
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
-        if len(kwargs['message_parts']) != 2:
+    if is_privileged(ev_room, ev_user_id, wrap2):
+        if len(message_parts) != 2:
             return False, "1 argument expected"
-        url = kwargs['message_parts'][1]
+        url = message_parts[1]
         user = get_user_from_url(url)
         if user is None:
             return "That doesn't look like a valid user URL."
-        why = u"User manually reported by *{}* in room *{}*.\n".format(kwargs['ev_user_name'], kwargs['ev_room_name'].decode('utf-8'))
+        why = u"User manually reported by *{}* in room *{}*.\n".format(ev_user_name, ev_room_name.decode('utf-8'))
         handle_user_with_all_spam(user, why)
         return None
 
 
-def command_errorlogs(*args, **kwargs):
+def command_errorlogs(ev_room, ev_user_id, wrap2, message_parts, *args, **kwargs):
     """
     Shows the most recent lines in the error logs
-    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2', 'message_parts' is passed as kwarg
+    :param message_parts:
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
     :return:
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+    if is_privileged(ev_room, ev_user_id, wrap2):
         count = -1
-        if len(kwargs['message_parts']) != 2:
+        if len(message_parts) != 2:
             return "The !!/errorlogs command requires 1 argument."
         try:
-            count = int(kwargs['message_parts'][1])
+            count = int(message_parts[1])
         except ValueError:
             pass
         if count == -1:
             return "Invalid argument."
         logs_part = fetch_lines_from_error_log(count)
-        post_message_in_room(room_id_str=kwargs['ev_room'], msg=logs_part, length_check=False)
+        post_message_in_room(room_id_str=ev_room, msg=logs_part, length_check=False)
     # TODO: NEEDS A RETURN
 
 
 def command_help(*args, **kwargs):
     """
     Returns the help text
-    :param kwargs:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
     return "I'm [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector), a bot " \
@@ -341,23 +383,29 @@ def command_location(*args, **kwargs):
     return GlobalVars.location
 
 
-def command_master(*args, **kwargs):
+def command_master(ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Forces a system exit with exit code = 8
-    :param kwargs: Requires 'ev_room', 'ev_user_id' and 'wrap2' is passed as kwarg
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
     :return: None
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+    if is_privileged(ev_room, ev_user_id, wrap2):
         os._exit(8)
 
 
-def command_pull(*args, **kwargs):
+def command_pull(ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Pull an update from GitHub
-    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2' is passed as kwarg
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
     :return: String on failure, None on success
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+    if is_privileged(ev_room, ev_user_id, wrap2):
         request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
         latest_sha = request.json()["object"]["sha"]
         request = requests.get(
@@ -375,24 +423,30 @@ def command_pull(*args, **kwargs):
             return "CI build is still pending, wait until the build has finished and then pull again."
 
 
-def command_reboot(*args, **kwargs):
+def command_reboot(ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Forces a system exit with exit code = 5
-    :param kwargs: Requires 'ev_room', 'ev_user_id' and 'wrap2' is passed as kwarg
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
     :return: None
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
-        post_message_in_room(room_id_str=kwargs['ev_room'], msg="Goodbye, cruel world")
+    if is_privileged(ev_room, ev_user_id, wrap2):
+        post_message_in_room(room_id_str=ev_room, msg="Goodbye, cruel world")
         os._exit(5)
 
 
-def command_privileged(*args, **kwargs):
+def command_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Tells user whether or not they have privileges
-    :param kwargs: Requires that 'ev_room', 'ev_user_id' and 'wrap2' are passed as kwargs
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+    if is_privileged(ev_room, ev_user_id, wrap2):
         return "Yes, you are a privileged user."
     return "No, you are not a privileged user. See " \
            "[the Privileges wiki page](//github.com/Charcoal-SE/SmokeDetector/wiki/Privileges) for information on " \
@@ -407,14 +461,17 @@ def command_quota(*args, **kwargs):
     return "The current API quota remaining is {}.".format(GlobalVars.apiquota)
 
 
-def command_stappit(*args, **kwargs):
+def command_stappit(ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Forces a system exit with exit code = 6
-    :param kwargs: Requires 'ev_room', 'ev_user_id' and 'wrap2' is passed as kwarg
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
     :return: None
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
-        post_message_in_room(room_id_str=kwargs['ev_room'], msg="Goodbye, cruel world")
+    if is_privileged(ev_room, ev_user_id, wrap2):
+        post_message_in_room(room_id_str=ev_room, msg="Goodbye, cruel world")
         os._exit(6)
 
 
@@ -431,16 +488,18 @@ def command_status(*args, **kwargs):
                                                                           minute_count=minutes, plurality=minute_str)
 
 
-def command_test(*args, **kwargs):
+def command_test(content, content_lower, *args, **kwargs):
     """
     Test a post to determine if it'd be automatically reported
-    :param kwargs: Requires that 'content', 'content-lower' be passed as a kwarg
+    :param content_lower:
+    :param content:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    string_to_test = kwargs['content'][8:]
+    string_to_test = content[8:]
     test_as_answer = False
-    if kwargs['content_lower'].startswith("!!/test-a"):
-        string_to_test = kwargs['content'][10:]
+    if content_lower.startswith("!!/test-a"):
+        string_to_test = content[10:]
         test_as_answer = True
     if len(string_to_test) == 0:
         return "Nothing to test"
@@ -465,29 +524,33 @@ def command_version(*args, **kwargs):
         commit_name=GlobalVars.commit_with_author, commit_code=GlobalVars.commit)
 
 
-def command_whoami(*args, **kwargs):
+def command_whoami(ev_room, *args, **kwargs):
     """
     Returns user id of smoke detector
-    :param kwargs: Requires 'ev_room' is passed as a kwarg
+    :param ev_room:
+    :param kwargs: No additional arguments expected
     :return:
     """
-    if kwargs['ev_room'] in GlobalVars.smokeDetector_user_id:
-        return "My id for this room is {}.".format(GlobalVars.smokeDetector_user_id[kwargs['ev_room']])
+    if ev_room in GlobalVars.smokeDetector_user_id:
+        return "My id for this room is {}.".format(GlobalVars.smokeDetector_user_id[ev_room])
     return "I don't know my user ID for this room. (Something is wrong, and it's apnorton's fault.)"
 
 
 # --- Notification functions --- #
-def command_allnotifications(*args, **kwargs):
+def command_allnotifications(message_parts, ev_user_id, wrap2, *args, **kwargs):
     """
     Returns a string stating what sites a user will be notified about
-    :param kwargs: Requires that 'message_parts', 'ev_user_id' and 'wrap2' be passed as kwarg
+    :param wrap2:
+    :param ev_user_id:
+    :param message_parts:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    if len(kwargs['message_parts']) != 2:
+    if len(message_parts) != 2:
         return False, "1 argument expected"
-    user_id = int(kwargs['ev_user_id'])
-    chat_site = kwargs['wrap2'].host
-    room_id = kwargs['message_parts'][1]
+    user_id = int(ev_user_id)
+    chat_site = wrap2.host
+    room_id = message_parts[1]
     if not room_id.isdigit():
         return False, "Room ID is invalid."
     sites = get_all_notification_sites(user_id, chat_site, room_id)
@@ -497,23 +560,26 @@ def command_allnotifications(*args, **kwargs):
     return "You will get notified for these sites:\r\n" + ", ".join(sites)
 
 
-def command_notify(*args, **kwargs):
+def command_notify(message_parts, ev_user_id, wrap2, *args, **kwargs):
     """
     Subscribe a user to events on a site in a single room
-    :param kwargs: Requires that 'message_parts', 'ev_user_id' and 'wrap2' be passed as a kwarg
+    :param wrap2:
+    :param ev_user_id:
+    :param message_parts:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    if len(kwargs['message_parts']) != 3:
+    if len(message_parts) != 3:
         return False, "2 arguments expected"
-    user_id = int(kwargs['ev_user_id'])
-    chat_site = kwargs['wrap2'].host
-    room_id = kwargs['message_parts'][1]
+    user_id = int(ev_user_id)
+    chat_site = wrap2.host
+    room_id = message_parts[1]
     if not room_id.isdigit():
         return False, "Room ID is invalid."
 
     room_id = int(room_id)
-    quiet_action = ("-" in kwargs['message_parts'][2])
-    se_site = kwargs['message_parts'][2].replace('-', '')
+    quiet_action = ("-" in message_parts[2])
+    se_site = message_parts[2].replace('-', '')
     response, full_site = add_to_notification_list(user_id, chat_site, room_id, se_site)
     if response == 0:
         if quiet_action:
@@ -527,23 +593,26 @@ def command_notify(*args, **kwargs):
         return False, "The given SE site does not exist."
 
 
-def command_unnotify(*args, **kwargs):
+def command_unnotify(message_parts, ev_user_id, wrap2, *args, **kwargs):
     """
     Unsubscribes a user to specific events
-    :param kwargs: Requires that 'message_parts', 'ev_user_id' and 'wrap2' be passed as a kwarg
+    :param wrap2:
+    :param ev_user_id:
+    :param message_parts:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    if len(kwargs['message_parts']) != 3:
+    if len(message_parts) != 3:
         return False, "2 arguments expected"
-    user_id = int(kwargs['ev_user_id'])
-    chat_site = kwargs['wrap2'].host
-    room_id = kwargs['message_parts'][1]
+    user_id = int(ev_user_id)
+    chat_site = wrap2.host
+    room_id = message_parts[1]
     if not room_id.isdigit():
         return False, "Room ID is invalid."
 
     room_id = int(room_id)
-    quiet_action = ("-" in kwargs['message_parts'][2])
-    se_site = kwargs['message_parts'][2].replace('-', '')
+    quiet_action = ("-" in message_parts[2])
+    se_site = message_parts[2].replace('-', '')
     response = remove_from_notification_list(user_id, chat_site, room_id, se_site)
     if response:
         if quiet_action:
@@ -553,22 +622,25 @@ def command_unnotify(*args, **kwargs):
     return "That configuration doesn't exist."
 
 
-def command_willbenotified(*args, **kwargs):
+def command_willbenotified(message_parts, ev_user_id, wrap2, *args, **kwargs):
     """
     Returns a string stating whether a user will be notified or not
-    :param kwargs: Requires that 'message_parts', 'ev_user_id' and 'wrap2' be passed as a kwarg
+    :param wrap2:
+    :param ev_user_id:
+    :param message_parts:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    if len(kwargs['message_parts']) != 3:
+    if len(message_parts) != 3:
         return False, "2 arguments expected"
-    user_id = int(kwargs['ev_user_id'])
-    chat_site = kwargs['wrap2'].host
-    room_id = kwargs['message_parts'][1]
+    user_id = int(ev_user_id)
+    chat_site = wrap2.host
+    room_id = message_parts[1]
     if not room_id.isdigit():
         return False, "Room ID is invalid"
 
     room_id = int(room_id)
-    se_site = kwargs['message_parts'][2]
+    se_site = message_parts[2]
     will_be_notified = will_i_be_notified(user_id, chat_site, room_id, se_site)
     if will_be_notified:
         return "Yes, you will be notified for that site in that room."
@@ -577,25 +649,33 @@ def command_willbenotified(*args, **kwargs):
 
 
 # --- Post Responses --- #
-def command_report_post(*args, **kwargs):
+def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
+                        ev_user_name, ev_room_name, *args, **kwargs):
     """
     Report a post (or posts)
-    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2', 'message_parts', 'message_url' is passed as kwarg
+    :param ev_room_name:
+    :param ev_user_name:
+    :param message_url:
+    :param message_parts:
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
     :return: A string (or None)
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
-        crn, wait = can_report_now(kwargs['ev_user_id'], kwargs['wrap2'].host)
+    if is_privileged(ev_room, ev_user_id, wrap2):
+        crn, wait = can_report_now(ev_user_id, wrap2.host)
         if not crn:
             return "You can execute the !!/report command again in {} seconds. " \
                    "To avoid one user sending lots of reports in a few commands and slowing SmokeDetector down " \
                    "due to rate-limiting, you have to wait 30 seconds after you've reported multiple posts using " \
                    "!!/report, even if your current command just has one URL. (Note that this timeout won't be " \
                    "applied if you only used !!/report for one post)".format(wait)
-        if len(kwargs['message_parts']) < 2:
+        if len(message_parts) < 2:
             return False, "Not enough arguments."
         output = []
         index = 0
-        urls = list(set(kwargs['message_parts'][1:]))
+        urls = list(set(message_parts[1:]))
         if len(urls) > 5:
             return False, "To avoid SmokeDetector reporting posts too slowly, " \
                           "you can report at most 5 posts at a time. " \
@@ -613,9 +693,9 @@ def command_report_post(*args, **kwargs):
                 continue
             user = get_user_from_url(post_data.owner_url)
             if user is not None:
-                add_blacklisted_user(user, kwargs['message_url'], post_data.post_url)
-            why = u"Post manually reported by user *{}* in room *{}*.\n".format(kwargs['ev_user_name'],
-                                                                                kwargs['ev_room_name'].decode('utf-8'))
+                add_blacklisted_user(user, message_url, post_data.post_url)
+            why = u"Post manually reported by user *{}* in room *{}*.\n".format(ev_user_name,
+                                                                                ev_room_name.decode('utf-8'))
             batch = ""
             if len(urls) > 1:
                 batch = " (batch report: post {} out of {})".format(index, len(urls))
@@ -635,7 +715,7 @@ def command_report_post(*args, **kwargs):
                         down_vote_count=post_data.down_vote_count,
                         question_id=post_data.question_id)
         if 1 < len(urls) > len(output):
-            add_or_update_multiple_reporter(kwargs['ev_user_id'], kwargs['wrap2'].host, time.time())
+            add_or_update_multiple_reporter(ev_user_id, wrap2.host, time.time())
         if len(output) > 0:
             return os.linesep.join(output)
         return None
@@ -644,166 +724,215 @@ def command_report_post(*args, **kwargs):
 #
 #
 # Subcommands go below here
-def subcommand_delete(*args, **kwargs):
+def subcommand_delete(ev_room, ev_user_id, wrap2, msg, *args, **kwargs):
     """
     Attempts to delete a post from room
-    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2' and 'msg' is passed as kwargs
+    :param msg:
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
     :return: None
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
+    if is_privileged(ev_room, ev_user_id, wrap2):
         try:
-            kwargs['msg'].delete()
+            msg.delete()
         except:
             pass  # couldn't delete message
 
 
-def subcommand_editlink(*args, **kwargs):
+def subcommand_editlink(ev_room, ev_user_id, wrap2, msg_content, msg, *args, **kwargs):
     """
     Removes link from a marked report message
-    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2', 'msg_content' and 'msg' is passed as kwargs
+    :param msg:
+    :param msg_content:
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
     :return: None
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
-        edited = edited_message_after_postgone_command(kwargs['msg_content'])
+    if is_privileged(ev_room, ev_user_id, wrap2):
+        edited = edited_message_after_postgone_command(msg_content)
         if edited is None:
             return "That's not a report."
-        kwargs['msg'].edit(edited)
+        msg.edit(edited)
         return None
 
 
-def subcommand_falsepositive(*args, **kwargs):
+def subcommand_falsepositive(ev_room, ev_user_id, wrap2, post_site_id, post_url,
+                             quiet_action, post_type, msg, second_part_lower, ev_user_name,
+                             msg_content, *args, **kwargs):
     """
     Marks a post as a false positive
-    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2', 'post_site_id', 'post_url', 'quiet_action', 'post_type'
-        and 'msg' is passed as kwargs
+    :param msg_content:
+    :param ev_user_name:
+    :param second_part_lower:
+    :param msg:
+    :param post_type:
+    :param quiet_action:
+    :param post_url:
+    :param post_site_id:
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
     :return: None or a string
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
-        if not is_report(kwargs['post_site_id']):
+    if is_privileged(ev_room, ev_user_id, wrap2):
+        if not is_report(post_site_id):
             return "That message is not a report."
 
-        send_metasmoke_feedback(post_url=kwargs['post_url'],
-                                second_part_lower=kwargs['second_part_lower'],
-                                ev_user_name=kwargs['ev_user_name'],
-                                ev_user_id=kwargs['ev_user_id'])
+        send_metasmoke_feedback(post_url=post_url,
+                                second_part_lower=second_part_lower,
+                                ev_user_name=ev_user_name,
+                                ev_user_id=ev_user_id)
 
-        add_false_positive((kwargs['post_site_id'][0], kwargs['post_site_id'][1]))
+        add_false_positive((post_site_id[0], post_site_id[1]))
         user_added = False
         user_removed = False
-        url_from_msg = fetch_owner_url_from_msg_content(kwargs['msg_content'])
+        url_from_msg = fetch_owner_url_from_msg_content(msg_content)
         user = None
         if url_from_msg is not None:
             user = get_user_from_url(url_from_msg)
 
-        if kwargs['second_part_lower'].startswith("falseu") or kwargs['second_part_lower'].startswith("fpu"):
+        if second_part_lower.startswith("falseu") or second_part_lower.startswith("fpu"):
             if user is not None:
                 add_whitelisted_user(user)
                 user_added = True
-        if "Blacklisted user:" in kwargs['msg_content']:
+        if "Blacklisted user:" in msg_content:
             if user is not None:
                 remove_blacklisted_user(user)
                 user_removed = True
-        if kwargs['post_type'] == "question":
-            if user_added and not kwargs['quiet_action']:
+        if post_type == "question":
+            if user_added and not quiet_action:
                 return "Registered question as false positive and whitelisted user."
-            elif user_removed and not kwargs['quiet_action']:
+            elif user_removed and not quiet_action:
                 return "Registered question as false positive and removed user from the blacklist."
-            elif not kwargs['quiet_action']:
+            elif not quiet_action:
                 return "Registered question as false positive."
-        elif kwargs['post_type'] == "answer":
-            if user_added and not kwargs['quiet_action']:
+        elif post_type == "answer":
+            if user_added and not quiet_action:
                 return "Registered answer as false positive and whitelisted user."
-            elif user_removed and not kwargs['quiet_action']:
+            elif user_removed and not quiet_action:
                 return "Registered answer as false positive and removed user from the blacklist."
-            elif not kwargs['quiet_action']:
+            elif not quiet_action:
                 return "Registered answer as false positive."
         try:
-            kwargs['msg'].delete()
+            msg.delete()
         except:
             pass
 
 
-def subcommand_ignore(*args, **kwargs):
+def subcommand_ignore(ev_room, ev_user_id, wrap2, post_site_id, post_url, quiet_action, second_part_lower, ev_user_name,
+                      *args, **kwargs):
     """
     Marks a post to be ignored
-    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2', 'post_site_id', 'post_url', 'quiet_action' is passed
-        as kwargs
+    :param quiet_action:
+    :param post_url:
+    :param post_site_id:
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
     :return: String or None
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
-        if not is_report(kwargs['post_site_id']):
+    if is_privileged(ev_room, ev_user_id, wrap2):
+        if not is_report(post_site_id):
             return "That message is not a report."
 
-        send_metasmoke_feedback(post_url=kwargs['post_url'],
-                                second_part_lower=kwargs['second_part_lower'],
-                                ev_user_name=kwargs['ev_user_name'],
-                                ev_user_id=kwargs['ev_user_id'])
+        send_metasmoke_feedback(post_url=post_url,
+                                second_part_lower=second_part_lower,
+                                ev_user_name=ev_user_name,
+                                ev_user_id=ev_user_id)
 
-        add_ignored_post(kwargs['post_site_id'][0:2])
-        if not kwargs['quiet_action']:
+        add_ignored_post(post_site_id[0:2])
+        if not quiet_action:
             return "Post ignored; alerts about it will no longer be posted."
         else:
             return None
 
 
-def subcommand_naa(*args, **kwargs):
+def subcommand_naa(ev_room, ev_user_id, wrap2, post_site_id, post_url, quiet_action,
+                   second_part_lower, ev_user_name, post_type, *args, **kwargs):
     """
     Marks a post as NAA
-    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2', 'post_site_id', 'post_url', 'quiet_action' is passed
-        as kwargs
+    :param post_type:
+    :param ev_user_name:
+    :param second_part_lower:
+    :param quiet_action:
+    :param post_url:
+    :param post_site_id:
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
     :return: String or None
     :return:
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
-        if not is_report(kwargs['post_site_id']):
+    if is_privileged(ev_room, ev_user_id, wrap2):
+        if not is_report(post_site_id):
             return "That message is not a report."
-        if kwargs['post_type'] != "answer":
+        if post_type != "answer":
             return "That report was a question; questions cannot be marked as NAAs."
 
-        send_metasmoke_feedback(post_url=kwargs['post_url'],
-                                second_part_lower=kwargs['second_part_lower'],
-                                ev_user_name=kwargs['ev_user_name'],
-                                ev_user_id=kwargs['ev_user_id'])
+        send_metasmoke_feedback(post_url=post_url,
+                                second_part_lower=second_part_lower,
+                                ev_user_name=ev_user_name,
+                                ev_user_id=ev_user_id)
 
-        add_ignored_post(kwargs['post_site_id'][0:2])
-        if kwargs['quiet_action']:
+        add_ignored_post(post_site_id[0:2])
+        if quiet_action:
             return None
         return "Recorded answer as an NAA in metasmoke."
 
 
-def subcommand_truepositive(*args, **kwargs):
+def subcommand_truepositive(ev_room, ev_user_id, wrap2, post_site_id, post_url, quiet_action,
+                            post_type, message_url, msg, second_part_lower, ev_user_name,
+                            msg_content, *args, **kwargs):
     """
     Marks a post as a true positive
-    :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2', 'post_site_id', 'post_url', 'quiet_action', 'post_type'
-        'message_url', and 'msg' is passed as kwargs
+    :param msg_content:
+    :param ev_user_name:
+    :param second_part_lower:
+    :param msg:
+    :param message_url:
+    :param post_type:
+    :param quiet_action:
+    :param post_url:
+    :param post_site_id:
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
     :return: None or a string
     """
-    if is_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2']):
-        if not is_report(kwargs['post_site_id']):
+    if is_privileged(ev_room, ev_user_id, wrap2):
+        if not is_report(post_site_id):
             return "That message is not a report."
 
-        send_metasmoke_feedback(post_url=kwargs['post_url'],
-                                second_part_lower=kwargs['second_part_lower'],
-                                ev_user_name=kwargs['ev_user_name'],
-                                ev_user_id=kwargs['ev_user_id'])
+        send_metasmoke_feedback(post_url=post_url,
+                                second_part_lower=second_part_lower,
+                                ev_user_name=ev_user_name,
+                                ev_user_id=ev_user_id)
 
         user_added = False
-        if kwargs['second_part_lower'].startswith("trueu") or kwargs['second_part_lower'].startswith("tpu"):
-            url_from_msg = fetch_owner_url_from_msg_content(kwargs['msg_content'])
+        if second_part_lower.startswith("trueu") or second_part_lower.startswith("tpu"):
+            url_from_msg = fetch_owner_url_from_msg_content(msg_content)
             if url_from_msg is not None:
                 user = get_user_from_url(url_from_msg)
                 if user is not None:
-                    add_blacklisted_user(user, kwargs['message_url'], "http:" + kwargs['post_url'])
+                    add_blacklisted_user(user, message_url, "http:" + post_url)
                     user_added = True
-        if kwargs['post_type'] == "question":
-            if kwargs['quiet_action']:
+        if post_type == "question":
+            if quiet_action:
                 return None
             if user_added:
                 return "Blacklisted user and registered question as true positive."
             return "Recorded question as true positive in metasmoke. Use `tpu` or `trueu` if you want to " \
                    "blacklist a user."
-        elif kwargs['post_type'] == "answer":
-            if kwargs['quiet_action']:
+        elif post_type == "answer":
+            if quiet_action:
                 return None
             if user_added:
                 return "Blacklisted user."
@@ -811,15 +940,16 @@ def subcommand_truepositive(*args, **kwargs):
                    "answer, use `trueu` or `tpu`."
 
 
-def subcommand_why(*args, **kwargs):
+def subcommand_why(msg_content, *args, **kwargs):
     """
     Returns reasons a post was reported
-    :param kwargs: Requires 'msg_content' is passed as a kwarg
+    :param msg_content:
+    :param kwargs: No additional arguments expected
     :return: A string
     """
-    post_info = fetch_post_id_and_site_from_msg_content(kwargs['msg_content'])
+    post_info = fetch_post_id_and_site_from_msg_content(msg_content)
     if post_info is None:
-        post_info = fetch_user_from_allspam_report(kwargs['msg_content'])
+        post_info = fetch_user_from_allspam_report(msg_content)
         if post_info is None:
             return "That's not a report."
         why = get_why_allspam(post_info)
