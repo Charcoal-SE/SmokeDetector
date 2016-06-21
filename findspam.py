@@ -458,9 +458,11 @@ class FindSpam:
         r"sex\.(com|net|info)", r"https?://(www\.)?sex",
         r"[\w-]{12}\.(webs|66ghz)\.com", r'online\.us[/"<]',
     ]
-    city_list = ["Agra", "Amritsar", "Bangalore", "Chandigarh", "Chennai", "Coimbatore", "Delhi", "Dubai", "Durgapur",
+    city_list = [
+        "Agra", "Amritsar", "Bangalore", "Chandigarh", "Chennai", "Coimbatore", "Delhi", "Dubai", "Durgapur",
         "Ghaziabad", "Hyderabad", "Jaipur", "Jalandhar", "Kolkata", "Ludhiana", "Mumbai", "Madurai", "Patna",
-        "Rajkot", "Surat",]
+        "Rajkot", "Surat",
+    ]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
         #
