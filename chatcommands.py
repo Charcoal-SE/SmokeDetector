@@ -4,7 +4,7 @@ from datetime import datetime
 from utcdate import UtcDate
 from apigetpost import api_get_post
 from datahandling import *
-from chatcommunicate import post_message_in_room
+from chatcommunicate import *
 from metasmoke import Metasmoke
 from parsing import *
 from spamhandling import handle_spam
@@ -253,7 +253,7 @@ def command_block(*args, **kwargs):
         return report
 
 
-def command_unblock(*args, *kwargs):
+def command_unblock(*args, **kwargs):
     """
     Unblocks posting to a room
     :param kwargs: Requires that 'message_parts', 'ev_user_id' and 'wrap2' be passed as a kwarg
@@ -477,7 +477,7 @@ def command_whoami(*args, **kwargs):
 
 
 # --- Notification functions --- #
-def command_allnotifications(*args, *kwargs):
+def command_allnotifications(*args, **kwargs):
     """
     Returns a string stating what sites a user will be notified about
     :param kwargs: Requires that 'message_parts', 'ev_user_id' and 'wrap2' be passed as kwarg
@@ -671,7 +671,7 @@ def subcommand_editlink(*args, **kwargs):
         return None
 
 
-def subcommand_falsepositive(*args, *kwargs):
+def subcommand_falsepositive(*args, **kwargs):
     """
     Marks a post as a false positive
     :param kwargs: Requires 'ev_room', 'ev_user_id', 'wrap2', 'post_site_id', 'post_url', 'quiet_action', 'post_type'
