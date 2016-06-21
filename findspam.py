@@ -231,8 +231,8 @@ class FindSpam:
         "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning",
         "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn", "revolyn",
         "(?:networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing|salesforce|joomla)( certification)? (courses?|training).{0,25}</a>",
-        "(?:design|compan(y|ies)|training|courses?).{0,8}(?:bangalore|chennai|delhi|hyderabad|kolkata|mumbai|madurai|coimbatore|rajkot|durgapur|surat|agra|patna|ghaziabad|jaipur|dubai)",
-        "\\bin (?:bangalore|chennai|delhi|hyderabad|kolkata|mumbai|madurai|coimbatore|rajkot|durgapur|surat|agra|patna|ghaziabad|jaipur|dubai)</a>",
+        "(?:design|compan(y|ies)|training|courses?).{0,8}\\L<city>",
+        "\\bin \\L<city></a>", "\\L<city>.{0,12}service", "\\L<city> (?:escort|call girl)",
         u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "no2blast", "sunergetic", "capilux", "sante ?avis",
         "enduros", "dianabol", "ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex", "revimax",
         "celluria", "viatropin", "(meg|test)adrox", "nordic ?loan ?firm",
@@ -458,6 +458,9 @@ class FindSpam:
         r"sex\.(com|net|info)", r"https?://(www\.)?sex",
         r"[\w-]{12}\.(webs|66ghz)\.com", r'online\.us[/"<]',
     ]
+    city_list = ["Agra", "Amritsar", "Bangalore", "Chandigarh", "Chennai", "Coimbatore", "Delhi", "Dubai", "Durgapur",
+        "Ghaziabad", "Hyderabad", "Jaipur", "Jalandhar", "Kolkata", "Ludhiana", "Mumbai", "Madurai", "Patna",
+        "Rajkot", "Surat",]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
         #
@@ -639,7 +642,7 @@ class FindSpam:
                 matched_body = None
                 compiled_regex = None
                 if is_regex_check:
-                    compiled_regex = regex.compile(rule['regex'], regex.UNICODE)
+                    compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)  # using a named list \L in some regexes
                     matched_title = compiled_regex.findall(title)
                     matched_username = compiled_regex.findall(user_name)
                     if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer) and (is_answer or check_if_question):
