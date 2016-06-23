@@ -416,7 +416,7 @@ class FindSpam:
         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
         r"((essay|resume|click2)\w{6,}|(essays|(research|term)paper|examcollection|(essay|paper)writing)[\w-]*?)\.(co|net|org|in\W|info|us)",
         r"(top|best|expert)\d\w{0,15}\.in\W", r"\dth\.co\.in",
-        r"[\w-](recovery|repair|(?<!epoch|font)converter)(pro|kit)?\.(com|net)", r"(corrupt|repair)[\w-]*?\.blogspot",
+        r"[\w-](recovery|repair|rescuer|(?<!epoch|font)converter)(pro|kit)?\.(com|net)", r"(corrupt|repair)[\w-]*?\.blogspot",
         r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)[\w-]{0,10}(account|tech|customer|support|service|phone|help)[\w-]{0,10}(service|care|help|recovery|support|phone|number)",
         r"fix[\w-]*?(files?|tool(box)?)\.com", r"(repair|recovery|fix)tool(box)?\.com",
         r"smart(pc)?fixer\.(co|net|org)",
