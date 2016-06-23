@@ -400,7 +400,7 @@ class FindSpam:
         "discussfact\\.com", "sirabhinavjain\\.com", "moneytransfercomparison\\.co",
         "exchangeratetoday\\.co", "currencysolutions\\.co", "accudb\\.com",
         "grey-areaweed\\.com", "360musicng\\.co", "oyetrade\\.com",
-        "trickspaid\\.com", "bulksmsclub\\.com",
+        "trickspaid\\.com", "bulksmsclub\\.com", "redbubble\\.com", "joomag\\.com",
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
