@@ -414,7 +414,7 @@ class FindSpam:
         r"filefix(er)?\.com", r"\.page\.tl\W", r"infotech\.(com|net|in)",
         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
-        r"((essay|resume|click2)\w{6,}|(essays|termpaper|examcollection)[\w-]*?)\.(co|net|org|in\W|info|us)",
+        r"((essay|resume|click2)\w{6,}|(essays|(research|term)paper|examcollection|(essay|paper)writing)[\w-]*?)\.(co|net|org|in\W|info|us)",
         r"(top|best|expert)\d\w{0,15}\.in\W", r"\dth\.co\.in",
         r"[\w-](recovery|repair|(?<!epoch|font)converter)(pro|kit)?\.(com|net)", r"(corrupt|repair)[\w-]*?\.blogspot",
         r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)[\w-]{0,10}(account|tech|customer|support|service|phone|help)[\w-]{0,10}(service|care|help|recovery|support|phone|number)",
