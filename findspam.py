@@ -379,7 +379,7 @@ class FindSpam:
         "appsapkfile\\.com", "bandarterbaikterpercaya\\.net", "yourdailymovie\\.com",
         "ipinteria\\.com", "blogines\\.com", "stepupheights\\.com", "gfix\\.in",
         "aminoprimexl\\.com", "csharpstar\\.com", "vbscore\\.com", "blueeagleindia\\.com",
-        "vizayn\\.com", "androidpureapk\\.com",
+        "vizayn\\.com", "androidpureapk\\.com", "hzxiaoya\\.com",
         "upsafe\\.com", "spiritsofts\\.com", "rcptec\\.com", "gmax-brasil\\.com", "icognix\\.net",
         "\\Wpysoft\\.com", "zescode\\.com", "eserviceshelp\\.in", "captainform\\.com",
         "techiphone\\.com", "kmminoaq4yci5woj\\.onion", "BlackListHackers\\.com",
