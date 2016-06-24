@@ -277,7 +277,7 @@ class FindSpam:
         "regeasypro\\.com", "registryware\\.org", "smartfixer\\.(net|org)", "chirbit\\.com",
         "dlllibrary\\.net", "wisefixer\\.(com|net|org)", "dojobsonline\\.com", "/mu6\\.me/",
         "password-?unlocker\\.com", "dropbox18gb\\.com", "mysocialpromos\\.com",
-        "passwordtech\\.com", "goshareware\\.com", "digitalacads\\.in",
+        "passwordtech\\.com", "goshareware\\.com", "digitalacads\\.in", "crichdlive\\.com",
         "nemopdf\\.com", "downloaddailymotion\\.com", "bharatplaza\\.com",
         "free-download-youtube\\.com", "free-music-downloader\\.com",
         "video-download-capture\\.com", "videograbber\\.net",
