@@ -141,7 +141,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
 def keyword_email(s, site):   # a keyword and an email in the same post
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
-    keyword = regex.compile(ur"(?i)\b(training|we (will )?(offer|develop|provide)|sell|invest(or|ing|ment)|money|quality|legit|interest(ed)?|guarantee|catalog|rent|crack|opportunity|fundraising|campaign|career|employment|candidate|resume|loan|lover|husband|female|illuminati|brotherhood|(join|reach|contact) (me|us|him)|spell(caster)?|doctor|(cheat|hack)(er|ing)?|spying|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? ").search(s)
+    keyword = regex.compile(ur"(?i)\b(training|we (will )?(offer|develop|provide)|sell|invest(or|ing|ment)|money|quality|legit|interest(ed)?|guarantee|catalog|rent|crack|opportunity|fundraising|campaign|career|employment|candidate|resume|loan|lover|husband|female|illuminati|brotherhood|(join|reach|contact|provide) (me|us|him)|spell(caster)?|doctor|(cheat|hack)(er|ing)?|spying|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? ").search(s)
     if keyword:
         email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
         if email:
