@@ -404,7 +404,7 @@ class FindSpam:
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
-        r"(removevirus|supportnumber|exclusive|onlineshop|video(course|classes|tutorial(?!s))|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|governmentjobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot|tumblr|webs\.)",
+        r"(removevirus|supportnumber|exclusive|onlineshop|video(course|classes|tutorial(?!s))|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|(govt|government)jobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot|tumblr|webs\.)",
         r"(rs\d?gold|rssong|runescapegold|e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertation|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(heathcare|meatspin|packers\S{0,3}movers|(buy|sell)\S{0,12}cvv|goatse|burnfat|gronkaffe|muskel|nitricoxide|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone|//xtra)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(\w{10}spell|[\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits|research-?paper|-wallet|refunds)\.(co|net|org|in\W|info)",
@@ -415,7 +415,7 @@ class FindSpam:
         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
         r"((essay|resume|click2)\w{6,}|(essays|(research|term)paper|examcollection|(essay|paper)writing)[\w-]*?)\.(co|net|org|in\W|info|us)",
-        r"(top|best|expert)\d\w{0,15}\.in\W", r"\dth\.co\.in",
+        r"(top|best|expert)\d\w{0,15}\.in\W", r"\dth\.co\.in", r"in\L<city>\.in",
         r"[\w-](recovery|repair|rescuer|(?<!epoch|font)converter)(pro|kit)?\.(com|net)", r"(corrupt|repair)[\w-]*?\.blogspot",
         r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)[\w-]{0,10}(account|tech|customer|support|service|phone|help)[\w-]{0,10}(service|care|help|recovery|support|phone|number)",
         r"fix[\w-]*?(files?|tool(box)?)\.com", r"(repair|recovery|fix)tool(box)?\.com",
@@ -461,7 +461,7 @@ class FindSpam:
     city_list = [
         "Agra", "Amritsar", "Bangalore", "Chandigarh", "Chennai", "Coimbatore", "Delhi", "Dubai", "Durgapur",
         "Ghaziabad", "Hyderabad", "Jaipur", "Jalandhar", "Kolkata", "Ludhiana", "Mumbai", "Madurai", "Patna",
-        "Rajkot", "Surat",
+        "Rajkot", "Surat", "Uttarakhand",
     ]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
