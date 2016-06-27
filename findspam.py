@@ -399,15 +399,15 @@ class FindSpam:
         "zaputra\\.com", "ok8uk\\.org\\.uk", "visitdevonandcornwall\\.co\\.uk",
         "discussfact\\.com", "sirabhinavjain\\.com", "moneytransfercomparison\\.co",
         "exchangeratetoday\\.co", "currencysolutions\\.co", "accudb\\.com",
-        "grey-areaweed\\.com", "360musicng\\.co", "oyetrade\\.com",
+        "grey-areaweed\\.com", "360musicng\\.co", "oyetrade\\.com", "softwarednl.com",
         "trickspaid\\.com", "bulksmsclub\\.com", "redbubble\\.com", "joomag\\.com",
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
         r"(removevirus|supportnumber|exclusive|onlineshop|video(course|classes|tutorial(?!s))|vipmodel|porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|(govt|government)jobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot|tumblr|webs\.)",
-        r"(rs\d?gold|rssong|runescapegold|e-cash|mothers?day|truo?ng|viet|phone-?number|fullmovie|tvstream|trainingin|dissertation|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
+        r"(rs\d?gold|rssong|runescapegold|e-cash|mothers?day|phone-?number|fullmovie|tvstream|trainingin|dissertation|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(heathcare|meatspin|packers\S{0,3}movers|(buy|sell)\S{0,12}cvv|goatse|burnfat|gronkaffe|muskel|nitricoxide|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
-        r"(\w{10}spell|[\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits|research-?paper|-wallet|refunds)\.(co|net|org|in\W|info)",
+        r"(\w{10}spell|[\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits|research-?paper|-wallet|refunds|truo?ng|viet|trang)\.(co|net|org|in\W|info)",
         r"(health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
         r"(//|www\.)healthy?\w{5,7}\.com",
         r"https?://[\w-.]\.repair\W", r"https?://[\w-.]{10,}\.(top|help)\W", r'https?://[\w-.]*-[\w-.]*\.pro[/"<]',
