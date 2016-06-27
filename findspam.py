@@ -415,7 +415,7 @@ class FindSpam:
         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
         r"((essay|resume|click2)\w{6,}|(essays|(research|term)paper|examcollection|(essay|paper)writing)[\w-]*?)\.(co|net|org|in\W|info|us)",
-        r"(top|best|expert)\d\w{0,15}\.in\W", r"\dth\.co\.in", r"in\L<city>\.in",
+        r"(top|best|expert)\d\w{0,15}\.in\W", r"\dth\.co\.in", r"(jobs|in)\L<city>\.in",
         r"[\w-](recovery|repair|rescuer|(?<!epoch|font)converter)(pro|kit)?\.(com|net)", r"(corrupt|repair)[\w-]*?\.blogspot",
         r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)[\w-]{0,10}(account|tech|customer|support|service|phone|help)[\w-]{0,10}(service|care|help|recovery|support|phone|number)",
         r"fix[\w-]*?(files?|tool(box)?)\.com", r"(repair|recovery|fix)tool(box)?\.com",
@@ -461,7 +461,7 @@ class FindSpam:
     city_list = [
         "Agra", "Amritsar", "Bangalore", "Chandigarh", "Chennai", "Coimbatore", "Delhi", "Dubai", "Durgapur",
         "Ghaziabad", "Hyderabad", "Jaipur", "Jalandhar", "Kolkata", "Ludhiana", "Mumbai", "Madurai", "Patna",
-        "Rajkot", "Surat", "Uttarakhand",
+        "Rajkot", "Surat", "Telangana", "Uttarakhand",
     ]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
