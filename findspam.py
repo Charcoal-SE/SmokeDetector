@@ -367,7 +367,7 @@ class FindSpam:
         "chatsim\\.com", "mlkblasters\\.org", "champcash\\.com", "bisbury\\.com",
         "rankyouup\\.com", "reviewanalysis\\.co", "apponfly\\.com", "gogames\\.me",
         "trutech\\.co", "askmespam\\.com", "imdresses\\.com", "doesitscam\\.com",
-        "jobsopening\\.co\\.in", "retersweld\\.com", "mindextra\\.com",
+        "jobsopening\\.co\\.in", "retersweld\\.com", "mindextra\\.com", "upcoming-trend\\.com",
         "psychicfuguestudio", "softserialhq\\.com", "unstopableshrine\\.webs\\.com",
         "softaken\\.com", "lyonstechnologies", "serialkeygeneratorfree\\.com", "routeperfect\\.com",
         "tupely\\.com", "apk(heart|safe)\\.com", "uflysoft\\.net", "nimblemessaging\\.com",
@@ -618,7 +618,7 @@ class FindSpam:
         #
         # Category: other
         # Blacklisted usernames
-        {'regex': ur"(?i)(tejveer ?iq|ser?vice pemanas?|\bnigger|^wingding$|dlqudals|^[a-z ]+juri(?:n|na|ns|sa|ya|yam|ym)$)", 'all': True, 'sites': [], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        {'regex': ur"(?i)(tejveer ?iq|ser?vice pemanas?|\bnigger|^wingding$|dlqudals|^[a-z]{3,}juri$|^[a-z ]+juri(?:n|na|ns|sa|ya|yam|ym)$)", 'all': True, 'sites': [], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0}
     ]
 
