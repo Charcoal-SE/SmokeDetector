@@ -213,7 +213,7 @@ class FindSpam:
         "Volive( Solutions)?", "Herbalife", "Accumass", "purple rhino male enhancement",
         "male enhancement supplements", "alpha levo", "digital marketing course", "stark trading system",
         "bring back lost lover", "service proposal essay", "enetdocumentation", "okaygoods", "bojiter",
-        "dr ?eziza", "(spell(home)?|temple|classes)@gmail\\.com", "viagra", "cialis",
+        "dr ?eziza", "(spell(home)?|temple|classes)@gmail\\.com", "viagra", "cialis", "slotobit",
     ]
     bad_keywords_nwb = [
         u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
@@ -551,7 +551,7 @@ class FindSpam:
         {'regex': ur'(?is)^.{0,350}<a href="https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,4}/?\w{0,2}/?|(?:plus\.google|www\.facebook)\.com/[\w/]+)"[^<]*</a>(?:</strong>)?\s*</p>\s*$', 'all': True,
          'sites': [], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Link after "thanks for sharing" in a short answer
-        {'regex': ur'(?is)^.{0,75}Thank(s| you) for sharing.{0,200}<a href.{0,200}$', 'all': True,
+        {'regex': ur'(?is)^.{0,75}(thank you|Thank(s| you) for sharing|dear forum members).{0,200}<a href.{0,200}$', 'all': True,
          'sites': [], 'reason': 'bad keyword with a link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # non-linked .tk site at the end of an answer
         {'regex': ur'(?is)\w{3}\.tk(?:</strong>)?\s*</p>\s*$', 'all': True,
