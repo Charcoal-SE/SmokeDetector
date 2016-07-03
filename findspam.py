@@ -642,8 +642,9 @@ class FindSpam:
                 check_if_question = rule['questions']
             except KeyError:
                 check_if_question = True
+            body_to_check = regex.sub("[\xad\u200b\u200c]", "", body_to_check)
             if rule['stripcodeblocks']:    # use a placeholder to avoid triggering "few unique characters" when most of post is code
-                body_to_check = regex.sub("(?s)<pre>.*?</pre>", u"<pre><code>placeholder for omitted code/код block</pre></code>", body)
+                body_to_check = regex.sub("(?s)<pre>.*?</pre>", u"<pre><code>placeholder for omitted code/код block</pre></code>", body_to_check)
                 body_to_check = regex.sub("(?s)<code>.*?</code>", u"<pre><code>placeholder for omitted code/код block</pre></code>", body_to_check)
             if rule['reason'] == 'Phone number detected in {}':
                 body_to_check = regex.sub("<img[^>]+>", "", body_to_check)
