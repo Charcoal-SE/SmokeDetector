@@ -601,6 +601,9 @@ class FindSpam:
         # Offensive content in titles and posts
         {'method': is_offensive_post, 'all': True, 'sites': [], 'reason': "offensive {} detected", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True,
          'max_rep': 101, 'max_score': 5},
+        # Offensive title: titles are more sensitive
+        {'regex': ur"\bfuck|(?<!brain)fuck(ers?|ing)?\b", 'all': True, 'sites': [], 'reason': "offensive {} detected", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': True, 'body_summary': False,
+         'max_rep': 101, 'max_score': 5},
         # All-caps text
         {'method': all_caps_text, 'all': True, 'sites': ["pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com", "ja.stackoverflow.com", "rus.stackexchange.com"],
          'reason': "all-caps {}", 'title': False, 'body': True, 'questions': False, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
