@@ -292,7 +292,7 @@ class FindSpam:
         "allavsoft", "tryapext\\.com", "essays(origin|council)\\.com", "caseism\\.com",
         "vanskeys\\.com", "cheapessaywritingservice", "edbtopsts\\.com",
         "texts\\.io", "writage\\.com", "mobitsolutions\\.com",
-        "askpcexperts\\.com", "anonymousvpnsoftware\\.com",
+        "askpcexperts\\.com", "anonymousvpnsoftware\\.com", "mmfsolutions\\.sg", "ungeekit\\.com",
         "ecouponcode\\.com", "wasel(pro)?\\.com", "i-spire\\.(com|net)",
         "iwasl\\.com", "vpn(faqs|answers|ranks|4games)\\.com",
         "unblockingtwitter\\.com", "openingblockedsite\\.com",
