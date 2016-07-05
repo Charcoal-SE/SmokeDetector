@@ -498,15 +498,36 @@ def command_test(content, content_lower, *args, **kwargs):
     """
     string_to_test = content[8:]
     test_as_answer = False
-    if content_lower.startswith("!!/test-a"):
-        string_to_test = content[10:]
-        test_as_answer = True
     if len(string_to_test) == 0:
         return "Nothing to test"
     result = "> "
     reasons, why = FindSpam.test_post(string_to_test, string_to_test, string_to_test, "", test_as_answer, False, 1, 0)
     if len(reasons) == 0:
-        result += "Would not be caught for title, {}, and username.".format("answer" if test_as_answer else "body")
+        result += "Would not be caught for title, body, and username."
+        return result
+    result += ", ".join(reasons).capitalize()
+    if why is not None and len(why) > 0:
+        result += "\n----------\n"
+        result += why
+    return result
+
+
+def command_test_answer(content, content_lower, *args, **kwargs):
+    """
+    Test a answer to determine if it'd be automatically reported
+    :param content_lower:
+    :param content:
+    :param kwargs: No additional arguments expected
+    :return: A string
+    """
+    string_to_test = content[10:]
+    test_as_answer = True
+    if len(string_to_test) == 0:
+        return "Nothing to test"
+    result = "> "
+    reasons, why = FindSpam.test_post(string_to_test, string_to_test, string_to_test, "", test_as_answer, False, 1, 0)
+    if len(reasons) == 0:
+        result += "Would not be caught for title, answer, and username."
         return result
     result += ", ".join(reasons).capitalize()
     if why is not None and len(why) > 0:
@@ -1008,6 +1029,7 @@ command_dict = {
     "!!/status": command_status,
     "!!/tea": command_tea,
     "!!/test": command_test,
+    "!!/test-a": command_test_answer,
     "!!/unblock": command_unblock,
     "!!/unnotify": command_unnotify,
     "!!/ver": command_version,
