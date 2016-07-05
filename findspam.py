@@ -284,7 +284,7 @@ class FindSpam:
         "video-download-capture\\.com", "videograbber\\.net", "gangboard.com",
         "globalvision\\.com\\.vn", "csoftglobal\\.com", "bsscommerce\\.com",
         "remorecover\\.com", "remosoftware\\.com", "freethemes\\.co",
-        "\\bpatch\\.com\\b", "ajgilworld\\.com", "santomais", "viilms",
+        "\\bpatch\\.com\\b", "ajgilworld\\.com", "santomais", "viilms", "fashionient\\.com",
         "clashofclansastucegemmes\\.com", "american-writers\\.org", "comaarp.org",
         "bestcelebritiesvideo\\.com", "shopnhlbruins\\.com", "mon-rasage.fr",
         "downloadscanpst\\.com", "downloadgames", "gameshop4u\\.com",
