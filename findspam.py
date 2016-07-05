@@ -281,7 +281,7 @@ class FindSpam:
         "passwordtech\\.com", "goshareware\\.com", "digitalacads\\.in", "crichdlive\\.com",
         "nemopdf\\.com", "downloaddailymotion\\.com", "bharatplaza\\.com", "boostmmr\\.com",
         "free-download-youtube\\.com", "free-music-downloader\\.com", "responsivesites\\.net",
-        "video-download-capture\\.com", "videograbber\\.net",
+        "video-download-capture\\.com", "videograbber\\.net", "gangboard.com",
         "globalvision\\.com\\.vn", "csoftglobal\\.com", "bsscommerce\\.com",
         "remorecover\\.com", "remosoftware\\.com", "freethemes\\.co",
         "\\bpatch\\.com\\b", "ajgilworld\\.com", "santomais", "viilms",
