@@ -125,6 +125,11 @@ GlobalVars.specialrooms = [
         "sites": ["movies.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("40705"),
         "unwantedReasons": []
+    },
+    {
+        "sites": ["ethereum.stackexchange.com"],
+        "room": GlobalVars.wrap.get_room("34620"),
+        "unwantedReasons": []
     }
 ]
 

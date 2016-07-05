@@ -50,10 +50,14 @@ def api_get_post(post_url):
     post_data.post_type = post_type
     h = HTMLParser.HTMLParser()
     post_data.title = h.unescape(item['title'])
-    if 'owner' in item and item['owner'] is not None:
+    if 'owner' in item and 'link' in item['owner']:
         post_data.owner_name = h.unescape(item['owner']['display_name'])
         post_data.owner_url = item['owner']['link']
         post_data.owner_rep = item['owner']['reputation']
+    else:
+        post_data.owner_name = ""
+        post_data.owner_url = ""
+        post_data.owner_rep = 1
     post_data.site = site
     post_data.body = item['body']
     post_data.score = item['score']
