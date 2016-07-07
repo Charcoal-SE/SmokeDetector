@@ -173,7 +173,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
     if command_aliases.get(second_part_lower):
         second_part_lower = command_aliases.get(second_part_lower)
-    match = re.match(r"[\w!/-]+", content_lower)
+    match = re.match(r"[!/]*[\w-]+", content_lower)
     command = match.group(0) if match else ""
     if re.compile("^:[0-9]{4,}$").search(message_parts[0]):
         msg_id = int(message_parts[0][1:])
