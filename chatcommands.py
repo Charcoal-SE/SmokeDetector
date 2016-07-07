@@ -1037,6 +1037,7 @@ command_dict = {
     "!!/status": command_status,
     "!!/tea": command_tea,
     "!!/test": command_test,
+    "!!/testanswer": command_test_answer,
     "!!/test-a": command_test_answer,
     "!!/unblock": command_unblock,
     "!!/unnotify": command_unnotify,
