@@ -4,7 +4,6 @@ from datetime import datetime
 from utcdate import UtcDate
 from apigetpost import api_get_post
 from datahandling import *
-from chatcommunicate import *
 from metasmoke import Metasmoke
 from parsing import *
 from spamhandling import handle_spam
@@ -23,6 +22,15 @@ import time
 #   if return...else return vs if return...return
 
 # Functions go before the final dictionaries of command to function mappings
+
+def post_message_in_room(room_id_str, msg, length_check=True):
+    if room_id_str == GlobalVars.charcoal_room_id:
+        GlobalVars.charcoal_hq.send_message(msg, length_check)
+    elif room_id_str == GlobalVars.meta_tavern_room_id:
+        GlobalVars.tavern_on_the_meta.send_message(msg, length_check)
+    elif room_id_str == GlobalVars.socvr_room_id:
+        GlobalVars.socvr.send_message(msg, length_check)
+
 
 def is_report(post_site_id):
     """
@@ -1029,6 +1037,7 @@ command_dict = {
     "!!/status": command_status,
     "!!/tea": command_tea,
     "!!/test": command_test,
+    "!!/testanswer": command_test_answer,
     "!!/test-a": command_test_answer,
     "!!/unblock": command_unblock,
     "!!/unnotify": command_unnotify,

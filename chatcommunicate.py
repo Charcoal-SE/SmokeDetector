@@ -32,15 +32,6 @@ cmds = chatcommands.command_dict
 subcmds = chatcommands.subcommand_dict
 
 
-def post_message_in_room(room_id_str, msg, length_check=True):
-    if room_id_str == GlobalVars.charcoal_room_id:
-        GlobalVars.charcoal_hq.send_message(msg, length_check)
-    elif room_id_str == GlobalVars.meta_tavern_room_id:
-        GlobalVars.tavern_on_the_meta.send_message(msg, length_check)
-    elif room_id_str == GlobalVars.socvr_room_id:
-        GlobalVars.socvr.send_message(msg, length_check)
-
-
 def is_smokedetector_message(user_id, room_id):
     return user_id == GlobalVars.smokeDetector_user_id[room_id]
 
@@ -182,7 +173,8 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
     if command_aliases.get(second_part_lower):
         second_part_lower = command_aliases.get(second_part_lower)
-    command = content_lower.split()[0]
+    match = re.match(r"[!/]*[\w-]+", content_lower)
+    command = match.group(0) if match else ""
     if re.compile("^:[0-9]{4,}$").search(message_parts[0]):
         msg_id = int(message_parts[0][1:])
         msg = wrap2.get_message(msg_id)
