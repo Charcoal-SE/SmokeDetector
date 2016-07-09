@@ -378,9 +378,9 @@ def command_help(*args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: A string
     """
-    return "I'm [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector), a bot " \
+    return "I'm " + GlobalVars.chatmessage_prefix + ", a bot " \
            "that detects spam and offensive posts on the network and posts alerts to chat. " \
-           "[A command list is available here](https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands)."
+           "[A command list is available here](" + GlobalVars.bot_repository + "/wiki/Commands)."
 
 
 def command_location(*args, **kwargs):
@@ -457,7 +457,7 @@ def command_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
     if is_privileged(ev_room, ev_user_id, wrap2):
         return "Yes, you are a privileged user."
     return "No, you are not a privileged user. See " \
-           "[the Privileges wiki page](//github.com/Charcoal-SE/SmokeDetector/wiki/Privileges) for information on " \
+           "[the Privileges wiki page](" + GlobalVars.bot_repository + "/wiki/Privileges) for information on " \
            "what privileges are and what is expected."
 
 
@@ -549,8 +549,8 @@ def command_version(*args, **kwargs):
     Returns the current version of the application
     :return: A string
     """
-    return '[{commit_name}](https://github.com/Charcoal-SE/SmokeDetector/commit/{commit_code})'.format(
-        commit_name=GlobalVars.commit_with_author, commit_code=GlobalVars.commit)
+    return '[{commit_name}]({repository}/commit/{commit_code})'.format(
+        commit_name=GlobalVars.commit_with_author, commit_code=GlobalVars.commit, repository=GlobalVars.bot_repository)
 
 
 def command_whoami(ev_room, *args, **kwargs):

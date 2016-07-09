@@ -49,19 +49,19 @@ GlobalVars.wrapso.login(username, password)
 GlobalVars.smokeDetector_user_id[GlobalVars.charcoal_room_id] = str(GlobalVars.wrap.get_me().id)
 GlobalVars.smokeDetector_user_id[GlobalVars.meta_tavern_room_id] = str(GlobalVars.wrapm.get_me().id)
 GlobalVars.smokeDetector_user_id[GlobalVars.socvr_room_id] = str(GlobalVars.wrapso.get_me().id)
-GlobalVars.s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] " \
+GlobalVars.s = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                "SmokeDetector started at [rev " +\
                GlobalVars.commit_with_author +\
-               "](https://github.com/Charcoal-SE/SmokeDetector/commit/" +\
+               "](" + GlobalVars.bot_repository  + "/commit/" +\
                GlobalVars.commit +\
                ") (running on " +\
                GlobalVars.location +\
                ")"
-GlobalVars.s_reverted = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] " \
-                        "SmokeDetector started in [reverted mode](https://github.com/Charcoal-SE/SmokeDetector/blob/master/RevertedMode.md) " \
+GlobalVars.s_reverted = "[ " + GlobalVars.chatmessage_prefix + " ] " \
+                        "SmokeDetector started in [reverted mode](" + GlobalVars.bot_repository + "/blob/master/RevertedMode.md) " \
                         "at [rev " + \
                         GlobalVars.commit_with_author + \
-                        "](https://github.com/Charcoal-SE/SmokeDetector/commit/" + \
+                        "](" + GlobalVars.bot_repository + "/commit/" + \
                         GlobalVars.commit + \
                         ") (running on " +\
                         GlobalVars.location +\
@@ -202,5 +202,5 @@ delta = UtcDate.startup_utc_date - now
 seconds = delta.total_seconds()
 if seconds < 60:
     os._exit(4)
-s = "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] SmokeDetector aborted"
+s = "[ " + GlobalVars.chatmessage_prefix + " ] SmokeDetector aborted"
 GlobalVars.charcoal_hq.send_message(s)
