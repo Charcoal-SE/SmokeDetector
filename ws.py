@@ -52,7 +52,7 @@ GlobalVars.smokeDetector_user_id[GlobalVars.socvr_room_id] = str(GlobalVars.wrap
 GlobalVars.s = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                "SmokeDetector started at [rev " +\
                GlobalVars.commit_with_author +\
-               "](" + GlobalVars.bot_repository  + "/commit/" +\
+               "](" + GlobalVars.bot_repository + "/commit/" +\
                GlobalVars.commit +\
                ") (running on " +\
                GlobalVars.location +\
