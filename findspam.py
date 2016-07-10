@@ -234,7 +234,7 @@ class FindSpam:
         "(?:networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing|salesforce|joomla)( certification)? (courses?|training).{0,25}</a>",
         "(?:design|compan(y|ies)|training|courses?).{0,8}\\L<city>",
         "\\bin \\L<city></a>", "\\L<city>.{0,12}service", "\\L<city> (?:escort|call girl)",
-        ">(best|make|full|cheap)[\w ]{0,20}online</a>",
+        ">(best|make|full|hd|cheap|software) [\w ]{0,20} (online|service|company)</a>",
         u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "no2blast", "sunergetic", "capilux", "sante ?avis",
         "enduros", "dianabol", "ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex", "revimax",
         "celluria", "viatropin", "(meg|test)adrox", "nordic ?loan ?firm",
