@@ -232,7 +232,7 @@ class FindSpam:
         "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning",
         "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn", "revolyn",
         "(?:networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing|salesforce|joomla)( certification)? (courses?|training).{0,25}</a>",
-        "(?:design|compan(y|ies)|training|courses?).{0,8}\\L<city>",
+        "(?:design|development|compan(y|ies)|training|courses?).{0,8}\\L<city>",
         "\\bin \\L<city></a>", "\\L<city>.{0,12}service", "\\L<city> (?:escort|call girl)",
         ">(best|make|full|hd|cheap|software) [\w ]{0,20} (online|service|company)</a>",
         u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "no2blast", "sunergetic", "capilux", "sante ?avis",
