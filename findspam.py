@@ -403,7 +403,7 @@ class FindSpam:
         "exchangeratetoday\\.co", "currencysolutions\\.co", "accudb\\.com",
         "grey-areaweed\\.com", "360musicng\\.co", "oyetrade\\.com", "softwarednl.com",
         "trickspaid\\.com", "bulksmsclub\\.com", "redbubble\\.com", "joomag\\.com",
-        "ladybirdco\\.com", "magehit\\.com", "colors34.com",
+        "ladybirdco\\.com", "magehit\\.com", "colors34.com", "ultimatewowguide\\.com",
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
