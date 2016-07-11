@@ -620,7 +620,7 @@ def command_notify(message_parts, ev_user_id, wrap2, *args, **kwargs):
     response, full_site = add_to_notification_list(user_id, chat_site, room_id, se_site)
     if response == 0:
         return None if quiet_action else "You'll now get pings from me if I report a post on `{site_name}`, in room" \
-               " `{room_id}` on `chat.{chat_domain}`".format(site_name=se_site, room_id=room_id, chat_domain=chat_site)
+            " `{room_id}` on `chat.{chat_domain}`".format(site_name=se_site, room_id=room_id, chat_domain=chat_site)
     elif response == -1:
         return "That notification configuration is already registered."
     elif response == -2:
@@ -650,7 +650,7 @@ def command_unnotify(message_parts, ev_user_id, wrap2, *args, **kwargs):
     response = remove_from_notification_list(user_id, chat_site, room_id, se_site)
     if response:
         return None if quiet_action else "I will no longer ping you if I report a post on `{site_name}`, in room" \
-               " `{room_id}` on `chat.{chat_domain}`".format(site_name=se_site, room_id=room_id, chat_domain=chat_site)
+            " `{room_id}` on `chat.{chat_domain}`".format(site_name=se_site, room_id=room_id, chat_domain=chat_site)
     return "That configuration doesn't exist."
 
 
