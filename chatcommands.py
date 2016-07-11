@@ -74,7 +74,7 @@ def single_random_user(ev_room):
 
 
 # --- Blacklist Functions --- #
-def command_add_blacklist_user(content_lower, message_url, ev_room, ev_user_id, wrap2, *args, **kwargs):
+def command_add_blacklist_user(message_parts, content_lower, message_url, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Adds a user to the site blacklist
     :param wrap2:
@@ -82,14 +82,16 @@ def command_add_blacklist_user(content_lower, message_url, ev_room, ev_user_id, 
     :param ev_room:
     :param message_url:
     :param content_lower:
+    :param message_parts:
     :param kwargs: No additional arguments expected
     :return: A string
     """
+    quiet_action = any([part.endswith('-') for part in message_parts])
     if is_privileged(ev_room, ev_user_id, wrap2):
         uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
             add_blacklisted_user((uid, val), message_url, "")
-            return "User blacklisted (`{}` on `{}`).".format(uid, val)
+            return None if quiet_action else "User blacklisted (`{}` on `{}`).".format(uid, val)
         elif uid == -2:
             return "Error: {}".format(val)
         else:
@@ -115,21 +117,23 @@ def command_check_blacklist(content_lower, *args, **kwargs):
         return False, "Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`."
 
 
-def command_remove_blacklist_user(content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
+def command_remove_blacklist_user(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Removes user from site blacklist
     :param wrap2:
     :param ev_user_id:
     :param ev_room:
     :param content_lower:
+    :param message_parts:
     :param kwargs: No additional arguments expected
     :return: A string
     """
+    quiet_action = any([part.endswith('-') for part in message_parts])
     if is_privileged(ev_room, ev_user_id, wrap2):
         uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
             if remove_blacklisted_user((uid, val)):
-                return "User removed from blacklist (`{}` on `{}`).".format(uid, val)
+                return None if quiet_action else "User removed from blacklist (`{}` on `{}`).".format(uid, val)
             else:
                 return "User is not blacklisted."
         elif uid == -2:
@@ -139,21 +143,23 @@ def command_remove_blacklist_user(content_lower, ev_room, ev_user_id, wrap2, *ar
 
 
 # --- Whitelist functions --- #
-def command_add_whitelist_user(content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
+def command_add_whitelist_user(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Adds a user to site whitelist
     :param wrap2:
     :param ev_user_id:
     :param ev_room:
     :param content_lower:
+    :param message_parts:
     :param kwargs: No additional arguments expected
     :return: A string
     """
+    quiet_action = any([part.endswith('-') for part in message_parts])
     if is_privileged(ev_room, ev_user_id, wrap2):
         uid, val = get_user_from_list_command(content_lower)
         if uid > -1 and val != "":
             add_whitelisted_user((uid, val))
-            return "User whitelisted (`{}` on `{}`).".format(uid, val)
+            return None if quiet_action else "User whitelisted (`{}` on `{}`).".format(uid, val)
         elif uid == -2:
             return "Error: {}".format(val)
         else:
@@ -179,21 +185,23 @@ def command_check_whitelist(content_lower, *args, **kwargs):
         return False, "Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`."
 
 
-def command_remove_whitelist_user(content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
+def command_remove_whitelist_user(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Removes a user from site whitelist
     :param wrap2:
     :param ev_user_id:
     :param ev_room:
     :param content_lower:
+    :param message_parts:
     :param kwargs: No additional arguments expected
     :return: A string
     """
+    quiet_action = any([part.endswith('-') for part in message_parts])
     if is_privileged(ev_room, ev_user_id, wrap2):
         uid, val = get_user_from_list_command(content_lower)
         if uid != -1 and val != "":
             if remove_whitelisted_user((uid, val)):
-                return "User removed from whitelist (`{}` on `{}`).".format(uid, val)
+                return None if quiet_action else "User removed from whitelist (`{}` on `{}`).".format(uid, val)
             else:
                 return "User is not whitelisted."
         elif uid == -2:
@@ -607,15 +615,12 @@ def command_notify(message_parts, ev_user_id, wrap2, *args, **kwargs):
         return False, "Room ID is invalid."
 
     room_id = int(room_id)
-    quiet_action = ("-" in message_parts[2])
+    quiet_action = any([part.endswith('-') for part in message_parts])
     se_site = message_parts[2].replace('-', '')
     response, full_site = add_to_notification_list(user_id, chat_site, room_id, se_site)
     if response == 0:
-        if quiet_action:
-            return None
-
-        return "You'll now get pings from me if I report a post on `{site_name}`, in room `{room_id}` on `chat.{chat_domain}`".format(
-            site_name=se_site, room_id=room_id, chat_domain=chat_site)
+        return None if quiet_action else "You'll now get pings from me if I report a post on `{site_name}`, in room" \
+               " `{room_id}` on `chat.{chat_domain}`".format(site_name=se_site, room_id=room_id, chat_domain=chat_site)
     elif response == -1:
         return "That notification configuration is already registered."
     elif response == -2:
@@ -640,14 +645,12 @@ def command_unnotify(message_parts, ev_user_id, wrap2, *args, **kwargs):
         return False, "Room ID is invalid."
 
     room_id = int(room_id)
-    quiet_action = ("-" in message_parts[2])
+    quiet_action = any([part.endswith('-') for part in message_parts])
     se_site = message_parts[2].replace('-', '')
     response = remove_from_notification_list(user_id, chat_site, room_id, se_site)
     if response:
-        if quiet_action:
-            return None
-        return "I will no longer ping you if I report a post on `{site_name}`, in room `{room_id}` on" \
-               " `chat.{chat_domain}`".format(site_name=se_site, room_id=room_id, chat_domain=chat_site)
+        return None if quiet_action else "I will no longer ping you if I report a post on `{site_name}`, in room" \
+               " `{room_id}` on `chat.{chat_domain}`".format(site_name=se_site, room_id=room_id, chat_domain=chat_site)
     return "That configuration doesn't exist."
 
 
@@ -1006,7 +1009,9 @@ def subcommand_why(msg_content, *args, **kwargs):
 #    command_dict["!//alive"]()
 command_dict = {
     "!!/addblu": command_add_blacklist_user,
+    "!!/addblu-": command_add_blacklist_user,
     "!!/addwlu": command_add_whitelist_user,
+    "!!/addwlu-": command_add_whitelist_user,
     "!!/alive": command_alive,
     "!!/allnotificationsites": command_allnotifications,
     "!!/allspam": command_allspam,
@@ -1026,11 +1031,14 @@ command_dict = {
     "!!/location": command_location,
     "!!/master": command_master,
     "!!/notify": command_notify,
+    "!!/notify-": command_notify,
     "!!/pull": command_pull,
     "!!/reboot": command_reboot,
     "!!/reportuser": command_allspam,
     "!!/rmblu": command_remove_blacklist_user,
+    "!!/rmblu-": command_remove_blacklist_user,
     "!!/rmwlu": command_remove_whitelist_user,
+    "!!/rmwlu-": command_remove_whitelist_user,
     "!!/report": command_report_post,
     "!!/rev": command_version,
     "!!/stappit": command_stappit,
@@ -1041,6 +1049,7 @@ command_dict = {
     "!!/test-a": command_test_answer,
     "!!/unblock": command_unblock,
     "!!/unnotify": command_unnotify,
+    "!!/unnotify-": command_unnotify,
     "!!/ver": command_version,
     "!!/willibenotified": command_willbenotified,
     "!!/whoami": command_whoami,
