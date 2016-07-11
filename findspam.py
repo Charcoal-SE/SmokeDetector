@@ -433,7 +433,7 @@ class FindSpam:
         r"(platinum|paying|acai|buy|premium|ultra|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
         r"(training|institute|marketing)[\w-]{6,}[\w.-]*?\.(co|net|org|in\W|info)", r"[\w-](courses?|training)[\w-]*?\.in/",
         r"\w{9}(buy|roofing)\.(co|net|org|in\W|info)",
-        r"(dive|hike|love|strong|ideal|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
+        r"(vitamin|dive|hike|love|strong|ideal|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"([^s]cream|acai|advance|aging|alpha|beauty|belle|beta|biotic|boost|brain(?!tree)|burn|colon|creme|derma|ecig|face(?!book)|fat|formula|geniu[sx]|grow|hair|health|herbal|ideal|male|medical|medicare|muscle|natura|nutrition|optimal|pearl|perfect|phyto|probio|rejuven|revive|ripped|rx|scam|shred|skin|slim|super|testo|top|trim|ultra|ultra|vapor|vita|weight|wellness|xplode|young|youth)[\w]{0,20}(about|advi[sc]|assess|blog|brazil|canada|care|center|centre|chat|complex(?!ity)|congress|consult|critic|critique|cure|denmark|discussion|doctor|dose|essence|essential|fact|formula|france|funct?ion|genix|guide|help|idea|info|jacked|l[iy]ft|mag|market|max|mexico|norway|nutrition|order|plus|points|policy|power|pro|program|report|review|rewind|site|slim|solution|sweden|tip|trial|try|world)[.\w-]{0,12}\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(\w{11}(idea|income|sale)|\w{6}(advice|problog|review))s?\.(co|net|in\W|info)",
