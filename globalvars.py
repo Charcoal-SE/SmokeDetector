@@ -6,6 +6,7 @@ from ChatExchange.chatexchange.client import Client
 import HTMLParser
 import md5
 import ConfigParser
+from helpers import environ_or_none
 
 
 class GlobalVars:
@@ -252,6 +253,11 @@ class GlobalVars:
     config.read('config')
 
     latest_smokedetector_messages = {meta_tavern_room_id: [], charcoal_room_id: [], socvr_room_id: []}
+
+    # environ_or_none defined in helpers.py
+    bot_name = environ_or_none("SMOKEDETECTOR_NAME") or "SmokeDetector"
+    bot_repository = environ_or_none("SMOKEDETECTOR_REPO") or "//github.com/Charcoal-SE/SmokeDetector"
+    chatmessage_prefix = "[{}]({})".format(bot_name, bot_repository)
 
     site_id_dict = {}
     post_site_id_to_question = {}
