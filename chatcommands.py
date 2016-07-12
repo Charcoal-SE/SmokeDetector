@@ -13,7 +13,7 @@ import random
 import requests
 import os
 import time
-from helpers import check_permissions
+import datahandling
 
 
 # TODO: pull out code block to get user_id, chat_site, room_id into function
@@ -22,8 +22,24 @@ from helpers import check_permissions
 # TODO: Consistant return structure
 #   if return...else return vs if return...return
 
-# Functions go before the final dictionaries of command to function mappings
+def check_permissions(function):
+    def run_command(ev_room, ev_user_id, wrap2, *args, **kwargs):
+        if datahandling.is_privileged(ev_room, ev_user_id, wrap2):
+            # DOING THIS HAS AN ISSUE:
+            # The passed parameters - room_id and user_id are not passed to function().
+            # To get those, we need to either readd them to kwargs or change all
+            # function signatures to accept these as named parameters
+            kwargs['ev_room'] = ev_room
+            kwargs['ev_user_id'] = ev_user_id
+            kwargs['wrap2'] = wrap2
+            return function(*args, **kwargs)
+        else:
+            return False
 
+    return run_command
+
+
+# Functions go before the final dictionaries of command to function mappings
 def post_message_in_room(room_id_str, msg, length_check=True):
     if room_id_str == GlobalVars.charcoal_room_id:
         GlobalVars.charcoal_hq.send_message(msg, length_check)
