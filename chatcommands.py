@@ -415,9 +415,11 @@ def command_help(*args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: A string
     """
-    return Response(command_status=True, message="I'm " + GlobalVars.chatmessage_prefix + ", a bot " \
-           "that detects spam and offensive posts on the network and posts alerts to chat. " \
-           "[A command list is available here](" + GlobalVars.bot_repository + "/wiki/Commands).")
+    return Response(command_status=True, message="I'm " + GlobalVars.chatmessage_prefix +
+                                                 ", a bot that detects spam and offensive posts on the network and "
+                                                 "posts alerts to chat. "
+                                                 "[A command list is available here](" + GlobalVars.bot_repository +
+                                                 "/wiki/Commands).")
 
 
 def command_location(*args, **kwargs):
@@ -494,9 +496,10 @@ def command_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     if is_privileged(ev_room, ev_user_id, wrap2):
         return Response(command_status=True, message="Yes, you are a privileged user.")
-    return Response(command_status=True, message="No, you are not a privileged user. See " \
-           "[the Privileges wiki page](" + GlobalVars.bot_repository + "/wiki/Privileges) for information on " \
-           "what privileges are and what is expected.")
+    return Response(command_status=True,
+                    message="No, you are not a privileged user. See "
+                            "[the Privileges wiki page](" + GlobalVars.bot_repository + "/wiki/Privileges) "
+                            "for information on what privileges are and what is expected.")
 
 
 def command_quota(*args, **kwargs):
@@ -531,8 +534,9 @@ def command_status(*args, **kwargs):
     minutes, remainder = divmod(diff.seconds, 60)
     minute_str = "minutes" if minutes != 1 else "minute"
     return Response(command_status=True,
-                    message='Running since {time} UTC ({minute_count} {plurality})'.format(time=GlobalVars.startup_utc,
-                                                                            minute_count=minutes, plurality=minute_str))
+                    message='Running since {time} UTC ({minute_count} {plurality})'.format(
+                        time=GlobalVars.startup_utc,
+                        minute_count=minutes, plurality=minute_str))
 
 
 def command_test(content, content_lower, *args, **kwargs):
@@ -739,21 +743,23 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
     """
     crn, wait = can_report_now(ev_user_id, wrap2.host)
     if not crn:
-        return Response(command_status=False, message="You can execute the !!/report command again in {} seconds. " \
-               "To avoid one user sending lots of reports in a few commands and slowing SmokeDetector down " \
-               "due to rate-limiting, you have to wait 30 seconds after you've reported multiple posts using " \
-               "!!/report, even if your current command just has one URL. (Note that this timeout won't be " \
-               "applied if you only used !!/report for one post)".format(wait))
+        return Response(command_status=False, message="You can execute the !!/report command again in {} seconds. "
+                                                      "To avoid one user sending lots of reports in a few commands and "
+                                                      "slowing SmokeDetector down due to rate-limiting, you have to "
+                                                      "wait 30 seconds after you've reported multiple posts using "
+                                                      "!!/report, even if your current command just has one URL. (Note "
+                                                      "that this timeout won't be applied if you only used !!/report "
+                                                      "for one post)".format(wait))
     if len(message_parts) < 2:
         return Response(command_status=False, message="Not enough arguments.")
     output = []
     index = 0
     urls = list(set(message_parts[1:]))
     if len(urls) > 5:
-        return Response(command_status=False, message="To avoid SmokeDetector reporting posts too slowly, " \
-                      "you can report at most 5 posts at a time. " \
-                      "This is to avoid SmokeDetector's chat messages getting rate-limited too much, " \
-                      "which would slow down reports.")
+        return Response(command_status=False, message="To avoid SmokeDetector reporting posts too slowly, you can "
+                                                      "report at most 5 posts at a time. This is to avoid "
+                                                      "SmokeDetector's chat messages getting rate-limited too much, "
+                                                      "which would slow down reports.")
     for url in urls:
         index += 1
         post_data = api_get_post(url)
