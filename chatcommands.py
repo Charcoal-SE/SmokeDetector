@@ -244,7 +244,7 @@ def command_blame(ev_room, *args, **kwargs):
     """
     GlobalVars.users_chatting[ev_room] = list(set(GlobalVars.users_chatting[ev_room]))
     user_to_blame = single_random_user(ev_room)
-    return Response(command_status=True, message="It's [{}]({})'s fault.".format(user_to_blame[0], user_to_blame[1]))
+    return Response(command_status=True, message=u"It's [{}]({})'s fault.".format(user_to_blame[0], user_to_blame[1]))
 
 
 def command_brownie(*args, **kwargs):
@@ -262,7 +262,7 @@ def command_coffee(ev_user_name, *args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: A string
     """
-    return Response(command_status=True, message="*brews coffee for @" + ev_user_name.replace(" ", "") + "*")
+    return Response(command_status=True, message=u"*brews coffee for @" + ev_user_name.replace(" ", "") + "*")
 
 
 def command_lick(*args, **kwargs):
@@ -281,9 +281,10 @@ def command_tea(ev_user_name, *args, **kwargs):
     :return: A string
     """
     return Response(command_status=True,
-                    message="*brews a cup of {choice} tea for @{user}*".format(
-        choice=random.choice(['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint', 'jasmine']),
-        user=ev_user_name.replace(" ", "")))
+                    message=u"*brews a cup of {choice} tea for @{user}*".format(
+                        choice=random.choice(['earl grey', 'green', 'chamomile',
+                                              'lemon', 'darjeeling', 'mint', 'jasmine']),
+                        user=ev_user_name.replace(" ", "")))
 
 
 def command_wut(*args, **kwargs):
