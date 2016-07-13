@@ -8,7 +8,7 @@ from termcolor import colored
 from deletionwatcher import DeletionWatcher
 from ChatExchange.chatexchange.messages import Message
 import chatcommands
-
+from helpers import Response
 
 # Please note: If new !!/ commands are added or existing ones are modified, don't forget to
 # update the wiki at https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands.
@@ -130,17 +130,26 @@ def watcher(ev, wrap2):
                                          wrap2=wrap2,
                                          content=current_message,
                                          message_id=message_id)
-                r = result
-                if type(result) == tuple:
-                    result = result[1]
-                if result is not None and result is not False:
+                if result.command_status and result.message:
                     reply += result + os.linesep
-                elif result is None:
+                if result.message is None:
                     reply += "<processed without return value>" + os.linesep
                     amount_none += 1
-                elif result is False or r[0] is False:
+                if result.command_status is False:
                     reply += "<unrecognized command>" + os.linesep
                     amount_unrecognized += 1
+                #
+                # r = result
+                # if type(result) == tuple:
+                #     result = result[1]
+                # if result is not None and result is not False:
+                #     reply += result + os.linesep
+                # elif result is None:
+                #     reply += "<processed without return value>" + os.linesep
+                #     amount_none += 1
+                # elif result is False or r[0] is False:
+                #     reply += "<unrecognized command>" + os.linesep
+                #     amount_unrecognized += 1
             else:
                 reply += "<skipped>" + os.linesep
                 amount_skipped += 1
@@ -164,16 +173,25 @@ def watcher(ev, wrap2):
                                  wrap2=wrap2,
                                  content=content_source,
                                  message_id=message_id)
-        if type(result) != tuple:
-            result = (True, result)
-        if result[1] is not None:
+        if result.message:
             if wrap2.host + str(message_id) in GlobalVars.listen_to_these_if_edited:
                 GlobalVars.listen_to_these_if_edited.remove(wrap2.host + str(message_id))
-            message_with_reply = u":{} {}".format(message_id, result[1])
-            if len(message_with_reply) <= 500 or "\n" in result[1]:
-                ev.message.reply(result[1], False)
-        if result[0] is False:
+            message_with_reply = u":{} {}".format(message_id, result.message)
+            if len(message_with_reply) <= 500 or "\n" in result.message:
+                ev.message.reply(result.message, False)
+        if result.command_status is False:
             add_to_listen_if_edited(wrap2.host, message_id)
+
+        # if type(result) != tuple:
+        #     result = (True, result)
+        # if result[1] is not None:
+        #     if wrap2.host + str(message_id) in GlobalVars.listen_to_these_if_edited:
+        #         GlobalVars.listen_to_these_if_edited.remove(wrap2.host + str(message_id))
+        #     message_with_reply = u":{} {}".format(message_id, result[1])
+        #     if len(message_with_reply) <= 500 or "\n" in result[1]:
+        #         ev.message.reply(result[1], False)
+        # if result[0] is False:
+        #     add_to_listen_if_edited(wrap2.host, message_id)
 
 
 def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content, message_id):
@@ -189,7 +207,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         msg_content = msg.content_source
         quiet_action = ("-" in second_part_lower)
         if str(msg.owner.id) != GlobalVars.smokeDetector_user_id[ev_room] or msg_content is None:
-            return
+            return Response(command_status=False, message=None)
         post_url = fetch_post_url_from_msg_content(msg_content)
         post_site_id = fetch_post_id_and_site_from_msg_content(msg_content)
         if post_site_id is not None:
@@ -228,6 +246,6 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
         'wrap2': wrap2,
     }
     if command not in cmds:
-        return False, None  # Unrecognized command, can be edited later.
+        return Response(command_status=False, message=None)  # Unrecognized command, can be edited later.
 
     return cmds[command](**command_parameters)
