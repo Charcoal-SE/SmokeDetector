@@ -80,6 +80,7 @@ def single_random_user(ev_room):
     """
     return random.choice(GlobalVars.users_chatting[ev_room])
 
+
 #
 #
 # System command functions below here
@@ -151,7 +152,8 @@ def command_remove_blacklist_user(message_parts, content_lower, ev_room, ev_user
     if uid > -1 and val != "":
         if remove_blacklisted_user((uid, val)):
             return Response(command_status=True, message=None) if quiet_action \
-                else Response(command_status=True, message="User removed from blacklist (`{}` on `{}`).".format(uid, val))
+                else Response(command_status=True,
+                              message="User removed from blacklist (`{}` on `{}`).".format(uid, val))
         else:
             return Response(command_status=True, message="User is not blacklisted.")
     elif uid == -2:
@@ -224,7 +226,8 @@ def command_remove_whitelist_user(message_parts, content_lower, ev_room, ev_user
     if uid != -1 and val != "":
         if remove_whitelisted_user((uid, val)):
             return Response(command_status=True, message=None) if quiet_action \
-                else Response(command_status=True, message="User removed from whitelist (`{}` on `{}`).".format(uid, val))
+                else Response(command_status=True,
+                              message="User removed from whitelist (`{}` on `{}`).".format(uid, val))
         else:
             return Response(command_status=True, message="User is not whitelisted.")
     elif uid == -2:
@@ -499,7 +502,7 @@ def command_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
     return Response(command_status=True,
                     message="No, you are not a privileged user. See "
                             "[the Privileges wiki page](" + GlobalVars.bot_repository + "/wiki/Privileges) "
-                            "for information on what privileges are and what is expected.")
+                                                                                        "for information on what privileges are and what is expected.")
 
 
 def command_quota(*args, **kwargs):
@@ -660,8 +663,8 @@ def command_notify(message_parts, ev_user_id, wrap2, *args, **kwargs):
             else Response(command_status=True,
                           message="You'll now get pings from me if I report a post on `{site_name}`, in room "
                                   "`{room_id}` on `chat.{chat_domain}`".format(site_name=se_site,
-                                                                              room_id=room_id,
-                                                                              chat_domain=chat_site))
+                                                                               room_id=room_id,
+                                                                               chat_domain=chat_site))
     elif response == -1:
         return Response(command_status=True, message="That notification configuration is already registered.")
     elif response == -2:
@@ -1106,7 +1109,6 @@ command_dict = {
     "!!/whoami": command_whoami,
     "!!/wut": command_wut,
 }
-
 
 # This dictionary defines our subcommands and the associated function to call
 # To use this your calling code will look like this
