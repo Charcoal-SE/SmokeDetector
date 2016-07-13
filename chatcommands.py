@@ -659,7 +659,7 @@ def command_notify(message_parts, ev_user_id, wrap2, *args, **kwargs):
         return Response(command_status=True, message=None) if quiet_action \
             else Response(command_status=True,
                           message="You'll now get pings from me if I report a post on `{site_name}`, in room "
-                                  "{room_id}` on `chat.{chat_domain}`".format(site_name=se_site,
+                                  "`{room_id}` on `chat.{chat_domain}`".format(site_name=se_site,
                                                                               room_id=room_id,
                                                                               chat_domain=chat_site))
     elif response == -1:
@@ -903,6 +903,7 @@ def subcommand_falsepositive(ev_room, ev_user_id, wrap2, post_site_id, post_url,
         msg.delete()
     except:
         pass
+    return Response(command_status=True, message=None)
 
 
 @check_permissions
@@ -1017,7 +1018,7 @@ def subcommand_truepositive(ev_room, ev_user_id, wrap2, post_site_id, post_url, 
         if quiet_action:
             return Response(command_status=True, message=None)
         if user_added:
-            return "Blacklisted user."
+            return Response(command_status=True, message="Blacklisted user.")
         return Response(command_status=True, message="Recorded answer as true positive in metasmoke. If you want to "
                                                      "blacklist the poster of the answer, use `trueu` or `tpu`.")
 
