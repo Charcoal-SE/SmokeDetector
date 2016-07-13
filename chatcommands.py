@@ -14,6 +14,7 @@ import requests
 import os
 import time
 import datahandling
+from helpers import Response
 
 
 # TODO: pull out code block to get user_id, chat_site, room_id into function
@@ -79,6 +80,7 @@ def single_random_user(ev_room):
     """
     return random.choice(GlobalVars.users_chatting[ev_room])
 
+
 #
 #
 # System command functions below here
@@ -104,11 +106,13 @@ def command_add_blacklist_user(message_parts, content_lower, message_url, ev_roo
     uid, val = get_user_from_list_command(content_lower)
     if uid > -1 and val != "":
         add_blacklisted_user((uid, val), message_url, "")
-        return None if quiet_action else "User blacklisted (`{}` on `{}`).".format(uid, val)
+        return Response(command_status=True, message=None) if quiet_action \
+            else Response(command_status=True, message="User blacklisted (`{}` on `{}`).".format(uid, val))
     elif uid == -2:
-        return "Error: {}".format(val)
+        return Response(command_status=True, message="Error: {}".format(val))
     else:
-        return "Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`."
+        return Response(command_status=False,
+                        message="Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`.")
 
 
 def command_check_blacklist(content_lower, *args, **kwargs):
@@ -121,13 +125,14 @@ def command_check_blacklist(content_lower, *args, **kwargs):
     uid, val = get_user_from_list_command(content_lower)
     if uid > -1 and val != "":
         if is_blacklisted_user((uid, val)):
-            return "User is blacklisted (`{}` on `{}`).".format(uid, val)
+            return Response(command_status=True, message="User is blacklisted (`{}` on `{}`).".format(uid, val))
         else:
-            return "User is not blacklisted (`{}` on `{}`).".format(uid, val)
+            return Response(command_status=True, message="User is not blacklisted (`{}` on `{}`).".format(uid, val))
     elif uid == -2:
-        return "Error: {}".format(val)
+        return Response(command_status=True, message="Error: {}".format(val))
     else:
-        return False, "Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`."
+        return Response(command_status=False,
+                        message="Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`.")
 
 
 @check_permissions
@@ -146,13 +151,16 @@ def command_remove_blacklist_user(message_parts, content_lower, ev_room, ev_user
     uid, val = get_user_from_list_command(content_lower)
     if uid > -1 and val != "":
         if remove_blacklisted_user((uid, val)):
-            return None if quiet_action else "User removed from blacklist (`{}` on `{}`).".format(uid, val)
+            return Response(command_status=True, message=None) if quiet_action \
+                else Response(command_status=True,
+                              message="User removed from blacklist (`{}` on `{}`).".format(uid, val))
         else:
-            return "User is not blacklisted."
+            return Response(command_status=True, message="User is not blacklisted.")
     elif uid == -2:
-        return "Error: {}".format(val)
+        return Response(command_status=True, message="Error: {}".format(val))
     else:
-        return False, "Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`."
+        return Response(command_status=False,
+                        message="Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`.")
 
 
 # --- Whitelist functions --- #
@@ -172,11 +180,13 @@ def command_add_whitelist_user(message_parts, content_lower, ev_room, ev_user_id
     uid, val = get_user_from_list_command(content_lower)
     if uid > -1 and val != "":
         add_whitelisted_user((uid, val))
-        return None if quiet_action else "User whitelisted (`{}` on `{}`).".format(uid, val)
+        return Response(command_status=True, message=None) if quiet_action \
+            else Response(command_status=True, message="User whitelisted (`{}` on `{}`).".format(uid, val))
     elif uid == -2:
-        return "Error: {}".format(val)
+        return Response(command_status=True, message="Error: {}".format(val))
     else:
-        return False, "Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`."
+        return Response(command_status=False,
+                        message="Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`.")
 
 
 def command_check_whitelist(content_lower, *args, **kwargs):
@@ -189,13 +199,14 @@ def command_check_whitelist(content_lower, *args, **kwargs):
     uid, val = get_user_from_list_command(content_lower)
     if uid > -1 and val != "":
         if is_whitelisted_user((uid, val)):
-            return "User is whitelisted (`{}` on `{}`).".format(uid, val)
+            return Response(command_status=True, message="User is whitelisted (`{}` on `{}`).".format(uid, val))
         else:
-            return "User is not whitelisted (`{}` on `{}`).".format(uid, val)
+            return Response(command_status=True, message="User is not whitelisted (`{}` on `{}`).".format(uid, val))
     elif uid == -2:
-        return "Error: {}".format(val)
+        return Response(command_status=True, message="Error: {}".format(val))
     else:
-        return False, "Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`."
+        return Response(command_status=False,
+                        message="Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`.")
 
 
 @check_permissions
@@ -214,13 +225,16 @@ def command_remove_whitelist_user(message_parts, content_lower, ev_room, ev_user
     uid, val = get_user_from_list_command(content_lower)
     if uid != -1 and val != "":
         if remove_whitelisted_user((uid, val)):
-            return None if quiet_action else "User removed from whitelist (`{}` on `{}`).".format(uid, val)
+            return Response(command_status=True, message=None) if quiet_action \
+                else Response(command_status=True,
+                              message="User removed from whitelist (`{}` on `{}`).".format(uid, val))
         else:
-            return "User is not whitelisted."
+            return Response(command_status=True, message="User is not whitelisted.")
     elif uid == -2:
-        return "Error: {}".format(val)
+        return Response(command_status=True, message="Error: {}".format(val))
     else:
-        return False, "Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`."
+        return Response(command_status=False,
+                        message="Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`.")
 
 
 # --- Joke Commands --- #
@@ -233,7 +247,7 @@ def command_blame(ev_room, *args, **kwargs):
     """
     GlobalVars.users_chatting[ev_room] = list(set(GlobalVars.users_chatting[ev_room]))
     user_to_blame = single_random_user(ev_room)
-    return u"It's [{}]({})'s fault.".format(user_to_blame[0], user_to_blame[1])
+    return Response(command_status=True, message=u"It's [{}]({})'s fault.".format(user_to_blame[0], user_to_blame[1]))
 
 
 def command_brownie(*args, **kwargs):
@@ -241,7 +255,7 @@ def command_brownie(*args, **kwargs):
     Returns a string equal to "Brown!" (This is a joke command)
     :return: A string
     """
-    return "Brown!"
+    return Response(command_status=True, message="Brown!")
 
 
 def command_coffee(ev_user_name, *args, **kwargs):
@@ -251,7 +265,7 @@ def command_coffee(ev_user_name, *args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: A string
     """
-    return "*brews coffee for @" + ev_user_name.replace(" ", "") + "*"
+    return Response(command_status=True, message=u"*brews coffee for @" + ev_user_name.replace(" ", "") + "*")
 
 
 def command_lick(*args, **kwargs):
@@ -259,7 +273,7 @@ def command_lick(*args, **kwargs):
     Returns a string when a user says 'lick' (This is a joke command)
     :return: A string
     """
-    return "*licks ice cream cone*"
+    return Response(command_status=True, message="*licks ice cream cone*")
 
 
 def command_tea(ev_user_name, *args, **kwargs):
@@ -269,9 +283,11 @@ def command_tea(ev_user_name, *args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: A string
     """
-    return "*brews a cup of {choice} tea for @{user}*".format(
-        choice=random.choice(['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint', 'jasmine']),
-        user=ev_user_name.replace(" ", ""))
+    return Response(command_status=True,
+                    message=u"*brews a cup of {choice} tea for @{user}*".format(
+                        choice=random.choice(['earl grey', 'green', 'chamomile',
+                                              'lemon', 'darjeeling', 'mint', 'jasmine']),
+                        user=ev_user_name.replace(" ", "")))
 
 
 def command_wut(*args, **kwargs):
@@ -279,7 +295,7 @@ def command_wut(*args, **kwargs):
     Returns a string when a user asks 'wut' (This is a joke command)
     :return: A string
     """
-    return "Whaddya mean, 'wut'? Humans..."
+    return Response(command_status=True, message="Whaddya mean, 'wut'? Humans...")
 
 
 # --- Block application from posting functions --- #
@@ -297,7 +313,7 @@ def command_block(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
     room_id = message_parts[2] if len(message_parts) > 2 else "all"
     time_to_block = message_parts[1] if len(message_parts) > 1 else "0"
     if not time_to_block.isdigit():
-        return False, "Invalid duration."
+        return Response(command_status=False, message="Invalid duration.")
 
     time_to_block = int(time_to_block)
     time_to_block = time_to_block if 0 < time_to_block < 14400 else 900
@@ -306,7 +322,7 @@ def command_block(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
     report = "Reports blocked for {} seconds {}.".format(time_to_block, which_room)
     if room_id != GlobalVars.charcoal_room_id:
         GlobalVars.charcoal_hq.send_message(report)
-    return report
+    return Response(command_status=True, message=report)
 
 
 @check_permissions
@@ -326,7 +342,7 @@ def command_unblock(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
     report = "Reports unblocked {}.".format(GlobalVars.blockedTime - time.time(), which_room)
     if room_id != GlobalVars.charcoal_room_id:
         GlobalVars.charcoal_hq.send_message(report)
-    return report
+    return Response(command_status=True, message=report)
 
 
 # --- Administration Commands --- #
@@ -338,10 +354,13 @@ def command_alive(ev_room, *args, **kwargs):
     :return: A string
     """
     if ev_room == GlobalVars.charcoal_room_id:
-        return 'Of course'
+        return Response(command_status=True, message='Of course')
     elif ev_room == GlobalVars.meta_tavern_room_id or ev_room == GlobalVars.socvr_room_id:
-        return random.choice(['Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee',
-                              'Watching this endless list of new questions *never* gets boring', 'Kinda sorta'])
+        return Response(command_status=True,
+                        message=random.choice(['Yup', 'You doubt me?', 'Of course',
+                                               '... did I miss something?', 'plz send teh coffee',
+                                               'Watching this endless list of new questions *never* gets boring',
+                                               'Kinda sorta']))
 
 
 @check_permissions
@@ -358,14 +377,14 @@ def command_allspam(message_parts, ev_room, ev_user_id, wrap2, ev_user_name, ev_
     :return:
     """
     if len(message_parts) != 2:
-        return False, "1 argument expected"
+        return Response(command_status=False, message="1 argument expected")
     url = message_parts[1]
     user = get_user_from_url(url)
     if user is None:
-        return "That doesn't look like a valid user URL."
+        return Response(command_status=True, message="That doesn't look like a valid user URL.")
     why = u"User manually reported by *{}* in room *{}*.\n".format(ev_user_name, ev_room_name.decode('utf-8'))
     handle_user_with_all_spam(user, why)
-    return None
+    return Response(command_status=True, message=None)
 
 
 @check_permissions
@@ -381,16 +400,16 @@ def command_errorlogs(ev_room, ev_user_id, wrap2, message_parts, *args, **kwargs
     """
     count = -1
     if len(message_parts) != 2:
-        return "The !!/errorlogs command requires 1 argument."
+        return Response(command_status=False, message="The !!/errorlogs command requires 1 argument.")
     try:
         count = int(message_parts[1])
     except ValueError:
         pass
     if count == -1:
-        return "Invalid argument."
+        return Response(command_status=False, message="Invalid argument.")
     logs_part = fetch_lines_from_error_log(count)
     post_message_in_room(room_id_str=ev_room, msg=logs_part, length_check=False)
-    # TODO: NEEDS A RETURN
+    return Response(command_status=True, message=None)
 
 
 def command_help(*args, **kwargs):
@@ -399,9 +418,11 @@ def command_help(*args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: A string
     """
-    return "I'm " + GlobalVars.chatmessage_prefix + ", a bot " \
-           "that detects spam and offensive posts on the network and posts alerts to chat. " \
-           "[A command list is available here](" + GlobalVars.bot_repository + "/wiki/Commands)."
+    return Response(command_status=True, message="I'm " + GlobalVars.chatmessage_prefix +
+                                                 ", a bot that detects spam and offensive posts on the network and "
+                                                 "posts alerts to chat. "
+                                                 "[A command list is available here](" + GlobalVars.bot_repository +
+                                                 "/wiki/Commands).")
 
 
 def command_location(*args, **kwargs):
@@ -409,7 +430,7 @@ def command_location(*args, **kwargs):
     Returns the current location the application is running from
     :return: A string with current location
     """
-    return GlobalVars.location
+    return Response(command_status=True, message=GlobalVars.location)
 
 
 @check_permissions
@@ -447,9 +468,10 @@ def command_pull(ev_room, ev_user_id, wrap2, *args, **kwargs):
     if "success" in states:
         os._exit(3)
     elif "error" in states or "failure" in states:
-        return "CI build failed! :( Please check your commit."
+        return Response(command_status=True, message="CI build failed! :( Please check your commit.")
     elif "pending" in states or not states:
-        return "CI build is still pending, wait until the build has finished and then pull again."
+        return Response(command_status=True,
+                        message="CI build is still pending, wait until the build has finished and then pull again.")
 
 
 @check_permissions
@@ -476,10 +498,11 @@ def command_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
     :return: A string
     """
     if is_privileged(ev_room, ev_user_id, wrap2):
-        return "Yes, you are a privileged user."
-    return "No, you are not a privileged user. See " \
-           "[the Privileges wiki page](" + GlobalVars.bot_repository + "/wiki/Privileges) for information on " \
-           "what privileges are and what is expected."
+        return Response(command_status=True, message="Yes, you are a privileged user.")
+    return Response(command_status=True,
+                    message="No, you are not a privileged user. See "
+                            "[the Privileges wiki page](" + GlobalVars.bot_repository + "/wiki/Privileges) "
+                                                                                        "for information on what privileges are and what is expected.")
 
 
 def command_quota(*args, **kwargs):
@@ -487,7 +510,7 @@ def command_quota(*args, **kwargs):
     Report how many API hits remain for the day
     :return: A string
     """
-    return "The current API quota remaining is {}.".format(GlobalVars.apiquota)
+    return Response(command_status=True, message="The current API quota remaining is {}.".format(GlobalVars.apiquota))
 
 
 @check_permissions
@@ -513,8 +536,10 @@ def command_status(*args, **kwargs):
     diff = now - UtcDate.startup_utc_date
     minutes, remainder = divmod(diff.seconds, 60)
     minute_str = "minutes" if minutes != 1 else "minute"
-    return 'Running since {time} UTC ({minute_count} {plurality})'.format(time=GlobalVars.startup_utc,
-                                                                          minute_count=minutes, plurality=minute_str)
+    return Response(command_status=True,
+                    message='Running since {time} UTC ({minute_count} {plurality})'.format(
+                        time=GlobalVars.startup_utc,
+                        minute_count=minutes, plurality=minute_str))
 
 
 def command_test(content, content_lower, *args, **kwargs):
@@ -528,17 +553,17 @@ def command_test(content, content_lower, *args, **kwargs):
     string_to_test = content[8:]
     test_as_answer = False
     if len(string_to_test) == 0:
-        return "Nothing to test"
+        return Response(command_status=True, message="Nothing to test")
     result = "> "
     reasons, why = FindSpam.test_post(string_to_test, string_to_test, string_to_test, "", test_as_answer, False, 1, 0)
     if len(reasons) == 0:
         result += "Would not be caught for title, body, and username."
-        return result
+        return Response(command_status=True, message=result)
     result += ", ".join(reasons).capitalize()
     if why is not None and len(why) > 0:
         result += "\n----------\n"
         result += why
-    return result
+    return Response(command_status=True, message=result)
 
 
 def command_test_answer(content, content_lower, *args, **kwargs):
@@ -552,17 +577,17 @@ def command_test_answer(content, content_lower, *args, **kwargs):
     string_to_test = content[10:]
     test_as_answer = True
     if len(string_to_test) == 0:
-        return "Nothing to test"
+        return Response(command_status=True, message="Nothing to test")
     result = "> "
     reasons, why = FindSpam.test_post(string_to_test, string_to_test, string_to_test, "", test_as_answer, False, 1, 0)
     if len(reasons) == 0:
         result += "Would not be caught for title, answer, and username."
-        return result
+        return Response(command_status=True, message=result)
     result += ", ".join(reasons).capitalize()
     if why is not None and len(why) > 0:
         result += "\n----------\n"
         result += why
-    return result
+    return Response(command_status=True, message=result)
 
 
 def command_version(*args, **kwargs):
@@ -570,8 +595,8 @@ def command_version(*args, **kwargs):
     Returns the current version of the application
     :return: A string
     """
-    return '[{commit_name}]({repository}/commit/{commit_code})'.format(
-        commit_name=GlobalVars.commit_with_author, commit_code=GlobalVars.commit, repository=GlobalVars.bot_repository)
+    return Response(command_status=True, message='[{commit_name}]({repository}/commit/{commit_code})'.format(
+        commit_name=GlobalVars.commit_with_author, commit_code=GlobalVars.commit, repository=GlobalVars.bot_repository))
 
 
 def command_whoami(ev_room, *args, **kwargs):
@@ -582,8 +607,10 @@ def command_whoami(ev_room, *args, **kwargs):
     :return:
     """
     if ev_room in GlobalVars.smokeDetector_user_id:
-        return "My id for this room is {}.".format(GlobalVars.smokeDetector_user_id[ev_room])
-    return "I don't know my user ID for this room. (Something is wrong, and it's apnorton's fault.)"
+        return Response(command_status=True,
+                        message="My id for this room is {}.".format(GlobalVars.smokeDetector_user_id[ev_room]))
+    return Response(command_status=True,
+                    message="I don't know my user ID for this room. (Something is wrong, and it's apnorton's fault.)")
 
 
 # --- Notification functions --- #
@@ -597,17 +624,17 @@ def command_allnotifications(message_parts, ev_user_id, wrap2, *args, **kwargs):
     :return: A string
     """
     if len(message_parts) != 2:
-        return False, "1 argument expected"
+        return Response(command_status=False, message="1 argument expected")
     user_id = int(ev_user_id)
     chat_site = wrap2.host
     room_id = message_parts[1]
     if not room_id.isdigit():
-        return False, "Room ID is invalid."
+        return Response(command_status=False, message="Room ID is invalid.")
     sites = get_all_notification_sites(user_id, chat_site, room_id)
     if len(sites) == 0:
-        return "You won't get notified for any sites in that room."
+        return Response(command_status=True, message="You won't get notified for any sites in that room.")
 
-    return "You will get notified for these sites:\r\n" + ", ".join(sites)
+    return Response(command_status=True, message="You will get notified for these sites:\r\n" + ", ".join(sites))
 
 
 def command_notify(message_parts, ev_user_id, wrap2, *args, **kwargs):
@@ -620,24 +647,28 @@ def command_notify(message_parts, ev_user_id, wrap2, *args, **kwargs):
     :return: A string
     """
     if len(message_parts) != 3:
-        return False, "2 arguments expected"
+        return Response(command_status=False, message="2 arguments expected")
     user_id = int(ev_user_id)
     chat_site = wrap2.host
     room_id = message_parts[1]
     if not room_id.isdigit():
-        return False, "Room ID is invalid."
+        return Response(command_status=False, message="Room ID is invalid.")
 
     room_id = int(room_id)
     quiet_action = any([part.endswith('-') for part in message_parts])
     se_site = message_parts[2].replace('-', '')
     response, full_site = add_to_notification_list(user_id, chat_site, room_id, se_site)
     if response == 0:
-        return None if quiet_action else "You'll now get pings from me if I report a post on `{site_name}`, in room" \
-            " `{room_id}` on `chat.{chat_domain}`".format(site_name=se_site, room_id=room_id, chat_domain=chat_site)
+        return Response(command_status=True, message=None) if quiet_action \
+            else Response(command_status=True,
+                          message="You'll now get pings from me if I report a post on `{site_name}`, in room "
+                                  "`{room_id}` on `chat.{chat_domain}`".format(site_name=se_site,
+                                                                               room_id=room_id,
+                                                                               chat_domain=chat_site))
     elif response == -1:
-        return "That notification configuration is already registered."
+        return Response(command_status=True, message="That notification configuration is already registered.")
     elif response == -2:
-        return False, "The given SE site does not exist."
+        return Response(command_status=False, message="The given SE site does not exist.")
 
 
 def command_unnotify(message_parts, ev_user_id, wrap2, *args, **kwargs):
@@ -650,21 +681,25 @@ def command_unnotify(message_parts, ev_user_id, wrap2, *args, **kwargs):
     :return: A string
     """
     if len(message_parts) != 3:
-        return False, "2 arguments expected"
+        return Response(command_status=False, message="2 arguments expected")
     user_id = int(ev_user_id)
     chat_site = wrap2.host
     room_id = message_parts[1]
     if not room_id.isdigit():
-        return False, "Room ID is invalid."
+        return Response(command_status=False, message="Room ID is invalid.")
 
     room_id = int(room_id)
     quiet_action = any([part.endswith('-') for part in message_parts])
     se_site = message_parts[2].replace('-', '')
     response = remove_from_notification_list(user_id, chat_site, room_id, se_site)
     if response:
-        return None if quiet_action else "I will no longer ping you if I report a post on `{site_name}`, in room" \
-            " `{room_id}` on `chat.{chat_domain}`".format(site_name=se_site, room_id=room_id, chat_domain=chat_site)
-    return "That configuration doesn't exist."
+        return Response(command_status=True, message=None) if quiet_action \
+            else Response(command_status=True,
+                          message="I will no longer ping you if I report a post on `{site_name}`, in room `{room_id}` "
+                                  "on `chat.{chat_domain}`".format(site_name=se_site,
+                                                                   room_id=room_id,
+                                                                   chat_domain=chat_site))
+    return Response(command_status=True, message="That configuration doesn't exist.")
 
 
 def command_willbenotified(message_parts, ev_user_id, wrap2, *args, **kwargs):
@@ -677,20 +712,20 @@ def command_willbenotified(message_parts, ev_user_id, wrap2, *args, **kwargs):
     :return: A string
     """
     if len(message_parts) != 3:
-        return False, "2 arguments expected"
+        return Response(command_status=False, message="2 arguments expected")
     user_id = int(ev_user_id)
     chat_site = wrap2.host
     room_id = message_parts[1]
     if not room_id.isdigit():
-        return False, "Room ID is invalid"
+        return Response(command_status=False, message="Room ID is invalid")
 
     room_id = int(room_id)
     se_site = message_parts[2]
     will_be_notified = will_i_be_notified(user_id, chat_site, room_id, se_site)
     if will_be_notified:
-        return "Yes, you will be notified for that site in that room."
+        return Response(command_status=True, message="Yes, you will be notified for that site in that room.")
 
-    return "No, you won't be notified for that site in that room."
+    return Response(command_status=True, message="No, you won't be notified for that site in that room.")
 
 
 # --- Post Responses --- #
@@ -711,21 +746,23 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
     """
     crn, wait = can_report_now(ev_user_id, wrap2.host)
     if not crn:
-        return "You can execute the !!/report command again in {} seconds. " \
-               "To avoid one user sending lots of reports in a few commands and slowing SmokeDetector down " \
-               "due to rate-limiting, you have to wait 30 seconds after you've reported multiple posts using " \
-               "!!/report, even if your current command just has one URL. (Note that this timeout won't be " \
-               "applied if you only used !!/report for one post)".format(wait)
+        return Response(command_status=False, message="You can execute the !!/report command again in {} seconds. "
+                                                      "To avoid one user sending lots of reports in a few commands and "
+                                                      "slowing SmokeDetector down due to rate-limiting, you have to "
+                                                      "wait 30 seconds after you've reported multiple posts using "
+                                                      "!!/report, even if your current command just has one URL. (Note "
+                                                      "that this timeout won't be applied if you only used !!/report "
+                                                      "for one post)".format(wait))
     if len(message_parts) < 2:
-        return False, "Not enough arguments."
+        return Response(command_status=False, message="Not enough arguments.")
     output = []
     index = 0
     urls = list(set(message_parts[1:]))
     if len(urls) > 5:
-        return False, "To avoid SmokeDetector reporting posts too slowly, " \
-                      "you can report at most 5 posts at a time. " \
-                      "This is to avoid SmokeDetector's chat messages getting rate-limited too much, " \
-                      "which would slow down reports."
+        return Response(command_status=False, message="To avoid SmokeDetector reporting posts too slowly, you can "
+                                                      "report at most 5 posts at a time. This is to avoid "
+                                                      "SmokeDetector's chat messages getting rate-limited too much, "
+                                                      "which would slow down reports.")
     for url in urls:
         index += 1
         post_data = api_get_post(url)
@@ -762,8 +799,8 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
     if 1 < len(urls) > len(output):
         add_or_update_multiple_reporter(ev_user_id, wrap2.host, time.time())
     if len(output) > 0:
-        return os.linesep.join(output)
-    return None
+        return Response(command_status=True, message=os.linesep.join(output))
+    return Response(command_status=True, message=None)
 
 
 #
@@ -800,9 +837,9 @@ def subcommand_editlink(ev_room, ev_user_id, wrap2, msg_content, msg, *args, **k
     """
     edited = edited_message_after_postgone_command(msg_content)
     if edited is None:
-        return "That's not a report."
+        return Response(command_status=True, message="That's not a report.")
     msg.edit(edited)
-    return None
+    return Response(command_status=True, message=None)
 
 
 @check_permissions
@@ -826,7 +863,7 @@ def subcommand_falsepositive(ev_room, ev_user_id, wrap2, post_site_id, post_url,
     :return: None or a string
     """
     if not is_report(post_site_id):
-        return "That message is not a report."
+        return Response(command_status=True, message="That message is not a report.")
 
     send_metasmoke_feedback(post_url=post_url,
                             second_part_lower=second_part_lower,
@@ -851,22 +888,25 @@ def subcommand_falsepositive(ev_room, ev_user_id, wrap2, post_site_id, post_url,
             user_removed = True
     if post_type == "question":
         if user_added and not quiet_action:
-            return "Registered question as false positive and whitelisted user."
+            return Response(command_status=True, message="Registered question as false positive and whitelisted user.")
         elif user_removed and not quiet_action:
-            return "Registered question as false positive and removed user from the blacklist."
+            return Response(command_status=True,
+                            message="Registered question as false positive and removed user from the blacklist.")
         elif not quiet_action:
-            return "Registered question as false positive."
+            return Response(command_status=True, message="Registered question as false positive.")
     elif post_type == "answer":
         if user_added and not quiet_action:
-            return "Registered answer as false positive and whitelisted user."
+            return Response(command_status=True, message="Registered answer as false positive and whitelisted user.")
         elif user_removed and not quiet_action:
-            return "Registered answer as false positive and removed user from the blacklist."
+            return Response(command_status=True,
+                            message="Registered answer as false positive and removed user from the blacklist.")
         elif not quiet_action:
-            return "Registered answer as false positive."
+            return Response(command_status=True, message="Registered answer as false positive.")
     try:
         msg.delete()
     except:
         pass
+    return Response(command_status=True, message=None)
 
 
 @check_permissions
@@ -884,7 +924,7 @@ def subcommand_ignore(ev_room, ev_user_id, wrap2, post_site_id, post_url, quiet_
     :return: String or None
     """
     if not is_report(post_site_id):
-        return "That message is not a report."
+        return Response(command_status=True, message="That message is not a report.")
 
     send_metasmoke_feedback(post_url=post_url,
                             second_part_lower=second_part_lower,
@@ -893,9 +933,9 @@ def subcommand_ignore(ev_room, ev_user_id, wrap2, post_site_id, post_url, quiet_
 
     add_ignored_post(post_site_id[0:2])
     if not quiet_action:
-        return "Post ignored; alerts about it will no longer be posted."
+        return Response(command_status=True, message="Post ignored; alerts about it will no longer be posted.")
     else:
-        return None
+        return Response(command_status=True, message=None)
 
 
 @check_permissions
@@ -917,9 +957,9 @@ def subcommand_naa(ev_room, ev_user_id, wrap2, post_site_id, post_url, quiet_act
     :return:
     """
     if not is_report(post_site_id):
-        return "That message is not a report."
+        return Response(command_status=True, message="That message is not a report.")
     if post_type != "answer":
-        return "That report was a question; questions cannot be marked as NAAs."
+        return Response(command_status=True, message="That report was a question; questions cannot be marked as NAAs.")
 
     send_metasmoke_feedback(post_url=post_url,
                             second_part_lower=second_part_lower,
@@ -928,8 +968,8 @@ def subcommand_naa(ev_room, ev_user_id, wrap2, post_site_id, post_url, quiet_act
 
     add_ignored_post(post_site_id[0:2])
     if quiet_action:
-        return None
-    return "Recorded answer as an NAA in metasmoke."
+        return Response(command_status=True, message=None)
+    return Response(command_status=True, message="Recorded answer as an NAA in metasmoke.")
 
 
 @check_permissions
@@ -954,7 +994,7 @@ def subcommand_truepositive(ev_room, ev_user_id, wrap2, post_site_id, post_url, 
     :return: None or a string
     """
     if not is_report(post_site_id):
-        return "That message is not a report."
+        return Response(command_status=True, message="That message is not a report.")
 
     send_metasmoke_feedback(post_url=post_url,
                             second_part_lower=second_part_lower,
@@ -971,18 +1011,19 @@ def subcommand_truepositive(ev_room, ev_user_id, wrap2, post_site_id, post_url, 
                 user_added = True
     if post_type == "question":
         if quiet_action:
-            return None
+            return Response(command_status=True, message=None)
         if user_added:
-            return "Blacklisted user and registered question as true positive."
-        return "Recorded question as true positive in metasmoke. Use `tpu` or `trueu` if you want to " \
-               "blacklist a user."
+            return Response(command_status=True, message="Blacklisted user and registered question as true positive.")
+        return Response(command_status=True,
+                        message="Recorded question as true positive in metasmoke. Use `tpu` or `trueu` if you want "
+                                "to blacklist a user.")
     elif post_type == "answer":
         if quiet_action:
-            return None
+            return Response(command_status=True, message=None)
         if user_added:
-            return "Blacklisted user."
-        return "Recorded answer as true positive in metasmoke. If you want to blacklist the poster of the " \
-               "answer, use `trueu` or `tpu`."
+            return Response(command_status=True, message="Blacklisted user.")
+        return Response(command_status=True, message="Recorded answer as true positive in metasmoke. If you want to "
+                                                     "blacklist the poster of the answer, use `trueu` or `tpu`.")
 
 
 def subcommand_why(msg_content, *args, **kwargs):
@@ -996,16 +1037,16 @@ def subcommand_why(msg_content, *args, **kwargs):
     if post_info is None:
         post_info = fetch_user_from_allspam_report(msg_content)
         if post_info is None:
-            return "That's not a report."
+            return Response(command_status=True, message="That's not a report.")
         why = get_why_allspam(post_info)
         if why is not None or why != "":
-            return why
+            return Response(command_status=True, message=why)
     else:
         post_id, site, _ = post_info
         why = get_why(site, post_id)
         if why is not None or why != "":
-            return why
-    return "There is no `why` data for that user (anymore)."
+            return Response(command_status=True, message=why)
+    return Response(command_status=True, message="There is no `why` data for that user (anymore).")
 
 
 #
@@ -1068,7 +1109,6 @@ command_dict = {
     "!!/whoami": command_whoami,
     "!!/wut": command_wut,
 }
-
 
 # This dictionary defines our subcommands and the associated function to call
 # To use this your calling code will look like this
