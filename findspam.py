@@ -288,7 +288,7 @@ class FindSpam:
         "\\bpatch\\.com\\b", "ajgilworld\\.com", "santomais", "viilms", "fashionient\\.com",
         "clashofclansastucegemmes\\.com", "american-writers\\.org", "comaarp.org",
         "bestcelebritiesvideo\\.com", "shopnhlbruins\\.com", "mon-rasage.fr",
-        "downloadscanpst\\.com", "downloadgames", "gameshop4u\\.com",
+        "downloadscanpst\\.com", "downloadgames", "gameshop4u\\.com", "laustan\\.com",
         "listoffreeware\\.com", "bigasoft\\.com", "opclub07\\.com",
         "allavsoft", "tryapext\\.com", "essays(origin|council)\\.com", "caseism\\.com",
         "vanskeys\\.com", "cheapessaywritingservice", "edbtopsts\\.com", "appkodes.\\com",
