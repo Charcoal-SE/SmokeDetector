@@ -295,7 +295,7 @@ class FindSpam:
         "vanskeys\\.com", "cheapessaywritingservice", "edbtopsts\\.com", "appkodes.\\com",
         "texts\\.io", "writage\\.com", "mobitsolutions\\.com", "pokemongodownload\\.co",
         "askpcexperts\\.com", "anonymousvpnsoftware\\.com", "mmfsolutions\\.sg", "ungeekit\\.com",
-        "ecouponcode\\.com", "wasel(pro)?\\.com", "i-spire\\.(com|net)",
+        "ecouponcode\\.com", "wasel(pro)?\\.com", "i-spire\\.(com|net)", "sandangku\\.com",
         "iwasl\\.com", "vpn(faqs|answers|ranks|4games)\\.com", "airmore\\.com", "showmore\\.com",
         "unblockingtwitter\\.com", "openingblockedsite\\.com",
         "arabic(soft)?downloads?\\.com", "braindumpsvalid",
