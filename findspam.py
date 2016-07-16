@@ -296,7 +296,7 @@ class FindSpam:
         "texts\\.io", "writage\\.com", "mobitsolutions\\.com", "pokemongodownload\\.co",
         "askpcexperts\\.com", "anonymousvpnsoftware\\.com", "mmfsolutions\\.sg", "ungeekit\\.com",
         "ecouponcode\\.com", "wasel(pro)?\\.com", "i-spire\\.(com|net)",
-        "iwasl\\.com", "vpn(faqs|answers|ranks|4games)\\.com",
+        "iwasl\\.com", "vpn(faqs|answers|ranks|4games)\\.com", "airmore\\.com", "showmore\\.com",
         "unblockingtwitter\\.com", "openingblockedsite\\.com",
         "arabic(soft)?downloads?\\.com", "braindumpsvalid",
         "couchsurfing\\.com", "sukere\\.com", "elsner\\.com",
