@@ -131,7 +131,7 @@ def watcher(ev, wrap2):
                                          content=current_message,
                                          message_id=message_id)
                 if result.command_status and result.message:
-                    reply += result + os.linesep
+                    reply += result.message + os.linesep
                 if result.message is None:
                     reply += "<processed without return value>" + os.linesep
                     amount_none += 1
