@@ -1024,6 +1024,10 @@ def subcommand_truepositive(ev_room, ev_user_id, wrap2, post_site_id, post_url, 
             return Response(command_status=True, message="Blacklisted user.")
         return Response(command_status=True, message="Recorded answer as true positive in metasmoke. If you want to "
                                                      "blacklist the poster of the answer, use `trueu` or `tpu`.")
+                                                     
+    else:
+        return Response(command_status=False, message="Post type was not recognized (not `question` or `answer`) - call a developer! "
+                                                      "No action was taken.")
 
 
 def subcommand_why(msg_content, *args, **kwargs):
