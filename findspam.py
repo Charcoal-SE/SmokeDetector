@@ -290,7 +290,7 @@ class FindSpam:
         "clashofclansastucegemmes\\.com", "american-writers\\.org", "comaarp.org",
         "bestcelebritiesvideo\\.com", "shopnhlbruins\\.com", "mon-rasage.fr",
         "downloadscanpst\\.com", "downloadgames", "gameshop4u\\.com", "laustan\\.com",
-        "listoffreeware\\.com", "bigasoft\\.com", "opclub07\\.com",
+        "listoffreeware\\.com", "bigasoft\\.com", "opclub07\\.com", "tekpirates\\.com",
         "allavsoft", "tryapext\\.com", "essays(origin|council)\\.com", "caseism\\.com",
         "vanskeys\\.com", "cheapessaywritingservice", "edbtopsts\\.com", "appkodes.\\com",
         "texts\\.io", "writage\\.com", "mobitsolutions\\.com", "pokemongodownload\\.co",
