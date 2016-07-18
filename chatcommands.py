@@ -353,14 +353,14 @@ def command_alive(ev_room, *args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: A string
     """
-    if ev_room == GlobalVars.charcoal_room_id:
-        return Response(command_status=True, message='Of course')
-    elif ev_room == GlobalVars.meta_tavern_room_id or ev_room == GlobalVars.socvr_room_id:
+    if ev_room == GlobalVars.meta_tavern_room_id or ev_room == GlobalVars.socvr_room_id:
         return Response(command_status=True,
                         message=random.choice(['Yup', 'You doubt me?', 'Of course',
                                                '... did I miss something?', 'plz send teh coffee',
                                                'Watching this endless list of new questions *never* gets boring',
                                                'Kinda sorta']))
+    else:
+        return Response(command_status=True, message='Of course')
 
 
 @check_permissions
@@ -669,6 +669,8 @@ def command_notify(message_parts, ev_user_id, wrap2, *args, **kwargs):
         return Response(command_status=True, message="That notification configuration is already registered.")
     elif response == -2:
         return Response(command_status=False, message="The given SE site does not exist.")
+    else:
+        return Response(command_status=False, message="Unrecognized code returned when adding notification.")
 
 
 def command_unnotify(message_parts, ev_user_id, wrap2, *args, **kwargs):
