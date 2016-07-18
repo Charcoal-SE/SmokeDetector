@@ -821,6 +821,7 @@ def subcommand_delete(ev_room, ev_user_id, wrap2, msg, *args, **kwargs):
         msg.delete()
     except:
         pass  # couldn't delete message
+    return Response(command_status=True, message=None)
 
 
 @check_permissions
