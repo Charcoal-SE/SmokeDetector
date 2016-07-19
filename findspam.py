@@ -150,6 +150,20 @@ def keyword_email(s, site):   # a keyword and an email in the same post
     return False, ""
 
 
+def keyword_link(s, site):   # thanking keyword and a link in the same short answer
+    if len(s) > 350:
+        return False, ""
+    link = regex.compile(ur"(?i)<a href|\[/url\]").search(s)
+    praise = regex.compile(ur"(?i)\b(nice|good|interesting|helpful) (article|blog|post)\b").search(s)
+    thanks = regex.compile(ur"(?i)\b(appreciate|than(k|ks|x))\b").search(s)
+    keyword = regex.compile(ur"(?i)thank you (very|for)|than(ks|x) for (sharing|this|your)|dear forum members").search(s)
+    if link and keyword:
+        return True, u"Keyword {} with link {}".format(keyword.group(0), link.group(0))
+    if link and thanks and praise:
+        return True, u"Keywords {}, {} with link {}".format(thanks.group(0), praise.group(0), link.group(0))
+    return False, ""
+
+
 def is_offensive_post(s, site):
     if s is None or len(s) == 0:
         return False, ""
@@ -556,7 +570,7 @@ class FindSpam:
         {'regex': ur'(?is)^.{0,350}<a href="https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,4}/?\w{0,2}/?|(?:plus\.google|www\.facebook)\.com/[\w/]+)"[^<]*</a>(?:</strong>)?\W*</p>\s*$|\[/url\]\W*</p>\s*$', 'all': True,
          'sites': [], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Link with "thanks for sharing" or a similar phrase in a short answer
-        {'regex': ur'(?is)^.{0,75}(thank you (very|for)|thanks for (sharing|this)|dear forum members).{0,200}<a href.{0,200}$|^.{0,75}<a href.{0,200}(thank you (very|for)|thanks for (sharing|this)|dear forum members).{0,200}$', 'all': True,
+        {'method': keyword_link, 'all': True,
          'sites': [], 'reason': 'bad keyword with a link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # non-linked .tk site at the end of an answer
         {'regex': ur'(?is)\w{3}\.tk(?:</strong>)?\W*</p>\s*$', 'all': True,
