@@ -523,7 +523,7 @@ class FindSpam:
          'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Mostly non-Latin alphabet
         {'method': mostly_non_latin, 'all': True,
-         'sites': ["stackoverflow.com", "ja.stackoverflow.com", "pt.stackoverflow.com", "es.stackoverflow.com", "islam.stackexchange.com", "japanese.stackexchange.com", "anime.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com", "french.stackexchange.com", "spanish.stackexchange.com", "portuguese.stackexchange.com", "codegolf.stackexchange.com"],
+         'sites': ["stackoverflow.com", "ja.stackoverflow.com", "pt.stackoverflow.com", "es.stackoverflow.com", "islam.stackexchange.com", "japanese.stackexchange.com", "anime.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com", "french.stackexchange.com", "spanish.stackexchange.com", "portuguese.stackexchange.com", "codegolf.stackexchange.com", "korean.stackexchange.com",],
          'reason': 'mostly non-Latin {}', 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Mostly non-Latin alphabet, SO answers only
         {'method': mostly_non_latin, 'all': False,
@@ -629,7 +629,7 @@ class FindSpam:
         #
         # Category: other
         # Blacklisted usernames
-        {'regex': ur"(?i)(^l(?:ol).{2,}$|tejveer ?iq|ser?vice pemanas?|\bnigger|\bfuck\b|^wingding$|dlqudals|^[a-z ]+juri(?:n|na|ns|sa|ya|yam|ym)$)", 'all': True, 'sites': [], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        {'regex': ur"(?i)(^l(?:ol)+$|^troll$|tejveer ?iq|ser?vice pemanas?|\bnigger|\bfuck\b|^wingding$|dlqudals|^[a-z ]+juri(?:n|na|ns|sa|ya|yam|ym)$)", 'all': True, 'sites': [], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0}
     ]
 
