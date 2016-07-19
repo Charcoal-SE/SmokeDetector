@@ -31,7 +31,9 @@ def check_permissions(function):
             kwargs['wrap2'] = wrap2
             return function(*args, **kwargs)
         else:
-            return False
+            return Response(command_status=False,
+                            message="Permission Denied. See [the Privileges wiki page](" + GlobalVars.bot_repository +
+                                    "/wiki/Privileges) for information on what privileges are and what is expected.")
 
     return run_command
 
