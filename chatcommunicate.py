@@ -132,12 +132,13 @@ def watcher(ev, wrap2):
                                          message_id=message_id)
                 if result.command_status and result.message:
                     reply += result.message + os.linesep
-                if result.message is None:
-                    reply += "<processed without return value>" + os.linesep
-                    amount_none += 1
                 if result.command_status is False:
                     reply += "<unrecognized command>" + os.linesep
                     amount_unrecognized += 1
+                if result.message is None and result.command_status is not False:
+                    reply += "<processed without return value>" + os.linesep
+                    amount_none += 1
+
             else:
                 reply += "<skipped>" + os.linesep
                 amount_skipped += 1
