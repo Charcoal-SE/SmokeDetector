@@ -209,7 +209,7 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             'wrap2': wrap2,
         }
         if second_part_lower not in subcmds:
-            return Response(command_status=False, message=None) # Unrecognized subcommand
+            return Response(command_status=False, message=None)  # Unrecognized subcommand
 
         return subcmds[second_part_lower](**subcommand_parameters)
 
