@@ -134,12 +134,13 @@ def watcher(ev, wrap2):
                     result = Response(command_status=True, message=None)
                 if result.command_status and result.message:
                     reply += result.message + os.linesep
-                if result.message is None:
-                    reply += "<processed without return value>" + os.linesep
-                    amount_none += 1
                 if result.command_status is False:
                     reply += "<unrecognized command>" + os.linesep
                     amount_unrecognized += 1
+                if result.message is None and result.command_status is not False:
+                    reply += "<processed without return value>" + os.linesep
+                    amount_none += 1
+
             else:
                 reply += "<skipped>" + os.linesep
                 amount_skipped += 1
@@ -209,8 +210,10 @@ def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user
             'second_part_lower': second_part_lower,
             'wrap2': wrap2,
         }
-        if second_part_lower in subcmds:
-            return subcmds[second_part_lower](**subcommand_parameters)
+        if second_part_lower not in subcmds:
+            return Response(command_status=False, message=None)  # Unrecognized subcommand
+
+        return subcmds[second_part_lower](**subcommand_parameters)
 
     # Process additional commands
     command_parameters = {
