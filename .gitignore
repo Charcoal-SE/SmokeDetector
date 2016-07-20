@@ -62,3 +62,6 @@ errorLogs.txt.*
 
 # Cache
 test/.cache/
+
+# Config
+config
