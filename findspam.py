@@ -645,7 +645,7 @@ class FindSpam:
         #
         # Category: other
         # Blacklisted usernames
-        {'regex': ur"(?i)(^l(?:ol)+$|^troll$|tejveer ?iq|ser?vice pemanas?|\bnigger|\bfuck\b|^wingding$|dlqudals|^[a-z ]+juri(?:n|na|ns|sa|ya|yam|ym)$)", 'all': True, 'sites': [], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        {'regex': ur"(?i)(^l(?:ol){2,}$|^troll$|tejveer ?iq|ser?vice pemanas?|\bnigger|\bfuck\b|^wingding$|dlqudals|^[a-z ]+juri(?:n|na|ns|sa|ya|yam|ym)$)", 'all': True, 'sites': [], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0}
     ]
 
