@@ -130,6 +130,8 @@ def watcher(ev, wrap2):
                                          wrap2=wrap2,
                                          content=current_message,
                                          message_id=message_id)
+                if not result:    # avoiding errors due to unprivileged commands 
+                    result = Response(command_status=True, message=None)
                 if result.command_status and result.message:
                     reply += result.message + os.linesep
                 if result.message is None:
