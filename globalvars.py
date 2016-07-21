@@ -285,5 +285,5 @@ class GlobalVars:
     try:
         metasmoke_ws_host = config.get("Config", "metasmoke_ws_host")
     except ConfigParser.NoOptionError:
-        metasmoke_key = ""
+        metasmoke_ws_host = ""
         print "No metasmoke websocket host found, which is okay if you're anti-websocket"
