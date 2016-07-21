@@ -50,9 +50,9 @@ def has_repeating_characters(s, site):
 
 def link_at_end(s, site):   # link at end of question, on selected sites
     s = regex.sub("</strong>|</em>|</p>", "", s)
-    match = regex.compile(ur"https?://(?:[.A-Za-z0-9-]*/?[.A-Za-z0-9-]*/|plus\.google\.com/[\w/]*|www\.pinterest\.com/pin/[\d/]*)</a>\s*$", regex.UNICODE).findall(s)
-    if len(match) > 0 and not regex.compile(r"upload|\b(imgur|yfrog|gfycat|tinypic|sendvid|ctrlv|prntscr|gyazo|youtu\.?be|stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|(?<!plus\.)google|localhost|ubuntu)\b", regex.UNICODE).search(match[0]):
-        return True, u"Link at end: {}".format(match[0])
+    match = regex.compile(ur"(?i)https?://(?:[.A-Za-z0-9-]*/?[.A-Za-z0-9-]*/|plus\.google\.com/[\w/]*|www\.pinterest\.com/pin/[\d/]*)</a>\s*$").search(s)
+    if match and not regex.compile(r"(?i)upload|\b(imgur|yfrog|gfycat|tinypic|sendvid|ctrlv|prntscr|gyazo|youtu\.?be|stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|(?<!plus\.)google|localhost|ubuntu)\b").search(match.group(0)):
+        return True, u"Link at end: {}".format(match.group(0))
     return False, ""
 
 
@@ -153,7 +153,9 @@ def keyword_email(s, site):   # a keyword and an email in the same post
 def keyword_link(s, site):   # thanking keyword and a link in the same short answer
     if len(s) > 350:
         return False, ""
-    link = regex.compile(ur"(?i)<a href|\[/url\]").search(s)
+    link = regex.compile(ur'(?i)<a href="https?://\S+').search(s)
+    if not link or regex.compile(r"(?i)upload|\b(imgur|yfrog|gfycat|tinypic|sendvid|ctrlv|prntscr|gyazo|youtu\.?be|stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|(?<!plus\.)google|localhost|ubuntu)\b").search(link.group(0)):
+        return False, ""
     praise = regex.compile(ur"(?i)\b(nice|good|interesting|helpful) (article|blog|post)\b").search(s)
     thanks = regex.compile(ur"(?i)\b(appreciate|than(k|ks|x))\b").search(s)
     keyword = regex.compile(ur"(?i)thank you (very|for)|than(ks|x) for (sharing|this|your)|dear forum members").search(s)
