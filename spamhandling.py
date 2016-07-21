@@ -124,7 +124,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             append_to_latest_questions(site, post_id, title)
 
             if reason not in GlobalVars.experimental_reasons:
-                metasmoke_link = u" [\u2026](//metasmoke.erwaysoftware.com/posts/by-url?url=" + post_url + ")"
+                metasmoke_link = u" [\u2026](//metasmoke.erwaysoftware.com/posts/by-url?url=" + post_url + ")" if GlobalVars.metasmoke_key else ""
                 if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
                     chq_pings = get_user_names_on_notification_list("stackexchange.com", GlobalVars.charcoal_room_id, site, GlobalVars.wrap)
                     chq_msg = append_pings(s, chq_pings)
