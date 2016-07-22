@@ -170,7 +170,7 @@ def is_offensive_post(s, site):
     if s is None or len(s) == 0:
         return False, ""
 
-    offensive = regex.compile(ur"(?is)\b((yo)?u suck|8={3,}D|nigg(a|er)|ass ?hole|fag(got)?|daf[au][qk]|(mother)?fuc?k+(ing?|e?(r|d)| off+| y(ou|e)(rself)?| u+|tard)?|shit(t?er|head)|dickhead|pedo|whore|(is a )?cunt|cocksucker|ejaculated?|butthurt|(private|pussy) show|lesbo|bitches|suck\b.{0,20}\bdick|dee[sz]e? nut[sz])s?\b")
+    offensive = regex.compile(ur"(?is)\b(ur mom|(yo)?u suck|8={3,}D|nigg(a|er)|ass ?hole|fag(got)?|daf[au][qk]|(mother)?fuc?k+(ing?|e?(r|d)| off+| y(ou|e)(rself)?| u+|tard)?|shit(t?er|head)|dickhead|pedo|whore|(is a )?cunt|cocksucker|ejaculated?|butthurt|(private|pussy) show|lesbo|bitches|suck\b.{0,20}\bdick|dee[sz]e? nut[sz])s?\b")
     matches = offensive.finditer(s)
     len_of_match = 0
     text_matched = []
@@ -314,8 +314,8 @@ class FindSpam:
         "ecouponcode\\.com", "wasel(pro)?\\.com", "i-spire\\.(com|net)", "sandangku\\.com",
         "iwasl\\.com", "vpn(faqs|answers|ranks|4games)\\.com", "airmore\\.com", "showmore\\.com",
         "unblockingtwitter\\.com", "openingblockedsite\\.com", "credenceresearch\\.com",
-        "arabic(soft)?downloads?\\.com", "braindumpsvalid",
-        "couchsurfing\\.com", "sukere\\.com", "elsner\\.com",
+        "arabic(soft)?downloads?\\.com", "braindumpsvalid", "cardsbymellc\\.com",
+        "couchsurfing\\.com", "sukere\\.com", "elsner\\.com", "latestphonespec\\.com",
         "gta5codes\\.fr", "pcsoftpro\\.com", "addium\\.info",
         "fallclassicrun\\.com", "forgrams\\.com", "windowiso\\.com",
         "cloudinsights\\.net", "xtremenitro", "surfmegeek",
