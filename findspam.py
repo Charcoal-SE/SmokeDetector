@@ -231,7 +231,7 @@ class FindSpam:
         "male enhancement supplements", "alpha levo", "digital marketing course", "stark trading system",
         "bring back lost lover", "service proposal essay", "enetdocumentation", "okaygoods", "bojiter",
         "dr ?eziza", "(spell(home)?|temple|classes)@gmail\\.com", "viagra", "cialis", "slotobit",
-        "putlocker",
+        "putlocker", "vimax",
     ]
     bad_keywords_nwb = [
         u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
@@ -557,7 +557,7 @@ class FindSpam:
         {'regex': ur"(?i)({}|({})[\w-]*?\.(co|net|org|in\W|info|blogspot|wordpress))(?![^>]*<)".format("|".join(pattern_websites), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 1},
         # Country-name domains, travel and expats sites are exempt
-        {'regex': ur"(?i)[\w-]{6}(australia|brazil|canada|denmark|france|india|mexico|norway|spain|sweden)\.(com|net)", 'all': True,
+        {'regex': ur"(?i)[\w-]{4}(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|spain|sweden)\.(com|net)", 'all': True,
          'sites': ["travel.stackexchange.com", "expatriates.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # The TLDs of Iran and Tokelau in answers
         {'regex': ur'(?i)http\S*\.(ir|tk)[/"<]', 'all': True,
