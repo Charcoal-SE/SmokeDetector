@@ -218,7 +218,8 @@ class GlobalVars:
             "5735775",  # Ashish Ahuja
             "3476191",  # Nobody Nada
             "2227743",  # Eric D
-            "821878"    # Ryan Bemrose
+            "821878",   # Ryan Bemrose
+            "1413395"  # Panta Rei
         ]
     }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
