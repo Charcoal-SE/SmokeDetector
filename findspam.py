@@ -316,7 +316,7 @@ class FindSpam:
         "unblockingtwitter\\.com", "openingblockedsite\\.com", "credenceresearch\\.com",
         "arabic(soft)?downloads?\\.com", "braindumpsvalid", "cardsbymellc\\.com",
         "couchsurfing\\.com", "sukere\\.com", "elsner\\.com", "latestphonespec\\.com",
-        "gta5codes\\.fr", "pcsoftpro\\.com", "addium\\.info",
+        "gta5codes\\.fr", "pcsoftpro\\.com", "addium\\.info", "graspui\\.com",
         "fallclassicrun\\.com", "forgrams\\.com", "windowiso\\.com",
         "cloudinsights\\.net", "xtremenitro", "surfmegeek",
         "(premium|priceless)-inkjet\\.com", "meatspin", "techappzone\\.com",
