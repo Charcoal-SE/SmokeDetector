@@ -318,7 +318,7 @@ class FindSpam:
         "arabic(soft)?downloads?\\.com", "braindumpsvalid", "cardsbymellc\\.com",
         "couchsurfing\\.com", "sukere\\.com", "elsner\\.com", "latestphonespec\\.com",
         "gta5codes\\.fr", "pcsoftpro\\.com", "addium\\.info", "graspui\\.com",
-        "fallclassicrun\\.com", "forgrams\\.com", "windowiso\\.com",
+        "fallclassicrun\\.com", "forgrams\\.com", "windowiso\\.com", "grantelevators\\.com",
         "cloudinsights\\.net", "xtremenitro", "surfmegeek",
         "(premium|priceless)-inkjet\\.com", "meatspin", "techappzone\\.com",
         "clusterlinks\\.com", "kizi1000\\.in", "weightruinations\\.com",
