@@ -166,6 +166,16 @@ def keyword_link(s, site):   # thanking keyword and a link in the same short ans
     return False, ""
 
 
+def bad_link_text(s, site):   # suspicious text of a hyperlink
+    reg = regex.compile(ur"(?isu)^(buy|cheap)\b|\b(porno|replica|essays?|thesis|in \L<city>)\b|\b\L<city>.*(service|escort|call girl)|(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery)", city=FindSpam.city_list)
+    links = regex.compile(ur'(?<=nofollow">)[^<]*(?=</a>)', regex.UNICODE).findall(s)
+    for link_text in links:
+        match = reg.search(link_text)
+        if match:
+            return True, u"Bad keyword {} in link text".format(match.group(0))
+    return False, ""
+
+
 def is_offensive_post(s, site):
     if s is None or len(s) == 0:
         return False, ""
@@ -214,7 +224,7 @@ class FindSpam:
         "JobsTribune", "join the (great )?illuminati", "Brorsoft", "Remo Recover",
         "kinnaristeel", "clash of (clan|stone)s? (cheats?|tricks?|gems?)",
         r"(?x:B [\s_]* A [\s_]* M \W{0,5} W [\s_]* A [\s_]* R [\s_]* \.? [\s_]* C [\s_]* O [\s_]* M)",
-        "slumber pm", "1-844-400-7325", "bestcollegechina", "\\bporno?\\b[^<]{0,30}</a>",
+        "slumber pm", "1-844-400-7325", "bestcollegechina",
         "bbwdesire", "rsorder", "Shopping ?Cart ?Elite", "Easy ?Data ?Feed",
         "breasts? enlargement", "best (hotel|property) management", "eduCBA", "Solid[ -]?SEO[ -]?Tools",
         "maxman ?power", "niagen", "Testo (X|Black)", "day ?trading ?academy",
@@ -250,11 +260,9 @@ class FindSpam:
         "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn", "revolyn",
         "(?:networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing|salesforce|joomla)( certification)? (courses?|training).{0,25}</a>",
         "(?:design|development|compan(y|ies)|training|courses?|automation).{0,8}\\L<city>",
-        "\\bin \\L<city></a>", "\\L<city>.{0,12}service", "\\L<city> (?:escort|call girl)",
-        ">(best|make|full|hd|cheap|software|cell|data) [\w ]{0,20} (online|service|company|repair|recovery)</a>",
         u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "no2blast", "sunergetic", "capilux", "sante ?avis",
         "enduros", "dianabol", "ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex", "revimax",
-        "celluria", "viatropin", "(meg|test)adrox", "nordic ?loan ?firm", 'rel="nofollow">replica', "replica</a>",
+        "celluria", "viatropin", "(meg|test)adrox", "nordic ?loan ?firm",
         "(essay|resume|article|dissertation|thesis) ?writing ?service",
     ]
     blacklisted_websites = [
@@ -558,6 +566,9 @@ class FindSpam:
         # Suspicious sites
         {'regex': ur"(?i)({}|({})[\w-]*?\.(co|net|org|in\W|info|blogspot|wordpress))(?![^>]*<)".format("|".join(pattern_websites), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 1},
+        # Bad keyword in link text
+        {'method': bad_link_text, 'all': True,
+         'sites': [], 'reason': 'Bad keyword in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Country-name domains, travel and expats sites are exempt
         {'regex': ur"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|spain|sweden)\.(com|net)", 'all': True,
          'sites': ["travel.stackexchange.com", "expatriates.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
