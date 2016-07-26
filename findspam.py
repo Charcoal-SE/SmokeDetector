@@ -206,7 +206,7 @@ class FindSpam:
         "aging skin", "acne( prone)? skin", "black[ -]label[ -]no",
         "bagprada", "6611165613", "Apowersoft", "ChatSim",
         "Service Solahart", "junisse", "Profactor[ -]?T",
-        "(fake|novelty|quality|buy(ing)?|sell(ing)?|offer).{0,5}(passport|driver'?s? licen[cs]e|ID card|green card|residence permit)s?",
+        "(fake|novelty|quality|buy(ing)?|sell(ing)?|offer).{0,20}(passport|driver'?s? licen[cs]e|ID card|green card|residence permit|toefl|Ielts)s?",
         "^.{0,200}(support|service|helpline)( phone)? number|1[ -]?[ -]?[ -]?866[ -]?978[ -]?(6819|6762)",
         "(mcafee|hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number",
         "kitchen for sale", "pdftoexcelconverter", "keepbrowsersafe", "SpyHunter",
@@ -254,7 +254,7 @@ class FindSpam:
         ">(best|make|full|hd|cheap|software|cell|data) [\w ]{0,20} (online|service|company|repair|recovery)</a>",
         u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "no2blast", "sunergetic", "capilux", "sante ?avis",
         "enduros", "dianabol", "ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex", "revimax",
-        "celluria", "viatropin", "(meg|test)adrox", "nordic ?loan ?firm",
+        "celluria", "viatropin", "(meg|test)adrox", "nordic ?loan ?firm", 'rel="nofollow">replica', "replica</a>",
         "(essay|resume|article|dissertation|thesis) ?writing ?service",
     ]
     blacklisted_websites = [
@@ -426,7 +426,7 @@ class FindSpam:
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
-        r"(removevirus|supportnumber|techhelp|calltech|exclusive|onlineshop|video(course|classes|tutorial(?!s))|vipmodel|(?<!word)porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|(govt|government)jobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot|tumblr|webs\.)",
+        r"(removevirus|support(number|help)|techhelp|calltech|exclusive|onlineshop|video(course|classes|tutorial(?!s))|vipmodel|(?<!word)porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|(govt|government)jobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot|tumblr|webs\.)",
         r"(rs\d?gold|rssong|runescapegold|maxgain|e-cash|mothers?day|phone-?number|fullmovie|tvstream|trainingin|dissertation|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(drivingschool|crackserial|freecrack|serialkey|appsfor(pc|mac)|heathcare|meatspin|packers\S{0,3}movers|(buy|sell)\S{0,12}cvv|goatse|burnfat|gronkaffe|muskel|tes(tos)?terone|nitricoxide|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(moving|\w{10}spell|[\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits|research-?paper|-wallet|refunds|truo?ng|viet|trang)\.(co|net|org|in\W|info)",
@@ -455,7 +455,7 @@ class FindSpam:
         r"\w{9}(buy|roofing)\.(co|net|org|in\W|info)",
         r"(vitamin|dive|hike|love|strong|ideal|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
-        r"(acai|advance|aging|alpha|beauty|belle|beta|biotic|body|boost|brain(?!tree)|burn|colon|[^s]cream|creme|derma|ecig|face(?!book)|fat|formula|geniu[sx]|grow|hair|health|herbal|ideal|male|medical|medicare|muscle|natura|nutrition|optimal|pearl|perfect|phyto|probio|rejuven|revive|ripped|rx|scam|shred|skin|slim|super|testo|top|trim|[/.]try|ultra|ultra|vapor|vita|weight|wellness|xplode|young|youth)[\w]{0,20}(about|advi[sc]|assess|blog|brazil|canada|care|center|centre|chat|complex(?!ity)|congress|consult|critic|critique|cure|denmark|discussion|doctor|dose|essence|essential|fact|formula|france|funct?ion|genix|guide|help|idea|info|jacked|l[iy]ft|mag|market|max|mexico|norway|nutrition|order|plus|points|policy|power|pro|program|report|review|rewind|site|slim|solution|sweden|tip|trial|try|world)[.\w-]{0,12}\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
+        r"(acai|advance|aging|alpha|beauty|belle|beta|biotic|body|boost|brain(?!tree)|burn|colon|[^s]cream|creme|derma|ecig|face(?!book)|fat|formula|geniu[sx]|grow|hair|health|herbal|ideal|male|medical|medicare|muscle|natura|nutrition|optimal|pearl|perfect|phyto|probio|rejuven|revive|ripped|rx|scam|shred|skin|slim|super|testo|top|trim|[/.]try|ultra|ultra|vapor|vita|weight|wellness|xplode|young|youth)[\w]{0,20}(about|advi[sc]|assess|blog|brazil|canada|care|center|centre|chat|complex(?!ity)|congress|consult|critic|critique|cure|denmark|discussion|doctor|dose|essence|essential|extract|fact|formula|france|funct?ion|genix|guide|help|idea|info|jacked|l[iy]ft|mag|market|max|mexico|norway|nutrition|order|plus|points|policy|power|pro|program|report|review|rewind|site|slim|solution|suppl(y|ier)|sweden|tip|trial|try|world)[.\w-]{0,12}\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(\w{11}(idea|income|sale)|\w{6}(advice|problog|review))s?\.(co|net|in\W|info)",
         r"-(poker|jobs)\.com",
         r"send[\w-]*?india\.(co|net|org|in\W|info)",
