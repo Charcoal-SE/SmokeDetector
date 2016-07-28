@@ -141,7 +141,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
 def keyword_email(s, site):   # a keyword and an email in the same post
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
-    keyword = regex.compile(ur"(?i)\b(training|we (will )?(offer|develop|provide)|sell|invest(or|ing|ment)|money|quality|legit|interest(ed)?|guarantee|catalog|rent|crack|opportunity|fundraising|campaign|career|employment|candidate|resume|loan|lover|husband|wife|marriage|relationship|female|illuminati|brotherhood|(join|reach|contact|provide) (me|us|him)|spell(caster)?|doctor|(cheat|hack)(er|ing)?|spying|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? |\$|@qq\.com").search(s)
+    keyword = regex.compile(ur"(?i)\b(training|we (will )?(offer|develop|provide)|sell|invest(or|ing|ment)|credit|money|quality|legit|interest(ed)?|guarantee|catalog|rent|crack|opportunity|fundraising|campaign|career|employment|candidate|resume|loan|lover|husband|wife|marriage|relationship|female|illuminati|brotherhood|(join|reach|contact|provide) (me|us|him)|spell(caster)?|doctor|(cheat|hack)(er|ing)?|spying|passport|visa|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|testimony|kidney|hospital|wetting)s?\b| Dr\.? |\$|@qq\.com").search(s)
     if keyword:
         email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
         if email:
@@ -623,6 +623,9 @@ class FindSpam:
         {'method': has_phone_number, 'all': True, 'sites': ["patents.stackexchange.com", "math.stackexchange.com", "mathoverflow.net"], 'reason': "phone number detected in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Phone number in post
         {'regex': ur"(?s)^.{0,250}\b1 ?[-(.]8\d{2}[-).] ?\d{3}[-. ]\d{4}\b", 'all': True, 'sites': ["math.stackexchange.com"], 'reason': "phone number detected in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
+        # Email check for answers on selected sites
+        {'regex': ur"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': False,
+        'sites': ["biology.stackexchange.com", "bitcoin.stackexchange.com", "ell.stackexchange.com", "english.stackexchange.com", "expatriates.stackexchange.com", "gaming.stackexchange.com", "health.stackexchange.com", "money.stackexchange.com", "parenting.stackexchange.com", "rpg.stackexchange.com", "scifi.stackexchange.com", "travel.stackexchange.com", "worldbuilding.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Email check for questions: check only at the end, and on selected sites
         {'regex': ur"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s).{0,100}$", 'all': False,
          'sites': ["money.stackexchange.com", "travel.stackexchange.com", "gamedev.stackexchange.com", "gaming.stackexchange.com", "patents.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
