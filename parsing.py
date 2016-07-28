@@ -122,7 +122,8 @@ def escape_special_chars_in_title(title_unescaped):
 
 
 def get_user_from_list_command(cmd):  # for example, !!/addblu is a list command
-    cmd_parts = cmd.split(" ")
+    cmd_merged_spaces = re.sub("\\s+", " ", cmd)
+    cmd_parts = cmd_merged_spaces.split(" ")
     uid = -1
     site = ""
     if len(cmd_parts) == 2:
