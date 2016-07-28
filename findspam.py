@@ -572,7 +572,7 @@ class FindSpam:
         {'method': bad_link_text, 'all': True,
          'sites': [], 'reason': 'Bad keyword in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Country-name domains, travel and expats sites are exempt
-        {'regex': ur"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|spain|sweden)\.(com|net)", 'all': True,
+        {'regex': ur"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|spain|sweden)\w{0,4}\.(com|net)", 'all': True,
          'sites': ["travel.stackexchange.com", "expatriates.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # The TLDs of Iran and Tokelau in answers
         {'regex': ur'(?i)http\S*\.(ir|tk)[/"<]', 'all': True,
