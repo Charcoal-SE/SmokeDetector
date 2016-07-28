@@ -25,7 +25,7 @@ def has_repeated_words(s, site):
             streak = 0
         prev = word
         if streak >= 5 and streak * len(word) >= 0.2 * len(s):
-            return True, u"Repeated word {}".format(word)
+            return True, u"Repeated word: *{}*".format(word)
     return False, ""
 
 
@@ -44,7 +44,7 @@ def has_repeating_characters(s, site):
     matches = regex.compile(u"([^\\s_\u200b\u200c.,?!=~*/0-9-])(\\1{10,})", regex.UNICODE).findall(s)
     match = "".join(["".join(match) for match in matches])
     if (100 * len(match) / len(s)) >= 20:
-        return True, u"Repeated character: {}".format(match)
+        return True, u"Repeated character: *{}*".format(match)
     return False, ""
 
 
@@ -63,7 +63,7 @@ def non_english_link(s, site):   # non-english link in short answer
             word_chars = regex.sub(r"(?u)\W", "", link_text)
             non_latin_chars = regex.sub(r"\w", "", word_chars)
             if (len(word_chars) <= 20 and len(non_latin_chars) >= 1) or (len(non_latin_chars) >= 10):
-                return True, u"Non-English link text: {}".format(link_text)
+                return True, u"Non-English link text: *{}*".format(link_text)
     return False, ""
 
 
@@ -107,14 +107,14 @@ def has_customer_service(s, site):  # flexible detection of customer service in 
     s = regex.sub(r"[^A-Za-z0-9\s]", "", s)   # deobfuscate
     phrase = regex.compile(r"(tech(nical)? support)|((support|service|contact|help(line)?) (telephone|phone|number))").search(s)
     if phrase and site in ["askubuntu.com", "webapps.stackexchange.com", "webmasters.stackexchange.com"]:
-        return True, u"Key phrase: {}".format(phrase.group(0))
+        return True, u"Key phrase: *{}*".format(phrase.group(0))
     business = regex.compile(r"(?i)\b(airlines?|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|sage|windows?|yahoo)\b").search(s)
     digits = len(regex.compile(r"\d").findall(s))
     if (business and digits >= 5):
         keywords = regex.compile(r"(?i)\b(customer|help|care|helpline|reservation|phone|recovery|service|support|contact|tech|technical|telephone|number)\b").findall(s)
         if len(set(keywords)) >= 2:
             matches = ", ".join(["".join(match) for match in keywords])
-            return True, u"Scam aimed at {} customers. Keywords: {}".format(business.group(0), matches)
+            return True, u"Scam aimed at *{}* customers. Keywords: *{}*".format(business.group(0), matches)
     return False, ""
 
 
@@ -134,7 +134,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
         for match in match_objects:
             if match:
                 words.append(match.group(0))
-        return True, u"Health-themed spam (score {}). Keywords: {}".format(score, ", ".join(words).lower())
+        return True, u"Health-themed spam (score {}). Keywords: *{}*".format(score, ", ".join(words).lower())
     return False, ""
 
 
@@ -145,10 +145,10 @@ def keyword_email(s, site):   # a keyword and an email in the same post
     if keyword:
         email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
         if email:
-            return True, u"Keyword {} with email {}".format(keyword.group(0), email.group(0))
-        obfuscated_email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+ *@ *gmail *\. *com\b").search(s)
-        if obfuscated_email:
-            return True, u"Keyword {} with email {}".format(keyword.group(0), obfuscated_email.group(0))
+            return True, u"Keyword *{}* with email {}".format(keyword.group(0), email.group(0))
+    obfuscated_email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+ *@ *gmail *\. *com\b").search(s)
+    if obfuscated_email:
+        return True, u"Obfuscated email {}".format(obfuscated_email.group(0))
     return False, ""
 
 
@@ -162,9 +162,9 @@ def keyword_link(s, site):   # thanking keyword and a link in the same short ans
     thanks = regex.compile(ur"(?i)\b(appreciate|than(k|ks|x))\b").search(s)
     keyword = regex.compile(ur"(?i)\b(many thanks|thanks a lot|thank you (very|for)|than(ks|x) for (sharing|this|your)|dear forum members)\b").search(s)
     if link and keyword:
-        return True, u"Keyword {} with link {}".format(keyword.group(0), link.group(0))
+        return True, u"Keyword *{}* with link {}".format(keyword.group(0), link.group(0))
     if link and thanks and praise:
-        return True, u"Keywords {}, {} with link {}".format(thanks.group(0), praise.group(0), link.group(0))
+        return True, u"Keywords *{}*, *{}* with link {}".format(thanks.group(0), praise.group(0), link.group(0))
     return False, ""
 
 
@@ -174,7 +174,7 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
     for link_text in links:
         match = reg.search(link_text)
         if match:
-            return True, u"Bad keyword {} in link text".format(match.group(0))
+            return True, u"Bad keyword *{}* in link text".format(match.group(0))
     return False, ""
 
 
@@ -191,14 +191,14 @@ def is_offensive_post(s, site):
         text_matched.append(match.group(0))
 
     if (1000 * len_of_match / len(s)) >= 15:  # currently at 1.5%, this can change if it needs to
-        return True, u"Offensive keyword{}: {}".format("s" if len(text_matched) > 1 else "", ", ".join(text_matched))
+        return True, u"Offensive keyword{}: *{}*".format("s" if len(text_matched) > 1 else "", ", ".join(text_matched))
     return False, ""
 
 
 def has_eltima(s, site):
     reg = regex.compile(ur"(?is)\beltima")
     if reg.search(s) and len(s) <= 750:
-        return True, u"Bad keyword 'eltima' and body length under 750 chars"
+        return True, u"Bad keyword *eltima* and body length under 750 chars"
     return False, ""
 
 
