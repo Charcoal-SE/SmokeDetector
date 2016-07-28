@@ -169,7 +169,7 @@ def keyword_link(s, site):   # thanking keyword and a link in the same short ans
 
 
 def bad_link_text(s, site):   # suspicious text of a hyperlink
-    reg = regex.compile(ur"(?isu)^(buy|cheap)\b|\b(porno|replica|essays?|thesis|in \L<city>)\b|\b\L<city>.*(service|escort|call girl)|(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery)", city=FindSpam.city_list)
+    reg = regex.compile(ur"(?isu)^(buy|cheap)\b|\bsale$|\b(porno|replica|essays?|thesis|in \L<city>)\b|\b\L<city>.*(service|escort|call girl)|(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery)", city=FindSpam.city_list)
     links = regex.compile(ur'(?<=nofollow">)[^<]*(?=</a>)', regex.UNICODE).findall(s)
     for link_text in links:
         match = reg.search(link_text)
@@ -662,7 +662,7 @@ class FindSpam:
         #
         # Category: other
         # Blacklisted usernames
-        {'regex': ur"(?i)(^l(?:ol){2,}$|^troll$|tejveer ?iq|ser?vice pemanas?|\bnigg[aeu][rh]?|\b(fuck(er|ing)?|penis)\b|^wingding$|dlqudals|^[a-z ]+juri(?:n|na|ns|sa|ya|yam|ym)$)", 'all': True, 'sites': [], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        {'regex': ur"(?i)(^l(?:ol){2,}$|^troll$|tejveer ?iq|ser?vice pemanas?|\bnigg[aeu][rh]?|\b(fuck(er|ing)?|penis)\b|^wingding$|dlqudals|^[a-z ]+juri(?:n|na|ns|sa|ya|yam|ym)$|^[a-z]jiibond$)", 'all': True, 'sites': [], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0}
     ]
 
