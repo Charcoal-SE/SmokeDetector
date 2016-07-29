@@ -235,7 +235,7 @@ class FindSpam:
         "Vigoraflo", "Fonepaw", "Provasil", "Slimera", "Cerebria", "Xanogen",
         "intellipaat", "Replennage", "Alpha XTRM", "Synagen", "Nufinity",
         "V[ -]?Stamina", "Gynectrol", "Adderin", "Whizz Systems?", "intellux", "viooz",
-        "smartican", "T-complex",
+        "smartican", "T-complex", u"фальшивы(е|х) (деньги|денег|купюры?)",
         "raging lion", "(love|miracle).*spell ?casters?", "08151871776", "retrodynamic formula",
         "^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$", "Krojam(Soft|Cleaner)?", "FilesSearch ?Tool",
         "teksonit", "Re@d More", "Live Streaming</a", "Blackcore ?Edge", "Copy Buffett", "Push Money App",
@@ -325,7 +325,7 @@ class FindSpam:
         "ecouponcode\\.com", "wasel(pro)?\\.com", "i-spire\\.(com|net)", "sandangku\\.com",
         "iwasl\\.com", "vpn(faqs|answers|ranks|4games)\\.com", "airmore\\.com", "showmore\\.com",
         "unblockingtwitter\\.com", "openingblockedsite\\.com", "credenceresearch\\.com",
-        "arabic(soft)?downloads?\\.com", "braindumpsvalid", "cardsbymellc\\.com",
+        "arabic(soft)?downloads?\\.com", "braindumpsvalid", "cardsbymellc\\.com", "codek\\.tv",
         "couchsurfing\\.com", "sukere\\.com", "elsner\\.com", "latestphonespec\\.com",
         "gta5codes\\.fr", "pcsoftpro\\.com", "addium\\.info", "graspui\\.com",
         "fallclassicrun\\.com", "forgrams\\.com", "windowiso\\.com", "grantelevators\\.com",
@@ -436,7 +436,7 @@ class FindSpam:
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
-        r"(removevirus|support(number|help)|techhelp|calltech|exclusive|onlineshop|video(course|classes|tutorial(?!s))|vipmodel|(?<!word)porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|(govt|government)jobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot|tumblr|webs\.)",
+        r"(recoverysoftware|removevirus|support(number|help)|techhelp|calltech|exclusive|onlineshop|video(course|classes|tutorial(?!s))|vipmodel|(?<!word)porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|(govt|government)jobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot|tumblr|webs\.)",
         r"(rs\d?gold|rssong|runescapegold|maxgain|e-cash|mothers?day|phone-?number|fullmovie|tvstream|trainingin|dissertation|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(drivingschool|crackserial|serial(key|crack)|freecrack|appsfor(pc|mac)|heathcare|meatspin|packers\S{0,3}movers|(buy|sell)\S{0,12}cvv|goatse|burnfat|gronkaffe|muskel|tes(tos)?terone|nitricoxide|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|moist|lefair|lubricant|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(moving|\w{10}spell|[\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|credits|research-?paper|-wallet|refunds|truo?ng|viet|trang)\.(co|net|org|in\W|info)",
