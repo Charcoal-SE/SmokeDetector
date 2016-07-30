@@ -159,7 +159,7 @@ def keyword_link(s, site):   # thanking keyword and a link in the same short ans
         return False, ""
     praise = regex.compile(ur"(?i)\b(nice|good|interesting|helpful) (article|blog|post)\b").search(s)
     thanks = regex.compile(ur"(?i)\b(appreciate|than(k|ks|x))\b").search(s)
-    keyword = regex.compile(ur"(?i)\b(many thanks|thanks a lot|thank you (very|for)|than(ks|x) for (sharing|this|your)|dear forum members)\b").search(s)
+    keyword = regex.compile(ur"(?i)\b(many thanks|thanks a lot|thank you (very|for)|than(ks|x) for (sharing|this|your)|dear forum members|stumbled upon (your|this) (blog|site|website))\b").search(s)
     if link and keyword:
         return True, u"Keyword *{}* with link {}".format(keyword.group(0), link.group(0))
     if link and thanks and praise:
@@ -168,7 +168,7 @@ def keyword_link(s, site):   # thanking keyword and a link in the same short ans
 
 
 def bad_link_text(s, site):   # suspicious text of a hyperlink
-    reg = regex.compile(ur"(?isu)^(buy|cheap)\b|\bsale$|\b(porno|replica|essays?|thesis|in \L<city>)\b|\b\L<city>.*(service|escort|call girl)|(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery)", city=FindSpam.city_list)
+    reg = regex.compile(ur"(?isu)^(buy|cheap)\b|\b(sale|coins)$|\b(porno|replica|essays?|thesis|in \L<city>)\b|\b\L<city>.*(service|escort|call girl)|(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery)", city=FindSpam.city_list)
     links = regex.compile(ur'(?<=nofollow">)[^<]*(?=</a>)', regex.UNICODE).findall(s)
     for link_text in links:
         match = reg.search(link_text)
@@ -326,7 +326,7 @@ class FindSpam:
         "unblockingtwitter\\.com", "openingblockedsite\\.com", "credenceresearch\\.com",
         "arabic(soft)?downloads?\\.com", "braindumpsvalid", "cardsbymellc\\.com", "codek\\.tv",
         "couchsurfing\\.com", "sukere\\.com", "elsner\\.com", "latestphonespec\\.com",
-        "gta5codes\\.fr", "pcsoftpro\\.com", "addium\\.info", "graspui\\.com",
+        "gta5codes\\.fr", "pcsoftpro\\.com", "addium\\.info", "graspui\\.com", "fifaeasy\\.com",
         "fallclassicrun\\.com", "forgrams\\.com", "windowiso\\.com", "grantelevators\\.com",
         "cloudinsights\\.net", "xtremenitro", "surfmegeek", "techittricks\\.com",
         "(premium|priceless)-inkjet\\.com", "meatspin", "techappzone\\.com",
@@ -459,7 +459,7 @@ class FindSpam:
         r"((\d|\w{3})livestream|livestream(ing|s))[\w]*?\.(com|net|tv)",
         r"(play|watch|cup|20)[\w-]*?(live|online)\.(com|net|tv)", r"worldcup\d[\w-]*?\.(com|net|tv|blogspot)",
         r"https?://(\w{5,}tutoring\w*|cheat[\w-.]{3,}|xtreme[\w-]{5,})\.",
-        r"(platinum|paying|acai|buy|premium|ultra|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
+        r"(platinum|paying|acai|buy|premium|premier|ultra|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
         r"(training|institute|marketing)[\w-]{6,}[\w.-]*?\.(co|net|org|in\W|info)", r"[\w-](courses?|training)[\w-]*?\.in/",
         r"\w{9}(buy|roofing)\.(co|net|org|in\W|info)",
         r"(vitamin|dive|hike|love|strong|ideal|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
@@ -569,7 +569,7 @@ class FindSpam:
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 1},
         # Bad keyword in link text
         {'method': bad_link_text, 'all': True,
-         'sites': [], 'reason': 'Bad keyword in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+         'sites': [], 'reason': 'bad keyword in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Country-name domains, travel and expats sites are exempt
         {'regex': ur"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|spain|sweden)\w{0,4}\.(com|net)", 'all': True,
          'sites': ["travel.stackexchange.com", "expatriates.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
