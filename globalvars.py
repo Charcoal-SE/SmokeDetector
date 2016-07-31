@@ -219,7 +219,8 @@ class GlobalVars:
             "3476191",  # Nobody Nada
             "2227743",  # Eric D
             "821878",   # Ryan Bemrose
-            "1413395"  # Panta Rei
+            "1413395",  # Panta Rei
+            "4875631"   # FrankerZ
         ]
     }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
