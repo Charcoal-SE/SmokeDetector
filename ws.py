@@ -134,7 +134,7 @@ GlobalVars.specialrooms = [
     {
         "sites": ["ru.stackoverflow.com"],
         "room": GlobalVars.wrap.get_room("22462"),
-        "unwantedReason": []
+        "unwantedReasons": []
     }
 ]
 
