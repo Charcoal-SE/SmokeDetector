@@ -130,6 +130,11 @@ GlobalVars.specialrooms = [
         "sites": ["ethereum.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("34620"),
         "unwantedReasons": []
+    },
+    {
+        "sites": ["ru.stackoverflow.com"],
+        "room": GlobalVars.wrap.get_room("22462"),
+        "unwantedReason": []
     }
 ]
 
