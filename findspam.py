@@ -330,7 +330,7 @@ class FindSpam:
         "fallclassicrun\\.com", "forgrams\\.com", "windowiso\\.com", "grantelevators\\.com",
         "cloudinsights\\.net", "xtremenitro", "surfmegeek", "techittricks\\.com",
         "(premium|priceless)-inkjet\\.com", "meatspin", "techappzone\\.com",
-        "clusterlinks\\.com", "kizi1000\\.in", "weightruinations\\.com",
+        "clusterlinks\\.com", "kizi1000\\.in", "weightruinations\\.com", "etrove\\.com\\.sg",
         "products\\.odosta\\.com", "naturacelhelp", "guidemesupss\\.com",
         "rackons\\.com", "imonitorsoft\\.com", "biginfosys\\.com",
         "analec\\.com", "livesportstv\\.us", "batteriedepcportable",
