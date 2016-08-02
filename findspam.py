@@ -208,7 +208,7 @@ class FindSpam:
         "kolcak", "Zapyo", "we (offer|give out) (loans|funds|funding)",
         "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
         "rejuvenated skin", "ProBrain", "restore[ -]?samsung[ -]?data",
-        "LifeForce", "swtor2credits", "me2.do",
+        "LifeForce", "swtor2credits", "me2.do", "death reckoning calculate",
         "bam2u", "Neuro(3X|flexyn|fuse|luma|plex)", "TesteroneXL", "Nitroxin",
         "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha ?(Rush|Fuel)",
         "Blackline Elite", "TestCore Pro", "blank(ed)? ?ATM\\b( card)?", "ATM Machine Vault",
