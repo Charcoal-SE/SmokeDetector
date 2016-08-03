@@ -328,7 +328,7 @@ class FindSpam:
         "couchsurfing\\.com", "sukere\\.com", "elsner\\.com", "latestphonespec\\.com",
         "gta5codes\\.fr", "pcsoftpro\\.com", "addium\\.info", "graspui\\.com", "fifaeasy\\.com",
         "fallclassicrun\\.com", "forgrams\\.com", "windowiso\\.com", "grantelevators\\.com",
-        "cloudinsights\\.net", "xtremenitro", "surfmegeek", "techittricks\\.com",
+        "cloudinsights\\.net", "xtremenitro", "surfmegeek", "techittricks\\.com", "din571\\.com",
         "(premium|priceless)-inkjet\\.com", "meatspin", "techappzone\\.com",
         "clusterlinks\\.com", "kizi1000\\.in", "weightruinations\\.com", "etrove\\.com\\.sg",
         "products\\.odosta\\.com", "naturacelhelp", "guidemesupss\\.com",
