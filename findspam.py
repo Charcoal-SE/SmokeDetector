@@ -337,7 +337,7 @@ class FindSpam:
         "stadtbett\\.com", "tokoterbaik\\.com", "\\Welance\\.com", "create-new-account\\.com",
         "jetcheats\\.com", "cheatio\\.com", "empiremountainbikes",
         "optimalstack(facts|products)", "x4facts", "endomondo\\.com",
-        "litindia\\.in", "egovtjobs\\.in", "tipsntrick\\.in", "techstack\\.in",
+        "litindia\\.in", "egovtjobs\\.in", "tipsntrick\\.in", "techstack\\.in", "yatko\\.com",
         "customizedwallpaper\\.com", "oathtohealth\\.com",
         "crevalorsite\\.com", "macfixz\\.com", "moviesexplore\\.com",
         "iphoneunlocking\\.org", "driverbasket\\.com", "erasephone\\.com", "femalevenue\\.com",
