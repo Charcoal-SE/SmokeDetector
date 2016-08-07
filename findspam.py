@@ -489,6 +489,7 @@ class FindSpam:
         r"\w{7}formac\.(com|net|org)",
         r"sex\.(com|net|info)", r"https?://(www\.)?sex",
         r"[\w-]{12}\.(webs|66ghz)\.com", r'online\.us[/"<]',
+        r"ptvsports\d+.com",
     ]
     city_list = [
         "Agra", "Amritsar", "Bangalore", "Bhopal", "Chandigarh", "Chennai", "Coimbatore", "Delhi", "Dubai", "Durgapur",
