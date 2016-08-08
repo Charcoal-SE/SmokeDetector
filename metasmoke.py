@@ -8,6 +8,7 @@ import websocket
 from collections import Iterable
 import sys
 import traceback
+import datahandling
 
 
 class Metasmoke:
@@ -28,6 +29,8 @@ class Metasmoke:
 
                         if isinstance(message, Iterable) and "message" in message:
                             GlobalVars.charcoal_hq.send_message("{ [metasmoke](https://github.com/Charcoal-SE/metasmoke) } " + message['message'])
+                        elif isinstance(message, Iterable) and "blacklist" in message:
+                            add_blacklisted_user((message['blacklist']['uid'], message['blacklist']['site']), "metasmoke", message['blacklist']['post'])
                 except Exception, e:
                     GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
                     GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"}))
