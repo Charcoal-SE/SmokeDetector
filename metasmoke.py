@@ -67,7 +67,7 @@ class Metasmoke:
             print e
 
     @classmethod
-    def send_feedback_for_post(self, post_link, feedback_type, user_name, user_id):
+    def send_feedback_for_post(self, post_link, feedback_type, user_name, user_id, chat_host):
         if GlobalVars.metasmoke_host is None:
             print "Metasmoke location not defined; not reporting"
             return
@@ -79,6 +79,7 @@ class Metasmoke:
                 'feedback': {
                     'user_name': user_name,
                     'chat_user_id': user_id,
+                    'chat_host': chat_host,
                     'feedback_type': feedback_type,
                     'post_link': post_link
                 },
