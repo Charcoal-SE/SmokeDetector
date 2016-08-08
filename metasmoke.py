@@ -8,7 +8,7 @@ import websocket
 from collections import Iterable
 import sys
 import traceback
-import datahandling
+from datahandling import add_blacklisted_user
 
 
 class Metasmoke:
