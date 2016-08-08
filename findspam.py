@@ -181,7 +181,7 @@ def is_offensive_post(s, site):
     if s is None or len(s) == 0:
         return False, ""
 
-    offensive = regex.compile(ur"(?is)\b(ur mom|(yo)?u suck|8={3,}D|nigg[aeu][rh]?|ass ?hole|fag(got)?|daf[au][qk]|(?<!brain)(mother)?fuc?k+(ing?|e?(r|d)| off+| y(ou|e)(rself)?| u+|tard)?|shit(t?er|head)|dickhead|pedo|whore|cunt|cocksucker|ejaculated?|cummies|butthurt|(private|pussy) show|lesbo|bitches|(eat|suck)\b.{0,20}\bdick|dee[sz]e? nut[sz])s?\b")
+    offensive = regex.compile(ur"(?is)\b(ur mom|(yo)?u suck|8={3,}D|nigg[aeu][rh]?|ass ?hole|fag(got)?|daf[au][qk]|(?<!brain)(mother|mutha)?fuc?k+(a|ing?|e?(r|d)| off+| y(ou|e)(rself)?| u+|tard)?|shit(t?er|head)|dickhead|pedo|whore|cunt|cocksucker|ejaculated?|cummies|butthurt|(private|pussy) show|lesbo|bitches|(eat|suck)\b.{0,20}\bdick|dee[sz]e? nut[sz])s?\b")
     matches = offensive.finditer(s)
     len_of_match = 0
     text_matched = []
@@ -336,7 +336,7 @@ class FindSpam:
         "analec\\.com", "livesportstv\\.us", "batteriedepcportable", "heflo\\.com",
         "stadtbett\\.com", "tokoterbaik\\.com", "\\Welance\\.com", "create-new-account\\.com",
         "jetcheats\\.com", "cheatio\\.com", "empiremountainbikes",
-        "optimalstack(facts|products)", "x4facts", "endomondo\\.com",
+        "optimalstack(facts|products)", "x4facts", "endomondo\\.com", "sulekha\\.com",
         "litindia\\.in", "egovtjobs\\.in", "tipsntrick\\.in", "techstack\\.in", "yatko\\.com",
         "customizedwallpaper\\.com", "oathtohealth\\.com",
         "crevalorsite\\.com", "macfixz\\.com", "moviesexplore\\.com",
@@ -436,9 +436,9 @@ class FindSpam:
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
-        r"(recoverysoftware|removevirus|support(number|help)|techhelp|calltech|exclusive|onlineshop|video(course|classes|tutorial(?!s))|vipmodel|(?<!word)porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|(govt|government)jobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot|tumblr|webs\.)",
+        r"(recoverysoftware|removevirus|support(number|help)|techhelp|calltech|exclusive|onlineshop|video(course|classes|tutorial(?!s))|vipmodel|(?<!word)porn|wholesale|inboxmachine|(get|buy)cheap|escort|diploma|(govt|government)jobs|extramoney|earnathome|spell(caster|specialist)|profits|seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online-?(training|solution))[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot|tumblr|webs\.)",
         r"(rs\d?gold|rssong|runescapegold|maxgain|e-cash|mothers?day|phone-?number|fullmovie|tvstream|trainingin|dissertation|research-?(paper|statement)|digitalmarketing|infocampus|cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
-        r"(drivingschool|crack-?serial|serial-?(key|crack)|freecrack|appsfor(pc|mac)|heathcare|sideeffect|meatspin|packers\S{0,3}movers|(buy|sell)\S{0,12}cvv|goatse|burnfat|gronkaffe|muskel|tes(tos)?terone|nitricoxide|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|slimbody|moist|lefair|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
+        r"(drivingschool|crack-?serial|serial-?(key|crack)|freecrack|appsfor(pc|mac)|heathcare|sideeffect|meatspin|packers\S{0,3}movers|(buy|sell)\S{0,12}cvv|goatse|burnfat|gronkaffe|muskel|tes(tos)?terone|nitric(storm|oxide)|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|slimbody|moist|lefair|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(moving|\w{10}spell|[\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{6}cheats|[\w-]{6}girls|cheatcode|cracks|credits|-wallet|refunds|truo?ng|viet|trang)\.(co|net|org|in\W|info)",
         r"(health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
         r"(//|www\.)healthy?\w{5,7}\.com",
@@ -465,7 +465,7 @@ class FindSpam:
         r"\w{9}(buy|roofing)\.(co|net|org|in\W|info)",
         r"(vitamin|dive|hike|love|strong|ideal|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
-        r"(acai|advance|aging|alpha|beauty|belle|beta|biotic|body|boost|brain(?!tree)|burn|colon|[^s]cream|creme|derma|ecig|face(?!book)|fat|formula|geniu[sx]|grow|hair|health|herbal|ideal|male|medical|medicare|muscle|natura|nutrition|optimal|pearl|perfect|phyto|probio|rejuven|revive|ripped|rx|scam|shred|skin|slim|super|testo|[/.]top|trim|[/.]try|ultra|ultra|vapor|vita|weight|wellness|xplode|yoga|young|youth)[\w]{0,20}(about|advi[sc]|assess|blog|brazil|canada|care|center|centre|chat|complex(?!ity)|congress|consult|critic|critique|cure|denmark|discussion|doctor|dose|essence|essential|extract|fact|formula|france|funct?ion|genix|guide|help|idea|info|jacked|l[iy]ft|mag|market|max|mexico|norway|nutrition|order|plus|points|policy|power|practice|pro|program|report|review|rewind|site|slim|solution|suppl(y|ier)|sweden|tip|trial|try|world)[.\w-]{0,12}\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
+        r"(acai|advance|aging|alpha|beauty|belle|beta|biotic|body|boost|brain(?!tree)|burn|colon|[^s]cream|creme|derma|ecig|eye|face(?!book)|fat|formula|geniu[sx]|grow|hair|health|herbal|ideal|luminous|male|medical|medicare|muscle|natura|nutrition|optimal|pearl|perfect|phyto|probio|rejuven|revive|ripped|rx|scam|shred|skin|slim|super|testo|[/.]top|trim|[/.]try|ultra|ultra|vapor|vita|weight|wellness|xplode|yoga|young|youth)[\w]{0,20}(about|advi[sc]|assess|blog|brazil|canada|care|center|centre|chat|complex(?!ity)|congress|consult|critic|critique|cure|denmark|discussion|doctor|dose|essence|essential|extract|fact|formula|france|funct?ion|genix|guide|help|idea|info|jacked|l[iy]ft|mag|market|max|mexico|norway|nutrition|order|plus|points|policy|power|practice|pro|program|report|review|rewind|site|slim|solution|suppl(y|ier)|sweden|tip|trial|try|world)[.\w-]{0,12}\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
         r"(\w{11}(idea|income|sale)|\w{6}(advice|problog|review))s?\.(co|net|in\W|info)",
         r"-(poker|jobs)\.com",
         r"send[\w-]*?india\.(co|net|org|in\W|info)",
