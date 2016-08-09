@@ -28,7 +28,7 @@ class Metasmoke:
                         message = data['message']
 
                         if isinstance(message, Iterable) and "message" in message:
-                            GlobalVars.charcoal_hq.send_message("{ [metasmoke](https://github.com/Charcoal-SE/metasmoke) } " + message['message'])
+                            GlobalVars.charcoal_hq.send_message(message['message'])
                         elif isinstance(message, Iterable) and "blacklist" in message:
                             add_blacklisted_user((message['blacklist']['uid'], message['blacklist']['site']), "metasmoke", message['blacklist']['post'])
                 except Exception, e:
