@@ -90,7 +90,8 @@ class GlobalVars:
             "121520",   # ArtOfCode
             "215783",   # KarmaBot (ArtOfCode's sock to test things with)
             "137388",   # QPaysTaxes
-            "212311"    # Ryan Bemrose
+            "212311",   # Ryan Bemrose
+            "172397"    # Kyll
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
