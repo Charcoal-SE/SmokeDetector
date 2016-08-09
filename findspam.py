@@ -339,7 +339,7 @@ class FindSpam:
         "optimalstack(facts|products)", "x4facts", "endomondo\\.com", "sulekha\\.com",
         "litindia\\.in", "egovtjobs\\.in", "tipsntrick\\.in", "techstack\\.in", "yatko\\.com",
         "customizedwallpaper\\.com", "oathtohealth\\.com",
-        "crevalorsite\\.com", "macfixz\\.com", "moviesexplore\\.com",
+        "crevalorsite\\.com", "macfixz\\.com", "moviesexplore\\.com", "computouchinc\\.com",
         "iphoneunlocking\\.org", "driverbasket\\.com", "erasephone\\.com", "femalevenue\\.com",
         "bloggermaking\\.com", "supportphonenumber\\.com",
         "prinenidz\\.com", "e-priceinbd", "ecigpre\\.com", "movingexpert\\.in",
