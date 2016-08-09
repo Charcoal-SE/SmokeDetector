@@ -168,7 +168,7 @@ def keyword_link(s, site):   # thanking keyword and a link in the same short ans
 
 
 def bad_link_text(s, site):   # suspicious text of a hyperlink
-    reg = regex.compile(ur"(?isu)^(buy|cheap)\b|\b(sale|coins)$|\b(porno|replica|essays?|thesis|in \L<city>)\b|\b\L<city>.*(service|escort|call girl)|(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery)|\bwriting service", city=FindSpam.city_list)
+    reg = regex.compile(ur"(?isu)^(buy|cheap)\b|\b(sale|coins)$|\b(porno|replica|luxury|essays?|thesis|in \L<city>)\b|\b\L<city>.*(service|escort|call girl)|(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery)|\bwriting service", city=FindSpam.city_list)
     links = regex.compile(ur'(?<=nofollow">)[^<]*(?=</a>)', regex.UNICODE).findall(s)
     for link_text in links:
         match = reg.search(link_text)
@@ -335,7 +335,7 @@ class FindSpam:
         "rackons\\.com", "imonitorsoft\\.com", "biginfosys\\.com", "worldofpower\\.co\\.uk",
         "analec\\.com", "livesportstv\\.us", "batteriedepcportable", "heflo\\.com",
         "stadtbett\\.com", "tokoterbaik\\.com", "\\Welance\\.com", "create-new-account\\.com",
-        "jetcheats\\.com", "cheatio\\.com", "empiremountainbikes",
+        "jetcheats\\.com", "cheatio\\.com", "empiremountainbikes", "assignmentcamp\\.co",
         "optimalstack(facts|products)", "x4facts", "endomondo\\.com", "sulekha\\.com",
         "litindia\\.in", "egovtjobs\\.in", "tipsntrick\\.in", "techstack\\.in", "yatko\\.com",
         "customizedwallpaper\\.com", "oathtohealth\\.com",
@@ -495,7 +495,7 @@ class FindSpam:
     city_list = [
         "Agra", "Amritsar", "Bangalore", "Bhopal", "Chandigarh", "Chennai", "Coimbatore", "Delhi", "Dubai", "Durgapur",
         "Ghaziabad", "Hyderabad", "Jaipur", "Jalandhar", "Kolkata", "Ludhiana", "Mumbai", "Madurai", "Patna",
-        "Rajkot", "Surat", "Telangana", "Uttarakhand",
+        "Rajkot", "Surat", "Telangana", "Udaipur", "Uttarakhand",
     ]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
