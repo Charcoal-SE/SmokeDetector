@@ -35,15 +35,16 @@ class Metasmoke:
                             elif "commit_status" in message:
                                 c = message["commit_status"]
                                 sha = c["commit_sha"][:7]
-                                if c["status"] == "success":
-                                    if "autopull" in c["commit_message"]:
-                                        GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"], commit_sha=sha))
-                                        time.sleep(2)
-                                        os._exit(3)
-                                    else:
-                                        GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} succeeded.".format(ci_link=c["ci_url"], commit_sha=sha))
-                                elif c["status"] == "failure":
-                                    GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} failed.".format(ci_link=c["ci_url"], commit_sha=sha))
+                                if c["commit_sha"] != os.popen('git log --pretty=format:"%H" -n 1').read():
+                                    if c["status"] == "success":
+                                        if "autopull" in c["commit_message"]:
+                                            GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"], commit_sha=sha))
+                                            time.sleep(2)
+                                            os._exit(3)
+                                        else:
+                                            GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} succeeded.".format(ci_link=c["ci_url"], commit_sha=sha))
+                                    elif c["status"] == "failure":
+                                        GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} failed.".format(ci_link=c["ci_url"], commit_sha=sha))
                 except Exception, e:
                     GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
                     GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"}))
