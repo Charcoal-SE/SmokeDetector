@@ -25,10 +25,14 @@ class Metasmoke:
                     if "message" in data:
                         message = data['message']
 
-                        if isinstance(message, Iterable) and "message" in message:
-                            GlobalVars.charcoal_hq.send_message(message['message'])
-                        elif isinstance(message, Iterable) and "blacklist" in message:
-                            add_blacklisted_user((message['blacklist']['uid'], message['blacklist']['site']), "metasmoke", message['blacklist']['post'])
+                        if isinstance(message, Iterable):
+                            if "message" in message:
+                                GlobalVars.charcoal_hq.send_message(message['message'])
+                            elif "blacklist" in message:
+                                add_blacklisted_user((message['blacklist']['uid'], message['blacklist']['site']), "metasmoke", message['blacklist']['post'])
+                            elif "commit_status" in message:
+                                c = message["commit_status"]
+                                GlobalVars.charcoal_hq.send_message(str(c))
                 except Exception, e:
                     GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
                     GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"}))
