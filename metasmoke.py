@@ -4,6 +4,8 @@ from globalvars import GlobalVars
 import threading
 import websocket
 from collections import Iterable
+import sys
+import traceback
 import time
 import os
 from datahandling import add_blacklisted_user
@@ -12,33 +14,46 @@ from datahandling import add_blacklisted_user
 class Metasmoke:
     @classmethod
     def init_websocket(self):
-        GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
-        GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\",\"key\":\"" + GlobalVars.metasmoke_key + "\"}"}))
+        try:
+            GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
+            GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\",\"key\":\"" + GlobalVars.metasmoke_key + "\"}"}))
 
-        while True:
-            a = GlobalVars.metasmoke_ws.recv()
-            print(a)
-            data = json.loads(a)
+            while True:
+                try:
+                    a = GlobalVars.metasmoke_ws.recv()
+                    print(a)
+                    data = json.loads(a)
 
-            if "message" in data:
-                message = data['message']
+                    if "message" in data:
+                        message = data['message']
 
-                if isinstance(message, Iterable):
-                    if "message" in message:
-                        GlobalVars.charcoal_hq.send_message(message['message'])
-                    elif "blacklist" in message:
-                        add_blacklisted_user((message['blacklist']['uid'], message['blacklist']['site']), "metasmoke", message['blacklist']['post'])
-                    elif "commit_status" in message:
-                        c = message["commit_status"]
-                        if c["status"] == "success":
-                            if "autopull" in c["message"]:
-                                GlobalVars.send_message("[CI]({ci_link}) on {commit_sha} succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
-                                time.sleep(2)
-                                os._exit(3)
-                            else:
-                                GlobalVars.send_message("[CI]({ci_link}) on {commit_sha} succeeded.".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
-                        elif c["status"] == "failure":
-                            GlobalVars.send_message("[CI]({ci_link}) on {commit_sha} failed.".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
+                        if isinstance(message, Iterable):
+                            if "message" in message:
+                                GlobalVars.charcoal_hq.send_message(message['message'])
+                            elif "blacklist" in message:
+                                add_blacklisted_user((message['blacklist']['uid'], message['blacklist']['site']), "metasmoke", message['blacklist']['post'])
+                            elif "commit_status" in message:
+                                c = message["commit_status"]
+                                if c["status"] == "success":
+                                    if "autopull" in c["message"]:
+                                        GlobalVars.send_message("[CI]({ci_link}) on {commit_sha} succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
+                                        time.sleep(2)
+                                        os._exit(3)
+                                    else:
+                                        GlobalVars.send_message("[CI]({ci_link}) on {commit_sha} succeeded.".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
+                                elif c["status"] == "failure":
+                                    GlobalVars.send_message("[CI]({ci_link}) on {commit_sha} failed.".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
+                except Exception, e:
+                    GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
+                    GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"}))
+                    print e
+                    try:
+                        exc_info = sys.exc_info()
+                        traceback.print_exception(*exc_info)
+                    except:
+                        print "meh"
+        except:
+            print "Couldn't bind to MS websocket"
 
     @classmethod
     def send_stats_on_post(self, title, link, reasons, body, username, user_link, why, owner_rep, post_score, up_vote_count, down_vote_count):
