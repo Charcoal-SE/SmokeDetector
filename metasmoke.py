@@ -30,15 +30,16 @@ class Metasmoke:
                         add_blacklisted_user((message['blacklist']['uid'], message['blacklist']['site']), "metasmoke", message['blacklist']['post'])
                     elif "commit_status" in message:
                         c = message["commit_status"]
+                        sha = c["commit_sha"][:7]
                         if c["status"] == "success":
                             if "autopull" in c["commit_message"]:
-                                GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
+                                GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"], commit_sha=sha))
                                 time.sleep(2)
                                 os._exit(3)
                             else:
-                                GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} succeeded.".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
+                                GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} succeeded.".format(ci_link=c["ci_url"], commit_sha=sha))
                         elif c["status"] == "failure":
-                            GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} failed.".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
+                            GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} failed.".format(ci_link=c["ci_url"], commit_sha=sha))
 
     @classmethod
     def send_stats_on_post(self, title, link, reasons, body, username, user_link, why, owner_rep, post_score, up_vote_count, down_vote_count):
