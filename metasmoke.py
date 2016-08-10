@@ -31,7 +31,7 @@ class Metasmoke:
                     elif "commit_status" in message:
                         c = message["commit_status"]
                         if c["status"] == "success":
-                            if "autopull" in c["message"]:
+                            if "autopull" in c["commit_message"]:
                                 GlobalVars.send_message("[CI]({ci_link}) on {commit_sha} succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
                                 time.sleep(2)
                                 os._exit(3)
