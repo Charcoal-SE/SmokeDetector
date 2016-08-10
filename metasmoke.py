@@ -6,6 +6,8 @@ import websocket
 from collections import Iterable
 import sys
 import traceback
+import time
+import os
 from datahandling import add_blacklisted_user
 
 
@@ -32,7 +34,15 @@ class Metasmoke:
                                 add_blacklisted_user((message['blacklist']['uid'], message['blacklist']['site']), "metasmoke", message['blacklist']['post'])
                             elif "commit_status" in message:
                                 c = message["commit_status"]
-                                GlobalVars.charcoal_hq.send_message(str(c))
+                                if c["status"] == "success":
+                                    if "autopull" in c["message"]:
+                                        GlobalVars.send_message("[CI]({ci_link}) on {commit_sha} succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
+                                        time.sleep(2)
+                                        os._exit(3)
+                                    else:
+                                        GlobalVars.send_message("[CI]({ci_link}) on {commit_sha} succeeded.".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
+                                elif c["status"] == "failure":
+                                    GlobalVars.send_message("[CI]({ci_link}) on {commit_sha} failed.".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
                 except Exception, e:
                     GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
                     GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"}))
