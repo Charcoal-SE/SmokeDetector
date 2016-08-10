@@ -32,13 +32,13 @@ class Metasmoke:
                         c = message["commit_status"]
                         if c["status"] == "success":
                             if "autopull" in c["commit_message"]:
-                                GlobalVars.send_message("[CI]({ci_link}) on {commit_sha} succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
+                                GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
                                 time.sleep(2)
                                 os._exit(3)
                             else:
-                                GlobalVars.send_message("[CI]({ci_link}) on {commit_sha} succeeded.".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
+                                GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} succeeded.".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
                         elif c["status"] == "failure":
-                            GlobalVars.send_message("[CI]({ci_link}) on {commit_sha} failed.".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
+                            GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} failed.".format(ci_link=c["ci_url"], commit_sha=c["commit_sha"]))
 
     @classmethod
     def send_stats_on_post(self, title, link, reasons, body, username, user_link, why, owner_rep, post_score, up_vote_count, down_vote_count):
