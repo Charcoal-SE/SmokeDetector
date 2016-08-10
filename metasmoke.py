@@ -1,7 +1,5 @@
 import json
 import requests
-import os
-import time
 from globalvars import GlobalVars
 import threading
 import websocket
@@ -132,7 +130,7 @@ class Metasmoke:
             }
 
             headers = {'Content-type': 'application/json'}
-            response = requests.post(GlobalVars.metasmoke_host + "/status-update.json", data=json.dumps(payload), headers=headers)
+            requests.post(GlobalVars.metasmoke_host + "/status-update.json", data=json.dumps(payload), headers=headers)
 
         except Exception as e:
             print e
