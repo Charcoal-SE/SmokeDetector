@@ -559,7 +559,7 @@ def command_test(content, content_lower, *args, **kwargs):
     result = "> "
     reasons, why = FindSpam.test_post(string_to_test, string_to_test, string_to_test, "", test_as_answer, False, 1, 0)
     if len(reasons) == 0:
-        result += "Would not be caught as a title, body, or username."
+        result += "Would not be caught for title, body, and username."
         return Response(command_status=True, message=result)
     result += ", ".join(reasons).capitalize()
     if why is not None and len(why) > 0:
