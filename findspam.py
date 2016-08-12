@@ -664,6 +664,7 @@ class FindSpam:
         {'regex': ur"(?i)kangaroos", 'all': False, 'sites': ["academia.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Hitler outside of History and Politics
         {'regex': ur"(?i)\bhitler\b", 'all': True, 'sites': ["history.stackexchange.com", "politics.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        {'regex': ur"(?i)\b\<a href=\".{0,25}\.xyz\"( rel=\"nofollow\")?\>.{0,15}google.{0,15}\<\/a\>\b", 'all': True, 'sites': [], 'reason': 'non-Google "google search" link in {}', 'title': False, 'body': True, 'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
         #
         # Category: other
         # Blacklisted usernames
