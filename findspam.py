@@ -62,7 +62,7 @@ def non_english_link(s, site):   # non-english link in short answer
         for link_text in links:
             word_chars = regex.sub(r"(?u)\W", "", link_text)
             non_latin_chars = regex.sub(r"\w", "", word_chars)
-            if (len(word_chars) <= 20 and len(non_latin_chars) >= 1) or (len(non_latin_chars) >= 10):
+            if (len(word_chars) <= 20 and len(non_latin_chars) >= 1) or (len(non_latin_chars) >= 0.05*len(word_chars)):
                 return True, u"Non-English link text: *{}*".format(link_text)
     return False, ""
 
@@ -496,7 +496,7 @@ class FindSpam:
     city_list = [
         "Agra", "Amritsar", "Bangalore", "Bhopal", "Chandigarh", "Chennai", "Coimbatore", "Delhi", "Dubai", "Durgapur",
         "Ghaziabad", "Hyderabad", "Jaipur", "Jalandhar", "Kolkata", "Ludhiana", "Mumbai", "Madurai", "Patna", "Portland",
-        "Rajkot", "Surat", "Telangana", "Udaipur", "Uttarakhand",
+        "Rajkot", "Surat", "Telangana", "Udaipur", "Uttarakhand", "India", "Pakistan",  # yes, these aren't cities but...
     ]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
