@@ -559,7 +559,7 @@ def command_test(content, content_lower, *args, **kwargs):
     result = "> "
     reasons, why = FindSpam.test_post(string_to_test, string_to_test, string_to_test, "", test_as_answer, False, 1, 0)
     if len(reasons) == 0:
-        result += "Would not be caught for title, body, and username."
+        result += "Would not be caught as a title, body, or username."
         return Response(command_status=True, message=result)
     result += ", ".join(reasons).capitalize()
     if why is not None and len(why) > 0:
@@ -570,7 +570,7 @@ def command_test(content, content_lower, *args, **kwargs):
 
 def command_test_answer(content, content_lower, *args, **kwargs):
     """
-    Test a answer to determine if it'd be automatically reported
+    Test an answer to determine if it'd be automatically reported
     :param content_lower:
     :param content:
     :param kwargs: No additional arguments expected
@@ -583,7 +583,79 @@ def command_test_answer(content, content_lower, *args, **kwargs):
     result = "> "
     reasons, why = FindSpam.test_post("Valid title", string_to_test, "Valid username", "", test_as_answer, False, 1, 0)
     if len(reasons) == 0:
-        result += "Would not be caught for title, answer, and username."
+        result += "Would not be caught as an answer."
+        return Response(command_status=True, message=result)
+    result += ", ".join(reasons).capitalize()
+    if why is not None and len(why) > 0:
+        result += "\n----------\n"
+        result += why
+    return Response(command_status=True, message=result)
+
+
+def command_test_question(content, content_lower, *args, **kwargs):
+    """
+    Test a question to determine if it'd be automatically reported
+    :param content_lower:
+    :param content:
+    :param kwargs: No additional arguments expected
+    :return: A string
+    """
+    string_to_test = content[10:]
+    test_as_answer = False
+    if len(string_to_test) == 0:
+        return Response(command_status=True, message="Nothing to test")
+    result = "> "
+    reasons, why = FindSpam.test_post("Valid title", string_to_test, "Valid username", "", test_as_answer, False, 1, 0)
+    if len(reasons) == 0:
+        result += "Would not be caught as a question."
+        return Response(command_status=True, message=result)
+    result += ", ".join(reasons).capitalize()
+    if why is not None and len(why) > 0:
+        result += "\n----------\n"
+        result += why
+    return Response(command_status=True, message=result)
+
+
+def command_test_title(content, content_lower, *args, **kwargs):
+    """
+    Test a title to determine if it'd be automatically reported
+    :param content_lower:
+    :param content:
+    :param kwargs: No additional arguments expected
+    :return: A string
+    """
+    string_to_test = content[10:]
+    test_as_answer = False
+    if len(string_to_test) == 0:
+        return Response(command_status=True, message="Nothing to test")
+    result = "> "
+    reasons, why = FindSpam.test_post(string_to_test, "Valid question body", "Valid username", "", test_as_answer, False, 1, 0)
+    if len(reasons) == 0:
+        result += "Would not be caught as a title."
+        return Response(command_status=True, message=result)
+    result += ", ".join(reasons).capitalize()
+    if why is not None and len(why) > 0:
+        result += "\n----------\n"
+        result += why
+    return Response(command_status=True, message=result)
+
+
+def command_test_username(content, content_lower, *args, **kwargs):
+    """
+    Test a username to determine if it'd be automatically reported
+    :param content_lower:
+    :param content:
+    :param kwargs: No additional arguments expected
+    :return: A string
+    """
+    string_to_test = content[10:]
+    test_as_answer = False
+    if len(string_to_test) == 0:
+        return Response(command_status=True, message="Nothing to test")
+    result = "> "
+    reasons, why = FindSpam.test_post("Valid title", "Valid post body", string_to_test, "", test_as_answer, False, 1, 0)
+    if len(reasons) == 0:
+        result += "Would not be caught as a username."
         return Response(command_status=True, message=result)
     result += ", ".join(reasons).capitalize()
     if why is not None and len(why) > 0:
@@ -1114,6 +1186,13 @@ command_dict = {
     "!!/test": command_test,
     "!!/testanswer": command_test_answer,
     "!!/test-a": command_test_answer,
+    "!!/testquestion": command_test_question,
+    "!!/test-q": command_test_question,
+    "!!/testtitle": command_test_title,
+    "!!/test-t": command_test_title,
+    "!!/testusername": command_test_username,
+    "!!/testuser": command_test_username,
+    "!!/test-u": command_test_username,
     "!!/unblock": command_unblock,
     "!!/unnotify": command_unnotify,
     "!!/unnotify-": command_unnotify,
