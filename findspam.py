@@ -204,7 +204,7 @@ def has_eltima(s, site):
 
 class FindSpam:
     bad_keywords = [
-        "baba ji", "fifa.{0,20}coins?", "fifabay", "Long ?Path ?Tool",
+        "baba ji", "fifa.{0,20}coins?", "fifabay", "Long ?Path ?Tool", "writing service",
         "fifaodell", "brianfo", "tosterone", "bajotz",
         "kolcak", "Zapyo", "we (offer|give out) (loans|funds|funding)",
         "molvi", "judi bola", "ituBola.com", "lost lover'?s?",
