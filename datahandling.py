@@ -126,13 +126,9 @@ def add_whitelisted_user(user):
 
 
 def add_blacklisted_user(user, message_url, post_url):
-    print(user.__str__())
-    print("adding blu" + message_url + " " + post_url)
     if is_blacklisted_user(user) or user is None:
-        print("exiting")
         return
     GlobalVars.blacklisted_users.append((user, message_url, post_url))
-    print("blacklisted")
     with open("blacklistedUsers.txt", "wb") as f:
         pickle.dump(GlobalVars.blacklisted_users, f, protocol=pickle.HIGHEST_PROTOCOL)
 
