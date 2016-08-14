@@ -126,7 +126,8 @@ def add_whitelisted_user(user):
 
 
 def add_blacklisted_user(user, message_url, post_url):
-    print("adding blu")
+    print(user.__str__())
+    print("adding blu" + message_url + " " + post_url)
     if is_blacklisted_user(user) or user is None:
         print("exiting")
         return
