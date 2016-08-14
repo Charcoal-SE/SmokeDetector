@@ -133,15 +133,15 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                 if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
                     chq_pings = get_user_names_on_notification_list("stackexchange.com", GlobalVars.charcoal_room_id, site, GlobalVars.wrap)
                     chq_msg = prefix + s
-                    chq_msg_pings = prefix + s + append_pings(s, chq_pings)
-                    chq_msg_pings_ms = prefix_ms + s + append_pings(s, chq_pings)
+                    chq_msg_pings = prefix + append_pings(s, chq_pings)
+                    chq_msg_pings_ms = prefix_ms + append_pings(s, chq_pings)
                     msg_to_send = chq_msg_pings_ms if len(chq_msg_pings_ms) <= 500 else chq_msg_pings if len(chq_msg_pings) <= 500 else chq_msg[0:500]
                     GlobalVars.charcoal_hq.send_message(msg_to_send)
                 if reason not in GlobalVars.non_tavern_reasons and site not in GlobalVars.non_tavern_sites and time.time() >= GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id]:
                     tavern_pings = get_user_names_on_notification_list("meta.stackexchange.com", GlobalVars.meta_tavern_room_id, site, GlobalVars.wrapm)
                     tavern_msg = prefix + s
-                    tavern_msg_pings = prefix + s + append_pings(s, tavern_pings)
-                    tavern_msg_pings_ms = prefix_ms + s + append_pings(s, tavern_pings)
+                    tavern_msg_pings = prefix + append_pings(s, tavern_pings)
+                    tavern_msg_pings_ms = prefix_ms + append_pings(s, tavern_pings)
                     msg_to_send = tavern_msg_pings_ms if len(tavern_msg_pings_ms) <= 500 else tavern_msg_pings if len(tavern_msg_pings) <= 500 else tavern_msg[0:500]
                     t_check_websocket = Thread(target=DeletionWatcher.post_message_if_not_deleted, args=((post_id, site, "answer" if is_answer else "question"), post_url, msg_to_send, GlobalVars.tavern_on_the_meta))
                     t_check_websocket.daemon = True
@@ -149,8 +149,8 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                 if site == "stackoverflow.com" and reason not in GlobalVars.non_socvr_reasons and time.time() >= GlobalVars.blockedTime[GlobalVars.socvr_room_id]:
                     socvr_pings = get_user_names_on_notification_list("stackoverflow.com", GlobalVars.socvr_room_id, site, GlobalVars.wrapso)
                     socvr_msg = prefix + s
-                    socvr_msg_pings = prefix + s + append_pings(s, socvr_pings)
-                    socvr_msg_pings_ms = prefix_ms + s + append_pings(s, socvr_pings)
+                    socvr_msg_pings = prefix + append_pings(s, socvr_pings)
+                    socvr_msg_pings_ms = prefix_ms + append_pings(s, socvr_pings)
                     msg_to_send = socvr_msg_pings_ms if len(socvr_msg_pings_ms) <= 500 else socvr_msg_pings if len(socvr_msg_pings) <= 500 else socvr_msg[0:500]
                     GlobalVars.socvr.send_message(msg_to_send)
 
@@ -163,8 +163,8 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                         room_id = int(room.id)
                         room_pings = get_user_names_on_notification_list(room_site, room_id, site, room._client)
                         room_msg = prefix + s
-                        room_msg_pings = prefix + s + append_pings(s, room_pings)
-                        room_msg_pings_ms = prefix_ms + s + append_pings(s, room_pings)
+                        room_msg_pings = prefix + append_pings(s, room_pings)
+                        room_msg_pings_ms = prefix_ms + append_pings(s, room_pings)
                         msg_to_send = room_msg_pings_ms if len(room_msg_pings_ms) <= 500 else room_msg_pings if len(room_msg_pings) <= 500 else room_msg[0:500]
                         specialroom["room"].send_message(msg_to_send)
     except:
