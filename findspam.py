@@ -458,7 +458,7 @@ class FindSpam:
         r"crack[\w-]*?(serial|soft|password)[\w-]*?\.(co|net)",
         r"(downloader|pdf)converter\.(com|net)", r"sourceforge\.net[\w/]*convert",
         r"ware[\w-]*?download\.(com|net|info|in\W)",
-        r"((\d|\w{3})livestream|livestream(ing|s))[\w]*?\.(com|net|tv)",
+        r"((\d|\w{3})livestream|livestream(ing|s))[\w]*?\.(com|net|tv)", r"\w+vs\w+live\.(com|net|tv)",
         r"(play|watch|cup|20)[\w-]*?(live|online)\.(com|net|tv)", r"worldcup\d[\w-]*?\.(com|net|tv|blogspot)",
         r"https?://(\w{5,}tutoring\w*|cheat[\w-.]{3,}|xtreme[\w-]{5,})\.",
         r"(platinum|paying|acai|buy|premium|premier|ultra|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
