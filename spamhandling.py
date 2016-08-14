@@ -33,7 +33,7 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
             blacklisted_post_url = blacklisted_user_data[2]
             if blacklisted_post_url:
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
-                why += u"\nBlacklisted user - blacklisted for {} (http://metasmoke.erwaysoftware.com/posts/by-url?url={}) by {}".format(blacklisted_post_url, rel_url, message_url)
+                why += u"\nBlacklisted user - blacklisted for {} (//metasmoke.erwaysoftware.com/posts/by-url?url={}) by {}".format(blacklisted_post_url, rel_url, message_url)
             else:
                 why += u"\n" + u"Blacklisted user - blacklisted by {}".format(message_url)
     if 0 < len(test):
@@ -104,13 +104,19 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
         title = escape_special_chars_in_title(title)
         sanitized_title = regex.sub('https?://', '', title)
 
+        prefix = u"[ [SmokeDetector](//git.io/vgx7b) ]"
+        if GlobalVars.metasmoke_key:
+            prefix_ms = u"[ [SmokeDetector](//git.io/vgx7b) | [MS](//m.erwaysoftware.com/posts/by-url?url=" + post_url + ") ]"
+        else:
+            prefix_ms = prefix
+
         if not poster.strip():
-            s = u"[ [SmokeDetector](//git.io/vgx7b) ] {}: [{}]({}) by a deleted user on `{}`" \
+            s = u" {}: [{}]({}) by a deleted user on `{}`" \
                 .format(reason, sanitized_title.strip(), post_url, site)
             username = ""
             user_link = ""
         else:
-            s = u"[ [SmokeDetector](//git.io/vgx7b) ] {}: [{}]({}) by [{}]({}) on `{}`" \
+            s = u" {}: [{}]({}) by [{}]({}) on `{}`" \
                 .format(reason, sanitized_title.strip(), post_url, poster.strip(), poster_url, site)
             username = poster.strip()
             user_link = poster_url
@@ -124,25 +130,29 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             append_to_latest_questions(site, post_id, title)
 
             if reason not in GlobalVars.experimental_reasons:
-                metasmoke_link = u" [\u2026](//metasmoke.erwaysoftware.com/posts/by-url?url=" + post_url + ")" if GlobalVars.metasmoke_key else ""
                 if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
                     chq_pings = get_user_names_on_notification_list("stackexchange.com", GlobalVars.charcoal_room_id, site, GlobalVars.wrap)
-                    chq_msg = append_pings(s, chq_pings)
-                    chq_msg_ms = chq_msg + metasmoke_link
-                    GlobalVars.charcoal_hq.send_message(chq_msg_ms if len(chq_msg_ms) <= 500 else chq_msg if len(chq_msg) <= 500 else s[0:500])
+                    chq_msg = prefix + s
+                    chq_msg_pings = prefix + s + append_pings(s, chq_pings)
+                    chq_msg_pings_ms = prefix_ms + s + append_pings(s, chq_pings)
+                    msg_to_send = chq_msg_pings_ms if len(chq_msg_pings_ms) <= 500 else chq_msg_pings if len(chq_msg_pings) <= 500 else chq_msg[0:500]
+                    GlobalVars.charcoal_hq.send_message(msg_to_send)
                 if reason not in GlobalVars.non_tavern_reasons and site not in GlobalVars.non_tavern_sites and time.time() >= GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id]:
                     tavern_pings = get_user_names_on_notification_list("meta.stackexchange.com", GlobalVars.meta_tavern_room_id, site, GlobalVars.wrapm)
-                    tavern_msg = append_pings(s, tavern_pings)
-                    tavern_msg_ms = tavern_msg + metasmoke_link
-                    msg_to_send = tavern_msg_ms if len(tavern_msg_ms) <= 500 else tavern_msg if len(tavern_msg) <= 500 else s[0:500]
+                    tavern_msg = prefix + s
+                    tavern_msg_pings = prefix + s + append_pings(s, tavern_pings)
+                    tavern_msg_pings_ms = prefix_ms + s + append_pings(s, tavern_pings)
+                    msg_to_send = tavern_msg_pings_ms if len(tavern_msg_pings_ms) <= 500 else tavern_msg_pings if len(tavern_msg_pings) <= 500 else tavern_msg[0:500]
                     t_check_websocket = Thread(target=DeletionWatcher.post_message_if_not_deleted, args=((post_id, site, "answer" if is_answer else "question"), post_url, msg_to_send, GlobalVars.tavern_on_the_meta))
                     t_check_websocket.daemon = True
                     t_check_websocket.start()
                 if site == "stackoverflow.com" and reason not in GlobalVars.non_socvr_reasons and time.time() >= GlobalVars.blockedTime[GlobalVars.socvr_room_id]:
                     socvr_pings = get_user_names_on_notification_list("stackoverflow.com", GlobalVars.socvr_room_id, site, GlobalVars.wrapso)
-                    socvr_msg = append_pings(s, socvr_pings)
-                    socvr_msg_ms = socvr_msg + metasmoke_link
-                    GlobalVars.socvr.send_message(socvr_msg_ms if len(socvr_msg_ms) <= 500 else socvr_msg if len(socvr_msg) <= 500 else s[0:500])
+                    socvr_msg = prefix + s
+                    socvr_msg_pings = prefix + s + append_pings(s, socvr_pings)
+                    socvr_msg_pings_ms = prefix_ms + s + append_pings(s, socvr_pings)
+                    msg_to_send = socvr_msg_pings_ms if len(socvr_msg_pings_ms) <= 500 else socvr_msg_pings if len(socvr_msg_pings) <= 500 else socvr_msg[0:500]
+                    GlobalVars.socvr.send_message(msg_to_send)
 
             for specialroom in GlobalVars.specialrooms:
                 sites = specialroom["sites"]
@@ -152,9 +162,11 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                         room_site = room._client.host
                         room_id = int(room.id)
                         room_pings = get_user_names_on_notification_list(room_site, room_id, site, room._client)
-                        room_msg = append_pings(s, room_pings)
-                        room_msg_ms = room_msg + metasmoke_link
-                        specialroom["room"].send_message(room_msg_ms if len(room_msg_ms) <= 500 else room_msg if len(room_msg) <= 500 else s[0:500])
+                        room_msg = prefix + s
+                        room_msg_pings = prefix + s + append_pings(s, room_pings)
+                        room_msg_pings_ms = prefix_ms + s + append_pings(s, room_pings)
+                        msg_to_send = room_msg_pings_ms if len(room_msg_pings_ms) <= 500 else room_msg_pings if len(room_msg_pings) <= 500 else room_msg[0:500]
+                        specialroom["room"].send_message(msg_to_send)
     except:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         excepthook.uncaught_exception(exc_type, exc_obj, exc_tb)
