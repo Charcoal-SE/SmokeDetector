@@ -111,13 +111,11 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             prefix_ms = prefix
 
         if not poster.strip():
-            s = u" {}: [{}]({}) by a deleted user on `{}`" \
-                .format(reason, sanitized_title.strip(), post_url, site)
+            s = u" {}: [{}]({}) by a deleted user on `{}`".format(reason, sanitized_title.strip(), post_url, site)
             username = ""
             user_link = ""
         else:
-            s = u" {}: [{}]({}) by [{}]({}) on `{}`" \
-                .format(reason, sanitized_title.strip(), post_url, poster.strip(), poster_url, site)
+            s = u" {}: [{}]({}) by [{}]({}) on `{}`" .format(reason, sanitized_title.strip(), post_url, poster.strip(), poster_url, site)
             username = poster.strip()
             user_link = poster_url
 
@@ -128,7 +126,6 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
         print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
         if time.time() >= GlobalVars.blockedTime["all"]:
             append_to_latest_questions(site, post_id, title)
-
             if reason not in GlobalVars.experimental_reasons:
                 if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
                     chq_pings = get_user_names_on_notification_list("stackexchange.com", GlobalVars.charcoal_room_id, site, GlobalVars.wrap)
