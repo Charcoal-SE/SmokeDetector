@@ -343,7 +343,7 @@ class FindSpam:
         "crevalorsite\\.com", "macfixz\\.com", "moviesexplore\\.com", "computouchinc\\.com",
         "iphoneunlocking\\.org", "driverbasket\\.com", "erasephone\\.com", "femalevenue\\.com",
         "bloggermaking\\.com", "supportphonenumber\\.com", "digitalmantra\\.co",
-        "prinenidz\\.com", "e-priceinbd", "ecigpre\\.com", "movingexpert\\.in",
+        "prinenidz\\.com", "e-priceinbd", "ecigpre\\.com", "movingexpert\\.in", "1stquest\\.com",
         "maddenmobilehack", "supplements4help", "watchtheboxing",
         "cacherealestate\\.com", "Matrixhackka007", "aoatech\\.com",
         "pharaohtools", "msoutlooktools\\.com", "softwarezee",
