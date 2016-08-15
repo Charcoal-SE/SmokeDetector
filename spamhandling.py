@@ -181,8 +181,6 @@ def handle_user_with_all_spam(user, why):
         GlobalVars.tavern_on_the_meta.send_message(s)
     if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
         GlobalVars.charcoal_hq.send_message(s)
-    if site == "stackoverflow.com" and time.time() >= GlobalVars.blockedTime[GlobalVars.socvr_room_id]:
-        GlobalVars.socvr.send_message(s)
     for specialroom in GlobalVars.specialrooms:
         room = specialroom["room"]
         if site in specialroom["sites"] and (room.id not in GlobalVars.blockedTime or time.time() >= GlobalVars.blockedTime[room.id]):
