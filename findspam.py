@@ -344,7 +344,7 @@ class FindSpam:
         "iphoneunlocking\\.org", "driverbasket\\.com", "erasephone\\.com", "femalevenue\\.com",
         "bloggermaking\\.com", "supportphonenumber\\.com", "digitalmantra\\.co",
         "prinenidz\\.com", "e-priceinbd", "ecigpre\\.com", "movingexpert\\.in", "1stquest\\.com",
-        "maddenmobilehack", "supplements4help", "watchtheboxing",
+        "maddenmobilehack", "supplements4help", "watchtheboxing", "scriptbaran\\.com",
         "cacherealestate\\.com", "Matrixhackka007", "aoatech\\.com",
         "pharaohtools", "msoutlooktools\\.com", "softwarezee",
         "i-hire\\.pro", "pandamw\\.com", "hariraya2015\\.net",
