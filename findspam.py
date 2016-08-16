@@ -346,7 +346,7 @@ class FindSpam:
         "prinenidz\\.com", "e-priceinbd", "ecigpre\\.com", "movingexpert\\.in", "1stquest\\.com",
         "maddenmobilehack", "supplements4help", "watchtheboxing", "scriptbaran\\.com",
         "cacherealestate\\.com", "Matrixhackka007", "aoatech\\.com",
-        "pharaohtools", "msoutlooktools\\.com", "softwarezee",
+        "pharaohtools", "msoutlooktools\\.com", "softwarezee", "imobie\\.com", "primosync\\.com",
         "i-hire\\.pro", "pandamw\\.com", "hariraya2015\\.net",
         "multipelife\\.com", "seasoncars\\.com", "evolvedlifevisions\\.com",
         "flexihub\\.com", "\\.debt\\.com", "websiteseochecker\\.com",
