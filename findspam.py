@@ -169,7 +169,7 @@ def keyword_link(s, site):   # thanking keyword and a link in the same short ans
 
 def bad_link_text(s, site):   # suspicious text of a hyperlink
     s = regex.sub("</?strong>|</?em>", "", s)  # remove font tags
-    reg = regex.compile(ur"(?isu)^(buy|cheap)\b|\b(porno?|(whole)?sale|coins|replica|luxury|essays?|thesis|in \L<city>)\b|\b\L<city>.*(service|escort|call girl)|(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery)|\bwriting service", city=FindSpam.city_list)
+    reg = regex.compile(ur"(?isu)^(buy|cheap)\b|\bmake (money|\$)| \$[\d,]{3}|\b(porno?|(whole)?sale|coins|replica|luxury|essays?|thesis|in \L<city>)\b|\b\L<city>.*(service|escort|call girl)|(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery)|\bwriting service", city=FindSpam.city_list)
     links = regex.compile(ur'(?<=nofollow">)[^<]*(?=</a>)', regex.UNICODE).findall(s)
     for link_text in links:
         match = reg.search(link_text)
@@ -345,7 +345,7 @@ class FindSpam:
         "bloggermaking\\.com", "supportphonenumber\\.com", "digitalmantra\\.co",
         "prinenidz\\.com", "e-priceinbd", "ecigpre\\.com", "movingexpert\\.in", "1stquest\\.com",
         "maddenmobilehack", "supplements4help", "watchtheboxing", "scriptbaran\\.com",
-        "cacherealestate\\.com", "Matrixhackka007", "aoatech\\.com",
+        "cacherealestate\\.com", "Matrixhackka007", "aoatech\\.com", "leonardhysaj\\.com",
         "pharaohtools", "msoutlooktools\\.com", "softwarezee", "imobie\\.com", "primosync\\.com",
         "i-hire\\.pro", "pandamw\\.com", "hariraya2015\\.net",
         "multipelife\\.com", "seasoncars\\.com", "evolvedlifevisions\\.com",
