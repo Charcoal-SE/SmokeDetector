@@ -32,7 +32,7 @@ def check_permissions(function):
             return function(*args, **kwargs)
         else:
             return Response(command_status=False,
-                            message="Permission Denied. See [the Privileges wiki page](" + GlobalVars.bot_repository +
+                            message="You are not a privileged user. Please see [the Privileges wiki page](" + GlobalVars.bot_repository +
                                     "/wiki/Privileges) for information on what privileges are and what is expected.")
 
     return run_command
