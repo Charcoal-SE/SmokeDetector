@@ -32,8 +32,8 @@ def check_permissions(function):
             return function(*args, **kwargs)
         else:
             return Response(command_status=False,
-                            message="You are not a privileged user. Please see [the Privileges wiki page](" + GlobalVars.bot_repository +
-                                    "/wiki/Privileges) for information on what privileges are and what is expected.")
+                            message="You are not a privileged user. Please see [the privileges wiki page](" + GlobalVars.bot_repository +
+                                    "/wiki/Privileges) for information on what privileges are and what is expected of privileged users.")
 
     return run_command
 
@@ -502,9 +502,8 @@ def command_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
     if is_privileged(ev_room, ev_user_id, wrap2):
         return Response(command_status=True, message="Yes, you are a privileged user.")
     return Response(command_status=True,
-                    message="No, you are not a privileged user. See "
-                            "[the Privileges wiki page](" + GlobalVars.bot_repository + "/wiki/Privileges) "
-                                                                                        "for information on what privileges are and what is expected.")
+                    message="No, you are not a privileged user. Please see [the privileges wiki page](" + GlobalVars.bot_repository +
+                    "/wiki/Privileges) for information on what privileges are and what is expected of privileged users.")
 
 
 def command_quota(*args, **kwargs):

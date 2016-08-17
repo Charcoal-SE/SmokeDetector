@@ -179,14 +179,13 @@ def test_privileged_users():
 
     event = mock_event("!!/amiprivileged", 1, 11540, "Charcoal HQ", -5, u"Some bot")
     watcher(event, client.Client())
-    assert reply_value == "No, you are not a privileged user. See [the Privileges wiki page](//github.com/Charcoal-SE/SmokeDetector/wiki/Privileges) for information on what privileges are and what is expected."
+    assert reply_value == "No, you are not a privileged user. Please see [the privileges wiki page](//github.com/Charcoal-SE/SmokeDetector/wiki/Privileges) for information on what privileges are and what is expected of privileged users."
 
 
 def test_unprivileged_denial():
     event = mock_event("!!/rmwlu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", -5, u"Some bot")
     watcher(event, client.Client())
-    assert reply_value == "Permission Denied. See [the Privileges wiki page](" + GlobalVars.bot_repository +\
-                          "/wiki/Privileges) for information on what privileges are and what is expected."
+    assert reply_value == "You are not a privileged user. Please see [the privileges wiki page](" + GlobalVars.bot_repository + "/wiki/Privileges) for information on what privileges are and what is expected of privileged users."
 
 
 def test_test_command():
