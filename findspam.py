@@ -430,7 +430,7 @@ class FindSpam:
         "discussfact\\.com", "sirabhinavjain\\.com", "moneytransfercomparison\\.co",
         "exchangeratetoday\\.co", "currencysolutions\\.co", "accudb\\.com",
         "grey-areaweed\\.com", "360musicng\\.co", "oyetrade\\.com", "softwarednl.com",
-        "trickspaid\\.com", "bulksmsclub\\.com", "redbubble\\.com", "joomag\\.com",
+        "trickspaid\\.com", "bulksmsclub\\.com", "redbubble\\.com", "joomag\\.com", "bigclasses\\.com",
         "ladybirdco\\.com", "magehit\\.com", "colors34.com", "ultimatewowguide\\.com", "fiverr\\.com/\\w+",
         "shaperich\\.com", "ugccoaching\\.com", "androidpluspc\\.com", "learnit\\.technology", "mastersite\\.com\\.ua",
         "jobstelangana\\.in", "readyscript\\.ru", "unlock-bootloaderb\\.xyz", "romrootandroid\\.xyz",
