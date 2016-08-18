@@ -349,7 +349,7 @@ class FindSpam:
         "pharaohtools", "msoutlooktools\\.com", "softwarezee", "imobie\\.com", "primosync\\.com",
         "i-hire\\.pro", "pandamw\\.com", "hariraya2015\\.net",
         "multipelife\\.com", "seasoncars\\.com", "evolvedlifevisions\\.com", "leptigentry\\.com",
-        "flexihub\\.com", "\\.debt\\.com", "websiteseochecker\\.com",
+        "flexihub\\.com", "\\.debt\\.com", "websiteseochecker\\.com", "fullsoftversion\\.com",
         "hotfrog\\.ca", "snorg(content|tees)\\.com", "webtechcoupons",
         "architecturedesign\\.tk", "playerhot\\.com", "fitwaypoint\\.com",
         "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
