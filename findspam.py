@@ -70,7 +70,7 @@ def non_english_link(s, site):   # non-english link in short answer
 def mostly_non_latin(s, site):   # majority of post is in non-Latin, non-Cyrillic characters
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
-    word_chars = regex.sub(r'(?u)[\W0-9]|\http[^"]*', "", s)
+    word_chars = regex.sub(r'(?u)[\W0-9]|http\S*', "", s)
     non_latin_chars = regex.sub(r"(?u)\p{script=Latin}|\p{script=Cyrillic}", "", word_chars)
     if (len(non_latin_chars) > 0.4 * len(word_chars)):
         return True, u"Text contains {} non-Latin characters out of {}".format(len(non_latin_chars), len(word_chars))
