@@ -429,12 +429,13 @@ class FindSpam:
         "zaputra\\.com", "ok8uk\\.org\\.uk", "visitdevonandcornwall\\.co\\.uk",
         "discussfact\\.com", "sirabhinavjain\\.com", "moneytransfercomparison\\.co",
         "exchangeratetoday\\.co", "currencysolutions\\.co", "accudb\\.com", "iqdermaessentials\\.com",
-        "grey-areaweed\\.com", "360musicng\\.co", "oyetrade\\.com", "softwarednl.com",
+        "grey-areaweed\\.com", "360musicng\\.co", "oyetrade\\.com", "softwarednl.com", "forexprotect\\.com",
         "trickspaid\\.com", "bulksmsclub\\.com", "redbubble\\.com", "joomag\\.com", "bigclasses\\.com",
         "ladybirdco\\.com", "magehit\\.com", "colors34.com", "ultimatewowguide\\.com", "fiverr\\.com/\\w+",
         "shaperich\\.com", "ugccoaching\\.com", "androidpluspc\\.com", "learnit\\.technology", "mastersite\\.com\\.ua",
         "jobstelangana\\.in", "readyscript\\.ru", "unlock-bootloaderb\\.xyz", "romrootandroid\\.xyz", "drozforskolin\\.org",
         "supplementsadvisor\\.org", "pokercheatcenter\\.com", "intelligentadvices\\.com", "yoursbetterhealthsolutions\\.com",
+        "naturalmusclegaininfo\\.com", "eyeluminoushelps\\.com", "isscamreview\\.com", "topessaywritingservice\\.org",
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
