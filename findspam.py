@@ -428,7 +428,7 @@ class FindSpam:
         "delhigurgaon\\.in", "gurgaonsex\\.com", "mehedi399blog", "myfundbucket\\.com",
         "zaputra\\.com", "ok8uk\\.org\\.uk", "visitdevonandcornwall\\.co\\.uk",
         "discussfact\\.com", "sirabhinavjain\\.com", "moneytransfercomparison\\.co",
-        "exchangeratetoday\\.co", "currencysolutions\\.co", "accudb\\.com",
+        "exchangeratetoday\\.co", "currencysolutions\\.co", "accudb\\.com", "iqdermaessentials\\.com",
         "grey-areaweed\\.com", "360musicng\\.co", "oyetrade\\.com", "softwarednl.com",
         "trickspaid\\.com", "bulksmsclub\\.com", "redbubble\\.com", "joomag\\.com", "bigclasses\\.com",
         "ladybirdco\\.com", "magehit\\.com", "colors34.com", "ultimatewowguide\\.com", "fiverr\\.com/\\w+",
