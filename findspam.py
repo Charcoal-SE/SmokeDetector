@@ -351,7 +351,7 @@ class FindSpam:
         "multipelife\\.com", "seasoncars\\.com", "evolvedlifevisions\\.com", "leptigentry\\.com",
         "flexihub\\.com", "\\.debt\\.com", "websiteseochecker\\.com", "fullsoftversion\\.com",
         "hotfrog\\.ca", "snorg(content|tees)\\.com", "webtechcoupons", "diwaliimages\\d+\\.in",
-        "architecturedesign\\.tk", "playerhot\\.com", "fitwaypoint\\.com",
+        "architecturedesign\\.tk", "playerhot\\.com", "fitwaypoint\\.com", "usefulpcguide\\.com",
         "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net",
         "statesmovie", "cleanlean", "iFoneMate", "babygames5\\.com",
         "replacementlaptopkeys\\.com", "safewiper\\.com", "ostoto\\.com",
