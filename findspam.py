@@ -282,7 +282,7 @@ class FindSpam:
         "axsoccertours", "ragednablog", "ios8easyjailbreak", "webforpc\\.com", "vbuycars\\.com",
         "totalfitnesspoint", "trustessaywriting", "thesispaperwriters", "homeworkhelponline",
         "trustmyessay", "faasoft", "besttvshows", "mytechlabs", "Housecarbike\\.com",
-        "giikers", "pagetube", "myenv\\.org", "testkiz\\.com", "nebusconitirk",
+        "giikers", "pagetube", "myenv\\.org", "testkiz\\.com", "nebusconitirk", "boxasian\\.com",
         "pelevoniface", "herintalk", "menshealth", "examguidez", "kynix\\.com",
         "skinphysiciantips", "xtrememusclerecoveryrev", "xtgenixau\\.com", "orignalsoft\\.com",
         "diabacordoesitwork", "mixresult\\.com", "win-ipad\\.", "mecharithm\\.com",
