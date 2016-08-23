@@ -222,8 +222,9 @@ class GlobalVars:
             "2227743",  # Eric D
             "821878",   # Ryan Bemrose
             "1413395",  # Panta Rei
-            "4875631",   # FrankerZ
-            "2958086"  # Compass
+            "4875631",  # FrankerZ
+            "2958086",  # Compass
+            "499214"  # JanDvorak
         ]
     }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
