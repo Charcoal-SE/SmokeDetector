@@ -177,8 +177,6 @@ def handle_user_with_all_spam(user, why):
         .format(user_id, site, site, user_id, tab)
     print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
     add_why_allspam(user, why)
-    if time.time() >= GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id]:
-        GlobalVars.tavern_on_the_meta.send_message(s)
     if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
         GlobalVars.charcoal_hq.send_message(s)
     for specialroom in GlobalVars.specialrooms:
