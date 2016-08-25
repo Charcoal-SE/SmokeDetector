@@ -176,11 +176,11 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
     for link_text in links:
         keywords_match = keywords.search(link_text)
         if keywords_match:
-            return True, u"Bad keyword *{}* in link text".format(keywords_match.group(0))
+            return True, u"Bad keyword *{}* in link text".format(keywords_match.group(0).strip())
         business_match = business.search(link_text)
         support_match = support.search(link_text)
         if business_match and support_match:
-            return True, u"Bad keywords *{}*, *{}* in link text".format(business_match.group(0), support_match.group(0))
+            return True, u"Bad keywords *{}*, *{}* in link text".format(business_match.group(0).strip(), support_match.group(0).strip())
     return False, ""
 
 
@@ -579,7 +579,7 @@ class FindSpam:
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 1},
         # Bad keyword in link text
         {'method': bad_link_text, 'all': True,
-         'sites': [], 'reason': 'bad keyword in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+         'sites': [], 'reason': 'bad keyword in link text in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Country-name domains, travel and expats sites are exempt
         {'regex': ur"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|spain|sweden)\w{0,4}\.(com|net)", 'all': True,
          'sites': ["travel.stackexchange.com", "expatriates.stackexchange.com"], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
