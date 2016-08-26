@@ -92,7 +92,8 @@ class GlobalVars:
             "137388",   # QPaysTaxes
             "212311",   # Ryan Bemrose
             "172397",   # Kyll
-            "224538"    # FrankerZ
+            "224538",    # FrankerZ
+            "61202"     # OldSkool
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
