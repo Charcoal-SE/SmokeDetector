@@ -92,7 +92,7 @@ class GlobalVars:
             "137388",   # QPaysTaxes
             "212311",   # Ryan Bemrose
             "172397",   # Kyll
-            "224538",    # FrankerZ
+            "224538",   # FrankerZ
             "61202"     # OldSkool
         ],
         meta_tavern_room_id: [
@@ -163,7 +163,8 @@ class GlobalVars:
             "302251",   # kos
             "262823",   # ArtOfCode
             "215067",   # Ferrybig
-            "308386"    # Magisch
+            "308386",   # Magisch
+            "285368"    # angussidney
         ],
         socvr_room_id: [
             "1849664",  # Undo
@@ -225,7 +226,7 @@ class GlobalVars:
             "1413395",  # Panta Rei
             "4875631",  # FrankerZ
             "2958086",  # Compass
-            "499214"  # JanDvorak
+            "499214"    # JanDvorak
         ]
     }
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
