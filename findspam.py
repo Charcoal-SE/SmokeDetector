@@ -359,7 +359,7 @@ class FindSpam:
         "hotfrog\\.ca", "snorg(content|tees)\\.com", "webtechcoupons", "diwaliimages\\d+\\.in",
         "architecturedesign\\.tk", "playerhot\\.com", "fitwaypoint\\.com", "usefulpcguide\\.com",
         "xinyanlaw", "ultrafinessesite", "sunitlabs\\.com", "puravol\\.net", "2captcha\\.com",
-        "statesmovie", "cleanlean", "iFoneMate", "babygames5\\.com",
+        "statesmovie", "cleanlean", "iFoneMate", "babygames5\\.com", 
         "replacementlaptopkeys\\.com", "safewiper\\.com", "ostoto\\.com",
         "academicservices\\.us", "writerspk\\.com",
         "musclebuilding(products|base)", "Blogdolllar\\.net", "bendul\\.com",
@@ -441,6 +441,7 @@ class FindSpam:
         "shaperich\\.com", "ugccoaching\\.com", "androidpluspc\\.com", "learnit\\.technology", "mastersite\\.com\\.ua",
         "jobstelangana\\.in", "readyscript\\.ru", "unlock-bootloaderb\\.xyz", "romrootandroid\\.xyz", "drozforskolin\\.org",
         "supplementsadvisor\\.org", "pokercheatcenter\\.com", "intelligentadvices\\.com", "yoursbetterhealthsolutions\\.com",
+        "makehimmine\\.com\\.au",
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
