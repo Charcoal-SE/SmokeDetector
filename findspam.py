@@ -245,7 +245,7 @@ class FindSpam:
         "raging lion", "(love|miracle).*spell ?casters?", "08151871776", "retrodynamic formula",
         "^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$", "Krojam(Soft|Cleaner)?", "FilesSearch ?Tool",
         "teksonit", "Re@d More", "Live Streaming</a", "Blackcore ?Edge", "Copy Buffett", "Push Money App",
-        "Volive( Solutions)?", "Herbalife", "Accumass", "purple rhino male enhancement",
+        "Volive( Solutions)?", "Herbalife", "Accumass", "purple rhino male enhancement", "Dating Coaching",
         "male enhancement supplements", "alpha levo", "digital marketing course", "stark trading system",
         "bring back lost lover", "service proposal essay", "enetdocumentation", "okaygoods", "bojiter",
         "dr ?eziza", "(spell(home)?|temple|classes)@gmail\\.com", "viagra", "cialis", "slotobit",
