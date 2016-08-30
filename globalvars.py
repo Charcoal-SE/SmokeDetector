@@ -38,6 +38,8 @@ class GlobalVars:
         "Title has only one unique char",
         "Phone number detected in title",
         "Offensive body detected",
+        "No whitespace in body",
+        "No whitespace in answer",
     ]
     non_tavern_sites = ["stackoverflow.com"]
 
