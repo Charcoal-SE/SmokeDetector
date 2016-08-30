@@ -5,5 +5,5 @@ coverage
 pytest
 phonenumbers
 flake8
-regex
+regex==2015.11.22
 termcolor
