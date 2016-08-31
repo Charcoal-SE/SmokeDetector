@@ -21,6 +21,11 @@ def should_whitelist_prevent_alert(user_url, reasons):
     return len(reasons_comparison) == 0
 
 
+def should_reasons_prevent_tavern_posting(reasons):
+    reasons_comparison = [r for r in set(reasons) if r not in GlobalVars.non_tavern_reasons]
+    return len(reasons_comparison) == 0
+
+
 def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer, body_is_summary, owner_rep, post_score):
     if not body:
         body = ""
@@ -134,7 +139,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                     chq_msg_pings_ms = prefix_ms + append_pings(s, chq_pings)
                     msg_to_send = chq_msg_pings_ms if len(chq_msg_pings_ms) <= 500 else chq_msg_pings if len(chq_msg_pings) <= 500 else chq_msg[0:500]
                     GlobalVars.charcoal_hq.send_message(msg_to_send)
-                if reason not in GlobalVars.non_tavern_reasons and site not in GlobalVars.non_tavern_sites and time.time() >= GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id]:
+                if not should_reasons_prevent_tavern_posting(reasons) and site not in GlobalVars.non_tavern_sites and time.time() >= GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id]:
                     tavern_pings = get_user_names_on_notification_list("meta.stackexchange.com", GlobalVars.meta_tavern_room_id, site, GlobalVars.wrapm)
                     tavern_msg = prefix + s
                     tavern_msg_pings = prefix + append_pings(s, tavern_pings)

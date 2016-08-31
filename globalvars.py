@@ -26,20 +26,18 @@ class GlobalVars:
     experimental_reasons = []  # Don't widely report these
     non_socvr_reasons = []    # Don't report to SOCVR
     non_tavern_reasons = [    # Don't report in the Tavern
-        "All-caps body",
-        "All-caps answer",
-        "Repeating characters in body",
-        "Repeating characters in title",
-        "Repeating characters in answer",
-        "Few unique characters in body",
-        "Few unique characters in answer",
-        "Few unique characters in body, repeating characters in body",
-        "Few unique characters in title, repeating characters in title",
-        "Title has only one unique char",
-        "Phone number detected in title",
-        "Offensive body detected",
-        "No whitespace in body",
-        "No whitespace in answer",
+        "all-caps body",
+        "all-caps answer",
+        "repeating characters in body",
+        "repeating characters in title",
+        "repeating characters in answer",
+        "few unique characters in body",
+        "few unique characters in answer",
+        "title has only one unique char",
+        "phone number detected in title",
+        "offensive body detected",
+        "no whitespace in body",
+        "no whitespace in answer",
     ]
     non_tavern_sites = ["stackoverflow.com"]
 
