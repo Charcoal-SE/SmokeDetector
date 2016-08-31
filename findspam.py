@@ -227,7 +227,7 @@ class FindSpam:
         "(fake|novelty|quality|buy(ing)?|sell(ing)?|offer).{0,20}(passport|driver'?s? licen[cs]e|ID card|green card|residence permit|toefl|Ielts)s?",
         "^.{0,200}(support|service|helpline)( phone)? number|1[ -]?[ -]?[ -]?866[ -]?978[ -]?(6819|6762)",
         "(mcafee|hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number",
-        "kitchen for sale", "pdftoexcelconverter", "keepbrowsersafe", "SpyHunter",
+        "kitchen for sale", "pdftoexcelconverter", "keepbrowsersafe",
         "pcerror-fix", "filerepairtool", "combatpcviruses", "SkinCentric",
         "JobsTribune", "join the (great )?illuminati", "Brorsoft", "Remo Recover",
         "kinnaristeel", "clash of (clan|stone)s? (cheats?|tricks?|gems?)",
