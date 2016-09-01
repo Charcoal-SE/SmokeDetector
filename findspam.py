@@ -217,7 +217,7 @@ class FindSpam:
         "rejuvenated skin", "ProBrain", "restore[ -]?samsung[ -]?data",
         "swtor2credits", "me2.do", "death reckoning calculate",
         "bam2u", "Neuro(3X|flexyn|fuse|luma|plex)", "TesteroneXL", "Nitroxin",
-        "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha ?(Rush|Fuel)",
+        "Bowtrol", "Slim ?Genix", "Cleanse EFX", "Alpha ?(Rush|Fuel)", "exoslim",
         "Blackline Elite", "TestCore Pro", "blank(ed)? ?ATM\\b( card)?", "ATM Machine Vault",
         "Xtreme Antler", "Maxx Test 3000", "orvigomax",
         "Cheap Wigs?", "jivam", "^(?s).{0,200}brain[- ]?power", "Maximum ?Shred",
