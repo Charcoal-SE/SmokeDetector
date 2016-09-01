@@ -93,7 +93,8 @@ class GlobalVars:
             "212311",   # Ryan Bemrose
             "172397",   # Kyll
             "224538",   # FrankerZ
-            "61202"     # OldSkool
+            "61202",    # OldSkool
+            "56166"     # Jan Dvorak
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
