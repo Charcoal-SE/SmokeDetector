@@ -249,7 +249,7 @@ class FindSpam:
         "male enhancement supplements", "alpha levo", "digital marketing course", "stark trading system",
         "bring back lost lover", "service proposal essay", "enetdocumentation", "okaygoods", "bojiter",
         "dr ?eziza", "(spell(home)?|temple|classes)@gmail\\.com", "viagra", "cialis", "slotobit",
-        "putlocker", "vimax", "(contact|call) us today", "call \\d{3}-\\d{4}-\\d{4}",
+        "putlocker", "vimax", "(contact|call) us today", "call \\d{3}-\\d{4}-\\d{4}", "sex sex bojiter"
     ]
     bad_keywords_nwb = [
         u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
