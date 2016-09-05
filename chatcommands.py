@@ -514,6 +514,14 @@ def command_quota(*args, **kwargs):
     return Response(command_status=True, message="The current API quota remaining is {}.".format(GlobalVars.apiquota))
 
 
+def command_queuestatus(*args, **kwargs):
+    """
+    Report current API queue
+    :return: A string
+    """
+    return Response(command_status=True, message=GlobalVars.bodyfetcher.print_queue())
+
+
 @check_permissions
 def command_stappit(ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -1199,6 +1207,7 @@ command_dict = {
     "!!/willibenotified": command_willbenotified,
     "!!/whoami": command_whoami,
     "!!/wut": command_wut,
+    "!!/queuestatus": command_queuestatus
 }
 
 # This dictionary defines our subcommands and the associated function to call
