@@ -261,6 +261,8 @@ class GlobalVars:
     multiple_reporters = []
     api_calls_per_site = {}
 
+    api_request_lock = threading.Lock()
+
     config = ConfigParser.RawConfigParser()
     config.read('config')
 
