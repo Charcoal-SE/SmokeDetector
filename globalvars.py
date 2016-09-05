@@ -7,6 +7,7 @@ import HTMLParser
 import md5
 import ConfigParser
 from helpers import environ_or_none
+import threading
 
 
 class GlobalVars:
