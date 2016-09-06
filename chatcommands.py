@@ -856,6 +856,10 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
             output.append("Post {}: Could not find data for this post in the API. "
                           "It may already have been deleted.".format(index))
             continue
+        if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive((post_data.post_id, post_data.site)):
+            # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
+            # this re-report might be attempting to correct that/fix a mistake/etc.
+            output.append("Post {}: Already recently reported".format(index))
         user = get_user_from_url(post_data.owner_url)
         if user is not None:
             add_blacklisted_user(user, message_url, post_data.post_url)
