@@ -142,6 +142,7 @@ class BodyFetcher:
         if GlobalVars.api_backoff_time > time.time():
             time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
         try:
+            time_request_made = datetime.strftime(datetime.now(), '%H:%M:%S')
             response = requests.get(url, timeout=20).json()
         except requests.exceptions.Timeout:
             return  # could add some retrying logic here, but eh.
@@ -171,7 +172,7 @@ class BodyFetcher:
             message_hq = "The quota_remaining property was not in the API response."
 
         if "error_message" in response:
-            message_hq += " Error: {}.".format(response["error_message"])
+            message_hq += " Error: {} at {} UTC.".format(response["error_message"], time_request_made)
             if "error_id" in response and response["error_id"] == 502:
                 if GlobalVars.api_backoff_time < time.time() + 12:  # Add a backoff of 10 + 2 seconds as a default
                     GlobalVars.api_backoff_time = time.time() + 12
@@ -182,7 +183,7 @@ class BodyFetcher:
                 GlobalVars.api_backoff_time = time.time() + response["backoff"]
             match = regex.compile('/2.2/([^.]*)').search(url)
             url_part = match.group(1) if match else url
-            message_hq += "\nBackoff received of {} seconds on request to `{}`".format(str(response["backoff"]), url_part)
+            message_hq += "\nBackoff received of {} seconds on request to `{}` at {} UTC".format(str(response["backoff"]), url_part, time_request_made)
 
         if len(message_hq) > 0:
             GlobalVars.charcoal_hq.send_message(message_hq.strip())
