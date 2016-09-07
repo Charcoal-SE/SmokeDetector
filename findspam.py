@@ -442,6 +442,7 @@ class FindSpam:
         "jobstelangana\\.in", "readyscript\\.ru", "unlock-bootloaderb\\.xyz", "romrootandroid\\.xyz", "drozforskolin\\.org",
         "supplementsadvisor\\.org", "pokercheatcenter\\.com", "intelligentadvices\\.com", "yoursbetterhealthsolutions\\.com",
         "makehimmine\\.com\\.au", "shopicheck\\.com", "hivimoore\\.com", "blogmium\\.com", "soundmagic\\.us",
+        "onlinecorrection\\.com", "dragracerv3game\\.com", "bananakong\\.net", "himzakaz\\.net", "dropcrack\\.com",
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
