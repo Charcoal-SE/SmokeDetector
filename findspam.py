@@ -429,7 +429,7 @@ class FindSpam:
         "cardvdonline\\.com", "icasnetwork\\.org", "epicresearch\\.co", "\\.soup\\.io", "pccdkeys\\.com",
         "hotxt\\.co\\.uk", "rcframecontractors", "bsgolds\\.com", "thedropnet\\.com",
         "science\\.misis\\.ru", "pdf\\.ac/", "slotobit\\.com", "thaykinhmanhinhcamung\\.com",
-        "sfdcbot\\.herokuapp\\.com", "technosanatgroup\\.com", "csgostrong\\.com", "freenom\\.com",
+        "sfdcbot\\.herokuapp\\.com", "technosanatgroup\\.com", "csgostrong\\.com",
         "emget\\.net", "gevezemirc\\.com", "divinenutrions\\.com", "ace23\\.tk", "fbsparta\\.com",
         "delhigurgaon\\.in", "gurgaonsex\\.com", "mehedi399blog", "myfundbucket\\.com",
         "zaputra\\.com", "ok8uk\\.org\\.uk", "visitdevonandcornwall\\.co\\.uk",
