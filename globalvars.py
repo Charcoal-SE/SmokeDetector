@@ -96,7 +96,8 @@ class GlobalVars:
             "61202",    # OldSkool
             "56166",    # Jan Dvorak
             "133966",   # DavidPostill
-            "22839"     # djsmiley2k
+            "22839",    # djsmiley2k
+            "97389"     # Kaz Wolfe
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
