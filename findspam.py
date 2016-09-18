@@ -297,7 +297,7 @@ class FindSpam:
         "sourceforge\\.net/projects/freepdftojpgconverter", "latestdatabase\\.com",
         "pdftoexel\\.wordpress\\.com", "best7th\\.in", "resolit\\.us", "techinpost\\.com",
         "malwaretips", "hackerscontent\\.com", "hrsoftwaresolution\\.com", "qboffers\\.com",
-        "webbuildersguide\\.com", "idealshare.net", "lankabpoacademy\\.com", "\\Wfita\\.in\\W",
+        "webbuildersguide\\.com", "idealshare\\.net", "lankabpoacademy\\.com", "\\Wfita\\.in\\W",
         "evomailserver\\.com", "gameart\\.net", "voonik\\.com", "pulsenight\\.com",
         "sofotex\\.com", "erecteentry", "fairharvardfund", "newfundingpoint\\.com",
         "mybloggingmoney\\.com", "windows-techsupport\\.com", "visaadvicecentre\\.com",
