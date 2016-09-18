@@ -652,7 +652,7 @@ class FindSpam:
         # Category: Trolling
         # Offensive content in titles and posts
         {'method': is_offensive_post, 'all': True, 'sites': [], 'reason': "offensive {} detected", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True,
-         'max_rep': 101, 'max_score': 5},
+         'max_rep': 101, 'max_score': 2},
         # Offensive title: titles are more sensitive
         {'regex': ur"(?i)\bfuck|(?<!brain)fuck(ers?|ing)?\b", 'all': True, 'sites': [], 'reason': "offensive {} detected", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': True, 'body_summary': False,
          'max_rep': 101, 'max_score': 5},
