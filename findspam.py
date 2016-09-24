@@ -172,7 +172,7 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
     keywords = regex.compile(ur"(?isu)^(buy|cheap) |live[ -]?stream|(^| )make (money|\$)(^| )(porno?|(whole)?sale|coins|replica|luxury|essays?|in \L<city>)($| )|(^| )\L<city>.*(service|escort|call girl)|(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery)|\b(writing service|essay (writing|tips))", city=FindSpam.city_list)
     links = regex.compile(ur'(?<=nofollow">)[^<]*(?=</a>)', regex.UNICODE).findall(s)
     business = regex.compile(r"(?i)(^| )(airlines?|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|sage|windows?|yahoo)($| )")
-    support = regex.compile(r"(?i)(^| )(customer|help|care|helpline|reservation|phone|recovery|service|support|contact|tech|technical|telephone|number)($| )")
+    support = regex.compile(r"(?i)(^| )(customer|care|helpline|reservation|phone|recovery|service|support|contact|tech|technical|telephone|number)($| )")
     for link_text in links:
         keywords_match = keywords.search(link_text)
         if keywords_match:
