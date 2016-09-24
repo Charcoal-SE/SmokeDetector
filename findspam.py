@@ -444,7 +444,7 @@ class FindSpam:
         "makehimmine\\.com\\.au", "shopicheck\\.com", "hivimoore\\.com", "blogmium\\.com", "soundmagic\\.us",
         "onlinecorrection\\.com", "dragracerv3game\\.com", "bananakong\\.net", "himzakaz\\.net", "dropcrack\\.com",
         "raybiztech\\.com", "cegonsoft\\.com", "technomaniya\\.com", "instantassignmenthelp\\.com\\.au", "huintech\\.com",
-        "dramaonline\\.pk", "gamingustaad\\.com",
+        "dramaonline\\.pk", "gamingustaad\\.com", " 000webhost\\.com",
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
