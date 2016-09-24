@@ -8,7 +8,8 @@ import sys
 import traceback
 import time
 import os
-from datahandling import add_blacklisted_user
+from datahandling import add_blacklisted_user, add_ignored_post
+from parsing import fetch_post_id_and_site_from_url
 
 
 class Metasmoke:
@@ -23,15 +24,16 @@ class Metasmoke:
                 print(a)
                 try:
                     data = json.loads(a)
-
                     if "message" in data:
                         message = data['message']
-
                         if isinstance(message, Iterable):
                             if "message" in message:
                                 GlobalVars.charcoal_hq.send_message(message['message'])
                             elif "blacklist" in message:
                                 add_blacklisted_user((message['blacklist']['uid'], message['blacklist']['site']), "metasmoke", message['blacklist']['post'])
+                            elif "naa" in message:
+                                post_site_id = fetch_post_id_and_site_from_url(message["naa"]["post_link"])
+                                add_ignored_post(post_site_id[0:2])
                             elif "commit_status" in message:
                                 c = message["commit_status"]
                                 sha = c["commit_sha"][:7]
@@ -70,11 +72,8 @@ class Metasmoke:
                 why = why[:512] + '...' + why[-512:]
 
             post = {'title': title, 'link': link, 'reasons': reasons, 'body': body, 'username': username, 'user_link': user_link, 'why': why, 'user_reputation': owner_rep, 'score': post_score, 'upvote_count': up_vote_count, 'downvote_count': down_vote_count}
-
             post = dict((k, v) for k, v in post.iteritems() if v)  # Remove None values (if they somehow manage to get through)
-
             payload = {'post': post, 'key': metasmoke_key}
-
             headers = {'Content-type': 'application/json'}
             requests.post(GlobalVars.metasmoke_host + "/posts.json", data=json.dumps(payload), headers=headers)
         except Exception as e:
@@ -125,7 +124,6 @@ class Metasmoke:
 
             headers = {'Content-type': 'application/json'}
             requests.post(GlobalVars.metasmoke_host + "/deletion_logs.json", data=json.dumps(payload), headers=headers)
-
         except Exception as e:
             print e
 
@@ -136,7 +134,6 @@ class Metasmoke:
             return
 
         threading.Timer(60, Metasmoke.send_status_ping).start()
-
         metasmoke_key = GlobalVars.metasmoke_key
 
         try:
@@ -147,6 +144,5 @@ class Metasmoke:
 
             headers = {'Content-type': 'application/json'}
             requests.post(GlobalVars.metasmoke_host + "/status-update.json", data=json.dumps(payload), headers=headers)
-
         except Exception as e:
             print e
