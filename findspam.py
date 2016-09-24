@@ -247,7 +247,7 @@ class FindSpam:
         "teksonit", "Re@d More", "Live Streaming</a", "Blackcore ?Edge", "Copy Buffett", "Push Money App",
         "Volive( Solutions)?", "Herbalife", "Accumass", "purple rhino male enhancement", "Dating Coaching",
         "male enhancement supplements", "alpha levo", "digital marketing course", "stark trading system",
-        "bring back lost lover", "service proposal essay", "enetdocumentation", "okaygoods", "bojiter",
+        "bring back lost lover", "service proposal essay", "enetdocumentation", "okaygoods", "((sex ?)+)?bojiter",
         "dr ?eziza", "(spell(home)?|temple|classes)@gmail\\.com", "viagra", "cialis", "slotobit",
         "putlocker", "vimax", "(contact|call) us today", "call \\d{3}-\\d{4}-\\d{4}",
     ]
