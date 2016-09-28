@@ -247,7 +247,7 @@ class FindSpam:
         "teksonit", "Re@d More", "Live Streaming</a", "Blackcore ?Edge", "Copy Buffett", "Push Money App",
         "Volive( Solutions)?", "Herbalife", "Accumass", "purple rhino male enhancement", "Dating Coaching",
         "male enhancement supplements", "alpha levo", "digital marketing course", "stark trading system",
-        "bring back lost lover", "service proposal essay", "enetdocumentation", "okaygoods", "((sex ?)+)?bojiter",
+        "bring back lost lover", "service proposal essay", "enetdocumentation", "okaygoods",
         "dr ?eziza", "(spell(home)?|temple|classes)@gmail\\.com", "viagra", "cialis", "slotobit",
         "putlocker", "vimax", "(contact|call) us today", "call \\d{3}-\\d{4}-\\d{4}",
         "I knew I wanted to get him alone, but I couldn.t be obvious about it. So, I came up with a plan. I waited",
@@ -275,7 +275,7 @@ class FindSpam:
         u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "no2blast", "sunergetic", "capilux", "sante ?avis",
         "enduros", "dianabol", "ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex", "revimax",
         "celluria", "viatropin", "(meg|test)adrox", "nordic ?loan ?firm", "safflower",
-        "(essay|resume|article|dissertation|thesis) ?writing ?service", "satta ?matka"
+        "(essay|resume|article|dissertation|thesis) ?writing ?service", "satta ?matka", "bojiter"
     ]
     blacklisted_websites = [
         "online ?kelas", "careyourhealths", "wowtoes", "(naga|dewa)poker", "reshapeready\\.com",
