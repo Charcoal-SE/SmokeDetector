@@ -683,8 +683,6 @@ class FindSpam:
         {'regex': ur"(?i)\b(erica|jeff|er1ca|spam|moderator)\b", 'all': False, 'sites': ["parenting.stackexchange.com"], 'reason': "bad keyword in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 0},
         # Academia kangaroos
         {'regex': ur"(?i)kangaroos", 'all': False, 'sites': ["academia.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        # Hitler outside of selected sites
-        {'regex': ur"(?i)\bhitler\b", 'all': True, 'sites': ["history.stackexchange.com", "politics.stackexchange.com", "worldbuilding.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': ur"(?i)\b\<a href=\".{0,25}\.xyz\"( rel=\"nofollow\")?\>.{0,15}google.{0,15}\<\/a\>\b", 'all': True, 'sites': [], 'reason': 'non-Google "google search" link in {}', 'title': False, 'body': True, 'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
         #
         # Category: other
