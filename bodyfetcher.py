@@ -138,6 +138,8 @@ class BodyFetcher:
 
         # wait to make sure API has/updates post data
         time.sleep(3)
+
+        GlobalVars.api_request_lock.acquire()
         # Respect backoff, if we were given one
         if GlobalVars.api_backoff_time > time.time():
             time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
@@ -184,6 +186,8 @@ class BodyFetcher:
             match = regex.compile('/2.2/([^.]*)').search(url)
             url_part = match.group(1) if match else url
             message_hq += "\nBackoff received of {} seconds on request to `{}` at {} UTC".format(str(response["backoff"]), url_part, time_request_made)
+
+        GlobalVars.api_request_lock.release()
 
         if len(message_hq) > 0:
             GlobalVars.charcoal_hq.send_message(message_hq.strip())

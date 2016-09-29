@@ -7,6 +7,7 @@ import HTMLParser
 import md5
 import ConfigParser
 from helpers import environ_or_none
+import threading
 
 
 class GlobalVars:
@@ -262,6 +263,8 @@ class GlobalVars:
     listen_to_these_if_edited = []
     multiple_reporters = []
     api_calls_per_site = {}
+
+    api_request_lock = threading.Lock()
 
     config = ConfigParser.RawConfigParser()
     config.read('config')
