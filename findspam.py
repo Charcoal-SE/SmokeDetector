@@ -449,7 +449,7 @@ class FindSpam:
         "onlinecorrection\\.com", "dragracerv3game\\.com", "bananakong\\.net", "himzakaz\\.net", "dropcrack\\.com",
         "raybiztech\\.com", "cegonsoft\\.com", "technomaniya\\.com", "instantassignmenthelp\\.com\\.au", "huintech\\.com",
         "dramaonline\\.pk", "gamingustaad\\.com", "carding-wutransfer\\.com", "nulife\\.co\\.in", "fixmyprinter\\.com",
-        "iseepassword\\.com", "samedaypros\\.com", "zen-promo\\.com", "excelpasswordremover\\.com",
+        "iseepassword\\.com", "samedaypros\\.com", "zen-promo\\.com", "excelpasswordremover\\.com", "seyf-educ\\.com",
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
