@@ -449,7 +449,7 @@ class FindSpam:
         "onlinecorrection\\.com", "dragracerv3game\\.com", "bananakong\\.net", "himzakaz\\.net", "dropcrack\\.com",
         "raybiztech\\.com", "cegonsoft\\.com", "technomaniya\\.com", "instantassignmenthelp\\.com\\.au", "huintech\\.com",
         "dramaonline\\.pk", "gamingustaad\\.com", "carding-wutransfer\\.com", "nulife\\.co\\.in", "fixmyprinter\\.com",
-        "iseepassword\\.com", "samedaypros\\.com", "zen-promo\\.com", "excelpasswordremover\\.com", "seyf-educ\\.com",
+        "iseepassword\\.com", "samedaypros\\.com", "zen-promo\\.com", "seyf-educ\\.com",
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
@@ -470,7 +470,7 @@ class FindSpam:
         r"http\S*?(essay|resume|thesis|dissertation|paper)-?writing",
         r"fix[\w-]*?(files?|tool(box)?)\.com", r"(repair|recovery|fix)tool(box)?\.(co|net|org)",
         r"smart(pc)?fixer\.(co|net|org)",
-        r"password[\w-]*?(cracker|unlocker|reset|buster|master)\.(co|net)",
+        r"password[\w-]*?(cracker|unlocker|reset|buster|master|remover)\.(co|net)",
         r"crack[\w-]*?(serial|soft|password)[\w-]*?\.(co|net)",
         r"(downloader|pdf)converter\.(com|net)", r"sourceforge\.net[\w/]*convert",
         r"ware[\w-]*?download\.(com|net|info|in\W)",
