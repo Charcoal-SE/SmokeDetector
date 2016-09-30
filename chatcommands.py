@@ -1069,7 +1069,7 @@ def subcommand_naa(ev_room, ev_user_id, wrap2, post_site_id, post_url, quiet_act
     """
     if not is_report(post_site_id):
         return Response(command_status=True, message="That message is not a report.")
-    if post_type != "answer":ev_room
+    if post_type != "answer":
         return Response(command_status=True, message="That report was a question; questions cannot be marked as NAAs.")
 
     send_metasmoke_feedback(post_url=post_url,
