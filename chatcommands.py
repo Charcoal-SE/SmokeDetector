@@ -694,6 +694,26 @@ def command_whoami(ev_room, *args, **kwargs):
                     message="I don't know my user ID for this room. (Something is wrong, and it's apnorton's fault.)")
 
 
+def command_pending(page, *args, **kwargs):
+    """
+    Finds posts with TP feedback that have yet to be deleted.
+    :param args: No additional arguments expected.
+    :param kwargs: No additional arguments expected.
+    :return:
+    """
+    try:
+        page = int(page)
+    except ValueError:
+        return Response(command_status=False,
+                        message="Expected an integer page number and got '{}' instead (ValueError).".format(page))
+    posts = requests.get("https://m.erwaysoftware.com/api/undeleted?pagesize=2&page={}&key={}".format(page, GlobalVars.metasmoke_key)).json()
+    messages = []
+    for post in posts['items']:
+        messages.append("[{0}]({1}) ([MS](https://m.erwaysoftware.com/post/{0}))".format(post['id'], post['link']))
+    return Response(command_status=True,
+                    message=", ".join(messages))
+
+
 # --- Notification functions --- #
 def command_allnotifications(message_parts, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -1049,7 +1069,7 @@ def subcommand_naa(ev_room, ev_user_id, wrap2, post_site_id, post_url, quiet_act
     """
     if not is_report(post_site_id):
         return Response(command_status=True, message="That message is not a report.")
-    if post_type != "answer":
+    if post_type != "answer":ev_room
         return Response(command_status=True, message="That report was a question; questions cannot be marked as NAAs.")
 
     send_metasmoke_feedback(post_url=post_url,
@@ -1184,6 +1204,7 @@ command_dict = {
     "!!/notify": command_notify,
     "!!/notify-": command_notify,
     "!!/pull": command_pull,
+    "!!/pending": command_pending,
     "!!/reboot": command_reboot,
     "!!/reportuser": command_allspam,
     "!!/rmblu": command_remove_blacklist_user,
