@@ -694,7 +694,7 @@ def command_whoami(ev_room, *args, **kwargs):
                     message="I don't know my user ID for this room. (Something is wrong, and it's apnorton's fault.)")
 
 
-def command_pending(page, *args, **kwargs):
+def command_pending(content, content_lower, *args, **kwargs):
     """
     Finds posts with TP feedback that have yet to be deleted.
     :param args: No additional arguments expected.
@@ -702,7 +702,7 @@ def command_pending(page, *args, **kwargs):
     :return:
     """
     try:
-        page = int(page)
+        page = int(content[:12])
     except ValueError:
         return Response(command_status=False,
                         message="Expected an integer page number and got '{}' instead (ValueError).".format(page))
