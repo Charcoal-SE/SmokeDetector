@@ -702,7 +702,7 @@ def command_pending(content, content_lower, *args, **kwargs):
     :return:
     """
     try:
-        page = int(content[:12])
+        page = int(content[11:])
     except ValueError:
         return Response(command_status=False,
                         message="Expected an integer page number and got '{}' instead (ValueError).".format(page))
