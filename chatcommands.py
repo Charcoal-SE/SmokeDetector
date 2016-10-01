@@ -706,7 +706,7 @@ def command_pending(content, content_lower, *args, **kwargs):
     except ValueError:
         return Response(command_status=False,
                         message="Expected an integer page number and got '{}' instead (ValueError).".format(page))
-    posts = requests.get("https://m.erwaysoftware.com/api/undeleted?pagesize=2&page={}&key={}".format(page, GlobalVars.metasmoke_key)).json()
+    posts = requests.get("https://metasmoke.erwaysoftware.com/api/undeleted?pagesize=2&page={}&key={}".format(page, GlobalVars.metasmoke_key)).json()
     messages = []
     for post in posts['items']:
         messages.append("[{0}]({1}) ([MS](https://m.erwaysoftware.com/post/{0}))".format(post['id'], post['link']))
