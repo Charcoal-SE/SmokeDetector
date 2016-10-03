@@ -450,7 +450,8 @@ class FindSpam:
         "raybiztech\\.com", "cegonsoft\\.com", "technomaniya\\.com", "instantassignmenthelp\\.com\\.au", "huintech\\.com",
         "dramaonline\\.pk", "gamingustaad\\.com", "carding-wutransfer\\.com", "nulife\\.co\\.in", "fixmyprinter\\.com",
         "iseepassword\\.com", "samedaypros\\.com", "zen-promo\\.com", "seyf-educ\\.com", "moneybanker\\.no",
-        "webhax\\.xyz", "techhacktweaks\\.com", "fluffypancakerecipe\\.com",
+        "webhax\\.xyz", "techhacktweaks\\.com", "fluffypancakerecipe\\.com", "appinary\\.com", "aprinled\\.com",
+        "abhitricks\\.com", "atompark\\.com",
     ]
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
