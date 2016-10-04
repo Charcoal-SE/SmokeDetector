@@ -20,6 +20,7 @@ class GitManager:
 
         # Store current commit hash
         current_commit = git("rev-parse", "HEAD")
+        print(current_commit)
 
         # Add items to file
 
@@ -42,4 +43,4 @@ class GitManager:
 
         git.checkout(current_commit)  # Return to old commit to await CI. This will make Smokey think it's in reverted mode if it restarts
 
-        return (True, "Blacklisted {0} - the entry will be applied via autopull if CI succeeds. Currently on %, should be on %.".format(", ".join(items_to_blacklist), git("rev-parse", "HEAD"), current_commit))
+        return (True, "Blacklisted {0} - the entry will be applied via autopull if CI succeeds. Currently on {1}, should be on {2}.".format(", ".join(items_to_blacklist), git("rev-parse", "HEAD"), current_commit))
