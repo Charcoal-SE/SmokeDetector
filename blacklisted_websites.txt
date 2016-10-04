@@ -708,3 +708,4 @@ mikonomi\.dk
 smugfashion\.com
 
 awesomespam\.spammyspam\d.spam
+thisis.aspammydomain\dname\.com
