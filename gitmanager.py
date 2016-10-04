@@ -20,7 +20,7 @@ class GitManager:
 
         # Add items to file
 
-        with blacklisted_websites as open("blacklisted_websites.txt", "a"):
+        with open("blacklisted_websites.txt", "a") as blacklisted_websites:
             for item in items_to_blacklist:
                 blacklisted_websites.write("%s\n" % item)
 
