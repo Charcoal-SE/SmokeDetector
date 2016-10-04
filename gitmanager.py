@@ -18,6 +18,9 @@ class GitManager:
         if "blacklisted_websites.txt" in git.status():  # Also ugly
             return (False, "blacklisted_websites.txt modified locally. This is probably bad.")
 
+        # Store current commit hash
+        current_commit = git("rev-parse", "HEAD")
+
         # Add items to file
 
         with open("blacklisted_websites.txt", "a") as blacklisted_websites:
@@ -36,5 +39,7 @@ class GitManager:
         git.checkout("master")
         git.merge(branch)
         git.push()
+
+        git.checkout(current_commit)  # Return to old commit to await CI. This will make Smokey think it's in reverted mode if it restarts
 
         return (True, "Blacklisted {0} - the entry will be applied via autopull if CI succeeds.".format(", ".join(items_to_blacklist)))
