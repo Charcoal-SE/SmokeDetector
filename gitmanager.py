@@ -21,7 +21,7 @@ class GitManager:
         # Add items to file
 
         with open("blacklisted_websites.txt", "a") as blacklisted_websites:
-            blacklisted_websites.write("\n".join(self.prep_blacklist_entries(items_to_blacklist)))
+            blacklisted_websites.write("\n".join(items_to_blacklist))
 
         # Checkout a new branch (mostly unnecessary, but may help if we create PRs in the future
         branch = "auto-blacklist-%s" % str(time.time())
@@ -38,7 +38,3 @@ class GitManager:
         git.push()
 
         return (True, "Blacklisted {0} - the entry will be applied via autopull if CI succeeds.".format(", ".join(items_to_blacklist)))
-    
-    @classmethod
-    def prep_blacklist_entries(self, raw_list):
-        return [x.replace('.', '\.') for x in raw_list]
