@@ -21,7 +21,7 @@ class GitManager:
         # Add items to file
 
         with open("blacklisted_websites.txt", "a") as blacklisted_websites:
-            blacklisted_websites.write("\n".join(items_to_blacklist))
+            blacklisted_websites.write("\n" + "\n".join(items_to_blacklist))
 
         # Checkout a new branch (mostly unnecessary, but may help if we create PRs in the future
         branch = "auto-blacklist-%s" % str(time.time())
