@@ -8,6 +8,7 @@ from metasmoke import Metasmoke
 from parsing import *
 from spamhandling import handle_spam
 from spamhandling import handle_user_with_all_spam
+from gitmanager import GitManager
 from threading import Thread
 import random
 import requests
@@ -237,6 +238,19 @@ def command_remove_whitelist_user(message_parts, content_lower, ev_room, ev_user
     else:
         return Response(command_status=False,
                         message="Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`.")
+
+
+@check_permissions
+def command_blacklist(message_parts, ev_user_name, *args, **kwargs):
+    """
+    Adds a string to the website blacklist and commits/pushes to GitHub
+    :param message_parts:
+    :param ev_user_name:
+    :return: A Response
+    """
+
+    result = GitManager.add_to_blacklist([message_parts[1]], ev_user_name)
+    return Response(command_status=result[0], message=result[1])
 
 
 # --- Joke Commands --- #
@@ -1191,6 +1205,7 @@ command_dict = {
     "!!/blame": command_blame,
     "!!/block": command_block,
     "!!/brownie": command_brownie,
+    "!!/blacklist-dangerous": command_blacklist,
     "!!/commands": command_help,
     "!!/coffee": command_coffee,
     "!!/errorlogs": command_errorlogs,
