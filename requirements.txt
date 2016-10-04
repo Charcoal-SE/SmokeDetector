@@ -7,3 +7,4 @@ phonenumbers
 flake8
 regex==2015.11.22
 termcolor
+sh
