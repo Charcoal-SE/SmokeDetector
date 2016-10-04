@@ -37,5 +37,5 @@ class GitManager:
         git.checkout("master")
         git.merge(branch)
         git.push()
-        
+
         return (True, "Blacklisted {0} - the entry will be applied via autopull if CI succeeds.".format(", ".join(items_to_blacklist)))
