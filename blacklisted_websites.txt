@@ -710,3 +710,4 @@ smugfashion\.com
 awesomespam\.spammyspam\d.spam
 thisis.aspammydomain\dname\.com
 thisisanother.aspammydomain\dname\.com
+totallylegit.ru
