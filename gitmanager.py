@@ -21,8 +21,7 @@ class GitManager:
         # Add items to file
 
         with open("blacklisted_websites.txt", "a") as blacklisted_websites:
-            for item in items_to_blacklist:
-                blacklisted_websites.write("%s\n" % item)
+            blacklisted_websites.write("\n".join(items_to_blacklist))
 
         # Checkout a new branch (mostly unnecessary, but may help if we create PRs in the future
         branch = "auto-blacklist-%s" % str(time.time())
@@ -32,7 +31,7 @@ class GitManager:
         git.reset("HEAD")
 
         git.add("blacklisted_websites.txt")
-        git.commit("-m", "Auto blacklist of %s by %s" % (items_to_blacklist, username))
+        git.commit("-m", "Auto blacklist of %s by %s --autopull" % (", ".join(items_to_blacklist), username))
 
         git.checkout("master")
         git.merge(branch)
