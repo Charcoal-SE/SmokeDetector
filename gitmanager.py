@@ -11,7 +11,7 @@ class GitManager:
 
         # Check that we're up-to-date with origin (GitHub)
         git.remote.update()
-        if git("rev-parse", "refs/remotes/origin/master") != git("rev-parse", "master"):
+        if git("rev-parse", "refs/remotes/origin/master").strip() != git("rev-parse", "master").strip():
             return (False, "HEAD isn't at tip of origin's master branch")
 
         # Check that blacklisted_websites.txt isn't modified locally. That could get ugly fast
