@@ -52,7 +52,7 @@ class GitManager:
                 return (False, "tell someone to set a GH password")
 
             payload = {"title": "%s: Blacklist %s" % (username, ", ".join(items_to_blacklist)),
-                       "body": "% requests blacklist of domains: \n\n - %" % (username, "\n - ".join(items_to_blacklist)),
+                       "body": "%s requests blacklist of domains: \n\n - %s" % (username, "\n - ".join(items_to_blacklist)),
                        "head": branch,
                        "base": "master"}
             response = requests.post("https://api.github.com/repos/Undo1/AutoHubTest/pulls", auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password), data=json.dumps(payload))
