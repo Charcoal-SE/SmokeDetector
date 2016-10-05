@@ -712,3 +712,5 @@ awesomespam\.spammyspam\d.spam
 thisis.aspammydomain\dname\.com
 thisisanother.aspammydomain\dname\.com
 totallylegit.ru
+
+another\.attempt\.test
