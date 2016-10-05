@@ -241,7 +241,7 @@ def command_remove_whitelist_user(message_parts, content_lower, ev_room, ev_user
 
 
 @check_permissions
-def command_blacklist(message_parts, ev_user_name, ev_room, ev_user_id, *args, **kwargs):
+def command_blacklist(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Adds a string to the website blacklist and commits/pushes to GitHub
     :param message_parts:
