@@ -114,7 +114,7 @@ class BodyFetcher:
         if site not in self.queue:
             GlobalVars.charcoal_hq.send_message("Attempted API call to {} but there are no posts to fetch.".format(site))
             return
-        
+
         self.queue_modify_lock.acquire()
         posts = self.queue.pop(site)
         store_bodyfetcher_queue()
