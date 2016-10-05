@@ -1,5 +1,9 @@
 from sh import git
+from requests.auth import HTTPBasicAuth
+from globalvars import GlobalVars
+import requests
 import time
+import json
 
 
 class GitManager:
@@ -42,6 +46,17 @@ class GitManager:
             git.push()
         else:
             git.push("origin", branch)
+            git.checkout("master")
+
+            if GlobalVars.github_username is None or GlobalVars.github_password is None:
+                return (False, "tell someone to set a GH password")
+
+            payload = {"title": "%: Blacklist %" % (username, ", ".join(items_to_blacklist)),
+                       "body": "% requests blacklist of domains: \n\n - %" % (username, "\n - ".join(items_to_blacklist)),
+                       "head": branch,
+                       "base": "master"}
+            response = requests.post("https://api.github.com/repos/Undo1/AutoHubTest/pulls", auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password), data=json.dumps(payload))
+            return (True, "You don't have code privileges, but I've [created a pull request for you](%s)." % response.json()["url"])
 
         git.checkout(current_commit)  # Return to old commit to await CI. This will make Smokey think it's in reverted mode if it restarts
 

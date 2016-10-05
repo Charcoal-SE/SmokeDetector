@@ -306,3 +306,10 @@ class GlobalVars:
     except ConfigParser.NoOptionError:
         metasmoke_ws_host = ""
         print "No metasmoke websocket host found, which is okay if you're anti-websocket"
+
+    try:
+        github_username = config.get("Config", "github_username")
+        github_password = config.get("Config", "github_password")
+    except ConfigParser.NoOptionError:
+        github_username = None
+        github_password = None
