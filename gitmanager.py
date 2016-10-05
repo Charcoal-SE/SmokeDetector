@@ -57,7 +57,7 @@ class GitManager:
                        "base": "master"}
             response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls", auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password), data=json.dumps(payload))
             print(response.json())
-            return (True, "You don't have code privileges, but I've [created a pull request for you](%s)." % response.json()["url"])
+            return (True, "You don't have code privileges, but I've [created a pull request for you](%s)." % response.json()["html_url"])
 
         git.checkout(current_commit)  # Return to old commit to await CI. This will make Smokey think it's in reverted mode if it restarts
 
