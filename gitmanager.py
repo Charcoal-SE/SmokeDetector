@@ -4,7 +4,7 @@ import time
 
 class GitManager:
     @classmethod
-    def add_to_blacklist(self, items_to_blacklist, username):
+    def add_to_blacklist(self, items_to_blacklist, username, code_permisions):
         # Check if we're on master
         if git("rev-parse", "--abbrev-ref", "HEAD").strip() != "master":
             return (False, "Not currently on master.")
@@ -36,10 +36,15 @@ class GitManager:
         git.add("blacklisted_websites.txt")
         git.commit("-m", "Auto blacklist of %s by %s --autopull" % (", ".join(items_to_blacklist), username))
 
-        git.checkout("master")
-        git.merge(branch)
+        if code_permissions:
+            git.checkout("master")
+            git.merge(branch)
+
         git.push()
 
         git.checkout(current_commit)  # Return to old commit to await CI. This will make Smokey think it's in reverted mode if it restarts
+
+        if not code_permissions:
+            return (False, "Unable to perform action due to lack of code-level permissions. Branch pushed, PR at your leisure.")
 
         return (True, "Blacklisted {0} - the entry will be applied via autopull if CI succeeds.".format(", ".join(items_to_blacklist)))

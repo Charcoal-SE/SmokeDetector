@@ -241,15 +241,17 @@ def command_remove_whitelist_user(message_parts, content_lower, ev_room, ev_user
 
 
 @check_permissions
-def command_blacklist(message_parts, ev_user_name, *args, **kwargs):
+def command_blacklist(message_parts, ev_user_name, ev_room, ev_user_id, *args, **kwargs):
     """
     Adds a string to the website blacklist and commits/pushes to GitHub
     :param message_parts:
     :param ev_user_name:
+    :param ev_room:
+    :param :ev_user_id:
     :return: A Response
     """
 
-    result = GitManager.add_to_blacklist([message_parts[1]], ev_user_name)
+    result = GitManager.add_to_blacklist([message_parts[1]], ev_user_name, datahandling.is_code_privileged(ev_room, ev_user_id, wrap2))
     return Response(command_status=result[0], message=result[1])
 
 

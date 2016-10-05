@@ -142,7 +142,19 @@ class Metasmoke:
                 'key': metasmoke_key
             }
 
-            headers = {'Content-type': 'application/json'}
+            headers = {'content-type': 'application/json'}
             requests.post(GlobalVars.metasmoke_host + "/status-update.json", data=json.dumps(payload), headers=headers)
         except Exception as e:
             print e
+
+    @classmethod
+    def update_code_privileged_users_list(self):
+        payload = {'key': GlobalVars.metasmoke_key}
+        headers = {'Content-type': 'application/json'}
+        response = requests.get(GlobalVars.metasmoke_host + "/api/users_with_code_privs", data=json.dumps(payload), headers=headers).json()['items']
+
+        GlobalVars.code_privileged_users = {
+            charcoal_room_id: [response["stackexchange_chat_ids"]],
+            meta_tavern_room_id: [response["meta_stackexchange_chat_ids"]],
+            socvr_room_id: [response["stackoverflow_chat_ids"]]
+        }

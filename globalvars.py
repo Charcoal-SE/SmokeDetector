@@ -235,6 +235,9 @@ class GlobalVars:
             "5647260"  # Andrew L.
         ]
     }
+
+    code_privileged_users = None
+
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
 
