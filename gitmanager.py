@@ -39,12 +39,13 @@ class GitManager:
         if code_permissions:
             git.checkout("master")
             git.merge(branch)
-
-        git.push()
+            git.push()
+        else:
+            git.push("origin", branch)
 
         git.checkout(current_commit)  # Return to old commit to await CI. This will make Smokey think it's in reverted mode if it restarts
 
         if not code_permissions:
-            return (False, "Unable to perform action due to lack of code-level permissions. Branch pushed, PR at your leisure.")
+            return (False, "Unable to perform action due to lack of code-level permissions. [Branch pushed](https://github.com/Charcoal-SE/SmokeDetector/tree/%s), PR at your leisure." % branch)
 
         return (True, "Blacklisted {0} - the entry will be applied via autopull if CI succeeds.".format(", ".join(items_to_blacklist)))
