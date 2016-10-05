@@ -51,7 +51,7 @@ class GitManager:
             if GlobalVars.github_username is None or GlobalVars.github_password is None:
                 return (False, "tell someone to set a GH password")
 
-            payload = {"title": "%: Blacklist %" % (username, ", ".join(items_to_blacklist)),
+            payload = {"title": "%s: Blacklist %s" % (username, ", ".join(items_to_blacklist)),
                        "body": "% requests blacklist of domains: \n\n - %" % (username, "\n - ".join(items_to_blacklist)),
                        "head": branch,
                        "base": "master"}
