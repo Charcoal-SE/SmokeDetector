@@ -117,12 +117,11 @@ def is_privileged(room_id_str, user_id_str, wrap2):
 
 
 def is_code_privileged(room_id_str, user_id_str, wrap2):
-    if GlobalVars.code_privileged_users == None:
+    if GlobalVars.code_privileged_users is None:
         Metasmoke.update_code_privileged_users_list()
 
     if room_id_str in GlobalVars.code_privileged_users and user_id_str in GlobalVars.code_privileged_users[room_id_str]:
         return True
-    user = wrap2.get_user(user_id_str)
     return False  # For now, disable the moderator override on code/blacklist changes
 
 # methods to add/remove whitelisted/blacklisted users, ignored posts, ...

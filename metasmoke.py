@@ -154,7 +154,7 @@ class Metasmoke:
         response = requests.get(GlobalVars.metasmoke_host + "/api/users_with_code_privs", data=json.dumps(payload), headers=headers).json()['items']
 
         GlobalVars.code_privileged_users = {
-            charcoal_room_id: [response["stackexchange_chat_ids"]],
-            meta_tavern_room_id: [response["meta_stackexchange_chat_ids"]],
-            socvr_room_id: [response["stackoverflow_chat_ids"]]
+            GlobalVars.charcoal_room_id: [response["stackexchange_chat_ids"]],
+            GlobalVars.meta_tavern_room_id: [response["meta_stackexchange_chat_ids"]],
+            GlobalVars.socvr_room_id: [response["stackoverflow_chat_ids"]]
         }

@@ -4,7 +4,7 @@ import time
 
 class GitManager:
     @classmethod
-    def add_to_blacklist(self, items_to_blacklist, username, code_permisions):
+    def add_to_blacklist(self, items_to_blacklist, username, code_permissions):
         # Check if we're on master
         if git("rev-parse", "--abbrev-ref", "HEAD").strip() != "master":
             return (False, "Not currently on master.")
