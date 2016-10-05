@@ -8,8 +8,8 @@ import sys
 import traceback
 import time
 import os
-from datahandling import add_blacklisted_user, add_ignored_post
-from parsing import fetch_post_id_and_site_from_url
+import datahandling
+import parsing
 
 
 class Metasmoke:
@@ -30,10 +30,10 @@ class Metasmoke:
                             if "message" in message:
                                 GlobalVars.charcoal_hq.send_message(message['message'])
                             elif "blacklist" in message:
-                                add_blacklisted_user((message['blacklist']['uid'], message['blacklist']['site']), "metasmoke", message['blacklist']['post'])
+                                datahandling.add_blacklisted_user((message['blacklist']['uid'], message['blacklist']['site']), "metasmoke", message['blacklist']['post'])
                             elif "naa" in message:
-                                post_site_id = fetch_post_id_and_site_from_url(message["naa"]["post_link"])
-                                add_ignored_post(post_site_id[0:2])
+                                post_site_id = parsing.fetch_post_id_and_site_from_url(message["naa"]["post_link"])
+                                datahandling.add_ignored_post(post_site_id[0:2])
                             elif "commit_status" in message:
                                 c = message["commit_status"]
                                 sha = c["commit_sha"][:7]

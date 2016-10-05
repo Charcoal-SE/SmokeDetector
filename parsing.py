@@ -1,6 +1,6 @@
 import regex
 from globalvars import GlobalVars
-from datahandling import check_site_and_get_full_name
+import datahandling
 
 
 def get_user_from_url(url):
@@ -140,7 +140,7 @@ def get_user_from_list_command(cmd):  # for example, !!/addblu is a list command
             uid = -1
             site = ""
         elif not site_re.match(site):
-            exists, name = check_site_and_get_full_name(site)
+            exists, name = datahandling.check_site_and_get_full_name(site)
             if exists:
                 return uid, name
             else:
