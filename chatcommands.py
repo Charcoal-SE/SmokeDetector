@@ -1207,7 +1207,7 @@ command_dict = {
     "!!/blame": command_blame,
     "!!/block": command_block,
     "!!/brownie": command_brownie,
-    "!!/blacklist-dangerous": command_blacklist,
+    "!!/blacklist": command_blacklist,
     "!!/commands": command_help,
     "!!/coffee": command_coffee,
     "!!/errorlogs": command_errorlogs,
