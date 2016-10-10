@@ -151,7 +151,7 @@ class Metasmoke:
     def update_code_privileged_users_list(self):
         payload = {'key': GlobalVars.metasmoke_key}
         headers = {'Content-type': 'application/json'}
-        response = requests.get(GlobalVars.metasmoke_host + "/api/users_with_code_privs", data=json.dumps(payload), headers=headers).json()['items']
+        response = requests.get(GlobalVars.metasmoke_host + "/api/users/code_privileged", data=json.dumps(payload), headers=headers).json()['items']
 
         GlobalVars.code_privileged_users = {
             GlobalVars.charcoal_room_id: [response["stackexchange_chat_ids"]],
