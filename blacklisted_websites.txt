@@ -715,6 +715,7 @@ rumahminimalisok\.com
 ceramicdirectory\.com
 yioplayer\.com
 caracepatmengobatimiomblog\.wordpress\.com
+datagharch\.com
 
 awesomespam\.spammyspam\d.spam
 thisis.aspammydomain\dname\.com
