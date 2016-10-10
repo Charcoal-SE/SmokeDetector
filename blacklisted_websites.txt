@@ -721,3 +721,5 @@ thisis.aspammydomain\dname\.com
 thisisanother.aspammydomain\dname\.com
 totallylegit.ru
 gurusquad\.com
+
+kikguru\.com
