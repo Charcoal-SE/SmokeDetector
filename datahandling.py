@@ -124,6 +124,10 @@ def is_code_privileged(room_id_str, user_id_str, wrap2):
         return True
     return False  # For now, disable the moderator override on code/blacklist changes
 
+
+def is_superuser(room_id_str, user_id_str, wrap2):
+    return room_id_str in GlobalVars.superusers and user_id_str in GlobalVars.superusers[room_id_str]
+
 # methods to add/remove whitelisted/blacklisted users, ignored posts, ...
 
 
