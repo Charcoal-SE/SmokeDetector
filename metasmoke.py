@@ -34,6 +34,9 @@ class Metasmoke:
                             elif "naa" in message:
                                 post_site_id = parsing.fetch_post_id_and_site_from_url(message["naa"]["post_link"])
                                 datahandling.add_ignored_post(post_site_id[0:2])
+                            elif "fp" in message:
+                                post_site_id = parsing.fetch_post_id_and_site_from_url(message["naa"]["post_link"])
+                                datahandling.add_false_positive(post_site_id[0:2])
                             elif "commit_status" in message:
                                 c = message["commit_status"]
                                 sha = c["commit_sha"][:7]
