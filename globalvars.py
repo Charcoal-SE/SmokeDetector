@@ -238,12 +238,14 @@ class GlobalVars:
     }
 
     code_privileged_users = None
-    
+
     superusers = {
         charcoal_room_id: ["121520", "103081", "73046"],
         meta_tavern_room_id: ["262823", "237685", "215468"],
         socvr_room_id: ["3160466", "2581872", "1849664"]
     }
+
+    disabled_notification_sites = ["stackoverflow.com"]
 
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}

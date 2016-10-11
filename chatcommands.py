@@ -774,20 +774,24 @@ def command_notify(message_parts, ev_user_id, wrap2, *args, **kwargs):
     room_id = int(room_id)
     quiet_action = any([part.endswith('-') for part in message_parts])
     se_site = message_parts[2].replace('-', '')
-    response, full_site = add_to_notification_list(user_id, chat_site, room_id, se_site)
-    if response == 0:
-        return Response(command_status=True, message=None) if quiet_action \
-            else Response(command_status=True,
-                          message="You'll now get pings from me if I report a post on `{site_name}`, in room "
-                                  "`{room_id}` on `chat.{chat_domain}`".format(site_name=se_site,
-                                                                               room_id=room_id,
-                                                                               chat_domain=chat_site))
-    elif response == -1:
-        return Response(command_status=True, message="That notification configuration is already registered.")
-    elif response == -2:
-        return Response(command_status=False, message="The given SE site does not exist.")
+    if se_site not in GlobalVars.disabled_notification_sites:
+        response, full_site = add_to_notification_list(user_id, chat_site, room_id, se_site)
+        if response == 0:
+            return Response(command_status=True, message=None) if quiet_action \
+                else Response(command_status=True,
+                              message="You'll now get pings from me if I report a post on `{site_name}`, in room "
+                                      "`{room_id}` on `chat.{chat_domain}`".format(site_name=se_site,
+                                                                                   room_id=room_id,
+                                                                                   chat_domain=chat_site))
+        elif response == -1:
+            return Response(command_status=True, message="That notification configuration is already registered.")
+        elif response == -2:
+            return Response(command_status=False, message="The given SE site does not exist.")
+        else:
+            return Response(command_status=False, message="Unrecognized code returned when adding notification.")
+
     else:
-        return Response(command_status=False, message="Unrecognized code returned when adding notification.")
+        return Response(command_status=False, message="Notifications are disabled for this site.")
 
 
 def command_unnotify(message_parts, ev_user_id, wrap2, *args, **kwargs):
