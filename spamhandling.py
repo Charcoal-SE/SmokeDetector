@@ -38,7 +38,7 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
             blacklisted_post_url = blacklisted_user_data[2]
             if blacklisted_post_url:
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
-                why += u"\nBlacklisted user - blacklisted for {} (//metasmoke.erwaysoftware.com/posts/by-url?url={}) by {}".format(blacklisted_post_url, rel_url, message_url)
+                why += u"\nBlacklisted user - blacklisted for {} (https://metasmoke.erwaysoftware.com/posts/by-url?url={}) by {}".format(blacklisted_post_url, rel_url, message_url)
             else:
                 why += u"\n" + u"Blacklisted user - blacklisted by {}".format(message_url)
     if 0 < len(test):
