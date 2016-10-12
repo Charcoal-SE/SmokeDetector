@@ -24,6 +24,7 @@ command_aliases = {
     "abuse": "tpu-",
     "abusive": "tpu-",
     "offensive": "tpu-",
+    "vandalism": "tp-",
     "n": "naa-",
 }
 
