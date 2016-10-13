@@ -39,6 +39,7 @@ def test_check_if_spam(title, body, username, site, match):
     print title
     assert match == is_spam
 
+
 @pytest.mark.parametrize("title, body, username, site, match", [
     ('',
      '''<p>Herro, anybody <a href="http://example.com/" rel="nofollow">home</a>?</p>
