@@ -40,36 +40,6 @@ def test_check_if_spam(title, body, username, site, match):
     assert match == is_spam
 
 
-@pytest.mark.parametrize("title, body, username, site, match", [
-    ('',
-     '''<p>Herro, anybody <a href="http://example.com/" rel="nofollow">home</a>?</p>
-
-<p><a href="http://example.com/" rel="nofollow">http://example.com/</a></p>''',
-     '', '', True),
-    ('',
-     '''<p>Test <a href="http://example.com/" rel="nofollow">some text</a> moo moo moo.</p>
-
-<p>Another paragraph. Make it long enough to bring this comfortably over the 300-character limit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-<p><a href="http://example.com/" rel="nofollow">http://example.com/</a></p>''',
-     '', '', True),
-    ('', '''
-<p>Herro, anybody home?</p>
-
-<p><a href="http://example.com" rel="nofollow">http://example.com</a></p>
-    ''', '', '', True)
-])
-def test_check_if_spam_answer(title, body, username, site, match):
-    # We can't check blacklists/whitelists in tests, so these are set to their default values
-    user_url = ""
-    post_id = 0
-    # We *are* now testing answers separately
-    is_answer = True
-    is_spam, reason, _ = check_if_spam(title, body, username, user_url, site, post_id, is_answer, False, 1, 0)
-    print title
-    assert match == is_spam, 'expected spam on {0!r}'.format(body)
-
-
 @pytest.mark.parametrize("data, match", [
     (test_data_inputs[0], False)
 ])

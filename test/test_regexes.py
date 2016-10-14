@@ -3,7 +3,7 @@ from findspam import FindSpam
 import pytest
 
 
-@pytest.mark.parametrize("title, body, username, site,  body_is_summary, match", [
+@pytest.mark.parametrize("title, body, username, site, body_is_summary, match", [
     ('18669786819 gmail customer service number 1866978-6819 gmail support number', '', '', '', False, True),
     ('18669786819 gmail customer service number 1866978-6819 gmail support number', '', '', '', True, True),
     ('Is there any http://www.hindawi.com/ template for Cloud-Oriented Data Center Networking?', '', '', '', False, True),
@@ -36,6 +36,7 @@ import pytest
     ('something', 'his email address is (SOMEONE@GMAIL.COM)', '', 'money.stackexchange.com', False, True),
     ('asdf asdf asdf asdf asdf asdf asdf asdf', '', '', 'stackoverflow.com', True, True),
     ('A title', '>>>>  http://', '', 'stackoverflow.com', False, True),
+    ('', '<p>Test <a href="http://example.com/" rel="nofollow">some text</a> moo moo moo.</p><p>Another paragraph. Make it long enough to bring this comfortably over the 300-character limit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p><a href="http://example.com/" rel="nofollow">http://example.com/</a></p>', '', 'stackoverflow.com', False, True),
     ('spam', '>>>> http://', '', 'stackoverflow.com', True, False),
     ('Another title', '<code>>>>>http://</code>', '', 'stackoverflow.com', False, False),
     ('This asdf should asdf not asdf be asdf matched asdf because asdf the asdf words do not asdf follow on each asdf other.', '', '', 'stackoverflow.com', False, False),
