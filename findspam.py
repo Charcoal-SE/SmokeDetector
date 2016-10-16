@@ -436,6 +436,8 @@ class FindSpam:
         # Link at the end of a short answer
         {'regex': ur'(?is)^.{0,350}<a href="https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,4}/?\w{0,2}/?|(?:plus\.google|www\.facebook)\.com/[\w/]+)"[^<]*</a>(?:</strong>)?\W*</p>\s*$|\[/url\]\W*</p>\s*$', 'all': True,
          'sites': ["raspberrypi.stackexchange.com"], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
+        # URL repeated at end of post
+        {'regex': ur"(?s)<a href=\"(https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,10}/?[\w-]{0,40}?/?|(?:plus\.google|www\.facebook)\.com/[\w/]+))\" rel=\"nofollow\">.{300,}<a href=\"\1\" rel=\"nofollow\">\1</a>(?:</strong>)?\W*</p>\s*$", 'all': True, 'sites': [], 'reason': 'repeated URL at end of long post', 'title': False, 'body': True, 'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
         # Link with "thanks for sharing" or a similar phrase in a short answer
         {'method': keyword_link, 'all': True,
          'sites': [], 'reason': 'bad keyword with a link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
@@ -514,8 +516,6 @@ class FindSpam:
         # Academia kangaroos
         {'regex': ur"(?i)kangaroos", 'all': False, 'sites': ["academia.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': ur"(?i)\b\<a href=\".{0,25}\.xyz\"( rel=\"nofollow\")?\>.{0,15}google.{0,15}\<\/a\>\b", 'all': True, 'sites': [], 'reason': 'non-Google "google search" link in {}', 'title': False, 'body': True, 'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
-        # URL repeated at end of long post
-        {'regex': ur"(?s)<a href=\"(https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,10}/?[\w-]{0,40}?/?|(?:plus\.google|www\.facebook)\.com/[\w/]+))\" rel=\"nofollow\">.{300,}<a href=\"\1\" rel=\"nofollow\">\1</a>(?:</strong>)?\W*</p>\s*$", 'all': True, 'sites': [], 'reason': 'Repeated URL at end of long post', 'title': False, 'body': True, 'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
         #
         # Category: other
         # Blacklisted usernames
