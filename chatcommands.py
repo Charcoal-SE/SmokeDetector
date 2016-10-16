@@ -283,7 +283,12 @@ def command_coffee(ev_user_name, *args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: A string
     """
-    return Response(command_status=True, message=u"*brews coffee for @" + ev_user_name.replace(" ", "") + "*")
+    if message_parts and message_parts[0]:  # list not empty and string not empty
+        # in case they decided to ping the person there, too:
+        giving_to = message_parts[0][1:] if message_parts[0][0] == "@" else  message_parts[0]
+    else:
+        giving_to = ev_user_name.replace(" ", "")
+    return Response(command_status=True, message=u"*brews coffee for @{user}*".format(user=giving_to))
 
 
 def command_lick(*args, **kwargs):
