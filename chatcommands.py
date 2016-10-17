@@ -283,8 +283,8 @@ def command_coffee(ev_user_name, message_parts, *args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: A string
     """
-    if message_parts and message_parts[0]:  # list not empty and string not empty
-        giving_to = message_parts[0][1:] if message_parts[0][0] == "@" else  message_parts[0]
+    if message_parts[1:] and message_parts[1]:  # list has the required element and it's not empty
+        giving_to = message_parts[1][1:] if message_parts[1][0] == "@" else  message_parts[1]
     else:
         giving_to = ev_user_name.replace(" ", "")
     return Response(command_status=True, message=u"*brews coffee for @" + giving_to + "*")
@@ -305,8 +305,8 @@ def command_tea(ev_user_name, message_parts, *args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: A string
     """
-    if message_parts and message_parts[0]:  # list not empty and string not empty
-        giving_to = message_parts[0][1:] if message_parts[0][0] == "@" else  message_parts[0]
+    if message_parts[1:] and message_parts[1]:  # list has the required element and it's not empty
+        giving_to = message_parts[1][1:] if message_parts[1][0] == "@" else  message_parts[1]
     else:
         giving_to = ev_user_name.replace(" ", "")
     return Response(command_status=True,
