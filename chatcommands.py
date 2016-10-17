@@ -1229,6 +1229,7 @@ command_dict = {
     "!!/rmwlu": command_remove_whitelist_user,
     "!!/rmwlu-": command_remove_whitelist_user,
     "!!/report": command_report_post,
+    "!!/restart": command_reboot,
     "!!/rev": command_version,
     "!!/stappit": command_stappit,
     "!!/status": command_status,
