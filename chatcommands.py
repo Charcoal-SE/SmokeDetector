@@ -522,6 +522,21 @@ def command_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
                     "/wiki/Privileges) for information on what privileges are and what is expected of privileged users.")
 
 
+def command_code_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
+    """
+    Tells user whether or not they have code privileges
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
+    :return: A string
+    """
+    if is_code_privileged(ev_room, ev_user_id, wrap2):
+        return Response(command_status=True, message="Yes, you have code privileges.")
+    return Response(command_status=True,
+                    message="No, you are not a code-privileged user.")
+
+
 def command_quota(*args, **kwargs):
     """
     Report how many API hits remain for the day
@@ -1203,6 +1218,7 @@ command_dict = {
     "!!/allnotificationsites": command_allnotifications,
     "!!/allspam": command_allspam,
     "!!/amiprivileged": command_privileged,
+    "!!/amicodeprivileged": command_code_privileged,
     "!!/apiquota": command_quota,
     "!!/blame": command_blame,
     "!!/block": command_block,
