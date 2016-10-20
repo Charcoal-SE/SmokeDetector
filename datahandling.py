@@ -120,7 +120,7 @@ def is_code_privileged(room_id_str, user_id_str, wrap2):
     if GlobalVars.code_privileged_users is None:
         metasmoke.Metasmoke.update_code_privileged_users_list()
 
-    if room_id_str in GlobalVars.code_privileged_users and user_id_str in GlobalVars.code_privileged_users[room_id_str]:
+    if room_id_str in GlobalVars.code_privileged_users and int(user_id_str) in GlobalVars.code_privileged_users[room_id_str]:
         return True
     return False  # For now, disable the moderator override on code/blacklist changes
 
