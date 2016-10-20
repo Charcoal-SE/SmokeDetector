@@ -3,6 +3,7 @@ from collections import namedtuple
 from apigetpost import api_get_post
 from parsing import get_user_from_url
 from spamhandling import handle_spam
+from datahandling import *
 
 Response = namedtuple('Response', 'command_status message')
 
