@@ -1,6 +1,5 @@
 import os
 from collections import namedtuple
-from helpers import Response
 from apigetpost import api_get_post
 from parsing import get_user_from_url
 from spamhandling import handle_spam
