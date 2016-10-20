@@ -729,4 +729,3 @@ serverbasket\.com
 whizzsystems\.com
 
 this\.is\.not\.spam\.com
-this\.is\.a\.test\.com
