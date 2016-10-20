@@ -15,6 +15,7 @@ def environ_or_none(key):
     except:
         return None
 
+
 class GlobalVars:
     false_positives = []
     whitelisted_users = []
