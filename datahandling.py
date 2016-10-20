@@ -78,7 +78,7 @@ def filter_auto_ignored_posts():
         pickle.dump(GlobalVars.auto_ignored_posts, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
-def report_post(urls):
+def report_post(urls, message_url, where_from, reported_by, ev_user_id=None, wrap2=None):
     output = []
     index = 0
     for url in urls:
@@ -99,8 +99,8 @@ def report_post(urls):
         user = get_user_from_url(post_data.owner_url)
         if user is not None:
             add_blacklisted_user(user, message_url, post_data.post_url)
-        why = u"Post manually reported by user *{}* in room *{}*.\n".format(ev_user_name,
-                                                                            ev_room_name.decode('utf-8'))
+        why = u"Post manually reported by user *{}* from *{}*.\n".format(reported_by,
+                                                                         where_from.decode('utf8'))
         batch = ""
         if len(urls) > 1:
             batch = " (batch report: post {} out of {})".format(index, len(urls))
@@ -119,7 +119,7 @@ def report_post(urls):
                     up_vote_count=post_data.up_vote_count,
                     down_vote_count=post_data.down_vote_count,
                     question_id=post_data.question_id)
-    if 1 < len(urls) > len(output):
+    if 1 < len(urls) > len(output) and where_from != 'metasmoke':
         add_or_update_multiple_reporter(ev_user_id, wrap2.host, time.time())
     if len(output) > 0:
         return Response(command_status=True, message=os.linesep.join(output))

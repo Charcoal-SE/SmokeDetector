@@ -2,11 +2,9 @@ from globalvars import GlobalVars
 from findspam import FindSpam
 from datetime import datetime
 from utcdate import UtcDate
-from apigetpost import api_get_post
 from datahandling import *
 from metasmoke import Metasmoke
 from parsing import *
-from spamhandling import handle_spam
 from spamhandling import handle_user_with_all_spam
 from gitmanager import GitManager
 from threading import Thread
@@ -880,7 +878,7 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
                                                       "report at most 5 posts at a time. This is to avoid "
                                                       "SmokeDetector's chat messages getting rate-limited too much, "
                                                       "which would slow down reports.")
-    return datahandling.report_post(urls)
+    return datahandling.report_post(urls, message_url, ev_room_name, ev_user_name, ev_user_id, wrap2)
 
 
 #
