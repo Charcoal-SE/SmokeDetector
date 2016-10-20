@@ -10,6 +10,7 @@ import time
 import os
 import datahandling
 import parsing
+import helpers
 
 
 class Metasmoke:
@@ -52,7 +53,7 @@ class Metasmoke:
                                         GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} failed.".format(ci_link=c["ci_url"], commit_sha=sha))
                             elif "report" in message:
                                 report = data['message']
-                                datahandling.report_post([report['post_link']], 'https://metasmoke.erwaysoftware.com/', 'metasmoke', report['user'])
+                                helpers.report_post([report['post_link']], 'https://metasmoke.erwaysoftware.com/', 'metasmoke', report['user'])
                 except Exception, e:
                     GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
                     GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"}))

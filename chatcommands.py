@@ -13,7 +13,7 @@ import requests
 import os
 import time
 import datahandling
-from helpers import Response
+import helpers
 
 
 # TODO: pull out code block to get user_id, chat_site, room_id into function
@@ -878,7 +878,7 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
                                                       "report at most 5 posts at a time. This is to avoid "
                                                       "SmokeDetector's chat messages getting rate-limited too much, "
                                                       "which would slow down reports.")
-    return datahandling.report_post(urls, message_url, ev_room_name, ev_user_name, ev_user_id, wrap2)
+    return helpers.report_post(urls, message_url, ev_room_name, ev_user_name, ev_user_id, wrap2)
 
 
 #
