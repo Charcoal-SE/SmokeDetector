@@ -50,39 +50,6 @@ class Metasmoke:
                                             GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} succeeded.".format(ci_link=c["ci_url"], commit_sha=sha))
                                     elif c["status"] == "failure":
                                         GlobalVars.charcoal_hq.send_message("[CI]({ci_link}) on {commit_sha} failed.".format(ci_link=c["ci_url"], commit_sha=sha))
-                            elif "report" in message:
-                                report = message['report']
-                                post_data = api_get_post(url)
-                                if post_data is None:
-                                    GlobalVars.charcoal_hq.send_message("API report ({}): Invalid post link ({})".format(report['user'], report['post_link']))
-                                    continue
-                                if post_data is False:
-                                    GlobalVars.charcoal_hq.send_message("API report ({}): Can't find data in the API for {}".format(report['user'], report['post_link']))
-                                    continue
-                                if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive((post_data.post_id, post_data.site)):
-                                    # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
-                                    # this re-report might be attempting to correct that/fix a mistake/etc.
-                                    GlobalVars.charcoal_hq.send_message("API report ({}): Already recently reported ({})".format(report['user'], report['post_link']))
-                                    continue
-                                user = get_user_from_url(post_data.owner_url)
-                                if user is not None:
-                                    add_blacklisted_user(user, message_url, post_data.post_url)
-                                why = u"Post manually reported by user *{}* from metasmoke.\n".format(report['user'])
-                                handle_spam(title=post_data.title,
-                                            body=post_data.body,
-                                            poster=post_data.owner_name,
-                                            site=post_data.site,
-                                            post_url=post_data.post_url,
-                                            poster_url=post_data.owner_url,
-                                            post_id=post_data.post_id,
-                                            reasons=["Manually reported " + post_data.post_type],
-                                            is_answer=post_data.post_type == "answer",
-                                            why=why,
-                                            owner_rep=post_data.owner_rep,
-                                            post_score=post_data.score,
-                                            up_vote_count=post_data.up_vote_count,
-                                            down_vote_count=post_data.down_vote_count,
-                                            question_id=post_data.question_id)
                 except Exception, e:
                     GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
                     GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"}))
