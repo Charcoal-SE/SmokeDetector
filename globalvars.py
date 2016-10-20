@@ -99,7 +99,8 @@ class GlobalVars:
             "133966",   # DavidPostill
             "22839",    # djsmiley2k
             "97389",    # Kaz Wolfe
-            "144962"    # DJMcMayhem
+            "144962",   # DJMcMayhem
+            "139423"    # NobodyNada
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
