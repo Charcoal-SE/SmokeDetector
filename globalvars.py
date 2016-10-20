@@ -6,9 +6,14 @@ from ChatExchange.chatexchange.client import Client
 import HTMLParser
 import md5
 import ConfigParser
-from helpers import environ_or_none
 import threading
 
+
+def environ_or_none(key):
+    try:
+        return os.environ[key]
+    except:
+        return None
 
 class GlobalVars:
     false_positives = []
