@@ -2,6 +2,10 @@ import os
 import cPickle as pickle
 from datetime import datetime
 from globalvars import GlobalVars
+from helpers import Response
+from apigetpost import api_get_post
+from parsing import get_user_from_url
+from spamhandling import handle_spam
 import metasmoke
 import requests
 import json
@@ -72,6 +76,54 @@ def filter_auto_ignored_posts():
         GlobalVars.auto_ignored_posts.remove(tr)
     with open("autoIgnoredPosts.txt", "wb") as f:
         pickle.dump(GlobalVars.auto_ignored_posts, f, protocol=pickle.HIGHEST_PROTOCOL)
+
+
+def report_post(urls):
+    output = []
+    index = 0
+    for url in urls:
+        index += 1
+        post_data = api_get_post(url)
+        if post_data is None:
+            output.append("Post {}: That does not look like a valid post URL.".format(index))
+            continue
+        if post_data is False:
+            output.append("Post {}: Could not find data for this post in the API. "
+                          "It may already have been deleted.".format(index))
+            continue
+        if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive((post_data.post_id, post_data.site)):
+            # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
+            # this re-report might be attempting to correct that/fix a mistake/etc.
+            output.append("Post {}: Already recently reported".format(index))
+            continue
+        user = get_user_from_url(post_data.owner_url)
+        if user is not None:
+            add_blacklisted_user(user, message_url, post_data.post_url)
+        why = u"Post manually reported by user *{}* in room *{}*.\n".format(ev_user_name,
+                                                                            ev_room_name.decode('utf-8'))
+        batch = ""
+        if len(urls) > 1:
+            batch = " (batch report: post {} out of {})".format(index, len(urls))
+        handle_spam(title=post_data.title,
+                    body=post_data.body,
+                    poster=post_data.owner_name,
+                    site=post_data.site,
+                    post_url=post_data.post_url,
+                    poster_url=post_data.owner_url,
+                    post_id=post_data.post_id,
+                    reasons=["Manually reported " + post_data.post_type + batch],
+                    is_answer=post_data.post_type == "answer",
+                    why=why,
+                    owner_rep=post_data.owner_rep,
+                    post_score=post_data.score,
+                    up_vote_count=post_data.up_vote_count,
+                    down_vote_count=post_data.down_vote_count,
+                    question_id=post_data.question_id)
+    if 1 < len(urls) > len(output):
+        add_or_update_multiple_reporter(ev_user_id, wrap2.host, time.time())
+    if len(output) > 0:
+        return Response(command_status=True, message=os.linesep.join(output))
+    return Response(command_status=True, message=None)
 
 
 # methods to check whether a post/user is whitelisted/blacklisted/...
