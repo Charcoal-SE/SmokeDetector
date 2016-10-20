@@ -2,9 +2,11 @@ from globalvars import GlobalVars
 from findspam import FindSpam
 from datetime import datetime
 from utcdate import UtcDate
+from apigetpost import api_get_post
 from datahandling import *
 from metasmoke import Metasmoke
 from parsing import *
+from spamhandling import handle_spam
 from spamhandling import handle_user_with_all_spam
 from gitmanager import GitManager
 from threading import Thread
@@ -13,7 +15,7 @@ import requests
 import os
 import time
 import datahandling
-import helpers
+from helpers import Response
 
 
 # TODO: pull out code block to get user_id, chat_site, room_id into function
@@ -872,13 +874,57 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
                                                       "for one post)".format(wait))
     if len(message_parts) < 2:
         return Response(command_status=False, message="Not enough arguments.")
+    output = []
+    index = 0
     urls = list(set(message_parts[1:]))
     if len(urls) > 5:
         return Response(command_status=False, message="To avoid SmokeDetector reporting posts too slowly, you can "
                                                       "report at most 5 posts at a time. This is to avoid "
                                                       "SmokeDetector's chat messages getting rate-limited too much, "
                                                       "which would slow down reports.")
-    return helpers.report_post(urls, message_url, ev_room_name, ev_user_name, ev_user_id, wrap2)
+    for url in urls:
+        index += 1
+        post_data = api_get_post(url)
+        if post_data is None:
+            output.append("Post {}: That does not look like a valid post URL.".format(index))
+            continue
+        if post_data is False:
+            output.append("Post {}: Could not find data for this post in the API. "
+                          "It may already have been deleted.".format(index))
+            continue
+        if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive((post_data.post_id, post_data.site)):
+            # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
+            # this re-report might be attempting to correct that/fix a mistake/etc.
+            output.append("Post {}: Already recently reported".format(index))
+            continue
+        user = get_user_from_url(post_data.owner_url)
+        if user is not None:
+            add_blacklisted_user(user, message_url, post_data.post_url)
+        why = u"Post manually reported by user *{}* in room *{}*.\n".format(ev_user_name,
+                                                                            ev_room_name.decode('utf-8'))
+        batch = ""
+        if len(urls) > 1:
+            batch = " (batch report: post {} out of {})".format(index, len(urls))
+        handle_spam(title=post_data.title,
+                    body=post_data.body,
+                    poster=post_data.owner_name,
+                    site=post_data.site,
+                    post_url=post_data.post_url,
+                    poster_url=post_data.owner_url,
+                    post_id=post_data.post_id,
+                    reasons=["Manually reported " + post_data.post_type + batch],
+                    is_answer=post_data.post_type == "answer",
+                    why=why,
+                    owner_rep=post_data.owner_rep,
+                    post_score=post_data.score,
+                    up_vote_count=post_data.up_vote_count,
+                    down_vote_count=post_data.down_vote_count,
+                    question_id=post_data.question_id)
+    if 1 < len(urls) > len(output):
+        add_or_update_multiple_reporter(ev_user_id, wrap2.host, time.time())
+    if len(output) > 0:
+        return Response(command_status=True, message=os.linesep.join(output))
+    return Response(command_status=True, message=None)
 
 
 #
