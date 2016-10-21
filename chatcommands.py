@@ -255,6 +255,11 @@ def command_blacklist(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *
     return Response(command_status=result[0], message=result[1])
 
 
+@check_permissions
+def command_gitstatus(wrap2, *args, **kwargs):
+    return Response(command_status=True, message=GitManager.current_git_status)
+
+
 # --- Joke Commands --- #
 def command_blame(ev_room, *args, **kwargs):
     """
@@ -1227,6 +1232,7 @@ command_dict = {
     "!!/commands": command_help,
     "!!/coffee": command_coffee,
     "!!/errorlogs": command_errorlogs,
+    "!!/gitstatus": command_gitstatus,
     "!!/help": command_help,
     "!!/info": command_help,
     "!!/isblu": command_check_blacklist,

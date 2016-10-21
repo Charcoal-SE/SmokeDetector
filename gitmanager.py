@@ -65,3 +65,6 @@ class GitManager:
             return (False, "Unable to perform action due to lack of code-level permissions. [Branch pushed](https://github.com/Charcoal-SE/SmokeDetector/tree/{0}), PR at your leisure.".format(branch))
 
         return (True, "Blacklisted {0} - the entry will be applied via autopull if CI succeeds.".format(", ".join(items_to_blacklist)))
+
+    def current_git_status(self):
+        return git.status()
