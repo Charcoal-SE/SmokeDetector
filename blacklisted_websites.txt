@@ -727,5 +727,6 @@ uflysoft\.com
 sea59\.com
 serverbasket\.com
 whizzsystems\.com
+salvinind\.com
 
 this\.is\.not\.spam\.com
