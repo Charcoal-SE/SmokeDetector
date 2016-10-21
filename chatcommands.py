@@ -257,7 +257,7 @@ def command_blacklist(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *
 
 @check_permissions
 def command_gitstatus(wrap2, *args, **kwargs):
-    return Response(command_status=True, message=GitManager.current_git_status)
+    return Response(command_status=True, message=GitManager.current_git_status())
 
 
 # --- Joke Commands --- #
