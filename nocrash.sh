@@ -22,6 +22,7 @@ do
 
    if [ "$ecode" -eq "3" ]
    then
+    git checkout -- blacklisted_websites.txt
     git checkout master
     git pull
     git submodule update
