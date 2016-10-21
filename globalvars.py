@@ -273,7 +273,11 @@ class GlobalVars:
     api_request_lock = threading.Lock()
 
     config = ConfigParser.RawConfigParser()
-    config.read('config')
+
+    if os.path.isfile('config'):
+        config.read('config')
+    else:
+        config.read('config.ci')
 
     latest_smokedetector_messages = {meta_tavern_room_id: [], charcoal_room_id: [], socvr_room_id: []}
 
