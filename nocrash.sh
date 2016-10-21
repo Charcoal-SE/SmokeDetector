@@ -1,11 +1,19 @@
 #!/bin/bash
-read -p "Username: " u
-export ChatExchangeU=$u
+
+if [ -z "$ChatExchangeU" ]; then
+  read -p "Username: " u
+  export ChatExchangeU=$u
+fi
+
 export CEU="h"
-stty -echo
-read -p "Password: " p
-export ChatExchangeP=$p
-stty echo
+
+if [ -z "$ChatExchangeP" ]; then
+  stty -echo
+  read -p "Password: " p
+  export ChatExchangeP=$p
+  stty echo
+fi
+
 count=0
 crashcount=0
 stoprunning=0
