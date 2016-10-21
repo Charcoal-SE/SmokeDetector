@@ -66,5 +66,6 @@ class GitManager:
 
         return (True, "Blacklisted {0} - the entry will be applied via autopull if CI succeeds.".format(", ".join(items_to_blacklist)))
 
+    @classmethod
     def current_git_status(self):
         return git.status()
