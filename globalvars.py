@@ -101,7 +101,8 @@ class GlobalVars:
             "97389",    # Kaz Wolfe
             "144962",   # DJMcMayhem
             "139423",   # NobodyNada
-            "62118"     # Triplee
+            "62118",    # tripleee
+            "130558"    # Registered User
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
