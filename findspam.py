@@ -275,7 +275,7 @@ class FindSpam:
         u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "no2blast", "sunergetic", "capilux", "sante ?avis",
         "enduros", "dianabol", "ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex", "revimax",
         "celluria", "viatropin", "(meg|test)adrox", "nordic ?loan ?firm", "safflower",
-        "(essay|resume|article|dissertation|thesis) ?writing ?service", "satta ?matka", "bojiter"
+        "(essay|resume|article|dissertation|thesis) ?writing ?service", "satta ?matka", "bojiter", "1-?800-?935-?7817"
     ]
 
     blacklisted_websites = [line.rstrip() for line in open("blacklisted_websites.txt") if len(line.rstrip()) > 0]
