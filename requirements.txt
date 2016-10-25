@@ -1,5 +1,6 @@
 beautifulsoup4
 requests
+requests[security]
 websocket-client
 coverage
 pytest
