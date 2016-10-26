@@ -1,5 +1,5 @@
 import requests
-from parsing import fetch_post_id_and_site_from_url, url_to_shortlink
+import parsing
 from globalvars import GlobalVars
 import time
 import HTMLParser
@@ -28,7 +28,7 @@ def api_get_post(post_url):
     # Respect backoff, if we were given one
     if GlobalVars.api_backoff_time > time.time():
         time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
-    d = fetch_post_id_and_site_from_url(post_url)
+    d = parsing.fetch_post_id_and_site_from_url(post_url)
     if d is None:
         return None
     post_id, site, post_type = d
@@ -50,7 +50,7 @@ def api_get_post(post_url):
     item = response['items'][0]
     post_data = PostData()
     post_data.post_id = post_id
-    post_data.post_url = url_to_shortlink(item['link'])
+    post_data.post_url = parsing.url_to_shortlink(item['link'])
     post_data.post_type = post_type
     h = HTMLParser.HTMLParser()
     post_data.title = h.unescape(item['title'])

@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 from threading import Thread
 import metasmoke
 from globalvars import GlobalVars
-from datahandling import is_false_positive, is_ignored_post, get_post_site_id_link
+import datahandling
 
 
 class DeletionWatcher:
@@ -26,7 +26,7 @@ class DeletionWatcher:
         post_id = post_site_id[0]
         post_type = post_site_id[2]
         if post_type == "answer":
-            question_id = str(get_post_site_id_link(post_site_id))
+            question_id = str(datahandling.get_post_site_id_link(post_site_id))
             if question_id is None:
                 return
         else:
@@ -75,5 +75,5 @@ class DeletionWatcher:
     @classmethod
     def post_message_if_not_deleted(self, post_site_id, post_url, message_text, room):
         was_report_deleted = self.check_websocket_for_deletion(post_site_id, post_url, 300)
-        if not was_report_deleted and not is_false_positive(post_site_id[0:2]) and not is_ignored_post(post_site_id[0:2]):
+        if not was_report_deleted and not datahandling.is_false_positive(post_site_id[0:2]) and not datahandling.is_ignored_post(post_site_id[0:2]):
             room.send_message(message_text)

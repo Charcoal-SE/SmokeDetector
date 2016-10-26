@@ -1,20 +1,19 @@
 import sys
 from threading import Thread
 from findspam import FindSpam
-from datahandling import *
-from parsing import get_user_from_url, unescape_title,\
-    escape_special_chars_in_title, to_protocol_relative
+import datahandling
 from globalvars import GlobalVars
 from datetime import datetime
-from parsing import url_to_shortlink, user_url_to_shortlink
+import parsing
 import metasmoke
-from deletionwatcher import DeletionWatcher
+import deletionwatcher
 import excepthook
 import regex
-
+import json
+import time
 
 def should_whitelist_prevent_alert(user_url, reasons):
-    is_whitelisted = is_whitelisted_user(get_user_from_url(user_url))
+    is_whitelisted = datahandling.is_whitelisted_user(parsing.get_user_from_url(user_url))
     if not is_whitelisted:
         return False
     reasons_comparison = [r for r in set(reasons) if "username" not in r]
@@ -30,9 +29,9 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
     if not body:
         body = ""
     test, why = FindSpam.test_post(title, body, user_name, post_site, is_answer, body_is_summary, owner_rep, post_score)
-    if is_blacklisted_user(get_user_from_url(user_url)):
+    if datahandling.is_blacklisted_user(parsing.get_user_from_url(user_url)):
         test.append("blacklisted user")
-        blacklisted_user_data = get_blacklisted_user_data(get_user_from_url(user_url))
+        blacklisted_user_data = datahandling.get_blacklisted_user_data(parsing.get_user_from_url(user_url))
         if len(blacklisted_user_data) > 1:
             message_url = 'http:' + blacklisted_user_data[1]
             blacklisted_post_url = blacklisted_user_data[2]
@@ -42,10 +41,10 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
             else:
                 why += u"\n" + u"Blacklisted user - blacklisted by {}".format(message_url)
     if 0 < len(test):
-        if has_already_been_posted(post_site, post_id, title) or is_false_positive((post_id, post_site)) \
+        if datahandling.has_already_been_posted(post_site, post_id, title) or datahandling.is_false_positive((post_id, post_site)) \
                 or should_whitelist_prevent_alert(user_url, test) \
-                or is_ignored_post((post_id, post_site)) \
-                or is_auto_ignored_post((post_id, post_site)):
+                or datahandling.is_ignored_post((post_id, post_site)) \
+                or datahandling.is_auto_ignored_post((post_id, post_site)):
             return False, None, ""  # Don't repost. Reddit will hate you.
         return True, test, why
     return False, None, ""
@@ -65,7 +64,7 @@ def check_if_spam_json(json_data):
         # http://chat.stackexchange.com/transcript/message/18380776#18380776
         return False, None, ""
     title = data["titleEncodedFancy"]
-    title = unescape_title(title)
+    title = parsing.unescape_title(title)
     body = data["bodySummary"]
     poster = data["ownerDisplayName"]
     url = data["url"]
@@ -88,11 +87,11 @@ def check_if_spam_json(json_data):
 
 
 def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reasons, is_answer, why="", owner_rep=None, post_score=None, up_vote_count=None, down_vote_count=None, question_id=None):
-    post_url = to_protocol_relative(url_to_shortlink(post_url))
-    poster_url = to_protocol_relative(user_url_to_shortlink(poster_url))
+    post_url = parsing.to_protocol_relative(parsing.url_to_shortlink(post_url))
+    poster_url = parsing.to_protocol_relative(parsing.user_url_to_shortlink(poster_url))
     reason = ", ".join(reasons)
     reason = reason[:1].upper() + reason[1:]  # reason is capitalised, unlike the entries of reasons list
-    append_to_latest_questions(site, post_id, title if not is_answer else "")
+    datahandling.append_to_latest_questions(site, post_id, title if not is_answer else "")
     if len(reasons) == 1 and ("all-caps title" in reasons or
                               "repeating characters in title" in reasons or
                               "repeating characters in body" in reasons or
@@ -100,13 +99,13 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                               "repeating words in title" in reasons or
                               "repeating words in body" in reasons or
                               "repeating words in answer" in reasons):
-        add_auto_ignored_post((post_id, site, datetime.now()))
+        datahandling.add_auto_ignored_post((post_id, site, datetime.now()))
     if why is not None and why != "":
-        add_why(site, post_id, why)
+        datahandling.add_why(site, post_id, why)
     if is_answer and question_id is not None:
-        add_post_site_id_link((post_id, site, "answer"), question_id)
+        datahandling.add_post_site_id_link((post_id, site, "answer"), question_id)
     try:
-        title = escape_special_chars_in_title(title)
+        title = parsing.escape_special_chars_in_title(title)
         sanitized_title = regex.sub('https?://', '', title)
 
         prefix = u"[ [SmokeDetector](//git.io/vgx7b) ]"
@@ -130,29 +129,29 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
 
         print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
         if time.time() >= GlobalVars.blockedTime["all"]:
-            append_to_latest_questions(site, post_id, title)
+            datahandling.append_to_latest_questions(site, post_id, title)
             if reason not in GlobalVars.experimental_reasons:
                 if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
-                    chq_pings = get_user_names_on_notification_list("stackexchange.com", GlobalVars.charcoal_room_id, site, GlobalVars.wrap)
+                    chq_pings = datahandling.get_user_names_on_notification_list("stackexchange.com", GlobalVars.charcoal_room_id, site, GlobalVars.wrap)
                     chq_msg = prefix + s
-                    chq_msg_pings = prefix + append_pings(s, chq_pings)
-                    chq_msg_pings_ms = prefix_ms + append_pings(s, chq_pings)
+                    chq_msg_pings = prefix + datahandling.append_pings(s, chq_pings)
+                    chq_msg_pings_ms = prefix_ms + datahandling.append_pings(s, chq_pings)
                     msg_to_send = chq_msg_pings_ms if len(chq_msg_pings_ms) <= 500 else chq_msg_pings if len(chq_msg_pings) <= 500 else chq_msg[0:500]
                     GlobalVars.charcoal_hq.send_message(msg_to_send)
                 if not should_reasons_prevent_tavern_posting(reasons) and site not in GlobalVars.non_tavern_sites and time.time() >= GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id]:
-                    tavern_pings = get_user_names_on_notification_list("meta.stackexchange.com", GlobalVars.meta_tavern_room_id, site, GlobalVars.wrapm)
+                    tavern_pings = datahandling.get_user_names_on_notification_list("meta.stackexchange.com", GlobalVars.meta_tavern_room_id, site, GlobalVars.wrapm)
                     tavern_msg = prefix + s
-                    tavern_msg_pings = prefix + append_pings(s, tavern_pings)
-                    tavern_msg_pings_ms = prefix_ms + append_pings(s, tavern_pings)
+                    tavern_msg_pings = prefix + datahandling.append_pings(s, tavern_pings)
+                    tavern_msg_pings_ms = prefix_ms + datahandling.append_pings(s, tavern_pings)
                     msg_to_send = tavern_msg_pings_ms if len(tavern_msg_pings_ms) <= 500 else tavern_msg_pings if len(tavern_msg_pings) <= 500 else tavern_msg[0:500]
-                    t_check_websocket = Thread(target=DeletionWatcher.post_message_if_not_deleted, args=((post_id, site, "answer" if is_answer else "question"), post_url, msg_to_send, GlobalVars.tavern_on_the_meta))
+                    t_check_websocket = Thread(target=deletionwatcher.DeletionWatcher.post_message_if_not_deleted, args=((post_id, site, "answer" if is_answer else "question"), post_url, msg_to_send, GlobalVars.tavern_on_the_meta))
                     t_check_websocket.daemon = True
                     t_check_websocket.start()
                 if site == "stackoverflow.com" and reason not in GlobalVars.non_socvr_reasons and time.time() >= GlobalVars.blockedTime[GlobalVars.socvr_room_id]:
-                    socvr_pings = get_user_names_on_notification_list("stackoverflow.com", GlobalVars.socvr_room_id, site, GlobalVars.wrapso)
+                    socvr_pings = datahandling.get_user_names_on_notification_list("stackoverflow.com", GlobalVars.socvr_room_id, site, GlobalVars.wrapso)
                     socvr_msg = prefix + s
-                    socvr_msg_pings = prefix + append_pings(s, socvr_pings)
-                    socvr_msg_pings_ms = prefix_ms + append_pings(s, socvr_pings)
+                    socvr_msg_pings = prefix + datahandling.append_pings(s, socvr_pings)
+                    socvr_msg_pings_ms = prefix_ms + datahandling.append_pings(s, socvr_pings)
                     msg_to_send = socvr_msg_pings_ms if len(socvr_msg_pings_ms) <= 500 else socvr_msg_pings if len(socvr_msg_pings) <= 500 else socvr_msg[0:500]
                     GlobalVars.socvr.send_message(msg_to_send)
 
@@ -163,10 +162,10 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                     if room.id not in GlobalVars.blockedTime or time.time() >= GlobalVars.blockedTime[room.id]:
                         room_site = room._client.host
                         room_id = int(room.id)
-                        room_pings = get_user_names_on_notification_list(room_site, room_id, site, room._client)
+                        room_pings = datahandling.get_user_names_on_notification_list(room_site, room_id, site, room._client)
                         room_msg = prefix + s
-                        room_msg_pings = prefix + append_pings(s, room_pings)
-                        room_msg_pings_ms = prefix_ms + append_pings(s, room_pings)
+                        room_msg_pings = prefix + datahandling.append_pings(s, room_pings)
+                        room_msg_pings_ms = prefix_ms + datahandling.append_pings(s, room_pings)
                         msg_to_send = room_msg_pings_ms if len(room_msg_pings_ms) <= 500 else room_msg_pings if len(room_msg_pings) <= 500 else room_msg[0:500]
                         specialroom["room"].send_message(msg_to_send)
     except:
@@ -181,7 +180,7 @@ def handle_user_with_all_spam(user, why):
     s = "[ [SmokeDetector](//git.io/vgx7b) ] All of this user's posts are spam: [user {} on {}](//{}/users/{}?tab={})" \
         .format(user_id, site, site, user_id, tab)
     print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
-    add_why_allspam(user, why)
+    datahandling.add_why_allspam(user, why)
     if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
         GlobalVars.charcoal_hq.send_message(s)
     for specialroom in GlobalVars.specialrooms:
