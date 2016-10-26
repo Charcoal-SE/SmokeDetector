@@ -12,6 +12,7 @@ import regex
 import json
 import time
 
+
 def should_whitelist_prevent_alert(user_url, reasons):
     is_whitelisted = datahandling.is_whitelisted_user(parsing.get_user_from_url(user_url))
     if not is_whitelisted:
