@@ -26,9 +26,11 @@ class GitManager:
         current_commit = git("rev-parse", "HEAD").strip()
 
         # Add items to file
-
-        with open("blacklisted_websites.txt", "a") as blacklisted_websites:
-            blacklisted_websites.write("\n" + "\n".join(items_to_blacklist))
+        with open("blacklisted_websites.txt", "a+") as blacklisted_websites:
+            last_character = blacklisted_websites.read()[-1:]
+            if last_character != "\n":
+                blacklisted_websites.write("\n")
+            blacklisted_websites.write("\n".join(items_to_blacklist) + "\n")
 
         # Checkout a new branch (mostly unnecessary, but may help if we create PRs in the future
         branch = "auto-blacklist-{0}".format(str(time.time()))
