@@ -40,7 +40,7 @@ class GitManager:
         git.reset("HEAD")
 
         git.add("blacklisted_websites.txt")
-        git.commit("-m", "Auto blacklist of {0} by {1} --autopull".format(", ".join(items_to_blacklist), username))
+        git.commit("-m", u"Auto blacklist of {0} by {1} --autopull".format(", ".join(items_to_blacklist), username))
 
         if code_permissions:
             git.checkout("master")
