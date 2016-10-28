@@ -35,7 +35,7 @@ hits4slim
 screenshot\.net
 downloadavideo\.net
 nutirions\.com
-sh\.st/
+//sh\.st/
 //adf\.ly/
 //j\.gs/
 centerweb10
