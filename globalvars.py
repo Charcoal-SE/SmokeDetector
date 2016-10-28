@@ -102,7 +102,8 @@ class GlobalVars:
             "144962",   # DJMcMayhem
             "139423",   # NobodyNada
             "62118",    # tripleee
-            "130558"    # Registered User
+            "130558",   # Registered User
+            "128113"    # arda
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
