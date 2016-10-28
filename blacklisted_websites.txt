@@ -733,3 +733,4 @@ ideaflix\.com
 usadrugguide\.com
 proofy\.io
 torrentsvpn\.com
+techexperiment\.blogspot\.(com|sg)
