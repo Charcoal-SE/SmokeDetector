@@ -3,16 +3,6 @@ import regex
 import phonenumbers
 
 
-def all_caps_text(s, site):
-    s = regex.sub("<[^>]*>", "", s)   # remove HTML tags
-    s = regex.sub("&\w+;", "", s)     # remove HTML entities
-    if len(s) <= 150 and regex.compile(ur"SQL|\b(ERROR|PHP|QUERY|ANDROID|CASE|SELECT|HAVING|COUNT|GROUP|ORDER BY|INNER|OUTER)\b").search(s):
-        return False, ""   # common words in non-spam all-caps titles
-    if len(s) >= 15 and regex.compile(ur"^(?=.*\p{upper})\P{lower}*$", regex.UNICODE).search(s):
-        return True, "All in caps"
-    return False, ""
-
-
 def has_repeated_words(s, site):
     words = regex.split(r"[\s.,;!/\()\[\]+_-]", s)
     words = [word for word in words if word != ""]
@@ -493,9 +483,6 @@ class FindSpam:
         # Offensive title: titles are more sensitive
         {'regex': ur"(?i)\bfuck|(?<!brain)fuck(ers?|ing)?\b", 'all': True, 'sites': [], 'reason': "offensive {} detected", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': True, 'body_summary': False,
          'max_rep': 101, 'max_score': 5},
-        # All-caps text
-        {'method': all_caps_text, 'all': True, 'sites': ["pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com", "ja.stackoverflow.com", "rus.stackexchange.com"],
-         'reason': "all-caps {}", 'title': False, 'body': True, 'questions': False, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # No whitespace, punctuation, or formatting in a post
         {'regex': ur"(?i)^<p>[a-z]+</p>\s*$", 'all': True, 'sites': ["codegolf.stackexchange.com", "puzzling.stackexchange.com"],
          'reason': "no whitespace in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
