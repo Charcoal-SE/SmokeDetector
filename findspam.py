@@ -244,6 +244,7 @@ class FindSpam:
         "Yeah! I had some liquid courage. I figured I would give it a shot. The worst he could say was no! Plus the semester",
         "friends that I came to UCU  a virgin and the first day I lost my virginity in a shower with two girls",
         "As I am carrying my personal effects to my room, I spot this girl, probably another fresher, sex hungry as I am",
+        "Thierno(_| )?M.(_| )Sow",
     ]
     bad_keywords_nwb = [
         u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
