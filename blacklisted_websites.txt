@@ -738,3 +738,4 @@ acewriters\.org
 backupbird\.com
 proofy\(dot\)io
 ituBola\.com
+shaperich\.com
