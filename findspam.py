@@ -200,7 +200,7 @@ def has_eltima(s, site):
 
 class FindSpam:
     with open("bad_keywords.txt", "r") as f:
-        bad_keywords = [line.rstrip() for line in f if len(line.rstrip()) > 0]
+        bad_keywords = [line.decode('utf8').rstrip() for line in f if len(line.decode('utf8').rstrip()) > 0]
 
     bad_keywords_nwb = [
         u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",  # "nwb" == "no word boundary"
