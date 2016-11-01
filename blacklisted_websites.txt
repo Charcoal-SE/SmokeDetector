@@ -736,3 +736,4 @@ techexperiment\.blogspot\.(com|sg)
 dutraeconomicus\.com
 acewriters\.org
 backupbird\.com
+proofy\(dot\)io
