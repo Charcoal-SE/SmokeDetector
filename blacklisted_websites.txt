@@ -740,3 +740,4 @@ proofy\(dot\)io
 ituBola\.com
 mag-manager\.com
 convertmydoc\.com
+standaloneinstaller\.com
