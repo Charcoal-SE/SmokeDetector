@@ -745,3 +745,4 @@ downloadapkinstaller\.com
 contactforhelp\.com
 filesupdated\.com
 fpga4student\.blogspot\.com
+sql-email\.com
