@@ -89,7 +89,7 @@ class GlobalVars:
             "163686",   # Gothdo
             "145827",   # angussidney
             "121520",   # ArtOfCode
-            "215783",   # KarmaBot (ArtOfCode's sock to test things with)
+            "244382",   # Lt. A. Code (ArtOfCode's sock to test things with)
             "137388",   # QPaysTaxes
             "212311",   # Ryan Bemrose
             "172397",   # Kyll
