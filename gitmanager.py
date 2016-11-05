@@ -52,9 +52,14 @@ class GitManager:
 
             if GlobalVars.github_username is None or GlobalVars.github_password is None:
                 return (False, "tell someone to set a GH password")
-
+            
+            list_of_domains = ""
+            
+            for domain in range(len(items_to_blacklist)):
+	            list_of_domains += "\n - {0} - [MS search](https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93&body_is_regex=1&body={0})".format(items_to_blacklist[domain])
+            
             payload = {"title": "{0}: Blacklist {1}".format(username, ", ".join(items_to_blacklist)),
-                       "body": "{0} requests blacklist of domains: \n\n - {1}".format(username, "\n - ".join(items_to_blacklist)),
+                       "body": "{0} requests blacklist of domains: \n{1}".format(username, list_of_domains),
                        "head": branch,
                        "base": "master"}
             response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls", auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password), data=json.dumps(payload))
