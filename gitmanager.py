@@ -56,7 +56,7 @@ class GitManager:
             list_of_domains = ""
             
             for domain in range(len(items_to_blacklist)):
-	        list_of_domains += "\n - {0} - [MS search](https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93&body_is_regex=1&body={0})".format(items_to_blacklist[domain])
+                list_of_domains += "\n - {0} - [MS search](https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93&body_is_regex=1&body={0})".format(items_to_blacklist[domain])
             
             payload = {"title": "{0}: Blacklist {1}".format(username, ", ".join(items_to_blacklist)),
                        "body": "{0} requests blacklist of domains: \n{1}".format(username, list_of_domains),
