@@ -88,6 +88,7 @@ class GlobalVars:
             "193364",   # Ashish Ahuja
             "163686",   # Gothdo
             "145827",   # angussidney
+            "244748",   # Supreme Leader SnokeDetector (angussidney's sock)
             "121520",   # ArtOfCode
             "244382",   # Lt. A. Code (ArtOfCode's sock to test things with)
             "137388",   # QPaysTaxes
