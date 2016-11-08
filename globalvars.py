@@ -104,7 +104,8 @@ class GlobalVars:
             "139423",   # NobodyNada
             "62118",    # tripleee
             "130558",   # Registered User
-            "128113"    # arda
+            "128113",   # arda
+            "164318"    # Glorfindel
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
