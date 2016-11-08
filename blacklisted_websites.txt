@@ -751,3 +751,4 @@ moviemaniaonline\.com
 SELLCVV\.SHOP
 biohunter\.in
 bizpro9\.com
+selenium\-venkat\.blogspot\.(com|sg|in)
