@@ -138,7 +138,7 @@ GlobalVars.specialrooms = [
     },
     {
         "sites": ["magento.stackexchange.com"],
-        "room": GlobalVars.wrap.get_room("48769"),
+        "room": GlobalVars.wrap.get_room("47869"),
         "unwantedReasons": []
     }
 ]
