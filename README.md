@@ -26,7 +26,7 @@ To run, use `nocrash.sh` (preferably in a daemon-able mode, like a `screen` sess
 You can also use `python ws.py`, but then SmokeDetector will be shut down after 6 hours; when running from `nocrash.sh`, it will be restarted. (This is to be sure that closed websockets, if any, are reopened)
 
 
-You can run `. ChatExchange/setup.sh` to set local environment variables so that you don't have to log in every time. 
+You can run `. ChatExchange/setp.sh` to set local environment variables so that you don't have to log in every time. 
 
 SmokeDetector only supports Stack Exchange OpenIDs for now.
 
