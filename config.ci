@@ -8,6 +8,12 @@ location=Continuous Integration. If you're seeing this, create a config file wit
 # Set metasmoke_key if Smokey isn't running on the same machine (localhost)
 # that metasmoke is
 # metasmoke_key=gibberish_here
+ 
+# Set Smokey user IDs
+# Leave as default values for the normal smokey user
+charcoal_id=120914
+meta_tavern_id=266345
+socvr_id=3735529
 
 # Set GitHub keys
 # github_username=username@domain.com
