@@ -9,6 +9,12 @@ location=location_here
 # that metasmoke is
 # metasmoke_key=gibberish_here
 
+# Set Smokey user IDs
+# Leave as default values for the normal smokey user
+charcoal_id=120914
+meta_tavern_id=266345
+socvr_id=3735529
+
 # Set GitHub keys
 # github_username=username@domain.com
 # github_password=p@55w0rd
