@@ -245,6 +245,16 @@ class GlobalVars:
 
     code_privileged_users = None
 
+    try:
+        smokeDetector_user_id = {charcoal_room_id: config.get("Config", "charcoal_id"),
+                                 meta_tavern_room_id: config.get("Config", "meta_tavern_id"),
+                                 socvr_room_id: config.get("Config", "socvr_id")}
+    except ConfigParser.NoOptionError:
+        smokeDetector_user_id = {charcoal_room_id: "120914",
+                                 meta_tavern_room_id: "266345",
+                                 socvr_room_id: "3735529"}
+        print "No SmokeDetector user IDs found, using default values"
+
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
 
