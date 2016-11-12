@@ -239,24 +239,11 @@ class GlobalVars:
             "4875631",  # FrankerZ
             "2958086",  # Compass
             "499214",   # JanDvorak
-            "5647260"  # Andrew L.
+            "5647260"   # Andrew L.
         ]
     }
 
     code_privileged_users = None
-
-    try:
-        smokeDetector_user_id = {charcoal_room_id: config.get("Config", "charcoal_id"),
-                                 meta_tavern_room_id: config.get("Config", "meta_tavern_id"),
-                                 socvr_room_id: config.get("Config", "socvr_id")}
-    except ConfigParser.NoOptionError:
-        smokeDetector_user_id = {charcoal_room_id: "120914",
-                                 meta_tavern_room_id: "266345",
-                                 socvr_room_id: "3735529"}
-        print "No SmokeDetector user IDs found, using default values"
-
-    smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
-                             socvr_room_id: "3735529"}
 
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
 
@@ -306,6 +293,16 @@ class GlobalVars:
 
     location = config.get("Config", "location")
     print location
+
+    try:
+        smokeDetector_user_id = {charcoal_room_id: config.get("Config", "charcoal_id"),
+                                 meta_tavern_room_id: config.get("Config", "meta_tavern_id"),
+                                 socvr_room_id: config.get("Config", "socvr_id")}
+    except ConfigParser.NoOptionError:
+        smokeDetector_user_id = {charcoal_room_id: "120914",
+                                 meta_tavern_room_id: "266345",
+                                 socvr_room_id: "3735529"}
+        print "No SmokeDetector user IDs found, using default values"
 
     metasmoke_ws = None
 
