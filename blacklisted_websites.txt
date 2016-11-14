@@ -646,7 +646,6 @@ redbubble\.com
 joomag\.com
 bigclasses\.com
 ladybirdco\.com
-magehit\.com
 colors34.com
 ultimatewowguide\.com
 fiverr\.com/\w+
