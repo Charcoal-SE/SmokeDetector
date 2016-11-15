@@ -148,6 +148,7 @@ def restart_automatically(time_in_seconds):
     time.sleep(time_in_seconds)
     os._exit(1)
 
+
 Thread(target=restart_automatically, args=(21600,)).start()
 
 DeletionWatcher.update_site_id_list()
