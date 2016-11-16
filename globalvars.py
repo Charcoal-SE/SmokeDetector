@@ -214,7 +214,6 @@ class GlobalVars:
             "874188",   # Triplee
             "880772",   # approxiblue
             "1835379",  # Cerbrus
-            "1843331",  # Tim Castelijns
             "3956566",  # JamesENL
             "2357233",  # Ms Yvette
             "3155639",  # AlexanderOMara
