@@ -202,7 +202,7 @@ while True:
             os._exit(4)
         ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
         ws.send("155-questions-active")
-        #GlobalVars.charcoal_hq.send_message("Recovered from `" + exception_only + "`")
+        # GlobalVars.charcoal_hq.send_message("Recovered from `" + exception_only + "`")
 
 now = datetime.utcnow()
 delta = UtcDate.startup_utc_date - now
