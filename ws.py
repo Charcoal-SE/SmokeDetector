@@ -181,9 +181,13 @@ while True:
     try:
         a = ws.recv()
         if a is not None and a != "":
-            is_spam, reason, why = check_if_spam_json(a)
-            t = Thread(target=GlobalVars.bodyfetcher.add_to_queue, args=(a, True if is_spam else None))
-            t.start()
+            action = json.loads(a)["action"]
+            if action == "hb":
+                ws.send("hb")
+            if action == "155-questions-active":
+                is_spam, reason, why = check_if_spam_json(a)
+                t = Thread(target=GlobalVars.bodyfetcher.add_to_queue, args=(a, True if is_spam else None))
+                t.start()
     except Exception, e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         now = datetime.utcnow()
