@@ -24,6 +24,7 @@ from globalvars import GlobalVars
 from datahandling import load_files, filter_auto_ignored_posts
 from metasmoke import Metasmoke
 from deletionwatcher import DeletionWatcher
+import json
 import os
 import time
 import requests
