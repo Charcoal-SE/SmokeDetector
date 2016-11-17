@@ -65,7 +65,14 @@ class BodyFetcher:
 
     def add_to_queue(self, post, should_check_site=False):
         mse_sandbox_id = 3122
-        d = json.loads(json.loads(post)["data"])
+
+        try:
+            d = json.loads(json.loads(post)["data"])
+        except ValueError, err:
+            # post didn't contain a valid JSON object in its ["data"] member
+            # indicative of a server-side socket reset
+            return
+
         site_base = d["siteBaseHostAddress"]
         post_id = d["id"]
         if post_id == mse_sandbox_id and site_base == "meta.stackexchange.com":
