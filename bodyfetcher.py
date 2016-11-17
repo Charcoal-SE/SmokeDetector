@@ -68,7 +68,7 @@ class BodyFetcher:
 
         try:
             d = json.loads(json.loads(post)["data"])
-        except ValueError, err:
+        except ValueError:
             # post didn't contain a valid JSON object in its ["data"] member
             # indicative of a server-side socket reset
             return
