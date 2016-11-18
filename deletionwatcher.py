@@ -49,7 +49,12 @@ class DeletionWatcher:
                 return False
             if a is not None and a != "":
                 try:
-                    d = json.loads(json.loads(a)["data"])
+                    action = json.loads(a)["action"]
+                    if action == "hb":
+                        ws.send("hb")
+                        continue
+                    else:
+                        d = json.loads(json.loads(a)["data"])
                 except:
                     continue
                 if d["a"] == "post-deleted" and str(d["qId"]) == question_id \
