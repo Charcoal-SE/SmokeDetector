@@ -754,4 +754,3 @@ rationaltechnologies\.com
 shiftingguide\.in
 facebookscraper\.net
 modr0z\.blog\.ir
-test\.com
