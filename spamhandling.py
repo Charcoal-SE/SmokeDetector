@@ -107,7 +107,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
         datahandling.add_post_site_id_link((post_id, site, "answer"), question_id)
     try:
         title = parsing.escape_special_chars_in_title(title)
-        sanitized_title = regex.sub('https?://', '', title)
+        sanitized_title = regex.sub('(https?://|\n)', '', title)
 
         prefix = u"[ [SmokeDetector](//git.io/vgx7b) ]"
         if GlobalVars.metasmoke_key:
