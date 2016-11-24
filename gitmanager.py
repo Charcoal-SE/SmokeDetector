@@ -8,7 +8,7 @@ import json
 
 class GitManager:
     @classmethod
-    def add_to_blacklist(self, items_to_blacklist, username, code_permissions):
+    def add_to_blacklist(self, items_to_blacklist, username, chat_profile_link, code_permissions):
         # Check if we're on master
         if git("rev-parse", "--abbrev-ref", "HEAD").strip() != "master":
             return (False, "Not currently on master.")
@@ -59,7 +59,7 @@ class GitManager:
                 list_of_domains += "\n - {0} - [MS search](https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93&body_is_regex=1&body={0})".format(items_to_blacklist[domain])
 
             payload = {"title": "{0}: Blacklist {1}".format(username, ", ".join(items_to_blacklist)),
-                       "body": "{0} requests blacklist of domains: \n{1}".format(username, list_of_domains),
+                       "body": "[{0}]({1}) requests blacklist of domains: \n{2}".format(username, chat_profile_link, list_of_domains),
                        "head": branch,
                        "base": "master"}
             response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls", auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password), data=json.dumps(payload))
