@@ -750,19 +750,6 @@ def command_pending(content, content_lower, *args, **kwargs):
                     message=", ".join(messages))
 
 
-def command_my_chat_profile(message_parts, ev_user_id, wrap2, *args, **kwargs):
-    """
-    Returns a link to the asker's chat profile. Hopefully.
-    :param wrap2:
-    :param ev_user_id:
-    :param message_parts:
-    :param kwargs: No additional arguments expected
-    :return: A string
-    """
-    resp = "https://" + wrap2.host + "/users/" + str(ev_user_id)
-    return Response(command_status=True, message=resp)
-
-
 # --- Notification functions --- #
 def command_allnotifications(message_parts, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -1253,7 +1240,6 @@ command_dict = {
     "!!/lick": command_lick,
     "!!/location": command_location,
     "!!/master": command_master,
-    "!!/mychatprofile": command_my_chat_profile,
     "!!/notify": command_notify,
     "!!/notify-": command_notify,
     "!!/pull": command_pull,
