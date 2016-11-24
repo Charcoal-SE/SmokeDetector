@@ -759,7 +759,8 @@ def command_my_chat_profile(message_parts, ev_user_id, wrap2, *args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: A string
     """
-    return "https://" + wrap2.host + "/users/" + ev_user_id
+    resp = "https://" + wrap2.host + "/users/" + str(ev_user_id)
+    return Response(command_status=True, message=resp)
 
 
 # --- Notification functions --- #
