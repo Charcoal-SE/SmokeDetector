@@ -64,7 +64,7 @@ class GitManager:
                 list_of_domains += "\n - {0} - [MS search](https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93&body_is_regex=1&body={0})".format(items_to_blacklist[domain])
 
             payload = {"title": "{0}: Blacklist {1}".format(username, ", ".join(items_to_blacklist)),
-                       "body": "[{0}]({1}) requests blacklist of domains: \n{2}".format(username, chat_profile_link, list_of_domains),
+                       "body": "[{0}]({1}) requests blacklist of domains: \n{2}\n<!-- METASMOKE-BLACKLIST {3} -->".format(username, chat_profile_link, list_of_domains, "|".join(items_to_blacklist)),
                        "head": branch,
                        "base": "master"}
             response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls", auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password), data=json.dumps(payload))
