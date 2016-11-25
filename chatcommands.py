@@ -251,8 +251,12 @@ def command_blacklist(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *
     :return: A Response
     """
 
-    chat_user_profile_link = "https://chat." + wrap2.host + "/users/" + str(ev_user_id)
-    result = GitManager.add_to_blacklist(message_parts[1:], ev_user_name, chat_user_profile_link, datahandling.is_code_privileged(ev_room, ev_user_id, wrap2))
+    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=wrap2.host, id=str(ev_user_id))
+    result = GitManager.add_to_blacklist(
+                items_to_blacklist=message_parts[1:],
+                username=ev_user_name,
+                chat_profile_link=chat_user_profile_link,
+                code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2))
     return Response(command_status=result[0], message=result[1])
 
 

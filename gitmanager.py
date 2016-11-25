@@ -8,7 +8,12 @@ import json
 
 class GitManager:
     @classmethod
-    def add_to_blacklist(self, items_to_blacklist, username, chat_profile_link, code_permissions):
+    def add_to_blacklist(self, **kwargs):
+        items_to_blacklist = kwargs.get('items_to_blacklist', [])
+        username = kwargs.get('username', '')
+        chat_profile_link = kwargs.get('chat_profile_link', 'http://chat.stackexchange.com/users')
+        code_permissions = kwargs.get('code_permissions', False)
+
         # Check if we're on master
         if git("rev-parse", "--abbrev-ref", "HEAD").strip() != "master":
             return (False, "Not currently on master.")
