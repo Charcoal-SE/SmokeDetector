@@ -77,11 +77,11 @@ GlobalVars.socvr = GlobalVars.wrapso.get_room(GlobalVars.socvr_room_id)
 # https://github.com/Charcoal-SE/SmokeDetector/wiki/Chat-Rooms
 
 GlobalVars.specialrooms = [
-    #{
-    #    "sites": ["math.stackexchange.com"],
-    #    "room": GlobalVars.wrap.get_room("2165"),
-    #    "unwantedReasons": []
-    #},
+    {
+        "sites": ["math.stackexchange.com"],
+        "room": GlobalVars.wrap.get_room("2165"),
+        "unwantedReasons": []
+    },
     {
         "sites": ["english.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("95"),
@@ -102,11 +102,11 @@ GlobalVars.specialrooms = [
         ],
         "watcher": True
     },
-    {
-        "sites": ["parenting.stackexchange.com"],
-        "room": GlobalVars.wrap.get_room("21625"),
-        "unwantedReasons": []
-    },
+    #{
+    #    "sites": ["parenting.stackexchange.com"],
+    #    "room": GlobalVars.wrap.get_room("21625"),
+    #    "unwantedReasons": []
+    #},
     {
         "sites": ["bitcoin.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("8089"),
