@@ -102,11 +102,11 @@ GlobalVars.specialrooms = [
         ],
         "watcher": True
     },
-    #{
+    # {
     #    "sites": ["parenting.stackexchange.com"],
     #    "room": GlobalVars.wrap.get_room("21625"),
     #    "unwantedReasons": []
-    #},
+    # },
     {
         "sites": ["bitcoin.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("8089"),
