@@ -241,7 +241,7 @@ def command_remove_whitelist_user(message_parts, content_lower, ev_room, ev_user
 
 
 @check_permissions
-def command_blacklist(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
+def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Adds a string to the website blacklist and commits/pushes to GitHub
     :param message_parts:
@@ -1234,7 +1234,7 @@ command_dict = {
     "!!/blame": command_blame,
     "!!/block": command_block,
     "!!/brownie": command_brownie,
-    "!!/blacklist": command_blacklist,
+    "!!/blacklist-website": command_blacklist_website,
     "!!/commands": command_help,
     "!!/coffee": command_coffee,
     "!!/errorlogs": command_errorlogs,
