@@ -104,7 +104,7 @@ GlobalVars.specialrooms = [
     },
     {
         "sites": ["parenting.stackexchange.com"],
-        "room": GlobalVars.wrap.get_room("21625"),
+        "room": GlobalVars.wrap.get_room("388"),
         "unwantedReasons": []
     },
     {
