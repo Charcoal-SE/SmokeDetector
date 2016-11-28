@@ -9,10 +9,16 @@ import json
 class GitManager:
     @classmethod
     def add_to_blacklist(self, **kwargs):
-        items_to_blacklist = kwargs.get('items_to_blacklist', [])
-        username = kwargs.get('username', '')
-        chat_profile_link = kwargs.get('chat_profile_link', 'http://chat.stackexchange.com/users')
-        code_permissions = kwargs.get('code_permissions', False)
+        blacklist = kwargs.get("blacklist", "website")
+        items_to_blacklist = kwargs.get("items_to_blacklist", [])
+        username = kwargs.get("username", "")
+        chat_profile_link = kwargs.get("chat_profile_link", "http://chat.stackexchange.com/users")
+        code_permissions = kwargs.get("code_permissions", False)
+
+        if blacklist == "website":
+            blacklist_file_name = "blacklisted_websites.txt"
+        elif blacklist == "keyword":
+            blacklist_file_name = "bad_keywords.txt"
 
         # Check if we're on master
         if git("rev-parse", "--abbrev-ref", "HEAD").strip() != "master":
@@ -24,27 +30,27 @@ class GitManager:
             return (False, "HEAD isn't at tip of origin's master branch")
 
         # Check that blacklisted_websites.txt isn't modified locally. That could get ugly fast
-        if "blacklisted_websites.txt" in git.status():  # Also ugly
-            return (False, "blacklisted_websites.txt modified locally. This is probably bad.")
+        if blacklist_file_name in git.status():  # Also ugly
+            return (False, "{0} modified locally. This is probably bad.".format(blacklist_file_name))
 
         # Store current commit hash
         current_commit = git("rev-parse", "HEAD").strip()
 
         # Add items to file
-        with open("blacklisted_websites.txt", "a+") as blacklisted_websites:
-            last_character = blacklisted_websites.read()[-1:]
+        with open(blacklist_file_name, "a+") as blacklist_file:
+            last_character = blacklist_file.read()[-1:]
             if last_character != "\n":
-                blacklisted_websites.write("\n")
-            blacklisted_websites.write("\n".join(items_to_blacklist) + "\n")
+                blacklist_file.write("\n")
+            blacklist_file.write("\n".join(items_to_blacklist) + "\n")
 
-        # Checkout a new branch (mostly unnecessary, but may help if we create PRs in the future
+        # Checkout a new branch (for PRs for non-code-privileged people)
         branch = "auto-blacklist-{0}".format(str(time.time()))
         git.checkout("-b", branch)
 
         # Clear HEAD just in case
         git.reset("HEAD")
 
-        git.add("blacklisted_websites.txt")
+        git.add(blacklist_file_name)
         git.commit("-m", u"Auto blacklist of {0} by {1} --autopull".format(", ".join(items_to_blacklist), username))
 
         if code_permissions:
@@ -56,7 +62,7 @@ class GitManager:
             git.checkout("master")
 
             if GlobalVars.github_username is None or GlobalVars.github_password is None:
-                return (False, "tell someone to set a GH password")
+                return (False, "Tell someone to set a GH password")
 
             list_of_domains = ""
 
@@ -64,7 +70,7 @@ class GitManager:
                 list_of_domains += "\n - {0} - [MS search](https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93&body_is_regex=1&body={0})".format(items_to_blacklist[domain])
 
             payload = {"title": "{0}: Blacklist {1}".format(username, ", ".join(items_to_blacklist)),
-                       "body": "[{0}]({1}) requests blacklist of domains: \n{2}\n<!-- METASMOKE-BLACKLIST {3} -->".format(username, chat_profile_link, list_of_domains, "|".join(items_to_blacklist)),
+                       "body": "[{0}]({1}) requests the blacklist of the following {2}(s): \n{3}\n<!-- METASMOKE-BLACKLIST {4} -->".format(username, chat_profile_link, blacklist, list_of_domains, "|".join(items_to_blacklist)),
                        "head": branch,
                        "base": "master"}
             response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls", auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password), data=json.dumps(payload))
@@ -72,9 +78,6 @@ class GitManager:
             return (True, "You don't have code privileges, but I've [created a pull request for you]({0}).".format(response.json()["html_url"]))
 
         git.checkout(current_commit)  # Return to old commit to await CI. This will make Smokey think it's in reverted mode if it restarts
-
-        if not code_permissions:
-            return (False, "Unable to perform action due to lack of code-level permissions. [Branch pushed](https://github.com/Charcoal-SE/SmokeDetector/tree/{0}), PR at your leisure.".format(branch))
 
         return (True, "Blacklisted {0} - the entry will be applied via autopull if CI succeeds.".format(", ".join(items_to_blacklist)))
 

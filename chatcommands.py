@@ -241,6 +241,17 @@ def command_remove_whitelist_user(message_parts, content_lower, ev_room, ev_user
 
 
 @check_permissions
+def command_blacklist_help(*args, **kwargs):
+    """
+    Returns a string which explains the usage of the new blacklist commands.
+    :return: A string
+    """
+    return Response(command_status=True, message="The !!/blacklist command has been deprecated. "
+                                                 "Please use either !!/blacklist-website or "
+                                                 "!!/blacklist-keyword. Remember to escape dots "
+                                                 "in URLs using \\. and spaces in keywords with \s.")
+
+
 def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Adds a string to the website blacklist and commits/pushes to GitHub
@@ -253,6 +264,28 @@ def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, 
 
     chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=wrap2.host, id=str(ev_user_id))
     result = GitManager.add_to_blacklist(
+        blacklist="website",
+        items_to_blacklist=message_parts[1:],
+        username=ev_user_name,
+        chat_profile_link=chat_user_profile_link,
+        code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
+    )
+    return Response(command_status=result[0], message=result[1])
+
+
+def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
+    """
+    Adds a string to the keyword blacklist and commits/pushes to GitHub
+    :param message_parts:
+    :param ev_user_name:
+    :param ev_room:
+    :param :ev_user_id:
+    :return: A Response
+    """
+
+    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=wrap2.host, id=str(ev_user_id))
+    result = GitManager.add_to_blacklist(
+        blacklist="keyword",
         items_to_blacklist=message_parts[1:],
         username=ev_user_name,
         chat_profile_link=chat_user_profile_link,
@@ -1234,7 +1267,9 @@ command_dict = {
     "!!/blame": command_blame,
     "!!/block": command_block,
     "!!/brownie": command_brownie,
+    "!!/blacklist": command_blacklist_help,
     "!!/blacklist-website": command_blacklist_website,
+    "!!/blacklist-keyword": command_blacklist_keyword,
     "!!/commands": command_help,
     "!!/coffee": command_coffee,
     "!!/errorlogs": command_errorlogs,
