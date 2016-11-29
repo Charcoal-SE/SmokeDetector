@@ -105,7 +105,8 @@ class GlobalVars:
             "62118",    # tripleee
             "130558",   # Registered User
             "128113",   # arda
-            "164318"    # Glorfindel
+            "164318",   # Glorfindel
+            "175347"  # Floern
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
@@ -238,7 +239,8 @@ class GlobalVars:
             "4875631",  # FrankerZ
             "2958086",  # Compass
             "499214",   # JanDvorak
-            "5647260"  # Andrew L.
+            "5647260",  # Andrew L.
+            "559745"  # Floern
         ]
     }
 
