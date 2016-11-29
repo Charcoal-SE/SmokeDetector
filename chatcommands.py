@@ -360,6 +360,32 @@ def command_wut(*args, **kwargs):
     return Response(command_status=True, message="Whaddya mean, 'wut'? Humans...")
 
 
+def command_hats(*args, **kwargs):
+    wb_start = datetime(2016, 12, 19, 0, 0, 0)
+    wb_end = datetime(2017, 1, 9, 0, 0, 0)
+    now = datetime.utcnow()
+    return_string = ""
+    if wb_start > now:
+        diff = wb_start - now
+        hours, remainder = divmod(diff.seconds, 3600)
+        minutes, seconds = divmod(remainder, 60)
+        daystr = "days" if diff.days != 1 else "day"
+        hourstr = "hours" if hours != 1 else "hour"
+        minutestr = "minutes" if minutes != 1 else "minute"
+        secondstr = "seconds" if seconds != 1 else "second"
+        return_string = "WE LOVE HATS! Winter Bash will begin in {} {}, {} {}, {} {}, and {} {}.".format(diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
+    elif wb_end > now:
+        diff = wb_end - now
+        hours, remainder = divmod(diff.seconds, 3600)
+        minutes, seconds = divmod(remainder, 60)
+        daystr = "days" if diff.days != 1 else "day"
+        hourstr = "hours" if hours != 1 else "hour"
+        minutestr = "minutes" if minutes != 1 else "minute"
+        secondstr = "seconds" if seconds != 1 else "second"
+        return_string = "Winter Bash won't end for {} {}, {} {}, {} {}, and {} {}. GO EARN SOME HATS!".format(diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
+    return Response(command_status=True, message=return_string)
+
+
 # --- Block application from posting functions --- #
 @check_permissions
 def command_block(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
@@ -1275,6 +1301,7 @@ command_dict = {
     "!!/errorlogs": command_errorlogs,
     "!!/gitstatus": command_gitstatus,
     "!!/help": command_help,
+    "!!/hats": command_hats,
     "!!/info": command_help,
     "!!/isblu": command_check_blacklist,
     "!!/iswlu": command_check_whitelist,
