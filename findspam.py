@@ -227,6 +227,9 @@ class FindSpam:
 
     with open("blacklisted_websites.txt", "r") as f:
         blacklisted_websites = [line.rstrip() for line in f if len(line.rstrip()) > 0]
+        
+    with open("blacklisted_usernames.txt", "ur") as f:
+        blacklisted_usernames = [line.rstrip() for line in f if len(line.rstrip()) > 0]
 
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
@@ -467,7 +470,7 @@ class FindSpam:
         #
         # Category: other
         # Blacklisted usernames
-        {'regex': ur"(?i)(^l(?:ol){2,}$|^troll$|tejveer ?iq|ser?vice pemanas?|\bnigg[aeu][rh]?|\b(fuck(er|ing)?|penis)\b|^w.ng.?d.ng$|dlqudals|^[a-z ]+juri(?:n|na|ns|sa|ya|yam|ym)$|^[a-z]+jiibond$|Marlin Woods|xiguai)", 'all': True, 'sites': [], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        {'regex': ur"(?i)({})".format("|".join(blacklisted_usernames)), 'all': True, 'sites': [], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0}
     ]
 
