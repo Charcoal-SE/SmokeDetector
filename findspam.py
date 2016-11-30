@@ -461,6 +461,9 @@ class FindSpam:
         # Academia kangaroos
         {'regex': ur"(?i)kangaroos", 'all': False, 'sites': ["academia.stackexchange.com"], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': ur"(?i)\b\<a href=\".{0,25}\.xyz\"( rel=\"nofollow( noreferrer)?\")?\>.{0,15}google.{0,15}\<\/a\>\b", 'all': True, 'sites': [], 'reason': 'non-Google "google search" link in {}', 'title': False, 'body': True, 'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
+        # Academia image by low-rep user
+        {'regex': ur'\<img src="[^"]+"(?: rel="nofollow")?(?: noreferrer)?>', 'all': True, 'sites': ['academia.stackexchange.com'], 'reason': 'image by low-rep user', 'title': False, 'body': True, 'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
+
         #
         # Category: other
         # Blacklisted usernames
