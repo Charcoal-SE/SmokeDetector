@@ -294,6 +294,27 @@ def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, 
     return Response(command_status=result[0], message=result[1])
 
 
+def command_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
+    """
+    Adds a string to the username blacklist and commits/pushes to GitHub
+    :param message_parts:
+    :param ev_user_name:
+    :param ev_room:
+    :param :ev_user_id:
+    :return: A Response
+    """
+
+    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=wrap2.host, id=str(ev_user_id))
+    result = GitManager.add_to_blacklist(
+        blacklist="username",
+        items_to_blacklist=message_parts[1:],
+        username=ev_user_name,
+        chat_profile_link=chat_user_profile_link,
+        code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
+    )
+    return Response(command_status=result[0], message=result[1])
+
+
 @check_permissions
 def command_gitstatus(wrap2, *args, **kwargs):
     return Response(command_status=True, message=GitManager.current_git_status())
@@ -1278,7 +1299,7 @@ def subcommand_why(msg_content, *args, **kwargs):
 # Triggering input:
 #        !!/alive
 # Hardcoded key example of above input:
-#    command_dict["!//alive"]()
+#    command_dict["!!/alive"]()
 command_dict = {
     "!!/addblu": command_add_blacklist_user,
     "!!/addblu-": command_add_blacklist_user,
@@ -1296,6 +1317,7 @@ command_dict = {
     "!!/blacklist": command_blacklist_help,
     "!!/blacklist-website": command_blacklist_website,
     "!!/blacklist-keyword": command_blacklist_keyword,
+    "!!/blacklist-username": command_blacklist_username,
     "!!/commands": command_help,
     "!!/coffee": command_coffee,
     "!!/errorlogs": command_errorlogs,
