@@ -19,6 +19,8 @@ class GitManager:
             blacklist_file_name = "blacklisted_websites.txt"
         elif blacklist == "keyword":
             blacklist_file_name = "bad_keywords.txt"
+        elif blacklist == "username":
+            blacklist_file_name = "blacklisted_usernames.txt"
 
         # Check if we're on master
         if git("rev-parse", "--abbrev-ref", "HEAD").strip() != "master":
