@@ -227,7 +227,7 @@ class FindSpam:
 
     with open("blacklisted_websites.txt", "r") as f:
         blacklisted_websites = [line.rstrip() for line in f if len(line.rstrip()) > 0]
-        
+
     with open("blacklisted_usernames.txt", "Ur") as f:
         blacklisted_usernames = [line.rstrip() for line in f if len(line.rstrip()) > 0]
 
