@@ -341,14 +341,18 @@ def command_brownie(*args, **kwargs):
     return Response(command_status=True, message="Brown!")
 
 
-def command_coffee(ev_user_name, *args, **kwargs):
+def command_coffee(ev_user_name, message_parts, *args, **kwargs):
     """
     Returns a string stating who the coffee is for (This is a joke command)
     :param ev_user_name:
     :param kwargs: No additional arguments expected
     :return: A string
     """
-    return Response(command_status=True, message=u"*brews coffee for @" + ev_user_name.replace(" ", "") + "*")
+    if message_parts[1:] and message_parts[1]:  # list has the required element and it's not empty
+        giving_to = message_parts[1][1:] if message_parts[1][0] == "@" else  message_parts[1]
+    else:
+        giving_to = ev_user_name.replace(" ", "")
+    return Response(command_status=True, message=u"*brews coffee for @" + giving_to + "*")
 
 
 def command_lick(*args, **kwargs):
@@ -359,19 +363,22 @@ def command_lick(*args, **kwargs):
     return Response(command_status=True, message="*licks ice cream cone*")
 
 
-def command_tea(ev_user_name, *args, **kwargs):
+def command_tea(ev_user_name, message_parts, *args, **kwargs):
     """
     Returns a string stating who the tea is for (This is a joke command)
     :param ev_user_name:
     :param kwargs: No additional arguments expected
     :return: A string
     """
+    if message_parts[1:] and message_parts[1]:  # list has the required element and it's not empty
+        giving_to = message_parts[1][1:] if message_parts[1][0] == "@" else  message_parts[1]
+    else:
+        giving_to = ev_user_name.replace(" ", "")
     return Response(command_status=True,
                     message=u"*brews a cup of {choice} tea for @{user}*".format(
-                        choice=random.choice(['earl grey', 'green', 'chamomile',
+                        choice=random.choice(['earl grey', 'green', 'chamomile', 'Southern sweet',
                                               'lemon', 'darjeeling', 'mint', 'jasmine']),
-                        user=ev_user_name.replace(" ", "")))
-
+                        user=giving_to))
 
 def command_wut(*args, **kwargs):
     """
