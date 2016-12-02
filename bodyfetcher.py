@@ -7,7 +7,6 @@ import json
 import time
 import threading
 import requests
-import regex
 
 
 class BodyFetcher:
@@ -191,9 +190,6 @@ class BodyFetcher:
         if "backoff" in response:
             if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
                 GlobalVars.api_backoff_time = time.time() + response["backoff"]
-            match = regex.compile('/2.2/([^.]*)').search(url)
-            url_part = match.group(1) if match else url
-            message_hq += "\nBackoff received of {} seconds on request to `{}` at {} UTC".format(str(response["backoff"]), url_part, time_request_made)
 
         GlobalVars.api_request_lock.release()
 
