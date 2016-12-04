@@ -16,7 +16,7 @@ def get_user_from_url(url):
 
 
 def fetch_post_url_from_msg_content(content):
-    search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:\(\)-]+: \[.+]\(((?:http:)?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\) by \[?.*\]?\(?(?:.*)\)? on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
+    search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:\(\)-]+: \[.+]\(((?:http:)?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?(?smokeypost=true)?\) by \[?.*\]?\(?(?:.*)\)? on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
     match = regex.compile(search_regex).search(content)
     if match is None:
         return None
