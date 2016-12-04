@@ -120,7 +120,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             username = ""
             user_link = ""
         else:
-            s = u" {}: [{}]({}) by [{}]({}) on `{}`" .format(reason, sanitized_title.strip(), post_url, poster.strip(), poster_url, site)
+            s = u" {}: [{}]({}) by [{}]({}) on `{}`" .format(reason, sanitized_title.strip(), post_url + "?smokeypost=yes", poster.strip(), poster_url, site)
             username = poster.strip()
             user_link = poster_url
 
