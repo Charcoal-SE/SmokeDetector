@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import regex
 import phonenumbers
+from urlparse import urlparse
 
 
 def has_repeated_words(s, site):
