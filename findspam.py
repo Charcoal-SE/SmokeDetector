@@ -177,17 +177,14 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
 
 def misleading_link(s, site):   # misleading links like [https://github.com/Charcoal-SE/SmokeDetector](https://spam.com)
     links = regex.compile(ur'<a href="([^"]*)" rel="nofollow(?: noreferrer)?">\s*([^<\s]*)(?=\s*</a>)', regex.UNICODE).findall(s)
-
     for (link, text) in links:
-        if '.' not in text: 
+        if '.' not in text:
             continue        # skip link text that doesn't contain a period
 
         linkHost = urlparse(link).netloc
         textHost = urlparse(text).netloc
-
         if textHost != '' and textHost != linkHost:
             return True, "Misleading link text *{}* to *{}*".format(text, link)
-
 
     return False, ""
 
