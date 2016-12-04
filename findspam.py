@@ -174,6 +174,20 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
     return False, ""
 
 
+def misleading_link(s, site): # misleading links like [https://github.com/Charcoal-SE/SmokeDetector](https://spam.com)
+    links = regex.compile(ur'<a href="([^"]*)" rel="nofollow(?: noreferrer)?">\s*([^<\s]*)(?=\s*</a>)', regex.UNICODE).findall(s)
+    
+    for (link, text) in links:
+        if '.' not in text: continue        # skip link text that doesn't contain a period
+        linkHost = urlparse(link).netloc
+        textHost = urlparse(text).netloc
+        
+        if textHost != '' and textHost != linkHost:
+            return True, "Misleading link text *{}* to *{}*".format(text, link)
+        
+    return False, ""
+
+
 def is_offensive_post(s, site):
     if s is None or len(s) == 0:
         return False, ""
@@ -414,6 +428,9 @@ class FindSpam:
         # Link text consists of punctuation, answers only
         {'regex': ur'(?iu)rel="nofollow( noreferrer)?">\W</a>', 'all': True,
          'sites': [], 'reason': 'linked punctuation in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 11, 'max_score': 1},
+        # Link text is misleading (like [https://github.com/Charcoal-SE/SmokeDetector](https://spam.com))
+        {'method': misleading_link, 'all': True,
+         'sites': [], 'reason': 'misleading link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 11, 'max_score': 1},
         # URL in title, some sites are exempt
         {'regex': ur"(?i)https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}|\w{3,}\.(com|net)\b.*\w{3,}\.(com|net)\b", 'all': True,
          'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com", "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com", "unix.stackexchange.com", "webmasters.stackexchange.com"], 'reason': "URL in title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 0},
