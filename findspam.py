@@ -374,9 +374,9 @@ class FindSpam:
          'sites': ["stackoverflow.com"],
          'reason': 'mostly non-Latin {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Jesus Christ, the Son of God, on SciFi.
-        {'regex': ur"^Jesus Christ, the Son of God$", 'all': False,
+        {'regex': ur"Son of (David|man)", 'all': False,
          'sites': ["scifi.stackexchange.com"],
-         'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+         'reason': "bad keyword in {}", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         #
         # Category: Suspicious links
         # Blacklisted sites
