@@ -183,8 +183,12 @@ def misleading_link(s, site):   # misleading links like [https://github.com/Char
 
         link_host = urlparse(link).netloc
         text_host = urlparse(text).netloc
-        if text_host != '' and text_host != link_host and link_host != 'rads.stackoverflow.com':
-            return True, "Misleading link text *{}* to *{}*".format(text, link)
+        if (text_host != '' and
+            text_host != link_host and
+            link_host != 'rads.stackoverflow.com' and
+            "www." + text_host != link_host and
+            "www." + link_host != text_host):
+                return True, "Misleading link text *{}* to *{}*".format(text, link)
 
     return False, ""
 
