@@ -188,7 +188,7 @@ def misleading_link(s, site):   # misleading links like [https://github.com/Char
             link_host != 'rads.stackoverflow.com' and
             "www." + text_host != link_host and
             "www." + link_host != text_host):
-                return True, "Misleading link text *{}* to *{}*".format(text, link)
+            return True, "Misleading link text *{}* to *{}*".format(text, link)
 
     return False, ""
 
