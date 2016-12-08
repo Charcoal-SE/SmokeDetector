@@ -106,7 +106,8 @@ class GlobalVars:
             "130558",   # Registered User
             "128113",   # arda
             "164318",   # Glorfindel
-            "175347"  # Floern
+            "175347",  # Floern
+            "180274"  # Alexander O'Mara
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
