@@ -190,10 +190,10 @@ def misleading_link(s, site):   # misleading links like [https://github.com/Char
                 "www." + link_host != text_host and
                 "." in text_host and
                 "." in link_host and
-                not " " in text_host.strip() and
-                not " " in link_host.strip() and
-                not "//http" in text_host and
-                not "//http" in link_host):
+                " " not in text_host.strip() and
+                " " not in link_host.strip() and
+                "//http" not in text_host and
+                "//http" not in link_host):
             return True, "Misleading link text *{}* to *{}*".format(text, link)
 
     return False, ""
