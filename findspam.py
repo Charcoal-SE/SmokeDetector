@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import regex
 import phonenumbers
+from urlparse import urlparse
 
 
 def has_repeated_words(s, site):
@@ -52,7 +53,7 @@ def non_english_link(s, site):   # non-english link in short answer
         for link_text in links:
             word_chars = regex.sub(r"(?u)\W", "", link_text)
             non_latin_chars = regex.sub(r"\w", "", word_chars)
-            if (len(word_chars) <= 20 and len(non_latin_chars) >= 1) or (len(non_latin_chars) >= 0.05 * len(word_chars)):
+            if len(word_chars) >= 1 and ((len(word_chars) <= 20 and len(non_latin_chars) >= 1) or (len(non_latin_chars) >= 0.05 * len(word_chars))):
                 return True, u"Non-English link text: *{}*".format(link_text)
     return False, ""
 
@@ -174,6 +175,30 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
     return False, ""
 
 
+def misleading_link(s, site):   # misleading links like [https://github.com/Charcoal-SE/SmokeDetector](https://spam.com)
+    links = regex.compile(ur'<a href="([^"]*)" rel="nofollow(?: noreferrer)?">\s*([^<\s]*)(?=\s*</a>)', regex.UNICODE).findall(s)
+    for (link, text) in links:
+        if '.' not in text:
+            continue        # skip link text that doesn't contain a period
+
+        link_host = urlparse(link).netloc
+        text_host = urlparse(text).netloc
+        if (text_host != '' and
+                text_host != link_host and
+                link_host != 'rads.stackoverflow.com' and
+                "www." + text_host != link_host and
+                "www." + link_host != text_host and
+                "." in text_host and
+                "." in link_host and
+                " " not in text_host.strip() and
+                " " not in link_host.strip() and
+                "//http" not in text_host and
+                "//http" not in link_host):
+            return True, "Misleading link text *{}* to *{}*".format(text, link)
+
+    return False, ""
+
+
 def is_offensive_post(s, site):
     if s is None or len(s) == 0:
         return False, ""
@@ -227,6 +252,9 @@ class FindSpam:
 
     with open("blacklisted_websites.txt", "r") as f:
         blacklisted_websites = [line.rstrip() for line in f if len(line.rstrip()) > 0]
+
+    with open("blacklisted_usernames.txt", "Ur") as f:
+        blacklisted_usernames = [line.rstrip() for line in f if len(line.rstrip()) > 0]
 
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
@@ -355,6 +383,10 @@ class FindSpam:
         {'method': mostly_non_latin, 'all': False,
          'sites': ["stackoverflow.com"],
          'reason': 'mostly non-Latin {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'questions': False, 'max_rep': 1, 'max_score': 0},
+        # Jesus Christ, the Son of God, on SciFi.
+        {'regex': ur"Son of (David|man)", 'all': False,
+         'sites': ["scifi.stackexchange.com"],
+         'reason': "bad keyword in {}", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         #
         # Category: Suspicious links
         # Blacklisted sites
@@ -411,6 +443,9 @@ class FindSpam:
         # Link text consists of punctuation, answers only
         {'regex': ur'(?iu)rel="nofollow( noreferrer)?">\W</a>', 'all': True,
          'sites': [], 'reason': 'linked punctuation in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 11, 'max_score': 1},
+        # Link text is misleading (like [https://github.com/Charcoal-SE/SmokeDetector](https://spam.com))
+        {'method': misleading_link, 'all': True,
+         'sites': [], 'reason': 'misleading link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 11, 'max_score': 1},
         # URL in title, some sites are exempt
         {'regex': ur"(?i)https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}|\w{3,}\.(com|net)\b.*\w{3,}\.(com|net)\b", 'all': True,
          'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com", "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com", "unix.stackexchange.com", "webmasters.stackexchange.com"], 'reason': "URL in title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 0},
@@ -467,7 +502,7 @@ class FindSpam:
         #
         # Category: other
         # Blacklisted usernames
-        {'regex': ur"(?i)(^l(?:ol){2,}$|^troll$|tejveer ?iq|ser?vice pemanas?|\bnigg[aeu][rh]?|\b(fuck(er|ing)?|penis)\b|^w.ng.?d.ng$|dlqudals|^[a-z ]+juri(?:n|na|ns|sa|ya|yam|ym)$|^[a-z]+jiibond$|Marlin Woods|xiguai)", 'all': True, 'sites': [], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        {'regex': ur"(?i)({})".format("|".join(blacklisted_usernames)), 'all': True, 'sites': [], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"], 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0}
     ]
 
