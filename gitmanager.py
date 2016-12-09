@@ -77,7 +77,16 @@ class GitManager:
                        "base": "master"}
             response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls", auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password), data=json.dumps(payload))
             print(response.json())
-            return (True, "You don't have code privileges, but I've [created a pull request for you]({0}).".format(response.json()["html_url"]))
+            try:
+                return (True, "You don't have code privileges, but I've [created a pull request for you]({0}).".format(response.json()["html_url"]))
+            except KeyError:
+                # Error capture/checking for any "invalid" GH reply without an 'html_url' item, which will throw a KeyError.
+                if "Bad credentials" in str(response.json()['message']):
+                    # Capture the case when GH credentials are bad or invalid
+                    return (False, "Something is wrong with the GH credentials, tell someone to check the GH credentials.")
+                else:
+                    # Capture any other invalid response cases.
+                    return (False, "A bad or invalid reply was received from GH, the message was: %s" % response.json()['message'])
 
         git.checkout(current_commit)  # Return to old commit to await CI. This will make Smokey think it's in reverted mode if it restarts
 
