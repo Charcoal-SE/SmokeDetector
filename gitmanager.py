@@ -86,7 +86,7 @@ class GitManager:
                     return (False, "Something is wrong with the GH credentials, tell someone to check the GH credentials.")
                 else:
                     # Capture any other invalid response cases.
-                    return (False, "A bad or invalid response was received from GH, please check the error logs for more information.")
+                    return (False, "A bad or invalid reply was received from GH, the message was: %s" % response.json()['message'])
 
         git.checkout(current_commit)  # Return to old commit to await CI. This will make Smokey think it's in reverted mode if it restarts
 
