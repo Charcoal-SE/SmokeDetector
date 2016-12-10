@@ -779,3 +779,4 @@ endtest\.io
 beaufitreviews\.com
 oraclefusionfinancials\.in
 el-harmeen\.com
+mobile-version\.ru
