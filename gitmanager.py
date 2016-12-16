@@ -16,7 +16,7 @@ class GitManager:
         code_permissions = kwargs.get("code_permissions", False)
 
         for item in items_to_blacklist:
-            item.replace("\\s", " ")
+            item = item.replace("\\s", " ")
 
         if blacklist == "website":
             blacklist_file_name = "blacklisted_websites.txt"
