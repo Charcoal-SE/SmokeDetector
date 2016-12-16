@@ -14,7 +14,7 @@ class GitManager:
         username = kwargs.get("username", "")
         chat_profile_link = kwargs.get("chat_profile_link", "http://chat.stackexchange.com/users")
         code_permissions = kwargs.get("code_permissions", False)
-        
+
         for item in items_to_blacklist:
             item.replace("\s", " ")
 
