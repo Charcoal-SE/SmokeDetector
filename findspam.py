@@ -135,7 +135,7 @@ def keyword_email(s, site):   # a keyword and an email in the same post
     email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
     if keyword and email:
         return True, u"Keyword *{}* with email {}".format(keyword.group(0), email.group(0))
-    obfuscated_email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+ *@ *gmail *\. *com\b").search(s)
+    obfuscated_email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+ *@ *(gmail|yahoo) *\. *com\b").search(s)
     if obfuscated_email and not email:
         return True, u"Obfuscated email {}".format(obfuscated_email.group(0))
     return False, ""
