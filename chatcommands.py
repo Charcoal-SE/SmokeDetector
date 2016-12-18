@@ -1135,7 +1135,8 @@ def subcommand_falsepositive(ev_room, ev_user_id, wrap2, post_site_id, post_url,
         elif not quiet_action:
             return Response(command_status=True, message="Registered answer as false positive.")
     try:
-        msg.delete()
+        if not msg.room == charcoal_hq:
+            msg.delete()
     except:
         pass
     return Response(command_status=True, message=None)
