@@ -15,8 +15,8 @@ class GitManager:
         chat_profile_link = kwargs.get("chat_profile_link", "http://chat.stackexchange.com/users")
         code_permissions = kwargs.get("code_permissions", False)
 
-        for item in items_to_blacklist:
-            item = item.replace("\s", " ")
+        for index, item in enumerate(items_to_blacklist):
+            items_to_blacklist[index] = item.replace("\s", " ")
 
         if blacklist == "website":
             blacklist_file_name = "blacklisted_websites.txt"
@@ -72,7 +72,7 @@ class GitManager:
             list_of_domains = ""
 
             for domain in range(len(items_to_blacklist)):
-                list_of_domains += "\n - {0} - [MS search](https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93&body_is_regex=1&body={0})".format(items_to_blacklist[domain])
+                list_of_domains += "\n - {0} - [MS search](https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93&body_is_regex=1&body={1})".format(items_to_blacklist[domain], items_to_blacklist[domain].replace(" ", "+"))
 
             payload = {"title": "{0}: Blacklist {1}".format(username, ", ".join(items_to_blacklist)),
                        "body": "[{0}]({1}) requests the blacklist of the following {2}(s): \n{3}\n<!-- METASMOKE-BLACKLIST {4} -->".format(username, chat_profile_link, blacklist, list_of_domains, "|".join(items_to_blacklist)),
