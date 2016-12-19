@@ -1,4 +1,4 @@
-baba ji
+(baba|molvi) ji
 fifa.{0,20}coins?
 fifabay
 Long ?Path ?Tool
