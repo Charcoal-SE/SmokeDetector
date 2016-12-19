@@ -247,8 +247,8 @@ def command_blacklist_help(*args, **kwargs):
     :return: A string
     """
     return Response(command_status=True, message="The !!/blacklist command has been deprecated. "
-                                                 "Please use either !!/blacklist-website or "
-                                                 "!!/blacklist-keyword. Remember to escape dots "
+                                                 "Please use !!/blacklist-website, !!/blacklist-username "
+                                                 "or !!/blacklist-keyword. Remember to escape dots "
                                                  "in URLs using \\. and spaces in keywords with \s.")
 
 
