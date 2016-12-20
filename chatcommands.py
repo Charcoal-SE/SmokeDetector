@@ -1289,9 +1289,21 @@ def subcommand_why(msg_content, *args, **kwargs):
     return Response(command_status=True, message="There is no `why` data for that user (anymore).")
 
 
-#
-#
-#
+def subcommand_autoflagged(msg_content, post_url, *args, **kwargs):
+    """
+    Determines whether a post was automatically flagged by Metasmoke
+    :param msg_content:
+    :param post_url:
+    :param kwargs: No additional arguments expected
+    :return: A string
+    """
+    autoflagged = Metasmoke.determine_if_autoflagged(post_url)
+    if autoflagged:
+        return Response(command_status=True, message="That post was automatically flagged by Metasmoke.")
+    else:
+        return Response(command_status=True, message="That post was **not** automatically flagged by Metasmoke.")
+
+
 # This dictionary defines our commands and the associated function to call
 # To use this your calling code will look like this
 #    command_dict['command'](paramer1, parameter2, ...)
@@ -1412,4 +1424,6 @@ subcommand_dict = {
 
     "why": subcommand_why,
     "why?": subcommand_why,
+
+    "autoflagged?": subcommand_autoflagged,
 }

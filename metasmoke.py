@@ -188,3 +188,18 @@ class Metasmoke:
             GlobalVars.meta_tavern_room_id: response["meta_stackexchange_chat_ids"],
             GlobalVars.socvr_room_id: response["stackoverflow_chat_ids"]
         }
+
+    @classmethod
+    def determine_if_autoflagged(self, post_url):
+        """
+        Given the URL for a post, determine whether or not it has been autoflagged.
+        """
+        payload = {'key': GlobalVars.metasmoke_key}
+        headers = {'Content-type': 'application/json'}
+        post_id = requests.get(GlobalVars.metasmoke_host + "/api/posts/urls", data=json.dumps(payload), headers=headers).json()['items'][0]['id']
+
+        payload = {'key': GlobalVars.metasmoke_key}
+        headers = {'Content-type': 'application/json'}
+        response = requests.get(GlobalVars.metasmoke_host + "/api/posts/" + post_id, data=json.dumps(payload), headers=headers).json()['items'][0]['autoflagged']
+
+        return response
