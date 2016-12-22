@@ -30,7 +30,7 @@ do
 
    if [ "$ecode" -eq "3" ]
    then
-    git checkout master
+    git checkout deploy
     git pull
     git submodule update
     count=0
@@ -55,7 +55,7 @@ do
     stoprunning=1
    elif [ "$ecode" -eq "8" ]
    then
-    git checkout master
+    git checkout deploy
     count=0
     crashcount=0
    else

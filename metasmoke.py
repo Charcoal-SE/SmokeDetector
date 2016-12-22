@@ -194,12 +194,9 @@ class Metasmoke:
         """
         Given the URL for a post, determine whether or not it has been autoflagged.
         """
-        payload = {'key': GlobalVars.metasmoke_key}
+        payload = {'key': GlobalVars.metasmoke_key,
+                   'urls': post_url}
         headers = {'Content-type': 'application/json'}
-        post_id = requests.get(GlobalVars.metasmoke_host + "/api/posts/urls", data=json.dumps(payload), headers=headers).json()['items'][0]['id']
+        is_autoflagged = requests.get(GlobalVars.metasmoke_host + "/api/posts/urls", data=json.dumps(payload), headers=headers).json()['items'][0]['autoflagged']
 
-        payload = {'key': GlobalVars.metasmoke_key}
-        headers = {'Content-type': 'application/json'}
-        response = requests.get(GlobalVars.metasmoke_host + "/api/posts/" + post_id, data=json.dumps(payload), headers=headers).json()['items'][0]['autoflagged']
-
-        return response
+        return is_autoflagged
