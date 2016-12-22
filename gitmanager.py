@@ -25,9 +25,7 @@ class GitManager:
         elif blacklist == "username":
             blacklist_file_name = "blacklisted_usernames.txt"
 
-        # Check if we're on master
-        if git("rev-parse", "--abbrev-ref", "HEAD").strip() != "master":
-            return (False, "Not currently on master.")
+        git.checkout("master")
 
         # Check that we're up-to-date with origin (GitHub)
         git.remote.update()
@@ -37,9 +35,6 @@ class GitManager:
         # Check that blacklisted_websites.txt isn't modified locally. That could get ugly fast
         if blacklist_file_name in git.status():  # Also ugly
             return (False, "{0} modified locally. This is probably bad.".format(blacklist_file_name))
-
-        # Store current commit hash
-        current_commit = git("rev-parse", "HEAD").strip()
 
         # Add items to file
         with open(blacklist_file_name, "a+") as blacklist_file:
@@ -86,14 +81,14 @@ class GitManager:
                 # Error capture/checking for any "invalid" GH reply without an 'html_url' item, which will throw a KeyError.
                 if "Bad credentials" in str(response.json()['message']):
                     # Capture the case when GH credentials are bad or invalid
-                    return (False, "Something is wrong with the GH credentials, tell someone to check the GH credentials.")
+                    return (False, "Something is wrong with the GH credentials, tell someone to check them.")
                 else:
                     # Capture any other invalid response cases.
                     return (False, "A bad or invalid reply was received from GH, the message was: %s" % response.json()['message'])
 
-        git.checkout(current_commit)  # Return to old commit to await CI. This will make Smokey think it's in reverted mode if it restarts
+        git.checkout("deploy")  # Return to deploy to await CI.
 
-        return (True, "Blacklisted {0} - the entry will be applied via autopull if CI succeeds.".format(", ".join(items_to_blacklist)))
+        return (True, "Blacklisted {0} on master - you may need to merge to deploy.".format(", ".join(items_to_blacklist)))
 
     @classmethod
     def current_git_status(self):
