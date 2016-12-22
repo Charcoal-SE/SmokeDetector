@@ -200,6 +200,6 @@ class Metasmoke:
         post_id = requests.get(GlobalVars.metasmoke_host + "/api/posts/urls", data=json.dumps(payload), headers=headers).json()['items'][0]['id']
 
         payload = {'key': GlobalVars.metasmoke_key}
-        response = requests.get(GlobalVars.metasmoke_host + "/api/posts/" + post_id, data=json.dumps(payload), headers=headers).json()['items'][0]['autoflagged']
+        response = requests.get(GlobalVars.metasmoke_host + "/api/posts/" + str(post_id), data=json.dumps(payload), headers=headers).json()['items'][0]['autoflagged']
 
         return response
