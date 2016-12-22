@@ -565,7 +565,7 @@ def command_pull(ev_room, ev_user_id, wrap2, *args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: String on failure, None on success
     """
-    request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/master')
+    request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/deploy')
     latest_sha = request.json()["object"]["sha"]
     request = requests.get(
         'https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/{commit_code}/statuses'.format(
