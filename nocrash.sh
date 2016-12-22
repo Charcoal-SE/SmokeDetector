@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Hail Hydra
-
 if [ -z "$ChatExchangeU" ]; then
   read -p "Username: " u
   export ChatExchangeU=$u
