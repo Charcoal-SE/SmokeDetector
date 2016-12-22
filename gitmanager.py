@@ -36,9 +36,6 @@ class GitManager:
         if blacklist_file_name in git.status():  # Also ugly
             return (False, "{0} modified locally. This is probably bad.".format(blacklist_file_name))
 
-        # Store current commit hash
-        current_commit = git("rev-parse", "HEAD").strip()
-
         # Add items to file
         with open(blacklist_file_name, "a+") as blacklist_file:
             last_character = blacklist_file.read()[-1:]
