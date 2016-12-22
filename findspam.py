@@ -33,7 +33,7 @@ def has_repeating_characters(s, site):
         return False, ""
     matches = regex.compile(u"([^\\s_\u200b\u200c.,?!=~*/0-9-])(\\1{10,})", regex.UNICODE).findall(s)
     match = "".join(["".join(match) for match in matches])
-    if (100 * len(match) / len(s)) >= 20:
+    if (100 * len(match) / len(s)) >= 20:  # Repeating characters make up >= 20 percent
         return True, u"Repeated character: *{}*".format(match)
     return False, ""
 
