@@ -200,3 +200,10 @@ class Metasmoke:
         is_autoflagged = requests.get(GlobalVars.metasmoke_host + "/api/posts/urls", data=json.dumps(payload), headers=headers).json()['items'][0]['autoflagged']
 
         return is_autoflagged
+
+    @classmethod
+    def stop_autoflagging(self):
+        payload = {'key': GlobalVars.metasmoke_key}
+        headers = {'Content-type': 'application/json'}
+
+        requests.post(GlobalVars.metasmoke_host + "/flagging/smokey_disable", data=json.dumps(payload), headers=headers)

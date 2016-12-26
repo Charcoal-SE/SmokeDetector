@@ -673,6 +673,14 @@ def command_status(*args, **kwargs):
                         minute_count=minutes, plurality=minute_str))
 
 
+@checkpermissions
+def command_stop_flagging(*args, **kwargs):
+    t_metasmoke = Thread(target=Metasmoke.stop_autoflagging,
+                         args=())
+    t_metasmoke.start()
+    return Response(command_status=True, message="Request sent...")
+
+
 def command_test(content, content_lower, *args, **kwargs):
     """
     Test a post to determine if it'd be automatically reported
@@ -1358,6 +1366,7 @@ command_dict = {
     "!!/rev": command_version,
     "!!/stappit": command_stappit,
     "!!/status": command_status,
+    "!!/stopflagging": command_stop_flagging,
     "!!/tea": command_tea,
     "!!/test": command_test,
     "!!/testanswer": command_test_answer,
