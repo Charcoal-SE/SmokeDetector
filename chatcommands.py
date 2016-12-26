@@ -673,7 +673,7 @@ def command_status(*args, **kwargs):
                         minute_count=minutes, plurality=minute_str))
 
 
-@checkpermissions
+@check_permissions
 def command_stop_flagging(*args, **kwargs):
     t_metasmoke = Thread(target=Metasmoke.stop_autoflagging,
                          args=())
