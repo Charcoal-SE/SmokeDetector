@@ -5,7 +5,6 @@ import requests
 import time
 import json
 
-
 # noinspection PyRedundantParentheses,PyClassHasNoInit
 class GitManager:
     @classmethod
@@ -30,12 +29,12 @@ class GitManager:
             # if we don't address it here.
             return (False, "Invalid blacklist type specified, something has broken badly!")
 
-        git.checkout("master")
+        git.checkout("deploy")
 
         # Check that we're up-to-date with origin (GitHub)
         git.remote.update()
-        if git("rev-parse", "refs/remotes/origin/master").strip() != git("rev-parse", "master").strip():
-            return (False, "HEAD isn't at tip of origin's master branch")
+        if git("rev-parse", "refs/remotes/origin/deploy").strip() != git("rev-parse", "deploy").strip():
+            return (False, "HEAD isn't at tip of origin's deploy branch")
 
         # Check that blacklisted_websites.txt isn't modified locally. That could get ugly fast
         if blacklist_file_name in git.status():  # Also ugly
