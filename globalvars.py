@@ -242,8 +242,9 @@ class GlobalVars:
             "2958086",  # Compass
             "499214",   # JanDvorak
             "5647260",  # Andrew L.
-            "559745",  # Floern
-            "5743988"  # 4castle
+            "559745",   # Floern
+            "5743988",  # 4castle
+            "4622463"  # angussidney
         ]
     }
 
