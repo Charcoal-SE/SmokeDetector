@@ -9,7 +9,7 @@ import json
 # noinspection PyRedundantParentheses,PyClassHasNoInit
 class GitManager:
     @classmethod
-    def add_to_blacklist(self, **kwargs):
+    def add_to_blacklist(cls, **kwargs):
         blacklist = kwargs.get("blacklist", "website")
         items_to_blacklist = kwargs.get("items_to_blacklist", [])
         username = kwargs.get("username", "")
@@ -96,5 +96,5 @@ class GitManager:
         return (True, "Blacklisted {0} on master - you may need to merge to deploy.".format(", ".join(items_to_blacklist)))
 
     @classmethod
-    def current_git_status(self):
+    def current_git_status(cls):
         return git.status()
