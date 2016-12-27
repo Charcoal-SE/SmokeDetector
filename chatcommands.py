@@ -1435,4 +1435,5 @@ subcommand_dict = {
     "why?": subcommand_why,
 
     "autoflagged?": subcommand_autoflagged,
+    "autoflagged": subcommand_autoflagged,
 }
