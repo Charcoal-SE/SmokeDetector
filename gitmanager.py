@@ -5,6 +5,7 @@ import requests
 import time
 import json
 
+
 # noinspection PyRedundantParentheses,PyClassHasNoInit
 class GitManager:
     @classmethod
