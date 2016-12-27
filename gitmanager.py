@@ -6,9 +6,10 @@ import time
 import json
 
 
+# noinspection PyRedundantParentheses,PyClassHasNoInit
 class GitManager:
     @classmethod
-    def add_to_blacklist(self, **kwargs):
+    def add_to_blacklist(cls, **kwargs):
         blacklist = kwargs.get("blacklist", "website")
         items_to_blacklist = kwargs.get("items_to_blacklist", [])
         username = kwargs.get("username", "")
@@ -24,6 +25,10 @@ class GitManager:
             blacklist_file_name = "bad_keywords.txt"
         elif blacklist == "username":
             blacklist_file_name = "blacklisted_usernames.txt"
+        else:
+            # Just checking all bases, but blacklist_file_name *might* have empty value
+            # if we don't address it here.
+            return (False, "Invalid blacklist type specified, something has broken badly!")
 
         git.checkout("master")
 
@@ -91,5 +96,5 @@ class GitManager:
         return (True, "Blacklisted {0} on master - you may need to merge to deploy.".format(", ".join(items_to_blacklist)))
 
     @classmethod
-    def current_git_status(self):
+    def current_git_status(cls):
         return git.status()
