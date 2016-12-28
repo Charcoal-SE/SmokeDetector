@@ -27,6 +27,7 @@ def fetch_post_url_from_msg_content(content):
         return None
 
 
+# noinspection PyBroadException
 def fetch_post_id_and_site_from_url(url):
     if url is None:
         return None
@@ -65,6 +66,7 @@ def fetch_post_id_and_site_from_msg_content(content):
     return fetch_post_id_and_site_from_url(url)
 
 
+# noinspection PyBroadException
 def fetch_owner_url_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:\(\)-]+: \[.+]\((?:(?:http:)?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\) by \[.+\]\((.+)\) on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
     match = regex.compile(search_regex).search(content)
@@ -77,6 +79,7 @@ def fetch_owner_url_from_msg_content(content):
         return None
 
 
+# noinspection PyBroadException
 def fetch_title_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:\(\)-]+: \[(.+)]\((?:(?:http:)?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\) by \[?.*\]?\(?.*\)? on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
     match = regex.compile(search_regex).search(content)
@@ -89,6 +92,7 @@ def fetch_title_from_msg_content(content):
         return None
 
 
+# noinspection PyBroadException
 def fetch_user_from_allspam_report(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\) \] All of this user's posts are spam: \[user \d+ on [\w\.]+\]\((//[\w\.]+/users/\d+\D*)\)(?: \[.+\]\(.+\))?$"
     match = regex.compile(search_regex).search(content)
@@ -101,6 +105,7 @@ def fetch_user_from_allspam_report(content):
         return None
 
 
+# noinspection PyBroadException
 def edited_message_after_postgone_command(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:\(\)-]+: (\[.+]\((?:(?:http:)?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\)) by \[?.*\]?\(?.*\)? on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
     match = regex.compile(search_regex).search(content)

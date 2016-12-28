@@ -41,6 +41,7 @@ def install_thread_excepthook():
         init_old(self, *args, **kwargs)
         run_old = self.run
 
+        # noinspection PyBroadException
         def run_with_except_hook(*args, **kw):
             try:
                 run_old(*args, **kw)

@@ -14,6 +14,7 @@ import apigetpost
 import spamhandling
 
 
+# noinspection PyClassHasNoInit,PyBroadException
 class Metasmoke:
     @classmethod
     def init_websocket(self):

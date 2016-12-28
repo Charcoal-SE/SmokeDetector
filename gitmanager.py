@@ -6,7 +6,7 @@ import time
 import json
 
 
-# noinspection PyRedundantParentheses,PyClassHasNoInit
+# noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
 class GitManager:
     @staticmethod
     def add_to_blacklist(**kwargs):

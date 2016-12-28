@@ -87,6 +87,7 @@ def check_if_spam_json(json_data):
     return is_spam, reason, why
 
 
+# noinspection PyBroadException
 def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reasons, is_answer, why="", owner_rep=None, post_score=None, up_vote_count=None, down_vote_count=None, question_id=None):
     post_url = parsing.to_protocol_relative(parsing.url_to_shortlink(post_url))
     poster_url = parsing.to_protocol_relative(parsing.user_url_to_shortlink(poster_url))

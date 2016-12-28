@@ -10,6 +10,7 @@ from helpers import environ_or_none
 import threading
 
 
+# noinspection PyClassHasNoInit
 class GlobalVars:
     false_positives = []
     whitelisted_users = []

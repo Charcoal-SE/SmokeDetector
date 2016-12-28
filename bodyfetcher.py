@@ -9,6 +9,7 @@ import threading
 import requests
 
 
+# noinspection PyClassHasNoInit,PyBroadException
 class BodyFetcher:
     queue = {}
 
