@@ -11,7 +11,8 @@ import datahandling
 
 # noinspection PyClassHasNoInit,PyBroadException
 class DeletionWatcher:
-    def update_site_id_list(self):
+    @staticmethod
+    def update_site_id_list():
         soup = BeautifulSoup(requests.get("http://meta.stackexchange.com/topbar/site-switcher/site-list").text)
         site_id_dict = {}
         for site in soup.findAll("a", attrs={"data-id": True}):
@@ -20,7 +21,8 @@ class DeletionWatcher:
             site_id_dict[site_name] = site_id
         GlobalVars.site_id_dict = site_id_dict
 
-    def check_websocket_for_deletion(self, post_site_id, post_url, timeout):
+    @staticmethod
+    def check_websocket_for_deletion(post_site_id, post_url, timeout):
         time_to_check = time.time() + timeout
         post_id = post_site_id[0]
         post_type = post_site_id[2]
