@@ -89,7 +89,7 @@ class GitManager:
                 return (True, "You don't have code privileges, but I've [created a pull request for you]({0}).".format(response.json()["html_url"]))
             except KeyError:
                 # Error capture/checking for any "invalid" GH reply without an 'html_url' item, which will throw a KeyError.
-                if "Bad credentials" in str(response.json()['message']):
+                if "bad credentials" in str(response.json()['message']).lower():
                     # Capture the case when GH credentials are bad or invalid
                     return (False, "Something is wrong with the GH credentials, tell someone to check them.")
                 else:
