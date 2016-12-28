@@ -9,7 +9,7 @@ from globalvars import GlobalVars
 import datahandling
 
 
-# noinspection PyClassHasNoInit,PyBroadException
+# noinspection PyClassHasNoInit,PyBroadException,PyMethodParameters
 class DeletionWatcher:
     @classmethod
     def update_site_id_list(self):
