@@ -31,6 +31,10 @@ class GitManager:
             return (False, "Invalid blacklist type specified, something has broken badly!")
 
         git.checkout("master")
+        try:
+            git.pull()
+        except:
+            pass
 
         # Check that we're up-to-date with origin (GitHub)
         git.remote.update()
