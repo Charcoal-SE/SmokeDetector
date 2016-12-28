@@ -85,6 +85,7 @@ class GitManager:
             response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls", auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password), data=json.dumps(payload))
             print(response.json())
             try:
+                git.checkout("deploy")  # Return to deploy, pending the accept of the PR in Master.
                 return (True, "You don't have code privileges, but I've [created a pull request for you]({0}).".format(response.json()["html_url"]))
             except KeyError:
                 # Error capture/checking for any "invalid" GH reply without an 'html_url' item, which will throw a KeyError.
