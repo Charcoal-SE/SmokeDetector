@@ -208,11 +208,3 @@ while True:
         ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
         ws.send("155-questions-active")
         GlobalVars.charcoal_hq.send_message("Recovered from `" + exception_only + "`")
-
-now = datetime.utcnow()
-delta = UtcDate.startup_utc_date - now
-seconds = delta.total_seconds()
-if seconds < 60:
-    os._exit(4)
-s = "[ " + GlobalVars.chatmessage_prefix + " ] SmokeDetector aborted"
-GlobalVars.charcoal_hq.send_message(s)
