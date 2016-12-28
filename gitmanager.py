@@ -6,7 +6,7 @@ import time
 import json
 
 
-# noinspection PyRedundantParentheses,PyClassHasNoInit
+# noinspection PyRedundantParentheses,PyClassHasNoInit,PyMethodParameters
 class GitManager:
     @classmethod
     def add_to_blacklist(self, **kwargs):
