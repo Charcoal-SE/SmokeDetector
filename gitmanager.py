@@ -6,10 +6,10 @@ import time
 import json
 
 
-# noinspection PyRedundantParentheses,PyClassHasNoInit,PyMethodParameters
+# noinspection PyRedundantParentheses,PyClassHasNoInit
 class GitManager:
-    @classmethod
-    def add_to_blacklist(self, **kwargs):
+    @staticmethod
+    def add_to_blacklist(**kwargs):
         blacklist = kwargs.get("blacklist", "website")
         items_to_blacklist = kwargs.get("items_to_blacklist", [])
         username = kwargs.get("username", "")
@@ -100,6 +100,6 @@ class GitManager:
 
         return (True, "Blacklisted {0} on master - you may need to merge to deploy.".format(", ".join(items_to_blacklist)))
 
-    @classmethod
-    def current_git_status(self):
+    @staticmethod
+    def current_git_status():
         return git.status()
