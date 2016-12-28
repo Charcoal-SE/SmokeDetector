@@ -16,8 +16,8 @@ import spamhandling
 
 # noinspection PyClassHasNoInit,PyBroadException
 class Metasmoke:
-    @classmethod
-    def init_websocket(self):
+    @staticmethod
+    def init_websocket():
         try:
             GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host, origin=GlobalVars.metasmoke_host)
             GlobalVars.metasmoke_ws.send(json.dumps({"command": "subscribe", "identifier": "{\"channel\":\"SmokeDetectorChannel\",\"key\":\"" + GlobalVars.metasmoke_key + "\"}"}))
@@ -90,8 +90,8 @@ class Metasmoke:
         except:
             print "Couldn't bind to MS websocket"
 
-    @classmethod
-    def send_stats_on_post(self, title, link, reasons, body, username, user_link, why, owner_rep, post_score, up_vote_count, down_vote_count):
+    @staticmethod
+    def send_stats_on_post(title, link, reasons, body, username, user_link, why, owner_rep, post_score, up_vote_count, down_vote_count):
         if GlobalVars.metasmoke_host is None:
             print "Metasmoke location not defined, not reporting"
             return
@@ -110,8 +110,8 @@ class Metasmoke:
         except Exception as e:
             print e
 
-    @classmethod
-    def send_feedback_for_post(self, post_link, feedback_type, user_name, user_id, chat_host):
+    @staticmethod
+    def send_feedback_for_post(post_link, feedback_type, user_name, user_id, chat_host):
         if GlobalVars.metasmoke_host is None:
             print "Metasmoke location not defined; not reporting"
             return
@@ -136,8 +136,8 @@ class Metasmoke:
         except Exception as e:
             print e
 
-    @classmethod
-    def send_deletion_stats_for_post(self, post_link, is_deleted):
+    @staticmethod
+    def send_deletion_stats_for_post(post_link, is_deleted):
         if GlobalVars.metasmoke_host is None:
             print "Metasmoke location not defined; not reporting deletion stats"
             return
@@ -158,8 +158,8 @@ class Metasmoke:
         except Exception as e:
             print e
 
-    @classmethod
-    def send_status_ping(self):
+    @staticmethod
+    def send_status_ping():
         if GlobalVars.metasmoke_host is None:
             print "Metasmoke location not defined; not sending status ping"
             return
@@ -178,8 +178,8 @@ class Metasmoke:
         except Exception as e:
             print e
 
-    @classmethod
-    def update_code_privileged_users_list(self):
+    @staticmethod
+    def update_code_privileged_users_list():
         payload = {'key': GlobalVars.metasmoke_key}
         headers = {'Content-type': 'application/json'}
         response = requests.get(GlobalVars.metasmoke_host + "/api/users/code_privileged", data=json.dumps(payload), headers=headers).json()['items']
@@ -190,8 +190,8 @@ class Metasmoke:
             GlobalVars.socvr_room_id: response["stackoverflow_chat_ids"]
         }
 
-    @classmethod
-    def determine_if_autoflagged(self, post_url):
+    @staticmethod
+    def determine_if_autoflagged(post_url):
         """
         Given the URL for a post, determine whether or not it has been autoflagged.
         """
@@ -202,8 +202,8 @@ class Metasmoke:
 
         return is_autoflagged
 
-    @classmethod
-    def stop_autoflagging(self):
+    @staticmethod
+    def stop_autoflagging():
         payload = {'key': GlobalVars.metasmoke_key}
         headers = {'Content-type': 'application/json'}
 
