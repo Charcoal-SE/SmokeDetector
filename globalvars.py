@@ -246,7 +246,7 @@ class GlobalVars:
             "5647260",  # Andrew L.
             "559745",   # Floern
             "5743988",  # 4castle
-            "4622463"  # angussidney
+            "4622463"   # angussidney
         ]
     }
 
