@@ -79,7 +79,7 @@ eduCBA
 Solid[ -]?SEO[ -]?Tools
 maxman ?power
 niagen
-testo\W(x|black)
+testo\W(e?x|black)
 day ?trading ?academy
 skinology
 folliplex
