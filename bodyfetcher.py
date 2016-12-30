@@ -142,7 +142,7 @@ class BodyFetcher:
         else:
             question_modifier = "/{0}".format(";".join(str(post) for post in posts))
 
-        url = "http://api.stackexchange.com/2.2/questions{q_modifier}?site={site}&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw(({optional_min_query_param}".format(q_modifier=question_modifier, site=site, optional_min_query_param=pagesize_modifier)
+        url = "https://api.stackexchange.com/2.2/questions{q_modifier}?site={site}&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw(({optional_min_query_param}".format(q_modifier=question_modifier, site=site, optional_min_query_param=pagesize_modifier)
 
         # wait to make sure API has/updates post data
         time.sleep(3)
