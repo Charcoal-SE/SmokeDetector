@@ -154,7 +154,7 @@ class BodyFetcher:
         try:
             time_request_made = datetime.strftime(datetime.now(), '%H:%M:%S')
             response = requests.get(url, timeout=20).json()
-        except requests.exceptions.Timeout:
+        except (requests.exceptions.Timeout, requests.ConnectionError, Exception):
             return  # could add some retrying logic here, but eh.
 
         self.api_data_lock.acquire()
