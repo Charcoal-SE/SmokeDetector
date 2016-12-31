@@ -155,7 +155,15 @@ class BodyFetcher:
             time_request_made = datetime.strftime(datetime.now(), '%H:%M:%S')
             response = requests.get(url, timeout=20).json()
         except (requests.exceptions.Timeout, requests.ConnectionError, Exception):
-            return  # could add some retrying logic here, but eh.
+            # Any failure in the request being made (timeout or otherwise) should be added back to
+            # the queue.
+            self.queue_modify_lock.acquire()
+            if site in self.queue:
+                self.queue[site].extend(posts)
+            else:
+                self.queue[site] = posts
+            self.queue_modify_lock.release()
+            return
 
         self.api_data_lock.acquire()
         add_or_update_api_data(site)
