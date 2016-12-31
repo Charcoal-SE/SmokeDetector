@@ -159,7 +159,7 @@ class BodyFetcher:
             # the queue.
             self.queue_modify_lock.acquire()
             if site in self.queue:
-                self.queue[site].append()
+                self.queue[site].extend(posts)
             else:
                 self.queue[site] = posts
             self.queue_modify_lock.release()
