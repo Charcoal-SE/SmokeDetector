@@ -162,6 +162,7 @@ class BodyFetcher:
                 self.queue[site].append()
             else:
                 self.queue[site] = [posts]
+            self.queue_modify_lock.release()
             return
 
         self.api_data_lock.acquire()
