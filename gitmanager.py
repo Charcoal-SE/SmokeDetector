@@ -18,7 +18,6 @@ class GitManager:
 
         for index, item in enumerate(items_to_blacklist):
             items_to_blacklist[index] = item.replace("\s", " ")
-            items_to_blacklist[index] = items_to_blacklist[index].replace("\W", "[^A-Za-z0-9_]")
 
         if blacklist == "website":
             blacklist_file_name = "blacklisted_websites.txt"
