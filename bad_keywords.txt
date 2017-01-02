@@ -178,4 +178,4 @@ explosive muscle
 zyntix
 genbrain
 teeth lightening
-(^|\W)dhea(\W|$)
+dhea
