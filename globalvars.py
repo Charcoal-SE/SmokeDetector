@@ -111,7 +111,7 @@ class GlobalVars:
             "180274",   # Alexander O'Mara
             "158742",   # Rob
             "207356",   # 4castle
-            "234817"   # Mark Yisri
+            "234817"    # Mark Yisri
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
