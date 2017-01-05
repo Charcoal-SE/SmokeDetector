@@ -1305,11 +1305,11 @@ def subcommand_autoflagged(msg_content, post_url, *args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: A string
     """
-    autoflagged = Metasmoke.determine_if_autoflagged(post_url)
+    autoflagged, names = Metasmoke.determine_if_autoflagged(post_url)
     if autoflagged:
-        return Response(command_status=True, message="That post was automatically flagged by Metasmoke.")
+        return Response(command_status=True, message="That post was automatically flagged, using flags from: {}.".format(", ".join(names)))
     else:
-        return Response(command_status=True, message="That post was **not** automatically flagged by Metasmoke.")
+        return Response(command_status=True, message="That post was **not** automatically flagged by metasmoke.")
 
 
 # This dictionary defines our commands and the associated function to call
