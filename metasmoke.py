@@ -24,7 +24,6 @@ class Metasmoke:
 
             while True:
                 a = GlobalVars.metasmoke_ws.recv()
-                print(a)
                 try:
                     data = json.loads(a)
                     if "message" in data:
