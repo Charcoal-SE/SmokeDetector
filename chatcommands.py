@@ -808,7 +808,7 @@ def command_thread_descriptions(*args, **kwargs):
     :return: A string
     """
 
-    threads = ("#{ident}: #{name}".format(ident=t.ident, name=t.name) for t in threading.enumerate())
+    threads = ("{ident}: {name}\n".format(ident=t.ident, name=t.name) for t in threading.enumerate())
 
     return Response(command_status=True, message="{threads}".format(threads=list(threads)))
 
