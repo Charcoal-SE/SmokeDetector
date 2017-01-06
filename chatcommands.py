@@ -810,7 +810,7 @@ def command_thread_descriptions(*args, **kwargs):
 
     threads = ("#{ident}: #{name}".format(ident=t.ident, name=t.name) for t in threading.enumerate())
 
-    return Response(command_status=True, message="{threads}".format(threads))
+    return Response(command_status=True, message="{threads}".format(threads=threads))
 
 
 def command_version(*args, **kwargs):
