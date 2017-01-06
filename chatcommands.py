@@ -70,7 +70,7 @@ def send_metasmoke_feedback(post_url, second_part_lower, ev_user_name, ev_user_i
     :param ev_user_id: User ID supplying the feedback
     :return: None
     """
-    t_metasmoke = Thread(target=Metasmoke.send_feedback_for_post,
+    t_metasmoke = Thread(name="metasmoke feedback send on #{url}".format(url=post_url), target=Metasmoke.send_feedback_for_post,
                          args=(post_url, second_part_lower, ev_user_name, ev_user_id, ev_chat_host,))
     t_metasmoke.start()
 
@@ -675,7 +675,7 @@ def command_status(*args, **kwargs):
 
 @check_permissions
 def command_stop_flagging(*args, **kwargs):
-    t_metasmoke = Thread(target=Metasmoke.stop_autoflagging,
+    t_metasmoke = Thread(name="stop_autoflagging", target=Metasmoke.stop_autoflagging,
                          args=())
     t_metasmoke.start()
     return Response(command_status=True, message="Request sent...")
@@ -799,6 +799,17 @@ def command_test_username(content, content_lower, *args, **kwargs):
         result += "\n----------\n"
         result += why
     return Response(command_status=True, message=result)
+
+
+def command_thread_descriptions(*args, **kwargs):
+    """
+    Returns a description of current threads, for debugging
+    :return: A string
+    """
+
+    threads = ("#{ident}: #{name}".format(ident=t.ident, name=t.name) for t in threading.enumerate())
+
+    return Response(command_status=True, message="{threads}".format(threads))
 
 
 def command_version(*args, **kwargs):
@@ -1378,6 +1389,7 @@ command_dict = {
     "!!/testusername": command_test_username,
     "!!/testuser": command_test_username,
     "!!/test-u": command_test_username,
+    "!!/threads": command_thread_descriptions,
     "!!/unblock": command_unblock,
     "!!/unnotify": command_unnotify,
     "!!/unnotify-": command_unnotify,

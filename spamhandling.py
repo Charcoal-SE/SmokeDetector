@@ -125,7 +125,8 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             username = poster.strip()
             user_link = poster_url
 
-        t_metasmoke = Thread(target=metasmoke.Metasmoke.send_stats_on_post,
+        t_metasmoke = Thread(name="metasmoke send post",
+                             target=metasmoke.Metasmoke.send_stats_on_post,
                              args=(title, post_url, reason.split(", "), body, username, user_link, why, owner_rep, post_score, up_vote_count, down_vote_count))
         t_metasmoke.start()
 
@@ -146,7 +147,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                     tavern_msg_pings = prefix + datahandling.append_pings(s, tavern_pings)
                     tavern_msg_pings_ms = prefix_ms + datahandling.append_pings(s, tavern_pings)
                     msg_to_send = tavern_msg_pings_ms if len(tavern_msg_pings_ms) <= 500 else tavern_msg_pings if len(tavern_msg_pings) <= 500 else tavern_msg[0:500]
-                    t_check_websocket = Thread(target=deletionwatcher.DeletionWatcher.post_message_if_not_deleted, args=((post_id, site, "answer" if is_answer else "question"), post_url, msg_to_send, GlobalVars.tavern_on_the_meta))
+                    t_check_websocket = Thread(name="deletionwatcher post message if not deleted", target=deletionwatcher.DeletionWatcher.post_message_if_not_deleted, args=((post_id, site, "answer" if is_answer else "question"), post_url, msg_to_send, GlobalVars.tavern_on_the_meta))
                     t_check_websocket.daemon = True
                     t_check_websocket.start()
                 if site == "stackoverflow.com" and reason not in GlobalVars.non_socvr_reasons and time.time() >= GlobalVars.blockedTime[GlobalVars.socvr_room_id]:

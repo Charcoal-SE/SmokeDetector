@@ -150,7 +150,7 @@ def restart_automatically(time_in_seconds):
     os._exit(1)
 
 
-Thread(target=restart_automatically, args=(21600,)).start()
+Thread(name="auto restart thread", target=restart_automatically, args=(21600,)).start()
 
 DeletionWatcher.update_site_id_list()
 
@@ -175,7 +175,7 @@ elif "first_start" in sys.argv and not GlobalVars.on_master:
 
 Metasmoke.send_status_ping()  # This will call itself every minute or so
 
-metasmoke_ws_t = Thread(target=Metasmoke.init_websocket)
+metasmoke_ws_t = Thread(name="metasmoke websocket", target=Metasmoke.init_websocket)
 metasmoke_ws_t.start()
 
 while True:
@@ -187,7 +187,7 @@ while True:
                 ws.send("hb")
             if action == "155-questions-active":
                 is_spam, reason, why = check_if_spam_json(a)
-                t = Thread(target=GlobalVars.bodyfetcher.add_to_queue, args=(a, True if is_spam else None))
+                t = Thread(name="bodyfetcher post enqueing", target=GlobalVars.bodyfetcher.add_to_queue, args=(a, True if is_spam else None))
                 t.start()
     except Exception, e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
