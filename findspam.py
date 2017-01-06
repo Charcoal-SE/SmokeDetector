@@ -71,8 +71,6 @@ def has_phone_number(s, site):
     if regex.compile(ur"(?i)\b(address(es)?|run[- ]?time|error|value|server|hostname|timestamp|warning|code|(sp)?exception|version|chrome|1234567)\b", regex.UNICODE).search(s):
         return False, ""  # not a phone number
     s = regex.sub("[^A-Za-z0-9\\s\"',]", "", s)   # deobfuscate
-    if site != 'math.stackexchange.com':
-        s = regex.sub(",", "", s)                 # keep commas for Math titles
     s = regex.sub("[Oo]", "0", s)
     s = regex.sub("[Ss]", "5", s)
     s = regex.sub("[Ii]", "1", s)
