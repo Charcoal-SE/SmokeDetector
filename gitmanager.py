@@ -10,7 +10,7 @@ import json
 class GitManager:
     @staticmethod
     def add_to_blacklist(**kwargs):
-        blacklist = kwargs.get("blacklist", "website")
+        blacklist = kwargs.get("blacklist", "")
         items_to_blacklist = kwargs.get("items_to_blacklist", [])
         username = kwargs.get("username", "")
         chat_profile_link = kwargs.get("chat_profile_link", "http://chat.stackexchange.com/users")
@@ -21,10 +21,13 @@ class GitManager:
 
         if blacklist == "website":
             blacklist_file_name = "blacklisted_websites.txt"
+            ms_search_option = "&body_is_regex=1&body="
         elif blacklist == "keyword":
             blacklist_file_name = "bad_keywords.txt"
+            ms_search_option = "&body_is_regex=1&body="
         elif blacklist == "username":
             blacklist_file_name = "blacklisted_usernames.txt"
+            ms_search_option = "&username_is_regex=1&username="
         else:
             # Just checking all bases, but blacklist_file_name *might* have empty value
             # if we don't address it here.
@@ -73,13 +76,13 @@ class GitManager:
             if GlobalVars.github_username is None or GlobalVars.github_password is None:
                 return (False, "Tell someone to set a GH password")
 
-            list_of_domains = ""
+            list_of_items = ""
 
-            for domain in range(len(items_to_blacklist)):
-                list_of_domains += "\n - {0} - [MS search](https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93&body_is_regex=1&body={1})".format(items_to_blacklist[domain], items_to_blacklist[domain].replace(" ", "+"))
+            for item in range(len(items_to_blacklist)):
+                list_of_items += "\n - {0} - [MS search](https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{1}{2})".format(items_to_blacklist[item], ms_search_option, items_to_blacklist[item].replace(" ", "+"))
 
             payload = {"title": "{0}: Blacklist {1}".format(username, ", ".join(items_to_blacklist)),
-                       "body": "[{0}]({1}) requests the blacklist of the following {2}(s): \n{3}\n<!-- METASMOKE-BLACKLIST {4} -->".format(username, chat_profile_link, blacklist, list_of_domains, "|".join(items_to_blacklist)),
+                       "body": "[{0}]({1}) requests the blacklist of the following {2}(s): \n{3}\n<!-- METASMOKE-BLACKLIST {4} -->".format(username, chat_profile_link, blacklist, list_of_items, "|".join(items_to_blacklist)),
                        "head": branch,
                        "base": "master"}
             response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls", auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password), data=json.dumps(payload))
