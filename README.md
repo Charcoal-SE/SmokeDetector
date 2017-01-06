@@ -15,12 +15,17 @@ User documentation is in the
 To set up, use
 
 ```
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
 git clone https://github.com/Charcoal-SE/SmokeDetector.git
 cd SmokeDetector
 git submodule init
 git submodule update
 sudo pip install -r requirements.txt --upgrade
 ```
+
+Next, copy `config.sample` to a new file called `config`, and edit the values required.
 
 To run, use `nocrash.sh` (preferably in a daemon-able mode, like a `screen` session.)
 You can also use `python ws.py`, but then SmokeDetector will be shut down after 6 hours; when running from `nocrash.sh`, it will be restarted. (This is to be sure that closed websockets, if any, are reopened)
