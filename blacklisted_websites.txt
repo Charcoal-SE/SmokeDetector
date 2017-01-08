@@ -806,3 +806,4 @@ amazfitpace\.com
 eincar\.com
 bloggerclass\.tk
 myhealthpeak\.com
+kali-images\.cf
