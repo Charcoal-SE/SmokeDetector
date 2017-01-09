@@ -213,9 +213,14 @@ class BodyFetcher:
             if len(items) > 0 and "last_activity_date" in items[0]:
                 self.last_activity_date = items[0]["last_activity_date"]
 
+        num_scanned = 0
+
         for post in response["items"]:
             if "title" not in post or "body" not in post:
                 continue
+
+            num_scanned += 1
+
             title = GlobalVars.parser.unescape(post["title"])
             body = GlobalVars.parser.unescape(post["body"])
             link = post["link"]
@@ -263,6 +268,7 @@ class BodyFetcher:
                     print "NOP"
             try:
                 for answer in post["answers"]:
+                    num_scanned += 1
                     answer_title = ""
                     body = answer["body"]
                     print "got answer from owner with name " + owner_name
@@ -311,4 +317,8 @@ class BodyFetcher:
                             print "NOP"
             except:
                 print "no answers"
+
+        GlobalVars.num_posts_scanned_lock.acquire()
+        GlobalVars.num_posts_scanned += num_scanned
+        GlobalVars.num_posts_scanned_lock.release()
         return

@@ -209,3 +209,17 @@ class Metasmoke:
         headers = {'Content-type': 'application/json'}
 
         requests.post(GlobalVars.metasmoke_host + "/flagging/smokey_disable", data=json.dumps(payload), headers=headers)
+
+    @staticmethod
+    def send_statistics(should_repeat=True):
+        GlobalVars.num_posts_scanned_lock.acquire()
+        payload = {'key': GlobalVars.metasmoke_key, 'statistic': {'posts_scanned': GlobalVars.num_posts_scanned}}
+        GlobalVars.num_posts_scanned = 0
+        GlobalVars.num_posts_scanned_lock.release()
+
+        headers = {'Content-type': 'application/json'}
+
+        requests.post(GlobalVars.metasmoke_host + "/statistics.json", data=json.dumps(payload), headers=headers)
+
+        if should_repeat:
+            threading.Timer(600, Metasmoke.send_statistics).start()

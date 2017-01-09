@@ -285,6 +285,9 @@ class GlobalVars:
 
     api_request_lock = threading.Lock()
 
+    num_posts_scanned = 0
+    num_posts_scanned_lock = threading.Lock()
+
     config = ConfigParser.RawConfigParser()
 
     if os.path.isfile('config'):

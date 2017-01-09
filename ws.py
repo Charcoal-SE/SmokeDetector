@@ -146,6 +146,7 @@ GlobalVars.specialrooms = [
 
 
 def restart_automatically(time_in_seconds):
+    Metasmoke.send_statistics(False)  # false indicates not to auto-repeat
     time.sleep(time_in_seconds)
     os._exit(1)
 
@@ -174,6 +175,7 @@ elif "first_start" in sys.argv and not GlobalVars.on_master:
     GlobalVars.charcoal_hq.send_message(GlobalVars.s_reverted)
 
 Metasmoke.send_status_ping()  # This will call itself every minute or so
+Metasmoke.send_statistics()  # This will call itself every ten minutes
 
 metasmoke_ws_t = Thread(name="metasmoke websocket", target=Metasmoke.init_websocket)
 metasmoke_ws_t.start()
