@@ -180,7 +180,7 @@ genbrain
 teeth lightening
 alpha\Wprime
 alpha\Wforce\Wtesto
-xtest\W(muscle|revie)
+xtest\W(muscle|reviews?)
 inteligen
 natural\Wslim\Wlife
 test\Wx\W360
