@@ -184,5 +184,5 @@ xength
 red\Wfortera
 skin\Wopulent
 vegalash
-lux\-derma
+lux\W?derma
 trinity\Wx3
