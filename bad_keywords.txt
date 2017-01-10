@@ -193,3 +193,4 @@ nitro\Wmxs
 alpha\Wmonster\Wadvanced
 hl12
 xength
+red\Wfortera
