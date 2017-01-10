@@ -101,7 +101,7 @@ class GitManager:
 
         git.checkout("deploy")  # Return to deploy to await CI.
 
-        return (True, "Blacklisted {0} on master - you may need to merge to deploy.".format(", ".join(items_to_blacklist)))
+        return (True, "Blacklisted {0}".format(", ".join(items_to_blacklist)))
 
     @staticmethod
     def current_git_status():
