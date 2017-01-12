@@ -466,8 +466,8 @@ class FindSpam:
         {'regex': ur"(?i)\b\<a href=\".{0,25}\.xyz\"( rel=\"nofollow( noreferrer)?\")?\>.{0,15}google.{0,15}\<\/a\>\b", 'all': True, 'sites': [], 'reason': 'non-Google "google search" link in {}', 'title': False, 'body': True, 'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
         # Academia image by low-rep user
         {'regex': ur'\<img src="[^"]+"(?: alt="[^"]+")?>', 'all': False, 'sites': ['academia.stackexchange.com'], 'reason': 'image by low-rep user', 'title': False, 'body': True, 'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
-        # Nested blockquotes
-        {'regex': ur'(?:<blockquote>\s*){8}', 'all': True, 'sites': [], 'reason': 'deeply nested blockquotes', 'title': False, 'body': True, 'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
+        # Link inside nested blockquotes
+        {'regex': ur'(?:<blockquote>\s*){6}<p><a href="([^<>]+)"[^<>]*>\1</a>\s*</p>\s*</blockquote>', 'all': True, 'sites': [], 'reason': 'link inside deeply nested blockquotes', 'title': False, 'body': True, 'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
 
         #
         # Category: other
