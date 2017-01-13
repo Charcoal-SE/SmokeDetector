@@ -631,7 +631,6 @@ bigclasses\.com
 ladybirdco\.com
 colors34.com
 ultimatewowguide\.com
-fiverr\.com/\w+
 shaperich\.com
 ugccoaching\.com
 androidpluspc\.com
