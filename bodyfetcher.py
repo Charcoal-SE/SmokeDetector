@@ -214,6 +214,7 @@ class BodyFetcher:
                 self.last_activity_date = items[0]["last_activity_date"]
 
         num_scanned = 0
+        start_time = time.time()
 
         for post in response["items"]:
             if "title" not in post or "body" not in post:
@@ -318,7 +319,9 @@ class BodyFetcher:
             except:
                 print "no answers"
 
-        GlobalVars.num_posts_scanned_lock.acquire()
+        end_time = time.time()
+        GlobalVars.posts_scan_stats_lock.acquire()
         GlobalVars.num_posts_scanned += num_scanned
-        GlobalVars.num_posts_scanned_lock.release()
+        GlobalVars.post_scan_time += end_time - start_time
+        GlobalVars.posts_scan_stats_lock.release()
         return

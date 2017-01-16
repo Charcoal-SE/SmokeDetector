@@ -286,7 +286,8 @@ class GlobalVars:
     api_request_lock = threading.Lock()
 
     num_posts_scanned = 0
-    num_posts_scanned_lock = threading.Lock()
+    post_scan_time = 0
+    posts_scan_stats_lock = threading.Lock()
 
     config = ConfigParser.RawConfigParser()
 

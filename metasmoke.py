@@ -212,10 +212,12 @@ class Metasmoke:
 
     @staticmethod
     def send_statistics(should_repeat=True):
-        GlobalVars.num_posts_scanned_lock.acquire()
-        payload = {'key': GlobalVars.metasmoke_key, 'statistic': {'posts_scanned': GlobalVars.num_posts_scanned, 'api_quota': GlobalVars.apiquota}}
+        GlobalVars.posts_scan_stats_lock.acquire()
+        posts_per_second = GlobalVars.num_posts_scanned / GlobalVars.post_scan_time
+        payload = {'key': GlobalVars.metasmoke_key, 'statistic': {'posts_scanned': GlobalVars.num_posts_scanned, 'api_quota': GlobalVars.apiquota, 'post_scan_rate': posts_per_second}}
+        GlobalVars.post_scan_time = 0
         GlobalVars.num_posts_scanned = 0
-        GlobalVars.num_posts_scanned_lock.release()
+        GlobalVars.posts_scan_stats_lock.release()
 
         headers = {'Content-type': 'application/json'}
 
