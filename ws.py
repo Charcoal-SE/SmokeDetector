@@ -147,8 +147,8 @@ GlobalVars.specialrooms = [
 
 
 def restart_automatically(time_in_seconds):
-    Metasmoke.send_statistics(False)  # false indicates not to auto-repeat
     time.sleep(time_in_seconds)
+    Metasmoke.send_statistics(False)  # false indicates not to auto-repeat
     os._exit(1)
 
 
