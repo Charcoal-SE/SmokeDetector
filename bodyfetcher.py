@@ -152,7 +152,7 @@ class BodyFetcher:
         if GlobalVars.api_backoff_time > time.time():
             time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
         try:
-            time_request_made = datetime.strftime(datetime.now(), '%H:%M:%S')
+            time_request_made = datetime.now().strftime('%H:%M:%S')
             response = requests.get(url, timeout=20).json()
         except (requests.exceptions.Timeout, requests.ConnectionError, Exception):
             # Any failure in the request being made (timeout or otherwise) should be added back to
