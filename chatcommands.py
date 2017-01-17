@@ -273,7 +273,7 @@ def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, 
         return Response(command_status=False, message="An invalid website pattern was provided, not blacklisting.")
     result = GitManager.add_to_blacklist(
         blacklist="website",
-        items_to_blacklist=message_parts[1:],
+        items_to_blacklist=website_pattern,
         username=ev_user_name,
         chat_profile_link=chat_user_profile_link,
         code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
@@ -300,7 +300,7 @@ def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, 
         return Response(command_status=False, message="An invalid keyword pattern was provided, not blacklisting.")
     result = GitManager.add_to_blacklist(
         blacklist="keyword",
-        items_to_blacklist=message_parts[1:],
+        items_to_blacklist=keyword_pattern,
         username=ev_user_name,
         chat_profile_link=chat_user_profile_link,
         code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
@@ -327,7 +327,7 @@ def command_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id,
         return Response(command_status=False, message="An invalid username pattern was provided, not blacklisting.")
     result = GitManager.add_to_blacklist(
         blacklist="username",
-        items_to_blacklist=message_parts[1:],
+        items_to_blacklist=username_pattern,
         username=ev_user_name,
         chat_profile_link=chat_user_profile_link,
         code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
