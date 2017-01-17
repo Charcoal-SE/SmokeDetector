@@ -265,8 +265,7 @@ def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, 
     """
 
     chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=wrap2.host, id=str(ev_user_id))
-    items = message_parts[1:]
-    for item in items:
+    for item in message_parts[1:]:
         # noinspection PyProtectedMember
         try:
             regex.compile(item)
@@ -293,8 +292,7 @@ def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, 
     """
 
     chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=wrap2.host, id=str(ev_user_id))
-    items = message_parts[1:]
-    for item in items:
+    for item in message_parts[1:]:
         # noinspection PyProtectedMember
         try:
             regex.compile(item)
@@ -321,8 +319,7 @@ def command_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id,
     """
 
     chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=wrap2.host, id=str(ev_user_id))
-    items = message_parts[1:]
-    for item in items:
+    for item in message_parts[1:]:
         # noinspection PyProtectedMember
         try:
             regex.compile(item)
