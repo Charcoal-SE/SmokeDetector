@@ -27,6 +27,7 @@ from helpers import Response
 # TODO: Consistant return structure
 #   if return...else return vs if return...return
 
+
 def check_permissions(function):
     def run_command(ev_room, ev_user_id, wrap2, *args, **kwargs):
         if datahandling.is_privileged(ev_room, ev_user_id, wrap2):
