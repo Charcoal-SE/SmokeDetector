@@ -16,6 +16,16 @@ class GitManager:
         chat_profile_link = kwargs.get("chat_profile_link", "http://chat.stackexchange.com/users")
         code_permissions = kwargs.get("code_permissions", False)
 
+        if blacklist == "":
+            # If we broke the code, and this isn't assigned, error out before doing anything, but do
+            # so gracefully with a nice error message.
+            return (False, "Programming Error - Critical information missing for GitManager: blacklist")
+
+        if item_to_blacklist == "":
+            # If we broke the code, and this isn't assigned, error out before doing anything, but do
+            # so gracefully with a nice error message.
+            return (False, "Programming Error - Critical information missing for GitManager: item_to_blacklist")
+
         item_to_blacklist = item_to_blacklist.replace("\s", " ")
 
         if blacklist == "website":
