@@ -60,7 +60,8 @@ GlobalVars.s = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                GlobalVars.location +\
                ")"
 GlobalVars.s_reverted = "[ " + GlobalVars.chatmessage_prefix + " ] " \
-                        "SmokeDetector started in [reverted mode](" + GlobalVars.bot_repository + "/blob/master/RevertedMode.md) " \
+                        "SmokeDetector started in [reverted mode](" + \
+                        GlobalVars.bot_repository + "/blob/master/RevertedMode.md) " \
                         "at [rev " + \
                         GlobalVars.commit_with_author + \
                         "](" + GlobalVars.bot_repository + "/commit/" + \
@@ -190,7 +191,9 @@ while True:
                 ws.send("hb")
             if action == "155-questions-active":
                 is_spam, reason, why = check_if_spam_json(a)
-                t = Thread(name="bodyfetcher post enqueing", target=GlobalVars.bodyfetcher.add_to_queue, args=(a, True if is_spam else None))
+                t = Thread(name="bodyfetcher post enqueing",
+                           target=GlobalVars.bodyfetcher.add_to_queue,
+                           args=(a, True if is_spam else None))
                 t.start()
     except Exception, e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
