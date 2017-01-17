@@ -4,8 +4,7 @@ import os
 from datetime import datetime
 from ChatExchange.chatexchange.client import Client
 import HTMLParser
-# noinspection PyDeprecation
-import md5  # TODO: NOTICE: DEPRECATED!  Consider HashLib MD5 instead.
+from hashlib import md5
 import ConfigParser
 from helpers import environ_or_none
 import threading
@@ -262,7 +261,7 @@ class GlobalVars:
     commit = os.popen('git log --pretty=format:"%h" -n 1').read()
     commit_author = os.popen('git log --pretty=format:"%an" -n 1').read()
 
-    if md5.new(commit_author).hexdigest() in censored_committer_names:
+    if md5(commit_author).hexdigest() in censored_committer_names:
         commit_author = censored_committer_names[md5.new(commit_author).hexdigest()]
 
     commit_with_author = os.popen('git log --pretty=format:"%h (' + commit_author + ': *%s*)" -n 1').read()
