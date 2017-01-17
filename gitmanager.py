@@ -52,7 +52,7 @@ class GitManager:
             last_character = blacklist_file.read()[-1:]
             if last_character != "\n":
                 blacklist_file.write("\n")
-            blacklist_file.write("\n".join(item_to_blacklist) + "\n")
+            blacklist_file.write(item_to_blacklist + "\n")
 
         # Checkout a new branch (for PRs for non-code-privileged people)
         branch = "auto-blacklist-{0}".format(str(time.time()))
@@ -62,7 +62,7 @@ class GitManager:
         git.reset("HEAD")
 
         git.add(blacklist_file_name)
-        git.commit("-m", u"Auto blacklist of {0} by {1} --autopull".format(", ".join(item_to_blacklist), username))
+        git.commit("-m", u"Auto blacklist of {0} by {1} --autopull".format(item_to_blacklist, username))
 
         if code_permissions:
             git.checkout("master")
