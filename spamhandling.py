@@ -26,7 +26,8 @@ def should_reasons_prevent_tavern_posting(reasons):
     return len(reasons_comparison) == 0
 
 
-def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer, body_is_summary, owner_rep, post_score):
+def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer, body_is_summary, owner_rep,
+                  post_score):
     if not body:
         body = ""
     test, why = FindSpam.test_post(title, body, user_name, post_site, is_answer, body_is_summary, owner_rep, post_score)
@@ -38,11 +39,14 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
             blacklisted_post_url = blacklisted_user_data[2]
             if blacklisted_post_url:
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
-                why += u"\nBlacklisted user - blacklisted for {} (https://m.erwaysoftware.com/posts/by-url?url={}) by {}".format(blacklisted_post_url, rel_url, message_url)
+                why += u"\nBlacklisted user - blacklisted for {} (" \
+                       u"https://m.erwaysoftware.com/posts/by-url?url={}) by {}".format(blacklisted_post_url, rel_url,
+                                                                                        message_url)
             else:
                 why += u"\n" + u"Blacklisted user - blacklisted by {}".format(message_url)
     if 0 < len(test):
-        if datahandling.has_already_been_posted(post_site, post_id, title) or datahandling.is_false_positive((post_id, post_site)) \
+        if datahandling.has_already_been_posted(post_site, post_id, title) \
+                or datahandling.is_false_positive((post_id, post_site)) \
                 or should_whitelist_prevent_alert(user_url, test) \
                 or datahandling.is_ignored_post((post_id, post_site)) \
                 or datahandling.is_auto_ignored_post((post_id, post_site)):
@@ -58,7 +62,8 @@ def check_if_spam_json(json_data):
     try:
         data = json.loads(text_data)
     except ValueError:
-        GlobalVars.charcoal_hq.send_message(u"Encountered ValueError parsing the following:\n{0}".format(json_data), False)
+        GlobalVars.charcoal_hq.send_message(u"Encountered ValueError parsing the following:\n{0}".format(json_data),
+                                            False)
         return False, None, ""
     if "ownerUrl" not in data:
         # owner's account doesn't exist anymore, no need to post it in chat:
@@ -88,7 +93,8 @@ def check_if_spam_json(json_data):
 
 
 # noinspection PyBroadException,PyProtectedMember
-def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reasons, is_answer, why="", owner_rep=None, post_score=None, up_vote_count=None, down_vote_count=None, question_id=None):
+def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reasons, is_answer, why="",
+                owner_rep=None, post_score=None, up_vote_count=None, down_vote_count=None, question_id=None):
     post_url = parsing.to_protocol_relative(parsing.url_to_shortlink(post_url))
     poster_url = parsing.to_protocol_relative(parsing.user_url_to_shortlink(poster_url))
     reason = ", ".join(reasons)
@@ -112,7 +118,8 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
 
         prefix = u"[ [SmokeDetector](//git.io/vgx7b) ]"
         if GlobalVars.metasmoke_key:
-            prefix_ms = u"[ [SmokeDetector](//git.io/vgx7b) | [MS](//m.erwaysoftware.com/posts/by-url?url=" + post_url + ") ]"
+            prefix_ms = u"[ [SmokeDetector](//git.io/vgx7b) | [MS](//m.erwaysoftware.com/posts/by-url?url=" + \
+                        post_url + ") ]"
         else:
             prefix_ms = prefix
 
@@ -121,13 +128,15 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             username = ""
             user_link = ""
         else:
-            s = u" {}: [{}]({}) by [{}]({}) on `{}`" .format(reason, sanitized_title.strip(), post_url, poster.strip(), poster_url, site)
+            s = u" {}: [{}]({}) by [{}]({}) on `{}`" .format(reason, sanitized_title.strip(), post_url, poster.strip(),
+                                                             poster_url, site)
             username = poster.strip()
             user_link = poster_url
 
         t_metasmoke = Thread(name="metasmoke send post",
                              target=metasmoke.Metasmoke.send_stats_on_post,
-                             args=(title, post_url, reason.split(", "), body, username, user_link, why, owner_rep, post_score, up_vote_count, down_vote_count))
+                             args=(title, post_url, reason.split(", "), body, username, user_link, why, owner_rep,
+                                   post_score, up_vote_count, down_vote_count))
         t_metasmoke.start()
 
         print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
@@ -135,27 +144,41 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             datahandling.append_to_latest_questions(site, post_id, title)
             if reason not in GlobalVars.experimental_reasons:
                 if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
-                    chq_pings = datahandling.get_user_names_on_notification_list("stackexchange.com", GlobalVars.charcoal_room_id, site, GlobalVars.wrap)
+                    chq_pings = datahandling.get_user_names_on_notification_list("stackexchange.com",
+                                                                                 GlobalVars.charcoal_room_id, site,
+                                                                                 GlobalVars.wrap)
                     chq_msg = prefix + s
                     chq_msg_pings = prefix + datahandling.append_pings(s, chq_pings)
                     chq_msg_pings_ms = prefix_ms + datahandling.append_pings(s, chq_pings)
-                    msg_to_send = chq_msg_pings_ms if len(chq_msg_pings_ms) <= 500 else chq_msg_pings if len(chq_msg_pings) <= 500 else chq_msg[0:500]
+                    msg_to_send = chq_msg_pings_ms if len(chq_msg_pings_ms) <= 500 else chq_msg_pings \
+                        if len(chq_msg_pings) <= 500 else chq_msg[0:500]
                     GlobalVars.charcoal_hq.send_message(msg_to_send)
-                if not should_reasons_prevent_tavern_posting(reasons) and site not in GlobalVars.non_tavern_sites and time.time() >= GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id]:
-                    tavern_pings = datahandling.get_user_names_on_notification_list("meta.stackexchange.com", GlobalVars.meta_tavern_room_id, site, GlobalVars.wrapm)
+                if not should_reasons_prevent_tavern_posting(reasons) and site not in GlobalVars.non_tavern_sites \
+                        and time.time() >= GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id]:
+                    tavern_pings = datahandling.get_user_names_on_notification_list("meta.stackexchange.com",
+                                                                                    GlobalVars.meta_tavern_room_id,
+                                                                                    site, GlobalVars.wrapm)
                     tavern_msg = prefix + s
                     tavern_msg_pings = prefix + datahandling.append_pings(s, tavern_pings)
                     tavern_msg_pings_ms = prefix_ms + datahandling.append_pings(s, tavern_pings)
-                    msg_to_send = tavern_msg_pings_ms if len(tavern_msg_pings_ms) <= 500 else tavern_msg_pings if len(tavern_msg_pings) <= 500 else tavern_msg[0:500]
-                    t_check_websocket = Thread(name="deletionwatcher post message if not deleted", target=deletionwatcher.DeletionWatcher.post_message_if_not_deleted, args=((post_id, site, "answer" if is_answer else "question"), post_url, msg_to_send, GlobalVars.tavern_on_the_meta))
+                    msg_to_send = tavern_msg_pings_ms if len(tavern_msg_pings_ms) <= 500 else tavern_msg_pings \
+                        if len(tavern_msg_pings) <= 500 else tavern_msg[0:500]
+                    t_check_websocket = Thread(name="deletionwatcher post message if not deleted",
+                                               target=deletionwatcher.DeletionWatcher.post_message_if_not_deleted,
+                                               args=((post_id, site, "answer" if is_answer else "question"), post_url,
+                                                     msg_to_send, GlobalVars.tavern_on_the_meta))
                     t_check_websocket.daemon = True
                     t_check_websocket.start()
-                if site == "stackoverflow.com" and reason not in GlobalVars.non_socvr_reasons and time.time() >= GlobalVars.blockedTime[GlobalVars.socvr_room_id]:
-                    socvr_pings = datahandling.get_user_names_on_notification_list("stackoverflow.com", GlobalVars.socvr_room_id, site, GlobalVars.wrapso)
+                if site == "stackoverflow.com" and reason not in GlobalVars.non_socvr_reasons \
+                        and time.time() >= GlobalVars.blockedTime[GlobalVars.socvr_room_id]:
+                    socvr_pings = datahandling.get_user_names_on_notification_list("stackoverflow.com",
+                                                                                   GlobalVars.socvr_room_id, site,
+                                                                                   GlobalVars.wrapso)
                     socvr_msg = prefix + s
                     socvr_msg_pings = prefix + datahandling.append_pings(s, socvr_pings)
                     socvr_msg_pings_ms = prefix_ms + datahandling.append_pings(s, socvr_pings)
-                    msg_to_send = socvr_msg_pings_ms if len(socvr_msg_pings_ms) <= 500 else socvr_msg_pings if len(socvr_msg_pings) <= 500 else socvr_msg[0:500]
+                    msg_to_send = socvr_msg_pings_ms if len(socvr_msg_pings_ms) <= 500 else socvr_msg_pings \
+                        if len(socvr_msg_pings) <= 500 else socvr_msg[0:500]
                     GlobalVars.socvr.send_message(msg_to_send)
 
             for specialroom in GlobalVars.specialrooms:
@@ -165,11 +188,13 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                     if room.id not in GlobalVars.blockedTime or time.time() >= GlobalVars.blockedTime[room.id]:
                         room_site = room._client.host
                         room_id = int(room.id)
-                        room_pings = datahandling.get_user_names_on_notification_list(room_site, room_id, site, room._client)
+                        room_pings = datahandling.get_user_names_on_notification_list(room_site, room_id, site,
+                                                                                      room._client)
                         room_msg = prefix + s
                         room_msg_pings = prefix + datahandling.append_pings(s, room_pings)
                         room_msg_pings_ms = prefix_ms + datahandling.append_pings(s, room_pings)
-                        msg_to_send = room_msg_pings_ms if len(room_msg_pings_ms) <= 500 else room_msg_pings if len(room_msg_pings) <= 500 else room_msg[0:500]
+                        msg_to_send = room_msg_pings_ms if len(room_msg_pings_ms) <= 500 else room_msg_pings \
+                            if len(room_msg_pings) <= 500 else room_msg[0:500]
                         specialroom["room"].send_message(msg_to_send)
     except:
         exc_type, exc_obj, exc_tb = sys.exc_info()
@@ -188,5 +213,6 @@ def handle_user_with_all_spam(user, why):
         GlobalVars.charcoal_hq.send_message(s)
     for specialroom in GlobalVars.specialrooms:
         room = specialroom["room"]
-        if site in specialroom["sites"] and (room.id not in GlobalVars.blockedTime or time.time() >= GlobalVars.blockedTime[room.id]):
+        if site in specialroom["sites"] and (room.id not in GlobalVars.blockedTime
+                                             or time.time() >= GlobalVars.blockedTime[room.id]):
             room.send_message(s)
