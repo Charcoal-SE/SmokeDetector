@@ -101,12 +101,12 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
     reason = reason[:1].upper() + reason[1:]  # reason is capitalised, unlike the entries of reasons list
     datahandling.append_to_latest_questions(site, post_id, title if not is_answer else "")
     if len(reasons) == 1 and ("all-caps title" in reasons or
-                                      "repeating characters in title" in reasons or
-                                      "repeating characters in body" in reasons or
-                                      "repeating characters in answer" in reasons or
-                                      "repeating words in title" in reasons or
-                                      "repeating words in body" in reasons or
-                                      "repeating words in answer" in reasons):
+                              "repeating characters in title" in reasons or
+                              "repeating characters in body" in reasons or
+                              "repeating characters in answer" in reasons or
+                              "repeating words in title" in reasons or
+                              "repeating words in body" in reasons or
+                              "repeating words in answer" in reasons):
         datahandling.add_auto_ignored_post((post_id, site, datetime.now()))
     if why is not None and why != "":
         datahandling.add_why(site, post_id, why)
