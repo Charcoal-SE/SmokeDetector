@@ -122,7 +122,8 @@ def is_code_privileged(room_id_str, user_id_str, wrap2):
     if GlobalVars.code_privileged_users is None:
         metasmoke.Metasmoke.update_code_privileged_users_list()
 
-    if room_id_str in GlobalVars.code_privileged_users and int(user_id_str) in GlobalVars.code_privileged_users[room_id_str]:
+    if room_id_str in GlobalVars.code_privileged_users \
+            and int(user_id_str) in GlobalVars.code_privileged_users[room_id_str]:
         return True
     return False  # For now, disable the moderator override on code/blacklist changes
 
@@ -310,7 +311,9 @@ def refresh_sites():
     has_more = True
     page = 1
     while has_more:
-        response = requests.get("https://api.stackexchange.com/2.2/sites?filter=!%29Qpa1bTB_jCkeaZsqiQ8pDwI&pagesize=500&page=" + str(page) + "&key=IAkbitmze4B8KpacUfLqkw((")
+        response = requests.get("https://api.stackexchange.com/2.2/sites"
+                                "?filter=!%29Qpa1bTB_jCkeaZsqiQ8pDwI&pagesize=500&page=" + str(page) +
+                                "&key=IAkbitmze4B8KpacUfLqkw((")
         data = json.loads(response.text)
         if "error_message" in data:
             return False, data["error_message"]
@@ -403,7 +406,8 @@ def add_or_update_multiple_reporter(user_id, chat_host, time_integer):
     user_id = str(user_id)
     for i in xrange(len(GlobalVars.multiple_reporters)):
         if GlobalVars.multiple_reporters[i][0] == user_id and GlobalVars.multiple_reporters[i][1] == chat_host:
-            GlobalVars.multiple_reporters[i] = (GlobalVars.multiple_reporters[i][0], GlobalVars.multiple_reporters[i][1], time_integer)
+            GlobalVars.multiple_reporters[i] = (GlobalVars.multiple_reporters[i][0],
+                                                GlobalVars.multiple_reporters[i][1], time_integer)
             return 1
     GlobalVars.multiple_reporters.append((user_id, chat_host, time_integer))
 
