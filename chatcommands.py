@@ -21,9 +21,6 @@ import datahandling
 import regex
 from helpers import Response
 
-
-
-
 # TODO: pull out code block to get user_id, chat_site, room_id into function
 # TODO: Return result for all functions should be similar (tuple/named tuple?)
 # TODO: Do we need uid == -2 check?  Turn into "is_user_valid" check
@@ -201,6 +198,7 @@ def command_add_whitelist_user(message_parts, content_lower, ev_room, ev_user_id
     else:
         return Response(command_status=False,
                         message="Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`.")
+
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_check_whitelist(content_lower, *args, **kwargs):
