@@ -16,8 +16,7 @@ class GitManager:
         chat_profile_link = kwargs.get("chat_profile_link", "http://chat.stackexchange.com/users")
         code_permissions = kwargs.get("code_permissions", False)
 
-        # for index, item in enumerate(item_to_blacklist):
-        #     item_to_blacklist[index] = item.replace("\s", " ")
+        item_to_blacklist = item_to_blacklist.replace("\s", " ")
 
         if blacklist == "website":
             blacklist_file_name = "blacklisted_websites.txt"
