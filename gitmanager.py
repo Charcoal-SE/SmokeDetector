@@ -80,7 +80,7 @@ class GitManager:
             for item in range(len(item_to_blacklist)):
                 list_of_items += "\n - {0} - [MS search](https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{1}{2})".format(item_to_blacklist[item], ms_search_option, item_to_blacklist[item].replace(" ", "+"))
 
-            payload = {"title": "{0}: Blacklist {1}".format(username, ", ".join(item_to_blacklist)),
+            payload = {"title": "{0}: Blacklist {1}".format(username, item_to_blacklist),
                        "body": "[{0}]({1}) requests the blacklist of the following {2}(s): \n{3}\n<!-- METASMOKE-BLACKLIST {4} -->".format(username, chat_profile_link, blacklist, list_of_items, "|".join(item_to_blacklist)),
                        "head": branch,
                        "base": "master"}
@@ -100,7 +100,7 @@ class GitManager:
 
         git.checkout("deploy")  # Return to deploy to await CI.
 
-        return (True, "Blacklisted {0}".format(", ".join(item_to_blacklist)))
+        return (True, "Blacklisted {0}".format(item_to_blacklist))
 
     @staticmethod
     def current_git_status():
