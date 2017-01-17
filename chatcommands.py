@@ -16,7 +16,6 @@ import requests
 import os
 import time
 import datahandling
-import re
 from helpers import Response
 
 
@@ -267,9 +266,10 @@ def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, 
     chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=wrap2.host, id=str(ev_user_id))
     items = message_parts[1:]
     for item in items:
+        # noinspection PyProtectedMember
         try:
-            re.compile(item)
-        except re.error:
+            regex.compile(item)
+        except regex._regex_core.error:
             return Response(command_status=False, message="An invalid website pattern was found in the item(s) being blacklisted.")
     result = GitManager.add_to_blacklist(
         blacklist="website",
@@ -294,9 +294,10 @@ def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, 
     chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=wrap2.host, id=str(ev_user_id))
     items = message_parts[1:]
     for item in items:
+        # noinspection PyProtectedMember
         try:
-            re.compile(item)
-        except re.error:
+            regex.compile(item)
+        except regex._regex_core.error:
             return Response(command_status=False, message="An invalid keyword pattern was found in the item(s) being blacklisted.")
     result = GitManager.add_to_blacklist(
         blacklist="keyword",
@@ -321,9 +322,10 @@ def command_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id,
     chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=wrap2.host, id=str(ev_user_id))
     items = message_parts[1:]
     for item in items:
+        # noinspection PyProtectedMember
         try:
-            re.compile(item)
-        except re.error:
+            regex.compile(item)
+        except regex._regex_core.error:
             return Response(command_status=False, message="An invalid username pattern was found in the item(s) being blacklisted.")
     result = GitManager.add_to_blacklist(
         blacklist="username",
