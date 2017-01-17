@@ -15,7 +15,8 @@ import datahandling
 class DeletionWatcher:
     @classmethod
     def update_site_id_list(self):
-        soup = BeautifulSoup(requests.get("http://meta.stackexchange.com/topbar/site-switcher/site-list").text)
+        soup = BeautifulSoup(requests.get("http://meta.stackexchange.com/topbar/site-switcher/site-list").text,
+                             "html.parser")
         site_id_dict = {}
         for site in soup.findAll("a", attrs={"data-id": True}):
             site_name = site["href"][2:]
