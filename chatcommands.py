@@ -273,7 +273,7 @@ def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, 
         return Response(command_status=False, message="An invalid website pattern was provided, not blacklisting.")
     result = GitManager.add_to_blacklist(
         blacklist="website",
-        items_to_blacklist=website_pattern,
+        item_to_blacklist=website_pattern,
         username=ev_user_name,
         chat_profile_link=chat_user_profile_link,
         code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
