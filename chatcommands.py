@@ -16,6 +16,7 @@ import requests
 import os
 import time
 import datahandling
+import regex
 from helpers import Response
 
 
