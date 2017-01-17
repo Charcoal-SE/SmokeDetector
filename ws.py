@@ -11,6 +11,7 @@ install_thread_excepthook()
 # Hence, please avoid adding code before this comment; if it's necessary,
 # test it thoroughly.
 
+# noinspection PyPackageRequirements
 import websocket
 import getpass
 import threading
@@ -146,6 +147,7 @@ GlobalVars.specialrooms = [
 ]
 
 
+# noinspection PyProtectedMember
 def restart_automatically(time_in_seconds):
     time.sleep(time_in_seconds)
     Metasmoke.send_statistics(False)  # false indicates not to auto-repeat
@@ -207,6 +209,7 @@ while True:
             f.write(logged_msg)
         if seconds < 180 and exc_type != websocket.WebSocketConnectionClosedException\
                 and exc_type != KeyboardInterrupt and exc_type != SystemExit and exc_type != requests.ConnectionError:
+            # noinspection PyProtectedMember
             os._exit(4)
         ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
         ws.send("155-questions-active")

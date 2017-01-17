@@ -1,4 +1,5 @@
 import os
+# noinspection PyPep8Naming
 import cPickle as pickle
 from datetime import datetime
 from globalvars import GlobalVars
@@ -116,6 +117,7 @@ def is_privileged(room_id_str, user_id_str, wrap2):
     return user.is_moderator
 
 
+# noinspection PyUnusedLocal
 def is_code_privileged(room_id_str, user_id_str, wrap2):
     if GlobalVars.code_privileged_users is None:
         metasmoke.Metasmoke.update_code_privileged_users_list()
@@ -283,6 +285,7 @@ def has_already_been_posted(host, post_id, title):
 # method to get data from the error log:
 
 
+# noinspection PyUnusedLocal
 def fetch_lines_from_error_log(line_count):
     if not os.path.isfile("errorLogs.txt"):
         return "The error log file does not exist."

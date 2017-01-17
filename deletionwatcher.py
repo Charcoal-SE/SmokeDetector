@@ -1,7 +1,9 @@
 import json
 import requests
 import time
+# noinspection PyPackageRequirements
 import websocket
+# noinspection PyPackageRequirements
 from bs4 import BeautifulSoup
 from threading import Thread
 import metasmoke

@@ -3,6 +3,7 @@ import regex
 import phonenumbers
 
 
+# noinspection PyUnusedLocal
 def has_repeated_words(s, site):
     words = regex.split(r"[\s.,;!/\()\[\]+_-]", s)
     words = [word for word in words if word != ""]
@@ -19,6 +20,7 @@ def has_repeated_words(s, site):
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def has_few_characters(s, site):
     s = regex.sub("</?p>", "", s).rstrip()    # remove HTML paragraph tags from posts
     uniques = len(set(list(s)))
@@ -27,6 +29,7 @@ def has_few_characters(s, site):
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def has_repeating_characters(s, site):
     s = regex.sub('http[^"]*', "", s)    # remove URLs for this check
     if s is None or len(s) == 0 or len(s) >= 300 or regex.compile("<pre>|<code>").search(s):
@@ -38,6 +41,7 @@ def has_repeating_characters(s, site):
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def link_at_end(s, site):   # link at end of question, on selected sites
     s = regex.sub("</strong>|</em>|</p>", "", s)
     match = regex.compile(ur"(?i)https?://(?:[.A-Za-z0-9-]*/?[.A-Za-z0-9-]*/?|plus\.google\.com/[\w/]*|www\.pinterest\.com/pin/[\d/]*)</a>\s*$").search(s)
@@ -46,6 +50,7 @@ def link_at_end(s, site):   # link at end of question, on selected sites
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def non_english_link(s, site):   # non-english link in short answer
     if len(s) < 600:
         links = regex.compile(ur'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
@@ -62,11 +67,12 @@ def mostly_non_latin(s, site):   # majority of post is in non-Latin, non-Cyrilli
         return False, ""
     word_chars = regex.sub(r'(?u)[\W0-9]|http\S*', "", s)
     non_latin_chars = regex.sub(r"(?u)\p{script=Latin}|\p{script=Cyrillic}", "", word_chars)
-    if (len(non_latin_chars) > 0.4 * len(word_chars)):
+    if len(non_latin_chars) > 0.4 * len(word_chars):
         return True, u"Text contains {} non-Latin characters out of {}".format(len(non_latin_chars), len(word_chars))
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def has_phone_number(s, site):
     if regex.compile(ur"(?i)\b(address(es)?|run[- ]?time|error|value|server|hostname|timestamp|warning|code|(sp)?exception|version|chrome|1234567)\b", regex.UNICODE).search(s):
         return False, ""  # not a phone number
@@ -98,7 +104,7 @@ def has_customer_service(s, site):  # flexible detection of customer service in 
         return True, u"Key phrase: *{}*".format(phrase.group(0))
     business = regex.compile(r"(?i)\b(airlines?|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|sage|windows?|yahoo)\b").search(s)
     digits = len(regex.compile(r"\d").findall(s))
-    if (business and digits >= 5):
+    if business and digits >= 5:
         keywords = regex.compile(r"(?i)\b(customer|help|care|helpline|reservation|phone|recovery|service|support|contact|tech|technical|telephone|number)\b").findall(s)
         if len(set(keywords)) >= 2:
             matches = ", ".join(["".join(match) for match in keywords])
@@ -106,6 +112,7 @@ def has_customer_service(s, site):  # flexible detection of customer service in 
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def has_health(s, site):   # flexible detection of health spam in titles
     s = s[0:200]   # if applied to body, the beginning should be enough: otherwise many false positives
     capitalized = len(regex.compile(r"\b[A-Z][a-z]").findall(s)) >= 5   # words beginning with uppercase letter
@@ -139,6 +146,7 @@ def keyword_email(s, site):   # a keyword and an email in the same post
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def keyword_link(s, site):   # thanking keyword and a link in the same short answer
     if len(s) > 400:
         return False, ""
@@ -155,6 +163,7 @@ def keyword_link(s, site):   # thanking keyword and a link in the same short ans
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def bad_link_text(s, site):   # suspicious text of a hyperlink
     s = regex.sub("</?strong>|</?em>", "", s)  # remove font tags
     keywords = regex.compile(ur"(?isu)^(buy|cheap) |live[ -]?stream|(^| )make (money|\$)|(^| )(porno?|(whole)?sale|coins|replica|luxury|essays?|in \L<city>)($| )|(^| )\L<city>.*(service|escort|call girl)|(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery)|\b(writing service|essay (writing|tips))", city=FindSpam.city_list)
@@ -172,6 +181,7 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def is_offensive_post(s, site):
     if s is None or len(s) == 0:
         return False, ""
@@ -189,6 +199,7 @@ def is_offensive_post(s, site):
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def has_eltima(s, site):
     reg = regex.compile(ur"(?is)\beltima")
     if reg.search(s) and len(s) <= 750:
@@ -196,6 +207,7 @@ def has_eltima(s, site):
     return False, ""
 
 
+# noinspection PyClassHasNoInit
 class FindSpam:
     with open("bad_keywords.txt", "r") as f:
         bad_keywords = [line.decode('utf8').rstrip() for line in f if len(line.decode('utf8').rstrip()) > 0]

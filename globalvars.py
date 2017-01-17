@@ -4,13 +4,14 @@ import os
 from datetime import datetime
 from ChatExchange.chatexchange.client import Client
 import HTMLParser
-import md5
+# noinspection PyDeprecation
+import md5  # TODO: NOTICE: DEPRECATED!  Consider HashLib MD5 instead.
 import ConfigParser
 from helpers import environ_or_none
 import threading
 
 
-# noinspection PyClassHasNoInit
+# noinspection PyClassHasNoInit,PyDeprecation
 class GlobalVars:
     false_positives = []
     whitelisted_users = []

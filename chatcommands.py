@@ -1,5 +1,7 @@
+# noinspection PyUnresolvedReferences
 from globalvars import GlobalVars
 from findspam import FindSpam
+# noinspection PyUnresolvedReferences
 from datetime import datetime
 from utcdate import UtcDate
 from apigetpost import api_get_post
@@ -18,6 +20,8 @@ import time
 import datahandling
 import regex
 from helpers import Response
+
+
 
 
 # TODO: pull out code block to get user_id, chat_site, room_id into function
@@ -62,13 +66,14 @@ def is_report(post_site_id):
     return True
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def send_metasmoke_feedback(post_url, second_part_lower, ev_user_name, ev_user_id, ev_chat_host):
     """
     Sends feedback to metasmoke
     :param ev_user_name:
     :param post_url: The post url we are sending
     :param second_part_lower: Feedback
-    :param ev_username: User name supplying the feedback
+    :param ev_user_name: User name supplying the feedback
     :param ev_user_id: User ID supplying the feedback
     :return: None
     """
@@ -94,6 +99,7 @@ def single_random_user(ev_room):
 
 
 # --- Blacklist Functions --- #
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
 def command_add_blacklist_user(message_parts, content_lower, message_url, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -120,6 +126,7 @@ def command_add_blacklist_user(message_parts, content_lower, message_url, ev_roo
                         message="Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`.")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_check_blacklist(content_lower, *args, **kwargs):
     """
     Checks if a user is blacklisted
@@ -140,6 +147,7 @@ def command_check_blacklist(content_lower, *args, **kwargs):
                         message="Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`.")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
 def command_remove_blacklist_user(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -169,6 +177,7 @@ def command_remove_blacklist_user(message_parts, content_lower, ev_room, ev_user
 
 
 # --- Whitelist functions --- #
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
 def command_add_whitelist_user(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -193,7 +202,7 @@ def command_add_whitelist_user(message_parts, content_lower, ev_room, ev_user_id
         return Response(command_status=False,
                         message="Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`.")
 
-
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_check_whitelist(content_lower, *args, **kwargs):
     """
     Checks if a user is whitelisted
@@ -214,6 +223,7 @@ def command_check_whitelist(content_lower, *args, **kwargs):
                         message="Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`.")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
 def command_remove_whitelist_user(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -242,6 +252,7 @@ def command_remove_whitelist_user(message_parts, content_lower, ev_room, ev_user
                         message="Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`.")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
 def command_blacklist_help(*args, **kwargs):
     """
@@ -254,6 +265,7 @@ def command_blacklist_help(*args, **kwargs):
                                                  "in URLs using \\. and spaces in keywords with \s.")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Adds a string to the website blacklist and commits/pushes to GitHub
@@ -281,6 +293,7 @@ def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, 
     return Response(command_status=result[0], message=result[1])
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Adds a string to the keyword blacklist and commits/pushes to GitHub
@@ -308,6 +321,7 @@ def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, 
     return Response(command_status=result[0], message=result[1])
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Adds a string to the username blacklist and commits/pushes to GitHub
@@ -335,12 +349,14 @@ def command_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id,
     return Response(command_status=result[0], message=result[1])
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
 def command_gitstatus(wrap2, *args, **kwargs):
     return Response(command_status=True, message=GitManager.current_git_status())
 
 
 # --- Joke Commands --- #
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_blame(ev_room, *args, **kwargs):
     """
     Returns a string with a user to blame (This is a joke command)
@@ -353,6 +369,7 @@ def command_blame(ev_room, *args, **kwargs):
     return Response(command_status=True, message=u"It's [{}]({})'s fault.".format(user_to_blame[0], user_to_blame[1]))
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_brownie(*args, **kwargs):
     """
     Returns a string equal to "Brown!" (This is a joke command)
@@ -361,6 +378,7 @@ def command_brownie(*args, **kwargs):
     return Response(command_status=True, message="Brown!")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_coffee(ev_user_name, *args, **kwargs):
     """
     Returns a string stating who the coffee is for (This is a joke command)
@@ -371,6 +389,7 @@ def command_coffee(ev_user_name, *args, **kwargs):
     return Response(command_status=True, message=u"*brews coffee for @" + ev_user_name.replace(" ", "") + "*")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_lick(*args, **kwargs):
     """
     Returns a string when a user says 'lick' (This is a joke command)
@@ -379,6 +398,7 @@ def command_lick(*args, **kwargs):
     return Response(command_status=True, message="*licks ice cream cone*")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_tea(ev_user_name, *args, **kwargs):
     """
     Returns a string stating who the tea is for (This is a joke command)
@@ -393,6 +413,7 @@ def command_tea(ev_user_name, *args, **kwargs):
                         user=ev_user_name.replace(" ", "")))
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_wut(*args, **kwargs):
     """
     Returns a string when a user asks 'wut' (This is a joke command)
@@ -401,6 +422,7 @@ def command_wut(*args, **kwargs):
     return Response(command_status=True, message="Whaddya mean, 'wut'? Humans...")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_hats(*args, **kwargs):
     wb_start = datetime(2016, 12, 19, 0, 0, 0)
     wb_end = datetime(2017, 1, 9, 0, 0, 0)
@@ -428,6 +450,7 @@ def command_hats(*args, **kwargs):
 
 
 # --- Block application from posting functions --- #
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
 def command_block(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -454,6 +477,7 @@ def command_block(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
     return Response(command_status=True, message=report)
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
 def command_unblock(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -475,6 +499,7 @@ def command_unblock(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
 
 
 # --- Administration Commands --- #
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_alive(ev_room, *args, **kwargs):
     """
     Returns a string indicating the process is still active
@@ -492,6 +517,7 @@ def command_alive(ev_room, *args, **kwargs):
         return Response(command_status=True, message='Of course')
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
 def command_allspam(message_parts, ev_room, ev_user_id, wrap2, ev_user_name, ev_room_name, *args, **kwargs):
     """
@@ -516,6 +542,7 @@ def command_allspam(message_parts, ev_room, ev_user_id, wrap2, ev_user_name, ev_
     return Response(command_status=True, message=None)
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
 def command_errorlogs(ev_room, ev_user_id, wrap2, message_parts, *args, **kwargs):
     """
@@ -541,6 +568,7 @@ def command_errorlogs(ev_room, ev_user_id, wrap2, message_parts, *args, **kwargs
     return Response(command_status=True, message=None)
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_help(*args, **kwargs):
     """
     Returns the help text
@@ -554,6 +582,7 @@ def command_help(*args, **kwargs):
                                                  "/wiki/Commands).")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_location(*args, **kwargs):
     """
     Returns the current location the application is running from
@@ -562,6 +591,7 @@ def command_location(*args, **kwargs):
     return Response(command_status=True, message=GlobalVars.location)
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyProtectedMember
 @check_permissions
 def command_master(ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -575,6 +605,7 @@ def command_master(ev_room, ev_user_id, wrap2, *args, **kwargs):
     os._exit(8)
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyProtectedMember
 @check_permissions
 def command_pull(ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -603,6 +634,7 @@ def command_pull(ev_room, ev_user_id, wrap2, *args, **kwargs):
                         message="CI build is still pending, wait until the build has finished and then pull again.")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyProtectedMember
 @check_permissions
 def command_reboot(ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -617,6 +649,7 @@ def command_reboot(ev_room, ev_user_id, wrap2, *args, **kwargs):
     os._exit(5)
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Tells user whether or not they have privileges
@@ -633,6 +666,7 @@ def command_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
                     "/wiki/Privileges) for information on what privileges are and what is expected of privileged users.")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_code_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Tells user whether or not they have code privileges
@@ -648,6 +682,7 @@ def command_code_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
                     message="No, you are not a code-privileged user.")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_quota(*args, **kwargs):
     """
     Report how many API hits remain for the day
@@ -656,6 +691,7 @@ def command_quota(*args, **kwargs):
     return Response(command_status=True, message="The current API quota remaining is {}.".format(GlobalVars.apiquota))
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_queuestatus(*args, **kwargs):
     """
     Report current API queue
@@ -664,6 +700,7 @@ def command_queuestatus(*args, **kwargs):
     return Response(command_status=True, message=GlobalVars.bodyfetcher.print_queue())
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyProtectedMember
 @check_permissions
 def command_stappit(ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -678,6 +715,7 @@ def command_stappit(ev_room, ev_user_id, wrap2, *args, **kwargs):
     os._exit(6)
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_status(*args, **kwargs):
     """
     Returns the amount of time the application has been running
@@ -693,6 +731,7 @@ def command_status(*args, **kwargs):
                         minute_count=minutes, plurality=minute_str))
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
 def command_stop_flagging(*args, **kwargs):
     t_metasmoke = Thread(name="stop_autoflagging", target=Metasmoke.stop_autoflagging,
@@ -701,6 +740,7 @@ def command_stop_flagging(*args, **kwargs):
     return Response(command_status=True, message="Request sent...")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_test(content, content_lower, *args, **kwargs):
     """
     Test a post to determine if it'd be automatically reported
@@ -725,6 +765,7 @@ def command_test(content, content_lower, *args, **kwargs):
     return Response(command_status=True, message=result)
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_test_answer(content, content_lower, *args, **kwargs):
     """
     Test an answer to determine if it'd be automatically reported
@@ -749,6 +790,7 @@ def command_test_answer(content, content_lower, *args, **kwargs):
     return Response(command_status=True, message=result)
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_test_question(content, content_lower, *args, **kwargs):
     """
     Test a question to determine if it'd be automatically reported
@@ -773,6 +815,7 @@ def command_test_question(content, content_lower, *args, **kwargs):
     return Response(command_status=True, message=result)
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_test_title(content, content_lower, *args, **kwargs):
     """
     Test a title to determine if it'd be automatically reported
@@ -797,6 +840,7 @@ def command_test_title(content, content_lower, *args, **kwargs):
     return Response(command_status=True, message=result)
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_test_username(content, content_lower, *args, **kwargs):
     """
     Test a username to determine if it'd be automatically reported
@@ -821,6 +865,7 @@ def command_test_username(content, content_lower, *args, **kwargs):
     return Response(command_status=True, message=result)
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_thread_descriptions(*args, **kwargs):
     """
     Returns a description of current threads, for debugging
@@ -832,6 +877,7 @@ def command_thread_descriptions(*args, **kwargs):
     return Response(command_status=True, message="{threads}".format(threads="\n".join(list(threads))))
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_version(*args, **kwargs):
     """
     Returns the current version of the application
@@ -841,6 +887,7 @@ def command_version(*args, **kwargs):
         commit_name=GlobalVars.commit_with_author, commit_code=GlobalVars.commit, repository=GlobalVars.bot_repository))
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_whoami(ev_room, *args, **kwargs):
     """
     Returns user id of smoke detector
@@ -855,6 +902,7 @@ def command_whoami(ev_room, *args, **kwargs):
                     message="I don't know my user ID for this room. (Something is wrong, and it's apnorton's fault.)")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyUnboundLocalVariable
 def command_pending(content, content_lower, *args, **kwargs):
     """
     Finds posts with TP feedback that have yet to be deleted.
@@ -876,6 +924,7 @@ def command_pending(content, content_lower, *args, **kwargs):
 
 
 # --- Notification functions --- #
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_allnotifications(message_parts, ev_user_id, wrap2, *args, **kwargs):
     """
     Returns a string stating what sites a user will be notified about
@@ -899,6 +948,7 @@ def command_allnotifications(message_parts, ev_user_id, wrap2, *args, **kwargs):
     return Response(command_status=True, message="You will get notified for these sites:\r\n" + ", ".join(sites))
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_notify(message_parts, ev_user_id, wrap2, *args, **kwargs):
     """
     Subscribe a user to events on a site in a single room
@@ -935,6 +985,7 @@ def command_notify(message_parts, ev_user_id, wrap2, *args, **kwargs):
         return Response(command_status=False, message="Unrecognized code returned when adding notification.")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_unnotify(message_parts, ev_user_id, wrap2, *args, **kwargs):
     """
     Unsubscribes a user to specific events
@@ -966,6 +1017,7 @@ def command_unnotify(message_parts, ev_user_id, wrap2, *args, **kwargs):
     return Response(command_status=True, message="That configuration doesn't exist.")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_willbenotified(message_parts, ev_user_id, wrap2, *args, **kwargs):
     """
     Returns a string stating whether a user will be notified or not
@@ -993,6 +1045,7 @@ def command_willbenotified(message_parts, ev_user_id, wrap2, *args, **kwargs):
 
 
 # --- Post Responses --- #
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
 def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
                         ev_user_name, ev_room_name, *args, **kwargs):
@@ -1075,6 +1128,7 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
 #
 #
 # Subcommands go below here
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyBroadException
 @check_permissions
 def subcommand_delete(ev_room, ev_user_id, wrap2, msg, *args, **kwargs):
     """
@@ -1093,6 +1147,7 @@ def subcommand_delete(ev_room, ev_user_id, wrap2, msg, *args, **kwargs):
     return Response(command_status=True, message=None)
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
 def subcommand_editlink(ev_room, ev_user_id, wrap2, msg_content, msg, *args, **kwargs):
     """
@@ -1112,6 +1167,7 @@ def subcommand_editlink(ev_room, ev_user_id, wrap2, msg_content, msg, *args, **k
     return Response(command_status=True, message=None)
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyBroadException
 @check_permissions
 def subcommand_falsepositive(ev_room, ev_user_id, wrap2, post_site_id, post_url,
                              quiet_action, post_type, msg, second_part_lower, ev_user_name,
@@ -1181,6 +1237,7 @@ def subcommand_falsepositive(ev_room, ev_user_id, wrap2, post_site_id, post_url,
     return Response(command_status=True, message=None)
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
 def subcommand_ignore(ev_room, ev_user_id, wrap2, post_site_id, post_url, quiet_action, second_part_lower, ev_user_name,
                       *args, **kwargs):
@@ -1211,6 +1268,7 @@ def subcommand_ignore(ev_room, ev_user_id, wrap2, post_site_id, post_url, quiet_
         return Response(command_status=True, message=None)
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
 def subcommand_naa(ev_room, ev_user_id, wrap2, post_site_id, post_url, quiet_action,
                    second_part_lower, ev_user_name, post_type, *args, **kwargs):
@@ -1246,6 +1304,7 @@ def subcommand_naa(ev_room, ev_user_id, wrap2, post_site_id, post_url, quiet_act
     return Response(command_status=True, message="Recorded answer as an NAA in metasmoke.")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
 def subcommand_truepositive(ev_room, ev_user_id, wrap2, post_site_id, post_url, quiet_action,
                             post_type, message_url, msg, second_part_lower, ev_user_name,
@@ -1305,6 +1364,7 @@ def subcommand_truepositive(ev_room, ev_user_id, wrap2, post_site_id, post_url, 
                                                       "No action was taken.")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def subcommand_why(msg_content, *args, **kwargs):
     """
     Returns reasons a post was reported
@@ -1328,6 +1388,7 @@ def subcommand_why(msg_content, *args, **kwargs):
     return Response(command_status=True, message="There is no `why` data for that user (anymore).")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal
 def subcommand_autoflagged(msg_content, post_url, *args, **kwargs):
     """
     Determines whether a post was automatically flagged by Metasmoke

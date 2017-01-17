@@ -3,6 +3,7 @@ from globalvars import GlobalVars
 import datahandling
 
 
+# noinspection PyBroadException
 def get_user_from_url(url):
     match = regex.compile(r"(?:https?:)?//([\w.]+)/u(?:sers)?/(\d+)(/(?:.+/?)?)?").search(url)
     if match is None:
@@ -15,6 +16,7 @@ def get_user_from_url(url):
         return None
 
 
+# noinspection PyBroadException
 def fetch_post_url_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:\(\)-]+: \[.+]\(((?:http:)?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)(?:\?smokeypost=true)?\) by \[?.*\]?\(?(?:.*)\)? on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
     match = regex.compile(search_regex).search(content)
@@ -27,7 +29,7 @@ def fetch_post_url_from_msg_content(content):
         return None
 
 
-# noinspection PyBroadException
+# noinspection PyBroadException,PyUnusedLocal,PyRedundantParentheses
 def fetch_post_id_and_site_from_url(url):
     if url is None:
         return None

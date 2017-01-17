@@ -2,6 +2,7 @@ import json
 import requests
 from globalvars import GlobalVars
 import threading
+# noinspection PyPackageRequirements
 import websocket
 from collections import Iterable
 import sys
@@ -14,7 +15,7 @@ import apigetpost
 import spamhandling
 
 
-# noinspection PyClassHasNoInit,PyBroadException
+# noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
 class Metasmoke:
     @staticmethod
     def init_websocket():
