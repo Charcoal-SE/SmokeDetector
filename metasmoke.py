@@ -106,6 +106,7 @@ class Metasmoke:
                     elif c["status"] == "failure":
                         s = "[CI]({ci_link}) on {commit_sha} failed.".format(ci_link=c["ci_url"], commit_sha=sha)
 
+                    # noinspection PyUnboundLocalVariable
                     GlobalVars.charcoal_hq.send_message(s)
 
     @staticmethod
