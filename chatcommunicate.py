@@ -53,6 +53,7 @@ def print_chat_message(ev):
     print message + colored(" - " + ev.data['user_name'], attrs=['bold'])
 
 
+# noinspection PyUnusedLocal
 def special_room_watcher(ev, wrap2):
     if ev.type_id != 1:
         return

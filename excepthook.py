@@ -4,10 +4,12 @@ import traceback
 import threading
 import sys
 from utcdate import UtcDate
+# noinspection PyPackageRequirements
 from websocket import WebSocketConnectionClosedException
 import requests
 
 
+# noinspection PyProtectedMember
 def uncaught_exception(exctype, value, tb):
     now = datetime.utcnow()
     delta = now - UtcDate.startup_utc_date
@@ -41,7 +43,7 @@ def install_thread_excepthook():
         init_old(self, *args, **kwargs)
         run_old = self.run
 
-        # noinspection PyBroadException
+        # noinspection PyBroadException,PyShadowingNames
         def run_with_except_hook(*args, **kw):
             try:
                 run_old(*args, **kw)
