@@ -38,7 +38,9 @@ def api_get_post(post_url):
         assert post_type == "question"
         api_filter = "!)Ehu.SHRfXhu2eCP4p6wd*Wxyw1XouU5qO83b7X5GQK6ciVat"
 
-    request_url = "http://api.stackexchange.com/2.2/{type}s/{post_id}?site={site}&filter={api_filter}&key=IAkbitmze4B8KpacUfLqkw((".format(type=post_type, post_id=post_id, site=site, api_filter=api_filter)
+    request_url = "http://api.stackexchange.com/2.2/{type}s/{post_id}?site={site}&filter={api_filter}&" \
+                  "key=IAkbitmze4B8KpacUfLqkw((".format(type=post_type, post_id=post_id, site=site,
+                                                        api_filter=api_filter)
     response = requests.get(request_url).json()
     if "backoff" in response:
         if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
