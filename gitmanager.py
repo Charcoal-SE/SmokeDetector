@@ -88,25 +88,34 @@ class GitManager:
             list_of_items = ""
 
             for item in range(len(item_to_blacklist)):
-                list_of_items += "\n - {0} - [MS search](https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{1}{2})".format(item_to_blacklist[item], ms_search_option, item_to_blacklist[item].replace(" ", "+"))
+                list_of_items += "\n - {0} - [MS search](https://metasmoke.erwaysoftware.com/search?" \
+                                 "utf8=%E2%9C%93{1}{2})".format(item_to_blacklist[item], ms_search_option,
+                                                                item_to_blacklist[item].replace(" ", "+"))
 
             payload = {"title": "{0}: Blacklist {1}".format(username, item_to_blacklist),
-                       "body": "[{0}]({1}) requests the blacklist of the following {2}(s): \n{3}\n<!-- METASMOKE-BLACKLIST {4} -->".format(username, chat_profile_link, blacklist, list_of_items, "|".join(item_to_blacklist)),
+                       "body": "[{0}]({1}) requests the blacklist of the following {2}(s): \n{3}\n"
+                               "<!-- METASMOKE-BLACKLIST {4} -->".format(username, chat_profile_link, blacklist,
+                                                                         list_of_items, "|".join(item_to_blacklist)),
                        "head": branch,
                        "base": "master"}
-            response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls", auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password), data=json.dumps(payload))
+            response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls",
+                                     auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password),
+                                     data=json.dumps(payload))
             print(response.json())
             try:
                 git.checkout("deploy")  # Return to deploy, pending the accept of the PR in Master.
-                return (True, "You don't have code privileges, but I've [created a pull request for you]({0}).".format(response.json()["html_url"]))
+                return (True, "You don't have code privileges, but I've [created a pull request for you]({0}).".format(
+                    response.json()["html_url"]))
             except KeyError:
-                # Error capture/checking for any "invalid" GH reply without an 'html_url' item, which will throw a KeyError.
+                # Error capture/checking for any "invalid" GH reply without an 'html_url' item,
+                # which will throw a KeyError.
                 if "bad credentials" in str(response.json()['message']).lower():
                     # Capture the case when GH credentials are bad or invalid
                     return (False, "Something is wrong with the GH credentials, tell someone to check them.")
                 else:
                     # Capture any other invalid response cases.
-                    return (False, "A bad or invalid reply was received from GH, the message was: %s" % response.json()['message'])
+                    return (False, "A bad or invalid reply was received from GH, the message was: %s" %
+                            response.json()['message'])
 
         git.checkout("deploy")  # Return to deploy to await CI.
 
