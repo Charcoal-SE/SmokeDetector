@@ -119,7 +119,6 @@ class BodyFetcher:
 
     def make_api_call_for_site(self, site):
         if site not in self.queue:
-            GlobalVars.charcoal_hq.send_message("Attempted API call to {} but there are no posts to fetch.".format(site))
             return
 
         self.queue_modify_lock.acquire()
@@ -138,11 +137,15 @@ class BodyFetcher:
             else:
                 pagesize = "25"
 
-            pagesize_modifier = "&pagesize={pagesize}&min={time_length}".format(pagesize=pagesize, time_length=str(self.last_activity_date))
+            pagesize_modifier = "&pagesize={pagesize}" \
+                                "&min={time_length}".format(pagesize=pagesize, time_length=str(self.last_activity_date))
         else:
             question_modifier = "/{0}".format(";".join(str(post) for post in posts))
 
-        url = "https://api.stackexchange.com/2.2/questions{q_modifier}?site={site}&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw(({optional_min_query_param}".format(q_modifier=question_modifier, site=site, optional_min_query_param=pagesize_modifier)
+        url = "https://api.stackexchange.com/2.2/questions{q_modifier}?site={site}" \
+              "&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw((" \
+              "{optional_min_query_param}".format(q_modifier=question_modifier, site=site,
+                                                  optional_min_query_param=pagesize_modifier)
 
         # wait to make sure API has/updates post data
         time.sleep(3)
@@ -172,11 +175,14 @@ class BodyFetcher:
         message_hq = ""
         if "quota_remaining" in response:
             if response["quota_remaining"] - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0:
-                GlobalVars.charcoal_hq.send_message("API quota rolled over with {0} requests remaining. Current quota: {1}.".format(GlobalVars.apiquota, response["quota_remaining"]))
+                GlobalVars.charcoal_hq.send_message("API quota rolled over with {0} requests remaining. "
+                                                    "Current quota: {1}.".format(GlobalVars.apiquota,
+                                                                                 response["quota_remaining"]))
                 sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1), reverse=True)
                 api_quota_used_per_site = ""
                 for site_name, quota_used in sorted_calls_per_site:
-                    api_quota_used_per_site += site_name.replace('.com', '').replace('.stackexchange', '') + ": {0}\n".format(str(quota_used))
+                    sanatized_site_name = site_name.replace('.com', '').replace('.stackexchange', '')
+                    api_quota_used_per_site += sanatized_site_name + ": {0}\n".format(str(quota_used))
                 api_quota_used_per_site = api_quota_used_per_site.strip()
                 GlobalVars.charcoal_hq.send_message(api_quota_used_per_site, False)
                 clear_api_data()
@@ -184,7 +190,8 @@ class BodyFetcher:
                 GlobalVars.charcoal_hq.send_message("API reports no quota left!  May be a glitch.")
                 GlobalVars.charcoal_hq.send_message(str(response))  # No code format for now?
             if GlobalVars.apiquota == -1:
-                GlobalVars.charcoal_hq.send_message("Restart: API quota is {quota}.".format(quota=response["quota_remaining"]))
+                GlobalVars.charcoal_hq.send_message("Restart: API quota is {quota}."
+                                                    .format(quota=response["quota_remaining"]))
             GlobalVars.apiquota = response["quota_remaining"]
         else:
             message_hq = "The quota_remaining property was not in the API response."
