@@ -37,8 +37,9 @@ def check_permissions(function):
             return function(*args, **kwargs)
         else:
             return Response(command_status=False,
-                            message="You are not a privileged user. Please see [the privileges wiki page](" + GlobalVars.bot_repository +
-                                    "/wiki/Privileges) for information on what privileges are and what is expected of privileged users.")
+                            message="You are not a privileged user. Please see [the privileges wiki page](" +
+                                    GlobalVars.bot_repository + "/wiki/Privileges) for information on what privileges"
+                                                                " are and what is expected of privileged users.")
 
     return run_command
 
@@ -75,7 +76,8 @@ def send_metasmoke_feedback(post_url, second_part_lower, ev_user_name, ev_user_i
     :param ev_user_id: User ID supplying the feedback
     :return: None
     """
-    t_metasmoke = Thread(name="metasmoke feedback send on #{url}".format(url=post_url), target=Metasmoke.send_feedback_for_post,
+    t_metasmoke = Thread(name="metasmoke feedback send on #{url}".format(url=post_url),
+                         target=Metasmoke.send_feedback_for_post,
                          args=(post_url, second_part_lower, ev_user_name, ev_user_id, ev_chat_host,))
     t_metasmoke.start()
 
@@ -121,7 +123,8 @@ def command_add_blacklist_user(message_parts, content_lower, message_url, ev_roo
         return Response(command_status=True, message="Error: {}".format(val))
     else:
         return Response(command_status=False,
-                        message="Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`.")
+                        message="Invalid format. Valid format: `!!/addblu profileurl` "
+                                "*or* `!!/addblu userid sitename`.")
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -198,7 +201,8 @@ def command_add_whitelist_user(message_parts, content_lower, ev_room, ev_user_id
         return Response(command_status=True, message="Error: {}".format(val))
     else:
         return Response(command_status=False,
-                        message="Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`.")
+                        message="Invalid format. Valid format: `!!/addwlu profileurl` *or* "
+                                "`!!/addwlu userid sitename`.")
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -435,7 +439,8 @@ def command_hats(*args, **kwargs):
         hourstr = "hours" if hours != 1 else "hour"
         minutestr = "minutes" if minutes != 1 else "minute"
         secondstr = "seconds" if seconds != 1 else "second"
-        return_string = "WE LOVE HATS! Winter Bash will begin in {} {}, {} {}, {} {}, and {} {}.".format(diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
+        return_string = "WE LOVE HATS! Winter Bash will begin in {} {}, {} {}, {} {}, and {} {}.".format(
+            diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
     elif wb_end > now:
         diff = wb_end - now
         hours, remainder = divmod(diff.seconds, 3600)
@@ -444,7 +449,8 @@ def command_hats(*args, **kwargs):
         hourstr = "hours" if hours != 1 else "hour"
         minutestr = "minutes" if minutes != 1 else "minute"
         secondstr = "seconds" if seconds != 1 else "second"
-        return_string = "Winter Bash won't end for {} {}, {} {}, {} {}, and {} {}. GO EARN SOME HATS!".format(diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
+        return_string = "Winter Bash won't end for {} {}, {} {}, {} {}, and {} {}. GO EARN SOME HATS!".format(
+            diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
     return Response(command_status=True, message=return_string)
 
 
@@ -661,8 +667,9 @@ def command_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
     if is_privileged(ev_room, ev_user_id, wrap2):
         return Response(command_status=True, message="Yes, you are a privileged user.")
     return Response(command_status=True,
-                    message="No, you are not a privileged user. Please see [the privileges wiki page](" + GlobalVars.bot_repository +
-                    "/wiki/Privileges) for information on what privileges are and what is expected of privileged users.")
+                    message="No, you are not a privileged user. Please see [the privileges wiki page](" +
+                            GlobalVars.bot_repository + "/wiki/Privileges) for information on what privileges "
+                                                        "are and what is expected of privileged users.")
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -828,7 +835,8 @@ def command_test_title(content, content_lower, *args, **kwargs):
     if len(string_to_test) == 0:
         return Response(command_status=True, message="Nothing to test")
     result = "> "
-    reasons, why = FindSpam.test_post(string_to_test, "Valid question body", "Valid username", "", test_as_answer, False, 1, 0)
+    reasons, why = FindSpam.test_post(string_to_test, "Valid question body", "Valid username", "",
+                                      test_as_answer, False, 1, 0)
     if len(reasons) == 0:
         result += "Would not be caught as a title."
         return Response(command_status=True, message=result)
@@ -853,7 +861,8 @@ def command_test_username(content, content_lower, *args, **kwargs):
     if len(string_to_test) == 0:
         return Response(command_status=True, message="Nothing to test")
     result = "> "
-    reasons, why = FindSpam.test_post("Valid title", "Valid post body", string_to_test, "", test_as_answer, False, 1, 0)
+    reasons, why = FindSpam.test_post("Valid title", "Valid post body", string_to_test, "",
+                                      test_as_answer, False, 1, 0)
     if len(reasons) == 0:
         result += "Would not be caught as a username."
         return Response(command_status=True, message=result)
@@ -914,7 +923,8 @@ def command_pending(content, content_lower, *args, **kwargs):
     except ValueError:
         return Response(command_status=False,
                         message="Expected an integer page number and got '{}' instead (ValueError).".format(page))
-    posts = requests.get("https://metasmoke.erwaysoftware.com/api/undeleted?pagesize=2&page={}&key={}".format(page, GlobalVars.metasmoke_key)).json()
+    posts = requests.get("https://metasmoke.erwaysoftware.com/api/undeleted?pagesize=2&page={}&key={}".format(
+        page, GlobalVars.metasmoke_key)).json()
     messages = []
     for post in posts['items']:
         messages.append("[{0}]({1}) ([MS](https://m.erwaysoftware.com/post/{0}))".format(post['id'], post['link']))
@@ -1089,7 +1099,8 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
             output.append("Post {}: Could not find data for this post in the API. "
                           "It may already have been deleted.".format(index))
             continue
-        if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive((post_data.post_id, post_data.site)):
+        if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive(
+                (post_data.post_id, post_data.site)):
             # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
             # this re-report might be attempting to correct that/fix a mistake/etc.
             output.append("Post {}: Already recently reported".format(index))
@@ -1359,7 +1370,8 @@ def subcommand_truepositive(ev_room, ev_user_id, wrap2, post_site_id, post_url, 
                                                      "blacklist the poster of the answer, use `trueu` or `tpu`.")
 
     else:
-        return Response(command_status=False, message="Post type was not recognized (not `question` or `answer`) - call a developer! "
+        return Response(command_status=False, message="Post type was not recognized (not `question` or `answer`) - "
+                                                      "call a developer! "
                                                       "No action was taken.")
 
 
@@ -1398,7 +1410,8 @@ def subcommand_autoflagged(msg_content, post_url, *args, **kwargs):
     """
     autoflagged, names = Metasmoke.determine_if_autoflagged(post_url)
     if autoflagged:
-        return Response(command_status=True, message="That post was automatically flagged, using flags from: {}.".format(", ".join(names)))
+        return Response(command_status=True,
+                        message="That post was automatically flagged, using flags from: {}.".format(", ".join(names)))
     else:
         return Response(command_status=True, message="That post was **not** automatically flagged by metasmoke.")
 
