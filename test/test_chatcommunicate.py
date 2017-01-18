@@ -12,6 +12,7 @@ messages = {}
 # methods to mock parts of SmokeDetector
 
 
+# noinspection PyUnusedLocal
 def mock_reply(text, length_check=True):
     global reply_value
     reply_value = text
@@ -23,6 +24,7 @@ def mock_get_message(msg_id):
     return None
 
 
+# noinspection PyShadowingBuiltins
 def mock_event(content, event_type, room_id, room_name, user_id, user_name, id=28258802, message_id=15249005, time_stamp=1398822427):
     global reply_value
 
@@ -50,6 +52,7 @@ def mock_previous_messages(messages_with_ids):
     messages = messages_with_ids
 
 
+# noinspection PyShadowingNames
 def mock_client_get_message(client):
     client.get_message = mock_get_message
     return client
@@ -58,6 +61,7 @@ def mock_client_get_message(client):
 # Helper methods
 
 
+# noinspection PyShadowingBuiltins
 def is_user_currently_whitelisted(link, site, id):
     event = mock_event("!!/iswlu {}".format(link), 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
@@ -68,6 +72,7 @@ def is_user_currently_whitelisted(link, site, id):
     return -1
 
 
+# noinspection PyShadowingBuiltins
 def is_user_currently_blacklisted(link, site, id):
     event = mock_event("!!/isblu {}".format(link), 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())

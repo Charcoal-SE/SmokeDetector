@@ -3,6 +3,7 @@ import pytest
 
 test_data_inputs = []
 with open("test/data_test_parsing.txt", "r") as f:
+    # noinspection PyRedeclaration
     test_data_inputs = f.readlines()
 
 # Large inputs should go to that file.

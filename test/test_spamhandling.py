@@ -6,6 +6,7 @@ import os
 
 test_data_inputs = []
 with open("test/data_test_spamhandling.txt", "r") as f:
+    # noinspection PyRedeclaration
     test_data_inputs = f.readlines()
 
 
