@@ -99,6 +99,7 @@ class Metasmoke:
                         if "autopull" in c["commit_message"]:
                             s = "[CI]({ci_link}) on {commit_sha} succeeded. Message contains 'autopull', pulling..." \
                                 .format(ci_link=c["ci_url"], commit_sha=sha)
+                            GlobalVars.charcoal_hq.send_message(s)
                             time.sleep(2)
                             os._exit(3)
                         else:
