@@ -48,7 +48,8 @@ class DeletionWatcher:
             try:
                 a = ws.recv()
             except websocket.WebSocketTimeoutException:
-                t_metasmoke = Thread(name="metasmoke send deletion stats", target=metasmoke.Metasmoke.send_deletion_stats_for_post, args=(post_url, False))
+                t_metasmoke = Thread(name="metasmoke send deletion stats",
+                                     target=metasmoke.Metasmoke.send_deletion_stats_for_post, args=(post_url, False))
                 t_metasmoke.start()
                 return False
             if a is not None and a != "":
@@ -62,13 +63,16 @@ class DeletionWatcher:
                 except:
                     continue
                 if d["a"] == "post-deleted" and str(d["qId"]) == question_id \
-                        and ((post_type == "answer" and "aId" in d and str(d["aId"]) == post_id) or post_type == "question"):
+                        and ((post_type == "answer" and "aId" in d and str(d["aId"]) == post_id) or
+                             post_type == "question"):
 
-                    t_metasmoke = Thread(name="metasmoke send deletion stats", target=metasmoke.Metasmoke.send_deletion_stats_for_post, args=(post_url, True))
+                    t_metasmoke = Thread(name="metasmoke send deletion stats",
+                                         target=metasmoke.Metasmoke.send_deletion_stats_for_post, args=(post_url, True))
                     t_metasmoke.start()
                     return True
 
-        t_metasmoke = Thread(name="metasmoke send deletion stats", target=metasmoke.Metasmoke.send_deletion_stats_for_post, args=(post_url, False))
+        t_metasmoke = Thread(name="metasmoke send deletion stats",
+                             target=metasmoke.Metasmoke.send_deletion_stats_for_post, args=(post_url, False))
         t_metasmoke.start()
         return False
 
@@ -84,5 +88,6 @@ class DeletionWatcher:
     @classmethod
     def post_message_if_not_deleted(self, post_site_id, post_url, message_text, room):
         was_report_deleted = self.check_websocket_for_deletion(post_site_id, post_url, 300)
-        if not was_report_deleted and not datahandling.is_false_positive(post_site_id[0:2]) and not datahandling.is_ignored_post(post_site_id[0:2]):
+        if not was_report_deleted and not datahandling.is_false_positive(post_site_id[0:2]) and not \
+                datahandling.is_ignored_post(post_site_id[0:2]):
             room.send_message(message_text)
