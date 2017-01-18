@@ -47,7 +47,8 @@ def add_to_listen_if_edited(host, message_id):
 
 
 def print_chat_message(ev):
-    message = colored("Chat message in " + ev.data["room_name"] + " (" + str(ev.data["room_id"]) + "): \"", attrs=['bold'])
+    message = colored("Chat message in " + ev.data["room_name"] + " (" + str(ev.data["room_id"]) + "): \"",
+                      attrs=['bold'])
     message += ev.data['content']
     message += "\""
     print message + colored(" - " + ev.data['user_name'], attrs=['bold'])
@@ -63,7 +64,9 @@ def special_room_watcher(ev, wrap2):
         post_site_id = fetch_post_id_and_site_from_msg_content(content_source)
         post_url = fetch_post_url_from_msg_content(content_source)
         if post_site_id is not None and post_url is not None:
-            t_check_websocket = Thread(name="DeletionWatcher check", target=DeletionWatcher.check_if_report_was_deleted, args=(post_site_id, post_url, ev.message))
+            t_check_websocket = Thread(name="DeletionWatcher check",
+                                       target=DeletionWatcher.check_if_report_was_deleted,
+                                       args=(post_site_id, post_url, ev.message))
             t_check_websocket.daemon = True
             t_check_websocket.start()
 
@@ -90,8 +93,11 @@ def watcher(ev, wrap2):
 
         post_site_id = fetch_post_id_and_site_from_msg_content(content_source)
         post_url = fetch_post_url_from_msg_content(content_source)
-        if post_site_id is not None and (ev_room == GlobalVars.meta_tavern_room_id or ev_room == GlobalVars.socvr_room_id):
-            t_check_websocket = Thread(name="DeletionWatcher check", target=DeletionWatcher.check_if_report_was_deleted, args=(post_site_id, post_url, ev.message))
+        if post_site_id is not None and (ev_room == GlobalVars.meta_tavern_room_id or
+                                         ev_room == GlobalVars.socvr_room_id):
+            t_check_websocket = Thread(name="DeletionWatcher check",
+                                       target=DeletionWatcher.check_if_report_was_deleted,
+                                       args=(post_site_id, post_url, ev.message))
             t_check_websocket.daemon = True
             t_check_websocket.start()
     message_parts = re.split('[ ,]+', content_source)
@@ -110,10 +116,12 @@ def watcher(ev, wrap2):
             ev.message.reply("I don't have a record of any messages posted.")
             return
         if len(commands) > len(latest_smokedetector_messages):
-            ev.message.reply("I only have a record of {} of my messages; that's not enough to execute all commands. No commands were executed.".format(len(latest_smokedetector_messages)))
+            ev.message.reply("I only have a record of {} of my messages; that's not enough to execute all commands. "
+                             "No commands were executed.".format(len(latest_smokedetector_messages)))
             return
         for i in xrange(0, len(commands)):
-            shortcut_messages.append(u":{message} {command_name}".format(message=latest_smokedetector_messages[-(i + 1)], command_name=commands[i]))
+            shortcut_messages.append(u":{message} {command_name}".format(
+                message=latest_smokedetector_messages[-(i + 1)], command_name=commands[i]))
         reply = ""
         amount_none = 0
         amount_skipped = 0
@@ -178,7 +186,8 @@ def watcher(ev, wrap2):
             add_to_listen_if_edited(wrap2.host, message_id)
 
 
-def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content, message_id):
+def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content,
+                    message_id):
     message_url = "//chat.{host}/transcript/message/{id}#{id}".format(host=wrap2.host, id=message_id)
     second_part_lower = "" if len(message_parts) < 2 else message_parts[1].lower()
     if command_aliases.get(second_part_lower):
