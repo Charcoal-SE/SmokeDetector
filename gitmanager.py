@@ -92,13 +92,14 @@ class GitManager:
             if GlobalVars.github_username is None or GlobalVars.github_password is None:
                 return (False, "Tell someone to set a GH password")
 
-            payload = {"title": "{0}: Blacklist {1}".format(username, item_to_blacklist),
-                       "body": "[{0}]({1}) requests the blacklist of the {2} {3}. See the Metasmoke search [here]"
+            payload = {"title": u"{0}: Blacklist {1}".format(username, item_to_blacklist),
+                       "body": u"[{0}]({1}) requests the blacklist of the {2} {3}. See the Metasmoke search [here]"
                                "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{4}{5})\n"
-                               "<!-- METASMOKE-BLACKLIST-{6} {3} -->".format(username, chat_profile_link, blacklist,
-                                                                             item_to_blacklist, ms_search_option,
-                                                                             item_to_blacklist.replace(" ", "+"),
-                                                                             blacklist.upper()),
+                               u"<!-- METASMOKE-BLACKLIST-{6} {3} -->".format(
+                                username, chat_profile_link, blacklist,
+                                item_to_blacklist, ms_search_option,
+                                item_to_blacklist.replace(" ", "+"),
+                                blacklist.upper()),
                        "head": branch,
                        "base": "master"}
             response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls",
