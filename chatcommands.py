@@ -265,7 +265,7 @@ def command_blacklist_help(*args, **kwargs):
     return Response(command_status=True, message="The !!/blacklist command has been deprecated. "
                                                  "Please use !!/blacklist-website, !!/blacklist-username "
                                                  "or !!/blacklist-keyword. Remember to escape dots "
-                                                 "in URLs using \\. and spaces in keywords with \s.")
+                                                 "in URLs using \\.")
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -1450,7 +1450,7 @@ command_dict = {
     "!!/errorlogs": command_errorlogs,
     "!!/gitstatus": command_gitstatus,
     "!!/help": command_help,
-    "!!/hats": command_hats,
+    # "!!/hats": command_hats, (uncomment when Winterbash begins)
     "!!/info": command_help,
     "!!/isblu": command_check_blacklist,
     "!!/iswlu": command_check_whitelist,

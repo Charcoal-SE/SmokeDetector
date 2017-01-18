@@ -16,6 +16,13 @@ class GitManager:
         chat_profile_link = kwargs.get("chat_profile_link", "http://chat.stackexchange.com/users")
         code_permissions = kwargs.get("code_permissions", False)
 
+        # Make sure git credentials are set up
+        if git.config("--global", "--get", "user.name") == "":
+            return (False, "Tell someone to run `git config --global user.name \"SmokeDetector\"`")
+
+        if git.config("--global", "--get", "user.name") == "":
+            return (False, "Tell someone to run `git config --global user.email \"smokey@erwaysoftware.com\"`")
+
         if blacklist == "":
             # If we broke the code, and this isn't assigned, error out before doing anything, but do
             # so gracefully with a nice error message.
@@ -55,9 +62,9 @@ class GitManager:
 
         # Check that blacklisted_websites.txt isn't modified locally. That could get ugly fast
         if blacklist_file_name in git.status():  # Also ugly
-            return (False, "{0} modified locally. This is probably bad.".format(blacklist_file_name))
+            return (False, "{0} is modified locally. This is probably bad.".format(blacklist_file_name))
 
-        # Add items to file
+        # Add item to file
         with open(blacklist_file_name, "a+") as blacklist_file:
             last_character = blacklist_file.read()[-1:]
             if last_character != "\n":
@@ -85,17 +92,12 @@ class GitManager:
             if GlobalVars.github_username is None or GlobalVars.github_password is None:
                 return (False, "Tell someone to set a GH password")
 
-            list_of_items = ""
-
-            for item in range(len(item_to_blacklist)):
-                list_of_items += "\n - {0} - [MS search](https://metasmoke.erwaysoftware.com/search?" \
-                                 "utf8=%E2%9C%93{1}{2})".format(item_to_blacklist[item], ms_search_option,
-                                                                item_to_blacklist[item].replace(" ", "+"))
-
             payload = {"title": "{0}: Blacklist {1}".format(username, item_to_blacklist),
-                       "body": "[{0}]({1}) requests the blacklist of the following {2}(s): \n{3}\n"
-                               "<!-- METASMOKE-BLACKLIST {4} -->".format(username, chat_profile_link, blacklist,
-                                                                         list_of_items, "|".join(item_to_blacklist)),
+                       "body": "[{0}]({1}) requests the blacklist of the {2} {3}. See the Metasmoke search [here]"
+                               "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{4}{5})\n"
+                               "<!-- METASMOKE-BLACKLIST {6} -->".format(username, chat_profile_link, blacklist,
+                                                                         item_to_blacklist, ms_search_option,
+                                                                         item_to_blacklist.replace(" ", "+")),
                        "head": branch,
                        "base": "master"}
             response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls",
