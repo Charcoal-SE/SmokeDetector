@@ -425,6 +425,7 @@ def command_wut(*args, **kwargs):
     return Response(command_status=True, message="Whaddya mean, 'wut'? Humans...")
 
 
+""" Uncomment when Winterbash comes back
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_hats(*args, **kwargs):
     wb_start = datetime(2016, 12, 19, 0, 0, 0)
@@ -452,6 +453,7 @@ def command_hats(*args, **kwargs):
         return_string = "Winter Bash won't end for {} {}, {} {}, {} {}, and {} {}. GO EARN SOME HATS!".format(
             diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
     return Response(command_status=True, message=return_string)
+"""
 
 
 # --- Block application from posting functions --- #
