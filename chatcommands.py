@@ -566,7 +566,7 @@ def command_errorlogs(ev_room, ev_user_id, wrap2, message_parts, *args, **kwargs
         return Response(command_status=False, message="The !!/errorlogs command requires either 0 or 1 arguments.")
     try:
         count = int(message_parts[1])
-    except ValueError:
+    except (ValueError, IndexError):
         count = 50
     logs_part = fetch_lines_from_error_log(count)
     post_message_in_room(room_id_str=ev_room, msg=logs_part, length_check=False)
