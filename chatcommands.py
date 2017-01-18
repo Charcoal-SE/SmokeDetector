@@ -562,14 +562,12 @@ def command_errorlogs(ev_room, ev_user_id, wrap2, message_parts, *args, **kwargs
     :return:
     """
     count = -1
-    if len(message_parts) != 2:
-        return Response(command_status=False, message="The !!/errorlogs command requires 1 argument.")
+    if len(message_parts) > 2:
+        return Response(command_status=False, message="The !!/errorlogs command requires either 0 or 1 arguments.")
     try:
         count = int(message_parts[1])
     except ValueError:
-        pass
-    if count == -1:
-        return Response(command_status=False, message="Invalid argument.")
+        count = 50
     logs_part = fetch_lines_from_error_log(count)
     post_message_in_room(room_id_str=ev_room, msg=logs_part, length_check=False)
     return Response(command_status=True, message=None)
