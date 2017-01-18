@@ -477,6 +477,8 @@ class FindSpam:
         {'regex': ur'\<img src="[^"]+"(?: alt="[^"]+")?>', 'all': False, 'sites': ['academia.stackexchange.com'], 'reason': 'image by low-rep user', 'title': False, 'body': True, 'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
         # Link inside nested blockquotes
         {'regex': ur'(?:<blockquote>\s*){6}<p><a href="([^<>]+)"[^<>]*>\1</a>\s*</p>\s*</blockquote>', 'all': True, 'sites': [], 'reason': 'link inside deeply nested blockquotes', 'title': False, 'body': True, 'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
+        # http://%20http:// pattern in URL
+        {'regex': ur'<a href="http://%20:http://', 'all': True, 'sites': [], 'reason': 'Formatting error in URL with bogus "http://%20" prefix', 'title': False, 'body': True, 'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
 
         #
         # Category: other
