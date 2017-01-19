@@ -96,8 +96,8 @@ class GitManager:
                        "body": u"[{0}]({1}) requests the blacklist of the {2} {3}. See the Metasmoke search [here]"
                                "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{4}{5})\n"
                                u"<!-- METASMOKE-BLACKLIST {3} -->".format(username, chat_profile_link, blacklist,
-                                                                              item_to_blacklist, ms_search_option,
-                                                                              item_to_blacklist.replace(" ", "+")),
+                                                                          item_to_blacklist, ms_search_option,
+                                                                          item_to_blacklist.replace(" ", "+")),
                        "head": branch,
                        "base": "master"}
             response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls",
