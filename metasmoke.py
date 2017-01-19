@@ -28,8 +28,7 @@ class Metasmoke:
                                       "identifier": "{\"channel\":\"SmokeDetectorChannel\","
                                       "\"key\":\"" + GlobalVars.metasmoke_key + "\"}"})
                 GlobalVars.metasmoke_ws.send(payload)
-                
-                
+
                 GlobalVars.metasmoke_ws.settimeout(10)
 
                 has_succeded = True
@@ -56,7 +55,6 @@ class Metasmoke:
                     break
                 else:
                     time.sleep(10)
-
 
     @staticmethod
     def handle_websocket_data(data):
