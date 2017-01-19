@@ -19,36 +19,49 @@ import spamhandling
 class Metasmoke:
     @staticmethod
     def init_websocket():
-        try:
-            GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host,
-                                                                  origin=GlobalVars.metasmoke_host)
-            payload = json.dumps({"command": "subscribe",
-                                  "identifier": "{\"channel\":\"SmokeDetectorChannel\","
-                                  "\"key\":\"" + GlobalVars.metasmoke_key + "\"}"})
-            GlobalVars.metasmoke_ws.send(payload)
+        has_succeded = False
+        while True:
+            try:
+                GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host,
+                                                                      origin=GlobalVars.metasmoke_host)
+                payload = json.dumps({"command": "subscribe",
+                                      "identifier": "{\"channel\":\"SmokeDetectorChannel\","
+                                      "\"key\":\"" + GlobalVars.metasmoke_key + "\"}"})
+                GlobalVars.metasmoke_ws.send(payload)
+                
+                
+                GlobalVars.metasmoke_ws.settimeout(10)
 
-            while True:
-                a = GlobalVars.metasmoke_ws.recv()
-                try:
-                    data = json.loads(a)
-                    Metasmoke.handle_websocket_data(data)
-                except Exception, e:
-                    GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host,
-                                                                          origin=GlobalVars.metasmoke_host)
-                    payload = json.dumps({"command": "subscribe",
-                                          "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"})
-                    GlobalVars.metasmoke_ws.send(payload)
-                    print e
+                has_succeded = True
+                while True:
+                    a = GlobalVars.metasmoke_ws.recv()
                     try:
-                        exc_info = sys.exc_info()
-                        traceback.print_exception(*exc_info)
-                    except:
-                        print "meh"
-        except:
-            print "Couldn't bind to MS websocket"
+                        data = json.loads(a)
+                        Metasmoke.handle_websocket_data(data)
+                    except Exception, e:
+                        GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host,
+                                                                              origin=GlobalVars.metasmoke_host)
+                        payload = json.dumps({"command": "subscribe",
+                                              "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"})
+                        GlobalVars.metasmoke_ws.send(payload)
+                        print e
+                        try:
+                            exc_info = sys.exc_info()
+                            traceback.print_exception(*exc_info)
+                        except:
+                            print "meh"
+            except:
+                print "Couldn't bind to MS websocket"
+                if not has_succeded:
+                    break
+                else:
+                    time.sleep(10)
+
 
     @staticmethod
     def handle_websocket_data(data):
+        last_recieved = time.gmtime()
+        
         if "message" not in data:
             return
 
@@ -109,6 +122,7 @@ class Metasmoke:
 
                     # noinspection PyUnboundLocalVariable
                     GlobalVars.charcoal_hq.send_message(s)
+
 
     @staticmethod
     def send_stats_on_post(title, link, reasons, body, username, user_link, why, owner_rep,
