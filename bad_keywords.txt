@@ -223,3 +223,4 @@ radley\W(\w+\W)?((hand)?bag|purse)s?
 somabiotix
 kerave\Whair
 t6\Wblack
+frequensea
