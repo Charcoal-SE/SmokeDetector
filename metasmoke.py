@@ -60,8 +60,6 @@ class Metasmoke:
 
     @staticmethod
     def handle_websocket_data(data):
-        last_recieved = time.gmtime()
-        
         if "message" not in data:
             return
 
@@ -122,7 +120,6 @@ class Metasmoke:
 
                     # noinspection PyUnboundLocalVariable
                     GlobalVars.charcoal_hq.send_message(s)
-
 
     @staticmethod
     def send_stats_on_post(title, link, reasons, body, username, user_link, why, owner_rep,
