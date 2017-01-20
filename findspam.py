@@ -531,9 +531,9 @@ class FindSpam:
          'username': False, 'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1,
          'max_score': 0},
         # URL repeated at end of post
-        {'regex': ur"(?s)<a href=\"(https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,10}/?"
+        {'regex': ur"(?s)<a href=\"(?:http://%20)?(https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,10}/?"
                   ur"[\w-]{0,40}?/?|(?:plus\.google|www\.facebook)\.com/[\w/]+))\" rel=\"nofollow( noreferrer)?\">"
-                  ur".{300,}<a href=\"\1\" rel=\"nofollow( noreferrer)?\">\1</a>(?:</strong>)?\W*</p>\s*$", 'all': True,
+                  ur".{300,}<a href=\"(?:http://%20)?\1\" rel=\"nofollow( noreferrer)?\">(?:http://%20)?\1</a>(?:</strong>)?\W*</p>\s*$", 'all': True,
          'sites': [], 'reason': 'repeated URL at end of long post', 'title': False, 'body': True, 'username': False,
          'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
         # Link with "thanks for sharing" or a similar phrase in a short answer
