@@ -196,10 +196,7 @@ apexatropin
 keranique
 rejuvonus
 image\Wrevive
-914[-
-()]{0
-2}517[-
-]?3229
+914[-()]{02}517[-]?3229
 cognishield
 spartagen
 blackcore
@@ -227,3 +224,4 @@ frequensea
 alphadrox
 vinetics\Wc
 soleil\Wglo
+Clariderm\WCream
