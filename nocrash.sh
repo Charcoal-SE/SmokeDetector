@@ -17,6 +17,7 @@ fi
 count=0
 crashcount=0
 stoprunning=0
+
 while [ "$stoprunning" -eq "0" ]
 do
    if [ "$count" -eq "0" ]
