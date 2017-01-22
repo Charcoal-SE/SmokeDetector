@@ -823,4 +823,3 @@ flightadviceclaims\.co\.uk
 homexmas\.com
 healthprev\.com
 ca-gyanguru\.in
-this-is-a-test-of-emergency-broadcast\.systems
