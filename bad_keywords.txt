@@ -225,3 +225,4 @@ alphadrox
 vinetics\Wc
 soleil\Wglo
 Clariderm\WCream
+hack\Wtool
