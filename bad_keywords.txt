@@ -227,3 +227,4 @@ soleil\Wglo
 Clariderm\WCream
 hack\Wtool
 gain\Wxt(reme)?
+evermax
