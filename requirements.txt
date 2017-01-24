@@ -1,3 +1,4 @@
+setuptools
 beautifulsoup4
 requests
 websocket-client
