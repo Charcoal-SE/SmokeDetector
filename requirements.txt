@@ -1,4 +1,4 @@
-setuptools
+packaging
 beautifulsoup4
 requests
 websocket-client
