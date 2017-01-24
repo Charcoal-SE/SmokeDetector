@@ -921,8 +921,10 @@ def command_pending(content, content_lower, *args, **kwargs):
     try:
         page = int(content[11:])
     except ValueError:
-        return Response(command_status=False,
-                        message="Expected an integer page number and got '{}' instead (ValueError).".format(page))
+        return Response(
+            command_status=False,
+            message="Expected an integer page number and got '{0!r}'"
+            " instead (ValueError).".format(content[11:]))
     posts = requests.get("https://metasmoke.erwaysoftware.com/api/undeleted?pagesize=2&page={}&key={}".format(
         page, GlobalVars.metasmoke_key)).json()
     messages = []
