@@ -240,4 +240,5 @@ raw\Wpower\Wxl
 pantothen
 argireline
 brick\Wmuscle
+\+234\d{8,14}
 vividermix
