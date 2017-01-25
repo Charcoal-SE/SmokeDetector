@@ -240,3 +240,4 @@ raw\Wpower\Wxl
 pantothen
 argireline
 brick\Wmuscle
+\+234[0-9]{8,}
