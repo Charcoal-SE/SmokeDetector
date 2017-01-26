@@ -243,3 +243,4 @@ brick\Wmuscle
 \+234\d{8,14}
 vividermix
 dsn\Wpre\Wworkout
+\+15402277725
