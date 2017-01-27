@@ -240,7 +240,9 @@ raw\Wpower\Wxl
 pantothen
 argireline
 brick\Wmuscle
-\+234\d{8,14}
+# documentation: the plus is skipped by the word boundary condition in the code
+# so we can't match that directly, but we can say "if we just skipped a plus sign"
+(?<=\+)234\d{8,14}
 vividermix
 dsn\Wpre\Wworkout
-\+15402277725
+(?<=\+)15402277725
