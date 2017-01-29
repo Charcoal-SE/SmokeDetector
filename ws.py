@@ -49,9 +49,24 @@ filter_auto_ignored_posts()
 GlobalVars.wrap.login(username, password)
 GlobalVars.wrapm.login(username, password)
 GlobalVars.wrapso.login(username, password)
-GlobalVars.smokeDetector_user_id[GlobalVars.charcoal_room_id] = str(GlobalVars.wrap.get_me().id)
-GlobalVars.smokeDetector_user_id[GlobalVars.meta_tavern_room_id] = str(GlobalVars.wrapm.get_me().id)
-GlobalVars.smokeDetector_user_id[GlobalVars.socvr_room_id] = str(GlobalVars.wrapso.get_me().id)
+
+while True:
+    try:
+        GlobalVars.smokeDetector_user_id[GlobalVars.charcoal_room_id] = str(GlobalVars.wrap.get_me().id)
+        GlobalVars.smokeDetector_user_id[GlobalVars.meta_tavern_room_id] = str(GlobalVars.wrapm.get_me().id)
+        GlobalVars.smokeDetector_user_id[GlobalVars.socvr_room_id] = str(GlobalVars.wrapso.get_me().id)
+        break
+    except ValueError as e:
+        if str(e.message).__contains__("invalid literal for int() with base 10: 'users'"):
+            # When this error happens, we don't do anything with the error, and end up in the while loop again
+            # and try and get values again until we have a valid value. Valid values won't trigger an error
+            # and will reach the "break" above in the try block.
+            pass
+        else:
+            # Any other ValueError should trigger a ValueError that would be captured by the exception handler
+            raise ValueError(e.message)
+    # Since we don't capture any other exception cases for handling, any other exceptions will trigger the handler.
+
 GlobalVars.s = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                "SmokeDetector started at [rev " +\
                GlobalVars.commit_with_author +\
