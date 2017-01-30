@@ -301,7 +301,7 @@ class GlobalVars:
 
     # environ_or_none defined in helpers.py
     bot_name = environ_or_none("SMOKEDETECTOR_NAME") or "SmokeDetector"
-    bot_repository = environ_or_none("SMOKEDETECTOR_REPO") or "//goo.gl/6ylPSc"
+    bot_repository = environ_or_none("SMOKEDETECTOR_REPO") or "//github.com/Charcoal-SE/SmokeDetector"
     chatmessage_prefix = "[{}]({})".format(bot_name, bot_repository)
 
     site_id_dict = {}
