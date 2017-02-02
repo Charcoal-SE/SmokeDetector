@@ -19,7 +19,7 @@ from threading import Thread
 import traceback
 from bodyfetcher import BodyFetcher
 from chatcommunicate import watcher, special_room_watcher
-from datetime import datetime
+from datetime import datetime, timedelta
 from utcdate import UtcDate
 from spamhandling import check_if_spam_json
 from globalvars import GlobalVars
@@ -204,6 +204,9 @@ threading.Timer(600, Metasmoke.send_statistics).start()
 metasmoke_ws_t = Thread(name="metasmoke websocket", target=Metasmoke.init_websocket)
 metasmoke_ws_t.start()
 
+metasmoke_ping_tracker = Thread(name="metasmoke last time checker", target=Metasmoke.check_last_pingtime)
+metasmoke_ping_tracker.start()
+
 while True:
     try:
         a = ws.recv()
@@ -217,6 +220,7 @@ while True:
                            target=GlobalVars.bodyfetcher.add_to_queue,
                            args=(a, True if is_spam else None))
                 t.start()
+
     except Exception, e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         now = datetime.utcnow()
