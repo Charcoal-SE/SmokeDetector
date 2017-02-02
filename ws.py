@@ -204,6 +204,8 @@ threading.Timer(600, Metasmoke.send_statistics).start()
 metasmoke_ws_t = Thread(name="metasmoke websocket", target=Metasmoke.init_websocket)
 metasmoke_ws_t.start()
 
+Metasmoke.check_last_pingtime()  # This will call itself every 10 seconds or so
+
 while True:
     try:
         a = ws.recv()
@@ -217,6 +219,7 @@ while True:
                            target=GlobalVars.bodyfetcher.add_to_queue,
                            args=(a, True if is_spam else None))
                 t.start()
+
     except Exception, e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         now = datetime.utcnow()

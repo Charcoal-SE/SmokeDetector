@@ -5,6 +5,7 @@ import threading
 # noinspection PyPackageRequirements
 import websocket
 from collections import Iterable
+from datetime import datetime
 import sys
 import traceback
 import time
@@ -55,6 +56,18 @@ class Metasmoke:
                     break
                 else:
                     time.sleep(10)
+
+    @staticmethod
+    def check_last_pingtime():
+        threading.Timer(10, Metasmoke.check_last_pingtime).start()
+
+        if GlobalVars.metasmoke_last_ping_time < (datetime.datetime.now() - datetime.timedelta(seconds=60)):
+            with open('errorlogs.txt', 'a') as errlog:
+                errlog.write("\nWARNING: Last metasmoke ping with a response was over 60 seconds ago, "
+                             "forcing SmokeDetector restart to reset all sockets.\n")
+            os._exit(10)
+        else:
+            pass  # Do nothing
 
     @staticmethod
     def handle_websocket_data(data):
@@ -211,6 +224,7 @@ class Metasmoke:
 
             headers = {'content-type': 'application/json'}
             requests.post(GlobalVars.metasmoke_host + "/status-update.json", data=json.dumps(payload), headers=headers)
+            GlobalVars.metasmoke_last_ping_time = datetime.now()
         except Exception as e:
             print e
 

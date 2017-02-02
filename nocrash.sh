@@ -59,6 +59,11 @@ do
     git checkout deploy
     count=0
     crashcount=0
+   elif [ "$ecode" -eq "10" ]
+   then
+    # Last MS Ping > 30 seconds handler.
+    sleep 5
+    count=0
    else
     sleep 5
     count=$((count+1))
