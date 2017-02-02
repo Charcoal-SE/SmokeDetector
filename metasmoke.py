@@ -164,6 +164,8 @@ class Metasmoke:
             print "Metasmoke location not defined; not reporting"
             return
 
+        metasmoke_key = GlobalVars.metasmoke_key
+
         try:
             payload = {
                 'feedback': {
