@@ -387,9 +387,10 @@ class FindSpam:
         {'regex': ur"(?is)^.{0,200}\bgratis\b$", 'all': True,
          'sites': ['softwarerecs.stackexchange.com'], 'reason': "bad keyword in {}", 'title': True, 'body': True,
          'username': False, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11, 'max_score': 0},
-        # Black magic at the beginning of question, Islam is exempt
+        # Black magic at the beginning of question, Islam and Video are exempt
         {'regex': ur"^(?is).{0,200}black magic", 'all': True,
-         'sites': ["islam.stackexchange.com"], 'reason': "black magic in {}", 'title': True, 'body': True,
+         'sites': ["islam.stackexchange.com", "video.stackexchange.com"],
+         'reason': "black magic in {}", 'title': True, 'body': True,
          'username': False, 'stripcodeblocks': False, 'body_summary': True, 'answers': False, 'max_rep': 11,
          'max_score': 0},
         # Bad keywords in titles and usernames, all sites
