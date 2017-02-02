@@ -61,7 +61,7 @@ class Metasmoke:
     def check_last_pingtime():
         threading.Timer(10, Metasmoke.check_last_pingtime).start()
 
-        if GlobalVars.metasmoke_last_ping_time < (datetime.now() - datetime.timedelta(seconds=60)):
+        if GlobalVars.metasmoke_last_ping_time < (datetime.now() - timedelta(seconds=60)):
             with open('errorlogs.txt', 'a') as errlog:
                 errlog.write("\nWARNING: Last metasmoke ping with a response was over 60 seconds ago, "
                              "forcing SmokeDetector restart to reset all sockets.\n")
