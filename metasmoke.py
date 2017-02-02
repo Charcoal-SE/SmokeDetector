@@ -222,7 +222,7 @@ class Metasmoke:
             }
 
             headers = {'content-type': 'application/json'}
-            requests.post(GlobalVars.metasmoke_host + "/status-update.json",  data=json.dumps(payload), headers=headers)
+            requests.post(GlobalVars.metasmoke_host + "/status-update.json", data=json.dumps(payload), headers=headers)
             GlobalVars.metasmoke_last_ping_time = datetime.now()
         except Exception as e:
             print e

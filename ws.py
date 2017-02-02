@@ -19,7 +19,7 @@ from threading import Thread
 import traceback
 from bodyfetcher import BodyFetcher
 from chatcommunicate import watcher, special_room_watcher
-from datetime import datetime, timedelta
+from datetime import datetime
 from utcdate import UtcDate
 from spamhandling import check_if_spam_json
 from globalvars import GlobalVars
