@@ -204,8 +204,7 @@ threading.Timer(600, Metasmoke.send_statistics).start()
 metasmoke_ws_t = Thread(name="metasmoke websocket", target=Metasmoke.init_websocket)
 metasmoke_ws_t.start()
 
-metasmoke_ping_tracker = Thread(name="metasmoke last time checker", target=Metasmoke.check_last_pingtime)
-metasmoke_ping_tracker.start()
+Metasmoke.check_last_pingtime()  # This will call itself every 10 seconds or so
 
 while True:
     try:
