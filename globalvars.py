@@ -112,7 +112,8 @@ class GlobalVars:
             "158742",   # Rob
             "207356",   # 4castle
             "133031",   # Mithrandir
-            "169713"   # Mego
+            "169713",   # Mego
+            "126657"    # Cerbrus
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
