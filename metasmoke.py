@@ -20,7 +20,7 @@ import spamhandling
 class Metasmoke:
     @staticmethod
     def init_websocket():
-        has_succeded = False
+        has_succeeded = False
         while True:
             try:
                 GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host,
