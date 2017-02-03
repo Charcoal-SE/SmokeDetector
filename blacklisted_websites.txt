@@ -849,4 +849,5 @@ trimplexeliteavis\.com
 maxhealthtips\.com
 forexlivealerts\.info
 comptiabraindumps\.com
+assignmenthelp\w*\.co
 fblikes\.(com|net)
