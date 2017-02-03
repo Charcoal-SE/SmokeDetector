@@ -851,4 +851,3 @@ forexlivealerts\.info
 comptiabraindumps\.com
 assignmenthelp\w*\.co
 fblikes\.(com|net)
-this-is-a-test-of-the-emergency-broadcast\.system
