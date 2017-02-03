@@ -13,14 +13,13 @@ import requests
 def uncaught_exception(exctype, value, tb):
     now = datetime.utcnow()
     delta = now - UtcDate.startup_utc_date
-    seconds = delta.total_seconds()
     tr = '\n'.join((traceback.format_tb(tb)))
     exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
     logged_msg = "{exception}\n{now} UTC\n{row}\n\n".format(exception=exception_only, now=now, row=tr)
     print(logged_msg)
     with open("errorLogs.txt", "a") as f:
         f.write(logged_msg)
-    if seconds < 180 and exctype != WebSocketConnectionClosedException\
+    if delta.total_seconds() < 180 and exctype != WebSocketConnectionClosedException\
             and exctype != KeyboardInterrupt and exctype != SystemExit and exctype != requests.ConnectionError:
         os._exit(4)
     else:
