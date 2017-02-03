@@ -17,10 +17,10 @@ class GitManager:
         code_permissions = kwargs.get("code_permissions", False)
 
         # Make sure git credentials are set up
-        if git.config("--global", "--get", "user.name", _ok_code=[0,1]) == "":
+        if git.config("--global", "--get", "user.name", _ok_code=[0, 1]) == "":
             return (False, "Tell someone to run `git config --global user.name \"SmokeDetector\"`")
 
-        if git.config("--global", "--get", "user.email", _ok_code=[0,1]) == "":
+        if git.config("--global", "--get", "user.email", _ok_code=[0, 1]) == "":
             return (False, "Tell someone to run `git config --global user.email \"smokey@erwaysoftware.com\"`")
 
         if blacklist == "":
