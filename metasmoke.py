@@ -60,13 +60,16 @@ class Metasmoke:
 
     @staticmethod
     def check_last_pingtime():
-        threading.Timer(10, Metasmoke.check_last_pingtime).start()
-
-        if GlobalVars.metasmoke_last_ping_time < (datetime.now() - timedelta(seconds=60)):
-            now = datetime.utcnow()
-            with open('errorLogs.txt', 'a') as errlog:
-                errlog.write("\nWARNING: Last metasmoke ping with a response was over 60 seconds ago, "
-                             "forcing SmokeDetector restart to reset all sockets.\n%s UTC\n" % now)
+        threading.Timer(30, Metasmoke.check_last_pingtime).start()
+        now = datetime.utcnow()
+        errlog = open('errorLogs.txt', 'a')
+        if GlobalVars.metasmoke_last_ping_time is None:
+            errlog.write("\nINFO/WARNING: SmokeDetector has not received a ping yet, forcing SmokeDetector restart "
+                         "to try and reset the connection states.\n%s UTC\n" % now)
+            os._exit(10)
+        elif GlobalVars.metasmoke_last_ping_time < (datetime.now() - timedelta(seconds=120)):
+            errlog.write("\nWARNING: Last metasmoke ping with a response was over 120 seconds ago, "
+                         "forcing SmokeDetector restart to reset all sockets.\n%s UTC\n" % now)
             os._exit(10)
         else:
             pass  # Do nothing
