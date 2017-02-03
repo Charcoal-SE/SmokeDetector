@@ -32,11 +32,12 @@ class Metasmoke:
 
                 GlobalVars.metasmoke_ws.settimeout(10)
 
-                has_succeded = True
+                has_succeeded = True
                 while True:
                     a = GlobalVars.metasmoke_ws.recv()
                     try:
                         data = json.loads(a)
+                        GlobalVars.metasmoke_last_ping_time = datetime.now()
                         Metasmoke.handle_websocket_data(data)
                     except Exception, e:
                         GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host,
@@ -52,7 +53,7 @@ class Metasmoke:
                             print "meh"
             except:
                 print "Couldn't bind to MS websocket"
-                if not has_succeded:
+                if not has_succeeded:
                     break
                 else:
                     time.sleep(10)
@@ -225,7 +226,6 @@ class Metasmoke:
 
             headers = {'content-type': 'application/json'}
             requests.post(GlobalVars.metasmoke_host + "/status-update.json", data=json.dumps(payload), headers=headers)
-            GlobalVars.metasmoke_last_ping_time = datetime.now()
         except Exception as e:
             print e
 
