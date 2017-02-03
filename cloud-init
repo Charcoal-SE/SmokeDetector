@@ -7,6 +7,9 @@ export GITHUB_EMAIL=smokey@erwaysoftware.com
 export GITHUB_PASSWORD=pass_here
 export METASMOKE_KEY=gibberish_here
 
+id -u somename &>/dev/null || adduser --disabled-password --gecos "" ubuntu
+mkdir -p /home/ubuntu/.ssh
+
 sudo apt-get update
 sudo apt-get install htop gcc python-dev python-setuptools --assume-yes
 sudo easy_install pip
@@ -15,8 +18,18 @@ chown -R ubuntu /home/ubuntu/.ssh
 eval "$(ssh-agent -s)"
 ssh-add /home/ubuntu/.ssh/id_rsa
 
+instance_id=$(curl http://169.254.169.254/latest/meta-data/instance-id)
+instance_type="EC2"
+
+if [[ $instance_id = "not found" ]]
+then
+  instance_id=$(curl -s http://169.254.169.254/metadata/v1/hostname)
+  instance_type="DigitalOcean"
+fi
+
+
 curl -u $GITHUB_USERNAME:$GITHUB_PASSWORD https://api.github.com/user
-curl -u $GITHUB_USERNAME:$GITHUB_PASSWORD -X POST --data "{\"title\": \"$(wget -q -O - http://169.254.169.254/latest/meta-data/instance-id)\", \"key\": \"$(cat /home/ubuntu/.ssh/id_rsa.pub)\" }" https://api.github.com/user/keys
+curl -u $GITHUB_USERNAME:$GITHUB_PASSWORD -X POST --data "{\"title\": \"$YOUR_USERNAME's $instance_type ($instance_id)\", \"key\": \"$(cat /home/ubuntu/.ssh/id_rsa.pub)\" }" https://api.github.com/user/keys
 
 ssh-keyscan github.com >> ~/.ssh/known_hosts
 git clone git@github.com:Charcoal-SE/SmokeDetector.git /home/ubuntu/SmokeDetector
@@ -29,7 +42,7 @@ pip install -r requirements.txt --upgrade
 
 cat > /home/ubuntu/SmokeDetector/config <<- EOM
 [Config]
-location=$YOUR_USERNAME's EC2 ($(wget -q -O - http://169.254.169.254/latest/meta-data instance-id))
+location=$YOUR_USERNAME's $instance_type ($instance_id))
 
 # Set the location for metasmoke here if you're running it. See https://github.com/Charcoal-SE/metasmoke.
 metasmoke_host=https://metasmoke.erwaysoftware.com
