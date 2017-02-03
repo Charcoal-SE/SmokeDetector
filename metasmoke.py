@@ -14,6 +14,7 @@ import datahandling
 import parsing
 import apigetpost
 import spamhandling
+from utcdate import UtcDate
 
 
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
@@ -62,9 +63,10 @@ class Metasmoke:
         threading.Timer(10, Metasmoke.check_last_pingtime).start()
 
         if GlobalVars.metasmoke_last_ping_time < (datetime.now() - timedelta(seconds=60)):
-            with open('errorlogs.txt', 'a') as errlog:
+            now = datetime.utcnow()
+            with open('errorLogs.txt', 'a') as errlog:
                 errlog.write("\nWARNING: Last metasmoke ping with a response was over 60 seconds ago, "
-                             "forcing SmokeDetector restart to reset all sockets.\n")
+                             "forcing SmokeDetector restart to reset all sockets.\n%s UTC\n" % now)
             os._exit(10)
         else:
             pass  # Do nothing
