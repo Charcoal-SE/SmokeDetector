@@ -1,0 +1,49 @@
+#!/bin/bash
+
+export YOUR_USERNAME=Undo
+
+export GITHUB_USERNAME=SmokeDetector
+export GITHUB_EMAIL=smokey@erwaysoftware.com
+export GITHUB_PASSWORD=pass_here
+export METASMOKE_KEY=gibberish_here
+
+sudo apt-get update
+sudo apt-get install htop gcc python-dev python-setuptools --assume-yes
+sudo easy_install pip
+ssh-keygen -t rsa -b 4096 -C "smokey@erwaysoftware.com" -f /home/ubuntu/.ssh/id_rsa -N ''
+chown -R ubuntu /home/ubuntu/.ssh
+eval "$(ssh-agent -s)"
+ssh-add /home/ubuntu/.ssh/id_rsa
+
+curl -u $GITHUB_USERNAME:$GITHUB_PASSWORD https://api.github.com/user
+curl -u $GITHUB_USERNAME:$GITHUB_PASSWORD -X POST --data "{\"title\": \"$(wget -q -O - http://169.254.169.254/latest/meta-data/instance-id)\", \"key\": \"$(cat /home/ubuntu/.ssh/id_rsa.pub)\" }" https://api.github.com/user/keys
+
+ssh-keyscan github.com >> ~/.ssh/known_hosts
+git clone git@github.com:Charcoal-SE/SmokeDetector.git /home/ubuntu/SmokeDetector
+
+cd /home/ubuntu/SmokeDetector
+
+git config --global user.email "smokey@erwaysoftware.com"
+git config --global user.name "SmokeDetector"
+git submodule init
+git submodule update
+pip install -r requirements.txt --upgrade
+
+cat > /home/ubuntu/SmokeDetector/config <<- EOM
+[Config]
+location=$YOUR_USERNAME's EC2 ($(wget -q -O - http://169.254.169.254/latest/meta-data instance-id))
+
+# Set the location for metasmoke here if you're running it. See https://github.com/Charcoal-SE/metasmoke.
+metasmoke_host=https://metasmoke.erwaysoftware.com
+metasmoke_ws_host=wss://metasmoke.erwaysoftware.com/cable
+
+# Set metasmoke_key if Smokey isn't running on the same machine (localhost)
+# that metasmoke is
+metasmoke_key=$METASMOKE_KEY
+
+# Set GitHub keys
+github_username=$GITHUB_USERNAME
+github_password=$GITHUB_PASSWORD
+EOM
+
+chown -R ubuntu /home/ubuntu/SmokeDetector
