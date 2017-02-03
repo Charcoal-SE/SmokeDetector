@@ -14,7 +14,6 @@ import datahandling
 import parsing
 import apigetpost
 import spamhandling
-from utcdate import UtcDate
 
 
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
