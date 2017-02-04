@@ -268,3 +268,4 @@ mayo\Wclinic
 alpha\Wx\Wboost
 tacticlight
 lumanere
+x\Walpha\Wboost
