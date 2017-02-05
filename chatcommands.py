@@ -718,7 +718,7 @@ def command_stappit(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: None
     """
-    if len(message_parts) == 1 or " ".join(message_parts[1:]) in GlobalVars.location:
+    if len(message_parts) == 1 or " ".join(message_parts[1:]).lower() in GlobalVars.location.lower():
         post_message_in_room(room_id_str=ev_room, msg="Goodbye, cruel world")
         os._exit(6)
 
