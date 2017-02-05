@@ -85,6 +85,7 @@ class GitManager:
             git.checkout("master")
             git.merge(branch)
             git.push()
+            git.branch('-D', branch)  # Delete the branch in the local git tree since we're done with it.
         else:
             git.push("origin", branch)
             git.checkout("master")
@@ -107,9 +108,14 @@ class GitManager:
             print(response.json())
             try:
                 git.checkout("deploy")  # Return to deploy, pending the accept of the PR in Master.
+                git.branch('-D', branch)  # Delete the branch in the local git tree since we're done with it.
                 return (True, "You don't have code privileges, but I've [created a pull request for you]({0}).".format(
                     response.json()["html_url"]))
             except KeyError:
+                git.branch('-D', branch)  # Delete the branch in the local git tree, we'll create it again if the
+                                          # command is run again. This way, we keep things a little more clean in
+                                          # the local git tree
+
                 # Error capture/checking for any "invalid" GH reply without an 'html_url' item,
                 # which will throw a KeyError.
                 if "bad credentials" in str(response.json()['message']).lower():
