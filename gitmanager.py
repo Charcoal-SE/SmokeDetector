@@ -112,9 +112,10 @@ class GitManager:
                 return (True, "You don't have code privileges, but I've [created a pull request for you]({0}).".format(
                     response.json()["html_url"]))
             except KeyError:
-                git.branch('-D', branch)  # Delete the branch in the local git tree, we'll create it again if the
-                                          # command is run again. This way, we keep things a little more clean in
-                                          # the local git tree
+                # Delete the branch in the local git tree, we'll create it again if the
+                # command is run again. This way, we keep things a little more clean in
+                # the local git tree
+                git.branch('-D', branch)
 
                 # Error capture/checking for any "invalid" GH reply without an 'html_url' item,
                 # which will throw a KeyError.
