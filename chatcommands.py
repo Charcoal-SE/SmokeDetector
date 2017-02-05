@@ -722,6 +722,10 @@ def command_stappit(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
         post_message_in_room(room_id_str=ev_room, msg="Goodbye, cruel world")
         os._exit(6)
 
+    m = "{location} is ignoring this command.".format(location=GlobalVars.location)
+
+    return Response(command_status=True, message=m)
+
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_status(*args, **kwargs):
