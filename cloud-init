@@ -7,6 +7,10 @@ export GITHUB_EMAIL=smokey@erwaysoftware.com
 export GITHUB_PASSWORD=pass_here
 export METASMOKE_KEY=gibberish_here
 
+# Define these variables if you want SmokeDetector to be automatically launched
+# export ChatExchangeU="email@domain.com"
+# export ChatExchangeP="password"
+
 id -u ubuntu &>/dev/null || adduser --disabled-password --gecos "" ubuntu
 mkdir -p /home/ubuntu/.ssh
 
@@ -61,3 +65,7 @@ git config user.email "smokey@erwaysoftware.com"
 git config user.name "SmokeDetector"
 
 chown -R ubuntu /home/ubuntu/SmokeDetector
+
+if [ ! -z "$ChatExchangeU" ] && [ ! -z "$ChatExchangeP" ]; then
+  su -m ubuntu -c 'cd /home/ubuntu/SmokeDetector; sh nocrash.sh > output.log' &
+fi
