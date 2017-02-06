@@ -81,8 +81,27 @@ GlobalVars.s_reverted = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                         ") (running on " +\
                         GlobalVars.location +\
                         ")"
+GlobalVars.standby_message = "[ " + GlobalVars.chatmessage_prefix + " ] " \
+                             "SmokeDetector started in [standby mode](" + \
+                             GlobalVars.bot_repository + "/blob/master/StandbyMode.md) " + \
+                             "at [rev " +\
+                             GlobalVars.commit_with_author +\
+                             "](" + GlobalVars.bot_repository + "/commit/" +\
+                             GlobalVars.commit +\
+                             ") (running on " +\
+                             GlobalVars.location +\
+                             ")"
 
 GlobalVars.charcoal_hq = GlobalVars.wrap.get_room(GlobalVars.charcoal_room_id)
+
+if "standby" in sys.argv:
+    GlobalVars.charcoal_hq.send_message(GlobalVars.standby_message)
+    GlobalVars.standby_mode = True
+    Metasmoke.send_status_ping()
+
+    while GlobalVars.standby_mode:
+        time.sleep(3)
+
 tavern_id = GlobalVars.meta_tavern_room_id
 GlobalVars.tavern_on_the_meta = GlobalVars.wrapm.get_room(tavern_id)
 GlobalVars.socvr = GlobalVars.wrapso.get_room(GlobalVars.socvr_room_id)

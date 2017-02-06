@@ -752,6 +752,28 @@ def command_stop_flagging(*args, **kwargs):
     return Response(command_status=True, message="Request sent...")
 
 
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyProtectedMember
+@check_permissions
+def command_standby(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
+    """
+    Forces a system exit with exit code = 7
+    :param message_parts:
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
+    :return: None
+    """
+    if " ".join(message_parts[1:]).lower() in GlobalVars.location.lower():
+        m = "{location} is switching to standby".format(location=GlobalVars.location)
+        post_message_in_room(room_id_str=ev_room, msg=m)
+        os._exit(7)
+
+    m = "{location} is ignoring this command.".format(location=GlobalVars.location)
+
+    return Response(command_status=True, message=m)
+
+
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_test(content, content_lower, *args, **kwargs):
     """
@@ -1479,6 +1501,7 @@ command_dict = {
     "!!/stappit": command_stappit,
     "!!/status": command_status,
     "!!/stopflagging": command_stop_flagging,
+    "!!/standby": command_standby,
     "!!/tea": command_tea,
     "!!/test": command_test,
     "!!/testanswer": command_test_answer,
