@@ -2,7 +2,7 @@
 
 ## What is standby mode?
 
-SmokeDectector can be ran in standby mode as a backup copy just in case the main Smokey breaks down.
+SmokeDectector can be run in standby mode as a backup copy just in case the main Smokey breaks down.
 While in Standby mode, SmokeDetector will not make reports in chat, send posts to Metasmoke or listen
 to commands.
 
