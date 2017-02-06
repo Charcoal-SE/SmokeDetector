@@ -17,6 +17,7 @@ fi
 count=0
 crashcount=0
 stoprunning=0
+switch_to_standby=0
 
 while [ "$stoprunning" -eq "0" ]
 do
@@ -28,7 +29,12 @@ do
       python ws.py first_start
     fi
    else
-    python ws.py
+    if [ "$switch_to_standby" -eq "0" ]; then
+      python ws.py
+    else
+      switch_to_standby=0
+      python ws.py standby
+    fi
    fi
 
    ecode=$?
@@ -58,6 +64,9 @@ do
    elif [ "$ecode" -eq "6" ]
    then
     stoprunning=1
+   elif [ "$ecode" -eq "7" ]
+   then
+    switch_to_standby=1
    elif [ "$ecode" -eq "8" ]
    then
     git checkout deploy
