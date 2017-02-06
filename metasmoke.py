@@ -224,11 +224,18 @@ class Metasmoke:
         try:
             payload = {
                 'location': GlobalVars.location,
-                'key': metasmoke_key
+                'key': metasmoke_key,
+                'standby': GlobalVars.standby_mode
             }
 
             headers = {'content-type': 'application/json'}
-            requests.post(GlobalVars.metasmoke_host + "/status-update.json", data=json.dumps(payload), headers=headers)
+            response = requests.post(GlobalVars.metasmoke_host + "/status-update.json",
+                                     data=json.dumps(payload), headers=headers).json()
+
+            if 'failover' in response and GlobalVars.standby_mode:
+                if response['failover']:
+                    GlobalVars.standby_mode = False
+                    GlobalVars.charcoal_hq.send_message(GlobalVars.location + " received failover signal.")
         except Exception as e:
             print e
 

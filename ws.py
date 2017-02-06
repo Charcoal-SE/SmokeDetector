@@ -100,7 +100,7 @@ if "standby" in sys.argv:
     Metasmoke.send_status_ping()
 
     while GlobalVars.standby_mode:
-        time.sleep(30)
+        time.sleep(3)
 
 tavern_id = GlobalVars.meta_tavern_room_id
 GlobalVars.tavern_on_the_meta = GlobalVars.wrapm.get_room(tavern_id)
