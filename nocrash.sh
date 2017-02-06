@@ -22,7 +22,11 @@ while [ "$stoprunning" -eq "0" ]
 do
    if [ "$count" -eq "0" ]
    then
-    python ws.py first_start
+    if [ "$1" == "standby" ] || [ "$2" == "standby" ]; then
+      python ws.py standby
+    else
+      python ws.py first_start
+    fi
    else
     python ws.py
    fi

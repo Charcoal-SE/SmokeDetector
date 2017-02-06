@@ -286,6 +286,9 @@ class GlobalVars:
     multiple_reporters = []
     api_calls_per_site = {}
 
+    standby_message = ""
+    standby_mode = False
+
     api_request_lock = threading.Lock()
 
     num_posts_scanned = 0
