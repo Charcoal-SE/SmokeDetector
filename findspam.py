@@ -483,6 +483,11 @@ class FindSpam:
          'sites': ["scifi.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        # Nazi(s), on SciFi.
+        {'regex': ur"\bnazis?\b", 'all': False,
+         'sites': ["scifi.stackexchange.com"],
+         'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False,
+         'body_summary': False, 'max_rep': 1, 'max_score': 0},
         #
         # Category: Suspicious links
         # Blacklisted sites
