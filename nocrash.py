@@ -30,7 +30,7 @@ while stoprunning is False:
         else:
             command = 'python ws.py first_start'.split()
     else:
-        if switch_to_standby:
+        if not switch_to_standby:
             command = 'python ws.py'.split()
         else:
             switch_to_standby = False
