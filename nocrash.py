@@ -25,7 +25,7 @@ switch_to_standby = False
 
 while stoprunning is False:
     if count == 0:
-        if sys.argv[1] == "standby" or sys.argv[2] == "standby":
+        if len(sys.argv) > 1 and (sys.argv[1] == "standby" or sys.argv[2] == "standby"):
             command = 'python ws.py standby'.split()
         else:
             command = 'python ws.py first_start'.split()
