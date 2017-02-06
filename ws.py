@@ -82,7 +82,9 @@ GlobalVars.s_reverted = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                         GlobalVars.location +\
                         ")"
 GlobalVars.standby_message = "[ " + GlobalVars.chatmessage_prefix + " ] " \
-                             "SmokeDetector started in standby mode at [rev " +\
+                             "SmokeDetector started in [standby mode](" + \
+                             GlobalVars.bot_repository + "/blob/master/StandbyMode.md) " + \
+                             "at [rev " +\
                              GlobalVars.commit_with_author +\
                              "](" + GlobalVars.bot_repository + "/commit/" +\
                              GlobalVars.commit +\
