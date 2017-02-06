@@ -124,19 +124,19 @@ class Metasmoke:
                 if c["commit_sha"] != os.popen('git log --pretty=format:"%H" -n 1').read():
                     if c["status"] == "success":
                         if "autopull" in c["commit_message"]:
-                            s = "[CI]({ci_link}) on `[{commit_sha}](https://github.com/Charcoal-SE/SmokeDetector/" \
-                                "commit/{commit_sha})`"\
+                            s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
+                                "commit/{commit_sha})"\
                                 " succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"],
                                                                                              commit_sha=sha)
                             GlobalVars.charcoal_hq.send_message(s)
                             time.sleep(2)
                             os._exit(3)
                         else:
-                            s = "[CI]({ci_link}) on `[{commit_sha}](https://github.com/Charcoal-SE/SmokeDetector/" \
-                                "commit/{commit_sha})` succeeded.".format(ci_link=c["ci_url"], commit_sha=sha)
+                            s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
+                                "commit/{commit_sha}) succeeded.".format(ci_link=c["ci_url"], commit_sha=sha)
                     elif c["status"] == "failure":
-                        s = "[CI]({ci_link}) on `[{commit_sha}](https://github.com/Charcoal-SE/SmokeDetector/" \
-                            "commit/{commit_sha})` failed.".format(ci_link=c["ci_url"], commit_sha=sha)
+                        s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
+                            "commit/{commit_sha}) failed.".format(ci_link=c["ci_url"], commit_sha=sha)
 
                     # noinspection PyUnboundLocalVariable
                     GlobalVars.charcoal_hq.send_message(s)
