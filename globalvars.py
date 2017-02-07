@@ -114,7 +114,8 @@ class GlobalVars:
             "207356",   # 4castle
             "133031",   # Mithrandir
             "169713",   # Mego
-            "126657"    # Cerbrus
+            "126657",   # Cerbrus
+            "10145"     # Thomas Ward
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
@@ -185,7 +186,8 @@ class GlobalVars:
             "262823",   # ArtOfCode
             "215067",   # Ferrybig
             "308386",   # Magisch
-            "285368"    # angussidney
+            "285368",   # angussidney
+            "158829"    # Thomas Ward
         ],
         socvr_room_id: [
             "1849664",  # Undo
@@ -250,7 +252,8 @@ class GlobalVars:
             "5647260",  # Andrew L.
             "559745",   # Floern
             "5743988",  # 4castle
-            "4622463"   # angussidney
+            "4622463",  # angussidney
+            "603346"    # Thomas Ward
         ]
     }
 
