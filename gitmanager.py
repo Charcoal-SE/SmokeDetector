@@ -79,7 +79,8 @@ class GitManager:
         git.reset("HEAD")
 
         git.add(blacklist_file_name)
-        git.commit("-m", u"Auto blacklist of {0} by {1} --autopull".format(item_to_blacklist, username))
+        git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
+                   "-m", u"Auto blacklist of {0} by {1} --autopull".format(item_to_blacklist, username))
 
         if code_permissions:
             git.checkout("master")
