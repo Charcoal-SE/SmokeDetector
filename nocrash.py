@@ -36,7 +36,15 @@ while stoprunning is False:
             switch_to_standby = False
             command = 'python ws.py standby'.split()
 
-    ecode = sp.call(command)
+    try:
+        ecode = sp.call(command)
+    except KeyboardInterrupt:
+        # We are OK accepting a KeyboardInterrupt here. We don't want ctrl+c on ws.py to
+        # bounce back to nocrash.py.  Though, we ideally would, this way we have the same
+        # process as we had previously with nocrash.sh where two ctrl+c is needed.
+        pass
+    except Exception as e:
+        raise e
 
     if ecode == 3:
         git.checkout('deploy')
