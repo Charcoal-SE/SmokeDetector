@@ -241,7 +241,10 @@ class Metasmoke:
                     GlobalVars.standby_mode = False
                     GlobalVars.charcoal_hq.send_message(GlobalVars.location + " received failover signal.")
         except Exception as e:
-            print e
+            if str(e) == "No JSON object could be decoded":
+                pass
+            else:
+                print e
 
     @staticmethod
     def update_code_privileged_users_list():
