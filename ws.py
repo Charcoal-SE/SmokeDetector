@@ -179,6 +179,11 @@ GlobalVars.specialrooms = [
         "sites": ["rpg.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("11"),
         "unwantedReasons": []
+    },
+    {
+        "sites": ["ell.stackexchange.com"],
+        "room": GlobalVars.wrap.get_room("24938"),
+        "unwantedReasons": []
     }
 ]
 
