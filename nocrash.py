@@ -22,6 +22,7 @@ count = 0
 crashcount = 0
 stoprunning = False
 switch_to_standby = False
+ecode = None  # Define this to prevent errors
 
 while stoprunning is False:
     if count == 0:
