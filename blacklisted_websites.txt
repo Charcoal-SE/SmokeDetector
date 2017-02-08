@@ -784,7 +784,7 @@ spiritualsadhana\.com
 hotsupplement\.com
 charmspandorasoldes\.com
 theconstantprofitsclub\.com
-amazfitpace\.com
+amazfitpace\.(com|org|net)
 eincar\.com
 bloggerclass\.tk
 myhealthpeak\.com
