@@ -274,3 +274,4 @@ staminon
 hydralie
 pro\W?shred
 little\Wpink\Wpill
+vigor\Wexcel
