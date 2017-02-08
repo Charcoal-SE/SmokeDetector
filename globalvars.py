@@ -115,7 +115,8 @@ class GlobalVars:
             "133031",   # Mithrandir
             "169713",   # Mego
             "126657",   # Cerbrus
-            "10145"     # Thomas Ward
+            "10145",    # Thomas Ward
+            "161943"    # J F
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
