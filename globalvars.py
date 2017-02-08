@@ -253,7 +253,8 @@ class GlobalVars:
             "559745",   # Floern
             "5743988",  # 4castle
             "4622463",  # angussidney
-            "603346"    # Thomas Ward
+            "603346",   # Thomas Ward
+            "3002139"   # Baum mit Augen
         ]
     }
 
