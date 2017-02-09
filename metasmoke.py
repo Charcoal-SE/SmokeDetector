@@ -242,6 +242,8 @@ class Metasmoke:
                 if 'failover' in response and GlobalVars.standby_mode:
                     if response['failover']:
                         GlobalVars.standby_mode = False
+                        GlobalVars.metasmoke_last_ping_time = datetime.now()  # Otherwise the ping watcher will exit(10)
+
                         GlobalVars.charcoal_hq.send_message(GlobalVars.location + " received failover signal.")
             except Exception as e:
                 pass
