@@ -234,17 +234,20 @@ class Metasmoke:
 
             headers = {'content-type': 'application/json'}
             response = requests.post(GlobalVars.metasmoke_host + "/status-update.json",
-                                     data=json.dumps(payload), headers=headers).json()
+                                     data=json.dumps(payload), headers=headers)
 
-            if 'failover' in response and GlobalVars.standby_mode:
-                if response['failover']:
-                    GlobalVars.standby_mode = False
-                    GlobalVars.charcoal_hq.send_message(GlobalVars.location + " received failover signal.")
-        except Exception as e:
-            if str(e) == "No JSON object could be decoded":
+            try:
+                response = response.json()
+
+                if 'failover' in response and GlobalVars.standby_mode:
+                    if response['failover']:
+                        GlobalVars.standby_mode = False
+                        GlobalVars.charcoal_hq.send_message(GlobalVars.location + " received failover signal.")
+            except Exception as e:
                 pass
-            else:
-                print e
+
+        except Exception as e:
+            print e
 
     @staticmethod
     def update_code_privileged_users_list():
