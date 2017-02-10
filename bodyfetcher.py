@@ -130,7 +130,7 @@ class BodyFetcher:
 
         self.max_ids_modify_lock.acquire()
 
-        if site in self.previous_max_ids:
+        if site in self.previous_max_ids and max(new_post_ids) > self.previous_max_ids[site]:
             previous_max_id = self.previous_max_ids[site]
             intermediate_posts = range(previous_max_id, max(new_post_ids))
 
@@ -147,7 +147,9 @@ class BodyFetcher:
         else:
             posts = new_post_ids
 
-        self.previous_max_ids[site] = max(new_post_ids)
+        if max(new_post_ids) > self.previous_max_ids[site]:
+            self.previous_max_ids[site] = max(new_post_ids)
+
         self.max_ids_modify_lock.release()
 
         print("New IDs / Hybrid Intermediate IDs:")
