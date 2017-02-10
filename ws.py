@@ -46,22 +46,12 @@ GlobalVars.bodyfetcher = BodyFetcher()
 load_files()
 filter_auto_ignored_posts()
 
-# This Try/Except block is here for debugger purposes to have catchable breakpoints; this helps us to be able
-# to see what is going on where and capture a snapshot of all data in memory at the time of an exception being
-# raised.
-try:
-    GlobalVars.wrap.login(username, password)
-    GlobalVars.wrapm.login(username, password)
-    GlobalVars.wrapso.login(username, password)
-    GlobalVars.smokeDetector_user_id[GlobalVars.charcoal_room_id] = str(GlobalVars.wrap.get_me().id)
-    GlobalVars.smokeDetector_user_id[GlobalVars.meta_tavern_room_id] = str(GlobalVars.wrapm.get_me().id)
-    GlobalVars.smokeDetector_user_id[GlobalVars.socvr_room_id] = str(GlobalVars.wrapso.get_me().id)
-except Exception as err:
-    # This was added here for debugger tracking purposes; to try and debug the Invalid literal problem,
-    # we are going to try and load Smokey in a debugger with a breakpoint right below here; however we
-    # need to be able to 'break' *before* we pass things to the except hook/handler, for any errors in
-    # this section.  And only for this section.
-    raise err
+GlobalVars.wrap.login(username, password)
+GlobalVars.wrapm.login(username, password)
+GlobalVars.wrapso.login(username, password)
+GlobalVars.smokeDetector_user_id[GlobalVars.charcoal_room_id] = str(GlobalVars.wrap.get_me().id)
+GlobalVars.smokeDetector_user_id[GlobalVars.meta_tavern_room_id] = str(GlobalVars.wrapm.get_me().id)
+GlobalVars.smokeDetector_user_id[GlobalVars.socvr_room_id] = str(GlobalVars.wrapso.get_me().id)
 
 GlobalVars.s = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                "SmokeDetector started at [rev " +\
