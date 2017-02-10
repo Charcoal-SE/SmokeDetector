@@ -41,6 +41,9 @@ while stoprunning is False:
 
     try:
         ecode = sp.call(command)
+    except KeyboardInterrupt:
+        print "[NoCrash] KeyBoard Interrupt received.."
+        ecode = 6
     except Exception as e:
         raise e
 
