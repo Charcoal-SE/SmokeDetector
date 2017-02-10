@@ -147,7 +147,10 @@ class BodyFetcher:
         else:
             posts = new_post_ids
 
-        if max(new_post_ids) > self.previous_max_ids[site]:
+        try:
+            if max(new_post_ids) > self.previous_max_ids[site]:
+                self.previous_max_ids[site] = max(new_post_ids)
+        except KeyError:
             self.previous_max_ids[site] = max(new_post_ids)
 
         self.max_ids_modify_lock.release()
