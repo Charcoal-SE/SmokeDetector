@@ -41,11 +41,6 @@ while stoprunning is False:
 
     try:
         ecode = sp.call(command)
-    except KeyboardInterrupt:
-        # We are OK accepting a KeyboardInterrupt here. We don't want ctrl+c on ws.py to
-        # bounce back to nocrash.py.  Though, we ideally would, this way we have the same
-        # process as we had previously with nocrash.sh where two ctrl+c is needed.
-        pass
     except Exception as e:
         raise e
 
