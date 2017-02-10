@@ -25,7 +25,7 @@ switch_to_standby = False
 ecode = None  # Define this to prevent errors
 
 while stoprunning is False:
-    print "[NoCrash] Switch to Standby? %s" % switch_to_standby
+    # print "[NoCrash] Switch to Standby? %s" % switch_to_standby
     if count == 0:
         if switch_to_standby or ((len(sys.argv) > 1) and ("standby" in sys.argv)):
             switch_to_standby = False
@@ -42,13 +42,13 @@ while stoprunning is False:
     try:
         ecode = sp.call(command)
     except KeyboardInterrupt:
-        print "[NoCrash] KeyBoard Interrupt received.."
+        # print "[NoCrash] KeyBoard Interrupt received.."
         ecode = 6
     except Exception as e:
         raise e
 
     if ecode == 3:
-        print "[NoCrash] Pull in new updates."
+        # print "[NoCrash] Pull in new updates."
         git.checkout('deploy')
         git.pull()
         git.submodule('update')
@@ -56,11 +56,12 @@ while stoprunning is False:
         crashcount = 0
 
     elif ecode == 4:
-        print "[NoCrash] REVERTED STATE"
+        # print "[NoCrash] Crashed."
         count += 1
         sleep(5)
 
         if crashcount == 2:
+            # print "[NoCrash] Going to reverted state."
             git.checkout('HEAD~1')
             count = 0
             crashcount = 0
@@ -72,25 +73,25 @@ while stoprunning is False:
         count = 0
 
     elif ecode == 6:
-        print "[NoCrash] Stopping"
+        # print "[NoCrash] Stopping"
         stoprunning = True
 
     elif ecode == 7:
-        print "[NoCrash] Go to Standby Restart Called"
+        # print "[NoCrash] Go to Standby Restart Called"
         switch_to_standby = True
 
     elif ecode == 8:
-        print "[NoCrash] Checkout Deploy"
+        # print "[NoCrash] Checkout Deploy"
         git.checkout('deploy')
         count = 0
         crashcount = 0
 
     elif ecode == 10:
-        print "[NoCrash] Socket failure, let network settle before restart."
+        # print "[NoCrash] Socket failure, let network settle before restart."
         sleep(5)
         count = 0
 
     else:
-        print "[NoCrash] Death by Evil, restart in 5 seconds."
+        # print "[NoCrash] Death by Evil, restart in 5 seconds."
         sleep(5)
         count += 1
