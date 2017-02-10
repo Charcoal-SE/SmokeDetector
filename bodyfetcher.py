@@ -12,6 +12,7 @@ import requests
 # noinspection PyClassHasNoInit,PyBroadException
 class BodyFetcher:
     queue = {}
+    previous_max_ids = {}
 
     special_cases = {
         "math.stackexchange.com": 15,
@@ -62,6 +63,7 @@ class BodyFetcher:
 
     api_data_lock = threading.Lock()
     queue_modify_lock = threading.Lock()
+    max_ids_modify_lock = threading.Lock()
 
     def add_to_queue(self, post, should_check_site=False):
         mse_sandbox_id = 3122
@@ -122,9 +124,35 @@ class BodyFetcher:
             return
 
         self.queue_modify_lock.acquire()
-        posts = self.queue.pop(site)
+        new_post_ids = self.queue.pop(site)
         store_bodyfetcher_queue()
         self.queue_modify_lock.release()
+
+        self.max_ids_modify_lock.acquire()
+
+        if site in self.previous_max_ids:
+            previous_max_id = self.previous_max_ids[site]
+            intermediate_posts = range(previous_max_id, max(new_post_ids))
+
+            # We don't want to go over the 100-post API cutoff, so take the last
+            # (100-len(new_post_ids)) from intermediate_posts
+
+            intermediate_posts = intermediate_posts[(len(new_post_ids) - 100):]
+
+            # new_post_ids could contain edited posts, so merge it back in
+            combined = intermediate_posts + new_post_ids
+
+            # Could be duplicates, so uniquify
+            posts = list(set(combined))
+        else:
+            posts = new_post_ids
+
+        self.previous_max_ids[site] = max(new_post_ids)
+        self.max_ids_modify_lock.release()
+
+        print("New IDs / Hybrid Intermediate IDs:")
+        print(new_post_ids)
+        print(posts)
 
         question_modifier = ""
         pagesize_modifier = ""
