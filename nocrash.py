@@ -25,8 +25,9 @@ switch_to_standby = False
 ecode = None  # Define this to prevent errors
 
 while stoprunning is False:
+    print "[NoCrash] Switch to Standby? %s" % switch_to_standby
     if count == 0:
-        if (len(sys.argv) > 1) and ("standby" in sys.argv):
+        if switch_to_standby or ((len(sys.argv) > 1) and ("standby" in sys.argv)):
             command = 'python ws.py standby'.split()
         else:
             command = 'python ws.py first_start'.split()
@@ -48,6 +49,7 @@ while stoprunning is False:
         raise e
 
     if ecode == 3:
+        print "[NoCrash] Pull in new updates."
         git.checkout('deploy')
         git.pull()
         git.submodule('update')
@@ -55,6 +57,7 @@ while stoprunning is False:
         crashcount = 0
 
     elif ecode == 4:
+        print "[NoCrash] REVERTED STATE"
         count += 1
         sleep(5)
 
@@ -70,20 +73,25 @@ while stoprunning is False:
         count = 0
 
     elif ecode == 6:
+        print "[NoCrash] Stopping"
         stoprunning = True
 
     elif ecode == 7:
+        print "[NoCrash] Go to Standby Restart Called"
         switch_to_standby = True
 
     elif ecode == 8:
+        print "[NoCrash] Checkout Deploy"
         git.checkout('deploy')
         count = 0
         crashcount = 0
 
     elif ecode == 10:
+        print "[NoCrash] Socket failure, let network settle before restart."
         sleep(5)
         count = 0
 
     else:
+        print "[NoCrash] Death by Evil, restart in 5 seconds."
         sleep(5)
         count += 1
