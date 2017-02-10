@@ -153,8 +153,8 @@ class BodyFetcher:
         self.max_ids_modify_lock.release()
 
         print("New IDs / Hybrid Intermediate IDs:")
-        print(new_post_ids)
-        print(posts)
+        print(sorted(new_post_ids))
+        print(sorted(posts))
 
         question_modifier = ""
         pagesize_modifier = ""
