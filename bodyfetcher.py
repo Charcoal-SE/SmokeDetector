@@ -1,5 +1,5 @@
 from spamhandling import handle_spam, check_if_spam
-from datahandling import add_or_update_api_data, clear_api_data, store_bodyfetcher_queue
+from datahandling import add_or_update_api_data, clear_api_data, store_bodyfetcher_queue, store_bodyfetcher_max_ids
 from globalvars import GlobalVars
 from operator import itemgetter
 from datetime import datetime
@@ -148,8 +148,10 @@ class BodyFetcher:
         try:
             if max(new_post_ids) > self.previous_max_ids[site]:
                 self.previous_max_ids[site] = max(new_post_ids)
+                store_bodyfetcher_max_ids()
         except KeyError:
             self.previous_max_ids[site] = max(new_post_ids)
+            store_bodyfetcher_max_ids()
 
         self.max_ids_modify_lock.release()
 

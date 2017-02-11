@@ -60,6 +60,14 @@ def load_files():
             os.remove("bodyfetcherQueue.txt")
             raise
 
+    if os.path.isfile("bodyfetcherMaxIds.txt"):
+        try:
+            with open("bodyfetcherMaxIds.txt", "rb") as f:
+                GlobalVars.bodyfetcher.previous_max_ids = pickle.load(f)
+        except EOFError:
+            os.remove("bodyfetcherMaxIds.txt")
+            raise
+
 
 def filter_auto_ignored_posts():
     today_date = datetime.today()
@@ -265,6 +273,11 @@ def clear_api_data():
 def store_bodyfetcher_queue():
     with open("bodyfetcherQueue.txt", "wb") as f:
         pickle.dump(GlobalVars.bodyfetcher.queue, f, protocol=pickle.HIGHEST_PROTOCOL)
+
+
+def store_bodyfetcher_max_ids():
+    with open("bodyfetcherMaxIds.txt", "wb") as f:
+        pickle.dump(GlobalVars.bodyfetcher.previous_max_ids, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 # methods that help avoiding reposting alerts:
