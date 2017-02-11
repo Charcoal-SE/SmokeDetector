@@ -96,12 +96,10 @@ class BodyFetcher:
         for site, values in self.queue.iteritems():
             if site in self.special_cases:
                 if len(values) >= self.special_cases[site]:
-                    print "site {0} met special case quota, fetching...".format(site)
                     self.make_api_call_for_site(site)
                     return
             if site in self.time_sensitive:
                 if len(values) >= 1 and datetime.utcnow().hour in range(4, 12):
-                    print "site {0} has activity during peak spam time, fetching...".format(site)
                     self.make_api_call_for_site(site)
                     return
 
@@ -306,7 +304,7 @@ class BodyFetcher:
                                 down_vote_count=down_vote_count,
                                 question_id=None)
                 except:
-                    print "NOP"
+                    pass
             try:
                 for answer in post["answers"]:
                     num_scanned += 1
@@ -354,9 +352,9 @@ class BodyFetcher:
                                         down_vote_count=down_vote_count,
                                         question_id=q_id)
                         except:
-                            print "NOP"
+                            pass
             except:
-                print "no answers"
+                pass
 
         end_time = time.time()
         GlobalVars.posts_scan_stats_lock.acquire()
