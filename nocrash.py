@@ -70,6 +70,7 @@ while stoprunning is False:
             crashcount += 1
 
     elif ecode == 5:
+        # print "[NoCrash] Rebooting."
         count = 0
 
     elif ecode == 6:
