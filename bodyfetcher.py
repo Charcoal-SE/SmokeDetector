@@ -132,7 +132,7 @@ class BodyFetcher:
 
         if site in self.previous_max_ids and max(new_post_ids) > self.previous_max_ids[site]:
             previous_max_id = self.previous_max_ids[site]
-            intermediate_posts = range(previous_max_id, max(new_post_ids))
+            intermediate_posts = range(previous_max_id + 1, max(new_post_ids))
 
             # We don't want to go over the 100-post API cutoff, so take the last
             # (100-len(new_post_ids)) from intermediate_posts
