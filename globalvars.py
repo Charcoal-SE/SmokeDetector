@@ -87,7 +87,7 @@ class GlobalVars:
             "137665",   # ByteCommander
             "147884",   # wythagoras
             "186395",   # Åna
-            "193364",   # Ashish Ahuja
+            "181293",   # Ashish Ahuja
             "163686",   # Gothdo
             "145827",   # angussidney
             "244748",   # Supreme Leader SnokeDetector (angussidney's sock)
@@ -242,7 +242,7 @@ class GlobalVars:
             "792066",   # Braiam
             "5666987",  # Ian
             "3160466",  # ArtOfCode
-            "5735775",  # Ashish Ahuja
+            "4688119",  # Ashish Ahuja
             "3476191",  # Nobody Nada
             "2227743",  # Eric D
             "821878",   # Ryan Bemrose
