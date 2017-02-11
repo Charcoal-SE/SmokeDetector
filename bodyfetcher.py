@@ -279,7 +279,6 @@ class BodyFetcher:
                     num_scanned += 1
                     answer_title = ""
                     body = answer["body"]
-                    print "got answer from owner with name " + owner_name
                     link = answer["link"]
                     a_id = str(answer["answer_id"])
                     post_score = answer["score"]
