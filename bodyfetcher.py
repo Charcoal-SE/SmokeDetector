@@ -155,7 +155,7 @@ class BodyFetcher:
 
         self.max_ids_modify_lock.release()
 
-        print("New IDs / Hybrid Intermediate IDs:")
+        print("New IDs / Hybrid Intermediate IDs for {0}:".format(site))
         print(sorted(new_post_ids))
         print(sorted(posts))
 
