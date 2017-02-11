@@ -27,8 +27,8 @@ ecode = None  # Define this to prevent errors
 while stoprunning is False:
     # print "[NoCrash] Switch to Standby? %s" % switch_to_standby
     if count == 0:
-        if switch_to_standby or ((len(sys.argv) > 1) and ("standby" in sys.argv)):
-            switch_to_standby = False
+        if switch_to_standby or ("standby" in sys.argv):
+            switch_to_standby = False  # Necessary for the while loop
             command = 'python ws.py standby'.split()
         else:
             command = 'python ws.py first_start'.split()
