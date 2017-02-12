@@ -93,6 +93,6 @@ while stoprunning is False:
         count = 0
 
     else:
-        # print "[NoCrash] Death by Evil, restart in 5 seconds."
+        # print "[NoCrash] Died by unknown reason, check logs; restarting in 5 seconds."
         sleep(5)
         count += 1

@@ -67,3 +67,7 @@ test/.cache/
 config
 
 .DS_Store
+
+# PyDev Debugger Module - should not be included in Repository
+# if this is present, because this can differ from env. to env.
+pydevd.py
