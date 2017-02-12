@@ -99,6 +99,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
     poster_url = parsing.to_protocol_relative(parsing.user_url_to_shortlink(poster_url))
     reason = ", ".join(reasons)
     reason = reason[:1].upper() + reason[1:]  # reason is capitalised, unlike the entries of reasons list
+    shortened_site = site.replace("stackexchange.com", "SE") # gaming.stackexchange.com -> gaming.SE
     datahandling.append_to_latest_questions(site, post_id, title if not is_answer else "")
     if len(reasons) == 1 and ("all-caps title" in reasons or
                               "repeating characters in title" in reasons or
