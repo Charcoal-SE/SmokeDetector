@@ -1,5 +1,6 @@
 import os
 
+
 # noinspection PyClassHasNoInit,PyDeprecation
 class Debugging:
     enabled = None
