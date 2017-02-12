@@ -28,7 +28,7 @@ if Debugging.enabled:
     try:
         print "Attaching Debugger..."
         pydevd.settrace(host=Debugging.pydev_host, port=Debugging.pydev_port, stdoutToServer=True, stderrToServer=True,
-                        suspend=False)
+                        suspend=True)
     except Exception:
         print "Unable to attach to debugger."
         # noinspection PyProtectedMember
