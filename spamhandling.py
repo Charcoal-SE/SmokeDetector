@@ -125,12 +125,13 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
             prefix_ms = prefix
 
         if not poster.strip():
-            s = u" {}: [{}]({}) by a deleted user on `{}`".format(reason, sanitized_title.strip(), post_url, site)
+            s = u" {}: [{}]({}) by a deleted user on `{}`".format(reason, sanitized_title.strip(), post_url,
+                                                                  shortened_site)
             username = ""
             user_link = ""
         else:
             s = u" {}: [{}]({}) by [{}]({}) on `{}`".format(reason, sanitized_title.strip(), post_url, poster.strip(),
-                                                            poster_url, site)
+                                                            poster_url, shortened_site)
             username = poster.strip()
             user_link = poster_url
 
