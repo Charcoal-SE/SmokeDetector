@@ -5,6 +5,7 @@ import os
 import subprocess as sp
 from time import sleep
 import sys
+from debugging import Debugging
 
 # Get environment variables
 ChatExchangeU = os.environ.get('ChatExchangeU')
@@ -26,8 +27,17 @@ stoprunning = False
 switch_to_standby = False
 ecode = None  # Define this to prevent errors
 
+# Make a clean copy of existing environment variables, to pass down to subprocess.
+environ = os.environ.copy()
+
+# Add debug environment variables to environment copy in variable 'environ', if Debugging is enabled
+if Debugging.enabled:
+    for (key, value) in Debugging.environ_dict.iteritems():
+        environ[key] = str(value)
+
 while stoprunning is False:
     # print "[NoCrash] Switch to Standby? %s" % switch_to_standby
+
     if count == 0:
         if switch_to_standby or ("standby" in sys.argv):
             switch_to_standby = False  # Necessary for the while loop
@@ -42,12 +52,10 @@ while stoprunning is False:
             command = 'python ws.py standby'.split()
 
     try:
-        ecode = sp.call(command + persistent_arguments)
+        ecode = sp.call(command + persistent_arguments, env=environ)
     except KeyboardInterrupt:
         # print "[NoCrash] KeyBoard Interrupt received.."
         ecode = 6
-    except Exception as e:
-        raise e
 
     if ecode == 3:
         # print "[NoCrash] Pull in new updates."
