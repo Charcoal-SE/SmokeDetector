@@ -18,6 +18,8 @@ os.environ['CEU'] = "h"
 if ChatExchangeP is None:
     ChatExchangeP = str(input("Password: ")).strip('\r\n')
 
+persistent_arguments = list({"charcoal-hq-only"} & set(sys.argv))
+
 count = 0
 crashcount = 0
 stoprunning = False
@@ -40,7 +42,7 @@ while stoprunning is False:
             command = 'python ws.py standby'.split()
 
     try:
-        ecode = sp.call(command)
+        ecode = sp.call(command + persistent_arguments)
     except KeyboardInterrupt:
         # print "[NoCrash] KeyBoard Interrupt received.."
         ecode = 6
