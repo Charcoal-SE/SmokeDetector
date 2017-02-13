@@ -9,6 +9,12 @@ class Room(rooms.Room):
         else:
             print("Blocked message to {0} due to charcoal-hq-only setting".format(self.name))
 
+    def watch_socket(self, event_callback):
+        if "charcoal-hq-only" not in sys.argv or int(self.id) == 11540:
+            return rooms.Room.watch_socket(self, event_callback)
+        else:
+            print("Blocked socket connection to {0} due to charcoal-hq-only setting".format(self.name))
+
 
 class Client(client.Client):
     def get_room(self, room_id, **attrs_to_set):
