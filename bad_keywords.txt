@@ -285,3 +285,4 @@ true\Wbrilliance
 neuroignite
 muscle\Wxtx
 test\Wboost\Welite
+gs\Wrichcopy\W360
