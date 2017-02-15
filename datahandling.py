@@ -79,7 +79,7 @@ def filter_auto_ignored_posts():
             to_remove.append(aip)
     for tr in to_remove:
         GlobalVars.auto_ignored_posts.remove(tr)
-    with open("autoIgnoredPosts.pickle", "wb") as f:
+    with open("autoIgnoredPosts.p", "wb") as f:
         pickle.dump(GlobalVars.auto_ignored_posts, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
