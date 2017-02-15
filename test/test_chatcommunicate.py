@@ -107,7 +107,7 @@ def test_tea():
     assert u"for @Doorknob冰" in reply_value
 
 
-@pytest.mark.skipif(os.path.isfile("blacklistedUsers.txt"),
+@pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"),
                     reason="shouldn't overwrite file")
 def test_blacklisted_users():
     assert is_user_currently_blacklisted("http://meta.stackexchange.com/users/237685/hichris123", "237685", "meta.stackexchange.com") is False
@@ -139,10 +139,10 @@ def test_blacklisted_users():
     assert reply_value == "Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`."
 
     # cleanup
-    os.remove("blacklistedUsers.txt")
+    os.remove("blacklistedUsers.p")
 
 
-@pytest.mark.skipif(os.path.isfile("whitelistedUsers.txt"),
+@pytest.mark.skipif(os.path.isfile("whitelistedUsers.p"),
                     reason="shouldn't overwrite file")
 def test_whitelisted_users():
     assert is_user_currently_whitelisted("http://meta.stackexchange.com/users/237685/hichris123", "237685", "meta.stackexchange.com") is False
@@ -174,7 +174,7 @@ def test_whitelisted_users():
     assert reply_value == "Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`."
 
     # cleanup
-    os.remove("whitelistedUsers.txt")
+    os.remove("whitelistedUsers.p")
 
 
 def test_privileged_users():
@@ -209,7 +209,7 @@ def test_test_command():
     assert "in username" in reply_value
 
 
-@pytest.mark.skipif(os.path.isfile("notifications.txt"),
+@pytest.mark.skipif(os.path.isfile("notifications.p"),
                     reason="shouldn't overwrite file")
 def test_notification():
     event = mock_event("!!/notify", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
@@ -277,7 +277,7 @@ def test_notification():
     assert reply_value == "No, you won't be notified for that site in that room."
 
     # cleanup
-    os.remove("notifications.txt")
+    os.remove("notifications.p")
 
 
 def test_messages_not_sent():
@@ -287,7 +287,7 @@ def test_messages_not_sent():
     assert reply_value == ""
 
 
-@pytest.mark.skipif(os.path.isfile("blacklistedUsers.txt"),
+@pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"),
                     reason="shouldn't overwrite file")
 def test_true_positive():
     mocked_client = mock_client_get_message(client.Client())
@@ -354,10 +354,10 @@ def test_true_positive():
     assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
 
     # cleanup
-    os.remove("blacklistedUsers.txt")
+    os.remove("blacklistedUsers.p")
 
 
-@pytest.mark.skipif(os.path.isfile("whitelistedUsers.txt") or os.path.isfile("falsePositives.txt"),
+@pytest.mark.skipif(os.path.isfile("whitelistedUsers.p") or os.path.isfile("falsePositives.p"),
                     reason="shouldn't overwrite file")
 def test_false_positive():
     mocked_client = mock_client_get_message(client.Client())
@@ -450,11 +450,11 @@ def test_false_positive():
     assert reply_value == "That message is not a report."
 
     # cleanup
-    os.remove("whitelistedUsers.txt")
-    os.remove("falsePositives.txt")
+    os.remove("whitelistedUsers.p")
+    os.remove("falsePositives.p")
 
 
-@pytest.mark.skipif(os.path.isfile("ignoredPosts.txt"),
+@pytest.mark.skipif(os.path.isfile("ignoredPosts.p"),
                     reason="shouldn't overwrite file")
 def test_ignore():
     mocked_client = mock_client_get_message(client.Client())
@@ -488,4 +488,4 @@ def test_ignore():
     assert reply_value == "That message is not a report."
 
     # cleanup
-    os.remove("ignoredPosts.txt")
+    os.remove("ignoredPosts.p")
