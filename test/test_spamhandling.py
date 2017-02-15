@@ -49,7 +49,7 @@ def test_check_if_spam_json(data, match):
     assert match == is_spam
 
 
-@pytest.mark.skipif(os.path.isfile("blacklistedUsers.txt"),
+@pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"),
                     reason="shouldn't overwrite file")
 def test_blacklisted_user():
     user_url = 'http://stackoverflow.com/users/1/jeff-atwood'
@@ -58,10 +58,10 @@ def test_blacklisted_user():
     is_spam, reason, _ = check_if_spam("", "", "", user_url, "stackoverflow.com", "1", False, False, 1, 0)
     assert is_spam is True
     # cleanup
-    os.remove("blacklistedUsers.txt")
+    os.remove("blacklistedUsers.p")
 
 
-@pytest.mark.skipif(os.path.isfile("whitelistedUsers.txt"),
+@pytest.mark.skipif(os.path.isfile("whitelistedUsers.p"),
                     reason="shouldn't overwrite file")
 def test_whitelisted_user():
     user_url = 'http://stackoverflow.com/users/2/geoff-dalgas'
@@ -79,4 +79,4 @@ def test_whitelisted_user():
     is_spam, reason, _ = check_if_spam("test", "", "baba ji - muscle building", user_url2, "stackoverflow.com", "0", False, False, 1, 0)
     assert is_spam is False
     # cleanup
-    os.remove("whitelistedUsers.txt")
+    os.remove("whitelistedUsers.p")
