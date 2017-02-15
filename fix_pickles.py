@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import os
 
+
 # Pickle files should be .p file extensions, not .txt.  This script handles moving the file extensions
 # to the correct names.
 
@@ -16,6 +17,7 @@ def fix_extension_on_pickles():
                 os.rename(txt, (txt[:-4] + '.p'))
         except:
             raise RuntimeError("Could not migrate Pickle file from .txt extension to .p extension.")
+
 
 if __name__ == "__main__":
     fix_extension_on_pickles()
