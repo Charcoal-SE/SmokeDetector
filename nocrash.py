@@ -11,8 +11,8 @@ from debugging import Debugging
 # Pickle files should be .p file extensions, not .txt.  Add a migration script.
 def fix_extension_on_pickles():
     pickles = ['falsePositives.txt', 'whitelistedUsers.txt', 'blacklistedUsers.txt', 'ignoredPosts.txt',
-                    'autoIgnoredPosts.txt', 'users.txt', 'notifications.txt', 'whyData.txt', 'whyDataAllspam.txt',
-                    'latestMessages.txt', 'apiCalls.txt', 'bodyfetcherQueue.txt', 'bodyfetcherMaxIds.txt']
+               'autoIgnoredPosts.txt', 'users.txt', 'notifications.txt', 'whyData.txt', 'whyDataAllspam.txt',
+               'latestMessages.txt', 'apiCalls.txt', 'bodyfetcherQueue.txt', 'bodyfetcherMaxIds.txt']
 
     # Check if each of these is a file, and if it exists, rename it to .p extension.
     for txt in pickles:
