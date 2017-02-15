@@ -287,3 +287,4 @@ muscle\Wxtx
 test\Wboost\Welite
 gs\Wrichcopy\W360
 collamask
+skincell\Wpro
