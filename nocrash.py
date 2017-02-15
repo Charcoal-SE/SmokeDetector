@@ -7,6 +7,22 @@ from time import sleep
 import sys
 from debugging import Debugging
 
+
+# Pickle files should be .p file extensions, not .txt.  Add a migration script.
+def fix_extension_on_pickles():
+    pickles = ['falsePositives.txt', 'whitelistedUsers.txt', 'blacklistedUsers.txt', 'ignoredPosts.txt',
+                    'autoIgnoredPosts.txt', 'users.txt', 'notifications.txt', 'whyData.txt', 'whyDataAllspam.txt',
+                    'latestMessages.txt', 'apiCalls.txt', 'bodyfetcherQueue.txt', 'bodyfetcherMaxIds.txt']
+
+    # Check if each of these is a file, and if it exists, rename it to .p extension.
+    for txt in pickles:
+        try:
+            if os.path.isfile(txt):
+                os.rename(txt, (txt[:-4] + '.p'))
+        except:
+            raise RuntimeError("Could not migrate Pickle file from .txt extension to .p extension.")
+
+
 # Get environment variables
 ChatExchangeU = os.environ.get('ChatExchangeU')
 ChatExchangeP = os.environ.get('ChatExchangeP')
@@ -36,6 +52,10 @@ if Debugging.enabled:
         environ[key] = str(value)
 
 while stoprunning is False:
+    # Pickle files used to have .txt extension, but now have a .p extension. We need to 'migrate' these, so
+    # we can use this function to do this.
+    fix_extension_on_pickles()
+
     # print "[NoCrash] Switch to Standby? %s" % switch_to_standby
 
     if count == 0:
