@@ -289,3 +289,4 @@ gs\Wrichcopy\W360
 collamask
 skincell\Wpro
 naturacel
+luminescent\Wserum
