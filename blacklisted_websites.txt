@@ -877,3 +877,4 @@ kerneltraining\.com
 magento-attribute\.com
 hitslimbody\.com
 academicwriter\.co\.uk
+intl\.aliyun\.com
