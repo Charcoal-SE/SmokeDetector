@@ -290,3 +290,4 @@ collamask
 skincell\Wpro
 naturacel
 luminescent\Wserum
+rx24
