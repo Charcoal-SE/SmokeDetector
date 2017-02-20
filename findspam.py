@@ -165,7 +165,7 @@ def keyword_email(s, site):   # a keyword and an email in the same post
                             ur"career|employment|candidate|loan|lover|husband|wife|marriage|illuminati|brotherhood|"
                             ur"(join|contact) (me|us|him)|reach (us|him)|spell(caster)?|doctor|cancer|krebs|"
                             ur"(cheat|hack)(er|ing)?|spying|passport|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|"
-                            ur"testimony|kidney|hospital|wetting)s?\b| Dr\.? |\$ ?[0-9,.]{4}|@qq\.com|"
+                            ur"cure|testimony|kidney|hospital|wetting)s?\b| Dr\.? |\$ ?[0-9,.]{4}|@qq\.com|"
                             ur"\b(герпес|муж|жена|доктор|болезн)").search(s)
     email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
                           ur"[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
