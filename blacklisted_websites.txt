@@ -210,7 +210,7 @@ wasel(pro)?\.com
 i-spire\.(com|net)
 sandangku\.com
 iwasl\.com
-vpn(faqs|answers|ranks|4games)\.com
+vpn(faqs|answers|4games)\.com
 airmore\.com
 showmore\.com
 unblockingtwitter\.com
