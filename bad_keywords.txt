@@ -304,4 +304,3 @@ pure\Wnitro
 contact us now
 celaxas
 celexas
-nutrition.*plan
