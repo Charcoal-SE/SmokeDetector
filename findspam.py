@@ -1,10 +1,36 @@
 # -*- coding: utf-8 -*-
 import regex
 import phonenumbers
+from difflib import SequenceMatcher
+import tld
+from tld.utils import update_tld_names
+from urlparse import urlparse
+update_tld_names()
+
+
+SIMILAR_THRESHOLD = 0.95
+EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
+RE_COMPILE = regex.compile(EXCEPTION_RE)
+COMMON_MALFORMED_PROTOCOLS = [
+    ('httl://', 'http://'),
+]
+
+# Flee before the ugly URL validator regex!
+# We are using this, instead of a nice library like BeautifulSoup, because spammers are
+# stupid and don't always know how to actually *link* their web site. BeautifulSoup misses
+# those plain text URLs.
+# https://gist.github.com/dperini/729294#gistcomment-1296121
+URL_REGEX = regex.compile(
+    r"""((?:(?:https?|ftp)://)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)"""
+    r"""(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2}))"""
+    r"""(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])"""
+    r"""(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))"""
+    r"""|(?:(?:[a-z\u00a1-\uffff0-9]-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-?)"""
+    r"""*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.UNICODE)
 
 
 # noinspection PyUnusedLocal
-def has_repeated_words(s, site):
+def has_repeated_words(s, site, *args):
     words = regex.split(r"[\s.,;!/\()\[\]+_-]", s)
     words = [word for word in words if word != ""]
     streak = 0
@@ -21,7 +47,7 @@ def has_repeated_words(s, site):
 
 
 # noinspection PyUnusedLocal
-def has_few_characters(s, site):
+def has_few_characters(s, site, *args):
     s = regex.sub("</?p>", "", s).rstrip()    # remove HTML paragraph tags from posts
     uniques = len(set(list(s)))
     if (len(s) >= 30 and uniques <= 6) or (len(s) >= 100 and uniques <= 15):    # reduce if false reports appear
@@ -33,7 +59,7 @@ def has_few_characters(s, site):
 
 
 # noinspection PyUnusedLocal
-def has_repeating_characters(s, site):
+def has_repeating_characters(s, site, *args):
     s = regex.sub('http[^"]*', "", s)    # remove URLs for this check
     if s is None or len(s) == 0 or len(s) >= 300 or regex.compile("<pre>|<code>").search(s):
         return False, ""
@@ -45,7 +71,7 @@ def has_repeating_characters(s, site):
 
 
 # noinspection PyUnusedLocal
-def link_at_end(s, site):   # link at end of question, on selected sites
+def link_at_end(s, site, *args):   # link at end of question, on selected sites
     s = regex.sub("</strong>|</em>|</p>", "", s)
     match = regex.compile(ur"(?i)https?://(?:[.A-Za-z0-9-]*/?[.A-Za-z0-9-]*/?|plus\.google\.com/"
                           ur"[\w/]*|www\.pinterest\.com/pin/[\d/]*)</a>\s*$").search(s)
@@ -57,7 +83,7 @@ def link_at_end(s, site):   # link at end of question, on selected sites
 
 
 # noinspection PyUnusedLocal
-def non_english_link(s, site):   # non-english link in short answer
+def non_english_link(s, site, *args):   # non-english link in short answer
     if len(s) < 600:
         links = regex.compile(ur'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
         for link_text in links:
@@ -69,7 +95,7 @@ def non_english_link(s, site):   # non-english link in short answer
     return False, ""
 
 
-def mostly_non_latin(s, site):   # majority of post is in non-Latin, non-Cyrillic characters
+def mostly_non_latin(s, site, *args):   # majority of post is in non-Latin, non-Cyrillic characters
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
     word_chars = regex.sub(r'(?u)[\W0-9]|http\S*', "", s)
@@ -80,7 +106,7 @@ def mostly_non_latin(s, site):   # majority of post is in non-Latin, non-Cyrilli
 
 
 # noinspection PyUnusedLocal
-def has_phone_number(s, site):
+def has_phone_number(s, site, *args):
     if regex.compile(ur"(?i)\b(address(es)?|run[- ]?time|error|value|server|hostname|timestamp|warning|code|"
                      ur"(sp)?exception|version|chrome|1234567)\b", regex.UNICODE).search(s):
         return False, ""  # not a phone number
@@ -106,7 +132,7 @@ def has_phone_number(s, site):
     return False, ""
 
 
-def has_customer_service(s, site):  # flexible detection of customer service in titles
+def has_customer_service(s, site, *args):  # flexible detection of customer service in titles
     s = s[0:300].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
     s = regex.sub(r"[^A-Za-z0-9\s]", "", s)   # deobfuscate
     phrase = regex.compile(r"(tech(nical)? support)|((support|service|contact|help(line)?) (telephone|phone|"
@@ -126,7 +152,7 @@ def has_customer_service(s, site):  # flexible detection of customer service in 
 
 
 # noinspection PyUnusedLocal
-def has_health(s, site):   # flexible detection of health spam in titles
+def has_health(s, site, *args):   # flexible detection of health spam in titles
     s = s[0:200]   # if applied to body, the beginning should be enough: otherwise many false positives
     capitalized = len(regex.compile(r"\b[A-Z][a-z]").findall(s)) >= 5   # words beginning with uppercase letter
     organ = regex.compile(r"(?i)\b(colon|skin|muscle|bicep|fac(e|ial)|eye|brain|IQ|mind|head|hair|peni(s|le)|"
@@ -157,7 +183,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
     return False, ""
 
 
-def keyword_email(s, site):   # a keyword and an email in the same post
+def keyword_email(s, site, *args):   # a keyword and an email in the same post
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
     keyword = regex.compile(ur"(?i)\b(training|we (will )?(offer|develop|provide)|sell|invest(or|ing|ment)|credit|"
@@ -178,7 +204,7 @@ def keyword_email(s, site):   # a keyword and an email in the same post
 
 
 # noinspection PyUnusedLocal
-def keyword_link(s, site):   # thanking keyword and a link in the same short answer
+def keyword_link(s, site, *args):   # thanking keyword and a link in the same short answer
     if len(s) > 400:
         return False, ""
     link = regex.compile(ur'(?i)<a href="https?://\S+').search(s)
@@ -200,7 +226,7 @@ def keyword_link(s, site):   # thanking keyword and a link in the same short ans
 
 
 # noinspection PyUnusedLocal
-def bad_link_text(s, site):   # suspicious text of a hyperlink
+def bad_link_text(s, site, *args):   # suspicious text of a hyperlink
     s = regex.sub("</?strong>|</?em>", "", s)  # remove font tags
     keywords = regex.compile(ur"(?isu)^(buy|cheap) |live[ -]?stream|(^| )make (money|\$)|(^| )(porno?|(whole)?sale|"
                              ur"coins|replica|luxury|essays?|in \L<city>)($| )|(^| )\L<city>.*(service|escort|"
@@ -224,7 +250,7 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
 
 
 # noinspection PyUnusedLocal
-def is_offensive_post(s, site):
+def is_offensive_post(s, site, *args):
     if s is None or len(s) == 0:
         return False, ""
 
@@ -246,11 +272,97 @@ def is_offensive_post(s, site):
 
 
 # noinspection PyUnusedLocal
-def has_eltima(s, site):
+def has_eltima(s, site, *args):
     reg = regex.compile(ur"(?is)\beltima")
     if reg.search(s) and len(s) <= 750:
         return True, u"Bad keyword *eltima* and body length under 750 chars"
     return False, ""
+
+
+# noinspection PyUnusedLocal
+def username_similar_website(s, site, *args):
+    username = args[0]
+    print "Username:", username
+    sim_result = perform_similarity_checks(s, username)
+    print "Sim result:", sim_result
+    if sim_result >= SIMILAR_THRESHOLD:
+        return True, u"Username similar to website"
+    else:
+        return False, ""
+
+
+def perform_similarity_checks(post, name):
+    """
+    Performs 4 tests to determine similarity between links in the post and the user name
+    :param post: Test of the post
+    :param name: Username to compare against
+    :return: Float ratio of similarity
+    """
+    # Fix stupid spammer tricks
+    for p in COMMON_MALFORMED_PROTOCOLS:
+        post = post.replace(p[0], p[1])
+    print "Post:", post
+    # Find links in post
+    found_links = regex.findall(URL_REGEX, post)
+
+    links = []
+    for l in found_links:
+        if l[-1].isalnum():
+            links.append(l)
+        else:
+            links.append(l[:-1])
+
+    links = list(set(links))
+    t1 = 0
+    t2 = 0
+    t3 = 0
+    t4 = 0
+
+    if links:
+        for link in links:
+            domain = get_domain(link)
+            # Straight comparison
+            t1 = similar_ratio(domain, name)
+            # Strip all spaces check
+            t2 = similar_ratio(domain, name.replace(" ", ""))
+            # Strip all hypens
+            t3 = similar_ratio(domain.replace("-", ""), name.replace("-", ""))
+            # Strip both hypens and spaces
+            t4 = similar_ratio(domain.replace("-", "").replace(" ", ""), name.replace("-", "").replace(" ", ""))
+            # Have we already exceeded the threshold? End now if so, otherwise, check the next link
+            if max(t1, t2, t3, t4) >= SIMILAR_THRESHOLD:
+                return max(t1, t2, t3, t4)
+    else:
+        return 0
+        #print "ERROR PARSING STRING: ", post
+    return max(t1, t2, t3, t4)
+
+
+def similar_ratio(a, b):
+    return SequenceMatcher(None, a.lower(), b.lower()).ratio()
+
+
+def get_domain(s):
+    try:
+        extract = tld.get_tld(s, fix_protocol=True, as_object=True, )
+        domain = extract.domain
+    except tld.exceptions.TldDomainNotFound as e:
+        invalid_tld = RE_COMPILE.match(e.message).group(1)
+        # Attempt to replace the invalid protocol
+        s1 = s.replace(invalid_tld, 'http', 1)
+        try:
+            extract = tld.get_tld(s1, fix_protocol=True, as_object=True, )
+            domain = extract.domain
+        except tld.exceptions.TldDomainNotFound as e:
+            # Assume bad TLD and try one last fall back, just strip the trailing TLD and leading subdomain
+            parsed_uri = urlparse(s)
+            # print "Exception within Exception result:", parsed_uri
+            # print parsed_uri.path.split(".")
+            if len(parsed_uri.path.split(".")) >= 3:
+                domain = parsed_uri.path.split(".")[1]
+            else:
+                domain = parsed_uri.path.split(".")[0]
+    return domain
 
 
 # noinspection PyClassHasNoInit
@@ -723,7 +835,12 @@ class FindSpam:
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"],
          'reason': "blacklisted username", 'title': False, 'body': False, 'username': True,
-         'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0}
+         'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+
+        # User name similar to link
+        {'method': username_similar_website, 'all': True, 'sites': [], 'reason': "username similar to website {}",
+         'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
+         'max_rep': 50, 'max_score': 0},
     ]
 
     @staticmethod
@@ -767,15 +884,15 @@ class FindSpam:
                         matched_body = compiled_regex.findall(body_to_check)
                 else:
                     assert 'method' in rule
-                    matched_title, why_title = rule['method'](title, site)
+                    matched_title, why_title = rule['method'](title, site, user_name)
                     if matched_title and rule['title']:
                         why["title"].append(u"Title - {}".format(why_title))
-                    matched_username, why_username = rule['method'](user_name, site)
+                    matched_username, why_username = rule['method'](user_name, site, user_name)
                     if matched_username and rule['username']:
                         why["username"].append(u"Username - {}".format(why_username))
                     if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer) and \
                             (is_answer or check_if_question):
-                        matched_body, why_body = rule['method'](body_to_check, site)
+                        matched_body, why_body = rule['method'](body_to_check, site, user_name)
                         if matched_body and rule['body']:
                             why["body"].append(u"Post - {}".format(why_body))
                 if matched_title and rule['title']:
