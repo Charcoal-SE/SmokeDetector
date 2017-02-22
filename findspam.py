@@ -282,9 +282,7 @@ def has_eltima(s, site, *args):
 # noinspection PyUnusedLocal
 def username_similar_website(s, site, *args):
     username = args[0]
-    print "Username:", username
     sim_result = perform_similarity_checks(s, username)
-    print "Sim result:", sim_result
     if sim_result >= SIMILAR_THRESHOLD:
         return True, u"Username similar to website"
     else:
@@ -301,7 +299,6 @@ def perform_similarity_checks(post, name):
     # Fix stupid spammer tricks
     for p in COMMON_MALFORMED_PROTOCOLS:
         post = post.replace(p[0], p[1])
-    print "Post:", post
     # Find links in post
     found_links = regex.findall(URL_REGEX, post)
 
@@ -334,7 +331,6 @@ def perform_similarity_checks(post, name):
                 return max(t1, t2, t3, t4)
     else:
         return 0
-        #print "ERROR PARSING STRING: ", post
     return max(t1, t2, t3, t4)
 
 
@@ -356,8 +352,6 @@ def get_domain(s):
         except tld.exceptions.TldDomainNotFound as e:
             # Assume bad TLD and try one last fall back, just strip the trailing TLD and leading subdomain
             parsed_uri = urlparse(s)
-            # print "Exception within Exception result:", parsed_uri
-            # print parsed_uri.path.split(".")
             if len(parsed_uri.path.split(".")) >= 3:
                 domain = parsed_uri.path.split(".")[1]
             else:
