@@ -1,6 +1,10 @@
 #!/usr/bin/python
 
-from sh import git
+import platform
+if 'windows' in str(platform.platform()).lower():
+    print "Git support not available in Windows."
+else:
+    from sh import git
 import os
 import subprocess as sp
 from time import sleep
@@ -59,9 +63,11 @@ while stoprunning is False:
 
     if ecode == 3:
         # print "[NoCrash] Pull in new updates."
-        git.checkout('deploy')
-        git.pull()
-        git.submodule('update')
+        if 'windows' not in str(platform.platform()).lower():
+            git.checkout('deploy')
+            git.pull()
+            git.submodule('update')
+
         count = 0
         crashcount = 0
 
@@ -72,7 +78,9 @@ while stoprunning is False:
 
         if crashcount == 2:
             # print "[NoCrash] Going to reverted state."
-            git.checkout('HEAD~1')
+            if 'windows' not in str(platform.platform()).lower():
+                git.checkout('HEAD~1')
+
             count = 0
             crashcount = 0
 
@@ -93,7 +101,9 @@ while stoprunning is False:
 
     elif ecode == 8:
         # print "[NoCrash] Checkout Deploy"
-        git.checkout('deploy')
+        if 'windows' not in str(platform.platform()).lower():
+            git.checkout('deploy')
+
         count = 0
         crashcount = 0
 
