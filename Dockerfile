@@ -12,7 +12,7 @@ RUN apt update && \
     git submodule update && \
     pip install -r requirements.txt --upgrade
 
-RUN apt remove -y --purge build-essential python-dev git wget && \
+RUN apt remove -y --purge build-essential python-dev wget && \
     apt clean && \
     rm -rf /root/* /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
