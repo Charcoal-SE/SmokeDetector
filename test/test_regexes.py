@@ -70,14 +70,19 @@ import pytest
     ('Title here', '<img src="http://example.com/11111111111.jpg" alt="my image">', '', 'stackoverflow.com', False, False),
     ('Title here', '<img src="http://example.com/11111111111111.jpg" alt="my image" />', '', 'stackoverflow.com', False, False),
     ('Title here', '<a href="http://example.com/11111111111111.html">page</a>', '', 'stackoverflow.com', False, False),
-    ('Error: 2147467259', '', '', 'stackoverflow.com', False, False)
+    ('Error: 2147467259', '', '', 'stackoverflow.com', False, False),
+    ('Max limit on number of concurrent ajax request', """<p>Php java script boring yaaarrr <a href="http://www.price-buy.com/" rel="nofollow noreferrer">Price-Buy.com</a> </p>""", 'Price Buy', 'stackoverflow.com', True, True),
+    ('Proof of onward travel in Japan?', """<p>The best solution to overcome the problem of your travel<a href="https://i.stack.imgur.com/eS6WQ.jpg" rel="nofollow noreferrer"><img src="https://i.stack.imgur.com/eS6WQ.jpg" alt="enter image description here"></a></p>
+
+<p>httl://bestonwardticket.com</p>""", 'Best onward Ticket', 'travel.stackexchange.com', True, True),
+    ('Max limit on number of concurrent ajax request', """<p>Php java script boring yaaarrr <a href="http://www.price-buy.com/" rel="nofollow noreferrer">Price-Buy.com</a> </p>""", 'Totally Unrelated Username', 'stackoverflow.com', True, False),
 ])
 def test_regexes(title, body, username, site, body_is_summary, match):
     # If we want to test answers separately, this should be changed
     is_answer = False
     result = FindSpam.test_post(title, body, username, site, is_answer, body_is_summary, 1, 0)[0]
     print title
-    print result
+    print "Result:", result
     isspam = False
     if len(result) > 0:
         isspam = True
