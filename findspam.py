@@ -3,9 +3,26 @@ import regex
 import phonenumbers
 from difflib import SequenceMatcher
 import tld
-from tld.utils import update_tld_names
+from tld.utils import update_tld_names, TldIOError, TldDomainNotFound
 from urlparse import urlparse
-update_tld_names()
+
+try:
+    update_tld_names()
+except TldIOError as ioerr:
+    with open('errorLogs.txt', 'a') as errlogs:
+        if ioerr.message.__contains__("Permission denied:"):
+            if ioerr.message.__contains__("/usr/local/lib/python2.7/dist-packages/"):
+                errlogs.write("WARNING: Cannot update TLD names, due to `tld` being system-wide installed and not "
+                              "user-level installed.  Skipping TLD names update. \n")
+                errlogs.close()
+            if ioerr.message.__contains__("/home/") and \
+               ioerr.message.__contains__(".local/lib/python2.7/site-packages/tld/"):
+                errlogs.write("WARNING: Cannot read/write to user-space `tld` installation, check permissions on the "
+                              "path.  Skipping TLD names update. \n")
+            errlogs.close()
+            pass
+        else:
+            raise ioerr
 
 
 SIMILAR_THRESHOLD = 0.95
@@ -342,14 +359,14 @@ def get_domain(s):
     try:
         extract = tld.get_tld(s, fix_protocol=True, as_object=True, )
         domain = extract.domain
-    except tld.exceptions.TldDomainNotFound as e:
+    except TldDomainNotFound as e:
         invalid_tld = RE_COMPILE.match(e.message).group(1)
         # Attempt to replace the invalid protocol
         s1 = s.replace(invalid_tld, 'http', 1)
         try:
             extract = tld.get_tld(s1, fix_protocol=True, as_object=True, )
             domain = extract.domain
-        except tld.exceptions.TldDomainNotFound as e:
+        except TldDomainNotFound as e:
             # Assume bad TLD and try one last fall back, just strip the trailing TLD and leading subdomain
             parsed_uri = urlparse(s)
             if len(parsed_uri.path.split(".")) >= 3:
