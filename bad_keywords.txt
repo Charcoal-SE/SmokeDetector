@@ -143,7 +143,7 @@ we are a team of (highly|professionals)
 booty pop
 Beard Czar
 Cianix
-(falcon|gladiator)(\Wtactical)?\Wflashlight
+(falcon|gladiator|tactical)\Wflashlights?
 Juvanere
 age-opposing
 revived\syouth
