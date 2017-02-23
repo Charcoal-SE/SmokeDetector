@@ -851,7 +851,7 @@ class FindSpam:
         # User name similar to link
         {'method': username_similar_website, 'all': True, 'sites': [], 'reason': "username similar to website {}",
          'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
-         'max_rep': 50, 'max_score': 0},
+         'max_rep': 50, 'max_score': 0, 'questions': False},
     ]
 
     @staticmethod
