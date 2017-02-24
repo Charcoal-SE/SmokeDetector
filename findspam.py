@@ -10,13 +10,12 @@ try:
     update_tld_names()
 except TldIOError as ioerr:
     with open('errorLogs.txt', 'a') as errlogs:
-        if ioerr.message.__contains__("Permission denied:"):
-            if ioerr.message.__contains__("/usr/local/lib/python2.7/dist-packages/"):
+        if "Permission denied:" in str(ioerr):
+            if "/usr/local/lib/python2.7/dist-packages/" in str(ioerr):
                 errlogs.write("WARNING: Cannot update TLD names, due to `tld` being system-wide installed and not "
                               "user-level installed.  Skipping TLD names update. \n")
                 errlogs.close()
-            if ioerr.message.__contains__("/home/") and \
-               ioerr.message.__contains__(".local/lib/python2.7/site-packages/tld/"):
+            if "/home/" in str(ioerr) and ".local/lib/python2.7/site-packages/tld/" in str(ioerr):
                 errlogs.write("WARNING: Cannot read/write to user-space `tld` installation, check permissions on the "
                               "path.  Skipping TLD names update. \n")
             errlogs.close()
