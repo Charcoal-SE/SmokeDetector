@@ -849,7 +849,7 @@ class FindSpam:
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
 
         # User name similar to link
-        {'method': username_similar_website, 'all': True, 'sites': [], 'reason': "username similar to website {}",
+        {'method': username_similar_website, 'all': True, 'sites': [], 'reason': "username similar to website in {}",
          'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
          'max_rep': 50, 'max_score': 0, 'questions': False},
     ]
