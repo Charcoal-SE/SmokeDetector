@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+# This script replaces the original nocrash.sh functionality with a pure Python approach.
+
 from sh import git
 import os
 import subprocess as sp
