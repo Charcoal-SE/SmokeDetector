@@ -37,7 +37,6 @@ if Debugging.enabled:
 else:
     pass  # We do nothing here if Debugger is not set, so go on.
 
-
 # noinspection PyPackageRequirements
 import websocket
 import getpass
@@ -56,6 +55,24 @@ from deletionwatcher import DeletionWatcher
 import json
 import time
 import requests
+from tld.utils import update_tld_names, TldIOError
+
+try:
+    update_tld_names()
+except TldIOError as ioerr:
+    with open('errorLogs.txt', 'a') as errlogs:
+        if "Permission denied:" in str(ioerr):
+            if "/usr/local/lib/python2.7/dist-packages/" in str(ioerr):
+                errlogs.write("WARNING: Cannot update TLD names, due to `tld` being system-wide installed and not "
+                              "user-level installed.  Skipping TLD names update. \n")
+                errlogs.close()
+            if "/home/" in str(ioerr) and ".local/lib/python2.7/site-packages/tld/" in str(ioerr):
+                errlogs.write("WARNING: Cannot read/write to user-space `tld` installation, check permissions on the "
+                              "path.  Skipping TLD names update. \n")
+            errlogs.close()
+            pass
+        else:
+            raise ioerr
 
 
 if "ChatExchangeU" in os.environ:
