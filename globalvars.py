@@ -117,7 +117,8 @@ class GlobalVars:
             "126657",   # Cerbrus
             "10145",    # Thomas Ward
             "161943",   # J F
-            "195967"    # CaffeineAddiction
+            "195967",   # CaffeineAddiction
+            "5363"      # Stijn
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
