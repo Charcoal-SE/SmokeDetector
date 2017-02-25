@@ -118,7 +118,8 @@ class GlobalVars:
             "10145",    # Thomas Ward
             "161943",   # J F
             "195967",   # CaffeineAddiction
-            "5363"      # Stijn
+            "5363",     # Stijn
+            "248139",   # FelixSFD
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
