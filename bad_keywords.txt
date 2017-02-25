@@ -309,3 +309,4 @@ infinite\Wcleanse
 helix6
 intellex\Wplus
 andronite
+idol\Wtan
