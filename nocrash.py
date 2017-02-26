@@ -26,7 +26,6 @@ persistent_arguments = list({"standby", "charcoal-hq-only"} & set(sys.argv))
 count = 0
 crashcount = 0
 stoprunning = False
-switch_to_standby = False
 ecode = None  # Define this to prevent errors
 
 # Make a clean copy of existing environment variables, to pass down to subprocess.
@@ -41,17 +40,18 @@ while stoprunning is False:
     # print "[NoCrash] Switch to Standby? %s" % switch_to_standby
 
     if count == 0:
-        if switch_to_standby or ("standby" in persistent_arguments):
+        if 'standby' in persistent_arguments:
             switch_to_standby = False  # Necessary for the while loop
             command = 'python ws.py standby'.split()
         else:
             command = 'python ws.py first_start'.split()
     else:
-        if not switch_to_standby:
+        if not ('standby' in persistent_arguments):
             command = 'python ws.py'.split()
         else:
-            switch_to_standby = False
             command = 'python ws.py standby'.split()
+
+    persistent_arguments.remove('standby')
 
     try:
         ecode = sp.call(command + persistent_arguments, env=environ)
@@ -66,8 +66,6 @@ while stoprunning is False:
         git.submodule('update')
         count = 0
         crashcount = 0
-        if "standby" in persistent_arguments:
-            persistent_arguments.remove("standby")
 
     elif ecode == 4:
         # print "[NoCrash] Crashed."
@@ -93,7 +91,7 @@ while stoprunning is False:
 
     elif ecode == 7:
         # print "[NoCrash] Go to Standby Restart Called"
-        switch_to_standby = True
+        persistent_arguments.append("standby")
 
     elif ecode == 8:
         # print "[NoCrash] Checkout Deploy"
