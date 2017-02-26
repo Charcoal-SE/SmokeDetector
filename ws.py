@@ -12,6 +12,20 @@ install_thread_excepthook()
 # test it thoroughly.
 
 import os
+
+# Platform Check: If Windows, we can't run, see GitHub issue #555.
+# Do it here, so we can die off early.
+import platform
+if "windows" in str(platform.platform()).lower():
+    print "OSError: Windows is not supported at this time."
+    with open("errorLogs.txt", "a") as errlogs:
+        errlogs.write("ERROR: Windows is not supported at this time.")
+    errlogs.close()
+    # noinspection PyProtectedMember
+    os._exit(6)
+
+# Debugger Attachment Here - we only work with this if specified in
+# the environment variables that we want to run in debugging mode.
 from debugging import Debugging
 if Debugging.enabled:
     # noinspection PyBroadException
