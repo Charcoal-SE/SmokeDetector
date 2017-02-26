@@ -531,7 +531,7 @@ class FindSpam:
         # Bad health-related keywords in titles, health sites are exempt, flexible method
         {'method': has_health, 'all': False,
          'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com", "drupal.stackexchange.com",
-                   "meta.stackexchange.com", "security.stackexchange.com",
+                   "meta.stackexchange.com", "security.stackexchange.com", "webapps.stackexchange.com",
                    "apple.stackexchange.com", "graphicdesign.stackexchange.com", "workplace.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
