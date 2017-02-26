@@ -12,15 +12,6 @@ install_thread_excepthook()
 # test it thoroughly.
 
 import os
-
-import platform
-if 'windows' in str(platform.platform()).lower():
-    with open('errorLogs.txt', 'a') as errlogs:
-        errlogs.write("OSError: SmokeDetector is not able to run properly on Windows.")
-        print "OSError: SmokeDetector is not able to run properly on Windows."
-        # noinspection PyProtectedMember
-        os._exit(6)
-
 from debugging import Debugging
 if Debugging.enabled:
     # noinspection PyBroadException
