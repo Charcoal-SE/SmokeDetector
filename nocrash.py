@@ -51,7 +51,11 @@ while stoprunning is False:
         else:
             command = 'python ws.py standby'.split()
 
-    persistent_arguments.remove('standby')
+    # noinspection PyBroadException
+    try:
+        persistent_arguments.remove('standby')
+    except:
+        pass  # We're OK if the argument isn't in the list.
 
     try:
         ecode = sp.call(command + persistent_arguments, env=environ)
