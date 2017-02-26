@@ -97,7 +97,9 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                 owner_rep=None, post_score=None, up_vote_count=None, down_vote_count=None, question_id=None):
     post_url = parsing.to_protocol_relative(parsing.url_to_shortlink(post_url))
     poster_url = parsing.to_protocol_relative(parsing.user_url_to_shortlink(poster_url))
-    reason = ", ".join(reasons)
+    reason = ", ".join(reasons[:5])
+    if len(reasons) > 5:
+        reason += ", +{} more".format(len(reasons) - 5)
     reason = reason[:1].upper() + reason[1:]  # reason is capitalised, unlike the entries of reasons list
     shortened_site = site.replace("stackexchange.com", "SE")  # gaming.stackexchange.com -> gaming.SE
     datahandling.append_to_latest_questions(site, post_id, title if not is_answer else "")
@@ -117,7 +119,7 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
         title = parsing.escape_special_chars_in_title(title)
         sanitized_title = regex.sub('(https?://|\n)', '', title)
 
-        prefix = u"[ [SmokeDetector](//git.io/vgx7b) ]"
+        prefix = u"[ [SmokeDetector](//goo.gl/eLDYqh) ]"
         if GlobalVars.metasmoke_key:
             prefix_ms = u"[ [SmokeDetector](//git.io/vgx7b) | [MS](//m.erwaysoftware.com/posts/by-url?url=" + \
                         post_url + ") ]"
