@@ -66,6 +66,8 @@ while stoprunning is False:
         git.submodule('update')
         count = 0
         crashcount = 0
+        if "standby" in sys.argv:
+            sys.argv.remove("standby")
 
     elif ecode == 4:
         # print "[NoCrash] Crashed."
