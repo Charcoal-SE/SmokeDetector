@@ -99,6 +99,7 @@ while stoprunning is False:
 
     elif ecode == 6:
         # print "[NoCrash] Stopping"
+        # Also triggers if Windows is the runtime env.
         stoprunning = True
 
     elif ecode == 7:
