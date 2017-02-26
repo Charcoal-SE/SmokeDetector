@@ -61,19 +61,26 @@ try:
     update_tld_names()
 except TldIOError as ioerr:
     with open('errorLogs.txt', 'a') as errlogs:
-        if "Permission denied:" in str(ioerr):
+        if "permission denied:" in str(ioerr).lower():
             if "/usr/local/lib/python2.7/dist-packages/" in str(ioerr):
                 errlogs.write("WARNING: Cannot update TLD names, due to `tld` being system-wide installed and not "
                               "user-level installed.  Skipping TLD names update. \n")
-                errlogs.close()
+
             if "/home/" in str(ioerr) and ".local/lib/python2.7/site-packages/tld/" in str(ioerr):
                 errlogs.write("WARNING: Cannot read/write to user-space `tld` installation, check permissions on the "
                               "path.  Skipping TLD names update. \n")
+
             errlogs.close()
             pass
+
+        elif "certificate verify failed" in str(ioerr).lower():
+            # Ran into this error in testing on Windows, best to throw a warn if we get this...
+            errlogs.write("WARNING: Cannot verify SSL connection for TLD names update; skipping TLD names update.")
+            errlogs.close()
+            pass
+
         else:
             raise ioerr
-
 
 if "ChatExchangeU" in os.environ:
     username = os.environ["ChatExchangeU"]
