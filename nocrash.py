@@ -41,7 +41,7 @@ while stoprunning is False:
     # print "[NoCrash] Switch to Standby? %s" % switch_to_standby
 
     if count == 0:
-        if switch_to_standby or ("standby" in sys.argv):
+        if switch_to_standby or ("standby" in persistent_arguments):
             switch_to_standby = False  # Necessary for the while loop
             command = 'python ws.py standby'.split()
         else:
@@ -66,8 +66,8 @@ while stoprunning is False:
         git.submodule('update')
         count = 0
         crashcount = 0
-        if "standby" in sys.argv:
-            sys.argv.remove("standby")
+        if "standby" in persistent_arguments:
+            persistent_arguments.remove("standby")
 
     elif ecode == 4:
         # print "[NoCrash] Crashed."
