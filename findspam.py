@@ -181,6 +181,22 @@ def has_health(s, site, *args):   # flexible detection of health spam in titles
     return False, ""
 
 
+def pattern_product_name(s, site, *args):
+    keywords = "|".join(["Testo", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Kamasutra", "HL-?12", "NeuroFuse",
+                         "Stack", "Junivive", "Apexatropin",
+                         "Elite", "Force", "Exceptional", "Enhance(ment)?", "Nitro", "Max", "Boost", "E?xtreme", "Grow",
+                         "Xt?", "Alpha", "Prime", "Deep", "Male", "Pro",
+                         "Pure", "Skin", "Sea", "Muscle",
+                         "Formula", "Serum", "Supplement", "Fuel", "Cream"])
+    three_words = regex.compile(ur"(?i)(({0})\W({0})\W({0}))".format(keywords)).findall(s)
+    two_words = regex.compile(ur"(?i)(({0})\W({0}))".format(keywords)).findall(s)
+    if len(three_words) >= 1:
+        return True, u"Pattern-matching product name *{}*".format(three_words[0][0])
+    elif len(two_words) >= 2:
+        return True, u"Pattern-matching product name *{}*".format(two_words[0][0])
+    return False, ""
+
+
 def keyword_email(s, site, *args):   # a keyword and an email in the same post
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
