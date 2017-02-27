@@ -444,7 +444,7 @@ class FindSpam:
         r"smart(pc)?fixer\.(co|net|org)",
         r"password[\w-]*?(cracker|unlocker|reset|buster|master|remover)\.(co|net)",
         r"crack[\w-]*?(serial|soft|password)[\w-]*?\.(co|net)",
-        r"(downloader|pdf)converter\.(com|net)", r"sourceforge\.net[\w/]*convert",
+        r"(downloader|pdf)converter\.(com|net)",
         r"ware[\w-]*?download\.(com|net|info|in\W)",
         r"((\d|\w{3})livestream|livestream(ing|s))[\w]*?\.(com|net|tv)", r"\w+vs\w+live\.(com|net|tv)",
         r"(play|watch|cup|20)[\w-]*?(live|online)\.(com|net|tv)", r"worldcup\d[\w-]*?\.(com|net|tv|blogspot)",
