@@ -188,8 +188,8 @@ def pattern_product_name(s, site, *args):
                          "Xt?", "Alpha", "Prime", "Deep", "Male", "Pro", "Advanced", "Monster",
                          "Pure", "Skin", "Sea", "Muscle", "Ascend",
                          "Formula", "Serum", "Supplement", "Fuel", "Cream"])
-    three_words = regex.compile(ur"(?i)(({0})[ -]({0})[ -]({0}))".format(keywords)).findall(s)
-    two_words = regex.compile(ur"(?i)(({0})[ -]({0}))".format(keywords)).findall(s)
+    three_words = regex.compile(ur"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
+    two_words = regex.compile(ur"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
     if len(three_words) >= 1:
         return True, u"Pattern-matching product name *{}*".format(three_words[0][0])
     elif len(two_words) >= 2:
