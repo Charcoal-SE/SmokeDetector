@@ -98,30 +98,33 @@ load_files()
 filter_auto_ignored_posts()
 
 # chat.stackexchange.com logon/wrapper
-while True:
+for chatlogoncount in range(1,10):
     try:
         GlobalVars.wrap.login(username, password)
         GlobalVars.smokeDetector_user_id[GlobalVars.charcoal_room_id] = str(GlobalVars.wrap.get_me().id)
         break  # If we didn't error out horribly, we can be done with this loop
     except ValueError:
+        time.sleep(1)
         continue  # If we did error, we need to try this again.
 
 # chat.meta.stackexchange.com logon/wrapper
-while True:
+for metalogoncount in range(1,10):
     try:
         GlobalVars.wrapm.login(username, password)
         GlobalVars.smokeDetector_user_id[GlobalVars.meta_tavern_room_id] = str(GlobalVars.wrapm.get_me().id)
         break  # If we didn't error out horribly, we can be done with this loop
     except ValueError:
+        time.sleep(1)
         continue  # If we did error, we need to try this again.
 
 # chat.stackoverflow.com logon/wrapper
-while True:
+for sologoncount in range(1,10):
     try:
         GlobalVars.wrapso.login(username, password)
         GlobalVars.smokeDetector_user_id[GlobalVars.socvr_room_id] = str(GlobalVars.wrapso.get_me().id)
         break  # If we didn't error out horribly, we can be done with this loop
     except ValueError:
+        time.sleep(1)
         continue  # If we did error, we need to try this again.
 
 GlobalVars.s = "[ " + GlobalVars.chatmessage_prefix + " ] " \
