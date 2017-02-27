@@ -505,7 +505,7 @@ class FindSpam:
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1},
         # Pattern-matching product name: three keywords in a row at least once, or two in a row at least twice
-        #{'method': pattern_product_name, 'all': True, 'sites': [], 'reason': "pattern-matching product name in {}",
+        # {'method': pattern_product_name, 'all': True, 'sites': [], 'reason': "pattern-matching product name in {}",
         # 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
         # 'max_rep': 4, 'max_score': 1},
         # gratis at the beginning of post, SoftwareRecs is exempt
