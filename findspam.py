@@ -183,10 +183,10 @@ def has_health(s, site, *args):   # flexible detection of health spam in titles
 
 def pattern_product_name(s, site, *args):
     keywords = "|".join(["Testo", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Kamasutra", "HL-?12", "NeuroFuse",
-                         "Stack", "Junivive", "Apexatropin",
+                         "Stack", "Junivive", "Apexatropin", "Gain",
                          "Elite", "Force", "Exceptional", "Enhance(ment)?", "Nitro", "Max", "Boost", "E?xtreme", "Grow",
                          "Xt?", "Alpha", "Prime", "Deep", "Male", "Pro",
-                         "Pure", "Skin", "Sea", "Muscle",
+                         "Pure", "Skin", "Sea", "Muscle", "Ascend",
                          "Formula", "Serum", "Supplement", "Fuel", "Cream"])
     three_words = regex.compile(ur"(?i)(({0})\W({0})\W({0}))".format(keywords)).findall(s)
     two_words = regex.compile(ur"(?i)(({0})\W({0}))".format(keywords)).findall(s)
