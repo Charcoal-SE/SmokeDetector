@@ -99,7 +99,7 @@ filter_auto_ignored_posts()
 
 # chat.stackexchange.com logon/wrapper
 chatlogoncount = 0
-for cl in range(1,10):
+for cl in range(1, 10):
     chatlogoncount += 1
     try:
         GlobalVars.wrap.login(username, password)
@@ -113,7 +113,7 @@ if chatlogoncount >= 10:  # Handle "too many logon attempts" case to prevent inf
 
 # chat.meta.stackexchange.com logon/wrapper
 metalogoncount = 0
-for cml in range(1,10):
+for cml in range(1, 10):
     metalogoncount += 1
     try:
         GlobalVars.wrapm.login(username, password)
@@ -127,7 +127,7 @@ if metalogoncount >= 10:  # Handle "too many logon attempts" case to prevent inf
 
 # chat.stackoverflow.com logon/wrapper
 sologoncount = 0
-for sol in range(1,10):
+for sol in range(1, 10):
     sologoncount += 1
     try:
         GlobalVars.wrapso.login(username, password)
