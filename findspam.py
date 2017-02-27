@@ -185,7 +185,7 @@ def pattern_product_name(s, site, *args):
     keywords = "|".join(["Testo", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Kamasutra", "HL-?12", "NeuroFuse",
                          "Stack", "Junivive", "Apexatropin", "Gain",
                          "Elite", "Force", "Exceptional", "Enhance(ment)?", "Nitro", "Max", "Boost", "E?xtreme", "Grow",
-                         "Xt?", "Alpha", "Prime", "Deep", "Male", "Pro",
+                         "Xt?", "Alpha", "Prime", "Deep", "Male", "Pro", "Advanced", "Monster",
                          "Pure", "Skin", "Sea", "Muscle", "Ascend",
                          "Formula", "Serum", "Supplement", "Fuel", "Cream"])
     three_words = regex.compile(ur"(?i)(({0})\W({0})\W({0}))".format(keywords)).findall(s)
