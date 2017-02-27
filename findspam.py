@@ -188,8 +188,8 @@ def pattern_product_name(s, site, *args):
                          "Xt?", "Alpha", "Prime", "Deep", "Male", "Pro", "Advanced", "Monster",
                          "Pure", "Skin", "Sea", "Muscle", "Ascend",
                          "Formula", "Serum", "Supplement", "Fuel", "Cream"])
-    three_words = regex.compile(ur"(?i)(({0})\W({0})\W({0}))".format(keywords)).findall(s)
-    two_words = regex.compile(ur"(?i)(({0})\W({0}))".format(keywords)).findall(s)
+    three_words = regex.compile(ur"(?i)(({0})[ -]({0})[ -]({0}))".format(keywords)).findall(s)
+    two_words = regex.compile(ur"(?i)(({0})[ -]({0}))".format(keywords)).findall(s)
     if len(three_words) >= 1:
         return True, u"Pattern-matching product name *{}*".format(three_words[0][0])
     elif len(two_words) >= 2:
@@ -505,9 +505,9 @@ class FindSpam:
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1},
         # Pattern-matching product name: three keywords in a row at least once, or two in a row at least twice
-        # {'method': pattern_product_name, 'all': True, 'sites': [], 'reason': "pattern-matching product name in {}",
-        # 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
-        # 'max_rep': 4, 'max_score': 1},
+        {'method': pattern_product_name, 'all': True, 'sites': [], 'reason': "pattern-matching product name in {}",
+         'title': True, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
+         'max_rep': 4, 'max_score': 1},
         # gratis at the beginning of post, SoftwareRecs is exempt
         {'regex': ur"(?is)^.{0,200}\bgratis\b$", 'all': True,
          'sites': ['softwarerecs.stackexchange.com'], 'reason': "bad keyword in {}", 'title': True, 'body': True,
