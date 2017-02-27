@@ -105,7 +105,7 @@ for cl in range(1, 10):
         GlobalVars.wrap.login(username, password)
         GlobalVars.smokeDetector_user_id[GlobalVars.charcoal_room_id] = str(GlobalVars.wrap.get_me().id)
         break  # If we didn't error out horribly, we can be done with this loop
-    except ValueError:
+    except (ValueError, AssertionError):
         time.sleep(1)
         continue  # If we did error, we need to try this again.
 if chatlogoncount >= 10:  # Handle "too many logon attempts" case to prevent infinite looping
@@ -119,7 +119,7 @@ for cml in range(1, 10):
         GlobalVars.wrapm.login(username, password)
         GlobalVars.smokeDetector_user_id[GlobalVars.meta_tavern_room_id] = str(GlobalVars.wrapm.get_me().id)
         break  # If we didn't error out horribly, we can be done with this loop
-    except ValueError:
+    except (ValueError, AssertionError):
         time.sleep(1)
         continue  # If we did error, we need to try this again.
 if metalogoncount >= 10:  # Handle "too many logon attempts" case to prevent infinite looping
@@ -133,7 +133,7 @@ for sol in range(1, 10):
         GlobalVars.wrapso.login(username, password)
         GlobalVars.smokeDetector_user_id[GlobalVars.socvr_room_id] = str(GlobalVars.wrapso.get_me().id)
         break  # If we didn't error out horribly, we can be done with this loop
-    except ValueError:
+    except (ValueError, AssertionError):
         time.sleep(1)
         continue  # If we did error, we need to try this again.
 if sologoncount >= 10:  # Handle "too many logon attempts" case to prevent infinite looping
