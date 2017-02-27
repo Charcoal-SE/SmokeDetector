@@ -97,17 +97,32 @@ GlobalVars.bodyfetcher = BodyFetcher()
 load_files()
 filter_auto_ignored_posts()
 
+# chat.stackexchange.com logon/wrapper
 while True:
     try:
         GlobalVars.wrap.login(username, password)
         GlobalVars.smokeDetector_user_id[GlobalVars.charcoal_room_id] = str(GlobalVars.wrap.get_me().id)
+        break  # If we didn't error out horribly, we can be done with this loop
+    except ValueError:
+        continue  # If we did error, we need to try this again.
+
+# chat.meta.stackexchange.com logon/wrapper
+while True:
+    try:
         GlobalVars.wrapm.login(username, password)
         GlobalVars.smokeDetector_user_id[GlobalVars.meta_tavern_room_id] = str(GlobalVars.wrapm.get_me().id)
+        break  # If we didn't error out horribly, we can be done with this loop
+    except ValueError:
+        continue  # If we did error, we need to try this again.
+
+# chat.stackoverflow.com logon/wrapper
+while True:
+    try:
         GlobalVars.wrapso.login(username, password)
         GlobalVars.smokeDetector_user_id[GlobalVars.socvr_room_id] = str(GlobalVars.wrapso.get_me().id)
-        break  # If we've gotten here, we don't need to continue in this loop, so 'break' from it
+        break  # If we didn't error out horribly, we can be done with this loop
     except ValueError:
-        continue  # If we've gotten here, we need to continue going through the loop.
+        continue  # If we did error, we need to try this again.
 
 GlobalVars.s = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                "SmokeDetector started at [rev " +\
