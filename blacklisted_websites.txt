@@ -167,7 +167,6 @@ csoftglobal\.com
 bsscommerce\.com
 nmeasoft\.com
 remorecover\.com
-remosoftware\.com
 freethemes\.co
 kliring\.co\.id
 \bpatch\.com\b
