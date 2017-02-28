@@ -602,7 +602,8 @@ class FindSpam:
                    "islam.stackexchange.com", "japanese.stackexchange.com", "anime.stackexchange.com",
                    "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com",
                    "chinese.stackexchange.com", "french.stackexchange.com", "spanish.stackexchange.com",
-                   "portuguese.stackexchange.com", "codegolf.stackexchange.com", "korean.stackexchange.com"],
+                   "portuguese.stackexchange.com", "codegolf.stackexchange.com", "korean.stackexchange.com",
+                   "ukrainian.stackexchange.com"],
          'reason': 'mostly non-Latin {}', 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
          'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Mostly non-Latin alphabet, SO answers only
@@ -709,9 +710,9 @@ class FindSpam:
          'sites': ["ja.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com",
                    "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com",
                    "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com",
-                   "codegolf.stackexchange.com", "korean.stackexchange.com"], 'reason': 'non-Latin link in {}',
-         'title': False, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False,
-         'questions': False, 'max_rep': 1, 'max_score': 0},
+                   "codegolf.stackexchange.com", "korean.stackexchange.com", "ukrainian.stackexchange.com"],
+         'reason': 'non-Latin link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True,
+         'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Link text with some non-Latin characters, answers only
         {'method': non_english_link, 'all': True, 'sites': ["pt.stackoverflow.com", "es.stackoverflow.com",
                                                             "ja.stackoverflow.com", "ru.stackoverflow.com",
@@ -721,7 +722,8 @@ class FindSpam:
                                                             "chinese.stackexchange.com", "russian.stackexchange.com",
                                                             "french.stackexchange.com", "portuguese.stackexchange.com",
                                                             "spanish.stackexchange.com", "codegolf.stackexchange.com",
-                                                            "korean.stackexchange.com", "esperanto.stackexchange.com"],
+                                                            "korean.stackexchange.com", "esperanto.stackexchange.com",
+                                                            "ukrainian.stackexchange.com"],
          'reason': 'non-English link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True,
          'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Link text is one character within a word
