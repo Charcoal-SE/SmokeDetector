@@ -11,7 +11,6 @@ import os
 import subprocess as sp
 from time import sleep
 import sys
-from debugging import Debugging
 
 # Get environment variables
 ChatExchangeU = os.environ.get('ChatExchangeU')
@@ -34,11 +33,6 @@ ecode = None  # Define this to prevent errors
 
 # Make a clean copy of existing environment variables, to pass down to subprocess.
 environ = os.environ.copy()
-
-# Add debug environment variables to environment copy in variable 'environ', if Debugging is enabled
-if Debugging.enabled:
-    for (key, value) in Debugging.environ_dict.iteritems():
-        environ[key] = str(value)
 
 while stoprunning is False:
     # print "[NoCrash] Switch to Standby? %s" % switch_to_standby

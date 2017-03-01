@@ -12,31 +12,6 @@ install_thread_excepthook()
 # test it thoroughly.
 
 import os
-from debugging import Debugging
-if Debugging.enabled:
-    # noinspection PyBroadException
-    try:
-        sys.path.append('pycharm-debug.egg')
-        # noinspection PyUnresolvedReferences, PyPackageRequirements
-        import pydevd
-    except:
-        print "Debugging enabled, but 'pydevd' is not available or not working."
-        # noinspection PyProtectedMember
-        os._exit(6)
-
-    # noinspection PyBroadException
-    try:
-        print "Attaching Debugger..."
-        pydevd.settrace(host=Debugging.pydev_host, port=Debugging.pydev_port, stdoutToServer=True, stderrToServer=True,
-                        suspend=True)
-    except Exception:
-        print "Unable to attach to debugger."
-        # noinspection PyProtectedMember
-        os._exit(6)
-
-else:
-    pass  # We do nothing here if Debugger is not set, so go on.
-
 # noinspection PyPackageRequirements
 import websocket
 import getpass

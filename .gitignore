@@ -85,11 +85,3 @@ config
 
 # Ignore .DS_Store file (usually seen in Mac environments)
 .DS_Store
-
-
-# PyCharm Debugger Package (includes pydevd and related plugins).
-#
-# Necessary for the Debugging handler's enablement, and to allow
-# for the debugger to communicate with PyCharm debugger servers
-# running on a specified system.
-!/pycharm-debug.egg
