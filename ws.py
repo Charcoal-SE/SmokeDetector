@@ -74,13 +74,13 @@ load_files()
 filter_auto_ignored_posts()
 
 # chat.stackexchange.com logon/wrapper
-ChatLogon.SE(username, password)
+ChatLogon.se(username, password)
 
 # chat.meta.stackexchange.com logon/wrapper
-ChatLogon.MetaSE(username, password)
+ChatLogon.meta_se(username, password)
 
 # chat.stackoverflow.com logon/wrapper
-ChatLogon.SO(username, password)
+ChatLogon.so(username, password)
 
 GlobalVars.s = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                "SmokeDetector started at [rev " +\
