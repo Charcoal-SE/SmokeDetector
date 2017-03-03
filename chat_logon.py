@@ -1,7 +1,7 @@
 from globalvars import GlobalVars
 from time import sleep
 
-class Logon:
+class ChatLogon:
     def SE(username, password):
         # chat.stackexchange.com logon/wrapper
         chatlogoncount = 0
