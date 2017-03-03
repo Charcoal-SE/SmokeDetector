@@ -1,10 +1,11 @@
 from globalvars import GlobalVars
 from time import sleep
 
+
 # noinspection PyClassHasNoInit
 class ChatLogon:
     @staticmethod
-    def SE(username, password):
+    def se(username, password):
         # chat.stackexchange.com logon/wrapper
         chatlogoncount = 0
         for cl in range(1, 10):
@@ -20,7 +21,7 @@ class ChatLogon:
             raise RuntimeError("Could not get Chat.SE logon.")
 
     @staticmethod
-    def MetaSE(username, password):
+    def meta_se(username, password):
         # chat.meta.stackexchange.com logon/wrapper
         metalogoncount = 0
         for cml in range(1, 10):
@@ -34,9 +35,9 @@ class ChatLogon:
                 continue  # If we did error, we need to try this again.
         if metalogoncount >= 10:  # Handle "too many logon attempts" case to prevent infinite looping
                 raise RuntimeError("Could not get Chat.Meta.SE logon.")
-    
+
     @staticmethod
-    def SO(username, password):
+    def so(username, password):
         # chat.stackoverflow.com logon/wrapper
         sologoncount = 0
         for sol in range(1, 10):
