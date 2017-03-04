@@ -49,7 +49,7 @@ def has_few_characters(s, site, *args):
     s = regex.sub("</?p>", "", s).rstrip()    # remove HTML paragraph tags from posts
     uniques = len(set(list(s)))
     if (len(s) >= 30 and uniques <= 6) or (len(s) >= 100 and uniques <= 15):    # reduce if false reports appear
-        if (uniques <= 15) and (uniques >= 5) and site == "math.stackoverflow.com":
+        if (uniques <= 15) and (uniques >= 5) and site == "math.stackexchange.com":
             # Special case for Math.SE: Uniques case may trigger false-positives.
             return False, ""
         return True, u"Contains {} unique characters".format(uniques)
@@ -182,12 +182,15 @@ def has_health(s, site, *args):   # flexible detection of health spam in titles
 
 
 def pattern_product_name(s, site, *args):
-    keywords = "|".join(["Testo", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Kamasutra", "HL-?12", "NeuroFuse",
+    keywords = ["Testo", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Kamasutra", "HL-?12", "NeuroFuse",
                          "Junivive", "Apexatropin", "Gain",
                          "Elite", "Force", "Exceptional", "Enhance(ment)?", "Nitro", "Max", "Boost", "E?xtreme", "Grow",
-                         "Xt?", "Alpha", "Prime", "Deep", "Male", "Pro", "Advanced", "Monster",
+                         "Deep", "Male", "Pro", "Advanced", "Monster",
                          "Pure", "Skin", "Sea", "Muscle", "Ascend",
-                         "Formula", "Serum", "Supplement", "Fuel", "Cream"])
+                         "Serum", "Supplement", "Fuel", "Cream"]
+    if site != "math.stackexchange.com" and site != "mathoverflow.net":
+        keywords += ["Xt?", "Aplha", "Prime", "Formula"]
+    keywords = "|".join(keywords)
     three_words = regex.compile(ur"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
     two_words = regex.compile(ur"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
     if len(three_words) >= 1:
