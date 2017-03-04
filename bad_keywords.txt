@@ -313,3 +313,4 @@ idol\Wtan
 max\Wgrow\Wxtreme
 mind\Wbooster
 \w*cyberhack\w*@\w*mail\.com
+secret\Wallure\Wcream
