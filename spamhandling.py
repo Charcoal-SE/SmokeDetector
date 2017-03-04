@@ -97,9 +97,11 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                 owner_rep=None, post_score=None, up_vote_count=None, down_vote_count=None, question_id=None):
     post_url = parsing.to_protocol_relative(parsing.url_to_shortlink(post_url))
     poster_url = parsing.to_protocol_relative(parsing.user_url_to_shortlink(poster_url))
-    reason = ", ".join(reasons)
+    reason = ", ".join(reasons[:5])
+    if len(reasons) > 5:
+        reason += ", +{} more".format(len(reasons) - 5)
     reason = reason[:1].upper() + reason[1:]  # reason is capitalised, unlike the entries of reasons list
-    shortened_site = site.replace("stackexchange.com", "SE")  # gaming.stackexchange.com -> gaming.SE
+    shortened_site = site.replace("stackexchange.com", "SE")  # site.stackexchange.com -> site.SE
     datahandling.append_to_latest_questions(site, post_id, title if not is_answer else "")
     if len(reasons) == 1 and ("all-caps title" in reasons or
                               "repeating characters in title" in reasons or
@@ -137,8 +139,8 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
 
         t_metasmoke = Thread(name="metasmoke send post",
                              target=metasmoke.Metasmoke.send_stats_on_post,
-                             args=(title, post_url, reason.split(", "), body, username, user_link, why, owner_rep,
-                                   post_score, up_vote_count, down_vote_count))
+                             args=(title, post_url, reasons, body, username, user_link, why, owner_rep, post_score,
+                                   up_vote_count, down_vote_count))
         t_metasmoke.start()
 
         print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
