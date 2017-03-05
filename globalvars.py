@@ -260,7 +260,8 @@ class GlobalVars:
             "603346",   # Thomas Ward
             "3002139",  # Baum mit Augen
             "1863564",  # QPaysTaxes
-            "4687348"   # FelixSFD
+            "4687348",  # FelixSFD
+            "4751173"  # Glorfindel
         ]
     }
 
