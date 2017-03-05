@@ -894,3 +894,4 @@ inancturizm\.gen\.tr
 srtspl\.in
 tutorspoint\.com
 mytechtalk\.org
+axaengineers\.com
