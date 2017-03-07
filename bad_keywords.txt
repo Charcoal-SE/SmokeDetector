@@ -317,3 +317,4 @@ secret\Wallure\Wcream
 sex\Wscandal
 kratos\Wmax
 safe\Wdriving\Wbreathaly(s|z)er
+rapid\Wageless
