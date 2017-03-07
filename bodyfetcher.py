@@ -199,7 +199,6 @@ class BodyFetcher:
             else:
                 self.queue[site] = posts
             self.queue_modify_lock.release()
-            GlobalVars.api_request_lock.release()
             return
 
         self.api_data_lock.acquire()

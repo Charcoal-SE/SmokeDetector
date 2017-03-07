@@ -30,7 +30,6 @@ def api_get_post(post_url):
         time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
     d = parsing.fetch_post_id_and_site_from_url(post_url)
     if d is None:
-        GlobalVars.api_request_lock.release()
         return None
     post_id, site, post_type = d
     if post_type == "answer":
@@ -47,7 +46,6 @@ def api_get_post(post_url):
         if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
             GlobalVars.api_backoff_time = time.time() + response["backoff"]
     if 'items' not in response or len(response['items']) == 0:
-        GlobalVars.api_request_lock.release()
         return False
     GlobalVars.api_request_lock.release()
 
