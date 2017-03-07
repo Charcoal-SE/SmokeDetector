@@ -6,6 +6,7 @@ import websocket
 # noinspection PyPackageRequirements
 from bs4 import BeautifulSoup
 from threading import Thread
+from urlparse import urlparse
 import metasmoke
 from globalvars import GlobalVars
 import datahandling
@@ -19,7 +20,7 @@ class DeletionWatcher:
                              "html.parser")
         site_id_dict = {}
         for site in soup.findAll("a", attrs={"data-id": True}):
-            site_name = site["href"][2:]
+            site_name = urlparse(site["href"]).netloc
             site_id = site["data-id"]
             site_id_dict[site_name] = site_id
         GlobalVars.site_id_dict = site_id_dict
