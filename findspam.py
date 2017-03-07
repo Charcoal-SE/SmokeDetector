@@ -492,6 +492,7 @@ class FindSpam:
         r"[\w-]{12}\.(webs|66ghz)\.com", r'online\.us[/"<]',
         r"ptvsports\d+.com",
         r"youth\Wserum",
+        r"buyviewsutube"
     ]
     city_list = [
         "Agra", "Amritsar", "Bangalore", "Bhopal", "Chandigarh", "Chennai", "Coimbatore", "Delhi", "Dubai", "Durgapur",
