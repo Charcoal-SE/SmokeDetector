@@ -895,3 +895,4 @@ srtspl\.in
 tutorspoint\.com
 mytechtalk\.org
 axaengineers\.com
+intimtown\.in
