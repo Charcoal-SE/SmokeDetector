@@ -15,7 +15,7 @@ import datahandling
 class DeletionWatcher:
     @classmethod
     def update_site_id_list(self):
-        soup = BeautifulSoup(requests.get("http://meta.stackexchange.com/topbar/site-switcher/site-list").text,
+        soup = BeautifulSoup(requests.get("https://meta.stackexchange.com/topbar/site-switcher/site-list").text,
                              "html.parser")
         site_id_dict = {}
         for site in soup.findAll("a", attrs={"data-id": True}):
@@ -26,17 +26,20 @@ class DeletionWatcher:
 
     @classmethod
     def check_websocket_for_deletion(self, post_site_id, post_url, timeout):
+        print("Deletion websocket started")
         time_to_check = time.time() + timeout
         post_id = post_site_id[0]
         post_type = post_site_id[2]
         if post_type == "answer":
             question_id = str(datahandling.get_post_site_id_link(post_site_id))
             if question_id is None:
+                print("Couldn't find question ID")
                 return
         else:
             question_id = post_id
         post_site = post_site_id[1]
         if post_site not in GlobalVars.site_id_dict:
+            print("Post site not recognized")
             return
         site_id = GlobalVars.site_id_dict[post_site]
 
