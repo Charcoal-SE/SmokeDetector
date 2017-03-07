@@ -40,7 +40,7 @@ class DeletionWatcher:
             return
         site_id = GlobalVars.site_id_dict[post_site]
 
-        ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
+        ws = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
         ws.send(site_id + "-question-" + question_id)
 
         while time.time() < time_to_check:
