@@ -8,6 +8,7 @@ import requests
 import json
 import time
 import math
+import regex
 
 
 # methods to load files and filter data in them:
@@ -346,7 +347,7 @@ def check_site_and_get_full_name(site):
         if not refreshed:
             return False, "Could not fetch sites: " + msg
     for item in GlobalVars.se_sites:
-        full_name = item["site_url"].replace("http://", "")
+        full_name = regex.sub(r'https?://', '', item['site_url']))
         short_name = item["api_site_parameter"]
         if site == full_name or site == short_name:
             return True, full_name
