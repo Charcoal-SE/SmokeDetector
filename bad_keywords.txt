@@ -1,23 +1,15 @@
-baba ji
+baba\W?ji
 fifa.{0,20}coins?
 fifabay
 Long ?Path ?Tool
 writing service
-fifaodell
-brianfo
 tosterone
-bajotz
-kolcak
-Zapyo
 we (offer|give out) (loans|funds|funding)
-molvi
 judi bola
 lost lover'?s?
 rejuvenated skin
-ProBrain
 restore[ -]?samsung[ -]?data
 swtor2credits
-me2.do
 death reckoning calculate
 bam2u
 Neuro(3X|flexyn|fuse|luma|plex)
@@ -30,7 +22,7 @@ Alpha ?(Rush|Fuel)
 exoslim
 Blackline Elite
 TestCore Pro
-blank(ed)? ?ATM\\b( card)?
+blank(ed)? ?ATM\b( card)?
 ATM Machine Vault
 Xtreme Antler
 Maxx Test 3000
@@ -79,7 +71,7 @@ eduCBA
 Solid[ -]?SEO[ -]?Tools
 maxman ?power
 niagen
-Testo (X|Black)
+testo\W(e?x|black|ultra|muscle)
 day ?trading ?academy
 skinology
 folliplex
@@ -136,21 +128,196 @@ service proposal essay
 enetdocumentation
 okaygoods
 dr ?eziza
-(spell(home)?|temple|classes)@gmail\\.com
+(spell(home)?|temple|classes)@gmail\.com
 viagra
 cialis
 slotobit
 putlocker
 vimax
 (contact|call) us today
-call \\d{3}-\\d{4}-\\d{4}
-I knew I wanted to get him alone, but I couldn.t be obvious about it. So, I came up with a plan. I waited
-Yeah! I had some liquid courage. I figured I would give it a shot. The worst he could say was no! Plus the semester
-friends that I came to UCU  a virgin and the first day I lost my virginity in a shower with two girls
-As I am carrying my personal effects to my room, I spot this girl, probably another fresher, sex hungry as I am
+call \d{3}-\d{4}-\d{4}
 Thierno(_| )?M.(_| )Sow
 maxtropin
-testo(?!sterone)
 geniux
 we are a team of (highly|professionals)
 booty pop
+Beard Czar
+Cianix
+(falcon|gladiator|tactical)\Wflashlights?
+Juvanere
+age-opposing
+revived\syouth
+follinique
+muscle supplement
+maxatin
+paravex
+testabolan
+ANG kimoc.?hi
+biocilium
+abella\Wmayfair
+Intelleral
+livana\Wlift
+alpha\Wmax
+vivalux
+call\Wgirl
+Youth Serum
+explosive muscle
+zyntix
+genbrain
+teeth lightening
+alpha\Wprime
+alpha\Wforce\Wtesto
+xtest\W(muscle|reviews?)
+inteligen
+natural\Wslim\Wlife
+test\Wx\W360
+newlifeherbalclinic
+male\W?x\W?pro
+break\Wup\Wpill
+biogenic\Wxr
+bella\W(dior|serata)
+nitro\Wmxs
+alpha\Wmonster\Wadvanced
+hl12
+xength
+red\Wfortera
+skin\Wopulent
+vegalash
+lux\W?derma
+trinity\Wx3
+satin\Wyouth\Wcream
+metabo\Wpure\Wmax
+nitric\Wmuscle\Wuptake
+dermatek
+Pass4Sure
+floracil50
+instaketones
+apexatropin
+keranique
+rejuvonus
+image\Wrevive
+914[-()]{02}517[-]?3229
+cognishield
+spartagen
+blackcore
+xiphos
+muscle\Wforce\Wfx
+vitanoria
+obat
+vlamorous
+erect\Wxl
+hl\Wslim
+beard\Wczar
+nitric\Wmuscle
+phytolyft
+black\Wdiamond\Wforce
+crepe\Werase
+Forever Bust
+borealis\Wcream
+miracle\Wbust
+apex\Wplump
+radley\W(\w+\W)?((hand)?bag|purse)s?
+somabiotix
+kerave\Whair
+t6\Wblack
+frequensea
+alphadrox
+vinetics\Wc
+soleil\Wglo
+Clariderm\WCream
+hack\Wtool
+gain\Wxt(reme)?
+evermax
+biotic\Wmax
+dominant\Wtesto
+bella\Wgold
+nubiotix
+uflysoft
+no2\Wforce\Wfx
+stack\Wxtreme
+nutraher\Wlean
+raw\Wpower\Wxl
+pantothen
+argireline
+brick\Wmuscle
+# documentation: the plus is skipped by the word boundary condition in the code
+# so we can't match that directly, but we can say "if we just skipped a plus sign"
+(?<=\+)234\d{8,14}
+vividermix
+dsn\Wpre\Wworkout
+(?<=\+)15402277725
+kerotin
+newbioti(x|cs)
+max\Wsynapse
+platinum\Wxt
+renovie
+cactinea
+provillus
+(testo|nitro)menix
+x\Walpha\Wmuscle
+parisian\Wglow
+revyve\Wskin
+krojamsoft
+beta\Wprostate
+oveena
+junivive
+easy\Wloss\Wcleanse
+erect\Won\Wdemand
+nucific
+mayo\Wclinic
+alpha\Wx\Wboost
+tacticlight
+lumanere
+x\Walpha\Wboost
+pure\Wvitamen
+staminon
+hydralie
+pro\W?shred
+little\Wpink\Wpill
+vigor\Wexcel
+optimal\Wrock
+slim\Wfit\W180
+azienda\Wcollagen
+testo\Wboost
+internal\W911
+neuphoric\Wskin
+true\Wbrilliance
+neuroignite
+muscle\Wxtx
+test\Wboost\Welite
+gs\Wrichcopy\W360
+collamask
+skincell\Wpro
+naturacel
+luminescent\Wserum
+rx24
+omega\Wrejuvenol
+spa\Welixir
+ultra\W?flex
+deep\Wsea\Wskin
+hypertone\Wforce
+dietary\Wsupplement
+rexadrene
+neurolon
+testosterone\Wreload
+pure\Wnitro
+contact us now
+celaxas
+celexas
+nutrition.*plan
+infinite\Wcleanse
+helix6
+intellex\Wplus
+andronite
+idol\Wtan
+max\Wgrow\Wxtreme
+mind\Wbooster
+\w*cyberhack\w*@\w*mail\.com
+secret\Wallure\Wcream
+sex\Wscandal
+kratos\Wmax
+safe\Wdriving\Wbreathaly(s|z)er
+rapid\Wageless
+better\Wbeard\Wclub\W
+better\Wbeard\Wclub
+gain xt

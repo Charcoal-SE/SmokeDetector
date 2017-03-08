@@ -2,14 +2,15 @@
 
 import os
 from datetime import datetime
-from ChatExchange.chatexchange.client import Client
+from chatexchange_extension import Client
 import HTMLParser
-import md5
+from hashlib import md5
 import ConfigParser
 from helpers import environ_or_none
 import threading
 
 
+# noinspection PyClassHasNoInit,PyDeprecation
 class GlobalVars:
     false_positives = []
     whitelisted_users = []
@@ -23,6 +24,7 @@ class GlobalVars:
     meta_tavern_room_id = "89"
     socvr_room_id = "41570"
     blockedTime = {"all": 0, charcoal_room_id: 0, meta_tavern_room_id: 0, socvr_room_id: 0}
+    metasmoke_last_ping_time = datetime.now()
 
     experimental_reasons = []  # Don't widely report these
     non_socvr_reasons = []    # Don't report to SOCVR
@@ -85,7 +87,7 @@ class GlobalVars:
             "137665",   # ByteCommander
             "147884",   # wythagoras
             "186395",   # Åna
-            "193364",   # Ashish Ahuja
+            "181293",   # Ashish Ahuja
             "163686",   # Gothdo
             "145827",   # angussidney
             "244748",   # Supreme Leader SnokeDetector (angussidney's sock)
@@ -105,7 +107,19 @@ class GlobalVars:
             "62118",    # tripleee
             "130558",   # Registered User
             "128113",   # arda
-            "164318"    # Glorfindel
+            "164318",   # Glorfindel
+            "175347",   # Floern
+            "180274",   # Alexander O'Mara
+            "158742",   # Rob
+            "207356",   # 4castle
+            "133031",   # Mithrandir
+            "169713",   # Mego
+            "126657",   # Cerbrus
+            "10145",    # Thomas Ward
+            "161943",   # J F
+            "195967",   # CaffeineAddiction
+            "5363",     # Stijn
+            "248139"   # FelixSFD
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
@@ -176,7 +190,8 @@ class GlobalVars:
             "262823",   # ArtOfCode
             "215067",   # Ferrybig
             "308386",   # Magisch
-            "285368"    # angussidney
+            "285368",   # angussidney
+            "158829"    # Thomas Ward
         ],
         socvr_room_id: [
             "1849664",  # Undo
@@ -230,7 +245,7 @@ class GlobalVars:
             "792066",   # Braiam
             "5666987",  # Ian
             "3160466",  # ArtOfCode
-            "5735775",  # Ashish Ahuja
+            "4688119",  # Ashish Ahuja
             "3476191",  # Nobody Nada
             "2227743",  # Eric D
             "821878",   # Ryan Bemrose
@@ -238,7 +253,15 @@ class GlobalVars:
             "4875631",  # FrankerZ
             "2958086",  # Compass
             "499214",   # JanDvorak
-            "5647260"  # Andrew L.
+            "5647260",  # Andrew L.
+            "559745",   # Floern
+            "5743988",  # 4castle
+            "4622463",  # angussidney
+            "603346",   # Thomas Ward
+            "3002139",  # Baum mit Augen
+            "1863564",  # QPaysTaxes
+            "4687348",  # FelixSFD
+            "4751173"  # Glorfindel
         ]
     }
 
@@ -252,11 +275,11 @@ class GlobalVars:
     commit = os.popen('git log --pretty=format:"%h" -n 1').read()
     commit_author = os.popen('git log --pretty=format:"%an" -n 1').read()
 
-    if md5.new(commit_author).hexdigest() in censored_committer_names:
-        commit_author = censored_committer_names[md5.new(commit_author).hexdigest()]
+    if md5(commit_author).hexdigest() in censored_committer_names:
+        commit_author = censored_committer_names[md5(commit_author).hexdigest()]
 
     commit_with_author = os.popen('git log --pretty=format:"%h (' + commit_author + ': *%s*)" -n 1').read()
-    on_master = os.popen("git rev-parse --abbrev-ref HEAD").read().strip() == "master"
+    on_master = "HEAD detached" not in os.popen("git status").read()
     charcoal_hq = None
     tavern_on_the_meta = None
     socvr = None
@@ -274,7 +297,14 @@ class GlobalVars:
     multiple_reporters = []
     api_calls_per_site = {}
 
+    standby_message = ""
+    standby_mode = False
+
     api_request_lock = threading.Lock()
+
+    num_posts_scanned = 0
+    post_scan_time = 0
+    posts_scan_stats_lock = threading.Lock()
 
     config = ConfigParser.RawConfigParser()
 
@@ -303,7 +333,8 @@ class GlobalVars:
         print metasmoke_host
     except ConfigParser.NoOptionError:
         metasmoke_host = None
-        print "metasmoke host not found. Set it as metasmoke_host in the config file. See https://github.com/Charcoal-SE/metasmoke."
+        print "metasmoke host not found. Set it as metasmoke_host in the config file." \
+              "See https://github.com/Charcoal-SE/metasmoke."
 
     try:
         metasmoke_key = config.get("Config", "metasmoke_key")

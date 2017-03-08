@@ -37,6 +37,7 @@ nosetests.xml
 .idea/
 
 # False positives, whitelisted/blacklisted users, ignored posts, etc.
+# - Old format text files:
 falsePositives.txt
 whitelistedUsers.txt
 blacklistedUsers.txt
@@ -49,6 +50,22 @@ whyDataAllspam.txt
 latestMessages.txt
 apiCalls.txt
 bodyfetcherQueue.txt
+bodyfetcherMaxIds.txt
+# - New format Pickle files:
+falsePositives.p
+whitelistedUsers.p
+blacklistedUsers.p
+ignoredPosts.p
+autoIgnoredPosts.p
+users.p
+notifications.p
+whyData.p
+whyDataAllspam.p
+latestMessages.p
+apiCalls.p
+apiCalls.pickle
+bodyfetcherQueue.p
+bodyfetcherMaxIds.p
 
 # Settings files
 .settings/
@@ -65,3 +82,6 @@ test/.cache/
 
 # Config
 config
+
+# Ignore .DS_Store file (usually seen in Mac environments)
+.DS_Store

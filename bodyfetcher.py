@@ -1,5 +1,5 @@
 from spamhandling import handle_spam, check_if_spam
-from datahandling import add_or_update_api_data, clear_api_data, store_bodyfetcher_queue
+from datahandling import add_or_update_api_data, clear_api_data, store_bodyfetcher_queue, store_bodyfetcher_max_ids
 from globalvars import GlobalVars
 from operator import itemgetter
 from datetime import datetime
@@ -7,11 +7,12 @@ import json
 import time
 import threading
 import requests
-import regex
 
 
+# noinspection PyClassHasNoInit,PyBroadException
 class BodyFetcher:
     queue = {}
+    previous_max_ids = {}
 
     special_cases = {
         "math.stackexchange.com": 15,
@@ -62,6 +63,7 @@ class BodyFetcher:
 
     api_data_lock = threading.Lock()
     queue_modify_lock = threading.Lock()
+    max_ids_modify_lock = threading.Lock()
 
     def add_to_queue(self, post, should_check_site=False):
         mse_sandbox_id = 3122
@@ -94,12 +96,10 @@ class BodyFetcher:
         for site, values in self.queue.iteritems():
             if site in self.special_cases:
                 if len(values) >= self.special_cases[site]:
-                    print "site {0} met special case quota, fetching...".format(site)
                     self.make_api_call_for_site(site)
                     return
             if site in self.time_sensitive:
                 if len(values) >= 1 and datetime.utcnow().hour in range(4, 12):
-                    print "site {0} has activity during peak spam time, fetching...".format(site)
                     self.make_api_call_for_site(site)
                     return
 
@@ -119,13 +119,45 @@ class BodyFetcher:
 
     def make_api_call_for_site(self, site):
         if site not in self.queue:
-            GlobalVars.charcoal_hq.send_message("Attempted API call to {} but there are no posts to fetch.".format(site))
             return
 
         self.queue_modify_lock.acquire()
-        posts = self.queue.pop(site)
+        new_post_ids = self.queue.pop(site)
         store_bodyfetcher_queue()
         self.queue_modify_lock.release()
+
+        self.max_ids_modify_lock.acquire()
+
+        if site in self.previous_max_ids and max(new_post_ids) > self.previous_max_ids[site]:
+            previous_max_id = self.previous_max_ids[site]
+            intermediate_posts = range(previous_max_id + 1, max(new_post_ids))
+
+            # We don't want to go over the 100-post API cutoff, so take the last
+            # (100-len(new_post_ids)) from intermediate_posts
+
+            intermediate_posts = intermediate_posts[(len(new_post_ids) - 100):]
+
+            # new_post_ids could contain edited posts, so merge it back in
+            combined = intermediate_posts + new_post_ids
+
+            # Could be duplicates, so uniquify
+            posts = list(set(combined))
+        else:
+            posts = new_post_ids
+
+        try:
+            if max(new_post_ids) > self.previous_max_ids[site]:
+                self.previous_max_ids[site] = max(new_post_ids)
+                store_bodyfetcher_max_ids()
+        except KeyError:
+            self.previous_max_ids[site] = max(new_post_ids)
+            store_bodyfetcher_max_ids()
+
+        self.max_ids_modify_lock.release()
+
+        print("New IDs / Hybrid Intermediate IDs for {0}:".format(site))
+        print(sorted(new_post_ids))
+        print(sorted(posts))
 
         question_modifier = ""
         pagesize_modifier = ""
@@ -138,11 +170,15 @@ class BodyFetcher:
             else:
                 pagesize = "25"
 
-            pagesize_modifier = "&pagesize={pagesize}&min={time_length}".format(pagesize=pagesize, time_length=str(self.last_activity_date))
+            pagesize_modifier = "&pagesize={pagesize}" \
+                                "&min={time_length}".format(pagesize=pagesize, time_length=str(self.last_activity_date))
         else:
             question_modifier = "/{0}".format(";".join(str(post) for post in posts))
 
-        url = "http://api.stackexchange.com/2.2/questions{q_modifier}?site={site}&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw(({optional_min_query_param}".format(q_modifier=question_modifier, site=site, optional_min_query_param=pagesize_modifier)
+        url = "https://api.stackexchange.com/2.2/questions{q_modifier}?site={site}" \
+              "&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw((" \
+              "{optional_min_query_param}".format(q_modifier=question_modifier, site=site,
+                                                  optional_min_query_param=pagesize_modifier)
 
         # wait to make sure API has/updates post data
         time.sleep(3)
@@ -152,10 +188,19 @@ class BodyFetcher:
         if GlobalVars.api_backoff_time > time.time():
             time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
         try:
-            time_request_made = datetime.strftime(datetime.now(), '%H:%M:%S')
+            time_request_made = datetime.now().strftime('%H:%M:%S')
             response = requests.get(url, timeout=20).json()
-        except requests.exceptions.Timeout:
-            return  # could add some retrying logic here, but eh.
+        except (requests.exceptions.Timeout, requests.ConnectionError, Exception):
+            # Any failure in the request being made (timeout or otherwise) should be added back to
+            # the queue.
+            self.queue_modify_lock.acquire()
+            if site in self.queue:
+                self.queue[site].extend(posts)
+            else:
+                self.queue[site] = posts
+            self.queue_modify_lock.release()
+            GlobalVars.api_request_lock.release()
+            return
 
         self.api_data_lock.acquire()
         add_or_update_api_data(site)
@@ -164,11 +209,14 @@ class BodyFetcher:
         message_hq = ""
         if "quota_remaining" in response:
             if response["quota_remaining"] - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0:
-                GlobalVars.charcoal_hq.send_message("API quota rolled over with {0} requests remaining. Current quota: {1}.".format(GlobalVars.apiquota, response["quota_remaining"]))
+                GlobalVars.charcoal_hq.send_message("API quota rolled over with {0} requests remaining. "
+                                                    "Current quota: {1}.".format(GlobalVars.apiquota,
+                                                                                 response["quota_remaining"]))
                 sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1), reverse=True)
                 api_quota_used_per_site = ""
                 for site_name, quota_used in sorted_calls_per_site:
-                    api_quota_used_per_site += site_name.replace('.com', '').replace('.stackexchange', '') + ": {0}\n".format(str(quota_used))
+                    sanatized_site_name = site_name.replace('.com', '').replace('.stackexchange', '')
+                    api_quota_used_per_site += sanatized_site_name + ": {0}\n".format(str(quota_used))
                 api_quota_used_per_site = api_quota_used_per_site.strip()
                 GlobalVars.charcoal_hq.send_message(api_quota_used_per_site, False)
                 clear_api_data()
@@ -176,7 +224,8 @@ class BodyFetcher:
                 GlobalVars.charcoal_hq.send_message("API reports no quota left!  May be a glitch.")
                 GlobalVars.charcoal_hq.send_message(str(response))  # No code format for now?
             if GlobalVars.apiquota == -1:
-                GlobalVars.charcoal_hq.send_message("Restart: API quota is {quota}.".format(quota=response["quota_remaining"]))
+                GlobalVars.charcoal_hq.send_message("Restart: API quota is {quota}."
+                                                    .format(quota=response["quota_remaining"]))
             GlobalVars.apiquota = response["quota_remaining"]
         else:
             message_hq = "The quota_remaining property was not in the API response."
@@ -191,9 +240,6 @@ class BodyFetcher:
         if "backoff" in response:
             if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
                 GlobalVars.api_backoff_time = time.time() + response["backoff"]
-            match = regex.compile('/2.2/([^.]*)').search(url)
-            url_part = match.group(1) if match else url
-            message_hq += "\nBackoff received of {} seconds on request to `{}` at {} UTC".format(str(response["backoff"]), url_part, time_request_made)
 
         GlobalVars.api_request_lock.release()
 
@@ -208,9 +254,15 @@ class BodyFetcher:
             if len(items) > 0 and "last_activity_date" in items[0]:
                 self.last_activity_date = items[0]["last_activity_date"]
 
+        num_scanned = 0
+        start_time = time.time()
+
         for post in response["items"]:
             if "title" not in post or "body" not in post:
                 continue
+
+            num_scanned += 1
+
             title = GlobalVars.parser.unescape(post["title"])
             body = GlobalVars.parser.unescape(post["body"])
             link = post["link"]
@@ -255,12 +307,12 @@ class BodyFetcher:
                                 down_vote_count=down_vote_count,
                                 question_id=None)
                 except:
-                    print "NOP"
+                    pass
             try:
                 for answer in post["answers"]:
+                    num_scanned += 1
                     answer_title = ""
                     body = answer["body"]
-                    print "got answer from owner with name " + owner_name
                     link = answer["link"]
                     a_id = str(answer["answer_id"])
                     post_score = answer["score"]
@@ -303,7 +355,13 @@ class BodyFetcher:
                                         down_vote_count=down_vote_count,
                                         question_id=q_id)
                         except:
-                            print "NOP"
+                            pass
             except:
-                print "no answers"
+                pass
+
+        end_time = time.time()
+        GlobalVars.posts_scan_stats_lock.acquire()
+        GlobalVars.num_posts_scanned += num_scanned
+        GlobalVars.post_scan_time += end_time - start_time
+        GlobalVars.posts_scan_stats_lock.release()
         return

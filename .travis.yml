@@ -5,6 +5,7 @@ python:
 install:
   - pip install -r requirements.txt --upgrade
 script:
+  - flake8 --config=tox_tests.ini ./test/
   - flake8 ./
   - python -W default::Warning -m pytest test
 branches:

@@ -1,0 +1,17 @@
+^l(?:ol){2,}$
+^troll$
+tejveer ?iq
+ser?vice pemanas?
+\bnigg[aeu][rh]?
+\b(fuck(er|ing)?|penis)\b
+^\w{0,3}w.ng.?d.ng\w{0,3}$
+dlqudals
+^[a-z ]+juri(?:n|na|ns|sa|ya|yam|ym)$
+^[a-z]+jiibond$
+Marlin Woods
+xiguai
+Dr\. Madonna
+Pro Max
+^hl12
+defort\ essid
+^pus(sy)?$
