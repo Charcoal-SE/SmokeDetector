@@ -318,3 +318,4 @@ sex\Wscandal
 kratos\Wmax
 safe\Wdriving\Wbreathaly(s|z)er
 rapid\Wageless
+better\Wbeard\Wclub\W
