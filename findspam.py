@@ -183,11 +183,11 @@ def has_health(s, site, *args):   # flexible detection of health spam in titles
 
 def pattern_product_name(s, site, *args):
     keywords = ["Testo", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Kamasutra", "HL-?12", "NeuroFuse",
-                         "Junivive", "Apexatropin", "Gain", "Allure",
-                         "Elite", "Force", "Exceptional", "Enhance(ment)?", "Nitro", "Max", "Boost", "E?xtreme", "Grow",
-                         "Deep", "Male", "Pro", "Advanced", "Monster",
-                         "Pure", "Skin", "Sea", "Muscle", "Ascend",
-                         "Serum", "Supplement", "Fuel", "Cream"]
+                "Junivive", "Apexatropin", "Gain", "Allure",
+                "Elite", "Force", "Exceptional", "Enhance(ment)?", "Nitro", "Max", "Boost", "E?xtreme", "Grow",
+                "Deep", "Male", "Pro", "Advanced", "Monster",
+                "Pure", "Skin", "Sea", "Muscle", "Ascend",
+                "Serum", "Supplement", "Fuel", "Cream"]
     if site != "math.stackexchange.com" and site != "mathoverflow.net":
         keywords += ["Xt?", "Aplha", "Prime", "Formula"]
     keywords = "|".join(keywords)
