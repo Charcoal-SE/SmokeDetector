@@ -320,3 +320,4 @@ rapid\Wageless
 better\Wbeard\Wclub
 renuglow
 duplicate\Wfile\Wdeleter
+money\Wgenerator
