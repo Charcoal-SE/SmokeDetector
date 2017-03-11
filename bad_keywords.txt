@@ -302,8 +302,7 @@ neurolon
 testosterone\Wreload
 pure\Wnitro
 contact us now
-celaxas
-celexas
+cel[ae]xas
 nutrition.*plan
 infinite\Wcleanse
 helix6
@@ -319,3 +318,5 @@ kratos\Wmax
 safe\Wdriving\Wbreathaly(s|z)er
 rapid\Wageless
 better\Wbeard\Wclub
+renuglow
+duplicate\Wfile\Wdeleter
