@@ -185,11 +185,11 @@ def pattern_product_name(s, site, *args):
     keywords = ["Testo?", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Kamasutra", "HL-?12", "NeuroFuse",
                 "Junivive", "Apexatropin", "Gain", "Allure", "Nuvella",
                 "Elite", "Force", "Exceptional", "Enhance(ment)?", "Nitro", "Max", "Boost", "E?xtreme", "Grow",
-                "Deep", "Male", "Pro", "Advanced", "Monster",
+                "Deep", "Male", "Pro", "Advanced", "Monster", "Divine",
                 "Pure", "Skin", "Sea", "Muscle", "Ascend",
                 "Serum", "Supplement", "Fuel", "Cream"]
     if site != "math.stackexchange.com" and site != "mathoverflow.net":
-        keywords += ["E?Xt?", "Aplha", "Prime", "Formula"]
+        keywords += ["E?Xt?", "Alpha", "Prime", "Formula"]
     keywords = "|".join(keywords)
     three_words = regex.compile(ur"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
     two_words = regex.compile(ur"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
