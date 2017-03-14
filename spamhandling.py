@@ -9,8 +9,8 @@ import metasmoke
 import deletionwatcher
 import excepthook
 import regex
-import json
 import time
+from classes import Post
 
 
 def should_whitelist_prevent_alert(user_url, reasons):
@@ -26,14 +26,17 @@ def should_reasons_prevent_tavern_posting(reasons):
     return len(reasons_comparison) == 0
 
 
-def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer, body_is_summary, owner_rep,
-                  post_score):
-    if not body:
-        body = ""
-    test, why = FindSpam.test_post(title, body, user_name, post_site, is_answer, body_is_summary, owner_rep, post_score)
-    if datahandling.is_blacklisted_user(parsing.get_user_from_url(user_url)):
+# def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answer, body_is_summary, owner_rep,
+#                   post_score):
+def check_if_spam(post):
+    # if not post.body:
+    #     body = ""
+    # test, why = FindSpam.test_post(title, body, user_name, post_site,
+    # is_answer, body_is_summary, owner_rep, post_score)
+    test, why = FindSpam.test_post(post)
+    if datahandling.is_blacklisted_user(parsing.get_user_from_url(post.user_url)):
         test.append("blacklisted user")
-        blacklisted_user_data = datahandling.get_blacklisted_user_data(parsing.get_user_from_url(user_url))
+        blacklisted_user_data = datahandling.get_blacklisted_user_data(parsing.get_user_from_url(post.user_url))
         if len(blacklisted_user_data) > 1:
             message_url = 'http:' + blacklisted_user_data[1]
             blacklisted_post_url = blacklisted_user_data[2]
@@ -45,50 +48,19 @@ def check_if_spam(title, body, user_name, user_url, post_site, post_id, is_answe
             else:
                 why += u"\n" + u"Blacklisted user - blacklisted by {}".format(message_url)
     if 0 < len(test):
-        if datahandling.has_already_been_posted(post_site, post_id, title) \
-                or datahandling.is_false_positive((post_id, post_site)) \
-                or should_whitelist_prevent_alert(user_url, test) \
-                or datahandling.is_ignored_post((post_id, post_site)) \
-                or datahandling.is_auto_ignored_post((post_id, post_site)):
+        if datahandling.has_already_been_posted(post.post_site, post.post_id, post.title) \
+                or datahandling.is_false_positive((post.post_id, post.post_site)) \
+                or should_whitelist_prevent_alert(post.user_url, test) \
+                or datahandling.is_ignored_post((post.post_id, post.post_site)) \
+                or datahandling.is_auto_ignored_post((post.post_id, post.post_site)):
             return False, None, ""  # Don't repost. Reddit will hate you.
         return True, test, why
     return False, None, ""
 
 
 def check_if_spam_json(json_data):
-    text_data = json.loads(json_data)["data"]
-    if text_data == "hb":
-        return False, None, ""
-    try:
-        data = json.loads(text_data)
-    except ValueError:
-        GlobalVars.charcoal_hq.send_message(u"Encountered ValueError parsing the following:\n{0}".format(json_data),
-                                            False)
-        return False, None, ""
-    if "ownerUrl" not in data:
-        # owner's account doesn't exist anymore, no need to post it in chat:
-        # http://chat.stackexchange.com/transcript/message/18380776#18380776
-        return False, None, ""
-    title = data["titleEncodedFancy"]
-    title = parsing.unescape_title(title)
-    body = data["bodySummary"]
-    poster = data["ownerDisplayName"]
-    url = data["url"]
-    post_id = str(data["id"])
-    print time.strftime("%Y-%m-%d %H:%M:%S"), title.encode("ascii", errors="replace")
-    site = data["siteBaseHostAddress"]
-    site = site.encode("ascii", errors="replace")
-    sys.stdout.flush()
-    is_spam, reason, why = check_if_spam(title=title,
-                                         body=body,
-                                         user_name=poster,
-                                         user_url=url,
-                                         post_site=site,
-                                         post_id=post_id,
-                                         is_answer=False,
-                                         body_is_summary=True,
-                                         owner_rep=1,
-                                         post_score=0)
+    post = Post(json_data=json_data)
+    is_spam, reason, why = check_if_spam(post)
     return is_spam, reason, why
 
 

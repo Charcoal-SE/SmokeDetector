@@ -2,6 +2,7 @@ import json
 from globalvars import GlobalVars
 from parsing import unescape_title
 
+
 class Post:
     _body = ""
     _body_is_summary = False
@@ -35,9 +36,10 @@ class Post:
 
     def __repr__(self):
         type_name = type(self).__name__
-        dataset = ['title='+self.title, 'body='+self.body, 'user_name='+self.user_name, 'user_url='+self.user_url,
-                   'post_site='+self.post_site, 'post_id='+self.post_id, 'is_answer='+self.is_answer,
-                   'body_is_summary='+self.body_is_summary, 'owner_rep='+self.owner_rep, 'post_score='+self.post_score]
+        dataset = ['title=' + self.title, 'body=' + self.body, 'user_name=' + self.user_name,
+                   'user_url=' + self.user_url, 'post_site=' + self.post_site, 'post_id=' + self.post_id,
+                   'is_answer=' + self.is_answer, 'body_is_summary=' + self.body_is_summary,
+                   'owner_rep=' + self.owner_rep, 'post_score=' + self.post_score]
         return "%s(%s)" % (type_name, ', '.join(dataset))
 
     def _parse_json_post(self, json_data):
@@ -65,6 +67,8 @@ class Post:
         self._post_site = self._post_site.encode("ascii", errors="replace")
         self._owner_rep = 1
         self._post_score = 0
+        self._body_is_summary = True
+        self._is_answer = False
         # is_spam, reason, why = check_if_spam(title=title,
         #                                      body=body,
         #                                      user_name=poster,
