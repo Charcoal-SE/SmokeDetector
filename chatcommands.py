@@ -1145,7 +1145,7 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
             output.append("Post {}: Already recently reported".format(index))
             continue
         post_data.is_answer = (post_data.post_type == "answer")
-        post = Post(api_response=dict(post_data))
+        post = Post(api_response=post_data.as_dict)
         user = get_user_from_url(post_data.owner_url)
         if user is not None:
             add_blacklisted_user(user, message_url, post_data.post_url)
