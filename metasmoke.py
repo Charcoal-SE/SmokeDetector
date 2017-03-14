@@ -14,6 +14,7 @@ import datahandling
 import parsing
 import apigetpost
 import spamhandling
+from classes import Post
 
 
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
