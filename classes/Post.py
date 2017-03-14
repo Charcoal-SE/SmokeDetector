@@ -39,7 +39,7 @@ class Post:
         dataset = ['title=' + self.title, 'body=' + self.body, 'user_name=' + self.user_name,
                    'user_url=' + self.user_url, 'post_site=' + self.post_site, 'post_id=' + self.post_id,
                    'is_answer=' + str(self.is_answer), 'body_is_summary=' + str(self.body_is_summary),
-                   'owner_rep=' + str(self.owner_rep), 'post_score=' + self.post_score]
+                   'owner_rep=' + str(self.owner_rep), 'post_score=' + str(self.post_score)]
         return "%s(%s)" % (type_name, ', '.join(dataset))
 
     def _parse_json_post(self, json_data):
@@ -127,23 +127,23 @@ class Post:
 
         # noinspection PyBroadException
         try:
-            self._post_id = str(response["question_id"])
+            self._post_id = unicode(response["question_id"])
         except:
-            self._post_id = str(0)
+            self._post_id = unicode(0)
 
         return
 
     @property
     def body(self):
-        return str(self._body)
+        return unicode(self._body)
 
     @property
     def body_is_summary(self):
-        return str(self._body_is_summary)
+        return unicode(self._body_is_summary)
 
     @property
     def is_answer(self):
-        return str(self._is_answer)
+        return unicode(self._is_answer)
 
     @property
     def owner_rep(self):
@@ -151,7 +151,7 @@ class Post:
 
     @property
     def post_id(self):
-        return str(self._post_id)
+        return unicode(self._post_id)
 
     @property
     def post_score(self):
@@ -159,19 +159,19 @@ class Post:
 
     @property
     def post_site(self):
-        return str(self._post_site)
+        return unicode(self._post_site)
 
     @property
     def title(self):
-        return str(self._title)
+        return unicode(self._title)
 
     @property
     def user_name(self):
-        return str(self._user_name)
+        return unicode(self._user_name)
 
     @property
     def user_url(self):
-        return str(self._user_url)
+        return unicode(self._user_url)
 
     @property
     def up_vote_count(self):
