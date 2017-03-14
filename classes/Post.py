@@ -69,6 +69,8 @@ class Post:
         self._post_score = 0
         self._body_is_summary = True
         self._is_answer = False
+        return
+
         # is_spam, reason, why = check_if_spam(title=title,
         #                                      body=body,
         #                                      user_name=poster,
@@ -79,11 +81,15 @@ class Post:
         #                                      body_is_summary=True,
         #                                      owner_rep=1,
         #                                      post_score=0)
-        raise NotImplementedError
 
     def _parse_api_post(self, response):
         if "title" not in response or "body" not in response:
             return
+
+        if "IsAnswer" in response and response["IsAnswer"] is True:
+            self._is_answer = True
+        else:
+            self._is_answer = False
 
         self._title = GlobalVars.parser.unescape(response["title"])
         self._body = GlobalVars.parser.unescape(response["body"])
@@ -97,9 +103,14 @@ class Post:
             self._user_url = response["owner"]["link"]
             self._owner_rep = response["owner"]["reputation"]
         except:
+            self._user_name = ""
+            self._user_url = ""
+            self._owner_rep = 0
             pass
 
         self._post_id = str(response["question_id"])
+
+        return
 
         # is_spam, reason, why = check_if_spam(title=title,
         #                                      body=body,
@@ -111,7 +122,6 @@ class Post:
         #                                      body_is_summary=False,
         #                                      owner_rep=owner_rep,
         #                                      post_score=post_score)
-        raise NotImplementedError
 
     @property
     def body(self):
@@ -152,6 +162,14 @@ class Post:
     @property
     def user_url(self):
         return self._title
+
+    @property
+    def up_vote_count(self):
+        return self._votes['upvotes']
+
+    @property
+    def down_vote_count(self):
+        return self._votes['downvotes']
 
     # is_spam, reason, why = check_if_spam(title=title,
     #                                      body=body,

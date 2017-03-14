@@ -65,16 +65,17 @@ def check_if_spam_json(json_data):
 
 
 # noinspection PyBroadException,PyProtectedMember
-def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reasons, is_answer, why="",
-                owner_rep=None, post_score=None, up_vote_count=None, down_vote_count=None, question_id=None):
-    post_url = parsing.to_protocol_relative(parsing.url_to_shortlink(post_url))
-    poster_url = parsing.to_protocol_relative(parsing.user_url_to_shortlink(poster_url))
+def handle_spam(post, reasons, why, site):
+# def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reasons, is_answer, why="",
+#                 owner_rep=None, post_score=None, up_vote_count=None, down_vote_count=None, question_id=None):
+    post_url = parsing.to_protocol_relative(parsing.url_to_shortlink(post.post_url))
+    poster_url = parsing.to_protocol_relative(parsing.user_url_to_shortlink(post.user_url))
     reason = ", ".join(reasons[:5])
     if len(reasons) > 5:
         reason += ", +{} more".format(len(reasons) - 5)
     reason = reason[:1].upper() + reason[1:]  # reason is capitalised, unlike the entries of reasons list
     shortened_site = site.replace("stackexchange.com", "SE")  # site.stackexchange.com -> site.SE
-    datahandling.append_to_latest_questions(site, post_id, title if not is_answer else "")
+    datahandling.append_to_latest_questions(site, post.post_id, post.title if not post.is_answer else "")
     if len(reasons) == 1 and ("all-caps title" in reasons or
                               "repeating characters in title" in reasons or
                               "repeating characters in body" in reasons or
@@ -82,14 +83,14 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                               "repeating words in title" in reasons or
                               "repeating words in body" in reasons or
                               "repeating words in answer" in reasons):
-        datahandling.add_auto_ignored_post((post_id, site, datetime.now()))
+        datahandling.add_auto_ignored_post((post.post_id, site, datetime.now()))
     if why is not None and why != "":
-        datahandling.add_why(site, post_id, why)
-    if is_answer and question_id is not None:
-        datahandling.add_post_site_id_link((post_id, site, "answer"), question_id)
+        datahandling.add_why(site, post.post_id, why)
+    if post.is_answer and post.question_id is not None:
+        datahandling.add_post_site_id_link((post.post_id, site, "answer"), post.question_id)
     try:
-        title = parsing.escape_special_chars_in_title(title)
-        sanitized_title = regex.sub('(https?://|\n)', '', title)
+        post.title = parsing.escape_special_chars_in_title(post.title)
+        sanitized_title = regex.sub('(https?://|\n)', '', post.title)
 
         prefix = u"[ [SmokeDetector](//goo.gl/eLDYqh) ]"
         if GlobalVars.metasmoke_key:
@@ -98,26 +99,25 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
         else:
             prefix_ms = prefix
 
-        if not poster.strip():
+        if not post.user_name.strip():
             s = u" {}: [{}]({}) by a deleted user on `{}`".format(reason, sanitized_title.strip(), post_url,
                                                                   shortened_site)
             username = ""
-            user_link = ""
         else:
-            s = u" {}: [{}]({}) by [{}]({}) on `{}`".format(reason, sanitized_title.strip(), post_url, poster.strip(),
-                                                            poster_url, shortened_site)
-            username = poster.strip()
-            user_link = poster_url
+            s = u" {}: [{}]({}) by [{}]({}) on `{}`".format(reason, sanitized_title.strip(), post_url,
+                                                            post.user_name.strip(), poster_url, shortened_site)
+            username = post.user_name.strip()
 
         t_metasmoke = Thread(name="metasmoke send post",
                              target=metasmoke.Metasmoke.send_stats_on_post,
-                             args=(title, post_url, reasons, body, username, user_link, why, owner_rep, post_score,
-                                   up_vote_count, down_vote_count))
+                             args=(post.title, post.post_url, reasons, post.body, username,
+                                   post.user_link, why, post.owner_rep, post.post_score,
+                                   post.up_vote_count, post.down_vote_count))
         t_metasmoke.start()
 
         print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
         if time.time() >= GlobalVars.blockedTime["all"]:
-            datahandling.append_to_latest_questions(site, post_id, title)
+            datahandling.append_to_latest_questions(site, post.post_id, post.title)
             if reason not in GlobalVars.experimental_reasons:
                 if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
                     chq_pings = datahandling.get_user_names_on_notification_list("stackexchange.com",
@@ -141,8 +141,8 @@ def handle_spam(title, body, poster, site, post_url, poster_url, post_id, reason
                         if len(tavern_msg_pings) <= 500 else tavern_msg[0:500]
                     t_check_websocket = Thread(name="deletionwatcher post message if not deleted",
                                                target=deletionwatcher.DeletionWatcher.post_message_if_not_deleted,
-                                               args=((post_id, site, "answer" if is_answer else "question"), post_url,
-                                                     msg_to_send, GlobalVars.tavern_on_the_meta))
+                                               args=((post.post_id, site, "answer" if post.is_answer else "question"),
+                                                     post_url, msg_to_send, GlobalVars.tavern_on_the_meta))
                     t_check_websocket.daemon = True
                     t_check_websocket.start()
                 if site == "stackoverflow.com" and reason not in GlobalVars.non_socvr_reasons \

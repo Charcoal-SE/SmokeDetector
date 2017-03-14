@@ -7,6 +7,7 @@ import json
 import time
 import threading
 import requests
+from classes import Post
 
 
 # noinspection PyClassHasNoInit,PyBroadException
@@ -261,99 +262,35 @@ class BodyFetcher:
             if "title" not in post or "body" not in post:
                 continue
 
+            post_ = Post(api_response=post)
+
             num_scanned += 1
 
-            title = GlobalVars.parser.unescape(post["title"])
-            body = GlobalVars.parser.unescape(post["body"])
-            link = post["link"]
-            post_score = post["score"]
-            up_vote_count = post["up_vote_count"]
-            down_vote_count = post["down_vote_count"]
-            try:
-                owner_name = GlobalVars.parser.unescape(post["owner"]["display_name"])
-                owner_link = post["owner"]["link"]
-                owner_rep = post["owner"]["reputation"]
-            except:
-                owner_name = ""
-                owner_link = ""
-                owner_rep = 0
-            q_id = str(post["question_id"])
+            is_spam, reason, why = check_if_spam(post_)
 
-            is_spam, reason, why = check_if_spam(title=title,
-                                                 body=body,
-                                                 user_name=owner_name,
-                                                 user_url=owner_link,
-                                                 post_site=site,
-                                                 post_id=q_id,
-                                                 is_answer=False,
-                                                 body_is_summary=False,
-                                                 owner_rep=owner_rep,
-                                                 post_score=post_score)
             if is_spam:
                 try:
-                    handle_spam(title=title,
-                                body=body,
-                                poster=owner_name,
+                    handle_spam(post=post_,
                                 site=site,
-                                post_url=link,
-                                poster_url=owner_link,
-                                post_id=q_id,
                                 reasons=reason,
-                                is_answer=False,
-                                why=why,
-                                owner_rep=owner_rep,
-                                post_score=post_score,
-                                up_vote_count=up_vote_count,
-                                down_vote_count=down_vote_count,
-                                question_id=None)
+                                why=why)
                 except:
                     pass
+
             try:
                 for answer in post["answers"]:
                     num_scanned += 1
-                    answer_title = ""
-                    body = answer["body"]
-                    link = answer["link"]
-                    a_id = str(answer["answer_id"])
-                    post_score = answer["score"]
-                    up_vote_count = answer["up_vote_count"]
-                    down_vote_count = answer["down_vote_count"]
-                    try:
-                        owner_name = GlobalVars.parser.unescape(answer["owner"]["display_name"])
-                        owner_link = answer["owner"]["link"]
-                        owner_rep = answer["owner"]["reputation"]
-                    except:
-                        owner_name = ""
-                        owner_link = ""
-                        owner_rep = 0
+                    answer["IsAnswer"] = True  # Necesssary for Post object
+                    answer["title"] = ""  # Necessary for proper Post object creation
+                    answer_ = Post(api_response=answer)
 
-                    is_spam, reason, why = check_if_spam(title=answer_title,
-                                                         body=body,
-                                                         user_name=owner_name,
-                                                         user_url=owner_link,
-                                                         post_site=site,
-                                                         post_id=a_id,
-                                                         is_answer=True,
-                                                         body_is_summary=False,
-                                                         owner_rep=owner_rep,
-                                                         post_score=post_score)
+                    is_spam, reason, why = check_if_spam(post_)
                     if is_spam:
                         try:
-                            handle_spam(title=title,
-                                        body=body,
-                                        poster=owner_name,
+                            handle_spam(answer_,
                                         site=site,
-                                        post_url=link,
-                                        poster_url=owner_link,
-                                        post_id=a_id,
                                         reasons=reason,
-                                        is_answer=True,
-                                        why=why,
-                                        owner_rep=owner_rep,
-                                        post_score=post_score,
-                                        up_vote_count=up_vote_count,
-                                        down_vote_count=down_vote_count,
-                                        question_id=q_id)
+                                        why=why)
                         except:
                             pass
             except:
