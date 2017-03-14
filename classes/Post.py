@@ -69,7 +69,6 @@ class Post:
         self._post_score = 0
         self._body_is_summary = True
         self._is_answer = False
-        return
 
     def _parse_api_post(self, response):
         # post = Post(api_response={'title': '', 'body': '',
@@ -160,6 +159,10 @@ class Post:
     @property
     def post_site(self):
         return unicode(self._post_site)
+
+    @property
+    def post_url(self):
+        return unicode(self._post_url)
 
     @property
     def title(self):
