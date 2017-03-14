@@ -1,6 +1,6 @@
 import json
 from globalvars import GlobalVars
-from parsing import unescape_title
+import parsing
 
 
 class Post:
@@ -58,7 +58,7 @@ class Post:
             # http://chat.stackexchange.com/transcript/message/18380776#18380776
             return
         self._title = data["titleEncodedFancy"]
-        self._title = unescape_title(self._title)
+        self._title = parsing.unescape_title(self._title)
         self._body = data["bodySummary"]
         self._user_name = data["ownerDisplayName"]
         self._user_url = data["url"]
