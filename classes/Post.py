@@ -17,6 +17,8 @@ class Post:
     _votes = {'downvotes': None, 'upvotes': None}
 
     def __init__(self, json_data=None, api_response=None):
+        # type: (str, dict) -> None
+
         if json_data is not None:
             self._parse_json_post(json_data)
         elif api_response is not None:
@@ -43,6 +45,8 @@ class Post:
         return "%s(%s)" % (type_name, ', '.join(dataset))
 
     def _parse_json_post(self, json_data):
+        # type: (str) -> None
+
         text_data = json.loads(json_data)["data"]
         if text_data == "hb":
             return
@@ -71,6 +75,8 @@ class Post:
         self._is_answer = False
 
     def _parse_api_post(self, response):
+        # type: (dict) -> None
+
         # post = Post(api_response={'title': '', 'body': '',
         #                           'owner': {'display_name': '', 'reputation': 1, 'link': ''},
         #                           'site': 'stackoverflow.com', 'question_id': '1', 'IsAnswer': False, 'score': 0})
