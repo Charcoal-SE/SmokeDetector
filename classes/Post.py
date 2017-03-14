@@ -139,11 +139,11 @@ class Post:
 
     @property
     def body_is_summary(self):
-        return unicode(self._body_is_summary)
+        return bool(self._body_is_summary)
 
     @property
     def is_answer(self):
-        return unicode(self._is_answer)
+        return bool(self._is_answer)
 
     @property
     def owner_rep(self):
