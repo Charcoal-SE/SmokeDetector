@@ -14,7 +14,7 @@ import datahandling
 import parsing
 import apigetpost
 import spamhandling
-from classes import Post
+import classes
 
 
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
@@ -104,15 +104,15 @@ class Metasmoke:
                 if user is not None:
                     datahandling.add_blacklisted_user(user, "metasmoke", post_data.post_url)
                 why = u"Post manually reported by user *{}* from metasmoke.\n".format(message["report"]["user"])
-                postobj = Post(api_response={'title': post_data.title, 'body': post_data.body,
-                                             'owner': {'display_name': post_data.owner_name,
-                                                       'reputation': post_data.owner_rep,
-                                                       'link': post_data.owner_url},
-                                             'site': post_data.site, 'IsAnswer': (post_data.post_type == "answer"),
-                                             'score': post_data.score, 'link': post_data.post_url,
-                                             'question_id': post_data.post_id,
-                                             'up_vote_count': post_data.up_vote_count,
-                                             'down_vote_count': post_data.down_vote_count})
+                postobj = classes.Post(api_response={'title': post_data.title, 'body': post_data.body,
+                                                     'owner': {'display_name': post_data.owner_name,
+                                                               'reputation': post_data.owner_rep,
+                                                               'link': post_data.owner_url},
+                                                     'site': post_data.site, 'IsAnswer': (post_data.post_type == "answer"),
+                                                     'score': post_data.score, 'link': post_data.post_url,
+                                                     'question_id': post_data.post_id,
+                                                     'up_vote_count': post_data.up_vote_count,
+                                                     'down_vote_count': post_data.down_vote_count})
                 spamhandling.handle_spam(post=postobj,
                                          reasons=["Manually reported " + post_data.post_type],
                                          why=why)

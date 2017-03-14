@@ -10,7 +10,7 @@ import deletionwatcher
 import excepthook
 import regex
 import time
-from classes import Post
+import classes
 
 
 # noinspection PyMissingTypeHints
@@ -60,7 +60,7 @@ def check_if_spam(post):
 
 # noinspection PyMissingTypeHints
 def check_if_spam_json(json_data):
-    post = Post(json_data=json_data)
+    post = classes.Post(json_data=json_data)
     is_spam, reason, why = check_if_spam(post)
     return is_spam, reason, why
 
