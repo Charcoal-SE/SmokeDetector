@@ -1,6 +1,7 @@
 from globalvars import GlobalVars
 
 
+# noinspection PyMissingTypeHints
 def test_globalvars():
     # Changing values in globalvars.py is fine for debugging, but when
     # pushing, there should be made sure that the values are correct.

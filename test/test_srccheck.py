@@ -10,6 +10,7 @@ def fail_with_message(message):
     pytest.fail(message)
 
 
+# noinspection PyMissingTypeHints
 def test_check_function_names():
     found, smokedetector_root = get_smokedetector_root()
     if not found:
@@ -31,6 +32,7 @@ def test_check_function_names():
                                            "function names.").format(filename[len(smokedetector_root):], current_line))
 
 
+# noinspection PyMissingTypeHints
 def test_check_indentation():
     found, smokedetector_root = get_smokedetector_root()
     if not found:

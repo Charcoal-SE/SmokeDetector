@@ -29,7 +29,9 @@ from classes import Post
 #   if return...else return vs if return...return
 
 
+# noinspection PyMissingTypeHints
 def check_permissions(function):
+    # noinspection PyMissingTypeHints
     def run_command(ev_room, ev_user_id, wrap2, *args, **kwargs):
         if datahandling.is_privileged(ev_room, ev_user_id, wrap2):
             kwargs['ev_room'] = ev_room
@@ -55,6 +57,7 @@ def post_message_in_room(room_id_str, msg, length_check=True):
         GlobalVars.socvr.send_message(msg, length_check)
 
 
+# noinspection PyMissingTypeHints
 def is_report(post_site_id):
     """
     Checks if a post is a report
@@ -66,7 +69,7 @@ def is_report(post_site_id):
     return True
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def send_metasmoke_feedback(post_url, second_part_lower, ev_user_name, ev_user_id, ev_chat_host):
     """
     Sends feedback to metasmoke
@@ -83,6 +86,7 @@ def send_metasmoke_feedback(post_url, second_part_lower, ev_user_name, ev_user_i
     t_metasmoke.start()
 
 
+# noinspection PyMissingTypeHints
 def single_random_user(ev_room):
     """
     Returns a single user name from users in a room
@@ -128,7 +132,7 @@ def command_add_blacklist_user(message_parts, content_lower, message_url, ev_roo
                                 "*or* `!!/addblu userid sitename`.")
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_check_blacklist(content_lower, *args, **kwargs):
     """
     Checks if a user is blacklisted
@@ -179,7 +183,7 @@ def command_remove_blacklist_user(message_parts, content_lower, ev_room, ev_user
 
 
 # --- Whitelist functions --- #
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 @check_permissions
 def command_add_whitelist_user(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -206,7 +210,7 @@ def command_add_whitelist_user(message_parts, content_lower, ev_room, ev_user_id
                                 "`!!/addwlu userid sitename`.")
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_check_whitelist(content_lower, *args, **kwargs):
     """
     Checks if a user is whitelisted
@@ -227,7 +231,7 @@ def command_check_whitelist(content_lower, *args, **kwargs):
                         message="Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`.")
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 @check_permissions
 def command_remove_whitelist_user(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -360,7 +364,7 @@ def command_gitstatus(wrap2, *args, **kwargs):
 
 
 # --- Joke Commands --- #
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_blame(ev_room, *args, **kwargs):
     """
     Returns a string with a user to blame (This is a joke command)
@@ -382,7 +386,7 @@ def command_brownie(*args, **kwargs):
     return Response(command_status=True, message="Brown!")
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_coffee(ev_user_name, *args, **kwargs):
     """
     Returns a string stating who the coffee is for (This is a joke command)
@@ -655,7 +659,7 @@ def command_reboot(ev_room, ev_user_id, wrap2, *args, **kwargs):
     os._exit(5)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Tells user whether or not they have privileges
@@ -771,7 +775,7 @@ def command_standby(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
     return Response(command_status=True, message=None)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_test(content, content_lower, *args, **kwargs):
     """
     Test a post to determine if it'd be automatically reported
@@ -999,7 +1003,7 @@ def command_allnotifications(message_parts, ev_user_id, wrap2, *args, **kwargs):
     return Response(command_status=True, message="You will get notified for these sites:\r\n" + ", ".join(sites))
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_notify(message_parts, ev_user_id, wrap2, *args, **kwargs):
     """
     Subscribe a user to events on a site in a single room
@@ -1036,7 +1040,7 @@ def command_notify(message_parts, ev_user_id, wrap2, *args, **kwargs):
         return Response(command_status=False, message="Unrecognized code returned when adding notification.")
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_unnotify(message_parts, ev_user_id, wrap2, *args, **kwargs):
     """
     Unsubscribes a user to specific events
@@ -1068,7 +1072,7 @@ def command_unnotify(message_parts, ev_user_id, wrap2, *args, **kwargs):
     return Response(command_status=True, message="That configuration doesn't exist.")
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_willbenotified(message_parts, ev_user_id, wrap2, *args, **kwargs):
     """
     Returns a string stating whether a user will be notified or not
@@ -1279,7 +1283,7 @@ def subcommand_falsepositive(ev_room, ev_user_id, wrap2, post_site_id, post_url,
     return Response(command_status=True, message=None)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 @check_permissions
 def subcommand_ignore(ev_room, ev_user_id, wrap2, post_site_id, post_url, quiet_action, second_part_lower, ev_user_name,
                       *args, **kwargs):

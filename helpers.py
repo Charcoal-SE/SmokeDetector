@@ -5,7 +5,7 @@ Response = namedtuple('Response', 'command_status message')
 
 
 # Allows use of `environ_or_none("foo") or "default"` shorthand
-# noinspection PyBroadException
+# noinspection PyBroadException,PyMissingTypeHints
 def environ_or_none(key):
     try:
         return os.environ[key]

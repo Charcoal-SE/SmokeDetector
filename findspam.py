@@ -27,7 +27,7 @@ URL_REGEX = regex.compile(
     r"""*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.UNICODE)
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def has_repeated_words(s, site, *args):
     words = regex.split(r"[\s.,;!/\()\[\]+_-]", s)
     words = [word for word in words if word != ""]
@@ -44,7 +44,7 @@ def has_repeated_words(s, site, *args):
     return False, ""
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def has_few_characters(s, site, *args):
     s = regex.sub("</?p>", "", s).rstrip()    # remove HTML paragraph tags from posts
     uniques = len(set(list(s)))
@@ -56,7 +56,7 @@ def has_few_characters(s, site, *args):
     return False, ""
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def has_repeating_characters(s, site, *args):
     s = regex.sub('http[^"]*', "", s)    # remove URLs for this check
     if s is None or len(s) == 0 or len(s) >= 300 or regex.compile("<pre>|<code>").search(s):
@@ -68,7 +68,7 @@ def has_repeating_characters(s, site, *args):
     return False, ""
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def link_at_end(s, site, *args):   # link at end of question, on selected sites
     s = regex.sub("</strong>|</em>|</p>", "", s)
     match = regex.compile(ur"(?i)https?://(?:[.A-Za-z0-9-]*/?[.A-Za-z0-9-]*/?|plus\.google\.com/"
@@ -80,7 +80,7 @@ def link_at_end(s, site, *args):   # link at end of question, on selected sites
     return False, ""
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def non_english_link(s, site, *args):   # non-english link in short answer
     if len(s) < 600:
         links = regex.compile(ur'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
@@ -93,7 +93,7 @@ def non_english_link(s, site, *args):   # non-english link in short answer
     return False, ""
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def mostly_non_latin(s, site, *args):   # majority of post is in non-Latin, non-Cyrillic characters
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
@@ -104,7 +104,7 @@ def mostly_non_latin(s, site, *args):   # majority of post is in non-Latin, non-
     return False, ""
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def has_phone_number(s, site, *args):
     if regex.compile(ur"(?i)\b(address(es)?|run[- ]?time|error|value|server|hostname|timestamp|warning|code|"
                      ur"(sp)?exception|version|chrome|1234567)\b", regex.UNICODE).search(s):
@@ -131,7 +131,7 @@ def has_phone_number(s, site, *args):
     return False, ""
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def has_customer_service(s, site, *args):  # flexible detection of customer service in titles
     s = s[0:300].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
     s = regex.sub(r"[^A-Za-z0-9\s]", "", s)   # deobfuscate
@@ -151,7 +151,7 @@ def has_customer_service(s, site, *args):  # flexible detection of customer serv
     return False, ""
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def has_health(s, site, *args):   # flexible detection of health spam in titles
     s = s[0:200]   # if applied to body, the beginning should be enough: otherwise many false positives
     capitalized = len(regex.compile(r"\b[A-Z][a-z]").findall(s)) >= 5   # words beginning with uppercase letter
@@ -183,7 +183,7 @@ def has_health(s, site, *args):   # flexible detection of health spam in titles
     return False, ""
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def pattern_product_name(s, site, *args):
     keywords = ["Testo?", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Kamasutra", "HL-?12", "NeuroFuse",
                 "Junivive", "Apexatropin", "Gain", "Allure", "Nuvella", "Trimgenix",
@@ -203,7 +203,7 @@ def pattern_product_name(s, site, *args):
     return False, ""
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def keyword_email(s, site, *args):   # a keyword and an email in the same post
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
@@ -224,7 +224,7 @@ def keyword_email(s, site, *args):   # a keyword and an email in the same post
     return False, ""
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def keyword_link(s, site, *args):   # thanking keyword and a link in the same short answer
     if len(s) > 400:
         return False, ""
@@ -246,7 +246,7 @@ def keyword_link(s, site, *args):   # thanking keyword and a link in the same sh
     return False, ""
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def bad_link_text(s, site, *args):   # suspicious text of a hyperlink
     s = regex.sub("</?strong>|</?em>", "", s)  # remove font tags
     keywords = regex.compile(ur"(?isu)^(buy|cheap) |live[ -]?stream|(^| )make (money|\$)|(^| )(porno?|(whole)?sale|"
@@ -270,7 +270,7 @@ def bad_link_text(s, site, *args):   # suspicious text of a hyperlink
     return False, ""
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def is_offensive_post(s, site, *args):
     if s is None or len(s) == 0:
         return False, ""
@@ -292,7 +292,7 @@ def is_offensive_post(s, site, *args):
     return False, ""
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def has_eltima(s, site, *args):
     reg = regex.compile(ur"(?is)\beltima")
     if reg.search(s) and len(s) <= 750:
@@ -300,7 +300,7 @@ def has_eltima(s, site, *args):
     return False, ""
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def username_similar_website(s, site, *args):
     username = args[0]
     sim_result = perform_similarity_checks(s, username)
@@ -310,6 +310,7 @@ def username_similar_website(s, site, *args):
         return False, ""
 
 
+# noinspection PyMissingTypeHints
 def perform_similarity_checks(post, name):
     """
     Performs 4 tests to determine similarity between links in the post and the user name
@@ -355,10 +356,12 @@ def perform_similarity_checks(post, name):
     return max(t1, t2, t3, t4)
 
 
+# noinspection PyMissingTypeHints
 def similar_ratio(a, b):
     return SequenceMatcher(None, a.lower(), b.lower()).ratio()
 
 
+# noinspection PyMissingTypeHints
 def get_domain(s):
     try:
         extract = tld.get_tld(s, fix_protocol=True, as_object=True, )

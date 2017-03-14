@@ -4,6 +4,7 @@ import pytest
 from classes import Post
 
 
+# noinspection PyMissingTypeHints
 @pytest.mark.parametrize("title, body, username, site, body_is_summary, is_answer, match", [
     ('18669786819 gmail customer service number 1866978-6819 gmail support number', '', '', '', False, False, True),
     ('18669786819 gmail customer service number 1866978-6819 gmail support number', '', '', '', True, False, True),

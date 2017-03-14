@@ -13,6 +13,7 @@ import time
 from classes import Post
 
 
+# noinspection PyMissingTypeHints
 def should_whitelist_prevent_alert(user_url, reasons):
     is_whitelisted = datahandling.is_whitelisted_user(parsing.get_user_from_url(user_url))
     if not is_whitelisted:
@@ -26,6 +27,7 @@ def should_reasons_prevent_tavern_posting(reasons):
     return len(reasons_comparison) == 0
 
 
+# noinspection PyMissingTypeHints
 def check_if_spam(post):
     # if not post.body:
     #     body = ""
@@ -56,6 +58,7 @@ def check_if_spam(post):
     return False, None, ""
 
 
+# noinspection PyMissingTypeHints
 def check_if_spam_json(json_data):
     post = Post(json_data=json_data)
     is_spam, reason, why = check_if_spam(post)
