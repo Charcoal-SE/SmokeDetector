@@ -262,6 +262,7 @@ class BodyFetcher:
             if "title" not in post or "body" not in post:
                 continue
 
+            post['site'] = site
             post_ = Post(api_response=post)
 
             num_scanned += 1
@@ -282,6 +283,7 @@ class BodyFetcher:
                     num_scanned += 1
                     answer["IsAnswer"] = True  # Necesssary for Post object
                     answer["title"] = ""  # Necessary for proper Post object creation
+                    answer["site"] = site  # Necessary for proper Post object creation
                     answer_ = Post(api_response=answer)
 
                     is_spam, reason, why = check_if_spam(post_)
