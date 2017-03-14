@@ -69,6 +69,7 @@ def test_check_if_spam_json(data, match):
 
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"),
                     reason="shouldn't overwrite file")
+# TODO: THIS IS NOT COMPLETE YET. WE ARE STILL PASSING STRINGS INSTEAD OF POST OBJECT
 def test_blacklisted_user():
     user_url = 'http://stackoverflow.com/users/1/jeff-atwood'
     user = get_user_from_url(user_url)
@@ -82,6 +83,7 @@ def test_blacklisted_user():
 
 @pytest.mark.skipif(os.path.isfile("whitelistedUsers.p"),
                     reason="shouldn't overwrite file")
+# TODO: THIS IS NOT COMPLETE YET. WE ARE STILL PASSING STRINGS INSTEAD OF POST OBJECT
 def test_whitelisted_user():
     user_url = 'http://stackoverflow.com/users/2/geoff-dalgas'
     user = get_user_from_url(user_url)
