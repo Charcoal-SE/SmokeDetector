@@ -20,6 +20,7 @@ class PostData:
         self.up_vote_count = None
         self.down_vote_count = None
         self.question_id = None
+        self.is_answer = None
 
 
 def api_get_post(post_url):

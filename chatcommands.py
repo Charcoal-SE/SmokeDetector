@@ -1144,7 +1144,7 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
             # this re-report might be attempting to correct that/fix a mistake/etc.
             output.append("Post {}: Already recently reported".format(index))
             continue
-        post_data["IsAnswer"] = post_data.post_type == "answer"
+        post_data.is_answer = (post_data.post_type == "answer")
         post = Post(api_response=post_data)
         user = get_user_from_url(post_data.owner_url)
         if user is not None:
@@ -1155,7 +1155,6 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
         if len(urls) > 1:
             batch = " (batch report: post {} out of {})".format(index, len(urls))
         handle_spam(post=post,
-                    site=post_data.site,
                     reasons=["Manually reported " + post_data.post_type + batch],
                     why=why)
     if 1 < len(urls) > len(output):

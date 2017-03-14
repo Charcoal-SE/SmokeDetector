@@ -71,17 +71,6 @@ class Post:
         self._is_answer = False
         return
 
-        # is_spam, reason, why = check_if_spam(title=title,
-        #                                      body=body,
-        #                                      user_name=poster,
-        #                                      user_url=url,
-        #                                      post_site=site,
-        #                                      post_id=post_id,
-        #                                      is_answer=False,
-        #                                      body_is_summary=True,
-        #                                      owner_rep=1,
-        #                                      post_score=0)
-
     def _parse_api_post(self, response):
         if "title" not in response or "body" not in response:
             return
@@ -112,17 +101,6 @@ class Post:
         self._post_id = str(response["question_id"])
 
         return
-
-        # is_spam, reason, why = check_if_spam(title=title,
-        #                                      body=body,
-        #                                      user_name=owner_name,
-        #                                      user_url=owner_link,
-        #                                      post_site=site,
-        #                                      post_id=q_id,
-        #                                      is_answer=False,
-        #                                      body_is_summary=False,
-        #                                      owner_rep=owner_rep,
-        #                                      post_score=post_score)
 
     @property
     def body(self):
@@ -171,14 +149,3 @@ class Post:
     @property
     def down_vote_count(self):
         return self._votes['downvotes']
-
-    # is_spam, reason, why = check_if_spam(title=title,
-    #                                      body=body,
-    #                                      user_name=owner_name,
-    #                                      user_url=owner_link,
-    #                                      post_site=site,
-    #                                      post_id=q_id,
-    #                                      is_answer=False,
-    #                                      body_is_summary=False,
-    #                                      owner_rep=owner_rep,
-    #                                      post_score=post_score)
