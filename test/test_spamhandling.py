@@ -36,13 +36,13 @@ def test_check_if_spam(title, body, username, site, match):
     # We can't check blacklists/whitelists in tests, so these are set to their default values
 
     post_dict = {
-            "titleEncodedFancy": unicode(title),
-            "bodySummary": unicode(body),
-            "ownerDisplayName": unicode(username),
-            "url": "TEST: No URL passed!",
-            "id": "TEST: No ID passed!",
-            "siteBaseHostAddress": unicode(site),
-            "ownerUrl": "TEST: No Owner ID passed!"
+        "titleEncodedFancy": unicode(title),
+        "bodySummary": unicode(body),
+        "ownerDisplayName": unicode(username),
+        "url": "TEST: No URL passed!",
+        "id": "TEST: No ID passed!",
+        "siteBaseHostAddress": unicode(site),
+        "ownerUrl": "TEST: No Owner ID passed!"
     }
     json_dict = {
         "action": "155-questions-active",
