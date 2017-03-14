@@ -93,6 +93,7 @@ def non_english_link(s, site, *args):   # non-english link in short answer
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def mostly_non_latin(s, site, *args):   # majority of post is in non-Latin, non-Cyrillic characters
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
@@ -130,6 +131,7 @@ def has_phone_number(s, site, *args):
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def has_customer_service(s, site, *args):  # flexible detection of customer service in titles
     s = s[0:300].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
     s = regex.sub(r"[^A-Za-z0-9\s]", "", s)   # deobfuscate
@@ -181,6 +183,7 @@ def has_health(s, site, *args):   # flexible detection of health spam in titles
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def pattern_product_name(s, site, *args):
     keywords = ["Testo?", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Kamasutra", "HL-?12", "NeuroFuse",
                 "Junivive", "Apexatropin", "Gain", "Allure", "Nuvella", "Trimgenix",
@@ -200,6 +203,7 @@ def pattern_product_name(s, site, *args):
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def keyword_email(s, site, *args):   # a keyword and an email in the same post
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
@@ -366,7 +370,7 @@ def get_domain(s):
         try:
             extract = tld.get_tld(s1, fix_protocol=True, as_object=True, )
             domain = extract.domain
-        except TldDomainNotFound as e:
+        except TldDomainNotFound:
             # Assume bad TLD and try one last fall back, just strip the trailing TLD and leading subdomain
             parsed_uri = urlparse(s)
             if len(parsed_uri.path.split(".")) >= 3:
@@ -867,11 +871,11 @@ class FindSpam:
     ]
 
     @staticmethod
-    def test_post(title, body, user_name, site, is_answer, body_is_summary, user_rep, post_score):
+    def test_post(post):
         result = []
         why = {'title': [], 'body': [], 'username': []}
         for rule in FindSpam.rules:
-            body_to_check = body
+            body_to_check = post.body
             is_regex_check = 'regex' in rule
             try:
                 check_if_answer = rule['answers']
@@ -893,41 +897,43 @@ class FindSpam:
             if rule['reason'] == 'Phone number detected in {}':
                 body_to_check = regex.sub("<img[^>]+>", "", body_to_check)
                 body_to_check = regex.sub("<a[^>]+>", "", body_to_check)
-            if rule['all'] != (site in rule['sites']) and user_rep <= rule['max_rep'] and \
-                    post_score <= rule['max_score']:
+            if rule['all'] != (post.post_site in rule['sites']) and post.owner_rep <= rule['max_rep'] and \
+                    post.post_score <= rule['max_score']:
                 matched_body = None
                 compiled_regex = None
                 if is_regex_check:
                     compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
                     # using a named list \L in some regexes
-                    matched_title = compiled_regex.findall(title)
-                    matched_username = compiled_regex.findall(user_name)
-                    if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer) and \
-                            (is_answer or check_if_question):
+                    matched_title = compiled_regex.findall(post.title)
+                    matched_username = compiled_regex.findall(post.user_name)
+                    if (not post.body_is_summary or rule['body_summary']) and \
+                            (not post.is_answer or check_if_answer) and \
+                            (post.is_answer or check_if_question):
                         matched_body = compiled_regex.findall(body_to_check)
                 else:
                     assert 'method' in rule
-                    matched_title, why_title = rule['method'](title, site, user_name)
+                    matched_title, why_title = rule['method'](post.title, post.post_site, post.user_name)
                     if matched_title and rule['title']:
                         why["title"].append(u"Title - {}".format(why_title))
-                    matched_username, why_username = rule['method'](user_name, site, user_name)
+                    matched_username, why_username = rule['method'](post.user_name, post.post_site, post.user_name)
                     if matched_username and rule['username']:
                         why["username"].append(u"Username - {}".format(why_username))
-                    if (not body_is_summary or rule['body_summary']) and (not is_answer or check_if_answer) and \
-                            (is_answer or check_if_question):
-                        matched_body, why_body = rule['method'](body_to_check, site, user_name)
+                    if (not post.body_is_summary or rule['body_summary']) and \
+                            (not post.is_answer or check_if_answer) and \
+                            (post.is_answer or check_if_question):
+                        matched_body, why_body = rule['method'](body_to_check, post.post_site, post.user_name)
                         if matched_body and rule['body']:
                             why["body"].append(u"Post - {}".format(why_body))
                 if matched_title and rule['title']:
-                    why["title"].append(FindSpam.generate_why(compiled_regex, title, u"Title", is_regex_check))
+                    why["title"].append(FindSpam.generate_why(compiled_regex, post.title, u"Title", is_regex_check))
                     result.append(rule['reason'].replace("{}", "title"))
                 if matched_username and rule['username']:
-                    why["username"].append(FindSpam.generate_why(compiled_regex, user_name, u"Username",
+                    why["username"].append(FindSpam.generate_why(compiled_regex, post.user_name, u"Username",
                                                                  is_regex_check))
                     result.append(rule['reason'].replace("{}", "username"))
                 if matched_body and rule['body']:
                     why["body"].append(FindSpam.generate_why(compiled_regex, body_to_check, u"Body", is_regex_check))
-                    type_of_post = "answer" if is_answer else "body"
+                    type_of_post = "answer" if post.is_answer else "body"
                     result.append(rule['reason'].replace("{}", type_of_post))
         result = list(set(result))
         result.sort()
