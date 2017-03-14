@@ -922,7 +922,7 @@ class FindSpam:
                     if (not post.body_is_summary or rule['body_summary']) and \
                             (not post.is_answer or check_if_answer) and \
                             (post.is_answer or check_if_question):
-                        matched_body, why_body = rule['method'](body_to_check, post.site, post.user_name)
+                        matched_body, why_body = rule['method'](body_to_check, post.post_site, post.user_name)
                         if matched_body and rule['body']:
                             why["body"].append(u"Post - {}".format(why_body))
                 if matched_title and rule['title']:
