@@ -79,6 +79,7 @@ errorLogs.txt.*
 
 # Cache
 test/.cache/
+.cache/
 
 # Config
 config
