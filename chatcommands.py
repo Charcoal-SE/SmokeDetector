@@ -786,9 +786,9 @@ def command_test(content, content_lower, *args, **kwargs):
         return Response(command_status=True, message="Nothing to test")
     result = "> "
     # def test_post(title, body, user_name, site, is_answer, body_is_summary, user_rep, post_score):
-    fakepost = {'title': string_to_test, 'body': string_to_test,
-                'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
-                'site': "", 'IsAnswer': False, 'score': 0}
+    fakepost = Post(api_response={'title': string_to_test, 'body': string_to_test,
+                                  'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
+                                  'site': "", 'IsAnswer': False, 'score': 0})
     reasons, why = FindSpam.test_post(fakepost)
     if len(reasons) == 0:
         result += "Would not be caught for title, body, and username."
@@ -815,9 +815,9 @@ def command_test_answer(content, content_lower, *args, **kwargs):
         return Response(command_status=True, message="Nothing to test")
     result = "> "
     # def test_post(title, body, user_name, site, is_answer, body_is_summary, user_rep, post_score):
-    fakepost = {'title': 'Valid title', 'body': string_to_test,
+    fakepost = Post(api_response={'title': 'Valid title', 'body': string_to_test,
                 'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                'site': "", 'IsAnswer': True, 'score': 0}
+                'site': "", 'IsAnswer': True, 'score': 0})
     reasons, why = FindSpam.test_post(fakepost)
     if len(reasons) == 0:
         result += "Would not be caught as an answer."
@@ -843,9 +843,9 @@ def command_test_question(content, content_lower, *args, **kwargs):
     if len(string_to_test) == 0:
         return Response(command_status=True, message="Nothing to test")
     result = "> "
-    fakepost = {'title': 'Valid title', 'body': string_to_test,
-                'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                'site': "", 'IsAnswer': False, 'score': 0}
+    fakepost = Post(api_response={'title': 'Valid title', 'body': string_to_test,
+                                  'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
+                                  'site': "", 'IsAnswer': False, 'score': 0})
     reasons, why = FindSpam.test_post(fakepost)
     if len(reasons) == 0:
         result += "Would not be caught as a question."
@@ -871,9 +871,9 @@ def command_test_title(content, content_lower, *args, **kwargs):
     if len(string_to_test) == 0:
         return Response(command_status=True, message="Nothing to test")
     result = "> "
-    fakepost = {'title': string_to_test, 'body': "Valid question body",
-                'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                'site': "", 'IsAnswer': False, 'score': 0}
+    fakepost = Post(api_response={'title': string_to_test, 'body': "Valid question body",
+                                  'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
+                                  'site': "", 'IsAnswer': False, 'score': 0})
     reasons, why = FindSpam.test_post(fakepost)
     if len(reasons) == 0:
         result += "Would not be caught as a title."
@@ -899,9 +899,9 @@ def command_test_username(content, content_lower, *args, **kwargs):
     if len(string_to_test) == 0:
         return Response(command_status=True, message="Nothing to test")
     result = "> "
-    fakepost = {'title': 'Valid title', 'body': "Valid post body",
-                'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
-                'site': '', 'IsAnswer': False, 'score': 0}
+    fakepost = Post(api_response={'title': 'Valid title', 'body': "Valid post body",
+                                  'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
+                                  'site': '', 'IsAnswer': False, 'score': 0})
     reasons, why = FindSpam.test_post(fakepost)
     if len(reasons) == 0:
         result += "Would not be caught as a username."

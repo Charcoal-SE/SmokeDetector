@@ -94,6 +94,11 @@ class Post:
         else:
             self._is_answer = False
 
+        if "BodyIsSummary" in response and response["BodyIsSummary"] is True:
+            self._body_is_summary = True
+        else:
+            self._body_is_summary = False
+
         if 'site' in response:
             self._post_site = response['site']
 
