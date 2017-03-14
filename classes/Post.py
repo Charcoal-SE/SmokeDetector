@@ -38,8 +38,8 @@ class Post:
         type_name = type(self).__name__
         dataset = ['title=' + self.title, 'body=' + self.body, 'user_name=' + self.user_name,
                    'user_url=' + self.user_url, 'post_site=' + self.post_site, 'post_id=' + self.post_id,
-                   'is_answer=' + self.is_answer, 'body_is_summary=' + self.body_is_summary,
-                   'owner_rep=' + self.owner_rep, 'post_score=' + self.post_score]
+                   'is_answer=' + str(self.is_answer), 'body_is_summary=' + str(self.body_is_summary),
+                   'owner_rep=' + str(self.owner_rep), 'post_score=' + self.post_score]
         return "%s(%s)" % (type_name, ', '.join(dataset))
 
     def _parse_json_post(self, json_data):
@@ -125,31 +125,31 @@ class Post:
 
     @property
     def body(self):
-        return self._title
+        return self._body
 
     @property
     def body_is_summary(self):
-        return self._title
+        return self._body_is_summary
 
     @property
     def is_answer(self):
-        return self._title
+        return self._is_answer
 
     @property
     def owner_rep(self):
-        return self._title
+        return self._owner_rep
 
     @property
     def post_id(self):
-        return self._title
+        return self._post_id
 
     @property
     def post_score(self):
-        return self._title
+        return self._post_score
 
     @property
     def post_site(self):
-        return self._title
+        return self._post_site
 
     @property
     def title(self):
@@ -157,11 +157,11 @@ class Post:
 
     @property
     def user_name(self):
-        return self._title
+        return self._user_name
 
     @property
     def user_url(self):
-        return self._title
+        return self._user_url
 
     @property
     def up_vote_count(self):
