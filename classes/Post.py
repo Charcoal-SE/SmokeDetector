@@ -175,6 +175,11 @@ class Post:
         return unicode(self._title)
 
     @property
+    def user_link(self):
+        # Alias for self.user_url
+        return unicode(self.user_url)
+
+    @property
     def user_name(self):
         return unicode(self._user_name)
 
