@@ -20,6 +20,22 @@ class PostData:
         self.up_vote_count = None
         self.down_vote_count = None
         self.question_id = None
+        self.is_answer = None
+
+    def __dict__(self):
+        # Basically, return this to the dict-style response that Post(api_data=DATA) expects, for proper parsing.
+        return {
+            'title': self.title,
+            'body': self.body,
+            'owner': {'display_name': self.owner_name, 'link': self.owner_url, 'reputation': self.owner_rep},
+            'site': self.site,
+            'question_id': self.post_id,
+            'IsAnswer': self.is_answer,
+            'link': self.post_url,
+            'score': self.score,
+            'up_vote_count': self.up_vote_count,
+            'down_vote_count': self.down_vote_count,
+        }
 
 
 def api_get_post(post_url):

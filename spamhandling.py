@@ -63,15 +63,15 @@ def check_if_spam_json(json_data):
 
 
 # noinspection PyBroadException,PyProtectedMember
-def handle_spam(post, reasons, why, site):
+def handle_spam(post, reasons, why):
     post_url = parsing.to_protocol_relative(parsing.url_to_shortlink(post.post_url))
     poster_url = parsing.to_protocol_relative(parsing.user_url_to_shortlink(post.user_url))
     reason = ", ".join(reasons[:5])
     if len(reasons) > 5:
         reason += ", +{} more".format(len(reasons) - 5)
     reason = reason[:1].upper() + reason[1:]  # reason is capitalised, unlike the entries of reasons list
-    shortened_site = site.replace("stackexchange.com", "SE")  # site.stackexchange.com -> site.SE
-    datahandling.append_to_latest_questions(site, post.post_id, post.title if not post.is_answer else "")
+    shortened_site = post.post_site.replace("stackexchange.com", "SE")  # site.stackexchange.com -> site.SE
+    datahandling.append_to_latest_questions(post.post_site, post.post_id, post.title if not post.is_answer else "")
     if len(reasons) == 1 and ("all-caps title" in reasons or
                               "repeating characters in title" in reasons or
                               "repeating characters in body" in reasons or
@@ -79,11 +79,11 @@ def handle_spam(post, reasons, why, site):
                               "repeating words in title" in reasons or
                               "repeating words in body" in reasons or
                               "repeating words in answer" in reasons):
-        datahandling.add_auto_ignored_post((post.post_id, site, datetime.now()))
+        datahandling.add_auto_ignored_post((post.post_id, post.post_site, datetime.now()))
     if why is not None and why != "":
-        datahandling.add_why(site, post.post_id, why)
+        datahandling.add_why(post.post_site, post.post_id, why)
     if post.is_answer and post.question_id is not None:
-        datahandling.add_post_site_id_link((post.post_id, site, "answer"), post.question_id)
+        datahandling.add_post_site_id_link((post.post_id, post.post_site, "answer"), post.question_id)
     try:
         post.title = parsing.escape_special_chars_in_title(post.title)
         sanitized_title = regex.sub('(https?://|\n)', '', post.title)
@@ -113,11 +113,12 @@ def handle_spam(post, reasons, why, site):
 
         print GlobalVars.parser.unescape(s).encode('ascii', errors='replace')
         if time.time() >= GlobalVars.blockedTime["all"]:
-            datahandling.append_to_latest_questions(site, post.post_id, post.title)
+            datahandling.append_to_latest_questions(post.post_site, post.post_id, post.title)
             if reason not in GlobalVars.experimental_reasons:
                 if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
                     chq_pings = datahandling.get_user_names_on_notification_list("stackexchange.com",
-                                                                                 GlobalVars.charcoal_room_id, site,
+                                                                                 GlobalVars.charcoal_room_id,
+                                                                                 post.post_site,
                                                                                  GlobalVars.wrap)
                     chq_msg = prefix + s
                     chq_msg_pings = prefix + datahandling.append_pings(s, chq_pings)
@@ -125,11 +126,12 @@ def handle_spam(post, reasons, why, site):
                     msg_to_send = chq_msg_pings_ms if len(chq_msg_pings_ms) <= 500 else chq_msg_pings \
                         if len(chq_msg_pings) <= 500 else chq_msg[0:500]
                     GlobalVars.charcoal_hq.send_message(msg_to_send)
-                if not should_reasons_prevent_tavern_posting(reasons) and site not in GlobalVars.non_tavern_sites \
+                if not should_reasons_prevent_tavern_posting(reasons) \
+                        and post.post_site not in GlobalVars.non_tavern_sites \
                         and time.time() >= GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id]:
                     tavern_pings = datahandling.get_user_names_on_notification_list("meta.stackexchange.com",
                                                                                     GlobalVars.meta_tavern_room_id,
-                                                                                    site, GlobalVars.wrapm)
+                                                                                    post.post_site, GlobalVars.wrapm)
                     tavern_msg = prefix + s
                     tavern_msg_pings = prefix + datahandling.append_pings(s, tavern_pings)
                     tavern_msg_pings_ms = prefix_ms + datahandling.append_pings(s, tavern_pings)
@@ -137,14 +139,16 @@ def handle_spam(post, reasons, why, site):
                         if len(tavern_msg_pings) <= 500 else tavern_msg[0:500]
                     t_check_websocket = Thread(name="deletionwatcher post message if not deleted",
                                                target=deletionwatcher.DeletionWatcher.post_message_if_not_deleted,
-                                               args=((post.post_id, site, "answer" if post.is_answer else "question"),
+                                               args=((post.post_id, post.post_site,
+                                                      "answer" if post.is_answer else "question"),
                                                      post_url, msg_to_send, GlobalVars.tavern_on_the_meta))
                     t_check_websocket.daemon = True
                     t_check_websocket.start()
-                if site == "stackoverflow.com" and reason not in GlobalVars.non_socvr_reasons \
+                if post.post_site == "stackoverflow.com" and reason not in GlobalVars.non_socvr_reasons \
                         and time.time() >= GlobalVars.blockedTime[GlobalVars.socvr_room_id]:
                     socvr_pings = datahandling.get_user_names_on_notification_list("stackoverflow.com",
-                                                                                   GlobalVars.socvr_room_id, site,
+                                                                                   GlobalVars.socvr_room_id,
+                                                                                   post.post_site,
                                                                                    GlobalVars.wrapso)
                     socvr_msg = prefix + s
                     socvr_msg_pings = prefix + datahandling.append_pings(s, socvr_pings)
@@ -155,13 +159,13 @@ def handle_spam(post, reasons, why, site):
 
             for specialroom in GlobalVars.specialrooms:
                 sites = specialroom["sites"]
-                if site in sites and reason not in specialroom["unwantedReasons"]:
+                if post.post_site in sites and reason not in specialroom["unwantedReasons"]:
                     room = specialroom["room"]
                     if room.id not in GlobalVars.blockedTime or time.time() >= GlobalVars.blockedTime[room.id]:
                         room_site = room._client.host
                         room_id = int(room.id)
-                        room_pings = datahandling.get_user_names_on_notification_list(room_site, room_id, site,
-                                                                                      room._client)
+                        room_pings = datahandling.get_user_names_on_notification_list(room_site, room_id,
+                                                                                      post.post_site, room._client)
                         room_msg = prefix + s
                         room_msg_pings = prefix + datahandling.append_pings(s, room_pings)
                         room_msg_pings_ms = prefix_ms + datahandling.append_pings(s, room_pings)

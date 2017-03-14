@@ -20,6 +20,7 @@ import time
 import datahandling
 import regex
 from helpers import Response
+from classes import Post
 
 # TODO: pull out code block to get user_id, chat_site, room_id into function
 # TODO: Return result for all functions should be similar (tuple/named tuple?)
@@ -784,7 +785,10 @@ def command_test(content, content_lower, *args, **kwargs):
     if len(string_to_test) == 0:
         return Response(command_status=True, message="Nothing to test")
     result = "> "
-    reasons, why = FindSpam.test_post(string_to_test, string_to_test, string_to_test, "", test_as_answer, False, 1, 0)
+    # def test_post(title, body, user_name, site, is_answer, body_is_summary, user_rep, post_score):
+    fakepost = {'title': string_to_test, 'body': string_to_test,
+                'owner': {'display_name': string_to_test, 'reputation': 1}, 'site': "", 'IsAnswer': False, 'score': 0}
+    reasons, why = FindSpam.test_post(fakepost)
     if len(reasons) == 0:
         result += "Would not be caught for title, body, and username."
         return Response(command_status=True, message=result)
@@ -809,7 +813,10 @@ def command_test_answer(content, content_lower, *args, **kwargs):
     if len(string_to_test) == 0:
         return Response(command_status=True, message="Nothing to test")
     result = "> "
-    reasons, why = FindSpam.test_post("Valid title", string_to_test, "Valid username", "", test_as_answer, False, 1, 0)
+    # def test_post(title, body, user_name, site, is_answer, body_is_summary, user_rep, post_score):
+    fakepost = {'title': 'Valid title', 'body': string_to_test,
+                'owner': {'display_name': "Valid username", 'reputation': 1}, 'site': "", 'IsAnswer': True, 'score': 0}
+    reasons, why = FindSpam.test_post(fakepost)
     if len(reasons) == 0:
         result += "Would not be caught as an answer."
         return Response(command_status=True, message=result)
@@ -834,7 +841,10 @@ def command_test_question(content, content_lower, *args, **kwargs):
     if len(string_to_test) == 0:
         return Response(command_status=True, message="Nothing to test")
     result = "> "
-    reasons, why = FindSpam.test_post("Valid title", string_to_test, "Valid username", "", test_as_answer, False, 1, 0)
+    fakepost = {'title': 'Valid title', 'body': string_to_test,
+                'owner': {'display_name': "Valid username", 'reputation': 1},
+                'site': "", 'IsAnswer': False, 'score': 0}
+    reasons, why = FindSpam.test_post(fakepost)
     if len(reasons) == 0:
         result += "Would not be caught as a question."
         return Response(command_status=True, message=result)
@@ -859,8 +869,10 @@ def command_test_title(content, content_lower, *args, **kwargs):
     if len(string_to_test) == 0:
         return Response(command_status=True, message="Nothing to test")
     result = "> "
-    reasons, why = FindSpam.test_post(string_to_test, "Valid question body", "Valid username", "",
-                                      test_as_answer, False, 1, 0)
+    fakepost = {'title': string_to_test, 'body': "Valid question body",
+                'owner': {'display_name': "Valid username", 'reputation': 1},
+                'site': "", 'IsAnswer': False, 'score': 0}
+    reasons, why = FindSpam.test_post(fakepost)
     if len(reasons) == 0:
         result += "Would not be caught as a title."
         return Response(command_status=True, message=result)
@@ -885,8 +897,9 @@ def command_test_username(content, content_lower, *args, **kwargs):
     if len(string_to_test) == 0:
         return Response(command_status=True, message="Nothing to test")
     result = "> "
-    reasons, why = FindSpam.test_post("Valid title", "Valid post body", string_to_test, "",
-                                      test_as_answer, False, 1, 0)
+    fakepost = {'title': 'Valid title', 'body': "Valid post body",
+                'owner': {'display_name': string_to_test, 'reputation': 1}, 'site': "", 'IsAnswer': False, 'score': 0}
+    reasons, why = FindSpam.test_post(fakepost)
     if len(reasons) == 0:
         result += "Would not be caught as a username."
         return Response(command_status=True, message=result)
@@ -1131,6 +1144,8 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
             # this re-report might be attempting to correct that/fix a mistake/etc.
             output.append("Post {}: Already recently reported".format(index))
             continue
+        post_data.is_answer = (post_data.post_type == "answer")
+        post = Post(api_response=dict(post_data))
         user = get_user_from_url(post_data.owner_url)
         if user is not None:
             add_blacklisted_user(user, message_url, post_data.post_url)
@@ -1139,21 +1154,9 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
         batch = ""
         if len(urls) > 1:
             batch = " (batch report: post {} out of {})".format(index, len(urls))
-        handle_spam(title=post_data.title,
-                    body=post_data.body,
-                    poster=post_data.owner_name,
-                    site=post_data.site,
-                    post_url=post_data.post_url,
-                    poster_url=post_data.owner_url,
-                    post_id=post_data.post_id,
+        handle_spam(post=post,
                     reasons=["Manually reported " + post_data.post_type + batch],
-                    is_answer=post_data.post_type == "answer",
-                    why=why,
-                    owner_rep=post_data.owner_rep,
-                    post_score=post_data.score,
-                    up_vote_count=post_data.up_vote_count,
-                    down_vote_count=post_data.down_vote_count,
-                    question_id=post_data.question_id)
+                    why=why)
     if 1 < len(urls) > len(output):
         add_or_update_multiple_reporter(ev_user_id, wrap2.host, time.time())
     if len(output) > 0:
