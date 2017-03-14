@@ -871,7 +871,6 @@ class FindSpam:
     ]
 
     @staticmethod
-    # def test_post(title, body, user_name, site, is_answer, body_is_summary, user_rep, post_score):
     def test_post(post):
         result = []
         why = {'title': [], 'body': [], 'username': []}

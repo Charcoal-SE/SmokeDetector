@@ -93,6 +93,7 @@ class Post:
 
         self._title = GlobalVars.parser.unescape(response["title"])
         self._body = GlobalVars.parser.unescape(response["body"])
+        self._post_site = response['site']
         self._post_url = response["link"]
         self._post_score = response["score"]
         self._votes['upvotes'] = response["up_vote_count"]
