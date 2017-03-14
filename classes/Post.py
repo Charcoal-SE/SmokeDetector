@@ -72,33 +72,59 @@ class Post:
         return
 
     def _parse_api_post(self, response):
+        # post = Post(api_response={'title': '', 'body': '',
+        #                           'owner': {'display_name': '', 'reputation': 1, 'link': ''},
+        #                           'site': 'stackoverflow.com', 'question_id': '1', 'IsAnswer': False, 'score': 0})
+        # ^ Just a ref about what an api_response can come in as.  Note that we should assume that we have each of
+        #   these.
+
+        # {'title': 'string', 'body': 'string',
+        #  'owner': {'display_name': 'string', 'reputation': 1 (int), 'link': 'string'},
+        #  'site': 'string', 'question_id': 'string', 'IsAnswer': False (Boolean), 'score': 0 (int), 'link': 'string',
+        #  up_vote_count: 'string', down_vote_count: 'string'}
+
         if "title" not in response or "body" not in response:
             return
+
+        self._title = GlobalVars.parser.unescape(response["title"])
+        self._body = GlobalVars.parser.unescape(response["body"])
 
         if "IsAnswer" in response and response["IsAnswer"] is True:
             self._is_answer = True
         else:
             self._is_answer = False
 
-        self._title = GlobalVars.parser.unescape(response["title"])
-        self._body = GlobalVars.parser.unescape(response["body"])
-        self._post_site = response['site']
-        self._post_url = response["link"]
-        self._post_score = response["score"]
-        self._votes['upvotes'] = response["up_vote_count"]
-        self._votes['downvotes'] = response["down_vote_count"]
+        if 'site' in response:
+            self._post_site = response['site']
+
+        if 'link' in response:
+            self._post_url = response["link"]
+
+        if 'score' in response:
+            self._post_score = response["score"]
+
+        if 'up_vote_count' in response:
+            self._votes['upvotes'] = response["up_vote_count"]
+
+        if 'down_vote_count' in response:
+            self._votes['downvotes'] = response["down_vote_count"]
+
+        if 'display_name' in response['owner']:
+            self._user_name = GlobalVars.parser.unescape(response["owner"]["display_name"])
+
+        if 'link' in response['owner']:
+            self._user_url = response["owner"]["link"]
+
+        if 'reputation' in response['owner']:
+            self._owner_rep = response["owner"]["reputation"]
+        else:
+            self._owner_rep = 0
+
         # noinspection PyBroadException
         try:
-            self._user_name = GlobalVars.parser.unescape(response["owner"]["display_name"])
-            self._user_url = response["owner"]["link"]
-            self._owner_rep = response["owner"]["reputation"]
+            self._post_id = str(response["question_id"])
         except:
-            self._user_name = ""
-            self._user_url = ""
-            self._owner_rep = 0
-            pass
-
-        self._post_id = str(response["question_id"])
+            self._post_id = str(0)
 
         return
 
