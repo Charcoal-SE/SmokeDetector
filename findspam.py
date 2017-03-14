@@ -93,6 +93,7 @@ def non_english_link(s, site, *args):   # non-english link in short answer
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def mostly_non_latin(s, site, *args):   # majority of post is in non-Latin, non-Cyrillic characters
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
@@ -130,6 +131,7 @@ def has_phone_number(s, site, *args):
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def has_customer_service(s, site, *args):  # flexible detection of customer service in titles
     s = s[0:300].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
     s = regex.sub(r"[^A-Za-z0-9\s]", "", s)   # deobfuscate
@@ -181,6 +183,7 @@ def has_health(s, site, *args):   # flexible detection of health spam in titles
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def pattern_product_name(s, site, *args):
     keywords = ["Testo?", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Kamasutra", "HL-?12", "NeuroFuse",
                 "Junivive", "Apexatropin", "Gain", "Allure", "Nuvella", "Trimgenix",
@@ -200,6 +203,7 @@ def pattern_product_name(s, site, *args):
     return False, ""
 
 
+# noinspection PyUnusedLocal
 def keyword_email(s, site, *args):   # a keyword and an email in the same post
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
@@ -366,7 +370,7 @@ def get_domain(s):
         try:
             extract = tld.get_tld(s1, fix_protocol=True, as_object=True, )
             domain = extract.domain
-        except TldDomainNotFound as e:
+        except TldDomainNotFound:
             # Assume bad TLD and try one last fall back, just strip the trailing TLD and leading subdomain
             parsed_uri = urlparse(s)
             if len(parsed_uri.path.split(".")) >= 3:
