@@ -3,6 +3,8 @@ from datahandling import add_blacklisted_user, add_whitelisted_user
 from parsing import get_user_from_url
 import pytest
 import os
+import json
+from classes import Post
 
 test_data_inputs = []
 with open("test/data_test_spamhandling.txt", "r") as f:
@@ -32,13 +34,28 @@ with open("test/data_test_spamhandling.txt", "r") as f:
 ])
 def test_check_if_spam(title, body, username, site, match):
     # We can't check blacklists/whitelists in tests, so these are set to their default values
+
+    post_dict = {
+            "titleEncodedFancy": unicode(title),
+            "bodySummary": unicode(body),
+            "ownerDisplayName": unicode(username),
+            "url": "TEST: No URL passed!",
+            "id": "TEST: No ID passed!",
+            "siteBaseHostAddress": unicode(site),
+            "ownerUrl": "TEST: No Owner ID passed!"
+    }
+    json_dict = {
+        "action": "155-questions-active",
+        'data': json.dumps(post_dict)
+    }
+    json_data = json.dumps(json_dict)
+    post = Post(json_data=json_data)
     user_url = ""
     post_id = 0
     # If we want to test answers separatly, this should be changed
     is_answer = False
     # TODO: Fix the test to work with a Post object instead.  This breaks here.
-    is_spam, reason, _ = check_if_spam(title, body, username, user_url, site, post_id, is_answer, False, 1, 0)
-    print title
+    is_spam, reason, _ = check_if_spam(post)
     assert match == is_spam
 
 
