@@ -135,43 +135,43 @@ class Post:
 
     @property
     def body(self):
-        return self._body
+        return str(self._body)
 
     @property
     def body_is_summary(self):
-        return self._body_is_summary
+        return str(self._body_is_summary)
 
     @property
     def is_answer(self):
-        return self._is_answer
+        return str(self._is_answer)
 
     @property
     def owner_rep(self):
-        return self._owner_rep
+        return int(self._owner_rep)
 
     @property
     def post_id(self):
-        return self._post_id
+        return str(self._post_id)
 
     @property
     def post_score(self):
-        return self._post_score
+        return int(self._post_score)
 
     @property
     def post_site(self):
-        return self._post_site
+        return str(self._post_site)
 
     @property
     def title(self):
-        return self._title
+        return str(self._title)
 
     @property
     def user_name(self):
-        return self._user_name
+        return str(self._user_name)
 
     @property
     def user_url(self):
-        return self._user_url
+        return str(self._user_url)
 
     @property
     def up_vote_count(self):
