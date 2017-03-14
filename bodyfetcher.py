@@ -272,7 +272,6 @@ class BodyFetcher:
             if is_spam:
                 try:
                     handle_spam(post=post_,
-                                site=site,
                                 reasons=reason,
                                 why=why)
                 except:
@@ -290,7 +289,6 @@ class BodyFetcher:
                     if is_spam:
                         try:
                             handle_spam(answer_,
-                                        site=site,
                                         reasons=reason,
                                         why=why)
                         except:
