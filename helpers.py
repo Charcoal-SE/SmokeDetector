@@ -11,3 +11,7 @@ def environ_or_none(key):
         return os.environ[key]
     except:
         return None
+
+# Checks that all items in a pattern-matching product name are unique
+def allMatchesUnique(match):
+    return len(match[0][1::2]) == len(set(match[0][1::2]))
