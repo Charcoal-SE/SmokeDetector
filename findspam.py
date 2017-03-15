@@ -5,6 +5,7 @@ from difflib import SequenceMatcher
 import tld
 from tld.utils import TldDomainNotFound
 from urlparse import urlparse
+from helpers import allMatchesUnique
 
 SIMILAR_THRESHOLD = 0.95
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
@@ -191,9 +192,9 @@ def pattern_product_name(s, site, *args):
     keywords = "|".join(keywords)
     three_words = regex.compile(ur"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
     two_words = regex.compile(ur"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
-    if len(three_words) >= 1:
+    if len(three_words) >= 1 and allMatchesUnique(three_words):
         return True, u"Pattern-matching product name *{}*".format(three_words[0][0])
-    elif len(two_words) >= 2:
+    elif len(two_words) >= 2 and two_words[0] == two_words[1] and allMatchesUnique(two_words):
         return True, u"Pattern-matching product name *{}*".format(two_words[0][0])
     return False, ""
 
