@@ -5,6 +5,7 @@ from difflib import SequenceMatcher
 import tld
 from tld.utils import TldDomainNotFound
 from urlparse import urlparse
+from helpers import all_matches_unique
 
 SIMILAR_THRESHOLD = 0.95
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
@@ -95,8 +96,6 @@ def non_english_link(s, site, *args):   # non-english link in short answer
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def mostly_non_latin(s, site, *args):   # majority of post is in non-Latin, non-Cyrillic characters
-    if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
-        return False, ""
     word_chars = regex.sub(r'(?u)[\W0-9]|http\S*', "", s)
     non_latin_chars = regex.sub(r"(?u)\p{script=Latin}|\p{script=Cyrillic}", "", word_chars)
     if len(non_latin_chars) > 0.4 * len(word_chars):
@@ -186,19 +185,19 @@ def has_health(s, site, *args):   # flexible detection of health spam in titles
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def pattern_product_name(s, site, *args):
     keywords = ["Testo?", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Kamasutra", "HL-?12", "NeuroFuse",
-                "Junivive", "Apexatropin", "Gain", "Allure", "Nuvella", "Trimgenix",
+                "Junivive", "Apexatropin", "Gain", "Allure", "Nuvella", "Trimgenix", "Satin", "Prodroxatone",
                 "Elite", "Force", "Exceptional", "Enhance(ment)?", "Nitro", "Max", "Boost", "E?xtreme", "Grow",
                 "Deep", "Male", "Pro", "Advanced", "Monster", "Divine",
-                "Pure", "Skin", "Sea", "Muscle", "Ascend",
+                "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth",
                 "Serum", "Supplement", "Fuel", "Cream"]
     if site != "math.stackexchange.com" and site != "mathoverflow.net":
-        keywords += ["E?Xt?", "Alpha", "Prime", "Formula"]
+        keywords += ["E?X[tl]?", "Alpha", "Prime", "Formula"]
     keywords = "|".join(keywords)
     three_words = regex.compile(ur"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
     two_words = regex.compile(ur"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
-    if len(three_words) >= 1:
+    if len(three_words) >= 1 and all_matches_unique(three_words):
         return True, u"Pattern-matching product name *{}*".format(three_words[0][0])
-    elif len(two_words) >= 2:
+    elif len(two_words) >= 2 and two_words[0] == two_words[1] and all_matches_unique(two_words):
         return True, u"Pattern-matching product name *{}*".format(two_words[0][0])
     return False, ""
 
