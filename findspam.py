@@ -194,7 +194,7 @@ def pattern_product_name(s, site, *args):
     two_words = regex.compile(ur"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
     if len(three_words) >= 1 and all_matches_unique(three_words):
         return True, u"Pattern-matching product name *{}*".format(three_words[0][0])
-    elif len(two_words) >= 2 and two_words[0] == two_words[1] and all_matches_unique(two_words):
+    elif len(two_words) >= 2 and all_matches_unique(two_words):
         return True, u"Pattern-matching product name *{}*".format(two_words[0][0])
     return False, ""
 
