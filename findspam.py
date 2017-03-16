@@ -233,7 +233,7 @@ def keyword_link(s, site, *args):   # thanking keyword and a link in the same sh
     thanks = regex.compile(ur"(?i)\b(appreciate|than(k|ks|x))\b").search(s)
     keyword = regex.compile(ur"(?i)\b(I really appreciate|many thanks|thanks a lot|thank you (very|for)|"
                             ur"than(ks|x) for (sharing|this|your)|dear forum members|(very (informative|useful)|"
-                            ur"stumbled upon (your|this)|wonderful) (blog|site|website))\b").search(s)
+                            ur"stumbled upon (your|this)|wonderful|visit my) (blog|site|website))\b").search(s)
     if link and keyword:
         return True, u"Keyword *{}* with link {}".format(keyword.group(0), link.group(0))
     if link and thanks and praise:
