@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 from findspam import FindSpam
 import pytest
+from classes import Post
 
 
+# noinspection PyMissingTypeHints
 @pytest.mark.parametrize("title, body, username, site, body_is_summary, is_answer, match", [
     ('18669786819 gmail customer service number 1866978-6819 gmail support number', '', '', '', False, False, True),
     ('18669786819 gmail customer service number 1866978-6819 gmail support number', '', '', '', True, False, True),
@@ -80,7 +82,11 @@ import pytest
 def test_regexes(title, body, username, site, body_is_summary, is_answer, match):
     # If we want to test answers separately, this should be changed
     # is_answer = False
-    result = FindSpam.test_post(title, body, username, site, is_answer, body_is_summary, 1, 0)[0]
+    post = Post(api_response={'title': title, 'body': body,
+                              'owner': {'display_name': username, 'reputation': 1, 'link': ''},
+                              'site': site, 'question_id': '1', 'IsAnswer': is_answer,
+                              'BodyIsSummary': body_is_summary, 'score': 0})
+    result = FindSpam.test_post(post)[0]
     print title
     print "Result:", result
     isspam = False

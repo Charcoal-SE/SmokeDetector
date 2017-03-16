@@ -240,6 +240,9 @@ def restart_automatically(time_in_seconds):
 
 Thread(name="auto restart thread", target=restart_automatically, args=(21600,)).start()
 
+print GlobalVars.location
+print GlobalVars.metasmoke_host
+
 DeletionWatcher.update_site_id_list()
 
 ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")

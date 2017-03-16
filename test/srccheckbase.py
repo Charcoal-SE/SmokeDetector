@@ -1,7 +1,7 @@
 import os
 
 
-# noinspection PyAugmentAssignment
+# noinspection PyAugmentAssignment,PyMissingTypeHints
 def list_python_files(root_dir):
     all_files = os.listdir(root_dir)
     py_files = []
@@ -12,6 +12,7 @@ def list_python_files(root_dir):
     return py_files
 
 
+# noinspection PyMissingTypeHints
 def get_smokedetector_root():
     smokedetector_root = "./"
     # The relative path to the directory containing SmokeDetector's files depends on the directory

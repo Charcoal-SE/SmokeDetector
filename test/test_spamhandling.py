@@ -3,6 +3,8 @@ from datahandling import add_blacklisted_user, add_whitelisted_user
 from parsing import get_user_from_url
 import pytest
 import os
+import json
+from classes import Post
 
 test_data_inputs = []
 with open("test/data_test_spamhandling.txt", "r") as f:
@@ -10,6 +12,7 @@ with open("test/data_test_spamhandling.txt", "r") as f:
     test_data_inputs = f.readlines()
 
 
+# noinspection PyMissingTypeHints
 @pytest.mark.parametrize("title, body, username, site, match", [
     ('18669786819 gmail customer service number 1866978-6819 gmail support number', '', '', '', True),
     ('Is there any http://www.hindawi.com/ template for Cloud-Oriented Data Center Networking?', '', '', '', True),
@@ -32,15 +35,28 @@ with open("test/data_test_spamhandling.txt", "r") as f:
 ])
 def test_check_if_spam(title, body, username, site, match):
     # We can't check blacklists/whitelists in tests, so these are set to their default values
-    user_url = ""
-    post_id = 0
-    # If we want to test answers separatly, this should be changed
-    is_answer = False
-    is_spam, reason, _ = check_if_spam(title, body, username, user_url, site, post_id, is_answer, False, 1, 0)
-    print title
+
+    post_dict = {
+        "titleEncodedFancy": unicode(title),
+        "bodySummary": unicode(body),
+        "ownerDisplayName": unicode(username),
+        "url": "TEST: No URL passed!",
+        "id": "TEST: No ID passed!",
+        "siteBaseHostAddress": unicode(site),
+        "ownerUrl": "TEST: No Owner ID passed!"
+    }
+    json_dict = {
+        "action": "155-questions-active",
+        'data': json.dumps(post_dict),
+        'IsAnswer': False  # If we want to test answers separately, this should be changed.
+    }
+    json_data = json.dumps(json_dict)
+    post = Post(json_data=json_data)
+    is_spam, reason, _ = check_if_spam(post)
     assert match == is_spam
 
 
+# noinspection PyMissingTypeHints
 @pytest.mark.parametrize("data, match", [
     (test_data_inputs[0], False)
 ])
@@ -55,12 +71,17 @@ def test_blacklisted_user():
     user_url = 'http://stackoverflow.com/users/1/jeff-atwood'
     user = get_user_from_url(user_url)
     add_blacklisted_user(user, "", "")
-    is_spam, reason, _ = check_if_spam("", "", "", user_url, "stackoverflow.com", "1", False, False, 1, 0)
+    # Construct a "fake" post object in API-format
+    post = Post(api_response={'title': '', 'body': '',
+                              'owner': {'display_name': user, 'reputation': 1, 'link': user_url},
+                              'site': 'stackoverflow.com', 'question_id': '1', 'IsAnswer': False, 'score': 0})
+    is_spam, reason, _ = check_if_spam(post)
     assert is_spam is True
     # cleanup
     os.remove("blacklistedUsers.p")
 
 
+# noinspection PyMissingTypeHints
 @pytest.mark.skipif(os.path.isfile("whitelistedUsers.p"),
                     reason="shouldn't overwrite file")
 def test_whitelisted_user():
@@ -70,13 +91,26 @@ def test_whitelisted_user():
     user_url2 = 'http://stackoverflow.com/users/0/test'
     user2 = get_user_from_url(user_url2)
     add_whitelisted_user(user2)
-    is_spam, reason, _ = check_if_spam("", "", "bagprada", user_url, "stackoverflow.com", "1", False, False, 1, 0)
+    post = Post(api_response={'title': '', 'body': '',
+                              'owner': {'display_name': 'bagprada', 'reputation': 1, 'link': user_url},
+                              'site': 'stackoverflow.com', 'question_id': '1', 'IsAnswer': False, 'score': 0})
+    is_spam, reason, _ = check_if_spam(post)
     assert is_spam is False
-    is_spam, reason, _ = check_if_spam("baba ji", "", "", user_url, "stackoverflow.com", "2", False, False, 1, 0)
+    post = Post(api_response={'title': 'baba ji', 'body': '',
+                              'owner': {'display_name': '', 'reputation': 1, 'link': user_url},
+                              'site': 'stackoverflow.com', 'question_id': '2', 'IsAnswer': False, 'score': 0})
+    is_spam, reason, _ = check_if_spam(post)
     assert is_spam is True
-    is_spam, reason, _ = check_if_spam("baba ji", "", "bagprada", user_url, "stackoverflow.com", "3", False, False, 1, 0)
+    post = Post(api_response={'title': 'baba ji', 'body': '',
+                              'owner': {'display_name': 'bagprada', 'reputation': 1, 'link': user_url},
+                              'site': 'stackoverflow.com', 'question_id': '3', 'IsAnswer': False, 'score': 0})
+    is_spam, reason, _ = check_if_spam(post)
     assert is_spam is True
-    is_spam, reason, _ = check_if_spam("test", "", "baba ji - muscle building", user_url2, "stackoverflow.com", "0", False, False, 1, 0)
+    post = Post(api_response={'title': 'test', 'body': '',
+                              'owner': {'display_name': 'baba ji - muscle building',
+                                        'reputation': 1, 'link': user_url2},
+                              'site': 'stackoverflow.com', 'question_id': '0', 'IsAnswer': False, 'score': 0})
+    is_spam, reason, _ = check_if_spam(post)
     assert is_spam is False
     # cleanup
     os.remove("whitelistedUsers.p")

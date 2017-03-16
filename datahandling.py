@@ -86,14 +86,17 @@ def filter_auto_ignored_posts():
 
 # methods to check whether a post/user is whitelisted/blacklisted/...
 
+# noinspection PyMissingTypeHints
 def is_false_positive(postid_site_tuple):
     return postid_site_tuple in GlobalVars.false_positives
 
 
+# noinspection PyMissingTypeHints
 def is_whitelisted_user(user):
     return user in GlobalVars.whitelisted_users
 
 
+# noinspection PyMissingTypeHints
 def is_blacklisted_user(user):
     for blacklisted_user in GlobalVars.blacklisted_users:
         if user == blacklisted_user[0]:
@@ -108,10 +111,12 @@ def get_blacklisted_user_data(user):
     return ()
 
 
+# noinspection PyMissingTypeHints
 def is_ignored_post(postid_site_tuple):
     return postid_site_tuple in GlobalVars.ignored_posts
 
 
+# noinspection PyMissingTypeHints
 def is_auto_ignored_post(postid_site_tuple):
     for p in GlobalVars.auto_ignored_posts:
         if p[0] == postid_site_tuple[0] and p[1] == postid_site_tuple[1]:
@@ -119,6 +124,7 @@ def is_auto_ignored_post(postid_site_tuple):
     return False
 
 
+# noinspection PyMissingTypeHints
 def is_privileged(room_id_str, user_id_str, wrap2):
     if room_id_str in GlobalVars.privileged_users and user_id_str in GlobalVars.privileged_users[room_id_str]:
         return True
@@ -139,6 +145,7 @@ def is_code_privileged(room_id_str, user_id_str, wrap2):
 # methods to add/remove whitelisted/blacklisted users, ignored posts, ...
 
 
+# noinspection PyMissingTypeHints
 def add_whitelisted_user(user):
     if user in GlobalVars.whitelisted_users or user is None:
         return
@@ -171,6 +178,7 @@ def add_false_positive(site_post_id_tuple):
         pickle.dump(GlobalVars.false_positives, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
+# noinspection PyMissingTypeHints
 def add_ignored_post(postid_site_tuple):
     if postid_site_tuple is None or postid_site_tuple in GlobalVars.ignored_posts:
         return
@@ -189,6 +197,7 @@ def remove_blacklisted_user(user):
     return True
 
 
+# noinspection PyMissingTypeHints
 def remove_whitelisted_user(user):
     if user not in GlobalVars.whitelisted_users:
         return False
@@ -290,6 +299,7 @@ def append_to_latest_questions(host, post_id, title):
         GlobalVars.latest_questions.pop()
 
 
+# noinspection PyMissingTypeHints
 def has_already_been_posted(host, post_id, title):
     for post in GlobalVars.latest_questions:
         if post[0] == host and post[1] == str(post_id) and post[2] == title:
@@ -321,6 +331,7 @@ def fetch_lines_from_error_log(line_count):
 # method to check whether a SE site exists:
 
 
+# noinspection PyMissingTypeHints
 def refresh_sites():
     has_more = True
     page = 1
@@ -341,6 +352,7 @@ def refresh_sites():
     return True, "OK"
 
 
+# noinspection PyMissingTypeHints
 def check_site_and_get_full_name(site):
     if len(GlobalVars.se_sites) == 0:
         refreshed, msg = refresh_sites()
@@ -357,6 +369,7 @@ def check_site_and_get_full_name(site):
 # methods to add/remove/check users on the "notification" list
 # (that is, being pinged when Smokey reports something on a specific site)
 
+# noinspection PyMissingTypeHints
 def add_to_notification_list(user_id, chat_site, room_id, se_site):
     exists, site = check_site_and_get_full_name(se_site)
     if not exists:
@@ -370,6 +383,7 @@ def add_to_notification_list(user_id, chat_site, room_id, se_site):
     return 0, site
 
 
+# noinspection PyMissingTypeHints
 def remove_from_notification_list(user_id, chat_site, room_id, se_site):
     notification_tuple = (int(user_id), chat_site, int(room_id), se_site)
     if notification_tuple not in GlobalVars.notifications:
@@ -380,6 +394,7 @@ def remove_from_notification_list(user_id, chat_site, room_id, se_site):
     return True
 
 
+# noinspection PyMissingTypeHints
 def will_i_be_notified(user_id, chat_site, room_id, se_site):
     notification_tuple = (int(user_id), chat_site, int(room_id), se_site)
     return notification_tuple in GlobalVars.notifications
@@ -405,6 +420,7 @@ def get_user_names_on_notification_list(chat_site, room_id, se_site, client):
     return [client.get_user(i).name for i in get_user_ids_on_notification_list(chat_site, room_id, se_site)]
 
 
+# noinspection PyMissingTypeHints
 def append_pings(original_message, names):
     if len(names) != 0:
         new_message = u"{0} ({1})".format(original_message, " ".join(["@" + x.replace(" ", "") for x in names]))

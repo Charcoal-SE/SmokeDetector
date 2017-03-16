@@ -11,6 +11,7 @@ with open("test/data_test_parsing.txt", "r") as f:
 # because the input is always a string and `parse_method` and `expected` are not.
 
 
+# noinspection PyMissingTypeHints
 @pytest.mark.parametrize("input_data, parse_method, expected", [
     ('Testing * escaping of ] special [ characters', escape_special_chars_in_title, 'Testing \* escaping of \] special \[ characters'),
     ('HTML &#39; unescaping&lt;', unescape_title, 'HTML \' unescaping<'),

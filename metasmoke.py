@@ -14,6 +14,7 @@ import datahandling
 import parsing
 import apigetpost
 import spamhandling
+import classes
 
 
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
@@ -103,21 +104,19 @@ class Metasmoke:
                 if user is not None:
                     datahandling.add_blacklisted_user(user, "metasmoke", post_data.post_url)
                 why = u"Post manually reported by user *{}* from metasmoke.\n".format(message["report"]["user"])
-                spamhandling.handle_spam(title=post_data.title,
-                                         body=post_data.body,
-                                         poster=post_data.owner_name,
-                                         site=post_data.site,
-                                         post_url=post_data.post_url,
-                                         poster_url=post_data.owner_url,
-                                         post_id=post_data.post_id,
+                postobj = classes.Post(api_response={'title': post_data.title, 'body': post_data.body,
+                                                     'owner': {'display_name': post_data.owner_name,
+                                                               'reputation': post_data.owner_rep,
+                                                               'link': post_data.owner_url},
+                                                     'site': post_data.site,
+                                                     'IsAnswer': (post_data.post_type == "answer"),
+                                                     'score': post_data.score, 'link': post_data.post_url,
+                                                     'question_id': post_data.post_id,
+                                                     'up_vote_count': post_data.up_vote_count,
+                                                     'down_vote_count': post_data.down_vote_count})
+                spamhandling.handle_spam(post=postobj,
                                          reasons=["Manually reported " + post_data.post_type],
-                                         is_answer=post_data.post_type == "answer",
-                                         why=why,
-                                         owner_rep=post_data.owner_rep,
-                                         post_score=post_data.score,
-                                         up_vote_count=post_data.up_vote_count,
-                                         down_vote_count=post_data.down_vote_count,
-                                         question_id=post_data.question_id)
+                                         why=why)
             elif "commit_status" in message:
                 c = message["commit_status"]
                 sha = c["commit_sha"][:7]
@@ -245,7 +244,7 @@ class Metasmoke:
                         GlobalVars.metasmoke_last_ping_time = datetime.now()  # Otherwise the ping watcher will exit(10)
 
                         GlobalVars.charcoal_hq.send_message(GlobalVars.location + " received failover signal.")
-            except Exception as e:
+            except Exception:
                 pass
 
         except Exception as e:

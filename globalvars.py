@@ -325,13 +325,11 @@ class GlobalVars:
     post_site_id_to_question = {}
 
     location = config.get("Config", "location")
-    print location
 
     metasmoke_ws = None
 
     try:
         metasmoke_host = config.get("Config", "metasmoke_host")
-        print metasmoke_host
     except ConfigParser.NoOptionError:
         metasmoke_host = None
         print "metasmoke host not found. Set it as metasmoke_host in the config file." \

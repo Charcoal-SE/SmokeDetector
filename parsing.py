@@ -3,7 +3,7 @@ from globalvars import GlobalVars
 import datahandling
 
 
-# noinspection PyBroadException
+# noinspection PyBroadException,PyMissingTypeHints
 def get_user_from_url(url):
     match = regex.compile(r"(?:https?:)?//([\w.]+)/u(?:sers)?/(\d+)(/(?:.+/?)?)?").search(url)
     if match is None:
@@ -16,7 +16,7 @@ def get_user_from_url(url):
         return None
 
 
-# noinspection PyBroadException
+# noinspection PyBroadException,PyMissingTypeHints
 def fetch_post_url_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[.+]\(((?:http:)" \
                    r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)(?:\?smokeypost=true)?\)" \
@@ -31,7 +31,7 @@ def fetch_post_url_from_msg_content(content):
         return None
 
 
-# noinspection PyBroadException,PyUnusedLocal,PyRedundantParentheses
+# noinspection PyBroadException,PyUnusedLocal,PyRedundantParentheses,PyMissingTypeHints
 def fetch_post_id_and_site_from_url(url):
     if url is None:
         return None
@@ -65,12 +65,13 @@ def fetch_post_id_and_site_from_url(url):
         return None
 
 
+# noinspection PyMissingTypeHints
 def fetch_post_id_and_site_from_msg_content(content):
     url = fetch_post_url_from_msg_content(content)
     return fetch_post_id_and_site_from_url(url)
 
 
-# noinspection PyBroadException
+# noinspection PyBroadException,PyMissingTypeHints
 def fetch_owner_url_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[.+]\((?:(?:http:)" \
                    r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\) by \[.+\]\((.+)\)" \
@@ -85,7 +86,7 @@ def fetch_owner_url_from_msg_content(content):
         return None
 
 
-# noinspection PyBroadException
+# noinspection PyBroadException,PyMissingTypeHints
 def fetch_title_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[(.+)]\((?:(?:http:)" \
                    r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\) by \[?.*\]?\(?.*\)?" \
@@ -100,7 +101,7 @@ def fetch_title_from_msg_content(content):
         return None
 
 
-# noinspection PyBroadException
+# noinspection PyBroadException,PyMissingTypeHints
 def fetch_user_from_allspam_report(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\) \] All of this user's posts are spam: \[user \d+ on " \
                    r"[\w\.]+\]\((//[\w\.]+/users/\d+\D*)\)(?: \[.+\]\(.+\))?$"
@@ -114,7 +115,7 @@ def fetch_user_from_allspam_report(content):
         return None
 
 
-# noinspection PyBroadException
+# noinspection PyBroadException,PyMissingTypeHints
 def edited_message_after_postgone_command(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: (\[.+]\((?:(?:http:)" \
                    r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\)) by \[?.*\]?\(?.*\)?" \
@@ -129,14 +130,17 @@ def edited_message_after_postgone_command(content):
         return None
 
 
+# noinspection PyMissingTypeHints
 def unescape_title(title_escaped):
     return GlobalVars.parser.unescape(title_escaped).strip()
 
 
+# noinspection PyMissingTypeHints
 def escape_special_chars_in_title(title_unescaped):
     return regex.sub(r"([_*\\`\[\]])", r"\\\1", title_unescaped)
 
 
+# noinspection PyMissingTypeHints
 def get_user_from_list_command(cmd):  # for example, !!/addblu is a list command
     cmd_merged_spaces = regex.sub("\\s+", " ", cmd)
     cmd_parts = cmd_merged_spaces.split(" ")
@@ -164,6 +168,7 @@ def get_user_from_list_command(cmd):  # for example, !!/addblu is a list command
     return uid, site
 
 
+# noinspection PyMissingTypeHints
 def url_to_shortlink(url):
     id_and_site = fetch_post_id_and_site_from_url(url)
     if id_and_site is None:
@@ -178,6 +183,7 @@ def url_to_shortlink(url):
         return "http://{}/a/{}".format(id_and_site[1], id_and_site[0])
 
 
+# noinspection PyMissingTypeHints
 def user_url_to_shortlink(url):
     user_id_and_site = get_user_from_url(url)
     if user_id_and_site is None:
@@ -185,6 +191,7 @@ def user_url_to_shortlink(url):
     return "http://{}/u/{}".format(user_id_and_site[1], user_id_and_site[0])
 
 
+# noinspection PyMissingTypeHints
 def to_protocol_relative(url):
     if url.startswith("http://"):
         return url[5:]
@@ -194,6 +201,7 @@ def to_protocol_relative(url):
         return url
 
 
+# noinspection PyMissingTypeHints
 def preprocess_shortcut_command(cmd):
     cmd = regex.sub(r"(\d)\s+", r"\1", cmd)
     parts = cmd.split(" ")

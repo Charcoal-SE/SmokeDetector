@@ -20,6 +20,7 @@ import time
 import datahandling
 import regex
 from helpers import Response
+from classes import Post
 
 # TODO: pull out code block to get user_id, chat_site, room_id into function
 # TODO: Return result for all functions should be similar (tuple/named tuple?)
@@ -28,7 +29,9 @@ from helpers import Response
 #   if return...else return vs if return...return
 
 
+# noinspection PyMissingTypeHints
 def check_permissions(function):
+    # noinspection PyMissingTypeHints
     def run_command(ev_room, ev_user_id, wrap2, *args, **kwargs):
         if datahandling.is_privileged(ev_room, ev_user_id, wrap2):
             kwargs['ev_room'] = ev_room
@@ -54,6 +57,7 @@ def post_message_in_room(room_id_str, msg, length_check=True):
         GlobalVars.socvr.send_message(msg, length_check)
 
 
+# noinspection PyMissingTypeHints
 def is_report(post_site_id):
     """
     Checks if a post is a report
@@ -65,7 +69,7 @@ def is_report(post_site_id):
     return True
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def send_metasmoke_feedback(post_url, second_part_lower, ev_user_name, ev_user_id, ev_chat_host):
     """
     Sends feedback to metasmoke
@@ -82,6 +86,7 @@ def send_metasmoke_feedback(post_url, second_part_lower, ev_user_name, ev_user_i
     t_metasmoke.start()
 
 
+# noinspection PyMissingTypeHints
 def single_random_user(ev_room):
     """
     Returns a single user name from users in a room
@@ -127,7 +132,7 @@ def command_add_blacklist_user(message_parts, content_lower, message_url, ev_roo
                                 "*or* `!!/addblu userid sitename`.")
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_check_blacklist(content_lower, *args, **kwargs):
     """
     Checks if a user is blacklisted
@@ -178,7 +183,7 @@ def command_remove_blacklist_user(message_parts, content_lower, ev_room, ev_user
 
 
 # --- Whitelist functions --- #
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 @check_permissions
 def command_add_whitelist_user(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -205,7 +210,7 @@ def command_add_whitelist_user(message_parts, content_lower, ev_room, ev_user_id
                                 "`!!/addwlu userid sitename`.")
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_check_whitelist(content_lower, *args, **kwargs):
     """
     Checks if a user is whitelisted
@@ -226,7 +231,7 @@ def command_check_whitelist(content_lower, *args, **kwargs):
                         message="Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`.")
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 @check_permissions
 def command_remove_whitelist_user(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -359,7 +364,7 @@ def command_gitstatus(wrap2, *args, **kwargs):
 
 
 # --- Joke Commands --- #
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_blame(ev_room, *args, **kwargs):
     """
     Returns a string with a user to blame (This is a joke command)
@@ -381,7 +386,7 @@ def command_brownie(*args, **kwargs):
     return Response(command_status=True, message="Brown!")
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_coffee(ev_user_name, *args, **kwargs):
     """
     Returns a string stating who the coffee is for (This is a joke command)
@@ -654,7 +659,7 @@ def command_reboot(ev_room, ev_user_id, wrap2, *args, **kwargs):
     os._exit(5)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Tells user whether or not they have privileges
@@ -770,7 +775,7 @@ def command_standby(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
     return Response(command_status=True, message=None)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_test(content, content_lower, *args, **kwargs):
     """
     Test a post to determine if it'd be automatically reported
@@ -784,7 +789,11 @@ def command_test(content, content_lower, *args, **kwargs):
     if len(string_to_test) == 0:
         return Response(command_status=True, message="Nothing to test")
     result = "> "
-    reasons, why = FindSpam.test_post(string_to_test, string_to_test, string_to_test, "", test_as_answer, False, 1, 0)
+    # def test_post(title, body, user_name, site, is_answer, body_is_summary, user_rep, post_score):
+    fakepost = Post(api_response={'title': string_to_test, 'body': string_to_test,
+                                  'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
+                                  'site': "", 'IsAnswer': test_as_answer, 'score': 0})
+    reasons, why = FindSpam.test_post(fakepost)
     if len(reasons) == 0:
         result += "Would not be caught for title, body, and username."
         return Response(command_status=True, message=result)
@@ -809,7 +818,11 @@ def command_test_answer(content, content_lower, *args, **kwargs):
     if len(string_to_test) == 0:
         return Response(command_status=True, message="Nothing to test")
     result = "> "
-    reasons, why = FindSpam.test_post("Valid title", string_to_test, "Valid username", "", test_as_answer, False, 1, 0)
+    # def test_post(title, body, user_name, site, is_answer, body_is_summary, user_rep, post_score):
+    fakepost = Post(api_response={'title': 'Valid title', 'body': string_to_test,
+                                  'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
+                                  'site': "", 'IsAnswer': test_as_answer, 'score': 0})
+    reasons, why = FindSpam.test_post(fakepost)
     if len(reasons) == 0:
         result += "Would not be caught as an answer."
         return Response(command_status=True, message=result)
@@ -834,7 +847,10 @@ def command_test_question(content, content_lower, *args, **kwargs):
     if len(string_to_test) == 0:
         return Response(command_status=True, message="Nothing to test")
     result = "> "
-    reasons, why = FindSpam.test_post("Valid title", string_to_test, "Valid username", "", test_as_answer, False, 1, 0)
+    fakepost = Post(api_response={'title': 'Valid title', 'body': string_to_test,
+                                  'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
+                                  'site': "", 'IsAnswer': test_as_answer, 'score': 0})
+    reasons, why = FindSpam.test_post(fakepost)
     if len(reasons) == 0:
         result += "Would not be caught as a question."
         return Response(command_status=True, message=result)
@@ -859,8 +875,10 @@ def command_test_title(content, content_lower, *args, **kwargs):
     if len(string_to_test) == 0:
         return Response(command_status=True, message="Nothing to test")
     result = "> "
-    reasons, why = FindSpam.test_post(string_to_test, "Valid question body", "Valid username", "",
-                                      test_as_answer, False, 1, 0)
+    fakepost = Post(api_response={'title': string_to_test, 'body': "Valid question body",
+                                  'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
+                                  'site': "", 'IsAnswer': test_as_answer, 'score': 0})
+    reasons, why = FindSpam.test_post(fakepost)
     if len(reasons) == 0:
         result += "Would not be caught as a title."
         return Response(command_status=True, message=result)
@@ -885,8 +903,10 @@ def command_test_username(content, content_lower, *args, **kwargs):
     if len(string_to_test) == 0:
         return Response(command_status=True, message="Nothing to test")
     result = "> "
-    reasons, why = FindSpam.test_post("Valid title", "Valid post body", string_to_test, "",
-                                      test_as_answer, False, 1, 0)
+    fakepost = Post(api_response={'title': 'Valid title', 'body': "Valid post body",
+                                  'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
+                                  'site': '', 'IsAnswer': test_as_answer, 'score': 0})
+    reasons, why = FindSpam.test_post(fakepost)
     if len(reasons) == 0:
         result += "Would not be caught as a username."
         return Response(command_status=True, message=result)
@@ -983,7 +1003,7 @@ def command_allnotifications(message_parts, ev_user_id, wrap2, *args, **kwargs):
     return Response(command_status=True, message="You will get notified for these sites:\r\n" + ", ".join(sites))
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_notify(message_parts, ev_user_id, wrap2, *args, **kwargs):
     """
     Subscribe a user to events on a site in a single room
@@ -1020,7 +1040,7 @@ def command_notify(message_parts, ev_user_id, wrap2, *args, **kwargs):
         return Response(command_status=False, message="Unrecognized code returned when adding notification.")
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_unnotify(message_parts, ev_user_id, wrap2, *args, **kwargs):
     """
     Unsubscribes a user to specific events
@@ -1052,7 +1072,7 @@ def command_unnotify(message_parts, ev_user_id, wrap2, *args, **kwargs):
     return Response(command_status=True, message="That configuration doesn't exist.")
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_willbenotified(message_parts, ev_user_id, wrap2, *args, **kwargs):
     """
     Returns a string stating whether a user will be notified or not
@@ -1131,6 +1151,8 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
             # this re-report might be attempting to correct that/fix a mistake/etc.
             output.append("Post {}: Already recently reported".format(index))
             continue
+        post_data.is_answer = (post_data.post_type == "answer")
+        post = Post(api_response=post_data.as_dict)
         user = get_user_from_url(post_data.owner_url)
         if user is not None:
             add_blacklisted_user(user, message_url, post_data.post_url)
@@ -1139,21 +1161,9 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
         batch = ""
         if len(urls) > 1:
             batch = " (batch report: post {} out of {})".format(index, len(urls))
-        handle_spam(title=post_data.title,
-                    body=post_data.body,
-                    poster=post_data.owner_name,
-                    site=post_data.site,
-                    post_url=post_data.post_url,
-                    poster_url=post_data.owner_url,
-                    post_id=post_data.post_id,
+        handle_spam(post=post,
                     reasons=["Manually reported " + post_data.post_type + batch],
-                    is_answer=post_data.post_type == "answer",
-                    why=why,
-                    owner_rep=post_data.owner_rep,
-                    post_score=post_data.score,
-                    up_vote_count=post_data.up_vote_count,
-                    down_vote_count=post_data.down_vote_count,
-                    question_id=post_data.question_id)
+                    why=why)
     if 1 < len(urls) > len(output):
         add_or_update_multiple_reporter(ev_user_id, wrap2.host, time.time())
     if len(output) > 0:
@@ -1273,7 +1283,7 @@ def subcommand_falsepositive(ev_room, ev_user_id, wrap2, post_site_id, post_url,
     return Response(command_status=True, message=None)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 @check_permissions
 def subcommand_ignore(ev_room, ev_user_id, wrap2, post_site_id, post_url, quiet_action, second_part_lower, ev_user_name,
                       *args, **kwargs):

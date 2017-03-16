@@ -12,19 +12,20 @@ messages = {}
 # methods to mock parts of SmokeDetector
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def mock_reply(text, length_check=True):
     global reply_value
     reply_value = text
 
 
+# noinspection PyMissingTypeHints
 def mock_get_message(msg_id):
     if msg_id in messages:
         return mock_event(messages[msg_id], 1, 11540, "Charcoal HQ", 120914, u"SmokeDetector").message
     return None
 
 
-# noinspection PyShadowingBuiltins
+# noinspection PyShadowingBuiltins,PyMissingTypeHints
 def mock_event(content, event_type, room_id, room_name, user_id, user_name, id=28258802, message_id=15249005, time_stamp=1398822427):
     global reply_value
 
@@ -47,12 +48,13 @@ def mock_event(content, event_type, room_id, room_name, user_id, user_name, id=2
     return event
 
 
+# noinspection PyMissingTypeHints
 def mock_previous_messages(messages_with_ids):
     global messages
     messages = messages_with_ids
 
 
-# noinspection PyShadowingNames
+# noinspection PyShadowingNames,PyMissingTypeHints
 def mock_client_get_message(client):
     client.get_message = mock_get_message
     return client
@@ -61,7 +63,7 @@ def mock_client_get_message(client):
 # Helper methods
 
 
-# noinspection PyShadowingBuiltins
+# noinspection PyShadowingBuiltins,PyMissingTypeHints
 def is_user_currently_whitelisted(link, site, id):
     event = mock_event("!!/iswlu {}".format(link), 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
@@ -72,7 +74,7 @@ def is_user_currently_whitelisted(link, site, id):
     return -1
 
 
-# noinspection PyShadowingBuiltins
+# noinspection PyShadowingBuiltins,PyMissingTypeHints
 def is_user_currently_blacklisted(link, site, id):
     event = mock_event("!!/isblu {}".format(link), 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
@@ -86,6 +88,7 @@ def is_user_currently_blacklisted(link, site, id):
 # Now starts the tests
 
 
+# noinspection PyMissingTypeHints
 def test_blame():
     # Get a suitable message
     blame_event = mock_event("!!/blame", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
@@ -93,6 +96,7 @@ def test_blame():
     assert reply_value == u"It's [Doorknob 冰](//chat.stackexchange.com/users/59776)'s fault."
 
 
+# noinspection PyMissingTypeHints
 def test_coffee():
     # Get a suitable message
     event = mock_event("!!/coffee", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
@@ -100,6 +104,7 @@ def test_coffee():
     assert u"for @Doorknob冰" in reply_value
 
 
+# noinspection PyMissingTypeHints
 def test_tea():
     # Get a suitable message
     event = mock_event("!!/coffee", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
@@ -142,6 +147,7 @@ def test_blacklisted_users():
     os.remove("blacklistedUsers.p")
 
 
+# noinspection PyMissingTypeHints
 @pytest.mark.skipif(os.path.isfile("whitelistedUsers.p"),
                     reason="shouldn't overwrite file")
 def test_whitelisted_users():
@@ -177,6 +183,7 @@ def test_whitelisted_users():
     os.remove("whitelistedUsers.p")
 
 
+# noinspection PyMissingTypeHints
 def test_privileged_users():
     event = mock_event("!!/amiprivileged", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
@@ -187,12 +194,14 @@ def test_privileged_users():
     assert reply_value == "No, you are not a privileged user. Please see [the privileges wiki page](//github.com/Charcoal-SE/SmokeDetector/wiki/Privileges) for information on what privileges are and what is expected of privileged users."
 
 
+# noinspection PyMissingTypeHints
 def test_unprivileged_denial():
     event = mock_event("!!/rmwlu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", -5, u"Some bot")
     watcher(event, client.Client())
     assert reply_value == "You are not a privileged user. Please see [the privileges wiki page](" + GlobalVars.bot_repository + "/wiki/Privileges) for information on what privileges are and what is expected of privileged users."
 
 
+# noinspection PyMissingTypeHints
 def test_test_command():
     event = mock_event("!!/test", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
@@ -209,6 +218,7 @@ def test_test_command():
     assert "in username" in reply_value
 
 
+# noinspection PyMissingTypeHints
 @pytest.mark.skipif(os.path.isfile("notifications.p"),
                     reason="shouldn't overwrite file")
 def test_notification():
@@ -280,6 +290,7 @@ def test_notification():
     os.remove("notifications.p")
 
 
+# noinspection PyMissingTypeHints
 def test_messages_not_sent():
     event = mock_event("test message", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
@@ -454,6 +465,7 @@ def test_false_positive():
     os.remove("falsePositives.p")
 
 
+# noinspection PyMissingTypeHints
 @pytest.mark.skipif(os.path.isfile("ignoredPosts.p"),
                     reason="shouldn't overwrite file")
 def test_ignore():

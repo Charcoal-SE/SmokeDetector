@@ -35,10 +35,12 @@ cmds = chatcommands.command_dict
 subcmds = chatcommands.subcommand_dict
 
 
+# noinspection PyMissingTypeHints
 def is_smokedetector_message(user_id, room_id):
     return user_id == GlobalVars.smokeDetector_user_id[room_id]
 
 
+# noinspection PyMissingTypeHints
 def add_to_listen_if_edited(host, message_id):
     if host + str(message_id) not in GlobalVars.listen_to_these_if_edited:
         GlobalVars.listen_to_these_if_edited.append(host + str(message_id))
@@ -46,6 +48,7 @@ def add_to_listen_if_edited(host, message_id):
         GlobalVars.listen_to_these_if_edited = GlobalVars.listen_to_these_if_edited[-500:]
 
 
+# noinspection PyMissingTypeHints
 def print_chat_message(ev):
     message = colored("Chat message in " + ev.data["room_name"] + " (" + str(ev.data["room_id"]) + "): \"",
                       attrs=['bold'])
@@ -71,6 +74,7 @@ def special_room_watcher(ev, wrap2):
             t_check_websocket.start()
 
 
+# noinspection PyMissingTypeHints
 def watcher(ev, wrap2):
     if ev.type_id != 1 and ev.type_id != 2:
         return
@@ -186,6 +190,7 @@ def watcher(ev, wrap2):
             add_to_listen_if_edited(wrap2.host, message_id)
 
 
+# noinspection PyMissingTypeHints
 def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content,
                     message_id):
     message_url = "//chat.{host}/transcript/message/{id}#{id}".format(host=wrap2.host, id=message_id)
