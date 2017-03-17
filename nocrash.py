@@ -24,7 +24,7 @@ os.environ['CEU'] = "h"
 if ChatExchangeP is None:
     ChatExchangeP = str(input("Password: ")).strip('\r\n')
 
-persistent_arguments = list({"standby", "charcoal-hq-only"} & set(sys.argv))
+persistent_arguments = list({"standby", "charcoal-hq-only", "no-chat"} & set(sys.argv))
 
 count = 0
 crashcount = 0
