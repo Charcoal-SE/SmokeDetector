@@ -69,6 +69,14 @@ def load_files():
             os.remove("bodyfetcherMaxIds.p")
             raise
 
+    if os.path.isfile("bodyfetcherQueueTimings.p"):
+        try:
+            with open("bodyfetcherQueueTimings.p", "rb") as f:
+                GlobalVars.bodyfetcher.queue_timings = pickle.load(f)
+        except EOFError:
+            os.remove("bodyfetcherQueueTimings.p")
+            raise
+
 
 def filter_auto_ignored_posts():
     today_date = datetime.today()
