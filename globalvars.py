@@ -120,7 +120,8 @@ class GlobalVars:
             "195967",   # CaffeineAddiction
             "5363",     # Stijn
             "248139",   # FelixSFD
-            "156721"    # D-side
+            "156721",   # D-side
+            "167070"    # quartata
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
