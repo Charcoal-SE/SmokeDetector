@@ -93,7 +93,7 @@ class GitManager:
         if code_permissions:
             git.checkout("master")
             git.merge(branch)
-            git.push("master")
+            git.push("origin", "master")
             git.branch('-D', branch)  # Delete the branch in the local git tree since we're done with it.
         else:
             git.push("origin", branch)
