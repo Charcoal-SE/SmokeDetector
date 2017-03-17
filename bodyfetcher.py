@@ -283,9 +283,9 @@ class BodyFetcher:
                     answer["IsAnswer"] = True  # Necesssary for Post object
                     answer["title"] = ""  # Necessary for proper Post object creation
                     answer["site"] = site  # Necessary for proper Post object creation
-                    answer_ = Post(api_response=answer)
+                    answer_ = Post(api_response=answer, parent=post_)
 
-                    is_spam, reason, why = check_if_spam(post_)
+                    is_spam, reason, why = check_if_spam(answer_)
                     if is_spam:
                         try:
                             handle_spam(answer_,

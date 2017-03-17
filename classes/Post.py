@@ -8,6 +8,7 @@ class Post:
     _body_is_summary = False
     _is_answer = False
     _owner_rep = 1
+    _parent = None
     _post_id = ""
     _post_score = 0
     _post_site = ""
@@ -16,8 +17,14 @@ class Post:
     _user_url = ""
     _votes = {'downvotes': None, 'upvotes': None}
 
-    def __init__(self, json_data=None, api_response=None):
-        # type: (str, dict) -> None
+    def __init__(self, json_data=None, api_response=None, parent=None):
+        # type: (str, dict, Post) -> None
+
+        if parent is not None:
+            if type(parent) is not Post:
+                raise TypeError("Parent object for a Post object must also be a Post object.")
+            else:
+                self._parent = parent
 
         if json_data is not None:
             self._parse_json_post(json_data)
@@ -119,16 +126,17 @@ class Post:
         if 'down_vote_count' in response:
             self._votes['downvotes'] = response["down_vote_count"]
 
-        if 'display_name' in response['owner']:
-            self._user_name = GlobalVars.parser.unescape(response["owner"]["display_name"])
+        if 'owner' in response:
+            if 'display_name' in response['owner']:
+                self._user_name = GlobalVars.parser.unescape(response["owner"]["display_name"])
 
-        if 'link' in response['owner']:
-            self._user_url = response["owner"]["link"]
+            if 'link' in response['owner']:
+                self._user_url = response["owner"]["link"]
 
-        if 'reputation' in response['owner']:
-            self._owner_rep = response["owner"]["reputation"]
-        else:
-            self._owner_rep = 0
+            if 'reputation' in response['owner']:
+                self._owner_rep = response["owner"]["reputation"]
+            else:
+                self._owner_rep = 0
 
         # noinspection PyBroadException
         try:
