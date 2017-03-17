@@ -1,6 +1,6 @@
 from spamhandling import handle_spam, check_if_spam
-from datahandling import add_or_update_api_data, clear_api_data, store_bodyfetcher_queue, store_bodyfetcher_max_ids,
-                         store_queue_timings
+from datahandling import (add_or_update_api_data, clear_api_data, store_bodyfetcher_queue, store_bodyfetcher_max_ids,
+                          store_queue_timings)
 from globalvars import GlobalVars
 from operator import itemgetter
 from datetime import datetime

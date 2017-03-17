@@ -289,6 +289,7 @@ def store_bodyfetcher_max_ids():
     with open("bodyfetcherMaxIds.p", "wb") as f:
         pickle.dump(GlobalVars.bodyfetcher.previous_max_ids, f, protocol=pickle.HIGHEST_PROTOCOL)
 
+
 def store_queue_timings():
     with open("bodyfetcherQueueTimings.p", "wb") as f:
         pickle.dump(GlobalVars.bodyfetcher.queue_timings, f, protocol=pickle.HIGHEST_PROTOCOL)
