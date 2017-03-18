@@ -23,11 +23,12 @@ def main():
             q1 = sorted_times[int(len(sorted_times) * 0.25)]
             q3 = sorted_times[int(len(sorted_times) * 0.75)]
 
-            print("{0}: min {1}, max {2}, avg {3}, q1 {4}, q3 {5}".format(site.split(".")[0],
-                                                                          min(times),
-                                                                          max(times),
-                                                                          sum(times) / len(times),
-                                                                          q1, q3))
+            mean = sum(times) / len(times)
+            diff_sqr = [(x - mean) ** 2 for x in times]
+            stddev = math.sqrt(sum(diff_sqr) / len(diff_sqr))
+
+            print("{0}: min {1}, max {2}, avg {3}, q1 {4}, q3 {5}, stddev {6}"
+                  .format(site.split(".")[0], min(times), max(times), mean, q1, q3, stddev))
 
     else:
         print("bodyfetcherQueueTimings.p doesn't exist. No data to analyse.")
