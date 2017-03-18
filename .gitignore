@@ -65,6 +65,7 @@ latestMessages.p
 apiCalls.p
 apiCalls.pickle
 bodyfetcherQueue.p
+bodyfetcherQueueTimings.p
 bodyfetcherMaxIds.p
 
 # Settings files

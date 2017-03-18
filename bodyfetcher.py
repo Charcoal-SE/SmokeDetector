@@ -156,11 +156,14 @@ class BodyFetcher:
         pop_time = datetime.utcnow()
 
         for add_time in post_add_times:
-            seconds_in_queue = (pop_time - add_time).total_seconds()
-            if site in self.queue_timings:
-                self.queue_timings[site].append(seconds_in_queue)
-            else:
-                self.queue_timings[site] = [seconds_in_queue]
+            try:
+                seconds_in_queue = (pop_time - add_time).total_seconds()
+                if site in self.queue_timings:
+                    self.queue_timings[site].append(seconds_in_queue)
+                else:
+                    self.queue_timings[site] = [seconds_in_queue]
+            except:
+                continue  # Skip to next item if we've got invalid data or missing values.
 
         store_queue_timings()
 
