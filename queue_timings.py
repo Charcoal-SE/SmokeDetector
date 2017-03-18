@@ -17,6 +17,7 @@ def main():
             if resp == "y":
                 os.remove("bodyfetcherQueueTimings.p")
 
+        print("SITE,MIN,MAX,AVG,Q1,Q3,STDDEV,COUNT")
         for site, times in queue_data.iteritems():
             sorted_times = sorted(times)
             median = sorted_times[int(len(sorted_times) * 0.5)]
@@ -27,7 +28,7 @@ def main():
             diff_sqr = [(x - mean) ** 2 for x in times]
             stddev = math.sqrt(sum(diff_sqr) / len(diff_sqr))
 
-            print("{0}: min {1}, max {2}, avg {3}, q1 {4}, q3 {5}, stddev {6}, count {7}"
+            print("{0},{1},{2},{3},{4},{5},{6},{7}"
                   .format(site.split(".")[0], min(times), max(times), mean, q1, q3, stddev,
                           len(times)))
 
