@@ -121,7 +121,8 @@ class GlobalVars:
             "5363",     # Stijn
             "248139",   # FelixSFD
             "156721",   # D-side
-            "167070"    # quartata
+            "167070",   # quartata
+            "172450"    # Hovercraft Full Of Eels
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
