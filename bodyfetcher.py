@@ -87,7 +87,7 @@ class BodyFetcher:
         if site_base not in self.queue:
             self.queue[site_base] = {}
 
-        self.queue[site_base][post_id] = datetime.utcnow()
+        self.queue[site_base][str(post_id)] = datetime.utcnow()
         self.queue_modify_lock.release()
 
         if should_check_site:
@@ -130,7 +130,7 @@ class BodyFetcher:
         store_bodyfetcher_queue()
         self.queue_modify_lock.release()
 
-        new_post_ids = [k for k, v in new_posts.iteritems()]
+        new_post_ids = [int(k) for k, v in new_posts.iteritems()]
 
         self.queue_timing_modify_lock.acquire()
         post_add_times = [v for k, v in new_posts.iteritems()]
