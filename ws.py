@@ -32,14 +32,6 @@ import time
 import requests
 from tld.utils import update_tld_names, TldIOError
 
-# TEMPORARY: Kill queue pickles first.
-# noinspection PyBroadException
-try:
-    os.remove(os.getcwd() + '/bodyfetcherQueue.p')
-    os.remove(os.getcwd() + '/bodyfetcherQueueTimings.p')
-except:
-    pass
-
 try:
     update_tld_names()
 except TldIOError as ioerr:
