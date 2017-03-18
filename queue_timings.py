@@ -1,8 +1,10 @@
 # queue_timings.py
-# Analysis script for bodyfetcher queue timings. Call from the command line using Python 3.
+# Analysis script for bodyfetcher queue timings. Call from the command line using Python 3 (or Python 2, thanks to
+# the compatibility code below).
 
 import os.path
 import platform
+# Handle both Python 2 and Python 3 compatibility with Pickle and cPickle
 if int(platform.python_version_tuple()[0]) == 2:
     import cPickle as pickle
 elif int(platform.python_version_tuple()[0]) == 3:
