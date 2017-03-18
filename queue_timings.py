@@ -23,23 +23,23 @@ def main():
             if isinstance(median_i, (int, long)):
                 median = sorted_times[median_i - 1]
             else:
-                median = (sorted_times[math.floor(median_i) - 1] +
-                          sorted_times[math.ceil(median_i) - 1]) / 2
+                median = (sorted_times[int(math.floor(median_i) - 1)] +
+                          sorted_times[int(math.ceil(median_i) - 1)]) / 2
 
-            left = sorted_times[0:math.floor(median_i)]
-            right = sorted_times[math.floor(median_i):-1]
+            left = sorted_times[0:int(math.floor(median_i))]
+            right = sorted_times[int(math.floor(median_i)):-1]
 
             q1_i = len(left) / 2
             if isinstance(q1_i, (int, long)):
                 q1 = left[q1_i - 1]
             else:
-                q1 = (left[math.floor(q1_i) - 1] + left[math.ceil(median_i) - 1]) / 2
+                q1 = (left[int(math.floor(q1_i) - 1)] + left[int(math.ceil(q1_i) - 1)]) / 2
 
             q3_i = len(right) / 2
             if isinstance(q3_i, (int, long)):
                 q3 = right[q3_i - 1]
             else:
-                q3 = (right[math.floor(q3_i) - 1] + right[math.ceil(q3_i) - 1]) / 2
+                q3 = (right[int(math.floor(q3_i) - 1)] + right[int(math.ceil(q3_i) - 1)]) / 2
 
             print("{0}: min {1}, max {2}, avg {3}, q1 {4}, q3 {5}".format(site.split(".")[0],
                                                                           min(times),
