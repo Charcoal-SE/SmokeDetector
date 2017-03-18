@@ -382,6 +382,31 @@ def get_domain(s):
     return domain
 
 
+# noinspection PyMissingTypeHints
+def similar_answer(post):
+    if not post.parent:
+        return False, False, False, ""
+
+    question = post.parent
+    sanitized_body = strip_urls_and_tags(post.body)
+
+    for other_answer in question['answers']:
+        if other_answer.post_id != post.post_id:
+            sanitized_answer = strip_urls_and_tags(other_answer.body)
+            ratio = similar_ratio(sanitized_body, sanitized_answer)
+
+            if ratio >= SIMILAR_THRESHOLD:
+                return False, False, True, \
+                    u"Answer similar to answer {}, ratio {}".format(other_answer.post_id, ratio)
+
+    return False, False, False, ""
+
+
+# noinspection PyMissingTypeHints
+def strip_urls_and_tags(string):
+    return regex.sub("</?.+?>|\w+?://", "", regex.sub(URL_REGEX, "", string))
+
+
 # noinspection PyClassHasNoInit
 class FindSpam:
     with open("bad_keywords.txt", "r") as f:
@@ -870,6 +895,12 @@ class FindSpam:
         {'method': username_similar_website, 'all': True, 'sites': [], 'reason': "username similar to website in {}",
          'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
          'max_rep': 50, 'max_score': 0, 'questions': False},
+
+        # Answer similar to existing answer on post
+        {'method': similar_answer, 'all': True, 'sites': ["codegolf.stackexchange.com"],
+         'reason': "answer similar to existing answer on post", 'whole_post': True,
+         'title': False, 'body': False, 'username': False, 'stripcodeblocks': False,
+         'max_rep': 50, 'max_score': 0}
     ]
 
     @staticmethod
@@ -914,18 +945,32 @@ class FindSpam:
                         matched_body = compiled_regex.findall(body_to_check)
                 else:
                     assert 'method' in rule
-                    matched_title, why_title = rule['method'](post.title, post.post_site, post.user_name)
-                    if matched_title and rule['title']:
-                        why["title"].append(u"Title - {}".format(why_title))
-                    matched_username, why_username = rule['method'](post.user_name, post.post_site, post.user_name)
-                    if matched_username and rule['username']:
-                        why["username"].append(u"Username - {}".format(why_username))
-                    if (not post.body_is_summary or rule['body_summary']) and \
-                            (not post.is_answer or check_if_answer) and \
-                            (post.is_answer or check_if_question):
-                        matched_body, why_body = rule['method'](body_to_check, post.post_site, post.user_name)
-                        if matched_body and rule['body']:
-                            why["body"].append(u"Post - {}".format(why_body))
+
+                    if 'whole_post' in rule and rule['whole_post']:
+                        matched_title, matched_username, matched_body, why_post = rule['method'](post)
+
+                        if matched_title:
+                            why["title"].append(u"Title - {}".format(why_post))
+                            result.append(rule['reason'].replace("{}", "title"))
+                        elif matched_username:
+                            why["username"].append(u"Username - {}".format(why_post))
+                            result.append(rule['reason'].replace("{}", "username"))
+                        elif matched_body:
+                            why["body"].append(u"Post - {}".format(why_post))
+                            result.append(rule['reason'].replace("{}", "body"))
+                    else:
+                        matched_title, why_title = rule['method'](post.title, post.post_site, post.user_name)
+                        if matched_title and rule['title']:
+                            why["title"].append(u"Title - {}".format(why_title))
+                        matched_username, why_username = rule['method'](post.user_name, post.post_site, post.user_name)
+                        if matched_username and rule['username']:
+                            why["username"].append(u"Username - {}".format(why_username))
+                        if (not post.body_is_summary or rule['body_summary']) and \
+                                (not post.is_answer or check_if_answer) and \
+                                (post.is_answer or check_if_question):
+                            matched_body, why_body = rule['method'](body_to_check, post.post_site, post.user_name)
+                            if matched_body and rule['body']:
+                                why["body"].append(u"Post - {}".format(why_body))
                 if matched_title and rule['title']:
                     why["title"].append(FindSpam.generate_why(compiled_regex, post.title, u"Title", is_regex_check))
                     result.append(rule['reason'].replace("{}", "title"))

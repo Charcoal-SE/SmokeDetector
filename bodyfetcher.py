@@ -1,5 +1,6 @@
 from spamhandling import handle_spam, check_if_spam
-from datahandling import add_or_update_api_data, clear_api_data, store_bodyfetcher_queue, store_bodyfetcher_max_ids
+from datahandling import (add_or_update_api_data, clear_api_data, store_bodyfetcher_queue, store_bodyfetcher_max_ids,
+                          store_queue_timings)
 from globalvars import GlobalVars
 from operator import itemgetter
 from datetime import datetime
@@ -14,6 +15,7 @@ from classes import Post
 class BodyFetcher:
     queue = {}
     previous_max_ids = {}
+    queue_timings = {}
 
     special_cases = {
         "math.stackexchange.com": 15,
@@ -65,6 +67,7 @@ class BodyFetcher:
     api_data_lock = threading.Lock()
     queue_modify_lock = threading.Lock()
     max_ids_modify_lock = threading.Lock()
+    queue_timing_modify_lock = threading.Lock()
 
     def add_to_queue(self, post, should_check_site=False):
         mse_sandbox_id = 3122
@@ -81,10 +84,29 @@ class BodyFetcher:
         if post_id == mse_sandbox_id and site_base == "meta.stackexchange.com":
             return  # don't check meta sandbox, it's full of weird posts
         self.queue_modify_lock.acquire()
-        if site_base in self.queue:
-            self.queue[site_base].append(post_id)
+        if site_base not in self.queue:
+            self.queue[site_base] = {}
+
+        # Something about how the queue is being filled is storing Post IDs in a list.
+        # So, if we get here we need to make sure that the correct types are paseed.
+        #
+        # If the item in self.queue[site_base] is a dict, do nothing.
+        # If the item in self.queue[site_base] is not a dict but is a list or a tuple, then convert to dict and
+        # then replace the list or tuple with the dict.
+        # If the item in self.queue[site_base] is neither a dict or a list, then explode.
+        if type(self.queue[site_base]) is dict:
+            pass
+        elif type(self.queue[site_base]) is not dict and type(self.queue[site_base]) in [list, tuple]:
+            post_list_dict = {}
+            for post_list_id in self.queue[site_base]:
+                post_list_dict[post_list_id] = None
+            self.queue[site_base] = post_list_dict
         else:
-            self.queue[site_base] = [post_id]
+            raise TypeError("A non-iterable is in the queue item for a given site, this will cause errors!")
+
+        # This line only works if we are using a dict in the self.queue[site_base] object, which we should be with
+        # the previous conversion code.
+        self.queue[site_base][str(post_id)] = datetime.utcnow()
         self.queue_modify_lock.release()
 
         if should_check_site:
@@ -123,10 +145,26 @@ class BodyFetcher:
             return
 
         self.queue_modify_lock.acquire()
-        new_post_ids = self.queue.pop(site)
+        new_posts = self.queue.pop(site)
         store_bodyfetcher_queue()
         self.queue_modify_lock.release()
 
+        new_post_ids = [int(k) for k, v in new_posts.iteritems()]
+
+        self.queue_timing_modify_lock.acquire()
+        post_add_times = [v for k, v in new_posts.iteritems()]
+        pop_time = datetime.utcnow()
+
+        for add_time in post_add_times:
+            seconds_in_queue = (pop_time - add_time).total_seconds()
+            if site in self.queue_timings:
+                self.queue_timings[site].append(seconds_in_queue)
+            else:
+                self.queue_timings[site] = [seconds_in_queue]
+
+        store_queue_timings()
+
+        self.queue_timing_modify_lock.release()
         self.max_ids_modify_lock.acquire()
 
         if site in self.previous_max_ids and max(new_post_ids) > self.previous_max_ids[site]:
