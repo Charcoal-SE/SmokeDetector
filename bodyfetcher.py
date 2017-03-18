@@ -87,6 +87,25 @@ class BodyFetcher:
         if site_base not in self.queue:
             self.queue[site_base] = {}
 
+        # Something about how the queue is being filled is storing Post IDs in a list.
+        # So, if we get here we need to make sure that the correct types are paseed.
+        #
+        # If the item in self.queue[site_base] is a dict, do nothing.
+        # If the item in self.queue[site_base] is not a dict but is a list or a tuple, then convert to dict and
+        # then replace the list or tuple with the dict.
+        # If the item in self.queue[site_base] is neither a dict or a list, then explode.
+        if type(self.queue[site_base]) is dict:
+            pass
+        elif type(self.queue[site_base]) is not dict and type(self.queue[site_base]) in [list, tuple]:
+            post_list_dict = {}
+            for post_list_id in self.queue[site_base]:
+                post_list_dict[post_list_id] = None
+            self.queue[site_base] = post_list_dict
+        else:
+            raise TypeError("A non-iterable is in the queue item for a given site, this will cause errors!")
+
+        # This line only works if we are using a dict in the self.queue[site_base] object, which we should be with
+        # the previous conversion code.
         self.queue[site_base][str(post_id)] = datetime.utcnow()
         self.queue_modify_lock.release()
 
