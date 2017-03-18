@@ -381,6 +381,7 @@ def get_domain(s):
                 domain = parsed_uri.path.split(".")[0]
     return domain
 
+
 # noinspection PyMissingTypeHints
 def similar_answer(post):
     if not post.parent:
@@ -400,9 +401,11 @@ def similar_answer(post):
 
     return False, False, False, ""
 
+
 # noinspection PyMissingTypeHints
 def strip_urls_and_tags(string):
     return regex.sub("</?.+?>|\w+?://", "", regex.sub(URL_REGEX, "", string))
+
 
 # noinspection PyClassHasNoInit
 class FindSpam:
