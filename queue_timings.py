@@ -17,7 +17,8 @@ def main():
                 os.remove("bodyfetcherQueueTimings.p")
 
         for site, times in queue_data.iteritems():
-            print("{0}: min {1}, max {2}, avg {3}".format(site.split(".")[0], min(times), max(times), sum(times) / len(times)))
+            print("{0}: min {1}, max {2}, avg {3}".format(site.split(".")[0], min(times), max(times),
+                                                          sum(times) / len(times)))
 
     else:
         print("bodyfetcherQueueTimings.p doesn't exist. No data to analyse.")
