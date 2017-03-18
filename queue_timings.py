@@ -16,7 +16,7 @@ def main():
             if resp == "y":
                 os.remove("bodyfetcherQueueTimings.p")
 
-        for site, times in queue_data:
+        for site, times in queue_data.iteritems():
             print("{0}: min {1}, max {2}, avg {3}".format(site, min(times), max(times), sum(times) / len(times)))
 
     else:
