@@ -163,10 +163,6 @@ class Post:
         return int(self._owner_rep)
 
     @property
-    def parent(self):
-        return self._parent
-
-    @property
     def post_id(self):
         return unicode(self._post_id)
 
