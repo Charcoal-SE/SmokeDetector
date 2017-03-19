@@ -407,6 +407,19 @@ def strip_urls_and_tags(string):
     return regex.sub("</?.+?>|\w+?://", "", regex.sub(URL_REGEX, "", string))
 
 
+# noinspection PyUnusedLocal,PyMissingTypeHints
+def mostly_dots(s, site, *args):
+    body = strip_urls_and_tags(s)
+    body_length = len(body)
+
+    dot_count = len(regex.findall("\.", body))
+
+    if body_length and dot_count / float(body_length) >= 0.4:
+        return True, u"Post contains {} dots out of {} characters".format(dot_count, body_length)
+    else:
+        return False, ""
+
+
 # noinspection PyClassHasNoInit
 class FindSpam:
     with open("bad_keywords.txt", "r") as f:
@@ -880,6 +893,10 @@ class FindSpam:
         {'regex': ur'(?:<blockquote>\s*){6}<p><a href="([^<>]+)"[^<>]*>\1</a>\s*</p>\s*</blockquote>', 'all': True,
          'sites': [], 'reason': 'link inside deeply nested blockquotes', 'title': False, 'body': True,
          'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
+        # Mostly dots in post
+        {'method': mostly_dots, 'all': True, 'sites': ['codegolf.stackexchange.com'],
+         'reason': 'mostly dots in {}', 'title': True, 'body': True, 'username': False, 'body_summary': False,
+         'stripcodeblocks': True, 'max_rep': 50, 'max_score': 0},
 
         #
         # Category: other
