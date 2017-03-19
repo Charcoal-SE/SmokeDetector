@@ -29,7 +29,7 @@ def main():
             stddev = math.sqrt(sum(diff_sqr) / len(diff_sqr))
 
             print("{0},{1},{2},{3},{4},{5},{6},{7}"
-                  .format(site.split(".")[0], min(times), max(times), mean, q1, median, 
+                  .format(site.split(".")[0], min(times), max(times), mean, q1, median,
                           q3, stddev, len(times)))
 
     else:
