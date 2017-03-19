@@ -897,6 +897,10 @@ class FindSpam:
         {'method': mostly_dots, 'all': True, 'sites': ['codegolf.stackexchange.com'],
          'reason': 'mostly dots in {}', 'title': True, 'body': True, 'username': False, 'body_summary': False,
          'stripcodeblocks': True, 'max_rep': 50, 'max_score': 0},
+        # Whitespace-only link
+        {'regex': ur'<a href=".*?">\p{Zs}+?</a>', 'all': True, 'sites': [],
+         'reason': 'whitespace-only link in {}', 'title': False, 'body': True, 'username': False, 'body_summary': False,
+         'stripcodeblocks': True, 'max_rep': 50, 'max_score': 0},
 
         #
         # Category: other
