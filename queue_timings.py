@@ -17,7 +17,7 @@ def main():
             if resp == "y":
                 os.remove("bodyfetcherQueueTimings.p")
 
-        print("SITE,MIN,MAX,AVG,Q1,Q3,STDDEV,COUNT")
+        print("SITE,MIN,MAX,AVG,Q1,MEDIAN,Q3,STDDEV,COUNT")
         for site, times in queue_data.iteritems():
             sorted_times = sorted(times)
             median = sorted_times[int(len(sorted_times) * 0.5)]
@@ -29,8 +29,8 @@ def main():
             stddev = math.sqrt(sum(diff_sqr) / len(diff_sqr))
 
             print("{0},{1},{2},{3},{4},{5},{6},{7}"
-                  .format(site.split(".")[0], min(times), max(times), mean, q1, q3, stddev,
-                          len(times)))
+                  .format(site.split(".")[0], min(times), max(times), mean, q1, median, 
+                          q3, stddev, len(times)))
 
     else:
         print("bodyfetcherQueueTimings.p doesn't exist. No data to analyse.")
