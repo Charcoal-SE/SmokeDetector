@@ -519,14 +519,11 @@ def command_alive(ev_room, *args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: A string
     """
-    if ev_room == GlobalVars.meta_tavern_room_id or ev_room == GlobalVars.socvr_room_id:
-        return Response(command_status=True,
-                        message=random.choice(['Yup', 'You doubt me?', 'Of course',
-                                               '... did I miss something?', 'plz send teh coffee',
-                                               'Watching this endless list of new questions *never* gets boring',
-                                               'Kinda sorta']))
-    else:
-        return Response(command_status=True, message='Of course')
+    return Response(command_status=True,
+                    message=random.choice(['Yup', 'You doubt me?', 'Of course',
+                                           '... did I miss something?', 'plz send teh coffee',
+                                           'Watching this endless list of new questions *never* gets boring',
+                                           'Kinda sorta']))
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
