@@ -5,6 +5,7 @@ else:
     from sh import git
 from requests.auth import HTTPBasicAuth
 from globalvars import GlobalVars
+import regex
 import requests
 import time
 import json
@@ -146,4 +147,4 @@ class GitManager:
     def current_git_status():
         if 'windows' in str(platform.platform()).lower():
             return "Git support not available in Windows."
-        return git.status()
+        return regex.sub("\x1b\[\d?\d?m", "", str(git.status()))
