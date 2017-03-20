@@ -146,4 +146,4 @@ class GitManager:
     def current_git_status():
         if 'windows' in str(platform.platform()).lower():
             return "Git support not available in Windows."
-        return git.status()
+        return git("-c", "color.status=false", "status")
