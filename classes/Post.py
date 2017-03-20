@@ -21,7 +21,7 @@ class Post:
         # type: (str, dict, Post) -> None
 
         if parent is not None:
-            if type(parent) is not Post:
+            if not isinstance(parent, Post):
                 raise TypeError("Parent object for a Post object must also be a Post object.")
             else:
                 self._parent = parent
@@ -161,6 +161,10 @@ class Post:
     @property
     def owner_rep(self):
         return int(self._owner_rep)
+
+    @property
+    def parent(self):
+        return self._parent
 
     @property
     def post_id(self):
