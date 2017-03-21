@@ -4,11 +4,12 @@ python:
   - '2.7'
 install:
   - pip install -r requirements.txt --upgrade
+  - pip install pytest-cov codecov
 script:
   - flake8 --config=tox_tests.ini ./test/
   - flake8 --config=tox_classes.ini ./classes/
   - flake8 ./
-  - python -W default::Warning -m pytest test
+  - python -W default::Warning -m pytest --cov=chatcommunicate.py --cov=findspam.py --cov=globalvars.py --cov=spamhandling.py --cov=datahandling.py test
 branches:
   only:
     - master
@@ -21,3 +22,5 @@ cache:
 before_cache:
   - rm -f $HOME/.cache/pip/log/debug.log
   - rm -rf $HOME/.cache/pip/http
+after_success:
+  - codecov
