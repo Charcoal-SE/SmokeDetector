@@ -32,6 +32,7 @@ import time
 import requests
 # noinspection PyPackageRequirements
 from tld.utils import update_tld_names, TldIOError
+from helpers import log
 
 try:
     update_tld_names()

@@ -7,7 +7,7 @@ import tld
 # noinspection PyPackageRequirements
 from tld.utils import TldDomainNotFound
 from urlparse import urlparse
-from helpers import all_matches_unique
+from helpers import all_matches_unique, log
 
 SIMILAR_THRESHOLD = 0.95
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"

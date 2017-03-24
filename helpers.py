@@ -18,6 +18,7 @@ def environ_or_none(key):
 def all_matches_unique(match):
     return len(match[0][1::2]) == len(set(match[0][1::2]))
 
+
 def log(*args):
     log_str = "[{}] {}".format(datetime.now().isoformat()[11:-7], "  ".join(args))
     print(log_str)
