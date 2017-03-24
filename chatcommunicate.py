@@ -54,7 +54,7 @@ def print_chat_message(ev):
                       attrs=['bold'])
     message += ev.data['content']
     message += "\""
-    log(message + colored(" - " + ev.data['user_name'], attrs=['bold']))
+    log('info', message + colored(" - " + ev.data['user_name'], attrs=['bold']))
 
 
 # noinspection PyUnusedLocal

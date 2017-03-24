@@ -1,6 +1,7 @@
 import os
 from collections import namedtuple
 from datetime import datetime
+from termcolor import colored
 
 Response = namedtuple('Response', 'command_status message')
 
@@ -19,6 +20,14 @@ def all_matches_unique(match):
     return len(match[0][1::2]) == len(set(match[0][1::2]))
 
 
-def log(*args):
-    log_str = u"[{}] {}".format(datetime.now().isoformat()[11:-7], u"  ".join([unicode(x) for x in args]))
+def log(log_level, *args):
+    colors = {
+        'debug': 'gray',
+        'info': 'cyan',
+        'warning': 'yellow',
+        'error': 'red'
+    }
+    color = (colors[log_level] if log_level in colors else 'white')
+    log_str = u"{} {}".format(colored("[{}]".format(datetime.now().isoformat()[11:-7]), color),
+                              u"  ".join([unicode(x) for x in args]))
     print(log_str)

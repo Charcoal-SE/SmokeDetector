@@ -47,14 +47,14 @@ class Metasmoke:
                         payload = json.dumps({"command": "subscribe",
                                               "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"})
                         GlobalVars.metasmoke_ws.send(payload)
-                        log(e)
+                        log('error', e)
                         try:
                             exc_info = sys.exc_info()
                             traceback.print_exception(*exc_info)
                         except:
-                            log("Can't fetch full exception details")
+                            log('error', "Can't fetch full exception details")
             except:
-                log("Couldn't bind to MS websocket")
+                log('error', "Couldn't bind to MS websocket")
                 if not has_succeeded:
                     break
                 else:
@@ -145,7 +145,7 @@ class Metasmoke:
     def send_stats_on_post(title, link, reasons, body, username, user_link, why, owner_rep,
                            post_score, up_vote_count, down_vote_count):
         if GlobalVars.metasmoke_host is None:
-            log("Metasmoke location not defined, not reporting")
+            log('info', "Metasmoke location not defined, not reporting")
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -166,12 +166,12 @@ class Metasmoke:
             headers = {'Content-type': 'application/json'}
             requests.post(GlobalVars.metasmoke_host + "/posts.json", data=json.dumps(payload), headers=headers)
         except Exception as e:
-            log(e)
+            log('error', e)
 
     @staticmethod
     def send_feedback_for_post(post_link, feedback_type, user_name, user_id, chat_host):
         if GlobalVars.metasmoke_host is None:
-            log("Metasmoke location not defined; not reporting")
+            log('info', "Metasmoke location not defined; not reporting")
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -192,12 +192,12 @@ class Metasmoke:
             requests.post(GlobalVars.metasmoke_host + "/feedbacks.json", data=json.dumps(payload), headers=headers)
 
         except Exception as e:
-            log(e)
+            log('error', e)
 
     @staticmethod
     def send_deletion_stats_for_post(post_link, is_deleted):
         if GlobalVars.metasmoke_host is None:
-            log("Metasmoke location not defined; not reporting deletion stats")
+            log('info', "Metasmoke location not defined; not reporting deletion stats")
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -214,12 +214,12 @@ class Metasmoke:
             headers = {'Content-type': 'application/json'}
             requests.post(GlobalVars.metasmoke_host + "/deletion_logs.json", data=json.dumps(payload), headers=headers)
         except Exception as e:
-            log(e)
+            log('error', e)
 
     @staticmethod
     def send_status_ping():
         if GlobalVars.metasmoke_host is None:
-            log("Metasmoke location not defined; not sending status ping")
+            log('info', "Metasmoke location not defined; not sending status ping")
             return
 
         threading.Timer(60, Metasmoke.send_status_ping).start()
@@ -249,7 +249,7 @@ class Metasmoke:
                 pass
 
         except Exception as e:
-            log(e)
+            log('error', e)
 
     @staticmethod
     def update_code_privileged_users_list():

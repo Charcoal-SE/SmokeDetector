@@ -5,7 +5,7 @@
 import platform
 from helpers import log
 if 'windows' in str(platform.platform()).lower():
-    log("Git support not available in Windows.")
+    log('warning', "Git support not available in Windows.")
 else:
     from sh import git
 import os

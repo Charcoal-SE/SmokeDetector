@@ -115,7 +115,7 @@ def handle_spam(post, reasons, why):
                                    post.up_vote_count, post.down_vote_count))
         t_metasmoke.start()
 
-        log(GlobalVars.parser.unescape(s).encode('ascii', errors='replace'))
+        log('debug', GlobalVars.parser.unescape(s).encode('ascii', errors='replace'))
         if time.time() >= GlobalVars.blockedTime["all"]:
             datahandling.append_to_latest_questions(post.post_site, post.post_id, post.title)
             if reason not in GlobalVars.experimental_reasons:
@@ -187,7 +187,7 @@ def handle_user_with_all_spam(user, why):
     tab = "activity" if site == "stackexchange.com" else "topactivity"
     s = "[ [SmokeDetector](//git.io/vgx7b) ] All of this user's posts are spam: [user {} on {}](//{}/users/{}?tab={})" \
         .format(user_id, site, site, user_id, tab)
-    log(GlobalVars.parser.unescape(s).encode('ascii', errors='replace'))
+    log('debug', GlobalVars.parser.unescape(s).encode('ascii', errors='replace'))
     datahandling.add_why_allspam(user, why)
     if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
         GlobalVars.charcoal_hq.send_message(s)

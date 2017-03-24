@@ -124,8 +124,8 @@ def has_phone_number(s, site, *args):
             try:
                 z = phonenumbers.parse(phone_number, testf)
                 if phonenumbers.is_possible_number(z) and phonenumbers.is_valid_number(z):
-                    log("Possible {}, Valid {}, Explain: {}".format(phonenumbers.is_possible_number(z),
-                                                                    phonenumbers.is_valid_number(z), z))
+                    log('debug', "Possible {}, Valid {}, Explain: {}".format(phonenumbers.is_possible_number(z),
+                                                                             phonenumbers.is_valid_number(z), z))
                     return True, u"Phone number: {}".format(phone_number)
             except phonenumbers.phonenumberutil.NumberParseException:
                 pass

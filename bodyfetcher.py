@@ -198,9 +198,9 @@ class BodyFetcher:
 
         self.max_ids_modify_lock.release()
 
-        log("New IDs / Hybrid Intermediate IDs for {0}:".format(site))
-        log(sorted(new_post_ids))
-        log(sorted(posts))
+        log('debug', "New IDs / Hybrid Intermediate IDs for {0}:".format(site))
+        log('debug', sorted(new_post_ids))
+        log('debug', sorted(posts))
 
         question_modifier = ""
         pagesize_modifier = ""

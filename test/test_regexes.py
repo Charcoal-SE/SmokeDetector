@@ -88,8 +88,8 @@ def test_regexes(title, body, username, site, body_is_summary, is_answer, match)
                               'site': site, 'question_id': '1', 'IsAnswer': is_answer,
                               'BodyIsSummary': body_is_summary, 'score': 0})
     result = FindSpam.test_post(post)[0]
-    log(title)
-    log("Result:", result)
+    log('info', title)
+    log('info', "Result:", result)
     isspam = False
     if len(result) > 0:
         isspam = True

@@ -242,8 +242,8 @@ def restart_automatically(time_in_seconds):
 
 Thread(name="auto restart thread", target=restart_automatically, args=(21600,)).start()
 
-log(GlobalVars.location)
-log(GlobalVars.metasmoke_host)
+log('info', GlobalVars.location)
+log('info', GlobalVars.metasmoke_host)
 
 DeletionWatcher.update_site_id_list()
 
@@ -298,7 +298,7 @@ while True:
                            .strip()
         n = os.linesep
         logged_msg = str(now) + " UTC" + n + exception_only + n + tr + n + n
-        log(logged_msg)
+        log('error', logged_msg)
         with open("errorLogs.txt", "a") as f:
             f.write(logged_msg)
         if seconds < 180 and exc_type != websocket.WebSocketConnectionClosedException\

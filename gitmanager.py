@@ -1,7 +1,7 @@
 import platform
 from helpers import log
 if 'windows' in str(platform.platform()).lower():
-    log("Git support not available in Windows.")
+    log('warning', "Git support not available in Windows.")
 else:
     from sh import git
 from requests.auth import HTTPBasicAuth
@@ -16,7 +16,7 @@ class GitManager:
     @staticmethod
     def add_to_blacklist(**kwargs):
         if 'windows' in str(platform.platform()).lower():
-            log("Git support not available in Windows.")
+            log('warning', "Git support not available in Windows.")
             return (False, "Git support not available in Windows.")
 
         blacklist = kwargs.get("blacklist", "")
@@ -115,7 +115,7 @@ class GitManager:
             response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls",
                                      auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password),
                                      data=json.dumps(payload))
-            log(response.json())
+            log('debug', response.json())
             try:
                 git.checkout("deploy")  # Return to deploy, pending the accept of the PR in Master.
                 git.branch('-D', branch)  # Delete the branch in the local git tree since we're done with it.
