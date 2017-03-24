@@ -104,7 +104,8 @@ class Post:
         if "IsAnswer" in response and response["IsAnswer"] is True:
             self._is_answer = True
         else:
-            if "answers" in response and not response["answers"] != []:
+            if "answers" in response and response["answers"] != []:
+                self._answers = []
                 for answer in response["answers"]:
                     self._answers.append(Post(api_response=answer))
             else:
