@@ -28,8 +28,8 @@ def main():
             diff_sqr = [(x - mean) ** 2 for x in times]
             stddev = math.sqrt(sum(diff_sqr) / len(diff_sqr))
 
-            min98 = max(mean - 2*stddev, min(times))
-            max98 = min(mean + 2*stddev, max(times))
+            min98 = max(mean - 2 * stddev, min(times))
+            max98 = min(mean + 2 * stddev, max(times))
 
             print("{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}"
                   .format(site.split(".")[0], min(times), max(times), mean, q1, median,
