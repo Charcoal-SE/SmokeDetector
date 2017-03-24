@@ -30,6 +30,7 @@ from deletionwatcher import DeletionWatcher
 import json
 import time
 import requests
+# noinspection PyPackageRequirements
 from tld.utils import update_tld_names, TldIOError
 
 try:

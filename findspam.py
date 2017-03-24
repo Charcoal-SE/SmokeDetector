@@ -2,7 +2,9 @@
 import regex
 import phonenumbers
 from difflib import SequenceMatcher
+# noinspection PyPackageRequirements
 import tld
+# noinspection PyPackageRequirements
 from tld.utils import TldDomainNotFound
 from urlparse import urlparse
 from helpers import all_matches_unique

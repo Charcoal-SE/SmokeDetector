@@ -24,6 +24,7 @@ cd SmokeDetector
 git submodule init
 git submodule update
 sudo pip install -r requirements.txt --upgrade
+pip install -r --user user_requirements.txt --upgrade
 ```
 
 Next, copy `config.sample` to a new file called `config`, and edit the values required.
