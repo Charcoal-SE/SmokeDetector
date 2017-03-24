@@ -539,9 +539,9 @@ class FindSpam:
         r"buyviewsutube"
     ]
     city_list = [
-        "Agra", "Amritsar", "Bangalore", "Bhopal", "Chandigarh", "Chennai", "Coimbatore", "Delhi", "Noida", "Dubai", "Durgapur",
+        "Agra", "Amritsar", "Bangalore", "Bhopal", "Chandigarh", "Chennai", "Coimbatore", "Delhi", "Dubai", "Durgapur",
         "Ghaziabad", "Hyderabad", "Jaipur", "Jalandhar", "Kolkata", "Ludhiana", "Mumbai", "Madurai", "Patna",
-        "Portland", "Rajkot", "Surat", "Telangana", "Udaipur", "Uttarakhand", "India", "Pakistan",
+        "Portland", "Rajkot", "Surat", "Telangana", "Udaipur", "Uttarakhand", "India", "Pakistan", "Noida",
         # yes, these aren't cities but...
     ]
     rules = [
