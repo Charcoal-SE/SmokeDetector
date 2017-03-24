@@ -20,5 +20,5 @@ def all_matches_unique(match):
 
 
 def log(*args):
-    log_str = u"[{}] {}".format(datetime.now().isoformat()[11:-7], "  ".join(args))
+    log_str = u"[{}] {}".format(datetime.now().isoformat()[11:-7], "  ".join([str(x) for x in args]))
     print(log_str)
