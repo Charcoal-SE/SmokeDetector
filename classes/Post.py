@@ -104,6 +104,11 @@ class Post:
         if "IsAnswer" in response and response["IsAnswer"] is True:
             self._is_answer = True
         else:
+            if "answers" in response and not response["answers"] != []:
+                for answer in response["answers"]:
+                    self._answers.append(Post(api_response=answer))
+            else:
+                self._answers = []
             self._is_answer = False
 
         if "BodyIsSummary" in response and response["BodyIsSummary"] is True:
@@ -145,6 +150,14 @@ class Post:
             self._post_id = unicode(0)
 
         return
+
+    @property
+    def answers(self):
+        # noinspection PyBroadException
+        try:
+            return self._answers
+        except:
+            return None
 
     @property
     def body(self):
@@ -206,3 +219,8 @@ class Post:
     @property
     def down_vote_count(self):
         return self._votes['downvotes']
+
+    def append_answer(self, answer):
+        if not isinstance(answer, Post):
+            raise TypeError("Answer objects must be instances of the Post class")
+        self._answers.append(answer)

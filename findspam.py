@@ -390,7 +390,7 @@ def similar_answer(post):
     question = post.parent
     sanitized_body = strip_urls_and_tags(post.body)
 
-    for other_answer in question['answers']:
+    for other_answer in question.answers:
         if other_answer.post_id != post.post_id:
             sanitized_answer = strip_urls_and_tags(other_answer.body)
             ratio = similar_ratio(sanitized_body, sanitized_answer)
