@@ -2,6 +2,7 @@
 from findspam import FindSpam
 import pytest
 from classes import Post
+from helpers import log
 
 
 # noinspection PyMissingTypeHints
@@ -87,8 +88,8 @@ def test_regexes(title, body, username, site, body_is_summary, is_answer, match)
                               'site': site, 'question_id': '1', 'IsAnswer': is_answer,
                               'BodyIsSummary': body_is_summary, 'score': 0})
     result = FindSpam.test_post(post)[0]
-    print title
-    print "Result:", result
+    log(title)
+    log("Result:", result)
     isspam = False
     if len(result) > 0:
         isspam = True

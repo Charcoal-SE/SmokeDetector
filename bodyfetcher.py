@@ -9,6 +9,7 @@ import time
 import threading
 import requests
 from classes import Post
+from helpers import log
 
 
 # noinspection PyClassHasNoInit,PyBroadException
@@ -197,9 +198,9 @@ class BodyFetcher:
 
         self.max_ids_modify_lock.release()
 
-        print("New IDs / Hybrid Intermediate IDs for {0}:".format(site))
-        print(sorted(new_post_ids))
-        print(sorted(posts))
+        log("New IDs / Hybrid Intermediate IDs for {0}:".format(site))
+        log(sorted(new_post_ids))
+        log(sorted(posts))
 
         question_modifier = ""
         pagesize_modifier = ""

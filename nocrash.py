@@ -3,8 +3,9 @@
 # This script replaces the original nocrash.sh functionality with a pure Python approach.
 
 import platform
+from helpers import log
 if 'windows' in str(platform.platform()).lower():
-    print "Git support not available in Windows."
+    log("Git support not available in Windows.")
 else:
     from sh import git
 import os

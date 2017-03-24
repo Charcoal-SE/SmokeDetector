@@ -6,7 +6,7 @@ from chatexchange_extension import Client
 import HTMLParser
 from hashlib import md5
 import ConfigParser
-from helpers import environ_or_none
+from helpers import environ_or_none, log
 import threading
 
 
@@ -335,20 +335,20 @@ class GlobalVars:
         metasmoke_host = config.get("Config", "metasmoke_host")
     except ConfigParser.NoOptionError:
         metasmoke_host = None
-        print "metasmoke host not found. Set it as metasmoke_host in the config file." \
-              "See https://github.com/Charcoal-SE/metasmoke."
+        log("metasmoke host not found. Set it as metasmoke_host in the config file." \
+            "See https://github.com/Charcoal-SE/metasmoke.")
 
     try:
         metasmoke_key = config.get("Config", "metasmoke_key")
     except ConfigParser.NoOptionError:
         metasmoke_key = ""
-        print "No metasmoke key found, which is okay if both are running on the same host"
+        log("No metasmoke key found, which is okay if both are running on the same host")
 
     try:
         metasmoke_ws_host = config.get("Config", "metasmoke_ws_host")
     except ConfigParser.NoOptionError:
         metasmoke_ws_host = ""
-        print "No metasmoke websocket host found, which is okay if you're anti-websocket"
+        log("No metasmoke websocket host found, which is okay if you're anti-websocket")
 
     try:
         github_username = config.get("Config", "github_username")

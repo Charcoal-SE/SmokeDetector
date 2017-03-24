@@ -8,7 +8,7 @@ from termcolor import colored
 from deletionwatcher import DeletionWatcher
 from ChatExchange.chatexchange.messages import Message
 import chatcommands
-from helpers import Response
+from helpers import Response, log
 
 # Please note: If new !!/ commands are added or existing ones are modified, don't forget to
 # update the wiki at https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands.
@@ -54,7 +54,7 @@ def print_chat_message(ev):
                       attrs=['bold'])
     message += ev.data['content']
     message += "\""
-    print message + colored(" - " + ev.data['user_name'], attrs=['bold'])
+    log(message + colored(" - " + ev.data['user_name'], attrs=['bold']))
 
 
 # noinspection PyUnusedLocal
