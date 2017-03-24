@@ -20,6 +20,7 @@ def all_matches_unique(match):
     return len(match[0][1::2]) == len(set(match[0][1::2]))
 
 
+# noinspection PyMissingTypeHints
 def log(log_level, *args):
     colors = {
         'debug': 'gray',
@@ -30,4 +31,3 @@ def log(log_level, *args):
     color = (colors[log_level] if log_level in colors else 'white')
     log_str = u"{} {}".format(colored("[{}]".format(datetime.now().isoformat()[11:-7]), color),
                               u"  ".join([unicode(x) for x in args]))
-    print(log_str)
