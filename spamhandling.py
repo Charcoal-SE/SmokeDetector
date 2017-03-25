@@ -86,8 +86,8 @@ def handle_spam(post, reasons, why):
         datahandling.add_auto_ignored_post((post.post_id, post.post_site, datetime.now()))
     if why is not None and why != "":
         datahandling.add_why(post.post_site, post.post_id, why)
-    if post.is_answer and post.question_id is not None:
-        datahandling.add_post_site_id_link((post.post_id, post.post_site, "answer"), post.question_id)
+    if post.is_answer and post.post_id is not None and post.post_id is not "":
+        datahandling.add_post_site_id_link((post.post_id, post.post_site, "answer"), post.post_id)
     try:
         post.title = parsing.escape_special_chars_in_title(post.title)
         sanitized_title = regex.sub('(https?://|\n)', '', post.title)

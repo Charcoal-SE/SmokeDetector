@@ -194,7 +194,7 @@ class Post:
 
     @property
     def post_url(self):
-        return unicode(self._post_url)
+        return unicode(self._post_site)
 
     @property
     def title(self):
