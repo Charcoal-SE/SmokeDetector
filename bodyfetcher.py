@@ -320,21 +320,24 @@ class BodyFetcher:
                     pass
 
             try:
-                for answer in post["answers"]:
-                    num_scanned += 1
-                    answer["IsAnswer"] = True  # Necesssary for Post object
-                    answer["title"] = ""  # Necessary for proper Post object creation
-                    answer["site"] = site  # Necessary for proper Post object creation
-                    answer_ = Post(api_response=answer, parent=post_)
+                if "answers" not in post:
+                    pass
+                else:
+                    for answer in post["answers"]:
+                        num_scanned += 1
+                        answer["IsAnswer"] = True  # Necesssary for Post object
+                        answer["title"] = ""  # Necessary for proper Post object creation
+                        answer["site"] = site  # Necessary for proper Post object creation
+                        answer_ = Post(api_response=answer, parent=post_)
 
-                    is_spam, reason, why = check_if_spam(answer_)
-                    if is_spam:
-                        try:
-                            handle_spam(answer_,
-                                        reasons=reason,
-                                        why=why)
-                        except Exception as e:
-                            raise e
+                        is_spam, reason, why = check_if_spam(answer_)
+                        if is_spam:
+                            try:
+                                handle_spam(answer_,
+                                            reasons=reason,
+                                            why=why)
+                            except Exception as e:
+                                raise e
             except Exception as e:
                 raise e
 
