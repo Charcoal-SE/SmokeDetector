@@ -333,10 +333,10 @@ class BodyFetcher:
                             handle_spam(answer_,
                                         reasons=reason,
                                         why=why)
-                        except:
-                            pass
-            except:
-                pass
+                        except Exception as e:
+                            raise e
+            except Exception as e:
+                raise e
 
         end_time = time.time()
         GlobalVars.posts_scan_stats_lock.acquire()
