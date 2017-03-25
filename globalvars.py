@@ -122,7 +122,9 @@ class GlobalVars:
             "248139",   # FelixSFD
             "156721",   # D-side
             "167070",   # quartata
-            "172450"    # Hovercraft Full Of Eels
+            "172450",   # Hovercraft Full Of Eels
+            "56200",    # Eric Leschinski
+            "211021"    # Henders
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
