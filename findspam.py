@@ -397,7 +397,7 @@ def similar_answer(post):
             sanitized_answer = strip_urls_and_tags(other_answer.body)
             ratio = similar_ratio(sanitized_body, sanitized_answer)
 
-            if ratio >= SIMILAR_THRESHOLD:
+            if ratio >= 0.7:
                 return False, False, True, \
                     u"Answer similar to answer {}, ratio {}".format(other_answer.post_id, ratio)
 
