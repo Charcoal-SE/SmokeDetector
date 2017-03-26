@@ -316,7 +316,7 @@ class BodyFetcher:
                     handle_spam(post=post_,
                                 reasons=reason,
                                 why=why)
-                except e:
+                except Exception as e:
                     log('error', "Exception in handle_spam:", e)
 
             try:
@@ -336,9 +336,9 @@ class BodyFetcher:
                                 handle_spam(answer_,
                                             reasons=reason,
                                             why=why)
-                            except e:
+                            except Exception as e:
                                 log('error', "Exception in handle_spam:", e)
-            except e:
+            except Exception as e:
                 log('error', "Exception handling answers:", e)
 
         end_time = time.time()
