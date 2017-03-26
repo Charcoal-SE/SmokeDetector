@@ -30,7 +30,7 @@ URL_REGEX = regex.compile(
     r"""*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.UNICODE)
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+# noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def has_repeated_words(s, site, *args):
     words = regex.split(r"[\s.,;!/\()\[\]+_-]", s)
     words = [word for word in words if word != ""]
@@ -83,7 +83,7 @@ def link_at_end(s, site, *args):   # link at end of question, on selected sites
     return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+# noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def non_english_link(s, site, *args):   # non-english link in short answer
     if len(s) < 600:
         links = regex.compile(ur'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
@@ -96,7 +96,7 @@ def non_english_link(s, site, *args):   # non-english link in short answer
     return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+# noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def mostly_non_latin(s, site, *args):   # majority of post is in non-Latin, non-Cyrillic characters
     word_chars = regex.sub(r'(?u)[\W0-9]|http\S*', "", s)
     non_latin_chars = regex.sub(r"(?u)\p{script=Latin}|\p{script=Cyrillic}", "", word_chars)
@@ -301,7 +301,7 @@ def has_eltima(s, site, *args):
     return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+# noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def username_similar_website(s, site, *args):
     username = args[0]
     sim_result = perform_similarity_checks(s, username)

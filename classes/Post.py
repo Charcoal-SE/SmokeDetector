@@ -193,6 +193,7 @@ class Post:
     def post_site(self):
         return unicode(self._post_site)
 
+    # noinspection PyBroadException
     @property
     def post_url(self):
         try:
