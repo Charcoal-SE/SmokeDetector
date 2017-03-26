@@ -33,16 +33,6 @@ class Post:
             self._parse_api_post(api_response)
         else:
             raise ValueError("Must provide either JSON Data or an API Response object for Post object.")
-        # self._title = title
-        # self._body = body
-        # self._user_name = user_name
-        # self._user_url = user_url
-        # self._post_site = post_site
-        # self._post_id = post_id
-        # self._is_answer = is_answer
-        # self._body_is_summary = body_is_summary
-        # self._owner_rep = owner_rep
-        # self._post_score = post_score
 
     def __repr__(self):
         type_name = type(self).__name__
@@ -84,17 +74,6 @@ class Post:
 
     def _parse_api_post(self, response):
         # type: (dict) -> None
-
-        # post = Post(api_response={'title': '', 'body': '',
-        #                           'owner': {'display_name': '', 'reputation': 1, 'link': ''},
-        #                           'site': 'stackoverflow.com', 'question_id': '1', 'IsAnswer': False, 'score': 0})
-        # ^ Just a ref about what an api_response can come in as.  Note that we should assume that we have each of
-        #   these.
-
-        # {'title': 'string', 'body': 'string',
-        #  'owner': {'display_name': 'string', 'reputation': 1 (int), 'link': 'string'},
-        #  'site': 'string', 'question_id': 'string', 'IsAnswer': False (Boolean), 'score': 0 (int), 'link': 'string',
-        #  up_vote_count: 'string', down_vote_count: 'string'}
 
         if "title" not in response or "body" not in response:
             return
@@ -230,8 +209,3 @@ class Post:
     @property
     def down_vote_count(self):
         return self._votes['downvotes']
-
-    def append_answer(self, answer):
-        if not isinstance(answer, Post):
-            raise TypeError("Answer objects must be instances of the Post class")
-        self._answers.append(answer)
