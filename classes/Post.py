@@ -12,6 +12,7 @@ class Post:
     _post_id = ""
     _post_score = 0
     _post_site = ""
+    _post_url = ""
     _title = ""
     _user_name = ""
     _user_url = ""
@@ -194,7 +195,10 @@ class Post:
 
     @property
     def post_url(self):
-        return unicode(self._post_site)
+        try:
+            return unicode(self._post_url)
+        except:
+            return "NoLink"
 
     @property
     def title(self):
