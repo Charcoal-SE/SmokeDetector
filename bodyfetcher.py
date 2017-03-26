@@ -316,27 +316,30 @@ class BodyFetcher:
                     handle_spam(post=post_,
                                 reasons=reason,
                                 why=why)
-                except:
-                    pass
+                except Exception as e:
+                    log('error', "Exception in handle_spam:", e)
 
             try:
-                for answer in post["answers"]:
-                    num_scanned += 1
-                    answer["IsAnswer"] = True  # Necesssary for Post object
-                    answer["title"] = ""  # Necessary for proper Post object creation
-                    answer["site"] = site  # Necessary for proper Post object creation
-                    answer_ = Post(api_response=answer, parent=post_)
+                if "answers" not in post:
+                    pass
+                else:
+                    for answer in post["answers"]:
+                        num_scanned += 1
+                        answer["IsAnswer"] = True  # Necesssary for Post object
+                        answer["title"] = post_.title  # Necessary for proper Post object creation
+                        answer["site"] = site  # Necessary for proper Post object creation
+                        answer_ = Post(api_response=answer, parent=post_)
 
-                    is_spam, reason, why = check_if_spam(answer_)
-                    if is_spam:
-                        try:
-                            handle_spam(answer_,
-                                        reasons=reason,
-                                        why=why)
-                        except:
-                            pass
-            except:
-                pass
+                        is_spam, reason, why = check_if_spam(answer_)
+                        if is_spam:
+                            try:
+                                handle_spam(answer_,
+                                            reasons=reason,
+                                            why=why)
+                            except Exception as e:
+                                log('error', "Exception in handle_spam:", e)
+            except Exception as e:
+                log('error', "Exception handling answers:", e)
 
         end_time = time.time()
         GlobalVars.posts_scan_stats_lock.acquire()

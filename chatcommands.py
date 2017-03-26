@@ -30,14 +30,14 @@ from classes import Post
 
 
 # noinspection PyMissingTypeHints
-def check_permissions(function):
+def check_permissions(function_):
     # noinspection PyMissingTypeHints
     def run_command(ev_room, ev_user_id, wrap2, *args, **kwargs):
         if datahandling.is_privileged(ev_room, ev_user_id, wrap2):
             kwargs['ev_room'] = ev_room
             kwargs['ev_user_id'] = ev_user_id
             kwargs['wrap2'] = wrap2
-            return function(*args, **kwargs)
+            return function_(*args, **kwargs)
         else:
             return Response(command_status=False,
                             message="You are not a privileged user. Please see [the privileges wiki page](" +

@@ -12,6 +12,7 @@ class Post:
     _post_id = ""
     _post_score = 0
     _post_site = ""
+    _post_url = ""
     _title = ""
     _user_name = ""
     _user_url = ""
@@ -195,9 +196,13 @@ class Post:
     def post_site(self):
         return unicode(self._post_site)
 
+    # noinspection PyBroadException
     @property
     def post_url(self):
-        return unicode(self._post_url)
+        try:
+            return unicode(self._post_url)
+        except:
+            return "NoLink"
 
     @property
     def title(self):

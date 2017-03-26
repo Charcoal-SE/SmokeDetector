@@ -10,6 +10,7 @@ from urlparse import urlparse
 from helpers import all_matches_unique, log
 
 SIMILAR_THRESHOLD = 0.95
+SIMILAR_ANSWER_THRESHOLD = 0.7
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
 RE_COMPILE = regex.compile(EXCEPTION_RE)
 COMMON_MALFORMED_PROTOCOLS = [
@@ -30,7 +31,7 @@ URL_REGEX = regex.compile(
     r"""*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.UNICODE)
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+# noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def has_repeated_words(s, site, *args):
     words = regex.split(r"[\s.,;!/\()\[\]+_-]", s)
     words = [word for word in words if word != ""]
@@ -83,7 +84,7 @@ def link_at_end(s, site, *args):   # link at end of question, on selected sites
     return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+# noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def non_english_link(s, site, *args):   # non-english link in short answer
     if len(s) < 600:
         links = regex.compile(ur'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
@@ -96,7 +97,7 @@ def non_english_link(s, site, *args):   # non-english link in short answer
     return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+# noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def mostly_non_latin(s, site, *args):   # majority of post is in non-Latin, non-Cyrillic characters
     word_chars = regex.sub(r'(?u)[\W0-9]|http\S*', "", s)
     non_latin_chars = regex.sub(r"(?u)\p{script=Latin}|\p{script=Cyrillic}", "", word_chars)
@@ -190,7 +191,7 @@ def pattern_product_name(s, site, *args):
                 "Junivive", "Apexatropin", "Gain", "Allure", "Nuvella", "Trimgenix", "Satin", "Prodroxatone",
                 "Elite", "Force", "Exceptional", "Enhance(ment)?", "Nitro", "Max", "Boost", "E?xtreme", "Grow",
                 "Deep", "Male", "Pro", "Advanced", "Monster", "Divine", "Royale", "Angele", "Trinity", "Andro",
-                "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth",
+                "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(tone)?",
                 "Serum", "Supplement", "Fuel", "Cream"]
     if site != "math.stackexchange.com" and site != "mathoverflow.net":
         keywords += ["E?X[tl\d]?", "Alpha", "Prime", "Formula"]
@@ -301,7 +302,7 @@ def has_eltima(s, site, *args):
     return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+# noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def username_similar_website(s, site, *args):
     username = args[0]
     sim_result = perform_similarity_checks(s, username)
@@ -397,7 +398,7 @@ def similar_answer(post):
             sanitized_answer = strip_urls_and_tags(other_answer.body)
             ratio = similar_ratio(sanitized_body, sanitized_answer)
 
-            if ratio >= SIMILAR_THRESHOLD:
+            if ratio >= SIMILAR_ANSWER_THRESHOLD:
                 return False, False, True, \
                     u"Answer similar to answer {}, ratio {}".format(other_answer.post_id, ratio)
 
