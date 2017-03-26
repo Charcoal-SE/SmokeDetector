@@ -147,12 +147,14 @@ class Post:
 
         # noinspection PyBroadException
         try:
-            self._post_id = unicode(response["question_id"])
-        except:
-            try:
+            if 'question_id' in response:
+                self._post_id = unicode(response["question_id"])
+            elif 'answer_id' in response:
                 self._post_id = unicode(response["answer_id"])
-            except:
+            else:
                 self._post_id = unicode(0)
+        except:
+            self._post_id = 0
 
         return
 
