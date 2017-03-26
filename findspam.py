@@ -10,6 +10,7 @@ from urlparse import urlparse
 from helpers import all_matches_unique, log
 
 SIMILAR_THRESHOLD = 0.95
+SIMILAR_ANSWER_THRESHOLD = 0.7
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
 RE_COMPILE = regex.compile(EXCEPTION_RE)
 COMMON_MALFORMED_PROTOCOLS = [
@@ -397,7 +398,7 @@ def similar_answer(post):
             sanitized_answer = strip_urls_and_tags(other_answer.body)
             ratio = similar_ratio(sanitized_body, sanitized_answer)
 
-            if ratio >= 0.7:
+            if ratio >= SIMILAR_ANSWER_THRESHOLD:
                 return False, False, True, \
                     u"Answer similar to answer {}, ratio {}".format(other_answer.post_id, ratio)
 
