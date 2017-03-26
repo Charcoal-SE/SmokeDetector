@@ -316,8 +316,8 @@ class BodyFetcher:
                     handle_spam(post=post_,
                                 reasons=reason,
                                 why=why)
-                except:
-                    pass
+                except e:
+                    log('error', "Exception in handle_spam:", e)
 
             try:
                 if "answers" not in post:
@@ -336,10 +336,10 @@ class BodyFetcher:
                                 handle_spam(answer_,
                                             reasons=reason,
                                             why=why)
-                            except:
-                                pass
-            except:
-                pass
+                            except e:
+                                log('error', "Exception in handle_spam:", e)
+            except e:
+                log('error', "Exception handling answers:", e)
 
         end_time = time.time()
         GlobalVars.posts_scan_stats_lock.acquire()
