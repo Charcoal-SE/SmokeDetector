@@ -148,7 +148,10 @@ class Post:
         try:
             self._post_id = unicode(response["question_id"])
         except:
-            self._post_id = unicode(0)
+            try:
+                self._post_id = unicode(response["answer_id"])
+            except:
+                self._post_id = unicode(0)
 
         return
 
