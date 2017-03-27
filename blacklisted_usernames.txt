@@ -16,3 +16,4 @@ Pro Max
 defort\ essid
 ^pus(sy)?$
 radlelgl
+Anonymous\WTeacher
