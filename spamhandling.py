@@ -117,7 +117,7 @@ def handle_spam(post, reasons, why):
 
         t_metasmoke = Thread(name="metasmoke send post",
                              target=metasmoke.Metasmoke.send_stats_on_post,
-                             args=(post.get_title_ignore_type(), post_url, reasons, post.body, username,
+                             args=(post.title_ignore_type, post_url, reasons, post.body, username,
                                    post.user_link, why, post.owner_rep, post.post_score,
                                    post.up_vote_count, post.down_vote_count))
         t_metasmoke.start()

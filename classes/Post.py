@@ -18,6 +18,7 @@ class Post:
     _user_url = ""
     _votes = {'downvotes': None, 'upvotes': None}
 
+    # noinspection PyTypeChecker
     def __init__(self, json_data=None, api_response=None, parent=None):
         # type: (str, dict, Post) -> None
 
@@ -41,6 +42,9 @@ class Post:
                    'is_answer=' + str(self.is_answer), 'body_is_summary=' + str(self.body_is_summary),
                    'owner_rep=' + str(self.owner_rep), 'post_score=' + str(self.post_score)]
         return "%s(%s)" % (type_name, ', '.join(dataset))
+
+    def _get_title_ignore_type(self):
+        return self.parent.title if self.is_answer else self.title
 
     def _parse_json_post(self, json_data):
         # type: (str) -> None
@@ -210,5 +214,6 @@ class Post:
     def down_vote_count(self):
         return self._votes['downvotes']
 
-    def get_title_ignore_type(self):
-        return self.parent.title if self.is_answer else self.title
+    @property
+    def title_ignore_type(self):
+        return self._get_title_ignore_type()
