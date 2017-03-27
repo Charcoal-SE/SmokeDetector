@@ -209,3 +209,6 @@ class Post:
     @property
     def down_vote_count(self):
         return self._votes['downvotes']
+
+    def get_title_ignore_type(self):
+        return self.parent.title if self.is_answer else self.title

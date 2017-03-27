@@ -115,19 +115,11 @@ def handle_spam(post, reasons, why):
                                                             post.user_name.strip(), poster_url, shortened_site)
             username = post.user_name.strip()
 
-        if post.is_answer:
-            t_metasmoke = Thread(name="metasmoke send post",
-                                 target=metasmoke.Metasmoke.send_stats_on_post,
-                                 args=(post.parent.title, post_url, reasons, post.body, username,
-                                       post.user_link, why, post.owner_rep, post.post_score,
-                                       post.up_vote_count, post.down_vote_count))
-        else:
-            t_metasmoke = Thread(name="metasmoke send post",
-                                 target=metasmoke.Metasmoke.send_stats_on_post,
-                                 args=(post.title, post_url, reasons, post.body, username,
-                                       post.user_link, why, post.owner_rep, post.post_score,
-                                       post.up_vote_count, post.down_vote_count))
-
+        t_metasmoke = Thread(name="metasmoke send post",
+                             target=metasmoke.Metasmoke.send_stats_on_post,
+                             args=(post.get_title_ignore_type(), post_url, reasons, post.body, username,
+                                   post.user_link, why, post.owner_rep, post.post_score,
+                                   post.up_vote_count, post.down_vote_count))
         t_metasmoke.start()
 
         log('debug', GlobalVars.parser.unescape(s).encode('ascii', errors='replace'))
