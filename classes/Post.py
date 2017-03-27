@@ -34,7 +34,7 @@ class Post:
         else:
             raise ValueError("Must provide either JSON Data or an API Response object for Post object.")
 
-        return  # Required for PEP compliance
+        return  # Required for PEP484 compliance
 
     def __repr__(self):
         type_name = type(self).__name__
