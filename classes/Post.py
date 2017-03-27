@@ -87,7 +87,7 @@ class Post:
             return
 
         self._title = self._parser.unescape(response["title"])
-        self._body = self.parser.unescape(response["body"])
+        self._body = self._parser.unescape(response["body"])
 
         if "IsAnswer" in response and response["IsAnswer"] is True:
             self._is_answer = True
