@@ -18,7 +18,6 @@ class Post:
     _user_url = ""
     _votes = {'downvotes': None, 'upvotes': None}
 
-    # noinspection PyTypeChecker
     def __init__(self, json_data=None, api_response=None, parent=None):
         # type: (str, dict, Post) -> None
 
@@ -35,6 +34,8 @@ class Post:
         else:
             raise ValueError("Must provide either JSON Data or an API Response object for Post object.")
 
+        return  # Required for PEP compliance
+
     def __repr__(self):
         type_name = type(self).__name__
         dataset = ['title=' + self.title, 'body=' + self.body, 'user_name=' + self.user_name,
@@ -44,6 +45,7 @@ class Post:
         return "%s(%s)" % (type_name, ', '.join(dataset))
 
     def _get_title_ignore_type(self):
+        # type: () -> unicode
         return self.parent.title if self.is_answer else self.title
 
     def _parse_json_post(self, json_data):
