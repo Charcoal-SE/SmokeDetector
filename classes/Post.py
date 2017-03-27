@@ -1,6 +1,7 @@
 import json
 from globalvars import GlobalVars
 import parsing
+from HTMLParser import HTMLParser
 
 
 class Post:
@@ -17,9 +18,10 @@ class Post:
     _user_name = ""
     _user_url = ""
     _votes = {'downvotes': None, 'upvotes': None}
+    _parser = HTMLParser()
 
     def __init__(self, json_data=None, api_response=None, parent=None):
-        # type: (str, dict, Post) -> None
+        # type: (str or unicode, dict, Post) -> None
 
         if parent is not None:
             if not isinstance(parent, Post):
@@ -40,8 +42,8 @@ class Post:
         type_name = type(self).__name__
         dataset = ['title=' + self.title, 'body=' + self.body, 'user_name=' + self.user_name,
                    'user_url=' + self.user_url, 'post_site=' + self.post_site, 'post_id=' + self.post_id,
-                   'is_answer=' + str(self.is_answer), 'body_is_summary=' + str(self.body_is_summary),
-                   'owner_rep=' + str(self.owner_rep), 'post_score=' + str(self.post_score)]
+                   'is_answer=' + unicode(self.is_answer), 'body_is_summary=' + unicode(self.body_is_summary),
+                   'owner_rep=' + unicode(self.owner_rep), 'post_score=' + unicode(self.post_score)]
         return "%s(%s)" % (type_name, ', '.join(dataset))
 
     def _get_title_ignore_type(self):
@@ -70,7 +72,7 @@ class Post:
         self._body = data["bodySummary"]
         self._user_name = data["ownerDisplayName"]
         self._user_url = data["url"]
-        self._post_id = str(data["id"])
+        self._post_id = unicode(data["id"])
         self._post_site = data["siteBaseHostAddress"]
         self._post_site = self._post_site.encode("ascii", errors="replace")
         self._owner_rep = 1
@@ -84,8 +86,8 @@ class Post:
         if "title" not in response or "body" not in response:
             return
 
-        self._title = GlobalVars.parser.unescape(response["title"])
-        self._body = GlobalVars.parser.unescape(response["body"])
+        self._title = self._parser.unescape(response["title"])
+        self._body = self.parser.unescape(response["body"])
 
         if "IsAnswer" in response and response["IsAnswer"] is True:
             self._is_answer = True
@@ -120,7 +122,7 @@ class Post:
 
         if 'owner' in response:
             if 'display_name' in response['owner']:
-                self._user_name = GlobalVars.parser.unescape(response["owner"]["display_name"])
+                self._user_name = self._parser.unescape(response["owner"]["display_name"])
 
             if 'link' in response['owner']:
                 self._user_url = response["owner"]["link"]
@@ -142,6 +144,10 @@ class Post:
             self._post_id = 0
 
         return
+
+    def _unescape_title(self, title):
+        # type: (str or unicode) -> unicode
+        return unicode(self._parser.unescape(title).strip())
 
     @property
     def answers(self):
