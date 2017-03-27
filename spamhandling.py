@@ -90,7 +90,14 @@ def handle_spam(post, reasons, why):
         datahandling.add_post_site_id_link((post.post_id, post.post_site, "answer"), post.post_id)
     try:
         post.title = parsing.escape_special_chars_in_title(post.title)
-        sanitized_title = regex.sub('(https?://|\n)', '', post.title)
+        if post.is_answer:
+            # If the post is an answer type post, the 'title' is going to be blank, so when posting the
+            # message contents we need to set the post title to the *parent* title, so the message in the
+            # chat is properly constructed with parent title instead. This will make things 'print'
+            # in a proper way in chat messages.
+            sanitized_title = regex.sub('(https?://|\n)', '', post.parent.title)
+        else:
+            sanitized_title = regex.sub('(https?://|\n)', '', post.title)
 
         prefix = u"[ [SmokeDetector](//goo.gl/eLDYqh) ]"
         if GlobalVars.metasmoke_key:

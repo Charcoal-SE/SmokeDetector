@@ -326,7 +326,7 @@ class BodyFetcher:
                     for answer in post["answers"]:
                         num_scanned += 1
                         answer["IsAnswer"] = True  # Necesssary for Post object
-                        answer["title"] = post_.title  # Necessary for proper Post object creation
+                        answer["title"] = ""  # Necessary for proper Post object creation
                         answer["site"] = site  # Necessary for proper Post object creation
                         answer_ = Post(api_response=answer, parent=post_)
 
