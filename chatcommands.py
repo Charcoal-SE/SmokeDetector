@@ -786,7 +786,6 @@ def command_test(content, content_lower, *args, **kwargs):
     if len(string_to_test) == 0:
         return Response(command_status=True, message="Nothing to test")
     result = "> "
-    # def test_post(title, body, user_name, site, is_answer, body_is_summary, user_rep, post_score):
     fakepost = Post(api_response={'title': string_to_test, 'body': string_to_test,
                                   'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
                                   'site': "", 'IsAnswer': test_as_answer, 'score': 0})
@@ -815,7 +814,6 @@ def command_test_answer(content, content_lower, *args, **kwargs):
     if len(string_to_test) == 0:
         return Response(command_status=True, message="Nothing to test")
     result = "> "
-    # def test_post(title, body, user_name, site, is_answer, body_is_summary, user_rep, post_score):
     fakepost = Post(api_response={'title': 'Valid title', 'body': string_to_test,
                                   'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
                                   'site': "", 'IsAnswer': test_as_answer, 'score': 0})
