@@ -2,6 +2,7 @@ import json
 from globalvars import GlobalVars
 import parsing
 from HTMLParser import HTMLParser
+from typing import Union
 
 
 class Post:
@@ -21,7 +22,7 @@ class Post:
     _parser = HTMLParser()
 
     def __init__(self, json_data=None, api_response=None, parent=None):
-        # type: (str or unicode, dict, Post) -> None
+        # type: (Union[str, unicode], dict, Post) -> None
 
         if parent is not None:
             if not isinstance(parent, Post):
@@ -146,7 +147,6 @@ class Post:
         return
 
     def _unescape_title(self, title):
-        # type: (str or unicode) -> unicode
         return unicode(self._parser.unescape(title).strip())
 
     @property
