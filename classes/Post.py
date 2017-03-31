@@ -1,6 +1,5 @@
 import json
 from globalvars import GlobalVars
-import parsing
 from HTMLParser import HTMLParser
 
 
@@ -46,6 +45,15 @@ class Post:
                    'owner_rep=' + unicode(self.owner_rep), 'post_score=' + unicode(self.post_score)]
         return "%s(%s)" % (type_name, ', '.join(dataset))
 
+    def __setitem__(self, key, item):
+        # type: (str, str or object) -> None
+        setattr(self, key, item)
+        return  # PEP compliance
+
+    def __getitem__(self, item):
+        # type: (str) -> object
+        return getattr(self, item)
+
     def _get_title_ignore_type(self):
         # type: () -> unicode
         return self.parent.title if self.is_answer else self.title
@@ -63,22 +71,32 @@ class Post:
             GlobalVars.charcoal_hq.send_message(u"Encountered ValueError parsing the following:\n{0}".format(json_data),
                                                 False)
             return
+
         if "ownerUrl" not in data:
             # owner's account doesn't exist anymore, no need to post it in chat:
             # http://chat.stackexchange.com/transcript/message/18380776#18380776
             return
-        self._title = data["titleEncodedFancy"]
-        self._title = parsing.unescape_title(self._title)
-        self._body = data["bodySummary"]
-        self._user_name = data["ownerDisplayName"]
-        self._user_url = data["url"]
-        self._post_id = unicode(data["id"])
-        self._post_site = data["siteBaseHostAddress"]
+
+        element_map = {
+            'titleEncodedFancy': '_title',
+            'bodySummary': '_body',
+            'ownerDisplayName': '_user_name',
+            'url': '_user_url',
+            'id': '_post_id',
+            'siteBaseHostAddress': '_post_site',
+        }
+
+        self._process_element_mapping(element_map, data, is_api_response=False)
+
+        self._title = self._unescape_title(self._title)
+        self._post_id = str(self._post_id)
         self._post_site = self._post_site.encode("ascii", errors="replace")
         self._owner_rep = 1
         self._post_score = 0
         self._body_is_summary = True
         self._is_answer = False
+
+        return  # PEP compliance
 
     def _parse_api_post(self, response):
         # type: (dict) -> None
@@ -102,48 +120,45 @@ class Post:
 
         if "BodyIsSummary" in response and response["BodyIsSummary"] is True:
             self._body_is_summary = True
-        else:
-            self._body_is_summary = False
 
-        if 'site' in response:
-            self._post_site = response['site']
+        # Map response elements to the corresponding variable for the Post object internally.
+        element_map = {
+            'site': '_post_site',
+            'link': '_post_url',
+            'score': '_post_score',
+            'up_vote_count': "_votes['upvotes']",
+            'down_vote_count': "_votes['downvotes']",
+            'owner': {
+                'display_name': '_user_name',
+                'link': '_user_url',
+                'reputation': '_owner_rep'
+            },
+            'question_id': '_post_id',
+            'answer_id': '_post_id'
+        }
 
-        if 'link' in response:
-            self._post_url = response["link"]
+        self._process_element_mapping(element_map, response, is_api_response=True)
 
-        if 'score' in response:
-            self._post_score = response["score"]
+    def _process_element_mapping(self, element_map, data, is_api_response=False):
+        # type: (dict, dict, bool) -> None
+        # Take the API response map, and start setting the elements (and sub-elements, where applicable)
+        # to the attributes and variables in the object.
+        for (element, varmap) in element_map.items():
+            try:
+                if is_api_response and element == 'owner':
+                    for (subelement, subvarmap) in element_map['owner'].items():
+                        try:
+                            self[subvarmap] = data['owner'][subelement]
+                        except KeyError:
+                            # Go to next subkey
+                            continue
+                    continue  # Go to next key because we're done processing the 'owner' key.
 
-        if 'up_vote_count' in response:
-            self._votes['upvotes'] = response["up_vote_count"]
-
-        if 'down_vote_count' in response:
-            self._votes['downvotes'] = response["down_vote_count"]
-
-        if 'owner' in response:
-            if 'display_name' in response['owner']:
-                self._user_name = self._parser.unescape(response["owner"]["display_name"])
-
-            if 'link' in response['owner']:
-                self._user_url = response["owner"]["link"]
-
-            if 'reputation' in response['owner']:
-                self._owner_rep = response["owner"]["reputation"]
-            else:
-                self._owner_rep = 0
-
-        # noinspection PyBroadException
-        try:
-            if 'question_id' in response:
-                self._post_id = unicode(response["question_id"])
-            elif 'answer_id' in response:
-                self._post_id = unicode(response["answer_id"])
-            else:
-                self._post_id = unicode(0)
-        except:
-            self._post_id = 0
-
-        return
+                # Other keys
+                self[varmap] = data[element]
+            except KeyError:
+                # Executes if the 'element' requested isn't part of the response.
+                continue  # Go to next key
 
     def _unescape_title(self, title):
         return unicode(self._parser.unescape(title).strip())
