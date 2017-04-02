@@ -196,7 +196,8 @@ class GlobalVars:
             "215067",   # Ferrybig
             "308386",   # Magisch
             "285368",   # angussidney
-            "158829"    # Thomas Ward
+            "158829",   # Thomas Ward
+            "294691"   # Mithrandir
         ],
         socvr_room_id: [
             "1849664",  # Undo
