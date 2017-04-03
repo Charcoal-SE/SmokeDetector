@@ -343,3 +343,4 @@ testoflex
 anibolx
 qugenix
 ampk
+regal\Wslim
