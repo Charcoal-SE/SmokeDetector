@@ -229,6 +229,11 @@ GlobalVars.specialrooms = [
         "sites": ["bricks.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("1964"),
         "unwantedReasons": []
+    },
+    {
+        "sites": ["crafts.stackexchange.com"],
+        "room": GlobalVars.wrap.get_room("38932"),
+        "unwantedReasons": []
     }
 ]
 
