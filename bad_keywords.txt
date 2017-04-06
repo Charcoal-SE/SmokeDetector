@@ -345,3 +345,4 @@ qugenix
 ampk
 regal\Wslim
 alpha\Wplus
+noxor
