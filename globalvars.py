@@ -268,7 +268,8 @@ class GlobalVars:
             "1863564",  # QPaysTaxes
             "4687348",  # FelixSFD
             "4751173",  # Glorfindel
-            "2233391"  # henders
+            "2233391",  # henders
+            "4805174"  # kayess
         ]
     }
 
