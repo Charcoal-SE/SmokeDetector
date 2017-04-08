@@ -325,7 +325,6 @@ diwaliimages\d+\.in
 architecturedesign\.tk
 playerhot\.com
 fitwaypoint\.com
-usefulpcguide\.com
 xinyanlaw
 ultrafinessesite
 sunitlabs\.com
