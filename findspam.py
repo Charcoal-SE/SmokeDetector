@@ -464,18 +464,18 @@ class FindSpam:
         r"onlineshop|video(course|classes|tutorial(?!s))|vipmodel|(?<!word)porn|wholesale|inboxmachine|(get|buy)cheap|"
         r"escort|diploma|(govt|government)jobs|extramoney|earnathome|spell(caster|specialist)|profits|"
         r"seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online-?(training|solution))"
-        r"[\w-]*?\.(co|net|org|in\W|info|ir|wordpress|blogspot|tumblr|webs\.)",
+        r"[\w-]*?\.(co|net|org|in(\W|fo)|us|ir|wordpress|blogspot|tumblr|webs\.)",
         r"(replica(?!t)|rs\d?gold|rssong|runescapegold|maxgain|e-cash|mothers?day|phone-?number|fullmovie|tvstream|"
         r"trainingin|dissertation|(placement|research)-?(paper|statement|essay)|digitalmarketing|infocampus|"
         r"cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|"
-        r"lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
+        r"lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in(\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
         r"(drivingschool|crack-?serial|serial-?(key|crack)|freecrack|appsfor(pc|mac)|probiotic|remedies|heathcare|"
         r"sideeffect|meatspin|packers\S{0,3}movers|(buy|sell)\S{0,12}cvv|goatse|burnfat|gronkaffe|muskel|"
         r"tes(tos)?terone|nitric(storm|oxide)|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|slimbody|"
-        r"moist|lefair|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone)[\w-]*?\.(co|net|org|in\W|info|"
+        r"moist|lefair|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone)[\w-]*?\.(co|net|org|in(\W|fo)|us|"
         r"wordpress|blogspot|tumblr|webs\.)",
         r"(moving|\w{10}spell|[\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{5}cheats|[\w-]{6}girls|"
-        r"clothing|shoes(inc)?|cheatcode|cracks|credits|-wallet|refunds|truo?ng|viet|trang)\.(co|net|org|in\W|info)",
+        r"clothing|shoes(inc)?|cheatcode|cracks|credits|-wallet|refunds|truo?ng|viet|trang)\.(co|net|org|in(\W|fo)|us)",
         r"(health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
         r"(//|www\.)healthy?\w{5,}\.com",
         r"https?://[\w-.]\.repair\W", r"https?://[\w-.]{10,}\.(top|help)\W", r'https?://[\w-.]*-[\w-.]*\.pro[/"<]',
@@ -483,7 +483,7 @@ class FindSpam:
         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
         r"((essay|resume|click2)\w{6,}|(essays|(research|term)paper|examcollection|[\w-]{5}writing|"
-        r"writing[\w-]{5})[\w-]*?)\.(co|net|org|in\W|info|us)",
+        r"writing[\w-]{5})[\w-]*?)\.(co|net|org|in(\W|fo)|us|us)",
         r"(top|best|expert)\d\w{0,15}\.in\W", r"\dth(\.co)?\.in", r"(jobs|in)\L<city>\.in",
         r"[\w-](recovery|repairs?|rescuer|(?<!epoch|font)converter)(pro|kit)?\.(com|net)",
         r"(corrupt|repair)[\w-]*?\.blogspot", r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)[\w-]{0,10}"
@@ -499,12 +499,12 @@ class FindSpam:
         r"((\d|\w{3})livestream|livestream(ing|s))[\w]*?\.(com|net|tv)", r"\w+vs\w+live\.(com|net|tv)",
         r"(play|watch|cup|20)[\w-]*?(live|online)\.(com|net|tv)", r"worldcup\d[\w-]*?\.(com|net|tv|blogspot)",
         r"https?://(\w{5,}tutoring\w*|cheat[\w-.]{3,}|xtreme[\w-]{5,})\.",
-        r"(platinum|paying|acai|buy|premium|premier|ultra|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in\W|info)",
-        r"(training|institute|marketing)[\w-]{6,}[\w.-]*?\.(co|net|org|in\W|info)",
-        r"[\w-](courses?|training)[\w-]*?\.in/", r"\w{9}(buy|roofing)\.(co|net|org|in\W|info)",
+        r"(platinum|paying|acai|buy|premium|premier|ultra|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in(\W|fo)|us)",
+        r"(training|institute|marketing)[\w-]{6,}[\w.-]*?\.(co|net|org|in(\W|fo)|us)",
+        r"[\w-](courses?|training)[\w-]*?\.in/", r"\w{9}(buy|roofing)\.(co|net|org|in(\W|fo)|us)",
         r"(vitamin|dive|hike|love|strong|ideal|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|"
-        r"prostate)[\w-]*?health[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
-        r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
+        r"prostate)[\w-]*?health[\w-]*?\.(co|net|org|in(\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
+        r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in(\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
         r"(acai|advance|aging|alpha|beauty|belle|beta|biotic|body|boost|brain(?!tree)|burn|colon|[^s]cream|creme|"
         r"derma|ecig|eye|face(?!book)|fat|formula|geniu[sx]|grow|hair|health|herbal|ideal|luminous|male|medical|"
         r"medicare|muscle|natura|no2|nutrition|optimal|pearl|perfect|phyto|probio|rejuven|revive|ripped|rx|scam|"
@@ -513,26 +513,26 @@ class FindSpam:
         r"congress|consult|critic|critique|cure|denmark|discussion|doctor|dose|essence|essential|extract|fact|formula|"
         r"france|funct?ion|genix|guide|help|idea|info|jacked|l[iy]ft|mag|market|max|mexico|norway|nutrition|order|plus|"
         r"points|policy|potency|power|practice|pro|program|report|review|rewind|site|slim|solution|suppl(y|ier)|sweden|"
-        r"tip|trial|try|world|zone)[.\w-]{0,12}\.(co|net|org|in\W|info|wordpress|blogspot|tumblr|webs\.)",
-        r"(\w{11}(idea|income|sale)|\w{6}(<?!notebook)(advice|problog|review))s?\.(co|net|in\W|info)",
-        r"-(poker|jobs)\.com", r"send[\w-]*?india\.(co|net|org|in\W|info)",
-        r"(file|photo|android|iphone)recovery[\w-]*?\.(co|net|org|in\W|info)",
+        r"tip|trial|try|world|zone)[.\w-]{0,12}\.(co|net|org|in(\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
+        r"(\w{11}(idea|income|sale)|\w{6}(<?!notebook)(advice|problog|review))s?\.(co|net|in(\W|fo)|us)",
+        r"-(poker|jobs)\.com", r"send[\w-]*?india\.(co|net|org|in(\W|fo)|us)",
+        r"(file|photo|android|iphone)recovery[\w-]*?\.(co|net|org|in(\W|fo)|us)",
         r"(videos?|movies?|watch)online[\w-]*?\.", r"hd(video|movie)[\w-]*?\.",
-        r"backlink(?!(o\.|watch))[\w-]*?\.(co|net|org|in\W|info)",
-        r"(replica[^nt]\w{5,}|\wrolex)\.(co|net|org|in\W|info)",
-        r"customer(service|support)[\w-]*?\.(co|net|org|in\W|info)",
-        r"conferences?alert[\w-]*?\.(co|net|org|in\W|info)",
+        r"backlink(?!(o\.|watch))[\w-]*?\.(co|net|org|in(\W|fo)|us)",
+        r"(replica[^nt]\w{5,}|\wrolex)\.(co|net|org|in(\W|fo)|us)",
+        r"customer(service|support)[\w-]*?\.(co|net|org|in(\W|fo)|us)",
+        r"conferences?alert[\w-]*?\.(co|net|org|in(\W|fo)|us)",
         r"seo\.com(?!/\w)", r"\Wseo[\w-]{10,}\.(com|net|in\W)",
-        r"(?<!site)24x7[\w-]*?\.(co|net|org|in\W|info)",
+        r"(?<!site)24x7[\w-]*?\.(co|net|org|in(\W|fo)|us)",
         r"backlink[\w-]*?\.(com|net|de|blogspot)",
         r"(software|developers|packers|movers|logistic|service)[\w-]*?india\.(com|in\W)",
-        r"scam[\w-]*?(book|alert|register|punch)[\w-]*?\.(co|net|org|in\W|info)",
+        r"scam[\w-]*?(book|alert|register|punch)[\w-]*?\.(co|net|org|in(\W|fo)|us)",
         r"http\S*?crazy(mass|bulk)", r'http\S*\.com\.com[/"<]',
         r"https?://[^/\s]{8,}healer",
         r"\w{9}rev\.com", r'reddit\.com/\w{6}/"',
-        r"world[\w-]*?cricket[\w-]*?\.(co|net|org|in\W|info)",
-        r"(credit|online)[\w-]*?loan[\w-]*?\.(co|net|org|in\W|info)",
-        r"worldcup\d+live\.(com?|net|org|in\W|info)",
+        r"world[\w-]*?cricket[\w-]*?\.(co|net|org|in(\W|fo)|us)",
+        r"(credit|online)[\w-]*?loan[\w-]*?\.(co|net|org|in(\W|fo)|us)",
+        r"worldcup\d+live\.(com?|net|org|in(\W|fo)|us)",
         r"((concrete|beton)-?mixer|crusher)[\w-]*?\.(co|net)",
         r"\w{7}formac\.(com|net|org)",
         r"sex\.(com|net|info)", r"https?://(www\.)?sex",
@@ -675,7 +675,7 @@ class FindSpam:
          'sites': [], 'reason': "blacklisted website in {}", 'title': True, 'body': True, 'username': False,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 5},
         # Suspicious sites
-        {'regex': ur"(?i)({}|({})[\w-]*?\.(co|net|org|in\W|info|blogspot|wordpress))(?![^>]*<)".format(
+        {'regex': ur"(?i)({}|({})[\w-]*?\.(co|net|org|in(\W|fo)|us|blogspot|wordpress))(?![^>]*<)".format(
             "|".join(pattern_websites), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': False,
             'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 1},
