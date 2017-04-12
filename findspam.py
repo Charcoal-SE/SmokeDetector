@@ -544,10 +544,14 @@ class FindSpam:
         r"celebritynetworth"
     ]
     city_list = [
-        "Agra", "Amritsar", "Bangalore", "Bhopal", "Chandigarh", "Chennai", "Coimbatore", "Delhi", "Dubai", "Durgapur",
-        "Ghaziabad", "Hyderabad", "Jaipur", "Jalandhar", "Kolkata", "Ludhiana", "Mumbai", "Madurai", "Patna",
-        "Portland", "Rajkot", "Surat", "Telangana", "Udaipur", "Uttarakhand", "India", "Pakistan", "Noida",
+        "Agra", "Amritsar", "Bangalore", "Bhopal", "Chandigarh",
+        "Chennai", "Coimbatore", "Delhi", "Dubai", "Durgapur",
+        "Ghaziabad", "Hyderabad", "Jaipur", "Jalandhar", "Kolkata",
+        "Ludhiana", "Mumbai", "Madurai", "Patna", "Portland",
+        "Rajkot", "Surat", "Telangana", "Udaipur", "Uttarakhand",
+        "Noida", "Pune",
         # yes, these aren't cities but...
+        "India", "Pakistan",
     ]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
