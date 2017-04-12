@@ -541,7 +541,7 @@ class FindSpam:
         r"ptvsports\d+.com",
         r"youth\Wserum",
         r"buyviewsutube",
-        r"celebritynetworth"
+        r"(?:celebrity-?)?net-?worth"
     ]
     city_list = [
         "Agra", "Amritsar", "Bangalore", "Bhopal", "Chandigarh", "Chennai", "Coimbatore", "Delhi", "Dubai", "Durgapur",
