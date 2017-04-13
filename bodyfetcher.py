@@ -263,7 +263,7 @@ class BodyFetcher:
             # the queue.
             self.queue_modify_lock.acquire()
             if site in self.queue:
-                self.queue[site] = self.queue[site].copy().update(new_posts)
+                self.queue[site].update(new_posts)
             else:
                 self.queue[site] = new_posts
             self.queue_modify_lock.release()
