@@ -263,9 +263,9 @@ class BodyFetcher:
             # the queue.
             self.queue_modify_lock.acquire()
             if site in self.queue:
-                self.queue[site].extend(posts)
+                self.queue[site] = self.queue[site].copy().update(new_posts)
             else:
-                self.queue[site] = posts
+                self.queue[site] = new_posts
             self.queue_modify_lock.release()
             GlobalVars.api_request_lock.release()
             return
