@@ -34,7 +34,7 @@ You can also use `python ws.py`, but then SmokeDetector will be shut down after 
 
 Note that SmokeDetector is written in Python 2, so you may have to explicity run `python2` if Python 3 is the default version of Python on your distro.
 
-You can run `. ChatExchange/setp.sh` to set local environment variables so that you don't have to log in every time. 
+You can run `. ChatExchange/setup.sh` to set local environment variables so that you don't have to log in every time. 
 
 SmokeDetector only supports Stack Exchange OpenIDs for now.
 
