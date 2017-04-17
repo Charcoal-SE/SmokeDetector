@@ -10,6 +10,7 @@ from helpers import environ_or_none, log
 import threading
 from sh import git
 import regex
+import subprocess as sp
 
 
 def strip_escape_chars(line):
@@ -296,8 +297,10 @@ class GlobalVars:
         commit_author = censored_committer_names[md5(commit_author).hexdigest()]
 
     commit_with_author = strip_escape_chars(
-        git.log('--pretty=format:"%h (' + commit_author.decode('utf-8') + ': *%s*)"', '-n 1').strip('\n')
+        sp.Popen(['--pretty=format:"%h (' + commit_author.decode('utf-8') + ': *%s*)"', '-n', '1'], shell=True, stdout=sp.PIPE).communicate()[0]
+        # git.log('--pretty=format:"%h (' + commit_author.decode('utf-8') + ': *%s*)"', '-n 1').strip('\n')
     )
+
     on_master = "HEAD detached" not in strip_escape_chars(git.status())
     charcoal_hq = None
     tavern_on_the_meta = None
