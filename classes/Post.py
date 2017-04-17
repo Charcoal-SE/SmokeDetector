@@ -55,8 +55,9 @@ class Post:
         # type: (str) -> object
         return getattr(self, item)
 
+    # noinspection PyTypeChecker
     def _get_title_ignore_type(self):
-        # type: () -> AnyStr
+        # type: () -> str
         return self.parent.title if self.is_answer else self.title
 
     def _parse_json_post(self, json_data):
@@ -203,7 +204,7 @@ class Post:
 
     @property
     def post_site(self):
-        return str(self._post_site)
+        return self._post_site
 
     # noinspection PyBroadException
     @property
