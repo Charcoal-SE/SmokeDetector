@@ -12,6 +12,7 @@ import threading
 import regex
 import subprocess as sp
 from dulwich.repo import Repo
+import platform
 
 
 def git_commit_info():
@@ -23,7 +24,10 @@ def git_commit_info():
 
 
 def git_status():
-    data = sp.Popen(['git status'], shell=True, cwd=os.getcwd(), stderr=sp.PIPE, stdout=sp.PIPE).communicate()
+    if 'windows' in platform.platform().lower():
+        data = sp.Popen(['git', 'status'], shell=True, cwd=os.getcwd(), stderr=sp.PIPE, stdout=sp.PIPE).communicate()
+    else:
+        data = sp.Popen(['git status'], shell=True, cwd=os.getcwd(), stderr=sp.PIPE, stdout=sp.PIPE).communicate()
     if not data[1]:
         data[0].decode('utf-8').strip('\n')
     else:
