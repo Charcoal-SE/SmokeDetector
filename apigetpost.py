@@ -1,8 +1,10 @@
+# coding=utf-8
 import requests
 import parsing
 from globalvars import GlobalVars
 import time
-import HTMLParser
+# noinspection PyPep8Naming
+from html.parser import HTMLParser
 
 
 class PostData:

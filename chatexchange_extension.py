@@ -1,3 +1,4 @@
+# coding=utf-8
 from ChatExchange.chatexchange import client, rooms
 import sys
 from helpers import log

@@ -1,3 +1,4 @@
+# coding=utf-8
 # SmokeDetector uses snake_case for all function names.
 # This tool checks for inconsistency: if it notices that there are capitalized letters in a function name,
 # it throws an error.

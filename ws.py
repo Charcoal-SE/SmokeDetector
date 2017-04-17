@@ -1,3 +1,4 @@
+# coding=utf-8
 # requires https://pypi.python.org/pypi/websocket-client/
 
 from excepthook import uncaught_exception, install_thread_excepthook
@@ -62,7 +63,7 @@ except TldIOError as ioerr:
 if "ChatExchangeU" in os.environ:
     username = os.environ["ChatExchangeU"]
 else:
-    username = raw_input("Username: ")
+    username = input("Username: ")
 if "ChatExchangeP" in os.environ:
     password = os.environ["ChatExchangeP"]
 else:
@@ -293,7 +294,7 @@ while True:
                            args=(a, True if is_spam else None))
                 t.start()
 
-    except Exception, e:
+    except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         now = datetime.utcnow()
         delta = now - UtcDate.startup_utc_date

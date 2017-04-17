@@ -1,3 +1,4 @@
+# coding=utf-8
 # noinspection PyUnresolvedReferences
 from globalvars import GlobalVars
 from findspam import FindSpam
@@ -18,6 +19,7 @@ import requests
 import os
 import time
 import datahandling
+# noinspection PyCompatibility
 import regex
 from helpers import Response
 from classes import Post

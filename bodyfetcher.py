@@ -1,3 +1,4 @@
+# coding=utf-8
 from spamhandling import handle_spam, check_if_spam
 from datahandling import (add_or_update_api_data, clear_api_data, store_bodyfetcher_queue, store_bodyfetcher_max_ids,
                           store_queue_timings)
@@ -10,6 +11,7 @@ import threading
 import requests
 from classes import Post
 from helpers import log
+from itertools import chain
 
 
 # noinspection PyClassHasNoInit,PyBroadException
@@ -142,7 +144,7 @@ class BodyFetcher:
         return
 
     def check_queue(self):
-        for site, values in self.queue.iteritems():
+        for site, values in self.queue.items():
             if site in self.special_cases:
                 if len(values) >= self.special_cases[site]:
                     self.make_api_call_for_site(site)
@@ -153,7 +155,7 @@ class BodyFetcher:
                     return
 
         # if we don't have any sites with their queue filled, take the first one without a special case
-        for site, values in self.queue.iteritems():
+        for site, values in self.queue.items():
             if site not in self.special_cases and len(values) >= self.threshold:
                 self.make_api_call_for_site(site)
                 return
@@ -164,7 +166,7 @@ class BodyFetcher:
         self.queue_modify_lock.release()
 
     def print_queue(self):
-        return '\n'.join("{0}: {1}".format(key, str(len(values))) for (key, values) in self.queue.iteritems())
+        return '\n'.join("{0}: {1}".format(key, str(len(values))) for (key, values) in self.queue.items())
 
     def make_api_call_for_site(self, site):
         if site not in self.queue:
@@ -175,10 +177,10 @@ class BodyFetcher:
         store_bodyfetcher_queue()
         self.queue_modify_lock.release()
 
-        new_post_ids = [int(k) for k, v in new_posts.iteritems()]
+        new_post_ids = [int(k) for k, v in new_posts.items()]
 
         self.queue_timing_modify_lock.acquire()
-        post_add_times = [v for k, v in new_posts.iteritems()]
+        post_add_times = [v for k, v in new_posts.items()]
         pop_time = datetime.utcnow()
 
         for add_time in post_add_times:
@@ -206,7 +208,7 @@ class BodyFetcher:
             intermediate_posts = intermediate_posts[(100 - len(new_post_ids)):]
 
             # new_post_ids could contain edited posts, so merge it back in
-            combined = intermediate_posts + new_post_ids
+            combined = chain(intermediate_posts, new_post_ids)
 
             # Could be duplicates, so uniquify
             posts = list(set(combined))

@@ -1,3 +1,4 @@
+# coding=utf-8
 import sys
 from threading import Thread
 from findspam import FindSpam
@@ -8,6 +9,7 @@ import parsing
 import metasmoke
 import deletionwatcher
 import excepthook
+# noinspection PyCompatibility
 import regex
 import time
 import classes

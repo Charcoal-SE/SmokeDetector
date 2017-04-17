@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# noinspection PyCompatibility
 import regex
 import phonenumbers
 from difflib import SequenceMatcher
@@ -6,8 +7,9 @@ from difflib import SequenceMatcher
 import tld
 # noinspection PyPackageRequirements
 from tld.utils import TldDomainNotFound
-from urlparse import urlparse
+from urllib.parse import urlparse
 from helpers import all_matches_unique, log
+from itertools import chain
 
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
@@ -75,8 +77,8 @@ def has_repeating_characters(s, site, *args):
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def link_at_end(s, site, *args):   # link at end of question, on selected sites
     s = regex.sub("</strong>|</em>|</p>", "", s)
-    match = regex.compile(ur"(?i)https?://(?:[.A-Za-z0-9-]*/?[.A-Za-z0-9-]*/?|plus\.google\.com/"
-                          ur"[\w/]*|www\.pinterest\.com/pin/[\d/]*)</a>\s*$").search(s)
+    match = regex.compile(r"(?i)https?://(?:[.A-Za-z0-9-]*/?[.A-Za-z0-9-]*/?|plus\.google\.com/"
+                          r"[\w/]*|www\.pinterest\.com/pin/[\d/]*)</a>\s*$").search(s)
     if match and not regex.compile(r"(?i)upload|\b(imgur|yfrog|gfycat|tinypic|sendvid|ctrlv|prntscr|gyazo|youtu\.?be|"
                                    r"stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|"
                                    r"(?<!plus\.)google|localhost|ubuntu)\b").search(match.group(0)):
@@ -87,7 +89,7 @@ def link_at_end(s, site, *args):   # link at end of question, on selected sites
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def non_english_link(s, site, *args):   # non-english link in short answer
     if len(s) < 600:
-        links = regex.compile(ur'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
+        links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
         for link_text in links:
             word_chars = regex.sub(r"(?u)\W", "", link_text)
             non_latin_chars = regex.sub(r"\w", "", word_chars)
@@ -108,15 +110,15 @@ def mostly_non_latin(s, site, *args):   # majority of post is in non-Latin, non-
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def has_phone_number(s, site, *args):
-    if regex.compile(ur"(?i)\b(address(es)?|run[- ]?time|error|value|server|hostname|timestamp|warning|code|"
-                     ur"(sp)?exception|version|chrome|1234567)\b", regex.UNICODE).search(s):
+    if regex.compile(r"(?i)\b(address(es)?|run[- ]?time|error|value|server|hostname|timestamp|warning|code|"
+                     r"(sp)?exception|version|chrome|1234567)\b", regex.UNICODE).search(s):
         return False, ""  # not a phone number
     s = regex.sub("[^A-Za-z0-9\\s\"',]", "", s)   # deobfuscate
     s = regex.sub("[Oo]", "0", s)
     s = regex.sub("[Ss]", "5", s)
     s = regex.sub("[Ii]", "1", s)
-    matched = regex.compile(ur"(?<!\d)(?:\d{2}\s?\d{8,11}|\d\s{0,2}\d{3}\s{0,2}\d{3}\s{0,2}\d{4}|8\d{2}"
-                            ur"\s{0,2}\d{3}\s{0,2}\d{4})(?!\d)", regex.UNICODE).findall(s)
+    matched = regex.compile(r"(?<!\d)(?:\d{2}\s?\d{8,11}|\d\s{0,2}\d{3}\s{0,2}\d{3}\s{0,2}\d{4}|8\d{2}"
+                            r"\s{0,2}\d{3}\s{0,2}\d{4})(?!\d)", regex.UNICODE).findall(s)
     test_formats = ["IN", "US", "NG", None]      # ^ don't match parts of too long strings of digits
     for phone_number in matched:
         if regex.compile(r"^21474(672[56]|8364)|^192168").search(phone_number):
@@ -196,8 +198,8 @@ def pattern_product_name(s, site, *args):
     if site != "math.stackexchange.com" and site != "mathoverflow.net":
         keywords += ["E?X[tl\d]?", "Alpha", "Plus", "Prime", "Formula"]
     keywords = "|".join(keywords)
-    three_words = regex.compile(ur"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
-    two_words = regex.compile(ur"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
+    three_words = regex.compile(r"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
+    two_words = regex.compile(r"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
     if len(three_words) >= 1 and all_matches_unique(three_words):
         return True, u"Pattern-matching product name *{}*".format(three_words[0][0])
     elif len(two_words) >= 2 and all_matches_unique(two_words):
@@ -209,18 +211,18 @@ def pattern_product_name(s, site, *args):
 def keyword_email(s, site, *args):   # a keyword and an email in the same post
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
-    keyword = regex.compile(ur"(?i)\b(training|we (will )?(offer|develop|provide)|sell|invest(or|ing|ment)|credit|"
-                            ur"money|quality|legit|interest(ed)?|guarantee|rent|crack|opportunity|fundraising|campaign|"
-                            ur"career|employment|candidate|loan|lover|husband|wife|marriage|illuminati|brotherhood|"
-                            ur"(join|contact) (me|us|him)|reach (us|him)|spell(caster)?|doctor|cancer|krebs|"
-                            ur"(cheat|hack)(er|ing)?|spying|passport|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|"
-                            ur"cure|testimony|kidney|hospital|wetting)s?\b| Dr\.? |\$ ?[0-9,.]{4}|@qq\.com|"
-                            ur"\b(герпес|муж|жена|доктор|болезн)").search(s)
-    email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
-                          ur"[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
+    keyword = regex.compile(r"(?i)\b(training|we (will )?(offer|develop|provide)|sell|invest(or|ing|ment)|credit|"
+                            r"money|quality|legit|interest(ed)?|guarantee|rent|crack|opportunity|fundraising|campaign|"
+                            r"career|employment|candidate|loan|lover|husband|wife|marriage|illuminati|brotherhood|"
+                            r"(join|contact) (me|us|him)|reach (us|him)|spell(caster)?|doctor|cancer|krebs|"
+                            r"(cheat|hack)(er|ing)?|spying|passport|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|"
+                            r"cure|testimony|kidney|hospital|wetting)s?\b| Dr\.? |\$ ?[0-9,.]{4}|@qq\.com|"
+                            r"\b(герпес|муж|жена|доктор|болезн)").search(s)
+    email = regex.compile(r"(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
+                          r"[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
     if keyword and email:
         return True, u"Keyword *{}* with email {}".format(keyword.group(0), email.group(0))
-    obfuscated_email = regex.compile(ur"(?<![=#/])\b[A-z0-9_.%+-]+ *@ *(gmail|yahoo) *\. *com\b").search(s)
+    obfuscated_email = regex.compile(r"(?<![=#/])\b[A-z0-9_.%+-]+ *@ *(gmail|yahoo) *\. *com\b").search(s)
     if obfuscated_email and not email:
         return True, u"Obfuscated email {}".format(obfuscated_email.group(0))
     return False, ""
@@ -230,17 +232,17 @@ def keyword_email(s, site, *args):   # a keyword and an email in the same post
 def keyword_link(s, site, *args):   # thanking keyword and a link in the same short answer
     if len(s) > 400:
         return False, ""
-    link = regex.compile(ur'(?i)<a href="https?://\S+').search(s)
+    link = regex.compile(r'(?i)<a href="https?://\S+').search(s)
     if not link or regex.compile(r"(?i)upload|\b(imgur|yfrog|gfycat|tinypic|sendvid|ctrlv|prntscr|gyazo|youtu\.?be|"
                                  r"stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|(?<!plus\.)google|"
                                  r"localhost|ubuntu)\b").search(link.group(0)):
         return False, ""
-    praise = regex.compile(ur"(?i)\b(nice|good|interesting|helpful|great|amazing) (article|blog|post|information)\b|"
-                           ur"very useful").search(s)
-    thanks = regex.compile(ur"(?i)\b(appreciate|than(k|ks|x))\b").search(s)
-    keyword = regex.compile(ur"(?i)\b(I really appreciate|many thanks|thanks a lot|thank you (very|for)|"
-                            ur"than(ks|x) for (sharing|this|your)|dear forum members|(very (informative|useful)|"
-                            ur"stumbled upon (your|this)|wonderful|visit my) (blog|site|website))\b").search(s)
+    praise = regex.compile(r"(?i)\b(nice|good|interesting|helpful|great|amazing) (article|blog|post|information)\b|"
+                           r"very useful").search(s)
+    thanks = regex.compile(r"(?i)\b(appreciate|than(k|ks|x))\b").search(s)
+    keyword = regex.compile(r"(?i)\b(I really appreciate|many thanks|thanks a lot|thank you (very|for)|"
+                            r"than(ks|x) for (sharing|this|your)|dear forum members|(very (informative|useful)|"
+                            r"stumbled upon (your|this)|wonderful|visit my) (blog|site|website))\b").search(s)
     if link and keyword:
         return True, u"Keyword *{}* with link {}".format(keyword.group(0), link.group(0))
     if link and thanks and praise:
@@ -251,11 +253,11 @@ def keyword_link(s, site, *args):   # thanking keyword and a link in the same sh
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def bad_link_text(s, site, *args):   # suspicious text of a hyperlink
     s = regex.sub("</?strong>|</?em>", "", s)  # remove font tags
-    keywords = regex.compile(ur"(?isu)^(buy|cheap) |live[ -]?stream|(^| )make (money|\$)|(^| )(porno?|(whole)?sale|"
-                             ur"coins|replica|luxury|essays?|in \L<city>)($| )|(^| )\L<city>.*(service|escort|"
-                             ur"call girl)|(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|"
-                             ur"repair|recovery)|\b(writing service|essay (writing|tips))", city=FindSpam.city_list)
-    links = regex.compile(ur'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
+    keywords = regex.compile(r"(?isu)^(buy|cheap) |live[ -]?stream|(^| )make (money|\$)|(^| )(porno?|(whole)?sale|"
+                             r"coins|replica|luxury|essays?|in \L<city>)($| )|(^| )\L<city>.*(service|escort|"
+                             r"call girl)|(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|"
+                             r"repair|recovery)|\b(writing service|essay (writing|tips))", city=FindSpam.city_list)
+    links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
     business = regex.compile(r"(?i)(^| )(airlines?|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
                              r"lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|sage|windows?|yahoo)($| )")
     support = regex.compile(r"(?i)(^| )(customer|care|helpline|reservation|phone|recovery|service|support|contact|"
@@ -277,11 +279,11 @@ def is_offensive_post(s, site, *args):
     if s is None or len(s) == 0:
         return False, ""
 
-    offensive = regex.compile(ur"(?is)\b(ur mom|(yo)?u suck|8={3,}D|nigg[aeu][rh]?|(ass ?|a|a-)hole|fag(got)?|"
-                              ur"daf[au][qk]|(?<!brain)(mother|mutha)?fuc?k+(a|ing?|e?(r|d)| off+| y(ou|e)(rself)?|"
-                              ur" u+|tard)?|shit(t?er|head)|you scum|dickhead|pedo|whore|cunt|cocksucker|ejaculated?|"
-                              ur"jerk off|cummies|butthurt|(private|pussy) show|lesbo|bitches|(eat|suck)\b.{0,20}\b"
-                              ur"dick|dee[sz]e? nut[sz])s?\b")
+    offensive = regex.compile(r"(?is)\b(ur mom|(yo)?u suck|8={3,}D|nigg[aeu][rh]?|(ass ?|a|a-)hole|fag(got)?|"
+                              r"daf[au][qk]|(?<!brain)(mother|mutha)?fuc?k+(a|ing?|e?(r|d)| off+| y(ou|e)(rself)?|"
+                              r" u+|tard)?|shit(t?er|head)|you scum|dickhead|pedo|whore|cunt|cocksucker|ejaculated?|"
+                              r"jerk off|cummies|butthurt|(private|pussy) show|lesbo|bitches|(eat|suck)\b.{0,20}\b"
+                              r"dick|dee[sz]e? nut[sz])s?\b")
     matches = offensive.finditer(s)
     len_of_match = 0
     text_matched = []
@@ -296,7 +298,7 @@ def is_offensive_post(s, site, *args):
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def has_eltima(s, site, *args):
-    reg = regex.compile(ur"(?is)\beltima")
+    reg = regex.compile(r"(?is)\beltima")
     if reg.search(s) and len(s) <= 750:
         return True, u"Bad keyword *eltima* and body length under 750 chars"
     return False, ""
@@ -369,7 +371,7 @@ def get_domain(s):
         extract = tld.get_tld(s, fix_protocol=True, as_object=True, )
         domain = extract.domain
     except TldDomainNotFound as e:
-        invalid_tld = RE_COMPILE.match(e.message).group(1)
+        invalid_tld = RE_COMPILE.match(str(e)).group(1)
         # Attempt to replace the invalid protocol
         s1 = s.replace(invalid_tld, 'http', 1)
         try:
@@ -426,7 +428,7 @@ def mostly_dots(s, site, *args):
 # noinspection PyClassHasNoInit
 class FindSpam:
     with open("bad_keywords.txt", "r") as f:
-        bad_keywords = [line.decode('utf8').rstrip() for line in f if len(line.decode('utf8').rstrip()) > 0]
+        bad_keywords = [line.rstrip() for line in f if len(line.rstrip()) > 0]
 
     bad_keywords_nwb = [  # "nwb" == "no word boundary"
         u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",
@@ -455,7 +457,7 @@ class FindSpam:
     with open("blacklisted_websites.txt", "r") as f:
         blacklisted_websites = [line.rstrip() for line in f if len(line.rstrip()) > 0]
 
-    with open("blacklisted_usernames.txt", "Ur") as f:
+    with open("blacklisted_usernames.txt", "r") as f:
         blacklisted_usernames = [line.rstrip() for line in f if len(line.rstrip()) > 0]
 
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
@@ -558,7 +560,7 @@ class FindSpam:
         #
         # Category: Bad keywords
         # The big list of bad keywords, for titles and posts
-        {'regex': ur"(?is)\b({})\b|{}".format("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
+        {'regex': r"(?is)\b({})\b|{}".format("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1},
         # Pattern-matching product name: three keywords in a row at least once, or two in a row at least twice
@@ -566,27 +568,27 @@ class FindSpam:
          'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True,
          'answers': False, 'max_rep': 4, 'max_score': 1},
         # gratis at the beginning of post, SoftwareRecs is exempt
-        {'regex': ur"(?is)^.{0,200}\bgratis\b$", 'all': True,
+        {'regex': r"(?is)^.{0,200}\bgratis\b$", 'all': True,
          'sites': ['softwarerecs.stackexchange.com'], 'reason': "bad keyword in {}", 'title': True, 'body': True,
          'username': False, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11, 'max_score': 0},
         # Black magic at the beginning of question, Islam and Video are exempt
-        {'regex': ur"^(?is).{0,200}black magic", 'all': True,
+        {'regex': r"^(?is).{0,200}black magic", 'all': True,
          'sites': ["islam.stackexchange.com", "video.stackexchange.com"],
          'reason': "black magic in {}", 'title': True, 'body': True,
          'username': False, 'stripcodeblocks': False, 'body_summary': True, 'answers': False, 'max_rep': 11,
          'max_score': 0},
         # Bad keywords in titles and usernames, all sites
-        {'regex': ur"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|"
-                  ur"kisn)\b)(?=.*?care).*products?\b|(?=.*?packer).*mover|(online|certification).*?training|"
-                  ur"\bvs\b.*\b(live|vivo)\b|(?<!can |uld )\bwe offer\b|payday loan|смотреть.*онлайн|"
-                  ur"watch\b.{0,50}(online|episode|free)|episode.{0,50}\bsub\b", 'all': True,
+        {'regex': r"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|"
+                  r"kisn)\b)(?=.*?care).*products?\b|(?=.*?packer).*mover|(online|certification).*?training|"
+                  r"\bvs\b.*\b(live|vivo)\b|(?<!can |uld )\bwe offer\b|payday loan|смотреть.*онлайн|"
+                  r"watch\b.{0,50}(online|episode|free)|episode.{0,50}\bsub\b", 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': True,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Bad keywords in titles only, all sites
-        {'regex': ur"(?i)\b(?!s.m.a.r.t)[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\b", 'all': True,
+        {'regex': r"(?i)\b(?!s.m.a.r.t)[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\b", 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        {'regex': ur'(?i)[\w\s]{0,20}help(?: a)?(?: weak)? postgraduate student(?: to)? write(?: a)? book\??',
+        {'regex': r'(?i)[\w\s]{0,20}help(?: a)?(?: weak)? postgraduate student(?: to)? write(?: a)? book\??',
          'all': True, 'sites': [], 'reason': 'bad keyword in {}', 'title': True, 'body': False, 'username': False,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 20, 'max_score': 2},
         # Eltima: separated into its own method so we can constrain length
@@ -597,10 +599,10 @@ class FindSpam:
          'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'questions': False,
          'max_rep': 1, 'max_score': 0},
         # Bad health-related keywords in titles, health sites are exempt
-        {'regex': ur"(?i)\b((beauty|skin|health|face|eye)[- ]?(serum|therapy|hydration|tip|renewal|shop|store|lyft|"
-                  ur"product|strateg(y|ies)|gel|lotion|cream|treatment|method|school|expert)|fat ?burn(er|ing)?|"
-                  ur"muscle|testo ?[sx]\w*|body ?build(er|ing)|wrinkle|probiotic|acne|peni(s|le)|erection)s?\b|"
-                  ur"(beauty|skin) care\b", 'all': True,
+        {'regex': r"(?i)\b((beauty|skin|health|face|eye)[- ]?(serum|therapy|hydration|tip|renewal|shop|store|lyft|"
+                  r"product|strateg(y|ies)|gel|lotion|cream|treatment|method|school|expert)|fat ?burn(er|ing)?|"
+                  r"muscle|testo ?[sx]\w*|body ?build(er|ing)|wrinkle|probiotic|acne|peni(s|le)|erection)s?\b|"
+                  r"(beauty|skin) care\b", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com",
                    "skeptics.stackexchange.com", "robotics.stackexchange.com"], 'reason': "bad keyword in {}",
          'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
@@ -615,28 +617,28 @@ class FindSpam:
          'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Bad health-related keywords in titles and posts, health sites are exempt
-        {'regex': ur"(?is)virility|diet ?(plan|pill)|\b(pro)?derma(?=[a-su-z ]\w)|(fat|(?<!dead[ -]?)weight)"
-                  ur"[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|erectile|\bherpes\b|colon ?(detox|clean)|\bpenis\b",
+        {'regex': r"(?is)virility|diet ?(plan|pill)|\b(pro)?derma(?=[a-su-z ]\w)|(fat|(?<!dead[ -]?)weight)"
+                  r"[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|erectile|\bherpes\b|colon ?(detox|clean)|\bpenis\b",
          'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com",
                    "skeptics.stackexchange.com", "bicycles.stackexchange.com", "islam.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
          'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Korean character in title: requires 3
-        {'regex': ur"(?i)\p{Script=Hangul}.*\p{Script=Hangul}.*\p{Script=Hangul}", 'all': True,
+        {'regex': r"(?i)\p{Script=Hangul}.*\p{Script=Hangul}.*\p{Script=Hangul}", 'all': True,
          'sites': ["korean.stackexchange.com"], 'reason': "Korean character in {}", 'title': True, 'body': False,
          'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Chinese characters in title: requires 3
-        {'regex': ur"(?i)\p{Script=Han}.*\p{Script=Han}.*\p{Script=Han}", 'all': True,
+        {'regex': r"(?i)\p{Script=Han}.*\p{Script=Han}.*\p{Script=Han}", 'all': True,
          'sites': ["chinese.stackexchange.com", "japanese.stackexchange.com", "ja.stackoverflow.com"],
          'reason': "Chinese character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Hindi character in title
-        {'regex': ur"(?i)\p{Script=Devanagari}", 'all': True,
+        {'regex': r"(?i)\p{Script=Devanagari}", 'all': True,
          'sites': ["hinduism.stackexchange.com"], 'reason': "Hindi character in {}", 'title': True, 'body': False,
          'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # English text on non-English site: rus.SE only
-        {'regex': ur"(?i)^[a-z0-9_\W]*[a-z]{3}[a-z0-9_\W]*$", 'all': False,
+        {'regex': r"(?i)^[a-z0-9_\W]*[a-z]{3}[a-z0-9_\W]*$", 'all': False,
          'sites': ["rus.stackexchange.com"], 'reason': "English text in {} on a localized site", 'title': True,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Roof repair
@@ -645,7 +647,7 @@ class FindSpam:
          'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
          'body_summary': True, 'max_rep': 11, 'max_score': 0},
         # Bad keywords (only include link at end sites + SO, the other sites give false positives for these keywords)
-        {'regex': ur"(?i)(?<!truth )serum|\b(?<!to )supplements\b", 'all': False,
+        {'regex': r"(?i)(?<!truth )serum|\b(?<!to )supplements\b", 'all': False,
          'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com", "drupal.stackexchange.com",
                    "meta.stackexchange.com", "security.stackexchange.com", "webapps.stackexchange.com",
                    "apple.stackexchange.com", "graphicdesign.stackexchange.com", "workplace.stackexchange.com",
@@ -669,7 +671,7 @@ class FindSpam:
          'reason': 'mostly non-Latin {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True,
          'body_summary': True, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Jesus Christ, the Son of God, on SciFi.
-        {'regex': ur"Son of (David|man)", 'all': False,
+        {'regex': r"Son of (David|man)", 'all': False,
          'sites': ["scifi.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
@@ -680,7 +682,7 @@ class FindSpam:
          'sites': [], 'reason': "blacklisted website in {}", 'title': True, 'body': True, 'username': False,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 5},
         # Suspicious sites
-        {'regex': ur"(?i)({}|({})[\w-]*?\.(co|net|org|in(\W|fo)|us|blogspot|wordpress))(?![^>]*<)".format(
+        {'regex': r"(?i)({}|({})[\w-]*?\.(co|net|org|in(\W|fo)|us|blogspot|wordpress))(?![^>]*<)".format(
             "|".join(pattern_websites), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': False,
             'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 1},
@@ -689,25 +691,25 @@ class FindSpam:
          'sites': [], 'reason': 'bad keyword in link text in {}', 'title': False, 'body': True, 'username': False,
          'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Country-name domains, travel and expats sites are exempt
-        {'regex': ur"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|"
-                  ur"spain|sweden)\w{0,4}\.(com|net)", 'all': True,
+        {'regex': r"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|"
+                  r"spain|sweden)\w{0,4}\.(com|net)", 'all': True,
          'sites': ["travel.stackexchange.com", "expatriates.stackexchange.com"],
          'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # The TLDs of Iran, Pakistan, and Tokelau in answers
-        {'regex': ur'(?i)http\S*\.(ir|pk|tk)[/"<]', 'all': True,
+        {'regex': r'(?i)http\S*\.(ir|pk|tk)[/"<]', 'all': True,
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0, 'questions': False},
         # Suspicious health-related websites, health sites are exempt
-        {'regex': ur"(?i)(bodybuilding|workout|fitness|diet|perfecthealth|muscle|nutrition|"
-                  ur"prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)", 'all': True,
+        {'regex': r"(?i)(bodybuilding|workout|fitness|diet|perfecthealth|muscle|nutrition|"
+                  r"prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com",
                    "skeptics.stackexchange.com", "bicycles.stackexchange.com"],
          'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 2},
         # Links preceded by arrows >>>
-        {'regex': ur"(?is)(>>>+|==\s*>>+|====|===>+|==>>+|= = =|(Read More|Click Here) \W{2,20}).{0,20}"
-                  ur"http(?!://i.stack.imgur.com).{0,200}$", 'all': True,
+        {'regex': r"(?is)(>>>+|==\s*>>+|====|===>+|==>>+|= = =|(Read More|Click Here) \W{2,20}).{0,20}"
+                  r"http(?!://i.stack.imgur.com).{0,200}$", 'all': True,
          'sites': [], 'reason': "link following arrow in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 11, 'max_score': 0},
         # Link at the end of question, selected sites
@@ -718,20 +720,20 @@ class FindSpam:
          'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
         # Link at the end of a short answer
-        {'regex': ur'(?is)^.{0,350}<a href="https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,4}'
-                  ur'/?\w{0,2}/?|(?:plus\.google|www\.facebook)\.com/[\w/]+)"[^<]*</a>(?:</strong>)?\W*</p>\s*$'
-                  ur'|\[/url\]\W*</p>\s*$', 'all': True,
+        {'regex': r'(?is)^.{0,350}<a href="https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,4}'
+                  r'/?\w{0,2}/?|(?:plus\.google|www\.facebook)\.com/[\w/]+)"[^<]*</a>(?:</strong>)?\W*</p>\s*$'
+                  r'|\[/url\]\W*</p>\s*$', 'all': True,
          'sites': ["raspberrypi.stackexchange.com"], 'reason': 'link at end of {}', 'title': False, 'body': True,
          'username': False, 'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1,
          'max_score': 0},
         # URL repeated at end of post
-        {'regex': ur"(?s)<a href=\"(?:http://%20)?(https?://(?:(?:www\.)?"
-            ur"[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,10}/?"
-            ur"[\w-]{0,40}?/?|(?:plus\.google|www\.facebook)\.com/[\w/]+))"
-            ur"\" rel=\"nofollow( noreferrer)?\">"
-            ur".{300,}<a href=\"(?:http://%20)?\1\" "
-            ur"rel=\"nofollow( noreferrer)?\">(?:http://%20)?\1</a>"
-            ur"(?:</strong>)?\W*</p>\s*$", 'all': True,
+        {'regex': r"(?s)<a href=\"(?:http://%20)?(https?://(?:(?:www\.)?"
+            r"[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,10}/?"
+            r"[\w-]{0,40}?/?|(?:plus\.google|www\.facebook)\.com/[\w/]+))"
+            r"\" rel=\"nofollow( noreferrer)?\">"
+            r".{300,}<a href=\"(?:http://%20)?\1\" "
+            r"rel=\"nofollow( noreferrer)?\">(?:http://%20)?\1</a>"
+            r"(?:</strong>)?\W*</p>\s*$", 'all': True,
          'sites': [], 'reason': 'repeated URL at end of long post', 'title': False, 'body': True, 'username': False,
          'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
         # Link with "thanks for sharing" or a similar phrase in a short answer
@@ -739,24 +741,24 @@ class FindSpam:
          'sites': [], 'reason': 'bad keyword with a link in {}', 'title': False, 'body': True, 'username': False,
          'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # non-linked .tk site at the end of an answer
-        {'regex': ur'(?is)\w{3}\.tk(?:</strong>)?\W*</p>\s*$', 'all': True,
+        {'regex': r'(?is)\w{3}\.tk(?:</strong>)?\W*</p>\s*$', 'all': True,
          'sites': [], 'reason': 'pattern-matching website in {}', 'title': False, 'body': True, 'username': False,
          'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # non-linked site at the end of a short answer
-        {'regex': ur'(?is)^.{0,350}\w{6}\.(com|co\.uk)(?:</strong>)?\W*</p>\s*$', 'all': True,
+        {'regex': r'(?is)^.{0,350}\w{6}\.(com|co\.uk)(?:</strong>)?\W*</p>\s*$', 'all': True,
          'sites': [], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False,
          'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Shortened URL near the end of question
-        {'regex': ur"(?is)://(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|"
-                  ur"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
-                  ur"surl\.cn\.com)/.{0,200}$", 'all': True,
+        {'regex': r"(?is)://(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|"
+                  r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
+                  r"surl\.cn\.com)/.{0,200}$", 'all': True,
          'sites': ["superuser.com", "askubuntu.com"], 'reason': "shortened URL in {}", 'title': False, 'body': True,
          'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1,
          'max_score': 0},
         # Shortened URL in an answer
-        {'regex': ur"(?is)://(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|"
-                  ur"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
-                  ur"surl\.cn\.com)/",
+        {'regex': r"(?is)://(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|"
+                  r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
+                  r"surl\.cn\.com)/",
          'all': True, 'sites': ["codegolf.stackexchange.com"], 'reason': "shortened URL in {}", 'title': False,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False,
          'max_rep': 1, 'max_score': 0},
@@ -782,23 +784,23 @@ class FindSpam:
          'reason': 'non-English link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True,
          'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Link text is one character within a word
-        {'regex': ur'(?iu)\w<a href="[^"]+" rel="nofollow( noreferrer)?">.</a>\w', 'all': True,
+        {'regex': r'(?iu)\w<a href="[^"]+" rel="nofollow( noreferrer)?">.</a>\w', 'all': True,
          'sites': [], 'reason': 'one-character link in {}', 'title': False, 'body': True, 'username': False,
          'stripcodeblocks': True, 'body_summary': False, 'max_rep': 11, 'max_score': 1},
         # Link text consists of punctuation, answers only
-        {'regex': ur'(?iu)rel="nofollow( noreferrer)?">\W</a>', 'all': True,
+        {'regex': r'(?iu)rel="nofollow( noreferrer)?">\W</a>', 'all': True,
          'sites': [], 'reason': 'linked punctuation in {}', 'title': False, 'body': True, 'username': False,
          'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 11, 'max_score': 1},
         # URL in title, some sites are exempt
-        {'regex': ur"(?i)https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}|"
-                  ur"\w{3,}\.(com|net)\b.*\w{3,}\.(com|net)\b", 'all': True,
+        {'regex': r"(?i)https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}|"
+                  r"\w{3,}\.(com|net)\b.*\w{3,}\.(com|net)\b", 'all': True,
          'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com",
                    "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com",
                    "unix.stackexchange.com", "webmasters.stackexchange.com"], 'reason': "URL in title",
          'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
          'max_rep': 11, 'max_score': 0},
         # URL-only title, for the exempt sites
-        {'regex': ur"(?i)^https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}(/\S*)?$",
+        {'regex': r"(?i)^https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}(/\S*)?$",
          'all': False,
          'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com",
                    "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com",
@@ -813,12 +815,12 @@ class FindSpam:
          'reason': "phone number detected in {}", 'title': True, 'body': False, 'username': False,
          'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Phone number in post
-        {'regex': ur"(?s)^.{0,250}\b1 ?[-(. ]8\d{2}[-). ] ?\d{3}[-. ]\d{4}\b", 'all': True,
+        {'regex': r"(?s)^.{0,250}\b1 ?[-(. ]8\d{2}[-). ] ?\d{3}[-. ]\d{4}\b", 'all': True,
          'sites': ["math.stackexchange.com"], 'reason': "phone number detected in {}", 'title': False,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Email check for answers on selected sites
-        {'regex': ur"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
-                  ur"[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': False,
+        {'regex': r"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
+                  r"[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': False,
          'sites': ["biology.stackexchange.com", "bitcoin.stackexchange.com", "ell.stackexchange.com",
                    "english.stackexchange.com", "expatriates.stackexchange.com", "gaming.stackexchange.com",
                    "health.stackexchange.com", "money.stackexchange.com", "parenting.stackexchange.com",
@@ -827,8 +829,8 @@ class FindSpam:
          'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1,
          'max_score': 0},
         # Email check for questions: check only at the end, and on selected sites
-        {'regex': ur"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
-                  ur"[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s).{0,100}$", 'all': False,
+        {'regex': r"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
+                  r"[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s).{0,100}$", 'all': False,
          'sites': ["money.stackexchange.com", "travel.stackexchange.com", "gamedev.stackexchange.com",
                    "gaming.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True,
          'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1,
@@ -837,8 +839,8 @@ class FindSpam:
         {'method': keyword_email, 'all': True, 'sites': [], 'reason': "bad keyword with email in {}", 'title': True,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # QQ/ICQ/Whatsapp... numbers, for all sites
-        {'regex': ur'(?i)(?<![a-z0-9])Q{1,2}(?:(?:[vw]|[^a-z0-9])\D{0,8})?\d{5}[.-]?\d{4,5}(?!["\d])|'
-                  ur'\bICQ[ :]{0,5}\d{9}\b|\bwh?atsapp?[ :]{0,5}\d{10}', 'all': True, 'sites': [],
+        {'regex': r'(?i)(?<![a-z0-9])Q{1,2}(?:(?:[vw]|[^a-z0-9])\D{0,8})?\d{5}[.-]?\d{4,5}(?!["\d])|'
+                  r'\bICQ[ :]{0,5}\d{9}\b|\bwh?atsapp?[ :]{0,5}\d{10}', 'all': True, 'sites': [],
          'reason': "messaging number in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
         #
@@ -848,17 +850,17 @@ class FindSpam:
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True,
          'max_rep': 101, 'max_score': 2},
         # Offensive title: titles are more sensitive
-        {'regex': ur"(?i)\bfuck|(?<!brain)fuck(ers?|ing)?\b", 'all': True, 'sites': [],
+        {'regex': r"(?i)\bfuck|(?<!brain)fuck(ers?|ing)?\b", 'all': True, 'sites': [],
          'reason': "offensive {} detected", 'title': True, 'body': False, 'username': False,
          'stripcodeblocks': True, 'body_summary': False,
          'max_rep': 101, 'max_score': 5},
         # No whitespace, punctuation, or formatting in a post
-        {'regex': ur"(?i)^<p>[a-z]+</p>\s*$", 'all': True, 'sites': ["codegolf.stackexchange.com",
-                                                                     "puzzling.stackexchange.com"],
+        {'regex': r"(?i)^<p>[a-z]+</p>\s*$", 'all': True, 'sites': ["codegolf.stackexchange.com",
+                                                                    "puzzling.stackexchange.com"],
          'reason': "no whitespace in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Numbers-only title
-        {'regex': ur"^(?=.*[0-9])[^\pL]*$", 'all': True, 'sites': ["math.stackexchange.com"],
+        {'regex': r"^(?=.*[0-9])[^\pL]*$", 'all': True, 'sites': ["math.stackexchange.com"],
          'reason': "numbers-only title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 50, 'max_score': 0},
         # Few unique characters
@@ -877,26 +879,26 @@ class FindSpam:
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 11,
          'max_score': 0},
         # One unique character in title
-        {'regex': ur"^(.)\1+$", 'all': True, 'sites': [], 'reason': "{} has only one unique char", 'title': True,
+        {'regex': r"^(.)\1+$", 'all': True, 'sites': [], 'reason': "{} has only one unique char", 'title': True,
          'body': False, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1000000,
          'max_score': 1000000},
         # Parenting troll
-        {'regex': ur"(?i)\b(erica|jeff|er1ca|spam|moderator)\b", 'all': False, 'sites': ["parenting.stackexchange.com"],
+        {'regex': r"(?i)\b(erica|jeff|er1ca|spam|moderator)\b", 'all': False, 'sites': ["parenting.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': True, 'max_rep': 50, 'max_score': 0},
         # Academia kangaroos
-        {'regex': ur"(?i)kangaroos", 'all': False, 'sites': ["academia.stackexchange.com"],
+        {'regex': r"(?i)kangaroos", 'all': False, 'sites': ["academia.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        {'regex': ur"(?i)\b\<a href=\".{0,25}\.xyz\"( rel=\"nofollow( noreferrer)?\")?\>.{0,15}google.{0,15}\<\/a\>\b",
+        {'regex': r"(?i)\b\<a href=\".{0,25}\.xyz\"( rel=\"nofollow( noreferrer)?\")?\>.{0,15}google.{0,15}\<\/a\>\b",
          'all': True, 'sites': [], 'reason': 'non-Google "google search" link in {}', 'title': False, 'body': True,
          'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
         # Academia image by low-rep user
-        {'regex': ur'\<img src="[^"]+"(?: alt="[^"]+")?>', 'all': False, 'sites': ['academia.stackexchange.com'],
+        {'regex': r'\<img src="[^"]+"(?: alt="[^"]+")?>', 'all': False, 'sites': ['academia.stackexchange.com'],
          'reason': 'image by low-rep user', 'title': False, 'body': True, 'username': False, 'body_summary': False,
          'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
         # Link inside nested blockquotes
-        {'regex': ur'(?:<blockquote>\s*){6}<p><a href="([^<>]+)"[^<>]*>\1</a>\s*</p>\s*</blockquote>', 'all': True,
+        {'regex': r'(?:<blockquote>\s*){6}<p><a href="([^<>]+)"[^<>]*>\1</a>\s*</p>\s*</blockquote>', 'all': True,
          'sites': [], 'reason': 'link inside deeply nested blockquotes', 'title': False, 'body': True,
          'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
         # Mostly dots in post
@@ -907,7 +909,7 @@ class FindSpam:
         #
         # Category: other
         # Blacklisted usernames
-        {'regex': ur"(?i)({})".format("|".join(blacklisted_usernames)), 'all': True, 'sites': [],
+        {'regex': r"(?i)({})".format("|".join(blacklisted_usernames)), 'all': True, 'sites': [],
          'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"],
@@ -1007,7 +1009,8 @@ class FindSpam:
                     result.append(rule['reason'].replace("{}", type_of_post))
         result = list(set(result))
         result.sort()
-        why = "\n".join(filter(None, why["title"]) + filter(None, why["body"]) + filter(None, why["username"])).strip()
+        why = "\n".join(chain(filter(None, why["title"]), filter(None, why["body"]),
+                              filter(None, why["username"]))).strip()
         return result, why
 
     @staticmethod

@@ -8,6 +8,7 @@ pytest
 phonenumbers
 flake8
 pep8-naming
-regex==2015.11.22
+regex
 termcolor
 sh
+typing

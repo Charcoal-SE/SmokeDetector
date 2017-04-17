@@ -1,3 +1,4 @@
+# coding=utf-8
 import os
 from collections import namedtuple
 from datetime import datetime
@@ -30,5 +31,5 @@ def log(log_level, *args):
     }
     color = (colors[log_level] if log_level in colors else 'white')
     log_str = u"{} {}".format(colored("[{}]".format(datetime.now().isoformat()[11:-7]), color),
-                              u"  ".join([unicode(x) for x in args]))
+                              u"  ".join([str(x) for x in args]))
     print(log_str)

@@ -1,17 +1,18 @@
 #!/usr/bin/python
+# coding=utf-8
 
 # This script replaces the original nocrash.sh functionality with a pure Python approach.
 
 import platform
 from helpers import log
-if 'windows' in str(platform.platform()).lower():
-    log('warning', "Git support not available in Windows.")
-else:
-    from sh import git
 import os
 import subprocess as sp
 from time import sleep
 import sys
+if 'windows' in str(platform.platform()).lower():
+    log('warning', "Git support not available in Windows.")
+else:
+    from sh import git
 
 # Get environment variables
 ChatExchangeU = os.environ.get('ChatExchangeU')

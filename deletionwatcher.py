@@ -1,3 +1,4 @@
+# coding=utf-8
 import json
 import requests
 import time
@@ -6,7 +7,7 @@ import websocket
 # noinspection PyPackageRequirements
 from bs4 import BeautifulSoup
 from threading import Thread
-from urlparse import urlparse
+from urllib.parse import urlparse
 import metasmoke
 from globalvars import GlobalVars
 import datahandling

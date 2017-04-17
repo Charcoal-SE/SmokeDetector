@@ -3,9 +3,9 @@
 import os
 from datetime import datetime
 from chatexchange_extension import Client
-import HTMLParser
+from html.parser import HTMLParser
 from hashlib import md5
-import ConfigParser
+from configparser import NoOptionError, RawConfigParser
 from helpers import environ_or_none, log
 import threading
 
@@ -44,7 +44,7 @@ class GlobalVars:
     ]
     non_tavern_sites = ["stackoverflow.com"]
 
-    parser = HTMLParser.HTMLParser()
+    parser = HTMLParser()
     wrap = Client("stackexchange.com")
     wrapm = Client("meta.stackexchange.com")
     wrapso = Client("stackoverflow.com")
@@ -315,7 +315,7 @@ class GlobalVars:
     post_scan_time = 0
     posts_scan_stats_lock = threading.Lock()
 
-    config = ConfigParser.RawConfigParser()
+    config = RawConfigParser()
 
     if os.path.isfile('config'):
         config.read('config')
@@ -338,26 +338,26 @@ class GlobalVars:
 
     try:
         metasmoke_host = config.get("Config", "metasmoke_host")
-    except ConfigParser.NoOptionError:
+    except NoOptionError:
         metasmoke_host = None
         log('info', "metasmoke host not found. Set it as metasmoke_host in the config file."
             "See https://github.com/Charcoal-SE/metasmoke.")
 
     try:
         metasmoke_key = config.get("Config", "metasmoke_key")
-    except ConfigParser.NoOptionError:
+    except NoOptionError:
         metasmoke_key = ""
         log('info', "No metasmoke key found, which is okay if both are running on the same host")
 
     try:
         metasmoke_ws_host = config.get("Config", "metasmoke_ws_host")
-    except ConfigParser.NoOptionError:
+    except NoOptionError:
         metasmoke_ws_host = ""
         log('info', "No metasmoke websocket host found, which is okay if you're anti-websocket")
 
     try:
         github_username = config.get("Config", "github_username")
         github_password = config.get("Config", "github_password")
-    except ConfigParser.NoOptionError:
+    except NoOptionError:
         github_username = None
         github_password = None

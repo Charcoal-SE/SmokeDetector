@@ -1,3 +1,4 @@
+# coding=utf-8
 from spamhandling import check_if_spam, check_if_spam_json
 from datahandling import add_blacklisted_user, add_whitelisted_user
 from parsing import get_user_from_url
