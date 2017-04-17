@@ -204,6 +204,9 @@ class Post:
 
     @property
     def post_site(self):
+        if type(self._post_site) in [bytes, bytearray]:
+            self._post_site = self._post_site.decode('utf-8')
+
         return self._post_site
 
     # noinspection PyBroadException
