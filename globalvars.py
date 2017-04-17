@@ -314,8 +314,8 @@ class GlobalVars:
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
 
     commit = git_commit_info()
-    if md5(commit['author'][0]).hexdigest() in censored_committer_names:
-        commit['author'] = censored_committer_names[md5(commit['author'][0]).hexdigest()]
+    if md5(commit['author'][0].encode('utf-8')).hexdigest() in censored_committer_names:
+        commit['author'] = censored_committer_names[md5(commit['author'][0].encode('utf-8')).hexdigest()]
 
     commit_with_author = "%s (%s: *%s*)" % (commit, commit_author, commit_msg)
 
