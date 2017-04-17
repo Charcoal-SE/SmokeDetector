@@ -8,10 +8,26 @@ from hashlib import md5
 from configparser import NoOptionError, RawConfigParser
 from helpers import environ_or_none, log
 import threading
-from sh import git
 # noinspection PyCompatibility
 import regex
 import subprocess as sp
+from dulwich.repo import Repo
+
+
+def git_commit_info():
+    git = Repo('.')
+    commit = git.get_object(git.head())
+    return {'id': commit.id.decode("utf-8")[0:7], 'id_full': commit.id.decode("utf-8"),
+            'author': regex.findall("(.*?) <(.*?)>", commit.author.decode("utf-8"))[0],
+            'message': commit.message.decode("utf-8").strip('\r\n')}
+
+
+def git_status():
+    data = sp.Popen(['git status'], shell=True, cwd=os.getcwd(), stderr=sp.PIPE, stdout=sp.PIPE).communicate()
+    if not data[1]:
+        data[0].decode('utf-8').strip('\n')
+    else:
+        raise OSError("Git error!")
 
 
 # This is needed later on for properly 'stripping' unicode weirdness out of git log data.
@@ -293,19 +309,13 @@ class GlobalVars:
 
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
 
-    commit = strip_escape_chars(git.log('--pretty=format:"%h"', '-n 1').strip('\n'))
-    commit_author = strip_escape_chars(git.log('--pretty=format:"%an"', '-n 1').strip('\n')).encode('utf-8')
+    commit = git_commit_info()
+    if md5(commit['author'][0]).hexdigest() in censored_committer_names:
+        commit['author'] = censored_committer_names[md5(commit['author'][0]).hexdigest()]
 
-    if md5(commit_author).hexdigest() in censored_committer_names:
-        commit_author = censored_committer_names[md5(commit_author).hexdigest()]
+    commit_with_author = "%s (%s: *%s*)" % (commit, commit_author, commit_msg)
 
-    commit_with_author = strip_escape_chars(
-        # Use subprocess.Popen here, so we can have better control of what we're actually executing.
-        sp.Popen(['--pretty=format:"%h (' + commit_author.decode('utf-8') + ': *%s*)"', '-n', '1'],
-                 shell=True, stdout=sp.PIPE).communicate()[0]
-    )
-
-    on_master = "HEAD detached" not in strip_escape_chars(git.status())
+    on_master = "HEAD detached" not in git_status()
     charcoal_hq = None
     tavern_on_the_meta = None
     socvr = None

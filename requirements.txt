@@ -1,3 +1,5 @@
+dulwich
+pbs
 packaging
 appdirs
 beautifulsoup4
