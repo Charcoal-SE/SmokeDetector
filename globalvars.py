@@ -29,7 +29,7 @@ def git_status():
     else:
         data = sp.Popen(['git status'], shell=True, cwd=os.getcwd(), stderr=sp.PIPE, stdout=sp.PIPE).communicate()
     if not data[1]:
-        data[0].decode('utf-8').strip('\n')
+        return data[0].decode('utf-8').strip('\n')
     else:
         raise OSError("Git error!")
 
