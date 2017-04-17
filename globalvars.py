@@ -8,9 +8,17 @@ from hashlib import md5
 from configparser import NoOptionError, RawConfigParser
 from helpers import environ_or_none, log
 import threading
+from sh import git
+import regex
 
 
-# noinspection PyClassHasNoInit,PyDeprecation
+def strip_escape_chars(line):
+    line = str(line)
+    ansi_escape = regex.compile(r'(\x9B|\x1B\[)[0-?]*[ -\/]*[@-~]')
+    return ansi_escape.sub('', line).strip('=\r\r\x1b>\n"')
+
+
+# noinspection PyClassHasNoInit,PyDeprecation,PyUnresolvedReferences
 class GlobalVars:
     false_positives = []
     whitelisted_users = []
@@ -281,14 +289,16 @@ class GlobalVars:
 
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
 
-    commit = os.popen('git log --pretty=format:"%h" -n 1').read()
-    commit_author = os.popen('git log --pretty=format:"%an" -n 1').read()
+    commit = strip_escape_chars(git.log('--pretty=format:"%h"', '-n 1').strip('\n'))
+    commit_author = strip_escape_chars(git.log('--pretty=format:"%an"', '-n 1').strip('\n')).encode('utf-8')
 
     if md5(commit_author).hexdigest() in censored_committer_names:
         commit_author = censored_committer_names[md5(commit_author).hexdigest()]
 
-    commit_with_author = os.popen('git log --pretty=format:"%h (' + commit_author + ': *%s*)" -n 1').read()
-    on_master = "HEAD detached" not in os.popen("git status").read()
+    commit_with_author = strip_escape_chars(
+        git.log('--pretty=format:"%h (' + commit_author.decode('utf-8') + ': *%s*)"', '-n 1').strip('\n')
+    )
+    on_master = "HEAD detached" not in strip_escape_chars(git.status())
     charcoal_hq = None
     tavern_on_the_meta = None
     socvr = None

@@ -1,15 +1,15 @@
 language: python
 sudo: false
 python:
-  - '2.7'
+  - '3.6'
 install:
-  - pip install -r requirements.txt --upgrade
-  - pip install pytest-cov codecov
+  - pip3 install -r requirements.txt --upgrade
+  - pip3 install pytest-cov codecov
 script:
   - flake8 --config=tox_tests.ini ./test/
   - flake8 --config=tox_classes.ini ./classes/
   - flake8 ./
-  - python -W default::Warning -m pytest --cov=chatcommunicate --cov=findspam --cov=globalvars --cov=spamhandling --cov=datahandling test
+  - python3 -W default::Warning -m pytest --cov=chatcommunicate --cov=findspam --cov=globalvars --cov=spamhandling --cov=datahandling test
 branches:
   only:
     - master
@@ -17,7 +17,7 @@ branches:
     - debugging
 cache:
   directories:
-    - $HOME/virtualenv/python2.7.9
+    - $HOME/virtualenv/python3.6.*
     - $HOME/.cache/pip
 before_cache:
   - rm -f $HOME/.cache/pip/log/debug.log
