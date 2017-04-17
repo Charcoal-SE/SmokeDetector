@@ -9,10 +9,13 @@ from configparser import NoOptionError, RawConfigParser
 from helpers import environ_or_none, log
 import threading
 from sh import git
+# noinspection PyCompatibility
 import regex
 import subprocess as sp
 
 
+# This is needed later on for properly 'stripping' unicode weirdness out of git log data.
+# Otherwise, we can't properly work with git log data.
 def strip_escape_chars(line):
     line = str(line)
     ansi_escape = regex.compile(r'(\x9B|\x1B\[)[0-?]*[ -\/]*[@-~]')
@@ -134,7 +137,7 @@ class GlobalVars:
             "172450",   # Hovercraft Full Of Eels
             "56200",    # Eric Leschinski
             "211021",   # Henders
-            "255290"   # Gypsy Spellweaver
+            "255290",   # Gypsy Spellweaver
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
@@ -207,7 +210,7 @@ class GlobalVars:
             "308386",   # Magisch
             "285368",   # angussidney
             "158829",   # Thomas Ward
-            "294691"   # Mithrandir
+            "294691",   # Mithrandir
         ],
         socvr_room_id: [
             "1849664",  # Undo
@@ -279,7 +282,7 @@ class GlobalVars:
             "4687348",  # FelixSFD
             "4751173",  # Glorfindel
             "2233391",  # henders
-            "4805174"  # kayess
+            "4805174",  # kayess
         ]
     }
 
@@ -297,8 +300,9 @@ class GlobalVars:
         commit_author = censored_committer_names[md5(commit_author).hexdigest()]
 
     commit_with_author = strip_escape_chars(
-        sp.Popen(['--pretty=format:"%h (' + commit_author.decode('utf-8') + ': *%s*)"', '-n', '1'], shell=True, stdout=sp.PIPE).communicate()[0]
-        # git.log('--pretty=format:"%h (' + commit_author.decode('utf-8') + ': *%s*)"', '-n 1').strip('\n')
+        # Use subprocess.Popen here, so we can have better control of what we're actually executing.
+        sp.Popen(['--pretty=format:"%h (' + commit_author.decode('utf-8') + ': *%s*)"', '-n', '1'],
+                 shell=True, stdout=sp.PIPE).communicate()[0]
     )
 
     on_master = "HEAD detached" not in strip_escape_chars(git.status())
