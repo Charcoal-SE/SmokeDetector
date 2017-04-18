@@ -28,6 +28,7 @@ command_aliases = {
     "vand": "tp-",
     "v": "tp-",
     "n": "naa-",
+    "💩": "naa-",
 }
 
 
