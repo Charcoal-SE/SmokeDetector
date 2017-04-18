@@ -187,7 +187,7 @@ def test_whitelisted_users():
 def test_privileged_users():
     event = mock_event("!!/amiprivileged", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
-    assert reply_value == u"\u2753 You are a privileged user."
+    assert reply_value == u"\u2713 You are a privileged user."
 
     event = mock_event("!!/amiprivileged", 1, 11540, "Charcoal HQ", -5, u"Some bot")
     watcher(event, client.Client())
