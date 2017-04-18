@@ -92,7 +92,7 @@ def handle_spam(post, reasons, why):
     if post.is_answer and post.post_id is not None and post.post_id is not "":
         datahandling.add_post_site_id_link((post.post_id, post.post_site, "answer"), post.post_id)
     try:
-        post.title = parsing.escape_special_chars_in_title(post.title)
+        post._title = parsing.escape_special_chars_in_title(post.title)
         if post.is_answer:
             # If the post is an answer type post, the 'title' is going to be blank, so when posting the
             # message contents we need to set the post title to the *parent* title, so the message in the

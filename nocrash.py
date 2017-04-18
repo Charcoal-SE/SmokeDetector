@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # coding=utf-8
 
 # This script replaces the original nocrash.sh functionality with a pure Python approach.
@@ -10,7 +10,7 @@ import subprocess as sp
 from time import sleep
 import sys
 if 'windows' in str(platform.platform()).lower():
-    log('warning', "Git support not available in Windows.")
+    log('warning', "Git support not yet available in Windows.")
 else:
     from sh import git
 
@@ -42,14 +42,14 @@ while stoprunning is False:
     if count == 0:
         if 'standby' in persistent_arguments:
             switch_to_standby = False  # Necessary for the while loop
-            command = 'python ws.py standby'.split()
+            command = 'python3 ws.py standby'.split()
         else:
-            command = 'python ws.py first_start'.split()
+            command = 'python3 ws.py first_start'.split()
     else:
         if not ('standby' in persistent_arguments):
-            command = 'python ws.py'.split()
+            command = 'python3 ws.py'.split()
         else:
-            command = 'python ws.py standby'.split()
+            command = 'python3 ws.py standby'.split()
 
     # noinspection PyBroadException
     try:

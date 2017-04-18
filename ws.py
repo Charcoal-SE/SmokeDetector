@@ -108,7 +108,7 @@ GlobalVars.s = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                "SmokeDetector started at [rev " +\
                GlobalVars.commit_with_author +\
                "](" + GlobalVars.bot_repository + "/commit/" +\
-               GlobalVars.commit +\
+               GlobalVars.commit['id'] +\
                ") (running on " +\
                GlobalVars.location +\
                ")"
@@ -118,7 +118,7 @@ GlobalVars.s_reverted = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                         "at [rev " + \
                         GlobalVars.commit_with_author + \
                         "](" + GlobalVars.bot_repository + "/commit/" + \
-                        GlobalVars.commit + \
+                        GlobalVars.commit['id'] + \
                         ") (running on " +\
                         GlobalVars.location +\
                         ")"
@@ -128,7 +128,7 @@ GlobalVars.standby_message = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                              "at [rev " +\
                              GlobalVars.commit_with_author +\
                              "](" + GlobalVars.bot_repository + "/commit/" +\
-                             GlobalVars.commit +\
+                             GlobalVars.commit['id'] +\
                              ") (running on " +\
                              GlobalVars.location +\
                              ")"
