@@ -203,7 +203,7 @@ class BodyFetcher:
             # We don't want to go over the 100-post API cutoff, so take the last
             # (100-len(new_post_ids)) from intermediate_posts
 
-            intermediate_posts = intermediate_posts[(len(new_post_ids) - 100):]
+            intermediate_posts = intermediate_posts[(100 - len(new_post_ids)):]
 
             # new_post_ids could contain edited posts, so merge it back in
             combined = intermediate_posts + new_post_ids
@@ -263,9 +263,9 @@ class BodyFetcher:
             # the queue.
             self.queue_modify_lock.acquire()
             if site in self.queue:
-                self.queue[site].extend(posts)
+                self.queue[site].update(new_posts)
             else:
-                self.queue[site] = posts
+                self.queue[site] = new_posts
             self.queue_modify_lock.release()
             GlobalVars.api_request_lock.release()
             return

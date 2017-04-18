@@ -124,7 +124,8 @@ class GlobalVars:
             "167070",   # quartata
             "172450",   # Hovercraft Full Of Eels
             "56200",    # Eric Leschinski
-            "211021"    # Henders
+            "211021",   # Henders
+            "255290"   # Gypsy Spellweaver
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
