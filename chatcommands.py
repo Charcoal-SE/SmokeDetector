@@ -583,7 +583,8 @@ def command_help(*args, **kwargs):
     return Response(command_status=True, message="I'm " + GlobalVars.chatmessage_prefix +
                                                  ", a bot that detects spam and offensive posts on the network and "
                                                  "posts alerts to chat. "
-                                                 "[A command list is available here](https://charcoal-se.org/smokey/Commands).")
+                                                 "[A command list is available here]"
+                                                 "(https://charcoal-se.org/smokey/Commands).")
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -664,9 +665,9 @@ def command_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
     :return: A string
     """
     if is_privileged(ev_room, ev_user_id, wrap2):
-        return Response(command_status=True, message="\u2713 You are a privileged user.")
+        return Response(command_status=True, message=u"\u2713 You are a privileged user.")
     return Response(command_status=True,
-                    message="\u2573 " + GlobalVars.not_privileged_warning)
+                    message=u"\u2573 " + GlobalVars.not_privileged_warning)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
