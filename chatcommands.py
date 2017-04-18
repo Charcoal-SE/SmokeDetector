@@ -40,9 +40,7 @@ def check_permissions(function_):
             return function_(*args, **kwargs)
         else:
             return Response(command_status=False,
-                            message="You are not a privileged user. Please see [the privileges wiki page](" +
-                                    GlobalVars.bot_repository + "/wiki/Privileges) for information on what privileges"
-                                                                " are and what is expected of privileged users.")
+                            message=GlobalVars.not_privileged_warning)
 
     return run_command
 
@@ -585,8 +583,8 @@ def command_help(*args, **kwargs):
     return Response(command_status=True, message="I'm " + GlobalVars.chatmessage_prefix +
                                                  ", a bot that detects spam and offensive posts on the network and "
                                                  "posts alerts to chat. "
-                                                 "[A command list is available here](" + GlobalVars.bot_repository +
-                                                 "/wiki/Commands).")
+                                                 "[A command list is available here]"
+                                                 "(https://charcoal-se.org/smokey/Commands).")
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -667,11 +665,9 @@ def command_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
     :return: A string
     """
     if is_privileged(ev_room, ev_user_id, wrap2):
-        return Response(command_status=True, message="Yes, you are a privileged user.")
+        return Response(command_status=True, message=u"\u2713 You are a privileged user.")
     return Response(command_status=True,
-                    message="No, you are not a privileged user. Please see [the privileges wiki page](" +
-                            GlobalVars.bot_repository + "/wiki/Privileges) for information on what privileges "
-                                                        "are and what is expected of privileged users.")
+                    message=u"\u2573 " + GlobalVars.not_privileged_warning)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
