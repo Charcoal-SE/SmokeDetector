@@ -1,14 +1,15 @@
+# coding=utf-8
 import platform
 from helpers import log
-if 'windows' in str(platform.platform()).lower():
-    log('warning', "Git support not available in Windows.")
-else:
-    from sh import git
 from requests.auth import HTTPBasicAuth
 from globalvars import GlobalVars
 import requests
 import time
 import json
+if 'windows' in str(platform.platform()).lower():
+    log('warning', "Git support not available in Windows.")
+else:
+    from sh import git
 
 
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException

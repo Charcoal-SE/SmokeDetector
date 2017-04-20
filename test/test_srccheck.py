@@ -1,3 +1,4 @@
+# coding=utf-8
 # SmokeDetector uses snake_case for all function names.
 # This tool checks for inconsistency: if it notices that there are capitalized letters in a function name,
 # it throws an error.
@@ -17,7 +18,7 @@ def test_check_function_names():
         fail_with_message("ERROR: could not find directory containing SmokeDetector's files -- failed to find ws.py.")
     py_files = list_python_files(smokedetector_root)
     for filename in py_files:
-        with open(filename, "r") as f:
+        with open(filename, "r", encoding='utf-8') as f:
             lines = f.readlines()
             current_line = 0
             for line in lines:
@@ -39,7 +40,7 @@ def test_check_indentation():
         fail_with_message("ERROR: could not find directory containing SmokeDetector's files -- failed to find ws.py.")
     py_files = list_python_files(smokedetector_root)
     for filename in py_files:
-        with open(filename, "r") as f:
+        with open(filename, "r", encoding='utf-8') as f:
             lines = f.readlines()
             current_line = 0
             for line in lines:
