@@ -409,7 +409,7 @@ def similar_answer(post):
 
 # noinspection PyMissingTypeHints
 def strip_urls_and_tags(string):
-    return regex.sub("</?.+?>|\w+?://", "", regex.sub(URL_REGEX, "", string))
+    return regex.sub(r"</?.+?>|\w+?://", "", regex.sub(URL_REGEX, "", string))
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
@@ -417,7 +417,7 @@ def mostly_dots(s, site, *args):
     body = strip_urls_and_tags(s)
     body_length = len(body)
 
-    dot_count = len(regex.findall("\.", body))
+    dot_count = len(regex.findall(r"\.", body))
 
     if body_length and dot_count / float(body_length) >= 0.4:
         return True, u"Post contains {} dots out of {} characters".format(dot_count, body_length)
@@ -449,8 +449,8 @@ class FindSpam:
         "salesforce|joomla)( certification)? (courses?|training).{0,25}</a>",
         r"(?:design|development|compan(y|ies)|training|courses?|automation)(\b.{1,8}\b)?\L<city>\b",
         u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "no2blast", "sunergetic", "capilux", "sante ?avis",
-        "enduros", "dianabol", "ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex", "revimax",
-        "celluria", "viatropin", "(meg|test)adrox", "nordic ?loan ?firm", "safflower\Woil",
+        "enduros", "dianabol", r"ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex", "revimax",
+        "celluria", "viatropin", "(meg|test)adrox", "nordic ?loan ?firm", r"safflower\Woil",
         "(essay|resume|article|dissertation|thesis) ?writing ?service", "satta ?matka", "b.?o.?j.?i.?t.?e.?r"
     ]
 
