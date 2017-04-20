@@ -275,7 +275,8 @@ class GlobalVars:
             "4687348",  # FelixSFD
             "4751173",  # Glorfindel
             "2233391",  # henders
-            "4805174"  # kayess
+            "4805174",  # kayess
+            "2370483"  # Machavity
         ]
     }
 
