@@ -15,4 +15,3 @@ test:
     - flake8 --config=tox_classes.ini ./classes/
     - flake8 ./
     - python3 -W default::Warning -m pytest test
-,
