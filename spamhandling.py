@@ -109,7 +109,7 @@ def handle_spam(post, reasons, why):
         else:
             prefix_ms = prefix
 
-        if not post.user_name.strip() or (poster_url.strip() == "" or not poster_url):
+        if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
             s = u" {}: [{}]({}) by a deleted user on `{}`".format(reason, sanitized_title.strip(), post_url,
                                                                   shortened_site)
             username = ""

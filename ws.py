@@ -253,7 +253,7 @@ log('info', GlobalVars.metasmoke_host)
 
 DeletionWatcher.update_site_id_list()
 
-ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
+ws = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
 ws.send("155-questions-active")
 GlobalVars.charcoal_hq.join()
 GlobalVars.tavern_on_the_meta.join()

@@ -18,7 +18,7 @@ Nitroxin
 Bowtrol
 Slim ?Genix
 Cleanse EFX
-Alpha ?(Rush|Fuel)
+Alpha\W?(x\W?)?(Rush|Fuel|XTRM|levo|max|prime|force\Wtesto|monster\Wadvanced|muscle|boost|plus)
 exoslim
 Blackline Elite
 TestCore Pro
@@ -89,7 +89,6 @@ Cerebria
 Xanogen
 intellipaat
 Replennage
-Alpha XTRM
 Synagen
 Nufinity
 V[ -]?Stamina
@@ -119,8 +118,7 @@ Herbalife
 Accumass
 purple rhino male enhancement
 Dating Coaching
-male enhancement supplements
-alpha levo
+(male\Wenhancement|dietary|muscle)\Wsupplements?
 digital marketing course
 stark trading system
 bring back lost lover
@@ -157,7 +155,6 @@ biocilium
 abella\Wmayfair
 Intelleral
 livana\Wlift
-alpha\Wmax
 vivalux
 call\Wgirl
 Youth Serum
@@ -165,8 +162,6 @@ explosive muscle
 zyntix
 genbrain
 teeth lightening
-alpha\Wprime
-alpha\Wforce\Wtesto
 xtest\W(muscle|reviews?)
 inteligen
 natural\Wslim\Wlife
@@ -177,7 +172,6 @@ break\Wup\Wpill
 biogenic\Wxr
 bella\W(dior|serata)
 nitro\Wmxs
-alpha\Wmonster\Wadvanced
 hl12
 xength
 red\Wfortera
@@ -187,7 +181,6 @@ lux\W?derma
 trinity\Wx3
 satin\Wyouth\Wcream
 metabo\Wpure\Wmax
-nitric\Wmuscle\Wuptake
 dermatek
 Pass4Sure
 floracil50
@@ -254,10 +247,8 @@ renovie
 cactinea
 provillus
 (testo|nitro)menix
-x\Walpha\Wmuscle
 parisian\Wglow
 revyve\Wskin
-krojamsoft
 beta\Wprostate
 oveena
 junivive
@@ -265,10 +256,8 @@ easy\Wloss\Wcleanse
 erect\Won\Wdemand
 nucific
 mayo\Wclinic
-alpha\Wx\Wboost
 tacticlight
 lumanere
-x\Walpha\Wboost
 pure\Wvitamen
 staminon
 hydralie
@@ -344,7 +333,6 @@ anibolx
 qugenix
 ampk
 regal\Wslim
-alpha\Wplus
 noxor
 healthherbalclinic
 zyalix
@@ -357,3 +345,26 @@ femme\W?youth
 priamax
 Novellus Skin
 patriot\Wpower\Wgreens
+ultraderm
+colodetox
+lumaglow
+primal\W?x
+vigrx
+ambisom
+laleur\Wcream
+rejuvalogic
+chantel\Wst\Wclaire
+testx\Wcore
+lumidaire
+embova
+core\Wskincare
+leallure
+neuro\Wxr
+test\Wshred
+phallyx
+nuvapelle
+jullen
+nos\Wex
+platinum\Wbeaute
+body\Wblast
+dermessence

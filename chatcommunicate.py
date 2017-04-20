@@ -12,7 +12,7 @@ import chatcommands
 from helpers import Response, log
 
 # Please note: If new !!/ commands are added or existing ones are modified, don't forget to
-# update the wiki at https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands.
+# update the wiki at https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands/_edit.
 
 add_latest_message_lock = Lock()
 
@@ -29,6 +29,7 @@ command_aliases = {
     "vand": "tp-",
     "v": "tp-",
     "n": "naa-",
+    u"\U0001F4A9": "tp-",
 }
 
 
