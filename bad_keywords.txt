@@ -357,3 +357,4 @@ chantel\Wst\Wclaire
 testx\Wcore
 lumidaire
 embova
+core\Wskincare
