@@ -358,7 +358,7 @@ testx\Wcore
 lumidaire
 embova
 core\Wskincare
-leallure(?#review)
+leallure
 neuro\Wxr
 test\Wshred
 phallyx
