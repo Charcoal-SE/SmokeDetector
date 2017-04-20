@@ -3,8 +3,8 @@
 
 from excepthook import uncaught_exception, install_thread_excepthook
 import sys
-# sys.excepthook = uncaught_exception
-# install_thread_excepthook()
+sys.excepthook = uncaught_exception
+install_thread_excepthook()
 
 # !! Important! Be careful when adding code/imports before this point.
 # Our except hook is installed here, so any errors before this point
