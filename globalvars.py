@@ -20,7 +20,7 @@ def git_commit_info():
     commit = git.get_object(git.head())
     return {'id': commit.id.decode("utf-8")[0:7], 'id_full': commit.id.decode("utf-8"),
             'author': regex.findall("(.*?) <(.*?)>", commit.author.decode("utf-8"))[0],
-            'message': commit.message.decode("utf-8").strip('\r\n')}
+            'message': commit.message.decode("utf-8").strip('\r\n').split('\n')[0]}
 
 
 def git_status():
@@ -363,7 +363,7 @@ class GlobalVars:
     # environ_or_none defined in helpers.py
     bot_name = environ_or_none("SMOKEDETECTOR_NAME") or "SmokeDetector"
     bot_repository = environ_or_none("SMOKEDETECTOR_REPO") or "//github.com/Charcoal-SE/SmokeDetector"
-    chatmessage_prefix = "[{}]({})".format(bot_name, bot_repository)
+    chatmessage_prefix = "[PY3Test {}]({})".format(bot_name, bot_repository)
 
     site_id_dict = {}
     post_site_id_to_question = {}

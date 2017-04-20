@@ -3,8 +3,7 @@ import requests
 import parsing
 from globalvars import GlobalVars
 import time
-# noinspection PyPep8Naming
-from html.parser import HTMLParser
+import html
 
 
 class PostData:
@@ -86,10 +85,9 @@ def api_get_post(post_url):
     post_data.post_id = post_id
     post_data.post_url = parsing.url_to_shortlink(item['link'])
     post_data.post_type = post_type
-    h = HTMLParser.HTMLParser()
-    post_data.title = h.unescape(item['title'])
+    post_data.title = html.unescape(item['title'])
     if 'owner' in item and 'link' in item['owner']:
-        post_data.owner_name = h.unescape(item['owner']['display_name'])
+        post_data.owner_name = html.unescape(item['owner']['display_name'])
         post_data.owner_url = item['owner']['link']
         post_data.owner_rep = item['owner']['reputation']
     else:

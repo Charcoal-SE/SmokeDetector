@@ -102,7 +102,7 @@ def handle_spam(post, reasons, why):
         else:
             sanitized_title = regex.sub('(https?://|\n)', '', post.title)
 
-        prefix = u"[ [SmokeDetector](//goo.gl/eLDYqh) ]"
+        prefix = u"[ Py3 Test [SmokeDetector](//goo.gl/eLDYqh) ]"
         if GlobalVars.metasmoke_key:
             prefix_ms = u"[ [SmokeDetector](//goo.gl/eLDYqh) | [MS](//m.erwaysoftware.com/posts/by-url?url=" + \
                         post_url + ") ]"
