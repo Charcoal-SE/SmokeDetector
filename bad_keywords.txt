@@ -348,7 +348,7 @@ patriot\Wpower\Wgreens
 ultraderm
 colodetox
 lumaglow
-primalx
+primal\W?x
 vigrx
 ambisom
 laleur\Wcream
@@ -363,4 +363,4 @@ neuro\Wxr
 test\Wshred
 phallyx
 nuvapelle
-primal\Wx
+
