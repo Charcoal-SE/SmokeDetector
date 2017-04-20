@@ -358,12 +358,12 @@ testx\Wcore
 lumidaire
 embova
 core\Wskincare
-leallure
+leallure(?#review)
 neuro\Wxr
 test\Wshred
 phallyx
 nuvapelle
 
-jullen
-nos\Wex
+jullen(?#review)
+nos\Wex(?#review)
 platinum\Wbeaute
