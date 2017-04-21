@@ -275,6 +275,23 @@ def bad_link_text(s, site, *args):   # suspicious text of a hyperlink
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
+def bad_fragment_in_link(s, site, *args):
+    fragments = [
+        r'[^"]*-reviews(?:-(?:canada|(?:and|or)-scam))?/?',
+    ]
+    bad_frag = regex.compile(
+        r'<a href="(?P<frag>{0})"|<a href="[^"]*"(?:\s+"[^"]*")*>(?P<frag>{0})</a>'.format(
+            '|'.join(fragments)), regex.UNICODE).findall(s)
+    if bad_frag:
+        log('warn', 'is true {0!r}'.format(bad_frag))
+        return True, u"Bad fragment in link {}".format(
+            ", ".join(["".join(match) for match in bad_frag]))
+    else:
+        log('warn', 'is false {0!r}, post {1!r}'.format(bad_frag, s))
+        return False, ""
+
+
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def is_offensive_post(s, site, *args):
     if s is None or len(s) == 0:
         return False, ""
@@ -690,6 +707,11 @@ class FindSpam:
         {'method': bad_link_text, 'all': True,
          'sites': [], 'reason': 'bad keyword in link text in {}', 'title': False, 'body': True, 'username': False,
          'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        # Bad fragment in link
+        {'method': bad_fragment_in_link, 'all': True, 'sites': [],
+         'reason': 'bad fragment in link {}',
+         'title': False, 'body': True, 'username': False,
+         'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Country-name domains, travel and expats sites are exempt
         {'regex': r"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|"
                   r"spain|sweden)\w{0,4}\.(com|net)", 'all': True,
