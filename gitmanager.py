@@ -77,7 +77,7 @@ class GitManager:
         # Add item to file
         with open(blacklist_file_name, "a+") as blacklist_file:
             last_character = blacklist_file.read()[-1:]
-            if last_character != "\n":
+            if last_character not in ["", "\n"]:
                 blacklist_file.write("\n")
             blacklist_file.write(item_to_blacklist + "\n")
 
