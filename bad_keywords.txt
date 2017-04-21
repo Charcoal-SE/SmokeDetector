@@ -337,7 +337,7 @@ noxor
 healthherbalclinic
 zyalix
 lumivol
-skin\Wnovela
+(skin|eye)\Wnovela
 avdshare
 hacker@
 nuvitaskin
@@ -371,3 +371,4 @@ dermessence
 avalure
 allumiere
 male\Wenhancement
+tl900\Wheadlamp
