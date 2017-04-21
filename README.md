@@ -22,13 +22,13 @@ git clone https://github.com/Charcoal-SE/SmokeDetector.git
 cd SmokeDetector
 git submodule init
 git submodule update
-sudo pip install -r requirements.txt --upgrade
-pip install -r --user user_requirements.txt --upgrade
+sudo pip3 install -r requirements.txt --upgrade
+pip3 install -r --user user_requirements.txt --upgrade
 ```
 
 Next, copy `config.sample` to a new file called `config`, and edit the values required.
 
-To run, use `nocrash.py` or `python nocrash.py` (preferably in a daemon-able mode, like a `screen` session.)
+To run, use `nocrash.py` or `python3 nocrash.py` (preferably in a daemon-able mode, like a `screen` session.)
 You can also use `python ws.py`, but then SmokeDetector will be shut down after 6 hours; when running from `nocrash.py`, it will be restarted. (This is to be sure that closed websockets, if any, are reopened)
 
 Note that SmokeDetector is written in Python 2, so you may have to explicity run `python2` if Python 3 is the default version of Python on your distro.
