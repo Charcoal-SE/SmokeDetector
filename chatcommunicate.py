@@ -1,3 +1,4 @@
+# coding=utf-8
 from threading import Thread, Lock
 from parsing import *
 from datahandling import *
@@ -124,7 +125,7 @@ def watcher(ev, wrap2):
             ev.message.reply("I only have a record of {} of my messages; that's not enough to execute all commands. "
                              "No commands were executed.".format(len(latest_smokedetector_messages)))
             return
-        for i in xrange(0, len(commands)):
+        for i in range(0, len(commands)):
             shortcut_messages.append(u":{message} {command_name}".format(
                 message=latest_smokedetector_messages[-(i + 1)], command_name=commands[i]))
         reply = ""
@@ -132,7 +133,7 @@ def watcher(ev, wrap2):
         amount_skipped = 0
         amount_unrecognized = 0
         length = len(shortcut_messages)
-        for i in xrange(0, length):
+        for i in range(0, length):
             current_message = shortcut_messages[i]
             if length > 1:
                 reply += str(i + 1) + ". "

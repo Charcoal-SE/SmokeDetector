@@ -1,9 +1,10 @@
+# coding=utf-8
 # queue_timings.py
 # Analysis script for bodyfetcher queue timings. Call from the command line using Python 3.
 
 import os.path
 # noinspection PyPep8Naming
-import cPickle as pickle
+import pickle
 import math
 
 
@@ -20,7 +21,7 @@ def main():
 
         print("SITE,MIN,MAX,AVG,Q1,MEDIAN,Q3,STDDEV,COUNT,98P_MIN,98P_MAX")
         # noinspection PyUnboundLocalVariable
-        for site, times in queue_data.iteritems():
+        for site, times in queue_data.items():
             sorted_times = sorted(times)
             median = sorted_times[int(len(sorted_times) * 0.5)]
             q1 = sorted_times[int(len(sorted_times) * 0.25)]

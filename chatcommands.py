@@ -1,3 +1,4 @@
+# coding=utf-8
 # noinspection PyUnresolvedReferences
 from globalvars import GlobalVars
 from findspam import FindSpam
@@ -18,6 +19,7 @@ import requests
 import os
 import time
 import datahandling
+# noinspection PyCompatibility
 import regex
 from helpers import Response
 from classes import Post
@@ -118,11 +120,11 @@ def command_add_blacklist_user(message_parts, content_lower, message_url, ev_roo
     """
     quiet_action = any([part.endswith('-') for part in message_parts])
     uid, val = get_user_from_list_command(content_lower)
-    if uid > -1 and val != "":
+    if int(uid) > -1 and val != "":
         add_blacklisted_user((uid, val), message_url, "")
         return Response(command_status=True, message=None) if quiet_action \
             else Response(command_status=True, message="User blacklisted (`{}` on `{}`).".format(uid, val))
-    elif uid == -2:
+    elif int(uid) == -2:
         return Response(command_status=True, message="Error: {}".format(val))
     else:
         return Response(command_status=False,
@@ -139,12 +141,12 @@ def command_check_blacklist(content_lower, *args, **kwargs):
     :return: A string
     """
     uid, val = get_user_from_list_command(content_lower)
-    if uid > -1 and val != "":
+    if int(uid) > -1 and val != "":
         if is_blacklisted_user((uid, val)):
             return Response(command_status=True, message="User is blacklisted (`{}` on `{}`).".format(uid, val))
         else:
             return Response(command_status=True, message="User is not blacklisted (`{}` on `{}`).".format(uid, val))
-    elif uid == -2:
+    elif int(uid) == -2:
         return Response(command_status=True, message="Error: {}".format(val))
     else:
         return Response(command_status=False,
@@ -166,14 +168,14 @@ def command_remove_blacklist_user(message_parts, content_lower, ev_room, ev_user
     """
     quiet_action = any([part.endswith('-') for part in message_parts])
     uid, val = get_user_from_list_command(content_lower)
-    if uid > -1 and val != "":
+    if int(uid) > -1 and val != "":
         if remove_blacklisted_user((uid, val)):
             return Response(command_status=True, message=None) if quiet_action \
                 else Response(command_status=True,
                               message="User removed from blacklist (`{}` on `{}`).".format(uid, val))
         else:
             return Response(command_status=True, message="User is not blacklisted.")
-    elif uid == -2:
+    elif int(uid) == -2:
         return Response(command_status=True, message="Error: {}".format(val))
     else:
         return Response(command_status=False,
@@ -196,11 +198,11 @@ def command_add_whitelist_user(message_parts, content_lower, ev_room, ev_user_id
     """
     quiet_action = any([part.endswith('-') for part in message_parts])
     uid, val = get_user_from_list_command(content_lower)
-    if uid > -1 and val != "":
+    if int(uid) > -1 and val != "":
         add_whitelisted_user((uid, val))
         return Response(command_status=True, message=None) if quiet_action \
             else Response(command_status=True, message="User whitelisted (`{}` on `{}`).".format(uid, val))
-    elif uid == -2:
+    elif int(uid) == -2:
         return Response(command_status=True, message="Error: {}".format(val))
     else:
         return Response(command_status=False,
@@ -217,12 +219,12 @@ def command_check_whitelist(content_lower, *args, **kwargs):
     :return: A string
     """
     uid, val = get_user_from_list_command(content_lower)
-    if uid > -1 and val != "":
+    if int(uid) > -1 and val != "":
         if is_whitelisted_user((uid, val)):
             return Response(command_status=True, message="User is whitelisted (`{}` on `{}`).".format(uid, val))
         else:
             return Response(command_status=True, message="User is not whitelisted (`{}` on `{}`).".format(uid, val))
-    elif uid == -2:
+    elif int(uid) == -2:
         return Response(command_status=True, message="Error: {}".format(val))
     else:
         return Response(command_status=False,
@@ -244,14 +246,14 @@ def command_remove_whitelist_user(message_parts, content_lower, ev_room, ev_user
     """
     quiet_action = any([part.endswith('-') for part in message_parts])
     uid, val = get_user_from_list_command(content_lower)
-    if uid != -1 and val != "":
+    if int(uid) != -1 and val != "":
         if remove_whitelisted_user((uid, val)):
             return Response(command_status=True, message=None) if quiet_action \
                 else Response(command_status=True,
                               message="User removed from whitelist (`{}` on `{}`).".format(uid, val))
         else:
             return Response(command_status=True, message="User is not whitelisted.")
-    elif uid == -2:
+    elif int(uid) == -2:
         return Response(command_status=True, message="Error: {}".format(val))
     else:
         return Response(command_status=False,

@@ -1,6 +1,8 @@
+# coding=utf-8
 import json
 from globalvars import GlobalVars
-from HTMLParser import HTMLParser
+import html
+from typing import AnyStr, Union
 
 
 class Post:
@@ -17,10 +19,9 @@ class Post:
     _user_name = ""
     _user_url = ""
     _votes = {'downvotes': None, 'upvotes': None}
-    _parser = HTMLParser()
 
     def __init__(self, json_data=None, api_response=None, parent=None):
-        # type: (str or unicode, dict, Post) -> None
+        # type: (AnyStr, dict, Post) -> None
 
         if parent is not None:
             if not isinstance(parent, Post):
@@ -41,12 +42,12 @@ class Post:
         type_name = type(self).__name__
         dataset = ['title=' + self.title, 'body=' + self.body, 'user_name=' + self.user_name,
                    'user_url=' + self.user_url, 'post_site=' + self.post_site, 'post_id=' + self.post_id,
-                   'is_answer=' + unicode(self.is_answer), 'body_is_summary=' + unicode(self.body_is_summary),
-                   'owner_rep=' + unicode(self.owner_rep), 'post_score=' + unicode(self.post_score)]
+                   'is_answer=' + str(self.is_answer), 'body_is_summary=' + str(self.body_is_summary),
+                   'owner_rep=' + str(self.owner_rep), 'post_score=' + str(self.post_score)]
         return "%s(%s)" % (type_name, ', '.join(dataset))
 
     def __setitem__(self, key, item):
-        # type: (str, str or object) -> None
+        # type: (str, Union[str, object]) -> None
         setattr(self, key, item)
         return  # PEP compliance
 
@@ -54,8 +55,9 @@ class Post:
         # type: (str) -> object
         return getattr(self, item)
 
+    # noinspection PyTypeChecker
     def _get_title_ignore_type(self):
-        # type: () -> unicode
+        # type: () -> str
         return self.parent.title if self.is_answer else self.title
 
     def _parse_json_post(self, json_data):
@@ -104,8 +106,8 @@ class Post:
         if "title" not in response or "body" not in response:
             return
 
-        self._title = self._parser.unescape(response["title"])
-        self._body = self._parser.unescape(response["body"])
+        self._title = html.unescape(response["title"])
+        self._body = html.unescape(response["body"])
 
         if "IsAnswer" in response and response["IsAnswer"] is True:
             self._is_answer = True
@@ -160,8 +162,9 @@ class Post:
                 # Executes if the 'element' requested isn't part of the response.
                 continue  # Go to next key
 
-    def _unescape_title(self, title):
-        return unicode(self._parser.unescape(title).strip())
+    @staticmethod
+    def _unescape_title(title):
+        return str(html.unescape(title).strip())
 
     @property
     def answers(self):
@@ -173,7 +176,7 @@ class Post:
 
     @property
     def body(self):
-        return unicode(self._body)
+        return str(self._body)
 
     @property
     def body_is_summary(self):
@@ -193,7 +196,7 @@ class Post:
 
     @property
     def post_id(self):
-        return unicode(self._post_id)
+        return str(self._post_id)
 
     @property
     def post_score(self):
@@ -201,32 +204,35 @@ class Post:
 
     @property
     def post_site(self):
-        return unicode(self._post_site)
+        if type(self._post_site) in [bytes, bytearray]:
+            self._post_site = self._post_site.decode('utf-8')
+
+        return self._post_site
 
     # noinspection PyBroadException
     @property
     def post_url(self):
         try:
-            return unicode(self._post_url)
+            return str(self._post_url)
         except:
             return "NoLink"
 
     @property
     def title(self):
-        return unicode(self._title)
+        return str(self._title)
 
     @property
     def user_link(self):
         # Alias for self.user_url
-        return unicode(self.user_url)
+        return str(self.user_url)
 
     @property
     def user_name(self):
-        return unicode(self._user_name)
+        return str(self._user_name)
 
     @property
     def user_url(self):
-        return unicode(self._user_url)
+        return str(self._user_url)
 
     @property
     def up_vote_count(self):

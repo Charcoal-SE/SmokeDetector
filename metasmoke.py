@@ -1,3 +1,4 @@
+# coding=utf-8
 import json
 import requests
 from globalvars import GlobalVars
@@ -41,7 +42,7 @@ class Metasmoke:
                         data = json.loads(a)
                         GlobalVars.metasmoke_last_ping_time = datetime.now()
                         Metasmoke.handle_websocket_data(data)
-                    except Exception, e:
+                    except Exception as e:
                         GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host,
                                                                               origin=GlobalVars.metasmoke_host)
                         payload = json.dumps({"command": "subscribe",
@@ -160,7 +161,7 @@ class Metasmoke:
                     'upvote_count': up_vote_count, 'downvote_count': down_vote_count}
 
             # Remove None values (if they somehow manage to get through)
-            post = dict((k, v) for k, v in post.iteritems() if v)
+            post = dict((k, v) for k, v in post.items() if v)
 
             payload = {'post': post, 'key': metasmoke_key}
             headers = {'Content-type': 'application/json'}
