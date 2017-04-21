@@ -317,8 +317,7 @@ class GlobalVars:
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
                              socvr_room_id: "3735529"}
 
-    censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1",
-                                "a4d992cfecdea6208c04ddca96718b33": "teward"}
+    censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
 
     commit = git_commit_info()
     if md5(commit['author'][0].encode('utf-8')).hexdigest() in censored_committer_names:
