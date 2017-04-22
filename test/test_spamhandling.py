@@ -33,9 +33,9 @@ with open("test/data_test_spamhandling.txt", "r") as f:
     ('Cannot access http://stackoverflow.com/ with proxy enabled', '', '', 'superuser.com', False),
     ('kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '<p>bbbbbbbbbbbbbbbbbbbbbb</p>', '', 'stackoverflow.com', True),
     ('Enhance SD Male Enhancement Supplements', '', '', '', True),
-    ('Test case for bad fragment rule',
+    ('Test case for bad pattern in URL',
      '<p><a href="http://example.com/bad-reviews-canada/" rel="nofollow noreferrer">Cliquez ici</a></p>', '', '', True),
-    ('Another test case for bad fragment',
+    ('Another test case for bad URL pattern',
      '<p><a href="http://example.net/harmless/">http://example.org/pesky-reviews-and-scam</a></p>', '', '', True),
 ])
 def test_check_if_spam(title, body, username, site, match):
