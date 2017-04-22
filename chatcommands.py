@@ -929,7 +929,8 @@ def command_version(*args, **kwargs):
     :return: A string
     """
     return Response(command_status=True, message='[{commit_name}]({repository}/commit/{commit_code})'.format(
-        commit_name=GlobalVars.commit_with_author, commit_code=GlobalVars.commit, repository=GlobalVars.bot_repository))
+        commit_name=GlobalVars.commit_with_author, commit_code=GlobalVars.commit['id'],
+        repository=GlobalVars.bot_repository))
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
