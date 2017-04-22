@@ -277,7 +277,7 @@ def bad_link_text(s, site, *args):   # suspicious text of a hyperlink
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def bad_pattern_in_url(s, site, *args):
     patterns = [
-        r'[^"]*-reviews(?:-(?:canada|(?:and|or)-scam))?/?',
+        r'[^"]*-reviews?(?:-(?:canada|(?:and|or)-scam))?/?',
     ]
     matches = regex.compile(
         r'<a href="(?P<frag>{0})"|<a href="[^"]*"(?:\s+"[^"]*")*>(?P<frag>{0})</a>'.format(
