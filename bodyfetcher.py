@@ -9,7 +9,7 @@ import json
 import time
 import threading
 import requests
-from classes import Post
+from classes import Post, PostParseError
 from helpers import log
 from itertools import chain
 
@@ -334,8 +334,9 @@ class BodyFetcher:
             post['site'] = site
             try:
                 post_ = Post(api_response=post)
-            except ValueError:
-                log('error', 'ValueError when parsing post {0!r}'.format(post_))
+            except PostParseError as err:
+                log('error', 'Error {0} when parsing post: {1!r}'.format(
+                    err, post_))
                 continue
 
             num_scanned += 1

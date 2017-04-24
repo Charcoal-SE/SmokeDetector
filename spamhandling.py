@@ -69,8 +69,9 @@ def check_if_spam(post):
 def check_if_spam_json(json_data):
     try:
         post = classes.Post(json_data=json_data)
-    except ValueError:
-        log('error', 'ValueError when parsing json_data {0!r}'.format(json_data))
+    except classes.PostParseError as err:
+        log('error', 'Parse error {0} when parsing json_data {1!r}'.format(
+            err, json_data))
         return False, '', ''
     is_spam, reason, why = check_if_spam(post)
     return is_spam, reason, why
