@@ -323,7 +323,10 @@ class GlobalVars:
     if md5(commit['author'][0].encode('utf-8')).hexdigest() in censored_committer_names:
         commit['author'] = censored_committer_names[md5(commit['author'][0].encode('utf-8')).hexdigest()]
 
-    commit_with_author = "%s (%s: *%s*)" % (commit['id'], commit['author'][0], commit['message'])
+    commit_with_author = "%s (%s: *%s*)" % (commit['id'],
+                                            commit['author'][0] if type(commit['author']) in [list, tuple]
+                                            else commit['author'],
+                                            commit['message'])
 
     on_master = "HEAD detached" not in git_status()
     charcoal_hq = None

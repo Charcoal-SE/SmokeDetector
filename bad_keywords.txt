@@ -116,9 +116,9 @@ Push Money App
 Volive( Solutions)?
 Herbalife
 Accumass
-purple rhino male enhancement
+purple\Wrhino
 Dating Coaching
-(male\Wenhancement|dietary|muscle)\Wsupplements?
+(dietary|muscle)\Wsupplements?
 digital marketing course
 stark trading system
 bring back lost lover
@@ -337,7 +337,7 @@ noxor
 healthherbalclinic
 zyalix
 lumivol
-skin\Wnovela
+(skin|eye)\Wnovela
 avdshare
 hacker@
 nuvitaskin
@@ -369,6 +369,12 @@ platinum\Wbeaute
 illujen(?#review)
 body\Wblast
 dermessence
-
 avalure
+allumiere
+male\Wenhancement
+tl900\Wheadlamp
+zytek(xl)?
+biodermrx
+amore\Wskin
+le\Wreel
 nevi(?#review)

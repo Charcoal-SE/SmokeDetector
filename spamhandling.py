@@ -42,15 +42,18 @@ def check_if_spam(post):
         test.append("blacklisted user")
         blacklisted_user_data = datahandling.get_blacklisted_user_data(parsing.get_user_from_url(post.user_url))
         if len(blacklisted_user_data) > 1:
-            message_url = 'http:' + blacklisted_user_data[1]
+            if blacklisted_user_data[1] == "metasmoke":
+                blacklisted_by = "the metasmoke API"
+            else:
+                blacklisted_by = "http:" + blacklisted_user_data[1]
             blacklisted_post_url = blacklisted_user_data[2]
             if blacklisted_post_url:
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
                 why += u"\nBlacklisted user - blacklisted for {} (" \
                        u"https://m.erwaysoftware.com/posts/by-url?url={}) by {}".format(blacklisted_post_url, rel_url,
-                                                                                        message_url)
+                                                                                        blacklisted_by)
             else:
-                why += u"\n" + u"Blacklisted user - blacklisted by {}".format(message_url)
+                why += u"\n" + u"Blacklisted user - blacklisted by {}".format(blacklisted_by)
     if 0 < len(test):
         if datahandling.has_already_been_posted(post.post_site, post.post_id, post.title) \
                 or datahandling.is_false_positive((post.post_id, post.post_site)) \
