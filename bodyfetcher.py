@@ -332,7 +332,11 @@ class BodyFetcher:
                 continue
 
             post['site'] = site
-            post_ = Post(api_response=post)
+            try:
+                post_ = Post(api_response=post)
+            except ValueError:
+                log('error', 'ValueError when parsing post {0!r}'.format(post_))
+                continue
 
             num_scanned += 1
 

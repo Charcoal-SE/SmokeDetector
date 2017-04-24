@@ -1,6 +1,5 @@
 # coding=utf-8
 import json
-from globalvars import GlobalVars
 import html
 from typing import AnyStr, Union
 
@@ -67,12 +66,8 @@ class Post:
         if text_data == "hb":
             return
 
-        try:
-            data = json.loads(text_data)
-        except ValueError:
-            GlobalVars.charcoal_hq.send_message(u"Encountered ValueError parsing the following:\n{0}".format(json_data),
-                                                False)
-            return
+        # This could throw ValueError which needs to be caught
+        data = json.loads(text_data)
 
         if "ownerUrl" not in data:
             # owner's account doesn't exist anymore, no need to post it in chat:

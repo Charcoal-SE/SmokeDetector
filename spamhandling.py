@@ -67,7 +67,11 @@ def check_if_spam(post):
 
 # noinspection PyMissingTypeHints
 def check_if_spam_json(json_data):
-    post = classes.Post(json_data=json_data)
+    try:
+        post = classes.Post(json_data=json_data)
+    except ValueError:
+        log('error', 'ValueError when parsing json_data {0!r}'.format(json_data))
+        return False, '', ''
     is_spam, reason, why = check_if_spam(post)
     return is_spam, reason, why
 
