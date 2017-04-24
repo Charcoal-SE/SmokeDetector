@@ -150,7 +150,8 @@ class Post:
                 if is_api_response and element == 'owner':
                     for (subelement, subvarmap) in element_map['owner'].items():
                         try:
-                            self[subvarmap] = html.unescape(data['owner'][subelement])
+                            self[subvarmap] = (html.unescape(data['owner'][subelement]) if subelement == 'display_name'
+                                               else data['owner'][subelement])
                         except KeyError:
                             # Go to next subkey
                             continue
