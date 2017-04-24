@@ -343,7 +343,7 @@ hacker@
 nuvitaskin
 femme\W?youth
 priamax
-Novellus Skin
+novellus
 patriot\Wpower\Wgreens
 ultraderm
 colodetox
