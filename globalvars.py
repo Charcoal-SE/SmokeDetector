@@ -163,6 +163,7 @@ class GlobalVars:
             "56200",    # Eric Leschinski
             "211021",   # Henders
             "255290",   # Gypsy Spellweaver
+            "64521",    # CalvT
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
