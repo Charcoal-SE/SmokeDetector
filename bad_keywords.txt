@@ -380,4 +380,4 @@ snail\Wsecret
 pensida
 peruvian\Whair
 intelligence\Wrx
-titanium\W?pro
+titanium\W?pro(\W?x)?
