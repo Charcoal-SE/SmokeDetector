@@ -275,6 +275,21 @@ def bad_link_text(s, site, *args):   # suspicious text of a hyperlink
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
+def bad_pattern_in_url(s, site, *args):
+    patterns = [
+        r'[^"]*-reviews?(?:-(?:canada|(?:and|or)-scam))?/?',
+    ]
+    matches = regex.compile(
+        r'<a href="(?P<frag>{0})"|<a href="[^"]*"(?:\s+"[^"]*")*>(?P<frag>{0})</a>'.format(
+            '|'.join(patterns)), regex.UNICODE).findall(s)
+    if matches:
+        return True, u"Bad fragment in link {}".format(
+            ", ".join(["".join(match) for match in matches]))
+    else:
+        return False, ""
+
+
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def is_offensive_post(s, site, *args):
     if s is None or len(s) == 0:
         return False, ""
@@ -690,6 +705,11 @@ class FindSpam:
         {'method': bad_link_text, 'all': True,
          'sites': [], 'reason': 'bad keyword in link text in {}', 'title': False, 'body': True, 'username': False,
          'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        # Bad fragment in link
+        {'method': bad_pattern_in_url, 'all': True, 'sites': [],
+         'reason': 'bad pattern in URL {}',
+         'title': False, 'body': True, 'username': False,
+         'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Country-name domains, travel and expats sites are exempt
         {'regex': r"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|"
                   r"spain|sweden)\w{0,4}\.(com|net)", 'all': True,
@@ -722,10 +742,10 @@ class FindSpam:
         # Link at the end of a short answer
         {'regex': r'(?is)^.{0,350}<a href="https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,4}'
                   r'/?\w{0,2}/?|(?:plus\.google|www\.facebook)\.com/[\w/]+)"[^<]*</a>(?:</strong>)?\W*</p>\s*$'
-                  r'|\[/url\]\W*</p>\s*$', 'all': True,
-         'sites': ["raspberrypi.stackexchange.com"], 'reason': 'link at end of {}', 'title': False, 'body': True,
-         'username': False, 'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1,
-         'max_score': 0},
+                  r'|\[/url\]\W*</p>\s*$',
+         'all': True, 'sites': ["raspberrypi.stackexchange.com", "softwarerecs.stackexchange.com"],
+         'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
+         'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # URL repeated at end of post
         {'regex': r"(?s)<a href=\"(?:http://%20)?(https?://(?:(?:www\.)?"
             r"[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,10}/?"
