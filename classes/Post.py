@@ -1,6 +1,6 @@
 # coding=utf-8
 import json
-from globalvars import GlobalVars
+from helpers import log
 import html
 from typing import AnyStr, Union
 
@@ -70,8 +70,7 @@ class Post:
         try:
             data = json.loads(text_data)
         except ValueError:
-            GlobalVars.charcoal_hq.send_message(u"Encountered ValueError parsing the following:\n{0}".format(json_data),
-                                                False)
+            log('error', u"Encountered ValueError parsing the following:\n{0}".format(json_data))
             return
 
         if "ownerUrl" not in data:
@@ -156,6 +155,9 @@ class Post:
                             # Go to next subkey
                             continue
                     continue  # Go to next key because we're done processing the 'owner' key.
+
+                if data[element] is None:
+                    continue
 
                 # Other keys
                 self[varmap] = data[element]
