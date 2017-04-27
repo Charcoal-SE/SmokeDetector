@@ -5,6 +5,13 @@ import html
 from typing import AnyStr, Union
 
 
+class PostParseError(Exception):
+    """
+    Error raised when a JSON entry could not be parsed.
+    """
+    pass
+
+
 class Post:
     _body = ""
     _body_is_summary = False
@@ -34,7 +41,7 @@ class Post:
         elif api_response is not None:
             self._parse_api_post(api_response)
         else:
-            raise ValueError("Must provide either JSON Data or an API Response object for Post object.")
+            raise PostParseError("Must provide either JSON Data or an API Response object for Post object.")
 
         return  # Required for PEP484 compliance
 
@@ -72,6 +79,7 @@ class Post:
         except ValueError:
             log('error', u"Encountered ValueError parsing the following:\n{0}".format(json_data))
             return
+
 
         if "ownerUrl" not in data:
             # owner's account doesn't exist anymore, no need to post it in chat:

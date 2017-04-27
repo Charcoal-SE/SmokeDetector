@@ -113,3 +113,15 @@ with open("test/data_test_parsing.txt", "r") as f:
 ])
 def test_parsing(input_data, parse_method, expected):
     assert parse_method(input_data.strip()) == expected
+
+
+# noinspection PyMissingTypeHints
+def test_post_parse_errors():
+    from classes import Post, PostParseError
+    failure = None
+    try:
+        failure = Post()
+        assert 'Post with no initializer did not fail' is False
+    except PostParseError:
+        pass
+    assert failure is None
