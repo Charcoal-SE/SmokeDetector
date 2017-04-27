@@ -80,7 +80,6 @@ class Post:
             log('error', u"Encountered ValueError parsing the following:\n{0}".format(json_data))
             return
 
-
         if "ownerUrl" not in data:
             # owner's account doesn't exist anymore, no need to post it in chat:
             # http://chat.stackexchange.com/transcript/message/18380776#18380776
