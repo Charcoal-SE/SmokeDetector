@@ -833,7 +833,6 @@ donewithjob\.com
 gangadharws\.blogspot\.in
 advids\.co
 gaanamp3club\.com
-flashcomindonesia\.com
 menintalk\.com
 essayacademia\.com
 one-zero\.eu
@@ -841,7 +840,6 @@ cygnet-infotech\.com
 bankgist\.com
 xreviews\.xyz
 trimplexeliteavis\.com
-maxhealthtips\.com
 forexlivealerts\.info
 comptiabraindumps\.com
 assignmenthelp\w*\.co
@@ -960,7 +958,6 @@ inspiredexperiences\.co\.uk
 skybridgeinfotech\.com
 newfitnessbooster\.com
 nutrahealthtrimsite\.com
-fitwaypoint\.com
 maximizedmuscleideas\.com
 supplementscombined\.com
 trytestoultra\.com
