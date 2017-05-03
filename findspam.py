@@ -211,6 +211,14 @@ def pattern_product_name(s, site, *args):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
+def what_is_this_pharma_title(s, site, *args):   # title "what is this Xxxx?"
+    if regex.compile(r'^what is this (?:[A-Z]|http://)').match(s):
+        return True, u'Title starts with "what is this"'
+    else:
+        return False, ""
+
+
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def keyword_email(s, site, *args):   # a keyword and an email in the same post
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
@@ -585,6 +593,10 @@ class FindSpam:
         {'method': pattern_product_name, 'all': True, 'sites': [], 'reason': "pattern-matching product name in {}",
          'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True,
          'answers': False, 'max_rep': 4, 'max_score': 1},
+        # "What is this" - pharma title
+        {'method': what_is_this_pharma_title, 'all': True, 'sites': [], 'reason': 'Pattern-matching title',
+         'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
+         'answers': False, 'max_rep': 1, 'max_score': 1},
         # gratis at the beginning of post, SoftwareRecs is exempt
         {'regex': r"(?is)^.{0,200}\bgratis\b$", 'all': True,
          'sites': ['softwarerecs.stackexchange.com'], 'reason': "bad keyword in {}", 'title': True, 'body': True,
