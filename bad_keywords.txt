@@ -417,3 +417,4 @@ cynergy\Wtk
 fitness\W?xtreme
 revella\Wlash
 (?:celebrity\W?)?net\W?worth
+professional\Whacker
