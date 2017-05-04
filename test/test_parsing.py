@@ -1,3 +1,4 @@
+# coding=utf-8
 from parsing import *
 import pytest
 
@@ -11,6 +12,7 @@ with open("test/data_test_parsing.txt", "r") as f:
 # because the input is always a string and `parse_method` and `expected` are not.
 
 
+# noinspection PyMissingTypeHints
 @pytest.mark.parametrize("input_data, parse_method, expected", [
     ('Testing * escaping of ] special [ characters', escape_special_chars_in_title, 'Testing \* escaping of \] special \[ characters'),
     ('HTML &#39; unescaping&lt;', unescape_title, 'HTML \' unescaping<'),
@@ -111,3 +113,15 @@ with open("test/data_test_parsing.txt", "r") as f:
 ])
 def test_parsing(input_data, parse_method, expected):
     assert parse_method(input_data.strip()) == expected
+
+
+# noinspection PyMissingTypeHints
+def test_post_parse_errors():
+    from classes import Post, PostParseError
+    failure = None
+    try:
+        failure = Post()
+        assert 'Post with no initializer did not fail' is False
+    except PostParseError:
+        pass
+    assert failure is None

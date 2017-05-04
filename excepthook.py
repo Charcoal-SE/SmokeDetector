@@ -1,3 +1,4 @@
+# coding=utf-8
 from datetime import datetime
 import os
 import traceback
@@ -7,6 +8,7 @@ from utcdate import UtcDate
 # noinspection PyPackageRequirements
 from websocket import WebSocketConnectionClosedException
 import requests
+from helpers import log
 
 
 # noinspection PyProtectedMember
@@ -16,7 +18,7 @@ def uncaught_exception(exctype, value, tb):
     tr = '\n'.join((traceback.format_tb(tb)))
     exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
     logged_msg = "{exception}\n{now} UTC\n{row}\n\n".format(exception=exception_only, now=now, row=tr)
-    print(logged_msg)
+    log('error', logged_msg)
     with open("errorLogs.txt", "a") as f:
         f.write(logged_msg)
     if delta.total_seconds() < 180 and exctype != WebSocketConnectionClosedException\

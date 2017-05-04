@@ -1,15 +1,17 @@
 machine:
   python:
-    version: 2.7.10
+    version: 3.6.1
 checkout:
   post:
     - git submodule init
     - git submodule update
 dependencies:
   post:
-    - pip install -r requirements.txt --upgrade
+    - pip3 install -r requirements.txt --upgrade
+    - pip3 install -r user_requirements.txt --upgrade
 test:
   override:
     - flake8 --config=tox_tests.ini ./test/
+    - flake8 --config=tox_classes.ini ./classes/
     - flake8 ./
-    - python -W default::Warning -m pytest test
+    - python3 -W default::Warning -m pytest test

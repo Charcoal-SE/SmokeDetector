@@ -1,5 +1,7 @@
+# coding=utf-8
 from spamhandling import handle_spam, check_if_spam
-from datahandling import add_or_update_api_data, clear_api_data, store_bodyfetcher_queue, store_bodyfetcher_max_ids
+from datahandling import (add_or_update_api_data, clear_api_data, store_bodyfetcher_queue, store_bodyfetcher_max_ids,
+                          store_queue_timings)
 from globalvars import GlobalVars
 from operator import itemgetter
 from datetime import datetime
@@ -7,24 +9,28 @@ import json
 import time
 import threading
 import requests
+from classes import Post, PostParseError
+from helpers import log
+from itertools import chain
 
 
 # noinspection PyClassHasNoInit,PyBroadException
 class BodyFetcher:
     queue = {}
     previous_max_ids = {}
+    queue_timings = {}
 
     special_cases = {
-        "math.stackexchange.com": 15,
+        "math.stackexchange.com": 1,
         "pt.stackoverflow.com": 10,
         "ru.stackoverflow.com": 10,
-        "serverfault.com": 10,
+        "serverfault.com": 1,
         "blender.stackexchange.com": 5,
-        "codegolf.stackexchange.com": 5,
+        "codegolf.stackexchange.com": 1,
         "codereview.stackexchange.com": 5,
         "es.stackoverflow.com": 5,
-        "physics.stackexchange.com": 5,
-        "stackoverflow.com": 5,
+        "physics.stackexchange.com": 1,
+        "stackoverflow.com": 3,
         "stats.stackexchange.com": 5,
         "tex.stackexchange.com": 5,
         "magento.stackexchange.com": 3,
@@ -50,7 +56,32 @@ class BodyFetcher:
         "travel.stackexchange.com": 1,
         "webapps.stackexchange.com": 1,
         "woodworking.stackexchange.com": 1,
-        "writers.stackexchange.com": 1
+        "writers.stackexchange.com": 1,
+        "android.stackexchange.com": 1,
+        "anime.stackexchange.com": 1,
+        "apple.stackexchange.com": 1,
+        "arduino.stackexchange.com": 1,
+        "bitcoin.stackexchange.com": 1,
+        "bricks.stackexchange.com": 1,
+        "communitybuilding.stackexchange.com": 1,
+        "english.stackexchange.com": 1,
+        "fitness.stackexchange.com": 1,
+        "freelancing.stackexchange.com": 1,
+        "gaming.stackexchange.com": 1,
+        "graphicdesign.stackexchange.com": 1,
+        "homebrew.stackexchange.com": 1,
+        "islam.stackexchange.com": 1,
+        "lifehacks.stackexchange.com": 1,
+        "martialarts.stackexchange.com": 1,
+        "mythology.stackexchange.com": 1,
+        "pm.stackexchange.com": 1,
+        "poker.stackexchange.com": 1,
+        "security.stackexchange.com": 1,
+        "skeptics.stackexchange.com": 1,
+        "sports.stackexchange.com": 1,
+        "superuser.com": 1,
+        "windowsphone.stackexchange.com": 1,
+        "workplace.stackexchange.com": 1
     }
 
     time_sensitive = ["askubuntu.com", "superuser.com", "security.stackexchange.com", "movies.stackexchange.com",
@@ -64,6 +95,7 @@ class BodyFetcher:
     api_data_lock = threading.Lock()
     queue_modify_lock = threading.Lock()
     max_ids_modify_lock = threading.Lock()
+    queue_timing_modify_lock = threading.Lock()
 
     def add_to_queue(self, post, should_check_site=False):
         mse_sandbox_id = 3122
@@ -80,10 +112,29 @@ class BodyFetcher:
         if post_id == mse_sandbox_id and site_base == "meta.stackexchange.com":
             return  # don't check meta sandbox, it's full of weird posts
         self.queue_modify_lock.acquire()
-        if site_base in self.queue:
-            self.queue[site_base].append(post_id)
+        if site_base not in self.queue:
+            self.queue[site_base] = {}
+
+        # Something about how the queue is being filled is storing Post IDs in a list.
+        # So, if we get here we need to make sure that the correct types are paseed.
+        #
+        # If the item in self.queue[site_base] is a dict, do nothing.
+        # If the item in self.queue[site_base] is not a dict but is a list or a tuple, then convert to dict and
+        # then replace the list or tuple with the dict.
+        # If the item in self.queue[site_base] is neither a dict or a list, then explode.
+        if type(self.queue[site_base]) is dict:
+            pass
+        elif type(self.queue[site_base]) is not dict and type(self.queue[site_base]) in [list, tuple]:
+            post_list_dict = {}
+            for post_list_id in self.queue[site_base]:
+                post_list_dict[post_list_id] = None
+            self.queue[site_base] = post_list_dict
         else:
-            self.queue[site_base] = [post_id]
+            raise TypeError("A non-iterable is in the queue item for a given site, this will cause errors!")
+
+        # This line only works if we are using a dict in the self.queue[site_base] object, which we should be with
+        # the previous conversion code.
+        self.queue[site_base][str(post_id)] = datetime.utcnow()
         self.queue_modify_lock.release()
 
         if should_check_site:
@@ -93,7 +144,7 @@ class BodyFetcher:
         return
 
     def check_queue(self):
-        for site, values in self.queue.iteritems():
+        for site, values in self.queue.items():
             if site in self.special_cases:
                 if len(values) >= self.special_cases[site]:
                     self.make_api_call_for_site(site)
@@ -104,7 +155,7 @@ class BodyFetcher:
                     return
 
         # if we don't have any sites with their queue filled, take the first one without a special case
-        for site, values in self.queue.iteritems():
+        for site, values in self.queue.items():
             if site not in self.special_cases and len(values) >= self.threshold:
                 self.make_api_call_for_site(site)
                 return
@@ -115,17 +166,36 @@ class BodyFetcher:
         self.queue_modify_lock.release()
 
     def print_queue(self):
-        return '\n'.join("{0}: {1}".format(key, str(len(values))) for (key, values) in self.queue.iteritems())
+        return '\n'.join("{0}: {1}".format(key, str(len(values))) for (key, values) in self.queue.items())
 
     def make_api_call_for_site(self, site):
         if site not in self.queue:
             return
 
         self.queue_modify_lock.acquire()
-        new_post_ids = self.queue.pop(site)
+        new_posts = self.queue.pop(site)
         store_bodyfetcher_queue()
         self.queue_modify_lock.release()
 
+        new_post_ids = [int(k) for k, v in new_posts.items()]
+
+        self.queue_timing_modify_lock.acquire()
+        post_add_times = [v for k, v in new_posts.items()]
+        pop_time = datetime.utcnow()
+
+        for add_time in post_add_times:
+            try:
+                seconds_in_queue = (pop_time - add_time).total_seconds()
+                if site in self.queue_timings:
+                    self.queue_timings[site].append(seconds_in_queue)
+                else:
+                    self.queue_timings[site] = [seconds_in_queue]
+            except:
+                continue  # Skip to next item if we've got invalid data or missing values.
+
+        store_queue_timings()
+
+        self.queue_timing_modify_lock.release()
         self.max_ids_modify_lock.acquire()
 
         if site in self.previous_max_ids and max(new_post_ids) > self.previous_max_ids[site]:
@@ -135,10 +205,10 @@ class BodyFetcher:
             # We don't want to go over the 100-post API cutoff, so take the last
             # (100-len(new_post_ids)) from intermediate_posts
 
-            intermediate_posts = intermediate_posts[(len(new_post_ids) - 100):]
+            intermediate_posts = intermediate_posts[(100 - len(new_post_ids)):]
 
             # new_post_ids could contain edited posts, so merge it back in
-            combined = intermediate_posts + new_post_ids
+            combined = chain(intermediate_posts, new_post_ids)
 
             # Could be duplicates, so uniquify
             posts = list(set(combined))
@@ -155,9 +225,9 @@ class BodyFetcher:
 
         self.max_ids_modify_lock.release()
 
-        print("New IDs / Hybrid Intermediate IDs for {0}:".format(site))
-        print(sorted(new_post_ids))
-        print(sorted(posts))
+        log('debug', "New IDs / Hybrid Intermediate IDs for {0}:".format(site))
+        log('debug', sorted(new_post_ids))
+        log('debug', sorted(posts))
 
         question_modifier = ""
         pagesize_modifier = ""
@@ -195,9 +265,9 @@ class BodyFetcher:
             # the queue.
             self.queue_modify_lock.acquire()
             if site in self.queue:
-                self.queue[site].extend(posts)
+                self.queue[site].update(new_posts)
             else:
-                self.queue[site] = posts
+                self.queue[site] = new_posts
             self.queue_modify_lock.release()
             GlobalVars.api_request_lock.release()
             return
@@ -236,6 +306,7 @@ class BodyFetcher:
                 if GlobalVars.api_backoff_time < time.time() + 12:  # Add a backoff of 10 + 2 seconds as a default
                     GlobalVars.api_backoff_time = time.time() + 12
             message_hq += " Backing off on requests for the next 12 seconds."
+            message_hq += " Previous URL: `{}`".format(url)
 
         if "backoff" in response:
             if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
@@ -261,103 +332,47 @@ class BodyFetcher:
             if "title" not in post or "body" not in post:
                 continue
 
+            post['site'] = site
+            try:
+                post_ = Post(api_response=post)
+            except PostParseError as err:
+                log('error', 'Error {0} when parsing post: {1!r}'.format(
+                    err, post_))
+                continue
+
             num_scanned += 1
 
-            title = GlobalVars.parser.unescape(post["title"])
-            body = GlobalVars.parser.unescape(post["body"])
-            link = post["link"]
-            post_score = post["score"]
-            up_vote_count = post["up_vote_count"]
-            down_vote_count = post["down_vote_count"]
-            try:
-                owner_name = GlobalVars.parser.unescape(post["owner"]["display_name"])
-                owner_link = post["owner"]["link"]
-                owner_rep = post["owner"]["reputation"]
-            except:
-                owner_name = ""
-                owner_link = ""
-                owner_rep = 0
-            q_id = str(post["question_id"])
+            is_spam, reason, why = check_if_spam(post_)
 
-            is_spam, reason, why = check_if_spam(title=title,
-                                                 body=body,
-                                                 user_name=owner_name,
-                                                 user_url=owner_link,
-                                                 post_site=site,
-                                                 post_id=q_id,
-                                                 is_answer=False,
-                                                 body_is_summary=False,
-                                                 owner_rep=owner_rep,
-                                                 post_score=post_score)
             if is_spam:
                 try:
-                    handle_spam(title=title,
-                                body=body,
-                                poster=owner_name,
-                                site=site,
-                                post_url=link,
-                                poster_url=owner_link,
-                                post_id=q_id,
+                    handle_spam(post=post_,
                                 reasons=reason,
-                                is_answer=False,
-                                why=why,
-                                owner_rep=owner_rep,
-                                post_score=post_score,
-                                up_vote_count=up_vote_count,
-                                down_vote_count=down_vote_count,
-                                question_id=None)
-                except:
-                    pass
-            try:
-                for answer in post["answers"]:
-                    num_scanned += 1
-                    answer_title = ""
-                    body = answer["body"]
-                    link = answer["link"]
-                    a_id = str(answer["answer_id"])
-                    post_score = answer["score"]
-                    up_vote_count = answer["up_vote_count"]
-                    down_vote_count = answer["down_vote_count"]
-                    try:
-                        owner_name = GlobalVars.parser.unescape(answer["owner"]["display_name"])
-                        owner_link = answer["owner"]["link"]
-                        owner_rep = answer["owner"]["reputation"]
-                    except:
-                        owner_name = ""
-                        owner_link = ""
-                        owner_rep = 0
+                                why=why)
+                except Exception as e:
+                    log('error', "Exception in handle_spam:", e)
 
-                    is_spam, reason, why = check_if_spam(title=answer_title,
-                                                         body=body,
-                                                         user_name=owner_name,
-                                                         user_url=owner_link,
-                                                         post_site=site,
-                                                         post_id=a_id,
-                                                         is_answer=True,
-                                                         body_is_summary=False,
-                                                         owner_rep=owner_rep,
-                                                         post_score=post_score)
-                    if is_spam:
-                        try:
-                            handle_spam(title=title,
-                                        body=body,
-                                        poster=owner_name,
-                                        site=site,
-                                        post_url=link,
-                                        poster_url=owner_link,
-                                        post_id=a_id,
-                                        reasons=reason,
-                                        is_answer=True,
-                                        why=why,
-                                        owner_rep=owner_rep,
-                                        post_score=post_score,
-                                        up_vote_count=up_vote_count,
-                                        down_vote_count=down_vote_count,
-                                        question_id=q_id)
-                        except:
-                            pass
-            except:
-                pass
+            try:
+                if "answers" not in post:
+                    pass
+                else:
+                    for answer in post["answers"]:
+                        num_scanned += 1
+                        answer["IsAnswer"] = True  # Necesssary for Post object
+                        answer["title"] = ""  # Necessary for proper Post object creation
+                        answer["site"] = site  # Necessary for proper Post object creation
+                        answer_ = Post(api_response=answer, parent=post_)
+
+                        is_spam, reason, why = check_if_spam(answer_)
+                        if is_spam:
+                            try:
+                                handle_spam(answer_,
+                                            reasons=reason,
+                                            why=why)
+                            except Exception as e:
+                                log('error', "Exception in handle_spam:", e)
+            except Exception as e:
+                log('error', "Exception handling answers:", e)
 
         end_time = time.time()
         GlobalVars.posts_scan_stats_lock.acquire()

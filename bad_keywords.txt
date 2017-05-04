@@ -18,7 +18,7 @@ Nitroxin
 Bowtrol
 Slim ?Genix
 Cleanse EFX
-Alpha ?(Rush|Fuel)
+Alpha\W?(x\W?)?(Rush|Fuel|XTRM|levo|max|prime|force\Wtesto|monster\Wadvanced|muscle|boost|plus)
 exoslim
 Blackline Elite
 TestCore Pro
@@ -65,7 +65,6 @@ bbwdesire
 rsorder
 Shopping ?Cart ?Elite
 Easy ?Data ?Feed
-breasts? enlargement
 best (hotel|property) management
 eduCBA
 Solid[ -]?SEO[ -]?Tools
@@ -89,7 +88,6 @@ Cerebria
 Xanogen
 intellipaat
 Replennage
-Alpha XTRM
 Synagen
 Nufinity
 V[ -]?Stamina
@@ -117,10 +115,9 @@ Push Money App
 Volive( Solutions)?
 Herbalife
 Accumass
-purple rhino male enhancement
+purple\Wrhino
 Dating Coaching
-male enhancement supplements
-alpha levo
+(dietary|muscle)\Wsupplements?
 digital marketing course
 stark trading system
 bring back lost lover
@@ -157,7 +154,6 @@ biocilium
 abella\Wmayfair
 Intelleral
 livana\Wlift
-alpha\Wmax
 vivalux
 call\Wgirl
 Youth Serum
@@ -165,8 +161,6 @@ explosive muscle
 zyntix
 genbrain
 teeth lightening
-alpha\Wprime
-alpha\Wforce\Wtesto
 xtest\W(muscle|reviews?)
 inteligen
 natural\Wslim\Wlife
@@ -177,7 +171,6 @@ break\Wup\Wpill
 biogenic\Wxr
 bella\W(dior|serata)
 nitro\Wmxs
-alpha\Wmonster\Wadvanced
 hl12
 xength
 red\Wfortera
@@ -187,7 +180,6 @@ lux\W?derma
 trinity\Wx3
 satin\Wyouth\Wcream
 metabo\Wpure\Wmax
-nitric\Wmuscle\Wuptake
 dermatek
 Pass4Sure
 floracil50
@@ -254,10 +246,8 @@ renovie
 cactinea
 provillus
 (testo|nitro)menix
-x\Walpha\Wmuscle
 parisian\Wglow
 revyve\Wskin
-krojamsoft
 beta\Wprostate
 oveena
 junivive
@@ -265,10 +255,8 @@ easy\Wloss\Wcleanse
 erect\Won\Wdemand
 nucific
 mayo\Wclinic
-alpha\Wx\Wboost
 tacticlight
 lumanere
-x\Walpha\Wboost
 pure\Wvitamen
 staminon
 hydralie
@@ -325,3 +313,115 @@ nitro\Wbuild\Wplus
 iq2\Wnootropic
 wrinkle\Wcouture
 favorite Riemann zeta function
+iq2\Wbrain\Wformula
+zilotrope
+eye\Wactives
+andro\Wbeast
+black\Wwolf\Wworkout
+lorevive
+endovex
+bioderm\Wrx
+best\Wbrite\Wsmile
+lunexia
+biotivia
+sohbet
+juvexil
+palmitate
+testoflex
+anibolx
+qugenix
+ampk
+regal\Wslim
+noxor
+healthherbalclinic
+zyalix
+lumivol
+(skin|eye)\Wnovela
+avdshare
+hacker@
+nuvitaskin
+femme\W?youth
+priamax
+novellus
+patriot\Wpower\Wgreens
+ultraderm
+colodetox
+lumaglow
+primal\W?x
+vigrx
+ambisom
+laleur\Wcream
+rejuvalogic
+chantel\Wst\Wclaire
+testx\Wcore
+lumidaire
+embova
+core\Wskincare
+leallure
+neuro\Wxr
+test\Wshred
+phallyx
+nuvapelle
+jullen
+nos\Wex
+platinum\Wbeaute
+body\Wblast
+dermessence
+avalure
+allumiere
+male\Wenhancement
+tl900\Wheadlamp
+zytek(xl)?
+biodermrx
+amore\Wskin
+le\Wreel
+epifresh
+snail\Wsecret
+pensida
+peruvian\Whair
+intelligence\Wrx
+titanium\W?pro(\W?x)?
+femora\Wcream
+retinolla
+focused\Win\Wbrain
+wrinkle\Wreducer?
+active\Wbrightening
+alpha\Wmale\Wex
+hotcyberlord
+luxlift
+testshred
+erectimax
+proshred
+forskolin
+stamina\Wfuel
+nuviante
+silkalike
+skin\Wroyale
+elysian
+vitaeyes
+neutratone
+luminis
+biocore
+testosterone\Wbooster
+visible\Wallure
+eye\Wroyale
+LinkFixer\WAdvanced
+brilladerm
+livalis
+vregx
+apex\Wrush
+nuluxe
+ripped\Wmax
+muscletech
+cynergy\Wtk
+fitness\W?xtreme
+revella\Wlash
+(?:celebrity\W?)?net\W?worth
+professional\Whacker
+phone\Wremotely
+jolique
+clemix
+nuavive
+evanti
+毕业证
+i\Wdidn't\Wfind\Wthe\Wright\Wsolution\Wfrom\Wthe\Winternet

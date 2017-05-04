@@ -3,14 +3,46 @@
 import os
 from datetime import datetime
 from chatexchange_extension import Client
-import HTMLParser
+from html.parser import HTMLParser
 from hashlib import md5
-import ConfigParser
-from helpers import environ_or_none
+from configparser import NoOptionError, RawConfigParser
+from helpers import environ_or_none, log
 import threading
+# noinspection PyCompatibility
+import regex
+import subprocess as sp
+from dulwich.repo import Repo
+import platform
 
 
-# noinspection PyClassHasNoInit,PyDeprecation
+def git_commit_info():
+    git = Repo('.')
+    commit = git.get_object(git.head())
+    return {'id': commit.id.decode("utf-8")[0:7], 'id_full': commit.id.decode("utf-8"),
+            'author': regex.findall("(.*?) <(.*?)>", commit.author.decode("utf-8"))[0],
+            'message': commit.message.decode("utf-8").strip('\r\n').split('\n')[0]}
+
+
+def git_status():
+    if 'windows' in platform.platform().lower():
+        data = sp.Popen(['git', 'status'], shell=True, cwd=os.getcwd(), stderr=sp.PIPE, stdout=sp.PIPE).communicate()
+    else:
+        data = sp.Popen(['git status'], shell=True, cwd=os.getcwd(), stderr=sp.PIPE, stdout=sp.PIPE).communicate()
+    if not data[1]:
+        return data[0].decode('utf-8').strip('\n')
+    else:
+        raise OSError("Git error!")
+
+
+# This is needed later on for properly 'stripping' unicode weirdness out of git log data.
+# Otherwise, we can't properly work with git log data.
+def strip_escape_chars(line):
+    line = str(line)
+    ansi_escape = regex.compile(r'(\x9B|\x1B\[)[0-?]*[ -\/]*[@-~]')
+    return ansi_escape.sub('', line).strip('=\r\r\x1b>\n"')
+
+
+# noinspection PyClassHasNoInit,PyDeprecation,PyUnresolvedReferences
 class GlobalVars:
     false_positives = []
     whitelisted_users = []
@@ -25,6 +57,11 @@ class GlobalVars:
     socvr_room_id = "41570"
     blockedTime = {"all": 0, charcoal_room_id: 0, meta_tavern_room_id: 0, socvr_room_id: 0}
     metasmoke_last_ping_time = datetime.now()
+    not_privileged_warning = """
+    You are not a privileged user. Please see
+    [the privileges wiki page](https://charcoal-se.org/smokey/Privileges) for
+    information on what privileges are and what is expected of privileged users.
+    """.strip().replace("\n", " ")
 
     experimental_reasons = []  # Don't widely report these
     non_socvr_reasons = []    # Don't report to SOCVR
@@ -44,7 +81,7 @@ class GlobalVars:
     ]
     non_tavern_sites = ["stackoverflow.com"]
 
-    parser = HTMLParser.HTMLParser()
+    parser = HTMLParser()
     wrap = Client("stackexchange.com")
     wrapm = Client("meta.stackexchange.com")
     wrapso = Client("stackoverflow.com")
@@ -120,7 +157,14 @@ class GlobalVars:
             "195967",   # CaffeineAddiction
             "5363",     # Stijn
             "248139",   # FelixSFD
-            "156721"    # D-side
+            "156721",   # D-side
+            "167070",   # quartata
+            "172450",   # Hovercraft Full Of Eels
+            "56200",    # Eric Leschinski
+            "211021",   # Henders
+            "255290",   # Gypsy Spellweaver
+            "64521",    # CalvT
+            "165474",   # Hyper Neutrino
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
@@ -192,7 +236,8 @@ class GlobalVars:
             "215067",   # Ferrybig
             "308386",   # Magisch
             "285368",   # angussidney
-            "158829"    # Thomas Ward
+            "158829",   # Thomas Ward
+            "294691",   # Mithrandir
         ],
         socvr_room_id: [
             "1849664",  # Undo
@@ -262,7 +307,10 @@ class GlobalVars:
             "3002139",  # Baum mit Augen
             "1863564",  # QPaysTaxes
             "4687348",  # FelixSFD
-            "4751173"  # Glorfindel
+            "4751173",  # Glorfindel
+            "2233391",  # henders
+            "4805174",  # kayess
+            "2370483"   # Machavity
         ]
     }
 
@@ -273,14 +321,16 @@ class GlobalVars:
 
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
 
-    commit = os.popen('git log --pretty=format:"%h" -n 1').read()
-    commit_author = os.popen('git log --pretty=format:"%an" -n 1').read()
+    commit = git_commit_info()
+    if md5(commit['author'][0].encode('utf-8')).hexdigest() in censored_committer_names:
+        commit['author'] = censored_committer_names[md5(commit['author'][0].encode('utf-8')).hexdigest()]
 
-    if md5(commit_author).hexdigest() in censored_committer_names:
-        commit_author = censored_committer_names[md5(commit_author).hexdigest()]
+    commit_with_author = "%s (%s: *%s*)" % (commit['id'],
+                                            commit['author'][0] if type(commit['author']) in [list, tuple]
+                                            else commit['author'],
+                                            commit['message'])
 
-    commit_with_author = os.popen('git log --pretty=format:"%h (' + commit_author + ': *%s*)" -n 1').read()
-    on_master = "HEAD detached" not in os.popen("git status").read()
+    on_master = "HEAD detached" not in git_status()
     charcoal_hq = None
     tavern_on_the_meta = None
     socvr = None
@@ -307,7 +357,7 @@ class GlobalVars:
     post_scan_time = 0
     posts_scan_stats_lock = threading.Lock()
 
-    config = ConfigParser.RawConfigParser()
+    config = RawConfigParser()
 
     if os.path.isfile('config'):
         config.read('config')
@@ -325,33 +375,31 @@ class GlobalVars:
     post_site_id_to_question = {}
 
     location = config.get("Config", "location")
-    print location
 
     metasmoke_ws = None
 
     try:
         metasmoke_host = config.get("Config", "metasmoke_host")
-        print metasmoke_host
-    except ConfigParser.NoOptionError:
+    except NoOptionError:
         metasmoke_host = None
-        print "metasmoke host not found. Set it as metasmoke_host in the config file." \
-              "See https://github.com/Charcoal-SE/metasmoke."
+        log('info', "metasmoke host not found. Set it as metasmoke_host in the config file."
+            "See https://github.com/Charcoal-SE/metasmoke.")
 
     try:
         metasmoke_key = config.get("Config", "metasmoke_key")
-    except ConfigParser.NoOptionError:
+    except NoOptionError:
         metasmoke_key = ""
-        print "No metasmoke key found, which is okay if both are running on the same host"
+        log('info', "No metasmoke key found, which is okay if both are running on the same host")
 
     try:
         metasmoke_ws_host = config.get("Config", "metasmoke_ws_host")
-    except ConfigParser.NoOptionError:
+    except NoOptionError:
         metasmoke_ws_host = ""
-        print "No metasmoke websocket host found, which is okay if you're anti-websocket"
+        log('info', "No metasmoke websocket host found, which is okay if you're anti-websocket")
 
     try:
         github_username = config.get("Config", "github_username")
         github_password = config.get("Config", "github_password")
-    except ConfigParser.NoOptionError:
+    except NoOptionError:
         github_username = None
         github_password = None

@@ -1,6 +1,8 @@
+# coding=utf-8
 from globalvars import GlobalVars
 
 
+# noinspection PyMissingTypeHints
 def test_globalvars():
     # Changing values in globalvars.py is fine for debugging, but when
     # pushing, there should be made sure that the values are correct.
@@ -17,6 +19,7 @@ def test_globalvars():
     assert GlobalVars.blockedTime[GlobalVars.charcoal_room_id] == 0
     assert GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id] == 0
     assert GlobalVars.blockedTime[GlobalVars.socvr_room_id] == 0
+
     # The following lists must be empty in globalvars.py, because
     # they will be filled later.
     assert len(GlobalVars.auto_ignored_posts) == 0

@@ -1,13 +1,15 @@
+# coding=utf-8
 import platform
-if 'windows' in str(platform.platform()).lower():
-    print "Git support not available in Windows."
-else:
-    from sh import git
+from helpers import log
 from requests.auth import HTTPBasicAuth
 from globalvars import GlobalVars
 import requests
 import time
 import json
+if 'windows' in str(platform.platform()).lower():
+    log('warning', "Git support not available in Windows.")
+else:
+    from sh import git
 
 
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
@@ -15,7 +17,7 @@ class GitManager:
     @staticmethod
     def add_to_blacklist(**kwargs):
         if 'windows' in str(platform.platform()).lower():
-            print "Git support not available in Windows."
+            log('warning', "Git support not available in Windows.")
             return (False, "Git support not available in Windows.")
 
         blacklist = kwargs.get("blacklist", "")
@@ -25,11 +27,11 @@ class GitManager:
         code_permissions = kwargs.get("code_permissions", False)
 
         # Make sure git credentials are set up
-        if git.config("--global", "--get", "user.name", _ok_code=[0, 1]) == "":
-            return (False, "Tell someone to run `git config --global user.name \"SmokeDetector\"`")
+        if git.config("--get", "user.name", _ok_code=[0, 1]) == "":
+            return (False, "Tell someone to run `git config user.name \"SmokeDetector\"`")
 
-        if git.config("--global", "--get", "user.email", _ok_code=[0, 1]) == "":
-            return (False, "Tell someone to run `git config --global user.email \"smokey@erwaysoftware.com\"`")
+        if git.config("--get", "user.email", _ok_code=[0, 1]) == "":
+            return (False, "Tell someone to run `git config user.email \"smokey@erwaysoftware.com\"`")
 
         if blacklist == "":
             # If we broke the code, and this isn't assigned, error out before doing anything, but do
@@ -75,7 +77,7 @@ class GitManager:
         # Add item to file
         with open(blacklist_file_name, "a+") as blacklist_file:
             last_character = blacklist_file.read()[-1:]
-            if last_character != "\n":
+            if last_character not in ["", "\n"]:
                 blacklist_file.write("\n")
             blacklist_file.write(item_to_blacklist + "\n")
 
@@ -93,7 +95,7 @@ class GitManager:
         if code_permissions:
             git.checkout("master")
             git.merge(branch)
-            git.push()
+            git.push("origin", "master")
             git.branch('-D', branch)  # Delete the branch in the local git tree since we're done with it.
         else:
             git.push("origin", branch)
@@ -114,7 +116,7 @@ class GitManager:
             response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls",
                                      auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password),
                                      data=json.dumps(payload))
-            print(response.json())
+            log('debug', response.json())
             try:
                 git.checkout("deploy")  # Return to deploy, pending the accept of the PR in Master.
                 git.branch('-D', branch)  # Delete the branch in the local git tree since we're done with it.
@@ -146,4 +148,4 @@ class GitManager:
     def current_git_status():
         if 'windows' in str(platform.platform()).lower():
             return "Git support not available in Windows."
-        return git.status()
+        return git("-c", "color.status=false", "status")

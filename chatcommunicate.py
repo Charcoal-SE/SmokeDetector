@@ -1,3 +1,4 @@
+# coding=utf-8
 from threading import Thread, Lock
 from parsing import *
 from datahandling import *
@@ -8,10 +9,10 @@ from termcolor import colored
 from deletionwatcher import DeletionWatcher
 from ChatExchange.chatexchange.messages import Message
 import chatcommands
-from helpers import Response
+from helpers import Response, log
 
 # Please note: If new !!/ commands are added or existing ones are modified, don't forget to
-# update the wiki at https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands.
+# update the wiki at https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands/_edit.
 
 add_latest_message_lock = Lock()
 
@@ -28,6 +29,7 @@ command_aliases = {
     "vand": "tp-",
     "v": "tp-",
     "n": "naa-",
+    u"\U0001F4A9": "tp-",
 }
 
 
@@ -35,10 +37,12 @@ cmds = chatcommands.command_dict
 subcmds = chatcommands.subcommand_dict
 
 
+# noinspection PyMissingTypeHints
 def is_smokedetector_message(user_id, room_id):
     return user_id == GlobalVars.smokeDetector_user_id[room_id]
 
 
+# noinspection PyMissingTypeHints
 def add_to_listen_if_edited(host, message_id):
     if host + str(message_id) not in GlobalVars.listen_to_these_if_edited:
         GlobalVars.listen_to_these_if_edited.append(host + str(message_id))
@@ -46,12 +50,13 @@ def add_to_listen_if_edited(host, message_id):
         GlobalVars.listen_to_these_if_edited = GlobalVars.listen_to_these_if_edited[-500:]
 
 
+# noinspection PyMissingTypeHints
 def print_chat_message(ev):
     message = colored("Chat message in " + ev.data["room_name"] + " (" + str(ev.data["room_id"]) + "): \"",
                       attrs=['bold'])
     message += ev.data['content']
     message += "\""
-    print message + colored(" - " + ev.data['user_name'], attrs=['bold'])
+    log('info', message + colored(" - " + ev.data['user_name'], attrs=['bold']))
 
 
 # noinspection PyUnusedLocal
@@ -71,6 +76,7 @@ def special_room_watcher(ev, wrap2):
             t_check_websocket.start()
 
 
+# noinspection PyMissingTypeHints
 def watcher(ev, wrap2):
     if ev.type_id != 1 and ev.type_id != 2:
         return
@@ -119,7 +125,7 @@ def watcher(ev, wrap2):
             ev.message.reply("I only have a record of {} of my messages; that's not enough to execute all commands. "
                              "No commands were executed.".format(len(latest_smokedetector_messages)))
             return
-        for i in xrange(0, len(commands)):
+        for i in range(0, len(commands)):
             shortcut_messages.append(u":{message} {command_name}".format(
                 message=latest_smokedetector_messages[-(i + 1)], command_name=commands[i]))
         reply = ""
@@ -127,7 +133,7 @@ def watcher(ev, wrap2):
         amount_skipped = 0
         amount_unrecognized = 0
         length = len(shortcut_messages)
-        for i in xrange(0, length):
+        for i in range(0, length):
             current_message = shortcut_messages[i]
             if length > 1:
                 reply += str(i + 1) + ". "
@@ -186,6 +192,7 @@ def watcher(ev, wrap2):
             add_to_listen_if_edited(wrap2.host, message_id)
 
 
+# noinspection PyMissingTypeHints
 def handle_commands(content_lower, message_parts, ev_room, ev_room_name, ev_user_id, ev_user_name, wrap2, content,
                     message_id):
     message_url = "//chat.{host}/transcript/message/{id}#{id}".format(host=wrap2.host, id=message_id)

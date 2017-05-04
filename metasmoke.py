@@ -1,3 +1,4 @@
+# coding=utf-8
 import json
 import requests
 from globalvars import GlobalVars
@@ -14,6 +15,8 @@ import datahandling
 import parsing
 import apigetpost
 import spamhandling
+import classes
+from helpers import log
 
 
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
@@ -39,20 +42,20 @@ class Metasmoke:
                         data = json.loads(a)
                         GlobalVars.metasmoke_last_ping_time = datetime.now()
                         Metasmoke.handle_websocket_data(data)
-                    except Exception, e:
+                    except Exception as e:
                         GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host,
                                                                               origin=GlobalVars.metasmoke_host)
                         payload = json.dumps({"command": "subscribe",
                                               "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"})
                         GlobalVars.metasmoke_ws.send(payload)
-                        print e
+                        log('error', e)
                         try:
                             exc_info = sys.exc_info()
                             traceback.print_exception(*exc_info)
                         except:
-                            print "meh"
+                            log('error', "Can't fetch full exception details")
             except:
-                print "Couldn't bind to MS websocket"
+                log('error', "Couldn't bind to MS websocket")
                 if not has_succeeded:
                     break
                 else:
@@ -103,21 +106,19 @@ class Metasmoke:
                 if user is not None:
                     datahandling.add_blacklisted_user(user, "metasmoke", post_data.post_url)
                 why = u"Post manually reported by user *{}* from metasmoke.\n".format(message["report"]["user"])
-                spamhandling.handle_spam(title=post_data.title,
-                                         body=post_data.body,
-                                         poster=post_data.owner_name,
-                                         site=post_data.site,
-                                         post_url=post_data.post_url,
-                                         poster_url=post_data.owner_url,
-                                         post_id=post_data.post_id,
+                postobj = classes.Post(api_response={'title': post_data.title, 'body': post_data.body,
+                                                     'owner': {'display_name': post_data.owner_name,
+                                                               'reputation': post_data.owner_rep,
+                                                               'link': post_data.owner_url},
+                                                     'site': post_data.site,
+                                                     'IsAnswer': (post_data.post_type == "answer"),
+                                                     'score': post_data.score, 'link': post_data.post_url,
+                                                     'question_id': post_data.post_id,
+                                                     'up_vote_count': post_data.up_vote_count,
+                                                     'down_vote_count': post_data.down_vote_count})
+                spamhandling.handle_spam(post=postobj,
                                          reasons=["Manually reported " + post_data.post_type],
-                                         is_answer=post_data.post_type == "answer",
-                                         why=why,
-                                         owner_rep=post_data.owner_rep,
-                                         post_score=post_data.score,
-                                         up_vote_count=post_data.up_vote_count,
-                                         down_vote_count=post_data.down_vote_count,
-                                         question_id=post_data.question_id)
+                                         why=why)
             elif "commit_status" in message:
                 c = message["commit_status"]
                 sha = c["commit_sha"][:7]
@@ -145,7 +146,7 @@ class Metasmoke:
     def send_stats_on_post(title, link, reasons, body, username, user_link, why, owner_rep,
                            post_score, up_vote_count, down_vote_count):
         if GlobalVars.metasmoke_host is None:
-            print "Metasmoke location not defined, not reporting"
+            log('info', "Metasmoke location not defined, not reporting")
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -160,18 +161,18 @@ class Metasmoke:
                     'upvote_count': up_vote_count, 'downvote_count': down_vote_count}
 
             # Remove None values (if they somehow manage to get through)
-            post = dict((k, v) for k, v in post.iteritems() if v)
+            post = dict((k, v) for k, v in post.items() if v)
 
             payload = {'post': post, 'key': metasmoke_key}
             headers = {'Content-type': 'application/json'}
             requests.post(GlobalVars.metasmoke_host + "/posts.json", data=json.dumps(payload), headers=headers)
         except Exception as e:
-            print e
+            log('error', e)
 
     @staticmethod
     def send_feedback_for_post(post_link, feedback_type, user_name, user_id, chat_host):
         if GlobalVars.metasmoke_host is None:
-            print "Metasmoke location not defined; not reporting"
+            log('info', "Metasmoke location not defined; not reporting")
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -192,12 +193,12 @@ class Metasmoke:
             requests.post(GlobalVars.metasmoke_host + "/feedbacks.json", data=json.dumps(payload), headers=headers)
 
         except Exception as e:
-            print e
+            log('error', e)
 
     @staticmethod
     def send_deletion_stats_for_post(post_link, is_deleted):
         if GlobalVars.metasmoke_host is None:
-            print "Metasmoke location not defined; not reporting deletion stats"
+            log('info', "Metasmoke location not defined; not reporting deletion stats")
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -214,12 +215,12 @@ class Metasmoke:
             headers = {'Content-type': 'application/json'}
             requests.post(GlobalVars.metasmoke_host + "/deletion_logs.json", data=json.dumps(payload), headers=headers)
         except Exception as e:
-            print e
+            log('error', e)
 
     @staticmethod
     def send_status_ping():
         if GlobalVars.metasmoke_host is None:
-            print "Metasmoke location not defined; not sending status ping"
+            log('info', "Metasmoke location not defined; not sending status ping")
             return
 
         threading.Timer(60, Metasmoke.send_status_ping).start()
@@ -245,11 +246,11 @@ class Metasmoke:
                         GlobalVars.metasmoke_last_ping_time = datetime.now()  # Otherwise the ping watcher will exit(10)
 
                         GlobalVars.charcoal_hq.send_message(GlobalVars.location + " received failover signal.")
-            except Exception as e:
+            except Exception:
                 pass
 
         except Exception as e:
-            print e
+            log('error', e)
 
     @staticmethod
     def update_code_privileged_users_list():

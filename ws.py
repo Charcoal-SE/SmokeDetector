@@ -1,3 +1,4 @@
+# coding=utf-8
 # requires https://pypi.python.org/pypi/websocket-client/
 
 from excepthook import uncaught_exception, install_thread_excepthook
@@ -30,7 +31,9 @@ from deletionwatcher import DeletionWatcher
 import json
 import time
 import requests
+# noinspection PyPackageRequirements
 from tld.utils import update_tld_names, TldIOError
+from helpers import log
 
 try:
     update_tld_names()
@@ -60,7 +63,7 @@ except TldIOError as ioerr:
 if "ChatExchangeU" in os.environ:
     username = os.environ["ChatExchangeU"]
 else:
-    username = raw_input("Username: ")
+    username = input("Username: ")
 if "ChatExchangeP" in os.environ:
     password = os.environ["ChatExchangeP"]
 else:
@@ -105,7 +108,7 @@ GlobalVars.s = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                "SmokeDetector started at [rev " +\
                GlobalVars.commit_with_author +\
                "](" + GlobalVars.bot_repository + "/commit/" +\
-               GlobalVars.commit +\
+               GlobalVars.commit['id'] +\
                ") (running on " +\
                GlobalVars.location +\
                ")"
@@ -115,7 +118,7 @@ GlobalVars.s_reverted = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                         "at [rev " + \
                         GlobalVars.commit_with_author + \
                         "](" + GlobalVars.bot_repository + "/commit/" + \
-                        GlobalVars.commit + \
+                        GlobalVars.commit['id'] + \
                         ") (running on " +\
                         GlobalVars.location +\
                         ")"
@@ -125,7 +128,7 @@ GlobalVars.standby_message = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                              "at [rev " +\
                              GlobalVars.commit_with_author +\
                              "](" + GlobalVars.bot_repository + "/commit/" +\
-                             GlobalVars.commit +\
+                             GlobalVars.commit['id'] +\
                              ") (running on " +\
                              GlobalVars.location +\
                              ")"
@@ -227,6 +230,16 @@ GlobalVars.specialrooms = [
         "sites": ["bricks.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("1964"),
         "unwantedReasons": []
+    },
+    {
+        "sites": ["crafts.stackexchange.com"],
+        "room": GlobalVars.wrap.get_room("38932"),
+        "unwantedReasons": []
+    },
+    {
+        "sites": ["graphicdesign.stackexchange.com"],
+        "room": GlobalVars.wrap.get_room("56223"),
+        "unwantedReasons": []
     }
 ]
 
@@ -240,9 +253,12 @@ def restart_automatically(time_in_seconds):
 
 Thread(name="auto restart thread", target=restart_automatically, args=(21600,)).start()
 
+log('info', GlobalVars.location)
+log('info', GlobalVars.metasmoke_host)
+
 DeletionWatcher.update_site_id_list()
 
-ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
+ws = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
 ws.send("155-questions-active")
 GlobalVars.charcoal_hq.join()
 GlobalVars.tavern_on_the_meta.join()
@@ -283,7 +299,7 @@ while True:
                            args=(a, True if is_spam else None))
                 t.start()
 
-    except Exception, e:
+    except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         now = datetime.utcnow()
         delta = now - UtcDate.startup_utc_date
@@ -293,7 +309,7 @@ while True:
                            .strip()
         n = os.linesep
         logged_msg = str(now) + " UTC" + n + exception_only + n + tr + n + n
-        print(logged_msg)
+        log('error', logged_msg)
         with open("errorLogs.txt", "a") as f:
             f.write(logged_msg)
         if seconds < 180 and exc_type != websocket.WebSocketConnectionClosedException\

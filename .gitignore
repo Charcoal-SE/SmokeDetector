@@ -6,6 +6,7 @@
 # Packages
 *.egg
 *.egg-info
+env/
 dist
 build
 eggs
@@ -65,6 +66,7 @@ latestMessages.p
 apiCalls.p
 apiCalls.pickle
 bodyfetcherQueue.p
+bodyfetcherQueueTimings.p
 bodyfetcherMaxIds.p
 
 # Settings files

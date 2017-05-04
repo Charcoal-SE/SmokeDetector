@@ -1,6 +1,7 @@
+# coding=utf-8
 import os
 # noinspection PyPep8Naming
-import cPickle as pickle
+import pickle
 from datetime import datetime
 from globalvars import GlobalVars
 import metasmoke
@@ -8,6 +9,7 @@ import requests
 import json
 import time
 import math
+# noinspection PyCompatibility
 import regex
 
 
@@ -17,46 +19,46 @@ import regex
 def load_files():
     if os.path.isfile("falsePositives.p"):
         with open("falsePositives.p", "rb") as f:
-            GlobalVars.false_positives = pickle.load(f)
+            GlobalVars.false_positives = pickle.load(f, encoding='utf-8')
     if os.path.isfile("whitelistedUsers.p"):
         with open("whitelistedUsers.p", "rb") as f:
-            GlobalVars.whitelisted_users = pickle.load(f)
+            GlobalVars.whitelisted_users = pickle.load(f, encoding='utf-8')
     if os.path.isfile("blacklistedUsers.p"):
         with open("blacklistedUsers.p", "rb") as f:
-            GlobalVars.blacklisted_users = pickle.load(f)
+            GlobalVars.blacklisted_users = pickle.load(f, encoding='utf-8')
     if os.path.isfile("ignoredPosts.p"):
         with open("ignoredPosts.p", "rb") as f:
-            GlobalVars.ignored_posts = pickle.load(f)
+            GlobalVars.ignored_posts = pickle.load(f, encoding='utf-8')
     if os.path.isfile("autoIgnoredPosts.p"):
         with open("autoIgnoredPosts.p", "rb") as f:
-            GlobalVars.auto_ignored_posts = pickle.load(f)
+            GlobalVars.auto_ignored_posts = pickle.load(f, encoding='utf-8')
     if os.path.isfile("notifications.p"):
         with open("notifications.p", "rb") as f:
-            GlobalVars.notifications = pickle.load(f)
+            GlobalVars.notifications = pickle.load(f, encoding='utf-8')
     if os.path.isfile("whyData.p"):
         with open("whyData.p", "rb") as f:
-            GlobalVars.why_data = pickle.load(f)
+            GlobalVars.why_data = pickle.load(f, encoding='utf-8')
     if os.path.isfile("whyDataAllspam.p"):
         with open("whyDataAllspam.p") as f:
-            GlobalVars.why_data_allspam = pickle.load(f)
+            GlobalVars.why_data_allspam = pickle.load(f, encoding='utf-8')
     if os.path.isfile("latestMessages.p"):
         try:
             with open("latestMessages.p", "rb") as f:
-                GlobalVars.latest_smokedetector_messages = pickle.load(f)
+                GlobalVars.latest_smokedetector_messages = pickle.load(f, encoding='utf-8')
         except EOFError:
             os.remove("latestMessages.p")
             raise
     if os.path.isfile("apiCalls.p"):
         try:
             with open("apiCalls.p", "rb") as f:
-                GlobalVars.api_calls_per_site = pickle.load(f)
+                GlobalVars.api_calls_per_site = pickle.load(f, encoding='utf-8')
         except EOFError:
             os.remove("apiCalls.p")
             raise
     if os.path.isfile("bodyfetcherQueue.p"):
         try:
             with open("bodyfetcherQueue.p", "rb") as f:
-                GlobalVars.bodyfetcher.queue = pickle.load(f)
+                GlobalVars.bodyfetcher.queue = pickle.load(f, encoding='utf-8')
         except EOFError:
             os.remove("bodyfetcherQueue.p")
             raise
@@ -64,9 +66,17 @@ def load_files():
     if os.path.isfile("bodyfetcherMaxIds.p"):
         try:
             with open("bodyfetcherMaxIds.p", "rb") as f:
-                GlobalVars.bodyfetcher.previous_max_ids = pickle.load(f)
+                GlobalVars.bodyfetcher.previous_max_ids = pickle.load(f, encoding='utf-8')
         except EOFError:
             os.remove("bodyfetcherMaxIds.p")
+            raise
+
+    if os.path.isfile("bodyfetcherQueueTimings.p"):
+        try:
+            with open("bodyfetcherQueueTimings.p", "rb") as f:
+                GlobalVars.bodyfetcher.queue_timings = pickle.load(f, encoding='utf-8')
+        except EOFError:
+            os.remove("bodyfetcherQueueTimings.p")
             raise
 
 
@@ -86,14 +96,17 @@ def filter_auto_ignored_posts():
 
 # methods to check whether a post/user is whitelisted/blacklisted/...
 
+# noinspection PyMissingTypeHints
 def is_false_positive(postid_site_tuple):
     return postid_site_tuple in GlobalVars.false_positives
 
 
+# noinspection PyMissingTypeHints
 def is_whitelisted_user(user):
     return user in GlobalVars.whitelisted_users
 
 
+# noinspection PyMissingTypeHints
 def is_blacklisted_user(user):
     for blacklisted_user in GlobalVars.blacklisted_users:
         if user == blacklisted_user[0]:
@@ -108,10 +121,12 @@ def get_blacklisted_user_data(user):
     return ()
 
 
+# noinspection PyMissingTypeHints
 def is_ignored_post(postid_site_tuple):
     return postid_site_tuple in GlobalVars.ignored_posts
 
 
+# noinspection PyMissingTypeHints
 def is_auto_ignored_post(postid_site_tuple):
     for p in GlobalVars.auto_ignored_posts:
         if p[0] == postid_site_tuple[0] and p[1] == postid_site_tuple[1]:
@@ -119,6 +134,7 @@ def is_auto_ignored_post(postid_site_tuple):
     return False
 
 
+# noinspection PyMissingTypeHints
 def is_privileged(room_id_str, user_id_str, wrap2):
     if room_id_str in GlobalVars.privileged_users and user_id_str in GlobalVars.privileged_users[room_id_str]:
         return True
@@ -139,6 +155,7 @@ def is_code_privileged(room_id_str, user_id_str, wrap2):
 # methods to add/remove whitelisted/blacklisted users, ignored posts, ...
 
 
+# noinspection PyMissingTypeHints
 def add_whitelisted_user(user):
     if user in GlobalVars.whitelisted_users or user is None:
         return
@@ -171,6 +188,7 @@ def add_false_positive(site_post_id_tuple):
         pickle.dump(GlobalVars.false_positives, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
+# noinspection PyMissingTypeHints
 def add_ignored_post(postid_site_tuple):
     if postid_site_tuple is None or postid_site_tuple in GlobalVars.ignored_posts:
         return
@@ -189,6 +207,7 @@ def remove_blacklisted_user(user):
     return True
 
 
+# noinspection PyMissingTypeHints
 def remove_whitelisted_user(user):
     if user not in GlobalVars.whitelisted_users:
         return False
@@ -281,6 +300,11 @@ def store_bodyfetcher_max_ids():
         pickle.dump(GlobalVars.bodyfetcher.previous_max_ids, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
+def store_queue_timings():
+    with open("bodyfetcherQueueTimings.p", "wb") as f:
+        pickle.dump(GlobalVars.bodyfetcher.queue_timings, f, protocol=pickle.HIGHEST_PROTOCOL)
+
+
 # methods that help avoiding reposting alerts:
 
 
@@ -290,6 +314,7 @@ def append_to_latest_questions(host, post_id, title):
         GlobalVars.latest_questions.pop()
 
 
+# noinspection PyMissingTypeHints
 def has_already_been_posted(host, post_id, title):
     for post in GlobalVars.latest_questions:
         if post[0] == host and post[1] == str(post_id) and post[2] == title:
@@ -321,6 +346,7 @@ def fetch_lines_from_error_log(line_count):
 # method to check whether a SE site exists:
 
 
+# noinspection PyMissingTypeHints
 def refresh_sites():
     has_more = True
     page = 1
@@ -341,6 +367,7 @@ def refresh_sites():
     return True, "OK"
 
 
+# noinspection PyMissingTypeHints
 def check_site_and_get_full_name(site):
     if len(GlobalVars.se_sites) == 0:
         refreshed, msg = refresh_sites()
@@ -357,6 +384,7 @@ def check_site_and_get_full_name(site):
 # methods to add/remove/check users on the "notification" list
 # (that is, being pinged when Smokey reports something on a specific site)
 
+# noinspection PyMissingTypeHints
 def add_to_notification_list(user_id, chat_site, room_id, se_site):
     exists, site = check_site_and_get_full_name(se_site)
     if not exists:
@@ -370,6 +398,7 @@ def add_to_notification_list(user_id, chat_site, room_id, se_site):
     return 0, site
 
 
+# noinspection PyMissingTypeHints
 def remove_from_notification_list(user_id, chat_site, room_id, se_site):
     notification_tuple = (int(user_id), chat_site, int(room_id), se_site)
     if notification_tuple not in GlobalVars.notifications:
@@ -380,6 +409,7 @@ def remove_from_notification_list(user_id, chat_site, room_id, se_site):
     return True
 
 
+# noinspection PyMissingTypeHints
 def will_i_be_notified(user_id, chat_site, room_id, se_site):
     notification_tuple = (int(user_id), chat_site, int(room_id), se_site)
     return notification_tuple in GlobalVars.notifications
@@ -405,6 +435,7 @@ def get_user_names_on_notification_list(chat_site, room_id, se_site, client):
     return [client.get_user(i).name for i in get_user_ids_on_notification_list(chat_site, room_id, se_site)]
 
 
+# noinspection PyMissingTypeHints
 def append_pings(original_message, names):
     if len(names) != 0:
         new_message = u"{0} ({1})".format(original_message, " ".join(["@" + x.replace(" ", "") for x in names]))
@@ -418,7 +449,7 @@ def append_pings(original_message, names):
 
 def add_or_update_multiple_reporter(user_id, chat_host, time_integer):
     user_id = str(user_id)
-    for i in xrange(len(GlobalVars.multiple_reporters)):
+    for i in range(len(GlobalVars.multiple_reporters)):
         if GlobalVars.multiple_reporters[i][0] == user_id and GlobalVars.multiple_reporters[i][1] == chat_host:
             GlobalVars.multiple_reporters[i] = (GlobalVars.multiple_reporters[i][0],
                                                 GlobalVars.multiple_reporters[i][1], time_integer)
