@@ -7,7 +7,8 @@ import requests
 import time
 import json
 if 'windows' in str(platform.platform()).lower():
-    log('warning', "Git support not available in Windows.")
+    # noinspection PyPep8Naming
+    from classes import Git as git
 else:
     from sh import git
 
