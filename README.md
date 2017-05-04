@@ -22,9 +22,12 @@ git clone https://github.com/Charcoal-SE/SmokeDetector.git
 cd SmokeDetector
 git submodule init
 git submodule update
-sudo pip3 install -r requirements.txt --upgrade
+pip3 install -r --user requirements.txt --upgrade
 pip3 install -r --user user_requirements.txt --upgrade
 ```
+
+If you would like to install the dependencies system-wide,
+remove the`--user` option and add `sudo` before `pip3`.
 
 Next, copy `config.sample` to a new file called `config`, and edit the values required.
 
