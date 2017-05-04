@@ -27,11 +27,11 @@ class GitManager:
         code_permissions = kwargs.get("code_permissions", False)
 
         # Make sure git credentials are set up
-        if git.config("--global", "--get", "user.name", _ok_code=[0, 1]) == "":
-            return (False, "Tell someone to run `git config --global user.name \"SmokeDetector\"`")
+        if git.config("--get", "user.name", _ok_code=[0, 1]) == "":
+            return (False, "Tell someone to run `git config user.name \"SmokeDetector\"`")
 
-        if git.config("--global", "--get", "user.email", _ok_code=[0, 1]) == "":
-            return (False, "Tell someone to run `git config --global user.email \"smokey@erwaysoftware.com\"`")
+        if git.config("--get", "user.email", _ok_code=[0, 1]) == "":
+            return (False, "Tell someone to run `git config user.email \"smokey@erwaysoftware.com\"`")
 
         if blacklist == "":
             # If we broke the code, and this isn't assigned, error out before doing anything, but do
