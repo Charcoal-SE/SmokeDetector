@@ -419,3 +419,4 @@ revella\Wlash
 (?:celebrity\W?)?net\W?worth
 professional\Whacker
 phone\Wremotely
+jolique
