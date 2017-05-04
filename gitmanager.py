@@ -17,10 +17,6 @@ else:
 class GitManager:
     @staticmethod
     def add_to_blacklist(**kwargs):
-        if 'windows' in str(platform.platform()).lower():
-            log('warning', "Git support not available in Windows.")
-            return (False, "Git support not available in Windows.")
-
         blacklist = kwargs.get("blacklist", "")
         item_to_blacklist = kwargs.get("item_to_blacklist", "")
         username = kwargs.get("username", "")
@@ -147,6 +143,4 @@ class GitManager:
 
     @staticmethod
     def current_git_status():
-        if 'windows' in str(platform.platform()).lower():
-            return "Git support not available in Windows."
         return git("-c", "color.status=false", "status")
