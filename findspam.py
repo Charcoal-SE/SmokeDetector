@@ -83,8 +83,8 @@ def link_at_end(s, site, *args):   # link at end of question, on selected sites
     match = regex.compile(r"(?i)https?://(?:[.A-Za-z0-9-]*/?[.A-Za-z0-9-]*/?|plus\.google\.com/"
                           r"[\w/]*|www\.pinterest\.com/pin/[\d/]*)</a>\s*$").search(s)
     if match and not regex.compile(r"(?i)upload|\b(imgur|yfrog|gfycat|tinypic|sendvid|ctrlv|prntscr|gyazo|youtu\.?be|"
-                                   r"stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|"
-                                   r"(?<!plus\.)google|localhost|ubuntu)\b").search(match.group(0)):
+                                   r"stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|regex101|"
+                                   r"(?<!plus\.)google|localhost|ubuntu|getbootstrap)\b").search(match.group(0)):
         return True, u"Link at end: {}".format(match.group(0))
     return False, ""
 
