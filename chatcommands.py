@@ -1464,7 +1464,9 @@ command_dict = {
     "!!/allnotificationsites": command_allnotifications,
     "!!/allspam": command_allspam,
     "!!/amiprivileged": command_privileged,
+    "!!/amipriviledged": command_privileged,   # TODO: add typo warning?
     "!!/amicodeprivileged": command_code_privileged,
+    "!!/amicodepriviledged": command_code_privileged,   # TODO: add typo warning?
     "!!/apiquota": command_quota,
     "!!/blame": command_blame,
     "!!/block": command_block,
