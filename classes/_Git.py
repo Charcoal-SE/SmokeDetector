@@ -77,13 +77,13 @@ class Git:
     # reset
     @staticmethod
     def reset(*args):
-        execcmd = "git reset" + " ".join(args)
+        execcmd = "git reset " + " ".join(args)
         _call_process(execcmd)
 
     # rev-parse
     @staticmethod
     def rev_parse(*args):
-        execcmd = "git rev-parse" + " ".join(args)
+        execcmd = "git rev-parse " + " ".join(args)
         return _call_process(execcmd, return_data=True)[0]
 
     # status
