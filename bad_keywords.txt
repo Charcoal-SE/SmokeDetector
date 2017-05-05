@@ -209,7 +209,7 @@ borealis\Wcream
 miracle\Wbust
 apex\Wplump
 radley\W(\w+\W)?((hand)?bag|purse)s?
-somabiotix
+soma\W?biotix
 kerave\Whair
 t6\Wblack
 frequensea
@@ -429,4 +429,4 @@ i\Wdidn't\Wfind\Wthe\Wright\Wsolution\Wfrom\Wthe\Winternet
 ultra\Wpure\Wturmeric
 libidogene
 suisse\Wrenewal
-soma\Wbiotics
+
