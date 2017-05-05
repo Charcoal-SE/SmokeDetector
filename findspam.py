@@ -481,10 +481,10 @@ class FindSpam:
         "(essay|resume|article|dissertation|thesis) ?writing ?service", "satta ?matka", "b.?o.?j.?i.?t.?e.?r"
     ]
 
-    with open("blacklisted_websites.txt", "r") as f:
+    with open("blacklisted_websites.txt", "r", encoding="utf-8") as f:
         blacklisted_websites = [line.rstrip() for line in f if len(line.rstrip()) > 0]
 
-    with open("blacklisted_usernames.txt", "r") as f:
+    with open("blacklisted_usernames.txt", "r", encoding="utf-8") as f:
         blacklisted_usernames = [line.rstrip() for line in f if len(line.rstrip()) > 0]
 
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
