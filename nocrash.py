@@ -4,7 +4,6 @@
 # This script replaces the original nocrash.sh functionality with a pure Python approach.
 
 import platform
-from helpers import log
 import os
 import subprocess as sp
 from time import sleep
@@ -46,14 +45,14 @@ while stoprunning is False:
     if count == 0:
         if 'standby' in persistent_arguments:
             switch_to_standby = False  # Necessary for the while loop
-            command = PY_EXECUTABLE + ' ws.py standby'.split()
+            command = (PY_EXECUTABLE + ' ws.py standby').split()
         else:
-            command = PY_EXECUTABLE + ' ws.py first_start'.split()
+            command = (PY_EXECUTABLE + ' ws.py first_start').split()
     else:
         if not ('standby' in persistent_arguments):
-            command = PY_EXECUTABLE + ' ws.py'.split()
+            command = (PY_EXECUTABLE + ' ws.py').split()
         else:
-            command = PY_EXECUTABLE + ' ws.py standby'.split()
+            command = (PY_EXECUTABLE + ' ws.py standby').split()
 
     # noinspection PyBroadException
     try:
