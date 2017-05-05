@@ -165,6 +165,7 @@ class GlobalVars:
             "255290",   # Gypsy Spellweaver
             "64521",    # CalvT
             "165474",   # Hyper Neutrino
+            "169252",   # Cai
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
