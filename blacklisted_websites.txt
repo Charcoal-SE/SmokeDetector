@@ -1007,3 +1007,4 @@ slimdietera\.com
 wellnesssupplement\.com
 endcrack\.wordpress\.com
 platinumcleanserinfo\.com
+health2facts\.(com|org)
