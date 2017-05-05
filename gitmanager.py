@@ -64,9 +64,12 @@ class GitManager:
 
         # Check that we're up-to-date with origin (GitHub)
         git.remote.update()
-        # TODO: Windows Git Class Integration
-        if git("rev-parse", "refs/remotes/origin/master").strip() != git("rev-parse", "master").strip():
-            return (False, "HEAD isn't at tip of origin's master branch")
+        if 'windows' in platform.platform().lower():
+            if git.rev_parse("refs/remotes/origin/master").strip() != git.rev_parse("master").strip():
+                return (False, "HEAD isn't at tip of origin's master branch")
+        else:
+            if git("rev-parse", "refs/remotes/origin/master").strip() != git("rev-parse", "master").strip():
+                return (False, "HEAD isn't at tip of origin's master branch")
 
         # Check that blacklisted_websites.txt isn't modified locally. That could get ugly fast
         if blacklist_file_name in git.status():  # Also ugly
@@ -144,5 +147,7 @@ class GitManager:
 
     @staticmethod
     def current_git_status():
-        # TODO: Windows Git Class Integration
-        return git("-c", "color.status=false", "status")
+        if 'windows' in platform.platform().lower():
+            return git.status_stripped()
+        else:
+            return git("-c", "color.status=false", "status")
