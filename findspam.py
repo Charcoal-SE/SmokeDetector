@@ -454,7 +454,7 @@ def mostly_dots(s, site, *args):
 
 # noinspection PyClassHasNoInit
 class FindSpam:
-    with open("bad_keywords.txt", "r") as f:
+    with open("bad_keywords.txt", "r", encoding="utf-8") as f:
         bad_keywords = [line.rstrip() for line in f if len(line.rstrip()) > 0]
 
     bad_keywords_nwb = [  # "nwb" == "no word boundary"
