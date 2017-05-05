@@ -12,7 +12,7 @@ import excepthook
 # noinspection PyCompatibility
 import regex
 import time
-import classes
+import classes.Post
 from helpers import log
 
 
