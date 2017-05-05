@@ -581,6 +581,8 @@ class FindSpam:
         "Noida", "Pune",
         # yes, these aren't cities but...
         "India", "Pakistan",
+        # buyabans.com spammer uses creative variations
+        "Sri Lanka", "Srilanka", "Srilankan",
     ]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
