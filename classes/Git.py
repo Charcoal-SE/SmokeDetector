@@ -1,133 +1,99 @@
 import shlex
 import subprocess as sp
+import platform
+
+if 'windows' not in platform.platform().lower():
+    raise NotImplementedError("Use the `sh` module's `git` from PyPI instead!")
+else:
+    pass
 
 
-def _call_process(execstr):
-    proc = sp.Popen(shlex.split(execstr), stdout=sp.PIPE, stderr=sp.PIPE, shell=True)
+def _call_process(execcmd, _ok_code=None, return_data=False):
+    proc = sp.Popen(shlex.split(execcmd), stdout=sp.PIPE, stderr=sp.PIPE, shell=True)
     (stdout, stderr) = proc.communicate()
     retcode = proc.returncode
-    return stdout, stderr, retcode
+    if retcode != 0:
+        if _ok_code and retcode not in _ok_code:
+            raise sp.CalledProcessError(retcode, execcmd, stdout, stderr)
+        else:
+            raise sp.CalledProcessError(retcode, execcmd, stdout, stderr)
+
+    if return_data:
+        return stdout, stderr, retcode
+    else:
+        pass
 
 
 class Git:
-
-    def __init__(self, *args):
-        execstr = "git " + " ".join(args)
-        (stdout, stderr, retcode) = _call_process(execstr)
-        if retcode != 0:
-            raise sp.CalledProcessError(retcode, execstr, stdout, stderr)
-        return
-
-    def __call__(self, *args, **kwargs):
-        execstr = "git " + " ".join(args)
-        (stdout, stderr, retcode) = _call_process(execstr)
-        if retcode != 0:
-            raise sp.CalledProcessError(retcode, execstr, stdout, stderr)
-        return
-
     # add
     @staticmethod
     def add(*args):
-        execstr = "git add " + " ".join(args)
-        (stdout, stderr, retcode) = _call_process(execstr)
-        if retcode != 0:
-            raise sp.CalledProcessError(retcode, execstr, stdout, stderr)
-        pass
+        execcmd = "git add " + " ".join(args)
+        _call_process(execcmd)
 
     # branch
     @staticmethod
     def branch(*args):
-        execstr = "git branch " + " ".join(args)
-        (stdout, stderr, retcode) = _call_process(execstr)
-        if retcode != 0:
-            raise sp.CalledProcessError(retcode, execstr, stdout, stderr)
-        pass
+        execcmd = "git branch " + " ".join(args)
+        _call_process(execcmd)
 
     # Checkout
     @staticmethod
     def checkout(*args):
-        execstr = "git checkout " + " ".join(args)
-        (stdout, stderr, retcode) = _call_process(execstr)
-        if retcode != 0:
-            raise sp.CalledProcessError(retcode, execstr, stdout, stderr)
-        pass
+        execcmd = "git checkout " + " ".join(args)
+        _call_process(execcmd)
 
     # commit
     @staticmethod
     def commit(*args):
-        execstr = "git commit " + " ".join(args)
-        (stdout, stderr, retcode) = _call_process(execstr)
-        if retcode != 0:
-            raise sp.CalledProcessError(retcode, execstr, stdout, stderr)
-        pass
+        execcmd = "git commit " + " ".join(args)
+        _call_process(execcmd)
 
     # Config
     @staticmethod
     def config(*args, _ok_code=None):
-        execstr = "git config " + " ".join(args)
-        (stdout, stderr, retcode) = _call_process(execstr)
-        if retcode not in _ok_code:
-            raise sp.CalledProcessError(retcode, execstr, stdout, stderr)
-        pass
+        execcmd = "git config " + " ".join(args)
+        _call_process(execcmd, _ok_code=_ok_code)
 
     # merge
     @staticmethod
     def merge(*args):
-        execstr = "git merge " + " ".join(args)
-        (stdout, stderr, retcode) = _call_process(execstr)
-        if retcode != 0:
-            raise sp.CalledProcessError(retcode, execstr, stdout, stderr)
-        pass
+        execcmd = "git merge " + " ".join(args)
+        _call_process(execcmd)
 
     # push
     @staticmethod
     def push(*args):
-        execstr = "git push " + " ".join(args)
-        (stdout, stderr, retcode) = _call_process(execstr)
-        if retcode != 0:
-            raise sp.CalledProcessError(retcode, execstr, stdout, stderr)
-        pass
+        execcmd = "git push " + " ".join(args)
+        _call_process(execcmd)
 
     # remote.update
     class remote:
-        def __call__(self, *args):
-            execstr = "git remote " + " ".join(*args)
-            (stdout, stderr, retcode) = _call_process(execstr)
-            if retcode != 0:
-                raise sp.CalledProcessError(retcode, execstr, stdout, stderr)
-            pass
-
         @staticmethod
         def update(*args):
-            execstr = "git remote update " + " ".join(args)
-            (stdout, stderr, retcode) = _call_process(execstr)
-            if retcode != 0:
-                raise sp.CalledProcessError(retcode, execstr, stdout, stderr)
-            pass
+            execcmd = "git remote update " + " ".join(args)
+            _call_process(execcmd)
 
     # reset
     @staticmethod
     def reset(*args):
-        execstr = "git " + " ".join(args)
-        (stdout, stderr, retcode) = _call_process(execstr)
-        if retcode != 0:
-            raise sp.CalledProcessError(retcode, execstr, stdout, stderr)
-        pass
+        execcmd = "git reset" + " ".join(args)
+        _call_process(execcmd)
 
     # rev-parse
     @staticmethod
     def rev_parse(*args):
-        execstr = "git " + " ".join(args)
-        (stdout, stderr, retcode) = _call_process(execstr)
-        if retcode != 0:
-            raise sp.CalledProcessError(retcode, execstr, stdout, stderr)
-        pass
+        execcmd = "git rev-parse" + " ".join(args)
+        return _call_process(execcmd, return_data=True)[0]
 
     # status
     @staticmethod
     def status(*args):
-        execstr = "git " + " ".join(args)
-        (stdout, stderr, retcode) = _call_process(execstr)
-        if retcode != 0:
-            raise sp.CalledProcessError(retcode, execstr, stdout, stderr)
-        pass
+        execcmd = "git " + " ".join(args)
+        return _call_process(execcmd, return_data=True)[0]
+
+    # status
+    @staticmethod
+    def status_stripped(*args):
+        execcmd = "git -c color.status=false " + " ".join(args)
+        return _call_process(execcmd, return_data=True)[0]

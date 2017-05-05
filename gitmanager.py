@@ -64,6 +64,7 @@ class GitManager:
 
         # Check that we're up-to-date with origin (GitHub)
         git.remote.update()
+        # TODO: Windows Git Class Integration
         if git("rev-parse", "refs/remotes/origin/master").strip() != git("rev-parse", "master").strip():
             return (False, "HEAD isn't at tip of origin's master branch")
 
@@ -143,4 +144,5 @@ class GitManager:
 
     @staticmethod
     def current_git_status():
+        # TODO: Windows Git Class Integration
         return git("-c", "color.status=false", "status")
