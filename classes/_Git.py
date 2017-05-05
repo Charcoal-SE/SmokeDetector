@@ -84,16 +84,16 @@ class Git:
     @staticmethod
     def rev_parse(*args):
         execcmd = "git rev-parse " + " ".join(args)
-        return _call_process(execcmd, return_data=True)[0]
+        return _call_process(execcmd, return_data=True)[0].decode('UTF-8')
 
     # status
     @staticmethod
     def status(*args):
         execcmd = "git status " + " ".join(args)
-        return _call_process(execcmd, return_data=True)[0]
+        return _call_process(execcmd, return_data=True)[0].decode('UTF-8')
 
     # status
     @staticmethod
     def status_stripped(*args):
         execcmd = "git -c color.status=false status " + " ".join(args)
-        return _call_process(execcmd, return_data=True)[0]
+        return _call_process(execcmd, return_data=True)[0].decode('UTF-8')
