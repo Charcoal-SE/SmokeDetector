@@ -10,6 +10,14 @@ def _call_process(execstr):
 
 
 class Git:
+
+    def __init__(self, *args):
+        execstr = "git " + " ".join(args)
+        (stdout, stderr, retcode) = _call_process(execstr)
+        if retcode != 0:
+            raise sp.CalledProcessError(retcode, execstr, stdout, stderr)
+        return
+
     def __call__(self, *args, **kwargs):
         execstr = "git " + " ".join(args)
         (stdout, stderr, retcode) = _call_process(execstr)
