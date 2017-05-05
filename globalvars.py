@@ -239,6 +239,7 @@ class GlobalVars:
             "285368",   # angussidney
             "158829",   # Thomas Ward
             "294691",   # Mithrandir
+            "203553"    # CalvT
         ],
         socvr_room_id: [
             "1849664",  # Undo
@@ -311,7 +312,8 @@ class GlobalVars:
             "4751173",  # Glorfindel
             "2233391",  # henders
             "4805174",  # kayess
-            "2370483"   # Machavity
+            "2370483",  # Machavity
+            "1873567"   # CalvT
         ]
     }
 
