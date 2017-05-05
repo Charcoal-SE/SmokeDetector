@@ -89,7 +89,7 @@ class Git:
     # status
     @staticmethod
     def status(*args):
-        execcmd = "git " + " ".join(args)
+        execcmd = "git status " + " ".join(args)
         return _call_process(execcmd, return_data=True)[0]
 
     # status
