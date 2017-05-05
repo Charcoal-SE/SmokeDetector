@@ -95,5 +95,5 @@ class Git:
     # status
     @staticmethod
     def status_stripped(*args):
-        execcmd = "git -c color.status=false " + " ".join(args)
+        execcmd = "git -c color.status=false status " + " ".join(args)
         return _call_process(execcmd, return_data=True)[0]
