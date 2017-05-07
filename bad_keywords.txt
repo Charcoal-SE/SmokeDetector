@@ -397,7 +397,6 @@ stamina\Wfuel
 nuviante
 silkalike
 skin\Wroyale
-elysian
 vitaeyes
 neutratone
 luminis
