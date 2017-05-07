@@ -1009,3 +1009,4 @@ health2facts\.(com|org)
 skin4up\.com
 gadgetsbowl\.com
 microadia\.net
+(the)?(celebrity|richest)\W*networth\.(org|com|wiki)
