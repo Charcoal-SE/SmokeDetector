@@ -7,7 +7,8 @@ import requests
 import time
 import json
 if 'windows' in str(platform.platform()).lower():
-    log('warning', "Git support not available in Windows.")
+    # noinspection PyPep8Naming
+    from classes import Git as git
 else:
     from sh import git
 
@@ -16,10 +17,6 @@ else:
 class GitManager:
     @staticmethod
     def add_to_blacklist(**kwargs):
-        if 'windows' in str(platform.platform()).lower():
-            log('warning', "Git support not available in Windows.")
-            return (False, "Git support not available in Windows.")
-
         blacklist = kwargs.get("blacklist", "")
         item_to_blacklist = kwargs.get("item_to_blacklist", "")
         username = kwargs.get("username", "")
@@ -67,8 +64,12 @@ class GitManager:
 
         # Check that we're up-to-date with origin (GitHub)
         git.remote.update()
-        if git("rev-parse", "refs/remotes/origin/master").strip() != git("rev-parse", "master").strip():
-            return (False, "HEAD isn't at tip of origin's master branch")
+        if 'windows' in platform.platform().lower():
+            if git.rev_parse("refs/remotes/origin/master").strip() != git.rev_parse("master").strip():
+                return (False, "HEAD isn't at tip of origin's master branch")
+        else:
+            if git("rev-parse", "refs/remotes/origin/master").strip() != git("rev-parse", "master").strip():
+                return (False, "HEAD isn't at tip of origin's master branch")
 
         # Check that blacklisted_websites.txt isn't modified locally. That could get ugly fast
         if blacklist_file_name in git.status():  # Also ugly
@@ -146,6 +147,7 @@ class GitManager:
 
     @staticmethod
     def current_git_status():
-        if 'windows' in str(platform.platform()).lower():
-            return "Git support not available in Windows."
-        return git("-c", "color.status=false", "status")
+        if 'windows' in platform.platform().lower():
+            return git.status_stripped()
+        else:
+            return git("-c", "color.status=false", "status")

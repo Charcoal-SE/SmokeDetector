@@ -4,15 +4,18 @@
 # This script replaces the original nocrash.sh functionality with a pure Python approach.
 
 import platform
-from helpers import log
 import os
 import subprocess as sp
 from time import sleep
 import sys
 if 'windows' in str(platform.platform()).lower():
-    log('warning', "Git support not yet available in Windows.")
+    # noinspection PyPep8Naming
+    from classes import Git as git
 else:
     from sh import git
+
+# Set the Python Executable based on this being stored - we refer to this later on for subprocess calls.
+PY_EXECUTABLE = sys.executable
 
 # Get environment variables
 ChatExchangeU = os.environ.get('ChatExchangeU')
@@ -42,14 +45,14 @@ while stoprunning is False:
     if count == 0:
         if 'standby' in persistent_arguments:
             switch_to_standby = False  # Necessary for the while loop
-            command = 'python3 ws.py standby'.split()
+            command = (PY_EXECUTABLE + ' ws.py standby').split()
         else:
-            command = 'python3 ws.py first_start'.split()
+            command = (PY_EXECUTABLE + ' ws.py first_start').split()
     else:
         if not ('standby' in persistent_arguments):
-            command = 'python3 ws.py'.split()
+            command = (PY_EXECUTABLE + ' ws.py').split()
         else:
-            command = 'python3 ws.py standby'.split()
+            command = (PY_EXECUTABLE + ' ws.py standby').split()
 
     # noinspection PyBroadException
     try:

@@ -12,7 +12,7 @@ import excepthook
 # noinspection PyCompatibility
 import regex
 import time
-import classes
+from classes import Post, PostParseError
 from helpers import log
 
 
@@ -68,8 +68,8 @@ def check_if_spam(post):
 # noinspection PyMissingTypeHints
 def check_if_spam_json(json_data):
     try:
-        post = classes.Post(json_data=json_data)
-    except classes.PostParseError as err:
+        post = Post(json_data=json_data)
+    except PostParseError as err:
         log('error', 'Parse error {0} when parsing json_data {1!r}'.format(
             err, json_data))
         return False, '', ''
