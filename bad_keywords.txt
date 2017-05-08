@@ -432,3 +432,4 @@ aviqua
 zyacin
 luna\Wgold
 Brain\WAmmo
+katosh\Wand\Wkarisa
