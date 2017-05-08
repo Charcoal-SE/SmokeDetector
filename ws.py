@@ -177,6 +177,12 @@ GlobalVars.specialrooms = [
         "watcher": True
     },
     {
+        "sites": ["stackoverflow.com"],
+        "room": GlobalVars.wrapso.get_room("111347"),
+        "unwantedReasons": [],
+        "watcher": True
+    },
+    {
         "sites": ["parenting.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("388"),
         "unwantedReasons": []
