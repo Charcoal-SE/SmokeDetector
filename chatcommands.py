@@ -3,7 +3,7 @@
 from globalvars import GlobalVars
 from findspam import FindSpam
 # noinspection PyUnresolvedReferences
-from datetime import datetime
+from datetime import datetime, timedelta
 from utcdate import UtcDate
 from apigetpost import api_get_post
 from datahandling import *
@@ -444,7 +444,7 @@ def command_hats(*args, **kwargs):
         daystr = "days" if diff.days != 1 else "day"
         hourstr = "hours" if hours != 1 else "hour"
         minutestr = "minutes" if minutes != 1 else "minute"
-        secondstr = "seconds" if seconds != 1 else "second"
+        secondstr = "seconds" if seconds != 1 else "diff_second"
         return_string = "WE LOVE HATS! Winter Bash will begin in {} {}, {} {}, {} {}, and {} {}.".format(
             diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
     elif wb_end > now:
@@ -725,6 +725,31 @@ def command_stappit(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
     return Response(command_status=True, message=None)
 
 
+def diff_time(diff):
+    def pl(n, s='s'):
+        return '' if n == 1 else s
+    seconds = int(diff.total_seconds())
+    minutes = seconds // 60
+    hours = minutes // 60
+    days = hours // 24
+    if minutes < 1:
+        time_str = '{seconds} second{plural}'.format(seconds=seconds, plural=pl(seconds))
+    elif hours < 1:
+        time_str = '{minutes} minute{plural} '.format(minutes=minutes, plural=pl(minutes))
+        diff = +diff
+        diff.seconds %= 60
+        time_str += diff_time(diff)
+    elif days < 1:
+        time_str = '{hours} hour{plural} '.format(hours=hours, plural=pl(hours))
+        diff = +diff
+        diff.seconds %= 60 * 60
+        time_str += diff_time(diff)
+    else:
+        time_str = '{days} day{plural} '.format(days=days, plural=pl(days))
+        time_str += diff_time(timedelta(seconds=seconds % (60 * 60 * 24)))
+    return time_str
+
+
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_status(*args, **kwargs):
     """
@@ -733,12 +758,10 @@ def command_status(*args, **kwargs):
     """
     now = datetime.utcnow()
     diff = now - UtcDate.startup_utc_date
-    minutes, remainder = divmod(diff.seconds, 60)
-    minute_str = "minutes" if minutes != 1 else "minute"
     return Response(command_status=True,
-                    message='Running since {time} UTC ({minute_count} {plurality})'.format(
+                    message='Running since {time} UTC ({relative})'.format(
                         time=GlobalVars.startup_utc,
-                        minute_count=minutes, plurality=minute_str))
+                        relative=diff_time(diff)))
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
