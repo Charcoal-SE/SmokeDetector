@@ -724,6 +724,7 @@ def command_stappit(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
 
     return Response(command_status=True, message=None)
 
+
 def diff_time(diff):
     def pl(n, s='s'):
         return '' if n == 1 else s
@@ -747,6 +748,7 @@ def diff_time(diff):
         time_str = '{days} day{plural} '.format(days=days, plural=pl(days))
         time_str += diff_time(timedelta(seconds=seconds % (60 * 60 * 24)))
     return time_str
+
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_status(*args, **kwargs):
