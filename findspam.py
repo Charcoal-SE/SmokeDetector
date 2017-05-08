@@ -147,8 +147,9 @@ def has_customer_service(s, site, *args):  # flexible detection of customer serv
                            r"number))").search(s)
     if phrase and site in ["askubuntu.com", "webapps.stackexchange.com", "webmasters.stackexchange.com"]:
         return True, u"Key phrase: *{}*".format(phrase.group(0))
-    business = regex.compile(r"(?i)\b(airlines?|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
-                             r"lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|sage|windows?|yahoo)\b").search(s)
+    business = regex.compile(
+        r"(?i)\b(airlines?|apple|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
+        r"lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|sage|windows?|yahoo)\b").search(s)
     digits = len(regex.compile(r"\d").findall(s))
     if business and digits >= 5:
         keywords = regex.compile(r"(?i)\b(customer|help|care|helpline|reservation|phone|recovery|service|support|"
@@ -270,8 +271,9 @@ def bad_link_text(s, site, *args):   # suspicious text of a hyperlink
                              r"call girl)|(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|"
                              r"repair|recovery)|\b(writing service|essay (writing|tips))", city=FindSpam.city_list)
     links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
-    business = regex.compile(r"(?i)(^| )(airlines?|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
-                             r"lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|sage|windows?|yahoo)($| )")
+    business = regex.compile(
+        r"(?i)(^| )(airlines?|apple|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
+        r"lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|sage|windows?|yahoo)($| )")
     support = regex.compile(r"(?i)(^| )(customer|care|helpline|reservation|phone|recovery|service|support|contact|"
                             r"tech|technical|telephone|number)($| )")
     for link_text in links:
