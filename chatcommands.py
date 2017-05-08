@@ -4,6 +4,7 @@ from globalvars import GlobalVars
 from findspam import FindSpam
 # noinspection PyUnresolvedReferences
 from datetime import datetime
+import datetime as dt
 from utcdate import UtcDate
 from apigetpost import api_get_post
 from datahandling import *
@@ -724,6 +725,25 @@ def command_stappit(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
 
     return Response(command_status=True, message=None)
 
+def diff_time(diff):
+    if diff.minutes < 1:
+        time_str = '{seconds} second{plural}'.format(seconds=diff.seconds, plural='' if diff.seconds == 1 else 's')
+    elif diff.hours < 1:
+        time_str = '{minutes} minute{plural} '.format(minutes=diff.minutes, plural='' if diff.minutes == 1 else 's')
+        diff = +diff
+        diff.minutes = 0
+        time_str += diff_time(diff)
+    elif diff.days < 1:
+        time_str = '{hours} hour{plural} '.format(hours=diff.hours, plural='' if diff.hours == 1 else 's')
+        diff = +diff
+        diff.hours = 0
+        time_str += diff_time(diff)
+    else:
+        time_str = '{days} day{plural} '.format(days=diff.days, plural='' if diff.days == 1 else 's')
+        diff = +diff
+        diff.days = 0
+        time_str += diff_time(diff)
+    return time_str
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_status(*args, **kwargs):
@@ -733,12 +753,10 @@ def command_status(*args, **kwargs):
     """
     now = datetime.utcnow()
     diff = now - UtcDate.startup_utc_date
-    minutes, remainder = divmod(diff.seconds, 60)
-    minute_str = "minutes" if minutes != 1 else "minute"
     return Response(command_status=True,
-                    message='Running since {time} UTC ({minute_count} {plurality})'.format(
+                    message='Running since {time} UTC ({relative})'.format(
                         time=GlobalVars.startup_utc,
-                        minute_count=minutes, plurality=minute_str))
+                        relative=diff_time(diff)))
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
