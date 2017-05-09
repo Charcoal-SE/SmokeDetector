@@ -1020,4 +1020,4 @@ growmewise\.com
 probioticspotency\.com
 supplementvalley\.com
 appleofhealth\.com
-garanntor\.co\.za
+garanntor\.co\.(za|ke)
