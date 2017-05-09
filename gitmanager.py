@@ -75,6 +75,13 @@ class GitManager:
         if blacklist_file_name in git.status():  # Also ugly
             return (False, "{0} is modified locally. This is probably bad.".format(blacklist_file_name))
 
+        # Prevent duplicates
+        with open(blacklist_file_name, "r") as blacklist_file:
+            for lineno, line in enumerate(blacklist_file, 1):
+                if line.rstrip('\n') == item_to_blacklist:
+                    return (False, '{0} already blacklisted on {1} line {2}'.format(
+                        item_to_blacklist, blacklist_file_name, lineno))
+
         # Add item to file
         with open(blacklist_file_name, "a+") as blacklist_file:
             last_character = blacklist_file.read()[-1:]
