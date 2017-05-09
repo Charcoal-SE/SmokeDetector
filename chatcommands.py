@@ -3,7 +3,7 @@
 from globalvars import GlobalVars
 from findspam import FindSpam
 # noinspection PyUnresolvedReferences
-from datetime import datetime, timedelta
+from datetime import datetime
 from utcdate import UtcDate
 from apigetpost import api_get_post
 from datahandling import *
@@ -725,29 +725,28 @@ def command_stappit(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
     return Response(command_status=True, message=None)
 
 
-def diff_time(diff):
-    def pl(n, s='s'):
-        return '' if n == 1 else s
-    seconds = int(diff.total_seconds())
-    minutes = seconds // 60
-    hours = minutes // 60
-    days = hours // 24
-    if minutes < 1:
-        time_str = '{seconds} second{plural}'.format(seconds=seconds, plural=pl(seconds))
-    elif hours < 1:
-        time_str = '{minutes} minute{plural} '.format(minutes=minutes, plural=pl(minutes))
-        diff = +diff
-        diff.seconds %= 60
-        time_str += diff_time(diff)
-    elif days < 1:
-        time_str = '{hours} hour{plural} '.format(hours=hours, plural=pl(hours))
-        diff = +diff
-        diff.seconds %= 60 * 60
-        time_str += diff_time(diff)
-    else:
-        time_str = '{days} day{plural} '.format(days=days, plural=pl(days))
-        time_str += diff_time(timedelta(seconds=seconds % (60 * 60 * 24)))
-    return time_str
+def td_format(td_object):
+    # source: http://stackoverflow.com/a/13756038/5244995
+    seconds = int(td_object.total_seconds())
+    periods = [
+        ('year', 60 * 60 * 24 * 365),
+        ('month', 60 * 60 * 24 * 30),
+        ('day', 60 * 60 * 24),
+        ('hour', 60 * 60),
+        ('minute', 60),
+        ('second', 1)
+    ]
+
+    strings = []
+    for period_name, period_seconds in periods:
+        if seconds > period_seconds:
+            period_value, seconds = divmod(seconds, period_seconds)
+            if period_value == 1:
+                strings.append("%s %s" % (period_value, period_name))
+            else:
+                strings.append("%s %ss" % (period_value, period_name))
+
+    return ", ".join(strings)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -761,7 +760,7 @@ def command_status(*args, **kwargs):
     return Response(command_status=True,
                     message='Running since {time} UTC ({relative})'.format(
                         time=GlobalVars.startup_utc,
-                        relative=diff_time(diff)))
+                        relative=td_format(diff)))
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
