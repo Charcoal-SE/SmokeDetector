@@ -436,3 +436,4 @@ katosh\Wand\Wkarisa
 marine\Wmuscle
 virility\Wex
 (?<=\+)306945683465
+visalia\W(?:skincare|cream)
