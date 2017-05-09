@@ -737,7 +737,7 @@ def td_format(td_object):
         ('second', 1)
     ]
 
-    strings=[]
+    strings = []
     for period_name, period_seconds in periods:
         if seconds > period_seconds:
             period_value, seconds = divmod(seconds, period_seconds)
