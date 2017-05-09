@@ -1020,5 +1020,5 @@ growmewise\.com
 probioticspotency\.com
 supplementvalley\.com
 appleofhealth\.com
-garanntor\.co\.(za|ke)
+garanntor\.(com|ng|co\.(za|ke))
 travianr\.com
