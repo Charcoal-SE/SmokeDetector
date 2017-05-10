@@ -52,6 +52,7 @@ def mock_event(content, event_type, room_id, room_name, user_id, user_name, id=2
 def mock_previous_messages(messages_with_ids):
     global messages
     messages = messages_with_ids
+    GlobalVars.latest_smokedetector_messages[GlobalVars.charcoal_room_id] = [id for id, text in messages_with_ids.items()]
 
 
 # noinspection PyShadowingNames,PyMissingTypeHints
@@ -94,6 +95,13 @@ def test_blame():
     blame_event = mock_event("!!/blame", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(blame_event, client.Client())
     assert reply_value == u"It's [Doorknob 冰](//chat.stackexchange.com/users/59776)'s fault."
+
+
+# noinspection PyMissingTypeHints
+def test_wut():
+    blame_event = mock_event("!!/wut", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(blame_event, client.Client())
+    assert reply_value == u"Whaddya mean, 'wut'? Humans..."
 
 
 # noinspection PyMissingTypeHints
@@ -298,12 +306,24 @@ def test_messages_not_sent():
     assert reply_value == ""
 
 
+# noinspection PyMissingTypeHints
+def test_manual_report():
+    event = mock_event("!!/report http://stackoverflow.com/questions/1000", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "Post 1: Could not find data for this post in the API. It may already have been deleted."
+
+
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"),
                     reason="shouldn't overwrite file")
 def test_true_positive():
     mocked_client = mock_client_get_message(client.Client())
 
     assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
+
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    event = mock_event("sd tp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, mocked_client)
+    assert reply_value == ""
 
     event = mock_event(":1234 tp", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
