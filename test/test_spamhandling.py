@@ -5,7 +5,7 @@ from parsing import get_user_from_url
 import pytest
 import os
 import json
-from classes import Post, PostParseError
+from classes import Post
 
 
 test_data_inputs = []
