@@ -344,7 +344,7 @@ class GlobalVars:
     apiquota = -1
     bodyfetcher = None
     se_sites = []
-    users_chatting = {meta_tavern_room_id: [], charcoal_room_id: [], socvr_room_id: []}
+    users_chatting = {meta_tavern_room_id: [], charcoal_room_id: [], socvr_room_id: [], '111347': []}
     why_data = []
     why_data_allspam = []
     notifications = []
@@ -368,7 +368,8 @@ class GlobalVars:
     else:
         config.read('config.ci')
 
-    latest_smokedetector_messages = {meta_tavern_room_id: [], charcoal_room_id: [], socvr_room_id: []}
+    latest_smokedetector_messages = {meta_tavern_room_id: [], charcoal_room_id: [], socvr_room_id: [],
+                                     '111347': []}
 
     # environ_or_none defined in helpers.py
     bot_name = environ_or_none("SMOKEDETECTOR_NAME") or "SmokeDetector"
