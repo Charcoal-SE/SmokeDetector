@@ -151,7 +151,7 @@ def handle_spam(post, reasons, why):
                         if len(chq_msg_pings) <= 500 else chq_msg[0:500]
                     try:
                         GlobalVars.charcoal_hq.send_message(msg_to_send)
-                    except AttributeError: # In our Test Suite
+                    except AttributeError:  # In our Test Suite
                         pass
                 if not should_reasons_prevent_tavern_posting(reasons) \
                         and post.post_site not in GlobalVars.non_tavern_sites \
@@ -184,7 +184,7 @@ def handle_spam(post, reasons, why):
                         if len(socvr_msg_pings) <= 500 else socvr_msg[0:500]
                     try:
                         GlobalVars.socvr.send_message(msg_to_send)
-                    except AttributeError: # In test Suite
+                    except AttributeError:  # In test Suite
                         pass
 
             for specialroom in GlobalVars.specialrooms:
