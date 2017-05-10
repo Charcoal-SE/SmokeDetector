@@ -149,7 +149,10 @@ def handle_spam(post, reasons, why):
                     chq_msg_pings_ms = prefix_ms + datahandling.append_pings(s, chq_pings)
                     msg_to_send = chq_msg_pings_ms if len(chq_msg_pings_ms) <= 500 else chq_msg_pings \
                         if len(chq_msg_pings) <= 500 else chq_msg[0:500]
-                    GlobalVars.charcoal_hq.send_message(msg_to_send)
+                    try:
+                        GlobalVars.charcoal_hq.send_message(msg_to_send)
+                    except AttributeError:  # In our Test Suite
+                        pass
                 if not should_reasons_prevent_tavern_posting(reasons) \
                         and post.post_site not in GlobalVars.non_tavern_sites \
                         and time.time() >= GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id]:
@@ -179,7 +182,10 @@ def handle_spam(post, reasons, why):
                     socvr_msg_pings_ms = prefix_ms + datahandling.append_pings(s, socvr_pings)
                     msg_to_send = socvr_msg_pings_ms if len(socvr_msg_pings_ms) <= 500 else socvr_msg_pings \
                         if len(socvr_msg_pings) <= 500 else socvr_msg[0:500]
-                    GlobalVars.socvr.send_message(msg_to_send)
+                    try:
+                        GlobalVars.socvr.send_message(msg_to_send)
+                    except AttributeError:  # In test Suite
+                        pass
 
             for specialroom in GlobalVars.specialrooms:
                 sites = specialroom["sites"]

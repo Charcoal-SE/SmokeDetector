@@ -70,6 +70,10 @@ def test_check_if_spam_json(data, match):
     is_spam, reason, _ = check_if_spam_json(data)
     assert match == is_spam
 
+    # Check that a malformed post isn't reported as spam
+    is_spam, reason, _ = check_if_spam_json(None)
+    assert not is_spam
+
 
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"),
                     reason="shouldn't overwrite file")
