@@ -5,7 +5,7 @@ from parsing import get_user_from_url
 import pytest
 import os
 import json
-from classes import Post
+from classes import Post, PostParseError
 
 
 test_data_inputs = []
@@ -69,6 +69,10 @@ def test_check_if_spam(title, body, username, site, match):
 def test_check_if_spam_json(data, match):
     is_spam, reason, _ = check_if_spam_json(data)
     assert match == is_spam
+
+    # Check that a malformed post isn't reported as spam
+    is_spam, reason, _ = check_if_spam_json(None)
+    assert not is_spam
 
 
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"),

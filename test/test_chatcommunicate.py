@@ -307,10 +307,24 @@ def test_messages_not_sent():
 
 
 # noinspection PyMissingTypeHints
-def test_manual_report():
+def test_manual_report(capfd):
     event = mock_event("!!/report http://stackoverflow.com/questions/1000", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(event, client.Client())
     assert reply_value == "Post 1: Could not find data for this post in the API. It may already have been deleted."
+
+    # Test batch reporting
+    event = mock_event("!!/report http://stackoverflow.com/a/1732454 http://stackoverflow.com/q/14405063/189134", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == ''
+
+    # Remove blacklisted users from above reports
+    event = mock_event("!!/rmblu http://stackoverflow.com/users/18936", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    event = mock_event("!!/rmblu http://stackoverflow.com/users/1715740", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+
+    os.remove("whyData.p")
+    os.remove("blacklistedUsers.p")
 
 
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"),
