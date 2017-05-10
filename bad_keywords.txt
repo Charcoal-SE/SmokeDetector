@@ -1,7 +1,7 @@
 baba\W?ji
 fifa.{0,20}coins?
 fifabay
-Long ?Path ?Tool
+Long\W?Path\W?Tool
 writing service
 tosterone
 we (offer|give out) (loans|funds|funding)
