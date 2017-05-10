@@ -277,6 +277,9 @@ for room in GlobalVars.specialrooms:
     if "watcher" in room:
         room["room"].join()
         room["room"].watch_socket(special_room_watcher)
+    if "stdwatcher" in room:
+        room["room"].join()
+        room["room"].watch_socket(watcher)
 
 if "first_start" in sys.argv and GlobalVars.on_master:
     GlobalVars.charcoal_hq.send_message(GlobalVars.s)
