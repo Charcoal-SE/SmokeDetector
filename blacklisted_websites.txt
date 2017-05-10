@@ -1026,3 +1026,4 @@ ampronix\.com
 mylaviveeyeserum\.com
 mahanteymouri\.ir
 onlinehealthmarkets\.com
+anti\Waging[^.]*\.com
