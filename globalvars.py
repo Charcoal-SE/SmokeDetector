@@ -315,6 +315,16 @@ class GlobalVars:
             "4805174",  # kayess
             "2370483",  # Machavity
             "1873567"   # CalvT
+        ],
+        '111347': [
+            "3160466",  # ArtOfCode
+            "1849664",  # Undo
+            "3002139",  # Baum mit Augen
+            "3476191",  # Nobody Nada
+            "5292302",  # Petter Friberg
+            "4688119",  # Ashish Ahuja
+            "4099593",  # Bhargav Rao
+            "1743880"   # Tunaki
         ]
     }
 
