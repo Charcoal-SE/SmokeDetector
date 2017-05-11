@@ -1117,7 +1117,7 @@ def command_whois(message_parts, ev_user_id, wrap2, *args, **kwargs):
                                 wrap2.get_user(admin).last_seen)
                                for admin in admins_not_in_room]
 
-    message = "I am aware of {} {}".format(len(admin_ids, message_parts[1]))
+    message = "I am aware of {} {}".format(len(admin_ids), message_parts[1]))
 
     if admins_in_room_list:
         admins_in_room_list.sort(key=lambda x: x[2])    # Sort by last message (last seen = x[3])
