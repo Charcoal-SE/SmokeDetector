@@ -329,10 +329,25 @@ def test_manual_report(capfd):
 
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"),
                     reason="shouldn't overwrite file")
-def test_true_positive():
+def test_true_positive(capsys):
     mocked_client = mock_client_get_message(client.Client())
 
     assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
+
+    # Test that it properly fails when no messages in history
+    event = mock_event("sd tp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, mocked_client)
+    assert reply_value == "I don't have a record of any messages posted."
+
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    event = mock_event("sd 10tp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, mocked_client)
+    assert reply_value == "I only have a record of 1 of my messages; that's not enough to execute all commands. No commands were executed."
+
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    event = mock_event("sd notacommand-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, mocked_client)
+    assert reply_value == ""
 
     mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
     event = mock_event("sd tp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
