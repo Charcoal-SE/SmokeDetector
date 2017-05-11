@@ -22,6 +22,7 @@ with open("test/data_test_spamhandling.txt", "r", encoding="utf-8") as f:
     ('12 Month Loans quick @ http://www.quick12monthpaydayloans.co.uk/Elimination of collateral pledging', '', '', '', True),
     ('support for yahoo mail 18669786819 @call for helpline number', '', '', '', True),
     ('yahoo email tech support 1 866 978 6819 Yahoo Customer Phone Number ,Shortest Wait', '', '', '', True),
+    ('Not a phone number 192.168.0.1', 'Not a phone number 192.168.0.1', '', '', False),
     ('What is the value of MD5 checksums if the MD5 hash itself could potentially also have been manipulated?', '', '', '', False),
     ('Probability: 6 Dice are rolled. Which is more likely, that you get exactly one 6, or that you get 6 different numbers?', '', '', '', False),
     ('The Challenge of Controlling a Powerful AI', '', 'Serban Tanasa', '', False),
@@ -33,11 +34,17 @@ with open("test/data_test_spamhandling.txt", "r", encoding="utf-8") as f:
     ('Inner workings of muscles', '', '', 'fitness.stackexchange.com', False),
     ('Cannot access http://stackoverflow.com/ with proxy enabled', '', '', 'superuser.com', False),
     ('kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '<p>bbbbbbbbbbbbbbbbbbbbbb</p>', '', 'stackoverflow.com', True),
+    ('This this this this this this this this', '<p>This this this this this this this this</p>', '', 'math.stackexchange.com', True),
+    ('Raw link at end', """<p>This this this this this this this this <a href="http://example.net/harmless/">http://example.org/pesky-reviews-and-scam</a></p>""", '', 'drupal.stackexchange.com', True),
     ('Enhance SD Male Enhancement Supplements', '', '', '', True),
     ('Test case for bad pattern in URL',
      '<p><a href="http://example.com/bad-reviews-canada/" rel="nofollow noreferrer">Cliquez ici</a></p>', '', '', True),
     ('Another test case for bad URL pattern',
      '<p><a href="http://example.net/harmless/">http://example.org/pesky-reviews-and-scam</a></p>', '', '', True),
+    ('Mostly Non-latin', '冰冰冰test冰冰冰冰冰冰冰冰冰冰冰冰 test 冰冰冰冰', '', '', True),
+    ('Pattern Matching product name - 2 words', """<p>vxl male enhancement</p>""", '', '', True),
+    ('Pattern Matching product name - 3 words', """<p>Extends Monster Male Enhancement And Male Penile Enhancement</p>""", '', '', True),
+
 ])
 def test_check_if_spam(title, body, username, site, match):
     # We can't check blacklists/whitelists in tests, so these are set to their default values
