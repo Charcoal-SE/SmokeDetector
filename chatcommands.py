@@ -1075,8 +1075,9 @@ def command_whois(message_parts, ev_user_id, wrap2, *args, **kwargs):
     if message_parts[1] not in list(valid_roles.keys()):
         return Response(command_status=False, message="That is not a user level I can check.")
 
-    ms_route = "https://metasmoke.erwaysoftware.com/api/users/?role={}&key={}".format(valid_roles[message_parts[1]],
-                                                                                      GlobalVars.metasmoke_key)
+    ms_route = "https://metasmoke.erwaysoftware.com/api/users/?role={}&key={}&per_page=100".format(
+        valid_roles[message_parts[1]],
+        GlobalVars.metasmoke_key)
     user_response = requests.get(ms_route)
     user_response.encoding = 'utf-8-sig'
     user_response = user_response.json()
