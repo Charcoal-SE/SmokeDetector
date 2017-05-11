@@ -324,7 +324,9 @@ class GlobalVars:
             "5292302",  # Petter Friberg
             "4688119",  # Ashish Ahuja
             "4099593",  # Bhargav Rao
-            "1743880"   # Tunaki
+            "1743880",  # Tunaki
+            "559745",   # Floern
+            "4687348"   # FelixSFD
         ]
     }
 
