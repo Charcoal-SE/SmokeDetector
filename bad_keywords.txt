@@ -1,7 +1,7 @@
 baba\W?ji
 fifa.{0,20}coins?
 fifabay
-Long ?Path ?Tool
+Long\W?Path\W?Tool
 writing service
 tosterone
 we (offer|give out) (loans|funds|funding)
@@ -209,7 +209,7 @@ borealis\Wcream
 miracle\Wbust
 apex\Wplump
 radley\W(\w+\W)?((hand)?bag|purse)s?
-somabiotix
+soma\W?biotix
 kerave\Whair
 t6\Wblack
 frequensea
@@ -397,7 +397,6 @@ stamina\Wfuel
 nuviante
 silkalike
 skin\Wroyale
-elysian
 vitaeyes
 neutratone
 luminis
@@ -405,3 +404,46 @@ biocore
 testosterone\Wbooster
 visible\Wallure
 eye\Wroyale
+LinkFixer\WAdvanced
+brilladerm
+livalis
+vregx
+apex\Wrush
+nuluxe
+ripped\Wmax
+muscletech
+cynergy\Wtk
+fitness\W?xtreme
+revella\Wlash
+celebrity\W?net\W?worth
+professional\Whacker
+phone\Wremotely
+jolique
+clemix
+nuavive
+evanti
+毕业证
+i\Wdidn't\Wfind\Wthe\Wright\Wsolution\Wfrom\Wthe\Winternet
+レーザーポインター
+ultra\Wpure\Wturmeric
+libidogene
+suisse\Wrenewal
+aviqua
+zyacin
+luna\Wgold
+Brain\WAmmo
+katosh\Wand\Wkarisa
+marine\Wmuscle
+virility\Wex
+(?<=\+)306945683465
+visalia\W(?:skincare|cream)
+tru\W?allure
+tongkat\Wali
+x\Wcbd
+luxurious\Wskin
+ys\Wcream
+profollix
+skin\Wendear
+mirage\Wimperial
+neulift(?:\W?cream)?
+endurance\Wtest\Wx(?:5)?

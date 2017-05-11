@@ -7,7 +7,8 @@ import requests
 import time
 import json
 if 'windows' in str(platform.platform()).lower():
-    log('warning', "Git support not available in Windows.")
+    # noinspection PyPep8Naming
+    from classes import Git as git
 else:
     from sh import git
 
@@ -16,10 +17,6 @@ else:
 class GitManager:
     @staticmethod
     def add_to_blacklist(**kwargs):
-        if 'windows' in str(platform.platform()).lower():
-            log('warning', "Git support not available in Windows.")
-            return (False, "Git support not available in Windows.")
-
         blacklist = kwargs.get("blacklist", "")
         item_to_blacklist = kwargs.get("item_to_blacklist", "")
         username = kwargs.get("username", "")
@@ -27,11 +24,11 @@ class GitManager:
         code_permissions = kwargs.get("code_permissions", False)
 
         # Make sure git credentials are set up
-        if git.config("--global", "--get", "user.name", _ok_code=[0, 1]) == "":
-            return (False, "Tell someone to run `git config --global user.name \"SmokeDetector\"`")
+        if git.config("--get", "user.name", _ok_code=[0, 1]) == "":
+            return (False, "Tell someone to run `git config user.name \"SmokeDetector\"`")
 
-        if git.config("--global", "--get", "user.email", _ok_code=[0, 1]) == "":
-            return (False, "Tell someone to run `git config --global user.email \"smokey@erwaysoftware.com\"`")
+        if git.config("--get", "user.email", _ok_code=[0, 1]) == "":
+            return (False, "Tell someone to run `git config user.email \"smokey@erwaysoftware.com\"`")
 
         if blacklist == "":
             # If we broke the code, and this isn't assigned, error out before doing anything, but do
@@ -67,12 +64,23 @@ class GitManager:
 
         # Check that we're up-to-date with origin (GitHub)
         git.remote.update()
-        if git("rev-parse", "refs/remotes/origin/master").strip() != git("rev-parse", "master").strip():
-            return (False, "HEAD isn't at tip of origin's master branch")
+        if 'windows' in platform.platform().lower():
+            if git.rev_parse("refs/remotes/origin/master").strip() != git.rev_parse("master").strip():
+                return (False, "HEAD isn't at tip of origin's master branch")
+        else:
+            if git("rev-parse", "refs/remotes/origin/master").strip() != git("rev-parse", "master").strip():
+                return (False, "HEAD isn't at tip of origin's master branch")
 
         # Check that blacklisted_websites.txt isn't modified locally. That could get ugly fast
         if blacklist_file_name in git.status():  # Also ugly
             return (False, "{0} is modified locally. This is probably bad.".format(blacklist_file_name))
+
+        # Prevent duplicates
+        with open(blacklist_file_name, "r") as blacklist_file:
+            for lineno, line in enumerate(blacklist_file, 1):
+                if line.rstrip('\n') == item_to_blacklist:
+                    return (False, '{0} already blacklisted on {1} line {2}'.format(
+                        item_to_blacklist, blacklist_file_name, lineno))
 
         # Add item to file
         with open(blacklist_file_name, "a+") as blacklist_file:
@@ -146,6 +154,7 @@ class GitManager:
 
     @staticmethod
     def current_git_status():
-        if 'windows' in str(platform.platform()).lower():
-            return "Git support not available in Windows."
-        return git("-c", "color.status=false", "status")
+        if 'windows' in platform.platform().lower():
+            return git.status_stripped()
+        else:
+            return git("-c", "color.status=false", "status")

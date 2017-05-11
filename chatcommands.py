@@ -444,7 +444,7 @@ def command_hats(*args, **kwargs):
         daystr = "days" if diff.days != 1 else "day"
         hourstr = "hours" if hours != 1 else "hour"
         minutestr = "minutes" if minutes != 1 else "minute"
-        secondstr = "seconds" if seconds != 1 else "second"
+        secondstr = "seconds" if seconds != 1 else "diff_second"
         return_string = "WE LOVE HATS! Winter Bash will begin in {} {}, {} {}, {} {}, and {} {}.".format(
             diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
     elif wb_end > now:
@@ -725,6 +725,30 @@ def command_stappit(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
     return Response(command_status=True, message=None)
 
 
+def td_format(td_object):
+    # source: http://stackoverflow.com/a/13756038/5244995
+    seconds = int(td_object.total_seconds())
+    periods = [
+        ('year', 60 * 60 * 24 * 365),
+        ('month', 60 * 60 * 24 * 30),
+        ('day', 60 * 60 * 24),
+        ('hour', 60 * 60),
+        ('minute', 60),
+        ('second', 1)
+    ]
+
+    strings = []
+    for period_name, period_seconds in periods:
+        if seconds > period_seconds:
+            period_value, seconds = divmod(seconds, period_seconds)
+            if period_value == 1:
+                strings.append("%s %s" % (period_value, period_name))
+            else:
+                strings.append("%s %ss" % (period_value, period_name))
+
+    return ", ".join(strings)
+
+
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_status(*args, **kwargs):
     """
@@ -733,12 +757,10 @@ def command_status(*args, **kwargs):
     """
     now = datetime.utcnow()
     diff = now - UtcDate.startup_utc_date
-    minutes, remainder = divmod(diff.seconds, 60)
-    minute_str = "minutes" if minutes != 1 else "minute"
     return Response(command_status=True,
-                    message='Running since {time} UTC ({minute_count} {plurality})'.format(
+                    message='Running since {time} UTC ({relative})'.format(
                         time=GlobalVars.startup_utc,
-                        minute_count=minutes, plurality=minute_str))
+                        relative=td_format(diff)))
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -1464,7 +1486,9 @@ command_dict = {
     "!!/allnotificationsites": command_allnotifications,
     "!!/allspam": command_allspam,
     "!!/amiprivileged": command_privileged,
+    "!!/amipriviledged": command_privileged,   # TODO: add typo warning?
     "!!/amicodeprivileged": command_code_privileged,
+    "!!/amicodepriviledged": command_code_privileged,   # TODO: add typo warning?
     "!!/apiquota": command_quota,
     "!!/blame": command_blame,
     "!!/block": command_block,

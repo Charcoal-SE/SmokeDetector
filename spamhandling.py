@@ -12,7 +12,7 @@ import excepthook
 # noinspection PyCompatibility
 import regex
 import time
-import classes
+from classes import Post, PostParseError
 from helpers import log
 
 
@@ -68,8 +68,8 @@ def check_if_spam(post):
 # noinspection PyMissingTypeHints
 def check_if_spam_json(json_data):
     try:
-        post = classes.Post(json_data=json_data)
-    except classes.PostParseError as err:
+        post = Post(json_data=json_data)
+    except PostParseError as err:
         log('error', 'Parse error {0} when parsing json_data {1!r}'.format(
             err, json_data))
         return False, '', ''
@@ -98,7 +98,7 @@ def handle_spam(post, reasons, why):
     if why is not None and why != "":
         datahandling.add_why(post.post_site, post.post_id, why)
     if post.is_answer and post.post_id is not None and post.post_id is not "":
-        datahandling.add_post_site_id_link((post.post_id, post.post_site, "answer"), post.post_id)
+        datahandling.add_post_site_id_link((post.post_id, post.post_site, "answer"), post.parent.post_id)
     try:
         post._title = parsing.escape_special_chars_in_title(post.title)
         if post.is_answer:
@@ -149,7 +149,10 @@ def handle_spam(post, reasons, why):
                     chq_msg_pings_ms = prefix_ms + datahandling.append_pings(s, chq_pings)
                     msg_to_send = chq_msg_pings_ms if len(chq_msg_pings_ms) <= 500 else chq_msg_pings \
                         if len(chq_msg_pings) <= 500 else chq_msg[0:500]
-                    GlobalVars.charcoal_hq.send_message(msg_to_send)
+                    try:
+                        GlobalVars.charcoal_hq.send_message(msg_to_send)
+                    except AttributeError:  # In our Test Suite
+                        pass
                 if not should_reasons_prevent_tavern_posting(reasons) \
                         and post.post_site not in GlobalVars.non_tavern_sites \
                         and time.time() >= GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id]:
@@ -179,7 +182,10 @@ def handle_spam(post, reasons, why):
                     socvr_msg_pings_ms = prefix_ms + datahandling.append_pings(s, socvr_pings)
                     msg_to_send = socvr_msg_pings_ms if len(socvr_msg_pings_ms) <= 500 else socvr_msg_pings \
                         if len(socvr_msg_pings) <= 500 else socvr_msg[0:500]
-                    GlobalVars.socvr.send_message(msg_to_send)
+                    try:
+                        GlobalVars.socvr.send_message(msg_to_send)
+                    except AttributeError:  # In test Suite
+                        pass
 
             for specialroom in GlobalVars.specialrooms:
                 sites = specialroom["sites"]

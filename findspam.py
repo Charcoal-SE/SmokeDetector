@@ -83,8 +83,9 @@ def link_at_end(s, site, *args):   # link at end of question, on selected sites
     match = regex.compile(r"(?i)https?://(?:[.A-Za-z0-9-]*/?[.A-Za-z0-9-]*/?|plus\.google\.com/"
                           r"[\w/]*|www\.pinterest\.com/pin/[\d/]*)</a>\s*$").search(s)
     if match and not regex.compile(r"(?i)upload|\b(imgur|yfrog|gfycat|tinypic|sendvid|ctrlv|prntscr|gyazo|youtu\.?be|"
-                                   r"stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|"
-                                   r"(?<!plus\.)google|localhost|ubuntu)\b").search(match.group(0)):
+                                   r"stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|regex101|"
+                                   r"(?<!plus\.)google|localhost|ubuntu|getbootstrap|"
+                                   r"jsfiddle\.net|codepen\.io)\b").search(match.group(0)):
         return True, u"Link at end: {}".format(match.group(0))
     return False, ""
 
@@ -146,8 +147,9 @@ def has_customer_service(s, site, *args):  # flexible detection of customer serv
                            r"number))").search(s)
     if phrase and site in ["askubuntu.com", "webapps.stackexchange.com", "webmasters.stackexchange.com"]:
         return True, u"Key phrase: *{}*".format(phrase.group(0))
-    business = regex.compile(r"(?i)\b(airlines?|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
-                             r"lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|sage|windows?|yahoo)\b").search(s)
+    business = regex.compile(
+        r"(?i)\b(airlines?|apple|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
+        r"lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|sage|windows?|yahoo)\b").search(s)
     digits = len(regex.compile(r"\d").findall(s))
     if business and digits >= 5:
         keywords = regex.compile(r"(?i)\b(customer|help|care|helpline|reservation|phone|recovery|service|support|"
@@ -199,7 +201,7 @@ def pattern_product_name(s, site, *args):
                 "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(tone)?", "Hydroluxe", "Booster",
                 "Serum", "Supplement", "Fuel", "Cream"]
     if site != "math.stackexchange.com" and site != "mathoverflow.net":
-        keywords += [r"E?X[tl\d]?", "Alpha", "Plus", "Prime", "Formula"]
+        keywords += ["E?X[tl\\d]?", "Alpha", "Plus", "Prime", "Formula"]
     keywords = "|".join(keywords)
     three_words = regex.compile(r"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
     two_words = regex.compile(r"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
@@ -208,6 +210,14 @@ def pattern_product_name(s, site, *args):
     elif len(two_words) >= 2 and all_matches_unique(two_words):
         return True, u"Pattern-matching product name *{}*".format(two_words[0][0])
     return False, ""
+
+
+# noinspection PyUnusedLocal,PyMissingTypeHints
+def what_is_this_pharma_title(s, site, *args):   # title "what is this Xxxx?"
+    if regex.compile(r'^what is this (?:[A-Z]|http://)').match(s):
+        return True, u'Title starts with "what is this"'
+    else:
+        return False, ""
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
@@ -261,8 +271,9 @@ def bad_link_text(s, site, *args):   # suspicious text of a hyperlink
                              r"call girl)|(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|"
                              r"repair|recovery)|\b(writing service|essay (writing|tips))", city=FindSpam.city_list)
     links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
-    business = regex.compile(r"(?i)(^| )(airlines?|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
-                             r"lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|sage|windows?|yahoo)($| )")
+    business = regex.compile(
+        r"(?i)(^| )(airlines?|apple|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
+        r"lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|sage|windows?|yahoo)($| )")
     support = regex.compile(r"(?i)(^| )(customer|care|helpline|reservation|phone|recovery|service|support|contact|"
                             r"tech|technical|telephone|number)($| )")
     for link_text in links:
@@ -445,7 +456,7 @@ def mostly_dots(s, site, *args):
 
 # noinspection PyClassHasNoInit
 class FindSpam:
-    with open("bad_keywords.txt", "r") as f:
+    with open("bad_keywords.txt", "r", encoding="utf-8") as f:
         bad_keywords = [line.rstrip() for line in f if len(line.rstrip()) > 0]
 
     bad_keywords_nwb = [  # "nwb" == "no word boundary"
@@ -472,10 +483,10 @@ class FindSpam:
         "(essay|resume|article|dissertation|thesis) ?writing ?service", "satta ?matka", "b.?o.?j.?i.?t.?e.?r"
     ]
 
-    with open("blacklisted_websites.txt", "r") as f:
+    with open("blacklisted_websites.txt", "r", encoding="utf-8") as f:
         blacklisted_websites = [line.rstrip() for line in f if len(line.rstrip()) > 0]
 
-    with open("blacklisted_usernames.txt", "r") as f:
+    with open("blacklisted_usernames.txt", "r", encoding="utf-8") as f:
         blacklisted_usernames = [line.rstrip() for line in f if len(line.rstrip()) > 0]
 
     # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
@@ -561,7 +572,7 @@ class FindSpam:
         r"ptvsports\d+.com",
         r"youth\Wserum",
         r"buyviewsutube",
-        r"(?:celebrity-?)?net-?worth"
+        r"(?:celebrity-?)?net-?worth", "richestcelebrities"
     ]
     city_list = [
         "Agra", "Amritsar", "Bangalore", "Bhopal", "Chandigarh",
@@ -569,9 +580,11 @@ class FindSpam:
         "Ghaziabad", "Hyderabad", "Jaipur", "Jalandhar", "Kolkata",
         "Ludhiana", "Mumbai", "Madurai", "Patna", "Portland",
         "Rajkot", "Surat", "Telangana", "Udaipur", "Uttarakhand",
-        "Noida", "Pune",
+        "Noida", "Pune", "Rohini",
         # yes, these aren't cities but...
         "India", "Pakistan",
+        # buyabans.com spammer uses creative variations
+        "Sri Lanka", "Srilanka", "Srilankan",
     ]
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
@@ -585,6 +598,10 @@ class FindSpam:
         {'method': pattern_product_name, 'all': True, 'sites': [], 'reason': "pattern-matching product name in {}",
          'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True,
          'answers': False, 'max_rep': 4, 'max_score': 1},
+        # "What is this" - pharma title
+        {'method': what_is_this_pharma_title, 'all': True, 'sites': [], 'reason': 'Pattern-matching title',
+         'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
+         'answers': False, 'max_rep': 1, 'max_score': 1},
         # gratis at the beginning of post, SoftwareRecs is exempt
         {'regex': r"(?is)^.{0,200}\bgratis\b$", 'all': True,
          'sites': ['softwarerecs.stackexchange.com'], 'reason': "bad keyword in {}", 'title': True, 'body': True,
@@ -693,6 +710,10 @@ class FindSpam:
          'sites': ["scifi.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        {'regex': r"holocaust\W(witnesses|belief)", 'all': False,
+         'sites': ["skeptics.stackexchange.com", "history.stackexchange.com"],
+         'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False,
+         'body_summary': False, 'max_rep': 1, 'max_score': 0},
         #
         # Category: Suspicious links
         # Blacklisted sites
@@ -774,14 +795,14 @@ class FindSpam:
         # Shortened URL near the end of question
         {'regex': r"(?is)://(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|"
                   r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
-                  r"surl\.cn\.com)/.{0,200}$", 'all': True,
+                  r"surl\.cn\.com|clkmein\.com|bluenik\.com)/.{0,200}$", 'all': True,
          'sites': ["superuser.com", "askubuntu.com"], 'reason': "shortened URL in {}", 'title': False, 'body': True,
          'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1,
          'max_score': 0},
         # Shortened URL in an answer
         {'regex': r"(?is)://(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|"
                   r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
-                  r"surl\.cn\.com)/",
+                  r"surl\.cn\.com|clkmein\.com|bluenik\.com)/",
          'all': True, 'sites': ["codegolf.stackexchange.com"], 'reason': "shortened URL in {}", 'title': False,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False,
          'max_rep': 1, 'max_score': 0},

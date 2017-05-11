@@ -17,7 +17,7 @@ class Post:
     _body_is_summary = False
     _is_answer = False
     _owner_rep = 1
-    _parent = None
+    _parent = None  # If this is not none, then _is_answer should be 'true' because there would then be a parent post.
     _post_id = ""
     _post_score = 0
     _post_site = ""

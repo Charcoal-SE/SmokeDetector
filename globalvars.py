@@ -164,6 +164,8 @@ class GlobalVars:
             "211021",   # Henders
             "255290",   # Gypsy Spellweaver
             "64521",    # CalvT
+            "165474",   # Hyper Neutrino
+            "169252",   # Cai
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
@@ -237,6 +239,8 @@ class GlobalVars:
             "285368",   # angussidney
             "158829",   # Thomas Ward
             "294691",   # Mithrandir
+            "203553",   # CalvT
+            "289971"    # Hyper Neutrino
         ],
         socvr_room_id: [
             "1849664",  # Undo
@@ -309,14 +313,27 @@ class GlobalVars:
             "4751173",  # Glorfindel
             "2233391",  # henders
             "4805174",  # kayess
-            "2370483"   # Machavity
+            "2370483",  # Machavity
+            "1873567"   # CalvT
+        ],
+        '111347': [
+            "3160466",  # ArtOfCode
+            "1849664",  # Undo
+            "3002139",  # Baum mit Augen
+            "3476191",  # Nobody Nada
+            "5292302",  # Petter Friberg
+            "4688119",  # Ashish Ahuja
+            "4099593",  # Bhargav Rao
+            "1743880",  # Tunaki
+            "559745",   # Floern
+            "4687348"   # FelixSFD
         ]
     }
 
     code_privileged_users = None
 
     smokeDetector_user_id = {charcoal_room_id: "120914", meta_tavern_room_id: "266345",
-                             socvr_room_id: "3735529"}
+                             socvr_room_id: "3735529", '111347': '3735529'}
 
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
 
@@ -339,7 +356,7 @@ class GlobalVars:
     apiquota = -1
     bodyfetcher = None
     se_sites = []
-    users_chatting = {meta_tavern_room_id: [], charcoal_room_id: [], socvr_room_id: []}
+    users_chatting = {meta_tavern_room_id: [], charcoal_room_id: [], socvr_room_id: [], '111347': []}
     why_data = []
     why_data_allspam = []
     notifications = []
@@ -363,7 +380,8 @@ class GlobalVars:
     else:
         config.read('config.ci')
 
-    latest_smokedetector_messages = {meta_tavern_room_id: [], charcoal_room_id: [], socvr_room_id: []}
+    latest_smokedetector_messages = {meta_tavern_room_id: [], charcoal_room_id: [], socvr_room_id: [],
+                                     '111347': []}
 
     # environ_or_none defined in helpers.py
     bot_name = environ_or_none("SMOKEDETECTOR_NAME") or "SmokeDetector"

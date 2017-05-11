@@ -177,6 +177,12 @@ GlobalVars.specialrooms = [
         "watcher": True
     },
     {
+        "sites": ["stackoverflow.com"],
+        "room": GlobalVars.wrapso.get_room("111347"),
+        "unwantedReasons": [],
+        "stdwatcher": True
+    },
+    {
         "sites": ["parenting.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("388"),
         "unwantedReasons": []
@@ -235,6 +241,11 @@ GlobalVars.specialrooms = [
         "sites": ["crafts.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("38932"),
         "unwantedReasons": []
+    },
+    {
+        "sites": ["graphicdesign.stackexchange.com"],
+        "room": GlobalVars.wrap.get_room("56223"),
+        "unwantedReasons": []
     }
 ]
 
@@ -266,6 +277,9 @@ for room in GlobalVars.specialrooms:
     if "watcher" in room:
         room["room"].join()
         room["room"].watch_socket(special_room_watcher)
+    if "stdwatcher" in room:
+        room["room"].join()
+        room["room"].watch_socket(watcher)
 
 if "first_start" in sys.argv and GlobalVars.on_master:
     GlobalVars.charcoal_hq.send_message(GlobalVars.s)

@@ -65,7 +65,7 @@ class Metasmoke:
     def check_last_pingtime():
         threading.Timer(30, Metasmoke.check_last_pingtime).start()
         now = datetime.utcnow()
-        errlog = open('errorLogs.txt', 'a')
+        errlog = open('errorLogs.txt', 'a', encoding="utf-8")
         if GlobalVars.metasmoke_last_ping_time is None:
             errlog.write("\nINFO/WARNING: SmokeDetector has not received a ping yet, forcing SmokeDetector restart "
                          "to try and reset the connection states.\n%s UTC\n" % now)

@@ -3,7 +3,7 @@ from parsing import *
 import pytest
 
 test_data_inputs = []
-with open("test/data_test_parsing.txt", "r") as f:
+with open("test/data_test_parsing.txt", "r", encoding="utf-8") as f:
     # noinspection PyRedeclaration
     test_data_inputs = f.readlines()
 

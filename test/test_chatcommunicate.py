@@ -52,6 +52,7 @@ def mock_event(content, event_type, room_id, room_name, user_id, user_name, id=2
 def mock_previous_messages(messages_with_ids):
     global messages
     messages = messages_with_ids
+    GlobalVars.latest_smokedetector_messages[GlobalVars.charcoal_room_id] = [id for id, text in messages_with_ids.items()]
 
 
 # noinspection PyShadowingNames,PyMissingTypeHints
@@ -94,6 +95,13 @@ def test_blame():
     blame_event = mock_event("!!/blame", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     watcher(blame_event, client.Client())
     assert reply_value == u"It's [Doorknob 冰](//chat.stackexchange.com/users/59776)'s fault."
+
+
+# noinspection PyMissingTypeHints
+def test_wut():
+    blame_event = mock_event("!!/wut", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(blame_event, client.Client())
+    assert reply_value == u"Whaddya mean, 'wut'? Humans..."
 
 
 # noinspection PyMissingTypeHints
@@ -298,12 +306,53 @@ def test_messages_not_sent():
     assert reply_value == ""
 
 
+# noinspection PyMissingTypeHints
+def test_manual_report(capfd):
+    event = mock_event("!!/report http://stackoverflow.com/questions/1000", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == "Post 1: Could not find data for this post in the API. It may already have been deleted."
+
+    # Test batch reporting
+    event = mock_event("!!/report http://stackoverflow.com/a/1732454 http://stackoverflow.com/q/14405063/189134", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert reply_value == ''
+
+    # Remove blacklisted users from above reports
+    event = mock_event("!!/rmblu http://stackoverflow.com/users/18936", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+    event = mock_event("!!/rmblu http://stackoverflow.com/users/1715740", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, client.Client())
+
+    os.remove("whyData.p")
+    os.remove("blacklistedUsers.p")
+
+
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"),
                     reason="shouldn't overwrite file")
-def test_true_positive():
+def test_true_positive(capsys):
     mocked_client = mock_client_get_message(client.Client())
 
     assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
+
+    # Test that it properly fails when no messages in history
+    event = mock_event("sd tp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, mocked_client)
+    assert reply_value == "I don't have a record of any messages posted."
+
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    event = mock_event("sd 10tp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, mocked_client)
+    assert reply_value == "I only have a record of 1 of my messages; that's not enough to execute all commands. No commands were executed."
+
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    event = mock_event("sd notacommand-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, mocked_client)
+    assert reply_value == ""
+
+    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
+    event = mock_event("sd tp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
+    watcher(event, mocked_client)
+    assert reply_value == ""
 
     event = mock_event(":1234 tp", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
     mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
