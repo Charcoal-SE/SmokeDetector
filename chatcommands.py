@@ -1137,7 +1137,7 @@ def command_whois(message_parts, ev_user_id, wrap2, *args, **kwargs):
         message = message[:-2] + ". "
         message += "None of them are currently in this room. Other users in this room might be able to help you."
 
-    return Response(command_status=False, message=message)
+    return Response(command_status=True, message=message)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
