@@ -406,7 +406,6 @@ visible\Wallure
 eye\Wroyale
 LinkFixer\WAdvanced
 brilladerm
-livalis
 vregx
 apex\Wrush
 nuluxe
@@ -446,6 +445,6 @@ profollix
 skin\Wendear
 mirage\Wimperial
 neulift(?:\W?cream)?
-endurance\Wtest\Wx(?:5)?
+endurance\Wtest\Wx5?
 radiant\Wbloom
-epiclear\Wpro
+epiclear\W?pro
