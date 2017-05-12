@@ -1073,7 +1073,10 @@ def command_whois(message_parts, ev_user_id, wrap2, *args, **kwargs):
                    "admins": "admin",
                    "codeadmins": "code_admin"}
     if message_parts[1] not in list(valid_roles.keys()):
-        return Response(command_status=False, message="That is not a user level I can check.")
+        return Response(
+            command_status=False,
+            message="That is not a user level I can check. "
+            "I know about {0}".format(", ".join(valid_roles.keys())))
 
     ms_route = "https://metasmoke.erwaysoftware.com/api/users/?role={}&key={}&per_page=100".format(
         valid_roles[message_parts[1]],
