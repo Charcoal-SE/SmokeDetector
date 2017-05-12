@@ -448,3 +448,4 @@ neulift(?:\W?cream)?
 endurance\Wtest\Wx5?
 radiant\Wbloom
 epiclear\W?pro
+nuvega\W?lash
