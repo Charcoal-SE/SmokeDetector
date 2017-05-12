@@ -446,6 +446,6 @@ profollix
 skin\Wendear
 mirage\Wimperial
 neulift(?:\W?cream)?
-endurance\Wtest\Wx(?:5)?
+endurance\Wtest\Wx5?
 radiant\Wbloom
 epiclear\W?pro
