@@ -447,3 +447,4 @@ skin\Wendear
 mirage\Wimperial
 neulift(?:\W?cream)?
 endurance\Wtest\Wx(?:5)?
+radiant\Wbloom
