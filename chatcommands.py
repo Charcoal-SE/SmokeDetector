@@ -267,10 +267,11 @@ def command_blacklist_help(*args, **kwargs):
     Returns a string which explains the usage of the new blacklist commands.
     :return: A string
     """
-    return Response(command_status=True, message="The !!/blacklist command has been deprecated. "
-                                                 "Please use !!/blacklist-website, !!/blacklist-username "
-                                                 "or !!/blacklist-keyword. Remember to escape dots "
-                                                 "in URLs using \\.")
+    return Response(command_status=True,
+                    message="The !!/blacklist command has been deprecated. "
+                    "Please use !!/blacklist-website, !!/blacklist-username,"
+                    "!!/blacklist-keyword, or perhaps !!/watch-keyword. "
+                    "Remember to escape dots in URLs using \\.")
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -322,6 +323,36 @@ def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, 
     result = GitManager.add_to_blacklist(
         blacklist="keyword",
         item_to_blacklist=keyword_pattern,
+        username=ev_user_name,
+        chat_profile_link=chat_user_profile_link,
+        code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
+    )
+    return Response(command_status=result[0], message=result[1])
+
+
+# noinspection PyIncorrectDocstring,PyUnusedLocal
+def command_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
+    """
+    Adds a string to the watched keywords list and commits/pushes to GitHub
+    :param message_parts:
+    :param ev_user_name:
+    :param ev_room:
+    :param :ev_user_id:
+    :return: A Response
+    """
+
+    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=wrap2.host, id=str(ev_user_id))
+    now = datetime.now().strftime('%s')
+    keyword_pattern = " ".join(message_parts[1:])
+    # noinspection PyProtectedMember
+    try:
+        regex.compile(keyword_pattern)
+    except regex._regex_core.error:
+        return Response(command_status=False, message="An invalid keyword pattern was provided, not watching.")
+    watchlist_entry = "\t".join([now, ev_user_name, keyword_pattern])
+    result = GitManager.add_to_blacklist(
+        blacklist="watch_keyword",
+        item_to_blacklist=watchlist_entry,
         username=ev_user_name,
         chat_profile_link=chat_user_profile_link,
         code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
@@ -1582,6 +1613,8 @@ command_dict = {
     "!!/blacklist-website": command_blacklist_website,
     "!!/blacklist-keyword": command_blacklist_keyword,
     "!!/blacklist-username": command_blacklist_username,
+    "!!/watch-keyword": command_watch_keyword,
+    # "!!/unwatch-keyword": command_unwatch_keyword,  # TODO
     "!!/commands": command_help,
     "!!/coffee": command_coffee,
     "!!/errorlogs": command_errorlogs,
