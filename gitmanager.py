@@ -6,6 +6,7 @@ from globalvars import GlobalVars
 import requests
 import time
 import json
+import regex
 if 'windows' in str(platform.platform()).lower():
     # noinspection PyPep8Naming
     from classes import Git as git
@@ -51,6 +52,9 @@ class GitManager:
         elif blacklist == "username":
             blacklist_file_name = "blacklisted_usernames.txt"
             ms_search_option = "&username_is_regex=1&username="
+        elif blacklist == "watch_keyword":
+            blacklist_file_name = "watched_keywords.txt"
+            ms_search_option = "&body_is_regex=1&body="
         else:
             # Just checking all bases, but blacklist_file_name *might* have empty value
             # if we don't address it here.
@@ -76,9 +80,14 @@ class GitManager:
             return (False, "{0} is modified locally. This is probably bad.".format(blacklist_file_name))
 
         # Prevent duplicates
+        if blacklist_file_name in ['watched_keywords.txt']:
+            item_regex = regex.compile(
+                r'\t\L<item>$', item=[item_to_blacklist.split('\t', 2)[2]])
+        else:
+            item_regex = regex.compile(r'^\L<item>$', item=[item_to_blacklist])
         with open(blacklist_file_name, "r") as blacklist_file:
             for lineno, line in enumerate(blacklist_file, 1):
-                if line.rstrip('\n') == item_to_blacklist:
+                if item_regex.search(line):
                     return (False, '{0} already blacklisted on {1} line {2}'.format(
                         item_to_blacklist, blacklist_file_name, lineno))
 
