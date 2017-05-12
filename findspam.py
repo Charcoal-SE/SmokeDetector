@@ -459,6 +459,19 @@ class FindSpam:
     with open("bad_keywords.txt", "r", encoding="utf-8") as f:
         bad_keywords = [line.rstrip() for line in f if len(line.rstrip()) > 0]
 
+    with open("watched_keywords.txt", "r", encoding="utf-8") as f:
+        watched_keywords = dict()
+        for lineno, line in enumerate(f, 1):
+            if regex.compile('^\s*(?:#|$)').match(line):
+                continue
+            try:
+                when, by_whom, what = line.rstrip().split('\t')
+            except ValueError as err:
+                log('error', '{0}:{1}:{2}'.format(
+                    'watched_keywords.txt', lineno, err))
+                continue
+            watched_keywords[what] = {'when': when, 'by': by_whom}
+
     bad_keywords_nwb = [  # "nwb" == "no word boundary"
         u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",
         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
@@ -594,6 +607,11 @@ class FindSpam:
         {'regex': r"(?is)\b({})\b|{}".format("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1},
+        # The small list of *potentially* bad keywords, for titles and posts
+        {'regex': r'(?is)\b({})\b'.format('|'.join(watched_keywords.keys())),
+         'reason': 'potentially bad keyword in {}',
+         'all': True, 'sites': [], 'title': True, 'body': True, 'username': True,
+         'stripcodeblocks': False, 'body_summary': True, 'max_rep': 30, 'max_score': 1},
         # Pattern-matching product name: three keywords in a row at least once, or two in a row at least twice
         {'method': pattern_product_name, 'all': True, 'sites': [], 'reason': "pattern-matching product name in {}",
          'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True,
