@@ -28,8 +28,8 @@ pip3 install -r --user user_requirements.txt --upgrade
 
 Next, copy `config.sample` to a new file called `config`, and edit the values required.
 
-To run, use `nocrash.py` or `python3 nocrash.py` (preferably in a daemon-able mode, like a `screen` session.)
-You can also use `python ws.py`, but then SmokeDetector will be shut down after 6 hours; when running from `nocrash.py`, it will be restarted. (This is to be sure that closed websockets, if any, are reopened)
+To run, use `python3 nocrash.py` (preferably in a daemon-able mode, like a `screen` session.)
+You can also use `python3 ws.py`, but then SmokeDetector will be shut down after 6 hours; when running from `nocrash.py`, it will be restarted. (This is to be sure that closed websockets, if any, are reopened)
 
 You can run `. ChatExchange/setp.sh` to set local environment variables so that you don't have to log in every time.
 
