@@ -728,7 +728,7 @@ class FindSpam:
          'sites': ["scifi.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        {'regex': r"holocaust\W(witnesses|belief)", 'all': False,
+        {'regex': r"holocaust\W(witnesses|belie(f|vers?)|denier)", 'all': False,
          'sites': ["skeptics.stackexchange.com", "history.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
