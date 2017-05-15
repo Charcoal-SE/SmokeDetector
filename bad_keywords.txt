@@ -452,3 +452,4 @@ nuvega\W?lash
 (?:<=\+)2348032214238
 bio\W?rocket\W?blast
 ideal\Wvitality
+lorevere
