@@ -266,20 +266,23 @@ DeletionWatcher.update_site_id_list()
 
 ws = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
 ws.send("155-questions-active")
-GlobalVars.charcoal_hq.join()
-GlobalVars.tavern_on_the_meta.join()
-GlobalVars.socvr.join()
 
+GlobalVars.charcoal_hq.join()
 GlobalVars.charcoal_hq.watch_socket(watcher)
-GlobalVars.tavern_on_the_meta.watch_socket(watcher)
-GlobalVars.socvr.watch_socket(watcher)
-for room in GlobalVars.specialrooms:
-    if "watcher" in room:
-        room["room"].join()
-        room["room"].watch_socket(special_room_watcher)
-    if "stdwatcher" in room:
-        room["room"].join()
-        room["room"].watch_socket(watcher)
+
+if 'charcoal-hq-only' not in sys.argv:
+    GlobalVars.tavern_on_the_meta.join()
+    GlobalVars.socvr.join()
+    GlobalVars.tavern_on_the_meta.watch_socket(watcher)
+    GlobalVars.socvr.watch_socket(watcher)
+
+    for room in GlobalVars.specialrooms:
+        if "watcher" in room:
+            room["room"].join()
+            room["room"].watch_socket(special_room_watcher)
+        if "stdwatcher" in room:
+            room["room"].join()
+            room["room"].watch_socket(watcher)
 
 if "first_start" in sys.argv and GlobalVars.on_master:
     GlobalVars.charcoal_hq.send_message(GlobalVars.s)
