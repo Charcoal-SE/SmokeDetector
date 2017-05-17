@@ -464,6 +464,5 @@ ultimate\Walpha
 nulift
 tone\Wexcel
 alasche
-progenta
 progentra
 vital\Wkhai
