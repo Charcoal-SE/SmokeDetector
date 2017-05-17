@@ -23,3 +23,4 @@
 1494945223	tripleee	menpowersupplement\.com
 1494995515	tripleee	allumiderm
 1494996512	tripleee	health-forall\.com
+1494997469	tripleee	careinfo\.in
