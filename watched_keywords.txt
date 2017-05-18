@@ -52,3 +52,4 @@
 1495112147	tripleee	mp3fashion\.net
 1495116312	tripleee	tech\W?and\W?music\W?teacher
 1495120084	tripleee	newyorkessays\.com
+1495126640	quartata	amasnigeria.com
