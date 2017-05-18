@@ -30,3 +30,13 @@
 1495005325	tripleee	onlinesupplementworld\.com
 1495006129	tripleee	alvenaandduaderma\.com
 1495006487	tripleee	ahealthadvisory\.com
+1495007435	tripleee	healthbuzzer\.com
+1495011338	tripleee	revella\Wbrow
+1495012866	tripleee	business2business\.co\.in
+1495015700	tripleee	0800\W098\W8424
+1495015814	tripleee	drozdietfacts\.com
+1495016534	tripleee	buyessay\.co
+1495021397	tripleee	giftboxtoday\.co\.nf
+1495028387	tripleee	takebonus\.com
+1495031512	tripleee	cut-urls\.com
+1495081499	tripleee	imoble\.com
