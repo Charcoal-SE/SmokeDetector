@@ -466,3 +466,4 @@ tone\Wexcel
 alasche
 progentra
 vital\Wkhai
+metabo\Wslimax
