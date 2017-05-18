@@ -10,10 +10,8 @@
 1494844966	tripleee	09545968049
 1494845249	tripleee	menshealthcme\.com
 1494846228	ArtOfCode	stampallyourclothes\.com
-1494850886	tripleee	fortraxitone
 1494909411	tripleee	8002905189
 1494909623	tripleee	213\W*986\W?6680
-1494915118	tripleee	mp3songsclub\.com
 1494915647	tripleee	goo\.gl/dCH6UH
 1494929269	tripleee	thewellnesscorner\.com
 1494929399	tripleee	optisolbusiness\.com
@@ -40,3 +38,10 @@
 1495028387	tripleee	takebonus\.com
 1495031512	tripleee	cut-urls\.com
 1495081499	tripleee	imoble\.com
+1495082580	tripleee	vital\Wnutra
+1495082912	tripleee	realsupplementfacts\.com
+1495083202	tripleee	getessayscheap\.com
+1495085157	tripleee	anavar
+1495087353	tripleee	yeezyboost350v2uk\.com
+1495088052	tripleee	musclech3mistry\.org
+1495091607	tripleee	realperfecthealth\.com
