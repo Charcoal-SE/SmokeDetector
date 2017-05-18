@@ -460,6 +460,7 @@ herbal\Wvirility\Wmax
 natures\Wtrim
 true\Wtesto\Wmax
 biogenex
+fortraxitone
 ultimate\Walpha
 nulift
 tone\Wexcel
