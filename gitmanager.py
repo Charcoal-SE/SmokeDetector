@@ -97,6 +97,23 @@ class GitManager:
                         return (False, '{0} already blacklisted on {1} line {2}'.format(
                             item_to_blacklist, blacklist_file_name, lineno))
 
+            # Remove from watch if watched
+            write_lines = False
+            if blacklist_file_name not in ['watched_keywords.txt']:
+                watch_lines = []
+                watch_regex = regex.compile(
+                    r'\t\L<item>$', item=[item_to_blacklist.split('\t', 2)[2]])
+                with open('watched_keywords.txt', 'r') as watch_file:
+                    for lineno, line in enumerate(watch_file, 1):
+                        if watch_regex.search(line):
+                            write_lines = True
+                            continue
+                        watch_lines.append(line)
+                if write_lines:
+                    with open('watched_keywords.txt', 'w') as watch_file:
+                        for line in watch_lines:
+                            watch_file.write(line)
+
             # Add item to file
             with open(blacklist_file_name, "a+") as blacklist_file:
                 last_character = blacklist_file.read()[-1:]
@@ -112,6 +129,9 @@ class GitManager:
             git.reset("HEAD")
 
             git.add(blacklist_file_name)
+            if write_lines:
+                git.add('watched_keywords.txt')
+
             git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
                        "-m", u"Auto blacklist of {0} by {1} --autopull".format(item_to_blacklist, username))
 
