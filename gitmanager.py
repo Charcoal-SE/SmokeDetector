@@ -102,7 +102,7 @@ class GitManager:
             if blacklist_file_name not in ['watched_keywords.txt']:
                 watch_lines = []
                 watch_regex = regex.compile(
-                    r'\t\L<item>$', item=[item_to_blacklist.split('\t', 2)[2]])
+                    r'\t\L<item>$', item=[item_to_blacklist])
                 with open('watched_keywords.txt', 'r') as watch_file:
                     for lineno, line in enumerate(watch_file, 1):
                         if watch_regex.search(line):
