@@ -1,4 +1,3 @@
-^l(?:ol){2,}$
 ^troll$
 tejveer ?iq
 ser?vice pemanas?
