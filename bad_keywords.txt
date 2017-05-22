@@ -450,7 +450,7 @@ radiant\Wbloom
 epiclear\W?pro
 nuvega\W?lash
 (?:<=\+)2348032214238
-bio\W?rocket\W?blast
+bio\W?rocket
 ideal\Wvitality
 lorevere
 5g\W?male
@@ -476,4 +476,3 @@ no2\Wcore
 evelina\Whydrofirm
 headlock\Wmuscle
 biogen\W?xt
-bio\Wrocket\Wmuscle
