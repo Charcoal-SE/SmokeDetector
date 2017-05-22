@@ -26,12 +26,6 @@ def should_whitelist_prevent_alert(user_url, reasons):
 
 
 # noinspection PyMissingTypeHints
-def all_reasons_experimental(reasons):
-    reasons_comparison = [r for r in set(reasons) if r not in GlobalVars.experimental_reasons]
-    return len(reasons_comparison) == 0
-
-
-# noinspection PyMissingTypeHints
 def should_reasons_prevent_tavern_posting(reasons):
     reasons_comparison = [r for r in set(reasons) if r not in GlobalVars.non_tavern_reasons]
     return len(reasons_comparison) == 0
@@ -144,23 +138,21 @@ def handle_spam(post, reasons, why):
         log('debug', GlobalVars.parser.unescape(s).encode('ascii', errors='replace'))
         if time.time() >= GlobalVars.blockedTime["all"]:
             datahandling.append_to_latest_questions(post.post_site, post.post_id, post.title)
-            # Post all reports to CHQ
-            if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
-                chq_pings = datahandling.get_user_names_on_notification_list("stackexchange.com",
-                                                                             GlobalVars.charcoal_room_id,
-                                                                             post.post_site,
-                                                                             GlobalVars.wrap)
-                chq_msg = prefix + s
-                chq_msg_pings = prefix + datahandling.append_pings(s, chq_pings)
-                chq_msg_pings_ms = prefix_ms + datahandling.append_pings(s, chq_pings)
-                msg_to_send = chq_msg_pings_ms if len(chq_msg_pings_ms) <= 500 else chq_msg_pings \
-                    if len(chq_msg_pings) <= 500 else chq_msg[0:500]
-                try:
-                    GlobalVars.charcoal_hq.send_message(msg_to_send)
-                except AttributeError:  # In our Test Suite
-                    pass
-            # Only post reports with specific reasons to other rooms
-            if not all_reasons_experimental():
+            if reason not in GlobalVars.experimental_reasons:
+                if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
+                    chq_pings = datahandling.get_user_names_on_notification_list("stackexchange.com",
+                                                                                 GlobalVars.charcoal_room_id,
+                                                                                 post.post_site,
+                                                                                 GlobalVars.wrap)
+                    chq_msg = prefix + s
+                    chq_msg_pings = prefix + datahandling.append_pings(s, chq_pings)
+                    chq_msg_pings_ms = prefix_ms + datahandling.append_pings(s, chq_pings)
+                    msg_to_send = chq_msg_pings_ms if len(chq_msg_pings_ms) <= 500 else chq_msg_pings \
+                        if len(chq_msg_pings) <= 500 else chq_msg[0:500]
+                    try:
+                        GlobalVars.charcoal_hq.send_message(msg_to_send)
+                    except AttributeError:  # In our Test Suite
+                        pass
                 if not should_reasons_prevent_tavern_posting(reasons) \
                         and post.post_site not in GlobalVars.non_tavern_sites \
                         and time.time() >= GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id]:
@@ -179,7 +171,6 @@ def handle_spam(post, reasons, why):
                                                      post_url, msg_to_send, GlobalVars.tavern_on_the_meta))
                     t_check_websocket.daemon = True
                     t_check_websocket.start()
-
                 if post.post_site == "stackoverflow.com" and reason not in GlobalVars.non_socvr_reasons \
                         and time.time() >= GlobalVars.blockedTime[GlobalVars.socvr_room_id]:
                     socvr_pings = datahandling.get_user_names_on_notification_list("stackoverflow.com",
@@ -196,21 +187,21 @@ def handle_spam(post, reasons, why):
                     except AttributeError:  # In test Suite
                         pass
 
-                for specialroom in GlobalVars.specialrooms:
-                    sites = specialroom["sites"]
-                    if post.post_site in sites and reason not in specialroom["unwantedReasons"]:
-                        room = specialroom["room"]
-                        if room.id not in GlobalVars.blockedTime or time.time() >= GlobalVars.blockedTime[room.id]:
-                            room_site = room._client.host
-                            room_id = int(room.id)
-                            room_pings = datahandling.get_user_names_on_notification_list(room_site, room_id,
-                                                                                          post.post_site, room._client)
-                            room_msg = prefix + s
-                            room_msg_pings = prefix + datahandling.append_pings(s, room_pings)
-                            room_msg_pings_ms = prefix_ms + datahandling.append_pings(s, room_pings)
-                            msg_to_send = room_msg_pings_ms if len(room_msg_pings_ms) <= 500 else room_msg_pings \
-                                if len(room_msg_pings) <= 500 else room_msg[0:500]
-                            specialroom["room"].send_message(msg_to_send)
+            for specialroom in GlobalVars.specialrooms:
+                sites = specialroom["sites"]
+                if post.post_site in sites and reason not in specialroom["unwantedReasons"]:
+                    room = specialroom["room"]
+                    if room.id not in GlobalVars.blockedTime or time.time() >= GlobalVars.blockedTime[room.id]:
+                        room_site = room._client.host
+                        room_id = int(room.id)
+                        room_pings = datahandling.get_user_names_on_notification_list(room_site, room_id,
+                                                                                      post.post_site, room._client)
+                        room_msg = prefix + s
+                        room_msg_pings = prefix + datahandling.append_pings(s, room_pings)
+                        room_msg_pings_ms = prefix_ms + datahandling.append_pings(s, room_pings)
+                        msg_to_send = room_msg_pings_ms if len(room_msg_pings_ms) <= 500 else room_msg_pings \
+                            if len(room_msg_pings) <= 500 else room_msg[0:500]
+                        specialroom["room"].send_message(msg_to_send)
     except:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         excepthook.uncaught_exception(exc_type, exc_obj, exc_tb)
