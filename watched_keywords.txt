@@ -64,3 +64,4 @@
 1495432167	tripleee	avanti\W?skin
 1495433038	tripleee	drozhealthblog\.com
 1495436456	tripleee	admit-card\.co\.in
+1495437072	tripleee	auvela\W?cream
