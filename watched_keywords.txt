@@ -62,3 +62,4 @@
 1495427162	tripleee	ultraburn
 1495432007	tripleee	tophealthydiet\.com
 1495432167	tripleee	avanti\W?skin
+1495433038	tripleee	drozhealthblog\.com
