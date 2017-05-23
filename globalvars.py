@@ -63,7 +63,11 @@ class GlobalVars:
     information on what privileges are and what is expected of privileged users.
     """.strip().replace("\n", " ")
 
-    experimental_reasons = []  # Don't widely report these
+    experimental_reasons = [  # Don't widely report these
+        "potentially bad keyword in answer",
+        "potentially bad keyword in body",
+        "potentially bad keyword in title",
+        "potentially bad keyword in username"]
     non_socvr_reasons = []    # Don't report to SOCVR
     non_tavern_reasons = [    # Don't report in the Tavern
         "all-caps body",
