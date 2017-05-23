@@ -85,24 +85,28 @@ class GitManager:
             if blacklist_file_name in git.status():  # Also ugly
                 return (False, "{0} is modified locally. This is probably bad.".format(blacklist_file_name))
 
-            # Prevent duplicates
+            # Set up parameters for watch vs blacklist
             if blacklist_file_name in ['watched_keywords.txt']:
-                item_regex = regex.compile(
-                    r'\t\L<item>$', item=[item_to_blacklist.split('\t', 2)[2]])
+                op = 'watch'
+                item = item_to_blacklist.split('\t', 2)[2]
+                item_regex = regex.compile(r'\t\L<item>$', item=[item])
             else:
-                item_regex = regex.compile(r'^\L<item>$', item=[item_to_blacklist])
+                op = 'blacklist'
+                item = item_to_blacklist
+                item_regex = regex.compile(r'^\L<item>$', item=[item])
+
+            # Prevent duplicates
             with open(blacklist_file_name, "r") as blacklist_file:
                 for lineno, line in enumerate(blacklist_file, 1):
                     if item_regex.search(line):
-                        return (False, '{0} already blacklisted on {1} line {2}'.format(
-                            item_to_blacklist, blacklist_file_name, lineno))
+                        return (False, '{0} already {1}ed on {2} line {3}'.format(
+                            item, op, blacklist_file_name, lineno))
 
             # Remove from watch if watched
             write_lines = False
             if blacklist_file_name not in ['watched_keywords.txt']:
                 watch_lines = []
-                watch_regex = regex.compile(
-                    r'\t\L<item>$', item=[item_to_blacklist])
+                watch_regex = regex.compile(r'\t\L<item>$', item=[item])
                 with open('watched_keywords.txt', 'r') as watch_file:
                     for lineno, line in enumerate(watch_file, 1):
                         if watch_regex.search(line):
@@ -133,7 +137,7 @@ class GitManager:
                 git.add('watched_keywords.txt')
 
             git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
-                       "-m", u"Auto blacklist of {0} by {1} --autopull".format(item_to_blacklist, username))
+                       "-m", u"Auto {0} of {1} by {2} --autopull".format(op, item, username))
 
             if code_permissions:
                 git.checkout("master")
@@ -147,13 +151,13 @@ class GitManager:
                 if GlobalVars.github_username is None or GlobalVars.github_password is None:
                     return (False, "Tell someone to set a GH password")
 
-                payload = {"title": u"{0}: Blacklist {1}".format(username, item_to_blacklist),
-                           "body": u"[{0}]({1}) requests the blacklist of the {2} {3}. See the Metasmoke search [here]"
-                                   "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{4}{5})\n"
-                                   u"<!-- METASMOKE-BLACKLIST-{6} {3} -->".format(
-                                       username, chat_profile_link, blacklist,
-                                       item_to_blacklist, ms_search_option,
-                                       item_to_blacklist.replace(" ", "+"),
+                payload = {"title": u"{0}: {1} {2}".format(username, op.title(), item),
+                           "body": u"[{0}]({1}) requests the {2} of the {3} {4}. See the Metasmoke search [here]"
+                                   "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6})\n"
+                                   u"<!-- METASMOKE-BLACKLIST-{7} {4} -->".format(
+                                       username, chat_profile_link, op, blacklist,
+                                       item, ms_search_option,
+                                       item.replace(" ", "+"),
                                        blacklist.upper()),
                            "head": branch,
                            "base": "master"}
@@ -189,7 +193,7 @@ class GitManager:
         finally:
             cls.gitmanager_lock.release()
 
-        return (True, "Blacklisted {0}".format(item_to_blacklist))
+        return (True, "{0}ed {1}".format(op.title(), item))
 
     @staticmethod
     def current_git_status():
