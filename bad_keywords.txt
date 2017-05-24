@@ -482,3 +482,4 @@ metabo\Wmatrix
 nouveaulift
 leanfire\Wxt
 l'?etoile\W(anti|cream)
+fungaway
