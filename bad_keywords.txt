@@ -484,3 +484,4 @@ leanfire\Wxt
 l'?etoile\W(anti|cream)
 fungaway
 (?<=/)vivax(?=[-/<])
+nitrobuild
