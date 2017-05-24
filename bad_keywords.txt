@@ -163,7 +163,7 @@ genbrain
 teeth lightening
 xtest\W(muscle|reviews?)
 inteligen
-natural\Wslim\Wlife
+natural\W?slim\W?life
 test\Wx\W360
 newlifeherbalclinic
 male\W?x\W?pro
@@ -486,4 +486,3 @@ fungaway
 (?<=/)vivax(?=[-/<])
 nitrobuild
 8167873816
-Natural\W?Slim\W?Life
