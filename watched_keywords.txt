@@ -100,3 +100,4 @@
 1495640287	Mithrandir	projectwriters\.ng
 1495706434	Glorfindel	paperio\.org
 1495719032	Mithrandir	ihaxit\.us
+1495719250	Mithrandir	New\W?Paypal\W?Money\W?Adder
