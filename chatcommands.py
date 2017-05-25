@@ -459,6 +459,13 @@ def command_wut(*args, **kwargs):
     :return: A string
     """
     return Response(command_status=True, message="Whaddya mean, 'wut'? Humans...")
+    
+def command_plop(*args, **kwargs):
+    """
+    Returns a string equal to "Plop!" (This is a joke command)
+    :return: A string
+    """
+    return Response(command_status=True, message="Plop!")
 
 
 """ Uncomment when Winterbash comes back
