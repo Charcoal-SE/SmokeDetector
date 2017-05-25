@@ -108,6 +108,10 @@ def watcher(ev, wrap2):
             t_check_websocket.start()
     message_parts = re.split('[ ,]+', content_source)
 
+    if len(message_parts) > 4:
+        log('debug', 'Ignoring what seems to be a discussion (message too long)')
+        return
+
     ev_user_name = ev.data["user_name"]
     ev_user_link = "//chat.{host}/users/{user_id}".format(host=wrap2.host, user_id=ev.user.id)
     if ev_user_name != "SmokeDetector":
