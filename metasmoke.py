@@ -86,6 +86,8 @@ class Metasmoke:
         if isinstance(message, Iterable):
             if "message" in message:
                 GlobalVars.charcoal_hq.send_message(message['message'])
+            elif "exit" in message:
+                os._exit(message["exit"])
             elif "blacklist" in message:
                 datahandling.add_blacklisted_user((message['blacklist']['uid'], message['blacklist']['site']),
                                                   "metasmoke", message['blacklist']['post'])
