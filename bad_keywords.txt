@@ -490,3 +490,4 @@ nitrobuild
 877\W?7788969
 doctor\W?zanza
 enduro\Wforce
+(?<=/)right\Wpick(?=[-/<])
