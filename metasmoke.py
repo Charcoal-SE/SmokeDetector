@@ -246,6 +246,11 @@ class Metasmoke:
                         GlobalVars.metasmoke_last_ping_time = datetime.now()  # Otherwise the ping watcher will exit(10)
 
                         GlobalVars.charcoal_hq.send_message(GlobalVars.location + " received failover signal.")
+
+                if 'shutdown' in response:
+                    if response['shutdown']:
+                        os._exit(6)
+
             except Exception:
                 pass
 
