@@ -493,3 +493,4 @@ enduro\Wforce
 (?<=/)right\Wpick(?=[-/<])
 power\Wboost\Wxi
 pinoy\W?tambayan
+crossroad\W?elf
