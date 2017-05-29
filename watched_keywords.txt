@@ -121,3 +121,4 @@
 1496040286	tripleee	jackedmuscleextremeadvice\.com
 1496042212	tripleee	pre-workoutideas\.com
 1496048159	tripleee	krasa\W?(anti|cream|skin)
+1496052391	tripleee	skincare\W?panama
