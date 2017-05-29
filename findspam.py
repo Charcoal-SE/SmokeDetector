@@ -519,11 +519,12 @@ class FindSpam:
         r"tes(tos)?terone|nitric(storm|oxide)|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|slimbody|"
         r"moist|lefair|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone)[\w-]*?\.(co|net|org|in(\W|fo)|us|"
         r"wordpress|blogspot|tumblr|webs\.)",
-        r"(moving|\w{10}spell|[\w-]{3}password|\w{5}deal|\w{5}facts|\w\dfacts|\Btoyshop|[\w-]{5}cheats|[\w-]{6}girls|"
-        r"clothing|shoes(inc)?|cheatcode|cracks|credits|-wallet|refunds|truo?ng|viet|trang)\.(co|net|org|in(\W|fo)|us)",
+        r"(moving|\w{10}spell|[\w-]{3}password|(?!greatfurniture)\w{5}deal|(?!nfood)\w{5}facts|\w\dfacts|\Btoyshop|"
+        r"[\w-]{5}cheats|[\w-]{6}girls|clothing|shoes(inc)?|cheatcode|cracks|credits|-wallet|refunds|truo?ng|viet|"
+        r"trang)\.(co|net|org|in(\W|fo)|us)",
         r"(health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
         r"(//|www\.)healthy?\w{5,}\.com",
-        r"https?://[\w-.]\.repair\W", r"https?://[\w-.]{10,}\.(top|help)\W", r'https?://[\w-.]*-[\w-.]*\.pro[/"<]',
+        r"https?://[\w-.]\.repair\W", r"https?://[\w-.]{10,}\.(top|help)\W",
         r"filefix(er)?\.com", r"\.page\.tl\W", r"infotech\.(com|net|in)",
         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
@@ -550,10 +551,10 @@ class FindSpam:
         r"(vitamin|dive|hike|love|strong|ideal|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|"
         r"prostate)[\w-]*?health[\w-]*?\.(co|net|org|in(\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in(\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
-        r"(acai|advance|aging|alpha|beauty|belle|beta|biotic|body|boost|brain(?!tree)|burn|colon|[^s]cream|creme|"
-        r"derma|ecig|eye|face(?!book)|fat|formula|geniu[sx]|grow|hair|health|herbal|ideal|luminous|male|medical|"
-        r"medicare|muscle|natura|no2|nutrition|optimal|pearl|perfect|phyto|probio|rejuven|revive|ripped|rx|scam|"
-        r"shred|skin|slim|super|testo|[/.]top|trim|[/.]try|ultra|ultra|vapor|vita|weight|wellness|xplode|yoga|"
+        r"(acai|advance|aging|alpha|beauty|belle|beta|biotic|body|boost(?! solution)|brain(?!tree)|burn|colon|"
+        r"[^s]cream|creme|derma|ecig|eye|face(?!book)|fat|formula|geniu[sx]|grow|hair|health|herbal|ideal|luminous|"
+        r"male|medical|medicare|muscle|natura|no2|nutrition|optimal|pearl|perfect|phyto|probio|rejuven|revive|ripped|"
+        r"rx|scam|shred|skin|slim|super|testo|[/.]top|trim|[/.]try|ultra|ultra|vapor|vita|weight|wellness|xplode|yoga|"
         r"young|youth)[\w]{0,20}(about|advi[sc]|assess|blog|brazil|canada|care|center|centre|chat|complex(?!ity)|"
         r"congress|consult|critic|critique|cure|denmark|discussion|doctor|dose|essence|essential|extract|fact|formula|"
         r"france|funct?ion|genix|guide|help|idea|info|jacked|l[iy]ft|mag|market|max|mexico|norway|nutrition|order|plus|"
