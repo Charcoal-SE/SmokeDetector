@@ -146,3 +146,4 @@
 1496202353	tripleeee	coffeemud\.org
 1496202977	tripleeee	healthy\W?soft\W?cream
 1496203212	tripleeee	cricutlab\.com
+1496208664	tripleee	glycematefacts\.com
