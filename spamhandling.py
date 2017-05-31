@@ -138,7 +138,7 @@ def handle_spam(post, reasons, why):
         log('debug', GlobalVars.parser.unescape(s).encode('ascii', errors='replace'))
         if time.time() >= GlobalVars.blockedTime["all"]:
             datahandling.append_to_latest_questions(post.post_site, post.post_id, post.title)
-            if reason not in GlobalVars.experimental_reasons:
+            if set(reasons).intersection(GlobalVars.experimental_reasons) != set(reasons):
                 if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
                     chq_pings = datahandling.get_user_names_on_notification_list("stackexchange.com",
                                                                                  GlobalVars.charcoal_room_id,
