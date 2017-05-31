@@ -166,3 +166,4 @@
 1496233993	tripleee	clippingimagespecialist\.com
 1496244466	tripleee	bollyquick\.blogspot\.\w+
 1496251310	tripleee	microsoftofficesupport\.org
+1496262181	Mithrandir	termsbux\.com
