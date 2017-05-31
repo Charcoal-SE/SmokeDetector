@@ -144,3 +144,4 @@
 1496162113	quartata	lotustutorial\.com
 1496202185	tripleee	accuwebhosting\.com
 1496202353	tripleeee	coffeemud\.org
+1496202977	tripleeee	healthy\W?soft\W?cream
