@@ -167,3 +167,4 @@
 1496244466	tripleee	bollyquick\.blogspot\.\w+
 1496251310	tripleee	microsoftofficesupport\.org
 1496262181	Mithrandir	termsbux\.com
+1496290923	tripleee	vitalieskincaretry\.com
