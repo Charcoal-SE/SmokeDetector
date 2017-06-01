@@ -126,7 +126,6 @@
 1496056127	tripleee	60167569133
 1496056308	tripleee	iranmember\.com
 1496056593	Mithrandir	lg916\.com
-1496056796	tripleee	follicore
 1496059924	Mithrandir	ipharmascience\.com
 1496060934	tripleee	mysupplementsera\.com
 1496086229	JoErNanO	boxoffice\Wmojo

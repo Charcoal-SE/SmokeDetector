@@ -512,3 +512,4 @@ freecustomwritings\.com
 cyberservices\.com
 rejuvaessence
 power\W?testro
+follicore
