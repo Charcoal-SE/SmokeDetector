@@ -154,6 +154,7 @@ def check_socket_connections():
        (datetime.utcnow() - GlobalVars.tavern_on_the_meta.last_activity).total_seconds() >= 60:
         os._exit(10)
 
+
 threading.Timer(90, check_socket_connections).start()
 
 # If you change these sites, please also update the wiki at
