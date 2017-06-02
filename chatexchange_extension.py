@@ -1,10 +1,13 @@
 # coding=utf-8
 from ChatExchange.chatexchange import client, rooms
 import sys
+from datetime import datetime
 from helpers import log
 
 
 class Room(rooms.Room):
+    last_activity = datetime.utcnow()
+
     def send_message(self, text, length_check=True):
         if "no-chat" in sys.argv:
             log('info', "Blocked message to {0} due to no-chat setting: {1}".format(self.name, text))
@@ -21,7 +24,12 @@ class Room(rooms.Room):
             return
 
         if "charcoal-hq-only" not in sys.argv or int(self.id) == 11540:
-            return rooms.Room.watch_socket(self, event_callback)
+            def on_activity(activity):
+                self.last_activity = datetime.utcnow()
+                for event in self._events_from_activity(activity, self.id):
+                    event_callback(event, self._client)
+
+            return self._client._br.watch_room_socket(self.id, on_activity)
         else:
             log('info', "Blocked socket connection to {0} due to charcoal-hq-only setting".format(self.name))
 

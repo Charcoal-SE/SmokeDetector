@@ -147,6 +147,15 @@ tavern_id = GlobalVars.meta_tavern_room_id
 GlobalVars.tavern_on_the_meta = GlobalVars.wrapm.get_room(tavern_id)
 GlobalVars.socvr = GlobalVars.wrapso.get_room(GlobalVars.socvr_room_id)
 
+
+def check_socket_connections():
+    if (datetime.utcnow() - GlobalVars.charcoal_hq.last_activity).total_seconds() >= 60 or\
+       (datetime.utcnow() - GlobalVars.socvr.last_activity).total_seconds() >= 60 or\
+       (datetime.utcnow() - GlobalVars.tavern_on_the_meta.last_activity).total_seconds() >= 60:
+        os._exit(10)
+
+threading.Timer(90, check_socket_connections).start()
+
 # If you change these sites, please also update the wiki at
 # https://github.com/Charcoal-SE/SmokeDetector/wiki/Chat-Rooms
 
