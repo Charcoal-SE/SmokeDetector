@@ -86,6 +86,8 @@ class Metasmoke:
         if isinstance(message, Iterable):
             if "message" in message:
                 GlobalVars.charcoal_hq.send_message(message['message'])
+            elif "exit" in message:
+                os._exit(message["exit"])
             elif "blacklist" in message:
                 datahandling.add_blacklisted_user((message['blacklist']['uid'], message['blacklist']['site']),
                                                   "metasmoke", message['blacklist']['post'])
@@ -246,6 +248,11 @@ class Metasmoke:
                         GlobalVars.metasmoke_last_ping_time = datetime.now()  # Otherwise the ping watcher will exit(10)
 
                         GlobalVars.charcoal_hq.send_message(GlobalVars.location + " received failover signal.")
+
+                if 'shutdown' in response:
+                    if response['shutdown']:
+                        os._exit(6)
+
             except Exception:
                 pass
 

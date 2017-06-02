@@ -29,7 +29,7 @@ command_aliases = {
     "vand": "tp-",
     "v": "tp-",
     "n": "naa-",
-    u"\U0001F4A9": "tp-",
+    u"\U0001F4A9": "naa-",
 }
 
 
@@ -76,120 +76,124 @@ def special_room_watcher(ev, wrap2):
             t_check_websocket.start()
 
 
-# noinspection PyMissingTypeHints
+# noinspection PyMissingTypeHints,PyBroadException
 def watcher(ev, wrap2):
-    if ev.type_id != 1 and ev.type_id != 2:
-        return
-    if ev.type_id == 2 and (wrap2.host + str(ev.message.id)) not in GlobalVars.listen_to_these_if_edited:
-        return
-
-    print_chat_message(ev)
-
-    ev_room = str(ev.data["room_id"])
-    ev_user_id = str(ev.data["user_id"])
-    ev_room_name = ev.data["room_name"].encode('utf-8')
-    if ev.type_id == 2:
-        ev.message = Message(ev.message.id, wrap2)
-    content_source = ev.message.content_source
-    message_id = ev.message.id
-    if is_smokedetector_message(ev_user_id, ev_room):
-        add_latest_message_lock.acquire()
-        add_latest_smokedetector_message(ev_room, message_id)
-        add_latest_message_lock.release()
-
-        post_site_id = fetch_post_id_and_site_from_msg_content(content_source)
-        post_url = fetch_post_url_from_msg_content(content_source)
-        if post_site_id is not None and (ev_room == GlobalVars.meta_tavern_room_id or
-                                         ev_room == GlobalVars.socvr_room_id):
-            t_check_websocket = Thread(name="DeletionWatcher check",
-                                       target=DeletionWatcher.check_if_report_was_deleted,
-                                       args=(post_site_id, post_url, ev.message))
-            t_check_websocket.daemon = True
-            t_check_websocket.start()
-    message_parts = re.split('[ ,]+', content_source)
-
-    ev_user_name = ev.data["user_name"]
-    ev_user_link = "//chat.{host}/users/{user_id}".format(host=wrap2.host, user_id=ev.user.id)
-    if ev_user_name != "SmokeDetector":
-        GlobalVars.users_chatting[ev_room].append((ev_user_name, ev_user_link))
-
-    shortcut_messages = []
-    if message_parts[0].lower() == "sd":
-        message_parts = preprocess_shortcut_command(content_source).split(" ")
-        latest_smokedetector_messages = GlobalVars.latest_smokedetector_messages[ev_room]
-        commands = message_parts[1:]
-        if len(latest_smokedetector_messages) == 0:
-            ev.message.reply("I don't have a record of any messages posted.")
+    try:
+        if ev.type_id != 1 and ev.type_id != 2:
             return
-        if len(commands) > len(latest_smokedetector_messages):
-            ev.message.reply("I only have a record of {} of my messages; that's not enough to execute all commands. "
-                             "No commands were executed.".format(len(latest_smokedetector_messages)))
+        if ev.type_id == 2 and (wrap2.host + str(ev.message.id)) not in GlobalVars.listen_to_these_if_edited:
             return
-        for i in range(0, len(commands)):
-            shortcut_messages.append(u":{message} {command_name}".format(
-                message=latest_smokedetector_messages[-(i + 1)], command_name=commands[i]))
-        reply = ""
-        amount_none = 0
-        amount_skipped = 0
-        amount_unrecognized = 0
-        length = len(shortcut_messages)
-        for i in range(0, length):
-            current_message = shortcut_messages[i]
-            if length > 1:
-                reply += str(i + 1) + ". "
-            reply += u"[{0}] ".format(current_message.split(" ")[0])
-            if current_message.split(" ")[1] != "-":
-                result = handle_commands(content_lower=current_message.lower(),
-                                         message_parts=current_message.split(" "),
-                                         ev_room=ev_room,
-                                         ev_room_name=ev_room_name,
-                                         ev_user_id=ev_user_id,
-                                         ev_user_name=ev_user_name,
-                                         wrap2=wrap2,
-                                         content=current_message,
-                                         message_id=message_id)
-                if not result:    # avoiding errors due to unprivileged commands
-                    result = Response(command_status=True, message=None)
-                if result.command_status and result.message:
-                    reply += result.message + os.linesep
-                if result.command_status is False:
-                    reply += "<unrecognized command>" + os.linesep
-                    amount_unrecognized += 1
-                if result.message is None and result.command_status is not False:
-                    reply += "<processed without return value>" + os.linesep
-                    amount_none += 1
 
-            else:
-                reply += "<skipped>" + os.linesep
-                amount_skipped += 1
-        if amount_unrecognized == length:
-            add_to_listen_if_edited(wrap2.host, message_id)
-        if amount_none + amount_skipped + amount_unrecognized == length:
+        print_chat_message(ev)
+
+        ev_room = str(ev.data["room_id"])
+        ev_user_id = str(ev.data["user_id"])
+        ev_room_name = ev.data["room_name"].encode('utf-8')
+        if ev.type_id == 2:
+            ev.message = Message(ev.message.id, wrap2)
+        content_source = ev.message.content_source
+        message_id = ev.message.id
+        if is_smokedetector_message(ev_user_id, ev_room):
+            add_latest_message_lock.acquire()
+            add_latest_smokedetector_message(ev_room, message_id)
+            add_latest_message_lock.release()
+
+            post_site_id = fetch_post_id_and_site_from_msg_content(content_source)
+            post_url = fetch_post_url_from_msg_content(content_source)
+            if post_site_id is not None and (ev_room == GlobalVars.meta_tavern_room_id or
+                                             ev_room == GlobalVars.socvr_room_id):
+                t_check_websocket = Thread(name="DeletionWatcher check",
+                                           target=DeletionWatcher.check_if_report_was_deleted,
+                                           args=(post_site_id, post_url, ev.message))
+                t_check_websocket.daemon = True
+                t_check_websocket.start()
+        message_parts = re.split('[ ,]+', content_source)
+
+        ev_user_name = ev.data["user_name"]
+        ev_user_link = "//chat.{host}/users/{user_id}".format(host=wrap2.host, user_id=ev.user.id)
+        if ev_user_name != "SmokeDetector":
+            GlobalVars.users_chatting[ev_room].append((ev_user_name, ev_user_link))
+
+        shortcut_messages = []
+        if message_parts[0].lower() == "sd":
+            message_parts = preprocess_shortcut_command(content_source).split(" ")
+            latest_smokedetector_messages = GlobalVars.latest_smokedetector_messages[ev_room]
+            commands = message_parts[1:]
+            if len(latest_smokedetector_messages) == 0:
+                ev.message.reply("I don't have a record of any messages posted.")
+                return
+            if len(commands) > len(latest_smokedetector_messages):
+                ev.message.reply("I only have a record of {} of my messages; that's not enough to execute all "
+                                 "commands. No commands were executed.".format(len(latest_smokedetector_messages)))
+                return
+            for i in range(0, len(commands)):
+                shortcut_messages.append(u":{message} {command_name}".format(
+                    message=latest_smokedetector_messages[-(i + 1)], command_name=commands[i]))
             reply = ""
+            amount_none = 0
+            amount_skipped = 0
+            amount_unrecognized = 0
+            length = len(shortcut_messages)
+            for i in range(0, length):
+                current_message = shortcut_messages[i]
+                if length > 1:
+                    reply += str(i + 1) + ". "
+                reply += u"[{0}] ".format(current_message.split(" ")[0])
+                if current_message.split(" ")[1] != "-":
+                    result = handle_commands(content_lower=current_message.lower(),
+                                             message_parts=current_message.split(" "),
+                                             ev_room=ev_room,
+                                             ev_room_name=ev_room_name,
+                                             ev_user_id=ev_user_id,
+                                             ev_user_name=ev_user_name,
+                                             wrap2=wrap2,
+                                             content=current_message,
+                                             message_id=message_id)
+                    if not result:    # avoiding errors due to unprivileged commands
+                        result = Response(command_status=True, message=None)
+                    if result.command_status and result.message:
+                        reply += result.message + os.linesep
+                    if result.command_status is False:
+                        reply += "<unrecognized command>" + os.linesep
+                        amount_unrecognized += 1
+                    if result.message is None and result.command_status is not False:
+                        reply += "<processed without return value>" + os.linesep
+                        amount_none += 1
 
-        reply = reply.strip()
-        if reply != "":
-            message_with_reply = u":{} {}".format(message_id, reply)
-            if len(message_with_reply) <= 500 or "\n" in reply:
-                ev.message.reply(reply, False)
-    else:
-        result = handle_commands(content_lower=content_source.lower(),
-                                 message_parts=message_parts,
-                                 ev_room=ev_room,
-                                 ev_room_name=ev_room_name,
-                                 ev_user_id=ev_user_id,
-                                 ev_user_name=ev_user_name,
-                                 wrap2=wrap2,
-                                 content=content_source,
-                                 message_id=message_id)
-        if result.message:
-            if wrap2.host + str(message_id) in GlobalVars.listen_to_these_if_edited:
-                GlobalVars.listen_to_these_if_edited.remove(wrap2.host + str(message_id))
-            message_with_reply = u":{} {}".format(message_id, result.message)
-            if len(message_with_reply) <= 500 or "\n" in result.message:
-                ev.message.reply(result.message, False)
-        if result.command_status is False:
-            add_to_listen_if_edited(wrap2.host, message_id)
+                else:
+                    reply += "<skipped>" + os.linesep
+                    amount_skipped += 1
+            if amount_unrecognized == length:
+                add_to_listen_if_edited(wrap2.host, message_id)
+            if amount_none + amount_skipped + amount_unrecognized == length:
+                reply = ""
+
+            reply = reply.strip()
+            if reply != "":
+                message_with_reply = u":{} {}".format(message_id, reply)
+                if len(message_with_reply) <= 500 or "\n" in reply:
+                    ev.message.reply(reply, False)
+        else:
+            result = handle_commands(content_lower=content_source.lower(),
+                                     message_parts=message_parts,
+                                     ev_room=ev_room,
+                                     ev_room_name=ev_room_name,
+                                     ev_user_id=ev_user_id,
+                                     ev_user_name=ev_user_name,
+                                     wrap2=wrap2,
+                                     content=content_source,
+                                     message_id=message_id)
+            if result.message:
+                if wrap2.host + str(message_id) in GlobalVars.listen_to_these_if_edited:
+                    GlobalVars.listen_to_these_if_edited.remove(wrap2.host + str(message_id))
+                message_with_reply = u":{} {}".format(message_id, result.message)
+                if len(message_with_reply) <= 500 or "\n" in result.message:
+                    ev.message.reply(result.message, False)
+            if result.command_status is False:
+                add_to_listen_if_edited(wrap2.host, message_id)
+    except:
+        # Return empty value because we blew up.
+        return
 
 
 # noinspection PyMissingTypeHints

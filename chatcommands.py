@@ -267,10 +267,11 @@ def command_blacklist_help(*args, **kwargs):
     Returns a string which explains the usage of the new blacklist commands.
     :return: A string
     """
-    return Response(command_status=True, message="The !!/blacklist command has been deprecated. "
-                                                 "Please use !!/blacklist-website, !!/blacklist-username "
-                                                 "or !!/blacklist-keyword. Remember to escape dots "
-                                                 "in URLs using \\.")
+    return Response(command_status=True,
+                    message="The !!/blacklist command has been deprecated. "
+                    "Please use !!/blacklist-website, !!/blacklist-username,"
+                    "!!/blacklist-keyword, or perhaps !!/watch-keyword. "
+                    "Remember to escape dots in URLs using \\.")
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -322,6 +323,36 @@ def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, 
     result = GitManager.add_to_blacklist(
         blacklist="keyword",
         item_to_blacklist=keyword_pattern,
+        username=ev_user_name,
+        chat_profile_link=chat_user_profile_link,
+        code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
+    )
+    return Response(command_status=result[0], message=result[1])
+
+
+# noinspection PyIncorrectDocstring,PyUnusedLocal
+def command_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
+    """
+    Adds a string to the watched keywords list and commits/pushes to GitHub
+    :param message_parts:
+    :param ev_user_name:
+    :param ev_room:
+    :param :ev_user_id:
+    :return: A Response
+    """
+
+    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=wrap2.host, id=str(ev_user_id))
+    now = datetime.now().strftime('%s')
+    keyword_pattern = " ".join(message_parts[1:])
+    # noinspection PyProtectedMember
+    try:
+        regex.compile(keyword_pattern)
+    except regex._regex_core.error:
+        return Response(command_status=False, message="An invalid keyword pattern was provided, not watching.")
+    watchlist_entry = "\t".join([now, ev_user_name, keyword_pattern])
+    result = GitManager.add_to_blacklist(
+        blacklist="watch_keyword",
+        item_to_blacklist=watchlist_entry,
         username=ev_user_name,
         chat_profile_link=chat_user_profile_link,
         code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
@@ -1057,6 +1088,94 @@ def command_notify(message_parts, ev_user_id, wrap2, *args, **kwargs):
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
+def command_whois(message_parts, ev_user_id, wrap2, *args, **kwargs):
+    """
+    Return a list of important users
+    :param wrap2:
+    :param ev_user_id:
+    :param message_parts:
+    :param kwargs: No additional arguments expected
+    :return: A string
+    """
+    if len(message_parts) < 2:
+        return Response(command_status=False, message="You must pass user level.")
+    valid_roles = {"admin": "admin",
+                   "code_admin": "code_admin",
+                   "admins": "admin",
+                   "codeadmins": "code_admin"}
+    if message_parts[1] not in list(valid_roles.keys()):
+        return Response(
+            command_status=False,
+            message="That is not a user level I can check. "
+            "I know about {0}".format(", ".join(set(valid_roles.values()))))
+
+    ms_route = "https://metasmoke.erwaysoftware.com/api/users/?role={}&key={}&per_page=100".format(
+        valid_roles[message_parts[1]],
+        GlobalVars.metasmoke_key)
+    user_response = requests.get(ms_route)
+    user_response.encoding = 'utf-8-sig'
+    user_response = user_response.json()
+
+    chat_host = wrap2.host
+
+    # Build our list of admin chat ids
+    key = ""
+    if chat_host == "stackexchange.com":
+        key = 'stackexchange_chat_id'
+    elif chat_host == "meta.stackexchange.com":
+        key = 'meta_stackexchange_chat_id'
+    elif chat_host == "stackoverflow.com":
+        key = 'stackoverflow_chat_id'
+
+    admin_ids = [a[key] for a in user_response['items'] if a[key] and a['id'] != -1]
+    room = wrap2.get_room(kwargs['ev_room'])
+
+    all_users_in_room = room.get_current_user_ids()
+    admins_in_room = list(set(admin_ids) & set(all_users_in_room))
+    admins_not_in_room = list(set(admin_ids) - set(admins_in_room))
+
+    admins_list = [(admin,
+                    wrap2.get_user(admin).name,
+                    wrap2.get_user(admin).last_message,
+                    wrap2.get_user(admin).last_seen)
+                   for admin in admin_ids]
+
+    admins_in_room_list = [(admin,
+                            wrap2.get_user(admin).name,
+                            wrap2.get_user(admin).last_message,
+                            wrap2.get_user(admin).last_seen)
+                           for admin in admins_in_room]
+
+    admins_not_in_room_list = [(admin,
+                                wrap2.get_user(admin).name,
+                                wrap2.get_user(admin).last_message,
+                                wrap2.get_user(admin).last_seen)
+                               for admin in admins_not_in_room]
+
+    message = "I am aware of {} {}".format(len(admin_ids), message_parts[1])
+
+    if admins_in_room_list:
+        admins_in_room_list.sort(key=lambda x: x[2])    # Sort by last message (last seen = x[3])
+        message += ". Currently in this room: **"
+        for admin in admins_in_room_list:
+            message += "{}, ".format(admin[1])
+        message = message[:-2] + "**. "
+        message += "Not currently in this room: "
+        for admin in admins_not_in_room_list:
+            message += "{}, ".format(admin[1])
+        message = message[:-2] + "."
+
+    else:
+        message += ": "
+        for admin in admins_list:
+            message += "{}, ".format(admin[1])
+        message = message[:-2] + ". "
+        message += "None of them are currently in this room. Other users in this room might be able to help you."
+
+    return Response(command_status=True, message=message)
+
+
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
 def command_unnotify(message_parts, ev_user_id, wrap2, *args, **kwargs):
     """
     Unsubscribes a user to specific events
@@ -1497,6 +1616,8 @@ command_dict = {
     "!!/blacklist-website": command_blacklist_website,
     "!!/blacklist-keyword": command_blacklist_keyword,
     "!!/blacklist-username": command_blacklist_username,
+    "!!/watch-keyword": command_watch_keyword,
+    # "!!/unwatch-keyword": command_unwatch_keyword,  # TODO
     "!!/commands": command_help,
     "!!/coffee": command_coffee,
     "!!/errorlogs": command_errorlogs,
@@ -1544,6 +1665,7 @@ command_dict = {
     "!!/ver": command_version,
     "!!/willibenotified": command_willbenotified,
     "!!/whoami": command_whoami,
+    "!!/whois": command_whois,
     "!!/wut": command_wut,
     "!!/queuestatus": command_queuestatus
 }
