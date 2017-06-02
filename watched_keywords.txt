@@ -184,3 +184,4 @@
 1496374082	tripleee	chevron\W?finance\W?firm
 1496374270	tripleee	aceh4d\.com
 1496376194	tripleee	expandom
+1496382291	Glorfindel	softwarehtec\.com
