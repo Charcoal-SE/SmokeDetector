@@ -1,0 +1,32 @@
+version: 2
+
+group_defaults:
+  approve_by_comment:
+    enabled: true
+    approve_regex: '^!!\/approve'
+  reset_on_push:
+    enabled: true
+
+groups:
+  code-admins:
+    required: 1
+    users:
+      - superplane39  # Mithrandir
+      - honnza  # Jan Dvorak
+      - magisch
+      - Aralun  # Kyll
+      - Fortunate-MAN  # Ashish Ahuja
+      - Glorfindel83
+      - teward
+      - ferrybig
+      - Manishearth
+      - tripleee
+      - angussidney
+      - Undo1
+      - hichris1234
+      - AWegnerGitHub
+      - ProgramFOX
+      - ArtOfCode-
+    author_approval:
+      ignored: true
+    reject_value: -1
