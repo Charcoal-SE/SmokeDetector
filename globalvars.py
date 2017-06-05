@@ -243,6 +243,7 @@ class GlobalVars:
             "285368",   # angussidney
             "158829",   # Thomas Ward
             "294691",   # Mithrandir
+            "215671",   # Locutus of Borg (Mithrandir's Sock)
             "203553",   # CalvT
             "289971"    # Hyper Neutrino
         ],
