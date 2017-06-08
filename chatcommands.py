@@ -275,7 +275,7 @@ def command_blacklist_help(*args, **kwargs):
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, message_id *args, **kwargs):
+def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, message_id, *args, **kwargs):
     """
     Adds a string to the website blacklist and commits/pushes to GitHub
     :param message_parts:

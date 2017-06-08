@@ -139,7 +139,7 @@ class GitManager:
 
             git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
                        "-m", u"Auto {0} of {1} by {2} --autopull".format(op, item, username),
-                       "-m", u"Chat message: https://chat.stackexchange.com/transcript/message/{0}#{0}".format(message_id))
+                       "-m", u"Request: https://chat.stackexchange.com/transcript/message/{0}#{0}".format(message_id))
             commit_sha = git('rev-parse', 'HEAD')
 
             if code_permissions:
