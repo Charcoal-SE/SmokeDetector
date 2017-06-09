@@ -172,6 +172,7 @@ class GlobalVars:
             "165474",   # Hyper Neutrino
             "169252",   # Cai
             "155243",   # Nisse Engström
+            "69330",    # Sconibulus
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
