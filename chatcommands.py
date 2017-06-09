@@ -111,7 +111,7 @@ def command_approve(message_parts, content_lower, ev_room, ev_user_id, wrap2, *a
             resp = requests.post('{}/github/pr_approve/{}'.format(GlobalVars.metasmoke_host, pr_num))
             if resp.status_code == 200:
                 return Response(command_status=True, message='Posted approval comment. PR will be merged automatically '
-                            'if it\'s a blacklist PR.')
+                                'if it\'s a blacklist PR.')
             else:
                 return Response(command_status=False, message='Forwarding request to metasmoke returned HTTP ' +
                                 resp.status_code + '. Check status manually.')
