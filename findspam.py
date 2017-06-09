@@ -11,9 +11,11 @@ from tld.utils import TldDomainNotFound
 from urllib.parse import urlparse
 from helpers import all_matches_unique, log
 from itertools import chain
+from collections import Counter
 
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
+CHARACTER_USE_RATIO = 0.42
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
 RE_COMPILE = regex.compile(EXCEPTION_RE)
 COMMON_MALFORMED_PROTOCOLS = [
@@ -339,6 +341,26 @@ def username_similar_website(s, site, *args):
     sim_result = perform_similarity_checks(s, username)
     if sim_result >= SIMILAR_THRESHOLD:
         return True, u"Username similar to website"
+    else:
+        return False, ""
+
+
+# noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
+def character_utilization_ratio(s, site, *args):
+    counter = Counter(s)
+    total_chars = len(s)
+    highest_ratio = 0.0
+    # highest_char = None
+
+    for key, value in counter.items():
+        char_ratio = value / float(total_chars)
+        key, value, char_ratio
+        if char_ratio > highest_ratio:
+            highest_ratio = char_ratio
+            # highest_char = key
+
+    if highest_ratio > CHARACTER_USE_RATIO:
+        return True, "The `{}` character appears in a high percentage of the post"
     else:
         return False, ""
 
@@ -988,7 +1010,14 @@ class FindSpam:
         {'method': similar_answer, 'all': True, 'sites': ["codegolf.stackexchange.com"],
          'reason': "answer similar to existing answer on post", 'whole_post': True,
          'title': False, 'body': False, 'username': False, 'stripcodeblocks': False,
-         'max_rep': 50, 'max_score': 0}
+         'max_rep': 50, 'max_score': 0},
+
+        # A single character is utilized in a high percentage of the post
+        {'method': character_utilization_ratio, 'all': False, 'sites': ["judaism.stackexchange.com"],
+         'reason': "single character over used in post",
+         'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
+         'max_rep': 20, 'max_score': 0}
+
     ]
 
     @staticmethod

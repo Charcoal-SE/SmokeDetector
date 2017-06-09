@@ -44,7 +44,7 @@ with open("test/data_test_spamhandling.txt", "r", encoding="utf-8") as f:
     ('Mostly Non-latin', '冰冰冰test冰冰冰冰冰冰冰冰冰冰冰冰 test 冰冰冰冰', '', '', True),
     ('Pattern Matching product name - 2 words', """<p>vxl male enhancement</p>""", '', '', True),
     ('Pattern Matching product name - 3 words', """<p>Extends Monster Male Enhancement And Male Penile Enhancement</p>""", '', '', True),
-
+    ('A Title', """<p>E x t e n d s  M o n s t e r Male E n h a n c e m e n t And M a l e P e n i l e E n h a n c e m e n t</p>""", '', 'judaism.stackexchange.com', True),
 ])
 def test_check_if_spam(title, body, username, site, match):
     # We can't check blacklists/whitelists in tests, so these are set to their default values

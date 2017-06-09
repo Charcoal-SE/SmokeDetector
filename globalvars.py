@@ -154,6 +154,7 @@ class GlobalVars:
             "158742",   # Rob
             "207356",   # 4castle
             "133031",   # Mithrandir
+            "215671",   # Locutus of Borg (Mithrandir's Sock)
             "169713",   # Mego
             "126657",   # Cerbrus
             "10145",    # Thomas Ward
@@ -170,6 +171,8 @@ class GlobalVars:
             "64521",    # CalvT
             "165474",   # Hyper Neutrino
             "169252",   # Cai
+            "155243",   # Nisse Engström
+            "69330",    # Sconibulus
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
