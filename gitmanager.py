@@ -25,7 +25,6 @@ class GitManager:
         blacklist = kwargs.get("blacklist", "")
         item_to_blacklist = kwargs.get("item_to_blacklist", "")
         username = kwargs.get("username", "")
-        message_id = kwargs.get("message_id", "<unknown>")
         chat_profile_link = kwargs.get("chat_profile_link", "http://chat.stackexchange.com/users")
         code_permissions = kwargs.get("code_permissions", False)
 
@@ -138,9 +137,7 @@ class GitManager:
                 git.add('watched_keywords.txt')
 
             git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
-                       "-m", u"Auto {0} of {1} by {2} --autopull".format(op, item, username),
-                       "-m", u"Request: https://chat.stackexchange.com/transcript/message/{0}#{0}".format(message_id))
-            commit_sha = git('rev-parse', 'HEAD')
+                       "-m", u"Auto {0} of {1} by {2} --autopull".format(op, item, username))
 
             if code_permissions:
                 git.checkout("master")
@@ -196,15 +193,7 @@ class GitManager:
         finally:
             cls.gitmanager_lock.release()
 
-        return (
-            True,
-            "{0}ed {1}: [`{2}`](https://github.com/Charcoal-SE/SmokeDetector/commit/{3})".format(
-                op.title(),
-                item,
-                commit_sha[:7],
-                commit_sha
-            )
-        )
+        return (True, "{0}ed {1}".format(op.title(), item))
 
     @staticmethod
     def current_git_status():

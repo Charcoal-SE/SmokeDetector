@@ -293,7 +293,7 @@ def command_blacklist_help(*args, **kwargs):
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, message_id, *args, **kwargs):
+def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Adds a string to the website blacklist and commits/pushes to GitHub
     :param message_parts:
@@ -315,14 +315,13 @@ def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, 
         item_to_blacklist=website_pattern,
         username=ev_user_name,
         chat_profile_link=chat_user_profile_link,
-        message_id=message_id,
         code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
     )
     return Response(command_status=result[0], message=result[1])
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, message_id, *args, **kwargs):
+def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Adds a string to the keyword blacklist and commits/pushes to GitHub
     :param message_parts:
@@ -344,14 +343,13 @@ def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, 
         item_to_blacklist=keyword_pattern,
         username=ev_user_name,
         chat_profile_link=chat_user_profile_link,
-        message_id=message_id,
         code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
     )
     return Response(command_status=result[0], message=result[1])
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, message_id, *args, **kwargs):
+def command_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Adds a string to the watched keywords list and commits/pushes to GitHub
     :param message_parts:
@@ -375,14 +373,13 @@ def command_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap
         item_to_blacklist=watchlist_entry,
         username=ev_user_name,
         chat_profile_link=chat_user_profile_link,
-        message_id=message_id,
         code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
     )
     return Response(command_status=result[0], message=result[1])
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, message_id, *args, **kwargs):
+def command_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
     Adds a string to the username blacklist and commits/pushes to GitHub
     :param message_parts:
@@ -404,7 +401,6 @@ def command_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id,
         item_to_blacklist=username_pattern,
         username=ev_user_name,
         chat_profile_link=chat_user_profile_link,
-        message_id=message_id,
         code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
     )
     return Response(command_status=result[0], message=result[1])
