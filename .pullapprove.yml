@@ -11,22 +11,23 @@ groups:
   code-admins:
     required: 1
     users:
-      - superplane39  # Mithrandir
-      - honnza  # Jan Dvorak
-      - magisch
+      - angussidney
       - Aralun  # Kyll
+      - ArtOfCode-
+      - AWegnerGitHub
+      - ferrybig
       - Fortunate-MAN  # Ashish Ahuja
       - Glorfindel83
-      - teward
-      - ferrybig
-      - Manishearth
-      - tripleee
-      - angussidney
-      - Undo1
       - hichris1234
-      - AWegnerGitHub
+      - honnza  # Jan Dvorak
+      - magisch
+      - Manishearth
+      - metasmoke
       - ProgramFOX
-      - ArtOfCode-
+      - superplane39  # Mithrandir
+      - teward
+      - tripleee
+      - Undo1
     author_approval:
       ignored: true
     reject_value: -1
