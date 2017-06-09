@@ -103,6 +103,24 @@ def single_random_user(ev_room):
 # don't accept any parameters but still use the `command_dict` mappings
 
 
+@check_permissions
+def command_approve(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
+    if ev_user_id in GlobalVars.code_privileged_users:
+        if len(message_parts) >= 2:
+            pr_num = message_parts[1]
+            resp = requests.post('{}/github/pr_approve/{}'.format(GlobalVars.metasmoke_host, pr_num))
+            if resp.status_code == 200:
+                return Response(command_status=True, message='Posted approval comment. PR will be merged automatically '
+                            'if it\'s a blacklist PR.')
+            else:
+                return Response(command_status=False, message='Forwarding request to metasmoke returned HTTP ' +
+                                resp.status_code + '. Check status manually.')
+        else:
+            return Response(command_status=False, message='Missing PR ID. Usage: !!/approve <id>')
+    else:
+        return Response(command_status=False, message='You don\'t have permission to do that.')
+
+
 # --- Blacklist Functions --- #
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
@@ -1609,6 +1627,7 @@ command_dict = {
     "!!/amicodeprivileged": command_code_privileged,
     "!!/amicodepriviledged": command_code_privileged,   # TODO: add typo warning?
     "!!/apiquota": command_quota,
+    "!!/approve": command_approve,
     "!!/blame": command_blame,
     "!!/block": command_block,
     "!!/brownie": command_brownie,
