@@ -249,6 +249,11 @@ class Metasmoke:
 
                         GlobalVars.charcoal_hq.send_message(GlobalVars.location + " received failover signal.")
 
+                    if response['standby']:
+                        GlobalVars.charcoal_hq.send_message(GlobalVars.location + " entering metasmoke-forced standby.")
+                        time.sleep(2)
+                        os._exit(7)
+
                 if 'shutdown' in response:
                     if response['shutdown']:
                         os._exit(6)
