@@ -207,4 +207,5 @@
 1496921326	Glorfindel	alphonsacollege\.com
 1496927422	Mithrandir	surejob\.in
 1496949638	Ferrybig	hyderabadfairy
-1497086954	Glorfindel	imperialindiatourpackages\.com viajesindiarajasthan\.com
+1497086954	Glorfindel	imperialindiatourpackages\.com
+1497086954	Glorfindel	viajesindiarajasthan\.com
