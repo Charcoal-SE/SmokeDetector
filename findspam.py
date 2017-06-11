@@ -479,7 +479,7 @@ def mostly_dots(s, site, *args):
 def mevaqesh_troll(s, *args):
     s = s.lower().replace(' ', '')
     bad = 'mevaqeshthereforehasnoshareintheworldtocome'
-    if s == bad:
+    if bad in s:
         return True, "Post matches pattern from a known troll"
     else:
         return False, ""
