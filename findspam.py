@@ -758,7 +758,7 @@ class FindSpam:
          'sites': ["skeptics.stackexchange.com", "history.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        {'method': mevaqesh_troll, 'all': False, 'sites': 'judaism.stackexchange.com',
+        {'method': mevaqesh_troll, 'all': False, 'sites': ['judaism.stackexchange.com'],
          'reason': 'Potential "Mevaqesh" troll', 'title': False, 'body': True, 'username': False,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 1},
         #
