@@ -994,6 +994,13 @@ class FindSpam:
         {'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"],
          'reason': "blacklisted username", 'title': False, 'body': False, 'username': True,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        # see https://chat.stackexchange.com/transcript/message/38039817#38039817
+        # > (for anyone wondering about the latest blacklist, that's a request from the Mi Yodeya mods.
+        # > That's the username of one of their users, and they have a troll who keeps attacking him.
+        # > He keeps getting around all the filters, though, so...:/)
+        {'regex': u"(?i)^mevaqesh$", 'all': False, 'sites': ["judaism.stackexchange.com"],
+         'reason': "potential troll victim", 'title': False, 'body': False, 'username': True,
+         'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1e6, 'max_score': 0},
 
         # User name similar to link
         {'method': username_similar_website, 'all': True, 'sites': [], 'reason': "username similar to website in {}",
