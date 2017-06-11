@@ -476,7 +476,7 @@ def mostly_dots(s, site, *args):
         return False, ""
 
 
-def mevaqesh_troll(s, site):
+def mevaqesh_troll(s, *args):
     s = s.lower().replace(' ', '')
     bad = 'mevaqeshthereforehasnoshareintheworldtocome'
     if s == bad:
