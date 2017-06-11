@@ -965,6 +965,14 @@ class FindSpam:
         {'regex': r"(?i)\b(erica|jeff|er1ca|spam|moderator)\b", 'all': False, 'sites': ["parenting.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': True, 'max_rep': 50, 'max_score': 0},
+        # Mi Yodeya troll
+        # see https://chat.stackexchange.com/transcript/message/38039817#38039817
+        # > (for anyone wondering about the latest blacklist, that's a request from the Mi Yodeya mods.
+        # > That's the username of one of their users, and they have a troll who keeps attacking him.
+        # > He keeps getting around all the filters, though, so...:/)
+        {'regex': r"(?i)\b?m\W*e\W*v\W*a\W*q\W*e\W*s\W*h\b?", 'all': False, 'sites': ["judaism.stackexchange.com"],
+         'reason': "potential troll victim", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False,
+         'body_summary': True, 'max_rep': 50, 'max_score': 0},
         # Academia kangaroos
         {'regex': r"(?i)kangaroos", 'all': False, 'sites': ["academia.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False,
@@ -994,13 +1002,6 @@ class FindSpam:
         {'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"],
          'reason': "blacklisted username", 'title': False, 'body': False, 'username': True,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        # see https://chat.stackexchange.com/transcript/message/38039817#38039817
-        # > (for anyone wondering about the latest blacklist, that's a request from the Mi Yodeya mods.
-        # > That's the username of one of their users, and they have a troll who keeps attacking him.
-        # > He keeps getting around all the filters, though, so...:/)
-        {'regex': u"(?i)^mevaqesh$", 'all': False, 'sites': ["judaism.stackexchange.com"],
-         'reason': "potential troll victim", 'title': False, 'body': False, 'username': True,
-         'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1e6, 'max_score': 0},
 
         # User name similar to link
         {'method': username_similar_website, 'all': True, 'sites': [], 'reason': "username similar to website in {}",
