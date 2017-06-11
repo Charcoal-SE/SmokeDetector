@@ -212,3 +212,4 @@
 1497093760	Glorfindel	canbeyvinc\.com
 1497104718	Glorfindel	powerengineers\.in
 1497177636	Glorfindel	Tony Awards \d+ Live
+1497177687	Glorfindel	tonyawards\W\d+\.net
