@@ -211,3 +211,4 @@
 1497086954	Glorfindel  viajesindiarajasthan\.com
 1497093760	Glorfindel	canbeyvinc\.com
 1497104718	Glorfindel	powerengineers\.in
+1497177636	Glorfindel	Tony Awards \d+ Live
