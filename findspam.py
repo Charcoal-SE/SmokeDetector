@@ -759,7 +759,7 @@ class FindSpam:
          'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'method': mevaqesh_troll, 'all': False, 'sites': ['judaism.stackexchange.com'],
-         'reason': 'Potential "Mevaqesh" troll', 'title': False, 'body': True, 'username': False,
+         'reason': 'Potential troll victim', 'title': False, 'body': True, 'username': False,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 1},
         #
         # Category: Suspicious links
