@@ -217,3 +217,4 @@
 1497257884	Glorfindel	jusfood\.com
 1497260189	Glorfindel	chicagoprostitutes\.info
 1497260628	Mithrandir	musixmatch\.com
+1497265706	Glorfindel	telediagnosis\.pl
