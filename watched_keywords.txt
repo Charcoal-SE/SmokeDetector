@@ -214,3 +214,4 @@
 1497177636	Glorfindel	Tony Awards \d+ Live
 1497177687	Glorfindel	tonyawards\W\d+\.net
 1497187751	Glorfindel	kafemag\.com
+1497257884	Glorfindel	jusfood\.com
