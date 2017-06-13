@@ -105,7 +105,7 @@ def single_random_user(ev_room):
 
 @check_permissions
 def command_approve(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
-    if ev_user_id in GlobalVars.code_privileged_users:
+    if datahandling.is_code_privileged(ev_room, ev_user_id, wrap2):
         if len(message_parts) >= 2:
             pr_num = message_parts[1]
             resp = requests.post('{}/github/pr_approve/{}'.format(GlobalVars.metasmoke_host, pr_num))
