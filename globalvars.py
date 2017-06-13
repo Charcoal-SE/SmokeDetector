@@ -173,6 +173,7 @@ class GlobalVars:
             "169252",   # Cai
             "155243",   # Nisse Engström
             "69330",    # Sconibulus
+            "164187"   # Okx
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
