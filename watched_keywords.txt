@@ -225,3 +225,4 @@
 1497340076	Glorfindel	cakengifts\.in
 1497340150	Mithrandir	10seos
 1497344319	CalvT	sqlite\.news
+1497352570	Glorfindel	thephotographersblog\.com
