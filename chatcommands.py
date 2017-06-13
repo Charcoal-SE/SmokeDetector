@@ -113,8 +113,8 @@ def command_approve(message_parts, content_lower, ev_room, ev_user_id, wrap2, *a
                 return Response(command_status=True, message='Posted approval comment. PR will be merged automatically '
                                 'if it\'s a blacklist PR.')
             else:
-                return Response(command_status=False, message='Forwarding request to metasmoke returned HTTP ' +
-                                resp.status_code + '. Check status manually.')
+                return Response(command_status=False, message='Forwarding request to metasmoke returned HTTP {}. '
+                                'Check status manually.'.format(resp.status_code))
         else:
             return Response(command_status=False, message='Missing PR ID. Usage: !!/approve <id>')
     else:
