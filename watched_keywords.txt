@@ -220,3 +220,4 @@
 1497265706	Glorfindel	telediagnosis\.pl
 1497270166	Glorfindel	hack2secure\.com
 1497272353	Glorfindel	replaymatches\.com
+1497336733	Glorfindel	clarkchimneyservices\.com
