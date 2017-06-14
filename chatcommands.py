@@ -1636,6 +1636,7 @@ command_dict = {
     "!!/blacklist-keyword": command_blacklist_keyword,
     "!!/blacklist-username": command_blacklist_username,
     "!!/watch-keyword": command_watch_keyword,
+    "!!/watch": command_watch_keyword,
     # "!!/unwatch-keyword": command_unwatch_keyword,  # TODO
     "!!/commands": command_help,
     "!!/coffee": command_coffee,
