@@ -314,7 +314,7 @@ class BodyFetcher:
                 GlobalVars.api_backoff_time = time.time() + response["backoff"]
             match = regex.compile('/2.2/([^.]*)').search(url)
             url_part = match.group(1) if match else url
-            message_hq += "\n{} second backoff on request to `{}` at {} UTC".format(str(response["backoff"]), url_part, time_request_made)
+            message_hq += "\n{} second backoff on request to `{}`".format(str(response["backoff"]), url_part)
 
         GlobalVars.api_request_lock.release()
 
