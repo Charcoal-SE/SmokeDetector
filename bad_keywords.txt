@@ -526,3 +526,4 @@ black magic specialist
 mevaqesh
 viril\Wx
 zz\Wsnore
+bulk\Wsms\W(delhi|india)
