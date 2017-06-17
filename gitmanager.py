@@ -192,8 +192,11 @@ class GitManager:
             git.checkout("deploy")  # Return to deploy to await CI.
         finally:
             cls.gitmanager_lock.release()
-
-        return (True, "{0}ed {1}".format(op.title(), item))
+        
+        if op == 'blacklist':
+            return (True, "Blacklisted {0}".format(item))
+        elif op == 'watch':
+            return (True, "Added {0} to watchlist".format(item))
 
     @staticmethod
     def current_git_status():
