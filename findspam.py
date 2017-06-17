@@ -700,7 +700,8 @@ class FindSpam:
                   r"[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|erectile|\bherpes\b|colon ?(detox|clean)|\bpenis\b",
          'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com",
-                   "skeptics.stackexchange.com", "bicycles.stackexchange.com", "islam.stackexchange.com"],
+                   "skeptics.stackexchange.com", "bicycles.stackexchange.com", "islam.stackexchange.com",
+                   "pets.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
          'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Korean character in title: requires 3
