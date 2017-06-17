@@ -192,7 +192,7 @@ class GitManager:
             git.checkout("deploy")  # Return to deploy to await CI.
         finally:
             cls.gitmanager_lock.release()
-        
+
         if op == 'blacklist':
             return (True, "Blacklisted {0}".format(item))
         elif op == 'watch':
