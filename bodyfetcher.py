@@ -12,7 +12,6 @@ import requests
 from classes import Post, PostParseError
 from helpers import log
 from itertools import chain
-import regex
 
 
 # noinspection PyClassHasNoInit,PyBroadException
@@ -312,9 +311,6 @@ class BodyFetcher:
         if "backoff" in response:
             if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
                 GlobalVars.api_backoff_time = time.time() + response["backoff"]
-            match = regex.compile('/2.2/([^.]*)').search(url)
-            url_part = match.group(1) if match else url
-            message_hq += "\n{} second backoff on request to `{}`".format(str(response["backoff"]), url_part)
 
         GlobalVars.api_request_lock.release()
 
