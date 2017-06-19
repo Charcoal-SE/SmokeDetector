@@ -53,7 +53,6 @@
 1495172088	tripleee	healthoptionbooklet\.com
 1495172199	tripleee	parisian\Wsecret
 1495173474	tripleee	blank\Watm\Wcards?
-1495427024	tripleee	findmp3songs\.com
 1495427162	tripleee	ultraburn
 1495432007	tripleee	tophealthydiet\.com
 1495432167	tripleee	avanti\W?skin
