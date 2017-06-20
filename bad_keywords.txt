@@ -354,7 +354,7 @@ rejuvalogic
 chantel\Wst\Wclaire
 testx\Wcore
 lumidaire
-embova
+embova(\W?rx)?
 core\Wskincare
 leallure
 neuro\Wxr
