@@ -258,3 +258,4 @@
 1497944600	tripleee	gari\.pk
 1497945800	tripleee	naturalhealthstore\.info
 1497954107	tripleee	learnsforce\.blogspot
+1497963280	Glorfindel	updateword\.com
