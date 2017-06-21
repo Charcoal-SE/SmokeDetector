@@ -364,7 +364,7 @@ nuvapelle
 jullen
 nos\Wex
 platinum\Wbeaute
-body\Wblast
+body\W?blast
 dermessence
 avalure
 allumiere
