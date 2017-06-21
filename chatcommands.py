@@ -296,11 +296,11 @@ def check_blacklist(string_to_test, is_username, is_watchlist):
     # Test the string and provide a warning message if it is already caught.
     if is_username:
         question = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
-                  'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
-                  'site': "", 'IsAnswer': False, 'score': 0})
+                                      'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
+                                      'site': "", 'IsAnswer': False, 'score': 0})
         answer = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
-            'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
-            'site': "", 'IsAnswer': True, 'score': 0})
+                                     'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
+                                     'site': "", 'IsAnswer': True, 'score': 0})
 
     else:
         question = Post(api_response={'title': 'Valid title', 'body': string_to_test,
@@ -317,16 +317,22 @@ def check_blacklist(string_to_test, is_username, is_watchlist):
     reasons = list(set(question_reasons) | set(answer_reasons))
 
     # Filter out watchlist results
-    if not is_watchlist: reasons = list(filter(lambda reason: "potentially bad keyword" not in reason, reasons))
+    if not is_watchlist: 
+        reasons = list(filter(lambda reason: "potentially bad keyword" not in reason, reasons))
 
     # Capitalize
     reasons = list(map(lambda reason: reason.capitalize(), ))
 
-    if len(reasons) < 3: reason_string = " and ".join(reasons)
-    else: reason_string = ", and ".join([", ".join(reasons[:-1]), reasons[-1]])
-    
-    if reasons: return (True, reason_string)
-    else: return (False, None)
+    if len(reasons) < 3: 
+        reason_string = " and ".join(reasons)
+    else: 
+        reason_string = ", and ".join([", ".join(reasons[:-1]), reasons[-1]])
+
+    if reasons: 
+        return (True, reason_string)
+    else: 
+        return (False, None)
+
 
 def do_blacklist(blacklist, force, message_parts, ev_user_name, ev_room, ev_user_id, wrap2):
     """
@@ -347,10 +353,14 @@ def do_blacklist(blacklist, force, message_parts, ev_user_name, ev_room, ev_user
         return Response(command_status=False, message="An invalid pattern was provided, not blacklisting.")
 
     if not force:
-        caught, reasons_string = check_blacklist(pattern.replace("\\W", " ").replace("\\.", "."), blacklist == "username", blacklist == "watch_keyword")
+        caught, reasons_string = check_blacklist(pattern.replace("\\W", " ").replace("\\.", "."), 
+                                                 blacklist == "username", 
+                                                 blacklist == "watch_keyword")
+
         if caught:
-            return Response(command_status=False, message="That pattern looks like it's already caught by " + reasons_string + 
-                                                      "; use `" + message_parts[0] + "-force` if you really want to do that.")
+            return Response(command_status=False,
+                            message="That pattern looks like it's already caught by " + reasons_string + 
+                                     "; use `" + message_parts[0] + "-force` if you really want to do that.")
 
     result = GitManager.add_to_blacklist(
         blacklist=blacklist,
@@ -375,6 +385,7 @@ def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, 
 
     return do_blacklist("website", False, message_parts, ev_user_name, ev_room, ev_user_id, wrap2)
 
+
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -388,6 +399,7 @@ def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, 
 
     return do_blacklist("keyword", False, message_parts, ev_user_name, ev_room, ev_user_id, wrap2)
 
+
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -400,6 +412,7 @@ def command_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap
     """
 
     return do_blacklist("watch_keyword", False, message_parts, ev_user_name, ev_room, ev_user_id, wrap2)
+
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
@@ -428,6 +441,7 @@ def command_force_blacklist_website(message_parts, ev_user_name, ev_room, ev_use
 
     return do_blacklist("website", True, message_parts, ev_user_name, ev_room, ev_user_id, wrap2)
 
+
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_force_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -441,6 +455,7 @@ def command_force_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_use
 
     return do_blacklist("keyword", True, message_parts, ev_user_name, ev_room, ev_user_id, wrap2)
 
+
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_force_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -453,6 +468,7 @@ def command_force_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id
     """
 
     return do_blacklist("watch_keyword", True, message_parts, ev_user_name, ev_room, ev_user_id, wrap2)
+
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_force_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
