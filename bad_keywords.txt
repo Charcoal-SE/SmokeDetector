@@ -538,5 +538,4 @@ appuploader
 firm\W?radiance
 gpoupon
 Enduro\WRush
-lumalift
 dermaglo
