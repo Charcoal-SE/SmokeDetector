@@ -256,7 +256,6 @@
 1497935872	tripleee	skintology
 1497940836	tripleee	valgosocks
 1497944600	tripleee	gari\.pk
-1497945800	tripleee	naturalhealthstore\.info
 1497954107	tripleee	learnsforce\.blogspot
 1497963280	Glorfindel	updateword\.com
 1497979105	Glorfindel	happyeid\.info
