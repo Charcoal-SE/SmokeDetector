@@ -346,7 +346,8 @@ def do_blacklist(**kwargs):
     :return: A Response
     """
 
-    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=kwargs['wrap2'].host, id=str(kwargs['ev_user_id']))
+    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=kwargs['wrap2'].host, 
+                                                                    id=str(kwargs['ev_user_id']))
     pattern = " ".join(kwargs['message_parts'][1:])
     # noinspection PyProtectedMember
     try:
@@ -356,13 +357,14 @@ def do_blacklist(**kwargs):
 
     if not kwargs['force']:
         reasons = check_blacklist(pattern.replace("\\W", " ").replace("\\.", "."),
-                                                 kwargs['blacklist'] == "username",
-                                                 kwargs['blacklist'] == "watch_keyword")
+                                  kwargs['blacklist'] == "username",
+                                  kwargs['blacklist'] == "watch_keyword")
 
         if reasons:
             return Response(command_status=False,
-                            message="That pattern looks like it's already caught by " + format_blacklist_reasons(reasons) +
-                                    "; use `" + kwargs['message_parts'][0] + "-force` if you really want to do that.")
+                            message="That pattern looks like it's already caught by " +
+                                    format_blacklist_reasons(reasons) + "; use `" +
+                                    kwargs['message_parts'][0] + "-force` if you really want to do that.")
 
     result = GitManager.add_to_blacklist(
         blacklist=kwargs['blacklist'],
@@ -403,6 +405,7 @@ def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, 
     return do_blacklist(blacklist="keyword", force=False, message_parts=message_parts,
                         ev_user_name=ev_user_name, ev_room=ev_room, ev_user_id=ev_user_id, wrap2=wrap2)
 
+
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -416,6 +419,7 @@ def command_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap
 
     return do_blacklist(blacklist="watch_keyword", force=True, message_parts=message_parts,
                         ev_user_name=ev_user_name, ev_room=ev_room, ev_user_id=ev_user_id, wrap2=wrap2)
+
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
@@ -431,6 +435,7 @@ def command_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id,
     return do_blacklist(blacklist="username", force=False, message_parts=message_parts,
                         ev_user_name=ev_user_name, ev_room=ev_room, ev_user_id=ev_user_id, wrap2=wrap2)
 
+
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_force_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -444,6 +449,7 @@ def command_force_blacklist_website(message_parts, ev_user_name, ev_room, ev_use
 
     return do_blacklist(blacklist="website", force=True, message_parts=message_parts,
                         ev_user_name=ev_user_name, ev_room=ev_room, ev_user_id=ev_user_id, wrap2=wrap2)
+
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_force_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
@@ -459,6 +465,7 @@ def command_force_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_use
     return do_blacklist(blacklist="keyword", force=True, message_parts=message_parts,
                         ev_user_name=ev_user_name, ev_room=ev_room, ev_user_id=ev_user_id, wrap2=wrap2)
 
+
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_force_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -473,6 +480,7 @@ def command_force_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id
     return do_blacklist(blacklist="watch_keyword", force=True, message_parts=message_parts,
                         ev_user_name=ev_user_name, ev_room=ev_room, ev_user_id=ev_user_id, wrap2=wrap2)
 
+
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_force_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
     """
@@ -486,6 +494,7 @@ def command_force_blacklist_username(message_parts, ev_user_name, ev_room, ev_us
 
     return do_blacklist(blacklist="username", force=True, message_parts=message_parts,
                         ev_user_name=ev_user_name, ev_room=ev_room, ev_user_id=ev_user_id, wrap2=wrap2)
+
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 @check_permissions
