@@ -346,7 +346,7 @@ def do_blacklist(**kwargs):
     :return: A Response
     """
 
-    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=kwargs['wrap2'].host, 
+    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=kwargs['wrap2'].host,
                                                                     id=str(kwargs['ev_user_id']))
     pattern = " ".join(kwargs['message_parts'][1:])
     # noinspection PyProtectedMember
