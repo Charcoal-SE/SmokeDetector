@@ -291,21 +291,22 @@ def command_blacklist_help(*args, **kwargs):
                     "!!/blacklist-keyword, or perhaps !!/watch-keyword. "
                     "Remember to escape dots in URLs using \\.")
 
+
 def check_blacklist(string_to_test, is_username, is_watchlist):
     # Test the string and provide a warning message if it is already caught.
     if is_username:
-      question = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
+        question = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
                   'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
                   'site': "", 'IsAnswer': False, 'score': 0})
-      answer = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
+        answer = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
             'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
             'site': "", 'IsAnswer': True, 'score': 0})
 
     else:
-      question = Post(api_response={'title': 'Valid title', 'body': string_to_test,
+        question = Post(api_response={'title': 'Valid title', 'body': string_to_test,
                   'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
                   'site': "", 'IsAnswer': False, 'score': 0})
-      answer = Post(api_response={'title': 'Valid title', 'body': string_to_test,
+        answer = Post(api_response={'title': 'Valid title', 'body': string_to_test,
             'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
             'site': "", 'IsAnswer': True, 'score': 0})
 
@@ -343,20 +344,20 @@ def do_blacklist(blacklist, force, message_parts, ev_user_name, ev_room, ev_user
     try:
         regex.compile(pattern)
     except regex._regex_core.error:
-      return Response(command_status=False, message="An invalid pattern was provided, not blacklisting.")
+        return Response(command_status=False, message="An invalid pattern was provided, not blacklisting.")
 
     if not force:
-      caught, reasons_string = check_blacklist(pattern.replace("\\W", " ").replace("\\.", "."), blacklist == "username", blacklist == "watch_keyword")
-      if caught:
-        return Response(command_status=False, message="That pattern looks like it's already caught by " + reasons_string + 
+        caught, reasons_string = check_blacklist(pattern.replace("\\W", " ").replace("\\.", "."), blacklist == "username", blacklist == "watch_keyword")
+        if caught:
+            return Response(command_status=False, message="That pattern looks like it's already caught by " + reasons_string + 
                                                       "; use `" + message_parts[0] + "-force` if you really want to do that.")
 
     result = GitManager.add_to_blacklist(
-      blacklist=blacklist,
-      item_to_blacklist=pattern,
-      username=ev_user_name,
-      chat_profile_link=chat_user_profile_link,
-      code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
+        blacklist=blacklist,
+        item_to_blacklist=pattern,
+        username=ev_user_name,
+        chat_profile_link=chat_user_profile_link,
+        code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
     )
     return Response(command_status=result[0], message=result[1])
 
