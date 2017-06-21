@@ -291,7 +291,7 @@ def command_blacklist_help(*args, **kwargs):
                     "!!/blacklist-keyword, or perhaps !!/watch-keyword. "
                     "Remember to escape dots in URLs using \\.")
 
-def check_blacklist(string_to_test, is_username):
+def check_blacklist(string_to_test, is_username, is_watchlist):
     # Test the string and provide a warning message if it is already caught.
     if is_username:
       question = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
@@ -311,8 +311,15 @@ def check_blacklist(string_to_test, is_username):
 
     question_reasons, _ = FindSpam.test_post(question)
     answer_reasons, _ = FindSpam.test_post(answer)
+
+    # Filter out duplicates
     reasons = list(set(question_reasons) | set(answer_reasons))
-    reasons = list(map(lambda reason: reason.capitalize(), filter(lambda reason: "potentially bad keyword" not in reason, reasons)))
+
+    # Filter out watchlist results
+    if not is_watchlist: reasons = list(filter(lambda reason: "potentially bad keyword" not in reason, reasons))
+
+    # Capitalize
+    reasons = list(map(lambda reason: reason.capitalize(), ))
 
     if len(reasons) < 3: reason_string = " and ".join(reasons)
     else: reason_string = ", and ".join([", ".join(reasons[:-1]), reasons[-1]])
@@ -339,7 +346,7 @@ def do_blacklist(blacklist, force, message_parts, ev_user_name, ev_room, ev_user
       return Response(command_status=False, message="An invalid pattern was provided, not blacklisting.")
 
     if not force:
-      caught, reasons_string = check_blacklist(pattern.replace("\\W", " ").replace("\\.", "."), blacklist == "username")
+      caught, reasons_string = check_blacklist(pattern.replace("\\W", " ").replace("\\.", "."), blacklist == "username", blacklist == "watch_keyword")
       if caught:
         return Response(command_status=False, message="That pattern looks like it's already caught by " + reasons_string + 
                                                       "; use `" + message_parts[0] + "-force` if you really want to do that.")
