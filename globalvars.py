@@ -170,6 +170,7 @@ class GlobalVars:
             "255290",   # Gypsy Spellweaver
             "64521",    # CalvT
             "165474",   # Hyper Neutrino
+            "281362",   # Hyper Neutrino v2
             "169252",   # Cai
             "155243",   # Nisse Engström
             "69330",    # Sconibulus
