@@ -351,8 +351,6 @@ def do_blacklist(blacklist, force, message_parts, ev_user_name, ev_room, ev_user
         return Response(command_status=False, message="That pattern looks like it's already caught by " + reasons_string + 
                                                       "; use `" + message_parts[0] + "-force` if you really want to do that.")
 
-    return Response(command_status=True, message="Adding `" + pattern + "` to " + blacklist + " blacklist.")
-
     result = GitManager.add_to_blacklist(
       blacklist=blacklist,
       item_to_blacklist=pattern,
