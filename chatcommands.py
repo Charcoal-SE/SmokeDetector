@@ -291,6 +291,70 @@ def command_blacklist_help(*args, **kwargs):
                     "!!/blacklist-keyword, or perhaps !!/watch-keyword. "
                     "Remember to escape dots in URLs using \\.")
 
+def check_blacklist(string_to_test, is_username):
+    # Test the string and provide a warning message if it is already caught.
+    if is_username:
+      question = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
+                  'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
+                  'site': "", 'IsAnswer': False, 'score': 0})
+      answer = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
+            'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
+            'site': "", 'IsAnswer': True, 'score': 0})
+
+    else:
+      question = Post(api_response={'title': 'Valid title', 'body': string_to_test,
+                  'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
+                  'site': "", 'IsAnswer': False, 'score': 0})
+      answer = Post(api_response={'title': 'Valid title', 'body': string_to_test,
+            'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
+            'site': "", 'IsAnswer': True, 'score': 0})
+
+    question_reasons, _ = FindSpam.test_post(question)
+    answer_reasons, _ = FindSpam.test_post(answer)
+    reasons = list(set(question_reasons) | set(answer_reasons))
+    reasons = list(map(lambda reason: reason.capitalize(), filter(lambda reason: "potentially bad keyword" not in reason, reasons)))
+
+    if len(reasons) < 3: reason_string = " and ".join(reasons)
+    else: reason_string = ", and ".join([", ".join(reasons[:-1]), reasons[-1]])
+    
+    if reasons: return (True, reason_string)
+    else: return (False, None)
+
+def do_blacklist(blacklist, force, message_parts, ev_user_name, ev_room, ev_user_id, wrap2):
+    """
+    Adds a string to the website blacklist and commits/pushes to GitHub
+    :param message_parts:
+    :param ev_user_name:
+    :param ev_room:
+    :param :ev_user_id:
+    :return: A Response
+    """
+
+    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=wrap2.host, id=str(ev_user_id))
+    pattern = " ".join(message_parts[1:])
+    # noinspection PyProtectedMember
+    try:
+        regex.compile(pattern)
+    except regex._regex_core.error:
+      return Response(command_status=False, message="An invalid pattern was provided, not blacklisting.")
+
+    if not force:
+      caught, reasons_string = check_blacklist(pattern.replace("\\W", " ").replace("\\.", "."), blacklist == "username")
+      if caught:
+        return Response(command_status=False, message="That pattern looks like it's already caught by " + reasons_string + 
+                                                      "; use `" + message_parts[0] + "-force` if you really want to do that.")
+
+    return Response(command_status=True, message="Adding `" + pattern + "` to " + blacklist + " blacklist.")
+
+    result = GitManager.add_to_blacklist(
+      blacklist=blacklist,
+      item_to_blacklist=pattern,
+      username=ev_user_name,
+      chat_profile_link=chat_user_profile_link,
+      code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
+    )
+    return Response(command_status=result[0], message=result[1])
+
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
@@ -303,22 +367,7 @@ def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, 
     :return: A Response
     """
 
-    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=wrap2.host, id=str(ev_user_id))
-    website_pattern = " ".join(message_parts[1:])
-    # noinspection PyProtectedMember
-    try:
-        regex.compile(website_pattern)
-    except regex._regex_core.error:
-        return Response(command_status=False, message="An invalid website pattern was provided, not blacklisting.")
-    result = GitManager.add_to_blacklist(
-        blacklist="website",
-        item_to_blacklist=website_pattern,
-        username=ev_user_name,
-        chat_profile_link=chat_user_profile_link,
-        code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
-    )
-    return Response(command_status=result[0], message=result[1])
-
+    return do_blacklist("website", False, message_parts, ev_user_name, ev_room, ev_user_id, wrap2)
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
@@ -331,22 +380,7 @@ def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, 
     :return: A Response
     """
 
-    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=wrap2.host, id=str(ev_user_id))
-    keyword_pattern = " ".join(message_parts[1:])
-    # noinspection PyProtectedMember
-    try:
-        regex.compile(keyword_pattern)
-    except regex._regex_core.error:
-        return Response(command_status=False, message="An invalid keyword pattern was provided, not blacklisting.")
-    result = GitManager.add_to_blacklist(
-        blacklist="keyword",
-        item_to_blacklist=keyword_pattern,
-        username=ev_user_name,
-        chat_profile_link=chat_user_profile_link,
-        code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
-    )
-    return Response(command_status=result[0], message=result[1])
-
+    return do_blacklist("keyword", False, message_parts, ev_user_name, ev_room, ev_user_id, wrap2)
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
@@ -359,24 +393,7 @@ def command_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap
     :return: A Response
     """
 
-    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=wrap2.host, id=str(ev_user_id))
-    now = datetime.now().strftime('%s')
-    keyword_pattern = " ".join(message_parts[1:])
-    # noinspection PyProtectedMember
-    try:
-        regex.compile(keyword_pattern)
-    except regex._regex_core.error:
-        return Response(command_status=False, message="An invalid keyword pattern was provided, not watching.")
-    watchlist_entry = "\t".join([now, ev_user_name, keyword_pattern])
-    result = GitManager.add_to_blacklist(
-        blacklist="watch_keyword",
-        item_to_blacklist=watchlist_entry,
-        username=ev_user_name,
-        chat_profile_link=chat_user_profile_link,
-        code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
-    )
-    return Response(command_status=result[0], message=result[1])
-
+    return do_blacklist("watch_keyword", False, message_parts, ev_user_name, ev_room, ev_user_id, wrap2)
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
@@ -389,21 +406,60 @@ def command_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id,
     :return: A Response
     """
 
-    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=wrap2.host, id=str(ev_user_id))
-    username_pattern = " ".join(message_parts[1:])
-    # noinspection PyProtectedMember
-    try:
-        regex.compile(username_pattern)
-    except regex._regex_core.error:
-        return Response(command_status=False, message="An invalid username pattern was provided, not blacklisting.")
-    result = GitManager.add_to_blacklist(
-        blacklist="username",
-        item_to_blacklist=username_pattern,
-        username=ev_user_name,
-        chat_profile_link=chat_user_profile_link,
-        code_permissions=datahandling.is_code_privileged(ev_room, ev_user_id, wrap2)
-    )
-    return Response(command_status=result[0], message=result[1])
+    return do_blacklist("username", False, message_parts, ev_user_name, ev_room, ev_user_id, wrap2)
+
+
+# noinspection PyIncorrectDocstring,PyUnusedLocal
+def command_force_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
+    """
+    Adds a string to the website blacklist and commits/pushes to GitHub
+    :param message_parts:
+    :param ev_user_name:
+    :param ev_room:
+    :param :ev_user_id:
+    :return: A Response
+    """
+
+    return do_blacklist("website", True, message_parts, ev_user_name, ev_room, ev_user_id, wrap2)
+
+# noinspection PyIncorrectDocstring,PyUnusedLocal
+def command_force_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
+    """
+    Adds a string to the keyword blacklist and commits/pushes to GitHub
+    :param message_parts:
+    :param ev_user_name:
+    :param ev_room:
+    :param :ev_user_id:
+    :return: A Response
+    """
+
+    return do_blacklist("keyword", True, message_parts, ev_user_name, ev_room, ev_user_id, wrap2)
+
+# noinspection PyIncorrectDocstring,PyUnusedLocal
+def command_force_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
+    """
+    Adds a string to the watched keywords list and commits/pushes to GitHub
+    :param message_parts:
+    :param ev_user_name:
+    :param ev_room:
+    :param :ev_user_id:
+    :return: A Response
+    """
+
+    return do_blacklist("watch_keyword", True, message_parts, ev_user_name, ev_room, ev_user_id, wrap2)
+
+# noinspection PyIncorrectDocstring,PyUnusedLocal
+def command_force_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
+    """
+    Adds a string to the username blacklist and commits/pushes to GitHub
+    :param message_parts:
+    :param ev_user_name:
+    :param ev_room:
+    :param :ev_user_id:
+    :return: A Response
+    """
+
+    return do_blacklist("username", True, message_parts, ev_user_name, ev_room, ev_user_id, wrap2)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -1637,6 +1693,11 @@ command_dict = {
     "!!/blacklist-username": command_blacklist_username,
     "!!/watch-keyword": command_watch_keyword,
     "!!/watch": command_watch_keyword,
+    "!!/blacklist-website-force": command_force_blacklist_website,
+    "!!/blacklist-keyword-force": command_force_blacklist_keyword,
+    "!!/blacklist-username-force": command_force_blacklist_username,
+    "!!/watch-keyword-force": command_force_watch_keyword,
+    "!!/watch-force": command_force_watch_keyword,
     # "!!/unwatch-keyword": command_unwatch_keyword,  # TODO
     "!!/commands": command_help,
     "!!/coffee": command_coffee,
