@@ -523,7 +523,7 @@ Mevaqesh .*lo chelek .*olam haba
 black magic specialist
 mevaqesh
 viril\Wx
-zz\Wsnore
+zz\W?snore
 bulk\Wsms\W(delhi|india)
 True\WTesto
 dabstarshop
