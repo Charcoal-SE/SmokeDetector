@@ -606,7 +606,7 @@ class FindSpam:
         r"scam[\w-]*?(book|alert|register|punch)[\w-]*?\.(co|net|org|in(\W|fo)|us)",
         r"http\S*?crazy(mass|bulk)", r'http\S*\.com\.com[/"<]',
         r"https?://[^/\s]{8,}healer",
-        r"\w{9}rev\.com", r'reddit\.com/\w{6}/"',
+        r'reddit\.com/\w{6}/"',
         r"world[\w-]*?cricket[\w-]*?\.(co|net|org|in(\W|fo)|us)",
         r"(credit|online)[\w-]*?loan[\w-]*?\.(co|net|org|in(\W|fo)|us)",
         r"worldcup\d+live\.(com?|net|org|in(\W|fo)|us)",
