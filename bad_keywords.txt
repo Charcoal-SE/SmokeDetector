@@ -358,7 +358,7 @@ embova(\W?rx)?
 core\Wskincare
 leallure
 neuro\Wxr
-test\Wshred
+testo?\W?shred
 phallyx
 nuvapelle
 jullen
@@ -388,9 +388,7 @@ active\Wbrightening
 alpha\Wmale\Wex
 hotcyberlord
 luxlift
-testshred
 erectimax
-proshred
 forskolin
 stamina\Wfuel
 nuviante
