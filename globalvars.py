@@ -323,7 +323,8 @@ class GlobalVars:
             "2233391",  # henders
             "4805174",  # kayess
             "2370483",  # Machavity
-            "1873567"   # CalvT
+            "1873567",  # CalvT
+            "4826457"  # suraj
         ],
         '111347': [
             "3160466",  # ArtOfCode
