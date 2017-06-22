@@ -540,4 +540,3 @@ dermaglo
 priaboost
 xcell\W?180
 derma\W?rewind
-livemnc\.com
