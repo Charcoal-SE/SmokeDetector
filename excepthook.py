@@ -11,8 +11,7 @@ import requests
 from helpers import log
 
 
-# noinspection PyProtectedMember
-def uncaught_exception(exctype, value, tb):
+def log_exception(exctype, value, tb):
     now = datetime.utcnow()
     delta = now - UtcDate.startup_utc_date
     tr = '\n'.join((traceback.format_tb(tb)))
@@ -21,6 +20,13 @@ def uncaught_exception(exctype, value, tb):
     log('error', logged_msg)
     with open("errorLogs.txt", "a") as f:
         f.write(logged_msg)
+
+
+# noinspection PyProtectedMember
+def uncaught_exception(exctype, value, tb):
+    now = datetime.utcnow()
+    delta = now - UtcDate.startup_utc_date
+    log_exception(exctype, value, tb)
     if delta.total_seconds() < 180 and exctype != WebSocketConnectionClosedException\
             and exctype != KeyboardInterrupt and exctype != SystemExit and exctype != requests.ConnectionError:
         os._exit(4)
