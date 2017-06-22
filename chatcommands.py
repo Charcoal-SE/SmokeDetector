@@ -417,7 +417,7 @@ def command_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap
     :return: A Response
     """
 
-    return do_blacklist(blacklist="watch_keyword", force=True, message_parts=message_parts,
+    return do_blacklist(blacklist="watch_keyword", force=False, message_parts=message_parts,
                         ev_user_name=ev_user_name, ev_room=ev_room, ev_user_id=ev_user_id, wrap2=wrap2)
 
 
