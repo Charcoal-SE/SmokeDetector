@@ -7,6 +7,7 @@ import platform
 import os
 import subprocess as sp
 from time import sleep
+import logging
 import sys
 if 'windows' in str(platform.platform()).lower():
     # noinspection PyPep8Naming
@@ -16,6 +17,12 @@ else:
 
 # Set the Python Executable based on this being stored - we refer to this later on for subprocess calls.
 PY_EXECUTABLE = sys.executable
+
+# Log to errorlog.txt so that !!/errorlogs shows us restarts
+logging.basicConfig(
+    filename='errorlog.txt',
+    level=logging.INFO,
+    format='%(asctime)s:%(levelname)s:%(message)s')
 
 # Get environment variables
 ChatExchangeU = os.environ.get('ChatExchangeU')
@@ -39,7 +46,17 @@ ecode = None  # Define this to prevent errors
 # Make a clean copy of existing environment variables, to pass down to subprocess.
 environ = os.environ.copy()
 
+def log(message):
+    logging.info('[NoCrash] {}'.format(message))
+
+def warn(message):
+    logging.warn('[NoCrash] {}'.format(message))
+
+def error(message):
+    logging.error('[NoCrash] {}'.format(message))
+
 while stoprunning is False:
+    log('Starting with persistent_arguments {!r}'.format(persistent_arguments))
     # print "[NoCrash] Switch to Standby? %s" % switch_to_standby
 
     if count == 0:
@@ -66,25 +83,31 @@ while stoprunning is False:
         # print "[NoCrash] KeyBoard Interrupt received.."
         ecode = 6
 
+    log('Exited with ecode {}'.format(ecode))
+
     if ecode == 3:
-        # print "[NoCrash] Pull in new updates."
+        log('Pull in new updates')
         if 'windows' not in str(platform.platform()).lower():
             git.checkout('deploy')
             git.pull()
             git.submodule('update')
+        else:
+            warn('Not pulling updates; we are on Windows')
 
         count = 0
         crashcount = 0
 
     elif ecode == 4:
-        # print "[NoCrash] Crashed."
         count += 1
+        log('Incremented crash count: {}; sleeping before restart'.format(count))
         sleep(5)
 
         if crashcount == 2:
-            # print "[NoCrash] Going to reverted state."
+            log('Crash count triggered reverted state')
             if 'windows' not in str(platform.platform()).lower():
                 git.checkout('HEAD~1')
+            else:
+                warn('Not reverting; we are on Windows')
 
             count = 0
             crashcount = 0
@@ -93,31 +116,34 @@ while stoprunning is False:
             crashcount += 1
 
     elif ecode == 5:
-        # print "[NoCrash] Rebooting."
+        log('Rebooting')
         count = 0
 
     elif ecode == 6:
-        # print "[NoCrash] Stopping"
+        log('Stopping')
         stoprunning = True
 
     elif ecode == 7:
-        # print "[NoCrash] Go to Standby Restart Called"
+        log('Adding "standby" to persistent arguments')
         persistent_arguments.append("standby")
 
     elif ecode == 8:
+        log('Checkout deploy')
         # print "[NoCrash] Checkout Deploy"
         if 'windows' not in str(platform.platform()).lower():
             git.checkout('deploy')
+        else:
+            warn('Not checking out deploy branch; we are on Windows')
 
         count = 0
         crashcount = 0
 
     elif ecode == 10:
-        # print "[NoCrash] Socket failure, let network settle before restart."
+        warn('Socket failure, sleeping to hopefully let network recover')
         sleep(5)
         count = 0
 
     else:
-        # print "[NoCrash] Died by unknown reason, check logs; restarting in 5 seconds."
+        error('Died for unknown reason -- check logs.  Sleeping before restart')
         sleep(5)
         count += 1
