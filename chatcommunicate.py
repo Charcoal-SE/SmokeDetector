@@ -10,6 +10,9 @@ from deletionwatcher import DeletionWatcher
 from ChatExchange.chatexchange.messages import Message
 import chatcommands
 from helpers import Response, log
+import traceback
+from excepthook import log_exception
+import sys
 
 # Please note: If new !!/ commands are added or existing ones are modified, don't forget to
 # update the wiki at https://github.com/Charcoal-SE/SmokeDetector/wiki/Commands/_edit.
@@ -192,8 +195,15 @@ def watcher(ev, wrap2):
             if result.command_status is False:
                 add_to_listen_if_edited(wrap2.host, message_id)
     except:
-        # Return empty value because we blew up.
-        return
+        try:
+            # log the error
+            log_exception(*sys.exc_info())
+
+            ev.message.reply("I hit an error while trying to run that command; run `!!/errorlogs` for details.")
+            return
+        except:
+            print("An exception was thrown while handling an exception: ")
+            traceback.print_exc()
 
 
 # noinspection PyMissingTypeHints
