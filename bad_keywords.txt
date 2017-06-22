@@ -538,6 +538,6 @@ gpoupon
 enduro\W?rush
 dermaglo
 priaboost
-xcell\W?180
+x\W?cell\W?180
 derma\W?rewind
 778.9936
