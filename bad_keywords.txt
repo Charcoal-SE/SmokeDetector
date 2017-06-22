@@ -538,3 +538,4 @@ gpoupon
 enduro\W?rush
 dermaglo
 priaboost
+xcell\W?180
