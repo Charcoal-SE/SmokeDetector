@@ -97,7 +97,7 @@ Whizz Systems?
 intellux
 viooz
 smartican
-T-complex
+t\Wcomplex
 фальшивы(е|х) (деньги|денег|купюры?)
 raging lion
 (love|miracle).*spell ?casters?
