@@ -7,7 +7,7 @@ import requests
 import time
 import json
 import regex
-import datetime
+from datetime import datetime
 from threading import Lock
 if 'windows' in str(platform.platform()).lower():
     # noinspection PyPep8Naming
