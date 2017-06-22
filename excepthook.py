@@ -13,7 +13,6 @@ from helpers import log
 
 def log_exception(exctype, value, tb):
     now = datetime.utcnow()
-    delta = now - UtcDate.startup_utc_date
     tr = '\n'.join((traceback.format_tb(tb)))
     exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
     logged_msg = "{exception}\n{now} UTC\n{row}\n\n".format(exception=exception_only, now=now, row=tr)
@@ -24,8 +23,7 @@ def log_exception(exctype, value, tb):
 
 # noinspection PyProtectedMember
 def uncaught_exception(exctype, value, tb):
-    now = datetime.utcnow()
-    delta = now - UtcDate.startup_utc_date
+    delta = datetime.utcnow() - UtcDate.startup_utc_date
     log_exception(exctype, value, tb)
     if delta.total_seconds() < 180 and exctype != WebSocketConnectionClosedException\
             and exctype != KeyboardInterrupt and exctype != SystemExit and exctype != requests.ConnectionError:

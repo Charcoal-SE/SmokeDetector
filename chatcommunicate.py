@@ -10,8 +10,6 @@ from deletionwatcher import DeletionWatcher
 from ChatExchange.chatexchange.messages import Message
 import chatcommands
 from helpers import Response, log
-from datetime import datetime
-from utcdate import UtcDate
 import traceback
 from excepthook import log_exception
 import sys
