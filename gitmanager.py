@@ -90,8 +90,8 @@ class GitManager:
             if blacklist_file_name in ['watched_keywords.txt']:
                 op = 'watch'
                 now = datetime.now().strftime('%s')
-                item_to_blacklist = "\t".join([now, username, item_to_blacklist])
-                item = item_to_blacklist.split('\t', 2)[2]
+                item = item_to_blacklist
+                item_to_blacklist = "\t".join([now, username, item])
                 item_regex = regex.compile(r'\t\L<item>$', item=[item])
             else:
                 op = 'blacklist'
