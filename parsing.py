@@ -190,7 +190,7 @@ def user_url_to_shortlink(url):
     user_id_and_site = get_user_from_url(url)
     if user_id_and_site is None:
         return url
-    return "http://{}/u/{}".format(user_id_and_site[1], user_id_and_site[0])
+    return "http://{}/users/{}".format(user_id_and_site[1], user_id_and_site[0])
 
 
 # noinspection PyMissingTypeHints
