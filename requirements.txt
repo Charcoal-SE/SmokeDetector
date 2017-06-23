@@ -4,7 +4,7 @@ packaging
 appdirs
 beautifulsoup4
 requests
-websocket-client
+websocket-client==0.42.1
 coverage
 pytest
 phonenumbers
