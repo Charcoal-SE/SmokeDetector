@@ -618,7 +618,7 @@ class FindSpam:
         r"youth\Wserum",
         r"buyviewsutube",
         r"(?:celebrity-?)?net-?worth", "richestcelebrities",
-        r"ufc\wfight\wnight" # Chiesa vs Lee spam
+        r"ufc\wfight\wnight"  # Chiesa vs Lee spam
     ]
     city_list = [
         "Agra", "Amritsar", "Bangalore", "Bhopal", "Chandigarh",
