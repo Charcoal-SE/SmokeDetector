@@ -46,14 +46,18 @@ ecode = None  # Define this to prevent errors
 # Make a clean copy of existing environment variables, to pass down to subprocess.
 environ = os.environ.copy()
 
+
 def log(message):
     logging.info('[NoCrash] {}'.format(message))
+
 
 def warn(message):
     logging.warn('[NoCrash] {}'.format(message))
 
+
 def error(message):
     logging.error('[NoCrash] {}'.format(message))
+
 
 while stoprunning is False:
     log('Starting with persistent_arguments {!r}'.format(persistent_arguments))
