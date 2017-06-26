@@ -62,7 +62,6 @@
 1495440047	tripleee	healthcaresupchat\.com
 1495456863	tripleee	testoultrastore\.com
 1495463389	tripleee	800-935-8563
-1495513435	tripleee	vaso\W?blast
 1495513790	tripleee	robdutoitsoftware\.com
 1495518292	tripleee	platinum\Wlight
 1495519138	tripleee	comfort\Wcube
