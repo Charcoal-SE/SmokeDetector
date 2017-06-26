@@ -280,3 +280,4 @@
 1498462912	tripleee	bandar99\.online
 1498466013	Glorfindel	deutsche-rednerschule\.de
 1498469035	Glorfindel	xtremedigitalsignage\.com
+1498488240	Glorfindel	seo-google\.co\.il
