@@ -61,6 +61,18 @@ class Git:
         execcmd = "git merge " + " ".join(args)
         _call_process(execcmd)
 
+    # fetch
+    @staticmethod
+    def fetch(*args):
+        execcmd = "git fetch " + " ".join(args)
+        _call_process(execcmd)
+
+    # pull
+    @staticmethod
+    def pull(*args):
+        execcmd = "git pull " + " ".join(args)
+        _call_process(execcmd)
+
     # push
     @staticmethod
     def push(*args):
@@ -92,8 +104,20 @@ class Git:
         execcmd = "git status " + " ".join(args)
         return _call_process(execcmd, return_data=True)[0].decode('UTF-8')
 
-    # status
+    # status with colours stripped
     @staticmethod
     def status_stripped(*args):
         execcmd = "git -c color.status=false status " + " ".join(args)
+        return _call_process(execcmd, return_data=True)[0].decode('UTF-8')
+
+    # diff
+    @staticmethod
+    def diff(*args):
+        execcmd = "git diff " + " ".join(args)
+        return _call_process(execcmd, return_data=True)[0].decode('UTF-8')
+
+    # diff with colours stripped
+    @staticmethod
+    def diff_stripped(*args):
+        execcmd = "git -c color.diff=false diff " + " ".join(args)
         return _call_process(execcmd, return_data=True)[0].decode('UTF-8')
