@@ -298,3 +298,4 @@
 1498629912	tripleee	upupw
 1498631302	Glorfindel	onfire\.shoes
 1498637266	tripleee	\\\[1080p\\\]
+1498642042	doppelgreener	casino\w*.co
