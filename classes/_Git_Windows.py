@@ -116,8 +116,8 @@ class Git:
         execcmd = "git diff " + " ".join(args)
         return _call_process(execcmd, return_data=True)[0].decode('UTF-8')
 
-    # diff with colours stripped
+    # diff with colours stripped, filenames only
     @staticmethod
-    def diff_stripped(*args):
-        execcmd = "git -c color.diff=false diff " + " ".join(args)
+    def diff_filenames(*args):
+        execcmd = "git -c color.diff=false diff --name-only " + " ".join(args)
         return _call_process(execcmd, return_data=True)[0].decode('UTF-8')

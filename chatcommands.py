@@ -21,7 +21,7 @@ import time
 import datahandling
 # noinspection PyCompatibility
 import regex
-from helpers import Response
+from helpers import Response, only_blacklists_changed
 from classes import Post
 
 # TODO: pull out code block to get user_id, chat_site, room_id into function
@@ -762,22 +762,25 @@ def command_pull(ev_room, ev_user_id, wrap2, *args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: String on failure, None on success
     """
-    request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/deploy')
-    latest_sha = request.json()["object"]["sha"]
-    request = requests.get(
-        'https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/{commit_code}/statuses'.format(
-            commit_code=latest_sha))
-    states = []
-    for status in request.json():
-        state = status["state"]
-        states.append(state)
-    if "success" in states:
-        os._exit(3)
-    elif "error" in states or "failure" in states:
-        return Response(command_status=True, message="CI build failed! :( Please check your commit.")
-    elif "pending" in states or not states:
-        return Response(command_status=True,
-                        message="CI build is still pending, wait until the build has finished and then pull again.")
+    if only_blacklists_changed(GitManager.get_remote_diff()):
+        #     pass
+        # else:
+        request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/deploy')
+        latest_sha = request.json()["object"]["sha"]
+        request = requests.get(
+            'https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/{commit_code}/statuses'.format(
+                commit_code=latest_sha))
+        states = []
+        for status in request.json():
+            state = status["state"]
+            states.append(state)
+        if "success" in states:
+            os._exit(3)
+        elif "error" in states or "failure" in states:
+            return Response(command_status=True, message="CI build failed! :( Please check your commit.")
+        elif "pending" in states or not states:
+            return Response(command_status=True,
+                            message="CI build is still pending, wait until the build has finished and then pull again.")
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal,PyProtectedMember

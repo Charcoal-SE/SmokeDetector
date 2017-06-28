@@ -533,7 +533,7 @@ class FindSpam:
     with open("blacklisted_usernames.txt", "r", encoding="utf-8") as f:
         blacklisted_usernames = [line.rstrip() for line in f if len(line.rstrip()) > 0]
 
-    # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
+    # Patterns: the top four lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
         r"(enstella|recoverysoftware|removevirus|support(number|help|quickbooks)|techhelp|calltech|exclusive|"
         r"onlineshop|video(course|classes|tutorial(?!s))|vipmodel|(?<!word)porn|wholesale|inboxmachine|(get|buy)cheap|"
