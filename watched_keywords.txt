@@ -295,3 +295,4 @@
 1498619433	tripleee	naijadailyfeed\.com
 1498625261	tripleee	follicle\W?rx
 1498625289	tripleee	clinamax
+1498628356	tripleee	muscle\W?rampage
