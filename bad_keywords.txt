@@ -100,7 +100,6 @@ smartican
 t\Wcomplex
 фальшивы(е|х) (деньги|денег|купюры?)
 raging lion
-(love|miracle).*spell ?casters?
 08151871776
 retrodynamic formula
 ^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$
@@ -125,7 +124,10 @@ service proposal essay
 enetdocumentation
 okaygoods
 dr ?eziza
-(spell(home)?|temple|classes)@gmail\.com
+(love|miracle).*spell ?casters?
+(spell(home)?|temple|classes)\w*@gmail\.com
+black magic specialist
+great\Wspell\Wcaster
 viagra
 cialis
 slotobit
@@ -519,7 +521,6 @@ dermalab
 expandom
 zylix\Wplus
 Mevaqesh .*lo chelek .*olam haba
-black magic specialist
 mevaqesh
 viril\Wx
 zz\W?snore
@@ -548,4 +549,3 @@ snorifix
 ampedrin
 Goldenslot
 8696823273
-great\Wspell\Wcaster
