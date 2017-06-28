@@ -435,7 +435,7 @@ virility\Wex
 visalia\W(?:skincare|cream)
 tru\W?allure
 tongkat\Wali
-x\Wcbd
+(element\W?)?x\W?cbd
 luxurious\Wskin
 ys\Wcream
 profollix
