@@ -293,3 +293,4 @@
 1498563907	Glorfindel	toiletclamp\.com
 1498619369	tripleee	bettersheet\.com
 1498619433	tripleee	naijadailyfeed\.com
+1498625261	tripleee	follicle\W?rx
