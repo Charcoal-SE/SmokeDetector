@@ -131,7 +131,7 @@ cialis
 slotobit
 putlocker
 vimax
-(contact|call) us today
+(contact|call) us (today|now)
 call \d{3}-\d{4}-\d{4}
 Thierno(_| )?M.(_| )Sow
 maxtropin
@@ -289,7 +289,6 @@ rexadrene
 neurolon
 testosterone\Wreload
 pure\Wnitro
-contact us now
 cel[ae]xas
 nutrition.*plan
 infinite\Wcleanse
