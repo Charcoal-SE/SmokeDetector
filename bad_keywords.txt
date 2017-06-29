@@ -57,7 +57,6 @@ Brorsoft
 Remo Recover
 kinnaristeel
 clash of (clan|stone)s? (cheats?|tricks?|gems?)
-(?x:B [\s_]* A [\s_]* M \W{0,5} W [\s_]* A [\s_]* R [\s_]* \.? [\s_]* C [\s_]* O [\s_]* M)
 slumber pm
 1-844-400-7325
 bestcollegechina
@@ -74,11 +73,8 @@ testo\W(e?x|black|ultra|muscle)
 day ?trading ?academy
 folliplex
 yafei ?cable
-MSP ?Hack ?Tool
 uggs ?on ?sale
 PhenQ
-Hack ?Tool ?2015
-ATM hackers?
 Vigoraflo
 Fonepaw
 Provasil
@@ -219,7 +215,11 @@ alphadrox
 vinetics\Wc
 soleil\Wglo
 Clariderm\WCream
+ATM hackers?
 hack\Wtool
+hacker\w*@
+hack\w*@
+professional\Whacker
 gain\Wxt(reme)?
 evermax
 biotic\Wmax
@@ -296,7 +296,6 @@ andronite
 idol\Wtan
 max\Wgrow\Wxtreme
 mind\Wbooster
-\w*cyberhack\w*@\w*mail\.com
 secret\Wallure\Wcream
 sex\Wscandal
 kratos\Wmax
@@ -333,7 +332,6 @@ healthherbalclinic
 zyalix
 lumivol
 avdshare
-hacker@
 femme\W?youth
 priamax
 novellus
@@ -404,7 +402,6 @@ cynergy\Wtk
 fitness\W?xtreme
 revella\Wlash
 celebrity\W?net\W?worth
-professional\Whacker
 phone\Wremotely
 jolique
 clemix
@@ -456,7 +453,6 @@ progentra
 vital\Wkhai
 metabo\Wslimax
 lash\W?rejuv
-ZeusHacks
 vital\Wnutra
 no2\Wcore
 evelina\Whydrofirm
