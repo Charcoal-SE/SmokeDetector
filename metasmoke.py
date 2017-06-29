@@ -16,7 +16,8 @@ import parsing
 import apigetpost
 import spamhandling
 import classes
-from helpers import log
+from helpers import log, only_blacklists_changed
+from gitmanager import GitManager
 
 
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
@@ -121,6 +122,16 @@ class Metasmoke:
                 spamhandling.handle_spam(post=postobj,
                                          reasons=["Manually reported " + post_data.post_type],
                                          why=why)
+            elif "deploy_updated" in message:
+                sha = message["commit_sha"][:7]
+                if message["commit_sha"] != os.popen('git log --pretty=format:"%H" -n 1').read():
+                    if "autopull" in message["commit_message"]:
+                        if only_blacklists_changed(GitManager.get_remote_diff()):
+                            GitManager.pull_remote()
+                            datahandling.load_blacklists()
+                            GlobalVars.charcoal_hq.send_message("No code modified in [`{0}`](https://github.com/"
+                                                                "Charcoal-SE/SmokeDetector/commit/{0}), only blacklists"
+                                                                " reloaded.".format(message["commit_sha"][:7]))
             elif "commit_status" in message:
                 c = message["commit_status"]
                 sha = c["commit_sha"][:7]
