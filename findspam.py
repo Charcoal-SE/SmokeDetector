@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 # noinspection PyCompatibility
-import json
 import regex
 import phonenumbers
 from difflib import SequenceMatcher
@@ -34,8 +33,6 @@ URL_REGEX = regex.compile(
     r"""(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))"""
     r"""|(?:(?:[a-z\u00a1-\uffff0-9]-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-?)"""
     r"""*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.UNICODE)
-
-COMPILED = {}
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
@@ -1060,12 +1057,7 @@ class FindSpam:
                 matched_body = None
                 compiled_regex = None
                 if is_regex_check:
-                    json_rule = json.dumps(rule)
-                    compiled_regex = COMPILED[json_rule] if json_rule in COMPILED else None
-                    if compiled_regex is None:
-                        compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
-                        COMPILED[json_rule] = compiled_regex
-
+                    compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
                     # using a named list \L in some regexes
                     matched_title = compiled_regex.findall(post.title)
                     matched_username = compiled_regex.findall(post.user_name)
