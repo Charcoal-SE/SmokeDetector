@@ -164,7 +164,7 @@ xtest\W(muscle|reviews?)
 inteligen
 natural\W?slim\W?life
 test\Wx\W360
-newlifeherbalcli!nic
+newlifeherbalclinic
 male\W?x\W?pro
 break\Wup\Wpill
 biogenic\Wxr
