@@ -11,6 +11,7 @@ from urllib.parse import urlparse
 from helpers import all_matches_unique, log
 from itertools import chain
 from collections import Counter
+from globalvars import GlobalVars
 
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
@@ -484,22 +485,6 @@ def mevaqesh_troll(s, *args):
 
 # noinspection PyClassHasNoInit
 class FindSpam:
-    with open("bad_keywords.txt", "r", encoding="utf-8") as f:
-        bad_keywords = [line.rstrip() for line in f if len(line.rstrip()) > 0]
-
-    with open("watched_keywords.txt", "r", encoding="utf-8") as f:
-        watched_keywords = dict()
-        for lineno, line in enumerate(f, 1):
-            if regex.compile('^\s*(?:#|$)').match(line):
-                continue
-            try:
-                when, by_whom, what = line.rstrip().split('\t')
-            except ValueError as err:
-                log('error', '{0}:{1}:{2}'.format(
-                    'watched_keywords.txt', lineno, err))
-                continue
-            watched_keywords[what] = {'when': when, 'by': by_whom}
-
     bad_keywords_nwb = [  # "nwb" == "no word boundary"
         u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",
         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
@@ -523,12 +508,6 @@ class FindSpam:
         "celluria", "viatropin", "(meg|test)adrox", "nordic ?loan ?firm", r"safflower\Woil",
         "(essay|resume|article|dissertation|thesis) ?writing ?service", "satta ?matka", "b.?o.?j.?i.?t.?e.?r"
     ]
-
-    with open("blacklisted_websites.txt", "r", encoding="utf-8") as f:
-        blacklisted_websites = [line.rstrip() for line in f if len(line.rstrip()) > 0]
-
-    with open("blacklisted_usernames.txt", "r", encoding="utf-8") as f:
-        blacklisted_usernames = [line.rstrip() for line in f if len(line.rstrip()) > 0]
 
     # Patterns: the top four lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
@@ -634,11 +613,11 @@ class FindSpam:
         #
         # Category: Bad keywords
         # The big list of bad keywords, for titles and posts
-        {'regex': r"(?is)\b({})\b|{}".format("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
-         'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
+        {'regex': r"(?is)\b({})\b|{}".format("|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
+         'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1},
         # The small list of *potentially* bad keywords, for titles and posts
-        {'regex': r'(?is)\b({})\b'.format('|'.join(watched_keywords.keys())),
+        {'regex': r'(?is)\b({})\b'.format('|'.join(GlobalVars.watched_keywords.keys())),
          'reason': 'potentially bad keyword in {}',
          'all': True, 'sites': [], 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 30, 'max_score': 1},
@@ -763,7 +742,7 @@ class FindSpam:
         #
         # Category: Suspicious links
         # Blacklisted sites
-        {'regex': u"(?i)({})".format("|".join(blacklisted_websites)), 'all': True,
+        {'regex': u"(?i)({})".format("|".join(GlobalVars.blacklisted_websites)), 'all': True,
          'sites': [], 'reason': "blacklisted website in {}", 'title': True, 'body': True, 'username': False,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 5},
         # Suspicious sites
@@ -999,7 +978,7 @@ class FindSpam:
         #
         # Category: other
         # Blacklisted usernames
-        {'regex': r"(?i)({})".format("|".join(blacklisted_usernames)), 'all': True, 'sites': [],
+        {'regex': r"(?i)({})".format("|".join(GlobalVars.blacklisted_usernames)), 'all': True, 'sites': [],
          'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"],
