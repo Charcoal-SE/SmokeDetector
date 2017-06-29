@@ -159,7 +159,8 @@ Youth Serum
 explosive muscle
 zyntix
 genbrain
-(teeth|tooth)\W(lightening|whitening)
+(teeth|tooth)\W(lighten|whiten|brighten|shin)(er|ing)?
+(lighten|whiten|brighten|shin)(e|er|ing|ed)?\W(teeth|tooth|kit)
 xtest\W(muscle|reviews?)
 inteligen
 natural\W?slim\W?life
