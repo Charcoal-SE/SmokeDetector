@@ -306,3 +306,4 @@
 1498708075	tripleee	rollingskygame\.com
 1498719370	tripleee	carcover\.com
 1498726931	tripleee	cartoonhd-apk\.com
+1498730047	Glorfindel	hitthegrade\.com
