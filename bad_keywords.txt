@@ -5,8 +5,12 @@ Long\W?Path\W?Tool
 writing service
 tosterone
 we (offer|give out) (loans|funds|funding)
+skin\W?(endear|royale|cell\W?pro|opulent|ology|centric)
+(rejuvenated?|aging|aged|revyve|neuphoric|deep\Wsea|amore|luxurious|regenere|nuvita|core)\W?skin
+acne( prone)? skin
+(skin|eye)\Wnovela
+visalia\W(?:skincare|cream)
 judi bola
-rejuvenated skin
 restore[ -]?samsung[ -]?data
 swtor2credits
 death reckoning calculate
@@ -30,8 +34,6 @@ Cheap Wigs?
 jivam
 ^(?s).{0,200}brain[- ]?power
 Maximum ?Shred
-aging skin
-acne( prone)? skin
 black[ -]label[ -]no
 bagprada
 6611165613
@@ -49,7 +51,6 @@ keepbrowsersafe
 pcerror-fix
 filerepairtool
 combatpcviruses
-SkinCentric
 JobsTribune
 join the (great )?illuminati
 Brorsoft
@@ -71,7 +72,6 @@ maxman ?power
 niagen
 testo\W(e?x|black|ultra|muscle)
 day ?trading ?academy
-skinology
 folliplex
 yafei ?cable
 MSP ?Hack ?Tool
@@ -177,7 +177,6 @@ nitro\Wmxs
 hl12
 xength
 red\Wfortera
-skin\Wopulent
 vegalash
 lux\W?derma
 trinity\Wx3
@@ -250,7 +249,6 @@ cactinea
 provillus
 (testo|nitro)menix
 parisian\Wglow
-revyve\Wskin
 beta\Wprostate
 oveena
 junivive
@@ -271,21 +269,18 @@ slim\Wfit\W180
 azienda\Wcollagen
 testo\Wboost
 internal\W911
-neuphoric\Wskin
 true\Wbrilliance
 neuroignite
 muscle\Wxtx
 test\Wboost\Welite
 gs\Wrichcopy\W360
 collamask
-skincell\Wpro
 naturacel
 luminescent\Wserum
 rx24
 omega\Wrejuvenol
 spa\Welixir
 ultra\W?flex
-deep\Wsea\Wskin
 hyper\W?tone\Wforce
 dietary\Wsupplement
 rexadrene
@@ -337,10 +332,8 @@ noxor
 healthherbalclinic
 zyalix
 lumivol
-(skin|eye)\Wnovela
 avdshare
 hacker@
-nuvitaskin
 femme\W?youth
 priamax
 novellus
@@ -357,7 +350,6 @@ chantel\Wst\Wclaire
 testx\Wcore
 lumidaire
 embova(\W?rx)?
-core\Wskincare
 leallure
 neuro\Wxr
 testo?\W?shred
@@ -374,7 +366,6 @@ male\Wenhancement
 tl900\Wheadlamp
 zytek(xl)?
 biodermrx
-amore\Wskin
 le\Wreel
 epifresh
 snail\Wsecret
@@ -395,7 +386,6 @@ forskolin
 stamina\Wfuel
 nuviante
 silkalike
-skin\Wroyale
 vitaeyes
 neutratone
 luminis
@@ -434,14 +424,11 @@ katosh\Wand\Wkarisa
 marine\Wmuscle
 virility\Wex
 (?<=\+)306945683465
-visalia\W(?:skincare|cream)
 tru\W?allure
 tongkat\Wali
 (element\W?)?x\W?cbd
-luxurious\Wskin
 ys\Wcream
 profollix
-skin\Wendear
 mirage\Wimperial
 neulift(?:\W?cream)?
 endurance\Wtest\Wx5?
@@ -514,7 +501,6 @@ follicore
 9100055546
 9100055547
 raw\Wnitro
-regenere\W?skin
 pottmaxxx
 active\W?plus
 truvitaliti
