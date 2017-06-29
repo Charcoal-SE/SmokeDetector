@@ -60,7 +60,6 @@ Remo Recover
 kinnaristeel
 clash of (clan|stone)s? (cheats?|tricks?|gems?)
 slumber pm
-1-844-400-7325
 bestcollegechina
 bbwdesire
 rsorder
@@ -97,7 +96,6 @@ smartican
 t\Wcomplex
 фальшивы(е|х) (деньги|денег|купюры?)
 raging lion
-08151871776
 retrodynamic formula
 ^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$
 Krojam(Soft|Cleaner)?
@@ -132,7 +130,6 @@ slotobit
 putlocker
 vimax
 (contact|call) us (today|now)
-call \d{3}-\d{4}-\d{4}
 Thierno(_| )?M.(_| )Sow
 maxtropin
 geniux
@@ -187,8 +184,7 @@ instaketones
 apexatropin
 keranique
 rejuvonus
-image\Wrevive
-914[-()]{02}517[-]?3229
+image\Wrevivey
 cognishield
 spartagen
 blackcore
