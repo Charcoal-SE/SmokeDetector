@@ -763,7 +763,9 @@ def command_pull(ev_room, ev_user_id, wrap2, *args, **kwargs):
     :return: String on failure, None on success
     """
     if only_blacklists_changed(GitManager.get_remote_diff()):
-        pass
+        GitManager.pull_remote()
+        load_blacklists()
+        return Response(command_status=True, message="No code modified, only blacklists reloaded.")
     else:
         request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/deploy')
         latest_sha = request.json()["object"]["sha"]

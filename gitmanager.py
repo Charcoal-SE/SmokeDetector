@@ -215,3 +215,7 @@ class GitManager:
             return git.diff_filenames("deploy", "origin/deploy")
         else:
             return git.diff("--name-only", "deploy", "origin/deploy")
+
+    @staticmethod
+    def pull_remote():
+        git.pull()
