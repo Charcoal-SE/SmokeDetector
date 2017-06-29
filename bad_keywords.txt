@@ -534,3 +534,4 @@ slx\W(muscle|male)
 clinamax
 atheno
 test\Wxtreme
+pdfsolution
