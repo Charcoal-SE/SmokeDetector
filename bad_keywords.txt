@@ -159,12 +159,12 @@ Youth Serum
 explosive muscle
 zyntix
 genbrain
-teeth lightening
+(teeth|tooth)\W(lightening|whitening)
 xtest\W(muscle|reviews?)
 inteligen
 natural\W?slim\W?life
 test\Wx\W360
-newlifeherbalclinic
+newlifeherbalcli!nic
 male\W?x\W?pro
 break\Wup\Wpill
 biogenic\Wxr
