@@ -74,11 +74,8 @@ day ?trading ?academy
 skinology
 folliplex
 yafei ?cable
-MSP ?Hack ?Tool
 uggs ?on ?sale
 PhenQ
-Hack ?Tool ?2015
-ATM hackers?
 Vigoraflo
 Fonepaw
 Provasil
@@ -220,7 +217,11 @@ alphadrox
 vinetics\Wc
 soleil\Wglo
 Clariderm\WCream
+ATM hackers?
 hack\Wtool
+hacker\w*@
+hack\w*@
+professional\Whacker
 gain\Wxt(reme)?
 evermax
 biotic\Wmax
@@ -301,7 +302,6 @@ andronite
 idol\Wtan
 max\Wgrow\Wxtreme
 mind\Wbooster
-\w*cyberhack\w*@\w*mail\.com
 secret\Wallure\Wcream
 sex\Wscandal
 kratos\Wmax
@@ -339,7 +339,6 @@ zyalix
 lumivol
 (skin|eye)\Wnovela
 avdshare
-hacker@
 nuvitaskin
 femme\W?youth
 priamax
@@ -414,7 +413,6 @@ cynergy\Wtk
 fitness\W?xtreme
 revella\Wlash
 celebrity\W?net\W?worth
-professional\Whacker
 phone\Wremotely
 jolique
 clemix
@@ -469,7 +467,6 @@ progentra
 vital\Wkhai
 metabo\Wslimax
 lash\W?rejuv
-ZeusHacks
 vital\Wnutra
 no2\Wcore
 evelina\Whydrofirm
