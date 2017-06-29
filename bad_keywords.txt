@@ -38,7 +38,6 @@ jivam
 Maximum ?Shred
 black[ -]label[ -]no
 bagprada
-6611165613
 Apowersoft
 ChatSim
 Service Solahart
