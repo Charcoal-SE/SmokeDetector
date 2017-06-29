@@ -2,6 +2,8 @@ baba\W?ji
 fifa.{0,20}coins?
 fifabay
 Long\W?Path\W?Tool
+# documentation: the (?!negative match) syntax won't work in the metasmoke search site
+# but it works for smoke detector.
 (?!code\W|script\W)writing service
 tosterone
 we (offer|give out) (loans|funds|funding)
