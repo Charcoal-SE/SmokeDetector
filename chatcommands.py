@@ -18,7 +18,6 @@ import random
 import requests
 import os
 import time
-import datahandling
 # noinspection PyCompatibility
 import regex
 from helpers import Response, only_blacklists_changed
@@ -35,7 +34,7 @@ from classes import Post
 def check_permissions(function_):
     # noinspection PyMissingTypeHints
     def run_command(ev_room, ev_user_id, wrap2, *args, **kwargs):
-        if datahandling.is_privileged(ev_room, ev_user_id, wrap2):
+        if is_privileged(ev_room, ev_user_id, wrap2):
             kwargs['ev_room'] = ev_room
             kwargs['ev_user_id'] = ev_user_id
             kwargs['wrap2'] = wrap2
@@ -105,7 +104,7 @@ def single_random_user(ev_room):
 
 @check_permissions
 def command_approve(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
-    if datahandling.is_code_privileged(ev_room, ev_user_id, wrap2):
+    if is_code_privileged(ev_room, ev_user_id, wrap2):
         if len(message_parts) >= 2:
             pr_num = message_parts[1]
             resp = requests.post('{}/github/pr_approve/{}'.format(GlobalVars.metasmoke_host, pr_num))
@@ -371,7 +370,7 @@ def do_blacklist(**kwargs):
         item_to_blacklist=pattern,
         username=kwargs['ev_user_name'],
         chat_profile_link=chat_user_profile_link,
-        code_permissions=datahandling.is_code_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2'])
+        code_permissions=is_code_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2'])
     )
     return Response(command_status=result[0], message=result[1])
 
