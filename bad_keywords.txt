@@ -15,7 +15,7 @@ restore[ -]?samsung[ -]?data
 swtor2credits
 death reckoning calculate
 bam2u
-Neuro(3X|flexyn|fuse|luma|plex)
+Neuro(3X|flexyn|fuse|luma|plex|ignite|lon|\Wxr)
 TesteroneXL
 Nitroxin
 Bowtrol
@@ -270,7 +270,6 @@ azienda\Wcollagen
 testo\Wboost
 internal\W911
 true\Wbrilliance
-neuroignite
 muscle\Wxtx
 test\Wboost\Welite
 gs\Wrichcopy\W360
@@ -284,7 +283,6 @@ ultra\W?flex
 hyper\W?tone\Wforce
 dietary\Wsupplement
 rexadrene
-neurolon
 testosterone\Wreload
 pure\Wnitro
 cel[ae]xas
@@ -349,7 +347,6 @@ testx\Wcore
 lumidaire
 embova(\W?rx)?
 leallure
-neuro\Wxr
 testo?\W?shred
 phallyx
 nuvapelle
