@@ -293,7 +293,6 @@
 1498619369	tripleee	bettersheet\.com
 1498619433	tripleee	naijadailyfeed\.com
 1498625261	tripleee	follicle\W?rx
-1498625289	tripleee	clinamax
 1498628356	tripleee	muscle\W?rampage
 1498629912	tripleee	upupw
 1498631302	Glorfindel	onfire\.shoes
@@ -305,3 +304,9 @@
 1498655988	doppelgreener	windowspctrendz.com
 1498656076	Glorfindel	qoppa\.com
 1498671080	NobodyNada	convert.world
+1498708075	tripleee	rollingskygame\.com
+1498719370	tripleee	carcover\.com
+1498726931	tripleee	cartoonhd-apk\.com
+1498730047	Glorfindel	hitthegrade\.com
+1498733188	tripleee	healthitcongress\.com
+1498733348	Glorfindel	sitaphal\.com
