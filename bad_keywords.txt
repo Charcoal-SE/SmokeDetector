@@ -122,7 +122,6 @@ lost lover? back
 service proposal essay
 enetdocumentation
 okaygoods
-dr ?eziza
 (love|miracle).*spell ?casters?
 (spell(home)?|temple|classes)\w*@gmail\.com
 black magic specialist
@@ -470,7 +469,6 @@ nitrobuild
 8167873816
 2348167873816
 877\W?7788969
-doctor\W?zanza
 enduro\Wforce
 (?<=/)right\Wpick(?=[-/<])
 power\Wboost\Wxi
