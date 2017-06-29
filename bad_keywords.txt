@@ -2,7 +2,7 @@ baba\W?ji
 fifa.{0,20}coins?
 fifabay
 Long\W?Path\W?Tool
-writing service
+(?!code\W|script\W)writing service
 tosterone
 we (offer|give out) (loans|funds|funding)
 skin\W?(endear|royale|cell\W?pro|opulent|ology|centric)
