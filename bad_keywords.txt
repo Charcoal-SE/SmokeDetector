@@ -530,3 +530,4 @@ clinamax
 atheno
 test\Wxtreme
 pdfsolution
+(whatsapp|viber|facebook|skype|hangouts|)\W?spy
