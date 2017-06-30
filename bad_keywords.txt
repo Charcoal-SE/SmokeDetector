@@ -532,3 +532,4 @@ test\Wxtreme
 pdfsolution
 (whatsapp|viber|facebook|skype|hangouts)\W?spy
 dermabellix
+astraea\W?(eye\W?)?serum
