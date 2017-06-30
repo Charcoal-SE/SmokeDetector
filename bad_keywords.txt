@@ -2,7 +2,9 @@ baba\W?ji
 fifa.{0,20}coins?
 fifabay
 Long\W?Path\W?Tool
-writing service
+# documentation: the (?!negative match) syntax won't work in the metasmoke search site
+# but it works for smoke detector.
+(?!code\W|script\W)writing service
 tosterone
 we (offer|give out) (loans|funds|funding)
 skin\W?(endear|royale|cell\W?pro|opulent|ology|centric)
@@ -36,7 +38,6 @@ jivam
 Maximum ?Shred
 black[ -]label[ -]no
 bagprada
-6611165613
 Apowersoft
 ChatSim
 Service Solahart
@@ -58,7 +59,6 @@ Remo Recover
 kinnaristeel
 clash of (clan|stone)s? (cheats?|tricks?|gems?)
 slumber pm
-1-844-400-7325
 bestcollegechina
 bbwdesire
 rsorder
@@ -95,7 +95,6 @@ smartican
 t\Wcomplex
 фальшивы(е|х) (деньги|денег|купюры?)
 raging lion
-08151871776
 retrodynamic formula
 ^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$
 Krojam(Soft|Cleaner)?
@@ -120,7 +119,6 @@ lost lover? back
 service proposal essay
 enetdocumentation
 okaygoods
-dr ?eziza
 (love|miracle).*spell ?casters?
 (spell(home)?|temple|classes)\w*@gmail\.com
 black magic specialist
@@ -131,7 +129,6 @@ slotobit
 putlocker
 vimax
 (contact|call) us (today|now)
-call \d{3}-\d{4}-\d{4}
 Thierno(_| )?M.(_| )Sow
 maxtropin
 geniux
@@ -187,7 +184,6 @@ apexatropin
 keranique
 rejuvonus
 image\Wrevive
-914[-()]{02}517[-]?3229
 cognishield
 spartagen
 blackcore
@@ -468,7 +464,6 @@ nitrobuild
 8167873816
 2348167873816
 877\W?7788969
-doctor\W?zanza
 enduro\Wforce
 (?<=/)right\Wpick(?=[-/<])
 power\Wboost\Wxi
