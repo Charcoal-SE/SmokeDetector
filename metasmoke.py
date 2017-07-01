@@ -79,7 +79,6 @@ class Metasmoke:
 
     @staticmethod
     def handle_websocket_data(data):
-        print("WEBSOCKET!!!  ", data)
         if "message" not in data:
             return
 
