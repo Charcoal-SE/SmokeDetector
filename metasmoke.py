@@ -123,15 +123,15 @@ class Metasmoke:
                                          reasons=["Manually reported " + post_data.post_type],
                                          why=why)
             elif "deploy_updated" in message:
-                sha = message["commit_sha"][:7]
-                if message["commit_sha"] != os.popen('git log --pretty=format:"%H" -n 1').read():
-                    if "autopull" in message["commit_message"]:
+                sha = message["deploy_updated"]["head_commit"]["id"]
+                if sha != os.popen('git log --pretty=format:"%H" -n 1').read():
+                    if "autopull" in message["deploy_updated"]["head_commit"]["message"]:
                         if only_blacklists_changed(GitManager.get_remote_diff()):
                             GitManager.pull_remote()
                             datahandling.load_blacklists()
                             GlobalVars.charcoal_hq.send_message("No code modified in [`{0}`](https://github.com/"
                                                                 "Charcoal-SE/SmokeDetector/commit/{0}), only blacklists"
-                                                                " reloaded.".format(message["commit_sha"][:7]))
+                                                                " reloaded.".format(sha[:7]))
             elif "commit_status" in message:
                 c = message["commit_status"]
                 sha = c["commit_sha"][:7]
