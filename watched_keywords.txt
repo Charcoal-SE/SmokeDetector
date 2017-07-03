@@ -337,3 +337,4 @@
 1499057732	tripleee	givemelyrics\.com
 1499059169	tripleee	coupontrends\.in
 1499062970	tripleee	cellista
+1499063412	tripleee	johortransport\.com
