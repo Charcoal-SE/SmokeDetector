@@ -291,7 +291,6 @@
 1498559032	CalvT븃	atomcurve\.com
 1498563907	Glorfindel	toiletclamp\.com
 1498619369	tripleee	bettersheet\.com
-1498619433	tripleee	naijadailyfeed\.com
 1498625261	tripleee	follicle\W?rx
 1498628356	tripleee	muscle\W?rampage
 1498629912	tripleee	upupw
@@ -333,3 +332,6 @@
 1498988797	Glorfindel	latheexperts\.com
 1499013214	rene	screenish\.com
 1499015742	Glorfindel	1onlinebusiness\.com
+1499054884	tripleee	woodprix\.com
+1499054974	tripleee	esystool\.com
+1499055297	tripleee	amabella
