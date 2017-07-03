@@ -538,3 +538,4 @@ dr\.?\W?aiwekhoe
 allerless
 SeverTek
 amabella
+vital\W?test
