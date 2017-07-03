@@ -307,7 +307,6 @@
 1498730047	Glorfindel	hitthegrade\.com
 1498733188	tripleee	healthitcongress\.com
 1498733348	Glorfindel	sitaphal\.com
-1498756628	doppelgreener	energytehran
 1498793393	tripleee	2349066011565
 1498793426	tripleee	2347064814574
 1498799521	tripleee	zeta\W?white
