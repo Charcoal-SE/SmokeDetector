@@ -343,3 +343,4 @@
 1499083591	doppelgreener	honsungtech.com
 1499083591	doppelgreener	malwarebytescustomerservice.com
 1499083591	doppelgreener	kys
+1499119824	doppelgreener	xool(scanner|net)
