@@ -335,3 +335,4 @@
 1499054884	tripleee	woodprix\.com
 1499054974	tripleee	esystool\.com
 1499057732	tripleee	givemelyrics\.com
+1499059169	tripleee	coupontrends\.in
