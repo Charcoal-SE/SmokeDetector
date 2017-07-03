@@ -336,3 +336,4 @@
 1499054974	tripleee	esystool\.com
 1499057732	tripleee	givemelyrics\.com
 1499059169	tripleee	coupontrends\.in
+1499062970	tripleee	cellista
