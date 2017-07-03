@@ -4,7 +4,7 @@ fifabay
 Long\W?Path\W?Tool
 # documentation: the (?!negative match) syntax won't work in the metasmoke search site
 # but it works for smoke detector.
-(?!code\W|script\W)writing service
+(?!code\W|script\W)writing services?
 tosterone
 we (offer|give out) (loans|funds|funding)
 skin\W?(endear|royale|cell\W?pro|opulent|ology|centric)
@@ -214,8 +214,8 @@ soleil\Wglo
 Clariderm\WCream
 ATM hackers?
 hack\Wtool
-hacker\w*@
-hack\w*@
+\w*hacker\w*@
+\w*hack\w*@
 professional\Whacker
 gain\Wxt(reme)?
 evermax
