@@ -334,14 +334,15 @@
 1499062970	tripleee	cellista
 1499063412	tripleee	johortransport\.com
 1499071077	Glorfindel	jacksexterminators\.com
-1499078105	doppelgreener	ethexindia.com
-1499083591	doppelgreener	iromde.ir
-1499083591	doppelgreener	brandor.ir
-1499083591	doppelgreener	kiapayamak.ir
-1499083591	doppelgreener	pillhammerofthor.net
-1499083591	doppelgreener	mcseo.ir
-1499083591	doppelgreener	honsungtech.com
-1499083591	doppelgreener	malwarebytescustomerservice.com
+1499078105	doppelgreener	ethexindia\.com
+1499083591	doppelgreener	iromde\.ir
+1499083591	doppelgreener	brandor\.ir
+1499083591	doppelgreener	kiapayamak\.ir
+1499083591	doppelgreener	pillhammerofthor\.net
+1499083591	doppelgreener	mcseo\.ir
+1499083591	doppelgreener	honsungtech\.com
+1499083591	doppelgreener	malwarebytescustomerservice\.com
 1499083591	doppelgreener	kys
 1499119824	doppelgreener	xool(scanner|net)
-1499119619	doppelgreener	playcoatbanat.com
+1499119619	doppelgreener	playcoatbanat\.com
+
