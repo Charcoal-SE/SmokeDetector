@@ -526,7 +526,7 @@ ampedrin
 Goldenslot
 8696823273
 slx\W(muscle|male)
-clinamax
+clina\W?max
 atheno
 test\Wxtreme
 pdfsolution
