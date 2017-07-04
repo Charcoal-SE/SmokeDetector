@@ -352,3 +352,4 @@
 1499119824	doppelgreener	xool(scanner|net)
 1499151495	Glorfindel	vidmateappsforpc\.com
 1499156323	Glorfindel	chaletsnaldehra\.com
+1499156842	Glorfindel	webgurunow\.com
