@@ -1,6 +1,6 @@
 # coding=utf-8
 from spamhandling import check_if_spam, check_if_spam_json
-from datahandling import add_blacklisted_user, add_whitelisted_user
+from datahandling import add_blacklisted_user, add_whitelisted_user, load_blacklists
 from parsing import get_user_from_url
 import pytest
 import os
@@ -8,6 +8,7 @@ import json
 from classes import Post
 
 
+load_blacklists()
 test_data_inputs = []
 with open("test/data_test_spamhandling.txt", "r", encoding="utf-8") as f:
     # noinspection PyRedeclaration
