@@ -23,7 +23,7 @@ Nitroxin
 Bowtrol
 Slim ?Genix
 Cleanse EFX
-Alpha\W?(x\W?)?(Rush|Fuel|XTRM|levo|max|prime|force\Wtesto|monster\Wadvanced|muscle|boost|plus)
+Alpha\W?(x\W?)?(Rush|Fuel|XTRM|levo|max|prime|force\Wtesto|monster\Wadvanced|muscle|boost)
 exoslim
 Blackline Elite
 TestCore Pro
