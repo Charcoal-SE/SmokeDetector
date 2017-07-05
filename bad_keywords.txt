@@ -551,4 +551,4 @@ skin\W?fresh\W?md
 renuvica
 Max\WTest\WUltra
 2348149470344
-herbal (doctor|medicine|center)
+herbal (doctor|center)
