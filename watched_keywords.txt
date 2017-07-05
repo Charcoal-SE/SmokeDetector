@@ -339,7 +339,6 @@
 1499083591	doppelgreener	pillhammerofthor\.net
 1499083591	doppelgreener	mcseo\.ir
 1499083591	doppelgreener	honsungtech\.com
-1499083591	doppelgreener	malwarebytescustomerservice\.com
 1499083591	doppelgreener	kys
 1499119824	doppelgreener	xool(scanner|net)
 1499119619	doppelgreener	playcoatbanat\.com
