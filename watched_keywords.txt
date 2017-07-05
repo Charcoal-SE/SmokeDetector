@@ -46,8 +46,8 @@
 1495112147	tripleee	mp3fashion\.net
 1495116312	tripleee	tech\W?and\W?music\W?teacher
 1495120084	tripleee	newyorkessays\.com
-1495126640	quartata	amasnigeria.com
-1495156953	quartata	financialloanfirm@mail.com
+1495126640	quartata	amasnigeria\.com
+1495156953	quartata	financialloanfirm@mail\.com
 1495166536	tripleee	test[ \-]reload
 1495172088	tripleee	healthoptionbooklet\.com
 1495172199	tripleee	parisian\Wsecret
@@ -72,7 +72,7 @@
 1495544675	tripleee	lancerskincare\.com
 1495547624	Mithrandir	azzamaviero\.com
 1495552368	doppelgreener	utm_source=stack.?exchange
-1495555781	Mithrandir	mastershield55@gmail.com
+1495555781	Mithrandir	mastershield55@gmail\.com
 1495609290	tripleee	lunaluxe\Wskin(s|care)?
 1495610661	tripleee	2348107155060
 1495610785	tripleee	dr\.?abaherbalhome
@@ -262,7 +262,7 @@
 1498034752	tripleee	lowfantasygaming\.com
 1498036355	tripleee	vitacleanseblogs\.com
 1498039604	tripleee	ecanarys\.com
-1498062658	Glorfindel	lodgingeo.com
+1498062658	Glorfindel	lodgingeo\.com
 1498069688	CalvT븃	zestteam\.com
 1498108272	tripleee	garciniasstore\.com
 1498114608	tripleee	hhwarkar
@@ -291,13 +291,13 @@
 1498629912	tripleee	upupw
 1498631302	Glorfindel	onfire\.shoes
 1498637266	tripleee	\\\[1080p\\\]
-1498642042	doppelgreener	casino\w*.co
+1498642042	doppelgreener	casino\w*\.co
 1498646009	tripleee	facebookmonthlydownload\.com
 1498649447	tripleee	nutrivix
 1498649454	Glorfindel	miracle\.net\.in
-1498655988	doppelgreener	windowspctrendz.com
+1498655988	doppelgreener	windowspctrendz\.com
 1498656076	Glorfindel	qoppa\.com
-1498671080	NobodyNada	convert.world
+1498671080	NobodyNada	convert\.world
 1498708075	tripleee	rollingskygame\.com
 1498719370	tripleee	carcover\.com
 1498726931	tripleee	cartoonhd-apk\.com
@@ -361,10 +361,10 @@
 1499167896	tripleee	inblogslife\.com
 1499168056	tripleee	asiafm99\.com
 1499170251	Mithrandir	kidmoto
-1499172798	doppelgreener	kondompasutri.com
+1499172798	doppelgreener	kondompasutri\.com
 1499172863	doppelgreener	Kondom\W?Online
 1499173370	Glorfindel	hindijokes123\.com
-1499174214	doppelgreener	i-fax.ru
-1499174231	doppelgreener	Sohbetguzel.net
-1499208532	doppelgreener	raitube.com
+1499174214	doppelgreener	i-fax\.ru
+1499174231	doppelgreener	Sohbetguzel\.net
+1499208532	doppelgreener	raitube\.com
 1499228875	tripleee	trimline\W?cleanse
