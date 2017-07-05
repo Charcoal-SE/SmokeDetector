@@ -368,3 +368,4 @@
 1499174231	doppelgreener	Sohbetguzel\.net
 1499208532	doppelgreener	raitube\.com
 1499228875	tripleee	trimline\W?cleanse
+1499234435	tripleee	darbastan\.(com|ir)
