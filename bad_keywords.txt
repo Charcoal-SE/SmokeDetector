@@ -120,7 +120,7 @@ service proposal essay
 enetdocumentation
 okaygoods
 (love|miracle).*spell ?casters?
-(spell(home)?|temple|classes)\w*@gmail\.com
+\w*(spell(home)?|temple|classes)\w*@
 black magic specialist
 great\Wspell\Wcaster
 viagra
