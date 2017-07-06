@@ -380,4 +380,4 @@
 1499251783	tripleee	interiordesignapmt\.hatenablog\.com
 1499270372	doppelgreener	sasibinu\.com
 1499272679	doppelgreener	prayertimesguide\.com
-1499283348	doppelgreener	javacodepoint.com
+1499283348	doppelgreener	javacodepoint\.com
