@@ -555,3 +555,4 @@ herbal (doctor|center|centre)
 trifecta\W?xl
 boost\W?excel
 571\W?286\W?5929
+power\W?testo
