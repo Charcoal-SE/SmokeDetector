@@ -385,3 +385,4 @@
 1499328874	tripleee	981\W?029\W?2342
 1499329106	Glorfindel	gsmarena\.com\.bd
 1499334440	tripleee	hypercet
+1499335268	tripleee	servetechie\.com
