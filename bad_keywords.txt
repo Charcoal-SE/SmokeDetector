@@ -559,3 +559,4 @@ power\W?testo
 888\W?337\W?5333
 ^where.*hyderabad\?$
 alpha\W?testo
+clevastin

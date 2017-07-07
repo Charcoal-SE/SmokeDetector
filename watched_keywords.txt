@@ -390,5 +390,4 @@
 1499402322	tripleee	2349054910629
 1499403375	tripleee	ninamoron\.bravesites\.com
 1499406025	tripleee	neuro\W?boost
-1499409849	tripleee	clevastin
 1499410428	tripleee	prostagenix
