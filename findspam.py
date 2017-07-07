@@ -8,10 +8,12 @@ import tld
 # noinspection PyPackageRequirements
 from tld.utils import TldDomainNotFound
 from urllib.parse import urlparse
-from helpers import all_matches_unique, log
 from itertools import chain
 from collections import Counter
+
+from helpers import all_matches_unique, log
 from globalvars import GlobalVars
+from blacklists import load_blacklists
 
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
@@ -482,6 +484,9 @@ def mevaqesh_troll(s, *args):
         return True, "Post matches pattern from a known troll"
     else:
         return False, ""
+
+
+load_blacklists()
 
 
 # noinspection PyClassHasNoInit

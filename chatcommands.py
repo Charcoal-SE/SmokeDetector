@@ -7,6 +7,7 @@ from datetime import datetime
 from utcdate import UtcDate
 from apigetpost import api_get_post
 from datahandling import *
+from blacklists import load_blacklists
 from metasmoke import Metasmoke
 from parsing import *
 from spamhandling import handle_spam
