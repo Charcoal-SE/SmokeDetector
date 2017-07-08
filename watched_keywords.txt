@@ -395,3 +395,4 @@
 1499433221	Glorfindel	rbianinfotech\.com
 1499504394	Glorfindel	enzoinfotech\.com
 1499507531	Glorfindel	40ng\.com
+1499509769	Glorfindel	omindiatech\.blogspot\.in
