@@ -571,3 +571,4 @@ liftesse
 bonte\W?(advanced|eye\W?serum)
 steelcut\W?testosterone
 پنتاکس
+allurifi
