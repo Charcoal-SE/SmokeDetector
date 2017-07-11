@@ -568,5 +568,5 @@ male\W?onyx
 2348133873774
 muscle\W?x\W?te?st
 liftesse
-bonte\W?advanced
+bonte\W?(advanced|eye\W?serum)
 steelcut\W?testosterone
