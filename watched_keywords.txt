@@ -422,3 +422,4 @@
 1499752193	tripleee	idea-refinery\.com
 1499754543	tripleee	complete\W?metabolism
 1499759409	tripleee	javachat\.co
+1499760787	tripleee	newjordans2017\.net
