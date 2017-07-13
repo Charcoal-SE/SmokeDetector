@@ -75,6 +75,7 @@ bodyfetcherMaxIds.p
 # Error logs
 errorLogs.txt
 errorLogs.txt.*
+errorlog.txt
 
 # Swap files
 *.swp
