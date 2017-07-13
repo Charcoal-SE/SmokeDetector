@@ -443,3 +443,4 @@
 1499928560	Glorfindel	transhumanconsulting\.com
 1499929215	Glorfindel	limeproxies\.com
 1499930461	Glorfindel	itphobia\.com
+1499933190	Glorfindel	devividstudio\.in
