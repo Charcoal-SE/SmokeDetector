@@ -449,3 +449,4 @@
 1499953072	Glorfindel	tecgeeks\.in
 1500008142	tripleee	uphindikhabar\.in
 1500009847	tripleee	titan\W?xplode
+1500014905	Ashish Ahuja	carehealthportal\.com
