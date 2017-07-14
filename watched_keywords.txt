@@ -452,3 +452,4 @@
 1500014905	Ashish Ahuja	carehealthportal\.com
 1500016574	Glorfindel	lifespro\.com
 1500018985	Glorfindel	quickencontactservice\.com
+1500020116	tripleee	acaiultralean-france\.com
