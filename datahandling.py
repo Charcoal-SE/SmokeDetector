@@ -36,6 +36,7 @@ def _load_pickle(path, encoding='utf-8'):
             os.remove(path)
             raise
 
+
 # methods to load files and filter data in them:
 def load_files():
     if os.path.isfile("falsePositives.p"):
