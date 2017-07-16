@@ -24,6 +24,11 @@ def _load_pickle(path, encoding='utf-8'):
             if os.path.isfile(path):
                 os.remove(path)
 
+            if "apiCalls" in path or "bodyfetcher" in path:
+                return {}
+            else:
+                return []
+
 
 # methods to load files and filter data in them:
 
