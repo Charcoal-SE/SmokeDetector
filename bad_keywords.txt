@@ -592,3 +592,4 @@ skintology
 formula\W?focus
 dermedica
 follicle\W?rx
+tekmale
