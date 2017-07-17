@@ -277,7 +277,6 @@
 1498559032	CalvT븃	atomcurve\.com
 1498563907	Glorfindel	toiletclamp\.com
 1498619369	tripleee	bettersheet\.com
-1498625261	tripleee	follicle\W?rx
 1498629912	tripleee	upupw
 1498631302	Glorfindel	onfire\.shoes
 1498637266	tripleee	\\\[1080p\\\]

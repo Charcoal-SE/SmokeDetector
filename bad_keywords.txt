@@ -591,3 +591,4 @@ skintology
 (?!<=tom )zko
 formula\W?focus
 dermedica
+follicle\W?rx
