@@ -481,4 +481,3 @@
 1500286294	tripleee	eminentweighingscale\.com
 1500290781	Glorfindel	breakingaway\.com
 1500294274	Mithrandir	smackcoders\.com
-1500296767	tripleee	apkbyte\.com
