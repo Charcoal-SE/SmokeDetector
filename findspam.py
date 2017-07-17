@@ -21,6 +21,14 @@ RE_COMPILE = regex.compile(EXCEPTION_RE)
 COMMON_MALFORMED_PROTOCOLS = [
     ('httl://', 'http://'),
 ]
+SE_SITES_RE = r'(?:{sites})'.format(
+    sites='|'.join([
+        r'([a-z]+\.)stackoverflow\.com',
+        r'(?:{doms})\.com'.format(doms='|'.join(
+            [r'askubuntu', r'superuser', r'serverfault'])),
+        r'mathoverflow\.net',
+        r'(?:[a-z]+\.)*stackexchange\.com']))
+
 
 # Flee before the ugly URL validator regex!
 # We are using this, instead of a nice library like BeautifulSoup, because spammers are
@@ -299,6 +307,8 @@ def bad_pattern_in_url(s, site, *args):
     matches = regex.compile(
         r'<a href="(?P<frag>{0})"|<a href="[^"]*"(?:\s+"[^"]*")*>(?P<frag>{0})</a>'.format(
             '|'.join(patterns)), regex.UNICODE).findall(s)
+    matches = [x for x in matches if not regex.match(
+        r'^https?://{0}'.format(SE_SITES_RE), x[0])]
     if matches:
         return True, u"Bad fragment in link {}".format(
             ", ".join(["".join(match) for match in matches]))
