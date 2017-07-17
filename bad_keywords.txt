@@ -588,3 +588,4 @@ xl\Wtest\Wplus
 illumina
 activatrol
 skintology
+(?!<=tom )zko
