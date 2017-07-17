@@ -483,3 +483,4 @@
 1500294274	Mithrandir	smackcoders\.com
 1500300679	Glorfindel	starregistration\.net
 1500308140	Glorfindel	tattoosme\.com
+1500311624	Glorfindel	cloudninjas\.com
