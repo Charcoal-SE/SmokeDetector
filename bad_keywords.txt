@@ -587,3 +587,4 @@ alpha\Wsize\Wfuel
 xl\Wtest\Wplus
 illumina
 activatrol
+skintology
