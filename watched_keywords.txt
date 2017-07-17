@@ -482,3 +482,4 @@
 1500290781	Glorfindel	breakingaway\.com
 1500294274	Mithrandir	smackcoders\.com
 1500300679	Glorfindel	starregistration\.net
+1500308140	Glorfindel	tattoosme\.com
