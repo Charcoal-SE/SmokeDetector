@@ -198,7 +198,6 @@
 1497187751	Glorfindel	kafemag\.com
 1497257884	Glorfindel	jusfood\.com
 1497260189	Glorfindel	chicagoprostitutes\.info
-1497260628	Mithrandir	musixmatch\.com
 1497265706	Glorfindel	telediagnosis\.pl
 1497270166	Glorfindel	hack2secure\.com
 1497272353	Glorfindel	replaymatches\.com
