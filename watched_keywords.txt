@@ -454,7 +454,6 @@
 1500053648	Glorfindel	ivisaonline\.com
 1500075663	NobodyNada	phpgrid\.org
 1500095149	NobodyNada	phongkhamdaidong\.vn
-1500099627	Glorfindel	کالپدا
 1500100733	Glorfindel	cater2\.me
 1500118173	Glorfindel	kamyaagnihotri\.co\.in
 1500126787	Glorfindel	192-168-0-1\.link

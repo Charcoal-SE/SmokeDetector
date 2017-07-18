@@ -599,3 +599,4 @@ magnetique\W?hair
 slim\W?365
 (?<=/)testfactor(?:=[-/])
 testrex
+کالپدا
