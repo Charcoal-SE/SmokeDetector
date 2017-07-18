@@ -1,17 +1,22 @@
 # -*- coding: utf-8 -*-
 # noinspection PyCompatibility
+
 import json
 import regex
-import phonenumbers
 from difflib import SequenceMatcher
+from urllib.parse import urlparse
+from itertools import chain
+from collections import Counter
+
 # noinspection PyPackageRequirements
 import tld
 # noinspection PyPackageRequirements
 from tld.utils import TldDomainNotFound
-from urllib.parse import urlparse
+import phonenumbers
+import dns.resolver
+
 from helpers import all_matches_unique, log
-from itertools import chain
-from collections import Counter
+
 
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
@@ -316,6 +321,20 @@ def bad_pattern_in_url(s, site, *args):
         return False, ""
 
 
+def bad_ns_for_url_domain(s, site, *args):
+    for domain in set([get_domain(link) for link in post_links(s)]):
+        try:
+            ns = dns.resolver.query(domain, 'ns')
+        except dns.exception.DNSException as exc:
+            # TODO: log exception?
+            continue
+        nameservers = [server.target.to_text() for server in ns]
+        if any([ns.endswith('.namecheaphosting.com.') for ns in nameservers]):
+            return True, '{domain} NS suspicious {ns}'.format(
+                domain=domain, ns=','.join(nameservers))
+    return False, ""
+
+
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def is_offensive_post(s, site, *args):
     if s is None or len(s) == 0:
@@ -376,6 +395,24 @@ def character_utilization_ratio(s, site, *args):
         return False, ""
 
 
+def post_links(post):
+    """
+    Helper function to extract URLs from a piece of HTML.
+    """
+    # Fix stupid spammer tricks
+    for p in COMMON_MALFORMED_PROTOCOLS:
+        post = post.replace(p[0], p[1])
+
+    links = []
+    for l in regex.findall(URL_REGEX, post):
+        if l[-1].isalnum():
+            links.append(l)
+        else:
+            links.append(l[:-1])
+
+    return set(links)
+
+
 # noinspection PyMissingTypeHints
 def perform_similarity_checks(post, name):
     """
@@ -384,41 +421,25 @@ def perform_similarity_checks(post, name):
     :param name: Username to compare against
     :return: Float ratio of similarity
     """
-    # Fix stupid spammer tricks
-    for p in COMMON_MALFORMED_PROTOCOLS:
-        post = post.replace(p[0], p[1])
-    # Find links in post
-    found_links = regex.findall(URL_REGEX, post)
-
-    links = []
-    for l in found_links:
-        if l[-1].isalnum():
-            links.append(l)
-        else:
-            links.append(l[:-1])
-
-    links = list(set(links))
     t1 = 0
     t2 = 0
     t3 = 0
     t4 = 0
 
-    if links:
-        for link in links:
-            domain = get_domain(link)
-            # Straight comparison
-            t1 = similar_ratio(domain, name)
-            # Strip all spaces check
-            t2 = similar_ratio(domain, name.replace(" ", ""))
-            # Strip all hypens
-            t3 = similar_ratio(domain.replace("-", ""), name.replace("-", ""))
-            # Strip both hypens and spaces
-            t4 = similar_ratio(domain.replace("-", "").replace(" ", ""), name.replace("-", "").replace(" ", ""))
-            # Have we already exceeded the threshold? End now if so, otherwise, check the next link
-            if max(t1, t2, t3, t4) >= SIMILAR_THRESHOLD:
-                return max(t1, t2, t3, t4)
-    else:
-        return 0
+    for link in post_links(post):
+        domain = get_domain(link)
+        # Straight comparison
+        t1 = similar_ratio(domain, name)
+        # Strip all spaces check
+        t2 = similar_ratio(domain, name.replace(" ", ""))
+        # Strip all hypens
+        t3 = similar_ratio(domain.replace("-", ""), name.replace("-", ""))
+        # Strip both hypens and spaces
+        t4 = similar_ratio(domain.replace("-", "").replace(" ", ""), name.replace("-", "").replace(" ", ""))
+        # Have we already exceeded the threshold? End now if so, otherwise, check the next link
+        if max(t1, t2, t3, t4) >= SIMILAR_THRESHOLD:
+            break
+
     return max(t1, t2, t3, t4)
 
 
@@ -793,7 +814,14 @@ class FindSpam:
         {'method': bad_pattern_in_url, 'all': True, 'sites': [],
          'reason': 'bad pattern in URL {}',
          'title': False, 'body': True, 'username': False,
-         'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
+         'stripcodeblocks': True, 'body_summary': True,
+         'max_rep': 1, 'max_score': 0},
+        # Link has NS hosted by bad guy
+        {'method': bad_ns_for_url_domain, 'all': True, 'sites': [],
+         'reason': 'bad NS for domain in {}',
+         'title': True, 'body': True, 'username': False,
+         'stripcodeblocks': True, 'body_summary': True,
+         'max_rep': 1, 'max_score': 0},
         # Country-name domains, travel and expats sites are exempt
         {'regex': r"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|"
                   r"spain|sweden)\w{0,4}\.(com|net)", 'all': True,
