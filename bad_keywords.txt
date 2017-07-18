@@ -600,3 +600,4 @@ slim\W?365
 (?<=/)testfactor(?:=[-/])
 testrex
 کالپدا
+titan\W?xplode
