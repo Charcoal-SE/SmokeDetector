@@ -3,7 +3,6 @@
 1494592807	tripleee	trimfire
 1494824575	tripleee	social-?bond\.[a-z]+
 1494825547	tripleee	08151729325
-1494825602	tripleee	z-a-recovery\.com
 1494837483	tripleee	advancehospital\.com
 1494837962	tripleee	[\\][$]pi[$]\Wis\Wrational
 1494844966	tripleee	09545968049
