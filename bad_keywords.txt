@@ -598,3 +598,4 @@ bella\W?rose
 magnetique\W?hair
 slim\W?365
 (?<=/)testfactor(?:=[-/])
+testrex
