@@ -3,7 +3,6 @@
 1494592807	tripleee	trimfire
 1494824575	tripleee	social-?bond\.[a-z]+
 1494825547	tripleee	08151729325
-1494825602	tripleee	z-a-recovery\.com
 1494837483	tripleee	advancehospital\.com
 1494837962	tripleee	[\\][$]pi[$]\Wis\Wrational
 1494844966	tripleee	09545968049
@@ -199,7 +198,6 @@
 1497187751	Glorfindel	kafemag\.com
 1497257884	Glorfindel	jusfood\.com
 1497260189	Glorfindel	chicagoprostitutes\.info
-1497260628	Mithrandir	musixmatch\.com
 1497265706	Glorfindel	telediagnosis\.pl
 1497270166	Glorfindel	hack2secure\.com
 1497272353	Glorfindel	replaymatches\.com
@@ -439,7 +437,6 @@
 1499948889	Glorfindel	businessmindltd\.co\.uk
 1499953072	Glorfindel	tecgeeks\.in
 1500008142	tripleee	uphindikhabar\.in
-1500009847	tripleee	titan\W?xplode
 1500014905	Ashish Ahuja	carehealthportal\.com
 1500016574	Glorfindel	lifespro\.com
 1500018985	Glorfindel	quickencontactservice\.com
@@ -488,3 +485,16 @@
 1500353110	tripleee	lawcancer\.cf
 1500353299	tripleee	curalin
 1500354018	tripleee	photoeditor360\.com
+1500364935	tripleee	vrhuntertech\.com
+1500368149	tripleee	avantor
+1500368329	tripleee	serapelle
+1500372001	Mithrandir	tutorialpedia
+1500375521	tripleee	anandhospital\.com
+1500375671	tripleee	coder22\.com
+1500380532	tripleee	neuroboostiq164
+1500388725	Mithrandir	telectronics\.pk
+1500393280	Mithrandir	makemyassignments\.com
+1500402122	NobodyNada	SEOMeter\.net
+1500402197	NobodyNada	plk5\.com
+1500441244	tripleee	uninstallmalwaretips\.com
+1500444282	Glorfindel	thecrazythinkers\.com
