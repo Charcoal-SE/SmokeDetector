@@ -601,3 +601,4 @@ slim\W?365
 testrex
 کالپدا
 titan\W?xplode
+test\W?1\W?fusion
