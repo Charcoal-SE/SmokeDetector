@@ -18,7 +18,6 @@ def _load_pickle(path, encoding='utf-8'):
         try:
             return pickle.load(f, encoding=encoding)
         except UnicodeDecodeError:
-            f.close()
             os.remove(path)
 
             if "apicalls" in path.lower():
@@ -30,8 +29,6 @@ def _load_pickle(path, encoding='utf-8'):
 
             if "bodyfetcher" in path.lower():
                 return {}
-        except Exception as e:
-            raise e
         except EOFError:
             os.remove(path)
             raise
