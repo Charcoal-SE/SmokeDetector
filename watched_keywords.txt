@@ -508,3 +508,4 @@
 1500463771	Glorfindel	jamesprada\.net
 1500465473	Glorfindel	idapgroup\.com
 1500467747	Glorfindel	azedo\.com
+1500477461	Mithrandir	leaveyourluggage\.gr
