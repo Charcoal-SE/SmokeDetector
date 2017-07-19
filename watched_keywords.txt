@@ -506,3 +506,4 @@
 1500458016	Glorfindel	oferteunice\.ro
 1500458721	Glorfindel	tranceformfitness\.com
 1500462251	Glorfindel	com\.applop
+1500463771	Glorfindel	jamesprada\.net
