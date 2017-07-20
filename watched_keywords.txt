@@ -507,7 +507,6 @@
 1500465473	Glorfindel	idapgroup\.com
 1500467747	Glorfindel	azedo\.com
 1500477461	Mithrandir	leaveyourluggage\.gr
-1500528744	Glorfindel	onevpn\.com
 1500529420	tripleee	dreamleaguesoccerkits\.info
 1500530690	tripleee	786\W?480\W?3239
 1500530979	tripleee	blank\Wcredit\Wcard
