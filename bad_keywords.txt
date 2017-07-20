@@ -611,3 +611,4 @@ duoslim
 credit\W?repair
 avantor
 monitor\Wany\Wphone
+iq\W?genex
