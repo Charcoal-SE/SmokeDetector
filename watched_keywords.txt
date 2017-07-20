@@ -486,7 +486,6 @@
 1500353299	tripleee	curalin
 1500354018	tripleee	photoeditor360\.com
 1500364935	tripleee	vrhuntertech\.com
-1500368149	tripleee	avantor
 1500368329	tripleee	serapelle
 1500372001	Mithrandir	tutorialpedia
 1500375521	tripleee	anandhospital\.com
