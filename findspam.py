@@ -253,8 +253,11 @@ def keyword_email(s, site, *args):   # a keyword and an email in the same post
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def pattern_email(s, site, *args):
-    pattern = regex.compile(r"(?<![=#/])\b[A-z0-9_.%+-]*(dr|loan|hack|financ|fund|spell|temple|herbal|spiritual|atm|heal|priest|classes)[A-z0-9_.%+-]*"
-                            r"@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s.lower())
+    pattern = regex.compile(r"(?<![=#/])\b[A-z0-9_.%+-]*"
+                            r"(dr|loan|hack|financ|fund|spell|temple|herbal|spiritual|atm|heal|priest|classes)"
+                            r"[A-z0-9_.%+-]*"
+                            r"@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b"
+                            ).search(s.lower())
     if pattern:
         return True, u"Pattern-matching email {}".format(pattern.group(0))
     return False, ""
@@ -955,7 +958,7 @@ class FindSpam:
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Spammy-looking email in questions and answers, for all sites
         {'method': pattern_email, 'all': True, 'sites': [], 'reason': "pattern-matching email in {}", 'title': True,
-         'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0}, 
+         'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # QQ/ICQ/Whatsapp... numbers, for all sites
         {'regex': r'(?i)(?<![a-z0-9])Q{1,2}(?:(?:[vw]|[^a-z0-9])\D{0,8})?\d{5}[.-]?\d{4,5}(?!["\d])|'
                   r'\bICQ[ :]{0,5}\d{9}\b|\bwh?atsapp?[ :]{0,5}\d{10}', 'all': True, 'sites': [],
