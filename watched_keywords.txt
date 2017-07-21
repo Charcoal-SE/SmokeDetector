@@ -524,3 +524,4 @@
 1500628976	Glorfindel	jualaborsicytotec\.com
 1500629601	Glorfindel	3dot\W?technologies
 1500630589	Glorfindel	luciddreamingpro\.com
+1500632525	Glorfindel	govtkb\.com
