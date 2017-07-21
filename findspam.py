@@ -562,7 +562,9 @@ class FindSpam:
         r"moist|lefair|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone)[\w-]*?\.(co|net|org|in(\W|fo)|us|"
         r"wordpress|blogspot|tumblr|webs\.)",
         r"(moving|\w{10}spell|[\w-]{3}password|(?!greatfurniture)\w{5}deal|(?!nfood)\w{5}facts|\w\dfacts|\Btoyshop|"
-        r"[\w-]{5}cheats|[\w-]{6}girls|clothing|shoes(inc)?|cheatcode|cracks|credits|-wallet|refunds|truo?ng|viet|"
+        r"[\w-]{5}cheats|"
+        r"(?!djangogirls\.org(?:$|[/?]))[\w-]{6}girls|"
+        r"clothing|shoes(inc)?|cheatcode|cracks|credits|-wallet|refunds|truo?ng|viet|"
         r"trang)\.(co|net|org|in(\W|fo)|us)",
         r"(health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
         r"(//|www\.)healthy?\w{5,}\.com",
