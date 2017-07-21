@@ -197,6 +197,10 @@ GlobalVars.specialrooms = [
         "room": GlobalVars.wrap.get_room("388"),
         "unwantedReasons": []
     },
+    {   "sites": ["meta.stackexchange.com"],
+        "room": GlobalVars.wrap.get_room("1121"),
+         "unwantedReasons": []
+    },
     {
         "sites": ["bitcoin.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("8089"),
