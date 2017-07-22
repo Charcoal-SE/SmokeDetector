@@ -22,11 +22,11 @@ def test_blacklist_integrity():
 
 
 def test_blacklist_pull_diff():
-    only_blacklists_diff = """helpers.py
-                              test/test_blacklists.py
-                              blacklisted_usernames.txt"""
+    only_blacklists_diff = """watched_keywords.txt
+                              bad_keywords.txt
+                              blacklisted_websites.txt"""
     assert only_blacklists_changed(only_blacklists_diff)
-    mixed_files_diff = """blacklisted_websites.txt
-                       watched_keywords.txt
-                       bad_keywords.txt"""
+    mixed_files_diff = """helpers.py
+                          test/test_blacklists.py
+                          blacklisted_usernames.txt"""
     assert not only_blacklists_changed(mixed_files_diff)
