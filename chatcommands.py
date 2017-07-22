@@ -504,9 +504,9 @@ def command_gitstatus(wrap2, *args, **kwargs):
 
 @check_permissions
 def command_remotediff(*args, **kwargs):
-    will_require_full_restart = "SmokeDetector will require a full restart to pull changes: " \
+    will_require_full_restart = "\n\nSmokeDetector will require a full restart to pull changes: " \
                                 "{}".format(str(only_blacklists_changed(GitManager.get_remote_diff())))
-    return Response(command_status=True, message="\n\n".join([GitManager.get_remote_diff(), will_require_full_restart]))
+    return Response(command_status=True, message=GitManager.get_remote_diff() + will_require_full_restart)
 
 
 # --- Joke Commands --- #
