@@ -40,4 +40,4 @@ def only_blacklists_changed(diff):
                        "watched_keywords.txt"]
     files_changed = diff.split()
     non_blacklist_files = [f for f in files_changed if f not in blacklist_files]
-    return bool(non_blacklist_files)
+    return not bool(non_blacklist_files)
