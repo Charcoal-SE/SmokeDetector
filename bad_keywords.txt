@@ -120,7 +120,6 @@ service proposal essay
 enetdocumentation
 okaygoods
 (love|miracle).*spell ?casters?
-\w*(spell(home)?|temple|classes)\w*@
 black magic specialist
 great\Wspell\Wcaster
 viagra
@@ -214,8 +213,6 @@ soleil\Wglo
 Clariderm\WCream
 ATM hackers?
 hack\Wtool
-\w*hacker\w*@
-\w*hack\w*@
 professional\Whacker
 gain\Wxt(reme)?
 evermax
