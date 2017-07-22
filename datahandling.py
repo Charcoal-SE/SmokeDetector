@@ -14,6 +14,7 @@ import regex
 from globalvars import GlobalVars
 from blacklists import load_blacklists
 
+
 def _load_pickle(path, encoding='utf-8'):
     with open(path, mode="rb") as f:
         try:
@@ -36,6 +37,7 @@ def _load_pickle(path, encoding='utf-8'):
 
 # methods to load files and filter data in them:
 # load_blacklists() is defined in a separate module blacklists.py, though
+
 
 # methods to load files and filter data in them:
 def load_files():
