@@ -1762,6 +1762,7 @@ command_dict = {
     "!!/pull": command_pull,
     "!!/pending": command_pending,
     "!!/reboot": command_reboot,
+    "!!/remote-diff": command_remotediff,
     "!!/reportuser": command_allspam,
     "!!/rmblu": command_remove_blacklist_user,
     "!!/rmblu-": command_remove_blacklist_user,
