@@ -254,8 +254,8 @@ def keyword_email(s, site, *args):   # a keyword and an email in the same post
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def pattern_email(s, site, *args):
     pattern = regex.compile(r"(?<![=#/])\b[A-z0-9_.%+-]*"
-                            r"(dr|loan|hack|financ|fund|spell|temple|herbal|spiritual|atm|heal|priest|classes)"
-                            r"[A-z0-9_.%+-]*"
+                            r"(dr|loan|hack|financ|fund|spell|temple|herbal|spiritual|atm|heal|priest|classes|"
+                            r"investment)[A-z0-9_.%+-]*"
                             r"@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b"
                             ).search(s.lower())
     if pattern:
