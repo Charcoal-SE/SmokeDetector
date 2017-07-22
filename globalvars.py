@@ -178,7 +178,8 @@ class GlobalVars:
             "169252",   # Cai
             "155243",   # Nisse Engström
             "69330",    # Sconibulus
-            "164187"   # Okx
+            "164187",   # Okx
+            "202619",   # John Militer
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human

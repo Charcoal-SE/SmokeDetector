@@ -4,7 +4,7 @@ fifabay
 Long\W?Path\W?Tool
 # documentation: the (?!negative match) syntax won't work in the metasmoke search site
 # but it works for smoke detector.
-(?!code\W|script\W)writing service
+(?!code\W|script\W)writing services?
 tosterone
 we (offer|give out) (loans|funds|funding)
 skin\W?(endear|royale|cell\W?pro|opulent|ology|centric)
@@ -23,7 +23,7 @@ Nitroxin
 Bowtrol
 Slim ?Genix
 Cleanse EFX
-Alpha\W?(x\W?)?(Rush|Fuel|XTRM|levo|max|prime|force\Wtesto|monster\Wadvanced|muscle|boost|plus)
+Alpha\W?(x\W?)?(Rush|Fuel|XTRM|levo|max|prime|force\Wtesto|monster\Wadvanced|muscle|boost)
 exoslim
 Blackline Elite
 TestCore Pro
@@ -120,7 +120,6 @@ service proposal essay
 enetdocumentation
 okaygoods
 (love|miracle).*spell ?casters?
-(spell(home)?|temple|classes)\w*@gmail\.com
 black magic specialist
 great\Wspell\Wcaster
 viagra
@@ -214,8 +213,6 @@ soleil\Wglo
 Clariderm\WCream
 ATM hackers?
 hack\Wtool
-hacker\w*@
-hack\w*@
 professional\Whacker
 gain\Wxt(reme)?
 evermax
@@ -264,7 +261,7 @@ vigor\Wexcel
 optimal\Wrock
 slim\Wfit\W180
 azienda\Wcollagen
-testo\Wboost
+testo\W?boost
 internal\W911
 true\Wbrilliance
 muscle\Wxtx
@@ -526,7 +523,7 @@ ampedrin
 Goldenslot
 8696823273
 slx\W(muscle|male)
-clinamax
+clina\W?max
 atheno
 test\Wxtreme
 pdfsolution
@@ -536,3 +533,82 @@ astraea\W?(eye\W?)?serum
 dr\.?\W?aiwekhoe
 2348102960248
 allerless
+SeverTek
+amabella
+vital\W?test
+mengenix
+rhea\W?skin\W?care
+natures\W?trim
+vigfx
+muscle\W?rampage
+i have also find out one good example
+sexual\W?decoder
+zyklon
+skin\W?fresh\W?md
+renuvica
+Max\WTest\WUltra
+2348149470344
+herbal (doctor|center|centre)
+trifecta\W?xl
+boost\W?excel
+571\W?286\W?5929
+power\W?testo
+888\W?337\W?5333
+^where.*hyderabad\?$
+alpha\W?testo
+clevastin
+xymax
+neuro\W?boost
+prostagenix
+shred\W?fx
+male\W?onyx
+2348133873774
+muscle\W?x\W?te?st
+liftesse
+bonte\W?(advanced|eye\W?serum)
+steelcut\W?testosterone
+پنتاکس
+allurifi
+2349055637784
+kyto\W?trim
+activ\W?forte
+ifirmationantiagingcream\.com
+proactol
+neftegazagent
+elixir\Wrevolution
+testo\W?pro
+orviax
+wesleymarkhackers
+titan\Wxplode
+alpha\Wsize\Wfuel
+xl\Wtest\Wplus
+illumina
+activatrol
+skintology
+(?!<=tom )zko
+formula\W?focus
+dermedica
+follicle\W?rx
+tekmale
+040-60506611
+bella\W?rose
+magnetique\W?hair
+slim\W?365
+(?<=/)testfactor(?:=[-/])
+testrex
+کالپدا
+titan\W?xplode
+test\W?1\W?fusion
+jeune\W?fleur
+xenical
+[$]exual
+vala\W?(rejuvenating\W?)?serum
+extensive\W?ageless
+duoslim
+credit\W?repair
+avantor
+monitor\Wany\Wphone
+iq\W?genex
+com\.applop
+Deepak\W?Ahirwar
+grovitex

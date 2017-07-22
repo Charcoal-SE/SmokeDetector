@@ -14,70 +14,57 @@ import regex
 from globalvars import GlobalVars
 from blacklists import load_blacklists
 
+def _load_pickle(path, encoding='utf-8'):
+    with open(path, mode="rb") as f:
+        try:
+            return pickle.load(f, encoding=encoding)
+        except UnicodeDecodeError:
+            os.remove(path)
+
+            if "apicalls" in path.lower():
+                return {}
+
+            if "latestmessages" in path.lower():
+                return {GlobalVars.meta_tavern_room_id: [], GlobalVars.charcoal_room_id: [],
+                        GlobalVars.socvr_room_id: [], '111347': []}
+
+            if "bodyfetcher" in path.lower():
+                return {}
+        except EOFError:
+            os.remove(path)
+            raise
 
 # methods to load files and filter data in them:
 # load_blacklists() is defined in a separate module blacklists.py, though
 
+# methods to load files and filter data in them:
 def load_files():
     if os.path.isfile("falsePositives.p"):
-        with open("falsePositives.p", "rb") as f:
-            GlobalVars.false_positives = pickle.load(f, encoding='utf-8')
+        GlobalVars.false_positives = _load_pickle("falsePositives.p", encoding='utf-8')
     if os.path.isfile("whitelistedUsers.p"):
-        with open("whitelistedUsers.p", "rb") as f:
-            GlobalVars.whitelisted_users = pickle.load(f, encoding='utf-8')
+        GlobalVars.whitelisted_users = _load_pickle("whitelistedUsers.p", encoding='utf-8')
     if os.path.isfile("blacklistedUsers.p"):
-        with open("blacklistedUsers.p", "rb") as f:
-            GlobalVars.blacklisted_users = pickle.load(f, encoding='utf-8')
+        GlobalVars.blacklisted_users = _load_pickle("blacklistedUsers.p", encoding='utf-8')
     if os.path.isfile("ignoredPosts.p"):
-        with open("ignoredPosts.p", "rb") as f:
-            GlobalVars.ignored_posts = pickle.load(f, encoding='utf-8')
+        GlobalVars.ignored_posts = _load_pickle("ignoredPosts.p", encoding='utf-8')
     if os.path.isfile("autoIgnoredPosts.p"):
-        with open("autoIgnoredPosts.p", "rb") as f:
-            GlobalVars.auto_ignored_posts = pickle.load(f, encoding='utf-8')
+        GlobalVars.auto_ignored_posts = _load_pickle("autoIgnoredPosts.p", encoding='utf-8')
     if os.path.isfile("notifications.p"):
-        with open("notifications.p", "rb") as f:
-            GlobalVars.notifications = pickle.load(f, encoding='utf-8')
+        GlobalVars.notifications = _load_pickle("notifications.p", encoding='utf-8')
     if os.path.isfile("whyData.p"):
-        with open("whyData.p", "rb") as f:
-            GlobalVars.why_data = pickle.load(f, encoding='utf-8')
+        GlobalVars.why_data = _load_pickle("whyData.p", encoding='utf-8')
     if os.path.isfile("whyDataAllspam.p"):
-        with open("whyDataAllspam.p") as f:
-            GlobalVars.why_data_allspam = pickle.load(f, encoding='utf-8')
+        GlobalVars.why_data_allspam = _load_pickle("whyDataAllspam.p", encoding='utf-8')
     if os.path.isfile("latestMessages.p"):
-        try:
-            with open("latestMessages.p", "rb") as f:
-                GlobalVars.latest_smokedetector_messages = pickle.load(f, encoding='utf-8')
-        except EOFError:
-            os.remove("latestMessages.p")
-            raise
+        GlobalVars.latest_smokedetector_messages = _load_pickle("latestMessages.p", encoding='utf-8')
     if os.path.isfile("apiCalls.p"):
-        try:
-            with open("apiCalls.p", "rb") as f:
-                GlobalVars.api_calls_per_site = pickle.load(f, encoding='utf-8')
-        except EOFError:
-            os.remove("apiCalls.p")
-            raise
+        GlobalVars.api_calls_per_site = _load_pickle("apiCalls.p", encoding='utf-8')
     if os.path.isfile("bodyfetcherQueue.p"):
-        try:
-            with open("bodyfetcherQueue.p", "rb") as f:
-                GlobalVars.bodyfetcher.queue = pickle.load(f, encoding='utf-8')
-        except EOFError:
-            os.remove("bodyfetcherQueue.p")
-            raise
+        GlobalVars.bodyfetcher.queue = _load_pickle("bodyfetcherQueue.p", encoding='utf-8')
     if os.path.isfile("bodyfetcherMaxIds.p"):
-        try:
-            with open("bodyfetcherMaxIds.p", "rb") as f:
-                GlobalVars.bodyfetcher.previous_max_ids = pickle.load(f, encoding='utf-8')
-        except EOFError:
-            os.remove("bodyfetcherMaxIds.p")
-            raise
+        GlobalVars.bodyfetcher.previous_max_ids = _load_pickle("bodyfetcherMaxIds.p", encoding='utf-8')
     if os.path.isfile("bodyfetcherQueueTimings.p"):
-        try:
-            with open("bodyfetcherQueueTimings.p", "rb") as f:
-                GlobalVars.bodyfetcher.queue_timings = pickle.load(f, encoding='utf-8')
-        except EOFError:
-            os.remove("bodyfetcherQueueTimings.p")
-            raise
+        GlobalVars.bodyfetcher.queue_timings = _load_pickle("bodyfetcherQueueTimings.p", encoding='utf-8')
     load_blacklists()
 
 

@@ -23,6 +23,14 @@ RE_COMPILE = regex.compile(EXCEPTION_RE)
 COMMON_MALFORMED_PROTOCOLS = [
     ('httl://', 'http://'),
 ]
+SE_SITES_RE = r'(?:{sites})'.format(
+    sites='|'.join([
+        r'([a-z]+\.)stackoverflow\.com',
+        r'(?:{doms})\.com'.format(doms='|'.join(
+            [r'askubuntu', r'superuser', r'serverfault'])),
+        r'mathoverflow\.net',
+        r'(?:[a-z]+\.)*stackexchange\.com']))
+
 
 # Flee before the ugly URL validator regex!
 # We are using this, instead of a nice library like BeautifulSoup, because spammers are
@@ -237,9 +245,21 @@ def keyword_email(s, site, *args):   # a keyword and an email in the same post
                           r"[A-z0-9_.%+-]+\.[A-z]{2,4}\b").search(s)
     if keyword and email:
         return True, u"Keyword *{}* with email {}".format(keyword.group(0), email.group(0))
-    obfuscated_email = regex.compile(r"(?<![=#/])\b[A-z0-9_.%+-]+ *@ *(gmail|yahoo) *\. *com\b").search(s)
+    obfuscated_email = regex.compile(r"(?<![=#/])\b[A-z0-9_.%+-]+ *@ *(g *mail|yahoo) *\. *com\b").search(s)
     if obfuscated_email and not email:
         return True, u"Obfuscated email {}".format(obfuscated_email.group(0))
+    return False, ""
+
+
+# noinspection PyUnusedLocal,PyMissingTypeHints
+def pattern_email(s, site, *args):
+    pattern = regex.compile(r"(?<![=#/])\b[A-z0-9_.%+-]*"
+                            r"(dr|loan|hack|financ|fund|spell|temple|herbal|spiritual|atm|heal|priest|classes)"
+                            r"[A-z0-9_.%+-]*"
+                            r"@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b"
+                            ).search(s.lower())
+    if pattern:
+        return True, u"Pattern-matching email {}".format(pattern.group(0))
     return False, ""
 
 
@@ -299,6 +319,8 @@ def bad_pattern_in_url(s, site, *args):
     matches = regex.compile(
         r'<a href="(?P<frag>{0})"|<a href="[^"]*"(?:\s+"[^"]*")*>(?P<frag>{0})</a>'.format(
             '|'.join(patterns)), regex.UNICODE).findall(s)
+    matches = [x for x in matches if not regex.match(
+        r'^https?://{0}'.format(SE_SITES_RE), x[0])]
     if matches:
         return True, u"Bad fragment in link {}".format(
             ", ".join(["".join(match) for match in matches]))
@@ -533,7 +555,9 @@ class FindSpam:
         r"moist|lefair|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone)[\w-]*?\.(co|net|org|in(\W|fo)|us|"
         r"wordpress|blogspot|tumblr|webs\.)",
         r"(moving|\w{10}spell|[\w-]{3}password|(?!greatfurniture)\w{5}deal|(?!nfood)\w{5}facts|\w\dfacts|\Btoyshop|"
-        r"[\w-]{5}cheats|[\w-]{6}girls|clothing|shoes(inc)?|cheatcode|cracks|credits|-wallet|refunds|truo?ng|viet|"
+        r"[\w-]{5}cheats|"
+        r"(?!djangogirls\.org(?:$|[/?]))[\w-]{6}girls|"
+        r"clothing|shoes(inc)?|cheatcode|cracks|credits|-wallet|refunds|truo?ng|viet|"
         r"trang)\.(co|net|org|in(\W|fo)|us)",
         r"(health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
         r"(//|www\.)healthy?\w{5,}\.com",
@@ -826,14 +850,14 @@ class FindSpam:
         # Shortened URL near the end of question
         {'regex': r"(?is)://(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|"
                   r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
-                  r"surl\.cn\.com|clkmein\.com|bluenik\.com)/.{0,200}$", 'all': True,
+                  r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us)/.{0,200}$", 'all': True,
          'sites': ["superuser.com", "askubuntu.com"], 'reason': "shortened URL in {}", 'title': False, 'body': True,
          'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1,
          'max_score': 0},
         # Shortened URL in an answer
         {'regex': r"(?is)://(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|"
                   r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
-                  r"surl\.cn\.com|clkmein\.com|bluenik\.com)/",
+                  r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us)/",
          'all': True, 'sites': ["codegolf.stackexchange.com"], 'reason': "shortened URL in {}", 'title': False,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False,
          'max_rep': 1, 'max_score': 0},
@@ -912,6 +936,9 @@ class FindSpam:
          'max_score': 0},
         # Combination of keyword and email in questions and answers, for all sites
         {'method': keyword_email, 'all': True, 'sites': [], 'reason': "bad keyword with email in {}", 'title': True,
+         'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        # Spammy-looking email in questions and answers, for all sites
+        {'method': pattern_email, 'all': True, 'sites': [], 'reason': "pattern-matching email in {}", 'title': True,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # QQ/ICQ/Whatsapp... numbers, for all sites
         {'regex': r'(?i)(?<![a-z0-9])Q{1,2}(?:(?:[vw]|[^a-z0-9])\D{0,8})?\d{5}[.-]?\d{4,5}(?!["\d])|'
