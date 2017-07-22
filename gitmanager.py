@@ -214,7 +214,7 @@ class GitManager:
         if 'windows' in platform.platform().lower():
             return git.diff_filenames("deploy", "origin/deploy")
         else:
-            return git.diff("--name-only", "deploy", "origin/deploy")
+            return git("-c", "color.diff=false", "diff", "--name-only", "deploy", "origin/deploy")
 
     @staticmethod
     def pull_remote():
