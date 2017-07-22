@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 # noinspection PyCompatibility
-import json
 import regex
 import phonenumbers
 from difflib import SequenceMatcher
@@ -9,9 +8,12 @@ import tld
 # noinspection PyPackageRequirements
 from tld.utils import TldDomainNotFound
 from urllib.parse import urlparse
-from helpers import all_matches_unique, log
 from itertools import chain
 from collections import Counter
+
+from helpers import all_matches_unique, log
+from globalvars import GlobalVars
+from blacklists import load_blacklists
 
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
@@ -42,8 +44,6 @@ URL_REGEX = regex.compile(
     r"""(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))"""
     r"""|(?:(?:[a-z\u00a1-\uffff0-9]-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-?)"""
     r"""*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.UNICODE)
-
-COMPILED = {}
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
@@ -508,24 +508,11 @@ def mevaqesh_troll(s, *args):
         return False, ""
 
 
+load_blacklists()
+
+
 # noinspection PyClassHasNoInit
 class FindSpam:
-    with open("bad_keywords.txt", "r", encoding="utf-8") as f:
-        bad_keywords = [line.rstrip() for line in f if len(line.rstrip()) > 0]
-
-    with open("watched_keywords.txt", "r", encoding="utf-8") as f:
-        watched_keywords = dict()
-        for lineno, line in enumerate(f, 1):
-            if regex.compile('^\s*(?:#|$)').match(line):
-                continue
-            try:
-                when, by_whom, what = line.rstrip().split('\t')
-            except ValueError as err:
-                log('error', '{0}:{1}:{2}'.format(
-                    'watched_keywords.txt', lineno, err))
-                continue
-            watched_keywords[what] = {'when': when, 'by': by_whom}
-
     bad_keywords_nwb = [  # "nwb" == "no word boundary"
         u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",
         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
@@ -550,13 +537,7 @@ class FindSpam:
         "(essay|resume|article|dissertation|thesis) ?writing ?service", "satta ?matka", "b.?o.?j.?i.?t.?e.?r"
     ]
 
-    with open("blacklisted_websites.txt", "r", encoding="utf-8") as f:
-        blacklisted_websites = [line.rstrip() for line in f if len(line.rstrip()) > 0]
-
-    with open("blacklisted_usernames.txt", "r", encoding="utf-8") as f:
-        blacklisted_usernames = [line.rstrip() for line in f if len(line.rstrip()) > 0]
-
-    # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
+    # Patterns: the top four lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
         r"(enstella|recoverysoftware|removevirus|support(number|help|quickbooks)|techhelp|calltech|exclusive|"
         r"onlineshop|video(course|classes|tutorial(?!s))|vipmodel|(?<!word)porn|wholesale|inboxmachine|(get|buy)cheap|"
@@ -662,11 +643,11 @@ class FindSpam:
         #
         # Category: Bad keywords
         # The big list of bad keywords, for titles and posts
-        {'regex': r"(?is)\b({})\b|{}".format("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
-         'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
+        {'regex': r"(?is)\b({})\b|{}".format("|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
+         'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1},
         # The small list of *potentially* bad keywords, for titles and posts
-        {'regex': r'(?is)\b({})\b'.format('|'.join(watched_keywords.keys())),
+        {'regex': r'(?is)\b({})\b'.format('|'.join(GlobalVars.watched_keywords.keys())),
          'reason': 'potentially bad keyword in {}',
          'all': True, 'sites': [], 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 30, 'max_score': 1},
@@ -791,7 +772,7 @@ class FindSpam:
         #
         # Category: Suspicious links
         # Blacklisted sites
-        {'regex': u"(?i)({})".format("|".join(blacklisted_websites)), 'all': True,
+        {'regex': u"(?i)({})".format("|".join(GlobalVars.blacklisted_websites)), 'all': True,
          'sites': [], 'reason': "blacklisted website in {}", 'title': True, 'body': True, 'username': False,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 5},
         # Suspicious sites
@@ -1030,7 +1011,7 @@ class FindSpam:
         #
         # Category: other
         # Blacklisted usernames
-        {'regex': r"(?i)({})".format("|".join(blacklisted_usernames)), 'all': True, 'sites': [],
+        {'regex': r"(?i)({})".format("|".join(GlobalVars.blacklisted_usernames)), 'all': True, 'sites': [],
          'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"],
@@ -1088,12 +1069,7 @@ class FindSpam:
                 matched_body = None
                 compiled_regex = None
                 if is_regex_check:
-                    json_rule = json.dumps(rule)
-                    compiled_regex = COMPILED[json_rule] if json_rule in COMPILED else None
-                    if compiled_regex is None:
-                        compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
-                        COMPILED[json_rule] = compiled_regex
-
+                    compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
                     # using a named list \L in some regexes
                     matched_title = compiled_regex.findall(post.title)
                     matched_username = compiled_regex.findall(post.user_name)

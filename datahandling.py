@@ -3,7 +3,6 @@ import os
 # noinspection PyPep8Naming
 import pickle
 from datetime import datetime
-from globalvars import GlobalVars
 import metasmoke
 import requests
 import json
@@ -11,6 +10,9 @@ import time
 import math
 # noinspection PyCompatibility
 import regex
+
+from globalvars import GlobalVars
+from blacklists import load_blacklists
 
 
 def _load_pickle(path, encoding='utf-8'):
@@ -32,6 +34,9 @@ def _load_pickle(path, encoding='utf-8'):
         except EOFError:
             os.remove(path)
             raise
+
+# methods to load files and filter data in them:
+# load_blacklists() is defined in a separate module blacklists.py, though
 
 
 # methods to load files and filter data in them:
@@ -62,6 +67,7 @@ def load_files():
         GlobalVars.bodyfetcher.previous_max_ids = _load_pickle("bodyfetcherMaxIds.p", encoding='utf-8')
     if os.path.isfile("bodyfetcherQueueTimings.p"):
         GlobalVars.bodyfetcher.queue_timings = _load_pickle("bodyfetcherQueueTimings.p", encoding='utf-8')
+    load_blacklists()
 
 
 def filter_auto_ignored_posts():

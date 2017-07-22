@@ -47,6 +47,10 @@ class GlobalVars:
     false_positives = []
     whitelisted_users = []
     blacklisted_users = []
+    blacklisted_usernames = []
+    blacklisted_websites = []
+    bad_keywords = []
+    watched_keywords = {}
     ignored_posts = []
     auto_ignored_posts = []
     startup_utc = datetime.utcnow().strftime("%H:%M:%S")

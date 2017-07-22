@@ -207,3 +207,15 @@ class GitManager:
             return git.status_stripped()
         else:
             return git("-c", "color.status=false", "status")
+
+    @staticmethod
+    def get_remote_diff():
+        git.fetch()
+        if 'windows' in platform.platform().lower():
+            return git.diff_filenames("deploy", "origin/deploy")
+        else:
+            return git.diff("--name-only", "deploy", "origin/deploy")
+
+    @staticmethod
+    def pull_remote():
+        git.pull()
