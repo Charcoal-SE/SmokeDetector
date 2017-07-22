@@ -19,6 +19,7 @@ import spamhandling
 import classes
 from helpers import log, only_blacklists_changed
 from gitmanager import GitManager
+from blacklists import load_blacklists
 
 
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
@@ -149,7 +150,7 @@ class Metasmoke:
                                         seen[line] = lineno
                             if i == []:  # No issues
                                 GitManager.pull_remote()
-                                datahandling.load_blacklists()
+                                load_blacklists()
                                 GlobalVars.charcoal_hq.send_message("No code modified in {0}, only blacklists"
                                                                     " reloaded.".format(commit_md))
                             else:
