@@ -531,3 +531,4 @@
 1500711320	Glorfindel	repliquemontreluxe\.com
 1500712516	Glorfindel	lolga\.com
 1500717664	Glorfindel	hiralsharma\.com
+1500719569	Glorfindel	happynewyear\d*images\.com
