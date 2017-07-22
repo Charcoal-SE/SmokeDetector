@@ -888,8 +888,9 @@ class FindSpam:
          'stripcodeblocks': True, 'body_summary': False, 'max_rep': 11, 'max_score': 1},
         # Link text consists of punctuation, answers only
         {'regex': r'(?iu)rel="nofollow( noreferrer)?">(?!><>)\W+</a>', 'all': True,
-         'sites': [], 'reason': 'linked punctuation in {}', 'title': False, 'body': True, 'username': False,
-         'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 11, 'max_score': 1},
+         'sites': ["codegolf.stackexchange.com"], 'reason': 'linked punctuation in {}', 'title': False, 'body': True,
+         'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 11,
+         'max_score': 1},
         # URL in title, some sites are exempt
         {'regex': r"(?i)https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}|"
                   r"\w{3,}\.(com|net)\b.*\w{3,}\.(com|net)\b", 'all': True,
