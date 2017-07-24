@@ -332,7 +332,7 @@ class GlobalVars:
             "1873567",  # CalvT
             "4826457"  # suraj
         ],
-        '111347': [
+        '111347': [     # SOBotics
             "3160466",  # ArtOfCode
             "1849664",  # Undo
             "3002139",  # Baum mit Augen
@@ -342,7 +342,8 @@ class GlobalVars:
             "4099593",  # Bhargav Rao
             "1743880",  # Tunaki
             "559745",   # Floern
-            "4687348"   # FelixSFD
+            "4687348",  # FelixSFD
+            "6375113"   # Bugs
         ]
     }
 
