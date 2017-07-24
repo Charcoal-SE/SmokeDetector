@@ -538,3 +538,4 @@
 1500881802	Glorfindel	luminaanalytics\.com
 1500883579	Mithrandir	teledc\.com
 1500885814	Glorfindel	answertomyquestion\.com
+1500887354	Glorfindel	spectalist\.com
