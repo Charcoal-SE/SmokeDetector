@@ -537,3 +537,4 @@
 1500813034	Mithrandir	techcheater
 1500816322	Mithrandir	Zarina
 1500881802	Glorfindel	luminaanalytics\.com
+1500883579	Mithrandir	teledc\.com
