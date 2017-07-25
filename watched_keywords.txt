@@ -557,3 +557,4 @@
 1500938031	doppelgreener	psd2html-service\.com
 1500954485	NobodyNada	\w*gamatqnc\w*
 1500964153	Glorfindel	freemonthnbn
+1500966272	Glorfindel	gulfwebstudio\.com
