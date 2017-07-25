@@ -558,3 +558,4 @@
 1500954485	NobodyNada	\w*gamatqnc\w*
 1500964153	Glorfindel	freemonthnbn
 1500966272	Glorfindel	gulfwebstudio\.com
+1500966917	Glorfindel	abaengineerco\.com
