@@ -563,4 +563,4 @@
 1500966958	Glorfindel	mrasayesh\.ir
 1500968301	Glorfindel	concilioorbis\.com
 1500974220	Glorfindel	marhabareception\.com
-1500981593	Mithrandir	ithealthfitness'.com
+1500981593	Mithrandir	ithealthfitness\.com
