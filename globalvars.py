@@ -343,7 +343,8 @@ class GlobalVars:
             "1743880",  # Tunaki
             "559745",   # Floern
             "4687348",  # FelixSFD
-            "6375113"   # Bugs
+            "6375113",  # Bugs
+            "4622463"   # angussidney
         ]
     }
 
