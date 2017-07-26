@@ -567,3 +567,4 @@
 1500986639	Mithrandir	epassportseva\.co\.in
 1501006473	Glorfindel	startupurban\.com
 1501055380	Glorfindel	torrent\.thegull\.biz
+1501055645	Glorfindel	softreload\.com
