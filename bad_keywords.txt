@@ -621,3 +621,4 @@ Poraxin\WRX
 geneticore\Wboost
 nitro\Wboost\Wmax
 varitonil
+pure\Wcbd\Wtincture
