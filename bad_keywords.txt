@@ -618,3 +618,4 @@ acethinker
 testo\Wmax
 povella
 Poraxin\WRX
+genericore\Wboost
