@@ -619,3 +619,4 @@ testo\Wmax
 povella
 Poraxin\WRX
 geneticore\Wboost
+nitro\Wboost\Wmax
