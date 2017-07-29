@@ -623,3 +623,4 @@ nitro\Wboost\Wmax
 varitonil
 pure\Wcbd\Wtincture
 testo\Wgx
+my\Wbeast\Wpower
