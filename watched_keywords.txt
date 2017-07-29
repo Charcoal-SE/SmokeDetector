@@ -591,3 +591,4 @@
 1501325213	Glorfindel	mannatsoftware\.com
 1501338610	quartata	testedsupplement\.com
 1501347530	Glorfindel	gadgetspirit\.com
+1501348328	Glorfindel	knowledgetpoint\.com
