@@ -588,3 +588,4 @@
 1501250114	Glorfindel	wklaw\.com
 1501278997	doppelgreener	modup.net
 1501323411	Glorfindel	kellytechno\.com
+1501325213	Glorfindel	mannatsoftware\.com
