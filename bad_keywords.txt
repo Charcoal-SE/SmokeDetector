@@ -213,7 +213,7 @@ soleil\Wglo
 Clariderm\WCream
 ATM hackers?
 hack\Wtool
-professional\Whacker
+professional\Whack(er|ing)?s?
 gain\Wxt(reme)?
 evermax
 biotic\Wmax
