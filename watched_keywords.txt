@@ -594,3 +594,4 @@
 1501348757	Glorfindel	recoveryiphone\.net
 1501350484	Glorfindel	taxi-airports-transfer\.com
 1501365414	Undo	Louis\W*A\W*Coffelt
+1501421675	Mithrandir	magic\.piktochart\.com
