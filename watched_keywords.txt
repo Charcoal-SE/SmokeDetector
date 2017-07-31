@@ -596,3 +596,4 @@
 1501365414	Undo	Louis\W*A\W*Coffelt
 1501421675	Mithrandir	magic\.piktochart\.com
 1501427629	Mithrandir	rootsh3ll\.com
+1501483531	Glorfindel	tekslate\.com
