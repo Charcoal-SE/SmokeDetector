@@ -551,7 +551,6 @@
 1500921596	NobodyNada	petites?\Wwarriors?
 1500921845	NobodyNada	folicum\Whair
 1500922390	NobodyNada	neovicta\Wviper
-1500938031	doppelgreener	psd2html-service\.com
 1500954485	NobodyNada	\w*gamatqnc\w*
 1500964153	Glorfindel	freemonthnbn
 1500966272	Glorfindel	gulfwebstudio\.com
