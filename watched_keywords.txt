@@ -621,7 +621,6 @@
 1501824993	John Militer	getsupplementhelp\.com
 1501832319	Glorfindel	resumevogue\.com
 1501862331	Mithrandir	timex247\.com
-1501927903	Glorfindel	divisare\.com
 1501928226	Glorfindel	webrife\.com
 1501981947	Undo	Chicago\WPromar\WSiding
 1502006486	Mithrandir	marketrocker\.com
