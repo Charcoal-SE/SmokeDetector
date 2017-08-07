@@ -542,7 +542,6 @@
 1500891424	Mithrandir	welloculus\.com
 1500895644	Mithrandir	supplementschat\.com
 1500898512	Mithrandir	elawoman\.com
-1500898824	Glorfindel	ave40\.com
 1500902246	Mithrandir	ithealthfitness\.com
 1500904012	Glorfindel	curves\.com\.au
 1500910817	Glorfindel	primacontent\.com
