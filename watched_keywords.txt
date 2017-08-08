@@ -263,7 +263,6 @@
 1498541708	tripleee	testo\W?rampage
 1498542424	Glorfindel	javaenotes\.com
 1498545203	tripleee	dbalmaxhub\.com
-1498550557	tripleee	slimtw\.com
 1498554725	Glorfindel	ouchmovies\.com
 1498556935	tripleee	ondra800@gmail\.com
 1498559032	CalvT븃	atomcurve\.com
