@@ -633,5 +633,4 @@
 1502183552	doppelgreener	free.?psn.?codes
 1502185175	Mithrandir	fliptheswitchs\.com
 1502190399	Glorfindel	bikejinni\.com
-1502190819	Glorfindel	imyfone\.com
 1502191128	tripleee	nareshit\.in
