@@ -647,3 +647,4 @@
 1502352923	Mithrandir	nhalouis\.com
 1502354038	Glorfindel	junkoust\.com
 1502356175	Glorfindel	tripplannera\.com
+1502356267	Glorfindel	brosway-shop-it\.com
