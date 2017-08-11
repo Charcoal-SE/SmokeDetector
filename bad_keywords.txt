@@ -639,3 +639,4 @@ endo\W?oil
 beast\W?mode
 verutum\W?rx
 rejuvalex
+core\W?e?xtreme
