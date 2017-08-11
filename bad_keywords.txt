@@ -638,3 +638,4 @@ endo\W?oil
 (?!pro/test)pro\Wtest\W?180
 beast\W?mode
 verutum\W?rx
+rejuvalex
