@@ -640,3 +640,4 @@ beast\W?mode
 verutum\W?rx
 rejuvalex
 core\W?e?xtreme
+peak\W?xplode
