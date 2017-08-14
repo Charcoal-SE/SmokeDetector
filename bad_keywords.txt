@@ -646,3 +646,4 @@ vitalix
 Zyflex
 prime\W?labs
 primal\W?growth
+slender\W?rx
