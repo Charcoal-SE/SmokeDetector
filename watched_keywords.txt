@@ -662,3 +662,4 @@
 1502623493	Glorfindel	sunmovie21\.com
 1502633863	Glorfindel	seo-group-buy\.net
 1502654867	Glorfindel	powertoolstore\.net
+1502685416	tripleee	muscle\W?xplode
