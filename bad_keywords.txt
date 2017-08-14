@@ -647,3 +647,4 @@ Zyflex
 prime\W?labs
 primal\W?growth
 slender\W?rx
+illuminati\W*(brotherhood|church|future|masons|society)\d*
