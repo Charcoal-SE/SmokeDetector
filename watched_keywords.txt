@@ -662,3 +662,4 @@
 1502654867	Glorfindel	powertoolstore\.net
 1502685416	tripleee	muscle\W?xplode
 1502700753	Glorfindel	resultview\.in
+1502700759	Glorfindel	reetresult\.co\.in
