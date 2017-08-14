@@ -664,3 +664,4 @@
 1502700753	Glorfindel	resultview\.in
 1502700759	Glorfindel	reetresult\.co\.in
 1502702901	tripleee	testovol
+1502713623	tripleee	mpanchang\.com
