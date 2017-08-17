@@ -651,3 +651,4 @@ illuminati\W*(brotherhood|church|future|masons|society)\d*
 sbobet
 puria
 primex
+stackt\W?360
