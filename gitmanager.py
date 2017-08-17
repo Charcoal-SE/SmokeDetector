@@ -171,9 +171,10 @@ class GitManager:
                 try:
                     git.checkout("deploy")  # Return to deploy, pending the accept of the PR in Master.
                     git.branch('-D', branch)  # Delete the branch in the local git tree since we're done with it.
+                    url = response.json()["html_url"]
                     return (True,
-                            "You don't have code privileges, but I've [created a pull request for you]({0}).".format(
-                                response.json()["html_url"]))
+                            "You don't have code privileges, but I've [created PR#{1} for you]({0}).".format(
+                                url, url.split('/')[-1]))
                 except KeyError:
                     git.checkout("deploy")  # Return to deploy
 
