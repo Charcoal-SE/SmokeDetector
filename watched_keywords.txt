@@ -669,7 +669,6 @@
 1502866168	tripleee	puisi\.co
 1502867832	suraj	mytruehost\.com
 1502871152	tripleee	privatoria
-1502871947	suraj	deployapp\.net
 1502874048	tripleee	smallbusinessforums\.org
 1502877450	Glorfindel	finansialku\.com
 1502918427	Mithrandir	geekact\.com
