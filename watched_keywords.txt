@@ -697,3 +697,4 @@
 1503050935	CalvT븃	storearmy\.com
 1503052331	doppelgreener	dssindia\.com
 1503060044	suraj	printersupplies\.com
+1503062802	CalvT븃	kinx\.cards
