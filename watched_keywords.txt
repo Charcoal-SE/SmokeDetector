@@ -685,3 +685,4 @@
 1502982679	tripleee	convertlotusnotesnsf\.com
 1503003785	quartata	alltipsfinder\.com
 1503032133	tripleee	app-aptoide\.com
+1503032593	tripleee	jamilslist\.com
