@@ -1415,3 +1415,4 @@ zigmaweb\.com
 mockplus\.com
 realexamdumps\.us
 gildadate\.com
+batchrenamefiles\.org
