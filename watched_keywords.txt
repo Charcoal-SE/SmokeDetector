@@ -730,3 +730,4 @@
 1503317771	tripleee	woodenletters\.biz
 1503318002	tripleee	armemberplugin\.com
 1503319394	tripleee	majestic\W?slim
+1503319418	tripleee	magnificent\W?slim
