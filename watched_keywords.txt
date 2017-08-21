@@ -726,3 +726,4 @@
 1503308223	Glorfindel	usopentennis-live\.com
 1503310656	Mithrandir	m2training.com\.ua
 1503310833	tripleee	lallabi\.com
+1503310894	Mithrandir	modern\.place
