@@ -732,3 +732,4 @@
 1503319394	tripleee	majestic\W?slim
 1503319418	tripleee	magnificent\W?slim
 1503326679	Glorfindel	zappedia\.com
+1503330106	Glorfindel	jonsguide\.org
