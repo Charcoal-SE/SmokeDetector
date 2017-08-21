@@ -716,9 +716,6 @@
 1503291499	tripleee	brainaicsurveyors\.wordpress\.com
 1503291551	tripleee	pawanpurohit\.com
 1503291727	tripleee	rawinfopages\.com
-1503291883	tripleee	oceansknowledge\.com
-1503291959	tripleee	thekissanime\.net
-1503292056	tripleee	java9pro\.blogspot\.in
 1503292103	tripleee	cyberforum\.ru
 1503292121	tripleee	toster\.ru
 1503292335	tripleee	flash-video-soft\.com
