@@ -330,7 +330,7 @@ class GlobalVars:
             "4805174",  # kayess
             "2370483",  # Machavity
             "1873567",  # CalvT
-            "4826457"  # suraj
+            "4826457"   # suraj
         ],
         '111347': [     # SOBotics
             "3160466",  # ArtOfCode
@@ -345,7 +345,8 @@ class GlobalVars:
             "4687348",  # FelixSFD
             "6375113",  # Bugs
             "4622463",  # angussidney
-            "158742"    # Rob
+            "158742",   # Rob
+            "4050842"   # Thaillie
         ]
     }
 
