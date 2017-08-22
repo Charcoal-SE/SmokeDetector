@@ -20,6 +20,6 @@ def check_deepsmoke(s, site, *args):
     resp = resp[:-7]
     resp.rstrip('\n')
     if resp == 'Spam':
-       return True, 'DeepSmoke response was {}'.format(resp)
+        return True, 'DeepSmoke response was {}'.format(resp)
     # else
     return False, ''
