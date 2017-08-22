@@ -666,3 +666,4 @@ cerebral\W?x
 levira
 aqua\W?refine
 peruvian\W?brew
+shapiro\Wmd

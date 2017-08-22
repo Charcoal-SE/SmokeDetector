@@ -285,7 +285,6 @@
 1498808468	Glorfindel	swamirara\.com
 1498810506	Glorfindel	careervilla\.in
 1498815509	tripleee	webdogs\.in
-1498817117	Glorfindel	shapiro\Wmd
 1498818776	tripleee	subagames\.com
 1498824171	doppelgreener	glossessays
 1498823986	doppelgreener	microsoftchatsupport
