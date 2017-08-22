@@ -667,3 +667,4 @@ levira
 aqua\W?refine
 peruvian\W?brew
 shapiro\Wmd
+Luxure\W?Cream
