@@ -16,8 +16,9 @@ def check_deepsmoke(s, site, *args):
     req.raise_for_status()
     assert req.text.startswith('<pre>')
     resp = req.text[5:]
-    assert resp.endswith('\n</pre>\n')
-    resp = resp[:-8]
+    assert resp.endswith('</pre>\n')
+    resp = resp[:-7]
+    resp.rstrip('\n')
     if resp == 'Spam':
        return True, 'DeepSmoke response was {}'.format(resp)
     # else
