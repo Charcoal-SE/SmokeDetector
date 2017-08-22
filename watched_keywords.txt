@@ -738,3 +738,4 @@
 1503377204	tripleee	pureforcexreview\.wordpress\.com
 1503377288	tripleee	crusheroperation\.com
 1503384862	Glorfindel	vehicleregistration\.ae
+1503385927	Glorfindel	gsmarenandphonearena\.com
