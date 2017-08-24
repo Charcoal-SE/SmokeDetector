@@ -330,8 +330,8 @@ class GlobalVars:
             "4805174",  # kayess
             "2370483",  # Machavity
             "1873567",  # CalvT
-            "4826457"   # suraj
-            "3773011",  # Makyen
+            "4826457",  # suraj
+            "3773011"   # Makyen
         ],
         '111347': [     # SOBotics
             "3160466",  # ArtOfCode
