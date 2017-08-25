@@ -138,45 +138,52 @@ def handle_spam(post, reasons, why):
         log('debug', GlobalVars.parser.unescape(s).encode('ascii', errors='replace'))
         if time.time() >= GlobalVars.blockedTime["all"]:
             datahandling.append_to_latest_questions(post.post_site, post.post_id, post.title)
+            if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
+                chq_pings = datahandling.get_user_names_on_notification_list(
+                    "stackexchange.com",
+                    GlobalVars.charcoal_room_id,
+                    post.post_site,
+                    GlobalVars.wrap)
+                chq_msg = prefix + s
+                chq_msg_pings = prefix + datahandling.append_pings(s, chq_pings)
+                chq_msg_pings_ms = prefix_ms + datahandling.append_pings(s, chq_pings)
+                msg_to_send = chq_msg_pings_ms if len(chq_msg_pings_ms) <= 500 else chq_msg_pings \
+                    if len(chq_msg_pings) <= 500 else chq_msg[0:500]
+                try:
+                    GlobalVars.charcoal_hq.send_message(msg_to_send)
+                except AttributeError:  # In our Test Suite
+                    pass
+
+            # If it's all experimental rules, we are done.
+            # If not, see which other rooms this should perhaps be posted to.
             if set(reasons).intersection(GlobalVars.experimental_reasons) != set(reasons):
-                if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
-                    chq_pings = datahandling.get_user_names_on_notification_list("stackexchange.com",
-                                                                                 GlobalVars.charcoal_room_id,
-                                                                                 post.post_site,
-                                                                                 GlobalVars.wrap)
-                    chq_msg = prefix + s
-                    chq_msg_pings = prefix + datahandling.append_pings(s, chq_pings)
-                    chq_msg_pings_ms = prefix_ms + datahandling.append_pings(s, chq_pings)
-                    msg_to_send = chq_msg_pings_ms if len(chq_msg_pings_ms) <= 500 else chq_msg_pings \
-                        if len(chq_msg_pings) <= 500 else chq_msg[0:500]
-                    try:
-                        GlobalVars.charcoal_hq.send_message(msg_to_send)
-                    except AttributeError:  # In our Test Suite
-                        pass
                 if not should_reasons_prevent_tavern_posting(reasons) \
                         and post.post_site not in GlobalVars.non_tavern_sites \
                         and time.time() >= GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id]:
-                    tavern_pings = datahandling.get_user_names_on_notification_list("meta.stackexchange.com",
-                                                                                    GlobalVars.meta_tavern_room_id,
-                                                                                    post.post_site, GlobalVars.wrapm)
+                    tavern_pings = datahandling.get_user_names_on_notification_list(
+                        "meta.stackexchange.com",
+                        GlobalVars.meta_tavern_room_id,
+                        post.post_site, GlobalVars.wrapm)
                     tavern_msg = prefix + s
                     tavern_msg_pings = prefix + datahandling.append_pings(s, tavern_pings)
                     tavern_msg_pings_ms = prefix_ms + datahandling.append_pings(s, tavern_pings)
                     msg_to_send = tavern_msg_pings_ms if len(tavern_msg_pings_ms) <= 500 else tavern_msg_pings \
                         if len(tavern_msg_pings) <= 500 else tavern_msg[0:500]
-                    t_check_websocket = Thread(name="deletionwatcher post message if not deleted",
-                                               target=deletionwatcher.DeletionWatcher.post_message_if_not_deleted,
-                                               args=((post.post_id, post.post_site,
-                                                      "answer" if post.is_answer else "question"),
-                                                     post_url, msg_to_send, GlobalVars.tavern_on_the_meta))
+                    t_check_websocket = Thread(
+                        name="deletionwatcher post message if not deleted",
+                        target=deletionwatcher.DeletionWatcher.post_message_if_not_deleted,
+                        args=((post.post_id, post.post_site,
+                               "answer" if post.is_answer else "question"),
+                              post_url, msg_to_send, GlobalVars.tavern_on_the_meta))
                     t_check_websocket.daemon = True
                     t_check_websocket.start()
                 if post.post_site == "stackoverflow.com" and reason not in GlobalVars.non_socvr_reasons \
                         and time.time() >= GlobalVars.blockedTime[GlobalVars.socvr_room_id]:
-                    socvr_pings = datahandling.get_user_names_on_notification_list("stackoverflow.com",
-                                                                                   GlobalVars.socvr_room_id,
-                                                                                   post.post_site,
-                                                                                   GlobalVars.wrapso)
+                    socvr_pings = datahandling.get_user_names_on_notification_list(
+                        "stackoverflow.com",
+                        GlobalVars.socvr_room_id,
+                        post.post_site,
+                        GlobalVars.wrapso)
                     socvr_msg = prefix + s
                     socvr_msg_pings = prefix + datahandling.append_pings(s, socvr_pings)
                     socvr_msg_pings_ms = prefix_ms + datahandling.append_pings(s, socvr_pings)
@@ -219,6 +226,7 @@ def handle_user_with_all_spam(user, why):
         GlobalVars.charcoal_hq.send_message(s)
     for specialroom in GlobalVars.specialrooms:
         room = specialroom["room"]
-        if site in specialroom["sites"] and (room.id not in GlobalVars.blockedTime or
-                                             time.time() >= GlobalVars.blockedTime[room.id]):
+        if site in specialroom["sites"] and (
+                room.id not in GlobalVars.blockedTime or
+                time.time() >= GlobalVars.blockedTime[room.id]):
             room.send_message(s)

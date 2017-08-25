@@ -62,7 +62,7 @@ def print_chat_message(ev):
     log('info', message + colored(" - " + ev.data['user_name'], attrs=['bold']))
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def special_room_watcher(ev, wrap2):
     if ev.type_id != 1:
         return
@@ -177,15 +177,23 @@ def watcher(ev, wrap2):
                 if len(message_with_reply) <= 500 or "\n" in reply:
                     ev.message.reply(reply, False)
         else:
-            result = handle_commands(content_lower=content_source.lower(),
-                                     message_parts=message_parts,
-                                     ev_room=ev_room,
-                                     ev_room_name=ev_room_name,
-                                     ev_user_id=ev_user_id,
-                                     ev_user_name=ev_user_name,
-                                     wrap2=wrap2,
-                                     content=content_source,
-                                     message_id=message_id)
+            try:
+                result = handle_commands(content_lower=content_source.lower(),
+                                         message_parts=message_parts,
+                                         ev_room=ev_room,
+                                         ev_room_name=ev_room_name,
+                                         ev_user_id=ev_user_id,
+                                         ev_user_name=ev_user_name,
+                                         wrap2=wrap2,
+                                         content=content_source,
+                                         message_id=message_id)
+            except requests.exceptions.HTTPError as e:
+                if "404 Client Error: Not Found for url:" in e.message and "/history" in e.message:
+                    return  # Return and do nothing.
+                else:
+                    traceback.print_exc()
+                    raise e  # Raise an error if it's not the 'expected' nonexistent link error.
+
             if result.message:
                 if wrap2.host + str(message_id) in GlobalVars.listen_to_these_if_edited:
                     GlobalVars.listen_to_these_if_edited.remove(wrap2.host + str(message_id))

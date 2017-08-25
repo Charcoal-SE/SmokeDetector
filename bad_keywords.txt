@@ -92,7 +92,7 @@ Whizz Systems?
 intellux
 viooz
 smartican
-t\Wcomplex
+(?<!')t\Wcomplex
 фальшивы(е|х) (деньги|денег|купюры?)
 raging lion
 retrodynamic formula
@@ -120,7 +120,6 @@ service proposal essay
 enetdocumentation
 okaygoods
 (love|miracle).*spell ?casters?
-\w*(spell(home)?|temple|classes)\w*@
 black magic specialist
 great\Wspell\Wcaster
 viagra
@@ -214,9 +213,7 @@ soleil\Wglo
 Clariderm\WCream
 ATM hackers?
 hack\Wtool
-\w*hacker\w*@
-\w*hack\w*@
-professional\Whacker
+professional\Whack(er|ing)?s?
 gain\Wxt(reme)?
 evermax
 biotic\Wmax
@@ -585,7 +582,7 @@ wesleymarkhackers
 titan\Wxplode
 alpha\Wsize\Wfuel
 xl\Wtest\Wplus
-illumina
+illumina\W?sd
 activatrol
 skintology
 (?!<=tom )zko
@@ -603,3 +600,73 @@ testrex
 titan\W?xplode
 test\W?1\W?fusion
 jeune\W?fleur
+xenical
+[$]exual
+vala\W?(rejuvenating\W?)?serum
+extensive\W?ageless
+duoslim
+credit\W?repair
+avantor
+monitor\Wany\Wphone
+iq\W?genex
+com\.applop
+Deepak\W?Ahirwar
+grovitex
+annibol
+renewiderm
+acethinker
+testo\Wmax
+povella
+Poraxin\WRX
+geneticore\Wboost
+nitro\Wboost\Wmax
+varitonil
+pure\Wcbd\Wtincture
+testo\Wgx
+my\Wbeast\Wpower
+pro\Wfactor\WT
+folicium
+dsn\Wcode\Wblack
+anxiety\Wfx
+ieltscert2017
+BatchRenameFiles\W?Tool
+OLOBA\W?POSITIVE
+vita\W?ultimate
+jacked\W?testo
+do you need (\w* )?(\w* )loan
+endo\W?oil
+(?!pro/test)pro\Wtest\W?180
+beast\W?mode
+verutum\W?rx
+rejuvalex
+core\W?e?xtreme
+peak\W?xplode
+musclextend
+vitalix
+Zyflex
+prime\W?labs
+primal\W?growth
+slender\W?rx
+illuminati\W*(brotherhood|church|future|masons|society)\d*
+sbobet
+puria
+primex
+stackt\W?360
+perlelux
+muira\W?puama
+maca\W?root
+wingsio
+mockplus
+la\W?mer\W?timeless
+vtrex
+pro\W?factor\W?t\W?2000
+2348073673757
+t\W?max\W?complex
+cerebral\W?x
+levira
+aqua\W?refine
+peruvian\W?brew
+shapiro\Wmd
+Luxure\W?Cream
+right\W?pick\W?muscle
+ultimate\Wtesto\Wexplosion

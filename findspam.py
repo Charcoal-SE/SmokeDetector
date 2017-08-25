@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 # noinspection PyCompatibility
 
-import json
 import regex
 from difflib import SequenceMatcher
 from urllib.parse import urlparse
@@ -14,13 +13,14 @@ import tld
 # noinspection PyPackageRequirements
 from tld.utils import TldDomainNotFound
 import phonenumbers
+from urllib.parse import urlparse
+from itertools import chain
+from collections import Counter
 import dns.resolver
 
 from helpers import all_matches_unique, log
 from globalvars import GlobalVars
 from blacklists import load_blacklists
-from deepsmoke import check_deepsmoke
-
 
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
@@ -1088,12 +1088,6 @@ class FindSpam:
          'reason': "single character over used in post",
          'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
          'max_rep': 20, 'max_score': 0},
-        # DeepSmoke
-        {'method': check_deepsmoke, 'all': False, 'sites': ['stackoverflow.com'],
-         'reason': 'Body classified as spam by DeepSmoke',
-         'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
-         # FIXME: provisionally high thresholds to get performance data
-         'max_rep': 20, 'max_score': 5}
     ]
 
     @staticmethod

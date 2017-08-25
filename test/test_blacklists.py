@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from glob import glob
+from helpers import only_blacklists_changed
 
 
 def test_blacklist_integrity():
@@ -18,3 +19,14 @@ def test_blacklist_integrity():
                     raise(ValueError('{0}:{1}:Duplicate entry {2} (also on line {3})'.format(
                         bl_file, lineno, line.rstrip('\n'), seen[line])))
                 seen[line] = lineno
+
+
+def test_blacklist_pull_diff():
+    only_blacklists_diff = """watched_keywords.txt
+                              bad_keywords.txt
+                              blacklisted_websites.txt"""
+    assert only_blacklists_changed(only_blacklists_diff)
+    mixed_files_diff = """helpers.py
+                          test/test_blacklists.py
+                          blacklisted_usernames.txt"""
+    assert not only_blacklists_changed(mixed_files_diff)

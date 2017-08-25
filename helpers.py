@@ -33,3 +33,11 @@ def log(log_level, *args):
     log_str = u"{} {}".format(colored("[{}]".format(datetime.now().isoformat()[11:-7]), color),
                               u"  ".join([str(x) for x in args]))
     print(log_str)
+
+
+def only_blacklists_changed(diff):
+    blacklist_files = ["bad_keywords.txt", "blacklisted_usernames.txt", "blacklisted_websites.txt",
+                       "watched_keywords.txt"]
+    files_changed = diff.split()
+    non_blacklist_files = [f for f in files_changed if f not in blacklist_files]
+    return not bool(non_blacklist_files)

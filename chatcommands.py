@@ -7,6 +7,7 @@ from datetime import datetime
 from utcdate import UtcDate
 from apigetpost import api_get_post
 from datahandling import *
+from blacklists import load_blacklists
 from metasmoke import Metasmoke
 from parsing import *
 from spamhandling import handle_spam
@@ -18,10 +19,9 @@ import random
 import requests
 import os
 import time
-import datahandling
 # noinspection PyCompatibility
 import regex
-from helpers import Response
+from helpers import Response, only_blacklists_changed
 from classes import Post
 
 # TODO: pull out code block to get user_id, chat_site, room_id into function
@@ -35,7 +35,7 @@ from classes import Post
 def check_permissions(function_):
     # noinspection PyMissingTypeHints
     def run_command(ev_room, ev_user_id, wrap2, *args, **kwargs):
-        if datahandling.is_privileged(ev_room, ev_user_id, wrap2):
+        if is_privileged(ev_room, ev_user_id, wrap2):
             kwargs['ev_room'] = ev_room
             kwargs['ev_user_id'] = ev_user_id
             kwargs['wrap2'] = wrap2
@@ -105,7 +105,7 @@ def single_random_user(ev_room):
 
 @check_permissions
 def command_approve(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
-    if datahandling.is_code_privileged(ev_room, ev_user_id, wrap2):
+    if is_code_privileged(ev_room, ev_user_id, wrap2):
         if len(message_parts) >= 2:
             pr_num = message_parts[1]
             resp = requests.post('{}/github/pr_approve/{}'.format(GlobalVars.metasmoke_host, pr_num))
@@ -371,7 +371,7 @@ def do_blacklist(**kwargs):
         item_to_blacklist=pattern,
         username=kwargs['ev_user_name'],
         chat_profile_link=chat_user_profile_link,
-        code_permissions=datahandling.is_code_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2'])
+        code_permissions=is_code_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2'])
     )
     return Response(command_status=result[0], message=result[1])
 
@@ -500,6 +500,14 @@ def command_force_blacklist_username(message_parts, ev_user_name, ev_room, ev_us
 @check_permissions
 def command_gitstatus(wrap2, *args, **kwargs):
     return Response(command_status=True, message=GitManager.current_git_status())
+
+
+@check_permissions
+def command_remotediff(*args, **kwargs):
+    will_require_full_restart = "SmokeDetector will require a full restart to pull changes: " \
+                                "{}".format(str(not only_blacklists_changed(GitManager.get_remote_diff())))
+    return Response(command_status=True, message="{}\n\n{}".format(GitManager.get_remote_diff(),
+                                                                   will_require_full_restart))
 
 
 # --- Joke Commands --- #
@@ -762,22 +770,27 @@ def command_pull(ev_room, ev_user_id, wrap2, *args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: String on failure, None on success
     """
-    request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/deploy')
-    latest_sha = request.json()["object"]["sha"]
-    request = requests.get(
-        'https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/{commit_code}/statuses'.format(
-            commit_code=latest_sha))
-    states = []
-    for status in request.json():
-        state = status["state"]
-        states.append(state)
-    if "success" in states:
-        os._exit(3)
-    elif "error" in states or "failure" in states:
-        return Response(command_status=True, message="CI build failed! :( Please check your commit.")
-    elif "pending" in states or not states:
-        return Response(command_status=True,
-                        message="CI build is still pending, wait until the build has finished and then pull again.")
+    if only_blacklists_changed(GitManager.get_remote_diff()):
+        GitManager.pull_remote()
+        load_blacklists()
+        return Response(command_status=True, message="No code modified, only blacklists reloaded.")
+    else:
+        request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/deploy')
+        latest_sha = request.json()["object"]["sha"]
+        request = requests.get(
+            'https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/{commit_code}/statuses'.format(
+                commit_code=latest_sha))
+        states = []
+        for status in request.json():
+            state = status["state"]
+            states.append(state)
+        if "success" in states:
+            os._exit(3)
+        elif "error" in states or "failure" in states:
+            return Response(command_status=True, message="CI build failed! :( Please check your commit.")
+        elif "pending" in states or not states:
+            return Response(command_status=True,
+                            message="CI build is still pending, wait until the build has finished and then pull again.")
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal,PyProtectedMember
@@ -1750,6 +1763,7 @@ command_dict = {
     "!!/pull": command_pull,
     "!!/pending": command_pending,
     "!!/reboot": command_reboot,
+    "!!/remote-diff": command_remotediff,
     "!!/reportuser": command_allspam,
     "!!/rmblu": command_remove_blacklist_user,
     "!!/rmblu-": command_remove_blacklist_user,

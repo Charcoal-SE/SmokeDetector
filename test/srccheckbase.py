@@ -2,7 +2,7 @@
 import os
 
 
-# noinspection PyAugmentAssignment,PyMissingTypeHints
+# noinspection PyMissingTypeHints
 def list_python_files(root_dir):
     all_files = os.listdir(root_dir)
     py_files = []

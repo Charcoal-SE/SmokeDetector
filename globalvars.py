@@ -47,6 +47,10 @@ class GlobalVars:
     false_positives = []
     whitelisted_users = []
     blacklisted_users = []
+    blacklisted_usernames = []
+    blacklisted_websites = []
+    bad_keywords = []
+    watched_keywords = {}
     ignored_posts = []
     auto_ignored_posts = []
     startup_utc = datetime.utcnow().strftime("%H:%M:%S")
@@ -176,6 +180,7 @@ class GlobalVars:
             "69330",    # Sconibulus
             "164187",   # Okx
             "202619",   # John Militer
+            "262693"    # suraj
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
@@ -325,9 +330,10 @@ class GlobalVars:
             "4805174",  # kayess
             "2370483",  # Machavity
             "1873567",  # CalvT
-            "4826457"  # suraj
+            "4826457",  # suraj
+            "3773011"   # Makyen
         ],
-        '111347': [
+        '111347': [     # SOBotics
             "3160466",  # ArtOfCode
             "1849664",  # Undo
             "3002139",  # Baum mit Augen
@@ -337,7 +343,11 @@ class GlobalVars:
             "4099593",  # Bhargav Rao
             "1743880",  # Tunaki
             "559745",   # Floern
-            "4687348"   # FelixSFD
+            "4687348",  # FelixSFD
+            "6375113",  # Bugs
+            "4622463",  # angussidney
+            "158742",   # Rob
+            "4050842"   # Thaillie
         ]
     }
 
