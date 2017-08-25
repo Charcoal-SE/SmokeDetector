@@ -787,3 +787,4 @@
 1503597244	DavidPostill	imfirewall
 1503614509	doppelgreener	corsoexcelonline\.com
 1503633550	tripleee	healthclinicusa\.com
+1503633622	tripleee	techruleinfo\.com
