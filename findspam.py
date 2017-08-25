@@ -6,7 +6,6 @@ from difflib import SequenceMatcher
 from urllib.parse import urlparse
 from itertools import chain
 from collections import Counter
-import logging
 
 # noinspection PyPackageRequirements
 import tld
@@ -337,7 +336,6 @@ def bad_pattern_in_url(s, site, *args):
 
 def bad_ns_for_url_domain(s, site, *args):
     for domain in set([get_domain(link, full=True) for link in post_links(s)]):
-        logging.info('bad_ns_for_url_domain: checking {0}'.format(domain))
         try:
             ns = dns.resolver.query(domain, 'ns')
         except dns.exception.DNSException as exc:
@@ -418,10 +416,8 @@ def post_links(post):
     for p in COMMON_MALFORMED_PROTOCOLS:
         post = post.replace(p[0], p[1])
 
-    logging.info('post is {0}'.format(post))
     links = []
     for l in regex.findall(URL_REGEX, post):
-        logging.info('found link {0}'.format(l))
         if l[-1].isalnum():
             links.append(l)
         else:
@@ -476,7 +472,6 @@ def get_domain(s, full=False):
             domain = str(extract)
         else:
             domain = extract.domain
-        logging.info('first try: {0}'.format(domain))
     except TldDomainNotFound as e:
         invalid_tld = RE_COMPILE.match(str(e)).group(1)
         # Attempt to replace the invalid protocol
@@ -487,23 +482,19 @@ def get_domain(s, full=False):
                 domain = str(extract)
             else:
                 domain = extract.domain
-            logging.info('second try: {0}'.format(domain))
         except TldDomainNotFound:
             # Assume bad TLD and try one last fall back, just strip the trailing TLD and leading subdomain
             parsed_uri = urlparse(s)
             if len(parsed_uri.path.split(".")) >= 3:
                 if full:
-                    domain = '.'.join(parsed_url.path.split(".")[1:])
+                    domain = '.'.join(parsed_uri.path.split(".")[1:])
                 else:
                     domain = parsed_uri.path.split(".")[1]
-                logging.info('final if: {0}'.format(domain))
             else:
                 if full:
                     domain = parsed_uri.path
                 else:
                     domain = parsed_uri.path.split(".")[0]
-                logging.info('final else: {0}'.format(domain))
-    logging.info('get_domain: extracted domain {0}'.format(domain))
     return domain
 
 
