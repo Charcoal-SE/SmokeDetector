@@ -7,6 +7,7 @@ from difflib import SequenceMatcher
 from urllib.parse import urlparse
 from itertools import chain
 from collections import Counter
+import logging
 
 # noinspection PyPackageRequirements
 import tld
@@ -16,6 +17,9 @@ import phonenumbers
 import dns.resolver
 
 from helpers import all_matches_unique, log
+from globalvars import GlobalVars
+from blacklists import load_blacklists
+from deepsmoke import check_deepsmoke
 
 
 SIMILAR_THRESHOLD = 0.95
@@ -47,8 +51,6 @@ URL_REGEX = regex.compile(
     r"""(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))"""
     r"""|(?:(?:[a-z\u00a1-\uffff0-9]-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-?)"""
     r"""*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.UNICODE)
-
-COMPILED = {}
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
@@ -257,6 +259,18 @@ def keyword_email(s, site, *args):   # a keyword and an email in the same post
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
+def pattern_email(s, site, *args):
+    pattern = regex.compile(r"(?<![=#/])\b(dr|[A-z0-9_.%+-]*"
+                            r"(loan|hack|financ|fund|spell|temple|herbal|spiritual|atm|heal|priest|classes|"
+                            r"investment))[A-z0-9_.%+-]*"
+                            r"@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b"
+                            ).search(s.lower())
+    if pattern:
+        return True, u"Pattern-matching email {}".format(pattern.group(0))
+    return False, ""
+
+
+# noinspection PyUnusedLocal,PyMissingTypeHints
 def keyword_link(s, site, *args):   # thanking keyword and a link in the same short answer
     if len(s) > 400:
         return False, ""
@@ -322,7 +336,8 @@ def bad_pattern_in_url(s, site, *args):
 
 
 def bad_ns_for_url_domain(s, site, *args):
-    for domain in set([get_domain(link) for link in post_links(s)]):
+    for domain in set([get_domain(link, full=True) for link in post_links(s)]):
+        logging.info('bad_ns_for_url_domain: checking {0}'.format(domain))
         try:
             ns = dns.resolver.query(domain, 'ns')
         except dns.exception.DNSException as exc:
@@ -403,8 +418,10 @@ def post_links(post):
     for p in COMMON_MALFORMED_PROTOCOLS:
         post = post.replace(p[0], p[1])
 
+    logging.info('post is {0}'.format(post))
     links = []
     for l in regex.findall(URL_REGEX, post):
+        logging.info('found link {0}'.format(l))
         if l[-1].isalnum():
             links.append(l)
         else:
@@ -449,24 +466,44 @@ def similar_ratio(a, b):
 
 
 # noinspection PyMissingTypeHints
-def get_domain(s):
+def get_domain(s, full=False):
+    """
+    Extract the domain name; with full=True, keep the TLD tacked on.
+    """
     try:
         extract = tld.get_tld(s, fix_protocol=True, as_object=True, )
-        domain = extract.domain
+        if full:
+            domain = str(extract)
+        else:
+            domain = extract.domain
+        logging.info('first try: {0}'.format(domain))
     except TldDomainNotFound as e:
         invalid_tld = RE_COMPILE.match(str(e)).group(1)
         # Attempt to replace the invalid protocol
         s1 = s.replace(invalid_tld, 'http', 1)
         try:
             extract = tld.get_tld(s1, fix_protocol=True, as_object=True, )
-            domain = extract.domain
+            if full:
+                domain = str(extract)
+            else:
+                domain = extract.domain
+            logging.info('second try: {0}'.format(domain))
         except TldDomainNotFound:
             # Assume bad TLD and try one last fall back, just strip the trailing TLD and leading subdomain
             parsed_uri = urlparse(s)
             if len(parsed_uri.path.split(".")) >= 3:
-                domain = parsed_uri.path.split(".")[1]
+                if full:
+                    domain = '.'.join(parsed_url.path.split(".")[1:])
+                else:
+                    domain = parsed_uri.path.split(".")[1]
+                logging.info('final if: {0}'.format(domain))
             else:
-                domain = parsed_uri.path.split(".")[0]
+                if full:
+                    domain = parsed_uri.path
+                else:
+                    domain = parsed_uri.path.split(".")[0]
+                logging.info('final else: {0}'.format(domain))
+    logging.info('get_domain: extracted domain {0}'.format(domain))
     return domain
 
 
@@ -517,24 +554,11 @@ def mevaqesh_troll(s, *args):
         return False, ""
 
 
+load_blacklists()
+
+
 # noinspection PyClassHasNoInit
 class FindSpam:
-    with open("bad_keywords.txt", "r", encoding="utf-8") as f:
-        bad_keywords = [line.rstrip() for line in f if len(line.rstrip()) > 0]
-
-    with open("watched_keywords.txt", "r", encoding="utf-8") as f:
-        watched_keywords = dict()
-        for lineno, line in enumerate(f, 1):
-            if regex.compile('^\s*(?:#|$)').match(line):
-                continue
-            try:
-                when, by_whom, what = line.rstrip().split('\t')
-            except ValueError as err:
-                log('error', '{0}:{1}:{2}'.format(
-                    'watched_keywords.txt', lineno, err))
-                continue
-            watched_keywords[what] = {'when': when, 'by': by_whom}
-
     bad_keywords_nwb = [  # "nwb" == "no word boundary"
         u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",
         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
@@ -559,13 +583,7 @@ class FindSpam:
         "(essay|resume|article|dissertation|thesis) ?writing ?service", "satta ?matka", "b.?o.?j.?i.?t.?e.?r"
     ]
 
-    with open("blacklisted_websites.txt", "r", encoding="utf-8") as f:
-        blacklisted_websites = [line.rstrip() for line in f if len(line.rstrip()) > 0]
-
-    with open("blacklisted_usernames.txt", "r", encoding="utf-8") as f:
-        blacklisted_usernames = [line.rstrip() for line in f if len(line.rstrip()) > 0]
-
-    # Patterns: the top three lines are the most straightforward, matching any site with this string in domain name
+    # Patterns: the top four lines are the most straightforward, matching any site with this string in domain name
     pattern_websites = [
         r"(enstella|recoverysoftware|removevirus|support(number|help|quickbooks)|techhelp|calltech|exclusive|"
         r"onlineshop|video(course|classes|tutorial(?!s))|vipmodel|(?<!word)porn|wholesale|inboxmachine|(get|buy)cheap|"
@@ -583,7 +601,9 @@ class FindSpam:
         r"moist|lefair|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone)[\w-]*?\.(co|net|org|in(\W|fo)|us|"
         r"wordpress|blogspot|tumblr|webs\.)",
         r"(moving|\w{10}spell|[\w-]{3}password|(?!greatfurniture)\w{5}deal|(?!nfood)\w{5}facts|\w\dfacts|\Btoyshop|"
-        r"[\w-]{5}cheats|[\w-]{6}girls|clothing|shoes(inc)?|cheatcode|cracks|credits|-wallet|refunds|truo?ng|viet|"
+        r"[\w-]{5}cheats|"
+        r"(?!djangogirls\.org(?:$|[/?]))[\w-]{6}girls|"
+        r"clothing|shoes(inc)?|cheatcode|cracks|credits|-wallet|refunds|truo?ng|viet|"
         r"trang)\.(co|net|org|in(\W|fo)|us)",
         r"(health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
         r"(//|www\.)healthy?\w{5,}\.com",
@@ -669,11 +689,11 @@ class FindSpam:
         #
         # Category: Bad keywords
         # The big list of bad keywords, for titles and posts
-        {'regex': r"(?is)\b({})\b|{}".format("|".join(bad_keywords), "|".join(bad_keywords_nwb)), 'all': True,
-         'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
+        {'regex': r"(?is)\b({})\b|{}".format("|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
+         'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1},
         # The small list of *potentially* bad keywords, for titles and posts
-        {'regex': r'(?is)\b({})\b'.format('|'.join(watched_keywords.keys())),
+        {'regex': r'(?is)\b({})\b'.format('|'.join(GlobalVars.watched_keywords.keys())),
          'reason': 'potentially bad keyword in {}',
          'all': True, 'sites': [], 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 30, 'max_score': 1},
@@ -798,7 +818,7 @@ class FindSpam:
         #
         # Category: Suspicious links
         # Blacklisted sites
-        {'regex': u"(?i)({})".format("|".join(blacklisted_websites)), 'all': True,
+        {'regex': u"(?i)({})".format("|".join(GlobalVars.blacklisted_websites)), 'all': True,
          'sites': [], 'reason': "blacklisted website in {}", 'title': True, 'body': True, 'username': False,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 5},
         # Suspicious sites
@@ -883,14 +903,14 @@ class FindSpam:
         # Shortened URL near the end of question
         {'regex': r"(?is)://(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|"
                   r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
-                  r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us)/.{0,200}$", 'all': True,
+                  r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us|adyou\.co)/.{0,200}$", 'all': True,
          'sites': ["superuser.com", "askubuntu.com"], 'reason': "shortened URL in {}", 'title': False, 'body': True,
          'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1,
          'max_score': 0},
         # Shortened URL in an answer
         {'regex': r"(?is)://(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|ow\.ly|"
                   r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
-                  r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us)/",
+                  r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us|adyou\.co)/",
          'all': True, 'sites': ["codegolf.stackexchange.com"], 'reason': "shortened URL in {}", 'title': False,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False,
          'max_rep': 1, 'max_score': 0},
@@ -921,8 +941,9 @@ class FindSpam:
          'stripcodeblocks': True, 'body_summary': False, 'max_rep': 11, 'max_score': 1},
         # Link text consists of punctuation, answers only
         {'regex': r'(?iu)rel="nofollow( noreferrer)?">(?!><>)\W+</a>', 'all': True,
-         'sites': [], 'reason': 'linked punctuation in {}', 'title': False, 'body': True, 'username': False,
-         'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 11, 'max_score': 1},
+         'sites': ["codegolf.stackexchange.com"], 'reason': 'linked punctuation in {}', 'title': False, 'body': True,
+         'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 11,
+         'max_score': 1},
         # URL in title, some sites are exempt
         {'regex': r"(?i)https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}|"
                   r"\w{3,}\.(com|net)\b.*\w{3,}\.(com|net)\b", 'all': True,
@@ -969,6 +990,9 @@ class FindSpam:
          'max_score': 0},
         # Combination of keyword and email in questions and answers, for all sites
         {'method': keyword_email, 'all': True, 'sites': [], 'reason': "bad keyword with email in {}", 'title': True,
+         'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        # Spammy-looking email in questions and answers, for all sites
+        {'method': pattern_email, 'all': True, 'sites': [], 'reason': "pattern-matching email in {}", 'title': True,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # QQ/ICQ/Whatsapp... numbers, for all sites
         {'regex': r'(?i)(?<![a-z0-9])Q{1,2}(?:(?:[vw]|[^a-z0-9])\D{0,8})?\d{5}[.-]?\d{4,5}(?!["\d])|'
@@ -1041,7 +1065,7 @@ class FindSpam:
         #
         # Category: other
         # Blacklisted usernames
-        {'regex': r"(?i)({})".format("|".join(blacklisted_usernames)), 'all': True, 'sites': [],
+        {'regex': r"(?i)({})".format("|".join(GlobalVars.blacklisted_usernames)), 'all': True, 'sites': [],
          'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"],
@@ -1063,8 +1087,13 @@ class FindSpam:
         {'method': character_utilization_ratio, 'all': False, 'sites': ["judaism.stackexchange.com"],
          'reason': "single character over used in post",
          'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
-         'max_rep': 20, 'max_score': 0}
-
+         'max_rep': 20, 'max_score': 0},
+        # DeepSmoke
+        {'method': check_deepsmoke, 'all': False, 'sites': ['stackoverflow.com'],
+         'reason': 'Body classified as spam by DeepSmoke',
+         'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
+         # FIXME: provisionally high thresholds to get performance data
+         'max_rep': 20, 'max_score': 5}
     ]
 
     @staticmethod
@@ -1099,12 +1128,7 @@ class FindSpam:
                 matched_body = None
                 compiled_regex = None
                 if is_regex_check:
-                    json_rule = json.dumps(rule)
-                    compiled_regex = COMPILED[json_rule] if json_rule in COMPILED else None
-                    if compiled_regex is None:
-                        compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
-                        COMPILED[json_rule] = compiled_regex
-
+                    compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
                     # using a named list \L in some regexes
                     matched_title = compiled_regex.findall(post.title)
                     matched_username = compiled_regex.findall(post.user_name)
