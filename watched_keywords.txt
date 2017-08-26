@@ -811,3 +811,4 @@
 1503779106	tripleee	tempostorm\.com
 1503779121	tripleee	fatsoma\.com
 1503779240	tripleee	mayweathervsmcgregor-livehd\.com
+1503779366	tripleee	bitfinex\.com
