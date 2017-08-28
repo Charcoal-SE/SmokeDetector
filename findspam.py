@@ -339,7 +339,7 @@ def bad_ns_for_url_domain(s, site, *args):
         try:
             ns = dns.resolver.query(domain, 'ns')
         except dns.exception.DNSException as exc:
-            # TODO: log exception?
+            log('warning', 'DNS error {0}'.format(exc))
             continue
         nameservers = [server.target.to_text() for server in ns]
         if any([ns.endswith('.namecheaphosting.com.') for ns in nameservers]):
