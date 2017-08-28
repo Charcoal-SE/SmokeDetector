@@ -673,3 +673,4 @@ ultimate\Wtesto\Wexplosion
 vampire\W?(kingdom|brotherhood)
 transform\W?derma
 testagenix
+hyper\W?fit\W?slim
