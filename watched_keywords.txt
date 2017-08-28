@@ -817,3 +817,4 @@
 1503794626	Mithrandir	Best\Whackers
 1503800112	quartata	chinese-items\.com
 1503882085	doppelgreener	gadgetbooks\.com
+1503882702	doppelgreener	swiss-german\.com
