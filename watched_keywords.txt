@@ -816,3 +816,4 @@
 1503787315	quartata	officesetup-com\.com
 1503794626	Mithrandir	Best\Whackers
 1503800112	quartata	chinese-items\.com
+1503882085	doppelgreener	gadgetbooks\.com
