@@ -818,3 +818,4 @@
 1503800112	quartata	chinese-items\.com
 1503882085	doppelgreener	gadgetbooks\.com
 1503882702	doppelgreener	swiss-german\.com
+1503882757	doppelgreener	office-setup-help\.com
