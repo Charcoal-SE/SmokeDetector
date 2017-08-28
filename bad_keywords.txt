@@ -677,3 +677,4 @@ hyper\W?fit\W?slim
 alpha\W?hard\W?reload
 nouvelle\W?beaute
 brain\W?hacker
+amd\?Walpha\W?regain
