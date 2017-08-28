@@ -6,6 +6,7 @@ from difflib import SequenceMatcher
 from urllib.parse import urlparse
 from itertools import chain
 from collections import Counter
+from datetime import datetime
 
 # noinspection PyPackageRequirements
 import tld
@@ -334,10 +335,15 @@ def bad_pattern_in_url(s, site, *args):
 def bad_ns_for_url_domain(s, site, *args):
     for domain in set([get_domain(link, full=True) for link in post_links(s)]):
         try:
+            starttime = datetime.now()
             ns = dns.resolver.query(domain, 'ns')
         except dns.exception.DNSException as exc:
-            log('warning', 'DNS error {0}'.format(exc))
+            endtime = datetime.now()
+            log('warning', 'DNS error {0} (duration: {1})'.format(
+                exc, endtime - starttime))
             continue
+        endtime = datetime.now()
+        log('info', 'NS query duration {0}'.format(endtime - starttime))
         nameservers = [server.target.to_text() for server in ns]
         if any([ns.endswith('.namecheaphosting.com.') for ns in nameservers]):
             return True, '{domain} NS suspicious {ns}'.format(
