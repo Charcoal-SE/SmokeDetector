@@ -820,3 +820,4 @@
 1503882702	doppelgreener	swiss-german\.com
 1503882757	doppelgreener	office-setup-help\.com
 1503894590	tripleee	miraireza\.com
+1503894681	tripleee	topnewsage\.com
