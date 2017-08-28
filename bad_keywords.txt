@@ -675,3 +675,4 @@ transform\W?derma
 testagenix
 hyper\W?fit\W?slim
 alpha\W?hard\W?reload
+nouvelle\W?beaute
