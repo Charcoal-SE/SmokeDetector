@@ -12,9 +12,6 @@ import tld
 # noinspection PyPackageRequirements
 from tld.utils import TldDomainNotFound
 import phonenumbers
-from urllib.parse import urlparse
-from itertools import chain
-from collections import Counter
 import dns.resolver
 
 from helpers import all_matches_unique, log
