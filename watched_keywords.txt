@@ -841,3 +841,4 @@
 1503974621	tripleee	fitnessjab\.com
 1503974681	tripleee	javatechworld\.com
 1503974751	tripleee	rajeshpanda\.in
+1504012830	tripleee	consultuning\.blogspot\.com
