@@ -15,8 +15,8 @@ User documentation is in the [wiki](https://charcoal-se.org/smokey).
 To set up, use
 
 ```
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
+git config user.email "smokey@erwaysoftware.com"
+git config user.name "SmokeDetector"
 
 git clone https://github.com/Charcoal-SE/SmokeDetector.git
 cd SmokeDetector
