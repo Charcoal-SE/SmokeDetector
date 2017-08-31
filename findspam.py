@@ -534,7 +534,8 @@ class FindSpam:
         u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "no2blast", "sunergetic", "capilux", "sante ?avis",
         "enduros", "dianabol", r"ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex", "revimax",
         "celluria", "viatropin", "(meg|test)adrox", "nordic ?loan ?firm", r"safflower\Woil",
-        "(essay|resume|article|dissertation|thesis) ?writing ?service", "satta ?matka", "b.?o.?j.?i.?t.?e.?r"
+        "(essay|resume|article|dissertation|thesis) ?writing ?service", "satta ?matka", "b.?o.?j.?i.?t.?e.?r",
+        "rams[ey]+\W?dave"
     ]
 
     # Patterns: the top four lines are the most straightforward, matching any site with this string in domain name
