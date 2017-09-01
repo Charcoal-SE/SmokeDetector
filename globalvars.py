@@ -4,6 +4,7 @@ import os
 from datetime import datetime
 from chatexchange_extension import Client
 from html.parser import HTMLParser
+from html import unescape
 from hashlib import md5
 from configparser import NoOptionError, RawConfigParser
 from helpers import environ_or_none, log
@@ -90,6 +91,7 @@ class GlobalVars:
     non_tavern_sites = ["stackoverflow.com"]
 
     parser = HTMLParser()
+    parser.unescape = unescape
     wrap = Client("stackexchange.com")
     wrapm = Client("meta.stackexchange.com")
     wrapso = Client("stackoverflow.com")
