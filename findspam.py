@@ -801,7 +801,7 @@ class FindSpam:
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0, 'questions': False},
         # Suspicious health-related websites, health sites are exempt
-        {'regex': r"(?i)(bodybuilding|workout|fitness|diet|perfecthealth|muscle|nutrition|"
+        {'regex': r"(?i)(bodybuilding|workout|fitness(?!e)|diet|perfecthealth|muscle|nutrition|"
                   r"prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com",
                    "skeptics.stackexchange.com", "bicycles.stackexchange.com"],
