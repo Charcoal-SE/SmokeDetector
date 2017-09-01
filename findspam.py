@@ -517,13 +517,13 @@ class FindSpam:
         u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",
         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
         "abam26", "watch2live", "cogniq", "(serum|lift) ?eye", "tophealth", "poker[ -]?online",
-        "caralluma", "male\\Wperf(?!ormer)", "anti[- ]?aging", "lumisse", "(ultra|berry|body)[ -]?ketone",
+        "caralluma", r"male\Wperf(?!ormer)", "anti[- ]?aging", "lumisse", "(ultra|berry|body)[ -]?ketone",
         "(cogni|oro)[ -]?(lift|plex)", "diabazole", "forskolin", "tonaderm", "luma(genex|lift)",
         "(skin|face|eye)[- ]?(serum|therapy|hydration|tip|renewal|gel|lotion|cream)",
         "(skin|eye)[- ]?lift", "(skin|herbal) ?care", "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim",
         "aimee[ -]?cream", "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
-        "contact (me|us)\\W*<a ", "follicure", "kidney[ -]?bean[ -]?extract", "ecoflex",
-        "\\brsgold", "bellavei", "goji ?xtreme", "lumagenex", "ajkobeshoes", "kreatine",
+        r"contact (me|us)\W*<a ", "follicure", "kidney[ -]?bean[ -]?extract", "ecoflex",
+        r"\brsgold", "bellavei", "goji ?xtreme", "lumagenex", "ajkobeshoes", "kreatine",
         "packers.{0,15}(movers|logistic).{0,25}</a>", "guaranteedprofitinvestment",
         "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)",
         "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning",
@@ -535,7 +535,7 @@ class FindSpam:
         "enduros", "dianabol", r"ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex", "revimax",
         "celluria", "viatropin", "(meg|test)adrox", "nordic ?loan ?firm", r"safflower\Woil",
         "(essay|resume|article|dissertation|thesis) ?writing ?service", "satta ?matka", "b.?o.?j.?i.?t.?e.?r",
-        "rams[ey]+\W?dave"
+        r"rams[ey]+\W?dave"
     ]
 
     # Patterns: the top four lines are the most straightforward, matching any site with this string in domain name
