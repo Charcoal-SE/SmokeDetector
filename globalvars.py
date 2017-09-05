@@ -182,7 +182,8 @@ class GlobalVars:
             "69330",    # Sconibulus
             "164187",   # Okx
             "202619",   # John Militer
-            "262693"    # suraj
+            "262693",   # suraj
+            "11287"    # Martin Sleziak
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
