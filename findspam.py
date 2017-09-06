@@ -288,10 +288,14 @@ def keyword_link(s, site, *args):   # thanking keyword and a link in the same sh
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def bad_link_text(s, site, *args):   # suspicious text of a hyperlink
     s = regex.sub("</?strong>|</?em>", "", s)  # remove font tags
-    keywords = regex.compile(r"(?isu)^(buy|cheap) |live[ -]?stream|(^| )make (money|\$)|(^| )(porno?|(whole)?sale|"
-                             r"coins|replica|luxury|essays?|in \L<city>)($| )|(^| )\L<city>.*(service|escort|"
-                             r"call girl)|(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|"
-                             r"repair|recovery)|\b(writing service|essay (writing|tips))", city=FindSpam.city_list)
+    keywords = regex.compile(
+        r"(?isu)"
+        r"\b(buy|cheap) |live[ -]?stream|"
+        r"\bmake (money|\$)|"
+        r"\b(porno?|(whole)?sale|coins|replica|luxury|essays?|in \L<city>)\b"
+        r"\b\L<city>(?:\b.{1.20}\b)?(service|escort|call girl)|"
+        r"(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery)|"
+        r"\b(writing service|essay (writing|tips))", city=FindSpam.city_list)
     links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
     business = regex.compile(
         r"(?i)(^| )(airlines?|apple|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
