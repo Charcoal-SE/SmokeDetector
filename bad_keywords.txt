@@ -150,9 +150,9 @@ abella\Wmayfair
 Intelleral
 livana\Wlift
 vivalux
-call\Wgirl
-Youth Serum
-explosive muscle
+call\W?girls?
+youth\W?serum
+explosive\W?muscles?
 zyntix
 genbrain
 (teeth|tooth)\W(lighten|whiten|brighten|shin)(er|ing)?
