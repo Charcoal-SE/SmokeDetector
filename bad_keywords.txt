@@ -694,3 +694,4 @@ menxcell
 nitro\W?grit
 aurora\Wbrite
 lumaslim
+testo\W?booster
