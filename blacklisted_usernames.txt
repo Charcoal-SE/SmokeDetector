@@ -5,7 +5,7 @@ ser?vice pemanas?
 \b(fuck(er|ing)?|penis)\b
 ^\w{0,3}w.ng.?d.ng\w{0,3}$
 dlqudals
-^[a-z ]+juri(?:n|na|ns|sa|ya|yam|ym)$
+[a-z ]{3,}juri(?:n|na|ns|sa|ya|yam|ym)?$
 ^[a-z]+jiibond$
 Marlin Woods
 xiguai
