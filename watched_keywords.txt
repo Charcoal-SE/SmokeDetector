@@ -941,3 +941,4 @@
 1505106650	tripleee	semmiami\.com
 1505107377	tripleee	wellness350\.com
 1505108167	tripleee	airfreightbazaar\.com
+1505109971	tripleee	malimgroup\.com
