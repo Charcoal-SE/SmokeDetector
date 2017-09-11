@@ -945,5 +945,5 @@
 1505113769	Glorfindel	indexexchange\.ae
 1505114070	tripleee	graphicsbackgrounds\.blogspot\.in
 1505114099	Glorfindel	gadgetsdeck\.com
-1505114543	Glorfindel	asoranker\.ocm
+1505114543	Glorfindel	asoranker\.com
 1505114579	Glorfindel	reviewsforapp\.com
