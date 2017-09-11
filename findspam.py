@@ -1,15 +1,19 @@
 # -*- coding: utf-8 -*-
 # noinspection PyCompatibility
+
 import regex
-import phonenumbers
 from difflib import SequenceMatcher
+from urllib.parse import urlparse
+from itertools import chain
+from collections import Counter
+from datetime import datetime
+
 # noinspection PyPackageRequirements
 import tld
 # noinspection PyPackageRequirements
 from tld.utils import TldDomainNotFound
-from urllib.parse import urlparse
-from itertools import chain
-from collections import Counter
+import phonenumbers
+import dns.resolver
 
 from helpers import all_matches_unique, log
 from globalvars import GlobalVars
@@ -332,6 +336,28 @@ def bad_pattern_in_url(s, site, *args):
         return False, ""
 
 
+def bad_ns_for_url_domain(s, site, *args):
+    for domain in set([get_domain(link, full=True) for link in post_links(s)]):
+        if not tld.get_tld(domain, fix_protocol=True, fail_silently=True):
+            log('debug', '{0} has no valid tld; skipping'.format(domain))
+            continue
+        try:
+            starttime = datetime.now()
+            ns = dns.resolver.query(domain, 'ns')
+        except dns.exception.DNSException as exc:
+            endtime = datetime.now()
+            log('warning', 'DNS error {0} (duration: {1})'.format(
+                exc, endtime - starttime))
+            continue
+        endtime = datetime.now()
+        log('info', 'NS query duration {0}'.format(endtime - starttime))
+        nameservers = [server.target.to_text() for server in ns]
+        if any([ns.endswith('.namecheaphosting.com.') for ns in nameservers]):
+            return True, '{domain} NS suspicious {ns}'.format(
+                domain=domain, ns=','.join(nameservers))
+    return False, ""
+
+
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def is_offensive_post(s, site, *args):
     if s is None or len(s) == 0:
@@ -392,6 +418,24 @@ def character_utilization_ratio(s, site, *args):
         return False, ""
 
 
+def post_links(post):
+    """
+    Helper function to extract URLs from a piece of HTML.
+    """
+    # Fix stupid spammer tricks
+    for p in COMMON_MALFORMED_PROTOCOLS:
+        post = post.replace(p[0], p[1])
+
+    links = []
+    for l in regex.findall(URL_REGEX, post):
+        if l[-1].isalnum():
+            links.append(l)
+        else:
+            links.append(l[:-1])
+
+    return set(links)
+
+
 # noinspection PyMissingTypeHints
 def perform_similarity_checks(post, name):
     """
@@ -400,41 +444,25 @@ def perform_similarity_checks(post, name):
     :param name: Username to compare against
     :return: Float ratio of similarity
     """
-    # Fix stupid spammer tricks
-    for p in COMMON_MALFORMED_PROTOCOLS:
-        post = post.replace(p[0], p[1])
-    # Find links in post
-    found_links = regex.findall(URL_REGEX, post)
-
-    links = []
-    for l in found_links:
-        if l[-1].isalnum():
-            links.append(l)
-        else:
-            links.append(l[:-1])
-
-    links = list(set(links))
     t1 = 0
     t2 = 0
     t3 = 0
     t4 = 0
 
-    if links:
-        for link in links:
-            domain = get_domain(link)
-            # Straight comparison
-            t1 = similar_ratio(domain, name)
-            # Strip all spaces check
-            t2 = similar_ratio(domain, name.replace(" ", ""))
-            # Strip all hypens
-            t3 = similar_ratio(domain.replace("-", ""), name.replace("-", ""))
-            # Strip both hypens and spaces
-            t4 = similar_ratio(domain.replace("-", "").replace(" ", ""), name.replace("-", "").replace(" ", ""))
-            # Have we already exceeded the threshold? End now if so, otherwise, check the next link
-            if max(t1, t2, t3, t4) >= SIMILAR_THRESHOLD:
-                return max(t1, t2, t3, t4)
-    else:
-        return 0
+    for link in post_links(post):
+        domain = get_domain(link)
+        # Straight comparison
+        t1 = similar_ratio(domain, name)
+        # Strip all spaces check
+        t2 = similar_ratio(domain, name.replace(" ", ""))
+        # Strip all hypens
+        t3 = similar_ratio(domain.replace("-", ""), name.replace("-", ""))
+        # Strip both hypens and spaces
+        t4 = similar_ratio(domain.replace("-", "").replace(" ", ""), name.replace("-", "").replace(" ", ""))
+        # Have we already exceeded the threshold? End now if so, otherwise, check the next link
+        if max(t1, t2, t3, t4) >= SIMILAR_THRESHOLD:
+            break
+
     return max(t1, t2, t3, t4)
 
 
@@ -444,24 +472,39 @@ def similar_ratio(a, b):
 
 
 # noinspection PyMissingTypeHints
-def get_domain(s):
+def get_domain(s, full=False):
+    """
+    Extract the domain name; with full=True, keep the TLD tacked on.
+    """
     try:
         extract = tld.get_tld(s, fix_protocol=True, as_object=True, )
-        domain = extract.domain
+        if full:
+            domain = str(extract)
+        else:
+            domain = extract.domain
     except TldDomainNotFound as e:
         invalid_tld = RE_COMPILE.match(str(e)).group(1)
         # Attempt to replace the invalid protocol
         s1 = s.replace(invalid_tld, 'http', 1)
         try:
             extract = tld.get_tld(s1, fix_protocol=True, as_object=True, )
-            domain = extract.domain
+            if full:
+                domain = str(extract)
+            else:
+                domain = extract.domain
         except TldDomainNotFound:
             # Assume bad TLD and try one last fall back, just strip the trailing TLD and leading subdomain
             parsed_uri = urlparse(s)
             if len(parsed_uri.path.split(".")) >= 3:
-                domain = parsed_uri.path.split(".")[1]
+                if full:
+                    domain = '.'.join(parsed_uri.path.split(".")[1:])
+                else:
+                    domain = parsed_uri.path.split(".")[1]
             else:
-                domain = parsed_uri.path.split(".")[0]
+                if full:
+                    domain = parsed_uri.path
+                else:
+                    domain = parsed_uri.path.split(".")[0]
     return domain
 
 
@@ -793,7 +836,14 @@ class FindSpam:
         {'method': bad_pattern_in_url, 'all': True, 'sites': [],
          'reason': 'bad pattern in URL {}',
          'title': False, 'body': True, 'username': False,
-         'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
+         'stripcodeblocks': True, 'body_summary': True,
+         'max_rep': 1, 'max_score': 0},
+        # Link has NS hosted by bad guy
+        {'method': bad_ns_for_url_domain, 'all': True, 'sites': [],
+         'reason': 'bad NS for domain in {}',
+         'title': True, 'body': True, 'username': False,
+         'stripcodeblocks': True, 'body_summary': True,
+         'max_rep': 1, 'max_score': 0},
         # Country-name domains, travel and expats sites are exempt
         {'regex': r"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|"
                   r"spain|sweden)\w{0,4}\.(com|net)", 'all': True,
@@ -1039,8 +1089,7 @@ class FindSpam:
         {'method': character_utilization_ratio, 'all': False, 'sites': ["judaism.stackexchange.com"],
          'reason': "single character over used in post",
          'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
-         'max_rep': 20, 'max_score': 0}
-
+         'max_rep': 20, 'max_score': 0},
     ]
 
     @staticmethod
