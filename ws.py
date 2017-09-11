@@ -171,24 +171,6 @@ GlobalVars.specialrooms = [
         "room": GlobalVars.wrap.get_room("95"),
         "unwantedReasons": []
     },
-# Disable Ask Ubuntu General Room notifications, per their mods requesting
-# in chat.  Commented out because they may want it enabled again in the
-# future, and so we don't have to re-do this config blurb.
-#     {
-#         "sites": ["askubuntu.com"],
-#         "room": GlobalVars.wrap.get_room("201"),
-#         "unwantedReasons": [
-#             "All-caps title",   # these should be in uppercased form
-#             "All-caps body",
-#             "All-caps answer",
-#             "Phone number detected",
-#             "Repeating characters in title",
-#             "Repeating characters in body",
-#             "Repeating characters in answer",
-#             "Link at end of answer"
-#         ],
-#         "watcher": True
-#     },
     {
         "sites": ["stackoverflow.com"],
         "room": GlobalVars.wrapso.get_room("111347"),
