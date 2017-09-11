@@ -258,7 +258,8 @@ class GlobalVars:
             "158829",   # Thomas Ward
             "294691",   # Mithrandir
             "203553",   # CalvT
-            "289971"    # Hyper Neutrino
+            "289971",   # Hyper Neutrino
+            "346854"    # DonQuiKong
         ],
         socvr_room_id: [
             "1849664",  # Undo
