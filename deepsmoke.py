@@ -23,5 +23,5 @@ def check_deepsmoke(s, site, *args):
     resp.rstrip('\n')
     endtime = datetime.now()
     details = 'DeepSmoke response was {0} (duration: {1})'.format(
-            resp, endtime - starttime)
-    return (resp=='Spam'), details
+        resp, endtime - starttime)
+    return (resp == 'Spam'), details
