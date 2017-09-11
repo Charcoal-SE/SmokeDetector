@@ -178,6 +178,10 @@ class Metasmoke:
 
                     # noinspection PyUnboundLocalVariable
                     GlobalVars.charcoal_hq.send_message(s)
+            
+            elif "everything_is_broken" in message:
+                if message["everything_is_broken"] == True:
+                    os._exit(6)
 
     @staticmethod
     def send_stats_on_post(title, link, reasons, body, username, user_link, why, owner_rep,
