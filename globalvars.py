@@ -335,6 +335,7 @@ class GlobalVars:
             "2370483",  # Machavity
             "1873567",  # CalvT
             "4826457",  # suraj
+            "8242698",  # user0042
             "3773011"   # Makyen
         ],
         '111347': [     # SOBotics
