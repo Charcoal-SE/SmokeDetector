@@ -345,6 +345,9 @@ def bad_ns_for_url_domain(s, site, *args):
             starttime = datetime.now()
             ns = dns.resolver.query(domain, 'ns')
         except dns.exception.DNSException as exc:
+            if str(exc).startswith('None of DNS query names exist:'):
+                log('debug', 'domain {0} not found; skipping'.format(domain))
+                continue
             endtime = datetime.now()
             log('warning', 'DNS error {0} (duration: {1})'.format(
                 exc, endtime - starttime))
