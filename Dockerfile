@@ -3,11 +3,11 @@ FROM ubuntu
 RUN DEBIAN_FRONTEND=noninteractive && \
     apt -y update && \
     apt install -y build-essential \
-        python3 python3-dev python3-pip python3-venv git && \
+        python3 python3-dev python3-pip python3-venv git ca-certificates && \
     adduser --disabled-password --force-badname SmokeDetector \
         --gecos SmokeDetector && \
     su - SmokeDetector sh -c '\
-        env GIT_SSL_NO_VERIFY=true git clone https://github.com/Charcoal-SE/SmokeDetector.git && \
+        git clone https://github.com/Charcoal-SE/SmokeDetector.git && \
         cd SmokeDetector && \
         python3 -m venv venv && \
         . ./venv/bin/activate && \
