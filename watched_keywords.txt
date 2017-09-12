@@ -585,7 +585,6 @@
 1501657943	Mithrandir	germanyes\.de
 1501667752	Glorfindel	deliveryd2d.com
 1501674433	Glorfindel	tuckedtrunks\.com
-1501675914	JoErNanO	customercontactnumbers\.com
 1501676648	Magisch	youtvplayerz\.com
 1501676650	Mithrandir	word-square\.com
 1501686953	Mithrandir	essaytools\.com
