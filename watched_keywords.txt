@@ -959,3 +959,4 @@
 1505196793	tripleee	medsoft-imaging\.com
 1505196819	tripleee	rotatepdf\.net
 1505196912	tripleee	jiofiber\.com
+1505197019	tripleee	ganna\.zone
