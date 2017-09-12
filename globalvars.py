@@ -336,7 +336,8 @@ class GlobalVars:
             "1873567",  # CalvT
             "4826457",  # suraj
             "8242698",  # user0042
-            "3773011"   # Makyen
+            "3773011",  # Makyen
+            "2858773"  # Ajay Brahmakshatriya
         ],
         '111347': [     # SOBotics
             "3160466",  # ArtOfCode
