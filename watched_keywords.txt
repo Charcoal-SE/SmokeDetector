@@ -676,7 +676,6 @@
 1503032133	tripleee	app-aptoide\.com
 1503032593	tripleee	jamilslist\.com
 1503032974	tripleee	handymandream\.com
-1503033671	tripleee	alldaygeneric\.com
 1503033825	tripleee	saturam\.com
 1503033845	tripleee	convertlotusnotesnsf\.com
 1503036987	tripleee	919990223143
