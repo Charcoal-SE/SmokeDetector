@@ -684,7 +684,6 @@
 1503071392	Glorfindel	cheap55printing\.com
 1503073291	Glorfindel	seleniumtraining\.com
 1503125702	Glorfindel	iphonesupport\.net
-1503125839	suraj	weblineindia\.com
 1503129363	Glorfindel	deiedu\.in
 1503129390	Glorfindel	webtrackker\.com
 1503225891	Glorfindel	java9pro\.blogspot\.in
