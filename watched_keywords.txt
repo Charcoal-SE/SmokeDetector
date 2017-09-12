@@ -312,7 +312,6 @@
 1499141643	tripleee	govtjobsassam\.com
 1499141849	tripleee	wfhost2\.com
 1499142418	tripleee	klikgreenworld\.com
-1499119824	doppelgreener	xool(scanner|net)
 1499151495	Glorfindel	vidmateappsforpc\.com
 1499156323	Glorfindel	chaletsnaldehra\.com
 1499156842	Glorfindel	webgurunow\.com
