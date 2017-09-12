@@ -699,6 +699,6 @@ trimbiofit
 glow\W?eternal
 apex\W?booty
 performx
-avan\W?derm
+avan\W?derm(?:\W?nu)?
 derm\W?naturale
 keravin
