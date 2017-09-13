@@ -704,3 +704,4 @@ derm\W?naturale
 keravin
 vita\W?cup(?:\W?coffee)?
 velexa
+pure\W?1\W?slim
