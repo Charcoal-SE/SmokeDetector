@@ -708,3 +708,4 @@ pure\W?1\W?slim
 firmacare
 avila\W?ageless
 muscle\W?force\W?e?xtreme
+alpha\W?complex(?:\W?e?xtreme)?
