@@ -70,7 +70,6 @@
 1495610661	tripleee	2348107155060
 1495610785	tripleee	dr\.?abaherbalhome
 1495611397	tripleee	suganthan\.ca
-1495611677	tripleee	suganthan
 1495613977	tripleee	australiancruisegroup\.com\.au
 1495615705	Mithrandir	Dil\W?Toh\W?Bachaa
 1495625033	tripleee	unisecure\.com
