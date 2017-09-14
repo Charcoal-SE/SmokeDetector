@@ -65,7 +65,8 @@ if 'no-git-user-check' in persistent_arguments:
 else:
     git_name = git.config('--get', 'user.name', _ok_code=[0, 1])
     if git_name != "SmokeDetector":
-        logging.error('git config user.name "{0}" is wrong'.format(git_name))
+        logging.error('git config user.name "{0}" is wrong; '
+                      'use no-git-user-check to ignore'.format(git_name))
         exit(122)
     git_mail = git.config('--get', 'user.email', _ok_code=[0, 1])
     if git_mail != "smokey@erwaysoftware.com":
