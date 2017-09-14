@@ -292,7 +292,7 @@ def command_blacklist_help(*args, **kwargs):
                     "Remember to escape dots in URLs using \\.")
 
 
-def check_blacklist(string_to_test, is_username, is_watchlist):
+def check_blacklist(string_to_test, is_username, is_watchlist, filter_dns=False):
     # Test the string and provide a warning message if it is already caught.
     if is_username:
         question = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
@@ -319,6 +319,10 @@ def check_blacklist(string_to_test, is_username, is_watchlist):
     # Filter out watchlist results
     if not is_watchlist:
         reasons = list(filter(lambda reason: "potentially bad keyword" not in reason, reasons))
+
+    # Maybe filter out DNS results
+    if filter_dns:
+        reasons = list(filter(lambda reason: "bad NS for domain" not in reason, reasons))
 
     return reasons
 
@@ -356,9 +360,11 @@ def do_blacklist(**kwargs):
         return Response(command_status=False, message="An invalid pattern was provided, not blacklisting.")
 
     if not kwargs['force']:
-        reasons = check_blacklist(pattern.replace("\\W", " ").replace("\\.", "."),
-                                  kwargs['blacklist'] == "username",
-                                  kwargs['blacklist'] == "watch_keyword")
+        reasons = check_blacklist(
+            pattern.replace("\\W", " ").replace("\\.", "."),
+            kwargs['blacklist'] == "username",
+            kwargs['blacklist'] == "watch_keyword",
+            filter_dns=True)
 
         if reasons:
             return Response(command_status=False,
