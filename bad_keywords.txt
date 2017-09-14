@@ -716,3 +716,4 @@ gieovie(?:\W?skincare)?
 hemptide
 nature\W?boost
 power\W?max\W?e?xtreme
+true\W?cbd\W?oil
