@@ -713,3 +713,4 @@ anaconda\W?xl
 purasia
 nerve\W?aid
 gieovie(?:\W?skincare)?
+hemptide
