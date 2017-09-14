@@ -711,3 +711,4 @@ muscle\W?force\W?e?xtreme
 alpha\W?complex(?:\W?e?xtreme)?
 anaconda\W?xl
 purasia
+nerve\W?aid
