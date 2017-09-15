@@ -353,7 +353,8 @@ class GlobalVars:
             "6375113",  # Bugs
             "4622463",  # angussidney
             "563532",   # Rob
-            "4050842"   # Thaillie
+            "4050842",  # Thaillie
+            "1915448"   # g00glen00b
         ]
     }
 
