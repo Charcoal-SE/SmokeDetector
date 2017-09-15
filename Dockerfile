@@ -1,20 +1,22 @@
 FROM ubuntu
-MAINTAINER CaffeineAddiction
 
-RUN apt update && \
-    apt install build-essential python2.7 python-dev git wget -y && \
-    wget https://bootstrap.pypa.io/get-pip.py && \
-    python2.7 get-pip.py && \
-    cd ~ && \
-    env GIT_SSL_NO_VERIFY=true git clone https://github.com/Charcoal-SE/SmokeDetector.git && \
-    cd SmokeDetector && \
-    git submodule init && \
-    git submodule update && \
-    pip install -r requirements.txt --upgrade
-
-RUN apt remove -y --purge build-essential python-dev wget && \
+RUN DEBIAN_FRONTEND=noninteractive && \
+    apt -y update && \
+    apt install -y build-essential \
+        python3 python3-dev python3-pip python3-venv git ca-certificates && \
+    adduser --disabled-password --force-badname SmokeDetector \
+        --gecos SmokeDetector && \
+    su - SmokeDetector sh -c '\
+        git clone https://github.com/Charcoal-SE/SmokeDetector.git && \
+        cd SmokeDetector && \
+        python3 -m venv venv && \
+        . ./venv/bin/activate && \
+        git submodule init && \
+        git submodule update && \
+        pip3 install -r user_requirements.txt --upgrade' && \
+    pip3 install -r ~SmokeDetector/SmokeDetector/requirements.txt --upgrade && \
+    apt autoremove -y --purge build-essential python3-dev && \
     apt clean && \
     rm -rf /root/* /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-
-CMD ["/bin/bash"]
+CMD ["su", "-", "SmokeDetector"]
