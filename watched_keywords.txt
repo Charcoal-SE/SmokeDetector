@@ -996,3 +996,4 @@
 1505465352	Glorfindel	ampledesigners\.com
 1505468357	tripleee	seocompanyprovider\.hatenablog\.com
 1505477479	tripleee	gamingtoolkit\.net
+1505489179	Glorfindel	1\W?844\W?235\W?0341
