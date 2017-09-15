@@ -114,7 +114,7 @@ GlobalVars.s = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                ")"
 GlobalVars.s_reverted = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                         "SmokeDetector started in [reverted mode](" + \
-                        GlobalVars.bot_repository + "/blob/master/RevertedMode.md) " \
+                        "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
                         "at [rev " + \
                         GlobalVars.commit_with_author + \
                         "](" + GlobalVars.bot_repository + "/commit/" + \
@@ -124,7 +124,7 @@ GlobalVars.s_reverted = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                         ")"
 GlobalVars.standby_message = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                              "SmokeDetector started in [standby mode](" + \
-                             GlobalVars.bot_repository + "/blob/master/StandbyMode.md) " + \
+                             "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " + \
                              "at [rev " +\
                              GlobalVars.commit_with_author +\
                              "](" + GlobalVars.bot_repository + "/commit/" +\
