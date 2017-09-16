@@ -184,7 +184,8 @@ class GlobalVars:
             "202619",   # John Militer
             "262693",   # suraj
             "11287",    # Martin Sleziak
-            "88588"     # NVZ
+            "88588",    # NVZ
+            "281674"   # paper1111
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
