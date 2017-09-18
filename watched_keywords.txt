@@ -1021,3 +1021,4 @@
 1505728397	Glorfindel	hv\Wsofttech
 1505728641	Glorfindel	deep\.gold
 1505730794	tripleee	navigatorsystem\.com
+1505733570	tripleee	classibooster\.com
