@@ -1017,3 +1017,4 @@
 1505719100	Glorfindel	reviewxprt\.com
 1505719617	Glorfindel	skateboard-guide\.com
 1505719731	tripleee	tollfree-help-number\.com
+1505728101	tripleee	"java\Wtraining\Win"
