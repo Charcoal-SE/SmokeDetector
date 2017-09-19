@@ -1035,3 +1035,4 @@
 1505819595	tripleee	citrusholidays\.co\.uk
 1505819716	Mithrandir	flukenetworks\.com
 1505820438	tripleee	loanfirm
+1505820678	tripleee	erección\W?total
