@@ -185,7 +185,8 @@ class GlobalVars:
             "262693",   # suraj
             "11287",    # Martin Sleziak
             "88588",    # NVZ
-            "281674"   # paper1111
+            "281674",   # paper1111
+            "279119",   # Tetsuya Yamamoto
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
