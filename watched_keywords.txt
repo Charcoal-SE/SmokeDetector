@@ -1042,3 +1042,4 @@
 1505894369	tripleee	emailloginsolution\.com
 1505894797	tripleee	varansoynakliyat\.com
 1505897558	Glorfindel	oncallbiz\.com
+1505898368	Glorfindel	appspicket\.com
