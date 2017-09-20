@@ -730,4 +730,4 @@ massive\W?testo
 sky\W?cbd\W?oil
 ultavive
 batch\Wrename\Wfiles\Wtool
-\bgclub\b
+gclub
