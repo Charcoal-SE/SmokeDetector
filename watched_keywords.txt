@@ -1050,3 +1050,4 @@
 1505906130	tripleee	^ajay kumar$
 1505906278	Glorfindel	resortsneardelhi\.co\.in
 1505906485	Glorfindel	elmanarh\.com
+1505911601	tripleee	bmtechnologies\.ae
