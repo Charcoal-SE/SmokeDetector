@@ -1048,3 +1048,4 @@
 1505905025	Glorfindel	cmattress\.com
 1505905999	Glorfindel	vindhykehri\.com
 1505906130	tripleee	^ajay kumar$
+1505906278	Glorfindel	resortsneardelhi\.co\.in
