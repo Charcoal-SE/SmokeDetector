@@ -187,6 +187,7 @@ class GlobalVars:
             "88588",    # NVZ
             "281674",   # paper1111
             "279119",   # Tetsuya Yamamoto
+            "307652",   # Ajay Brahmakshatriya
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
