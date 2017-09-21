@@ -731,3 +731,4 @@ sky\W?cbd\W?oil
 ultavive
 batch\Wrename\Wfiles\Wtool
 gclub
+hyprshred
