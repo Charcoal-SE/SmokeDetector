@@ -1059,3 +1059,4 @@
 1505992866	tripleee	spurtcommerce\.com
 1506018248	NobodyNada	delivr\.com
 1506018468	bwDraco	budgetvideo4biz
+1506060380	Ajay Brahmakshatriya	vcor
