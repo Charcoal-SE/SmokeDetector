@@ -1,15 +1,19 @@
 # -*- coding: utf-8 -*-
 # noinspection PyCompatibility
+
 import regex
-import phonenumbers
 from difflib import SequenceMatcher
+from urllib.parse import urlparse
+from itertools import chain
+from collections import Counter
+from datetime import datetime
+
 # noinspection PyPackageRequirements
 import tld
 # noinspection PyPackageRequirements
 from tld.utils import TldDomainNotFound
-from urllib.parse import urlparse
-from itertools import chain
-from collections import Counter
+import phonenumbers
+import dns.resolver
 
 from helpers import all_matches_unique, log
 from globalvars import GlobalVars
@@ -290,10 +294,14 @@ def keyword_link(s, site, *args):   # thanking keyword and a link in the same sh
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def bad_link_text(s, site, *args):   # suspicious text of a hyperlink
     s = regex.sub("</?strong>|</?em>", "", s)  # remove font tags
-    keywords = regex.compile(r"(?isu)^(buy|cheap) |live[ -]?stream|(^| )make (money|\$)|(^| )(porno?|(whole)?sale|"
-                             r"coins|replica|luxury|essays?|in \L<city>)($| )|(^| )\L<city>.*(service|escort|"
-                             r"call girl)|(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|"
-                             r"repair|recovery)|\b(writing service|essay (writing|tips))", city=FindSpam.city_list)
+    keywords = regex.compile(
+        r"(?isu)"
+        r"\b(buy|cheap) |live[ -]?stream|"
+        r"\bmake (money|\$)|"
+        r"\b(porno?|(whole)?sale|coins|replica|luxury|essays?|in \L<city>)\b"
+        r"\b\L<city>(?:\b.{1.20}\b)?(service|escort|call girls?)|"
+        r"(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery)|"
+        r"\b(writing service|essay (writing|tips))", city=FindSpam.city_list)
     links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
     business = regex.compile(
         r"(?i)(^| )(airlines?|apple|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
@@ -330,6 +338,31 @@ def bad_pattern_in_url(s, site, *args):
         return False, ""
 
 
+def bad_ns_for_url_domain(s, site, *args):
+    for domain in set([get_domain(link, full=True) for link in post_links(s)]):
+        if not tld.get_tld(domain, fix_protocol=True, fail_silently=True):
+            log('debug', '{0} has no valid tld; skipping'.format(domain))
+            continue
+        try:
+            starttime = datetime.now()
+            ns = dns.resolver.query(domain, 'ns')
+        except dns.exception.DNSException as exc:
+            if str(exc).startswith('None of DNS query names exist:'):
+                log('debug', 'domain {0} not found; skipping'.format(domain))
+                continue
+            endtime = datetime.now()
+            log('warning', 'DNS error {0} (duration: {1})'.format(
+                exc, endtime - starttime))
+            continue
+        endtime = datetime.now()
+        log('info', 'NS query duration {0}'.format(endtime - starttime))
+        nameservers = [server.target.to_text() for server in ns]
+        if any([ns.endswith('.namecheaphosting.com.') for ns in nameservers]):
+            return True, '{domain} NS suspicious {ns}'.format(
+                domain=domain, ns=','.join(nameservers))
+    return False, ""
+
+
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def is_offensive_post(s, site, *args):
     if s is None or len(s) == 0:
@@ -338,8 +371,8 @@ def is_offensive_post(s, site, *args):
     offensive = regex.compile(r"(?is)\b(ur mom|(yo)?u suck|8={3,}D|nigg[aeu][rh]?|(ass ?|a|a-)hole|fag(got)?|"
                               r"daf[au][qk]|(?<!brain)(mother|mutha)?fuc?k+(a|ing?|e?(r|d)| off+| y(ou|e)(rself)?|"
                               r" u+|tard)?|shit(t?er|head)|you scum|dickhead|pedo|whore|cunt|cocksucker|ejaculated?|"
-                              r"jerk off|cummies|butthurt|(private|pussy) show|lesbo|bitches|(eat|suck)\b.{0,20}\b"
-                              r"dick|dee[sz]e? nut[sz])s?\b")
+                              r"jerk off|cummies|butthurt|queef|(private|pussy) show|lesbo|"
+                              r"bitche?s?|(eat|suck)\b.{0,20}\b dick|dee[sz]e? nut[sz])s?\b")
     matches = offensive.finditer(s)
     len_of_match = 0
     text_matched = []
@@ -390,6 +423,24 @@ def character_utilization_ratio(s, site, *args):
         return False, ""
 
 
+def post_links(post):
+    """
+    Helper function to extract URLs from a piece of HTML.
+    """
+    # Fix stupid spammer tricks
+    for p in COMMON_MALFORMED_PROTOCOLS:
+        post = post.replace(p[0], p[1])
+
+    links = []
+    for l in regex.findall(URL_REGEX, post):
+        if l[-1].isalnum():
+            links.append(l)
+        else:
+            links.append(l[:-1])
+
+    return set(links)
+
+
 # noinspection PyMissingTypeHints
 def perform_similarity_checks(post, name):
     """
@@ -398,41 +449,25 @@ def perform_similarity_checks(post, name):
     :param name: Username to compare against
     :return: Float ratio of similarity
     """
-    # Fix stupid spammer tricks
-    for p in COMMON_MALFORMED_PROTOCOLS:
-        post = post.replace(p[0], p[1])
-    # Find links in post
-    found_links = regex.findall(URL_REGEX, post)
-
-    links = []
-    for l in found_links:
-        if l[-1].isalnum():
-            links.append(l)
-        else:
-            links.append(l[:-1])
-
-    links = list(set(links))
     t1 = 0
     t2 = 0
     t3 = 0
     t4 = 0
 
-    if links:
-        for link in links:
-            domain = get_domain(link)
-            # Straight comparison
-            t1 = similar_ratio(domain, name)
-            # Strip all spaces check
-            t2 = similar_ratio(domain, name.replace(" ", ""))
-            # Strip all hypens
-            t3 = similar_ratio(domain.replace("-", ""), name.replace("-", ""))
-            # Strip both hypens and spaces
-            t4 = similar_ratio(domain.replace("-", "").replace(" ", ""), name.replace("-", "").replace(" ", ""))
-            # Have we already exceeded the threshold? End now if so, otherwise, check the next link
-            if max(t1, t2, t3, t4) >= SIMILAR_THRESHOLD:
-                return max(t1, t2, t3, t4)
-    else:
-        return 0
+    for link in post_links(post):
+        domain = get_domain(link)
+        # Straight comparison
+        t1 = similar_ratio(domain, name)
+        # Strip all spaces check
+        t2 = similar_ratio(domain, name.replace(" ", ""))
+        # Strip all hypens
+        t3 = similar_ratio(domain.replace("-", ""), name.replace("-", ""))
+        # Strip both hypens and spaces
+        t4 = similar_ratio(domain.replace("-", "").replace(" ", ""), name.replace("-", "").replace(" ", ""))
+        # Have we already exceeded the threshold? End now if so, otherwise, check the next link
+        if max(t1, t2, t3, t4) >= SIMILAR_THRESHOLD:
+            break
+
     return max(t1, t2, t3, t4)
 
 
@@ -442,24 +477,39 @@ def similar_ratio(a, b):
 
 
 # noinspection PyMissingTypeHints
-def get_domain(s):
+def get_domain(s, full=False):
+    """
+    Extract the domain name; with full=True, keep the TLD tacked on.
+    """
     try:
         extract = tld.get_tld(s, fix_protocol=True, as_object=True, )
-        domain = extract.domain
+        if full:
+            domain = str(extract)
+        else:
+            domain = extract.domain
     except TldDomainNotFound as e:
         invalid_tld = RE_COMPILE.match(str(e)).group(1)
         # Attempt to replace the invalid protocol
         s1 = s.replace(invalid_tld, 'http', 1)
         try:
             extract = tld.get_tld(s1, fix_protocol=True, as_object=True, )
-            domain = extract.domain
+            if full:
+                domain = str(extract)
+            else:
+                domain = extract.domain
         except TldDomainNotFound:
             # Assume bad TLD and try one last fall back, just strip the trailing TLD and leading subdomain
             parsed_uri = urlparse(s)
             if len(parsed_uri.path.split(".")) >= 3:
-                domain = parsed_uri.path.split(".")[1]
+                if full:
+                    domain = '.'.join(parsed_uri.path.split(".")[1:])
+                else:
+                    domain = parsed_uri.path.split(".")[1]
             else:
-                domain = parsed_uri.path.split(".")[0]
+                if full:
+                    domain = parsed_uri.path
+                else:
+                    domain = parsed_uri.path.split(".")[0]
     return domain
 
 
@@ -519,13 +569,13 @@ class FindSpam:
         u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",
         "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
         "abam26", "watch2live", "cogniq", "(serum|lift) ?eye", "tophealth", "poker[ -]?online",
-        "caralluma", "male\\Wperf(?!ormer)", "anti[- ]?aging", "lumisse", "(ultra|berry|body)[ -]?ketone",
+        "caralluma", r"male\Wperf(?!ormer)", "anti[- ]?aging", "lumisse", "(ultra|berry|body)[ -]?ketone",
         "(cogni|oro)[ -]?(lift|plex)", "diabazole", "forskolin", "tonaderm", "luma(genex|lift)",
         "(skin|face|eye)[- ]?(serum|therapy|hydration|tip|renewal|gel|lotion|cream)",
         "(skin|eye)[- ]?lift", "(skin|herbal) ?care", "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim",
         "aimee[ -]?cream", "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
-        "contact (me|us)\\W*<a ", "follicure", "kidney[ -]?bean[ -]?extract", "ecoflex",
-        "\\brsgold", "bellavei", "goji ?xtreme", "lumagenex", "ajkobeshoes", "kreatine",
+        r"contact (me|us)\W*<a ", "follicure", "kidney[ -]?bean[ -]?extract", "ecoflex",
+        r"\brsgold", "bellavei", "goji ?xtreme", "lumagenex", "ajkobeshoes", "kreatine",
         "packers.{0,15}(movers|logistic).{0,25}</a>", "guaranteedprofitinvestment",
         "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)",
         "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning",
@@ -536,7 +586,8 @@ class FindSpam:
         u"Ｃ[Ｏ|0]Ｍ", "ecoflex", "no2factor", "no2blast", "sunergetic", "capilux", "sante ?avis",
         "enduros", "dianabol", r"ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex", "revimax",
         "celluria", "viatropin", "(meg|test)adrox", "nordic ?loan ?firm", r"safflower\Woil",
-        "(essay|resume|article|dissertation|thesis) ?writing ?service", "satta ?matka", "b.?o.?j.?i.?t.?e.?r"
+        "(essay|resume|article|dissertation|thesis) ?writing ?service", "satta ?matka", "b.?o.?j.?i.?t.?e.?r",
+        r"rams[ey]+\W?dave"
     ]
 
     # Patterns: the top four lines are the most straightforward, matching any site with this string in domain name
@@ -790,7 +841,14 @@ class FindSpam:
         {'method': bad_pattern_in_url, 'all': True, 'sites': [],
          'reason': 'bad pattern in URL {}',
          'title': False, 'body': True, 'username': False,
-         'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
+         'stripcodeblocks': True, 'body_summary': True,
+         'max_rep': 1, 'max_score': 0},
+        # Link has NS hosted by bad guy
+        {'method': bad_ns_for_url_domain, 'all': True, 'sites': [],
+         'reason': 'bad NS for domain in {}',
+         'title': True, 'body': True, 'username': False,
+         'stripcodeblocks': True, 'body_summary': True,
+         'max_rep': 1, 'max_score': 0},
         # Country-name domains, travel and expats sites are exempt
         {'regex': r"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|"
                   r"spain|sweden)\w{0,4}\.(com|net)", 'all': True,
@@ -802,7 +860,7 @@ class FindSpam:
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0, 'questions': False},
         # Suspicious health-related websites, health sites are exempt
-        {'regex': r"(?i)(bodybuilding|workout|fitness|diet|perfecthealth|muscle|nutrition|"
+        {'regex': r"(?i)(bodybuilding|workout|fitness(?!e)|diet|perfecthealth|muscle|nutrition|"
                   r"prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com",
                    "skeptics.stackexchange.com", "bicycles.stackexchange.com"],

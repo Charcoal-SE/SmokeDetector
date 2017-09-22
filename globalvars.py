@@ -4,6 +4,7 @@ import os
 from datetime import datetime
 from chatexchange_extension import Client
 from html.parser import HTMLParser
+from html import unescape
 from hashlib import md5
 from configparser import NoOptionError, RawConfigParser
 from helpers import environ_or_none, log
@@ -90,6 +91,7 @@ class GlobalVars:
     non_tavern_sites = ["stackoverflow.com"]
 
     parser = HTMLParser()
+    parser.unescape = unescape
     wrap = Client("stackexchange.com")
     wrapm = Client("meta.stackexchange.com")
     wrapso = Client("stackoverflow.com")
@@ -180,7 +182,12 @@ class GlobalVars:
             "69330",    # Sconibulus
             "164187",   # Okx
             "202619",   # John Militer
-            "262693"    # suraj
+            "262693",   # suraj
+            "11287",    # Martin Sleziak
+            "88588",    # NVZ
+            "281674",   # paper1111
+            "279119",   # Tetsuya Yamamoto
+            "307652",   # Ajay Brahmakshatriya
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
@@ -255,7 +262,8 @@ class GlobalVars:
             "158829",   # Thomas Ward
             "294691",   # Mithrandir
             "203553",   # CalvT
-            "289971"    # Hyper Neutrino
+            "289971",   # Hyper Neutrino
+            "346854"    # DonQuiKong
         ],
         socvr_room_id: [
             "1849664",  # Undo
@@ -330,7 +338,10 @@ class GlobalVars:
             "4805174",  # kayess
             "2370483",  # Machavity
             "1873567",  # CalvT
-            "4826457"  # suraj
+            "4826457",  # suraj
+            "8242698",  # user0042
+            "3773011",  # Makyen
+            "2858773"  # Ajay Brahmakshatriya
         ],
         '111347': [     # SOBotics
             "3160466",  # ArtOfCode
@@ -345,7 +356,9 @@ class GlobalVars:
             "4687348",  # FelixSFD
             "6375113",  # Bugs
             "4622463",  # angussidney
-            "158742"    # Rob
+            "563532",   # Rob
+            "4050842",  # Thaillie
+            "1915448"   # g00glen00b
         ]
     }
 

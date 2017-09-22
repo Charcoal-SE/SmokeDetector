@@ -114,7 +114,7 @@ GlobalVars.s = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                ")"
 GlobalVars.s_reverted = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                         "SmokeDetector started in [reverted mode](" + \
-                        GlobalVars.bot_repository + "/blob/master/RevertedMode.md) " \
+                        "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
                         "at [rev " + \
                         GlobalVars.commit_with_author + \
                         "](" + GlobalVars.bot_repository + "/commit/" + \
@@ -124,7 +124,7 @@ GlobalVars.s_reverted = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                         ")"
 GlobalVars.standby_message = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                              "SmokeDetector started in [standby mode](" + \
-                             GlobalVars.bot_repository + "/blob/master/StandbyMode.md) " + \
+                             "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " + \
                              "at [rev " +\
                              GlobalVars.commit_with_author +\
                              "](" + GlobalVars.bot_repository + "/commit/" +\
@@ -170,21 +170,6 @@ GlobalVars.specialrooms = [
         "sites": ["english.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("95"),
         "unwantedReasons": []
-    },
-    {
-        "sites": ["askubuntu.com"],
-        "room": GlobalVars.wrap.get_room("201"),
-        "unwantedReasons": [
-            "All-caps title",   # these should be in uppercased form
-            "All-caps body",
-            "All-caps answer",
-            "Phone number detected",
-            "Repeating characters in title",
-            "Repeating characters in body",
-            "Repeating characters in answer",
-            "Link at end of answer"
-        ],
-        "watcher": True
     },
     {
         "sites": ["stackoverflow.com"],

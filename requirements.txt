@@ -14,3 +14,4 @@ regex
 termcolor
 sh
 typing
+dnspython

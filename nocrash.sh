@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# This script is deprecated, so give the warning.
 echo "WARNING: The 'nocrash.sh' script is deprecated in favor of 'nocrash.py' instead."
 echo ""
 
