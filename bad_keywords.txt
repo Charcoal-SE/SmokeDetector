@@ -740,3 +740,4 @@ extagen
 zmass
 thrive\W?max
 max\W?rise
+\Wphuk(ing)?\W
