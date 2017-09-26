@@ -746,3 +746,4 @@ luna\W?illuminate
 5\W?hour\W?force
 votofel
 tone\W?360
+super\W?trim\W?500
