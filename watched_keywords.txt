@@ -1096,3 +1096,4 @@
 1506505048	tripleee	better\W?bust
 1506508121	tripleee	recruitmentresult\.com
 1506509191	paper1111	powerjackpowerinverter.(?:de|co\.uk)
+1506512254	tripleee	repairz\.ie
