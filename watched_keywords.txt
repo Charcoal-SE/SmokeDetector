@@ -1094,3 +1094,4 @@
 1506496250	tripleee	bomeans\.com
 1506498126	tripleee	cheappairmax\.com
 1506502507	tripleee	eva\W?daily
+1506503383	tripleee	offersdealscoupons\.store
