@@ -1098,3 +1098,4 @@
 1506509191	paper1111	powerjackpowerinverter.(?:de|co\.uk)
 1506512254	tripleee	repairz\.ie
 1506516146	tripleee	quicken-phone-support\.com
+1506524527	Mithrandir	uchi\.ru
