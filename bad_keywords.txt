@@ -750,3 +750,4 @@ super\W?trim\W?500
 silqueskin
 serafina\W?deluxe
 vigostren
+alpha\W?x\W?booster
