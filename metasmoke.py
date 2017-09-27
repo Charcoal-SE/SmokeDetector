@@ -116,7 +116,7 @@ class Metasmoke:
                                                                'reputation': post_data.owner_rep,
                                                                'link': post_data.owner_url},
                                                      'site': post_data.site,
-                                                     'IsAnswer': (post_data.post_type == "answer"),
+                                                     'is_answer': (post_data.post_type == "answer"),
                                                      'score': post_data.score, 'link': post_data.post_url,
                                                      'question_id': post_data.post_id,
                                                      'up_vote_count': post_data.up_vote_count,
