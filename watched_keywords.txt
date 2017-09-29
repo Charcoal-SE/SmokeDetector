@@ -1116,3 +1116,4 @@
 1506666164	Glorfindel	techlightnews\.com
 1506669737	Glorfindel	buildyourorg\.com
 1506671869	tripleee	reviewfantasy\.com
+1506687270	Glorfindel	speedyfiles\.net
