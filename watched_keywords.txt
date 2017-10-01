@@ -1127,3 +1127,4 @@
 1506794008	Glorfindel	zhanhestudio\.com
 1506795168	Glorfindel	playgamesstore\.com
 1506861464	Glorfindel	staffordglobal\.org
+1506864747	Glorfindel	www\.ju\.edu\.jo
