@@ -1136,3 +1136,4 @@
 1506945240	Mithrandir	hack(er)?.*(text|call|contact)
 1506959194	Owen Hines	boldcraze\.com
 1506961455	Glorfindel	bandbniagara.com
+1506963780	Owen Hines	mr-android12\.blogspot\.com\.eg
