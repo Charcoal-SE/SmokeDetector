@@ -1129,3 +1129,4 @@
 1506861464	Glorfindel	staffordglobal\.org
 1506864747	Glorfindel	www\.ju\.edu\.jo
 1506892558	Owen Hines	el-watnya\.com
+1506920331	tripleee	elfex-linker\.com
