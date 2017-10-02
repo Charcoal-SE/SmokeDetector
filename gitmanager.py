@@ -50,16 +50,16 @@ class GitManager:
 
         if blacklist == "website":
             blacklist_file_name = "blacklisted_websites.txt"
-            ms_search_option = "&body_is_regex=1&body="
+            ms_search_option = "&body="
         elif blacklist == "keyword":
             blacklist_file_name = "bad_keywords.txt"
-            ms_search_option = "&body_is_regex=1&body="
+            ms_search_option = "&body="
         elif blacklist == "username":
             blacklist_file_name = "blacklisted_usernames.txt"
-            ms_search_option = "&username_is_regex=1&username="
+            ms_search_option = "&username="
         elif blacklist == "watch_keyword":
             blacklist_file_name = "watched_keywords.txt"
-            ms_search_option = "&body_is_regex=1&body="
+            ms_search_option = "&body="
         else:
             # Just checking all bases, but blacklist_file_name *might* have empty value
             # if we don't address it here.
