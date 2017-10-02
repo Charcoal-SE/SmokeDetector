@@ -727,6 +727,10 @@ class FindSpam:
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': r'(?i)[\w\s]{0,20}help(?: a)?(?: weak)? postgraduate student(?: to)? write(?: a)? book\??',
          'all': True, 'sites': [], 'reason': 'bad keyword in {}', 'title': True, 'body': False, 'username': False,
+         'stripcodeblocks': False, 'body_summary': False, 'max_rep': 20, 'max_score': 0},
+        # Tech support phone number scam
+        {'regex': r'support\Wphone\Wnumber',
+         'all': True, 'sites': [], 'reason': 'bad keyword in {}', 'title': True, 'body': False, 'username': False,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 20, 'max_score': 2},
         # Eltima: separated into its own method so we can constrain length
         {'method': has_eltima, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': False, 'body': True,
