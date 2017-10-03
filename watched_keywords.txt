@@ -1145,3 +1145,4 @@
 1507014788	tripleee	virplexin
 1507031229	tripleee	xtraperf
 1507049989	Glorfindel	graphicdesigninstitutedelhi\.com
+1507050128	Glorfindel	seothor\.blogspot\.com
