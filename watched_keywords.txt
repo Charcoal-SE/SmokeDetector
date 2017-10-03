@@ -1140,3 +1140,4 @@
 1506971135	Glorfindel	unlimitedloottricks\.com
 1507005373	tripleee	protazen
 1507006018	tripleee	no\W?force\W?xl
+1507006266	tripleee	victorvijay\.com
