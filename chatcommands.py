@@ -1102,9 +1102,12 @@ def command_version(*args, **kwargs):
     Returns the current version of the application
     :return: A string
     """
-    return Response(command_status=True, message='[{commit_name}]({repository}/commit/{commit_code})'.format(
-        commit_name=GlobalVars.commit_with_author, commit_code=GlobalVars.commit['id'],
-        repository=GlobalVars.bot_repository))
+    return Response(command_status=True,
+        message='{id} [{commit_name}]({repository}/commit/{commit_code})'.format(
+            id=GlobalVars.location,
+            commit_name=GlobalVars.commit_with_author,
+            commit_code=GlobalVars.commit['id'],
+            repository=GlobalVars.bot_repository))
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
