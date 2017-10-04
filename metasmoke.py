@@ -76,7 +76,7 @@ class Metasmoke:
         elif GlobalVars.metasmoke_last_ping_time < (datetime.now() - timedelta(seconds=120)):
             errlog.write("\nWARNING: Last metasmoke ping with a response was over 120 seconds ago, "
                          "forcing SmokeDetector restart to reset all sockets.\n%s UTC\n" % now)
-            os._exit(10)
+            # os._exit(10)
         else:
             pass  # Do nothing
 
