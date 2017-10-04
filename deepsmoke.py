@@ -24,9 +24,8 @@ def check_deepsmoke(s, site, *args):
     except KeyError as err:
         logging.warn('Force False result from Deepsmoke, error {0!r}'.format(
             err))
-        return False, 'error {0!r}'.format(err)
+        return False, {'error': err}
     endtime = datetime.now()
+    result['duration'] = str(endtime - starttime)
     logging.debug('Deepsmoke result {0} ({1})'.format(resp, result))
-    details = 'DeepSmoke response was {0!r} (duration: {1})'.format(
-        result, endtime - starttime)
-    return resp, details
+    return resp, result
