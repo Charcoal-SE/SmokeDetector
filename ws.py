@@ -251,6 +251,11 @@ GlobalVars.specialrooms = [
         "sites": ["interpersonal.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("61165"),
         "unwantedReasons": []
+    },
+    {
+        "sites": ["askubuntu.com"],
+        "room": GlobalVars.wrap.get_room("3877"),
+        "unwantedReasons": []
     }
 ]
 
