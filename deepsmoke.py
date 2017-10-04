@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 # noinspection PyCompatibility
 
+import logging
+
 import requests
 from datetime import datetime
 
@@ -20,8 +22,11 @@ def check_deepsmoke(s, site, *args):
         result = req.json()
         resp = result['spam']
     except KeyError as err:
+        logging.warn('Force False result from Deepsmoke, error {0!r}'.format(
+            err))
         return False, 'error {0!r}'.format(err)
     endtime = datetime.now()
-    details = 'DeepSmoke response was {0} (duration: {1})'.format(
-        resp, endtime - starttime)
-    return (resp == 'Spam'), details
+    logging.debug('Deepsmoke result {0} ({1})'.format(resp, result))
+    details = 'DeepSmoke response was {0!r} (duration: {1})'.format(
+        result, endtime - starttime)
+    return resp, details
