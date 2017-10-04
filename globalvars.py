@@ -188,7 +188,8 @@ class GlobalVars:
             "281674",   # paper1111
             "279119",   # Tetsuya Yamamoto
             "307652",   # Ajay Brahmakshatriya
-            "238145"   # Owen Hines
+            "238145",   # Owen Hines
+            "268731"   # Sagar V
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
