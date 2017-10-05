@@ -1165,3 +1165,4 @@
 1507187535	tripleee	test\W?origen
 1507194823	tripleee	(1\W*)?888\W*473\W*8821
 1507202733	tripleee	xtext
+1507203028	tripleee	kateit\.in
