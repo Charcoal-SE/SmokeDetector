@@ -1143,7 +1143,6 @@
 1507006266	tripleee	victorvijay\.com
 1507013586	Glorfindel	sportsinteriors\.com
 1507014788	tripleee	virplexin
-1507031229	tripleee	xtraperf
 1507049678	Owen Hines	techquery\.org
 1507049989	Glorfindel	graphicdesigninstitutedelhi\.com
 1507050128	Glorfindel	seothor\.blogspot\.com
