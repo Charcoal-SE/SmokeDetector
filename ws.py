@@ -255,7 +255,8 @@ GlobalVars.specialrooms = [
     {
         "sites": ["askubuntu.com"],
         "room": GlobalVars.wrap.get_room("3877"),
-        "unwantedReasons": []
+        "unwantedReasons": [],
+        "watcher": True
     }
 ]
 
