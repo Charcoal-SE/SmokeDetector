@@ -1169,3 +1169,4 @@
 1507260859	tripleee	dtube\.vide
 1507267789	tripleee	gkquestion\.in
 1507287272	tripleee	winonasoap
+1507289031	tripleee	evno.in
