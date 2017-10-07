@@ -505,7 +505,6 @@
 1500811942	Mithrandir	ihundespelltemple@gmail\.com
 1500812468	Mithrandir	thietbigiaothongdaian
 1500813034	Mithrandir	techcheater
-1500816322	Mithrandir	Zarina
 1500881802	Glorfindel	luminaanalytics\.com
 1500883579	Mithrandir	teledc\.com
 1500885814	Glorfindel	answertomyquestion\.com
@@ -728,7 +727,6 @@
 1503465164	tripleee	seositecheckup\.com
 1503465284	tripleee	atozsupplement\.com
 1503465384	tripleee	ocpay\.it
-1503465426	tripleee	allsupplement4u\.com
 1503465537	tripleee	hicheng\.net
 1503468304	tripleee	khalilstarsports\.com
 1503471369	Mithrandir	butyjordansklep\.pl
@@ -997,7 +995,6 @@
 1505584590	Thomas Ward	printerdriverforwindows\.com
 1505603516	J F	free\W?paid\W?content
 1505646864	Mithrandir	Ultra\W?Turmeric
-1505646957	Mithrandir	mumybear\.com
 1505658326	Mithrandir	raconstructions\.us
 1505663824	Glorfindel	top4webhosting\.com
 1505706795	tripleee	regiebaquero\.tk
@@ -1036,7 +1033,6 @@
 1505902265	tripleee	sornavallitech\.com
 1505905025	Glorfindel	cmattress\.com
 1505905999	Glorfindel	vindhykehri\.com
-1505906130	tripleee	^ajay kumar$
 1505906278	Glorfindel	resortsneardelhi\.co\.in
 1505906485	Glorfindel	elmanarh\.com
 1505911601	tripleee	bmtechnologies\.ae
@@ -1133,7 +1129,7 @@
 1506924670	tripleee	1?469\W*844\W*0536
 1506935371	Glorfindel	pbctimes\.com
 1506944134	Mithrandir	gamestore\.live
-1506945240	Mithrandir	hack(er)?.*(text|call|contact)
+1506945240	Mithrandir	hack(er)?.{0,50}\b(text|call|contact)
 1506959194	Owen Hines	boldcraze\.com
 1506961455	Glorfindel	bandbniagara.com
 1506963780	Owen Hines	mr-android12\.blogspot\.com\.eg
@@ -1143,7 +1139,6 @@
 1507006266	tripleee	victorvijay\.com
 1507013586	Glorfindel	sportsinteriors\.com
 1507014788	tripleee	virplexin
-1507031229	tripleee	xtraperf
 1507049678	Owen Hines	techquery\.org
 1507049989	Glorfindel	graphicdesigninstitutedelhi\.com
 1507050128	Glorfindel	seothor\.blogspot\.com
@@ -1159,3 +1154,20 @@
 1507117125	tripleee	aolemail-support\.com
 1507118154	Glorfindel	thehissecretobsessionreview\.com
 1507121084	tripleee	roots\W?revive
+1507150320	Owen Hines	themmaexperts\.com
+1507177275	paper1111	ptnasa\.net
+1507182423	tripleee	cognifen
+1507182836	tripleee	bible\.com
+1507182864	tripleee	bible\.cc
+1507183640	tripleee	indiaeve\.com
+1507187387	tripleee	(1\W*)?530\W*466\W?8399
+1507187535	tripleee	test\W?origen
+1507194823	tripleee	(1\W*)?888\W*473\W*8821
+1507202733	tripleee	xtext
+1507203028	tripleee	kateit\.in
+1507204474	tripleee	catalogplayer\.com
+1507260859	tripleee	dtube\.vide
+1507267789	tripleee	gkquestion\.in
+1507287272	tripleee	winonasoap
+1507289031	tripleee	evno.in
+1507335477	Owen Hines	quickbookssupport\.company
