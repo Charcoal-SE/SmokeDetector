@@ -3,6 +3,7 @@ import sys
 from threading import Thread
 from findspam import FindSpam
 import datahandling
+from chatcommunicate import tell_rooms_with
 from globalvars import GlobalVars
 from datetime import datetime
 import parsing
@@ -150,7 +151,7 @@ def handle_spam(post, reasons, why):
                 msg_to_send = chq_msg_pings_ms if len(chq_msg_pings_ms) <= 500 else chq_msg_pings \
                     if len(chq_msg_pings) <= 500 else chq_msg[0:500]
                 try:
-                    GlobalVars.charcoal_hq.send_message(msg_to_send)
+                    tell_rooms_with("debug", msg_to_send)
                 except AttributeError:  # In our Test Suite
                     pass
 

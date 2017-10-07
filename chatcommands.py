@@ -1,5 +1,6 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
+from chatcommunicate import command, message, tell_rooms
 from globalvars import GlobalVars
 from findspam import FindSpam
 # noinspection PyUnresolvedReferences
@@ -21,7 +22,7 @@ import os
 import time
 # noinspection PyCompatibility
 import regex
-from helpers import Response, only_blacklists_changed
+from helpers import only_blacklists_changed
 from classes import Post
 
 # TODO: pull out code block to get user_id, chat_site, room_id into function
@@ -29,32 +30,6 @@ from classes import Post
 # TODO: Do we need uid == -2 check?  Turn into "is_user_valid" check
 # TODO: Consistant return structure
 #   if return...else return vs if return...return
-
-
-# noinspection PyMissingTypeHints
-def check_permissions(function_):
-    # noinspection PyMissingTypeHints
-    def run_command(ev_room, ev_user_id, wrap2, *args, **kwargs):
-        if is_privileged(ev_room, ev_user_id, wrap2):
-            kwargs['ev_room'] = ev_room
-            kwargs['ev_user_id'] = ev_user_id
-            kwargs['wrap2'] = wrap2
-            return function_(*args, **kwargs)
-        else:
-            return Response(command_status=False,
-                            message=GlobalVars.not_privileged_warning)
-
-    return run_command
-
-
-# Functions go before the final dictionaries of command to function mappings
-def post_message_in_room(room_id_str, msg, length_check=True):
-    if room_id_str == GlobalVars.charcoal_room_id:
-        GlobalVars.charcoal_hq.send_message(msg, length_check)
-    elif room_id_str == GlobalVars.meta_tavern_room_id:
-        GlobalVars.tavern_on_the_meta.send_message(msg, length_check)
-    elif room_id_str == GlobalVars.socvr_room_id:
-        GlobalVars.socvr.send_message(msg, length_check)
 
 
 # noinspection PyMissingTypeHints
@@ -86,157 +61,120 @@ def send_metasmoke_feedback(post_url, second_part_lower, ev_user_name, ev_user_i
     t_metasmoke.start()
 
 
-# noinspection PyMissingTypeHints
-def single_random_user(ev_room):
-    """
-    Returns a single user name from users in a room
-    :param ev_room: Room to select users from
-    :return: A single user tuple
-    """
-    return random.choice(GlobalVars.users_chatting[ev_room])
-
-
 #
 #
 # System command functions below here
-# Each of these should take the *args and **kwargs parameters. This allows us to create functions that
-# don't accept any parameters but still use the `command_dict` mappings
 
 
-@check_permissions
-def command_approve(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
-    if is_code_privileged(ev_room, ev_user_id, wrap2):
-        if len(message_parts) >= 2:
-            pr_num = message_parts[1]
-            resp = requests.post('{}/github/pr_approve/{}'.format(GlobalVars.metasmoke_host, pr_num))
-            if resp.status_code == 200:
-                return Response(command_status=True, message='Posted approval comment. PR will be merged automatically '
-                                'if it\'s a blacklist PR.')
-            else:
-                return Response(command_status=False, message='Forwarding request to metasmoke returned HTTP {}. '
-                                'Check status manually.'.format(resp.status_code))
+@command(int, whole_msg=True, privileged=True)
+def approve(msg, pr_num):
+    if is_code_privileged(msg.room, msg.owner.id, msg._client):
+        resp = requests.post('{}/github/pr_approve/{}'.format(GlobalVars.metasmoke_host, pr_num))
+        
+        if resp.status_code == 200:
+            return "Posted approval comment. PR will be merged automatically if it's a blacklist PR."
         else:
-            return Response(command_status=False, message='Missing PR ID. Usage: !!/approve <id>')
+            return "Forwarding request to metasmoke returned HTTP {}. Check status manually.".format(resp.status_code))
     else:
-        return Response(command_status=False, message='You don\'t have permission to do that.')
+        return "You don't have permission to do that."
 
 
 # --- Blacklist Functions --- #
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-@check_permissions
-def command_add_blacklist_user(message_parts, content_lower, message_url, ev_room, ev_user_id, wrap2, *args, **kwargs):
+# noinspection PyIncorrectDocstring,PyMissingTypeHints
+@command(str, whole_msg=True, privileged=True)
+def addblu(msg, user):
     """
-    Adds a user to the site blacklist
-    :param wrap2:
-    :param ev_user_id:
-    :param ev_room:
-    :param message_url:
-    :param content_lower:
-    :param message_parts:
-    :param kwargs: No additional arguments expected
+    Adds a user to site whitelist
+    :param msg: ChatExchange message
+    :param user:
     :return: A string
     """
-    quiet_action = any([part.endswith('-') for part in message_parts])
-    uid, val = get_user_from_list_command(content_lower)
+    uid, val = get_user_from_list_command(user)
+
     if int(uid) > -1 and val != "":
-        add_blacklisted_user((uid, val), message_url, "")
-        return Response(command_status=True, message=None) if quiet_action \
-            else Response(command_status=True, message="User blacklisted (`{}` on `{}`).".format(uid, val))
+        add_blacklisted_user((uid, val), msg.url, "")
+        return "User blacklisted (`{}` on `{}`).".format(uid, val)
     elif int(uid) == -2:
-        return Response(command_status=True, message="Error: {}".format(val))
+        return "Error: {}".format(val)
     else:
-        return Response(command_status=False,
-                        message="Invalid format. Valid format: `!!/addblu profileurl` "
-                                "*or* `!!/addblu userid sitename`.")
+        return "Invalid format. Valid format: `!!/addblu profileurl` "
+                                        "*or* `!!/addblu userid sitename`."
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
-def command_check_blacklist(content_lower, *args, **kwargs):
+# noinspection PyIncorrectDocstring,PyMissingTypeHints
+@command(str)
+def isblu(user):
     """
-    Checks if a user is blacklisted
-    :param content_lower:
-    :param kwargs: No additional arguments expected
+    Check if a user is blacklisted
+    :param user:
     :return: A string
     """
-    uid, val = get_user_from_list_command(content_lower)
+
+    uid, val = get_user_from_list_command(user)
+
     if int(uid) > -1 and val != "":
         if is_blacklisted_user((uid, val)):
-            return Response(command_status=True, message="User is blacklisted (`{}` on `{}`).".format(uid, val))
+            return "User is blacklisted (`{}` on `{}`).".format(uid, val)
         else:
-            return Response(command_status=True, message="User is not blacklisted (`{}` on `{}`).".format(uid, val))
+            return "User is not blacklisted (`{}` on `{}`).".format(uid, val)
     elif int(uid) == -2:
-        return Response(command_status=True, message="Error: {}".format(val))
+        return "Error: {}".format(val)
     else:
-        return Response(command_status=False,
-                        message="Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`.")
+        return "Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`."
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
-@check_permissions
-def command_remove_blacklist_user(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
+@command(str, privileged=True)
+def rmblu(user):
     """
     Removes user from site blacklist
-    :param wrap2:
-    :param ev_user_id:
-    :param ev_room:
-    :param content_lower:
-    :param message_parts:
-    :param kwargs: No additional arguments expected
+    :param user:
     :return: A string
     """
-    quiet_action = any([part.endswith('-') for part in message_parts])
-    uid, val = get_user_from_list_command(content_lower)
+    uid, val = get_user_from_list_command(user)
+
     if int(uid) > -1 and val != "":
         if remove_blacklisted_user((uid, val)):
-            return Response(command_status=True, message=None) if quiet_action \
-                else Response(command_status=True,
-                              message="User removed from blacklist (`{}` on `{}`).".format(uid, val))
+            return "User removed from blacklist (`{}` on `{}`).".format(uid, val)
         else:
-            return Response(command_status=True, message="User is not blacklisted.")
+            return "User is not blacklisted."
     elif int(uid) == -2:
-        return Response(command_status=True, message="Error: {}".format(val))
+        return "Error: {}".format(val)
     else:
-        return Response(command_status=False,
-                        message="Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`.")
+        return "Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`."
 
 
 # --- Whitelist functions --- #
 # noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
-@check_permissions
-def command_add_whitelist_user(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
+@command(str, privileged=True)
+def addwlu(user):
     """
     Adds a user to site whitelist
-    :param wrap2:
-    :param ev_user_id:
-    :param ev_room:
-    :param content_lower:
-    :param message_parts:
-    :param kwargs: No additional arguments expected
+    :param user:
     :return: A string
     """
-    quiet_action = any([part.endswith('-') for part in message_parts])
     uid, val = get_user_from_list_command(content_lower)
+
     if int(uid) > -1 and val != "":
         add_whitelisted_user((uid, val))
-        return Response(command_status=True, message=None) if quiet_action \
-            else Response(command_status=True, message="User whitelisted (`{}` on `{}`).".format(uid, val))
+        return "User whitelisted (`{}` on `{}`).".format(uid, val)
     elif int(uid) == -2:
-        return Response(command_status=True, message="Error: {}".format(val))
+        return "Error: {}".format(val)
     else:
-        return Response(command_status=False,
-                        message="Invalid format. Valid format: `!!/addwlu profileurl` *or* "
-                                "`!!/addwlu userid sitename`.")
+        return "Invalid format. Valid format: `!!/addwlu profileurl` *or* "
+                                             "`!!/addwlu userid sitename`."
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
-def command_check_whitelist(content_lower, *args, **kwargs):
+@command(str)
+def iswlu(user):
     """
     Checks if a user is whitelisted
-    :param content_lower:
-    :param kwargs: No additional arguments expected
+    :param user:
     :return: A string
     """
     uid, val = get_user_from_list_command(content_lower)
+
     if int(uid) > -1 and val != "":
         if is_whitelisted_user((uid, val)):
             return Response(command_status=True, message="User is whitelisted (`{}` on `{}`).".format(uid, val))
@@ -249,47 +187,38 @@ def command_check_whitelist(content_lower, *args, **kwargs):
                         message="Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`.")
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
+# noinspection PyIncorrectDocstring,PyMissingTypeHints
 @check_permissions
-def command_remove_whitelist_user(message_parts, content_lower, ev_room, ev_user_id, wrap2, *args, **kwargs):
+def rmwlu(user):
     """
     Removes a user from site whitelist
-    :param wrap2:
-    :param ev_user_id:
-    :param ev_room:
-    :param content_lower:
-    :param message_parts:
-    :param kwargs: No additional arguments expected
+    :param user:
     :return: A string
     """
-    quiet_action = any([part.endswith('-') for part in message_parts])
-    uid, val = get_user_from_list_command(content_lower)
+    uid, val = get_user_from_list_command(user)
+
     if int(uid) != -1 and val != "":
         if remove_whitelisted_user((uid, val)):
-            return Response(command_status=True, message=None) if quiet_action \
-                else Response(command_status=True,
-                              message="User removed from whitelist (`{}` on `{}`).".format(uid, val))
+            return "User removed from whitelist (`{}` on `{}`).".format(uid, val)
         else:
-            return Response(command_status=True, message="User is not whitelisted.")
+            return "User is not whitelisted."
     elif int(uid) == -2:
-        return Response(command_status=True, message="Error: {}".format(val))
+        return "Error: {}".format(val)
     else:
-        return Response(command_status=False,
-                        message="Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`.")
+        return "Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`."
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-@check_permissions
-def command_blacklist_help(*args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command(str)
+def blacklist(_):
     """
     Returns a string which explains the usage of the new blacklist commands.
     :return: A string
     """
-    return Response(command_status=True,
-                    message="The !!/blacklist command has been deprecated. "
-                    "Please use !!/blacklist-website, !!/blacklist-username,"
-                    "!!/blacklist-keyword, or perhaps !!/watch-keyword. "
-                    "Remember to escape dots in URLs using \\.")
+    return "The !!/blacklist command has been deprecated. "
+           "Please use !!/blacklist-website, !!/blacklist-username,"
+           "!!/blacklist-keyword, or perhaps !!/watch-keyword. "
+           "Remember to escape dots in URLs using \\."
 
 
 def check_blacklist(string_to_test, is_username, is_watchlist):
@@ -336,250 +265,186 @@ def format_blacklist_reasons(reasons):
     return reason_string
 
 
-def do_blacklist(**kwargs):
+def do_blacklist(pattern, blacklist_type, msg, force=False):
     """
     Adds a string to the website blacklist and commits/pushes to GitHub
     :param message_parts:
     :param ev_user_name:
     :param ev_room:
     :param :ev_user_id:
-    :return: A Response
+    :return: A string
     """
 
-    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=kwargs['wrap2'].host,
-                                                                    id=str(kwargs['ev_user_id']))
-    pattern = " ".join(kwargs['message_parts'][1:])
+    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=msg._client.host,
+                                                                    id=msg.owner.id)
+
     # noinspection PyProtectedMember
     try:
         regex.compile(pattern)
     except regex._regex_core.error:
-        return Response(command_status=False, message="An invalid pattern was provided, not blacklisting.")
+        return "An invalid pattern was provided, not blacklisting."
 
-    if not kwargs['force']:
+    if not force:
         reasons = check_blacklist(pattern.replace("\\W", " ").replace("\\.", "."),
-                                  kwargs['blacklist'] == "username",
-                                  kwargs['blacklist'] == "watch_keyword")
+                                  blacklist_type == "username",
+                                  blacklist_type == "watch_keyword")
 
         if reasons:
-            return Response(command_status=False,
-                            message="That pattern looks like it's already caught by " +
-                                    format_blacklist_reasons(reasons) + "; use `" +
-                                    kwargs['message_parts'][0] + "-force` if you really want to do that.")
+            return "That pattern looks like it's already caught by " +
+                    format_blacklist_reasons(reasons) + "; append`-force` if you really want to do that.")
 
-    result = GitManager.add_to_blacklist(
-        blacklist=kwargs['blacklist'],
+    _, result = GitManager.add_to_blacklist(
+        blacklist=blacklist_type,
         item_to_blacklist=pattern,
-        username=kwargs['ev_user_name'],
+        username=user.name,
         chat_profile_link=chat_user_profile_link,
-        code_permissions=is_code_privileged(kwargs['ev_room'], kwargs['ev_user_id'], kwargs['wrap2'])
+        code_permissions=is_code_privileged(msg.room, msg.owner.id, msg._client)
     )
-    return Response(command_status=result[0], message=result[1])
+
+    return result
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command(str, whole_msg=True, privileged=True, give_name=True, aliases=["blacklist_website",
+                                                                        "blacklist_username",
+                                                                        "blacklist_keyword_force"
+                                                                        "blacklist_website_force"
+                                                                        "blacklist_username_force"])
+def blacklist_keyword(msg, pattern, alias_used="blacklist_keyword"):
     """
-    Adds a string to the website blacklist and commits/pushes to GitHub
-    :param message_parts:
-    :param ev_user_name:
-    :param ev_room:
-    :param :ev_user_id:
-    :return: A Response
-    """
-
-    return do_blacklist(blacklist="website", force=False, message_parts=message_parts,
-                        ev_user_name=ev_user_name, ev_room=ev_room, ev_user_id=ev_user_id, wrap2=wrap2)
-
-
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
-    """
-    Adds a string to the keyword blacklist and commits/pushes to GitHub
-    :param message_parts:
-    :param ev_user_name:
-    :param ev_room:
-    :param :ev_user_id:
-    :return: A Response
+    Adds a string to the blacklist and commits/pushes to GitHub
+    :param msg:
+    :param website:
+    :return: A string
     """
 
-    return do_blacklist(blacklist="keyword", force=False, message_parts=message_parts,
-                        ev_user_name=ev_user_name, ev_room=ev_room, ev_user_id=ev_user_id, wrap2=wrap2)
+    parts = alias_used.split("_")
+    return do_blacklist(pattern, parts[1], msg, force=len(parts) > 2)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command(str, whole_msg=True, privileged=True, aliases=["watch_keyword"])
+def watch(msg, website):
     """
     Adds a string to the watched keywords list and commits/pushes to GitHub
-    :param message_parts:
-    :param ev_user_name:
-    :param ev_room:
-    :param :ev_user_id:
-    :return: A Response
+    :param msg:
+    :param website:
+    :return: A string
     """
 
-    return do_blacklist(blacklist="watch_keyword", force=False, message_parts=message_parts,
-                        ev_user_name=ev_user_name, ev_room=ev_room, ev_user_id=ev_user_id, wrap2=wrap2)
+    return do_blacklist(website, "watch_keyword", msg, force=False)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
-    """
-    Adds a string to the username blacklist and commits/pushes to GitHub
-    :param message_parts:
-    :param ev_user_name:
-    :param ev_room:
-    :param :ev_user_id:
-    :return: A Response
-    """
-
-    return do_blacklist(blacklist="username", force=False, message_parts=message_parts,
-                        ev_user_name=ev_user_name, ev_room=ev_room, ev_user_id=ev_user_id, wrap2=wrap2)
-
-
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_force_blacklist_website(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
-    """
-    Adds a string to the website blacklist and commits/pushes to GitHub
-    :param message_parts:
-    :param ev_user_name:
-    :param ev_room:
-    :param :ev_user_id:
-    :return: A Response
-    """
-
-    return do_blacklist(blacklist="website", force=True, message_parts=message_parts,
-                        ev_user_name=ev_user_name, ev_room=ev_room, ev_user_id=ev_user_id, wrap2=wrap2)
-
-
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_force_blacklist_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
-    """
-    Adds a string to the keyword blacklist and commits/pushes to GitHub
-    :param message_parts:
-    :param ev_user_name:
-    :param ev_room:
-    :param :ev_user_id:
-    :return: A Response
-    """
-
-    return do_blacklist(blacklist="keyword", force=True, message_parts=message_parts,
-                        ev_user_name=ev_user_name, ev_room=ev_room, ev_user_id=ev_user_id, wrap2=wrap2)
-
-
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_force_watch_keyword(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command(str, whole_msg=True, privileged=True, aliases=["watch_keyword_force"])
+def watch_force(msg, website):
     """
     Adds a string to the watched keywords list and commits/pushes to GitHub
-    :param message_parts:
-    :param ev_user_name:
-    :param ev_room:
-    :param :ev_user_id:
-    :return: A Response
+    :param msg:
+    :param website:
+    :return: A string
     """
 
-    return do_blacklist(blacklist="watch_keyword", force=True, message_parts=message_parts,
-                        ev_user_name=ev_user_name, ev_room=ev_room, ev_user_id=ev_user_id, wrap2=wrap2)
+    return do_blacklist(website, "watch_keyword", msg, force=True)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_force_blacklist_username(message_parts, ev_user_name, ev_room, ev_user_id, wrap2, *args, **kwargs):
-    """
-    Adds a string to the username blacklist and commits/pushes to GitHub
-    :param message_parts:
-    :param ev_user_name:
-    :param ev_room:
-    :param :ev_user_id:
-    :return: A Response
-    """
-
-    return do_blacklist(blacklist="username", force=True, message_parts=message_parts,
-                        ev_user_name=ev_user_name, ev_room=ev_room, ev_user_id=ev_user_id, wrap2=wrap2)
+# noinspection PyIncorrectDocstring
+@command(privileged=True)
+def gitstatus():
+    return GitManager.current_git_status()
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-@check_permissions
-def command_gitstatus(wrap2, *args, **kwargs):
-    return Response(command_status=True, message=GitManager.current_git_status())
-
-
-@check_permissions
-def command_remotediff(*args, **kwargs):
+@command(privileged=True, aliases=["remote-diff", "remote_diff"])
+def remotediff():
     will_require_full_restart = "SmokeDetector will require a full restart to pull changes: " \
                                 "{}".format(str(not only_blacklists_changed(GitManager.get_remote_diff())))
-    return Response(command_status=True, message="{}\n\n{}".format(GitManager.get_remote_diff(),
-                                                                   will_require_full_restart))
+
+    return "{}\n\n{}".format(GitManager.get_remote_diff(), will_require_full_restart))
 
 
 # --- Joke Commands --- #
-# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
-def command_blame(ev_room, *args, **kwargs):
-    """
-    Returns a string with a user to blame (This is a joke command)
-    :param ev_room:
-    :param kwargs: No additional arguments expected
-    :return: A string
-    """
-    GlobalVars.users_chatting[ev_room] = list(set(GlobalVars.users_chatting[ev_room]))
-    user_to_blame = single_random_user(ev_room)
-    return Response(command_status=True, message=u"It's [{}]({})'s fault.".format(user_to_blame[0], user_to_blame[1]))
+@command(whole_msg=True)
+def blame(msg):
+    unlucky_victim = msg._client.get_user(random.choice(msg.room.get_current_user_ids()))
+
+    return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name, msg._client.host, unlucky_victim.id)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_brownie(*args, **kwargs):
+@command(str, whole_msg=True, aliases=["blame\u180E"])
+def blame2(msg, x):
+    base = {"\u180E": 0, "\u200B": 1, "\u200C": 2, "\u200D": 3, "\u2060": 4, "\u2063": 5, "\uFEFF": 6}
+    user = 0
+
+    for i, char in enumerate(reversed(x)):
+        user += (len(base)**i) * base[char]
+
+    unlucky_victim = msg._client.get_user(user)
+    return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name, msg._client.host, unlucky_victim.id)
+
+# noinspection PyIncorrectDocstring
+@command
+def brownie():
     """
     Returns a string equal to "Brown!" (This is a joke command)
     :return: A string
     """
-    return Response(command_status=True, message="Brown!")
+    return "Brown!"
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
-def command_coffee(ev_user_name, *args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command(str, whole_msg=True, arity=(0, 1))
+def coffee(msg, other_user):
     """
     Returns a string stating who the coffee is for (This is a joke command)
-    :param ev_user_name:
-    :param kwargs: No additional arguments expected
+    :param msg:
+    :param other_user:
     :return: A string
     """
-    return Response(command_status=True, message=u"*brews coffee for @" + ev_user_name.replace(" ", "") + "*")
+    return "*brews coffee for @" + (other_user if other_user else msg.owner.name.replace(" ", "")) + "*"
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_lick(*args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command
+def lick(*args, **kwargs):
     """
     Returns a string when a user says 'lick' (This is a joke command)
     :return: A string
     """
-    return Response(command_status=True, message="*licks ice cream cone*")
+    return "*licks ice cream cone*"
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_tea(ev_user_name, *args, **kwargs):
+TEAS = ['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint', 'jasmine', 'passionfruit']
+
+
+# noinspection PyIncorrectDocstring
+@command(str, whole_msg=True, arity=(0, 1))
+def tea(msg, other_user):
     """
     Returns a string stating who the tea is for (This is a joke command)
-    :param ev_user_name:
-    :param kwargs: No additional arguments expected
+    :param msg:
+    :param other_user:
     :return: A string
     """
-    return Response(command_status=True,
-                    message=u"*brews a cup of {choice} tea for @{user}*".format(
-                        choice=random.choice(['earl grey', 'green', 'chamomile',
-                                              'lemon', 'darjeeling', 'mint', 'jasmine']),
-                        user=ev_user_name.replace(" ", "")))
+
+    if other_user is None:
+        return "*brews a cup of {} tea for @{}*".format(random.choice(TEAS), msg.owner.name.replace(" ", ""))
+    else:
+        return "*brews a cup of {} tea for @{}*".format(random.choice(TEAS), other_user)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_wut(*args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command
+def wut():
     """
     Returns a string when a user asks 'wut' (This is a joke command)
     :return: A string
     """
-    return Response(command_status=True, message="Whaddya mean, 'wut'? Humans...")
+    return "Whaddya mean, 'wut'? Humans..."
 
 
 """ Uncomment when Winterbash comes back
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_hats(*args, **kwargs):
+@command(aliases=["zomg_hats"])
+def hats():
     wb_start = datetime(2016, 12, 19, 0, 0, 0)
     wb_end = datetime(2017, 1, 9, 0, 0, 0)
     now = datetime.utcnow()
@@ -604,41 +469,35 @@ def command_hats(*args, **kwargs):
         secondstr = "seconds" if seconds != 1 else "second"
         return_string = "Winter Bash won't end for {} {}, {} {}, {} {}, and {} {}. GO EARN SOME HATS!".format(
             diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
-    return Response(command_status=True, message=return_string)
+
+    return return_string
 """
 
 
 # --- Block application from posting functions --- #
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-@check_permissions
-def command_block(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command(int, int, privileged=True, arity=(1, 2))
+def command_block(time, room_id):
     """
     Blocks posts from application for a period of time
-    :param ev_room:
-    :param wrap2:
-    :param ev_user_id:
-    :param message_parts:
-    :param kwargs: No additional arguments expected
+    :param time:
+    :param room_id:
     :return: A string
     """
-    room_id = message_parts[2] if len(message_parts) > 2 else "all"
-    time_to_block = message_parts[1] if len(message_parts) > 1 else "0"
-    if not time_to_block.isdigit():
-        return Response(command_status=False, message="Invalid duration.")
+    if room_id is None:
 
-    time_to_block = int(time_to_block)
     time_to_block = time_to_block if 0 < time_to_block < 14400 else 900
     GlobalVars.blockedTime[room_id] = time.time() + time_to_block
-    which_room = "globally" if room_id == "all" else "in room " + room_id
-    report = "Reports blocked for {} seconds {}.".format(time_to_block, which_room)
-    if room_id != GlobalVars.charcoal_room_id:
-        GlobalVars.charcoal_hq.send_message(report)
-    return Response(command_status=True, message=report)
+    which_room = "globally" if room_id is None else "in room " + room_id
+    report = "Reports blocked for {} seconds {}.".format(time, room_id)
+
+    tell_rooms(report, ("debug", "metatavern"), ())
+    return report
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
-@check_permissions
-def command_unblock(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
+@command(int int, privileged=True, arity=(1, 2))
+def unblock(time, room_id):
     """
     Unblocks posting to a room
     :param ev_room:
@@ -652,128 +511,98 @@ def command_unblock(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
     GlobalVars.blockedTime[room_id] = time.time()
     which_room = "globally" if room_id == "all" else "in room " + room_id
     report = "Reports unblocked {}.".format(GlobalVars.blockedTime - time.time(), which_room)
-    if room_id != GlobalVars.charcoal_room_id:
-        GlobalVars.charcoal_hq.send_message(report)
-    return Response(command_status=True, message=report)
+
+    tell_rooms(report, ("debug", "metatavern"), ())
+    return report
 
 
 # --- Administration Commands --- #
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_alive(ev_room, *args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command
+def alive():
     """
     Returns a string indicating the process is still active
-    :param ev_room:
-    :param kwargs: No additional arguments expected
     :return: A string
     """
-    return Response(command_status=True,
-                    message=random.choice(['Yup', 'You doubt me?', 'Of course',
-                                           '... did I miss something?', 'plz send teh coffee',
-                                           'Watching this endless list of new questions *never* gets boring',
-                                           'Kinda sorta']))
+    return random.choice(['Yup', 'You doubt me?', 'Of course',
+                          '... did I miss something?', 'plz send teh coffee',
+                          'Watching this endless list of new questions *never* gets boring',
+                          'Kinda sorta']))
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-@check_permissions
-def command_allspam(message_parts, ev_room, ev_user_id, wrap2, ev_user_name, ev_room_name, *args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command(str, privileged=True)
+def allspam(url):
     """
     Reports all of a user's posts as spam
-    :param ev_room_name:
-    :param ev_user_name:
-    :param wrap2:
-    :param ev_user_id:
-    :param ev_room:
-    :param message_parts:
-    :param kwargs: No additional arguments expected
+    :param url:
     :return:
     """
-    if len(message_parts) != 2:
-        return Response(command_status=False, message="1 argument expected")
-    url = message_parts[1]
     user = get_user_from_url(url)
+
     if user is None:
-        return Response(command_status=True, message="That doesn't look like a valid user URL.")
+        return "That doesn't look like a valid user URL."
+
     why = u"User manually reported by *{}* in room *{}*.\n".format(ev_user_name, ev_room_name.decode('utf-8'))
     handle_user_with_all_spam(user, why)
-    return Response(command_status=True, message=None)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-@check_permissions
-def command_errorlogs(ev_room, ev_user_id, wrap2, message_parts, *args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command(int, privileged=True, arity=(0, 1))
+def command_errorlogs(count):
     """
     Shows the most recent lines in the error logs
-    :param message_parts:
-    :param wrap2:
-    :param ev_user_id:
-    :param ev_room:
-    :param kwargs: No additional arguments expected
-    :return:
-    """
-    count = -1
-    if len(message_parts) > 2:
-        return Response(command_status=False, message="The !!/errorlogs command requires either 0 or 1 arguments.")
-    try:
-        count = int(message_parts[1])
-    except (ValueError, IndexError):
-        count = 50
-    logs_part = fetch_lines_from_error_log(count)
-    post_message_in_room(room_id_str=ev_room, msg=logs_part, length_check=False)
-    return Response(command_status=True, message=None)
-
-
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_help(*args, **kwargs):
-    """
-    Returns the help text
-    :param kwargs: No additional arguments expected
+    :param count:
     :return: A string
     """
-    return Response(command_status=True, message="I'm " + GlobalVars.chatmessage_prefix +
-                                                 ", a bot that detects spam and offensive posts on the network and "
-                                                 "posts alerts to chat. "
-                                                 "[A command list is available here]"
-                                                 "(https://charcoal-se.org/smokey/Commands).")
+    return fetch_lines_from_error_log(count or 50)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_location(*args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command
+def help():
+    """
+    Returns the help text
+    :return: A string
+    """
+    return "I'm " + GlobalVars.chatmessage_prefix +
+           ", a bot that detects spam and offensive posts on the network and "
+           "posts alerts to chat. "
+           "[A command list is available here]"
+           "(https://charcoal-se.org/smokey/Commands).")
+
+
+# noinspection PyIncorrectDocstring
+@command
+def location():
     """
     Returns the current location the application is running from
     :return: A string with current location
     """
-    return Response(command_status=True, message=GlobalVars.location)
+    return GlobalVars.location
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal,PyProtectedMember
-@check_permissions
-def command_master(ev_room, ev_user_id, wrap2, *args, **kwargs):
+# noinspection PyIncorrectDocstring,PyProtectedMember
+@command(privileged=True)
+def command_master():
     """
     Forces a system exit with exit code = 8
-    :param wrap2:
-    :param ev_user_id:
-    :param ev_room:
-    :param kwargs: No additional arguments expected
     :return: None
     """
     os._exit(8)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal,PyProtectedMember
-@check_permissions
-def command_pull(ev_room, ev_user_id, wrap2, *args, **kwargs):
+# noinspection PyIncorrectDocstring,PyProtectedMember
+@command(privileged=True)
+def command_pull():
     """
     Pull an update from GitHub
-    :param wrap2:
-    :param ev_user_id:
-    :param ev_room:
-    :param kwargs: No additional arguments expected
     :return: String on failure, None on success
     """
     if only_blacklists_changed(GitManager.get_remote_diff()):
         GitManager.pull_remote()
         load_blacklists()
-        return Response(command_status=True, message="No code modified, only blacklists reloaded.")
+        return "No code modified, only blacklists reloaded."
     else:
         request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/deploy')
         latest_sha = request.json()["object"]["sha"]
@@ -787,80 +616,74 @@ def command_pull(ev_room, ev_user_id, wrap2, *args, **kwargs):
         if "success" in states:
             os._exit(3)
         elif "error" in states or "failure" in states:
-            return Response(command_status=True, message="CI build failed! :( Please check your commit.")
+            return "CI build failed! :( Please check your commit."
         elif "pending" in states or not states:
-            return Response(command_status=True,
-                            message="CI build is still pending, wait until the build has finished and then pull again.")
+            return "CI build is still pending, wait until the build has finished and then pull again."
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal,PyProtectedMember
-@check_permissions
-def command_reboot(ev_room, ev_user_id, wrap2, *args, **kwargs):
+# noinspection PyIncorrectDocstring,PyProtectedMember
+@command(whole_msg=True, privileged=True, aliases=["restart"])
+def command_reboot(msg):
     """
     Forces a system exit with exit code = 5
-    :param wrap2:
-    :param ev_user_id:
-    :param ev_room:
-    :param kwargs: No additional arguments expected
+    :param msg:
     :return: None
     """
-    post_message_in_room(room_id_str=ev_room, msg="Goodbye, cruel world")
+    msg.room.send_message("Goodbye, cruel world")
     os._exit(5)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
-def command_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
+# noinspection PyIncorrectDocstring,PyMissingTypeHints
+@command(whole_msg=True)
+def amiprivileged(msg):
     """
     Tells user whether or not they have privileges
-    :param wrap2:
-    :param ev_user_id:
-    :param ev_room:
-    :param kwargs: No additional arguments expected
+    :param msg:
     :return: A string
     """
-    if is_privileged(ev_room, ev_user_id, wrap2):
-        return Response(command_status=True, message=u"\u2713 You are a privileged user.")
-    return Response(command_status=True,
-                    message=u"\u2573 " + GlobalVars.not_privileged_warning)
+    if is_privileged(msg.room, msg.owner.id, msg._client):
+        return "\u2713 You are a privileged user."
+
+    return "\u2573 " + GlobalVars.not_privileged_warning
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_code_privileged(ev_room, ev_user_id, wrap2, *args, **kwargs):
+# noinspection PyIncorrectDocstring,
+@command(whole_msg=True)
+def amicodeprivileged(msg):
     """
     Tells user whether or not they have code privileges
-    :param wrap2:
-    :param ev_user_id:
-    :param ev_room:
-    :param kwargs: No additional arguments expected
+    :param msg:
     :return: A string
     """
-    if is_code_privileged(ev_room, ev_user_id, wrap2):
-        return Response(command_status=True, message="Yes, you have code privileges.")
-    return Response(command_status=True,
-                    message="No, you are not a code-privileged user.")
+    if is_code_privileged(msg.room, msg.owner.id, msg._client):
+        return "\u2713 You are a code-privileged user."
+
+    return "\u2573 No, you are not a code-privileged user."
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_quota(*args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command
+def apiquota():
     """
     Report how many API hits remain for the day
     :return: A string
     """
-    return Response(command_status=True, message="The current API quota remaining is {}.".format(GlobalVars.apiquota))
+    return "The current API quota remaining is {}.".format(GlobalVars.apiquota)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_queuestatus(*args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command
+def queuestatus():
     """
     Report current API queue
     :return: A string
     """
-    return Response(command_status=True, message=GlobalVars.bodyfetcher.print_queue())
+    return GlobalVars.bodyfetcher.print_queue()
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal,PyProtectedMember
-@check_permissions
-def command_stappit(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
+# noinspection PyIncorrectDocstring,PyProtectedMember
+@command(str, whole_msg=True, privileged=True, arity=(0, 1))
+def command_stappit(msg, location):
     """
     Forces a system exit with exit code = 6
     :param message_parts:
@@ -870,11 +693,9 @@ def command_stappit(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: None
     """
-    if len(message_parts) == 1 or " ".join(message_parts[1:]).lower() in GlobalVars.location.lower():
-        post_message_in_room(room_id_str=ev_room, msg="Goodbye, cruel world")
+    if location is None or location.lower() in GlobalVars.location.lower():
+        msg.room.send_message("Goodbye, cruel world")
         os._exit(6)
-
-    return Response(command_status=True, message=None)
 
 
 def td_format(td_object):
@@ -901,51 +722,45 @@ def td_format(td_object):
     return ", ".join(strings)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_status(*args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command
+def status():
     """
     Returns the amount of time the application has been running
     :return: A string
     """
     now = datetime.utcnow()
     diff = now - UtcDate.startup_utc_date
-    return Response(command_status=True,
-                    message='Running since {time} UTC ({relative})'.format(
-                        time=GlobalVars.startup_utc,
-                        relative=td_format(diff)))
+
+    return 'Running since {time} UTC ({relative})'.format(time=GlobalVars.startup_utc, relative=td_format(diff))
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-@check_permissions
-def command_stop_flagging(*args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command(privileged=True)
+def stopflagging(*args, **kwargs):
     t_metasmoke = Thread(name="stop_autoflagging", target=Metasmoke.stop_autoflagging,
                          args=())
     t_metasmoke.start()
-    return Response(command_status=True, message="Request sent...")
+
+    return "Request sent..."
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal,PyProtectedMember
-@check_permissions
-def command_standby(message_parts, ev_room, ev_user_id, wrap2, *args, **kwargs):
+# noinspection PyIncorrectDocstring,PyProtectedMember
+@command(str, whole_msg=True, privileged=True)
+def command_standby(msg, location):
     """
     Forces a system exit with exit code = 7
-    :param message_parts:
-    :param wrap2:
-    :param ev_user_id:
-    :param ev_room:
-    :param kwargs: No additional arguments expected
+    :param msg:
+    :param location:
     :return: None
     """
-    if " ".join(message_parts[1:]).lower() in GlobalVars.location.lower():
-        m = "{location} is switching to standby".format(location=GlobalVars.location)
-        post_message_in_room(room_id_str=ev_room, msg=m)
+    if location.lower() in GlobalVars.location.lower():
+        msg.room.send_message("{location} is switching to standby".format(location=GlobalVars.location))
         os._exit(7)
-
-    return Response(command_status=True, message=None)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
-def command_test(content, content_lower, *args, **kwargs):
+def test(content, content_lower, *args, **kwargs):
     """
     Test a post to determine if it'd be automatically reported
     :param content_lower:
@@ -972,120 +787,60 @@ def command_test(content, content_lower, *args, **kwargs):
     return Response(command_status=True, message=result)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_test_answer(content, content_lower, *args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command(str, aliases=["test-q, test-a, test-u, test-t"], give_name=True)
+def test(content, alias_used="test"):
     """
     Test an answer to determine if it'd be automatically reported
-    :param content_lower:
     :param content:
-    :param kwargs: No additional arguments expected
     :return: A string
     """
-    string_to_test = content[10:]
-    test_as_answer = True
-    if len(string_to_test) == 0:
-        return Response(command_status=True, message="Nothing to test")
     result = "> "
-    fakepost = Post(api_response={'title': 'Valid title', 'body': string_to_test,
-                                  'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                  'site': "", 'IsAnswer': test_as_answer, 'score': 0})
+    kind = ""
+
+    if alias_used == "test-q":
+        kind = " question."
+        fakepost = Post(api_response={'title': 'Valid title', 'body': content,
+                                      'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
+                                      'site': "", 'IsAnswer': False, 'score': 0})
+    elif alias_used == "test-a":
+        kind = "n answer."
+        fakepost = Post(api_response={'title': 'Valid title', 'body': content,
+                                      'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
+                                      'site': "", 'IsAnswer': True, 'score': 0})
+    elif alias_used == "test-u":
+        kind = " username."
+        fakepost = Post(api_response={'title': 'Valid title', 'body': "Valid question body",
+                                      'owner': {'display_name': content, 'reputation': 1, 'link': ''},
+                                      'site': "", 'IsAnswer': False, 'score': 0})
+    elif alias_used == "test-t":
+        kind = " title."
+        fakepost = Post(api_response={'title': content, 'body': "Valid question body",
+                                      'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
+                                      'site': "", 'IsAnswer': False, 'score': 0})
+    else:
+        kind = " question, title or username."
+        fakepost = Post(api_response={'title': content, 'body': content,
+                                      'owner': {'display_name': content, 'reputation': 1, 'link': ''},
+                                      'site': "", 'IsAnswer': False, 'score': 0})
+    
     reasons, why = FindSpam.test_post(fakepost)
+
     if len(reasons) == 0:
-        result += "Would not be caught as an answer."
-        return Response(command_status=True, message=result)
-    result += ", ".join(reasons).capitalize()
-    if why is not None and len(why) > 0:
-        result += "\n----------\n"
-        result += why
-    return Response(command_status=True, message=result)
+        result += "Would not be caught as a{}".format(kind)
+    else:
+        result += ", ".join(reasons).capitalize()
+    
+        if why is not None and len(why) > 0:
+            result += "\n----------\n"
+            result += why
+    
+    return result
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_test_question(content, content_lower, *args, **kwargs):
-    """
-    Test a question to determine if it'd be automatically reported
-    :param content_lower:
-    :param content:
-    :param kwargs: No additional arguments expected
-    :return: A string
-    """
-    string_to_test = content[10:]
-    test_as_answer = False
-    if len(string_to_test) == 0:
-        return Response(command_status=True, message="Nothing to test")
-    result = "> "
-    fakepost = Post(api_response={'title': 'Valid title', 'body': string_to_test,
-                                  'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                  'site': "", 'IsAnswer': test_as_answer, 'score': 0})
-    reasons, why = FindSpam.test_post(fakepost)
-    if len(reasons) == 0:
-        result += "Would not be caught as a question."
-        return Response(command_status=True, message=result)
-    result += ", ".join(reasons).capitalize()
-    if why is not None and len(why) > 0:
-        result += "\n----------\n"
-        result += why
-    return Response(command_status=True, message=result)
-
-
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_test_title(content, content_lower, *args, **kwargs):
-    """
-    Test a title to determine if it'd be automatically reported
-    :param content_lower:
-    :param content:
-    :param kwargs: No additional arguments expected
-    :return: A string
-    """
-    string_to_test = content[10:]
-    test_as_answer = False
-    if len(string_to_test) == 0:
-        return Response(command_status=True, message="Nothing to test")
-    result = "> "
-    fakepost = Post(api_response={'title': string_to_test, 'body': "Valid question body",
-                                  'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                  'site': "", 'IsAnswer': test_as_answer, 'score': 0})
-    reasons, why = FindSpam.test_post(fakepost)
-    if len(reasons) == 0:
-        result += "Would not be caught as a title."
-        return Response(command_status=True, message=result)
-    result += ", ".join(reasons).capitalize()
-    if why is not None and len(why) > 0:
-        result += "\n----------\n"
-        result += why
-    return Response(command_status=True, message=result)
-
-
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_test_username(content, content_lower, *args, **kwargs):
-    """
-    Test a username to determine if it'd be automatically reported
-    :param content_lower:
-    :param content:
-    :param kwargs: No additional arguments expected
-    :return: A string
-    """
-    string_to_test = content[10:]
-    test_as_answer = False
-    if len(string_to_test) == 0:
-        return Response(command_status=True, message="Nothing to test")
-    result = "> "
-    fakepost = Post(api_response={'title': 'Valid title', 'body': "Valid post body",
-                                  'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
-                                  'site': '', 'IsAnswer': test_as_answer, 'score': 0})
-    reasons, why = FindSpam.test_post(fakepost)
-    if len(reasons) == 0:
-        result += "Would not be caught as a username."
-        return Response(command_status=True, message=result)
-    result += ", ".join(reasons).capitalize()
-    if why is not None and len(why) > 0:
-        result += "\n----------\n"
-        result += why
-    return Response(command_status=True, message=result)
-
-
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_thread_descriptions(*args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command
+def threads():
     """
     Returns a description of current threads, for debugging
     :return: A string
@@ -1093,154 +848,122 @@ def command_thread_descriptions(*args, **kwargs):
 
     threads = ("{ident}: {name}".format(ident=t.ident, name=t.name) for t in threading.enumerate())
 
-    return Response(command_status=True, message="{threads}".format(threads="\n".join(list(threads))))
+    return "{threads}".format(threads="\n".join(list(threads)))
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_version(*args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command(aliases=["rev"])
+def version():
     """
     Returns the current version of the application
     :return: A string
     """
-    return Response(command_status=True,
-                    message='{id} [{commit_name}]({repository}/commit/{commit_code})'.format(
-                        id=GlobalVars.location,
-                        commit_name=GlobalVars.commit_with_author,
-                        commit_code=GlobalVars.commit['id'],
-                        repository=GlobalVars.bot_repository))
+
+    return '{id} [{commit_name}]({repository}/commit/{commit_code})'.format(
+            id=GlobalVars.location,
+            commit_name=GlobalVars.commit_with_author,
+            commit_code=GlobalVars.commit['id'],
+            repository=GlobalVars.bot_repository))
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_whoami(ev_room, *args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command(whole_msg=True)
+def whoami(msg):
     """
     Returns user id of smoke detector
-    :param ev_room:
-    :param kwargs: No additional arguments expected
+    :param msg:
     :return:
     """
-    if ev_room in GlobalVars.smokeDetector_user_id:
-        return Response(command_status=True,
-                        message="My id for this room is {}.".format(GlobalVars.smokeDetector_user_id[ev_room]))
-    return Response(command_status=True,
-                    message="I don't know my user ID for this room. (Something is wrong, and it's apnorton's fault.)")
+    return "My id for this room is {}, and it's not apnorton's fault.".format(msg._client._br.user_id)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal,PyUnboundLocalVariable
-def command_pending(content, content_lower, *args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command(int)
+def pending():
     """
     Finds posts with TP feedback that have yet to be deleted.
     :param args: No additional arguments expected.
     :param kwargs: No additional arguments expected.
     :return:
     """
-    try:
-        page = int(content[11:])
-    except ValueError:
-        return Response(
-            command_status=False,
-            message="Expected an integer page number and got '{0!r}'"
-            " instead (ValueError).".format(content[11:]))
     posts = requests.get("https://metasmoke.erwaysoftware.com/api/undeleted?pagesize=2&page={}&key={}".format(
         page, GlobalVars.metasmoke_key)).json()
+
     messages = []
     for post in posts['items']:
         messages.append("[{0}]({1}) ([MS](https://m.erwaysoftware.com/post/{0}))".format(post['id'], post['link']))
-    return Response(command_status=True,
-                    message=", ".join(messages))
+
+    return ", ".join(messages))
 
 
 # --- Notification functions --- #
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-def command_allnotifications(message_parts, ev_user_id, wrap2, *args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command(int, whole_msg=True)
+def allnotifications(msg, room_id):
     """
     Returns a string stating what sites a user will be notified about
-    :param wrap2:
-    :param ev_user_id:
-    :param message_parts:
-    :param kwargs: No additional arguments expected
+    :param msg:
+    :param room_id:
     :return: A string
     """
-    if len(message_parts) != 2:
-        return Response(command_status=False, message="1 argument expected")
-    user_id = int(ev_user_id)
-    chat_site = wrap2.host
-    room_id = message_parts[1]
-    if not room_id.isdigit():
-        return Response(command_status=False, message="Room ID is invalid.")
-    sites = get_all_notification_sites(user_id, chat_site, room_id)
+    sites = get_all_notification_sites(msg.owner.id, msg._client.host, room_id)
+
     if len(sites) == 0:
-        return Response(command_status=True, message="You won't get notified for any sites in that room.")
+        return "You won't get notified for any sites in that room."
 
-    return Response(command_status=True, message="You will get notified for these sites:\r\n" + ", ".join(sites))
+    return "You will get notified for these sites:\r\n" + ", ".join(sites)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
-def command_notify(message_parts, ev_user_id, wrap2, *args, **kwargs):
+# noinspection PyIncorrectDocstring,PyMissingTypeHints
+@command(int, str, whole_msg=True)
+def notify(msg, room_id, se_site):
     """
     Subscribe a user to events on a site in a single room
-    :param wrap2:
-    :param ev_user_id:
-    :param message_parts:
-    :param kwargs: No additional arguments expected
+    :param msg:
+    :param room_id:
+    :param site:
     :return: A string
     """
-    if len(message_parts) != 3:
-        return Response(command_status=False, message="2 arguments expected")
-    user_id = int(ev_user_id)
-    chat_site = wrap2.host
-    room_id = message_parts[1]
-    if not room_id.isdigit():
-        return Response(command_status=False, message="Room ID is invalid.")
+    response, full_site = add_to_notification_list(msg.owner.id, msg._client.host, room_id, se_site)
 
-    room_id = int(room_id)
-    quiet_action = any([part.endswith('-') for part in message_parts])
-    se_site = message_parts[2].replace('-', '')
-    response, full_site = add_to_notification_list(user_id, chat_site, room_id, se_site)
     if response == 0:
-        return Response(command_status=True, message=None) if quiet_action \
-            else Response(command_status=True,
-                          message="You'll now get pings from me if I report a post on `{site_name}`, in room "
-                                  "`{room_id}` on `chat.{chat_domain}`".format(site_name=se_site,
-                                                                               room_id=room_id,
-                                                                               chat_domain=chat_site))
+        return "You'll now get pings from me if I report a post on `{site}`, in room "
+               "`{room}` on `chat.{domain}`".format(site=se_site, room=room_id, domain=msg._client.host))
     elif response == -1:
-        return Response(command_status=True, message="That notification configuration is already registered.")
+        return "That notification configuration is already registered."
     elif response == -2:
-        return Response(command_status=False, message="The given SE site does not exist.")
+        return "The given SE site does not exist."
     else:
-        return Response(command_status=False, message="Unrecognized code returned when adding notification.")
+        return "Unrecognized code returned when adding notification."
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
-def command_whois(message_parts, ev_user_id, wrap2, *args, **kwargs):
+# noinspection PyIncorrectDocstring,PyMissingTypeHints
+@command(str, whole_msg=True)
+def command_whois(msg, role):
     """
     Return a list of important users
-    :param wrap2:
-    :param ev_user_id:
-    :param message_parts:
-    :param kwargs: No additional arguments expected
+    :param msg:
+    :param role:
     :return: A string
     """
-    if len(message_parts) < 2:
-        return Response(command_status=False, message="You must pass user level.")
     valid_roles = {"admin": "admin",
                    "code_admin": "code_admin",
                    "admins": "admin",
                    "codeadmins": "code_admin"}
-    if message_parts[1] not in list(valid_roles.keys()):
-        return Response(
-            command_status=False,
-            message="That is not a user level I can check. "
-            "I know about {0}".format(", ".join(set(valid_roles.values()))))
+
+    if role not in list(valid_roles.keys()):
+        return "That is not a user level I can check. "
+               "I know about {0}".format(", ".join(set(valid_roles.values())))
 
     ms_route = "https://metasmoke.erwaysoftware.com/api/users/?role={}&key={}&per_page=100".format(
-        valid_roles[message_parts[1]],
+        valid_roles[role],
         GlobalVars.metasmoke_key)
+
     user_response = requests.get(ms_route)
     user_response.encoding = 'utf-8-sig'
     user_response = user_response.json()
 
-    chat_host = wrap2.host
+    chat_host = msg._client.host
 
     # Build our list of admin chat ids
     key = ""
@@ -1252,28 +975,27 @@ def command_whois(message_parts, ev_user_id, wrap2, *args, **kwargs):
         key = 'stackoverflow_chat_id'
 
     admin_ids = [a[key] for a in user_response['items'] if a[key] and a['id'] != -1]
-    room = wrap2.get_room(kwargs['ev_room'])
 
-    all_users_in_room = room.get_current_user_ids()
+    all_users_in_room = msg.room.get_current_user_ids()
     admins_in_room = list(set(admin_ids) & set(all_users_in_room))
     admins_not_in_room = list(set(admin_ids) - set(admins_in_room))
 
     admins_list = [(admin,
-                    wrap2.get_user(admin).name,
-                    wrap2.get_user(admin).last_message,
-                    wrap2.get_user(admin).last_seen)
+                    msg._client.get_user(admin).name,
+                    msg._client.get_user(admin).last_message,
+                    msg._client.get_user(admin).last_seen)
                    for admin in admin_ids]
 
     admins_in_room_list = [(admin,
-                            wrap2.get_user(admin).name,
-                            wrap2.get_user(admin).last_message,
-                            wrap2.get_user(admin).last_seen)
+                            msg._client.get_user(admin).name,
+                            msg._client.get_user(admin).last_message,
+                            msg._client.get_user(admin).last_seen)
                            for admin in admins_in_room]
 
     admins_not_in_room_list = [(admin,
-                                wrap2.get_user(admin).name,
-                                wrap2.get_user(admin).last_message,
-                                wrap2.get_user(admin).last_seen)
+                                msg._client.get_user(admin).name,
+                                msg._client.get_user(admin).last_message,
+                                msg._client.get_user(admin).last_seen)
                                for admin in admins_not_in_room]
 
     message = "I am aware of {} {}".format(len(admin_ids), message_parts[1])
@@ -1296,146 +1018,121 @@ def command_whois(message_parts, ev_user_id, wrap2, *args, **kwargs):
         message = message[:-2] + ". "
         message += "None of them are currently in this room. Other users in this room might be able to help you."
 
-    return Response(command_status=True, message=message)
+    return message
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
-def command_unnotify(message_parts, ev_user_id, wrap2, *args, **kwargs):
+# noinspection PyIncorrectDocstring,PyMissingTypeHints
+@command(int, str, whole_msg=True)
+def unnotify(msg, room_id, se_site):
     """
     Unsubscribes a user to specific events
-    :param wrap2:
-    :param ev_user_id:
-    :param message_parts:
-    :param kwargs: No additional arguments expected
+    :param msg:
+    :param room_id:
+    :param se_site:
     :return: A string
     """
-    if len(message_parts) != 3:
-        return Response(command_status=False, message="2 arguments expected")
-    user_id = int(ev_user_id)
-    chat_site = wrap2.host
-    room_id = message_parts[1]
-    if not room_id.isdigit():
-        return Response(command_status=False, message="Room ID is invalid.")
+    response = remove_from_notification_list(msg.owner.id, msg._client.host, room_id, se_site)
 
-    room_id = int(room_id)
-    quiet_action = any([part.endswith('-') for part in message_parts])
-    se_site = message_parts[2].replace('-', '')
-    response = remove_from_notification_list(user_id, chat_site, room_id, se_site)
     if response:
-        return Response(command_status=True, message=None) if quiet_action \
-            else Response(command_status=True,
-                          message="I will no longer ping you if I report a post on `{site_name}`, in room `{room_id}` "
-                                  "on `chat.{chat_domain}`".format(site_name=se_site,
-                                                                   room_id=room_id,
-                                                                   chat_domain=chat_site))
-    return Response(command_status=True, message="That configuration doesn't exist.")
+        return "I will no longer ping you if I report a post on `{site}`, in room `{room}` "
+               "on `chat.{domain}`".format(site=se_site, room=room_id, domain=msg._client.host))
+
+    return "That configuration doesn't exist."
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
-def command_willbenotified(message_parts, ev_user_id, wrap2, *args, **kwargs):
+# noinspection PyIncorrectDocstring,PyMissingTypeHints
+@command(int, str, whole_msg=True)
+def willbenotified(msg, room_id, se_site):
     """
     Returns a string stating whether a user will be notified or not
-    :param wrap2:
-    :param ev_user_id:
-    :param message_parts:
-    :param kwargs: No additional arguments expected
+    :param msg:
+    :param room_id:
+    :param se_site:
     :return: A string
     """
-    if len(message_parts) != 3:
-        return Response(command_status=False, message="2 arguments expected")
-    user_id = int(ev_user_id)
-    chat_site = wrap2.host
-    room_id = message_parts[1]
-    if not room_id.isdigit():
-        return Response(command_status=False, message="Room ID is invalid")
+    if will_i_be_notified(msg.owner.id, msg._client.host, room_id, se_site):
+        return "Yes, you will be notified for that site in that room."
 
-    room_id = int(room_id)
-    se_site = message_parts[2]
-    will_be_notified = will_i_be_notified(user_id, chat_site, room_id, se_site)
-    if will_be_notified:
-        return Response(command_status=True, message="Yes, you will be notified for that site in that room.")
-
-    return Response(command_status=True, message="No, you won't be notified for that site in that room.")
+    return "No, you won't be notified for that site in that room."
 
 
 # --- Post Responses --- #
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-@check_permissions
-def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
-                        ev_user_name, ev_room_name, *args, **kwargs):
+# noinspection PyIncorrectDocstring
+@command(str, whole_msg=True, privileged=True)
+def command_report_post(msg, urls):
     """
     Report a post (or posts)
-    :param ev_room_name:
-    :param ev_user_name:
-    :param message_url:
-    :param message_parts:
-    :param wrap2:
-    :param ev_user_id:
-    :param ev_room:
-    :param kwargs: No additional arguments expected
+    :param msg:
+    :param urls:
     :return: A string (or None)
     """
-    crn, wait = can_report_now(ev_user_id, wrap2.host)
+    crn, wait = can_report_now(msg.owner.id, msg_client.host)
     if not crn:
-        return Response(command_status=False, message="You can execute the !!/report command again in {} seconds. "
-                                                      "To avoid one user sending lots of reports in a few commands and "
-                                                      "slowing SmokeDetector down due to rate-limiting, you have to "
-                                                      "wait 30 seconds after you've reported multiple posts using "
-                                                      "!!/report, even if your current command just has one URL. (Note "
-                                                      "that this timeout won't be applied if you only used !!/report "
-                                                      "for one post)".format(wait))
-    if len(message_parts) < 2:
-        return Response(command_status=False, message="Not enough arguments.")
+        return "You can execute the !!/report command again in {} seconds. "
+               "To avoid one user sending lots of reports in a few commands and "
+               "slowing SmokeDetector down due to rate-limiting, you have to "
+               "wait 30 seconds after you've reported multiple posts using "
+               "!!/report, even if your current command just has one URL. (Note "
+               "that this timeout won't be applied if you only used !!/report "
+               "for one post)".format(wait))
+
     output = []
-    index = 0
-    urls = list(set(message_parts[1:]))
+    urls = list(set(urls.split()))
+
     if len(urls) > 5:
-        return Response(command_status=False, message="To avoid SmokeDetector reporting posts too slowly, you can "
-                                                      "report at most 5 posts at a time. This is to avoid "
-                                                      "SmokeDetector's chat messages getting rate-limited too much, "
-                                                      "which would slow down reports.")
-    for url in urls:
-        index += 1
+        return "To avoid SmokeDetector reporting posts too slowly, you can "
+               "report at most 5 posts at a time. This is to avoid "
+               "SmokeDetector's chat messages getting rate-limited too much, "
+                "which would slow down reports."
+
+    for index, url in enumerate(urls):
         post_data = api_get_post(url)
+
         if post_data is None:
             output.append("Post {}: That does not look like a valid post URL.".format(index))
             continue
+
         if post_data is False:
             output.append("Post {}: Could not find data for this post in the API. "
                           "It may already have been deleted.".format(index))
             continue
+
         if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive(
                 (post_data.post_id, post_data.site)):
             # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
             # this re-report might be attempting to correct that/fix a mistake/etc.
             output.append("Post {}: Already recently reported".format(index))
             continue
+
         post_data.is_answer = (post_data.post_type == "answer")
         post = Post(api_response=post_data.as_dict)
         user = get_user_from_url(post_data.owner_url)
+
         if user is not None:
             add_blacklisted_user(user, message_url, post_data.post_url)
-        why = u"Post manually reported by user *{}* in room *{}*.\n".format(ev_user_name,
-                                                                            ev_room_name.decode('utf-8'))
+
+        why = u"Post manually reported by user *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
         batch = ""
         if len(urls) > 1:
             batch = " (batch report: post {} out of {})".format(index, len(urls))
+
         handle_spam(post=post,
                     reasons=["Manually reported " + post_data.post_type + batch],
                     why=why)
+
     if 1 < len(urls) > len(output):
-        add_or_update_multiple_reporter(ev_user_id, wrap2.host, time.time())
+        add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
+
     if len(output) > 0:
-        return Response(command_status=True, message=os.linesep.join(output))
-    return Response(command_status=True, message=None)
+        return os.linesep.join(output))
 
 
 #
 #
 # Subcommands go below here
-# noinspection PyIncorrectDocstring,PyUnusedLocal,PyBroadException
-@check_permissions
-def subcommand_delete(ev_room, ev_user_id, wrap2, msg, *args, **kwargs):
+# noinspection PyIncorrectDocstring,PyBroadException
+@command(message, reply=True, aliases=["del", "poof", "gone", "kaboom"])
+def delete(ev_room, ev_user_id, wrap2, msg, *args, **kwargs):
     """
     Attempts to delete a post from room
     :param msg:
