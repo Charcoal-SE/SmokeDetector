@@ -1468,9 +1468,9 @@ def subcommand_delete(ev_room, ev_user_id, wrap2, msg, *args, **kwargs):
     if int(ev_room.id) == int(GlobalVars.charcoal_hq.id):
         return Response(command_status=False, message="Messages from SmokeDetector in Charcoal HQ are generally kept "
                                                       "as records. If you really need to delete a message, please use "
-                                                      "`sd delete-force` [See issue #1071]"
-                                                      "(https://github.com/Charcoal-SE/SmokeDetector/issues/1071) for "
-                                                      "more details.")
+                                                      "`sd delete-force`. See [this note on message deletion]"
+                                                      "(https://charcoal-se.org/smokey/Commands"
+                                                      "#a-note-on-message-deletion) for more details.")
     else:
         return subcommand_delete_force(ev_room, ev_user_id, wrap2, msg, *args, **kwargs)
 
