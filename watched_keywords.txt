@@ -946,7 +946,6 @@
 1505225874	tripleee	saintpat1985\.wordpress\.com
 1505253294	NobodyNada	almomtazz\.com
 1505260111	NobodyNada	iraniantranslate\.com
-1505278569	tripleee	projsolution\.com
 1505285555	Glorfindel	dreamkeralapackages\.com
 1505291615	tripleee	mrjattmix\.com
 1505292084	tripleee	adasinstrument\.com
