@@ -1867,6 +1867,8 @@ subcommand_dict = {
     "del": subcommand_delete,
 
     "delete-force": subcommand_delete_force,
+    "del-force": subcommand_delete_force,
+    "remove-force": subcommand_delete_force,
 
     "postgone": subcommand_editlink,
 
