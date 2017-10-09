@@ -1181,3 +1181,4 @@
 1507522856	tripleee	zenith\W?sleep
 1507524250	tripleee	digitalsbharat.com
 1507524734	tripleee	sudheerjonna\.com
+1507536012	tripleee	rubiksplace\.com
