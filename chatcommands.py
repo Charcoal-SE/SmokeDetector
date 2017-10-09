@@ -1465,7 +1465,7 @@ def subcommand_delete(ev_room, ev_user_id, wrap2, msg, *args, **kwargs):
     :return: None
     """
 
-    if int(ev_room.id) == int(GlobalVars.charcoal_hq.id):
+    if int(ev_room) == int(GlobalVars.charcoal_hq.id):
         return Response(command_status=False, message="Messages from SmokeDetector in Charcoal HQ are generally kept "
                                                       "as records. If you really need to delete a message, please use "
                                                       "`sd delete-force`. See [this note on message deletion]"
