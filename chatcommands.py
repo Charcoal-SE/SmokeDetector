@@ -1435,9 +1435,9 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
 # Subcommands go below here
 # noinspection PyIncorrectDocstring,PyUnusedLocal,PyBroadException
 @check_permissions
-def subcommand_delete(ev_room, ev_user_id, wrap2, msg, *args, **kwargs):
+def subcommand_delete_force(ev_room, ev_user_id, wrap2, msg, *args, **kwargs):
     """
-    Attempts to delete a post from room
+    Delete a post from the room, ignoring protection for Charcoal HQ
     :param msg:
     :param wrap2:
     :param ev_user_id:
@@ -1450,6 +1450,28 @@ def subcommand_delete(ev_room, ev_user_id, wrap2, msg, *args, **kwargs):
     except:
         pass  # couldn't delete message
     return Response(command_status=True, message=None)
+
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyBroadException
+@check_permissions
+def subcommand_delete(ev_room, ev_user_id, wrap2, msg, *args, **kwargs):
+    """
+    Delete a post from a chatroom, with an override for Charcoal HQ.
+    :param msg:
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
+    :return: None
+    """
+
+    if int(ev_room.id) == int(GlobalVars.charcoal_hq.id):
+        return Response(command_status=False, message="Messages from SmokeDetector in Charcoal HQ are generally kept "
+                                                      "as records. If you really need to delete a message, please use "
+                                                      "`sd delete-force` [See issue #1071]"
+                                                      "(https://github.com/Charcoal-SE/SmokeDetector/issues/1071) for "
+                                                      "more details.")
+    else:
+        return subcommand_delete_force(ev_room, ev_user_id, wrap2, msg, *args, **kwargs)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -1842,6 +1864,8 @@ subcommand_dict = {
     "gone": subcommand_delete,
     "poof": subcommand_delete,
     "del": subcommand_delete,
+
+    "delete-force": subcommand_delete_force,
 
     "postgone": subcommand_editlink,
 
