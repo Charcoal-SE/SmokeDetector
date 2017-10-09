@@ -777,7 +777,6 @@
 1503779106	tripleee	tempostorm\.com
 1503779121	tripleee	fatsoma\.com
 1503779240	tripleee	mayweathervsmcgregor-livehd\.com
-1503779366	tripleee	bitfinex\.com
 1503779820	tripleee	738398822
 1503787315	quartata	officesetup-com\.com
 1503794626	Mithrandir	Best\Whackers
