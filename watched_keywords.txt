@@ -1204,3 +1204,4 @@
 1507643717	quartata	artprepare\.com
 1507643761	Glorfindel	Z1APARTMENT
 1507643786	Glorfindel	landing\.vectera\.com
+1507643824	Glorfindel	fav\W*123stream
