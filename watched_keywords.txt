@@ -1218,3 +1218,4 @@
 1507704331	tripleee	business\W?capital\W?experts
 1507705044	tripleee	abservetech\.com
 1507705183	tripleee	ephamere
+1507705420	tripleee	plus\W?iq\W?points
