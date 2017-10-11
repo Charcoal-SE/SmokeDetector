@@ -287,7 +287,7 @@ def dispatch_reply_command(msg, reply, cmd, client):
 
 
 def dispatch_shorthand_command(msg, room, client):
-    commands = msg.content[len(config.shorthand_prefix):].split()
+    commands = msg.content[3:].split()
 
     output = []
     processed_commands = []
@@ -310,4 +310,4 @@ def dispatch_shorthand_command(msg, room, client):
             else:
                 output.append("[:{}] <processed without return value>".format(message.id))
 
-    return "\n".join(output)
+    return "\n".join(output) if should_return_output else ""
