@@ -1230,3 +1230,4 @@
 1507721756	tripleee	sharp\.reviews
 1507721935	tripleee	lawngears\.net
 1507723263	tripleee	theboxers\.co\.uk
+1507723934	Glorfindel	Исламский\Wбанк
