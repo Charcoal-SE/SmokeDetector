@@ -1,10 +1,7 @@
 # coding=utf-8
 import os
-from collections import namedtuple
 from datetime import datetime
 from termcolor import colored
-
-Response = namedtuple('Response', 'command_status message')
 
 
 # Allows use of `environ_or_none("foo") or "default"` shorthand

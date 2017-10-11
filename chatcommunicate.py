@@ -1,4 +1,6 @@
-from ChatExchange.chatexchange import client as chatclient, events as events, messages.Message as Message
+from ChatExchange.chatexchange import events
+from ChatExchange.chatexchange.client import Client
+from ChatExchange.chatexchange.messages import Message
 import collections
 import itertools
 import json5
@@ -8,10 +10,12 @@ import regex
 import threading
 
 from globalvars import GlobalVars
-from helpers import environ_or_none
+from parsing import fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
 
 
-RoomData = collections.namedtuple("RoomData", ["room", "lock", "block_time", "is_report"])
+RoomData = collections.namedtuple("RoomData", ["room", "lock", "block_time", "last_report_data"])
+LastMessages = collections.namedtuple("LastMessages", ["messages", "reports"])
+Command = collections.namedtuple("Command", ["func", "arity"])
 
 _commands = {"reply": {}, "prefix": {}}
 
@@ -27,7 +31,7 @@ _privileges = {}
 
 _rooms = {}
 _room_data = {}
-_last_messages = {}
+_last_messages = LastMessages({}, {})
 
 _pickle_run = threading.Event()
 
@@ -36,9 +40,10 @@ def init(username, password):
     global _clients
     global _rooms
     global _room_data
+    global _last_messages
 
     for site in _clients.keys():
-        client = chatclient.Client(site)
+        client = Client(site)
 
         for _ in range(10):
             try:
@@ -101,16 +106,23 @@ def on_msg(msg, client, room):
 
         if message.owner.id == client._br.user_id:
             identifier = (client.host, room.id)
+            room_data = _rooms[identifier]
 
-            _rooms[identifier].lock.clear()
+            room_data.lock.clear()
 
-            if identifier not in _last_messages:
-                _last_messages[identifier] = collections.deque((message.id,))
+            if identifier not in _last_messages.messages:
+                _last_messages.messages[identifier] = collections.deque((message.id,))
             else:
-                if len(_last_messages[identifier]) > 50:
-                    _last_messages[identifier].popleft()
+                last = _last_messages.messages[identifier]
 
-                _last_messages[identifier].append(message.id)
+                if len(last) > 100:
+                    last.popleft()
+
+                last.append(message.id)
+
+            if room_data.last_report_data is not None:
+                _last_messages.reports[message.id] = room_data.last_report_data
+                room_data.last_report_data = ""
 
             _pickle_run.set()
         elif message.parent and message.parent.owner.id in config.my_ids:
@@ -124,15 +136,16 @@ def on_msg(msg, client, room):
 
 
 def send_to_room(room, msg, prefix=False):
-    _rooms[(room.host, room)].lock.wait()
+    if room.block_time < time.time():
+        room.lock.wait()
 
-    msg = msg.rstrip()
+        msg = msg.rstrip()
 
-    if prefix:
-        msg = GlobalVars.chatmessage_prefix + msg
+        if prefix:
+            msg = GlobalVars.chatmessage_prefix + msg
 
-    _rooms[(room.host, room)].lock.set()
-    room.send_message(msg)
+        room.lock.set()
+        room.room.send_message(msg)
 
 
 def tell_rooms_with(prop, msg, prefix=False):
@@ -159,15 +172,22 @@ def tell_rooms(msg, has, hasnt, prefix=False):
 
                     _rooms[room] = RoomData(new_room, threading.Event(), -1, False)
 
-                target_rooms.add(_rooms[room].room)
+                target_rooms.add(_rooms[room])
 
     for room in target_rooms:
         send_to_room(room, msg, prefix=prefix)
 
 
 def get_last_messages(room, count):
-    for msg_id in itertools.islice(reversed(_last_messages[(room._client.host, room.id)]), count):
+    for msg_id in itertools.islice(reversed(_last_messages.messages[(room._client.host, room.id)]), count):
         yield room._client.get_message(msg_id)
+
+
+def get_report_data(message):
+    if message.id in _last_messages.reports:
+        return _last_messages.reports[message.id]
+    else:
+        return (fetch_post_url_from_msg_content(message.content), fetch_owner_url_from_msg_content(message.content))
 
 
 def command(*type_signature, reply=False, whole_msg=False, privileged=False, arity=None, aliases=None, give_name=False):
@@ -175,25 +195,22 @@ def command(*type_signature, reply=False, whole_msg=False, privileged=False, ari
         aliases = []
 
     def decorator(func):
-        def f(*args, original_msg=None, alias_used=None):
-            try:
-                processed_args = [get_type(arg) if arg else arg for get_type, arg in zip(type_signature, args)]
-            except Exception as e:
-                return str(e)
-
+        def f(*args, original_msg=None, alias_used=None, quiet_action=False):
             if privileged and original_msg.user.id not in _privileges[original_msg.room.id]:
                 return GlobalVars.not_privileged_warning
 
             if whole_msg:
-                if give_name:
-                    return func(original_msg, *processed_args, alias=alias_used)
-                else:
-                    return func(original_msg, *processed_args)
+                processed_args = [original_msg]
             else:
-                if give_name:
-                    return func(*processed_args, alias=alias_used)
-                else:
-                    return func(*processed_args)
+                processed_args = []
+
+            try:
+                processed_args.extend([get_type(arg) if arg else arg for get_type, arg in zip(type_signature, args)])
+
+                result = func(*processed_args, **({"alias_used": alias_used} if give_name else {}))
+                return result if not quiet_action else ""
+            except Exception as e:
+                return str(e)
 
         cmd = (f, arity if arity else (len(type_signature), len(type_signature)))
 
@@ -201,7 +218,7 @@ def command(*type_signature, reply=False, whole_msg=False, privileged=False, ari
             _commands["reply"][func.__name__] = cmd
 
             for alias in aliases:
-                _commands["reply"][alias] = command
+                _commands["reply"][alias] = cmd
         else:
             _commands["prefix"][func.__name__] = cmd
 
@@ -227,17 +244,20 @@ def dispatch_command(msg, client):
         cmd, = command_parts
         args = ""
 
-    command_name = cmd[len(config.command_prefix):].lower()
+    command_name = cmd[3:].lower()
+
+    quiet_action = command_name[-1] == "-"
+    command_name = regex.sub(r"\W*$", "", command_name)
 
     if command_name not in _commands["prefix"]:
-        return "No such command %s." % command_name
+        return "No such command {}.".format(command_name)
     else:
         func, min_arity, max_arity = _commands["prefix"][command_name]
 
         if max_arity == 0:
-            return func(original_msg=msg)
+            return func(original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
         elif max_arity == 1:
-            return func(args, original_msg=msg)
+            return func(args, original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
         else:
             args = args.split() 
             args.extend([None] * (max_arity - len(args)))
@@ -247,11 +267,14 @@ def dispatch_command(msg, client):
             elif len(args) > max_arity:
                 return "Too many arguments."
             else:
-                return func(*args, original_msg=msg)
+                return func(*args, original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
 
 
 def dispatch_reply_command(msg, reply, cmd, client):
     cmd = cmd.lower()
+
+    quiet_action = cmd[-1] == "-"
+    cmd = regex.sub(r"\W*$", "", cmd)
 
     if cmd not in _commands["reply"]:
         return "No such command {}.".format(cmd)
@@ -260,7 +283,7 @@ def dispatch_reply_command(msg, reply, cmd, client):
 
         assert arity == 1
 
-        return func(msg, original_msg=reply)
+        return func(msg, original_msg=reply, alias_used=command_name, quiet_action=quiet_action)
 
 
 def dispatch_shorthand_command(msg, room, client):
@@ -275,9 +298,16 @@ def dispatch_shorthand_command(msg, room, client):
         for _ in range(int(count) if count else 1):
             processed_commands.append(cmd)
 
+    should_return_output = False
+
     for current_command, message in zip(processed_commands, get_last_messages(room, len(processed_commands))):
         if current_command != "-":
-            output.append("[:{}] {}".format 
-                          dispatch_reply_command(message, msg, current_command) or "<processed without return value>")
+            result = dispatch_reply_command(message, msg, current_command)
+
+            if result:
+                should_return_output = True
+                output.append("[:{}] {}".format(message.id, result))
+            else:
+                output.append("[:{}] <processed without return value>".format(message.id))
 
     return "\n".join(output)
