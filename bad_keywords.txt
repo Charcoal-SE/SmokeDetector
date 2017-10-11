@@ -132,7 +132,7 @@ Thierno(_| )?M.(_| )Sow
 maxtropin
 geniux
 we are a team of (highly|professionals)
-booty pop
+booty\W?pop
 Beard Czar
 Cianix
 (falcon|gladiator|tactical)\Wflashlights?
