@@ -1205,3 +1205,11 @@
 1507630851	Glorfindel	subhajitbiswas\.com
 1507630851	Glorfindel	drvikasgoswami\.com
 1507630851	Glorfindel	vrdhhigra
+1507634463	tripleee	proofreadmyfile\.com
+1507643717	quartata	artprepare\.com
+1507643761	Glorfindel	Z1APARTMENT
+1507643786	Glorfindel	landing\.vectera\.com
+1507643824	Glorfindel	fav\W*123stream
+1507643862	Glorfindel	hshare\.io
+1507648804	Glorfindel	classesatoz\.co\.uk
+1507679557	quartata	nairasleek\.info
