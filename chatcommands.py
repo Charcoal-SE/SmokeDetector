@@ -1102,10 +1102,10 @@ def report(msg, urls):
 #
 # Subcommands go below here
 # noinspection PyIncorrectDocstring,PyBroadException
-@command(message, reply=True, privileged=True, aliases=["del", "remove", "poof", "gone", "kaboom"])
-def delete(msg):
+@command(message, reply=True, privileged=True, aliases=["delete-force", "del-force", "remove-force", "poof-force", "gone-force", "kaboom-force"])
+def delete_force(msg):
     """
-    Attempts to delete a post from room
+    Delete a post from the room, ignoring protection for Charcoal HQ
     :param msg:
     :return: None
     """
@@ -1113,6 +1113,29 @@ def delete(msg):
         msg.delete()
     except:
         pass  # couldn't delete message
+
+
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyBroadException
+@command(message, reply=True, aliases=["del", "remove", "poof", "gone", "kaboom"])
+def delete(msg):
+    """
+    Delete a post from a chatroom, with an override for Charcoal HQ.
+    :param msg:
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
+    :return: None
+    """
+
+    if msg.room.id == 11540:
+        return "Messages from SmokeDetector in Charcoal HQ are generally kept "
+               "as records. If you really need to delete a message, please use "
+               "`sd delete-force`. See [this note on message deletion]"
+               "(https://charcoal-se.org/smokey/Commands"
+               "#a-note-on-message-deletion) for more details.")
+    else:
+        return delete_force(msg)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
