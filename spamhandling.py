@@ -4,7 +4,6 @@ from threading import Thread
 from findspam import FindSpam
 import datahandling
 import chatcommunicate
-import chatcommands
 from globalvars import GlobalVars
 from datetime import datetime
 import parsing
@@ -143,15 +142,15 @@ def handle_spam(post, reasons, why):
         message = prefix_ms + s
         if len(message) > 500:
             message = (prefix + s)[:500]
-        
-        without_roles = tuple("no-" + reason for reason in reason)
+
+        without_roles = tuple("no-" + reason for reason in reasons)
 
         if set(reason) & GlobalVars.experimental_reasons == {}:
-            chatcommunicate.tell_rooms(("debug", "site-"+post.post_site, "experimental"), 
-                                       without_roles, message, notify_site=post.post_site)
+            chatcommunicate.tell_rooms(message, ("all", "site-"+post.post_site, "experimental"), 
+                                       without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
         else:
-            chatcommunicate.tell_rooms(("debug", "site-"+post.post_site), 
-                       without_roles, message, notify_site=post.post_site)
+            chatcommunicate.tell_rooms(message, ("all", "site-"+post.post_site), 
+                       without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
     except:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         excepthook.uncaught_exception(exc_type, exc_obj, exc_tb)

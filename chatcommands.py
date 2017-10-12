@@ -1,6 +1,6 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
-from chatcommunicate import command, get_report_data, is_privileged, message, tell_rooms
+from chatcommunicate import block_room, command, get_report_data, is_privileged, message, tell_rooms
 from globalvars import GlobalVars
 from findspam import FindSpam
 # noinspection PyUnresolvedReferences
@@ -74,7 +74,7 @@ def approve(msg, pr_num):
         if resp.status_code == 200:
             return "Posted approval comment. PR will be merged automatically if it's a blacklist PR."
         else:
-            return "Forwarding request to metasmoke returned HTTP {}. Check status manually.".format(resp.status_code))
+            return "Forwarding request to metasmoke returned HTTP {}. Check status manually.".format(resp.status_code)
     else:
         raise Exception("You don't have permission to do that.")
 
@@ -161,8 +161,7 @@ def addwlu(user):
     elif int(uid) == -2:
         return "Error: {}".format(val)
     else:
-        return "Invalid format. Valid format: `!!/addwlu profileurl` *or* "
-                                             "`!!/addwlu userid sitename`."
+        return "Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`."
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
@@ -358,7 +357,7 @@ def remotediff():
     will_require_full_restart = "SmokeDetector will require a full restart to pull changes: " \
                                 "{}".format(str(not only_blacklists_changed(GitManager.get_remote_diff())))
 
-    return "{}\n\n{}".format(GitManager.get_remote_diff(), will_require_full_restart))
+    return "{}\n\n{}".format(GitManager.get_remote_diff(), will_require_full_restart)
 
 
 # --- Joke Commands --- #
@@ -381,7 +380,7 @@ def blame2(msg, x):
     return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name, msg._client.host, unlucky_victim.id)
 
 # noinspection PyIncorrectDocstring
-@command
+@command()
 def brownie():
     """
     Returns a string equal to "Brown!" (This is a joke command)
@@ -403,7 +402,7 @@ def coffee(msg, other_user):
 
 
 # noinspection PyIncorrectDocstring
-@command
+@command()
 def lick(*args, **kwargs):
     """
     Returns a string when a user says 'lick' (This is a joke command)
@@ -432,7 +431,7 @@ def tea(msg, other_user):
 
 
 # noinspection PyIncorrectDocstring
-@command
+@command()
 def wut():
     """
     Returns a string when a user asks 'wut' (This is a joke command)
@@ -475,18 +474,17 @@ def hats():
 
 # --- Block application from posting functions --- #
 # noinspection PyIncorrectDocstring
-@command(int, int, privileged=True, arity=(1, 2))
-def block(time, room_id):
+@command(int, int, whole_msg=True, privileged=True, arity=(1, 2))
+def block(msg, time, room_id):
     """
     Blocks posts from application for a period of time
     :param time:
     :param room_id:
     :return: A string
     """
-    if room_id is None:
+    time_to_block = time if 0 < time < 14400 else 900
+    block_room(room_id, msg._client.host, time.time() + time_to_block)
 
-    time_to_block = time_to_block if 0 < time_to_block < 14400 else 900
-    GlobalVars.blockedTime[room_id] = time.time() + time_to_block
     which_room = "globally" if room_id is None else "in room " + room_id
     report = "Reports blocked for {} seconds {}.".format(time, room_id)
 
@@ -495,7 +493,7 @@ def block(time, room_id):
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
-@command(int int, privileged=True, arity=(1, 2))
+@command(int, int, privileged=True, arity=(1, 2))
 def unblock(time, room_id):
     """
     Unblocks posting to a room
@@ -506,18 +504,17 @@ def unblock(time, room_id):
     :param kwargs: No additional arguments expected
     :return: A string
     """
-    room_id = message_parts[2] if len(message_parts) > 2 else "all"
-    GlobalVars.blockedTime[room_id] = time.time()
-    which_room = "globally" if room_id == "all" else "in room " + room_id
-    report = "Reports unblocked {}.".format(GlobalVars.blockedTime - time.time(), which_room)
+    block_room(room_id, msg._client.host, -1)
 
-    tell_rooms(report, ("debug", "metatavern"), ())
+    which_room = "globally" if room_id is None else "in room " + room_id
+
+    tell_rooms("Reports unblocked.", ("debug", "metatavern"), ())
     return report
 
 
 # --- Administration Commands --- #
 # noinspection PyIncorrectDocstring
-@command
+@command()
 def alive():
     """
     Returns a string indicating the process is still active
@@ -526,7 +523,7 @@ def alive():
     return random.choice(['Yup', 'You doubt me?', 'Of course',
                           '... did I miss something?', 'plz send teh coffee',
                           'Watching this endless list of new questions *never* gets boring',
-                          'Kinda sorta']))
+                          'Kinda sorta'])
 
 
 # noinspection PyIncorrectDocstring
@@ -564,15 +561,14 @@ def help():
     Returns the help text
     :return: A string
     """
-    return "I'm " + GlobalVars.chatmessage_prefix +
-           ", a bot that detects spam and offensive posts on the network and "
-           "posts alerts to chat. "
-           "[A command list is available here]"
-           "(https://charcoal-se.org/smokey/Commands).")
+    return "I'm " + GlobalVars.chatmessage_prefix +\
+           " a bot that detects spam and offensive posts on the network and"\
+           " posts alerts to chat."\
+           " [A command list is available here](https://charcoal-se.org/smokey/Commands)."
 
 
 # noinspection PyIncorrectDocstring
-@command
+@command()
 def location():
     """
     Returns the current location the application is running from
@@ -661,7 +657,7 @@ def amicodeprivileged(msg):
 
 
 # noinspection PyIncorrectDocstring
-@command
+@command()
 def apiquota():
     """
     Report how many API hits remain for the day
@@ -671,7 +667,7 @@ def apiquota():
 
 
 # noinspection PyIncorrectDocstring
-@command
+@command()
 def queuestatus():
     """
     Report current API queue
@@ -722,7 +718,7 @@ def td_format(td_object):
 
 
 # noinspection PyIncorrectDocstring
-@command
+@command()
 def status():
     """
     Returns the amount of time the application has been running
@@ -810,7 +806,7 @@ def test(content, alias_used="test"):
 
 
 # noinspection PyIncorrectDocstring
-@command
+@command()
 def threads():
     """
     Returns a description of current threads, for debugging
@@ -834,7 +830,7 @@ def version():
             id=GlobalVars.location,
             commit_name=GlobalVars.commit_with_author,
             commit_code=GlobalVars.commit['id'],
-            repository=GlobalVars.bot_repository))
+            repository=GlobalVars.bot_repository)
 
 
 # noinspection PyIncorrectDocstring
@@ -864,7 +860,7 @@ def pending(page):
     for post in posts['items']:
         messages.append("[{0}]({1}) ([MS](https://m.erwaysoftware.com/post/{0}))".format(post['id'], post['link']))
 
-    return ", ".join(messages))
+    return ", ".join(messages)
 
 
 # --- Notification functions --- #
@@ -898,8 +894,8 @@ def notify(msg, room_id, se_site):
     response, full_site = add_to_notification_list(msg.owner.id, msg._client.host, room_id, se_site)
 
     if response == 0:
-        return "You'll now get pings from me if I report a post on `{site}`, in room "
-               "`{room}` on `chat.{domain}`".format(site=se_site, room=room_id, domain=msg._client.host))
+        return "You'll now get pings from me if I report a post on `{site}`, in room "\
+               "`{room}` on `chat.{domain}`".format(site=se_site, room=room_id, domain=msg._client.host)
     elif response == -1:
         raise Exception("That notification configuration is already registered.")
     elif response == -2:
@@ -1005,8 +1001,8 @@ def unnotify(msg, room_id, se_site):
     response = remove_from_notification_list(msg.owner.id, msg._client.host, room_id, se_site)
 
     if response:
-        return "I will no longer ping you if I report a post on `{site}`, in room `{room}` "
-               "on `chat.{domain}`".format(site=se_site, room=room_id, domain=msg._client.host))
+        return "I will no longer ping you if I report a post on `{site}`, in room `{room}` "\
+               "on `chat.{domain}`".format(site=se_site, room=room_id, domain=msg._client.host)
 
     raise Exception("That configuration doesn't exist.")
 
@@ -1037,23 +1033,23 @@ def report(msg, urls):
     :param urls:
     :return: A string (or None)
     """
-    crn, wait = can_report_now(msg.owner.id, msg_client.host)
+    crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
-        raise Exception("You can execute the !!/report command again in {} seconds. "
-                        "To avoid one user sending lots of reports in a few commands and "
-                        "slowing SmokeDetector down due to rate-limiting, you have to "
-                        "wait 30 seconds after you've reported multiple posts using "
-                        "!!/report, even if your current command just has one URL. (Note "
-                        "that this timeout won't be applied if you only used !!/report "
+        raise Exception("You can execute the !!/report command again in {} seconds. "\
+                        "To avoid one user sending lots of reports in a few commands and "\
+                        "slowing SmokeDetector down due to rate-limiting, you have to "\
+                        "wait 30 seconds after you've reported multiple posts using "\
+                        "!!/report, even if your current command just has one URL. (Note "\
+                        "that this timeout won't be applied if you only used !!/report "\
                         "for one post)".format(wait))
 
     output = []
     urls = list(set(urls.split()))
 
     if len(urls) > 5:
-        raise Exception("To avoid SmokeDetector reporting posts too slowly, you can "
-                        "report at most 5 posts at a time. This is to avoid "
-                        "SmokeDetector's chat messages getting rate-limited too much, "
+        raise Exception("To avoid SmokeDetector reporting posts too slowly, you can "\
+                        "report at most 5 posts at a time. This is to avoid "\
+                        "SmokeDetector's chat messages getting rate-limited too much, "\
                         "which would slow down reports.")
 
     for index, url in enumerate(urls):
@@ -1080,6 +1076,7 @@ def report(msg, urls):
         user = get_user_from_url(post_data.owner_url)
 
         if user is not None:
+            message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
             add_blacklisted_user(user, message_url, post_data.post_url)
 
         why = u"Post manually reported by user *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
@@ -1095,7 +1092,7 @@ def report(msg, urls):
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
 
     if len(output) > 0:
-        return os.linesep.join(output))
+        return os.linesep.join(output)
 
 
 #
@@ -1129,11 +1126,11 @@ def delete(msg):
     """
 
     if msg.room.id == 11540:
-        return "Messages from SmokeDetector in Charcoal HQ are generally kept "
-               "as records. If you really need to delete a message, please use "
-               "`sd delete-force`. See [this note on message deletion]"
-               "(https://charcoal-se.org/smokey/Commands"
-               "#a-note-on-message-deletion) for more details.")
+        return "Messages from SmokeDetector in Charcoal HQ are generally kept "\
+               "as records. If you really need to delete a message, please use "\
+               "`sd delete-force`. See [this note on message deletion]"\
+               "(https://charcoal-se.org/smokey/Commands"\
+               "#a-note-on-message-deletion) for more details."
     else:
         return delete_force(msg)
 
@@ -1200,7 +1197,7 @@ def false(feedback, msg, alias_used="false"):
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
 @command(message, reply=True, privileged=True, whole_msg=True)
-def ignore(feedback, msg)
+def ignore(feedback, msg):
     """
     Marks a post to be ignored
     :param feedback:
@@ -1215,7 +1212,7 @@ def ignore(feedback, msg)
 
     send_metasmoke_feedback(post_url=post_url,
                             second_part_lower="ignore",
-                            ev_user_name=feedback.owner.name
+                            ev_user_name=feedback.owner.name,
                             ev_user_id=feedback.owner.id,
                             ev_chat_host=feedback._client.host)
 
@@ -1285,7 +1282,7 @@ def true(feedback, msg, alias_used=["true"]):
             add_blacklisted_user(user)
             return "Registered " + post_type + " as true positive and blacklisted user."
         else:
-            return "Registered " + post_type + " as true positive. If you want to "
+            return "Registered " + post_type + " as true positive. If you want to "\
                    "blacklist the poster, use `trueu` or `tpu`."
 
 

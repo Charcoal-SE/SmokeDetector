@@ -33,7 +33,6 @@ _clients = {
     "meta.stackexchange.com": None
 }
 
-_my_ids = {}
 _room_roles = {"commands": set()}
 _privileges = {}
 
@@ -72,7 +71,7 @@ def init(username, password):
             room = _clients[site].get_room(roomid)
 
             room.join()
-            room.watch(lambda msg, client: on_msg(msg, client, room))
+            room.watch_socket(lambda msg, client: on_msg(msg, client, room))
             _rooms[(site, roomid)] = RoomData(room, threading.Event(), -1, False)
             _rooms[(site, roomid)].lock.set()
 
@@ -83,28 +82,22 @@ def init(username, password):
 
 
 def parse_room_config():
-    global _room_roles
-
     with open("rooms.json5", "r") as room_config:
         room_dict = json5.load(room_config)
 
         for site, site_rooms in room_dict.items():
             for roomid, room in site_rooms.items():
-                if roomid == "id":
-                    _myids[site] = room
-                else:
-                    room_identifier = (site, roomid)
+                room_identifier = (site, int(roomid))
+                _privileges[room_identifier] = room["privileges"] if "privileges" in room else []
 
-                    _privileges[room_identifier] = room["privileges"] if "privileges" in room else None
+                if room["commands"]:
+                    _room_roles["commands"].add(room_identifier)
 
-                    if room["commands"]:
-                        _room_roles["commands"].add(room_identifier)
+                for perm in room["msg_types"]:
+                    if perm not in _room_roles:
+                        _room_roles[perm] = set()
 
-                    for perm in room["msg_types"]:
-                        if perm not in _room_roles:
-                            _room_roles[perm] = set()
-
-                        _room_roles[perm].add(room_identifier)
+                    _room_roles[perm].add(room_identifier)
 
 
 def pickle_last_messages():
@@ -138,47 +131,61 @@ def on_msg(msg, client, room):
 
             if room_data.last_report_data is not None:
                 _last_messages.reports[message.id] = room_data.last_report_data
-                room_data.last_report_data = ""
+                room_data.last_report_data = ()
 
             _pickle_run.set()
-        elif message.parent and message.parent.owner.id in config.my_ids:
+        elif message.parent and message.parent.owner.id == client._br.user_id:
             command = message.content.split(" ", 1)[1]
+            result = dispatch_reply_command(message.parent, message, command, client)
 
-            message.reply(dispatch_reply_command(message.parent, message, command, client))
+            if result:
+                message.reply(result)
         elif message.content.startswith("sd "):
-            message.reply(dispatch_shorthand_command(message, room, client))
+            result = dispatch_shorthand_command(message, room, client)
+
+            if result:
+                message.reply(result)
         elif message.content.startswith("!!/"):
-            message.reply(dispatch_command(message, client))
+            result = dispatch_command(message, client)
+
+            if result:
+                message.reply(result)
 
 
-def send_to_room(room, msg):
+def send_to_room(room, msg, report_data=()):
     timestamp = time.time()
 
     if room.block_time < timestamp and _global_block < timestamp:
         room.lock.wait()
         room.lock.clear()
 
+        if report_data:
+            room.last_report_data = report_data
+
         msg = msg.rstrip()
 
         room.room.send_message(msg)
 
 
-def tell_rooms_with(prop, msg, notify_site=""):
-    tell_rooms(msg, (prop,), (), notify_site=notify_site)
+def tell_rooms_with(prop, msg, notify_site="", report_data=()):
+    tell_rooms(msg, (prop,), (), notify_site=notify_site, report_data=report_data)
 
 
-def tell_rooms_without(prop, msg, notify_site=""):
-    tell_rooms(msg, (), (prop,), notify_site=notify_site)
+def tell_rooms_without(prop, msg, notify_site="", report_data=()):
+    tell_rooms(msg, (), (prop,), notify_site=notify_site, report_data=report_data)
 
 
-def tell_rooms(msg, has, hasnt, notify_site=""):
+def tell_rooms(msg, has, hasnt, notify_site="", report_data=()):
     global _rooms
 
     target_rooms = set()
 
     for prop_has in has:
+        if prop_has not in _room_roles:
+            continue
+
         for room in _room_roles[prop_has]:
-            if all(map(lambda prop_hasnt: room not in _room_roles[prop_hasnt], hasnt)):
+            if all(map(lambda prop: prop not in _room_roles or room not in _room_roles[prop], hasnt)):
                 if room not in _rooms:
                     site, roomid = room
 
@@ -192,14 +199,14 @@ def tell_rooms(msg, has, hasnt, notify_site=""):
 
     for room in target_rooms:
         if notify_site:
-            pings = datahandling.get_user_names_on_notification_list("stackexchange.com",
+            pings = datahandling.get_user_names_on_notification_list(room.room._client.host,
                                                                      room.room.id,
                                                                      notify_site,
-                                                                     room._client)
+                                                                     room.room._client)
 
-            msg += datahandling.append_pings(msg, pings)
+            msg = datahandling.append_pings(msg, pings)
 
-        send_to_room(room, msg)
+        send_to_room(room, msg, report_data=report_data)
 
 
 def get_last_messages(room, count):
@@ -216,6 +223,13 @@ def get_report_data(message):
 
 def is_privileged(user, room):
     return user.id in _privileges[(room._client.host, room.id)] or user.is_moderator
+
+
+def block_room(room_id, site, time):
+    if room_id is None:
+        _global_block = time
+    else:
+        _room_data[(site, room_id)].block_time = time
 
 
 def command(*type_signature, reply=False, whole_msg=False, privileged=False, arity=None, aliases=None, give_name=False):
@@ -280,7 +294,7 @@ def dispatch_command(msg, client):
     if command_name not in _commands["prefix"]:
         return "No such command {}.".format(command_name)
     else:
-        func, min_arity, max_arity = _commands["prefix"][command_name]
+        func, (min_arity, max_arity) = _commands["prefix"][command_name]
 
         if max_arity == 0:
             return func(original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
@@ -309,9 +323,9 @@ def dispatch_reply_command(msg, reply, cmd, client):
     else:
         func, arity = _commands["reply"][cmd]
 
-        assert arity == 1
+        assert arity == (1, 1)
 
-        return func(msg, original_msg=reply, alias_used=command_name, quiet_action=quiet_action)
+        return func(msg, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
 
 
 def dispatch_shorthand_command(msg, room, client):
