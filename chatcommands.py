@@ -1,6 +1,6 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
-from chatcommunicate import command, get_report_data, message, tell_rooms
+from chatcommunicate import command, get_report_data, is_privileged, message, tell_rooms
 from globalvars import GlobalVars
 from findspam import FindSpam
 # noinspection PyUnresolvedReferences
@@ -640,7 +640,7 @@ def amiprivileged(msg):
     :param msg:
     :return: A string
     """
-    if is_privileged(msg.room, msg.owner.id, msg._client):
+    if is_privileged(msg.room, msg.owner):
         return "\u2713 You are a privileged user."
 
     return "\u2573 " + GlobalVars.not_privileged_warning

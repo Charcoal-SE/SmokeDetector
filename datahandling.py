@@ -25,10 +25,6 @@ def _load_pickle(path, encoding='utf-8'):
             if "apicalls" in path.lower():
                 return {}
 
-            if "latestmessages" in path.lower():
-                return {GlobalVars.meta_tavern_room_id: [], GlobalVars.charcoal_room_id: [],
-                        GlobalVars.socvr_room_id: [], '111347': []}
-
             if "bodyfetcher" in path.lower():
                 return {}
         except EOFError:
@@ -57,8 +53,6 @@ def load_files():
         GlobalVars.why_data = _load_pickle("whyData.p", encoding='utf-8')
     if os.path.isfile("whyDataAllspam.p"):
         GlobalVars.why_data_allspam = _load_pickle("whyDataAllspam.p", encoding='utf-8')
-    if os.path.isfile("latestMessages.p"):
-        GlobalVars.latest_smokedetector_messages = _load_pickle("latestMessages.p", encoding='utf-8')
     if os.path.isfile("apiCalls.p"):
         GlobalVars.api_calls_per_site = _load_pickle("apiCalls.p", encoding='utf-8')
     if os.path.isfile("bodyfetcherQueue.p"):
@@ -124,22 +118,14 @@ def is_auto_ignored_post(postid_site_tuple):
     return False
 
 
-# noinspection PyMissingTypeHints
-def is_privileged(room_id_str, user_id_str, wrap2):
-    if room_id_str in GlobalVars.privileged_users and user_id_str in GlobalVars.privileged_users[room_id_str]:
-        return True
-    user = wrap2.get_user(user_id_str)
-    return user.is_moderator
-
-
 # noinspection PyUnusedLocal
-def is_code_privileged(room_id_str, user_id_str, wrap2):
+def is_code_privileged(site, user_id):
     if GlobalVars.code_privileged_users is None:
         metasmoke.Metasmoke.update_code_privileged_users_list()
 
-    if room_id_str in GlobalVars.code_privileged_users \
-            and int(user_id_str) in GlobalVars.code_privileged_users[room_id_str]:
+    if (site, user_id) in GlobalVars.code_privileged_users:
         return True
+
     return False  # For now, disable the moderator override on code/blacklist changes
 
 # methods to add/remove whitelisted/blacklisted users, ignored posts, ...

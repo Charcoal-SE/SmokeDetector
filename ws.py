@@ -134,9 +134,9 @@ ws = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
 ws.send("155-questions-active")
 
 if "first_start" in sys.argv and GlobalVars.on_master:
-    tell_rooms_with("debug", GlobalVars.s)
+    chatcommunicate.tell_rooms_with("debug", GlobalVars.s)
 elif "first_start" in sys.argv and not GlobalVars.on_master:
-    tell_rooms_with("debug", GlobalVars.s_reverted)
+    chatcommunicate.tell_rooms_with("debug", GlobalVars.s_reverted)
 
 Metasmoke.send_status_ping()  # This will call itself every minute or so
 threading.Timer(600, Metasmoke.send_statistics).start()

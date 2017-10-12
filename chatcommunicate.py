@@ -8,14 +8,22 @@ import os.path
 import pickle
 import regex
 import threading
+import time
 
+import datahandling
 from globalvars import GlobalVars
 from parsing import fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
 
 
-RoomData = collections.namedtuple("RoomData", ["room", "lock", "block_time", "last_report_data"])
+class RoomData:
+    def __init__(self, room, lock, block_time, last_report_data):
+        self.room = room
+        self.lock = lock
+        self.block_time = block_time
+        self.last_report_data = last_report_data
+
+
 LastMessages = collections.namedtuple("LastMessages", ["messages", "reports"])
-Command = collections.namedtuple("Command", ["func", "arity"])
 
 _commands = {"reply": {}, "prefix": {}}
 
@@ -26,9 +34,10 @@ _clients = {
 }
 
 _my_ids = {}
-_room_roles = {}
+_room_roles = {"commands": set()}
 _privileges = {}
 
+_global_block = -1
 _rooms = {}
 _room_data = {}
 _last_messages = LastMessages({}, {})
@@ -58,12 +67,14 @@ def init(username, password):
 
     parse_room_config()
 
-    for site, roomid in _room_roles["commands"]:
-        room = _clients[site].get_room(roomid)
+    if not GlobalVars.standby_mode:
+        for site, roomid in _room_roles["commands"]:
+            room = _clients[site].get_room(roomid)
 
-        room.join()
-        room.watch(lambda msg, client: on_msg(msg, client, room))
-        _rooms[(site, roomid)] = RoomData(room, threading.Event(), -1, False)
+            room.join()
+            room.watch(lambda msg, client: on_msg(msg, client, room))
+            _rooms[(site, roomid)] = RoomData(room, threading.Event(), -1, False)
+            _rooms[(site, roomid)].lock.set()
 
     if os.path.isfile("messageData.p"):
         _last_messages = pickle.load(open("messageData.p", "rb"))
@@ -72,6 +83,8 @@ def init(username, password):
 
 
 def parse_room_config():
+    global _room_roles
+
     with open("rooms.json5", "r") as room_config:
         room_dict = json5.load(room_config)
 
@@ -82,10 +95,13 @@ def parse_room_config():
                 else:
                     room_identifier = (site, roomid)
 
-                    _privileges[room] = room["privileges"] if "privileges" in room else None
+                    _privileges[room_identifier] = room["privileges"] if "privileges" in room else None
+
+                    if room["commands"]:
+                        _room_roles["commands"].add(room_identifier)
 
                     for perm in room["msg_types"]:
-                        if perm not in _rooms_roles:
+                        if perm not in _room_roles:
                             _room_roles[perm] = set()
 
                         _room_roles[perm].add(room_identifier)
@@ -96,7 +112,7 @@ def pickle_last_messages():
         _pickle_run.wait()
         _pickle_run.clear()
 
-        with open("../pickles/last_messages.pck", "wb") as pickle_file:
+        with open("messageData.p", "wb") as pickle_file:
             pickle.dump(_last_messages, pickle_file)
 
 
@@ -108,7 +124,7 @@ def on_msg(msg, client, room):
             identifier = (client.host, room.id)
             room_data = _rooms[identifier]
 
-            room_data.lock.clear()
+            room_data.lock.set()
 
             if identifier not in _last_messages.messages:
                 _last_messages.messages[identifier] = collections.deque((message.id,))
@@ -135,28 +151,27 @@ def on_msg(msg, client, room):
             message.reply(dispatch_command(message, client))
 
 
-def send_to_room(room, msg, prefix=False):
-    if room.block_time < time.time():
+def send_to_room(room, msg):
+    timestamp = time.time()
+
+    if room.block_time < timestamp and _global_block < timestamp:
         room.lock.wait()
+        room.lock.clear()
 
         msg = msg.rstrip()
 
-        if prefix:
-            msg = GlobalVars.chatmessage_prefix + msg
-
-        room.lock.set()
         room.room.send_message(msg)
 
 
-def tell_rooms_with(prop, msg, prefix=False):
-    tell_rooms(msg, (prop,), (), prefix=prefix)
+def tell_rooms_with(prop, msg, notify_site=""):
+    tell_rooms(msg, (prop,), (), notify_site=notify_site)
 
 
-def tell_rooms_without(prop, msg, prefix=False):
-    tell_rooms(msg, (), (prop,), prefix=prefix)
+def tell_rooms_without(prop, msg, notify_site=""):
+    tell_rooms(msg, (), (prop,), notify_site=notify_site)
 
 
-def tell_rooms(msg, has, hasnt, prefix=False):
+def tell_rooms(msg, has, hasnt, notify_site=""):
     global _rooms
 
     target_rooms = set()
@@ -171,11 +186,20 @@ def tell_rooms(msg, has, hasnt, prefix=False):
                     new_room.join()
 
                     _rooms[room] = RoomData(new_room, threading.Event(), -1, False)
+                    _rooms[room].lock.set()
 
                 target_rooms.add(_rooms[room])
 
     for room in target_rooms:
-        send_to_room(room, msg, prefix=prefix)
+        if notify_site:
+            pings = datahandling.get_user_names_on_notification_list("stackexchange.com",
+                                                                     room.room.id,
+                                                                     notify_site,
+                                                                     room._client)
+
+            msg += datahandling.append_pings(msg, pings)
+
+        send_to_room(room, msg)
 
 
 def get_last_messages(room, count):
@@ -190,13 +214,17 @@ def get_report_data(message):
         return (fetch_post_url_from_msg_content(message.content), fetch_owner_url_from_msg_content(message.content))
 
 
+def is_privileged(user, room):
+    return user.id in _privileges[(room._client.host, room.id)] or user.is_moderator
+
+
 def command(*type_signature, reply=False, whole_msg=False, privileged=False, arity=None, aliases=None, give_name=False):
     if aliases is None:
         aliases = []
 
     def decorator(func):
         def f(*args, original_msg=None, alias_used=None, quiet_action=False):
-            if privileged and original_msg.user.id not in _privileges[original_msg.room.id]:
+            if privileged and not is_privileged(original_msg.owner, original_msg.room):
                 return GlobalVars.not_privileged_warning
 
             if whole_msg:
