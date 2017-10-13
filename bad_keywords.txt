@@ -27,7 +27,7 @@ Alpha\W?(x\W?)?(Rush|Fuel|XTRM|levo|max|prime|force\Wtesto|monster\Wadvanced|mus
 exoslim
 blackline\W?elite
 testcore\W?pro
-blank(ed)? ?ATM\b( card)?
+blank(ed)?\W?ATM(\W?cards?)?
 ATM{W?machine\W?vault
 xtreme\W?antler
 maxx\W?test\W?3000

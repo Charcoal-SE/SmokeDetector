@@ -42,7 +42,6 @@
 1495166536	tripleee	test[ \-]reload
 1495172088	tripleee	healthoptionbooklet\.com
 1495172199	tripleee	parisian\Wsecret
-1495173474	tripleee	blank\Watm\Wcards?
 1495427162	tripleee	ultraburn
 1495432167	tripleee	avanti\W?skin
 1495436456	tripleee	admit-card\.co\.in
