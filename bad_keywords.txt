@@ -28,7 +28,7 @@ exoslim
 blackline\W?elite
 testcore\W?pro
 blank(ed)?\W?ATM(\W?cards?)?
-ATM{W?machine\W?vault
+ATM\W?machine\W?vault
 xtreme\W?antler
 maxx\W?test\W?3000
 orvigomax
