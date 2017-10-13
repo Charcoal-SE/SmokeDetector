@@ -749,7 +749,7 @@ super\W?trim\W?500
 silqueskin
 serafina\W?deluxe
 vigostren
-alpha\W?x\W?booster
+alpha\W?xl?\W?(boost(?:er?)|factor)
 androforce\W?x10
 folicillium
 invigorate\W?rx
@@ -762,7 +762,6 @@ r-hub
 liquid\W?tree
 puravida
 le\W?juve
-alpha\W?x\W?factor
 Pure\W?Radiance
 neurovarium
 bioregen
