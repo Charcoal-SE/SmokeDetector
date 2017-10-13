@@ -12,7 +12,6 @@ import deletionwatcher
 import excepthook
 # noinspection PyCompatibility
 import regex
-import time
 from classes import Post, PostParseError
 from helpers import log
 
@@ -146,11 +145,11 @@ def handle_spam(post, reasons, why):
         without_roles = tuple("no-" + reason for reason in reasons)
 
         if set(reason) & GlobalVars.experimental_reasons == {}:
-            chatcommunicate.tell_rooms(message, ("all", "site-"+post.post_site, "experimental"), 
+            chatcommunicate.tell_rooms(message, ("experimental"),
                                        without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
         else:
-            chatcommunicate.tell_rooms(message, ("all", "site-"+post.post_site), 
-                       without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
+            chatcommunicate.tell_rooms(message, ("all", "site-" + post.post_site),
+                                       without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
     except:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         excepthook.uncaught_exception(exc_type, exc_obj, exc_tb)
@@ -160,8 +159,9 @@ def handle_user_with_all_spam(user, why):
     user_id = user[0]
     site = user[1]
     tab = "activity" if site == "stackexchange.com" else "topactivity"
-    s = "[ [SmokeDetector](//git.io/vgx7b) ] All of this user's posts are spam: [user {} on {}](//{}/users/{}?tab={})" \
-        .format(user_id, site, site, user_id, tab)
+    s = "[ [SmokeDetector](//git.io/vgx7b) ] All of this user's posts are spam:" \
+        " [user {} on {}](//{}/users/{}?tab={})".format(user_id, site, site, user_id, tab)
+
     log('debug', GlobalVars.parser.unescape(s).encode('ascii', errors='replace'))
     datahandling.add_why_allspam(user, why)
 

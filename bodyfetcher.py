@@ -290,7 +290,7 @@ class BodyFetcher:
                     sanatized_site_name = site_name.replace('.com', '').replace('.stackexchange', '')
                     api_quota_used_per_site += sanatized_site_name + ": {0}\n".format(str(quota_used))
                 api_quota_used_per_site = api_quota_used_per_site.strip()
-    
+
                 tell_rooms_with("debug", api_quota_used_per_site)
                 clear_api_data()
             if response["quota_remaining"] == 0:

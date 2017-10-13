@@ -70,7 +70,7 @@ def send_metasmoke_feedback(post_url, second_part_lower, ev_user_name, ev_user_i
 def approve(msg, pr_num):
     if is_code_privileged(msg.room, msg.owner.id, msg._client):
         resp = requests.post('{}/github/pr_approve/{}'.format(GlobalVars.metasmoke_host, pr_num))
-        
+
         if resp.status_code == 200:
             return "Posted approval comment. PR will be merged automatically if it's a blacklist PR."
         else:
@@ -365,7 +365,9 @@ def remotediff():
 def blame(msg):
     unlucky_victim = msg._client.get_user(random.choice(msg.room.get_current_user_ids()))
 
-    return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name, msg._client.host, unlucky_victim.id)
+    return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
+                                                                 msg._client.host,
+                                                                 unlucky_victim.id)
 
 
 @command(str, whole_msg=True, aliases=["blame\u180E"])
@@ -377,7 +379,10 @@ def blame2(msg, x):
         user += (len(base)**i) * base[char]
 
     unlucky_victim = msg._client.get_user(user)
-    return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name, msg._client.host, unlucky_victim.id)
+    return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
+                                                                 msg._client.host,
+                                                                 unlucky_victim.id)
+
 
 # noinspection PyIncorrectDocstring
 @command()
@@ -486,7 +491,7 @@ def block(msg, time, room_id):
     block_room(room_id, msg._client.host, time.time() + time_to_block)
 
     which_room = "globally" if room_id is None else "in room " + room_id
-    report = "Reports blocked for {} seconds {}.".format(time, room_id)
+    report = "Reports blocked for {} seconds {}.".format(time, which_room)
 
     tell_rooms(report, ("debug", "metatavern"), ())
     return report
@@ -507,8 +512,9 @@ def unblock(time, room_id):
     block_room(room_id, msg._client.host, -1)
 
     which_room = "globally" if room_id is None else "in room " + room_id
+    report = "Reports unblocked {}.".format(which_room)
 
-    tell_rooms("Reports unblocked.", ("debug", "metatavern"), ())
+    tell_rooms(report, ("debug", "metatavern"), ())
     return report
 
 
@@ -790,18 +796,18 @@ def test(content, alias_used="test"):
         fakepost = Post(api_response={'title': content, 'body': content,
                                       'owner': {'display_name': content, 'reputation': 1, 'link': ''},
                                       'site': "", 'IsAnswer': False, 'score': 0})
-    
+
     reasons, why = FindSpam.test_post(fakepost)
 
     if len(reasons) == 0:
         result += "Would not be caught as a{}".format(kind)
     else:
         result += ", ".join(reasons).capitalize()
-    
+
         if why is not None and len(why) > 0:
             result += "\n----------\n"
             result += why
-    
+
     return result
 
 
@@ -826,11 +832,10 @@ def version():
     :return: A string
     """
 
-    return '{id} [{commit_name}]({repository}/commit/{commit_code})'.format(
-            id=GlobalVars.location,
-            commit_name=GlobalVars.commit_with_author,
-            commit_code=GlobalVars.commit['id'],
-            repository=GlobalVars.bot_repository)
+    return '{id} [{commit_name}]({repository}/commit/{commit_code})'.format(id=GlobalVars.location,
+                                                                            commit_name=GlobalVars.commit_with_author,
+                                                                            commit_code=GlobalVars.commit['id'],
+                                                                            repository=GlobalVars.bot_repository)
 
 
 # noinspection PyIncorrectDocstring
@@ -1035,21 +1040,21 @@ def report(msg, urls):
     """
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
-        raise Exception("You can execute the !!/report command again in {} seconds. "\
-                        "To avoid one user sending lots of reports in a few commands and "\
-                        "slowing SmokeDetector down due to rate-limiting, you have to "\
-                        "wait 30 seconds after you've reported multiple posts using "\
-                        "!!/report, even if your current command just has one URL. (Note "\
-                        "that this timeout won't be applied if you only used !!/report "\
+        raise Exception("You can execute the !!/report command again in {} seconds. "
+                        "To avoid one user sending lots of reports in a few commands and "
+                        "slowing SmokeDetector down due to rate-limiting, you have to "
+                        "wait 30 seconds after you've reported multiple posts using "
+                        "!!/report, even if your current command just has one URL. (Note "
+                        "that this timeout won't be applied if you only used !!/report "
                         "for one post)".format(wait))
 
     output = []
     urls = list(set(urls.split()))
 
     if len(urls) > 5:
-        raise Exception("To avoid SmokeDetector reporting posts too slowly, you can "\
-                        "report at most 5 posts at a time. This is to avoid "\
-                        "SmokeDetector's chat messages getting rate-limited too much, "\
+        raise Exception("To avoid SmokeDetector reporting posts too slowly, you can "
+                        "report at most 5 posts at a time. This is to avoid "
+                        "SmokeDetector's chat messages getting rate-limited too much, "
                         "which would slow down reports.")
 
     for index, url in enumerate(urls):
@@ -1099,7 +1104,10 @@ def report(msg, urls):
 #
 # Subcommands go below here
 # noinspection PyIncorrectDocstring,PyBroadException
-@command(message, reply=True, privileged=True, aliases=["delete-force", "del-force", "remove-force", "poof-force", "gone-force", "kaboom-force"])
+DELETE_ALIASES = ["delete", "del", "remove", "poof", "gone", "kaboom"]
+
+
+@command(message, reply=True, privileged=True, aliases=[alias + "-force" for alias in DELETE_ALIASES])
 def delete_force(msg):
     """
     Delete a post from the room, ignoring protection for Charcoal HQ
@@ -1113,7 +1121,7 @@ def delete_force(msg):
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal,PyBroadException
-@command(message, reply=True, aliases=["del", "remove", "poof", "gone", "kaboom"])
+@command(message, reply=True, aliases=DELETE_ALIASES)
 def delete(msg):
     """
     Delete a post from a chatroom, with an override for Charcoal HQ.
@@ -1187,12 +1195,11 @@ def false(feedback, msg, alias_used="false"):
         else:
             return "Registered " + post_type + " as false positive."
 
-
-    #try:
-    #    if int(msg.room.id) != int(GlobalVars.charcoal_hq.id):
-    #        msg.delete()
-    #except:
-    #    pass
+    # try:
+    #     if int(msg.room.id) != int(GlobalVars.charcoal_hq.id):
+    #         msg.delete()
+    # except:
+    #     pass
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
@@ -1254,7 +1261,7 @@ def naa(feedback, msg, alias_used="naa"):
 
 
 # noinspection PyIncorrectDocstring
-@command(message, reply=True, privileged=True, whole_msg=True, give_name=True, 
+@command(message, reply=True, privileged=True, whole_msg=True, give_name=True,
          aliases=["tp", "tpu", "trueu", "rude", "abusive", "vandalism", "v"])
 def true(feedback, msg, alias_used=["true"]):
     """
@@ -1284,7 +1291,6 @@ def true(feedback, msg, alias_used=["true"]):
         else:
             return "Registered " + post_type + " as true positive. If you want to "\
                    "blacklist the poster, use `trueu` or `tpu`."
-
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -1324,7 +1330,7 @@ def autoflagged(msg):
     post_data = get_report_data(msg)
 
     if not post_data:
-         raise Exception("That's not a report.")
+        raise Exception("That's not a report.")
 
     autoflagged, names = Metasmoke.determine_if_autoflagged(post_data[0])
 

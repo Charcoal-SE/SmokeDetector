@@ -304,7 +304,6 @@ class Metasmoke:
         except Exception as e:
             log('error', e)
 
-
     @staticmethod
     def update_code_privileged_users_list():
         payload = {'key': GlobalVars.metasmoke_key}
@@ -322,7 +321,6 @@ class Metasmoke:
 
         for id in response["stackoverflow_chat_ids"]:
             set.add(("stackoverflow.com", id))
-
 
     @staticmethod
     def determine_if_autoflagged(post_url):

@@ -226,6 +226,8 @@ def is_privileged(user, room):
 
 
 def block_room(room_id, site, time):
+    global _global_block
+
     if room_id is None:
         _global_block = time
     else:
@@ -301,7 +303,7 @@ def dispatch_command(msg, client):
         elif max_arity == 1:
             return func(args, original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
         else:
-            args = args.split() 
+            args = args.split()
             args.extend([None] * (max_arity - len(args)))
 
             if len(args) < min_arity:

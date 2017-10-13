@@ -2,7 +2,6 @@
 
 import os
 from datetime import datetime
-from chatexchange_extension import Client
 from html.parser import HTMLParser
 from html import unescape
 from hashlib import md5

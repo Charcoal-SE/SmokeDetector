@@ -123,7 +123,8 @@ def is_code_privileged(site, user_id):
     if GlobalVars.code_privileged_users is None:
         metasmoke.Metasmoke.update_code_privileged_users_list()
 
-    return (site, user_id) in GlobalVars.code_privileged_users # For now, disable the moderator override on code/blacklist changes
+    # For now, disable the moderator override on code/blacklist changes
+    return (site, user_id) in GlobalVars.code_privileged_users
 
 # methods to add/remove whitelisted/blacklisted users, ignored posts, ...
 
