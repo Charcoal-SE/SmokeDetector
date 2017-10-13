@@ -48,7 +48,6 @@
 1495432167	tripleee	avanti\W?skin
 1495436456	tripleee	admit-card\.co\.in
 1495437072	tripleee	auvela\W?cream
-1495437282	tripleee	auvelacreamreviews\.com
 1495456863	tripleee	testoultrastore\.com
 1495463389	tripleee	800-935-8563
 1495513790	tripleee	robdutoitsoftware\.com
