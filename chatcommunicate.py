@@ -38,7 +38,6 @@ _privileges = {}
 
 _global_block = -1
 _rooms = {}
-_room_data = {}
 _last_messages = LastMessages({}, {})
 
 _pickle_run = threading.Event()
@@ -136,17 +135,17 @@ def on_msg(msg, client, room):
             _pickle_run.set()
         elif message.parent and message.parent.owner.id == client._br.user_id:
             command = message.content.split(" ", 1)[1]
-            result = dispatch_reply_command(message.parent, message, command, client)
+            result = dispatch_reply_command(message.parent, message, command)
 
             if result:
                 message.reply(result)
         elif message.content.startswith("sd "):
-            result = dispatch_shorthand_command(message, room, client)
+            result = dispatch_shorthand_command(message, room)
 
             if result:
                 message.reply(result)
         elif message.content.startswith("!!/"):
-            result = dispatch_command(message, client)
+            result = dispatch_command(message)
 
             if result:
                 message.reply(result)
@@ -231,7 +230,7 @@ def block_room(room_id, site, time):
     if room_id is None:
         _global_block = time
     else:
-        _room_data[(site, room_id)].block_time = time
+        _rooms[(site, room_id)].block_time = time
 
 
 def command(*type_signature, reply=False, whole_msg=False, privileged=False, arity=None, aliases=None, give_name=False):
@@ -279,7 +278,7 @@ def message(msg):
     return msg
 
 
-def dispatch_command(msg, client):
+def dispatch_command(msg):
     command_parts = msg.content.split(" ", 1)
 
     if len(command_parts) == 2:
@@ -301,7 +300,7 @@ def dispatch_command(msg, client):
         if max_arity == 0:
             return func(original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
         elif max_arity == 1:
-            return func(args, original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
+            return func(args or None, original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
         else:
             args = args.split()
             args.extend([None] * (max_arity - len(args)))
@@ -314,8 +313,8 @@ def dispatch_command(msg, client):
                 return func(*args, original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
 
 
-def dispatch_reply_command(msg, reply, cmd, client):
-    cmd = cmd.lower()
+def dispatch_reply_command(msg, reply, command_name):
+    cmd = command_name.lower()
 
     quiet_action = cmd[-1] == "-"
     cmd = regex.sub(r"\W*$", "", cmd)
@@ -330,7 +329,7 @@ def dispatch_reply_command(msg, reply, cmd, client):
         return func(msg, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
 
 
-def dispatch_shorthand_command(msg, room, client):
+def dispatch_shorthand_command(msg, room):
     commands = msg.content[3:].split()
 
     output = []
@@ -345,7 +344,9 @@ def dispatch_shorthand_command(msg, room, client):
     should_return_output = False
 
     for current_command, message in zip(processed_commands, get_last_messages(room, len(processed_commands))):
-        if current_command != "-":
+        if current_command == "-":
+            output.append("[:{}] <skipped>".format(message.id))
+        else:
             result = dispatch_reply_command(message, msg, current_command)
 
             if result:

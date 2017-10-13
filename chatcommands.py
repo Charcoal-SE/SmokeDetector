@@ -480,18 +480,18 @@ def hats():
 # --- Block application from posting functions --- #
 # noinspection PyIncorrectDocstring
 @command(int, int, whole_msg=True, privileged=True, arity=(1, 2))
-def block(msg, time, room_id):
+def block(msg, block_time, room_id):
     """
     Blocks posts from application for a period of time
-    :param time:
+    :param t:
     :param room_id:
     :return: A string
     """
-    time_to_block = time if 0 < time < 14400 else 900
+    time_to_block = block_time if 0 < block_time < 14400 else 900
     block_room(room_id, msg._client.host, time.time() + time_to_block)
 
     which_room = "globally" if room_id is None else "in room " + room_id
-    report = "Reports blocked for {} seconds {}.".format(time, which_room)
+    report = "Reports blocked for {} seconds {}.".format(time_to_block, which_room)
 
     tell_rooms(report, ("debug", "metatavern"), ())
     return report
@@ -1283,6 +1283,7 @@ def true(feedback, msg, alias_used=["true"]):
                             ev_chat_host=feedback._client.host)
 
     user = get_user_from_url(owner_url)
+    _, _, post_type = fetch_post_id_and_site_from_url(post_url)
 
     if user is not None:
         if alias_used.startswith("trueu") or alias_used.startswith("tpu"):
