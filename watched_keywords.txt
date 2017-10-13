@@ -56,7 +56,6 @@
 1495519138	tripleee	comfort\Wcube
 1495520576	tripleee	guestvalet\.com
 1495524143	tripleee	cheapmanuals\.com
-1495530463	tripleee	dealhitch\.com
 1495538675	tripleee	mansix\.net
 1495538921	tripleee	donboscobangalore\.education
 1495539082	tripleee	crazyjar\.com
