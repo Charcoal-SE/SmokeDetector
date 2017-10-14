@@ -104,7 +104,7 @@ stackexchange.com:
 
   3877:  # Raiders of the Lost Downboat
     commands: false
-    # watcher: true
+    watcher: true
     msg_types:
       - site-askubuntu.com
 
@@ -190,7 +190,7 @@ stackexchange.com:
 meta.stackexchange.com:
   89:  # Tavern on the Meta
     commands: true
-    # watcher: true
+    watcher: true
 
     msg_types:
       - all
@@ -289,7 +289,7 @@ meta.stackexchange.com:
 stackoverflow.com:
   41570:  # SOCVR
     commands: true
-    # watcher: true
+    watcher: true
 
     msg_types:
       - site-stackoverflow.com
