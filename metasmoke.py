@@ -357,8 +357,9 @@ class Metasmoke:
 
         headers = {'Content-type': 'application/json'}
 
-        requests.post(GlobalVars.metasmoke_host + "/statistics.json",
-                      data=json.dumps(payload), headers=headers)
+        if GlobalVars.metasmoke_host is not None:
+            requests.post(GlobalVars.metasmoke_host + "/statistics.json",
+                          data=json.dumps(payload), headers=headers)
 
         if should_repeat:
             threading.Timer(600, Metasmoke.send_statistics).start()
