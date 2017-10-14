@@ -92,7 +92,9 @@ def addblu(msg, user):
     uid, val = get_user_from_list_command(user)
 
     if int(uid) > -1 and val != "":
-        add_blacklisted_user((uid, val), msg.url, "")
+        message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
+
+        add_blacklisted_user((uid, val), message_url, "")
         return "User blacklisted (`{}` on `{}`).".format(uid, val)
     elif int(uid) == -2:
         raise Exception("Error: {}".format(val))
@@ -533,8 +535,8 @@ def alive():
 
 
 # noinspection PyIncorrectDocstring
-@command(str, privileged=True, aliases=["reportuser"])
-def allspam(url):
+@command(str, whole_msg=True, privileged=True, aliases=["reportuser"])
+def allspam(msg, url):
     """
     Reports all of a user's posts as spam
     :param url:
@@ -545,7 +547,7 @@ def allspam(url):
     if user is None:
         raise Exception("That doesn't look like a valid user URL.")
 
-    why = u"User manually reported by *{}* in room *{}*.\n".format(ev_user_name, ev_room_name.decode('utf-8'))
+    why = u"User manually reported by *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
     handle_user_with_all_spam(user, why)
 
 
@@ -642,7 +644,7 @@ def amiprivileged(msg):
     :param msg:
     :return: A string
     """
-    if is_privileged(msg.room, msg.owner):
+    if is_privileged(msg.owner, msg.room):
         return "\u2713 You are a privileged user."
 
     return "\u2573 " + GlobalVars.not_privileged_warning
@@ -761,7 +763,7 @@ def standby(msg, location):
 
 
 # noinspection PyIncorrectDocstring
-@command(str, aliases=["test-q, test-a, test-u, test-t"], give_name=True)
+@command(str, aliases=["test-q", "test-a", "test-u", "test-t"], give_name=True)
 def test(content, alias_used="test"):
     """
     Test an answer to determine if it'd be automatically reported
@@ -1121,15 +1123,11 @@ def delete_force(msg):
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal,PyBroadException
-@command(message, reply=True, aliases=DELETE_ALIASES)
+@command(message, reply=True, privileged=True, aliases=DELETE_ALIASES)
 def delete(msg):
     """
     Delete a post from a chatroom, with an override for Charcoal HQ.
     :param msg:
-    :param wrap2:
-    :param ev_user_id:
-    :param ev_room:
-    :param kwargs: No additional arguments expected
     :return: None
     """
 
@@ -1140,7 +1138,10 @@ def delete(msg):
                "(https://charcoal-se.org/smokey/Commands"\
                "#a-note-on-message-deletion) for more details."
     else:
-        return delete_force(msg)
+        try:
+            msg.delete()
+        except:
+            pass
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -1285,13 +1286,14 @@ def true(feedback, msg, alias_used=["true"]):
 
     user = get_user_from_url(owner_url)
     _, _, post_type = fetch_post_id_and_site_from_url(post_url)
+    message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
 
     if user is not None:
         if alias_used == "k":
-            add_blacklisted_user(user)
+            add_blacklisted_user(user, message_url, post_url)
             return
         elif alias_used[-1] == "u":
-            add_blacklisted_user(user)
+            add_blacklisted_user(user, message_url, post_url)
             return "Registered " + post_type + " as true positive and blacklisted user."
         else:
             return "Registered " + post_type + " as true positive. If you want to "\
@@ -1313,12 +1315,11 @@ def why(msg):
         if not post_data:
             raise Exception("That's not a report.")
 
-        *post, _ = fetch_post_id_and_site_from_url(post_data[0])
-        why = get_why_allspam(post)
+        why = get_why_allspam(post_data)
         return why if why else ""
     else:
         *post, _ = fetch_post_id_and_site_from_url(post_data[0])
-        why = get_why(post)
+        why = get_why(post[1], post[0])
         return why if why else ""
 
     raise Exception("There is no `why` data for that user (anymore).")

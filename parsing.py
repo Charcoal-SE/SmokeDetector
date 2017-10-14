@@ -146,16 +146,17 @@ def escape_special_chars_in_title(title_unescaped):
 def get_user_from_list_command(cmd):  # for example, !!/addblu is a list command
     cmd_merged_spaces = regex.sub("\\s+", " ", cmd)
     cmd_parts = cmd_merged_spaces.split(" ")
+
     uid = -1
     site = ""
-    if len(cmd_parts) == 2:
-        uid_site = get_user_from_url(cmd_parts[1])
+
+    if len(cmd_parts) == 1:
+        uid_site = get_user_from_url(cmd_parts[0])
         if uid_site is not None:
-            uid = uid_site[0]
-            site = uid_site[1]
-    elif len(cmd_parts) == 3:
-        uid = cmd_parts[1]
-        site = cmd_parts[2]
+            uid, site = uid_site
+    elif len(cmd_parts) == 2:
+        uid = cmd_parts[0]
+        site = cmd_parts[1]
         digit_re = regex.compile("^[0-9]+$")
         site_re = regex.compile(r"^(\w+\.stackexchange\.com|\w+\.(com|net))$")
         if not digit_re.match(uid):
