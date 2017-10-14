@@ -1,7 +1,7 @@
 baba\W?ji
 fifa.{0,20}coins?
 fifabay
-Long\W?Path\W?Tool
+long\W?path\W?tool
 # documentation: the (?!negative match) syntax won't work in the metasmoke search site
 # but it works for smoke detector.
 (?!code\W|script\W)writing services?
@@ -9,40 +9,40 @@ tosterone
 we (offer|give out) (loans|funds|funding)
 skin\W?(endear|royale|cell\W?pro|opulent|ology|centric)
 (rejuvenated?|aging|aged|revyve|neuphoric|deep\Wsea|amore|luxurious|regenere|nuvita|core)\W?skin
-acne( prone)? skin
+acne(\W?prone)?\Wskin
 (skin|eye)\Wnovela
 visalia\W(?:skincare|cream)
-judi bola
-restore[ -]?samsung[ -]?data
+judi\W?bola
+restore\W?samsung\W?data
 swtor2credits
-death reckoning calculate
+death\Wreckoning\Wcalculate
 bam2u
 Neuro(3X|flexyn|fuse|luma|plex|ignite|lon|\Wxr)
 TesteroneXL
 Nitroxin
 Bowtrol
-Slim ?Genix
-Cleanse EFX
+slim\W?genix
+cleanse\W?efx
 Alpha\W?(x\W?)?(Rush|Fuel|XTRM|levo|max|prime|force\Wtesto|monster\Wadvanced|muscle|boost)
 exoslim
-Blackline Elite
-TestCore Pro
-blank(ed)? ?ATM\b( card)?
-ATM Machine Vault
-Xtreme Antler
-Maxx Test 3000
+blackline\W?elite
+testcore\W?pro
+blank(ed)?\W?ATM(\W?cards?)?
+ATM\W?machine\W?vault
+xtreme\W?antler
+maxx\W?test\W?3000
 orvigomax
-Cheap Wigs?
+cheap\W?wigs?
 jivam
-^(?s).{0,200}brain[- ]?power
-Maximum ?Shred
-black[ -]label[ -]no
+^(?s).{0,200}brain\W?power
+maximum\W?shred
+black\W?label\W?no
 bagprada
 Apowersoft
 ChatSim
-Service Solahart
+service\W?solahart
 junisse
-Profactor[ -]?T
+profactor\W?t
 (fake|novelty|quality|buy(ing)?|sell(ing)?|offer).{0,20}(passport|driver'?s? licen[cs]e|ID card|green card|residence permit|toefl|Ielts)s?
 ^.{0,200}(support|service|helpline)( phone)? number|1[ -]?[ -]?[ -]?866[ -]?978[ -]?(6819|6762)
 (mcafee|hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number
@@ -52,75 +52,75 @@ keepbrowsersafe
 pcerror-fix
 filerepairtool
 combatpcviruses
-JobsTribune
+jobstribune
 join the (great )?illuminati
-Brorsoft
-Remo Recover
+brorsoft
+remo\W?recover
 kinnaristeel
 clash of (clan|stone)s? (cheats?|tricks?|gems?)
-slumber pm
+slumber\W?pm
 bestcollegechina
 bbwdesire
 rsorder
-Shopping ?Cart ?Elite
-Easy ?Data ?Feed
+shopping\W?cart\W?elite
+easy\W?data\W?feed
 best (hotel|property) management
 eduCBA
-Solid[ -]?SEO[ -]?Tools
-maxman ?power
+solid\W?SEO\W?tools
+maxman\W?power
 niagen
 testo\W(e?x|black|ultra|muscle)
-day ?trading ?academy
+day\W?trading\W?academy
 folliplex
-yafei ?cable
-uggs ?on ?sale
-PhenQ
-Vigoraflo
-Fonepaw
-Provasil
-Slimera
-Cerebria
-Xanogen
+yafei\W?cable
+uggs\W?on\W?sale
+phenq
+vigoraflo
+fonepaw
+provasil
+slimera
+cerebria
+xanogen
 intellipaat
-Replennage
-Synagen
-Nufinity
-V[ -]?Stamina
-Gynectrol
-Adderin
-Whizz Systems?
+replennage
+synagen
+nufinity
+v\W?stamina
+gynectrol
+adderin
+whizz\W?systems?
 intellux
 viooz
 smartican
 (?<!')t\Wcomplex
 фальшивы(е|х) (деньги|денег|купюры?)
-raging lion
-retrodynamic formula
+raging\W?lion
+retrodynamic\W?formula
 ^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$
-Krojam(Soft|Cleaner)?
-FilesSearch ?Tool
+krojam(soft|cleaner)?
+filessearch\W?tool
 teksonit
 Re@d More
 Live Streaming</a
-Blackcore ?Edge
-Copy Buffett
-Push Money App
-Volive( Solutions)?
-Herbalife
-Accumass
+blackcore\W?edge
+copy\W?buffett
+push\W?money\W?app
+volive(\W?solutions?)?
+herbalife
+accumass
 purple\Wrhino
-Dating Coaching
+dating\W?coaching
 (dietary|muscle)\Wsupplements?
-digital marketing course
-stark trading system
-lost lover'?s?
+digital\W?marketing\W?course
+stark\W?trading\W?system
+lost\W?lover'?s?
 bring back lost love
 lost lover? back
 service proposal essay
 enetdocumentation
 okaygoods
 (love|miracle).*spell ?casters?
-black magic specialist
+black\W?magic\W?specialist
 great\Wspell\Wcaster
 viagra
 cialis
@@ -132,15 +132,15 @@ Thierno(_| )?M.(_| )Sow
 maxtropin
 geniux
 we are a team of (highly|professionals)
-booty pop
-Beard Czar
-Cianix
+booty\W?pop
+beard\W?czar
+cianix
 (falcon|gladiator|tactical)\Wflashlights?
-Juvanere
+juvanere
 age-opposing
-revived\syouth
+revived\W?youth
 follinique
-muscle supplement
+muscle\W?supplement
 maxatin
 paravex
 testabolan
@@ -198,7 +198,7 @@ nitric\Wmuscle
 phytolyft
 black\Wdiamond\Wforce
 crepe\Werase
-Forever Bust
+forever\W?bust
 borealis\Wcream
 miracle\Wbust
 apex\Wplump
@@ -749,7 +749,7 @@ super\W?trim\W?500
 silqueskin
 serafina\W?deluxe
 vigostren
-alpha\W?x\W?booster
+alpha\W?xl?\W?(boost(?:er?)|factor)
 androforce\W?x10
 folicillium
 invigorate\W?rx
@@ -762,7 +762,6 @@ r-hub
 liquid\W?tree
 puravida
 le\W?juve
-alpha\W?x\W?factor
 Pure\W?Radiance
 neurovarium
 bioregen
@@ -783,3 +782,27 @@ zenith\W?sleep
 serafina\W?cream
 genesis\W?investing\W?system
 adult\W?friend\W?finder
+ziladerm
+apex\W?vitality
+revive\W?cbd
+simple\W?comfort\W?cbd
+vrdhhigra
+zamoura
+elixir\W?neuro\W?pro
+cla\W?safflower
+decollage
+impanix
+nitro\W?max
+androdrox
+qute\W?balance
+venabol
+testo\W?fuse\W?xl
+plus\W?iq\W?points
+platinum\W?light
+844\W305\W7041
+test[ -]reload
+avanti\W?skin
+8882335050
+0?808\W?281\W?8685
+9681701229
+firmaluxe
