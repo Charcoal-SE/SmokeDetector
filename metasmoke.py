@@ -17,7 +17,7 @@ import parsing
 import apigetpost
 import spamhandling
 import classes
-from chatcommunicate import tell_rooms_with
+import chatcommunicate
 from helpers import log, only_blacklists_changed
 from gitmanager import GitManager
 from blacklists import load_blacklists
@@ -89,7 +89,7 @@ class Metasmoke:
         message = data['message']
         if isinstance(message, Iterable):
             if "message" in message:
-                tell_rooms_with("debug", message['message'])
+                chatcommunicate.tell_rooms_with("debug", message['message'])
             elif "exit" in message:
                 os._exit(message["exit"])
             elif "blacklist" in message:
@@ -152,11 +152,11 @@ class Metasmoke:
                             if i == []:  # No issues
                                 GitManager.pull_remote()
                                 load_blacklists()
-                                tell_rooms_with("debug", "No code modified in {0}, only blacklists"
-                                                         " reloaded.".format(commit_md))
+                                chatcommunicate.tell_rooms_with("debug", "No code modified in {0}, only blacklists"
+                                                                " reloaded.".format(commit_md))
                             else:
                                 i.append("please fix before pulling.")
-                                tell_rooms_with("debug", ", ".join(i))
+                                chatcommunicate.tell_rooms_with("debug", ", ".join(i))
             elif "commit_status" in message:
                 c = message["commit_status"]
                 sha = c["commit_sha"][:7]
@@ -167,7 +167,7 @@ class Metasmoke:
                                 "commit/{commit_sha})"\
                                 " succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"],
                                                                                              commit_sha=sha)
-                            tell_rooms_with("debug", s)
+                            chatcommunicate.tell_rooms_with("debug", s)
                             time.sleep(2)
                             os._exit(3)
                         else:
@@ -178,7 +178,7 @@ class Metasmoke:
                             "commit/{commit_sha}) failed.".format(ci_link=c["ci_url"], commit_sha=sha)
 
                     # noinspection PyUnboundLocalVariable
-                    tell_rooms_with("debug", s)
+                    chatcommunicate.tell_rooms_with("debug", s)
 
             elif "everything_is_broken" in message:
                 if message["everything_is_broken"] is True:
@@ -287,10 +287,11 @@ class Metasmoke:
                         GlobalVars.standby_mode = False
                         GlobalVars.metasmoke_last_ping_time = datetime.now()  # Otherwise the ping watcher will exit(10)
 
-                        tell_rooms_with("debug", GlobalVars.location + " received failover signal.")
+                        chatcommunicate.tell_rooms_with("debug", GlobalVars.location + " received failover signal.")
 
                     if response['standby']:
-                        tell_rooms_with("debug", GlobalVars.location + " entering metasmoke-forced standby.")
+                        chatcommunicate.tell_rooms_with("debug", 
+                                                        GlobalVars.location + " entering metasmoke-forced standby.")
                         time.sleep(2)
                         os._exit(7)
 
