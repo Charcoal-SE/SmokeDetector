@@ -81,7 +81,7 @@ def init(username, password):
 
 
 def parse_room_config():
-    with open("rooms.json5", "r") as room_config:
+    with open("rooms.yml", "r") as room_config:
         room_dict = yaml.load(room_config.read())
 
         for site, site_rooms in room_dict.items():
