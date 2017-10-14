@@ -138,8 +138,8 @@ def on_msg(msg, client, room):
             if room_data.last_report_data != ():
                 _last_messages.reports[message.id] = room_data.last_report_data
 
-                threading.Thread(name="deletion watcher", 
-                                 target=DeletionWatcher.check_if_report_was_deleted, 
+                threading.Thread(name="deletion watcher",
+                                 target=DeletionWatcher.check_if_report_was_deleted,
                                  args=(room_data.last_report_data[0], message))
 
                 room_data.last_report_data = ()

@@ -290,7 +290,7 @@ class Metasmoke:
                         chatcommunicate.tell_rooms_with("debug", GlobalVars.location + " received failover signal.")
 
                     if response['standby']:
-                        chatcommunicate.tell_rooms_with("debug", 
+                        chatcommunicate.tell_rooms_with("debug",
                                                         GlobalVars.location + " entering metasmoke-forced standby.")
                         time.sleep(2)
                         os._exit(7)
