@@ -11,19 +11,22 @@ import time
 import yaml
 
 import datahandling
+from deletionwatcher import DeletionWatcher
 from globalvars import GlobalVars
 from parsing import fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
 
 
+LastMessages = collections.namedtuple("LastMessages", ["messages", "reports"])
+
+
 class RoomData:
-    def __init__(self, room, lock, block_time, last_report_data):
+    def __init__(self, room, lock, block_time, last_report_data, deletion_watcher):
         self.room = room
         self.lock = lock
         self.block_time = block_time
         self.last_report_data = last_report_data
+        self.deletion_watcher = deletion_watcher
 
-
-LastMessages = collections.namedtuple("LastMessages", ["messages", "reports"])
 
 _commands = {"reply": {}, "prefix": {}}
 
@@ -33,7 +36,9 @@ _clients = {
     "meta.stackexchange.com": None
 }
 
-_room_roles = {"commands": set()}
+_command_rooms = set()
+_watcher_rooms = set()
+_room_roles = {}
 _privileges = {}
 
 _global_block = -1
@@ -66,12 +71,13 @@ def init(username, password):
     parse_room_config()
 
     if not GlobalVars.standby_mode:
-        for site, roomid in _room_roles["commands"]:
+        for site, roomid in _command_rooms:
             room = _clients[site].get_room(roomid)
+            deletion_watcher = (site, roomid) in _watcher_rooms
 
             room.join()
             room.watch_socket(lambda msg, client: on_msg(msg, client, room))
-            _rooms[(site, roomid)] = RoomData(room, threading.Event(), -1, False)
+            _rooms[(site, roomid)] = RoomData(room, threading.Event(), -1, (), deletion_watcher)
             _rooms[(site, roomid)].lock.set()
 
     if os.path.isfile("messageData.p"):
@@ -89,8 +95,11 @@ def parse_room_config():
                 room_identifier = (site, roomid)
                 _privileges[room_identifier] = room["privileges"] if "privileges" in room else []
 
-                if room["commands"]:
-                    _room_roles["commands"].add(room_identifier)
+                if "commands" in room and room["commands"]:
+                    _command_rooms.add(room_identifier)
+
+                if "watcher" in room and room["watcher"]:
+                    _watcher_rooms.add(room_identifier)
 
                 for perm in room["msg_types"]:
                     if perm not in _room_roles:
@@ -116,8 +125,6 @@ def on_msg(msg, client, room):
             identifier = (client.host, room.id)
             room_data = _rooms[identifier]
 
-            room_data.lock.set()
-
             if identifier not in _last_messages.messages:
                 _last_messages.messages[identifier] = collections.deque((message.id,))
             else:
@@ -128,10 +135,16 @@ def on_msg(msg, client, room):
 
                 last.append(message.id)
 
-            if room_data.last_report_data is not None:
+            if room_data.last_report_data != ():
                 _last_messages.reports[message.id] = room_data.last_report_data
+
+                threading.Thread(name="deletion watcher", 
+                                 target=DeletionWatcher.check_if_report_was_deleted, 
+                                 args=(room_data.last_report_data[0], message))
+
                 room_data.last_report_data = ()
 
+            room_data.lock.set()
             _pickle_run.set()
         elif message.parent and message.parent.owner.id == client._br.user_id:
             command = message.content.split(" ", 1)[1]
@@ -155,14 +168,19 @@ def send_to_room(room, msg, report_data=()):
     timestamp = time.time()
 
     if room.block_time < timestamp and _global_block < timestamp:
-        room.lock.wait()
-        room.lock.clear()
+        msg = msg.rstrip()
 
         if report_data:
             room.last_report_data = report_data
 
-        msg = msg.rstrip()
+            if "delay" in _room_roles and room in _room_roles["delay"]:
+                threading.Thread(name="delayed post",
+                                 target=DeletionWatcher.post_message_if_not_deleted,
+                                 args=(report_data[0], msg, room))
+                return
 
+        room.lock.wait()
+        room.lock.clear()
         room.room.send_message(msg)
 
 
@@ -187,11 +205,12 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=()):
             if all(map(lambda prop: prop not in _room_roles or room not in _room_roles[prop], hasnt)):
                 if room not in _rooms:
                     site, roomid = room
+                    deletion_watcher = room in _room_roles["watchers"]
 
                     new_room = _clients[site].get_room(roomid)
                     new_room.join()
 
-                    _rooms[room] = RoomData(new_room, threading.Event(), -1, False)
+                    _rooms[room] = RoomData(new_room, threading.Event(), -1, (), deletion_watcher)
                     _rooms[room].lock.set()
 
                 target_rooms.add(_rooms[room])

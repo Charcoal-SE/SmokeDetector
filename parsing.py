@@ -201,26 +201,3 @@ def to_protocol_relative(url):
         return url[6:]
     else:
         return url
-
-
-# noinspection PyMissingTypeHints
-def preprocess_shortcut_command(cmd):
-    cmd = regex.sub(r"(\d)\s+", r"\1", cmd)
-    parts = cmd.split(" ")
-    new_cmd = ["sd"]
-    for i in range(1, len(parts)):
-        current = parts[i]
-        if current == "":
-            continue
-        if not current[0].isdigit():
-            new_cmd.append(current)
-        else:
-            match = regex.search(r"^\d+", current)
-            t = int(match.group())
-            if t > 100:
-                # If someone made an unreasonable request, limit the # of commands (so we don't
-                # have any overflows) but do one more than the max messages we keep so it errors out
-                t = 101
-            for j in range(0, t):
-                new_cmd.append(current[match.end():])
-    return " ".join(new_cmd)

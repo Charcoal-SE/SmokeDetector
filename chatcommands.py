@@ -1160,7 +1160,7 @@ def postgone(msg):
 
 
 # noinspection PyIncorrectDocstring
-@command(message, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=["fp", "falseu"])
+@command(message, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=["f", "fp", "falseu"])
 def false(feedback, msg, alias_used="false"):
     """
     Marks a post as a false positive
@@ -1186,14 +1186,15 @@ def false(feedback, msg, alias_used="false"):
     user = get_user_from_url(owner_url)
 
     if user is not None:
-        if alias_used.startswith("falseu") or alias_used.startswith("fpu"):
+        if alias_used[-1] == "u":
             add_whitelisted_user(user)
             return "Registered " + post_type + " as false positive and whitelisted user."
         elif is_blacklisted_user(user):
             remove_blacklisted_user(user)
-            return "Registered " + post_type + " as false positive and removed user from the blacklist."
+            return "Registered " + post_type + " as false positive and removed user from the blacklist." \
+                   if alias_used != "f" else ""
         else:
-            return "Registered " + post_type + " as false positive."
+            return "Registered " + post_type + " as false positive." if alias_used != "f" else ""
 
     # try:
     #     if int(msg.room.id) != int(GlobalVars.charcoal_hq.id):
@@ -1257,12 +1258,12 @@ def naa(feedback, msg, alias_used="naa"):
     post_id, site, _ = fetch_post_id_and_site_from_url(post_url)
     add_ignored_post((post_id, site))
 
-    return "Recorded answer as an NAA in metasmoke."
+    return "Recorded answer as an NAA in metasmoke." if alias_used != "n" else ""
 
 
 # noinspection PyIncorrectDocstring
 @command(message, reply=True, privileged=True, whole_msg=True, give_name=True,
-         aliases=["tp", "tpu", "trueu", "rude", "abusive", "vandalism", "v"])
+         aliases=["tp", "tpu", "trueu", "rude", "abusive", "vandalism", "v", "k"])
 def true(feedback, msg, alias_used=["true"]):
     """
     Marks a post as a true positive
@@ -1286,7 +1287,10 @@ def true(feedback, msg, alias_used=["true"]):
     _, _, post_type = fetch_post_id_and_site_from_url(post_url)
 
     if user is not None:
-        if alias_used.startswith("trueu") or alias_used.startswith("tpu"):
+        if alias_used == "k":
+            add_blacklisted_user(user)
+            return
+        elif alias_used[-1] == "u":
             add_blacklisted_user(user)
             return "Registered " + post_type + " as true positive and blacklisted user."
         else:
