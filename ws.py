@@ -198,11 +198,6 @@ GlobalVars.specialrooms = [
         "unwantedReasons": ["All-caps title", "All-caps body", "All-caps answer"]
     },
     {
-        "sites": ["movies.stackexchange.com"],
-        "room": GlobalVars.wrap.get_room("40705"),
-        "unwantedReasons": []
-    },
-    {
         "sites": ["ethereum.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("34620"),
         "unwantedReasons": []
@@ -225,11 +220,6 @@ GlobalVars.specialrooms = [
     {
         "sites": ["ell.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("24938"),
-        "unwantedReasons": []
-    },
-    {
-        "sites": ["bricks.stackexchange.com"],
-        "room": GlobalVars.wrap.get_room("1964"),
         "unwantedReasons": []
     },
     {
