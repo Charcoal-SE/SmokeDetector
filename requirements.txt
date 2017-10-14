@@ -15,4 +15,4 @@ termcolor
 sh
 typing
 dnspython
-json5
+pyyaml

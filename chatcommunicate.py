@@ -3,12 +3,12 @@ from ChatExchange.chatexchange.client import Client
 from ChatExchange.chatexchange.messages import Message
 import collections
 import itertools
-import json5
 import os.path
 import pickle
 import regex
 import threading
 import time
+import yaml
 
 import datahandling
 from globalvars import GlobalVars
@@ -82,11 +82,11 @@ def init(username, password):
 
 def parse_room_config():
     with open("rooms.json5", "r") as room_config:
-        room_dict = json5.load(room_config)
+        room_dict = yaml.load(room_config.read())
 
         for site, site_rooms in room_dict.items():
             for roomid, room in site_rooms.items():
-                room_identifier = (site, int(roomid))
+                room_identifier = (site, roomid)
                 _privileges[room_identifier] = room["privileges"] if "privileges" in room else []
 
                 if room["commands"]:
