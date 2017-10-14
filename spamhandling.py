@@ -8,7 +8,6 @@ from globalvars import GlobalVars
 from datetime import datetime
 import parsing
 import metasmoke
-import deletionwatcher
 import excepthook
 # noinspection PyCompatibility
 import regex
