@@ -18,6 +18,20 @@ def get_user_from_url(url):
         return None
 
 
+# noinspection PyBroadException
+def get_api_sitename_from_url(url):
+    match = regex.compile(r"(?:https?:)?(?://)?([\w.]+)/?").search(url)
+    if match is None:
+        return None
+    try:
+        if match.group(1) == 'mathoverflow.net':
+            return 'mathoverflow.net'
+        else:
+            return match.group(1).split('.')[0]
+    except:
+        return None
+
+
 # noinspection PyBroadException,PyMissingTypeHints
 def fetch_post_url_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[.+]\(((?:http:)" \
@@ -99,20 +113,6 @@ def fetch_title_from_msg_content(content):
     try:
         title = match.group(1)
         return title
-    except:
-        return None
-
-
-# noinspection PyBroadException,PyMissingTypeHints
-def fetch_user_from_allspam_report(content):
-    search_regex = r"^\[ \[SmokeDetector\]\([^)]*\) \] All of this user's posts are spam: \[user \d+ on " \
-                   r"[\w\.]+\]\((//[\w\.]+/users/\d+\D*)\)(?: \[.+\]\(.+\))?$"
-    match = regex.compile(search_regex).search(content)
-    if match is None:
-        return None
-    try:
-        user_link = match.group(1)
-        return get_user_from_url(user_link)
     except:
         return None
 

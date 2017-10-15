@@ -51,8 +51,6 @@ def load_files():
         GlobalVars.notifications = _load_pickle("notifications.p", encoding='utf-8')
     if os.path.isfile("whyData.p"):
         GlobalVars.why_data = _load_pickle("whyData.p", encoding='utf-8')
-    if os.path.isfile("whyDataAllspam.p"):
-        GlobalVars.why_data_allspam = _load_pickle("whyDataAllspam.p", encoding='utf-8')
     if os.path.isfile("apiCalls.p"):
         GlobalVars.api_calls_per_site = _load_pickle("apiCalls.p", encoding='utf-8')
     if os.path.isfile("bodyfetcherQueue.p"):
@@ -212,20 +210,6 @@ def filter_why(max_size=50):
     GlobalVars.why_data = GlobalVars.why_data[-max_size:]
 
 
-def add_why_allspam(user, why):
-    GlobalVars.why_data_allspam.append((user, why))
-    filter_why_allspam()
-    with open("whyDataAllspam.p", "wb") as f:
-        pickle.dump(GlobalVars.why_data_allspam, f, protocol=pickle.HIGHEST_PROTOCOL)
-
-
-def get_why_allspam(user):
-    for post in GlobalVars.why_data_allspam:
-        if post[0] == user:
-            return post[1]
-    return None
-
-
 def add_post_site_id_link(post_site_id, question_id):
     GlobalVars.post_site_id_to_question[post_site_id] = question_id
 
@@ -234,10 +218,6 @@ def get_post_site_id_link(post_site_id):
     if post_site_id in GlobalVars.post_site_id_to_question:
         return GlobalVars.post_site_id_to_question[post_site_id]
     return None
-
-
-def filter_why_allspam(max_size=50):
-    GlobalVars.why_data_allspam = GlobalVars.why_data_allspam[-max_size:]
 
 
 def add_latest_smokedetector_message(room, message_id):

@@ -52,6 +52,9 @@ with open("test/data_test_parsing.txt", "r", encoding="utf-8") as f:
     # ('sd 2 tpu', preprocess_shortcut_command, 'sd tpu tpu'),
     # ('sd 10 tpu', preprocess_shortcut_command, 'sd tpu tpu tpu tpu tpu tpu tpu tpu tpu tpu'),
     # ('sd fp 3   tpu', preprocess_shortcut_command, 'sd fp tpu tpu tpu'),
+    ('stackoverflow.com', get_api_sitename_from_url, 'stackoverflow'),
+    ('http://gaming.stackexchange.com', get_api_sitename_from_url, 'gaming'),
+    ('https://mathoverflow.net/', get_api_sitename_from_url, 'mathoverflow.net'),
     (test_data_inputs[0], fetch_post_id_and_site_from_msg_content, ('246651', 'meta.stackexchange.com', 'question')),
     (test_data_inputs[0], fetch_owner_url_from_msg_content, 'http://meta.stackexchange.com/users/279263/lisa-usher'),
     (test_data_inputs[0], fetch_title_from_msg_content, 'Best Weight Loss Tips For Fast Results'),
@@ -103,10 +106,9 @@ with open("test/data_test_parsing.txt", "r", encoding="utf-8") as f:
     (test_data_inputs[15], fetch_owner_url_from_msg_content, '//stackoverflow.com/users/3754535/user3754535'),
     (test_data_inputs[15], fetch_title_from_msg_content, "Why I can't insert data in a model from a custom controller?"),
     (test_data_inputs[15], edited_message_after_postgone_command, "[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Manually reported question (batch report: post 2 out of 3): *(gone)* by [user3754535](//stackoverflow.com/users/3754535/user3754535) on `stackoverflow.com`"),
-    (test_data_inputs[16], fetch_user_from_allspam_report, ('5733779', 'stackoverflow.com')),
-    (test_data_inputs[17], fetch_post_id_and_site_from_msg_content, ('230329', 'drupal.stackexchange.com', 'question')),
-    (test_data_inputs[17], fetch_title_from_msg_content, 'spammy spammy title'),
-    (test_data_inputs[17], fetch_owner_url_from_msg_content, '//drupal.stackexchange.com/u/73447')
+    (test_data_inputs[16], fetch_post_id_and_site_from_msg_content, ('230329', 'drupal.stackexchange.com', 'question')),
+    (test_data_inputs[16], fetch_title_from_msg_content, 'spammy spammy title'),
+    (test_data_inputs[16], fetch_owner_url_from_msg_content, '//drupal.stackexchange.com/u/73447')
 ])
 def test_parsing(input_data, parse_method, expected):
     assert parse_method(input_data.strip()) == expected

@@ -6,13 +6,12 @@ from findspam import FindSpam
 # noinspection PyUnresolvedReferences
 from datetime import datetime
 from utcdate import UtcDate
-from apigetpost import api_get_post
+from apigetpost import api_get_post, PostData
 from datahandling import *
 from blacklists import load_blacklists
 from metasmoke import Metasmoke
 from parsing import *
 from spamhandling import handle_spam
-from spamhandling import handle_user_with_all_spam
 from gitmanager import GitManager
 import threading
 from threading import Thread
@@ -20,6 +19,7 @@ import random
 import requests
 import os
 import time
+from html import unescape
 # noinspection PyCompatibility
 import regex
 from helpers import only_blacklists_changed
@@ -28,7 +28,7 @@ from classes import Post
 # TODO: pull out code block to get user_id, chat_site, room_id into function
 # TODO: Return result for all functions should be similar (tuple/named tuple?)
 # TODO: Do we need uid == -2 check?  Turn into "is_user_valid" check
-# TODO: Consistant return structure
+# TODO: Consistent return structure
 #   if return...else return vs if return...return
 
 
@@ -535,23 +535,6 @@ def alive():
 
 
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=True, aliases=["reportuser"])
-def allspam(msg, url):
-    """
-    Reports all of a user's posts as spam
-    :param url:
-    :return:
-    """
-    user = get_user_from_url(url)
-
-    if user is None:
-        raise Exception("That doesn't look like a valid user URL.")
-
-    why = u"User manually reported by *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
-    handle_user_with_all_spam(user, why)
-
-
-# noinspection PyIncorrectDocstring
 @command(int, privileged=True, arity=(0, 1))
 def errorlogs(count):
     """
@@ -1045,10 +1028,8 @@ def report(msg, urls):
         raise Exception("You can execute the !!/report command again in {} seconds. "
                         "To avoid one user sending lots of reports in a few commands and "
                         "slowing SmokeDetector down due to rate-limiting, you have to "
-                        "wait 30 seconds after you've reported multiple posts using "
-                        "!!/report, even if your current command just has one URL. (Note "
-                        "that this timeout won't be applied if you only used !!/report "
-                        "for one post)".format(wait))
+                        "wait 30 seconds after you've reported multiple posts in "
+                        "one go.".format(wait))
 
     output = []
     urls = list(set(urls.split()))
@@ -1059,7 +1040,7 @@ def report(msg, urls):
                         "SmokeDetector's chat messages getting rate-limited too much, "
                         "which would slow down reports.")
 
-    for index, url in enumerate(urls):
+    for index, url in enumerate(urls, start=1):
         post_data = api_get_post(url)
 
         if post_data is None:
@@ -1100,6 +1081,115 @@ def report(msg, urls):
 
     if len(output) > 0:
         return os.linesep.join(output)
+
+
+# noinspection PyIncorrectDocstring,PyUnusedLocal
+@command(str, whole_msg=True, privileged=True, aliases=['reportuser'])
+def allspam(msg, url):
+    """
+    Reports all of a user's posts as spam
+    :param msg:
+    :param url: A user profile URL
+    :return:
+    """
+    crn, wait = can_report_now(msg.owner.id, msg._client.host)
+    if not crn:
+        raise Exception("You can execute the !!/report command again in {} seconds. "
+                        "To avoid one user sending lots of reports in a few commands and "
+                        "slowing SmokeDetector down due to rate-limiting, you have to "
+                        "wait 30 seconds after you've reported multiple posts in "
+                        "one go.".format(wait))
+    user = get_user_from_url(url)
+    if user is None:
+        raise Exception("That doesn't look like a valid user URL.")
+    user_sites = []
+    user_posts = []
+    # Detect whether link is to network profile or site profile
+    if user[1] == 'stackexchange.com':
+        # Respect backoffs etc
+        GlobalVars.api_request_lock.acquire()
+        if GlobalVars.api_backoff_time > time.time():
+            time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
+        # Fetch sites
+        api_filter = "!6Pbp)--cWmv(1"
+        request_url = "http://api.stackexchange.com/2.2/users/{}/associated?filter={}&key=IAkbitmze4B8KpacUfLqkw((" \
+            .format(user[0], api_filter)
+        res = requests.get(request_url).json()
+        if "backoff" in res:
+            if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
+                GlobalVars.api_backoff_time = time.time() + res["backoff"]
+        GlobalVars.api_request_lock.release()
+        if 'items' not in res or len(res['items']) == 0:
+            raise Exception("The specified user does not appear to exist.")
+        if res['has_more']:
+            raise Exception("The specified user has an abnormally high number of accounts. Please consider flagging for"
+                            " moderator attention, otherwise use !!/report on the user's posts individually.")
+        # Add accounts with posts
+        for site in res['items']:
+            if site['question_count'] > 0 or site['answer_count'] > 0:
+                user_sites.append((site['user_id'], get_api_sitename_from_url(site['site_url'])))
+    else:
+        user_sites.append((user[0], get_api_sitename_from_url(user[1])))
+    # Fetch posts
+    for u_id, u_site in user_sites:
+        # Respect backoffs etc
+        GlobalVars.api_request_lock.acquire()
+        if GlobalVars.api_backoff_time > time.time():
+            time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
+        # Fetch posts
+        api_filter = "!)Q4RrMH0DC96Y4g9yVzuwUrW"
+        request_url = "http://api.stackexchange.com/2.2/users/{}/posts?site={}&filter={}&key=IAkbitmze4B8KpacUfLqkw((" \
+            .format(u_id, u_site, api_filter)
+        res = requests.get(request_url).json()
+        if "backoff" in res:
+            if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
+                GlobalVars.api_backoff_time = time.time() + res["backoff"]
+        GlobalVars.api_request_lock.release()
+        if 'items' not in res or len(res['items']) == 0:
+            raise Exception("The specified user has no posts on this site.")
+        posts = res['items']
+        if posts[0]['owner']['reputation'] > 100:
+            raise Exception("The specified user's reputation is abnormally high. Please consider flagging for moderator"
+                            " attention, otherwise use !!/report on the posts individually.")
+        # Add blacklisted user - use most downvoted post as post URL
+        message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
+        add_blacklisted_user(user, message_url, sorted(posts, key=lambda x: x['score'])[0]['owner']['link'])
+        # TODO: Postdata refactor, figure out a better way to use apigetpost
+        for post in posts:
+            post_data = PostData()
+            post_data.post_id = post['post_id']
+            post_data.post_url = url_to_shortlink(post['link'])
+            *discard, post_data.site, post_data.post_type = fetch_post_id_and_site_from_url(
+                url_to_shortlink(post['link']))
+            post_data.title = unescape(post['title'])
+            post_data.owner_name = unescape(post['owner']['display_name'])
+            post_data.owner_url = post['owner']['link']
+            post_data.owner_rep = post['owner']['reputation']
+            post_data.body = post['body']
+            post_data.score = post['score']
+            post_data.up_vote_count = post['up_vote_count']
+            post_data.down_vote_count = post['down_vote_count']
+            if post_data.post_type == "answer":
+                post_data.question_id = post['question_id']
+                post_data.is_answer = True
+            user_posts.append(post_data)
+    if len(user_posts) == 0:
+        raise Exception("The specified user hasn't posted anything.")
+    if len(user_posts) > 15:
+        raise Exception("The specified user has an abnormally high number of spam posts. Please consider flagging for "
+                        "moderator attention, otherwise use !!/report on the posts individually.")
+    why_info = u"User manually reported by *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
+    # Handle all posts
+    for index, post in enumerate(user_posts, start=1):
+        batch = ""
+        if len(user_posts) > 1:
+            batch = " (batch report: post {} out of {})".format(index, len(user_posts))
+        handle_spam(post=Post(api_response=post.as_dict),
+                    reasons=["Manually reported " + post.post_type + batch],
+                    why=why_info)
+        time.sleep(1)  # Should this be implemented differently?
+    if len(user_posts) > 2:
+        add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
 
 
 #
@@ -1310,19 +1400,14 @@ def why(msg):
     """
     post_data = get_report_data(msg)
     if not post_data:
-        post_data = fetch_user_from_allspam_report(msg.content)
-
-        if not post_data:
-            raise Exception("That's not a report.")
-
-        why = get_why_allspam(post_data)
-        return why if why else ""
+        raise Exception("That's not a report.")
     else:
         *post, _ = fetch_post_id_and_site_from_url(post_data[0])
         why = get_why(post[1], post[0])
-        return why if why else ""
-
-    raise Exception("There is no `why` data for that user (anymore).")
+        if why:
+            return why
+        else:
+            raise Exception("There is no `why` data for that user (anymore).")
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal

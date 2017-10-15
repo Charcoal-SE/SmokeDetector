@@ -93,7 +93,6 @@ class GlobalVars:
     bodyfetcher = None
     se_sites = []
     why_data = []
-    why_data_allspam = []
     notifications = []
     listen_to_these_if_edited = []
     multiple_reporters = []
