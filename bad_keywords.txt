@@ -808,3 +808,4 @@ avanti\W?skin
 firmaluxe
 hemp\Woil
 office-comsetup\.com
+test\.test\.com
