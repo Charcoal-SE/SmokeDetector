@@ -68,7 +68,7 @@ def init(username, password):
 
         _clients[site] = client
 
-    parse_room_config()
+    parse_room_config("rooms.yml")
 
     if not GlobalVars.standby_mode:
         for site, roomid in _command_rooms:
@@ -86,14 +86,14 @@ def init(username, password):
     threading.Thread(name="pickle ---rick--- runner", target=pickle_last_messages).start()
 
 
-def parse_room_config():
-    with open("rooms.yml", "r") as room_config:
+def parse_room_config(path):
+    with open(path, "r") as room_config:
         room_dict = yaml.load(room_config.read())
 
         for site, site_rooms in room_dict.items():
             for roomid, room in site_rooms.items():
                 room_identifier = (site, roomid)
-                _privileges[room_identifier] = room["privileges"] if "privileges" in room else []
+                _privileges[room_identifier] = set(room["privileges"]) if "privileges" in room else set()
 
                 if "commands" in room and room["commands"]:
                     _command_rooms.add(room_identifier)
@@ -101,11 +101,12 @@ def parse_room_config():
                 if "watcher" in room and room["watcher"]:
                     _watcher_rooms.add(room_identifier)
 
-                for perm in room["msg_types"]:
-                    if perm not in _room_roles:
-                        _room_roles[perm] = set()
+                if "msg_types" in room:
+                    for perm in room["msg_types"]:
+                        if perm not in _room_roles:
+                            _room_roles[perm] = set()
 
-                    _room_roles[perm].add(room_identifier)
+                        _room_roles[perm].add(room_identifier)
 
 
 def pickle_last_messages():
