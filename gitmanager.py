@@ -196,6 +196,7 @@ class GitManager:
             git.checkout("deploy")  # Return to deploy to await CI.
         except Exception:  # On any error in the Git functionality here, return to `deploy` branch.
             git.checkout("deploy")
+            return (False, "Git functions failed for unspecified reasons.")
         finally:
             cls.gitmanager_lock.release()
 
