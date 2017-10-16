@@ -1224,7 +1224,6 @@
 1507795355	Glorfindel	mac-dvd\.com
 1507800300	Glorfindel	minecraftpebr\.com
 1507802103	tripleee	invictus\W?labs
-1507802927	tripleee	test\W?ultimate
 1507803070	tripleee	cake-delivery\.in
 1507808350	Glorfindel	emv\W?sdk
 1507808776	tripleee	9910184831
@@ -1254,3 +1253,10 @@
 1508059658	Glorfindel	furnishmyplace\.com
 1508091825	quartata	theporndude\.com
 1508100027	quartata	pagesecret\.com
+1508115742	bwDraco	holocaust
+1508120609	QPaysTaxes	millionaire
+1508120753	quartata	dateamillionaire\.org
+1508130413	bwDraco	suitunderwear\.com
+1508130671	tripleee	bitittan\.com
+1508131015	tripleee	email-technical-support\.com
+1508132940	tripleee	mxicoders\.com
