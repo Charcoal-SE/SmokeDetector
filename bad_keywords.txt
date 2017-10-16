@@ -813,3 +813,4 @@ blue\W?fortera
 radiant\W?revive
 derma\W?luminous
 test\W?ultimate
+(customer|tech|technical)-?(support|service)\.com
