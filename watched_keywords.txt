@@ -1224,7 +1224,6 @@
 1507795355	Glorfindel	mac-dvd\.com
 1507800300	Glorfindel	minecraftpebr\.com
 1507802103	tripleee	invictus\W?labs
-1507802927	tripleee	test\W?ultimate
 1507803070	tripleee	cake-delivery\.in
 1507808350	Glorfindel	emv\W?sdk
 1507808776	tripleee	9910184831
