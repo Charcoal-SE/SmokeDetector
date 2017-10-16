@@ -194,6 +194,8 @@ class GitManager:
                                 response.json()['message'])
 
             git.checkout("deploy")  # Return to deploy to await CI.
+        except Exception:  # On any error in the Git functionality here, return to `deploy` branch.
+            git.checkout("deploy")
         finally:
             cls.gitmanager_lock.release()
 
