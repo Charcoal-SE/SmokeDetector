@@ -192,12 +192,11 @@ class GitManager:
                         # Capture any other invalid response cases.
                         return (False, "A bad or invalid reply was received from GH, the message was: %s" %
                                 response.json()['message'])
-
-            git.checkout("deploy")  # Return to deploy to await CI.
-        except Exception:  # On any error in the Git functionality here, return to `deploy` branch.
-            git.checkout("deploy")
+        except Exception:
             return (False, "Git functions failed for unspecified reasons.")
         finally:
+            # Always return to `deploy` branch when done with anything.
+            git.checkout("deploy")
             cls.gitmanager_lock.release()
 
         if op == 'blacklist':
