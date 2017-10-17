@@ -1282,3 +1282,4 @@
 1508240552	tripleee	one\W?two\W?slim
 1508241757	tripleee	689cloud\.com
 1508242135	tripleee	9873940964
+1508242324	tripleee	mindstick\.com
