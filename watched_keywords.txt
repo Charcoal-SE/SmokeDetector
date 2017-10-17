@@ -1273,3 +1273,4 @@
 1508223010	tripleee	brosway-italia\.com
 1508226668	Glorfindel	nomasvirus\.com
 1508226913	Glorfindel	savyour\.com
+1508227690	tripleee	cannalux
