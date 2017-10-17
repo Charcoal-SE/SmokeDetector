@@ -1269,3 +1269,4 @@
 1508188478	bwDraco	bovada\.lv
 1508217866	tripleee	tubemate\.zone
 1508218354	tripleee	mireage\W?imperial
+1508218513	tripleee	kiron\W?acqua\W?optimizer
