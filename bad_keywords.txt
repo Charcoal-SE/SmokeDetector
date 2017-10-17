@@ -261,7 +261,7 @@ vigor\Wexcel
 optimal\Wrock
 slim\Wfit\W180
 azienda\Wcollagen
-testo\W?boost
+testo(?:sterone)?\W?boost(?:er)?
 internal\W911
 true\Wbrilliance
 muscle\Wxtx
@@ -379,7 +379,6 @@ vitaeyes
 neutratone
 luminis
 biocore
-testosterone\Wbooster
 visible\Wallure
 eye\Wroyale
 LinkFixer\WAdvanced
@@ -693,7 +692,6 @@ menxcell
 nitro\W?grit
 aurora\Wbrite
 lumaslim
-testo\W?booster
 trimbiofit
 glow\W?eternal
 apex\W?booty
