@@ -1203,7 +1203,6 @@
 1507696552	tripleee	maximfit
 1507704331	tripleee	business\W?capital\W?experts
 1507705044	tripleee	abservetech\.com
-1507705183	tripleee	ephamere
 1507705570	tripleee	invictus\W?alpha\W?elite
 1507708354	tripleee	everything4comp\.blogspot\.com
 1507708678	tripleee	activguard
