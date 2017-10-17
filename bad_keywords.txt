@@ -817,3 +817,4 @@ memory\W?boost\W?xl
 musconv
 collagen\W?retinol
 avella\W?serum
+zyklo?n.*(introduction|delivery|device)
