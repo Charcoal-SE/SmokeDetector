@@ -749,7 +749,7 @@ super\W?trim\W?500
 silqueskin
 serafina\W?deluxe
 vigostren
-alpha\W?xl?\W?(boost(?:er?)|factor)
+alpha\W?xl?\W?(?:boost(?:er)?|factor)
 androforce\W?x10
 folicillium
 invigorate\W?rx
