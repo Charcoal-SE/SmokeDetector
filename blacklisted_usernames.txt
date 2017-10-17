@@ -36,3 +36,4 @@ limeprox(y|ies)
 ^dongfang$
 Da Whole Truth
 Merit\ Campus
+Learner\ Logic
