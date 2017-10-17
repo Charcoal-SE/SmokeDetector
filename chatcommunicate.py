@@ -43,7 +43,7 @@ _privileges = {}
 
 _global_block = -1
 _rooms = {}
-_last_messages = LastMessages({}, {})
+_last_messages = LastMessages({}, collections.OrderedDict())
 
 _pickle_run = threading.Event()
 
@@ -138,6 +138,9 @@ def on_msg(msg, client, room):
 
             if room_data.last_report_data != ():
                 _last_messages.reports[message.id] = room_data.last_report_data
+
+                if len(_last_messages.reports) > 50:
+                    _last_messages.reports.popitem(last=False)
 
                 threading.Thread(name="deletion watcher",
                                  target=DeletionWatcher.check_if_report_was_deleted,
