@@ -825,3 +825,4 @@ vars\W?performance
 rapiture
 tressurge
 ephamere
+cannabinoid\W?complex
