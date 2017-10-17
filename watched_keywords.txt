@@ -1270,5 +1270,4 @@
 1508217866	tripleee	tubemate\.zone
 1508218354	tripleee	mireage\W?imperial
 1508218513	tripleee	kiron\W?acqua\W?optimizer
-1508219147	tripleee	rapiture
 1508220822	tripleee	toefl\W?certificates
