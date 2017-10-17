@@ -261,7 +261,7 @@ vigor\Wexcel
 optimal\Wrock
 slim\Wfit\W180
 azienda\Wcollagen
-testo\W?boost
+testo(?:sterone)?\W?boost(?:er)?
 internal\W911
 true\Wbrilliance
 muscle\Wxtx
@@ -379,7 +379,6 @@ vitaeyes
 neutratone
 luminis
 biocore
-testosterone\Wbooster
 visible\Wallure
 eye\Wroyale
 LinkFixer\WAdvanced
@@ -693,7 +692,6 @@ menxcell
 nitro\W?grit
 aurora\Wbrite
 lumaslim
-testo\W?booster
 trimbiofit
 glow\W?eternal
 apex\W?booty
@@ -749,7 +747,7 @@ super\W?trim\W?500
 silqueskin
 serafina\W?deluxe
 vigostren
-alpha\W?xl?\W?(boost(?:er?)|factor)
+alpha\W?xl?\W?(?:boost(?:er)?|factor)
 androforce\W?x10
 folicillium
 invigorate\W?rx
@@ -807,3 +805,23 @@ avanti\W?skin
 9681701229
 firmaluxe
 hemp\Woil
+office-comsetup\.com
+blue\W?fortera
+radiant\W?revive
+derma\W?luminous
+test\W?ultimate
+(customer|tech|technical)-?(support|service)\.com
+memory\W?boost\W?xl
+musconv
+collagen\W?retinol
+avella\W?serum
+zyklo?n.*(introduction|delivery|device)
+inch(es)?\ lol
+ang\ ang
+p(eni|nei|enni|eeni|ein)s?\ size
+vars\W?performance
+rapiture
+tressurge
+ephamere
+cannabinoid\W?complex
+body\W?slim\W?down
