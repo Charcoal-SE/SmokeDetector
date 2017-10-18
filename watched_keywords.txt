@@ -1299,3 +1299,4 @@
 1508328077	Byte Commander	rrbresult\d+\.co\.in
 1508353840	Glorfindel	procorpprojects\.com
 1508357273	Glorfindel	androidrootinghelp\.com
+1508366507	QPaysTaxes	pcworldtech\.com
