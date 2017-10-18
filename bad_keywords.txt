@@ -816,7 +816,6 @@ musconv
 collagen\W?retinol
 avella\W?serum
 zyklo?n.*(introduction|delivery|device)
-inch(es)?\ lol
 ang\ ang
 p(eni|nei|enni|eeni|ein)s?\ size
 vars\W?performance
