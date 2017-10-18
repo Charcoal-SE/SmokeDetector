@@ -1298,3 +1298,4 @@
 1508309928	tripleee	2347053699933
 1508328077	Byte Commander	rrbresult\d+\.co\.in
 1508353840	Glorfindel	procorpprojects\.com
+1508357273	Glorfindel	androidrootinghelp\.com
