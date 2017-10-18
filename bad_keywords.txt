@@ -825,3 +825,4 @@ pusys
 ((p[eni]{3,4}s{1,2})|(d[ick]{2,4})|pussy)\W(is\W)?\.?[0-9]+\.?([0-9]+)?\Winch(es)?
 fukc(ing)?
 truewell
+activguard
