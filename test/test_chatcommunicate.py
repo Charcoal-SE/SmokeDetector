@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from ChatExchange.chatexchange import events, client
 from chatcommunicate import *
+from chatcommands import check_blacklist
 from datahandling import is_false_positive, is_ignored_post
 import pytest
 
@@ -224,6 +225,18 @@ def test_test_command():
     assert "in title" in reply_value
     assert "in body" in reply_value
     assert "in username" in reply_value
+
+    # This is slightly brittle -- what if cr7hd.com gets blacklisted?
+    # Or changes to a different DNS provider?
+    event = mock_event(
+        "!!/test https://test-chatcommunicate.cr7hd.com/nst",
+        1, 11540, "Charcoal HQ", 59775, u"Doorknob 冰")
+    watcher(event, client.Client())
+    assert "NS suspicious" in reply_value
+
+    blocked = check_blacklist(
+        'test-chatcommunicate.cr7hd.com', False, False, filter_dns=True)
+    assert not blocked, "check_blacklist(...filter_dns=True) skips NS rule"
 
 
 # noinspection PyMissingTypeHints
