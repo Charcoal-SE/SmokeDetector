@@ -779,7 +779,6 @@
 1503895154	tripleee	yourlifechange\.in
 1503897468	tripleee	noahdatatech\.com
 1503898170	tripleee	cdgrouphk\.com
-1503905112	tripleee	obatpelancarhaidterbaik\.com
 1503906471	tripleee	628\W*204\W?3299
 1503909127	tripleee	edudriveservices\.com
 1503917028	tripleee	bulksmscoimbatore\.net
