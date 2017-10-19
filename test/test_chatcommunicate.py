@@ -1,4 +1,5 @@
 import chatcommunicate
+import chatcommands
 
 
 def test_parse_room_config():
