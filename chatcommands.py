@@ -1017,6 +1017,9 @@ def willbenotified(msg, room_id, se_site):
 def invite(msg, room_id, roles):
     add_room((msg._client.host, room_id), roles.split(","))
 
+    return "I'll now send messages with types `{}` to room `{}` on `{}`." \
+           " (Note that this will not persist after restarts.)".format(roles, room_id, msg._client.host)
+
 
 # --- Post Responses --- #
 # noinspection PyIncorrectDocstring
