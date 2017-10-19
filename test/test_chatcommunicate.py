@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from ChatExchange.chatexchange import events, client
 from chatcommunicate import *
+import chatcommands  # required for coverage
 from datahandling import is_false_positive, is_ignored_post
 import pytest
 
