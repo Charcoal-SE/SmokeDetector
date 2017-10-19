@@ -1,6 +1,6 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
-from chatcommunicate import block_room, command, get_report_data, is_privileged, message, tell_rooms
+from chatcommunicate import add_room, block_room, command, get_report_data, is_privileged, message, tell_rooms
 from globalvars import GlobalVars
 from findspam import FindSpam
 # noinspection PyUnresolvedReferences
@@ -1011,6 +1011,11 @@ def willbenotified(msg, room_id, se_site):
         return "Yes, you will be notified for that site in that room."
 
     return "No, you won't be notified for that site in that room."
+
+
+@command(int, str, privileged=True, whole_msg=True)
+def invite(msg, room_id, roles):
+    add_room((msg._client.host, room_id), roles.split(","))
 
 
 # --- Post Responses --- #

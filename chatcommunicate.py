@@ -102,11 +102,15 @@ def parse_room_config(path):
                     _watcher_rooms.add(room_identifier)
 
                 if "msg_types" in room:
-                    for perm in room["msg_types"]:
-                        if perm not in _room_roles:
-                            _room_roles[perm] = set()
+                    add_room(room_identifier, room["msg_types"])
 
-                        _room_roles[perm].add(room_identifier)
+
+def add_room(room, roles):
+    for role in roles:
+        if role not in _room_roles:
+            _room_roles[role] = set()
+
+        _room_roles[role].add(room)
 
 
 def pickle_last_messages():
@@ -209,7 +213,7 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=()):
             if all(map(lambda prop: prop not in _room_roles or room not in _room_roles[prop], hasnt)):
                 if room not in _rooms:
                     site, roomid = room
-                    deletion_watcher = room in _room_roles["watchers"]
+                    deletion_watcher = room in _watcher_rooms
 
                     new_room = _clients[site].get_room(roomid)
                     new_room.join()
