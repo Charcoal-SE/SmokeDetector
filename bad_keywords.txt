@@ -732,7 +732,6 @@ hyprshred
 Als\W?trailers
 jolie\W?derme
 megaxxl
-semmiami\.com
 extagen
 zmass
 thrive\W?max
@@ -791,7 +790,7 @@ cla\W?safflower
 decollage
 impanix
 nitro\W?max
-androdrox
+androdrox1?
 qute\W?balance
 venabol
 testo\W?fuse\W?xl
@@ -805,18 +804,15 @@ avanti\W?skin
 9681701229
 firmaluxe
 hemp\Woil
-office-comsetup\.com
 blue\W?fortera
 radiant\W?revive
 derma\W?luminous
 test\W?ultimate
-(customer|tech|technical)-?(support|service)\.com
 memory\W?boost\W?xl
 musconv
 collagen\W?retinol
 avella\W?serum
 zyklo?n.*(introduction|delivery|device)
-inch(es)?\ lol
 ang\ ang
 p(eni|nei|enni|eeni|ein)s?\ size
 vars\W?performance
@@ -825,3 +821,10 @@ tressurge
 ephamere
 cannabinoid\W?complex
 body\W?slim\W?down
+pusys
+((p[eni]{3,4}s{1,2})|(d[ick]{2,4})|pussy)\W(is\W)?\.?[0-9]+\.?([0-9]+)?\Winch(es)?
+fukc(ing)?
+truewell
+activguard
+zygenx
+fortera

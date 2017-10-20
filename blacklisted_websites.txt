@@ -1519,3 +1519,12 @@ sex-superstore\.com
 healthsupplementzone\.com
 puremusclefacts\.com
 facts4fitness\.com
+vbagetech\.com
+browseplay\.com
+semmiami\.com
+office-comsetup\.com
+(customer|tech|technical)-?(support|service)\.com
+livetecs\.com
+obatpelancarhaidterbaik\.com
+el-watnya\.com
+raymondcoding\.com

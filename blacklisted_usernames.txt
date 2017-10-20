@@ -12,7 +12,7 @@ xiguai
 Dr\. Madonna
 Pro Max
 ^hl12
-defort\ essid
+defort essid
 ^pus(sy)?$
 radlelgl
 Anonymous\WTeacher
@@ -35,3 +35,7 @@ maccolar
 limeprox(y|ies)
 ^dongfang$
 Da Whole Truth
+Merit Campus
+Learner Logic
+online\W?time\W?sheets?
+medo74
