@@ -1301,3 +1301,4 @@
 1508481999	Byte Commander	iplaystoredownloadfree\.com
 1508484522	Glorfindel	kiwitaxi\.com
 1508506596	Glorfindel	zetpush\.com
+1508509947	Glorfindel	bugrem\.com
