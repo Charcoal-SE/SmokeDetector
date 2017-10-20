@@ -828,3 +828,4 @@ truewell
 activguard
 zygenx
 fortera
+claire\W?hydrafirm
