@@ -1299,3 +1299,4 @@
 1508366507	QPaysTaxes	pcworldtech\.com
 1508384817	bwDraco	auroramine
 1508481999	Byte Commander	iplaystoredownloadfree\.com
+1508484522	Glorfindel	kiwitaxi\.com
