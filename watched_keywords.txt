@@ -1141,7 +1141,6 @@
 1507187387	tripleee	(1\W*)?530\W*466\W?8399
 1507187535	tripleee	test\W?origen
 1507194823	tripleee	(1\W*)?888\W*473\W*8821
-1507202733	tripleee	xtext
 1507203028	tripleee	kateit\.in
 1507204474	tripleee	catalogplayer\.com
 1507260859	tripleee	dtube\.vide
