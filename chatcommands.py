@@ -1471,8 +1471,12 @@ def subcommand_delete(ev_room, ev_user_id, wrap2, msg, *args, **kwargs):
                                                       "`sd delete-force`. See [this note on message deletion]"
                                                       "(https://charcoal-se.org/smokey/Commands"
                                                       "#a-note-on-message-deletion) for more details.")
-    else:
-        return subcommand_delete_force(ev_room, ev_user_id, wrap2, msg, *args, **kwargs)
+
+    try:
+        msg.delete()
+    except:
+        pass  # couldn't delete message
+    return Response(command_status=True, message=None)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
