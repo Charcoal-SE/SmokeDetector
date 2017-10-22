@@ -69,7 +69,7 @@ def send_metasmoke_feedback(post_url, second_part_lower, ev_user_name, ev_user_i
 
 @command(int, whole_msg=True, privileged=True)
 def approve(msg, pr_num):
-    if is_code_privileged(msg.room, msg.owner.id):
+    if is_code_privileged(msg._client.host, msg.owner.id):
         resp = requests.post('{}/github/pr_approve/{}'.format(GlobalVars.metasmoke_host, pr_num))
 
         if resp.status_code == 200:
@@ -299,7 +299,7 @@ def do_blacklist(pattern, blacklist_type, msg, force=False):
         item_to_blacklist=pattern,
         username=msg.owner.name,
         chat_profile_link=chat_user_profile_link,
-        code_permissions=is_code_privileged(msg.room, msg.owner.id)
+        code_permissions=is_code_privileged(msg._client.host, msg.owner.id)
     )
 
     return result
@@ -640,7 +640,7 @@ def amicodeprivileged(msg):
     :param msg:
     :return: A string
     """
-    if is_code_privileged(msg.room, msg.owner.id):
+    if is_code_privileged(msg._client.host, msg.owner.id):
         return "\u2713 You are a code-privileged user."
 
     return "\u2573 No, you are not a code-privileged user."
