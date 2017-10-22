@@ -1,6 +1,7 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
 from chatcommunicate import add_room, block_room, command, get_report_data, is_privileged, message, tell_rooms
+# noinspection PyUnresolvedReferences
 from globalvars import GlobalVars
 from findspam import FindSpam
 # noinspection PyUnresolvedReferences
@@ -68,7 +69,7 @@ def send_metasmoke_feedback(post_url, second_part_lower, ev_user_name, ev_user_i
 
 @command(int, whole_msg=True, privileged=True)
 def approve(msg, pr_num):
-    if is_code_privileged(msg.room, msg.owner.id, msg._client):
+    if is_code_privileged(msg.room, msg.owner.id):
         resp = requests.post('{}/github/pr_approve/{}'.format(GlobalVars.metasmoke_host, pr_num))
 
         if resp.status_code == 200:
@@ -155,7 +156,7 @@ def addwlu(user):
     :param user:
     :return: A string
     """
-    uid, val = get_user_from_list_command(content_lower)
+    uid, val = get_user_from_list_command(user)
 
     if int(uid) > -1 and val != "":
         add_whitelisted_user((uid, val))
@@ -174,7 +175,7 @@ def iswlu(user):
     :param user:
     :return: A string
     """
-    uid, val = get_user_from_list_command(content_lower)
+    uid, val = get_user_from_list_command(user)
 
     if int(uid) > -1 and val != "":
         if is_whitelisted_user((uid, val)):
@@ -268,10 +269,10 @@ def format_blacklist_reasons(reasons):
 def do_blacklist(pattern, blacklist_type, msg, force=False):
     """
     Adds a string to the website blacklist and commits/pushes to GitHub
-    :param message_parts:
-    :param ev_user_name:
-    :param ev_room:
-    :param :ev_user_id:
+    :param pattern:
+    :param blacklist_type:
+    :param msg:
+    :param force:
     :return: A string
     """
 
@@ -296,9 +297,9 @@ def do_blacklist(pattern, blacklist_type, msg, force=False):
     _, result = GitManager.add_to_blacklist(
         blacklist=blacklist_type,
         item_to_blacklist=pattern,
-        username=user.name,
+        username=msg.owner.name,
         chat_profile_link=chat_user_profile_link,
-        code_permissions=is_code_privileged(msg.room, msg.owner.id, msg._client)
+        code_permissions=is_code_privileged(msg.room, msg.owner.id)
     )
 
     return result
@@ -314,7 +315,7 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist_keyword"):
     """
     Adds a string to the blacklist and commits/pushes to GitHub
     :param msg:
-    :param website:
+    :param pattern:
     :return: A string
     """
 
@@ -410,7 +411,7 @@ def coffee(msg, other_user):
 
 # noinspection PyIncorrectDocstring
 @command()
-def lick(*args, **kwargs):
+def lick():
     """
     Returns a string when a user says 'lick' (This is a joke command)
     :return: A string
@@ -485,7 +486,8 @@ def hats():
 def block(msg, block_time, room_id):
     """
     Blocks posts from application for a period of time
-    :param t:
+    :param msg:
+    :param block_time:
     :param room_id:
     :return: A string
     """
@@ -493,30 +495,27 @@ def block(msg, block_time, room_id):
     block_room(room_id, msg._client.host, time.time() + time_to_block)
 
     which_room = "globally" if room_id is None else "in room " + room_id
-    report = "Reports blocked for {} seconds {}.".format(time_to_block, which_room)
+    block_message = "Reports blocked for {} seconds {}.".format(time_to_block, which_room)
 
-    tell_rooms(report, ("debug", "metatavern"), ())
+    tell_rooms(block_message, ("debug", "metatavern"), ())
     return report
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
-@command(int, int, privileged=True, arity=(1, 2))
-def unblock(time, room_id):
+@command(int, int, whole_msg=True, privileged=True, arity=(1, 2))
+def unblock(msg, room_id):
     """
     Unblocks posting to a room
-    :param ev_room:
-    :param wrap2:
-    :param ev_user_id:
-    :param message_parts:
-    :param kwargs: No additional arguments expected
+    :param msg:
+    :param room_id:
     :return: A string
     """
     block_room(room_id, msg._client.host, -1)
 
     which_room = "globally" if room_id is None else "in room " + room_id
-    report = "Reports unblocked {}.".format(which_room)
+    unblock_message = "Reports unblocked {}.".format(which_room)
 
-    tell_rooms(report, ("debug", "metatavern"), ())
+    tell_rooms(unblock_message, ("debug", "metatavern"), ())
     return report
 
 
@@ -546,8 +545,8 @@ def errorlogs(count):
 
 
 # noinspection PyIncorrectDocstring
-@command(aliases=["commands", "info"])
-def help():
+@command(aliases=["commands", "help"])
+def info():
     """
     Returns the help text
     :return: A string
@@ -596,8 +595,8 @@ def pull():
             'https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/{commit_code}/statuses'.format(
                 commit_code=latest_sha))
         states = []
-        for status in request.json():
-            state = status["state"]
+        for ci_status in request.json():
+            state = ci_status["state"]
             states.append(state)
         if "success" in states:
             os._exit(3)
@@ -641,7 +640,7 @@ def amicodeprivileged(msg):
     :param msg:
     :return: A string
     """
-    if is_code_privileged(msg.room, msg.owner.id, msg._client):
+    if is_code_privileged(msg.room, msg.owner.id):
         return "\u2713 You are a code-privileged user."
 
     return "\u2573 No, you are not a code-privileged user."
@@ -669,18 +668,16 @@ def queuestatus():
 
 # noinspection PyIncorrectDocstring,PyProtectedMember
 @command(str, whole_msg=True, privileged=True, arity=(0, 1))
-def stappit(msg, location):
+def stappit(msg, location_search):
     """
     Forces a system exit with exit code = 6
-    :param message_parts:
-    :param wrap2:
-    :param ev_user_id:
-    :param ev_room:
-    :param kwargs: No additional arguments expected
+    :param msg:
+    :param location_search:
     :return: None
     """
-    if location is None or location.lower() in GlobalVars.location.lower():
+    if location_search is None or location_search.lower() in GlobalVars.location.lower():
         msg.room.send_message("Goodbye, cruel world")
+        time.sleep(1)
         os._exit(6)
 
 
@@ -723,7 +720,7 @@ def status():
 
 # noinspection PyIncorrectDocstring
 @command(privileged=True)
-def stopflagging(*args, **kwargs):
+def stopflagging():
     t_metasmoke = Thread(name="stop_autoflagging", target=Metasmoke.stop_autoflagging,
                          args=())
     t_metasmoke.start()
@@ -733,15 +730,16 @@ def stopflagging(*args, **kwargs):
 
 # noinspection PyIncorrectDocstring,PyProtectedMember
 @command(str, whole_msg=True, privileged=True)
-def standby(msg, location):
+def standby(msg, location_search):
     """
     Forces a system exit with exit code = 7
     :param msg:
-    :param location:
+    :param location_search:
     :return: None
     """
-    if location.lower() in GlobalVars.location.lower():
+    if location_search.lower() in GlobalVars.location.lower():
         msg.room.send_message("{location} is switching to standby".format(location=GlobalVars.location))
+        time.sleep(1)
         os._exit(7)
 
 
@@ -754,7 +752,6 @@ def test(content, alias_used="test"):
     :return: A string
     """
     result = "> "
-    kind = ""
 
     if alias_used == "test-q":
         kind = " question."
@@ -782,14 +779,14 @@ def test(content, alias_used="test"):
                                       'owner': {'display_name': content, 'reputation': 1, 'link': ''},
                                       'site': "", 'IsAnswer': False, 'score': 0})
 
-    reasons, why = FindSpam.test_post(fakepost)
+    reasons, why_response = FindSpam.test_post(fakepost)
 
     if len(reasons) == 0:
         result += "Would not be caught as a{}".format(kind)
     else:
         result += ", ".join(reasons).capitalize()
 
-        if why is not None and len(why) > 0:
+        if why_response is not None and len(why) > 0:
             result += "\n----------\n"
             result += why
 
@@ -804,9 +801,9 @@ def threads():
     :return: A string
     """
 
-    threads = ("{ident}: {name}".format(ident=t.ident, name=t.name) for t in threading.enumerate())
+    threads_list = ("{ident}: {name}".format(ident=t.ident, name=t.name) for t in threading.enumerate())
 
-    return "{threads}".format(threads="\n".join(list(threads)))
+    return "{threads}".format(threads="\n".join(list(threads_list)))
 
 
 # noinspection PyIncorrectDocstring
@@ -834,25 +831,6 @@ def whoami(msg):
     return "My id for this room is {}, and it's not apnorton's fault.".format(msg._client._br.user_id)
 
 
-# noinspection PyIncorrectDocstring
-@command(int)
-def pending(page):
-    """
-    Finds posts with TP feedback that have yet to be deleted.
-    :param args: No additional arguments expected.
-    :param kwargs: No additional arguments expected.
-    :return:
-    """
-    posts = requests.get("https://metasmoke.erwaysoftware.com/api/undeleted?pagesize=2&page={}&key={}".format(
-        page, GlobalVars.metasmoke_key)).json()
-
-    messages = []
-    for post in posts['items']:
-        messages.append("[{0}]({1}) ([MS](https://m.erwaysoftware.com/post/{0}))".format(post['id'], post['link']))
-
-    return ", ".join(messages)
-
-
 # --- Notification functions --- #
 # noinspection PyIncorrectDocstring
 @command(int, whole_msg=True)
@@ -878,7 +856,7 @@ def notify(msg, room_id, se_site):
     Subscribe a user to events on a site in a single room
     :param msg:
     :param room_id:
-    :param site:
+    :param se_site:
     :return: A string
     """
     response, full_site = add_to_notification_list(msg.owner.id, msg._client.host, room_id, se_site)
@@ -955,27 +933,27 @@ def whois(msg, role):
                                 msg._client.get_user(admin).last_seen)
                                for admin in admins_not_in_room]
 
-    message = "I am aware of {} {}".format(len(admin_ids), message_parts[1])
+    response = "I am aware of {} {}".format(len(admin_ids), role)
 
     if admins_in_room_list:
         admins_in_room_list.sort(key=lambda x: x[2])    # Sort by last message (last seen = x[3])
-        message += ". Currently in this room: **"
+        response += ". Currently in this room: **"
         for admin in admins_in_room_list:
-            message += "{}, ".format(admin[1])
-        message = message[:-2] + "**. "
-        message += "Not currently in this room: "
+            response += "{}, ".format(admin[1])
+        response = response[:-2] + "**. "
+        response += "Not currently in this room: "
         for admin in admins_not_in_room_list:
-            message += "{}, ".format(admin[1])
-        message = message[:-2] + "."
+            response += "{}, ".format(admin[1])
+        response = response[:-2] + "."
 
     else:
-        message += ": "
+        response += ": "
         for admin in admins_list:
-            message += "{}, ".format(admin[1])
-        message = message[:-2] + ". "
-        message += "None of them are currently in this room. Other users in this room might be able to help you."
+            response += "{}, ".format(admin[1])
+        response = response[:-2] + ". "
+        response += "None of them are currently in this room. Other users in this room might be able to help you."
 
-    return message
+    return response
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
@@ -1075,14 +1053,14 @@ def report(msg, urls):
             message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
             add_blacklisted_user(user, message_url, post_data.post_url)
 
-        why = u"Post manually reported by user *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
+        why_info = u"Post manually reported by user *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
         batch = ""
         if len(urls) > 1:
             batch = " (batch report: post {} out of {})".format(index, len(urls))
 
         handle_spam(post=post,
                     reasons=["Manually reported " + post_data.post_type + batch],
-                    why=why)
+                    why=why_info)
 
     if 1 < len(urls) > len(output):
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
@@ -1214,6 +1192,7 @@ def delete_force(msg):
     :param msg:
     :return: None
     """
+    # noinspection PyBroadException
     try:
         msg.delete()
     except:
@@ -1363,7 +1342,7 @@ def naa(feedback, msg, alias_used="naa"):
 # noinspection PyIncorrectDocstring
 @command(message, reply=True, privileged=True, whole_msg=True, give_name=True,
          aliases=["tp", "tpu", "trueu", "rude", "abusive", "vandalism", "v", "k"])
-def true(feedback, msg, alias_used=["true"]):
+def true(feedback, msg, alias_used="true"):
     """
     Marks a post as a true positive
     :param feedback:
@@ -1411,9 +1390,9 @@ def why(msg):
         raise Exception("That's not a report.")
     else:
         *post, _ = fetch_post_id_and_site_from_url(post_data[0])
-        why = get_why(post[1], post[0])
-        if why:
-            return why
+        why_info = get_why(post[1], post[0])
+        if why_info:
+            return why_info
         else:
             raise Exception("There is no `why` data for that user (anymore).")
 
@@ -1431,9 +1410,9 @@ def autoflagged(msg):
     if not post_data:
         raise Exception("That's not a report.")
 
-    autoflagged, names = Metasmoke.determine_if_autoflagged(post_data[0])
+    is_autoflagged, names = Metasmoke.determine_if_autoflagged(post_data[0])
 
-    if autoflagged:
+    if is_autoflagged:
         return "That post was automatically flagged, using flags from: {}.".format(", ".join(names))
     else:
         return "That post was **not** automatically flagged by metasmoke."
