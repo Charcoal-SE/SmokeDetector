@@ -1306,3 +1306,4 @@
 1508577374	Nisse Engström	alituraclaymask\.net
 1508593272	Glorfindel	apkdownloads\.net
 1508657535	Glorfindel	java2python\.com
+1508662308	Glorfindel	jobalertdaily\.com
