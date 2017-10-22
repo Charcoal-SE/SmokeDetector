@@ -1141,7 +1141,6 @@
 1507187387	tripleee	(1\W*)?530\W*466\W?8399
 1507187535	tripleee	test\W?origen
 1507194823	tripleee	(1\W*)?888\W*473\W*8821
-1507202733	tripleee	xtext
 1507203028	tripleee	kateit\.in
 1507204474	tripleee	catalogplayer\.com
 1507260859	tripleee	dtube\.vide
@@ -1301,5 +1300,11 @@
 1508481999	Byte Commander	iplaystoredownloadfree\.com
 1508484522	Glorfindel	kiwitaxi\.com
 1508506596	Glorfindel	zetpush\.com
-1508509947	Glorfindel	bugrem\.com
 1508511174	doppelgreener	whycall\.me
+1508547311	NobodyNada	picdiet
+1508570614	Glorfindel	collisionexpresscenter\.com
+1508577374	Nisse Engström	alituraclaymask\.net
+1508593272	Glorfindel	apkdownloads\.net
+1508657535	Glorfindel	java2python\.com
+1508662308	Glorfindel	jobalertdaily\.com
+1508681291	Glorfindel	ontimefeed\.com
