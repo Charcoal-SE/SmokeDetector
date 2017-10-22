@@ -1308,3 +1308,4 @@
 1508657535	Glorfindel	java2python\.com
 1508662308	Glorfindel	jobalertdaily\.com
 1508681291	Glorfindel	ontimefeed\.com
+1508710013	Byte Commander	bitcoinrealcash\.com
