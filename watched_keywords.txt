@@ -1307,3 +1307,4 @@
 1508593272	Glorfindel	apkdownloads\.net
 1508657535	Glorfindel	java2python\.com
 1508662308	Glorfindel	jobalertdaily\.com
+1508681291	Glorfindel	ontimefeed\.com
