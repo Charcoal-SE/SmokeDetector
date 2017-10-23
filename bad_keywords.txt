@@ -832,3 +832,4 @@ claire\W?hydrafirm
 testo\W?fuel
 super\W?cbd
 suavpele
+(?:1\W*)?317\W*794\W*1276
