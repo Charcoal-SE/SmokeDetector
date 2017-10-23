@@ -1324,3 +1324,4 @@
 1508777493	bwDraco	treasurebox
 1508777497	bwDraco	collision\W?express
 1508779581	bwDraco	rock\W?hard
+1508787746	Byte Commander	cyber(?!\W*security)
