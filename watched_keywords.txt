@@ -1309,4 +1309,6 @@
 1508662308	Glorfindel	jobalertdaily\.com
 1508681291	Glorfindel	ontimefeed\.com
 1508710013	Byte Commander	bitcoinrealcash\.com
-1508710898	Byte Commander	originaldocuments150|ieltscertificate247|buyoriginaldocumentonline
+1508710898	Byte Commander	originaldocuments150
+1508710898	Byte Commander	ieltscertificate247
+1508710898	Byte Commander	buyoriginaldocumentonline
