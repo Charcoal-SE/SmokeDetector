@@ -834,3 +834,4 @@ super\W?cbd
 suavpele
 (?:1\W*)?317\W*794\W*1276
 alpha\W?burst\W?n[0o]\W?2
+cyberwizard
