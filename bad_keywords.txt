@@ -491,7 +491,7 @@ active\W?plus
 truvitaliti
 dermalab
 expandom
-zylix\Wplus
+zylix
 Mevaqesh .*lo chelek .*olam haba
 mevaqesh
 viril\Wx
