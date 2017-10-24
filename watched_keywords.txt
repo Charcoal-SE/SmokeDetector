@@ -1344,3 +1344,4 @@
 1508838010	bwDraco	get\W?talking\W?smileys
 1508841523	tripleee	bios-pw\.org
 1508841778	Mithrandir	thegarbagedisposal\.com
+1508855605	Glorfindel	mailhesabi\.com
