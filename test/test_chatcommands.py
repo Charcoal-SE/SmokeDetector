@@ -1,4 +1,4 @@
-import chatcommunicate # coverage
+import chatcommunicate  # coverage
 import chatcommands
 import regex
 from unittest.mock import *
@@ -6,7 +6,7 @@ from unittest.mock import *
 
 def test_coffee():
     owner = Mock(name="El'endia Starman")
-    owner.name.replace = Mock(return_value="El'endiaStarman")
+    owner.name.replace = "El'endia Starman".replace
 
     msg = Mock(owner=owner)
 
@@ -16,9 +16,9 @@ def test_coffee():
 
 def test_tea():
     owner = Mock(name="El'endia Starman")
-    owner.name.replace = Mock(return_value="El'endiaStarman")
+    owner.name.replace = "El'endia Starman".replace
 
-    msg = Mock(owner=owner) 
+    msg = Mock(owner=owner)
 
     teas = "\*brews a cup of ({}) tea for ".format("|".join(chatcommands.TEAS))
     assert regex.match(teas + "@El'endiaStarman\*", chatcommands.tea(None, original_msg=msg))
