@@ -1346,3 +1346,4 @@
 1508841778	Mithrandir	thegarbagedisposal\.com
 1508855605	Glorfindel	mailhesabi\.com
 1508873526	Glorfindel	knama\.com
+1508880029	quartata	technocertified\.in
