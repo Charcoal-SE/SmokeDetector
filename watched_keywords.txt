@@ -1327,3 +1327,4 @@
 1508787746	Byte Commander	cyber(?!\W*security)
 1508791180	Mithrandir	fdsfs
 1508817954	Suraj Rao	tutorialslife\.com
+1508818670	tripleee	(?:1\W*)?518\W*855\W*8838
