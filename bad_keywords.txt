@@ -839,3 +839,4 @@ buysupplement
 memory\W?repair\W?protocol
 numax\W?test\W?xt
 vyalis\W?rx
+duro\W?max
