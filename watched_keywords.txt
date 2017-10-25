@@ -1361,3 +1361,4 @@
 1508912522	tripleee	videoder\.zone
 1508915218	tripleee	(?:1\W*)?844\W*225\W*4691
 1508915244	Glorfindel	realfakedocs\.com
+1508915853	tripleee	(?<=/)hdt(?=[-/<]|$)
