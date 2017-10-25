@@ -1364,3 +1364,4 @@
 1508916697	Glorfindel	tyrecompare\.com
 1508916847	tripleee	darshanbooking\.com
 1508918141	Glorfindel	stafaband\w*
+1508918834	tripleee	revglow
