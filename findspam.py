@@ -541,6 +541,9 @@ def mostly_dots(s, site, *args):
     body = strip_urls_and_tags(s)
     body_length = len(body)
 
+    body = regex.sub("(?s)<pre>.*?</pre>", "", body)
+    body = regex.sub("(?s)<code>.*?</code>", "", body)
+
     dot_count = len(regex.findall(r"\.", body))
 
     if body_length and dot_count / float(body_length) >= 0.4:
@@ -1065,7 +1068,7 @@ class FindSpam:
         # Mostly dots in post
         {'method': mostly_dots, 'all': True, 'sites': ['codegolf.stackexchange.com'],
          'reason': 'mostly dots in {}', 'title': True, 'body': True, 'username': False, 'body_summary': False,
-         'stripcodeblocks': True, 'max_rep': 50, 'max_score': 0},
+         'max_rep': 50, 'max_score': 0},
 
         #
         # Category: other
