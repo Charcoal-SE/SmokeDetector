@@ -1068,7 +1068,7 @@ class FindSpam:
         # Mostly dots in post
         {'method': mostly_dots, 'all': True, 'sites': ['codegolf.stackexchange.com'],
          'reason': 'mostly dots in {}', 'title': True, 'body': True, 'username': False, 'body_summary': False,
-         'max_rep': 50, 'max_score': 0},
+         'stripcodeblocks': False, 'max_rep': 50, 'max_score': 0},
 
         #
         # Category: other
