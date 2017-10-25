@@ -1355,3 +1355,4 @@
 1508906225	tripleee	holistic\W?life\W?cbd
 1508906496	tripleee	vitrixa
 1508906625	tripleee	(?<=/)blue\W?pearl(?:[-/<]|$)
+1508907317	tripleee	كة مكافحة حشرات
