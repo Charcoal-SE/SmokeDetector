@@ -1356,3 +1356,4 @@
 1508906496	tripleee	vitrixa
 1508906625	tripleee	(?<=/)blue\W?pearl(?:[-/<]|$)
 1508907317	tripleee	كة مكافحة حشرات
+1508907816	tripleee	organixx
