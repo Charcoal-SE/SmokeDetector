@@ -1353,7 +1353,6 @@
 1508904581	tripleee	234\W*810\W*066\W*3964
 1508904939	tripleee	mmovip\.net
 1508906225	tripleee	holistic\W?life\W?cbd
-1508906496	tripleee	vitrixa
 1508906625	tripleee	(?<=/)blue\W?pearl(?:[-/<]|$)
 1508907317	tripleee	كة مكافحة حشرات
 1508907816	tripleee	organixx
