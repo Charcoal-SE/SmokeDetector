@@ -1361,3 +1361,4 @@
 1508912522	tripleee	videoder\.zone
 1508915244	Glorfindel	realfakedocs\.com
 1508915853	tripleee	(?<=/)hdt(?=[-/<]|$)
+1508916697	Glorfindel	tyrecompare\.com
