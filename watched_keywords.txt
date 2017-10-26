@@ -1375,3 +1375,4 @@
 1508991416	tripleee	glamor\W?gold
 1508991618	tripleee	thehaccguru\.com
 1508991967	tripleee	fpwordpressthemes\.com
+1508992105	tripleee	fpbloggertemplates\.com
