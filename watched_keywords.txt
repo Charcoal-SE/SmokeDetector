@@ -1379,3 +1379,4 @@
 1508992245	tripleee	force\W?factor\W?alpha
 1508993295	tripleee	homedecorideaspro\.com
 1508995744	tripleee	neogyaan\.com
+1508999549	tripleee	thehaccguru
