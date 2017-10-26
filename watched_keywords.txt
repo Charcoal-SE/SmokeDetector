@@ -1373,3 +1373,4 @@
 1508935301	Henders	miaustore\.com
 1508938566	Glorfindel	cpimobi\.com
 1508991416	tripleee	glamor\W?gold
+1508991618	tripleee	thehaccguru\.com
