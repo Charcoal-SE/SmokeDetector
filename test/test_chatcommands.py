@@ -1,3 +1,4 @@
+# noinspection PyUnresolvedReferences
 import chatcommunicate  # coverage
 import chatcommands
 import regex
