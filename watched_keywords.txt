@@ -1378,3 +1378,4 @@
 1508992105	tripleee	fpbloggertemplates\.com
 1508992245	tripleee	force\W?factor\W?alpha
 1508993295	tripleee	homedecorideaspro\.com
+1508995744	tripleee	neogyaan\.com
