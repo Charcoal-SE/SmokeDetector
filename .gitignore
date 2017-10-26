@@ -68,6 +68,7 @@ apiCalls.pickle
 bodyfetcherQueue.p
 bodyfetcherQueueTimings.p
 bodyfetcherMaxIds.p
+messageData.p
 
 # Settings files
 .settings/

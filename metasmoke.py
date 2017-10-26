@@ -17,6 +17,7 @@ import parsing
 import apigetpost
 import spamhandling
 import classes
+import chatcommunicate
 from helpers import log, only_blacklists_changed
 from gitmanager import GitManager
 from blacklists import load_blacklists
@@ -88,7 +89,7 @@ class Metasmoke:
         message = data['message']
         if isinstance(message, Iterable):
             if "message" in message:
-                GlobalVars.charcoal_hq.send_message(message['message'])
+                chatcommunicate.tell_rooms_with("debug", message['message'])
             elif "exit" in message:
                 os._exit(message["exit"])
             elif "blacklist" in message:
@@ -151,11 +152,11 @@ class Metasmoke:
                             if i == []:  # No issues
                                 GitManager.pull_remote()
                                 load_blacklists()
-                                GlobalVars.charcoal_hq.send_message("No code modified in {0}, only blacklists"
-                                                                    " reloaded.".format(commit_md))
+                                chatcommunicate.tell_rooms_with("debug", "No code modified in {0}, only blacklists"
+                                                                " reloaded.".format(commit_md))
                             else:
                                 i.append("please fix before pulling.")
-                                GlobalVars.charcoal_hq.send_message(", ".join(i))
+                                chatcommunicate.tell_rooms_with("debug", ", ".join(i))
             elif "commit_status" in message:
                 c = message["commit_status"]
                 sha = c["commit_sha"][:7]
@@ -166,7 +167,7 @@ class Metasmoke:
                                 "commit/{commit_sha})"\
                                 " succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"],
                                                                                              commit_sha=sha)
-                            GlobalVars.charcoal_hq.send_message(s)
+                            chatcommunicate.tell_rooms_with("debug", s)
                             time.sleep(2)
                             os._exit(3)
                         else:
@@ -177,7 +178,7 @@ class Metasmoke:
                             "commit/{commit_sha}) failed.".format(ci_link=c["ci_url"], commit_sha=sha)
 
                     # noinspection PyUnboundLocalVariable
-                    GlobalVars.charcoal_hq.send_message(s)
+                    chatcommunicate.tell_rooms_with("debug", s)
 
             elif "everything_is_broken" in message:
                 if message["everything_is_broken"] is True:
@@ -286,10 +287,11 @@ class Metasmoke:
                         GlobalVars.standby_mode = False
                         GlobalVars.metasmoke_last_ping_time = datetime.now()  # Otherwise the ping watcher will exit(10)
 
-                        GlobalVars.charcoal_hq.send_message(GlobalVars.location + " received failover signal.")
+                        chatcommunicate.tell_rooms_with("debug", GlobalVars.location + " received failover signal.")
 
                     if response['standby']:
-                        GlobalVars.charcoal_hq.send_message(GlobalVars.location + " entering metasmoke-forced standby.")
+                        chatcommunicate.tell_rooms_with("debug",
+                                                        GlobalVars.location + " entering metasmoke-forced standby.")
                         time.sleep(2)
                         os._exit(7)
 
@@ -310,11 +312,16 @@ class Metasmoke:
         response = requests.get(GlobalVars.metasmoke_host + "/api/users/code_privileged",
                                 data=json.dumps(payload), headers=headers).json()['items']
 
-        GlobalVars.code_privileged_users = {
-            GlobalVars.charcoal_room_id: response["stackexchange_chat_ids"],
-            GlobalVars.meta_tavern_room_id: response["meta_stackexchange_chat_ids"],
-            GlobalVars.socvr_room_id: response["stackoverflow_chat_ids"]
-        }
+        GlobalVars.code_privileged_users = set()
+
+        for id in response["stackexchange_chat_ids"]:
+            set.add(("stackexchange.com", id))
+
+        for id in response["meta_stackexchange_chat_ids"]:
+            set.add(("meta.stackexchange.com", id))
+
+        for id in response["stackoverflow_chat_ids"]:
+            set.add(("stackoverflow.com", id))
 
     @staticmethod
     def determine_if_autoflagged(post_url):
