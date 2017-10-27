@@ -1275,8 +1275,20 @@ def command_whois(message_parts, ev_user_id, wrap2, *args, **kwargs):
                                 wrap2.get_user(admin).last_message,
                                 wrap2.get_user(admin).last_seen)
                                for admin in admins_not_in_room]
+    
+    singular_return_names = {"admin": "admin",
+                             "code_admin": "code admin"}
 
-    message = "I am aware of {} {}".format(len(admin_ids), message_parts[1])
+    plural_return_names = {"admin": "admins",
+                           "code_admin": "code admins"}
+    
+    return_name = ""
+    if len(admin_ids) == 1:
+        return_name = singular_return_names[valid_roles[message_parts[1]]]
+    else:
+        return_name = plural_return_names[valid_roles[message_parts[1]]]
+
+    message = "I am aware of {} {}".format(len(admin_ids), return_name)
 
     if admins_in_room_list:
         admins_in_room_list.sort(key=lambda x: x[2])    # Sort by last message (last seen = x[3])
