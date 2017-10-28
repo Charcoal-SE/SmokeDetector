@@ -911,7 +911,6 @@
 1505196793	tripleee	medsoft-imaging\.com
 1505196819	tripleee	rotatepdf\.net
 1505196912	tripleee	jiofiber\.com
-1505197019	tripleee	ganna\.zone
 1505197055	tripleee	noithatkuongthinh\.com\.vn
 1505199611	tripleee	cornerstonegraniteandtile\.net
 1505199986	tripleee	poe-pcba\.com

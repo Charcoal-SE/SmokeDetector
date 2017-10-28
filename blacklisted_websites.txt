@@ -1545,3 +1545,4 @@ educationhubspot\.com
 gesturelockscreen\.uniqsofts\.com
 tubemate\.zone
 vidmate\.zone
+ganna\.zone
