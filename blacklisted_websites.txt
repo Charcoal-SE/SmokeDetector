@@ -1544,3 +1544,4 @@ juvalifegermanyhelp\.com
 educationhubspot\.com
 gesturelockscreen\.uniqsofts\.com
 tubemate\.zone
+vidmate\.zone
