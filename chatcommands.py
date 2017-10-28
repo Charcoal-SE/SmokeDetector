@@ -1277,7 +1277,7 @@ def command_whois(message_parts, ev_user_id, wrap2, *args, **kwargs):
                                for admin in admins_not_in_room]
 
     return_names = {"admin": ["admin", "admins"], "code_admin": ["code admin", "code admins"]}
-    return_name = return_names[valid_roles[message_parts[1]]][len(admin_ids) - 1]
+    return_name = return_names[valid_roles[message_parts[1]]][0 if len(admin_ids) == 1 else 1]
 
     message = "I am aware of {} {}".format(len(admin_ids), return_name)
 
