@@ -56,7 +56,7 @@ def test_privileged():
     chatcommunicate.parse_room_config("test/test_rooms.yml")
 
     owner = Mock(name="El'endia Starman", id=1)
-    room = Mock(_client=Mock(host="chat.stackexchange.com"), id=11540)
+    room = Mock(_client=Mock(host="stackexchange.com"), id=11540)
     msg = Mock(owner=owner, room=room)
     assert chatcommands.amiprivileged(original_msg=msg) == "\u2713 You are a privileged user."
 
@@ -69,11 +69,8 @@ def test_privileged():
 
 def test_report():
     owner = Mock(name="El'endia Starman", id=2)
-    room = Mock(_client=Mock(host="chat.stackexchange.com"), id=11540)
+    room = Mock(_client=Mock(host="stackexchange.com"), id=11540)
     msg = Mock(owner=owner, room=room)
-
-    # We need to test non-privileged users at least once
-    assert chatcommands.report("test", original_msg=msg) == GlobalVars.not_privileged_warning
 
     msg.owner.id = 1
 
@@ -84,7 +81,7 @@ def test_report():
         "SmokeDetector's chat messages getting rate-limited too much, which would slow down reports."
     )
 
-    assert chatcommands.report('http://stackoverflow.com/posts/1', original_msg=msg) == \
+    assert chatcommands.report('http://stackoverflow.com/q/1', original_msg=msg) == \
         "Post 1: Could not find data for this post in the API. It may already have been deleted."
 
     # Valid post
@@ -100,12 +97,13 @@ def test_report():
 
 def test_allspam():
     owner = Mock(name="El'endia Starman", id=1)
-    room = Mock(_client=Mock(host="chat.stackexchange.com"), id=11540)
+    room = Mock(_client=Mock(host="stackexchange.com"), id=11540)
     msg = Mock(owner=owner, room=room)
 
     assert chatcommands.allspam("test", original_msg=msg) == "That doesn't look like a valid user URL."
 
-    assert chatcommands.allspam("http://stackexchange.com/users/-2", original_msg=msg) == \
+    # If this code lasts long enough to fail, I'll be happy
+    assert chatcommands.allspam("http://stackexchange.com/users/10000000000", original_msg=msg) == \
         "The specified user does not appear to exist."
 
     assert chatcommands.allspam("http://stackexchange.com/users/me", original_msg=msg) == (
@@ -132,7 +130,7 @@ def test_allspam():
     # This test is for users with <100rep but >15 posts
     # If this breaks in the future because the below user eventually gets 100 rep (highly unlikely), use the following
     # data.SE query to find a new target. Alternatively, get a sock to post 16 answers in the sandbox.
-    # https://stackoverflow.com/users/7052649/vibin
+    # https://stackoverflow.com/users/7052649/vibin (look for low rep but >1rep users, 1rep users are usually suspended)
     assert chatcommands.allspam("http://stackoverflow.com/users/7052649", original_msg=msg) == (
         "The specified user has an abnormally high number of spam posts. Please consider flagging for moderator "
         "attention, otherwise use !!/report on the posts individually."
