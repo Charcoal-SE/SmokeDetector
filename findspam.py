@@ -581,10 +581,10 @@ def toxic_check(post):
     }).json()
 
     if "error" in response:
-       err_msg = response["error"]["message"]
+        err_msg = response["error"]["message"]
 
-       if not err_msg.startswith("Attribute TOXICITY does not support request languages:"):
-           log("debug", "Perspective error: {} for string {} (original body {})".format(err_msg, string, post.body))
+        if not err_msg.startswith("Attribute TOXICITY does not support request languages:"):
+            log("debug", "Perspective error: {} for string {} (original body {})".format(err_msg, string, post.body))
     else:
         probability = response["attributeScores"]["TOXICITY"]["summaryScore"]["value"]
 
