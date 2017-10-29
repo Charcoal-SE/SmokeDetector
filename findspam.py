@@ -562,8 +562,11 @@ def mevaqesh_troll(s, *args):
         return False, ""
 
 
-def toxic_check(string, *_):
-    string = strip_urls_and_tags(string)
+def toxic_check(post):
+    string = strip_urls_and_tags(regex.sub("(?s)<code>.*?</code>", "", post.body))
+
+    if not string:
+        return
 
     response = requests.post(PERSPECTIVE, json={
         "comment": {
@@ -577,10 +580,18 @@ def toxic_check(string, *_):
         }
     }).json()
 
-    if "TOXICITY" in response["attributeScores"] and response["TOXICITY"]["value"] > PERSPECTIVE_THRESHOLD:
-        return True, "Perspective scored {}".format(response["TOXICITY"]["value"])
+    if "error" in response:
+       err_msg = response["error"]["message"]
+
+       if not err_msg.startswith("Attribute TOXICITY does not support request languages:"):
+           log("debug", "Perspective error: {} for string {} (original body {})".format(err_msg, string, post.body))
     else:
-        return False, ""
+        probability = response["attributeScores"]["TOXICITY"]["summaryScore"]["value"]
+
+        if probability > PERSPECTIVE_THRESHOLD:
+            return False, False, True, "Perspective scored {}".format(probability)
+
+    return False, False, False, ""
 
 
 load_blacklists()
@@ -1123,9 +1134,9 @@ class FindSpam:
     # Toxic content using Perspective
     if GlobalVars.perspective_key:  # don't bother if we don't have a key, since it's expensive
         rules.append({"method": toxic_check, "all": True, "sites": [],
-                      "reason": "toxic {} detected",
-                      "title": False, "body": True, "username": False, "stripcodeblocks": True,
-                      "max_rep": 101, "max_score": 2})
+                      "reason": "toxic {} detected", "whole_post": True,
+                      "title": False, "body": False, "username": False, "body_summary": False,
+                      "stripcodeblocks": False, "max_rep": 101, "max_score": 2})
 
     @staticmethod
     def test_post(post):
