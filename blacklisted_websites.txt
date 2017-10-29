@@ -1546,3 +1546,4 @@ gesturelockscreen\.uniqsofts\.com
 tubemate\.zone
 vidmate\.zone
 ganna\.zone
+hostdrop\.eu
