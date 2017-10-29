@@ -1415,3 +1415,4 @@
 1509269673	paper1111	twineer\.com
 1509295438	Byte Commander	loganpaul\.com
 1509306497	Glorfindel	series-world\.org
+1509310904	Mithrandir	alabama-football\.org
