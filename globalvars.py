@@ -72,7 +72,7 @@ class GlobalVars:
         "potentially bad keyword in answer",
         "potentially bad keyword in body",
         "potentially bad keyword in title",
-        "potentially bad keyword in username"
+        "potentially bad keyword in username",
         "toxic body detected",
         "toxic answer detected"]
     non_socvr_reasons = []    # Don't report to SOCVR
