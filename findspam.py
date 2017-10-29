@@ -14,6 +14,7 @@ import tld
 from tld.utils import TldDomainNotFound
 import phonenumbers
 import dns.resolver
+import requests
 
 from helpers import all_matches_unique, log
 from globalvars import GlobalVars
@@ -35,6 +36,9 @@ SE_SITES_RE = r'(?:{sites})'.format(
         r'mathoverflow\.net',
         r'(?:[a-z]+\.)*stackexchange\.com']))
 
+if GlobalVars.perspective_key:
+    PERSPECTIVE = "https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=" + GlobalVars.perspective_key
+    PERSPECTIVE_THRESHOLD = 0.5  # aggressive
 
 # Flee before the ugly URL validator regex!
 # We are using this, instead of a nice library like BeautifulSoup, because spammers are
@@ -554,6 +558,27 @@ def mevaqesh_troll(s, *args):
     bad = 'mevaqeshthereforehasnoshareintheworldtocome'
     if bad in s:
         return True, "Post matches pattern from a known troll"
+    else:
+        return False, ""
+
+
+def toxic_check(string, *_):
+    string = strip_urls_and_tags(string)
+
+    response = requests.post(PERSPECTIVE, json={
+        "comment": {
+            "text": string
+        },
+
+        "requestedAttributes": {
+            "TOXICITY": {
+                "scoreType": "PROBABILITY"
+            }
+        }
+    }).json()
+
+    if "TOXICITY" in response["attributeScores"] and response["TOXICITY"]["value"] > PERSPECTIVE_THRESHOLD:
+        return True, "Perspective scored {}".format(response["TOXICITY"]["value"])
     else:
         return False, ""
 
@@ -1094,6 +1119,13 @@ class FindSpam:
          'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
          'max_rep': 20, 'max_score': 0},
     ]
+
+    # Toxic content using Perspective
+    if GlobalVars.perspective_key:  # don't bother if we don't have a key, since it's expensive
+        rules.append({"method": toxic_check, "all": True, "sites": [],
+                      "reason": "toxic {} detected",
+                      "title": False, "body": True, "username": False, "stripcodeblocks": True,
+                      "max_rep": 101, "max_score": 2})
 
     @staticmethod
     def test_post(post):
