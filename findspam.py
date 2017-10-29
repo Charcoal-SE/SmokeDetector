@@ -566,7 +566,7 @@ def toxic_check(post):
     string = strip_urls_and_tags(regex.sub("(?s)<code>.*?</code>", "", post.body[:3000]))
 
     if not string:
-        return
+        return False, False, False, ""
 
     response = requests.post(PERSPECTIVE, json={
         "comment": {
