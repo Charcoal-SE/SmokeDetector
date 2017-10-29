@@ -1192,7 +1192,7 @@ class FindSpam:
                             result.append(rule['reason'].replace("{}", "username"))
                         elif matched_body:
                             why["body"].append(u"Post - {}".format(why_post))
-                            result.append(rule['reason'].replace("{}", "body"))
+                            result.append(rule['reason'].replace("{}", "answer" if post.is_answer else "body"))
                     else:
                         matched_title, why_title = rule['method'](post.title, post.post_site, post.user_name)
                         if matched_title and rule['title']:
