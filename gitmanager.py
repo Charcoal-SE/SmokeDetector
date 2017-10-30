@@ -157,7 +157,7 @@ class GitManager:
 
                 payload = {"title": u"{0}: {1} {2}".format(username, op.title(), item),
                            "body": u"[{0}]({1}) requests the {2} of the {3} {4}. See the Metasmoke search [here]"
-                                   "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6}), and the"
+                                   "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6}) and the"
                                    "Stack Exchange search [here](https://stackexchange.com/search?q=%22{5}%22).\n"
                                    u"<!-- METASMOKE-BLACKLIST-{7} {4} -->".format(
                                        username, chat_profile_link, op, blacklist,
