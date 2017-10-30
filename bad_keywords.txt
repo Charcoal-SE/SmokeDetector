@@ -864,3 +864,4 @@ krivtsovoilgasconsultant
 vyantix(?:\W?rx)?
 slim\W?hca
 aphroditera
+biotrim(?:\W?(?:e?xtreme|lab(?:oratorie)?s))?
