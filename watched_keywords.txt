@@ -1402,7 +1402,6 @@
 1509095659	tripleee	wholesale-swimwear\.com
 1509095683	tripleee	swimwear-manufacturers\.com
 1509101694	tripleee	delhiwebsolutions\.com
-1509101901	tripleee	aphroditera
 1509102553	Glorfindel	sbcltd\.co
 1509123717	quartata	myshop999\.com
 1509123967	quartata	bestdronesadvisor\.com
