@@ -1547,3 +1547,4 @@ tubemate\.zone
 vidmate\.zone
 ganna\.zone
 hostdrop\.eu
+moviehall24\.com
