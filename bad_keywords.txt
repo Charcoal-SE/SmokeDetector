@@ -866,3 +866,4 @@ slim\W?hca
 aphroditera
 biotrim(?:\W?(?:e?xtreme|lab(?:oratorie)?s))?
 xtrcut
+dermiva
