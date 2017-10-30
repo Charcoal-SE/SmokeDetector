@@ -43,3 +43,4 @@ shitfuck
 vbage tech
 AMANDEEP SINGH
 ^ling xing$
+printers?\W?driver
