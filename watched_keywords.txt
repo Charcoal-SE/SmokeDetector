@@ -1418,3 +1418,4 @@
 1509340934	tripleee	businessideasfit\.com
 1509341379	tripleee	7etn\.com
 1509343654	tripleee	vyantix(?:\W?rx)?
+1509345463	bummi	canonprintersdrivers.com
