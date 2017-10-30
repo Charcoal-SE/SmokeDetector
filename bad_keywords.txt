@@ -861,3 +861,4 @@ zmax\?Wmale
 platinum\W?cleanse\W?xl
 loriax
 krivtsovoilgasconsultant
+vyantix(?:\W?rx)?
