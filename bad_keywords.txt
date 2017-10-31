@@ -861,7 +861,7 @@ zmax\?Wmale
 platinum\W?cleanse\W?xl
 loriax
 krivtsovoilgasconsultant
-vyantix(?:\W?rx)?
+vyantix?(?:\W?rx)?
 slim\W?hca
 aphroditera
 biotrim(?:\W?(?:e?xtreme|lab(?:oratorie)?s))?
