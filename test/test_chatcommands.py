@@ -4,7 +4,8 @@ import chatcommands
 from globalvars import GlobalVars
 import regex
 from unittest.mock import *
-
+import pytest
+import os
 
 # TODO: Test notifications, blacklisted and whitelisted users
 
@@ -68,11 +69,9 @@ def test_privileged():
 
 
 def test_report():
-    owner = Mock(name="El'endia Starman", id=2)
+    owner = Mock(name="El'endia Starman", id=1)
     room = Mock(_client=Mock(host="stackexchange.com"), id=11540)
     msg = Mock(owner=owner, room=room)
-
-    msg.owner.id = 1
 
     assert chatcommands.report("test", original_msg=msg) == "Post 1: That does not look like a valid post URL."
 
@@ -139,3 +138,48 @@ def test_allspam():
     # Valid user for allspam command
     assert chatcommands.allspam("http://stackexchange.com/users/12108974", original_msg=msg) is None
     assert chatcommands.allspam("http://meta.stackexchange.com/users/373807", original_msg=msg) is None
+
+
+@pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"), reason="shouldn't overwrite file")
+def test_blacklisted_users():
+    owner = Mock(name="El'endia Starman", id=1)
+    room = Mock(_client=Mock(host="stackexchange.com"), id=11540)
+    msg = Mock(owner=owner, room=room)
+
+    # Format: !!/*blu profileurl
+    assert chatcommands.isblu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        "User is not blacklisted (`4622463` on `stackoverflow.com`)."
+    assert chatcommands.addblu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        "User blacklisted (`4622463` on `stackoverflow.com`)."
+    # TODO: Edit command to check and not blacklist again, add test
+    assert chatcommands.isblu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        "User is blacklisted (`4622463` on `stackoverflow.com`)."
+    assert chatcommands.rmblu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        "User removed from blacklist (`4622463` on `stackoverflow.com`)."
+    assert chatcommands.isblu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        "User is not blacklisted (`4622463` on `stackoverflow.com`)."
+    assert chatcommands.rmblu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        "User is not blacklisted."
+
+    # Format: !!/*blu userid sitename
+    assert chatcommands.isblu("4622463 stackoverflow", original_msg=msg) == \
+        "User is not blacklisted (`4622463` on `stackoverflow.com`)."
+    assert chatcommands.addblu("4622463 stackoverflow", original_msg=msg) == \
+        "User blacklisted (`4622463` on `stackoverflow.com`)."
+    # TODO: Add test here as well
+    assert chatcommands.isblu("4622463 stackoverflow", original_msg=msg) == \
+        "User is blacklisted (`4622463` on `stackoverflow.com`)."
+    assert chatcommands.rmblu("4622463 stackoverflow", original_msg=msg) == \
+        "User removed from blacklist (`4622463` on `stackoverflow.com`)."
+    assert chatcommands.isblu("4622463 stackoverflow", original_msg=msg) == \
+        "User is not blacklisted (`4622463` on `stackoverflow.com`)."
+    assert chatcommands.rmblu("4622463 stackoverflow", original_msg=msg) == \
+        "User is not blacklisted."
+
+    # Invalid input
+    assert chatcommands.addblu("http://meta.stackexchange.com/users", original_msg=msg) == \
+        "Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`."
+    assert chatcommands.rmblu("http://meta.stackexchange.com/", original_msg=msg) == \
+        "Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`."
+    assert chatcommands.isblu("msklkldsklaskd", original_msg=msg) == \
+        "Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`."
