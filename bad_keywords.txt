@@ -600,7 +600,7 @@ test\W?1\W?fusion
 jeune\W?fleur
 xenical
 [$]exual
-vala\W?(?:(?:rejuvenating|facial\W?)*serum
+vala\W?(?:(?:rejuvenating|facial\W?))*serum
 extensive\W?ageless
 duoslim
 credit\W?repair
