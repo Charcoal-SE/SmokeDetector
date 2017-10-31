@@ -1448,3 +1448,4 @@
 1509460334	tripleee	sheriffcoupons\.com
 1509461917	tripleee	deal4ask\.com
 1509462108	tripleee	09971333795
+1509465505	Glorfindel	lovemykittens\.com
