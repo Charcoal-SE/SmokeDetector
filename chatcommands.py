@@ -1417,7 +1417,7 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
                 output.append("Post {}: Already recently reported [[MS]({})]".format(index, ms_link))
                 continue
             else:
-                output.append("Post {}: Already recently reported").format(index)
+                output.append("Post {}: Already recently reported".format(index))
                 continue
         post_data.is_answer = (post_data.post_type == "answer")
         post = Post(api_response=post_data.as_dict)
