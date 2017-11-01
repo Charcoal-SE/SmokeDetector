@@ -1454,3 +1454,4 @@
 1509513740	tripleee	cannabinoid\W?plus
 1509519818	tripleee	derma\W?mira
 1509522741	tripleee	<strong>strong text</strong>
+1509523615	tripleee	revital\W?eyes
