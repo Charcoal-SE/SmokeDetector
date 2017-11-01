@@ -47,3 +47,4 @@ printers?\W?driver
 ^689 Cloud$
 support
 JoeClark
+^Gracia\W?Ryan\d*$
