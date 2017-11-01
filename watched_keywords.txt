@@ -1452,3 +1452,4 @@
 1509492890	Byte Commander	directory\Wreport
 1509512622	tripleee	mysoft\W(?:studio|youtube|ytd)
 1509513555	tripleee	testovate
+1509513740	tripleee	cannabinoid\W?plus
