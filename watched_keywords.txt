@@ -1453,7 +1453,6 @@
 1509519818	tripleee	derma\W?mira
 1509522741	tripleee	<strong>strong text</strong>
 1509523615	tripleee	revital\W?eyes
-1509527187	tripleee	tubidy\.zone
 1509528171	tripleee	pathfinder-character-sheet\.com
 1509532881	tripleee	sunshineskinclinic\.com
 1509533017	tripleee	simply\W?flawless\W?cream
