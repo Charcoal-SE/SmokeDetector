@@ -1453,3 +1453,4 @@
 1509512622	tripleee	mysoft\W(?:studio|youtube|ytd)
 1509513740	tripleee	cannabinoid\W?plus
 1509519818	tripleee	derma\W?mira
+1509522741	tripleee	<strong>strong text</strong>
