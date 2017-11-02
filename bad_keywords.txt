@@ -889,3 +889,4 @@ derma\W?mira
 rapid\W?boost
 grs\W?ultra
 donna\W?belle
+max\W?trim(?:\W?365)?
