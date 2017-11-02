@@ -1466,3 +1466,4 @@
 1509600226	tripleee	healthtrendz\.co
 1509600753	tripleee	xytropin
 1509600870	tripleee	max\W?trim(?:\W?365)?
+1509600946	tripleee	lutreviasingapore\.com
