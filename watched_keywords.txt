@@ -1451,7 +1451,6 @@
 1509492890	Byte Commander	directory\Wreport
 1509512622	tripleee	mysoft\W(?:studio|youtube|ytd)
 1509522741	tripleee	<strong>strong text</strong>
-1509523615	tripleee	revital\W?eyes
 1509528171	tripleee	pathfinder-character-sheet\.com
 1509532881	tripleee	sunshineskinclinic\.com
 1509533017	tripleee	simply\W?flawless\W?cream
