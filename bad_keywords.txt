@@ -893,3 +893,4 @@ max\W?trim(?:\W?365)?
 ultra\W?boost
 revital\W?eyes
 phyto\W?power\W?caps
+(?:1\W*)?540\W*227\W*7725
