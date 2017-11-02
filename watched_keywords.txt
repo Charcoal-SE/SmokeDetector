@@ -1468,3 +1468,4 @@
 1509621218	tripleee	smart\W?trim
 1509622119	tripleee	macho\W?t
 1509622230	tripleee	testo\W?rev
+1509629867	tripleee	gleelover\w*
