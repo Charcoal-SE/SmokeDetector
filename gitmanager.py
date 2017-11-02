@@ -1,20 +1,24 @@
 # coding=utf-8
+
 import platform
-from helpers import log
-from requests.auth import HTTPBasicAuth
-from globalvars import GlobalVars
-import requests
 import time
 import json
-import regex
 from datetime import datetime
 from threading import Lock
+
+import regex
+import requests
+from requests.auth import HTTPBasicAuth
+
 from urllib.parse import quote_plus
 if 'windows' in str(platform.platform()).lower():
     # noinspection PyPep8Naming
     from classes import Git as git
 else:
     from sh import git
+
+from helpers import log
+from globalvars import GlobalVars
 
 
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
