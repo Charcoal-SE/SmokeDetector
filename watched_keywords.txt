@@ -1468,3 +1468,4 @@
 1509600946	tripleee	lutreviasingapore\.com
 1509601011	tripleee	tuturblog\.id
 1509604872	tripleee	phyto\W?power\W?caps
+1509604956	tripleee	(?<=[-/])focus\W?fast(?=[-/<"])
