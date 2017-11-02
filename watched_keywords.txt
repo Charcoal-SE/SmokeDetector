@@ -1469,3 +1469,4 @@
 1509604872	tripleee	phyto\W?power\W?caps
 1509604956	tripleee	(?<=[-/])focus\W?fast(?=[-/<"])
 1509610727	tripleee	medsdelta
+1509610906	tripleee	91\W*997\W*164\W*6666
