@@ -873,7 +873,7 @@ hca\W?slim
 hot\W?goat
 slim\W?fire
 endurolast
-invento\W?software
+invento\W?(?:accounting|software)
 leanbac
 hair\W?bloom
 wow\W?facial\W?mask
