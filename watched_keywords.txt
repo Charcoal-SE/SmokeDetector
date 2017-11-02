@@ -788,7 +788,6 @@
 1503974321	tripleee	legit-review\.com
 1503974369	tripleee	vevostars\.com
 1503974621	tripleee	fitnessjab\.com
-1503974681	tripleee	javatechworld\.com
 1503974751	tripleee	rajeshpanda\.in
 1504012830	tripleee	consultuning\.blogspot\.com
 1504013007	tripleee	superbanswer\.com
