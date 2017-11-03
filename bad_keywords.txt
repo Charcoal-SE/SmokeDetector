@@ -900,3 +900,4 @@ impact\W?ultra
 pure\W?prime
 \w*cyberwiz\w*@gmail\.com
 le\W?flor
+smart\W?trim
