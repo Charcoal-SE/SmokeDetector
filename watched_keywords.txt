@@ -1484,4 +1484,4 @@
 1509702644	Byte Commander	jollyhers\.com
 1509707090	tripleee	chicagocosmeticderm\.com
 1509707266	tripleee	aptoide\.com
-1509712941	tripleee	womaninparadise\.in
+1509712941	tripleee	womanparadise\.in
