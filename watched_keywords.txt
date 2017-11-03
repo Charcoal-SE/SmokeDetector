@@ -881,7 +881,6 @@
 1504855612	tripleee	surveymonkey\.com
 1504857133	tripleee	fa9099\.com
 1504857441	tripleee	webcamfan4good
-1504861165	tripleee	coppercrushing\.com
 1504861999	tripleee	parentingpod\.com
 1504863116	Glorfindel	irefone
 1504864999	tripleee	olivepower\.in
