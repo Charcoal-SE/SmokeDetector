@@ -903,3 +903,4 @@ le\W?fior
 bellaire\W?skin
 alpha\W?king
 /phone-mirror(?=[/"<-]|$)
+bio\W?slim
