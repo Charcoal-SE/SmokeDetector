@@ -902,3 +902,4 @@ pure\W?prime
 le\W?fior
 bellaire\W?skin
 alpha\W?king
+/phone-mirror(?=[/"<-]|$)
