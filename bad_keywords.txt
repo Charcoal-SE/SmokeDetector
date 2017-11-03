@@ -905,3 +905,4 @@ alpha\W?king
 /phone-mirror(?=[/"<-]|$)
 bio\W?slim
 shanti\W?cbd
+steel\W?focus
