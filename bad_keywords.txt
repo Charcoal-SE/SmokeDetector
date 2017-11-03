@@ -904,3 +904,4 @@ bellaire\W?skin
 alpha\W?king
 /phone-mirror(?=[/"<-]|$)
 bio\W?slim
+shanti\W?cbd

@@ -1431,7 +1431,6 @@
 1509436790	tripleee	aoneassignments\.com
 1509438208	tripleee	conferenceseries\.com
 1509438409	tripleee	conferenceworld\.org
-1509439572	tripleee	shanti\W?cbd
 1509442468	Glorfindel	convergehub\.com
 1509449556	tripleee	technoscripts\.in
 1509454169	Glorfindel	SoundSharkAudio\.com
