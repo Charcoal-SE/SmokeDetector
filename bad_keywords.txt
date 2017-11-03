@@ -675,7 +675,7 @@ hyper\W?fit\W?slim
 alpha\W?hard\W?reload
 nouvelle\W?beaute
 brain\W?hacker
-amd\?Walpha\W?regain
+amd\W?alpha\W?regain
 slimdera
 prime\W?ageless
 biofit
