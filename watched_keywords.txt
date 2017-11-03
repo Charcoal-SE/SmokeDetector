@@ -1482,3 +1482,4 @@
 1509700616	tripleee	cognitune
 1509701233	tripleee	nu\W?clarity
 1509702644	Byte Commander	jollyhers\.com
+1509707090	tripleee	chicagocosmeticderm\.com
