@@ -119,7 +119,7 @@ lost lover? back
 service proposal essay
 enetdocumentation
 okaygoods
-(love|miracle).*spell ?casters?
+(love|miracle).{120}spell ?casters?
 black\W?magic\W?specialist
 great\Wspell\Wcaster
 viagra
