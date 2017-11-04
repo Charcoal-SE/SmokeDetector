@@ -872,6 +872,9 @@ def notify(msg, room_id, se_site):
         raise Exception("Unrecognized code returned when adding notification.")
 
 
+RETURN_NAMES = {"admin": ["admin", "admins"], "code_admin": ["code admin", "code admins"]}
+
+
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
 @command(str, whole_msg=True)
 def whois(msg, role):
@@ -933,7 +936,9 @@ def whois(msg, role):
                                 msg._client.get_user(admin).last_seen)
                                for admin in admins_not_in_room]
 
-    response = "I am aware of {} {}".format(len(admin_ids), role)
+    return_name = RETURN_NAMES[valid_roles[message_parts[1]]][0 if len(admin_ids) == 1 else 1]
+
+    response = "I am aware of {} {}".format(len(admin_ids), return_name)
 
     if admins_in_room_list:
         admins_in_room_list.sort(key=lambda x: x[2])    # Sort by last message (last seen = x[3])
@@ -1042,8 +1047,15 @@ def report(msg, urls):
                 (post_data.post_id, post_data.site)):
             # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
             # this re-report might be attempting to correct that/fix a mistake/etc.
-            output.append("Post {}: Already recently reported".format(index))
-            continue
+
+            if GlobalVars.metasmoke_key is not None:
+                se_link = parsing.to_protocol_relative(post_data.post_url)
+                ms_link = "https://m.erwaysoftware.com/posts/by-url?url={}".format(se_link)
+                output.append("Post {}: Already recently reported [[MS]({})]".format(index, ms_link))
+                continue
+            else:
+                output.append("Post {}: Already recently reported".format(index))
+                continue
 
         post_data.is_answer = (post_data.post_type == "answer")
         post = Post(api_response=post_data.as_dict)

@@ -119,7 +119,7 @@ lost lover? back
 service proposal essay
 enetdocumentation
 okaygoods
-(love|miracle).*spell ?casters?
+(love|miracle).{120}spell ?casters?
 black\W?magic\W?specialist
 great\Wspell\Wcaster
 viagra
@@ -600,7 +600,7 @@ test\W?1\W?fusion
 jeune\W?fleur
 xenical
 [$]exual
-vala\W?(rejuvenating\W?)?serum
+vala\W?(?:(?:rejuvenating|facial\W?))*serum
 extensive\W?ageless
 duoslim
 credit\W?repair
@@ -675,7 +675,7 @@ hyper\W?fit\W?slim
 alpha\W?hard\W?reload
 nouvelle\W?beaute
 brain\W?hacker
-amd\?Walpha\W?regain
+amd\W?alpha\W?regain
 slimdera
 prime\W?ageless
 biofit
@@ -730,7 +730,7 @@ batch\Wrename\Wfiles\Wtool
 gclub
 hyprshred
 Als\W?trailers
-jolie\W?derme
+jolie\W?derm[ae]
 megaxxl
 extagen
 zmass
@@ -833,7 +833,7 @@ testo\W?fuel
 super\W?cbd
 suavpele
 (?:1\W*)?317\W*794\W*1276
-alpha\W?burst\W?n[0o]\W?2
+alpha\W?burst(?:\W?n[0o]\W?2)?
 cyberwizard
 buysupplement
 memory\W?repair\W?protocol
@@ -849,3 +849,62 @@ vitrixa
 (?:1\W*)?844\W*225\W*4691
 hermusa
 kotolena\W?cream
+andro\W?xl
+radiant\W?beauty\W?cream
+rapid\W?lift\W?fx
+tru\W?testo
+melatrol
+power\W?muscle\W?blast
+avella
+health\W?supplements\W?reviews
+zmax\W?male
+platinum\W?cleanse\W?xl
+loriax
+krivtsovoilgasconsultant
+vyantix?(?:\W?rx)?
+slim\W?hca
+aphroditera
+biotrim(?:\W?(?:e?xtreme|lab(?:oratorie)?s))?
+xtrcut
+dermiva
+.{0 12}loanfirm@gmail\.com
+testo\W?ampx
+hca\W?slim
+hot\W?goat
+slim\W?fire
+endurolast
+invento\W?(?:accounting|software)
+leanbac
+hair\W?bloom
+wow\W?facial\W?mask
+cleargenix
+lux\W?dermatologie
+testovate
+bio\W?blend
+titanax
+mp3\W?song\W?download
+cannabinoid\W?plus
+clarityx
+derma\W?mira
+rapid\W?boost
+grs\W?ultra
+donna\W?belle
+max\W?trim(?:\W?365)?
+ultra\W?boost
+revital\W?eyes
+phyto\W?power\W?caps
+(?:1\W*)?540\W*227\W*7725
+xytropin
+trim\W?genesis
+impact\W?ultra
+pure\W?prime
+\w*cyberwiz\w*@gmail\.com
+le\W?fior
+bellaire\W?skin
+alpha\W?king
+/phone-mirror(?=[/"<-]|$)
+bio\W?slim
+shanti\W?cbd
+steel\W?focus
+sky\W?test
+apk-download-youtube-downloader

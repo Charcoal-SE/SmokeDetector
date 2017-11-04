@@ -41,4 +41,9 @@ online\W?time\W?sheets?
 medo74
 shitfuck
 vbage tech
-AMANDEEP SINGH
+^ling xing$
+printers?\W?driver
+^689 Cloud$
+support
+JoeClark
+^Gracia\W?Ryan\d*$
