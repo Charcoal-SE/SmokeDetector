@@ -1175,7 +1175,6 @@
 1507551495	tripleee	teamvrz\.com
 1507551988	tripleee	q\W?soft\W?ltd
 1507611081	tripleee	makecashonlinewithamazonfromhome\.com
-1507618206	tripleee	ulti\W?power
 1507619663	tripleee	edustoke.com
 1507620503	Glorfindel	cartoonhdappz\.com
 1507625091	tripleee	fittextjs\.com
@@ -1308,3 +1307,63 @@
 1508657535	Glorfindel	java2python\.com
 1508662308	Glorfindel	jobalertdaily\.com
 1508681291	Glorfindel	ontimefeed\.com
+1508710013	Byte Commander	bitcoinrealcash\.com
+1508710898	Byte Commander	originaldocuments150
+1508710898	Byte Commander	ieltscertificate247
+1508710898	Byte Commander	buyoriginaldocumentonline
+1508739535	tripleee	essaydune\.com
+1508743878	tripleee	keyboardtester\.co
+1508751696	Byte Commander	mcfly\.aero
+1508753000	Glorfindel	fravo\.com
+1508754537	tripleee	edubirdie\.com
+1508755025	tripleee	domyessay\.today
+1508764061	tripleee	fynsis\.com
+1508767429	bwDraco	movieboxappz\.com
+1508772404	tripleee	cassiopeiastudio\.com
+1508777493	bwDraco	treasurebox
+1508777497	bwDraco	collision\W?express
+1508779581	bwDraco	(?<=/)rock\W?hard(?:[/<]|$)
+1508787746	Byte Commander	cyber(?!\W*security)
+1508791180	Mithrandir	fdsfs
+1508817954	Suraj Rao	tutorialslife\.com
+1508818670	tripleee	(?:1\W*)?518\W*855\W*8838
+1508819107	tripleee	(?:1\W*)?415\W*689\W*5065
+1508821039	tripleee	endurolast
+1508823044	tripleee	easydatingsites\.com
+1508829191	tripleee	carmozo\.com
+1508829305	Ajay Brahmakshatriya	exutmobileapp\.com
+1508829311	tripleee	body\W?spartan
+1508829461	Byte Commander	geekwebservices
+1508829968	tripleee	myessays\.website
+1508830450	tripleee	couponstechie\.com
+1508833728	tripleee	webexperts\.pk
+1508834300	Mithrandir	chauffeurlinkmelbourne\.com\.au
+1508834854	Mithrandir	(hotmail\.)?supportnumbersaustralia\.com
+1508836538	tripleee	get-talking-smileys\.com
+1508838010	bwDraco	get\W?talking\W?smileys
+1508841523	tripleee	bios-pw\.org
+1508841778	Mithrandir	thegarbagedisposal\.com
+1508855605	Glorfindel	mailhesabi\.com
+1508873526	Glorfindel	knama\.com
+1508880029	quartata	technocertified\.in
+1508884614	Byte Commander	agenbola
+1508903505	tripleee	greenlifemedications\.com
+1508904203	tripleee	agenbola59\.com
+1508904346	tripleee	permanentlovespellcaster
+1508904581	tripleee	234\W*810\W*066\W*3964
+1508904939	tripleee	mmovip\.net
+1508906225	tripleee	holistic\W?life\W?cbd
+1508906625	tripleee	(?<=/)blue\W?pearl(?:[-/<]|$)
+1508907317	tripleee	كة مكافحة حشرات
+1508907816	tripleee	organixx
+1508911038	tripleee	easysolutions\.repair
+1508912367	tripleee	purevpn
+1508912522	tripleee	videoder\.zone
+1508915244	Glorfindel	realfakedocs\.com
+1508915853	tripleee	(?<=/)hdt(?=[-/<]|$)
+1508916697	Glorfindel	tyrecompare\.com
+1508916847	tripleee	darshanbooking\.com
+1508918141	Glorfindel	stafaband\w*
+1508918834	tripleee	revglow
+1508920008	tripleee	hellotravelclub\.com
+1508924701	Byte Commander	hiretowork\.com

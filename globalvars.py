@@ -64,11 +64,11 @@ class GlobalVars:
     information on what privileges are and what is expected of privileged users.
     """.strip().replace("\n", " ")
 
-    experimental_reasons = set((  # Don't widely report these
+    experimental_reasons = {  # Don't widely report these
         "potentially bad keyword in answer",
         "potentially bad keyword in body",
         "potentially bad keyword in title",
-        "potentially bad keyword in username"))
+        "potentially bad keyword in username"}
 
     parser = HTMLParser()
     parser.unescape = unescape

@@ -491,7 +491,7 @@ active\W?plus
 truvitaliti
 dermalab
 expandom
-zylix\Wplus
+zylix
 Mevaqesh .*lo chelek .*olam haba
 mevaqesh
 viril\Wx
@@ -830,3 +830,22 @@ zygenx
 fortera
 claire\W?hydrafirm
 testo\W?fuel
+super\W?cbd
+suavpele
+(?:1\W*)?317\W*794\W*1276
+alpha\W?burst\W?n[0o]\W?2
+cyberwizard
+buysupplement
+memory\W?repair\W?protocol
+numax\W?test\W?xt
+vyalis\W?rx
+duro\W?max
+emior
+agen\W*bola
+brosway
+ulti\W?power
+jelq(?:ing)?
+vitrixa
+(?:1\W*)?844\W*225\W*4691
+hermusa
+kotolena\W?cream
