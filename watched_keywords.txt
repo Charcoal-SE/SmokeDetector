@@ -1491,3 +1491,4 @@
 1509875324	Glorfindel	knowledgeuniverseonline\.com
 1509875457	Mithrandir	farnian\.com
 1509886057	paper1111	cloudprint\.io
+1509897010	quartata	btgexp\.com
