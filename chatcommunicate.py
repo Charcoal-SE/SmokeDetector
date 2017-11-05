@@ -306,7 +306,7 @@ def message(msg):
 
 
 def dispatch_command(msg):
-    command_parts = msg.content.split(" ", 1)
+    command_parts = GlobalVars.parser.unescape(msg.content).split(" ", 1)
 
     if len(command_parts) == 2:
         cmd, args = command_parts
@@ -320,7 +320,7 @@ def dispatch_command(msg):
     command_name = regex.sub(r"\W*$", "", command_name)
 
     if command_name not in _commands["prefix"]:
-        return "No such command {}.".format(command_name)
+        return "No such command '{}'.".format(command_name)
     else:
         func, (min_arity, max_arity) = _commands["prefix"][command_name]
 
@@ -341,7 +341,7 @@ def dispatch_command(msg):
 
 
 def dispatch_reply_command(msg, reply, command_name):
-    cmd = command_name.lower()
+    cmd = GlobalVars.parser.unescape(command_name).lower()
 
     quiet_action = cmd[-1] == "-"
     cmd = regex.sub(r"\W*$", "", cmd)
@@ -357,7 +357,7 @@ def dispatch_reply_command(msg, reply, command_name):
 
 
 def dispatch_shorthand_command(msg, room):
-    commands = msg.content[3:].split()
+    commands = GlobalVars.parser.unescape(msg.content[3:]).split()
 
     output = []
     processed_commands = []
