@@ -909,3 +909,4 @@ steel\W?focus
 sky\W?test
 apk-download-youtube-downloader
 kimotti
+(?:1\W*)?888\W*787\W*9274
