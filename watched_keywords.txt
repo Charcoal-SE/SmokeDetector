@@ -104,7 +104,6 @@
 1496136245	tripleee	bluewhalesprinklers\.com
 1496137239	JoErNanO	forbackpack\.com
 1496138620	tripleee	trimcoloncleanse\.dk
-1496140517	tripleee	tophealthmart\.com
 1496146579	tripleee	we\Ware\Wa\Wcompany\W(from|in)
 1496162113	quartata	lotustutorial\.com
 1496202185	tripleee	accuwebhosting\.com
@@ -788,7 +787,6 @@
 1503974321	tripleee	legit-review\.com
 1503974369	tripleee	vevostars\.com
 1503974621	tripleee	fitnessjab\.com
-1503974681	tripleee	javatechworld\.com
 1503974751	tripleee	rajeshpanda\.in
 1504012830	tripleee	consultuning\.blogspot\.com
 1504013007	tripleee	superbanswer\.com
@@ -882,7 +880,6 @@
 1504855612	tripleee	surveymonkey\.com
 1504857133	tripleee	fa9099\.com
 1504857441	tripleee	webcamfan4good
-1504861165	tripleee	coppercrushing\.com
 1504861999	tripleee	parentingpod\.com
 1504863116	Glorfindel	irefone
 1504864999	tripleee	olivepower\.in
@@ -968,7 +965,6 @@
 1505557856	tripleee	bigbazaardirect\.com
 1505557957	tripleee	gamnesia\.com
 1505560384	tripleee	codzify\.com
-1505562239	tripleee	evaherbalist\.com
 1505562774	tripleee	31\W?645491781
 1505563848	suraj	foxpro\.guru
 1505584268	Glorfindel	gethpdrivers\.com
@@ -1044,7 +1040,6 @@
 1506342725	Glorfindel	affiliateclues\.com
 1506344058	Glorfindel	wonderware?intouchusers\.com
 1506349956	Glorfindel	gopcsecure\.com
-1506350077	Glorfindel	bingdroid\.com
 1506357517	bwDraco	phuk(ing)?
 1506359998	tripleee	vitaskin
 1506360472	tripleee	bookmybabes\.com
@@ -1167,7 +1162,6 @@
 1507545877	tripleee	rinkipatel\.com
 1507545884	tripleee	9686826939
 1507549666	tripleee	antivirustechhelp\.com
-1507549875	tripleee	x4peak\.com
 1507550859	tripleee	roophkapickdrop\.com
 1507551495	tripleee	teamvrz\.com
 1507551988	tripleee	q\W?soft\W?ltd
@@ -1306,7 +1300,6 @@
 1508710898	Byte Commander	ieltscertificate247
 1508710898	Byte Commander	buyoriginaldocumentonline
 1508739535	tripleee	essaydune\.com
-1508743878	tripleee	keyboardtester\.co
 1508751696	Byte Commander	mcfly\.aero
 1508753000	Glorfindel	fravo\.com
 1508754537	tripleee	edubirdie\.com
@@ -1317,7 +1310,6 @@
 1508777493	bwDraco	treasurebox
 1508777497	bwDraco	collision\W?express
 1508779581	bwDraco	(?<=/)rock\W?hard(?:=[-/<]|$)
-1508787746	Byte Commander	cyber(?!\W*security)
 1508791180	Mithrandir	fdsfs
 1508817954	Suraj Rao	tutorialslife\.com
 1508818670	tripleee	(?:1\W*)?518\W*855\W*8838
@@ -1429,14 +1421,12 @@
 1509425622	Tetsuya Yamamoto	brazilianmp3songs\.com
 1509427421	tripleee	hackercombat\.com
 1509428036	tripleee	divoire
-1509429498	tripleee	sky\W?test
 1509434415	tripleee	mp3juice\.zone
 1509436095	tripleee	ankitricker\.com
 1509436402	Tetsuya Yamamoto	klinikobatcytotec\.com
 1509436790	tripleee	aoneassignments\.com
 1509438208	tripleee	conferenceseries\.com
 1509438409	tripleee	conferenceworld\.org
-1509439572	tripleee	shanti\W?cbd
 1509442468	Glorfindel	convergehub\.com
 1509449556	tripleee	technoscripts\.in
 1509454169	Glorfindel	SoundSharkAudio\.com
@@ -1456,17 +1446,69 @@
 1509533017	tripleee	simply\W?flawless\W?cream
 1509534245	tripleee	xyplexin
 1509537456	tripleee	greenvisa\.io
-1509537640	tripleee	bellaire\W?skin
 1509538468	tripleee	lispa\.in
 1509539711	tripleee	ugconect\.blogspot\.com
 1509542096	tripleee	overthecoutnerviagramd\.com
 1509599714	tripleee	bitcoinscashout\.com
 1509599890	tripleee	termium\.com
 1509600226	tripleee	healthtrendz\.co
-1509600753	tripleee	xytropin
 1509600946	tripleee	lutreviasingapore\.com
 1509601011	tripleee	tuturblog\.id
-1509604872	tripleee	phyto\W?power\W?caps
 1509604956	tripleee	(?<=[-/])focus\W?fast(?=[-/<"])
 1509610727	tripleee	medsdelta
 1509610906	tripleee	91\W*997\W*164\W*6666
+1509613319	tripleee	254\W*79\W*711\W*8868
+1509618151	Byte Commander	amoylily\.com
+1509622119	tripleee	macho\W?t
+1509629867	tripleee	gleelover\w*
+1509683961	Suraj Rao	programatologist\.com
+1509687249	tripleee	anatabloc
+1509687657	tripleee	serenity\W?cbd
+1509688146	tripleee	seodoyen\.com
+1509688388	tripleee	echtgeld-casino\.net
+1509688885	tripleee	xn--d1abbusdciv\.xn--p1ai
+1509688895	tripleee	xn--80aakcbevmvw9p\.xn--p1ai
+1509690057	tripleee	facebook\.com/Unofficial-The-lost-ways
+1509694906	tripleee	droppages\.com
+1509695278	tripleee	nu\W?vigor(?:\W?rx)?
+1509695617	tripleee	sharingindia\.in
+1509695841	tripleee	977\W*39\W*00\W*508
+1509695929	tripleee	etherfax\.my
+1509696974	tripleee	crusher-manufacturers\.com
+1509698831	tripleee	miracgogo\.com
+1509699127	tripleee	goo\.gl/py5Qeo
+1509700616	tripleee	cognitune
+1509701233	tripleee	nu\W?clarity
+1509702644	Byte Commander	jollyhers\.com
+1509707090	tripleee	chicagocosmeticderm\.com
+1509707266	tripleee	aptoide\.com
+1509712941	tripleee	womanparadise\.in
+1509821855	quartata	cpagrip\.com
+1509823086	Mithrandir	parismasters\.co
+1509874602	rene	watchonmovies\.com
+1509875324	Glorfindel	knowledgeuniverseonline\.com
+1509875457	Mithrandir	farnian\.com
+1509897010	quartata	btgexp\.com
+1509920977	Byte Commander	suzan\W?rynan
+1509949618	bummi	jyotravel\.com
+1509963454	paper1111	yoursantiagingserum\.com
+1509964559	Glorfindel	newglobedocuments\.com
+1509969744	Glorfindel	hookupapps\.org
+1509970146	paper1111	creativoindian\.blogspot\.in
+1509971299	Glorfindel	ekeeda\.com
+1509976771	Ajay Brahmakshatriya	waistlab\.com
+1509976772	Glorfindel	kalyanmatkatipss\.mobi
+1509976773	Glorfindel	filmbuzz\.top
+1509976774	Glorfindel	aponu\.org
+1509976775	Glorfindel	amarspensieve\.com
+1509976776	Glorfindel	damagedphotorestoration\.com
+1509994952	QPaysTaxes	severalnines
+1510035293	tripleee	tinyurl\.com/ya4b7apc
+1510037808	tripleee	lisacole29\.wordpress\.com
+1510042186	Glorfindel	createmyfreeapp\.com
+1510047189	Byte Commander	mp3juice\.live
+1510047486	Glorfindel	letsgoforgood\.com
+1510047512	Glorfindel	binaryforexacademy\.org
+1510047709	Glorfindel	mission-humanitaire-afrique\.org
+1510051260	Glorfindel	windowstechsupport\.org
+1510052936	tripleee	perfect\W?babies

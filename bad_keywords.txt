@@ -119,7 +119,7 @@ lost lover? back
 service proposal essay
 enetdocumentation
 okaygoods
-(love|miracle).*spell ?casters?
+(love|miracle).{120}spell ?casters?
 black\W?magic\W?specialist
 great\Wspell\Wcaster
 viagra
@@ -675,7 +675,7 @@ hyper\W?fit\W?slim
 alpha\W?hard\W?reload
 nouvelle\W?beaute
 brain\W?hacker
-amd\?Walpha\W?regain
+amd\W?alpha\W?regain
 slimdera
 prime\W?ageless
 biofit
@@ -857,7 +857,7 @@ melatrol
 power\W?muscle\W?blast
 avella
 health\W?supplements\W?reviews
-zmax\?Wmale
+zmax\W?male
 platinum\W?cleanse\W?xl
 loriax
 krivtsovoilgasconsultant
@@ -873,7 +873,7 @@ hca\W?slim
 hot\W?goat
 slim\W?fire
 endurolast
-invento\W?software
+invento\W?(?:accounting|software)
 leanbac
 hair\W?bloom
 wow\W?facial\W?mask
@@ -892,3 +892,23 @@ donna\W?belle
 max\W?trim(?:\W?365)?
 ultra\W?boost
 revital\W?eyes
+phyto\W?power\W?caps
+(?:1\W*)?540\W*227\W*7725
+xytropin
+trim\W?genesis
+impact\W?ultra
+pure\W?prime
+\w*cyberwiz\w*@gmail\.com
+le\W?fior
+bellaire\W?skin
+alpha\W?king
+/phone-mirror(?=[/"<-]|$)
+bio\W?slim
+shanti\W?cbd
+steel\W?focus
+sky\W?test
+apk-download-youtube-downloader
+kimotti
+(?:1\W*)?888\W*787\W*9274
+t\W?core\W?plus
+testo\W?rev
