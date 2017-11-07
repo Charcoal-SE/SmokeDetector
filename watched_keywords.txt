@@ -1511,3 +1511,4 @@
 1510047486	Glorfindel	letsgoforgood\.com
 1510047512	Glorfindel	binaryforexacademy\.org
 1510047709	Glorfindel	mission-humanitaire-afrique\.org
+1510051260	Glorfindel	windowstechsupport\.org
