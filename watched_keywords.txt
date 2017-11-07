@@ -1509,3 +1509,4 @@
 1510042186	Glorfindel	createmyfreeapp\.com
 1510047189	Byte Commander	mp3juice\.live
 1510047486	Glorfindel	letsgoforgood\.com
+1510047512	Glorfindel	binaryforexacademy\.org
