@@ -911,3 +911,4 @@ apk-download-youtube-downloader
 kimotti
 (?:1\W*)?888\W*787\W*9274
 t\W?core\W?plus
+testo\W?rev
