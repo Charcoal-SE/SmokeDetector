@@ -1300,7 +1300,6 @@
 1508710898	Byte Commander	ieltscertificate247
 1508710898	Byte Commander	buyoriginaldocumentonline
 1508739535	tripleee	essaydune\.com
-1508743878	tripleee	keyboardtester\.co
 1508751696	Byte Commander	mcfly\.aero
 1508753000	Glorfindel	fravo\.com
 1508754537	tripleee	edubirdie\.com
@@ -1460,7 +1459,6 @@
 1509613319	tripleee	254\W*79\W*711\W*8868
 1509618151	Byte Commander	amoylily\.com
 1509622119	tripleee	macho\W?t
-1509622230	tripleee	testo\W?rev
 1509629867	tripleee	gleelover\w*
 1509683961	Suraj Rao	programatologist\.com
 1509687249	tripleee	anatabloc
@@ -1484,3 +1482,37 @@
 1509707090	tripleee	chicagocosmeticderm\.com
 1509707266	tripleee	aptoide\.com
 1509712941	tripleee	womanparadise\.in
+1509821855	quartata	cpagrip\.com
+1509823086	Mithrandir	parismasters\.co
+1509874602	rene	watchonmovies\.com
+1509875324	Glorfindel	knowledgeuniverseonline\.com
+1509875457	Mithrandir	farnian\.com
+1509897010	quartata	btgexp\.com
+1509920977	Byte Commander	suzan\W?rynan
+1509949618	bummi	jyotravel\.com
+1509963454	paper1111	yoursantiagingserum\.com
+1509964559	Glorfindel	newglobedocuments\.com
+1509969744	Glorfindel	hookupapps\.org
+1509970146	paper1111	creativoindian\.blogspot\.in
+1509971299	Glorfindel	ekeeda\.com
+1509976771	Ajay Brahmakshatriya	waistlab\.com
+1509976772	Glorfindel	kalyanmatkatipss\.mobi
+1509976773	Glorfindel	filmbuzz\.top
+1509976774	Glorfindel	aponu\.org
+1509976775	Glorfindel	amarspensieve\.com
+1509976776	Glorfindel	damagedphotorestoration\.com
+1509994952	QPaysTaxes	severalnines
+1510035293	tripleee	tinyurl\.com/ya4b7apc
+1510037808	tripleee	lisacole29\.wordpress\.com
+1510042186	Glorfindel	createmyfreeapp\.com
+1510047189	Byte Commander	mp3juice\.live
+1510047486	Glorfindel	letsgoforgood\.com
+1510047512	Glorfindel	binaryforexacademy\.org
+1510047709	Glorfindel	mission-humanitaire-afrique\.org
+1510051260	Glorfindel	windowstechsupport\.org
+1510052936	tripleee	perfect\W?babies
+1510055422	paper1111	planetlagu\.world
+1510057946	Mithrandir	neowebwallet\.com
+1510065530	Glorfindel	nedirbilgiler\.com
+1510065563	Glorfindel	pvpserverlar\.biz
+1510065586	Glorfindel	haberleryeni\.com
