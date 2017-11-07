@@ -1516,3 +1516,4 @@
 1510057946	Mithrandir	neowebwallet\.com
 1510065530	Glorfindel	nedirbilgiler\.com
 1510065563	Glorfindel	pvpserverlar\.biz
+1510065586	Glorfindel	haberleryeni\.com
