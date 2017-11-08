@@ -1468,7 +1468,6 @@
 1509688895	tripleee	xn--80aakcbevmvw9p\.xn--p1ai
 1509690057	tripleee	facebook\.com/Unofficial-The-lost-ways
 1509694906	tripleee	droppages\.com
-1509695278	tripleee	nu\W?vigor(?:\W?rx)?
 1509695617	tripleee	sharingindia\.in
 1509695841	tripleee	977\W*39\W*00\W*508
 1509695929	tripleee	etherfax\.my

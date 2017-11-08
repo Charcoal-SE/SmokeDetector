@@ -913,3 +913,4 @@ kimotti
 t\W?core\W?plus
 testo\W?rev
 max\W?potent
+nu\W?vigor(?:\W?rx)?
