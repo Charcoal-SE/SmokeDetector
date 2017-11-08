@@ -915,3 +915,4 @@ testo\W?rev
 max\W?potent
 nu\W?vigor(?:\W?rx)?
 greenlyte(?:\W?forskolin)?
+clarasoft
