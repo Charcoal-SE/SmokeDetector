@@ -1513,3 +1513,4 @@
 1510136145	tripleee	weddingphotographeryeovil\.co\.uk
 1510138896	Byte Commander	paperscrux\.com
 1510144118	tripleee	hhbc\.in
+1510147111	tripleee	soreddymanjunath\.blogspot\.\w+
