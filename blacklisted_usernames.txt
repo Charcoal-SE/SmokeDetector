@@ -48,3 +48,4 @@ support
 JoeClark
 ^Gracia\W?Ryan\d*$
 ^Juliet Bell$
+^Prasanta Shee$
