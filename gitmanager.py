@@ -32,7 +32,7 @@ class GitManager:
         item_to_blacklist = kwargs.get("item_to_blacklist", "")
         username = kwargs.get("username", "")
         chat_profile_link = kwargs.get("chat_profile_link", "http://chat.stackexchange.com/users")
-        code_permissions = False  # kwargs.get("code_permissions", False) - revert this once git is fixed
+        code_permissions = kwargs.get("code_permissions", False)
 
         # Make sure git credentials are set up
         if git.config("--get", "user.name", _ok_code=[0, 1]) == "":
