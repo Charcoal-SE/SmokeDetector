@@ -779,7 +779,6 @@
 1503906471	tripleee	628\W*204\W?3299
 1503909127	tripleee	edudriveservices\.com
 1503917028	tripleee	bulksmscoimbatore\.net
-1503919746	tripleee	stanafiltry\.com
 1503932236	Mithrandir	hh\.ru
 1503932590	D-side	ваканси
 1503971927	tripleee	45999841257
