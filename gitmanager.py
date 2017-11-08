@@ -5,7 +5,6 @@ import time
 import json
 from datetime import datetime
 from threading import Lock
-from os import mkdir, rmdir
 
 import regex
 import requests
@@ -34,12 +33,6 @@ class GitManager:
         username = kwargs.get("username", "")
         chat_profile_link = kwargs.get("chat_profile_link", "http://chat.stackexchange.com/users")
         code_permissions = kwargs.get("code_permissions", False)
-
-        # Block if git lock directory exists
-        try:
-            mkdir('gitmanager.lock')
-        except FileExistsError:
-            return (False, "Previous operation in progress; `!!/pull` to force")
 
         # Make sure git credentials are set up
         if git.config("--get", "user.name", _ok_code=[0, 1]) == "":
@@ -235,8 +228,4 @@ class GitManager:
 
     @staticmethod
     def pull_remote():
-        try:
-            rmdir('gitmanager.lock')
-        except FileNotFoundError:
-            pass
         git.pull()
