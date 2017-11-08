@@ -397,7 +397,6 @@
 1499948889	Glorfindel	businessmindltd\.co\.uk
 1499953072	Glorfindel	tecgeeks\.in
 1500008142	tripleee	uphindikhabar\.in
-1500014905	Ashish Ahuja	carehealthportal\.com
 1500016574	Glorfindel	lifespro\.com
 1500018985	Glorfindel	quickencontactservice\.com
 1500020116	tripleee	acaiultralean-france\.com
