@@ -779,7 +779,6 @@
 1503906471	tripleee	628\W*204\W?3299
 1503909127	tripleee	edudriveservices\.com
 1503917028	tripleee	bulksmscoimbatore\.net
-1503919746	tripleee	stanafiltry\.com
 1503932236	Mithrandir	hh\.ru
 1503932590	D-side	ваканси
 1503971927	tripleee	45999841257
@@ -1002,7 +1001,6 @@
 1505846045	Glorfindel	locutortv\.es
 1505894369	tripleee	emailloginsolution\.com
 1505894797	tripleee	varansoynakliyat\.com
-1505897558	Glorfindel	oncallbiz\.com
 1505898368	Glorfindel	appspicket\.com
 1505901265	tripleee	coloringpagesonly\.com
 1505902265	tripleee	sornavallitech\.com
@@ -1194,7 +1192,6 @@
 1507716082	Glorfindel	Mechanic37
 1507716828	tripleee	levage
 1507718474	tripleee	codecanyon\.net\Witem\Wmagento
-1507720818	tripleee	0?44\W*6565\W*6523
 1507721756	tripleee	sharp\.reviews
 1507721935	tripleee	lawngears\.net
 1507723263	tripleee	theboxers\.co\.uk
@@ -1354,7 +1351,6 @@
 1508934870	Glorfindel	conferencenext\.com
 1508935301	Henders	miaustore\.com
 1508938566	Glorfindel	cpimobi\.com
-1508991416	tripleee	glamor\W?gold
 1508991618	tripleee	thehaccguru\.com
 1508991967	tripleee	fpwordpressthemes\.com
 1508992105	tripleee	fpbloggertemplates\.com
@@ -1467,7 +1463,6 @@
 1509688895	tripleee	xn--80aakcbevmvw9p\.xn--p1ai
 1509690057	tripleee	facebook\.com/Unofficial-The-lost-ways
 1509694906	tripleee	droppages\.com
-1509695278	tripleee	nu\W?vigor(?:\W?rx)?
 1509695617	tripleee	sharingindia\.in
 1509695841	tripleee	977\W*39\W*00\W*508
 1509695929	tripleee	etherfax\.my
@@ -1509,9 +1504,12 @@
 1510047709	Glorfindel	mission-humanitaire-afrique\.org
 1510051260	Glorfindel	windowstechsupport\.org
 1510052936	tripleee	perfect\W?babies
-1510055422	paper1111	planetlagu\.world
 1510057946	Mithrandir	neowebwallet\.com
 1510065530	Glorfindel	nedirbilgiler\.com
 1510065563	Glorfindel	pvpserverlar\.biz
 1510065586	Glorfindel	haberleryeni\.com
+1510128371	tripleee	sobusygirls\.fr
+1510128388	tripleee	salarpuriasattvaparkcubixbangalore\.com
+1510136145	tripleee	weddingphotographeryeovil\.co\.uk
 1510138896	Byte Commander	paperscrux\.com
+1510144118	tripleee	hhbc\.in

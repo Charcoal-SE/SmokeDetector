@@ -1522,7 +1522,7 @@ vbagetech\.com
 browseplay\.com
 semmiami\.com
 office-comsetup\.com
-(customer|tech|technical)-?(support|service)\.com
+(?!<paypal-)(customer|tech|technical)-?(support|service)\.com
 livetecs\.com
 obatpelancarhaidterbaik\.com
 el-watnya\.com
@@ -1581,4 +1581,10 @@ cloudprint\.io
 keyboardtester\.co
 buysupplementcanada\.ca
 supplement350\.com
+rsorder\.com
+oncallbiz\.com
+wellnesstrials\.com
 tradexcelgraphics\.com
+planetlagu\.world
+stanafiltry\.com
+healthkartclub\.com
