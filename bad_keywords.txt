@@ -922,3 +922,4 @@ elite\W?350
 0?44\W*6565\W*6523
 glamor\W?gold
 royal\W?kiraz
+simply\W?flawless\W?cream

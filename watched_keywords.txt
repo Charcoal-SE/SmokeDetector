@@ -1435,7 +1435,6 @@
 1509522741	tripleee	<strong>strong text</strong>
 1509528171	tripleee	pathfinder-character-sheet\.com
 1509532881	tripleee	sunshineskinclinic\.com
-1509533017	tripleee	simply\W?flawless\W?cream
 1509534245	tripleee	xyplexin
 1509537456	tripleee	greenvisa\.io
 1509538468	tripleee	lispa\.in
