@@ -126,13 +126,13 @@ class GitManager:
             git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
                        "-m", u"Auto {0} of {1} by {2} --autopull".format(op, item, username))
 
-            # Checkout a new branch from detached HEAD
-            branch = "auto-blacklist-{0}".format(str(time.time()))
-            git.checkout("-b", branch)
-
             if code_permissions:
-                git.push("origin", branch + ":master")
+                git.push("origin", "HEAD:master")
             else:
+                # Checkout a new branch from detached HEAD
+                branch = "auto-blacklist-{0}".format(str(time.time()))
+                git.checkout("-b", branch)
+
                 git.push("origin", branch)
 
                 if GlobalVars.github_username is None or GlobalVars.github_password is None:
@@ -173,9 +173,6 @@ class GitManager:
         finally:
             # Always return to `deploy` branch when done with anything.
             git.checkout("deploy")
-
-            if branch:
-                git.branch("-D", branch)
 
             cls.gitmanager_lock.release()
 
