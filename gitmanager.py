@@ -20,6 +20,9 @@ else:
 from helpers import log
 from globalvars import GlobalVars
 
+import os.path
+git.config("core.hooksPath", os.path.dirname(os.path.realpath(__file__)) + "/hooks")
+
 
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
 class GitManager:

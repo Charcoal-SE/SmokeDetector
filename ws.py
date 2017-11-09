@@ -35,11 +35,6 @@ import requests
 from tld.utils import update_tld_names, TldIOError
 from helpers import log
 
-import os.path
-
-if not os.path.islink(".git/hooks/pre-commit"):
-    os.symlink("hooks/pre-commit", ".git/hooks/pre-commit")
-
 try:
     update_tld_names()
 except TldIOError as ioerr:
