@@ -250,7 +250,10 @@ def get_report_data(message):
     if message.id in _last_messages.reports:
         return _last_messages.reports[message.id]
     else:
-        return (fetch_post_url_from_msg_content(message.content), fetch_owner_url_from_msg_content(message.content))
+        post_url = fetch_post_url_from_msg_content(message.content)
+
+        if post_url:
+            return (post_url, fetch_owner_url_from_msg_content(message.content))
 
 
 def is_privileged(user, room):
