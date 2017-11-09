@@ -1338,7 +1338,6 @@
 1508911038	tripleee	easysolutions\.repair
 1508912522	tripleee	videoder\.zone
 1508915244	Glorfindel	realfakedocs\.com
-1508915853	tripleee	(?<=/)hdt(?=[-/<]|$)
 1508916697	Glorfindel	tyrecompare\.com
 1508916847	tripleee	darshanbooking\.com
 1508918141	Glorfindel	stafaband\w*
