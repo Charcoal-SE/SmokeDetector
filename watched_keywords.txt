@@ -1017,7 +1017,6 @@
 1505992866	tripleee	spurtcommerce\.com
 1506018248	NobodyNada	delivr\.com
 1506018468	bwDraco	budgetvideo4biz
-1506060380	Ajay Brahmakshatriya	vcor
 1506062681	Magisch	passwordmanagers\.net
 1506064815	tripleee	garagedoorsrepairwoodlandhillsca\.com
 1506065246	tripleee	greetingsforchristmas\.com

@@ -926,3 +926,4 @@ simply\W?flawless\W?cream
 trim\W?fit
 apple\W?stem\W?cell
 (?<=/)hdt(?=[-/<]|$)
+(?<=/)vcor(?=[-/<]|$)
