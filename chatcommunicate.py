@@ -6,12 +6,14 @@ import itertools
 import os.path
 import pickle
 import regex
+import sys
 import threading
 import time
 import yaml
 
 import datahandling
 from deletionwatcher import DeletionWatcher
+from excepthook import log_exception
 from globalvars import GlobalVars
 from parsing import fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
 
@@ -26,6 +28,10 @@ class RoomData:
         self.block_time = block_time
         self.last_report_data = last_report_data
         self.deletion_watcher = deletion_watcher
+
+
+class CmdException(Exception):
+    pass
 
 
 _commands = {"reply": {}, "prefix": {}}
@@ -279,8 +285,11 @@ def command(*type_signature, reply=False, whole_msg=False, privileged=False, ari
 
                 result = func(*processed_args, **({"alias_used": alias_used} if give_name else {}))
                 return result if not quiet_action else ""
-            except Exception as e:
+            except CmdException as e:
                 return str(e)
+            except:
+                log_exception(*sys.exc_info())
+                return "I hit an error while trying to run that command; run `!!/errorlogs` for details."
 
         cmd = (f, arity if arity else (len(type_signature), len(type_signature)))
 

@@ -1,6 +1,6 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
-from chatcommunicate import add_room, block_room, command, get_report_data, is_privileged, message, tell_rooms
+from chatcommunicate import add_room, block_room, CmdException, command, get_report_data, is_privileged, message, tell_rooms
 # noinspection PyUnresolvedReferences
 from globalvars import GlobalVars
 from findspam import FindSpam
@@ -77,7 +77,7 @@ def approve(msg, pr_num):
         else:
             return "Forwarding request to metasmoke returned HTTP {}. Check status manually.".format(resp.status_code)
     else:
-        raise Exception("You don't have permission to do that.")
+        raise CmdException("You don't have permission to do that.")
 
 
 # --- Blacklist Functions --- #
@@ -98,9 +98,9 @@ def addblu(msg, user):
         add_blacklisted_user((uid, val), message_url, "")
         return "User blacklisted (`{}` on `{}`).".format(uid, val)
     elif int(uid) == -2:
-        raise Exception("Error: {}".format(val))
+        raise CmdException("Error: {}".format(val))
     else:
-        raise Exception("Invalid format. Valid format: `!!/addblu profileurl` "
+        raise CmdException("Invalid format. Valid format: `!!/addblu profileurl` "
                         "*or* `!!/addblu userid sitename`.")
 
 
@@ -185,7 +185,7 @@ def iswlu(user):
     elif int(uid) == -2:
         return "Error: {}".format(val)
     else:
-        raise Exception("Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`.")
+        raise CmdException("Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`.")
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
@@ -216,10 +216,10 @@ def blacklist(_):
     Returns a string which explains the usage of the new blacklist commands.
     :return: A string
     """
-    raise Exception("The !!/blacklist command has been deprecated. "
-                    "Please use !!/blacklist-website, !!/blacklist-username,"
-                    "!!/blacklist-keyword, or perhaps !!/watch-keyword. "
-                    "Remember to escape dots in URLs using \\.")
+    raise CmdException("The !!/blacklist command has been deprecated. "
+                       "Please use !!/blacklist-website, !!/blacklist-username,"
+                       "!!/blacklist-keyword, or perhaps !!/watch-keyword. "
+                       "Remember to escape dots in URLs using \\.")
 
 
 def check_blacklist(string_to_test, is_username, is_watchlist):
@@ -283,7 +283,7 @@ def do_blacklist(pattern, blacklist_type, msg, force=False):
     try:
         regex.compile(pattern)
     except regex._regex_core.error:
-        raise Exception("An invalid pattern was provided, not blacklisting.")
+        raise CmdException("An invalid pattern was provided, not blacklisting.")
 
     if not force:
         reasons = check_blacklist(pattern.replace("\\W", " ").replace("\\.", "."),
@@ -291,7 +291,7 @@ def do_blacklist(pattern, blacklist_type, msg, force=False):
                                   blacklist_type == "watch_keyword")
 
         if reasons:
-            raise Exception("That pattern looks like it's already caught by " +
+            raise CmdException("That pattern looks like it's already caught by " +
                             format_blacklist_reasons(reasons) + "; append`-force` if you really want to do that.")
 
     _, result = GitManager.add_to_blacklist(
@@ -601,9 +601,9 @@ def pull():
         if "success" in states:
             os._exit(3)
         elif "error" in states or "failure" in states:
-            raise Exception("CI build failed! :( Please check your commit.")
+            raise CmdException("CI build failed! :( Please check your commit.")
         elif "pending" in states or not states:
-            raise Exception("CI build is still pending, wait until the build has finished and then pull again.")
+            raise CmdException("CI build is still pending, wait until the build has finished and then pull again.")
 
 
 # noinspection PyIncorrectDocstring,PyProtectedMember
@@ -865,11 +865,11 @@ def notify(msg, room_id, se_site):
         return "You'll now get pings from me if I report a post on `{site}`, in room "\
                "`{room}` on `chat.{domain}`".format(site=se_site, room=room_id, domain=msg._client.host)
     elif response == -1:
-        raise Exception("That notification configuration is already registered.")
+        raise CmdException("That notification configuration is already registered.")
     elif response == -2:
-        raise Exception("The given SE site does not exist.")
+        raise CmdException("The given SE site does not exist.")
     else:
-        raise Exception("Unrecognized code returned when adding notification.")
+        raise CmdException("Unrecognized code returned when adding notification.")
 
 
 RETURN_NAMES = {"admin": ["admin", "admins"], "code_admin": ["code admin", "code admins"]}
@@ -890,8 +890,8 @@ def whois(msg, role):
                    "codeadmins": "code_admin"}
 
     if role not in list(valid_roles.keys()):
-        raise Exception("That is not a user level I can check. "
-                        "I know about {0}".format(", ".join(set(valid_roles.values()))))
+        raise CmdException("That is not a user level I can check. "
+                           "I know about {0}".format(", ".join(set(valid_roles.values()))))
 
     ms_route = "https://metasmoke.erwaysoftware.com/api/users/?role={}&key={}&per_page=100".format(
         valid_roles[role],
@@ -977,7 +977,7 @@ def unnotify(msg, room_id, se_site):
         return "I will no longer ping you if I report a post on `{site}`, in room `{room}` "\
                "on `chat.{domain}`".format(site=se_site, room=room_id, domain=msg._client.host)
 
-    raise Exception("That configuration doesn't exist.")
+    raise CmdException("That configuration doesn't exist.")
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
@@ -1016,20 +1016,20 @@ def report(msg, urls):
     """
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
-        raise Exception("You can execute the !!/report command again in {} seconds. "
-                        "To avoid one user sending lots of reports in a few commands and "
-                        "slowing SmokeDetector down due to rate-limiting, you have to "
-                        "wait 30 seconds after you've reported multiple posts in "
-                        "one go.".format(wait))
+        raise CmdException("You can execute the !!/report command again in {} seconds. "
+                           "To avoid one user sending lots of reports in a few commands and "
+                           "slowing SmokeDetector down due to rate-limiting, you have to "
+                           "wait 30 seconds after you've reported multiple posts in "
+                           "one go.".format(wait))
 
     output = []
     urls = list(set(urls.split()))
 
     if len(urls) > 5:
-        raise Exception("To avoid SmokeDetector reporting posts too slowly, you can "
-                        "report at most 5 posts at a time. This is to avoid "
-                        "SmokeDetector's chat messages getting rate-limited too much, "
-                        "which would slow down reports.")
+        raise CmdException("To avoid SmokeDetector reporting posts too slowly, you can "
+                           "report at most 5 posts at a time. This is to avoid "
+                           "SmokeDetector's chat messages getting rate-limited too much, "
+                           "which would slow down reports.")
 
     for index, url in enumerate(urls, start=1):
         post_data = api_get_post(url)
@@ -1092,14 +1092,14 @@ def allspam(msg, url):
     """
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
-        raise Exception("You can execute the !!/report command again in {} seconds. "
-                        "To avoid one user sending lots of reports in a few commands and "
-                        "slowing SmokeDetector down due to rate-limiting, you have to "
-                        "wait 30 seconds after you've reported multiple posts in "
-                        "one go.".format(wait))
+        raise CmdException("You can execute the !!/allspam command again in {} seconds. "
+                           "To avoid one user sending lots of reports in a few commands and "
+                           "slowing SmokeDetector down due to rate-limiting, you have to "
+                           "wait 30 seconds after you've reported multiple posts in "
+                           "one go.".format(wait))
     user = get_user_from_url(url)
     if user is None:
-        raise Exception("That doesn't look like a valid user URL.")
+        raise CmdException("That doesn't look like a valid user URL.")
     user_sites = []
     user_posts = []
     # Detect whether link is to network profile or site profile
@@ -1118,10 +1118,10 @@ def allspam(msg, url):
                 GlobalVars.api_backoff_time = time.time() + res["backoff"]
         GlobalVars.api_request_lock.release()
         if 'items' not in res or len(res['items']) == 0:
-            raise Exception("The specified user does not appear to exist.")
+            raise CmdException("The specified user does not appear to exist.")
         if res['has_more']:
-            raise Exception("The specified user has an abnormally high number of accounts. Please consider flagging for"
-                            " moderator attention, otherwise use !!/report on the user's posts individually.")
+            raise CmdException("The specified user has an abnormally high number of accounts. Please consider flagging for"
+                               " moderator attention, otherwise use !!/report on the user's posts individually.")
         # Add accounts with posts
         for site in res['items']:
             if site['question_count'] > 0 or site['answer_count'] > 0:
@@ -1144,11 +1144,11 @@ def allspam(msg, url):
                 GlobalVars.api_backoff_time = time.time() + res["backoff"]
         GlobalVars.api_request_lock.release()
         if 'items' not in res or len(res['items']) == 0:
-            raise Exception("The specified user has no posts on this site.")
+            raise CmdException("The specified user has no posts on this site.")
         posts = res['items']
         if posts[0]['owner']['reputation'] > 100:
-            raise Exception("The specified user's reputation is abnormally high. Please consider flagging for moderator"
-                            " attention, otherwise use !!/report on the posts individually.")
+            raise CmdException("The specified user's reputation is abnormally high. Please consider flagging for moderator"
+                               " attention, otherwise use !!/report on the posts individually.")
         # Add blacklisted user - use most downvoted post as post URL
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
         add_blacklisted_user(user, message_url, sorted(posts, key=lambda x: x['score'])[0]['owner']['link'])
@@ -1172,10 +1172,10 @@ def allspam(msg, url):
                 post_data.is_answer = True
             user_posts.append(post_data)
     if len(user_posts) == 0:
-        raise Exception("The specified user hasn't posted anything.")
+        raise CmdException("The specified user hasn't posted anything.")
     if len(user_posts) > 15:
-        raise Exception("The specified user has an abnormally high number of spam posts. Please consider flagging for "
-                        "moderator attention, otherwise use !!/report on the posts individually.")
+        raise CmdException("The specified user has an abnormally high number of spam posts. Please consider flagging for "
+                           "moderator attention, otherwise use !!/report on the posts individually.")
     why_info = u"User manually reported by *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
     # Handle all posts
     for index, post in enumerate(user_posts, start=1):
@@ -1243,7 +1243,7 @@ def postgone(msg):
     edited = edited_message_after_postgone_command(msg.content)
 
     if edited is None:
-        raise Exception("That's not a report.")
+        raise CmdException("That's not a report.")
 
     msg.edit(edited)
 
@@ -1259,7 +1259,7 @@ def false(feedback, msg, alias_used="false"):
     """
     post_data = get_report_data(msg)
     if not post_data:
-        raise Exception("That message is not a report.")
+        raise CmdException("That message is not a report.")
 
     post_url, owner_url = post_data
 
@@ -1303,7 +1303,7 @@ def ignore(feedback, msg):
     """
     post_data = get_report_data(msg)
     if not post_data:
-        raise Exception("That message is not a report.")
+        raise CmdException("That message is not a report.")
 
     post_url, _ = post_data
 
@@ -1330,13 +1330,13 @@ def naa(feedback, msg, alias_used="naa"):
     """
     post_data = get_report_data(msg)
     if not post_data:
-        raise Exception("That message is not a report.")
+        raise CmdException("That message is not a report.")
 
     post_url, _ = post_data
     post_id, site, post_type = fetch_post_id_and_site_from_url(post_url)
 
     if post_type != "answer":
-        raise Exception("That report was a question; questions cannot be marked as NAAs.")
+        raise CmdException("That report was a question; questions cannot be marked as NAAs.")
 
     send_metasmoke_feedback(post_url=post_url,
                             second_part_lower=alias_used,
@@ -1362,7 +1362,7 @@ def true(feedback, msg, alias_used="true"):
     """
     post_data = get_report_data(msg)
     if not post_data:
-        raise Exception("That message is not a report.")
+        raise CmdException("That message is not a report.")
 
     post_url, owner_url = post_data
 
@@ -1398,14 +1398,14 @@ def why(msg):
     """
     post_data = get_report_data(msg)
     if not post_data:
-        raise Exception("That's not a report.")
+        raise CmdException("That's not a report.")
     else:
         *post, _ = fetch_post_id_and_site_from_url(post_data[0])
         why_info = get_why(post[1], post[0])
         if why_info:
             return why_info
         else:
-            raise Exception("There is no `why` data for that user (anymore).")
+            raise CmdException("There is no `why` data for that user (anymore).")
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -1419,7 +1419,7 @@ def autoflagged(msg):
     post_data = get_report_data(msg)
 
     if not post_data:
-        raise Exception("That's not a report.")
+        raise CmdException("That's not a report.")
 
     is_autoflagged, names = Metasmoke.determine_if_autoflagged(post_data[0])
 
