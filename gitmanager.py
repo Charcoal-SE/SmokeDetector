@@ -176,6 +176,9 @@ class GitManager:
         finally:
             # Always return to `deploy` branch when done with anything.
             git.checkout("deploy")
+            
+            if branch:
+                git.branch('-D', branch)
 
             cls.gitmanager_lock.release()
 
