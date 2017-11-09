@@ -692,7 +692,6 @@ menxcell
 nitro\W?grit
 aurora\Wbrite
 lumaslim
-trimbiofit
 glow\W?eternal
 apex\W?booty
 performx
