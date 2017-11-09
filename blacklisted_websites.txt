@@ -1591,3 +1591,4 @@ healthkartclub\.com
 womenshealthclaimed\.com
 powerfullcombo\.com
 carehealthportal\.com
+apigd\.com
