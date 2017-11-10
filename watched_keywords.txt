@@ -1534,3 +1534,4 @@
 1510309710	tripleee	chirurgie-esthetique-tun\.com
 1510310628	tripleee	25dollarsupport\.com
 1510312824	tripleee	(?:1\W*)?844\W*727\W*3625
+1510314153	tripleee	cloudpipes\.com
