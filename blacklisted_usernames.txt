@@ -47,3 +47,5 @@ printers?\W?driver
 support
 JoeClark
 ^Gracia\W?Ryan\d*$
+^Juliet Bell$
+^Prasanta Shee$

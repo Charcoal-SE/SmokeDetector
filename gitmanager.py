@@ -1,20 +1,24 @@
 # coding=utf-8
+
 import platform
-from helpers import log
-from requests.auth import HTTPBasicAuth
-from globalvars import GlobalVars
-import requests
 import time
 import json
-import regex
 from datetime import datetime
 from threading import Lock
+
+import regex
+import requests
+from requests.auth import HTTPBasicAuth
+
 from urllib.parse import quote_plus
 if 'windows' in str(platform.platform()).lower():
     # noinspection PyPep8Naming
     from classes import Git as git
 else:
     from sh import git
+
+from helpers import log
+from globalvars import GlobalVars
 
 
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
@@ -158,11 +162,10 @@ class GitManager:
                 payload = {"title": u"{0}: {1} {2}".format(username, op.title(), item),
                            "body": u"[{0}]({1}) requests the {2} of the {3} {4}. See the Metasmoke search [here]"
                                    "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6}) and the "
-                                   "Stack Exchange search [here](https://stackexchange.com/search?q=%22{7}%22).\n"
-                                   u"<!-- METASMOKE-BLACKLIST-{8} {4} -->".format(
+                                   "Stack Exchange search [here](https://stackexchange.com/search?q=%22{6}%22).\n"
+                                   u"<!-- METASMOKE-BLACKLIST-{7} {4} -->".format(
                                        username, chat_profile_link, op, blacklist,
                                        item, ms_search_option,
-                                       quote_plus(item),
                                        quote_plus(item.replace("\\W", " ").replace("\\.", ".")),
                                        blacklist.upper()),
                            "head": branch,
