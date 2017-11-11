@@ -1545,3 +1545,4 @@
 1510399882	Glorfindel	361online
 1510401507	Glorfindel	elzool\.com
 1510407666	tripleee	medvedtrader\.com
+1510408047	tripleee	(?<=/)dmp[-/<"]
