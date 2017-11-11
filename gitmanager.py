@@ -73,6 +73,8 @@ class GitManager:
             # if we don't address it here.
             return (False, "Invalid blacklist type specified, something has broken badly!")
 
+        branch = ""
+
         try:
             cls.gitmanager_lock.acquire()
 
