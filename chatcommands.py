@@ -100,8 +100,7 @@ def addblu(msg, user):
     elif int(uid) == -2:
         raise CmdException("Error: {}".format(val))
     else:
-        raise CmdException("Invalid format. Valid format: `!!/addblu profileurl` "
-                        "*or* `!!/addblu userid sitename`.")
+        raise CmdException("Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`.")
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
@@ -291,8 +290,8 @@ def do_blacklist(pattern, blacklist_type, msg, force=False):
                                   blacklist_type == "watch_keyword")
 
         if reasons:
-            raise CmdException("That pattern looks like it's already caught by " +
-                            format_blacklist_reasons(reasons) + "; append`-force` if you really want to do that.")
+            raise CmdException("That pattern looks like it's already caught by " + format_blacklist_reasons(reasons) +
+                               "; append `-force` if you really want to do that.")
 
     _, result = GitManager.add_to_blacklist(
         blacklist=blacklist_type,
@@ -1120,8 +1119,8 @@ def allspam(msg, url):
         if 'items' not in res or len(res['items']) == 0:
             raise CmdException("The specified user does not appear to exist.")
         if res['has_more']:
-            raise CmdException("The specified user has an abnormally high number of accounts. Please consider flagging for"
-                               " moderator attention, otherwise use !!/report on the user's posts individually.")
+            raise CmdException("The specified user has an abnormally high number of accounts. Please consider flagging "
+                               "for moderator attention, otherwise use !!/report on the user's posts individually.")
         # Add accounts with posts
         for site in res['items']:
             if site['question_count'] > 0 or site['answer_count'] > 0:
@@ -1147,8 +1146,8 @@ def allspam(msg, url):
             raise CmdException("The specified user has no posts on this site.")
         posts = res['items']
         if posts[0]['owner']['reputation'] > 100:
-            raise CmdException("The specified user's reputation is abnormally high. Please consider flagging for moderator"
-                               " attention, otherwise use !!/report on the posts individually.")
+            raise CmdException("The specified user's reputation is abnormally high. Please consider flagging for "
+                               "moderator attention, otherwise use !!/report on the posts individually.")
         # Add blacklisted user - use most downvoted post as post URL
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
         add_blacklisted_user(user, message_url, sorted(posts, key=lambda x: x['score'])[0]['owner']['link'])
@@ -1174,8 +1173,8 @@ def allspam(msg, url):
     if len(user_posts) == 0:
         raise CmdException("The specified user hasn't posted anything.")
     if len(user_posts) > 15:
-        raise CmdException("The specified user has an abnormally high number of spam posts. Please consider flagging for "
-                           "moderator attention, otherwise use !!/report on the posts individually.")
+        raise CmdException("The specified user has an abnormally high number of spam posts. Please consider flagging "
+                           "for moderator attention, otherwise use !!/report on the posts individually.")
     why_info = u"User manually reported by *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
     # Handle all posts
     for index, post in enumerate(user_posts, start=1):
