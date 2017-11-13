@@ -942,3 +942,4 @@ delta\W?mass
 brain\W?boost(?:er)?
 eva\W?daily
 whitening\W?kit
+(?:1\W*)?800\W*826\W*8068
