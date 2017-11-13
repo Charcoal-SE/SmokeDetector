@@ -1338,7 +1338,6 @@
 1508918141	Glorfindel	stafaband\w*
 1508918834	tripleee	revglow
 1508924701	Byte Commander	hiretowork\.com
-1508929640	Glorfindel	yangintupufirmasi\.com
 1508930152	tripleee	ankarackyangin\.com
 1508930269	tripleee	yanginsondurmeistanbul\.com
 1508934870	Glorfindel	conferencenext\.com
