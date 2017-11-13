@@ -941,3 +941,4 @@ everfirm
 delta\W?mass
 brain\W?boost(?:er)?
 eva\W?daily
+whitening\W?kit
