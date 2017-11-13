@@ -938,3 +938,4 @@ hotcyberlord425\w*@
 enhance\W?xl
 Extreme\WFit\W180
 everfirm
+delta\W?mass
