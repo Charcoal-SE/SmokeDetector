@@ -1489,7 +1489,6 @@
 1510047189	Byte Commander	mp3juice\.live
 1510047486	Glorfindel	letsgoforgood\.com
 1510047512	Glorfindel	binaryforexacademy\.org
-1510047709	Glorfindel	mission-humanitaire-afrique\.org
 1510051260	Glorfindel	windowstechsupport\.org
 1510052936	tripleee	perfect\W?babies
 1510057946	Mithrandir	neowebwallet\.com
