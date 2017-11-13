@@ -606,7 +606,7 @@
 1502370421	Glorfindel	viviangist\.com\.ng
 1502452271	tripleee	ssl2buy\.com
 1502453948	tripleee	avnitechsolutions\.com
-1502471747	doppelgreener	abestpro.com
+1502471747	doppelgreener	abestpro\.com
 1502617608	Glorfindel	threeprinciplesmovies\.com
 1502617615	Glorfindel	jdpiekiti\.org
 1502621751	Mithrandir	getstudypoint\.blogspot\.com
@@ -677,7 +677,7 @@
 1503301018	tripleee	16506538578
 1503301419	Glorfindel	email-support-contact\.com
 1503308223	Glorfindel	usopentennis-live\.com
-1503310656	Mithrandir	m2training.com\.ua
+1503310656	Mithrandir	m2training\.com\.ua
 1503310833	tripleee	lallabi\.com
 1503310894	Mithrandir	modern\.place
 1503315248	tripleee	eb3atli\.com
@@ -845,7 +845,7 @@
 1504457443	Glorfindel	hdwallpapers\.ch
 1504489869	quartata	crackedandroidapk\.com
 1504511119	Glorfindel	irefone\.com
-1504520130	Yvette Colomb	theconsumptionstudy.wixsite\.com
+1504520130	Yvette Colomb	theconsumptionstudy\.wixsite\.com
 1504528813	JoErNanO	trawelmart\.com
 1504597640	Glorfindel	vikidhaka\.com
 1504597661	Glorfindel	lajm-shqip\.com
@@ -930,7 +930,7 @@
 1505298009	tripleee	byetnet\.com
 1505302755	Glorfindel	xemiennam\.net
 1505304370	Glorfindel	abstractclasses\.in
-1505309160	Glorfindel	kncarogyadham.com
+1505309160	Glorfindel	kncarogyadham\.com
 1505362827	tripleee	stdodds\.com
 1505365210	tripleee	dialbro\.com
 1505365647	tripleee	professoridea\.com
@@ -1055,7 +1055,7 @@
 1506503383	tripleee	offersdealscoupons\.store
 1506505048	tripleee	better\W?bust
 1506508121	tripleee	recruitmentresult\.com
-1506509191	paper1111	powerjackpowerinverter.(?:de|co\.uk)
+1506509191	paper1111	powerjackpowerinverter\.(?:de|co\.uk)
 1506512254	tripleee	repairz\.ie
 1506516146	tripleee	quicken-phone-support\.com
 1506524527	Mithrandir	uchi\.ru
@@ -1097,7 +1097,7 @@
 1506944134	Mithrandir	gamestore\.live
 1506945240	Mithrandir	hack(er)?.{0,50}\b(text|call|contact)
 1506959194	Owen Hines	boldcraze\.com
-1506961455	Glorfindel	bandbniagara.com
+1506961455	Glorfindel	bandbniagara\.com
 1506963780	Owen Hines	mr-android12\.blogspot\.com\.eg
 1506971135	Glorfindel	unlimitedloottricks\.com
 1507005373	tripleee	protazen
@@ -1131,7 +1131,7 @@
 1507260859	tripleee	dtube\.vide
 1507267789	tripleee	gkquestion\.in
 1507287272	tripleee	winonasoap
-1507289031	tripleee	evno.in
+1507289031	tripleee	evno\.in
 1507335477	Owen Hines	quickbookssupport\.company
 1507389965	doppelgreener	surajvines\.com
 1507390240	doppelgreener	new\shindi\smovies
@@ -1143,7 +1143,7 @@
 1507482239	tripleee	cassandrawillemsen
 1507483548	tripleee	stafabanddz\.com
 1507496841	doppelgreener	kondom
-1507524250	tripleee	digitalsbharat.com
+1507524250	tripleee	digitalsbharat\.com
 1507524734	tripleee	sudheerjonna\.com
 1507536012	tripleee	rubiksplace\.com
 1507536149	tripleee	sellingplaza\.ru
@@ -1159,7 +1159,7 @@
 1507551495	tripleee	teamvrz\.com
 1507551988	tripleee	q\W?soft\W?ltd
 1507611081	tripleee	makecashonlinewithamazonfromhome\.com
-1507619663	tripleee	edustoke.com
+1507619663	tripleee	edustoke\.com
 1507620503	Glorfindel	cartoonhdappz\.com
 1507625091	tripleee	fittextjs\.com
 1507627712	tripleee	codesroom\.com
@@ -1538,7 +1538,7 @@
 1510317173	tripleee	freeusermanuals\.com
 1510331475	Glorfindel	girlypick\.com
 1510353592	Byte Commander	stellar\W*lumen
-1510379543	NobodyNada	mp3skull.band
+1510379543	NobodyNada	mp3skull\.band
 1510393664	tripleee	snaptube\.zone
 1510393821	tripleee	theoctopustech\.com
 1510395995	tripleee	valiantwriters\.com
@@ -1551,7 +1551,7 @@
 1510435120	Mithrandir	make\W?money\W?online
 1510474778	Mithrandir	Body\W?Dynamix
 1510500459	J F	supplementsrevolution\.com
-1510502953	Eric Leschinski	7-pdf.de
+1510502953	Eric Leschinski	7-pdf\.de
 1510506840	Mithrandir	twotreview\.com
 1510551561	tripleee	meramaal\.com
 1510551960	NobodyNada	emailtechhelpservice\.weebly\.com
