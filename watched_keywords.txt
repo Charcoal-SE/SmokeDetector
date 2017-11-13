@@ -1050,7 +1050,6 @@
 1506495170	tripleee	1?844\W?205\W?0712
 1506496250	tripleee	bomeans\.com
 1506498126	tripleee	cheappairmax\.com
-1506502507	tripleee	eva\W?daily
 1506503383	tripleee	offersdealscoupons\.store
 1506505048	tripleee	better\W?bust
 1506508121	tripleee	recruitmentresult\.com

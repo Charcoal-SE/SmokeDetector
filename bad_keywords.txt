@@ -940,3 +940,4 @@ Extreme\WFit\W180
 everfirm
 delta\W?mass
 brain\W?boost(?:er)?
+eva\W?daily
