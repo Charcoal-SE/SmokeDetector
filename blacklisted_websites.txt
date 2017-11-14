@@ -1600,7 +1600,6 @@ hookupapps\.org
 123movies\.yt
 purabellarev\.com
 mr-jatt\.zone
-zone/[^/]*mp3-(?:song-)?download
 buybestessaysonline\.com
 innozilla\.com
 facecreamreviews\.ca
@@ -1610,9 +1609,8 @@ yangintupufirmasi\.com
 lolga\.com
 mission-humanitaire-afrique\.org
 microsoftoutlookoffice365\.com
-(?:zone|band)/[^/]*-mp3-musica-baixar
+(?:live|zone|band)/[^/]*-mp3-(musica-baixar|cancion-descargar|(?:song-)?download)
 mp3juice\.live
-(?:live|zone|band)/[^/]+-mp3-cancion-descargar
 renewandroid\.com
 slimnojymfacts\.com
 trial4supplement\.com
