@@ -50,3 +50,4 @@ JoeClark
 ^Juliet Bell$
 ^Prasanta Shee$
 ^gesture(?: screen)?$
+^jhon lee$
