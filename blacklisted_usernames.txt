@@ -51,3 +51,4 @@ JoeClark
 ^Prasanta Shee$
 ^gesture(?: screen)?$
 ^jhon lee$
+^mike alec$
