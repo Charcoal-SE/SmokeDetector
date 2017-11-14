@@ -1613,3 +1613,4 @@ microsoftoutlookoffice365\.com
 (?:zone|band)/[^/]*-mp3-musica-baixar
 mp3juice\.live
 (?:live|zone|band)/[^/]+-mp3-cancion-descargar
+renewandroid\.com
