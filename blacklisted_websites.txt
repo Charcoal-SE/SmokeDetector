@@ -1614,3 +1614,4 @@ microsoftoutlookoffice365\.com
 mp3juice\.live
 (?:live|zone|band)/[^/]+-mp3-cancion-descargar
 renewandroid\.com
+slimnojymfacts\.com
