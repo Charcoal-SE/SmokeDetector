@@ -27,11 +27,8 @@ import regex
 from helpers import only_blacklists_changed
 from classes import Post
 
-# TODO: pull out code block to get user_id, chat_site, room_id into function
-# TODO: Return result for all functions should be similar (tuple/named tuple?)
+
 # TODO: Do we need uid == -2 check?  Turn into "is_user_valid" check
-# TODO: Consistent return structure
-#   if return...else return vs if return...return
 
 
 # noinspection PyMissingTypeHints
@@ -1049,7 +1046,7 @@ def report(msg, urls):
             # this re-report might be attempting to correct that/fix a mistake/etc.
 
             if GlobalVars.metasmoke_key is not None:
-                se_link = parsing.to_protocol_relative(post_data.post_url)
+                se_link = to_protocol_relative(post_data.post_url)
                 ms_link = "https://m.erwaysoftware.com/posts/by-url?url={}".format(se_link)
                 output.append("Post {}: Already recently reported [[MS]({})]".format(index, ms_link))
                 continue

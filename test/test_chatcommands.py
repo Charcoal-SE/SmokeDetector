@@ -185,3 +185,48 @@ def test_blacklisted_users():
         "Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`."
     assert chatcommands.isblu("msklkldsklaskd", original_msg=msg) == \
         "Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`."
+
+
+@pytest.mark.skipif(os.path.isfile("whitelistedUsers.p"), reason="shouldn't overwrite file")
+def test_whitelisted_users():
+    owner = Mock(name="El'endia Starman", id=1)
+    room = Mock(_client=Mock(host="stackexchange.com"), id=11540)
+    msg = Mock(owner=owner, room=room)
+
+    # Format: !!/*wlu profileurl
+    assert chatcommands.iswlu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        "User is not whitelisted (`4622463` on `stackoverflow.com`)."
+    assert chatcommands.addwlu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        "User whitelisted (`4622463` on `stackoverflow.com`)."
+    # TODO: Add test here as well
+    assert chatcommands.iswlu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        "User is whitelisted (`4622463` on `stackoverflow.com`)."
+    assert chatcommands.rmwlu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        "User removed from whitelist (`4622463` on `stackoverflow.com`)."
+    assert chatcommands.iswlu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        "User is not whitelisted (`4622463` on `stackoverflow.com`)."
+    assert chatcommands.rmwlu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        "User is not whitelisted."
+
+    # Format: !!/*wlu userid sitename
+    assert chatcommands.iswlu("4622463 stackoverflow", original_msg=msg) == \
+        "User is not whitelisted (`4622463` on `stackoverflow.com`)."
+    assert chatcommands.addwlu("4622463 stackoverflow", original_msg=msg) == \
+        "User whitelisted (`4622463` on `stackoverflow.com`)."
+    # TODO: Add test here as well
+    assert chatcommands.iswlu("4622463 stackoverflow", original_msg=msg) == \
+        "User is whitelisted (`4622463` on `stackoverflow.com`)."
+    assert chatcommands.rmwlu("4622463 stackoverflow", original_msg=msg) == \
+        "User removed from whitelist (`4622463` on `stackoverflow.com`)."
+    assert chatcommands.iswlu("4622463 stackoverflow", original_msg=msg) == \
+        "User is not whitelisted (`4622463` on `stackoverflow.com`)."
+    assert chatcommands.rmwlu("4622463 stackoverflow", original_msg=msg) == \
+        "User is not whitelisted."
+
+    # Invalid input
+    assert chatcommands.addwlu("http://meta.stackexchange.com/users", original_msg=msg) == \
+        "Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`."
+    assert chatcommands.rmwlu("http://meta.stackexchange.com/", original_msg=msg) == \
+        "Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`."
+    assert chatcommands.iswlu("msklkldsklaskd", original_msg=msg) == \
+        "Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`."
