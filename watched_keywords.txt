@@ -1328,7 +1328,6 @@
 1508907317	tripleee	كة مكافحة حشرات
 1508907816	tripleee	organixx
 1508911038	tripleee	easysolutions\.repair
-1508912522	tripleee	videoder\.zone
 1508915244	Glorfindel	realfakedocs\.com
 1508916697	Glorfindel	tyrecompare\.com
 1508916847	tripleee	darshanbooking\.com
