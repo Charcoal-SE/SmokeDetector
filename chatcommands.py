@@ -538,6 +538,8 @@ def errorlogs(count):
     :param count:
     :return: A string
     """
+    print("errorlogs")
+    print("count = " + str(count))
     return fetch_lines_from_error_log(count or 50)
 
 
@@ -783,9 +785,9 @@ def test(content, alias_used="test"):
     else:
         result += ", ".join(reasons).capitalize()
 
-        if why_response is not None and len(why) > 0:
+        if why_response is not None and len(why_response) > 0:
             result += "\n----------\n"
-            result += why
+            result += why_response
 
     return result
 
