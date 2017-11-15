@@ -1587,3 +1587,4 @@
 1510736930	Glorfindel	wpblog\.com
 1510737119	Glorfindel	magenticians\.com
 1510738100	tripleee	warm\W?up\W?email\W?service
+1510745650	tripleee	joviluniversal\.com
