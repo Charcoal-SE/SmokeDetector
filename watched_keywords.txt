@@ -1374,7 +1374,6 @@
 1509123717	quartata	myshop999\.com
 1509123967	quartata	bestdronesadvisor\.com
 1509172150	Glorfindel	themilliontrip\.blogspot\.com
-1509176641	Glorfindel	diving-solutions\.com
 1509197238	Glorfindel	mobotak\.com
 1509200834	Glorfindel	matlabprozhe\.com
 1509269673	paper1111	twineer\.com
