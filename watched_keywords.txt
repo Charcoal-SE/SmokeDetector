@@ -1589,3 +1589,4 @@
 1510745650	tripleee	joviluniversal\.com
 1510745805	tripleee	usitechbitcoin\.co\.uk
 1510745915	tripleee	servicecentersinhyderabad\.com
+1510748913	Glorfindel	bandbcuba\.com
