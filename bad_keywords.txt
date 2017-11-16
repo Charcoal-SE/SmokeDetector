@@ -883,7 +883,7 @@ bio\W?blend
 titanax
 mp3\W?song\W?download
 cannabinoid\W?plus
-clarityx
+clarity\W?x
 derma\W?mira
 rapid\W?boost
 grs\W?ultra
