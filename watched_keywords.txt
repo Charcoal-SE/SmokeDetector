@@ -1178,7 +1178,6 @@
 1507704331	tripleee	business\W?capital\W?experts
 1507705044	tripleee	abservetech\.com
 1507705570	tripleee	invictus\W?alpha\W?elite
-1507708354	tripleee	everything4comp\.blogspot\.com
 1507712294	tripleee	1?\W*855\W*517\W*2433
 1507712810	tripleee	fixerrorcodecanonprinter\.blogspot\.in
 1507716082	Glorfindel	Mechanic37
