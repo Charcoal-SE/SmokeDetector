@@ -191,6 +191,7 @@ class GlobalVars:
             "238145",   # Owen Hines
             "268731",   # Sagar V
             "205208",   # a-j
+            "234375",   # Jarko Dubbeldam
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
