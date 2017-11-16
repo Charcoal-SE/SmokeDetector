@@ -220,15 +220,6 @@ def get_post_site_id_link(post_site_id):
     return None
 
 
-def add_latest_smokedetector_message(room, message_id):
-    GlobalVars.latest_smokedetector_messages[room].append(message_id)
-    # Keep the last 100 messages
-    max_size = 100
-    GlobalVars.latest_smokedetector_messages[room] = GlobalVars.latest_smokedetector_messages[room][-max_size:]
-    with open("latestMessages.p", "wb") as f:
-        pickle.dump(GlobalVars.latest_smokedetector_messages, f, protocol=pickle.HIGHEST_PROTOCOL)
-
-
 def add_or_update_api_data(site):
     if site in GlobalVars.api_calls_per_site:
         GlobalVars.api_calls_per_site[site] += 1
