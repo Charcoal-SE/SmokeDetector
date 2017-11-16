@@ -1596,3 +1596,4 @@
 1510810520	tripleee	beaute\W?facial\W?eye
 1510812709	tripleee	radikalmedikal\.com
 1510814596	tripleee	inkmasters\.net\.au
+1510814991	Tetsuya Yamamoto	epsonprinterssupport\.com
