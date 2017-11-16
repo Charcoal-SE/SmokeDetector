@@ -657,7 +657,6 @@
 1503073291	Glorfindel	seleniumtraining\.com
 1503125702	Glorfindel	iphonesupport\.net
 1503129363	Glorfindel	deiedu\.in
-1503129390	Glorfindel	webtrackker\.com
 1503225891	Glorfindel	java9pro\.blogspot\.in
 1503234989	Glorfindel	thekissanime\.net
 1503242768	Glorfindel	oceansknowledge\.com
