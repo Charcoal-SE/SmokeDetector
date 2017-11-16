@@ -165,17 +165,17 @@ def on_msg(msg, client, room):
             result = dispatch_reply_command(message.parent, message, command)
 
             if result:
-                message.reply(result)
+                message.reply(result, length_check=False)
         elif message.content.startswith("sd "):
             result = dispatch_shorthand_command(message, room)
 
             if result:
-                message.reply(result)
+                message.reply(result, length_check=False)
         elif message.content.startswith("!!/"):
             result = dispatch_command(message)
 
             if result:
-                message.reply(result)
+                message.reply(result, length_check=False)
 
 
 def send_to_room(room, msg, report_data=()):

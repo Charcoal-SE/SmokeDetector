@@ -538,8 +538,6 @@ def errorlogs(count):
     :param count:
     :return: A string
     """
-    print("errorlogs")
-    print("count = " + str(count))
     return fetch_lines_from_error_log(count or 50)
 
 
