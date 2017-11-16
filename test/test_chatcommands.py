@@ -3,26 +3,32 @@ import chatcommunicate  # coverage
 import chatcommands
 from globalvars import GlobalVars
 import regex
-from unittest.mock import *
 import pytest
 import os
 
 
-def test_coffee():
-    owner = Mock(name="El'endia Starman")
-    owner.name.replace = "El'endia Starman".replace
+class Fake():
+    def __init__(self, d):
+        for key, value in d.items():
+            if isinstance(value, dict):
+                setattr(self, key, Fake(value))
+            else:
+                setattr(self, key, value)
 
-    msg = Mock(owner=owner)
+
+def test_coffee():
+    msg = Fake({"owner": {"name": "El'endia Starman"}})
 
     assert chatcommands.coffee(None, original_msg=msg) == "*brews coffee for @El'endiaStarman*"
     assert chatcommands.coffee("angussidney") == "*brews coffee for @angussidney*"
 
 
 def test_tea():
-    owner = Mock(name="El'endia Starman")
-    owner.name.replace = "El'endia Starman".replace
-
-    msg = Mock(owner=owner)
+    msg = Fake({
+        "owner": {
+            "name": "El'endia Starman"
+        }
+    })
 
     teas = "\*brews a cup of ({}) tea for ".format("|".join(chatcommands.TEAS))
     assert regex.match(teas + "@El'endiaStarman\*", chatcommands.tea(None, original_msg=msg))
@@ -54,9 +60,20 @@ def test_location():
 def test_privileged():
     chatcommunicate.parse_room_config("test/test_rooms.yml")
 
-    owner = Mock(name="El'endia Starman", id=1, is_moderator=False)
-    room = Mock(_client=Mock(host="stackexchange.com"), id=11540)
-    msg = Mock(owner=owner, room=room)
+    msg = Fake({
+        "owner": {
+            "name": "El'endia Starman",
+            "id": 1,
+            "is_moderator": False
+        }, 
+        "room": {
+            "_client": {
+                "host": "stackexchange.com"
+            },
+            "id": 11540
+        }
+    })
+
     assert chatcommands.amiprivileged(original_msg=msg) == "\u2713 You are a privileged user."
 
     msg.owner.id = 2
@@ -67,9 +84,23 @@ def test_privileged():
 
 
 def test_report():
-    owner = Mock(name="El'endia Starman", id=1)
-    room = Mock(_client=Mock(host="stackexchange.com"), id=11540)
-    msg = Mock(owner=owner, room=room)
+    msg = Fake({
+        "owner": {
+            "name": "El'endia Starman",
+            "id": 1,
+            "is_moderator": False
+        }, 
+        "room": {
+            "id": 11540,
+            "_client": {
+                "host": "stackexchange.com"
+            }
+        },
+        "_client": {
+            "host": "stackexchange.com"
+        },
+        "id": 1337
+    })
 
     assert chatcommands.report("test", original_msg=msg) == "Post 1: That does not look like a valid post URL."
 
@@ -93,9 +124,23 @@ def test_report():
 
 
 def test_allspam():
-    owner = Mock(name="El'endia Starman", id=1)
-    room = Mock(_client=Mock(host="stackexchange.com"), id=11540)
-    msg = Mock(owner=owner, room=room)
+    msg = Fake({
+        "owner": {
+            "name": "El'endia Starman",
+            "id": 1,
+            "is_moderator": False
+        }, 
+        "room": {
+            "id": 11540,
+            "_client": {
+                "host": "stackexchange.com"
+            }
+        },
+        "_client": {
+            "host": "stackexchange.com"
+        },
+        "id": 1337
+    })
 
     assert chatcommands.allspam("test", original_msg=msg) == "That doesn't look like a valid user URL."
 
@@ -142,9 +187,23 @@ def test_allspam():
 
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"), reason="shouldn't overwrite file")
 def test_blacklisted_users():
-    owner = Mock(name="El'endia Starman", id=1)
-    room = Mock(_client=Mock(host="stackexchange.com"), id=11540)
-    msg = Mock(owner=owner, room=room)
+    msg = Fake({
+        "owner": {
+            "name": "El'endia Starman",
+            "id": 1,
+            "is_moderator": False
+        }, 
+        "room": {
+            "id": 11540,
+            "_client": {
+                "host": "stackexchange.com"
+            }
+        },
+        "_client": {
+            "host": "stackexchange.com"
+        },
+        "id": 1337
+    })
 
     # Format: !!/*blu profileurl
     assert chatcommands.isblu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
@@ -190,9 +249,22 @@ def test_blacklisted_users():
 
 @pytest.mark.skipif(os.path.isfile("whitelistedUsers.p"), reason="shouldn't overwrite file")
 def test_whitelisted_users():
-    owner = Mock(name="El'endia Starman", id=1)
-    room = Mock(_client=Mock(host="stackexchange.com"), id=11540)
-    msg = Mock(owner=owner, room=room)
+    msg = Fake({
+        "owner": {
+            "name": "El'endia Starman",
+            "id": 1,
+            "is_moderator": False
+        }, 
+        "room": {
+            "id": 11540,
+            "_client": {
+                "host": "stackexchange.com"
+            }
+        },
+        "_client": {
+            "host": "stackexchange.com"
+        }
+    })
 
     # Format: !!/*wlu profileurl
     assert chatcommands.iswlu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
@@ -238,37 +310,63 @@ def test_whitelisted_users():
 
 @pytest.mark.skipif(os.path.isfile("notifications.p"), reason="shouldn't overwrite file")
 def test_notifications():
-    owner1 = Mock(name="El'endia Starman", id=1)
-    room1 = Mock(_client=Mock(host="stackexchange.com"), id=11540)
-    msg1 = Mock(owner=owner1, room=room1)
+    msg1 = Fake({
+        "owner": {
+            "name": "El'endia Starman",
+            "id": 1,
+            "is_moderator": False
+        }, 
+        "room": {
+            "id": 11540,
+            "_client": {
+                "host": "stackexchange.com"
+            }
+        },
+        "_client": {
+            "host": "stackexchange.com"
+        }
+    })
 
-    owner2 = Mock(name="angussidney", id=145827)
-    room2 = Mock(_client=Mock(host="stackexchange.com"), id=11540)
-    msg2 = Mock(owner=owner2, room=room2)
+    msg2 = Fake({
+        "owner": {
+            "name": "angussidney",
+            "id": 145827,
+            "is_moderator": False
+        }, 
+        "room": {
+            "id": 11540,
+            "_client": {
+                "host": "stackexchange.com"
+            }
+        },
+        "_client": {
+            "host": "stackexchange.com"
+        }
+    })
 
     # User 1
     assert chatcommands.allnotificationsites("11540", original_msg=msg1) == \
         "You won't get notified for any sites in that room."
-    assert chatcommands.willbenotified("11540 gaming", original_msg=msg1) == \
+    assert chatcommands.willbenotified("11540", "gaming", original_msg=msg1) == \
         "No, you won't be notified for that site in that room."
-    assert chatcommands.notify("11540 gaming", original_msg=msg1) == \
+    assert chatcommands.notify("11540", "gaming", original_msg=msg1) == \
         "You'll now get pings from me if I report a post on `gaming`, in room `11540` on `chat.stackexchange.com`"
-    assert chatcommands.notify("11540 codegolf.stackexchange.com", original_msg=msg1) == \
+    assert chatcommands.notify("11540", "codegolf.stackexchange.com", original_msg=msg1) == \
         "You'll now get pings from me if I report a post on `codegolf.stackexchange.com`, in room `11540` on " \
         "`chat.stackexchange.com`"
-    assert chatcommands.willbenotified("11540 gaming.stackexchange.com", original_msg=msg1) == \
+    assert chatcommands.willbenotified("11540", "gaming.stackexchange.com", original_msg=msg1) == \
         "Yes, you will be notified for that site in that room."
-    assert chatcommands.willbenotified("11540 codegolf", original_msg=msg1) == \
+    assert chatcommands.willbenotified("11540", "codegolf", original_msg=msg1) == \
         "Yes, you will be notified for that site in that room."
 
     # User 2
     assert chatcommands.allnotificationsites("11540", original_msg=msg2) == \
         "You won't get notified for any sites in that room."
-    assert chatcommands.willbenotified("11540 raspberrypi", original_msg=msg2) == \
+    assert chatcommands.willbenotified("11540", "raspberrypi", original_msg=msg2) == \
         "No, you won't be notified for that site in that room."
-    assert chatcommands.notify("11540 raspberrypi", original_msg=msg2) == \
+    assert chatcommands.notify("11540", "raspberrypi", original_msg=msg2) == \
         "You'll now get pings from me if I report a post on `raspberrypi`, in room `11540` on `chat.stackexchange.com`"
-    assert chatcommands.willbenotified("11540 raspberrypi.stackexchange.com", original_msg=msg2) == \
+    assert chatcommands.willbenotified("11540", "raspberrypi.stackexchange.com", original_msg=msg2) == \
         "Yes, you will be notified for that site in that room."
 
     # Check for no interaction
@@ -278,18 +376,18 @@ def test_notifications():
         "You will get notified for these sites:\r\nraspberrypi.stackexchange.com"
 
     # Remove all notifications and check
-    assert chatcommands.unnotify("11540 gaming.stackexchange.com", original_msg=msg1) == \
+    assert chatcommands.unnotify("11540", "gaming.stackexchange.com", original_msg=msg1) == \
         "I will no longer ping you if I report a post on `gaming.stackexchange.com`, in room `11540` on " \
         "`chat.stackexchange.com`"
-    assert chatcommands.unnotify("11540 codegolf", original_msg=msg1) == \
+    assert chatcommands.unnotify("11540", "codegolf", original_msg=msg1) == \
         "I will no longer ping you if I report a post on `codegolf`, in room `11540` on `chat.stackexchange.com`"
-    assert chatcommands.unnotify("11540 raspberrypi", original_msg=msg2) == \
+    assert chatcommands.unnotify("11540", "raspberrypi", original_msg=msg2) == \
         "I will no longer ping you if I report a post on `raspberrypi`, in room `11540` on `chat.stackexchange.com`"
-    assert chatcommands.unnotify("11540 raspberrypi", original_msg=msg2) == \
+    assert chatcommands.unnotify("11540", "raspberrypi", original_msg=msg2) == \
         "That configuration doesn't exist."
     assert chatcommands.allnotificationsites("11540", original_msg=msg1) == \
         "You won't get notified for any sites in that room."
-    assert chatcommands.willbenotified("11540 raspberrypi", original_msg=msg2) == \
+    assert chatcommands.willbenotified("11540", "raspberrypi", original_msg=msg2) == \
         "No, you won't be notified for that site in that room."
 
     # Cleanup
