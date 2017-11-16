@@ -1597,3 +1597,4 @@
 1510814596	tripleee	inkmasters\.net\.au
 1510814991	Tetsuya Yamamoto	epsonprinterssupport\.com
 1510815136	tripleee	(?:1\W*)?800\W*432\W*0815
+1510822476	Glorfindel	australiadaycruises\.com
