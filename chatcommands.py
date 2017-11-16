@@ -856,6 +856,7 @@ def notify(msg, room_id, se_site):
     :param se_site:
     :return: A string
     """
+    # TODO: Add check whether smokey reports in that room
     response, full_site = add_to_notification_list(msg.owner.id, msg._client.host, room_id, se_site)
 
     if response == 0:
@@ -956,6 +957,8 @@ def whois(msg, role):
         response += "None of them are currently in this room. Other users in this room might be able to help you."
 
     return response
+
+# TODO: !!/unnotify-all
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints

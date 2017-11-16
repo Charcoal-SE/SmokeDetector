@@ -7,8 +7,6 @@ from unittest.mock import *
 import pytest
 import os
 
-# TODO: Test notifications, blacklisted and whitelisted users
-
 
 def test_coffee():
     owner = Mock(name="El'endia Starman")
@@ -186,6 +184,9 @@ def test_blacklisted_users():
     assert chatcommands.isblu("msklkldsklaskd", original_msg=msg) == \
         "Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`."
 
+    # Cleanup
+    os.remove("blacklistedUsers.p")
+
 
 @pytest.mark.skipif(os.path.isfile("whitelistedUsers.p"), reason="shouldn't overwrite file")
 def test_whitelisted_users():
@@ -230,3 +231,66 @@ def test_whitelisted_users():
         "Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`."
     assert chatcommands.iswlu("msklkldsklaskd", original_msg=msg) == \
         "Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`."
+
+    # Cleanup
+    os.remove("whitelistedUsers.p")
+
+
+@pytest.mark.skipif(os.path.isfile("notifications.p"), reason="shouldn't overwrite file")
+def test_notifications():
+    owner1 = Mock(name="El'endia Starman", id=1)
+    room1 = Mock(_client=Mock(host="stackexchange.com"), id=11540)
+    msg1 = Mock(owner=owner1, room=room1)
+
+    owner2 = Mock(name="angussidney", id=145827)
+    room2 = Mock(_client=Mock(host="stackexchange.com"), id=11540)
+    msg2 = Mock(owner=owner2, room=room2)
+
+    # User 1
+    assert chatcommands.allnotificationsites("11540", original_msg=msg1) == \
+        "You won't get notified for any sites in that room."
+    assert chatcommands.willbenotified("11540 gaming", original_msg=msg1) == \
+        "No, you won't be notified for that site in that room."
+    assert chatcommands.notify("11540 gaming", original_msg=msg1) == \
+        "You'll now get pings from me if I report a post on `gaming`, in room `11540` on `chat.stackexchange.com`"
+    assert chatcommands.notify("11540 codegolf.stackexchange.com", original_msg=msg1) == \
+        "You'll now get pings from me if I report a post on `codegolf.stackexchange.com`, in room `11540` on " \
+        "`chat.stackexchange.com`"
+    assert chatcommands.willbenotified("11540 gaming.stackexchange.com", original_msg=msg1) == \
+        "Yes, you will be notified for that site in that room."
+    assert chatcommands.willbenotified("11540 codegolf", original_msg=msg1) == \
+        "Yes, you will be notified for that site in that room."
+
+    # User 2
+    assert chatcommands.allnotificationsites("11540", original_msg=msg2) == \
+        "You won't get notified for any sites in that room."
+    assert chatcommands.willbenotified("11540 raspberrypi", original_msg=msg2) == \
+        "No, you won't be notified for that site in that room."
+    assert chatcommands.notify("11540 raspberrypi", original_msg=msg2) == \
+        "You'll now get pings from me if I report a post on `raspberrypi`, in room `11540` on `chat.stackexchange.com`"
+    assert chatcommands.willbenotified("11540 raspberrypi.stackexchange.com", original_msg=msg2) == \
+        "Yes, you will be notified for that site in that room."
+
+    # Check for no interaction
+    assert chatcommands.allnotificationsites("11540", original_msg=msg1) == \
+        "You will get notified for these sites:\r\ngaming.stackexchange.com, codegolf.stackexchange.com"
+    assert chatcommands.allnotificationsites("11540", original_msg=msg2) == \
+        "You will get notified for these sites:\r\nraspberrypi.stackexchange.com"
+
+    # Remove all notifications and check
+    assert chatcommands.unnotify("11540 gaming.stackexchange.com", original_msg=msg1) == \
+        "I will no longer ping you if I report a post on `gaming.stackexchange.com`, in room `11540` on " \
+        "`chat.stackexchange.com`"
+    assert chatcommands.unnotify("11540 codegolf", original_msg=msg1) == \
+        "I will no longer ping you if I report a post on `codegolf`, in room `11540` on `chat.stackexchange.com`"
+    assert chatcommands.unnotify("11540 raspberrypi", original_msg=msg2) == \
+        "I will no longer ping you if I report a post on `raspberrypi`, in room `11540` on `chat.stackexchange.com`"
+    assert chatcommands.unnotify("11540 raspberrypi", original_msg=msg2) == \
+        "That configuration doesn't exist."
+    assert chatcommands.allnotificationsites("11540", original_msg=msg1) == \
+        "You won't get notified for any sites in that room."
+    assert chatcommands.willbenotified("11540 raspberrypi", original_msg=msg2) == \
+        "No, you won't be notified for that site in that room."
+
+    # Cleanup
+    os.remove("notifications.p")
