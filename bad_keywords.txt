@@ -960,3 +960,4 @@ max\W?e?xtreme
 refollium
 cilexin
 essential\W?trim(?:\W?gc)?
+ez\W*battery
