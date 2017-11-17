@@ -49,3 +49,7 @@ JoeClark
 ^Gracia\W?Ryan\d*$
 ^Juliet Bell$
 ^Prasanta Shee$
+^gesture(?: screen)?$
+^jhon lee$
+^mike alec$
+^Madhav sharma$
