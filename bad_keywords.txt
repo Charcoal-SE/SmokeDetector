@@ -737,7 +737,7 @@ thrive\W?max
 max\W?rise
 prima\W?lift\W?skin
 muscle\W?boost\W?x
-luna\W?illuminate
+luna\W?(?:il)?luminate
 5\W?hour\W?force
 votofel
 tone\W?360
