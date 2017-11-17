@@ -962,3 +962,4 @@ cilexin
 essential\W?trim(?:\W?gc)?
 ez\W*battery
 https?://\S+\.(?:live|zone|band)/[^/]*-mp3-(musica-baixar|cancion-descargar|(?:song-)?download)
+platinum\W*xwl
