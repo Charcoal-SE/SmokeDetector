@@ -44,7 +44,6 @@ vbage tech
 ^ling xing$
 printers?\W?driver
 ^689 Cloud$
-support
 JoeClark
 ^Gracia\W?Ryan\d*$
 ^Juliet Bell$
