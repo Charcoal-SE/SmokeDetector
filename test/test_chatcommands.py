@@ -7,7 +7,7 @@ import pytest
 import os
 
 
-class Fake():
+class Fake:
     def __init__(self, d):
         for key, value in d.items():
             if isinstance(value, dict):
@@ -24,11 +24,7 @@ def test_coffee():
 
 
 def test_tea():
-    msg = Fake({
-        "owner": {
-            "name": "El'endia Starman"
-        }
-    })
+    msg = Fake({"owner": {"name": "El'endia Starman"}})
 
     teas = "\*brews a cup of ({}) tea for ".format("|".join(chatcommands.TEAS))
     assert regex.match(teas + "@El'endiaStarman\*", chatcommands.tea(None, original_msg=msg))
@@ -65,7 +61,7 @@ def test_privileged():
             "name": "El'endia Starman",
             "id": 1,
             "is_moderator": False
-        }, 
+        },
         "room": {
             "_client": {
                 "host": "stackexchange.com"
@@ -89,7 +85,7 @@ def test_report():
             "name": "El'endia Starman",
             "id": 1,
             "is_moderator": False
-        }, 
+        },
         "room": {
             "id": 11540,
             "_client": {
@@ -129,7 +125,7 @@ def test_allspam():
             "name": "El'endia Starman",
             "id": 1,
             "is_moderator": False
-        }, 
+        },
         "room": {
             "id": 11540,
             "_client": {
@@ -192,7 +188,7 @@ def test_blacklisted_users():
             "name": "El'endia Starman",
             "id": 1,
             "is_moderator": False
-        }, 
+        },
         "room": {
             "id": 11540,
             "_client": {
@@ -254,7 +250,7 @@ def test_whitelisted_users():
             "name": "El'endia Starman",
             "id": 1,
             "is_moderator": False
-        }, 
+        },
         "room": {
             "id": 11540,
             "_client": {
@@ -315,7 +311,7 @@ def test_notifications():
             "name": "El'endia Starman",
             "id": 1,
             "is_moderator": False
-        }, 
+        },
         "room": {
             "id": 11540,
             "_client": {
@@ -332,7 +328,7 @@ def test_notifications():
             "name": "angussidney",
             "id": 145827,
             "is_moderator": False
-        }, 
+        },
         "room": {
             "id": 11540,
             "_client": {

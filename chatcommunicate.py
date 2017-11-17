@@ -285,7 +285,7 @@ def command(*type_signature, reply=False, whole_msg=False, privileged=False, ari
 
             try:
                 try:
-                    processed_args.extend([get_type(arg) if arg else arg for get_type, arg in zip(type_signature, args)])
+                    processed_args.extend([coerce(arg) if arg else arg for coerce, arg in zip(type_signature, args)])
                 except ValueError as e:
                     return "Invalid input type given for an argument"
 
