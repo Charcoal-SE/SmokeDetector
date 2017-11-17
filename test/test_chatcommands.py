@@ -268,6 +268,8 @@ def test_notifications():
         "No, you won't be notified for that site in that room."
     assert chatcommands.notify("11540 raspberrypi", original_msg=msg2) == \
         "You'll now get pings from me if I report a post on `raspberrypi`, in room `11540` on `chat.stackexchange.com`"
+    assert chatcommands.notify("11540 raspberrypi", original_msg=msg2) == \
+        "That notification configuration is already registered."
     assert chatcommands.willbenotified("11540 raspberrypi.stackexchange.com", original_msg=msg2) == \
         "Yes, you will be notified for that site in that room."
 
@@ -291,6 +293,9 @@ def test_notifications():
         "You won't get notified for any sites in that room."
     assert chatcommands.willbenotified("11540 raspberrypi", original_msg=msg2) == \
         "No, you won't be notified for that site in that room."
+
+    assert chatcommands.allnotificationsites("asdf", original_msg=msg1) == "Invalid input type given for an argument"
+    assert chatcommands.notify("11540", "charcoalspam.stackexchange.com") == "The given SE site does not exist."
 
     # Cleanup
     os.remove("notifications.p")

@@ -872,6 +872,44 @@ def notify(msg, room_id, se_site):
         raise CmdException("Unrecognized code returned when adding notification.")
 
 
+# TODO: !!/unnotify-all
+
+
+# noinspection PyIncorrectDocstring,PyMissingTypeHints
+@command(int, str, whole_msg=True)
+def unnotify(msg, room_id, se_site):
+    """
+    Unsubscribes a user to specific events
+    :param msg:
+    :param room_id:
+    :param se_site:
+    :return: A string
+    """
+    response = remove_from_notification_list(msg.owner.id, msg._client.host, room_id, se_site)
+
+    if response:
+        return "I will no longer ping you if I report a post on `{site}`, in room `{room}` "\
+               "on `chat.{domain}`".format(site=se_site, room=room_id, domain=msg._client.host)
+
+    raise CmdException("That configuration doesn't exist.")
+
+
+# noinspection PyIncorrectDocstring,PyMissingTypeHints
+@command(int, str, whole_msg=True)
+def willbenotified(msg, room_id, se_site):
+    """
+    Returns a string stating whether a user will be notified or not
+    :param msg:
+    :param room_id:
+    :param se_site:
+    :return: A string
+    """
+    if will_i_be_notified(msg.owner.id, msg._client.host, room_id, se_site):
+        return "Yes, you will be notified for that site in that room."
+
+    return "No, you won't be notified for that site in that room."
+
+
 RETURN_NAMES = {"admin": ["admin", "admins"], "code_admin": ["code admin", "code admins"]}
 
 
@@ -936,7 +974,7 @@ def whois(msg, role):
                                 msg._client.get_user(admin).last_seen)
                                for admin in admins_not_in_room]
 
-    return_name = RETURN_NAMES[valid_roles[message_parts[1]]][0 if len(admin_ids) == 1 else 1]
+    return_name = RETURN_NAMES[valid_roles[role]][0 if len(admin_ids) == 1 else 1]
 
     response = "I am aware of {} {}".format(len(admin_ids), return_name)
 
@@ -959,43 +997,6 @@ def whois(msg, role):
         response += "None of them are currently in this room. Other users in this room might be able to help you."
 
     return response
-
-# TODO: !!/unnotify-all
-
-
-# noinspection PyIncorrectDocstring,PyMissingTypeHints
-@command(int, str, whole_msg=True)
-def unnotify(msg, room_id, se_site):
-    """
-    Unsubscribes a user to specific events
-    :param msg:
-    :param room_id:
-    :param se_site:
-    :return: A string
-    """
-    response = remove_from_notification_list(msg.owner.id, msg._client.host, room_id, se_site)
-
-    if response:
-        return "I will no longer ping you if I report a post on `{site}`, in room `{room}` "\
-               "on `chat.{domain}`".format(site=se_site, room=room_id, domain=msg._client.host)
-
-    raise CmdException("That configuration doesn't exist.")
-
-
-# noinspection PyIncorrectDocstring,PyMissingTypeHints
-@command(int, str, whole_msg=True)
-def willbenotified(msg, room_id, se_site):
-    """
-    Returns a string stating whether a user will be notified or not
-    :param msg:
-    :param room_id:
-    :param se_site:
-    :return: A string
-    """
-    if will_i_be_notified(msg.owner.id, msg._client.host, room_id, se_site):
-        return "Yes, you will be notified for that site in that room."
-
-    return "No, you won't be notified for that site in that room."
 
 
 @command(int, str, privileged=True, whole_msg=True)

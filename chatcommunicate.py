@@ -284,7 +284,10 @@ def command(*type_signature, reply=False, whole_msg=False, privileged=False, ari
                 processed_args = []
 
             try:
-                processed_args.extend([get_type(arg) if arg else arg for get_type, arg in zip(type_signature, args)])
+                try:
+                    processed_args.extend([get_type(arg) if arg else arg for get_type, arg in zip(type_signature, args)])
+                except ValueError as e:
+                    return "Invalid input type given for an argument"
 
                 result = func(*processed_args, **({"alias_used": alias_used} if give_name else {}))
                 return result if not quiet_action else ""
