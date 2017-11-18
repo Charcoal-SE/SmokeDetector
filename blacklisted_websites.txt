@@ -1609,7 +1609,6 @@ yangintupufirmasi\.com
 lolga\.com
 mission-humanitaire-afrique\.org
 microsoftoutlookoffice365\.com
-(?:live|zone|band)/[^/]*-mp3-(musica-baixar|cancion-descargar|(?:song-)?download)
 mp3juice\.live
 renewandroid\.com
 slimnojymfacts\.com
@@ -1621,3 +1620,9 @@ worldhealthreviews\.com
 MusConv\.com
 videoder\.zone
 diving-solutions\.com
+studio\.stupeflix\.com
+everything4comp\.blogspot\.com
+testoultra\.in
+webtrackker\.com
+garciniasecretdietabout\.com
+technicalsuport\.com

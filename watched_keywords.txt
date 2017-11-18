@@ -587,7 +587,6 @@
 1502200906	Mithrandir	gpsvehicletrackersindia\.in
 1502201687	Mithrandir	.?burgeesjason2@gmail\.com
 1502204516	Glorfindel	softisistem\.blogspot\.ru
-1502232039	quartata	technicalsuport\.com
 1502252737	tripleee	roachexpert\.com
 1502252754	tripleee	watch-tv-shows\.org
 1502272230	CalvT븃	sharedesk\.pk
@@ -657,7 +656,6 @@
 1503073291	Glorfindel	seleniumtraining\.com
 1503125702	Glorfindel	iphonesupport\.net
 1503129363	Glorfindel	deiedu\.in
-1503129390	Glorfindel	webtrackker\.com
 1503225891	Glorfindel	java9pro\.blogspot\.in
 1503234989	Glorfindel	thekissanime\.net
 1503242768	Glorfindel	oceansknowledge\.com
@@ -1178,7 +1176,6 @@
 1507704331	tripleee	business\W?capital\W?experts
 1507705044	tripleee	abservetech\.com
 1507705570	tripleee	invictus\W?alpha\W?elite
-1507708354	tripleee	everything4comp\.blogspot\.com
 1507712294	tripleee	1?\W*855\W*517\W*2433
 1507712810	tripleee	fixerrorcodecanonprinter\.blogspot\.in
 1507716082	Glorfindel	Mechanic37
@@ -1595,3 +1592,38 @@
 1510757828	Glorfindel	malohit\.ru
 1510771299	Glorfindel	eudormail\.com
 1510795028	paper1111	fues email customer services
+1510810520	tripleee	beaute\W?facial\W?eye
+1510812709	tripleee	radikalmedikal\.com
+1510814596	tripleee	inkmasters\.net\.au
+1510814991	Tetsuya Yamamoto	epsonprinterssupport\.com
+1510815136	tripleee	(?:1\W*)?800\W*432\W*0815
+1510822476	Glorfindel	australiadaycruises\.com
+1510823079	Glorfindel	sydneyharbourdinnercruises\.com
+1510834633	Glorfindel	electronicservicecenter\.in
+1510839440	tripleee	(?:1\W*)?314\W*833\W*9209
+1510851511	DrMcMoylex	jestaplophotography
+1510879822	paper1111	lk-tinsel-wire\.com
+1510894855	tripleee	(?:1\W*)?339\W*201\W*8850
+1510895035	tripleee	unstuckbtc\.ml
+1510895567	tripleee	cell\W?repair\W?7
+1510895779	tripleee	bemass
+1510901220	tripleee	everydayhero\.com
+1510905001	tripleee	(?:1\W*)?888\W*886\W*0477
+1510905155	tripleee	atlasdpack\.com
+1510907582	Glorfindel	purchasesharesonline\.com
+1510910182	Glorfindel	crescentpolyvinyl\.com
+1510912261	tripleee	726226983
+1510912649	tripleee	pcb-forum\.com
+1510918202	Glorfindel	carloanstudent\.com
+1510921712	paper1111	4421571131
+1510921874	paper1111	kalyanisprings.com
+1510924829	Glorfindel	pro-papers\.com
+1510953965	Byte Commander	makkarhospital
+1510984145	A J	forgotpasswordmailtriggeringinasp
+1511003406	Glorfindel	biggboss11winner\.com
+1511003893	Glorfindel	show-box\.ooo
+1511004080	Nisse Engström	aptoideguide\.com
+1511005185	Glorfindel	khojdo\.com
+1511021644	Glorfindel	popunderzone\.com
+1511022777	Glorfindel	nusaphala\.com
+1511023166	Glorfindel	luis\W?cotton

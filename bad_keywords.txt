@@ -737,7 +737,7 @@ thrive\W?max
 max\W?rise
 prima\W?lift\W?skin
 muscle\W?boost\W?x
-luna\W?illuminate
+luna\W?(?:il)?luminate
 5\W?hour\W?force
 votofel
 tone\W?360
@@ -883,7 +883,7 @@ bio\W?blend
 titanax
 mp3\W?song\W?download
 cannabinoid\W?plus
-clarityx
+clarity\W?x
 derma\W?mira
 rapid\W?boost
 grs\W?ultra
@@ -956,3 +956,11 @@ zarrah
 overthecounter
 simply\W?flawless
 mohit\.sharma6611
+max\W?e?xtreme
+refollium
+cilexin
+essential\W?trim(?:\W?gc)?
+ez\W*battery
+https?://\S+\.(?:live|zone|band)/[^/]*-mp3-(musica-baixar|cancion-descargar|(?:song-)?download)
+platinum\W*xwl
+new\W*age\W*serum
