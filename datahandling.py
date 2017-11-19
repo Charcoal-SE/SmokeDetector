@@ -359,7 +359,10 @@ def remove_from_notification_list(user_id, chat_site, room_id, se_site):
 
 # noinspection PyMissingTypeHints
 def will_i_be_notified(user_id, chat_site, room_id, se_site):
-    notification_tuple = (int(user_id), chat_site, int(room_id), se_site)
+    exists, site = check_site_and_get_full_name(se_site)
+    if not exists:
+        return False
+    notification_tuple = (int(user_id), chat_site, int(room_id), site)
     return notification_tuple in GlobalVars.notifications
 
 
