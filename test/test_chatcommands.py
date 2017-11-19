@@ -389,7 +389,8 @@ def test_notifications():
         "No, you won't be notified for that site in that room."
 
     assert chatcommands.allnotificationsites("asdf", original_msg=msg1) == "Invalid input type given for an argument"
-    assert chatcommands.notify("11540", "charcoalspam.stackexchange.com") == "The given SE site does not exist."
+    assert chatcommands.notify("11540", "charcoalspam.stackexchange.com", original_msg=msg1) == \
+        "The given SE site does not exist."
 
     # Cleanup
     os.remove("notifications.p")
