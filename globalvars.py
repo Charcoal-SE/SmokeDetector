@@ -192,7 +192,8 @@ class GlobalVars:
             "268731",   # Sagar V
             "205208",   # a-j
             "234375",   # Jarko Dubbeldam
-            "139041"    # Catija
+            "139041",   # Catija
+            "305737"    # Tinkeringbell
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
