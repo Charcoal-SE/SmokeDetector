@@ -369,7 +369,7 @@ def test_notifications():
 
     # Check for no interaction
     assert chatcommands.allnotificationsites("11540", original_msg=msg1) == \
-        "You will get notified for these sites:\r\ngaming.stackexchange.com, codegolf.stackexchange.com"
+        "You will get notified for these sites:\r\ncodegolf.stackexchange.com, gaming.stackexchange.com"
     assert chatcommands.allnotificationsites("11540", original_msg=msg2) == \
         "You will get notified for these sites:\r\nraspberrypi.stackexchange.com"
 
