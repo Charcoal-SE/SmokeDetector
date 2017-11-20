@@ -1640,3 +1640,4 @@
 1511158945	tripleee	noresponding\.net
 1511159656	tripleee	themeegg\.com
 1511160474	tripleee	ideiasvirtuais\.com\.br
+1511161125	tripleee	pure\W?core
