@@ -1639,3 +1639,4 @@
 1511157505	tripleee	sharecodepoint\.com
 1511158945	tripleee	noresponding\.net
 1511159656	tripleee	themeegg\.com
+1511160474	tripleee	ideiasvirtuais\.com\.br
