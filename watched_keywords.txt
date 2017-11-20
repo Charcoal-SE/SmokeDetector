@@ -1628,7 +1628,7 @@
 1511023166	Glorfindel	luis\W?cotton
 1511077128	paper1111	writinghelp\.net
 1511078574	paper1111	sorgs\.cn
-1511080442	paper1111	662\W+368\W8811
+1511080442	paper1111	(?:1\*W)?662\W*368\W*8811
 1511088861	Glorfindel	gobowlingalley\.com
 1511089507	Glorfindel	fireofdeals\.com
 1511110796	Glorfindel	xoomer\.virgilio\.it
