@@ -965,3 +965,4 @@ https?://\S+\.(?:live|zone|band)/[^/]*-mp3-(musica-baixar|cancion-descargar|(?:s
 platinum\W*xwl
 new\W*age\W*serum
 noxitril
+boli\W?testo\W?boost
