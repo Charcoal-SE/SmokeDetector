@@ -1637,7 +1637,6 @@
 1511157274	tripleee	(?:1\W*)?855\W*434\W*1666
 1511157314	tripleee	emailphonenumbers\.com
 1511157505	tripleee	sharecodepoint\.com
-1511158945	tripleee	noresponding\.net
 1511159656	tripleee	themeegg\.com
 1511160474	tripleee	ideiasvirtuais\.com\.br
 1511161125	tripleee	pure\W?core
