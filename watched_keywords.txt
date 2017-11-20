@@ -1642,3 +1642,4 @@
 1511161125	tripleee	pure\W?core
 1511164415	tripleee	(?:1\W*)?877\W*220\W*7367
 1511169206	Glorfindel	notresponding\.net
+1511169984	Glorfindel	oahu-handyman\.com
