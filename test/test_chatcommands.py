@@ -80,26 +80,7 @@ def test_privileged():
 
 
 def test_deprecated_blacklist():
-    msg = Fake({
-        "owner": {
-            "name": "El'endia Starman",
-            "id": 1,
-            "is_moderator": False
-        },
-        "room": {
-            "id": 11540,
-            "_client": {
-                "host": "stackexchange.com"
-            }
-        },
-        "_client": {
-            "host": "stackexchange.com"
-        },
-        "id": 1337
-    })
-
-    assert chatcommands.blacklist("", original_msg=msg) \
-        .startswith("""The !!/blacklist command has been deprecated.""")
+    assert chatcommands.blacklist("").startswith("""The !!/blacklist command has been deprecated.""")
 
 
 def test_report():
