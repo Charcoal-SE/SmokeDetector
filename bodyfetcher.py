@@ -82,7 +82,8 @@ class BodyFetcher:
         "sports.stackexchange.com": 1,
         "superuser.com": 1,
         "windowsphone.stackexchange.com": 1,
-        "workplace.stackexchange.com": 1
+        "workplace.stackexchange.com": 1,
+        "interpersonal.stackexchange.com": 1
     }
 
     time_sensitive = ["askubuntu.com", "superuser.com", "security.stackexchange.com", "movies.stackexchange.com",

@@ -810,7 +810,6 @@
 1504146287	tripleee	tribungroup\.com
 1504146309	tripleee	gokilgilasinting\.com
 1504156771	tripleee	erexatropin
-1504157076	tripleee	trimbiofit\.co\.uk
 1504158387	tripleee	luxe\W?rose
 1504162531	tripleee	microbladingoslo\.com
 1504165162	tripleee	stelecom\.in
@@ -1589,7 +1588,6 @@
 1510748913	Glorfindel	bandbcuba\.com
 1510749013	Glorfindel	scytek\.com
 1510754907	tripleee	ncresults\.com
-1510757828	Glorfindel	malohit\.ru
 1510771299	Glorfindel	eudormail\.com
 1510795028	paper1111	fues email customer services
 1510810520	tripleee	beaute\W?facial\W?eye
@@ -1627,3 +1625,58 @@
 1511021644	Glorfindel	popunderzone\.com
 1511022777	Glorfindel	nusaphala\.com
 1511023166	Glorfindel	luis\W?cotton
+1511077128	paper1111	writinghelp\.net
+1511078574	paper1111	sorgs\.cn
+1511080442	paper1111	(?:1\*W)?662\W*368\W*8811
+1511088861	Glorfindel	gobowlingalley\.com
+1511089507	Glorfindel	fireofdeals\.com
+1511110796	Glorfindel	xoomer\.virgilio\.it
+1511156714	Tetsuya Yamamoto	boyuanpam\.com
+1511157214	tripleee	234\*703\*335\*4868
+1511157274	tripleee	(?:1\W*)?855\W*434\W*1666
+1511157314	tripleee	emailphonenumbers\.com
+1511157505	tripleee	sharecodepoint\.com
+1511159656	tripleee	themeegg\.com
+1511160474	tripleee	ideiasvirtuais\.com\.br
+1511161125	tripleee	pure\W?core
+1511164415	tripleee	(?:1\W*)?877\W*220\W*7367
+1511169984	Glorfindel	oahu-handyman\.com
+1511170344	Glorfindel	reviewsformusicians\.com
+1511170834	Glorfindel	wealthmagnet\.biz
+1511174468	tripleee	erezan
+1511174797	tripleee	draozien\.com
+1511174798	Glorfindel	alsaqibrecruitmentgroup\.com
+1511174799	Glorfindel	ghaffarsons\.com
+1511174800	Glorfindel	agshrsolutions\.com
+1511174801	Glorfindel	alsaqibgroup\.com
+1511174802	Glorfindel	jobsleed\.com
+1511175529	A J	mlmportal\.net
+1511177973	tripleee	cisco-200-155-exam-question-dumps\.blogspot
+1511185818	paper1111	etechroom\.com
+1511217899	Glorfindel	jiragoggles\.com
+1511239192	Tetsuya Yamamoto	dompetpoker\.com
+1511241792	tripleee	play\.fm
+1511241808	tripleee	uplabs\.com
+1511241821	tripleee	jagobola88\.com
+1511241967	tripleee	bobslocks\.us
+1511242236	tripleee	follimen
+1511242263	tripleee	appermermai
+1511243920	tripleee	max\W?hair(?:\W?3)?
+1511245167	tripleee	roll20\.net
+1511248291	A J	jypsealocal\.com
+1511250098	tripleee	swertresresultz\.com
+1511250257	tripleee	probulus
+1511253631	tripleee	whirlpool\.net\.au
+1511254452	A J	techaveranoida\.in
+1511255662	tripleee	luxxia
+1511255811	tripleee	(?:1\W*)?844\W*777\W*1902
+1511260061	Mithrandir	spartagenxtfacts\.com
+1511260494	Glorfindel	tallahasseemensrehab\.com
+1511260505	Glorfindel	swfloridawomensrehab\.com
+1511260626	Glorfindel	valentinegifts\d+\.com
+1511262391	tripleee	cosmovio\W?beauty
+1511268164	Glorfindel	stupidtalks\.com
+1511270061	paper1111	topamericanwriters\.com
+1511271321	Glorfindel	cpalists\.com
+1511276854	Glorfindel	meeba
+1511277442	Glorfindel	gametwist\.com

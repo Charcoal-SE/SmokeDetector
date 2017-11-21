@@ -12,7 +12,7 @@ skin\W?(endear|royale|cell\W?pro|opulent|ology|centric)
 acne(\W?prone)?\Wskin
 (skin|eye)\Wnovela
 visalia\W(?:skincare|cream)
-judi\W?bola
+judi\W?(?:bola|online)
 restore\W?samsung\W?data
 swtor2credits
 death\Wreckoning\Wcalculate
@@ -964,3 +964,14 @@ ez\W*battery
 https?://\S+\.(?:live|zone|band)/[^/]*-mp3-(musica-baixar|cancion-descargar|(?:song-)?download)
 platinum\W*xwl
 new\W*age\W*serum
+noxitril
+boli\W?testo\W?boost
+troxin
+Pабoта для жeлaющих сaйт
+15 ООО рублей в день
+ultra\W?omega
+the\W?lost\W?ways
+nba\W?live\W?mobile
+(?:1\W*)?925\W*318\W*5176
+dermagen(?:\W?iq)?
+slimforia
