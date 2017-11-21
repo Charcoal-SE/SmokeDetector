@@ -1672,3 +1672,4 @@
 1511255811	tripleee	(?:1\W*)?844\W*777\W*1902
 1511260061	Mithrandir	spartagenxtfacts\.com
 1511260494	Glorfindel	tallahasseemensrehab\.com
+1511260505	Glorfindel	swfloridawomensrehab\.com
