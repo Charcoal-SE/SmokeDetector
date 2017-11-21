@@ -79,6 +79,28 @@ def test_privileged():
     assert chatcommands.amiprivileged(original_msg=msg) == "\u2713 You are a privileged user."
 
 
+def test_deprecated_blacklist():
+    msg = Fake({
+        "owner": {
+            "name": "El'endia Starman",
+            "id": 1,
+            "is_moderator": False
+        },
+        "room": {
+            "id": 11540,
+            "_client": {
+                "host": "stackexchange.com"
+            }
+        },
+        "_client": {
+            "host": "stackexchange.com"
+        },
+        "id": 1337
+    })
+
+    assert chatcommands.blacklist("", original_msg=msg) \
+        .startswith("""The !!/blacklist command has been deprecated.""")
+
 def test_report():
     msg = Fake({
         "owner": {
@@ -239,6 +261,14 @@ def test_blacklisted_users():
     assert chatcommands.isblu("msklkldsklaskd", original_msg=msg) == \
         "Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`."
 
+    # Invalid sitename
+    assert chatcommands.addblu("1 completelyfakesite", original_msg=msg) == \
+        "Error: Could not find the given site."
+    assert chatcommands.isblu("1 completelyfakesite", original_msg=msg) == \
+        "Error: Could not find the given site."
+    assert chatcommands.rmblu("1 completelyfakesite", original_msg=msg) == \
+        "Error: Could not find the given site."
+
     # Cleanup
     os.remove("blacklistedUsers.p")
 
@@ -299,6 +329,12 @@ def test_whitelisted_users():
         "Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`."
     assert chatcommands.iswlu("msklkldsklaskd", original_msg=msg) == \
         "Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`."
+
+    # Invalid sitename
+    assert chatcommands.addwlu("1 completelyfakesite", original_msg=msg) == \
+        "Error: Could not find the given site."
+    assert chatcommands.iswlu("1 completelyfakesite", original_msg=msg) == \
+        "Error: Could not find the given site."
 
     # Cleanup
     os.remove("whitelistedUsers.p")
