@@ -12,7 +12,7 @@ skin\W?(endear|royale|cell\W?pro|opulent|ology|centric)
 acne(\W?prone)?\Wskin
 (skin|eye)\Wnovela
 visalia\W(?:skincare|cream)
-judi\W?bola
+judi\W?(?:bola|online)
 restore\W?samsung\W?data
 swtor2credits
 death\Wreckoning\Wcalculate
