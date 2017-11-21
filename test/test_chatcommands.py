@@ -101,6 +101,7 @@ def test_deprecated_blacklist():
     assert chatcommands.blacklist("", original_msg=msg) \
         .startswith("""The !!/blacklist command has been deprecated.""")
 
+
 def test_report():
     msg = Fake({
         "owner": {
