@@ -1673,3 +1673,4 @@
 1511260061	Mithrandir	spartagenxtfacts\.com
 1511260494	Glorfindel	tallahasseemensrehab\.com
 1511260505	Glorfindel	swfloridawomensrehab\.com
+1511260626	Glorfindel	valentinegifts\d+\.com
