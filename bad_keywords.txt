@@ -976,5 +976,4 @@ nba\W?live\W?mobile
 dermagen(?:\W?iq)?
 slimforia
 bellalumi
-slim\Wplus
 slim\W?plus
