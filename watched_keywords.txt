@@ -1686,3 +1686,4 @@
 1511328810	tripleee	lampuprosesor\.my\.id
 1511328979	tripleee	engineeringinterviewquestions\.com
 1511330275	Tetsuya Yamamoto	(?:1\W*)?705\W*806\W*2021
+1511338175	Glorfindel	precision-elec\.com
