@@ -748,7 +748,7 @@ vigostren
 alpha\W?xl?\W?(?:boost(?:er)?|factor)
 androforce\W?x10
 folicillium
-invigorate\W?rx
+invigorate\W?r?x
 alluraluxe
 lejuve
 endozyn
