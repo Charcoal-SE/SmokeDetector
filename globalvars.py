@@ -269,7 +269,8 @@ class GlobalVars:
             "294691",   # Mithrandir
             "203553",   # CalvT
             "289971",   # Hyper Neutrino
-            "346854"    # DonQuiKong
+            "346854",   # DonQuiKong
+            "284336"    # Catija
         ],
         socvr_room_id: [
             "1849664",  # Undo
@@ -347,7 +348,7 @@ class GlobalVars:
             "4826457",  # suraj
             "8242698",  # user0042
             "3773011",  # Makyen
-            "2858773"  # Ajay Brahmakshatriya
+            "2858773"   # Ajay Brahmakshatriya
         ],
         '111347': [     # SOBotics
             "3160466",  # ArtOfCode
