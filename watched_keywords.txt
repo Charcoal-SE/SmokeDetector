@@ -1688,3 +1688,4 @@
 1511330275	Tetsuya Yamamoto	(?:1\W*)?705\W*806\W*2021
 1511338175	Glorfindel	precision-elec\.com
 1511339295	Tetsuya Yamamoto	safarnikan\.com
+1511341325	tripleee	argacademy\.com
