@@ -977,3 +977,4 @@ dermagen(?:\W?iq)?
 slimforia
 bellalumi
 slim\Wplus
+slim\W?plus
