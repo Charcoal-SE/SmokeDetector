@@ -1498,7 +1498,6 @@
 1510208795	tripleee	indoorwallpaper\.com
 1510210054	tripleee	lovemovementglobal\.org
 1510212817	tripleee	sanamterenaam
-1510212933	tripleee	the\W?lost\W?way
 1510217416	Glorfindel	lnsel\.com
 1510217734	Glorfindel	qqraja\.com
 1510218265	Glorfindel	vat-software\.com
