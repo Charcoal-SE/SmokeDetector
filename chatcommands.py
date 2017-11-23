@@ -416,6 +416,12 @@ def lick():
     return "*licks ice cream cone*"
 
 
+@command()
+def bup():
+    return "flips if you don't give my Smokey boy some proper adhesive " \
+           "I will take a bullet train to your house and dispute your autoflags"
+
+
 TEAS = ['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint', 'jasmine', 'passionfruit']
 
 

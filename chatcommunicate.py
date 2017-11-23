@@ -17,7 +17,6 @@ from excepthook import log_exception
 from globalvars import GlobalVars
 from parsing import fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
 
-
 LastMessages = collections.namedtuple("LastMessages", ["messages", "reports"])
 
 
@@ -89,7 +88,7 @@ def init(username, password):
     if os.path.isfile("messageData.p"):
         _last_messages = pickle.load(open("messageData.p", "rb"))
 
-    threading.Thread(name="pickle ---rick--- runner", target=pickle_last_messages).start()
+    threading.Thread(name="pickle ---rick--- runner", target=pickle_last_messages, daemon=True).start()
 
 
 def parse_room_config(path):

@@ -2,9 +2,11 @@
 import chatcommunicate  # coverage
 import chatcommands
 from globalvars import GlobalVars
-import regex
-import pytest
+
 import os
+import pytest
+import regex
+from unittest.mock import patch
 
 
 class Fake:
@@ -51,6 +53,35 @@ def test_alive():
 
 def test_location():
     assert chatcommands.location() == GlobalVars.location
+
+
+def test_blame():
+    msg1 = Fake({
+        "_client": {
+            "host": "stackexchange.com",
+            "get_user": lambda id: Fake({"name": "J F", "id": id})
+        },
+
+        "room": {
+            "get_current_user_ids": lambda: [161943]
+        }
+    })
+
+    assert chatcommands.blame(original_msg=msg1) == "It's [J F](https://chat.stackexchange.com/users/161943)'s fault."
+
+    msg2 = Fake({
+        "_client": {
+            "host": "stackexchange.com",
+            "get_user": lambda id: Fake({"name": "J F", "id": id})
+        }
+    })
+
+    assert chatcommands.blame2("\u200B\u200C\u2060\u200D\u180E\uFEFF\u2063", original_msg=msg2) == "It's [J F](https://chat.stackexchange.com/users/161943)'s fault."
+
+
+def test_bup():
+    assert chatcommands.bup() == "flips if you don't give my Smokey boy some proper adhesive " \
+                                 "I will take a bullet train to your house and dispute your autoflags"
 
 
 def test_privileged():

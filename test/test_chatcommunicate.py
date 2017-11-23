@@ -2,6 +2,12 @@ import chatcommunicate
 import chatcommands
 from globalvars import GlobalVars
 
+import io
+import os
+import os.path
+import pytest
+import threading
+import time
 from unittest.mock import Mock, patch
 
 
@@ -75,7 +81,7 @@ def test_init(room_config, client_constructor, thread):
     client_constructor.assert_any_call("stackoverflow.com")
     client_constructor.assert_any_call("meta.stackexchange.com")
 
-    thread.assert_called_once_with(name="pickle ---rick--- runner", target=chatcommunicate.pickle_last_messages)
+    thread.assert_called_once_with(name="pickle ---rick--- runner", target=chatcommunicate.pickle_last_messages, daemon=True)
 
     client.login.reset_mock()
     client_constructor.reset_mock()
@@ -103,9 +109,29 @@ def test_init(room_config, client_constructor, thread):
     client_constructor.assert_any_call("stackoverflow.com")
     client_constructor.assert_any_call("meta.stackexchange.com")
 
-    thread.assert_called_once_with(name="pickle ---rick--- runner", target=chatcommunicate.pickle_last_messages)
+    thread.assert_called_once_with(name="pickle ---rick--- runner", target=chatcommunicate.pickle_last_messages, daemon=True)
 
-    client.login.side_effect = None
-    client.login.reset_mock()
-    client_constructor.reset_mock()
-    thread.reset_mock()
+    assert len(chatcommunicate._rooms) == 3
+    assert chatcommunicate._rooms[("stackexchange.com", 11540)].deletion_watcher is True
+    assert chatcommunicate._rooms[("stackexchange.com", 30332)].deletion_watcher is False
+    assert chatcommunicate._rooms[("stackoverflow.com", 111347)].deletion_watcher is False
+
+
+@pytest.mark.skipif(os.path.isfile("messageData.p"), reason="shouldn't overwrite file")
+@patch("chatcommunicate.pickle.dump")
+def test_pickle_rick(dump):
+    threading.Thread(target=chatcommunicate.pickle_last_messages, daemon=True).start()
+
+    chatcommunicate._pickle_run.set()
+
+    # Yield to the pickling thread until it acquires the lock again
+    while len(chatcommunicate._pickle_run._cond._waiters) == 0:
+        time.sleep(0)
+
+    assert dump.call_count == 1
+
+    call = dump.call_args_list[0][0]
+    assert isinstance(call[0], chatcommunicate.LastMessages)
+    assert isinstance(call[1], io.IOBase) and call[1].name == "messageData.p"
+
+    os.remove("messageData.p")
