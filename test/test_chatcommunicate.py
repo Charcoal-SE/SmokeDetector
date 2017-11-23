@@ -85,14 +85,12 @@ def test_init(room_config, client_constructor, thread):
 
     counter = 0
 
-
     def throw_every_other(*_):
         nonlocal counter
 
         counter += 1
         if counter & 1:
             raise Exception()
-
 
     client.login.side_effect = throw_every_other
     chatcommunicate.init("shoutouts", "to simpleflips")

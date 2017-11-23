@@ -106,6 +106,7 @@ stackexchange.com:
       - 139041   # Catija
       - 305737   # Tinkeringbell
 
+
   3877:  # Raiders of the Lost Downboat
     commands: false
     watcher: true
@@ -288,6 +289,7 @@ meta.stackexchange.com:
       - 203553   # CalvT
       - 289971   # Hyper Neutrino
       - 346854   # DonQuiKong
+      - 284336    # Catija
 
 
 stackoverflow.com:
