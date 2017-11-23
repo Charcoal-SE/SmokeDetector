@@ -1695,3 +1695,4 @@
 1511356145	tripleee	silklogistics\.com\.pk
 1511412142	tripleee	naijatrace\.com
 1511412366	tripleee	downloadofgames\.com
+1511413134	tripleee	luckypatcherdownloads\.org
