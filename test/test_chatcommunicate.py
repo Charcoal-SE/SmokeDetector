@@ -120,18 +120,19 @@ def test_init(room_config, client_constructor, thread):
 @pytest.mark.skipif(os.path.isfile("messageData.p"), reason="shouldn't overwrite file")
 @patch("chatcommunicate.pickle.dump")
 def test_pickle_rick(dump):
-    threading.Thread(target=chatcommunicate.pickle_last_messages, daemon=True).start()
+    try:
+        threading.Thread(target=chatcommunicate.pickle_last_messages, daemon=True).start()
 
-    chatcommunicate._pickle_run.set()
+        chatcommunicate._pickle_run.set()
 
-    # Yield to the pickling thread until it acquires the lock again
-    while len(chatcommunicate._pickle_run._cond._waiters) == 0:
-        time.sleep(0)
+        # Yield to the pickling thread until it acquires the lock again
+        while len(chatcommunicate._pickle_run._cond._waiters) == 0:
+            time.sleep(0)
 
-    assert dump.call_count == 1
+        assert dump.call_count == 1
 
-    call = dump.call_args_list[0][0]
-    assert isinstance(call[0], chatcommunicate.LastMessages)
-    assert isinstance(call[1], io.IOBase) and call[1].name == "messageData.p"
-
-    os.remove("messageData.p")
+        call, _ = dump.call_args_list[0]
+        assert isinstance(call[0], chatcommunicate.LastMessages)
+        assert isinstance(call[1], io.IOBase) and call[1].name == "messageData.p"
+    finally:
+        os.remove("messageData.p")
