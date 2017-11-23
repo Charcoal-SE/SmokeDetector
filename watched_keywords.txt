@@ -1698,3 +1698,4 @@
 1511413134	tripleee	luckypatcherdownloads\.org
 1511413986	tripleee	44\W*740\W*509\W*2459
 1511414120	tripleee	(?:1\W*)?214\W*302\W*9195
+1511416641	A J	sarkariexaamresult\.com
