@@ -1044,7 +1044,6 @@
 1506440976	Glorfindel	indwiki\.com
 1506454713	Glorfindel	studarea\.com
 1506493189	tripleee	weightedblanketusa\.com
-1506495170	tripleee	1?844\W?205\W?0712
 1506496250	tripleee	bomeans\.com
 1506498126	tripleee	cheappairmax\.com
 1506503383	tripleee	offersdealscoupons\.store
