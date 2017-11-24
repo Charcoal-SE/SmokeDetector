@@ -1710,4 +1710,4 @@
 1511507204	A J	rupeenomics\.com
 1511512701	tripleee	tiger\W?zinda\W?hai
 1511520791	tripleee	(?:1\W*)?216\W*341\W*3152
-1511523307	tripleee	91\W*999\W*982\*W1722
+1511523307	tripleee	91\W*999\W*982\W*1722
