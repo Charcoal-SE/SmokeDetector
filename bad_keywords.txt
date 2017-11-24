@@ -986,3 +986,4 @@ t\W?boost
 (?:1\W*)?844\W*205\W*0712
 hydra\W?claire
 piracetol
+robust\W?e?xtreme
