@@ -1708,3 +1708,4 @@
 1511504994	tripleee	quick\W?trim
 1511505171	tripleee	revoria
 1511507204	A J	rupeenomics\.com
+1511512701	tripleee	tiger\W?zinda\W?hai
