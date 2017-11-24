@@ -80,11 +80,6 @@ def test_blame():
     assert chatcommands.blame2("\u200B\u200C\u2060\u200D\u180E\uFEFF\u2063", original_msg=msg2) == "It's [J F](https://chat.stackexchange.com/users/161943)'s fault."
 
 
-def test_bup():
-    assert chatcommands.bup() == "flips if you don't give my Smokey boy some proper adhesive " \
-                                 "I will take a bullet train to your house and dispute your autoflags"
-
-
 def test_privileged():
     chatcommunicate.parse_room_config("test/test_rooms.yml")
 
