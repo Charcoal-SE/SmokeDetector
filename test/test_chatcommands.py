@@ -152,7 +152,7 @@ def test_report(handle_spam):
 
         # Don't re-report
         GlobalVars.latest_questions = [('stackoverflow.com', '1732454', 'RegEx match open tags except XHTML self-contained tags')]
-        assert chatcommands.report('http://stackoverflow.com/a/1732454', original_msg=msg).startswith("Post 1: Already recently " \
+        assert chatcommands.report('http://stackoverflow.com/a/1732454', original_msg=msg).startswith("Post 1: Already recently "
                                                                                                       "reported")
 
         # Can use report command multiple times in 30s if only one URL was used
@@ -220,22 +220,22 @@ def test_allspam(handle_spam):
         )
 
         # Valid user for allspam command
-        #assert chatcommands.allspam("http://stackexchange.com/users/12108974", original_msg=msg) is None
+        # assert chatcommands.allspam("http://stackexchange.com/users/12108974", original_msg=msg) is None
 
-        #assert handle_spam.call_count == 1
-        #_, call = handle_spam.call_args_list[0]
-        #assert isinstance(call["post"], Post)
-        #assert call["reasons"] == ["Manually reported answer"]
-        #assert call["why"] == "Post manually reported by user *El'endia Starman* in room *Charcoal HQ*.\n"
+        # assert handle_spam.call_count == 1
+        # _, call = handle_spam.call_args_list[0]
+        # assert isinstance(call["post"], Post)
+        # assert call["reasons"] == ["Manually reported answer"]
+        # assert call["why"] == "Post manually reported by user *El'endia Starman* in room *Charcoal HQ*.\n"
 
-        #handle_spam.reset_mock()
-        #assert chatcommands.allspam("http://meta.stackexchange.com/users/373807", original_msg=msg) is None
+        # handle_spam.reset_mock()
+        # assert chatcommands.allspam("http://meta.stackexchange.com/users/373807", original_msg=msg) is None
 
-        #assert handle_spam.call_count == 1
-        #_, call = handle_spam.call_args_list[0]
-        #assert isinstance(call["post"], Post)
-        #assert call["reasons"] == ["Manually reported answer"]
-        #assert call["why"] == "Post manually reported by user *El'endia Starman* in room *Charcoal HQ*.\n"
+        # assert handle_spam.call_count == 1
+        # _, call = handle_spam.call_args_list[0]
+        # assert isinstance(call["post"], Post)
+        # assert call["reasons"] == ["Manually reported answer"]
+        # assert call["why"] == "Post manually reported by user *El'endia Starman* in room *Charcoal HQ*.\n"
 
     finally:
         GlobalVars.blacklisted_users = []
