@@ -1412,7 +1412,7 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
             # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
             # this re-report might be attempting to correct that/fix a mistake/etc.
             if GlobalVars.metasmoke_key is not None:
-                se_link = parsing.to_protocol_relative(post_data.post_url)
+                se_link = to_protocol_relative(post_data.post_url)
                 ms_link = "https://m.erwaysoftware.com/posts/by-url?url={}".format(se_link)
                 output.append("Post {}: Already recently reported [[MS]({})]".format(index, ms_link))
                 continue
