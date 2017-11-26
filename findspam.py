@@ -561,6 +561,41 @@ def mevaqesh_troll(s, *args):
         return False, ""
 
 
+def blacklist_factory(wb=[], nwb=[], **kwargs):
+    pattern = r'(?is){}'.format("|".join(chain(
+        (r"(?P<wb{}>\b{}\b)".format(i, keyword) for i, keyword in enumerate(wb)),
+        (r"(?P<nwb{}>{})".format(i, keyword) for i, keyword in enumerate(nwb))
+    )))
+
+    compiled_pattern = regex.compile(pattern, **kwargs)
+    del pattern
+
+    def f(s, *args):
+        why = []
+
+        for match in compiled_pattern.finditer(s):
+            group = match.lastgroup
+            start, end = match.span()
+
+            if group[:3] == "nwb":
+                i = int(group[3:])
+                why.append("Position {}-{}: {} (nwb pattern `{}` on L{})"
+                           .format(start, end, match.group(), nwb[i], i + 1))
+            elif group[:2] == "wb":
+                i = int(group[2:])
+                why.append("Position {}-{}: {} (wb pattern `{}` on L{})"
+                           .format(start, end, match.group(), wb[i], i + 1))
+            else:
+                why.append("Position {}-{}: {} (can't retrieve matching pattern)".format(start, end, match.group()))
+
+        if len(why) > 0:
+            return True, " + ".join(why)
+        else:
+            return False, ""
+
+    return f
+
+
 load_blacklists()
 
 
@@ -697,11 +732,11 @@ class FindSpam:
         #
         # Category: Bad keywords
         # The big list of bad keywords, for titles and posts
-        {'regex': r"(?is)\b({})\b|{}".format("|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
+        {'method': blacklist_factory(wb=GlobalVars.bad_keywords, nwb=bad_keywords_nwb, city=city_list),
          'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1},
         # The small list of *potentially* bad keywords, for titles and posts
-        {'regex': r'(?is)\b({})\b'.format('|'.join(GlobalVars.watched_keywords.keys())),
+        {'method': blacklist_factory(wb=list(GlobalVars.watched_keywords)),
          'reason': 'potentially bad keyword in {}',
          'all': True, 'sites': [], 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 30, 'max_score': 1},
@@ -826,7 +861,7 @@ class FindSpam:
         #
         # Category: Suspicious links
         # Blacklisted sites
-        {'regex': u"(?i)({})".format("|".join(GlobalVars.blacklisted_websites)), 'all': True,
+        {'method': blacklist_factory(nwb=GlobalVars.blacklisted_websites), 'all': True,
          'sites': [], 'reason': "blacklisted website in {}", 'title': True, 'body': True, 'username': False,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 5},
         # Suspicious sites
@@ -1073,7 +1108,7 @@ class FindSpam:
         #
         # Category: other
         # Blacklisted usernames
-        {'regex': r"(?i)({})".format("|".join(GlobalVars.blacklisted_usernames)), 'all': True, 'sites': [],
+        {'method': blacklist_factory(nwb=GlobalVars.blacklisted_usernames), 'all': True, 'sites': [],
          'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"],
