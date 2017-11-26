@@ -1,3 +1,4 @@
+from collections import OrderedDict
 import regex
 
 from globalvars import GlobalVars
@@ -12,7 +13,7 @@ def load_blacklists():
     with open("blacklisted_usernames.txt", "r", encoding="utf-8") as f:
         GlobalVars.blacklisted_usernames = [line.rstrip() for line in f if len(line.rstrip()) > 0]
     with open("watched_keywords.txt", "r", encoding="utf-8") as f:
-        GlobalVars.watched_keywords = dict()
+        GlobalVars.watched_keywords = OrderedDict()
         for lineno, line in enumerate(f, 1):
             if regex.compile('^\s*(?:#|$)').match(line):
                 continue
