@@ -589,7 +589,7 @@ def blacklist_factory(wb=[], nwb=[], **kwargs):
                 why.append("Position {}-{}: {} (can't retrieve matching pattern)".format(start, end, match.group()))
 
         if len(why) > 0:
-            return True, " + ".join(why)
+            return True, ", ".join(why)
         else:
             return False, ""
 
