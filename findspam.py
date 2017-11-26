@@ -579,10 +579,12 @@ def blacklist_factory(wb=[], nwb=[], **kwargs):
 
             if group[:3] == "nwb":
                 i = int(group[3:])
-                why.append("Position {}-{}: {} (nwb pattern `{}` on L{})".format(start, end, match.group(), nwb[i], i + 1))
+                why.append("Position {}-{}: {} (nwb pattern `{}` on L{})"
+                           .format(start, end, match.group(), nwb[i], i + 1))
             elif group[:2] == "wb":
                 i = int(group[2:])
-                why.append("Position {}-{}: {} (wb pattern `{}` on L{})".format(start, end, match.group(), wb[i], i + 1))
+                why.append("Position {}-{}: {} (wb pattern `{}` on L{})"
+                           .format(start, end, match.group(), wb[i], i + 1))
             else:
                 why.append("Position {}-{}: {} (can't retrieve matching pattern)".format(start, end, match.group()))
 
