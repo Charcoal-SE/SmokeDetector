@@ -1739,3 +1739,4 @@
 1511773245	Glorfindel	healthyfigures\.org
 1511773631	Glorfindel	nihalfashions\.com
 1511774510	Glorfindel	vipprogrammer.com
+1511776011	tripleee	(?:1\W*)?628\W*204\W*3690
