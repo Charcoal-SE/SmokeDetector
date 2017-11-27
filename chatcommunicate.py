@@ -73,7 +73,10 @@ def init(username, password):
 
         _clients[site] = client
 
-    parse_room_config("rooms.yml")
+    if os.path.exists("rooms_custom.yml"):
+        parse_room_config("rooms_custom.yml")
+    else:
+        parse_room_config("rooms.yml")
 
     if not GlobalVars.standby_mode:
         for site, roomid in _command_rooms:

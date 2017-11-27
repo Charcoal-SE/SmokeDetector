@@ -87,6 +87,7 @@ test/.cache/
 
 # Config
 config
+rooms_custom.yml
 
 # Ignore .DS_Store file (usually seen in Mac environments)
 .DS_Store
