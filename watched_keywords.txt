@@ -1736,3 +1736,4 @@
 1511772637	Glorfindel	nag-rani\.com
 1511772739	Glorfindel	uma-rai\.com
 1511773193	Glorfindel	tramadoldrug\.co
+1511773245	Glorfindel	healthyfigures\.org
