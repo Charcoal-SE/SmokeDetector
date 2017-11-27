@@ -992,3 +992,4 @@ meta\W?labs
 (?:1\W*)?310\W*359\W*9685
 andro\W?test
 mega\W?slim
+endow\W?max
