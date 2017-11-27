@@ -760,9 +760,9 @@ class FindSpam:
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': True,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Car insurance spammers (username only)
-        {'regex': r"car\Win", 'all': False, 'sites': ['superuser.com'], 'reason': 'bad keyword in {}',
-         'title': False, 'body': False, 'username': True, 'stripcodeblocks': False, 'body_summary': False,
-         'max_rep': 1, 'max_score': 0},
+        {'regex': r"car\Win", 'all': False, 'sites': ['superuser.com', 'puzzling.stackexchange.com'],
+         'reason': 'bad keyword in {}', 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
+         'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Bad keywords in titles only, all sites
         {'regex': r"(?i)\b(?!s.m.a.r.t)[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\b", 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False,
