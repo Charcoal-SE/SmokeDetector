@@ -1762,3 +1762,4 @@
 1511873109	Glorfindel	billfixer\.com
 1511884629	Glorfindel	keinetcybertechnologies
 1511884757	Glorfindel	guitarpickzone\.com
+1511889609	quartata	agencemit\.com
