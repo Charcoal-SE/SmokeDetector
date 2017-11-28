@@ -1755,3 +1755,4 @@
 1511862105	doppelgreener	bicycling-product\.com
 1511862197	doppelgreener	hbogocomactivate\.com
 1511865786	Glorfindel	vbhelponline\.com
+1511869766	J F	codeproject\.com/Articles/1217036
