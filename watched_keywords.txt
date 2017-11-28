@@ -1756,3 +1756,4 @@
 1511862197	doppelgreener	hbogocomactivate\.com
 1511865786	Glorfindel	vbhelponline\.com
 1511869766	J F	codeproject\.com/Articles/1217036
+1511871788	Glorfindel	etleducation\.com
