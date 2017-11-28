@@ -1760,3 +1760,4 @@
 1511872566	tripleee	(?:1\W*)?215\W*309\W*9972
 1511872807	tripleee	viamagus\.com
 1511873109	Glorfindel	billfixer\.com
+1511884629	Glorfindel	keinetcybertechnologies
