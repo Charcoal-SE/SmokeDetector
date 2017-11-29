@@ -1780,3 +1780,4 @@
 1511952750	Glorfindel	0800\W?035\W?4801
 1511956659	A J	wbwhite\.com
 1511960554	paper1111	(?:0?1\W*)?709\W*834\W*9700
+1511975083	Glorfindel	bitcoinnews3312\.blogspot\.com
