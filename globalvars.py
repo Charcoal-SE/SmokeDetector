@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import os
-from collections import OrderedDict
 from datetime import datetime
 from chatexchange_extension import Client
 from html.parser import HTMLParser
@@ -52,7 +51,7 @@ class GlobalVars:
     blacklisted_usernames = []
     blacklisted_websites = []
     bad_keywords = []
-    watched_keywords = OrderedDict()
+    watched_keywords = {}
     ignored_posts = []
     auto_ignored_posts = []
     startup_utc = datetime.utcnow().strftime("%H:%M:%S")
