@@ -575,7 +575,6 @@ class BlacklistFactory:
 
         self.compiled_regex = regex.compile("(?is)" + "|".join(parts), **kwargs)
 
-
     def add_pattern(self, parts, pattern, line, wb=False):
         wb_description = "wb" if wb else "nwb"
         self.patterns[self.info.group_count + len(self.patterns)] = (pattern, line, wb_description)
@@ -591,7 +590,6 @@ class BlacklistFactory:
             parts.append("(\\b{}\\b)".format(pattern))
         else:
             parts.append("({})".format(pattern))
-
 
     def __call__(self, s, *args):
         why = []
