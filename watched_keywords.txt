@@ -1684,7 +1684,6 @@
 1511338175	Glorfindel	precision-elec\.com
 1511339295	Tetsuya Yamamoto	safarnikan\.com
 1511341325	tripleee	argacademy\.com
-1511342290	tripleee	trembolex
 1511343966	tripleee	saudavd
 1511346568	tripleee	neuro\W?max
 1511348665	tripleee	protectimus\.com
@@ -1780,3 +1779,4 @@
 1511952500	Glorfindel	(?:1\W*)?844\W*909\W*0831
 1511952750	Glorfindel	0800\W?035\W?4801
 1511956659	A J	wbwhite\.com
+1511960554	paper1111	(?:0?1\W*)?709\W*834\W*9700
