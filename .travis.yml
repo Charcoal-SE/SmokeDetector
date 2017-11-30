@@ -5,7 +5,7 @@ python:
 install:
   - pip3 install -r requirements.txt --upgrade
   - pip3 install -r user_requirements.txt --upgrade
-  - pip3 install pytest-cov codecov
+  - pip3 install pytest-cov codecov python-coveralls
 script:
   - flake8 --config=tox_tests.ini ./test/
   - flake8 --config=tox_classes.ini ./classes/
@@ -25,3 +25,4 @@ before_cache:
   - rm -rf $HOME/.cache/pip/http
 after_success:
   - codecov
+  - coveralls
