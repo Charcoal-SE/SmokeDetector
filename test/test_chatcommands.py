@@ -7,16 +7,9 @@ from globalvars import GlobalVars
 import os
 import pytest
 import regex
+
+from fake import Fake
 from unittest.mock import patch
-
-
-class Fake:
-    def __init__(self, d):
-        for key, value in d.items():
-            if isinstance(value, dict):
-                setattr(self, key, Fake(value))
-            else:
-                setattr(self, key, value)
 
 
 def test_coffee():

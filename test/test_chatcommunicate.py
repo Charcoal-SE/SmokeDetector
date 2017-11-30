@@ -2,12 +2,15 @@ import chatcommunicate
 import chatcommands
 from globalvars import GlobalVars
 
+import collections
 import io
 import os
 import os.path
 import pytest
 import threading
 import time
+
+from fake import Fake
 from unittest.mock import Mock, patch
 
 
@@ -136,3 +139,92 @@ def test_pickle_rick(dump):
         assert isinstance(call[1], io.IOBase) and call[1].name == "messageData.p"
     finally:
         os.remove("messageData.p")
+
+
+@patch("chatcommunicate._pickle_run")
+def test_on_msg(pickle_rick):
+    client = Fake({
+        "_br": {
+            "user_id": 1337
+        },
+
+        "host": "stackexchange.com"
+    })
+
+    room_data = chatcommunicate.RoomData(Mock(), Mock(), -1, (), False)
+    chatcommunicate._rooms[("stackexchange.com", 11540)] = room_data
+
+    assert chatcommunicate.on_msg(Fake({}, spec=chatcommunicate.events.MessageStarred), None) is None  # don't reply to events we don't care about
+
+    msg1 = Fake({
+        "message": {
+            "owner": {
+                "id": 1,
+            },
+
+            "parent": None,
+            "content": "shoutouts to simpleflips"
+        }
+    }, spec=chatcommunicate.events.MessagePosted)
+
+    assert chatcommunicate.on_msg(msg1, client) is None
+
+    msg2 = Fake({
+        "message": {
+            "room": {
+                "id": 11540
+            },
+
+            "owner": {
+                "id": 1337
+            },
+
+            "id": 999,
+            "parent": None,
+            "content": "!!/not_actually_a_command"
+        }
+    }, spec=chatcommunicate.events.MessagePosted)
+
+    room_data.last_report_data = "did you hear about what happened to pluto"
+
+    assert chatcommunicate.on_msg(msg2, client) is None
+
+    assert chatcommunicate._last_messages.messages[("stackexchange.com", 11540)] == collections.deque((999,))
+    assert chatcommunicate._last_messages.reports == collections.OrderedDict({("stackexchange.com", 999): "did you hear about what happened to pluto"})
+    assert room_data.last_report_data == ()
+
+    pickle_rick.set.assert_called_once()
+    room_data.lock.set.assert_called_once()
+
+    msg3 = Fake({
+        "message": {
+            "room": {
+                "id": 11540,
+            },
+
+            "owner": {
+                "id": 1
+            },
+
+            "id": 999,
+            "parent": None,
+            "reply": Mock(),
+            "content": "!!/a_command"
+        }
+    }, spec=chatcommunicate.events.MessagePosted)
+
+    mock_command = Mock(side_effect=lambda **kwargs: "hi" if not kwargs["quiet_action"] else "")
+    chatcommunicate._commands["prefix"]["a_command"] = (mock_command, (0, 0))
+
+    chatcommunicate.on_msg(msg3, client)
+
+    msg3.message.reply.assert_called_once_with("hi", length_check=False)
+    mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a_command", quiet_action=False)
+    msg3.message.reply.reset_mock()
+    mock_command.reset_mock()
+
+    msg3.message.content = "!!/a_command-"
+    chatcommunicate.on_msg(msg3, client)
+
+    msg3.message.reply.assert_not_called()
+    mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a_command", quiet_action=True)

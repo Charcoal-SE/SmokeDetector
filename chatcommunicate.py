@@ -84,7 +84,7 @@ def init(username, password):
             deletion_watcher = (site, roomid) in _watcher_rooms
 
             room.join()
-            room.watch_socket(lambda msg, client: on_msg(msg, client, room))
+            room.watch_socket(on_msg)
             _rooms[(site, roomid)] = RoomData(room, threading.Event(), -1, (), deletion_watcher)
             _rooms[(site, roomid)].lock.set()
 
@@ -130,12 +130,12 @@ def pickle_last_messages():
             pickle.dump(_last_messages, pickle_file)
 
 
-def on_msg(msg, client, room):
+def on_msg(msg, client):
     if isinstance(msg, events.MessagePosted) or isinstance(msg, events.MessageEdited):
         message = msg.message
 
         if message.owner.id == client._br.user_id:
-            identifier = (client.host, room.id)
+            identifier = (client.host, message.room.id)
             room_data = _rooms[identifier]
 
             if identifier not in _last_messages.messages:
@@ -149,14 +149,15 @@ def on_msg(msg, client, room):
                 last.append(message.id)
 
             if room_data.last_report_data != ():
-                _last_messages.reports[message.id] = room_data.last_report_data
+                _last_messages.reports[(client.host, message.id)] = room_data.last_report_data
 
                 if len(_last_messages.reports) > 50:
                     _last_messages.reports.popitem(last=False)
 
-                threading.Thread(name="deletion watcher",
-                                 target=DeletionWatcher.check_if_report_was_deleted,
-                                 args=(room_data.last_report_data[0], message))
+                if room_data.deletion_watcher:
+                    threading.Thread(name="deletion watcher",
+                                     target=DeletionWatcher.check_if_report_was_deleted,
+                                     args=(room_data.last_report_data[0], message))
 
                 room_data.last_report_data = ()
 
@@ -169,7 +170,7 @@ def on_msg(msg, client, room):
             if result:
                 message.reply(result, length_check=False)
         elif message.content.startswith("sd "):
-            result = dispatch_shorthand_command(message, room)
+            result = dispatch_shorthand_command(message, message.room)
 
             if result:
                 message.reply(result, length_check=False)
@@ -249,8 +250,10 @@ def get_last_messages(room, count):
 
 
 def get_report_data(message):
-    if message.id in _last_messages.reports:
-        return _last_messages.reports[message.id]
+    identifier = (message._client.host, message.id)
+
+    if identifier in _last_messages.reports:
+        return _last_messages.reports[identifier]
     else:
         post_url = fetch_post_url_from_msg_content(message.content)
 
