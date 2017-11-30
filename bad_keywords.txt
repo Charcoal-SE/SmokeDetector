@@ -998,3 +998,4 @@ healthy\W?bloom
 focus\W?zx\W?1
 invisaderm
 trembolex
+(?:0?4\W*)?8126\W*1500
