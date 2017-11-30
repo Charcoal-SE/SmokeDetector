@@ -1790,3 +1790,4 @@
 1512022776	tripleee	softwaretesterfriend\.blogspot
 1512026393	A J	maheshinfo\.com
 1512030730	Glorfindel	geekhoodies\.com
+1512031043	Glorfindel	asherlaub\.com
