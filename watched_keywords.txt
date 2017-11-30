@@ -1664,8 +1664,6 @@
 1511255662	tripleee	luxxia
 1511255811	tripleee	(?:1\W*)?844\W*777\W*1902
 1511260061	Mithrandir	spartagenxtfacts\.com
-1511260494	Glorfindel	tallahasseemensrehab\.com
-1511260505	Glorfindel	swfloridawomensrehab\.com
 1511260626	Glorfindel	valentinegifts\d+\.com
 1511262391	tripleee	cosmovio\W?beauty
 1511268164	Glorfindel	stupidtalks\.com
