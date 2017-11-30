@@ -1782,3 +1782,4 @@
 1511975083	Glorfindel	bitcoinnews3312\.blogspot\.com
 1511997116	paper1111	pablocabral\.com\.br
 1512020525	tripleee	bitcoinnews\d+\.blogspot
+1512020623	tripleee	makeappicon\.com
