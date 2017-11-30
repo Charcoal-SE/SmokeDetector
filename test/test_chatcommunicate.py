@@ -141,8 +141,11 @@ def test_pickle_rick(dump):
         os.remove("messageData.p")
 
 
+@patch("chatcommunicate.get_last_messages")
 @patch("chatcommunicate._pickle_run")
-def test_on_msg(pickle_rick):
+def test_on_msg(pickle_rick, get_last_messages):
+    chatcommunicate._last_messages = chatcommunicate.LastMessages({}, collections.OrderedDict())
+
     client = Fake({
         "_br": {
             "user_id": 1337
@@ -154,7 +157,7 @@ def test_on_msg(pickle_rick):
     room_data = chatcommunicate.RoomData(Mock(), Mock(), -1, (), False)
     chatcommunicate._rooms[("stackexchange.com", 11540)] = room_data
 
-    assert chatcommunicate.on_msg(Fake({}, spec=chatcommunicate.events.MessageStarred), None) is None  # don't reply to events we don't care about
+    chatcommunicate.on_msg(Fake({}, spec=chatcommunicate.events.MessageStarred), None)  # don't reply to events we don't care about
 
     msg1 = Fake({
         "message": {
@@ -167,7 +170,7 @@ def test_on_msg(pickle_rick):
         }
     }, spec=chatcommunicate.events.MessagePosted)
 
-    assert chatcommunicate.on_msg(msg1, client) is None
+    chatcommunicate.on_msg(msg1, client)
 
     msg2 = Fake({
         "message": {
@@ -187,7 +190,7 @@ def test_on_msg(pickle_rick):
 
     room_data.last_report_data = "did you hear about what happened to pluto"
 
-    assert chatcommunicate.on_msg(msg2, client) is None
+    chatcommunicate.on_msg(msg2, client)
 
     assert chatcommunicate._last_messages.messages[("stackexchange.com", 11540)] == collections.deque((999,))
     assert chatcommunicate._last_messages.reports == collections.OrderedDict({("stackexchange.com", 999): "did you hear about what happened to pluto"})
@@ -213,7 +216,7 @@ def test_on_msg(pickle_rick):
         }
     }, spec=chatcommunicate.events.MessagePosted)
 
-    mock_command = Mock(side_effect=lambda **kwargs: "hi" if not kwargs["quiet_action"] else "")
+    mock_command = Mock(side_effect=lambda *_, **kwargs: "hi" if not kwargs["quiet_action"] else "")
     chatcommunicate._commands["prefix"]["a_command"] = (mock_command, (0, 0))
 
     chatcommunicate.on_msg(msg3, client)
@@ -228,3 +231,149 @@ def test_on_msg(pickle_rick):
 
     msg3.message.reply.assert_not_called()
     mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a_command", quiet_action=True)
+    msg3.message.reply.reset_mock()
+    mock_command.reset_mock()
+
+    chatcommunicate._commands["prefix"]["a_command"] = (mock_command, (0, 1))
+    chatcommunicate.on_msg(msg3, client)
+
+    msg3.message.reply.assert_not_called()
+    mock_command.assert_called_once_with(None, original_msg=msg3.message, alias_used="a_command", quiet_action=True)
+    msg3.message.reply.reset_mock()
+    mock_command.reset_mock()
+
+    msg3.message.content = "!!/a_command 1 2 3"
+    chatcommunicate.on_msg(msg3, client)
+
+    msg3.message.reply.assert_called_once_with("hi", length_check=False)
+    mock_command.assert_called_once_with("1 2 3", original_msg=msg3.message, alias_used="a_command", quiet_action=False)
+    msg3.message.reply.reset_mock()
+    mock_command.reset_mock()
+
+    chatcommunicate._commands["prefix"]["a_command"] = (mock_command, (1, 2))
+
+    msg3.message.content = "!!/a_command"
+    chatcommunicate.on_msg(msg3, client)
+
+    msg3.message.reply.assert_called_once_with("Too few arguments.", length_check=False)
+    mock_command.assert_not_called()
+    msg3.message.reply.reset_mock()
+    mock_command.reset_mock()
+
+    msg3.message.content = "!!/a_command 1 2 oatmeal"
+    chatcommunicate.on_msg(msg3, client)
+
+    msg3.message.reply.assert_called_once_with("Too many arguments.", length_check=False)
+    mock_command.assert_not_called()
+    msg3.message.reply.reset_mock()
+    mock_command.reset_mock()
+
+    msg3.message.content = "!!/a_command- 1 2"
+    chatcommunicate.on_msg(msg3, client)
+
+    msg3.message.reply.assert_not_called()
+    mock_command.assert_called_once_with("1", "2", original_msg=msg3.message, alias_used="a_command", quiet_action=True)
+    msg3.message.reply.reset_mock()
+    mock_command.reset_mock()
+
+    msg3.message.content = "!!/a_command 3"
+    chatcommunicate.on_msg(msg3, client)
+
+    msg3.message.reply.assert_called_once_with("hi", length_check=False)
+    mock_command.assert_called_once_with("3", None, original_msg=msg3.message, alias_used="a_command", quiet_action=False)
+
+    mock_command.reset_mock()
+
+    msg4 = Fake({
+        "message": {
+            "room": {
+                "id": 11540,
+            },
+
+            "owner": {
+                "id": 1
+            },
+
+            "parent": {
+                "owner": {
+                    "id": 2
+                }
+            },
+
+            "id": 1000,
+            "content": "asdf"
+        }
+    }, spec=chatcommunicate.events.MessageEdited)
+
+    chatcommunicate.on_msg(msg4, client)
+
+    msg5 = Fake({
+        "message": {
+            "room": {
+                "id": 11540,
+            },
+
+            "owner": {
+                "id": 1
+            },
+
+            "parent": {
+                "owner": {
+                    "id": 1337
+                }
+            },
+
+            "id": 1000,
+            "reply": Mock(),
+            "content": "@SmokeDetector why   "
+        }
+    }, spec=chatcommunicate.events.MessageEdited)
+
+    chatcommunicate._commands["reply"]["why"] = (mock_command, (0, 0))
+
+    threw_exception = False
+
+    try:
+        chatcommunicate.on_msg(msg5, client)
+    except AssertionError:
+        threw_exception = True
+
+    assert threw_exception
+    mock_command.assert_not_called()
+    msg5.message.reply.assert_not_called()
+
+    chatcommunicate._commands["reply"]["why"] = (mock_command, (1, 1))
+    chatcommunicate.on_msg(msg5, client)
+
+    msg5.message.reply.assert_called_once_with("hi", length_check=False)
+    mock_command.assert_called_once_with(msg5.message.parent, original_msg=msg5.message, alias_used="why", quiet_action=False)
+    msg5.message.reply.reset_mock()
+    mock_command.reset_mock()
+
+    msg5.message.content = "@SmokeDetector why@!@#-"
+    chatcommunicate.on_msg(msg5, client)
+
+    msg5.message.reply.assert_not_called()
+    mock_command.assert_called_once_with(msg5.message.parent, original_msg=msg5.message, alias_used="why", quiet_action=True)
+
+    msg6 = Fake({
+        "message": {
+            "room": {
+                "id": 11540,
+            },
+
+            "owner": {
+                "id": 1
+            },
+
+            "id": 1000,
+            "parent": None,
+            "reply": Mock(),
+            "content": "sd why - 2why 2why- 2- why- "
+        }
+    }, spec=chatcommunicate.events.MessageEdited)
+
+    get_last_messages.side_effect = lambda _, num: (Fake({"id": i}) for i in range(num))
+    chatcommunicate.on_msg(msg6, client)
+
+    msg6.message.reply.assert_called_once_with("[:0] hi\n[:1] <skipped>\n[:2] hi\n[:3] hi\n[:4] <processed without return value>\n[:5] <processed without return value>\n[:6] <skipped>\n[:7] <skipped>\n[:8] <processed without return value>", length_check=False)

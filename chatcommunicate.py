@@ -350,13 +350,13 @@ def dispatch_command(msg):
             return func(args or None, original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
         else:
             args = args.split()
-            args.extend([None] * (max_arity - len(args)))
 
             if len(args) < min_arity:
                 return "Too few arguments."
             elif len(args) > max_arity:
                 return "Too many arguments."
             else:
+                args.extend([None] * (max_arity - len(args)))
                 return func(*args, original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
 
 
