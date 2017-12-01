@@ -1809,3 +1809,4 @@
 1512120671	Glorfindel	americaconferences\.org
 1512122110	Byte Commander	602communications\.com
 1512124348	Byte Commander	shardhamanavayurveda.com
+1512126561	tripleee	osxuninstaller\.com
