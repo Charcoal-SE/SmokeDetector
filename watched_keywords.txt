@@ -1803,4 +1803,3 @@
 1512048991	Glorfindel	pngtojpg\.org
 1512058748	Glorfindel	monily\.com
 1512058989	Glorfindel	oracle\.com/goto/plsql
-1512106471	NobodyNada	blue\Wbeach\Wyouth\Wscience
