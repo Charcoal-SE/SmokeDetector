@@ -1821,3 +1821,4 @@
 1512159711	Glorfindel	impactlanguagetraining\.com
 1512171999	doppelgreener	darkwebsolutions(\.| dot )co
 1512172011	doppelgreener	darkwebsolutions
+1512172018	doppelgreener	rootgatehacks
