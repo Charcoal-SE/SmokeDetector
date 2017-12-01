@@ -686,7 +686,7 @@ rarete
 divine\W?cbd
 pure\W?force\W?x
 vedda\W?blood\W?sugar
-beaute\W?lift
+beaute\W?(?:lift|facial)
 hemptif
 menxcell
 nitro\W?grit
@@ -980,3 +980,24 @@ slim\W?plus
 erezan
 the\W*lost\W*ways?
 We offer only original high-quality counterfeit currency NOTES
+foods\W?that\W?help\W?you\W?sleep
+xaxtus
+t\W?boost
+(?:1\W*)?844\W*205\W*0712
+hydra\W?claire
+piracetol
+robust\W?e?xtreme
+purely\W?vibrant
+meta\W?labs
+(?:1\W*)?310\W*359\W*9685
+andro\W?test
+mega\W?slim
+endow\W?max
+nugenix
+healthy\W?bloom
+focus\W?zx\W?1
+invisaderm
+trembolex
+(?:0?4\W*)?8126\W*1500
+virilate
+bemass

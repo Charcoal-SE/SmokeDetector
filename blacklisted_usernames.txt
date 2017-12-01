@@ -52,3 +52,4 @@ JoeClark
 ^jhon lee$
 ^mike alec$
 ^Madhav sharma$
+car\W?insurance

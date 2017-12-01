@@ -109,7 +109,7 @@ def handle_spam(post, reasons, why):
         else:
             sanitized_title = regex.sub('(https?://|\n)', '', post.title)
 
-        sanitized_title = regex.sub(r'([\]*`])', r'\\$1', sanitized_title).replace('\n', u'\u23CE')
+        sanitized_title = regex.sub(r'([\]*`])', r'\\\1', sanitized_title).replace('\n', u'\u23CE')
 
         prefix = u"[ [SmokeDetector](//goo.gl/eLDYqh) ]"
         if GlobalVars.metasmoke_key:
