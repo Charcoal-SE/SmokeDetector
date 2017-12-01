@@ -1804,3 +1804,4 @@
 1512058748	Glorfindel	monily\.com
 1512058989	Glorfindel	oracle\.com/goto/plsql
 1512114833	tripleee	cyberops\.in
+1512116557	Glorfindel	mmogah\.com
