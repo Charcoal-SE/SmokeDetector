@@ -1807,3 +1807,4 @@
 1512116557	Glorfindel	mmogah\.com
 1512119112	Glorfindel	yodalearning\.com
 1512120671	Glorfindel	americaconferences\.org
+1512122110	Byte Commander	602communications\.com
