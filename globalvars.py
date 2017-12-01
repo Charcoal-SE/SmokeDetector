@@ -193,7 +193,8 @@ class GlobalVars:
             "205208",   # a-j
             "234375",   # Jarko Dubbeldam
             "139041",   # Catija
-            "305737"    # Tinkeringbell
+            "305737",   # Tinkeringbell
+            "210948"    # WELZ
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
