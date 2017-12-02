@@ -19,6 +19,7 @@ from helpers import all_matches_unique, log
 from globalvars import GlobalVars
 from blacklists import load_blacklists
 
+LEVEN_DOMAIN_DISTANCE = 3
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
 CHARACTER_USE_RATIO = 0.42
@@ -49,11 +50,11 @@ URL_REGEX = regex.compile(
     r"""|(?:(?:[a-z\u00a1-\uffff0-9]-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-?)"""
     r"""*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.UNICODE)
 
+
 def levenshtein(s1, s2):
     if len(s1) < len(s2):
         return levenshtein(s2, s1)
 
-    # len(s1) >= len(s2)
     if len(s2) == 0:
         return len(s1)
 
@@ -61,8 +62,8 @@ def levenshtein(s1, s2):
     for i, c1 in enumerate(s1):
         current_row = [i + 1]
         for j, c2 in enumerate(s2):
-            insertions = previous_row[j + 1] + 1 # j+1 instead of j since previous_row and current_row are one character longer
-            deletions = current_row[j] + 1       # than s2
+            insertions = previous_row[j + 1] + 1
+            deletions = current_row[j] + 1
             substitutions = previous_row[j] + (c1 != c2)
             current_row.append(min(insertions, deletions, substitutions))
         previous_row = current_row
@@ -84,11 +85,10 @@ def malicious_link(s, site, *args):
     except tld.Exceptions.TldDomainNotFound:
         return False, ''
 
-    threshold = 3
     if levenshtein(parsed_href.domain, parsed_text.domain) > LEVEN_DOMAIN_DISTANCE:
         return True, 'Domain {} indicated by possible misleading text {}.'.format(
-                   parsed_href, parsed_text
-               )
+            parsed_href, parsed_text
+        )
     else:
         return False, ''
 
