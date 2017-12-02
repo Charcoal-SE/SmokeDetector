@@ -81,7 +81,7 @@ def malicious_link(s, site, *args):
     href, text = search[1], search[2]
     try:
         parsed_href = tld.get_tld(href, as_object=True)
-        parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True, fail_silently=True)
+        parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True)
     except tld.Exceptions.TldDomainNotFound:
         return False, ''
 
