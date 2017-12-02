@@ -79,7 +79,8 @@ def contains_tld(s):
     # Hackity hack.
     if len(TLD_CACHE) == 0:
         with open(path.join(tld.defaults.NAMES_LOCAL_PATH_PARENT, tld.defaults.NAMES_LOCAL_PATH), 'r') as f:
-            TLD_CACHE = [x for x in f.readlines() if x and not x.strip().startswith('#')]
+            TLD_CACHE = [x.rstrip('\n') for x in f.readlines() if x.rstrip('\n') and
+                         not x.strip().startswith('//')]
 
     return any([('.' + x) in s for x in TLD_CACHE])
 
@@ -94,7 +95,7 @@ def malicious_link(s, site, *args):
     href, text = search[1], search[2]
     try:
         parsed_href = tld.get_tld(href, as_object=True)
-        if contains_tld(s):
+        if contains_tld(text):
             parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True)
         else:
             raise tld.exceptions.TldBadUrl('Link text is not a URL')
