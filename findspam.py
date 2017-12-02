@@ -49,6 +49,48 @@ URL_REGEX = regex.compile(
     r"""|(?:(?:[a-z\u00a1-\uffff0-9]-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-?)"""
     r"""*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.UNICODE)
 
+def levenshtein(s1, s2):
+    if len(s1) < len(s2):
+        return levenshtein(s2, s1)
+
+    # len(s1) >= len(s2)
+    if len(s2) == 0:
+        return len(s1)
+
+    previous_row = range(len(s2) + 1)
+    for i, c1 in enumerate(s1):
+        current_row = [i + 1]
+        for j, c2 in enumerate(s2):
+            insertions = previous_row[j + 1] + 1 # j+1 instead of j since previous_row and current_row are one character longer
+            deletions = current_row[j] + 1       # than s2
+            substitutions = previous_row[j] + (c1 != c2)
+            current_row.append(min(insertions, deletions, substitutions))
+        previous_row = current_row
+
+    return previous_row[-1]
+
+
+def malicious_link(s, site, *args):
+    link_regex = r"<a href=\"([^\"]+)\"[^>]*>([^<]+)<\/a>"
+    compiled = regex.compile(link_regex)
+    search = compiled.search(s)
+    if search is None:
+        return False, ''
+
+    href, text = search[1], search[2]
+    try:
+        parsed_href = tld.get_tld(href, as_object=True)
+        parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True, fail_silently=True)
+    except tld.Exceptions.TldDomainNotFound:
+        return False, ''
+
+    threshold = 3
+    if levenshtein(parsed_href.domain, parsed_text.domain) > LEVEN_DOMAIN_DISTANCE:
+        return True, 'Domain {} indicated by possible misleading text {}.'.format(
+                   parsed_href, parsed_text
+               )
+    else:
+        return False, ''
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def has_repeated_words(s, site, *args):
@@ -1093,6 +1135,11 @@ class FindSpam:
          'reason': "single character over used in post",
          'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
          'max_rep': 20, 'max_score': 0},
+
+        # Link text points to a different domain than the href
+        {'method': malicious_link, 'all': True, 'sites': [], 'reason': 'misleading link', 'title': False,
+         'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False,
+         'max_rep': 10, 'max_score': 1}
     ]
 
     @staticmethod
