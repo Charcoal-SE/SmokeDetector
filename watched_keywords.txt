@@ -1544,7 +1544,6 @@
 1510561546	tripleee	cloudally\.com
 1510561706	Glorfindel	unilexconsultants\.com
 1510562372	tripleee	forest\W?springs(?:\W?garcinia)?(?:\W?cambogia)?
-1510569042	Glorfindel	kosmiktechnologies\.com
 1510569870	tripleee	doorsmelbourne\.net
 1510576244	tripleee	andrshz99
 1510587491	Glorfindel	facebook-hacker\.org
