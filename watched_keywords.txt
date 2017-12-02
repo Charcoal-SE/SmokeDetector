@@ -1825,3 +1825,4 @@
 1512221649	Glorfindel	gamingrun\.com
 1512221711	Glorfindel	ebcoo\.net
 1512221780	Glorfindel	euroscicon\.com
+1512222635	Glorfindel	atlantidasubmarine\.com
