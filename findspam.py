@@ -92,6 +92,7 @@ def malicious_link(s, site, *args):
     else:
         return False, ''
 
+
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def has_repeated_words(s, site, *args):
     words = regex.split(r"[\s.,;!/\()\[\]+_-]", s)
