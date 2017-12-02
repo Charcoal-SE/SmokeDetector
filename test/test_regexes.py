@@ -93,4 +93,6 @@ def test_regexes(title, body, username, site, body_is_summary, is_answer, match)
     isspam = False
     if len(result) > 0:
         isspam = True
+    if match != isspam:
+        print((body, match))
     assert match == isspam

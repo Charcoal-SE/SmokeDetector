@@ -7,6 +7,7 @@ from urllib.parse import urlparse
 from itertools import chain
 from collections import Counter
 from datetime import datetime
+import os.path as path
 
 # noinspection PyPackageRequirements
 import tld
@@ -19,6 +20,7 @@ from helpers import all_matches_unique, log
 from globalvars import GlobalVars
 from blacklists import load_blacklists
 
+TLD_CACHE = []
 LEVEN_DOMAIN_DISTANCE = 3
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
@@ -71,6 +73,17 @@ def levenshtein(s1, s2):
     return previous_row[-1]
 
 
+def contains_tld(s):
+    global TLD_CACHE
+
+    # Hackity hack.
+    if len(TLD_CACHE) == 0:
+        with open(path.join(tld.defaults.NAMES_LOCAL_PATH_PARENT, tld.defaults.NAMES_LOCAL_PATH), 'r') as f:
+            TLD_CACHE = [x for x in f.readlines() if x and not x.strip().startswith('#')]
+
+    return any([('.' + x) in s for x in TLD_CACHE])
+
+
 def malicious_link(s, site, *args):
     link_regex = r"<a href=\"([^\"]+)\"[^>]*>([^<]+)<\/a>"
     compiled = regex.compile(link_regex)
@@ -81,11 +94,16 @@ def malicious_link(s, site, *args):
     href, text = search[1], search[2]
     try:
         parsed_href = tld.get_tld(href, as_object=True)
-        parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True)
-    except tld.Exceptions.TldDomainNotFound:
+        if contains_tld(s):
+            parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True)
+        else:
+            raise tld.exceptions.TldBadUrl('Link text is not a URL')
+    except tld.exceptions.TldDomainNotFound:
+        return False, ''
+    except tld.exceptions.TldBadUrl:
         return False, ''
 
-    if levenshtein(parsed_href.domain, parsed_text.domain) > LEVEN_DOMAIN_DISTANCE:
+    if levenshtein(parsed_href.domain.lower(), parsed_text.domain.lower()) > LEVEN_DOMAIN_DISTANCE:
         return True, 'Domain {} indicated by possible misleading text {}.'.format(
             parsed_href, parsed_text
         )
