@@ -1544,7 +1544,6 @@
 1510561546	tripleee	cloudally\.com
 1510561706	Glorfindel	unilexconsultants\.com
 1510562372	tripleee	forest\W?springs(?:\W?garcinia)?(?:\W?cambogia)?
-1510569042	Glorfindel	kosmiktechnologies\.com
 1510569870	tripleee	doorsmelbourne\.net
 1510576244	tripleee	andrshz99
 1510587491	Glorfindel	facebook-hacker\.org
@@ -1823,3 +1822,10 @@
 1512172018	doppelgreener	rootgatehacks
 1512172510	paper1111	afterether\.org
 1512201179	paper1111	gertrudex\.beep\.com
+1512203784	paper1111	wwwspankyaffilates\.000webhostapp\.com
+1512206300	Glorfindel	instant-gaming\.com
+1512221649	Glorfindel	gamingrun\.com
+1512221711	Glorfindel	ebcoo\.net
+1512221780	Glorfindel	euroscicon\.com
+1512222635	Glorfindel	atlantidasubmarine\.com
+1512240330	Federico	oldwoodward\.com
