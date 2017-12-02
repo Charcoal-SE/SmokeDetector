@@ -198,11 +198,6 @@ GlobalVars.specialrooms = [
         "unwantedReasons": ["All-caps title", "All-caps body", "All-caps answer"]
     },
     {
-        "sites": ["movies.stackexchange.com"],
-        "room": GlobalVars.wrap.get_room("40705"),
-        "unwantedReasons": []
-    },
-    {
         "sites": ["ethereum.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("34620"),
         "unwantedReasons": []
@@ -228,11 +223,6 @@ GlobalVars.specialrooms = [
         "unwantedReasons": []
     },
     {
-        "sites": ["bricks.stackexchange.com"],
-        "room": GlobalVars.wrap.get_room("1964"),
-        "unwantedReasons": []
-    },
-    {
         "sites": ["crafts.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("38932"),
         "unwantedReasons": []
@@ -246,6 +236,17 @@ GlobalVars.specialrooms = [
         "sites": ["scifi.stackexchange.com"],
         "room": GlobalVars.wrap.get_room("59281"),
         "unwantedReasons": []
+    },
+    {
+        "sites": ["interpersonal.stackexchange.com"],
+        "room": GlobalVars.wrap.get_room("61165"),
+        "unwantedReasons": []
+    },
+    {
+        "sites": ["askubuntu.com"],
+        "room": GlobalVars.wrap.get_room("3877"),
+        "unwantedReasons": [],
+        "watcher": True
     }
 ]
 

@@ -76,7 +76,7 @@ class Metasmoke:
         elif GlobalVars.metasmoke_last_ping_time < (datetime.now() - timedelta(seconds=120)):
             errlog.write("\nWARNING: Last metasmoke ping with a response was over 120 seconds ago, "
                          "forcing SmokeDetector restart to reset all sockets.\n%s UTC\n" % now)
-            os._exit(10)
+            # os._exit(10)
         else:
             pass  # Do nothing
 
@@ -116,7 +116,7 @@ class Metasmoke:
                                                                'reputation': post_data.owner_rep,
                                                                'link': post_data.owner_url},
                                                      'site': post_data.site,
-                                                     'IsAnswer': (post_data.post_type == "answer"),
+                                                     'is_answer': (post_data.post_type == "answer"),
                                                      'score': post_data.score, 'link': post_data.post_url,
                                                      'question_id': post_data.post_id,
                                                      'up_vote_count': post_data.up_vote_count,
@@ -357,8 +357,9 @@ class Metasmoke:
 
         headers = {'Content-type': 'application/json'}
 
-        requests.post(GlobalVars.metasmoke_host + "/statistics.json",
-                      data=json.dumps(payload), headers=headers)
+        if GlobalVars.metasmoke_host is not None:
+            requests.post(GlobalVars.metasmoke_host + "/statistics.json",
+                          data=json.dumps(payload), headers=headers)
 
         if should_repeat:
             threading.Timer(600, Metasmoke.send_statistics).start()

@@ -12,7 +12,7 @@ xiguai
 Dr\. Madonna
 Pro Max
 ^hl12
-defort\ essid
+defort essid
 ^pus(sy)?$
 radlelgl
 Anonymous\WTeacher
@@ -34,3 +34,22 @@ shifflettkristen
 maccolar
 limeprox(y|ies)
 ^dongfang$
+Da Whole Truth
+Merit Campus
+Learner Logic
+online\W?time\W?sheets?
+medo74
+shitfuck
+vbage tech
+^ling xing$
+printers?\W?driver
+^689 Cloud$
+JoeClark
+^Gracia\W?Ryan\d*$
+^Juliet Bell$
+^Prasanta Shee$
+^gesture(?: screen)?$
+^jhon lee$
+^mike alec$
+^Madhav sharma$
+car\W?insurance

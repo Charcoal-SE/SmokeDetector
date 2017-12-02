@@ -1,19 +1,24 @@
 # coding=utf-8
+
 import platform
-from helpers import log
-from requests.auth import HTTPBasicAuth
-from globalvars import GlobalVars
-import requests
 import time
 import json
-import regex
 from datetime import datetime
 from threading import Lock
+
+import regex
+import requests
+from requests.auth import HTTPBasicAuth
+
+from urllib.parse import quote_plus
 if 'windows' in str(platform.platform()).lower():
     # noinspection PyPep8Naming
     from classes import Git as git
 else:
     from sh import git
+
+from helpers import log
+from globalvars import GlobalVars
 
 
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
@@ -50,16 +55,16 @@ class GitManager:
 
         if blacklist == "website":
             blacklist_file_name = "blacklisted_websites.txt"
-            ms_search_option = "&body_is_regex=1&body="
+            ms_search_option = "&body="
         elif blacklist == "keyword":
             blacklist_file_name = "bad_keywords.txt"
-            ms_search_option = "&body_is_regex=1&body="
+            ms_search_option = "&body="
         elif blacklist == "username":
             blacklist_file_name = "blacklisted_usernames.txt"
-            ms_search_option = "&username_is_regex=1&username="
+            ms_search_option = "&username="
         elif blacklist == "watch_keyword":
             blacklist_file_name = "watched_keywords.txt"
-            ms_search_option = "&body_is_regex=1&body="
+            ms_search_option = "&body="
         else:
             # Just checking all bases, but blacklist_file_name *might* have empty value
             # if we don't address it here.
@@ -156,11 +161,12 @@ class GitManager:
 
                 payload = {"title": u"{0}: {1} {2}".format(username, op.title(), item),
                            "body": u"[{0}]({1}) requests the {2} of the {3} {4}. See the Metasmoke search [here]"
-                                   "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6})\n"
+                                   "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6}) and the "
+                                   "Stack Exchange search [here](https://stackexchange.com/search?q=%22{6}%22).\n"
                                    u"<!-- METASMOKE-BLACKLIST-{7} {4} -->".format(
                                        username, chat_profile_link, op, blacklist,
                                        item, ms_search_option,
-                                       item.replace(" ", "+"),
+                                       quote_plus(item.replace("\\W", " ").replace("\\.", ".")),
                                        blacklist.upper()),
                            "head": branch,
                            "base": "master"}
@@ -192,9 +198,11 @@ class GitManager:
                         # Capture any other invalid response cases.
                         return (False, "A bad or invalid reply was received from GH, the message was: %s" %
                                 response.json()['message'])
-
-            git.checkout("deploy")  # Return to deploy to await CI.
+        except Exception:
+            return (False, "Git functions failed for unspecified reasons.")
         finally:
+            # Always return to `deploy` branch when done with anything.
+            git.checkout("deploy")
             cls.gitmanager_lock.release()
 
         if op == 'blacklist':

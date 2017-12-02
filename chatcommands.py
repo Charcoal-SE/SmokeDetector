@@ -1102,9 +1102,12 @@ def command_version(*args, **kwargs):
     Returns the current version of the application
     :return: A string
     """
-    return Response(command_status=True, message='[{commit_name}]({repository}/commit/{commit_code})'.format(
-        commit_name=GlobalVars.commit_with_author, commit_code=GlobalVars.commit['id'],
-        repository=GlobalVars.bot_repository))
+    return Response(command_status=True,
+                    message='{id} [{commit_name}]({repository}/commit/{commit_code})'.format(
+                        id=GlobalVars.location,
+                        commit_name=GlobalVars.commit_with_author,
+                        commit_code=GlobalVars.commit['id'],
+                        repository=GlobalVars.bot_repository))
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -1273,7 +1276,10 @@ def command_whois(message_parts, ev_user_id, wrap2, *args, **kwargs):
                                 wrap2.get_user(admin).last_seen)
                                for admin in admins_not_in_room]
 
-    message = "I am aware of {} {}".format(len(admin_ids), message_parts[1])
+    return_names = {"admin": ["admin", "admins"], "code_admin": ["code admin", "code admins"]}
+    return_name = return_names[valid_roles[message_parts[1]]][0 if len(admin_ids) == 1 else 1]
+
+    message = "I am aware of {} {}".format(len(admin_ids), return_name)
 
     if admins_in_room_list:
         admins_in_room_list.sort(key=lambda x: x[2])    # Sort by last message (last seen = x[3])
@@ -1405,8 +1411,14 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
                 (post_data.post_id, post_data.site)):
             # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
             # this re-report might be attempting to correct that/fix a mistake/etc.
-            output.append("Post {}: Already recently reported".format(index))
-            continue
+            if GlobalVars.metasmoke_key is not None:
+                se_link = to_protocol_relative(post_data.post_url)
+                ms_link = "https://m.erwaysoftware.com/posts/by-url?url={}".format(se_link)
+                output.append("Post {}: Already recently reported [ [MS]({}) ]".format(index, ms_link))
+                continue
+            else:
+                output.append("Post {}: Already recently reported".format(index))
+                continue
         post_data.is_answer = (post_data.post_type == "answer")
         post = Post(api_response=post_data.as_dict)
         user = get_user_from_url(post_data.owner_url)
@@ -1432,9 +1444,9 @@ def command_report_post(ev_room, ev_user_id, wrap2, message_parts, message_url,
 # Subcommands go below here
 # noinspection PyIncorrectDocstring,PyUnusedLocal,PyBroadException
 @check_permissions
-def subcommand_delete(ev_room, ev_user_id, wrap2, msg, *args, **kwargs):
+def subcommand_delete_force(ev_room, ev_user_id, wrap2, msg, *args, **kwargs):
     """
-    Attempts to delete a post from room
+    Delete a post from the room, ignoring protection for Charcoal HQ
     :param msg:
     :param wrap2:
     :param ev_user_id:
@@ -1442,6 +1454,33 @@ def subcommand_delete(ev_room, ev_user_id, wrap2, msg, *args, **kwargs):
     :param kwargs: No additional arguments expected
     :return: None
     """
+    try:
+        msg.delete()
+    except:
+        pass  # couldn't delete message
+    return Response(command_status=True, message=None)
+
+
+# noinspection PyIncorrectDocstring,PyUnusedLocal,PyBroadException
+@check_permissions
+def subcommand_delete(ev_room, ev_user_id, wrap2, msg, *args, **kwargs):
+    """
+    Delete a post from a chatroom, with an override for Charcoal HQ.
+    :param msg:
+    :param wrap2:
+    :param ev_user_id:
+    :param ev_room:
+    :param kwargs: No additional arguments expected
+    :return: None
+    """
+
+    if int(ev_room) == int(GlobalVars.charcoal_hq.id):
+        return Response(command_status=False, message="Messages from SmokeDetector in Charcoal HQ are generally kept "
+                                                      "as records. If you really need to delete a message, please use "
+                                                      "`sd delete-force`. See [this note on message deletion]"
+                                                      "(https://charcoal-se.org/smokey/Commands"
+                                                      "#a-note-on-message-deletion) for more details.")
+
     try:
         msg.delete()
     except:
@@ -1839,6 +1878,10 @@ subcommand_dict = {
     "gone": subcommand_delete,
     "poof": subcommand_delete,
     "del": subcommand_delete,
+
+    "delete-force": subcommand_delete_force,
+    "del-force": subcommand_delete_force,
+    "remove-force": subcommand_delete_force,
 
     "postgone": subcommand_editlink,
 

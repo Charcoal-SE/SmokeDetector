@@ -188,6 +188,13 @@ class GlobalVars:
             "281674",   # paper1111
             "279119",   # Tetsuya Yamamoto
             "307652",   # Ajay Brahmakshatriya
+            "238145",   # Owen Hines
+            "268731",   # Sagar V
+            "205208",   # a-j
+            "234375",   # Jarko Dubbeldam
+            "139041",   # Catija
+            "305737",   # Tinkeringbell
+            "210948"    # WELZ
         ],
         meta_tavern_room_id: [
             "315433",   # Normal Human
@@ -263,7 +270,8 @@ class GlobalVars:
             "294691",   # Mithrandir
             "203553",   # CalvT
             "289971",   # Hyper Neutrino
-            "346854"    # DonQuiKong
+            "346854",   # DonQuiKong
+            "284336"    # Catija
         ],
         socvr_room_id: [
             "1849664",  # Undo
@@ -341,7 +349,7 @@ class GlobalVars:
             "4826457",  # suraj
             "8242698",  # user0042
             "3773011",  # Makyen
-            "2858773"  # Ajay Brahmakshatriya
+            "2858773"   # Ajay Brahmakshatriya
         ],
         '111347': [     # SOBotics
             "3160466",  # ArtOfCode
