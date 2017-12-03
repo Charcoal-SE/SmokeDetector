@@ -1169,7 +1169,23 @@ def allspam(msg, url):
             post_data.up_vote_count = post['up_vote_count']
             post_data.down_vote_count = post['down_vote_count']
             if post_data.post_type == "answer":
-                post_data.question_id = post['question_id']
+                # Annoyingly we have to make another request to get the question ID, since it is only returned by the
+                # /answers route
+                # Respect backoffs etc
+                GlobalVars.api_request_lock.acquire()
+                if GlobalVars.api_backoff_time > time.time():
+                    time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
+                # Fetch posts
+                filter = "!*Jxb9s5EOrE51WK*"
+                req_url = "http://api.stackexchange.com/2.2/answers/{}?site={}&filter={}&key=IAkbitmze4B8KpacUfLqkw((" \
+                    .format(post['post_id'], u_site, filter)
+                answer_res = requests.get(req_url).json()
+                if "backoff" in res:
+                    if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
+                        GlobalVars.api_backoff_time = time.time() + res["backoff"]
+                GlobalVars.api_request_lock.release()
+                # Finally, set the attribute
+                post_data.question_id = answer_res['items'][0]['question_id']
                 post_data.is_answer = True
             user_posts.append(post_data)
     if len(user_posts) == 0:
@@ -1186,7 +1202,7 @@ def allspam(msg, url):
         handle_spam(post=Post(api_response=post.as_dict),
                     reasons=["Manually reported " + post.post_type + batch],
                     why=why_info)
-        time.sleep(1)  # Should this be implemented differently?
+        time.sleep(2)  # Should this be implemented differently?
     if len(user_posts) > 2:
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
 
