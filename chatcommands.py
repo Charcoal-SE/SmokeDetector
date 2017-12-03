@@ -577,7 +577,6 @@ def command_wut(*args, **kwargs):
     return Response(command_status=True, message="Whaddya mean, 'wut'? Humans...")
 
 
-
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 def command_hats(*args, **kwargs):
     wb_start = datetime(2017, 12, 13, 0, 0, 0)
