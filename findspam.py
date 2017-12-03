@@ -37,6 +37,8 @@ SE_SITES_RE = r'(?:{sites})'.format(
             [r'askubuntu', r'superuser', r'serverfault'])),
         r'mathoverflow\.net',
         r'(?:[a-z]+\.)*stackexchange\.com']))
+SE_SITES_DOMAINS = ['stackoverflow.com', 'askubuntu.com', 'superuser.com', 'serverfault.com',
+                    'mathoverflow.net', 'stackapps.com', 'stackexchange.com', 'sstatic.net']
 
 
 # Flee before the ugly URL validator regex!
@@ -95,7 +97,10 @@ def malicious_link(s, site, *args):
     href, text = search[1], search[2]
     try:
         parsed_href = tld.get_tld(href, as_object=True)
-        if contains_tld(text):
+        print(parsed_href.domain, SE_SITES_DOMAINS)
+        if parsed_href.tld in SE_SITES_DOMAINS:
+            return False, ''
+        if contains_tld(text) and ' ' not in text:
             parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True)
         else:
             raise tld.exceptions.TldBadUrl('Link text is not a URL')
