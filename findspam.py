@@ -7,6 +7,7 @@ from urllib.parse import urlparse
 from itertools import chain
 from collections import Counter
 from datetime import datetime
+import os.path as path
 
 # noinspection PyPackageRequirements
 import tld
@@ -19,6 +20,8 @@ from helpers import all_matches_unique, log
 from globalvars import GlobalVars
 from blacklists import load_blacklists
 
+TLD_CACHE = []
+LEVEN_DOMAIN_DISTANCE = 3
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
 CHARACTER_USE_RATIO = 0.42
@@ -34,6 +37,8 @@ SE_SITES_RE = r'(?:{sites})'.format(
             [r'askubuntu', r'superuser', r'serverfault'])),
         r'mathoverflow\.net',
         r'(?:[a-z]+\.)*stackexchange\.com']))
+SE_SITES_DOMAINS = ['stackoverflow.com', 'askubuntu.com', 'superuser.com', 'serverfault.com',
+                    'mathoverflow.net', 'stackapps.com', 'stackexchange.com', 'sstatic.net']
 
 
 # Flee before the ugly URL validator regex!
@@ -48,6 +53,68 @@ URL_REGEX = regex.compile(
     r"""(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))"""
     r"""|(?:(?:[a-z\u00a1-\uffff0-9]-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-?)"""
     r"""*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.UNICODE)
+
+
+def levenshtein(s1, s2):
+    if len(s1) < len(s2):
+        return levenshtein(s2, s1)
+
+    if len(s2) == 0:
+        return len(s1)
+
+    previous_row = range(len(s2) + 1)
+    for i, c1 in enumerate(s1):
+        current_row = [i + 1]
+        for j, c2 in enumerate(s2):
+            insertions = previous_row[j + 1] + 1
+            deletions = current_row[j] + 1
+            substitutions = previous_row[j] + (c1 != c2)
+            current_row.append(min(insertions, deletions, substitutions))
+        previous_row = current_row
+
+    return previous_row[-1]
+
+
+def contains_tld(s):
+    global TLD_CACHE
+
+    # Hackity hack.
+    if len(TLD_CACHE) == 0:
+        with open(path.join(tld.defaults.NAMES_LOCAL_PATH_PARENT, tld.defaults.NAMES_LOCAL_PATH), 'r') as f:
+            TLD_CACHE = [x.rstrip('\n') for x in f.readlines() if x.rstrip('\n') and
+                         not x.strip().startswith('//')]
+
+    return any([('.' + x) in s for x in TLD_CACHE])
+
+
+def malicious_link(s, site, *args):
+    link_regex = r"<a href=\"([^\"]+)\"[^>]*>([^<]+)<\/a>"
+    compiled = regex.compile(link_regex)
+    search = compiled.search(s)
+    if search is None:
+        return False, ''
+
+    href, text = search[1], search[2]
+    try:
+        parsed_href = tld.get_tld(href, as_object=True)
+        print(parsed_href.domain, SE_SITES_DOMAINS)
+        if parsed_href.tld in SE_SITES_DOMAINS:
+            return False, ''
+        if contains_tld(text) and ' ' not in text:
+            parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True)
+        else:
+            raise tld.exceptions.TldBadUrl('Link text is not a URL')
+    except tld.exceptions.TldDomainNotFound:
+        return False, ''
+    except tld.exceptions.TldBadUrl:
+        return False, ''
+
+    if levenshtein(parsed_href.domain.lower(), parsed_text.domain.lower()) > LEVEN_DOMAIN_DISTANCE:
+        return True, 'Domain {} indicated by possible misleading text {}.'.format(
+            parsed_href, parsed_text
+        )
+    else:
+        return False, ''
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
@@ -1100,6 +1167,11 @@ class FindSpam:
          'reason': "single character over used in post",
          'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
          'max_rep': 20, 'max_score': 0},
+
+        # Link text points to a different domain than the href
+        {'method': malicious_link, 'all': True, 'sites': [], 'reason': 'misleading link', 'title': False,
+         'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False,
+         'max_rep': 10, 'max_score': 1}
     ]
 
     @staticmethod

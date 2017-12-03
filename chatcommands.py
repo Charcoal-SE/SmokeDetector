@@ -1052,7 +1052,7 @@ def report(msg, urls):
             if GlobalVars.metasmoke_key is not None:
                 se_link = to_protocol_relative(post_data.post_url)
                 ms_link = "https://m.erwaysoftware.com/posts/by-url?url={}".format(se_link)
-                output.append("Post {}: Already recently reported [[MS]({})]".format(index, ms_link))
+                output.append("Post {}: Already recently reported [ [MS]({}) ]".format(index, ms_link))
                 continue
             else:
                 output.append("Post {}: Already recently reported".format(index))

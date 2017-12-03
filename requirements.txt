@@ -16,3 +16,4 @@ sh
 typing
 dnspython
 pyyaml
+tld
