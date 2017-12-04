@@ -1836,3 +1836,4 @@
 1512309401	Glorfindel	iptindia\.com
 1512310625	J F	513238993
 1512323456	Glorfindel	pakaribazar\.com
+1512363325	Tetsuya Yamamoto	uaetechnician\.com
