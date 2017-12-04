@@ -445,11 +445,10 @@ def wut():
     return "Whaddya mean, 'wut'? Humans..."
 
 
-""" Uncomment when Winterbash comes back
 @command(aliases=["zomg_hats"])
 def hats():
-    wb_start = datetime(2016, 12, 19, 0, 0, 0)
-    wb_end = datetime(2017, 1, 9, 0, 0, 0)
+    wb_start = datetime(2017, 12, 13, 0, 0, 0)
+    wb_end = datetime(2018, 1, 9, 0, 0, 0)
     now = datetime.utcnow()
     return_string = ""
     if wb_start > now:
@@ -474,7 +473,6 @@ def hats():
             diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
 
     return return_string
-"""
 
 
 # --- Block application from posting functions --- #
