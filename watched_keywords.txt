@@ -1876,3 +1876,4 @@
 1512498256	DJMcMayhem	SapamaCash
 1512505532	Glorfindel	grupkeroncongmodern\.blogspot\.co
 1512505545	Glorfindel	keroncongpanggilan\.blogspot\.co
+1512505572	Glorfindel	keroncongkemayoran\.blogspot\.co
