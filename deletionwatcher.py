@@ -8,6 +8,7 @@ import websocket
 from bs4 import BeautifulSoup
 from threading import Thread
 from urllib.parse import urlparse
+import chatcommunicate
 import metasmoke
 from globalvars import GlobalVars
 import datahandling
