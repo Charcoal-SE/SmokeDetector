@@ -458,7 +458,7 @@ def hats():
         daystr = "days" if diff.days != 1 else "day"
         hourstr = "hours" if hours != 1 else "hour"
         minutestr = "minutes" if minutes != 1 else "minute"
-        secondstr = "seconds" if seconds != 1 else "diff_second"
+        secondstr = "seconds" if seconds != 1 else "second"
         return_string = "WE LOVE HATS! Winter Bash will begin in {} {}, {} {}, {} {}, and {} {}.".format(
             diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
     elif wb_end > now:

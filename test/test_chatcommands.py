@@ -4,6 +4,7 @@ import chatcommands
 from classes._Post import Post
 from globalvars import GlobalVars
 
+import datetime
 import os
 import pytest
 import regex
@@ -47,6 +48,17 @@ def test_alive():
 
 def test_location():
     assert chatcommands.location() == GlobalVars.location
+
+
+@patch("chatcommands.datetime")
+def test_hats(date):
+    date.side_effect = datetime.datetime
+
+    date.utcnow.return_value = datetime.datetime(2017, 12, 12, hour=23)
+    assert chatcommands.hats() == "WE LOVE HATS! Winter Bash will begin in 0 days, 1 hour, 0 minutes, and 0 seconds."
+
+    date.utcnow.return_value = datetime.datetime(2018, 1, 8, hour=23)
+    assert chatcommands.hats() == "Winter Bash won't end for 0 days, 1 hour, 0 minutes, and 0 seconds. GO EARN SOME HATS!"
 
 
 def test_blame():

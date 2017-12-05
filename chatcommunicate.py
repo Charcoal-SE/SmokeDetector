@@ -337,7 +337,7 @@ def dispatch_command(msg):
     command_name = cmd[3:].lower()
 
     quiet_action = command_name[-1] == "-"
-    command_name = regex.sub(r"\W*$", "", command_name)
+    command_name = regex.sub(r"[[:punct:]]*$", "", command_name)
 
     if command_name not in _commands["prefix"]:
         return "No such command '{}'.".format(command_name)
