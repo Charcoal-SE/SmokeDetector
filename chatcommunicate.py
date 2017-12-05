@@ -5,6 +5,7 @@ import collections
 import itertools
 import os.path
 import pickle
+import queue
 import regex
 import sys
 import threading
@@ -49,6 +50,7 @@ _privileges = {}
 _global_block = -1
 _rooms = {}
 _last_messages = LastMessages({}, collections.OrderedDict())
+_msg_queue = queue.Queue()
 
 _pickle_run = threading.Event()
 
@@ -92,6 +94,7 @@ def init(username, password):
         _last_messages = pickle.load(open("messageData.p", "rb"))
 
     threading.Thread(name="pickle ---rick--- runner", target=pickle_last_messages, daemon=True).start()
+    threading.Thread(name="message sender", target=send_messages, daemon=True).start()
 
 
 def parse_room_config(path):
@@ -128,6 +131,15 @@ def pickle_last_messages():
 
         with open("messageData.p", "wb") as pickle_file:
             pickle.dump(_last_messages, pickle_file)
+
+
+def send_messages():
+    while True:
+        room, msg = _msg_queue.get()
+
+        room.lock.wait()
+        room.lock.clear()
+        room.room._client._do_action_despite_throttling(("send", room.room.id, msg))
 
 
 def on_msg(msg, client):
@@ -181,26 +193,6 @@ def on_msg(msg, client):
                 message.reply(result, length_check=False)
 
 
-def send_to_room(room, msg, report_data=()):
-    timestamp = time.time()
-
-    if room.block_time < timestamp and _global_block < timestamp:
-        msg = msg.rstrip()
-
-        if report_data:
-            room.last_report_data = report_data
-
-            if "delay" in _room_roles and room in _room_roles["delay"]:
-                threading.Thread(name="delayed post",
-                                 target=DeletionWatcher.post_message_if_not_deleted,
-                                 args=(report_data[0], msg, room))
-                return
-
-        room.lock.wait()
-        room.lock.clear()
-        room.room.send_message(msg)
-
-
 def tell_rooms_with(prop, msg, notify_site="", report_data=()):
     tell_rooms(msg, (prop,), (), notify_site=notify_site, report_data=report_data)
 
@@ -241,7 +233,21 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=()):
 
             msg = datahandling.append_pings(msg, pings)
 
-        send_to_room(room, msg, report_data=report_data)
+        timestamp = time.time()
+
+        if room.block_time < timestamp and _global_block < timestamp:
+            msg = msg.rstrip()
+
+            if report_data:
+                room.last_report_data = report_data
+
+                if "delay" in _room_roles and room in _room_roles["delay"]:
+                    threading.Thread(name="delayed post",
+                                     target=DeletionWatcher.post_message_if_not_deleted,
+                                     args=(report_data[0], msg, room))
+                    continue
+
+            _msg_queue.put((room, msg))
 
 
 def get_last_messages(room, count):

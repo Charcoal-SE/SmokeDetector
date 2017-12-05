@@ -98,6 +98,4 @@ class DeletionWatcher:
         if not was_report_deleted and not datahandling.is_false_positive(post_site_id[0:2]) and not \
                 datahandling.is_ignored_post(post_site_id[0:2]):
 
-            room.lock.wait()
-            room.lock.clear()
-            room.room.send_message(message_text)
+            chatcommunicate._msg_queue.put((room, message_text))
