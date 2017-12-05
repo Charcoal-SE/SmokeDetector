@@ -1852,3 +1852,4 @@
 1512454811	Tetsuya Yamamoto	appngamereskin\.com
 1512456205	Glorfindel	technicalguru\.beep\.com
 1512459609	Glorfindel	novingate\.com
+1512459618	Glorfindel	novinwebsite\.com
