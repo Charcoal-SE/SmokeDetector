@@ -1877,3 +1877,4 @@
 1512505532	Glorfindel	grupkeroncongmodern\.blogspot\.co
 1512505545	Glorfindel	keroncongpanggilan\.blogspot\.co
 1512505572	Glorfindel	keroncongkemayoran\.blogspot\.co
+1512505596	Glorfindel	grupkeroncongjakarta\.blogspot\.co
