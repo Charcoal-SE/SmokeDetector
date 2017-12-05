@@ -84,7 +84,9 @@ def test_init(room_config, client_constructor, thread):
     client_constructor.assert_any_call("stackoverflow.com")
     client_constructor.assert_any_call("meta.stackexchange.com")
 
-    thread.assert_called_once_with(name="pickle ---rick--- runner", target=chatcommunicate.pickle_last_messages, daemon=True)
+    assert thread.call_count == 2
+    thread.assert_any_call(name="pickle ---rick--- runner", target=chatcommunicate.pickle_last_messages, daemon=True)
+    thread.assert_any_call(name="message sender", target=chatcommunicate.send_messages, daemon=True)
 
     client.login.reset_mock()
     client_constructor.reset_mock()
@@ -112,7 +114,9 @@ def test_init(room_config, client_constructor, thread):
     client_constructor.assert_any_call("stackoverflow.com")
     client_constructor.assert_any_call("meta.stackexchange.com")
 
-    thread.assert_called_once_with(name="pickle ---rick--- runner", target=chatcommunicate.pickle_last_messages, daemon=True)
+    assert thread.call_count == 2
+    thread.assert_any_call(name="pickle ---rick--- runner", target=chatcommunicate.pickle_last_messages, daemon=True)
+    thread.assert_any_call(name="message sender", target=chatcommunicate.send_messages, daemon=True)
 
     assert len(chatcommunicate._rooms) == 3
     assert chatcommunicate._rooms[("stackexchange.com", 11540)].deletion_watcher is True
