@@ -358,7 +358,9 @@ def dispatch_command(msg):
     quiet_action = command_name[-1] == "-"
     command_name = regex.sub(r"[[:punct:]]*$", "", command_name)
 
-    if command_name in _commands["prefix"]:
+    if command_name not in _commands["prefix"]:
+        return "No such command '{}'.".format(command_name)
+    else:
         func, (min_arity, max_arity) = _commands["prefix"][command_name]
 
         if max_arity == 0:
@@ -381,9 +383,7 @@ def dispatch_reply_command(msg, reply, cmd):
     quiet_action = cmd[-1] == "-"
     cmd = regex.sub(r"\W*$", "", cmd)
 
-    if cmd not in _commands["reply"]:
-        return "No such command {}.".format(cmd)
-    else:
+    if cmd in _commands["reply"]:
         func, arity = _commands["reply"][cmd]
 
         assert arity == (1, 1)
