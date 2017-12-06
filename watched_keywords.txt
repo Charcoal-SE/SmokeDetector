@@ -1881,3 +1881,4 @@
 1512505610	Glorfindel	keroncongkita\.blogspot\.co
 1512549833	Glorfindel	selenium-webdriver\.com
 1512523529	Tetsuya Yamamoto	xinhepacking\.com
+1512523576	Tetsuya Yamamoto	xinrongelectric\.com
