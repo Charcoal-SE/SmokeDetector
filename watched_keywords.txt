@@ -1824,7 +1824,6 @@
 1512201138	paper1111	gertrudex\.postagon\.com
 1512206300	Glorfindel	instant-gaming\.com
 1512221649	Glorfindel	gamingrun\.com
-1512221711	Glorfindel	ebcoo\.net
 1512221780	Glorfindel	euroscicon\.com
 1512222635	Glorfindel	atlantidasubmarine\.com
 1512240330	Federico	oldwoodward\.com
