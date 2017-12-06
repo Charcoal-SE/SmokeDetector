@@ -271,7 +271,8 @@ class GlobalVars:
             "203553",   # CalvT
             "289971",   # Hyper Neutrino
             "346854",   # DonQuiKong
-            "284336"    # Catija
+            "284336",   # Catija
+            "205533"    # Videonauth
         ],
         socvr_room_id: [
             "1849664",  # Undo
