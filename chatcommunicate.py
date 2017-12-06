@@ -235,8 +235,8 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=()):
 
                 target_rooms.add(room)
 
-    for room in target_rooms:
-        room_data = _rooms[room]
+    for room_id in target_rooms:
+        room = _rooms[room_id]
 
         if notify_site:
             pings = datahandling.get_user_names_on_notification_list(room.room._client.host,
@@ -248,19 +248,19 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=()):
 
         timestamp = time.time()
 
-        if room_data.block_time < timestamp and _global_block < timestamp:
+        if room.block_time < timestamp and _global_block < timestamp:
             msg = msg.rstrip()
 
             if report_data:
-                room_data.last_report_data = report_data
+                room.last_report_data = report_data
 
-                if "delay" in _room_roles and room in _room_roles["delay"]:
+                if "delay" in _room_roles and room_id in _room_roles["delay"]:
                     threading.Thread(name="delayed post",
                                      target=DeletionWatcher.post_message_if_not_deleted,
-                                     args=(report_data[0], msg, room_data))
+                                     args=(report_data[0], msg, room))
                     continue
 
-            _msg_queue.put((room_data, msg))
+            _msg_queue.put((room, msg))
 
 
 def get_last_messages(room, count):
