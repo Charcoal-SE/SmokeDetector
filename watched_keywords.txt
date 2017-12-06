@@ -1880,3 +1880,4 @@
 1512505596	Glorfindel	grupkeroncongjakarta\.blogspot\.co
 1512505610	Glorfindel	keroncongkita\.blogspot\.co
 1512549833	Glorfindel	selenium-webdriver\.com
+1512523529	Tetsuya Yamamoto	xinhepacking\.com
