@@ -1892,3 +1892,4 @@
 1512554567	Glorfindel	writemyessay\.pro
 1512560605	Suraj Rao	monstertut\.com
 1512563575	Glorfindel	towncalendars\.com
+1512563589	Glorfindel	calendarworld\.info
