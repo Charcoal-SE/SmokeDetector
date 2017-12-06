@@ -25,10 +25,6 @@ def _load_pickle(path, encoding='utf-8'):
             if "apicalls" in path.lower():
                 return {}
 
-            if "latestmessages" in path.lower():
-                return {GlobalVars.meta_tavern_room_id: [], GlobalVars.charcoal_room_id: [],
-                        GlobalVars.socvr_room_id: [], '111347': []}
-
             if "bodyfetcher" in path.lower():
                 return {}
         except EOFError:
@@ -55,10 +51,6 @@ def load_files():
         GlobalVars.notifications = _load_pickle("notifications.p", encoding='utf-8')
     if os.path.isfile("whyData.p"):
         GlobalVars.why_data = _load_pickle("whyData.p", encoding='utf-8')
-    if os.path.isfile("whyDataAllspam.p"):
-        GlobalVars.why_data_allspam = _load_pickle("whyDataAllspam.p", encoding='utf-8')
-    if os.path.isfile("latestMessages.p"):
-        GlobalVars.latest_smokedetector_messages = _load_pickle("latestMessages.p", encoding='utf-8')
     if os.path.isfile("apiCalls.p"):
         GlobalVars.api_calls_per_site = _load_pickle("apiCalls.p", encoding='utf-8')
     if os.path.isfile("bodyfetcherQueue.p"):
@@ -124,23 +116,13 @@ def is_auto_ignored_post(postid_site_tuple):
     return False
 
 
-# noinspection PyMissingTypeHints
-def is_privileged(room_id_str, user_id_str, wrap2):
-    if room_id_str in GlobalVars.privileged_users and user_id_str in GlobalVars.privileged_users[room_id_str]:
-        return True
-    user = wrap2.get_user(user_id_str)
-    return user.is_moderator
-
-
 # noinspection PyUnusedLocal
-def is_code_privileged(room_id_str, user_id_str, wrap2):
+def is_code_privileged(site, user_id):
     if GlobalVars.code_privileged_users is None:
         metasmoke.Metasmoke.update_code_privileged_users_list()
 
-    if room_id_str in GlobalVars.code_privileged_users \
-            and int(user_id_str) in GlobalVars.code_privileged_users[room_id_str]:
-        return True
-    return False  # For now, disable the moderator override on code/blacklist changes
+    # For now, disable the moderator override on code/blacklist changes
+    return (site, user_id) in GlobalVars.code_privileged_users
 
 # methods to add/remove whitelisted/blacklisted users, ignored posts, ...
 
@@ -228,20 +210,6 @@ def filter_why(max_size=50):
     GlobalVars.why_data = GlobalVars.why_data[-max_size:]
 
 
-def add_why_allspam(user, why):
-    GlobalVars.why_data_allspam.append((user, why))
-    filter_why_allspam()
-    with open("whyDataAllspam.p", "wb") as f:
-        pickle.dump(GlobalVars.why_data_allspam, f, protocol=pickle.HIGHEST_PROTOCOL)
-
-
-def get_why_allspam(user):
-    for post in GlobalVars.why_data_allspam:
-        if post[0] == user:
-            return post[1]
-    return None
-
-
 def add_post_site_id_link(post_site_id, question_id):
     GlobalVars.post_site_id_to_question[post_site_id] = question_id
 
@@ -250,19 +218,6 @@ def get_post_site_id_link(post_site_id):
     if post_site_id in GlobalVars.post_site_id_to_question:
         return GlobalVars.post_site_id_to_question[post_site_id]
     return None
-
-
-def filter_why_allspam(max_size=50):
-    GlobalVars.why_data_allspam = GlobalVars.why_data_allspam[-max_size:]
-
-
-def add_latest_smokedetector_message(room, message_id):
-    GlobalVars.latest_smokedetector_messages[room].append(message_id)
-    # Keep the last 100 messages
-    max_size = 100
-    GlobalVars.latest_smokedetector_messages[room] = GlobalVars.latest_smokedetector_messages[room][-max_size:]
-    with open("latestMessages.p", "wb") as f:
-        pickle.dump(GlobalVars.latest_smokedetector_messages, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 def add_or_update_api_data(site):
@@ -404,7 +359,10 @@ def remove_from_notification_list(user_id, chat_site, room_id, se_site):
 
 # noinspection PyMissingTypeHints
 def will_i_be_notified(user_id, chat_site, room_id, se_site):
-    notification_tuple = (int(user_id), chat_site, int(room_id), se_site)
+    exists, site = check_site_and_get_full_name(se_site)
+    if not exists:
+        return False
+    notification_tuple = (int(user_id), chat_site, int(room_id), site)
     return notification_tuple in GlobalVars.notifications
 
 
@@ -413,7 +371,7 @@ def get_all_notification_sites(user_id, chat_site, room_id):
     for notification in GlobalVars.notifications:
         if notification[0] == int(user_id) and notification[1] == chat_site and notification[2] == int(room_id):
             sites.append(notification[3])
-    return sites
+    return sorted(sites)
 
 
 def get_user_ids_on_notification_list(chat_site, room_id, se_site):

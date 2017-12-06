@@ -1,553 +1,398 @@
-# -*- coding: utf-8 -*-
-from ChatExchange.chatexchange import events, client
-from chatcommunicate import *
-import chatcommands  # required for coverage
-from datahandling import is_false_positive, is_ignored_post
+import chatcommunicate
+import chatcommands
+from globalvars import GlobalVars
+
+import collections
+import io
+import os
+import os.path
 import pytest
+import threading
+import time
 
-GlobalVars.metasmoke_host = None
+from fake import Fake
+from unittest.mock import Mock, patch
 
-reply_value = ""
-messages = {}
 
-# methods to mock parts of SmokeDetector
+def test_parse_room_config():
+    chatcommunicate.parse_room_config("test/test_rooms.yml")
 
+    assert ("stackexchange.com", 11540) in chatcommunicate._command_rooms
+    assert ("stackexchange.com", 30332) in chatcommunicate._command_rooms
+    assert ("stackoverflow.com", 111347) in chatcommunicate._command_rooms
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
-def mock_reply(text, length_check=True):
-    global reply_value
-    reply_value = text
+    assert ("stackexchange.com", 3) not in chatcommunicate._command_rooms
+    assert ("stackexchange.com", 54445) not in chatcommunicate._command_rooms
+    assert ("meta.stackexchange.com", 89) not in chatcommunicate._command_rooms
 
+    assert ("stackexchange.com", 11540) in chatcommunicate._watcher_rooms
+    assert ("stackexchange.com", 3) in chatcommunicate._watcher_rooms
+    assert ("meta.stackexchange.com", 89) in chatcommunicate._watcher_rooms
 
-# noinspection PyMissingTypeHints
-def mock_get_message(msg_id):
-    if msg_id in messages:
-        return mock_event(messages[msg_id], 1, 11540, "Charcoal HQ", 120914, u"SmokeDetector").message
-    return None
+    assert ("stackexchange.com", 30332) not in chatcommunicate._watcher_rooms
+    assert ("stackexchange.com", 54445) not in chatcommunicate._watcher_rooms
+    assert ("stackoverflow.com", 111347) not in chatcommunicate._watcher_rooms
 
+    assert chatcommunicate._privileges[("stackexchange.com", 11540)] == {1, 16070}
+    assert chatcommunicate._privileges[("stackexchange.com", 30332)] == set()
+    assert chatcommunicate._privileges[("stackexchange.com", 3)] == set()
+    assert chatcommunicate._privileges[("stackexchange.com", 54445)] == set()
+    assert chatcommunicate._privileges[("meta.stackexchange.com", 89)] == {42}
+    assert chatcommunicate._privileges[("stackoverflow.com", 111347)] == {1337, 256, 4766556}
 
-# noinspection PyShadowingBuiltins,PyMissingTypeHints
-def mock_event(content, event_type, room_id, room_name, user_id, user_name, id=28258802, message_id=15249005, time_stamp=1398822427):
-    global reply_value
+    assert len(chatcommunicate._room_roles) == 5
+    assert chatcommunicate._room_roles["debug"] == {("stackexchange.com", 11540)}
+    assert chatcommunicate._room_roles["all"] == {("stackexchange.com", 11540),
+                                                  ("stackexchange.com", 54445),
+                                                  ("stackoverflow.com", 111347)}
+    assert chatcommunicate._room_roles["metatavern"] == {("meta.stackexchange.com", 89)}
+    assert chatcommunicate._room_roles["delay"] == {("meta.stackexchange.com", 89)}
+    assert chatcommunicate._room_roles["no-all-caps title"] == {("meta.stackexchange.com", 89)}
 
-    reply_value = ""
-    event_data = {
-        "content": content,
-        "event_type": event_type,
-        "id": id,
-        "message_id": message_id,
-        "room_id": room_id,
-        "room_name": room_name,
-        "time_stamp": time_stamp,
-        "user_id": user_id,
-        "user_name": user_name
-    }
 
-    event = events.make(event_data, client.Client())
-    event.message.reply = mock_reply
-    event.message.content_source = content
-    return event
+@patch("chatcommunicate.threading.Thread")
+@patch("chatcommunicate.Client")
+@patch("chatcommunicate.parse_room_config")
+def test_init(room_config, client_constructor, thread):
+    client = Mock()
+    client_constructor.return_value = client
 
+    client.login.side_effect = Exception()
+    threw_exception = False
 
-# noinspection PyMissingTypeHints
-def mock_previous_messages(messages_with_ids):
-    global messages
-    messages = messages_with_ids
-    GlobalVars.latest_smokedetector_messages[GlobalVars.charcoal_room_id] = [id for id, text in messages_with_ids.items()]
+    try:
+        chatcommunicate.init("shoutouts", "to simpleflips")
+    except Exception as e:
+        assert str(e) == "Failed to log into stackexchange.com"
+        threw_exception = True
 
+    assert threw_exception
 
-# noinspection PyShadowingNames,PyMissingTypeHints
-def mock_client_get_message(client):
-    client.get_message = mock_get_message
-    return client
+    client.login.side_effect = None
+    client.login.reset_mock()
+    client_constructor.reset_mock()
 
+    room_config.side_effect = lambda _: room_config.get_original()("test/test_rooms.yml")
+    GlobalVars.standby_mode = True
+    chatcommunicate.init("shoutouts", "to simpleflips")
 
-# Helper methods
+    assert len(chatcommunicate._rooms) == 0
+    assert client.login.call_count == 3
 
+    assert client_constructor.call_count == 3
+    client_constructor.assert_any_call("stackexchange.com")
+    client_constructor.assert_any_call("stackoverflow.com")
+    client_constructor.assert_any_call("meta.stackexchange.com")
 
-# noinspection PyShadowingBuiltins,PyMissingTypeHints
-def is_user_currently_whitelisted(link, site, id):
-    event = mock_event("!!/iswlu {}".format(link), 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    if reply_value == "User is whitelisted (`{}` on `{}`).".format(site, id):
-        return True
-    if reply_value == "User is not whitelisted (`{}` on `{}`).".format(site, id):
-        return False
-    return -1
+    assert thread.call_count == 2
+    thread.assert_any_call(name="pickle ---rick--- runner", target=chatcommunicate.pickle_last_messages, daemon=True)
+    thread.assert_any_call(name="message sender", target=chatcommunicate.send_messages, daemon=True)
 
+    client.login.reset_mock()
+    client_constructor.reset_mock()
+    thread.reset_mock()
 
-# noinspection PyShadowingBuiltins,PyMissingTypeHints
-def is_user_currently_blacklisted(link, site, id):
-    event = mock_event("!!/isblu {}".format(link), 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    if reply_value == "User is blacklisted (`{}` on `{}`).".format(site, id):
-        return True
-    if reply_value == "User is not blacklisted (`{}` on `{}`).".format(site, id):
-        return False
-    return -1
+    GlobalVars.standby_mode = False
 
+    counter = 0
 
-# Now starts the tests
+    def throw_every_other(*_):
+        nonlocal counter
 
+        counter += 1
+        if counter & 1:
+            raise Exception()
 
-# noinspection PyMissingTypeHints
-def test_blame():
-    # Get a suitable message
-    blame_event = mock_event("!!/blame", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(blame_event, client.Client())
-    assert reply_value == u"It's [Doorknob 冰](//chat.stackexchange.com/users/59776)'s fault."
+    client.login.side_effect = throw_every_other
+    chatcommunicate.init("shoutouts", "to simpleflips")
 
+    assert client.login.call_count == 6
+    assert counter == 6
 
-# noinspection PyMissingTypeHints
-def test_wut():
-    blame_event = mock_event("!!/wut", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(blame_event, client.Client())
-    assert reply_value == u"Whaddya mean, 'wut'? Humans..."
+    assert client_constructor.call_count == 3
+    client_constructor.assert_any_call("stackexchange.com")
+    client_constructor.assert_any_call("stackoverflow.com")
+    client_constructor.assert_any_call("meta.stackexchange.com")
 
+    assert thread.call_count == 2
+    thread.assert_any_call(name="pickle ---rick--- runner", target=chatcommunicate.pickle_last_messages, daemon=True)
+    thread.assert_any_call(name="message sender", target=chatcommunicate.send_messages, daemon=True)
 
-# noinspection PyMissingTypeHints
-def test_coffee():
-    # Get a suitable message
-    event = mock_event("!!/coffee", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert u"for @Doorknob冰" in reply_value
+    assert len(chatcommunicate._rooms) == 3
+    assert chatcommunicate._rooms[("stackexchange.com", 11540)].deletion_watcher is True
+    assert chatcommunicate._rooms[("stackexchange.com", 30332)].deletion_watcher is False
+    assert chatcommunicate._rooms[("stackoverflow.com", 111347)].deletion_watcher is False
 
 
-# noinspection PyMissingTypeHints
-def test_tea():
-    # Get a suitable message
-    event = mock_event("!!/coffee", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert u"for @Doorknob冰" in reply_value
+@pytest.mark.skipif(os.path.isfile("messageData.p"), reason="shouldn't overwrite file")
+@patch("chatcommunicate.pickle.dump")
+def test_pickle_rick(dump):
+    try:
+        threading.Thread(target=chatcommunicate.pickle_last_messages, daemon=True).start()
 
+        chatcommunicate._pickle_run.set()
 
-@pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"),
-                    reason="shouldn't overwrite file")
-def test_blacklisted_users():
-    assert is_user_currently_blacklisted("http://meta.stackexchange.com/users/237685/hichris123", "237685", "meta.stackexchange.com") is False
-
-    event = mock_event("!!/rmblu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is not blacklisted."
+        # Yield to the pickling thread until it acquires the lock again
+        while len(chatcommunicate._pickle_run._cond._waiters) == 0:
+            time.sleep(0)
 
-    event = mock_event("!!/addblu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User blacklisted (`237685` on `meta.stackexchange.com`)."
-    assert is_user_currently_blacklisted("http://meta.stackexchange.com/users/237685/hichris123", "237685", "meta.stackexchange.com")
-
-    event = mock_event("!!/rmblu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User removed from blacklist (`237685` on `meta.stackexchange.com`)."
-    assert is_user_currently_blacklisted("http://meta.stackexchange.com/users/237685/hichris123", "237685", "meta.stackexchange.com") is False
+        assert dump.call_count == 1
 
-    event = mock_event("!!/isblu http://meta.stackexchange.com/", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`."
+        call, _ = dump.call_args_list[0]
+        assert isinstance(call[0], chatcommunicate.LastMessages)
+        assert isinstance(call[1], io.IOBase) and call[1].name == "messageData.p"
+    finally:
+        os.remove("messageData.p")
 
-    event = mock_event("!!/addblu http://meta.stackexchange.com/", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`."
 
-    event = mock_event("!!/rmblu http://meta.stackexchange.com/", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`."
+@patch("chatcommunicate.get_last_messages")
+@patch("chatcommunicate._pickle_run")
+def test_on_msg(pickle_rick, get_last_messages):
+    chatcommunicate._last_messages = chatcommunicate.LastMessages({}, collections.OrderedDict())
 
-    # cleanup
-    os.remove("blacklistedUsers.p")
-
+    client = Fake({
+        "_br": {
+            "user_id": 1337
+        },
 
-# noinspection PyMissingTypeHints
-@pytest.mark.skipif(os.path.isfile("whitelistedUsers.p"),
-                    reason="shouldn't overwrite file")
-def test_whitelisted_users():
-    assert is_user_currently_whitelisted("http://meta.stackexchange.com/users/237685/hichris123", "237685", "meta.stackexchange.com") is False
-
-    event = mock_event("!!/rmwlu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User is not whitelisted."
-
-    event = mock_event("!!/addwlu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User whitelisted (`237685` on `meta.stackexchange.com`)."
-    assert is_user_currently_whitelisted("http://meta.stackexchange.com/users/237685/hichris123", "237685", "meta.stackexchange.com")
-
-    event = mock_event("!!/rmwlu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User removed from whitelist (`237685` on `meta.stackexchange.com`)."
-    assert is_user_currently_whitelisted("http://meta.stackexchange.com/users/237685/hichris123", "237685", "meta.stackexchange.com") is False
+        "host": "stackexchange.com"
+    })
 
-    event = mock_event("!!/iswlu http://meta.stackexchange.com/", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`."
+    room_data = chatcommunicate.RoomData(Mock(), Mock(), -1, (), False)
+    chatcommunicate._rooms[("stackexchange.com", 11540)] = room_data
 
-    event = mock_event("!!/addwlu http://meta.stackexchange.com/", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`."
+    chatcommunicate.on_msg(Fake({}, spec=chatcommunicate.events.MessageStarred), None)  # don't reply to events we don't care about
 
-    event = mock_event("!!/rmwlu http://meta.stackexchange.com/", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`."
+    msg1 = Fake({
+        "message": {
+            "owner": {
+                "id": 1,
+            },
 
-    # cleanup
-    os.remove("whitelistedUsers.p")
-
+            "parent": None,
+            "content": "shoutouts to simpleflips"
+        }
+    }, spec=chatcommunicate.events.MessagePosted)
 
-# noinspection PyMissingTypeHints
-def test_privileged_users():
-    event = mock_event("!!/amiprivileged", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == u"\u2713 You are a privileged user."
-
-    event = mock_event("!!/amiprivileged", 1, 11540, "Charcoal HQ", -5, u"Some bot")
-    watcher(event, client.Client())
-    assert reply_value == u"\u2573 " + GlobalVars.not_privileged_warning
+    chatcommunicate.on_msg(msg1, client)
 
+    msg2 = Fake({
+        "message": {
+            "room": {
+                "id": 11540
+            },
 
-# noinspection PyMissingTypeHints
-def test_unprivileged_denial():
-    event = mock_event("!!/rmwlu http://meta.stackexchange.com/users/237685/hichris123", 1, 11540, "Charcoal HQ", -5, u"Some bot")
-    watcher(event, client.Client())
-    assert reply_value == GlobalVars.not_privileged_warning
+            "owner": {
+                "id": 1337
+            },
 
+            "id": 999,
+            "parent": None,
+            "content": "!!/not_actually_a_command"
+        }
+    }, spec=chatcommunicate.events.MessagePosted)
 
-# noinspection PyMissingTypeHints
-def test_test_command():
-    event = mock_event("!!/test", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "Nothing to test"
+    room_data.last_report_data = "did you hear about what happened to pluto"
 
-    event = mock_event("!!/test my perfectly valid string which shouldn't be caught", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "> Would not be caught for title, body, and username."
+    chatcommunicate.on_msg(msg2, client)
 
-    event = mock_event("!!/test 18669786819 gmail customer service number 1866978-6819 gmail support number", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert "in title" in reply_value
-    assert "in body" in reply_value
-    assert "in username" in reply_value
-
-
-# noinspection PyMissingTypeHints
-@pytest.mark.skipif(os.path.isfile("notifications.p"),
-                    reason="shouldn't overwrite file")
-def test_notification():
-    event = mock_event("!!/notify", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "2 arguments expected"
+    assert chatcommunicate._last_messages.messages[("stackexchange.com", 11540)] == collections.deque((999,))
+    assert chatcommunicate._last_messages.reports == collections.OrderedDict({("stackexchange.com", 999): "did you hear about what happened to pluto"})
+    assert room_data.last_report_data == ()
 
-    event = mock_event("!!/willibenotified", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "2 arguments expected"
+    pickle_rick.set.assert_called_once()
+    room_data.lock.set.assert_called_once()
 
-    event = mock_event("!!/unnotify", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "2 arguments expected"
+    msg3 = Fake({
+        "message": {
+            "room": {
+                "id": 11540,
+            },
 
-    event = mock_event("!!/notify abcd meta.stackexchange.com", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "Room ID is invalid."
+            "owner": {
+                "id": 1
+            },
 
-    event = mock_event("!!/willibenotified abcd meta.stackexchange.com", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "Room ID is invalid"
+            "id": 999,
+            "parent": None,
+            "reply": Mock(),
+            "content": "!!/a_command"
+        }
+    }, spec=chatcommunicate.events.MessagePosted)
 
-    event = mock_event("!!/unnotify abcd meta.stackexchange.com", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "Room ID is invalid."
-
-    event = mock_event("!!/notify 11540 meat.stackexchange.com", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "The given SE site does not exist."
-
-    event = mock_event("!!/willibenotified 11540 meta.stackexchange.com", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "No, you won't be notified for that site in that room."
-
-    event = mock_event("!!/notify 11540 meta.stackexchange.com", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "You'll now get pings from me if I report a post on `meta.stackexchange.com`, in room `11540` on `chat.stackexchange.com`"
-
-    event = mock_event("!!/willibenotified 11540 meta.stackexchange.com", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "Yes, you will be notified for that site in that room."
-
-    event = mock_event("!!/notify 11540 meta.stackexchange.com", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "That notification configuration is already registered."
-
-    event = mock_event("!!/unnotify 11540 meta.stackexchange.com", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "I will no longer ping you if I report a post on `meta.stackexchange.com`, in room `11540` on `chat.stackexchange.com`"
-
-    event = mock_event("!!/unnotify 11540 meta.stackexchange.com", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "That configuration doesn't exist."
-
-    event = mock_event("!!/notify 11540 meta.stackexchange.com-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == ""
-
-    event = mock_event("!!/unnotify 11540 meta.stackexchange.com-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == ""
-
-    event = mock_event("!!/willibenotified 11540 meta.stackexchange.com", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "No, you won't be notified for that site in that room."
-
-    # cleanup
-    os.remove("notifications.p")
-
-
-# noinspection PyMissingTypeHints
-def test_messages_not_sent():
-    event = mock_event("test message", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    # If this fails, you have utterly broken something. Do *not* even think of pulling because people will scream and it will be ugly. Bad things will happen, and the world will fall into anarchy. So please, please, please... don't break this test.
-    assert reply_value == ""
-
-
-# noinspection PyMissingTypeHints
-def test_manual_report(capfd):
-    event = mock_event("!!/report http://stackoverflow.com/questions/1000", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "Post 1: Could not find data for this post in the API. It may already have been deleted."
-
-    # Test batch reporting
-    event = mock_event("!!/report http://stackoverflow.com/a/1732454 http://stackoverflow.com/q/14405063/189134", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == ''
-
-    # Remove blacklisted users from above reports
-    event = mock_event("!!/rmblu http://stackoverflow.com/users/18936", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    event = mock_event("!!/rmblu http://stackoverflow.com/users/1715740", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-
-    os.remove("whyData.p")
-    os.remove("blacklistedUsers.p")
-
-
-@pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"),
-                    reason="shouldn't overwrite file")
-def test_true_positive(capsys):
-    mocked_client = mock_client_get_message(client.Client())
-
-    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
-
-    # Test that it properly fails when no messages in history
-    event = mock_event("sd tp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, mocked_client)
-    assert reply_value == "I don't have a record of any messages posted."
-
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    event = mock_event("sd 10tp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, mocked_client)
-    assert reply_value == "I only have a record of 1 of my messages; that's not enough to execute all commands. No commands were executed."
-
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    event = mock_event("sd notacommand-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, mocked_client)
-    assert reply_value == ""
-
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    event = mock_event("sd tp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, mocked_client)
-    assert reply_value == ""
-
-    event = mock_event(":1234 tp", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == "Recorded question as true positive in metasmoke. Use `tpu` or `trueu` if you want to blacklist a user."
-
-    event = mock_event(":1234 tp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == ""
-
-    event = mock_event(":1234 tpu", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == "Blacklisted user and registered question as true positive."
-    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com")
-
-    event = mock_event(":1234 tpu-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == ""
-    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com")
-
-    event = mock_event("!!/rmblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User removed from blacklist (`1` on `stackoverflow.com`)."
-    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
-
-    event = mock_event(":1234 tpu-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: 'Not a report yay for bots'})
-    watcher(event, mocked_client)
-    assert reply_value == "That message is not a report."
-
-    event = mock_event(":1234 tp", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == "Recorded answer as true positive in metasmoke. If you want to blacklist the poster of the answer, use `trueu` or `tpu`."
-
-    event = mock_event(":1234 tp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == ""
-
-    event = mock_event(":1234 tpu", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == "Blacklisted user."
-    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com")
-
-    event = mock_event(":1234 tpu-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == ""
-    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com")
-
-    event = mock_event("!!/rmblu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User removed from blacklist (`1` on `stackoverflow.com`)."
-    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
-
-    # cleanup
-    os.remove("blacklistedUsers.p")
-
-
-@pytest.mark.skipif(os.path.isfile("whitelistedUsers.p") or os.path.isfile("falsePositives.p"),
-                    reason="shouldn't overwrite file")
-def test_false_positive():
-    mocked_client = mock_client_get_message(client.Client())
-
-    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
-
-    event = mock_event(":1234 fp", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == "Registered question as false positive."
-    assert is_false_positive(("1000", "stackoverflow.com"))
-
-    GlobalVars.false_positives = []
-    assert not is_false_positive(("1000", "stackoverflow.com"))
-    event = mock_event(":1234 fp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == ""
-    assert is_false_positive(("1000", "stackoverflow.com"))
-
-    GlobalVars.false_positives = []
-    assert not is_false_positive(("1000", "stackoverflow.com"))
-    event = mock_event(":1234 fpu", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == "Registered question as false positive and whitelisted user."
-    assert is_false_positive(("1000", "stackoverflow.com"))
-    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com")
-    event = mock_event("!!/rmwlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User removed from whitelist (`1` on `stackoverflow.com`)."
-    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
-
-    GlobalVars.false_positives = []
-    assert not is_false_positive(("1000", "stackoverflow.com"))
-    event = mock_event(":1234 fpu-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == ""
-    assert is_false_positive(("1000", "stackoverflow.com"))
-    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com")
-    event = mock_event("!!/rmwlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User removed from whitelist (`1` on `stackoverflow.com`)."
-    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
-
-    event = mock_event(":1234 fp", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == "Registered answer as false positive."
-    assert is_false_positive(("1000", "stackoverflow.com"))
-
-    GlobalVars.false_positives = []
-    assert not is_false_positive(("1000", "stackoverflow.com"))
-    event = mock_event(":1234 fp-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == ""
-    assert is_false_positive(("1000", "stackoverflow.com"))
-
-    GlobalVars.false_positives = []
-    assert not is_false_positive(("1000", "stackoverflow.com"))
-    event = mock_event(":1234 fpu", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == "Registered answer as false positive and whitelisted user."
-    assert is_false_positive(("1000", "stackoverflow.com"))
-    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com")
-    event = mock_event("!!/rmwlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User removed from whitelist (`1` on `stackoverflow.com`)."
-    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
-
-    GlobalVars.false_positives = []
-    assert not is_false_positive(("1000", "stackoverflow.com"))
-    event = mock_event(":1234 fpu-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] Bad keyword in answer: [TEST](//stackoverflow.com/a/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == ""
-    assert is_false_positive(("1000", "stackoverflow.com"))
-    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com")
-    event = mock_event("!!/rmwlu http://stackoverflow.com/users/1", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    watcher(event, client.Client())
-    assert reply_value == "User removed from whitelist (`1` on `stackoverflow.com`)."
-    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
-
-    event = mock_event(":1234 fpu-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: 'Not a report yay for bots'})
-    watcher(event, mocked_client)
-    assert reply_value == "That message is not a report."
-
-    # cleanup
-    os.remove("whitelistedUsers.p")
-    os.remove("falsePositives.p")
-
-
-# noinspection PyMissingTypeHints
-@pytest.mark.skipif(os.path.isfile("ignoredPosts.p"),
-                    reason="shouldn't overwrite file")
-def test_ignore():
-    mocked_client = mock_client_get_message(client.Client())
-
-    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
-    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
-
-    assert not is_ignored_post(("1000", "stackoverflow.com"))
-    event = mock_event(":1234 ignore", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == "Post ignored; alerts about it will no longer be posted."
-    assert is_ignored_post(("1000", "stackoverflow.com"))
-    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
-    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
-    GlobalVars.ignored_posts = []
-
-    assert not is_ignored_post(("1000", "stackoverflow.com"))
-    event = mock_event(":1234 ignore-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: '[ [SmokeDetector](https://github.com/Charcoal-SE/SmokeDetector) ] All-caps title: [TEST](//stackoverflow.com/questions/1000) by [Community](//stackoverflow.com/users/1) on `stackoverflow.com`'})
-    watcher(event, mocked_client)
-    assert reply_value == ""
-    assert is_ignored_post(("1000", "stackoverflow.com"))
-    assert is_user_currently_whitelisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
-    assert is_user_currently_blacklisted("http://stackoverflow.com/users/1", "1", "stackoverflow.com") is False
-    GlobalVars.ignored_posts = []
-
-    event = mock_event(":1234 ignore-", 1, 11540, "Charcoal HQ", 59776, u"Doorknob 冰")
-    mock_previous_messages({1234: 'Not a report yay for bots'})
-    watcher(event, mocked_client)
-    assert reply_value == "That message is not a report."
-
-    # cleanup
-    os.remove("ignoredPosts.p")
+    mock_command = Mock(side_effect=lambda *_, **kwargs: "hi" if not kwargs["quiet_action"] else "")
+    chatcommunicate._commands["prefix"]["a_command"] = (mock_command, (0, 0))
+
+    chatcommunicate.on_msg(msg3, client)
+
+    msg3.message.reply.assert_called_once_with("hi", length_check=False)
+    mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a_command", quiet_action=False)
+    msg3.message.reply.reset_mock()
+    mock_command.reset_mock()
+
+    msg3.message.content = "!!/a_command-"
+    chatcommunicate.on_msg(msg3, client)
+
+    msg3.message.reply.assert_not_called()
+    mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a_command", quiet_action=True)
+    msg3.message.reply.reset_mock()
+    mock_command.reset_mock()
+
+    chatcommunicate._commands["prefix"]["a_command"] = (mock_command, (0, 1))
+    chatcommunicate.on_msg(msg3, client)
+
+    msg3.message.reply.assert_not_called()
+    mock_command.assert_called_once_with(None, original_msg=msg3.message, alias_used="a_command", quiet_action=True)
+    msg3.message.reply.reset_mock()
+    mock_command.reset_mock()
+
+    msg3.message.content = "!!/a_command 1 2 3"
+    chatcommunicate.on_msg(msg3, client)
+
+    msg3.message.reply.assert_called_once_with("hi", length_check=False)
+    mock_command.assert_called_once_with("1 2 3", original_msg=msg3.message, alias_used="a_command", quiet_action=False)
+    msg3.message.reply.reset_mock()
+    mock_command.reset_mock()
+
+    chatcommunicate._commands["prefix"]["a_command"] = (mock_command, (1, 2))
+
+    msg3.message.content = "!!/a_command"
+    chatcommunicate.on_msg(msg3, client)
+
+    msg3.message.reply.assert_called_once_with("Too few arguments.", length_check=False)
+    mock_command.assert_not_called()
+    msg3.message.reply.reset_mock()
+    mock_command.reset_mock()
+
+    msg3.message.content = "!!/a_command 1 2 oatmeal"
+    chatcommunicate.on_msg(msg3, client)
+
+    msg3.message.reply.assert_called_once_with("Too many arguments.", length_check=False)
+    mock_command.assert_not_called()
+    msg3.message.reply.reset_mock()
+    mock_command.reset_mock()
+
+    msg3.message.content = "!!/a_command- 1 2"
+    chatcommunicate.on_msg(msg3, client)
+
+    msg3.message.reply.assert_not_called()
+    mock_command.assert_called_once_with("1", "2", original_msg=msg3.message, alias_used="a_command", quiet_action=True)
+    msg3.message.reply.reset_mock()
+    mock_command.reset_mock()
+
+    msg3.message.content = "!!/a_command 3"
+    chatcommunicate.on_msg(msg3, client)
+
+    msg3.message.reply.assert_called_once_with("hi", length_check=False)
+    mock_command.assert_called_once_with("3", None, original_msg=msg3.message, alias_used="a_command", quiet_action=False)
+
+    mock_command.reset_mock()
+
+    msg4 = Fake({
+        "message": {
+            "room": {
+                "id": 11540,
+            },
+
+            "owner": {
+                "id": 1
+            },
+
+            "parent": {
+                "owner": {
+                    "id": 2
+                }
+            },
+
+            "id": 1000,
+            "content": "asdf"
+        }
+    }, spec=chatcommunicate.events.MessageEdited)
+
+    chatcommunicate.on_msg(msg4, client)
+
+    msg5 = Fake({
+        "message": {
+            "room": {
+                "id": 11540,
+            },
+
+            "owner": {
+                "id": 1
+            },
+
+            "parent": {
+                "owner": {
+                    "id": 1337
+                }
+            },
+
+            "id": 1000,
+            "reply": Mock(),
+            "content": "@SmokeDetector why   "
+        }
+    }, spec=chatcommunicate.events.MessageEdited)
+
+    chatcommunicate._commands["reply"]["why"] = (mock_command, (0, 0))
+
+    threw_exception = False
+
+    try:
+        chatcommunicate.on_msg(msg5, client)
+    except AssertionError:
+        threw_exception = True
+
+    assert threw_exception
+    mock_command.assert_not_called()
+    msg5.message.reply.assert_not_called()
+
+    chatcommunicate._commands["reply"]["why"] = (mock_command, (1, 1))
+    chatcommunicate.on_msg(msg5, client)
+
+    msg5.message.reply.assert_called_once_with("hi", length_check=False)
+    mock_command.assert_called_once_with(msg5.message.parent, original_msg=msg5.message, alias_used="why", quiet_action=False)
+    msg5.message.reply.reset_mock()
+    mock_command.reset_mock()
+
+    msg5.message.content = "@SmokeDetector why@!@#-"
+    chatcommunicate.on_msg(msg5, client)
+
+    msg5.message.reply.assert_not_called()
+    mock_command.assert_called_once_with(msg5.message.parent, original_msg=msg5.message, alias_used="why", quiet_action=True)
+
+    msg6 = Fake({
+        "message": {
+            "room": {
+                "id": 11540,
+            },
+
+            "owner": {
+                "id": 1
+            },
+
+            "id": 1000,
+            "parent": None,
+            "reply": Mock(),
+            "content": "sd why - 2why 2why- 2- why- "
+        }
+    }, spec=chatcommunicate.events.MessageEdited)
+
+    get_last_messages.side_effect = lambda _, num: (Fake({"id": i}) for i in range(num))
+    chatcommunicate.on_msg(msg6, client)
+
+    msg6.message.reply.assert_called_once_with("[:0] hi\n[:1] <skipped>\n[:2] hi\n[:3] hi\n[:4] <processed without return value>\n[:5] <processed without return value>\n[:6] <skipped>\n[:7] <skipped>\n[:8] <processed without return value>", length_check=False)
+
+
+def test_message_type():
+    fake1 = Fake({}, spec=chatcommunicate.Message)
+    assert chatcommands.message(fake1) == fake1
+
+    fake2 = Fake({})
+    threw_exception = False
+
+    try:
+        chatcommands.message(fake2)
+    except AssertionError:
+        threw_exception = True
+
+    assert threw_exception
