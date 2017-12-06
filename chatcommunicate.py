@@ -257,7 +257,7 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=()):
                 if "delay" in _room_roles and room_id in _room_roles["delay"]:
                     threading.Thread(name="delayed post",
                                      target=DeletionWatcher.post_message_if_not_deleted,
-                                     args=(report_data[0], msg, room))
+                                     args=(report_data[0], msg, room)).start()
                     continue
 
             _msg_queue.put((room, msg))
