@@ -176,13 +176,15 @@ def on_msg(msg, client):
             room_data.lock.set()
             _pickle_run.set()
         elif message.parent and message.parent.owner.id == client._br.user_id:
-            command = message.content.split(" ", 1)[1]
-            result = dispatch_reply_command(message.parent, message, command)
+            content = GlobalVars.parser.unescape(message.content).lower()
+            cmd = content.split(" ", 1)[1]
+
+            result = dispatch_reply_command(message.parent, message, cmd)
 
             if result:
                 message.reply(result, length_check=False)
         elif message.content.startswith("sd "):
-            result = dispatch_shorthand_command(message, message.room)
+            result = dispatch_shorthand_command(message)
 
             if result:
                 message.reply(result, length_check=False)
@@ -366,9 +368,7 @@ def dispatch_command(msg):
                 return func(*args, original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
 
 
-def dispatch_reply_command(msg, reply, command_name):
-    cmd = GlobalVars.parser.unescape(command_name).lower()
-
+def dispatch_reply_command(msg, reply, cmd):
     quiet_action = cmd[-1] == "-"
     cmd = regex.sub(r"\W*$", "", cmd)
 
@@ -382,7 +382,7 @@ def dispatch_reply_command(msg, reply, command_name):
         return func(msg, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
 
 
-def dispatch_shorthand_command(msg, room):
+def dispatch_shorthand_command(msg):
     commands = GlobalVars.parser.unescape(msg.content[3:]).split()
 
     output = []
@@ -396,7 +396,7 @@ def dispatch_shorthand_command(msg, room):
 
     should_return_output = False
 
-    for current_command, message in zip(processed_commands, get_last_messages(room, len(processed_commands))):
+    for current_command, message in zip(processed_commands, get_last_messages(msg.room, len(processed_commands))):
         if current_command == "-":
             output.append("[:{}] <skipped>".format(message.id))
         else:

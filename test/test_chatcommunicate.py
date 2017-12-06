@@ -381,3 +381,18 @@ def test_on_msg(pickle_rick, get_last_messages):
     chatcommunicate.on_msg(msg6, client)
 
     msg6.message.reply.assert_called_once_with("[:0] hi\n[:1] <skipped>\n[:2] hi\n[:3] hi\n[:4] <processed without return value>\n[:5] <processed without return value>\n[:6] <skipped>\n[:7] <skipped>\n[:8] <processed without return value>", length_check=False)
+
+
+def test_message_type():
+    fake1 = Fake({}, spec=chatcommunicate.Message)
+    assert chatcommands.message(fake1) == fake1
+
+    fake2 = Fake({})
+    threw_exception = False
+
+    try:
+        chatcommands.message(fake2)
+    except AssertionError:
+        threw_exception = True
+
+    assert threw_exception
