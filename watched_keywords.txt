@@ -1898,3 +1898,4 @@
 1512565093	Glorfindel	crackszone\.net
 1512565102	Glorfindel	crackswar\.com
 1512565114	Glorfindel	maqprosoft\.co
+1512573466	Glorfindel	medpasteur\.com
