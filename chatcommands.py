@@ -1391,6 +1391,9 @@ def true(feedback, msg, alias_used="true"):
     _, _, post_type = fetch_post_id_and_site_from_url(post_url)
     message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
 
+    if alias_used[0] == "v":
+        return
+
     if user is not None:
         if alias_used == "k":
             add_blacklisted_user(user, message_url, post_url)

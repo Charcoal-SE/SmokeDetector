@@ -7,6 +7,7 @@ import os.path
 import pickle
 import queue
 import regex
+import requests
 import sys
 import threading
 import time
@@ -139,7 +140,15 @@ def send_messages():
 
         room.lock.wait()
         room.lock.clear()
-        room.room._client._do_action_despite_throttling(("send", room.room.id, msg))
+
+        full_retries = 0
+
+        while full_retries < 3:
+            try:
+                room.room._client._do_action_despite_throttling(("send", room.room.id, msg))
+                break
+            except requests.exceptions.HTTPError:
+                full_retries += 1
 
 
 def on_msg(msg, client):
@@ -224,9 +233,11 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=()):
                     _rooms[room] = RoomData(new_room, threading.Event(), -1, (), deletion_watcher)
                     _rooms[room].lock.set()
 
-                target_rooms.add(_rooms[room])
+                target_rooms.add(room)
 
     for room in target_rooms:
+        room_data = _rooms[room]
+
         if notify_site:
             pings = datahandling.get_user_names_on_notification_list(room.room._client.host,
                                                                      room.room.id,
@@ -237,19 +248,19 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=()):
 
         timestamp = time.time()
 
-        if room.block_time < timestamp and _global_block < timestamp:
+        if room_data.block_time < timestamp and _global_block < timestamp:
             msg = msg.rstrip()
 
             if report_data:
-                room.last_report_data = report_data
+                room_data.last_report_data = report_data
 
                 if "delay" in _room_roles and room in _room_roles["delay"]:
                     threading.Thread(name="delayed post",
                                      target=DeletionWatcher.post_message_if_not_deleted,
-                                     args=(report_data[0], msg, room))
+                                     args=(report_data[0], msg, room_data))
                     continue
 
-            _msg_queue.put((room, msg))
+            _msg_queue.put((room_data, msg))
 
 
 def get_last_messages(room, count):
@@ -347,9 +358,7 @@ def dispatch_command(msg):
     quiet_action = command_name[-1] == "-"
     command_name = regex.sub(r"[[:punct:]]*$", "", command_name)
 
-    if command_name not in _commands["prefix"]:
-        return "No such command '{}'.".format(command_name)
-    else:
+    if command_name in _commands["prefix"]:
         func, (min_arity, max_arity) = _commands["prefix"][command_name]
 
         if max_arity == 0:
