@@ -315,13 +315,13 @@ class Metasmoke:
         GlobalVars.code_privileged_users = set()
 
         for id in response["stackexchange_chat_ids"]:
-            set.add(("stackexchange.com", id))
+            GlobalVars.code_privileged_users.add(("stackexchange.com", id))
 
         for id in response["meta_stackexchange_chat_ids"]:
-            set.add(("meta.stackexchange.com", id))
+            GlobalVars.code_privileged_users.add(("meta.stackexchange.com", id))
 
         for id in response["stackoverflow_chat_ids"]:
-            set.add(("stackoverflow.com", id))
+            GlobalVars.code_privileged_users.add(("stackoverflow.com", id))
 
     @staticmethod
     def determine_if_autoflagged(post_url):
