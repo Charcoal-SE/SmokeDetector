@@ -634,7 +634,6 @@
 1502955349	tripleee	ineedmotivations\.com
 1502955618	tripleee	tribulus\W?terrestris
 1502955676	tripleee	l\W?argin(?:ine)?
-1502966938	tripleee	toddmotto\.com
 1502969219	CalvT븃	alldaygeneric\.com
 1502973604	Glorfindel	saturam\.com
 1502982679	tripleee	convertlotusnotesnsf\.com
@@ -1823,9 +1822,7 @@
 1512172510	paper1111	afterether\.org
 1512201138	paper1111	gertrudex\.postagon\.com
 1512206300	Glorfindel	instant-gaming\.com
-1512218228	A J	parsianpools\.com
 1512221649	Glorfindel	gamingrun\.com
-1512221711	Glorfindel	ebcoo\.net
 1512221780	Glorfindel	euroscicon\.com
 1512222635	Glorfindel	atlantidasubmarine\.com
 1512240330	Federico	oldwoodward\.com
@@ -1846,3 +1843,56 @@
 1512389046	Glorfindel	myinteriors\.ie
 1512390717	Glorfindel	etherhashpower\.com
 1512394536	Mithrandir	psiphoniphone
+1512405080	DJMcMayhem	cabhit
+1512419270	Glorfindel	luxervrental\.com
+1512450079	Suraj Rao	advocateselvakumar\.com
+1512452409	Tetsuya Yamamoto	esearchadvisors\.com
+1512454811	Tetsuya Yamamoto	appngamereskin\.com
+1512456205	Glorfindel	technicalguru\.beep\.com
+1512459609	Glorfindel	novingate\.com
+1512459618	Glorfindel	novinwebsite\.com
+1512459768	Tetsuya Yamamoto	worldeyecam\.com
+1512466172	Mithrandir	our\W?team\W?of\W?experts
+1512469768	ArtOfCode	deepak apples
+1512470239	Mithrandir	shivainfotech\.com
+1512470316	Suraj Rao	turboems\.com
+1512481409	Mithrandir	aestiva\.in
+1512482467	Federico	VTOLEJET\.COM
+1512482467	Federico	HEAVYCARGODRONES\.COM 
+1512482467	Federico	24X7AIRTAXI\.COM 
+1512482467	Federico	FLYINGDRONESCAR\.COM 
+1512482467	Federico	CARSFO\.COM 
+1512482467	Federico	FIRECHIEFDRONE\.COM 
+1512482467	Federico	USADRONEFLEET\.COM 
+1512482467	Federico	DRONESPOLICE\.COM 
+1512482467	Federico	DRONETV1\.COM
+1512482467	Federico	ESCROW\.COM
+1512482467	Federico	YEADOMAIN
+1512483260	tripleee	seoexperts\.ae
+1512487922	Federico	socialwander\.com
+1512488031	Federico	epicfollowers\.co
+1512498256	DJMcMayhem	SapamaCash
+1512505545	Glorfindel	.{0,10}keroncong.{0,10}\.blogspot\.co
+1512549833	Glorfindel	selenium-webdriver\.com
+1512523529	Tetsuya Yamamoto	xinhepacking\.com
+1512523576	Tetsuya Yamamoto	xinrongelectric\.com
+1512523892	Tetsuya Yamamoto	xinlihandbag\.com
+1512524063	Tetsuya Yamamoto	xinlumachinery\.com
+1512538925	paper1111	accountingassignment\.xyz
+1512542272	Tetsuya Yamamoto	globallogic\.com
+1512542914	Tetsuya Yamamoto	wolkwill\.com
+1512544090	paper1111	askopinion\.com
+1512523714	Tetsuya Yamamoto	xinhepackaging.com
+1512554567	Glorfindel	writemyessay\.pro
+1512560605	Suraj Rao	monstertut\.com
+1512563575	Glorfindel	towncalendars\.com
+1512563589	Glorfindel	calendarworld\.info
+1512563598	Glorfindel	imagesugar\.com
+1512565077	Glorfindel	hit5k\.com
+1512565085	Glorfindel	crackstell\.com
+1512565093	Glorfindel	crackszone\.net
+1512565102	Glorfindel	crackswar\.com
+1512565114	Glorfindel	maqprosoft\.co
+1512573466	Glorfindel	medpasteur\.com
+1512573504	Glorfindel	medespoir\.ch
+1512578931	Glorfindel	zumminer
