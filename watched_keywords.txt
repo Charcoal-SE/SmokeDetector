@@ -634,7 +634,6 @@
 1502955349	tripleee	ineedmotivations\.com
 1502955618	tripleee	tribulus\W?terrestris
 1502955676	tripleee	l\W?argin(?:ine)?
-1502966938	tripleee	toddmotto\.com
 1502969219	CalvT븃	alldaygeneric\.com
 1502973604	Glorfindel	saturam\.com
 1502982679	tripleee	convertlotusnotesnsf\.com
@@ -1873,11 +1872,7 @@
 1512487922	Federico	socialwander\.com
 1512488031	Federico	epicfollowers\.co
 1512498256	DJMcMayhem	SapamaCash
-1512505532	Glorfindel	grupkeroncongmodern\.blogspot\.co
-1512505545	Glorfindel	keroncongpanggilan\.blogspot\.co
-1512505572	Glorfindel	keroncongkemayoran\.blogspot\.co
-1512505596	Glorfindel	grupkeroncongjakarta\.blogspot\.co
-1512505610	Glorfindel	keroncongkita\.blogspot\.co
+1512505545	Glorfindel	.{0,10}keroncong.{0,10}\.blogspot\.co
 1512549833	Glorfindel	selenium-webdriver\.com
 1512523529	Tetsuya Yamamoto	xinhepacking\.com
 1512523576	Tetsuya Yamamoto	xinrongelectric\.com
