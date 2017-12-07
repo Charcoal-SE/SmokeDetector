@@ -107,11 +107,12 @@ GlobalVars.standby_message = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                              GlobalVars.location +\
                              ")"
 
+GlobalVars.standby_mode = "standby" in sys.argv
+
 chatcommunicate.init(username, password)
 
-if "standby" in sys.argv:
+if GlobalVars.standby_mode:
     chatcommunicate.tell_rooms_with("debug", GlobalVars.standby_message)
-    GlobalVars.standby_mode = True
     Metasmoke.send_status_ping()
 
     while GlobalVars.standby_mode:
