@@ -81,16 +81,15 @@ def init(username, password):
     else:
         parse_room_config("rooms.yml")
 
-    for site, roomid in _command_rooms:
-        room = _clients[site].get_room(roomid)
-        deletion_watcher = (site, roomid) in _watcher_rooms
+    if not GlobalVars.standby_mode:
+        for site, roomid in _command_rooms:
+            room = _clients[site].get_room(roomid)
+            deletion_watcher = (site, roomid) in _watcher_rooms
 
-        if not GlobalVars.standby_mode:
             room.join()
             room.watch_socket(on_msg)
-
-        _rooms[(site, roomid)] = RoomData(room, threading.Event(), -1, (), deletion_watcher)
-        _rooms[(site, roomid)].lock.set()
+            _rooms[(site, roomid)] = RoomData(room, threading.Event(), -1, (), deletion_watcher)
+            _rooms[(site, roomid)].lock.set()
 
     if os.path.isfile("messageData.p"):
         _last_messages = pickle.load(open("messageData.p", "rb"))
@@ -230,9 +229,7 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=()):
                     deletion_watcher = room in _watcher_rooms
 
                     new_room = _clients[site].get_room(roomid)
-
-                    if not GlobalVars.standby_mode:
-                        new_room.join()
+                    new_room.join()
 
                     _rooms[room] = RoomData(new_room, threading.Event(), -1, (), deletion_watcher)
                     _rooms[room].lock.set()
