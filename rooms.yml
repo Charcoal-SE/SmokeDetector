@@ -292,6 +292,7 @@ meta.stackexchange.com:
       - 346854   # DonQuiKong
       - 284336   # Catija
       - 205533   # Videonauth
+      - 310369   # quartata
 
 
 stackoverflow.com:
@@ -379,6 +380,7 @@ stackoverflow.com:
       - 8242698  # user0042
       - 3773011  # Makyen
       - 2858773  # Ajay Brahmakshatriya
+      - 4766556  # quartata
 
   111347:  # SOBotics
     commands: true
