@@ -8,11 +8,9 @@ import websocket
 from bs4 import BeautifulSoup
 from threading import Thread
 from urllib.parse import urlparse
-import chatcommunicate
 import metasmoke
 from globalvars import GlobalVars
 import datahandling
-from parsing import fetch_post_id_and_site_from_url
 
 
 # noinspection PyClassHasNoInit,PyBroadException,PyMethodParameters
@@ -81,10 +79,8 @@ class DeletionWatcher:
         return False
 
     @classmethod
-    def check_if_report_was_deleted(self, post_url, message):
-        post_site_id = fetch_post_id_and_site_from_url(post_url)
+    def check_if_report_was_deleted(self, post_site_id, post_url, message):
         was_report_deleted = self.check_websocket_for_deletion(post_site_id, post_url, 1200)
-
         if was_report_deleted:
             try:
                 message.delete()
@@ -92,11 +88,8 @@ class DeletionWatcher:
                 pass
 
     @classmethod
-    def post_message_if_not_deleted(self, post_url, message_text, room, report_data):
-        post_site_id = fetch_post_id_and_site_from_url(post_url)
+    def post_message_if_not_deleted(self, post_site_id, post_url, message_text, room):
         was_report_deleted = self.check_websocket_for_deletion(post_site_id, post_url, 300)
-
         if not was_report_deleted and not datahandling.is_false_positive(post_site_id[0:2]) and not \
                 datahandling.is_ignored_post(post_site_id[0:2]):
-
-            chatcommunicate._msg_queue.put((room, message_text, report_data))
+            room.send_message(message_text)
