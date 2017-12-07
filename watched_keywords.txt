@@ -1904,3 +1904,4 @@
 1512620993	tripleee	claim-lumen\.ga
 1512632436	tripleee	kharchabachao\.com
 1512632784	tripleee	download25\.com
+1512634164	tripleee	windstream\.net
