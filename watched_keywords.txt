@@ -1912,3 +1912,4 @@
 1512648485	Glorfindel	indiumsoft\.com
 1512651873	Mithrandir	geourbgroup\.com
 1512653210	Glorfindel	freecoupondunia\.com
+1512653412	Glorfindel	clickpay24\.tv
