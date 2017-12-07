@@ -82,7 +82,7 @@ class DeletionWatcher:
 
     @classmethod
     def check_if_report_was_deleted(self, post_url, message):
-        *post_site_id, _ = fetch_post_id_and_site_from_url(post_url)
+        post_site_id = fetch_post_id_and_site_from_url(post_url)
         was_report_deleted = self.check_websocket_for_deletion(post_site_id, post_url, 1200)
 
         if was_report_deleted:
@@ -93,7 +93,7 @@ class DeletionWatcher:
 
     @classmethod
     def post_message_if_not_deleted(self, post_url, message_text, room):
-        *post_site_id, _ = fetch_post_id_and_site_from_url(post_url)
+        post_site_id = fetch_post_id_and_site_from_url(post_url)
         was_report_deleted = self.check_websocket_for_deletion(post_site_id, post_url, 300)
 
         if not was_report_deleted and not datahandling.is_false_positive(post_site_id[0:2]) and not \
