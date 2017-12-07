@@ -1010,3 +1010,4 @@ synoptic\W?boost
 libomax
 lumineux
 renuvaline
+nexacell
