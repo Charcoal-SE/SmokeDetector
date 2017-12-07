@@ -2,7 +2,6 @@
 from spamhandling import handle_spam, check_if_spam
 from datahandling import (add_or_update_api_data, clear_api_data, store_bodyfetcher_queue, store_bodyfetcher_max_ids,
                           store_queue_timings)
-from chatcommunicate import tell_rooms_with
 from globalvars import GlobalVars
 from operator import itemgetter
 from datetime import datetime
@@ -281,25 +280,23 @@ class BodyFetcher:
         message_hq = ""
         if "quota_remaining" in response:
             if response["quota_remaining"] - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0:
-                tell_rooms_with("debug", "API quota rolled over with {0} requests remaining. "
-                                         "Current quota: {1}.".format(GlobalVars.apiquota,
-                                                                      response["quota_remaining"]))
-
+                GlobalVars.charcoal_hq.send_message("API quota rolled over with {0} requests remaining. "
+                                                    "Current quota: {1}.".format(GlobalVars.apiquota,
+                                                                                 response["quota_remaining"]))
                 sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1), reverse=True)
                 api_quota_used_per_site = ""
                 for site_name, quota_used in sorted_calls_per_site:
                     sanatized_site_name = site_name.replace('.com', '').replace('.stackexchange', '')
                     api_quota_used_per_site += sanatized_site_name + ": {0}\n".format(str(quota_used))
                 api_quota_used_per_site = api_quota_used_per_site.strip()
-
-                tell_rooms_with("debug", api_quota_used_per_site)
+                GlobalVars.charcoal_hq.send_message(api_quota_used_per_site, False)
                 clear_api_data()
             if response["quota_remaining"] == 0:
-                tell_rooms_with("debug", "API reports no quota left!  May be a glitch.")
-                tell_rooms_with("debug", str(response))  # No code format for now?
+                GlobalVars.charcoal_hq.send_message("API reports no quota left!  May be a glitch.")
+                GlobalVars.charcoal_hq.send_message(str(response))  # No code format for now?
             if GlobalVars.apiquota == -1:
-                tell_rooms_with("debug", "Restart: API quota is {quota}."
-                                         .format(quota=response["quota_remaining"]))
+                GlobalVars.charcoal_hq.send_message("Restart: API quota is {quota}."
+                                                    .format(quota=response["quota_remaining"]))
             GlobalVars.apiquota = response["quota_remaining"]
         else:
             message_hq = "The quota_remaining property was not in the API response."
@@ -319,7 +316,7 @@ class BodyFetcher:
         GlobalVars.api_request_lock.release()
 
         if len(message_hq) > 0:
-            tell_rooms_with("debug", message_hq.strip())
+            GlobalVars.charcoal_hq.send_message(message_hq.strip())
 
         if "items" not in response:
             return
