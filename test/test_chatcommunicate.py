@@ -145,9 +145,10 @@ def test_pickle_rick(dump):
         os.remove("messageData.p")
 
 
+@patch("chatcommunicate._msg_queue.put")
 @patch("chatcommunicate.get_last_messages")
 @patch("chatcommunicate._pickle_run")
-def test_on_msg(pickle_rick, get_last_messages):
+def test_on_msg(pickle_rick, get_last_messages, post_msg):
     chatcommunicate._last_messages = chatcommunicate.LastMessages({}, collections.OrderedDict())
 
     client = Fake({
@@ -165,6 +166,10 @@ def test_on_msg(pickle_rick, get_last_messages):
 
     msg1 = Fake({
         "message": {
+            "room": {
+                "id": 11540,
+            },
+
             "owner": {
                 "id": 1,
             },
@@ -215,7 +220,6 @@ def test_on_msg(pickle_rick, get_last_messages):
 
             "id": 999,
             "parent": None,
-            "reply": Mock(),
             "content": "!!/a_command"
         }
     }, spec=chatcommunicate.events.MessagePosted)
@@ -225,33 +229,40 @@ def test_on_msg(pickle_rick, get_last_messages):
 
     chatcommunicate.on_msg(msg3, client)
 
-    msg3.message.reply.assert_called_once_with("hi", length_check=False)
+    assert post_msg.call_count == 1
+    print(post_msg.call_args_list[0][0][0][1])
+    assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
     mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a_command", quiet_action=False)
-    msg3.message.reply.reset_mock()
+
+    post_msg.reset_mock()
     mock_command.reset_mock()
 
     msg3.message.content = "!!/a_command-"
     chatcommunicate.on_msg(msg3, client)
 
-    msg3.message.reply.assert_not_called()
+    post_msg.assert_not_called()
     mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a_command", quiet_action=True)
-    msg3.message.reply.reset_mock()
+
+    post_msg.reset_mock()
     mock_command.reset_mock()
 
     chatcommunicate._commands["prefix"]["a_command"] = (mock_command, (0, 1))
     chatcommunicate.on_msg(msg3, client)
 
-    msg3.message.reply.assert_not_called()
+    post_msg.assert_not_called()
     mock_command.assert_called_once_with(None, original_msg=msg3.message, alias_used="a_command", quiet_action=True)
-    msg3.message.reply.reset_mock()
+
+    post_msg.reset_mock()
     mock_command.reset_mock()
 
     msg3.message.content = "!!/a_command 1 2 3"
     chatcommunicate.on_msg(msg3, client)
 
-    msg3.message.reply.assert_called_once_with("hi", length_check=False)
+    assert post_msg.call_count == 1
+    assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
     mock_command.assert_called_once_with("1 2 3", original_msg=msg3.message, alias_used="a_command", quiet_action=False)
-    msg3.message.reply.reset_mock()
+
+    post_msg.reset_mock()
     mock_command.reset_mock()
 
     chatcommunicate._commands["prefix"]["a_command"] = (mock_command, (1, 2))
@@ -259,33 +270,40 @@ def test_on_msg(pickle_rick, get_last_messages):
     msg3.message.content = "!!/a_command"
     chatcommunicate.on_msg(msg3, client)
 
-    msg3.message.reply.assert_called_once_with("Too few arguments.", length_check=False)
+    assert post_msg.call_count == 1
+    assert post_msg.call_args_list[0][0][0][1] == ":999 Too few arguments."
     mock_command.assert_not_called()
-    msg3.message.reply.reset_mock()
+
+    post_msg.reset_mock()
     mock_command.reset_mock()
 
     msg3.message.content = "!!/a_command 1 2 oatmeal"
     chatcommunicate.on_msg(msg3, client)
 
-    msg3.message.reply.assert_called_once_with("Too many arguments.", length_check=False)
+    assert post_msg.call_count == 1
+    assert post_msg.call_args_list[0][0][0][1] == ":999 Too many arguments."
     mock_command.assert_not_called()
-    msg3.message.reply.reset_mock()
+
+    post_msg.reset_mock()
     mock_command.reset_mock()
 
     msg3.message.content = "!!/a_command- 1 2"
     chatcommunicate.on_msg(msg3, client)
 
-    msg3.message.reply.assert_not_called()
+    post_msg.assert_not_called()
     mock_command.assert_called_once_with("1", "2", original_msg=msg3.message, alias_used="a_command", quiet_action=True)
-    msg3.message.reply.reset_mock()
+
+    post_msg.reset_mock()
     mock_command.reset_mock()
 
     msg3.message.content = "!!/a_command 3"
     chatcommunicate.on_msg(msg3, client)
 
-    msg3.message.reply.assert_called_once_with("hi", length_check=False)
+    assert post_msg.call_count == 1
+    assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
     mock_command.assert_called_once_with("3", None, original_msg=msg3.message, alias_used="a_command", quiet_action=False)
 
+    post_msg.reset_mock()
     mock_command.reset_mock()
 
     msg4 = Fake({
@@ -328,7 +346,6 @@ def test_on_msg(pickle_rick, get_last_messages):
             },
 
             "id": 1000,
-            "reply": Mock(),
             "content": "@SmokeDetector why   "
         }
     }, spec=chatcommunicate.events.MessageEdited)
@@ -344,20 +361,22 @@ def test_on_msg(pickle_rick, get_last_messages):
 
     assert threw_exception
     mock_command.assert_not_called()
-    msg5.message.reply.assert_not_called()
+    post_msg.assert_not_called()
 
     chatcommunicate._commands["reply"]["why"] = (mock_command, (1, 1))
     chatcommunicate.on_msg(msg5, client)
 
-    msg5.message.reply.assert_called_once_with("hi", length_check=False)
+    assert post_msg.call_count == 1
+    assert post_msg.call_args_list[0][0][0][1] == ":1000 hi"
     mock_command.assert_called_once_with(msg5.message.parent, original_msg=msg5.message, alias_used="why", quiet_action=False)
-    msg5.message.reply.reset_mock()
+
+    post_msg.reset_mock()
     mock_command.reset_mock()
 
     msg5.message.content = "@SmokeDetector why@!@#-"
     chatcommunicate.on_msg(msg5, client)
 
-    msg5.message.reply.assert_not_called()
+    post_msg.assert_not_called()
     mock_command.assert_called_once_with(msg5.message.parent, original_msg=msg5.message, alias_used="why", quiet_action=True)
 
     msg6 = Fake({
@@ -372,7 +391,6 @@ def test_on_msg(pickle_rick, get_last_messages):
 
             "id": 1000,
             "parent": None,
-            "reply": Mock(),
             "content": "sd why - 2why 2why- 2- why- "
         }
     }, spec=chatcommunicate.events.MessageEdited)
@@ -380,7 +398,8 @@ def test_on_msg(pickle_rick, get_last_messages):
     get_last_messages.side_effect = lambda _, num: (Fake({"id": i}) for i in range(num))
     chatcommunicate.on_msg(msg6, client)
 
-    msg6.message.reply.assert_called_once_with("[:0] hi\n[:1] <skipped>\n[:2] hi\n[:3] hi\n[:4] <processed without return value>\n[:5] <processed without return value>\n[:6] <skipped>\n[:7] <skipped>\n[:8] <processed without return value>", length_check=False)
+    assert post_msg.call_count == 1
+    assert post_msg.call_args_list[0][0][0][1] == ":1000 [:0] hi\n[:1] <skipped>\n[:2] hi\n[:3] hi\n[:4] <processed without return value>\n[:5] <processed without return value>\n[:6] <skipped>\n[:7] <skipped>\n[:8] <processed without return value>"
 
 
 def test_message_type():

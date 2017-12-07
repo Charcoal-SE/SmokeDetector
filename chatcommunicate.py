@@ -155,11 +155,10 @@ def send_messages():
 def on_msg(msg, client):
     if isinstance(msg, events.MessagePosted) or isinstance(msg, events.MessageEdited):
         message = msg.message
+        identifier = (client.host, message.room.id)
+        room_data = _rooms[identifier]
 
         if message.owner.id == client._br.user_id:
-            identifier = (client.host, message.room.id)
-            room_data = _rooms[identifier]
-
             if identifier not in _last_messages.messages:
                 _last_messages.messages[identifier] = collections.deque((message.id,))
             else:
@@ -192,17 +191,17 @@ def on_msg(msg, client):
             result = dispatch_reply_command(message.parent, message, cmd)
 
             if result:
-                message.reply(result, length_check=False)
+                _msg_queue.put((room_data, ":{} {}".format(message.id, result), ()))
         elif message.content.startswith("sd "):
             result = dispatch_shorthand_command(message)
 
             if result:
-                message.reply(result, length_check=False)
+                _msg_queue.put((room_data, ":{} {}".format(message.id, result), ()))
         elif message.content.startswith("!!/"):
             result = dispatch_command(message)
 
             if result:
-                message.reply(result, length_check=False)
+                _msg_queue.put((room_data, ":{} {}".format(message.id, result), ()))
 
 
 def tell_rooms_with(prop, msg, notify_site="", report_data=()):
