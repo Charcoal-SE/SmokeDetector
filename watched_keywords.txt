@@ -1923,3 +1923,4 @@
 1512714096	tripleee	ultralast(?:\W?xxl)?
 1512714376	tripleee	facebookhelp\.us
 1512721506	Glorfindel	saytooloud\.com
+1512722659	Glorfindel	getapkk\.com
