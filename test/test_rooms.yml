@@ -1,0 +1,48 @@
+stackexchange.com:
+  11540:
+    commands: true
+    watcher: true
+
+    privileges:
+      - 1
+      - 16070
+
+    msg_types:
+      - debug
+      - all
+
+  30332:
+    commands: true
+
+  3:
+    watcher: true
+
+  54445:
+    msg_types:
+      - all
+
+meta.stackexchange.com:
+  89:
+    commands: false
+    watcher: true
+
+    privileges:
+      - 42
+
+    msg_types:
+      - metatavern
+      - delay
+      - no-all-caps title
+
+stackoverflow.com:
+  111347:
+    commands: true
+    watcher: false
+
+    privileges:
+      - 1337
+      - 256
+      - 4766556
+
+    msg_types:
+      - all
