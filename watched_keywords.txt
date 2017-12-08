@@ -1264,7 +1264,6 @@
 1508384817	bwDraco	auroramine
 1508481999	Byte Commander	iplaystoredownloadfree\.com
 1508484522	Glorfindel	kiwitaxi\.com
-1508506596	Glorfindel	zetpush\.com
 1508511174	doppelgreener	whycall\.me
 1508547311	NobodyNada	picdiet
 1508570614	Glorfindel	collisionexpresscenter\.com
