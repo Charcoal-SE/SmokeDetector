@@ -1410,7 +1410,6 @@
 1509465505	Glorfindel	lovemykittens\.com
 1509492890	Byte Commander	directory\Wreport
 1509512622	tripleee	mysoft\W(?:studio|youtube|ytd)
-1509522741	tripleee	<strong>strong text</strong>
 1509528171	tripleee	pathfinder-character-sheet\.com
 1509532881	tripleee	sunshineskinclinic\.com
 1509534245	tripleee	xyplexin
