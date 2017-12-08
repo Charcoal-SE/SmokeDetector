@@ -1921,3 +1921,4 @@
 1512709839	tripleee	hookupapp
 1512713519	tripleee	(?:1\W*)?407\W*965\W*2136
 1512714096	tripleee	ultralast(?:\W?xxl)?
+1512714376	tripleee	facebookhelp\.us
