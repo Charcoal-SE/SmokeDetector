@@ -1922,3 +1922,4 @@
 1512721506	Glorfindel	saytooloud\.com
 1512722659	Glorfindel	getapkk\.com
 1512727519	Glorfindel	itechgyan\.com
+1512737502	Glorfindel	tweakboxapp\.info
