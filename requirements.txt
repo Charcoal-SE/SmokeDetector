@@ -15,4 +15,5 @@ termcolor
 sh
 typing
 dnspython
+pyyaml
 tld
