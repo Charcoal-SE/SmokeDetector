@@ -1931,3 +1931,4 @@
 1512792898	quartata	varyforte
 1512798102	quartata	fizzy\W?slim
 1512809909	Glorfindel	gclubth\.net
+1512810048	Glorfindel	noornegar\.com
