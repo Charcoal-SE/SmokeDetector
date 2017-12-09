@@ -303,12 +303,12 @@ def do_blacklist(pattern, blacklist_type, msg, force=False):
 
 
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=True, give_name=True, aliases=["blacklist_website",
-                                                                        "blacklist_username",
-                                                                        "blacklist_keyword_force"
-                                                                        "blacklist_website_force"
-                                                                        "blacklist_username_force"])
-def blacklist_keyword(msg, pattern, alias_used="blacklist_keyword"):
+@command(str, whole_msg=True, privileged=True, give_name=True, aliases=["blacklist-website",
+                                                                        "blacklist-username",
+                                                                        "blacklist-keyword-force"
+                                                                        "blacklist-website-force"
+                                                                        "blacklist-username-force"])
+def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     """
     Adds a string to the blacklist and commits/pushes to GitHub
     :param msg:
@@ -316,12 +316,12 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist_keyword"):
     :return: A string
     """
 
-    parts = alias_used.split("_")
+    parts = alias_used.split("-")
     return do_blacklist(pattern, parts[1], msg, force=len(parts) > 2)
 
 
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=True, aliases=["watch_keyword"])
+@command(str, whole_msg=True, privileged=True, aliases=["watch-keyword"])
 def watch(msg, website):
     """
     Adds a string to the watched keywords list and commits/pushes to GitHub
@@ -334,7 +334,7 @@ def watch(msg, website):
 
 
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=True, aliases=["watch_keyword_force"])
+@command(str, whole_msg=True, privileged=True, aliases=["watch-keyword-force"])
 def watch_force(msg, website):
     """
     Adds a string to the watched keywords list and commits/pushes to GitHub

@@ -23,11 +23,9 @@ LastMessages = collections.namedtuple("LastMessages", ["messages", "reports"])
 
 
 class RoomData:
-    def __init__(self, room, lock, block_time, last_report_data, deletion_watcher):
+    def __init__(self, room, block_time, deletion_watcher):
         self.room = room
-        self.lock = lock
         self.block_time = block_time
-        self.last_report_data = last_report_data
         self.deletion_watcher = deletion_watcher
 
 
@@ -88,8 +86,7 @@ def init(username, password):
 
             room.join()
             room.watch_socket(on_msg)
-            _rooms[(site, roomid)] = RoomData(room, threading.Event(), -1, (), deletion_watcher)
-            _rooms[(site, roomid)].lock.set()
+            _rooms[(site, roomid)] = RoomData(room, -1, deletion_watcher)
 
     if os.path.isfile("messageData.p"):
         _last_messages = pickle.load(open("messageData.p", "rb"))
@@ -138,81 +135,84 @@ def send_messages():
     while True:
         room, msg, report_data = _msg_queue.get()
 
-        room.lock.wait()
-        room.lock.clear()
-        room.last_report_data = report_data
-
         full_retries = 0
 
         while full_retries < 3:
             try:
-                room.room._client._do_action_despite_throttling(("send", room.room.id, msg))
+                response = room.room._client._do_action_despite_throttling(("send", room.room.id, msg)).json()
+
+                if "id" in response:
+                    identifier = (room.room._client.host, room.room.id)
+                    message_id = response["id"]
+
+                    if identifier not in _last_messages.messages:
+                        _last_messages.messages[identifier] = collections.deque((message_id,))
+                    else:
+                        last = _last_messages.messages[identifier]
+
+                        if len(last) > 100:
+                            last.popleft()
+
+                        last.append(message_id)
+
+                    if report_data:
+                        _last_messages.reports[(room.room._client.host, message_id)] = report_data
+
+                        if len(_last_messages.reports) > 50:
+                            _last_messages.reports.popitem(last=False)
+
+                        if room.deletion_watcher:
+                            threading.Thread(name="deletion watcher",
+                                             target=DeletionWatcher.check_if_report_was_deleted,
+                                             args=(report_data[0], message_id))
+
+                    _pickle_run.set()
+
                 break
             except requests.exceptions.HTTPError:
                 full_retries += 1
+
+        _msg_queue.task_done()
 
 
 def on_msg(msg, client):
     if isinstance(msg, events.MessagePosted) or isinstance(msg, events.MessageEdited):
         message = msg.message
-        identifier = (client.host, message.room.id)
-        room_data = _rooms[identifier]
 
         if message.owner.id == client._br.user_id:
-            if identifier not in _last_messages.messages:
-                _last_messages.messages[identifier] = collections.deque((message.id,))
-            else:
-                last = _last_messages.messages[identifier]
+            return
 
-                if len(last) > 100:
-                    last.popleft()
+        room_data = _rooms[(client.host, message.room.id)]
 
-                last.append(message.id)
-
-            if room_data.last_report_data != ():
-                _last_messages.reports[(client.host, message.id)] = room_data.last_report_data
-
-                if len(_last_messages.reports) > 50:
-                    _last_messages.reports.popitem(last=False)
-
-                if room_data.deletion_watcher:
-                    threading.Thread(name="deletion watcher",
-                                     target=DeletionWatcher.check_if_report_was_deleted,
-                                     args=(room_data.last_report_data[0], message))
-
-                room_data.last_report_data = ()
-
-            room_data.lock.set()
-            _pickle_run.set()
-        elif message.parent and message.parent.owner.id == client._br.user_id:
+        if message.parent and message.parent.owner.id == client._br.user_id:
             content = GlobalVars.parser.unescape(message.content).lower()
             cmd = content.split(" ", 1)[1]
 
             result = dispatch_reply_command(message.parent, message, cmd)
 
             if result:
-                _msg_queue.put((room_data, ":{} {}".format(message.id, result), ()))
+                _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
         elif message.content.startswith("sd "):
             result = dispatch_shorthand_command(message)
 
             if result:
-                _msg_queue.put((room_data, ":{} {}".format(message.id, result), ()))
+                _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
         elif message.content.startswith("!!/"):
             result = dispatch_command(message)
 
             if result:
-                _msg_queue.put((room_data, ":{} {}".format(message.id, result), ()))
+                _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
 
 
-def tell_rooms_with(prop, msg, notify_site="", report_data=()):
+def tell_rooms_with(prop, msg, notify_site="", report_data=None):
     tell_rooms(msg, (prop,), (), notify_site=notify_site, report_data=report_data)
 
 
-def tell_rooms_without(prop, msg, notify_site="", report_data=()):
+def tell_rooms_without(prop, msg, notify_site="", report_data=None):
     tell_rooms(msg, (), (prop,), notify_site=notify_site, report_data=report_data)
 
 
-def tell_rooms(msg, has, hasnt, notify_site="", report_data=()):
+def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
     global _rooms
 
     target_rooms = set()
@@ -230,8 +230,7 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=()):
                     new_room = _clients[site].get_room(roomid)
                     new_room.join()
 
-                    _rooms[room] = RoomData(new_room, threading.Event(), -1, (), deletion_watcher)
-                    _rooms[room].lock.set()
+                    _rooms[room] = RoomData(new_room, -1, deletion_watcher)
 
                 target_rooms.add(room)
 
@@ -254,7 +253,7 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=()):
             if report_data and "delay" in _room_roles and room_id in _room_roles["delay"]:
                 threading.Thread(name="delayed post",
                                  target=DeletionWatcher.post_message_if_not_deleted,
-                                 args=(report_data[0], msg, room, report_data)).start()
+                                 args=(msg, room, report_data)).start()
             else:
                 _msg_queue.put((room, msg, report_data))
 
@@ -362,6 +361,9 @@ def dispatch_command(msg):
         if max_arity == 0:
             return func(original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
         elif max_arity == 1:
+            if min_arity == 1 and not args:
+                return "Missing an argument."
+
             return func(args or None, original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
         else:
             args = args.split()

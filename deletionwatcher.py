@@ -92,7 +92,9 @@ class DeletionWatcher:
                 pass
 
     @classmethod
-    def post_message_if_not_deleted(self, post_url, message_text, room, report_data):
+    def post_message_if_not_deleted(self, message_text, room, report_data):
+        post_url = report_data[0]
+
         post_site_id = fetch_post_id_and_site_from_url(post_url)
         was_report_deleted = self.check_websocket_for_deletion(post_site_id, post_url, 300)
 

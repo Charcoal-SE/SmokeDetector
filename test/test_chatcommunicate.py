@@ -145,12 +145,42 @@ def test_pickle_rick(dump):
         os.remove("messageData.p")
 
 
-@patch("chatcommunicate._msg_queue.put")
-@patch("chatcommunicate.get_last_messages")
 @patch("chatcommunicate._pickle_run")
-def test_on_msg(pickle_rick, get_last_messages, post_msg):
+def test_message_sender(pickle_rick):
     chatcommunicate._last_messages = chatcommunicate.LastMessages({}, collections.OrderedDict())
 
+    threading.Thread(target=chatcommunicate.send_messages, daemon=True).start()
+
+    room = chatcommunicate.RoomData(Mock(), -1, False)
+
+    room.room.id = 11540
+    room.room._client.host = "stackexchange.com"
+
+    room.room._client._do_action_despite_throttling.return_value = Fake({"json": lambda: {"id": 1}})
+    chatcommunicate._msg_queue.put((room, "test", None))
+
+    while not chatcommunicate._msg_queue.empty():
+        time.sleep(0)
+
+    room.room._client._do_action_despite_throttling.assert_called_once_with(("send", 11540, "test"))
+    room.room.reset_mock()
+    assert chatcommunicate._last_messages.messages[("stackexchange.com", 11540)] == collections.deque((1,))
+
+    room.room.id = 30332
+    room.room._client._do_action_despite_throttling.return_value = Fake({"json": lambda: {"id": 2}})
+    chatcommunicate._msg_queue.put((room, "test", "did you hear about what happened to pluto"))
+
+    while not chatcommunicate._msg_queue.empty():
+        time.sleep(0)
+
+    room.room._client._do_action_despite_throttling.assert_called_once_with(("send", 30332, "test"))
+    assert chatcommunicate._last_messages.messages[("stackexchange.com", 11540)] == collections.deque((1,))
+    assert chatcommunicate._last_messages.reports == collections.OrderedDict({("stackexchange.com", 2): "did you hear about what happened to pluto"})
+
+
+@patch("chatcommunicate._msg_queue.put")
+@patch("chatcommunicate.get_last_messages")
+def test_on_msg(get_last_messages, post_msg):
     client = Fake({
         "_br": {
             "user_id": 1337
@@ -159,7 +189,7 @@ def test_on_msg(pickle_rick, get_last_messages, post_msg):
         "host": "stackexchange.com"
     })
 
-    room_data = chatcommunicate.RoomData(Mock(), Mock(), -1, (), False)
+    room_data = chatcommunicate.RoomData(Mock(), -1, False)
     chatcommunicate._rooms[("stackexchange.com", 11540)] = room_data
 
     chatcommunicate.on_msg(Fake({}, spec=chatcommunicate.events.MessageStarred), None)  # don't reply to events we don't care about
@@ -197,16 +227,7 @@ def test_on_msg(pickle_rick, get_last_messages, post_msg):
         }
     }, spec=chatcommunicate.events.MessagePosted)
 
-    room_data.last_report_data = "did you hear about what happened to pluto"
-
     chatcommunicate.on_msg(msg2, client)
-
-    assert chatcommunicate._last_messages.messages[("stackexchange.com", 11540)] == collections.deque((999,))
-    assert chatcommunicate._last_messages.reports == collections.OrderedDict({("stackexchange.com", 999): "did you hear about what happened to pluto"})
-    assert room_data.last_report_data == ()
-
-    pickle_rick.set.assert_called_once()
-    room_data.lock.set.assert_called_once()
 
     msg3 = Fake({
         "message": {
@@ -230,7 +251,6 @@ def test_on_msg(pickle_rick, get_last_messages, post_msg):
     chatcommunicate.on_msg(msg3, client)
 
     assert post_msg.call_count == 1
-    print(post_msg.call_args_list[0][0][0][1])
     assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
     mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a_command", quiet_action=False)
 
