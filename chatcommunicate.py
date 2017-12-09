@@ -164,7 +164,7 @@ def send_messages():
                         if room.deletion_watcher:
                             threading.Thread(name="deletion watcher",
                                              target=DeletionWatcher.check_if_report_was_deleted,
-                                             args=(report_data[0], room.room._client.get_message(message_id)))
+                                             args=(report_data[0], room.room._client.get_message(message_id))).start()
 
                     _pickle_run.set()
 
