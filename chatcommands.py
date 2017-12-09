@@ -334,7 +334,7 @@ def watch(msg, website):
 
 
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=True, aliases=["watch-keyword-force"])
+@command(str, whole_msg=True, privileged=True, aliases=["watch-force", "watch-keyword-force"])
 def watch_force(msg, website):
     """
     Adds a string to the watched keywords list and commits/pushes to GitHub
