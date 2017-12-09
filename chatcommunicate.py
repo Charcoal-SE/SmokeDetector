@@ -164,7 +164,7 @@ def send_messages():
                         if room.deletion_watcher:
                             threading.Thread(name="deletion watcher",
                                              target=DeletionWatcher.check_if_report_was_deleted,
-                                             args=(report_data[0], message_id))
+                                             args=(report_data[0], room.room._client.get_message(message_id)))
 
                     _pickle_run.set()
 
@@ -308,7 +308,11 @@ def command(*type_signature, reply=False, whole_msg=False, privileged=False, ari
                 except ValueError as e:
                     return "Invalid input type given for an argument"
 
-                result = func(*processed_args, **({"alias_used": alias_used} if give_name else {}))
+                if give_name:
+                    result = func(*processed_args, alias_used=alias_used)
+                else:
+                    result = func(*processed_args)
+
                 return result if not quiet_action else ""
             except CmdException as e:
                 return str(e)
