@@ -1716,7 +1716,6 @@
 1511708180	Glorfindel	360websitedesign\.sg
 1511714480	NVZ	Tailorind\.com
 1511717542	Glorfindel	howtoisolve\.com
-1511721309	Glorfindel	enlightentricks\.com
 1511758707	paper1111	jlbtcptc\.com
 1511759974	tripleee	babasupport\.org
 1511772542	Glorfindel	airfio
