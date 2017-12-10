@@ -303,7 +303,8 @@ def do_blacklist(pattern, blacklist_type, msg, force=False):
 
 
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=True, give_name=True, aliases=["blacklist-website",
+@command(str, whole_msg=True, privileged=True, give_name=True, aliases=["blacklist-keyword",
+                                                                        "blacklist-website",
                                                                         "blacklist-username",
                                                                         "blacklist-keyword-force",
                                                                         "blacklist-website-force",
