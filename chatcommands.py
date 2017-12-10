@@ -305,8 +305,8 @@ def do_blacklist(pattern, blacklist_type, msg, force=False):
 # noinspection PyIncorrectDocstring
 @command(str, whole_msg=True, privileged=True, give_name=True, aliases=["blacklist-website",
                                                                         "blacklist-username",
-                                                                        "blacklist-keyword-force"
-                                                                        "blacklist-website-force"
+                                                                        "blacklist-keyword-force",
+                                                                        "blacklist-website-force",
                                                                         "blacklist-username-force"])
 def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     """
