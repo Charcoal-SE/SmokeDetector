@@ -739,7 +739,7 @@ def test(content, alias_used="test"):
                                       'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
                                       'site': "", 'IsAnswer': False, 'score': 0})
     else:
-        kind = " question, title or username."
+        kind = " post, title or username."
         fakepost = Post(api_response={'title': content, 'body': content,
                                       'owner': {'display_name': content, 'reputation': 1, 'link': ''},
                                       'site': "", 'IsAnswer': False, 'score': 0})
