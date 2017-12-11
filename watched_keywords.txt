@@ -1944,3 +1944,4 @@
 1512972800	tripleee	(?:le\W?)?reviva
 1512981448	Glorfindel	meal5\.com
 1512983792	Tetsuya Yamamoto	burmatravel\.com
+1512985110	Glorfindel	desertsafarievening\.com
