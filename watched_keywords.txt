@@ -1939,3 +1939,4 @@
 1512835350	Nisse Engström	repliqueluxemontre\.com
 1512839645	Glorfindel	javatportal
 1512839766	Glorfindel	audiomanager\.org
+1512963322	Tetsuya Yamamoto	purepearls\.in
