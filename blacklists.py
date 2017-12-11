@@ -42,7 +42,7 @@ class BasicListParser(BlacklistParser):
             f.write(item + '\n')
 
     def remove(self, item: str):
-        with open(self._filename, 'w', encoding='utf-8') as f:
+        with open(self._filename, 'r+', encoding='utf-8') as f:
             items = f.readlines()
             items = [x for x in items if item not in x]
             f.writelines(items)
@@ -52,7 +52,7 @@ class BasicListParser(BlacklistParser):
             lines = f.readlines()
             for i, x in enumerate(lines):
                 if item in x:
-                    return True, i
+                    return True, i + 1
 
         return False, -1
 
@@ -74,7 +74,7 @@ class TSVDictParser(BlacklistParser):
         return list
 
     def add(self, item: dict):
-        with open(self._filename, 'a', encoding='utf-8') as f:
+        with open(self._filename, 'a+', encoding='utf-8') as f:
             item = '{}\t{}\t{}'.format(item[0], item[1], item[2])
             last_char = f.read()[-1:]
             if last_char not in ['', '\n']:
@@ -85,7 +85,7 @@ class TSVDictParser(BlacklistParser):
         if isinstance(item, dict):
             item = item[2]
 
-        with open(self._filename, 'w', encoding='utf-8') as f:
+        with open(self._filename, 'r+', encoding='utf-8') as f:
             items = f.readlines()
             items = [x for x in items if item not in x]
             f.writelines(items)
@@ -98,7 +98,7 @@ class TSVDictParser(BlacklistParser):
             lines = f.readlines()
             for i, x in enumerate(lines):
                 if item in x:
-                    return True, i
+                    return True, i + 1
 
         return False, -1
 
