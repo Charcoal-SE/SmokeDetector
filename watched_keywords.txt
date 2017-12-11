@@ -1594,7 +1594,6 @@
 1510905001	tripleee	(?:1\W*)?888\W*886\W*0477
 1510905155	tripleee	atlasdpack\.com
 1510907582	Glorfindel	purchasesharesonline\.com
-1510910182	Glorfindel	crescentpolyvinyl\.com
 1510912261	tripleee	726226983
 1510912649	tripleee	pcb-forum\.com
 1510918202	Glorfindel	carloanstudent\.com
@@ -1947,3 +1946,5 @@
 1512988917	Glorfindel	phonespecifier\.com
 1512989078	Glorfindel	angelss\.in
 1512989250	tripleee	enjoydelhilife\.in
+1512978032	Tetsuya Yamamoto	bomeitong\.com
+1513005011	JoErNanO	bankbazaar\.com

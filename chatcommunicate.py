@@ -216,6 +216,7 @@ def tell_rooms_without(prop, msg, notify_site="", report_data=None):
 def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
     global _rooms
 
+    msg = msg.rstrip()
     target_rooms = set()
 
     for prop_has in has:
@@ -244,19 +245,19 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
                                                                      notify_site,
                                                                      room.room._client)
 
-            msg = datahandling.append_pings(msg, pings)
+            msg_pings = datahandling.append_pings(msg, pings)
+        else:
+            msg_pings = msg
 
         timestamp = time.time()
 
         if room.block_time < timestamp and _global_block < timestamp:
-            msg = msg.rstrip()
-
             if report_data and "delay" in _room_roles and room_id in _room_roles["delay"]:
                 threading.Thread(name="delayed post",
                                  target=DeletionWatcher.post_message_if_not_deleted,
-                                 args=(msg, room, report_data)).start()
+                                 args=(msg_pings, room, report_data)).start()
             else:
-                _msg_queue.put((room, msg, report_data))
+                _msg_queue.put((room, msg_pings, report_data))
 
 
 def get_last_messages(room, count):
