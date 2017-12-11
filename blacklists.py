@@ -45,6 +45,7 @@ class BasicListParser(BlacklistParser):
         with open(self._filename, 'r+', encoding='utf-8') as f:
             items = f.readlines()
             items = [x for x in items if item not in x]
+            f.truncate()
             f.writelines(items)
 
     def exists(self, item: str):
@@ -88,6 +89,7 @@ class TSVDictParser(BlacklistParser):
         with open(self._filename, 'r+', encoding='utf-8') as f:
             items = f.readlines()
             items = [x for x in items if item not in x]
+            f.truncate()
             f.writelines(items)
 
     def exists(self, item: Union[str, dict]):
