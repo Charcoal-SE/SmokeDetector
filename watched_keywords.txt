@@ -1940,3 +1940,4 @@
 1512839766	Glorfindel	audiomanager\.org
 1512963322	Tetsuya Yamamoto	purepearls\.in
 1512972219	tripleee	69games\.website
+1512972371	tripleee	fairui\.org
