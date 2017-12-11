@@ -1942,3 +1942,4 @@
 1512972219	tripleee	69games\.website
 1512972371	tripleee	fairui\.org
 1512972800	tripleee	(?:le\W?)?reviva
+1512981448	Glorfindel	meal5\.com
