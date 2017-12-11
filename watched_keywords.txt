@@ -1941,3 +1941,4 @@
 1512963322	Tetsuya Yamamoto	purepearls\.in
 1512972219	tripleee	69games\.website
 1512972371	tripleee	fairui\.org
+1512972800	tripleee	(?:le\W?)?reviva
