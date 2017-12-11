@@ -1250,8 +1250,8 @@ class Feedback:
     @staticmethod
     def send_custom(type, url, msg):
         threading.Thread(name="metasmoke feedback send on " + url,
-                         target=metasmoke.Metasmoke.send_feedback_for_post,
-                         args=(url, type, msg.owner.name, msg.owner.id, msg._client.host,))
+                         target=Metasmoke.send_feedback_for_post,
+                         args=(url, type, msg.owner.name, msg.owner.id, msg._client.host,)).start()
 
 
 TRUE_FEEDBACKS = {
