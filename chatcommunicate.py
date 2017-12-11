@@ -192,16 +192,17 @@ def on_msg(msg, client):
 
             if result:
                 _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
-        elif message.content.startswith("sd "):
-            result = dispatch_shorthand_command(message)
+        elif len(message.content) > 3:
+            if message.content.startswith("sd "):
+                result = dispatch_shorthand_command(message)
 
-            if result:
-                _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
-        elif message.content.startswith("!!/"):
-            result = dispatch_command(message)
+                if result:
+                    _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
+            elif message.content.startswith("!!/"):
+                result = dispatch_command(message)
 
-            if result:
-                _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
+                if result:
+                    _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
 
 
 def tell_rooms_with(prop, msg, notify_site="", report_data=None):
