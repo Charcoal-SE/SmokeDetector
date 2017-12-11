@@ -29,37 +29,6 @@ from classes import Post
 
 
 # TODO: Do we need uid == -2 check?  Turn into "is_user_valid" check
-
-
-# noinspection PyMissingTypeHints
-def is_report(post_site_id):
-    """
-    Checks if a post is a report
-    :param post_site_id: Report to check
-    :return: Boolean stating if it is a report
-    """
-    if post_site_id is None:
-        return False
-    return True
-
-
-# noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
-def send_metasmoke_feedback(post_url, second_part_lower, ev_user_name, ev_user_id, ev_chat_host):
-    """
-    Sends feedback to metasmoke
-    :param ev_user_name:
-    :param post_url: The post url we are sending
-    :param second_part_lower: Feedback
-    :param ev_user_name: User name supplying the feedback
-    :param ev_user_id: User ID supplying the feedback
-    :return: None
-    """
-    t_metasmoke = Thread(name="metasmoke feedback send on #{url}".format(url=post_url),
-                         target=Metasmoke.send_feedback_for_post,
-                         args=(post_url, second_part_lower, ev_user_name, ev_user_id, ev_chat_host,))
-    t_metasmoke.start()
-
-
 #
 #
 # System command functions below here
@@ -1264,8 +1233,62 @@ def postgone(msg):
     msg.edit(edited)
 
 
+class Feedback:
+    TRUE_POSITIVE = "tp"
+    FALSE_POSITIVE = "fp"
+    NAA = "naa"
+
+    def __init__(self, feedback, blacklist=False, always_silent=False):
+        self.blacklist = blacklist
+        self.always_silent = always_silent
+
+        self._type = feedback + "u" if blacklist else "" + "-" if always_silent else ""
+
+    def send(self, url, msg):
+        Feedback.send_custom(self._type, url, msg)
+
+    @staticmethod
+    def send_custom(type, url, msg):
+        threading.Thread(name="metasmoke feedback send on " + url,
+                         target=metasmoke.Metasmoke.send_feedback_for_post,
+                         args=(url, type, msg.owner.name, msg.owner.id, msg._client.host,))
+
+
+TRUE_FEEDBACKS = {
+    "true": Feedback(Feedback.TRUE_POSITIVE, always_silent=False, blacklist=False),
+    "tp": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=False),
+    "trueu": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=False),
+    "tpu": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=False),
+
+    "k": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
+    "spam": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
+    "rude": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
+    "abusive": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
+    "offensive": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
+
+    "v": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=True),
+    "vand": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=True),
+    "vandalism": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=False)
+}
+
+FALSE_FEEDBACKS = {
+    "false": Feedback(Feedback.FALSE_POSITIVE, blacklist=False, always_silent=False),
+    "fp": Feedback(Feedback.FALSE_POSITIVE, blacklist=False, always_silent=False),
+    "falseu": Feedback(Feedback.FALSE_POSITIVE, blacklist=True, always_silent=False),
+    "fpu": Feedback(Feedback.FALSE_POSITIVE, blacklist=True, always_silent=False),
+
+    "f": Feedback(Feedback.FALSE_POSITIVE, blacklist=False, always_silent=True),
+    "notspam": Feedback(Feedback.FALSE_POSITIVE, blacklist=False, always_silent=True),
+}
+
+NAA_FEEDBACKS = {
+    "naa": Feedback(Feedback.NAA, blacklist=False, always_silent=False),
+    "n": Feedback(Feedback.NAA, blacklist=False, always_silent=True),
+}
+
+
 # noinspection PyIncorrectDocstring
-@command(message, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=["f", "fp", "falseu"])
+@command(message, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=FALSE_FEEDBACKS.keys())
 def false(feedback, msg, alias_used="false"):
     """
     Marks a post as a false positive
@@ -1279,11 +1302,8 @@ def false(feedback, msg, alias_used="false"):
 
     post_url, owner_url = post_data
 
-    send_metasmoke_feedback(post_url=post_url,
-                            second_part_lower=alias_used,
-                            ev_user_name=feedback.owner.name,
-                            ev_user_id=feedback.owner.id,
-                            ev_chat_host=feedback._client.host)
+    feedback_type = FALSE_FEEDBACKS[alias_used]
+    feedback_type.send(post_url, feedback)
 
     post_id, site, post_type = fetch_post_id_and_site_from_url(post_url)
     add_false_positive((post_id, site))
@@ -1291,21 +1311,22 @@ def false(feedback, msg, alias_used="false"):
     user = get_user_from_url(owner_url)
 
     if user is not None:
-        if alias_used[-1] == "u":
+        if feedback_type.blacklist:
             add_whitelisted_user(user)
-            return "Registered " + post_type + " as false positive and whitelisted user."
+            result = "Registered " + post_type + " as false positive and whitelisted user."
         elif is_blacklisted_user(user):
             remove_blacklisted_user(user)
-            return "Registered " + post_type + " as false positive and removed user from the blacklist." \
-                   if alias_used != "f" else ""
+            result = "Registered " + post_type + " as false positive and removed user from the blacklist."
         else:
-            return "Registered " + post_type + " as false positive." if alias_used != "f" else ""
+            result = "Registered " + post_type + " as false positive."
 
-    # try:
-    #     if int(msg.room.id) != int(GlobalVars.charcoal_hq.id):
-    #         msg.delete()
-    # except:
-    #     pass
+    try:
+        if int(msg.room.id) != int(GlobalVars.charcoal_hq.id):
+            msg.delete()
+    except:
+        pass
+
+    return result if not feedback_type.always_silent else ""
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
@@ -1323,11 +1344,7 @@ def ignore(feedback, msg):
 
     post_url, _ = post_data
 
-    send_metasmoke_feedback(post_url=post_url,
-                            second_part_lower="ignore",
-                            ev_user_name=feedback.owner.name,
-                            ev_user_id=feedback.owner.id,
-                            ev_chat_host=feedback._client.host)
+    Feedback.send_custom("ignore", post_url, feedback)
 
     post_id, site, _ = fetch_post_id_and_site_from_url(post_url)
     add_ignored_post((post_id, site))
@@ -1336,7 +1353,7 @@ def ignore(feedback, msg):
 
 
 # noinspection PyIncorrectDocstring
-@command(message, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=["n"])
+@command(message, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=NAA_FEEDBACKS.keys())
 def naa(feedback, msg, alias_used="naa"):
     """
     Marks a post as NAA
@@ -1354,21 +1371,17 @@ def naa(feedback, msg, alias_used="naa"):
     if post_type != "answer":
         raise CmdException("That report was a question; questions cannot be marked as NAAs.")
 
-    send_metasmoke_feedback(post_url=post_url,
-                            second_part_lower=alias_used,
-                            ev_user_name=feedback.owner.name,
-                            ev_user_id=feedback.owner.id,
-                            ev_chat_host=feedback._client.host)
+    feedback_type = NAA_FEEDBACKS[alias_used]
+    feedback_type.send(post_url, feedback)
 
     post_id, site, _ = fetch_post_id_and_site_from_url(post_url)
     add_ignored_post((post_id, site))
 
-    return "Recorded answer as an NAA in metasmoke." if alias_used != "n" else ""
+    return "Recorded answer as an NAA in metasmoke." if not feedback_type.always_silent else ""
 
 
 # noinspection PyIncorrectDocstring
-@command(message, reply=True, privileged=True, whole_msg=True, give_name=True,
-         aliases=["tp", "tpu", "trueu", "rude", "abusive", "vandalism", "v", "k"])
+@command(message, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=TRUE_FEEDBACKS.keys())
 def true(feedback, msg, alias_used="true"):
     """
     Marks a post as a true positive
@@ -1382,29 +1395,22 @@ def true(feedback, msg, alias_used="true"):
 
     post_url, owner_url = post_data
 
-    send_metasmoke_feedback(post_url=post_url,
-                            second_part_lower="tp" if not alias_used[0] == "t" else alias_used,
-                            ev_user_name=feedback.owner.name,
-                            ev_user_id=feedback.owner.id,
-                            ev_chat_host=feedback._client.host)
+    feedback_type = TRUE_FEEDBACKS[alias_used]
+    feedback_type.send(post_url, feedback)
 
     user = get_user_from_url(owner_url)
     _, _, post_type = fetch_post_id_and_site_from_url(post_url)
     message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
 
-    if alias_used[0] == "v":
-        return
-
     if user is not None:
-        if alias_used == "k":
+        if feedback_type.blacklist:
             add_blacklisted_user(user, message_url, post_url)
-            return
-        elif alias_used[-1] == "u":
-            add_blacklisted_user(user, message_url, post_url)
-            return "Registered " + post_type + " as true positive and blacklisted user."
+            result = "Registered " + post_type + " as true positive and blacklisted user."
         else:
-            return "Registered " + post_type + " as true positive. If you want to "\
-                   "blacklist the poster, use `trueu` or `tpu`."
+            result = "Registered " + post_type + " as true positive. If you want to "\
+                     "blacklist the poster, use `trueu` or `tpu`."
+
+    return result if not feedback_type.always_silent else ""
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
