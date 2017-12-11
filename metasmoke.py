@@ -173,13 +173,13 @@ class Metasmoke:
                         else:
                             s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
                                 "commit/{commit_sha}) succeeded.".format(ci_link=c["ci_url"], commit_sha=sha)
+
+                            chatcommunicate.tell_rooms_with("debug", s)
                     elif c["status"] == "failure":
                         s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
                             "commit/{commit_sha}) failed.".format(ci_link=c["ci_url"], commit_sha=sha)
 
-                    # noinspection PyUnboundLocalVariable
-                    chatcommunicate.tell_rooms_with("debug", s)
-
+                        chatcommunicate.tell_rooms_with("debug", s)
             elif "everything_is_broken" in message:
                 if message["everything_is_broken"] is True:
                     os._exit(6)
