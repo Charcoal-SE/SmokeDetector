@@ -186,7 +186,7 @@ def on_msg(msg, client):
 
         if message.parent and message.parent.owner.id == client._br.user_id:
             content = GlobalVars.parser.unescape(message.content).lower()
-            cmd = content.split(" ")[1]
+            cmd = content.split(" ", 2)[1]
 
             result = dispatch_reply_command(message.parent, message, cmd)
 
