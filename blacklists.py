@@ -75,9 +75,10 @@ class TSVDictParser(BlacklistParser):
 
         return list
 
-    def add(self, item: dict):
+    def add(self, item: Union[str, dict]):
         with open(self._filename, 'a+', encoding='utf-8') as f:
-            item = '{}\t{}\t{}'.format(item[0], item[1], item[2])
+            if isinstance(item, dict):
+                item = '{}\t{}\t{}'.format(item[0], item[1], item[2])
             last_char = f.read()[-1:]
             if last_char not in ['', '\n']:
                 item = '\n' + item
