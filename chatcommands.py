@@ -1242,7 +1242,7 @@ class Feedback:
         self.blacklist = blacklist
         self.always_silent = always_silent
 
-        self._type = feedback + "u" if blacklist else "" + "-" if always_silent else ""
+        self._type = feedback + ("u" if blacklist else "") + ("-" if always_silent else "")
 
     def send(self, url, msg):
         Feedback.send_custom(self._type, url, msg)
