@@ -1017,6 +1017,3 @@ cyberwizardhack
 chocolite
 master\W?testo
 derma\W?active
-this-is-a-test
-more-testing
-are-we-nearly-there-yet
