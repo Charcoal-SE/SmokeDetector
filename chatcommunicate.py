@@ -89,7 +89,10 @@ def init(username, password):
             _rooms[(site, roomid)] = RoomData(room, -1, deletion_watcher)
 
     if os.path.isfile("messageData.p"):
-        _last_messages = pickle.load(open("messageData.p", "rb"))
+        try:
+            _last_messages = pickle.load(open("messageData.p", "rb"))
+        except EOFError:
+            pass
 
     threading.Thread(name="pickle ---rick--- runner", target=pickle_last_messages, daemon=True).start()
     threading.Thread(name="message sender", target=send_messages, daemon=True).start()
@@ -261,7 +264,12 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
 
 
 def get_last_messages(room, count):
-    for msg_id in itertools.islice(reversed(_last_messages.messages[(room._client.host, room.id)]), count):
+    identifier = (room._client.host, room.id)
+
+    if identifier not in _last_messages.messages:
+        return
+
+    for msg_id in itertools.islice(reversed(_last_messages.messages[identifier]), count):
         yield room._client.get_message(msg_id)
 
 
