@@ -15,8 +15,8 @@ from metasmoke import Metasmoke
 from parsing import *
 from spamhandling import handle_spam
 from gitmanager import GitManager
+from tasks import Tasks
 import threading
-from threading import Thread
 import random
 import requests
 import os
@@ -687,10 +687,7 @@ def status():
 # noinspection PyIncorrectDocstring
 @command(privileged=True)
 def stopflagging():
-    t_metasmoke = Thread(name="stop_autoflagging", target=Metasmoke.stop_autoflagging,
-                         args=())
-    t_metasmoke.start()
-
+    Tasks.do(Metasmoke.stop_autoflagging)
     return "Request sent..."
 
 

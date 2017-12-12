@@ -1,5 +1,5 @@
-import threading
 from metasmoke import Metasmoke
+from tasks import Tasks
 
 
 class Feedback:
@@ -18,9 +18,7 @@ class Feedback:
 
     @staticmethod
     def send_custom(type, url, msg):
-        threading.Thread(name="metasmoke feedback send on " + url,
-                         target=Metasmoke.send_feedback_for_post,
-                         args=(url, type, msg.owner.name, msg.owner.id, msg._client.host,)).start()
+        Tasks.do(Metasmoke.send_feedback_for_post, url, type, msg.owner.name, msg.owner.id, msg._client.host)
 
 
 TRUE_FEEDBACKS = {
