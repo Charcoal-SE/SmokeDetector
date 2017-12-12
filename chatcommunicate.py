@@ -1,6 +1,6 @@
 from ChatExchange.chatexchange import events
-from ChatExchange.chatexchange.client import Client
 from ChatExchange.chatexchange.messages import Message
+from chatexchange_extension import Client
 import collections
 import itertools
 import os.path

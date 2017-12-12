@@ -120,6 +120,20 @@ if GlobalVars.standby_mode:
 
 
 # noinspection PyProtectedMember
+def check_socket_connections():
+    while True:
+        time.sleep(90)
+
+        for client in chatcommunicate._clients.values():
+            if client.last_activity:
+                if (datetime.utcnow() - client.last_activity).total_seconds() >= 60:
+                    os._exit(10)
+
+
+Thread(name="check socket connections", target=check_socket_connections, daemon=True).start()
+
+
+# noinspection PyProtectedMember
 def restart_automatically(time_in_seconds):
     time.sleep(time_in_seconds)
     Metasmoke.send_statistics(False)  # false indicates not to auto-repeat
