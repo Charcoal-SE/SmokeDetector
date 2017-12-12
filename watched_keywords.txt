@@ -1960,3 +1960,4 @@
 1513081715	tripleee	genesis-mining\.com
 1513081781	tripleee	edge\W?testo
 1513114425	Glorfindel	bluebellplus\.in
+1513114432	Glorfindel	sparechange\.io
