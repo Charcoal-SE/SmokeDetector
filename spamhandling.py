@@ -13,6 +13,7 @@ import excepthook
 import regex
 from classes import Post, PostParseError
 from helpers import log
+from tasks import Tasks
 
 
 # noinspection PyMissingTypeHints
@@ -127,12 +128,10 @@ def handle_spam(post, reasons, why):
                                                             post.user_name.strip(), poster_url, shortened_site)
             username = post.user_name.strip()
 
-        t_metasmoke = Thread(name="metasmoke send post",
-                             target=metasmoke.Metasmoke.send_stats_on_post,
-                             args=(post.title_ignore_type, post_url, reasons, post.body, username,
-                                   post.user_link, why, post.owner_rep, post.post_score,
-                                   post.up_vote_count, post.down_vote_count))
-        t_metasmoke.start()
+        Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
+                 post.title_ignore_type, post_url, reasons, post.body, username,
+                 post.user_link, why, post.owner_rep, post.post_score,
+                 post.up_vote_count, post.down_vote_count)
 
         log('debug', GlobalVars.parser.unescape(s).encode('ascii', errors='replace'))
         datahandling.append_to_latest_questions(post.post_site, post.post_id, post.title)

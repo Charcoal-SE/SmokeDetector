@@ -6,13 +6,13 @@ import time
 import websocket
 # noinspection PyPackageRequirements
 from bs4 import BeautifulSoup
-from threading import Thread
 from urllib.parse import urlparse
 import chatcommunicate
 import metasmoke
 from globalvars import GlobalVars
 import datahandling
 from parsing import fetch_post_id_and_site_from_url
+from tasks import Tasks
 
 
 # noinspection PyClassHasNoInit,PyBroadException,PyMethodParameters
@@ -52,9 +52,7 @@ class DeletionWatcher:
             try:
                 a = ws.recv()
             except websocket.WebSocketTimeoutException:
-                t_metasmoke = Thread(name="metasmoke send deletion stats",
-                                     target=metasmoke.Metasmoke.send_deletion_stats_for_post, args=(post_url, False))
-                t_metasmoke.start()
+                Tasks.do(metasmoke.Metasmoke.send_deletion_stats_for_post, post_url, False)
                 return False
             if a is not None and a != "":
                 try:
@@ -70,14 +68,10 @@ class DeletionWatcher:
                         and ((post_type == "answer" and "aId" in d and str(d["aId"]) == post_id) or
                              post_type == "question"):
 
-                    t_metasmoke = Thread(name="metasmoke send deletion stats",
-                                         target=metasmoke.Metasmoke.send_deletion_stats_for_post, args=(post_url, True))
-                    t_metasmoke.start()
+                    Tasks.do(metasmoke.Metasmoke.send_deletion_stats_for_post, post_url, True)
                     return True
 
-        t_metasmoke = Thread(name="metasmoke send deletion stats",
-                             target=metasmoke.Metasmoke.send_deletion_stats_for_post, args=(post_url, False))
-        t_metasmoke.start()
+        Tasks.do(metasmoke.Metasmoke.send_deletion_stats_for_post, post_url, False)
         return False
 
     @classmethod

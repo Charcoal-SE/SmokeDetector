@@ -16,7 +16,6 @@ import os
 # noinspection PyPackageRequirements
 import websocket
 import getpass
-import threading
 from threading import Thread
 import traceback
 from bodyfetcher import BodyFetcher
@@ -34,6 +33,7 @@ import requests
 # noinspection PyPackageRequirements
 from tld.utils import update_tld_names, TldIOError
 from helpers import log
+from tasks import Tasks
 
 import chatcommands
 
@@ -121,26 +121,19 @@ if GlobalVars.standby_mode:
 
 # noinspection PyProtectedMember
 def check_socket_connections():
-    while True:
-        time.sleep(90)
-
-        for client in chatcommunicate._clients.values():
-            if client.last_activity:
-                if (datetime.utcnow() - client.last_activity).total_seconds() >= 60:
-                    os._exit(10)
-
-
-Thread(name="check socket connections", target=check_socket_connections, daemon=True).start()
+    for client in chatcommunicate._clients.values():
+        if client.last_activity and (datetime.utcnow() - client.last_activity).total_seconds() >= 60:
+            os._exit(10)
 
 
 # noinspection PyProtectedMember
-def restart_automatically(time_in_seconds):
-    time.sleep(time_in_seconds)
-    Metasmoke.send_statistics(False)  # false indicates not to auto-repeat
+def restart_automatically():
+    Metasmoke.send_statistics()
     os._exit(1)
 
 
-Thread(name="auto restart thread", target=restart_automatically, args=(21600,)).start()
+Tasks.periodic(check_socket_connections, interval=90)
+Tasks.later(restart_automatically, after=21600)
 
 log('info', GlobalVars.location)
 log('info', GlobalVars.metasmoke_host)
@@ -155,13 +148,12 @@ if "first_start" in sys.argv and GlobalVars.on_master:
 elif "first_start" in sys.argv and not GlobalVars.on_master:
     chatcommunicate.tell_rooms_with("debug", GlobalVars.s_reverted)
 
-Metasmoke.send_status_ping()  # This will call itself every minute or so
-threading.Timer(600, Metasmoke.send_statistics).start()
+Tasks.periodic(Metasmoke.send_status_ping, interval=60)
+Tasks.periodic(Metasmoke.send_statistics, interval=600)
+Tasks.periodic(Metasmoke.check_last_pingtime, interval=30)
 
 metasmoke_ws_t = Thread(name="metasmoke websocket", target=Metasmoke.init_websocket)
 metasmoke_ws_t.start()
-
-Metasmoke.check_last_pingtime()  # This will call itself every 10 seconds or so
 
 while True:
     try:

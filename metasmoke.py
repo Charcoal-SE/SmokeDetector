@@ -67,7 +67,6 @@ class Metasmoke:
 
     @staticmethod
     def check_last_pingtime():
-        threading.Timer(30, Metasmoke.check_last_pingtime).start()
         now = datetime.utcnow()
         errlog = open('errorLogs.txt', 'a', encoding="utf-8")
         if GlobalVars.metasmoke_last_ping_time is None:
@@ -265,7 +264,6 @@ class Metasmoke:
             log('info', "Metasmoke location not defined; not sending status ping")
             return
 
-        threading.Timer(60, Metasmoke.send_status_ping).start()
         metasmoke_key = GlobalVars.metasmoke_key
 
         try:
@@ -347,7 +345,7 @@ class Metasmoke:
                       data=json.dumps(payload), headers=headers)
 
     @staticmethod
-    def send_statistics(should_repeat=True):
+    def send_statistics():
         GlobalVars.posts_scan_stats_lock.acquire()
         if GlobalVars.post_scan_time != 0:
             posts_per_second = GlobalVars.num_posts_scanned / GlobalVars.post_scan_time
@@ -367,6 +365,3 @@ class Metasmoke:
         if GlobalVars.metasmoke_host is not None:
             requests.post(GlobalVars.metasmoke_host + "/statistics.json",
                           data=json.dumps(payload), headers=headers)
-
-        if should_repeat:
-            threading.Timer(600, Metasmoke.send_statistics).start()
