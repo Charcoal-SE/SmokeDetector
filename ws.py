@@ -110,6 +110,8 @@ GlobalVars.standby_message = "[ " + GlobalVars.chatmessage_prefix + " ] " \
 GlobalVars.standby_mode = "standby" in sys.argv
 
 chatcommunicate.init(username, password)
+Tasks.periodic(Metasmoke.send_status_ping, interval=60)
+Tasks.periodic(Metasmoke.check_last_pingtime, interval=30)
 
 if GlobalVars.standby_mode:
     chatcommunicate.tell_rooms_with("debug", GlobalVars.standby_message)
@@ -150,9 +152,7 @@ if "first_start" in sys.argv and GlobalVars.on_master:
 elif "first_start" in sys.argv and not GlobalVars.on_master:
     chatcommunicate.tell_rooms_with("debug", GlobalVars.s_reverted)
 
-Tasks.periodic(Metasmoke.send_status_ping, interval=60)
 Tasks.periodic(Metasmoke.send_statistics, interval=600)
-Tasks.periodic(Metasmoke.check_last_pingtime, interval=30)
 
 metasmoke_ws_t = Thread(name="metasmoke websocket", target=Metasmoke.init_websocket)
 metasmoke_ws_t.start()
