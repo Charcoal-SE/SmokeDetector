@@ -1022,3 +1022,4 @@ zoroc
 nutralu
 nouveau\W?restore?
 enduromax
+(?:le\W?)?reviva
