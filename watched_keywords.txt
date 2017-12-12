@@ -1915,7 +1915,6 @@
 1512713519	tripleee	(?:1\W*)?407\W*965\W*2136
 1512714096	tripleee	ultralast(?:\W?xxl)?
 1512714376	tripleee	facebookhelp\.us
-1512721506	Glorfindel	saytooloud\.com
 1512722659	Glorfindel	getapkk\.com
 1512727519	Glorfindel	itechgyan\.com
 1512737502	Glorfindel	tweakboxapp\.info
