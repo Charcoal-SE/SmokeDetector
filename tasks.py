@@ -7,6 +7,8 @@ class Tasks:
 
     @classmethod
     def _run(cls):
+        asyncio.set_event_loop(cls.loop)
+
         try:
             cls.loop.run_forever()
         finally:
