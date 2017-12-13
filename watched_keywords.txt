@@ -1962,3 +1962,4 @@
 1513114425	Glorfindel	bluebellplus\.in
 1513114432	Glorfindel	sparechange\.io
 1513114438	Glorfindel	prosabbir\.blogspot\.com
+1513139142	Tetsuya Yamamoto	martine-voyance\.com
