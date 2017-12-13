@@ -53,3 +53,4 @@ JoeClark
 ^mike alec$
 ^Madhav sharma$
 car\W?insurance
+^xiao(?:xi|zhu)$
