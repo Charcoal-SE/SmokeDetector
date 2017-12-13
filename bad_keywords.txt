@@ -1028,3 +1028,4 @@ alpha\W?pro(?:\Wmuscle)?
 bioflex
 ageless\W?youth
 keto\W?burn(?:\W?protocol)?
+nikon-d50-dslr-camera-24-1mp-1080i-video-3-0-vari-angle-lcd
