@@ -188,8 +188,8 @@ def on_msg(msg, client):
         room_data = _rooms[(client.host, message.room.id)]
 
         if message.parent and message.parent.owner.id == client._br.user_id:
-            content = GlobalVars.parser.unescape(message.content).lower()
-            cmd = content.split(" ", 2)[1]
+            strip_mention = regex.sub("^(<span class='mention'>)?@.*?(</span>)? ", "", message.content)
+            cmd = GlobalVars.parser.unescape(strip_mention).lower().split(" ", 1)[0]
 
             result = dispatch_reply_command(message.parent, message, cmd)
 
@@ -279,10 +279,10 @@ def get_report_data(message):
     if identifier in _last_messages.reports:
         return _last_messages.reports[identifier]
     else:
-        post_url = fetch_post_url_from_msg_content(message.content)
+        post_url = fetch_post_url_from_msg_content(message.content_source)
 
         if post_url:
-            return (post_url, fetch_owner_url_from_msg_content(message.content))
+            return (post_url, fetch_owner_url_from_msg_content(message.content_source))
 
 
 def is_privileged(user, room):
