@@ -1956,7 +1956,6 @@
 1513066900	tripleee	lawyersforcaraccidents\.org
 1513069612	tripleee	blockchaininvestio
 1513078265	tripleee	24\W?karat\W?gold
-1513081689	tripleee	topwellnessdiet\.com
 1513081715	tripleee	genesis-mining\.com
 1513081781	tripleee	edge\W?testo
 1513114425	Glorfindel	bluebellplus\.in
