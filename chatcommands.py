@@ -1189,7 +1189,7 @@ def delete_force(msg):
     """
     # noinspection PyBroadException
     try:
-        msg.delete()
+        msg._client._do_action_despite_throttling(("delete", msg.id, ""))
     except:
         pass  # couldn't delete message
 
@@ -1210,7 +1210,7 @@ def delete(msg):
                "#a-note-on-message-deletion) for more details."
     else:
         try:
-            msg.delete()
+            msg._client._do_action_despite_throttling(("delete", msg.id, ""))
         except:
             pass
 
@@ -1228,7 +1228,7 @@ def postgone(msg):
     if edited is None:
         raise CmdException("That's not a report.")
 
-    msg.edit(edited)
+    msg._client._do_action_despite_throttling(("edit", msg.id, edited))
 
 
 # noinspection PyIncorrectDocstring
@@ -1266,7 +1266,7 @@ def false(feedback, msg, alias_used="false"):
 
     try:
         if int(msg.room.id) != int(GlobalVars.charcoal_hq.id):
-            msg.delete()
+            msg._client._do_action_despite_throttling(("delete", msg.id, ""))
     except:
         pass
 
