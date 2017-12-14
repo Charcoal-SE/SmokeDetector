@@ -108,6 +108,8 @@ def malicious_link(s, site, *args):
         return False, ''
     except tld.exceptions.TldBadUrl:
         return False, ''
+    except ValueError as err:
+        return False, ''
 
     if levenshtein(parsed_href.domain.lower(), parsed_text.domain.lower()) > LEVEN_DOMAIN_DISTANCE:
         return True, 'Domain {} indicated by possible misleading text {}.'.format(
