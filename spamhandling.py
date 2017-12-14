@@ -140,7 +140,7 @@ def handle_spam(post, reasons, why):
         if len(message) > 500:
             message = (prefix + s)[:500]
 
-        without_roles = tuple("no-" + reason for reason in reasons)
+        without_roles = tuple("no-" + reason for reason in reasons) + ("site-no-" + post.post_site,)
 
         if set(reason) & GlobalVars.experimental_reasons == {}:
             chatcommunicate.tell_rooms(message, ("experimental"),

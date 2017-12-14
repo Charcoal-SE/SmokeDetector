@@ -206,6 +206,7 @@ meta.stackexchange.com:
       - all
       - metatavern
       - delay
+      - site-no-stackoverflow.com
       - no-all-caps body
       - no-all-caps answer
       - no-repeating characters in body
