@@ -80,13 +80,7 @@ def init(username, password):
         parse_room_config("rooms.yml")
 
     if not GlobalVars.standby_mode:
-        for site, roomid in _command_rooms:
-            room = _clients[site].get_room(roomid)
-            deletion_watcher = (site, roomid) in _watcher_rooms
-
-            room.join()
-            room.watch_socket(on_msg)
-            _rooms[(site, roomid)] = RoomData(room, -1, deletion_watcher)
+        join_command_rooms()
 
     if os.path.isfile("messageData.p"):
         try:
@@ -96,6 +90,16 @@ def init(username, password):
 
     threading.Thread(name="pickle ---rick--- runner", target=pickle_last_messages, daemon=True).start()
     threading.Thread(name="message sender", target=send_messages, daemon=True).start()
+
+
+def join_command_rooms():
+    for site, roomid in _command_rooms:
+        room = _clients[site].get_room(roomid)
+        deletion_watcher = (site, roomid) in _watcher_rooms
+
+        room.join()
+        room.watch_socket(on_msg)
+        _rooms[(site, roomid)] = RoomData(room, -1, deletion_watcher)
 
 
 def parse_room_config(path):

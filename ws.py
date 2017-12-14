@@ -120,7 +120,7 @@ if GlobalVars.standby_mode:
     while GlobalVars.standby_mode:
         time.sleep(3)
 
-    chatcommunicate.init(username, password)  # to rejoin rooms
+    chatcommunicate.join_command_rooms()
 
 
 # noinspection PyProtectedMember
