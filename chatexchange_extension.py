@@ -93,4 +93,4 @@ class Browser(browser.Browser):
             super._default_ws_recovery(roomid)
 
 
-threading.Thread(name="poller", target=Browser._poll).start()
+threading.Thread(name="poller", target=Browser._poll, daemon=True).start()
