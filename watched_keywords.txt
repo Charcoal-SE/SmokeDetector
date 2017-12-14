@@ -1066,7 +1066,6 @@
 1506669737	Glorfindel	buildyourorg\.com
 1506671869	tripleee	reviewfantasy\.com
 1506687270	Glorfindel	speedyfiles\.net
-1506687310	Glorfindel	3dprintersbay\.com
 1506687425	Glorfindel	hdbelgesel\.tv
 1506711943	Glorfindel	starsportslive3\.blogspot\.com
 1506730306	bwDraco	icloud\W?assistant\W?pro
