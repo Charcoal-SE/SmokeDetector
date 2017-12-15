@@ -1033,3 +1033,4 @@ write-my-dissertation
 apex\W?mastermind
 rejuva\W?brain
 dissertation-writing-services
+zuratex
