@@ -37,7 +37,6 @@ class Client(client.Client):
 
 class Browser(browser.Browser):
     _poller = select.poll()
-    _kill_poll = False
     _sockets_by_fd = {}
 
     _rid, _wid = os.pipe()
@@ -49,16 +48,17 @@ class Browser(browser.Browser):
             for ready, event in cls._poller.poll():
                 if ready == cls._rid:
                     os.read(cls._rid, 1)
+                    continue
+
+                sock, roomid, on_msg, on_hup = cls._sockets_by_fd[ready]
+
+                if event & select.POLLHUP:
+                    on_hup(roomid)
                 else:
-                    sock, roomid, on_msg, on_hup = cls._sockets_by_fd[ready]
+                    msg = sock.recv()
 
-                    if event & select.POLLHUP:
-                        on_hup(roomid)
-                    else:
-                        msg = sock.recv()
-
-                        if msg:
-                            on_msg(json.loads(msg))
+                    if msg:
+                        on_msg(json.loads(msg))
 
     def leave_room(self, roomid):
         roomid = str(roomid)

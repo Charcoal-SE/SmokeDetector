@@ -1180,6 +1180,10 @@ def allspam(msg, url):
 DELETE_ALIASES = ["delete", "del", "remove", "poof", "gone", "kaboom"]
 
 
+def delete_helper(msg):
+    msg._client._do_action_despite_throttling(("delete", msg.id, ""))
+
+
 @command(message, reply=True, privileged=True, aliases=[alias + "-force" for alias in DELETE_ALIASES])
 def delete_force(msg):
     """
@@ -1189,7 +1193,7 @@ def delete_force(msg):
     """
     # noinspection PyBroadException
     try:
-        msg._client._do_action_despite_throttling(("delete", msg.id, ""))
+        delete_helper(msg)
     except:
         pass  # couldn't delete message
 
@@ -1210,7 +1214,7 @@ def delete(msg):
                "#a-note-on-message-deletion) for more details."
     else:
         try:
-            msg._client._do_action_despite_throttling(("delete", msg.id, ""))
+            delete_helper(msg)
         except:
             pass
 
