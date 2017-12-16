@@ -199,17 +199,16 @@ def on_msg(msg, client):
 
             if result:
                 _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
-        elif len(message.content) > 3:
-            if message.content.startswith("sd "):
-                result = dispatch_shorthand_command(message)
+        elif message.content.startswith("sd "):
+            result = dispatch_shorthand_command(message)
 
-                if result:
-                    _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
-            elif message.content.startswith("!!/"):
-                result = dispatch_command(message)
+            if result:
+                _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
+        elif message.content.startswith("!!/"):
+            result = dispatch_command(message)
 
-                if result:
-                    _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
+            if result:
+                _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
 
 
 def tell_rooms_with(prop, msg, notify_site="", report_data=None):
@@ -366,6 +365,9 @@ def dispatch_command(msg):
         cmd, = command_parts
         args = ""
 
+    if len(command_name) == 3:
+        return
+
     command_name = cmd[3:].lower()
 
     quiet_action = command_name[-1] == "-"
@@ -409,6 +411,9 @@ def dispatch_reply_command(msg, reply, cmd):
 
 def dispatch_shorthand_command(msg):
     commands = GlobalVars.parser.unescape(msg.content[3:]).split()
+    
+    if len(commands) == 0:
+        return
 
     output = []
     processed_commands = []
