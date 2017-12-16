@@ -365,7 +365,7 @@ def dispatch_command(msg):
         cmd, = command_parts
         args = ""
 
-    if len(command_name) == 3:
+    if len(cmd) == 3:
         return
 
     command_name = cmd[3:].lower()
@@ -411,7 +411,7 @@ def dispatch_reply_command(msg, reply, cmd):
 
 def dispatch_shorthand_command(msg):
     commands = GlobalVars.parser.unescape(msg.content[3:]).split()
-    
+
     if len(commands) == 0:
         return
 
