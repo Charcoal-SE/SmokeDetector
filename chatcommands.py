@@ -1181,7 +1181,10 @@ DELETE_ALIASES = ["delete", "del", "remove", "poof", "gone", "kaboom"]
 
 
 def delete_helper(msg):
-    msg._client._do_action_despite_throttling(("delete", msg.id, ""))
+    try:
+        msg._client._do_action_despite_throttling(("delete", msg.id, ""))
+    except:
+        pass
 
 
 @command(message, reply=True, privileged=True, aliases=[alias + "-force" for alias in DELETE_ALIASES])
@@ -1191,11 +1194,7 @@ def delete_force(msg):
     :param msg:
     :return: None
     """
-    # noinspection PyBroadException
-    try:
-        delete_helper(msg)
-    except:
-        pass  # couldn't delete message
+    delete_helper(msg)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal,PyBroadException
@@ -1213,13 +1212,10 @@ def delete(msg):
                "(https://charcoal-se.org/smokey/Commands"\
                "#a-note-on-message-deletion) for more details."
     else:
-        try:
-            delete_helper(msg)
-        except:
-            pass
+        delete_helper(msg)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring
 @command(message, reply=True, privileged=True)
 def postgone(msg):
     """
