@@ -1537,7 +1537,6 @@
 1510562372	tripleee	forest\W?springs(?:\W?garcinia)?(?:\W?cambogia)?
 1510569870	tripleee	doorsmelbourne\.net
 1510576244	tripleee	andrshz99
-1510587491	Glorfindel	facebook-hacker\.org
 1510598410	tripleee	softcrylic\.com
 1510602280	Glorfindel	techrenters\.com
 1510604836	Glorfindel	beddingaid\.com
