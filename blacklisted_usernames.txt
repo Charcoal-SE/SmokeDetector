@@ -54,3 +54,4 @@ JoeClark
 ^Madhav sharma$
 car\W?insurance
 ^xiao(?:xi|zhu)$
+lavinia\W?stark
