@@ -326,15 +326,24 @@ class Metasmoke:
         """
         Given the URL for a post, determine whether or not it has been autoflagged.
         """
-        payload = {'key': GlobalVars.metasmoke_key,
-                   'urls': post_url}
-        headers = {'Content-type': 'application/json'}
-        autoflagged = requests.get(GlobalVars.metasmoke_host + "/api/posts/urls",
-                                   data=json.dumps(payload), headers=headers).json()['items'][0]['autoflagged']
-        is_autoflagged = autoflagged['flagged']
-        names = autoflagged['names']
+        payload = {
+            'key': GlobalVars.metasmoke_key,
+            'filter': 'GKNJKLILHNFMJLFKINGJJHJOLGFHJF' # id and autoflagged
+            'urls': post_url
+        }
+        response = requests.get(GlobalVars.metasmoke_host + "/api/v2.0/posts/urls", params=payload).json()
 
-        return is_autoflagged, names
+        if len(response["items"]) > 0 and response["items"][0]["autoflagged"]:
+            # get flagger names
+            id = str(response["items"][0]["id"])
+            payload = {'key': GlobalVars.metasmoke_key}
+
+            flaggers = requests.get(GlobalVars.metasmoke_host + "/api/v2.0/posts/" + id + "/flags", params=payload).json()
+
+            if len(flaggers["items"]) > 0: 
+                return True, [user["username"] for user in flaggers["items"][0]["autoflagged"]["users"]]
+
+        return False, []
 
     @staticmethod
     def stop_autoflagging():
