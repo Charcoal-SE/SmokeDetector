@@ -328,7 +328,7 @@ class Metasmoke:
         """
         payload = {
             'key': GlobalVars.metasmoke_key,
-            'filter': 'GKNJKLILHNFMJLFKINGJJHJOLGFHJF', # id and autoflagged
+            'filter': 'GKNJKLILHNFMJLFKINGJJHJOLGFHJF',  # id and autoflagged
             'urls': post_url
         }
         response = requests.get(GlobalVars.metasmoke_host + "/api/v2.0/posts/urls", params=payload).json()
@@ -340,7 +340,7 @@ class Metasmoke:
 
             flags = requests.get(GlobalVars.metasmoke_host + "/api/v2.0/posts/" + id + "/flags", params=payload).json()
 
-            if len(flags["items"]) > 0: 
+            if len(flags["items"]) > 0:
                 return True, [user["username"] for user in flags["items"][0]["autoflagged"]["users"]]
 
         return False, []
