@@ -338,10 +338,10 @@ class Metasmoke:
             id = str(response["items"][0]["id"])
             payload = {'key': GlobalVars.metasmoke_key}
 
-            flaggers = requests.get(GlobalVars.metasmoke_host + "/api/v2.0/posts/" + id + "/flags", params=payload).json()
+            flags = requests.get(GlobalVars.metasmoke_host + "/api/v2.0/posts/" + id + "/flags", params=payload).json()
 
-            if len(flaggers["items"]) > 0: 
-                return True, [user["username"] for user in flaggers["items"][0]["autoflagged"]["users"]]
+            if len(flags["items"]) > 0: 
+                return True, [user["username"] for user in flags["items"][0]["autoflagged"]["users"]]
 
         return False, []
 
