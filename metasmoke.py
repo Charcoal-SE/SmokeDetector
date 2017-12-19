@@ -328,7 +328,7 @@ class Metasmoke:
         """
         payload = {
             'key': GlobalVars.metasmoke_key,
-            'filter': 'GKNJKLILHNFMJLFKINGJJHJOLGFHJF' # id and autoflagged
+            'filter': 'GKNJKLILHNFMJLFKINGJJHJOLGFHJF', # id and autoflagged
             'urls': post_url
         }
         response = requests.get(GlobalVars.metasmoke_host + "/api/v2.0/posts/urls", params=payload).json()
