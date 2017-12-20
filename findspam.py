@@ -1143,7 +1143,7 @@ class FindSpam:
          'reason': 'mostly dots in {}', 'title': True, 'body': True, 'username': False, 'body_summary': False,
          'stripcodeblocks': False, 'max_rep': 50, 'max_score': 0},
         # Title ends with Comma (IPS Troll)
-        {'regex': r".*\,$", 'all': True, 'sites': [],
+        {'regex': r".*\,$", 'all': False, 'sites': ['interpersonal.stackexchange.com'],
          'reason': "title ends with comma", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 50, 'max_score': 0},
         #
