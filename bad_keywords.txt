@@ -1040,3 +1040,4 @@ testro\W?t3
 slimlast
 alpha.male
 core\W?max(?:\W?ultra)?
+enduraflex
