@@ -1263,6 +1263,8 @@ def false(feedback, msg, alias_used="false"):
             result = "Registered " + post_type + " as false positive and removed user from the blacklist."
         else:
             result = "Registered " + post_type + " as false positive."
+    else:
+        result = "Registered " + post_type + " as false positive."
 
     try:
         if int(msg.room.id) != int(GlobalVars.charcoal_hq.id):
@@ -1353,6 +1355,8 @@ def true(feedback, msg, alias_used="true"):
         else:
             result = "Registered " + post_type + " as true positive. If you want to "\
                      "blacklist the poster, use `trueu` or `tpu`."
+    else:
+        result = "Registered " + post_type + " as true positive."
 
     return result if not feedback_type.always_silent else ""
 
