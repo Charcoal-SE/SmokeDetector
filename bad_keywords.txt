@@ -1042,3 +1042,4 @@ alpha.male
 core\W?max(?:\W?ultra)?
 enduraflex
 Oil\W?Review
+krasa\W?(anti|cream|skin)
