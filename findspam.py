@@ -1146,6 +1146,10 @@ class FindSpam:
         {'regex': r".*\,$", 'all': False, 'sites': ['interpersonal.stackexchange.com'],
          'reason': "title ends with comma", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 50, 'max_score': 0},
+        # Title starts and ends with a forward slash
+        {'regex': r"^\/.*\/$", 'all': True, 'sites': [], 'reason': "title starts and ends with a forward slash",
+         'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
+         'max_rep': 1, 'max_score': 0},
         #
         # Category: other
         # Blacklisted usernames
