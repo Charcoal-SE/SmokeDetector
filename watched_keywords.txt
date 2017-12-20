@@ -89,7 +89,6 @@
 1495979303	Mithrandir	indisweets\.com
 1496032220	tripleee	luminary\Wrevitalizing
 1496038730	tripleee	govtjobsrch\.com
-1496048159	tripleee	krasa\W?(anti|cream|skin)
 1496052391	tripleee	skincare\W?panama
 1496054040	Mithrandir	esteworld\.com
 1496056127	tripleee	60167569133
@@ -2010,3 +2009,4 @@
 1513766286	Glorfindel	theclasaffloweroilreview\.com
 1513767213	Mithrandir	titan\W?blast
 1513768815	paper1111	wbcwallet\.blogspot\.in
+1513771776	Glorfindel	youthful\W?derma
