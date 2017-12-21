@@ -954,7 +954,6 @@
 1505584268	Glorfindel	gethpdrivers\.com
 1505584590	Thomas Ward	printerdriverforwindows\.com
 1505603516	J F	free\W?paid\W?content
-1505646864	Mithrandir	Ultra\W?Turmeric
 1505658326	Mithrandir	raconstructions\.us
 1505663824	Glorfindel	top4webhosting\.com
 1505706795	tripleee	regiebaquero\.tk
