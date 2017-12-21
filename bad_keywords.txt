@@ -1046,3 +1046,4 @@ blockchaininvestio
 titan\W?blast
 male\W?peak(?:\W?ultra)?
 (?:immune\W?)?ultra\W?turmeric
+(?<=[/-])fxm(?:[<"])
