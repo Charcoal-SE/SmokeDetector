@@ -2011,3 +2011,4 @@
 1513857550	paper1111	buddhika-semasinghe\.blogspot\.com
 1513863276	tripleee	sociobid\.com
 1513880166	quartata	dataalign\.com
+1513882051	Mithrandir	trickyfact(\.com)?
