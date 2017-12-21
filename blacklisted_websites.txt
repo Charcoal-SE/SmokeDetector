@@ -1673,3 +1673,4 @@ translation\.pk
 impactlanguagetraining\.com
 viralsupplement\.com
 healthboosterclub\.com
+junivive\.fr
