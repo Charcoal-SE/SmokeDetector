@@ -331,7 +331,7 @@ patriot\Wpower\Wgreens
 ultraderm
 colodetox
 lumaglow
-primal\W?x
+primal\W?xl?
 vigrx
 ambisom
 laleur\Wcream
@@ -367,7 +367,7 @@ retinolla
 focused\Win\Wbrain
 wrinkle\Wreducer?
 active\Wbrightening
-alpha\Wmale\Wex
+alpha\W?male(?:\W?ex)?
 hotcyberlord
 luxlift
 erectimax
@@ -1038,7 +1038,6 @@ tribulus\W?terrestris
 instantly\W?ageless
 testro\W?t3
 slimlast
-alpha.male
 core\W?max(?:\W?ultra)?
 enduraflex
 Oil\W?Review
@@ -1046,4 +1045,3 @@ krasa\W?(anti|cream|skin)
 blockchaininvestio
 titan\W?blast
 male\W?peak(?:\W?ultra)?
-primal\W?xl
