@@ -1048,3 +1048,4 @@ male\W?peak(?:\W?ultra)?
 (?:immune\W?)?ultra\W?turmeric
 (?<=[/-])fxm(?=[-<"])
 testosup
+true\W?slim
