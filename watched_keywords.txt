@@ -2027,4 +2027,3 @@
 1513936815	Glorfindel	alpha\W?monster\W?blast
 1513936929	Glorfindel	office-comsetup\.net
 1513949773	paper1111	neosphere\.com\.np
-1514026089	Glorfindel	techment\.in
