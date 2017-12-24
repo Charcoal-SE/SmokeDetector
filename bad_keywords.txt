@@ -1050,3 +1050,4 @@ male\W?peak(?:\W?ultra)?
 testosup
 true\W?slim
 zyplex
+prostalgene

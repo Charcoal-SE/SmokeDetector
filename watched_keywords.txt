@@ -1966,7 +1966,6 @@
 1513229390	tripleee	smokegears\.com
 1513229418	tripleee	lockerpoint\.com
 1513229434	tripleee	gpsrunner\.co\.uk
-1513229669	tripleee	prostalgene
 1513241117	tripleee	powergatesoftware\.com
 1513250533	tripleee	techissueshelp\.com
 1513255094	Glorfindel	onyourbike\.com
