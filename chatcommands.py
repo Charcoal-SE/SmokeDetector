@@ -1202,7 +1202,7 @@ def delete(msg):
     :param msg:
     :return: None
     """
-    if msg.room.id == 11540:
+
     post_data = get_report_data(msg)
     if post_data and msg.room.id == 11540:
         return "Reports from SmokeDetector in Charcoal HQ are generally kept "\
