@@ -1436,7 +1436,6 @@
 1509699127	tripleee	goo\.gl/py5Qeo
 1509700616	tripleee	cognitune
 1509701233	tripleee	nu\W?clarity
-1509702644	Byte Commander	jollyhers\.com
 1509707090	tripleee	chicagocosmeticderm\.com
 1509707266	tripleee	aptoide\.com
 1509712941	tripleee	womanparadise\.in
