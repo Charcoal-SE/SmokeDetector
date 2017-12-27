@@ -2060,3 +2060,4 @@
 1514374482	Glorfindel	wiipedia\.org
 1514379109	paper1111	thedrum\.com
 1514391529	Glorfindel	binfer\.com
+1514397597	Glorfindel	us-counsel\.com
