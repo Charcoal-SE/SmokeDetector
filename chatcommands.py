@@ -875,6 +875,10 @@ def willbenotified(msg, room_id, se_site):
 
 
 RETURN_NAMES = {"admin": ["admin", "admins"], "code_admin": ["code admin", "code admins"]}
+VALID_ROLES = {"admin": "admin",
+               "code_admin": "code_admin",
+               "admins": "admin",
+               "codeadmins": "code_admin"}
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
@@ -886,17 +890,12 @@ def whois(msg, role):
     :param role:
     :return: A string
     """
-    valid_roles = {"admin": "admin",
-                   "code_admin": "code_admin",
-                   "admins": "admin",
-                   "codeadmins": "code_admin"}
-
-    if role not in list(valid_roles.keys()):
+    if role not in VALID_ROLES:
         raise CmdException("That is not a user level I can check. "
-                           "I know about {0}".format(", ".join(set(valid_roles.values()))))
+                           "I know about {0}".format(", ".join(set(VALID_ROLES.values()))))
 
-    ms_route = "https://metasmoke.erwaysoftware.com/api/users/?role={}&key={}&per_page=100".format(
-        valid_roles[role],
+    ms_route = "https://metasmoke.erwaysoftware.com/api/v2/users/with_role/{}?key={}&per_page=100&filter=JIHF".format(
+        VALID_ROLES[role],
         GlobalVars.metasmoke_key)
 
     user_response = requests.get(ms_route)
@@ -938,7 +937,7 @@ def whois(msg, role):
                                 msg._client.get_user(admin).last_seen)
                                for admin in admins_not_in_room]
 
-    return_name = RETURN_NAMES[valid_roles[role]][0 if len(admin_ids) == 1 else 1]
+    return_name = RETURN_NAMES[VALID_ROLES[role]][0 if len(admin_ids) == 1 else 1]
 
     response = "I am aware of {} {}".format(len(admin_ids), return_name)
 
