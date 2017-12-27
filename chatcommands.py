@@ -894,7 +894,7 @@ def whois(msg, role):
         raise CmdException("That is not a user level I can check. "
                            "I know about {0}".format(", ".join(set(VALID_ROLES.values()))))
 
-    ms_route = "https://metasmoke.erwaysoftware.com/api/v2/users/with_role/{}?key={}&per_page=100&filter=JIHF".format(
+    ms_route = "https://metasmoke.erwaysoftware.com/api/v2.0/users/with_role/{}?key={}&per_page=100&filter=JIHF".format(
         VALID_ROLES[role],
         GlobalVars.metasmoke_key)
 
