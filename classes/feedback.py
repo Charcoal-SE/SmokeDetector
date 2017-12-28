@@ -22,7 +22,7 @@ class Feedback:
 
 
 TRUE_FEEDBACKS = {
-    "true": Feedback(Feedback.TRUE_POSITIVE, always_silent=False, blacklist=False),
+    "true": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=False),
     "tp": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=False),
     "trueu": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=False),
     "tpu": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=False),
