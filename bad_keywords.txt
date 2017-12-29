@@ -1057,3 +1057,4 @@ jouliage
 testosterone\W?complex
 primal\W?factor
 gold.raiditem
+alpha\W?monster\W?blast

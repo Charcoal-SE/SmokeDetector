@@ -2021,7 +2021,6 @@
 1513936423	Glorfindel	multiculturalismrocks\.com
 1513936433	Glorfindel	itcantbeyou\.com
 1513936779	Suraj Rao	getwillzone\.blogspot\.in
-1513936815	Glorfindel	alpha\W?monster\W?blast
 1513936929	Glorfindel	office-comsetup\.net
 1513949773	paper1111	neosphere\.com\.np
 1514042853	Glorfindel	vrcams\.io
