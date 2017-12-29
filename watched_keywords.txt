@@ -2080,3 +2080,4 @@
 1514538530	Glorfindel	gamatasli\.com
 1514538609	Glorfindel	ahlinyaobatmaag\.com
 1514538653	Glorfindel	\w*jellygamat.com
+1514543789	Glorfindel	uniformonline\.com
