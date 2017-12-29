@@ -2079,3 +2079,4 @@
 1514532206	Glorfindel	agcustoms\.net
 1514538530	Glorfindel	gamatasli\.com
 1514538609	Glorfindel	ahlinyaobatmaag\.com
+1514538653	Glorfindel	\w*jellygamat.com
