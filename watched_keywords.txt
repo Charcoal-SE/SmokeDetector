@@ -2086,3 +2086,4 @@
 1514614412	paper1111	press-start\.com
 1514629076	Suraj Rao	jacksonvillegunrunners\.com
 1514658506	Glorfindel	auto\Wstamper
+1514706869	Mithrandir	kill?\W?(yo)?urs(el|le)f
