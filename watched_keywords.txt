@@ -2087,3 +2087,4 @@
 1514658506	Glorfindel	auto\Wstamper
 1514706869	Mithrandir	kill?\W?(yo)?urs(el|le)f
 1514728896	iBug	wondercoco
+1514848305	paper1111	conexraco\.com
