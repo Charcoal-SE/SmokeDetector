@@ -1058,4 +1058,4 @@ testosterone\W?complex
 primal\W?factor
 gold.raiditem
 alpha\W?monster\W?blast
-neuro max
+neuro\W?max
