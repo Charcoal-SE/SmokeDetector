@@ -1059,3 +1059,4 @@ primal\W?factor
 gold.raiditem
 alpha\W?monster\W?blast
 neuro\W?max
+vexan
