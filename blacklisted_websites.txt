@@ -1522,7 +1522,7 @@ vbagetech\.com
 browseplay\.com
 semmiami\.com
 office-comsetup\.com
-(?!<paypal-)(customer|tech|technical)-?(support|service)\.com
+(?<!paypal-)(customer|tech|technical)-?(support|service)\.com
 livetecs\.com
 obatpelancarhaidterbaik\.com
 el-watnya\.com
