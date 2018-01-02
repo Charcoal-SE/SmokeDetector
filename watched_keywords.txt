@@ -2091,3 +2091,4 @@
 1514865786	iBug	honeytik\.com
 1514872257	tripleee	newangle\.com
 1514879002	Tetsuya Yamamoto	liveyahoohelp\.com
+1514881356	Tetsuya Yamamoto	precision-elec\.com
