@@ -34,6 +34,17 @@ from classes.feedback import *
 #
 # System command functions below here
 
+# The following two commands are just bypasses for the "unrecognized command" message, so that pingbot
+# can respond instead.
+@command(aliases=['ping-help'])
+def ping_help():
+    return None
+
+
+@command()
+def groups()
+    return None
+
 
 @command(int, whole_msg=True, privileged=True)
 def approve(msg, pr_num):
