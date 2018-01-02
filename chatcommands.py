@@ -42,7 +42,7 @@ def ping_help():
 
 
 @command()
-def groups()
+def groups():
     return None
 
 
