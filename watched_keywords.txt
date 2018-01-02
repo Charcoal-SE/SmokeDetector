@@ -1078,7 +1078,7 @@
 1506924670	tripleee	1?469\W*844\W*0536
 1506935371	Glorfindel	pbctimes\.com
 1506944134	Mithrandir	gamestore\.live
-1506945240	Mithrandir	hack(er)?.{0,50}\b(text|call|contact)
+1506945240	Mithrandir	hack(er)?\b.{0,50}\b(text|call|contact)
 1506959194	Owen Hines	boldcraze\.com
 1506961455	Glorfindel	bandbniagara\.com
 1506963780	Owen Hines	mr-android12\.blogspot\.com\.eg
