@@ -375,7 +375,9 @@ def brownie():
     """
     return "Brown!"
 
+
 COFFEES = ['Espresso', 'Macchiato', 'Ristretto', 'Americano', 'Latte', 'Cappuccino', 'Mocha', 'Affogato']
+
 
 # noinspection PyIncorrectDocstring
 @command(str, whole_msg=True, arity=(0, 1))
