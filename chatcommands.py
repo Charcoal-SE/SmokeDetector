@@ -388,7 +388,7 @@ def coffee(msg, other_user):
     """
     if other_user is None:
         return "*brews a cup of {} for @{}*".format(random.choice(COFFEES), msg.owner.name.replace(" ", ""))
-    else
+    else:
         return "*brews a cup of {} for @{}*".format(random.choice(COFFEES), other_user)
 
 
