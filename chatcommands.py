@@ -376,6 +376,9 @@ def brownie():
     return "Brown!"
 
 
+COFFEES = ['Espresso', 'Macchiato', 'Ristretto', 'Americano', 'Latte', 'Cappuccino', 'Mocha', 'Affogato']
+
+
 # noinspection PyIncorrectDocstring
 @command(str, whole_msg=True, arity=(0, 1))
 def coffee(msg, other_user):
@@ -385,7 +388,10 @@ def coffee(msg, other_user):
     :param other_user:
     :return: A string
     """
-    return "*brews coffee for @" + (other_user if other_user else msg.owner.name.replace(" ", "")) + "*"
+    if other_user is None:
+        return "*brews a cup of {} for @{}*".format(random.choice(COFFEES), msg.owner.name.replace(" ", ""))
+    else:
+        return "*brews a cup of {} for @{}*".format(random.choice(COFFEES), other_user)
 
 
 # noinspection PyIncorrectDocstring
