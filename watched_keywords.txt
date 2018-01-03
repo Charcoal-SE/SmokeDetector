@@ -1459,7 +1459,6 @@
 1509994952	QPaysTaxes	severalnines
 1510035293	tripleee	tinyurl\.com/ya4b7apc
 1510037808	tripleee	lisacole29\.wordpress\.com
-1510042186	Glorfindel	createmyfreeapp\.com
 1510047486	Glorfindel	letsgoforgood\.com
 1510047512	Glorfindel	binaryforexacademy\.org
 1510051260	Glorfindel	windowstechsupport\.org
