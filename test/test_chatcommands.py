@@ -16,8 +16,9 @@ from unittest.mock import patch
 def test_coffee():
     msg = Fake({"owner": {"name": "El'endia Starman"}})
 
-    assert chatcommands.coffee(None, original_msg=msg) == "*brews coffee for @El'endiaStarman*"
-    assert chatcommands.coffee("angussidney") == "*brews coffee for @angussidney*"
+    coffees = "\*brews a cup of ({}) for ".format("|".join(chatcommands.COFFEES))
+    assert regex.match(coffees + "@El'endiaStarman\*", chatcommands.coffee(None, original_msg = msg))
+    assert regex.match(coffees + "@angussidney\*", chatcommands.coffee("angussidney"))
 
 
 def test_tea():
