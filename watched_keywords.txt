@@ -1459,7 +1459,6 @@
 1509994952	QPaysTaxes	severalnines
 1510035293	tripleee	tinyurl\.com/ya4b7apc
 1510037808	tripleee	lisacole29\.wordpress\.com
-1510042186	Glorfindel	createmyfreeapp\.com
 1510047486	Glorfindel	letsgoforgood\.com
 1510047512	Glorfindel	binaryforexacademy\.org
 1510051260	Glorfindel	windowstechsupport\.org
@@ -2096,3 +2095,9 @@
 1514898665	tripleee	muscle\W?nit
 1514901509	Glorfindel	approvedreviewz\.com
 1514940545	iBug	tekerleklisandalyemiz.com
+1514974380	Glorfindel	visaonlinevietnam\.com
+1514974670	Glorfindel	2ip\.io
+1514982009	Glorfindel	bcz\.com
+1514982505	paper1111	officegx\.com
+1514985511	Glorfindel	pufmag\.com
+1514987243	Glorfindel	jimmystogo\.com
