@@ -2095,7 +2095,5 @@
 1514889457	Glorfindel	myvisioninteriordesign\.com
 1514898665	tripleee	muscle\W?nit
 1514901509	Glorfindel	approvedreviewz\.com
-1514974270	Glorfindel	buy\.fineproxy\.org
-1514974273	Mithrandir	fineproxy\.org
 1514974380	Glorfindel	visaonlinevietnam\.com
 1514974670	Glorfindel	2ip\.io
