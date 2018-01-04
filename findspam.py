@@ -153,10 +153,10 @@ def has_repeating_characters(s, site, *args):
     s = regex.sub('http[^"]*', "", s)    # remove URLs for this check
     if s is None or len(s) == 0 or len(s) >= 300 or regex.compile("<pre>|<code>").search(s):
         return False, ""
-    matches = regex.compile(u"([^\\s_\u200b\u200c.,?!=~*/0-9-])(\\1{10,})", regex.UNICODE).findall(s)
+    matches = regex.compile(u"([^\\s_\u200b\u200c.,?!=~*/0-9-])(\\1{9,})", regex.UNICODE).findall(s)
     match = "".join(["".join(match) for match in matches])
     if (100 * len(match) / len(s)) >= 20:  # Repeating characters make up >= 20 percent
-        return True, u"Repeated character: *{}*".format(match)
+        return True, u"Repeated character: *{}*".format("*, *".join(["".join(match) for match in matches]))
     return False, ""
 
 
