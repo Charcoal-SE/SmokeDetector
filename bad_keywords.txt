@@ -17,7 +17,7 @@ restore\W?samsung\W?data
 swtor2credits
 death\Wreckoning\Wcalculate
 bam2u
-Neuro(3X|flexyn|fuse|luma|plex|ignite|lon|\Wxr)
+neuro\W*(3X|flexyn|fuse|luma|plex|ignite|lon|xr|max)
 TesteroneXL
 Nitroxin
 Bowtrol
@@ -230,7 +230,7 @@ argireline
 brick\Wmuscle
 # documentation: the plus is skipped by the word boundary condition in the code
 # so we can't match that directly, but we can say "if we just skipped a plus sign"
-(?<=\+)234\d{8,14}
+\+?234\W*\d{3}\W*\d{3}\W*\d{4,10}
 vividermix
 dsn\Wpre\Wworkout
 (?<=\+)15402277725
@@ -422,7 +422,6 @@ endurance\Wtest\Wx5?
 radiant\Wbloom
 epiclear\W?pro
 nuvega\W?lash
-(?:<=\+)2348032214238
 bio\W?rocket
 ideal\Wvitality
 lorevere
@@ -458,7 +457,6 @@ fungaway
 (?<=/)vivax(?=[-/<])
 nitrobuild
 8167873816
-2348167873816
 877\W?7788969
 enduro\Wforce
 (?<=/)right\Wpick(?=[-/<])
@@ -530,7 +528,6 @@ pdfsolution
 dermabellix
 astraea\W?(eye\W?)?serum
 dr\.?\W?aiwekhoe
-2348102960248
 allerless
 SeverTek
 amabella
@@ -546,7 +543,6 @@ zyklon
 skin\W?fresh\W?md
 renuvica
 Max\WTest\WUltra
-2348149470344
 herbal (doctor|center|centre)
 trifecta\W?xl
 boost\W?excel
@@ -561,14 +557,12 @@ neuro\W?boost
 prostagenix
 shred\W?fx
 male\W?onyx
-2348133873774
 muscle\W?x\W?te?st
 liftesse
 bonte\W?(advanced|eye\W?serum)
 steelcut\W?testosterone
 پنتاکس
 allurifi
-2349055637784
 kyto\W?trim
 activ\W?forte
 proactol
@@ -658,7 +652,6 @@ mockplus
 la\W?mer\W?timeless
 vtrex
 pro\W?factor\W?t\W?2000
-2348073673757
 t\W?max\W?complex
 cerebral\W?x
 levira
@@ -934,7 +927,6 @@ regenex
 quantinsti\.com
 vigorous\W?extend
 hotcyberlord425\w*@
-234\W*813\W*579\W*0702
 enhance\W?xl
 Extreme\WFit\W180
 everfirm
@@ -1004,7 +996,6 @@ bemass
 blue\Wbeach\Wyouth\Wscience
 derm\W?vitale
 bella\W?restor
-234\W*905\W*144\W*2970
 9530069900
 synoptic\W?boost
 libomax
@@ -1058,7 +1049,6 @@ testosterone\W?complex
 primal\W?factor
 gold.raiditem
 alpha\W?monster\W?blast
-neuro\W?max
 vexan
 propecia
 adelina
