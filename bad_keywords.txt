@@ -1067,3 +1067,4 @@ levimax
 maxx\W?boost
 keto\W?boost
 individualproxy
+tableau\W?training
