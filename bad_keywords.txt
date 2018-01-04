@@ -228,9 +228,7 @@ raw\Wpower\Wxl
 pantothen
 argireline
 brick\Wmuscle
-# documentation: the plus is skipped by the word boundary condition in the code
-# so we can't match that directly, but we can say "if we just skipped a plus sign"
-\+?234\W*\d{3}\W*\d{3}\W*\d{4,10}
+# phone number starting with 234 moved to watch
 vividermix
 dsn\Wpre\Wworkout
 (?<=\+)15402277725
