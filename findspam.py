@@ -25,6 +25,7 @@ LEVEN_DOMAIN_DISTANCE = 3
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
 CHARACTER_USE_RATIO = 0.42
+REPEATED_CHARACTER_RATIO = 0.20
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
 RE_COMPILE = regex.compile(EXCEPTION_RE)
 COMMON_MALFORMED_PROTOCOLS = [
@@ -155,7 +156,7 @@ def has_repeating_characters(s, site, *args):
         return False, ""
     matches = regex.compile(u"([^\\s_\u200b\u200c.,?!=~*/0-9-])(\\1{9,})", regex.UNICODE).findall(s)
     match = "".join(["".join(match) for match in matches])
-    if (100 * len(match) / len(s)) >= 20:  # Repeating characters make up >= 20 percent
+    if len(match) / float(len(s)) >= REPEATED_CHARACTER_RATIO:  # Repeating characters make up >= 20 percent
         return True, u"Repeated character: *{}*".format("*, *".join(["".join(match) for match in matches]))
     return False, ""
 
