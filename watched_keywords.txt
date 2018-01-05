@@ -2121,3 +2121,4 @@
 1515160326	Glorfindel	btc2double\.com
 1515177389	DJMcMayhem	subnetcalculator.in
 1515180852	Glorfindel	cfpfinaltv\.com
+1515180881	Glorfindel	wwewrestlemania\d+\.com
