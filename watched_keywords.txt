@@ -2114,3 +2114,4 @@
 1515134877	tripleee	tronyxonline\.com
 1515139811	paper1111	rxmarine\.com
 1515140350	iBug	abismould\.com
+1515145628	iBug	intelbuild\.in
