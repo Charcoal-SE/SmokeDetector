@@ -2120,3 +2120,4 @@
 1515149422	Glorfindel	payghanta\.com
 1515160326	Glorfindel	btc2double\.com
 1515177389	DJMcMayhem	subnetcalculator.in
+1515180852	Glorfindel	cfpfinaltv\.com
