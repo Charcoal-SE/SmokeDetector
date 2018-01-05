@@ -228,9 +228,7 @@ raw\Wpower\Wxl
 pantothen
 argireline
 brick\Wmuscle
-# phone number starting with 234 (generic version) moved to watch
-# looks like those numbers have a pattern [ :) ]
-#234\W*(?:8032214238|8167873816|8102960248|8149470344|8133873774|8073673757|9055637784|8135790702|9051442970)
+#comment:234\W*(?:8032214238|8167873816|8102960248|8149470344|8133873774|8073673757|9055637784|8135790702|9051442970)
 234\W*[89][01]\d\W*\d{3}\W*\d{4,10}
 vividermix
 dsn\Wpre\Wworkout
