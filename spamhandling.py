@@ -143,7 +143,7 @@ def handle_spam(post, reasons, why):
         without_roles = tuple("no-" + reason for reason in reasons) + ("site-no-" + post.post_site,)
 
         if set(reasons) & GlobalVars.experimental_reasons == {}:
-            chatcommunicate.tell_rooms(message, ("experimental"),
+            chatcommunicate.tell_rooms(message, ("experimental",),
                                        without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
         else:
             chatcommunicate.tell_rooms(message, ("all", "site-" + post.post_site),
