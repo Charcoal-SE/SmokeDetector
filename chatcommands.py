@@ -1196,6 +1196,13 @@ def allspam(msg, url):
 DELETE_ALIASES = ["delete", "del", "remove", "poof", "gone", "kaboom"]
 
 
+def delete_helper(msg):
+    try:
+        msg._client._do_action_despite_throttling(("delete", msg.id, ""))
+    except:
+        pass
+
+
 @command(message, reply=True, privileged=True, aliases=[alias + "-force" for alias in DELETE_ALIASES])
 def delete_force(msg):
     """
@@ -1203,11 +1210,7 @@ def delete_force(msg):
     :param msg:
     :return: None
     """
-    # noinspection PyBroadException
-    try:
-        msg.delete()
-    except:
-        pass  # couldn't delete message
+    delete_helper(msg)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal,PyBroadException
@@ -1227,13 +1230,10 @@ def delete(msg):
                "(https://charcoal-se.org/smokey/Commands"\
                "#a-note-on-message-deletion) for more details."
     else:
-        try:
-            msg.delete()
-        except:
-            pass
+        delete_helper(msg)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
+# noinspection PyIncorrectDocstring
 @command(message, reply=True, privileged=True)
 def postgone(msg):
     """
@@ -1246,7 +1246,7 @@ def postgone(msg):
     if edited is None:
         raise CmdException("That's not a report.")
 
-    msg.edit(edited)
+    msg._client._do_action_despite_throttling(("edit", msg.id, edited))
 
 
 # noinspection PyIncorrectDocstring
@@ -1286,7 +1286,7 @@ def false(feedback, msg, alias_used="false"):
 
     try:
         if int(msg.room.id) != int(GlobalVars.charcoal_hq.id):
-            msg.delete()
+            msg._client._do_action_despite_throttling(("delete", msg.id, ""))
     except:
         pass
 
