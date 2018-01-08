@@ -649,6 +649,21 @@ def queuestatus():
     return GlobalVars.bodyfetcher.print_queue()
 
 
+@command(str)
+def inqueue(url):
+    post_id, site, post_type = fetch_post_id_and_site_from_url(url)
+
+    if post_type != "question":
+        raise CmdException("Can't check for answers.")
+
+    if site in GlobalVars.bodyfetcher.queue:
+        for i, id in enumerate(GlobalVars.bodyfetcher.queue[site].keys()):
+            if id == post_id:
+                return "#" + str(i) + " in queue."
+
+    return "Not in queue."
+
+
 # noinspection PyIncorrectDocstring,PyProtectedMember
 @command(str, whole_msg=True, privileged=True, arity=(0, 1))
 def stappit(msg, location_search):
