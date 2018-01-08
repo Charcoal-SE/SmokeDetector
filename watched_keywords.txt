@@ -2141,3 +2141,4 @@
 1515415023	paper1111	dmarketfeetoken\.com
 1515416490	Glorfindel	telecomcore\.com
 1515423654	quartata	drughouse\.store
+1515424523	quartata	seodigitalmarketing\.in
