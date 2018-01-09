@@ -2146,3 +2146,4 @@
 1515426612	iBug	uvbaskiistanbul\.com
 1515446485	Glorfindel	kingtv\.org
 1515477016	iBug	cursesmenu\.blogspot\.com
+1515477683	Tetsuya Yamamoto	emailhelpline\.co\.uk
