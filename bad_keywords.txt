@@ -260,7 +260,7 @@ vigor\Wexcel
 optimal\Wrock
 slim\Wfit\W180
 azienda\Wcollagen
-testo(?:sterone)?\W?boost(?:er)?
+testo(?:sterone)?\W?boost(?:er|ing)?
 internal\W911
 true\Wbrilliance
 muscle\Wxtx
