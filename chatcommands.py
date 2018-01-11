@@ -1300,7 +1300,7 @@ def false(feedback, msg, alias_used="false"):
         result = "Registered " + post_type + " as false positive."
 
     try:
-        if int(msg.room.id) != int(GlobalVars.charcoal_hq.id):
+        if msg.room.id != 11540
             msg.delete()
     except:
         pass
