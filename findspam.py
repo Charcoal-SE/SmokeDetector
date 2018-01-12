@@ -907,7 +907,7 @@ class FindSpam:
          'sites': [], 'reason': "blacklisted website in {}", 'title': True, 'body': True, 'username': False,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 5},
         # Suspicious sites
-        {'regex': r"(?i)({}|({})[\w-]*?\.(co|net|org|in(\W|fo)|us|blogspot|wordpress))(?![^>]*<)".format(
+        {'regex': r"(?i)({}|[\w-]*?({})[\w-]*?\.(com?|net|org|in(fo)?|us|blogspot|wordpress))(?![^>]*<)".format(
             "|".join(pattern_websites), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': False,
             'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 1},
@@ -945,7 +945,7 @@ class FindSpam:
          'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 2},
         # Links preceded by arrows >>>
-        {'regex': r"(?is)(>>>+|==\s*>>+|====|===>+|==>>+|= = =|(Read More|Click Here) \W{2,20}).{0,20}"
+        {'regex': r"(?is)(>>>+|==\s*>>+|====|===>+|==>>+|= = =|(Read More|Click Here)).{0,20}"
                   r"http(?!://i.stack.imgur.com).{0,200}$", 'all': True,
          'sites': [], 'reason': "link following arrow in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 11, 'max_score': 0},
