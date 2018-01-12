@@ -72,7 +72,6 @@
 1495634008	Mithrandir	indiapiles\.com
 1495639425	Mithrandir	trusthacker543@gmail\.com
 1495640287	Mithrandir	projectwriters\.ng
-1495706434	Glorfindel	paperio\.org
 1495719032	Mithrandir	ihaxit\.us
 1495719250	Mithrandir	New\W?Paypal\W?Money\W?Adder
 1495722227	Mithrandir	adalee@sdhengjing\.com
