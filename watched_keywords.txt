@@ -2188,3 +2188,4 @@
 1515735461	paper1111	mywifi-ext\.com
 1515739044	A J	guidancepoint\.in
 1515741464	iBug	rnnindia\.in
+1515742362	iBug	nbalive[0-9]*coins\.com
