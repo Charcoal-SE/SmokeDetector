@@ -72,7 +72,6 @@
 1495634008	Mithrandir	indiapiles\.com
 1495639425	Mithrandir	trusthacker543@gmail\.com
 1495640287	Mithrandir	projectwriters\.ng
-1495706434	Glorfindel	paperio\.org
 1495719032	Mithrandir	ihaxit\.us
 1495719250	Mithrandir	New\W?Paypal\W?Money\W?Adder
 1495722227	Mithrandir	adalee@sdhengjing\.com
@@ -1589,7 +1588,6 @@
 1510918202	Glorfindel	carloanstudent\.com
 1510921712	paper1111	4421571131
 1510921874	paper1111	kalyanisprings\.com
-1510924829	Glorfindel	pro-papers\.com
 1510953965	Byte Commander	makkarhospital
 1510984145	A J	forgotpasswordmailtriggeringinasp
 1511003406	Glorfindel	biggboss11winner\.com
@@ -1690,7 +1688,6 @@
 1511549812	Glorfindel	connectbroadbandchandigarh\.in
 1511558182	tripleee	(?:1\W*)?661\W*533\W*3371
 1511561311	Glorfindel	liondomino
-1511588499	Nisse Engström	deskmoz\.com
 1511600925	Glorfindel	savethelive\.com
 1511601088	Glorfindel	innervisiontechnology\.com
 1511603586	Glorfindel	graphicsbutter\.com
@@ -2169,3 +2166,34 @@
 1515625190	paper1111	leanbelly-breakthrough-review\.blogspot\.com
 1515649782	NobodyNada	viabol\Wrx
 1515651445	Tetsuya Yamamoto	mobcollege\.ir
+1515652490	Tetsuya Yamamoto	appacmedia\.com
+1515651994	Tetsuya Yamamoto	26januaryrepublicday2018speech\.in
+1515599032	iBug	babyhealthyproduct\.com
+1515661980	Tetsuya Yamamoto	eduonix\.com
+1515667448	Glorfindel	unicoladhesive\.com
+1515671834	Glorfindel	opportunityinchina\.com
+1515676448	Glorfindel	indiakaaoffer\.com
+1515659614	Tetsuya Yamamoto	101-prototype\.com
+1515687711	Glorfindel	lawrence\W?livestock\W?farm
+1515723357	NobodyNada	mmotank.com
+1515724019	paper1111	ffxivgilline8z4\.tek-blogs\.com
+1515724069	paper1111	nba2kmt1853mvn\.basinperlite\.com
+1515728655	Tetsuya Yamamoto	lantai-kayu\.co\.id
+1515728683	Tetsuya Yamamoto	suryarental-bandung\.com
+1515733892	paper1111	iogames-online\.com
+1515734106	paper1111	omatompower\.com
+1515734297	paper1111	shopping\.muteyaar\.org
+1515735461	paper1111	mywifi-ext\.com
+1515739044	A J	guidancepoint\.in
+1515741464	iBug	rnnindia\.in
+1515741954	A J	maddenvip\.com
+1515741960	iBug	mmogo\.com
+1515749044	paper1111	managenortonnow\.com
+1515752388	doppelgreener	manjeeramonarch\.com
+1515768333	Glorfindel	freebiebitcoin\.com
+1515771310	CalvT븃	segwitchecker\.com
+1515803538	Tetsuya Yamamoto	markscarpetcleaning\.com\.au
+1515832663	Glorfindel	perfectadhesives\.com
+1515836938	Glorfindel	bhiwadipolymers\.com
+1515840976	Suraj Rao	gteches\.com
+1515853609	iBug	honeyadvertising\.in

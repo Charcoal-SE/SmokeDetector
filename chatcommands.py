@@ -472,7 +472,7 @@ def block(msg, block_time, room_id):
     :param msg:
     :param block_time:
     :param room_id:
-    :return: A string
+    :return: None
     """
     time_to_block = block_time if 0 < block_time < 14400 else 900
     block_room(room_id, msg._client.host, time.time() + time_to_block)
@@ -481,7 +481,6 @@ def block(msg, block_time, room_id):
     block_message = "Reports blocked for {} seconds {}.".format(time_to_block, which_room)
 
     tell_rooms(block_message, ("debug", "metatavern"), ())
-    return report
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -491,7 +490,7 @@ def unblock(msg, room_id):
     Unblocks posting to a room
     :param msg:
     :param room_id:
-    :return: A string
+    :return: None
     """
     block_room(room_id, msg._client.host, -1)
 
@@ -499,7 +498,6 @@ def unblock(msg, room_id):
     unblock_message = "Reports unblocked {}.".format(which_room)
 
     tell_rooms(unblock_message, ("debug", "metatavern"), ())
-    return report
 
 
 # --- Administration Commands --- #
@@ -1300,7 +1298,7 @@ def false(feedback, msg, alias_used="false"):
         result = "Registered " + post_type + " as false positive."
 
     try:
-        if int(msg.room.id) != int(GlobalVars.charcoal_hq.id):
+        if msg.room.id != 11540:
             msg.delete()
     except:
         pass

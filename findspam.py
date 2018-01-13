@@ -437,10 +437,10 @@ def is_offensive_post(s, site, *args):
         return False, ""
 
     offensive = regex.compile(r"(?is)\b(ur mom|(yo)?u suck|8={3,}D|nigg[aeu][rh]?|(ass ?|a|a-)hole|fag(got)?|"
-                              r"daf[au][qk]|(?<!brain)(mother|mutha)?fuc?k+(a|ing?|e?(r|d)| off+| y(ou|e)(rself)?|"
-                              r" u+|tard)?|shit(t?er|head)?|you scum|dickhead|pedo|whore|cunt|cocksucker|ejaculated?|"
-                              r"jerk off|cummies|butthurt|queef|(private|pussy) show|lesbo|"
-                              r"bitche?s?|(eat|suck)\b.{0,20}\b dick|dee[sz]e? nut[sz])s?\b")
+                              r"daf[au][qk]|(?<!brain)(mother|mutha)?fuc?k+(a|ing?|e?[rd]| off+| y(ou|e)(rself)?|"
+                              r" u+|tard)?|(bull?)?shit(t?er|head)?|(yo)?u scum|dickhead|pedo|cocksuck(e?[rd])?|"
+                              r"whore|cunt|ejaculated?|jerk off|cummies|butthurt|queef|(private|pussy) show|lesbo|"
+                              r"bitche?|(eat|suck)\b.{0,20}\b dick|dee[sz]e? nut[sz])s?\b")
     matches = offensive.finditer(s)
     len_of_match = 0
     text_matched = []
@@ -907,7 +907,7 @@ class FindSpam:
          'sites': [], 'reason': "blacklisted website in {}", 'title': True, 'body': True, 'username': False,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 5},
         # Suspicious sites
-        {'regex': r"(?i)({}|({})[\w-]*?\.(co|net|org|in(\W|fo)|us|blogspot|wordpress))(?![^>]*<)".format(
+        {'regex': r"(?i)({}|[\w-]*?({})[\w-]*?\.(com?|net|org|in(fo)?|us|blogspot|wordpress))(?![^>]*<)".format(
             "|".join(pattern_websites), "|".join(bad_keywords_nwb)), 'all': True,
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': False,
             'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 1},
@@ -945,7 +945,7 @@ class FindSpam:
          'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 2},
         # Links preceded by arrows >>>
-        {'regex': r"(?is)(>>>+|==\s*>>+|====|===>+|==>>+|= = =|(Read More|Click Here) \W{2,20}).{0,20}"
+        {'regex': r"(?is)(>>>+|==\s*>>+|====|===>+|==>>+|= = =|(Read More|Click Here)).{0,20}"
                   r"http(?!://i.stack.imgur.com).{0,200}$", 'all': True,
          'sites': [], 'reason': "link following arrow in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 11, 'max_score': 0},

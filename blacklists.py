@@ -32,7 +32,7 @@ class BlacklistParser:
 class BasicListParser(BlacklistParser):
     def parse(self):
         with open(self._filename, 'r', encoding='utf-8') as f:
-            return [line.rstrip() for line in f if len(line.rstrip()) > 0]
+            return [line.rstrip() for line in f if len(line.rstrip()) > 0 and line[0] != '#']
 
     def add(self, item: str):
         with open(self._filename, 'a+', encoding='utf-8') as f:
