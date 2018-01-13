@@ -106,7 +106,6 @@ blackcore\W?edge
 copy\W?buffett
 push\W?money\W?app
 volive(\W?solutions?)?
-herbalife
 accumass
 purple\Wrhino
 dating\W?coaching
@@ -161,7 +160,6 @@ xtest\W(muscle|reviews?)
 inteligen
 natural\W?slim\W?life
 test\Wx\W360
-newlifeherbalclinic
 male\W?x\W?pro
 break\Wup\Wpill
 biogenic\Wxr
@@ -319,7 +317,6 @@ qugenix
 ampk
 regal\Wslim
 noxor
-healthherbalclinic
 zyalix
 lumivol
 avdshare
@@ -427,7 +424,6 @@ lorevere
 5g\W?male
 instaglam
 provacyl
-herbal\Wvirility\Wmax
 natures\Wtrim
 allumiderm
 true\Wtesto\Wmax
@@ -542,7 +538,9 @@ zyklon
 skin\W?fresh\W?md
 renuvica
 Max\WTest\WUltra
-herbal (doctor|center|centre)
+herbal ?(doctor|center|centre|clinic)
+herbalife
+herbal\Wvirility\Wmax
 trifecta\W?xl
 boost\W?excel
 571\W?286\W?5929
