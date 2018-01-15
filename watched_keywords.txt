@@ -2141,7 +2141,6 @@
 1515426612	iBug	uvbaskiistanbul\.com
 1515446485	Glorfindel	kingtv\.org
 1515477016	iBug	cursesmenu\.blogspot\.com
-1515478882	micsthepick	calminax
 1515478012	micsthepick	testrot
 1515477683	Tetsuya Yamamoto	emailhelpline\.co\.uk
 1515487698	Glorfindel	soapandcosmeticclasses\.com
