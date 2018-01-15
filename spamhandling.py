@@ -45,7 +45,7 @@ def check_if_spam(post):
             if blacklisted_user_data[1] == "metasmoke":
                 blacklisted_by = "the metasmoke API"
             else:
-                blacklisted_by = "http:" + blacklisted_user_data[1]
+                blacklisted_by = blacklisted_user_data[1]
             blacklisted_post_url = blacklisted_user_data[2]
             if blacklisted_post_url:
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
