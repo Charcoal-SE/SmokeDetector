@@ -394,8 +394,8 @@ def coffee(msg, other_user):
         return "*brews a cup of {} for @{}*".format(random.choice(COFFEES), other_user)
 
 
-FRUITS = ['apple', 'banana', 'orange', 'pear', 'watermelon', 'mango', 
-    'pineapple', 'strawberry', 'grape', 'tomato', 'jQuery']
+FRUITS = ['apple', 'banana', 'orange', 'pear', 'watermelon', 'mango',
+          'pineapple', 'strawberry', 'grape', 'tomato', 'jQuery']
 
 
 # noinspection PyIncorrectDocstring
