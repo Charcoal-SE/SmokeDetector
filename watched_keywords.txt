@@ -1514,7 +1514,6 @@
 1510434996	Mithrandir	hempsoftgels\.com
 1510435120	Mithrandir	make\W?money\W?online
 1510474778	Mithrandir	Body\W?Dynamix
-1510500459	J F	supplementsrevolution\.com
 1510502953	Eric Leschinski	7-pdf\.de
 1510506840	Mithrandir	twotreview\.com
 1510551561	tripleee	meramaal\.com
@@ -2142,7 +2141,6 @@
 1515426612	iBug	uvbaskiistanbul\.com
 1515446485	Glorfindel	kingtv\.org
 1515477016	iBug	cursesmenu\.blogspot\.com
-1515478882	micsthepick	calminax
 1515478012	micsthepick	testrot
 1515477683	Tetsuya Yamamoto	emailhelpline\.co\.uk
 1515487698	Glorfindel	soapandcosmeticclasses\.com
@@ -2197,3 +2195,10 @@
 1515836938	Glorfindel	bhiwadipolymers\.com
 1515840976	Suraj Rao	gteches\.com
 1515853609	iBug	honeyadvertising\.in
+1515887777	JoErNanO	joytravels\.co\.in
+1515922645	Glorfindel	gstech
+1515933768	paper1111	youtubethumbnaildownload\.com
+1515919358	iBug	learninall\.com
+1515955060	Glorfindel	telecomacadmey\.com
+1515993266	Suraj Rao	cracktaking\.com
+1515996218	Tetsuya Yamamoto	logisticmart\.com
