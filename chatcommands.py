@@ -394,6 +394,25 @@ def coffee(msg, other_user):
         return "*brews a cup of {} for @{}*".format(random.choice(COFFEES), other_user)
 
 
+FRUITS = ['apple', 'banana', 'orange', 'pear', 'watermelon', 'mango', 
+    'pineapple', 'strawberry', 'grape', 'tomato', 'jQuery']
+
+
+# noinspection PyIncorrectDocstring
+@command(str, whole_msg=True, arity=(0, 1))
+def juice(msg, other_user):
+    """
+    Returns a string stating who the juice is for (This is a joke command)
+    :param msg:
+    :param other_user:
+    :return: A string
+    """
+    if other_user is None:
+        return "*squeezes a cup of {} juice for @{}*".format(random.choice(FRUITS), msg.owner.name.replace(" ", ""))
+    else:
+        return "*squeezes a cup of {} juice for @{}*".format(random.choice(FRUITS), other_user)
+
+
 # noinspection PyIncorrectDocstring
 @command()
 def lick():
