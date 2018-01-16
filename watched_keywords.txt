@@ -2214,3 +2214,4 @@
 1516103621	paper1111	movie\.arifin91\.com
 1516104327	paper1111	americasuits\.com
 1516109738	Mithrandir	aike-handdryer\.com
+1516109869	Mithrandir	(steel|speed)\W?hand\W?dryer
