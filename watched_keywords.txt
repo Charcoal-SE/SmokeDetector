@@ -2217,3 +2217,4 @@
 1516109869	Mithrandir	(steel|speed)\W?hand\W?dryer
 1516172436	Glorfindel	bhiwadi\W?polymers
 1516177388	Glorfindel	hypez\.com
+1516181311	Glorfindel	reviewlancer
