@@ -2216,3 +2216,4 @@
 1516109738	Mithrandir	aike-handdryer\.com
 1516109869	Mithrandir	(steel|speed)\W?hand\W?dryer
 1516172436	Glorfindel	bhiwadi\W?polymers
+1516177388	Glorfindel	hypez\.com
