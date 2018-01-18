@@ -2233,4 +2233,3 @@
 1516281191	paper1111	styleup\.ir
 1516282128	paper1111	ben-solutions\.com
 1516284477	Byte Commander	bonzi.link
-1516260912	Tetsuya Yamamoto	rushyourtrial\.com
