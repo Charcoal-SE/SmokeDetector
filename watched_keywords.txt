@@ -2236,3 +2236,4 @@
 1516385879	WELZ	sarkariresultgov\.com
 1516368786	WELZ	parswebserver\.com
 1516437509	Nisse Engström	adaniaffordables\.in
+1516469276	Nisse Engström	studymanger\.com
