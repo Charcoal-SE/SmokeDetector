@@ -1821,7 +1821,6 @@
 1512452409	Tetsuya Yamamoto	esearchadvisors\.com
 1512454811	Tetsuya Yamamoto	appngamereskin\.com
 1512456205	Glorfindel	technicalguru\.beep\.com
-1512459609	Glorfindel	novingate\.com
 1512459618	Glorfindel	novinwebsite\.com
 1512459768	Tetsuya Yamamoto	worldeyecam\.com
 1512466172	Mithrandir	our\W?team\W?of\W?experts
