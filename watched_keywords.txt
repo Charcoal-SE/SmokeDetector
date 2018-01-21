@@ -2239,3 +2239,4 @@
 1516541243	paper1111	macos-download\.org
 1516559784	WELZ	apmov.ir
 1516573986	WELZ	rightfamilydentalny\.com
+1516559796	WELZ	apmov\.ir
