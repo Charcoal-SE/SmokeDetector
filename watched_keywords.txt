@@ -2248,3 +2248,4 @@
 1516623577	Glorfindel	wirapoker\.com
 1516623742	Glorfindel	desert\W?safari\W?dubai
 1516623803	Glorfindel	dreamnighttours\.ae
+1516623814	CalvT븃	dream\W?night\W?tours
