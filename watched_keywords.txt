@@ -2244,3 +2244,4 @@
 1516608091	Tetsuya Yamamoto	hiradana\.com
 1516614769	Mithrandir	autobinarysignalssoftwarereviews\.com
 1516614913	Mithrandir	nolah\W?mattress(\W?reviews)?
+1516616589	Glorfindel	mahanseirsam\.com
