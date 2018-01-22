@@ -31,8 +31,8 @@ RE_COMPILE = regex.compile(EXCEPTION_RE)
 COMMON_MALFORMED_PROTOCOLS = [
     ('httl://', 'http://'),
 ]
-# These types of files frequently gets caught as "misleading link"
-SAFE_EXTENSIONS = ['txt', 'js', 'htm', 'html', 'css', 'php', 'py', 'java', 'rb']
+# These types of files frequently get caught as "misleading link"
+SAFE_EXTENSIONS = set(('txt', 'js', 'htm', 'html', 'css', 'php', 'py', 'java', 'rb'))
 SE_SITES_RE = r'(?:{sites})'.format(
     sites='|'.join([
         r'([a-z]+\.)stackoverflow\.com',
