@@ -31,6 +31,8 @@ RE_COMPILE = regex.compile(EXCEPTION_RE)
 COMMON_MALFORMED_PROTOCOLS = [
     ('httl://', 'http://'),
 ]
+# These types of files frequently gets caught as "misleading link"
+SAFE_EXTENSIONS = ['txt', 'js', 'htm', 'html', 'css', 'php', 'py', 'java', 'rb']
 SE_SITES_RE = r'(?:{sites})'.format(
     sites='|'.join([
         r'([a-z]+\.)stackoverflow\.com',
@@ -100,6 +102,8 @@ def malicious_link(s, site, *args):
         parsed_href = tld.get_tld(href, as_object=True)
         print(parsed_href.domain, SE_SITES_DOMAINS)
         if parsed_href.tld in SE_SITES_DOMAINS:
+            return False, ''
+        if parsed_href.tld.split('.')[-1] in SAFE_EXTENSIONS:
             return False, ''
         if contains_tld(text) and ' ' not in text:
             parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True)
