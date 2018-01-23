@@ -82,8 +82,13 @@ from helpers import log
     ('Asp.NET Identity will not consistently authenticate users', """<p>I am definitely not the only one experiencing this anomaly (<a href="https://stackoverflow.com/questions/46559016/asp-net-identity-login-sometimes-yes-and-sometimes-no">Asp.net: Identity Login sometimes yes and sometimes no</a>), and I have been combind StackExchange for some solution (I have tried literally dozens of suggestions), and simply nothing delivers a consistent fix.</p>""", 'Dan Martini', 'stackoverflow.com', False, False, False),
     ('Power a circuit off USB the correct way', """<p>I'd like to properly power a gadget off USB (2.4A USB powerbank <a href="https://rads.stackoverflow.com/amzn/click/B00X5RV14Y" rel="nofollow noreferrer">https://www.amazon.com/Anker-20100mAh-Portable-Charger-PowerCore/dp/B00X5RV14Y/ref=sr_1_3?ie=UTF8&qid=1512261941&sr=8-3</a>) consisting of:</p>""", 'iMrFelix', 'electronics.stackexchange.com', False, False, False),
     ('GUI over bash using glade', """<p>I want to make a remote control for my PC. Basically all I need is to run a command on a button click. Following this <a href="https://www.youtube.com/watch?v=cNWmleAJ2qg" rel="nofollow noreferrer">guide</a> I managed to build the <a href="https://i.stack.imgur.com/dMy9g.jpg" rel="nofollow noreferrer">layout</a> and it's everything i've ever dreamed of.
-But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, False, False)
+But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, False, False),
+    ('Misleading link common file whitelist', 'File: <a href="https://www.malicious.com/">file.txt</a>', '', '', False, False, False),
+    ('Misleading link common file whitelist', 'File: <a href="https://www.malicious.com/">file.com</a>', '', '', False, False, True),
+    ('Misleading link common file whitelist', 'File: <a href="https://www.malicious.com/">https://google.com/file.txt</a>', '', '', False, False, True),
+    ('Misleading link common file whitelist', 'File: <a href="https://www.malicious.txt/">https://google.com/file.txt</a>', '', '', False, False, True)
 ])
+
 def test_regexes(title, body, username, site, body_is_summary, is_answer, match):
     # If we want to test answers separately, this should be changed
     # is_answer = False
