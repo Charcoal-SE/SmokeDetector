@@ -88,7 +88,6 @@ But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, Fal
     ('Misleading link common file whitelist', 'File: <a href="https://www.malicious.com/">https://google.com/file.txt</a>', '', '', False, False, True),
     ('Misleading link common file whitelist', 'File: <a href="https://www.malicious.txt/">https://google.com/file.txt</a>', '', '', False, False, True)
 ])
-
 def test_regexes(title, body, username, site, body_is_summary, is_answer, match):
     # If we want to test answers separately, this should be changed
     # is_answer = False
