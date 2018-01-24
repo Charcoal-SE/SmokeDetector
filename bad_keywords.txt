@@ -1084,3 +1084,4 @@ tryvex[ai]n
 renew\W?elle
 juvenique
 Glovella
+neftegaz\W?agent
