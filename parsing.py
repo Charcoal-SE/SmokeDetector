@@ -51,16 +51,17 @@ def fetch_post_url_from_msg_content(content):
 def fetch_post_id_and_site_from_url(url):
     if url is None:
         return None
+    trimmed_url = url.replace("&zwnj;&#8203;", "")
     post_type_regex = r"\/\d+(&zwnj;&#8203;\d+)?#\d+$"
     post_type = ""
     search_regex = ""
-    if regex.compile(post_type_regex).search(url):
+    if regex.compile(post_type_regex).search(trimmed_url):
         post_type = "answer"
-        search_regex = r"^(?:https?:)?\/\/([\w.]+)/questions/\d+/.+/(\d+)#\d+$"
+        search_regex = r"^(?:https?:)?\/\/([\w.]+)\/questions\/\d+\/.+\/(\d+(&zwnj;&#8203;\d+)?)#\d+$"
     else:
         post_type = "question"
         search_regex = r"^(?:https?:)?\/\/([\w.]+)/questions/(\d+)(?:/.*)?$"
-    found = regex.compile(search_regex).search(url)
+    found = regex.compile(search_regex).search(trimmed_url)
     if found is not None:
         try:
             post_id = found.group(2)
@@ -69,7 +70,7 @@ def fetch_post_id_and_site_from_url(url):
         except:
             return None
     search_regex = r"^(?:https?:)?\/\/([\w.]+)/(q|a)/(\d+)(?:/\d+)?/?"
-    found = regex.compile(search_regex).search(url)
+    found = regex.compile(search_regex).search(trimmed_url)
     if found is None:
         return None
     try:
