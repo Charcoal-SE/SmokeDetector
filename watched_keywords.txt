@@ -2097,7 +2097,6 @@
 1515053113	paper1111	car\.lol
 1515053302	paper1111	it-bari\.net
 1515073825	iBug	pendingbitcoin\.com
-1515074872	iBug	234\W*\d{3}\W*\d{3}\W*\d{2,8}
 1515106120	JoErNanO	b­o­s­s­c­y­b­e­r\.c­o­m
 1515107050	paper1111	alinma\.com
 1515107078	paper1111	alrajhibank\.com\.sa
@@ -2250,3 +2249,12 @@
 1516628980	iBug	weetas\.com
 1516635127	iBug	crowdcast\.io
 1516648889	Glorfindel	999hdwallpaper\.com
+1516697844	Glorfindel	vapottery\.com
+1516698349	CalvT븃	ikingrootapk\.com
+1516699690	doppelgreener	onlineblackjackuk\.com
+1516700587	iBug	onlinecodebeautify\.com
+1516704720	Glorfindel	coinexmarket\.io
+1516706679	iBug	supreme\W?dissertations?
+1516720248	Glorfindel	osttopstapp\.com
+1516721470	Glorfindel	otczeus
+1516748172	paper1111	art\Wchapel\W+84738
