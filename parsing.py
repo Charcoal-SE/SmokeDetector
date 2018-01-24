@@ -51,7 +51,7 @@ def fetch_post_url_from_msg_content(content):
 def fetch_post_id_and_site_from_url(url):
     if url is None:
         return None
-    post_type_regex = r"\/\d+(&zwnj;&#8203;)?\d+#\d+$"
+    post_type_regex = r"\/\d+(&zwnj;&#8203;\d+)?#\d+$"
     post_type = ""
     search_regex = ""
     if regex.compile(post_type_regex).search(url):
