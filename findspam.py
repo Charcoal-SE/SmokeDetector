@@ -32,7 +32,7 @@ COMMON_MALFORMED_PROTOCOLS = [
     ('httl://', 'http://'),
 ]
 # These types of files frequently get caught as "misleading link"
-SAFE_EXTENSIONS = set(('txt', 'js', 'htm', 'html', 'css', 'php', 'py', 'java', 'rb'))
+SAFE_EXTENSIONS = set(('htm', 'py', 'java'))
 SE_SITES_RE = r'(?:{sites})'.format(
     sites='|'.join([
         r'([a-z]+\.)stackoverflow\.com',
