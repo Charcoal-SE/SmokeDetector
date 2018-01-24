@@ -52,7 +52,7 @@ def fetch_post_id_and_site_from_url(url):
     if url is None:
         return None
     trimmed_url = url.replace("&zwnj;&#8203;", "")
-    post_type_regex = r"\/\d+#\d+$"
+    post_type_regex = r"\/\d+(&zwnj;&#8203;\d+)?#\d+$"
     post_type = ""
     search_regex = ""
     if regex.compile(post_type_regex).search(trimmed_url):
