@@ -1044,7 +1044,7 @@ Testo720
 jouliage
 testosterone\W?complex
 primal\W?factor
-gold.raiditem
+gold\.raiditem
 alpha\W?monster\W?blast
 vexan
 propecia
