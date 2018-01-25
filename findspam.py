@@ -315,9 +315,9 @@ def keyword_email(s, site, *args):   # a keyword and an email in the same post
                             r"(cheat|hack)(er|ing)?|spying|passport|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|"
                             r"cure|testimony|kidney|hospital|wetting)s?\b| Dr\.? |\$ ?[0-9,.]{4}|@qq\.com|"
                             r"\b(герпес|муж|жена|доктор|болезн)").search(s)
-    email = regex.compile(r"(?<![=#/])\b[A-z0-9_.%+-]+ ?(?:@|\(?at\)?) ?(?!(example|domain|site|foo|\dx) ?"
-                          r"(?:\.|\(?dot\)?) ?[A-z]{2,4})(?:[A-z0-9_.%+-]|\(?dot\)?)+ ?"
-                          r"(?:\.|\(?dot\)?) ?[A-z]{2,4}\b").search(s)
+    email = regex.compile(r"(?<![=#/])\b[A-z0-9_.%+-]+(?:@|\(?at\)?)(?!(example|domain|site|foo|\dx)"
+                          r"(?:\.|\(?dot\)?)[A-z]{2,4})(?:[A-z0-9_.%+-]|\(?dot\)?)+"
+                          r"(?:\.|\(?dot\)?)[A-z]{2,4}\b").search(s)
     if keyword and email:
         return True, u"Keyword *{}* with email {}".format(keyword.group(0), email.group(0))
     obfuscated_email = regex.compile(r"(?<![=#/])\b[A-z0-9_.%+-]+ *@ *(g *mail|yahoo) *\. *com\b").search(s)
