@@ -2267,4 +2267,4 @@
 1516804605	CalvT븃	dogshunt\.com
 1516782138	A J	setriterealtors\.com
 1516760244	Tetsuya Yamamoto	iguruservices\.com
-1516847809	JoErNanO	www.yourtripdubai\.com
+1516847809	JoErNanO	yourtripdubai\.com
