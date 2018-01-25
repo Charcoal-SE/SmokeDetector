@@ -101,7 +101,7 @@ def malicious_link(s, site, *args):
     try:
         parsed_href = tld.get_tld(href, as_object=True)
         print(parsed_href.domain, SE_SITES_DOMAINS)
-        if site == 'stackoverflow.com' and parsed_href.tld in SE_SITES_DOMAINS:
+        if parsed_href.tld in SE_SITES_DOMAINS:
             return False, ''
         if contains_tld(text) and ' ' not in text:
             parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True)
@@ -114,7 +114,7 @@ def malicious_link(s, site, *args):
     except ValueError as err:
         return False, ''
 
-    if parsed_text.tld.split('.')[-1] in SAFE_EXTENSIONS:
+    if site == 'stackoverflow.com' and parsed_text.tld.split('.')[-1] in SAFE_EXTENSIONS:
         return False, ''
     elif levenshtein(parsed_href.domain.lower(), parsed_text.domain.lower()) > LEVEN_DOMAIN_DISTANCE:
         return True, 'Domain {} indicated by possible misleading text {}.'.format(
