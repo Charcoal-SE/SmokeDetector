@@ -2282,4 +2282,3 @@
 1516953150	iBug	supreme\W?choice\W?cbd
 1516956865	Glorfindel	sfeo\.agency
 1516958373	iBug	uplist\.lk
-1516965880	iBug	Supreme\W?Choice\W?CBD
