@@ -2280,3 +2280,4 @@
 1516943768	iBug	handdryer-china\.com
 1516956865	Glorfindel	sfeo\.agency
 1516958373	iBug	uplist\.lk
+1516990638	Glorfindel	furnituretransportgroup\.com
