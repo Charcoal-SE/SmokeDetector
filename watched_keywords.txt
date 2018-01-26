@@ -659,7 +659,6 @@
 1503291499	tripleee	brainaicsurveyors\.wordpress\.com
 1503291551	tripleee	pawanpurohit\.com
 1503291727	tripleee	rawinfopages\.com
-1503292103	tripleee	cyberforum\.ru
 1503292335	tripleee	flash-video-soft\.com
 1503292722	tripleee	tubesh\.com
 1503299178	Glorfindel	tikusliar\.com
