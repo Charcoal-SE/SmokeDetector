@@ -35,8 +35,8 @@ def get_api_sitename_from_url(url):
 # noinspection PyBroadException,PyMissingTypeHints
 def fetch_post_url_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[.+]\(((?:http:)" \
-                   r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)(?:\?smokeypost=true)?\)" \
-                   r" by \[?.*\]?\(?(?:.*)\)? on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
+                   r"?\/\/[\w.]+\/q(?:uestions)?\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)" \
+                   r"(?:\?smokeypost=true)?\) by \[?.*\]?\(?(?:.*)\)? on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
     match = regex.compile(search_regex).search(content)
     if match is None:
         return None
@@ -57,10 +57,10 @@ def fetch_post_id_and_site_from_url(url):
     search_regex = ""
     if regex.compile(post_type_regex).search(trimmed_url):
         post_type = "answer"
-        search_regex = r"^(?:https?:)?\/\/([\w.]+)\/questions\/\d+\/.+\/(\d+(&zwnj;&#8203;\d+)?)#\d+$"
+        search_regex = r"^(?:https?:)?\/\/([\w.]+)\/q(?:uestions)?\/\d+\/.+\/(\d+(&zwnj;&#8203;\d+)?)#\d+$"
     else:
         post_type = "question"
-        search_regex = r"^(?:https?:)?\/\/([\w.]+)/questions/(\d+)(?:/.*)?$"
+        search_regex = r"^(?:https?:)?\/\/([\w.]+)/q(?:uestions)?/(\d+)(?:/.*)?$"
     found = regex.compile(search_regex).search(trimmed_url)
     if found is not None:
         try:
@@ -91,8 +91,8 @@ def fetch_post_id_and_site_from_msg_content(content):
 # noinspection PyBroadException,PyMissingTypeHints
 def fetch_owner_url_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[.+]\((?:(?:http:)" \
-                   r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\) by \[.+\]\((.+)\)" \
-                   r" on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
+                   r"?\/\/[\w.]+\/q(?:uestions)?\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\) by " \
+                   r"\[.+\]\((.+)\) on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
     match = regex.compile(search_regex).search(content)
     if match is None:
         return None
@@ -106,8 +106,8 @@ def fetch_owner_url_from_msg_content(content):
 # noinspection PyBroadException,PyMissingTypeHints
 def fetch_title_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[(.+)]\((?:(?:http:)" \
-                   r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\) by \[?.*\]?\(?.*\)?" \
-                   r" on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
+                   r"?\/\/[\w.]+\/q(?:uestions)?\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\) by " \
+                   r"\[?.*\]?\(?.*\)? on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
     match = regex.compile(search_regex).search(content)
     if match is None:
         return None
@@ -121,8 +121,8 @@ def fetch_title_from_msg_content(content):
 # noinspection PyBroadException,PyMissingTypeHints
 def edited_message_after_postgone_command(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: (\[.+]\((?:(?:http:)" \
-                   r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\)) by \[?.*\]?\(?.*\)?" \
-                   r" on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
+                   r"?\/\/[\w.]+\/q(?:uestions)?\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\)) by " \
+                   r"\[?.*\]?\(?.*\)? on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
     match = regex.compile(search_regex).search(content)
     if match is None:
         return None
@@ -178,11 +178,9 @@ def url_to_shortlink(url):
     if id_and_site is None:
         return url
     if id_and_site[2] == "question":
-        return "http://{}/questions/{}".format(id_and_site[1], id_and_site[0])
-        # We're using "/questions" and not "/q" here because when the URL
-        # is made protocol-relative, /q would redirect to http even if the
-        # shortlink is https. Same for /a. But there we still use /a because
-        # there is no /answers or something like that.
+        return "http://{}/q/{}".format(id_and_site[1], id_and_site[0])
+        # Since the protocal-related redirection is no longer the case
+        # We can safely use the short form of links to posts now
     else:
         return "http://{}/a/{}".format(id_and_site[1], id_and_site[0])
 
@@ -192,7 +190,8 @@ def user_url_to_shortlink(url):
     user_id_and_site = get_user_from_url(url)
     if user_id_and_site is None:
         return url
-    return "http://{}/users/{}".format(user_id_and_site[1], user_id_and_site[0])
+    return "http://{}/u/{}".format(user_id_and_site[1], user_id_and_site[0])
+    # User links can also be shortened :)
 
 
 # noinspection PyMissingTypeHints
