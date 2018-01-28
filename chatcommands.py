@@ -1207,7 +1207,7 @@ def feedback(msg, post_url, feedback):
     for feedbacks in (TRUE_FEEDBACKS, FALSE_FEEDBACKS, NAA_FEEDBACKS):
         if feedback in feedbacks:
             feedbacks[feedback].send(post_url, msg)
-            break
+            return
 
     raise CmdException("No such feedback.")
 
