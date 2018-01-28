@@ -1204,6 +1204,8 @@ def allspam(msg, url):
 
 @command(str, str, privileged=True, whole_msg=True)
 def feedback(msg, post_url, feedback):
+    post_url = url_to_shortlink(post_url)[5:]
+
     for feedbacks in (TRUE_FEEDBACKS, FALSE_FEEDBACKS, NAA_FEEDBACKS):
         if feedback in feedbacks:
             feedbacks[feedback].send(post_url, msg)
