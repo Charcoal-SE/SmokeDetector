@@ -1202,6 +1202,16 @@ def allspam(msg, url):
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
 
 
+@command(str, str, privileged=True, whole_msg=True)
+def feedback(msg, post_url, feedback):
+    for feedbacks in (TRUE_FEEDBACKS, FALSE_FEEDBACKS, NAA_FEEDBACKS):
+        if feedback in feedbacks:
+            feedbacks[feedback].send(post_url, msg)
+            break
+
+    raise CmdException("No such feedback.")
+
+
 #
 #
 # Subcommands go below here
