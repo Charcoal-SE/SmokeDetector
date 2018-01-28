@@ -2283,3 +2283,4 @@
 1517066355	iBug	makreviews\.com
 1517069792	iBug	cinphe\.com
 1517137526	Glorfindel	lakipoker\.com
+1517140555	Glorfindel	compressman\.com
