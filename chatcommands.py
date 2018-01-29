@@ -867,8 +867,8 @@ def notify(msg, room_id, se_site):
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
-@command(int, str, whole_msg=True, aliases=["unnotify-all"])
-def unnotify_all(msg, room_id, se_site):
+@command(whole_msg=True, aliases=["unnotify-all"])
+def unnotify_all(msg):
     """
     Unsubscribes a user to all events
     :param msg:
@@ -877,7 +877,7 @@ def unnotify_all(msg, room_id, se_site):
     :return: A string
     """
     remove_all_from_notification_list(msg.owner.id)
-    return "You will no longer be pinged if I report a post."
+    return "I will no longer ping you if I report a post anywhere."
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
