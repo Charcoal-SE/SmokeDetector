@@ -865,7 +865,7 @@ def notify(msg, room_id, se_site):
     else:
         raise CmdException("Unrecognized code returned when adding notification.")
 
-        
+
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
 @command(int, str, whole_msg=True, aliases=["unnotify-all"])
 def unnotify_all(msg, room_id, se_site):
