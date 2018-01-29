@@ -865,8 +865,19 @@ def notify(msg, room_id, se_site):
     else:
         raise CmdException("Unrecognized code returned when adding notification.")
 
-
-# TODO: !!/unnotify-all
+        
+# noinspection PyIncorrectDocstring,PyMissingTypeHints
+@command(int, str, whole_msg=True, aliases=["unnotify-all"])
+def unnotify_all(msg, room_id, se_site):
+    """
+    Unsubscribes a user to all events
+    :param msg:
+    :param room_id:
+    :param se_site:
+    :return: A string
+    """
+    remove_all_from_notification_list(msg.owner.id)
+    return "You will no longer be pinged if I report a post."
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
