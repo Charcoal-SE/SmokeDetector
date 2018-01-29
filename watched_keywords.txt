@@ -2292,3 +2292,4 @@
 1517198633	bwDraco	goldyarora\.com
 1517201630	iBug	sg\W?11\W?brain
 1517202337	iBug	jc168\.herokuapp\.com
+1517213540	Glorfindel	trekarna\.com
