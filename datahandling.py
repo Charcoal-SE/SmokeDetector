@@ -369,10 +369,14 @@ def will_i_be_notified(user_id, chat_site, room_id, se_site):
 # noinspection PyMissingTypeHints
 def remove_all_from_notification_list(user_id):
     user_id = int(user_id)
+    my_notifications = []
 
     for notification in GlobalVars.notifications:
         if notification[0] == user_id:
-            remove_from_notification_list(*notification)
+            my_notifications.append(notify)
+            
+    for notification in my_notifications:
+        remove_from_notification_list(*notification)
 
 
 def get_all_notification_sites(user_id, chat_site, room_id):
