@@ -1093,3 +1093,4 @@ CeluRaid
 dumbass
 primacin\W?xl
 Stami\W?Max
+tst\W?11
