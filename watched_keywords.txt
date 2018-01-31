@@ -2315,3 +2315,4 @@
 1517335749	Nisse Engström	insightstate\.com
 1517386596	Glorfindel	keymagicinc\.com
 1517386602	Glorfindel	pianobossa\.com
+1517389942	Glorfindel	essaycorp\.co
