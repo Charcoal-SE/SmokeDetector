@@ -2318,3 +2318,4 @@
 1517389942	Glorfindel	essaycorp\.co
 1517390790	Glorfindel	bssgeek\.com
 1517392326	Glorfindel	chanelbrand5\.com
+1517396421	Glorfindel	medallionfinance
