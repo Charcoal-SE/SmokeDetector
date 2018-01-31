@@ -544,7 +544,6 @@
 1501421675	Mithrandir	magic\.piktochart\.com
 1501427629	Mithrandir	rootsh3ll\.com
 1501483754	Glorfindel	ouseful\.info
-1501491975	Glorfindel	nektony
 1501505499	Glorfindel	health4life\.cf
 1501570836	Glorfindel	19216811wiki\.com
 1501570946	Yvette Colomb	weaveinc.org
