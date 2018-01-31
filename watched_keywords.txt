@@ -1935,7 +1935,6 @@
 1513114438	Glorfindel	prosabbir\.blogspot\.com
 1513139142	Tetsuya Yamamoto	martine-voyance\.com
 1513157538	Tetsuya Yamamoto	brsoftech\.com
-1513157616	tripleee	irelandsupplements\.ie
 1513158850	tripleee	usmanakbar\.com
 1513159853	tripleee	http\W?hook\W?up\W?apps\W?org
 1513162353	Mithrandir	dmwevehicles\.com
