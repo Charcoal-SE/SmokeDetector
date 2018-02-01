@@ -544,7 +544,6 @@
 1501421675	Mithrandir	magic\.piktochart\.com
 1501427629	Mithrandir	rootsh3ll\.com
 1501483754	Glorfindel	ouseful\.info
-1501491975	Glorfindel	nektony
 1501505499	Glorfindel	health4life\.cf
 1501570836	Glorfindel	19216811wiki\.com
 1501570946	Yvette Colomb	weaveinc.org
@@ -580,7 +579,6 @@
 1502183008	doppelgreener	pointsprizes\.com
 1502183552	doppelgreener	free.?psn.?codes
 1502185175	Mithrandir	fliptheswitchs\.com
-1502190399	Glorfindel	bikejinni\.com
 1502200906	Mithrandir	gpsvehicletrackersindia\.in
 1502201687	Mithrandir	.?burgeesjason2@gmail\.com
 1502204516	Glorfindel	softisistem\.blogspot\.ru
@@ -1691,7 +1689,6 @@
 1511714480	NVZ	Tailorind\.com
 1511717542	Glorfindel	howtoisolve\.com
 1511758707	paper1111	jlbtcptc\.com
-1511759974	tripleee	babasupport\.org
 1511772542	Glorfindel	airfio
 1511772615	Glorfindel	vani-dutt\.com
 1511772637	Glorfindel	nag-rani\.com
@@ -2006,7 +2003,6 @@
 1513936423	Glorfindel	multiculturalismrocks\.com
 1513936433	Glorfindel	itcantbeyou\.com
 1513936779	Suraj Rao	getwillzone\.blogspot\.in
-1513936929	Glorfindel	office-comsetup\.net
 1513949773	paper1111	neosphere\.com\.np
 1514042853	Glorfindel	vrcams\.io
 1514045768	Glorfindel	runmyresearch\.com
@@ -2315,3 +2311,25 @@
 1517328014	Glorfindel	877\W?690\W?9305
 1517331260	quartata	magedirect\.co
 1517335749	Nisse Engström	insightstate\.com
+1517386596	Glorfindel	keymagicinc\.com
+1517386602	Glorfindel	pianobossa\.com
+1517389942	Glorfindel	essaycorp\.co
+1517390790	Glorfindel	bssgeek\.com
+1517392326	Glorfindel	chanelbrand5\.com
+1517396421	Glorfindel	medallionfinance
+1517406771	Suraj Rao	nethority\.com
+1517383452	Tetsuya Yamamoto	digitalacademy360\.com
+1517422995	Glorfindel	hammerofthor\.name
+1517473396	Glorfindel	vironit
+1517476876	Glorfindel	tubemate\.xyz
+1517478433	Glorfindel	vsoftware\.org
+1517481295	Glorfindel	walletonline\.info
+1517484937	Byte Commander	inandoutsteamers\.com
+1517485460	Glorfindel	viplocksmithtampa\.com
+1517485516	Glorfindel	mmfilmesonlinex\.org
+1517486086	Glorfindel	habcreative\.ca
+1517486206	Glorfindel	allstringsnylon\.com
+1517486318	Glorfindel	boomeon\.com
+1517486345	Glorfindel	twilightraven\.com
+1517492687	Glorfindel	superracing3d
+1517495591	Glorfindel	children\W?enjoyment\W?brisbane
