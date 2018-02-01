@@ -6,7 +6,7 @@ long\W?path\W?tool
 # but it works for smoke detector.
 (?!code\W|script\W)writing services?
 tosterone
-we (offer|give out) (loans|funds|funding)
+we (offer|give out) (loans?|funds?|funding)
 skin\W?(endear|royale|cell\W?pro|opulent|ology|centric)
 (rejuvenated?|aging|aged|revyve|neuphoric|deep\Wsea|amore|luxurious|regenere|nuvita|core)\W?skin
 acne(\W?prone)?\Wskin
@@ -1090,7 +1090,6 @@ v\W?tight\W?gel
 brute/W?gains
 Supreme\W?Choice\W?CBD
 CeluRaid
-dumbass
 primacin\W?xl
 Stami\W?Max
 tst\W?11
