@@ -30,6 +30,7 @@ TRUE_FEEDBACKS = {
     "k": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
     "spam": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
     "rude": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
+    "abuse": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
     "abusive": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
     "offensive": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
 
