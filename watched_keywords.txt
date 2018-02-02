@@ -2338,3 +2338,4 @@
 1517559085	iBug	laserfiche\.com
 1517568550	iBug	multitechnosys\.com
 1517580973	Glorfindel	londonlogodesigns\.co
+1517584302	Glorfindel	errspdyprotocolerror\.com
