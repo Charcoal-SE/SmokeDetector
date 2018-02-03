@@ -1665,7 +1665,6 @@
 1511434025	Glorfindel	venture\W?care
 1511437873	Glorfindel	avisatasfie\.com
 1511504994	tripleee	quick\W?trim
-1511505171	tripleee	revoria
 1511507204	A J	rupeenomics\.com
 1511512701	tripleee	tiger\W?zinda\W?hai
 1511520791	tripleee	(?:1\W*)?216\W*341\W*3152
