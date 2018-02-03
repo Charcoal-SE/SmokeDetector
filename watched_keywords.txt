@@ -2200,7 +2200,6 @@
 1516181311	Glorfindel	reviewlancer
 1516182606	Glorfindel	forummantra\.org
 1516196965	CalvT븃	AscendedMaster8888
-1516201377	Glorfindel	snaptube\.co
 1516208067	CalvT븃	dideban-cctv\.com
 1516215978	Mithrandir	the\W?millennium\W?blessing
 1516217156	Glorfindel	openitsolution\.in
