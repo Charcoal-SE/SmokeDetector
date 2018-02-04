@@ -2344,4 +2344,3 @@
 1517642170	Glorfindel	kingroot-apk-download\.com
 1517660276	Glorfindel	koelcolours\.com
 1517725274	iBug	polskasuplementy\.pl
-1517725281	iBug	Erogen\W?X
