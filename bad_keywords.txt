@@ -1095,3 +1095,4 @@ Stami\W?Max
 tst\W?11
 revoria
 Erogen\W?X
+(duck|cum).juice
