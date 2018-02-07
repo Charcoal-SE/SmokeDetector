@@ -2363,3 +2363,4 @@
 1518000819	Glorfindel	onlinetechnicians\.co
 1518004167	Glorfindel	mymedistore\.com
 1518006957	WELZ	gamehacktips\.com
+1518007178	WELZ	skokka\.com
