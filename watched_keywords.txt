@@ -2342,7 +2342,6 @@
 1517642170	Glorfindel	kingroot-apk-download\.com
 1517660276	Glorfindel	koelcolours\.com
 1517725274	iBug	polskasuplementy\.pl
-1517747602	Mithrandir	rofaffordable\.in
 1517774050	Mithrandir	complexsentencegenerator\.com
 1517811441	Suraj Rao	perzue\.com
 1517819791	Glorfindel	cetusplay\.com
@@ -2357,7 +2356,6 @@
 1517907377	Glorfindel	spromoter\.com
 1517909698	Glorfindel	ksacompounds\.com
 1517910414	Glorfindel	mathrubhumi\.com
-1517993112	paper1111	lemonparty\.fr
 1517997951	Glorfindel	pusatayam\.com
 1517999264	Glorfindel	discoverydental\.com
 1518000819	Glorfindel	onlinetechnicians\.co
@@ -2366,3 +2364,7 @@
 1518007178	WELZ	skokka\.com
 1518064795	iBug	swnmredcross\.org
 1518064809	iBug	jzwangzhuan\.com
+1518080055	tripleee	testonutra\.com
+1518086561	tripleee	liva\W?derma
+1518088445	tripleee	webdesigning\.ae
+1518088635	Glorfindel	9and9\.com
