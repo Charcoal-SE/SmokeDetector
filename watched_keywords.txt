@@ -2369,3 +2369,4 @@
 1518088445	tripleee	webdesigning\.ae
 1518088635	Glorfindel	9and9\.com
 1518021095	WELZ	wordcookiesanswersaz\.com
+1518021119	WELZ	archerygames\.co
