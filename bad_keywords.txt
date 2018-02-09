@@ -1101,6 +1101,5 @@ probiox
 androdna
 velaire
 (?<=/)xflo(?:$|[/?])
-flexinail
 flexinall
 phytolast
