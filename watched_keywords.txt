@@ -2373,3 +2373,4 @@
 1518097917	tripleee	raypars\.com
 1518157687	tripleee	juicer\W+machine
 1518160584	iBug	Qurb\W?Shot
+1518199700	Glorfindel	ingolin\.com
