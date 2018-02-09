@@ -226,6 +226,9 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
     target_rooms = set()
 
     for prop_has in has:
+        if isinstance(prop_has, tuple):
+            target_rooms.add(prop_has)
+
         if prop_has not in _room_roles:
             continue
 
