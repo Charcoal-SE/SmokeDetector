@@ -285,7 +285,7 @@ class Metasmoke:
                         GlobalVars.standby_mode = False
                         GlobalVars.metasmoke_last_ping_time = datetime.now()  # Otherwise the ping watcher will exit(10)
 
-                        chatcommunicate.tell_rooms_with("debug", GlobalVars.location + " received failover signal.", 
+                        chatcommunicate.tell_rooms_with("debug", GlobalVars.location + " received failover signal.",
                                                         notify_site="/failover")
 
                     if response['standby']:
