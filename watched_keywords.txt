@@ -1047,7 +1047,6 @@
 1506602688	Glorfindel	comingit\.com
 1506604373	tripleee	digitembdesigns\.tumblr\.com
 1506658986	tripleee	natrogix
-1506664625	Glorfindel	softwaresuggest\.com
 1506666164	Glorfindel	techlightnews\.com
 1506669737	Glorfindel	buildyourorg\.com
 1506671869	tripleee	reviewfantasy\.com
