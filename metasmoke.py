@@ -166,19 +166,19 @@ class Metasmoke:
                                 "commit/{commit_sha})"\
                                 " succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"],
                                                                                              commit_sha=sha)
-                            chatcommunicate.tell_rooms_with("debug", s)
+                            chatcommunicate.tell_rooms_with("debug", s, notify_site="/ci")
                             time.sleep(2)
                             os._exit(3)
                         else:
                             s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
                                 "commit/{commit_sha}) succeeded.".format(ci_link=c["ci_url"], commit_sha=sha)
 
-                            chatcommunicate.tell_rooms_with("debug", s)
+                            chatcommunicate.tell_rooms_with("debug", s, notify_site="/ci")
                     elif c["status"] == "failure":
                         s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
                             "commit/{commit_sha}) failed.".format(ci_link=c["ci_url"], commit_sha=sha)
 
-                        chatcommunicate.tell_rooms_with("debug", s)
+                        chatcommunicate.tell_rooms_with("debug", s, notify_site="/ci")
             elif "everything_is_broken" in message:
                 if message["everything_is_broken"] is True:
                     os._exit(6)
@@ -285,7 +285,7 @@ class Metasmoke:
                         GlobalVars.standby_mode = False
                         GlobalVars.metasmoke_last_ping_time = datetime.now()  # Otherwise the ping watcher will exit(10)
 
-                        chatcommunicate.tell_rooms_with("debug", GlobalVars.location + " received failover signal.")
+                        chatcommunicate.tell_rooms_with("debug", GlobalVars.location + " received failover signal.", notify_site="/failover")
 
                     if response['standby']:
                         chatcommunicate.tell_rooms_with("debug",
