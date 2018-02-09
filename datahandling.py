@@ -331,24 +331,26 @@ def check_site_and_get_full_name(site):
 
 # noinspection PyMissingTypeHints
 def add_to_notification_list(user_id, chat_site, room_id, se_site):
-    exists, site = check_site_and_get_full_name(se_site)
-    if not exists:
-        return -2, None
-    notification_tuple = (int(user_id), chat_site, int(room_id), site)
+    if se_site[0] != "/":
+        exists, se_site = check_site_and_get_full_name(se_site)
+        if not exists:
+            return -2, None
+    notification_tuple = (int(user_id), chat_site, int(room_id), se_site)
     if notification_tuple in GlobalVars.notifications:
         return -1, None
     GlobalVars.notifications.append(notification_tuple)
     with open("notifications.p", "wb") as f:
         pickle.dump(GlobalVars.notifications, f, protocol=pickle.HIGHEST_PROTOCOL)
-    return 0, site
+    return 0, se_site
 
 
 # noinspection PyMissingTypeHints
 def remove_from_notification_list(user_id, chat_site, room_id, se_site):
-    exists, site = check_site_and_get_full_name(se_site)
-    if not exists:
-        return False
-    notification_tuple = (int(user_id), chat_site, int(room_id), site)
+    if se_site[0] != "/":
+        exists, se_site = check_site_and_get_full_name(se_site)
+        if not exists:
+            return False
+    notification_tuple = (int(user_id), chat_site, int(room_id), se_site)
     if notification_tuple not in GlobalVars.notifications:
         return False
     GlobalVars.notifications.remove(notification_tuple)
