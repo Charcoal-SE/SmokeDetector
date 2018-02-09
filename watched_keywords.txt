@@ -2372,3 +2372,4 @@
 1518021095	WELZ	wordcookiesanswersaz\.com
 1518021119	WELZ	archerygames\.co
 1518097917	tripleee	raypars\.com
+1518157687	tripleee	juicer\W+machine
