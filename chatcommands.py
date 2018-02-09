@@ -595,7 +595,7 @@ def reboot(msg):
     :param msg:
     :return: None
     """
-    tell_rooms("Goodbye, cruel world", ("debug", msg.room.id))
+    tell_rooms("Goodbye, cruel world", ("debug", msg.room.id), ())
     time.sleep(1)
     os._exit(5)
 
@@ -673,7 +673,7 @@ def stappit(msg, location_search):
     :return: None
     """
     if location_search is None or location_search.lower() in GlobalVars.location.lower():
-        tell_rooms("Goodbye, cruel world", ("debug", msg.room.id))
+        tell_rooms("Goodbye, cruel world", ("debug", msg.room.id), ())
 
         time.sleep(1)
         os._exit(6)
@@ -734,7 +734,7 @@ def standby(msg, location_search):
     """
     if location_search.lower() in GlobalVars.location.lower():
         tell_rooms("{location} is switching to standby".format(location=GlobalVars.location),
-                   ("debug", msg.room.id), notify_site="/standby")
+                   ("debug", msg.room.id), (), notify_site="/standby")
 
         time.sleep(2)
         os._exit(7)
