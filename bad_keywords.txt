@@ -1103,3 +1103,4 @@ velaire
 (?<=/)xflo(?:$|[/?])
 flexinail
 flexinall
+phytolast
