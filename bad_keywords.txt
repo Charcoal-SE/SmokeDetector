@@ -1105,3 +1105,4 @@ flexinall
 phytolast
 andras\Wfiber
 apower\W?(manager|mirror|pdf|rec|recover)
+video\W?download\W?capture
