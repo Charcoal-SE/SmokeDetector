@@ -2359,7 +2359,6 @@
 1517999264	Glorfindel	discoverydental\.com
 1518000819	Glorfindel	onlinetechnicians\.co
 1518004167	Glorfindel	mymedistore\.com
-1518006957	WELZ	gamehacktips\.com
 1518007178	WELZ	skokka\.com
 1518021145	WELZ	scratchgames\.co
 1518064795	iBug	swnmredcross\.org
