@@ -1104,3 +1104,4 @@ velaire
 flexinall
 phytolast
 andras\Wfiber
+apower\W?(manager|mirror|pdf|rec|recover)
