@@ -2376,3 +2376,4 @@
 1518257801	iBug	trilixton
 1518275391	doppelgreener	pcgamescenter\.com
 1518287027	doppelgreener	cryptowolverine\.com
+1518292301	Glorfindel	gstechsoftware\.com
