@@ -2378,3 +2378,4 @@
 1518292301	Glorfindel	gstechsoftware\.com
 1518336237	iBug	affordablehousing-\w*\.in
 1518336400	iBug	mahira\W?homes
+1518368840	Mego	crypto(\W*)wolverine
