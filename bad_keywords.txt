@@ -263,7 +263,7 @@ internal\W911
 true\Wbrilliance
 muscle\Wxtx
 test\Wboost\Welite
-gs\Wrichcopy\W360
+richcopy\W360
 collamask
 naturacel
 luminescent\Wserum
@@ -744,7 +744,7 @@ lejuve
 endozyn
 boost\W?rx
 euphoria\W?anti\W?aging
-r-hub
+r\Whub
 liquid\W?tree
 puravida
 le\W?juve
@@ -1087,7 +1087,7 @@ Glovella
 neftegaz\W?agent
 Avoir\W?Derm
 v\W?tight\W?gel
-brute/W?gains
+brute\W?gains
 Supreme\W?Choice\W?CBD
 Cell?uRaid
 primacin\W?xl
