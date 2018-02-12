@@ -2379,3 +2379,4 @@
 1518336237	iBug	affordablehousing-\w*\.in
 1518336400	iBug	mahira\W?homes
 1518368840	Mego	crypto(\W*)wolverine
+1518413493	iBug	tryvix
