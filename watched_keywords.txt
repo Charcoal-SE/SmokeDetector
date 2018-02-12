@@ -2391,3 +2391,4 @@
 1518443095	iBug	socialprac(?:ha|ah)r.com
 1518448208	Glorfindel	mcessay\.com
 1518448665	doppelgreener	\w*essay\w*\.com?
+1518459067	WELZ	alarmasalicante\.info
