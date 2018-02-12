@@ -2378,7 +2378,6 @@
 1518336400	iBug	mahira\W?homes
 1518368840	Mego	crypto(\W*)wolverine
 1518413493	iBug	tryvix
-1518417539	Glorfindel	r-quickshop\.com
 1518418778	tripleee	thermocore\W?max
 1518419817	NobodyNada	ahanasingh\.com
 1518424948	paper1111	verge3d\W?for\W?3ds\W?Max
