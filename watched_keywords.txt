@@ -2380,3 +2380,4 @@
 1518368840	Mego	crypto(\W*)wolverine
 1518413493	iBug	tryvix
 1518417539	Glorfindel	r-quickshop\.com
+1518418778	tripleee	thermocore\W?max
