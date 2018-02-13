@@ -1114,4 +1114,4 @@ reducelant
 lipovyn
 trilixton
 slim\W?trim
-(?<=[/?])mrx([/"<])
+(?<=[/?])mrx([-/"<])
