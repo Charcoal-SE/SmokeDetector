@@ -2394,3 +2394,4 @@
 1518472745	NobodyNada	hack\Wethics
 1518494357	iBug	lyaxtin
 1518497424	iBug	bookhungama\.com
+1518498746	iBug	new\W?age\W?skin
