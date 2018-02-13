@@ -2239,7 +2239,6 @@
 1516748172	paper1111	art\Wchapel\W+84738
 1516760206	Tetsuya Yamamoto	saharveto\.com
 1516765168	iBug	bx-zone\.com
-1516776685	Glorfindel	thehumannest\.com
 1516786198	Suraj Rao	safewow\.com
 1516788435	doppelgreener	bx-zone
 1516795126	iBug	rocketpaper\.net
