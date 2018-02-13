@@ -2395,3 +2395,4 @@
 1518497424	iBug	bookhungama\.com
 1518498746	iBug	new\W?age\W?skin
 1518501746	iBug	volidian
+1518511096	Glorfindel	inteled\.info
