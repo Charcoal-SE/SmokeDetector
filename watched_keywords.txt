@@ -2396,3 +2396,4 @@
 1518498746	iBug	new\W?age\W?skin
 1518501746	iBug	volidian
 1518511096	Glorfindel	inteled\.info
+1518512272	iBug	instarect
