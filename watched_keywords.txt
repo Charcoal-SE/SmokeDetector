@@ -2326,7 +2326,6 @@
 1517495591	Glorfindel	children\W?enjoyment\W?brisbane
 1517508624	Glorfindel	devmyresume\.com
 1517550030	NobodyNada	janbasktraining.com
-1517559085	iBug	laserfiche\.com
 1517568550	iBug	multitechnosys\.com
 1517580973	Glorfindel	londonlogodesigns\.co
 1517584302	Glorfindel	errspdyprotocolerror\.com
