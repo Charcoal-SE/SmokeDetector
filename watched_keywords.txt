@@ -2210,7 +2210,6 @@
 1516368786	WELZ	parswebserver\.com
 1516437509	Nisse Engström	adaniaffordables\.in
 1516469276	Nisse Engström	studymanger\.com
-1516461464	Nisse Engström	mindsmetricks\.com
 1516541243	paper1111	macos-download\.org
 1516559784	WELZ	apmov.ir
 1516573986	WELZ	rightfamilydentalny\.com
