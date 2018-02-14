@@ -2404,3 +2404,4 @@
 1518595213	Mithrandir	scottishkiltshop\.com
 1518595233	Mithrandir	prince\W?charlie\W?jacket
 1518599111	Glorfindel	antimalwareserviceexecutable\.xyz
+1518600487	iBug	thyroid
