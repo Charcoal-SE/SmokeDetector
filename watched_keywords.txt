@@ -2404,3 +2404,4 @@
 1518595233	Mithrandir	prince\W?charlie\W?jacket
 1518599111	Glorfindel	antimalwareserviceexecutable\.xyz
 1518602689	Glorfindel	jcookflyrods\.com
+1518602743	iBug	jcookflyrods\.com
