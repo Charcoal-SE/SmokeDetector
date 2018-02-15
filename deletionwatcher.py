@@ -93,7 +93,7 @@ class DeletionWatcher:
     def _save(self):
         pickle_output = {}
 
-        for post_id, post_site, _, _, _, _ in self.posts.values():
+        for post_id, post_site, _, _, _ in self.posts.values():
             if post_site not in pickle_output:
                 pickle_output[post_site] = [post_id]
             else:
@@ -104,7 +104,7 @@ class DeletionWatcher:
 
     @staticmethod
     def _check_batch(saved):
-        for site, posts in saved:
+        for site, posts in saved.items():
             ids = ";".join([post_id for post_id in posts])
             uri = "https://api.stackexchange.com/2.2/posts/{}?site={}&key=IAkbitmze4B8KpacUfLqkw((".format(ids, site)
 
