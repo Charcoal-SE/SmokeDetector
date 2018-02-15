@@ -105,11 +105,16 @@ class DeletionWatcher:
     @staticmethod
     def _check_batch(saved):
         for site, posts in saved.items():
-            ids = ";".join([post_id for post_id in posts])
+            ids = ";".join([post_id for post_id in posts if not DeletionWatcher._ignore((post_id, site))])
             uri = "https://api.stackexchange.com/2.2/posts/{}?site={}&key=IAkbitmze4B8KpacUfLqkw((".format(ids, site)
 
             for post in requests.get(uri).json()["items"]:
                 yield post["link"]
+
+    @staticmethod
+    def _ignore(post_site_id):
+        return datahandling.is_false_positive(post_site_id) or datahandling.is_ignored_post(post_site_id) or \
+            datahandling.is_auto_ignored_post(post_site_id)
 
     @staticmethod
     def update_site_id_list():
