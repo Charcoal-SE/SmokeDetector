@@ -50,14 +50,15 @@ class DeletionWatcher:
 
                     if data["a"] == "post-deleted":
                         try:
-                            post_id, _, post_type, post_url, callback, max_time = self.posts[action["action"]]
+                            post_id, _, post_type, post_url, callbacks = self.posts[action["action"]]
 
                             if not post_type == "answer" or ("aId" in d and str(d["aId"]) == post_id)):
                                 self.socket.send("-" + action)
                                 Tasks.do(metasmoke.Metasmoke.send_deletion_stats_for_post, post_url, True)
 
-                                if callback and (not max_time or time.time() < max_time):
-                                    callback()
+                                for callback, max_time in callbacks:
+                                    if callback and (not max_time or time.time() < max_time):
+                                        callback()
                         except KeyError:
                             pass
 
@@ -79,8 +80,12 @@ class DeletionWatcher:
         action = "{}-question-{}".format(site_id, question_id)
         max_time = time.time() + timeout
 
-        self.posts[action] = (post_id, post_site, post_type, post_url, callback, max_time)
-        self.socket.send(action)
+        if action in self.posts:
+            _, _, _, _, callbacks = self.posts[action]
+            callbacks.append((callback, max_time))
+        else:
+            self.posts[action] = (post_id, post_site, post_type, post_url, [(callback, max_time)])
+            self.socket.send(action)
 
         if pickle:
             Tasks.do(self._save)

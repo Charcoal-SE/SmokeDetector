@@ -170,7 +170,7 @@ def send_messages():
                         if room.deletion_watcher:
                             callback = room.room._client.get_message(message_id).delete
 
-                            GlobalVars.deletion_watcher.subscribe(report_data[0], callback=callback, max=120)
+                            GlobalVars.deletion_watcher.subscribe(report_data[0], callback=callback, timeout=120)
 
                     _pickle_run.set()
 
@@ -263,7 +263,7 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
             if report_data and "delay" in _room_roles and room_id in _room_roles["delay"]:
                 callback = lambda: _msg_queue.put((room, msg_pings, report_data))
 
-                GlobalVars.deletion_watcher.subscribe(report_data[0], callback=callback, max=300)
+                GlobalVars.deletion_watcher.subscribe(report_data[0], callback=callback, timeout=300)
             else:
                 _msg_queue.put((room, msg_pings, report_data))
 
