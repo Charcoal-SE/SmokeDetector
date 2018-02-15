@@ -28,7 +28,7 @@ class DeletionWatcher:
 
         if os.path.exists("deletionIDs.p"):
             with open("deletionIDs.p", "rb") as fh:
-                for post in self._check_batch(pickle.load(fh)):
+                for post in DeletionWatcher._check_batch(pickle.load(fh)):
                     self.subscribe(post, pickle=False)
 
                 self._save()
