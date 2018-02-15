@@ -261,7 +261,8 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
 
         if room.block_time < timestamp and _global_block < timestamp:
             if report_data and "delay" in _room_roles and room_id in _room_roles["delay"]:
-                callback = lambda: _msg_queue.put((room, msg_pings, report_data))
+                def callback():
+                    _msg_queue.put((room, msg_pings, report_data))
 
                 GlobalVars.deletion_watcher.subscribe(report_data[0], callback=callback, timeout=300)
             else:

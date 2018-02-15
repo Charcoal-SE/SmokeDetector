@@ -44,7 +44,7 @@ class DeletionWatcher:
                 action = msg["action"]
 
                 if action == "hb":
-                    ws.send("hb")
+                    self.sock.send("hb")
                 else:
                     data = json.loads(msg)["data"]
 
@@ -52,7 +52,7 @@ class DeletionWatcher:
                         try:
                             post_id, _, post_type, post_url, callbacks = self.posts[action["action"]]
 
-                            if not post_type == "answer" or ("aId" in d and str(d["aId"]) == post_id)):
+                            if not post_type == "answer" or ("aId" in data and str(data["aId"]) == post_id):
                                 self.socket.send("-" + action)
                                 Tasks.do(metasmoke.Metasmoke.send_deletion_stats_for_post, post_url, True)
 
@@ -62,14 +62,14 @@ class DeletionWatcher:
                         except KeyError:
                             pass
 
-    def subscribe(post_url, callback=None, pickle=True, timeout=300):
+    def subscribe(self, post_url, callback=None, pickle=True, timeout=300):
         post_id, post_site, post_type = fetch_post_id_and_site_from_url(post_url)
 
         if post_site not in GlobalVars.site_id_dict:
             return
 
         if post_type == "answer":
-            question_id = str(datahandling.get_post_site_id_link(post_site_id))
+            question_id = str(datahandling.get_post_site_id_link((post_id, post_site, post_type)))
 
             if question_id is None:
                 return
@@ -90,7 +90,7 @@ class DeletionWatcher:
         if pickle:
             Tasks.do(self._save)
 
-    def _save():
+    def _save(self):
         pickle_output = {}
 
         for post_id, post_site, _, _, _, _ in self.posts.values():
