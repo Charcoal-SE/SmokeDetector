@@ -2413,3 +2413,4 @@
 1518611707	Glorfindel	support\W?wala
 1518616873	doppelgreener	(vaastuwith)?puneet\W?chawla
 1518670788	iBug	mango\W?nutrition
+1518671735	iBug	vala\W?facial
