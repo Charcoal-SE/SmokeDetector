@@ -14,7 +14,6 @@ import time
 import yaml
 
 import datahandling
-from deletionwatcher import DeletionWatcher
 from excepthook import log_exception
 from globalvars import GlobalVars
 from parsing import fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
@@ -169,9 +168,9 @@ def send_messages():
                             _last_messages.reports.popitem(last=False)
 
                         if room.deletion_watcher:
-                            threading.Thread(name="deletion watcher",
-                                             target=DeletionWatcher.check_if_report_was_deleted,
-                                             args=(report_data[0], room.room._client.get_message(message_id))).start()
+                            callback = room.room._client.get_message(message_id).delete
+
+                            GlobalVars.deletion_watcher.subscribe(report_data[0], callback=callback, max=120)
 
                     _pickle_run.set()
 
@@ -262,9 +261,9 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
 
         if room.block_time < timestamp and _global_block < timestamp:
             if report_data and "delay" in _room_roles and room_id in _room_roles["delay"]:
-                threading.Thread(name="delayed post",
-                                 target=DeletionWatcher.post_message_if_not_deleted,
-                                 args=(msg_pings, room, report_data)).start()
+                callback = lambda: _msg_queue.put((room, msg_pings, report_data))
+
+                GlobalVars.deletion_watcher.subscribe(report_data[0], callback=callback, max=300)
             else:
                 _msg_queue.put((room, msg_pings, report_data))
 
