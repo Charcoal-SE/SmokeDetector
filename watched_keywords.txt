@@ -2414,3 +2414,4 @@
 1518670788	iBug	mango\W?nutrition
 1518671735	iBug	vala\W?facial
 1518687419	Glorfindel	eamazongo\.com
+1518692010	Byte Commander	panditanilmaharaj\.com
