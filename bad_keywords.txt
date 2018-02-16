@@ -209,7 +209,7 @@ alphadrox
 vinetics\Wc
 soleil\Wglo
 Clariderm\WCream
-ATM hackers?
+ATM\W?hackers?
 hack\Wtool
 professional\Whack(er|ing)?s?
 gain\Wxt(reme)?
@@ -1095,7 +1095,7 @@ Stami\W?Max
 tst\W?11
 revoria
 Erogen\W?X
-(dick|cum).juice
+(dick|cum).?juice
 Proflexoral
 probiox
 androdna
@@ -1115,7 +1115,6 @@ lipovyn
 trilixton
 slim\W?trim
 (?<=[/?])mrx([-/"<])
-fxm\W?male\W?enhancement
 suplementodiet
 tevida
 total\W?radiance
@@ -1130,4 +1129,3 @@ windows\W?taskbar\W?fix
 sell\W?old\W?used\W?bikes
 herzolex
 neogelio\W?mask
-copula
