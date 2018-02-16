@@ -1130,3 +1130,4 @@ windows\W?taskbar\W?fix
 sell\W?old\W?used\W?bikes
 herzolex
 neogelio\W?mask
+copula
