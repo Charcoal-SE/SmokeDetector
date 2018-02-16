@@ -1125,3 +1125,4 @@ instarect
 ultimate\W?slim
 (?:1\W?)?855\W*559\W*8711
 slim\W?trim\W?2000
+real\W?exam\W?dumps
