@@ -201,19 +201,16 @@ def blacklist(_):
                        "and spaces and punctuations with `\\W?`.")
 
 
-def check_blacklist(string_to_test, **is_what):
+def check_blacklist(string_to_test, username=False, watch=False, site=""):
     # Test the string and provide a warning message if it is already caught.
     sample_post = {'title': 'Valid title', 'body': 'Valid body',
                    'owner': {'display_name': 'Valid username', 'reputation': 1, 'link': ''},
-                   'site': '', 'IsAnswer': False, 'score': 0}
+                   'site': site, 'IsAnswer': False, 'score': 0}
 
-    if is_what['username']:
+    if username:
         sample_post['owner']['display_name'] = string_to_test
     else:
         sample_post['body'] = string_to_test
-
-    if is_what['stackoverflow']:
-        sample_post['site'] = 'stackoverflow.com'
 
     sample_post['IsAnswer'] = False
     question = Post(api_response=sample_post)
@@ -228,7 +225,7 @@ def check_blacklist(string_to_test, **is_what):
     reasons = list(set(question_reasons) | set(answer_reasons))
 
     # Filter out watchlist results
-    if not is_what['watchlist']:
+    if not watch:
         reasons = list(filter(lambda reason: "potentially bad keyword" not in reason, reasons))
 
     return reasons
@@ -267,11 +264,10 @@ def do_blacklist(pattern, blacklist_type, msg, force=False):
         raise CmdException("An invalid pattern was provided, not blacklisting.")
 
     if not force:
-        is_what = {'username': blacklist_type == "username",
-                   'watchlist': blacklist_type == "watch_keyword",
-                   'stackoverflow': blacklist_type == "sokeyword"}
         reasons = check_blacklist(pattern.replace("\\W", " ").replace("\\.", "."),
-                                  **is_what)
+                                  username=(blacklist_type == "username"),
+                                  watch=(blacklist_type == "watch_keyword"),
+                                  site=("stackoverflow.com" if blacklist_type == "sokeyword" else ""))
 
         if reasons:
             raise CmdException("That pattern looks like it's already caught by " + format_blacklist_reasons(reasons) +
