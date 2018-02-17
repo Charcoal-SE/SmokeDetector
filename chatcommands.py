@@ -203,9 +203,9 @@ def blacklist(_):
 
 def check_blacklist(string_to_test, **is_what):
     # Test the string and provide a warning message if it is already caught.
-    sample_post = {'api_response': {'title': 'Valid title', 'body': 'Valid body',
-                                    'owner': {'display_name': 'Valid username', 'reputation': 1, 'link': ''},
-                                    'site': '', 'IsAnswer': False, 'score': 0}}
+    sample_post = {'title': 'Valid title', 'body': 'Valid body',
+                   'owner': {'display_name': 'Valid username', 'reputation': 1, 'link': ''},
+                   'site': '', 'IsAnswer': False, 'score': 0}
 
     if is_what['username']:
         sample_post['owner']['display_name'] = string_to_test
