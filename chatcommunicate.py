@@ -17,6 +17,7 @@ import datahandling
 from excepthook import log_exception
 from globalvars import GlobalVars
 from parsing import fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
+from tasks import Tasks
 
 LastMessages = collections.namedtuple("LastMessages", ["messages", "reports"])
 
@@ -261,10 +262,9 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
 
         if room.block_time < timestamp and _global_block < timestamp:
             if report_data and "delay" in _room_roles and room_id in _room_roles["delay"]:
-                def callback():
-                    _msg_queue.put((room, msg_pings, report_data))
+                task = Tasks.later(_msg_queue.put, (room, msg_pings, report_data), after=300)
 
-                GlobalVars.deletion_watcher.subscribe(report_data[0], callback=callback, timeout=300)
+                GlobalVars.deletion_watcher.subscribe(report_data[0], callback=task.cancel)
             else:
                 _msg_queue.put((room, msg_pings, report_data))
 

@@ -33,7 +33,7 @@ class DeletionWatcher:
 
                 self._save()
 
-        threading.Thread(name="deletion watcher", target=self._start, daemon=True)
+        threading.Thread(name="deletion watcher", target=self._start, daemon=True).start()
 
     def _start(self):
         while True:
@@ -44,13 +44,14 @@ class DeletionWatcher:
                 action = msg["action"]
 
                 if action == "hb":
-                    self.sock.send("hb")
+                    self.socket.send("hb")
                 else:
-                    data = json.loads(msg)["data"]
+                    data = json.loads(msg["data"])
 
                     if data["a"] == "post-deleted":
                         try:
-                            post_id, _, post_type, post_url, callbacks = self.posts[action["action"]]
+                            post_id, _, post_type, post_url, callbacks = self.posts[action]
+                            del self.posts[action["action"]]
 
                             if not post_type == "answer" or ("aId" in data and str(data["aId"]) == post_id):
                                 self.socket.send("-" + action)
@@ -62,7 +63,7 @@ class DeletionWatcher:
                         except KeyError:
                             pass
 
-    def subscribe(self, post_url, callback=None, pickle=True, timeout=300):
+    def subscribe(self, post_url, callback=None, pickle=True, timeout=None):
         post_id, post_site, post_type = fetch_post_id_and_site_from_url(post_url)
 
         if post_site not in GlobalVars.site_id_dict:
@@ -78,7 +79,7 @@ class DeletionWatcher:
 
         site_id = GlobalVars.site_id_dict[post_site]
         action = "{}-question-{}".format(site_id, question_id)
-        max_time = time.time() + timeout
+        max_time = (time.time() + timeout) if timeout else None
 
         if action in self.posts:
             _, _, _, _, callbacks = self.posts[action]
