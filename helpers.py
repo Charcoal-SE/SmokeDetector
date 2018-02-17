@@ -34,7 +34,8 @@ def log(log_level, *args):
 
 
 def only_blacklists_changed(diff):
-    blacklist_files = ["bad_keywords.txt", "blacklisted_usernames.txt", "blacklisted_websites.txt",
+    blacklist_files = ["bad_keywords.txt", "so_bad_keywords.txt",
+                       "blacklisted_usernames.txt", "blacklisted_websites.txt",
                        "watched_keywords.txt"]
     files_changed = diff.split()
     non_blacklist_files = [f for f in files_changed if f not in blacklist_files]

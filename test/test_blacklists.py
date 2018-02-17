@@ -5,7 +5,7 @@ from helpers import only_blacklists_changed
 
 
 def test_blacklist_integrity():
-    bl_files = glob('bad_*.txt') + glob('blacklisted_*.txt') + \
+    bl_files = glob('bad_*.txt') + glob('so_bad_*.txt') + glob('blacklisted_*.txt') + \
         ['watched_keywords.txt']
     seen = dict()
     for bl_file in bl_files:
@@ -28,6 +28,7 @@ def test_blacklist_integrity():
 def test_blacklist_pull_diff():
     only_blacklists_diff = """watched_keywords.txt
                               bad_keywords.txt
+                              so_bad_keywords.txt
                               blacklisted_websites.txt"""
     assert only_blacklists_changed(only_blacklists_diff)
     mixed_files_diff = """helpers.py

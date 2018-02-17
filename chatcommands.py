@@ -194,29 +194,32 @@ def blacklist(_):
     Returns a string which explains the usage of the new blacklist commands.
     :return: A string
     """
-    raise CmdException("The !!/blacklist command has been deprecated. "
-                       "Please use !!/blacklist-website, !!/blacklist-username,"
-                       "!!/blacklist-keyword, or perhaps !!/watch-keyword. "
-                       "Remember to escape dots in URLs using \\.")
+    raise CmdException("The `!!/blacklist` command has been deprecated. "
+                       "Please use `!!/blacklist-website`, `!!/blacklist-username`, "
+                       "`!!/blacklist-keyword`, or perhaps `!!/watch`. "
+                       "Remember to escape dots in URLs using `\\.`, "
+                       "and spaces and punctuations with `\\W?`.")
 
 
-def check_blacklist(string_to_test, is_username, is_watchlist):
+def check_blacklist(string_to_test, **is_what):
     # Test the string and provide a warning message if it is already caught.
-    if is_username:
-        question = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
-                                      'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
-        answer = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
-                                    'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
-                                    'site': "", 'IsAnswer': True, 'score': 0})
+    sample_post = {'api_response': {'title': 'Valid title', 'body': 'Valid body',
+                                    'owner': {'display_name': 'Valid username', 'reputation': 1, 'link': ''},
+                                    'site': '', 'IsAnswer': False, 'score': 0}}
 
+    if is_what['username']:
+        sample_post['owner']['display_name'] = string_to_test
     else:
-        question = Post(api_response={'title': 'Valid title', 'body': string_to_test,
-                                      'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
-        answer = Post(api_response={'title': 'Valid title', 'body': string_to_test,
-                                    'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                    'site': "", 'IsAnswer': True, 'score': 0})
+        sample_post['body'] = string_to_test
+
+    if is_what['stackoverflow']:
+        sample_post['site'] = 'stackoverflow.com'
+
+    sample_post['IsAnswer'] = False
+    question = Post(api_response=sample_post)
+
+    sample_post['IsAnswer'] = True
+    answer = Post(api_response=sample_post)
 
     question_reasons, _ = FindSpam.test_post(question)
     answer_reasons, _ = FindSpam.test_post(answer)
@@ -225,7 +228,7 @@ def check_blacklist(string_to_test, is_username, is_watchlist):
     reasons = list(set(question_reasons) | set(answer_reasons))
 
     # Filter out watchlist results
-    if not is_watchlist:
+    if not is_what['watchlist']:
         reasons = list(filter(lambda reason: "potentially bad keyword" not in reason, reasons))
 
     return reasons
@@ -264,9 +267,11 @@ def do_blacklist(pattern, blacklist_type, msg, force=False):
         raise CmdException("An invalid pattern was provided, not blacklisting.")
 
     if not force:
+        is_what = {'username': blacklist_type == "username",
+                   'watchlist': blacklist_type == "watch_keyword",
+                   'stackoverflow': blacklist_type == "sokeyword"}
         reasons = check_blacklist(pattern.replace("\\W", " ").replace("\\.", "."),
-                                  blacklist_type == "username",
-                                  blacklist_type == "watch_keyword")
+                                  **is_what)
 
         if reasons:
             raise CmdException("That pattern looks like it's already caught by " + format_blacklist_reasons(reasons) +
@@ -285,9 +290,11 @@ def do_blacklist(pattern, blacklist_type, msg, force=False):
 
 # noinspection PyIncorrectDocstring
 @command(str, whole_msg=True, privileged=True, give_name=True, aliases=["blacklist-keyword",
+                                                                        "blacklist-sokeyword",
                                                                         "blacklist-website",
                                                                         "blacklist-username",
                                                                         "blacklist-keyword-force",
+                                                                        "blacklist-sokeyword-force",
                                                                         "blacklist-website-force",
                                                                         "blacklist-username-force"])
 def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
@@ -376,7 +383,7 @@ def brownie():
     return "Brown!"
 
 
-COFFEES = ['Espresso', 'Macchiato', 'Ristretto', 'Americano', 'Latte', 'Cappuccino', 'Mocha', 'Affogato']
+COFFEES = ['Espresso', 'Macchiato', 'Ristretto', 'Americano', 'Latte', 'Cappuccino', 'Mocha', 'Affogato', 'jQuery']
 
 
 # noinspection PyIncorrectDocstring
@@ -404,7 +411,7 @@ def lick():
     return "*licks ice cream cone*"
 
 
-TEAS = ['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint', 'jasmine', 'passionfruit']
+TEAS = ['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint', 'jasmine', 'passionfruit', 'oolong']
 
 
 # noinspection PyIncorrectDocstring
