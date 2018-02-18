@@ -2427,3 +2427,4 @@
 1518936891	iBug	nilsmoke
 1518939853	iBug	cardio\W?clear\W?\d
 1518940329	Mithrandir	packersmoversjammu\.in
+1518970497	WELZ	pop\.movie
