@@ -35,13 +35,14 @@ COMMON_MALFORMED_PROTOCOLS = [
 SAFE_EXTENSIONS = set(('htm', 'py', 'java', 'sh'))
 SE_SITES_RE = r'(?:{sites})'.format(
     sites='|'.join([
-        r'([a-z]+\.)stackoverflow\.com',
+        r'(?:[a-z]+\.)*stackoverflow\.com',
         r'(?:{doms})\.com'.format(doms='|'.join(
-            [r'askubuntu', r'superuser', r'serverfault'])),
+            [r'askubuntu', r'superuser', r'serverfault', r'stackapps', r'i\.stack\.imgur'])),
         r'mathoverflow\.net',
         r'(?:[a-z]+\.)*stackexchange\.com']))
 SE_SITES_DOMAINS = ['stackoverflow.com', 'askubuntu.com', 'superuser.com', 'serverfault.com',
-                    'mathoverflow.net', 'stackapps.com', 'stackexchange.com', 'sstatic.net']
+                    'mathoverflow.net', 'stackapps.com', 'stackexchange.com', 'sstatic.net',
+                    'i.stack.imgur.com'] # Frequently catching FP
 
 
 # Flee before the ugly URL validator regex!
