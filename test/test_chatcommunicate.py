@@ -63,7 +63,7 @@ def test_init(room_config, client_constructor, thread):
     try:
         chatcommunicate.init("shoutouts", "to simpleflips")
     except Exception as e:
-        assert str(e) == "Failed to log into stackexchange.com"
+        assert str(e) == "Failed to log into " + next(chatcommunicate._clients.keys())
         threw_exception = True
 
     assert threw_exception
