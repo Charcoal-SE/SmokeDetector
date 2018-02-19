@@ -2431,3 +2431,4 @@
 1518974486	iBug	blood\W?sugar\W?shield
 1519018600	iBug	pokerolb\.com
 1519019966	iBug	juniviveserum\.fr
+1519021162	iBug	crumbles\.co
