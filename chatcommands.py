@@ -830,7 +830,7 @@ def whoami(msg):
 
 # --- Notification functions --- #
 # noinspection PyIncorrectDocstring
-@command(int, whole_msg=True)
+@command(int, whole_msg=True, aliases=["allnotifications", "allnoti"])
 def allnotificationsites(msg, room_id):
     """
     Returns a string stating what sites a user will be notified about
