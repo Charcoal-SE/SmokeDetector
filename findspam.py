@@ -42,7 +42,7 @@ SE_SITES_RE = r'(?:{sites})'.format(
         r'(?:[a-z]+\.)*stackexchange\.com']))
 SE_SITES_DOMAINS = ['stackoverflow.com', 'askubuntu.com', 'superuser.com', 'serverfault.com',
                     'mathoverflow.net', 'stackapps.com', 'stackexchange.com', 'sstatic.net',
-                    'i.stack.imgur.com'] # Frequently catching FP
+                    'i.stack.imgur.com']  # Frequently catching FP
 
 
 # Flee before the ugly URL validator regex!
