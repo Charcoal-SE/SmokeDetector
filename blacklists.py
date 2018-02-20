@@ -7,6 +7,7 @@ from helpers import log
 
 def load_blacklists():
     GlobalVars.bad_keywords = Blacklist(Blacklist.KEYWORDS).parse()
+    GlobalVars.so_bad_keywords = Blacklist(Blacklist.SO_KEYWORDS).parse()
     GlobalVars.blacklisted_websites = Blacklist(Blacklist.WEBSITES).parse()
     GlobalVars.blacklisted_usernames = Blacklist(Blacklist.USERNAMES).parse()
     GlobalVars.watched_keywords = Blacklist(Blacklist.WATCHED_KEYWORDS).parse()
@@ -110,6 +111,7 @@ class TSVDictParser(BlacklistParser):
 
 class Blacklist:
     KEYWORDS = ('bad_keywords.txt', BasicListParser)
+    SO_KEYWORDS = ('so_bad_keywords.txt', BasicListParser)
     WEBSITES = ('blacklisted_websites.txt', BasicListParser)
     USERNAMES = ('blacklisted_usernames.txt', BasicListParser)
     WATCHED_KEYWORDS = ('watched_keywords.txt', TSVDictParser)

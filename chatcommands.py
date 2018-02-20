@@ -194,29 +194,29 @@ def blacklist(_):
     Returns a string which explains the usage of the new blacklist commands.
     :return: A string
     """
-    raise CmdException("The !!/blacklist command has been deprecated. "
-                       "Please use !!/blacklist-website, !!/blacklist-username,"
-                       "!!/blacklist-keyword, or perhaps !!/watch-keyword. "
-                       "Remember to escape dots in URLs using \\.")
+    raise CmdException("The `!!/blacklist` command has been deprecated. "
+                       "Please use `!!/blacklist-website`, `!!/blacklist-username`, "
+                       "`!!/blacklist-keyword`, or perhaps `!!/watch`. "
+                       "Remember to escape dots in URLs using `\\.`, "
+                       "and spaces and punctuations with `\\W?`.")
 
 
-def check_blacklist(string_to_test, is_username, is_watchlist):
+def check_blacklist(string_to_test, username=False, watch=False, site=""):
     # Test the string and provide a warning message if it is already caught.
-    if is_username:
-        question = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
-                                      'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
-        answer = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
-                                    'owner': {'display_name': string_to_test, 'reputation': 1, 'link': ''},
-                                    'site': "", 'IsAnswer': True, 'score': 0})
+    sample_post = {'title': 'Valid title', 'body': 'Valid body',
+                   'owner': {'display_name': 'Valid username', 'reputation': 1, 'link': ''},
+                   'site': site, 'IsAnswer': False, 'score': 0}
 
+    if username:
+        sample_post['owner']['display_name'] = string_to_test
     else:
-        question = Post(api_response={'title': 'Valid title', 'body': string_to_test,
-                                      'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
-        answer = Post(api_response={'title': 'Valid title', 'body': string_to_test,
-                                    'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                    'site': "", 'IsAnswer': True, 'score': 0})
+        sample_post['body'] = string_to_test
+
+    sample_post['IsAnswer'] = False
+    question = Post(api_response=sample_post)
+
+    sample_post['IsAnswer'] = True
+    answer = Post(api_response=sample_post)
 
     question_reasons, _ = FindSpam.test_post(question)
     answer_reasons, _ = FindSpam.test_post(answer)
@@ -225,7 +225,7 @@ def check_blacklist(string_to_test, is_username, is_watchlist):
     reasons = list(set(question_reasons) | set(answer_reasons))
 
     # Filter out watchlist results
-    if not is_watchlist:
+    if not watch:
         reasons = list(filter(lambda reason: "potentially bad keyword" not in reason, reasons))
 
     return reasons
@@ -265,8 +265,9 @@ def do_blacklist(pattern, blacklist_type, msg, force=False):
 
     if not force:
         reasons = check_blacklist(pattern.replace("\\W", " ").replace("\\.", "."),
-                                  blacklist_type == "username",
-                                  blacklist_type == "watch_keyword")
+                                  username=(blacklist_type == "username"),
+                                  watch=(blacklist_type == "watch_keyword"),
+                                  site=("stackoverflow.com" if blacklist_type == "sokeyword" else ""))
 
         if reasons:
             raise CmdException("That pattern looks like it's already caught by " + format_blacklist_reasons(reasons) +
@@ -285,9 +286,11 @@ def do_blacklist(pattern, blacklist_type, msg, force=False):
 
 # noinspection PyIncorrectDocstring
 @command(str, whole_msg=True, privileged=True, give_name=True, aliases=["blacklist-keyword",
+                                                                        "blacklist-sokeyword",
                                                                         "blacklist-website",
                                                                         "blacklist-username",
                                                                         "blacklist-keyword-force",
+                                                                        "blacklist-sokeyword-force",
                                                                         "blacklist-website-force",
                                                                         "blacklist-username-force"])
 def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
@@ -376,7 +379,7 @@ def brownie():
     return "Brown!"
 
 
-COFFEES = ['Espresso', 'Macchiato', 'Ristretto', 'Americano', 'Latte', 'Cappuccino', 'Mocha', 'Affogato']
+COFFEES = ['Espresso', 'Macchiato', 'Ristretto', 'Americano', 'Latte', 'Cappuccino', 'Mocha', 'Affogato', 'jQuery']
 
 
 # noinspection PyIncorrectDocstring
@@ -404,7 +407,7 @@ def lick():
     return "*licks ice cream cone*"
 
 
-TEAS = ['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint', 'jasmine', 'passionfruit']
+TEAS = ['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint', 'jasmine', 'passionfruit', 'oolong']
 
 
 # noinspection PyIncorrectDocstring
@@ -741,45 +744,47 @@ def standby(msg, location_search):
 
 
 # noinspection PyIncorrectDocstring
-@command(str, aliases=["test-q", "test-a", "test-u", "test-t"], give_name=True)
+@command(str, aliases=["test-q", "test-a", "test-u", "test-t", "test-so",
+                       "test-q-so", "test-a-so", "test-u-so", "test-t-so"], give_name=True)
 def test(content, alias_used="test"):
     """
-    Test an answer to determine if it'd be automatically reported
+    Test a string to determine if it'd be automatically reported
     :param content:
     :return: A string
     """
     result = "> "
 
-    if alias_used == "test-q":
-        kind = " question."
-        fakepost = Post(api_response={'title': 'Valid title', 'body': content,
-                                      'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
-    elif alias_used == "test-a":
-        kind = "n answer."
-        fakepost = Post(api_response={'title': 'Valid title', 'body': content,
-                                      'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': True, 'score': 0})
-    elif alias_used == "test-u":
-        kind = " username."
-        fakepost = Post(api_response={'title': 'Valid title', 'body': "Valid question body",
-                                      'owner': {'display_name': content, 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
-    elif alias_used == "test-t":
-        kind = " title."
-        fakepost = Post(api_response={'title': content, 'body': "Valid question body",
-                                      'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
-    else:
-        kind = " post, title or username."
-        fakepost = Post(api_response={'title': content, 'body': content,
-                                      'owner': {'display_name': content, 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
+    sample_post = {'title': 'Valid title', 'body': 'Valid question body',
+                   'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
+                   'site': "", 'IsAnswer': False, 'score': 0}
 
-    reasons, why_response = FindSpam.test_post(fakepost)
+    if alias_used.endswith('-so'):
+        alias_used = alias_used[:-3]
+        sample_post['site'] = 'stackoverflow.com'
+
+    if alias_used == "test-q":
+        kind = "a question"
+        sample_post['body'] = content
+        sample_post['IsAnswer'] = False
+    elif alias_used == "test-a":
+        kind = "an answer"
+        sample_post['body'] = content
+        sample_post['IsAnswer'] = True
+    elif alias_used == "test-u":
+        kind = "a username"
+        sample_post['owner']['display_name'] = content
+    elif alias_used == "test-t":
+        kind = "a title"
+        sample_post['title'] = content
+        sample_post['IsAnswer'] = False
+    else:
+        kind = "a post, title or username"
+        sample_post['title'] = sample_post['body'] = sample_post['owner']['display_name'] = content
+
+    reasons, why_response = FindSpam.test_post(Post(api_response=sample_post))
 
     if len(reasons) == 0:
-        result += "Would not be caught as a{}".format(kind)
+        result += "Would not be caught as {}.".format(kind)
     else:
         result += ", ".join(reasons).capitalize()
 

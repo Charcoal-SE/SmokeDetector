@@ -60,6 +60,9 @@ class GitManager:
         elif blacklist == "keyword":
             blacklist_type = Blacklist.KEYWORDS
             ms_search_option = "&body_is_regex=1&body="
+        elif blacklist == "sokeyword":
+            blacklist_type = Blacklist.SO_KEYWORDS
+            ms_search_option = "&site=1&body_is_regex=1&body="
         elif blacklist == "username":
             blacklist_type = Blacklist.USERNAMES
             ms_search_option = "&username_is_regex=1&username="
