@@ -1093,7 +1093,7 @@ def report(msg, urls):
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
-@command(str, whole_msg=True, privileged=True, aliases=['test-post', 'test-p'])
+@command(str, whole_msg=True, privileged=True, aliases=['scan', 'test-p'])
 def checkpost(msg, url):  # FIXME: Currently does not support batch report
     """
     Force Smokey to scan a post even if it has no recent activity
