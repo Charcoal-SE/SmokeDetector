@@ -383,7 +383,7 @@ class Metasmoke:
             'filter': 'IOLGJFNGHKMGIHGLNMOLMMGOMKGLN',  # posts.body
             'urls': parsing.to_protocol_relative(post_url)
         }
-        response = requests.get(GlobalVars.metasmoke_host + "/api/v2.0/posts/urls", params=payload).json()
+        response = requests.get(GlobalVars.metasmoke_host + '/api/v2.0/posts/urls', params=payload).json()
         
-        return response["items"]
+        return response['items']
             
