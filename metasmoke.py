@@ -375,3 +375,15 @@ class Metasmoke:
         if GlobalVars.metasmoke_host is not None:
             requests.post(GlobalVars.metasmoke_host + "/statistics.json",
                           data=json.dumps(payload), headers=headers)
+            
+    @staticmethod
+    def get_post_bodies_from_ms(post_url):
+        payload = {
+            'key': GlobalVars.metasmoke_key,
+            'filter': 'IOLGJFNGHKMGIHGLNMOLMMGOMKGLN',  # posts.body
+            'urls': post_url
+        }
+        response = requests.get(GlobalVars.metasmoke_host + "/api/v2.0/posts/urls", params=payload).json()
+        
+        return response["items"]
+            
