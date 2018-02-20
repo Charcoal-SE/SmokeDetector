@@ -2445,3 +2445,4 @@
 1519041666	Mithrandir	buyhealthpharmacy\.com
 1519041821	doppelgreener	assignmentsonweb
 1519099543	iBug	weighteddecision\.com
+1519107666	iBug	jimtrade
