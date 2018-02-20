@@ -1106,38 +1106,31 @@ def checkpost(msg, url):  # FIXME: Currently does not support batch report
     if not crn:
         raise CmdException("You should totally drop that and try jQuery.")
 
-    output = []
-
     post_data = api_get_post(url)
-    _, reasons, computed_why = check_if_spam(title=post_data.title,
-                                             body=post_data.body,
-                                             user_name=post_data.owner_name,
-                                             user_url=post_data.owner_url,
-                                             post_site=post_data.site,
-                                             post_id=post_data.post_id,
-                                             is_answer=post_data.post_type == "answer",
-                                             body_is_summary=False,
-                                             owner_rep=post_data.owner_rep,
-                                             post_score=post_data.score)
 
-    handle_spam(title=post_data.title,
-                body=post_data.body,
-                poster=post_data.owner_name,
-                site=post_data.site,
-                post_url=post_data.post_url,
-                poster_url=post_data.owner_url,
-                post_id=post_data.post_id,
-                reasons=reasons,
-                is_answer=post_data.post_type == "answer",
-                owner_rep=post_data.owner_rep,
-                post_score=post_data.score,
-                up_vote_count=post_data.up_vote_count,
-                down_vote_count=post_data.down_vote_count,
-                question_id=post_data.question_id)
+    if post_data is None:
+        raise CmdException("That does not look like a valid post URL")
 
-    if len(output) > 0:
-        return os.linesep.join(output)
-    return None
+    if post_data is False:
+        raise CmdException("Cannot find data for this post in the API. "
+                           "It may have already been deleted.")
+
+    is_spam, reasons, why = check_if_spam(title=post_data.title,
+                                          body=post_data.body,
+                                          user_name=post_data.owner_name,
+                                          user_url=post_data.owner_url,
+                                          post_site=post_data.site,
+                                          post_id=post_data.post_id,
+                                          is_answer=post_data.post_type == "answer",
+                                          body_is_summary=False,
+                                          owner_rep=post_data.owner_rep,
+                                          post_score=post_data.score)
+    t = Thread(name="bodyfetcher post enqueing",
+               target=GlobalVars.bodyfetcher.add_to_queue,
+               args=(a, True if is_spam else None))
+    t.start()
+
+    return "Post added to scanning queue."
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
