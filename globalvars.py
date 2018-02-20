@@ -68,7 +68,8 @@ class GlobalVars:
         "potentially bad keyword in answer",
         "potentially bad keyword in body",
         "potentially bad keyword in title",
-        "potentially bad keyword in username"}
+        "potentially bad keyword in username",
+        "potentially bad username"}
 
     parser = HTMLParser()
     parser.unescape = unescape

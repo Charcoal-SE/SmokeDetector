@@ -1190,7 +1190,12 @@ class FindSpam:
         # Link text points to a different domain than the href
         {'method': malicious_link, 'all': True, 'sites': [], 'reason': 'misleading link', 'title': False,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False,
-         'max_rep': 10, 'max_score': 1}
+         'max_rep': 10, 'max_score': 1},
+
+        # Donald Trump username
+        {'regex': r"don(ald)?(\W*j)?\W*trump", 'all': True, 'sites': [],
+         'reason': "potentially bad username", 'title': False, 'body': False, 'username': True,
+         'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0}
     ]
 
     @staticmethod
