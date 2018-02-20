@@ -2446,3 +2446,4 @@
 1519107666	iBug	jimtrade
 1519109962	iBug	healthline\.com
 1519125085	iBug	male\W?liberator
+1519129099	doppelgreener	moon(bit|b|lite|doge|dash)(co\.in|\.co|\.ch)
