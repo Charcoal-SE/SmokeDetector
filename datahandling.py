@@ -439,8 +439,9 @@ def can_report_now(user_id, chat_host):
 
 
 def has_community_bumped_post(post_url, post_content):
-    ms_posts = Metasmoke.get_post_bodies_from_ms(post_url)
-    for post in ms_posts:
-        if post['body'] == post_content:
-            return True
+    if GlobalVars.metasmoke_key is not None and GlobalVars.metasmoke_host is not None:
+        ms_posts = Metasmoke.get_post_bodies_from_ms(post_url)
+        for post in ms_posts:
+            if post['body'] == post_content:
+                return True
     return False
