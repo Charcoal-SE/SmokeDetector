@@ -2449,3 +2449,4 @@
 1519129099	doppelgreener	moon(bit|b|lite|doge|dash)(co\.in|\.co|\.ch)
 1519129122	doppelgreener	hashflare\.io
 1519129128	doppelgreener	makeculous\.com
+1519189513	tripleee	barbarian\W?xl
