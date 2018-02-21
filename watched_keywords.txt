@@ -353,7 +353,6 @@
 1499668899	tripleee	rewritertools\.com
 1499669105	Glorfindel	drmare\.com
 1499669662	Glorfindel	alanddesign\.com
-1499676066	Glorfindel	rhubcom\.com
 1499682957	tripleee	dumbu\.one
 1499685523	tripleee	createspace\.com
 1499694027	Mithrandir	mancharter\.com
