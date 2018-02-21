@@ -1127,10 +1127,11 @@ def checkpost(msg, url):  # FIXME: Currently does not support batch report
                                           post_score=post_data.score)
     t = Thread(name="bodyfetcher post enqueing",
                target=GlobalVars.bodyfetcher.add_to_queue,
-               args=(a, True if is_spam else None))
+               args=(a, True))  # This is manually triggered so always check posts
     t.start()
 
-    return "Post added to scanning queue."
+    # Temporarily just use the URL provided from the command. That should change someday
+    return "Post [{}]({}) added to scanning queue.".format(post_data.title, url)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
