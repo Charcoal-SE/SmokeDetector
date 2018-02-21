@@ -1150,4 +1150,4 @@ primal\W?alpha\W?beast
 barbarian\W?xl
 max\W?gain\W?e?xtreme
 male\W?liberator
-james\W?rueben
+james\W?rueben\d*
