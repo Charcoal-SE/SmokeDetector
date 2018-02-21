@@ -1115,23 +1115,15 @@ def checkpost(msg, url):  # FIXME: Currently does not support batch report
         raise CmdException("Cannot find data for this post in the API. "
                            "It may have already been deleted.")
 
-    is_spam, reasons, why = check_if_spam(title=post_data.title,
-                                          body=post_data.body,
-                                          user_name=post_data.owner_name,
-                                          user_url=post_data.owner_url,
-                                          post_site=post_data.site,
-                                          post_id=post_data.post_id,
-                                          is_answer=post_data.post_type == "answer",
-                                          body_is_summary=False,
-                                          owner_rep=post_data.owner_rep,
-                                          post_score=post_data.score)
-    t = Thread(name="bodyfetcher post enqueing",
-               target=GlobalVars.bodyfetcher.add_to_queue,
-               args=(a, True))  # This is manually triggered so always check posts
-    t.start()
+    post = Post(api_response=post_data.as_dict())
+    is_spam, reasons, why = check_if_spam(post)
+
+    if is_spam:
+        spamhandling.handle_spam(post=post, reasons=reasons, why=why + ["Manually triggered scan"])
+        return None
 
     # Temporarily just use the URL provided from the command. That should change someday
-    return "Post [{}]({}) added to scanning queue.".format(post_data.title, url)
+    return "Post [{}]({}) does not look like spam.".format(post_data.title, url)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
