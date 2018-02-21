@@ -437,6 +437,7 @@ def can_report_now(user_id, chat_host):
 
 # method to check if a post has been bumped by Community
 
+
 def has_community_bumped_post(post_url, post_content):
     ms_posts = Metasmoke.get_post_bodies_from_ms(post_url)
     for post in ms_posts:
