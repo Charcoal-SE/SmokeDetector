@@ -2453,3 +2453,4 @@
 1519199481	iBug	musculoskeletal\W?pain
 1519205754	tripleee	electricista\.barcelona
 1519205869	tripleee	holidaytriptour\.com
+1519207327	iBug	ftv\W?24k\W?golden\W?hero
