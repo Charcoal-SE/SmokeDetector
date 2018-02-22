@@ -475,12 +475,12 @@ def block(msg, block_time, room_id):
     :return: None
     """
     time_to_block = block_time if 0 < block_time < 14400 else 900
-    block_room(room_id, msg._client.host, time.time() + time_to_block)
 
-    which_room = "globally" if room_id is None else "in room " + room_id
+    which_room = "globally" if room_id is None else "in room " + str(room_id)
     block_message = "Reports blocked for {} seconds {}.".format(time_to_block, which_room)
+    tell_rooms(block_message, (msg.room.id, "debug", "metatavern"), ())
 
-    tell_rooms(block_message, ("debug", "metatavern"), ())
+    block_room(room_id, msg._client.host, time.time() + time_to_block)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -494,10 +494,10 @@ def unblock(msg, room_id):
     """
     block_room(room_id, msg._client.host, -1)
 
-    which_room = "globally" if room_id is None else "in room " + room_id
+    which_room = "globally" if room_id is None else "in room " + str(room_id)
     unblock_message = "Reports unblocked {}.".format(which_room)
 
-    tell_rooms(unblock_message, ("debug", "metatavern"), ())
+    tell_rooms(unblock_message, (msg.room.id, "debug", "metatavern"), ())
 
 
 # --- Administration Commands --- #
