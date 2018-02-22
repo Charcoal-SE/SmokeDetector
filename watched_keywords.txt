@@ -2456,3 +2456,4 @@
 1519217912	tripleee	bowhunting-hungary\.com
 1519276030	iBug	zylexitrim
 1519330064	thesecretmaster	wampinfotech\.com
+1519335130	WELZ	offers\W?for\W?all?\.blogspot\.com
