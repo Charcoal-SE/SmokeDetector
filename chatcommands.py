@@ -847,8 +847,8 @@ def allnotificationsites(msg, room_id):
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
-@command(int, str, whole_msg=True)
-def notify(msg, room_id, se_site):
+@command(int, str, bool, whole_msg=True, arity=(2, 3))
+def notify(msg, room_id, se_site, always_ping):
     """
     Subscribe a user to events on a site in a single room
     :param msg:
@@ -857,7 +857,8 @@ def notify(msg, room_id, se_site):
     :return: A string
     """
     # TODO: Add check whether smokey reports in that room
-    response, full_site = add_to_notification_list(msg.owner.id, msg._client.host, room_id, se_site)
+    response, full_site = add_to_notification_list(msg.owner.id, msg._client.host, room_id, se_site,
+                                                   always_ping=(always_ping or True))
 
     if response == 0:
         return "You'll now get pings from me if I report a post on `{site}`, in room "\
@@ -868,6 +869,19 @@ def notify(msg, room_id, se_site):
         raise CmdException("The given SE site does not exist.")
     else:
         raise CmdException("Unrecognized code returned when adding notification.")
+
+
+# temp command
+@command(privileged=True)
+def migrate_notifications():
+    for i, notification in enumerate(GlobalVars.notifications):
+        if len(notification) == 4:
+            GlobalVars.notifications[i] = notification + (True,)
+
+    with open("notifications.p", "wb") as f:
+        pickle.dump(GlobalVars.notifications, f, protocol=pickle.HIGHEST_PROTOCOL)
+
+    return "shoutouts to simpleflips"
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints

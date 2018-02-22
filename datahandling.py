@@ -15,6 +15,11 @@ from globalvars import GlobalVars
 from blacklists import load_blacklists
 
 
+class Any:
+    def __eq__(self, _):
+        return True
+
+
 def _load_pickle(path, encoding='utf-8'):
     with open(path, mode="rb") as f:
         try:
@@ -330,15 +335,15 @@ def check_site_and_get_full_name(site):
 # (that is, being pinged when Smokey reports something on a specific site)
 
 # noinspection PyMissingTypeHints
-def add_to_notification_list(user_id, chat_site, room_id, se_site):
+def add_to_notification_list(user_id, chat_site, room_id, se_site, always_ping=True):
     if se_site[0] != "/":
         exists, se_site = check_site_and_get_full_name(se_site)
         if not exists:
             return -2, None
-    notification_tuple = (int(user_id), chat_site, int(room_id), se_site)
+    notification_tuple = (int(user_id), chat_site, int(room_id), se_site, Any())
     if notification_tuple in GlobalVars.notifications:
         return -1, None
-    GlobalVars.notifications.append(notification_tuple)
+    GlobalVars.notifications.append((int(user_id), chat_site, int(room_id), se_site, always_ping))
     with open("notifications.p", "wb") as f:
         pickle.dump(GlobalVars.notifications, f, protocol=pickle.HIGHEST_PROTOCOL)
     return 0, se_site
@@ -350,7 +355,7 @@ def remove_from_notification_list(user_id, chat_site, room_id, se_site):
         exists, se_site = check_site_and_get_full_name(se_site)
         if not exists:
             return False
-    notification_tuple = (int(user_id), chat_site, int(room_id), se_site)
+    notification_tuple = (int(user_id), chat_site, int(room_id), se_site, Any())
     if notification_tuple not in GlobalVars.notifications:
         return False
     GlobalVars.notifications.remove(notification_tuple)
@@ -364,7 +369,7 @@ def will_i_be_notified(user_id, chat_site, room_id, se_site):
     exists, site = check_site_and_get_full_name(se_site)
     if not exists:
         return False
-    notification_tuple = (int(user_id), chat_site, int(room_id), site)
+    notification_tuple = (int(user_id), chat_site, int(room_id), site, Any())
     return notification_tuple in GlobalVars.notifications
 
 
@@ -393,12 +398,24 @@ def get_user_ids_on_notification_list(chat_site, room_id, se_site):
     uids = []
     for notification in GlobalVars.notifications:
         if notification[1] == chat_site and notification[2] == int(room_id) and notification[3] == se_site:
-            uids.append(notification[0])
+            uids.append((notification[0], notification[4]))
     return uids
 
 
 def get_user_names_on_notification_list(chat_site, room_id, se_site, client):
-    return [client.get_user(i).name for i in get_user_ids_on_notification_list(chat_site, room_id, se_site)]
+    names = []
+    current_users = client._br.get_current_users_in_room(room_id)
+
+    for i, always in get_user_ids_on_notification_list(chat_site, room_id, se_site):
+        if always:
+            names.append(client.get_user(i).name)
+        else:
+            try:
+                names.append(current_users[current_users.index((i, Any()))][1])
+            except:
+                pass
+
+    return names
 
 
 # noinspection PyMissingTypeHints
