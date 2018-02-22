@@ -857,9 +857,10 @@ def notify(msg, room_id, se_site, always_ping):
     :param se_site:
     :return: A string
     """
+    print(always_ping)
     # TODO: Add check whether smokey reports in that room
     response, full_site = add_to_notification_list(msg.owner.id, msg._client.host, room_id, se_site,
-                                                   always_ping=(always_ping or True))
+                                                   always_ping=(always_ping if always_ping is not None else True))
 
     if response == 0:
         return "You'll now get pings from me if I report a post on `{site}`, in room "\
