@@ -22,6 +22,7 @@ import requests
 import os
 import time
 from html import unescape
+from ast import literal_eval
 # noinspection PyCompatibility
 import regex
 from helpers import only_blacklists_changed
@@ -847,7 +848,7 @@ def allnotificationsites(msg, room_id):
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
-@command(int, str, bool, whole_msg=True, arity=(2, 3))
+@command(int, str, literal_eval, whole_msg=True, arity=(2, 3))
 def notify(msg, room_id, se_site, always_ping):
     """
     Subscribe a user to events on a site in a single room
