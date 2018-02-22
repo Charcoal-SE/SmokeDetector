@@ -476,9 +476,9 @@ def block(msg, block_time, room_id):
     """
     time_to_block = block_time if 0 < block_time < 14400 else 900
 
-    which_room = "globally" if room_id is None else "in room " + str(room_id)
-    block_message = "Reports blocked for {} seconds {}.".format(time_to_block, which_room)
-    tell_rooms(block_message, (msg.room.id, "debug", "metatavern"), ())
+    which_room = "globally" if room_id is None else "in room {} on {}".format(room_id, msg._client.host)
+    block_message = "Reports blocked for {} second(s) {}.".format(time_to_block, which_room)
+    tell_rooms(block_message, ((msg._client.host, msg.room.id), "debug", "metatavern"), ())
 
     block_room(room_id, msg._client.host, time.time() + time_to_block)
 
@@ -494,10 +494,10 @@ def unblock(msg, room_id):
     """
     block_room(room_id, msg._client.host, -1)
 
-    which_room = "globally" if room_id is None else "in room " + str(room_id)
+    which_room = "globally" if room_id is None else "in room {} on {}".format(room_id, msg._client.host)
     unblock_message = "Reports unblocked {}.".format(which_room)
 
-    tell_rooms(unblock_message, (msg.room.id, "debug", "metatavern"), ())
+    tell_rooms(unblock_message, ((msg._client.host, msg.room.id), "debug", "metatavern"), ())
 
 
 # --- Administration Commands --- #
@@ -595,7 +595,7 @@ def reboot(msg):
     :param msg:
     :return: None
     """
-    tell_rooms("Goodbye, cruel world", ("debug", msg.room.id), ())
+    tell_rooms("Goodbye, cruel world", ("debug", (msg._client.host, msg.room.id)), ())
     time.sleep(3)
     os._exit(5)
 
@@ -673,7 +673,7 @@ def stappit(msg, location_search):
     :return: None
     """
     if location_search is None or location_search.lower() in GlobalVars.location.lower():
-        tell_rooms("Goodbye, cruel world", ("debug", msg.room.id), ())
+        tell_rooms("Goodbye, cruel world", ((msg._client.host, msg.room.id)), ())
 
         time.sleep(3)
         os._exit(6)
@@ -734,7 +734,7 @@ def standby(msg, location_search):
     """
     if location_search.lower() in GlobalVars.location.lower():
         tell_rooms("{location} is switching to standby".format(location=GlobalVars.location),
-                   ("debug", msg.room.id), (), notify_site="/standby")
+                   ("debug", (msg._client.host, msg.room.id)), (), notify_site="/standby")
 
         time.sleep(3)
         os._exit(7)
