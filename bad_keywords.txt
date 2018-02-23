@@ -1153,3 +1153,4 @@ male\W?liberator
 james\W?rueben\d*
 tryvix
 8\W?ball\W?pool\W?hack
+'\W?arginine
