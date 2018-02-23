@@ -1148,10 +1148,8 @@ density\W?vaso
 ph375
 primal\W?alpha\W?beast
 barbarian\W?xl
-max\W?gain\W?e?xtreme
 male\W?liberator
 james\W?rueben\d*
 tryvix
 8\W?ball\W?pool\W?hack
-'\W?arginine
 l\W?arginine
