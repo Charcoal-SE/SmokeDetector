@@ -13,7 +13,7 @@ from datahandling import *
 from blacklists import load_blacklists
 from metasmoke import Metasmoke
 from parsing import *
-from spamhandling import handle_spam
+from spamhandling import check_if_spam, handle_spam
 from gitmanager import GitManager
 from tasks import Tasks
 import threading
@@ -659,7 +659,7 @@ def inqueue(url):
     if site in GlobalVars.bodyfetcher.queue:
         for i, id in enumerate(GlobalVars.bodyfetcher.queue[site].keys()):
             if id == post_id:
-                return "#" + str(i) + " in queue."
+                return "#" + str(i + 1) + " in queue."
 
     return "Not in queue."
 
@@ -1105,6 +1105,50 @@ def report(msg, urls):
 
     if len(output) > 0:
         return os.linesep.join(output)
+
+
+# noinspection PyIncorrectDocstring,PyUnusedLocal
+@command(str, whole_msg=True, privileged=True, aliases=['scan', 'test-p'])
+def checkpost(msg, url):  # FIXME: Currently does not support batch report
+    """
+    Force Smokey to scan a post even if it has no recent activity
+    :param msg:
+    :param url:
+    :return str:
+    """
+    crn, wait = can_report_now(msg.owner.id, msg._client.host)
+    if not crn:
+        raise CmdException("You can execute the !!/checkpost command again in {} seconds. "
+                           "To avoid one user sending lots of reports in a few commands and "
+                           "slowing SmokeDetector down due to rate-limiting, you have to "
+                           "wait 30 seconds after you've reported multiple posts in "
+                           "one go.".format(wait))
+
+    post_data = api_get_post(url)
+
+    if post_data is None:
+        raise CmdException("That does not look like a valid post URL.")
+
+    if post_data is False:
+        raise CmdException("Cannot find data for this post in the API. "
+                           "It may have already been deleted.")
+
+    post = Post(api_response=post_data.as_dict)
+
+    if fetch_post_id_and_site_from_url(url)[2] == "answer":
+        parent = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
+
+        post._is_answer = True
+        post._parent = Post(api_response=parent.as_dict)
+
+    is_spam, reasons, why = check_if_spam(post)
+
+    if is_spam:
+        handle_spam(post=post, reasons=reasons, why=why + "\nManually triggered scan")
+        return None
+
+    # Temporarily just use the URL provided from the command. That should change someday
+    return "Post [{}]({}) does not look like spam.".format(post_data.title, url)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal

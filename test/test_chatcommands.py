@@ -8,6 +8,7 @@ import datetime
 import os
 import pytest
 import regex
+import types
 
 from fake import Fake
 from unittest.mock import patch
@@ -483,3 +484,20 @@ def test_notifications():
     finally:
         # Cleanup
         os.remove("notifications.p")
+
+
+def test_inqueue():
+    site = Fake({"keys": (lambda: ['1'])})
+
+    class FakeQueue:
+        def __getitem__(self, _):
+            return site
+
+        def __contains__(self, name):
+            return name == "codegolf.stackexchange.com"
+
+    chatcommands.GlobalVars.bodyfetcher = Fake({"queue": FakeQueue()})
+
+    assert chatcommands.inqueue("https://codegolf.stackexchange.com/a/1") == "Can't check for answers."
+    assert chatcommands.inqueue("https://stackoverflow.com/q/1") == "Not in queue."
+    assert chatcommands.inqueue("https://codegolf.stackexchange.com/q/1") == "#1 in queue."
