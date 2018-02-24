@@ -1121,13 +1121,10 @@ def checkpost(msg, url):  # FIXME: Currently does not support batch report
     post = Post(api_response=post_data.as_dict)
 
     if fetch_post_id_and_site_from_url(url)[2] == "answer":
-        fake_parent = Post(api_response={})
-        fake_parent._post_id = post_data.question_id
-        fake_parent._title = post_data.title
-        fake_parent._answers = []
+        parent = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
 
         post._is_answer = True
-        post._parent = fake_parent
+        post._parent = Post(api_response=parent.as_dict)
 
     is_spam, reasons, why = check_if_spam(post)
 
