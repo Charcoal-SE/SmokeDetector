@@ -658,7 +658,7 @@ def inqueue(url):
     if site in GlobalVars.bodyfetcher.queue:
         for i, id in enumerate(GlobalVars.bodyfetcher.queue[site].keys()):
             if id == post_id:
-                return "#" + str(i) + " in queue."
+                return "#" + str(i + 1) + " in queue."
 
     return "Not in queue."
 
