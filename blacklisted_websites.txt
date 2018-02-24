@@ -743,7 +743,7 @@ bookmywash\.co
 christmasgiftideaz\.com
 yourdriverishere\.com
 essaypeer\.com
-luminati\.io
+luminati.io\S*affiliate=
 themobileupdates\.com
 eduncle\.com
 endtest\.io
