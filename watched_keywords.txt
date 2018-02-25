@@ -2463,3 +2463,4 @@
 1519474639	tripleee	nitronemax
 1519477134	tripleee	streamhd1080\.ga
 1519545240	paper1111	keralalotteriesresults\.in
+1519546829	iBug	fungus\W?destroyer
