@@ -1201,7 +1201,6 @@
 1508152302	tripleee	fieldengineer\.com
 1508153653	tripleee	restaurantsnearme-opennow\.com
 1508157034	tripleee	amritabodyspa\.com
-1508158758	tripleee	mayoralderm\.com
 1508158997	tripleee	hybapps\.com
 1508188478	bwDraco	bovada\.lv
 1508218354	tripleee	mireage\W?imperial
