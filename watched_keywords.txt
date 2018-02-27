@@ -394,7 +394,6 @@
 1500008142	tripleee	uphindikhabar\.in
 1500016574	Glorfindel	lifespro\.com
 1500018985	Glorfindel	quickencontactservice\.com
-1500020116	tripleee	acaiultralean-france\.com
 1500025970	tripleee	ieltscert\.77
 1500027126	tripleee	saptraininginstitutenoida\.in
 1500030766	Glorfindel	nomorefakereviews\.com
