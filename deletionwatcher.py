@@ -14,6 +14,7 @@ import chatcommunicate
 import metasmoke
 from globalvars import GlobalVars
 import datahandling
+from helpers import log
 from parsing import fetch_post_id_and_site_from_url
 from tasks import Tasks
 
@@ -67,6 +68,7 @@ class DeletionWatcher:
         post_id, post_site, post_type = fetch_post_id_and_site_from_url(post_url)
 
         if post_site not in GlobalVars.site_id_dict:
+            log("warning", "unknown site {} when subscribing to {}".format(post_site, post_url)
             return
 
         if post_type == "answer":
