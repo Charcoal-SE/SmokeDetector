@@ -2485,3 +2485,4 @@
 1519786348	WELZ	fix\W?card\W?tech
 1519772280	WELZ	bubblyhub\.in
 1519796009	tripleee	3peartechnologies\.com
+1519802723	tripleee	asetsafety\.ac\.in
