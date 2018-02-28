@@ -37,6 +37,7 @@ groups:
       - teward
       - tripleee
       - Undo1
+      - WELZ-gh
     author_approval:
       ignored: true
     reject_value: -1
