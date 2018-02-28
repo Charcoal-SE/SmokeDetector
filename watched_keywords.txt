@@ -2486,3 +2486,4 @@
 1519772280	WELZ	bubblyhub\.in
 1519796009	tripleee	3peartechnologies\.com
 1519802723	tripleee	asetsafety\.ac\.in
+1519806308	doppelgreener	softsolution\.al
