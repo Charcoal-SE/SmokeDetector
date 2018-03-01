@@ -1615,7 +1615,6 @@
 1511250098	tripleee	swertresresultz\.com
 1511250257	tripleee	probulus
 1511253631	tripleee	whirlpool\.net\.au
-1511254452	A J	techaveranoida\.in
 1511255662	tripleee	luxxia
 1511255811	tripleee	(?:1\W*)?844\W*777\W*1902
 1511260061	Mithrandir	spartagenxtfacts\.com
