@@ -645,7 +645,6 @@ perlelux
 muira\W?puama
 maca\W?root
 wingsio
-mockplus
 la\W?mer\W?timeless
 vtrex
 pro\W?factor\W?t\W?2000
