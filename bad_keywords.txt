@@ -1159,3 +1159,4 @@ bellarina\W?cream
 elite\W?biotics
 focal\W?point\W?iq
 casino\W?(?:\w{0,8}\W?)?online
+up\W?a\W?cup
