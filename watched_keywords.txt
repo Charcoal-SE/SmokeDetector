@@ -2436,7 +2436,6 @@
 1519107666	iBug	jimtrade
 1519109962	iBug	healthline\.com
 1519129099	doppelgreener	moon(bit|b|lite|doge|dash)(co\.in|\.co|\.ch)
-1519129122	doppelgreener	hashflare\.io
 1519129128	doppelgreener	makeculous\.com
 1519190868	iBug	hydrabelle
 1519195226	tripleee	french-fries-machine\.com
