@@ -2518,3 +2518,4 @@
 1520119560	K.Dᴀᴠɪs	(?:1\W*)?512\W*605\W*1256
 1520161426	Glorfindel	alternativoj\.com
 1520163179	Glorfindel	ca-pub-6263657833493461
+1520170610	iBug	tomsolut\.de
