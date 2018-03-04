@@ -6,7 +6,6 @@ stackexchange.com:
       - debug
       - all
       - experimental
-      - site-no-bioinformatics.stackexchange.com
 
     privileges:
       - 117490   # Normal Human
@@ -213,7 +212,6 @@ meta.stackexchange.com:
       - metatavern
       - delay
       - site-no-stackoverflow.com
-      - site-no-bioinformatics.stackexchange.com
       - no-all-caps body
       - no-all-caps answer
       - no-repeating characters in body
