@@ -1099,9 +1099,9 @@ def report(msg, urls):
         scan_spam, scan_reasons, scan_why = check_if_spam(post)  # Add reasons
         if scan_spam:
             why_append = ', '.join(scan_reasons)
-            why_append = ''.join("This post would also have been caught for: ",
-                                 why_append[0].upper() + why_append[1:],
-                                 '\n' + scan_why)
+            why_append = ''.join(["This post would also have been caught for: ",
+                                  why_append[0].upper() + why_append[1:],
+                                  '\n' + scan_why])
         else:
             why_append = "This post would not have been caught otherwise."
 
