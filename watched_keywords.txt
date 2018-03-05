@@ -2526,3 +2526,4 @@
 1520227812	K.Dᴀᴠɪs	sweatslimbelt\.co\.in
 1520232914	Glorfindel	dinhat\.com
 1520236051	Glorfindel	srilankatrips\.com
+1520241827	K.Dᴀᴠɪs	(?:1\W*)?852\W*6446\W*7029
