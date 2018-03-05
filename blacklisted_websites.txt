@@ -1764,4 +1764,4 @@ acaiultralean-france\.com
 plotmynovel\.com
 techaveranoida\.in
 freehackleaked\.com
-w\W?w\W?w\W<i>greenhouseherbalclinic\W</i>com
+w\W?w\W?w\W*greenhouseherbalclinic\W*com
