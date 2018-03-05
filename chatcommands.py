@@ -1090,15 +1090,24 @@ def report(msg, urls):
         if user is not None:
             message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
             add_blacklisted_user(user, message_url, post_data.post_url)
-
+        
         why_info = u"Post manually reported by user *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
         batch = ""
         if len(urls) > 1:
             batch = " (batch report: post {} out of {})".format(index, len(urls))
 
+        scan_spam, scan_reasons, scan_why = check_if_spam(post)  # Add reasons
+        if scan_spam:
+            why_append = ', '.join(scan_reasons)
+            why_append = "This post would also have been caught for: " +
+                         why_append[0].upper() + why_append[1:] +
+                         '\n' + scan_why
+        else:
+            why_append = "This post would not have been caught otherwise."
+
         handle_spam(post=post,
                     reasons=["Manually reported " + post_data.post_type + batch],
-                    why=why_info)
+                    why=why_info + '\n' + why_append)
 
     if 1 < len(urls) > len(output):
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
