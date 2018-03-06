@@ -2539,3 +2539,4 @@
 1520303372	bwDraco	spotify\W?music\W?converter
 1520312247	K.Dᴀᴠɪs	(?:female|girl).{0,30}? escort.{0,5}?
 1520320761	A J	obatvimaxjakarta\.com
+1520320978	K.Dᴀᴠɪs	(?:1\W*)?0813\W*9051\W*4444
