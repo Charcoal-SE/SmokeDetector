@@ -2537,4 +2537,4 @@
 1520265950	WELZ	tvideos\.net
 1520301186	bwDraco	errorsolutions\.tech
 1520303372	bwDraco	spotify\W?music\W?converter
-1520312247	K.Dᴀᴠɪs	\b(?i)(female.*?|girl.*?) (escort.*?)\b
+1520312247	K.Dᴀᴠɪs	(?:female|girl).{0,30}? escort.{0,5}?
