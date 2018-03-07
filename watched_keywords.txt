@@ -2551,3 +2551,4 @@
 1520426778	WELZ	threadsphere\.bid
 1520437008	Mithrandir	bubbly\W?hub
 1520442035	Glorfindel	techugs\.com
+1520451040	Glorfindel	thedaonline\.com
