@@ -2552,3 +2552,4 @@
 1520437008	Mithrandir	bubbly\W?hub
 1520442035	Glorfindel	techugs\.com
 1520451040	Glorfindel	thedaonline\.com
+1520465131	K.Dᴀᴠɪs	(\+1)?518\W{0,3}504\W{0,3}9376
