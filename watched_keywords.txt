@@ -2549,3 +2549,4 @@
 1520426412	tripleee	(?:7\W*)?926\W*503\W*65\W*51
 1520426606	WELZ	briskrange\.com
 1520426778	WELZ	threadsphere\.bid
+1520437008	Mithrandir	bubbly\W?hub
