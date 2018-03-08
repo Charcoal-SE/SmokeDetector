@@ -2558,3 +2558,4 @@
 1520500362	Glorfindel	storeonblockchain\.com
 1520521655	Glorfindel	taxi-net\.fr
 1520523135	Glorfindel	proweb365\.com
+1520526187	WELZ	thehtmlcoder\.com
