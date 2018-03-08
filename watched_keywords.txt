@@ -2552,3 +2552,4 @@
 1520442035	Glorfindel	techugs\.com
 1520451040	Glorfindel	thedaonline\.com
 1520465131	K.Dᴀᴠɪs	(\+1)?518\W{0,3}504\W{0,3}9376
+1520490348	K.Dᴀᴠɪs	91\W{0,3}9911\W{0,3}001197
