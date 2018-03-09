@@ -2570,3 +2570,4 @@
 1520603365	tripleee	(?:1\W*)?850\W*329\W*0522
 1520617739	Thomas Ward	kalkipurana\.com
 1520618087	ArtOfCode	kalkipuri\.com
+1520618330	Thomas Ward	kalkipur[ia](na)?\.com
