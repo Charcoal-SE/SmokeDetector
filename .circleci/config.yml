@@ -5,25 +5,20 @@ jobs:
       - image: circleci/python:3.6-stretch
     steps:
       - checkout
-      - run: pwd
       - run:
           name: Install Python dependencies in venv
           command: |
             python3 -m venv env
             env/bin/pip3 install 'flake8==3.4.1'
-      - run: pwd
       - run:
           name: Lint tests
           command: env/bin/python3 -m flake8 --config=tox_tests.ini ./test/
-      - run: pwd
       - run:
           name: Lint classes
           command: env/bin/python3 -m flake8 --config=tox_classes.ini ./classes/
-      - run: pwd
       - run:
           name: Lint code
           command: env/bin/python3 -m flake8 ./
-      - run: pwd
   test:
     docker:
       - image: circleci/python:3.6-stretch
