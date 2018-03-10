@@ -2570,3 +2570,4 @@
 1520603365	tripleee	(?:1\W*)?850\W*329\W*0522
 1520618330	Thomas Ward	kalkipur[ia](na)?\.com
 1520625631	WELZ	mailhelp\.net
+1520670641	Glorfindel	digiarch\.org
