@@ -1177,7 +1177,6 @@
 1507880375	tripleee	omnibeats\.com
 1507881257	tripleee	watchtamil\.online
 1507881945	tripleee	toptechgiant\.com
-1507892163	tripleee	byteball
 1507894980	tripleee	hearingsol\.com
 1507895492	tripleee	merchantstronghold\.com
 1507897517	tripleee	adectec\.com
