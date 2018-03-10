@@ -1,0 +1,26 @@
+version: 2
+jobs:
+  lint:
+    docker:
+      - image: circleci/python:3.6-stretch
+    steps:
+      - checkout
+      - run: pip3 install 'flake8==3.4.1'
+      - run: flake8 --config=tox_tests.ini ./test/
+      - run: flake8 --config=tox_classes.ini ./classes/
+      - run: flake8 ./
+  test:
+    docker:
+      - image: circleci/python:3.6-stretch
+    steps:
+      - checkout
+      - run: pip3 install -r requirements.txt --upgrade
+      - run: pip3 install -r user_requirements.txt --upgrade
+      - run: python3 -W default::Warning -m pytest test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - lint
+      - test
