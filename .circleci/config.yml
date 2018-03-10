@@ -12,13 +12,13 @@ jobs:
             venv/bin/pip3 install 'flake8==3.4.1'
       - run:
           name: Lint tests
-          command: venv/bin/flake8 --config=tox_tests.ini ./test/
+          command: venv/bin/python3 -m flake8 --config=tox_tests.ini ./test/
       - run:
           name: Lint classes
-          command: venv/bin/flake8 --config=tox_classes.ini ./classes/
+          command: venv/bin/python3 -m flake8 --config=tox_classes.ini ./classes/
       - run:
           name: Lint code
-          command: venv/bin/flake8 ./
+          command: venv/bin/python3 -m flake8 ./
   test:
     docker:
       - image: circleci/python:3.6-stretch
