@@ -9,11 +9,16 @@ jobs:
           name: Install Python dependencies in venv
           command: |
             python3 -m venv venv
-            . venv/bin/activate
-            pip3 install 'flake8==3.4.1'
-      - run: flake8 --config=tox_tests.ini ./test/
-      - run: flake8 --config=tox_classes.ini ./classes/
-      - run: flake8 ./
+            venv/bin/pip3 install 'flake8==3.4.1'
+      - run:
+          name: Lint tests
+          command: venv/bin/flake8 --config=tox_tests.ini ./test/
+      - run:
+          name: Lint classes
+          command: venv/bin/flake8 --config=tox_classes.ini ./classes/
+      - run:
+          name: Lint code
+          command: venv/bin/flake8 ./
   test:
     docker:
       - image: circleci/python:3.6-stretch
@@ -23,10 +28,11 @@ jobs:
           name: Install Python dependencies in venv
           command: |
             python3 -m venv venv
-            . venv/bin/activate
-            pip3 install -r requirements.txt --upgrade
-            pip3 install -r user_requirements.txt --upgrade
-      - run: python3 -W default::Warning -m pytest test
+            venv/bin/pip3 install -r requirements.txt --upgrade
+            venv/bin/pip3 install -r user_requirements.txt --upgrade
+      - run:
+          name: Pytest
+          command: venv/bin/python3 -W default::Warning -m pytest test
 
 workflows:
   version: 2
