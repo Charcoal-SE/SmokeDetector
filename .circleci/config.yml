@@ -23,3 +23,9 @@ jobs:
       - run:
           name: Pytest
           command: env/bin/python3 -W default::Warning -m pytest test
+
+workflows:
+  version: 2
+  lint_and_test:
+    jobs:
+      - test
