@@ -118,6 +118,124 @@ stackexchange.com:
       - 252743   # Christopher
       - 165415   # Princess Luna
 
+  65945:  # Charcoal Test
+    commands: true
+
+    msg_types:
+      - debug
+      - all
+      - experimental
+
+    privileges:
+      - 117490   # Normal Human
+      - 66258    # Andy
+      - 31768    # ManishEarth
+      - 103081   # hichris123
+      - 73046    # Undo
+      - 88521    # ProgramFOX
+      - 59776    # Doorknob
+      - 31465    # Seth
+      - 88577    # Santa Claus
+      - 34124    # Andrew Leach
+      - 54229    # apnorton
+      - 20459    # S.L. Barth
+      - 32436    # tchrist
+      - 30477    # Brock Adams
+      - 58529    # ferrybig
+      - 145208   # Robert Longson
+      - 178825   # Ms Yvette
+      - 171800   # JAL
+      - 64978    # PeterJ
+      - 125141   # Jeffrey Bosboom
+      - 54902    # bummi
+      - 135450   # M.A.R.
+      - 145604   # Quill
+      - 60548    # rene
+      - 121401   # michaelpri
+      - 116218   # JamesENL
+      - 82927    # Braiam
+      - 11606    # bwDraco
+      - 19761    # Ilmari Karonen
+      - 108271   # Andrew T.
+      - 171054   # Magisch
+      - 190011   # Petter Friberg
+      - 165661   # Tunaki
+      - 145086   # Wai Ha Lee
+      - 137665   # ByteCommander
+      - 147884   # wythagoras
+      - 186395   # Åna
+      - 181293   # Ashish Ahuja
+      - 163686   # Gothdo
+      - 145827   # angussidney
+      - 244748   # Supreme Leader SnokeDetector (angussidney's sock)
+      - 121520   # ArtOfCode
+      - 244382   # Lt. A. Code (ArtOfCode's sock to test things with)
+      - 137388   # QPaysTaxes
+      - 212311   # Ryan Bemrose
+      - 172397   # Kyll
+      - 224538   # FrankerZ
+      - 61202    # OldSkool
+      - 56166    # Jan Dvorak
+      - 133966   # DavidPostill
+      - 22839    # djsmiley2k
+      - 97389    # Kaz Wolfe
+      - 144962   # DJMcMayhem
+      - 139423   # NobodyNada
+      - 62118    # tripleee
+      - 130558   # Registered User
+      - 128113   # Avery
+      - 164318   # Glorfindel
+      - 175347   # Floern
+      - 180274   # Alexander O'Mara
+      - 158742   # Rob
+      - 207356   # 4castle
+      - 133031   # Mithrandir
+      - 215671   # Locutus of Borg (Mithrandir's Sock)
+      - 169713   # Mego
+      - 126657   # Cerbrus
+      - 10145    # Thomas Ward
+      - 161943   # J F
+      - 195967   # CaffeineAddiction
+      - 5363     # Stijn
+      - 248139   # FelixSFD
+      - 156721   # D-side
+      - 167070   # quartata
+      - 172450   # Hovercraft Full Of Eels
+      - 56200    # Eric Leschinski
+      - 211021   # Henders
+      - 255290   # Gypsy Spellweaver
+      - 64521    # CalvT
+      - 165474   # Hyper Neutrino
+      - 281362   # Hyper Neutrino v2
+      - 169252   # Cai
+      - 155243   # Nisse Engström
+      - 69330    # Sconibulus
+      - 164187   # Okx
+      - 202619   # John Militer
+      - 262693   # suraj
+      - 11287    # Martin Sleziak
+      - 88588    # NVZ
+      - 281674   # paper1111
+      - 279119   # Tetsuya Yamamoto
+      - 307652   # Ajay Brahmakshatriya
+      - 238145   # Owen Hines
+      - 268731   # Sagar V
+      - 205208   # a-j
+      - 234375   # Jarko Dubbeldam
+      - 139041   # Catija
+      - 305737   # Tinkeringbell
+      - 210948   # WELZ
+      - 156050   # Makyen
+      - 269502   # micsthepick
+      - 205533   # Videonauth
+      - 275329   # iBug
+      - 78973    # gparyani
+      - 318454   # Jake Symons
+      - 202339   # Nog Shine
+      - 37096    # Lynn Crumbling
+      - 223524   # K.Davis
+      - 252743   # Christopher
+      - 165415   # Princess Luna
 
   3877:  # Raiders of the Lost Downboat
     commands: false
