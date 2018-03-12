@@ -1087,6 +1087,9 @@ def report(msg, urls):
         post = Post(api_response=post_data.as_dict)
         user = get_user_from_url(post_data.owner_url)
 
+        scan_spam, scan_reasons, scan_why = check_if_spam(post)  # Scan it first
+        # Scan before adding blacklist to prevent showing all reported posts as "Blacklisted user"
+
         if user is not None:
             message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
             add_blacklisted_user(user, message_url, post_data.post_url)
@@ -1096,7 +1099,6 @@ def report(msg, urls):
         if len(urls) > 1:
             batch = " (batch report: post {} out of {})".format(index, len(urls))
 
-        scan_spam, scan_reasons, scan_why = check_if_spam(post)  # Add reasons
         if scan_spam:
             why_append = ', '.join(scan_reasons)
             why_append = ''.join(["This post would also have been caught for: ",
