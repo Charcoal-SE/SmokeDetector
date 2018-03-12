@@ -52,7 +52,7 @@ class DeletionWatcher:
                     if data["a"] == "post-deleted":
                         try:
                             post_id, _, post_type, post_url, callbacks = self.posts[action]
-                            del self.posts[action["action"]]
+                            del self.posts[action]
 
                             if not post_type == "answer" or ("aId" in data and str(data["aId"]) == post_id):
                                 self.socket.send("-" + action)
