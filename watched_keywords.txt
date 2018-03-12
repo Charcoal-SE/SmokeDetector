@@ -2597,3 +2597,4 @@
 1520852453	Glorfindel	mobdro\.one
 1520859753	Glorfindel	cputemper\.com
 1520861335	tripleee	^Nastia Mykoliuk$
+1520861497	tripleee	ora-error\.com
