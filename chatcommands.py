@@ -364,7 +364,7 @@ def blame2(msg, x):
     try:
         unlucky_victim = msg._client.get_user(user)
     except HTTPError:
-        unlucky_victim = msg._client.get_user(random.choice(msg.room.get_current_user_ids()))
+        unlucky_victim = msg.owner
     return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
                                                                  msg._client.host,
                                                                  unlucky_victim.id)
