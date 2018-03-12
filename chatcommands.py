@@ -1101,7 +1101,7 @@ def report(msg, urls):
 
         if scan_spam:
             why_append = ', '.join(scan_reasons)
-            why_append = ''.join(["This post would also have been caught for: ",
+            why_append = ''.join(["This post would have also been caught for: ",
                                   why_append[0].upper() + why_append[1:],
                                   '\n' + scan_why])
         else:
