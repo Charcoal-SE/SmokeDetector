@@ -2516,6 +2516,7 @@
 1520185125	Glorfindel	fools-day\.com
 1520185175	Glorfindel	nicfile\.com
 1520196770	Glorfindel	suggestmebest\.com
+1520203511	K.Dᴀᴠɪs	(?:1\W*)?508\W*934\W*7719
 1520227812	K.Dᴀᴠɪs	sweatslimbelt\.co\.in
 1520232914	Glorfindel	dinhat\.com
 1520236051	Glorfindel	srilankatrips\.com
