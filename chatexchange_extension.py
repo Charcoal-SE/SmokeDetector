@@ -1,5 +1,5 @@
 # coding=utf-8
-from ChatExchange.chatexchange import client, rooms
+from chatexchange import client, rooms
 import sys
 from datetime import datetime
 from helpers import log

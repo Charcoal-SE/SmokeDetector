@@ -1,5 +1,5 @@
-from ChatExchange.chatexchange import events
-from ChatExchange.chatexchange.messages import Message
+from chatexchange import events
+from chatexchange.messages import Message
 from chatexchange_extension import Client
 import collections
 import itertools

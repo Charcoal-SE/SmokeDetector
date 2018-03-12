@@ -229,7 +229,6 @@
 1498469035	Glorfindel	xtremedigitalsignage\.com
 1498488240	Glorfindel	seo-google\.co\.il
 1498537575	tripleee	tescore
-1498541708	tripleee	testo\W?rampage
 1498542424	Glorfindel	javaenotes\.com
 1498545203	tripleee	dbalmaxhub\.com
 1498554725	Glorfindel	ouchmovies\.com
@@ -1178,7 +1177,6 @@
 1507880375	tripleee	omnibeats\.com
 1507881257	tripleee	watchtamil\.online
 1507881945	tripleee	toptechgiant\.com
-1507892163	tripleee	byteball
 1507894980	tripleee	hearingsol\.com
 1507895492	tripleee	merchantstronghold\.com
 1507897517	tripleee	adectec\.com
@@ -2240,7 +2238,6 @@
 1516880516	paper1111	sharepointpdfwizard\.com
 1516886144	paper1111	curvert\.com
 1516887607	Glorfindel	sabungayam\.com
-1516888209	ArtOfCode	tunefab\.com
 1516900033	Mithrandir	enternations\.com
 1516892394	JAD	indianjobs4u\.in
 1516943768	iBug	handdryer-china\.com
@@ -2318,7 +2315,6 @@
 1517639251	Suraj Rao	homeworkhelp602@gmail\.com
 1517642170	Glorfindel	kingroot-apk-download\.com
 1517660276	Glorfindel	koelcolours\.com
-1517725274	iBug	polskasuplementy\.pl
 1517774050	Mithrandir	complexsentencegenerator\.com
 1517811441	Suraj Rao	perzue\.com
 1517819791	Glorfindel	cetusplay\.com
@@ -2453,7 +2449,6 @@
 1519442124	iBug	cozy\W?cheekz(\.com)?
 1519453689	Suraj Rao	apility\.io
 1519455141	iBug	vandexafil\W?ultra
-1519461129	paper1111	adviksoft\.com
 1519477134	tripleee	streamhd1080\.ga
 1519545240	paper1111	keralalotteriesresults\.in
 1519546829	iBug	fungus\W?destroyer
@@ -2469,7 +2464,6 @@
 1519644651	Glorfindel	radiantinsights\.com
 1519644876	Glorfindel	blazewellnessresources\.com
 1519648151	Glorfindel	pulsedigital\.ae
-1519648329	WELZ	drozhelp\.com
 1519710800	tripleee	templateonweb\.com
 1519685337	Makyen	bolaqiuqiu\.net
 1519726954	Glorfindel	eazy2gain\.blogspot\.com
@@ -2480,7 +2474,6 @@
 1519739799	Federico	dentoaviation\.com
 1519745836	Glorfindel	ind99info\.com
 1519786348	WELZ	fix\W?card\W?tech
-1519772280	WELZ	bubblyhub\.in
 1519796009	tripleee	3peartechnologies\.com
 1519802723	tripleee	asetsafety\.ac\.in
 1519806308	doppelgreener	softsolution\.al
@@ -2527,3 +2520,69 @@
 1520232914	Glorfindel	dinhat\.com
 1520236051	Glorfindel	srilankatrips\.com
 1520241827	K.Dᴀᴠɪs	(?:1\W*)?852\W*6446\W*7029
+1520244712	Mithrandir	hepa\Wvacuum
+1520245689	Glorfindel	gorokuhdcp\.com
+1520245886	Glorfindel	rokuactivationcode\.com
+1520246317	Glorfindel	azamaraclubcruises\.com
+1520246543	doppelgreener	dataturks\.com
+1520257156	Glorfindel	nepalrentcar\.com
+1520260656	WELZ	greenhouseherbalclinic\.com
+1520262131	WELZ	cypherock\.github\.io
+1520265950	WELZ	tvideos\.net
+1520301186	bwDraco	errorsolutions\.tech
+1520303372	bwDraco	spotify\W?music\W?converter
+1520312247	K.Dᴀᴠɪs	(?:female|girl).{0,30}? escort.{0,5}?
+1520320761	A J	obatvimaxjakarta\.com
+1520320978	K.Dᴀᴠɪs	(?:1\W*)?0813\W*9051\W*4444
+1520309926	K.Dᴀᴠɪs	rukhsana\.online
+1520325407	Glorfindel	500px\.com
+1520327296	Glorfindel	yiioverflow\.com
+1520335822	WELZ	shivatattvayoga\.com
+1520336803	WELZ	papacookinggames\.com
+1520336829	Glorfindel	deletebinghistory\.com
+1520338933	iBug	go4trial\.com
+1520426606	WELZ	briskrange\.com
+1520426778	WELZ	threadsphere\.bid
+1520437008	Mithrandir	bubbly\W?hub
+1520442035	Glorfindel	techugs\.com
+1520451040	Glorfindel	thedaonline\.com
+1520465131	K.Dᴀᴠɪs	(\+1)?518\W{0,3}504\W{0,3}9376
+1520490863	K.Dᴀᴠɪs	janbasktraining\.com
+1520492914	tripleee	91\W*9911\W*001197
+1520493341	K.Dᴀᴠɪs	cairo-glitz\.com
+1520495291	tripleee	paperown\.com
+1520496980	tripleee	ropaxin
+1520497869	Glorfindel	veb108\.com
+1520521655	Glorfindel	taxi-net\.fr
+1520523135	Glorfindel	proweb365\.com
+1520526187	WELZ	thehtmlcoder\.com
+1520546854	Glorfindel	acctournament\.ca
+1520490348	K.Dᴀᴠɪs	91\W{0,3}9911\W{0,3}001197
+1520571069	micsthepick	golden\Whemp
+1520573592	K.Dᴀᴠɪs	yellowpill\.co\.uk
+1520577588	K.Dᴀᴠɪs	brilliant-lightinggroup\.com
+1520578078	tripleee	apkpureapps.com
+1520581308	Glorfindel	shiv-chemicals\.com
+1520581532	tripleee	verionfloors\.com
+1520588993	Glorfindel	iiceducation\.in
+1520600906	WELZ	consultant\.com
+1520603365	tripleee	(?:1\W*)?850\W*329\W*0522
+1520618330	Thomas Ward	kalkipur[ia](na)?\.com
+1520625631	WELZ	mailhelp\.net
+1520670641	Glorfindel	digiarch\.org
+1520672905	K.Dᴀᴠɪs	anuitex\.com
+1520677457	Glorfindel	comfortrecoveryllc\.com
+1520677477	Glorfindel	bloggerrama\.com
+1520680844	Glorfindel	danasens\.com
+1520680895	Glorfindel	thesupermousse\.com
+1520681146	Glorfindel	cryptosairdrop\.com
+1520684451	Glorfindel	brainystarsschool\.com
+1520684568	K.Dᴀᴠɪs	800\W{0,3}425\W{0,3}3520
+1520747385	iBug	vision\W?20
+1520761386	micsthepick	trenoven
+1520772093	WELZ	noavarangermi\.ir
+1520773183	WELZ	sourcesara\.com
+1520795181	Glorfindel	meshkalla
+1520822770	iBug	nuallura
+1520830900	K.Dᴀᴠɪs	chinasunlead\.net
+1520834947	micsthepick	ajk\Wtorus
