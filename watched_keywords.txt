@@ -2599,3 +2599,4 @@
 1520861335	tripleee	^Nastia Mykoliuk$
 1520861497	tripleee	ora-error\.com
 1520882503	Glorfindel	howtogethelpinwindows10\.co
+1520892688	K.Dᴀᴠɪs	low(er|est)?\Wprices?
