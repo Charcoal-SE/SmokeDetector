@@ -1,7 +1,10 @@
 # coding=utf-8
 import json
+import os.path
+import pickle
 import requests
 import time
+import threading
 # noinspection PyPackageRequirements
 import websocket
 # noinspection PyPackageRequirements
@@ -11,14 +14,113 @@ import chatcommunicate
 import metasmoke
 from globalvars import GlobalVars
 import datahandling
+from helpers import log
 from parsing import fetch_post_id_and_site_from_url
 from tasks import Tasks
 
 
 # noinspection PyClassHasNoInit,PyBroadException,PyMethodParameters
 class DeletionWatcher:
-    @classmethod
-    def update_site_id_list(self):
+    def __init__(self):
+        DeletionWatcher.update_site_id_list()
+
+        self.socket = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
+        self.posts = {}
+
+        if os.path.exists("deletionIDs.p"):
+            with open("deletionIDs.p", "rb") as fh:
+                for post in DeletionWatcher._check_batch(pickle.load(fh)):
+                    self.subscribe(post, pickle=False)
+
+                self._save()
+
+        threading.Thread(name="deletion watcher", target=self._start, daemon=True).start()
+
+    def _start(self):
+        while True:
+            msg = self.socket.recv()
+
+            if msg:
+                msg = json.loads(msg)
+                action = msg["action"]
+
+                if action == "hb":
+                    self.socket.send("hb")
+                else:
+                    data = json.loads(msg["data"])
+
+                    if data["a"] == "post-deleted":
+                        try:
+                            post_id, _, post_type, post_url, callbacks = self.posts[action]
+                            del self.posts[action["action"]]
+
+                            if not post_type == "answer" or ("aId" in data and str(data["aId"]) == post_id):
+                                self.socket.send("-" + action)
+                                Tasks.do(metasmoke.Metasmoke.send_deletion_stats_for_post, post_url, True)
+
+                                for callback, max_time in callbacks:
+                                    if callback and (not max_time or time.time() < max_time):
+                                        callback()
+                        except KeyError:
+                            pass
+
+    def subscribe(self, post_url, callback=None, pickle=True, timeout=None):
+        post_id, post_site, post_type = fetch_post_id_and_site_from_url(post_url)
+
+        if post_site not in GlobalVars.site_id_dict:
+            log("warning", "unknown site {} when subscribing to {}".format(post_site, post_url))
+            return
+
+        if post_type == "answer":
+            question_id = str(datahandling.get_post_site_id_link((post_id, post_site, post_type)))
+
+            if question_id is None:
+                return
+        else:
+            question_id = post_id
+
+        site_id = GlobalVars.site_id_dict[post_site]
+        action = "{}-question-{}".format(site_id, question_id)
+        max_time = (time.time() + timeout) if timeout else None
+
+        if action in self.posts:
+            _, _, _, _, callbacks = self.posts[action]
+            callbacks.append((callback, max_time))
+        else:
+            self.posts[action] = (post_id, post_site, post_type, post_url, [(callback, max_time)])
+            self.socket.send(action)
+
+        if pickle:
+            Tasks.do(self._save)
+
+    def _save(self):
+        pickle_output = {}
+
+        for post_id, post_site, _, _, _ in self.posts.values():
+            if post_site not in pickle_output:
+                pickle_output[post_site] = [post_id]
+            else:
+                pickle_output[post_site].append(post_id)
+
+        with open("deletionIDs.p", "wb") as pickle_file:
+                pickle.dump(pickle_output, pickle_file)
+
+    @staticmethod
+    def _check_batch(saved):
+        for site, posts in saved.items():
+            ids = ";".join([post_id for post_id in posts if not DeletionWatcher._ignore((post_id, site))])
+            uri = "https://api.stackexchange.com/2.2/posts/{}?site={}&key=IAkbitmze4B8KpacUfLqkw((".format(ids, site)
+
+            for post in requests.get(uri).json()["items"]:
+                yield post["link"]
+
+    @staticmethod
+    def _ignore(post_site_id):
+        return datahandling.is_false_positive(post_site_id) or datahandling.is_ignored_post(post_site_id) or \
+            datahandling.is_auto_ignored_post(post_site_id)
+
+    @staticmethod
+    def update_site_id_list():
         soup = BeautifulSoup(requests.get("https://meta.stackexchange.com/topbar/site-switcher/site-list").text,
                              "html.parser")
         site_id_dict = {}
@@ -27,70 +129,3 @@ class DeletionWatcher:
             site_id = site["data-id"]
             site_id_dict[site_name] = site_id
         GlobalVars.site_id_dict = site_id_dict
-
-    @classmethod
-    def check_websocket_for_deletion(self, post_site_id, post_url, timeout):
-        time_to_check = time.time() + timeout
-        post_id = post_site_id[0]
-        post_type = post_site_id[2]
-        if post_type == "answer":
-            question_id = str(datahandling.get_post_site_id_link(post_site_id))
-            if question_id is None:
-                return
-        else:
-            question_id = post_id
-        post_site = post_site_id[1]
-        if post_site not in GlobalVars.site_id_dict:
-            return
-        site_id = GlobalVars.site_id_dict[post_site]
-
-        ws = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
-        ws.send(site_id + "-question-" + question_id)
-
-        while time.time() < time_to_check:
-            ws.settimeout(time_to_check - time.time())
-            try:
-                a = ws.recv()
-            except websocket.WebSocketTimeoutException:
-                Tasks.do(metasmoke.Metasmoke.send_deletion_stats_for_post, post_url, False)
-                return False
-            if a is not None and a != "":
-                try:
-                    action = json.loads(a)["action"]
-                    if action == "hb":
-                        ws.send("hb")
-                        continue
-                    else:
-                        d = json.loads(json.loads(a)["data"])
-                except:
-                    continue
-                if d["a"] == "post-deleted" and str(d["qId"]) == question_id:
-                    if (post_type == "answer" and "aId" in d and str(d["aId"]) == post_id) or post_type == "question":
-                        Tasks.do(metasmoke.Metasmoke.send_deletion_stats_for_post, post_url, True)
-                        return True
-
-        Tasks.do(metasmoke.Metasmoke.send_deletion_stats_for_post, post_url, False)
-        return False
-
-    @classmethod
-    def check_if_report_was_deleted(self, post_url, message):
-        post_site_id = fetch_post_id_and_site_from_url(post_url)
-        was_report_deleted = self.check_websocket_for_deletion(post_site_id, post_url, 1200)
-
-        if was_report_deleted:
-            try:
-                message.delete()
-            except:
-                pass
-
-    @classmethod
-    def post_message_if_not_deleted(self, message_text, room, report_data):
-        post_url = report_data[0]
-
-        post_site_id = fetch_post_id_and_site_from_url(post_url)
-        was_report_deleted = self.check_websocket_for_deletion(post_site_id, post_url, 300)
-
-        if not was_report_deleted and not datahandling.is_false_positive(post_site_id[0:2]) and not \
-                datahandling.is_ignored_post(post_site_id[0:2]):
-
-            chatcommunicate._msg_queue.put((room, message_text, report_data))

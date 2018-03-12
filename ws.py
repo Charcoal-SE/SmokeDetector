@@ -73,6 +73,7 @@ else:
 
 # We need an instance of bodyfetcher before load_files() is called
 GlobalVars.bodyfetcher = BodyFetcher()
+GlobalVars.deletion_watcher = DeletionWatcher()
 
 load_files()
 filter_auto_ignored_posts()
@@ -141,8 +142,6 @@ Tasks.later(restart_automatically, after=21600)
 
 log('info', GlobalVars.location)
 log('info', GlobalVars.metasmoke_host)
-
-DeletionWatcher.update_site_id_list()
 
 ws = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
 ws.send("155-questions-active")

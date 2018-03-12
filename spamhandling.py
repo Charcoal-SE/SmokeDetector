@@ -148,6 +148,8 @@ def handle_spam(post, reasons, why):
         else:
             chatcommunicate.tell_rooms(message, ("all", "site-" + post.post_site),
                                        without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
+
+        GlobalVars.deletion_watcher.subscribe(post_url)
     except:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         excepthook.uncaught_exception(exc_type, exc_obj, exc_tb)
