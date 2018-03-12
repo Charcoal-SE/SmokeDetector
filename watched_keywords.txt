@@ -2595,3 +2595,4 @@
 1520852396	Glorfindel	neftegaz\W?agent
 1520852436	Glorfindel	showbox\.onl
 1520852445	Glorfindel	vidmate\.win
+1520852453	Glorfindel	mobdro\.one
