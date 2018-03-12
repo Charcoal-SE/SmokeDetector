@@ -2596,3 +2596,4 @@
 1520852445	Glorfindel	vidmate\.win
 1520852453	Glorfindel	mobdro\.one
 1520859753	Glorfindel	cputemper\.com
+1520861335	tripleee	^Nastia Mykoliuk$
