@@ -2594,3 +2594,4 @@
 1520851419	Glorfindel	hellenictaxi\.com
 1520852396	Glorfindel	neftegaz\W?agent
 1520852436	Glorfindel	showbox\.onl
+1520852445	Glorfindel	vidmate\.win
