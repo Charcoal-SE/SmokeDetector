@@ -2600,3 +2600,4 @@
 1520861497	tripleee	ora-error\.com
 1520882503	Glorfindel	howtogethelpinwindows10\.co
 1520907077	WELZ	plasticbidet\.com
+1520907152	WELZ	aquatownbidet\.com
