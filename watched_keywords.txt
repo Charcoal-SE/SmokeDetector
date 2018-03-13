@@ -2601,3 +2601,4 @@
 1520907077	WELZ	plasticbidet\.com
 1520907152	WELZ	aquatownbidet\.com
 1520917730	tripleee	lts\W?secure
+1520918729	tripleee	(?:7\W*)?914\W*611\W*04\W*44
