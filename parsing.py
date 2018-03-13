@@ -4,6 +4,13 @@ import regex
 from globalvars import GlobalVars
 import datahandling
 
+URL_CHAR = r"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.?:-/=_#%"
+
+
+# noinspection PyMissingTypeHints
+def rebuild_url(url)
+    return ''.join([ch for ch in url if ch in URL_CHAR])
+
 
 # noinspection PyBroadException,PyMissingTypeHints
 def get_user_from_url(url):
