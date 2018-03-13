@@ -2608,3 +2608,4 @@
 1520936500	doppelgreener	mobile-phone-tracker\.org
 1520939532	tripleee	healthureum\.io
 1520947926	WELZ	btcerich\.com
+1520949439	K.Dᴀᴠɪs	api\W*amplience\W*(dot\W*)?net
