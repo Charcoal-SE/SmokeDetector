@@ -4,12 +4,12 @@ import regex
 from globalvars import GlobalVars
 import datahandling
 
-URL_CHAR = r"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.?:-/=_#%,~&;"
+BAD_CHAR = "\u200c\u200b"
 
 
 # noinspection PyMissingTypeHints
 def rebuild_url(url):
-    return ''.join([ch for ch in url if ch in URL_CHAR])
+    return ''.join([ch for ch in url if ch not in BAD_CHAR])
 
 
 # noinspection PyBroadException,PyMissingTypeHints
