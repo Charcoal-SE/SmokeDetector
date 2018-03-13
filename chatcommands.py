@@ -1070,6 +1070,7 @@ def report(msg, urls):
                            "which would slow down reports.")
 
     for index, url in enumerate(urls, start=1):
+        url = rebuild_url(url)
         post_data = api_get_post(url)
 
         if post_data is None:
@@ -1147,6 +1148,7 @@ def checkpost(msg, url):  # FIXME: Currently does not support batch report
                            "wait 30 seconds after you've reported multiple posts in "
                            "one go.".format(wait))
 
+    url = rebuild_url(url)
     post_data = api_get_post(url)
 
     if post_data is None:
