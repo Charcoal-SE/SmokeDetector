@@ -361,10 +361,16 @@ def blame2(msg, x):
     for i, char in enumerate(reversed(x)):
         user += (len(base)**i) * base[char]
 
-    unlucky_victim = msg._client.get_user(user)
-    return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
-                                                                 msg._client.host,
-                                                                 unlucky_victim.id)
+    try:
+        unlucky_victim = msg._client.get_user(user)
+        return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
+                                                                     msg._client.host,
+                                                                     unlucky_victim.id)
+    except HTTPError:
+        unlucky_victim = msg.owner
+        return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
+                                                                     msg._client.host,
+                                                                     unlucky_victim.id)
 
 
 # noinspection PyIncorrectDocstring
@@ -662,6 +668,12 @@ def inqueue(url):
                 return "#" + str(i + 1) + " in queue."
 
     return "Not in queue."
+
+
+@command()
+def listening():
+    # return "{} post(s) currently monitored for deletion.".format(len(GlobalVars.deletion_watcher.posts))
+    return repr(GlobalVars.deletion_watcher.posts)
 
 
 # noinspection PyIncorrectDocstring,PyProtectedMember

@@ -2474,7 +2474,6 @@
 1519739799	Federico	dentoaviation\.com
 1519745836	Glorfindel	ind99info\.com
 1519786348	WELZ	fix\W?card\W?tech
-1519796009	tripleee	3peartechnologies\.com
 1519802723	tripleee	asetsafety\.ac\.in
 1519806308	doppelgreener	softsolution\.al
 1519808512	Glorfindel	hot166\.com
@@ -2584,7 +2583,6 @@
 1520772093	WELZ	noavarangermi\.ir
 1520773183	WELZ	sourcesara\.com
 1520795181	Glorfindel	meshkalla
-1520822770	iBug	nuallura
 1520830900	K.Dᴀᴠɪs	chinasunlead\.net
 1520834947	micsthepick	ajk\Wtorus
 1520837032	tripleee	theitsol\.com
@@ -2599,4 +2597,10 @@
 1520861335	tripleee	^Nastia Mykoliuk$
 1520861497	tripleee	ora-error\.com
 1520882503	Glorfindel	howtogethelpinwindows10\.co
-1520892688	K.Dᴀᴠɪs	low(er|est)?\Wprices?
+1520892688	K.Dᴀᴠɪs	low(?:er|est)?\Wprices?
+1520907077	WELZ	plasticbidet\.com
+1520907152	WELZ	aquatownbidet\.com
+1520917730	tripleee	lts\W?secure
+1520918729	tripleee	(?:7\W*)?914\W*611\W*04\W*44
+1520919103	tripleee	golden\W?farms
+1520919209	tripleee	rose\W?diamond

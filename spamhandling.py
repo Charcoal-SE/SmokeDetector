@@ -26,12 +26,6 @@ def should_whitelist_prevent_alert(user_url, reasons):
 
 
 # noinspection PyMissingTypeHints
-def should_reasons_prevent_tavern_posting(reasons):
-    reasons_comparison = [r for r in set(reasons) if r not in GlobalVars.non_tavern_reasons]
-    return len(reasons_comparison) == 0
-
-
-# noinspection PyMissingTypeHints
 def check_if_spam(post):
     # if not post.body:
     #     body = ""
@@ -148,6 +142,8 @@ def handle_spam(post, reasons, why):
         else:
             chatcommunicate.tell_rooms(message, ("all", "site-" + post.post_site),
                                        without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
+
+        GlobalVars.deletion_watcher.subscribe(post_url)
     except:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         excepthook.uncaught_exception(exc_type, exc_obj, exc_tb)

@@ -16,13 +16,17 @@ class Tasks:
 
     @classmethod
     def do(cls, func, *args, **kwargs):
-        cls.loop.call_soon(lambda: func(*args, **kwargs))
+        handle = cls.loop.call_soon(lambda: func(*args, **kwargs))
         cls.loop._write_to_self()
+
+        return handle
 
     @classmethod
     def later(cls, func, *args, after=None, **kwargs):
-        cls.loop.call_later(after, lambda: func(*args, **kwargs))
+        handle = cls.loop.call_later(after, lambda: func(*args, **kwargs))
         cls.loop._write_to_self()
+
+        return handle
 
     @classmethod
     def periodic(cls, func, *args, interval=None, **kwargs):
@@ -32,8 +36,10 @@ class Tasks:
                 yield from asyncio.sleep(interval)
                 func(*args, **kwargs)
 
-        cls.loop.create_task(f())
+        handle = cls.loop.create_task(f())
         cls.loop._write_to_self()
+
+        return handle
 
 
 threading.Thread(name="tasks", target=Tasks._run, daemon=True).start()
