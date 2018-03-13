@@ -2606,4 +2606,4 @@
 1520919209	tripleee	rose\W?diamond
 1520922333	micsthepick	vitax
 1520922642	tripleee	emailsupports\.net
-1520929210	K.Dᴀᴠɪs	hacknet\W*(?:@|at)\W<i>cyberservice\W</i>com
+1520929210	K.Dᴀᴠɪs	hacknet\W*(?:@|at)\W*cyberservice\W*com
