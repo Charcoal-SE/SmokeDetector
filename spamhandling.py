@@ -26,12 +26,6 @@ def should_whitelist_prevent_alert(user_url, reasons):
 
 
 # noinspection PyMissingTypeHints
-def should_reasons_prevent_tavern_posting(reasons):
-    reasons_comparison = [r for r in set(reasons) if r not in GlobalVars.non_tavern_reasons]
-    return len(reasons_comparison) == 0
-
-
-# noinspection PyMissingTypeHints
 def check_if_spam(post):
     # if not post.body:
     #     body = ""
