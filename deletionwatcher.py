@@ -113,7 +113,7 @@ class DeletionWatcher:
 
             for post in requests.get(uri).json()["items"]:
                 if time.time() - post["creation_date"] < 7200:
-                    yield to_protocol_relative(post["link"])
+                    yield to_protocol_relative(post["link"]).replace("/q/", "/questions/")
 
     @staticmethod
     def _ignore(post_site_id):
