@@ -8,7 +8,7 @@ URL_CHAR = r"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.?:-/
 
 
 # noinspection PyMissingTypeHints
-def rebuild_url(url)
+def rebuild_url(url):
     return ''.join([ch for ch in url if ch in URL_CHAR])
 
 
