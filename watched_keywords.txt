@@ -2601,3 +2601,4 @@
 1520882503	Glorfindel	howtogethelpinwindows10\.co
 1520907077	WELZ	plasticbidet\.com
 1520907152	WELZ	aquatownbidet\.com
+1520917730	tripleee	lts\W?secure
