@@ -4,7 +4,7 @@ import regex
 from globalvars import GlobalVars
 import datahandling
 
-URL_CHAR = r"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.?:-/=_#%"
+URL_CHAR = r"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.?:-/=_#%,~&;"
 
 
 # noinspection PyMissingTypeHints
