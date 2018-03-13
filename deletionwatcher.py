@@ -112,7 +112,8 @@ class DeletionWatcher:
             uri = "https://api.stackexchange.com/2.2/posts/{}?site={}&key=IAkbitmze4B8KpacUfLqkw((".format(ids, site)
 
             for post in requests.get(uri).json()["items"]:
-                yield to_protocol_relative(post["link"])
+                if time.time() - post["creation_date"] < 7200:
+                    yield to_protocol_relative(post["link"])
 
     @staticmethod
     def _ignore(post_site_id):
