@@ -15,7 +15,7 @@ import metasmoke
 from globalvars import GlobalVars
 import datahandling
 from helpers import log
-from parsing import fetch_post_id_and_site_from_url
+from parsing import fetch_post_id_and_site_from_url, to_protocol_relative
 from tasks import Tasks
 
 
@@ -112,7 +112,7 @@ class DeletionWatcher:
             uri = "https://api.stackexchange.com/2.2/posts/{}?site={}&key=IAkbitmze4B8KpacUfLqkw((".format(ids, site)
 
             for post in requests.get(uri).json()["items"]:
-                yield "//" + post["link"]
+                yield to_protocol_relative(post["link"])
 
     @staticmethod
     def _ignore(post_site_id):
