@@ -83,11 +83,11 @@ class DeletionWatcher:
         action = "{}-question-{}".format(site_id, question_id)
         max_time = (time.time() + timeout) if timeout else None
 
-        if action in self.posts:
+        if action in self.posts and callback:
             _, _, _, _, callbacks = self.posts[action]
             callbacks.append((callback, max_time))
         else:
-            self.posts[action] = (post_id, post_site, post_type, post_url, [(callback, max_time)])
+            self.posts[action] = (post_id, post_site, post_type, post_url, [(callback, max_time)] if callback else [])
             self.socket.send(action)
 
         if pickle:
@@ -112,7 +112,7 @@ class DeletionWatcher:
             uri = "https://api.stackexchange.com/2.2/posts/{}?site={}&key=IAkbitmze4B8KpacUfLqkw((".format(ids, site)
 
             for post in requests.get(uri).json()["items"]:
-                yield post["link"]
+                yield "//" + post["link"]
 
     @staticmethod
     def _ignore(post_site_id):
