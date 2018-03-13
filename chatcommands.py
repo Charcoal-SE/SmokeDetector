@@ -675,6 +675,7 @@ def listening():
     # return "{} post(s) currently monitored for deletion.".format(len(GlobalVars.deletion_watcher.posts))
     return repr(GlobalVars.deletion_watcher.posts)
 
+
 # noinspection PyIncorrectDocstring,PyProtectedMember
 @command(str, whole_msg=True, privileged=True, arity=(0, 1))
 def stappit(msg, location_search):
