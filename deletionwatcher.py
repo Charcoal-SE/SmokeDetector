@@ -72,7 +72,7 @@ class DeletionWatcher:
             return
 
         if post_type == "answer":
-            question_id = str(datahandling.get_post_site_id_link((post_id, post_site, post_type)))
+            question_id = datahandling.get_post_site_id_link((post_id, post_site, post_type))
 
             if question_id is None:
                 return
