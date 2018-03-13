@@ -1509,7 +1509,6 @@
 1510602280	Glorfindel	techrenters\.com
 1510604836	Glorfindel	beddingaid\.com
 1510633845	NobodyNada	spaintommy\.com
-1510638092	tripleee	mammut-group\.com
 1510638714	tripleee	beorganics
 1510639770	tripleee	sans\W?age
 1510642485	tripleee	sterling\W?marketing\W?solutions
