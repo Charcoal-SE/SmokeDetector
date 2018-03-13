@@ -21,8 +21,6 @@ git config user.name "SmokeDetector"
 git clone https://github.com/Charcoal-SE/SmokeDetector.git
 cd SmokeDetector
 git checkout deploy
-git submodule init
-git submodule update
 sudo pip3 install -r requirements.txt --upgrade
 pip3 install --user -r user_requirements.txt --upgrade
 ```
