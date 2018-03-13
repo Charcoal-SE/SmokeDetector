@@ -59,7 +59,7 @@ class DeletionWatcher:
                                 Tasks.do(metasmoke.Metasmoke.send_deletion_stats_for_post, post_url, True)
 
                                 for callback, max_time in callbacks:
-                                    if callback and (not max_time or time.time() < max_time):
+                                    if not max_time or time.time() < max_time:
                                         callback()
                         except KeyError:
                             pass
