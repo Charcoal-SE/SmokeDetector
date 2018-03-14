@@ -37,6 +37,8 @@ from tasks import Tasks
 
 import chatcommands
 
+from particulates import Particulates
+
 try:
     update_tld_names()
 except TldIOError as ioerr:
@@ -74,6 +76,9 @@ else:
 # We need an instance of bodyfetcher before load_files() is called
 GlobalVars.bodyfetcher = BodyFetcher()
 GlobalVars.deletion_watcher = DeletionWatcher()
+
+GlobalVars.particulates = Particulates()
+GlobalVars.particulates.start_server()
 
 load_files()
 filter_auto_ignored_posts()
@@ -164,6 +169,8 @@ while True:
             if action == "hb":
                 ws.send("hb")
             if action == "155-questions-active":
+                data = json.loads(json.loads(a)["data"])
+                GlobalVars.particulates.post_ingested(data["siteBaseHostAddress"], data["titleEncodedFancy"], data["id"])
                 is_spam, reason, why = check_if_spam_json(a)
                 t = Thread(name="bodyfetcher post enqueing",
                            target=GlobalVars.bodyfetcher.add_to_queue,

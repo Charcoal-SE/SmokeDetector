@@ -113,6 +113,9 @@ class BodyFetcher:
         post_id = d["id"]
         if post_id == mse_sandbox_id and site_base == "meta.stackexchange.com":
             return  # don't check meta sandbox, it's full of weird posts
+
+        GlobalVars.particulates.in_stage(post_id, site_base, "BodyFetcher - Queued")
+
         self.queue_modify_lock.acquire()
         if site_base not in self.queue:
             self.queue[site_base] = {}
@@ -260,7 +263,11 @@ class BodyFetcher:
         if GlobalVars.api_backoff_time > time.time():
             time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
         try:
+            for post_id in posts:
+                GlobalVars.particulates.in_stage(post_id, site, "BodyFetcher - Fetching")
+
             time_request_made = datetime.now().strftime('%H:%M:%S')
+
             response = requests.get(url, timeout=20).json()
         except (requests.exceptions.Timeout, requests.ConnectionError, Exception):
             # Any failure in the request being made (timeout or otherwise) should be added back to
@@ -333,6 +340,8 @@ class BodyFetcher:
         start_time = time.time()
 
         for post in response["items"]:
+            GlobalVars.particulates.in_stage(post["question_id"] if "question_id" in post else post["answer_id"], site, "BodyFetcher - Succeeded")
+
             if "title" not in post or "body" not in post:
                 continue
 
@@ -350,11 +359,15 @@ class BodyFetcher:
 
             if is_spam:
                 try:
+                    GlobalVars.particulates.in_stage(post_id, site, "BodyFetcher - Spam")
+
                     handle_spam(post=post_,
                                 reasons=reason,
                                 why=why)
                 except Exception as e:
                     log('error', "Exception in handle_spam:", e)
+            else:
+                GlobalVars.particulates.in_stage(post_id, site, "BodyFetcher - Not spam")
 
             try:
                 if "answers" not in post:

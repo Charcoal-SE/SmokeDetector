@@ -18,3 +18,4 @@ typing>=3.6.4
 dnspython>=1.15.0
 PyYAML>=3.12
 tld>=0.7.9
+websocket-server

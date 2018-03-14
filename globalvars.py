@@ -91,6 +91,7 @@ class GlobalVars:
     s_reverted = ""
     apiquota = -1
     bodyfetcher = None
+    particulates = None
     se_sites = []
     why_data = []
     notifications = []
