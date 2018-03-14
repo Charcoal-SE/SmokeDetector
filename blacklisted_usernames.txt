@@ -66,3 +66,4 @@ air\W?purifier\W?reviews
 Cum\W?Juice
 agen judi‭
 donald\W*j?\.?\W*trump
+^yolo_does_not_detect_me$
