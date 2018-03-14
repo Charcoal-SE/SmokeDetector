@@ -1014,7 +1014,6 @@
 1506414896	Glorfindel	eventeca\.com
 1506417201	tripleee	skylifr\.com
 1506418667	Glorfindel	freetoolonline\.com
-1506431853	tripleee	fortraxitonetry\.com
 1506432381	tripleee	socialseo4you\.wordpress\.com
 1506440976	Glorfindel	indwiki\.com
 1506454713	Glorfindel	studarea\.com
@@ -2595,7 +2594,6 @@
 1520861335	tripleee	^Nastia Mykoliuk$
 1520861497	tripleee	ora-error\.com
 1520882503	Glorfindel	howtogethelpinwindows10\.co
-1520892688	K.Dᴀᴠɪs	low(?:er|est)?\Wprices?
 1520907077	WELZ	plasticbidet\.com
 1520907152	WELZ	aquatownbidet\.com
 1520917730	tripleee	lts\W?secure
@@ -2611,3 +2609,7 @@
 1520950839	iBug	videobhaia
 1520952319	K.Dᴀᴠɪs	flexistamps\.com
 1520984230	WELZ	immunet\.com
+1521003191	iBug	april2018calendar\.net
+1521015811	Glorfindel	bostonmc\.com
+1521018574	tripleee	pakersmovershyderabad\.net
+1521022500	iBug	salarpuriasattvamistycharmkanakapura\.in
