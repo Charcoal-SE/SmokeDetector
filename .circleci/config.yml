@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  test:
+  build:
     docker:
       - image: circleci/python:3.6-stretch
     steps:
@@ -23,9 +23,3 @@ jobs:
       - run:
           name: Pytest
           command: env/bin/python3 -W default::Warning -m pytest test
-
-workflows:
-  version: 2
-  lint_and_test:
-    jobs:
-      - test
