@@ -2618,3 +2618,4 @@
 1521029319	tripleee	(?:91\W*)?853\W*015\W*6266
 1521029413	WELZ	aecoverseas\.com
 1521042112	Glorfindel	cryptotaxprep\.com
+1521050518	K.Dᴀᴠɪs	teclogiq\.com
