@@ -1132,8 +1132,8 @@ def report(msg, urls):
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
-@command(str, whole_msg=True, privileged=True, aliases=['scan', 'test-p'])
-def checkpost(msg, url):  # FIXME: Currently does not support batch report
+@command(str, whole_msg=True, privileged=True, give_name=True, aliases=['scan', 'test-p'])
+def checkpost(msg, url, alias_used='scan'):  # FIXME: Currently does not support batch report
     """
     Force Smokey to scan a post even if it has no recent activity
     :param msg:
@@ -1142,14 +1142,15 @@ def checkpost(msg, url):  # FIXME: Currently does not support batch report
     """
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
-        raise CmdException("You can execute the !!/checkpost command again in {} seconds. "
+        raise CmdException("You can execute the !!/{0} command again in {1} seconds. "
                            "To avoid one user sending lots of reports in a few commands and "
                            "slowing SmokeDetector down due to rate-limiting, you have to "
                            "wait 30 seconds after you've reported multiple posts in "
-                           "one go.".format(wait))
+                           "one go.".format(alias_used, wait))
 
-    url = rebuild_url(url)
-    post_data = api_get_post(url)
+    post_data = api_get_post(rebuild_url(url))
+    # Update url to be consistent with other code
+    url = to_protocol_relative(post_data.post_url)
 
     if post_data is None:
         raise CmdException("That does not look like a valid post URL.")
@@ -1172,7 +1173,6 @@ def checkpost(msg, url):  # FIXME: Currently does not support batch report
         handle_spam(post=post, reasons=reasons, why=why + "\nManually triggered scan")
         return None
 
-    # Temporarily just use the URL provided from the command. That should change someday
     return "Post [{}]({}) does not look like spam.".format(post_data.title, url)
 
 
