@@ -1766,7 +1766,7 @@ techaveranoida\.in
 freehackleaked\.com
 w\W?w\W?w\W*greenhouseherbalclinic\W*com
 tunefab\.com
-www\.errorsolutions\.tech
+errorsolutions\.tech
 bubblyhub\.in
 drozhelp\.com
 supplementmakehealthy\.org
@@ -1783,3 +1783,7 @@ goo\.gl/7J79so
 3peartechnologies\.com
 supplementsbucket\.com
 mammut-group\.com
+needforsupplements\.com
+healthiestcanada\.ca
+fortraxitonetry\.com
+supplementsbazar\.com

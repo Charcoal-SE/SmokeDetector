@@ -673,7 +673,7 @@ def inqueue(url):
 @command()
 def listening():
     # return "{} post(s) currently monitored for deletion.".format(len(GlobalVars.deletion_watcher.posts))
-    return repr(GlobalVars.deletion_watcher.posts)
+    return "Currently listening to:\n" + repr(GlobalVars.deletion_watcher.posts)
 
 
 # noinspection PyIncorrectDocstring,PyProtectedMember
