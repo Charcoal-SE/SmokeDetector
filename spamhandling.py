@@ -75,10 +75,6 @@ def check_if_spam_json(json_data):
 def handle_spam(post, reasons, why):
     post_url = parsing.to_protocol_relative(parsing.url_to_shortlink(post.post_url))
     poster_url = parsing.to_protocol_relative(parsing.user_url_to_shortlink(post.user_url))
-    reason = ", ".join(reasons[:5])
-    if len(reasons) > 5:
-        reason += ", +{} more".format(len(reasons) - 5)
-    reason = reason[:1].upper() + reason[1:]  # reason is capitalised, unlike the entries of reasons list
     shortened_site = post.post_site.replace("stackexchange.com", "SE")  # site.stackexchange.com -> site.SE
     datahandling.append_to_latest_questions(post.post_site, post.post_id, post.title if not post.is_answer else "")
     if len(reasons) == 1 and ("all-caps title" in reasons or
@@ -113,13 +109,14 @@ def handle_spam(post, reasons, why):
         else:
             prefix_ms = prefix
 
+        # We'll insert reason list later
         if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
-            s = u" {}: [{}]({}) by a deleted user on `{}`".format(reason, sanitized_title.strip(), post_url,
-                                                                  shortened_site)
+            s = u" {{}}: [{}]({}) by a deleted user on `{}`".format(sanitized_title.strip(), post_url,
+                                                                    shortened_site)
             username = ""
         else:
-            s = u" {}: [{}]({}) by [{}]({}) on `{}`".format(reason, sanitized_title.strip(), post_url,
-                                                            post.user_name.strip(), poster_url, shortened_site)
+            s = u" {{}}: [{}]({}) by [{}]({}) on `{}`".format(sanitized_title.strip(), post_url,
+                                                              post.user_name.strip(), poster_url, shortened_site)
             username = post.user_name.strip()
 
         Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
@@ -130,9 +127,18 @@ def handle_spam(post, reasons, why):
         log('debug', GlobalVars.parser.unescape(s).encode('ascii', errors='replace'))
         datahandling.append_to_latest_questions(post.post_site, post.post_id, post.title)
 
-        message = prefix_ms + s
+        for reason_count in range(5, 2, -1):  # Try 5 reasons, then 4, then 3
+            reason = ", ".join(reasons[:reason_count])
+            if len(reasons) > reason_count:
+                reason += ", +{} more".format(len(reasons) - reason_count)
+            reason = reason[:1].upper() + reason[1:]  # reason is capitalised, unlike the entries of reasons list
+            message = prefix_ms + s.format(reason)  # Insert reason list
+            if len(message) <= 500:
+                break  # Problem solved, stop attempting
+
+        s = s.format(reason)  # Later code needs this variable
         if len(message) > 500:
-            message = (prefix + s)[:500]
+            message = (prefix_ms + s)[:500]  # Truncate directly and keep MS link
 
         without_roles = tuple("no-" + reason for reason in reasons) + ("site-no-" + post.post_site,)
 
