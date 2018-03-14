@@ -1149,8 +1149,6 @@ def checkpost(msg, url, alias_used='scan'):  # FIXME: Currently does not support
                            "one go.".format(alias_used, wait))
 
     post_data = api_get_post(rebuild_url(url))
-    # Update url to be consistent with other code
-    url = to_protocol_relative(post_data.post_url)
 
     if post_data is None:
         raise CmdException("That does not look like a valid post URL.")
@@ -1159,6 +1157,8 @@ def checkpost(msg, url, alias_used='scan'):  # FIXME: Currently does not support
         raise CmdException("Cannot find data for this post in the API. "
                            "It may have already been deleted.")
 
+    # Update url to be consistent with other code
+    url = to_protocol_relative(post_data.post_url)
     post = Post(api_response=post_data.as_dict)
 
     if fetch_post_id_and_site_from_url(url)[2] == "answer":
