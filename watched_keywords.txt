@@ -2628,3 +2628,5 @@
 1521110031	tripleee	f1krazy
 1521110186	Glorfindel	convertertools\.org
 1521111121	Glorfindel	arysontechnologies\.com
+1520947926	WELZ	btcerich\.com
+1520949439	K.Dᴀᴠɪs	api\W*amplience\W*(dot\W*)?net
