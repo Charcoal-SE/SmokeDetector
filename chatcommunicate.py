@@ -266,7 +266,7 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
                     post = fetch_post_id_and_site_from_url(report_data[0])[0:2]
 
                     if not datahandling.is_false_positive(post) and not datahandling.is_ignored_post(post):
-                        _msg_queue.put((room, msg_pings, report_data))
+                        _msg_queue.put((room, msg, report_data))
 
                 task = Tasks.later(callback, after=300)
 
