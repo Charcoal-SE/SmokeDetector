@@ -366,7 +366,7 @@ def blame2(msg, x):
         return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
                                                                      msg._client.host,
                                                                      unlucky_victim.id)
-    except HTTPError:
+    except requests.excptions.HTTPError:
         unlucky_victim = msg.owner
         return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
                                                                      msg._client.host,
