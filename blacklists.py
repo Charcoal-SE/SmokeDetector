@@ -50,10 +50,12 @@ class BasicListParser(BlacklistParser):
             f.writelines(items)
 
     def exists(self, item: str):
+        item = item.lower()
+
         with open(self._filename, 'r', encoding='utf-8') as f:
             lines = f.readlines()
             for i, x in enumerate(lines):
-                if item in x:
+                if item in x.lower():
                     return True, i + 1
 
         return False, -1
@@ -99,10 +101,12 @@ class TSVDictParser(BlacklistParser):
         if isinstance(item, dict):
             item = item[2]
 
+        item = item.lower()
+
         with open(self._filename, 'r', encoding='utf-8') as f:
             lines = f.readlines()
             for i, x in enumerate(lines):
-                if item in x:
+                if item in x.lower():
                     return True, i + 1
 
         return False, -1
