@@ -350,7 +350,7 @@ def add_to_notification_list(user_id, chat_site, room_id, se_site, always_ping=T
 
 
 # noinspection PyMissingTypeHints
-def remove_from_notification_list(user_id, chat_site, room_id, se_site):
+def remove_from_notification_list(user_id, chat_site, room_id, se_site, status=True):
     if se_site[0] != "/":
         exists, se_site = check_site_and_get_full_name(se_site)
         if not exists:
@@ -383,7 +383,7 @@ def remove_all_from_notification_list(user_id):
             my_notifications.append(notification)
 
     for notification in my_notifications:
-        remove_from_notification_list(*(notification[:4]))
+        remove_from_notification_list(*notification)
 
 
 def get_all_notification_sites(user_id, chat_site, room_id):
