@@ -383,7 +383,7 @@ def remove_all_from_notification_list(user_id):
             my_notifications.append(notification)
 
     for notification in my_notifications:
-        remove_from_notification_list(*notification)
+        remove_from_notification_list(*(notification[:4]))
 
 
 def get_all_notification_sites(user_id, chat_site, room_id):
