@@ -366,6 +366,7 @@ def blame2(msg, x):
         return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
                                                                      msg._client.host,
                                                                      unlucky_victim.id)
+
     except requests.exceptions.HTTPError:
         unlucky_victim = msg.owner
         return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
@@ -668,6 +669,12 @@ def inqueue(url):
                 return "#" + str(i + 1) + " in queue."
 
     return "Not in queue."
+
+
+@command()
+def listening():
+    # return "{} post(s) currently monitored for deletion.".format(len(GlobalVars.deletion_watcher.posts))
+    return "Currently listening to:\n" + repr(GlobalVars.deletion_watcher.posts)
 
 
 # noinspection PyIncorrectDocstring,PyProtectedMember
@@ -1064,6 +1071,7 @@ def report(msg, urls):
                            "which would slow down reports.")
 
     for index, url in enumerate(urls, start=1):
+        url = rebuild_url(url)
         post_data = api_get_post(url)
 
         if post_data is None:
@@ -1125,8 +1133,8 @@ def report(msg, urls):
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
-@command(str, whole_msg=True, privileged=True, aliases=['scan', 'test-p'])
-def checkpost(msg, url):  # FIXME: Currently does not support batch report
+@command(str, whole_msg=True, privileged=True, give_name=True, aliases=['scan', 'test-p'])
+def checkpost(msg, url, alias_used='scan'):  # FIXME: Currently does not support batch report
     """
     Force Smokey to scan a post even if it has no recent activity
     :param msg:
@@ -1135,13 +1143,13 @@ def checkpost(msg, url):  # FIXME: Currently does not support batch report
     """
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
-        raise CmdException("You can execute the !!/checkpost command again in {} seconds. "
+        raise CmdException("You can execute the !!/{0} command again in {1} seconds. "
                            "To avoid one user sending lots of reports in a few commands and "
                            "slowing SmokeDetector down due to rate-limiting, you have to "
                            "wait 30 seconds after you've reported multiple posts in "
-                           "one go.".format(wait))
+                           "one go.".format(alias_used, wait))
 
-    post_data = api_get_post(url)
+    post_data = api_get_post(rebuild_url(url))
 
     if post_data is None:
         raise CmdException("That does not look like a valid post URL.")
@@ -1150,6 +1158,8 @@ def checkpost(msg, url):  # FIXME: Currently does not support batch report
         raise CmdException("Cannot find data for this post in the API. "
                            "It may have already been deleted.")
 
+    # Update url to be consistent with other code
+    url = to_protocol_relative(post_data.post_url)
     post = Post(api_response=post_data.as_dict)
 
     if fetch_post_id_and_site_from_url(url)[2] == "answer":
@@ -1164,7 +1174,6 @@ def checkpost(msg, url):  # FIXME: Currently does not support batch report
         handle_spam(post=post, reasons=reasons, why=why + "\nManually triggered scan")
         return None
 
-    # Temporarily just use the URL provided from the command. That should change someday
     return "Post [{}]({}) does not look like spam.".format(post_data.title, url)
 
 

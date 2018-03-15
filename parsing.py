@@ -4,6 +4,13 @@ import regex
 from globalvars import GlobalVars
 import datahandling
 
+BAD_CHAR = "\u200c\u200b"
+
+
+# noinspection PyMissingTypeHints
+def rebuild_url(url):
+    return ''.join([ch for ch in url if ch not in BAD_CHAR])
+
 
 # noinspection PyBroadException,PyMissingTypeHints
 def get_user_from_url(url):
@@ -51,8 +58,8 @@ def fetch_post_url_from_msg_content(content):
 def fetch_post_id_and_site_from_url(url):
     if url is None:
         return None
-    trimmed_url = url.replace("&zwnj;&#8203;", "")
-    post_type_regex = r"\/\d+(&zwnj;&#8203;\d+)?#\d+$"
+    trimmed_url = url.replace("\u200c\u200b", "")
+    post_type_regex = r"\/\d+(\d+)?#\d+$"
     post_type = ""
     search_regex = ""
     if regex.compile(post_type_regex).search(trimmed_url):

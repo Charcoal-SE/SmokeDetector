@@ -1014,7 +1014,6 @@
 1506414896	Glorfindel	eventeca\.com
 1506417201	tripleee	skylifr\.com
 1506418667	Glorfindel	freetoolonline\.com
-1506431853	tripleee	fortraxitonetry\.com
 1506432381	tripleee	socialseo4you\.wordpress\.com
 1506440976	Glorfindel	indwiki\.com
 1506454713	Glorfindel	studarea\.com
@@ -1509,7 +1508,6 @@
 1510602280	Glorfindel	techrenters\.com
 1510604836	Glorfindel	beddingaid\.com
 1510633845	NobodyNada	spaintommy\.com
-1510638092	tripleee	mammut-group\.com
 1510638714	tripleee	beorganics
 1510639770	tripleee	sans\W?age
 1510642485	tripleee	sterling\W?marketing\W?solutions
@@ -1949,7 +1947,6 @@
 1513594212	Glorfindel	welldonehouse\.com
 1513672663	paper1111	deutschlandsupplements\.de
 1513674610	Mithrandir	dyplantextract\.com
-1513674844	Mithrandir	wellness4healthy\.com
 1513688583	tripleee	casinoarchives\.com
 1513710519	Mithrandir	ufabet99\.com
 1513710592	Mithrandir	Rishi Sehrawat
@@ -2474,7 +2471,6 @@
 1519739799	Federico	dentoaviation\.com
 1519745836	Glorfindel	ind99info\.com
 1519786348	WELZ	fix\W?card\W?tech
-1519796009	tripleee	3peartechnologies\.com
 1519802723	tripleee	asetsafety\.ac\.in
 1519806308	doppelgreener	softsolution\.al
 1519808512	Glorfindel	hot166\.com
@@ -2530,7 +2526,6 @@
 1520260656	WELZ	greenhouseherbalclinic\.com
 1520262131	WELZ	cypherock\.github\.io
 1520265950	WELZ	tvideos\.net
-1520301186	bwDraco	errorsolutions\.tech
 1520303372	bwDraco	spotify\W?music\W?converter
 1520312247	K.Dᴀᴠɪs	(?:female|girl).{0,30}? escort.{0,5}?
 1520320761	A J	obatvimaxjakarta\.com
@@ -2584,7 +2579,6 @@
 1520772093	WELZ	noavarangermi\.ir
 1520773183	WELZ	sourcesara\.com
 1520795181	Glorfindel	meshkalla
-1520822770	iBug	nuallura
 1520830900	K.Dᴀᴠɪs	chinasunlead\.net
 1520834947	micsthepick	ajk\Wtorus
 1520837032	tripleee	theitsol\.com
@@ -2599,3 +2593,34 @@
 1520861335	tripleee	^Nastia Mykoliuk$
 1520861497	tripleee	ora-error\.com
 1520882503	Glorfindel	howtogethelpinwindows10\.co
+1520907077	WELZ	plasticbidet\.com
+1520907152	WELZ	aquatownbidet\.com
+1520917730	tripleee	lts\W?secure
+1520918729	tripleee	(?:7\W*)?914\W*611\W*04\W*44
+1520919103	tripleee	golden\W?farms
+1520919209	tripleee	rose\W?diamond
+1520922333	micsthepick	vitax
+1520922642	tripleee	emailsupports\.net
+1520929210	K.Dᴀᴠɪs	hacknet\W*(?:@|at)\W*cyberservice\W*(?:dot\W*)?com
+1520936500	doppelgreener	mobile-phone-tracker\.org
+1520939532	tripleee	healthureum\.io
+1520947926	WELZ	btcerich\W?com
+1520950839	iBug	videobhaia
+1520952319	K.Dᴀᴠɪs	flexistamps\.com
+1520984230	WELZ	immunet\.com
+1521003191	iBug	april2018calendar\.net
+1521015811	Glorfindel	bostonmc\.com
+1521018574	tripleee	pakersmovershyderabad\.net
+1521022500	iBug	salarpuriasattvamistycharmkanakapura\.in
+1521023141	iBug	anifar\.com
+1521023168	iBug	softsluz\.com
+1521029093	iBug	aceinvent\.com
+1521029319	tripleee	(?:91\W*)?853\W*015\W*6266
+1521029413	WELZ	aecoverseas\.com
+1521042112	Glorfindel	cryptotaxprep\.com
+1521050518	K.Dᴀᴠɪs	teclogiq\.com
+1521061365	K.Dᴀᴠɪs	og-youtube\.com
+1521078425	K.Dᴀᴠɪs	peanutbuttermachinery\.com
+1521079004	K.Dᴀᴠɪs	0086\W*185\W*3993\W*1566
+1521079605	iBug	machinehall\.com
+1521094665	tripleee	anyrent\.in

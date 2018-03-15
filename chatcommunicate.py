@@ -14,10 +14,10 @@ import time
 import yaml
 
 import datahandling
-from deletionwatcher import DeletionWatcher
 from excepthook import log_exception
 from globalvars import GlobalVars
-from parsing import fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
+from parsing import fetch_post_id_and_site_from_url, fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
+from tasks import Tasks
 
 LastMessages = collections.namedtuple("LastMessages", ["messages", "reports"])
 
@@ -169,9 +169,9 @@ def send_messages():
                             _last_messages.reports.popitem(last=False)
 
                         if room.deletion_watcher:
-                            threading.Thread(name="deletion watcher",
-                                             target=DeletionWatcher.check_if_report_was_deleted,
-                                             args=(report_data[0], room.room._client.get_message(message_id))).start()
+                            callback = room.room._client.get_message(message_id).delete
+
+                            GlobalVars.deletion_watcher.subscribe(report_data[0], callback=callback, timeout=120)
 
                     _pickle_run.set()
 
@@ -262,9 +262,15 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
 
         if room.block_time < timestamp and _global_block < timestamp:
             if report_data and "delay" in _room_roles and room_id in _room_roles["delay"]:
-                threading.Thread(name="delayed post",
-                                 target=DeletionWatcher.post_message_if_not_deleted,
-                                 args=(msg_pings, room, report_data)).start()
+                def callback(room=room):
+                    post = fetch_post_id_and_site_from_url(report_data[0])[0:2]
+
+                    if not datahandling.is_false_positive(post) and not datahandling.is_ignored_post(post):
+                        _msg_queue.put((room, msg_pings, report_data))
+
+                task = Tasks.later(callback, after=300)
+
+                GlobalVars.deletion_watcher.subscribe(report_data[0], callback=task.cancel)
             else:
                 _msg_queue.put((room, msg_pings, report_data))
 
