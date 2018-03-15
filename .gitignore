@@ -85,7 +85,7 @@ errorlog.txt
 test/.cache/
 .cache/
 
-# Config & Credential
+# Configuration and credential files
 config
 rooms_custom.yml
 setp.sh
