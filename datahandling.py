@@ -380,7 +380,7 @@ def remove_all_from_notification_list(user_id):
 
     for notification in GlobalVars.notifications:
         if notification[0] == user_id:
-            my_notifications.append(notification)
+            my_notifications.append(notification[:4])
 
     for notification in my_notifications:
         remove_from_notification_list(*notification)
