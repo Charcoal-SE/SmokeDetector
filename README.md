@@ -30,7 +30,7 @@ Next, copy `config.sample` to a new file called `config`, and edit the values re
 To run, use `python3 nocrash.py` (preferably in a daemon-able mode, like a `screen` session.)
 You can also use `python3 ws.py`, but then SmokeDetector will be shut down after 6 hours; when running from `nocrash.py`, it will be restarted. (This is to be sure that closed websockets, if any, are reopened)
 
-You can run `. ChatExchange/setp.sh` to set local environment variables so that you don't have to log in every time.
+You can create your own `setp.sh` to set local environment variables, and run it as `. ./setp.sh` so that you don't have to log in every time.
 
 SmokeDetector only supports Stack Exchange OpenIDs for now.
 
