@@ -262,7 +262,7 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
 
         if room.block_time < timestamp and _global_block < timestamp:
             if report_data and "delay" in _room_roles and room_id in _room_roles["delay"]:
-                def callback():
+                def callback(room=room):
                     post = fetch_post_id_and_site_from_url(report_data[0])[0:2]
 
                     if not datahandling.is_false_positive(post) and not datahandling.is_ignored_post(post):
