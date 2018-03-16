@@ -2639,3 +2639,4 @@
 1521180420	micsthepick	hbmgz\.com
 1521186412	tripleee	free\W?partition\W?manager
 1521188712	tripleee	(?:0?7\W*)?676\W*080\W*008
+1521190918	tripleee	cfone\.net
