@@ -83,12 +83,14 @@ class DeletionWatcher:
         action = "{}-question-{}".format(site_id, question_id)
         max_time = (time.time() + timeout) if timeout else None
 
-        if action in self.posts and callback:
+        if action not in self.posts:
+            self.posts[action] = (post_id, post_site, post_type, post_url, [(callback, max_time)] if callback else [])
+            self.socket.send(action)
+        elif callback:
             _, _, _, _, callbacks = self.posts[action]
             callbacks.append((callback, max_time))
         else:
-            self.posts[action] = (post_id, post_site, post_type, post_url, [(callback, max_time)] if callback else [])
-            self.socket.send(action)
+            return
 
         if pickle:
             Tasks.do(self._save)
