@@ -2455,7 +2455,6 @@
 1519624208	tripleee	forgica\.com
 1519630958	tripleee	italianiintegratori\.it
 1519631060	tripleee	sayweee\.com
-1519632921	Glorfindel	ios12update\.com
 1519638532	Byte Commander	indiainvestmentworld\.com
 1519638630	Byte Commander	leafoftheeast\.com
 1519644651	Glorfindel	radiantinsights\.com
