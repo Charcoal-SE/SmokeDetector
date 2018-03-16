@@ -2637,3 +2637,4 @@
 1521146699	WELZ	antivirussupport\.org
 1521147788	micsthepick	\W*root\W*gate\W*hacks\W*
 1521150763	Glorfindel	publishgreen\.info
+1521176467	A J	worldsporstnews\.com
