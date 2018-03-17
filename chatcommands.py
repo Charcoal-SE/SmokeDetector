@@ -1162,6 +1162,18 @@ def checkpost(msg, url, alias_used='scan'):  # FIXME: Currently does not support
     url = to_protocol_relative(post_data.post_url)
     post = Post(api_response=post_data.as_dict)
 
+    if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) \
+        and not is_false_positive((post_data.post_id, post_data.site)):
+        # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
+        # this force scan might be attempting to correct that/fix a mistake/etc.
+
+        response_text = "This post is already recently reported"
+        if GlobalVars.metasmoke_key is not None:
+            ms_link = "https://m.erwaysoftware.com/posts/by-url?url={}".format(url)  # se_link == url
+            return response_text + " [ [MS]({}) ]".format(ms_link)
+        else:
+            return response_text + "."
+
     if fetch_post_id_and_site_from_url(url)[2] == "answer":
         parent = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
 
