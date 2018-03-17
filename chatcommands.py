@@ -1163,7 +1163,7 @@ def checkpost(msg, url, alias_used='scan'):  # FIXME: Currently does not support
     post = Post(api_response=post_data.as_dict)
 
     if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) \
-        and not is_false_positive((post_data.post_id, post_data.site)):
+            and not is_false_positive((post_data.post_id, post_data.site)):
         # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
         # this force scan might be attempting to correct that/fix a mistake/etc.
 
