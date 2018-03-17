@@ -4,6 +4,7 @@ stackexchange.com:
 
     msg_types:
       - debug
+      - metasmoke
       - all
       - experimental
 

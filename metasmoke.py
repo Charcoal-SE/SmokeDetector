@@ -88,7 +88,7 @@ class Metasmoke:
         message = data['message']
         if isinstance(message, Iterable):
             if "message" in message:
-                chatcommunicate.tell_rooms_with("debug", message['message'])
+                chatcommunicate.tell_rooms_with("metasmoke", message['message'])
             elif "exit" in message:
                 os._exit(message["exit"])
             elif "blacklist" in message:
