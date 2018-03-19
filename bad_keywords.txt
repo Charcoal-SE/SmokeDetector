@@ -552,7 +552,7 @@ clevastin
 xymax
 neuro\W?boost
 prostagenix
-shred\W?fx
+shred\W?(?:fx|xl)
 male\W?onyx
 muscle\W?x\W?te?st
 liftesse
