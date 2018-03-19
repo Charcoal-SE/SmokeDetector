@@ -2655,3 +2655,4 @@
 1521443386	tripleee	turboerp\.in
 1521446788	micsthepick	Claira Care
 1521450739	micsthepick	profemin
+1521456219	Glorfindel	rofaalayassector\d+\.in
