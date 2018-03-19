@@ -1189,3 +1189,4 @@ auto\W?link\W?international
 xlr8\W?plus
 testo\W?pump
 flora\W?spring
+zenista
