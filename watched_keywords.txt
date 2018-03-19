@@ -2661,3 +2661,4 @@
 1521476213	WELZ	alphavantage\.co
 1521476603	tripleee	shimeji-ee\.com
 1521493935	WELZ	mymountain\.xyz
+1521494458	K.Dᴀᴠɪs	scott\W*larry\W*918
