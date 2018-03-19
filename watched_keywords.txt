@@ -2601,7 +2601,6 @@
 1520922642	tripleee	emailsupports\.net
 1520929210	K.Dᴀᴠɪs	hacknet\W*(?:@|at)\W*cyberservice\W*(?:dot\W*)?com
 1520936500	doppelgreener	mobile-phone-tracker\.org
-1520939532	tripleee	healthureum\.io
 1520947926	WELZ	btcerich\W?com
 1520950839	iBug	videobhaia
 1520952319	K.Dᴀᴠɪs	flexistamps\.com
