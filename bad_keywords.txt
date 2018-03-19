@@ -487,7 +487,7 @@ expandom
 zylix
 Mevaqesh .*lo chelek .*olam haba
 mevaqesh
-viril\Wx
+viril\W?(?:x|tech)
 zz\W?snore
 bulk\Wsms\W(delhi|india)
 True\WTesto
