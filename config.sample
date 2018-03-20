@@ -5,8 +5,7 @@ location=location_here
 # metasmoke_host=https://metasmoke.erwaysoftware.com
 # metasmoke_ws_host=wss://metasmoke.erwaysoftware.com/cable
 
-# Set metasmoke_key if Smokey isn't running on the same machine (localhost)
-# that metasmoke is
+# Set metasmoke_key if Smokey isn't running on the same machine (localhost) that metasmoke is
 # metasmoke_key=gibberish_here
 
 # Set GitHub keys
