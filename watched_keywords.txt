@@ -948,7 +948,6 @@
 1505728101	Glorfindel	java\Wtraining\Win
 1505728397	Glorfindel	hv\Wsofttech
 1505728641	Glorfindel	deep\.gold
-1505730794	tripleee	navigatorsystem\.com
 1505733570	tripleee	classibooster\.com
 1505734452	tripleee	o\W?slim\W?br
 1505735036	tripleee	clicktrans\.es
