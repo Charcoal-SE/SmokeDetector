@@ -170,6 +170,51 @@ def test_report(handle_spam):
 
 
 @patch("chatcommands.handle_spam")
+def test_checkpost(handle_spam):
+    try:
+        msg = Fake({
+            "owner": {
+                "name": "foo",
+                "id": 1,
+                "is_moderator": False
+            },
+            "room": {
+                "id": 11540,
+                "name": "Charcoal HQ",
+                "_client": {
+                    "host": "stackexchange.com"
+                }
+            },
+            "_client": {
+                "host": "stackexchange.com"
+            },
+            "id": 1337
+        })
+
+        assert chatcommands.checkpost("foo", original_msg=msg) == "That does not look like a valid post URL."
+        assert chatcommands.checkpost("https://stackoverflow.com/q/1", original_msg=msg) == \
+            "Cannot find data for this post in the API. It may have already been deleted."
+
+        # This is the highest voted question on Stack Overflow
+        good_post_url = "https://stackoverflow.com/q/11227809"
+        response = chatcommands.checkpost(good_post_url, original_msg=msg)
+        assert response.startswith("Post ") and response.endswith(" does not look like spam.")
+
+        # This post is found in Sandbox Archive, so it will remain intact and is a reliable test post
+        # backup: https://meta.stackexchange.com/a/228635
+        test_post_url = "https://meta.stackexchange.com/a/209772"
+        assert chatcommands.checkpost(test_post_url, original_msg=msg) is None
+
+        _, call = handle_spam.call_args_list[0]
+        assert isinstance(call["post"], Post)
+        assert call["why"].endswith("Manually triggered scan")
+
+        # Strangely it doesn't work if scanned repeatedly
+    finally:
+        GlobalVars.latest_questions = []
+
+
+@patch("chatcommands.handle_spam")
 def test_allspam(handle_spam):
     try:
         msg = Fake({
