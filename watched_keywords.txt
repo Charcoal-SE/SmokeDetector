@@ -2666,3 +2666,4 @@
 1521496161	WELZ	sweet16basketball2018\.ca
 1521496366	WELZ	sweet\W*16\W*(basketball)?
 1521498617	WELZ	pcsoftwarereview\.com
+1521522499	tripleee	9982201414
