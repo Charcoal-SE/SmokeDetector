@@ -155,7 +155,7 @@ def test_report(handle_spam):
         _, call = handle_spam.call_args_list[0]
         assert isinstance(call["post"], Post)
         assert call["reasons"] == ["Manually reported answer"]
-        assert call["why"].startswith("Post manually reported by user *El'endia Starman* in room *Charcoal HQ*.\n")
+        assert call["why"].startswith("Post manually reported by user *El'endia Starman* in room *Charcoal HQ*.\n\nThis post")
 
         # Don't re-report
         GlobalVars.latest_questions = [('stackoverflow.com', '1732454', 'RegEx match open tags except XHTML self-contained tags')]
