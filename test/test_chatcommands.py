@@ -1,6 +1,8 @@
 # noinspection PyUnresolvedReferences
 import chatcommunicate  # coverage
 import chatcommands
+from apigetpost import api_get_post
+from parsing import to_protocol_relative
 from classes._Post import Post
 from globalvars import GlobalVars
 
@@ -155,7 +157,7 @@ def test_report(handle_spam):
         _, call = handle_spam.call_args_list[0]
         assert isinstance(call["post"], Post)
         assert call["reasons"] == ["Manually reported answer"]
-        assert call["why"].startswith("Post manually reported by user *El'endia Starman* in room *Charcoal HQ*.\n")
+        assert call["why"].startswith("Post manually reported by user *El'endia Starman* in room *Charcoal HQ*.\n\nThis post")
 
         # Don't re-report
         GlobalVars.latest_questions = [('stackoverflow.com', '1732454', 'RegEx match open tags except XHTML self-contained tags')]
@@ -166,6 +168,52 @@ def test_report(handle_spam):
         assert chatcommands.report('http://stackoverflow.com/q/1732348', original_msg=msg) is None
     finally:
         GlobalVars.blacklisted_users = []
+        GlobalVars.latest_questions = []
+
+
+@patch("chatcommands.handle_spam")
+def test_checkpost(handle_spam):
+    try:
+        msg = Fake({
+            "owner": {
+                "name": "foo",
+                "id": 1,
+                "is_moderator": False
+            },
+            "room": {
+                "id": 11540,
+                "name": "Charcoal HQ",
+                "_client": {
+                    "host": "stackexchange.com"
+                }
+            },
+            "_client": {
+                "host": "stackexchange.com"
+            },
+            "id": 1337
+        })
+
+        assert chatcommands.checkpost("foo", original_msg=msg) == "That does not look like a valid post URL."
+        assert chatcommands.checkpost("https://stackoverflow.com/q/1", original_msg=msg) == \
+            "Cannot find data for this post in the API. It may have already been deleted."
+
+        # This is the highest voted question on Stack Overflow
+        good_post_url = "https://stackoverflow.com/q/11227809"
+        post = api_get_post(good_post_url)
+        assert chatcommands.checkpost(good_post_url, original_msg=msg) == \
+            "Post [{0}]({1}) does not look like spam.".format(post.title, to_protocol_relative(post.post_url))
+
+        # This post is found in Sandbox Archive, so it will remain intact and is a reliable test post
+        # backup: https://meta.stackexchange.com/a/228635
+        test_post_url = "https://meta.stackexchange.com/a/209772"
+        assert chatcommands.checkpost(test_post_url, original_msg=msg) is None
+
+        _, call = handle_spam.call_args_list[0]
+        assert isinstance(call["post"], Post)
+        assert call["why"].endswith("Manually triggered scan")
+
+        # Strangely it doesn't work if scanned repeatedly
+    finally:
         GlobalVars.latest_questions = []
 
 
