@@ -2670,3 +2670,4 @@
 1521529459	K.Dᴀᴠɪs	foxalert\.io
 1521537756	tripleee	reviewcrazybulk\.com
 1521558236	WELZ	stockmetrix\.net
+1521559327	WELZ	bitcoin\W?global\.?org
