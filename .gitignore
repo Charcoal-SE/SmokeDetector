@@ -53,6 +53,7 @@ latestMessages.txt
 apiCalls.txt
 bodyfetcherQueue.txt
 bodyfetcherMaxIds.txt
+
 # - New format Pickle files:
 falsePositives.p
 whitelistedUsers.p
@@ -70,6 +71,7 @@ bodyfetcherQueue.p
 bodyfetcherQueueTimings.p
 bodyfetcherMaxIds.p
 messageData.p
+deletionIDs.p
 
 # Settings files
 .settings/
