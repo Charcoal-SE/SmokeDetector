@@ -1,6 +1,8 @@
 # noinspection PyUnresolvedReferences
 import chatcommunicate  # coverage
 import chatcommands
+from apigetpost import api_get_post
+from parsing import to_protocol_relative
 from classes._Post import Post
 from globalvars import GlobalVars
 
@@ -197,8 +199,9 @@ def test_checkpost(handle_spam):
 
         # This is the highest voted question on Stack Overflow
         good_post_url = "https://stackoverflow.com/q/11227809"
-        response = chatcommands.checkpost(good_post_url, original_msg=msg)
-        assert response.startswith("Post ") and response.endswith(" does not look like spam.")
+        post = api_get_post(good_post_url)
+        assert chatcommands.checkpost(good_post_url, original_msg=msg) == \
+            "Post [{0}]({1}) does not look like spam.".format(post.title, to_protocol_relative(post.post_url))
 
         # This post is found in Sandbox Archive, so it will remain intact and is a reliable test post
         # backup: https://meta.stackexchange.com/a/228635
