@@ -2668,3 +2668,4 @@
 1521523390	tripleee	asiavacuumpumps\.com
 1521524018	K.Dᴀᴠɪs	dad(?:dy)?.*(?:fricc|r8p)
 1521529459	K.Dᴀᴠɪs	foxalert\.io
+1521532595	tripleee	zdorov\W?propolis
