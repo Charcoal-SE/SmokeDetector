@@ -548,6 +548,19 @@ def info():
 
 # noinspection PyIncorrectDocstring
 @command()
+def welcome(msg):
+    """
+    Returns the welcome text
+    :return: A string
+    """
+    return "Welcome to " + msg.room.name + "! I'm " + GlobalVars.chatmessage_prefix +\
+           ", a bot that detects spam and offensive posts on the network and"\
+           " posts alerts to chat."\
+           " You can find more about me on the [Charcoal website](https://charcoal-se.org/)."
+
+
+# noinspection PyIncorrectDocstring
+@command()
 def location():
     """
     Returns the current location the application is running from
