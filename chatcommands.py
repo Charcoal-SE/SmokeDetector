@@ -556,7 +556,7 @@ def welcome(msg):
     return "Welcome to " + msg.room.name + "! I'm " + GlobalVars.chatmessage_prefix +\
            ", a bot that detects spam and offensive posts on the network and"\
            " posts alerts to chat."\
-           " You can find more about me on the [Charcoal Website](https://charcoal-se.org/)."
+           " You can find more about me on the [Charcoal website](https://charcoal-se.org/)."
 
 
 # noinspection PyIncorrectDocstring
