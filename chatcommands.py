@@ -555,15 +555,14 @@ def welcome(msg, other_user):
     :param other_user:
     :return: A string
     """
+    w_msg = ("Welcome to {room}{user}! I'm {me}, a bot that detects spam and offensive posts on the network, "
+             "and posts alerts to chat. You can find more about me on the "
+             "[Charcoal website](https://charcoal-se.org/).")
     if other_user is None:
-        return "Welcome to {}! I'm {},".format(msg.room.name, GlobalVars.chatmessage_prefix) +\
-               " a bot that detects spam and offensive posts on the network and posts alerts to chat."\
-               " You can find more about me on the [Charcoal website](https://charcoal-se.org/)."
+        return w_msg.format(room=msg.room.name, user="", me=GlobalVars.chatmessage_prefix)
     else:
         other_user = regex.sub(r'^@*|\b\s.{1,}', '', other_user)
-        raise CmdException("Welcome to {} @{}! I'm {},".format(msg.room.name, other_user, GlobalVars.chatmessage_prefix) +\
-               " a bot that detects spam and offensive posts on the network and posts alerts to chat."\
-               " You can find more about me on the [Charcoal website](https://charcoal-se.org/).")
+        raise CmdException(w_msg.format(room=msg.room.name, user=" @" + other_user, me=GlobalVars.chatmessage_prefix))
 
 
 # noinspection PyIncorrectDocstring
