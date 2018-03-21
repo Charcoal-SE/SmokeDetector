@@ -548,15 +548,17 @@ def info():
 
 # noinspection PyIncorrectDocstring
 @command()
-def welcome(msg):
+def welcome(msg, other_user):
     """
     Returns the welcome text
+    :param msg:
+    :param other_user:
     :return: A string
     """
-    return "Welcome to " + msg.room.name + "! I'm " + GlobalVars.chatmessage_prefix +\
-           ", a bot that detects spam and offensive posts on the network and"\
-           " posts alerts to chat."\
-           " You can find more about me on the [Charcoal website](https://charcoal-se.org/)."
+    if other_user is None:
+        return "Welcome to {}! I'm {}, a bot that detects spam and offensive posts on the network and posts alerts to chat. You can find more about me on the [Charcoal website](https://charcoal-se.org/).".format(msg.room.name, GlobalVars.chatmessage_prefix)
+    else:
+        return "Welcome to {} @{}! I'm {}, a bot that detects spam and offensive posts on the network and posts alerts to chat. You can find more about me on the [Charcoal website](https://charcoal-se.org/).".format(msg.room.name, other_user, GlobalVars.chatmessage_prefix)
 
 
 # noinspection PyIncorrectDocstring
