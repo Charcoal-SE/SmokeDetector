@@ -516,7 +516,7 @@
 1501063031	Glorfindel	esds\.co\.in
 1501063155	Glorfindel	elprices\.com
 1501082253	Glorfindel	screenrecorderpro\.wordpress\.com
-1501088918	Glorfindel	www\.excel\.repair
+1501088918	Glorfindel	www.\excel\.repair
 1501132145	NobodyNada	cafe\Wvert
 1501137294	Glorfindel	dewapoker\.com
 1501144103	Glorfindel	techomash\.com
@@ -530,7 +530,7 @@
 1501166479	Mithrandir	koyoele.in
 1501175814	quartata	couppay.ind.in
 1501250114	Glorfindel	wklaw\.com
-1501278997	doppelgreener	modup.net
+1501278997	doppelgreener	modup\.net
 1501323411	Glorfindel	kellytechno\.com
 1501347530	Glorfindel	gadgetspirit\.com
 1501350484	Glorfindel	taxi-airports-transfer\.com
@@ -540,11 +540,11 @@
 1501483754	Glorfindel	ouseful\.info
 1501505499	Glorfindel	health4life\.cf
 1501570836	Glorfindel	19216811wiki\.com
-1501570946	Yvette Colomb	weaveinc.org
+1501570946	Yvette Colomb	weaveinc\.org
 1501571786	Glorfindel	phpcooker\.com
 1501600926	Glorfindel	myappleinfo\.tumblr\.com
 1501657943	Mithrandir	germanyes\.de
-1501667752	Glorfindel	deliveryd2d.com
+1501667752	Glorfindel	deliveryd2d\.com
 1501674433	Glorfindel	tuckedtrunks\.com
 1501676648	Magisch	youtvplayerz\.com
 1501676650	Mithrandir	word-square\.com
@@ -1746,7 +1746,7 @@
 1512119112	Glorfindel	yodalearning\.com
 1512120671	Glorfindel	americaconferences\.org
 1512122110	Byte Commander	602communications\.com
-1512124348	Byte Commander	shardhamanavayurveda.com
+1512124348	Byte Commander	shardhamanavayurveda\.com
 1512126561	tripleee	osxuninstaller\.com
 1512126666	tripleee	(?:1\W*)?702\W*508\*W5200
 1512126778	tripleee	906\*908\*7886
