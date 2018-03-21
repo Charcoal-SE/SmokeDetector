@@ -548,12 +548,12 @@ def info():
 
 # noinspection PyIncorrectDocstring
 @command()
-def welcome():
+def welcome(msg):
     """
     Returns the welcome text
     :return: A string
     """
-    return "Hi! I'm " + GlobalVars.chatmessage_prefix +\
+    return "Welcome to " + msg.room.name + "! I'm " + GlobalVars.chatmessage_prefix +\
            ", a bot that detects spam and offensive posts on the network and"\
            " posts alerts to chat."\
            " You can find more about me on the [Charcoal Website](https://charcoal-se.org/)."
