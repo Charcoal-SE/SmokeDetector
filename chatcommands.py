@@ -555,6 +555,7 @@ def welcome(msg, other_user):
     :param other_user:
     :return: A string
     """
+    other_user = regex.sub(r'^@|\b\s.{1,}', '', other_user)
     if other_user is None:
         return "Welcome to {}! I'm {},".format(msg.room.name, GlobalVars.chatmessage_prefix) +\
                " a bot that detects spam and offensive posts on the network and posts alerts to chat."\
