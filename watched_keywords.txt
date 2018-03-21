@@ -516,7 +516,7 @@
 1501063031	Glorfindel	esds\.co\.in
 1501063155	Glorfindel	elprices\.com
 1501082253	Glorfindel	screenrecorderpro\.wordpress\.com
-1501088918	Glorfindel	www.\excel\.repair
+1501088918	Glorfindel	www\.excel\.repair
 1501132145	NobodyNada	cafe\Wvert
 1501137294	Glorfindel	dewapoker\.com
 1501144103	Glorfindel	techomash\.com
