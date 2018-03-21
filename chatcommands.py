@@ -561,8 +561,8 @@ def welcome(msg, other_user):
                " You can find more about me on the [Charcoal website](https://charcoal-se.org/)."
     else:
         other_user = regex.sub(r'^@*|\b\s.{1,}', '', other_user)
-        raise CmdException("Welcome to {} @{}! I'm {},".format(msg.room.name, other_user, GlobalVars.chatmessage_prefix) +\
-               " a bot that detects spam and offensive posts on the network and posts alerts to chat."\
+        raise CmdException("Welcome to {} @{}! I'm {}".format(msg.room.name, other_user, GlobalVars.chatmessage_prefix)
+               + ", a bot that detects spam and offensive posts on the network and posts alerts to chat."
                " You can find more about me on the [Charcoal website](https://charcoal-se.org/).")
 
 
