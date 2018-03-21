@@ -50,6 +50,8 @@ _global_block = -1
 _rooms = {}
 _last_messages = LastMessages({}, collections.OrderedDict())
 _msg_queue = queue.Queue()
+_th_msg_queue = queue.Queue()  # Throttled message queue
+_TH_TYPES = set(("debug", "metasmoke"))  # Throttle these types of messages
 
 _pickle_run = threading.Event()
 
