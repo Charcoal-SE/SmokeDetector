@@ -547,7 +547,7 @@ def info():
 
 
 # noinspection PyIncorrectDocstring
-@command()
+@command(str, whole_msg=True, arity=(0, 1))
 def welcome(msg, other_user):
     """
     Returns the welcome text
