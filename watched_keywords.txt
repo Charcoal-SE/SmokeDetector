@@ -2684,3 +2684,4 @@
 1521636326	Glorfindel	jasoren\.com
 1521640750	tripleee	(?:00?\W*)?44\W*800\W*090\W*3272
 1521657848	J F	duplicate\W?files\W?deleter
+1521658295	Glorfindel	swat-em\.com
