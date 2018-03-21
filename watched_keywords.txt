@@ -1582,7 +1582,6 @@
 1511157505	tripleee	sharecodepoint\.com
 1511159656	tripleee	themeegg\.com
 1511160474	tripleee	ideiasvirtuais\.com\.br
-1511161125	tripleee	pure\W?core
 1511164415	tripleee	(?:1\W*)?877\W*220\W*7367
 1511169984	Glorfindel	oahu-handyman\.com
 1511170344	Glorfindel	reviewsformusicians\.com
