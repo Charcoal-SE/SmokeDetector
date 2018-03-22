@@ -1254,7 +1254,6 @@
 1508772404	tripleee	cassiopeiastudio\.com
 1508777493	bwDraco	treasurebox
 1508777497	bwDraco	collision\W?express
-1508779581	bwDraco	(?<=/)rock\W?hard(?:=[-/<]|$)
 1508791180	Mithrandir	fdsfs
 1508817954	Suraj Rao	tutorialslife\.com
 1508818670	tripleee	(?:1\W*)?518\W*855\W*8838
