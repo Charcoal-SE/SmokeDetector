@@ -1201,14 +1201,8 @@ class FindSpam:
         for rule in FindSpam.rules:
             body_to_check = post.body
             is_regex_check = 'regex' in rule
-            try:
-                check_if_answer = rule['answers']
-            except KeyError:
-                check_if_answer = True
-            try:
-                check_if_question = rule['questions']
-            except KeyError:
-                check_if_question = True
+            check_if_answer = rule.get('answers', True)
+            check_if_question = rule.get('questions', True)
             body_to_check = regex.sub("[\xad\u200b\u200c]", "", body_to_check)
             if rule['stripcodeblocks']:
                 # use a placeholder to avoid triggering "few unique characters" when most of post is code
