@@ -2700,3 +2700,4 @@
 1521726718	tripleee	thetexting\.com
 1521726830	K.Dᴀᴠɪs	sellandbuycoins\.com
 1521727039	K.Dᴀᴠɪs	experttexting\.com
+1521748422	K.Dᴀᴠɪs	<code>[1l|i]\W*[8B]\W*(?:[o0@]\W*){2}7\W*[4A]\W*[1l|i]\W*[3E]\W*[1l|i]\W*[4A]\W*[5S]</code>
