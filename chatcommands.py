@@ -399,6 +399,7 @@ def coffee(msg, other_user):
     if other_user is None:
         return "*brews a cup of {} for @{}*".format(random.choice(COFFEES), msg.owner.name.replace(" ", ""))
     else:
+        other_user = regex.sub(r'^@*|\b\s.{1,}', '', other_user)
         return "*brews a cup of {} for @{}*".format(random.choice(COFFEES), other_user)
 
 
@@ -559,7 +560,7 @@ def welcome(msg, other_user):
              "and posts alerts to chat. You can find more about me on the "
              "[Charcoal website](https://charcoal-se.org/).")
     if other_user is None:
-        return w_msg.format(room=msg.room.name, user="", me=GlobalVars.chatmessage_prefix)
+        raise CmdException(w_msg.format(room=msg.room.name, user="", me=GlobalVars.chatmessage_prefix))
     else:
         other_user = regex.sub(r'^@*|\b\s.{1,}', '', other_user)
         raise CmdException(w_msg.format(room=msg.room.name, user=" @" + other_user, me=GlobalVars.chatmessage_prefix))
