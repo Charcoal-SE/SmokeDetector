@@ -70,4 +70,4 @@ donald\W*j?\.?\W*trump
 ^christine roebuck$
 techelpp‭
 \W?router$
-fu(c?)k\W*bo(i|y)
+fu(c?)k
