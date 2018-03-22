@@ -246,7 +246,7 @@ def test_on_msg(get_last_messages, post_msg):
     }, spec=chatcommunicate.events.MessagePosted)
 
     mock_command = Mock(side_effect=lambda *_, **kwargs: "hi" if not kwargs["quiet_action"] else "")
-    chatcommunicate._commands["prefix"]["a_command"] = (mock_command, (0, 0))
+    chatcommunicate._prefix_commands["a_command"] = (mock_command, (0, 0))
 
     chatcommunicate.on_msg(msg3, client)
 
@@ -266,7 +266,7 @@ def test_on_msg(get_last_messages, post_msg):
     post_msg.reset_mock()
     mock_command.reset_mock()
 
-    chatcommunicate._commands["prefix"]["a_command"] = (mock_command, (0, 1))
+    chatcommunicate._prefix_commands["a_command"] = (mock_command, (0, 1))
     chatcommunicate.on_msg(msg3, client)
 
     post_msg.assert_not_called()
@@ -285,7 +285,7 @@ def test_on_msg(get_last_messages, post_msg):
     post_msg.reset_mock()
     mock_command.reset_mock()
 
-    chatcommunicate._commands["prefix"]["a_command"] = (mock_command, (1, 2))
+    chatcommunicate._prefix_commands["a_command"] = (mock_command, (1, 2))
 
     msg3.message.content = "!!/a_command"
     chatcommunicate.on_msg(msg3, client)
@@ -370,7 +370,7 @@ def test_on_msg(get_last_messages, post_msg):
         }
     }, spec=chatcommunicate.events.MessageEdited)
 
-    chatcommunicate._commands["reply"]["why"] = (mock_command, (0, 0))
+    chatcommunicate._reply_commands["why"] = (mock_command, (0, 0))
 
     threw_exception = False
 
@@ -383,7 +383,7 @@ def test_on_msg(get_last_messages, post_msg):
     mock_command.assert_not_called()
     post_msg.assert_not_called()
 
-    chatcommunicate._commands["reply"]["why"] = (mock_command, (1, 1))
+    chatcommunicate._reply_commands["why"] = (mock_command, (1, 1))
     chatcommunicate.on_msg(msg5, client)
 
     assert post_msg.call_count == 1

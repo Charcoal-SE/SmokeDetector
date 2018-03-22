@@ -33,7 +33,8 @@ class CmdException(Exception):
     pass
 
 
-_commands = {"reply": {}, "prefix": {}}
+_prefix_commands = {}
+_reply_commands = {}
 
 _clients = {
     "stackexchange.com": None,
@@ -345,15 +346,15 @@ def command(*type_signature, reply=False, whole_msg=False, privileged=False, ari
         cmd = (f, arity if arity else (len(type_signature), len(type_signature)))
 
         if reply:
-            _commands["reply"][func.__name__] = cmd
+            _reply_commands[func.__name__] = cmd
 
             for alias in aliases:
-                _commands["reply"][alias] = cmd
+                _reply_commands[alias] = cmd
         else:
-            _commands["prefix"][func.__name__] = cmd
+            _prefix_commands[func.__name__] = cmd
 
             for alias in aliases:
-                _commands["prefix"][alias] = cmd
+                _prefix_commands[alias] = cmd
 
         return f
 
@@ -382,10 +383,10 @@ def dispatch_command(msg):
     quiet_action = command_name[-1] == "-"
     command_name = regex.sub(r"[[:punct:]]*$", "", command_name)
 
-    if command_name not in _commands["prefix"]:
+    if command_name not in _prefix_commands:
         return "No such command '{}'.".format(command_name)
     else:
-        func, (min_arity, max_arity) = _commands["prefix"][command_name]
+        func, (min_arity, max_arity) = _prefix_commands[command_name]
 
         if max_arity == 0:
             return func(original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
@@ -410,8 +411,8 @@ def dispatch_reply_command(msg, reply, cmd):
     quiet_action = cmd[-1] == "-"
     cmd = regex.sub(r"\W*$", "", cmd)
 
-    if cmd in _commands["reply"]:
-        func, arity = _commands["reply"][cmd]
+    if cmd in _reply_commands:
+        func, arity = _reply_commands[cmd]
 
         assert arity == (1, 1)
 
