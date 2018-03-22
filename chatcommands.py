@@ -1524,7 +1524,7 @@ def true(feedback, msg, alias_used="true"):
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
-@command(message, reply=True)
+@command(message, reply=True, aliases=['wtf'])
 def why(msg):
     """
     Returns reasons a post was reported
