@@ -206,10 +206,10 @@ def has_phone_number(s, site, *args):
     if regex.compile(r"(?i)\b(address(es)?|run[- ]?time|error|value|server|hostname|timestamp|warning|code|"
                      r"(sp)?exception|version|chrome|1234567)\b", regex.UNICODE).search(s):
         return False, ""  # not a phone number
-    s = regex.sub("[^A-Za-z0-9\\s\"',]", "", s)   # deobfuscate
+    s = regex.sub("[^A-Za-z0-9\\s\"',|]", "", s)   # deobfuscate
     s = regex.sub("[Oo]", "0", s)
     s = regex.sub("[Ss]", "5", s)
-    s = regex.sub("[Ii]", "1", s)
+    s = regex.sub("[Iil|]", "1", s)
     matched = regex.compile(r"(?<!\d)(?:\d{2}\s?\d{8,11}|\d\s{0,2}\d{3}\s{0,2}\d{3}\s{0,2}\d{4}|8\d{2}"
                             r"\s{0,2}\d{3}\s{0,2}\d{4})(?!\d)", regex.UNICODE).findall(s)
     test_formats = ["IN", "US", "NG", None]      # ^ don't match parts of too long strings of digits
