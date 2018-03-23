@@ -2590,7 +2590,6 @@
 1520918729	tripleee	(?:7\W*)?914\W*611\W*04\W*44
 1520919103	tripleee	golden\W?farms
 1520919209	tripleee	rose\W?diamond
-1520922333	micsthepick	vitax
 1520922642	tripleee	emailsupports\.net
 1520929210	K.Dᴀᴠɪs	hacknet\W*(?:@|at)\W*cyberservice\W*(?:dot\W*)?com
 1520936500	doppelgreener	mobile-phone-tracker\.org
