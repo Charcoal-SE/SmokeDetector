@@ -71,3 +71,4 @@ donald\W*j?\.?\W*trump
 techelpp‭
 \W?router$
 fu(c?)k\W*bo(i|y)
+(hurriyet|turkishdaily)news
