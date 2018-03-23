@@ -2702,3 +2702,4 @@
 1521727039	K.Dᴀᴠɪs	experttexting\.com
 1521760819	paper1111	anti-virus-support\.com
 1521774879	iBug	power\W?max\W?extra
+1521780528	K.Dᴀᴠɪs	d\W<i>r\W</i>_\W<i>m\W</i>a\W<i>c\W</i>k\W*@\W<i>y\W</i>a\W<i>h\W</i>o\W<i>o\W*\.\W</i>c\W<i>o\W</i>m
