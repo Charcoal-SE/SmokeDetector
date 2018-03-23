@@ -8,7 +8,7 @@ Headless chatbot that detects spam and posts it to chatrooms. Uses [ChatExchange
 
 Example [chat post](http://chat.stackexchange.com/transcript/11540?m=17962164#17962164):
 
-![Example chat post](http://i.stack.imgur.com/d8pbW.png)
+![Example chat post](https://i.stack.imgur.com/oLyfb.png)
 
 User documentation is in the [wiki](https://charcoal-se.org/smokey).
 
