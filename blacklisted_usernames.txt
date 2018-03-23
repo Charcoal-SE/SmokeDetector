@@ -74,3 +74,4 @@ fu(c?)k\W*bo(i|y)
 (hurriyet|turkishdaily)news
 tour\W?packages
 sputnik\W?international
+daily\W?news
