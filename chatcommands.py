@@ -429,6 +429,7 @@ def tea(msg, other_user):
     if other_user is None:
         return "*brews a cup of {} tea for @{}*".format(random.choice(TEAS), msg.owner.name.replace(" ", ""))
     else:
+        other_user = regex.sub(r'^@*|\b\s.{1,}', '', other_user)
         return "*brews a cup of {} tea for @{}*".format(random.choice(TEAS), other_user)
 
 
