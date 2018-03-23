@@ -2661,7 +2661,6 @@
 1521496161	WELZ	sweet16basketball2018\.ca
 1521496366	WELZ	sweet\W*16\W*(basketball)?
 1521498617	WELZ	pcsoftwarereview\.com
-1521522499	tripleee	9982201414
 1521523390	tripleee	asiavacuumpumps\.com
 1521524018	K.Dᴀᴠɪs	dad(?:dy)?.*(?:fricc|r8p)
 1521529459	K.Dᴀᴠɪs	foxalert\.io
