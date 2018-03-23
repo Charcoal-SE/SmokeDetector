@@ -2716,3 +2716,4 @@
 1521813057	Glorfindel	lagu7\.net
 1521817290	doppelgreener	earn3asy\.ml
 1521817741	doppelgreener	earneasy\.ml
+1521820511	K.Dᴀᴠɪs	(?:aids\W*){2,}
