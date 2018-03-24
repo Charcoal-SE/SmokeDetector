@@ -100,6 +100,8 @@ class Metasmoke:
             elif "fp" in message:
                 post_site_id = parsing.fetch_post_id_and_site_from_url(message["fp"]["post_link"])
                 datahandling.add_false_positive(post_site_id[0:2])
+                if datahandling.is_blacklisted_user(user):
+                    datahandling.remove_blacklisted_user(user)
             elif "report" in message:
                 post_data = apigetpost.api_get_post(message["report"]["post_link"])
                 if post_data is None or post_data is False:
