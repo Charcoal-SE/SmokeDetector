@@ -1902,7 +1902,6 @@
 1513114432	Glorfindel	sparechange\.io
 1513114438	Glorfindel	prosabbir\.blogspot\.com
 1513139142	Tetsuya Yamamoto	martine-voyance\.com
-1513157538	Tetsuya Yamamoto	brsoftech\.com
 1513158850	tripleee	usmanakbar\.com
 1513159853	tripleee	http\W?hook\W?up\W?apps\W?org
 1513162353	Mithrandir	dmwevehicles\.com
@@ -2219,7 +2218,6 @@
 1516804605	CalvT븃	dogshunt\.com
 1516782138	A J	setriterealtors\.com
 1516760244	Tetsuya Yamamoto	iguruservices\.com
-1516847809	JoErNanO	yourtripdubai\.com
 1516863944	Tetsuya Yamamoto	samwebstudio\.com
 1516867065	Glorfindel	indabaa\.com
 1516868946	Glorfindel	kicx\.in
@@ -2591,7 +2589,6 @@
 1520918729	tripleee	(?:7\W*)?914\W*611\W*04\W*44
 1520919103	tripleee	golden\W?farms
 1520919209	tripleee	rose\W?diamond
-1520922333	micsthepick	vitax
 1520922642	tripleee	emailsupports\.net
 1520929210	K.Dᴀᴠɪs	hacknet\W*(?:@|at)\W*cyberservice\W*(?:dot\W*)?com
 1520936500	doppelgreener	mobile-phone-tracker\.org
@@ -2661,7 +2658,6 @@
 1521496161	WELZ	sweet16basketball2018\.ca
 1521496366	WELZ	sweet\W*16\W*(basketball)?
 1521498617	WELZ	pcsoftwarereview\.com
-1521522499	tripleee	9982201414
 1521523390	tripleee	asiavacuumpumps\.com
 1521524018	K.Dᴀᴠɪs	dad(?:dy)?.*(?:fricc|r8p)
 1521529459	K.Dᴀᴠɪs	foxalert\.io
@@ -2700,3 +2696,25 @@
 1521726718	tripleee	thetexting\.com
 1521726830	K.Dᴀᴠɪs	sellandbuycoins\.com
 1521727039	K.Dᴀᴠɪs	experttexting\.com
+1521760819	paper1111	anti-virus-support\.com
+1521774879	iBug	power\W?max\W?extra
+1521787780	Glorfindel	globaltravelsandholidays\.com
+1521788179	tripleee	mega\W?forte
+1521789274	tripleee	indianetouristvisa\.co\.in
+1521790492	tripleee	guardiantech\.com\.gh
+1521792514	Glorfindel	aureolefurniture\.com
+1521793348	Glorfindel	smebusinessonline\.com
+1521797612	tripleee	ttconsultants\.com
+1521797868	Glorfindel	grammarchecker\.net
+1521800066	tripleee	lnkclik\.com
+1521800253	Glorfindel	motopoker\.club
+1521801293	tripleee	kalyandevelopers\.com
+1521801346	tripleee	massiltechnologies\.com
+1521804795	tripleee	lunatrim
+1521805526	tripleee	belfieldmusic\.com\.au
+1521810417	tripleee	indoasiangroceries\.com\.au
+1521813057	Glorfindel	lagu7\.net
+1521817290	doppelgreener	earn3asy\.ml
+1521817741	doppelgreener	earneasy\.ml
+1521825476	K.Dᴀᴠɪs	Turkey
+1521827019	CalvT븃	turkish

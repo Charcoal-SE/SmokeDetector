@@ -766,7 +766,7 @@ class FindSpam:
         "Ghaziabad", "Hyderabad", "Jaipur", "Jalandhar", "Kolkata",
         "Ludhiana", "Mumbai", "Madurai", "Patna", "Portland",
         "Rajkot", "Surat", "Telangana", "Udaipur", "Uttarakhand",
-        "Noida", "Pune", "Rohini",
+        "Noida", "Pune", "Rohini", "Trivandrum", "Thiruvananthapuram",
         # yes, these aren't cities but...
         "India", "Pakistan",
         # buyabans.com spammer uses creative variations

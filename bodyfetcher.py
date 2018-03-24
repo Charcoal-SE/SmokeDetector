@@ -57,7 +57,7 @@ class BodyFetcher:
         "travel.stackexchange.com": 1,
         "webapps.stackexchange.com": 1,
         "woodworking.stackexchange.com": 1,
-        "writers.stackexchange.com": 1,
+        "writing.stackexchange.com": 1,
         "android.stackexchange.com": 1,
         "anime.stackexchange.com": 1,
         "apple.stackexchange.com": 1,
@@ -83,10 +83,11 @@ class BodyFetcher:
         "superuser.com": 1,
         "windowsphone.stackexchange.com": 1,
         "workplace.stackexchange.com": 1,
-        "interpersonal.stackexchange.com": 1
+        "interpersonal.stackexchange.com": 1,
+        "askubuntu.com": 1
     }
 
-    time_sensitive = ["askubuntu.com", "superuser.com", "security.stackexchange.com", "movies.stackexchange.com",
+    time_sensitive = ["security.stackexchange.com", "movies.stackexchange.com",
                       "mathoverflow.net", "gaming.stackexchange.com", "webmasters.stackexchange.com",
                       "arduino.stackexchange.com", "workplace.stackexchange.com"]
 
