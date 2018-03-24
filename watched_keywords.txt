@@ -1596,7 +1596,6 @@
 1511217899	Glorfindel	jiragoggles\.com
 1511239192	Tetsuya Yamamoto	dompetpoker\.com
 1511241792	tripleee	play\.fm
-1511241808	tripleee	uplabs\.com
 1511241821	tripleee	jagobola88\.com
 1511241967	tripleee	bobslocks\.us
 1511242236	tripleee	follimen
