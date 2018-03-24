@@ -710,7 +710,6 @@
 1503575891	tripleee	08104527661
 1503576307	tripleee	zanberg(?:resources)?
 1503577451	Glorfindel	thehappybirthdaywishes\.com
-1503597206	DavidPostill	wfilter
 1503597244	DavidPostill	imfirewall
 1503614509	doppelgreener	corsoexcelonline\.com
 1503633550	tripleee	healthclinicusa\.com
