@@ -75,3 +75,4 @@ fuc?k
 tour\W?packages
 sputnik\W?international
 daily\W?news
+^Jack Hollywood$
