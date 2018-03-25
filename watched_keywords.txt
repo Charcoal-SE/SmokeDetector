@@ -710,7 +710,6 @@
 1503575891	tripleee	08104527661
 1503576307	tripleee	zanberg(?:resources)?
 1503577451	Glorfindel	thehappybirthdaywishes\.com
-1503597206	DavidPostill	wfilter
 1503597244	DavidPostill	imfirewall
 1503614509	doppelgreener	corsoexcelonline\.com
 1503633550	tripleee	healthclinicusa\.com
@@ -1596,7 +1595,6 @@
 1511217899	Glorfindel	jiragoggles\.com
 1511239192	Tetsuya Yamamoto	dompetpoker\.com
 1511241792	tripleee	play\.fm
-1511241808	tripleee	uplabs\.com
 1511241821	tripleee	jagobola88\.com
 1511241967	tripleee	bobslocks\.us
 1511242236	tripleee	follimen
