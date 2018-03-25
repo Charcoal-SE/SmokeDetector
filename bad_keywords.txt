@@ -1209,3 +1209,4 @@ xr\W?nutrition\W?clarity
 /test\W?x[-"</]
 sumer\W?kolcak
 eagle security
+bold\W?mass
