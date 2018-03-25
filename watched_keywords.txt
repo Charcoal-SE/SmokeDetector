@@ -2718,3 +2718,4 @@
 1521896676	Glorfindel	antimalwareserviceexecutable\.co
 1521973706	Glorfindel	gameconfiguration\.com
 1521991880	Byte Commander	oceansofgamess\.com
+1522001888	Glorfindel	antminerelectronics\.com
