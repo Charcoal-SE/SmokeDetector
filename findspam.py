@@ -739,7 +739,7 @@ class FindSpam:
         r"(replica[^nt]\w{5,}|\wrolex)\.(co|net|org|in(\W|fo)|us)",
         r"customer(service|support)[\w-]*?\.(co|net|org|in(\W|fo)|us)",
         r"conferences?alert[\w-]*?\.(co|net|org|in(\W|fo)|us)",
-        r"seo\.com(?!/\w)", r"\Wseo[\w-]{10,}\.(com|net|in\W)",
+        r"seo\.com(?!/\w)", r"\Wseo(?!sitecheckup)[\w-]{10,}\.(com|net|in\W)",
         r"(?<!site)24x7[\w-]*?\.(co|net|org|in(\W|fo)|us)",
         r"backlink[\w-]*?\.(com|net|de|blogspot)",
         r"(software|developers|packers|movers|logistic|service)[\w-]*?india\.(com|in\W)",
