@@ -1898,7 +1898,6 @@
 1513078265	tripleee	24\W?karat\W?gold
 1513081715	tripleee	genesis-mining\.com
 1513081781	tripleee	edge\W?testo
-1513114425	Glorfindel	bluebellplus\.in
 1513114432	Glorfindel	sparechange\.io
 1513114438	Glorfindel	prosabbir\.blogspot\.com
 1513139142	Tetsuya Yamamoto	martine-voyance\.com
