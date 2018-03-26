@@ -2719,3 +2719,4 @@
 1521973706	Glorfindel	gameconfiguration\.com
 1521991880	Byte Commander	oceansofgamess\.com
 1522001888	Glorfindel	antminerelectronics\.com
+1522037753	K.Dᴀᴠɪs	claim\W+(?:yo)?ur\W+trial
