@@ -2730,3 +2730,4 @@
 1522058988	tripleee	(?:1\W*)?844\W*821\W*5790
 1522064423	Glorfindel	medicomart\.in
 1522066819	tripleee	terrecasa\.com
+1522073957	WELZ	[8B]===*[D>]
