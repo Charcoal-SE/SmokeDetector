@@ -1170,9 +1170,9 @@ def checkpost(msg, url, alias_used='scan'):  # FIXME: Currently does not support
         response_text = "This post is already recently reported"
         if GlobalVars.metasmoke_key is not None:
             ms_link = "https://m.erwaysoftware.com/posts/by-url?url={}".format(url)  # se_link == url
-            return response_text + " [ [MS]({}) ]".format(ms_link)
+            raise CmdException(response_text + " [ [MS]({}) ]".format(ms_link))
         else:
-            return response_text + "."
+            raise CmdException(response_text + ".")
 
     if fetch_post_id_and_site_from_url(url)[2] == "answer":
         parent = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
