@@ -2722,4 +2722,4 @@
 1522037753	K.Dᴀᴠɪs	claim\W+(?:yo)?ur\W+trial
 1522039016	K.Dᴀᴠɪs	PhalluMAX
 1522040003	K.Dᴀᴠɪs	binancecustomersupport\.weebly\.com
-1522041136	K.Dᴀᴠɪs	enhances\W(?:fe)?male\Wfertility
+1522041136	K.Dᴀᴠɪs	enhances?\W(?:fe)?male\Wfertility
