@@ -2722,4 +2722,5 @@
 1522035631	K.Dᴀᴠɪs	emily\.zhang0613@gmail\.com
 1522037753	K.Dᴀᴠɪs	claim\W+(?:yo)?ur\W+trial
 1522039016	K.Dᴀᴠɪs	PhalluMAX
+1522040036	K.Dᴀᴠɪs	binance\W?support
 1522040003	K.Dᴀᴠɪs	binancecustomersupport\.weebly\.com
