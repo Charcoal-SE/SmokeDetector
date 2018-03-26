@@ -2721,3 +2721,4 @@
 1522001888	Glorfindel	antminerelectronics\.com
 1522035631	K.Dᴀᴠɪs	emily\.zhang0613@gmail\.com
 1522037753	K.Dᴀᴠɪs	claim\W+(?:yo)?ur\W+trial
+1522039016	K.Dᴀᴠɪs	PhalluMAX
