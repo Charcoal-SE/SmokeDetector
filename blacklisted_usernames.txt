@@ -77,3 +77,4 @@ sputnik\W?international
 daily\W?news
 ^Jack Hollywood$
 ^router\W+sup*ort$
+fauk\W?usa
