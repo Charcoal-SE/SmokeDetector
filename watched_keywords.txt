@@ -2728,3 +2728,4 @@
 1522048346	tripleee	ericscerri\.com
 1522056272	K.Dᴀᴠɪs	techworldlive\.com
 1522058988	tripleee	(?:1\W*)?844\W*821\W*5790
+1522064423	Glorfindel	medicomart\.in
