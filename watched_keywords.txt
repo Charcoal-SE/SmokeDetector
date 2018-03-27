@@ -2749,3 +2749,4 @@
 1522146022	CalvT븃	dumps4download\.com
 1522147847	tripleee	tru\W?life
 1522148415	CalvT븃	legalmarijuanaonlinestore\.com
+1522149656	tripleee	sure(?:lock|mdm)
