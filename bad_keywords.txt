@@ -451,8 +451,8 @@ l'?etoile\W(anti|cream)
 fungaway
 (?<=/)vivax(?=[-/<])
 nitrobuild
-8167873816
-877\W?7788969
+816\W*787\W*3816
+877\W*778\W*8969
 enduro\Wforce
 (?<=/)right\Wpick(?=[-/<])
 power\Wboost\Wxi
@@ -505,10 +505,10 @@ dermaglo
 priaboost
 x\W?cell\W?180
 derma\W?rewind
-778.9936
+778\W*9936
 pure\W?rejuve
 vaso\W?blast
-775\W?557\W?6060
+775\W*557\W*6060
 juvaclear
 snorifix
 ampedrin
@@ -543,9 +543,9 @@ herbalife
 herbal\Wvirility\Wmax
 trifecta\W?xl
 boost\W?excel
-571\W?286\W?5929
+(?:1\W*)?571\W*286\W*5929
 power\W?testo
-888\W?337\W?5333
+888\W*337\W*5333
 ^where.*hyderabad\?$
 alpha\W?testo
 clevastin
@@ -784,11 +784,11 @@ venabol
 testo\W?fuse\W?xl
 plus\W?iq\W?points
 platinum\W?light
-844\W305\W7041
+844\W*305\W*7041
 test[ -]reload
 avanti\W?skin
 8882335050
-0?808\W?281\W?8685
+0?808\W*281\W*8685
 9681701229
 firmaluxe
 hemp\Woil
@@ -1214,3 +1214,9 @@ luna\W?trim
 binance\W?support
 (?:1\W*)?844\W*816\W*0231
 keto\W?choice
+bella\W?derm
+Crazy\W?Bulk
+green\W?detox
+(?:1\W*)??628\W*203\W*5734
+joint\W?flx
+rapid\W?releaf
