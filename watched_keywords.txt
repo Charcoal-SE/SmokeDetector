@@ -2744,3 +2744,4 @@
 1522134489	tripleee	agrud\.com
 1522134581	tripleee	(?:1\W*)?800\W*392\W*9127
 1522134584	Suraj Rao	helptechnumber\.com
+1522139558	Glorfindel	pcbdesigncourse\.blogspot\.com
