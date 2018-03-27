@@ -1220,3 +1220,4 @@ green\W?detox
 (?:1\W*)??628\W*203\W*5734
 joint\W?flx
 rapid\W?releaf
+power\W?max\W?extra
