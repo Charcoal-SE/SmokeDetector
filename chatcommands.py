@@ -87,9 +87,9 @@ def isblu(user):
         else:
             return "User is not blacklisted (`{}` on `{}`).".format(uid, val)
     elif int(uid) == -2:
-        return "Error: {}".format(val)
+        raise CmdException("Error: {}".format(val))
     else:
-        return "Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`."
+        raise CmdException("Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`.")
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -108,9 +108,9 @@ def rmblu(user):
         else:
             return "User is not blacklisted."
     elif int(uid) == -2:
-        return "Error: {}".format(val)
+        raise CmdException("Error: {}".format(val))
     else:
-        return "Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`."
+        raise CmdException("Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`.")
 
 
 # --- Whitelist functions --- #
@@ -128,9 +128,9 @@ def addwlu(user):
         add_whitelisted_user((uid, val))
         return "User whitelisted (`{}` on `{}`).".format(uid, val)
     elif int(uid) == -2:
-        return "Error: {}".format(val)
+        raise CmdException("Error: {}".format(val))
     else:
-        return "Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`."
+        raise CmdException("Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`.")
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal,PyMissingTypeHints
@@ -149,7 +149,7 @@ def iswlu(user):
         else:
             return "User is not whitelisted (`{}` on `{}`).".format(uid, val)
     elif int(uid) == -2:
-        return "Error: {}".format(val)
+        raise CmdException("Error: {}".format(val))
     else:
         raise CmdException("Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`.")
 
@@ -170,9 +170,9 @@ def rmwlu(user):
         else:
             return "User is not whitelisted."
     elif int(uid) == -2:
-        return "Error: {}".format(val)
+        raise CmdException("Error: {}".format(val))
     else:
-        return "Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`."
+        raise CmdException("Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`.")
 
 
 # noinspection PyIncorrectDocstring
