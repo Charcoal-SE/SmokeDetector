@@ -442,11 +442,12 @@ def is_offensive_post(s, site, *args):
     if s is None or len(s) == 0:
         return False, ""
 
-    offensive = regex.compile(r"(?is)\b(ur\Wm[ou]m|(yo)?u suck|8={3,}D|nigg[aeu][rh]?|(ass\W?|a|a-)hole|fag(g?ot)?|"
-                              r"daf[au][qk]|(?<!brain)(mother|mutha)?fuc?k+(a|ing?|e?[rd]| off+| y(ou|e)(rself)?|"
-                              r" u+|tard)?|(bul+)?shit(t?er|head)?|(yo)?u scum|dickhead|pedo|cocksuck(e?[rd])?|"
-                              r"whore|cunt|jerk\W?off|cumm(y|ie)|butthurt|queef|(private|pussy) show|lesbo|slut+y?|"
-                              r"bitche?|(eat|suck)\b.{0,20}\b dick|dee[sz]e? nut[sz]|dumb\W?ass)s?\b")
+    offensive = regex.compile(
+        r"(?is)\b(ur\Wm[ou]m|(yo)?u suck|[8B]={3,}[D>)]|nigg[aeu][rh]?|(ass\W?|a|a-)hole|fag(g?ot)?|"
+        r"daf[au][qk]|(?<!brain)(mother|mutha)?fuc?k+(a|ing?|e?[rd]| off+| y(ou|e)(rself)?|"
+        r" u+|tard)?|(bul+)?shit(t?er|head)?|(yo)?u scum|dickhead|pedo|cocksuck(e?[rd])?|"
+        r"whore|cunt|jerk\W?off|cumm(y|ie)|butthurt|queef|(private|pussy) show|lesbo|slut+y?|"
+        r"bitche?|(eat|suck)\b.{0,20}\b dick|dee[sz]e? nut[sz]|dumb\W?ass)s?\b")
     matches = offensive.finditer(s)
     len_of_match = 0
     text_matched = []
@@ -718,10 +719,14 @@ class FindSpam:
         r"https?://(\w{5,}tutoring\w*|cheat[\w-.]{3,}|xtreme[\w-]{5,})\.",
         r"(platinum|paying|acai|buy|premium|premier|ultra|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in(\W|fo)|us)",
         r"(training|institute|marketing)[\w-]{6,}[\w.-]*?\.(co|net|org|in(\W|fo)|us)",
-        r"[\w-](courses?|training)[\w-]*?\.in/", r"\w{9}(buy|roofing)\.(co|net|org|in(\W|fo)|us)",
+        r"[\w-](courses?|training)[\w-]*?\.in/",
+        r"\w{9}(buy|roofing)\.(co|net|org|in(\W|fo)|us)",
+        # (something)health.(something)
         r"(vitamin|dive|hike|love|strong|ideal|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|"
         r"prostate)[\w-]*?health[\w-]*?\.(co|net|org|in(\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
+        # (something)cream.(something)
         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in(\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
+        # (keyword)(something)(keyword)(something).(something)
         r"(acai|advance|aging|alpha|beauty|belle|beta|biotic|body|boost(?! solution)|brain(?!tree)|burn|colon|"
         r"[^s]cream|creme|derma|ecig|eye|face(?!book)|fat|formula|geniu[sx]|grow|hair|health|herbal|ideal|luminous|"
         r"male|medical|medicare|muscle|natura|no2|nutrition|optimal|pearl|perfect|phyto|probio|rejuven|revive|ripped|"
@@ -945,7 +950,7 @@ class FindSpam:
          'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0, 'questions': False},
         # Suspicious health-related websites, health sites are exempt
-        {'regex': r"(?i)(bodybuilding|workout|fitness(?!e)|diet|perfecthealth|muscle|nutrition|"
+        {'regex': r"(?i)(bodybuilding|workout|fitness(?!e)|diet|perfecthealth|muscle|nutrition(?!ix)|"
                   r"prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)", 'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com",
                    "skeptics.stackexchange.com", "bicycles.stackexchange.com"],
