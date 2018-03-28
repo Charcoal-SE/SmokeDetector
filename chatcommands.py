@@ -430,7 +430,6 @@ def wut():
     return "Whaddya mean, 'wut'? Humans..."
 
 
-"""
 @command(aliases=["zomg_hats"])
 def hats():
     wb_start = datetime(2017, 12, 13, 0, 0, 0)
@@ -459,7 +458,6 @@ def hats():
             diff.days, daystr, hours, hourstr, minutes, minutestr, seconds, secondstr)
 
     return return_string
-"""
 
 
 # --- Block application from posting functions --- #
