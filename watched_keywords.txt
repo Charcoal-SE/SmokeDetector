@@ -2769,3 +2769,4 @@
 1522225253	Federico	assignmentland\.com
 1522235233	Glorfindel	sheikvara\.wordpress\.com
 1522235389	Glorfindel	datasparc\.com
+1522236191	Glorfindel	ritikapatel\.com
