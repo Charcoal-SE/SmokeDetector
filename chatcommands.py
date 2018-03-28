@@ -47,19 +47,6 @@ def groups():
     return None
 
 
-@command(int, whole_msg=True, privileged=True)
-def approve(msg, pr_num):
-    if is_code_privileged(msg._client.host, msg.owner.id):
-        resp = requests.post('{}/github/pr_approve/{}'.format(GlobalVars.metasmoke_host, pr_num))
-
-        if resp.status_code == 200:
-            return "Posted approval comment. PR will be merged automatically if it's a blacklist PR."
-        else:
-            return "Forwarding request to metasmoke returned HTTP {}. Check status manually.".format(resp.status_code)
-    else:
-        raise CmdException("You don't have permission to do that.")
-
-
 # --- Blacklist Functions --- #
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
 @command(str, whole_msg=True, privileged=True)
