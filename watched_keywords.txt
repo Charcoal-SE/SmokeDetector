@@ -2778,3 +2778,4 @@
 1522266111	K.Dᴀᴠɪs	(?:sum+er\Wkolcak|adam\Wbarak)
 1522268376	Federico	gaflighttracker\.com
 1522273018	K.Dᴀᴠɪs	maxproduction\d{3}@gmail\.com
+1522278147	WELZ	121techsupport\.co
