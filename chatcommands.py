@@ -553,7 +553,24 @@ def welcome(msg, other_user):
         other_user = regex.sub(r'^@*|\b\s.{1,}', '', other_user)
         raise CmdException(w_msg.format(room=msg.room.name, user=" @" + other_user, me=GlobalVars.chatmessage_prefix))
 
+        
+# noinspection PyIncorrectDocstring
+@command(str, whole_msg=True, arity=(0, 1))
+def birthday(msg, other_user):
+    """
+    Returns the welcome text
+    :param msg:
+    :param other_user:
+    :return: A string
+    """
+    b_msg = ("Happy Birthday from {me} and everyone in {room}{user}!")
+    if other_user is None:
+        raise CmdException(b_msg.format(room=msg.room.name, user="", me=GlobalVars.chatmessage_prefix))
+    else:
+        other_user = regex.sub(r'^@*|\b\s.{1,}', '', other_user)
+        raise CmdException(b_msg.format(room=msg.room.name, user=", @" + other_user, me=GlobalVars.chatmessage_prefix))
 
+        
 # noinspection PyIncorrectDocstring
 @command()
 def location():
