@@ -36,7 +36,8 @@ os.environ['CEU'] = "h"
 if ChatExchangeP is None:
     ChatExchangeP = str(input("Password: ")).strip('\r\n')
 
-persistent_arguments = list({"standby", "charcoal-hq-only", "no-chat"} & set(sys.argv))
+options = {"standby", "charcoal-hq-only", "no-chat", "no-git-user-check"}
+persistent_arguments = list(options & set(sys.argv))
 
 count = 0
 crashcount = 0
@@ -57,6 +58,20 @@ def warn(message):
 
 def error(message):
     logging.error('[NoCrash] {}'.format(message))
+
+
+# if 'no-git-user-check' in persistent_arguments:
+#     persistent_arguments.remove('no-git-user-check')
+# else:
+#     git_name = git.config('--get', 'user.name', _ok_code=[0, 1])
+#     if git_name != "SmokeDetector":
+#         logging.error('git config user.name "{0}" is wrong; '
+#                       'use no-git-user-check to ignore'.format(git_name))
+#         exit(122)
+#     git_mail = git.config('--get', 'user.email', _ok_code=[0, 1])
+#     if git_mail != "smokey@erwaysoftware.com":
+#         logging.error('git config user.email "{0}" is wrong'.format(git_mail))
+#         exit(121)
 
 
 while stoprunning is False:

@@ -7,6 +7,7 @@
 *.egg
 *.egg-info
 env/
+venv/
 dist
 build
 eggs
@@ -52,6 +53,7 @@ latestMessages.txt
 apiCalls.txt
 bodyfetcherQueue.txt
 bodyfetcherMaxIds.txt
+
 # - New format Pickle files:
 falsePositives.p
 whitelistedUsers.p
@@ -68,6 +70,8 @@ apiCalls.pickle
 bodyfetcherQueue.p
 bodyfetcherQueueTimings.p
 bodyfetcherMaxIds.p
+messageData.p
+deletionIDs.p
 
 # Settings files
 .settings/
@@ -84,8 +88,10 @@ errorlog.txt
 test/.cache/
 .cache/
 
-# Config
+# Configuration and credential files
 config
+rooms_custom.yml
+setp.sh
 
 # Ignore .DS_Store file (usually seen in Mac environments)
 .DS_Store

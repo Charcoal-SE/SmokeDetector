@@ -1,48 +1,48 @@
 baba\W?ji
 fifa.{0,20}coins?
 fifabay
-Long\W?Path\W?Tool
+long\W?path\W?tool
 # documentation: the (?!negative match) syntax won't work in the metasmoke search site
 # but it works for smoke detector.
 (?!code\W|script\W)writing services?
 tosterone
-we (offer|give out) (loans|funds|funding)
+we (offer|give out) (loans?|funds?|funding)
 skin\W?(endear|royale|cell\W?pro|opulent|ology|centric)
 (rejuvenated?|aging|aged|revyve|neuphoric|deep\Wsea|amore|luxurious|regenere|nuvita|core)\W?skin
-acne( prone)? skin
+acne(\W?prone)?\Wskin
 (skin|eye)\Wnovela
 visalia\W(?:skincare|cream)
-judi bola
-restore[ -]?samsung[ -]?data
+judi\W?(?:bola|online)
+restore\W?samsung\W?data
 swtor2credits
-death reckoning calculate
+death\Wreckoning\Wcalculate
 bam2u
-Neuro(3X|flexyn|fuse|luma|plex|ignite|lon|\Wxr)
-TesteroneXL
+neuro\W*(3X|flexyn|fuse|luma|plex|ignite|lon|xr|max)
+Testerone\W*XL
 Nitroxin
 Bowtrol
-Slim ?Genix
-Cleanse EFX
+slim\W?genix
+cleanse\W?efx
 Alpha\W?(x\W?)?(Rush|Fuel|XTRM|levo|max|prime|force\Wtesto|monster\Wadvanced|muscle|boost)
 exoslim
-Blackline Elite
-TestCore Pro
-blank(ed)? ?ATM\b( card)?
-ATM Machine Vault
-Xtreme Antler
-Maxx Test 3000
+blackline\W?elite
+testcore\W?pro
+blank(ed)?\W?ATM(\W?cards?)?
+ATM\W?machine\W?vault
+xtreme\W?antler
+maxx\W?test\W?3000
 orvigomax
-Cheap Wigs?
+cheap\W?wigs?
 jivam
-^(?s).{0,200}brain[- ]?power
-Maximum ?Shred
-black[ -]label[ -]no
+^(?s).{0,200}brain\W?power
+maximum\W?shred
+black\W?label\W?no
 bagprada
 Apowersoft
 ChatSim
-Service Solahart
+service\W?solahart
 junisse
-Profactor[ -]?T
+profactor\W?t
 (fake|novelty|quality|buy(ing)?|sell(ing)?|offer).{0,20}(passport|driver'?s? licen[cs]e|ID card|green card|residence permit|toefl|Ielts)s?
 ^.{0,200}(support|service|helpline)( phone)? number|1[ -]?[ -]?[ -]?866[ -]?978[ -]?(6819|6762)
 (mcafee|hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number
@@ -52,75 +52,74 @@ keepbrowsersafe
 pcerror-fix
 filerepairtool
 combatpcviruses
-JobsTribune
+jobstribune
 join the (great )?illuminati
-Brorsoft
-Remo Recover
+brorsoft
+remo\W?recover
 kinnaristeel
 clash of (clan|stone)s? (cheats?|tricks?|gems?)
-slumber pm
+slumber\W?pm
 bestcollegechina
 bbwdesire
 rsorder
-Shopping ?Cart ?Elite
-Easy ?Data ?Feed
+shopping\W?cart\W?elite
+easy\W?data\W?feed
 best (hotel|property) management
 eduCBA
-Solid[ -]?SEO[ -]?Tools
-maxman ?power
+solid\W?SEO\W?tools
+maxman\W?power
 niagen
 testo\W(e?x|black|ultra|muscle)
-day ?trading ?academy
+day\W?trading\W?academy
 folliplex
-yafei ?cable
-uggs ?on ?sale
-PhenQ
-Vigoraflo
-Fonepaw
-Provasil
-Slimera
-Cerebria
-Xanogen
+yafei\W?cable
+uggs\W?on\W?sale
+phenq
+vigoraflo
+fonepaw
+provasil
+slimera
+cerebria
+xanogen
 intellipaat
-Replennage
-Synagen
-Nufinity
-V[ -]?Stamina
-Gynectrol
-Adderin
-Whizz Systems?
+replennage
+synagen
+nufinity
+v\W?stamina
+gynectrol
+adderin
+whizz\W?systems?
 intellux
 viooz
 smartican
 (?<!')t\Wcomplex
 фальшивы(е|х) (деньги|денег|купюры?)
-raging lion
-retrodynamic formula
+raging\W?lion
+retrodynamic\W?formula
 ^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$
-Krojam(Soft|Cleaner)?
-FilesSearch ?Tool
+krojam(soft|cleaner)?
+filessearch\W?tool
 teksonit
 Re@d More
 Live Streaming</a
-Blackcore ?Edge
-Copy Buffett
-Push Money App
-Volive( Solutions)?
-Herbalife
-Accumass
+blackcore\W?edge
+copy\W?buffett
+push\W?money\W?app
+volive(\W?solutions?)?
+accumass
 purple\Wrhino
-Dating Coaching
+dating\W?coaching
 (dietary|muscle)\Wsupplements?
-digital marketing course
-stark trading system
-lost lover'?s?
+digital\W?marketing\W?course
+stark\W?trading\W?system
+lost\W?lover'?s?
 bring back lost love
 lost lover? back
 service proposal essay
 enetdocumentation
 okaygoods
-(love|miracle).*spell ?casters?
-black magic specialist
+(love|miracle).{120}spell ?casters?
+black\W?magic\W?specialist
 great\Wspell\Wcaster
 viagra
 cialis
@@ -132,15 +131,15 @@ Thierno(_| )?M.(_| )Sow
 maxtropin
 geniux
 we are a team of (highly|professionals)
-booty pop
-Beard Czar
-Cianix
+booty\W?pop
+beard\W?czar
+cianix
 (falcon|gladiator|tactical)\Wflashlights?
-Juvanere
+juvanere
 age-opposing
-revived\syouth
+revived\W?youth
 follinique
-muscle supplement
+muscle\W?supplement
 maxatin
 paravex
 testabolan
@@ -161,7 +160,6 @@ xtest\W(muscle|reviews?)
 inteligen
 natural\W?slim\W?life
 test\Wx\W360
-newlifeherbalclinic
 male\W?x\W?pro
 break\Wup\Wpill
 biogenic\Wxr
@@ -198,7 +196,7 @@ nitric\Wmuscle
 phytolyft
 black\Wdiamond\Wforce
 crepe\Werase
-Forever Bust
+forever\W?bust
 borealis\Wcream
 miracle\Wbust
 apex\Wplump
@@ -211,7 +209,7 @@ alphadrox
 vinetics\Wc
 soleil\Wglo
 Clariderm\WCream
-ATM hackers?
+ATM\W?hackers?
 hack\Wtool
 professional\Whack(er|ing)?s?
 gain\Wxt(reme)?
@@ -228,9 +226,8 @@ raw\Wpower\Wxl
 pantothen
 argireline
 brick\Wmuscle
-# documentation: the plus is skipped by the word boundary condition in the code
-# so we can't match that directly, but we can say "if we just skipped a plus sign"
-(?<=\+)234\d{8,14}
+#comment:234\W*(?:8032214238|8167873816|8102960248|8149470344|8133873774|8073673757|9055637784|8135790702|9051442970)
+234\W*[89][01]\d\W*\d{3}\W*\d{4,10}
 vividermix
 dsn\Wpre\Wworkout
 (?<=\+)15402277725
@@ -261,12 +258,12 @@ vigor\Wexcel
 optimal\Wrock
 slim\Wfit\W180
 azienda\Wcollagen
-testo\W?boost
+testo(?:sterone)?\W?boost(?:er|ing)?
 internal\W911
 true\Wbrilliance
 muscle\Wxtx
 test\Wboost\Welite
-gs\Wrichcopy\W360
+richcopy\W360
 collamask
 naturacel
 luminescent\Wserum
@@ -320,7 +317,6 @@ qugenix
 ampk
 regal\Wslim
 noxor
-healthherbalclinic
 zyalix
 lumivol
 avdshare
@@ -331,7 +327,7 @@ patriot\Wpower\Wgreens
 ultraderm
 colodetox
 lumaglow
-primal\W?x
+primal\W?xl?
 vigrx
 ambisom
 laleur\Wcream
@@ -367,7 +363,7 @@ retinolla
 focused\Win\Wbrain
 wrinkle\Wreducer?
 active\Wbrightening
-alpha\Wmale\Wex
+alpha\W?male(?:\W?ex)?
 hotcyberlord
 luxlift
 erectimax
@@ -379,7 +375,6 @@ vitaeyes
 neutratone
 luminis
 biocore
-testosterone\Wbooster
 visible\Wallure
 eye\Wroyale
 LinkFixer\WAdvanced
@@ -423,14 +418,12 @@ endurance\Wtest\Wx5?
 radiant\Wbloom
 epiclear\W?pro
 nuvega\W?lash
-(?:<=\+)2348032214238
 bio\W?rocket
 ideal\Wvitality
 lorevere
 5g\W?male
 instaglam
 provacyl
-herbal\Wvirility\Wmax
 natures\Wtrim
 allumiderm
 true\Wtesto\Wmax
@@ -458,9 +451,8 @@ l'?etoile\W(anti|cream)
 fungaway
 (?<=/)vivax(?=[-/<])
 nitrobuild
-8167873816
-2348167873816
-877\W?7788969
+816\W*787\W*3816
+877\W*778\W*8969
 enduro\Wforce
 (?<=/)right\Wpick(?=[-/<])
 power\Wboost\Wxi
@@ -492,10 +484,10 @@ active\W?plus
 truvitaliti
 dermalab
 expandom
-zylix\Wplus
+zylix
 Mevaqesh .*lo chelek .*olam haba
 mevaqesh
-viril\Wx
+viril\W?(?:x|tech)
 zz\W?snore
 bulk\Wsms\W(delhi|india)
 True\WTesto
@@ -513,10 +505,10 @@ dermaglo
 priaboost
 x\W?cell\W?180
 derma\W?rewind
-778.9936
+778\W*9936
 pure\W?rejuve
 vaso\W?blast
-775\W?557\W?6060
+775\W*557\W*6060
 juvaclear
 snorifix
 ampedrin
@@ -531,7 +523,6 @@ pdfsolution
 dermabellix
 astraea\W?(eye\W?)?serum
 dr\.?\W?aiwekhoe
-2348102960248
 allerless
 SeverTek
 amabella
@@ -547,32 +538,30 @@ zyklon
 skin\W?fresh\W?md
 renuvica
 Max\WTest\WUltra
-2348149470344
-herbal (doctor|center|centre)
+herbal ?(doctor|center|centre|clinic)
+herbalife
+herbal\Wvirility\Wmax
 trifecta\W?xl
 boost\W?excel
-571\W?286\W?5929
+(?:1\W*)?571\W*286\W*5929
 power\W?testo
-888\W?337\W?5333
+888\W*337\W*5333
 ^where.*hyderabad\?$
 alpha\W?testo
 clevastin
 xymax
 neuro\W?boost
 prostagenix
-shred\W?fx
+shred\W?(?:fx|xl)
 male\W?onyx
-2348133873774
 muscle\W?x\W?te?st
 liftesse
 bonte\W?(advanced|eye\W?serum)
 steelcut\W?testosterone
 پنتاکس
 allurifi
-2349055637784
 kyto\W?trim
 activ\W?forte
-ifirmationantiagingcream\.com
 proactol
 neftegazagent
 elixir\Wrevolution
@@ -602,7 +591,7 @@ test\W?1\W?fusion
 jeune\W?fleur
 xenical
 [$]exual
-vala\W?(rejuvenating\W?)?serum
+vala\W?(?:(?:rejuvenating|facial\W?))*serum
 extensive\W?ageless
 duoslim
 credit\W?repair
@@ -656,11 +645,9 @@ perlelux
 muira\W?puama
 maca\W?root
 wingsio
-mockplus
 la\W?mer\W?timeless
 vtrex
 pro\W?factor\W?t\W?2000
-2348073673757
 t\W?max\W?complex
 cerebral\W?x
 levira
@@ -677,7 +664,7 @@ hyper\W?fit\W?slim
 alpha\W?hard\W?reload
 nouvelle\W?beaute
 brain\W?hacker
-amd\?Walpha\W?regain
+amd\W?alpha\W?regain
 slimdera
 prime\W?ageless
 biofit
@@ -688,14 +675,12 @@ rarete
 divine\W?cbd
 pure\W?force\W?x
 vedda\W?blood\W?sugar
-beaute\W?lift
+beaute\W?(?:lift|facial)
 hemptif
 menxcell
 nitro\W?grit
 aurora\Wbrite
 lumaslim
-testo\W?booster
-trimbiofit
 glow\W?eternal
 apex\W?booty
 performx
@@ -733,4 +718,509 @@ batch\Wrename\Wfiles\Wtool
 gclub
 hyprshred
 Als\W?trailers
-jolie\W?derme
+jolie\W?derm[ae]
+megaxxl
+extagen
+zmass
+thrive\W?max
+max\W?rise
+prima\W?lift\W?skin
+muscle\W?boost\W?x
+luna\W?(?:il)?luminate
+5\W?hour\W?force
+votofel
+tone\W?360
+super\W?trim\W?500
+silqueskin
+serafina\W?deluxe
+vigostren
+alpha\W?xl?\W?(?:boost(?:er)?|factor)
+androforce\W?x10
+folicillium
+invigorate\W?r?x
+alluraluxe
+lejuve
+endozyn
+boost\W?rx
+euphoria\W?anti\W?aging
+r\Whub
+liquid\W?tree
+puravida
+le\W?juve
+Pure\W?Radiance
+neurovarium
+bioregen
+uneeq
+derma\W?boost\W?360
+lutrevia
+xtraperf
+cbd\W?pure
+neuactive
+force\W?fit\W?xl
+youthful\W?balance\W?serum
+dolce\W?vita\W?cream
+cbd\W?oil
+le\W?allure
+sinrex
+majestic\W?slim
+zenith\W?sleep
+serafina\W?cream
+genesis\W?investing\W?system
+adult\W?friend\W?finder
+ziladerm
+apex\W?vitality
+revive\W?cbd
+simple\W?comfort\W?cbd
+vrdhhigra
+zamoura
+elixir\W?neuro\W?pro
+cla\W?safflower
+decollage
+impanix
+nitro\W?max
+androdrox1?
+qute\W?balance
+venabol
+testo\W?fuse\W?xl
+plus\W?iq\W?points
+platinum\W?light
+844\W*305\W*7041
+test[ -]reload
+avanti\W?skin
+8882335050
+0?808\W*281\W*8685
+9681701229
+firmaluxe
+hemp\Woil
+blue\W?fortera
+radiant\W?revive
+derma\W?luminous
+test\W?ultimate
+memory\W?boost\W?xl
+musconv
+collagen\W?retinol
+avella\W?serum
+zyklo?n.*(introduction|delivery|device)
+ang\ ang
+p(eni|nei|enni|eeni|ein)s?\ size
+vars\W?performance
+rapiture
+tressurge
+ephamere
+cannabinoid\W?complex
+body\W?slim\W?down
+pusys
+((p[eni]{3,4}s{1,2})|(d[ick]{2,4})|pussy)\W(is\W)?\.?[0-9]+\.?([0-9]+)?\W?(in|inch(es)?|cm|centimet(er|re)s?)
+fukc(ing)?
+truewell
+activguard
+zygenx
+fortera
+claire\W?hydrafirm
+testo\W?fuel
+super\W?cbd
+suavpele
+(?:1\W*)?317\W*794\W*1276
+alpha\W?burst(?:\W?n[0o]\W?2)?
+cyberwizard
+buysupplement
+memory\W?repair\W?protocol
+numax\W?test\W?xt
+vyalis\W?rx
+duro\W?max
+emior
+agen\W*bola
+brosway
+ulti\W?power
+jelq(?:ing)?
+vitrixa
+(?:1\W*)?844\W*225\W*4691
+hermusa
+kotolena\W?cream
+andro\W?xl
+radiant\W?beauty\W?cream
+rapid\W?lift\W?fx
+tru\W?testo
+melatrol
+power\W?muscle\W?blast
+avella
+health\W?supplements\W?reviews
+zmax\W?male
+platinum\W?cleanse\W?xl
+loriax
+krivtsovoilgasconsultant
+vyantix?(?:\W?rx)?
+slim\W?hca
+aphroditera
+biotrim(?:\W?(?:e?xtreme|lab(?:oratorie)?s))?
+xtrcut
+dermiva
+.{0 12}loanfirm@gmail\.com
+testo\W?ampx
+hca\W?slim
+hot\W?goat
+slim\W?fire
+endurolast
+invento\W?(?:accounting|software)
+leanbac
+hair\W?bloom
+wow\W?facial\W?mask
+cleargenix
+lux\W?dermatologie
+testovate
+bio\W?blend
+titanax
+mp3\W?song\W?download
+cannabinoid\W?plus
+clarity\W?x
+derma\W?mira
+rapid\W?boost
+grs\W?ultra
+donna\W?belle
+max\W?trim(?:\W?365)?
+ultra\W?boost
+revital\W?eyes
+phyto\W?power\W?caps
+(?:1\W*)?540\W*227\W*7725
+xytropin
+trim\W?genesis
+impact\W?ultra
+pure\W?prime
+\w*cyberwiz\w*@gmail\.com
+le\W?fior
+bellaire\W?skin
+alpha\W?king
+/phone-mirror(?=[/"<-]|$)
+bio\W?slim
+shanti\W?cbd
+steel\W?focus
+sky\W?test
+apk-download-youtube-downloader
+kimotti
+(?:1\W*)?888\W*787\W*9274
+t\W?core\W?plus
+testo\W?rev
+max\W?potent
+nu\W?vigor(?:\W?rx)?
+greenlyte(?:\W?forskolin)?
+clarasoft
+perfect\W?prime\W?face
+mobotak
+elite\W?350
+0?44\W*6565\W*6523
+glamor\W?gold
+royal\W?kiraz
+simply\W?flawless\W?cream
+trim\W?fit
+apple\W?stem\W?cell
+(?<=/)hdt(?=[-/<"]|$)
+(?<=/)vcor(?=[-/<"]|$)
+brain\W?360
+rejuvilane
+(?:1\W*)?408\W*818\W*9369
+phenlean
+regenex
+quantinsti\.com
+vigorous\W?extend
+hotcyberlord425\w*@
+enhance\W?xl
+Extreme\WFit\W180
+everfirm
+delta\W?mass
+brain\W?boost(?:er)?
+eva\W?daily
+whitening\W?kit
+(?:1\W*)?800\W*826\W*8068
+(?:1\W*)?858\W*412\W*7054
+male\W?formula
+ultra\W?muscle(?:\W?testo)?
+roots\W?revive
+testoland
+hydraxil
+353\W*21\W*234\W*0006
+synapsyl
+zarrah
+0?800\W*0\W*119\W*116
+overthecounter
+simply\W?flawless
+mohit\.sharma6611
+max\W?e?xtreme
+refollium
+cilexin
+essential\W?trim(?:\W?gc)?
+ez\W*battery
+https?://\S+\.(?:live|zone|band)/[^/]*-mp3-(musica-baixar|cancion-descargar|(?:song-)?download)
+platinum\W*xwl
+new\W*age\W*serum
+noxitril
+boli\W?testo\W?boost
+troxin
+Pабoта для жeлaющих сaйт
+15 ООО рублей в день
+ultra\W?omega
+the\W?lost\W?ways
+nba\W?live\W?mobile
+(?:1\W*)?925\W*318\W*5176
+dermagen(?:\W?iq)?
+slimforia
+bellalumi
+slim\W?plus
+erezan
+the\W*lost\W*ways?
+We offer only original high-quality counterfeit currency NOTES
+foods\W?that\W?help\W?you\W?sleep
+xaxtus
+t\W?boost
+(?:1\W*)?844\W*205\W*0712
+hydra\W?claire
+piracetol
+robust\W?e?xtreme
+purely\W?vibrant
+meta\W?labs
+(?:1\W*)?310\W*359\W*9685
+andro\W?test
+mega\W?slim
+endow\W?max
+nugenix
+healthy\W?bloom
+focus\W?zx\W?1
+invisaderm
+trembolex
+(?:0?4\W*)?8126\W*1500
+virilate
+bemass
+blue\Wbeach\Wyouth\Wscience
+derm\W?vitale
+bella\W?restor
+9530069900
+synoptic\W?boost
+libomax
+lumineux
+renuvaline
+nexacell
+(?:1\W*)?417\W*323\W*2635
+andbrain\.com
+cyberwizardhack
+chocolite
+master\W?testo
+derma\W?active
+mass\W?cut\W?pro
+zoroc
+nutralu
+nouveau\W?restore?
+enduromax
+(?:le\W?)?reviva
+colastrina
+alpha\W?pro(?:\Wmuscle)?
+bioflex
+ageless\W?youth
+keto\W?burn(?:\W?protocol)?
+nikon-d50-dslr-camera-24-1mp-1080i-video-3-0-vari-angle-lcd
+write-my-dissertation
+apex\W?mastermind
+rejuva\W?brain
+dissertation-writing-services
+zuratex
+tribulus\W?terrestris
+instantly\W?ageless
+testro\W?t3
+slimlast
+core\W?max(?:\W?ultra)?
+enduraflex
+Oil\W?Review
+krasa\W?(anti|cream|skin)
+blockchaininvestio
+titan\W?blast
+male\W?peak(?:\W?ultra)?
+(?:immune\W?)?ultra\W?turmeric
+(?<=[/-])fxm(?=[-<"])
+testosup
+true\W?slim
+zyplex
+prostalgene
+beezmax
+Testo720
+jouliage
+testosterone\W?complex
+primal\W?factor
+gold\.raiditem
+alpha\W?monster\W?blast
+vexan
+propecia
+adelina
+ss\W?boost
+levimax
+maxx\W?boost
+keto\W?boost
+individualproxy
+tableau\W?training
+fitwaypoint
+testo\W?genesis
+pure\W?ceramides
+testo\W?ss
+slim\W?quick
+cct55
+lohri\W?bumper\W?2018
+luxury\W?lean
+erx\W?pro
+php\W?training\W?in\W?chennai
+radiancy\W?serum
+thrustuline\W?boost
+viritenz
+luxe\W?revival
+cur\W?q\W?flex
+andro\W?testin
+viabol\W?rx
+calminax
+melvin\W?hines
+folicell\W?hair\W?therapy
+Supreme\W?Booste?r
+Testionatex
+muscle\W?nit
+decabolan
+Belle\W?Silk
+tryvex[ai]n
+renew\W?elle
+juvenique
+Glovella
+neftegaz\W?agent
+Avoir\W?Derm
+v\W?tight\W?gel
+brute\W?gains
+Supreme\W?Choice\W?CBD
+Cell?uRaid
+primacin\W?xl
+Stami\W?Max
+tst\W?11
+revoria
+Erogen\W?X
+(dick|cum).?juice
+Proflexoral
+probiox
+androdna
+velaire
+(?<=/)xflo(?:$|[/?])
+flexinall
+phytolast
+andras\Wfiber
+apower\W?(manager|mirror|pdf|rec|recover)
+video\W?download\W?capture
+streaming\W?(audio|video)\W?recorder
+showmore\W?screen\W?recorder
+windows\W?shutdown\W?assistant
+mxi\W?coders?
+reducelant
+lipovyn
+trilixton
+slim\W?trim
+(?<=[/?])mrx([-/"<])
+suplementodiet
+tevida
+total\W?radiance
+age\W?repair
+sg\W?11\W?brain
+instarect
+ultimate\W?slim
+(?:1\W?)?855\W*559\W*8711
+slim\W?trim\W?2000
+real\W?exam\W?dumps
+windows\W?taskbar\W?fix
+sell\W?old\W?used\W?bikes
+herzolex
+neogelio\W?mask
+vortaxel
+alibaba\W*cloud
+# ^^^ see https://meta.stackoverflow.com/a/363426/5958455
+lyaxtin
+nutrio2
+darkwebsolutions
+agen\W?poker
+situs\W?poker
+renux
+provitazol
+cbd\W?gummy\W?bears?
+juneau\W?skin
+testo\W?xxl
+gorilla\W?ultra\W?pump
+tinnitus\W?911
+density\W?vaso
+ph375
+primal\W?alpha\W?beast
+barbarian\W?xl
+male\W?liberator
+james\W?rueben\d*
+tryvix
+8\W?ball\W?pool\W?hack
+l\W?arginine
+force\W?factor\W?truflow
+drone\W?720x
+bellanu\W?cream
+bellarina\W?cream
+elite\W?biotics
+focal\W?point\W?iq
+casino\W?(?:\w{0,8}\W?)?online
+up\W?a\W?cup
+le\W?derme\W?luxe
+essencia
+nitronemax
+illuminosity
+fucoxanthin
+nitridex
+gainxtreme
+enjoyllery
+(?:7\W*)?926\W*503\W*65\W*51
+testo\W?master
+vivrax
+testo\W?ram
+boost\W?perform\W?xl
+seo\W*services
+vidhigra
+nuallura
+nitric\W?boost\W?xl
+zdorov\W?propolis
+super\W?boost\W?perform\W?xl
+vita\W?x
+keto\W?trim
+ropaxin
+cognivex
+hydrox\W?slim
+vigoriax
+auto\W?link\W?international
+xlr8\W?plus
+testo\W?pump
+flora\W?spring
+zenista
+enzo\W?cassino
+assure\W?hair
+3\W*463\W*119\W*7525
+dermology
+prime\W?energy
+fxx\W?me
+mega\W?boost\W?intense\W?xl
+rock\W?hard
+detox\W?my\W?mac
+oxinova
+steel\W?rx
+dr\W?mack
+bellamia
+xr\W?nutrition\W?clarity
+9982201414
+/dubai-city[/"<]
+/test\W?x[-"</]
+sumer\W?kolcak
+eagle security
+bold\W?mass
+luna\W?trim
+binance\W?support
+(?:1\W*)?844\W*816\W*0231
+keto\W?choice
+bella\W?derm
+Crazy\W?Bulk
+green\W?detox
+(?:1\W*)??628\W*203\W*5734
+joint\W?flx
+rapid\W?releaf
+power\W?max\W?extra
+al\W?sharq\W?alawsat
+Kurdish\W?YPG
+Kurdish\W?militant
