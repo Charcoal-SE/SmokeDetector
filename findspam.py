@@ -673,7 +673,7 @@ def mevaqesh_troll(s, *args):
 
 
 def turkey(s, *args):
-    s = regex.search("<p>(\w{4,20})</p>$", s.lower())
+    s = regex.search("<p>(.{4,20})</p>$", s.lower())
 
     if not s:
         return False, ""
