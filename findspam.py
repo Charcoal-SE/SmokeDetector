@@ -48,7 +48,7 @@ SE_SITES_DOMAINS = ['stackoverflow.com', 'askubuntu.com', 'superuser.com', 'serv
 
 if GlobalVars.perspective_key:
     PERSPECTIVE = "https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=" + GlobalVars.perspective_key
-    PERSPECTIVE_THRESHOLD = 0.5  # aggressive
+    PERSPECTIVE_THRESHOLD = 0.85  # conservative
 
 # Flee before the ugly URL validator regex!
 # We are using this, instead of a nice library like BeautifulSoup, because spammers are
@@ -1339,10 +1339,10 @@ class FindSpam:
                         if matched_title:
                             why["title"].append(u"Title - {}".format(why_post))
                             result.append(rule['reason'].replace("{}", "title"))
-                        elif matched_username:
+                        if matched_username:
                             why["username"].append(u"Username - {}".format(why_post))
                             result.append(rule['reason'].replace("{}", "username"))
-                        elif matched_body:
+                        if matched_body:
                             why["body"].append(u"Post - {}".format(why_post))
                             result.append(rule['reason'].replace("{}", "answer" if post.is_answer else "body"))
                     else:
