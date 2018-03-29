@@ -435,6 +435,7 @@ stackoverflow.com:
 
     msg_types:
       - site-stackoverflow.com
+      - delay
 
     privileges:
       - 1849664  # Undo
