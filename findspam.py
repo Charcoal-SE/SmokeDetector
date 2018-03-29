@@ -60,6 +60,8 @@ URL_REGEX = regex.compile(
     r"""*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.UNICODE)
 
 UNIFORM = math.log(1 / 26)
+UNIFORM_PRIOR = math.log(1 / 5)
+
 ENGLISH = {
     'a': -2.5050685416119527,
     'b': -4.205052684206522,
@@ -88,6 +90,7 @@ ENGLISH = {
     'y': -3.9251082449768013,
     'z': -7.208860371766058
 }
+ENGLISH_PRIOR = math.log(4 / 5)
 
 
 def levenshtein(s1, s2):
@@ -678,15 +681,15 @@ def turkey(s, *args):
     if not s:
         return False, ""
 
-    prior1 = 1
-    prior2 = 1
+    p1 = ENGLISH_PRIOR
+    p2 = UNIFORM_PRIOR
 
     for symbol in s[1]:
         if symbol in ENGLISH:
-            prior1 += ENGLISH[symbol]
-            prior2 += UNIFORM
+            p1 += ENGLISH[symbol]
+            p2 += UNIFORM
 
-    return prior2 > prior1, "match: {}, prior1: {}, prior2: {}".format(s[1], prior1, prior2)
+    return p2 > p1, "match: {}, p1: {}, p2: {}".format(s[1], p1, p2)
 
 
 load_blacklists()
