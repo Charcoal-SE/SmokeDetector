@@ -1223,3 +1223,4 @@ rapid\W?releaf
 power\W?max\W?extra
 al\W?sharq\W?alawsat
 Kurdish\W?YPG
+Kurdish\W?militant
