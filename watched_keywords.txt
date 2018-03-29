@@ -2785,3 +2785,4 @@
 1522321659	Glorfindel	turk1sh
 1522323516	Glorfindel	touristvisaonline\.com
 1522325690	Glorfindel	chavegatech\.com
+1522326260	Glorfindel	turchia
