@@ -126,6 +126,7 @@ def handle_spam(post, reasons, why):
 
         log('debug', GlobalVars.parser.unescape(s).encode('ascii', errors='replace'))
         datahandling.append_to_latest_questions(post.post_site, post.post_id, post.title)
+        GlobalVars.deletion_watcher.subscribe(post_url)
 
         for reason_count in range(5, 2, -1):  # Try 5 reasons, then 4, then 3
             reason = ", ".join(reasons[:reason_count])
@@ -148,8 +149,6 @@ def handle_spam(post, reasons, why):
         else:
             chatcommunicate.tell_rooms(message, ("all", "site-" + post.post_site),
                                        without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
-
-        GlobalVars.deletion_watcher.subscribe(post_url)
     except:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         excepthook.uncaught_exception(exc_type, exc_obj, exc_tb)
