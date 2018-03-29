@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # noinspection PyCompatibility
 
+import math
 import regex
 from difflib import SequenceMatcher
 from urllib.parse import urlparse
@@ -57,6 +58,36 @@ URL_REGEX = regex.compile(
     r"""(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))"""
     r"""|(?:(?:[a-z\u00a1-\uffff0-9]-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-?)"""
     r"""*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.UNICODE)
+
+UNIFORM = math.log(1 / 26)
+ENGLISH = {
+    'a': -2.5050685416119527,
+    'b': -4.205052684206522,
+    'c': -3.5820000924868403,
+    'd': -3.157545569716595,
+    'e': -2.063410724607308,
+    'f': -3.8040658639230536,
+    'g': -3.904550990589445,
+    'h': -2.797865505424574,
+    'i': -2.6641290140442817,
+    'j': -6.482487543577793,
+    'k': -4.863940914945452,
+    'l': -3.2126452751175645,
+    'm': -3.7272045684356043,
+    'n': -2.695775840226822,
+    'o': -2.589334267397226,
+    'p': -3.948168452064499,
+    'q': -6.959048573369688,
+    'r': -2.8155797340448765,
+    's': -2.7603439958233444,
+    't': -2.4017426645272644,
+    'u': -3.5906644066169813,
+    'v': -4.627415794935411,
+    'w': -3.7465085669505727,
+    'x': -6.502290170873972,
+    'y': -3.9251082449768013,
+    'z': -7.208860371766058
+}
 
 
 def levenshtein(s1, s2):
@@ -641,6 +672,23 @@ def mevaqesh_troll(s, *args):
         return False, ""
 
 
+def turkey(s, *args):
+    s = regex.search("<p>(\w{4,20})</p>$", s.lower())
+
+    if not s:
+        return False, ""
+
+    prior1 = 1
+    prior2 = 1
+
+    for symbol in s[1]:
+        if symbol in ENGLISH:
+            prior1 += ENGLISH[symbol]
+            prior2 += UNIFORM
+
+    return prior2 > prior1, "match: {}, prior1: {}, prior2: {}".format(s[1], prior1, prior2)
+
+
 load_blacklists()
 
 
@@ -1166,6 +1214,9 @@ class FindSpam:
         {'regex': r"^\/.*\/$", 'all': True, 'sites': [], 'reason': "title starts and ends with a forward slash",
          'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
          'max_rep': 1, 'max_score': 0},
+        {'method': turkey, 'all': False, 'sites': ['stackoverflow.com'], 'reason': "luncheon meat detected",
+         'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
+         'max_rep': 21, 'max_score': 0},
         #
         # Category: other
         # Blacklisted usernames
