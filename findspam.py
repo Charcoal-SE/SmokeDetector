@@ -62,7 +62,11 @@ URL_REGEX = regex.compile(
 UNIFORM = math.log(1 / 26)
 UNIFORM_PRIOR = math.log(1 / 5)
 
+# A guess
+NUMBER_P = math.log(1 / 5000)
 ENGLISH = {
+    # source: https://en.wikipedia.org/wiki/Letter_frequency#Relative_frequencies_of_letters_in_the_English_language
+    # 'letter': math.log(value from table)
     'a': -2.5050685416119527,
     'b': -4.205052684206522,
     'c': -3.5820000924868403,
@@ -88,7 +92,18 @@ ENGLISH = {
     'w': -3.7465085669505727,
     'x': -6.502290170873972,
     'y': -3.9251082449768013,
-    'z': -7.208860371766058
+    'z': -7.208860371766058,
+    # not from Wikipedia
+    '0': NUMBER_P,
+    '1': NUMBER_P,
+    '2': NUMBER_P,
+    '3': NUMBER_P,
+    '4': NUMBER_P,
+    '5': NUMBER_P,
+    '6': NUMBER_P,
+    '7': NUMBER_P,
+    '8': NUMBER_P,
+    '9': NUMBER_P
 }
 ENGLISH_PRIOR = math.log(4 / 5)
 
