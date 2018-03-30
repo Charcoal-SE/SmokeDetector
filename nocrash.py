@@ -31,8 +31,6 @@ ChatExchangeP = os.environ.get('ChatExchangeP')
 if ChatExchangeU is None:
     ChatExchangeU = str(input("Username: ")).strip('\r\n')
 
-os.environ['CEU'] = "h"
-
 if ChatExchangeP is None:
     ChatExchangeP = str(input("Password: ")).strip('\r\n')
 
@@ -46,7 +44,8 @@ ecode = None  # Define this to prevent errors
 
 # Make a clean copy of existing environment variables, to pass down to subprocess.
 environ = os.environ.copy()
-
+environ['ChatExchangeU'] = ChatExchangeU
+environ['ChatExchangeP'] = ChatExchangeP
 
 def log(message):
     logging.info('[NoCrash] {}'.format(message))
