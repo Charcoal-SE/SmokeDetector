@@ -9,6 +9,7 @@ import subprocess as sp
 from time import sleep
 import logging
 import sys
+from getpass import getpass
 if 'windows' in str(platform.platform()).lower():
     # noinspection PyPep8Naming
     from classes import Git as git
@@ -29,12 +30,10 @@ ChatExchangeU = os.environ.get('ChatExchangeU')
 ChatExchangeP = os.environ.get('ChatExchangeP')
 
 if ChatExchangeU is None:
-    ChatExchangeU = str(input("Username: ")).strip('\r\n')
-
-os.environ['CEU'] = "h"
+    ChatExchangeU = input("Username: ").strip('\r\n')
 
 if ChatExchangeP is None:
-    ChatExchangeP = str(input("Password: ")).strip('\r\n')
+    ChatExchangeP = getpass("Password: ").strip('\r\n')
 
 options = {"standby", "charcoal-hq-only", "no-chat", "no-git-user-check"}
 persistent_arguments = list(options & set(sys.argv))
@@ -46,6 +45,8 @@ ecode = None  # Define this to prevent errors
 
 # Make a clean copy of existing environment variables, to pass down to subprocess.
 environ = os.environ.copy()
+environ['ChatExchangeU'] = ChatExchangeU
+environ['ChatExchangeP'] = ChatExchangeP
 
 
 def log(message):
