@@ -482,7 +482,7 @@ def is_offensive_post(s, site, *args):
         r" u+|tard)?|(bul+)?shit(t?er|head)?|(yo)?u(r|'?re)? (gay|scum)|dickhead|pedo|cocksuck(e?[rd])?|"
         r"whore|cunt|jerk\W?off|cumm(y|ie)|butthurt|queef|(private|pussy) show|lesbo|slut+y?|"
         r"bitche?|(eat|suck|throbbing|sw[oe]ll(en|ing)?)\b.{0,20}\b (cock|dick)|dee[sz]e? nut[sz]|"
-        r"dumb\W?ass)s?|wet\W?pussy?|shot\W?my\W?(hot\W?)?load\b")
+        r"dumb\W?ass|wet\W?pussy?|shot\W?my\W?(hot\W?)?load)s?\b")
     matches = offensive.finditer(s)
     len_of_match = 0
     text_matched = []
