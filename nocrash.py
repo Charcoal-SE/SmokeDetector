@@ -47,6 +47,7 @@ environ = os.environ.copy()
 environ['ChatExchangeU'] = ChatExchangeU
 environ['ChatExchangeP'] = ChatExchangeP
 
+
 def log(message):
     logging.info('[NoCrash] {}'.format(message))
 
