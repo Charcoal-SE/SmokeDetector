@@ -1224,3 +1224,4 @@ power\W?max\W?extra
 al\W?sharq\W?alawsat
 Kurdish\W?YPG
 Kurdish\W?militant
+high\W<i>tech\W</i>cbd
