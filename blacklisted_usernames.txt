@@ -79,3 +79,4 @@ daily\W?news
 ^router\W+sup*ort$
 fauk\W?usa
 michael\W?david\W?mills
+Hurriyet\W?Daily\W?News
