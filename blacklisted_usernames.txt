@@ -9,11 +9,11 @@ dlqudals
 ^[a-z]+jiibond$
 Marlin Woods
 xiguai
-Dr\. Madonna
+Dr\.? Madonna
 Pro Max
 ^hl12
 defort essid
-^pus(sy)?$
+^pus+y?$
 radlelgl
 Anonymous\WTeacher
 Satyajay\WMandal
