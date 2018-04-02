@@ -2819,3 +2819,4 @@
 1522668128	Glorfindel	jammer-buy\.com
 1522681414	K.Dᴀᴠɪs	drink\W(?:it'?s|my|(?:yo)ur)\W?piss
 1522686099	K.Dᴀᴠɪs	you['re]{0,3}\Wstupid
+1522690945	K.Dᴀᴠɪs	New\W?night\W?escorts
