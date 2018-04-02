@@ -2818,3 +2818,4 @@
 1522667709	Glorfindel	office365import\.com
 1522668128	Glorfindel	jammer-buy\.com
 1522681414	K.Dᴀᴠɪs	drink\W(?:it'?s|my|(?:yo)ur)\W?piss
+1522686099	K.Dᴀᴠɪs	you['re]{0,3}\Wstupid
