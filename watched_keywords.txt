@@ -2822,3 +2822,4 @@
 1522690945	K.Dᴀᴠɪs	New\W?night\W?escorts
 1522698359	K.Dᴀᴠɪs	(?:listen|buy|purchase|stream|view|grab)\W(?:to\W)?my.{0,20}album
 1522701205	NobodyNada	broxer\.com
+1522730602	WELZ	biglobal\.io
