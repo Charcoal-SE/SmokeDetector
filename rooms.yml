@@ -553,3 +553,4 @@ stackoverflow.com:
     msg_types:
       - site-stackoverflow.com
       - site-askubuntu.com
+      - experimental
