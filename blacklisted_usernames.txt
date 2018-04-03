@@ -1,7 +1,7 @@
 ^troll$
 tejveer ?iq
 ser?vice pemanas?
-\bnigg[aeu][rh]?
+\bni*g+[aeu]*[rh]?
 \b(fuck(er|ing)?|penis)\b
 ^\w{0,3}w.{0,2}ng.?d.{0,2}ng\w{0,3}$
 dlqudals
