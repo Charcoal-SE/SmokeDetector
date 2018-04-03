@@ -661,7 +661,7 @@ def strip_urls_and_tags(string):
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def mostly_dots(s, *args):
     if not s:
-        return
+        return False, ""
 
     # Strip code blocks here rather than with `stripcodeblocks` so we get the length of the whole post
     body = regex.sub("(?s)<pre>.*?</pre>", "", s)
