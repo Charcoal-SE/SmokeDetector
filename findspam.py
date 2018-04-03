@@ -659,20 +659,17 @@ def strip_urls_and_tags(string):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def mostly_dots(s, site, *args):
-    body = s
-    # To ensure the length calculation is correct
-    body_length = len(strip_urls_and_tags(s))
-
-    body = regex.sub("(?s)<pre>.*?</pre>", "", body)
+def mostly_dots(s, *args):
+    # Strip code blocks here rather than with `stripcodeblocks` so we get the length of the whole post
+    body = regex.sub("(?s)<pre>.*?</pre>", "", s)
     body = regex.sub("(?s)<code>.*?</code>", "", body)
-    # Strip tags AFTER code blocks are stripped
+
     body = strip_urls_and_tags(body)
 
     dot_count = len(regex.findall(r"\.", body))
 
     if body_length and dot_count / float(body_length) >= 0.4:
-        return True, u"Post contains {} dots out of {} characters".format(dot_count, body_length)
+        return True, u"Post contains {} dots out of {} characters".format(dot_count, len(s))
     else:
         return False, ""
 
