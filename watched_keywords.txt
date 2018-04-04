@@ -2836,3 +2836,4 @@
 1522827757	Glorfindel	oakyweb\.com
 1522830104	Glorfindel	informaticscommerce\.com
 1522831473	Glorfindel	mendooutdoors\.com
+1522831835	Glorfindel	devopssuccess\.blogspot\.in
