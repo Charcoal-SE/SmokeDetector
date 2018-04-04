@@ -88,7 +88,8 @@ class Metasmoke:
 
         message = data['message']
         if isinstance(message, Iterable):
-            if "message" in message and (not message['message'].startswith('New metasmoke user') or random.randint(0, 2) == 0):
+            if "message" in message and (not message['message'].startswith('New metasmoke user') 
+                                         or random.randint(0, 2) == 0):
                 chatcommunicate.tell_rooms_with("metasmoke", message['message'])
             elif "exit" in message:
                 os._exit(message["exit"])
