@@ -2844,3 +2844,4 @@
 1522853853	Glorfindel	cloudcall365\.co
 1522860087	K.Dᴀᴠɪs	teleseryetv\.me
 1522862323	K.Dᴀᴠɪs	jasadomino\.com
+1522862995	Glorfindel	cryptocurrency\W?trader
