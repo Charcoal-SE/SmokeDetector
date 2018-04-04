@@ -2838,3 +2838,4 @@
 1522831473	Glorfindel	mendooutdoors\.com
 1522831835	Glorfindel	devopssuccess\.blogspot\.in
 1522832376	A J	agen388\.org
+1522838453	Glorfindel	earthscience\d+\.wordpress\.com
