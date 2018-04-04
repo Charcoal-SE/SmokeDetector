@@ -1226,3 +1226,4 @@ Kurdish\W?YPG
 Kurdish\W?militant
 high\W*tech\W*cbd
 foligen
+male\W?booster
