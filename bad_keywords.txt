@@ -1230,3 +1230,4 @@ male\W?booster
 anamax
 invigorise
 o\W?slim
+cortyx\W?clarity
