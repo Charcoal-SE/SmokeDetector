@@ -2846,3 +2846,4 @@
 1522862323	K.Dᴀᴠɪs	jasadomino\.com
 1522862995	Glorfindel	cryptocurrency\W?trader
 1522899276	K.Dᴀᴠɪs	(?:(?:yo)ur|my)\W(?:di|co)[ck]*s?\b
+1522902810	tripleee	cervello
