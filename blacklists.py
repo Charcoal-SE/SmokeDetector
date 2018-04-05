@@ -54,9 +54,9 @@ class BasicListParser(BlacklistParser):
 
         with open(self._filename, 'r', encoding='utf-8') as f:
             lines = f.readlines()
-            for i, x in enumerate(lines):
-                if item in x.lower():
-                    return True, i + 1
+            for i, x in enumerate(lines, start=1):
+                if item == x.lower().rstrip('\n'):
+                    return True, i
 
         return False, -1
 
