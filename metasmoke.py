@@ -21,7 +21,6 @@ import chatcommunicate
 from helpers import log, only_blacklists_changed
 from gitmanager import GitManager
 from blacklists import load_blacklists
-import random
 
 
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
@@ -88,8 +87,7 @@ class Metasmoke:
 
         message = data['message']
         if isinstance(message, Iterable):
-            if "message" in message and (not message['message'].startswith('New metasmoke user') or
-                                         random.randint(0, 2) == 0):
+            if "message" in message:
                 chatcommunicate.tell_rooms_with("metasmoke", message['message'])
             elif "exit" in message:
                 os._exit(message["exit"])
