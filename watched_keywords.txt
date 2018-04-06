@@ -2859,3 +2859,4 @@
 1522939371	CalvT븃	rekuza
 1522965694	WELZ	sundul77\.com
 1522966218	doppelgreener	nandi\W?events
+1522985386	K.Dᴀᴠɪs	you['re]{0,3}\W.{0,9}bast[ua]rd
