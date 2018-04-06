@@ -516,9 +516,9 @@ def has_eltima(s, site, *args):
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def username_similar_website(s, site, *args):
     username = args[0]
-    sim_result = perform_similarity_checks(s, username)
+    sim_result, sim_url, sim_name = perform_similarity_checks(s, username)
     if sim_result >= SIMILAR_THRESHOLD:
-        return True, u"Username similar to website"
+        return True, u"Username `{}` similar to `{}`".format(sim_name, sim_url)
     else:
         return False, ""
 
@@ -569,26 +569,29 @@ def perform_similarity_checks(post, name):
     :param name: Username to compare against
     :return: Float ratio of similarity
     """
-    t1 = 0
-    t2 = 0
-    t3 = 0
-    t4 = 0
+    similarity = 0.0
 
+    # Keep checking links until one is deemed "similar"
     for link in post_links(post):
         domain = get_domain(link)
-        # Straight comparison
-        t1 = similar_ratio(domain, name)
-        # Strip all spaces check
-        t2 = similar_ratio(domain, name.replace(" ", ""))
-        # Strip all hypens
-        t3 = similar_ratio(domain.replace("-", ""), name.replace("-", ""))
-        # Strip both hypens and spaces
-        t4 = similar_ratio(domain.replace("-", "").replace(" ", ""), name.replace("-", "").replace(" ", ""))
-        # Have we already exceeded the threshold? End now if so, otherwise, check the next link
-        if max(t1, t2, t3, t4) >= SIMILAR_THRESHOLD:
-            break
 
-    return max(t1, t2, t3, t4)
+        checks = [
+            # Straight comparison
+            (domain, name),
+            # Strip all spaces
+            (domain, name.replace(" ", "")),
+            # Strip all hyphens
+            (domain.replace("-", ""), name.replace("-", "")),
+            # Strip all hyphens and all spaces
+            (domain.replace("-", "").replace(" ", ""), name.replace("-", "").replace(" ", ""))
+        ]
+        
+        for check_domain, check_name in checks:
+            similarity = similar_ratio(check_domain, check_name)
+            if similarity >= SIMILAR_THRESHOLD:
+                return similarity, check_domain, check_name
+
+    return 0.0, "", ""
 
 
 # noinspection PyMissingTypeHints
