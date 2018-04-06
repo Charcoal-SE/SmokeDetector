@@ -1083,7 +1083,7 @@ def report(msg, args):
     except IndexError:
         custom_reason = None
 
-    urls = list(set(urls.split()))
+    urls = list(set(urls))
 
     if len(urls) > 5:
         raise CmdException("To avoid SmokeDetector reporting posts too slowly, you can "
