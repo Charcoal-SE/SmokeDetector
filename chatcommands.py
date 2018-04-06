@@ -1054,7 +1054,7 @@ def invite(msg, room_id, roles):
 # --- Post Responses --- #
 # noinspection PyIncorrectDocstring
 @command(str, whole_msg=True, privileged=True)
-def report(msg, urls):
+def report(msg, args):
     """
     Report a post (or posts)
     :param msg:
@@ -1070,6 +1070,19 @@ def report(msg, urls):
                            "one go.".format(wait))
 
     output = []
+
+    argsraw = args.split(' "')
+    urls = argsraw[0].split(' ')
+
+    # Handle determining whether a custom report reason was provided.
+    try:
+        custom_reason = ' "'.join(argsraw[1:])
+        # Custom handle trailing quotation marks at the end of the custom reason, which could happen.
+        if custom_reason[-1] is '"':
+            custom_reason = custom_reason[:-1]
+    except IndexError:
+        custom_reason = None
+
     urls = list(set(urls.split()))
 
     if len(urls) > 5:
@@ -1116,7 +1129,13 @@ def report(msg, urls):
             message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
             add_blacklisted_user(user, message_url, post_data.post_url)
 
-        why_info = u"Post manually reported by user *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
+        if custom_reason:
+            why_info = u"Post manually reported by user *{}* in room *{}* with reason: *{}*.\n".format(
+                msg.owner.name, msg.room.name, custom_reason
+            )
+        else:
+            why_info = u"Post manually reported by user *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
+
         batch = ""
         if len(urls) > 1:
             batch = " (batch report: post {} out of {})".format(index, len(urls))
