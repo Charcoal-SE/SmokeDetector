@@ -516,10 +516,10 @@ def has_eltima(s, site, *args):
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def username_similar_website(s, site, *args):
     username = args[0]
-    sim_result, sim_url, sim_name = perform_similarity_checks(s, username)
-    if sim_result >= SIMILAR_THRESHOLD:
-        return True, u"Username `{}` similar to {}".format(
-            sim_name, ', '.join('`{}`'.format(item) for item in sim_url)
+    sim_ratio, sim_webs = perform_similarity_checks(s, username)
+    if sim_ratio >= SIMILAR_THRESHOLD:
+        return True, u"Username `{}` similar to {}, ratio={}".format(
+            username, ', '.join('`{}`'.format(item) for item in sim_webs), sim_ratio
         )
     else:
         return False, ""
@@ -577,23 +577,19 @@ def perform_similarity_checks(post, name):
     for link in post_links(post):
         domain = get_domain(link)
 
-        checks = [
-            # Straight comparison
-            (domain, name),
-            # Strip all spaces
-            (domain, name.replace(" ", "")),
-            # Strip all hyphens
-            (domain.replace("-", ""), name.replace("-", "")),
-            # Strip all hyphens and all spaces
-            (domain.replace("-", "").replace(" ", ""), name.replace("-", "").replace(" ", ""))
-        ]
+        # Straight comparison
+        s1 = similar_ratio(domain, name)
+        # Strip all spaces
+        s2 = similar_ratio(domain, name.replace(" ", ""))
+        # Strip all hyphens
+        s3 = similar_ratio(domain.replace("-", ""), name.replace("-", ""))
+        # Strip all hyphens and all spaces
+        s4 = similar_ratio(domain.replace("-", "").replace(" ", ""), name.replace("-", "").replace(" ", ""))
 
-        for check_domain, check_name in checks:
-            similarity = similar_ratio(check_domain, check_name)
-            max_similarity = max(max_similarity, similarity)
-            if similarity >= SIMILAR_THRESHOLD:
-                similar_links.append(check_domain)
-                break
+        similarity = max(s1, s2, s3, s4)
+        max_similarity = max(max_similarity, similarity)
+        if similarity >= SIMILAR_THRESHOLD:
+            similar_links.append(domain)
 
     return max_similarity, similar_links
 
