@@ -324,6 +324,10 @@ stackexchange.com:
     msg_types:
       - site-interpersonal.stackexchange.com
 
+  511:
+    commands: false
+    msg_types:
+      - site-japanese.stackexchange.com
 
 meta.stackexchange.com:
   89:  # Tavern on the Meta
