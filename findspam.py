@@ -518,7 +518,9 @@ def username_similar_website(s, site, *args):
     username = args[0]
     sim_result, sim_url, sim_name = perform_similarity_checks(s, username)
     if sim_result >= SIMILAR_THRESHOLD:
-        return True, u"Username `{}` similar to `{}`".format(sim_name, sim_url)
+        return True, u"Username `{}` similar to {}".format(
+            sim_name, ', '.join('`{}`'.format(item) for item in sim_url)
+        )
     else:
         return False, ""
 
@@ -569,7 +571,7 @@ def perform_similarity_checks(post, name):
     :param name: Username to compare against
     :return: Float ratio of similarity
     """
-    similarity = 0.0
+    max_similarity, similar_links = 0.0, []
 
     # Keep checking links until one is deemed "similar"
     for link in post_links(post):
@@ -585,13 +587,15 @@ def perform_similarity_checks(post, name):
             # Strip all hyphens and all spaces
             (domain.replace("-", "").replace(" ", ""), name.replace("-", "").replace(" ", ""))
         ]
-        
+
         for check_domain, check_name in checks:
             similarity = similar_ratio(check_domain, check_name)
+            max_similarity = max(max_similarity, similarity)
             if similarity >= SIMILAR_THRESHOLD:
-                return similarity, check_domain, check_name
+                similar_links.append(check_domain)
+                break
 
-    return 0.0, "", ""
+    return max_similarity, similar_links
 
 
 # noinspection PyMissingTypeHints
