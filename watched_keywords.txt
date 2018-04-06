@@ -2879,3 +2879,4 @@
 1523055180	doppelgreener	livemasters\.ca
 1523055193	doppelgreener	frozenfour2018\.ca
 1523055210	doppelgreener	frozen-four\.ca
+1523055214	doppelgreener	themasters-golf\.ca
