@@ -746,15 +746,20 @@ def stopflagging():
 
 
 # noinspection PyIncorrectDocstring,PyProtectedMember
-@command(str, whole_msg=True, privileged=True)
-def standby(msg, location_search):
+@command(str, whole_msg=True, privileged=True, aliases=["standby-except"], give_name=True)
+def standby(msg, location_search, alias_used="standby"):
     """
     Forces a system exit with exit code = 7
     :param msg:
     :param location_search:
     :return: None
     """
-    if location_search.lower() in GlobalVars.location.lower():
+
+    match = location_search.lower() in GlobalVars.location.lower()
+    reverse_search = "except" in alias_used
+
+    # Use `!=` as Logical XOR
+    if match != reverse_search:
         tell_rooms("{location} is switching to standby".format(location=GlobalVars.location),
                    ("debug", (msg._client.host, msg.room.id)), (), notify_site="/standby")
 
