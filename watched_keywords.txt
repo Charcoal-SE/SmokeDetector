@@ -2901,3 +2901,4 @@
 1523179415	Glorfindel	cincinnativsnevada\.ca
 1523179457	Glorfindel	livevs\w+\.ca
 1523179446	gparyani	safetomatic\.com
+1523192479	Zoe	goodtricks4pc\.blogspot\.in
