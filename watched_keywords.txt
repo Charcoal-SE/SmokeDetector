@@ -2913,3 +2913,4 @@
 1523224508	WELZ	horusdynamics\.com
 1523246752	K.Dᴀᴠɪs	pus+y
 1523256909	A J	fluper\.com
+1523261212	A J	showbox\.(?:onl|software)
