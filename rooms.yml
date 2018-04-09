@@ -431,6 +431,25 @@ meta.stackexchange.com:
       - 310369   # quartata
       - 350567   # iDebug (iBug on SO)
       - 377214   # Sonic the Anonymous Hedgehog (gparyani elsewhere)
+  1181:
+    commands: true
+    
+    msg_types:
+      - all
+      - metasmoke
+      - experimental
+    
+    privileges:
+      - 285368   # angussidney
+      - 262823   # ArtOfCode
+      - 186281   # Andy
+      - 215468   # Undo
+      - 158829   # Thomas Ward
+      - 310369   # quartata
+      - 203553   # CalvT
+      - 294691   # Mithrandir
+      - 315433   # Normal Human
+      - 158100   # rene
 
 
 stackoverflow.com:
