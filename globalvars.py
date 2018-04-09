@@ -68,7 +68,10 @@ class GlobalVars:
         "potentially bad keyword in answer",
         "potentially bad keyword in body",
         "potentially bad keyword in title",
-        "potentially bad keyword in username"}
+        "potentially bad keyword in username",
+        "toxic body detected",
+        "toxic answer detected"
+    }
 
     parser = HTMLParser()
     parser.unescape = unescape
@@ -151,3 +154,8 @@ class GlobalVars:
     except NoOptionError:
         github_username = None
         github_password = None
+
+    try:
+        perspective_key = config.get("Config", "perspective_key")
+    except NoOptionError:
+        perspective_key = None

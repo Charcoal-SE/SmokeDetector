@@ -16,6 +16,7 @@ import tld
 from tld.utils import TldDomainNotFound
 import phonenumbers
 import dns.resolver
+import requests
 
 from helpers import all_matches_unique, log
 from globalvars import GlobalVars
@@ -45,6 +46,9 @@ SE_SITES_DOMAINS = ['stackoverflow.com', 'askubuntu.com', 'superuser.com', 'serv
                     'mathoverflow.net', 'stackapps.com', 'stackexchange.com', 'sstatic.net',
                     'imgur.com']  # Frequently catching FP
 
+if GlobalVars.perspective_key:
+    PERSPECTIVE = "https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=" + GlobalVars.perspective_key
+    PERSPECTIVE_THRESHOLD = 0.85  # conservative
 
 # Flee before the ugly URL validator regex!
 # We are using this, instead of a nice library like BeautifulSoup, because spammers are
@@ -687,6 +691,38 @@ def mevaqesh_troll(s, *args):
         return False, ""
 
 
+def toxic_check(post):
+    string = strip_urls_and_tags(regex.sub("(?s)<code>.*?</code>", "", post.body[:3000]))
+
+    if not string:
+        return False, False, False, ""
+
+    response = requests.post(PERSPECTIVE, json={
+        "comment": {
+            "text": string
+        },
+
+        "requestedAttributes": {
+            "TOXICITY": {
+                "scoreType": "PROBABILITY"
+            }
+        }
+    }).json()
+
+    if "error" in response:
+        err_msg = response["error"]["message"]
+
+        if not err_msg.startswith("Attribute TOXICITY does not support request languages:"):
+            log("debug", "Perspective error: {} for string {} (original body {})".format(err_msg, string, post.body))
+    else:
+        probability = response["attributeScores"]["TOXICITY"]["summaryScore"]["value"]
+
+        if probability > PERSPECTIVE_THRESHOLD:
+            return False, False, True, "Perspective scored {}".format(probability)
+
+    return False, False, False, ""
+
+
 def turkey(s, *args):
     s = regex.search("<p>\s*?(\S{8,})\s*?</p>$", s.lower())
 
@@ -1268,6 +1304,13 @@ class FindSpam:
          'max_rep': 10, 'max_score': 1}
     ]
 
+    # Toxic content using Perspective
+    if GlobalVars.perspective_key:  # don't bother if we don't have a key, since it's expensive
+        rules.append({"method": toxic_check, "all": True, "sites": [],
+                      "reason": "toxic {} detected", "whole_post": True,
+                      "title": False, "body": False, "username": False, "body_summary": False,
+                      "stripcodeblocks": False, "max_rep": 101, "max_score": 2})
+
     @staticmethod
     def test_post(post):
         result = []
@@ -1311,12 +1354,12 @@ class FindSpam:
                         if matched_title:
                             why["title"].append(u"Title - {}".format(why_post))
                             result.append(rule['reason'].replace("{}", "title"))
-                        elif matched_username:
+                        if matched_username:
                             why["username"].append(u"Username - {}".format(why_post))
                             result.append(rule['reason'].replace("{}", "username"))
-                        elif matched_body:
+                        if matched_body:
                             why["body"].append(u"Post - {}".format(why_post))
-                            result.append(rule['reason'].replace("{}", "body"))
+                            result.append(rule['reason'].replace("{}", "answer" if post.is_answer else "body"))
                     else:
                         matched_title, why_title = rule['method'](post.title, post.post_site, post.user_name)
                         if matched_title and rule['title']:
