@@ -1237,3 +1237,4 @@ keto\W?advanced
 rs\W?gold
 keto\W?tone(?:\W?diet)?
 eye\W?serum\W?magic
+jet\W?prox
