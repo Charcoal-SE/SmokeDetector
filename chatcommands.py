@@ -1071,15 +1071,16 @@ def report(msg, args):
 
     output = []
 
-    argsraw = args.split(' "')
+    argsraw = args.split(' "', 1)
     urls = argsraw[0].split(' ')
 
     # Handle determining whether a custom report reason was provided.
     try:
-        custom_reason = ' "'.join(argsraw[1:])
         # Custom handle trailing quotation marks at the end of the custom reason, which could happen.
-        if custom_reason[-1] is '"':
-            custom_reason = custom_reason[:-1]
+        if argsraw[1][-1] is '"':
+            custom_reason = argsraw[1][:-1].replace('" "', '; ')
+        else:
+            custom_reason = argsraw[1].replace('" "', '; ')
     except IndexError:
         custom_reason = None
 
