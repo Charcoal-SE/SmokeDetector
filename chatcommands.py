@@ -1078,9 +1078,15 @@ def report(msg, args):
     try:
         # Custom handle trailing quotation marks at the end of the custom reason, which could happen.
         if argsraw[1][-1] is '"':
-            custom_reason = argsraw[1][:-1].replace('" "', '; ')
+            custom_reason = argsraw[1][:-1]
         else:
-            custom_reason = argsraw[1].replace('" "', '; ')
+            custom_reason = argsraw[1]
+
+        # Deny cases of multiple close reasons, in which case custom_reason will still have " chars in it.
+        if '"' in custom_reason:
+            raise CmdException("You cannot provide multiple custom report reasons. "
+                               "Please review the permitted !!/report syntax in the documentation "
+                               "for guidance on using custom report reasons.")
     except IndexError:
         custom_reason = None
 
