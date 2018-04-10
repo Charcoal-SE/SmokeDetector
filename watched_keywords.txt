@@ -2938,3 +2938,4 @@
 1523362427	Glorfindel	passportrenewalapplication\.com
 1523363826	doppelgreener	eco-farm@i\.ua
 1523363850	doppelgreener	myceliy\.com\.ua
+1523363864	doppelgreener	teplitca\.com\.ua
