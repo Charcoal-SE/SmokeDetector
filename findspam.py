@@ -34,7 +34,7 @@ COMMON_MALFORMED_PROTOCOLS = [
     ('httl://', 'http://'),
 ]
 # These types of files frequently get caught as "misleading link"
-SAFE_EXTENSIONS = set(('htm', 'py', 'java', 'sh'))
+SAFE_EXTENSIONS = {'htm', 'py', 'java', 'sh'}
 SE_SITES_RE = r'(?:{sites})'.format(
     sites='|'.join([
         r'(?:[a-z]+\.)*stackoverflow\.com',
@@ -521,9 +521,11 @@ def has_eltima(s, site, *args):
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def username_similar_website(s, site, *args):
     username = args[0]
-    sim_result = perform_similarity_checks(s, username)
-    if sim_result >= SIMILAR_THRESHOLD:
-        return True, u"Username similar to website"
+    sim_ratio, sim_webs = perform_similarity_checks(s, username)
+    if sim_ratio >= SIMILAR_THRESHOLD:
+        return True, u"Username `{}` similar to {}, ratio={}".format(
+            username, ', '.join('`{}`'.format(item) for item in sim_webs), sim_ratio
+        )
     else:
         return False, ""
 
@@ -574,26 +576,27 @@ def perform_similarity_checks(post, name):
     :param name: Username to compare against
     :return: Float ratio of similarity
     """
-    t1 = 0
-    t2 = 0
-    t3 = 0
-    t4 = 0
+    max_similarity, similar_links = 0.0, []
 
+    # Keep checking links until one is deemed "similar"
     for link in post_links(post):
         domain = get_domain(link)
-        # Straight comparison
-        t1 = similar_ratio(domain, name)
-        # Strip all spaces check
-        t2 = similar_ratio(domain, name.replace(" ", ""))
-        # Strip all hypens
-        t3 = similar_ratio(domain.replace("-", ""), name.replace("-", ""))
-        # Strip both hypens and spaces
-        t4 = similar_ratio(domain.replace("-", "").replace(" ", ""), name.replace("-", "").replace(" ", ""))
-        # Have we already exceeded the threshold? End now if so, otherwise, check the next link
-        if max(t1, t2, t3, t4) >= SIMILAR_THRESHOLD:
-            break
 
-    return max(t1, t2, t3, t4)
+        # Straight comparison
+        s1 = similar_ratio(domain, name)
+        # Strip all spaces
+        s2 = similar_ratio(domain, name.replace(" ", ""))
+        # Strip all hyphens
+        s3 = similar_ratio(domain.replace("-", ""), name.replace("-", ""))
+        # Strip all hyphens and all spaces
+        s4 = similar_ratio(domain.replace("-", "").replace(" ", ""), name.replace("-", "").replace(" ", ""))
+
+        similarity = max(s1, s2, s3, s4)
+        max_similarity = max(max_similarity, similarity)
+        if similarity >= SIMILAR_THRESHOLD:
+            similar_links.append(domain)
+
+    return max_similarity, similar_links
 
 
 # noinspection PyMissingTypeHints
