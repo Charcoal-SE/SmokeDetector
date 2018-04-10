@@ -101,8 +101,6 @@ class BodyFetcher:
     queue_timing_modify_lock = threading.Lock()
 
     def add_to_queue(self, post, should_check_site=False):
-        mse_sandbox_id = 3122
-
         try:
             d = json.loads(json.loads(post)["data"])
         except ValueError:
@@ -112,7 +110,7 @@ class BodyFetcher:
 
         site_base = d["siteBaseHostAddress"]
         post_id = d["id"]
-        if post_id == mse_sandbox_id and site_base == "meta.stackexchange.com":
+        if (post_id == 3122 or post_id == 51812) and site_base == "meta.stackexchange.com":
             return  # don't check meta sandbox, it's full of weird posts
         self.queue_modify_lock.acquire()
         if site_base not in self.queue:
