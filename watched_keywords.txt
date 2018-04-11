@@ -2961,3 +2961,4 @@
 1523450758	Glorfindel	text\W?extract\.com
 1523451093	Glorfindel	talkchatroom\.com
 1523455565	K.Dᴀᴠɪs	shove\W?(?:a|(:yo)?ur)\W?di[ck]{1,2}\b
+1523457413	K.Dᴀᴠɪs	up\W?(?:yo)?ur\W?ass
