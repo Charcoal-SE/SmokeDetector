@@ -2951,3 +2951,4 @@
 1523430722	Glorfindel	sysdatatools\.com
 1523434799	Mithrandir	appinchina\.co
 1523438466	Glorfindel	itacec\.org
+1523443327	tripleee	(?:(bulk|cutt)ing|strength)\W*stack
