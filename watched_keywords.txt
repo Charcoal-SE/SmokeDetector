@@ -2954,3 +2954,4 @@
 1523443327	tripleee	(?:(bulk|cutt)ing|strength)\W*stack
 1523443971	tripleee	maxmunus\.com
 1523444076	tripleee	91\W*9066638196
+1523444418	Glorfindel	back2nopest\.com
