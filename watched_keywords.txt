@@ -2950,3 +2950,4 @@
 1523429964	tripleee	digital\W?marketing\W?packages
 1523430722	Glorfindel	sysdatatools\.com
 1523434799	Mithrandir	appinchina\.co
+1523438466	Glorfindel	itacec\.org
