@@ -42,11 +42,11 @@ try:
 except TldIOError as ioerr:
     with open('errorLogs.txt', 'a') as errlogs:
         if "permission denied:" in str(ioerr).lower():
-            if "/usr/local/lib/python2.7/dist-packages/" in str(ioerr):
+            if "/usr/local/lib/python" in str(ioerr) and "/dist-packages/" in str(ioerr):
                 errlogs.write("WARNING: Cannot update TLD names, due to `tld` being system-wide installed and not "
                               "user-level installed.  Skipping TLD names update. \n")
 
-            if "/home/" in str(ioerr) and ".local/lib/python2.7/site-packages/tld/" in str(ioerr):
+            if "/home/" in str(ioerr) and ".local/lib/python" in str(ioerr) and "/site-packages/tld/" in str(ioerr):
                 errlogs.write("WARNING: Cannot read/write to user-space `tld` installation, check permissions on the "
                               "path.  Skipping TLD names update. \n")
 
