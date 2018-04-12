@@ -1241,6 +1241,6 @@ jet\W?pro\W?x
 size\W?gain\W?plus
 enhance\W?male
 gluco\W?trim
-833\W?783\W?3300
+\d*833\W?783\W?3300
 brilliance\W?sf
 how\W?to\W?hack\W?whatsapp
