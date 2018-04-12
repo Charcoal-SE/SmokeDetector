@@ -1245,3 +1245,4 @@ gluco\W?trim
 brilliance\W?sf
 how\W?to\W?hack\W?whatsapp
 (?<=/)memory\Whack[-/<"]
+panitrol\W?xl
