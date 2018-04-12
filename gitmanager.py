@@ -19,6 +19,7 @@ else:
 
 from helpers import log
 from globalvars import GlobalVars
+from blacklists import *
 
 import os.path
 git.config("core.hooksPath", os.path.dirname(os.path.realpath(__file__)) + "/hooks")
@@ -57,23 +58,25 @@ class GitManager:
         item_to_blacklist = item_to_blacklist.replace("\s", " ")
 
         if blacklist == "website":
-            blacklist_file_name = "blacklisted_websites.txt"
-            ms_search_option = "&body="
+            blacklist_type = Blacklist.WEBSITES
+            ms_search_option = "&body_is_regex=1&body="
         elif blacklist == "keyword":
-            blacklist_file_name = "bad_keywords.txt"
-            ms_search_option = "&body="
+            blacklist_type = Blacklist.KEYWORDS
+            ms_search_option = "&body_is_regex=1&body="
         elif blacklist == "username":
-            blacklist_file_name = "blacklisted_usernames.txt"
-            ms_search_option = "&username="
+            blacklist_type = Blacklist.USERNAMES
+            ms_search_option = "&username_is_regex=1&username="
         elif blacklist == "watch_keyword":
-            blacklist_file_name = "watched_keywords.txt"
-            ms_search_option = "&body="
+            blacklist_type = Blacklist.WATCHED_KEYWORDS
+            ms_search_option = "&body_is_regex=1&body="
         else:
             # Just checking all bases, but blacklist_file_name *might* have empty value
             # if we don't address it here.
             return (False, "Invalid blacklist type specified, something has broken badly!")
 
         branch = ""
+        blacklister = Blacklist(blacklist_type)
+        blacklist_file_name = blacklist_type[0]
 
         try:
             cls.gitmanager_lock.acquire()
@@ -83,49 +86,33 @@ class GitManager:
             git.checkout("origin/master")
 
             # Set up parameters for watch vs blacklist
-            if blacklist_file_name in ['watched_keywords.txt']:
+            if blacklist_type in [Blacklist.WATCHED_KEYWORDS]:
                 op = 'watch'
                 now = datetime.now().strftime('%s')
                 item = item_to_blacklist
                 item_to_blacklist = "\t".join([now, username, item])
-                item_regex = regex.compile(r'\t\L<item>$', item=[item])
             else:
                 op = 'blacklist'
                 item = item_to_blacklist
-                item_regex = regex.compile(r'^\L<item>$', item=[item])
 
             # Prevent duplicates
-            with open(blacklist_file_name, "r") as blacklist_file:
-                for lineno, line in enumerate(blacklist_file, 1):
-                    if item_regex.search(line):
-                        return (False, '{0} already {1}ed on {2} line {3}'.format(
-                            item, op, blacklist_file_name, lineno))
+            exists, line = blacklister.exists(item_to_blacklist)
+            if exists:
+                return (False, 'Already {}ed on line {} of {}'.format(op, line, blacklist_file_name))
 
             # Remove from watch if watched
-            write_lines = False
-            if blacklist_file_name not in ['watched_keywords.txt']:
-                watch_lines = []
-                watch_regex = regex.compile(r'\t\L<item>$', item=[item])
-                with open('watched_keywords.txt', 'r') as watch_file:
-                    for lineno, line in enumerate(watch_file, 1):
-                        if watch_regex.search(line):
-                            write_lines = True
-                            continue
-                        watch_lines.append(line)
-                if write_lines:
-                    with open('watched_keywords.txt', 'w') as watch_file:
-                        for line in watch_lines:
-                            watch_file.write(line)
+            watch_removed = False
+            if blacklist_type not in [Blacklist.WATCHED_KEYWORDS]:
+                watcher = Blacklist(Blacklist.WATCHED_KEYWORDS)
+                if watcher.exists(item_to_blacklist):
+                    watch_removed = True
+                    watcher.remove(item_to_blacklist)
 
             # Add item to file
-            with open(blacklist_file_name, "a+") as blacklist_file:
-                last_character = blacklist_file.read()[-1:]
-                if last_character not in ["", "\n"]:
-                    blacklist_file.write("\n")
-                blacklist_file.write(item_to_blacklist + "\n")
+            blacklister.add(item_to_blacklist)
 
             git.add(blacklist_file_name)
-            if write_lines:
+            if watch_removed:
                 git.add('watched_keywords.txt')
 
             git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
@@ -144,12 +131,13 @@ class GitManager:
                     return (False, "Tell someone to set a GH password")
 
                 payload = {"title": u"{0}: {1} {2}".format(username, op.title(), item),
-                           "body": u"[{0}]({1}) requests the {2} of the {3} {4}. See the Metasmoke search [here]"
+                           "body": u"[{0}]({1}) requests the {2} of the {3} `{4}`. See the Metasmoke search [here]"
                                    "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6}) and the "
-                                   "Stack Exchange search [here](https://stackexchange.com/search?q=%22{6}%22).\n"
-                                   u"<!-- METASMOKE-BLACKLIST-{7} {4} -->".format(
+                                   "Stack Exchange search [here](https://stackexchange.com/search?q=%22{7}%22).\n"
+                                   u"<!-- METASMOKE-BLACKLIST-{8} {4} -->".format(
                                        username, chat_profile_link, op, blacklist,
                                        item, ms_search_option,
+                                       quote_plus(item.replace("\\W", "[- ]")),
                                        quote_plus(item.replace("\\W", " ").replace("\\.", ".")),
                                        blacklist.upper()),
                            "head": branch,

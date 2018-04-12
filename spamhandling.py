@@ -3,17 +3,17 @@ import sys
 from threading import Thread
 from findspam import FindSpam
 import datahandling
+import chatcommunicate
 from globalvars import GlobalVars
 from datetime import datetime
 import parsing
 import metasmoke
-import deletionwatcher
 import excepthook
 # noinspection PyCompatibility
 import regex
-import time
 from classes import Post, PostParseError
 from helpers import log
+from tasks import Tasks
 
 
 # noinspection PyMissingTypeHints
@@ -22,12 +22,6 @@ def should_whitelist_prevent_alert(user_url, reasons):
     if not is_whitelisted:
         return False
     reasons_comparison = [r for r in set(reasons) if "username" not in r]
-    return len(reasons_comparison) == 0
-
-
-# noinspection PyMissingTypeHints
-def should_reasons_prevent_tavern_posting(reasons):
-    reasons_comparison = [r for r in set(reasons) if r not in GlobalVars.non_tavern_reasons]
     return len(reasons_comparison) == 0
 
 
@@ -45,7 +39,7 @@ def check_if_spam(post):
             if blacklisted_user_data[1] == "metasmoke":
                 blacklisted_by = "the metasmoke API"
             else:
-                blacklisted_by = "http:" + blacklisted_user_data[1]
+                blacklisted_by = blacklisted_user_data[1]
             blacklisted_post_url = blacklisted_user_data[2]
             if blacklisted_post_url:
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
@@ -81,10 +75,6 @@ def check_if_spam_json(json_data):
 def handle_spam(post, reasons, why):
     post_url = parsing.to_protocol_relative(parsing.url_to_shortlink(post.post_url))
     poster_url = parsing.to_protocol_relative(parsing.user_url_to_shortlink(post.user_url))
-    reason = ", ".join(reasons[:5])
-    if len(reasons) > 5:
-        reason += ", +{} more".format(len(reasons) - 5)
-    reason = reason[:1].upper() + reason[1:]  # reason is capitalised, unlike the entries of reasons list
     shortened_site = post.post_site.replace("stackexchange.com", "SE")  # site.stackexchange.com -> site.SE
     datahandling.append_to_latest_questions(post.post_site, post.post_id, post.title if not post.is_answer else "")
     if len(reasons) == 1 and ("all-caps title" in reasons or
@@ -110,7 +100,7 @@ def handle_spam(post, reasons, why):
         else:
             sanitized_title = regex.sub('(https?://|\n)', '', post.title)
 
-        sanitized_title = regex.sub(r'([\]*`])', r'\\$1', sanitized_title).replace('\n', u'\u23CE')
+        sanitized_title = regex.sub(r'([\]*`])', r'\\\1', sanitized_title).replace('\n', u'\u23CE')
 
         prefix = u"[ [SmokeDetector](//goo.gl/eLDYqh) ]"
         if GlobalVars.metasmoke_key:
@@ -119,114 +109,46 @@ def handle_spam(post, reasons, why):
         else:
             prefix_ms = prefix
 
+        # We'll insert reason list later
         if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
-            s = u" {}: [{}]({}) by a deleted user on `{}`".format(reason, sanitized_title.strip(), post_url,
-                                                                  shortened_site)
+            s = u" {{}}: [{}]({}) by a deleted user on `{}`".format(sanitized_title.strip(), post_url,
+                                                                    shortened_site)
             username = ""
         else:
-            s = u" {}: [{}]({}) by [{}]({}) on `{}`".format(reason, sanitized_title.strip(), post_url,
-                                                            post.user_name.strip(), poster_url, shortened_site)
+            s = u" {{}}: [{}]({}) by [{}]({}) on `{}`".format(sanitized_title.strip(), post_url,
+                                                              post.user_name.strip(), poster_url, shortened_site)
             username = post.user_name.strip()
 
-        t_metasmoke = Thread(name="metasmoke send post",
-                             target=metasmoke.Metasmoke.send_stats_on_post,
-                             args=(post.title_ignore_type, post_url, reasons, post.body, username,
-                                   post.user_link, why, post.owner_rep, post.post_score,
-                                   post.up_vote_count, post.down_vote_count))
-        t_metasmoke.start()
+        Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
+                 post.title_ignore_type, post_url, reasons, post.body, username,
+                 post.user_link, why, post.owner_rep, post.post_score,
+                 post.up_vote_count, post.down_vote_count)
 
         log('debug', GlobalVars.parser.unescape(s).encode('ascii', errors='replace'))
-        if time.time() >= GlobalVars.blockedTime["all"]:
-            datahandling.append_to_latest_questions(post.post_site, post.post_id, post.title)
-            if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
-                chq_pings = datahandling.get_user_names_on_notification_list(
-                    "stackexchange.com",
-                    GlobalVars.charcoal_room_id,
-                    post.post_site,
-                    GlobalVars.wrap)
-                chq_msg = prefix + s
-                chq_msg_pings = prefix + datahandling.append_pings(s, chq_pings)
-                chq_msg_pings_ms = prefix_ms + datahandling.append_pings(s, chq_pings)
-                msg_to_send = chq_msg_pings_ms if len(chq_msg_pings_ms) <= 500 else chq_msg_pings \
-                    if len(chq_msg_pings) <= 500 else chq_msg[0:500]
-                try:
-                    GlobalVars.charcoal_hq.send_message(msg_to_send)
-                except AttributeError:  # In our Test Suite
-                    pass
+        datahandling.append_to_latest_questions(post.post_site, post.post_id, post.title)
+        GlobalVars.deletion_watcher.subscribe(post_url)
 
-            # If it's all experimental rules, we are done.
-            # If not, see which other rooms this should perhaps be posted to.
-            if set(reasons).intersection(GlobalVars.experimental_reasons) != set(reasons):
-                if not should_reasons_prevent_tavern_posting(reasons) \
-                        and post.post_site not in GlobalVars.non_tavern_sites \
-                        and time.time() >= GlobalVars.blockedTime[GlobalVars.meta_tavern_room_id]:
-                    tavern_pings = datahandling.get_user_names_on_notification_list(
-                        "meta.stackexchange.com",
-                        GlobalVars.meta_tavern_room_id,
-                        post.post_site, GlobalVars.wrapm)
-                    tavern_msg = prefix + s
-                    tavern_msg_pings = prefix + datahandling.append_pings(s, tavern_pings)
-                    tavern_msg_pings_ms = prefix_ms + datahandling.append_pings(s, tavern_pings)
-                    msg_to_send = tavern_msg_pings_ms if len(tavern_msg_pings_ms) <= 500 else tavern_msg_pings \
-                        if len(tavern_msg_pings) <= 500 else tavern_msg[0:500]
-                    t_check_websocket = Thread(
-                        name="deletionwatcher post message if not deleted",
-                        target=deletionwatcher.DeletionWatcher.post_message_if_not_deleted,
-                        args=((post.post_id, post.post_site,
-                               "answer" if post.is_answer else "question"),
-                              post_url, msg_to_send, GlobalVars.tavern_on_the_meta))
-                    t_check_websocket.daemon = True
-                    t_check_websocket.start()
-                if post.post_site == "stackoverflow.com" and reason not in GlobalVars.non_socvr_reasons \
-                        and time.time() >= GlobalVars.blockedTime[GlobalVars.socvr_room_id]:
-                    socvr_pings = datahandling.get_user_names_on_notification_list(
-                        "stackoverflow.com",
-                        GlobalVars.socvr_room_id,
-                        post.post_site,
-                        GlobalVars.wrapso)
-                    socvr_msg = prefix + s
-                    socvr_msg_pings = prefix + datahandling.append_pings(s, socvr_pings)
-                    socvr_msg_pings_ms = prefix_ms + datahandling.append_pings(s, socvr_pings)
-                    msg_to_send = socvr_msg_pings_ms if len(socvr_msg_pings_ms) <= 500 else socvr_msg_pings \
-                        if len(socvr_msg_pings) <= 500 else socvr_msg[0:500]
-                    try:
-                        GlobalVars.socvr.send_message(msg_to_send)
-                    except AttributeError:  # In test Suite
-                        pass
+        for reason_count in range(5, 2, -1):  # Try 5 reasons, then 4, then 3
+            reason = ", ".join(reasons[:reason_count])
+            if len(reasons) > reason_count:
+                reason += ", +{} more".format(len(reasons) - reason_count)
+            reason = reason[:1].upper() + reason[1:]  # reason is capitalised, unlike the entries of reasons list
+            message = prefix_ms + s.format(reason)  # Insert reason list
+            if len(message) <= 500:
+                break  # Problem solved, stop attempting
 
-            for specialroom in GlobalVars.specialrooms:
-                sites = specialroom["sites"]
-                if post.post_site in sites and reason not in specialroom["unwantedReasons"]:
-                    room = specialroom["room"]
-                    if room.id not in GlobalVars.blockedTime or time.time() >= GlobalVars.blockedTime[room.id]:
-                        room_site = room._client.host
-                        room_id = int(room.id)
-                        room_pings = datahandling.get_user_names_on_notification_list(room_site, room_id,
-                                                                                      post.post_site, room._client)
-                        room_msg = prefix + s
-                        room_msg_pings = prefix + datahandling.append_pings(s, room_pings)
-                        room_msg_pings_ms = prefix_ms + datahandling.append_pings(s, room_pings)
-                        msg_to_send = room_msg_pings_ms if len(room_msg_pings_ms) <= 500 else room_msg_pings \
-                            if len(room_msg_pings) <= 500 else room_msg[0:500]
-                        specialroom["room"].send_message(msg_to_send)
+        s = s.format(reason)  # Later code needs this variable
+        if len(message) > 500:
+            message = (prefix_ms + s)[:500]  # Truncate directly and keep MS link
+
+        without_roles = tuple("no-" + reason for reason in reasons) + ("site-no-" + post.post_site,)
+
+        if set(reasons) - GlobalVars.experimental_reasons == set():
+            chatcommunicate.tell_rooms(message, ("experimental",),
+                                       without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
+        else:
+            chatcommunicate.tell_rooms(message, ("all", "site-" + post.post_site),
+                                       without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
     except:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         excepthook.uncaught_exception(exc_type, exc_obj, exc_tb)
-
-
-def handle_user_with_all_spam(user, why):
-    user_id = user[0]
-    site = user[1]
-    tab = "activity" if site == "stackexchange.com" else "topactivity"
-    s = "[ [SmokeDetector](//git.io/vgx7b) ] All of this user's posts are spam: [user {} on {}](//{}/users/{}?tab={})" \
-        .format(user_id, site, site, user_id, tab)
-    log('debug', GlobalVars.parser.unescape(s).encode('ascii', errors='replace'))
-    datahandling.add_why_allspam(user, why)
-    if time.time() >= GlobalVars.blockedTime[GlobalVars.charcoal_room_id]:
-        GlobalVars.charcoal_hq.send_message(s)
-    for specialroom in GlobalVars.specialrooms:
-        room = specialroom["room"]
-        if site in specialroom["sites"] and (
-                room.id not in GlobalVars.blockedTime or
-                time.time() >= GlobalVars.blockedTime[room.id]):
-            room.send_message(s)

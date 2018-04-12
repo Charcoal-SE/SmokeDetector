@@ -17,23 +17,28 @@ groups:
       - AWegnerGitHub  # Andy
       - bwDraco
       - ByteCommander
-      - doppeldeveloper  # doppelgreener
+      - CalvT
       - ferrybig
       - Fortunate-MAN  # Ashish Ahuja
       - Glorfindel83
-      - hichris1234
+      - csnardi # hichris1234
       - honnza  # Jan Dvorak
+      - iBug
+      - K-Davis1
       - magisch
       - Manishearth
       - metasmoke
       - NobodyNada
+      - paper1111
       - ProgramFOX
       - quartata
+      - spacemonaut # doppelgreener
       - superplane39  # Mithrandir
       - surajrao
       - teward
       - tripleee
       - Undo1
+      - WELZ-gh
     author_approval:
       ignored: true
     reject_value: -1

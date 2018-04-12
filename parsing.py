@@ -4,6 +4,13 @@ import regex
 from globalvars import GlobalVars
 import datahandling
 
+BAD_CHAR = "\u200c\u200b"
+
+
+# noinspection PyMissingTypeHints
+def rebuild_url(url):
+    return ''.join([ch for ch in url if ch not in BAD_CHAR])
+
 
 # noinspection PyBroadException,PyMissingTypeHints
 def get_user_from_url(url):
@@ -14,6 +21,20 @@ def get_user_from_url(url):
         site = match.group(1)
         user_id = match.group(2)
         return user_id, site
+    except:
+        return None
+
+
+# noinspection PyBroadException
+def get_api_sitename_from_url(url):
+    match = regex.compile(r"(?:https?:)?(?://)?([\w.]+)/?").search(url)
+    if match is None:
+        return None
+    try:
+        if match.group(1) == 'mathoverflow.net':
+            return 'mathoverflow.net'
+        else:
+            return match.group(1).split('.')[0]
     except:
         return None
 
@@ -37,16 +58,17 @@ def fetch_post_url_from_msg_content(content):
 def fetch_post_id_and_site_from_url(url):
     if url is None:
         return None
+    trimmed_url = rebuild_url(url)
     post_type_regex = r"\/\d+#\d+$"
     post_type = ""
     search_regex = ""
-    if regex.compile(post_type_regex).search(url):
+    if regex.compile(post_type_regex).search(trimmed_url):
         post_type = "answer"
-        search_regex = r"^(?:https?:)?\/\/([\w.]+)/questions/\d+/.+/(\d+)#\d+$"
+        search_regex = r"^(?:https?:)?\/\/([\w.]+)\/questions\/\d+\/.+\/(\d+)#\d+$"
     else:
         post_type = "question"
         search_regex = r"^(?:https?:)?\/\/([\w.]+)/questions/(\d+)(?:/.*)?$"
-    found = regex.compile(search_regex).search(url)
+    found = regex.compile(search_regex).search(trimmed_url)
     if found is not None:
         try:
             post_id = found.group(2)
@@ -55,7 +77,7 @@ def fetch_post_id_and_site_from_url(url):
         except:
             return None
     search_regex = r"^(?:https?:)?\/\/([\w.]+)/(q|a)/(\d+)(?:/\d+)?/?"
-    found = regex.compile(search_regex).search(url)
+    found = regex.compile(search_regex).search(trimmed_url)
     if found is None:
         return None
     try:
@@ -104,20 +126,6 @@ def fetch_title_from_msg_content(content):
 
 
 # noinspection PyBroadException,PyMissingTypeHints
-def fetch_user_from_allspam_report(content):
-    search_regex = r"^\[ \[SmokeDetector\]\([^)]*\) \] All of this user's posts are spam: \[user \d+ on " \
-                   r"[\w\.]+\]\((//[\w\.]+/users/\d+\D*)\)(?: \[.+\]\(.+\))?$"
-    match = regex.compile(search_regex).search(content)
-    if match is None:
-        return None
-    try:
-        user_link = match.group(1)
-        return get_user_from_url(user_link)
-    except:
-        return None
-
-
-# noinspection PyBroadException,PyMissingTypeHints
 def edited_message_after_postgone_command(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: (\[.+]\((?:(?:http:)" \
                    r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\)) by \[?.*\]?\(?.*\)?" \
@@ -146,16 +154,17 @@ def escape_special_chars_in_title(title_unescaped):
 def get_user_from_list_command(cmd):  # for example, !!/addblu is a list command
     cmd_merged_spaces = regex.sub("\\s+", " ", cmd)
     cmd_parts = cmd_merged_spaces.split(" ")
+
     uid = -1
     site = ""
-    if len(cmd_parts) == 2:
-        uid_site = get_user_from_url(cmd_parts[1])
+
+    if len(cmd_parts) == 1:
+        uid_site = get_user_from_url(cmd_parts[0])
         if uid_site is not None:
-            uid = uid_site[0]
-            site = uid_site[1]
-    elif len(cmd_parts) == 3:
-        uid = cmd_parts[1]
-        site = cmd_parts[2]
+            uid, site = uid_site
+    elif len(cmd_parts) == 2:
+        uid = cmd_parts[0]
+        site = cmd_parts[1]
         digit_re = regex.compile("^[0-9]+$")
         site_re = regex.compile(r"^(\w+\.stackexchange\.com|\w+\.(com|net))$")
         if not digit_re.match(uid):
@@ -201,26 +210,3 @@ def to_protocol_relative(url):
         return url[6:]
     else:
         return url
-
-
-# noinspection PyMissingTypeHints
-def preprocess_shortcut_command(cmd):
-    cmd = regex.sub(r"(\d)\s+", r"\1", cmd)
-    parts = cmd.split(" ")
-    new_cmd = ["sd"]
-    for i in range(1, len(parts)):
-        current = parts[i]
-        if current == "":
-            continue
-        if not current[0].isdigit():
-            new_cmd.append(current)
-        else:
-            match = regex.search(r"^\d+", current)
-            t = int(match.group())
-            if t > 100:
-                # If someone made an unreasonable request, limit the # of commands (so we don't
-                # have any overflows) but do one more than the max messages we keep so it errors out
-                t = 101
-            for j in range(0, t):
-                new_cmd.append(current[match.end():])
-    return " ".join(new_cmd)

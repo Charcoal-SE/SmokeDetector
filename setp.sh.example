@@ -1,0 +1,6 @@
+# Rename to setp.sh before modifying
+# setp.sh is declared in .gitignore
+# So it will not be tracked by Git
+
+export ChatExchangeU=YourEmailHere
+export ChatExchangeP=YourPasswordHere

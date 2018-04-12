@@ -1,0 +1,31 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6-stretch
+    steps:
+      - checkout
+      - restore_cache:
+          key: deps-{{ .Branch }}-{{ checksum "requirements.txt" }}
+      - run:
+          name: Install Python dependencies in venv
+          command: |
+            python3 -m venv env
+            env/bin/pip3 install -r requirements.txt --upgrade
+            env/bin/pip3 install -r user_requirements.txt --upgrade
+      - save_cache:
+          key: deps-{{ .Branch }}-{{ checksum "requirements.txt" }}
+          paths:
+            - "env"
+      - run:
+          name: Lint tests
+          command: env/bin/python3 -m flake8 --config=tox_tests.ini ./test/
+      - run:
+          name: Lint classes
+          command: env/bin/python3 -m flake8 --config=tox_classes.ini ./classes/
+      - run:
+          name: Lint code
+          command: env/bin/python3 -m flake8 ./
+      - run:
+          name: Pytest
+          command: env/bin/python3 -W default::Warning -m pytest test
