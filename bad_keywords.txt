@@ -1244,3 +1244,4 @@ gluco\W?trim
 \d*833\W?783\W?3300
 brilliance\W?sf
 how\W?to\W?hack\W?whatsapp
+(?<=/)memory\Whack[-/<"]
