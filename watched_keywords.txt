@@ -1225,7 +1225,6 @@
 1508357273	Glorfindel	androidrootinghelp\.com
 1508366507	QPaysTaxes	pcworldtech\.com
 1508384817	bwDraco	auroramine
-1508481999	Byte Commander	iplaystoredownloadfree\.com
 1508484522	Glorfindel	kiwitaxi\.com
 1508511174	doppelgreener	whycall\.me
 1508547311	NobodyNada	picdiet
@@ -2040,7 +2039,6 @@
 1514982505	paper1111	officegx\.com
 1514985511	Glorfindel	pufmag\.com
 1514987243	Glorfindel	jimmystogo\.com
-1514997754	Glorfindel	python36\.com
 1515020175	paper1111	sheetdb\.io
 1515045376	tripleee	744357761
 1515053113	paper1111	car\.lol
@@ -2860,7 +2858,7 @@
 1522985901	Glorfindel	earpsupport\.com
 1523005826	A J	dompetpoker\.net
 1523006445	A J	(?:1\W*)?855\W*750\W*0786 
-1523013068	A J	ssc\w*result
+1523013068	A J	ssc\W*result
 1523013408	tripleee	(?:1\W*)?844\W*479\W*2863o
 1523016864	Glorfindel	getprospect\.io
 1523022262	Glorfindel	topseoservices\.in
@@ -2919,7 +2917,6 @@
 1523282290	doppelgreener	lanamorell\.com
 1523283150	K.Dᴀᴠɪs	cyberhack005
 1523283189	WELZ	aus\W?visa\W?hub
-1523293826	ArtOfCode	asha24\.com
 1523294272	CalvT븃	citrusframework\.org
 1523294285	CalvT븃	onSol
 1523298851	WELZ	topnam\.net
@@ -2942,3 +2939,30 @@
 1523364051	tripleee	ecofarmproject
 1523368885	WELZ	inzhoop\.com
 1523372576	Glorfindel	cellspyapps\.org
+1523379414	WELZ	gayworld4r4
+1523404260	Makyen	roommanis\.com
+1523419948	tripleee	393510620692
+1523420466	tripleee	apkbiz\.info
+1523420865	tripleee	supramind\.com
+1523420915	tripleee	zetpdf\.com
+1523423855	tripleee	cleanlabcoat\.com
+1523424589	tripleee	spiritsecret\.com
+1523429964	tripleee	digital\W?marketing\W?packages
+1523430722	Glorfindel	sysdatatools\.com
+1523434799	Mithrandir	appinchina\.co
+1523438466	Glorfindel	itacec\.org
+1523443327	tripleee	(?:(bulk|cutt)ing|strength)\W*stack
+1523443971	tripleee	maxmunus\.com
+1523444076	tripleee	91\W*9066638196
+1523444418	Glorfindel	back2nopest\.com
+1523449747	tripleee	game-ikan\.com
+1523449798	tripleee	games128\.net
+1523450531	Glorfindel	iphonesmsbackup\.com
+1523450758	Glorfindel	text\W?extract\.com
+1523451093	Glorfindel	talkchatroom\.com
+1523455565	K.Dᴀᴠɪs	shove\W?(?:a|(?:yo)?ur)\W?di[ck]{1,2}\b
+1523457413	K.Dᴀᴠɪs	up\W?(?:yo)?ur\W?ass
+1523471455	Olivia Zoe	appreviewsubmit\.com
+1523476987	Makyen	rootjoe301
+1523489302	WELZ	tmexexperts\.com
+1523493314	WELZ	coinminingcompare\.com

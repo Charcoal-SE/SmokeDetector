@@ -1237,8 +1237,10 @@ keto\W?advanced
 rs\W?gold
 keto\W?tone(?:\W?diet)?
 eye\W?serum\W?magic
-jet\W?prox
+jet\W?pro\W?x
 size\W?gain\W?plus
 enhance\W?male
 gluco\W?trim
-\W*833\W?783\W?3300
+\d*833\W?783\W?3300
+brilliance\W?sf
+how\W?to\W?hack\W?whatsapp
