@@ -70,7 +70,7 @@ donald\W*j?\.?\W*trump
 ^christine roebuck$
 techelpp‭
 \W?router$
-fuc?k
+\b(?:moth(?:e?r|a))?fu+[ck]+(?:[ei]ng*|e[dr])?\b
 (hurriyet|turkishdaily)news
 tour\W?packages
 sputnik\W?international
