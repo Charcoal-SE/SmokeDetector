@@ -2992,4 +2992,4 @@
 1523612169	Glorfindel	crowdbabble\.com
 1523613620	tripleee	ibrowhenna\.com
 1523617067	Glorfindel	pentalift\.com
-1523619508	Olivia Zoe	pinpinterest\.com
+1523619508	Olivia Zoe	pinpinterest\W?com
