@@ -2989,3 +2989,4 @@
 1523567736	K.Dᴀᴠɪs	merchant.cash.advance.(?:leads?|marketing|live|appointment)
 1523602672	Glorfindel	syhdee\.com
 1523604315	Glorfindel	personalloanlender\.uk
+1523612169	Glorfindel	crowdbabble\.com
