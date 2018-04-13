@@ -1247,3 +1247,4 @@ how\W?to\W?hack\W?whatsapp
 (?<=/)memory\Whack[-/<"]
 panitrol\W?xl
 xyz\W?collagen
+personal-loans\.html
