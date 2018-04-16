@@ -3011,3 +3011,4 @@
 1523864902	Glorfindel	svrtechnologies\.com
 1523868951	Glorfindel	guldcoin
 1523870228	Mithrandir	\$ex\W?drive
+1523870244	Glorfindel	originalapk\.com
