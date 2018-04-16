@@ -3009,3 +3009,4 @@
 1523843390	quartata	irctctatkalsoftware.co.in
 1523863355	tripleee	(?:1\W*)?800\W*509\W*3075
 1523864902	Glorfindel	svrtechnologies\.com
+1523868951	Glorfindel	guldcoin
