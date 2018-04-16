@@ -3010,3 +3010,4 @@
 1523863355	tripleee	(?:1\W*)?800\W*509\W*3075
 1523864902	Glorfindel	svrtechnologies\.com
 1523868951	Glorfindel	guldcoin
+1523870228	Mithrandir	\$ex\W?drive
