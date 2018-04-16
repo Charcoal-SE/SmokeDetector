@@ -3017,5 +3017,4 @@
 1523880174	tripleee	milnermuller
 1523890913	Glorfindel	playcasinoca\.com
 1523890942	Glorfindel	mmo4me\.com
-1523903008	CalvT	gum.co
 1523903012	CalvT	gum\.co
