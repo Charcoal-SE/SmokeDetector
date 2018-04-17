@@ -3032,3 +3032,4 @@
 1523958010	tripleee	(?:1\W*)?970\W*368\W*3293
 1523958028	tripleee	hzhualongs\.net
 1523963680	Glorfindel	cryptobulls\.exchange
+1523964238	Glorfindel	hirehackersandprogrammers
