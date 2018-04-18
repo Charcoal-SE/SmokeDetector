@@ -3047,3 +3047,4 @@
 1524048079	tripleee	die\W+Juden
 1524048256	tripleee	^John$
 1524055892	WELZ	codexking.com
+1524056394	tripleee	becomegorgeous\.com
