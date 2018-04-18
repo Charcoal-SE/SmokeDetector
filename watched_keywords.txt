@@ -3039,3 +3039,4 @@
 1524023467	tripleee	(?:1\W*)?858\W*905\W*7790
 1524013166	Makyen	f+u+[ck]+
 1524031052	tripleee	healthy\W?king
+1524031124	tripleee	healthy\W?king
