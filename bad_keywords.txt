@@ -1260,3 +1260,4 @@ fungus\W?hack
 vitality\W?rx
 rapid\W?trim\W?ultra
 onycosolve
+pro\W?bio\W?slim
