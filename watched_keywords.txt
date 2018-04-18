@@ -3037,3 +3037,4 @@
 1524023339	tripleee	couriertrackingstatus\.online
 1524023467	tripleee	(?:1\W*)?858\W*905\W*7790
 1524013166	Makyen	f+u+[ck]+
+1524033408	tripleee	foodies\W?panda
