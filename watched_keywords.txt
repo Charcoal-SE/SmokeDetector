@@ -3043,3 +3043,4 @@
 1524044012	Suraj Rao	joyoshare\.com
 1524046719	Byte Commander	awarepedia\.com
 1524046885	tripleee	casinoscroll\.com
+1524048066	tripleee	der\W+Jude
