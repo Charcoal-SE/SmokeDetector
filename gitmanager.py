@@ -21,6 +21,9 @@ from helpers import log
 from globalvars import GlobalVars
 from blacklists import *
 
+import os.path
+git.config("core.hooksPath", os.path.dirname(os.path.realpath(__file__)) + "/hooks")
+
 
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
 class GitManager:
@@ -71,29 +74,16 @@ class GitManager:
             # if we don't address it here.
             return (False, "Invalid blacklist type specified, something has broken badly!")
 
+        branch = ""
         blacklister = Blacklist(blacklist_type)
         blacklist_file_name = blacklist_type[0]
 
         try:
             cls.gitmanager_lock.acquire()
-            git.checkout("master")
-            try:
-                git.pull()
-            except:
-                pass
 
-            # Check that we're up-to-date with origin (GitHub)
-            git.remote.update()
-            if 'windows' in platform.platform().lower():
-                if git.rev_parse("refs/remotes/origin/master").strip() != git.rev_parse("master").strip():
-                    return (False, "HEAD isn't at tip of origin's master branch")
-            else:
-                if git("rev-parse", "refs/remotes/origin/master").strip() != git("rev-parse", "master").strip():
-                    return (False, "HEAD isn't at tip of origin's master branch")
-
-            # Check that blacklisted_websites.txt isn't modified locally. That could get ugly fast
-            if blacklist_file_name in git.status():  # Also ugly
-                return (False, "{0} is modified locally. This is probably bad.".format(blacklist_file_name))
+            # Fetch remote changes and checkout into detached head
+            git.fetch("origin", "master")
+            git.checkout("origin/master")
 
             # Set up parameters for watch vs blacklist
             if blacklist_type in [Blacklist.WATCHED_KEYWORDS]:
@@ -121,13 +111,6 @@ class GitManager:
             # Add item to file
             blacklister.add(item_to_blacklist)
 
-            # Checkout a new branch (for PRs for non-code-privileged people)
-            branch = "auto-blacklist-{0}".format(str(time.time()))
-            git.checkout("-b", branch)
-
-            # Clear HEAD just in case
-            git.reset("HEAD")
-
             git.add(blacklist_file_name)
             if watch_removed:
                 git.add('watched_keywords.txt')
@@ -136,13 +119,13 @@ class GitManager:
                        "-m", u"Auto {0} of {1} by {2} --autopull".format(op, item, username))
 
             if code_permissions:
-                git.checkout("master")
-                git.merge(branch)
-                git.push("origin", "master")
-                git.branch('-D', branch)  # Delete the branch in the local git tree since we're done with it.
+                git.push("origin", "HEAD:master")
             else:
+                # Checkout a new branch from detached HEAD
+                branch = "auto-blacklist-{0}".format(str(time.time()))
+                git.checkout("-b", branch)
+
                 git.push("origin", branch)
-                git.checkout("master")
 
                 if GlobalVars.github_username is None or GlobalVars.github_password is None:
                     return (False, "Tell someone to set a GH password")
@@ -164,20 +147,11 @@ class GitManager:
                                          data=json.dumps(payload))
                 log('debug', response.json())
                 try:
-                    git.checkout("deploy")  # Return to deploy, pending the accept of the PR in Master.
-                    git.branch('-D', branch)  # Delete the branch in the local git tree since we're done with it.
                     url = response.json()["html_url"]
                     return (True,
                             "You don't have code privileges, but I've [created PR#{1} for you]({0}).".format(
                                 url, url.split('/')[-1]))
                 except KeyError:
-                    git.checkout("deploy")  # Return to deploy
-
-                    # Delete the branch in the local git tree, we'll create it again if the
-                    # command is run again. This way, we keep things a little more clean in
-                    # the local git tree
-                    git.branch('-D', branch)
-
                     # Error capture/checking for any "invalid" GH reply without an 'html_url' item,
                     # which will throw a KeyError.
                     if "bad credentials" in str(response.json()['message']).lower():
@@ -192,6 +166,10 @@ class GitManager:
         finally:
             # Always return to `deploy` branch when done with anything.
             git.checkout("deploy")
+
+            if branch:
+                git.branch('-D', branch)
+
             cls.gitmanager_lock.release()
 
         if op == 'blacklist':

@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+
+import os.path
+import sys
+from dulwich import repo
+
+git = repo.Repo(os.path.realpath(os.path.dirname(__file__) + "../.."))
+
+if git.refs.follow(b"HEAD")[0][-1] == b"refs/heads/deploy":
+    print("Please don't commit directly to deploy.")
+    sys.exit(1)
