@@ -461,9 +461,14 @@ def bad_pattern_in_url(s, site, *args):
 
 
 def bad_ns_for_url_domain(s, site, *args):
+    invalid_tld_count = 0
     for domain in set([get_domain(link, full=True) for link in post_links(s)]):
         if not tld.get_tld(domain, fix_protocol=True, fail_silently=True):
             log('debug', '{0} has no valid tld; skipping'.format(domain))
+            invalid_tld_count += 1
+            if invalid_tld_count > 3:
+                log('debug', 'too many invalid TLDs; abandoning post')
+                return False, ""
             continue
         try:
             starttime = datetime.now()
@@ -478,10 +483,22 @@ def bad_ns_for_url_domain(s, site, *args):
             continue
         endtime = datetime.now()
         log('info', 'NS query duration {0}'.format(endtime - starttime))
-        nameservers = [server.target.to_text() for server in ns]
-        if any([ns.endswith('.namecheaphosting.com.') for ns in nameservers]):
-            return True, '{domain} NS suspicious {ns}'.format(
-                domain=domain, ns=','.join(nameservers))
+        nameservers = set(server.target.to_text() for server in ns)
+        for bad_ns in [
+                # Don't forget the trailing dot on the resolved name!
+                # {'dns1.namecheaphosting.com.', 'dns2.namecheaphosting.com.'},
+                # {'dns11.namecheaphosting.com.', 'dns12.namecheaphosting.com.'},
+                'namecheaphosting.com.',
+                {'ns1.md-95.bigrockservers.com.', 'ns2.md-95.bigrockservers.com.'},
+                {'ns1.md-99.bigrockservers.com.', 'ns2.md-99.bigrockservers.com.'},
+                {'apollo.ns.cloudflare.com.', 'liz.ns.cloudflare.com.'},
+                {'chip.ns.cloudflare.com.', 'lola.ns.cloudflare.com.'},
+                {'lloyd.ns.cloudflare.com.', 'reza.ns.cloudflare.com.'}]:
+            if (type(bad_ns) is set and nameservers == bad_ns) or \
+                any([ns.endswith('.{0}'.format(bad_ns))
+                    for ns in nameservers]):
+                return True, '{domain} NS suspicious {ns}'.format(
+                    domain=domain, ns=','.join(nameservers))
     return False, ""
 
 
