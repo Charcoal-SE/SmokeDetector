@@ -915,6 +915,18 @@ class FindSpam:
         {'regex': r"car\Win", 'all': False, 'sites': ['superuser.com', 'puzzling.stackexchange.com'],
          'reason': 'bad keyword in {}', 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        # Judaism etc troll, 2018-04-18 ("potentially bad" makes this watch)
+        {'regex': r'^John$', 'all': False,
+         'sites': [
+             'judaism.stackexchange.com', 'stackoverflow.com',
+             'superuser.com', 'islam.stackexchange.com',
+             'math.stackexchange.com', 'academia.stackexchange.com',
+             'health.stackexchange.com', 'askubuntu.com',
+             'skeptics.stackexchange.com', 'politics.stackeschange.com'],
+         'reason': 'potentially bad keyword in {}',
+         'title': False, 'body': False, 'username': True,
+         'stripcodeblocks': False, 'body_summary': False,
+         'max_rep': 1, 'max_score': 1},
         # Bad keywords in titles only, all sites
         {'regex': r"(?i)\b(?!s.m.a.r.t)[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\b", 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False,
