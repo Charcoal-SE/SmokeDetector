@@ -1211,7 +1211,6 @@
 1508299259	tripleee	buyingripple\.com
 1508299568	tripleee	abahadil\.com
 1508301596	tripleee	body\W?boost
-1508302086	bwDraco	healthy\W?king\W?cbd
 1508305736	tripleee	clinicspots\.com
 1508305970	tripleee	kk4678
 1508308385	tripleee	nxlog\.co
@@ -3039,4 +3038,3 @@
 1524023467	tripleee	(?:1\W*)?858\W*905\W*7790
 1524013166	Makyen	f+u+[ck]+
 1524031052	tripleee	healthy\W?king
-1524031124	tripleee	healthy\W?king
