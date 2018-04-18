@@ -461,9 +461,14 @@ def bad_pattern_in_url(s, site, *args):
 
 
 def bad_ns_for_url_domain(s, site, *args):
+    invalid_tld_count = 0
     for domain in set([get_domain(link, full=True) for link in post_links(s)]):
         if not tld.get_tld(domain, fix_protocol=True, fail_silently=True):
             log('debug', '{0} has no valid tld; skipping'.format(domain))
+            invalid_tld_count += 1
+            if invalid_tld_count > 3:
+                log('debug', 'too many invalid TLDs; abandoning post')
+                return False, ""
             continue
         try:
             starttime = datetime.now()
