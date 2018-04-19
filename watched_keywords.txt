@@ -3056,3 +3056,4 @@
 1524110188	tripleee	qnc\W*jelly
 1524111402	Tetsuya Yamamoto	kangarooindonesia\.id
 1524112691	tripleee	racwg\.com
+1524112807	tripleee	(?:91\W*)?22\W*2663\W*5100
