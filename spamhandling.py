@@ -90,17 +90,11 @@ def handle_spam(post, reasons, why):
     if post.is_answer and post.post_id is not None and post.post_id is not "":
         datahandling.add_post_site_id_link((post.post_id, post.post_site, "answer"), post.parent.post_id)
     try:
-        post._title = parsing.escape_special_chars_in_title(post.title)
-        if post.is_answer:
-            # If the post is an answer type post, the 'title' is going to be blank, so when posting the
-            # message contents we need to set the post title to the *parent* title, so the message in the
-            # chat is properly constructed with parent title instead. This will make things 'print'
-            # in a proper way in chat messages.
-            sanitized_title = regex.sub('(https?://|\n)', '', post.parent.title)
-        else:
-            sanitized_title = regex.sub('(https?://|\n)', '', post.title)
-
-        sanitized_title = regex.sub(r'([\]*`])', r'\\\1', sanitized_title).replace('\n', u'\u23CE')
+        # If the post is an answer type post, the 'title' is going to be blank, so when posting the
+        # message contents we need to set the post title to the *parent* title, so the message in the
+        # chat is properly constructed with parent title instead. This will make things 'print'
+        # in a proper way in chat messages.
+        sanitized_title = parsing.sanitize_title(post.title if not post.is_answer else post.parent.title)
 
         prefix = u"[ [SmokeDetector](//goo.gl/eLDYqh) ]"
         if GlobalVars.metasmoke_key:
@@ -111,11 +105,10 @@ def handle_spam(post, reasons, why):
 
         # We'll insert reason list later
         if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
-            s = u" {{}}: [{}]({}) by a deleted user on `{}`".format(sanitized_title.strip(), post_url,
-                                                                    shortened_site)
+            s = u" {{}}: [{}]({}) by a deleted user on `{}`".format(sanitized_title, post_url, shortened_site)
             username = ""
         else:
-            s = u" {{}}: [{}]({}) by [{}]({}) on `{}`".format(sanitized_title.strip(), post_url,
+            s = u" {{}}: [{}]({}) by [{}]({}) on `{}`".format(sanitized_title, post_url,
                                                               post.user_name.strip(), poster_url, shortened_site)
             username = post.user_name.strip()
 
@@ -125,7 +118,6 @@ def handle_spam(post, reasons, why):
                  post.up_vote_count, post.down_vote_count)
 
         log('debug', GlobalVars.parser.unescape(s).encode('ascii', errors='replace'))
-        datahandling.append_to_latest_questions(post.post_site, post.post_id, post.title)
         GlobalVars.deletion_watcher.subscribe(post_url)
 
         for reason_count in range(5, 2, -1):  # Try 5 reasons, then 4, then 3

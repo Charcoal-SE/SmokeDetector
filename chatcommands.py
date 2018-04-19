@@ -1225,7 +1225,7 @@ def checkpost(msg, url, alias_used='scan'):  # FIXME: Currently does not support
         handle_spam(post=post, reasons=reasons, why=why + "\nManually triggered scan")
         return None
 
-    return "Post [{}]({}) does not look like spam.".format(post_data.title, url)
+    return "Post [{}]({}) does not look like spam.".format(sanitize_title(post_data.title), url)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal

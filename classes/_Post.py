@@ -13,22 +13,22 @@ class PostParseError(Exception):
 
 
 class Post:
-    _body = ""
-    _body_is_summary = False
-    _is_answer = False
-    _owner_rep = 1
-    _parent = None  # If this is not none, then _is_answer should be 'true' because there would then be a parent post.
-    _post_id = ""
-    _post_score = 0
-    _post_site = ""
-    _post_url = ""
-    _title = ""
-    _user_name = ""
-    _user_url = ""
-    _votes = {'downvotes': None, 'upvotes': None}
-
     def __init__(self, json_data=None, api_response=None, parent=None):
         # type: (AnyStr, dict, Post) -> None
+
+        self._body = ""
+        self._body_is_summary = False
+        self._is_answer = False
+        self._owner_rep = 1
+        self._parent = None  # If not None, _is_answer should be 'true' because there would then be a parent post.
+        self._post_id = ""
+        self._post_score = 0
+        self._post_site = ""
+        self._post_url = ""
+        self._title = ""
+        self._user_name = ""
+        self._user_url = ""
+        self._votes = {'downvotes': None, 'upvotes': None}
 
         if parent is not None:
             if not isinstance(parent, Post):

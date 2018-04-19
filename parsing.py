@@ -149,6 +149,9 @@ def unescape_title(title_escaped):
 def escape_special_chars_in_title(title_unescaped):
     return regex.sub(r"([_*\\`\[\]])", r"\\\1", title_unescaped)
 
+# noinspection PyMissingTypeHints
+def sanitize_title(title_unescaped):
+    return regex.sub('(https?://|\n)', '', escape_special_chars_in_title(title_unescaped).replace('\n', u'\u23CE'))
 
 # noinspection PyMissingTypeHints
 def get_user_from_list_command(cmd):  # for example, !!/addblu is a list command
