@@ -56,6 +56,7 @@ class GlobalVars:
     startup_utc = datetime.utcnow().strftime("%H:%M:%S")
     latest_questions = []
     api_backoff_time = 0
+    deletion_watcher = None
 
     metasmoke_last_ping_time = datetime.now()
     not_privileged_warning = """

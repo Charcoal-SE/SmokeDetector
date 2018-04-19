@@ -11,11 +11,9 @@ from utcdate import UtcDate
 from apigetpost import api_get_post, PostData
 from datahandling import *
 from blacklists import load_blacklists
-from metasmoke import Metasmoke
 from parsing import *
 from spamhandling import check_if_spam, handle_spam
 from gitmanager import GitManager
-from tasks import Tasks
 import threading
 import random
 import requests
@@ -917,8 +915,6 @@ def unnotify_all(msg):
     """
     Unsubscribes a user to all events
     :param msg:
-    :param room_id:
-    :param se_site:
     :return: A string
     """
     remove_all_from_notification_list(msg.owner.id)
@@ -1063,7 +1059,6 @@ def report(msg, args):
     """
     Report a post (or posts)
     :param msg:
-    :param urls:
     :return: A string (or None)
     """
     crn, wait = can_report_now(msg.owner.id, msg._client.host)

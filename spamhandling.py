@@ -1,6 +1,5 @@
 # coding=utf-8
 import sys
-from threading import Thread
 from findspam import FindSpam
 import datahandling
 import chatcommunicate
@@ -9,8 +8,6 @@ from datetime import datetime
 import parsing
 import metasmoke
 import excepthook
-# noinspection PyCompatibility
-import regex
 from classes import Post, PostParseError
 from helpers import log
 from tasks import Tasks
@@ -120,6 +117,7 @@ def handle_spam(post, reasons, why):
         log('debug', GlobalVars.parser.unescape(s).encode('ascii', errors='replace'))
         GlobalVars.deletion_watcher.subscribe(post_url)
 
+        reason = message = None
         for reason_count in range(5, 2, -1):  # Try 5 reasons, then 4, then 3
             reason = ", ".join(reasons[:reason_count])
             if len(reasons) > reason_count:
