@@ -3079,3 +3079,4 @@
 1524204966	tripleee	jjrru(?:닷|\W*dot\W*|\.)com
 1524209199	tripleee	tronyx\W?online
 1524215420	tripleee	flyto\.club
+1524217978	tripleee	skrupt-bot\.ml
