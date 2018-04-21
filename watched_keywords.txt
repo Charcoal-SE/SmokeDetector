@@ -3093,3 +3093,4 @@
 1524308058	Princess Luna	youtubetomp3converter\.world
 1524310525	Princess Luna	skyembed\.com
 1524318511	Princess Luna	getthumbnails\.com
+1524329664	doppelgreener	autocleanfolder\.com
