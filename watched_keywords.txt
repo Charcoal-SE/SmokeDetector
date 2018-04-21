@@ -3096,3 +3096,4 @@
 1524329664	doppelgreener	autocleanfolder\.com
 1524331367	Makyen	(1[\W_]*)?844[\W_]*542[\W_]*4110
 1524332363	quartata	techdriod\.com
+1524333742	NobodyNada	inverterbattery\.online
