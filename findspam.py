@@ -935,7 +935,7 @@ class FindSpam:
         # Judaism etc troll, 2018-04-18 ("potentially bad" makes this watch)
         {'regex': r'^John$', 'all': False,
          'sites': [
-             'judaism.stackexchange.com', 'stackoverflow.com',
+             'judaism.stackexchange.com',
              'superuser.com', 'islam.stackexchange.com',
              'math.stackexchange.com', 'academia.stackexchange.com',
              'health.stackexchange.com', 'askubuntu.com',
