@@ -3098,3 +3098,4 @@
 1524332363	quartata	techdriod\.com
 1524333742	NobodyNada	inverterbattery\.online
 1524333832	NobodyNada	belajarmenanam\.com
+1524357408	Makyen	screw\W*you(('?r?e?.{0,20}?(mother|m[ou]m(m?y)?|sister|brother|father|dad|pop))‌​|r?self)?
