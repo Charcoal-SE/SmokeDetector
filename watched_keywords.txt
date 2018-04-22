@@ -3110,3 +3110,4 @@
 1524416572	Zoe	gamedevtycoonapk\.online
 1524416551	Zoe	simcitymodapk\.info
 1524416539	Zoe	dolphinemulatorapk\.info
+1524424812	WELZ	phone\W?scam\W?app
