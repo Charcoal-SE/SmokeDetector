@@ -3112,3 +3112,4 @@
 1524416539	Zoe	dolphinemulatorapk\.info
 1524424812	WELZ	phone\W?scam\W?app
 1524424822	WELZ	.+1310489717
+1524451698	Tetsuya Yamamoto	tamsutre\.com
