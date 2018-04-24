@@ -143,6 +143,7 @@ Tasks.later(restart_automatically, after=21600)
 log('info', GlobalVars.location)
 log('info', GlobalVars.metasmoke_host)
 
+
 def setup_websocket(attempt, max_attempts):
     try:
         ws = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
@@ -151,6 +152,7 @@ def setup_websocket(attempt, max_attempts):
     except:
         log('warning', 'WS failed to create websocket connection. Attempt {} of {}.'.format(attempt, max_attempts))
         return None
+
 
 tries = 1
 max_tries = 5
