@@ -3131,3 +3131,4 @@
 1524543348	tripleee	biptut\.com
 1524552388	K.Dᴀᴠɪs	optimalgeek\.com
 1524553034	tripleee	(?:1\W*)?844\W*445\W*5\W*767
+1524553076	K.Dᴀᴠɪs	sisgain\.com
