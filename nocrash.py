@@ -36,7 +36,7 @@ if ChatExchangeP is None:
     ChatExchangeP = getpass("Password: ").strip('\r\n')
 
 options = {"standby", "charcoal-hq-only", "no-chat", "no-git-user-check"}
-persistent_arguments = list(options & set(sys.argv))
+persistent_arguments = sys.argv
 
 count = 0
 crashcount = 0
