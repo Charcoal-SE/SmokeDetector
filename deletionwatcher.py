@@ -89,7 +89,10 @@ class DeletionWatcher:
 
         if action not in self.posts:
             self.posts[action] = (post_id, post_site, post_type, post_url, [(callback, max_time)] if callback else [])
-            self.socket.send(action)
+            try:
+                self.socket.send(action)
+            except:
+                log('error', 'DeletionWatcher failed on sending {}'.format(action))
         elif callback:
             _, _, _, _, callbacks = self.posts[action]
             callbacks.append((callback, max_time))
