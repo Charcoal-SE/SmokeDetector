@@ -152,14 +152,17 @@ def setup_websocket(attempt, max_attempts):
         log('warning', 'WS failed to create websocket connection. Attempt {} of {}.'.format(attempt, max_attempts))
         return None
 
-tries = 0
+tries = 1
 max_tries = 5
-while tries < max_tries:
+while tries <= max_tries:
     ws = setup_websocket(tries, max_tries)
     if ws:
         break
-    else:
+    elif tries < max_tries:
         tries += 1
+    elif tries == max_tries:
+        log('error', 'Max retries exceeded. Exiting, maybe a restart will kick things.')
+        os._exit(4)
 
 
 if "first_start" in sys.argv and GlobalVars.on_master:
