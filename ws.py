@@ -164,7 +164,7 @@ while tries <= max_tries:
         tries += 1
     elif tries == max_tries:
         log('error', 'Max retries exceeded. Exiting, maybe a restart will kick things.')
-        os._exit(4)
+        os._exit(5)
 
 
 if "first_start" in sys.argv and GlobalVars.on_master:
