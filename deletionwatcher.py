@@ -23,14 +23,13 @@ from tasks import Tasks
 class DeletionWatcher:
     def __init__(self):
         DeletionWatcher.update_site_id_list()
+        self.posts = {}
 
         try:
             self.socket = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
         except:
             log('error', 'DeletionWatcher failed to create a websocket connection')
             return
-
-        self.posts = {}
 
         if os.path.exists("deletionIDs.p"):
             with open("deletionIDs.p", "rb") as fh:
