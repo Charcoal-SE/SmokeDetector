@@ -108,7 +108,6 @@ GlobalVars.standby_message = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                              ")"
 
 GlobalVars.standby_mode = "standby" in sys.argv
-GlobalVars.deletion_watcher = DeletionWatcher()
 
 chatcommunicate.init(username, password)
 Tasks.periodic(Metasmoke.send_status_ping, interval=60)
@@ -166,6 +165,7 @@ while tries <= max_tries:
         log('error', 'Max retries exceeded. Exiting, maybe a restart will kick things.')
         os._exit(5)
 
+GlobalVars.deletion_watcher = DeletionWatcher()
 
 if "first_start" in sys.argv and GlobalVars.on_master:
     chatcommunicate.tell_rooms_with("debug", GlobalVars.s)
