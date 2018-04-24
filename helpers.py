@@ -7,7 +7,7 @@ import requests
 
 
 class Helpers:
-    pass
+    min_log_level = 0
 
 
 # Allows use of `environ_or_none("foo") or "default"` shorthand
