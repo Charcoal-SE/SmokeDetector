@@ -3142,3 +3142,4 @@
 1524575132	Zoe	instamojo\.com
 1524575516	Zoe	canonijdriver\.com
 1524591814	WELZ	xanax\W?plug\W?\d\d
+1524588805	Makyen	(1[\W_]*)?844[\W_]*443[\W_]*3244[A-Za-z_]*
