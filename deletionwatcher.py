@@ -28,6 +28,7 @@ class DeletionWatcher:
             self.socket = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
         except:
             log('error', 'DeletionWatcher failed to create a websocket connection')
+            return
 
         self.posts = {}
 
