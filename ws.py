@@ -143,8 +143,24 @@ Tasks.later(restart_automatically, after=21600)
 log('info', GlobalVars.location)
 log('info', GlobalVars.metasmoke_host)
 
-ws = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
-ws.send("155-questions-active")
+def setup_websocket(attempt, max_attempts):
+    try:
+        ws = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
+        ws.send("155-questions-active")
+        return ws
+    except:
+        log('warning', 'WS failed to create websocket connection. Attempt {} of {}.'.format(attempt, max_attempts))
+        return None
+
+tries = 0
+max_tries = 5
+while tries < max_tries:
+    ws = setup_websocket(tries, max_tries)
+    if ws:
+        break
+    else:
+        tries += 1
+
 
 if "first_start" in sys.argv and GlobalVars.on_master:
     chatcommunicate.tell_rooms_with("debug", GlobalVars.s)
