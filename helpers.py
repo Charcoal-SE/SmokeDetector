@@ -4,7 +4,10 @@ import sys
 from datetime import datetime
 from termcolor import colored
 import requests
-from globalvars import GlobalVars
+
+
+class Helpers:
+    pass
 
 
 # Allows use of `environ_or_none("foo") or "default"` shorthand
@@ -31,7 +34,7 @@ def log(log_level, *args):
     }
 
     level = levels[log_level][0]
-    if level < GlobalVars.min_log_level:
+    if level < Helpers.min_log_level:
         return
 
     color = (levels[log_level][1] if log_level in levels else 'white')

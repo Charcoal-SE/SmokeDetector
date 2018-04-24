@@ -32,7 +32,7 @@ import time
 import requests
 # noinspection PyPackageRequirements
 from tld.utils import update_tld_names, TldIOError
-from helpers import log
+from helpers import log, Helpers
 from tasks import Tasks
 
 import chatcommands
@@ -47,11 +47,11 @@ if any(['--loglevel' in x for x in sys.argv]):
     idx = ['--loglevel' in x for x in sys.argv].index(True)
     arg = sys.argv[idx].split('=')
     if len(arg) >= 2:
-        GlobalVars.min_log_level = levels[arg[-1]]
+        Helpers.min_log_level = levels[arg[-1]]
     else:
-        GlobalVars.min_log_level = 0
+        Helpers.min_log_level = 0
 else:
-    GlobalVars.min_log_level = 0
+    Helpers.min_log_level = 0
 
 try:
     update_tld_names()
