@@ -1,5 +1,6 @@
 # coding=utf-8
 import os
+import sys
 from datetime import datetime
 from termcolor import colored
 import requests
@@ -21,13 +22,27 @@ def all_matches_unique(match):
 
 # noinspection PyMissingTypeHints
 def log(log_level, *args):
-    colors = {
-        'debug': 'grey',
-        'info': 'cyan',
-        'warning': 'yellow',
-        'error': 'red'
+    levels = {
+        'debug': [0, 'grey'],
+        'info': [1, 'cyan'],
+        'warning': [2, 'yellow'],
+        'error': [3, 'red']
     }
-    color = (colors[log_level] if log_level in colors else 'white')
+    if any(['--loglevel' in x for x in sys.argv]):
+        idx = ['--loglevel' in x for x in sys.argv].index(True)
+        arg = sys.argv[idx].split('=')
+        if len(arg) >= 2:
+            min_level = levels[arg[-1]][0]
+        else:
+            min_level = 0
+    else:
+        min_level = 0
+
+    level = levels[log_level][0]
+    if level < GlobalVars.min_log_level:
+        return
+
+    color = (levels[log_level][1] if log_level in colors else 'white')
     log_str = u"{} {}".format(colored("[{}]".format(datetime.now().isoformat()[11:-7]), color),
                               u"  ".join([str(x) for x in args]))
     print(log_str)

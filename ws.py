@@ -37,6 +37,22 @@ from tasks import Tasks
 
 import chatcommands
 
+levels = {
+    'debug': 0,
+    'info': 1,
+    'warning': 2,
+    'error': 3
+}
+if any(['--loglevel' in x for x in sys.argv]):
+    idx = ['--loglevel' in x for x in sys.argv].index(True)
+    arg = sys.argv[idx].split('=')
+    if len(arg) >= 2:
+        GlobalVars.min_log_level = levels[arg[-1]]
+    else:
+        GlobalVars.min_log_level = 0
+else:
+    GlobalVars.min_log_level = 0
+
 try:
     update_tld_names()
 except TldIOError as ioerr:
