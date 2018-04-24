@@ -73,7 +73,6 @@ else:
 
 # We need an instance of bodyfetcher before load_files() is called
 GlobalVars.bodyfetcher = BodyFetcher()
-GlobalVars.deletion_watcher = DeletionWatcher()
 
 load_files()
 filter_auto_ignored_posts()
@@ -109,6 +108,7 @@ GlobalVars.standby_message = "[ " + GlobalVars.chatmessage_prefix + " ] " \
                              ")"
 
 GlobalVars.standby_mode = "standby" in sys.argv
+GlobalVars.deletion_watcher = DeletionWatcher()
 
 chatcommunicate.init(username, password)
 Tasks.periodic(Metasmoke.send_status_ping, interval=60)

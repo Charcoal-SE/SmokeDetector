@@ -24,7 +24,11 @@ class DeletionWatcher:
     def __init__(self):
         DeletionWatcher.update_site_id_list()
 
-        self.socket = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
+        try:
+            self.socket = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
+        except:
+            log('error', 'DeletionWatcher failed to create a websocket connection')
+
         self.posts = {}
 
         if os.path.exists("deletionIDs.p"):
