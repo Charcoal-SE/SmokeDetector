@@ -133,7 +133,7 @@ def check_socket_connections():
 # noinspection PyProtectedMember
 def restart_automatically():
     Metasmoke.send_statistics()
-    os._exit(1)
+    os._exit(5)
 
 
 Tasks.periodic(check_socket_connections, interval=90)
