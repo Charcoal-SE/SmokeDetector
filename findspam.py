@@ -149,7 +149,7 @@ def malicious_link(s, site, *args):
     href, text = search[1], search[2]
     try:
         parsed_href = tld.get_tld(href, as_object=True)
-        print(parsed_href.domain, SE_SITES_DOMAINS)
+        log('debug', parsed_href.domain, SE_SITES_DOMAINS)
         if parsed_href.tld in SE_SITES_DOMAINS:
             return False, ''
         if contains_tld(text) and ' ' not in text:
