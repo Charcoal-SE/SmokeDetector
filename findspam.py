@@ -482,7 +482,7 @@ def bad_ns_for_url_domain(s, site, *args):
                 exc, endtime - starttime))
             continue
         endtime = datetime.now()
-        log('info', 'NS query duration {0}'.format(endtime - starttime))
+        log('debug', 'NS query duration {0}'.format(endtime - starttime))
         nameservers = set(server.target.to_text() for server in ns)
         for bad_ns in [
                 # Don't forget the trailing dot on the resolved name!
