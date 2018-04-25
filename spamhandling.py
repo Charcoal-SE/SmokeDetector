@@ -104,7 +104,7 @@ def handle_spam(post, reasons, why):
 
         prefix = u"[ [SmokeDetector](//goo.gl/eLDYqh) ]"
         if GlobalVars.metasmoke_key:
-            prefix_ms = u"[ [SmokeDetector](//goo.gl/eLDYqh) | [MS](//m.erwaysoftware.com/posts/uid/{}/{}".format(
+            prefix_ms = u"[ [SmokeDetector](//goo.gl/eLDYqh) | [MS](//m.erwaysoftware.com/posts/uid/{}/{}) ]".format(
                 api_parameter_from_link(post_url),
                 post.post_id
             )
