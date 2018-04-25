@@ -1279,3 +1279,4 @@ fuel\W?fit\W?max
 rapid\W?tone
 clash\W?of\W?clans\W?hack
 saint\W?elias
+keto\W?ultra(\W?diet)?
