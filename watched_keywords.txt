@@ -1834,7 +1834,6 @@
 1512634552	tripleee	crackyourinterview\.com
 1512635723	Federico	ceoemaillist\.com
 1512638723	Glorfindel	sweisads\.com
-1512642505	tripleee	francesupplements\.fr
 1512648485	Glorfindel	indiumsoft\.com
 1512651873	Mithrandir	geourbgroup\.com
 1512653210	Glorfindel	freecoupondunia\.com
