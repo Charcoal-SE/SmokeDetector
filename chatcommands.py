@@ -739,10 +739,11 @@ def status():
 
 
 # noinspection PyIncorrectDocstring
-@command(privileged=True)
-def stopflagging():
+@command(privileged=True, whole_msg=True)
+def stopflagging(msg):
     Tasks.do(Metasmoke.stop_autoflagging)
-    return "Request sent..."
+    log('warning', 'Disabling autoflagging ({} ran !!/stopflagging, message {})'.format(msg.owner.name, msg.id))
+    return 'Stopping'
 
 
 # noinspection PyIncorrectDocstring,PyProtectedMember

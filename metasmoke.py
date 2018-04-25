@@ -189,7 +189,7 @@ class Metasmoke:
     def send_stats_on_post(title, link, reasons, body, username, user_link, why, owner_rep,
                            post_score, up_vote_count, down_vote_count):
         if GlobalVars.metasmoke_host is None:
-            log('info', "Metasmoke location not defined, not reporting")
+            log('info', 'Attempted to send stats but metasmoke_host is undefined. Ignoring.')
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -215,7 +215,7 @@ class Metasmoke:
     @staticmethod
     def send_feedback_for_post(post_link, feedback_type, user_name, user_id, chat_host):
         if GlobalVars.metasmoke_host is None:
-            log('info', "Metasmoke location not defined; not reporting")
+            log('info', 'Received chat feedback but metasmoke_host is undefined. Ignoring.')
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -241,7 +241,7 @@ class Metasmoke:
     @staticmethod
     def send_deletion_stats_for_post(post_link, is_deleted):
         if GlobalVars.metasmoke_host is None:
-            log('info', "Metasmoke location not defined; not reporting deletion stats")
+            log('info', 'Attempted to send deletion data but metasmoke_host is undefined. Ignoring.')
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -263,7 +263,7 @@ class Metasmoke:
     @staticmethod
     def send_status_ping():
         if GlobalVars.metasmoke_host is None:
-            log('info', "Metasmoke location not defined; not sending status ping")
+            log('info', 'Attempted to send status ping but metasmoke_host is undefined. Not sent.')
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -375,5 +375,6 @@ class Metasmoke:
         headers = {'Content-type': 'application/json'}
 
         if GlobalVars.metasmoke_host is not None:
+            log('info', 'Sent statistics to metasmoke: ', payload['statistic'])
             requests.post(GlobalVars.metasmoke_host + "/statistics.json",
                           data=json.dumps(payload), headers=headers)

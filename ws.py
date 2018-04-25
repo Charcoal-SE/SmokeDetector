@@ -155,8 +155,8 @@ def restart_automatically():
 Tasks.periodic(check_socket_connections, interval=90)
 Tasks.later(restart_automatically, after=21600)
 
-log('info', GlobalVars.location)
-log('info', GlobalVars.metasmoke_host)
+log('info', '{} active'.format(GlobalVars.location))
+log('info', 'MS host: {}'.format(GlobalVars.metasmoke_host))
 
 
 def setup_websocket(attempt, max_attempts):
