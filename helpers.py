@@ -4,6 +4,7 @@ import sys
 from datetime import datetime
 from termcolor import colored
 import requests
+import regex
 
 
 class Helpers:
@@ -74,6 +75,15 @@ def unshorten_link(url, request_type='HEAD', explicitly_ignore_security_warning=
             url = res.headers['Location']
 
     return url
+
+
+parser_regex = r'((?:(?:math|stack)overflow|askubuntu|superuser|serverfault)|\w+)\.(?:stackexchange\.com|com|net)'
+parser = regex.compile(parser_regex)
+
+
+def api_parameter_from_link(link):
+    match = parser.search(link)
+    return match[1] if match else None
 
 
 class SecurityError(Exception):
