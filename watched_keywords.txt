@@ -3165,3 +3165,4 @@
 1524733777	Tetsuya Yamamoto	amarnathjourney\.com
 1524734334	Byte Commander	printerstuffs\.com
 1524737867	Mithrandir	news313news
+1524738079	Mithrandir	(nice|useful|good)\W?(article|answer|blog)
