@@ -3167,3 +3167,4 @@
 1524737867	Mithrandir	news313news
 1524738079	Mithrandir	(nice|useful|good)\W?(article|answer|blog)
 1524740311	Zoe	socialnavy\.com
+1524744623	WELZ	topquotelifeinsurance\.com
