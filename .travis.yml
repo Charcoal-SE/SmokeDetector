@@ -10,7 +10,7 @@ script:
   - flake8 --config=tox_tests.ini ./test/
   - flake8 --config=tox_classes.ini ./classes/
   - flake8 ./
-  - python3 -W default::Warning -m pytest --cov=chatcommunicate --cov=findspam --cov=globalvars --cov=spamhandling --cov=datahandling --cov=chatcommands test
+  - python3 -W default::Warning -m pytest --cov=chatcommunicate --cov=findspam --cov=globalvars --cov=spamhandling --cov=datahandling --cov=chatcommands --cov=helpers test
 branches:
   only:
     - master
