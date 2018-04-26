@@ -3169,3 +3169,4 @@
 1524740311	Zoe	socialnavy\.com
 1524744623	WELZ	topquotelifeinsurance\.com
 1524744802	WELZ	sajadwani\d+
+1524748689	Glorfindel	royalrumble\d+
