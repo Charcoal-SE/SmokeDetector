@@ -77,13 +77,31 @@ def unshorten_link(url, request_type='HEAD', explicitly_ignore_security_warning=
     return url
 
 
-parser_regex = r'((?:(?:math|stack)overflow|askubuntu|superuser|serverfault)|\w+)\.(?:stackexchange\.com|com|net)'
+parser_regex = r'((?:meta\.)?(?:(?:(?:math|stack)overflow|askubuntu|superuser|serverfault)|\w+)(?:\.meta)?)' \
+               r'\.(?:stackexchange\.com|com|net)'
 parser = regex.compile(parser_regex)
+exceptions = {
+    'meta.stackoverflow': 'meta.stackoverflow',
+    'meta.superuser': 'meta.superuser',
+    'meta.serverfault': 'meta.serverfault',
+    'meta.askubuntu': 'meta.askubuntu',
+    'meta.mathoverflow': 'meta.mathoverflow.net',
+    'meta.stackexchange': 'meta'
+}
 
 
 def api_parameter_from_link(link):
     match = parser.search(link)
-    return match[1] if match else None
+    if match:
+        print(match[1])
+        if match[1] in exceptions.keys():
+            return exceptions[match[1]]
+        elif 'meta.' in match[1]:
+            return '.'.join(match[1].split('.')[::-1])
+        else:
+            return match[1]
+    else:
+        return None
 
 
 class SecurityError(Exception):

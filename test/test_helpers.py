@@ -29,7 +29,20 @@ def test_unshorten_link(shortened, original):
     ('https://blender.stackexchange.com', 'blender'),
     ('https://blender.stackexchange.com/', 'blender'),
     ('//blender.stackexchange.com/questions/123456', 'blender'),
-    ('//blender.stackexchange.com/a/123456', 'blender')
+    ('//blender.stackexchange.com/a/123456', 'blender'),
+    ('meta.stackoverflow.com', 'meta.stackoverflow'),
+    ('//meta.stackoverflow.com', 'meta.stackoverflow'),
+    ('https://meta.stackoverflow.com', 'meta.stackoverflow'),
+    ('https://meta.stackoverflow.com/', 'meta.stackoverflow'),
+    ('//meta.stackoverflow.com/questions/12345678', 'meta.stackoverflow'),
+    ('//meta.stackoverflow.com/a/12345678', 'meta.stackoverflow'),
+    ('meta.mathoverflow.net', 'meta.mathoverflow.net'),
+    ('meta.superuser.com', 'meta.superuser'),
+    ('meta.serverfault.com', 'meta.serverfault'),
+    ('meta.askubuntu.com', 'meta.askubuntu'),
+    ('3dprinting.meta.stackexchange.com', '3dprinting.meta'),
+    ('blender.meta.stackexchange.com', 'blender.meta'),
+    ('meta.stackexchange.com', 'meta')
 ])
 def test_api_parameter_from_link(link, param):
     assert helpers.api_parameter_from_link(link) == param

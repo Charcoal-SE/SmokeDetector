@@ -95,3 +95,5 @@ setp.sh
 
 # Ignore .DS_Store file (usually seen in Mac environments)
 .DS_Store
+
+.pytest_cache/
