@@ -1284,3 +1284,4 @@ pay\W?for\W?essay
 cla\W?slim
 trdbot
 piss\W*be\W*upon\W*him
+\/asha24\\b
