@@ -63,24 +63,9 @@ class GitManager:
 
         try:
             cls.gitmanager_lock.acquire()
-            git.checkout("master")
-            try:
-                git.pull()
-            except:
-                pass
-
-            # Check that we're up-to-date with origin (GitHub)
-            git.remote.update()
-            if 'windows' in platform.platform().lower():
-                if git.rev_parse("refs/remotes/origin/master").strip() != git.rev_parse("master").strip():
-                    return (False, "HEAD isn't at tip of origin's master branch")
-            else:
-                if git("rev-parse", "refs/remotes/origin/master").strip() != git("rev-parse", "master").strip():
-                    return (False, "HEAD isn't at tip of origin's master branch")
-
-            # Check that blacklisted_websites.txt isn't modified locally. That could get ugly fast
-            if blacklist_file_name in git.status():  # Also ugly
-                return (False, "{0} is modified locally. This is probably bad.".format(blacklist_file_name))
+            status, message = cls.prepare_git_for_operation(blacklist_file_name)
+            if not status:
+                return (False, message)
 
             if blacklist_type in [Blacklist.WATCHED_KEYWORDS]:
                 op = 'watch'
@@ -179,6 +164,66 @@ class GitManager:
             return (True, "Blacklisted {0}".format(item))
         elif op == 'watch':
             return (True, "Added {0} to watchlist".format(item))
+
+    @classmethod
+    def unwatch(cls, item, username, code_privileged=False):
+        if not code_privileged:
+            return (False, 'Ask a code admin to run that for you. Use `!!/whois code_admin` to find out who\'s here.')
+
+        try:
+            cls.gitmanager_lock.acquire()
+
+            watchlist = Blacklist.WATCHED_KEYWORDS
+            file_name = watchlist[0]
+            manager = Blacklist(watchlist)
+
+            status, message = cls.prepare_git_for_operation(file_name)
+            if not status:
+                return (False, message)
+
+            branch = 'auto-unwatch-{}'.format(str(time.time()))
+            git.checkout('-b', branch)
+            git.reset('HEAD')
+
+            manager.remove(item)
+
+            git.add(file_name)
+            git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
+                       '-m', 'Auto unwatch of {} by {} --autopull'.format(item, username))
+
+            git.checkout('master')
+            git.merge(branch)
+            git.push('origin', 'master')
+            git.branch('-D', branch)
+        except Exception as e:
+            log('error', '{}: {}'.format(type(e).__name__, str(e)))
+            return (False, 'Git operations failed for unspecified reasons.')
+        finally:
+            git.checkout('deploy')
+            cls.gitmanager_lock.release()
+
+        return (True, 'Removed {} from watchlist'.format(item))
+
+    @staticmethod
+    def prepare_git_for_operation(blacklist_file_name):
+        git.checkout('master')
+
+        try:
+            git.pull()
+        except:
+            pass
+
+        git.remote.update()
+        at_tip = git.rev_parse("refs/remotes/origin/master").strip() == git.rev_parse("master").strip() \
+            if 'windows' in platform.platform().lower() else \
+            git("rev-parse", "refs/remotes/origin/master").strip() == git("rev-parse", "master").strip()
+        if not at_tip:
+            return (False, "HEAD isn't at tip of origin's master branch")
+
+        if blacklist_file_name in git.status():
+            return (False, "{0} is modified locally. This is probably bad.".format(blacklist_file_name))
+
+        return (True, None)
 
     @staticmethod
     def current_git_status():
