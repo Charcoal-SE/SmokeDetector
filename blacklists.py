@@ -92,7 +92,8 @@ class TSVDictParser(BlacklistParser):
 
         with open(self._filename, 'r+', encoding='utf-8') as f:
             items = f.readlines()
-            items = [x for x in items if item not in x]
+            items = [x for x in items if ('\t' not in x) or
+                     (len(x.split('\t')) == 3 and x.split('\t')[2].strip() != item)]
             f.seek(0)
             f.truncate()
             f.writelines(items)
@@ -101,12 +102,14 @@ class TSVDictParser(BlacklistParser):
         if isinstance(item, dict):
             item = item[2]
 
-        item = item.lower()
-
         with open(self._filename, 'r', encoding='utf-8') as f:
             lines = f.readlines()
             for i, x in enumerate(lines, start=1):
-                if item == x.lower().rstrip('\n'):
+                if '\t' not in x:
+                    continue
+
+                splat = x.split('\t')
+                if len(splat) == 3 and splat[2].strip() == item:
                     return True, i
 
         return False, -1
