@@ -93,7 +93,6 @@ exceptions = {
 def api_parameter_from_link(link):
     match = parser.search(link)
     if match:
-        print(match[1])
         if match[1] in exceptions.keys():
             return exceptions[match[1]]
         elif 'meta.' in match[1]:
