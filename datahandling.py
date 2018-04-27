@@ -3,7 +3,7 @@ import os
 # noinspection PyPep8Naming
 import pickle
 from datetime import datetime
-import metasmoke
+from metasmoke import Metasmoke
 import requests
 import json
 import time
@@ -124,7 +124,7 @@ def is_auto_ignored_post(postid_site_tuple):
 # noinspection PyUnusedLocal
 def is_code_privileged(site, user_id):
     if GlobalVars.code_privileged_users is None:
-        metasmoke.Metasmoke.update_code_privileged_users_list()
+        Metasmoke.update_code_privileged_users_list()
 
     # For now, disable the moderator override on code/blacklist changes
     return (site, user_id) in GlobalVars.code_privileged_users
@@ -451,3 +451,14 @@ def can_report_now(user_id, chat_host):
                 return True, True
             return False, math.ceil(can_report_again - now)
     return True, True
+
+# method to check if a post has been bumped by Community
+
+
+def has_community_bumped_post(post_url, post_content):
+    if GlobalVars.metasmoke_key is not None and GlobalVars.metasmoke_host is not None:
+        ms_posts = Metasmoke.get_post_bodies_from_ms(post_url)
+        for post in ms_posts:
+            if post['body'] == post_content:
+                return True
+    return False
