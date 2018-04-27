@@ -177,6 +177,9 @@ class GitManager:
             file_name = watchlist[0]
             manager = Blacklist(watchlist)
 
+            if not manager.exists(item):
+                return (False, 'No such item `{}` in watchlist.'.format(item))
+
             status, message = cls.prepare_git_for_operation(file_name)
             if not status:
                 return (False, message)
