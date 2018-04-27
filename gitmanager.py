@@ -24,33 +24,22 @@ from blacklists import *
 
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
 class GitManager:
-
     gitmanager_lock = Lock()
 
     @classmethod
-    def add_to_blacklist(cls, **kwargs):
-        blacklist = kwargs.get("blacklist", "")
-        item_to_blacklist = kwargs.get("item_to_blacklist", "")
-        username = kwargs.get("username", "")
-        chat_profile_link = kwargs.get("chat_profile_link", "http://chat.stackexchange.com/users")
-        code_permissions = kwargs.get("code_permissions", False)
-
-        # Make sure git credentials are set up
+    def add_to_blacklist(cls, blacklist='', item_to_blacklist='', username='', chat_profile_link='',
+                         code_permissions=False):
         if git.config("--get", "user.name", _ok_code=[0, 1]) == "":
-            return (False, "Tell someone to run `git config user.name \"SmokeDetector\"`")
+            return (False, 'Tell someone to run `git config user.name "SmokeDetector"`')
 
         if git.config("--get", "user.email", _ok_code=[0, 1]) == "":
-            return (False, "Tell someone to run `git config user.email \"smokey@erwaysoftware.com\"`")
+            return (False, 'Tell someone to run `git config user.email "smokey@erwaysoftware.com"`')
 
         if blacklist == "":
-            # If we broke the code, and this isn't assigned, error out before doing anything, but do
-            # so gracefully with a nice error message.
-            return (False, "Programming Error - Critical information missing for GitManager: blacklist")
+            return (False, 'GitManager: blacklist is not defined. Blame a developer.')
 
         if item_to_blacklist == "":
-            # If we broke the code, and this isn't assigned, error out before doing anything, but do
-            # so gracefully with a nice error message.
-            return (False, "Programming Error - Critical information missing for GitManager: item_to_blacklist")
+            return (False, 'GitManager: item_to_blacklist is not defined. Blame a developer.')
 
         item_to_blacklist = item_to_blacklist.replace("\s", " ")
 
@@ -67,9 +56,7 @@ class GitManager:
             blacklist_type = Blacklist.WATCHED_KEYWORDS
             ms_search_option = "&body_is_regex=1&body="
         else:
-            # Just checking all bases, but blacklist_file_name *might* have empty value
-            # if we don't address it here.
-            return (False, "Invalid blacklist type specified, something has broken badly!")
+            return (False, 'GitManager: blacklist is not recognized. Blame a developer.')
 
         blacklister = Blacklist(blacklist_type)
         blacklist_file_name = blacklist_type[0]
@@ -95,7 +82,6 @@ class GitManager:
             if blacklist_file_name in git.status():  # Also ugly
                 return (False, "{0} is modified locally. This is probably bad.".format(blacklist_file_name))
 
-            # Set up parameters for watch vs blacklist
             if blacklist_type in [Blacklist.WATCHED_KEYWORDS]:
                 op = 'watch'
                 now = datetime.now().strftime('%s')
@@ -105,12 +91,10 @@ class GitManager:
                 op = 'blacklist'
                 item = item_to_blacklist
 
-            # Prevent duplicates
             exists, line = blacklister.exists(item_to_blacklist)
             if exists:
                 return (False, 'Already {}ed on line {} of {}'.format(op, line, blacklist_file_name))
 
-            # Remove from watch if watched
             watch_removed = False
             if blacklist_type not in [Blacklist.WATCHED_KEYWORDS]:
                 watcher = Blacklist(Blacklist.WATCHED_KEYWORDS)
@@ -118,14 +102,11 @@ class GitManager:
                     watch_removed = True
                     watcher.remove(item_to_blacklist)
 
-            # Add item to file
             blacklister.add(item_to_blacklist)
 
-            # Checkout a new branch (for PRs for non-code-privileged people)
             branch = "auto-blacklist-{0}".format(str(time.time()))
             git.checkout("-b", branch)
 
-            # Clear HEAD just in case
             git.reset("HEAD")
 
             git.add(blacklist_file_name)
