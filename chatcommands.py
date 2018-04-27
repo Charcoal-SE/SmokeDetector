@@ -305,7 +305,11 @@ def watch(msg, website):
 
 @command(str, whole_msg=True, privileged=True)
 def unwatch(msg, item):
-    return GitManager.unwatch(item, msg.owner.name, is_code_privileged(msg._client.host, msg.owner.id))
+    status, message = GitManager.unwatch(item, msg.owner.name, is_code_privileged(msg._client.host, msg.owner.id))
+    if status:
+        return message
+    else:
+        raise CommandException(message)
 
 
 # noinspection PyIncorrectDocstring
