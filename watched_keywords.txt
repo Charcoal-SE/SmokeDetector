@@ -3214,3 +3214,4 @@
 1524999440	Zoe	binaryscamalerts\.com
 1525003307	Zoe	jkhint\.com
 1525003340	Zoe	fgpgames\.com
+1525013092	WELZ	flologic\.com
