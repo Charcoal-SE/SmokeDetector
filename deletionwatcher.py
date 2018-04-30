@@ -119,6 +119,13 @@ class DeletionWatcher:
         for site, posts in saved.items():
             ids = ";".join([post_id for post_id in posts if not DeletionWatcher._ignore((post_id, site))])
             uri = "https://api.stackexchange.com/2.2/posts/{}?site={}&key=IAkbitmze4B8KpacUfLqkw((".format(ids, site)
+            res = requests.get(uri).json()
+
+            if "items" not in res:
+                log('warning',
+                    'DeletionWatcher API request received no items in response (code {})'.format(res.status_code))
+                log('warning', res.text)
+                return
 
             for post in requests.get(uri).json()["items"]:
                 if time.time() - post["creation_date"] < 7200:
