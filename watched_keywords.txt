@@ -3222,3 +3222,4 @@
 1525084873	Glorfindel	icoranker\.com
 1525087150	Glorfindel	themuhamamdramzan
 1525088264	tripleee	237650092947
+1525097930	WELZ	(die|kill)\W?jew
