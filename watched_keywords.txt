@@ -3225,3 +3225,4 @@
 1525099286	Glorfindel	reverse(\w){4,12}\.com
 1525106565	Makyen	e621\.net
 1525106740	Makyen	ha\W*ha\W*ha\w*
+1525125958	WELZ	freevocabulary\.com
