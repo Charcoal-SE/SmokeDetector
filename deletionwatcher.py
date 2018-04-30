@@ -119,7 +119,7 @@ class DeletionWatcher:
     @staticmethod
     def _check_batch(saved):
         if time.time() < DeletionWatcher.next_request_time:
-            sleep(DeletionWatcher.next_request_time - time.time())
+            time.sleep(DeletionWatcher.next_request_time - time.time())
 
         for site, posts in saved.items():
             ids = ";".join([post_id for post_id in posts if not DeletionWatcher._ignore((post_id, site))])
