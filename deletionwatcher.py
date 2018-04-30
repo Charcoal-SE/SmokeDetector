@@ -128,7 +128,7 @@ class DeletionWatcher:
                 log('warning', res.text)
                 return
 
-            for post in requests.get(uri).json()["items"]:
+            for post in res.json()['items']:
                 if time.time() - post["creation_date"] < 7200:
                     yield to_protocol_relative(post["link"]).replace("/q/", "/questions/")
 
