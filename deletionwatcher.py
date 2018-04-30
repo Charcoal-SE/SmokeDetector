@@ -21,6 +21,8 @@ from tasks import Tasks
 
 # noinspection PyClassHasNoInit,PyBroadException,PyMethodParameters
 class DeletionWatcher:
+    next_request_time = time.time() - 1
+
     def __init__(self):
         DeletionWatcher.update_site_id_list()
         self.posts = {}
@@ -116,19 +118,25 @@ class DeletionWatcher:
 
     @staticmethod
     def _check_batch(saved):
+        if time.time() < DeletionWatcher.next_request_time:
+            sleep(DeletionWatcher.next_request_time - time.time())
+
         for site, posts in saved.items():
             ids = ";".join([post_id for post_id in posts if not DeletionWatcher._ignore((post_id, site))])
             uri = "https://api.stackexchange.com/2.2/posts/{}?site={}&key=IAkbitmze4B8KpacUfLqkw((".format(ids, site)
-            log('info', 'DeletionWatcher -> {}'.format(uri))
             res = requests.get(uri)
+            json = res.json()
 
-            if "items" not in res.json():
+            if "items" not in json:
                 log('warning',
                     'DeletionWatcher API request received no items in response (code {})'.format(res.status_code))
                 log('warning', res.text)
                 return
 
-            for post in res.json()['items']:
+            if 'backoff' in json:
+                DeletionWatcher.next_request_time = time.time() + json['backoff']
+
+            for post in json['items']:
                 if time.time() - post["creation_date"] < 7200:
                     yield to_protocol_relative(post["link"]).replace("/q/", "/questions/")
 
