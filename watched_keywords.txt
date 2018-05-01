@@ -3236,3 +3236,4 @@
 1525172700	Mithrandir	puriconstructionsamanvilas\.com
 1525173590	Glorfindel	ezbattery\.info
 1525175921	WELZ	female\W?hackerz\d
+1525176883	WELZ	a(s|\$){2}h(o|0)(l|1|i)e
