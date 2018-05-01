@@ -3237,3 +3237,4 @@
 1525175921	WELZ	female\W?hackerz\d
 1525176883	WELZ	a(s|\$){2}h(o|0)(l|1|i)e
 1525178545	WELZ	you\W?fucking\W?suck
+1525181969	WELZ	6296561
