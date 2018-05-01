@@ -681,7 +681,7 @@ def similar_answer(post):
 
 # noinspection PyMissingTypeHints
 def strip_urls_and_tags(string):
-    return regex.sub(r"</?.+?>|\w+?://", "", regex.sub(URL_REGEX, "", string))
+    return regex.sub(URL_REGEX, "", regex.sub(r"</?.+?>|\w+?://", "", string))
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
