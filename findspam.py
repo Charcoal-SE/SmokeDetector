@@ -762,7 +762,6 @@ def turkey(s, *args):
 
 
 def turkey2(post):
-    print(post.user_name, chatcommunicate._clients["stackexchange.com"].get_room(11540).get_pingable_user_names())
     if regex.search("[01]{8}", post.body) and \
         post.user_name in chatcommunicate._clients["stackexchange.com"].get_room(11540).get_pingable_user_names():
         return False, False, True, ""
