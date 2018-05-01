@@ -768,7 +768,7 @@ def turkey2(post):
         if not pingable or not isinstance(pingable, list):
             return False, False, False, ""
 
-        if regex.search("[01]{8}", post.body) and post.user_name in pingable:
+        if post.user_name in pingable:
             return False, False, True, ""
 
     return False, False, False, ""
