@@ -762,7 +762,7 @@ def turkey(s, *args):
 
 
 def turkey2(post):
-    if regex.search("[01]{8}", post.body):
+    if regex.search("([01]{8}|zoe)", post.body):
         pingable = chatcommunicate._clients["stackexchange.com"].get_room(11540).get_pingable_user_names()
 
         if not pingable or not isinstance(pingable, list):
