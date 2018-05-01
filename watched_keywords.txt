@@ -3226,3 +3226,4 @@
 1525106565	Makyen	e621\.net
 1525106740	Makyen	ha\W*ha\W*ha\w*
 1525125958	WELZ	freevocabulary\.com
+1525142119	WELZ	kamal\W?singhaldel
