@@ -3234,3 +3234,4 @@
 1525164330	Zoe	troll\W*?master
 1525166932	Sonic Wizard	CryptoDataDownload\.com
 1525172696	Glorfindel	puriconstructionsamanvilas\.com
+1525172700	Mithrandir	puriconstructionsamanvilas\.com
