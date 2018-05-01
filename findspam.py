@@ -17,6 +17,7 @@ from tld.utils import TldDomainNotFound
 import phonenumbers
 import dns.resolver
 import requests
+import chatcommunicate
 
 from helpers import all_matches_unique, log
 from globalvars import GlobalVars
@@ -760,6 +761,15 @@ def turkey(s, *args):
     return p2 > p1, "match: {}, p1: {}, p2: {}".format(s[1], p1, p2)
 
 
+def turkey2(post):
+    print(post.user_name, chatcommunicate._clients["stackexchange.com"].get_room(11540).get_pingable_user_names())
+    if regex.search("[01]{8}", post.body) and \
+        post.user_name in chatcommunicate._clients["stackexchange.com"].get_room(11540).get_pingable_user_names():
+        return False, False, True, ""
+    else:
+        return False, False, False, ""
+
+
 load_blacklists()
 
 
@@ -1300,6 +1310,9 @@ class FindSpam:
         {'method': turkey, 'all': False, 'sites': ['stackoverflow.com'], 'reason': "luncheon meat detected",
          'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
          'max_rep': 21, 'max_score': 0},
+        {'method': turkey2, 'all': False, 'sites': ['stackoverflow.com'], 'reason': "himalayan pink salt detected",
+         "whole_post": True, "title": False, "body": False, "username": False, "body_summary": False,
+         'stripcodeblocks': False, 'max_rep': 1, 'max_score': 0},
         #
         # Category: other
         # Blacklisted usernames
