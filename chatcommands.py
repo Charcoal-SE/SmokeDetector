@@ -304,7 +304,8 @@ def watch(msg, website):
 
 @command(str, whole_msg=True, privileged=True)
 def unwatch(msg, item):
-    _status, message = GitManager.unwatch(rebuild_str(item), msg.owner.name, is_code_privileged(msg._client.host, msg.owner.id))
+    _status, message = GitManager.unwatch(rebuild_str(item), msg.owner.name, is_code_privileged(
+        msg._client.host, msg.owner.id))
     return message
 
 
