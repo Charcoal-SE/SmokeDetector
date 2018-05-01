@@ -3228,3 +3228,4 @@
 1525125958	WELZ	freevocabulary\.com
 1525142119	WELZ	kamal\W?singhaldel
 1525155089	Makyen	hiphopog\.download
+1525155240	Makyen	focus[\W_]*remix[\W_]*ft[\W_]*chris[\W_]*brown
