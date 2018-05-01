@@ -3230,3 +3230,4 @@
 1525155089	Makyen	hiphopog\.download
 1525155240	Makyen	focus[\W_]*remix[\W_]*ft[\W_]*chris[\W_]*brown
 1525156870	Makyen	www\.technicalsupporttollfree\.com
+1525158109	Makyen	ecom[\W_]*profit[\W_]*sniper
