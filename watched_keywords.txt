@@ -2747,7 +2747,6 @@
 1522255280	K.Dᴀᴠɪs	aolgoldsupport\.com
 1522256276	CalvT븃	termsfeed\.com
 1522263835	Glorfindel	installwhatsapp\.com
-1522264960	K.Dᴀᴠɪs	turkey
 1522266111	K.Dᴀᴠɪs	(?:sum+er\Wkolcak|adam\Wbarak)
 1522268376	Federico	gaflighttracker\.com
 1522273018	K.Dᴀᴠɪs	maxproduction\d{3}@gmail\.com
