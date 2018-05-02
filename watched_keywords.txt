@@ -1161,7 +1161,6 @@
 1507871182	tripleee	bucasporfan\.com
 1507871540	tripleee	snappea\.zone
 1507871941	tripleee	1\W*951\W*395\W*7929
-1507871948	tripleee	slimming\W?patch
 1507880375	tripleee	omnibeats\.com
 1507881257	tripleee	watchtamil\.online
 1507881945	tripleee	toptechgiant\.com
@@ -2461,7 +2460,7 @@
 1519947198	paper1111	printlist\.org
 1519967786	tripleee	CNN747
 1519971711	tripleee	byethost7\.com
-1519972104	Nisse Engström	www\.vitasave\.ca
+1519972104	Nisse Engström	vitasave\.ca
 1519982196	Glorfindel	klimakombiservisi\.com
 1519995397	Glorfindel	tutoriage\.com
 1519999286	Glorfindel	moneyonlineslots\.com
@@ -2922,7 +2921,6 @@
 1523419948	tripleee	393510620692
 1523420466	tripleee	apkbiz\.info
 1523420865	tripleee	supramind\.com
-1523420915	tripleee	zetpdf\.com
 1523423855	tripleee	cleanlabcoat\.com
 1523424589	tripleee	spiritsecret\.com
 1523429964	tripleee	digital\W?marketing\W?packages
@@ -3153,7 +3151,6 @@
 1524692415	WELZ	electricguitarstrap\.com
 1524718266	Tetsuya Yamamoto	freeminecraftgiftcode\.net
 1524724229	Zoe	sthint\.com
-1524726406	Glorfindel	cognegicsystems\.com
 1524726846	Makyen	9769689450
 1524727049	Makyen	happymothersday2018i\.blogspot\.com
 1524732598	Makyen	saggy\W*ass
@@ -3195,9 +3192,7 @@
 1524880074	Rob	nutrinext\w*
 1524899826	Makyen	90creditspecialist
 1524906579	Zoe	doze\.buzz
-1524907056	Zoe	horlaxendeutschland\.de
 1524910702	Zoe	massmailservers\.net
-1524911797	Zoe	nehatandan\.com
 1524912058	Zoe	amarleen\.com
 1524912211	Zoe	yalghis\.in
 1524912230	Zoe	geetagrewal\.com
@@ -3219,7 +3214,6 @@
 1525076392	Glorfindel	activate-starz-com\.com
 1525084873	Glorfindel	icoranker\.com
 1525087150	Glorfindel	themuhamamdramzan
-1525088264	tripleee	237650092947
 1525097930	WELZ	(die|kill)\W?jew
 1525099286	Glorfindel	reverse(\w){4,12}\.com
 1525106740	Makyen	ha\W*ha\W*ha\w*
@@ -3227,11 +3221,27 @@
 1525142119	WELZ	kamal\W?singhaldel
 1525155089	Makyen	hiphopog\.download
 1525155240	Makyen	focus[\W_]*remix[\W_]*ft[\W_]*chris[\W_]*brown
-1525156870	Makyen	www\.technicalsupporttollfree\.com
+1525156870	Makyen	technicalsupporttollfree\.com
 1525158109	Makyen	ecom[\W_]*profit[\W_]*sniper
 1525158829	Makyen	hyaluronic\W*acid
 1525164330	Zoe	troll\W*?master
 1525166932	Sonic Wizard	CryptoDataDownload\.com
 1525172696	Glorfindel	puriconstructionsamanvilas\.com
-1525172700	Mithrandir	puriconstructionsamanvilas\.com
 1525173590	Glorfindel	ezbattery\.info
+1525175921	WELZ	female\W?hackerz\d
+1525176883	WELZ	a[s$]{2}h[o0][l1i]e
+1525178545	WELZ	you\W?fucking\W?suck
+1525181969	WELZ	6296561
+1525189892	WELZ	01100110 01110101 01110010( 00100000)? 01100110 01100001 01100111
+1525234888	tripleee	reddragon-ds\.co\.uk
+1525235385	tripleee	010219\.com
+1525239824	tripleee	thermo\W?burn
+1525241332	Rob	artjoker\.net
+1525242336	tripleee	stamina\W?plus(?:\W?xl)?
+1525243351	tripleee	tru\W?build
+1525243890	Glorfindel	bigbagbazaar\.com
+1525247509	Glorfindel	raletta\.in
+1525247813	Glorfindel	iosdeveloperlive\.blogspot\.in
+1525258090	Mithrandir	arkramos
+1525258521	Glorfindel	hostessworldparis\.com
+1525259294	Glorfindel	happyfathersdayv\.com

@@ -17,6 +17,7 @@ from tld.utils import TldDomainNotFound
 import phonenumbers
 import dns.resolver
 import requests
+import chatcommunicate
 
 from helpers import all_matches_unique, log
 from globalvars import GlobalVars
@@ -508,8 +509,8 @@ def is_offensive_post(s, site, *args):
         return False, ""
 
     offensive = regex.compile(
-        r"(?is)\b(ur\Wm[ou]m|(yo)?u suck|[8B]={3,}[D>)]|nigg[aeu][rh]?|(ass\W?|a|a-)hole|fa+g+(ot)?s?\b|"
-        r"daf[au][qk]|(?<!brain)(mother|mutha)?fuc?k+(a|ing?|e?[rd]| off+| y(ou|e)(rself)?|"
+        r"(?is)\b(ur\Wm[ou]m|(yo)?u suck|[8B]={3,}[D>)]|nigg[aeu][rh]?|(ass\W?|a|a-)hole|(?:fur)?fa+g+(ot)?s?\b|"
+        r"daf[au][qk]|(?<!brain)(mother|mutha)?f\W*u\W*c?\W*k+(a|ing?|e?[rd]| off+| y(ou|e)(rself)?|"
         r" u+|tard)?|(bul+)?shit(t?er|head)?|(yo)?u(r|'?re)? (gay|scum)|dickhead|"
         r"pedo(?!bapt|dont|log|mete?r|troph)|cocksuck(e?[rd])?|"
         r"whore|cunt|jerk\W?off|cumm(y|ie)|butthurt|queef|(private|pussy) show|lesbo|"
@@ -680,7 +681,7 @@ def similar_answer(post):
 
 # noinspection PyMissingTypeHints
 def strip_urls_and_tags(string):
-    return regex.sub(r"</?.+?>|\w+?://", "", regex.sub(URL_REGEX, "", string))
+    return regex.sub(URL_REGEX, "", regex.sub(r"</?.+?>|\w+?://", "", string))
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
@@ -758,6 +759,19 @@ def turkey(s, *args):
             p2 += UNIFORM
 
     return p2 > p1, "match: {}, p1: {}, p2: {}".format(s[1], p1, p2)
+
+
+def turkey2(post):
+    if regex.search("([01]{8}|zoe)", post.body):
+        pingable = chatcommunicate._clients["stackexchange.com"].get_room(11540).get_pingable_user_names()
+
+        if not pingable or not isinstance(pingable, list):
+            return False, False, False, ""
+
+        if post.user_name in pingable:
+            return False, False, True, ""
+
+    return False, False, False, ""
 
 
 load_blacklists()
@@ -1300,6 +1314,9 @@ class FindSpam:
         {'method': turkey, 'all': False, 'sites': ['stackoverflow.com'], 'reason': "luncheon meat detected",
          'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
          'max_rep': 21, 'max_score': 0},
+        {'method': turkey2, 'all': False, 'sites': ['stackoverflow.com'], 'reason': "himalayan pink salt detected",
+         "whole_post": True, "title": False, "body": False, "username": False, "body_summary": False,
+         'stripcodeblocks': False, 'max_rep': 1, 'max_score': 0},
         #
         # Category: other
         # Blacklisted usernames
@@ -1351,7 +1368,7 @@ class FindSpam:
         result = []
         why = {'title': [], 'body': [], 'username': []}
         for rule in FindSpam.rules:
-            body_to_check = post.body
+            body_to_check = post.body.replace("&nsbp;", "")
             is_regex_check = 'regex' in rule
             check_if_answer = rule.get('answers', True)
             check_if_question = rule.get('questions', True)
