@@ -3239,3 +3239,4 @@
 1525235385	tripleee	010219\.com
 1525239824	tripleee	thermo\W?burn
 1525241332	Rob	artjoker\.net
+1525242336	tripleee	stamina\W?plus(?:\W?xl)?
