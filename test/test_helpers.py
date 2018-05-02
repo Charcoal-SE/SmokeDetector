@@ -19,7 +19,7 @@ def test_unshorten_link(shortened, original):
     ('https://stackoverflow.com/', 'stackoverflow'),
     ('//stackoverflow.com/questions/12345678', 'stackoverflow'),
     ('//stackoverflow.com/a/12345678', 'stackoverflow'),
-    ('mathoverflow.net', 'mathoverflow'),
+    ('mathoverflow.net', 'mathoverflow.net'),
     ('superuser.com', 'superuser'),
     ('serverfault.com', 'serverfault'),
     ('askubuntu.com', 'askubuntu'),

@@ -85,6 +85,7 @@ exceptions = {
     'meta.superuser': 'meta.superuser',
     'meta.serverfault': 'meta.serverfault',
     'meta.askubuntu': 'meta.askubuntu',
+    'mathoverflow': 'mathoverflow.net',
     'meta.mathoverflow': 'meta.mathoverflow.net',
     'meta.stackexchange': 'meta'
 }
