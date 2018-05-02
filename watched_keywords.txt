@@ -3085,7 +3085,7 @@
 1524332363	quartata	techdriod\.com
 1524333742	NobodyNada	inverterbattery\.online
 1524333832	NobodyNada	belajarmenanam\.com
-1524357408	Makyen	screw\W*you(('?r?e?.{0,20}?(mother|m[ou]m(m?y)?|sister|brother|father|dad|pop))|r?self)?
+1524357408	Makyen	(?:screw|fuc?k|kill)(?:ing|ed|[sz])?\W*(?:you(?:(?:.{0,20}?(?:mother|m[ou]m+y?|dad+y?|sister|brother|father|pop+a?|uncle|aunt|cousin))|r?\W*sel(?:f|ves))?|\w*sel(?:f|ve[sz]))
 1524266587	Makyen	auMoLcQ6zwFolsHI3
 1524367599	Makyen	LGBT\W*Executioner
 1524383247	Zoe	swastikminerals\.co\.in
@@ -3187,7 +3187,7 @@
 1524856509	Glorfindel	iapptoko\.com
 1524856530	Glorfindel	v-share\.org
 1524856548	Glorfindel	3dsemulator\.me
-1524856941	Makyen	(?:(?:drill|suck|lick|wet+|bang+|stuf+|(?:mother)?fuc?k|fist)(?:ing|e[dr]|e?[sz])?(?:|\b.{0,80}?\b)(?:pis+|pus+(?:y|ies)|boo+b|tit|coc?k|dick|ass|penis|phallus|vagina|genital|ball|rectum|dog+ystyle|blowjob|bitch|bastard|slut+(?:ish)?|harlot|whore|lesbian|queer|homo(?:sexual)?|retard|jew(?:ish)?|nig+er|nic+a|fag(?:g?[eio]t)?|heretic|idiot|sinners|raghead|muslim|hindu)(?:ing|e[dr]|e?[sz])?|(?:pis+|pus+(?:y|ies)|boo+b|tit|coc?k|dick|ass|penis|phallus|vagina|genital|ball|rectum|dog+ystyle|blowjob|bitch|bastard|slut+(?:ish)?|harlot|whore|lesbian|queer|homo(?:sexual)?|retard|jew(?:ish)?|nig+er|nic+a|fag(?:g?[eio]t)?|heretic|idiot|sinners|raghead|muslim|hindu)(?:ing|e[dr]|e?[sz])?(?:|\b.{0,80}?\b)(?:drill|suck|lick|wet+|bang+|stuf+|(?:mother)?fuc?k|fist)(?:ing|e[dr]|e?[sz])?)
+1524856941	Makyen	(?:(?:drill|suck|lick|wet+|bang+|stuf+|(?:mother)?fuc?k|fist)(?:(?:ing|e[dr]|e?)[sz]?)?(?:|\b.{0,80}?\b)(?:pis+|pus+(?:y|ies)|boo+b+|tit+(?:ies)?|coc?k|dick|ass|penis|phallus|cunt|vag(?:ina)?|genital|ball|rectum|dog+ystyle|blowjob|bitch|bastard|slut+(?:ish)?|harlot|whore|lesbian|queer|homo(?:sexual)?|retard|jew(?:ish)?|nig+(?:er|a)|nic+a|fag(?:g?[eio]t)?|her[ei]tic|idiot|sin+ers|raghead|muslim|hindu|\w*sel(?:f|ves))(?:(?:ing|e[dr]|e?)[sz]?)?|(?:pis+|pus+(?:y|ies)|boo+b+|tit+(?:ies)?|coc?k|dick|ass|penis|phallus|cunt|vag(?:ina)?|genital|ball|rectum|dog+ystyle|blowjob|bitch|bastard|slut+(?:ish)?|harlot|whore|lesbian|queer|homo(?:sexual)?|retard|jew(?:ish)?|nig+(?:er|a)|nic+a|fag(?:g?[eio]t)?|her[ei]tic|idiot|sin+ers|raghead|muslim|hindu|\w*sel(?:f|ves))(?:(?:ing|e[dr]|e?)[sz]?)?(?:|\b.{0,80}?\b)(?:drill|suck|lick|wet+|bang+|stuf+|(?:mother)?fuc?k|fist)(?:(?:ing|e[dr]|e?)[sz]?)?)
 1524858850	Glorfindel	mizansurovi1\.blogspot\.com
 1524863201	Glorfindel	obatextenzeasli\.com
 1524871974	quartata	aeroportos\.weebly\.com
