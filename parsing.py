@@ -8,8 +8,8 @@ BAD_CHAR = "\u200c\u200b"
 
 
 # noinspection PyMissingTypeHints
-def rebuild_url(url):
-    return ''.join([ch for ch in url if ch not in BAD_CHAR])
+def rebuild_str(str):
+    return ''.join([ch for ch in str if ch not in BAD_CHAR])
 
 
 # noinspection PyBroadException,PyMissingTypeHints
@@ -58,7 +58,7 @@ def fetch_post_url_from_msg_content(content):
 def fetch_post_id_and_site_from_url(url):
     if url is None:
         return None
-    trimmed_url = rebuild_url(url)
+    trimmed_url = rebuild_str(url)
     post_type_regex = r"\/\d+#\d+$"
     post_type = ""
     search_regex = ""

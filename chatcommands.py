@@ -230,10 +230,10 @@ def format_blacklist_reasons(reasons):
     return reason_string
 
 
-def do_blacklist(pattern, blacklist_type, msg, force=False):
+def do_blacklist(raw_pattern, blacklist_type, msg, force=False):
     """
     Adds a string to the website blacklist and commits/pushes to GitHub
-    :param pattern:
+    :param raw_pattern:
     :param blacklist_type:
     :param msg:
     :param force:
@@ -244,6 +244,7 @@ def do_blacklist(pattern, blacklist_type, msg, force=False):
                                                                     id=msg.owner.id)
 
     # noinspection PyProtectedMember
+    pattern = rebuild_str(raw_pattern)
     try:
         regex.compile(pattern)
     except regex._regex_core.error:
@@ -303,7 +304,8 @@ def watch(msg, website):
 
 @command(str, whole_msg=True, privileged=True)
 def unwatch(msg, item):
-    _status, message = GitManager.unwatch(item, msg.owner.name, is_code_privileged(msg._client.host, msg.owner.id))
+    _status, message = GitManager.unwatch(rebuild_str(item), msg.owner.name, is_code_privileged(
+        msg._client.host, msg.owner.id))
     return message
 
 
@@ -1106,7 +1108,7 @@ def report(msg, args):
                            "which would slow down reports.")
 
     for index, url in enumerate(urls, start=1):
-        url = rebuild_url(url)
+        url = rebuild_str(url)
         post_data = api_get_post(url)
 
         if post_data is None:
@@ -1190,7 +1192,7 @@ def checkpost(msg, url, alias_used='scan'):  # FIXME: Currently does not support
                            "wait 30 seconds after you've reported multiple posts in "
                            "one go.".format(alias_used, wait))
 
-    post_data = api_get_post(rebuild_url(url))
+    post_data = api_get_post(rebuild_str(url))
 
     if post_data is None:
         raise CmdException("That does not look like a valid post URL.")
