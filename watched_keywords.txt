@@ -2461,7 +2461,7 @@
 1519947198	paper1111	printlist\.org
 1519967786	tripleee	CNN747
 1519971711	tripleee	byethost7\.com
-1519972104	Nisse Engström	www\.vitasave\.ca
+1519972104	Nisse Engström	vitasave\.ca
 1519982196	Glorfindel	klimakombiservisi\.com
 1519995397	Glorfindel	tutoriage\.com
 1519999286	Glorfindel	moneyonlineslots\.com
@@ -3224,7 +3224,7 @@
 1525142119	WELZ	kamal\W?singhaldel
 1525155089	Makyen	hiphopog\.download
 1525155240	Makyen	focus[\W_]*remix[\W_]*ft[\W_]*chris[\W_]*brown
-1525156870	Makyen	www\.technicalsupporttollfree\.com
+1525156870	Makyen	technicalsupporttollfree\.com
 1525158109	Makyen	ecom[\W_]*profit[\W_]*sniper
 1525158829	Makyen	hyaluronic\W*acid
 1525164330	Zoe	troll\W*?master
@@ -3232,7 +3232,7 @@
 1525172696	Glorfindel	puriconstructionsamanvilas\.com
 1525173590	Glorfindel	ezbattery\.info
 1525175921	WELZ	female\W?hackerz\d
-1525176883	WELZ	a(s|\$){2}h(o|0)(l|1|i)e
+1525176883	WELZ	a[s$]{2}h[o0][l1i]e
 1525178545	WELZ	you\W?fucking\W?suck
 1525181969	WELZ	6296561
 1525189892	WELZ	01100110 01110101 01110010( 00100000)? 01100110 01100001 01100111
