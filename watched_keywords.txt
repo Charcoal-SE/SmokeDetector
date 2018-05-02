@@ -1161,7 +1161,6 @@
 1507871182	tripleee	bucasporfan\.com
 1507871540	tripleee	snappea\.zone
 1507871941	tripleee	1\W*951\W*395\W*7929
-1507871948	tripleee	slimming\W?patch
 1507880375	tripleee	omnibeats\.com
 1507881257	tripleee	watchtamil\.online
 1507881945	tripleee	toptechgiant\.com
