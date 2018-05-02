@@ -3219,7 +3219,6 @@
 1525076392	Glorfindel	activate-starz-com\.com
 1525084873	Glorfindel	icoranker\.com
 1525087150	Glorfindel	themuhamamdramzan
-1525088264	tripleee	237650092947
 1525097930	WELZ	(die|kill)\W?jew
 1525099286	Glorfindel	reverse(\w){4,12}\.com
 1525106740	Makyen	ha\W*ha\W*ha\w*

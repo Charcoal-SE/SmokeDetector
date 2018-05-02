@@ -1291,3 +1291,4 @@ ever\W?erect
 (?:(?:Rubellite\W*Fae|Sarvabhouma|Rohit|Anisha)(?:|\b.{1,200}?\b)(?:(?:mother)?[sf]uck|pis+|pus+(?:y|ies)|boo+b|tit|coc?k|dick|ass|penis|phallus|vagina|genital|rectum|dog+ystyle|blowjob|bitch|bastard|slut+(?:ish)?|harlot|whore|lesbian|queer|homo(?:sexual)?|retard|jew(?:ish)?|nig+er|nic+a|fag(?:g?[eio]t)?|heretic|idiot|sinners|raghead|muslim|hindu)(?:ing|e[dr]|e?[sz])?|(?:(?:mother)?[sf]uck|pis+|pus+(?:y|ies)|boo+b|tit|coc?k|dick|ass|penis|phallus|vagina|genital|rectum|dog+ystyle|blowjob|bitch|bastard|slut+(?:ish)?|harlot|whore|lesbian|queer|homo(?:sexual)?|retard|jew(?:ish)?|nig+er|nic+a|fag(?:g?[eio]t)?|heretic|idiot|sinners|raghead|muslim|hindu)(?:ing|e[dr]|e?[sz])?(?:|\b.{1,200}?\b)(?:Rubellite\W*Fae|Sarvabhouma|Rohit|Anisha))
 purefit\W?keto
 fur\W?fag
+237650092947
