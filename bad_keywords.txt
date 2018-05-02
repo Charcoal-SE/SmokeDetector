@@ -1295,3 +1295,4 @@ fur\W?fag
 bonte\W?cream
 slim(?:ming)?\W?(?:diet\W?)?patch
 trenorol
+trenbolone
