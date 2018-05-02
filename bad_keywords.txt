@@ -1293,4 +1293,4 @@ purefit\W?keto
 fur\W?fag
 237650092947
 bonte\W?cream
-slimming\W?patch
+slim(?:ming)?\W?(?:diet\W?)?patch
