@@ -3241,3 +3241,4 @@
 1525241332	Rob	artjoker\.net
 1525242336	tripleee	stamina\W?plus(?:\W?xl)?
 1525243351	tripleee	tru\W?build
+1525243890	Glorfindel	bigbagbazaar\.com
