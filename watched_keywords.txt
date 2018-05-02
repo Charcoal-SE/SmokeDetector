@@ -2922,7 +2922,6 @@
 1523419948	tripleee	393510620692
 1523420466	tripleee	apkbiz\.info
 1523420865	tripleee	supramind\.com
-1523420915	tripleee	zetpdf\.com
 1523423855	tripleee	cleanlabcoat\.com
 1523424589	tripleee	spiritsecret\.com
 1523429964	tripleee	digital\W?marketing\W?packages
