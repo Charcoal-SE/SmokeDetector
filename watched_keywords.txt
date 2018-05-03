@@ -1686,7 +1686,6 @@
 1511943395	tripleee	testo\W?explo
 1511944039	tripleee	alcostopex
 1511944316	tripleee	courseworkhelponline\.xyz
-1511944428	tripleee	folliclerxstore\.com
 1511944642	tripleee	espanasuplementos\.es
 1511945022	tripleee	dckap\.com
 1511945140	tripleee	dvijok
