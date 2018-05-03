@@ -3250,3 +3250,4 @@
 1525338830	Byte Commander	justem-noonespecial
 1525338857	Glorfindel	xoprincessxxo\.tumblr\.com
 1525342571	doppelgreener	casino\w*\.com?
+1525344138	Glorfindel	afinoz
