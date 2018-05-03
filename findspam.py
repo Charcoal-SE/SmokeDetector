@@ -1368,7 +1368,7 @@ class FindSpam:
         result = []
         why = {'title': [], 'body': [], 'username': []}
         for rule in FindSpam.rules:
-            body_to_check = post.body.replace("&nsbp;", "")
+            body_to_check = post.body.replace("&nbsp;", "")
             is_regex_check = 'regex' in rule
             check_if_answer = rule.get('answers', True)
             check_if_question = rule.get('questions', True)
