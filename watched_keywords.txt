@@ -3253,4 +3253,3 @@
 1525320825	tripleee	vital\W?derma(?:\W?x)?
 1525323207	tripleee	cool_guy\d+
 1525324005	tripleee	mobdro\.onl
-1525324013	tripleee	vidmate\.onl
