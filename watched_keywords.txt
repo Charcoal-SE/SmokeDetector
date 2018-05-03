@@ -1728,7 +1728,6 @@
 1512058989	Glorfindel	oracle\.com/goto/plsql
 1512114833	tripleee	cyberops\.in
 1512116557	Glorfindel	mmogah\.com
-1512119112	Glorfindel	yodalearning\.com
 1512120671	Glorfindel	americaconferences\.org
 1512122110	Byte Commander	602communications\.com
 1512124348	Byte Commander	shardhamanavayurveda\.com
