@@ -3252,3 +3252,4 @@
 1525342571	doppelgreener	casino\w*\.com?
 1525344138	Glorfindel	afinoz
 1525346164	Glorfindel	almondhackingarena\.com
+1525350068	Glorfindel	nourifbc\.com
