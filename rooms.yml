@@ -459,7 +459,6 @@ stackoverflow.com:
     watcher: true
 
     msg_types:
-      - delay  
       - site-stackoverflow.com
 
     privileges:
