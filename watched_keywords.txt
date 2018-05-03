@@ -3253,3 +3253,4 @@
 1525320825	tripleee	vital\W?derma(?:\W?x)?
 1525323207	tripleee	cool_guy\d+
 1525324992	tripleee	shred\W?t3x
+1525326607	tripleee	folexin
