@@ -3252,3 +3252,4 @@
 1525284474	Glorfindel	torontoairportlimotaxis\.com
 1525301665	Makyen	livetvpcgame\.com
 1525320825	tripleee	vital\W?derma(?:\W?x)?
+1525323207	tripleee	cool_guy\d+
