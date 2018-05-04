@@ -3158,7 +3158,6 @@
 1524823151	Glorfindel	airportanalytics\.aero
 1524825012	Glorfindel	downsviewchiropractic\.com
 1524827555	Sonic Wizard	anushkaaggarwal\.in
-1524813923	Tetsuya Yamamoto	iphtechnologies\.com
 1524811211	Tetsuya Yamamoto	sellbitbuy\.net
 1524842415	Glorfindel	4wdsupacentre\.com
 1524854483	Zoe	nettv4u\.com
