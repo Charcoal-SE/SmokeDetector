@@ -3270,3 +3270,4 @@
 1525437268	tripleee	 helayugaya\.blogspot\.\w+
 1525440012	doppelgreener	9anime\.is
 1525441253	Zoe	mhe\W*?pakistan
+1525456566	Glorfindel	hrvoip\.com
