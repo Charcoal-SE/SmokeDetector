@@ -3268,3 +3268,4 @@
 1525437234	tripleee	ravana\.info
 1525437254	tripleee	sri-ravana\.blogspot\.\w+
 1525437268	tripleee	 helayugaya\.blogspot\.\w+
+1525440012	doppelgreener	9anime\.is
