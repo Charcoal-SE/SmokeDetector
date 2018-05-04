@@ -2879,7 +2879,6 @@
 1523224508	WELZ	horusdynamics\.com
 1523246752	K.Dᴀᴠɪs	pus+y
 1523261212	A J	showbox\.(?:onl|software)
-1523264789	tripleee	maestrogoslin\.com
 1523272086	doppelgreener	sstechsystem\.com
 1523272167	Rob	WestsideLuxuryApartments
 1523274377	Yvette Colomb	turtle\.bgpic
