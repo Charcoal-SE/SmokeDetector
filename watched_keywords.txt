@@ -3269,3 +3269,4 @@
 1525437254	tripleee	sri-ravana\.blogspot\.\w+
 1525437268	tripleee	 helayugaya\.blogspot\.\w+
 1525440012	doppelgreener	9anime\.is
+1525441253	Zoe	mhe\W*?pakistan
