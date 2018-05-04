@@ -1303,3 +1303,4 @@ folexin
 (?:stupid|bloody|gandus?|lindus?|impotent|(?:mother\W*?)?fucking|assholes?(?:\W*?of\W*?)?|bitch(?:es)?)\W*?[hl]indus?
 vital\W?derma\W?x
 shred\W?t3x
+male\W?extra
