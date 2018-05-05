@@ -3070,7 +3070,7 @@
 1524332363	quartata	techdriod\.com
 1524333742	NobodyNada	inverterbattery\.online
 1524333832	NobodyNada	belajarmenanam\.com
-1524357408	Makyen	(?:screw|fuc?k|kill)(?:ing|ed|[sz])?\W*(?:you(?:(?:.{0,20}?(?:mother|m[ou]m+y?|dad+y?|sister|brother|father|pop+a?|uncle|aunt|cousin))|r?\W*sel(?:f|ves))?|\w*sel(?:f|ve[sz]))
+1524357408	Makyen	(?:screw|fuc?k|kill)(?:ing|ed|[sz])?\W*(?:you(?:(?:.{0,20}?(?:mother|m[ou]m+y?|dad+y?|sister|brother|father|pop+a?|uncle|aunt|cousin))|r?\W*sel(?:f|ves))?|(?:your|him|her|them)\W*sel(?:f|ve[sz]))
 1524266587	Makyen	auMoLcQ6zwFolsHI3
 1524367599	Makyen	LGBT\W*Executioner
 1524383247	Zoe	swastikminerals\.co\.in
