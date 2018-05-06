@@ -1472,7 +1472,7 @@ def false(feedback, msg, alias_used="false"):
         pass
 
     if not msg.content[-1].endswith(alias_used[-1]):  # lazy, pls fix
-        Tasks.do(Metasmoke.post_auto_comment, msg.content_source, msg.owner, url=post_url)
+        Tasks.do(Metasmoke.post_auto_comment, feedback.content_source, feedback.owner, url=post_url)
 
     return result if not feedback_type.always_silent else ""
 
