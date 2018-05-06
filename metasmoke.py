@@ -398,14 +398,14 @@ class Metasmoke:
             params = {"key": GlobalVars.metasmoke_key, "filter": "GFGJGHFJNFGNHKNIKHGGOMILHKLJIFFN"}
 
             response = requests.get("{}/api/v2.0/posts/uid/{}/{}".format(GlobalVars.metasmoke_host,
-                                                                         post_id,
-                                                                         site), params=params).json()
+                                                                         site,
+                                                                         post_id), params=params).json()
 
         if response and "items" in response and len(response["items"]) > 0:
             ms_id = response["items"][0]["id"]
             params = {"key": GlobalVars.metasmoke_key,
                       "text": msg,
                       "chat_user_id": user.id,
-                      "chat_user_host": user._client.host}
+                      "chat_host": user._client.host}
 
             requests.post("{}/api/v2.0/comments/post/{}".format(GlobalVars.metasmoke_host, ms_id), params=params)
