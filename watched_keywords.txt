@@ -3273,6 +3273,10 @@
 1525456566	Glorfindel	hrvoip\.com
 1525461949	Glorfindel	blockpad\.io
 1525461973	Glorfindel	totalcryptos
+1525475390	WELZ	xboxsupport\.org
+1525481879	Makyen	cyber\.surgeon
+1525481880	Glorfindel	urbanchaos-007\.blogspot\.in
+1525481881	Glorfindel	crazyhealthplan\.com
 1525539092	Byte Commander	neverbounce\.com
 1525548426	Zoe	crazyanda\.com
 1525553111	Vogel612	kazafi\.com
