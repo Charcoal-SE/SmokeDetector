@@ -9,6 +9,7 @@ from findspam import FindSpam
 from datetime import datetime
 from utcdate import UtcDate
 from apigetpost import api_get_post, PostData
+import datahandling
 from datahandling import *
 from blacklists import load_blacklists
 from parsing import *
@@ -1470,6 +1471,9 @@ def false(feedback, msg, alias_used="false"):
     except:
         pass
 
+    if not msg.content[-1].endswith(alias_used[-1]):  # lazy, pls fix
+        Tasks.do(Metasmoke.post_auto_comment, msg.content_source, msg.owner, url=post_url)
+
     return result if not feedback_type.always_silent else ""
 
 
@@ -1542,19 +1546,22 @@ def true(feedback, msg, alias_used="true"):
     feedback_type = TRUE_FEEDBACKS[alias_used]
     feedback_type.send(post_url, feedback)
 
+    post_id, site, post_type = fetch_post_id_and_site_from_url(post_url)
     user = get_user_from_url(owner_url)
-    _, _, post_type = fetch_post_id_and_site_from_url(post_url)
-    message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
 
     if user is not None:
         if feedback_type.blacklist:
+            message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
             add_blacklisted_user(user, message_url, post_url)
+
             result = "Registered " + post_type + " as true positive and blacklisted user."
         else:
             result = "Registered " + post_type + " as true positive. If you want to "\
                      "blacklist the poster, use `trueu` or `tpu`."
     else:
         result = "Registered " + post_type + " as true positive."
+
+    datahandling.last_feedbacked = (post_id, site)
 
     return result if not feedback_type.always_silent else ""
 

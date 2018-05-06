@@ -1,3 +1,6 @@
+import itertools
+import regex
+
 from metasmoke import Metasmoke
 from tasks import Tasks
 
@@ -33,6 +36,7 @@ TRUE_FEEDBACKS = {
     "abuse": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
     "abusive": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
     "offensive": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
+    "r/a": Feedback(Feedback.TRUE_POSITIVE, blacklist=True, always_silent=True),
 
     "v": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=True),
     "vand": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=True),
@@ -53,3 +57,7 @@ NAA_FEEDBACKS = {
     "naa": Feedback(Feedback.NAA, blacklist=False, always_silent=False),
     "n": Feedback(Feedback.NAA, blacklist=False, always_silent=True),
 }
+
+FEEDBACK_REGEX = regex.compile(r"(?i)\b({})\b".format("|".join(itertools.chain(TRUE_FEEDBACKS.keys(),
+                                                                               FALSE_FEEDBACKS.keys(),
+                                                                               NAA_FEEDBACKS.keys()))))

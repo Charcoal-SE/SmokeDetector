@@ -14,6 +14,8 @@ import regex
 from globalvars import GlobalVars
 from blacklists import load_blacklists
 
+last_feedbacked = None
+
 
 class Any:
     def __eq__(self, _):
@@ -163,6 +165,9 @@ def add_false_positive(site_post_id_tuple):
     GlobalVars.false_positives.append(site_post_id_tuple)
     with open("falsePositives.p", "wb") as f:
         pickle.dump(GlobalVars.false_positives, f, protocol=pickle.HIGHEST_PROTOCOL)
+
+    global last_feedbacked
+    last_feedbacked = site_post_id_tuple
 
 
 # noinspection PyMissingTypeHints

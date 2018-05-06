@@ -14,6 +14,8 @@ import time
 import yaml
 
 import datahandling
+import metasmoke
+import classes.feedback
 from excepthook import log_exception
 from globalvars import GlobalVars
 from parsing import fetch_post_id_and_site_from_url, fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
@@ -210,6 +212,9 @@ def on_msg(msg, client):
 
             if result:
                 _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
+        elif classes.feedback.FEEDBACK_REGEX.search(message.content) and is_privileged(message.owner, message.room):
+            Tasks.do(metasmoke.Metasmoke.post_auto_comment, message.content_source, message.owner,
+                     ids=datahandling.last_feedbacked)
 
 
 def tell_rooms_with(prop, msg, notify_site="", report_data=None):
@@ -417,6 +422,11 @@ def dispatch_reply_command(msg, reply, cmd):
         assert arity == (1, 1)
 
         return func(msg, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
+    elif is_privileged(reply.owner, reply.room):
+        post_data = get_report_data(msg)
+
+        if post_data[0]:
+            Tasks.do(metasmoke.Metasmoke.post_auto_comment, reply.content_source, reply.owner, url=post_data[0])
 
 
 def dispatch_shorthand_command(msg):

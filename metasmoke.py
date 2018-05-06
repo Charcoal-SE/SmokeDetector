@@ -18,7 +18,7 @@ import apigetpost
 import spamhandling
 import classes
 import chatcommunicate
-from helpers import log, only_blacklists_changed
+from helpers import api_parameter_from_link, log, only_blacklists_changed
 from gitmanager import GitManager
 from blacklists import load_blacklists
 
@@ -92,8 +92,10 @@ class Metasmoke:
             elif "exit" in message:
                 os._exit(message["exit"])
             elif "blacklist" in message:
-                datahandling.add_blacklisted_user((message['blacklist']['uid'], message['blacklist']['site']),
-                                                  "metasmoke", message['blacklist']['post'])
+                ids = (message['blacklist']['uid'], message['blacklist']['site'])
+
+                datahandling.add_blacklisted_user(ids, "metasmoke", message['blacklist']['post'])
+                datahandling.last_feedbacked = ids
             elif "unblacklist" in message:
                 datahandling.remove_blacklisted_user(message['unblacklist']['uid'])
             elif "naa" in message:
@@ -378,3 +380,28 @@ class Metasmoke:
             log('info', 'Sent statistics to metasmoke: ', payload['statistic'])
             requests.post(GlobalVars.metasmoke_host + "/statistics.json",
                           data=json.dumps(payload), headers=headers)
+
+    @staticmethod
+    def post_auto_comment(msg, user, url=None, ids=None):
+        if not GlobalVars.metasmoke_key:
+            log('info', 'Ignoring auto-comment')
+            return
+
+        response = None
+
+        if url is not None:
+            params = {"urls": url, "filter": "GFGJGHFJNFGNHKNIKHGGOMILHKLJIFFN"}
+            response = requests.get(GlobalVars.metasmoke_host + "/api/v2.0/posts/urls", params=params).json()
+        elif ids is not None:
+            post_id, site = ids
+            site = api_parameter_from_link(site)
+
+            response = requests.get("{}/api/v2.0/posts/uid/{}/{}".format(GlobalVars.metasmoke_host,
+                                                                         post_id,
+                                                                         site)).json()
+
+        if response and "items" in response and len(response["items"]) > 0:
+            ms_id = response["items"][0]["id"]
+            params = {"text": msg, "chat_user_id": user.id, "chat_user_host": user._client.host}
+
+            requests.post("{}/api/v2.0/comments/post/{}".format(GlobalVars.metasmoke_host, ms_id), params=params)
