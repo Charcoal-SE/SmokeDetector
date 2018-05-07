@@ -825,7 +825,6 @@
 1504776207	tripleee	happydiwali2016imageshd\.in
 1504777188	tripleee	newangelmed\.com
 1504777656	tripleee	apsense\.com
-1504779056	tripleee	circlehealthclub\.com
 1504779419	tripleee	best-documentation-quality\.sitey\.me
 1504783354	tripleee	shape2spatial\.blogspot\.com\.es
 1504786133	tripleee	djmp3find\.net
