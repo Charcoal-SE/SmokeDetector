@@ -461,7 +461,7 @@ def bad_pattern_in_url(s, site, *args):
         return False, ""
 
 
-def bad_ns_for_url_domain(s, site, *args):
+def ns_for_url_domain(s, site, nslist, *args):
     invalid_tld_count = 0
     for domain in set([get_domain(link, full=True) for link in post_links(s)]):
         if not tld.get_tld(domain, fix_protocol=True, fail_silently=True):
@@ -485,22 +485,36 @@ def bad_ns_for_url_domain(s, site, *args):
         endtime = datetime.now()
         log('debug', 'NS query duration {0}'.format(endtime - starttime))
         nameservers = set(server.target.to_text() for server in ns)
-        for bad_ns in [
-                # Don't forget the trailing dot on the resolved name!
-                # {'dns1.namecheaphosting.com.', 'dns2.namecheaphosting.com.'},
-                # {'dns11.namecheaphosting.com.', 'dns12.namecheaphosting.com.'},
-                'namecheaphosting.com.',
-                {'ns1.md-95.bigrockservers.com.', 'ns2.md-95.bigrockservers.com.'},
-                {'ns1.md-99.bigrockservers.com.', 'ns2.md-99.bigrockservers.com.'},
-                {'apollo.ns.cloudflare.com.', 'liz.ns.cloudflare.com.'},
-                {'chip.ns.cloudflare.com.', 'lola.ns.cloudflare.com.'},
-                {'lloyd.ns.cloudflare.com.', 'reza.ns.cloudflare.com.'}]:
-            if (type(bad_ns) is set and nameservers == bad_ns) or \
-                any([ns.endswith('.{0}'.format(bad_ns))
+        for ns_candidate in nslist:
+            if (type(ns_candidate) is set and nameservers == ns_candidate) or \
+                any([ns.endswith('.{0}'.format(ns_candidate))
                     for ns in nameservers]):
                 return True, '{domain} NS suspicious {ns}'.format(
                     domain=domain, ns=','.join(nameservers))
     return False, ""
+
+
+def bad_ns_for_url_domain(s, site, *args):
+    return ns_for_url_domain(s, site, [
+        # Don't forget the trailing dot on the resolved name!
+        # {'dns1.namecheaphosting.com.', 'dns2.namecheaphosting.com.'},
+        # {'dns11.namecheaphosting.com.', 'dns12.namecheaphosting.com.'},
+        'namecheaphosting.com.',
+        {'ns1.md-95.bigrockservers.com.', 'ns2.md-95.bigrockservers.com.'},
+        {'ns1.md-99.bigrockservers.com.', 'ns2.md-99.bigrockservers.com.'},
+        {'apollo.ns.cloudflare.com.', 'liz.ns.cloudflare.com.'},
+        {'chip.ns.cloudflare.com.', 'lola.ns.cloudflare.com.'},
+        {'lloyd.ns.cloudflare.com.', 'reza.ns.cloudflare.com.'},
+    ])
+
+
+def watched_ns_for_url_domain(s, site, *args):
+    return ns_for_url_domain(s, site, [
+        # Don't forget the trailing dot on the resolved name here either!
+        {'brenda.ns.cloudflare.com.', 'merlin.ns.cloudflare.com.'},
+        {'chris.ns.cloudflare.com.', 'tess.ns.cloudflare.com.'},
+        {'pablo.ns.cloudflare.com.', 'pola.ns.cloudflare.com.'},
+    ])
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
@@ -1081,6 +1095,11 @@ class FindSpam:
         # Link has NS hosted by bad guy
         {'method': bad_ns_for_url_domain, 'all': True, 'sites': [],
          'reason': 'bad NS for domain in {}',
+         'title': True, 'body': True, 'username': False,
+         'stripcodeblocks': True, 'body_summary': True,
+         'max_rep': 1, 'max_score': 0},
+        {'method': watched_ns_for_url_domain, 'all': True, 'sites': [],
+         'reason': 'potentially bad NS for domain in {}',
          'title': True, 'body': True, 'username': False,
          'stripcodeblocks': True, 'body_summary': True,
          'max_rep': 1, 'max_score': 0},
