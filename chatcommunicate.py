@@ -216,7 +216,7 @@ def on_msg(msg, client):
                 and is_privileged(message.owner, message.room) and datahandling.last_feedbacked:
                 ids, expires_in = datahandling.last_feedbacked
 
-                if expires_in < time.time():
+                if time.time() < expires_in:
                     Tasks.do(metasmoke.Metasmoke.post_auto_comment, message.content_source, message.owner, ids=ids)
 
 
