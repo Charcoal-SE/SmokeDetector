@@ -212,13 +212,12 @@ def on_msg(msg, client):
 
             if result:
                 _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
-        elif classes.feedback.FEEDBACK_REGEX.search(message.content) and is_privileged(message.owner, message.room):
-            if datahandling.last_feedbacked:
+        elif classes.feedback.FEEDBACK_REGEX.search(message.content) \
+                and is_privileged(message.owner, message.room) and datahandling.last_feedbacked:
                 ids, expires_in = datahandling.last_feedbacked
 
                 if expires_in < time.time():
-                    Tasks.do(metasmoke.Metasmoke.post_auto_comment, message.content_source, message.owner,
-                             ids=datahandling.last_feedbacked)
+                    Tasks.do(metasmoke.Metasmoke.post_auto_comment, message.content_source, message.owner, ids=ids)
 
 
 def tell_rooms_with(prop, msg, notify_site="", report_data=None):
