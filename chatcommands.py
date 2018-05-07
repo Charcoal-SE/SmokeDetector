@@ -1471,7 +1471,7 @@ def false(feedback, msg, alias_used="false"):
     except:
         pass
 
-    if not msg.content[-1].endswith(alias_used[-1]):  # lazy, pls fix
+    if msg.content[-1] != "-" and not msg.content.endswith(alias_used):
         Tasks.do(Metasmoke.post_auto_comment, feedback.content_source, feedback.owner, url=post_url)
 
     return result if not feedback_type.always_silent else ""
@@ -1525,6 +1525,9 @@ def naa(feedback, msg, alias_used="naa"):
     post_id, site, _ = fetch_post_id_and_site_from_url(post_url)
     add_ignored_post((post_id, site))
 
+    if msg.content[-1] != "-" and not msg.content.endswith(alias_used):
+        Tasks.do(Metasmoke.post_auto_comment, feedback.content_source, feedback.owner, url=post_url)
+
     return "Recorded answer as an NAA in metasmoke." if not feedback_type.always_silent else ""
 
 
@@ -1560,6 +1563,9 @@ def true(feedback, msg, alias_used="true"):
                      "blacklist the poster, use `trueu` or `tpu`."
     else:
         result = "Registered " + post_type + " as true positive."
+
+    if msg.content[-1] != "-" and not msg.content.endswith(alias_used):
+        Tasks.do(Metasmoke.post_auto_comment, feedback.content_source, feedback.owner, url=post_url)
 
     datahandling.last_feedbacked = ((post_id, site), time.time() + 60)
 
