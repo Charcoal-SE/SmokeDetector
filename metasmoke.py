@@ -8,6 +8,7 @@ import websocket
 from collections import Iterable
 from datetime import datetime, timedelta
 from glob import glob
+from regex import sub
 import sys
 import traceback
 import time
@@ -386,7 +387,9 @@ class Metasmoke:
         if not GlobalVars.metasmoke_key:
             log('info', 'Ignoring auto-comment')
             return
-
+        
+        clean_msg = sub(r"^:\d{7,} ", "", msg)  # Remove reply handle
+        
         response = None
 
         if url is not None:
@@ -404,7 +407,7 @@ class Metasmoke:
         if response and "items" in response and len(response["items"]) > 0:
             ms_id = response["items"][0]["id"]
             params = {"key": GlobalVars.metasmoke_key,
-                      "text": msg,
+                      "text": clean_msg,
                       "chat_user_id": user.id,
                       "chat_host": user._client.host}
 
