@@ -167,7 +167,7 @@ def add_false_positive(site_post_id_tuple):
         pickle.dump(GlobalVars.false_positives, f, protocol=pickle.HIGHEST_PROTOCOL)
 
     global last_feedbacked
-    last_feedbacked = site_post_id_tuple
+    last_feedbacked = (site_post_id_tuple, time.time() + 60)
 
 
 # noinspection PyMissingTypeHints
@@ -177,6 +177,9 @@ def add_ignored_post(postid_site_tuple):
     GlobalVars.ignored_posts.append(postid_site_tuple)
     with open("ignoredPosts.p", "wb") as f:
         pickle.dump(GlobalVars.ignored_posts, f, protocol=pickle.HIGHEST_PROTOCOL)
+
+    global last_feedbacked
+    last_feedbacked = (postid_site_tuple, time.time() + 60)
 
 
 def remove_blacklisted_user(user):

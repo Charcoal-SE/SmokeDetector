@@ -1561,7 +1561,7 @@ def true(feedback, msg, alias_used="true"):
     else:
         result = "Registered " + post_type + " as true positive."
 
-    datahandling.last_feedbacked = (post_id, site)
+    datahandling.last_feedbacked = ((post_id, site), time.time() + 60)
 
     return result if not feedback_type.always_silent else ""
 
