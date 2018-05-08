@@ -85,6 +85,5 @@ istanbul\W?hair\W?transplant
 away\W?days
 Racist
 Reihmann
-\btv\b
 rayaz
 Virk$
