@@ -1306,3 +1306,4 @@ shred\W?t3x
 male\W?extra
 SEXY\W*DURGA
 t\W?plus(?:\W?premium)?
+vary\W?forte
