@@ -1308,3 +1308,4 @@ SEXY\W*DURGA
 t\W?plus(?:\W?premium)?
 vary\W?forte
 summit\W?keto
+unlimited\W?fit(?:\W?forskolin)?
