@@ -3312,3 +3312,4 @@
 1525721359	Glorfindel	absolutedigitizing\.com
 1525744142	Makyen	^.{0,38}\bTV\b.{0,38}$
 1525745363	quartata	advancedmagnets\.com
+1525757791	tripleee	blogoart\.com
