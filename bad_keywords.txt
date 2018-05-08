@@ -1288,7 +1288,7 @@ asha24
 action\W?pro
 bone\W?oak
 ever\W?erect
-(?:(?:Rubellite\W*Fae|Sarvabhouma|Rohit|Anisha)(?:|\b.{1,200}?\b)(?:(?:mother)?[sf]uck|pis+|pus+(?:y|ies)|boo+b|tit|coc?k|dick|ass|penis|phallus|vagina|genital|rectum|dog+ystyle|blowjob|bitch|bastard|slut+(?:ish)?|harlot|whore|lesbian|queer|homo(?:sexual)?|retard|jew(?:ish)?|nig+er|nic+a|fag(?:g?[eio]t)?|heretic|idiot|sinners|raghead|muslim|hindu)(?:ing|e[dr]|e?[sz])?|(?:(?:mother)?[sf]uck|pis+|pus+(?:y|ies)|boo+b|tit|coc?k|dick|ass|penis|phallus|vagina|genital|rectum|dog+ystyle|blowjob|bitch|bastard|slut+(?:ish)?|harlot|whore|lesbian|queer|homo(?:sexual)?|retard|jew(?:ish)?|nig+er|nic+a|fag(?:g?[eio]t)?|heretic|idiot|sinners|raghead|muslim|hindu)(?:ing|e[dr]|e?[sz])?(?:|\b.{1,200}?\b)(?:Rubellite\W*Fae|Sarvabhouma|Rohit|Anisha))
+(?:(?:Rubellite\W*Fae|Rubellite\W*Yaksi|Sarvabhouma|Rohit|Anisha)(?:|\b.{1,200}?\b)(?:(?:mother)?[sf]uck|pis+|pus+(?:y|ies)|boo+b|tit|coc?k|dick|ass|penis|phallus|vagina|genital|rectum|dog+ystyle|blowjob|bitch|bastard|slut+(?:ish)?|harlot|whore|lesbian|queer|homo(?:sexual)?|retard|jew(?:ish)?|nig+er|nic+a|fag(?:g?[eio]t)?|heretic|idiot|sinners|raghead|muslim|hindu)(?:ing|e[dr]|e?[sz])?|(?:(?:mother)?[sf]uck|pis+|pus+(?:y|ies)|boo+b|tit|coc?k|dick|ass|penis|phallus|vagina|genital|rectum|dog+ystyle|blowjob|bitch|bastard|slut+(?:ish)?|harlot|whore|lesbian|queer|homo(?:sexual)?|retard|jew(?:ish)?|nig+er|nic+a|fag(?:g?[eio]t)?|heretic|idiot|sinners|raghead|muslim|hindu)(?:ing|e[dr]|e?[sz])?(?:|\b.{1,200}?\b)(?:Rubellite\W*Fae|Sarvabhouma|Rohit|Anisha))
 purefit\W?keto
 fur\W?fag
 237650092947
@@ -1299,8 +1299,8 @@ trenbolone
 hindus\W*?are\W*?bastards
 hindus\W*?are\W*?assholes
 folexin
-[hl]indus?\W*?(?:(?:are|is)\W*?)?(?:(?:damned|going)\W*?to\W*?(rot\W*?in\W*?)?hell|(?:(?:stinking|filthy|dirty)\W*?)*?(?:assholes?|w?hores?|bitch(?:es)?|idiots?|gandus?|faggots?|morons?|bastards?|jhandus?))
-(?:stupid|bloody|gandus?|lindus?|impotent|(?:mother\W*?)?fucking|assholes?(?:\W*?of\W*?)?|bitch(?:es)?)\W*?[hl]indus?
+(?:[hl]indu|jew)s?\W*?(?:(?:are|is)\W*?)?(?:the)?(?:(?:scum)(?:damned|going)\W*?to\W*?(rot\W*?in\W*?)?hell|(?:(?:stinking|filthy|dirty)\W*?)*?(?:assholes?|w?hores?|bitch(?:es)?|idiots?|gandus?|fag(?:g?[eio]t)?s?|morons?|bastards?|jhandus?|fuck(s|ing)?|sucks?))
+(?:stupid|bloody|gandus?|lindus?|impotent|(?:mother\W*?)?fucking|assholes?(?:\W*?of\W*?)?|bitch(?:es)?)\W*?(?:[hl]indu|jew)s?
 vital\W?derma\W?x
 shred\W?t3x
 male\W?extra
