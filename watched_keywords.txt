@@ -3345,3 +3345,4 @@
 1525860415	Glorfindel	mockuptiger\.com
 1525866679	tripleee	(?:1\W*)?866\W*833\W*9887
 1525867554	WELZ	wuinstall\.com
+1525867870	Glorfindel	tripbeam\.com
