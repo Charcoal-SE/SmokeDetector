@@ -3332,3 +3332,4 @@
 1525785293	WELZ	nigeria\W?custom\W?ser?vice\d
 1525787396	Glorfindel	percentagecalc\.net
 1525807595	Zoe	garimpo\.io
+1525826167	Makyen	pyramideye\.hack
