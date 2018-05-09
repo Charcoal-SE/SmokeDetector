@@ -1314,3 +1314,4 @@ iphone\W?data\W?recovery
 apeaksoft
 lutragen
 D\W?Bal
+iq\W?180(?:\W?cognitive)?
