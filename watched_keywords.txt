@@ -3365,3 +3365,4 @@
 1525951090	Glorfindel	drcleaner
 1525951808	Zoe	hackdigg\W*?(?:at|@)\W*?gmail\W*?com
 1525953709	Zoe	rushordertees\.com
+1525954927	Zoe	veintreatmentclinic\.com
