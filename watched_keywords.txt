@@ -3356,3 +3356,4 @@
 1525943110	tripleee	consultantsfactory\.com
 1525944597	tripleee	(?:1\W*)?607\W*800\W*4675
 1525947516	Glorfindel	newportbutane\.com
+1525947803	Mithrandir	dating-vergleich\.com
