@@ -3337,7 +3337,6 @@
 1525853717	Makyen	techcentrica\.com
 1525854377	Mithrandir	reliablemedstore\.com
 1525855086	Glorfindel	belfiorestores\.com
-1525855456	tripleee	alpha\W?trt
 1525859229	tripleee	indiancybersecuritysolutions\.com
 1525860415	Glorfindel	mockuptiger\.com
 1525866679	tripleee	(?:1\W*)?866\W*833\W*9887
