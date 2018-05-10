@@ -3358,3 +3358,4 @@
 1525947516	Glorfindel	newportbutane\.com
 1525947803	Mithrandir	dating-vergleich\.com
 1525947826	Mithrandir	swinger-live\.de
+1525947923	Mithrandir	(.{3})?playerschampionsh(.{1-8})?
