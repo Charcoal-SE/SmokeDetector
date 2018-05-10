@@ -86,4 +86,4 @@ away\W?days
 Racist
 Reihmann
 rayaz
-Virk$
+\w*\d+\W+Virk$
