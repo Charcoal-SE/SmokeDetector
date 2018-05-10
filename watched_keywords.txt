@@ -3361,7 +3361,6 @@
 1525947923	Mithrandir	(.{3})?playerschampionsh(.{1-8})?
 1525949646	Glorfindel	saumyagiri\.com
 1525949974	Glorfindel	clippingsolution\.com
-1525949977	Zoe	clippingsolution\.com
 1525951090	Glorfindel	drcleaner
 1525951808	Zoe	hackdigg\W*?(?:at|@)\W*?gmail\W*?com
 1525953709	Zoe	rushordertees\.com
