@@ -1321,4 +1321,4 @@ suck\W*?(?:(?:the|of)?\W*?(?:lingam|phallus)\W*?)+
 pro\W?diet\W?plus
 alpha\W?trt
 keto\W?6x
-(\+1)?518\W{0,3}504\W{0,3}9376
+(\+1\W{0,3})?518\W{0,3}504\W{0,3}9376
