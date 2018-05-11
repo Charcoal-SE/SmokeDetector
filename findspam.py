@@ -1355,7 +1355,7 @@ class FindSpam:
         {'regex': u'(?i)^john$', 'all': False, 'sites': ['hinduism.stackexchange.com'],
          'reason': 'blacklisted username', 'title': False, 'body': False, 'username': True,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        {'regex': u'(?i)(?:(?:\d{3}|_\d{5})$|juri(?:[yr]?am?)?|(?:bond|max|vaxer|jems|tz?osan)$)', 'all': False,
+        {'regex': u'(?i)(?:(?:\d{3}|_\d{5})$|juri(?:[yr]?am?)?|(?:bond|max|vaxer|jems|tz?osan)$)', 'all': True,
          'sites': [], 'reason': 'blacklisted username (medium)', 'title': False, 'body': False, 'username': True,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
 
