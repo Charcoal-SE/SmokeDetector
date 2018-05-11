@@ -1129,8 +1129,6 @@ sell\W?old\W?used\W?bikes
 herzolex
 neogelio\W?mask
 vortaxel
-alibaba\W*cloud
-# ^^^ see https://meta.stackoverflow.com/a/363426/5958455
 lyaxtin
 nutrio2
 darkwebsolutions
