@@ -429,7 +429,7 @@ def dispatch_reply_command(msg, reply, cmd):
     elif is_privileged(reply.owner, reply.room):
         post_data = get_report_data(msg)
 
-        if post_data[0]:
+        if post_data:
             Tasks.do(metasmoke.Metasmoke.post_auto_comment, reply.content_source, reply.owner, url=post_data[0])
 
 
