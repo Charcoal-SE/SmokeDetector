@@ -1323,3 +1323,4 @@ alpha\W?trt
 keto\W?6x
 (\+1\W{0,3})?518\W{0,3}504\W{0,3}9376
 keto\W?slim(?:\W?forskolin)?
+anavar
