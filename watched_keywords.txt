@@ -3391,3 +3391,4 @@
 1526105455	NobodyNada	bondolls\.com
 1526141844	Makyen	[A-Za-z_]*(1_*)?844[\W_]*545[\W_]*4512[A-Za-z_]*
 1526142686	Makyen	keychainx\.io
+1526143026	NobodyNada	spyfix6
