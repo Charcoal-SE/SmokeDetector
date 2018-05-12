@@ -42,7 +42,9 @@ def test_unshorten_link(shortened, original):
     ('meta.askubuntu.com', 'meta.askubuntu'),
     ('3dprinting.meta.stackexchange.com', '3dprinting.meta'),
     ('blender.meta.stackexchange.com', 'blender.meta'),
-    ('meta.stackexchange.com', 'meta')
+    ('meta.stackexchange.com', 'meta'),
+    ('ja.stackoverflow.com', 'ja.stackoverflow'),
+    ('meta.ja.stackoverflow.com', 'meta.ja.stackoverflow')
 ])
 def test_api_parameter_from_link(link, param):
     assert helpers.api_parameter_from_link(link) == param
