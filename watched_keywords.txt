@@ -3386,3 +3386,4 @@
 1526068928	Glorfindel	hamiast\.com
 1526087933	Makyen	capitalfundings3
 1526088116	Makyen	[A-Za-z_]*(1_*)?951[\W_]*356[\W_]*1777[A-Za-z_]*
+1526097390	Makyen	ketosis\W*kit
