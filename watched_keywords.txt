@@ -3388,4 +3388,3 @@
 1526088116	Makyen	[A-Za-z_]*(1_*)?951[\W_]*356[\W_]*1777[A-Za-z_]*
 1526097390	Makyen	ketosis\W*kit
 1526098952	Makyen	chutiya+
-1526101065	Makyen	(?:saale|salle)
