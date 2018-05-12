@@ -3389,3 +3389,4 @@
 1526097390	Makyen	ketosis\W*kit
 1526098952	Makyen	chutiya+
 1526105455	NobodyNada	bondolls\.com
+1526141844	Makyen	[A-Za-z_]*(1_*)?844[\W_]*545[\W_]*4512[A-Za-z_]*
