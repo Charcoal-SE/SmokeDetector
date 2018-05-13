@@ -3402,3 +3402,4 @@
 1526205551	Glorfindel	agfunr4\.com
 1526205862	Glorfindel	agfunr?4
 1526227125	Glorfindel	trekkingsapa\.com
+1526239956	Makyen	[A-Za-z_]*(1_*)?888[\W_]*978[\W_]*5688[A-Za-z_]*
