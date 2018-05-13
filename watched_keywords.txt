@@ -3400,3 +3400,4 @@
 1526202219	Zoe	players\W*?champion\W*?ship(?:\W*?final)?\.[a-z]{2,4}
 1526202317	Zoe	italianopentennis\.[a-z]{2,4}
 1526205551	Glorfindel	agfunr4\.com
+1526205862	Glorfindel	agfunr?4
