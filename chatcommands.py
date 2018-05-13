@@ -1502,7 +1502,7 @@ def ignore(feedback, msg):
     post_id, site, _ = fetch_post_id_and_site_from_url(post_url)
     add_ignored_post((post_id, site))
 
-    if feedback.content[-1] != "-" and not feedback.content.endswith(" " + alias_used):
+    if feedback.content[-1] != "-" and not feedback.content.endswith(" ignore"):
         Tasks.do(Metasmoke.post_auto_comment, feedback.content_source, feedback.owner, url=post_url)
 
     return "Post ignored; alerts about it will no longer be posted."
