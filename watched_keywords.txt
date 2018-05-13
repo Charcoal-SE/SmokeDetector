@@ -3398,3 +3398,4 @@
 1526177216	JoErNanO	buffalo\-airporttaxi\.com
 1526177255	JoErNanO	buffaloexpresstaxi\.com
 1526202219	Zoe	players\W*?champion\W*?ship(?:\W*?final)?\.[a-z]{2,4}
+1526202317	Zoe	italianopentennis\.[a-z]{2,4}
