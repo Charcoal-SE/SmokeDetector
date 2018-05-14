@@ -42,7 +42,7 @@ def check_if_spam(post):
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
                 why += u"\nBlacklisted user - blacklisted for {} (" \
                        u"https://m.erwaysoftware.com/posts/uid/{}/{}) by {}".format(
-                           blacklisted_post_url, api_parameter_from_link(post_url),
+                           blacklisted_post_url, api_parameter_from_link(rel_url),
                            post.post_id, blacklisted_by
                        )
             else:
