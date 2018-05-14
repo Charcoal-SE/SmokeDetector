@@ -1323,3 +1323,4 @@ keto\W?6x
 keto\W?slim(?:\W?forskolin)?
 anavar
 [A-Za-z_]*(1_*)?844[\W_]*545[\W_]*4512[A-Za-z_]*
+keto\W?summer\W?diet
