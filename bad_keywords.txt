@@ -1325,3 +1325,4 @@ anavar
 [A-Za-z_]*(1_*)?844[\W_]*545[\W_]*4512[A-Za-z_]*
 keto\W?summer\W?diet
 summer\W?keto
+primal\W?surge(?:\W?xl)?
