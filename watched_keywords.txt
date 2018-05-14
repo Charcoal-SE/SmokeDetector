@@ -3428,3 +3428,4 @@
 1526326439	Makyen	[A-Za-z_]*(1_*)?845[\W_]*259[\W_]*6015[A-Za-z_]*
 1526328020	NobodyNada	ramanathapuram mandai dog
 1526339700	Makyen	guru\.com
+1526340156	K.Dᴀᴠɪs	peterprincii
