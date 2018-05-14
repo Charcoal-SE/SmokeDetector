@@ -3339,7 +3339,7 @@
 1525903476	Zoe	gamaplus\.ir
 1525908727	Byte Commander	seoexpertspk\.com
 1525911965	DJMcMayhem	metropollitan\.com
-1525925733	Makyen	f+u+[ck]+(?<!fuck)(?<!fuk)
+1525925733	Makyen	(?:(?:m(?:[^A-Za-z]|&\w+;)*)+(?:o(?:[^A-Za-z]|&\w+;)*)+(?:t(?:[^A-Za-z]|&\w+;)*)+(?:h(?:[^A-Za-z]|&\w+;)*)+(?:e(?:[^A-Za-z]|&\w+;)*)*(?:r(?:[^A-Za-z]|&\w+;)*)+)?(?:f(?:[^A-Za-z]|&\w+;)*)+(?:u(?:[^A-Za-z]|&\w+;)*)+(?:(?:[^A-Za-z]|&\w+;)*[ck])+(?<!fuck)(?<!fuk)(?:[^A-Za-z]|&\w+;)*(?:(?:i(?:[^A-Za-z]|&\w+;)*)+(?:n(?:[^A-Za-z]|&\w+;)*)+(?:g(?:[^A-Za-z]|&\w+;)*)+|(?:e(?:[^A-Za-z]|&\w+;)*)+(?:[rd](?:[^A-Za-z]|&\w+;)*)+)?(?:s(?:[^A-Za-z]|&\w+;)*)*
 1525929262	Makyen	bitmex\.com
 1525933074	Suraj Rao	jskcindia\.com
 1525936599	Makyen	bol7\.com
