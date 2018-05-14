@@ -3411,3 +3411,4 @@
 1526289036	tripleee	si3\.ae
 1526289708	tripleee	spotify-webplayer\.com
 1526291698	Glorfindel	deletebrowsinghistory\.net
+1526291710	Glorfindel	foxdownload\.org
