@@ -1311,7 +1311,7 @@ unlimited\W?fit(?:\W?forskolin)?
 iphone\W?data\W?recovery
 apeaksoft
 lutragen
-D\W?Bal
+D\W+Bal
 iq\W?180(?:\W?cognitive)?
 flawless\W?keto
 rama?\W*?(?:(?:was|is|a|an)\W*?)*\W*?(?:bastard|impotent|asshole|(?:mother\W*?)?fuck(?:ing|ers|s)|(?:fag|mag)(?:g?[eio]t)?s?)+
