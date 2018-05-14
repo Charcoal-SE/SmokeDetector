@@ -3422,3 +3422,4 @@
 1526303590	Zoe	trading-automatique\.fr
 1526312494	Makyen	[A-Za-z_]*(1_*)?407[\W_]*337[\W_]*9869[A-Za-z_]*
 1526312587	Makyen	driyohasolutiontemple
+1526314195	Makyen	kodi\.software
