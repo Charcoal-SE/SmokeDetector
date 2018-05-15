@@ -3436,3 +3436,4 @@
 1526380933	micsthepick	hot\W?runner\W?coil\W?heater
 1526387241	Zoe	host\.co\.in
 1526394252	Mithrandir	phdify\.com
+1526394587	Mithrandir	buy.{1,4}essay
