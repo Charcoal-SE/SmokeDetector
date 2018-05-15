@@ -405,7 +405,7 @@ class Metasmoke:
         if response and "items" in response and len(response["items"]) > 0:
             ms_id = response["items"][0]["id"]
             params = {"key": GlobalVars.metasmoke_key,
-                      "text": clean_msg,
+                      "text": msg,
                       "chat_user_id": user.id,
                       "chat_host": user._client.host}
 

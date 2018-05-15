@@ -1437,7 +1437,7 @@ def postgone(msg):
 
 # noinspection PyIncorrectDocstring
 @command(message, str, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=FALSE_FEEDBACKS.keys(),
-         arity=(1,2))
+         arity=(1, 2))
 def false(feedback, msg, alias_used="false"):
     """
     Marks a post as a false positive
@@ -1484,7 +1484,7 @@ def false(feedback, msg, alias_used="false"):
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
-@command(message, str, reply=True, privileged=True, whole_msg=True, arity=(1,2))
+@command(message, str, reply=True, privileged=True, whole_msg=True, arity=(1, 2))
 def ignore(feedback, msg, comment):
     """
     Marks a post to be ignored
@@ -1510,8 +1510,8 @@ def ignore(feedback, msg, comment):
 
 
 # noinspection PyIncorrectDocstring
-@command(message, str, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=NAA_FEEDBACKS.keys(), 
-         arity=(1,2))
+@command(message, str, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=NAA_FEEDBACKS.keys(),
+         arity=(1, 2))
 def naa(feedback, msg, comment, alias_used="naa"):
     """
     Marks a post as NAA
@@ -1542,8 +1542,8 @@ def naa(feedback, msg, comment, alias_used="naa"):
 
 
 # noinspection PyIncorrectDocstring
-@command(message, str, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=TRUE_FEEDBACKS.keys(), 
-         arity=(1,2))
+@command(message, str, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=TRUE_FEEDBACKS.keys(),
+         arity=(1, 2))
 def true(feedback, msg, comment, alias_used="true"):
     """
     Marks a post as a true positive
