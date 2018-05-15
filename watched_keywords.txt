@@ -3438,3 +3438,4 @@
 1526394252	Mithrandir	phdify\.com
 1526394587	Mithrandir	buy.{1,4}essay
 1526402562	tripleee	googlesupport\.co
+1526409369	Zoe	(?:(?:moron|islamophobic|anti\W*?Muslim)\W*?)+(?:(?:(?:who|a|of)\W*?)+(?:humped)+\W*?)
