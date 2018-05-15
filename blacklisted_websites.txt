@@ -1968,3 +1968,4 @@ showbox\.software
 kodi\.software
 luckypatcher\.pro
 getcryptotab\.com
+martine-voyance\.com

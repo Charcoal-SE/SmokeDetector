@@ -1875,7 +1875,6 @@
 1513081781	tripleee	edge\W?testo
 1513114432	Glorfindel	sparechange\.io
 1513114438	Glorfindel	prosabbir\.blogspot\.com
-1513139142	Tetsuya Yamamoto	martine-voyance\.com
 1513158850	tripleee	usmanakbar\.com
 1513159853	tripleee	http\W?hook\W?up\W?apps\W?org
 1513162353	Mithrandir	dmwevehicles\.com
