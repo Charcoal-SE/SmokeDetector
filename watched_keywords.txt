@@ -2981,7 +2981,6 @@
 1523890913	Glorfindel	playcasinoca\.com
 1523890942	Glorfindel	mmo4me\.com
 1523917509	K.Dᴀᴠɪs	678\W{0,2}682\W{0,2}2622
-1523917893	K.Dᴀᴠɪs	getcryptotab\.com
 1523937803	Tetsuya Yamamoto	wsoftpro\.com
 1523938910	tripleee	mediatechreviews\.com
 1523937174	Tetsuya Yamamoto	prepareforjob\.in
