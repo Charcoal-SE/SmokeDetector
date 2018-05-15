@@ -1966,3 +1966,4 @@ supplementsauthority\.com
 allecrahealthcare\.com
 showbox\.software
 kodi\.software
+luckypatcher\.pro
