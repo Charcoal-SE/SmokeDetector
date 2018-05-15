@@ -416,8 +416,8 @@ def dispatch_command(msg):
                 return func(*args, original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
 
 
-def dispatch_reply_command(msg, reply, cmd):
-    command_parts = cmd.split(" ", 1)
+def dispatch_reply_command(msg, reply, full_cmd):
+    command_parts = full_cmd.split(" ", 1)
 
     if len(command_parts) == 2:
         cmd, args = command_parts
@@ -446,7 +446,7 @@ def dispatch_reply_command(msg, reply, cmd):
         post_data = get_report_data(msg)
 
         if post_data:
-            Tasks.do(metasmoke.Metasmoke.post_auto_comment, reply.content_source, reply.owner, url=post_data[0])
+            Tasks.do(metasmoke.Metasmoke.post_auto_comment, full_cmd, reply.owner, url=post_data[0])
 
 
 def dispatch_shorthand_command(msg):
