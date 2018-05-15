@@ -1328,3 +1328,4 @@ summer\W?keto
 primal\W?surge(?:\W?xl)?
 andro\W?mpx
 maverick\W?beard\W?growth
+[A-Za-z_]*(1_*)?407[\W_]337[\W_]9869[A-Za-z_]*
