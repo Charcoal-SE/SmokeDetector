@@ -1965,3 +1965,4 @@ garcinialossweight\.com
 supplementsauthority\.com
 allecrahealthcare\.com
 showbox\.software
+kodi\.software
