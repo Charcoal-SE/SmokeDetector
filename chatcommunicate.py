@@ -197,7 +197,7 @@ def on_msg(msg, client):
         if message.parent:
             if message.parent.owner.id == client._br.user_id:
                 strip_mention = regex.sub("^(<span class='mention'>)?@.*?(</span>)? ", "", message.content)
-                cmd = GlobalVars.parser.unescape(strip_mention).lower().split(" ", 1)[0]
+                cmd = GlobalVars.parser.unescape(strip_mention)
 
                 result = dispatch_reply_command(message.parent, message, cmd)
 
@@ -417,15 +417,31 @@ def dispatch_command(msg):
 
 
 def dispatch_reply_command(msg, reply, cmd):
+    command_parts = cmd.split(" ", 1)
+
+    if len(command_parts) == 2:
+        cmd, args = command_parts
+    else:
+        cmd, = command_parts
+        args = ""
+
     quiet_action = cmd[-1] == "-"
     cmd = regex.sub(r"\W*$", "", cmd)
 
     if cmd in _reply_commands:
-        func, arity = _reply_commands[cmd]
+        func, (min_arity, max_arity) = _reply_commands[cmd]
 
-        assert arity == (1, 1)
+        assert min_arity == 1
 
-        return func(msg, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
+        if max_arity == 1:
+            return func(msg, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
+        elif max_arity == 2:
+            return func(msg, args, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
+        else:
+            args = args.split()
+            args.extend([None] * (max_arity - len(args)))
+
+            return func(msg, *args, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
     elif is_privileged(reply.owner, reply.room):
         post_data = get_report_data(msg)
 

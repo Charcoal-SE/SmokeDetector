@@ -1436,7 +1436,8 @@ def postgone(msg):
 
 
 # noinspection PyIncorrectDocstring
-@command(message, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=FALSE_FEEDBACKS.keys())
+@command(message, str, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=FALSE_FEEDBACKS.keys(),
+         arity=(1,2))
 def false(feedback, msg, alias_used="false"):
     """
     Marks a post as a false positive
@@ -1476,15 +1477,15 @@ def false(feedback, msg, alias_used="false"):
     except:
         pass
 
-    if feedback.content[-1] != "-" and not feedback.content.endswith(" " + alias_used):
-        Tasks.do(Metasmoke.post_auto_comment, feedback.content_source, feedback.owner, url=post_url)
+    if comment:
+        Tasks.do(Metasmoke.post_auto_comment, comment, feedback.owner, url=post_url)
 
     return result if not feedback_type.always_silent else ""
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
-@command(message, reply=True, privileged=True, whole_msg=True)
-def ignore(feedback, msg):
+@command(message, str, reply=True, privileged=True, whole_msg=True, arity=(1,2))
+def ignore(feedback, msg, comment):
     """
     Marks a post to be ignored
     :param feedback:
@@ -1502,15 +1503,16 @@ def ignore(feedback, msg):
     post_id, site, _ = fetch_post_id_and_site_from_url(post_url)
     add_ignored_post((post_id, site))
 
-    if feedback.content[-1] != "-" and not feedback.content.endswith(" ignore"):
-        Tasks.do(Metasmoke.post_auto_comment, feedback.content_source, feedback.owner, url=post_url)
+    if comment:
+        Tasks.do(Metasmoke.post_auto_comment, comment, feedback.owner, url=post_url)
 
     return "Post ignored; alerts about it will no longer be posted."
 
 
 # noinspection PyIncorrectDocstring
-@command(message, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=NAA_FEEDBACKS.keys())
-def naa(feedback, msg, alias_used="naa"):
+@command(message, str, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=NAA_FEEDBACKS.keys(), 
+         arity=(1,2))
+def naa(feedback, msg, comment, alias_used="naa"):
     """
     Marks a post as NAA
     :param feedback:
@@ -1533,15 +1535,16 @@ def naa(feedback, msg, alias_used="naa"):
     post_id, site, _ = fetch_post_id_and_site_from_url(post_url)
     add_ignored_post((post_id, site))
 
-    if feedback.content[-1] != "-" and not feedback.content.endswith(" " + alias_used):
-        Tasks.do(Metasmoke.post_auto_comment, feedback.content_source, feedback.owner, url=post_url)
+    if comment:
+        Tasks.do(Metasmoke.post_auto_comment, comment, feedback.owner, url=post_url)
 
     return "Recorded answer as an NAA in metasmoke." if not feedback_type.always_silent else ""
 
 
 # noinspection PyIncorrectDocstring
-@command(message, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=TRUE_FEEDBACKS.keys())
-def true(feedback, msg, alias_used="true"):
+@command(message, str, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=TRUE_FEEDBACKS.keys(), 
+         arity=(1,2))
+def true(feedback, msg, comment, alias_used="true"):
     """
     Marks a post as a true positive
     :param feedback:
@@ -1572,8 +1575,8 @@ def true(feedback, msg, alias_used="true"):
     else:
         result = "Registered " + post_type + " as true positive."
 
-    if feedback.content[-1] != "-" and not feedback.content.endswith(" " + alias_used):
-        Tasks.do(Metasmoke.post_auto_comment, feedback.content_source, feedback.owner, url=post_url)
+    if comment:
+        Tasks.do(Metasmoke.post_auto_comment, comment, feedback.owner, url=post_url)
 
     datahandling.last_feedbacked = ((post_id, site), time.time() + 60)
 

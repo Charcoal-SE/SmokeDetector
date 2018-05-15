@@ -388,8 +388,6 @@ class Metasmoke:
             log('info', 'Ignoring auto-comment')
             return
 
-        clean_msg = sub(r"^:\d{7,} ", "", msg)  # Remove reply handle
-
         response = None
 
         if url is not None:
