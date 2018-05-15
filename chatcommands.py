@@ -1438,7 +1438,7 @@ def postgone(msg):
 # noinspection PyIncorrectDocstring
 @command(message, str, reply=True, privileged=True, whole_msg=True, give_name=True, aliases=FALSE_FEEDBACKS.keys(),
          arity=(1, 2))
-def false(feedback, msg, alias_used="false"):
+def false(feedback, msg, comment, alias_used="false"):
     """
     Marks a post as a false positive
     :param feedback:
