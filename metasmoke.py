@@ -410,3 +410,14 @@ class Metasmoke:
                       "chat_host": user._client.host}
 
             requests.post("{}/api/v2.0/comments/post/{}".format(GlobalVars.metasmoke_host, ms_id), params=params)
+
+    @staticmethod
+    def get_post_bodies_from_ms(post_url):
+        payload = {
+            'key': GlobalVars.metasmoke_key,
+            'filter': 'IOLGJFNGHKMGIHGLNMOLMMGOMKGLN',  # posts.body
+            'urls': parsing.to_protocol_relative(post_url)
+        }
+        response = requests.get(GlobalVars.metasmoke_host + '/api/v2.0/posts/urls', params=payload).json()
+
+        return response['items']
