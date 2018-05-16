@@ -87,3 +87,4 @@ Racist
 Reihmann
 rayaz
 \w*\d+\W+Virk$
+Charles\WRane
