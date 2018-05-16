@@ -3456,3 +3456,4 @@
 1526478329	WELZ	italianopen2018i
 1526478370	WELZ	italianopenlivetv
 1526478393	WELZ	liveg\.ca
+1526486424	Zoe	freevslive\.com
