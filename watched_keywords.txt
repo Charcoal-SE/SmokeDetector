@@ -1504,7 +1504,6 @@
 1510729808	tripleee	naisedu\.com
 1510736661	Glorfindel	icloudbypassdownload\.co
 1510736930	Glorfindel	wpblog\.com
-1510737119	Glorfindel	magenticians\.com
 1510738100	tripleee	warm\W?up\W?email\W?service
 1510745650	tripleee	joviluniversal\.com
 1510745805	tripleee	usitechbitcoin\.co\.uk
