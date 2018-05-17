@@ -516,6 +516,7 @@ def watched_ns_for_url_domain(s, site, *args):
         {'brenda.ns.cloudflare.com.', 'merlin.ns.cloudflare.com.'},
         {'chris.ns.cloudflare.com.', 'tess.ns.cloudflare.com.'},
         {'greg.ns.cloudflare.com.', 'kia.ns.cloudflare.com.'},
+        {'lee.ns.cloudflare.com.', 'ulla.ns.cloudflare.com.'},
         {'pablo.ns.cloudflare.com.', 'pola.ns.cloudflare.com.'},
         'sathyats.net.',
     ])
