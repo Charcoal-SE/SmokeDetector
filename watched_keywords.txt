@@ -3480,3 +3480,4 @@
 1526558400	tripleee	buyreactions\.com
 1526560699	Glorfindel	orion\W?infoso?lutions
 1526560703	tripleee	orioninfosolutions\.com
+1526562176	tripleee	ingic\.uk
