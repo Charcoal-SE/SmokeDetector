@@ -3086,7 +3086,6 @@
 1524533169	Makyen	(1[\W_]*)?717[\W_]*316[\W_]*8194[A-Za-z_]*
 1524533921	WELZ	wealth\W?recovery\W?\d\d
 1524540572	DJMcMayhem	tourismthailand.org
-1524542888	tripleee	flvto\.club
 1524542974	tripleee	eeewallet\.com
 1524543348	tripleee	biptut\.com
 1524552388	K.Dᴀᴠɪs	optimalgeek\.com
