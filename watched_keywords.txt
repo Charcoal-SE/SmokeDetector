@@ -3083,7 +3083,7 @@
 1524502412	Makyen	idclipseifalmyname
 1524513574	WELZ	hotstarl.com
 1524532810	Makyen	grantdavid635
-1524533169	Makyen	(1[\W_]*)?717[\W_]*316[\W_]*8194[A-Za-z_]*
+1524533169	Makyen	[a-z_]*(?_1_*)?717[\W_]*316[\W_]*8194[a-z_]*
 1524533921	WELZ	wealth\W?recovery\W?\d\d
 1524540572	DJMcMayhem	tourismthailand.org
 1524542974	tripleee	eeewallet\.com
@@ -3100,7 +3100,7 @@
 1524575132	Zoe	instamojo\.com
 1524575516	Zoe	canonijdriver\.com
 1524591814	WELZ	xanax\W?plug\W?\d\d
-1524588805	Makyen	(1[\W_]*)?844[\W_]*443[\W_]*3244[A-Za-z_]*
+1524588805	Makyen	[a-z_]*(?:1_*)?844[\W_]*443[\W_]*3244[a-z_]*
 1524616157	bro	ie10support\.com
 1524629945	tripleee	payflowpayments\.com
 1524638637	tripleee	profive
@@ -3132,7 +3132,7 @@
 1524766164	Glorfindel	seda-baran\.com
 1524781114	Makyen	floralenders001
 1524796030	Makyen	 progresiveloan@yahoo\.com
-1524796771	Makyen	(1[\W_]*)?603[\W_]*786[\W_]*7565[A-Za-z_]*
+1524796771	Makyen	[a-z]*(?:1_*)?603[\W_]*786[\W_]*7565[a-z_]*
 1524810079	Tetsuya Yamamoto	gs-jj\.com
 1524821443	Glorfindel	4k-hd\.club
 1524822366	Glorfindel	vclassiccoin\.com
@@ -3271,7 +3271,7 @@
 1525674379	Makyen	prkfabricators\.com
 1525674786	Makyen	grupocodesi\.com
 1525676422	Glorfindel	getmyhomepage\.com
-1525676707	Makyen	(1[\W_]*)?888[\W_]*885[\W_]*1810[A-Za-z_]*
+1525676707	Makyen	[a-z_]*(?:1_*)?888[\W_]*885[\W_]*1810[a-z_]*
 1525679371	Glorfindel	gdlixin\.net
 1525688143	Zoe	affinitycondo-serangoon\.com
 1525688649	Zoe	illuminatiweaith098
@@ -3328,7 +3328,7 @@
 1525903476	Zoe	gamaplus\.ir
 1525908727	Byte Commander	seoexpertspk\.com
 1525911965	DJMcMayhem	metropollitan\.com
-1525925733	Makyen	(?:(?:m(?:[^A-Za-z]|&\w+;)*)+(?:o(?:[^A-Za-z]|&\w+;)*)+(?:t(?:[^A-Za-z]|&\w+;)*)+(?:h(?:[^A-Za-z]|&\w+;)*)+(?:e(?:[^A-Za-z]|&\w+;)*)*(?:r(?:[^A-Za-z]|&\w+;)*)+)?(?:f(?:[^A-Za-z]|&\w+;)*)+(?:u(?:[^A-Za-z]|&\w+;)*)+(?:(?:[^A-Za-z]|&\w+;)*[ck])+(?<!fuck)(?<!fuk)(?:[^A-Za-z]|&\w+;)*(?:(?:i(?:[^A-Za-z]|&\w+;)*)+(?:n(?:[^A-Za-z]|&\w+;)*)+(?:g(?:[^A-Za-z]|&\w+;)*)+|(?:e(?:[^A-Za-z]|&\w+;)*)+(?:[rd](?:[^A-Za-z]|&\w+;)*)+)?(?:s(?:[^A-Za-z]|&\w+;)*)*
+1525925733	Makyen	(?:(?:m(?:[^a-z]|&\w+;)*)+(?:o(?:[^a-z]|&\w+;)*)+(?:t(?:[^a-z]|&\w+;)*)+(?:h(?:[^a-z]|&\w+;)*)+(?:e(?:[^a-z]|&\w+;)*)*(?:r(?:[^a-z]|&\w+;)*)+)?(?:f(?:[^a-z]|&\w+;)*)+(?:u(?:[^a-z]|&\w+;)*)+(?:(?:[^a-z]|&\w+;)*[ck])+(?<!fuck)(?<!fuk)(?:[^a-z]|&\w+;)*(?:(?:i(?:[^a-z]|&\w+;)*)+(?:n(?:[^a-z]|&\w+;)*)+(?:g(?:[^a-z]|&\w+;)*)+|(?:e(?:[^a-z]|&\w+;)*)+(?:[rd](?:[^a-z]|&\w+;)*)+)?(?:s(?:[^a-z]|&\w+;)*)*
 1525929262	Makyen	bitmex\.com
 1525933074	Suraj Rao	jskcindia\.com
 1525936599	Makyen	bol7\.com
@@ -3375,7 +3375,7 @@
 1526067000	Makyen.fromBlacklist	urlopener\.com
 1526068928	Glorfindel	hamiast\.com
 1526087933	Makyen	capitalfundings3
-1526088116	Makyen	[A-Za-z_]*(1_*)?951[\W_]*356[\W_]*1777[A-Za-z_]*
+1526088116	Makyen	[a-z_]*(?:1_*)?951[\W_]*356[\W_]*1777[a-z_]*
 1526097390	Makyen	ketosis\W*kit
 1526098952	Makyen	chutiya+
 1526105455	NobodyNada	bondolls\.com
@@ -3390,7 +3390,7 @@
 1526205551	Glorfindel	agfunr4\.com
 1526205862	Glorfindel	agfunr?4
 1526227125	Glorfindel	trekkingsapa\.com
-1526239956	Makyen	[A-Za-z_]*(1_*)?888[\W_]*978[\W_]*5688[A-Za-z_]*
+1526239956	Makyen	[a-z_]*(?:1_*)?888[\W_]*978[\W_]*5688[a-z_]*
 1526242275	Chris	everybodyspersonaltrainer\.com
 1526254993	Makyen	hustlemindsent
 1526278951	Suraj Rao	brahmagems\.com
@@ -3410,10 +3410,10 @@
 1526303553	Zoe	iasp\.info
 1526303574	Zoe	body-xtreme\.de
 1526303590	Zoe	trading-automatique\.fr
-1526312494	Makyen	[A-Za-z_]*(1_*)?407[\W_]*337[\W_]*9869[A-Za-z_]*
+1526312494	Makyen	[a-z_]*(?:1_*)?407[\W_]*337[\W_]*9869[a-z_]*
 1526312587	Makyen	driyohasolutiontemple
 1526324547	Zoe	wealthrecoverynow\.co
-1526326439	Makyen	[A-Za-z_]*(1_*)?845[\W_]*259[\W_]*6015[A-Za-z_]*
+1526326439	Makyen	[a-z_]*(?:1_*)?845[\W_]*259[\W_]*6015[a-z_]*
 1526328020	NobodyNada	ramanathapuram mandai dog
 1526339700	Makyen	guru\.com
 1526340156	K.Dᴀᴠɪs	peterprincii
@@ -3446,7 +3446,7 @@
 1526444812	Tetsuya Yamamoto	hack-exploits\.com
 1526448973	Makyen	crackedlicense\.com
 1526450139	Tetsuya Yamamoto	nortonkeyactivation\.com
-1526450225	tripleee	[A-Za-z_]*(?:1_)?800[\W_]*384[\W_]*0231[A-Za-z_]*
+1526450225	tripleee	[a-z_]*(?:1_*)?800[\W_]*384[\W_]*0231[a-z_]*
 1526451490	tripleee	sureviagra\.com
 1526453319	Makyen	evantage\.store
 1526455625	Tetsuya Yamamoto	flitop\.net
@@ -3459,7 +3459,7 @@
 1526496706	Zoe	pigdian
 1526515534	Makyen	mercyfullsolutionhome
 1526515628	Makyen	LORD\W*JUMA
-1526515715	Makyen	[A-Za-z_]*(1_*)?859[\W_]*203[\W_]*2241[A-Za-z_]*
+1526515715	Makyen	[a-z_]*(1_*)?859[\W_]*203[\W_]*2241[a-z_]*
 1526520861	Tetsuya Yamamoto	transmitterfm\.com
 1526536993	Glorfindel	geoffandfrancis\.co
 1526537330	tripleee	indianpackersmovers\.in
@@ -3487,7 +3487,7 @@
 1526619161	tripleee	pegasimediagroup\.com
 1526620560	Makyen	visaliendaiduong\.com
 1526623222	tripleee	landintopc\.blogspot
-1526624138	Makyen	[A-Za-z_]*(1_*)?855[\W_]*206[\W_]*2326[A-Za-z_]*
+1526624138	Makyen	[a-z_]*(1_*)?855[\W_]*206[\W_]*2326[a-z_]*
 1526624155	Makyen	61885261030
 1526624167	Makyen	448081894462
 1526624179	Makyen	gemini\.com
