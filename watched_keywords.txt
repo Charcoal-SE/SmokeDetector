@@ -3510,3 +3510,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1526648047	user5389107	rootcracked\.com
 1526649848	Zoe	kike
 1526670038	Makyen	hduncan\.al
+1526683938	Makyen	[a-z_]*(1_*)?845[\W_]*400[\W_]*7115[a-z_]*
