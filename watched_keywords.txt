@@ -3459,7 +3459,7 @@
 1526496706	Zoe	pigdian
 1526515534	Makyen	mercyfullsolutionhome
 1526515628	Makyen	LORD\W*JUMA
-1526515715	Makyen	[a-z_]*(1_*)?859[\W_]*203[\W_]*2241[a-z_]*
+1526515715	Makyen	[a-z_]*(?:1_*)?859[\W_]*203[\W_]*2241[a-z_]*
 1526520861	Tetsuya Yamamoto	transmitterfm\.com
 1526536993	Glorfindel	geoffandfrancis\.co
 1526537330	tripleee	indianpackersmovers\.in
@@ -3487,7 +3487,7 @@
 1526619161	tripleee	pegasimediagroup\.com
 1526620560	Makyen	visaliendaiduong\.com
 1526623222	tripleee	landintopc\.blogspot
-1526624138	Makyen	[a-z_]*(1_*)?855[\W_]*206[\W_]*2326[a-z_]*
+1526624138	Makyen	[a-z_]*(?:1_*)?855[\W_]*206[\W_]*2326[a-z_]*
 1526624155	Makyen	61885261030
 1526624167	Makyen	448081894462
 1526624179	Makyen	gemini\.com
@@ -3499,11 +3499,11 @@
 1526632040	Tetsuya Yamamoto	trulyheal\.com
 1526632328	Makyen	powersupply\.top
 1526635513	Glorfindel	netgearrouterhelp\.com
-1526635659	Makyen	[a-z_]*(1_*)?888[\W_]*239[\W_]*5201[a-z_]*
+1526635659	Makyen	[a-z_]*(?:1_*)?888[\W_]*239[\W_]*5201[a-z_]*
 1526636587	Glorfindel	kingstondome\.com
 1526636594	Glorfindel	onlineincomes\.com
 1526638050	tripleee	office-account\.com
-1526638674	Makyen	[a-z_]*(1_*)?614[\W_]*996[\W_]*5476[a-z_]*
+1526638674	Makyen	[a-z_]*(?:1_*)?614[\W_]*996[\W_]*5476[a-z_]*
 1526638686	Makyen	14849643748
 1526638707	Makyen	androidpcapps\.com
 1526643696	Zoe	auto\W*link\W*(?:int(?:ernational)?)?\W*(?:pakistan|pk)?
