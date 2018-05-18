@@ -3506,5 +3506,4 @@
 1526638674	Makyen	[a-z_]*(1_*)?614[\W_]*996[\W_]*5476[a-z_]*
 1526638686	Makyen	14849643748
 1526638707	Makyen	androidpcapps\.com
-1526643357	tripleee	auto\W*link\W*pk
 1526643696	Zoe	auto\W*link\W*(?:int(?:ernational)?)?\W*(?:pakistan|pk)?
