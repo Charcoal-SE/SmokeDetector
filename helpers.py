@@ -102,6 +102,13 @@ def api_parameter_from_link(link):
     else:
         return None
 
+def clean_html(input):
+    """
+    Removes some HTML tags from input and replaces it with markdown
+    """
+    input = regex.subf("<i>(.*)</i>", "*{1}*", input)
+    input = regex.subf("<b>(.*)</b>", "**{1}**", input)
+    return regex.subf("<code>(.*)</code>", "`{1}`", input)
 
 class SecurityError(Exception):
     pass
