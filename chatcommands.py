@@ -24,7 +24,7 @@ from html import unescape
 from ast import literal_eval
 # noinspection PyCompatibility
 import regex
-from helpers import only_blacklists_changed
+from helpers import only_blacklists_changed, clean_html
 from classes import Post
 from classes.feedback import *
 
@@ -245,7 +245,7 @@ def do_blacklist(raw_pattern, blacklist_type, msg, force=False):
                                                                     id=msg.owner.id)
 
     # noinspection PyProtectedMember
-    pattern = rebuild_str(raw_pattern)
+    pattern = clean_html(rebuild_str(raw_pattern))
     try:
         regex.compile(pattern)
     except regex._regex_core.error:
