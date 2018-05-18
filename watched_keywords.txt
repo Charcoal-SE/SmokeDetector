@@ -3507,4 +3507,3 @@
 1526638707	Makyen	androidpcapps\.com
 1526643696	Zoe	auto\W*link\W*(?:int(?:ernational)?)?\W*(?:pakistan|pk)?
 1526646031	tripleee	vietcruisetours\.com
-1526646272	Zoe	viet\W<i>cruise\W*(?:travel\W</i>agency|tours)
