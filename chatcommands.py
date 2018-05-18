@@ -231,7 +231,7 @@ def format_blacklist_reasons(reasons):
     return reason_string
 
 
-def do_blacklist(raw_pattern, blacklist_type, msg, force=False):
+def do_blacklist(blacklist_type, msg, force=False):
     """
     Adds a string to the website blacklist and commits/pushes to GitHub
     :param raw_pattern:
@@ -245,7 +245,7 @@ def do_blacklist(raw_pattern, blacklist_type, msg, force=False):
                                                                     id=msg.owner.id)
 
     # noinspection PyProtectedMember
-    pattern = rebuild_str(raw_pattern)
+    pattern = rebuild_str(msg.content_source.split(" ", 1)[1])
     try:
         regex.compile(pattern)
     except regex._regex_core.error:
@@ -287,7 +287,7 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     """
 
     parts = alias_used.split("-")
-    return do_blacklist(pattern, parts[1], msg, force=len(parts) > 2)
+    return do_blacklist(parts[1], msg, force=len(parts) > 2)
 
 
 # noinspection PyIncorrectDocstring
@@ -300,12 +300,13 @@ def watch(msg, website):
     :return: A string
     """
 
-    return do_blacklist(website, "watch_keyword", msg, force=False)
+    return do_blacklist("watch_keyword", msg, force=False)
 
 
 @command(str, whole_msg=True, privileged=True)
 def unwatch(msg, item):
-    _status, message = GitManager.unwatch(rebuild_str(item), msg.owner.name, is_code_privileged(
+    pattern = msg.content_source.split(" ", 1)[1]
+    _status, message = GitManager.unwatch(rebuild_str(pattern), msg.owner.name, is_code_privileged(
         msg._client.host, msg.owner.id))
     return message
 
@@ -320,7 +321,7 @@ def watch_force(msg, website):
     :return: A string
     """
 
-    return do_blacklist(website, "watch_keyword", msg, force=True)
+    return do_blacklist("watch_keyword", msg, force=True)
 
 
 # noinspection PyIncorrectDocstring
