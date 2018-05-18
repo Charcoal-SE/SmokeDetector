@@ -3508,3 +3508,4 @@
 1526643696	Zoe	auto\W*link\W*(?:int(?:ernational)?)?\W*(?:pakistan|pk)?
 1526646031	tripleee	vietcruisetours\.com
 Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
+1526648047	user5389107	rootcracked\.com
