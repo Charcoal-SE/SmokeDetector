@@ -3507,3 +3507,4 @@
 1526638686	Makyen	14849643748
 1526638707	Makyen	androidpcapps\.com
 1526643357	tripleee	auto\W*link\W*pk
+1526643696	Zoe	auto\W*link\W*(?:int(?:ernational)?)?\W*(?:pakistan|pk)?
