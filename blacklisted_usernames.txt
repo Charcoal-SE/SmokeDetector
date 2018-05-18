@@ -88,3 +88,4 @@ Reihmann
 rayaz
 \w*\d+\W+Virk$
 Charles\WRane
+adolf\W*hitler
