@@ -3502,4 +3502,3 @@
 1526635659	Makyen	[a-z_]*(1_*)?888[\W_]*239[\W_]*5201[a-z_]*
 1526636587	Glorfindel	kingstondome\.com
 1526636594	Glorfindel	onlineincomes\.com
-1526636598	tripleee	onlineincomes\.com\.ng
