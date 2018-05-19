@@ -774,7 +774,8 @@ def body_starts_with_title(post):
     similarity = similar_ratio(s[:len(post.title)], post.title)
     end_in_url, ending_url = link_at_end(post.body, None)
     if similarity >= BODY_TITLE_SIMILAR_THRESHOLD and end_in_url:
-        return False, False, True, 'Body starts with title and ends in URL: {}'.format(ending_url.replace("Link at end: ", ""))
+        return False, False, True, \
+            'Body starts with title and ends in URL: {}'.format(ending_url.replace("Link at end: ", ""))
     return False, False, False, ''
 
 

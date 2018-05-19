@@ -84,7 +84,8 @@ from helpers import log
     ('GUI over bash using glade', """<p>I want to make a remote control for my PC. Basically all I need is to run a command on a button click. Following this <a href="https://www.youtube.com/watch?v=cNWmleAJ2qg" rel="nofollow noreferrer">guide</a> I managed to build the <a href="https://i.stack.imgur.com/dMy9g.jpg" rel="nofollow noreferrer">layout</a> and it's everything i've ever dreamed of.
 But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, False, False),
     ('Misleading link common file whitelist', 'File: <a href="https://www.malicious.com/">https://google.com/file.txt</a>', '', 'stackoverflow.com', False, False, True),
-    ('Misleading link common file whitelist', 'File: <a href="https://www.malicious.txt/">https://google.com</a>', '', 'stackoverflow.com', False, False, False)
+    ('Misleading link common file whitelist', 'File: <a href="https://www.malicious.txt/">https://google.com</a>', '', 'stackoverflow.com', False, False, False),
+    ('Body starts with title', 'Body starts with title and ends with <a href="https://example.com">https://example.com</a>', '', '', False, False, True)
 ])
 def test_regexes(title, body, username, site, body_is_summary, is_answer, match):
     # If we want to test answers separately, this should be changed
