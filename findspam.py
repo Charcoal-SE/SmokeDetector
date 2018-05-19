@@ -1369,7 +1369,7 @@ class FindSpam:
         why = {'title': [], 'body': [], 'username': []}
         for rule in FindSpam.rules:
             title_to_check = post.title if not post.is_answer else "Placeholder Title"
-            body_to_check = post.body.replace("&nbsp;", "").replace("\xAD", "") \
+            body_to_check = post.body.replace("&nsbp;", "").replace("\xAD", "") \
                                      .replace("\u200B", "").replace("\u200C", "")
             is_regex_check = 'regex' in rule
             check_if_answer = rule.get('answers', True)
