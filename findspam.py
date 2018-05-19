@@ -1368,7 +1368,7 @@ class FindSpam:
         result = []
         why = {'title': [], 'body': [], 'username': []}
         for rule in FindSpam.rules:
-            title_to_check = post.title if not post.is_answer else "Placeholder Title"
+            title_to_check = post.title
             body_to_check = post.body.replace("&nsbp;", "").replace("\xAD", "") \
                                      .replace("\u200B", "").replace("\u200C", "")
             is_regex_check = 'regex' in rule
@@ -1392,7 +1392,7 @@ class FindSpam:
                 if is_regex_check:
                     compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
                     # using a named list \L in some regexes
-                    matched_title = compiled_regex.findall(title_to_check)
+                    matched_title = False if post.is_answer else compiled_regex.findall(title_to_check)
                     matched_username = compiled_regex.findall(post.user_name)
                     if (not post.body_is_summary or rule['body_summary']) and \
                             (not post.is_answer or check_if_answer) and \
