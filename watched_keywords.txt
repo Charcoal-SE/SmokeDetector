@@ -3513,3 +3513,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1526683938	Makyen	[a-z_]*(1_*)?845[\W_]*400[\W_]*7115[a-z_]*
 1526684249	Makyen	[a-z_]*(1_*)?833[\W_]*669[\W_]*4666[a-z_]*
 1526684258	Makyen	doctorzakuzaspelltemple
+1526711726	Makyen	Cleaning\W*Pirates
