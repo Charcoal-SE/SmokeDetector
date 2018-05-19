@@ -27,6 +27,7 @@ TLD_CACHE = []
 LEVEN_DOMAIN_DISTANCE = 3
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
+BODY_TITLE_SIMILAR_THRESHOLD = 0.99  # That's enough
 CHARACTER_USE_RATIO = 0.42
 REPEATED_CHARACTER_RATIO = 0.20
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
@@ -763,6 +764,20 @@ def toxic_check(post):
     return False, False, False, ""
 
 
+# noinspection PyUnusedLocal,PyMissingTypeHints
+def body_starts_with_title(post):
+    # Ignore too-short title
+    if len(post.title) < 10:
+        return False, False, False, ''
+
+    s = strip_urls_and_tags(post.body)
+    similarity = similar_ratio(s[:len(post.title)], post.title)
+    end_in_url, ending_url = link_at_end(post.body, None)
+    if similarity >= BODY_TITLE_SIMILAR_THRESHOLD and end_in_url:
+        return False, False, True, 'Body starts with title and ends in URL: {}'.format(ending_url.replace("Link at end: ", ""))
+    return False, False, False, ''
+
+
 def turkey(s, *args):
     s = regex.search("<p>\s*?(\S{8,})\s*?</p>$", s.lower())
 
@@ -1226,6 +1241,10 @@ class FindSpam:
                    "unix.stackexchange.com", "webmasters.stackexchange.com"], 'reason': "URL-only title",
          'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
          'max_rep': 11, 'max_score': 0},
+        # Body starts with title and ends in URL
+        {'method': body_starts_with_title, 'all': True, 'sites': ['codegolf.stackexchange.com'],
+         'reason': "body starts with title and ends in URL", 'whole_post': True, 'title': False, 'body': False,
+         'username': False, 'body_summary': False, 'stripcodeblocks': False, 'max_rep': 1, 'max_score': 0},
         #
         # Category: Suspicious contact information
         # Phone number in title
@@ -1260,7 +1279,7 @@ class FindSpam:
         # Spammy-looking email in questions and answers, for all sites
         {'method': pattern_email, 'all': True, 'sites': [], 'reason': "pattern-matching email in {}", 'title': True,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        # QQ/ICQ/Whatsapp... numbers, for all sites
+        # QQ/ICQ/WhatsApp... numbers, for all sites
         {'regex': r'(?i)(?<![a-z0-9])Q{1,2}(?:(?:[vw]|[^a-z0-9])\D{0,8})?\d{5}[.-]?\d{4,5}(?!["\d])|'
                   r'\bICQ[ :]{0,5}\d{9}\b|\bwh?atsa+pp?[ :+]{0,5}\d{10}', 'all': True, 'sites': [],
          'reason': "messaging number in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
