@@ -524,7 +524,7 @@ def watched_ns_for_url_domain(s, site, *args):
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def is_offensive_post(s, site, *args):
-    if s is None or len(s) == 0:
+    if not s:
         return False, ""
 
     offensive = regex.compile(
