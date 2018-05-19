@@ -103,7 +103,7 @@ def api_parameter_from_link(link):
         return None
 
 
-id_parser_regex = r'https?://[^/]+/[qa]/(\d+)'
+id_parser_regex = r'https?://[^/]+/\w+/(\d+)'
 id_parser = regex.compile(id_parser_regex)
 
 
