@@ -3528,3 +3528,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1526816894	paper1111	9apps\.ooo
 1526816903	paper1111	aptoide\.vip
 1526823878	Zoe	(?:aa?ron(?:\W*hall)?)\W*(?:(?:is|are|a)\W*?)*\W*(?:(?:(?:jealous|and|you)*\W*)+(?:dumbass|dirty|gay|jew(?:s|ish)?|(?:mother\W*)?fuck(?:ing)?)+\W*)+
+1526830025	Zoe	techobserver\.net
