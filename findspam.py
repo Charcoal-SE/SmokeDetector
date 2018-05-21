@@ -515,6 +515,7 @@ def watched_ns_for_url_domain(s, site, *args):
         # Don't forget the trailing dot on the resolved name here either!
         {'ara.ns.cloudflare.com.', 'greg.ns.cloudflare.com.'},
         {'brenda.ns.cloudflare.com.', 'merlin.ns.cloudflare.com.'},
+        {'chip.ns.cloudflare.com.', 'cruz.ns.cloudflare.com.'},
         {'chris.ns.cloudflare.com.', 'tess.ns.cloudflare.com.'},
         {'greg.ns.cloudflare.com.', 'kia.ns.cloudflare.com.'},
         {'lee.ns.cloudflare.com.', 'ulla.ns.cloudflare.com.'},
