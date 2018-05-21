@@ -9,7 +9,7 @@ import parsing
 import metasmoke
 import excepthook
 from classes import Post, PostParseError
-from helpers import log, api_parameter_from_link
+from helpers import log, api_parameter_from_link, post_id_from_link
 from tasks import Tasks
 
 
@@ -41,8 +41,10 @@ def check_if_spam(post):
             if blacklisted_post_url:
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
                 why += u"\nBlacklisted user - blacklisted for {} (" \
-                       u"https://m.erwaysoftware.com/posts/by-url?url={}) by {}".format(blacklisted_post_url, rel_url,
-                                                                                        blacklisted_by)
+                       u"https://m.erwaysoftware.com/posts/uid/{}/{}) by {}".format(
+                           blacklisted_post_url, api_parameter_from_link(rel_url),
+                           post_id_from_link(rel_url), blacklisted_by
+                       )
             else:
                 why += u"\n" + u"Blacklisted user - blacklisted by {}".format(blacklisted_by)
     if 0 < len(test):

@@ -103,5 +103,17 @@ def api_parameter_from_link(link):
         return None
 
 
+id_parser_regex = r'https?://[^/]+/\w+/(\d+)'
+id_parser = regex.compile(id_parser_regex)
+
+
+def post_id_from_link(link):
+    match = id_parser.search(link)
+    if match:
+        return match[1]
+    else:
+        return None
+
+
 class SecurityError(Exception):
     pass
