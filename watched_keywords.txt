@@ -3528,3 +3528,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1526846575	Makyen	topcoinexchange\W*uk
 1526875767	tripleee	testbike\.hu
 1526876679	tripleee	clickmeterlink\.com
+1526881075	Tetsuya Yamamoto	sattamatkapro\.mobi
