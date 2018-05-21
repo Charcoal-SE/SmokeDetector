@@ -3537,3 +3537,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1526886135	Tetsuya Yamamoto	hphelpnumber\.com
 1526887887	Tetsuya Yamamoto	fireandsafetycoursesinchennai\.in
 1526889009	Tetsuya Yamamoto	yamarkets\.com
+1526889066	Zoe	^yamarkets$
