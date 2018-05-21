@@ -201,7 +201,12 @@ while True:
             if action == "hb":
                 ws.send("hb")
             if action == "155-questions-active":
+                if GlobalVars.flovis is not None:
+                    data = json.loads(a)['data']
+                    GlobalVars.flovis.stage('received', data['siteBaseHostAddress'], data['id'], a)
+
                 is_spam, reason, why = check_if_spam_json(a)
+
                 t = Thread(name="bodyfetcher post enqueing",
                            target=GlobalVars.bodyfetcher.add_to_queue,
                            args=(a, True if is_spam else None))

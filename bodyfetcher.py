@@ -141,6 +141,9 @@ class BodyFetcher:
         self.queue[site_base][str(post_id)] = datetime.utcnow()
         self.queue_modify_lock.release()
 
+        if GlobalVars.flovis is not None:
+            GlobalVars.flovis.stage('bodyfetcher/enqueued', site_base, post_id, self.queue)
+
         if should_check_site:
             self.make_api_call_for_site(site_base)
         else:
@@ -182,6 +185,11 @@ class BodyFetcher:
         self.queue_modify_lock.release()
 
         new_post_ids = [int(k) for k, v in new_posts.items()]
+
+        if GlobalVars.flovis is not None:
+            for post_id in new_post_ids:
+                GlobalVars.flovis.stage('bodyfetcher/api_request', site, post_id,
+                                        {'queue': self.queue, 'site': site, 'posts': new_posts})
 
         self.queue_timing_modify_lock.acquire()
         post_add_times = [v for k, v in new_posts.items()]
@@ -336,14 +344,17 @@ class BodyFetcher:
 
         for post in response["items"]:
             if "title" not in post or "body" not in post:
+                if GlobalVars.flovis is not None:
+                    GlobalVars.flovis.stage('bodyfetcher/api_response/no_content', site, post['question_id'], post)
                 continue
 
             post['site'] = site
             try:
                 post_ = Post(api_response=post)
             except PostParseError as err:
-                log('error', 'Error {0} when parsing post: {1!r}'.format(
-                    err, post_))
+                log('error', 'Error {0} when parsing post: {1!r}'.format(err, post_))
+                if GlobalVars.flovis is not None:
+                    GlobalVars.flovis.stage('bodyfetcher/api_response/error', site, post['question_id'], post)
                 continue
 
             num_scanned += 1
@@ -352,11 +363,17 @@ class BodyFetcher:
 
             if is_spam:
                 try:
+                    if GlobalVars.flovis is not None:
+                        GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, post['question_id'],
+                                                {'post': post, 'check_if_spam': [is_spam, reason, why]})
                     handle_spam(post=post_,
                                 reasons=reason,
                                 why=why)
                 except Exception as e:
                     log('error', "Exception in handle_spam:", e)
+            elif GlobalVars.flovis is not None:
+                GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, post['question_id'],
+                                        {'post': post, 'check_if_spam': [is_spam, reason, why]})
 
             try:
                 if "answers" not in post:
@@ -372,11 +389,18 @@ class BodyFetcher:
                         is_spam, reason, why = check_if_spam(answer_)
                         if is_spam:
                             try:
+                                if GlobalVars.flovis is not None:
+                                    GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, post['answer_id'],
+                                                            {'post': post, 'check_if_spam': [is_spam, reason, why]})
                                 handle_spam(answer_,
                                             reasons=reason,
                                             why=why)
                             except Exception as e:
                                 log('error', "Exception in handle_spam:", e)
+                        elif GlobalVars.flovis is not None:
+                            GlobalVars.flovis.stage('bodyfetcher/api_response/not_spam', site, post['answer_id'],
+                                                    {'post': post, 'check_if_spam': [is_spam, reason, why]})
+
             except Exception as e:
                 log('error', "Exception handling answers:", e)
 
