@@ -3543,3 +3543,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1526890527	Vogel612	beyondcorner\.com
 1526893287	Zoe	directmerchant\.org
 1526899081	Zoe	imaginea\.com
+1526900211	Zoe	cicever\.com
