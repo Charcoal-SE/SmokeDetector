@@ -93,7 +93,7 @@ class Metasmoke:
             elif "autoflag_fp" in message:
                 event = message["autoflag_fp"]
 
-                chatcommunicate.tell_rooms(("debug", "site-" + event["site"]), ("no-site-" + event["site"],), 
+                chatcommunicate.tell_rooms(("debug", "site-" + event["site"]), ("no-site-" + event["site"],),
                                            event["message"], notify_site="/autoflag_fp")
             elif "exit" in message:
                 os._exit(message["exit"])
