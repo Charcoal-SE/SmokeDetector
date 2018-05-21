@@ -91,8 +91,10 @@ class Metasmoke:
             if "message" in message:
                 chatcommunicate.tell_rooms_with("metasmoke", message['message'])
             elif "autoflag_fp" in message:
-                chatcommunicate.tell_rooms(("debug", "site-" + message["site"]), (), message["message"],
-                                           notify_site="/autoflag_fp")
+                event = message["autoflag_fp"]
+
+                chatcommunicate.tell_rooms(("debug", "site-" + event["site"]), ("no-site-" + event["site"],), 
+                                           event["message"], notify_site="/autoflag_fp")
             elif "exit" in message:
                 os._exit(message["exit"])
             elif "blacklist" in message:
