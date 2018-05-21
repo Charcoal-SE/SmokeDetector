@@ -3541,3 +3541,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1526889125	Zoe	^Servant\W*of\W*Christ$
 1526890040	Zoe	\W*817\W*818\W*2100
 1526890527	Vogel612	beyondcorner\.com
+1526893287	Zoe	directmerchant\.org
