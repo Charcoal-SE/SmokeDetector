@@ -90,3 +90,4 @@ rayaz
 Charles\WRane
 adolf\W*hitler
 heinrich\W*(?:luitpold\W*)?himmler
+ante\W*paveli[cć]
