@@ -3251,7 +3251,6 @@
 1525475390	WELZ	xboxsupport\.org
 1525481879	Makyen	cyber\.surgeon
 1525481880	Glorfindel	urbanchaos-007\.blogspot\.in
-1525481881	Glorfindel	crazyhealthplan\.com
 1525539092	Byte Commander	neverbounce\.com
 1525548426	Zoe	crazyanda\.com
 1525553111	Vogel612	kazafi\.com
@@ -3543,3 +3542,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1526899081	Zoe	imaginea\.com
 1526900211	Zoe	cicever\.com
 1526909061	tripleee	anantyoga\.com
+1526933928	Mithrandir	ambar\.info
