@@ -3531,3 +3531,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1526881075	Tetsuya Yamamoto	sattamatkapro\.mobi
 1526881713	Tetsuya Yamamoto	supersavermamacanada\.com
 1526883731	Mithrandir	cribooks\.org
+1526883742	Tetsuya Yamamoto	lovepackages\.org
