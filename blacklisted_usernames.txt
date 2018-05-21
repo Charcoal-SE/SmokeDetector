@@ -71,7 +71,7 @@ donald\W*j?\.?\W*trump
 techelpp‭
 \W?router$
 \b(?:moth(?:e?r|a))?fu+[ck]+(?:[ei]ng*|e[dr])?\b
-(hurriyet|turkishdaily)news
+(?:hurriyet|turkish)(?:daily)?news
 tour\W?packages
 sputnik\W?international
 daily\W?news
@@ -88,6 +88,6 @@ Reihmann
 rayaz
 \w*\d+\W+Virk$
 Charles\WRane
-adolf\W*hitler
+adol(?:f|ph)\W*hitler
 heinrich\W*(?:luitpold\W*)?himmler
 ante\W*paveli[cć]
