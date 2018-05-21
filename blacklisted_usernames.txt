@@ -89,3 +89,4 @@ rayaz
 \w*\d+\W+Virk$
 Charles\WRane
 adolf\W*hitler
+heinrich\W*(?:luitpold\W*)?himmler
