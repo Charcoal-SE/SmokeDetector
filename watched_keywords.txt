@@ -3545,3 +3545,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1526933928	Mithrandir	ambar\.info
 1526949801	Tetsuya Yamamoto	applesupportnumber\.net
 1526950073	Tetsuya Yamamoto	customerhelptollfree\.com
+1526950228	Tetsuya Yamamoto	(?:1\W*)?844\W*235\W*4800
