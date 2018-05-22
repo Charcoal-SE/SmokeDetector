@@ -1338,3 +1338,4 @@ keto\W?power
 cortyx
 turmeric\W?slim
 [a-z_]*(?:1_*)?913[\W_]*608[\W_]*4584[a-z_]*
+xyzol
