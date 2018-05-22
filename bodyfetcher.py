@@ -142,7 +142,8 @@ class BodyFetcher:
         self.queue_modify_lock.release()
 
         if GlobalVars.flovis is not None:
-            GlobalVars.flovis.stage('bodyfetcher/enqueued', site_base, post_id, self.queue)
+            GlobalVars.flovis.stage('bodyfetcher/enqueued', site_base, post_id,
+                                    dict([[sk, [k for k, v in sq.items()]] for sk, sq in self.queue.items()]))
 
         if should_check_site:
             self.make_api_call_for_site(site_base)
@@ -189,7 +190,9 @@ class BodyFetcher:
         if GlobalVars.flovis is not None:
             for post_id in new_post_ids:
                 GlobalVars.flovis.stage('bodyfetcher/api_request', site, post_id,
-                                        {'queue': self.queue, 'site': site, 'posts': new_posts})
+                                        {'queue':
+                                             dict([[sk, [k for k, v in sq.items()]] for sk, sq in self.queue.items()]),
+                                         'site': site, 'posts': [k for k, v in new_posts.items()]})
 
         self.queue_timing_modify_lock.acquire()
         post_add_times = [v for k, v in new_posts.items()]
