@@ -3554,3 +3554,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1526976642	Mithrandir	giftpackagingbox\.com
 1526977930	Tetsuya Yamamoto	omarbaileyfootwear\.com
 1526983217	A J	jjbbu\.com
+1526988826	iBug	judo\W?mats
