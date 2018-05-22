@@ -3543,3 +3543,14 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1526900211	Zoe	cicever\.com
 1526909061	tripleee	anantyoga\.com
 1526933928	Mithrandir	ambar\.info
+1526949801	Tetsuya Yamamoto	applesupportnumber\.net
+1526950073	Tetsuya Yamamoto	customerhelptollfree\.com
+1526950228	Tetsuya Yamamoto	(?:1\W*)?844\W*235\W*4800
+1526967817	tripleee	vitolast
+1526972067	tripleee	wtshirebook\.com
+1526973801	tripleee	omega\W?green
+1526975208	tripleee	careerz360\.pk
+1526975238	tripleee	stayparallel\.com
+1526976642	Mithrandir	giftpackagingbox\.com
+1526977930	Tetsuya Yamamoto	omarbaileyfootwear\.com
+1526983217	A J	jjbbu\.com
