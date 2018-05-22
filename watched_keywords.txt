@@ -3557,3 +3557,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1526993351	Byte Commander	btctradefarm\.com
 1527011360	WELZ	mrs\W?martina\W?loan\W?firm
 1527012058	Glorfindel	typeset\.io
+1527014421	ArtOfCode	tutorialforlinux\.com
