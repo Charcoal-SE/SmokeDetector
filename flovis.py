@@ -28,7 +28,7 @@ class Flovis:
                     ws.send(json.dumps({'action': 'pong'}))
                 elif msg['action'] == 'response':
                     if msg['success'] is False:
-                        log('warning', 'Flovis data send failed ({}): {}'.format(msg['event_id'], msg['source']))
+                        log('warning', 'Flovis data send failed ({}): {}'.format(msg['event_id'], msg['code']))
             else:
                 ws.send(json.dumps({'action': 'info', 'message': "LA LA LA I'M NOT LISTENING"}))
 
