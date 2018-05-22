@@ -51,7 +51,7 @@ class Flovis:
             return False
 
     def stage(self, name, site, post_id, data=None):
-        event_id = uuid.uuid4()
+        event_id = str(uuid.uuid4())
         msg_data = {'action': 'stage', 'name': name, 'site': site, 'post_id': post_id, 'event_id': event_id}
 
         if data is not None:
