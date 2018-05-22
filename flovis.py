@@ -2,6 +2,7 @@ import websocket
 import socket
 import json
 import time
+import uuid
 from threading import Thread
 from helpers import log
 
@@ -22,8 +23,12 @@ class Flovis:
     def _init_websocket(self):
         def on_message(ws, frame):
             msg = json.loads(frame)
-            if 'action' in msg and msg['action'] == 'ping':
-                ws.send(json.dumps({'action': 'pong'}))
+            if 'action' in msg:
+                if msg['action'] == 'ping':
+                    ws.send(json.dumps({'action': 'pong'}))
+                elif msg['action'] == 'response':
+                    if msg['success'] == False:
+                        log('warning', 'Flovis data send failed ({}): {}'.format(msg['event_id'], msg['source']))
             else:
                 ws.send(json.dumps({'action': 'info', 'message': "LA LA LA I'M NOT LISTENING"}))
 
@@ -45,7 +50,8 @@ class Flovis:
             return False
 
     def stage(self, name, site, post_id, data=None):
-        msg_data = {'action': 'stage', 'name': name, 'site': site, 'post_id': post_id}
+        event_id = uuid.uuid4()
+        msg_data = {'action': 'stage', 'name': name, 'site': site, 'post_id': post_id, 'event_id': event_id}
 
         if data is not None:
             msg_data['data'] = data
