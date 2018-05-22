@@ -191,7 +191,7 @@ class BodyFetcher:
             for post_id in new_post_ids:
                 GlobalVars.flovis.stage('bodyfetcher/api_request', site, post_id,
                                         {'queue':
-                                             dict([[sk, [k for k, v in sq.items()]] for sk, sq in self.queue.items()]),
+                                         dict([[sk, [k for k, v in sq.items()]] for sk, sq in self.queue.items()]),
                                          'site': site, 'posts': [k for k, v in new_posts.items()]})
 
         self.queue_timing_modify_lock.acquire()
