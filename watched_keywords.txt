@@ -3550,3 +3550,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1526972067	tripleee	wtshirebook\.com
 1526973801	tripleee	omega\W?green
 1526975208	tripleee	careerz360\.pk
+1526975218	Tetsuya Yamamoto	careerz360\.pk
