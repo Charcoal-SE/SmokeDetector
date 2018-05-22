@@ -3551,4 +3551,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1526973801	tripleee	omega\W?green
 1526975208	tripleee	careerz360\.pk
 1526975238	tripleee	stayparallel\.com
-1526976642	Mithrandir	giftpackagingbox.com
+1526976642	Mithrandir	giftpackagingbox\.com
