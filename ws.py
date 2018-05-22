@@ -202,7 +202,7 @@ while True:
                 ws.send("hb")
             if action == "155-questions-active":
                 if GlobalVars.flovis is not None:
-                    data = json.loads(a)['data']
+                    data = json.loads(json.loads(a)['data'])
                     GlobalVars.flovis.stage('received', data['siteBaseHostAddress'], data['id'], a)
 
                 is_spam, reason, why = check_if_spam_json(a)
