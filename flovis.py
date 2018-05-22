@@ -27,7 +27,7 @@ class Flovis:
                 if msg['action'] == 'ping':
                     ws.send(json.dumps({'action': 'pong'}))
                 elif msg['action'] == 'response':
-                    if msg['success'] == False:
+                    if msg['success'] is False:
                         log('warning', 'Flovis data send failed ({}): {}'.format(msg['event_id'], msg['source']))
             else:
                 ws.send(json.dumps({'action': 'info', 'message': "LA LA LA I'M NOT LISTENING"}))
@@ -37,6 +37,7 @@ class Flovis:
 
         try:
             self.ws = websocket.WebSocketApp(self.host, on_message=on_message, on_close=on_close)
+
             def run():
                 self.ws.run_forever()
 
@@ -57,4 +58,3 @@ class Flovis:
             msg_data['data'] = data
 
         self.ws.send(json.dumps(msg_data))
-
