@@ -3193,7 +3193,6 @@
 1525189892	WELZ	01100110 01110101 01110010( 00100000)? 01100110 01100001 01100111
 1525234888	tripleee	reddragon-ds\.co\.uk
 1525235385	tripleee	010219\.com
-1525239824	tripleee	thermo\W?burn
 1525241332	Rob	artjoker\.net
 1525242336	tripleee	stamina\W?plus(?:\W?xl)?
 1525243351	tripleee	tru\W?build
