@@ -3566,3 +3566,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1527054021	Makyen	\w*opss\d+\W*(com|net)\w*
 1527057324	tripleee	skytechdigitals\.com
 1527057951	Makyen	\w*h+a+\W*h+a+\W*h+a+\w*(?!(?:\n|.)*?</code>)
+1527061064	tripleee	^adverd$
