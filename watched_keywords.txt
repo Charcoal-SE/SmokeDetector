@@ -3559,3 +3559,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1527014421	ArtOfCode	tutorialforlinux\.com
 1527022333	Zoe	songspkzz\.com
 1527035065	Tetsuya Yamamoto	notron-setup\.com
+1527040390	Makyen	hackerone\.com
