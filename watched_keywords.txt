@@ -3562,3 +3562,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1527040437	Makyen	jobert\W*abma
 1527045643	Nisse Engström	naturalherbalgardens
 1527047415	Makyen	\w*jjbbu\.com\w*
+1527049175	Makyen	assignmentbang\.com
