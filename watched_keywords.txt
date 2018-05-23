@@ -3572,3 +3572,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1527082667	Glorfindel	amanqq\.com
 1527083505	Glorfindel	obsdeal\.com
 1527088815	Glorfindel	frenchopen\.co
+1527117673	Makyen	illuminatiofficialcouncil666
