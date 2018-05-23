@@ -87,7 +87,8 @@ class BodyFetcher:
         "askubuntu.com": 1,
         "hinduism.stackexchange.com": 1,
         "buddhism.stackexchange.com": 1,
-        "judaism.stackexchange.com": 1
+        "judaism.stackexchange.com": 1,
+        "crafts.stackexchange.com": 1
     }
 
     time_sensitive = ["security.stackexchange.com", "movies.stackexchange.com",
