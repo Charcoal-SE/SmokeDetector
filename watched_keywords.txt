@@ -3414,7 +3414,6 @@
 1526362127	Makyen	InterDialog
 1526362277	Makyen	teckinfo\.com
 1526363529	Glorfindel	fuaosanitaryware\.com
-1526365220	Makyen	estavisa-online\.com
 1526365774	Tetsuya Yamamoto	ctpmuhendislik\.com
 1526366747	tripleee	valota\.live
 1526374746	Glorfindel	sp\W?flash\W?tool
