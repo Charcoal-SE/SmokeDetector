@@ -3570,3 +3570,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1527071718	tripleee	allchatroom\.com
 1527074569	tripleee	saffloswer
 1527082667	Glorfindel	amanqq\.com
+1527083505	Glorfindel	obsdeal\.com
