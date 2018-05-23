@@ -3569,3 +3569,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1527061970	tripleee	instantassignment\.co\.uk
 1527068217	Glorfindel	ebookmyseat\.in
 1527071718	tripleee	allchatroom\.com
+1527074569	tripleee	saffloswer
