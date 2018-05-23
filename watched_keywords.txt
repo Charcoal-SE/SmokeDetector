@@ -3567,3 +3567,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1527053997	tripleee	clippingpathgraphics\.com
 1527054011	Makyen	\w*jj(?:aa|bb|cc|dd|ee|ff|gg|hh|ii|jj|kk|ll|mm|nn|oo|pp|qq|rr|ss|tt|uu|vv|ww|xx|yy|zz)u\W*com\w*
 1527054021	Makyen	\w*opss\d+\W*(com|net)\w*
+1527057324	tripleee	skytechdigitals\.com
