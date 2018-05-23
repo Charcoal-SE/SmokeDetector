@@ -3564,3 +3564,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1527047415	Makyen	\w*jjbbu\.com\w*
 1527049175	Makyen	assignmentbang\.com
 1527053628	Makyen	epchindia\.blogspot\.in
+1527053997	tripleee	clippingpathgraphics\.com
