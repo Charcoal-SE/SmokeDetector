@@ -3600,3 +3600,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1527160586	Glorfindel	aas\W?raw
 1527183145	Glorfindel	mgtechnologies\.co
 1527183548	Glorfindel	vunova
+1527196477	Makyen	bluewafflesdiseaseclinics\.com
