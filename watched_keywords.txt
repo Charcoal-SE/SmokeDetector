@@ -3592,3 +3592,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1527150556	Tetsuya Yamamoto	dompetpkr\.co
 1527150673	Tetsuya Yamamoto	dompetpoker\.org
 1527150686	Glorfindel	OLM\W?Converter\W?Pro
+1527150795	Tetsuya Yamamoto	dompetcasino
