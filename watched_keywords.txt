@@ -3526,7 +3526,6 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1526884458	Tetsuya Yamamoto	mtvaudition\.in
 1526884867	Mithrandir	concrete-contractor-greenville-sc\.business\.site
 1526886135	Tetsuya Yamamoto	hphelpnumber\.com
-1526887887	Tetsuya Yamamoto	fireandsafetycoursesinchennai\.in
 1526889009	Tetsuya Yamamoto	yamarkets\.com
 1526889066	Zoe	^yamarkets$
 1526889125	Zoe	^Servant\W*of\W*Christ$
