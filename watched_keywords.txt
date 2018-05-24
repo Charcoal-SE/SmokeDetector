@@ -3595,3 +3595,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1527150795	Tetsuya Yamamoto	dompetcasino
 1527151323	Glorfindel	hoomansadr\.com
 1527151369	Glorfindel	seo$
+1527151449	Glorfindel	seo$
