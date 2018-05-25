@@ -3607,3 +3607,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1527226185	tripleee	maxize(?:\W?plus)?
 1527227967	tripleee	candidpost\.com
 1527231967	tripleee	keto\W?fuel
+1527232208	Tetsuya Yamamoto	kala\.ir
