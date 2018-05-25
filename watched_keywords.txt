@@ -3608,3 +3608,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1527227967	tripleee	candidpost\.com
 1527231967	tripleee	keto\W?fuel
 1527232208	Tetsuya Yamamoto	kala\.ir
+1527238519	Glorfindel	happywheelsnow\.com
