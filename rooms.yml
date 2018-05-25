@@ -581,5 +581,4 @@ stackoverflow.com:
     commands: false
     msg_types:
       - site-stackoverflow.com
-      - site-askubuntu.com
       - experimental
