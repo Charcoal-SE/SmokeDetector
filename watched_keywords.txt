@@ -3606,3 +3606,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1527224978	Makyen	(?:autolinkpk|auto\W+link\W+(?:international|int\W+pakistan))
 1527226185	tripleee	maxize(?:\W?plus)?
 1527227967	tripleee	candidpost\.com
+1527231967	tripleee	keto\W?fuel
