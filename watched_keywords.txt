@@ -3603,3 +3603,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1527196477	Makyen	bluewafflesdiseaseclinics\.com
 1527207321	Makyen	makemoneyyonline\.com
 1527215533	Tetsuya Yamamoto	mycabdeal\.in
+1527221263	Tetsuya Yamamoto	websoftvalley\.com
