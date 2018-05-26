@@ -3628,4 +3628,3 @@
 1527326363	Makyen	InkNik(?:\.com)
 1527341885	J F	cyberhelp\d*
 1527345117	iBug	eevdenevenakliyat\.org
-1527347886	J F	\d*jobsexam\.in
