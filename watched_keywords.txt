@@ -3620,3 +3620,4 @@ Zoe	1526646507	viet\W*cruise\W*(?:travel\W*agency|tours)
 1527311495	Makyen	mp3\W*(?:müzik\W*)?indir
 1527311869	Makyen	raja-n-raja\.com
 1527311885	Makyen	raja\W*&\W*raja
+1527322311	Glorfindel	reseller\W?box
