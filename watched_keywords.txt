@@ -3629,3 +3629,4 @@
 1527341885	J F	cyberhelp\d*
 1527345117	iBug	eevdenevenakliyat\.org
 1527356615	Makyen	sibiamedicalcentre\.com
+1527378088	Makyen	amzn\.to/2LwctZe
