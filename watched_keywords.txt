@@ -3643,3 +3643,4 @@
 1527460271	Makyen	[a-z_]*(?:1_*)?508[\W_]*556[\W_]*9312[a-z_]*
 1527467086	Videonauth	goztepetemizlik\.com
 1527468454	Makyen	competativestudy\.com
+1527475062	Tetsuya Yamamoto	jakartapoker\.net
