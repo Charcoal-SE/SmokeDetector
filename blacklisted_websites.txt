@@ -2005,3 +2005,4 @@ coolmath-games\.io
 19216811wiki\.com
 stackexchange\.com/(?:.*/)?Zoe$
 \d*jobsexam\.in
+tips4facts\.com
