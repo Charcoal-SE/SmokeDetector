@@ -3655,3 +3655,4 @@
 1527497440	Mithrandir	huetransferservice\.com
 1527498164	Mithrandir	cannapure\W?cbd
 1527500092	Glorfindel	allinonejobs\.com
+1527500593	Glorfindel	seracode\.com
