@@ -3711,3 +3711,4 @@
 1527683132	WELZ	mangeshinteriors\.com
 1527691877	doppelgreener	galaxy-satellite\.com
 1527695274	Makyen	[a-z_]*(?:1_*)?888[\W_]*625[\W_]*0073[a-z_]*
+1527695326	Makyen	bankcodeifsc\.com
