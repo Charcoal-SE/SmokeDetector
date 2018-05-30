@@ -1352,3 +1352,4 @@ salus\W?defense
 livali
 slim\W?force(?:\W?forskolin)?
 /g-suite/"
+(?:black\W?)?cumin\W?oil

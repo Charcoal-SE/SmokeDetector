@@ -3668,7 +3668,6 @@
 1527539608	Makyen	temicity\.com
 1527561786	WELZ	theadventurejunkies\.com
 1527567371	tripleee	cogni\W?zance(?:\W?rpm)?
-1527568326	tripleee	(?:black\W?)?cumin\W?oil
 1527576187	Makyen	fCgSiN-GBQI
 1527576876	Makyen	irealities\.com
 1527576938	Makyen	bestassignmentexperts\.com
