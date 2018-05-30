@@ -3706,3 +3706,4 @@
 1527676907	J F	anttravels\.com
 1527679654	tripleee	[a-z_]*(?:1_*)?914[\W_]*529[\W_]*5224[a-z_]*
 1527680787	WELZ	woodsworthindustries\.com
+1527681216	WELZ	cablear\.com
