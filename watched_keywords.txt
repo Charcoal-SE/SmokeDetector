@@ -3692,3 +3692,4 @@
 1527662021	tripleee	[a-z_]*(?:1_*)?800[\W_]*449[\W_]*0204‭[a-z_]*
 1527662827	tripleee	[a-z_]*(?:1_*)?855[\W_]*673[\W_]*0562[a-z_]*
 1527666043	tripleee	rocket\W?loans?
+1527666522	tripleee	ringtonedownload\.in
