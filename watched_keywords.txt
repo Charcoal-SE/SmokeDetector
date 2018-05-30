@@ -3689,3 +3689,4 @@
 1527655618	tripleee	premer\W?t\W?boost
 1527657821	Makyen	(?:(?:g|hot)mail|outlook)\W*(?:login|not\W*working)[^<]*</a>\W*
 1527657885	tripleee	xylacor
+1527660958	tripleee	[a-z_]*(?:1_*)?855[\W_]*664[\W_]*0766[a-z_]*
