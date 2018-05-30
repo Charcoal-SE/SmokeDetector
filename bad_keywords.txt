@@ -1047,7 +1047,7 @@ gold\.raiditem
 alpha\W?monster\W?blast
 vexan
 propecia
-adelina
+adelina(?:(?:\W*(?:skin|anti\W*aging))?\W*cream(?:ing)?|\W*skin\W*care|\W*revitalizing\W*moisturizer)
 ss\W?boost
 levimax
 maxx\W?boost
