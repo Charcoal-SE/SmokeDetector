@@ -1359,3 +1359,4 @@ dxn\W?code\W?strike
 [a-z_]*(?:1_*)?844[\W_]*777[\W_]*1902[a-z_]*
 [a-z_]*(?:1_*)?844[\W_]*72Z[\W_]*6675[a-z_]*
 hydroxinia
+premi?er\W?t\W?boost
