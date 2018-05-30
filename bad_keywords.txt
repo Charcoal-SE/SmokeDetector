@@ -1355,3 +1355,4 @@ slim\W?force(?:\W?forskolin)?
 (?:black\W?)?cumin\W?oil
 grow\W?ultra
 dxn\W?code\W?strike
+[a-z_]*(?:1_*)?800[\W_]*961[\W_]*9635‭[a-z_]*
