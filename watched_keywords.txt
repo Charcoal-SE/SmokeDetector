@@ -3723,3 +3723,4 @@
 1527750150	tripleee	30minutemoneymethods\.com
 1527750186	tripleee	socialsalerep\.com
 1527751676	tripleee	(?:dr\W*)?simon\W?ourian(?:\W*md)?
+1527753887	Makyen	javatpoint\.com
