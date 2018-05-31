@@ -1360,3 +1360,4 @@ dxn\W?code\W?strike
 [a-z_]*(?:1_*)?844[\W_]*72Z[\W_]*6675[a-z_]*
 hydroxinia
 premi?er\W?t\W?boost
+ultra\W?burn(?:\W?plus)?
