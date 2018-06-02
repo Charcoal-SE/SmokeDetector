@@ -3771,3 +3771,4 @@
 1527951446	Byte Commander	acharya\W*institute
 1527954717	Zoe	antimalwareserviceexecutable\.org
 1527955333	Zoe	oil-khratyn\.ir
+1527963949	Makyen	learningdefinition\.com
