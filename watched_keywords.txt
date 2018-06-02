@@ -3766,3 +3766,4 @@
 1527932740	A J	jquerytraining\.com
 1527932858	Zoe	alertfreejob\.com
 1527936496	Videonauth	cryptoexchangescript\.com
+1527944254	Zoe	karait\.com
