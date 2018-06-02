@@ -3770,3 +3770,4 @@
 1527948328	Zoe	softknoll\.com
 1527951446	Byte Commander	acharya\W*institute
 1527954717	Zoe	antimalwareserviceexecutable\.org
+1527955333	Zoe	oil-khratyn\.ir
