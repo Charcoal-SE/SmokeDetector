@@ -39,7 +39,11 @@ class Flovis:
             self.ws = websocket.WebSocketApp(self.host, on_message=on_message, on_close=on_close)
 
             def run():
-                self.ws.run_forever()
+                try:
+                    self.ws.run_forever()
+                except websocket._exceptions.WebSocketConnectionClosedException:
+                    log('error', 'Flovis websocket closed unexpectedly, assuming problems and nullifying ws')
+                    self.ws = None
 
             flovis_t = Thread(name='flovis_websocket', target=run)
             flovis_t.start()
@@ -57,4 +61,5 @@ class Flovis:
         if data is not None:
             msg_data['data'] = data
 
-        self.ws.send(json.dumps(msg_data))
+        if self.ws is not None:
+            self.ws.send(json.dumps(msg_data))
