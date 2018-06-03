@@ -161,9 +161,9 @@ class GitManager:
             cls.gitmanager_lock.release()
 
         if op == 'blacklist':
-            return (True, "Blacklisted {0}".format(item))
+            return (True, "Blacklisted `{0}`".format(item))
         elif op == 'watch':
-            return (True, "Added {0} to watchlist".format(item))
+            return (True, "Added `{0}` to watchlist".format(item))
 
     @classmethod
     def unwatch(cls, item, username, code_privileged=False):
@@ -206,7 +206,7 @@ class GitManager:
             git.checkout('deploy')
             cls.gitmanager_lock.release()
 
-        return (True, 'Removed {} from watchlist'.format(item))
+        return (True, 'Removed `{}` from watchlist'.format(item))
 
     @staticmethod
     def prepare_git_for_operation(blacklist_file_name):
