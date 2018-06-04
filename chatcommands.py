@@ -247,7 +247,7 @@ def do_blacklist(blacklist_type, msg, force=False):
     # noinspection PyProtectedMember
     pattern = rebuild_str(msg.content_source.split(" ", 1)[1])
     try:
-        regex.compile(pattern)
+        regex.compile(pattern, city=FindSpam.city_list)
     except regex._regex_core.error:
         raise CmdException("An invalid pattern was provided, not blacklisting.")
 
