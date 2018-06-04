@@ -1365,3 +1365,4 @@ shark\W?tank\W?weight\W?loss
 [a-z_]*44[\W_]*753[\W_]*712[\W_]*7155[a-z_]*
 (?:muhammad)\W*(?:(?:(?:was|a|is)\W*)*(?:(?:schizophrenic|psycho(?:pathic)|delusional|suicidal|megalomaniac|madman|savage|warlord|(?:mother\W*)?fuck(?:ing)?|bastard)\W*)+)+
 realvampirekingdom
+tone\W?slim
