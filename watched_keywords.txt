@@ -739,7 +739,7 @@
 1503909127	tripleee	edudriveservices\.com
 1503917028	tripleee	bulksmscoimbatore\.net
 1503932236	Mithrandir	hh\.ru
-1503932590	D-side	ваканси
+1503932590	D-side	\W*ваканси\W*
 1503971927	tripleee	45999841257
 1503972320	tripleee	kcfdesigner\.com
 1503974321	tripleee	legit-review\.com
@@ -1131,7 +1131,7 @@
 1507721756	tripleee	sharp\.reviews
 1507721935	tripleee	lawngears\.net
 1507723263	tripleee	theboxers\.co\.uk
-1507723934	Glorfindel	Исламский\Wбанк
+1507723934	Glorfindel	\W*Исламский\Wбанк\W*
 1507738037	doppelgreener	bsipro\.com
 1507741583	Glorfindel	jobsf\.in
 1507795211	tripleee	norton-tech-support\.com
@@ -1259,7 +1259,7 @@
 1508904939	tripleee	mmovip\.net
 1508906225	tripleee	holistic\W?life\W?cbd
 1508906625	tripleee	(?<=/)blue\W?pearl(?:[-/<]|$)
-1508907317	tripleee	كة مكافحة حشرات
+1508907317	tripleee	\W*كة مكافحة حشرات\W*
 1508907816	tripleee	organixx
 1508911038	tripleee	easysolutions\.repair
 1508915244	Glorfindel	realfakedocs\.com
@@ -1805,7 +1805,7 @@
 1512578931	Glorfindel	zumminer
 1512601485	quartata	quickbookspayrollsupport\.com
 1512620360	tripleee	drayasinhealinghome\.com
-1512620470	tripleee	﻿dejustushealinghome\.com
+1512620470	tripleee	dejustushealinghome\.com
 1512620788	tripleee	08375046120
 1512620945	tripleee	madpasteur\.com
 1512620993	tripleee	claim-lumen\.ga
@@ -2733,7 +2733,7 @@
 1522334123	Glorfindel	xtremetape\.com
 1522334573	Glorfindel	fvdtube\.com
 1522334596	Glorfindel	tubidy\.media
-1522344451	Ferrybig	Türkiye'nin son derece kararlı olması
+1522344451	Ferrybig	Türkiye'nin son derece kararlı olması\W*
 1522357771	NobodyNada	301-redirect\.online
 1522366953	Yvette Colomb	abrandao\.com
 1522377356	Mithrandir	ruzqil31
@@ -3567,8 +3567,8 @@
 1527137213	Tetsuya Yamamoto	warmvape\.com
 1527137346	Tetsuya Yamamoto	bouhannstore\.com
 1527137540	A J	okdb79
-1527138247	tripleee	ｏｋｄｂ７９
-1527142090	Makyen	(?:안마|마사지|알몸사진|애인대행)
+1527138247	tripleee	\W*ｏｋｄｂ７９\W*
+1527142090	Makyen	\W*(?:안마|마사지|알몸사진|애인대행)\W*
 1527142633	Tetsuya Yamamoto	exploresrilanka\.com
 1527143411	Zoe	instabuilder\.com
 1527144445	Makyen	\w*h+a+\W*h+a+\W*h+a+\w*(?!(?:[^<]|<[^c]|<c[^o]|<co[^d]|<cod[^e]|<code[^>])*?</code>)
@@ -3681,7 +3681,7 @@
 1527657821	Makyen	(?:(?:g|hot)mail|outlook)\W*(?:login|not\W*working)[^<]*</a>\W*
 1527657885	tripleee	xylacor
 1527660958	tripleee	[a-z_]*(?:1_*)?855[\W_]*664[\W_]*0766[a-z_]*
-1527662021	tripleee	[a-z_]*(?:1_*)?800[\W_]*449[\W_]*0204‭[a-z_]*
+1527662021	tripleee	[a-z_]*(?:1_*)?800[\W_]*449[\W_]*0204[a-z_]*
 1527662827	tripleee	[a-z_]*(?:1_*)?855[\W_]*673[\W_]*0562[a-z_]*
 1527666043	tripleee	rocket\W?loans?
 1527666522	tripleee	ringtonedownload\.in
