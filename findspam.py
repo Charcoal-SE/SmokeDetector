@@ -1024,7 +1024,7 @@ class FindSpam:
         {'regex': r"car\Win", 'all': False, 'sites': ['superuser.com', 'puzzling.stackexchange.com'],
          'reason': 'bad keyword in {}', 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        { 'commented-out': '''
+        {'commented-out': '''
         # Judaism etc troll, 2018-04-18 ("potentially bad" makes this watch)
         {'regex': r'^John$', 'all': False,
          'sites': [
@@ -1037,7 +1037,7 @@ class FindSpam:
          'title': False, 'body': False, 'username': True,
          'stripcodeblocks': False, 'body_summary': False,
          'max_rep': 1, 'max_score': 1},
-        ''' },
+        '''},
         # Bad keywords in titles only, all sites
         {'regex': r"(?i)\b(?!s.m.a.r.t)[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\b", 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False,
@@ -1424,8 +1424,10 @@ class FindSpam:
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Judaism etc troll, 2018-04-18 (see also commented-out watch above)
         {'regex': u'(?i)^john$',
-          'all': False, 'sites': ['hinduism.stackexchange.com',
-                'judaism.stackexchange.com', 'islam.stackexchange.com'],
+         'all': False, 'sites': [
+             'hinduism.stackexchange.com',
+             'judaism.stackexchange.com',
+             'islam.stackexchange.com'],
          'reason': 'blacklisted username',
          'title': False, 'body': False, 'username': True,
          'stripcodeblocks': False, 'body_summary': False,
@@ -1478,6 +1480,8 @@ class FindSpam:
         result = []
         why = {'title': [], 'body': [], 'username': []}
         for rule in FindSpam.rules:
+            if 'commented-out' in rule:
+                continue
             title_to_check = post.title
             body_to_check = post.body.replace("&nsbp;", "").replace("\xAD", "") \
                                      .replace("\u200B", "").replace("\u200C", "")
