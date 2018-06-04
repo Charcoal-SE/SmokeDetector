@@ -3803,3 +3803,4 @@
 1528141667	Glorfindel	pitechworld\.com
 1528144268	Glorfindel	driver-canon\.com
 1528146968	Zoe	(?:trusted\W*)?powerfull?\W*rings\W*for\W*(?:(?:money)\W*)?spells
+1528147218	Zoe	magic\W*rings?\W*will\W*help\W*you\W*win\W*(?:(?:lotto|casino|horses|powerball|betting)\W*(?:and\W*)?)+
