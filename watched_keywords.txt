@@ -3801,3 +3801,4 @@
 1528114505	tripleee	tfa110\.com
 1528139740	Glorfindel	TIARATOURS\W?INDONESIA
 1528141667	Glorfindel	pitechworld\.com
+1528144268	Glorfindel	driver-canon\.com
