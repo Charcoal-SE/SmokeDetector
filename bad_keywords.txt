@@ -1084,7 +1084,7 @@ renew\W?elle
 juvenique
 Glovella
 neftegaz\W?agent
-Avoir\W?Derm
+avoir\W?derma?
 v\W?tight\W?gel
 brute\W?gains
 Supreme\W?Choice\W?CBD
