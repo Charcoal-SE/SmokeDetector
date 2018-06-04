@@ -1368,3 +1368,4 @@ realvampirekingdom
 tone\W?slim
 essence\W?of\W?argan
 ultrapur
+power\W?trim\W?1200
