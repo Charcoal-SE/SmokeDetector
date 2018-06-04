@@ -3782,5 +3782,4 @@
 1528039866	Makyen	how\W?I\W?became\W?a\W?vampire
 1528054337	Zoe	hpsoftwaredrivers\.com
 1528055624	Makyen	kbsu\.ru
-1528072147	Makyen	[a-z0-9!#$%&'*+/=?^_`{|}~-]*vampire[a-z0-9!#$%&'*+/=?^_`{|}~-]*@\w*(?:\.\w*)+
 1528072159	Makyen	[a-z0-9!#$%&'*+/=?^_`{|}~-]*illuminati[a-z0-9!#$%&'*+/=?^_`{|}~-]*@\w*(?:\.\w*)+
