@@ -3802,3 +3802,4 @@
 1528139740	Glorfindel	TIARATOURS\W?INDONESIA
 1528141667	Glorfindel	pitechworld\.com
 1528144268	Glorfindel	driver-canon\.com
+1528146968	Zoe	(?:trusted\W*)?powerfull?\W*rings\W*for\W*(?:(?:money)\W*)?spells
