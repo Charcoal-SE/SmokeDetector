@@ -1373,3 +1373,4 @@ pryazine
 max\W?pro\W?1000
 supportwala
 xtreme\W?exo\W?test
+intel\W?xr
