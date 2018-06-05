@@ -464,6 +464,16 @@ def bad_pattern_in_url(s, site, *args):
 
 def ns_for_url_domain(s, site, nslist, *args):
     invalid_tld_count = 0
+
+    for nsentry in nslist:
+        if isinstance(nsentry, set):
+            for ns in nsentry:
+                assert ns.endswith('.'),\
+                    "Missing final dot on NS entry {0}".format(ns)
+        else:
+            assert nsentry.endswith('.'),\
+                "Missing final dot on NS entry {0}".format(nsentry)
+
     for domain in set([get_domain(link, full=True) for link in post_links(s)]):
         if not tld.get_tld(domain, fix_protocol=True, fail_silently=True):
             log('debug', '{0} has no valid tld; skipping'.format(domain))
