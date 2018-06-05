@@ -3812,3 +3812,4 @@
 1528179908	Zoe	mp3converter\.live
 1528182916	Glorfindel	clicktrix\.com
 1528184574	Makyen	helpforemails\.com
+1528184891	Glorfindel	newscurrent\.us
