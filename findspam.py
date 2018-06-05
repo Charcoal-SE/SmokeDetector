@@ -464,6 +464,16 @@ def bad_pattern_in_url(s, site, *args):
 
 def ns_for_url_domain(s, site, nslist, *args):
     invalid_tld_count = 0
+
+    for nsentry in nslist:
+        if isinstance(nsentry, set):
+            for ns in nsentry:
+                assert ns.endswith('.'),\
+                    "Missing final dot on NS entry {0}".format(ns)
+        else:
+            assert nsentry.endswith('.'),\
+                "Missing final dot on NS entry {0}".format(nsentry)
+
     for domain in set([get_domain(link, full=True) for link in post_links(s)]):
         if not tld.get_tld(domain, fix_protocol=True, fail_silently=True):
             log('debug', '{0} has no valid tld; skipping'.format(domain))
@@ -521,6 +531,7 @@ def watched_ns_for_url_domain(s, site, *args):
         {'ernest.ns.cloudflare.com.', 'pat.ns.cloudflare.com.'},
         {'greg.ns.cloudflare.com.', 'kia.ns.cloudflare.com.'},
         {'lee.ns.cloudflare.com.', 'ulla.ns.cloudflare.com.'},
+        {'mark.ns.cloudflare.com.', 'wanda.ns.cloudflare.com.'},
         {'norm.ns.cloudflare.com.', 'olga.ns.cloudflare.com.'},
         {'pablo.ns.cloudflare.com.', 'pola.ns.cloudflare.com.'},
         'sathyats.net.',
@@ -1024,6 +1035,7 @@ class FindSpam:
         {'regex': r"car\Win", 'all': False, 'sites': ['superuser.com', 'puzzling.stackexchange.com'],
          'reason': 'bad keyword in {}', 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        {'commented-out': '''
         # Judaism etc troll, 2018-04-18 ("potentially bad" makes this watch)
         {'regex': r'^John$', 'all': False,
          'sites': [
@@ -1036,6 +1048,7 @@ class FindSpam:
          'title': False, 'body': False, 'username': True,
          'stripcodeblocks': False, 'body_summary': False,
          'max_rep': 1, 'max_score': 1},
+        '''},
         # Bad keywords in titles only, all sites
         {'regex': r"(?i)\b(?!s.m.a.r.t)[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\b", 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False,
@@ -1420,9 +1433,16 @@ class FindSpam:
         {'regex': u"(?i)^keshav$", 'all': False, 'sites': ["judaism.stackexchange.com"],
          'reason': "blacklisted username", 'title': False, 'body': False, 'username': True,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        {'regex': u'(?i)^john$', 'all': False, 'sites': ['hinduism.stackexchange.com'],
-         'reason': 'blacklisted username', 'title': False, 'body': False, 'username': True,
-         'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        # Judaism etc troll, 2018-04-18 (see also commented-out watch above)
+        {'regex': u'(?i)^john$',
+         'all': False, 'sites': [
+             'hinduism.stackexchange.com',
+             'judaism.stackexchange.com',
+             'islam.stackexchange.com'],
+         'reason': 'blacklisted username',
+         'title': False, 'body': False, 'username': True,
+         'stripcodeblocks': False, 'body_summary': False,
+         'max_rep': 1, 'max_score': 0},
         # disabled
         {'regex': u'(?i)(?:(?:[^\dr]\d{3}|_\d{5})$|juri(?:[yr]?am?)?|(?:bond|max|vaxer|jems|tz?osan)$)', 'all': False,
          'sites': [], 'reason': 'blacklisted username (medium)', 'title': False, 'body': False, 'username': True,
@@ -1471,6 +1491,8 @@ class FindSpam:
         result = []
         why = {'title': [], 'body': [], 'username': []}
         for rule in FindSpam.rules:
+            if 'commented-out' in rule:
+                continue
             title_to_check = post.title
             body_to_check = post.body.replace("&nsbp;", "").replace("\xAD", "") \
                                      .replace("\u200B", "").replace("\u200C", "")

@@ -393,9 +393,9 @@ jolique
 clemix
 nuavive
 evanti
-毕业证
+\W*毕业证\W*
 i\Wdidn't\Wfind\Wthe\Wright\Wsolution\Wfrom\Wthe\Winternet
-レーザーポインター
+\W*レーザーポインター\W*
 ultra\Wpure\Wturmeric
 libidogene
 suisse\Wrenewal
@@ -1084,7 +1084,7 @@ renew\W?elle
 juvenique
 Glovella
 neftegaz\W?agent
-Avoir\W?Derm
+avoir\W?derma?
 v\W?tight\W?gel
 brute\W?gains
 Supreme\W?Choice\W?CBD
@@ -1343,7 +1343,7 @@ vera\W?slim
 verism\W?training(?:\W?online)?
 thermo\W?burn
 vita\W?silk
-学历认证
+\W*学历认证\W*
 forskothin
 \d*jobsexam
 premier\W?keto
@@ -1363,3 +1363,15 @@ premi?er\W?t\W?boost
 ultra\W?burn(?:\W?plus)?
 shark\W?tank\W?weight\W?loss
 [a-z_]*44[\W_]*753[\W_]*712[\W_]*7155[a-z_]*
+(?:muhammad)\W*(?:(?:(?:was|a|is)\W*)*(?:(?:schizophrenic|psycho(?:pathic)|delusional|suicidal|megalomaniac|madman|savage|warlord|(?:mother\W*)?fuck(?:ing)?|bastard)\W*)+)+
+realvampirekingdom
+tone\W?slim
+essence\W?of\W?argan
+ultrapur
+power\W?trim\W?1200
+pryazine
+max\W?pro\W?1000
+supportwala
+xtreme\W?exo\W?test
+intel\W?xr
+shark\W?tank\W?rapid\W?tone
