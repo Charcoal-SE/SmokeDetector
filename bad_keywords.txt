@@ -1374,3 +1374,4 @@ max\W?pro\W?1000
 supportwala
 xtreme\W?exo\W?test
 intel\W?xr
+shark\W?tank\W?rapid\W?tone
