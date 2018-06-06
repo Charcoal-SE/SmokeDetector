@@ -3569,7 +3569,6 @@
 1527143411	Zoe	instabuilder\.com
 1527144445	Makyen	\w*h+a+\W*h+a+\W*h+a+\w*(?!(?:[^<]|<[^c]|<c[^o]|<co[^d]|<cod[^e]|<code[^>])*?</code>)
 1527145181	Tetsuya Yamamoto	phpinterview\.in
-1527145785	Tetsuya Yamamoto	edbmails\.com
 1527146048	Glorfindel	positivesingles
 1527146782	Glorfindel	zaptechsolutions\.com
 1527150538	Tetsuya Yamamoto	dompetcasino\.com
