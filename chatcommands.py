@@ -520,7 +520,7 @@ def alive():
 
 
 # noinspection PyIncorrectDocstring
-@command(int, privileged=True, arity=(0, 1), aliases=["errlogs", "errlog"])
+@command(int, privileged=True, arity=(0, 1), aliases=["errlogs", "errlog", "errorlog"])
 def errorlogs(count):
     """
     Shows the most recent lines in the error logs
