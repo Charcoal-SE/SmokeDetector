@@ -3822,3 +3822,4 @@
 1528234697	Makyen	printerchatsupport\.co\.uk
 1528263597	tripleee	[a-z_]*(?:1_*)?877[\W_]*521[\W_]*2086[a-z_]*
 1528270974	Glorfindel	stateoforigini\.uk
+1528271026	Glorfindel	state\W?of\W?origin\W?\d+
