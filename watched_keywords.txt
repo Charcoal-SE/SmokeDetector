@@ -3834,3 +3834,4 @@
 1528348669	tripleee	ukhelpnumber\.com
 1528349750	tripleee	talentfore\.com
 1528350232	Makyen	(?<!api\.)hh\.(?:ru|ua)
+1528354541	Glorfindel	alconost\.com
