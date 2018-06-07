@@ -3842,3 +3842,4 @@
 1528363602	Glorfindel	aapthitech\.com
 1528370024	tripleee	familyessay\.org
 1528371419	tripleee	webdata-scraping\.com/
+1528371765	tripleee	[a-z_]*(?:234_*)?812[\W_]*364[\W_]*5598[a-z_]*
