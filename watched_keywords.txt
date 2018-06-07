@@ -3844,3 +3844,4 @@
 1528371419	tripleee	webdata-scraping\.com/
 1528371765	tripleee	[a-z_]*(?:234_*)?812[\W_]*364[\W_]*5598[a-z_]*
 1528379242	Glorfindel	howtoinpakistan\.pk
+1528383206	Glorfindel	moneymatters\.com
