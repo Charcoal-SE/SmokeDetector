@@ -349,6 +349,8 @@ class BodyFetcher:
             pnb = copy.deepcopy(post)
             if 'body' in pnb:
                 pnb['body'] = 'Present, but truncated'
+            if 'answers' in pnb:
+                del pnb['answers']
 
             if "title" not in post or "body" not in post:
                 if GlobalVars.flovis is not None and 'question_id' in post:
