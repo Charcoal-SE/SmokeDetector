@@ -153,8 +153,10 @@ class GitManager:
                         # Capture any other invalid response cases.
                         return (False, "A bad or invalid reply was received from GH, the message was: %s" %
                                 response.json()['message'])
-        except Exception:
-            return (False, "Git functions failed for unspecified reasons.")
+        except Exception as err:
+            with open('errorLogs.txt', 'a', encoding="utf-8") as f:
+                f.write("{dt} {message}".format(dt=datetime.now().strftime('%Y-%m-%d %H:%M:%s'), message=str(err)))
+            return (False, "Git functions failed for unspecified reasons, details may be in error log.")
         finally:
             # Always return to `deploy` branch when done with anything.
             git.checkout("deploy")

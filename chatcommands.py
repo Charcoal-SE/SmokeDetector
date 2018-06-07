@@ -507,7 +507,7 @@ def unblock(msg, room_id):
 
 # --- Administration Commands --- #
 # noinspection PyIncorrectDocstring
-@command()
+@command(aliases=["live"])
 def alive():
     """
     Returns a string indicating the process is still active
@@ -520,7 +520,7 @@ def alive():
 
 
 # noinspection PyIncorrectDocstring
-@command(int, privileged=True, arity=(0, 1))
+@command(int, privileged=True, arity=(0, 1), aliases=["errlogs", "errlog", "errorlog"])
 def errorlogs(count):
     """
     Shows the most recent lines in the error logs
