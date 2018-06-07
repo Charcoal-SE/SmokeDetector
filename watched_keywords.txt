@@ -3846,3 +3846,4 @@
 1528379242	Glorfindel	howtoinpakistan\.pk
 1528383206	Glorfindel	moneymatters\.com
 1528410318	Makyen	 davis_credit100@yahoo\.com
+1528410327	Makyen	[a-z_]*(?:1_*)?712[\W_]*600[\W_]*2838[a-z_]*
