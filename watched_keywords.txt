@@ -3864,8 +3864,5 @@
 1528464331	tripleee	asthadnggroup\.com
 1528476596	Makyen	microsoftsupport\.co
 1528476655	Makyen	test-dpc-apk\.com
-1528480689	NobodyNada	cavsvswarriors
+1528480689	NobodyNada	ca(vs|valiers)?vsswarriors
 1528480707	Glorfindel	fourfinal\.ca
-1528480724	Glorfindel	cavswarriors\.de
-1528480728	NobodyNada	!!/watch cavaliersvswarriors
-1528480735	NobodyNada	cavaliersvswarriors
