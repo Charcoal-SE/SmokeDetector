@@ -3807,7 +3807,6 @@
 1528182916	Glorfindel	clicktrix\.com
 1528184574	Makyen	helpforemails\.com
 1528184891	Glorfindel	newscurrent\.us
-1528189028	tripleee	gleam\W?and\W?glow
 1528193769	Zoe	muchotrap\.com
 1528200369	Zoe	turbotax
 1528223372	Sonic the Inclusive Hedgehog	limerosdelchess\.BlogSpot\.com
