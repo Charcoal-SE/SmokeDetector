@@ -92,3 +92,4 @@ adol(?:f|ph)\W*hitler
 heinrich\W*(?:luitpold\W*)?himmler
 ante\W*paveli[cć]
 ^LGBT representative$
+muh[ae]mm[ae]d\W*the\W*p[ae]dophile
