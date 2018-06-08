@@ -1472,9 +1472,9 @@ class FindSpam:
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False,
          'max_rep': 10, 'max_score': 1},
 
-        # Japanese Proper Case Posts on RPG
+        # Japanese Proper Case Posts on RPG etc
         {'regex': r'((?:(?:[A-Z][a-z]*\W+(?:\d+\W+)?){5,}([a-z]+\W+)?)Japan)',
-         'all': False, 'sites': ['rpg.stackexchange.com'],
+         'all': True, 'sites': ['ja.stackoverflow.com', 'japanese.stackexchange.com'],
          'reason': "Dominantly Proper Case Sequence Mentioning Japan in {}",
          'title': False, 'body': True, 'username': False,
          'stripcodeblocks': True, 'body_summary': True,
