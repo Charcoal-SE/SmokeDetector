@@ -91,4 +91,4 @@ Charles\WRane
 adol(?:f|ph)\W*hitler
 heinrich\W*(?:luitpold\W*)?himmler
 ante\W*paveli[cć]
-^LBGT representative$
+^LGBT representative$
