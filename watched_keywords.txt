@@ -3328,7 +3328,6 @@
 1525951808	Zoe	hackdigg\W*?(?:at|@)\W*?gmail\W*?com
 1525953709	Zoe	rushordertees\.com
 1525954927	Zoe	veintreatmentclinic\.com
-1525955006	Byte Commander	2conv\.xyz
 1525966310	tripleee	88\W*0\W*17\W*3470\W*0123
 1525966345	tripleee	zenithclippingpath\.com
 1525966353	tripleee	zenith-itech\.net
