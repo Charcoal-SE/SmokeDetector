@@ -3854,3 +3854,4 @@
 1528437150	Makyen	albertochueca\.com
 1528437186	Makyen	priyaescort\.com
 1528437562	Makyen	dubaisafaritrips\.com
+1528441945	Zoe	^stack\W*overflow\W*fake\W*knowledge$
