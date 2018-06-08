@@ -3858,3 +3858,4 @@
 1528444301	tripleee	nris\.com
 1528446158	tripleee	mixxkart\.com
 1528446325	Makyen	[a-z_]*(?:1_*)?844[\W_]*617[\W_]*9531[a-z_]*
+1528449487	Glorfindel	loomsolar\.com
