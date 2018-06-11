@@ -3904,3 +3904,4 @@
 1528703699	Zoe	composite\W*hacks?
 1528705087	Zoe	buffett\W*financial
 1528705267	Zoe	we\W*are\W*granting\W*loans
+1528710729	Glorfindel	chat\.stackexchange\.com/rooms/11540/charcoal-hq
