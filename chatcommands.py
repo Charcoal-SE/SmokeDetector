@@ -1166,12 +1166,10 @@ def report(msg, args):
             batch = " (batch report: post {} out of {})".format(index, len(urls))
 
         if scan_spam:
-            why_append = ', '.join(scan_reasons)
-            why_append = ''.join(["This post would have also been caught for: ",
-                                  why_append[0].upper() + why_append[1:],
-                                  '\n' + scan_why])
+            why_append = u"This post would have also been caught for: " + ", ".join(scan_reasons).capitalize() + \
+                '\n' + scan_why
         else:
-            why_append = "This post would not have been caught otherwise."
+            why_append = u"This post would not have been caught otherwise."
 
         handle_spam(post=post,
                     reasons=["Manually reported " + post_data.post_type + batch],
