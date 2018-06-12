@@ -1387,3 +1387,4 @@ compositehacks@gmail\.com
 xylacor
 pyrazine
 alpha\W?rise
+premier\W?diet(?:\W?keto)?
