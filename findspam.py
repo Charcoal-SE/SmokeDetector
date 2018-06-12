@@ -1051,6 +1051,10 @@ class FindSpam:
          'stripcodeblocks': False, 'body_summary': False,
          'max_rep': 1, 'max_score': 1},
         '''},
+        # Corn troll on Blender.SE
+        {'regex': r'corn', 'all': False, 'sites': ['blender.stackexchange.com'],
+         'reason': 'potentially bad keyword in {}', 'title': True, 'body': True, 'username': True,
+         'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 1},
         # Bad keywords in titles only, all sites
         {'regex': r"(?i)\b(?!s.m.a.r.t)[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\b", 'all': True,
          'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False,
