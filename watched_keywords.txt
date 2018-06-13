@@ -3932,4 +3932,3 @@
 1528845453	Makyen	ogbefunhearlingtemple(?:@gmail\.com)?
 1528845465	Makyen	dr\W*ogbefun
 1528864430	tripleee	netgear\W?powerline
-1528864665	tripleee	epson-printer
