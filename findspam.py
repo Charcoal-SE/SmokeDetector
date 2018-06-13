@@ -731,9 +731,10 @@ def mostly_dots(s, *args):
 
     body = strip_urls_and_tags(body)
 
-    dot_count = len(regex.findall(r"\.", body))
+    dot_count = body.count(".")
+    s = strip_urls_and_tags(s)
 
-    if dot_count / float(len(s)) >= 0.4:
+    if dot_count / len(s) >= 0.4:
         return True, u"Post contains {} dots out of {} characters".format(dot_count, len(s))
     else:
         return False, ""
