@@ -165,11 +165,11 @@ def malicious_link(s, site, *args):
     except ValueError as err:
         return False, ''
 
-    if site == 'stackoverflow.com' and parsed_text.tld.split('.')[-1] in SAFE_EXTENSIONS:
+    if site == 'stackoverflow.com' and parsed_text.fld.split('.')[-1] in SAFE_EXTENSIONS:
         return False, ''
     elif levenshtein(parsed_href.domain.lower(), parsed_text.domain.lower()) > LEVEN_DOMAIN_DISTANCE:
         return True, 'Domain {} indicated by possible misleading text {}.'.format(
-            parsed_href, parsed_text
+            parsed_href.fld, parsed_text.fld
         )
     else:
         return False, ''
@@ -666,7 +666,7 @@ def get_domain(s, full=False):
     try:
         extract = tld.get_tld(s, fix_protocol=True, as_object=True, )
         if full:
-            domain = str(extract)
+            domain = str(extract.fld)
         else:
             domain = extract.domain
     except TldDomainNotFound as e:
@@ -676,7 +676,7 @@ def get_domain(s, full=False):
         try:
             extract = tld.get_tld(s1, fix_protocol=True, as_object=True, )
             if full:
-                domain = str(extract)
+                domain = str(extract.fld)
             else:
                 domain = extract.domain
         except TldDomainNotFound:
