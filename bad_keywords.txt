@@ -1392,3 +1392,4 @@ intelliboost\W?iq
 delhi\W*escort
 sphere\W?labs
 epson-printer
+norton-setup
