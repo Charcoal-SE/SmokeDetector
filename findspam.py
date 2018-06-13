@@ -1057,8 +1057,10 @@ class FindSpam:
          'reason': 'potentially bad keyword in {}', 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 1},
         # Bad keywords in titles only, all sites
-        {'regex': r"(?i)\b(?!s.m.a.r.t)[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\b", 'all': True,
-         'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False,
+        # The rule is supposed to trigger on stuff like f.r.e.e d.o.w.n.l.o.a.d
+        {'regex': r"(?i)\b(?!s.m.a.r.t|s.h.i.e.l.d|s.o.l.i.d|o.s.a.r.l)[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\b",
+         'all': True, 'sites': [], 'reason': "bad keyword in {}",
+         'title': True, 'body': False, 'username': False,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': r'(?i)[\w\s]{0,20}help(?: a)?(?: weak)? postgraduate student(?: to)? write(?: a)? book\??',
          'all': True, 'sites': [], 'reason': 'bad keyword in {}', 'title': True, 'body': False, 'username': False,
