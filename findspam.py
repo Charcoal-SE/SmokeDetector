@@ -27,7 +27,7 @@ TLD_CACHE = []
 LEVEN_DOMAIN_DISTANCE = 3
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
-BODY_TITLE_SIMILAR_THRESHOLD = 0.99  # That's enough
+BODY_TITLE_SIMILAR_THRESHOLD = 0.90
 CHARACTER_USE_RATIO = 0.42
 REPEATED_CHARACTER_RATIO = 0.20
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
@@ -731,9 +731,12 @@ def mostly_dots(s, *args):
 
     body = strip_urls_and_tags(body)
 
-    dot_count = len(regex.findall(r"\.", body))
+    dot_count = body.count(".")
+    s = strip_urls_and_tags(s)
+    if not s:
+        return False, ""
 
-    if dot_count / float(len(s)) >= 0.4:
+    if dot_count / len(s) >= 0.4:
         return True, u"Post contains {} dots out of {} characters".format(dot_count, len(s))
     else:
         return False, ""
