@@ -171,11 +171,7 @@ def malicious_link(s, site, *args):
             parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True)
         else:
             raise tld.exceptions.TldBadUrl('Link text is not a URL')
-    except tld.exceptions.TldDomainNotFound:
-        return False, ''
-    except tld.exceptions.TldBadUrl:
-        return False, ''
-    except ValueError as err:
+    except (tld.exceptions.TldDomainNotFound, tld.exceptions.TldBadUrl, ValueError) as err:
         return False, ''
 
     if site == 'stackoverflow.com' and compatible_tld(parsed_text).split('.')[-1] in SAFE_EXTENSIONS:
