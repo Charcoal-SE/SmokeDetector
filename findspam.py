@@ -141,6 +141,19 @@ def contains_tld(s):
     return any([('.' + x) in s for x in TLD_CACHE])
 
 
+# Code maintainer:
+#   After people have updated tld package on their servers, remove this function and
+#   replace all occurrences with `obj.fld`
+#
+#   There should be a total of 6 occurrences to replace
+
+def compatible_tld(tld_object):
+    try:
+        return tld_object.fld  # Result.fld doesn't exist in tld==0.7.*
+    except:
+        return tld_object.tld
+
+
 def malicious_link(s, site, *args):
     link_regex = r"<a href=\"([^\"]+)\"[^>]*>([^<]+)<\/a>"
     compiled = regex.compile(link_regex)
@@ -152,24 +165,20 @@ def malicious_link(s, site, *args):
     try:
         parsed_href = tld.get_tld(href, as_object=True)
         log('debug', parsed_href.domain, SE_SITES_DOMAINS)
-        if parsed_href.tld in SE_SITES_DOMAINS:
+        if compatible_tld(parsed_href) in SE_SITES_DOMAINS:
             return False, ''
         if contains_tld(text) and ' ' not in text:
             parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True)
         else:
             raise tld.exceptions.TldBadUrl('Link text is not a URL')
-    except tld.exceptions.TldDomainNotFound:
-        return False, ''
-    except tld.exceptions.TldBadUrl:
-        return False, ''
-    except ValueError as err:
+    except (tld.exceptions.TldDomainNotFound, tld.exceptions.TldBadUrl, ValueError) as err:
         return False, ''
 
-    if site == 'stackoverflow.com' and parsed_text.tld.split('.')[-1] in SAFE_EXTENSIONS:
+    if site == 'stackoverflow.com' and compatible_tld(parsed_text).split('.')[-1] in SAFE_EXTENSIONS:
         return False, ''
     elif levenshtein(parsed_href.domain.lower(), parsed_text.domain.lower()) > LEVEN_DOMAIN_DISTANCE:
         return True, 'Domain {} indicated by possible misleading text {}.'.format(
-            parsed_href, parsed_text
+            compatible_tld(parsed_href), compatible_tld(parsed_text)
         )
     else:
         return False, ''
@@ -666,7 +675,7 @@ def get_domain(s, full=False):
     try:
         extract = tld.get_tld(s, fix_protocol=True, as_object=True, )
         if full:
-            domain = str(extract)
+            domain = compatible_tld(extract)
         else:
             domain = extract.domain
     except TldDomainNotFound as e:
@@ -676,7 +685,7 @@ def get_domain(s, full=False):
         try:
             extract = tld.get_tld(s1, fix_protocol=True, as_object=True, )
             if full:
-                domain = str(extract)
+                domain = compatible_tld(extract)
             else:
                 domain = extract.domain
         except TldDomainNotFound:
