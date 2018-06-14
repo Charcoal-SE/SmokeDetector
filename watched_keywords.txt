@@ -3968,3 +3968,4 @@
 1528967751	tripleee	res\W?q
 1528975550	tripleee	soapandcosmeticclasses
 1528977870	tripleee	smartinfomation\.com
+1528980084	Ashish Ahuja	caidentistry\.com
