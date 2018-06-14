@@ -1394,5 +1394,4 @@ sphere\W?labs
 epson-printer
 norton-setup
 luminary\W?v
-rose\W?diamond
-rose\W?diamond\W?beauty
+rose\W?diamond(?:\W?beauty)?
