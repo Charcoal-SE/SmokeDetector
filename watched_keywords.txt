@@ -3962,3 +3962,4 @@
 1528961066	Glorfindel	zuvoo\.com
 1528961620	Glorfindel	p1instrument
 1528961632	tripleee	p1-instrument\.com
+1528962566	Glorfindel	stubborne\.com
