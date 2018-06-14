@@ -3959,3 +3959,4 @@
 1528949991	tripleee	flixstar\.net
 1528952699	gparyani	clickbait
 1528957305	iBug	cryptonhash\.com
+1528957387	tripleee	closers\W?credits
