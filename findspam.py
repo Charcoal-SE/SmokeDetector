@@ -340,19 +340,32 @@ def has_health(s, site, *args):   # flexible detection of health spam in titles
     return False, ""
 
 
+pattern_keywords = ["Testo?", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Kamasutra", "HL-?12", "NeuroFuse",
+                    "Junivive", "Apexatropin", "Gain", "Allure", "Nuvella", "Trimgenix", "Satin", "Prodroxatone",
+                    "Elite", "Force", "Exceptional", "Enhance(?:ment)?", "Nitro", "Max", "Boost", "E?xtreme", "Grow",
+                    "Deep", "Male", "Pro", "Advanced", "Monster", "Divine", "Royale", "Angele", "Trinity", "Andro",
+                    "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Hydroluxe", "Booster",
+                    "Serum", "Supplement", "Fuel", "Cream", "Keto"]
+pattern_keywords_nonmath = pattern_keywords + [r"E?X[tl\d]?", "Alpha", "Plus", "Prime", "Formula"]
+
+pattern_keywords = "|".join(pattern_keywords)
+pattern_keywords_nonmath = "|".join(pattern_keywords_nonmath)
+pattern_three_words = regex.compile(r"(?i)\b(({0})\W({0})\W({0}))\b".format(pattern_keywords))
+pattern_two_words = regex.compile(r"(?i)\b(({0})\W({0}))\b".format(pattern_keywords))
+pattern_three_words_nonmath = regex.compile(r"(?i)\b(({0})\W({0})\W({0}))\b".format(pattern_keywords_nonmath))
+pattern_two_words_nonmath = regex.compile(r"(?i)\b(({0})\W({0}))\b".format(pattern_keywords_nonmath))
+
+
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def pattern_product_name(s, site, *args):
-    keywords = ["Testo?", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Kamasutra", "HL-?12", "NeuroFuse",
-                "Junivive", "Apexatropin", "Gain", "Allure", "Nuvella", "Trimgenix", "Satin", "Prodroxatone",
-                "Elite", "Force", "Exceptional", "Enhance(?:ment)?", "Nitro", "Max", "Boost", "E?xtreme", "Grow",
-                "Deep", "Male", "Pro", "Advanced", "Monster", "Divine", "Royale", "Angele", "Trinity", "Andro",
-                "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Hydroluxe", "Booster",
-                "Serum", "Supplement", "Fuel", "Cream"]
+    scanner_three = pattern_three_words
+    scanner_two = pattern_two_words
     if site != "math.stackexchange.com" and site != "mathoverflow.net":
-        keywords += ["E?X[tl\\d]?", "Alpha", "Plus", "Prime", "Formula"]
-    keywords = "|".join(keywords)
-    three_words = regex.compile(r"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
-    two_words = regex.compile(r"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
+        scanner_three = pattern_three_words_nonmath
+        scanner_two = pattern_two_words_nonmath
+
+    three_words = scanner_three.findall(s)
+    two_words = scanner_two.findall(s)
     if len(three_words) >= 1 and all_matches_unique(three_words):
         return True, u"Pattern-matching product name *{}*".format(three_words[0][0])
     if len(two_words) >= 2 and all_matches_unique(two_words):
