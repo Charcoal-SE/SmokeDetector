@@ -349,11 +349,11 @@ def pattern_product_name(s, site, *args):
                 "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Hydroluxe", "Booster",
                 "Serum", "Supplement", "Fuel", "Cream", "Keto"]
     if site != "math.stackexchange.com" and site != "mathoverflow.net":
-        keywords += [r"E?X[tl\d]?", "Alpha", "Plus", "Prime", "Formula"]
+        keywords += [r"E?X[tl]?", "Alpha", "Plus", "Prime", "Formula"]
     keywords = "|".join(keywords)
 
-    three_words = regex.compile(r"(?i)\b(({0})\W({0})\W({0}))\b".format(keywords)).findall(s)
-    two_words = regex.compile(r"(?i)\b(({0})\W({0}))\b".format(keywords)).findall(s)
+    three_words = regex.compile(r"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
+    two_words = regex.compile(r"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
     if len(three_words) >= 1 and all_matches_unique(three_words):
         return True, u"Pattern-matching product name *{}*".format(three_words[0][0])
     if len(two_words) >= 2 and all_matches_unique(two_words):
