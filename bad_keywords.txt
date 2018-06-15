@@ -1397,3 +1397,4 @@ luminary\W?v
 rose\W?diamond(?:\W?beauty)?
 peraglow
 liva\W?derma
+konect(?:\W?nutra\?Wketo)?
