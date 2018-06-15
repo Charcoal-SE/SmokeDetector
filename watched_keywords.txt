@@ -2281,7 +2281,6 @@
 1518021145	WELZ	scratchgames\.co
 1518064795	iBug	swnmredcross\.org
 1518064809	iBug	jzwangzhuan\.com
-1518086561	tripleee	liva\W?derma
 1518088445	tripleee	webdesigning\.ae
 1518088635	Glorfindel	9and9\.com
 1518021095	WELZ	wordcookiesanswersaz\.com
