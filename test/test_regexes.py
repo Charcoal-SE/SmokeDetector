@@ -85,6 +85,8 @@ from helpers import log
 But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, False, False),
     ('Misleading link common file whitelist', 'File: <a href="https://www.malicious.com/">https://google.com/file.txt</a>', '', 'stackoverflow.com', False, False, True),
     ('Misleading link common file whitelist', 'File: <a href="https://www.malicious.txt/">https://google.com</a>', '', 'stackoverflow.com', False, False, False),
+    ('Pattern-matching product name', 'Extreme Boost Max', '', 'stackoverflow.com', False, False, True),
+    ('Pattern-matching product name', 'Alpha Formula Pro', '', 'math.stackexchange.com', False, False, False),
     ('Body starts with title', 'Body starts with title and ends with <a href="https://example.com">https://example.com</a>', '', '', False, False, True)
 ])
 def test_regexes(title, body, username, site, body_is_summary, is_answer, match):
