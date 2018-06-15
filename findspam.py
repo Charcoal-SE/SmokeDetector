@@ -350,6 +350,7 @@ def pattern_product_name(s, site, *args):
                 "Serum", "Supplement", "Fuel", "Cream", "Keto"]
     if site != "math.stackexchange.com" and site != "mathoverflow.net":
         keywords += [r"E?X[tl\d]?", "Alpha", "Plus", "Prime", "Formula"]
+    keywords = "|".join(keywords)
 
     three_words = regex.compile(r"(?i)\b(({0})\W({0})\W({0}))\b".format(keywords)).findall(s)
     two_words = regex.compile(r"(?i)\b(({0})\W({0}))\b".format(keywords)).findall(s)
