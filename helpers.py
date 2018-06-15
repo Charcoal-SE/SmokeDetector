@@ -22,7 +22,7 @@ def environ_or_none(key):
 
 # Checks that all items in a pattern-matching product name are unique
 def all_matches_unique(match):
-    return len(match[0][1::2]) == len(set(match[0][1::2]))
+    return len(match[0][1:]) == len(set(match[0][1:]))
 
 
 # noinspection PyMissingTypeHints
