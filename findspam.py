@@ -344,13 +344,13 @@ def has_health(s, site, *args):   # flexible detection of health spam in titles
 def pattern_product_name(s, site, *args):
     keywords = ["Testo?(?:sterone)?", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Diet", "Slim", "Premier",
                 "Junivive", "Apexatropin", "Gain", "Allure", "Nuvella", "Trimgenix", "Satin", "Prodroxatone",
-                "Elite", "Force", "Exceptional", "Enhance(?:ment)?", "Nitro", "Max", "Boost", "E?xtreme", "Grow",
-                "Deep", "Male", "Pro", "Advanced", "Monster", "Divine", "Royale", "Angele", "Trinity", "Andro",
+                "Elite", "Force", "Exceptional", "Enhance(?:ment)?", "Nitro", "Max+", "Boost", "E?xtreme", "Grow",
+                "Deep", "Male", "Pro", "Advanced", "Monster", "Divine", "Royale", "Angele*", "Trinity", "Andro",
                 "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Hydroluxe", "Boost(?:er)?",
-                "Serum", "Supplement", "Fuel", "Cream", "Keto", "Rapid", "Tone", "Forkskolin",
-                "(?:Anti-)?Ag(?:e|ing)"]
+                "Serum", "Supplement", "Fuel", "Cream", "Keto", "Rapid", "Tone", "Forkskolin", "Neuro", "Luma"
+                "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Premi(?:um|er)", "Vital", "Derma?", "Master"]
     if site != "math.stackexchange.com" and site != "mathoverflow.net":
-        keywords += [r"E?X[tl\d]?", "Alpha", "Plus", "Prime", "Formula"]
+        keywords += [r"E?X[LORT\d]?", "Alpha", "Plus", "Prime", "Formula"]
     keywords = "|".join(keywords)
 
     three_words = regex.compile(r"(?i)\b(({0})\W({0})\W({0}))\b".format(keywords)).findall(s)
