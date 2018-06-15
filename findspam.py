@@ -344,9 +344,9 @@ def has_health(s, site, *args):   # flexible detection of health spam in titles
 def pattern_product_name(s, site, *args):
     keywords = ["Testo?", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Kamasutra", "HL-?12", "NeuroFuse",
                 "Junivive", "Apexatropin", "Gain", "Allure", "Nuvella", "Trimgenix", "Satin", "Prodroxatone",
-                "Elite", "Force", "Exceptional", "Enhance(ment)?", "Nitro", "Max", "Boost", "E?xtreme", "Grow",
+                "Elite", "Force", "Exceptional", "Enhance(?:ment)?", "Nitro", "Max", "Boost", "E?xtreme", "Grow",
                 "Deep", "Male", "Pro", "Advanced", "Monster", "Divine", "Royale", "Angele", "Trinity", "Andro",
-                "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(tone)?", "Hydroluxe", "Booster",
+                "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Hydroluxe", "Booster",
                 "Serum", "Supplement", "Fuel", "Cream"]
     if site != "math.stackexchange.com" and site != "mathoverflow.net":
         keywords += ["E?X[tl\\d]?", "Alpha", "Plus", "Prime", "Formula"]
@@ -355,7 +355,7 @@ def pattern_product_name(s, site, *args):
     two_words = regex.compile(r"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
     if len(three_words) >= 1 and all_matches_unique(three_words):
         return True, u"Pattern-matching product name *{}*".format(three_words[0][0])
-    elif len(two_words) >= 2 and all_matches_unique(two_words):
+    if len(two_words) >= 2 and all_matches_unique(two_words):
         return True, u"Pattern-matching product name *{}*".format(two_words[0][0])
     return False, ""
 
