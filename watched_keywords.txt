@@ -3998,3 +3998,4 @@
 1529107877	Makyen	jbachyns
 1529124831	Makyen	trademarkcart\.com
 1529125388	Makyen	[a-z_]*(?:1_*)?646[\W_]*513[\W_]*4304[a-z_]*
+1529128543	JoErNanO	giftcards2u.com
