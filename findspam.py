@@ -534,6 +534,7 @@ def bad_ns_for_url_domain(s, site, *args):
 def watched_ns_for_url_domain(s, site, *args):
     return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name here either!
+        {'adi.ns.cloudflare.com.', 'miles.ns.cloudflare.com.'},
         {'bonnie.ns.cloudflare.com.', 'guss.ns.cloudflare.com.'},
         {'brenda.ns.cloudflare.com.', 'merlin.ns.cloudflare.com.'},
         {'chip.ns.cloudflare.com.', 'cruz.ns.cloudflare.com.'},
@@ -545,6 +546,7 @@ def watched_ns_for_url_domain(s, site, *args):
         {'mark.ns.cloudflare.com.', 'wanda.ns.cloudflare.com.'},
         {'norm.ns.cloudflare.com.', 'olga.ns.cloudflare.com.'},
         {'pablo.ns.cloudflare.com.', 'pola.ns.cloudflare.com.'},
+        'offshoreracks.com.',
         'sathyats.net.',
     ])
 
