@@ -1401,3 +1401,4 @@ konect(?:\W?nutra\?Wketo)?
 hyperion\W?male\W?no2\W?booster
 total\W?tone
 retro\W?slim
+narvi\W?testo
