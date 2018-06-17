@@ -342,23 +342,23 @@ def has_health(s, site, *args):   # flexible detection of health spam in titles
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def pattern_product_name(s, site, *args):
-    keywords = ["Testo?(?:sterone)?", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Diet", "Slim", "Premier",
+    keywords = ["Testo", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Diet", "Slim", "Premier", "Diet",
                 "Junivive", "Apexatropin", "Gain", "Allure", "Nuvella", "Trimgenix", "Satin", "Prodroxatone",
                 "Elite", "Force", "Exceptional", "Enhance(?:ment)?", "Nitro", "Max+", "Boost", "E?xtreme", "Grow",
                 "Deep", "Male", "Pro", "Advanced", "Monster", "Divine", "Royale", "Angele*", "Trinity", "Andro",
                 "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Hydroluxe", "Boost(?:er)?",
-                "Serum", "Supplement", "Fuel", "Cream", "Keto", "Rapid", "Tone", "Forkskolin", "Neuro", "Luma"
+                "Serum", "Supplement", "Fuel", "Cream", "Keto", "Rapid", "Tone", "Forskolin", "Neuro", "Luma"
                 "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Premi(?:um|er)", "Vital", "Derma?", "Master"]
     if site != "math.stackexchange.com" and site != "mathoverflow.net":
-        keywords += [r"E?X[LORT]?", "Alpha", "Plus", "Prime", "Formula"]
+        keywords += ["X[LORT]", "Alpha", "Plus", "Prime", "Formula"]
     keywords = "|".join(keywords)
 
     three_words = regex.compile(r"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
     two_words = regex.compile(r"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
     if len(three_words) >= 1 and all_matches_unique(three_words):
-        return True, u"Pattern-matching product name *{}*".format(three_words[0][0])
+        return True, u"Pattern-matching product name *{}*".format(match[0] for match in three_words)
     if len(two_words) >= 2 and all_matches_unique(two_words):
-        return True, u"Pattern-matching product name *{}*".format(two_words[0][0])
+        return True, u"Pattern-matching product name *{}*".format(match[0] for match in two_words)
     return False, ""
 
 
