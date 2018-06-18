@@ -1405,3 +1405,4 @@ narvi\W?testo
 perfect\W?youth(?:\W?booster)?
 vital\W?x9
 keto\W?elite(?:\W?diet)?
+maestro/W?goslin
