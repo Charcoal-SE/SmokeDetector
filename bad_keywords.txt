@@ -1402,7 +1402,6 @@ hyperion\W?male\W?no2\W?booster
 total\W?tone
 retro\W?slim
 narvi\W?testo
-jovian
 perfect\W?youth(?:\W?booster)?
 vital\W?x9
 keto\W?elite(?:\W?diet)?
