@@ -4004,3 +4004,4 @@
 1529233312	Glorfindel	hanoiexploretravel\.com
 1529234089	Zoe	hanoi\W*explore\W*travel\W*agency
 1529249435	Zoe	jews\W*destroy\W*everything
+1529290491	WELZ	noahidenews\.com
