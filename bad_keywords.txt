@@ -1403,3 +1403,4 @@ total\W?tone
 retro\W?slim
 narvi\W?testo
 jovian
+perfect\W?youth(?:\W?booster)
