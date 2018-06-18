@@ -1404,3 +1404,4 @@ retro\W?slim
 narvi\W?testo
 jovian
 perfect\W?youth(?:\W?booster)?
+vital\W?x9
