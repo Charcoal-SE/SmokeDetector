@@ -548,7 +548,8 @@ def watched_ns_for_url_domain(s, site, *args):
         {'pablo.ns.cloudflare.com.', 'pola.ns.cloudflare.com.'},
         'offshoreracks.com.',
         'sathyats.net.',
-        'shared-host.org.'
+        'shared-host.org.',
+        'siteground.us.'
     ])
 
 
