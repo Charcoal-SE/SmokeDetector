@@ -4007,3 +4007,4 @@
 1529249435	Zoe	jews\W*destroy\W*everything
 1529290491	WELZ	noahidenews\.com
 1529293135	Makyen	seicoder\.com
+1529301421	tripleee	promo\W*code
