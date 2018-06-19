@@ -4040,3 +4040,4 @@
 1529396671	Glorfindel	tricksroad\.com
 1529398031	tripleee	zdrorov\W?propolis
 1529398048	tripleee	softisfree\.com
+1529400496	tripleee	telo\W?revive
