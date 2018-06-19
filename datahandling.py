@@ -37,6 +37,10 @@ def _load_pickle(path, encoding='utf-8'):
         except EOFError:
             os.remove(path)
             raise
+        except pickle.UnpicklingError as err:
+            if 'pickle data was truncated' in str(err).lower():
+                os.remove(path)
+            raise
 
 # methods to load files and filter data in them:
 # load_blacklists() is defined in a separate module blacklists.py, though
