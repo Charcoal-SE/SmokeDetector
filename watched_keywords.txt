@@ -4027,3 +4027,4 @@
 1529386228	Glorfindel	thearousedproject\.com
 1529386235	Glorfindel	calendartemplatefree\.com
 1529386249	Glorfindel	calendartemplate\W?free
+1529387733	tripleee	alfrescoadventure\d+
