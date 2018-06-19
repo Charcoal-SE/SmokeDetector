@@ -356,9 +356,9 @@ def pattern_product_name(s, site, *args):
     three_words = regex.compile(r"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
     two_words = regex.compile(r"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
     if len(three_words) >= 1 and all_matches_unique(three_words):
-        return True, u"Pattern-matching product name *{}*".format(match[0] for match in three_words)
+        return True, u"Pattern-matching product name *{}*".format(", ".join(match[0] for match in three_words))
     if len(two_words) >= 2 and all_matches_unique(two_words):
-        return True, u"Pattern-matching product name *{}*".format(match[0] for match in two_words)
+        return True, u"Pattern-matching product name *{}*".format(", ".join(match[0] for match in two_words))
     return False, ""
 
 
@@ -535,6 +535,7 @@ def bad_ns_for_url_domain(s, site, *args):
 def watched_ns_for_url_domain(s, site, *args):
     return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name here either!
+        {'adi.ns.cloudflare.com.', 'miles.ns.cloudflare.com.'},
         {'bonnie.ns.cloudflare.com.', 'guss.ns.cloudflare.com.'},
         {'brenda.ns.cloudflare.com.', 'merlin.ns.cloudflare.com.'},
         {'chip.ns.cloudflare.com.', 'cruz.ns.cloudflare.com.'},
@@ -546,7 +547,11 @@ def watched_ns_for_url_domain(s, site, *args):
         {'mark.ns.cloudflare.com.', 'wanda.ns.cloudflare.com.'},
         {'norm.ns.cloudflare.com.', 'olga.ns.cloudflare.com.'},
         {'pablo.ns.cloudflare.com.', 'pola.ns.cloudflare.com.'},
+        'mihanwebhost.com.',
+        'offshoreracks.com.',
         'sathyats.net.',
+        'shared-host.org.',
+        'siteground.us.'
     ])
 
 
@@ -1010,7 +1015,7 @@ class FindSpam:
         "Ludhiana", "Mumbai", "Madurai", "Patna", "Portland",
         "Rajkot", "Surat", "Telangana", "Udaipur", "Uttarakhand",
         "Noida", "Pune", "Rohini", "Trivandrum", "Thiruvananthapuram",
-        "Nashik", "Gurgaon",
+        "Nashik", "Gurgaon", "Kochi", "Ernakulam",
         # yes, these aren't cities but...
         "India", "Pakistan",
         # buyabans.com spammer uses creative variations

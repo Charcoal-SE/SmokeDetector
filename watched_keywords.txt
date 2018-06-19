@@ -2176,7 +2176,6 @@
 1516795126	iBug	rocketpaper\.net
 1516804605	CalvT븃	dogshunt\.com
 1516760244	Tetsuya Yamamoto	iguruservices\.com
-1516863944	Tetsuya Yamamoto	samwebstudio\.com
 1516867065	Glorfindel	indabaa\.com
 1516868946	Glorfindel	kicx\.in
 1516869044	Glorfindel	velmm\.com
@@ -2727,7 +2726,6 @@
 1522333164	Glorfindel	brillins\.com
 1522333255	K.Dᴀᴠɪs	michackersolution
 1522334123	Glorfindel	xtremetape\.com
-1522334573	Glorfindel	fvdtube\.com
 1522334596	Glorfindel	tubidy\.media
 1522344451	Ferrybig	Türkiye'nin son derece kararlı olması\W*
 1522357771	NobodyNada	301-redirect\.online
@@ -2949,7 +2947,6 @@
 1523805148	Glorfindel	bitcoinprivatekey\.weebly\.com
 1523813466	Olivia Zoe	hentaimangaly\.com
 1523843390	quartata	irctctatkalsoftware.co.in
-1523864902	Glorfindel	svrtechnologies\.com
 1523868951	Glorfindel	guldcoin
 1523870228	Mithrandir	\$ex\W?drive
 1523870244	Glorfindel	originalapk\.com
@@ -3264,7 +3261,6 @@
 1525706648	Zoe	analyticsmania\.com
 1525711087	WELZ	jasakontraktorlapangan\.com
 1525714290	Glorfindel	successmessages\.net
-1525716267	Zoe	customers-services-numbers\.com
 1525717121	Thomas Ward	vencore\.com
 1525720814	Zoe	zameen\.com
 1525721359	Glorfindel	absolutedigitizing\.com
@@ -3311,7 +3307,6 @@
 1525938622	tripleee	clappia\.com
 1525939654	tripleee	qualitysteroid\.com
 1525941994	tripleee	voztech\.in
-1525942362	Zoe	1800customerservicenumbers\.com
 1525944597	tripleee	(?:1\W*)?607\W*800\W*4675
 1525947516	Glorfindel	newportbutane\.com
 1525947803	Mithrandir	dating-vergleich\.com
@@ -3369,7 +3364,6 @@
 1526254993	Makyen	hustlemindsent
 1526278951	Suraj Rao	brahmagems\.com
 1526282392	Glorfindel	repairmsexcel\.com
-1526282826	Mithrandir	supplementsxpert\.com
 1526287348	Glorfindel	cryptodoubler\.io
 1526289708	tripleee	spotify-webplayer\.com
 1526291698	Glorfindel	deletebrowsinghistory\.net
@@ -3391,7 +3385,6 @@
 1526340156	K.Dᴀᴠɪs	peterprincii
 1526340246	Makyen	tsung\W*han\W*lin
 1526340535	Makyen	total\W*credit\W*restoration
-1526357910	tripleee	^umar$
 1526362127	Makyen	InterDialog
 1526362277	Makyen	teckinfo\.com
 1526363529	Glorfindel	fuaosanitaryware\.com
@@ -3756,7 +3749,6 @@
 1528016688	Makyen	quickbookshelps\.support
 1528028119	Zoe	high\W*quality\W*undetectable\W*counterfeit\W*banknotes
 1528030577	WELZ	dronestream\.app
-1528031313	Zoe	videoproducedmarke\.wixsite\.com
 1528033296	Zoe	btcc?ngame
 1528036397	Zoe	subhuman(?:\W*arab)\W*raghead
 1528039866	Makyen	how\W?I\W?became\W?a\W?vampire
@@ -3904,7 +3896,6 @@
 1528729675	Zoe	bho-cannabisonline\.com
 1528745948	Zoe	allexperts16\.blogspot
 1528765397	Makyen	iwikies\.com
-1528780300	gparyani	i love corn
 1528785079	Makyen	digital\W?marketing(?!(?:[^<]|<[^c]|<c[^o]|<co[^d]|<cod[^e]|<code[^>])*?</code>)
 1528794520	Zoe	kadinlarplajiservisi\.com
 1528794527	Zoe	Sarıyer\W*Altınkum\W*Kadınlar\W*Plajı\W*Servisi
@@ -3975,7 +3966,6 @@
 1529008920	Makyen	akwkae3
 1529022081	Makyen	hollywoodfilmsupplies\.com
 1529025583	Makyen	timberland-outlet\.com
-1529036916	tripleee	narvi\W?testo
 1529039331	Makyen	inspiresayan\.com
 1529043656	Makyen	vimeo\.com/275188532
 1529043666	Makyen	rUSuigydIDI5tbhFfBIbsw
@@ -3984,3 +3974,73 @@
 1529045274	iBug	supplementsengine\.com
 1529045410	tripleee	elemor
 1529046494	tripleee	voip4callcenters\.com
+1529048227	iBug	supplements4test\.com
+1529048574	Makyen	spy-casino\.com
+1529049847	Byte Commander	cannacanine\.ca
+1529053928	tripleee	[a-z_]*(?:1_*)?202[\W_]*570[\W_]*4495[a-z_]*
+1529054825	iBug	fresh\W?nature\W?hemp
+1529055139	tripleee	topwatch\.vn
+1529055398	tripleee	jovian
+1529055733	tripleee	skinhealthcanada\.ca
+1529066143	Zoe	moneyinthebanklive\.com
+1529066199	Zoe	money\W*in\W*the\W*bank\W*\d*\W*live
+1529067761	Chris	healthylifeandshape\.com
+1529088411	tripleee	[a-z_]*(?:1_*)?510[\W_]*858[\W_]*1305[a-z_]*
+1529107852	Makyen	joshbachynski@gmail\.com
+1529107877	Makyen	jbachyns
+1529124831	Makyen	trademarkcart\.com
+1529125388	Makyen	[a-z_]*(?:1_*)?646[\W_]*513[\W_]*4304[a-z_]*
+1529128757	JoErNanO	giftcards2u\.com
+1529133498	tripleee	user393411
+1529133609	tripleee	whitehaveninsurance\.com
+1529136726	tripleee	neuro\W?brilliance
+1529200759	Makyen	ailatte\.com
+1529200772	Makyen	aade46375530c013f4424f8ca864ea76
+1529233287	Glorfindel	vietnamecotravel\.com
+1529233312	Glorfindel	hanoiexploretravel\.com
+1529234089	Zoe	hanoi\W*explore\W*travel\W*agency
+1529249435	Zoe	jews\W*destroy\W*everything
+1529290491	WELZ	noahidenews\.com
+1529293135	Makyen	seicoder\.com
+1529301421	tripleee	promo\W*code
+1529301444	tripleee	benetizen\.com
+1529304638	tripleee	iteci\.ca
+1529304649	tripleee	icutit\.ca
+1529304658	tripleee	earnbig\.ca
+1529304668	tripleee	shortit\.ca
+1529304676	tripleee	cutearn\.ca
+1529304915	Glorfindel	digitechhealth\.com
+1529307132	Glorfindel	testunity\.com
+1529316727	Zoe	bust\W*full\W*cream
+1529327469	Zoe	maxwell\W*the\W*squirrel
+1529327870	Byte Commander	windowsclassroom\.com
+1529333215	Zoe	balaji\W*cargo\W*packers\W*pune
+1529333288	WELZ	balajicargopackers\.in
+1529356721	Makyen	evgravingplus\.weebly\.com
+1529366192	Makyen	arsenalloansolutions
+1529369767	Makyen	pageoptimizer\W*(?:dot\W*)?pro
+1529369871	Makyen	bit\W*(?:dot\W*)?ly/seoproof
+1529377832	Makyen	(?:corn)?i love corni?
+1529384698	tripleee	florenceloans1
+1529386221	Glorfindel	global-trade-news\.com
+1529386228	Glorfindel	thearousedproject\.com
+1529386235	Glorfindel	calendartemplatefree\.com
+1529386249	Glorfindel	calendartemplate\W?free
+1529387733	tripleee	alfrescoadventure\d+
+1529389708	tripleee	testo\W?e\W?force
+1529390015	tripleee	mersad(?:\W?web)?
+1529391547	tripleee	hot\W?body\W?secrets?
+1529391572	tripleee	lean\W?body\W?hacks
+1529391597	tripleee	te60\W?shred
+1529391616	tripleee	booty\W?challenge
+1529391647	tripleee	tru\W?loss
+1529393785	tripleee	[a-z_]*(?:1_*)?888[\W_]*729[\W_]*0433[a-z_]*
+1529395075	Mithrandir	supplementdealblogs\.wordpress\.com
+1529396671	Glorfindel	tricksroad\.com
+1529398031	tripleee	zdrorov\W?propolis
+1529398048	tripleee	softisfree\.com
+1529400496	tripleee	telo\W?revive
+1529405838	Glorfindel	megainfomatix\.com
+1529408325	tripleee	nitro\W?pro
+1529409208	Glorfindel	hotmailemail\.net
+1529415591	WELZ	cryptonbattle\.com

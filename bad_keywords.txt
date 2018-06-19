@@ -1179,7 +1179,7 @@ zdorov\W?propolis
 super\W?boost\W?perform\W?xl
 vita\W?x
 keto\W?trim
-ropaxin
+ropaxin(?:\W*t)?
 cognivex
 hydrox\W?slim
 vigoriax
@@ -1398,3 +1398,14 @@ rose\W?diamond(?:\W?beauty)?
 peraglow
 liva\W?derma
 konect(?:\W?nutra\?Wketo)?
+hyperion\W?male\W?no2\W?booster
+total\W?tone
+retro\W?slim
+narvi\W?testo
+perfect\W?youth(?:\W?booster)?
+vital\W?x9
+keto\W?elite(?:\W?diet)?
+maestro\W?goslin
+phen375
+Navari\W?Testo
+spectrum\W?cbd
