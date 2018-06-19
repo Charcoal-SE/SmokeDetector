@@ -4035,3 +4035,4 @@
 1529391597	tripleee	te60\W?shred
 1529391616	tripleee	booty\W?challenge
 1529391647	tripleee	tru\W?loss
+1529393785	tripleee	[a-z_]*(?:1_*)?888[\W_]*729[\W_]*0433[a-z_]*
