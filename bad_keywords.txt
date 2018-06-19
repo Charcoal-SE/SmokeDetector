@@ -1179,7 +1179,7 @@ zdorov\W?propolis
 super\W?boost\W?perform\W?xl
 vita\W?x
 keto\W?trim
-ropaxin
+ropaxin(?:\W*t)?
 cognivex
 hydrox\W?slim
 vigoriax
