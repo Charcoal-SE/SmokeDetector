@@ -546,6 +546,7 @@ def watched_ns_for_url_domain(s, site, *args):
         {'mark.ns.cloudflare.com.', 'wanda.ns.cloudflare.com.'},
         {'norm.ns.cloudflare.com.', 'olga.ns.cloudflare.com.'},
         {'pablo.ns.cloudflare.com.', 'pola.ns.cloudflare.com.'},
+        'mihanwebhost.com.',
         'offshoreracks.com.',
         'sathyats.net.',
         'shared-host.org.',
