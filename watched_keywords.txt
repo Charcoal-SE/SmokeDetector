@@ -4029,3 +4029,4 @@
 1529386249	Glorfindel	calendartemplate\W?free
 1529387733	tripleee	alfrescoadventure\d+
 1529389285	NobodyNada	mersadweb
+1529389708	tripleee	testo\W?e\W?force
