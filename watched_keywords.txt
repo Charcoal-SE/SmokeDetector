@@ -4024,3 +4024,4 @@
 1529369871	Makyen	bit\W*(?:dot\W*)?ly/seoproof
 1529377832	Makyen	(?:corn)?i love corni?
 1529384698	tripleee	florenceloans1
+1529386221	Glorfindel	global-trade-news\.com
