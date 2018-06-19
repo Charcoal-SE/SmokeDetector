@@ -415,7 +415,7 @@ class Metasmoke:
     def get_post_bodies_from_ms(post_url):
         payload = {
             'key': GlobalVars.metasmoke_key,
-            'filter': 'IOLGJFNGHKMGIHGLNMOLMMGOMKGLN',  # posts.body
+            'filter': 'HNKHHGINKFKGIKGLGKIILMKNHHGHFOL',  # posts.body, posts.created_at
             'urls': parsing.to_protocol_relative(post_url)
         }
         response = requests.get(GlobalVars.metasmoke_host + '/api/v2.0/posts/urls', params=payload).json()
