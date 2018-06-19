@@ -4046,3 +4046,4 @@
 1529415591	WELZ	cryptonbattle\.com
 1529437289	Makyen	mah7\.com
 1529450291	Makyen	[a-z_]*(?:1_*)?844[\W_]*797[\W_]*8692[a-z_]*
+1529450299	Makyen	theshimangroup\.com
