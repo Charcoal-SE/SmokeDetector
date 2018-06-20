@@ -19,7 +19,7 @@ import dns.resolver
 import requests
 import chatcommunicate
 
-from helpers import all_matches_unique, log
+from helpers import unique_matches, log
 from globalvars import GlobalVars
 from blacklists import load_blacklists
 
@@ -355,9 +355,9 @@ def pattern_product_name(s, site, *args):
 
     three_words = regex.compile(r"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
     two_words = regex.compile(r"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
-    if len(three_words) >= 1 and all_matches_unique(three_words):
+    if len(three_words) >= 1 and unique_matches(three_words) >= 1:
         return True, u"Pattern-matching product name *{}*".format(", ".join(match[0] for match in three_words))
-    if len(two_words) >= 2 and all_matches_unique(two_words):
+    if len(two_words) >= 2 and unique_matches(two_words) >= 2:
         return True, u"Pattern-matching product name *{}*".format(", ".join(match[0] for match in two_words))
     return False, ""
 
