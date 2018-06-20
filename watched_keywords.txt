@@ -4048,3 +4048,4 @@
 1529450291	Makyen	[a-z_]*(?:1_*)?844[\W_]*797[\W_]*8692[a-z_]*
 1529450299	Makyen	theshimangroup\.com
 1529461145	Makyen	thedroidhax\.com
+1529473176	Glorfindel	mg\W?infomatics
