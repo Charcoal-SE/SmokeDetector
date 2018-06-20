@@ -4056,3 +4056,4 @@
 1529482757	iBug	Essential\W?CBD\W?Extract
 1529485191	A J	cars2bike\.com
 1529490745	tripleee	sale-swiss\.net
+1529491708	doppelgreener	couponspromos\.co
