@@ -4007,7 +4007,6 @@
 1529304658	tripleee	earnbig\.ca
 1529304668	tripleee	shortit\.ca
 1529304676	tripleee	cutearn\.ca
-1529304915	Glorfindel	digitechhealth\.com
 1529307132	Glorfindel	testunity\.com
 1529316727	Zoe	bust\W*full\W*cream
 1529327469	Zoe	maxwell\W*the\W*squirrel
