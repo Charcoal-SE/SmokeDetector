@@ -4055,4 +4055,3 @@
 1529478415	Glorfindel	openingmaster\.com
 1529479340	iBug	Lipozal
 1529481647	tripleee	shred\W?secrets
-1529481835	tripleee	heal588735955\.wordpress\.com
