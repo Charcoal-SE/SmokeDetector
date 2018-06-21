@@ -3838,7 +3838,6 @@
 1528446325	Makyen	[a-z_]*(?:1_*)?844[\W_]*617[\W_]*9531[a-z_]*
 1528449487	Glorfindel	loomsolar\.com
 1528451939	Glorfindel	pycker\.com
-1528451965	tripleee	karishmasharma\.com
 1528455872	Zoe	logisticinfotech\.com
 1528462664	Glorfindel	towelrootapkfree\.blogspot\.com
 1528464331	tripleee	asthadnggroup\.com
