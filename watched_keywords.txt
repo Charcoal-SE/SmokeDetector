@@ -4097,3 +4097,4 @@
 1529660594	Glorfindel	osttopstconverter-tool\.com
 1529660634	Glorfindel	pcrecoveryutility\.com
 1529660648	Glorfindel	recoverydeletedfiles\.com
+1529660776	Glorfindel	iqtechline\.com
