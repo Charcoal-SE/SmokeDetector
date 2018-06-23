@@ -7,6 +7,7 @@ from html import unescape
 from hashlib import md5
 from configparser import NoOptionError, RawConfigParser
 from helpers import environ_or_none, log
+from parsing import escape_markdown
 import threading
 # noinspection PyCompatibility
 import regex
@@ -90,7 +91,7 @@ class GlobalVars:
     commit_with_author = "%s (%s: *%s*)" % (commit['id'],
                                             commit['author'][0] if type(commit['author']) in [list, tuple]
                                             else commit['author'],
-                                            commit['message'])
+                                            escape_markdown(commit['message']))
 
     on_master = "HEAD detached" not in git_status()
 
