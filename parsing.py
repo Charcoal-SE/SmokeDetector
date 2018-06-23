@@ -147,7 +147,7 @@ def unescape_title(title_escaped):
 
 # noinspection PyMissingTypeHints
 def escape_markdown(s):
-    return regex.sub(r"([_*\\`\[\]])", r"\\\1", s)
+    return regex.sub(r"([_*`\[\]])", r"\\\1", s)
 
 
 # noinspection PyMissingTypeHints
