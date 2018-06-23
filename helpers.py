@@ -20,7 +20,7 @@ def environ_or_none(key):
         return None
 
 
-# Checks that all items in a pattern-matching product name are unique
+# Counts when all items in a pattern-matching product name are unique
 def unique_matches(match):
     return sum(len(m[1:]) == len(set(m[1:])) for m in match)
 
