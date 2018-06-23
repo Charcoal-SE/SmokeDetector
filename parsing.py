@@ -9,7 +9,7 @@ BAD_CHAR = "\u200c\u200b"
 
 # noinspection PyMissingTypeHints
 def rebuild_str(str):
-    return ''.join([ch for ch in str if ch not in BAD_CHAR])
+    return ''.join(ch for ch in str if ch not in BAD_CHAR)
 
 
 # noinspection PyBroadException,PyMissingTypeHints
