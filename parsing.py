@@ -146,13 +146,13 @@ def unescape_title(title_escaped):
 
 
 # noinspection PyMissingTypeHints
-def escape_special_chars_in_title(title_unescaped):
-    return regex.sub(r"([_*\\`\[\]])", r"\\\1", title_unescaped)
+def escape_markdown(s):
+    return regex.sub(r"([_*\\`\[\]])", r"\\\1", s)
 
 
 # noinspection PyMissingTypeHints
 def sanitize_title(title_unescaped):
-    return regex.sub('(https?://|\n)', '', escape_special_chars_in_title(title_unescaped).replace('\n', u'\u23CE'))
+    return regex.sub('(https?://|\n)', '', escape_markdown(title_unescaped).replace('\n', u'\u23CE'))
 
 
 # noinspection PyMissingTypeHints
