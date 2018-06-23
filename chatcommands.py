@@ -241,8 +241,8 @@ def do_blacklist(blacklist_type, msg, force=False):
     :return: A string
     """
 
-    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=msg._client.host,
-                                                                    id=msg.owner.id)
+    chat_user_profile_link = "https://chat.{host}/users/{id}".format(host=msg._client.host,
+                                                                     id=msg.owner.id)
 
     # noinspection PyProtectedMember
     pattern = rebuild_str(msg.content_source.split(" ", 1)[1])
@@ -252,7 +252,7 @@ def do_blacklist(blacklist_type, msg, force=False):
         raise CmdException("An invalid pattern was provided, not blacklisting.")
 
     if not force:
-        reasons = check_blacklist(pattern.replace("\\W", " ").replace("\\.", "."),
+        reasons = check_blacklist(pattern.replace("\\W", " ").replace("\\.", ".").replace("\\d", "8"),
                                   blacklist_type == "username",
                                   blacklist_type == "watch_keyword")
 
