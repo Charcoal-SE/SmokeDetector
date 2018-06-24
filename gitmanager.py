@@ -99,7 +99,7 @@ class GitManager:
                 git.add('watched_keywords.txt')
 
             git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
-                       "-m", u"Auto {0} of {1} by {2} --autopull".format(op, item, username))
+                       "-m", u"Auto {0} of `{1}` by {2} --autopull".format(op, item, username))
 
             if code_permissions:
                 git.checkout("master")
