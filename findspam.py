@@ -818,8 +818,11 @@ def body_starts_with_title(post):
 def turkey(s, *args):
     s = regex.search(r"<p>\s*?(\S{8,})\s*?</p>$", s.lower())
 
+    if not s:
+        return False, ""
+
     has_letter = regex.search(r"[A-Za-z]", s[1])
-    if not (s and has_letter):
+    if not has_letter:
         return False, ""
 
     p1 = ENGLISH_PRIOR
