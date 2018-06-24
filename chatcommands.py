@@ -793,7 +793,7 @@ def test(content, alias_used="test"):
     site = ""
 
     for segment in content.split():
-        if segment.beginswith("site="):
+        if segment.startswith("site="):
             site = segment[5:]
         else:
             # Stop parsing options at first non-option
