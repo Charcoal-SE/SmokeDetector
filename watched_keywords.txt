@@ -4125,3 +4125,4 @@
 1529869596	Makyen	upwork\.com
 1529869617	Makyen	freelancer\.com
 1529870103	Makyen	smsuvo\.ahmed1
+1529870122	Makyen	mominsuvo\W*(?:AD|AT|@)\W*gmail\W*(?:Dot|\.)\W*com
