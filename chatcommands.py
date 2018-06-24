@@ -792,35 +792,38 @@ def test(content, alias_used="test"):
     result = "> "
     site = ""
 
+    option_count = 0
     for segment in content.split():
         if segment.startswith("site="):
-            site = segment[5:]
+            site = segment[5:].lower()
         else:
             # Stop parsing options at first non-option
             break
+        option_count += 1
+    content = content.split(' ', option_count)[-1]  # Strip parsed options
 
     if alias_used == "test-q":
-        kind = " question."
+        kind = "a question"
         fakepost = Post(api_response={'title': 'Valid title', 'body': content,
                                       'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
                                       'site': site, 'IsAnswer': False, 'score': 0})
     elif alias_used == "test-a":
-        kind = "n answer."
+        kind = "an answer"
         fakepost = Post(api_response={'title': 'Valid title', 'body': content,
                                       'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
                                       'site': site, 'IsAnswer': True, 'score': 0})
     elif alias_used == "test-u":
-        kind = " username."
+        kind = "a username"
         fakepost = Post(api_response={'title': 'Valid title', 'body': "Valid question body",
                                       'owner': {'display_name': content, 'reputation': 1, 'link': ''},
                                       'site': site, 'IsAnswer': False, 'score': 0})
     elif alias_used == "test-t":
-        kind = " title."
+        kind = "a title"
         fakepost = Post(api_response={'title': content, 'body': "Valid question body",
                                       'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
                                       'site': site, 'IsAnswer': False, 'score': 0})
     else:
-        kind = " post, title or username."
+        kind = "a post, title or username"
         fakepost = Post(api_response={'title': content, 'body': content,
                                       'owner': {'display_name': content, 'reputation': 1, 'link': ''},
                                       'site': site, 'IsAnswer': False, 'score': 0})
@@ -828,7 +831,13 @@ def test(content, alias_used="test"):
     reasons, why_response = FindSpam.test_post(fakepost)
 
     if len(reasons) == 0:
-        result += "Would not be caught as a{}".format(kind)
+        result += "Would not be caught as {}".format(kind)
+
+        if site == "chat.stackexchange.com":
+            result += " on this magic userspace"
+        elif len(site) > 0:
+            result += " on site `{}`".format(site)
+        result += "."
     else:
         result += ", ".join(reasons).capitalize()
 
