@@ -790,32 +790,40 @@ def test(content, alias_used="test"):
     :return: A string
     """
     result = "> "
+    site = ""
+
+    for segment in content.split():
+        if segment.beginswith("site="):
+            site = segment[5:]
+        else:
+            # Stop parsing options at first non-option
+            break
 
     if alias_used == "test-q":
         kind = " question."
         fakepost = Post(api_response={'title': 'Valid title', 'body': content,
                                       'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
+                                      'site': site, 'IsAnswer': False, 'score': 0})
     elif alias_used == "test-a":
         kind = "n answer."
         fakepost = Post(api_response={'title': 'Valid title', 'body': content,
                                       'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': True, 'score': 0})
+                                      'site': site, 'IsAnswer': True, 'score': 0})
     elif alias_used == "test-u":
         kind = " username."
         fakepost = Post(api_response={'title': 'Valid title', 'body': "Valid question body",
                                       'owner': {'display_name': content, 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
+                                      'site': site, 'IsAnswer': False, 'score': 0})
     elif alias_used == "test-t":
         kind = " title."
         fakepost = Post(api_response={'title': content, 'body': "Valid question body",
                                       'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
+                                      'site': site, 'IsAnswer': False, 'score': 0})
     else:
         kind = " post, title or username."
         fakepost = Post(api_response={'title': content, 'body': content,
                                       'owner': {'display_name': content, 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
+                                      'site': site, 'IsAnswer': False, 'score': 0})
 
     reasons, why_response = FindSpam.test_post(fakepost)
 
