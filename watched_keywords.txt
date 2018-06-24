@@ -4104,7 +4104,6 @@
 1529687972	Byte Commander	mcerdem82
 1529690038	Makyen	(?:net-)?routerlogin\.net
 1529697546	Andy	data-flair\.training
-1529729969	iBug	keto\W?complete
 1529733521	Makyen	primeloanlice@gmail\.com
 1529750929	iBug	bestvpndeals\.com
 1529753358	Glorfindel	wikisol
