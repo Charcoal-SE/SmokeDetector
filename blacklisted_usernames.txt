@@ -93,3 +93,4 @@ heinrich\W*(?:luitpold\W*)?himmler
 ante\W*paveli[cć]
 ^LGBT representative$
 muh[ae]mm[ae]d\W*the\W*pa?edophile
+^.{1,7}dl?san$
