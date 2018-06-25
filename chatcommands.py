@@ -24,7 +24,7 @@ from html import unescape
 from ast import literal_eval
 # noinspection PyCompatibility
 import regex
-from helpers import only_blacklists_changed, log
+from helpers import only_blacklists_changed, log, expand_shorthand_link
 from classes import Post
 from classes.feedback import *
 
@@ -795,7 +795,7 @@ def test(content, alias_used="test"):
     option_count = 0
     for segment in content.split():
         if segment.startswith("site="):
-            site = segment[5:].lower()
+            site = expand_shorthand_link(segment[5:])
         else:
             # Stop parsing options at first non-option
             break

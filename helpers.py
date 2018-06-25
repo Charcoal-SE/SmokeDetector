@@ -25,6 +25,21 @@ def unique_matches(match):
     return sum(len(m[1:]) == len(set(m[1:])) for m in match)
 
 
+def expand_shorthand_link(s):
+    s = s.lower()
+    if s.endswith("so"):
+        s = s[:-2] + "stackoverflow.com"
+    elif s.endswith("se"):
+        s = s[:-2] + "stackexchange.com"
+    elif s.endswith("su"):
+        s = s[:-2] + "superuser.com"
+    elif s.endswith("sf"):
+        s = s[:-2] + "serverfault.com"
+    elif s.endswith("au"):
+        s = s[:-2] + "askubuntu.com"
+    return s
+
+
 # noinspection PyMissingTypeHints
 def log(log_level, *args):
     levels = {
