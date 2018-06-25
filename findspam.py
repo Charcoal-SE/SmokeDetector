@@ -552,7 +552,6 @@ def watched_ns_for_url_domain(s, site, *args):
         'offshoreracks.com.',
         'sathyats.net.',
         'shared-host.org.',
-        'siteground.us.'
     ])
 
 
