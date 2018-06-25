@@ -4127,3 +4127,4 @@
 1529870103	Makyen	smsuvo\.ahmed1
 1529870122	Makyen	mominsuvo\W*(?:AD|AT|@)\W*gmail\W*(?:Dot|\.)\W*com
 1529870135	Makyen	[a-z_]*88[\W_]*017[\W_]*2142[\W_]*2660[a-z_]*
+1529892233	Rob	bookmaker-foot.weebly\.com
