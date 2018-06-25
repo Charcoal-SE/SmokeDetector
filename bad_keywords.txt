@@ -1414,3 +1414,4 @@ btcc?ngame
 [a-z_]*(?:1_*)?404[\W_]*400[\W_]*4210[a-z_]*
 REAL profit from their business
 keto\W?complete
+keto\W?kara
