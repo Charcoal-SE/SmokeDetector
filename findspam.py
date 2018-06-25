@@ -543,6 +543,7 @@ def watched_ns_for_url_domain(s, site, *args):
         {'duke.ns.cloudflare.com.', 'lola.ns.cloudflare.com.'},
         {'ernest.ns.cloudflare.com.', 'pat.ns.cloudflare.com.'},
         {'greg.ns.cloudflare.com.', 'kia.ns.cloudflare.com.'},
+        {'kia.ns.cloudflare.com.', 'noah.cs.cloudflare.com.'},
         {'lee.ns.cloudflare.com.', 'ulla.ns.cloudflare.com.'},
         {'mark.ns.cloudflare.com.', 'wanda.ns.cloudflare.com.'},
         {'norm.ns.cloudflare.com.', 'olga.ns.cloudflare.com.'},
