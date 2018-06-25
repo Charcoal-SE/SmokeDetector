@@ -4158,4 +4158,4 @@
 1529930217	tripleee	adarose\d*
 1529932065	tripleee	voipterminator\.com
 1529932642	tripleee	itabix.com
-1529937637	iBug	tgig.ir
+1529937637	iBug	tgig\.ir
