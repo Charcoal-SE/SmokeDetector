@@ -1505,14 +1505,6 @@ class FindSpam:
         {'method': malicious_link, 'all': True, 'sites': [], 'reason': 'misleading link', 'title': False,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False,
          'max_rep': 10, 'max_score': 1},
-
-        # Japanese Proper Case Posts on RPG etc
-        {'regex': r'((?:(?:[A-Z][a-z]*\W+(?:\d+\W+)?){5,}([a-z]+\W+)?)Japan)',
-         'all': True, 'sites': ['ja.stackoverflow.com', 'japanese.stackexchange.com'],
-         'reason': "Dominantly Proper Case Sequence Mentioning Japan in {}",
-         'title': False, 'body': True, 'username': False,
-         'stripcodeblocks': True, 'body_summary': True,
-         'max_rep': 1, 'max_score': 1}
     ]
 
     # Toxic content using Perspective
