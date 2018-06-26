@@ -4176,3 +4176,4 @@
 1530013058	tripleee	[a-z_]*(?:91_*)?9505066323[a-z_]*
 1530013098	tripleee	iteducationalexperts\.com
 1530014505	tripleee	melvin\W+lim\W+centennial
+1530055610	Makyen	bluestacks\.vip
