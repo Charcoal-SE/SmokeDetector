@@ -4175,3 +4175,4 @@
 1530008707	A J	mtrac\.in
 1530009277	tripleee	everydayhealth\.com
 1530011991	tripleee	[a-z_]*(?:1_*)?876[\W_]*731[\W_]*9666[a-z_]*
+1530012016	tripleee	sndp\W*ln
