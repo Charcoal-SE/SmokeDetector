@@ -4196,3 +4196,4 @@
 1530088634	tripleee	[a-z_]*(?:86_*)?132[\W_]*659[\W_]*51996[a-z_]*
 1530088659	tripleee	minkhair\.com
 1530090657	Mithrandir	^.{1,15}(?!ice\W?)cream$
+1530094689	tripleee	vpntracker\.com
