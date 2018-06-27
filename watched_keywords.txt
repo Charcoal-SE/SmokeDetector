@@ -4198,3 +4198,4 @@
 1530090657	Mithrandir	^.{1,15}(?!ice\W?)cream$
 1530094689	tripleee	vpntracker\.com
 1530097303	paper1111	radiustheme\.com
+1530102128	tripleee	mykindofjob\.com
