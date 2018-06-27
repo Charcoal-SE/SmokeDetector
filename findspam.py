@@ -746,7 +746,7 @@ def mostly_dots(s, *args):
         return False, ""
 
     # Strip code blocks here rather than with `stripcodeblocks` so we get the length of the whole post
-    body = regex.sub("(?s)<pre>.*?</pre>", "", s)
+    body = regex.sub("(?s)<pre([\w=\" -]*)?>.*?</pre>", "", s)
     body = regex.sub("(?s)<code>.*?</code>", "", body)
 
     body = strip_urls_and_tags(body)
