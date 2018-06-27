@@ -3995,7 +3995,6 @@
 1529249435	Zoe	jews\W*destroy\W*everything
 1529290491	WELZ	noahidenews\.com
 1529293135	Makyen	seicoder\.com
-1529301421	tripleee	promo\W*code
 1529301444	tripleee	benetizen\.com
 1529304638	tripleee	iteci\.ca
 1529304649	tripleee	icutit\.ca
