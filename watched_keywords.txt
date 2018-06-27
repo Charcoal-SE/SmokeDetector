@@ -4184,3 +4184,11 @@
 1530082243	tripleee	yonder-music\.com
 1530082243	tripleee	youngfree\.co
 1530082243	tripleee	vshare\.win
+1530083455	tripleee	apkmajor\.com
+1530083455	tripleee	apkxios\.com
+1530083455	tripleee	getitube\.com
+1530083455	tripleee	gettutuapp\.com
+1530083455	tripleee	task-bucks\.com
+1530083455	tripleee	tutu-app\.com
+1530083455	tripleee	happychick\.vip
+1530083455	tripleee	showbox\.ooo
