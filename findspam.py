@@ -519,9 +519,6 @@ def ns_for_url_domain(s, site, nslist, *args):
 def bad_ns_for_url_domain(s, site, *args):
     return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name!
-        # {'dns1.namecheaphosting.com.', 'dns2.namecheaphosting.com.'},
-        # {'dns11.namecheaphosting.com.', 'dns12.namecheaphosting.com.'},
-        'namecheaphosting.com.',
         {'ns1.md-95.bigrockservers.com.', 'ns2.md-95.bigrockservers.com.'},
         {'ns1.md-99.bigrockservers.com.', 'ns2.md-99.bigrockservers.com.'},
         {'apollo.ns.cloudflare.com.', 'liz.ns.cloudflare.com.'},
@@ -535,6 +532,9 @@ def bad_ns_for_url_domain(s, site, *args):
 def watched_ns_for_url_domain(s, site, *args):
     return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name here either!
+        # {'dns1.namecheaphosting.com.', 'dns2.namecheaphosting.com.'},
+        # {'dns11.namecheaphosting.com.', 'dns12.namecheaphosting.com.'},
+        'namecheaphosting.com.',
         {'adi.ns.cloudflare.com.', 'miles.ns.cloudflare.com.'},
         {'ajay.ns.cloudflare.com.', 'lia.ns.cloudflare.com.'},
         {'betty.ns.cloudflare.com.', 'kai.ns.cloudflare.com.'},
