@@ -4211,3 +4211,4 @@
 1530174499	Makyen	shineads\.in
 1530174508	Makyen	shineartsdesigns\.com
 1530174516	Makyen	shineprints\.in
+1530174564	Makyen	Shine\W?Ads
