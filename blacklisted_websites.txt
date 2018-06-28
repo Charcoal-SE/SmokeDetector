@@ -2066,3 +2066,4 @@ locutortv\.es
 bestvpndeals\.com
 sibiamedicalcentre\.com
 skinhealthcanada\.wordpress\.com
+skinhealthcanada\.ca
