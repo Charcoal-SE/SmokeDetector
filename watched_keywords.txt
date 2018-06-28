@@ -4212,6 +4212,5 @@
 1530174508	Makyen	shineartsdesigns\.com
 1530174516	Makyen	shineprints\.in
 1530174564	Makyen	Shine\W?Ads
-1530175905	Mithrandir	^(?!user)[a-z]{1,6}[0-9]{4}$
 1530176214	Mithrandir	http://slickdealsindia.com
 1530176278	Mithrandir	slickdealsindia\.com
