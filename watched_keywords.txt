@@ -4212,7 +4212,6 @@
 1530174564	Makyen	Shine\W?Ads
 1530176214	Mithrandir	http://slickdealsindia.com
 1530176278	Mithrandir	slickdealsindia\.com
-1530176578	Mithrandir	^(?!user)[a-z]{4,6}19[0-9]{2}$
 1530182195	tripleee	rajbhasha\.net
 1530186147	Mithrandir	olivehealthandtravel\.co\.uk
 1530186186	Mithrandir	 Olive\W?Health\W?Travel\W?Clinic
