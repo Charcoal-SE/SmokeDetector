@@ -4213,3 +4213,4 @@
 1530176214	Mithrandir	http://slickdealsindia.com
 1530176278	Mithrandir	slickdealsindia\.com
 1530176578	Mithrandir	^(?!user)[a-z]{4,6}19[0-9]{2}$
+1530182195	tripleee	rajbhasha\.net
