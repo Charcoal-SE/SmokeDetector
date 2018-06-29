@@ -3365,7 +3365,6 @@
 1526287348	Glorfindel	cryptodoubler\.io
 1526291698	Glorfindel	deletebrowsinghistory\.net
 1526291710	Glorfindel	foxdownload\.org
-1526292521	tripleee	onlinequickbooks\.online
 1526293294	tripleee	apkpure\.in
 1526294306	paper1111	smiline\.com
 1526302997	Glorfindel	freeandroidroot\.com
