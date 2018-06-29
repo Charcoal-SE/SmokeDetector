@@ -3789,7 +3789,6 @@
 1528231607	Makyen	pickyassist\.com
 1528231640	Makyen	currencycapital@yahoo\.com
 1528231848	Makyen	luckypatchergames\.com
-1528263597	tripleee	[a-z_]*(?:1_*)?877[\W_]*521[\W_]*2086[a-z_]*
 1528270974	Glorfindel	stateoforigini\.uk
 1528271026	Glorfindel	state\W?of\W?origin\W?\d+
 1528276406	Glorfindel	isbirecruitment\.com
