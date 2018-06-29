@@ -2488,7 +2488,7 @@
 1520571069	micsthepick	golden\Whemp
 1520573592	K.Dᴀᴠɪs	yellowpill\.co\.uk
 1520577588	K.Dᴀᴠɪs	brilliant-lightinggroup\.com
-1520578078	tripleee	apkpureapps.com
+1520578078	tripleee	apkpureapps\.com
 1520581308	Glorfindel	shiv-chemicals\.com
 1520581532	tripleee	verionfloors\.com
 1520588993	Glorfindel	iiceducation\.in
@@ -4141,7 +4141,7 @@
 1529930183	tripleee	[a-z_]*(?:08_*)?9335[\W_]*8310[a-z_]*
 1529930217	tripleee	adarose\d*
 1529932065	tripleee	voipterminator\.com
-1529932642	tripleee	itabix.com
+1529932642	tripleee	itabix\.com
 1529943700	Glorfindel	24freelancernews\.blogspot\.com
 1529959496	Makyen	employeestockoptions\.com
 1529970016	Makyen	chathelp\.org
@@ -4233,4 +4233,4 @@
 1530265437	tripleee	asiansealing\.in
 1530267177	tripleee	snow\W?teeth
 1530269228	tripleee	[a-z_]*(?:1_*)?414[\W_]*454[\W_]*9493[a-z_]*
-1530270472	tripleee	sphere.social
+1530270472	tripleee	sphere\.social
