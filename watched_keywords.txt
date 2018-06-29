@@ -3946,7 +3946,6 @@
 1528962566	Glorfindel	stubborne\.com
 1528962803	tripleee	9971527752(?#phone)
 1528966872	Mithrandir	Auction\W?Factory
-1528967751	tripleee	res\W?q
 1528975550	tripleee	soapandcosmeticclasses
 1528977870	tripleee	smartinfomation\.com
 1528980084	Ashish Ahuja	caidentistry\.com
