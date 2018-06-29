@@ -61,7 +61,6 @@ class Flovis:
         if data is not None:
             msg_data['data'] = data
 
-        retries = 0  # Tracker for communication retry attempts
         for retries in range(1, 5):
             try:
                 if self.ws is not None:
