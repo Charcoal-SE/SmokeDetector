@@ -61,5 +61,14 @@ class Flovis:
         if data is not None:
             msg_data['data'] = data
 
-        if self.ws is not None:
-            self.ws.send(json.dumps(msg_data))
+        retries = 0  # Tracker for communication retry attempts
+        for retries in range(1, 5):
+            try:
+                if self.ws is not None:
+                    self.ws.send(json.dumps(msg_data))
+                break
+            except websocket.WebSocketConnectionClosedException:
+                if retries == 5:
+                    raise  # Actually raise the initial error if we've exceeded number of init retries
+
+                self._init_websocket()
