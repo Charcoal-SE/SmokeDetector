@@ -2474,7 +2474,6 @@
 1520426778	WELZ	threadsphere\.bid
 1520437008	Mithrandir	bubbly\W?hub
 1520451040	Glorfindel	thedaonline\.com
-1520490863	K.Dᴀᴠɪs	janbasktraining\.com
 1520492914	tripleee	91\W*9911\W*001197
 1520493341	K.Dᴀᴠɪs	cairo-glitz\.com
 1520495291	tripleee	paperown\.com
@@ -3051,7 +3050,6 @@
 1524466693	tripleee	topnewshindi\.com
 1524476901	Zoe	clicksbazaar\.com
 1524472318	Tetsuya Yamamoto	exirsalt\.com
-1524410980	Zoe	iranzirnevis\.com
 1524485507	tripleee	amazonprimenumber\.com
 1524486066	tripleee	chargiesapp\.com
 1524487136	tripleee	forskohlii
@@ -3620,7 +3618,6 @@
 1527500092	Glorfindel	allinonejobs\.com
 1527500593	Glorfindel	seracode\.com
 1527503743	tripleee	cloudsmtpservers\.com
-1527504501	J F	fordcreditcentre\.com
 1527507636	J F	brilliantwms\.com
 1527509556	tripleee	recro\.io
 1527520037	Videonauth	avalmoshaver\.com
