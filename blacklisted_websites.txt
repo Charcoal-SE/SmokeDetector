@@ -2070,3 +2070,4 @@ skinhealthcanada\.ca
 hacklike\.mobi
 onlinequickbooks\.online
 chicagoknifeworks\.com
+bestitsm\.wordpress\.com
