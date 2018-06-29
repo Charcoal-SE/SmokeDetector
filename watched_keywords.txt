@@ -409,7 +409,7 @@
 1500275469	tripleee	nooflex
 1500275606	tripleee	2348038324478
 1500275750	tripleee	2348099533810
-1500276223	Glorfindel	icloud-unlock.page4.me
+1500276223	Glorfindel	icloud-unlock\.page4\.me
 1500276272	Glorfindel	icloudhelpcare\.weebly\.com
 1500276693	tripleee	organizacionempresa\.xyz
 1500283108	Mithrandir	kacakbahisrehber\.com
@@ -515,8 +515,8 @@
 1501156550	JoErNanO	idealservicesindia@yahoo\.com
 1501160358	Mithrandir	starpestcontrol\.ca
 1501160616	Mithrandir	blackhatethicalhacking\.com
-1501166479	Mithrandir	koyoele.in
-1501175814	quartata	couppay.ind.in
+1501166479	Mithrandir	koyoele\.in
+1501175814	quartata	couppay\.ind\.in
 1501250114	Glorfindel	wklaw\.com
 1501278997	doppelgreener	modup\.net
 1501323411	Glorfindel	kellytechno\.com
@@ -1785,7 +1785,7 @@
 1512542272	Tetsuya Yamamoto	globallogic\.com
 1512542914	Tetsuya Yamamoto	wolkwill\.com
 1512544090	paper1111	askopinion\.com
-1512523714	Tetsuya Yamamoto	xinhepackaging.com
+1512523714	Tetsuya Yamamoto	xinhepackaging\.com
 1512554567	Glorfindel	writemyessay\.pro
 1512560605	Suraj Rao	monstertut\.com
 1512563575	Glorfindel	towncalendars\.com
@@ -1988,7 +1988,7 @@
 1514532206	Glorfindel	agcustoms\.net
 1514538530	Glorfindel	gamatasli\.com
 1514538609	Glorfindel	ahlinyaobatmaag\.com
-1514538653	Glorfindel	\w*jellygamat.com
+1514538653	Glorfindel	\w*jellygamat\.com
 1514543789	Glorfindel	uniformonline\.com
 1514605149	paper1111	mylifeshirt\.com
 1514613278	paper1111	iuktvnowapk\.com
@@ -2004,7 +2004,7 @@
 1514884605	Glorfindel	hcbeauty\.net
 1514889457	Glorfindel	myvisioninteriordesign\.com
 1514901509	Glorfindel	approvedreviewz\.com
-1514940545	iBug	tekerleklisandalyemiz.com
+1514940545	iBug	tekerleklisandalyemiz\.com
 1514974670	Glorfindel	2ip\.io
 1514982009	Glorfindel	bcz\.com
 1514982505	paper1111	officegx\.com
@@ -2026,7 +2026,7 @@
 1515148138	Glorfindel	sparkinfosys
 1515149422	Glorfindel	payghanta\.com
 1515160326	Glorfindel	btc2double\.com
-1515177389	DJMcMayhem	subnetcalculator.in
+1515177389	DJMcMayhem	subnetcalculator\.in
 1515180852	Glorfindel	cfpfinaltv\.com
 1515180881	Glorfindel	wwewrestlemania\d+\.com
 1515227937	paper1111	flexboxcssgrid\.com
@@ -2040,7 +2040,7 @@
 1515329300	paper1111	parsjarsaghil\.com
 1515332887	paper1111	mybtechprojects\.tech
 1515366163	paper1111	0and7\.com
-1515390716	micsthepick	testrot3male.co.uk
+1515390716	micsthepick	testrot3male\.co\.uk
 1515406704	Glorfindel	servostabilizer
 1515407786	Glorfindel	tswitat\.com
 1515408172	Glorfindel	aadarshconstructions
@@ -2138,13 +2138,12 @@
 1516266687	Glorfindel	eforfun\.com
 1516281191	paper1111	styleup\.ir
 1516282128	paper1111	ben-solutions\.com
-1516284477	Byte Commander	bonzi.link
+1516284477	Byte Commander	bonzi\.link
 1516385879	WELZ	sarkariresultgov\.com
 1516368786	WELZ	parswebserver\.com
 1516437509	Nisse Engström	adaniaffordables\.in
 1516469276	Nisse Engström	studymanger\.com
 1516541243	paper1111	macos-download\.org
-1516559784	WELZ	apmov.ir
 1516573986	WELZ	rightfamilydentalny\.com
 1516559796	WELZ	apmov\.ir
 1516605325	Tetsuya Yamamoto	backupmytumblr\.com
@@ -2244,7 +2243,7 @@
 1517486345	Glorfindel	twilightraven\.com
 1517492687	Glorfindel	superracing3d
 1517495591	Glorfindel	children\W?enjoyment\W?brisbane
-1517550030	NobodyNada	janbasktraining.com
+1517550030	NobodyNada	janbasktraining\.com
 1517568550	iBug	multitechnosys\.com
 1517580973	Glorfindel	londonlogodesigns\.co
 1517584302	Glorfindel	errspdyprotocolerror\.com
@@ -2301,7 +2300,7 @@
 1518429126	paper1111	hakankocaman\.com
 1518429862	Byte Commander	crack\Wkeygen
 1518438959	iBug	nova\W?repair
-1518443095	iBug	socialprac(?:ha|ah)r.com
+1518443095	iBug	socialprac(?:ha|ah)r\.com
 1518448208	Glorfindel	mcessay\.com
 1518448665	doppelgreener	\w*essay\w*\.com?
 1518459067	WELZ	alarmasalicante\.info
@@ -2943,7 +2942,7 @@
 1523804805	WELZ	expressbags\.in
 1523805148	Glorfindel	bitcoinprivatekey\.weebly\.com
 1523813466	Olivia Zoe	hentaimangaly\.com
-1523843390	quartata	irctctatkalsoftware.co.in
+1523843390	quartata	irctctatkalsoftware\.co\.in
 1523868951	Glorfindel	guldcoin
 1523870228	Mithrandir	\$ex\W?drive
 1523870244	Glorfindel	originalapk\.com
@@ -2964,7 +2963,7 @@
 1523939551	tripleee	pure\W?ravishing
 1523943058	tripleee	acewebacademy\.com
 1523947131	tripleee	codingpill\.com
-1523950508	Glorfindel	truerating.com
+1523950508	Glorfindel	truerating\.com
 1523955579	Glorfindel	humboldtmarijuanashop\.com
 1523956008	Ashish Ahuja	car\W?insurance\W?dallas\W?texas
 1523957840	tripleee	helpdeskphone\.com
@@ -2983,7 +2982,7 @@
 1524046885	tripleee	casinoscroll\.com
 1524048066	tripleee	der\W+Jude
 1524048079	tripleee	die\W+Juden
-1524055892	WELZ	codexking.com
+1524055892	WELZ	codexking\.com
 1524056394	tripleee	becomegorgeous\.com
 1524108897	tripleee	swiftcoin\.tech
 1524108914	tripleee	joysticksensor\.com
@@ -3040,7 +3039,7 @@
 1524275997	Makyen	maryabbate128
 1524409674	WELZ	pogo-supportcenter\.com
 1524409835	WELZ	pogo\W?support
-1524410965	WELZ	iranzirnevis.com
+1524410965	WELZ	iranzirnevis\.com
 1524413303	Zoe	miniairdrone\.com
 1524416572	Zoe	gamedevtycoonapk\.online
 1524416551	Zoe	simcitymodapk\.info
@@ -3057,14 +3056,14 @@
 1524486066	tripleee	chargiesapp\.com
 1524487136	tripleee	forskohlii
 1524497116	Zoe	mp3juice\.media
-1524498119	WELZ	tubeanew.com
+1524498119	WELZ	tubeanew\.com
 1524500778	Makyen	supravat
 1524502412	Makyen	idclipseifalmyname
-1524513574	WELZ	hotstarl.com
+1524513574	WELZ	hotstarl\.com
 1524532810	Makyen	grantdavid635
 1524533169	Makyen	[a-z_]*(?:1_*)?717[\W_]*316[\W_]*8194[a-z_]*
 1524533921	WELZ	wealth\W?recovery\W?\d\d
-1524540572	DJMcMayhem	tourismthailand.org
+1524540572	DJMcMayhem	tourismthailand\.org
 1524542974	tripleee	eeewallet\.com
 1524543348	tripleee	biptut\.com
 1524552388	K.Dᴀᴠɪs	optimalgeek\.com
@@ -3088,7 +3087,7 @@
 1524651566	tripleee	payday\W?loans
 1524659555	Byte Commander	stationcoin\.co
 1524659660	Byte Commander	tradesatoshi\.com
-1524665381	WELZ	securabilityprotection.com
+1524665381	WELZ	securabilityprotection\.com
 1524674148	WELZ	(sex sex )+
 1524674425	Zoe	tweaking\.com
 1524679286	Zoe	quickbookcontactnumber\.com
@@ -3205,7 +3204,7 @@
 1525351695	Glorfindel	theusindependence\.com
 1525356679	Thomas Ward	originmenuboards\.com
 1525358390	WELZ	247arlo\.com
-1525367929	WELZ	nonstopsigns.com
+1525367929	WELZ	nonstopsigns\.com
 1525376252	Zoe	tenta\.com
 1525376903	Zoe	atsynch\.com
 1525393087	WELZ	liveitvs\.com
@@ -3621,7 +3620,7 @@
 1527500092	Glorfindel	allinonejobs\.com
 1527500593	Glorfindel	seracode\.com
 1527503743	tripleee	cloudsmtpservers\.com
-1527504501	J F	fordcreditcentre.com
+1527504501	J F	fordcreditcentre\.com
 1527507636	J F	brilliantwms\.com
 1527509556	tripleee	recro\.io
 1527520037	Videonauth	avalmoshaver\.com
@@ -3752,7 +3751,7 @@
 1528080710	NobodyNada	\L<city>\Wescorts?
 1528080906	Makyen	union\.ic\.ac\.uk
 1528080916	Makyen	jagonyaobatherbal
-1528092627	Makyen	instantcreditloansus.com
+1528092627	Makyen	instantcreditloansus\.com
 1528096927	tripleee	client360\.in
 1528100563	tripleee	kingrootapkapp\.com
 1528101328	Glorfindel	customer-care-tollfree\.com
@@ -3837,7 +3836,7 @@
 1528476655	Makyen	test-dpc-apk\.com
 1528480689	NobodyNada	ca(vs|valiers)?vswarriors
 1528480707	Glorfindel	fourfinal\.ca
-1528492615	NobodyNada	printerssupport.org
+1528492615	NobodyNada	printerssupport\.org
 1528492662	NobodyNada	felixmbouna57@gmail\.com
 1528501987	Makyen	[a-z_]*(?:1_*)?800[\W_]*916[\W_]*9563[a-z_]*
 1528507831	Makyen	plex\.software
@@ -4114,7 +4113,7 @@
 1529870103	Makyen	smsuvo\.ahmed1
 1529870122	Makyen	mominsuvo\W*(?:AD|AT|@)\W*gmail\W*(?:Dot|\.)\W*com
 1529870135	Makyen	[a-z_]*88[\W_]*017[\W_]*2142[\W_]*2660[a-z_]*
-1529892233	Rob	bookmaker-foot.weebly\.com
+1529892233	Rob	bookmaker-foot\.weebly\.com
 1529900566	tripleee	brighten\W?facial
 1529900606	tripleee	lean\W?belly
 1529903831	Makyen	youtubego\.me
@@ -4202,7 +4201,6 @@
 1530174508	Makyen	shineartsdesigns\.com
 1530174516	Makyen	shineprints\.in
 1530174564	Makyen	Shine\W?Ads
-1530176214	Mithrandir	http://slickdealsindia.com
 1530176278	Mithrandir	slickdealsindia\.com
 1530182195	tripleee	rajbhasha\.net
 1530186147	Mithrandir	olivehealthandtravel\.co\.uk
