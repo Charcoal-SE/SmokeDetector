@@ -526,6 +526,7 @@ def bad_ns_for_url_domain(s, site, *args):
         {'chip.ns.cloudflare.com.', 'lola.ns.cloudflare.com.'},
         {'lloyd.ns.cloudflare.com.', 'reza.ns.cloudflare.com.'},
         '247support-number.com.',
+        'promoocodes.com.',
     ])
 
 
