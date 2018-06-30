@@ -1231,10 +1231,12 @@ def checkpost(msg, args, alias_used='scan'):
 
         if post_data is None:
             response.append((index, "That does not look like a valid post URL."))
+            continue
 
         if post_data is False:
             response.append((index, "Cannot find data for this post in the API. "
                                     "It may have already been deleted."))
+            continue
 
         # Update url to be consistent with other code
         url = to_protocol_relative(post_data.post_url)
@@ -1251,6 +1253,7 @@ def checkpost(msg, args, alias_used='scan'):
                 response.append((index, response_text + " [ [MS]({}) ]".format(ms_link)))
             else:
                 response.append((index, response_text + "."))
+            continue
 
         if fetch_post_id_and_site_from_url(url)[2] == "answer":
             parent = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
