@@ -1200,8 +1200,8 @@ def report(msg, args):
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
-@command(str, whole_msg=True, give_name=True, aliases=['scan', 'test-p'])
-def checkpost(msg, args, alias_used='scan'):
+@command(str, whole_msg=True)
+def scan(msg, args):
     """
     Force Smokey to scan a post even if it has no recent activity
     :param msg:
@@ -1210,11 +1210,11 @@ def checkpost(msg, args, alias_used='scan'):
     """
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
-        raise CmdException("You can execute the !!/{0} command again in {1} seconds. "
+        raise CmdException("You can execute the !!/scan command again in {1} seconds. "
                            "To avoid one user sending lots of reports in a few commands and "
                            "slowing SmokeDetector down due to rate-limiting, you have to "
                            "wait 30 seconds after you've scanned multiple posts in "
-                           "one go.".format(alias_used, wait))
+                           "one go.".format(wait))
 
     urls = args.split()
 
