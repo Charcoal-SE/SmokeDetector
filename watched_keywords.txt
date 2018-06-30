@@ -4238,3 +4238,4 @@
 1529923214	A J	tiaracle\.com
 1530346826	Makyen	wizardcyprushacker(?:@gmail.com)?
 1530349477	Makyen	tops-int\.com
+1530352029	Makyen	organic\W?fungus\W?nuker
