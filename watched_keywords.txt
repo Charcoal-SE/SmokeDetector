@@ -1318,7 +1318,7 @@
 1509355242	tripleee	caliber\.com
 1509355872	tripleee	howtotoken\.com
 1509364669	Mithrandir	arabiandesertdubai\.com
-1509365424	Mithrandir	maleenhancement.{1 7}\..{2 4}
+1509365424	Mithrandir	maleenhancement.{1,7}\..{2,4}
 1509365875	Mithrandir	kyreniataxi\.com
 1509367535	tripleee	(?:1\W*)?610\W*634\W*2968
 1509371974	Glorfindel	i-zon\.in
@@ -4112,7 +4112,6 @@
 1529870135	Makyen	[a-z_]*88[\W_]*017[\W_]*2142[\W_]*2660[a-z_]*
 1529892233	Rob	bookmaker-foot\.weebly\.com
 1529900566	tripleee	brighten\W?facial
-1529900606	tripleee	lean\W?belly
 1529903831	Makyen	youtubego\.me
 1529904284	tripleee	jtfreshly\.co\.uk
 1529905750	tripleee	OSRSA10
@@ -4231,3 +4230,13 @@
 1530270472	tripleee	sphere\.social
 1530285951	Makyen	9518692718
 1530285959	Makyen	socialaddworld\.us\.com
+1530317828	Makyen	supportantivirus\.org
+1530340477	Makyen	codegigs\.app
+1530345013	Makyen	bestringtonesfree\.net
+1530345112	Makyen	watchstreamvsliveonline\.com
+1529923214	A J	tiaracle\.com
+1530346826	Makyen	wizardcyprushacker(?:@gmail.com)?
+1530349477	Makyen	tops-int\.com
+1530352029	Makyen	organic\W?fungus\W?nuker
+1530352385	Makyen	yeshopy\.com
+1530356724	iBug	dhflinsurance\.com
