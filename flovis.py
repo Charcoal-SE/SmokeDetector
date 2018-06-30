@@ -69,5 +69,5 @@ class Flovis:
             except websocket.WebSocketConnectionClosedException:
                 if retries == 5:
                     raise  # Actually raise the initial error if we've exceeded number of init retries
-
+                self.ws = None
                 self._init_websocket()
