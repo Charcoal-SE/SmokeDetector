@@ -1201,7 +1201,7 @@ def report(msg, args):
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 @command(str, whole_msg=True, give_name=True, aliases=['scan', 'test-p'])
-def checkpost(msg, args, alias_used='scan'):  # FIXME: Currently does not support batch report
+def checkpost(msg, args, alias_used='scan'):
     """
     Force Smokey to scan a post even if it has no recent activity
     :param msg:
@@ -1213,13 +1213,20 @@ def checkpost(msg, args, alias_used='scan'):  # FIXME: Currently does not suppor
         raise CmdException("You can execute the !!/{0} command again in {1} seconds. "
                            "To avoid one user sending lots of reports in a few commands and "
                            "slowing SmokeDetector down due to rate-limiting, you have to "
-                           "wait 30 seconds after you've reported multiple posts in "
+                           "wait 30 seconds after you've scanned multiple posts in "
                            "one go.".format(alias_used, wait))
 
     urls = args.split()
+
+    if len(urls) > 5:
+        raise CmdException("To avoid SmokeDetector reporting posts too slowly, you can "
+                           "scan at most 5 posts at a time. This is to avoid "
+                           "SmokeDetector's chat messages getting rate-limited too much, "
+                           "which would slow down reports.")
+
     response = []
 
-    for url in urls:
+    for index, url in enumerate(urls):
         post_data = api_get_post(rebuild_str(url))
 
         if post_data is None:
@@ -1263,8 +1270,9 @@ def checkpost(msg, args, alias_used='scan'):  # FIXME: Currently does not suppor
         return None
     elif len(response) == 1:
         return response[0][1]
-    else
-        return "\n".join("URL {}: {}".format(response_item) for response_item in response)
+    else:
+        return "\n".join("URL {}: {}".format(index + 1, text) for index, text in response)
+
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 @command(str, whole_msg=True, privileged=True, aliases=['reportuser'])
