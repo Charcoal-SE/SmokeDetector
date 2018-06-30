@@ -1201,7 +1201,7 @@ def report(msg, args):
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 @command(str, whole_msg=True, give_name=True, aliases=['scan', 'test-p'])
-def checkpost(msg, url, alias_used='scan'):  # FIXME: Currently does not support batch report
+def checkpost(msg, args, alias_used='scan'):  # FIXME: Currently does not support batch report
     """
     Force Smokey to scan a post even if it has no recent activity
     :param msg:
@@ -1216,45 +1216,55 @@ def checkpost(msg, url, alias_used='scan'):  # FIXME: Currently does not support
                            "wait 30 seconds after you've reported multiple posts in "
                            "one go.".format(alias_used, wait))
 
-    post_data = api_get_post(rebuild_str(url))
+    urls = args.split()
+    response = []
 
-    if post_data is None:
-        raise CmdException("That does not look like a valid post URL.")
+    for url in urls:
+        post_data = api_get_post(rebuild_str(url))
 
-    if post_data is False:
-        raise CmdException("Cannot find data for this post in the API. "
-                           "It may have already been deleted.")
+        if post_data is None:
+            response.append((index, "That does not look like a valid post URL."))
 
-    # Update url to be consistent with other code
-    url = to_protocol_relative(post_data.post_url)
-    post = Post(api_response=post_data.as_dict)
+        if post_data is False:
+            response.append((index, "Cannot find data for this post in the API. "
+                                    "It may have already been deleted."))
 
-    if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) \
-            and not is_false_positive((post_data.post_id, post_data.site)):
-        # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
-        # this force scan might be attempting to correct that/fix a mistake/etc.
+        # Update url to be consistent with other code
+        url = to_protocol_relative(post_data.post_url)
+        post = Post(api_response=post_data.as_dict)
 
-        response_text = "This post is already recently reported"
-        if GlobalVars.metasmoke_key is not None:
-            ms_link = "https://m.erwaysoftware.com/posts/by-url?url={}".format(url)  # se_link == url
-            raise CmdException(response_text + " [ [MS]({}) ]".format(ms_link))
-        else:
-            raise CmdException(response_text + ".")
+        if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) \
+                and not is_false_positive((post_data.post_id, post_data.site)):
+            # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
+            # this force scan might be attempting to correct that/fix a mistake/etc.
 
-    if fetch_post_id_and_site_from_url(url)[2] == "answer":
-        parent = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
+            response_text = "This post is already recently reported"
+            if GlobalVars.metasmoke_key is not None:
+                ms_link = "https://m.erwaysoftware.com/posts/by-url?url={}".format(url)  # se_link == url
+                response.append((index, response_text + " [ [MS]({}) ]".format(ms_link)))
+            else:
+                response.append((index, response_text + "."))
 
-        post._is_answer = True
-        post._parent = Post(api_response=parent.as_dict)
+        if fetch_post_id_and_site_from_url(url)[2] == "answer":
+            parent = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
 
-    is_spam, reasons, why = check_if_spam(post)
+            post._is_answer = True
+            post._parent = Post(api_response=parent.as_dict)
 
-    if is_spam:
-        handle_spam(post=post, reasons=reasons, why=why + "\nManually triggered scan")
+        is_spam, reasons, why = check_if_spam(post)
+
+        if is_spam:
+            handle_spam(post=post, reasons=reasons, why=why + "\nManually triggered scan")
+            continue
+
+        response.append((index, "Post [{}]({}) does not look like spam.".format(sanitize_title(post_data.title), url)))
+
+    if len(response) == 0:
         return None
-
-    return "Post [{}]({}) does not look like spam.".format(sanitize_title(post_data.title), url)
-
+    elif len(response) == 1:
+        return response[0][1]
+    else
+        return "\n".join("URL {}: {}".format(response_item) for response_item in response)
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
 @command(str, whole_msg=True, privileged=True, aliases=['reportuser'])
