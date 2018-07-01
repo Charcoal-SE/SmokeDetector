@@ -130,5 +130,10 @@ def post_id_from_link(link):
         return None
 
 
+def to_metasmoke_link(post_url):
+    return r"https://m.erwaysoftware.com/posts/uid/{}/{}".format(
+        api_parameter_from_link(post_url), post_id_from_link(post_url))
+
+
 class SecurityError(Exception):
     pass
