@@ -1198,7 +1198,7 @@ def report(msg, args, alias_used="report"):
 
         # scan_spam == False and alias_used == "scan"
         else:
-            output.append("Post {}: This does not look like spam")
+            output.append("Post {}: This does not look like spam".format(index))
 
     if 1 < len(urls) > len(output):
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())

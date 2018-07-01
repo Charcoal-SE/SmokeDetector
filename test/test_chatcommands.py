@@ -155,14 +155,37 @@ def test_report(handle_spam):
             "Post 1: Could not find data for this post in the API. It may already have been deleted."
 
         # Valid post
+        assert chatcommands.report('https://stackoverflow.com/a/1732454', original_msg=msg, alias_used="scan") == \
+            "Post 1: This does not look like spam"
         assert chatcommands.report('https://stackoverflow.com/a/1732454', original_msg=msg, alias_used="report") is None
 
-        _, call = handle_spam.call_args_list[0]
+        _, call = handle_spam.call_args_list[-1]
         assert isinstance(call["post"], Post)
         assert call["reasons"] == ["Manually reported answer"]
         assert call["why"] == (
             "Post manually reported by user *El'endia Starman* in room *Charcoal HQ*."
             "\n\nThis post would not have been caught otherwise."
+        )
+
+        # Bad post
+        # This post is found in Sandbox Archive, so it will remain intact and is a reliable test post  
+        # backup: https://meta.stackexchange.com/a/228635  
+        test_post_url = "https://meta.stackexchange.com/a/209772"  
+        assert chatcommands.report(test_post_url, original_msg=msg, alias_used="scan") is None  
+
+        _, call = handle_spam.call_args_list[-1]
+        assert isinstance(call["post"], Post)
+        assert call["why"].endswith("Manually triggered scan")
+
+        # Now with report-force
+        GlobalVars.blacklisted_users = []
+        GlobalVars.latest_questions = []
+        assert chatcommands.report(test_post_url, original_msg=msg, alias_used="report-force") is None  
+        _, call = handle_spam.call_args_list[-1]
+        assert isinstance(call["post"], Post)
+        assert call["why"].startswith(
+            "Post manually reported by user *El'endia Starman* in room *Charcoal HQ*."
+            "\n\nThis post would have also been caught for:"
         )
 
         # Don't re-report
