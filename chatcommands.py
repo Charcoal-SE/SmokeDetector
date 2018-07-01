@@ -1188,8 +1188,8 @@ def report(msg, args):
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
-@command(str, whole_msg=True, give_name=True, aliases=['scan', 'test-p'])
-def checkpost(msg, url, alias_used='scan'):  # FIXME: Currently does not support batch report
+@command(str, whole_msg=True)
+def scan(msg, args):
     """
     Force Smokey to scan a post even if it has no recent activity
     :param msg:
@@ -1198,50 +1198,71 @@ def checkpost(msg, url, alias_used='scan'):  # FIXME: Currently does not support
     """
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
-        raise CmdException("You can execute the !!/{0} command again in {1} seconds. "
+        raise CmdException("You can execute the !!/scan command again in {1} seconds. "
                            "To avoid one user sending lots of reports in a few commands and "
                            "slowing SmokeDetector down due to rate-limiting, you have to "
-                           "wait 30 seconds after you've reported multiple posts in "
-                           "one go.".format(alias_used, wait))
+                           "wait 30 seconds after you've scanned multiple posts in "
+                           "one go.".format(wait))
 
-    post_data = api_get_post(rebuild_str(url))
+    urls = args.split()
 
-    if post_data is None:
-        raise CmdException("That does not look like a valid post URL.")
+    if len(urls) > 5:
+        raise CmdException("To avoid SmokeDetector reporting posts too slowly, you can "
+                           "scan at most 5 posts at a time. This is to avoid "
+                           "SmokeDetector's chat messages getting rate-limited too much, "
+                           "which would slow down reports.")
 
-    if post_data is False:
-        raise CmdException("Cannot find data for this post in the API. "
-                           "It may have already been deleted.")
+    response = []
 
-    # Update url to be consistent with other code
-    url = to_protocol_relative(post_data.post_url)
-    post = Post(api_response=post_data.as_dict)
+    for index, url in enumerate(urls):
+        post_data = api_get_post(rebuild_str(url))
 
-    if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) \
-            and not is_false_positive((post_data.post_id, post_data.site)):
-        # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
-        # this force scan might be attempting to correct that/fix a mistake/etc.
+        if post_data is None:
+            response.append((index, "That does not look like a valid post URL."))
+            continue
 
-        response_text = "This post is already recently reported"
-        if GlobalVars.metasmoke_key is not None:
-            ms_link = "https://m.erwaysoftware.com/posts/by-url?url={}".format(url)  # se_link == url
-            raise CmdException(response_text + " [ [MS]({}) ]".format(ms_link))
-        else:
-            raise CmdException(response_text + ".")
+        if post_data is False:
+            response.append((index, "Cannot find data for this post in the API. "
+                                    "It may have already been deleted."))
+            continue
 
-    if fetch_post_id_and_site_from_url(url)[2] == "answer":
-        parent = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
+        # Update url to be consistent with other code
+        url = to_protocol_relative(post_data.post_url)
+        post = Post(api_response=post_data.as_dict)
 
-        post._is_answer = True
-        post._parent = Post(api_response=parent.as_dict)
+        if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) \
+                and not is_false_positive((post_data.post_id, post_data.site)):
+            # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
+            # this force scan might be attempting to correct that/fix a mistake/etc.
 
-    is_spam, reasons, why = check_if_spam(post)
+            response_text = "This post is already recently reported"
+            if GlobalVars.metasmoke_key is not None:
+                ms_link = "https://m.erwaysoftware.com/posts/by-url?url={}".format(url)  # se_link == url
+                response.append((index, response_text + " [ [MS]({}) ]".format(ms_link)))
+            else:
+                response.append((index, response_text + "."))
+            continue
 
-    if is_spam:
-        handle_spam(post=post, reasons=reasons, why=why + "\nManually triggered scan")
+        if fetch_post_id_and_site_from_url(url)[2] == "answer":
+            parent = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
+
+            post._is_answer = True
+            post._parent = Post(api_response=parent.as_dict)
+
+        is_spam, reasons, why = check_if_spam(post)
+
+        if is_spam:
+            handle_spam(post=post, reasons=reasons, why=why + "\nManually triggered scan")
+            continue
+
+        response.append((index, "Post [{}]({}) does not look like spam.".format(sanitize_title(post_data.title), url)))
+
+    if len(response) == 0:
         return None
-
-    return "Post [{}]({}) does not look like spam.".format(sanitize_title(post_data.title), url)
+    elif len(response) == 1:
+        return response[0][1]
+    else:
+        return "\n".join("URL {}: {}".format(index + 1, text) for index, text in response)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
