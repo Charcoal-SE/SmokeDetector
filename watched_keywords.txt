@@ -4246,3 +4246,4 @@
 1530412808	Makyen	[\w-]*cyberwiz[\w-]*(?!@gmail\.com)\W*(?:at|@)\W*[\w-]*\W*(?:\.|dot|)\W*[\w-]*
 1530415259	Makyen	^Sbtech\W*Uae$
 1530417122	paper1111	oggy\.me
+1530420582	Makyen	usafitnessguide\.com
