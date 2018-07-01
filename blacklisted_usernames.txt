@@ -95,3 +95,4 @@ ante\W*paveli[cć]
 muh[ae]mm[ae]d\W*the\W*pa?edophile
 ^.{1,7}dl?san$
 ^eray$
+^autolinkpk$
