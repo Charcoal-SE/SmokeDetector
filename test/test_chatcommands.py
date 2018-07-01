@@ -168,10 +168,10 @@ def test_report(handle_spam):
         )
 
         # Bad post
-        # This post is found in Sandbox Archive, so it will remain intact and is a reliable test post  
-        # backup: https://meta.stackexchange.com/a/228635  
-        test_post_url = "https://meta.stackexchange.com/a/209772"  
-        assert chatcommands.report(test_post_url, original_msg=msg, alias_used="scan") is None  
+        # This post is found in Sandbox Archive, so it will remain intact and is a reliable test post
+        # backup: https://meta.stackexchange.com/a/228635
+        test_post_url = "https://meta.stackexchange.com/a/209772"
+        assert chatcommands.report(test_post_url, original_msg=msg, alias_used="scan") is None
 
         _, call = handle_spam.call_args_list[-1]
         assert isinstance(call["post"], Post)
@@ -180,7 +180,7 @@ def test_report(handle_spam):
         # Now with report-force
         GlobalVars.blacklisted_users = []
         GlobalVars.latest_questions = []
-        assert chatcommands.report(test_post_url, original_msg=msg, alias_used="report-force") is None  
+        assert chatcommands.report(test_post_url, original_msg=msg, alias_used="report-force") is None
         _, call = handle_spam.call_args_list[-1]
         assert isinstance(call["post"], Post)
         assert call["why"].startswith(
