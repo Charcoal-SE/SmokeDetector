@@ -367,7 +367,7 @@ def brownie():
     return "Brown!"
 
 
-COFFEES = ['Espresso', 'Macchiato', 'Ristretto', 'Americano', 'Latte', 'Cappuccino', 'Mocha', 'Affogato']
+COFFEES = ['Espresso', 'Macchiato', 'Ristretto', 'Americano', 'Latte', 'Cappuccino', 'Mocha', 'Affogato', 'jQuery']
 
 
 # noinspection PyIncorrectDocstring

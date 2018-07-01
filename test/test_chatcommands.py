@@ -178,8 +178,8 @@ def test_report(handle_spam):
         assert call["why"].endswith("Manually triggered scan")
 
         # Now with report-force
-        GlobalVars.blacklisted_users = []
-        GlobalVars.latest_questions = []
+        GlobalVars.blacklisted_users.clear()
+        GlobalVars.latest_questions.clear()
         assert chatcommands.report(test_post_url, original_msg=msg, alias_used="report-force") is None
         _, call = handle_spam.call_args_list[-1]
         assert isinstance(call["post"], Post)
@@ -195,8 +195,8 @@ def test_report(handle_spam):
         # Can use report command multiple times in 30s if only one URL was used
         assert chatcommands.report('https://stackoverflow.com/q/1732348', original_msg=msg, alias_used="report") is None
     finally:
-        GlobalVars.blacklisted_users = []
-        GlobalVars.latest_questions = []
+        GlobalVars.blacklisted_users.clear()
+        GlobalVars.latest_questions.clear()
 
 
 @patch("chatcommands.handle_spam")
@@ -276,7 +276,7 @@ def test_allspam(handle_spam):
         assert call["why"] == "User manually reported by *El'endia Starman* in room *Charcoal HQ*.\n"
 
     finally:
-        GlobalVars.blacklisted_users = []
+        GlobalVars.blacklisted_users.clear()
 
 
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"), reason="shouldn't overwrite file")
