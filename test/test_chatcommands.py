@@ -116,7 +116,7 @@ def test_privileged():
 
 
 def test_deprecated_blacklist():
-    assert chatcommands.blacklist("").startswith("""The !!/blacklist command has been deprecated.""")
+    assert chatcommands.blacklist("").startswith("The !!/blacklist command has been deprecated.")
 
 
 @patch("chatcommands.handle_spam")
@@ -151,19 +151,24 @@ def test_report(handle_spam):
             "SmokeDetector's chat messages getting rate-limited too much, which would slow down reports."
         )
 
+        assert chatcommands.report('a a a a a "invalid"""', original_msg=msg, alias_used="report") \
+            .startswith("You cannot provide multiple custom report reasons.")
+        assert chatcommands.report('a "custom reason"', original_msg=msg, alias_used="scan") == \
+            "Custom reason is not supported with `!!/scan`"
+
         assert chatcommands.report('https://stackoverflow.com/q/1', original_msg=msg) == \
             "Post 1: Could not find data for this post in the API. It may already have been deleted."
 
         # Valid post
         assert chatcommands.report('https://stackoverflow.com/a/1732454', original_msg=msg, alias_used="scan") == \
             "Post 1: This does not look like spam"
-        assert chatcommands.report('https://stackoverflow.com/a/1732454', original_msg=msg, alias_used="report") is None
+        assert chatcommands.report('https://stackoverflow.com/a/1732454 "reason"', original_msg=msg, alias_used="report") is None
 
         _, call = handle_spam.call_args_list[-1]
         assert isinstance(call["post"], Post)
         assert call["reasons"] == ["Manually reported answer"]
         assert call["why"] == (
-            "Post manually reported by user *El'endia Starman* in room *Charcoal HQ*."
+            "Post manually reported by user *El'endia Starman* in room *Charcoal HQ* with reason: *reason*."
             "\n\nThis post would not have been caught otherwise."
         )
 
