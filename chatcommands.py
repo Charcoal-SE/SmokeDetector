@@ -291,8 +291,9 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
 
 
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=True, aliases=["watch-keyword"])
-def watch(msg, website):
+@command(str, whole_msg=True, privileged=True, give_name=True,
+         aliases=["watch-keyword", "watch-force", "watch-keyword-force"])
+def watch(msg, website, alias_used="watch"):
     """
     Adds a string to the watched keywords list and commits/pushes to GitHub
     :param msg:
@@ -300,7 +301,7 @@ def watch(msg, website):
     :return: A string
     """
 
-    return do_blacklist("watch_keyword", msg, force=False)
+    return do_blacklist("watch_keyword", msg, force=alias_used.split("-")[-1] == "force")
 
 
 @command(str, whole_msg=True, privileged=True)
@@ -309,19 +310,6 @@ def unwatch(msg, item):
     _status, message = GitManager.unwatch(rebuild_str(pattern), msg.owner.name, is_code_privileged(
         msg._client.host, msg.owner.id))
     return message
-
-
-# noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=True, aliases=["watch-force", "watch-keyword-force"])
-def watch_force(msg, website):
-    """
-    Adds a string to the watched keywords list and commits/pushes to GitHub
-    :param msg:
-    :param website:
-    :return: A string
-    """
-
-    return do_blacklist("watch_keyword", msg, force=True)
 
 
 # noinspection PyIncorrectDocstring
