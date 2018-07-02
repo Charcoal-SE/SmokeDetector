@@ -4254,3 +4254,4 @@
 1530539331	iBug	pokerbot\.com
 1530548750	doppelgreener	roofing[^a-z]+contractors[^a-z]+shreveport
 1530560273	doppelgreener	buteringift\.com
+1530561339	Makyen	facebook\.com/Biryanicenter
