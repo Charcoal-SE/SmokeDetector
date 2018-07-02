@@ -207,7 +207,7 @@ class GitManager:
 
             git.add(file_name)
             git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
-                       '-m', 'Auto un{} of `{}` by {} --autopull'.format(list_type, item, username))
+                       '-m', 'Auto un{} of `{}` by {} --autopull'.format(blacklist_type, item, username))
 
             git.checkout('master')
             git.merge(branch)
