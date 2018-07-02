@@ -170,7 +170,7 @@ class GitManager:
     @classmethod
     def unwatch(cls, item, username, code_privileged=False):
         if not code_privileged:
-            return (False, 'Ask a code admin to run that for you. Use `!!/whois code_admin` to find out who\'s here.')
+            return (False, "Ask a code admin to run that for you. Use `!!/whois code_admin` to find out who's here.")
 
         try:
             cls.gitmanager_lock.acquire()
@@ -187,7 +187,7 @@ class GitManager:
             if not status:
                 return (False, message)
 
-            branch = 'auto-unwatch-{}'.format(str(time.time()))
+            branch = 'auto-unwatch-{}'.format(time.time())
             git.checkout('-b', branch)
             git.reset('HEAD')
 
@@ -195,7 +195,53 @@ class GitManager:
 
             git.add(file_name)
             git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
-                       '-m', 'Auto unwatch of {} by {} --autopull'.format(item, username))
+                       '-m', 'Auto unwatch of `{}` by {} --autopull'.format(item, username))
+
+            git.checkout('master')
+            git.merge(branch)
+            git.push('origin', 'master')
+            git.branch('-D', branch)
+        except Exception as e:
+            log('error', '{}: {}'.format(type(e).__name__, e))
+            return (False, 'Git operations failed for unspecified reasons.')
+        finally:
+            git.checkout('deploy')
+            cls.gitmanager_lock.release()
+
+        return (True, 'Removed `{}` from watchlist'.format(item))
+
+    @classmethod
+    def unblacklist(cls, item, username, code_privileged=False):
+        if not code_privileged:
+            return False, "Ask a code admin to run that for you. Use `!!/whois code_admin` to find out who's here."
+
+        try:
+            cls.gitmanager_lock.acquire()
+
+            for bl in [Blacklist.KEYWORDS, Blacklist.WEBSITES, Blacklist.USERNAMES]:
+                file_name = bl[0]
+                manager = Blacklist(bl)
+
+                exists, _line = manager.exists(item)
+                if exists:
+                    break
+
+            if not exists:
+                return False, 'No such item `{}` in blacklists.'.format(item)
+
+            status, message = cls.prepare_git_for_operation(file_name)
+            if not status:
+                return (False, message)
+
+            branch = 'auto-unblacklist-{}'.format(time.time())
+            git.checkout('-b', branch)
+            git.reset('HEAD')
+
+            manager.remove(item)
+
+            git.add(file_name)
+            git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
+                       '-m', 'Auto unblacklist of `{}` by {} --autopull'.format(item, username))
 
             git.checkout('master')
             git.merge(branch)
@@ -208,7 +254,8 @@ class GitManager:
             git.checkout('deploy')
             cls.gitmanager_lock.release()
 
-        return (True, 'Removed `{}` from watchlist'.format(item))
+        # With no exception happened, file_name should be correctly set
+        return True, 'Removed `{}` from {}'.format(item, file_name)
 
     @staticmethod
     def prepare_git_for_operation(blacklist_file_name):

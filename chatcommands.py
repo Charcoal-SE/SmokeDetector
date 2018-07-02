@@ -290,6 +290,14 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     return do_blacklist(parts[1], msg, force=len(parts) > 2)
 
 
+@command(str, whole_msg=True, privileged=True)
+def unblacklist(msg, item):
+    pattern = msg.content_source.split(" ", 1)[1]
+    _status, message = GitManager.unblacklist(rebuild_str(pattern), msg.owner.name, is_code_privileged(
+        msg._client.host, msg.owner.id))
+    return message
+
+
 # noinspection PyIncorrectDocstring
 @command(str, whole_msg=True, privileged=True, give_name=True,
          aliases=["watch-keyword", "watch-force", "watch-keyword-force"])
