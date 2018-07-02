@@ -280,7 +280,7 @@ def do_blacklist(blacklist_type, msg, force=False):
                                                                         "blacklist-username-force"])
 def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     """
-    Adds a string to the blacklist and commits/pushes to GitHub
+    Adds a pattern to the blacklist and commits/pushes to GitHub
     :param msg:
     :param pattern:
     :return: A string
@@ -293,11 +293,11 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
 # noinspection PyIncorrectDocstring
 @command(str, whole_msg=True, privileged=True, give_name=True,
          aliases=["watch-keyword", "watch-force", "watch-keyword-force"])
-def watch(msg, website, alias_used="watch"):
+def watch(msg, pattern, alias_used="watch"):
     """
-    Adds a string to the watched keywords list and commits/pushes to GitHub
+    Adds a pattern to the watched keywords list and commits/pushes to GitHub
     :param msg:
-    :param website:
+    :param pattern:
     :return: A string
     """
 
@@ -306,6 +306,12 @@ def watch(msg, website, alias_used="watch"):
 
 @command(str, whole_msg=True, privileged=True, give_name=True, aliases=["unwatch"])
 def unblacklist(msg, item, alias_used="unwatch"):
+    """
+    Removes a pattern from watchlist/blacklist and commits/pushes to GitHub
+    :param msg:
+    :param pattern:
+    :return: A string
+    """
     if alias_used == "unwatch":
         blacklist_type = "watch"
     elif alias_used == "unblacklist":
