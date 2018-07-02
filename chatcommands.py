@@ -290,15 +290,6 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     return do_blacklist(parts[1], msg, force=len(parts) > 2)
 
 
-@command(str, whole_msg=True, privileged=True)
-def unblacklist(msg, item):
-    pattern = msg.content_source.split(" ", 1)[1]
-    _status, message = GitManager.remove_from_blacklist(
-        rebuild_str(pattern), msg.owner.name, "blacklist",
-        is_code_privileged(msg._client.host, msg.owner.id))
-    return message
-
-
 # noinspection PyIncorrectDocstring
 @command(str, whole_msg=True, privileged=True, give_name=True,
          aliases=["watch-keyword", "watch-force", "watch-keyword-force"])
@@ -313,11 +304,18 @@ def watch(msg, website, alias_used="watch"):
     return do_blacklist("watch_keyword", msg, force=alias_used.split("-")[-1] == "force")
 
 
-@command(str, whole_msg=True, privileged=True)
-def unwatch(msg, item):
+@command(str, whole_msg=True, privileged=True, give_name=True, aliases=["unwatch"])
+def unblacklist(msg, item, alias_used="unwatch"):
+    if alias_used == "unwatch":
+        blacklist_type = "watch"
+    elif alias_used == "unblacklist":
+        blacklist_type = "blacklist"
+    else:
+        raise CmdException("Invalid blacklist type.")
+
     pattern = msg.content_source.split(" ", 1)[1]
     _status, message = GitManager.remove_from_blacklist(
-        rebuild_str(pattern), msg.owner.name, "watch",
+        rebuild_str(pattern), msg.owner.name, blacklist_type,
         is_code_privileged(msg._client.host, msg.owner.id))
     return message
 
