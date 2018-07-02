@@ -1,5 +1,6 @@
 import websocket
 import socket
+import ssl
 import json
 import time
 import uuid
@@ -43,6 +44,13 @@ class Flovis:
                     self.ws.run_forever()
                 except websocket._exceptions.WebSocketConnectionClosedException:
                     log('error', 'Flovis websocket closed unexpectedly, assuming problems and nullifying ws')
+                    
+                    if self.ws.sock:
+                        try:
+                            self.ws.sock.close()
+                        except:
+                            pass
+
                     self.ws = None
 
             flovis_t = Thread(name='flovis_websocket', target=run)
@@ -51,6 +59,7 @@ class Flovis:
             return True
         except (websocket._exceptions.WebSocketBadStatusException, socket.gaierror) as e:
             log('error', e)
+
             self.ws = None
             return False
 
@@ -66,7 +75,7 @@ class Flovis:
                 if self.ws is not None:
                     self.ws.send(json.dumps(msg_data))
                 break
-            except websocket.WebSocketConnectionClosedException:
+            except (websocket.WebSocketConnectionClosedException, ssl.SSLError):
                 if retries == 5:
                     raise  # Actually raise the initial error if we've exceeded number of init retries
                 self.ws = None
