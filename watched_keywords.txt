@@ -4252,3 +4252,4 @@
 1530535515	Zoe	outlooksupport\.4team\.biz
 1530535578	Mithrandir	gadgetsx300\.com
 1530539331	iBug	pokerbot\.com
+1530548750	doppelgreener	roofing[^a-z]+contractors[^a-z]+shreveport
