@@ -9,8 +9,6 @@ from helpers import log
 
 
 class Flovis:
-    ws = None
-
     def __init__(self, host):
         self.host = host
         initialized = False
@@ -44,7 +42,7 @@ class Flovis:
                     self.ws.run_forever()
                 except websocket._exceptions.WebSocketConnectionClosedException:
                     log('error', 'Flovis websocket closed unexpectedly, assuming problems and nullifying ws')
-                    
+
                     if self.ws.sock:
                         try:
                             self.ws.sock.close()
