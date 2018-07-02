@@ -293,8 +293,9 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
 @command(str, whole_msg=True, privileged=True)
 def unblacklist(msg, item):
     pattern = msg.content_source.split(" ", 1)[1]
-    _status, message = GitManager.unblacklist(rebuild_str(pattern), msg.owner.name, is_code_privileged(
-        msg._client.host, msg.owner.id))
+    _status, message = GitManager.remove_from_blacklist(
+        rebuild_str(pattern), msg.owner.name, "blacklist",
+        is_code_privileged(msg._client.host, msg.owner.id))
     return message
 
 
@@ -315,8 +316,9 @@ def watch(msg, website, alias_used="watch"):
 @command(str, whole_msg=True, privileged=True)
 def unwatch(msg, item):
     pattern = msg.content_source.split(" ", 1)[1]
-    _status, message = GitManager.unwatch(rebuild_str(pattern), msg.owner.name, is_code_privileged(
-        msg._client.host, msg.owner.id))
+    _status, message = GitManager.remove_from_blacklist(
+        rebuild_str(pattern), msg.owner.name, "watch",
+        is_code_privileged(msg._client.host, msg.owner.id))
     return message
 
 
