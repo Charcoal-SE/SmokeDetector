@@ -280,7 +280,7 @@ def do_blacklist(blacklist_type, msg, force=False):
                                                                         "blacklist-username-force"])
 def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     """
-    Adds a string to the blacklist and commits/pushes to GitHub
+    Adds a pattern to the blacklist and commits/pushes to GitHub
     :param msg:
     :param pattern:
     :return: A string
@@ -293,22 +293,36 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
 # noinspection PyIncorrectDocstring
 @command(str, whole_msg=True, privileged=True, give_name=True,
          aliases=["watch-keyword", "watch-force", "watch-keyword-force"])
-def watch(msg, website, alias_used="watch"):
+def watch(msg, pattern, alias_used="watch"):
     """
-    Adds a string to the watched keywords list and commits/pushes to GitHub
+    Adds a pattern to the watched keywords list and commits/pushes to GitHub
     :param msg:
-    :param website:
+    :param pattern:
     :return: A string
     """
 
     return do_blacklist("watch_keyword", msg, force=alias_used.split("-")[-1] == "force")
 
 
-@command(str, whole_msg=True, privileged=True)
-def unwatch(msg, item):
+@command(str, whole_msg=True, privileged=True, give_name=True, aliases=["unwatch"])
+def unblacklist(msg, item, alias_used="unwatch"):
+    """
+    Removes a pattern from watchlist/blacklist and commits/pushes to GitHub
+    :param msg:
+    :param pattern:
+    :return: A string
+    """
+    if alias_used == "unwatch":
+        blacklist_type = "watch"
+    elif alias_used == "unblacklist":
+        blacklist_type = "blacklist"
+    else:
+        raise CmdException("Invalid blacklist type.")
+
     pattern = msg.content_source.split(" ", 1)[1]
-    _status, message = GitManager.unwatch(rebuild_str(pattern), msg.owner.name, is_code_privileged(
-        msg._client.host, msg.owner.id))
+    _status, message = GitManager.remove_from_blacklist(
+        rebuild_str(pattern), msg.owner.name, blacklist_type,
+        is_code_privileged(msg._client.host, msg.owner.id))
     return message
 
 
