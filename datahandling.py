@@ -447,7 +447,7 @@ def has_community_bumped_post(post_url, post_content):
                     if post['body'] == post_content:
                         return True
         except requests.exceptions.ReadTimeout:
-            return False # MS is down, so assume it is not bumped
+            return False  # MS is down, so assume it is not bumped
     return False
 
 # methods to check if someone waited long enough to use another !!/report with multiple URLs
