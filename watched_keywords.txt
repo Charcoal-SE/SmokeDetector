@@ -4272,3 +4272,4 @@
 1530661823	Makyen	[a-z_]*(?:1_*)?828[\W_]*827[\W_]*0635[a-z_]*
 1530661834	Makyen	clippingpathquick\.com
 1530661873	Makyen	t\.me/NamoShanti
+1530671559	Makyen	crvltda\.webs\.com
