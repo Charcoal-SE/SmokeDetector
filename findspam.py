@@ -598,17 +598,17 @@ def character_utilization_ratio(s, site, *args):
     counter = Counter(s)
     total_chars = len(s)
     highest_ratio = 0.0
-    # highest_char = None
+    highest_char = ""
 
     for key, value in counter.items():
         char_ratio = value / float(total_chars)
-        key, value, char_ratio
+        # key, value, char_ratio
         if char_ratio > highest_ratio:
             highest_ratio = char_ratio
-            # highest_char = key
+            highest_char = key
 
     if highest_ratio > CHARACTER_USE_RATIO:
-        return True, "The `{}` character appears in a high percentage of the post"
+        return True, "The `{}` character appears in a high percentage of the post".format(highest_char)
     else:
         return False, ""
 
