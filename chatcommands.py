@@ -24,7 +24,7 @@ from html import unescape
 from ast import literal_eval
 # noinspection PyCompatibility
 import regex
-from helpers import only_blacklists_changed, log, expand_shorthand_link
+from helpers import only_blacklists_changed, log, expand_shorthand_link, to_metasmoke_link
 from classes import Post
 from classes.feedback import *
 
@@ -381,7 +381,7 @@ def brownie():
     return "Brown!"
 
 
-COFFEES = ['Espresso', 'Macchiato', 'Ristretto', 'Americano', 'Latte', 'Cappuccino', 'Mocha', 'Affogato']
+COFFEES = ['Espresso', 'Macchiato', 'Ristretto', 'Americano', 'Latte', 'Cappuccino', 'Mocha', 'Affogato', 'jQuery']
 
 
 # noinspection PyIncorrectDocstring
@@ -1091,8 +1091,8 @@ def invite(msg, room_id, roles):
 
 # --- Post Responses --- #
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=True)
-def report(msg, args):
+@command(str, whole_msg=True, privileged=True, give_name=True, aliases=["scan", "report-force"])
+def report(msg, args, alias_used="report"):
     """
     Report a post (or posts)
     :param msg:
@@ -1100,11 +1100,11 @@ def report(msg, args):
     """
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
-        raise CmdException("You can execute the !!/report command again in {} seconds. "
+        raise CmdException("You can execute the !!/{} command again in {} seconds. "
                            "To avoid one user sending lots of reports in a few commands and "
                            "slowing SmokeDetector down due to rate-limiting, you have to "
                            "wait 30 seconds after you've reported multiple posts in "
-                           "one go.".format(wait))
+                           "one go.".format(alias_used, wait))
 
     output = []
 
@@ -1124,6 +1124,9 @@ def report(msg, args):
             raise CmdException("You cannot provide multiple custom report reasons. "
                                "Please review the permitted !!/report syntax in the documentation "
                                "for guidance on using custom report reasons.")
+
+        if alias_used == "scan":
+            raise CmdException("Custom reason is not supported with `!!/scan`")
     except IndexError:
         custom_reason = None
 
@@ -1131,13 +1134,12 @@ def report(msg, args):
 
     if len(urls) > 5:
         raise CmdException("To avoid SmokeDetector reporting posts too slowly, you can "
-                           "report at most 5 posts at a time. This is to avoid "
+                           "{} at most 5 posts at a time. This is to avoid "
                            "SmokeDetector's chat messages getting rate-limited too much, "
-                           "which would slow down reports.")
+                           "which would slow down reports.".format(alias_used))
 
     for index, url in enumerate(urls, start=1):
-        url = rebuild_str(url)
-        post_data = api_get_post(url)
+        post_data = api_get_post(rebuild_str(url))
 
         if post_data is None:
             output.append("Post {}: That does not look like a valid post URL.".format(index))
@@ -1155,128 +1157,68 @@ def report(msg, args):
 
             if GlobalVars.metasmoke_key is not None:
                 se_link = to_protocol_relative(post_data.post_url)
-                ms_link = "https://m.erwaysoftware.com/posts/by-url?url={}".format(se_link)
+                ms_link = to_metasmoke_link(se_link)
                 output.append("Post {}: Already recently reported [ [MS]({}) ]".format(index, ms_link))
                 continue
             else:
                 output.append("Post {}: Already recently reported".format(index))
                 continue
 
-        post_data.is_answer = (post_data.post_type == "answer")
+        url = to_protocol_relative(post_data.post_url)
         post = Post(api_response=post_data.as_dict)
         user = get_user_from_url(post_data.owner_url)
 
+        if fetch_post_id_and_site_from_url(url)[2] == "answer":
+            parent_data = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
+            post._is_answer = True
+            post._parent = Post(api_response=parent_data.as_dict)
+
         scan_spam, scan_reasons, scan_why = check_if_spam(post)  # Scan it first
-        # Scan before adding blacklist to prevent showing all reported posts as "Blacklisted user"
 
-        if user is not None:
-            message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
-            add_blacklisted_user(user, message_url, post_data.post_url)
+        # Here's where it starts to be different
 
-        if custom_reason:
-            why_info = u"Post manually reported by user *{}* in room *{}* with reason: *{}*.\n".format(
-                msg.owner.name, msg.room.name, custom_reason
-            )
+        # If alias_used == "report-force" then jump to the next block
+        if scan_spam and alias_used in {"scan", "report"}:
+            handle_spam(post=post, reasons=scan_reasons, why=scan_why + "\nManually triggered scan")
+            continue
+
+        # scan_spam == False
+        if alias_used in {"report", "report-force"}:
+            if user is not None:
+                message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
+                add_blacklisted_user(user, message_url, post_data.post_url)
+
+            if custom_reason:
+                why_info = u"Post manually reported by user *{}* in room *{}* with reason: *{}*.\n".format(
+                    msg.owner.name, msg.room.name, custom_reason
+                )
+            else:
+                why_info = u"Post manually reported by user *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
+
+            batch = ""
+            if len(urls) > 1:
+                batch = " (batch report: post {} out of {})".format(index, len(urls))
+
+            if scan_spam:
+                why_append = u"This post would have also been caught for: " + ", ".join(scan_reasons).capitalize() + \
+                    '\n' + scan_why
+            else:
+                why_append = u"This post would not have been caught otherwise."
+
+            handle_spam(post=post,
+                        reasons=["Manually reported " + post_data.post_type + batch],
+                        why=why_info + '\n' + why_append)
+            continue
+
+        # scan_spam == False and alias_used == "scan"
         else:
-            why_info = u"Post manually reported by user *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
-
-        batch = ""
-        if len(urls) > 1:
-            batch = " (batch report: post {} out of {})".format(index, len(urls))
-
-        if scan_spam:
-            why_append = u"This post would have also been caught for: " + ", ".join(scan_reasons).capitalize() + \
-                '\n' + scan_why
-        else:
-            why_append = u"This post would not have been caught otherwise."
-
-        handle_spam(post=post,
-                    reasons=["Manually reported " + post_data.post_type + batch],
-                    why=why_info + '\n' + why_append)
+            output.append("Post {}: This does not look like spam".format(index))
 
     if 1 < len(urls) > len(output):
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
 
     if len(output) > 0:
-        return os.linesep.join(output)
-
-
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-@command(str, whole_msg=True)
-def scan(msg, args):
-    """
-    Force Smokey to scan a post even if it has no recent activity
-    :param msg:
-    :param url:
-    :return str:
-    """
-    crn, wait = can_report_now(msg.owner.id, msg._client.host)
-    if not crn:
-        raise CmdException("You can execute the !!/scan command again in {1} seconds. "
-                           "To avoid one user sending lots of reports in a few commands and "
-                           "slowing SmokeDetector down due to rate-limiting, you have to "
-                           "wait 30 seconds after you've scanned multiple posts in "
-                           "one go.".format(wait))
-
-    urls = args.split()
-
-    if len(urls) > 5:
-        raise CmdException("To avoid SmokeDetector reporting posts too slowly, you can "
-                           "scan at most 5 posts at a time. This is to avoid "
-                           "SmokeDetector's chat messages getting rate-limited too much, "
-                           "which would slow down reports.")
-
-    response = []
-
-    for index, url in enumerate(urls):
-        post_data = api_get_post(rebuild_str(url))
-
-        if post_data is None:
-            response.append((index, "That does not look like a valid post URL."))
-            continue
-
-        if post_data is False:
-            response.append((index, "Cannot find data for this post in the API. "
-                                    "It may have already been deleted."))
-            continue
-
-        # Update url to be consistent with other code
-        url = to_protocol_relative(post_data.post_url)
-        post = Post(api_response=post_data.as_dict)
-
-        if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) \
-                and not is_false_positive((post_data.post_id, post_data.site)):
-            # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
-            # this force scan might be attempting to correct that/fix a mistake/etc.
-
-            response_text = "This post is already recently reported"
-            if GlobalVars.metasmoke_key is not None:
-                ms_link = "https://m.erwaysoftware.com/posts/by-url?url={}".format(url)  # se_link == url
-                response.append((index, response_text + " [ [MS]({}) ]".format(ms_link)))
-            else:
-                response.append((index, response_text + "."))
-            continue
-
-        if fetch_post_id_and_site_from_url(url)[2] == "answer":
-            parent = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
-
-            post._is_answer = True
-            post._parent = Post(api_response=parent.as_dict)
-
-        is_spam, reasons, why = check_if_spam(post)
-
-        if is_spam:
-            handle_spam(post=post, reasons=reasons, why=why + "\nManually triggered scan")
-            continue
-
-        response.append((index, "Post [{}]({}) does not look like spam.".format(sanitize_title(post_data.title), url)))
-
-    if len(response) == 0:
-        return None
-    elif len(response) == 1:
-        return response[0][1]
-    else:
-        return "\n".join("URL {}: {}".format(index + 1, text) for index, text in response)
+        return "\n".join(output)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
