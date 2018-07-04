@@ -440,9 +440,11 @@ def append_pings(original_message, names):
 def has_community_bumped_post(post_url, post_content):
     if GlobalVars.metasmoke_key is not None and GlobalVars.metasmoke_host is not None:
         ms_posts = Metasmoke.get_post_bodies_from_ms(post_url)
+        latest_revision_date = max([post['created_at'] for post in ms_posts])
         for post in ms_posts:
-            if post['body'] == post_content:
-                return True
+            if post['created_at'] == latest_revision_date:
+                if post['body'] == post_content:
+                    return True
     return False
 
 # methods to check if someone waited long enough to use another !!/report with multiple URLs
