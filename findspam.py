@@ -595,6 +595,7 @@ def username_similar_website(s, site, *args):
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def character_utilization_ratio(s, site, *args):
+    s = strip_urls_and_tags(s)
     counter = Counter(s)
     total_chars = len(s)
     highest_ratio = 0.0
