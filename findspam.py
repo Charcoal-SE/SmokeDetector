@@ -524,7 +524,7 @@ def watched_ns_for_url_domain(s, site, *args):
         # {'dns1.namecheaphosting.com.', 'dns2.namecheaphosting.com.'},
         # {'dns11.namecheaphosting.com.', 'dns12.namecheaphosting.com.'},
         'namecheaphosting.com.',
-        'domaincontrol.com.',
+        # 'domaincontrol.com.',
         {'dns1.registrar-servers.com.', 'dns2.registrar-servers.com.'},
         {'adi.ns.cloudflare.com.', 'miles.ns.cloudflare.com.'},
         {'ajay.ns.cloudflare.com.', 'lia.ns.cloudflare.com.'},
