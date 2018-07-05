@@ -4290,3 +4290,4 @@
 1530755273	Makyen	\W*۰۹۳۶۶۰۱۰۴۳۲\W*
 1530755281	Makyen	09366010432
 1530755685	Tetsuya Yamamoto	texasweedsyndicate\.com
+1530756982	Makyen	\W*<hr>\W*<p>(?:<a href(?:[^<]|<[^/]|</[^a]|</a[^>])*</a>\W*){2,}</p>\W*$
