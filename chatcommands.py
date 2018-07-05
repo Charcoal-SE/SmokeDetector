@@ -260,27 +260,22 @@ def do_blacklist(blacklist_type, msg, force=False):
             raise CmdException("That pattern looks like it's already caught by " + format_blacklist_reasons(reasons) +
                                "; append `-force` if you really want to do that.")
 
-    result = None
+    metasmoke_down = False
 
     try:
-        _, result = GitManager.add_to_blacklist(
-            blacklist=blacklist_type,
-            item_to_blacklist=pattern,
-            username=msg.owner.name,
-            chat_profile_link=chat_user_profile_link,
-            code_permissions=is_code_privileged(msg._client.host, msg.owner.id)
-        )
-    except requests.exceptions.ConnectionError as err:
-        if 'metasmoke.erwaysoftware.com' in str(err).lower() and \
-                'failed to establish a new connection' in str(err).lower():
-            _, result = GitManager.add_to_blacklist(
-                blacklist=blacklist_type,
-                item_to_blacklist=pattern,
-                username=msg.owner.name,
-                chat_profile_link=chat_user_profile_link,
-                code_permissions=False,
-                metasmoke_down=True
-            )
+        code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
+    except requests.exceptions.ConnectionError:
+        code_permissions = False  # Because we need the system to assume that we don't have code privs.
+        metasmoke_down = True
+
+    _, result = GitManager.add_to_blacklist(
+        blacklist=blacklist_type,
+        item_to_blacklist=pattern,
+        username=msg.owner.name,
+        chat_profile_link=chat_user_profile_link,
+        code_permissions=code_permissions,
+        metasmoke_down=metasmoke_down
+    )
 
     return result
 
