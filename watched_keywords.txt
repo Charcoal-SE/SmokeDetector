@@ -4298,3 +4298,4 @@
 1530771474	Makyen	garmin-map-updates\.com
 1530774762	Tetsuya Yamamoto	reecoupons\.com
 1530776351	Tetsuya Yamamoto	[J|j]ade\W?[T|t]ailor
+1530777419	Tetsuya Yamamoto	carjumpstarterreview\.com
