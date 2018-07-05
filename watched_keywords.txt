@@ -4292,3 +4292,4 @@
 1530755685	Tetsuya Yamamoto	texasweedsyndicate\.com
 1530757330	Makyen	\W*<hr>\W*<p>(?:<a href(?:[^<]|<[^/]|</[^a]|</a[^>])*</a>\W*){2,}</p>\W*
 1530758026	Makyen	\W*<hr>\W*<p>(?:<a\W+href=.*?</a>\W*){2,}</p>\W*
+1530758862	Makyen	\W*<hr>\W*<p>(?:<a href(?:[^<]|<[^/]|</[^a]|</a[^>])*</a>\W*){2,}</p
