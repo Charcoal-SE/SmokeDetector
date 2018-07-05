@@ -4306,3 +4306,4 @@
 1530806523	Makyen	ttc\.eco
 1530806563	Makyen	dex\.top
 1530806575	Makyen	uex\.com
+1530807011	Makyen	TTC\W*(?:token|airdrop)
