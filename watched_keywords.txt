@@ -4293,3 +4293,4 @@
 1530758862	Makyen	\W*<hr>\W*<p>(?:<a href(?:[^<]|<[^/]|</[^a]|</a[^>])*</a>\W*){2,}</p
 1530760643	Makyen	faremakers\.com
 1530762204	Tetsuya Yamamoto	livetechnicianhelp\.com
+1530762305	Tetsuya Yamamoto	ubibot\.io
