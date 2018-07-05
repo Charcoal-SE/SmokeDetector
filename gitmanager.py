@@ -175,9 +175,13 @@ class GitManager:
             return (True, "Added `{0}` to watchlist".format(item))
 
     @classmethod
-    def remove_from_blacklist(cls, item, username, blacklist_type="", code_privileged=False):
+    def remove_from_blacklist(cls, item, username, blacklist_type="", code_privileged=False, metasmoke_down=False):
         if not code_privileged:
-            return False, "Ask a code admin to run that for you. Use `!!/whois code_admin` to find out who's here."
+            if metasmoke_down:
+                return False, "MetaSmoke is offline, and I can't determine if you are a code admin or not. " \
+                              "If you are a code admin, then wait for MS to be back up before running this command."
+            else:
+                return False, "Ask a code admin to run that for you. Use `!!/whois code_admin` to find out who's here."
 
         try:
             cls.gitmanager_lock.acquire()

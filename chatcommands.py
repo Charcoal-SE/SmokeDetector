@@ -328,10 +328,17 @@ def unblacklist(msg, item, alias_used="unwatch"):
     else:
         raise CmdException("Invalid blacklist type.")
 
+    metasmoke_down = False
+    try:
+        code_privs = is_code_privileged(msg._client.host, msg.owner.id)
+    except requests.exceptions.ConnectionError:
+        code_privs = False
+        metasmoke_down = True
+
     pattern = msg.content_source.split(" ", 1)[1]
     _status, message = GitManager.remove_from_blacklist(
         rebuild_str(pattern), msg.owner.name, blacklist_type,
-        is_code_privileged(msg._client.host, msg.owner.id))
+        code_privileged=code_privs, metasmoke_down=metasmoke_down)
     return message
 
 
