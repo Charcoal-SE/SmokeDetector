@@ -28,7 +28,7 @@ class GitManager:
 
     @classmethod
     def add_to_blacklist(cls, blacklist='', item_to_blacklist='', username='', chat_profile_link='',
-                         code_permissions=False):
+                         code_permissions=False, metasmoke_down=False):
         if git.config("--get", "user.name", _ok_code=[0, 1]) == "":
             return (False, 'Tell someone to run `git config user.name "SmokeDetector"`')
 
@@ -114,7 +114,7 @@ class GitManager:
                     return (False, "Tell someone to set a GH password")
 
                 payload = {"title": u"{0}: {1} {2}".format(username, op.title(), item),
-                           "body": u"[{0}]({1}) requests the {2} of the {3} `{4}`. See the Metasmoke search [here]"
+                           "body": u"[{0}]({1}) requests the {2} of the {3} `{4}`. See the MS search [here]"
                                    "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6}) and the "
                                    "Stack Exchange search [here](https://stackexchange.com/search?q=%22{7}%22).\n"
                                    u"<!-- METASMOKE-BLACKLIST-{8} {4} -->".format(
@@ -133,9 +133,16 @@ class GitManager:
                     git.checkout("deploy")  # Return to deploy, pending the accept of the PR in Master.
                     git.branch('-D', branch)  # Delete the branch in the local git tree since we're done with it.
                     url = response.json()["html_url"]
-                    return (True,
-                            "You don't have code privileges, but I've [created PR#{1} for you]({0}).".format(
-                                url, url.split('/')[-1]))
+                    if metasmoke_down:
+                        return (True,
+                                "MS is not reachable, so I can't see if you have code privileges, but I've "
+                                "[created PR#{1} for you]({0}).".format(
+                                    url, url.split('/')[-1]))
+                    else:
+                        return (True,
+                                "You don't have code privileges, but I've [created PR#{1} for you]({0}).".format(
+                                    url, url.split('/')[-1]))
+
                 except KeyError:
                     git.checkout("deploy")  # Return to deploy
 
@@ -168,9 +175,13 @@ class GitManager:
             return (True, "Added `{0}` to watchlist".format(item))
 
     @classmethod
-    def remove_from_blacklist(cls, item, username, blacklist_type="", code_privileged=False):
+    def remove_from_blacklist(cls, item, username, blacklist_type="", code_privileged=False, metasmoke_down=False):
         if not code_privileged:
-            return False, "Ask a code admin to run that for you. Use `!!/whois code_admin` to find out who's here."
+            if metasmoke_down:
+                return False, "MS is offline, and I can't determine if you are a code admin or not. " \
+                              "If you are a code admin, then wait for MS to be back up before running this command."
+            else:
+                return False, "Ask a code admin to run that for you. Use `!!/whois code_admin` to find out who's here."
 
         try:
             cls.gitmanager_lock.acquire()

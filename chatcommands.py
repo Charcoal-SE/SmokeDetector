@@ -260,12 +260,21 @@ def do_blacklist(blacklist_type, msg, force=False):
             raise CmdException("That pattern looks like it's already caught by " + format_blacklist_reasons(reasons) +
                                "; append `-force` if you really want to do that.")
 
+    metasmoke_down = False
+
+    try:
+        code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
+    except requests.exceptions.ConnectionError:
+        code_permissions = False  # Because we need the system to assume that we don't have code privs.
+        metasmoke_down = True
+
     _, result = GitManager.add_to_blacklist(
         blacklist=blacklist_type,
         item_to_blacklist=pattern,
         username=msg.owner.name,
         chat_profile_link=chat_user_profile_link,
-        code_permissions=is_code_privileged(msg._client.host, msg.owner.id)
+        code_permissions=code_permissions,
+        metasmoke_down=metasmoke_down
     )
 
     return result
@@ -319,10 +328,17 @@ def unblacklist(msg, item, alias_used="unwatch"):
     else:
         raise CmdException("Invalid blacklist type.")
 
+    metasmoke_down = False
+    try:
+        code_privs = is_code_privileged(msg._client.host, msg.owner.id)
+    except requests.exceptions.ConnectionError:
+        code_privs = False
+        metasmoke_down = True
+
     pattern = msg.content_source.split(" ", 1)[1]
     _status, message = GitManager.remove_from_blacklist(
         rebuild_str(pattern), msg.owner.name, blacklist_type,
-        is_code_privileged(msg._client.host, msg.owner.id))
+        code_privileged=code_privs, metasmoke_down=metasmoke_down)
     return message
 
 
