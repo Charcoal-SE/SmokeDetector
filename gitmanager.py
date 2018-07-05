@@ -28,7 +28,7 @@ class GitManager:
 
     @classmethod
     def add_to_blacklist(cls, blacklist='', item_to_blacklist='', username='', chat_profile_link='',
-                         code_permissions=False):
+                         code_permissions=False, metasmoke_down=False):
         if git.config("--get", "user.name", _ok_code=[0, 1]) == "":
             return (False, 'Tell someone to run `git config user.name "SmokeDetector"`')
 
@@ -133,9 +133,16 @@ class GitManager:
                     git.checkout("deploy")  # Return to deploy, pending the accept of the PR in Master.
                     git.branch('-D', branch)  # Delete the branch in the local git tree since we're done with it.
                     url = response.json()["html_url"]
-                    return (True,
-                            "You don't have code privileges, but I've [created PR#{1} for you]({0}).".format(
-                                url, url.split('/')[-1]))
+                    if metasmoke_down:
+                        return (True,
+                                "MetaSmoke is not reachable, so I can't see if you have code privileges, but I've "
+                                "[created PR#{1} for you]({0}).".format(
+                                    url, url.split('/')[-1]))
+                    else:
+                        return (True,
+                                "You don't have code privileges, but I've [created PR#{1} for you]({0}).".format(
+                                    url, url.split('/')[-1]))
+
                 except KeyError:
                     git.checkout("deploy")  # Return to deploy
 
