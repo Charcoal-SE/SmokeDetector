@@ -4307,3 +4307,4 @@
 1530806563	Makyen	dex\.top
 1530806575	Makyen	uex\.com
 1530807011	Makyen	TTC\W*(?:token|airdrop)
+1530807021	Makyen	incentivized\W*social\W*networking
