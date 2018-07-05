@@ -1110,6 +1110,7 @@ def report(msg, args, alias_used="report"):
 
     argsraw = args.split(' "', 1)
     urls = argsraw[0].split(' ')
+    action_done = "scanned" if alias_used == "scan" else "reported"
 
     # Handle determining whether a custom report reason was provided.
     try:
@@ -1125,10 +1126,11 @@ def report(msg, args, alias_used="report"):
                                "Please review the permitted !!/report syntax in the documentation "
                                "for guidance on using custom report reasons.")
 
-        if alias_used == "scan":
-            raise CmdException("Custom reason is not supported with `!!/scan`")
+        report_info = u"Post manually {} by user *{}* in room *{}* with reason: *{}*.\n\n".format(
+            action_done, msg.owner.name, msg.room.name, custom_reason)
     except IndexError:
-        custom_reason = None
+        report_info = u"Post manually {} by user *{}* in room *{}*.\n\n".format(
+            action_done, msg.owner.name, msg.room.name)
 
     urls = list(set(urls))
 
@@ -1179,21 +1181,14 @@ def report(msg, args, alias_used="report"):
 
         # If alias_used == "report-force" then jump to the next block
         if scan_spam and alias_used in {"scan", "report"}:
-            handle_spam(post=post, reasons=scan_reasons, why=scan_why + "\nManually triggered scan")
+            handle_spam(post=post, reasons=scan_reasons, why=report_info + scan_why)
             continue
 
-        # scan_spam == False
+        # scan_spam == False or alias_used == "report-force"
         if alias_used in {"report", "report-force"}:
             if user is not None:
                 message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
                 add_blacklisted_user(user, message_url, post_data.post_url)
-
-            if custom_reason:
-                why_info = u"Post manually reported by user *{}* in room *{}* with reason: *{}*.\n".format(
-                    msg.owner.name, msg.room.name, custom_reason
-                )
-            else:
-                why_info = u"Post manually reported by user *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
 
             batch = ""
             if len(urls) > 1:
@@ -1207,7 +1202,7 @@ def report(msg, args, alias_used="report"):
 
             handle_spam(post=post,
                         reasons=["Manually reported " + post_data.post_type + batch],
-                        why=why_info + '\n' + why_append)
+                        why=report_info + why_append)
             continue
 
         # scan_spam == False and alias_used == "scan"
