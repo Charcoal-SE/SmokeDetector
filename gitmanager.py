@@ -135,7 +135,7 @@ class GitManager:
                     url = response.json()["html_url"]
                     if metasmoke_down:
                         return (True,
-                                "MetaSmoke is not reachable, so I can't see if you have code privileges, but I've "
+                                "Metasmoke is not reachable, so I can't see if you have code privileges, but I've "
                                 "[created PR#{1} for you]({0}).".format(
                                     url, url.split('/')[-1]))
                     else:
@@ -178,7 +178,7 @@ class GitManager:
     def remove_from_blacklist(cls, item, username, blacklist_type="", code_privileged=False, metasmoke_down=False):
         if not code_privileged:
             if metasmoke_down:
-                return False, "MetaSmoke is offline, and I can't determine if you are a code admin or not. " \
+                return False, "Metasmoke is offline, and I can't determine if you are a code admin or not. " \
                               "If you are a code admin, then wait for MS to be back up before running this command."
             else:
                 return False, "Ask a code admin to run that for you. Use `!!/whois code_admin` to find out who's here."
