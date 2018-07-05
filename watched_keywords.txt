@@ -4305,3 +4305,4 @@
 1530806503	Makyen	shareplus\.tataufo\.com
 1530806523	Makyen	ttc\.eco
 1530806563	Makyen	dex\.top
+1530806575	Makyen	uex\.com
