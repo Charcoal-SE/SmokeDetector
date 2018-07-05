@@ -118,11 +118,11 @@ class GitManager:
                                    "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6}) and the "
                                    "Stack Exchange search [here](https://stackexchange.com/search?q=%22{7}%22).\n"
                                    u"<!-- METASMOKE-BLACKLIST-{8} {4} -->".format(
-                                       username, chat_profile_link, op, blacklist,
-                                       item, ms_search_option,
-                                       quote_plus(item.replace("\\W", "[- ]")),
-                                       quote_plus(item.replace("\\W", " ").replace("\\.", ".")),
-                                       blacklist.upper()),
+                                       username, chat_profile_link, op, blacklist,                # 0 1 2 3
+                                       item, ms_search_option,                                    # 4 5
+                                       quote_plus(item),                                          # 6
+                                       quote_plus(item.replace("\\W", " ").replace("\\.", ".")),  # 7
+                                       blacklist.upper()),                                        # 8
                            "head": branch,
                            "base": "master"}
                 response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls",
