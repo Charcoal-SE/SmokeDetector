@@ -4319,3 +4319,4 @@
 1530866335	Makyen	supportsquicken\.com
 1530866347	Makyen	[a-z_]*(?:1_*)?855[\W_]*718[\W_]*2888[a-z_]*
 1530867666	Glorfindel	tambarampcsacademy\.com
+1530868285	Glorfindel	puriconstructionsamanvilas\.in
