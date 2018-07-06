@@ -446,7 +446,7 @@ def has_community_bumped_post(post_url, post_content):
                 if post['created_at'] == latest_revision_date:
                     if post['body'] == post_content:
                         return True
-        except requests.exceptions.ReadTimeout:
+        except requests.exceptions.ConnectionError:
             return False  # MS is down, so assume it is not bumped
     return False
 
