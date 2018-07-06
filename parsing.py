@@ -1,7 +1,7 @@
 # coding=utf-8
 # noinspection PyCompatibility
 import regex
-from globalvars import GlobalVars
+import globalvars
 import datahandling
 
 BAD_CHAR = "\u200c\u200b"
@@ -9,7 +9,7 @@ BAD_CHAR = "\u200c\u200b"
 
 # noinspection PyMissingTypeHints
 def rebuild_str(str):
-    return ''.join([ch for ch in str if ch not in BAD_CHAR])
+    return ''.join(ch for ch in str if ch not in BAD_CHAR)
 
 
 # noinspection PyBroadException,PyMissingTypeHints
@@ -142,17 +142,17 @@ def edited_message_after_postgone_command(content):
 
 # noinspection PyMissingTypeHints
 def unescape_title(title_escaped):
-    return GlobalVars.parser.unescape(title_escaped).strip()
+    return globalvars.GlobalVars.parser.unescape(title_escaped).strip()
 
 
 # noinspection PyMissingTypeHints
-def escape_special_chars_in_title(title_unescaped):
-    return regex.sub(r"([_*\\`\[\]])", r"\\\1", title_unescaped)
+def escape_markdown(s):
+    return regex.sub(r"([_*`\[\]])", r"\\\1", s)
 
 
 # noinspection PyMissingTypeHints
 def sanitize_title(title_unescaped):
-    return regex.sub('(https?://|\n)', '', escape_special_chars_in_title(title_unescaped).replace('\n', u'\u23CE'))
+    return regex.sub('(https?://|\n)', '', escape_markdown(title_unescaped).replace('\n', u'\u23CE'))
 
 
 # noinspection PyMissingTypeHints

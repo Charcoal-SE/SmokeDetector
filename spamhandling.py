@@ -9,7 +9,7 @@ import parsing
 import metasmoke
 import excepthook
 from classes import Post, PostParseError
-from helpers import log, api_parameter_from_link
+from helpers import log, to_metasmoke_link
 from tasks import Tasks
 
 
@@ -40,9 +40,9 @@ def check_if_spam(post):
             blacklisted_post_url = blacklisted_user_data[2]
             if blacklisted_post_url:
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
-                why += u"\nBlacklisted user - blacklisted for {} (" \
-                       u"https://m.erwaysoftware.com/posts/by-url?url={}) by {}".format(blacklisted_post_url, rel_url,
-                                                                                        blacklisted_by)
+                why += u"\nBlacklisted user - blacklisted for {} ({}) by {}".format(
+                    blacklisted_post_url, to_metasmoke_link(rel_url), blacklisted_by
+                )
             else:
                 why += u"\n" + u"Blacklisted user - blacklisted by {}".format(blacklisted_by)
     if 0 < len(test):
@@ -96,10 +96,8 @@ def handle_spam(post, reasons, why):
 
         prefix = u"[ [SmokeDetector](//goo.gl/eLDYqh) ]"
         if GlobalVars.metasmoke_key:
-            prefix_ms = u"[ [SmokeDetector](//goo.gl/eLDYqh) | [MS](//m.erwaysoftware.com/posts/uid/{}/{}) ]".format(
-                api_parameter_from_link(post_url),
-                post.post_id
-            )
+            prefix_ms = u"[ [SmokeDetector](//goo.gl/eLDYqh) | [MS]({}) ]".format(
+                to_metasmoke_link(post_url, protocol=False))
         else:
             prefix_ms = prefix
 
@@ -125,7 +123,7 @@ def handle_spam(post, reasons, why):
             reason = ", ".join(reasons[:reason_count])
             if len(reasons) > reason_count:
                 reason += ", +{} more".format(len(reasons) - reason_count)
-            reason = reason[:1].upper() + reason[1:]  # reason is capitalised, unlike the entries of reasons list
+            reason = reason.capitalize()
             message = prefix_ms + s.format(reason)  # Insert reason list
             if len(message) <= 500:
                 break  # Problem solved, stop attempting
@@ -136,7 +134,8 @@ def handle_spam(post, reasons, why):
 
         without_roles = tuple("no-" + reason for reason in reasons) + ("site-no-" + post.post_site,)
 
-        if set(reasons) - GlobalVars.experimental_reasons == set():
+        if set(reasons) - GlobalVars.experimental_reasons == set() and \
+                not why.startswith("Post manually "):
             chatcommunicate.tell_rooms(message, ("experimental",),
                                        without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
         else:

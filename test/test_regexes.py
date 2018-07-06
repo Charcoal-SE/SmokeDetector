@@ -78,13 +78,16 @@ from helpers import log
     ('Proof of onward travel in Japan?', """<p>The best solution to overcome the problem of your travel<a href="https://i.stack.imgur.com/eS6WQ.jpg" rel="nofollow noreferrer"><img src="https://i.stack.imgur.com/eS6WQ.jpg" alt="enter image description here"></a></p>
 
 <p>httl://bestonwardticket.com</p>""", 'Best onward Ticket', 'travel.stackexchange.com', True, True, True),
-    ('Max limit on number of concurrent ajax request', """<p>Php java script boring yaaarrr <a href="http://www.price-buy.com/" rel="nofollow noreferrer">Price-Buy.com</a> </p>""", 'Totally Unrelated Username', 'stackoverflow.com', True, True, False),
+    ('Max limit on number of concurrent ajax request', """<p>Php java script boring yaaarrr <a href="http://www.google.com/" rel="nofollow noreferrer">Google.com</a> </p>""", 'Totally Unrelated Username', 'stackoverflow.com', True, True, False),
     ('Asp.NET Identity will not consistently authenticate users', """<p>I am definitely not the only one experiencing this anomaly (<a href="https://stackoverflow.com/questions/46559016/asp-net-identity-login-sometimes-yes-and-sometimes-no">Asp.net: Identity Login sometimes yes and sometimes no</a>), and I have been combind StackExchange for some solution (I have tried literally dozens of suggestions), and simply nothing delivers a consistent fix.</p>""", 'Dan Martini', 'stackoverflow.com', False, False, False),
     ('Power a circuit off USB the correct way', """<p>I'd like to properly power a gadget off USB (2.4A USB powerbank <a href="https://rads.stackoverflow.com/amzn/click/B00X5RV14Y" rel="nofollow noreferrer">https://www.amazon.com/Anker-20100mAh-Portable-Charger-PowerCore/dp/B00X5RV14Y/ref=sr_1_3?ie=UTF8&qid=1512261941&sr=8-3</a>) consisting of:</p>""", 'iMrFelix', 'electronics.stackexchange.com', False, False, False),
     ('GUI over bash using glade', """<p>I want to make a remote control for my PC. Basically all I need is to run a command on a button click. Following this <a href="https://www.youtube.com/watch?v=cNWmleAJ2qg" rel="nofollow noreferrer">guide</a> I managed to build the <a href="https://i.stack.imgur.com/dMy9g.jpg" rel="nofollow noreferrer">layout</a> and it's everything i've ever dreamed of.
 But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, False, False),
     ('Misleading link common file whitelist', 'File: <a href="https://www.malicious.com/">https://google.com/file.txt</a>', '', 'stackoverflow.com', False, False, True),
-    ('Misleading link common file whitelist', 'File: <a href="https://www.malicious.txt/">https://google.com</a>', '', 'stackoverflow.com', False, False, False)
+    ('Misleading link common file whitelist', 'File: <a href="https://www.malicious.txt/">https://google.com</a>', '', 'stackoverflow.com', False, False, False),
+    ('Pattern-matching product name', 'Extreme Boost Max', '', 'stackoverflow.com', False, False, True),
+    ('Pattern-matching product name', 'Alpha Formula Pro', '', 'math.stackexchange.com', False, False, False),
+    ('Body starts with title', 'Body starts with title and ends with <a href="https://example.com">https://example.com</a>', '', '', False, False, True)
 ])
 def test_regexes(title, body, username, site, body_is_summary, is_answer, match):
     # If we want to test answers separately, this should be changed

@@ -196,7 +196,7 @@ def on_msg(msg, client):
 
         if message.parent:
             if message.parent.owner.id == client._br.user_id:
-                strip_mention = regex.sub("^(<span class='mention'>)?@.*?(</span>)? ", "", message.content)
+                strip_mention = regex.sub("^(<span class=(\"|')mention(\"|')>)?@.*?(</span>)? ", "", message.content)
                 cmd = GlobalVars.parser.unescape(strip_mention)
 
                 result = dispatch_reply_command(message.parent, message, cmd)

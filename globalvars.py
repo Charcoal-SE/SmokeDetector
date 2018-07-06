@@ -13,6 +13,7 @@ import regex
 import subprocess as sp
 from dulwich.repo import Repo
 import platform
+from flovis import Flovis
 
 
 def git_commit_info():
@@ -70,6 +71,8 @@ class GlobalVars:
         "potentially bad keyword in body",
         "potentially bad keyword in title",
         "potentially bad keyword in username",
+        "potentially bad NS for domain in title",
+        "potentially bad NS for domain in body",
         "toxic body detected",
         "toxic answer detected"
     }
@@ -160,3 +163,13 @@ class GlobalVars:
         perspective_key = config.get("Config", "perspective_key")
     except NoOptionError:
         perspective_key = None
+
+    try:
+        flovis_host = config.get("Config", "flovis_host")
+    except NoOptionError:
+        flovis_host = None
+
+    if flovis_host is not None:
+        flovis = Flovis(flovis_host)
+    else:
+        flovis = None

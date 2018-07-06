@@ -90,6 +90,11 @@ class Metasmoke:
         if isinstance(message, Iterable):
             if "message" in message:
                 chatcommunicate.tell_rooms_with("metasmoke", message['message'])
+            elif "autoflag_fp" in message:
+                event = message["autoflag_fp"]
+
+                chatcommunicate.tell_rooms(event["message"], ("debug", "site-" + event["site"]),
+                                           ("no-site-" + event["site"],), notify_site="/autoflag_fp")
             elif "exit" in message:
                 os._exit(message["exit"])
             elif "blacklist" in message:
@@ -113,20 +118,23 @@ class Metasmoke:
                         and not datahandling.is_false_positive((post_data.post_id, post_data.site)):
                     return
                 user = parsing.get_user_from_url(post_data.owner_url)
+                post = classes.Post(api_response=post_data)
+
+                scan_spam, scan_reasons, scan_why = spamhandling.check_if_spam(post)
+                if scan_spam:
+                    why_append = u"This post would have also been caught for: " + \
+                        u", ".join(scan_reasons).capitalize() + "\n" + scan_why
+                else:
+                    why_append = u"This post would not have been caught otherwise."
+
+                # Add user to blacklist *after* post is scanned
                 if user is not None:
                     datahandling.add_blacklisted_user(user, "metasmoke", post_data.post_url)
-                why = u"Post manually reported by user *{}* from metasmoke.\n".format(message["report"]["user"])
-                postobj = classes.Post(api_response={'title': post_data.title, 'body': post_data.body,
-                                                     'owner': {'display_name': post_data.owner_name,
-                                                               'reputation': post_data.owner_rep,
-                                                               'link': post_data.owner_url},
-                                                     'site': post_data.site,
-                                                     'is_answer': (post_data.post_type == "answer"),
-                                                     'score': post_data.score, 'link': post_data.post_url,
-                                                     'question_id': post_data.post_id,
-                                                     'up_vote_count': post_data.up_vote_count,
-                                                     'down_vote_count': post_data.down_vote_count})
-                spamhandling.handle_spam(post=postobj,
+
+                why = u"Post manually reported by user *{}* from metasmoke.\n\n{}".format(
+                    message["report"]["user"], why_append)
+
+                spamhandling.handle_spam(post=post,
                                          reasons=["Manually reported " + post_data.post_type],
                                          why=why)
             elif "deploy_updated" in message:

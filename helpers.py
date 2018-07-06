@@ -20,9 +20,24 @@ def environ_or_none(key):
         return None
 
 
-# Checks that all items in a pattern-matching product name are unique
-def all_matches_unique(match):
-    return len(match[0][1::2]) == len(set(match[0][1::2]))
+# Counts when all items in a pattern-matching product name are unique
+def unique_matches(match):
+    return sum(len(m[1:]) == len(set(m[1:])) for m in match)
+
+
+def expand_shorthand_link(s):
+    s = s.lower()
+    if s.endswith("so"):
+        s = s[:-2] + "stackoverflow.com"
+    elif s.endswith("se"):
+        s = s[:-2] + "stackexchange.com"
+    elif s.endswith("su"):
+        s = s[:-2] + "superuser.com"
+    elif s.endswith("sf"):
+        s = s[:-2] + "serverfault.com"
+    elif s.endswith("au"):
+        s = s[:-2] + "askubuntu.com"
+    return s
 
 
 # noinspection PyMissingTypeHints
@@ -101,6 +116,23 @@ def api_parameter_from_link(link):
             return match[1]
     else:
         return None
+
+
+id_parser_regex = r'(?:https?:)?//[^/]+/\w+/(\d+)'
+id_parser = regex.compile(id_parser_regex)
+
+
+def post_id_from_link(link):
+    match = id_parser.search(link)
+    if match:
+        return match[1]
+    else:
+        return None
+
+
+def to_metasmoke_link(post_url, protocol=True):
+    return "{}//m.erwaysoftware.com/posts/uid/{}/{}".format(
+        "https:" if protocol else "", api_parameter_from_link(post_url), post_id_from_link(post_url))
 
 
 class SecurityError(Exception):

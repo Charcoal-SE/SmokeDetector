@@ -28,7 +28,7 @@ class GitManager:
 
     @classmethod
     def add_to_blacklist(cls, blacklist='', item_to_blacklist='', username='', chat_profile_link='',
-                         code_permissions=False):
+                         code_permissions=False, metasmoke_down=False):
         if git.config("--get", "user.name", _ok_code=[0, 1]) == "":
             return (False, 'Tell someone to run `git config user.name "SmokeDetector"`')
 
@@ -41,7 +41,7 @@ class GitManager:
         if item_to_blacklist == "":
             return (False, 'GitManager: item_to_blacklist is not defined. Blame a developer.')
 
-        item_to_blacklist = item_to_blacklist.replace("\s", " ")
+        item_to_blacklist = item_to_blacklist.replace("\\s", " ")
 
         if blacklist == "website":
             blacklist_type = Blacklist.WEBSITES
@@ -99,7 +99,7 @@ class GitManager:
                 git.add('watched_keywords.txt')
 
             git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
-                       "-m", u"Auto {0} of {1} by {2} --autopull".format(op, item, username))
+                       "-m", u"Auto {0} of `{1}` by {2} --autopull".format(op, item, username))
 
             if code_permissions:
                 git.checkout("master")
@@ -114,15 +114,15 @@ class GitManager:
                     return (False, "Tell someone to set a GH password")
 
                 payload = {"title": u"{0}: {1} {2}".format(username, op.title(), item),
-                           "body": u"[{0}]({1}) requests the {2} of the {3} `{4}`. See the Metasmoke search [here]"
+                           "body": u"[{0}]({1}) requests the {2} of the {3} `{4}`. See the MS search [here]"
                                    "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6}) and the "
                                    "Stack Exchange search [here](https://stackexchange.com/search?q=%22{7}%22).\n"
                                    u"<!-- METASMOKE-BLACKLIST-{8} {4} -->".format(
-                                       username, chat_profile_link, op, blacklist,
-                                       item, ms_search_option,
-                                       quote_plus(item.replace("\\W", "[- ]")),
-                                       quote_plus(item.replace("\\W", " ").replace("\\.", ".")),
-                                       blacklist.upper()),
+                                       username, chat_profile_link, op, blacklist,                # 0 1 2 3
+                                       item, ms_search_option,                                    # 4 5
+                                       quote_plus(item),                                          # 6
+                                       quote_plus(item.replace("\\W", " ").replace("\\.", ".")),  # 7
+                                       blacklist.upper()),                                        # 8
                            "head": branch,
                            "base": "master"}
                 response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls",
@@ -133,9 +133,16 @@ class GitManager:
                     git.checkout("deploy")  # Return to deploy, pending the accept of the PR in Master.
                     git.branch('-D', branch)  # Delete the branch in the local git tree since we're done with it.
                     url = response.json()["html_url"]
-                    return (True,
-                            "You don't have code privileges, but I've [created PR#{1} for you]({0}).".format(
-                                url, url.split('/')[-1]))
+                    if metasmoke_down:
+                        return (True,
+                                "MS is not reachable, so I can't see if you have code privileges, but I've "
+                                "[created PR#{1} for you]({0}).".format(
+                                    url, url.split('/')[-1]))
+                    else:
+                        return (True,
+                                "You don't have code privileges, but I've [created PR#{1} for you]({0}).".format(
+                                    url, url.split('/')[-1]))
+
                 except KeyError:
                     git.checkout("deploy")  # Return to deploy
 
@@ -153,39 +160,57 @@ class GitManager:
                         # Capture any other invalid response cases.
                         return (False, "A bad or invalid reply was received from GH, the message was: %s" %
                                 response.json()['message'])
-        except Exception:
-            return (False, "Git functions failed for unspecified reasons.")
+        except Exception as err:
+            with open('errorLogs.txt', 'a', encoding="utf-8") as f:
+                f.write("{dt} {message}".format(dt=datetime.now().strftime('%Y-%m-%d %H:%M:%s'), message=str(err)))
+            return (False, "Git functions failed for unspecified reasons, details may be in error log.")
         finally:
             # Always return to `deploy` branch when done with anything.
             git.checkout("deploy")
             cls.gitmanager_lock.release()
 
         if op == 'blacklist':
-            return (True, "Blacklisted {0}".format(item))
+            return (True, "Blacklisted `{0}`".format(item))
         elif op == 'watch':
-            return (True, "Added {0} to watchlist".format(item))
+            return (True, "Added `{0}` to watchlist".format(item))
 
     @classmethod
-    def unwatch(cls, item, username, code_privileged=False):
+    def remove_from_blacklist(cls, item, username, blacklist_type="", code_privileged=False, metasmoke_down=False):
         if not code_privileged:
-            return (False, 'Ask a code admin to run that for you. Use `!!/whois code_admin` to find out who\'s here.')
+            if metasmoke_down:
+                return False, "MS is offline, and I can't determine if you are a code admin or not. " \
+                              "If you are a code admin, then wait for MS to be back up before running this command."
+            else:
+                return False, "Ask a code admin to run that for you. Use `!!/whois code_admin` to find out who's here."
 
         try:
             cls.gitmanager_lock.acquire()
 
-            watchlist = Blacklist.WATCHED_KEYWORDS
-            file_name = watchlist[0]
-            manager = Blacklist(watchlist)
+            if blacklist_type == "watch":
+                blacklists = [Blacklist.WATCHED_KEYWORDS]
+                list_type = "watchlist"
+            elif blacklist_type == "blacklist":
+                blacklists = [Blacklist.KEYWORDS, Blacklist.WEBSITES, Blacklist.USERNAMES]
+                list_type = "blacklist"
+            else:
+                return False, "`blacklist_type` not set, blame a developer."
 
-            exists, _line = manager.exists(item)
+            for blacklist in blacklists:
+                file_name = blacklist[0]
+                manager = Blacklist(blacklist)
+
+                exists, _line = manager.exists(item)
+                if exists:
+                    break
+
             if not exists:
-                return (False, 'No such item `{}` in watchlist.'.format(item))
+                return False, 'No such item `{}` in {}.'.format(item, list_type)
 
             status, message = cls.prepare_git_for_operation(file_name)
             if not status:
-                return (False, message)
+                return False, message
 
-            branch = 'auto-unwatch-{}'.format(str(time.time()))
+            branch = 'auto-un{}-{}'.format(blacklist_type, time.time())
             git.checkout('-b', branch)
             git.reset('HEAD')
 
@@ -193,20 +218,21 @@ class GitManager:
 
             git.add(file_name)
             git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
-                       '-m', 'Auto unwatch of {} by {} --autopull'.format(item, username))
+                       '-m', 'Auto un{} of `{}` by {} --autopull'.format(blacklist_type, item, username))
 
             git.checkout('master')
             git.merge(branch)
             git.push('origin', 'master')
             git.branch('-D', branch)
         except Exception as e:
-            log('error', '{}: {}'.format(type(e).__name__, str(e)))
-            return (False, 'Git operations failed for unspecified reasons.')
+            log('error', '{}: {}'.format(type(e).__name__, e))
+            return False, 'Git operations failed for unspecified reasons.'
         finally:
             git.checkout('deploy')
             cls.gitmanager_lock.release()
 
-        return (True, 'Removed {} from watchlist'.format(item))
+        # With no exception raised, list_type should be set
+        return True, 'Removed `{}` from {}'.format(item, list_type)
 
     @staticmethod
     def prepare_git_for_operation(blacklist_file_name):

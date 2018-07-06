@@ -19,7 +19,7 @@ import dns.resolver
 import requests
 import chatcommunicate
 
-from helpers import all_matches_unique, log
+from helpers import unique_matches, log
 from globalvars import GlobalVars
 from blacklists import load_blacklists
 
@@ -27,6 +27,7 @@ TLD_CACHE = []
 LEVEN_DOMAIN_DISTANCE = 3
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
+BODY_TITLE_SIMILAR_THRESHOLD = 0.90
 CHARACTER_USE_RATIO = 0.42
 REPEATED_CHARACTER_RATIO = 0.20
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
@@ -151,24 +152,20 @@ def malicious_link(s, site, *args):
     try:
         parsed_href = tld.get_tld(href, as_object=True)
         log('debug', parsed_href.domain, SE_SITES_DOMAINS)
-        if parsed_href.tld in SE_SITES_DOMAINS:
+        if parsed_href.fld in SE_SITES_DOMAINS:
             return False, ''
         if contains_tld(text) and ' ' not in text:
             parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True)
         else:
             raise tld.exceptions.TldBadUrl('Link text is not a URL')
-    except tld.exceptions.TldDomainNotFound:
-        return False, ''
-    except tld.exceptions.TldBadUrl:
-        return False, ''
-    except ValueError as err:
+    except (tld.exceptions.TldDomainNotFound, tld.exceptions.TldBadUrl, ValueError) as err:
         return False, ''
 
-    if site == 'stackoverflow.com' and parsed_text.tld.split('.')[-1] in SAFE_EXTENSIONS:
+    if site == 'stackoverflow.com' and parsed_text.fld.split('.')[-1] in SAFE_EXTENSIONS:
         return False, ''
     elif levenshtein(parsed_href.domain.lower(), parsed_text.domain.lower()) > LEVEN_DOMAIN_DISTANCE:
         return True, 'Domain {} indicated by possible misleading text {}.'.format(
-            parsed_href, parsed_text
+            parsed_href.fld, parsed_text.fld
         )
     else:
         return False, ''
@@ -332,21 +329,23 @@ def has_health(s, site, *args):   # flexible detection of health spam in titles
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def pattern_product_name(s, site, *args):
-    keywords = ["Testo?", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Kamasutra", "HL-?12", "NeuroFuse",
+    keywords = ["Testo", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Diet", "Slim", "Premier", "Diet",
                 "Junivive", "Apexatropin", "Gain", "Allure", "Nuvella", "Trimgenix", "Satin", "Prodroxatone",
-                "Elite", "Force", "Exceptional", "Enhance(ment)?", "Nitro", "Max", "Boost", "E?xtreme", "Grow",
-                "Deep", "Male", "Pro", "Advanced", "Monster", "Divine", "Royale", "Angele", "Trinity", "Andro",
-                "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(tone)?", "Hydroluxe", "Booster",
-                "Serum", "Supplement", "Fuel", "Cream"]
+                "Elite", "Force", "Exceptional", "Enhance(?:ment)?", "Nitro", "Max+", "Boost", "E?xtreme", "Grow",
+                "Deep", "Male", "Pro", "Advanced", "Monster", "Divine", "Royale", "Angele*", "Trinity", "Andro",
+                "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Hydroluxe", "Boost(?:er)?",
+                "Serum", "Supplement", "Fuel", "Cream", "Keto", "Rapid", "Tone", "Forskolin", "Neuro", "Luma"
+                "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Premi(?:um|er)", "Vital", "Derma?", "Master"]
     if site != "math.stackexchange.com" and site != "mathoverflow.net":
-        keywords += ["E?X[tl\\d]?", "Alpha", "Plus", "Prime", "Formula"]
+        keywords += ["X[LORT]", "Alpha", "Plus", "Prime", "Formula"]
     keywords = "|".join(keywords)
+
     three_words = regex.compile(r"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
     two_words = regex.compile(r"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
-    if len(three_words) >= 1 and all_matches_unique(three_words):
-        return True, u"Pattern-matching product name *{}*".format(three_words[0][0])
-    elif len(two_words) >= 2 and all_matches_unique(two_words):
-        return True, u"Pattern-matching product name *{}*".format(two_words[0][0])
+    if unique_matches(three_words) >= 1:
+        return True, u"Pattern-matching product name *{}*".format(", ".join(match[0] for match in three_words))
+    if unique_matches(two_words) >= 2:
+        return True, u"Pattern-matching product name *{}*".format(", ".join(match[0] for match in two_words))
     return False, ""
 
 
@@ -421,10 +420,10 @@ def bad_link_text(s, site, *args):   # suspicious text of a hyperlink
         r"(?isu)"
         r"\b(buy|cheap) |live[ -]?stream|"
         r"\bmake (money|\$)|"
-        r"\b(porno?|(whole)?sale|coins|replica|luxury|essays?|in \L<city>)\b"
+        r"\b(porno?|(whole)?sale|coins|replica|luxury|coupons?|essays?|in \L<city>)\b"
         r"\b\L<city>(?:\b.{1.20}\b)?(service|escort|call girls?)|"
         r"(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery|school|university)|"
-        r"\b(writing service|essay (writing|tips))", city=FindSpam.city_list)
+        r"\b(writing (service|help)|essay (writing|tips))", city=FindSpam.city_list)
     links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
     business = regex.compile(
         r"(?i)(^| )(airlines?|apple|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
@@ -463,6 +462,16 @@ def bad_pattern_in_url(s, site, *args):
 
 def ns_for_url_domain(s, site, nslist, *args):
     invalid_tld_count = 0
+
+    for nsentry in nslist:
+        if isinstance(nsentry, set):
+            for ns in nsentry:
+                assert ns.endswith('.'),\
+                    "Missing final dot on NS entry {0}".format(ns)
+        else:
+            assert nsentry.endswith('.'),\
+                "Missing final dot on NS entry {0}".format(nsentry)
+
     for domain in set([get_domain(link, full=True) for link in post_links(s)]):
         if not tld.get_tld(domain, fix_protocol=True, fail_silently=True):
             log('debug', '{0} has no valid tld; skipping'.format(domain))
@@ -497,33 +506,53 @@ def ns_for_url_domain(s, site, nslist, *args):
 def bad_ns_for_url_domain(s, site, *args):
     return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name!
-        # {'dns1.namecheaphosting.com.', 'dns2.namecheaphosting.com.'},
-        # {'dns11.namecheaphosting.com.', 'dns12.namecheaphosting.com.'},
-        'namecheaphosting.com.',
         {'ns1.md-95.bigrockservers.com.', 'ns2.md-95.bigrockservers.com.'},
         {'ns1.md-99.bigrockservers.com.', 'ns2.md-99.bigrockservers.com.'},
         {'apollo.ns.cloudflare.com.', 'liz.ns.cloudflare.com.'},
+        {'ara.ns.cloudflare.com.', 'greg.ns.cloudflare.com.'},
         {'chip.ns.cloudflare.com.', 'lola.ns.cloudflare.com.'},
         {'lloyd.ns.cloudflare.com.', 'reza.ns.cloudflare.com.'},
         '247support-number.com.',
+        'promoocodes.com.',
     ])
 
 
 def watched_ns_for_url_domain(s, site, *args):
     return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name here either!
-        {'ara.ns.cloudflare.com.', 'greg.ns.cloudflare.com.'},
+        # {'dns1.namecheaphosting.com.', 'dns2.namecheaphosting.com.'},
+        # {'dns11.namecheaphosting.com.', 'dns12.namecheaphosting.com.'},
+        'namecheaphosting.com.',
+        # 'domaincontrol.com.',
+        {'dns1.registrar-servers.com.', 'dns2.registrar-servers.com.'},
+        {'adi.ns.cloudflare.com.', 'miles.ns.cloudflare.com.'},
+        {'ajay.ns.cloudflare.com.', 'lia.ns.cloudflare.com.'},
+        {'betty.ns.cloudflare.com.', 'kai.ns.cloudflare.com.'},
+        {'bonnie.ns.cloudflare.com.', 'guss.ns.cloudflare.com.'},
         {'brenda.ns.cloudflare.com.', 'merlin.ns.cloudflare.com.'},
+        {'chip.ns.cloudflare.com.', 'cruz.ns.cloudflare.com.'},
         {'chris.ns.cloudflare.com.', 'tess.ns.cloudflare.com.'},
+        {'dana.ns.cloudflare.com.', 'piotr.ns.cloudflare.com.'},
+        {'duke.ns.cloudflare.com.', 'lola.ns.cloudflare.com.'},
+        {'ernest.ns.cloudflare.com.', 'pat.ns.cloudflare.com.'},
         {'greg.ns.cloudflare.com.', 'kia.ns.cloudflare.com.'},
+        {'kia.ns.cloudflare.com.', 'noah.cs.cloudflare.com.'},
+        {'lee.ns.cloudflare.com.', 'ulla.ns.cloudflare.com.'},
+        {'mark.ns.cloudflare.com.', 'wanda.ns.cloudflare.com.'},
+        {'naomi.ns.cloudflare.com.', 'tim.ns.cloudflare.com.'},
+        {'norm.ns.cloudflare.com.', 'olga.ns.cloudflare.com.'},
         {'pablo.ns.cloudflare.com.', 'pola.ns.cloudflare.com.'},
+        'mihanwebhost.com.',
+        'offshoreracks.com.',
         'sathyats.net.',
+        'shared-host.org.',
+        'web.com.ph.',
     ])
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def is_offensive_post(s, site, *args):
-    if s is None or len(s) == 0:
+    if not s:
         return False, ""
 
     offensive = regex.compile(
@@ -531,7 +560,7 @@ def is_offensive_post(s, site, *args):
         r"daf[au][qk]|(?<!brain)(mother|mutha)?f\W*u\W*c?\W*k+(a|ing?|e?[rd]| off+| y(ou|e)(rself)?|"
         r" u+|tard)?|(bul+)?shit(t?er|head)?|(yo)?u(r|'?re)? (gay|scum)|dickhead|"
         r"pedo(?!bapt|dont|log|mete?r|troph)|cocksuck(e?[rd])?|"
-        r"whore|cunt|jerk\W?off|cumm(y|ie)|butthurt|queef|(private|pussy) show|lesbo|"
+        r"whore|cunt|jerk(ing)?\W?off|cumm(y|ie)|butthurt|queef|(private|pussy) show|lesbo|"
         r"bitche?|(eat|suck|throbbing|sw[oe]ll(en|ing)?)\b.{0,20}\b (cock|dick)|dee[sz]e? nut[sz]|"
         r"dumb\W?ass)s?|wet\W?pussy?(ies)?|\bslut+[ys]?\b|shot\W?my\W?(hot\W?)?load\b")
     matches = offensive.finditer(s)
@@ -568,20 +597,21 @@ def username_similar_website(s, site, *args):
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def character_utilization_ratio(s, site, *args):
+    s = strip_urls_and_tags(s)
     counter = Counter(s)
     total_chars = len(s)
     highest_ratio = 0.0
-    # highest_char = None
+    highest_char = ""
 
     for key, value in counter.items():
         char_ratio = value / float(total_chars)
-        key, value, char_ratio
+        # key, value, char_ratio
         if char_ratio > highest_ratio:
             highest_ratio = char_ratio
-            # highest_char = key
+            highest_char = key
 
     if highest_ratio > CHARACTER_USE_RATIO:
-        return True, "The `{}` character appears in a high percentage of the post"
+        return True, "The `{}` character appears in a high percentage of the post".format(highest_char)
     else:
         return False, ""
 
@@ -648,7 +678,7 @@ def get_domain(s, full=False):
     try:
         extract = tld.get_tld(s, fix_protocol=True, as_object=True, )
         if full:
-            domain = str(extract)
+            domain = extract.fld
         else:
             domain = extract.domain
     except TldDomainNotFound as e:
@@ -658,7 +688,7 @@ def get_domain(s, full=False):
         try:
             extract = tld.get_tld(s1, fix_protocol=True, as_object=True, )
             if full:
-                domain = str(extract)
+                domain = extract.fld
             else:
                 domain = extract.domain
         except TldDomainNotFound:
@@ -708,14 +738,17 @@ def mostly_dots(s, *args):
         return False, ""
 
     # Strip code blocks here rather than with `stripcodeblocks` so we get the length of the whole post
-    body = regex.sub("(?s)<pre>.*?</pre>", "", s)
+    body = regex.sub("(?s)<pre([\w=\" -]*)?>.*?</pre>", "", s)
     body = regex.sub("(?s)<code>.*?</code>", "", body)
 
     body = strip_urls_and_tags(body)
 
-    dot_count = len(regex.findall(r"\.", body))
+    dot_count = body.count(".")
+    s = strip_urls_and_tags(s)
+    if not s:
+        return False, ""
 
-    if dot_count / float(len(s)) >= 0.4:
+    if dot_count / len(s) >= 0.4:
         return True, u"Post contains {} dots out of {} characters".format(dot_count, len(s))
     else:
         return False, ""
@@ -762,10 +795,30 @@ def toxic_check(post):
     return False, False, False, ""
 
 
+# noinspection PyUnusedLocal,PyMissingTypeHints
+def body_starts_with_title(post):
+    # Ignore too-short title
+    if len(post.title) < 10:
+        return False, False, False, ''
+
+    s = strip_urls_and_tags(post.body).replace(" ", "")
+    t = post.title.replace(" ", "")
+    similarity = similar_ratio(s[:len(t)], t)
+    end_in_url, ending_url = link_at_end(post.body, None)
+    if similarity >= BODY_TITLE_SIMILAR_THRESHOLD and end_in_url:
+        return False, False, True, \
+            'Body starts with title and ends in URL: {}'.format(ending_url.replace("Link at end: ", ""))
+    return False, False, False, ''
+
+
 def turkey(s, *args):
-    s = regex.search("<p>\s*?(\S{8,})\s*?</p>$", s.lower())
+    s = regex.search(r"<p>\s*?(\S{8,})\s*?</p>$", s.lower())
 
     if not s:
+        return False, ""
+
+    has_letter = regex.search(r"[A-Za-z]", s[1])
+    if not has_letter:
         return False, ""
 
     p1 = ENGLISH_PRIOR
@@ -790,6 +843,45 @@ def turkey2(post):
             return False, False, True, ""
 
     return False, False, False, ""
+
+
+# FLEE WHILE YOU STILL CAN.
+def religion_troll(s, *args):
+    regexes = [
+        r'(?:(?:Rubellite\W*(?:Fae|Yaksi)|Sarvabhouma|Rohit|Anisha|Ahmed\W*Bkhaty|Anubhav\W*Jha|Vineet\W*Aggarwal|Josh'
+        r'\W*K|Doniel\W*F|mbloch)(?:|\b.{1,200}?\b)(?:(?:mother)?[sf]uck|pis+|pus+(?:y|ies)|boo+b|tit|coc*k|dick|ass'
+        r'(?:hole|lick)?|penis|phallus|vagina|cunt(?:bag)?|genital|rectum|dog+ystyle|blowjob|scum(?:bag)|bitch|bastard'
+        r'|slut+(?:ish|y)?|harlot|whore|bloody|rotten|diseased|swelling|lesbian|queer|(?:homo|trans|bi)(?:sexual)?|'
+        r'retard|jew(?:ish)?|nig+er|nic+a|fag(?:g?[eio]t)?|heretic|idiot|sinners|raghead|muslim|hindu)(?:(?:ing|e[dr]'
+        r'|e?)[sz]?)?|(?:(?:mother)?[sf]uck|pis+|pus+(?:y|ies)|boo+b|tit|coc*k|dick|ass(?:hole|lick)?|penis|phallus|'
+        r'vagina|cunt(?:bag)?|genital|rectum|dog+ystyle|blowjob|scum(?:bag)|bitch|bastard|slut+(?:ish|y)?|harlot|whore'
+        r'|bloody|rotten|diseased|swelling|lesbian|queer|(?:homo|trans|bi)(?:sexual)?|retard|jew(?:ish)?|nig+er|nic+a|'
+        r'fag(?:g?[eio]t)?|heretic|idiot|sinners|raghead|muslim|hindu)(?:(?:ing|e[dr]|e?)[sz]?)?(?:|\b.{1,200}?\b)'
+        r'(?:Rubellite\W*(?:Fae|Yaksi)|Sarvabhouma|Rohit|Anisha|Ahmed\W*Bkhaty|Anubhav\W*Jha|Vineet\W*Aggarwal|Josh'
+        r'\W*K|Doniel\W*F|mbloch))',
+
+        r'(?:[hl]indu(?:s|ism)?|jew(?:s|ish)?|juda(?:ic|ism)|kike)(?:\W*(?:(?:chew|kiss|bunch|are|is|n|it|is|and|of|an?'
+        r'|the|greedy|bag|with|jewdaism)\W*)*(?:(?:worse\W*than(?:(?:\W*and)?\W*(?:aids|cancer|tuberculosis|syphilis|'
+        r'tumor|internal\W*bleeding)+)+)|(?:damned|going)\W*to\W*(?:rot\W*in\W*)?hell|stinking|filthy|dirty|bloody|'
+        r'(?:saggy)?\W*ass\W*?(?:hole|licker|e)?s?|w?hores?|bitch(?:es)?|idiots?|gandus?|homo(?:sexual)?s?|(?:fag|mag)'
+        r'(?:g?[eio]t)?s?|morons?|(circumcised\W*)?bastards?|jhandus?|(?:mother\W*?)?fuck(?:s|ing|ers)?|sucks?|'
+        r'cockroach(?:es)?|excreta|need\W*to\W*be\W*(?:exterminated|castrated)|puss(?:y|ies)(?:\W*licking)|hairy|'
+        r'rotten|cock\W*(?:slurping|suck(?:ers?|ing)?)|blood\W*?suck(?:ing|ers?)|parasites?|swines?(?:\W*piss)?|'
+        r'(?:scum|cunt)\W*bags?|rotten|corpses|slurping|mutilated\W*genitals?|whoremonger|rodents?|pests?|demonic|evil|'
+        r'uncivilized|barbaric|racist|satanic|savage|dead\W*swines)+)+',
+
+        r'(?:(?:stupid|bloody|gandus?|lindus?|w?hore(?:monger(?:s|ing)|s)?|impotent|dumb|(?:mother\W*?)?fuck(?:ing|ers)'
+        r'?|assholes?(?:\W*?of\W*?)?|bitch(?:es)?|dirty|stinking|filthy|blood\W*?(?:thirsty|sucking)|racist|dumb|pussy)'
+        r'\W*?(?:and|is|you|flesh|of|a)*\W*?)+(?:[hl]indu(?:s|ism)?|jew(?:s|ish)?|juda(?:ism|ic)|kike)',
+
+        r'rama?\W*?(?:(?:was|is|a|an)\W*?)*\W*?(?:bastard|impotent|asshole|(?:mother\W*?)?fuck(?:ing|ers|s)|'
+        r'(?:fag|mag)(?:g?[eio]t)?s?)+',
+
+        r'(?:\b|\w*)(?:o(?:[^A-Za-z]|&#?\w+;)*)(?:d(?:[^A-Za-z]|&#?\w+;)*)(?:u(?:[^A-Za-z]|&#?\w+;)*)(?:d(?:[^A-Za-z]|'
+        r'&#?\w+;)*)(?:u(?:[^A-Za-z]|&#?\w+;)*)(?:w(?:[^A-Za-z]|&#?\w+;)*)(?:a(?:[^A-Za-z]|&#?\w+;)*)\w*(?:\b|\w*)'
+    ]
+    offensive = any([regex.search(x, s) for x in regexes])
+    return offensive, 'Potential religion site troll post' if offensive else ''
 
 
 load_blacklists()
@@ -923,6 +1015,7 @@ class FindSpam:
         "Ludhiana", "Mumbai", "Madurai", "Patna", "Portland",
         "Rajkot", "Surat", "Telangana", "Udaipur", "Uttarakhand",
         "Noida", "Pune", "Rohini", "Trivandrum", "Thiruvananthapuram",
+        "Nashik", "Gurgaon", "Kochi", "Ernakulam",
         # yes, these aren't cities but...
         "India", "Pakistan",
         # buyabans.com spammer uses creative variations
@@ -964,6 +1057,7 @@ class FindSpam:
         {'regex': r"car\Win", 'all': False, 'sites': ['superuser.com', 'puzzling.stackexchange.com'],
          'reason': 'bad keyword in {}', 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        {'commented-out': '''
         # Judaism etc troll, 2018-04-18 ("potentially bad" makes this watch)
         {'regex': r'^John$', 'all': False,
          'sites': [
@@ -976,9 +1070,16 @@ class FindSpam:
          'title': False, 'body': False, 'username': True,
          'stripcodeblocks': False, 'body_summary': False,
          'max_rep': 1, 'max_score': 1},
+        '''},
+        # Corn troll on Blender.SE
+        {'regex': r'\bcorn\b', 'all': False, 'sites': ['blender.stackexchange.com'],
+         'reason': 'potentially bad keyword in {}', 'title': True, 'body': True, 'username': True,
+         'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 1},
         # Bad keywords in titles only, all sites
-        {'regex': r"(?i)\b(?!s.m.a.r.t)[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\b", 'all': True,
-         'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False,
+        # The rule is supposed to trigger on stuff like f.r.e.e d.o.w.n.l.o.a.d
+        {'regex': r"(?i)\b(?!s.m.a.r.t|s.h.i.e.l.d|s.o.l.i.d|o.s.a.r.l)[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\b",
+         'all': True, 'sites': [], 'reason': "bad keyword in {}",
+         'title': True, 'body': False, 'username': False,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         {'regex': r'(?i)[\w\s]{0,20}help(?: a)?(?: weak)? postgraduate student(?: to)? write(?: a)? book\??',
          'all': True, 'sites': [], 'reason': 'bad keyword in {}', 'title': True, 'body': False, 'username': False,
@@ -1168,7 +1269,7 @@ class FindSpam:
         # Shortened URL near the end of question
         {'regex': r"(?is)://(?:w+\.)?(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|"
                   r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
-                  r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us|adyou\.co|buff\.ly|ow\.ly)/.{0,200}$",
+                  r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us|adyou\.co|buff\.ly|ow\.ly|tgig\.ir)/.{0,200}$",
          'all': True, 'sites': ["superuser.com", "askubuntu.com"], 'reason': "shortened URL in {}", 'title': False,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False,
          'max_rep': 1, 'max_score': 0},
@@ -1225,6 +1326,10 @@ class FindSpam:
                    "unix.stackexchange.com", "webmasters.stackexchange.com"], 'reason': "URL-only title",
          'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
          'max_rep': 11, 'max_score': 0},
+        # Body starts with title and ends in URL
+        {'method': body_starts_with_title, 'all': True, 'sites': ['codegolf.stackexchange.com'],
+         'reason': "body starts with title and ends in URL", 'whole_post': True, 'title': False, 'body': False,
+         'username': False, 'body_summary': False, 'stripcodeblocks': False, 'max_rep': 1, 'max_score': 0},
         #
         # Category: Suspicious contact information
         # Phone number in title
@@ -1259,7 +1364,7 @@ class FindSpam:
         # Spammy-looking email in questions and answers, for all sites
         {'method': pattern_email, 'all': True, 'sites': [], 'reason': "pattern-matching email in {}", 'title': True,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        # QQ/ICQ/Whatsapp... numbers, for all sites
+        # QQ/ICQ/WhatsApp... numbers, for all sites
         {'regex': r'(?i)(?<![a-z0-9])Q{1,2}(?:(?:[vw]|[^a-z0-9])\D{0,8})?\d{5}[.-]?\d{4,5}(?!["\d])|'
                   r'\bICQ[ :]{0,5}\d{9}\b|\bwh?atsa+pp?[ :+]{0,5}\d{10}', 'all': True, 'sites': [],
          'reason': "messaging number in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
@@ -1267,6 +1372,10 @@ class FindSpam:
         #
         # Category: Trolling
         # Offensive content in titles and posts
+        {'method': religion_troll, 'all': False, 'sites': ['hindiusm.stackexchange.com', 'islam.stackexchange.com',
+                                                           'judaism.stackexchange.com', 'health.stackexchange.com'],
+         'reason': 'offensive {} detected', 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
+         'body_summary': True, 'max_rep': 101, 'max_score': 1},
         {'method': is_offensive_post, 'all': True, 'sites': [], 'reason': "offensive {} detected", 'title': True,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True,
          'max_rep': 101, 'max_score': 2},
@@ -1352,9 +1461,16 @@ class FindSpam:
         {'regex': u"(?i)^keshav$", 'all': False, 'sites': ["judaism.stackexchange.com"],
          'reason': "blacklisted username", 'title': False, 'body': False, 'username': True,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        {'regex': u'(?i)^john$', 'all': False, 'sites': ['hinduism.stackexchange.com'],
-         'reason': 'blacklisted username', 'title': False, 'body': False, 'username': True,
-         'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        # Judaism etc troll, 2018-04-18 (see also commented-out watch above)
+        {'regex': u'(?i)^john$',
+         'all': False, 'sites': [
+             'hinduism.stackexchange.com',
+             'judaism.stackexchange.com',
+             'islam.stackexchange.com'],
+         'reason': 'blacklisted username',
+         'title': False, 'body': False, 'username': True,
+         'stripcodeblocks': False, 'body_summary': False,
+         'max_rep': 1, 'max_score': 0},
         # disabled
         {'regex': u'(?i)(?:(?:[^\dr]\d{3}|_\d{5})$|juri(?:[yr]?am?)?|(?:bond|max|vaxer|jems|tz?osan)$)', 'all': False,
          'sites': [], 'reason': 'blacklisted username (medium)', 'title': False, 'body': False, 'username': True,
@@ -1380,7 +1496,7 @@ class FindSpam:
         # Link text points to a different domain than the href
         {'method': malicious_link, 'all': True, 'sites': [], 'reason': 'misleading link', 'title': False,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False,
-         'max_rep': 10, 'max_score': 1}
+         'max_rep': 10, 'max_score': 1},
     ]
 
     # Toxic content using Perspective
@@ -1395,11 +1511,14 @@ class FindSpam:
         result = []
         why = {'title': [], 'body': [], 'username': []}
         for rule in FindSpam.rules:
-            body_to_check = post.body.replace("&nsbp;", "")
+            if 'commented-out' in rule:
+                continue
+            title_to_check = post.title
+            body_to_check = post.body.replace("&nsbp;", "").replace("\xAD", "") \
+                                     .replace("\u200B", "").replace("\u200C", "")
             is_regex_check = 'regex' in rule
             check_if_answer = rule.get('answers', True)
             check_if_question = rule.get('questions', True)
-            body_to_check = regex.sub("[\xad\u200b\u200c]", "", body_to_check)
             if rule['stripcodeblocks']:
                 # use a placeholder to avoid triggering "few unique characters" when most of post is code
                 body_to_check = regex.sub("(?s)<pre>.*?</pre>",
@@ -1418,7 +1537,7 @@ class FindSpam:
                 if is_regex_check:
                     compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
                     # using a named list \L in some regexes
-                    matched_title = compiled_regex.findall(post.title)
+                    matched_title = False if post.is_answer else compiled_regex.findall(title_to_check)
                     matched_username = compiled_regex.findall(post.user_name)
                     if (not post.body_is_summary or rule['body_summary']) and \
                             (not post.is_answer or check_if_answer) and \
@@ -1440,7 +1559,7 @@ class FindSpam:
                             why["body"].append(u"Post - {}".format(why_post))
                             result.append(rule['reason'].replace("{}", "answer" if post.is_answer else "body"))
                     else:
-                        matched_title, why_title = rule['method'](post.title, post.post_site, post.user_name)
+                        matched_title, why_title = rule['method'](title_to_check, post.post_site, post.user_name)
                         if matched_title and rule['title']:
                             why["title"].append(u"Title - {}".format(why_title))
                         matched_username, why_username = rule['method'](post.user_name, post.post_site, post.user_name)
@@ -1453,7 +1572,7 @@ class FindSpam:
                             if matched_body and rule['body']:
                                 why["body"].append(u"Post - {}".format(why_body))
                 if matched_title and rule['title']:
-                    why["title"].append(FindSpam.generate_why(compiled_regex, post.title, u"Title", is_regex_check))
+                    why["title"].append(FindSpam.generate_why(compiled_regex, title_to_check, u"Title", is_regex_check))
                     result.append(rule['reason'].replace("{}", "title"))
                 if matched_username and rule['username']:
                     why["username"].append(FindSpam.generate_why(compiled_regex, post.user_name, u"Username",

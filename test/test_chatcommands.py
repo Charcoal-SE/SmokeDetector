@@ -116,11 +116,14 @@ def test_privileged():
 
 
 def test_deprecated_blacklist():
-    assert chatcommands.blacklist("").startswith("""The !!/blacklist command has been deprecated.""")
+    assert chatcommands.blacklist("").startswith("The !!/blacklist command has been deprecated.")
 
 
 @patch("chatcommands.handle_spam")
 def test_report(handle_spam):
+    # Documentation: The process before scanning the post is identical regardless of alias_used.
+    #   No need to supply alias_used to test that part.
+    #   If no alias_used is supplied, it acts as if it's "scan"
     try:
         msg = Fake({
             "owner": {
@@ -141,80 +144,62 @@ def test_report(handle_spam):
             "id": 1337
         })
 
-        assert chatcommands.report("test", original_msg=msg) == "Post 1: That does not look like a valid post URL."
+        assert chatcommands.report("test", original_msg=msg, alias_used="report") == "Post 1: That does not look like a valid post URL."
 
-        assert chatcommands.report("one two three four five plus-an-extra", original_msg=msg) == (
+        assert chatcommands.report("one two three four five plus-an-extra", original_msg=msg, alias_used="report") == (
             "To avoid SmokeDetector reporting posts too slowly, you can report at most 5 posts at a time. This is to avoid "
             "SmokeDetector's chat messages getting rate-limited too much, which would slow down reports."
         )
 
-        assert chatcommands.report('http://stackoverflow.com/q/1', original_msg=msg) == \
+        assert chatcommands.report('a a a a a "invalid"""', original_msg=msg) \
+            .startswith("You cannot provide multiple custom report reasons.")
+
+        assert chatcommands.report('https://stackoverflow.com/q/1', original_msg=msg) == \
             "Post 1: Could not find data for this post in the API. It may already have been deleted."
 
         # Valid post
-        assert chatcommands.report('http://stackoverflow.com/a/1732454', original_msg=msg) is None
+        assert chatcommands.report('https://stackoverflow.com/a/1732454', original_msg=msg, alias_used="scan") == \
+            "Post 1: This does not look like spam"
+        assert chatcommands.report('https://stackoverflow.com/a/1732454 "~o.O~"', original_msg=msg, alias_used="report") is None
 
-        _, call = handle_spam.call_args_list[0]
+        _, call = handle_spam.call_args_list[-1]
         assert isinstance(call["post"], Post)
         assert call["reasons"] == ["Manually reported answer"]
-        assert call["why"].startswith("Post manually reported by user *El'endia Starman* in room *Charcoal HQ*.\n\nThis post")
+        assert call["why"] == (
+            "Post manually reported by user *El'endia Starman* in room *Charcoal HQ* with reason: *~o.O~*."
+            "\n\nThis post would not have been caught otherwise."
+        )
 
-        # Don't re-report
-        GlobalVars.latest_questions = [('stackoverflow.com', '1732454', 'RegEx match open tags except XHTML self-contained tags')]
-        assert chatcommands.report('http://stackoverflow.com/a/1732454', original_msg=msg).startswith("Post 1: Already recently "
-                                                                                                      "reported")
-
-        # Can use report command multiple times in 30s if only one URL was used
-        assert chatcommands.report('http://stackoverflow.com/q/1732348', original_msg=msg) is None
-    finally:
-        GlobalVars.blacklisted_users = []
-        GlobalVars.latest_questions = []
-
-
-@patch("chatcommands.handle_spam")
-def test_checkpost(handle_spam):
-    try:
-        msg = Fake({
-            "owner": {
-                "name": "foo",
-                "id": 1,
-                "is_moderator": False
-            },
-            "room": {
-                "id": 11540,
-                "name": "Charcoal HQ",
-                "_client": {
-                    "host": "stackexchange.com"
-                }
-            },
-            "_client": {
-                "host": "stackexchange.com"
-            },
-            "id": 1337
-        })
-
-        assert chatcommands.checkpost("foo", original_msg=msg) == "That does not look like a valid post URL."
-        assert chatcommands.checkpost("https://stackoverflow.com/q/1", original_msg=msg) == \
-            "Cannot find data for this post in the API. It may have already been deleted."
-
-        # This is the highest voted question on Stack Overflow
-        good_post_url = "https://stackoverflow.com/q/11227809"
-        post = api_get_post(good_post_url)
-        assert chatcommands.checkpost(good_post_url, original_msg=msg) == \
-            "Post [{0}]({1}) does not look like spam.".format(post.title, to_protocol_relative(post.post_url))
-
+        # Bad post
         # This post is found in Sandbox Archive, so it will remain intact and is a reliable test post
         # backup: https://meta.stackexchange.com/a/228635
         test_post_url = "https://meta.stackexchange.com/a/209772"
-        assert chatcommands.checkpost(test_post_url, original_msg=msg) is None
+        assert chatcommands.report(test_post_url, original_msg=msg, alias_used="scan") is None
 
-        _, call = handle_spam.call_args_list[0]
+        _, call = handle_spam.call_args_list[-1]
         assert isinstance(call["post"], Post)
-        assert call["why"].endswith("Manually triggered scan")
+        assert call["why"].startswith("Post manually scanned by user *El'endia Starman* in room *Charcoal HQ*.")
 
-        # Strangely it doesn't work if scanned repeatedly
+        # Now with report-force
+        GlobalVars.blacklisted_users.clear()
+        GlobalVars.latest_questions.clear()
+        assert chatcommands.report(test_post_url, original_msg=msg, alias_used="report-force") is None
+        _, call = handle_spam.call_args_list[-1]
+        assert isinstance(call["post"], Post)
+        assert call["why"].startswith(
+            "Post manually reported by user *El'endia Starman* in room *Charcoal HQ*."
+            "\n\nThis post would have also been caught for:"
+        )
+
+        # Don't re-report
+        GlobalVars.latest_questions = [('stackoverflow.com', '1732454', 'RegEx match open tags except XHTML self-contained tags')]
+        assert chatcommands.report('https://stackoverflow.com/a/1732454', original_msg=msg).startswith("Post 1: Already recently reported")
+
+        # Can use report command multiple times in 30s if only one URL was used
+        assert chatcommands.report('https://stackoverflow.com/q/1732348', original_msg=msg, alias_used="report") is None
     finally:
-        GlobalVars.latest_questions = []
+        GlobalVars.blacklisted_users.clear()
+        GlobalVars.latest_questions.clear()
 
 
 @patch("chatcommands.handle_spam")
@@ -294,7 +279,7 @@ def test_allspam(handle_spam):
         assert call["why"] == "User manually reported by *El'endia Starman* in room *Charcoal HQ*.\n"
 
     finally:
-        GlobalVars.blacklisted_users = []
+        GlobalVars.blacklisted_users.clear()
 
 
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"), reason="shouldn't overwrite file")

@@ -24,8 +24,8 @@ laserscheap
 yingao
 Support Polyvalent
 Bill Cookie
-صابر خلیلی‭
-فن بیان‭
+صابر خلیلی
+فن بیان
 android\Wexample
 Vladislav Yakov
 JAAFAR LENDING
@@ -64,14 +64,14 @@ zixuan[0-9][0-9]
 emilie\W?larsen
 air\W?purifier\W?reviews
 Cum\W?Juice
-agen judi‭
+agen judi
 donald\W*j?\.?\W*trump
 ^yolo_does_not_detect_me$
 ^christine roebuck$
-techelpp‭
+techelpp
 \W?router$
 \b(?:moth(?:e?r|a))?fu+[ck]+(?:[ei]ng*|e[dr])?\b
-(hurriyet|turkishdaily)news
+(?:hurriyet|turkish)(?:daily)?news
 tour\W?packages
 sputnik\W?international
 daily\W?news
@@ -87,3 +87,12 @@ Racist
 Reihmann
 rayaz
 \w*\d+\W+Virk$
+Charles\WRane
+adol(?:f|ph)\W*hitler
+heinrich\W*(?:luitpold\W*)?himmler
+ante\W*paveli[cć]
+^LGBT representative$
+muh[ae]mm[ae]d\W*the\W*pa?edophile
+^.{1,7}dl?san$
+^eray$
+^autolinkpk$
