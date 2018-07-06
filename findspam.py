@@ -506,7 +506,6 @@ def ns_for_url_domain(s, site, nslist, *args):
 def bad_ns_for_url_domain(s, site, *args):
     return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name!
-        {'dns1.namecheaphosting.com.', 'dns2.namecheaphosting.com.'},
         {'ns1.md-95.bigrockservers.com.', 'ns2.md-95.bigrockservers.com.'},
         {'ns1.md-99.bigrockservers.com.', 'ns2.md-99.bigrockservers.com.'},
         {'apollo.ns.cloudflare.com.', 'liz.ns.cloudflare.com.'},
