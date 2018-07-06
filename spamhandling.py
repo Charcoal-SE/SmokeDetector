@@ -122,7 +122,7 @@ def handle_spam(post, reasons, why):
             reason = ", ".join(reasons[:reason_count])
             if len(reasons) > reason_count:
                 reason += ", +{} more".format(len(reasons) - reason_count)
-            reason = reason[:1].upper() + reason[1:]  # reason is capitalised, unlike the entries of reasons list
+            reason = reason.capitalize()
             message = prefix_ms + s.format(reason)  # Insert reason list
             if len(message) <= 500:
                 break  # Problem solved, stop attempting
@@ -133,7 +133,8 @@ def handle_spam(post, reasons, why):
 
         without_roles = tuple("no-" + reason for reason in reasons) + ("site-no-" + post.post_site,)
 
-        if set(reasons) - GlobalVars.experimental_reasons == set():
+        if set(reasons) - GlobalVars.experimental_reasons == set() and \
+                not why.startswith("Post manually "):
             chatcommunicate.tell_rooms(message, ("experimental",),
                                        without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
         else:
