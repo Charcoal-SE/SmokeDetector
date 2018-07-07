@@ -87,7 +87,8 @@ But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, Fal
     ('Misleading link common file whitelist', 'File: <a href="https://www.malicious.txt/">https://google.com</a>', '', 'stackoverflow.com', False, False, False),
     ('Pattern-matching product name', 'Extreme Boost Max', '', 'stackoverflow.com', False, False, True),
     ('Pattern-matching product name', 'Alpha Formula Pro', '', 'math.stackexchange.com', False, False, False),
-    ('Body starts with title', 'Body starts with title and ends with <a href="https://example.com">https://example.com</a>', '', '', False, False, True)
+    ('Body starts with title', 'Body starts with title and ends with <a href="https://example.com">https://example.com</a>', '', '', False, False, True),
+    ('Advanced BSWT', '<p><a href="......">Product Name</a> Advanced BSWT is a must-have <a href="https://example.com">https://example.com</a></p>', '', '', False, False, True),
 ])
 def test_regexes(title, body, username, site, body_is_summary, is_answer, match):
     # If we want to test answers separately, this should be changed

@@ -27,7 +27,7 @@ TLD_CACHE = []
 LEVEN_DOMAIN_DISTANCE = 3
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
-BODY_TITLE_SIMILAR_THRESHOLD = 0.90
+BODY_TITLE_SIMILAR_RATIO = 0.90
 CHARACTER_USE_RATIO = 0.42
 REPEATED_CHARACTER_RATIO = 0.20
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
@@ -799,16 +799,24 @@ def toxic_check(post):
 def body_starts_with_title(post):
     # Ignore too-short title
     if len(post.title) < 10:
-        return False, False, False, ''
+        return False, False, False, ""
 
-    s = strip_urls_and_tags(post.body).replace(" ", "")
-    t = post.title.replace(" ", "")
-    similarity = similar_ratio(s[:len(t)], t)
     end_in_url, ending_url = link_at_end(post.body, None)
-    if similarity >= BODY_TITLE_SIMILAR_THRESHOLD and end_in_url:
-        return False, False, True, \
-            'Body starts with title and ends in URL: {}'.format(ending_url.replace("Link at end: ", ""))
-    return False, False, False, ''
+    if not end_in_url:
+        return False, False, False, ""
+    ending_url = ending_url.replace("Link at end: ", "")
+
+    t = post.title.replace(" ", "")
+    s = strip_urls_and_tags(post.body).replace(" ", "").replace("\n", "")
+    if similar_ratio(s[:len(t)], t) >= BODY_TITLE_SIMILAR_RATIO:
+        return False, False, True, "Body starts with title and ends in URL: " + ending_url
+
+    # Strip links and link text
+    s = regex.sub(r"<a[^>]+>[^<>]*</a>", "", post.body).replace(" ", "").replace("\n", "")
+    s = strip_urls_and_tags(s)
+    if similar_ratio(s[:len(t)], t) >= BODY_TITLE_SIMILAR_RATIO:
+        return False, False, True, "Body starts with title and ends in URL: " + ending_url
+    return False, False, False, ""
 
 
 def turkey(s, *args):
