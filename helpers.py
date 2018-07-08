@@ -67,8 +67,7 @@ def only_blacklists_changed(diff):
     blacklist_files = ["bad_keywords.txt", "blacklisted_usernames.txt", "blacklisted_websites.txt",
                        "watched_keywords.txt"]
     files_changed = diff.split()
-    non_blacklist_files = [f for f in files_changed if f not in blacklist_files]
-    return not bool(non_blacklist_files)
+    return not any(f for f in files_changed if f not in blacklist_files)
 
 
 # FAIR WARNING: Sending HEAD requests to resolve a shortened link is generally okay - there aren't

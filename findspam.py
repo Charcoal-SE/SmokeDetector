@@ -138,10 +138,10 @@ def contains_tld(s):
             TLD_CACHE = [x.rstrip('\n') for x in f.readlines() if x.rstrip('\n') and
                          not x.strip().startswith('//')]
 
-    return any([('.' + x) in s for x in TLD_CACHE])
+    return any(('.' + x) in s for x in TLD_CACHE)
 
 
-def malicious_link(s, site, *args):
+def misleading_link(s, site, *args):
     link_regex = r"<a href=\"([^\"]+)\"[^>]*>([^<]+)<\/a>"
     compiled = regex.compile(link_regex)
     search = compiled.search(s)
@@ -498,8 +498,8 @@ def ns_for_url_domain(s, site, nslist, *args):
         nameservers = set(server.target.to_text() for server in ns)
         for ns_candidate in nslist:
             if (type(ns_candidate) is set and nameservers == ns_candidate) or \
-                any([ns.endswith('.{0}'.format(ns_candidate))
-                    for ns in nameservers]):
+                any(ns.endswith('.{0}'.format(ns_candidate))
+                    for ns in nameservers):
                 return True, '{domain} NS suspicious {ns}'.format(
                     domain=domain, ns=','.join(nameservers))
     return False, ""
@@ -890,7 +890,7 @@ def religion_troll(s, *args):
         r'(?:\b|\w*)(?:o(?:[^A-Za-z]|&#?\w+;)*)(?:d(?:[^A-Za-z]|&#?\w+;)*)(?:u(?:[^A-Za-z]|&#?\w+;)*)(?:d(?:[^A-Za-z]|'
         r'&#?\w+;)*)(?:u(?:[^A-Za-z]|&#?\w+;)*)(?:w(?:[^A-Za-z]|&#?\w+;)*)(?:a(?:[^A-Za-z]|&#?\w+;)*)\w*(?:\b|\w*)'
     ]
-    offensive = any([regex.search(x, s) for x in regexes])
+    offensive = any(regex.search(x, s) for x in regexes)
     return offensive, 'Potential religion site troll post' if offensive else ''
 
 
@@ -1504,7 +1504,7 @@ class FindSpam:
          'max_rep': 20, 'max_score': 0},
 
         # Link text points to a different domain than the href
-        {'method': malicious_link, 'all': True, 'sites': [], 'reason': 'misleading link', 'title': False,
+        {'method': misleading_link, 'all': True, 'sites': [], 'reason': 'misleading link', 'title': False,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False,
          'max_rep': 10, 'max_score': 1},
     ]

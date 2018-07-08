@@ -18,8 +18,7 @@ def should_whitelist_prevent_alert(user_url, reasons):
     is_whitelisted = datahandling.is_whitelisted_user(parsing.get_user_from_url(user_url))
     if not is_whitelisted:
         return False
-    reasons_comparison = [r for r in set(reasons) if "username" not in r]
-    return len(reasons_comparison) == 0
+    return not any(r for r in set(reasons) if "username" not in r)
 
 
 # noinspection PyMissingTypeHints
