@@ -3,7 +3,7 @@ import os
 # noinspection PyPep8Naming
 import pickle
 from datetime import datetime
-import metasmoke
+from metasmoke import Metasmoke
 import requests
 import json
 import time
@@ -130,7 +130,7 @@ def is_auto_ignored_post(postid_site_tuple):
 # noinspection PyUnusedLocal
 def is_code_privileged(site, user_id):
     if GlobalVars.code_privileged_users is None:
-        metasmoke.Metasmoke.update_code_privileged_users_list()
+        Metasmoke.update_code_privileged_users_list()
 
     # For now, disable the moderator override on code/blacklist changes
     return (site, user_id) in GlobalVars.code_privileged_users
@@ -437,6 +437,22 @@ def append_pings(original_message, names):
         if len(new_message) <= 500:
             return new_message
     return original_message
+
+# method to check if a post has been bumped by Community
+
+
+def has_community_bumped_post(post_url, post_content):
+    if GlobalVars.metasmoke_key is not None and GlobalVars.metasmoke_host is not None:
+        try:
+            ms_posts = Metasmoke.get_post_bodies_from_ms(post_url)
+            latest_revision_date = max([post['created_at'] for post in ms_posts])
+            for post in ms_posts:
+                if post['created_at'] == latest_revision_date:
+                    if post['body'] == post_content:
+                        return True
+        except requests.exceptions.ConnectionError:
+            return False  # MS is down, so assume it is not bumped
+    return False
 
 # methods to check if someone waited long enough to use another !!/report with multiple URLs
 # (to avoid SmokeDetector's chat messages to be rate-limited too much)
