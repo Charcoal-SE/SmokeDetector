@@ -4,7 +4,7 @@
 import math
 import regex
 from difflib import SequenceMatcher
-from urllib.parse import urlparse
+from urllib.parse import urlparse, unquote_plus
 from itertools import chain
 from collections import Counter
 from datetime import datetime
@@ -164,8 +164,8 @@ def misleading_link(s, site, *args):
     if site == 'stackoverflow.com' and parsed_text.fld.split('.')[-1] in SAFE_EXTENSIONS:
         return False, ''
 
-    href_domain = parsed_href.domain.encode("idna").decode("ascii")
-    text_domain = parsed_text.domain.encode("idna").decode("ascii")
+    href_domain = unquote_plus(parsed_href.domain).encode("idna").decode("ascii")
+    text_domain = unquote_plus(parsed_text.domain).encode("idna").decode("ascii")
     if levenshtein(href_domain, text_domain) > LEVEN_DOMAIN_DISTANCE:
         return True, 'Domain {} indicated by possible misleading text {}.'.format(
             parsed_href.fld, parsed_text.fld
