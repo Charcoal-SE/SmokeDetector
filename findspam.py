@@ -3,6 +3,7 @@
 
 import math
 import regex
+import string
 from difflib import SequenceMatcher
 from urllib.parse import urlparse
 from itertools import chain
@@ -756,6 +757,29 @@ def mostly_dots(s, *args):
         return False, ""
 
 
+# noinspection PyUnusedLocal,PyMissingTypeHints
+def mostly_punctuations(s, *args):
+    if not s:
+        return False, ""
+
+    s = strip_urls_and_tags(s)
+    if not s:
+        return False, ""
+
+    # List of punctuations to tally
+    punct_string = string.punctuation
+    punct_string = punct_string + "！“”‘’（），。、：；《》〈〉【】？…——·"
+
+    tally = [s.count(punct) for punct in punct_string]
+    count = sum(tally)
+    frequency = count / len(s)
+
+    if frequency >= CHARACTER_USE_RATIO:
+        return True, u"Post contains {} punctuation marks out of {} characters".format(count, len(s))
+    else:
+        return False, ""
+
+
 def mevaqesh_troll(s, *args):
     s = s.lower().replace(' ', '')
     bad = 'mevaqeshthereforehasnoshareintheworldtocome'
@@ -1445,6 +1469,10 @@ class FindSpam:
         {'method': mostly_dots, 'all': True, 'sites': ['codegolf.stackexchange.com'],
          'reason': 'mostly dots in {}', 'title': True, 'body': True, 'username': False, 'body_summary': False,
          'stripcodeblocks': False, 'max_rep': 50, 'max_score': 0},
+        # Mostly single punctuation in post
+        {'method': mostly_punctuations, 'all': True, 'sites': [],
+         'reason': 'mostly punctuation marks in {}', 'title': True, 'body': True, 'username': False,
+         'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
         # Title ends with Comma (IPS Troll)
         {'regex': r".*\,$", 'all': False, 'sites': ['interpersonal.stackexchange.com'],
          'reason': "title ends with comma", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
