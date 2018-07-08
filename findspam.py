@@ -163,7 +163,10 @@ def misleading_link(s, site, *args):
 
     if site == 'stackoverflow.com' and parsed_text.fld.split('.')[-1] in SAFE_EXTENSIONS:
         return False, ''
-    elif levenshtein(parsed_href.domain.lower(), parsed_text.domain.lower()) > LEVEN_DOMAIN_DISTANCE:
+
+    href_domain = parsed_href.domain.encode("idna").decode("ascii")
+    text_domain = parsed_text.domain.encode("idna").decode("ascii")
+    if levenshtein(href_domain, text_domain) > LEVEN_DOMAIN_DISTANCE:
         return True, 'Domain {} indicated by possible misleading text {}.'.format(
             parsed_href.fld, parsed_text.fld
         )
