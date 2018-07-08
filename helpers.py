@@ -25,6 +25,10 @@ def unique_matches(match):
     return sum(len(m[1:]) == len(set(m[1:])) for m in match)
 
 
+def escape_format(s):
+    return s.replace("{", "{{").replace("}", "}}")
+
+
 def expand_shorthand_link(s):
     s = s.lower()
     if s.endswith("so"):

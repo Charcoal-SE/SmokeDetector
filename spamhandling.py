@@ -9,7 +9,7 @@ import parsing
 import metasmoke
 import excepthook
 from classes import Post, PostParseError
-from helpers import log, to_metasmoke_link
+from helpers import log, to_metasmoke_link, escape_format
 from tasks import Tasks
 
 
@@ -101,12 +101,13 @@ def handle_spam(post, reasons, why):
             prefix_ms = prefix
 
         # We'll insert reason list later
+        sanitized_title = escape_format(sanitized_title)
         if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
             s = u" {{}}: [{}]({}) by a deleted user on `{}`".format(sanitized_title, post_url, shortened_site)
             username = ""
         else:
-            s = u" {{}}: [{}]({}) by [{}]({}) on `{}`".format(sanitized_title, post_url,
-                                                              post.user_name.strip(), poster_url, shortened_site)
+            s = u" {{}}: [{}]({}) by [{}]({}) on `{}`".format(
+                sanitized_title, post_url, escape_format(post.user_name.strip()), poster_url, shortened_site)
             username = post.user_name.strip()
 
         Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
