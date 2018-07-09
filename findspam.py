@@ -3,7 +3,6 @@
 
 import math
 import regex
-import string
 from difflib import SequenceMatcher
 from urllib.parse import urlparse
 from itertools import chain
