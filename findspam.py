@@ -732,8 +732,8 @@ def similar_answer(post):
 
 
 # noinspection PyMissingTypeHints
-def strip_urls_and_tags(string):
-    return regex.sub(URL_REGEX, "", regex.sub(r"</?.+?>|\w+?://", "", string))
+def strip_urls_and_tags(s):
+    return regex.sub(URL_REGEX, "", regex.sub(r"</?.+?>|\w+?://", "", s))
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
@@ -785,14 +785,14 @@ def mevaqesh_troll(s, *args):
 
 
 def toxic_check(post):
-    string = strip_urls_and_tags(post.body)[:3000]
+    s = strip_urls_and_tags(post.body)[:3000]
 
-    if not string:
+    if not s:
         return False, False, False, ""
 
     response = requests.post(PERSPECTIVE, json={
         "comment": {
-            "text": string
+            "text": s
         },
 
         "requestedAttributes": {
@@ -806,7 +806,7 @@ def toxic_check(post):
         err_msg = response["error"]["message"]
 
         if not err_msg.startswith("Attribute TOXICITY does not support request languages:"):
-            log("debug", "Perspective error: {} for string {} (original body {})".format(err_msg, string, post.body))
+            log("debug", "Perspective error: {} for string {} (original body {})".format(err_msg, s, post.body))
     else:
         probability = response["attributeScores"]["TOXICITY"]["summaryScore"]["value"]
 
