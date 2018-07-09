@@ -764,8 +764,8 @@ def mostly_punctuations(s, site, *args):
         return False, ""
 
     punct_re = regex.compile(r"[[:punct:]]")
-    all_punc = punct_re.findall(s)
-    count = max(all_punc.count(punc) for punc in (set(all_punc) - {"."})) if all_punc else 0
+    all_punc = [p for p in punct_re.findall(s) if p != '.']
+    count = max(all_punc.count(punc) for punc in set(all_punc)) if all_punc else 0
     frequency = count / len(s)
 
     if frequency >= PUNCTUATION_RATIO:
