@@ -765,7 +765,8 @@ def mostly_punctuations(s, site, *args):
         return False, ""
 
     punct_re = regex.compile(r"[[:punct:]]")
-    count = len(punct_re.findall(s))
+    all_punc = punct_re.findall(s)
+    count = max(all_punc.count(punc) for punc in set(all_punc))
     frequency = count / len(s)
 
     if frequency >= PUNCTUATION_RATIO:
@@ -1464,7 +1465,7 @@ class FindSpam:
          'reason': 'mostly dots in {}', 'title': True, 'body': True, 'username': False, 'body_summary': False,
          'stripcodeblocks': False, 'max_rep': 50, 'max_score': 0},
         # Mostly single punctuation in post
-        {'method': mostly_punctuations, 'all': True, 'sites': [],
+        {'method': mostly_punctuations, 'all': True, 'sites': ['math.stackexchange.com', 'mathoverflow.net'],
          'reason': 'mostly punctuation marks in {}', 'title': True, 'body': True, 'username': False,
          'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
         # Title ends with Comma (IPS Troll)
