@@ -1478,8 +1478,8 @@ def false(feedback, msg, comment, alias_used="false"):
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
-@command(message, str, reply=True, privileged=True, whole_msg=True, arity=(1, 2))
-def ignore(feedback, msg, comment):
+@command(message, str, reply=True, privileged=True, whole_msg=True, arity=(1, 2), give_name=True, aliases=["ig"])
+def ignore(feedback, msg, comment, alias_used="ignore"):
     """
     Marks a post to be ignored
     :param feedback:
@@ -1500,6 +1500,8 @@ def ignore(feedback, msg, comment):
     if comment:
         Tasks.do(Metasmoke.post_auto_comment, comment, feedback.owner, url=post_url)
 
+    if alias_used == "ig":
+        return None
     return "Post ignored; alerts about it will no longer be posted."
 
 
