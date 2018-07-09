@@ -30,6 +30,7 @@ SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
 BODY_TITLE_SIMILAR_RATIO = 0.90
 CHARACTER_USE_RATIO = 0.42
+PUNCTUATION_RATIO = 0.42
 REPEATED_CHARACTER_RATIO = 0.20
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
 RE_COMPILE = regex.compile(EXCEPTION_RE)
@@ -746,11 +747,11 @@ def mostly_dots(s, *args):
 
     body = strip_urls_and_tags(body)
 
-    dot_count = body.count(".")
     s = strip_urls_and_tags(s)
     if not s:
         return False, ""
 
+    dot_count = body.count(".")
     if dot_count / len(s) >= 0.4:
         return True, u"Post contains {} dots out of {} characters".format(dot_count, len(s))
     else:
@@ -758,23 +759,16 @@ def mostly_dots(s, *args):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def mostly_punctuations(s, *args):
-    if not s:
-        return False, ""
-
+def mostly_punctuations(s, site, *args):
     s = strip_urls_and_tags(s)
     if not s:
         return False, ""
 
-    # List of punctuations to tally
-    punct_string = string.punctuation
-    punct_string = punct_string + "！“”‘’（），。、：；《》〈〉【】？…——·"
-
-    tally = [s.count(punct) for punct in punct_string]
-    count = sum(tally)
+    punct_re = regex.compile(r"[[:punct:]]")
+    count = len(punct_re.findall(s))
     frequency = count / len(s)
 
-    if frequency >= CHARACTER_USE_RATIO:
+    if frequency >= PUNCTUATION_RATIO:
         return True, u"Post contains {} punctuation marks out of {} characters".format(count, len(s))
     else:
         return False, ""
