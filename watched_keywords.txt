@@ -4349,3 +4349,9 @@
 1531037606	Makyen	twitter\.com/nutritions_of
 1531038646	paper1111	eyesbit\.com
 1531048210	paper1111	emily\.com\.co
+1531069680	rene	i-digitalpixel\.com
+1531070347	Makyen	coderprogrammer\.tk
+1531075561	Makyen	xcut\.ml
+1531096407	Makyen	\W*دانلود زیرنویس فارسی\W*
+1531109748	Makyen	investyourbitcoin\.net
+1531109939	Makyen	bd\.lifequeries\.com

@@ -29,6 +29,7 @@ SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
 BODY_TITLE_SIMILAR_RATIO = 0.90
 CHARACTER_USE_RATIO = 0.42
+PUNCTUATION_RATIO = 0.42
 REPEATED_CHARACTER_RATIO = 0.20
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
 RE_COMPILE = regex.compile(EXCEPTION_RE)
@@ -62,8 +63,8 @@ URL_REGEX = regex.compile(
     r"""(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2}))"""
     r"""(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])"""
     r"""(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))"""
-    r"""|(?:(?:[a-z\u00a1-\uffff0-9]-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-?)"""
-    r"""*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.UNICODE)
+    r"""|(?:(?:[A-Za-z\u00a1-\uffff0-9]-?)*[A-Za-z\u00a1-\uffff0-9]+)(?:\.(?:[A-Za-z\u00a1-\uffff0-9]-?)"""
+    r"""*[A-Za-z\u00a1-\uffff0-9]+)*(?:\.(?:[A-Za-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.UNICODE)
 
 UNIFORM = math.log(1 / 36)
 UNIFORM_PRIOR = math.log(1 / 5)
@@ -740,8 +741,8 @@ def similar_answer(post):
 
 
 # noinspection PyMissingTypeHints
-def strip_urls_and_tags(string):
-    return regex.sub(URL_REGEX, "", regex.sub(r"</?.+?>|\w+?://", "", string))
+def strip_urls_and_tags(s):
+    return regex.sub(URL_REGEX, "", regex.sub(r"</?.+?>|\w+?://", "", s))
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
@@ -755,13 +756,30 @@ def mostly_dots(s, *args):
 
     body = strip_urls_and_tags(body)
 
-    dot_count = body.count(".")
     s = strip_urls_and_tags(s)
     if not s:
         return False, ""
 
+    dot_count = body.count(".")
     if dot_count / len(s) >= 0.4:
         return True, u"Post contains {} dots out of {} characters".format(dot_count, len(s))
+    else:
+        return False, ""
+
+
+# noinspection PyUnusedLocal,PyMissingTypeHints
+def mostly_punctuations(s, site, *args):
+    s = strip_urls_and_tags(s)
+    if not s:
+        return False, ""
+
+    punct_re = regex.compile(r"[[:punct:]]")
+    all_punc = punct_re.findall(s.replace(".", ""))
+    count = max(all_punc.count(punc) for punc in set(all_punc)) if all_punc else 0
+    frequency = count / len(s)
+
+    if frequency >= PUNCTUATION_RATIO:
+        return True, u"Post contains {} punctuation marks out of {} characters".format(count, len(s))
     else:
         return False, ""
 
@@ -776,14 +794,14 @@ def mevaqesh_troll(s, *args):
 
 
 def toxic_check(post):
-    string = strip_urls_and_tags(post.body)[:3000]
+    s = strip_urls_and_tags(post.body)[:3000]
 
-    if not string:
+    if not s:
         return False, False, False, ""
 
     response = requests.post(PERSPECTIVE, json={
         "comment": {
-            "text": string
+            "text": s
         },
 
         "requestedAttributes": {
@@ -797,7 +815,7 @@ def toxic_check(post):
         err_msg = response["error"]["message"]
 
         if not err_msg.startswith("Attribute TOXICITY does not support request languages:"):
-            log("debug", "Perspective error: {} for string {} (original body {})".format(err_msg, string, post.body))
+            log("debug", "Perspective error: {} for string {} (original body {})".format(err_msg, s, post.body))
     else:
         probability = response["attributeScores"]["TOXICITY"]["summaryScore"]["value"]
 
@@ -1455,6 +1473,10 @@ class FindSpam:
         {'method': mostly_dots, 'all': True, 'sites': ['codegolf.stackexchange.com'],
          'reason': 'mostly dots in {}', 'title': True, 'body': True, 'username': False, 'body_summary': False,
          'stripcodeblocks': False, 'max_rep': 50, 'max_score': 0},
+        # Mostly single punctuation in post
+        {'method': mostly_punctuations, 'all': True, 'sites': ['math.stackexchange.com', 'mathoverflow.net'],
+         'reason': 'mostly punctuation marks in {}', 'title': True, 'body': True, 'username': False,
+         'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
         # Title ends with Comma (IPS Troll)
         {'regex': r".*\,$", 'all': False, 'sites': ['interpersonal.stackexchange.com'],
          'reason': "title ends with comma", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
