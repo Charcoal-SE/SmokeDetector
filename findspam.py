@@ -760,7 +760,7 @@ def mostly_dots(s, *args):
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def mostly_punctuations(s, site, *args):
     s = strip_urls_and_tags(s)
-    if not s:
+    if len(s) <= 12:
         return False, ""
 
     punct_re = regex.compile(r"[[:punct:]]")
@@ -832,8 +832,8 @@ def body_starts_with_title(post):
         return False, False, True, "Body starts with title and ends in URL: " + ending_url
 
     # Strip links and link text
-    s = regex.sub(r"<a[^>]+>[^<>]*</a>", "", post.body).replace(" ", "").replace("\n", "")
-    s = strip_urls_and_tags(s)
+    s = regex.sub(r"<a[^>]+>[^<>]*</a>", "", regex.sub(r">>+", "", post.body))
+    s = strip_urls_and_tags(s).replace(" ", "").replace("\n", "")
     if similar_ratio(s[:len(t)], t) >= BODY_TITLE_SIMILAR_RATIO:
         return False, False, True, "Body starts with title and ends in URL: " + ending_url
     return False, False, False, ""
