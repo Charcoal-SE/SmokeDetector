@@ -337,7 +337,7 @@ def pattern_product_name(s, site, *args):
         "Deep", "Male", "Pro", "Advanced", "Monster", "Divine", "Royale", "Angele*", "Trinity", "Andro",
         "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Hydroluxe", "Boost(?:er)?",
         "Serum", "Supplement", "Fuel", "Cream", "Keto", "Rapid", "Tone", "Forskolin", "Neuro", "Luma"
-        "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Premi(?:um|er)", "Vital", "Derma?", "Master", "Ultra",
+        "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Premi(?:um|er)", "Vital", "Derma?", "Master", "Ultra", "Radiant(?:ly)?",
     ]
     if site != "math.stackexchange.com" and site != "mathoverflow.net":
         keywords += ["X[LORT]?", "Alpha", "Plus", "Prime", "Formula"]
