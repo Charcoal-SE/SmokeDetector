@@ -29,6 +29,7 @@ class Post:
         self._user_name = ""
         self._user_url = ""
         self._votes = {'downvotes': None, 'upvotes': None}
+        self._edited = False
 
         if parent is not None:
             if not isinstance(parent, Post):
@@ -142,7 +143,8 @@ class Post:
                 'reputation': '_owner_rep'
             },
             'question_id': '_post_id',
-            'answer_id': '_post_id'
+            'answer_id': '_post_id',
+            'edited': '_edited',
         }
 
         self._process_element_mapping(element_map, response, is_api_response=True)
