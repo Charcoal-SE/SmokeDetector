@@ -45,7 +45,9 @@ class Flovis:
                         raise
                 except websocket._exceptions.WebSocketConnectionClosedException:
                     log('error', 'Flovis websocket closed unexpectedly, assuming problems and nullifying ws')
-
+                except (AttributeError, OSError) as e:
+                    log('error', str(e))
+                finally:
                     if self.ws.sock:
                         try:
                             self.ws.sock.close()
