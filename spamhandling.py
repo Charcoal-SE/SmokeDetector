@@ -102,17 +102,14 @@ def handle_spam(post, reasons, why):
 
         # We'll insert reason list later
         sanitized_title = escape_format(sanitized_title)
-        escaped_title = parsing.escape_markdown(sanitized_title)
         if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
+            s = u" {{}}: [{}]({}) by a deleted user on `{}`".format(sanitized_title, post_url, shortened_site)
             username = ""
-            s = u" {{}}: [{}]({}) by a deleted user on `{}`".format(
-                escaped_title, post_url, shortened_site)
         else:
             username = post.user_name.strip()
-            sanitized_username = escape_format(username)
-            escaped_username = parsing.escape_markdown(sanitized_username)
+            escaped_username = escape_format(parsing.escape_markdown(username))
             s = u" {{}}: [{}]({}) by [{}]({}) on `{}`".format(
-                escaped_title, post_url, escaped_username, poster_url, shortened_site)
+                sanitized_title, post_url, escaped_username, poster_url, shortened_site)
 
         Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
                  post.title_ignore_type, post_url, reasons, post.body, username,
