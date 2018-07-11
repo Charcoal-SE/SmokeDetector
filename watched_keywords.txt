@@ -4391,3 +4391,4 @@
 1531285704	Makyen	printererrorrepair\.com
 1531286952	Makyen	[a-z_]*(?:1_*)?888[\W_]*693[\W_]*2062[a-z_]*
 1531288937	Makyen	linkedinsupportnumber\.com
+1531288958	Makyen	[a-z_]*(?:1_*)?800[\W_]*712[\W_]*0803[a-z_]*
