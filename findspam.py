@@ -1454,6 +1454,10 @@ class FindSpam:
         {'regex': r"(?i)\b(erica|jeff|er1ca|spam|moderator)\b", 'all': False, 'sites': ["parenting.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': True, 'max_rep': 50, 'max_score': 0},
+        # Code Review troll
+        {'regex': r"JAMAL", 'all': False, 'sites': ["codereview.stackexchange.com"],
+         'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False,
+         'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Academia kangaroos
         {'regex': r"(?i)kangaroos", 'all': False, 'sites': ["academia.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False,
