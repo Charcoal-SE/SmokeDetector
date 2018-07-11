@@ -257,3 +257,7 @@ class Post:
     @property
     def title_ignore_type(self):
         return self._get_title_ignore_type()
+
+    @property
+    def edited(self):
+        return self._edited
