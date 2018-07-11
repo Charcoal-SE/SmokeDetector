@@ -101,7 +101,7 @@ def handle_spam(post, reasons, why):
             prefix_ms = prefix
 
         # We'll insert reason list later
-        edited = '*' if post.edited else ''
+        edited = '\\*' if post.edited else ''
         if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
             s = u" {{}}: [{}]({}){} by a deleted user on `{}`".format(
                 sanitized_title, post_url, edited, shortened_site)
