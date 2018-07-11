@@ -106,9 +106,10 @@ def handle_spam(post, reasons, why):
             s = u" {{}}: [{}]({}) by a deleted user on `{}`".format(sanitized_title, post_url, shortened_site)
             username = ""
         else:
-            s = u" {{}}: [{}]({}) by [{}]({}) on `{}`".format(
-                sanitized_title, post_url, escape_format(post.user_name.strip()), poster_url, shortened_site)
             username = post.user_name.strip()
+            escaped_username = escape_format(parsing.escape_markdown(username))
+            s = u" {{}}: [{}]({}) by [{}]({}) on `{}`".format(
+                sanitized_title, post_url, escaped_username, poster_url, shortened_site)
 
         Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
                  post.title_ignore_type, post_url, reasons, post.body, username,
