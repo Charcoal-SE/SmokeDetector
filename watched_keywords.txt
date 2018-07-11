@@ -4419,3 +4419,4 @@
 1531305354	A J	identitypi\.com
 1531330212	Makyen	cppsecrets\.com
 1531337601	Glorfindel	hindifonts\.org
+1531338130	Glorfindel	asgardmining\.com
