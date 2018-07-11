@@ -421,7 +421,7 @@ class Metasmoke:
 
     @staticmethod
     def get_post_bodies_from_ms(post_url):
-        if not GlovalVars.metasmoke_key:
+        if not GlobalVars.metasmoke_key:
             return None
 
         payload = {
