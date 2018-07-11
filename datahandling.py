@@ -445,7 +445,7 @@ def has_community_bumped_post(post_url, post_content):
     if GlobalVars.metasmoke_key is not None and GlobalVars.metasmoke_host is not None:
         try:
             ms_posts = Metasmoke.get_post_bodies_from_ms(post_url)
-            if len(ms_posts) == 0:
+            if not ms_posts:
                 return False
 
             latest_revision_date = max([post['created_at'] for post in ms_posts])

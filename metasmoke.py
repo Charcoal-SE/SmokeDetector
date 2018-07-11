@@ -421,6 +421,9 @@ class Metasmoke:
 
     @staticmethod
     def get_post_bodies_from_ms(post_url):
+        if not GlovalVars.metasmoke_key:
+            return None
+
         payload = {
             'key': GlobalVars.metasmoke_key,
             'filter': 'HNKHHGINKFKGIKGLGKIILMKNHHGHFOL',  # posts.body, posts.created_at
