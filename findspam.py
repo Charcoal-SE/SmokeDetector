@@ -1054,11 +1054,11 @@ class FindSpam:
         #
         # Category: Bad keywords
         # The big list of bad keywords, for titles and posts
-        {'regex': r"(?is)\b({})\b|{}".format("|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
+        {'regex': r"(?is)(?:^|\b)({})(?:\b|$)|{}".format("|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
          'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1},
         # The small list of *potentially* bad keywords, for titles and posts
-        {'regex': r'(?is)\b({})\b'.format('|'.join(GlobalVars.watched_keywords.keys())),
+        {'regex': r'(?is)(?:^|\b)({})(?:\b|$)'.format('|'.join(GlobalVars.watched_keywords.keys())),
          'reason': 'potentially bad keyword in {}',
          'all': True, 'sites': [], 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 30, 'max_score': 1},
