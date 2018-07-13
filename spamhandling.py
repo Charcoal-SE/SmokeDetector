@@ -1,5 +1,6 @@
 # coding=utf-8
 import sys
+import random
 from findspam import FindSpam
 import datahandling
 import chatcommunicate
@@ -102,7 +103,7 @@ def handle_spam(post, reasons, why):
             prefix_ms = prefix
 
         # We'll insert reason list later
-        edited = ' \u270F\uFE0F' if post.edited else ''
+        edited = '' if not post.edited else (' \u270F\uFE0F' if random.choice(range(10)) else ' \U0001F437')
         if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
             s = u" {{}}: [{}]({}){} by a deleted user on `{}`".format(
                 sanitized_title, post_url, edited, shortened_site)
