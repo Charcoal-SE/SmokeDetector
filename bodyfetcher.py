@@ -402,6 +402,10 @@ class BodyFetcher:
                         answer["IsAnswer"] = True  # Necesssary for Post object
                         answer["title"] = ""  # Necessary for proper Post object creation
                         answer["site"] = site  # Necessary for proper Post object creation
+                        try:
+                            answer['edited'] = (answer['creation_date'] != answer['last_edit_date'])
+                        except KeyError:
+                            answer['edited'] = False  # last_edit_date not present = not edited
                         answer_ = Post(api_response=answer, parent=post_)
 
                         is_spam, reason, why = check_if_spam(answer_)
