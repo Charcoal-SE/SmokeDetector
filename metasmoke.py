@@ -118,7 +118,7 @@ class Metasmoke:
                         and not datahandling.is_false_positive((post_data.post_id, post_data.site)):
                     return
                 user = parsing.get_user_from_url(post_data.owner_url)
-                post = classes.Post(api_response=post_data)
+                post = classes.Post(api_response=post_data.as_dict)
 
                 scan_spam, scan_reasons, scan_why = spamhandling.check_if_spam(post)
                 if scan_spam:
