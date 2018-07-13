@@ -4471,3 +4471,4 @@
 1531504130	Makyen	16282035722
 1531504161	Makyen	recoverandroid-data\.com
 1531514327	Makyen	(?:>>>+|@+>>+|@@+>+|== *>>+|={4,}|===>+|= = =|(Read More|Click Here)).{0,20}https?(?!://i.stack.imgur.com).{201,}$
+1531514953	Makyen	drlawrencespelltemple(?:@hotmail\.com)?
