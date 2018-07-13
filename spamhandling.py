@@ -92,6 +92,7 @@ def handle_spam(post, reasons, why):
         # chat is properly constructed with parent title instead. This will make things 'print'
         # in a proper way in chat messages.
         sanitized_title = parsing.sanitize_title(post.title if not post.is_answer else post.parent.title)
+        sanitized_title = escape_format(sanitized_title)
 
         prefix = u"[ [SmokeDetector](//goo.gl/eLDYqh) ]"
         if GlobalVars.metasmoke_key:
@@ -101,15 +102,16 @@ def handle_spam(post, reasons, why):
             prefix_ms = prefix
 
         # We'll insert reason list later
-        sanitized_title = escape_format(sanitized_title)
+        edited = '\u270F\uFE0F' if post.edited else ''
         if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
-            s = u" {{}}: [{}]({}) by a deleted user on `{}`".format(sanitized_title, post_url, shortened_site)
+            s = u" {{}}: [{}]({}){} by a deleted user on `{}`".format(
+                sanitized_title, post_url, edited, shortened_site)
             username = ""
         else:
             username = post.user_name.strip()
             escaped_username = escape_format(parsing.escape_markdown(username))
-            s = u" {{}}: [{}]({}) by [{}]({}) on `{}`".format(
-                sanitized_title, post_url, escaped_username, poster_url, shortened_site)
+            s = u" {{}}: [{}]({}){} by [{}]({}) on `{}`".format(
+                sanitized_title, post_url, edited, escaped_username, poster_url, shortened_site)
 
         Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
                  post.title_ignore_type, post_url, reasons, post.body, username,
