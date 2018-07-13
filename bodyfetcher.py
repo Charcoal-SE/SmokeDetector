@@ -261,7 +261,7 @@ class BodyFetcher:
             question_modifier = "/{0}".format(";".join(str(post) for post in posts))
 
         url = "https://api.stackexchange.com/2.2/questions{q_modifier}?site={site}" \
-              "&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw((" \
+              "&filter=!*xq08dCDNr)PlxxXfaN8ntivx(BPlY_8XASyXLX-J7F-)VK*Q3KTJVkvp*&key=IAkbitmze4B8KpacUfLqkw((" \
               "{optional_min_query_param}".format(q_modifier=question_modifier, site=site,
                                                   optional_min_query_param=pagesize_modifier)
 
@@ -358,6 +358,11 @@ class BodyFetcher:
                 continue
 
             post['site'] = site
+            try:
+                post['edited'] = (post['creation_date'] != post['last_edit_date'])
+            except KeyError:
+                post['edited'] = False  # last_edit_date not present = not edited
+
             try:
                 post_ = Post(api_response=post)
             except PostParseError as err:
