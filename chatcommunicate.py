@@ -202,9 +202,6 @@ def on_msg(msg, client):
         return
 
     message = msg.message
-    log("info", message.content)
-    log("info", message.content_source)
-    log("info", fetch_source(message))
     if message.owner.id == client._br.user_id:
         return
 
