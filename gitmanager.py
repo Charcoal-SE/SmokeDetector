@@ -67,6 +67,9 @@ class GitManager:
             if not status:
                 return (False, message)
 
+            # Checkout master so other pending changes are also there
+            git.checkout("master")
+
             if blacklist_type in [Blacklist.WATCHED_KEYWORDS]:
                 op = 'watch'
                 now = datetime.now().strftime('%s')
@@ -102,7 +105,6 @@ class GitManager:
                        "-m", u"Auto {0} of `{1}` by {2} --autopull".format(op, item, username))
 
             if code_permissions:
-                git.checkout("master")
                 git.merge(branch)
                 git.push("origin", "master")
                 git.branch('-D', branch)  # Delete the branch in the local git tree since we're done with it.
