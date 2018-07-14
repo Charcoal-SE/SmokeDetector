@@ -185,18 +185,6 @@ def send_messages():
         _msg_queue.task_done()
 
 
-def fetch_source(msg)
-    headers = {"Content-type": "text/plain"}
-    try:
-        response = requests.get(r"https://{}/message/{}?plain=true".format(msg._client.host, msg.id), headers=headers)
-    except:  # Something wrong, not handling them for now
-        return None
-
-    if response.status_code == 200:
-        return response.content.decode(response.encoding)
-    return None
-
-
 def on_msg(msg, client):
     if not isinstance(msg, events.MessagePosted) and not isinstance(msg, events.MessageEdited):
         return
