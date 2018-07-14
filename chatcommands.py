@@ -800,7 +800,7 @@ def standby(msg, location_search, alias_used="standby"):
 
 
 # noinspection PyIncorrectDocstring
-@command(str, aliases=["test-q", "test-a", "test-u", "test-t"], give_name=True)
+@command(str, aliases=["test-q", "test-a", "test-u", "test-t", "test-json"], give_name=True)
 def test(content, alias_used="test"):
     """
     Test an answer to determine if it'd be automatically reported
@@ -840,6 +840,45 @@ def test(content, alias_used="test"):
         fakepost = Post(api_response={'title': content, 'body': "Valid question body",
                                       'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
                                       'site': site, 'IsAnswer': False, 'score': 0})
+    elif alias_used == "test-json":
+        # Only load legit json object
+        try:
+            json_obj = json.loads(content)
+        except ValueError as e:
+            return str(e)
+        if not isinstance(json_obj, dict):
+            return "Only accepts a json object as input"
+        # List of valid keys and their corresponding classes
+        valid_keys = [
+            ('title', str), ('body', str), ('username', str), ('type', str),
+            ('reputation', int), ('score', int)
+        ]
+        right_types = list(filter(lambda p: p[0] in json_obj and isinstance(json_obj[p[0]], p[1]), valid_keys))
+        wrong_types = list(filter(lambda p: p[0] in json_obj and not isinstance(json_obj[p[0]], p[1]), valid_keys))
+        # Alert if valid key is of wrong class
+        if len(wrong_types) > 0:
+            return "Invalid type: {}".format(", ".join(
+                ["{} should be {}".format(x, y.__name__) for (x, y) in wrong_types]))
+        # Alert if none of the valid keys are used
+        elif len(right_types) == 0:
+            return "At least one of the following keys needed: {}".format(", ".join(
+                ["{} ({})".format(x, y.__name__) for (x, y) in valid_keys]))
+        # Craft a fake response
+        fake_response = {
+            'title': json_obj['title'] if 'title' in json_obj else 'Valid post title',
+            'body': json_obj['body'] if 'body' in json_obj else 'Valid post body',
+            'owner': {
+                'display_name': json_obj['username'] if 'username' in json_obj else 'Valid username',
+                'reputation': json_obj['reputation'] if 'reputation' in json_obj else 0,
+                'link': ''
+            },
+            'IsAnswer': 'type' in json_obj and not json_obj['type'] == "question",
+            'site': site,
+            'score': json_obj['score'] if 'score' in json_obj else 0,
+        }
+        # Handle that pluralization bug
+        kind = "an answer" if fake_response['IsAnswer'] else "a question"
+        fakepost = Post(api_response=fake_response)
     else:
         kind = "a post, title or username"
         fakepost = Post(api_response={'title': content, 'body': content,
