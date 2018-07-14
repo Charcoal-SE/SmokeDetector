@@ -141,6 +141,18 @@ def pickle_last_messages():
             pickle.dump(_last_messages, pickle_file)
 
 
+def fetch_source(msg):
+    headers = {"Content-type": "text/plain"}
+    try:
+        response = requests.get(r"https://chat.{}/message/{}?plain=true".format(msg._client.host, msg.id), headers=headers)
+    except:  # Something wrong, not handling them for now, use placeholder
+        return msg.content_source
+
+    if response.status_code == 200:
+        return response.content.decode(response.encoding)
+    return msg.content_source
+
+
 def send_messages():
     while True:
         room, msg, report_data = _msg_queue.get()
@@ -185,26 +197,11 @@ def send_messages():
         _msg_queue.task_done()
 
 
-def fetch_source(msg):
-    headers = {"Content-type": "text/plain"}
-    try:
-        response = requests.get(r"https://chat.{}/message/{}?plain=true".format(msg._client.host, msg.id), headers=headers)
-    except:  # Something wrong, not handling them for now, use placeholder
-        return msg.content_source
-
-    if response.status_code == 200:
-        return response.content.decode(response.encoding)
-    return msg.content_source
-
-
 def on_msg(msg, client):
     if not isinstance(msg, events.MessagePosted) and not isinstance(msg, events.MessageEdited):
         return
 
     message = msg.message
-    log("info", message.content)
-    log("info", message.content_source)
-    log("info", fetch_source(message))
     if message.owner.id == client._br.user_id:
         return
 
