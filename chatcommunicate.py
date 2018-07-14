@@ -144,7 +144,8 @@ def pickle_last_messages():
 def fetch_source(msg):
     headers = {"Content-type": "text/plain"}
     try:
-        response = requests.get(r"https://chat.{}/message/{}?plain=true".format(msg._client.host, msg.id), headers=headers)
+        response = requests.get(r"https://chat.{}/message/{}?plain=true".format(msg._client.host, msg.id),
+                                headers=headers)
     except:  # Something wrong, not handling them for now, use placeholder
         return msg.content_source
 
