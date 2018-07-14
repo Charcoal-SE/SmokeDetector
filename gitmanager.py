@@ -67,9 +67,6 @@ class GitManager:
             if not status:
                 return (False, message)
 
-            # Checkout master so other pending changes are also there
-            git.checkout("master")
-
             if blacklist_type in [Blacklist.WATCHED_KEYWORDS]:
                 op = 'watch'
                 now = datetime.now().strftime('%s')
@@ -188,6 +185,7 @@ class GitManager:
 
         try:
             cls.gitmanager_lock.acquire()
+            git.checkout("master")
 
             if blacklist_type == "watch":
                 blacklists = [Blacklist.WATCHED_KEYWORDS]
