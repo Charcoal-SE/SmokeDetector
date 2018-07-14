@@ -185,40 +185,56 @@ def send_messages():
         _msg_queue.task_done()
 
 
+def fetch_source(msg)
+    headers = {"Content-type": "text/plain"}
+    try:
+        response = requests.get(r"https://{}/message/{}?plain=true".format(msg._client.host, msg.id), headers=headers)
+    except:  # Something wrong, not handling them for now
+        return None
+
+    if response.status_code == 200:
+        return response.content.decode(response.encoding)
+    return None
+
+
 def on_msg(msg, client):
-    if isinstance(msg, events.MessagePosted) or isinstance(msg, events.MessageEdited):
-        message = msg.message
+    if not isinstance(msg, events.MessagePosted) and not isinstance(msg, events.MessageEdited):
+        return
 
-        if message.owner.id == client._br.user_id:
-            return
+    message = msg.message
+    log("info", message.content)
+    log("info", message.content_source)
+    log("info", fetch_source(message))
+    if message.owner.id == client._br.user_id:
+        return
 
-        room_data = _rooms[(client.host, message.room.id)]
+    room_data = _rooms[(client.host, message.room.id)]
 
-        if message.parent:
-            if message.parent.owner.id == client._br.user_id:
-                strip_mention = regex.sub("^(<span class=(\"|')mention(\"|')>)?@.*?(</span>)? ", "", message.content)
-                cmd = GlobalVars.parser.unescape(strip_mention)
+    if message.parent:
+        if message.parent.owner.id == client._br.user_id:
+            strip_mention = regex.sub("^(<span class=(\"|')mention(\"|')>)?@.*?(</span>)? ", "", message.content)
+            cmd = GlobalVars.parser.unescape(strip_mention)
 
-                result = dispatch_reply_command(message.parent, message, cmd)
-
-                if result:
-                    _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
-        elif message.content.startswith("sd "):
-            result = dispatch_shorthand_command(message)
-
-            if result:
-                _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
-        elif message.content.startswith("!!/"):
-            result = dispatch_command(message)
+            result = dispatch_reply_command(message.parent, message, cmd)
 
             if result:
                 _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
-        elif classes.feedback.FEEDBACK_REGEX.search(message.content) \
-                and is_privileged(message.owner, message.room) and datahandling.last_feedbacked:
-                ids, expires_in = datahandling.last_feedbacked
+    elif message.content.startswith("sd "):
+        result = dispatch_shorthand_command(message)
 
-                if time.time() < expires_in:
-                    Tasks.do(metasmoke.Metasmoke.post_auto_comment, message.content_source, message.owner, ids=ids)
+        if result:
+            _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
+    elif message.content.startswith("!!/"):
+        result = dispatch_command(message)
+
+        if result:
+            _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
+    elif classes.feedback.FEEDBACK_REGEX.search(message.content) \
+            and is_privileged(message.owner, message.room) and datahandling.last_feedbacked:
+            ids, expires_in = datahandling.last_feedbacked
+
+            if time.time() < expires_in:
+                Tasks.do(metasmoke.Metasmoke.post_auto_comment, message.content_source, message.owner, ids=ids)
 
 
 def tell_rooms_with(prop, msg, notify_site="", report_data=None):
