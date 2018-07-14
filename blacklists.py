@@ -101,6 +101,7 @@ class TSVDictParser(BlacklistParser):
     def exists(self, item: Union[str, dict]):
         if isinstance(item, dict):
             item = item[2]
+        item = item.split('\t')[-1]
 
         with open(self._filename, 'r', encoding='utf-8') as f:
             lines = f.readlines()
