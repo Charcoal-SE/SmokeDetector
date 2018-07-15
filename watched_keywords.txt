@@ -4490,4 +4490,3 @@
 1531603180	Makyen	(?:>>>+|@+>>+|@@+>+|== *>>+|={4,}|===>+|= = =|(Read More|Click Here)).{0,20}https?(?!://i.stack.imgur.com)(?=.{201,}$)
 1531628344	iBug	ancientshrine12
 1531635926	paper1111	crazyvideohub\.com
-1531637380	iBug	smartcredit07
