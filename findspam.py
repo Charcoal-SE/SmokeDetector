@@ -356,15 +356,15 @@ def pattern_product_name(s, site, *args):
     three_words = regex.compile(r"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
     two_words = regex.compile(r"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
     if unique_matches(three_words) >= 1:
-        return True, u"Pattern-matching product name *{}*".format(", ".join(match[0] for match in three_words))
+        return True, u"Pattern-matching product name *{}*".format(", ".join(match[0] for match in set(three_words)))
     if unique_matches(two_words) >= 2:
-        return True, u"Pattern-matching product name *{}*".format(", ".join(match[0] for match in two_words))
+        return True, u"Pattern-matching product name *{}*".format(", ".join(match[0] for match in set(two_words)))
     return False, ""
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def what_is_this_pharma_title(s, site, *args):   # title "what is this Xxxx?"
-    if regex.compile(r'^what is this (?:[A-Z]|http://)').match(s):
+    if regex.compile(r'^what is this (?:[A-Z]|https?://)').match(s):
         return True, u'Title starts with "what is this"'
     else:
         return False, ""
