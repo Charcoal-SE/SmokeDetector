@@ -1641,7 +1641,7 @@ class FindSpam:
             why_for_matches = []
             for match in matches:
                 span = match.span()
-                group = match.group()
+                group = match.group().replace("\n", "")
                 why_for_matches.append(u"Position {}-{}: {}".format(span[0] + 1, span[1] + 1, group))
             return type_of_text + u" - " + ", ".join(why_for_matches)
         return ""
