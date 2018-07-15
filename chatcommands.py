@@ -845,9 +845,9 @@ def test(content, alias_used="test"):
         try:
             json_obj = json.loads(content)
         except ValueError as e:
-            return str(e)
+            raise CmdException("Error: {}".format(e))
         if not isinstance(json_obj, dict):
-            return "Only accepts a json object as input"
+            raise CmdException("Only accepts a json object as input")
         # List of valid keys and their corresponding classes
         valid_keys = [
             ('title', str), ('body', str), ('username', str), ('type', str),
@@ -857,12 +857,12 @@ def test(content, alias_used="test"):
         wrong_types = list(filter(lambda p: p[0] in json_obj and not isinstance(json_obj[p[0]], p[1]), valid_keys))
         # Alert if valid key is of wrong class
         if len(wrong_types) > 0:
-            return "Invalid type: {}".format(", ".join(
-                ["{} should be {}".format(x, y.__name__) for (x, y) in wrong_types]))
+            raise CmdException("Invalid type: {}".format(", ".join(
+                ["{} should be {}".format(x, y.__name__) for (x, y) in wrong_types])))
         # Alert if none of the valid keys are used
         elif len(right_types) == 0:
-            return "At least one of the following keys needed: {}".format(", ".join(
-                ["{} ({})".format(x, y.__name__) for (x, y) in valid_keys]))
+            raise CmdException("At least one of the following keys needed: {}".format(", ".join(
+                ["{} ({})".format(x, y.__name__) for (x, y) in valid_keys])))
         # Craft a fake response
         fake_response = {
             'title': json_obj['title'] if 'title' in json_obj else 'Valid post title',
@@ -874,7 +874,7 @@ def test(content, alias_used="test"):
             },
             'IsAnswer': 'type' in json_obj and not json_obj['type'] == "question",
             'site': site,
-            'score': json_obj['score'] if 'score' in json_obj else 0,
+            'score': json_obj['score'] if 'score' in json_obj else 0
         }
         # Handle that pluralization bug
         kind = "an answer" if fake_response['IsAnswer'] else "a question"
