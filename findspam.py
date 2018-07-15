@@ -434,7 +434,7 @@ def bad_link_text(s, site, *args):   # suspicious text of a hyperlink
         r"\b(buy|cheap) |live[ -]?stream|"
         r"\bmake (money|\$)|"
         r"\b(porno?|(whole)?sale|coins|replica|luxury|coupons?|essays?|in \L<city>)\b|"
-        r"\b\L<city>(?:\b.{1.20}\b)?(service|escort|call girls?)|"
+        r"\b\L<city>(?:\b.{1,20}\b)?(service|escort|call girls?)|"
         r"(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery|school|university)|"
         r"\b(writing (service|help)|essay (writing|tips))", city=FindSpam.city_list)
     links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
