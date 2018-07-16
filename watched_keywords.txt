@@ -4495,3 +4495,4 @@
 1531715708	Tetsuya Yamamoto	thunkapp\.com
 1531715814	Tetsuya Yamamoto	thunksoftware
 1531718708	Makyen	\W*(?:>>>+|@+>>+|@@+>+|== *>>+|={4,}|===>+|= = =|(?:Read More|Click Here)).{0,20}https?://(?!(?:i\.stack\.imgur\.com|(?:[\w-]+\.)*(?:(?:stack(?:exchange|overflow)|superuser|serverfault|askubuntu|stackapps)\.com|(?:mathoverflow|sstatic)\.net)))(?=.{201,}$)
+1531722754	Tetsuya Yamamoto	ludokinggames\.com
