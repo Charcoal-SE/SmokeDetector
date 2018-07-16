@@ -4485,7 +4485,6 @@
 1531581860	Makyen	[a-z_]*(?:1_*)?844[\W_]*438[\W_]*3711[a-z_]*
 1531586496	Makyen	gbwhatsappapk\.net
 1531589568	Makyen	packers-and-movers-navi-mumbai\.co\.in
-1531603180	Makyen	(?:>>>+|@+>>+|@@+>+|== *>>+|={4,}|===>+|= = =|(Read More|Click Here)).{0,20}https?(?!://i.stack.imgur.com)(?=.{201,}$)
 1531628344	iBug	ancientshrine12
 1531635926	paper1111	crazyvideohub\.com
 1531654187	doppelgreener	icochargeback\.com
