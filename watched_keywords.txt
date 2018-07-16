@@ -4506,3 +4506,4 @@
 1531724947	Makyen	dailymotion\.com/video/x6ovf4q
 1531725372	Tetsuya Yamamoto	georgiateacoffee\.com
 1531725786	Tetsuya Yamamoto	datacaptive\.com
+1531725852	Makyen	[a-z_]*(?:1_*)?800[\W_]*523[\W_]*1387[a-z_]*
