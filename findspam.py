@@ -1081,7 +1081,7 @@ class FindSpam:
          'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
          'answers': False, 'max_rep': 1, 'max_score': 1},
         # gratis at the beginning of post, SoftwareRecs is exempt
-        {'regex': r"(?is)^.{0,200}\bgratis\b$", 'all': True,
+        {'regex': r"(?is)(?<=^.{,200})\bgratis\b$", 'all': True,
          'sites': ['softwarerecs.stackexchange.com'], 'reason': "bad keyword in {}", 'title': True, 'body': True,
          'username': False, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11, 'max_score': 0},
         # Bad keywords in titles and usernames, all sites
@@ -1265,7 +1265,7 @@ class FindSpam:
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 2},
         # Links preceded by arrows >>>
         {'regex': r"(?is)(?:>>>+|@+>>+|@@+>+|==\s*>>+|={4,}|===>+|= = =|(Read More|Click Here)).{0,20}"
-                  r"https?(?!://i.stack.imgur.com).{0,200}$", 'all': True,
+                  r"https?(?!://i.stack.imgur.com)(?=.{,200}$)", 'all': True,
          'sites': [], 'reason': "link following arrow in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 11, 'max_score': 0},
         # Link at the end of question, selected sites
@@ -1276,7 +1276,7 @@ class FindSpam:
          'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'answers': False, 'max_rep': 1, 'max_score': 0},
         # Link at the end of a short answer
-        {'regex': r'(?is)^.{0,350}<a href="https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,4}'
+        {'regex': r'(?is)(?<=^.{,350})<a href="https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,4}'
                   r'/?\w{0,2}/?|(?:plus\.google|www\.facebook)\.com/[\w/]+)"[^<]*</a>(?:</strong>)?\W*</p>\s*$'
                   r'|\[/url\]\W*</p>\s*$',
          'all': True, 'sites': ["raspberrypi.stackexchange.com", "softwarerecs.stackexchange.com"],
@@ -1301,13 +1301,13 @@ class FindSpam:
          'sites': [], 'reason': 'pattern-matching website in {}', 'title': False, 'body': True, 'username': False,
          'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # non-linked site at the end of a short answer
-        {'regex': r'(?is)^.{0,350}\w{6}\.(com|co\.uk)(?:</strong>)?\W*</p>\s*$', 'all': True,
+        {'regex': r'(?is)(?<=^.{,350})\w{6}\.(com|co\.uk)(?:</strong>)?\W*</p>\s*$', 'all': True,
          'sites': [], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False,
          'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Shortened URL near the end of question
         {'regex': r"(?is)://(?:w+\.)?(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|"
                   r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
-                  r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us|adyou\.co|buff\.ly|ow\.ly|tgig\.ir)/.{0,200}$",
+                  r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us|adyou\.co|buff\.ly|ow\.ly|tgig\.ir)/(?=.{,200}$)",
          'all': True, 'sites': ["superuser.com", "askubuntu.com"], 'reason': "shortened URL in {}", 'title': False,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False,
          'max_rep': 1, 'max_score': 0},
@@ -1376,7 +1376,7 @@ class FindSpam:
          'reason': "phone number detected in {}", 'title': True, 'body': False, 'username': False,
          'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Phone number in post
-        {'regex': r"(?s)^.{0,250}\b1 ?[-(. ]8\d{2}[-). ] ?\d{3}[-. ]\d{4}\b", 'all': True,
+        {'regex': r"(?s)(?<=^.{,250})\b1 ?[-(. ]8\d{2}[-). ] ?\d{3}[-. ]\d{4}\b", 'all': True,
          'sites': ["math.stackexchange.com"], 'reason': "phone number detected in {}", 'title': False,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
         # Email check for answers on selected sites
@@ -1391,7 +1391,7 @@ class FindSpam:
          'max_score': 0},
         # Email check for questions: check only at the end, and on selected sites
         {'regex': r"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
-                  r"[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s).{0,100}$", 'all': False,
+                  r"[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s)(?=.{,100}$)", 'all': False,
          'sites': ["money.stackexchange.com", "travel.stackexchange.com", "gamedev.stackexchange.com",
                    "gaming.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True,
          'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1,
