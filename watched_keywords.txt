@@ -4517,3 +4517,4 @@
 1531762047	Makyen	womenbootsreview\.com
 1531762068	Makyen	[a-z_]*(?:1_*)?800[\W_]*503[\W_]*3075[a-z_]*
 1531762076	Makyen	souvikcreations\.in
+1531762939	Thomas Ward	techysupport\.co
