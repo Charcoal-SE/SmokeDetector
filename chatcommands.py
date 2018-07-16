@@ -1,7 +1,7 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
 from chatcommunicate import add_room, block_room, CmdException, command, get_report_data, is_privileged, message, \
-    tell_rooms
+    tell_rooms, fetch_source
 # noinspection PyUnresolvedReferences
 from globalvars import GlobalVars
 from findspam import FindSpam
@@ -241,6 +241,7 @@ def do_blacklist(blacklist_type, msg, force=False):
     :return: A string
     """
 
+    msg.content_source = fetch_source(msg)
     chat_user_profile_link = "https://chat.{host}/users/{id}".format(host=msg._client.host,
                                                                      id=msg.owner.id)
 

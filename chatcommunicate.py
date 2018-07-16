@@ -141,6 +141,19 @@ def pickle_last_messages():
             pickle.dump(_last_messages, pickle_file)
 
 
+def fetch_source(msg):
+    headers = {"Content-type": "text/plain"}
+    try:
+        response = requests.get(r"https://chat.{}/message/{}?plain=true".format(msg._client.host, msg.id),
+                                headers=headers)
+    except:  # Something wrong, not handling them for now, use placeholder
+        return msg.content_source
+
+    if response.status_code == 200:
+        return response.content.decode(response.encoding)
+    return msg.content_source
+
+
 def send_messages():
     while True:
         room, msg, report_data = _msg_queue.get()
