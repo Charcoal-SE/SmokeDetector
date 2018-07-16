@@ -1114,7 +1114,7 @@ def report(msg, args, alias_used="report"):
     :param msg:
     :return: A string (or None)
     """
-    if privileged and not is_privileged(original_msg.owner, original_msg.room) and alias_used != "scan":
+    if not is_privileged(msg.owner, msg.room) and alias_used != "scan":
         raise CmdException(GlobalVars.not_privileged_warning)
 
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
