@@ -227,7 +227,7 @@ def has_repeating_characters(s, site, *args):
 def link_at_end(s, site, *args):   # link at end of question, on selected sites
     s = regex.sub("</?(?:strong|em|p)>", "", s)
     match = regex.compile(r"(?i)https?://(?:[.A-Za-z0-9-]*/?[.A-Za-z0-9-]*/?|plus\.google\.com/"
-                          r"[\w/]*|www\.pinterest\.com/pin/[\d/]*)(?=</a>\s*)$").search(s)
+                          r"[\w/]*|www\.pinterest\.com/pin/[\d/]*)(?=</a>\s*$)").search(s)
     if match and not regex.compile(r"(?i)upload|\b(imgur|yfrog|gfycat|tinypic|sendvid|ctrlv|prntscr|gyazo|youtu\.?be|"
                                    r"stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|regex101|"
                                    r"(?<!plus\.)google|localhost|ubuntu|getbootstrap|"
