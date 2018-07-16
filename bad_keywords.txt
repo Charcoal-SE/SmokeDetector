@@ -1441,3 +1441,4 @@ almondhackingarena
 [a-z_]*(?:1_*)?518[\W_]*504[\W_]*9376[a-z_]*
 oneofonehack
 hackdigg(?:ATgmailcom)?
+maximum\W?power\W?xl
