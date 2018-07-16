@@ -1107,13 +1107,16 @@ def invite(msg, room_id, roles):
 
 # --- Post Responses --- #
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=True, give_name=True, aliases=["scan", "report-force"])
+@command(str, whole_msg=True, privileged=False, give_name=True, aliases=["scan", "report-force"])
 def report(msg, args, alias_used="report"):
     """
     Report a post (or posts)
     :param msg:
     :return: A string (or None)
     """
+    if privileged and not is_privileged(original_msg.owner, original_msg.room) and alias_used != "scan":
+        raise CmdException(GlobalVars.not_privileged_warning)
+
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
         raise CmdException("You can execute the !!/{} command again in {} seconds. "
