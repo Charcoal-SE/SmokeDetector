@@ -110,7 +110,6 @@ while stoprunning is False:
         if 'windows' not in str(platform.platform()).lower():
             git.checkout('deploy')
             git.pull()
-            git.submodule('update')
         else:
             warn('Not pulling updates; we are on Windows')
 
