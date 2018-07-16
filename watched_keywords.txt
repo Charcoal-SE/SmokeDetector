@@ -4497,3 +4497,4 @@
 1531718708	Makyen	\W*(?:>>>+|@+>>+|@@+>+|== *>>+|={4,}|===>+|= = =|(?:Read More|Click Here)).{0,20}https?://(?!(?:i\.stack\.imgur\.com|(?:[\w-]+\.)*(?:(?:stack(?:exchange|overflow)|superuser|serverfault|askubuntu|stackapps)\.com|(?:mathoverflow|sstatic)\.net)))(?=.{201,}$)
 1531722754	Tetsuya Yamamoto	ludokinggames\.com
 1531722813	Makyen	carogallo\.\w*\.com
+1531722997	iBug	happywheelshappy\.com
