@@ -146,10 +146,15 @@ class GitManager:
                 except KeyError:
                     git.checkout("deploy")  # Return to deploy
 
-                    # Delete the branch in the local git tree, we'll create it again if the
-                    # command is run again. This way, we keep things a little more clean in
-                    # the local git tree
-                    git.branch('-D', branch)
+                    try:
+                        # Delete the branch in the local git tree, we'll create it again if the
+                        # command is run again. This way, we keep things a little more clean in
+                        # the local git tree
+                        git.branch('-D', branch)
+                    except:
+                        # It's OK if the branch doesn't get deleted, so long as we switch back to
+                        # deploy, which we do in the finally block...
+                        pass
 
                     # Error capture/checking for any "invalid" GH reply without an 'html_url' item,
                     # which will throw a KeyError.
@@ -224,7 +229,14 @@ class GitManager:
             git.checkout('master')
             git.merge(branch)
             git.push('origin', 'master')
-            git.branch('-D', branch)
+
+            try:
+                git.branch('-D', branch)
+            except:
+                # It's OK if the branch doesn't get deleted, so long as we switch back to
+                # deploy, which we do in the finally block...
+                pass
+
         except Exception as e:
             log('error', '{}: {}'.format(type(e).__name__, e))
             return False, 'Git operations failed for unspecified reasons.'
