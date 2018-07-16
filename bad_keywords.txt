@@ -1437,3 +1437,4 @@ rapid\W*results\W*keto
 smartcredit07
 boost\W?sx\W?pro
 almondhackingarena
+[a-z_]*(?:1_*)?518[\W_]*628[\W_]*4630[a-z_]*

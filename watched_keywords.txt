@@ -4498,5 +4498,4 @@
 1531715708	Tetsuya Yamamoto	thunkapp\.com
 1531715814	Tetsuya Yamamoto	thunksoftware
 1531716200	Makyen	oneofonehack
-1531716240	Makyen	[a-z_]*(?:1_*)?518[\W_]*628[\W_]*4630[a-z_]*
 1531716252	Makyen	[a-z_]*(?:1_*)?518[\W_]*504[\W_]*9376[a-z_]*
