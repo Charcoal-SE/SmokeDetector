@@ -1287,9 +1287,11 @@ class FindSpam:
             r"[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,10}/?"
             r"[\w-]{0,40}?/?|(?:plus\.google|www\.facebook)\.com/[\w/]+))"
             r"\" rel=\"nofollow( noreferrer)?\">"
+            r"(?="
             r".{300,}<a href=\"(?:http://%20)?\1\" "
             r"rel=\"nofollow( noreferrer)?\">(?:http://%20)?\1</a>"
-            r"(?:</strong>)?\W*</p>\s*$", 'all': True,
+            r"(?:</strong>)?\W*</p>\s*$"
+            r")", 'all': True,
          'sites': [], 'reason': 'repeated URL at end of long post', 'title': False, 'body': True, 'username': False,
          'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
         # Link with "thanks for sharing" or a similar phrase in a short answer
