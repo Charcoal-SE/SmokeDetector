@@ -4534,3 +4534,4 @@
 1531864230	Makyen	[a-z_]*(?:1_*)?319[\W_]*298[\W_]*0816[a-z_]*
 1531864239	Makyen	fabpro1\.com
 1531884457	Makyen	hometuitionsgurgaon\.com
+1531884558	Makyen	thebentech\.com
