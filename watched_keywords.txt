@@ -4558,3 +4558,4 @@
 1531824823	Shree	codexwebsite\.blogspot\.com
 1531932585	Glorfindel	aslitarcanhairclinic\.com
 1531940014	Makyen	ride-executive\.com
+1531940036	Makyen	\W*온라인경마사이트\W*
