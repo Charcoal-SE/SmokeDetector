@@ -4573,3 +4573,4 @@
 1531980741	Makyen	arevadigital\.com
 1531981079	Makyen	jeremdepa\.[\w-]*\.(?:com|net)
 1531984868	Glorfindel	office-setup\.me
+1531985186	Makyen	drjaguai(?:@gmail\.com)?
