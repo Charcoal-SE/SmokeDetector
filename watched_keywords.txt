@@ -4573,3 +4573,4 @@
 1531980222	Makyen	54\.192\.225\.217
 1531980257	Makyen	harddrivefix\.blogspot\.in
 1531980741	Makyen	arevadigital\.com
+1531981079	Makyen	jeremdepa\.[\w-]*\.(?:com|net)
