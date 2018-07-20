@@ -4589,3 +4589,4 @@
 1532054546	Makyen	oche\W*herbal\W*cream
 1532054899	Makyen	^.{1,15}(?<!ice)(?<!ice\W)cream$
 1532057688	Makyen	customer-carehelpline\.com
+1532057699	Makyen	[a-z_]*(?:1_*)?844[\W_]*794[\W_]*2729[a-z_]*
