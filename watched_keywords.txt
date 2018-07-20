@@ -4602,3 +4602,4 @@
 1532079425	Tetsuya Yamamoto	pofitec\.com
 1532079444	Tetsuya Yamamoto	homestaydnn\.com
 1532079926	Tetsuya Yamamoto	toolsguardian\.com
+1532093148	Glorfindel	duiadns\.net
