@@ -4599,3 +4599,4 @@
 1532076059	Makyen	[a-z_]*91[\W_]*9489[\W_]*184[\W_]*010[a-z_]*
 1532076081	Makyen	[a-z_]*(?:1_*)?844[\W_]*762[\W_]*3952[a-z_]*
 1532077415	Tetsuya Yamamoto	arabic-calligraphy\.com
+1532079425	Tetsuya Yamamoto	pofitec\.com
