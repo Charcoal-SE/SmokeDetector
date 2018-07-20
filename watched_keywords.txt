@@ -4602,3 +4602,4 @@
 1532079444	Tetsuya Yamamoto	homestaydnn\.com
 1532079926	Tetsuya Yamamoto	toolsguardian\.com
 1532093148	Glorfindel	duiadns\.net
+1532097585	Glorfindel	zeptrick\.blogspot\.com
