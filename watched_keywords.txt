@@ -4603,3 +4603,4 @@
 1532079926	Tetsuya Yamamoto	toolsguardian\.com
 1532093148	Glorfindel	duiadns\.net
 1532097585	Glorfindel	zeptrick\.blogspot\.com
+1532116711	Makyen	\w{3,}quick\W*book\w{3,}
