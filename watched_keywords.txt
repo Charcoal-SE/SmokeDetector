@@ -4587,3 +4587,4 @@
 1532054290	Makyen	britishtheopen\.de
 1532054299	Makyen	drochesolutiontempel(?:@gmail\.com)?
 1532054546	Makyen	oche\W*herbal\W*cream
+1532054899	Makyen	^.{1,15}(?<!ice)(?<!ice\W)cream$
