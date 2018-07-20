@@ -1443,5 +1443,4 @@ oneofonehack
 hackdigg(?:ATgmailcom)?
 maximum\W?power\W?xl
 Quick\W?Tone
-18554092300
 [a-z_]*(?:1_*)?855[\W_]*409[\W_]*2300[a-z_]*
