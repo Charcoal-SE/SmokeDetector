@@ -4596,3 +4596,4 @@
 1532066385	Makyen	[a-z_]*(?:1_*)?833[\W_]*283[\W_]*8333[a-z_]*
 1532069049	Makyen	collegeappplanner\.com
 1532070143	Tetsuya Yamamoto	stintlieftechnologies\.com
+1532075050	Glorfindel	tmblearning\.com
