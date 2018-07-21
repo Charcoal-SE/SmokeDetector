@@ -4607,3 +4607,4 @@
 1532116749	Makyen	quick\.books?
 1532148727	Makyen	mercurygadgets\.com
 1532149887	Makyen	^mercurygadgets$
+1532151870	Makyen	oureducation\.in
