@@ -198,14 +198,14 @@ def on_msg(msg, client):
     if message.parent:
         if message.parent.owner.id == client._br.user_id:
             strip_mention = regex.sub("^(<span class=(\"|')mention(\"|')>)?@.*?(</span>)? ", "", message.content)
-            cmd = GlobalVars.parser.unescape(strip_mention)
+            cmd = GlobalVars.parser.unescape(strip_mention).lower()
 
             result = dispatch_reply_command(message.parent, message, cmd)
 
             if result:
                 _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
-    elif message.content.startswith("sd "):
-        result = dispatch_shorthand_command(message)
+    elif message.content.lower().startswith("sd "):
+        result = dispatch_shorthand_command(message.lower())
 
         if result:
             _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
