@@ -4614,3 +4614,4 @@
 1532156487	Makyen	[a-z_]*(?:1_*)?855[\W_]*687[\W_]*3777[a-z_]*
 1532160753	Makyen	imfitech\.com
 1532161343	Makyen	paydayloansonlineusa\.net
+1532162031	Glorfindel	nesilteknoloji\.com
