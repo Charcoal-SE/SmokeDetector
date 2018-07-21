@@ -214,10 +214,10 @@ def has_few_characters(s, site, *args):
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def has_repeating_characters(s, site, *args):
     s = regex.sub('http[^"]*', "", s)    # remove URLs for this check
-    if s is None or len(s) == 0 or len(s) >= 300 or regex.compile("<pre>|<code>").search(s):
+    if s is None or len(s) == 0 or (len(s) >= 300 and "\n" in s) or regex.compile("<pre>|<code>").search(s):
         return False, ""
     matches = regex.compile(u"([^\\s_\u200b\u200c.,?!=~*/0-9-])(\\1{9,})", regex.UNICODE).findall(s)
-    match = "".join(["".join(match) for match in matches])
+    match = "".join("".join(match) for match in matches)
     if len(match) / float(len(s)) >= REPEATED_CHARACTER_RATIO:  # Repeating characters make up >= 20 percent
         return True, u"Repeated character: *{}*".format("*, *".join(["".join(match) for match in matches]))
     return False, ""
