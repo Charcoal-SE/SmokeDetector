@@ -201,13 +201,13 @@ def has_repeated_words(s, site, *args):
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def has_few_characters(s, site, *args):
-    s = regex.sub("</?p>", "", s).rstrip()    # remove HTML paragraph tags from posts
-    uniques = len(set(list(s)))
-    if (len(s) >= 30 and uniques <= 6) or (len(s) >= 100 and uniques <= 15):    # reduce if false reports appear
+    s = regex.sub("</?(?:p|strong|em)>", "", s).rstrip()  # remove HTML paragraph tags from posts
+    uniques = len(set(s) - {"\n", "\t"})
+    if (len(s) >= 30 and uniques <= 6) or (len(s) >= 100 and uniques <= 15):  # reduce if false reports appear
         if (uniques <= 15) and (uniques >= 5) and site == "math.stackexchange.com":
             # Special case for Math.SE: Uniques case may trigger false-positives.
             return False, ""
-        return True, u"Contains {} unique characters".format(uniques)
+        return True, u"Contains {} unique character{}".format(uniques, "s" if uniques >= 2 else "")
     return False, ""
 
 
