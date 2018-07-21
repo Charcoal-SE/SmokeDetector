@@ -198,14 +198,14 @@ def on_msg(msg, client):
     if message.parent:
         if message.parent.owner.id == client._br.user_id:
             strip_mention = regex.sub("^(<span class=(\"|')mention(\"|')>)?@.*?(</span>)? ", "", message.content)
-            cmd = GlobalVars.parser.unescape(strip_mention).lower()
+            cmd = GlobalVars.parser.unescape(strip_mention)
 
             result = dispatch_reply_command(message.parent, message, cmd)
 
             if result:
                 _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
     elif message.content.lower().startswith("sd "):
-        result = dispatch_shorthand_command(message.lower())
+        result = dispatch_shorthand_command(message)
 
         if result:
             _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
@@ -418,7 +418,7 @@ def dispatch_command(msg):
 
 
 def dispatch_reply_command(msg, reply, full_cmd):
-    command_parts = full_cmd.split(" ", 1)
+    command_parts = full_cmd.lower().split(" ", 1)
 
     if len(command_parts) == 2:
         cmd, args = command_parts
@@ -451,7 +451,7 @@ def dispatch_reply_command(msg, reply, full_cmd):
 
 
 def dispatch_shorthand_command(msg):
-    commands = GlobalVars.parser.unescape(msg.content[3:]).split()
+    commands = GlobalVars.parser.unescape(msg.content[3:]).lower().split()
 
     if len(commands) == 0:
         return
