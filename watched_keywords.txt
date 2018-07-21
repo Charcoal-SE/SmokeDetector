@@ -4606,3 +4606,4 @@
 1532116711	Makyen	\w{3,}quick\W*book\w{3,}
 1532116749	Makyen	quick\.books?
 1532148727	Makyen	mercurygadgets\.com
+1532149887	Makyen	^mercurygadgets$
