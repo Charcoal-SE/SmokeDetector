@@ -301,7 +301,7 @@ stackexchange.com:
     msg_types:
       - site-magento.stackexchange.com
 
-  11:  # RPG General Chat
+  13848: # Not A Bar (RPG.SE)
     commands: false
     msg_types:
       - site-rpg.stackexchange.com
