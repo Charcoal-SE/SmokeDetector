@@ -4670,3 +4670,4 @@
 1532416698	Glorfindel	Alpha\W?Titan\W?Testo
 1532421126	Glorfindel	telsamedia\.com
 1532431035	Glorfindel	getfans\.io
+1532433038	Glorfindel	vedic\W?cosmos
