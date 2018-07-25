@@ -583,7 +583,7 @@ def is_offensive_post(s, site, *args):
         len_of_match += match.end() - match.start()
         text_matched.append(match.group(0))
 
-    if len_of_match / len(s) >= 0.01.5:  # currently at 1.5%, this can change if it needs to
+    if len_of_match / len(s) >= 0.015:  # currently at 1.5%, this can change if it needs to
         return True, u"Offensive keyword{}: *{}*".format("s" if len(text_matched) > 1 else "", ", ".join(text_matched))
     return False, ""
 
