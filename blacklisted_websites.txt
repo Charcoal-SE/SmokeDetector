@@ -2104,3 +2104,4 @@ comparebox\.pk
 getmaxgains\.com
 godiply\.com
 testostack\.com
+joyoshare\.com
