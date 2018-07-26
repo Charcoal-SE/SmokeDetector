@@ -985,7 +985,7 @@ class FindSpam:
         r"writing[\w-]{5})[\w-]*?)\.(co|net|org|in(\W|fo)|us|us)",
         r"(top|best|expert)\d\w{0,15}\.in\W", r"\dth(\.co)?\.in", r"(jobs|in)\L<city>\.in",
         r"[\w-](recovery|repairs?|rescuer|(?<!epoch|font)converter)(pro|kit)?\.(com|net)",
-        r"(corrupt|repair)[\w-]*?\.blogspot", r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)[\w-]{0,10}"
+        r"(corrupt|repair)[\w-]*?\.blogspot", r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)?[\w-]{0,10}"
                                               r"(account|tech|customer|support|service|phone|help)[\w-]{0,10}(service|"
                                               r"care|help|recovery|support|phone|number)",
         r"http\S*?(essay|resume|thesis|dissertation|paper)-?writing",
