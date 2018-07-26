@@ -4702,3 +4702,4 @@
 1532595142	Glorfindel	weddingforward\.com
 1532595536	Glorfindel	hestia\.vn
 1532595554	Glorfindel	pif\.vn
+1532595773	Tetsuya Yamamoto	fadkart\.com
