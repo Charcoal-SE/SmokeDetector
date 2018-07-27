@@ -4718,3 +4718,4 @@
 1532684867	Makyen	ismyprivatekeysafe\.com
 1532685348	Makyen	counselorindelhi\.in
 1532685382	Makyen	vestureindia\.com
+1532685597	Makyen	freedomsat.co(?:m|\.uk)
