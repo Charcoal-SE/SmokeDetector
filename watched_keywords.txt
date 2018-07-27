@@ -2609,7 +2609,6 @@
 1521658295	Glorfindel	swat-em\.com
 1521694333	K.Dᴀᴠɪs	firstbencher\.com
 1521698346	K.Dᴀᴠɪs	91\W*9369655365
-1521699158	tripleee	joe\W?root
 1521700872	tripleee	happywheels\.me
 1521702786	tripleee	commandpromptwindows10\.com
 1521702313	Makyen	documentswindows10\.com
