@@ -213,8 +213,8 @@ def has_few_characters(s, site, *args):
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def has_repeating_characters(s, site, *args):
-    s = regex.sub('http[^"]*', "", s)    # remove URLs for this check
-    if s is None or len(s) == 0 or (len(s) >= 300 and "\n" in s) or regex.compile("<pre>|<code>").search(s):
+    s = regex.sub('http[^"]*', "", s)  # remove URLs for this check
+    if (not s) or ("\n" in s.strip()) or regex.compile("<pre>|<code>").search(s):
         return False, ""
     matches = regex.compile(u"([^\\s_\u200b\u200c.,?!=~*/0-9-])(\\1{9,})", regex.UNICODE).findall(s)
     match = "".join("".join(match) for match in matches)
@@ -350,7 +350,7 @@ def pattern_product_name(s, site, *args):
         "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Premi(?:um|er)", "Vital", "Derma?", "Master", "Ultra", "Radiant(?:ly)?",
     ]
     if site != "math.stackexchange.com" and site != "mathoverflow.net":
-        keywords += ["X[LORT]?", "Alpha", "Plus", "Prime", "Formula"]
+        keywords += ["X[LOST]?", "Alpha", "Plus", "Prime", "Formula"]
     keywords = "|".join(keywords)
 
     three_words = regex.compile(r"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
