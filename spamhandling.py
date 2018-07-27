@@ -45,15 +45,23 @@ def check_if_spam(post):
                 )
             else:
                 why += u"\n" + u"Blacklisted user - blacklisted by {}".format(blacklisted_by)
-    if 0 < len(test):
-        if datahandling.has_already_been_posted(post.post_site, post.post_id, post.title) \
-                or datahandling.is_false_positive((post.post_id, post.post_site)) \
-                or should_whitelist_prevent_alert(post.user_url, test) \
-                or datahandling.is_ignored_post((post.post_id, post.post_site)) \
-                or datahandling.is_auto_ignored_post((post.post_id, post.post_site)) \
-                or datahandling.has_community_bumped_post(post.post_url, post.body):
-            return False, None, ""  # Don't repost. Reddit will hate you.
-        return True, test, why
+    if test:
+        result = (True, test, why)
+        if datahandling.has_already_been_posted(post.post_site, post.post_id, post.title):
+            result = (False, None, "post has already been reported")
+        elif datahandling.is_false_positive((post.post_id, post.post_site)):
+            result = (False, None, "post is marked as false positive")
+        elif should_whitelist_prevent_alert(post.user_url, test):
+            result = (False, None, "user is whitelisted")
+        elif datahandling.is_ignored_post((post.post_id, post.post_site)):
+            result = (False, None, "post is ignored")
+        elif datahandling.is_auto_ignored_post((post.post_id, post.post_site)):
+            result = (False, None, "post is automatically ignored")
+        elif datahandling.has_community_bumped_post(post.post_url, post.body):
+            result = (False, None, "post is bumped by Community \u2666\uFE0F")
+        return result  # Don't repost. Reddit will hate you.
+
+    # Return an empty string for "why" if the post isn't scanned as spam
     return False, None, ""
 
 
