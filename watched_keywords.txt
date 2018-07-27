@@ -4712,3 +4712,4 @@
 1532668416	iBug	pyrupay
 1532673218	Tetsuya Yamamoto	generaltreatments\.xyz
 1532673261	Glorfindel	acmarket\.xyz
+1532674543	Glorfindel	Apartments\W?Wales
