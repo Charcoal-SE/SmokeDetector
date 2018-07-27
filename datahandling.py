@@ -448,12 +448,12 @@ def has_community_bumped_post(post_url, post_content):
             if not ms_posts:
                 return False
 
-            latest_revision_date = max([post['created_at'] for post in ms_posts])
+            latest_revision_date = max(post['created_at'] for post in ms_posts)
             for post in ms_posts:
                 if post['created_at'] == latest_revision_date:
                     if post['body'] == post_content:
                         return True
-        except requests.exceptions.ConnectionError:
+        except (requests.exceptions.ConnectionError, json.decoder.JSONDecodeError):
             return False  # MS is down, so assume it is not bumped
     return False
 
