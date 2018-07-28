@@ -622,7 +622,6 @@
 1503062802	CalvT븃	kinx\.cards
 1503071392	Glorfindel	cheap55printing\.com
 1503073291	Glorfindel	seleniumtraining\.com
-1503125702	Glorfindel	iphonesupport\.net
 1503129363	Glorfindel	deiedu\.in
 1503225891	Glorfindel	java9pro\.blogspot\.in
 1503234989	Glorfindel	thekissanime\.net
