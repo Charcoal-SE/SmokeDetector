@@ -4556,7 +4556,6 @@
 1531974873	Tetsuya Yamamoto	allofficefurnitureltd\.com
 1531974892	Makyen	ffflv\.org
 1531976822	Makyen	phpbasic\.com
-1531978035	Nog Shine	moviessimilarto\.com
 1531980257	Makyen	harddrivefix\.blogspot\.in
 1531980741	Makyen	arevadigital\.com
 1531981079	Makyen	jeremdepa\.[\w-]*\.(?:com|net)
