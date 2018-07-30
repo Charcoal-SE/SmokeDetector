@@ -4766,3 +4766,4 @@
 1532946066	Glorfindel	cydiaelite\.com
 1532946789	Mithrandir	ogmin
 1532949547	tripleee	pcduster\.co
+1532952682	tripleee	[a-z_]*(?:234_*)?7036517871[a-z_]*
