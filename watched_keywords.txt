@@ -4762,3 +4762,4 @@
 1532939793	tripleee	shyamjitours\.in
 1532939847	tripleee	[a-z_]*(?:91_*)?8377832255[a-z_]*
 1532939876	tripleee	[a-z_]*(?:91_*)?7838007208[a-z_]*
+1532946066	Glorfindel	cydiaelite\.com
