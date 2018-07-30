@@ -4746,3 +4746,4 @@
 1532848711	Makyen	get\.cryptobrowser\.site
 1532856869	Glorfindel	macgeniustricks\.com
 1532892528	WELZ	installvidmate\.com
+1532881326	gparyani	perfectedition\.win
