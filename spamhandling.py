@@ -44,8 +44,8 @@ def check_if_spam(post):
                     blacklisted_post_url, to_metasmoke_link(rel_url), blacklisted_by
                 )
             else:
-                why += u"\n" + u"Blacklisted user - blacklisted by {}".format(blacklisted_by)
-    if 0 < len(test):
+                why += u"\nBlacklisted user - blacklisted by {}".format(blacklisted_by)
+    if test:
         if datahandling.has_already_been_posted(post.post_site, post.post_id, post.title) \
                 or datahandling.is_false_positive((post.post_id, post.post_site)) \
                 or should_whitelist_prevent_alert(post.user_url, test) \
@@ -53,7 +53,7 @@ def check_if_spam(post):
                 or datahandling.is_auto_ignored_post((post.post_id, post.post_site)) \
                 or datahandling.has_community_bumped_post(post.post_url, post.body):
             return False, None, ""  # Don't repost. Reddit will hate you.
-        return True, test, why
+        return True, test, why.strip()
     return False, None, ""
 
 
