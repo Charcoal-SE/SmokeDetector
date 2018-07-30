@@ -4758,3 +4758,4 @@
 1532932523	tripleee	tutorail-point\.blogspot
 1532934374	Glorfindel	total-qa\.com
 1532935669	Glorfindel	hotmail\d+\.eklablog\.fr
+1532935686	Glorfindel	hotmailsignin\d+\.blogspot\.com
