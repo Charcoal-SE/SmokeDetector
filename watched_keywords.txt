@@ -1722,7 +1722,6 @@
 1512172018	doppelgreener	rootgatehacks
 1512172510	paper1111	afterether\.org
 1512201138	paper1111	gertrudex\.postagon\.com
-1512206300	Glorfindel	instant-gaming\.com
 1512221649	Glorfindel	gamingrun\.com
 1512221780	Glorfindel	euroscicon\.com
 1512222635	Glorfindel	atlantidasubmarine\.com
@@ -4387,7 +4386,6 @@
 1531295825	Makyen	amazonprimesupportnumber\.com
 1531296787	Glorfindel	dumps\W?with\W?pin
 1531296914	Makyen	way\.com
-1531296946	Makyen	bangalorehotescorts\.in
 1531296984	Makyen	08123770473
 1531296999	Makyen	8147349718
 1531297697	Glorfindel	unisunwebservices\.in
@@ -4757,3 +4755,13 @@
 1532929179	tripleee	seopressor\.com
 1532931969	tripleee	creativechaos\.digital
 1532931992	Federico	heiwaco
+1532932523	tripleee	tutorail-point\.blogspot
+1532934374	Glorfindel	total-qa\.com
+1532935669	Glorfindel	hotmail\d+\.eklablog\.fr
+1532935686	Glorfindel	hotmailsignin\d+\.blogspot\.com
+1532937701	tripleee	[a-z_]*(?:1_*)?800[\W_]*291[\W_]3665[a-z_]*
+1532939793	tripleee	shyamjitours\.in
+1532939847	tripleee	[a-z_]*(?:91_*)?8377832255[a-z_]*
+1532939876	tripleee	[a-z_]*(?:91_*)?7838007208[a-z_]*
+1532946066	Glorfindel	cydiaelite\.com
+1532946789	Mithrandir	ogmin
