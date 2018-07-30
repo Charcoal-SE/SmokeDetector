@@ -4760,3 +4760,4 @@
 1532935686	Glorfindel	hotmailsignin\d+\.blogspot\.com
 1532937701	tripleee	[a-z_]*(?:1_*)?800[\W_]*291[\W_]3665[a-z_]*
 1532939793	tripleee	shyamjitours\.in
+1532939847	tripleee	[a-z_]*(?:91_*)?8377832255[a-z_]*
