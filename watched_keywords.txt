@@ -4781,3 +4781,4 @@
 1533027111	Federico	solutionbyyouth\.com
 1533028569	Makyen	[a-z_]*(?:1_*)?800[\W_]*841[\W_]*6480[a-z_]*
 1533028580	Makyen	[a-z_]*44[\W_]*203[\W_]*318[\W_]*2512[a-z_]*
+1533029950	tripleee	socialmonkee\.com
