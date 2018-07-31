@@ -16,7 +16,8 @@ from flovis import Flovis
 
 
 def git_commit_info():
-    data = sp.Popen(['git log -1 --pretty="%h%n%H%n%an%n%s"'], shell=True, cwd=os.getcwd(), stdout=sp.PIPE, stderr=sp.PIPE).communicate()
+    data = sp.Popen(['git log -1 --pretty="%h%n%H%n%an%n%s"'],
+                    shell=True, cwd=os.getcwd(), stdout=sp.PIPE, stderr=sp.PIPE).communicate()
     if data[1]:
         raise OSError("Git error:\n" + data[1].decode('utf-8'))
     short_id, full_id, author, message = data[0].decode('utf-8').strip().split("\n")
