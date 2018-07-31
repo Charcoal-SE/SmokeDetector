@@ -4769,3 +4769,4 @@
 1532968218	Makyen	[a-z_]*(?:1_*)?785[\W_]*328[\W_]*9627[a-z_]*
 1532980765	Glorfindel	miningchamp\.com
 1532984749	Mithrandir	rentacardubaimonthly\.com
+1533016344	Glorfindel	replicawatchess?\.uk
