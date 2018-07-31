@@ -4773,3 +4773,4 @@
 1533016496	Makyen	family\W*fun\W*thailand
 1533016509	Makyen	health\W*(?:and\W*)?wellness\W*online\W*marketing
 1533020845	Makyen	[a-z_]*(?:91[\W_]*)?9587[\W_]*549[\W_]*251[a-z_]*
+1533021545	tripleee	titan\W?testo
