@@ -4,7 +4,7 @@ SmokeDetector
 [![Build Status](https://travis-ci.org/Charcoal-SE/SmokeDetector.svg?branch=master)](https://travis-ci.org/Charcoal-SE/SmokeDetector) [![Circle CI](https://circleci.com/gh/Charcoal-SE/SmokeDetector.svg?style=shield)](https://circleci.com/gh/Charcoal-SE/SmokeDetector) [![Coverage Status](https://coveralls.io/repos/github/Charcoal-SE/SmokeDetector/badge.svg?branch=master)](https://coveralls.io/github/Charcoal-SE/SmokeDetector?branch=master) [![Open issues](https://img.shields.io/github/issues/Charcoal-SE/SmokeDetector.svg)](https://github.com/Charcoal-SE/SmokeDetector/issues) [![Open PRs](https://img.shields.io/github/issues-pr/Charcoal-SE/SmokeDetector.svg)](https://github.com/Charcoal-SE/SmokeDetector/pulls)
 
 
-Headless chatbot that detects spam and posts it to chatrooms. Uses [ChatExchange](https://github.com/Manishearth/ChatExchange), takes questions from the Stack Exchange [realtime tab](http://stackexchange.com/questions?tab=realtime), and accesses answers via the [Stack Exchange API](http://api.stackexchange.com/).
+Headless chatbot that detects spam and posts it to chatrooms. Uses [ChatExchange](https://github.com/Manishearth/ChatExchange), takes questions from the Stack Exchange [realtime tab](https://stackexchange.com/questions?tab=realtime), and accesses answers via the [Stack Exchange API](http://api.stackexchange.com/).
 
 Example [chat post](http://chat.stackexchange.com/transcript/11540?m=17962164#17962164):
 
@@ -28,9 +28,7 @@ pip3 install --user -r user_requirements.txt --upgrade
 Next, copy `config.sample` to a new file called `config`, and edit the values required.
 
 To run, use `python3 nocrash.py` (preferably in a daemon-able mode, like a `screen` session.)
-You can also use `python3 ws.py`, but then SmokeDetector will be shut down after 6 hours; when running from `nocrash.py`, it will be restarted. (This is to be sure that closed websockets, if any, are reopened)
-
-You can create your own `setp.sh` to set local environment variables, and run it as `. ./setp.sh` so that you don't have to log in every time.
+You can also use `python3 ws.py`, but then SmokeDetector will be shut down after 6 hours; when running from `nocrash.py`, it will be restarted. (This is to be sure that closed websockets, if any, are reopened.)
 
 SmokeDetector only supports Stack Exchange OpenIDs for now.
 
