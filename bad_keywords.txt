@@ -1457,3 +1457,4 @@ g10-force
 keto\W?fire
 kara\W?keto
 keto\W?go
+creme\W?des\W?palmier
