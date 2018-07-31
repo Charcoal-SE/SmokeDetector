@@ -133,10 +133,17 @@ class GlobalVars:
     metasmoke_ws = None
 
     try:
+        chatexchange_u = config.get("Config", "ChatExchangeU")
+        chatexchange_p = config.get("Config", "ChatExchangeP")
+    except NoOptionError:
+        chatexchange_u = None
+        chatexchange_p = None
+
+    try:
         metasmoke_host = config.get("Config", "metasmoke_host")
     except NoOptionError:
         metasmoke_host = None
-        log('info', "metasmoke host not found. Set it as metasmoke_host in the config file."
+        log('info', "metasmoke host not found. Set it as metasmoke_host in the config file. "
             "See https://github.com/Charcoal-SE/metasmoke.")
 
     try:
