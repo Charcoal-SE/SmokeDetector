@@ -43,7 +43,7 @@ levels = {
     'warning': 2,
     'error': 3
 }
-if any(['--loglevel' in x for x in sys.argv]):
+if any('--loglevel' in x for x in sys.argv):
     idx = ['--loglevel' in x for x in sys.argv].index(True)
     arg = sys.argv[idx].split('=')
     if len(arg) >= 2:
