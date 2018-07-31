@@ -65,7 +65,8 @@ def check_if_spam(post):
         else:
             return False, (test, why), result
 
-    # Return an empty string for "why" if the post isn't scanned as spam
+    # XXX: Return an empty string for "why" if the post isn't scanned as spam
+    # Don't touch if unsure, you'll break !!/report
     return False, None, ""
 
 

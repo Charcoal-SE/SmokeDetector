@@ -1196,7 +1196,11 @@ def report(msg, args, alias_used="report"):
 
         scan_spam, scan_reasons, scan_why = check_if_spam(post)  # Scan it first
 
-        # Here's where it starts to be different
+        # Expand real scan results from dirty returm value when not "!!/scan"
+        # Presence of "scan_why" indicates the post IS spam but ignored
+        if alias_used != "scan" and (not scan_spam) and scan_why:
+            scan_spam = True
+            scan_reasons, scan_why = scan_reasons
 
         # If alias_used == "report-force" then jump to the next block
         if scan_spam and alias_used in {"scan", "report"}:
