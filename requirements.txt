@@ -1,5 +1,4 @@
 git+https://github.com/Manishearth/ChatExchange.git@a0307e431ea29983f846e770629f25bffb8c3814
-dulwich>=0.18.6
 pbs>=0.110
 packaging>=16.8
 appdirs>=1.4.3

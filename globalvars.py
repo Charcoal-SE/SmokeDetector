@@ -11,17 +11,16 @@ import threading
 # noinspection PyCompatibility
 import regex
 import subprocess as sp
-from dulwich.repo import Repo
 import platform
 from flovis import Flovis
 
 
 def git_commit_info():
-    git = Repo('.')
-    commit = git.get_object(git.head())
-    return {'id': commit.id.decode("utf-8")[0:7], 'id_full': commit.id.decode("utf-8"),
-            'author': regex.findall("(.*?) <(.*?)>", commit.author.decode("utf-8"))[0],
-            'message': commit.message.decode("utf-8").strip('\r\n').split('\n')[0]}
+    data = sp.Popen(['git log -1 --pretty="%h%n%H%n%an%n%s"'], shell=True, cwd=os.getcwd(), stdout=sp.PIPE, stderr=sp.PIPE).communicate()
+    if data[1]:
+        raise OSError("Git error:\n" + data[1].decode('utf-8'))
+    short_id, full_id, author, message = data[0].decode('utf-8').strip().split("\n")
+    return {'id': short_id, 'id_full': full_id, 'author': author, 'message': message}
 
 
 def git_status():
