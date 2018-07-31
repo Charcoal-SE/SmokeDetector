@@ -19,7 +19,7 @@ import dns.resolver
 import requests
 import chatcommunicate
 
-from helpers import unique_matches, log
+from helpers import log
 from globalvars import GlobalVars
 from blacklists import load_blacklists
 
@@ -349,15 +349,17 @@ def pattern_product_name(s, site, *args):
         "Serum", "Supplement", "Fuel", "Cream", "Keto", "Rapid", "Tone", "Forskolin", "Neuro", "Luma"
         "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Premi(?:um|er)", "Vital", "Derma?", "Master", "Ultra", "Radiant(?:ly)?",
     ]
-    if site != "math.stackexchange.com" and site != "mathoverflow.net":
+    if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords += ["X[LOST]?", "Alpha", "Plus", "Prime", "Formula"]
     keywords = "|".join(keywords)
 
     three_words = regex.compile(r"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
     two_words = regex.compile(r"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
-    if unique_matches(three_words) >= 1:
+    unique_three_words = sum(len(m[1:]) == len(set(m[1:])) for m in three_words)
+    unique_two_words = sum(len(m[1:]) == len(set(m[1:])) for m in two_words)
+    if unique_three_words >= 1:
         return True, u"Pattern-matching product name *{}*".format(", ".join(match[0] for match in set(three_words)))
-    if unique_matches(two_words) >= 2:
+    elif unique_two_words >= 2:
         return True, u"Pattern-matching product name *{}*".format(", ".join(match[0] for match in set(two_words)))
     return False, ""
 
@@ -539,6 +541,7 @@ def watched_ns_for_url_domain(s, site, *args):
         # 'domaincontrol.com.',
         # {'dns1.registrar-servers.com.', 'dns2.registrar-servers.com.'},
         {'adi.ns.cloudflare.com.', 'miles.ns.cloudflare.com.'},
+        {'aida.ns.cloudflare.com.', 'lloyd.ns.cloudflare.com.'},
         {'ajay.ns.cloudflare.com.', 'lia.ns.cloudflare.com.'},
         {'betty.ns.cloudflare.com.', 'kai.ns.cloudflare.com.'},
         {'bonnie.ns.cloudflare.com.', 'guss.ns.cloudflare.com.'},
@@ -573,8 +576,8 @@ def is_offensive_post(s, site, *args):
         r"daf[au][qk]|(?<!brain)(mother|mutha)?f\W*u\W*c?\W*k+(a|ing?|e?[rd]| *off+| *(you|ye|u)(rself)?|"
         r" u+|tard)?|(bul+)?shit(t?er|head)?|(yo)?u(r|'?re)? (gay|scum)|dickhead|"
         r"pedo(?!bapt|dont|log|mete?r|troph)|cocksuck(e?[rd])?|"
-        r"whore|cunt|jerk(ing)?\W?off|cumm(y|ie)|butthurt|queef|(private|pussy) show|lesbo|"
-        r"bitche?|(eat|suck|throbbing|sw[oe]ll(en|ing)?)\b.{0,20}\b (cock|dick)|dee[sz]e? nut[sz]|"
+        r"whore|cunt|jerk(ing)?\W?off|cumm(y|ie)|butthurt|queef|lesbo|"
+        r"bitche?|(eat|suck|throbbing|sw[oe]ll(en|ing)?)\b.{0,20}\b(cock|dick)|dee[sz]e? nut[sz]|"
         r"dumb\W?ass|wet\W?puss(y|ie)?|slut+y?|shot\W?my\W?(hot\W?)?load)s?)\b")
     matches = offensive.finditer(s)
     len_of_match = 0
@@ -751,8 +754,8 @@ def mostly_dots(s, *args):
         return False, ""
 
     # Strip code blocks here rather than with `stripcodeblocks` so we get the length of the whole post
-    body = regex.sub("(?s)<pre([\w=\" -]*)?>.*?</pre>", "", s)
-    body = regex.sub("(?s)<code>.*?</code>", "", body)
+    body = regex.sub(r"(?s)<pre([\w=\" -]*)?>.*?</pre>", "", s)
+    body = regex.sub(r"(?s)<code>.*?</code>", "", body)
 
     body = strip_urls_and_tags(body)
 
@@ -1520,7 +1523,7 @@ class FindSpam:
          'stripcodeblocks': False, 'body_summary': False,
          'max_rep': 1, 'max_score': 0},
         # disabled
-        {'regex': u'(?i)(?:(?:[^\dr]\d{3}|_\d{5})$|juri(?:[yr]?am?)?|(?:bond|max|vaxer|jems|tz?osan)$)', 'all': False,
+        {'regex': r'(?i)(?:(?:[^\dr]\d{3}|_\d{5})$|juri(?:[yr]?am?)?|(?:bond|max|vaxer|jems|tz?osan)$)', 'all': False,
          'sites': [], 'reason': 'blacklisted username (medium)', 'title': False, 'body': False, 'username': True,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
 

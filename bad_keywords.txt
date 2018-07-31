@@ -43,8 +43,9 @@ ChatSim
 service\W?solahart
 junisse
 profactor\W?t
-(fake|novelty|quality|buy(ing)?|sell(ing)?|offer).{0,20}(passport|driver'?s? licen[cs]e|ID card|green card|residence permit|toefl|Ielts)s?
-^.{0,200}(support|service|helpline)( phone)? number|1[ -]?[ -]?[ -]?866[ -]?978[ -]?(6819|6762)
+(fake|novelty|quality|buy(ing)?|sell(ing)?|offer).{,20}(passport|driver'?s? licen[cs]e|ID card|green card|residence permit|toefl|Ielts)s?
+(?<=^.{,200})(support|service|helpline)( phone)? number
+[a-z_]*(?:1_*)?866[\W_]*978[\W_]*(6819|6762)[a-z_]*
 (mcafee|hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number
 kitchen for sale
 pdftoexcelconverter
@@ -276,7 +277,6 @@ rexadrene
 testosterone\Wreload
 pure\Wnitro
 cel[ae]xas
-nutrition.*plan
 infinite\Wcleanse
 helix6
 intellex\Wplus
@@ -1375,7 +1375,6 @@ xtreme\W?exo\W?test
 intel\W?xr
 shark\W?tank\W?rapid\W?tone
 folicell
-keto\W?blend
 keto\W?gen\W?pure
 keto\W?firm
 keto\W?rapid
@@ -1450,3 +1449,13 @@ keto\W?renew
 nutralite\W?keto
 activated\W?xtnd
 kdhfhs93874
+Testonenemax
+stellatrim
+shakra\W?keto
+g10-force
+keto\W?fire
+kara\W?keto
+keto\W?go
+creme\W?des\W?palmier
+(?:\W*</a>(?!.*?</?code).*?nutrition.*?plan|nutrition(?!.*?</?code)(?=.*?</a>).*?plan)
+keto\W?(natural\W?)?blend

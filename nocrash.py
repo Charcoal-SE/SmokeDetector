@@ -75,7 +75,7 @@ def error(message):
 #         exit(121)
 
 
-while stoprunning is False:
+while not stoprunning:
     log('Starting with persistent_arguments {!r}'.format(persistent_arguments))
     # print "[NoCrash] Switch to Standby? %s" % switch_to_standby
 

@@ -60,11 +60,10 @@ class GlobalVars:
     deletion_watcher = None
 
     metasmoke_last_ping_time = datetime.now()
-    not_privileged_warning = """
-    You are not a privileged user. Please see
-    [the privileges wiki page](https://charcoal-se.org/smokey/Privileges) for
-    information on what privileges are and what is expected of privileged users.
-    """.strip().replace("\n", " ")
+    not_privileged_warning = \
+        "You are not a privileged user. Please see " \
+        "[the privileges wiki page](https://charcoal-se.org/smokey/Privileges) for " \
+        "information on what privileges are and what is expected of privileged users."
 
     experimental_reasons = {  # Don't widely report these
         "potentially bad keyword in answer",
@@ -74,7 +73,7 @@ class GlobalVars:
         "potentially bad NS for domain in title",
         "potentially bad NS for domain in body",
         "toxic body detected",
-        "toxic answer detected"
+        "toxic answer detected",
     }
 
     parser = HTMLParser()
@@ -87,10 +86,10 @@ class GlobalVars:
     if md5(commit['author'][0].encode('utf-8')).hexdigest() in censored_committer_names:
         commit['author'] = censored_committer_names[md5(commit['author'][0].encode('utf-8')).hexdigest()]
 
-    commit_with_author = "`%s` (*%s*: %s)" % (commit['id'],
-                                              commit['author'][0] if type(commit['author']) in [list, tuple]
-                                              else commit['author'],
-                                              commit['message'])
+    commit_with_author = "`{}` (*{}*: {})".format(
+        commit['id'],
+        commit['author'][0] if type(commit['author']) in {list, tuple} else commit['author'],
+        commit['message'])
 
     on_master = "HEAD detached" not in git_status()
 

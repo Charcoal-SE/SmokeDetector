@@ -622,7 +622,6 @@
 1503062802	CalvT븃	kinx\.cards
 1503071392	Glorfindel	cheap55printing\.com
 1503073291	Glorfindel	seleniumtraining\.com
-1503125702	Glorfindel	iphonesupport\.net
 1503129363	Glorfindel	deiedu\.in
 1503225891	Glorfindel	java9pro\.blogspot\.in
 1503234989	Glorfindel	thekissanime\.net
@@ -1723,7 +1722,6 @@
 1512172018	doppelgreener	rootgatehacks
 1512172510	paper1111	afterether\.org
 1512201138	paper1111	gertrudex\.postagon\.com
-1512206300	Glorfindel	instant-gaming\.com
 1512221649	Glorfindel	gamingrun\.com
 1512221780	Glorfindel	euroscicon\.com
 1512222635	Glorfindel	atlantidasubmarine\.com
@@ -2424,7 +2422,6 @@
 1519928247	quartata	live-casino-online\.org
 1519947198	paper1111	printlist\.org
 1519967786	tripleee	CNN747
-1519971711	tripleee	byethost7\.com
 1519972104	Nisse Engström	vitasave\.ca
 1519982196	Glorfindel	klimakombiservisi\.com
 1519999286	Glorfindel	moneyonlineslots\.com
@@ -2554,7 +2551,6 @@
 1521122123	tripleee	imgforfree\.com
 1521123387	Federico	mydocsuite\.com
 1521135565	K.Dᴀᴠɪs	trustincmart@gmail\.com
-1521146699	WELZ	antivirussupport\.org
 1521147788	micsthepick	\W*root\W*gate\W*hacks\W*
 1521150763	Glorfindel	publishgreen\.info
 1521180420	micsthepick	hbmgz\.com
@@ -3049,7 +3045,6 @@
 1524532810	Makyen	grantdavid635
 1524533169	Makyen	[a-z_]*(?:1_*)?717[\W_]*316[\W_]*8194[a-z_]*
 1524533921	WELZ	wealth\W?recovery\W?\d\d
-1524540572	DJMcMayhem	tourismthailand\.org
 1524542974	tripleee	eeewallet\.com
 1524543348	tripleee	biptut\.com
 1524552388	K.Dᴀᴠɪs	optimalgeek\.com
@@ -4389,7 +4384,6 @@
 1531295825	Makyen	amazonprimesupportnumber\.com
 1531296787	Glorfindel	dumps\W?with\W?pin
 1531296914	Makyen	way\.com
-1531296946	Makyen	bangalorehotescorts\.in
 1531296984	Makyen	08123770473
 1531296999	Makyen	8147349718
 1531297697	Glorfindel	unisunwebservices\.in
@@ -4413,7 +4407,6 @@
 1531356832	Tetsuya Yamamoto	onlinecheckwriter\.com
 1531357193	Tetsuya Yamamoto	checkeeper\.com
 1531357600	Tetsuya Yamamoto	zerobounce\.net
-1531365991	Tetsuya Yamamoto	ragamobatherbal\.com
 1531371217	Tetsuya Yamamoto	zlotto\.org
 1531375019	Makyen	gkXxuC6GMBQ
 1531375031	Makyen	vimeo\.com/279599250
@@ -4432,7 +4425,6 @@
 1531391542	doppelgreener	learn\Wtube\Wby\Wtechpassion
 1531407282	doppelgreener	\w*menshealth\w*
 1531406651	bertieb	poweruser\.blog
-1531453362	Makyen	obatnyerisenditerbaik\.com
 1531454708	Tetsuya Yamamoto	traininginstitutepune\.in
 1531460171	Makyen	R6Ko3OCrO9r2BKuzbCHYIw
 1531460184	Makyen	v=_pje3XhRVbQ
@@ -4560,7 +4552,6 @@
 1531974873	Tetsuya Yamamoto	allofficefurnitureltd\.com
 1531974892	Makyen	ffflv\.org
 1531976822	Makyen	phpbasic\.com
-1531978035	Nog Shine	moviessimilarto\.com
 1531980257	Makyen	harddrivefix\.blogspot\.in
 1531980741	Makyen	arevadigital\.com
 1531981079	Makyen	jeremdepa\.[\w-]*\.(?:com|net)
@@ -4621,7 +4612,6 @@
 1532231516	Makyen	areazipcode\.org
 1532236865	Makyen	[a-z_]*91[\W_]*9587[\W_]*650[\W_]*908[a-z_]*
 1532251704	Makyen	ptvnbabaji(?:@gmail\.com)?
-1532251714	Makyen	[a-z_]*91[\W_]*9587[\W_]*549[\W_]*251[a-z_]*
 1532251751	Makyen	qaclickacademy\.com
 1532252139	Makyen	intelligeme101
 1532252157	Makyen	sino-5000\.com
@@ -4656,7 +4646,6 @@
 1532361343	Makyen	danielfordllc(?:@gmail\.com)?
 1532361350	Makyen	fitatnagar
 1532368749	Makyen	alibababrands\.com
-1532388367	Erik the Outgolfer	firefoxsupport\.com
 1532399557	Tetsuya Yamamoto	qncjellygamat20\.blogspot
 1532400938	Tetsuya Yamamoto	umbsstudio\.com
 1532401196	Makyen	oneoffjobs\.com
@@ -4709,3 +4698,92 @@
 1532608909	Glorfindel	royaledecasa\.com
 1532626712	Glorfindel	zomro\.net
 1532643260	Makyen	alansmith\.smith61(?:@gmail\.com)?
+1532668416	iBug	pyrupay
+1532673218	Tetsuya Yamamoto	generaltreatments\.xyz
+1532673261	Glorfindel	acmarket\.xyz
+1532674543	Glorfindel	Apartments\W?Wales
+1532678934	Makyen	dishtvchannels\.com
+1532682893	Glorfindel	kooxdiving\.com
+1532684867	Makyen	ismyprivatekeysafe\.com
+1532685348	Makyen	counselorindelhi\.in
+1532685382	Makyen	vestureindia\.com
+1532685597	Makyen	freedomsat.co(?:m|\.uk)
+1532686092	Makyen	experienceumrah\.co\.uk
+1532685748	bertieb	embeddedschool\.in
+1532688307	Makyen	freesteamcodesnosurvey\.com
+1532688323	Makyen	adderallpills\.site
+1532699210	iBug	careersaver\.blogspot\.com
+1532716301	Makyen	strackit\.com
+1532716310	Makyen	bitcoinminers50(?:@gmail\.com)?
+1532716327	Makyen	923455384582
+1532716341	Makyen	adeel\.mgt(?:@gmail\.com)?
+1532716269	Nisse Engström	airexmfg\.com
+1532718466	Makyen	[a-z_]*(?:1_*)?888[\W_]*893[\W_]*0888[a-z_]*
+1532718475	Makyen	[a-z_]*44[\W_]*800[\W_]*041[\W_]*8609[a-z_]*
+1532730010	Makyen	drogudugusolutionspell(?:@gmail\.com)?
+1532732072	Tetsuya Yamamoto	douongngoainhap\.com
+1532732145	Makyen	kbHM6ooNmZ0
+1532749706	Makyen	i\W?cloud\W?customer
+1532749721	Makyen	[a-z_]*(?:1_*)?844[\W_]*238[\W_]*0068[a-z_]*
+1532749728	gparyani	vdgb\.ru
+1532752171	Makyen	abuse\.spd\.co\.il
+1532752180	Makyen	2LXK7XQ
+1532761152	Makyen	putlockersmoviez\.ltd
+1532763047	Glorfindel	vpnranks\.com
+1532771348	doppelgreener	slim\W?swift
+1532776362	Glorfindel	dressfair
+1532780397	Glorfindel	kvch\.in
+1532791267	Glorfindel	gearsview\.com
+1532793488	Glorfindel	arhamtechnovations\.com
+1532808055	Makyen	writingcollegeessays\.org
+1532830266	Makyen	radiocashino\.byethost7\.com
+1532848711	Makyen	get\.cryptobrowser\.site
+1532856869	Glorfindel	macgeniustricks\.com
+1532892528	WELZ	installvidmate\.com
+1532881326	gparyani	perfectedition\.win
+1532916021	Makyen	drharryherbaltempl\.wixsite\.com
+1532916098	Makyen	alfonsinarpg(?:@gmail\.com)?
+1532918804	WELZ	stepium
+1532925135	tripleee	solutiontemple
+1532925927	tripleee	pardakht\.org
+1532927878	Makyen	itsaco\.ir
+1532927962	Makyen	heiwaco\.tripod\.com
+1532929179	tripleee	seopressor\.com
+1532931969	tripleee	creativechaos\.digital
+1532931992	Federico	heiwaco
+1532932523	tripleee	tutorail-point\.blogspot
+1532934374	Glorfindel	total-qa\.com
+1532935669	Glorfindel	hotmail\d+\.eklablog\.fr
+1532935686	Glorfindel	hotmailsignin\d+\.blogspot\.com
+1532937701	tripleee	[a-z_]*(?:1_*)?800[\W_]*291[\W_]3665[a-z_]*
+1532939793	tripleee	shyamjitours\.in
+1532939847	tripleee	[a-z_]*(?:91_*)?8377832255[a-z_]*
+1532939876	tripleee	[a-z_]*(?:91_*)?7838007208[a-z_]*
+1532946066	Glorfindel	cydiaelite\.com
+1532946789	Mithrandir	ogmin
+1532949547	tripleee	pcduster\.co
+1532952682	tripleee	[a-z_]*(?:234_*)?7036517871[a-z_]*
+1532968181	doppelgreener	clubseodeverdade\.com
+1532968202	Makyen	maximilianmarkfinance(?:@gmail\W*com)?
+1532968218	Makyen	[a-z_]*(?:1_*)?785[\W_]*328[\W_]*9627[a-z_]*
+1532980765	Glorfindel	miningchamp\.com
+1532984749	Mithrandir	rentacardubaimonthly\.com
+1533016344	Glorfindel	replicawatchess?\.uk
+1533016382	Makyen	instituteofphotography\.in
+1533016496	Makyen	family\W*fun\W*thailand
+1533016509	Makyen	health\W*(?:and\W*)?wellness\W*online\W*marketing
+1533020845	Makyen	[a-z_]*(?:91[\W_]*)?9587[\W_]*549[\W_]*251[a-z_]*
+1533021545	tripleee	titan\W?testo
+1533021630	tripleee	slim4vit
+1533024795	Makyen	garmin-updates\.net
+1533024806	Makyen	[a-z_]*(?:1_*)?844[\W_]*570[\W_]*9631[a-z_]*
+1533024994	Makyen	(?:\W*</a>(?!.*?</?code).*?nutrition.*?program|nutrition(?!.*?</?code)(?=.*?</a>).*?program)
+1533027111	Federico	solutionbyyouth\.com
+1533028569	Makyen	[a-z_]*(?:1_*)?800[\W_]*841[\W_]*6480[a-z_]*
+1533028580	Makyen	[a-z_]*44[\W_]*203[\W_]*318[\W_]*2512[a-z_]*
+1533029950	tripleee	socialmonkee\.com
+1533030225	tripleee	amazonprimesupport\.com
+1533032056	tripleee	aptrondelhi\.in
+1533039322	tripleee	blastrestore\.co\.uk
+1533040343	Glorfindel	onlineweblogsite\.blogspot\.com
+1533041192	tripleee	acowebs\.com

@@ -4,12 +4,10 @@ import regex
 import globalvars
 import datahandling
 
-BAD_CHAR = "\u200c\u200b"
-
 
 # noinspection PyMissingTypeHints
-def rebuild_str(str):
-    return ''.join(ch for ch in str if ch not in BAD_CHAR)
+def rebuild_str(s):
+    return s.replace("\u200B", "").replace("\u200C", "")
 
 
 # noinspection PyBroadException,PyMissingTypeHints
@@ -60,12 +58,12 @@ def fetch_post_id_and_site_from_url(url):
     if url is None:
         return None
     trimmed_url = rebuild_str(url)
-    post_type_regex = r"\/\d+#\d+$"
+    post_type_regex = r"(?:\/\d+)?#\d+$"
     post_type = ""
     search_regex = ""
     if regex.compile(post_type_regex).search(trimmed_url):
         post_type = "answer"
-        search_regex = r"^(?:https?:)?\/\/([\w.]+)\/questions\/\d+\/.+\/(\d+)#\d+$"
+        search_regex = r"^(?:https?:)?\/\/([\w.]+)\/questions\/\d+\/.+[/#](\d+)(?:#\d+)?$"
     else:
         post_type = "question"
         search_regex = r"^(?:https?:)?\/\/([\w.]+)/questions/(\d+)(?:/.*)?$"
