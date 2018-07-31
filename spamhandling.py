@@ -44,16 +44,29 @@ def check_if_spam(post):
                     blacklisted_post_url, to_metasmoke_link(rel_url), blacklisted_by
                 )
             else:
-                why += u"\nBlacklisted user - blacklisted by {}".format(blacklisted_by)
+                why += u"\n" + u"Blacklisted user - blacklisted by {}".format(blacklisted_by)
     if test:
-        if datahandling.has_already_been_posted(post.post_site, post.post_id, post.title) \
-                or datahandling.is_false_positive((post.post_id, post.post_site)) \
-                or should_whitelist_prevent_alert(post.user_url, test) \
-                or datahandling.is_ignored_post((post.post_id, post.post_site)) \
-                or datahandling.is_auto_ignored_post((post.post_id, post.post_site)) \
-                or datahandling.has_community_bumped_post(post.post_url, post.body):
-            return False, None, ""  # Don't repost. Reddit will hate you.
-        return True, test, why.strip()
+        result = None
+        if datahandling.has_already_been_posted(post.post_site, post.post_id, post.title):
+            result = "post has already been reported"
+        elif datahandling.is_false_positive((post.post_id, post.post_site)):
+            result = "post is marked as false positive"
+        elif should_whitelist_prevent_alert(post.user_url, test):
+            result = "user is whitelisted"
+        elif datahandling.is_ignored_post((post.post_id, post.post_site)):
+            result = "post is ignored"
+        elif datahandling.is_auto_ignored_post((post.post_id, post.post_site)):
+            result = "post is automatically ignored"
+        elif datahandling.has_community_bumped_post(post.post_url, post.body):
+            result = "post is bumped by Community \u2666\uFE0F"
+        # Dirty approach
+        if result is None:  # Post not ignored
+            return True, test, why
+        else:
+            return False, (test, why), result
+
+    # XXX: Return an empty string for "why" if the post isn't scanned as spam
+    # Don't touch if unsure, you'll break !!/report
     return False, None, ""
 
 
