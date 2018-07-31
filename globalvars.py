@@ -16,8 +16,7 @@ from flovis import Flovis
 
 
 def git_commit_info():
-    data = sp.Popen(['git log -1 --pretty="%h%n%H%n%an%n%s"'],
-                    shell=True, cwd=os.getcwd(), stdout=sp.PIPE, stderr=sp.PIPE).communicate()
+    data = sp.Popen(['git', 'log', '-1', '--pretty="%h%n%H%n%an%n%s"'], stdout=sp.PIPE, stderr=sp.PIPE).communicate()
     if data[1]:
         raise OSError("Git error:\n" + data[1].decode('utf-8'))
     short_id, full_id, author, message = data[0].decode('utf-8').strip().split("\n")
@@ -25,14 +24,10 @@ def git_commit_info():
 
 
 def git_status():
-    if 'windows' in platform.platform().lower():
-        data = sp.Popen(['git', 'status'], shell=True, cwd=os.getcwd(), stderr=sp.PIPE, stdout=sp.PIPE).communicate()
-    else:
-        data = sp.Popen(['git status'], shell=True, cwd=os.getcwd(), stderr=sp.PIPE, stdout=sp.PIPE).communicate()
-    if not data[1]:
-        return data[0].decode('utf-8').strip('\n')
-    else:
-        raise OSError("Git error!")
+    data = sp.Popen(['git', 'status'], stdout=sp.PIPE, stderr=sp.PIPE).communicate()
+    if data[1]:
+        raise OSError("Git error:\n" + data[1].decode('utf-8'))
+    return data[0].decode('utf-8').strip('\n')
 
 
 # This is needed later on for properly 'stripping' unicode weirdness out of git log data.
