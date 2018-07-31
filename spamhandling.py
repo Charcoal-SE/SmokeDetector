@@ -93,7 +93,7 @@ def handle_spam(post, reasons, why):
         # chat is properly constructed with parent title instead. This will make things 'print'
         # in a proper way in chat messages.
         sanitized_title = parsing.sanitize_title(post.title if not post.is_answer else post.parent.title)
-        sanitized_title = escape_format(sanitized_title)
+        sanitized_title = escape_format(sanitized_title).strip()
 
         prefix = u"[ [SmokeDetector](//goo.gl/eLDYqh) ]"
         if GlobalVars.metasmoke_key:
