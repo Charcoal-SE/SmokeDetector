@@ -1455,3 +1455,4 @@ stellatrim
 shakra\W?keto
 g10-force
 keto\W?fire
+kara\W?keto
