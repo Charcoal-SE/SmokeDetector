@@ -1194,7 +1194,7 @@ dermology
 prime\W?energy
 fxx\W?me
 mega\W?boost\W?intense\W?xl
-rock\W?hard
+rock\W?hard(?:\W?bull)?
 detox\W?my\W?mac
 oxinova
 steel\W?rx
@@ -1460,4 +1460,3 @@ creme\W?des\W?palmier
 (?:\W*</a>(?!.*?</?code).*?nutrition.*?plan|nutrition(?!.*?</?code)(?=.*?</a>).*?plan)
 keto\W?(natural\W?)?blend
 chakra\W?keto
-rock\W?hard\?Wbull
