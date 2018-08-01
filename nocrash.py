@@ -99,7 +99,9 @@ while not stoprunning:
 
     try:
         ecode = sp.call(command + persistent_arguments, env=environ)
-    except KeyboardInterrupt:
+    except Exception:
+        pass
+    except:  # KerboardInterrupt and SystemExit
         # print "[NoCrash] KeyBoard Interrupt received.."
         ecode = 6
 

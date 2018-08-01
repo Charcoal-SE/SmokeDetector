@@ -164,7 +164,7 @@ def setup_websocket(attempt, max_attempts):
         ws = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
         ws.send("155-questions-active")
         return ws
-    except:
+    except Exception:
         log('warning', 'WS failed to create websocket connection. Attempt {} of {}.'.format(attempt, max_attempts))
         return None
 
