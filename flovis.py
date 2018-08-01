@@ -48,7 +48,7 @@ class Flovis:
                 except (AttributeError, OSError) as e:
                     log('error', str(e))
                 finally:
-                    if self.ws.sock:
+                    if self.ws is not None and hasattr(self.ws, 'sock'):
                         try:
                             self.ws.sock.close()
                         except:
