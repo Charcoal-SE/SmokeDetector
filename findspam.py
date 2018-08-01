@@ -1443,9 +1443,7 @@ class FindSpam:
          'reason': "few unique characters in {}", 'title': False, 'body': True, 'username': False,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 10000, 'max_score': 1000000},
         # Repeating characters
-        {'method': has_repeating_characters, 'all': True, 'sites': ["pt.stackoverflow.com", "ru.stackoverflow.com",
-                                                                    "es.stackoverflow.com", "rus.stackexchange.com",
-                                                                    "chinese.stackexchange.com"],
+        {'method': has_repeating_characters, 'all': True, 'sites': [],
          'reason': "repeating characters in {}", 'title': True, 'body': True, 'username': False,
          'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1000000, 'max_score': 1000000},
         # Repeating words
