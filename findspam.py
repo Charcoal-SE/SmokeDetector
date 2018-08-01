@@ -213,9 +213,11 @@ def has_few_characters(s, site, *args):
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def has_repeating_characters(s, site, *args):
-    if (not s) or ("\n" in s.strip()) or regex.compile("<pre>|<code>").search(s):
+    if "<pre>" in s or "<code>" in s or "\n" in s.strip():
         return False, ""
     s = strip_urls_and_tags(s).replace("\u200B", "").replace("\u200C", "")
+    if not s:
+        return False, ""
     matches = regex.compile(r"([^\s_.,?!=~*/0-9-])(\1{9,})", regex.UNICODE).findall(s)
     match = "".join("".join(match) for match in matches)
     if len(match) / len(s) >= REPEATED_CHARACTER_RATIO:  # Repeating characters make up >= 20 percent
