@@ -1451,7 +1451,7 @@ activated\W?xtnd
 kdhfhs93874
 Testonenemax
 stellatrim
-shakra\W?keto
+[cs]hakra\W?keto
 g10-force
 keto\W?fire
 kara\W?keto
@@ -1459,4 +1459,3 @@ keto\W?go
 creme\W?des\W?palmier
 (?:\W*</a>(?!.*?</?code).*?nutrition.*?plan|nutrition(?!.*?</?code)(?=.*?</a>).*?plan)
 keto\W?(natural\W?)?blend
-chakra\W?keto
