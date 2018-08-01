@@ -183,7 +183,7 @@ def misleading_link(s, site, *args):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
-def has_repeated_words(s, site, *args):
+def has_repeating_words(s, site, *args):
     words = regex.split(r"[\s.,;!/\()\[\]+_-]", s)
     words = [word for word in words if word != ""]
     streak = 0
@@ -195,7 +195,7 @@ def has_repeated_words(s, site, *args):
             streak = 0
         prev = word
         if streak >= 5 and streak * len(word) >= 0.2 * len(s):
-            return True, u"Repeated word: *{}*".format(word)
+            return True, "Repeated word: *{}*".format(word)
     return False, ""
 
 
@@ -207,7 +207,7 @@ def has_few_characters(s, site, *args):
         if (uniques <= 15) and (uniques >= 5) and site == "math.stackexchange.com":
             # Special case for Math.SE: Uniques case may trigger false-positives.
             return False, ""
-        return True, u"Contains {} unique character{}".format(uniques, "s" if uniques >= 2 else "")
+        return True, "Contains {} unique character{}".format(uniques, "s" if uniques >= 2 else "")
     return False, ""
 
 
@@ -221,7 +221,7 @@ def has_repeating_characters(s, site, *args):
     matches = regex.compile(r"([^\s_.,?!=~*/0-9-])(\1{9,})", regex.UNICODE).findall(s)
     match = "".join("".join(match) for match in matches)
     if len(match) / len(s) >= REPEATED_CHARACTER_RATIO:  # Repeating characters make up >= 20 percent
-        return True, u"Repeated character: *{}*".format("*, *".join("".join(match) for match in matches))
+        return True, "Repeated character: *{}*".format("*, *".join("".join(match) for match in matches))
     return False, ""
 
 
@@ -1449,7 +1449,7 @@ class FindSpam:
          'reason': "repeating characters in {}", 'title': True, 'body': True, 'username': False,
          'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1000000, 'max_score': 1000000},
         # Repeating words
-        {'method': has_repeated_words, 'all': True, 'sites': [], 'reason': "repeating words in {}", 'title': True,
+        {'method': has_repeating_words, 'all': True, 'sites': [], 'reason': "repeating words in {}", 'title': True,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 11,
          'max_score': 0},
         # One unique character in title
