@@ -563,6 +563,7 @@ def watched_ns_for_url_domain(s, site, *args):
         'sathyats.net.',
         'shared-host.org.',
         'web.com.ph.',
+        {'ns09.domaincontrol.com.', 'ns10.domaincontrol.com.'},
     ])
 
 
