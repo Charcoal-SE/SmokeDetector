@@ -11,28 +11,23 @@ import threading
 # noinspection PyCompatibility
 import regex
 import subprocess as sp
-from dulwich.repo import Repo
 import platform
 from flovis import Flovis
 
 
 def git_commit_info():
-    git = Repo('.')
-    commit = git.get_object(git.head())
-    return {'id': commit.id.decode("utf-8")[0:7], 'id_full': commit.id.decode("utf-8"),
-            'author': regex.findall("(.*?) <(.*?)>", commit.author.decode("utf-8"))[0],
-            'message': commit.message.decode("utf-8").strip('\r\n').split('\n')[0]}
+    data = sp.Popen(['git', 'log', '-1', '--pretty="%h%n%H%n%an%n%s"'], stdout=sp.PIPE, stderr=sp.PIPE).communicate()
+    if data[1]:
+        raise OSError("Git error:\n" + data[1].decode('utf-8'))
+    short_id, full_id, author, message = data[0].decode('utf-8').strip().split("\n")
+    return {'id': short_id, 'id_full': full_id, 'author': author, 'message': message}
 
 
 def git_status():
-    if 'windows' in platform.platform().lower():
-        data = sp.Popen(['git', 'status'], shell=True, cwd=os.getcwd(), stderr=sp.PIPE, stdout=sp.PIPE).communicate()
-    else:
-        data = sp.Popen(['git status'], shell=True, cwd=os.getcwd(), stderr=sp.PIPE, stdout=sp.PIPE).communicate()
-    if not data[1]:
-        return data[0].decode('utf-8').strip('\n')
-    else:
-        raise OSError("Git error!")
+    data = sp.Popen(['git', 'status'], stdout=sp.PIPE, stderr=sp.PIPE).communicate()
+    if data[1]:
+        raise OSError("Git error:\n" + data[1].decode('utf-8'))
+    return data[0].decode('utf-8').strip('\n')
 
 
 # This is needed later on for properly 'stripping' unicode weirdness out of git log data.
