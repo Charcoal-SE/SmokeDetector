@@ -4804,3 +4804,4 @@
 1533135846	Makyen	bluetoothfmtransmitters\.com
 1533135887	Makyen	mparkshackingint(?:\W*(?:at\W*)?gmail\W*com)?
 1533136255	Makyen	faithministriesinlove(?:@gmail\.com)?
+1533153989	Makyen	\W*카지노\W*
