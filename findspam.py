@@ -1574,8 +1574,9 @@ class FindSpam:
             body_to_check = post.body.replace("&nsbp;", "").replace("\xAD", "") \
                                      .replace("\u200B", "").replace("\u200C", "")
             is_regex_check = 'regex' in rule
-            check_if_answer = rule.get('answers', True)
-            check_if_question = rule.get('questions', True)
+            if (post.is_answer and not rule.get('answers', True)) \
+                    or (not post.is_answer and not rule.get('questions', True)):
+                continue
             if rule['stripcodeblocks']:
                 # use a placeholder to avoid triggering "few unique characters" when most of post is code
                 body_to_check = regex.sub("(?s)<pre>.*?</pre>",
@@ -1596,9 +1597,7 @@ class FindSpam:
                     # using a named list \L in some regexes
                     matched_title = False if post.is_answer else compiled_regex.findall(title_to_check)
                     matched_username = compiled_regex.findall(post.user_name)
-                    if (not post.body_is_summary or rule['body_summary']) and \
-                            (not post.is_answer or check_if_answer) and \
-                            (post.is_answer or check_if_question):
+                    if not post.body_is_summary or rule['body_summary']:
                         matched_body = compiled_regex.findall(body_to_check)
                 else:
                     assert 'method' in rule
@@ -1622,9 +1621,7 @@ class FindSpam:
                         matched_username, why_username = rule['method'](post.user_name, post.post_site)
                         if matched_username and rule['username']:
                             why["username"].append(u"Username - {}".format(why_username))
-                        if (not post.body_is_summary or rule['body_summary']) and \
-                                (not post.is_answer or check_if_answer) and \
-                                (post.is_answer or check_if_question):
+                        if not post.body_is_summary or rule['body_summary']:
                             matched_body, why_body = rule['method'](body_to_check, post.post_site)
                             if matched_body and rule['body']:
                                 why["body"].append(u"Post - {}".format(why_body))
