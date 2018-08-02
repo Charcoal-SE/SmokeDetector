@@ -591,7 +591,7 @@ def is_offensive_post(s, site):
         text_matched.append(match.group(0))
 
     if len_of_match / len(s) >= 0.015:  # currently at 1.5%, this can change if it needs to
-        return True, u"Offensive keyword{}: *{}*".format("s" if len(text_matched) > 1 else "", ", ".join(text_matched))
+        return True, "Offensive keyword{}: *{}*".format("s" if len(text_matched) > 1 else "", ", ".join(text_matched))
     return False, ""
 
 
@@ -608,9 +608,10 @@ def username_similar_website(post):
     s, username = post.body, post.user_name
     sim_ratio, sim_webs = perform_similarity_checks(s, username)
     if sim_ratio >= SIMILAR_THRESHOLD:
-        return False, False, True, u"Username `{}` similar to {}, ratio={}".format(
-            username, ', '.join('`{}`'.format(item) for item in sim_webs), sim_ratio
-        )
+        return False, False, True, "Username `{}` similar to {}, ratio={}".format(
+            username,
+            ', '.join('*{}* at position {}-{}'.format(w, s.index(w), s.index(w) + len(w)) for w in sim_webs),
+            sim_ratio)
     else:
         return False, False, False, ""
 
