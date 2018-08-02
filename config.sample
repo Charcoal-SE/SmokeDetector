@@ -1,6 +1,10 @@
 [Config]
 location=location_here
 
+# Set ChatExchange login credentials, environmental variables take precedence over here
+# ChatExchangeU=stackexchange_login@example.com
+# ChatExchangeP=p@55w0rd
+
 # Set the location for metasmoke here if you're running it. See https://github.com/Charcoal-SE/metasmoke.
 # metasmoke_host=https://metasmoke.erwaysoftware.com
 # metasmoke_ws_host=wss://metasmoke.erwaysoftware.com/cable

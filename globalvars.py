@@ -128,6 +128,13 @@ class GlobalVars:
     metasmoke_ws = None
 
     try:
+        chatexchange_u = config.get("Config", "ChatExchangeU")
+        chatexchange_p = config.get("Config", "ChatExchangeP")
+    except NoOptionError:
+        chatexchange_u = None
+        chatexchange_p = None
+
+    try:
         metasmoke_host = config.get("Config", "metasmoke_host")
     except NoOptionError:
         metasmoke_host = None

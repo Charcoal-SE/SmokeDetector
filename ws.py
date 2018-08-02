@@ -15,7 +15,6 @@ install_thread_excepthook()
 import os
 # noinspection PyPackageRequirements
 import websocket
-import getpass
 from threading import Thread
 import traceback
 from bodyfetcher import BodyFetcher
@@ -79,13 +78,24 @@ except TldIOError as ioerr:
             raise ioerr
 
 if "ChatExchangeU" in os.environ:
+    log('debug', "ChatExchange username loaded from environment")
     username = os.environ["ChatExchangeU"]
+elif GlobalVars.chatexchange_u:
+    log('debug', "ChatExchange username loaded from config")
+    username = GlobalVars.chatexchange_u
 else:
-    username = input("Username: ")
+    log('debug', "No ChatExchange username provided. Set it in config or provide it via environment variable")
+    os._exit(6)
+
 if "ChatExchangeP" in os.environ:
+    log('debug', "ChatExchange password loaded from environment")
     password = os.environ["ChatExchangeP"]
+elif GlobalVars.chatexchange_p:
+    log('info', "ChatExchange password loaded from config")
+    password = GlobalVars.chatexchange_p
 else:
-    password = getpass.getpass("Password: ")
+    log('error', "No ChatExchange password provided. Set it in config or provide it via environment variable")
+    os._exit(6)
 
 # We need an instance of bodyfetcher before load_files() is called
 GlobalVars.bodyfetcher = BodyFetcher()
