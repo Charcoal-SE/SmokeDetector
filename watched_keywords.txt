@@ -4605,7 +4605,6 @@
 1532186389	Glorfindel	govtjobalertindia\.blogspot\.com
 1532193256	Makyen	dr\.obho(?:greatspell(?:@gmail.com)?)?
 1532193286	Makyen	live4k-sports\.blogspot\.com
-1532195658	Makyen	keto
 1532211320	Makyen	sweetupdate\.com
 1532231516	Makyen	areazipcode\.org
 1532236865	Makyen	[a-z_]*91[\W_]*9587[\W_]*650[\W_]*908[a-z_]*
