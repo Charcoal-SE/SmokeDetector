@@ -532,6 +532,7 @@ def bad_ns_for_url_domain(s, site):
         {'lloyd.ns.cloudflare.com.', 'reza.ns.cloudflare.com.'},
         '247support-number.com.',
         'promoocodes.com.',
+        'myassignmenthelp.co.uk.',
     ])
 
 
@@ -571,7 +572,7 @@ def watched_ns_for_url_domain(s, site):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def is_offensive_post(s, site):
+de fis_offensive_post(s, site):
     if not s:
         return False, ""
 
