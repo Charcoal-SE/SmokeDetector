@@ -572,7 +572,7 @@ def watched_ns_for_url_domain(s, site):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-de fis_offensive_post(s, site):
+de is_offensive_post(s, site):
     if not s:
         return False, ""
 
