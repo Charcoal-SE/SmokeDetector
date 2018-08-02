@@ -4816,3 +4816,4 @@
 1533203572	Mithrandir	^.{1,30}?MissionImpossible\W?Fallout.{1,20}?$
 1533203633	doppelgreener	buyyourdocuments\.com
 1533203834	doppelgreener	commotionstudios\.net
+1533203988	tripleee	health\.blog
