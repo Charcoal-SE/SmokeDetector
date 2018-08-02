@@ -142,7 +142,7 @@ def contains_tld(s):
     return any(('.' + x) in s for x in TLD_CACHE)
 
 
-def misleading_link(s, site, *args):
+def misleading_link(s, site):
     link_regex = r"<a href=\"([^\"]+)\"[^>]*>([^<]+)<\/a>"
     compiled = regex.compile(link_regex)
     search = compiled.search(s)
@@ -183,7 +183,7 @@ def misleading_link(s, site, *args):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
-def has_repeating_words(s, site, *args):
+def has_repeating_words(s, site):
     words = regex.split(r"[\s.,;!/\()\[\]+_-]", s)
     words = [word for word in words if word != ""]
     streak = 0
@@ -200,7 +200,7 @@ def has_repeating_words(s, site, *args):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def has_few_characters(s, site, *args):
+def has_few_characters(s, site):
     s = regex.sub("</?(?:p|strong|em)>", "", s).rstrip()  # remove HTML paragraph tags from posts
     uniques = len(set(s) - {"\n", "\t"})
     if (len(s) >= 30 and uniques <= 6) or (len(s) >= 100 and uniques <= 15):  # reduce if false reports appear
@@ -212,7 +212,7 @@ def has_few_characters(s, site, *args):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def has_repeating_characters(s, site, *args):
+def has_repeating_characters(s, site):
     s = s.strip().replace("\u200B", "").replace("\u200C", "")  # Strip leading and trailing spaces
     if "\n" in s or "<code>" in s or "<pre>" in s:
         return False, ""
@@ -227,7 +227,7 @@ def has_repeating_characters(s, site, *args):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def link_at_end(s, site, *args):   # link at end of question, on selected sites
+def link_at_end(s, site):   # link at end of question, on selected sites
     s = regex.sub("</?(?:strong|em|p)>", "", s)
     match = regex.compile(r"(?i)https?://(?:[.A-Za-z0-9-]*/?[.A-Za-z0-9-]*/?|plus\.google\.com/"
                           r"[\w/]*|www\.pinterest\.com/pin/[\d/]*)(?=</a>\s*$)").search(s)
@@ -240,7 +240,7 @@ def link_at_end(s, site, *args):   # link at end of question, on selected sites
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
-def non_english_link(s, site, *args):   # non-english link in short answer
+def non_english_link(s, site):   # non-english link in short answer
     if len(s) < 600:
         links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
         for link_text in links:
@@ -253,7 +253,7 @@ def non_english_link(s, site, *args):   # non-english link in short answer
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
-def mostly_non_latin(s, site, *args):   # majority of post is in non-Latin, non-Cyrillic characters
+def mostly_non_latin(s, site):   # majority of post is in non-Latin, non-Cyrillic characters
     word_chars = regex.sub(r'(?u)[\W0-9]|http\S*', "", s)
     non_latin_chars = regex.sub(r"(?u)\p{script=Latin}|\p{script=Cyrillic}", "", word_chars)
     if len(non_latin_chars) > 0.4 * len(word_chars):
@@ -262,7 +262,7 @@ def mostly_non_latin(s, site, *args):   # majority of post is in non-Latin, non-
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def has_phone_number(s, site, *args):
+def has_phone_number(s, site):
     if regex.compile(r"(?i)\b(address(es)?|run[- ]?time|error|value|server|hostname|timestamp|warning|code|"
                      r"(sp)?exception|version|chrome|1234567)\b", regex.UNICODE).search(s):
         return False, ""  # not a phone number
@@ -289,7 +289,7 @@ def has_phone_number(s, site, *args):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def has_customer_service(s, site, *args):  # flexible detection of customer service in titles
+def has_customer_service(s, site):  # flexible detection of customer service in titles
     s = s[0:300].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
     s = regex.sub(r"[^A-Za-z0-9\s]", "", s)   # deobfuscate
     phrase = regex.compile(r"(tech(nical)? support)|((support|service|contact|help(line)?) (telephone|phone|"
@@ -310,7 +310,7 @@ def has_customer_service(s, site, *args):  # flexible detection of customer serv
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def has_health(s, site, *args):   # flexible detection of health spam in titles
+def has_health(s, site):   # flexible detection of health spam in titles
     s = s[0:200]   # if applied to body, the beginning should be enough: otherwise many false positives
     capitalized = len(regex.compile(r"\b[A-Z][a-z]").findall(s)) >= 5   # words beginning with uppercase letter
     organ = regex.compile(r"(?i)\b(colon|skin|muscle|bicep|fac(e|ial)|eye|brain|IQ|mind|head|hair|peni(s|le)|"
@@ -342,7 +342,7 @@ def has_health(s, site, *args):   # flexible detection of health spam in titles
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def pattern_product_name(s, site, *args):
+def pattern_product_name(s, site):
     keywords = [
         "Testo", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Diet", "Slim", "Premier", "Diet", "(?:Pure)?Fit",
         "Junivive", "Apexatropin", "Gain", "Allure", "Nuvella", "Trimgenix", "Satin", "Prodroxatone", "Blast",
@@ -368,7 +368,7 @@ def pattern_product_name(s, site, *args):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def what_is_this_pharma_title(s, site, *args):   # title "what is this Xxxx?"
+def what_is_this_pharma_title(s, site):   # title "what is this Xxxx?"
     if regex.compile(r'^what is this (?:[A-Z]|https?://)').match(s):
         return True, u'Title starts with "what is this"'
     else:
@@ -376,7 +376,7 @@ def what_is_this_pharma_title(s, site, *args):   # title "what is this Xxxx?"
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def keyword_email(s, site, *args):   # a keyword and an email in the same post
+def keyword_email(s, site):   # a keyword and an email in the same post
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
     keyword = regex.compile(r"(?i)\b(training|we (will )?(offer|develop|provide)|sell|invest(or|ing|ment)|credit|"
@@ -398,7 +398,7 @@ def keyword_email(s, site, *args):   # a keyword and an email in the same post
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def pattern_email(s, site, *args):
+def pattern_email(s, site):
     pattern = regex.compile(r"(?<![=#/])\b(dr|[A-z0-9_.%+-]*"
                             r"(loan|hack|financ|fund|spell|temple|herbal|spiritual|atm|heal|priest|classes|"
                             r"investment))[A-z0-9_.%+-]*"
@@ -410,7 +410,7 @@ def pattern_email(s, site, *args):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def keyword_link(s, site, *args):   # thanking keyword and a link in the same short answer
+def keyword_link(s, site):   # thanking keyword and a link in the same short answer
     if len(s) > 400:
         return False, ""
     link = regex.compile(r'(?i)<a href="https?://\S+').search(s)
@@ -432,7 +432,7 @@ def keyword_link(s, site, *args):   # thanking keyword and a link in the same sh
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def bad_link_text(s, site, *args):   # suspicious text of a hyperlink
+def bad_link_text(s, site):   # suspicious text of a hyperlink
     s = regex.sub("</?strong>|</?em>", "", s)  # remove font tags
     keywords = regex.compile(
         r"(?isu)"
@@ -461,7 +461,7 @@ def bad_link_text(s, site, *args):   # suspicious text of a hyperlink
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def bad_pattern_in_url(s, site, *args):
+def bad_pattern_in_url(s, site):
     patterns = [
         r'[^"]*-reviews?(?:-(?:canada|(?:and|or)-scam))?/?',
         r'[^"]*-support/?',
@@ -478,7 +478,7 @@ def bad_pattern_in_url(s, site, *args):
         return False, ""
 
 
-def ns_for_url_domain(s, site, nslist, *args):
+def ns_for_url_domain(s, site, nslist):
     invalid_tld_count = 0
 
     for nsentry in nslist:
@@ -521,7 +521,7 @@ def ns_for_url_domain(s, site, nslist, *args):
     return False, ""
 
 
-def bad_ns_for_url_domain(s, site, *args):
+def bad_ns_for_url_domain(s, site):
     return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name!
         {'ns1.md-95.bigrockservers.com.', 'ns2.md-95.bigrockservers.com.'},
@@ -535,7 +535,7 @@ def bad_ns_for_url_domain(s, site, *args):
     ])
 
 
-def watched_ns_for_url_domain(s, site, *args):
+def watched_ns_for_url_domain(s, site):
     return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name here either!
         # {'dns1.namecheaphosting.com.', 'dns2.namecheaphosting.com.'},
@@ -571,7 +571,7 @@ def watched_ns_for_url_domain(s, site, *args):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def is_offensive_post(s, site, *args):
+def is_offensive_post(s, site):
     if not s:
         return False, ""
 
@@ -596,7 +596,7 @@ def is_offensive_post(s, site, *args):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def has_eltima(s, site, *args):
+def has_eltima(s, site):
     reg = regex.compile(r"(?is)\beltima")
     if reg.search(s) and len(s) <= 750:
         return True, u"Bad keyword *eltima* and body length under 750 chars"
@@ -604,19 +604,19 @@ def has_eltima(s, site, *args):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
-def username_similar_website(s, site, *args):
-    username = args[0]
+def username_similar_website(post):
+    s, username = post.body, post.user_name
     sim_ratio, sim_webs = perform_similarity_checks(s, username)
     if sim_ratio >= SIMILAR_THRESHOLD:
-        return True, u"Username `{}` similar to {}, ratio={}".format(
+        return False, False, True, u"Username `{}` similar to {}, ratio={}".format(
             username, ', '.join('`{}`'.format(item) for item in sim_webs), sim_ratio
         )
     else:
-        return False, ""
+        return False, False, False, ""
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
-def character_utilization_ratio(s, site, *args):
+def character_utilization_ratio(s, site):
     s = strip_urls_and_tags(s)
     counter = Counter(s)
     total_chars = len(s)
@@ -753,7 +753,7 @@ def strip_urls_and_tags(s):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def mostly_dots(s, *args):
+def mostly_dots(s, site):
     if not s:
         return False, ""
 
@@ -775,7 +775,7 @@ def mostly_dots(s, *args):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def mostly_punctuations(s, site, *args):
+def mostly_punctuations(s, site):
     s = strip_urls_and_tags(s)
     if len(s) <= 12:
         return False, ""
@@ -791,7 +791,7 @@ def mostly_punctuations(s, site, *args):
         return False, ""
 
 
-def mevaqesh_troll(s, *args):
+def mevaqesh_troll(s, site):
     s = s.lower().replace(' ', '')
     bad = 'mevaqeshthereforehasnoshareintheworldtocome'
     if bad in s:
@@ -856,7 +856,7 @@ def body_starts_with_title(post):
     return False, False, False, ""
 
 
-def turkey(s, *args):
+def luncheon_meat(s, site):  # Random "signature" like asdfghjkl
     s = regex.search(r"<p>\s*?(\S{8,})\s*?</p>$", s.lower())
 
     if not s:
@@ -885,13 +885,13 @@ def turkey2(post):
             return False, False, False, ""
 
         if post.user_name in pingable:
-            return False, False, True, ""
+            return False, False, True, "Himalayan pink salt detected"
 
     return False, False, False, ""
 
 
 # FLEE WHILE YOU STILL CAN.
-def religion_troll(s, *args):
+def religion_troll(s, site):
     regexes = [
         r'(?:(?:Rubellite\W*(?:Fae|Yaksi)|Sarvabhouma|Rohit|Anisha|Ahmed\W*Bkhaty|Anubhav\W*Jha|Vineet\W*Aggarwal|Josh'
         r'\W*K|Doniel\W*F|mbloch)(?:|\b.{1,200}?\b)(?:(?:mother)?[sf]uck|pis+|pus+(?:y|ies)|boo+b|tit|coc*k|dick|ass'
@@ -1496,7 +1496,7 @@ class FindSpam:
         {'regex': r"^\/.*\/$", 'all': True, 'sites': [], 'reason': "title starts and ends with a forward slash",
          'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
          'max_rep': 1, 'max_score': 0},
-        {'method': turkey, 'all': False, 'sites': ['stackoverflow.com'], 'reason': "luncheon meat detected",
+        {'method': luncheon_meat, 'all': False, 'sites': ['stackoverflow.com'], 'reason': "luncheon meat detected",
          'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
          'max_rep': 21, 'max_score': 0},
         {'method': turkey2, 'all': False, 'sites': ['stackoverflow.com'], 'reason': "himalayan pink salt detected",
@@ -1532,7 +1532,7 @@ class FindSpam:
         # User name similar to link
         {'method': username_similar_website, 'all': True, 'sites': [], 'reason': "username similar to website in {}",
          'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
-         'max_rep': 50, 'max_score': 0, 'questions': False},
+         'max_rep': 50, 'max_score': 0, 'questions': False, 'whole_post': True},
 
         # Answer similar to existing answer on post
         {'method': similar_answer, 'all': True, 'sites': ["codegolf.stackexchange.com"],
@@ -1612,16 +1612,16 @@ class FindSpam:
                             why["body"].append(u"Post - {}".format(why_post))
                             result.append(rule['reason'].replace("{}", "answer" if post.is_answer else "body"))
                     else:
-                        matched_title, why_title = rule['method'](title_to_check, post.post_site, post.user_name)
+                        matched_title, why_title = rule['method'](title_to_check, post.post_site)
                         if matched_title and rule['title']:
                             why["title"].append(u"Title - {}".format(why_title))
-                        matched_username, why_username = rule['method'](post.user_name, post.post_site, post.user_name)
+                        matched_username, why_username = rule['method'](post.user_name, post.post_site)
                         if matched_username and rule['username']:
                             why["username"].append(u"Username - {}".format(why_username))
                         if (not post.body_is_summary or rule['body_summary']) and \
                                 (not post.is_answer or check_if_answer) and \
                                 (post.is_answer or check_if_question):
-                            matched_body, why_body = rule['method'](body_to_check, post.post_site, post.user_name)
+                            matched_body, why_body = rule['method'](body_to_check, post.post_site)
                             if matched_body and rule['body']:
                                 why["body"].append(u"Post - {}".format(why_body))
                 if matched_title and rule['title']:
