@@ -4746,7 +4746,6 @@
 1532925927	tripleee	pardakht\.org
 1532927878	Makyen	itsaco\.ir
 1532927962	Makyen	heiwaco\.tripod\.com
-1532929179	tripleee	seopressor\.com
 1532931969	tripleee	creativechaos\.digital
 1532931992	Federico	heiwaco
 1532932523	tripleee	tutorail-point\.blogspot
