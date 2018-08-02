@@ -302,7 +302,7 @@ stackexchange.com:
       - site-magento.stackexchange.com
 
   13848: # Not A Bar (RPG.SE)
-    commands: false
+    commands: true
     msg_types:
       - site-rpg.stackexchange.com
 
