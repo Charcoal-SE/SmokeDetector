@@ -16,18 +16,19 @@ from flovis import Flovis
 
 
 def git_commit_info():
-    data = sp.Popen(['git', 'log', '-1', '--pretty=%h%n%H%n%an%n%s'], stdout=sp.PIPE, stderr=sp.PIPE).communicate()
-    if data[1]:
-        raise OSError("Git error:\n" + data[1].decode('utf-8'))
-    short_id, full_id, author, message = data[0].decode('utf-8').strip().split("\n")
+    try:
+        data = sp.check_output(['git', 'log', '-1', '--pretty=%h%n%H%n%an%n%s'], stderr=sp.STDOUT, encoding='utf-8')
+    except sp.CalledProcessError as e:
+        raise OSError("Git error:\n" + e.output) from e
+    short_id, full_id, author, message = data.strip().split("\n")
     return {'id': short_id, 'id_full': full_id, 'author': author, 'message': message}
 
 
 def git_status():
-    data = sp.Popen(['git', 'status'], stdout=sp.PIPE, stderr=sp.PIPE).communicate()
-    if data[1]:
-        raise OSError("Git error:\n" + data[1].decode('utf-8'))
-    return data[0].decode('utf-8').strip('\n')
+    try:
+        return sp.check_output(['git', 'status'], stderr=sp.STDOUT, encoding='utf-8').strip()
+    except sp.CalledProcessError as e:
+        raise OSError("Git error:\n" + e.output) from e
 
 
 # This is needed later on for properly 'stripping' unicode weirdness out of git log data.

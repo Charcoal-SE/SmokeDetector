@@ -140,7 +140,7 @@ class Metasmoke:
                                          why=why)
             elif "deploy_updated" in message:
                 sha = message["deploy_updated"]["head_commit"]["id"]
-                if sha != os.popen('git log --pretty=format:"%H" -n 1').read():
+                if sha != os.popen('git log -1 --pretty="%H"').read():
                     if "autopull" in message["deploy_updated"]["head_commit"]["message"]:
                         if only_blacklists_changed(GitManager.get_remote_diff()):
                             commit_md = "[`{0}`](https://github.com/Charcoal-SE/SmokeDetector/commit/{0})" \
@@ -173,7 +173,7 @@ class Metasmoke:
             elif "commit_status" in message:
                 c = message["commit_status"]
                 sha = c["commit_sha"][:7]
-                if c["commit_sha"] != os.popen('git log --pretty=format:"%H" -n 1').read():
+                if c["commit_sha"] != os.popen('git log -1 --pretty="%H"').read():
                     if c["status"] == "success":
                         if "autopull" in c["commit_message"]:
                             s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
