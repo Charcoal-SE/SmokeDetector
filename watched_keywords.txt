@@ -4820,3 +4820,4 @@
 1533206670	doppelgreener	diet c\b
 1533209512	iBug	keto(?:nes?)?
 1533210851	tripleee	livechatzone\.com
+1533211200	tripleee	[a-z_]*(?:1_*)?972[\W_]*534[\W_]*5446[a-z_]*
