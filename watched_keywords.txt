@@ -4818,3 +4818,4 @@
 1533203834	doppelgreener	commotionstudios\.net
 1533203988	tripleee	health\.blog
 1533204413	Mithrandir	\?id=1445793225
+1533204516	Mithrandir	http://[-\w]{4,20}\.\w{3,5}/[-\w]{1,30}?(reviews?|creams?|movie[-\w]{1,8}online(-free)?)[-\w]{1,30}?/?
