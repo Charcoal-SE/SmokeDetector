@@ -17,7 +17,7 @@ from flovis import Flovis
 
 def git_commit_info():
     try:
-        data = sp.check_output(['git', 'log', '-1', '--pretty=%h%n%H%n%an%n%s'], stderr=sp.STDOUT, encoding='utf-8')
+        data = sp.check_output(['git', 'log', '-1', '--pretty=%h%n%H%n%an%n%s'], stderr=sp.STDOUT).decode('utf-8')
     except sp.CalledProcessError as e:
         raise OSError("Git error:\n" + e.output) from e
     short_id, full_id, author, message = data.strip().split("\n")
@@ -26,7 +26,7 @@ def git_commit_info():
 
 def git_status():
     try:
-        return sp.check_output(['git', 'status'], stderr=sp.STDOUT, encoding='utf-8').strip()
+        return sp.check_output(['git', 'status'], stderr=sp.STDOUT).decode('utf-8').strip()
     except sp.CalledProcessError as e:
         raise OSError("Git error:\n" + e.output) from e
 
