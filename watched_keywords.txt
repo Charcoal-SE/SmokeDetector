@@ -4813,3 +4813,4 @@
 1533203143	Glorfindel	chainlinks\.com
 1533203215	doppelgreener	koololdiesradio\.net
 1533203251	Glorfindel	mission-impossible-fallout
+1533203572	Mithrandir	^.{1,30}?MissionImpossible\W?Fallout.{1,20}?$
