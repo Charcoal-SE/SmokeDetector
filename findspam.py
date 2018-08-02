@@ -533,6 +533,7 @@ def bad_ns_for_url_domain(s, site):
         '247support-number.com.',
         'promoocodes.com.',
         'myassignmenthelp.co.uk.',
+        'socialmonkee.com.',
     ])
 
 
