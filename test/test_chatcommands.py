@@ -16,6 +16,10 @@ from fake import Fake
 from unittest.mock import patch
 
 
+def test_null():
+    assert chatcommands.null() is None
+
+
 def test_coffee():
     msg = Fake({"owner": {"name": "El'endia Starman"}})
 
@@ -32,22 +36,8 @@ def test_tea():
     assert regex.match(teas + "@angussidney\\*", chatcommands.tea("angussidney"))
 
 
-def test_lick():
-    assert chatcommands.lick() == "*licks ice cream cone*"
-
-
-def test_brownie():
-    assert chatcommands.brownie() == "Brown!"
-
-
-def test_wut():
-    assert chatcommands.wut() == "Whaddya mean, 'wut'? Humans..."
-
-
 def test_alive():
-    assert chatcommands.alive() in ['Yup', 'You doubt me?', 'Of course', '... did I miss something?',
-                                    'plz send teh coffee', 'Kinda sorta',
-                                    'Watching this endless list of new questions *never* gets boring']
+    assert chatcommands.alive() in chatcommands.ALIVE_MSG
 
 
 def test_location():

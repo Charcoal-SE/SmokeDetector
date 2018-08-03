@@ -16,6 +16,7 @@ import yaml
 import datahandling
 import metasmoke
 import classes.feedback
+from helpers import log
 from excepthook import log_exception
 from globalvars import GlobalVars
 from parsing import fetch_post_id_and_site_from_url, fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
@@ -66,14 +67,15 @@ def init(username, password):
     for site in _clients.keys():
         client = Client(site)
 
-        for _ in range(10):
+        for retry in range(10):
             try:
                 client.login(username, password)
                 break
-            except:
-                pass
+            except Exception as e:
+                exc_type, exc_obj, exc_tb = sys.exc_info()
+                log('debug', 'Login error {}: {}'.format(exc_type.__name__, exc_obj))
         else:
-            raise Exception("Failed to log into " + site)
+            raise Exception("Failed to log into " + site + ", max retries exceeded")
 
         _clients[site] = client
 
@@ -337,7 +339,7 @@ def command(*type_signature, reply=False, whole_msg=False, privileged=False, ari
 
             try:
                 try:
-                    processed_args.extend([coerce(arg) if arg else arg for coerce, arg in zip(type_signature, args)])
+                    processed_args.extend(coerce(arg) if arg else arg for coerce, arg in zip(type_signature, args))
                 except ValueError as e:
                     return "Invalid input type given for an argument"
 
@@ -349,7 +351,7 @@ def command(*type_signature, reply=False, whole_msg=False, privileged=False, ari
                 return result if not quiet_action else ""
             except CmdException as e:
                 return str(e)
-            except:
+            except Exception as e:  # Any other general exception
                 log_exception(*sys.exc_info())
                 return "I hit an error while trying to run that command; run `!!/errorlogs` for details."
 

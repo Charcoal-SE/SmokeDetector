@@ -1354,7 +1354,7 @@ slim\W?force
 (?:black\W?)?cumin\W?oil
 grow\W?ultra
 dxn\W?code\W?strike
-[a-z_]*(?:1_*)?800[\W_]*961[\W_]*9635‭[a-z_]*
+[a-z_]*(?:1_*)?800[\W_]*961[\W_]*9635[a-z_]*
 [a-z_]*(?:1_*)?844[\W_]*777[\W_]*1902[a-z_]*
 [a-z_]*(?:1_*)?844[\W_]*72Z[\W_]*6675[a-z_]*
 hydroxinia
@@ -1462,3 +1462,4 @@ keto\W?(natural\W?)?blend
 slim\W?999
 l\W?averla
 keto\W?diet
+beauty\W?replenish

@@ -569,6 +569,7 @@ def watched_ns_for_url_domain(s, site):
         'shared-host.org.',
         'web.com.ph.',
         {'ns09.domaincontrol.com.', 'ns10.domaincontrol.com.'},
+        'supercloudapps.com.',
     ])
 
 
@@ -1624,7 +1625,7 @@ class FindSpam:
                         if not post.body_is_summary or rule['body_summary']:
                             matched_body, why_body = rule['method'](body_to_check, post.post_site)
                             if matched_body and rule['body']:
-                                why["body"].append(u"Post - {}".format(why_body))
+                                why["body"].append(u"Body - {}".format(why_body))
                 if matched_title and rule['title']:
                     why["title"].append(FindSpam.generate_why(compiled_regex, title_to_check, u"Title", is_regex_check))
                     result.append(rule['reason'].replace("{}", "title"))

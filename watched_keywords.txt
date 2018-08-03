@@ -3839,7 +3839,6 @@
 1528683167	Makyen	gmailloginfix\.com
 1528683458	Makyen	gn\.єzєnαc\.cσ\.kr
 1528693686	A J	full2info\.com
-1528694273	Makyen	[a-z_]*(?:1_*)?800[\W_]*961[\W_]*9635[a-z_]*
 1528694572	tripleee	d-mart
 1528696424	Makyen	[a-z_]*(?:1_*)?888[\W_]*695[\W_]*1360[a-z_]*
 1528696460	Makyen	xboxlivesupportnumber\.com
@@ -4237,7 +4236,6 @@
 1530580759	Makyen	fashionbirdz\.com
 1530591099	Makyen	hasweightoffers\.com
 1530594938	Frenzy Li	growth\W*xtreme
-1530603624	Glorfindel	greattibettour\.com
 1530606394	Byte Commander	^Cade\W+Song$
 1530608985	iBug	zerobugacademy\.com
 1530610408	Mithrandir	whowillwin\.in
@@ -4375,7 +4373,6 @@
 1531288958	Makyen	[a-z_]*(?:1_*)?800[\W_]*712[\W_]*0803[a-z_]*
 1531288977	Makyen	drolusolutionhome(?:@gmail\.com)?
 1531289791	Glorfindel	futurebiomed\.com
-1531290390	Makyen	bitdefendersupportnumbers\.com
 1531290398	Makyen	[a-z_]*(?:1_*)?855[\W_]*205[\W_]*4069[a-z_]*
 1531291393	Makyen	amcham\.org\.hk
 1531295413	Glorfindel	safaryar\.net
@@ -4828,3 +4825,15 @@
 1533217071	Glorfindel	eglobalinfo\.com
 1533235036	Mithrandir	southwest\W?airlines\W?customer\W?services
 1533235209	Erik the Outgolfer	sites\.google\.com/view/americanairlineschangeflights
+1533267632	Tetsuya Yamamoto	mobilekaba\.com
+1533275787	iBug	escorts?\W?girls?
+1533276872	tripleee	[a-z_]*(?:44_*)?(?:0_*)?808[\W_]*169[\W_]*8369[a-z_]*
+1533277284	tripleee	phozeca
+1533279101	Glorfindel	bicepsexercise\.in
+1533279291	Glorfindel	fish\W?keeping\W?guide
+1533279354	tripleee	customerservice\.website
+1533281415	iBug	dubaidesertsafariuae\.com
+1533281545	Glorfindel	dhowkhasabtours\.com
+1533287227	tripleee	gofitmantra\.com
+1533290954	tripleee	isphack
+1533291972	tripleee	seo1seo1

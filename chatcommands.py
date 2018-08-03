@@ -34,15 +34,10 @@ from classes.feedback import *
 #
 # System command functions below here
 
-# The following two commands are just bypasses for the "unrecognized command" message, so that pingbot
+# This 'null' command and its aliases are just bypasses for the "unrecognized command" message, so that pingbot
 # can respond instead.
-@command(aliases=['ping-help'])
-def ping_help():
-    return None
-
-
-@command()
-def groups():
+@command(aliases=['ping-help', 'groups'])
+def null():
     return None
 
 
@@ -213,7 +208,14 @@ def check_blacklist(string_to_test, is_username, is_watchlist):
 
     # Filter out watchlist results
     if not is_watchlist:
-        reasons = list(filter(lambda reason: "potentially bad keyword" not in reason, reasons))
+        reasons = list(filter(
+            lambda reason: "potentially bad keyword" not in reason, reasons))
+    # Ignore "Mostly non-latin body/answer" for phone number watches
+    elif regex.match(
+            r'(?:\[a-z_]\*)?(?:\(\?:)?\d+(?:[][\\W_*()?:]+\d+)+(?:\[a-z_]\*)?$',
+            string_to_test):
+        reasons = list(filter(
+            lambda reason: "mostly non-latin" not in reason, reasons))
 
     return reasons
 
@@ -369,32 +371,16 @@ def blame(msg):
 @command(str, whole_msg=True, aliases=["blame\u180E"])
 def blame2(msg, x):
     base = {"\u180E": 0, "\u200B": 1, "\u200C": 2, "\u200D": 3, "\u2060": 4, "\u2063": 5, "\uFEFF": 6}
-    user = 0
 
-    for i, char in enumerate(reversed(x)):
-        user += (len(base)**i) * base[char]
+    user = sum((len(base)**i) * base[char] for i, char in enumerate(reversed(x)))
 
     try:
         unlucky_victim = msg._client.get_user(user)
-        return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
-                                                                     msg._client.host,
-                                                                     unlucky_victim.id)
-
     except requests.exceptions.HTTPError:
         unlucky_victim = msg.owner
-        return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
-                                                                     msg._client.host,
-                                                                     unlucky_victim.id)
 
-
-# noinspection PyIncorrectDocstring
-@command()
-def brownie():
-    """
-    Returns a string equal to "Brown!" (This is a joke command)
-    :return: A string
-    """
-    return "Brown!"
+    return "It's [{}](https://chat.{}/users/{})'s fault.".format(
+        unlucky_victim.name, msg._client.host, unlucky_victim.id)
 
 
 COFFEES = ['Espresso', 'Macchiato', 'Ristretto', 'Americano', 'Latte', 'Cappuccino', 'Mocha', 'Affogato', 'jQuery']
@@ -416,16 +402,6 @@ def coffee(msg, other_user):
         return "*brews a cup of {} for @{}*".format(random.choice(COFFEES), other_user)
 
 
-# noinspection PyIncorrectDocstring
-@command()
-def lick():
-    """
-    Returns a string when a user says 'lick' (This is a joke command)
-    :return: A string
-    """
-    return "*licks ice cream cone*"
-
-
 TEAS = ['earl grey', 'green', 'chamomile', 'lemon', 'darjeeling', 'mint', 'jasmine', 'passionfruit']
 
 
@@ -444,16 +420,6 @@ def tea(msg, other_user):
     else:
         other_user = regex.sub(r'^@*|\b\s.{1,}', '', other_user)
         return "*brews a cup of {} tea for @{}*".format(random.choice(TEAS), other_user)
-
-
-# noinspection PyIncorrectDocstring
-@command()
-def wut():
-    """
-    Returns a string when a user asks 'wut' (This is a joke command)
-    :return: A string
-    """
-    return "Whaddya mean, 'wut'? Humans..."
 
 
 @command(aliases=["zomg_hats"])
@@ -523,6 +489,11 @@ def unblock(msg, room_id):
     tell_rooms(unblock_message, ((msg._client.host, msg.room.id), "debug", "metatavern"), ())
 
 
+ALIVE_MSG = [
+    'Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee',
+    'Watching this endless list of new questions *never* gets boring', 'Kinda sorta']
+
+
 # --- Administration Commands --- #
 # noinspection PyIncorrectDocstring
 @command(aliases=["live"])
@@ -531,10 +502,7 @@ def alive():
     Returns a string indicating the process is still active
     :return: A string
     """
-    return random.choice(['Yup', 'You doubt me?', 'Of course',
-                          '... did I miss something?', 'plz send teh coffee',
-                          'Watching this endless list of new questions *never* gets boring',
-                          'Kinda sorta'])
+    return random.choice(ALIVE_MSG)
 
 
 # noinspection PyIncorrectDocstring
