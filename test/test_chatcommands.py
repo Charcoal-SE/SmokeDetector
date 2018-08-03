@@ -79,14 +79,6 @@ def test_blame():
     assert chatcommands.blame2("\u200B\u200C\u2060\u200D\u180E\uFEFF\u2063", original_msg=msg2) == "It's [J F](https://chat.stackexchange.com/users/161943)'s fault."
 
 
-@pytest.mark.parametrize("s, nvul, vul", [
-    ("1N =", 90, 90), ("3N =", 400, 600), ("6C X 0", 1090, 1540), ("1ntXX +6", 1760, 3160),
-    ("4  HX+ 2", 790, 1190), ("1d -1", -50, -100), ("5Sx -4", -800, -1100), ("7ntxx -13", -7000, -7600),
-])
-def test_bridge(s, nvul, vul):
-    assert chatcommands.bridge(s) == "Not vulnerable: {}, Vulnerable: {}".format(nvul, vul)
-
-
 def test_privileged():
     chatcommunicate.parse_room_config("test/test_rooms.yml")
 
