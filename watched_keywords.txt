@@ -4828,3 +4828,4 @@
 1533235036	Mithrandir	southwest\W?airlines\W?customer\W?services
 1533267632	Tetsuya Yamamoto	mobilekaba\.com
 1533275787	iBug	escorts?\W?girls?
+1533276872	tripleee	[a-z_]*(?:44_*)?(?:0_*)?808[\W_]*169[\W_]*8369[a-z_]*
