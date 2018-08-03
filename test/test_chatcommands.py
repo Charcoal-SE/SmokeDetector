@@ -117,6 +117,44 @@ def test_deprecated_blacklist():
     assert chatcommands.blacklist("").startswith("The !!/blacklist command has been deprecated.")
 
 
+def test_watch():
+    # XXX TODO: expand
+    def wrap_watch(pattern, force=False):
+        cmd = 'watch{0}'.format('-force' if force else '')
+        msg = Fake({
+            "_client": {
+                "host": "stackexchange.com",
+                "get_user": lambda id: Fake({"name": "J F", "id": id})
+            },
+            "owner": {"name": "El'endia Starman", "id": 1},
+            "room": {"id": 11540, "get_current_user_ids": lambda: [161943]},
+            # Ouch, this is iffy
+            # Prevent an error from deep inside do_blacklist
+            "content_source": '!!/{0} {1}'.format(cmd, pattern)
+        })
+        msg.room._client = msg._client
+        # Prevent from attempting to check privileges with Metasmoke
+        GlobalVars.code_privileged_users = [1, 161943]
+
+        return chatcommands.watch(pattern, alias_used=cmd, original_msg=msg)
+
+    # Invalid regex
+    resp = wrap_watch(r'?')
+    assert "An invalid pattern was provided" in resp
+
+    # This is one of the perpetually condemned spam domains, blacklisted forever
+    resp = wrap_watch(r'israelbigmarket')
+    assert "That pattern looks like it's already caught" in resp
+
+    # The phone number here is the first one in this format in bad_keywords.txt
+    resp = wrap_watch(r'[a-z_]*(?:1_*)?913[\W_]*608[\W_]*4584[a-z_]*')
+    assert "Mostly non-latin" not in resp
+    assert "Bad keyword in answer" in resp
+    assert "Bad keyword in body" in resp
+
+    # XXX TODO: figure out how to trigger duplicate entry separately
+
+
 @patch("chatcommands.handle_spam")
 def test_report(handle_spam):
     # Documentation: The process before scanning the post is identical regardless of alias_used.
