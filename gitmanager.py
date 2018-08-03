@@ -67,9 +67,10 @@ class GitManager:
             if not status:
                 return (False, message)
 
+            now = str(int(time.time()))
+
             if blacklist_type in [Blacklist.WATCHED_KEYWORDS]:
                 op = 'watch'
-                now = datetime.now().strftime('%s')
                 item = item_to_blacklist
                 item_to_blacklist = "\t".join([now, username, item])
             else:
@@ -89,7 +90,7 @@ class GitManager:
 
             blacklister.add(item_to_blacklist)
 
-            branch = "auto-blacklist-{0}".format(str(time.time()))
+            branch = "auto-blacklist-{0}".format(now)
             git.checkout("-b", branch)
 
             git.reset("HEAD")
@@ -113,11 +114,11 @@ class GitManager:
                 if GlobalVars.github_username is None or GlobalVars.github_password is None:
                     return (False, "Tell someone to set a GH password")
 
-                payload = {"title": u"{0}: {1} {2}".format(username, op.title(), item),
-                           "body": u"[{0}]({1}) requests the {2} of the {3} `{4}`. See the MS search [here]"
+                payload = {"title": "{0}: {1} {2}".format(username, op.title(), item),
+                           "body": "[{0}]({1}) requests the {2} of the {3} `{4}`. See the MS search [here]"
                                    "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6}) and the "
                                    "Stack Exchange search [here](https://stackexchange.com/search?q=%22{7}%22).\n"
-                                   u"<!-- METASMOKE-BLACKLIST-{8} {4} -->".format(
+                                   "<!-- METASMOKE-BLACKLIST-{8} {4} -->".format(
                                        username, chat_profile_link, op, blacklist,                # 0 1 2 3
                                        item, ms_search_option,                                    # 4 5
                                        quote_plus(item),                                          # 6
