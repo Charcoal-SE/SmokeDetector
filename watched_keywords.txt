@@ -4830,3 +4830,4 @@
 1533276872	tripleee	[a-z_]*(?:44_*)?(?:0_*)?808[\W_]*169[\W_]*8369[a-z_]*
 1533277284	tripleee	phozeca
 1533279101	Glorfindel	bicepsexercise\.in
+1533279291	Glorfindel	fish\W?keeping\W?guide
