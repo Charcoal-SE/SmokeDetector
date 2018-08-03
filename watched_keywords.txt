@@ -4824,6 +4824,7 @@
 1533215588	Glorfindel	altomerge\.com
 1533217071	Glorfindel	eglobalinfo\.com
 1533235036	Mithrandir	southwest\W?airlines\W?customer\W?services
+1533235209	Erik the Outgolfer	sites\.google\.com/view/americanairlineschangeflights
 1533267632	Tetsuya Yamamoto	mobilekaba\.com
 1533275787	iBug	escorts?\W?girls?
 1533276872	tripleee	[a-z_]*(?:44_*)?(?:0_*)?808[\W_]*169[\W_]*8369[a-z_]*
