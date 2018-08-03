@@ -213,7 +213,14 @@ def check_blacklist(string_to_test, is_username, is_watchlist):
 
     # Filter out watchlist results
     if not is_watchlist:
-        reasons = list(filter(lambda reason: "potentially bad keyword" not in reason, reasons))
+        reasons = list(filter(
+            lambda reason: "potentially bad keyword" not in reason, reasons))
+    # Ignore "Mostly non-latin body/answer" for phone number watches
+    elif regex.match(
+            r'(?:\[a-z_]\*)?(?:\(\?:)?\d+(?:[][\\W_*()?:]+\d+)+(?:\[a-z_]\*)?$',
+            string_to_test):
+        reasons = list(filter(
+            lambda reason: "mostly non-latin" not in reason, reasons))
 
     return reasons
 
