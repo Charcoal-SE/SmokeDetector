@@ -339,7 +339,7 @@ def command(*type_signature, reply=False, whole_msg=False, privileged=False, ari
 
             try:
                 try:
-                    processed_args.extend(coerce(arg) if arg else arg for coerce, arg in zip(type_signature, args))
+                    processed_args.extend([coerce(arg) if arg else arg for coerce, arg in zip(type_signature, args)])
                 except ValueError as e:
                     return "Invalid input type given for an argument"
 
@@ -351,7 +351,7 @@ def command(*type_signature, reply=False, whole_msg=False, privileged=False, ari
                 return result if not quiet_action else ""
             except CmdException as e:
                 return str(e)
-            except Exception as e:  # Any other general exception
+            except:
                 log_exception(*sys.exc_info())
                 return "I hit an error while trying to run that command; run `!!/errorlogs` for details."
 
