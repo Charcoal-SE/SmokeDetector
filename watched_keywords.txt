@@ -4846,3 +4846,4 @@
 1533353089	iBug	fastdocuments\.net
 1533354809	Makyen	[a-z_]*(?:1_*)?910[\W_]*986[\W_]*3818[a-z_]*
 1533354816	Makyen	kupiti\W*vozačku\W*dozvolu
+1533354824	Makyen	kupiti\W*putovnicu
