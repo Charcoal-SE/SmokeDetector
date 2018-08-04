@@ -4858,3 +4858,4 @@
 1533367416	Glorfindel	kvktech\.com
 1533367447	Glorfindel	dillashaw\W?vs\W?garbrandt\W?\d+
 1533378098	doppelgreener	ufa007\.com
+1533378160	doppelgreener	wordunscrambler\.co
