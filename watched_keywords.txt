@@ -4855,4 +4855,3 @@
 1533364051	iBug	worldwidedocuments7(?:\W*gmail\.com)?
 1533364076	iBug	worldwidedocumentation\.com
 1533364736	Makyen	[a-z_]*(?:44[\W_]*)?753[\W_]*718[\W_]*2633[a-z_]*
-1533367388	Glorfindel	kvktech\.coim
