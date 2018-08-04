@@ -136,7 +136,7 @@ def handle_spam(post, reasons, why):
         GlobalVars.deletion_watcher.subscribe(post_url)
 
         reason = message = None
-        for reason_count in range(5, 2, -1):  # Try 5 reasons, then 4, then 3
+        for reason_count in range(5, 0, -1):  # Try 5 reasons and all the way down to 1
             reason = ", ".join(reasons[:reason_count])
             if len(reasons) > reason_count:
                 reason += ", +{} more".format(len(reasons) - reason_count)

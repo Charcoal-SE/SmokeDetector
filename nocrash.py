@@ -94,14 +94,14 @@ while not stoprunning:
     # noinspection PyBroadException
     try:
         persistent_arguments.remove('standby')
-    except:
+    except ValueError:
         pass  # We're OK if the argument isn't in the list.
 
     try:
         ecode = sp.call(command + persistent_arguments, env=environ)
     except Exception:
         pass
-    except:  # KerboardInterrupt and SystemExit
+    except BaseException:  # KerboardInterrupt and SystemExit
         # print "[NoCrash] KeyBoard Interrupt received.."
         ecode = 6
 

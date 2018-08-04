@@ -351,7 +351,7 @@ def command(*type_signature, reply=False, whole_msg=False, privileged=False, ari
                 return result if not quiet_action else ""
             except CmdException as e:
                 return str(e)
-            except:
+            except Exception:  # Everything else
                 log_exception(*sys.exc_info())
                 return "I hit an error while trying to run that command; run `!!/errorlogs` for details."
 
