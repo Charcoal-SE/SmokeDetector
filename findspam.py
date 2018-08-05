@@ -838,10 +838,8 @@ def toxic_check(post):
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def body_starts_with_title(post):
-    # Ignore too-short title
     t = post.title.strip().replace(" ", "")
-    if len(t) <= 10:
-        return False, False, False, ""
+    # Title can't be shorter than 15, so no need to ignore
 
     end_in_url, ending_url = link_at_end(post.body, None)
     if not end_in_url:
@@ -858,6 +856,10 @@ def body_starts_with_title(post):
     if similar_ratio(s[:len(t)], t) >= BODY_TITLE_SIMILAR_RATIO \
             or similar_ratio(s[-len(t):], t) >= BODY_TITLE_SIMILAR_RATIO:
         return False, False, True, "Body starts with title and ends in URL: " + ending_url
+
+    # Experimental: Body contains title verbatim
+    if t in strip_urls_and_tags(s).replace(" ", "").replace("\n", ""):
+        return False, False, True, "Body contains title and ends in URL: " + ending_url
     return False, False, False, ""
 
 
