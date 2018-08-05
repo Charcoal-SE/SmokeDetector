@@ -753,7 +753,7 @@ def similar_answer(post):
 
 # noinspection PyMissingTypeHints
 def strip_urls_and_tags(s):
-    return regex.sub(URL_REGEX, "", regex.sub(r"</?.+?>|\w+?://", "", s))
+    return regex.sub(URL_REGEX, "", regex.sub(r"</?[^>]+>|\w+://", "", s))
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
@@ -1576,13 +1576,13 @@ class FindSpam:
         for rule in FindSpam.rules:
             if 'commented-out' in rule:
                 continue
+            if (post.is_answer and not rule.get('answers', True)) \
+                    or (not post.is_answer and not rule.get('questions', True)):
+                continue
             title_to_check = post.title
             body_to_check = post.body.replace("&nsbp;", "").replace("\xAD", "") \
                                      .replace("\u200B", "").replace("\u200C", "")
             is_regex_check = 'regex' in rule
-            if (post.is_answer and not rule.get('answers', True)) \
-                    or (not post.is_answer and not rule.get('questions', True)):
-                continue
             if rule['stripcodeblocks']:
                 # use a placeholder to avoid triggering "few unique characters" when most of post is code
                 body_to_check = regex.sub("(?s)<pre>.*?</pre>",
