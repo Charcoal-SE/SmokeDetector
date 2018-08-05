@@ -838,9 +838,11 @@ def toxic_check(post):
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def body_starts_with_title(post):
-    # Ignore too-short title
     t = post.title.strip().replace(" ", "")
+
+    # Safeguard for answers, should never hit
     if len(t) <= 10:
+        log('warning', "Length of post title is 10 characters or less. This is highly abnormal")
         return False, False, False, ""
 
     end_in_url, ending_url = link_at_end(post.body, None)
