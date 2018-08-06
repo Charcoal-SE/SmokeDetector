@@ -4868,3 +4868,4 @@
 1533464440	Glorfindel	himalayan\.online
 1533471561	doppelgreener	turmeric\Wdiet
 1533473251	Glorfindel	thinkiit\.in
+1533515227	Makyen	[a-z_]*(?:1_*)?984[\W_]*329[\W_]*5944[a-z_]*
