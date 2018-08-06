@@ -187,7 +187,7 @@ def blacklist(_):
                        "Remember to escape dots in URLs using \\.")
 
 
-def check_blacklist(string_to_test, is_username, is_watchlist):
+def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
     # Test the string and provide a warning message if it is already caught.
     if is_username:
         question = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
@@ -212,15 +212,16 @@ def check_blacklist(string_to_test, is_username, is_watchlist):
     reasons = list(set(question_reasons) | set(answer_reasons))
 
     # Filter out watchlist results
+    filter_out = ["potentially bad ns"]
     if not is_watchlist:
-        reasons = list(filter(
-            lambda reason: "potentially bad keyword" not in reason, reasons))
+        filter_out.append("potentially bad keyword")
     # Ignore "Mostly non-latin body/answer" for phone number watches
-    elif regex.match(
-            r'(?:\[a-z_]\*)?(?:\(\?:)?\d+(?:[][\\W_*()?:]+\d+)+(?:\[a-z_]\*)?$',
-            string_to_test):
+    elif is_phone:
+        filter_out.append("mostly non-latin")
+
+    if filter_out:
         reasons = list(filter(
-            lambda reason: "mostly non-latin" not in reason, reasons))
+            lambda reason: all(x not in reason.lower() for x in filter_out), reasons))
 
     return reasons
 
@@ -259,13 +260,24 @@ def do_blacklist(blacklist_type, msg, force=False):
         raise CmdException("An invalid pattern was provided, not blacklisting.")
 
     if not force:
-        reasons = check_blacklist(pattern.replace("\\W", " ").replace("\\.", ".").replace("\\d", "8"),
-                                  blacklist_type == "username",
-                                  blacklist_type == "watch_keyword")
+        if regex.match(r'(?:\[a-z_]\*)?(?:\(\?:)?\d+(?:[][\\W_*()?:]+\d+)+(?:\[a-z_]\*)?$', pattern):
+            is_phone = True
+        else:
+            is_phone = False
 
-        if reasons:
-            raise CmdException("That pattern looks like it's already caught by " + format_blacklist_reasons(reasons) +
-                               "; append `-force` if you really want to do that.")
+        is_watchlist = bool(blacklist_type == 'watch_keyword')
+
+        concretized_pattern = pattern.replace("\\W", " ").replace("\\.", ".").replace("\\d", "8")
+
+        for username in False, True:
+            reasons = check_blacklist(
+                concretized_pattern, is_username=username, is_watchlist=is_watchlist, is_phone=is_phone)
+
+            if reasons:
+                raise CmdException(
+                    "That pattern looks like it's already caught by " +
+                    format_blacklist_reasons(reasons) +
+                    "; append `-force` if you really want to do that.")
 
     metasmoke_down = False
 
