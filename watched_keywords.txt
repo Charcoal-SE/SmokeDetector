@@ -4780,7 +4780,6 @@
 1533041192	tripleee	acowebs\.com
 1533045195	Glorfindel	geoproxies\.com
 1533046787	Mithrandir	Bark\W?Busters
-1533046794	Mithrandir	dogstrainingtools\.com
 1533075442	doppelgreener	supportprop58\.com
 1533099840	tripleee	[a-z_]*(?:1_*)?203[\W_]*456[\W_]*7944[a-z_]*
 1533099880	tripleee	[a-z_]*(?:1_*)?321[\W_]*730[\W_]*8834[a-z_]*
