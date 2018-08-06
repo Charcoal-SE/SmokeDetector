@@ -235,8 +235,7 @@ while True:
         log('error', logged_msg)
         with open("errorLogs.txt", "a") as f:
             f.write(logged_msg)
-        if seconds < 180 and exc_type != websocket.WebSocketConnectionClosedException\
-                and exc_type != KeyboardInterrupt and exc_type != SystemExit and exc_type != requests.ConnectionError:
+        if seconds < 180 and exc_type not in {websocket.WebSocketConnectionClosedException, requests.ConnectionError}:
             # noinspection PyProtectedMember
             os._exit(4)
         ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")

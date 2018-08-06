@@ -205,7 +205,7 @@ class BodyFetcher:
                     self.queue_timings[site].append(seconds_in_queue)
                 else:
                     self.queue_timings[site] = [seconds_in_queue]
-            except:
+            except KeyError:  # XXX: Any other possible exception?
                 continue  # Skip to next item if we've got invalid data or missing values.
 
         store_queue_timings()
