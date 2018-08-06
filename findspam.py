@@ -570,6 +570,7 @@ def watched_ns_for_url_domain(s, site):
         'web.com.ph.',
         {'ns09.domaincontrol.com.', 'ns10.domaincontrol.com.'},
         'supercloudapps.com.',
+        'vultr.com.',
     ])
 
 
