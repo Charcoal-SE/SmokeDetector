@@ -4893,5 +4893,4 @@
 1533542715	Tetsuya Yamamoto	greeniq\.ir
 1533548501	iBug	plusapk\.com
 1533548888	iBug	issaallassan116(?:@gmail\.com)?
-1533550523	doppelgreener	anand\W?tech\w+
 1533550546	doppelgreener	anand\W?tech\w*
