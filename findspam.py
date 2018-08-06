@@ -569,6 +569,7 @@ def watched_ns_for_url_domain(s, site):
         'shared-host.org.',
         'web.com.ph.',
         {'ns09.domaincontrol.com.', 'ns10.domaincontrol.com.'},
+        'supercloudapps.com.',
     ])
 
 
@@ -752,7 +753,7 @@ def similar_answer(post):
 
 # noinspection PyMissingTypeHints
 def strip_urls_and_tags(s):
-    return regex.sub(URL_REGEX, "", regex.sub(r"</?.+?>|\w+?://", "", s))
+    return regex.sub(URL_REGEX, "", regex.sub(r"</?[^>]+>|\w+://", "", s))
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
@@ -837,9 +838,11 @@ def toxic_check(post):
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def body_starts_with_title(post):
-    # Ignore too-short title
     t = post.title.strip().replace(" ", "")
+
+    # Safeguard for answers, should never hit
     if len(t) <= 10:
+        log('warning', "Length of post title is 10 characters or less. This is highly abnormal")
         return False, False, False, ""
 
     end_in_url, ending_url = link_at_end(post.body, None)
@@ -857,6 +860,10 @@ def body_starts_with_title(post):
     if similar_ratio(s[:len(t)], t) >= BODY_TITLE_SIMILAR_RATIO \
             or similar_ratio(s[-len(t):], t) >= BODY_TITLE_SIMILAR_RATIO:
         return False, False, True, "Body starts with title and ends in URL: " + ending_url
+
+    # Experimental: Body contains title verbatim
+    if t in strip_urls_and_tags(post.body).replace(" ", "").replace("\n", ""):
+        return False, False, True, "Body contains title and ends in URL: " + ending_url
     return False, False, False, ""
 
 
@@ -1380,7 +1387,8 @@ class FindSpam:
         # Body starts with title and ends in URL
         {'method': body_starts_with_title, 'all': True, 'sites': ['codegolf.stackexchange.com'],
          'reason': "body starts with title and ends in URL", 'whole_post': True, 'title': False, 'body': False,
-         'username': False, 'body_summary': False, 'stripcodeblocks': False, 'max_rep': 1, 'max_score': 0},
+         'username': False, 'body_summary': False, 'stripcodeblocks': False, 'max_rep': 1, 'max_score': 0,
+         'answers': False},
         #
         # Category: Suspicious contact information
         # Phone number in title
@@ -1570,13 +1578,13 @@ class FindSpam:
         for rule in FindSpam.rules:
             if 'commented-out' in rule:
                 continue
+            if (post.is_answer and not rule.get('answers', True)) \
+                    or (not post.is_answer and not rule.get('questions', True)):
+                continue
             title_to_check = post.title
             body_to_check = post.body.replace("&nsbp;", "").replace("\xAD", "") \
                                      .replace("\u200B", "").replace("\u200C", "")
             is_regex_check = 'regex' in rule
-            if (post.is_answer and not rule.get('answers', True)) \
-                    or (not post.is_answer and not rule.get('questions', True)):
-                continue
             if rule['stripcodeblocks']:
                 # use a placeholder to avoid triggering "few unique characters" when most of post is code
                 body_to_check = regex.sub("(?s)<pre>.*?</pre>",

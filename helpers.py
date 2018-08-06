@@ -16,7 +16,7 @@ class Helpers:
 def environ_or_none(key):
     try:
         return os.environ[key]
-    except:
+    except KeyError:
         return None
 
 

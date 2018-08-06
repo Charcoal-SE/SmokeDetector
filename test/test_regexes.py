@@ -88,6 +88,7 @@ But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, Fal
     ('Pattern-matching product name', 'Extreme Boost Max', '', 'stackoverflow.com', False, False, True),
     ('Pattern-matching product name', 'Alpha Formula Pro', '', 'math.stackexchange.com', False, False, False),
     ('Body starts with title', 'Body starts with title and ends with <a href="https://example.com">https://example.com</a>', '', '', False, False, True),
+    ('Body starts with title', 'Body starts with title and ends with <a href="https://example.com">https://example.com</a>', '', '', False, True, False),
     ('Advanced BSWT', '<p><a href="......">Product Name</a> Advanced BSWT is a must-have <a href="https://example.com">https://example.com</a></p>', '', '', False, False, True),
     ('IDNA misleading link', '<a href="http://www.h%c3%a5nd.no">http://www.h\u00E5nd.no</a>', '', '', False, False, False),
     ('Mostly punctuation', ';[].[.[.&_$)_\\*&_@$.[;*/-!#*&)(_.\'].1\\)!#_', '', '', False, False, True),

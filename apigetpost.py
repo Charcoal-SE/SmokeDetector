@@ -42,7 +42,7 @@ class PostData:
         # noinspection PyBroadException
         try:
             dictdata['IsAnswer'] = getattr(self, 'IsAnswer')
-        except:
+        except AttributeError:
             dictdata['IsAnswer'] = False  # Assume it's not an answer
 
         return dictdata
@@ -105,7 +105,7 @@ def api_get_post(post_url):
     post_data.creation_date = item['creation_date']
     try:
         post_data.last_edit_date = item['last_edit_date']
-    except:
+    except KeyError:
         post_data.last_edit_date = post_data.creation_date  # Key not present = not edited
     if post_type == "answer":
         post_data.question_id = item['question_id']

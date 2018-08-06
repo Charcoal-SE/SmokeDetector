@@ -13,9 +13,9 @@ from requests.auth import HTTPBasicAuth
 from urllib.parse import quote_plus
 if 'windows' in str(platform.platform()).lower():
     # noinspection PyPep8Naming
-    from classes import Git as git
+    from classes import Git as git, GitError
 else:
-    from sh import git
+    from sh import git, ErrorReturnCode as GitError
 
 from helpers import log
 from globalvars import GlobalVars
@@ -152,7 +152,7 @@ class GitManager:
                         # command is run again. This way, we keep things a little more clean in
                         # the local git tree
                         git.branch('-D', branch)
-                    except:
+                    except GitError:
                         # It's OK if the branch doesn't get deleted, so long as we switch back to
                         # deploy, which we do in the finally block...
                         pass
@@ -233,7 +233,7 @@ class GitManager:
 
             try:
                 git.branch('-D', branch)
-            except:
+            except GitError:
                 # It's OK if the branch doesn't get deleted, so long as we switch back to
                 # deploy, which we do in the finally block...
                 pass
@@ -254,7 +254,7 @@ class GitManager:
 
         try:
             git.pull()
-        except:
+        except GitError:
             pass
 
         git.remote.update()

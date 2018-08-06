@@ -4824,6 +4824,7 @@
 1533215588	Glorfindel	altomerge\.com
 1533217071	Glorfindel	eglobalinfo\.com
 1533235036	Mithrandir	southwest\W?airlines\W?customer\W?services
+1533235209	Erik the Outgolfer	sites\.google\.com/view/americanairlineschangeflights
 1533267632	Tetsuya Yamamoto	mobilekaba\.com
 1533275787	iBug	escorts?\W?girls?
 1533276872	tripleee	[a-z_]*(?:44_*)?(?:0_*)?808[\W_]*169[\W_]*8369[a-z_]*
@@ -4836,3 +4837,46 @@
 1533287227	tripleee	gofitmantra\.com
 1533290954	tripleee	isphack
 1533291972	tripleee	seo1seo1
+1533311532	Makyen	[a-z_]*(?:1_*)?612[\W_]*361[\W_]*0692[a-z_]*
+1533311542	Makyen	[a-z_]*(?:1_*)?800[\W_]*509[\W_]*3075[a-z_]*
+1533318595	Makyen	[a-z_]*(?:91[\W_]*)?9160[\W_]*267[\W_]*809[a-z_]*
+1533319961	Glorfindel	exploremyadventure\.com
+1533320396	Makyen	\w*h(?:[\W_]|&#?\w+;)*a(?:[\W_]|&#?\w+;)*c(?:[\W_]|&#?\w+;)*k(?:[\W_]|&#?\w+;)*s(?:[\W_]|&#?\w+;)*e(?:[\W_]|&#?\w+;)*c(?:[\W_]|&#?\w+;)*r(?:[\W_]|&#?\w+;)*e(?:[\W_]|&#?\w+;)*t(?:[\W_]|&#?\w+;)*e(?:[\W_]|&#?\w+;)*(?:a(?:[\W_]|&#?\w+;)*t(?:[\W_]|&#?\w+;)*)?g(?:[\W_]|&#?\w+;)*m(?:[\W_]|&#?\w+;)*a(?:[\W_]|&#?\w+;)*i(?:[\W_]|&#?\w+;)*l(?:[\W_]|&#?\w+;)*(?:d(?:[\W_]|&#?\w+;)*o(?:[\W_]|&#?\w+;)*t(?:[\W_]|&#?\w+;)*)?c(?:[\W_]|&#?\w+;)*o(?:[\W_]|&#?\w+;)*m\w*
+1533344557	Makyen	foundationchristianacademy\.org
+1533353089	iBug	fastdocuments\.net
+1533354809	Makyen	[a-z_]*(?:1_*)?910[\W_]*986[\W_]*3818[a-z_]*
+1533354816	Makyen	kupiti\W*vozačku\W*dozvolu
+1533354824	Makyen	kupiti\W*putovnicu
+1533360328	Suraj Rao	wirelessdisplay\.cn
+1533362252	iBug	dataentryexport\.com
+1533362486	Makyen	rodfinancing3\.wixsite\.com
+1533362647	iBug	epsonprinterrepair\.com
+1533363208	iBug	UCwkpKdiW4S4CGTg60Xky30Q
+1533364051	iBug	worldwidedocuments7(?:\W*gmail\.com)?
+1533364076	iBug	worldwidedocumentation\.com
+1533364736	Makyen	[a-z_]*(?:44[\W_]*)?753[\W_]*718[\W_]*2633[a-z_]*
+1533367416	Glorfindel	kvktech\.com
+1533367447	Glorfindel	dillashaw\W?vs\W?garbrandt\W?\d+
+1533378098	doppelgreener	ufa007\.com
+1533378160	doppelgreener	wordunscrambler\.co
+1533378187	doppelgreener	protasarim\.net
+1533396878	doppelgreener	sysinspirewindowslivecalendarexport
+1533412029	Makyen	cybergoddess87(?:@gmail\.com)?
+1533445797	Makyen	coolrishabhjaiswal(?:@gmail\.com)?
+1533455698	Makyen	bsai\.io
+1533457002	Makyen	nebulas\.io
+1533464440	Glorfindel	himalayan\.online
+1533471561	doppelgreener	turmeric\Wdiet
+1533473251	Glorfindel	thinkiit\.in
+1533515227	Makyen	[a-z_]*(?:1_*)?984[\W_]*329[\W_]*5944[a-z_]*
+1533515237	Makyen	agborjerryyan12(?:@gmail\.com)?
+1533515246	Makyen	greatidodotemple(?:@gmail\.com)?
+1533515258	Makyen	[a-z_]*234[\W_]*903[\W_]*0451[\W_]*450[a-z_]*
+1533522443	Makyen	quickesthacker(?:@gmail\.com)?
+1533524916	Tetsuya Yamamoto	ankarakanalacimi\.com
+1533528290	Tetsuya Yamamoto	healthymum\.org
+1533528425	iBug	ringtonemob\.net
+1533528570	Tetsuya Yamamoto	lipsonhips\.com
+1533528684	Tetsuya Yamamoto	bigbet66\.com
+1533528869	Tetsuya Yamamoto	onlineconvertfree\.com
+1533528896	Tetsuya Yamamoto	pilpedia\.com
