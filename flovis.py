@@ -49,7 +49,7 @@ class Flovis:
                     log('error', str(e))
                 finally:
                     try:
-                        if self.ws.sock:
+                        if self.ws and self.ws.sock:
                             self.ws.sock.close()
                     except websocket.WebSocketException:
                         pass
