@@ -110,6 +110,14 @@ ENGLISH = {
 ENGLISH_PRIOR = math.log(4 / 5)
 
 
+def is_whitelisted_website(url):
+    # Imported from method link_at_end
+    return bool(regex.compile(r"(?i)upload|\b(imgur|yfrog|gfycat|tinypic|sendvid|ctrlv|prntscr|gyazo|youtu\.?be|"
+                                   r"stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|regex101|"
+                                   r"(?<!plus\.)google|localhost|ubuntu|getbootstrap|"
+                                   r"jsfiddle\.net|codepen\.io)\b").search(url))
+
+
 def levenshtein(s1, s2):
     if len(s1) < len(s2):
         return levenshtein(s2, s1)
@@ -231,10 +239,7 @@ def link_at_end(s, site):   # link at end of question, on selected sites
     s = regex.sub("</?(?:strong|em|p)>", "", s)
     match = regex.compile(r"(?i)https?://(?:[.A-Za-z0-9-]*/?[.A-Za-z0-9-]*/?|plus\.google\.com/"
                           r"[\w/]*|www\.pinterest\.com/pin/[\d/]*)(?=</a>\s*$)").search(s)
-    if match and not regex.compile(r"(?i)upload|\b(imgur|yfrog|gfycat|tinypic|sendvid|ctrlv|prntscr|gyazo|youtu\.?be|"
-                                   r"stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|regex101|"
-                                   r"(?<!plus\.)google|localhost|ubuntu|getbootstrap|"
-                                   r"jsfiddle\.net|codepen\.io)\b").search(match.group(0)):
+    if match and not is_whitelisted_website(match.group(0)):
         return True, u"Link at end: {}".format(match.group(0))
     return False, ""
 
@@ -414,9 +419,7 @@ def keyword_link(s, site):   # thanking keyword and a link in the same short ans
     if len(s) > 400:
         return False, ""
     link = regex.compile(r'(?i)<a href="https?://\S+').search(s)
-    if not link or regex.compile(r"(?i)upload|\b(imgur|yfrog|gfycat|tinypic|sendvid|ctrlv|prntscr|gyazo|youtu\.?be|"
-                                 r"stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|(?<!plus\.)google|"
-                                 r"localhost|ubuntu)\b").search(link.group(0)):
+    if not link or is_whitelisted_website(link.group(0)):
         return False, ""
     praise = regex.compile(r"(?i)\b(nice|good|interesting|helpful|great|amazing) (article|blog|post|information)\b|"
                            r"very useful").search(s)
