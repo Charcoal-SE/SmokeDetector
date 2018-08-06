@@ -112,7 +112,7 @@ class GlobalVars:
 
     config = RawConfigParser()
 
-    if os.path.isfile('config') and not "pytest" in sys.modules:
+    if os.path.isfile('config') and "pytest" not in sys.modules:
         config.read('config')
         log('debug', "Configuration loaded from \"config\"")
     else:
