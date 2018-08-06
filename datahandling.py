@@ -424,7 +424,7 @@ def get_user_names_on_notification_list(chat_site, room_id, se_site, client):
         else:
             try:
                 names.append(current_users[current_users.index((i, Any()))][1])
-            except:
+            except ValueError:  # user not in room
                 pass
 
     return names

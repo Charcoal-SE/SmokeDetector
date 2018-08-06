@@ -54,12 +54,8 @@ class Metasmoke:
                                               "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"})
                         GlobalVars.metasmoke_ws.send(payload)
                         log('error', e)
-                        try:
-                            exc_info = sys.exc_info()
-                            traceback.print_exception(*exc_info)
-                        except:
-                            log('error', "Can't fetch full exception details")
-            except:
+                        traceback.print_exc()
+            except websocket.WebSocketException:
                 log('error', "Couldn't bind to MS websocket")
                 if not has_succeeded:
                     break

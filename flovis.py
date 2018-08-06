@@ -51,7 +51,7 @@ class Flovis:
                     try:
                         if self.ws.sock:
                             self.ws.sock.close()
-                    except Exception:  # TODO: What could happen here?
+                    except websocket.WebSocketException:
                         pass
 
                     self.ws = None

@@ -1415,7 +1415,7 @@ def delete_force(msg):
     # noinspection PyBroadException
     try:
         msg.delete()
-    except:
+    except Exception:  # I don't want to dig into ChatExchange
         pass  # couldn't delete message
 
 
@@ -1438,7 +1438,7 @@ def delete(msg):
     else:
         try:
             msg.delete()
-        except:
+        except Exception:  # I don't want to dig into ChatExchange
             pass
 
 
@@ -1497,7 +1497,7 @@ def false(feedback, msg, comment, alias_used="false"):
     try:
         if msg.room.id != 11540:
             msg.delete()
-    except:
+    except Exception:  # I don't want to dig into ChatExchange
         pass
 
     if comment:
