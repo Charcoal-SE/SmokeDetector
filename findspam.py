@@ -48,6 +48,11 @@ SE_SITES_RE = r'(?:{sites})'.format(
 SE_SITES_DOMAINS = ['stackoverflow.com', 'askubuntu.com', 'superuser.com', 'serverfault.com',
                     'mathoverflow.net', 'stackapps.com', 'stackexchange.com', 'sstatic.net',
                     'imgur.com']  # Frequently catching FP
+WHITELISTED_WEBSITES_REGEX = regex.compile(r"(?i)upload|\b(?:{})\b".format("|".join([
+    "yfrog", "gfycat", "tinypic", "sendvid", "ctrlv", "prntscr", "gyazo", r"youtu\.?be", "past[ie]", "dropbox",
+    "microsoft", "newegg", "cnet", "regex101", r"(?<!plus\.)google", "localhost", "ubuntu", "getbootstrap",
+    "jsfiddle\.net", "codepen\.io",
+] + [se_dom.replace(".", r"\.") for se_dom in SE_SITES_DOMAINS])))
 
 if GlobalVars.perspective_key:
     PERSPECTIVE = "https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=" + GlobalVars.perspective_key
@@ -112,10 +117,7 @@ ENGLISH_PRIOR = math.log(4 / 5)
 
 def is_whitelisted_website(url):
     # Imported from method link_at_end
-    return bool(regex.compile(r"(?i)upload|\b(imgur|yfrog|gfycat|tinypic|sendvid|ctrlv|prntscr|gyazo|youtu\.?be|"
-                              r"stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|regex101|"
-                              r"(?<!plus\.)google|localhost|ubuntu|getbootstrap|"
-                              r"jsfiddle\.net|codepen\.io)\b").search(url))
+    return bool(WHITELISTED_WEBSITES_REGEX.search(url))
 
 
 def levenshtein(s1, s2):
