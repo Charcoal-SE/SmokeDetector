@@ -113,9 +113,9 @@ ENGLISH_PRIOR = math.log(4 / 5)
 def is_whitelisted_website(url):
     # Imported from method link_at_end
     return bool(regex.compile(r"(?i)upload|\b(imgur|yfrog|gfycat|tinypic|sendvid|ctrlv|prntscr|gyazo|youtu\.?be|"
-                                   r"stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|regex101|"
-                                   r"(?<!plus\.)google|localhost|ubuntu|getbootstrap|"
-                                   r"jsfiddle\.net|codepen\.io)\b").search(url))
+                              r"stackexchange|superuser|past[ie].*|dropbox|microsoft|newegg|cnet|regex101|"
+                              r"(?<!plus\.)google|localhost|ubuntu|getbootstrap|"
+                              r"jsfiddle\.net|codepen\.io)\b").search(url))
 
 
 def levenshtein(s1, s2):
