@@ -25,16 +25,6 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s:%(levelname)s:%(message)s')
 
-# Get environment variables
-ChatExchangeU = os.environ.get('ChatExchangeU')
-ChatExchangeP = os.environ.get('ChatExchangeP')
-
-if ChatExchangeU is None:
-    ChatExchangeU = input("Username: ").strip('\r\n')
-
-if ChatExchangeP is None:
-    ChatExchangeP = getpass("Password: ").strip('\r\n')
-
 options = {"standby", "charcoal-hq-only", "no-chat", "no-git-user-check"}
 persistent_arguments = sys.argv
 
@@ -42,11 +32,6 @@ count = 0
 crashcount = 0
 stoprunning = False
 ecode = None  # Define this to prevent errors
-
-# Make a clean copy of existing environment variables, to pass down to subprocess.
-environ = os.environ.copy()
-environ['ChatExchangeU'] = ChatExchangeU
-environ['ChatExchangeP'] = ChatExchangeP
 
 
 def log(message):
@@ -98,9 +83,10 @@ while not stoprunning:
         pass  # We're OK if the argument isn't in the list.
 
     try:
-        ecode = sp.call(command + persistent_arguments, env=environ)
+        ecode = sp.call(command + persistent_arguments, env=os.environ.copy())
     except Exception:
-        pass
+        exc_type, exc_obj, exc_tb = sys.exc_info()
+        log("sp.call() exited with {0}: {1}".format(exc_type.__name__, exc_obj))
     except BaseException:  # KerboardInterrupt and SystemExit
         # print "[NoCrash] KeyBoard Interrupt received.."
         ecode = 6

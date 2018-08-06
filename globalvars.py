@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import sys
 import os
 from datetime import datetime
 from html.parser import HTMLParser
@@ -111,10 +112,15 @@ class GlobalVars:
 
     config = RawConfigParser()
 
-    if os.path.isfile('config'):
+    if os.path.isfile('config') and not "pytest" in sys.modules:
         config.read('config')
+        log('debug', "Configuration loaded from \"config\"")
     else:
         config.read('config.ci')
+        if "pytest" in sys.modules:
+            log('debug', "Running in pytest, force load config from \"config.ci\"")
+        else:
+            log('debug', "Configuration loaded from \"config.ci\"")
 
     # environ_or_none defined in helpers.py
     bot_name = environ_or_none("SMOKEDETECTOR_NAME") or "SmokeDetector"
