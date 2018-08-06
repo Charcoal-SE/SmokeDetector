@@ -312,7 +312,7 @@ class Metasmoke:
                     if response['shutdown']:
                         os._exit(6)
 
-            except Exception:
+            except Exception:  # TODO: What could happen here?
                 pass
 
         except Exception as e:

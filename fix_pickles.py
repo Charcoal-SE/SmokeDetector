@@ -16,8 +16,8 @@ def fix_extension_on_pickles():
         try:
             if os.path.isfile(txt):
                 os.rename(txt, (txt[:-4] + '.p'))
-        except Exception:
-            raise RuntimeError("Could not migrate Pickle file from .txt extension to .p extension.")
+        except Exception:  # TODO: What could happen here?
+            raise RuntimeError("Could not migrate Pickle file from .txt extension to .p extension.") from None
 
 
 if __name__ == "__main__":

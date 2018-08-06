@@ -84,7 +84,7 @@ while not stoprunning:
 
     try:
         ecode = sp.call(command + persistent_arguments, env=os.environ.copy())
-    except Exception:
+    except Exception:  # Kinda sorta intended, used to be a pass so the BaseException below only catch program exits
         exc_type, exc_obj, exc_tb = sys.exc_info()
         log("sp.call() exited with {0}: {1}".format(exc_type.__name__, exc_obj))
     except BaseException:  # KerboardInterrupt and SystemExit

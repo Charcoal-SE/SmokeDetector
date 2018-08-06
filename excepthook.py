@@ -52,9 +52,9 @@ def install_thread_excepthook():
         def run_with_except_hook(*args, **kw):
             try:
                 run_old(*args, **kw)
-            except Exception:
+            except Exception:  # Broad exception makes sense here
                 sys.excepthook(*sys.exc_info())
-            except BaseException:  # This includes KeyboardInterrupt and SystemExit
+            except BaseException:  # KeyboardInterrupt and SystemExit
                 raise
         self.run = run_with_except_hook
     threading.Thread.__init__ = init

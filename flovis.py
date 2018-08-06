@@ -51,7 +51,7 @@ class Flovis:
                     try:
                         if self.ws.sock:
                             self.ws.sock.close()
-                    except Exception:
+                    except Exception:  # TODO: What could happen here?
                         pass
 
                     self.ws = None
