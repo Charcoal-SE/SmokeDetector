@@ -539,7 +539,7 @@ def bad_ns_for_url_domain(s, site):
         'promoocodes.com.',
         'myassignmenthelp.co.uk.',
         'socialmonkee.com.',
-        'aapkeaajanese.website'.,
+        'aapkeaajanese.website.',
     ])
 
 
