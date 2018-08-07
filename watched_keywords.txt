@@ -4767,7 +4767,6 @@
 1533020845	Makyen	[a-z_]*(?:91[\W_]*)?9587[\W_]*549[\W_]*251[a-z_]*
 1533021545	tripleee	titan\W?testo
 1533021630	tripleee	slim4vit
-1533024795	Makyen	garmin-updates\.net
 1533024806	Makyen	[a-z_]*(?:1_*)?844[\W_]*570[\W_]*9631[a-z_]*
 1533024994	Makyen	(?:\W*</a>(?!.*?</?code).*?nutrition.*?program|nutrition(?!.*?</?code)(?=.*?</a>).*?program)
 1533027111	Federico	solutionbyyouth\.com
