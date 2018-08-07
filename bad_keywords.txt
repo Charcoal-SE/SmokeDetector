@@ -1471,3 +1471,4 @@ keto\W?fast\W?diet
 daniel\W+tan
 slim\W?wave
 (?<=/)canon-
+belly\W?burn
