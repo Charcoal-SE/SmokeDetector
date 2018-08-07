@@ -540,6 +540,7 @@ def bad_ns_for_url_domain(s, site):
         'myassignmenthelp.co.uk.',
         'socialmonkee.com.',
         'aapkeaajanese.website.',
+        'healthymum.org.',
     ])
 
 
