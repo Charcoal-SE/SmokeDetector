@@ -263,7 +263,7 @@ internal\W911
 true\Wbrilliance
 muscle\Wxtx
 test\Wboost\Welite
-richcopy\W360
+(?:gs\W?)?richcopy\W?360
 collamask
 naturacel
 luminescent\Wserum
