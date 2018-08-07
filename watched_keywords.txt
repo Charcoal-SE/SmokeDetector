@@ -4915,3 +4915,4 @@
 1533629829	Glorfindel	fhacyberservics
 1533630904	Makyen	diamondloanfirm24(?:@gmail\.com)?
 1533630921	Makyen	[a-z_]*(?:1_*)?903[\W_]*568[\W_]*0039[a-z_]*
+1533631690	Makyen	diamond\W*loan\W*firm
