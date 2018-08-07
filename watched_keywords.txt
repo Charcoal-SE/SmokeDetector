@@ -4904,3 +4904,4 @@
 1533614873	tripleee	nolza9\.com
 1533620919	tripleee	[a-z_]*(?:1_*)?800[\W_]*610[\W_]*6962[a-z_]*
 1533621707	tripleee	ogeninfo\.com
+1533623276	Makyen	\w*[\w-]*factforhealth(?!\.com)[\w-]*\w*
