@@ -4907,3 +4907,4 @@
 1533623276	Makyen	\w*[\w-]*factforhealth(?!\.com)[\w-]*\w*
 1533625292	tripleee	apahouse\.com
 1533625614	Glorfindel	phdassistance\.com
+1533627283	Glorfindel	techseek\.org
