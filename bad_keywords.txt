@@ -1472,3 +1472,4 @@ daniel\W+tan
 slim\W?wave
 (?<=/)canon-
 belly\W?burn
+hackethics008(?:@gmail\.com)?
