@@ -76,7 +76,6 @@ while not stoprunning:
         else:
             command = (PY_EXECUTABLE + ' ws.py standby').split()
 
-    # noinspection PyBroadException
     try:
         persistent_arguments.remove('standby')
     except ValueError:
@@ -84,11 +83,10 @@ while not stoprunning:
 
     try:
         ecode = sp.call(command + persistent_arguments, env=os.environ.copy())
-    except Exception:  # Kinda sorta intended, used to be a pass so the BaseException below only catch program exits
+    except sp.SubprocessError:
         exc_type, exc_obj, exc_tb = sys.exc_info()
-        log("sp.call() exited with {0}: {1}".format(exc_type.__name__, exc_obj))
-    except BaseException:  # KerboardInterrupt and SystemExit
-        # print "[NoCrash] KeyBoard Interrupt received.."
+        log("subprocess.call() error {0}: {1}".format(exc_type.__name__, exc_obj))
+    except (KeyboardInterrupt, SystemExit):
         ecode = 6
 
     log('Exited with ecode {}'.format(ecode))
