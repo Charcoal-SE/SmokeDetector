@@ -4925,3 +4925,4 @@
 1533673329	Makyen	maninerd\.com
 1533675249	doppelgreener	apmediahouse\.com
 1533676195	Zoe	allcoinhodler(?:\.com)?
+1533682655	Tetsuya Yamamoto	synlogics\.com
