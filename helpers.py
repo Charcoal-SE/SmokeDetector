@@ -54,7 +54,7 @@ def log(log_level, *args):
 
     color = (levels[log_level][1] if log_level in levels else 'white')
     log_str = u"{} {}".format(colored("[{}]".format(datetime.now().isoformat()[11:-7]), color),
-                              u"  ".join([str(x) for x in args]))
+                              u"  ".join(str(x) for x in args))
     print(log_str)
 
 

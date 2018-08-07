@@ -433,7 +433,7 @@ def get_user_names_on_notification_list(chat_site, room_id, se_site, client):
 # noinspection PyMissingTypeHints
 def append_pings(original_message, names):
     if len(names) != 0:
-        new_message = u"{0} ({1})".format(original_message, " ".join(["@" + x.replace(" ", "") for x in names]))
+        new_message = u"{0} ({1})".format(original_message, " ".join("@" + x.replace(" ", "") for x in names))
         if len(new_message) <= 500:
             return new_message
     return original_message

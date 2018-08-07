@@ -311,7 +311,7 @@ def has_customer_service(s, site):  # flexible detection of customer service in 
         keywords = regex.compile(r"(?i)\b(customer|help|care|helpline|reservation|phone|recovery|service|support|"
                                  r"contact|tech|technical|telephone|number)\b").findall(s)
         if len(set(keywords)) >= 2:
-            matches = ", ".join(["".join(match) for match in keywords])
+            matches = ", ".join("".join(match) for match in keywords)
             return True, u"Scam aimed at *{}* customers. Keywords: *{}*".format(business.group(0), matches)
     return False, ""
 
@@ -478,7 +478,7 @@ def bad_pattern_in_url(s, site):
         r'^https?://{0}'.format(SE_SITES_RE), x[0])]
     if matches:
         return True, u"Bad fragment in link {}".format(
-            ", ".join(["".join(match) for match in matches]))
+            ", ".join("".join(match) for match in matches))
     else:
         return False, ""
 
