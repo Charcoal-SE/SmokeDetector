@@ -1467,3 +1467,4 @@ keto\W?lux
 turmeric\W?diet
 ketofit(?:\W?dragons\W?den)?
 Keep\WTry2fit
+keto\W?fast\W?diet
