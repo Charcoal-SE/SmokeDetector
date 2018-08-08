@@ -1475,3 +1475,4 @@ belly\W?burn
 hackethics008(?:@gmail\.com)?
 smart\W?body\W?max
 printer-error-code-messages
+supercharge\W?male
