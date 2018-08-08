@@ -233,7 +233,7 @@ def has_repeating_characters(s, site):
     match = "".join("".join(match) for match in matches)
     if len(match) / len(s) >= REPEATED_CHARACTER_RATIO:  # Repeating characters make up >= 20 percent
         return True, "Repeated character: {}".format("*, *".join(
-            "\"{}\"*{}".format(match[0], len(match)) for match in matches))
+            "\"{}\"*{}".format(match[0], len(''.join(match))) for match in matches))
     return False, ""
 
 
