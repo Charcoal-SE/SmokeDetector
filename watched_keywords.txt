@@ -4940,3 +4940,4 @@
 1533722312	doppelgreener	yourtopbest\.com
 1533725690	Glorfindel	hairstylersfriend\.com
 1533726487	Glorfindel	herbs\W?solutions\W?by\W?nature
+1533727839	Glorfindel	viralbigo\.com
