@@ -4947,3 +4947,4 @@
 1533737448	Tetsuya Yamamoto	emercoin\.com
 1533751111	Makyen	[a-z_]*(?:1_*)?857[\W_]*309[\W_]*9[\W_]*158[a-z_]*
 1533751123	Makyen	howard[\W_]*loan[\W_]*funds
+1533766237	doppelgreener	coupon\W?codes?
