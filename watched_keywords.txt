@@ -4933,3 +4933,4 @@
 1533712142	Glorfindel	hightidefestival
 1533712148	Tetsuya Yamamoto	hightidefestival\.org
 1533712410	tripleee	sotegirt
+1533712510	Glorfindel	sportsblog\.com
