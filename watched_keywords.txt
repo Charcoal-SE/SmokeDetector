@@ -4929,3 +4929,4 @@
 1533704793	Makyen	[a-z_]*(?:1_*)?518[\W_]*740[\W_]*0715[a-z_]*
 1533707932	tripleee	alphaforcetestorev\.com
 1533708835	Makyen	asussupportnumber\.com
+1533709260	tripleee	lenovosupport\.org
