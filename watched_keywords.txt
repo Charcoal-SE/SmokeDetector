@@ -4935,4 +4935,3 @@
 1533712410	tripleee	sotegirt
 1533712510	Glorfindel	sportsblog\.com
 1533719437	tripleee	read\W+before\W+(you\W+)?buy
-1533719871	tripleee	support\W*number
