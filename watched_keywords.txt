@@ -4956,3 +4956,4 @@
 1533778858	Tetsuya Yamamoto	obatsakitlututbengkak\.com
 1533778890	Tetsuya Yamamoto	obatherbalterbaik14\.blogspot
 1533783993	paper1111	soundcloudmp3\.online
+1533791061	tripleee	[a-z_]*(?:91_*)?9343[\W_]*518[\W_]*612[a-z_]*
