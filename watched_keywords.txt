@@ -4967,3 +4967,4 @@
 1533807887	Tetsuya Yamamoto	nrimb\.com
 1533811470	Suraj Rao	livewirelabs\.co
 1533812900	Zoe	traveltourister\.com
+1533815311	tripleee	[a-z_]*(?:27_*)?(?:0_*)?660[\W_]*699[\W_]*030[a-z_]*
