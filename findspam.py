@@ -580,6 +580,7 @@ def watched_ns_for_url_domain(s, site):
         'supercloudapps.com.',
         'vultr.com.',
         'directory92.com.',
+        'offshoric.com.',
     ])
 
 
