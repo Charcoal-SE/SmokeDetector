@@ -4969,3 +4969,4 @@
 1533815311	tripleee	[a-z_]*(?:27_*)?(?:0_*)?660[\W_]*699[\W_]*030[a-z_]*
 1533816566	tripleee	surli\.in
 1533818133	tripleee	indydesk\.com
+1533820949	tripleee	lyricsgym\.com
