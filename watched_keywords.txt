@@ -4960,3 +4960,4 @@
 1533791140	tripleee	apollo\W*(?:kidney\W*)?hospital\d*
 1533791167	tripleee	oetprate
 1533791957	tripleee	bostonairporttaxis\.com
+1533796130	Tetsuya Yamamoto	guidesinsider\.com
