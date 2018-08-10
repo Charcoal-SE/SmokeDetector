@@ -4985,3 +4985,4 @@
 1533888862	Glorfindel	technologyconference\.com
 1533894560	Shree	expressdocuments\d+(?:@gmail\.com)?
 1533897866	Glorfindel	carlson ?\W?media
+1533902756	Federico	Cybershieldnotch
