@@ -1480,3 +1480,4 @@ keto\W?bloom
 [a-z_]*(?:1_*)?800[\W_]*294[\W_]*1752[a-z_]*
 praltrix
 diet\W*pills?
+menage\W?beauty
