@@ -51,7 +51,7 @@ SE_SITES_DOMAINS = ['stackoverflow.com', 'askubuntu.com', 'superuser.com', 'serv
 WHITELISTED_WEBSITES_REGEX = regex.compile(r"(?i)upload|\b(?:{})\b".format("|".join([
     "yfrog", "gfycat", "tinypic", "sendvid", "ctrlv", "prntscr", "gyazo", r"youtu\.?be", "past[ie]", "dropbox",
     "microsoft", "newegg", "cnet", "regex101", r"(?<!plus\.)google", "localhost", "ubuntu", "getbootstrap",
-    "jsfiddle\.net", "codepen\.io",
+    "jsfiddle\.net", "codepen\.io", "pastebin"
 ] + [se_dom.replace(".", r"\.") for se_dom in SE_SITES_DOMAINS])))
 
 if GlobalVars.perspective_key:
@@ -214,7 +214,7 @@ def has_few_characters(s, site):
     s = regex.sub("</?(?:p|strong|em)>", "", s).rstrip()  # remove HTML paragraph tags from posts
     uniques = len(set(s) - {"\n", "\t"})
     if (len(s) >= 30 and uniques <= 6) or (len(s) >= 100 and uniques <= 15):  # reduce if false reports appear
-        if (uniques <= 15) and (uniques >= 5) and site == "math.stackexchange.com":
+        if uniques >= 5 and site == "math.stackexchange.com":
             # Special case for Math.SE: Uniques case may trigger false-positives.
             return False, ""
         return True, "Contains {} unique character{}".format(uniques, "s" if uniques >= 2 else "")
@@ -282,8 +282,8 @@ def has_phone_number(s, site):
                             r"\s{0,2}\d{3}\s{0,2}\d{4})(?!\d)", regex.UNICODE).findall(s)
     test_formats = ["IN", "US", "NG", None]      # ^ don't match parts of too long strings of digits
     for phone_number in matched:
-        if regex.compile(r"^21474(672[56]|8364)|^192168").search(phone_number):
-            return False, ""  # error code or limit of int size, or 192.168 IP
+        if regex.compile(r"^21474(672[56]|8364)|^192168|3221225").search(phone_number):
+            return False, ""  # error code or limit of int size, or 192.168 IP, or 0xC000000_ error code
         for testf in test_formats:
             try:
                 z = phonenumbers.parse(phone_number, testf)
@@ -341,10 +341,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
         bool(other) + capitalized
     if score >= 8:
         match_objects = [organ, condition, goal, remedy, boast, other]
-        words = []
-        for match in match_objects:
-            if match:
-                words.append(match.group(0))
+        words = [match.group(0) for match in match_objects if match]
         return True, u"Health-themed spam (score {}). Keywords: *{}*".format(score, ", ".join(words).lower())
     return False, ""
 
@@ -352,7 +349,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def pattern_product_name(s, site):
     keywords = [
-        "Testo", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Diet", "Slim", "Premier", "Diet", "(?:Pure)?Fit",
+        "Testo", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Diet", "Slim", "Premier", "(?:Pure)?Fit",
         "Junivive", "Apexatropin", "Gain", "Allure", "Nuvella", "Trimgenix", "Satin", "Prodroxatone", "Blast",
         "Elite", "Force", "Exceptional", "Enhance(?:ment)?", "Nitro", "Max+", "Boost", "E?xtreme", "Grow",
         "Deep", "Male", "Pro", "Advanced", "Monster", "Divine", "Royale", "Angele*", "Trinity", "Andro",
@@ -407,11 +404,11 @@ def keyword_email(s, site):   # a keyword and an email in the same post
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def pattern_email(s, site):
-    pattern = regex.compile(r"(?<![=#/])\b(dr|[A-z0-9_.%+-]*"
+    pattern = regex.compile(r"(?i)(?<![=#/])\b(dr|[A-z0-9_.%+-]*"
                             r"(loan|hack|financ|fund|spell|temple|herbal|spiritual|atm|heal|priest|classes|"
                             r"investment))[A-z0-9_.%+-]*"
                             r"@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b"
-                            ).search(s.lower())
+                            ).search(s)
     if pattern:
         return True, u"Pattern-matching email {}".format(pattern.group(0))
     return False, ""
@@ -791,12 +788,15 @@ def mostly_dots(s, site):
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def mostly_punctuations(s, site):
-    s = strip_urls_and_tags(s)
-    if len(s) <= 12:
+    if len(s) < 30:
         return False, ""
+    body = regex.sub(r"(?s)<pre([\w=\" -]*)?>.*?</pre>", "", s)
+    body = regex.sub(r"(?s)<code>.*?</code>", "", body)
+    body = strip_urls_and_tags(body)
+    s = strip_urls_and_tags(s)
 
     punct_re = regex.compile(r"[[:punct:]]")
-    all_punc = punct_re.findall(s.replace(".", ""))
+    all_punc = punct_re.findall(body.replace(".", ""))
     count = max(all_punc.count(punc) for punc in set(all_punc)) if all_punc else 0
     frequency = count / len(s)
 
@@ -1510,7 +1510,7 @@ class FindSpam:
         # Mostly single punctuation in post
         {'method': mostly_punctuations, 'all': True, 'sites': ['math.stackexchange.com', 'mathoverflow.net'],
          'reason': 'mostly punctuation marks in {}', 'title': True, 'body': True, 'username': False,
-         'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
+         'body_summary': False, 'stripcodeblocks': False, 'max_rep': 1, 'max_score': 0},
         # Title ends with Comma (IPS Troll)
         {'regex': r".*\,$", 'all': False, 'sites': ['interpersonal.stackexchange.com'],
          'reason': "title ends with comma", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
