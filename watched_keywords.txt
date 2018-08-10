@@ -4977,3 +4977,4 @@
 1533879627	Makyen	antivirussupporthelpdesk\.com
 1533879656	Makyen	coupon[\W_]?codes?
 1533883912	Glorfindel	insdhyd\.com
+1533884378	Glorfindel	techlarix\.com
