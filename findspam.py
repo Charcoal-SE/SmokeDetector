@@ -282,7 +282,7 @@ def has_phone_number(s, site):
                             r"\s{0,2}\d{3}\s{0,2}\d{4})(?!\d)", regex.UNICODE).findall(s)
     test_formats = ["IN", "US", "NG", None]      # ^ don't match parts of too long strings of digits
     for phone_number in matched:
-        if regex.compile(r"^21474(672[56]|8364)|^192168|3221225").search(phone_number):
+        if regex.compile(r"^21474(672[56]|8364)|^192168|^3221225").search(phone_number):
             return False, ""  # error code or limit of int size, or 192.168 IP, or 0xC000000_ error code
         for testf in test_formats:
             try:
@@ -788,12 +788,12 @@ def mostly_dots(s, site):
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def mostly_punctuations(s, site):
-    if len(s) < 30:
-        return False, ""
     body = regex.sub(r"(?s)<pre([\w=\" -]*)?>.*?</pre>", "", s)
     body = regex.sub(r"(?s)<code>.*?</code>", "", body)
     body = strip_urls_and_tags(body)
     s = strip_urls_and_tags(s)
+    if len(s) < 15:
+        return False, ""
 
     punct_re = regex.compile(r"[[:punct:]]")
     all_punc = punct_re.findall(body.replace(".", ""))
@@ -802,15 +802,6 @@ def mostly_punctuations(s, site):
 
     if frequency >= PUNCTUATION_RATIO:
         return True, u"Post contains {} punctuation marks out of {} characters".format(count, len(s))
-    else:
-        return False, ""
-
-
-def mevaqesh_troll(s, site):
-    s = s.lower().replace(' ', '')
-    bad = 'mevaqeshthereforehasnoshareintheworldtocome'
-    if bad in s:
-        return True, "Post matches pattern from a known troll"
     else:
         return False, ""
 
@@ -1240,9 +1231,6 @@ class FindSpam:
          'sites': ["skeptics.stackexchange.com", "history.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        {'method': mevaqesh_troll, 'all': False, 'sites': ['judaism.stackexchange.com'],
-         'reason': 'potential troll victim', 'title': False, 'body': True, 'username': False,
-         'stripcodeblocks': False, 'body_summary': False, 'max_rep': 11, 'max_score': 1},
         #
         # Category: Suspicious links
         # Blacklisted sites
