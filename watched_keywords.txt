@@ -4946,7 +4946,6 @@
 1533737448	Tetsuya Yamamoto	emercoin\.com
 1533751111	Makyen	[a-z_]*(?:1_*)?857[\W_]*309[\W_]*9[\W_]*158[a-z_]*
 1533751123	Makyen	howard[\W_]*loan[\W_]*funds
-1533766311	doppelgreener	coupon_codes?
 1533778211	Tetsuya Yamamoto	sheffield-backpage\.com
 1533778810	Tetsuya Yamamoto	obatresdung\.com
 1533778822	paper1111	gamatemaswalatra\.net
