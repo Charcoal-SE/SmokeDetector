@@ -4299,7 +4299,6 @@
 1530878914	Glorfindel	designerjuwel
 1530879733	Glorfindel	developerm\.wordpress\.com
 1530893767	doppelgreener	commoditytips\.org\.in
-1530893785	doppelgreener	biztechcs\.com
 1530896121	bertieb	tripleolighting\.com
 1530903560	doppelgreener	123hpcomsetup\.org
 1530904064	Makyen	cyberhackez@gmail\.com
