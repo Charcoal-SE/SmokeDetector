@@ -1483,3 +1483,4 @@ diet\W*pills?
 menage\W?beauty
 cudamax
 Ziapro
+tone\W?fire(?:\W?garcinia)?
