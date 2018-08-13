@@ -562,7 +562,6 @@ allurifi
 kyto\W?trim
 activ\W?forte
 proactol
-neftegazagent
 elixir\Wrevolution
 testo\W?pro
 orviax
