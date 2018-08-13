@@ -575,6 +575,7 @@ def watched_ns_for_url_domain(s, site):
         'shared-host.org.',
         'web.com.ph.',
         {'ns09.domaincontrol.com.', 'ns10.domaincontrol.com.'},
+        {'ns43.domaincontrol.com.', 'ns44.domaincontrol.com.'},
         'supercloudapps.com.',
         'vultr.com.',
         'directory92.com.',
