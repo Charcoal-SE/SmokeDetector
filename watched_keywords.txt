@@ -5001,3 +5001,4 @@
 1534130696	Makyen	gm2p\.com
 1534130707	Makyen	twitter\.com/GM2P_Official
 1534130713	Makyen	facebook\.com/gm2pcom
+1534135996	Tetsuya Yamamoto	obatasamuratalami\.net
