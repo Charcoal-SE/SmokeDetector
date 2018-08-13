@@ -221,7 +221,7 @@ def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
 
     if filter_out:
         reasons = list(filter(
-            lambda reason: all(x not in reason.lower() for x in filter_out), reasons))
+            lambda reason: all([x not in reason.lower() for x in filter_out]), reasons))
 
     return reasons
 
@@ -893,9 +893,9 @@ def threads():
     :return: A string
     """
 
-    threads_list = ("{ident}: {name}".format(ident=t.ident, name=t.name) for t in threading.enumerate())
+    threads_list = ["{ident}: {name}".format(ident=t.ident, name=t.name) for t in threading.enumerate()]
 
-    return "{threads}".format(threads="\n".join(list(threads_list)))
+    return "\n".join(threads_list)
 
 
 # noinspection PyIncorrectDocstring

@@ -54,7 +54,7 @@ def log(log_level, *args):
 
     color = (levels[log_level][1] if log_level in levels else 'white')
     log_str = u"{} {}".format(colored("[{}]".format(datetime.now().isoformat()[11:-7]), color),
-                              u"  ".join(str(x) for x in args))
+                              u"  ".join([str(x) for x in args]))
     print(log_str)
 
 
@@ -62,7 +62,7 @@ def only_blacklists_changed(diff):
     blacklist_files = ["bad_keywords.txt", "blacklisted_usernames.txt", "blacklisted_websites.txt",
                        "watched_keywords.txt"]
     files_changed = diff.split()
-    return not any(f for f in files_changed if f not in blacklist_files)
+    return not any([f for f in files_changed if f not in blacklist_files])
 
 
 # FAIR WARNING: Sending HEAD requests to resolve a shortened link is generally okay - there aren't

@@ -230,10 +230,10 @@ def has_repeating_characters(s, site):
     if not s:
         return False, ""
     matches = regex.compile(r"([^\s_.,?!=~*/0-9-])(\1{9,})", regex.UNICODE).findall(s)
-    match = "".join("".join(match) for match in matches)
+    match = "".join(["".join(match) for match in matches])
     if len(match) / len(s) >= REPEATED_CHARACTER_RATIO:  # Repeating characters make up >= 20 percent
         return True, "Repeated character: {}".format(", ".join(
-            "{}*{}".format(repr(match[0]), len(''.join(match))) for match in matches))
+            ["{}*{}".format(repr(match[0]), len(''.join(match))) for match in matches]))
     return False, ""
 
 
@@ -312,7 +312,7 @@ def has_customer_service(s, site):  # flexible detection of customer service in 
         keywords = regex.compile(r"(?i)\b(customer|help|care|helpline|reservation|phone|recovery|service|support|"
                                  r"contact|tech|technical|telephone|number)\b").findall(s)
         if len(set(keywords)) >= 2:
-            matches = ", ".join("".join(match) for match in keywords)
+            matches = ", ".join(["".join(match) for match in keywords])
             return True, u"Scam aimed at *{}* customers. Keywords: *{}*".format(business.group(0), matches)
     return False, ""
 
@@ -363,12 +363,12 @@ def pattern_product_name(s, site):
 
     three_words = regex.compile(r"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
     two_words = regex.compile(r"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
-    unique_three_words = sum(len(m[1:]) == len(set(m[1:])) for m in three_words)
-    unique_two_words = sum(len(m[1:]) == len(set(m[1:])) for m in two_words)
+    unique_three_words = sum(len(m[1:]) == len([set(m[1:])) for m in three_words])
+    unique_two_words = sum(len(m[1:]) == len([set(m[1:])) for m in two_words])
     if unique_three_words >= 1:
-        return True, u"Pattern-matching product name *{}*".format(", ".join(match[0] for match in set(three_words)))
+        return True, u"Pattern-matching product name *{}*".format(", ".join([match[0] for match in set(three_words)]))
     elif unique_two_words >= 2:
-        return True, u"Pattern-matching product name *{}*".format(", ".join(match[0] for match in set(two_words)))
+        return True, u"Pattern-matching product name *{}*".format(", ".join([match[0] for match in set(two_words)]))
     return False, ""
 
 
@@ -476,7 +476,7 @@ def bad_pattern_in_url(s, site):
         r'^https?://{0}'.format(SE_SITES_RE), x[0])]
     if matches:
         return True, u"Bad fragment in link {}".format(
-            ", ".join("".join(match) for match in matches))
+            ", ".join(["".join(match) for match in matches]))
     else:
         return False, ""
 
@@ -514,7 +514,7 @@ def ns_for_url_domain(s, site, nslist):
             continue
         endtime = datetime.now()
         log('debug', 'NS query duration {0}'.format(endtime - starttime))
-        nameservers = set(server.target.to_text() for server in ns)
+        nameservers = set([server.target.to_text() for server in ns])
         for ns_candidate in nslist:
             if (type(ns_candidate) is set and nameservers == ns_candidate) or \
                 any(ns.endswith('.{0}'.format(ns_candidate))
@@ -621,7 +621,7 @@ def username_similar_website(post):
     if sim_ratio >= SIMILAR_THRESHOLD:
         return False, False, True, "Username `{}` similar to {}, ratio={}".format(
             username,
-            ', '.join('*{}* at position {}-{}'.format(w, s.index(w), s.index(w) + len(w)) for w in sim_webs),
+            ', '.join(['*{}* at position {}-{}'.format(w, s.index(w), s.index(w) + len(w)) for w in sim_webs]),
             sim_ratio)
     else:
         return False, False, False, ""
@@ -797,7 +797,7 @@ def mostly_punctuations(s, site):
 
     punct_re = regex.compile(r"[[:punct:]]")
     all_punc = punct_re.findall(body.replace(".", ""))
-    count = max(all_punc.count(punc) for punc in set(all_punc)) if all_punc else 0
+    count = max([all_punc.count(punc) for punc in set(all_punc)]) if all_punc else 0
     frequency = count / len(s)
 
     if frequency >= PUNCTUATION_RATIO:

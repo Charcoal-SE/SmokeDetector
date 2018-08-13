@@ -149,7 +149,7 @@ def handle_spam(post, reasons, why):
         if len(message) > 500:
             message = (prefix_ms + s)[:500]  # Truncate directly and keep MS link
 
-        without_roles = tuple("no-" + reason for reason in reasons) + ("site-no-" + post.post_site,)
+        without_roles = tuple(["no-" + reason for reason in reasons]) + ("site-no-" + post.post_site,)
 
         if set(reasons) - GlobalVars.experimental_reasons == set() and \
                 not why.startswith("Post manually "):
