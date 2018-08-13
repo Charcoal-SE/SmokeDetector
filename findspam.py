@@ -539,6 +539,7 @@ def bad_ns_for_url_domain(s, site):
         'socialmonkee.com.',
         'aapkeaajanese.website.',
         'healthymum.org.',
+        'escortdomain.net.',
     ])
 
 
