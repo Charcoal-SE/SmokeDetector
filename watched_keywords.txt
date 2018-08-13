@@ -971,7 +971,6 @@
 1506328960	Glorfindel	elocenter\.net
 1506329024	Glorfindel	vinpearls-namhoian\.com
 1506336835	suraj	krivtsov(?:oil)?(?:gas)?consultants?@(?:yandex|mail)\.ru
-1506336876	suraj	neftegazconsultant@yandex\.ru
 1506336898	suraj	info\.russiatrading@mail\.ru
 1506340046	Glorfindel	marketsandmarkets\.com
 1506342725	Glorfindel	affiliateclues\.com
@@ -4791,7 +4790,6 @@
 1533136255	Makyen	faithministriesinlove(?:@gmail\.com)?
 1533153989	Makyen	\W*카지노\W*
 1533153997	Makyen	V\W*S\W*A\W*3\W*3\W*(?:[。.]|dot\W*)\W*C\W*o?\W*M
-1533170628	Makyen	neftegazoiltrading(?:@yandex\.ru|@yahoo\.com)?
 1533170638	Makyen	Vico\W*Peißker
 1533196819	tripleee	akilanews\.com
 1533197723	tripleee	registrationwala\.com
