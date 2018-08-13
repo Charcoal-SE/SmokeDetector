@@ -145,7 +145,7 @@ class BodyFetcher:
 
         if GlobalVars.flovis is not None:
             GlobalVars.flovis.stage('bodyfetcher/enqueued', site_base, post_id,
-                                    {sk: list(sq.keys()) for sk, sq in self.queue.items()}
+                                    {sk: list(sq.keys()) for sk, sq in self.queue.items()})
 
         if should_check_site:
             self.make_api_call_for_site(site_base)
