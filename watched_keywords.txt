@@ -5027,3 +5027,4 @@
 1534215891	Makyen	EEJA\W*(?:Machinery|XT)
 1534215899	Makyen	Foshan\W(?:DECI|Naihai)
 1534215925	Makyen	jobfusion\.in
+1534217686	Makyen	fordbecky6(?:@gmail\.com)?
