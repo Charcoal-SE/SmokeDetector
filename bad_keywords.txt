@@ -1491,3 +1491,4 @@ tonaki
 neftegaz\w+@[-\w]+(\.[-\w]+)+
 fob\W*rotterdam
 neftegazoiltrading
+[a-z_]*(?:1_*)?844[\W_]*443[\W_]*3244[a-z_]*
