@@ -1394,7 +1394,7 @@ luminary\W?v
 rose\W?diamond(?:\W?beauty)?
 peraglow
 liva\W?derma
-konect(?!\.co\.za\b)(?:\W?nutra\?Wketo)?
+konect(?!\.(?:co\.za|uni-koblenz)\b)(?:\W?nutra\?Wketo)?
 hyperion\W?male\W?no2\W?booster
 total\W?tone
 retro\W?slim
