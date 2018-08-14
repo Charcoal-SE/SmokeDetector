@@ -582,6 +582,7 @@ def watched_ns_for_url_domain(s, site):
         'offshoric.com.',
         'freehostia.com.',
         'hawkhost.com.',
+        'greengeeks.com.',
     ])
 
 
