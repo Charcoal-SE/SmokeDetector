@@ -5025,3 +5025,4 @@
 1534215874	Makyen	xingtuo\.en\.alibaba\.com
 1534215882	Makyen	www.eejafr\.com
 1534215891	Makyen	EEJA\W*(?:Machinery|XT)
+1534215899	Makyen	Foshan\W(?:DECI|Naihai)
