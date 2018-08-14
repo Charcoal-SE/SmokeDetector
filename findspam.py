@@ -581,6 +581,7 @@ def watched_ns_for_url_domain(s, site):
         'directory92.com.',
         'offshoric.com.',
         'freehostia.com.',
+        'hawkhost.com.',
     ])
 
 
