@@ -580,6 +580,7 @@ def watched_ns_for_url_domain(s, site):
         'vultr.com.',
         'directory92.com.',
         'offshoric.com.',
+        'freehostia.com.',
     ])
 
 
