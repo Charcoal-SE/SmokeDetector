@@ -5050,3 +5050,4 @@
 1534318786	tripleee	indotravelteam\.com
 1534321176	Makyen	popsugar\.com
 1534324186	tripleee	sololearn\.com
+1534332401	tripleee	[a-z_]*(?:1_*)?845[\W_]*422[\W_]*4913[a-z_]*
