@@ -5040,3 +5040,4 @@
 1534286409	Tetsuya Yamamoto	smartearn\.online
 1534289467	Erik the Outgolfer	streamanime\.tv
 1534304738	Tetsuya Yamamoto	yamisok\.com
+1534310302	tripleee	sun\W?chips
