@@ -5085,3 +5085,4 @@
 1534405273	Makyen	aicup2018(?:@zhejianglab\.com)?
 1534405299	Makyen	noblewebhackers(?:\W*gmail\.com)?
 1534405319	Makyen	hpsupportnumber\.net
+1534408398	Glorfindel	alpha\W?ripped
