@@ -5082,3 +5082,4 @@
 1534404994	Tetsuya Yamamoto	skeyllc\.com
 1534405146	Makyen	tianchi\.aliyun\.com
 1534405254	Makyen	zhejianglab\.mikecrm\.com
+1534405273	Makyen	aicup2018(?:@zhejianglab\.com)?
