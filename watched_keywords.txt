@@ -5075,3 +5075,4 @@
 1534401275	tripleee	zhejianglab
 1534401792	Tetsuya Yamamoto	miapiellealpha\.com
 1534402720	tripleee	newbiz\d+@\w+(\.\w+)+
+1534404924	Tetsuya Yamamoto	skeyfin\.com
