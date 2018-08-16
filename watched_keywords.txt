@@ -5074,4 +5074,4 @@
 1534400673	Tetsuya Yamamoto	semerupoker\.com
 1534401275	tripleee	zhejianglab
 1534401792	Tetsuya Yamamoto	miapiellealpha\.com
-1534402720	tripleee	newbiz\+@\w+(\.\w+)+
+1534402720	tripleee	newbiz\d+@\w+(\.\w+)+
