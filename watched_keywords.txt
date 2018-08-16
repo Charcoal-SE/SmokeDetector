@@ -5088,3 +5088,4 @@
 1534414366	tripleee	skn\W?renew
 1534421887	tripleee	[a-z_]*(?:1_*)?844[\W_]*850[\W_]*8475[a-z_]*
 1534421987	tripleee	printerofflinehelp\.com
+1534422159	Erik the Outgolfer	pupsack\.com
