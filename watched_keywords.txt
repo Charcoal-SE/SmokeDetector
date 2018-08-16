@@ -5071,3 +5071,4 @@
 1534397736	tripleee	[a-z_]*(?:91_*)?702[\W_]*351[\W_]*5920[a-z_]*
 1534397906	tripleee	[a-z_]*(?:91_*)?739[\W_]*597[\W_]*3872[a-z_]*
 1534399465	Tetsuya Yamamoto	amobilebailbonds\.com
+1534400673	Tetsuya Yamamoto	semerupoker\.com
