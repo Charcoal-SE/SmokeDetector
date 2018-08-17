@@ -1493,3 +1493,4 @@ fob\W*rotterdam
 neftegazoiltrading
 [a-z_]*(?:1_*)?844[\W_]*443[\W_]*3244[a-z_]*
 sun\W?chips
+[a-z_]*(?:0?80_*)?4110[\W_]*3383[a-z_]*
