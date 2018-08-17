@@ -9,9 +9,9 @@ def load_blacklists():
     GlobalVars.bad_keywords = Blacklist(Blacklist.KEYWORDS).parse()
     GlobalVars.blacklisted_websites = Blacklist(Blacklist.WEBSITES).parse()
     GlobalVars.blacklisted_usernames = Blacklist(Blacklist.USERNAMES).parse()
-    GlobalVars.blacklisted_phones = Blacklist(Blacklist.PHONES).parse()
+    GlobalVars.blacklisted_phones = Blacklist(Blacklist.NUMBERS).parse()
     GlobalVars.watched_keywords = Blacklist(Blacklist.WATCHED_KEYWORDS).parse()
-    GlobalVars.watched_phones = Blacklist(Blacklist.WATCHED_PHONES).parse()
+    GlobalVars.watched_phones = Blacklist(Blacklist.WATCHED_NUMBERS).parse()
 
 
 class BlacklistParser:
@@ -122,9 +122,9 @@ class Blacklist:
     KEYWORDS = ('bad_keywords.txt', BasicListParser)
     WEBSITES = ('blacklisted_websites.txt', BasicListParser)
     USERNAMES = ('blacklisted_usernames.txt', BasicListParser)
-    PHONES = ('blacklisted_phones.txt', BasicListParser)
+    NUMBERS = ('blacklisted_numbers.txt', BasicListParser)
     WATCHED_KEYWORDS = ('watched_keywords.txt', TSVDictParser)
-    WATCHED_PHONES = ('watched_phones.txt', TSVDictParser)
+    WATCHED_NUMBERS = ('watched_numbers.txt', TSVDictParser)
 
     def __init__(self, type):
         self._filename = type[0]

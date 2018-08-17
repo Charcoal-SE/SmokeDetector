@@ -23,7 +23,7 @@ from helpers import log
 from globalvars import GlobalVars
 from blacklists import load_blacklists
 
-PHONE_CACHE = dict()
+NUMBER_CACHE = {}
 TLD_CACHE = []
 LEVEN_DOMAIN_DISTANCE = 3
 SIMILAR_THRESHOLD = 0.95
@@ -298,32 +298,30 @@ def has_phone_number(s, site):
 
 
 # noinspection PyMissingTypeHints
-def check_phones(s, phonelist):
+def check_numbers(s, numlist):
     """
     Extract sequences of possible phone numbers. Check extracted numbers
     against verbatim match (identical to item in list) or normalized match
     (digits are identical, but spacing or punctuation contains differences).
     """
-    global PHONE_CACHE
+    global NUMBER_CACHE
     matches = []
-    if not PHONE_CACHE:
+    if not NUMBER_CACHE:
         # Extract between 9 and 14 digits
-        phone_re = r'\b[a-z_]*\+?(?:\d[\W_]*){8,13}\d(?=[a-z_]|\b)'
-        PHONE_CACHE['re'] = regex.compile(phone_re)
-    if not id(phonelist) in PHONE_CACHE:
-        normalized = [''.join(
-            filter(lambda x: x.isdigit(), entry)) for entry in phonelist]
-        log('debug', 'normalized id(phonelist) {0}: {1} entries'.format(
-            id(phonelist), len(normalized)))
-        PHONE_CACHE[id(phonelist)] = normalized
-    for phone_candidate in PHONE_CACHE['re'].findall(s):
-        if phone_candidate in phonelist:
-            matches.append('{0} found verbatim'.format(phone_candidate))
+        number_re = r'\b[a-z_]*\+?(?:\d[\W_]*){8,13}\d(?=[a-z_]|\b)'
+        NUMBER_CACHE['re'] = regex.compile(number_re)
+    if not id(numlist) in NUMBER_CACHE:
+        normalized = [regex.sub(r"[^\d]", "", entry) for entry in numlist]
+        log('debug', 'normalized id(numlist) {0}: {1} entries'.format(
+            id(numlist), len(normalized)))
+        NUMBER_CACHE[id(numlist)] = normalized
+    for number_candidate in NUMBER_CACHE['re'].findall(s):
+        if number_candidate in numlist:
+            matches.append('{0} found verbatim'.format(number_candidate))
             continue
         # else
-        normalized_candidate = ''.join(
-            filter(lambda x: x.isdigit(), phone_candidate))
-        if normalized_candidate in PHONE_CACHE[id(phonelist)]:
+        normalized_candidate = regex.sub(r"[^\d]", "", number_candidate)
+        if normalized_candidate in NUMBER_CACHE[id(numlist)]:
             matches.append('{0} found normalized'.format(normalized_candidate))
     if matches:
         return True, '; '.join(matches)
@@ -331,12 +329,12 @@ def check_phones(s, phonelist):
         return False, ''
 
 
-def check_blacklisted_phones(s, site, *args):
-    return check_phones(s, GlobalVars.blacklisted_phones)
+def check_blacklisted_numbers(s, site, *args):
+    return check_numbers(s, GlobalVars.blacklisted_numbers)
 
 
-def check_watched_phones(s, site, *args):
-    return check_phones(s, GlobalVars.watched_phones)
+def check_watched_numbers(s, site, *args):
+    return check_numbers(s, GlobalVars.watched_numbers)
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints

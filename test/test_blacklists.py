@@ -5,8 +5,7 @@ from helpers import only_blacklists_changed
 
 
 def test_blacklist_integrity():
-    bl_files = glob('bad_*.txt') + glob('blacklisted_*.txt') + \
-        ['watched_keywords.txt']
+    bl_files = glob('bad_*.txt') + glob('blacklisted_*.txt') + glob('watched_*.txt')
     seen = dict()
     errors = []
     for bl_file in bl_files:
