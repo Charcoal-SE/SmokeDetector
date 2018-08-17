@@ -333,7 +333,7 @@ def watch(msg, pattern, alias_used="watch"):
     """
 
     return do_blacklist("watch_number" if "number" in alias_used else "watch_keyword",
-        msg, force=alias_used.split("-")[-1] == "force")
+                        msg, force=alias_used.split("-")[-1] == "force")
 
 
 @command(str, whole_msg=True, privileged=True, give_name=True, aliases=["unwatch"])

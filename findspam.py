@@ -1139,14 +1139,14 @@ class FindSpam:
          'all': True, 'sites': [], 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 30, 'max_score': 1},
         # Blacklisted phone numbers
-        {'method': check_blacklisted_phones,
+        {'method': check_blacklisted_numbers,
          'reason': 'bad phone number in {}',
          'all': True, 'sites': [],
          'title': True, 'body': True, 'username': False,
          'stripcodeblocks': True, 'body_summary': True,
          'max_rep': 5, 'max_score': 1},
         # Watched phone numbers
-        {'method': check_watched_phones,
+        {'method': check_watched_numbers,
          'reason': 'potentially bad phone number in {}',
          'all': True, 'sites': [],
          'title': True, 'body': True, 'username': False,
