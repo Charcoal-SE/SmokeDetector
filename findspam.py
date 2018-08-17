@@ -1146,7 +1146,7 @@ class FindSpam:
          'max_rep': 5, 'max_score': 1},
         # Watched phone numbers
         {'method': check_watched_numbers,
-         'reason': 'potentially bad phone number in {}',
+         'reason': 'potentially bad keyword in {}',
          'all': True, 'sites': [],
          'title': True, 'body': True, 'username': False,
          'stripcodeblocks': True, 'body_summary': True,
