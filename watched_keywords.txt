@@ -5101,3 +5101,4 @@
 1534487036	tripleee	supportnumberireland\.com
 1534487121	Makyen	[a-z_]*353[\W_]*766803285[a-z_]*
 1534490295	tripleee	gs-jj
+1534497160	tripleee	logaster\.com
