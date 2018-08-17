@@ -16,6 +16,7 @@ import yaml
 import datahandling
 import metasmoke
 import classes.feedback
+from helpers import log
 from excepthook import log_exception
 from globalvars import GlobalVars
 from parsing import fetch_post_id_and_site_from_url, fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
@@ -66,14 +67,15 @@ def init(username, password):
     for site in _clients.keys():
         client = Client(site)
 
-        for _ in range(10):
+        for retry in range(10):
             try:
                 client.login(username, password)
                 break
-            except:
-                pass
+            except Exception as e:
+                exc_type, exc_obj, exc_tb = sys.exc_info()
+                log('debug', 'Login error {}: {}'.format(exc_type.__name__, exc_obj))
         else:
-            raise Exception("Failed to log into " + site)
+            raise Exception("Failed to log into " + site + ", max retries exceeded")
 
         _clients[site] = client
 
@@ -186,39 +188,40 @@ def send_messages():
 
 
 def on_msg(msg, client):
-    if isinstance(msg, events.MessagePosted) or isinstance(msg, events.MessageEdited):
-        message = msg.message
+    if not isinstance(msg, events.MessagePosted) and not isinstance(msg, events.MessageEdited):
+        return
 
-        if message.owner.id == client._br.user_id:
-            return
+    message = msg.message
+    if message.owner.id == client._br.user_id:
+        return
 
-        room_data = _rooms[(client.host, message.room.id)]
+    room_data = _rooms[(client.host, message.room.id)]
 
-        if message.parent:
-            if message.parent.owner.id == client._br.user_id:
-                strip_mention = regex.sub("^(<span class='mention'>)?@.*?(</span>)? ", "", message.content)
-                cmd = GlobalVars.parser.unescape(strip_mention)
+    if message.parent:
+        if message.parent.owner.id == client._br.user_id:
+            strip_mention = regex.sub("^(<span class=(\"|')mention(\"|')>)?@.*?(</span>)? ", "", message.content)
+            cmd = GlobalVars.parser.unescape(strip_mention)
 
-                result = dispatch_reply_command(message.parent, message, cmd)
-
-                if result:
-                    _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
-        elif message.content.startswith("sd "):
-            result = dispatch_shorthand_command(message)
+            result = dispatch_reply_command(message.parent, message, cmd)
 
             if result:
                 _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
-        elif message.content.startswith("!!/"):
-            result = dispatch_command(message)
+    elif message.content.lower().startswith("sd "):
+        result = dispatch_shorthand_command(message)
 
-            if result:
-                _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
-        elif classes.feedback.FEEDBACK_REGEX.search(message.content) \
-                and is_privileged(message.owner, message.room) and datahandling.last_feedbacked:
-                ids, expires_in = datahandling.last_feedbacked
+        if result:
+            _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
+    elif message.content.startswith("!!/"):
+        result = dispatch_command(message)
 
-                if time.time() < expires_in:
-                    Tasks.do(metasmoke.Metasmoke.post_auto_comment, message.content_source, message.owner, ids=ids)
+        if result:
+            _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
+    elif classes.feedback.FEEDBACK_REGEX.search(message.content) \
+            and is_privileged(message.owner, message.room) and datahandling.last_feedbacked:
+            ids, expires_in = datahandling.last_feedbacked
+
+            if time.time() < expires_in:
+                Tasks.do(metasmoke.Metasmoke.post_auto_comment, message.content_source, message.owner, ids=ids)
 
 
 def tell_rooms_with(prop, msg, notify_site="", report_data=None):
@@ -348,7 +351,7 @@ def command(*type_signature, reply=False, whole_msg=False, privileged=False, ari
                 return result if not quiet_action else ""
             except CmdException as e:
                 return str(e)
-            except:
+            except Exception:  # Everything else
                 log_exception(*sys.exc_info())
                 return "I hit an error while trying to run that command; run `!!/errorlogs` for details."
 
@@ -417,7 +420,7 @@ def dispatch_command(msg):
 
 
 def dispatch_reply_command(msg, reply, full_cmd):
-    command_parts = full_cmd.split(" ", 1)
+    command_parts = full_cmd.lower().split(" ", 1)
 
     if len(command_parts) == 2:
         cmd, args = command_parts
@@ -450,7 +453,7 @@ def dispatch_reply_command(msg, reply, full_cmd):
 
 
 def dispatch_shorthand_command(msg):
-    commands = GlobalVars.parser.unescape(msg.content[3:]).split()
+    commands = GlobalVars.parser.unescape(msg.content[3:]).lower().split()
 
     if len(commands) == 0:
         return

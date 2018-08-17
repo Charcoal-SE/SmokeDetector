@@ -1,5 +1,6 @@
 import websocket
 import socket
+import ssl
 import json
 import time
 import uuid
@@ -8,8 +9,6 @@ from helpers import log
 
 
 class Flovis:
-    ws = None
-
     def __init__(self, host):
         self.host = host
         initialized = False
@@ -41,8 +40,20 @@ class Flovis:
             def run():
                 try:
                     self.ws.run_forever()
+                except websocket._exceptions.WebSocketException as e:
+                    if "socket is already opened" not in str(e):
+                        raise
                 except websocket._exceptions.WebSocketConnectionClosedException:
                     log('error', 'Flovis websocket closed unexpectedly, assuming problems and nullifying ws')
+                except (AttributeError, OSError) as e:
+                    log('error', str(e))
+                finally:
+                    try:
+                        if self.ws and self.ws.sock:
+                            self.ws.sock.close()
+                    except websocket.WebSocketException:
+                        pass
+
                     self.ws = None
 
             flovis_t = Thread(name='flovis_websocket', target=run)
@@ -51,6 +62,7 @@ class Flovis:
             return True
         except (websocket._exceptions.WebSocketBadStatusException, socket.gaierror) as e:
             log('error', e)
+
             self.ws = None
             return False
 
@@ -61,5 +73,13 @@ class Flovis:
         if data is not None:
             msg_data['data'] = data
 
-        if self.ws is not None:
-            self.ws.send(json.dumps(msg_data))
+        for retries in range(1, 5):
+            try:
+                if self.ws is not None:
+                    self.ws.send(json.dumps(msg_data))
+                break
+            except (websocket.WebSocketConnectionClosedException, ssl.SSLError):
+                if retries == 5:
+                    raise  # Actually raise the initial error if we've exceeded number of init retries
+                self.ws = None
+                self._init_websocket()

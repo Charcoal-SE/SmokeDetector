@@ -121,6 +121,11 @@ stackexchange.com:
       - 301688   # Grant Garrison
       - 311852   # Filnor
       - 113120   # Gaurang Tandon
+      - 153555   # bertieb
+      - 40662    # Frenzy Li
+      - 340148   # Shree
+      - 80316    # Erik the Outgolfer
+      - 165839   # Melebius
 
   65945:  # Charcoal Test
     commands: true
@@ -296,8 +301,8 @@ stackexchange.com:
     msg_types:
       - site-magento.stackexchange.com
 
-  11:  # RPG General Chat
-    commands: false
+  13848: # Not A Bar (RPG.SE)
+    commands: true
     msg_types:
       - site-rpg.stackexchange.com
 
@@ -433,7 +438,7 @@ meta.stackexchange.com:
       - 310369   # quartata
       - 350567   # iDebug (iBug on SO)
       - 377214   # Sonic the Anonymous Hedgehog (gparyani elsewhere)
-      - 186472  # Panta Rei
+      - 186472   # Panta Rei
   1181:
     commands: true
     
@@ -575,6 +580,10 @@ stackoverflow.com:
       - 397817   # Stephen Kennedy
       - 4946380  # Mithrandir
       - 3773011  # Makyen
+      - 965146   # Shree
+      - 6707985  # geisterfurz007
+      - 6723642  # heather
+      - 6296561  # Zoe
       # NOTICE: please don't add new users until you have Room Owner approval. Art is an RO.
       
   167826: # temp room

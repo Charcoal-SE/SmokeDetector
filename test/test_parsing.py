@@ -14,7 +14,7 @@ with open("test/data_test_parsing.txt", "r", encoding="utf-8") as f:
 
 # noinspection PyMissingTypeHints
 @pytest.mark.parametrize("input_data, parse_method, expected", [
-    ('Testing * escaping of ] special [ characters', escape_special_chars_in_title, 'Testing \* escaping of \] special \[ characters'),
+    ('Testing * escaping of ] special [ characters', escape_markdown, 'Testing \* escaping of \] special \[ characters'),
     ('HTML &#39; unescaping&lt;', unescape_title, 'HTML \' unescaping<'),
     ('http://physics.stackexchange.com/users/7433/manishearth', get_user_from_url, ('7433', 'physics.stackexchange.com')),
     ('http://softwarerecs.stackexchange.com/users/46/undo', get_user_from_url, ('46', 'softwarerecs.stackexchange.com')),
@@ -42,6 +42,7 @@ with open("test/data_test_parsing.txt", "r", encoding="utf-8") as f:
     ('http://stackexchange.com', to_protocol_relative, '//stackexchange.com'),
     ('https://stackexchange.com', to_protocol_relative, '//stackexchange.com'),
     ('//stackexchange.com', to_protocol_relative, '//stackexchange.com'),
+    ('https://stackoverflow.com/questions/123456/hello-world#654321', fetch_post_id_and_site_from_url, ('654321', 'stackoverflow.com', 'answer')),
     # ('sd 2tpu', preprocess_shortcut_command, 'sd tpu tpu'),
     # ('sd - 3tpu fp', preprocess_shortcut_command, 'sd - tpu tpu tpu fp'),
     # ('sd 3- 2fp', preprocess_shortcut_command, 'sd - - - fp fp'),

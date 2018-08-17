@@ -16,13 +16,27 @@ class Helpers:
 def environ_or_none(key):
     try:
         return os.environ[key]
-    except:
+    except KeyError:
         return None
 
 
-# Checks that all items in a pattern-matching product name are unique
-def all_matches_unique(match):
-    return len(match[0][1:]) == len(set(match[0][1:]))
+def escape_format(s):
+    return s.replace("{", "{{").replace("}", "}}")
+
+
+def expand_shorthand_link(s):
+    s = s.lower()
+    if s.endswith("so"):
+        s = s[:-2] + "stackoverflow.com"
+    elif s.endswith("se"):
+        s = s[:-2] + "stackexchange.com"
+    elif s.endswith("su"):
+        s = s[:-2] + "superuser.com"
+    elif s.endswith("sf"):
+        s = s[:-2] + "serverfault.com"
+    elif s.endswith("au"):
+        s = s[:-2] + "askubuntu.com"
+    return s
 
 
 # noinspection PyMissingTypeHints
@@ -48,8 +62,7 @@ def only_blacklists_changed(diff):
     blacklist_files = ["bad_keywords.txt", "blacklisted_usernames.txt", "blacklisted_websites.txt",
                        "watched_keywords.txt"]
     files_changed = diff.split()
-    non_blacklist_files = [f for f in files_changed if f not in blacklist_files]
-    return not bool(non_blacklist_files)
+    return not any([f for f in files_changed if f not in blacklist_files])
 
 
 # FAIR WARNING: Sending HEAD requests to resolve a shortened link is generally okay - there aren't
@@ -113,6 +126,11 @@ def post_id_from_link(link):
         return match[1]
     else:
         return None
+
+
+def to_metasmoke_link(post_url, protocol=True):
+    return "{}//m.erwaysoftware.com/posts/uid/{}/{}".format(
+        "https:" if protocol else "", api_parameter_from_link(post_url), post_id_from_link(post_url))
 
 
 class SecurityError(Exception):

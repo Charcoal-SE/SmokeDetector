@@ -25,16 +25,6 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s:%(levelname)s:%(message)s')
 
-# Get environment variables
-ChatExchangeU = os.environ.get('ChatExchangeU')
-ChatExchangeP = os.environ.get('ChatExchangeP')
-
-if ChatExchangeU is None:
-    ChatExchangeU = input("Username: ").strip('\r\n')
-
-if ChatExchangeP is None:
-    ChatExchangeP = getpass("Password: ").strip('\r\n')
-
 options = {"standby", "charcoal-hq-only", "no-chat", "no-git-user-check"}
 persistent_arguments = sys.argv
 
@@ -42,11 +32,6 @@ count = 0
 crashcount = 0
 stoprunning = False
 ecode = None  # Define this to prevent errors
-
-# Make a clean copy of existing environment variables, to pass down to subprocess.
-environ = os.environ.copy()
-environ['ChatExchangeU'] = ChatExchangeU
-environ['ChatExchangeP'] = ChatExchangeP
 
 
 def log(message):
@@ -75,7 +60,7 @@ def error(message):
 #         exit(121)
 
 
-while stoprunning is False:
+while not stoprunning:
     log('Starting with persistent_arguments {!r}'.format(persistent_arguments))
     # print "[NoCrash] Switch to Standby? %s" % switch_to_standby
 
@@ -91,16 +76,17 @@ while stoprunning is False:
         else:
             command = (PY_EXECUTABLE + ' ws.py standby').split()
 
-    # noinspection PyBroadException
     try:
         persistent_arguments.remove('standby')
-    except:
+    except ValueError:
         pass  # We're OK if the argument isn't in the list.
 
     try:
-        ecode = sp.call(command + persistent_arguments, env=environ)
-    except KeyboardInterrupt:
-        # print "[NoCrash] KeyBoard Interrupt received.."
+        ecode = sp.call(command + persistent_arguments, env=os.environ.copy())
+    except sp.SubprocessError:
+        exc_type, exc_obj, exc_tb = sys.exc_info()
+        log("subprocess.call() error {0}: {1}".format(exc_type.__name__, exc_obj))
+    except (KeyboardInterrupt, SystemExit):
         ecode = 6
 
     log('Exited with ecode {}'.format(ecode))
@@ -110,7 +96,6 @@ while stoprunning is False:
         if 'windows' not in str(platform.platform()).lower():
             git.checkout('deploy')
             git.pull()
-            git.submodule('update')
         else:
             warn('Not pulling updates; we are on Windows')
 

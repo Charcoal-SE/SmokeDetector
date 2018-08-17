@@ -11,8 +11,6 @@ RUN DEBIAN_FRONTEND=noninteractive && \
         cd SmokeDetector && \
         python3 -m venv venv && \
         . ./venv/bin/activate && \
-        git submodule init && \
-        git submodule update && \
         pip3 install -r user_requirements.txt --upgrade' && \
     pip3 install -r ~SmokeDetector/SmokeDetector/requirements.txt --upgrade && \
     apt autoremove -y --purge build-essential python3-dev && \

@@ -25,8 +25,8 @@ def log_exception(exctype, value, tb):
 def uncaught_exception(exctype, value, tb):
     delta = datetime.utcnow() - UtcDate.startup_utc_date
     log_exception(exctype, value, tb)
-    if delta.total_seconds() < 180 and exctype != WebSocketConnectionClosedException\
-            and exctype != KeyboardInterrupt and exctype != SystemExit and exctype != requests.ConnectionError:
+    if delta.total_seconds() < 180 and exctype not in \
+            {KeyboardInterrupt, SystemExit, requests.ConnectionError, WebSocketConnectionClosedException}:
         os._exit(4)
     else:
         os._exit(1)
@@ -52,9 +52,9 @@ def install_thread_excepthook():
         def run_with_except_hook(*args, **kw):
             try:
                 run_old(*args, **kw)
-            except (KeyboardInterrupt, SystemExit):
-                raise
-            except:
+            except Exception:  # Broad exception makes sense here
                 sys.excepthook(*sys.exc_info())
+            except BaseException:  # KeyboardInterrupt and SystemExit
+                raise
         self.run = run_with_except_hook
     threading.Thread.__init__ = init

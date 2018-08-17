@@ -15,7 +15,6 @@ install_thread_excepthook()
 import os
 # noinspection PyPackageRequirements
 import websocket
-import getpass
 from threading import Thread
 import traceback
 from bodyfetcher import BodyFetcher
@@ -43,7 +42,7 @@ levels = {
     'warning': 2,
     'error': 3
 }
-if any(['--loglevel' in x for x in sys.argv]):
+if any('--loglevel' in x for x in sys.argv):
     idx = ['--loglevel' in x for x in sys.argv].index(True)
     arg = sys.argv[idx].split('=')
     if len(arg) >= 2:
@@ -79,13 +78,24 @@ except TldIOError as ioerr:
             raise ioerr
 
 if "ChatExchangeU" in os.environ:
+    log('debug', "ChatExchange username loaded from environment")
     username = os.environ["ChatExchangeU"]
+elif GlobalVars.chatexchange_u:
+    log('debug', "ChatExchange username loaded from config")
+    username = GlobalVars.chatexchange_u
 else:
-    username = input("Username: ")
+    log('debug', "No ChatExchange username provided. Set it in config or provide it via environment variable")
+    os._exit(6)
+
 if "ChatExchangeP" in os.environ:
+    log('debug', "ChatExchange password loaded from environment")
     password = os.environ["ChatExchangeP"]
+elif GlobalVars.chatexchange_p:
+    log('info', "ChatExchange password loaded from config")
+    password = GlobalVars.chatexchange_p
 else:
-    password = getpass.getpass("Password: ")
+    log('error', "No ChatExchange password provided. Set it in config or provide it via environment variable")
+    os._exit(6)
 
 # We need an instance of bodyfetcher before load_files() is called
 GlobalVars.bodyfetcher = BodyFetcher()
@@ -164,7 +174,7 @@ def setup_websocket(attempt, max_attempts):
         ws = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
         ws.send("155-questions-active")
         return ws
-    except:
+    except websocket.WebSocketException:
         log('warning', 'WS failed to create websocket connection. Attempt {} of {}.'.format(attempt, max_attempts))
         return None
 
@@ -225,8 +235,7 @@ while True:
         log('error', logged_msg)
         with open("errorLogs.txt", "a") as f:
             f.write(logged_msg)
-        if seconds < 180 and exc_type != websocket.WebSocketConnectionClosedException\
-                and exc_type != KeyboardInterrupt and exc_type != SystemExit and exc_type != requests.ConnectionError:
+        if seconds < 180 and exc_type not in {websocket.WebSocketConnectionClosedException, requests.ConnectionError}:
             # noinspection PyProtectedMember
             os._exit(4)
         ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")

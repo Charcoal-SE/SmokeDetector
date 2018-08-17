@@ -1,5 +1,5 @@
 # coding=utf-8
-from chatexchange import client, rooms
+from chatexchange import client, events, rooms
 import sys
 from datetime import datetime
 from helpers import log
@@ -13,6 +13,9 @@ class Room(rooms.Room):
             self._client.last_activity = datetime.utcnow()
 
             for event in self._events_from_activity(activity, self.id):
+                if isinstance(event, events.MessageEdited):
+                    del event.message.content_source
+
                 event_callback(event, self._client)
 
         return self._client._br.watch_room_socket(self.id, on_activity)

@@ -145,7 +145,7 @@ class BodyFetcher:
 
         if GlobalVars.flovis is not None:
             GlobalVars.flovis.stage('bodyfetcher/enqueued', site_base, post_id,
-                                    dict([[sk, [k for k, v in sq.items()]] for sk, sq in self.queue.items()]))
+                                    {sk: list(sq.keys()) for sk, sq in self.queue.items()})
 
         if should_check_site:
             self.make_api_call_for_site(site_base)
@@ -176,7 +176,7 @@ class BodyFetcher:
         self.queue_modify_lock.release()
 
     def print_queue(self):
-        return '\n'.join("{0}: {1}".format(key, str(len(values))) for (key, values) in self.queue.items())
+        return '\n'.join(["{0}: {1}".format(key, str(len(values))) for (key, values) in self.queue.items()])
 
     def make_api_call_for_site(self, site):
         if site not in self.queue:
@@ -187,12 +187,12 @@ class BodyFetcher:
         store_bodyfetcher_queue()
         self.queue_modify_lock.release()
 
-        new_post_ids = [int(k) for k, v in new_posts.items()]
+        new_post_ids = [int(k) for k in new_posts.keys()]
 
         if GlobalVars.flovis is not None:
             for post_id in new_post_ids:
                 GlobalVars.flovis.stage('bodyfetcher/api_request', site, post_id,
-                                        {'site': site, 'posts': [k for k, v in new_posts.items()]})
+                                        {'site': site, 'posts': list(new_posts.keys())})
 
         self.queue_timing_modify_lock.acquire()
         post_add_times = [v for k, v in new_posts.items()]
@@ -205,7 +205,7 @@ class BodyFetcher:
                     self.queue_timings[site].append(seconds_in_queue)
                 else:
                     self.queue_timings[site] = [seconds_in_queue]
-            except:
+            except KeyError:  # XXX: Any other possible exception?
                 continue  # Skip to next item if we've got invalid data or missing values.
 
         store_queue_timings()
@@ -258,10 +258,10 @@ class BodyFetcher:
             pagesize_modifier = "&pagesize={pagesize}" \
                                 "&min={time_length}".format(pagesize=pagesize, time_length=str(self.last_activity_date))
         else:
-            question_modifier = "/{0}".format(";".join(str(post) for post in posts))
+            question_modifier = "/{0}".format(";".join([str(post) for post in posts]))
 
         url = "https://api.stackexchange.com/2.2/questions{q_modifier}?site={site}" \
-              "&filter=!)E0g*ODaEZ(SgULQhYvCYbu09*ss(bKFdnTrGmGUxnqPptuHP&key=IAkbitmze4B8KpacUfLqkw((" \
+              "&filter=!*xq08dCDNr)PlxxXfaN8ntivx(BPlY_8XASyXLX-J7F-)VK*Q3KTJVkvp*&key=IAkbitmze4B8KpacUfLqkw((" \
               "{optional_min_query_param}".format(q_modifier=question_modifier, site=site,
                                                   optional_min_query_param=pagesize_modifier)
 
@@ -359,6 +359,11 @@ class BodyFetcher:
 
             post['site'] = site
             try:
+                post['edited'] = (post['creation_date'] != post['last_edit_date'])
+            except KeyError:
+                post['edited'] = False  # last_edit_date not present = not edited
+
+            try:
                 post_ = Post(api_response=post)
             except PostParseError as err:
                 log('error', 'Error {0} when parsing post: {1!r}'.format(err, post_))
@@ -397,6 +402,10 @@ class BodyFetcher:
                         answer["IsAnswer"] = True  # Necesssary for Post object
                         answer["title"] = ""  # Necessary for proper Post object creation
                         answer["site"] = site  # Necessary for proper Post object creation
+                        try:
+                            answer['edited'] = (answer['creation_date'] != answer['last_edit_date'])
+                        except KeyError:
+                            answer['edited'] = False  # last_edit_date not present = not edited
                         answer_ = Post(api_response=answer, parent=post_)
 
                         is_spam, reason, why = check_if_spam(answer_)

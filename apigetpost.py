@@ -21,6 +21,8 @@ class PostData:
         self.up_vote_count = None
         self.down_vote_count = None
         self.question_id = None
+        self.creation_date = None
+        self.last_edit_date = None
 
     @property
     def as_dict(self):
@@ -35,11 +37,12 @@ class PostData:
             'score': self.score,
             'up_vote_count': self.up_vote_count,
             'down_vote_count': self.down_vote_count,
+            'edited': (self.creation_date != self.last_edit_date),
         }
         # noinspection PyBroadException
         try:
             dictdata['IsAnswer'] = getattr(self, 'IsAnswer')
-        except:
+        except AttributeError:
             dictdata['IsAnswer'] = False  # Assume it's not an answer
 
         return dictdata
@@ -63,12 +66,12 @@ def api_get_post(post_url):
         return None
     post_id, site, post_type = d
     if post_type == "answer":
-        api_filter = "!FdmhxNQy0ZXsmxUOvWMVSbuktT"
+        api_filter = r"!FdmhxNRjn0vYtGOu3FfS5xSwvL"
     else:
         assert post_type == "question"
-        api_filter = "!)Ehu.SHRfXhu2eCP4p6wd*Wxyw1XouU5qO83b7X5GQK6ciVat"
+        api_filter = r"!DEPw4-PqDduRmCwMBNAxrCdSZl81364qitC3TebCzqyF4-y*r2L"
 
-    request_url = "http://api.stackexchange.com/2.2/{type}s/{post_id}?site={site}&filter={api_filter}&" \
+    request_url = "https://api.stackexchange.com/2.2/{type}s/{post_id}?site={site}&filter={api_filter}&" \
                   "key=IAkbitmze4B8KpacUfLqkw((".format(type=post_type, post_id=post_id, site=site,
                                                         api_filter=api_filter)
     response = requests.get(request_url).json()
@@ -99,6 +102,11 @@ def api_get_post(post_url):
     post_data.score = item['score']
     post_data.up_vote_count = item['up_vote_count']
     post_data.down_vote_count = item['down_vote_count']
+    post_data.creation_date = item['creation_date']
+    try:
+        post_data.last_edit_date = item['last_edit_date']
+    except KeyError:
+        post_data.last_edit_date = post_data.creation_date  # Key not present = not edited
     if post_type == "answer":
         post_data.question_id = item['question_id']
     return post_data

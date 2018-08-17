@@ -1,15 +1,13 @@
 # coding=utf-8
 # noinspection PyCompatibility
 import regex
-from globalvars import GlobalVars
+import globalvars
 import datahandling
-
-BAD_CHAR = "\u200c\u200b"
 
 
 # noinspection PyMissingTypeHints
-def rebuild_str(str):
-    return ''.join([ch for ch in str if ch not in BAD_CHAR])
+def rebuild_str(s):
+    return s.replace("\u200B", "").replace("\u200C", "")
 
 
 # noinspection PyBroadException,PyMissingTypeHints
@@ -21,7 +19,7 @@ def get_user_from_url(url):
         site = match.group(1)
         user_id = match.group(2)
         return user_id, site
-    except:
+    except IndexError:
         return None
 
 
@@ -35,7 +33,7 @@ def get_api_sitename_from_url(url):
             return 'mathoverflow.net'
         else:
             return match.group(1).split('.')[0]
-    except:
+    except IndexError:
         return None
 
 
@@ -43,14 +41,15 @@ def get_api_sitename_from_url(url):
 def fetch_post_url_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[.+]\(((?:http:)" \
                    r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)(?:\?smokeypost=true)?\)" \
-                   r" by \[?.*\]?\(?(?:.*)\)? on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
+                   r"\s?(?:\u270F\uFE0F|\U0001F437)?\sby \[?.*\]?\(?(?:.*)\)? on `[\w.]+`(?: \(@.+\))?" \
+                   r"(?: \[.+\]\(.+\))?$"
     match = regex.compile(search_regex).search(content)
     if match is None:
         return None
     try:
         url = match.group(1)
         return url
-    except:
+    except IndexError:
         return None
 
 
@@ -59,12 +58,12 @@ def fetch_post_id_and_site_from_url(url):
     if url is None:
         return None
     trimmed_url = rebuild_str(url)
-    post_type_regex = r"\/\d+#\d+$"
+    post_type_regex = r"(?:\/\d+)?#\d+$"
     post_type = ""
     search_regex = ""
     if regex.compile(post_type_regex).search(trimmed_url):
         post_type = "answer"
-        search_regex = r"^(?:https?:)?\/\/([\w.]+)\/questions\/\d+\/.+\/(\d+)#\d+$"
+        search_regex = r"^(?:https?:)?\/\/([\w.]+)\/questions\/\d+\/.+[/#](\d+)(?:#\d+)?$"
     else:
         post_type = "question"
         search_regex = r"^(?:https?:)?\/\/([\w.]+)/questions/(\d+)(?:/.*)?$"
@@ -74,7 +73,7 @@ def fetch_post_id_and_site_from_url(url):
             post_id = found.group(2)
             post_site = found.group(1)
             return (post_id, post_site, post_type)
-        except:
+        except IndexError:
             return None
     search_regex = r"^(?:https?:)?\/\/([\w.]+)/(q|a)/(\d+)(?:/\d+)?/?"
     found = regex.compile(search_regex).search(trimmed_url)
@@ -85,7 +84,7 @@ def fetch_post_id_and_site_from_url(url):
         post_site = found.group(1)
         post_type = "question" if found.group(2) == "q" else "answer"
         return (post_id, post_site, post_type)
-    except:
+    except IndexError:
         return None
 
 
@@ -106,7 +105,7 @@ def fetch_owner_url_from_msg_content(content):
     try:
         owner_url = match.group(1)
         return owner_url
-    except:
+    except IndexError:
         return None
 
 
@@ -121,7 +120,7 @@ def fetch_title_from_msg_content(content):
     try:
         title = match.group(1)
         return title
-    except:
+    except IndexError:
         return None
 
 
@@ -136,23 +135,23 @@ def edited_message_after_postgone_command(content):
     try:
         link = match.group(1)
         return content.replace(link, "*(gone)*")
-    except:
+    except IndexError:
         return None
 
 
 # noinspection PyMissingTypeHints
 def unescape_title(title_escaped):
-    return GlobalVars.parser.unescape(title_escaped).strip()
+    return globalvars.GlobalVars.parser.unescape(title_escaped).strip()
 
 
 # noinspection PyMissingTypeHints
-def escape_special_chars_in_title(title_unescaped):
-    return regex.sub(r"([_*\\`\[\]])", r"\\\1", title_unescaped)
+def escape_markdown(s):
+    return regex.sub(r"([_*`\[\]])", r"\\\1", s)
 
 
 # noinspection PyMissingTypeHints
 def sanitize_title(title_unescaped):
-    return regex.sub('(https?://|\n)', '', escape_special_chars_in_title(title_unescaped).replace('\n', u'\u23CE'))
+    return regex.sub('(https?://|\n)', '', escape_markdown(title_unescaped).replace('\n', u'\u23CE'))
 
 
 # noinspection PyMissingTypeHints

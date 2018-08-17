@@ -54,12 +54,8 @@ class Metasmoke:
                                               "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"})
                         GlobalVars.metasmoke_ws.send(payload)
                         log('error', e)
-                        try:
-                            exc_info = sys.exc_info()
-                            traceback.print_exception(*exc_info)
-                        except:
-                            log('error', "Can't fetch full exception details")
-            except:
+                        traceback.print_exc()
+            except websocket.WebSocketException:
                 log('error', "Couldn't bind to MS websocket")
                 if not has_succeeded:
                     break
@@ -103,7 +99,8 @@ class Metasmoke:
                 datahandling.add_blacklisted_user(ids, "metasmoke", message['blacklist']['post'])
                 datahandling.last_feedbacked = (ids, time.time() + 60)
             elif "unblacklist" in message:
-                datahandling.remove_blacklisted_user(message['unblacklist']['uid'])
+                ids = (message['unblacklist']['uid'], message['unblacklist']['site'])
+                datahandling.remove_blacklisted_user(ids)
             elif "naa" in message:
                 post_site_id = parsing.fetch_post_id_and_site_from_url(message["naa"]["post_link"])
                 datahandling.add_ignored_post(post_site_id[0:2])
@@ -118,7 +115,7 @@ class Metasmoke:
                         and not datahandling.is_false_positive((post_data.post_id, post_data.site)):
                     return
                 user = parsing.get_user_from_url(post_data.owner_url)
-                post = classes.Post(api_response=post_data)
+                post = classes.Post(api_response=post_data.as_dict)
 
                 scan_spam, scan_reasons, scan_why = spamhandling.check_if_spam(post)
                 if scan_spam:
@@ -139,7 +136,7 @@ class Metasmoke:
                                          why=why)
             elif "deploy_updated" in message:
                 sha = message["deploy_updated"]["head_commit"]["id"]
-                if sha != os.popen('git log --pretty=format:"%H" -n 1').read():
+                if sha != os.popen('git log -1 --pretty="%H"').read():
                     if "autopull" in message["deploy_updated"]["head_commit"]["message"]:
                         if only_blacklists_changed(GitManager.get_remote_diff()):
                             commit_md = "[`{0}`](https://github.com/Charcoal-SE/SmokeDetector/commit/{0})" \
@@ -172,7 +169,7 @@ class Metasmoke:
             elif "commit_status" in message:
                 c = message["commit_status"]
                 sha = c["commit_sha"][:7]
-                if c["commit_sha"] != os.popen('git log --pretty=format:"%H" -n 1').read():
+                if c["commit_sha"] != os.popen('git log -1 --pretty="%H"').read():
                     if c["status"] == "success":
                         if "autopull" in c["commit_message"]:
                             s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
@@ -206,8 +203,8 @@ class Metasmoke:
         metasmoke_key = GlobalVars.metasmoke_key
 
         try:
-            if len(why) > 1024:
-                why = why[:512] + '...' + why[-512:]
+            if len(why) > 2048:
+                why = why[:1024] + '...' + why[-1021:]  # Basic maths
 
             post = {'title': title, 'link': link, 'reasons': reasons,
                     'body': body, 'username': username, 'user_link': user_link,
@@ -215,7 +212,7 @@ class Metasmoke:
                     'upvote_count': up_vote_count, 'downvote_count': down_vote_count}
 
             # Remove None values (if they somehow manage to get through)
-            post = dict((k, v) for k, v in post.items() if v)
+            post = {k: v for k, v in post.items() if v}
 
             payload = {'post': post, 'key': metasmoke_key}
             headers = {'Content-type': 'application/json'}
@@ -311,7 +308,7 @@ class Metasmoke:
                     if response['shutdown']:
                         os._exit(6)
 
-            except Exception:
+            except Exception:  # TODO: What could happen here?
                 pass
 
         except Exception as e:
@@ -418,3 +415,17 @@ class Metasmoke:
                       "chat_host": user._client.host}
 
             requests.post("{}/api/v2.0/comments/post/{}".format(GlobalVars.metasmoke_host, ms_id), params=params)
+
+    @staticmethod
+    def get_post_bodies_from_ms(post_url):
+        if not GlobalVars.metasmoke_key:
+            return None
+
+        payload = {
+            'key': GlobalVars.metasmoke_key,
+            'filter': 'HNKHHGINKFKGIKGLGKIILMKNHHGHFOL',  # posts.body, posts.created_at
+            'urls': parsing.to_protocol_relative(post_url)
+        }
+        response = requests.get(GlobalVars.metasmoke_host + '/api/v2.0/posts/urls', params=payload).json()
+
+        return response['items']

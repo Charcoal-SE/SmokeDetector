@@ -24,7 +24,7 @@ from html import unescape
 from ast import literal_eval
 # noinspection PyCompatibility
 import regex
-from helpers import only_blacklists_changed, log
+from helpers import only_blacklists_changed, log, expand_shorthand_link, to_metasmoke_link
 from classes import Post
 from classes.feedback import *
 
@@ -187,7 +187,7 @@ def blacklist(_):
                        "Remember to escape dots in URLs using \\.")
 
 
-def check_blacklist(string_to_test, is_username, is_watchlist):
+def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
     # Test the string and provide a warning message if it is already caught.
     if is_username:
         question = Post(api_response={'title': 'Valid title', 'body': 'Valid body',
@@ -212,8 +212,16 @@ def check_blacklist(string_to_test, is_username, is_watchlist):
     reasons = list(set(question_reasons) | set(answer_reasons))
 
     # Filter out watchlist results
+    filter_out = ["potentially bad ns"]
     if not is_watchlist:
-        reasons = list(filter(lambda reason: "potentially bad keyword" not in reason, reasons))
+        filter_out.append("potentially bad keyword")
+    # Ignore "Mostly non-latin body/answer" for phone number watches
+    elif is_phone:
+        filter_out.append("mostly non-latin")
+
+    if filter_out:
+        reasons = list(filter(
+            lambda reason: all([x not in reason.lower() for x in filter_out]), reasons))
 
     return reasons
 
@@ -241,8 +249,8 @@ def do_blacklist(blacklist_type, msg, force=False):
     :return: A string
     """
 
-    chat_user_profile_link = "http://chat.{host}/users/{id}".format(host=msg._client.host,
-                                                                    id=msg.owner.id)
+    chat_user_profile_link = "https://chat.{host}/users/{id}".format(host=msg._client.host,
+                                                                     id=msg.owner.id)
 
     # noinspection PyProtectedMember
     pattern = rebuild_str(msg.content_source.split(" ", 1)[1])
@@ -252,20 +260,40 @@ def do_blacklist(blacklist_type, msg, force=False):
         raise CmdException("An invalid pattern was provided, not blacklisting.")
 
     if not force:
-        reasons = check_blacklist(pattern.replace("\\W", " ").replace("\\.", "."),
-                                  blacklist_type == "username",
-                                  blacklist_type == "watch_keyword")
+        if regex.match(r'(?:\[a-z_]\*)?(?:\(\?:)?\d+(?:[][\\W_*()?:]+\d+)+(?:\[a-z_]\*)?$', pattern):
+            is_phone = True
+        else:
+            is_phone = False
 
-        if reasons:
-            raise CmdException("That pattern looks like it's already caught by " + format_blacklist_reasons(reasons) +
-                               "; append `-force` if you really want to do that.")
+        is_watchlist = bool(blacklist_type == 'watch_keyword')
+
+        concretized_pattern = pattern.replace("\\W", " ").replace("\\.", ".").replace("\\d", "8")
+
+        for username in False, True:
+            reasons = check_blacklist(
+                concretized_pattern, is_username=username, is_watchlist=is_watchlist, is_phone=is_phone)
+
+            if reasons:
+                raise CmdException(
+                    "That pattern looks like it's already caught by " +
+                    format_blacklist_reasons(reasons) +
+                    "; append `-force` if you really want to do that.")
+
+    metasmoke_down = False
+
+    try:
+        code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
+    except (requests.exceptions.ConnectionError, json.decoder.JSONDecodeError):
+        code_permissions = False  # Because we need the system to assume that we don't have code privs.
+        metasmoke_down = True
 
     _, result = GitManager.add_to_blacklist(
         blacklist=blacklist_type,
         item_to_blacklist=pattern,
         username=msg.owner.name,
         chat_profile_link=chat_user_profile_link,
-        code_permissions=is_code_privileged(msg._client.host, msg.owner.id)
+        code_permissions=code_permissions,
+        metasmoke_down=metasmoke_down
     )
 
     return result
@@ -280,7 +308,7 @@ def do_blacklist(blacklist_type, msg, force=False):
                                                                         "blacklist-username-force"])
 def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     """
-    Adds a string to the blacklist and commits/pushes to GitHub
+    Adds a pattern to the blacklist and commits/pushes to GitHub
     :param msg:
     :param pattern:
     :return: A string
@@ -291,37 +319,46 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
 
 
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=True, aliases=["watch-keyword"])
-def watch(msg, website):
+@command(str, whole_msg=True, privileged=True, give_name=True,
+         aliases=["watch-keyword", "watch-force", "watch-keyword-force"])
+def watch(msg, pattern, alias_used="watch"):
     """
-    Adds a string to the watched keywords list and commits/pushes to GitHub
+    Adds a pattern to the watched keywords list and commits/pushes to GitHub
     :param msg:
-    :param website:
+    :param pattern:
     :return: A string
     """
 
-    return do_blacklist("watch_keyword", msg, force=False)
+    return do_blacklist("watch_keyword", msg, force=alias_used.split("-")[-1] == "force")
 
 
-@command(str, whole_msg=True, privileged=True)
-def unwatch(msg, item):
+@command(str, whole_msg=True, privileged=True, give_name=True, aliases=["unwatch"])
+def unblacklist(msg, item, alias_used="unwatch"):
+    """
+    Removes a pattern from watchlist/blacklist and commits/pushes to GitHub
+    :param msg:
+    :param pattern:
+    :return: A string
+    """
+    if alias_used == "unwatch":
+        blacklist_type = "watch"
+    elif alias_used == "unblacklist":
+        blacklist_type = "blacklist"
+    else:
+        raise CmdException("Invalid blacklist type.")
+
+    metasmoke_down = False
+    try:
+        code_privs = is_code_privileged(msg._client.host, msg.owner.id)
+    except (requests.exceptions.ConnectionError, json.decoder.JSONDecodeError):
+        code_privs = False
+        metasmoke_down = True
+
     pattern = msg.content_source.split(" ", 1)[1]
-    _status, message = GitManager.unwatch(rebuild_str(pattern), msg.owner.name, is_code_privileged(
-        msg._client.host, msg.owner.id))
+    _status, message = GitManager.remove_from_blacklist(
+        rebuild_str(pattern), msg.owner.name, blacklist_type,
+        code_privileged=code_privs, metasmoke_down=metasmoke_down)
     return message
-
-
-# noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=True, aliases=["watch-force", "watch-keyword-force"])
-def watch_force(msg, website):
-    """
-    Adds a string to the watched keywords list and commits/pushes to GitHub
-    :param msg:
-    :param website:
-    :return: A string
-    """
-
-    return do_blacklist("watch_keyword", msg, force=True)
 
 
 # noinspection PyIncorrectDocstring
@@ -379,7 +416,7 @@ def brownie():
     return "Brown!"
 
 
-COFFEES = ['Espresso', 'Macchiato', 'Ristretto', 'Americano', 'Latte', 'Cappuccino', 'Mocha', 'Affogato']
+COFFEES = ['Espresso', 'Macchiato', 'Ristretto', 'Americano', 'Latte', 'Cappuccino', 'Mocha', 'Affogato', 'jQuery']
 
 
 # noinspection PyIncorrectDocstring
@@ -790,37 +827,54 @@ def test(content, alias_used="test"):
     :return: A string
     """
     result = "> "
+    site = ""
+
+    option_count = 0
+    for segment in content.split():
+        if segment.startswith("site="):
+            site = expand_shorthand_link(segment[5:])
+        else:
+            # Stop parsing options at first non-option
+            break
+        option_count += 1
+    content = content.split(' ', option_count)[-1]  # Strip parsed options
 
     if alias_used == "test-q":
-        kind = " question."
+        kind = "a question"
         fakepost = Post(api_response={'title': 'Valid title', 'body': content,
                                       'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
+                                      'site': site, 'IsAnswer': False, 'score': 0})
     elif alias_used == "test-a":
-        kind = "n answer."
+        kind = "an answer"
         fakepost = Post(api_response={'title': 'Valid title', 'body': content,
                                       'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': True, 'score': 0})
+                                      'site': site, 'IsAnswer': True, 'score': 0})
     elif alias_used == "test-u":
-        kind = " username."
+        kind = "a username"
         fakepost = Post(api_response={'title': 'Valid title', 'body': "Valid question body",
                                       'owner': {'display_name': content, 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
+                                      'site': site, 'IsAnswer': False, 'score': 0})
     elif alias_used == "test-t":
-        kind = " title."
+        kind = "a title"
         fakepost = Post(api_response={'title': content, 'body': "Valid question body",
                                       'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
+                                      'site': site, 'IsAnswer': False, 'score': 0})
     else:
-        kind = " post, title or username."
+        kind = "a post, title or username"
         fakepost = Post(api_response={'title': content, 'body': content,
                                       'owner': {'display_name': content, 'reputation': 1, 'link': ''},
-                                      'site': "", 'IsAnswer': False, 'score': 0})
+                                      'site': site, 'IsAnswer': False, 'score': 0})
 
     reasons, why_response = FindSpam.test_post(fakepost)
 
     if len(reasons) == 0:
-        result += "Would not be caught as a{}".format(kind)
+        result += "Would not be caught as {}".format(kind)
+
+        if site == "chat.stackexchange.com":
+            result += " on this magic userspace"
+        elif len(site) > 0:
+            result += " on site `{}`".format(site)
+        result += "."
     else:
         result += ", ".join(reasons).capitalize()
 
@@ -839,9 +893,9 @@ def threads():
     :return: A string
     """
 
-    threads_list = ("{ident}: {name}".format(ident=t.ident, name=t.name) for t in threading.enumerate())
+    threads_list = ["{ident}: {name}".format(ident=t.ident, name=t.name) for t in threading.enumerate()]
 
-    return "{threads}".format(threads="\n".join(list(threads_list)))
+    return "\n".join(threads_list)
 
 
 # noinspection PyIncorrectDocstring
@@ -1072,25 +1126,29 @@ def invite(msg, room_id, roles):
 
 # --- Post Responses --- #
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=True)
-def report(msg, args):
+@command(str, whole_msg=True, privileged=False, give_name=True, aliases=["scan", "report-force"])
+def report(msg, args, alias_used="report"):
     """
     Report a post (or posts)
     :param msg:
     :return: A string (or None)
     """
+    if not is_privileged(msg.owner, msg.room) and alias_used != "scan":
+        raise CmdException(GlobalVars.not_privileged_warning)
+
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
-        raise CmdException("You can execute the !!/report command again in {} seconds. "
+        raise CmdException("You can execute the !!/{} command again in {} seconds. "
                            "To avoid one user sending lots of reports in a few commands and "
                            "slowing SmokeDetector down due to rate-limiting, you have to "
                            "wait 30 seconds after you've reported multiple posts in "
-                           "one go.".format(wait))
+                           "one go.".format(alias_used, wait))
 
     output = []
 
     argsraw = args.split(' "', 1)
     urls = argsraw[0].split(' ')
+    action_done = "scanned" if alias_used == "scan" else "reported"
 
     # Handle determining whether a custom report reason was provided.
     try:
@@ -1105,20 +1163,23 @@ def report(msg, args):
             raise CmdException("You cannot provide multiple custom report reasons. "
                                "Please review the permitted !!/report syntax in the documentation "
                                "for guidance on using custom report reasons.")
+
+        report_info = u"Post manually {} by user *{}* in room *{}* with reason: *{}*.\n\n".format(
+            action_done, msg.owner.name, msg.room.name, custom_reason)
     except IndexError:
-        custom_reason = None
+        report_info = u"Post manually {} by user *{}* in room *{}*.\n\n".format(
+            action_done, msg.owner.name, msg.room.name)
 
     urls = list(set(urls))
 
     if len(urls) > 5:
         raise CmdException("To avoid SmokeDetector reporting posts too slowly, you can "
-                           "report at most 5 posts at a time. This is to avoid "
+                           "{} at most 5 posts at a time. This is to avoid "
                            "SmokeDetector's chat messages getting rate-limited too much, "
-                           "which would slow down reports.")
+                           "which would slow down reports.".format(alias_used))
 
     for index, url in enumerate(urls, start=1):
-        url = rebuild_str(url)
-        post_data = api_get_post(url)
+        post_data = api_get_post(rebuild_str(url))
 
         if post_data is None:
             output.append("Post {}: That does not look like a valid post URL.".format(index))
@@ -1136,107 +1197,68 @@ def report(msg, args):
 
             if GlobalVars.metasmoke_key is not None:
                 se_link = to_protocol_relative(post_data.post_url)
-                ms_link = "https://m.erwaysoftware.com/posts/by-url?url={}".format(se_link)
+                ms_link = to_metasmoke_link(se_link)
                 output.append("Post {}: Already recently reported [ [MS]({}) ]".format(index, ms_link))
                 continue
             else:
                 output.append("Post {}: Already recently reported".format(index))
                 continue
 
-        post_data.is_answer = (post_data.post_type == "answer")
+        url = to_protocol_relative(post_data.post_url)
         post = Post(api_response=post_data.as_dict)
         user = get_user_from_url(post_data.owner_url)
 
+        if fetch_post_id_and_site_from_url(url)[2] == "answer":
+            parent_data = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
+            post._is_answer = True
+            post._parent = Post(api_response=parent_data.as_dict)
+
         scan_spam, scan_reasons, scan_why = check_if_spam(post)  # Scan it first
-        # Scan before adding blacklist to prevent showing all reported posts as "Blacklisted user"
 
-        if user is not None:
-            message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
-            add_blacklisted_user(user, message_url, post_data.post_url)
+        # Expand real scan results from dirty returm value when not "!!/scan"
+        # Presence of "scan_why" indicates the post IS spam but ignored
+        if alias_used != "scan" and (not scan_spam) and scan_why:
+            scan_spam = True
+            scan_reasons, scan_why = scan_reasons
 
-        if custom_reason:
-            why_info = u"Post manually reported by user *{}* in room *{}* with reason: *{}*.\n".format(
-                msg.owner.name, msg.room.name, custom_reason
-            )
+        # If alias_used == "report-force" then jump to the next block
+        if scan_spam and alias_used in {"scan", "report"}:
+            handle_spam(post=post, reasons=scan_reasons, why=report_info + scan_why)
+            continue
+
+        # scan_spam == False or alias_used == "report-force"
+        if alias_used in {"report", "report-force"}:
+            if user is not None:
+                message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
+                add_blacklisted_user(user, message_url, post_data.post_url)
+
+            batch = ""
+            if len(urls) > 1:
+                batch = " (batch report: post {} out of {})".format(index, len(urls))
+
+            if scan_spam:
+                why_append = u"This post would have also been caught for: " + ", ".join(scan_reasons).capitalize() + \
+                    '\n' + scan_why
+            else:
+                why_append = u"This post would not have been caught otherwise."
+
+            handle_spam(post=post,
+                        reasons=["Manually reported " + post_data.post_type + batch],
+                        why=report_info + why_append)
+            continue
+
+        # scan_spam == False and alias_used == "scan"
         else:
-            why_info = u"Post manually reported by user *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
-
-        batch = ""
-        if len(urls) > 1:
-            batch = " (batch report: post {} out of {})".format(index, len(urls))
-
-        if scan_spam:
-            why_append = u"This post would have also been caught for: " + ", ".join(scan_reasons).capitalize() + \
-                '\n' + scan_why
-        else:
-            why_append = u"This post would not have been caught otherwise."
-
-        handle_spam(post=post,
-                    reasons=["Manually reported " + post_data.post_type + batch],
-                    why=why_info + '\n' + why_append)
+            if scan_why:
+                output.append("Post {}: Looks like spam but not reported: {}".format(index, scan_why.capitalize()))
+            else:
+                output.append("Post {}: This does not look like spam".format(index))
 
     if 1 < len(urls) > len(output):
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
 
     if len(output) > 0:
-        return os.linesep.join(output)
-
-
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-@command(str, whole_msg=True, give_name=True, aliases=['scan', 'test-p'])
-def checkpost(msg, url, alias_used='scan'):  # FIXME: Currently does not support batch report
-    """
-    Force Smokey to scan a post even if it has no recent activity
-    :param msg:
-    :param url:
-    :return str:
-    """
-    crn, wait = can_report_now(msg.owner.id, msg._client.host)
-    if not crn:
-        raise CmdException("You can execute the !!/{0} command again in {1} seconds. "
-                           "To avoid one user sending lots of reports in a few commands and "
-                           "slowing SmokeDetector down due to rate-limiting, you have to "
-                           "wait 30 seconds after you've reported multiple posts in "
-                           "one go.".format(alias_used, wait))
-
-    post_data = api_get_post(rebuild_str(url))
-
-    if post_data is None:
-        raise CmdException("That does not look like a valid post URL.")
-
-    if post_data is False:
-        raise CmdException("Cannot find data for this post in the API. "
-                           "It may have already been deleted.")
-
-    # Update url to be consistent with other code
-    url = to_protocol_relative(post_data.post_url)
-    post = Post(api_response=post_data.as_dict)
-
-    if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) \
-            and not is_false_positive((post_data.post_id, post_data.site)):
-        # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
-        # this force scan might be attempting to correct that/fix a mistake/etc.
-
-        response_text = "This post is already recently reported"
-        if GlobalVars.metasmoke_key is not None:
-            ms_link = "https://m.erwaysoftware.com/posts/by-url?url={}".format(url)  # se_link == url
-            raise CmdException(response_text + " [ [MS]({}) ]".format(ms_link))
-        else:
-            raise CmdException(response_text + ".")
-
-    if fetch_post_id_and_site_from_url(url)[2] == "answer":
-        parent = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
-
-        post._is_answer = True
-        post._parent = Post(api_response=parent.as_dict)
-
-    is_spam, reasons, why = check_if_spam(post)
-
-    if is_spam:
-        handle_spam(post=post, reasons=reasons, why=why + "\nManually triggered scan")
-        return None
-
-    return "Post [{}]({}) does not look like spam.".format(sanitize_title(post_data.title), url)
+        return "\n".join(output)
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -1393,7 +1415,7 @@ def delete_force(msg):
     # noinspection PyBroadException
     try:
         msg.delete()
-    except:
+    except Exception:  # I don't want to dig into ChatExchange
         pass  # couldn't delete message
 
 
@@ -1416,7 +1438,7 @@ def delete(msg):
     else:
         try:
             msg.delete()
-        except:
+        except Exception:  # I don't want to dig into ChatExchange
             pass
 
 
@@ -1475,7 +1497,7 @@ def false(feedback, msg, comment, alias_used="false"):
     try:
         if msg.room.id != 11540:
             msg.delete()
-    except:
+    except Exception:  # I don't want to dig into ChatExchange
         pass
 
     if comment:
@@ -1485,8 +1507,8 @@ def false(feedback, msg, comment, alias_used="false"):
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
-@command(message, str, reply=True, privileged=True, whole_msg=True, arity=(1, 2))
-def ignore(feedback, msg, comment):
+@command(message, str, reply=True, privileged=True, whole_msg=True, arity=(1, 2), give_name=True, aliases=["ig"])
+def ignore(feedback, msg, comment, alias_used="ignore"):
     """
     Marks a post to be ignored
     :param feedback:
@@ -1507,6 +1529,8 @@ def ignore(feedback, msg, comment):
     if comment:
         Tasks.do(Metasmoke.post_auto_comment, comment, feedback.owner, url=post_url)
 
+    if alias_used == "ig":
+        return None
     return "Post ignored; alerts about it will no longer be posted."
 
 

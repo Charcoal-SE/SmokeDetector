@@ -4,8 +4,9 @@ import platform
 
 if 'windows' not in platform.platform().lower():
     raise NotImplementedError("Use the `sh` module's `git` from PyPI instead!")
-else:
-    pass
+
+
+GitError = sp.CalledProcessError
 
 
 def _call_process(execcmd, _ok_code=None, return_data=False):
@@ -13,15 +14,13 @@ def _call_process(execcmd, _ok_code=None, return_data=False):
     (stdout, stderr) = proc.communicate()
     retcode = proc.returncode
     if retcode != 0:
-        if _ok_code and retcode not in _ok_code:
-            raise sp.CalledProcessError(retcode, execcmd, stdout, stderr)
+        if _ok_code and retcode in _ok_code:
+            pass
         else:
-            raise sp.CalledProcessError(retcode, execcmd, stdout, stderr)
+            raise GitError(retcode, execcmd, stdout, stderr)
 
     if return_data:
         return stdout, stderr, retcode
-    else:
-        pass
 
 
 class Git:

@@ -1,5 +1,6 @@
 # coding=utf-8
 import sys
+import random
 from findspam import FindSpam
 import datahandling
 import chatcommunicate
@@ -9,7 +10,7 @@ import parsing
 import metasmoke
 import excepthook
 from classes import Post, PostParseError
-from helpers import log, api_parameter_from_link, post_id_from_link
+from helpers import log, to_metasmoke_link, escape_format
 from tasks import Tasks
 
 
@@ -18,8 +19,7 @@ def should_whitelist_prevent_alert(user_url, reasons):
     is_whitelisted = datahandling.is_whitelisted_user(parsing.get_user_from_url(user_url))
     if not is_whitelisted:
         return False
-    reasons_comparison = [r for r in set(reasons) if "username" not in r]
-    return len(reasons_comparison) == 0
+    return not any(r for r in set(reasons) if "username" not in r)
 
 
 # noinspection PyMissingTypeHints
@@ -40,21 +40,33 @@ def check_if_spam(post):
             blacklisted_post_url = blacklisted_user_data[2]
             if blacklisted_post_url:
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
-                why += u"\nBlacklisted user - blacklisted for {} (" \
-                       u"https://m.erwaysoftware.com/posts/uid/{}/{}) by {}".format(
-                           blacklisted_post_url, api_parameter_from_link(rel_url),
-                           post_id_from_link(rel_url), blacklisted_by
-                       )
+                why += u"\nBlacklisted user - blacklisted for {} ({}) by {}".format(
+                    blacklisted_post_url, to_metasmoke_link(rel_url), blacklisted_by
+                )
             else:
                 why += u"\n" + u"Blacklisted user - blacklisted by {}".format(blacklisted_by)
-    if 0 < len(test):
-        if datahandling.has_already_been_posted(post.post_site, post.post_id, post.title) \
-                or datahandling.is_false_positive((post.post_id, post.post_site)) \
-                or should_whitelist_prevent_alert(post.user_url, test) \
-                or datahandling.is_ignored_post((post.post_id, post.post_site)) \
-                or datahandling.is_auto_ignored_post((post.post_id, post.post_site)):
-            return False, None, ""  # Don't repost. Reddit will hate you.
-        return True, test, why
+    if test:
+        result = None
+        if datahandling.has_already_been_posted(post.post_site, post.post_id, post.title):
+            result = "post has already been reported"
+        elif datahandling.is_false_positive((post.post_id, post.post_site)):
+            result = "post is marked as false positive"
+        elif should_whitelist_prevent_alert(post.user_url, test):
+            result = "user is whitelisted"
+        elif datahandling.is_ignored_post((post.post_id, post.post_site)):
+            result = "post is ignored"
+        elif datahandling.is_auto_ignored_post((post.post_id, post.post_site)):
+            result = "post is automatically ignored"
+        elif datahandling.has_community_bumped_post(post.post_url, post.body):
+            result = "post is bumped by Community \u2666\uFE0F"
+        # Dirty approach
+        if result is None:  # Post not ignored
+            return True, test, why
+        else:
+            return False, (test, why), result
+
+    # XXX: Return an empty string for "why" if the post isn't scanned as spam
+    # Don't touch if unsure, you'll break !!/report
     return False, None, ""
 
 
@@ -94,24 +106,26 @@ def handle_spam(post, reasons, why):
         # chat is properly constructed with parent title instead. This will make things 'print'
         # in a proper way in chat messages.
         sanitized_title = parsing.sanitize_title(post.title if not post.is_answer else post.parent.title)
+        sanitized_title = escape_format(sanitized_title).strip()
 
         prefix = u"[ [SmokeDetector](//goo.gl/eLDYqh) ]"
         if GlobalVars.metasmoke_key:
-            prefix_ms = u"[ [SmokeDetector](//goo.gl/eLDYqh) | [MS](//m.erwaysoftware.com/posts/uid/{}/{}) ]".format(
-                api_parameter_from_link(post_url),
-                post.post_id
-            )
+            prefix_ms = u"[ [SmokeDetector](//goo.gl/eLDYqh) | [MS]({}) ]".format(
+                to_metasmoke_link(post_url, protocol=False))
         else:
             prefix_ms = prefix
 
         # We'll insert reason list later
+        edited = '' if not post.edited else ' \u270F\uFE0F'
         if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
-            s = u" {{}}: [{}]({}) by a deleted user on `{}`".format(sanitized_title, post_url, shortened_site)
+            s = u" {{}}: [{}]({}){} by a deleted user on `{}`".format(
+                sanitized_title, post_url, edited, shortened_site)
             username = ""
         else:
-            s = u" {{}}: [{}]({}) by [{}]({}) on `{}`".format(sanitized_title, post_url,
-                                                              post.user_name.strip(), poster_url, shortened_site)
             username = post.user_name.strip()
+            escaped_username = escape_format(parsing.escape_markdown(username))
+            s = u" {{}}: [{}]({}){} by [{}]({}) on `{}`".format(
+                sanitized_title, post_url, edited, escaped_username, poster_url, shortened_site)
 
         Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
                  post.title_ignore_type, post_url, reasons, post.body, username,
@@ -122,11 +136,11 @@ def handle_spam(post, reasons, why):
         GlobalVars.deletion_watcher.subscribe(post_url)
 
         reason = message = None
-        for reason_count in range(5, 2, -1):  # Try 5 reasons, then 4, then 3
+        for reason_count in range(5, 0, -1):  # Try 5 reasons and all the way down to 1
             reason = ", ".join(reasons[:reason_count])
             if len(reasons) > reason_count:
                 reason += ", +{} more".format(len(reasons) - reason_count)
-            reason = reason[:1].upper() + reason[1:]  # reason is capitalised, unlike the entries of reasons list
+            reason = reason.capitalize()
             message = prefix_ms + s.format(reason)  # Insert reason list
             if len(message) <= 500:
                 break  # Problem solved, stop attempting
@@ -135,14 +149,14 @@ def handle_spam(post, reasons, why):
         if len(message) > 500:
             message = (prefix_ms + s)[:500]  # Truncate directly and keep MS link
 
-        without_roles = tuple("no-" + reason for reason in reasons) + ("site-no-" + post.post_site,)
+        without_roles = tuple(["no-" + reason for reason in reasons]) + ("site-no-" + post.post_site,)
 
-        if set(reasons) - GlobalVars.experimental_reasons == set():
+        if set(reasons) - GlobalVars.experimental_reasons == set() and \
+                not why.startswith("Post manually "):
             chatcommunicate.tell_rooms(message, ("experimental",),
                                        without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
         else:
             chatcommunicate.tell_rooms(message, ("all", "site-" + post.post_site),
                                        without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
-    except:
-        exc_type, exc_obj, exc_tb = sys.exc_info()
-        excepthook.uncaught_exception(exc_type, exc_obj, exc_tb)
+    except Exception as e:
+        excepthook.uncaught_exception(*sys.exc_info())

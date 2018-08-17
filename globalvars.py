@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import sys
 import os
 from datetime import datetime
 from html.parser import HTMLParser
@@ -11,28 +12,24 @@ import threading
 # noinspection PyCompatibility
 import regex
 import subprocess as sp
-from dulwich.repo import Repo
 import platform
 from flovis import Flovis
 
 
 def git_commit_info():
-    git = Repo('.')
-    commit = git.get_object(git.head())
-    return {'id': commit.id.decode("utf-8")[0:7], 'id_full': commit.id.decode("utf-8"),
-            'author': regex.findall("(.*?) <(.*?)>", commit.author.decode("utf-8"))[0],
-            'message': commit.message.decode("utf-8").strip('\r\n').split('\n')[0]}
+    try:
+        data = sp.check_output(['git', 'log', '-1', '--pretty=%h%n%H%n%an%n%s'], stderr=sp.STDOUT).decode('utf-8')
+    except sp.CalledProcessError as e:
+        raise OSError("Git error:\n" + e.output) from e
+    short_id, full_id, author, message = data.strip().split("\n")
+    return {'id': short_id, 'id_full': full_id, 'author': author, 'message': message}
 
 
 def git_status():
-    if 'windows' in platform.platform().lower():
-        data = sp.Popen(['git', 'status'], shell=True, cwd=os.getcwd(), stderr=sp.PIPE, stdout=sp.PIPE).communicate()
-    else:
-        data = sp.Popen(['git status'], shell=True, cwd=os.getcwd(), stderr=sp.PIPE, stdout=sp.PIPE).communicate()
-    if not data[1]:
-        return data[0].decode('utf-8').strip('\n')
-    else:
-        raise OSError("Git error!")
+    try:
+        return sp.check_output(['git', 'status'], stderr=sp.STDOUT).decode('utf-8').strip()
+    except sp.CalledProcessError as e:
+        raise OSError("Git error:\n" + e.output) from e
 
 
 # This is needed later on for properly 'stripping' unicode weirdness out of git log data.
@@ -60,19 +57,20 @@ class GlobalVars:
     deletion_watcher = None
 
     metasmoke_last_ping_time = datetime.now()
-    not_privileged_warning = """
-    You are not a privileged user. Please see
-    [the privileges wiki page](https://charcoal-se.org/smokey/Privileges) for
-    information on what privileges are and what is expected of privileged users.
-    """.strip().replace("\n", " ")
+    not_privileged_warning = \
+        "You are not a privileged user. Please see " \
+        "[the privileges wiki page](https://charcoal-se.org/smokey/Privileges) for " \
+        "information on what privileges are and what is expected of privileged users."
 
     experimental_reasons = {  # Don't widely report these
         "potentially bad keyword in answer",
         "potentially bad keyword in body",
         "potentially bad keyword in title",
         "potentially bad keyword in username",
+        "potentially bad NS for domain in title",
+        "potentially bad NS for domain in body",
         "toxic body detected",
-        "toxic answer detected"
+        "toxic answer detected",
     }
 
     parser = HTMLParser()
@@ -85,10 +83,10 @@ class GlobalVars:
     if md5(commit['author'][0].encode('utf-8')).hexdigest() in censored_committer_names:
         commit['author'] = censored_committer_names[md5(commit['author'][0].encode('utf-8')).hexdigest()]
 
-    commit_with_author = "%s (%s: *%s*)" % (commit['id'],
-                                            commit['author'][0] if type(commit['author']) in [list, tuple]
-                                            else commit['author'],
-                                            commit['message'])
+    commit_with_author = "`{}` (*{}*: {})".format(
+        commit['id'],
+        commit['author'][0] if type(commit['author']) in {list, tuple} else commit['author'],
+        commit['message'])
 
     on_master = "HEAD detached" not in git_status()
 
@@ -114,10 +112,15 @@ class GlobalVars:
 
     config = RawConfigParser()
 
-    if os.path.isfile('config'):
+    if os.path.isfile('config') and "pytest" not in sys.modules:
         config.read('config')
+        log('debug', "Configuration loaded from \"config\"")
     else:
         config.read('config.ci')
+        if "pytest" in sys.modules:
+            log('debug', "Running in pytest, force load config from \"config.ci\"")
+        else:
+            log('debug', "Configuration loaded from \"config.ci\"")
 
     # environ_or_none defined in helpers.py
     bot_name = environ_or_none("SMOKEDETECTOR_NAME") or "SmokeDetector"
@@ -132,10 +135,17 @@ class GlobalVars:
     metasmoke_ws = None
 
     try:
+        chatexchange_u = config.get("Config", "ChatExchangeU")
+        chatexchange_p = config.get("Config", "ChatExchangeP")
+    except NoOptionError:
+        chatexchange_u = None
+        chatexchange_p = None
+
+    try:
         metasmoke_host = config.get("Config", "metasmoke_host")
     except NoOptionError:
         metasmoke_host = None
-        log('info', "metasmoke host not found. Set it as metasmoke_host in the config file."
+        log('info', "metasmoke host not found. Set it as metasmoke_host in the config file. "
             "See https://github.com/Charcoal-SE/metasmoke.")
 
     try:

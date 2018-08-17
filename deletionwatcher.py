@@ -29,7 +29,7 @@ class DeletionWatcher:
 
         try:
             self.socket = websocket.create_connection("wss://qa.sockets.stackexchange.com/")
-        except:
+        except websocket.WebSocketException:
             log('error', 'DeletionWatcher failed to create a websocket connection')
             return
 
@@ -93,7 +93,7 @@ class DeletionWatcher:
             self.posts[action] = (post_id, post_site, post_type, post_url, [(callback, max_time)] if callback else [])
             try:
                 self.socket.send(action)
-            except:
+            except websocket.WebSocketException:
                 log('error', 'DeletionWatcher failed on sending {}'.format(action))
         elif callback:
             _, _, _, _, callbacks = self.posts[action]
@@ -122,7 +122,7 @@ class DeletionWatcher:
             time.sleep(DeletionWatcher.next_request_time - time.time())
 
         for site, posts in saved.items():
-            ids = ";".join([post_id for post_id in posts if not DeletionWatcher._ignore((post_id, site))])
+            ids = ";".join(post_id for post_id in posts if not DeletionWatcher._ignore((post_id, site)))
             uri = "https://api.stackexchange.com/2.2/posts/{}?site={}&key=IAkbitmze4B8KpacUfLqkw((".format(ids, site)
             res = requests.get(uri)
             json = res.json()
