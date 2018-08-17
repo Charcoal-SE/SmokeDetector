@@ -9,9 +9,9 @@ def load_blacklists():
     GlobalVars.bad_keywords = Blacklist(Blacklist.KEYWORDS).parse()
     GlobalVars.blacklisted_websites = Blacklist(Blacklist.WEBSITES).parse()
     GlobalVars.blacklisted_usernames = Blacklist(Blacklist.USERNAMES).parse()
-    GlobalVars.blacklisted_phones = Blacklist(Blacklist.NUMBERS).parse()
+    GlobalVars.blacklisted_numbers = Blacklist(Blacklist.NUMBERS).parse()
     GlobalVars.watched_keywords = Blacklist(Blacklist.WATCHED_KEYWORDS).parse()
-    GlobalVars.watched_phones = Blacklist(Blacklist.WATCHED_NUMBERS).parse()
+    GlobalVars.watched_numbers = Blacklist(Blacklist.WATCHED_NUMBERS).parse()
 
 
 class BlacklistParser:

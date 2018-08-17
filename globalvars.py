@@ -47,6 +47,8 @@ class GlobalVars:
     blacklisted_users = []
     blacklisted_usernames = []
     blacklisted_websites = []
+    blacklisted_numbers = []
+    watched_numbers = []
     bad_keywords = []
     watched_keywords = {}
     ignored_posts = []
