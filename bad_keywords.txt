@@ -1497,3 +1497,4 @@ sun\W?chips
 [a-z_]*(?:91_*)?9066[\W_]*638[\W_]*196[a-z_]*
 mission-impossible-fallout
 phendora
+apollo\W*(?:kidney\W*)?hospital\d*(?!(?:[^<]|<(?!code>)(?!/code))*</code>)
