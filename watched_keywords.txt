@@ -5110,3 +5110,4 @@
 1534555404	Makyen	netcurrencyindex\.com
 1534555437	Makyen	NetCurrencyIndex(?:Crypto)?
 1534555449	Makyen	netcryptoindex
+1534559964	Makyen	arthurgeorge020(?:@gmail\.com)?
