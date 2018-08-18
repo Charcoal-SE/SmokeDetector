@@ -5107,3 +5107,4 @@
 1534502899	tripleee	aristocratholding\.com
 1534503490	tripleee	maid\W*pro
 1534544664	Makyen	hp-driversoftware\.net
+1534555404	Makyen	netcurrencyindex\.com
