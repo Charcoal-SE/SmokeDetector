@@ -5109,3 +5109,4 @@
 1534544664	Makyen	hp-driversoftware\.net
 1534555404	Makyen	netcurrencyindex\.com
 1534555437	Makyen	NetCurrencyIndex(?:Crypto)?
+1534555449	Makyen	netcryptoindex
