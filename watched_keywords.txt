@@ -5118,3 +5118,4 @@
 1534714736	Makyen	queenspalace\.com
 1534717883	Tetsuya Yamamoto	dailymails\.org
 1534717913	Makyen	rubygarage\.org
+1534717965	Tetsuya Yamamoto	juniba\.pk
