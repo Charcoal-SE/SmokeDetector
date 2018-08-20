@@ -5108,7 +5108,6 @@
 1534559964	Makyen	arthurgeorge020(?:@gmail\.com)?
 1534572526	Makyen	applemacsupportnumbers\.com
 1534581026	Makyen	dr\.davehanks01(?:@gmail\.com)?
-1534581667	Makyen	getcontacthelp\.com
 1534584959	Makyen	errosupport\.com
 1534589409	Zoe	dailyneeds247\.com
 1534593079	Zoe	pst\W*compress
