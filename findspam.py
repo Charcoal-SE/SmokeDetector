@@ -585,6 +585,7 @@ def watched_ns_for_url_domain(s, site):
         'greengeeks.com.',
         'supportaus.com.',
         'utecho.com.',
+        'syrahost.com.',
     ])
 
 
