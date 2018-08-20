@@ -5148,3 +5148,4 @@
 1534760500	tripleee	hqguestpost\.com
 1534760588	tripleee	strategiesdc\.ae
 1534760752	tripleee	fugenx\.ae
+1534762706	tripleee	[a-z_]*(?:1_*)?877[\W_]*917[\W_]*4965[a-z_]*
