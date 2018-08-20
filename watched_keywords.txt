@@ -5134,3 +5134,4 @@
 1534751010	Tetsuya Yamamoto	ralali\.com
 1534751527	Tetsuya Yamamoto	internetserviceproviders\.co
 1534751843	iBug	brothersoft\.com
+1534751868	iBug	Smart\W?Stream\W?Alliance
