@@ -5125,3 +5125,4 @@
 1534733408	Makyen	imperiumspencer999(?:@gmail\.com)?
 1534733422	Makyen	[a-z_]*(?:1_*)?631[\W_]*538[\W_]*3574[a-z_]*
 1534742290	Makyen	we\Ware\Wplease\Wto\Winform
+1534743984	Tetsuya Yamamoto	chineseproverbs\.net
