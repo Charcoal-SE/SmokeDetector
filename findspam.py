@@ -175,12 +175,15 @@ def misleading_link(s, site):
     if site == 'stackoverflow.com' and parsed_text.fld.split('.')[-1] in SAFE_EXTENSIONS:
         return False, ''
 
+    if levenshtein(href_domain, text_domain) <= LEVEN_DOMAIN_DISTANCE:  # Preempt
+        return False, ''
+
     try:
         href_domain = unquote_plus(parsed_href.domain.encode("ascii").decode("idna"))
     except ValueError:
         href_domain = parsed_href.domain
     try:
-        text_domain = unquote_plus(parsed_text.domain)  # Nobody posts "xn--abcdefg.com" in link text
+        text_domain = unquote_plus(parsed_text.domain.encode("ascii").decode("idna"))  # people do post this, sad
     except ValueError:
         text_domain = parsed_text.domain
 
