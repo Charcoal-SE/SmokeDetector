@@ -5144,3 +5144,4 @@
 1534755026	tripleee	[a-z_]*(?:1_*)?661[\W_]*244[\W_]*5224[a-z_]*
 1534755475	Makyen	[a-z_]*(?:91_*)?8094[\W_]*945[\W_]*424[a-z_]*
 1534759162	Tetsuya Yamamoto	stratapulse\.com\.au
+1534759241	doppelgreener	new\Wstrata\Wmanager
