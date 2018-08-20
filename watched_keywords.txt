@@ -5148,3 +5148,4 @@
 1534762706	tripleee	[a-z_]*(?:1_*)?877[\W_]*917[\W_]*4965[a-z_]*
 1534762776	doppelgreener	simpletrick\.net
 1534766827	doppelgreener	cute-nicknames\.com
+1534768728	tripleee	inovarfloor\.com
