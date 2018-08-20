@@ -584,6 +584,7 @@ def watched_ns_for_url_domain(s, site):
         'hawkhost.com.',
         'greengeeks.com.',
         'supportaus.com.',
+        'utecho.com.',
     ])
 
 
