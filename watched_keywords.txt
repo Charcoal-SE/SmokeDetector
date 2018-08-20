@@ -5132,3 +5132,4 @@
 1534747183	tripleee	letsdiskuss\.com
 1534748251	iBug	تور داخلی
 1534751010	Tetsuya Yamamoto	ralali\.com
+1534751527	Tetsuya Yamamoto	internetserviceproviders\.co
