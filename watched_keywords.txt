@@ -5142,3 +5142,4 @@
 1534753509	tripleee	sagarkidiary\.com
 1534754954	tripleee	apsara\W?db
 1534755008	tripleee	techdatapark\.com
+1534755026	tripleee	[a-z_]*(?:1_*)?661[\W_]*244[\W_]*5224[a-z_]*
