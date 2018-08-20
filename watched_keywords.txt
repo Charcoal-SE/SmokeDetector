@@ -5145,3 +5145,4 @@
 1534755475	Makyen	[a-z_]*(?:91_*)?8094[\W_]*945[\W_]*424[a-z_]*
 1534759162	Tetsuya Yamamoto	stratapulse\.com\.au
 1534759241	doppelgreener	new\Wstrata\Wmanager
+1534760500	tripleee	hqguestpost\.com
