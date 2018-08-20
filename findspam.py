@@ -175,7 +175,7 @@ def misleading_link(s, site):
     if site == 'stackoverflow.com' and parsed_text.fld.split('.')[-1] in SAFE_EXTENSIONS:
         return False, ''
 
-    if levenshtein(href_domain, text_domain) <= LEVEN_DOMAIN_DISTANCE:  # Preempt
+    if levenshtein(parsed_href, parsed_text) <= LEVEN_DOMAIN_DISTANCE:  # Preempt
         return False, ''
 
     try:
