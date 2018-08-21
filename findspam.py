@@ -351,14 +351,15 @@ def has_health(s, site):   # flexible detection of health spam in titles
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def pattern_product_name(s, site):
+    # Always use (?: non-capturing groups ) in the keywords list
     keywords = [
-        "Testo", "Dermapholia", "Garcinia", "Cambogia", "Aurora", "Diet", "Slim", "Premier", "(?:Pure)?Fit",
-        "Junivive", "Apexatropin", "Gain", "Allure", "Nuvella", "Trimgenix", "Satin", "Prodroxatone", "Blast",
+        "Testo", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Aurora", "Diet", "Slim", "Premier", "(?:Pure)?Fit",
+        "Junivive", "Gain", "Allure", "Nuvella", "Blast",
         "Elite", "Force", "Exceptional", "Enhance(?:ment)?", "Nitro", "Max+", "Boost", "E?xtreme", "Grow",
         "Deep", "Male", "Pro", "Advanced", "Monster", "Divine", "Royale", "Angele*", "Trinity", "Andro",
-        "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Hydroluxe", "Boost(?:er)?",
+        "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Boost(?:er)?",
         "Serum", "Supplement", "Fuel", "Cream", "Keto", "Rapid", "Tone", "Forskolin", "Neuro", "Luma"
-        "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Premi(?:um|er)", "Vital", "Derma?", "Master", "Ultra", "Radiant(?:ly)?",
+        "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Premi(?:um|er)", "Vital", "Master", "Ultra", "Radiant(?:ly)?",
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords += [r"X[\dLOST]?", "Alpha", "Plus", "Prime", "Formula"]
@@ -366,8 +367,10 @@ def pattern_product_name(s, site):
 
     three_words = regex.compile(r"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
     two_words = regex.compile(r"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
-    unique_three_words = sum([len(m[1:]) == len(set(m[1:])) for m in three_words])
-    unique_two_words = sum([len(m[1:]) == len(set(m[1:])) for m in two_words])
+    unique_three_words = sum([len(m[1:]) == len(set([regex.sub(r"(?i)X\d", "X0", w) for w in m[1:]]))
+        for m in three_words])
+    unique_two_words = sum([len(m[1:]) == len(set([regex.sub(r"(?i)X\d", "X0", w) for w in m[1:]]))
+        for m in two_words])
     if unique_three_words >= 1:
         return True, u"Pattern-matching product name *{}*".format(", ".join([match[0] for match in set(three_words)]))
     elif unique_two_words >= 2:
