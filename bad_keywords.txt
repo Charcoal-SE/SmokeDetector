@@ -1502,3 +1502,4 @@ apollo\W*(?:kidney\W*)?hospital\d*(?!(?:[^<]|<(?!code>)(?!/code))*</code>)
 Purexen
 smart\W?stream\W?alliance(?:\W?llc)?
 beach\W?slim
+south\W?beach(?:\W?diet)?
