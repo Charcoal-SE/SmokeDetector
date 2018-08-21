@@ -1178,6 +1178,8 @@ def report(msg, args, alias_used="report"):
                            "SmokeDetector's chat messages getting rate-limited too much, "
                            "which would slow down reports.".format(alias_used))
 
+    users_to_blacklist = []
+
     for index, url in enumerate(urls, start=1):
         post_data = api_get_post(rebuild_str(url))
 
@@ -1215,6 +1217,11 @@ def report(msg, args, alias_used="report"):
 
         scan_spam, scan_reasons, scan_why = check_if_spam(post)  # Scan it first
 
+        if alias_used in {"report", "report-force"}:  # Force blacklist user even if !!/report falls back to scan
+            if user is not None:
+                message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
+            users_to_blacklist.append((user, message_url, post_data.post_url))
+
         # Expand real scan results from dirty returm value when not "!!/scan"
         # Presence of "scan_why" indicates the post IS spam but ignored
         if alias_used != "scan" and (not scan_spam) and scan_why:
@@ -1228,10 +1235,6 @@ def report(msg, args, alias_used="report"):
 
         # scan_spam == False or alias_used == "report-force"
         if alias_used in {"report", "report-force"}:
-            if user is not None:
-                message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
-                add_blacklisted_user(user, message_url, post_data.post_url)
-
             batch = ""
             if len(urls) > 1:
                 batch = " (batch report: post {} out of {})".format(index, len(urls))
@@ -1253,6 +1256,9 @@ def report(msg, args, alias_used="report"):
                 output.append("Post {}: Looks like spam but not reported: {}".format(index, scan_why.capitalize()))
             else:
                 output.append("Post {}: This does not look like spam".format(index))
+
+    for item in users_to_blacklist:
+        add_blacklisted_user(*item)
 
     if 1 < len(urls) > len(output):
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
