@@ -4812,7 +4812,6 @@
 1533279354	tripleee	customerservice\.website
 1533281415	iBug	dubaidesertsafariuae\.com
 1533281545	Glorfindel	dhowkhasabtours\.com
-1533287227	tripleee	gofitmantra\.com
 1533290954	tripleee	isphack
 1533291972	tripleee	seo1seo1
 1533311532	Makyen	[a-z_]*(?:1_*)?612[\W_]*361[\W_]*0692[a-z_]*
