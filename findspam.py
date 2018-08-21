@@ -589,6 +589,7 @@ def watched_ns_for_url_domain(s, site):
         'supportaus.com.',
         'utecho.com.',
         'syrahost.com.',
+        '256gbserver.com.',
     ])
 
 
