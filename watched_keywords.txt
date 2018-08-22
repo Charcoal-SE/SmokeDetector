@@ -5168,3 +5168,4 @@
 1534916300	Makyen	crlightin?g\W*(?:and\W*)?audio
 1534917211	tripleee	workglovesdepot\.com
 1534922850	Tetsuya Yamamoto	alekando\.ru
+1534923835	tripleee	[a-z_]*(?:353_*)?(?:0_*)?76[\W_]*680[\W_]*3285[a-z_]*
