@@ -97,3 +97,4 @@ muh[ae]mm[ae]d\W*the\W*pa?edophile
 ^autolinkpk$
 ^PCBindex$
 ^Vico\W*Peißker$
+^rayaz$
