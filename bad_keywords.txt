@@ -392,9 +392,9 @@ jolique
 clemix
 nuavive
 evanti
-\W*毕业证\W*
+\w*毕业证\w*
 i\Wdidn't\Wfind\Wthe\Wright\Wsolution\Wfrom\Wthe\Winternet
-\W*レーザーポインター\W*
+\w*レーザーポインター\w*
 ultra\Wpure\Wturmeric
 libidogene
 suisse\Wrenewal
@@ -1341,7 +1341,7 @@ vera\W?slim
 verism\W?training(?:\W?online)?
 thermo\W?burn
 vita\W?silk
-\W*学历认证\W*
+\w*学历认证\w*
 forskothin
 \d*jobsexam
 premier\W?keto
@@ -1456,7 +1456,7 @@ keto\W?fire
 kara\W?keto
 keto\W?go
 creme\W?des\W?palmier
-(?:\W*</a>(?!.*?</?code).*?nutrition.*?plan|nutrition(?!.*?</?code)(?=.*?</a>).*?plan)
+(?:\w*</a>(?!.*?</?code).*?nutrition.*?plan|nutrition(?!.*?</?code)(?=.*?</a>).*?plan)
 keto\W?(natural\W?)?blend
 slim\W?999
 l\W?averla
