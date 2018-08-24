@@ -593,6 +593,7 @@ def watched_ns_for_url_domain(s, site):
         'utecho.com.',
         'syrahost.com.',
         '256gbserver.com.',
+        'solutionsinfini.org.',
     ])
 
 
