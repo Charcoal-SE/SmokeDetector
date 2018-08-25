@@ -1505,3 +1505,4 @@ beach\W?slim
 south\W?beach(?:\W?diet)?
 kleanse\W*diet
 imaginea
+cbd\W?plus
