@@ -1506,3 +1506,4 @@ south\W?beach(?:\W?diet)?
 kleanse\W*diet
 imaginea
 cbd\W?plus
+(?:premium\W?)?pure\W?keto
