@@ -5216,3 +5216,4 @@
 1535156370	Makyen	browsersupports\.net
 1535176787	Makyen	stripeman\.com
 1535211107	Makyen	lyricsearth\.com
+1535211117	Makyen	[a-z_]*(?:1_*)?869[\W_]*712[\W_]*1622[a-z_]*
