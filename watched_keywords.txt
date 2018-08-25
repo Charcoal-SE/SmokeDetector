@@ -5214,3 +5214,4 @@
 1535124115	Makyen	chupacker1
 1535127669	Thomas Ward	webchain\.network
 1535145222	Makyen	ibesomeone(?:@gmail\.com)?
+1535156370	Makyen	browsersupports\.net
