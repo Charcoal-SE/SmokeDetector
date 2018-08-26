@@ -5240,3 +5240,4 @@
 1535253440	Makyen	[a-z_]*(?:1_*)?607[\W_]*800[\W_]*4675[a-z_]*
 1535261118	Makyen	Matters\+
 1535261125	Makyen	Shoosmiths
+1535273688	Makyen	tacticalflashlightsled\.com
