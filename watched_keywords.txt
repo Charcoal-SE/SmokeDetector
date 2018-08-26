@@ -5236,3 +5236,4 @@
 1535245817	Makyen	hipsandbums(?:as)?
 1535245826	Makyen	ultimatemacasa(?:@gmail\.com)?
 1535253422	Makyen	korbatech\.com
+1535253431	Makyen	kobartechnology(?:@gmail\.com)?
