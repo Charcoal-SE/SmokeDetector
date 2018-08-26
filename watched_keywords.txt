@@ -5245,3 +5245,4 @@
 1535279008	Makyen	[a-z_]*(?:448_*)?454[\W_]*860[\W_]*773[a-z_]*
 1535291962	doppelgreener	inanews\.cc
 1535291976	doppelgreener	lihatbola\.live
+1535292013	doppelgreener	indogirlfriend\.net
