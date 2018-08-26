@@ -5026,7 +5026,6 @@
 1534310370	tripleee	keralaboatstay\.com
 1534312232	tripleee	pokerseri\.com
 1534313029	Tetsuya Yamamoto	ideafit\.com
-1534316239	Tetsuya Yamamoto	takhfifan\.com
 1534316985	Glorfindel	isocials\.org
 1534318134	tripleee	altencalsoftlabs\.com
 1534318786	tripleee	indotravelteam\.com
