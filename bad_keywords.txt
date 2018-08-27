@@ -1509,3 +1509,4 @@ cbd\W?plus
 (?:premium\W?)?pure\W?keto
 Pure\W?Ravishing
 exam\W?passing\W?assurance
+regal\W?keto
