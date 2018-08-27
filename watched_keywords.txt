@@ -5258,3 +5258,4 @@
 1535351543	Tetsuya Yamamoto	proplinerealty\.com
 1535351561	Tetsuya Yamamoto	lahzeakhar\.com
 1535353249	tripleee	\w*\d-\d{3}\W?(?:brain\W?)?dumps?
+1535354126	Tetsuya Yamamoto	newsletterforhealth\.com
