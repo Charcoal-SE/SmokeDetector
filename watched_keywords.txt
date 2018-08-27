@@ -5260,3 +5260,4 @@
 1535353249	tripleee	\w*\d-\d{3}\W?(?:brain\W?)?dumps?
 1535354126	Tetsuya Yamamoto	newsletterforhealth\.com
 1535354769	Tetsuya Yamamoto	microsoft-helpline-numbers\.com
+1535357846	Shree	dataperspective\.info
