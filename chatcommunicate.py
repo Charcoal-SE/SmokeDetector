@@ -194,6 +194,10 @@ def on_msg(msg, client):
     message = msg.message
     if message.owner.id == client._br.user_id:
         return
+    if message.content.startswith("<div class='partial'>"):
+        message.content = message.content[21:]
+        if message.content.endswith("</div>"):
+            message.content = message.content[:-6]
 
     room_data = _rooms[(client.host, message.room.id)]
 
