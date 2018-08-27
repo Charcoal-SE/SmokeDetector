@@ -596,6 +596,7 @@ def watched_ns_for_url_domain(s, site):
         'solutionsinfini.org.',
         'dnsdomen.com.',
         'ownmyserver.com.',
+        'websitewelcome.com.',
     ])
 
 
