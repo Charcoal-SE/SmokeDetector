@@ -597,6 +597,7 @@ def watched_ns_for_url_domain(s, site):
         'dnsdomen.com.',
         'ownmyserver.com.',
         'websitewelcome.com.',
+        'fatcow.com.',
     ])
 
 
