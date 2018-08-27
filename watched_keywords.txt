@@ -5272,3 +5272,4 @@
 1535391048	tripleee	open-us\.de
 1535391055	tripleee	collegeseriesworld\.de
 1535391068	tripleee	usopenslive\.com
+1535397496	iBug	^\w{,3}w.{,2}ng.?d.{,2}ng\w{0,3}$
