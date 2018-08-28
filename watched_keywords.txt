@@ -5097,7 +5097,6 @@
 1534555437	Makyen	NetCurrencyIndex(?:Crypto)?
 1534555449	Makyen	netcryptoindex
 1534559964	Makyen	arthurgeorge020(?:@gmail\.com)?
-1534572526	Makyen	applemacsupportnumbers\.com
 1534581026	Makyen	dr\.davehanks01(?:@gmail\.com)?
 1534584959	Makyen	errosupport\.com
 1534589409	Zoe	dailyneeds247\.com
