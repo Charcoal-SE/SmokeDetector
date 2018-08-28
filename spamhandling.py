@@ -34,7 +34,7 @@ def check_if_spam(post):
             else:
                 blacklisted_by = blacklisted_user_data[1]
             blacklisted_post_url = blacklisted_user_data[2]
-            if why[-1] == "\n":
+            if why and why[-1] == "\n":
                 why = why[:-1]
             if blacklisted_post_url:
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
