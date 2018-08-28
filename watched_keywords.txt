@@ -4791,7 +4791,6 @@
 1533206670	doppelgreener	diet c\b
 1533209512	iBug	keto(?:nes?)?
 1533210851	tripleee	livechatzone\.com
-1533211200	tripleee	[a-z_]*(?:1_*)?972[\W_]*534[\W_]*5446[a-z_]*
 1533213690	tripleee	usaesta\.co\.uk
 1533215002	doppelgreener	deccanrummy\.com
 1533215580	Glorfindel	altoconvertwordtopdf\.com
