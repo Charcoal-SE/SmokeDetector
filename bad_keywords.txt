@@ -1514,3 +1514,4 @@ ultra\W?slim
 dumpsdumps380@gmail\.com
 Medallion\W?Finance
 [a-z_]*(?:1_*)?972[\W_]*534[\W_]*5446[a-z_]*
+pil\W?pedia(?!\.com)
