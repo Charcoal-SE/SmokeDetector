@@ -554,7 +554,7 @@ def watched_ns_for_url_domain(s, site):
         # Don't forget the trailing dot on the resolved name here either!
         # {'dns1.namecheaphosting.com.', 'dns2.namecheaphosting.com.'},
         # {'dns11.namecheaphosting.com.', 'dns12.namecheaphosting.com.'},
-        'namecheaphosting.com.',
+        'namecheaphosting.com.',  # has FPs, don't blacklist again
         # 'domaincontrol.com.',
         # {'dns1.registrar-servers.com.', 'dns2.registrar-servers.com.'},
         {'adi.ns.cloudflare.com.', 'miles.ns.cloudflare.com.'},
@@ -575,19 +575,19 @@ def watched_ns_for_url_domain(s, site):
         {'naomi.ns.cloudflare.com.', 'tim.ns.cloudflare.com.'},
         {'norm.ns.cloudflare.com.', 'olga.ns.cloudflare.com.'},
         {'pablo.ns.cloudflare.com.', 'pola.ns.cloudflare.com.'},
-        'mihanwebhost.com.',
+        'mihanwebhost.com.',  # FPs, don't blacklist
         'offshoreracks.com.',
         'sathyats.net.',
         'shared-host.org.',
         'web.com.ph.',
-        {'ns09.domaincontrol.com.', 'ns10.domaincontrol.com.'},
-        {'ns43.domaincontrol.com.', 'ns44.domaincontrol.com.'},
+        {'ns09.domaincontrol.com.', 'ns10.domaincontrol.com.'},  # FPs, don't blacklist
+        {'ns43.domaincontrol.com.', 'ns44.domaincontrol.com.'},  # FPs, don't blacklist
         'supercloudapps.com.',
-        'vultr.com.',
+        'vultr.com.',  # has FPs, don't move to blacklist
         'directory92.com.',
         'offshoric.com.',
         'freehostia.com.',
-        'hawkhost.com.',
+        'hawkhost.com.',  # has FPs, don't move to blacklist
         'greengeeks.com.',
         'supportaus.com.',
         'utecho.com.',
