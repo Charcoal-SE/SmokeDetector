@@ -833,17 +833,20 @@ def toxic_check(post):
     if not s:
         return False, False, False, ""
 
-    response = requests.post(PERSPECTIVE, json={
-        "comment": {
-            "text": s
-        },
+    try:
+        response = requests.post(PERSPECTIVE, json={
+            "comment": {
+                "text": s
+            },
 
-        "requestedAttributes": {
-            "TOXICITY": {
-                "scoreType": "PROBABILITY"
+            "requestedAttributes": {
+                "TOXICITY": {
+                    "scoreType": "PROBABILITY"
+                }
             }
-        }
-    }).json()
+        }).json()
+    except requests.exceptions.ConnectionError:
+        return False, False, False, ""
 
     if "error" in response:
         err_msg = response["error"]["message"]
