@@ -598,6 +598,7 @@ def watched_ns_for_url_domain(s, site):
         'ownmyserver.com.',
         'websitewelcome.com.',
         'fatcow.com.',
+        'vedigitize.us.',
     ])
 
 
