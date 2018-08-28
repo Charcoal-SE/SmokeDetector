@@ -24,10 +24,6 @@ def should_whitelist_prevent_alert(user_url, reasons):
 
 # noinspection PyMissingTypeHints
 def check_if_spam(post):
-    # if not post.body:
-    #     body = ""
-    # test, why = FindSpam.test_post(title, body, user_name, post_site,
-    # is_answer, body_is_summary, owner_rep, post_score)
     test, why = FindSpam.test_post(post)
     if datahandling.is_blacklisted_user(parsing.get_user_from_url(post.user_url)):
         test.append("blacklisted user")
@@ -38,6 +34,8 @@ def check_if_spam(post):
             else:
                 blacklisted_by = blacklisted_user_data[1]
             blacklisted_post_url = blacklisted_user_data[2]
+            if why[-1] == "\n":
+                why = why[:-1]
             if blacklisted_post_url:
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
                 why += u"\nBlacklisted user - blacklisted for {} ({}) by {}".format(
