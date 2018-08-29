@@ -1516,3 +1516,4 @@ Medallion\W?Finance
 pil\W?pedia(?!\.com)
 leanfors
 foodies\W?panda(?!\.com)
+medlief
