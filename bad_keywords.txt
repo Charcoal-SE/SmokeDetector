@@ -1258,7 +1258,7 @@ rapid\W?trim\W?ultra
 onycosolve
 pro\W?bio\W?slim
 healthy\W?king
-outback\W?vision\W?protocol
+outback\W?vision\W?protoc(?:ol)?
 MP3XD
 smart\W?collagen
 nutrition\W?curcumin
