@@ -5298,6 +5298,5 @@
 1535489269	Makyen	[a-z_]*(?:1_*)?408[\W_]*713[\W_]*1443[a-z_]*
 1535508539	gparyani	migrationexpert\.com\.au
 1535515393	tripleee	bitcoin-casino-no-deposit-bonus\.com
-1535518676	Tetsuya Yamamoto	curlycrayy\.com
 1535518762	tripleee	reverse\W?racism
 1535521928	iBug	outback\W?vision\W?protoc(?:ol)?
