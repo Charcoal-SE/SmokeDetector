@@ -22,7 +22,7 @@ def git_commit_info():
     except sp.CalledProcessError as e:
         raise OSError("Git error:\n" + e.output) from e
     short_id, full_id, author, message = data.strip().split("\n")
-    return {'id': short_id, 'id_full': full_id, 'author': author, 'message': message}
+    return {'id': full_id[:7], 'id_full': full_id, 'author': author, 'message': message}
 
 
 def git_status():
