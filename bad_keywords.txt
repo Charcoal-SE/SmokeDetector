@@ -1517,3 +1517,4 @@ pil\W?pedia(?!\.com)
 leanfors
 foodies\W?panda(?!\.com)
 medlief
+alpha\W?xr
