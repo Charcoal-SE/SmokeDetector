@@ -5319,3 +5319,4 @@
 1535542219	tripleee	tournet\.co
 1535545946	Glorfindel	garmingpsmap\.net
 1535556701	Makyen	hp-scandoctor\.com
+1535556710	Makyen	ijcanonsetups\.com
