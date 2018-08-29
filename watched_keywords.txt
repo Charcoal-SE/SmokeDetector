@@ -5300,3 +5300,4 @@
 1535515393	tripleee	bitcoin-casino-no-deposit-bonus\.com
 1535518762	tripleee	reverse\W?racism
 1535525172	tripleee	medlief
+1535525440	tripleee	[a-z_]*(?:1_*)?877[\W_]*715[\W_]*0222[a-z_]*
