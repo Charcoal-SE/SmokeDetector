@@ -1110,7 +1110,8 @@ class FindSpam:
         # Category: Bad keywords
         # The big list of bad keywords, for titles and posts
         # See PR 2322 for the reason of (?:^|\b)
-        {'regex': r"(?is)(?:^|\b)(?:{})(?:\b|$)|{}".format("|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
+        {'regex': r"(?is)(?:^|\b)(?:{})(?:\b|$)|{}".format(
+            "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
          'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1},
         # The growing list of *potentially* bad keywords, for titles and posts
