@@ -5315,4 +5315,3 @@
 1535538554	Glorfindel	creative-bioarray\.com
 1535538792	tripleee	creative-bio\w+
 1535539729	tripleee	ibackpage\.com
-1535540766	Glorfindel	https://chinese.stackexchange.com/users/20342
