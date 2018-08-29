@@ -600,6 +600,7 @@ def watched_ns_for_url_domain(s, site):
         'websitewelcome.com.',
         'fatcow.com.',
         'vedigitize.us.',
+        'serverpars.com.',
     ])
 
 
