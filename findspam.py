@@ -1052,7 +1052,7 @@ class FindSpam:
         r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in(\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
         # (keyword)(something)(keyword)(something).(something)
         r"(acai|advance|aging|alpha|beauty|belle|beta|biotic|body|boost(?! solution)|brain(?!tree)|burn|colon|"
-        r"[^s]cream|creme|derma|ecig|eye|face(?!book)|fat|formula|geniu[sx]|grow|hair|health|herbal|ideal|luminous|"
+        r"[^s]cream|cr[eè]me|derma|ecig|eye|face(?!book)|fat|formula|geniu[sx]|grow|hair|health|herbal|ideal|luminous|"
         r"male|medical|medicare|muscle|natura|no2|nutrition|optimal|pearl|perfect|phyto|probio|rejuven|revive|ripped|"
         r"rx|scam|shred|skin|slim|super|testo|[/.]top|trim|[/.]try|ultra|ultra|vapor|vita|weight|wellness|xplode|yoga|"
         r"young|youth)[\w]{0,20}(about|advi[sc]|assess|blog|brazil|canada|care|center|centre|chat|complex(?!ity)|"
@@ -1107,10 +1107,10 @@ class FindSpam:
         #
         # Category: Bad keywords
         # The big list of bad keywords, for titles and posts
-        {'regex': r"(?is)(?:^|\b)({})(?:\b|$)|{}".format("|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
+        {'regex': r"(?is)\b(?:{})\b|{}".format("|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
          'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1},
-        # The small list of *potentially* bad keywords, for titles and posts
+        # The growing list of *potentially* bad keywords, for titles and posts
         {'regex': r'(?is)(?:^|\b)({})(?:\b|$)'.format('|'.join(GlobalVars.watched_keywords.keys())),
          'reason': 'potentially bad keyword in {}',
          'all': True, 'sites': [], 'title': True, 'body': True, 'username': True,
@@ -1124,7 +1124,7 @@ class FindSpam:
          'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
          'answers': False, 'max_rep': 1, 'max_score': 1},
         # gratis at the beginning of post, SoftwareRecs is exempt
-        {'regex': r"(?is)(?<=^.{,200})\bgratis\b$", 'all': True,
+        {'regex': r"(?is)(?<=^.{,200})\bgratis\b", 'all': True,
          'sites': ['softwarerecs.stackexchange.com'], 'reason': "bad keyword in {}", 'title': True, 'body': True,
          'username': False, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11, 'max_score': 0},
         # Bad keywords in titles and usernames, all sites
@@ -1138,27 +1138,25 @@ class FindSpam:
         {'regex': r"car\Win", 'all': False, 'sites': ['superuser.com', 'puzzling.stackexchange.com'],
          'reason': 'bad keyword in {}', 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        {'commented-out': '''
         # Judaism etc troll, 2018-04-18 ("potentially bad" makes this watch)
-        {'regex': r'^John$', 'all': False,
-         'sites': [
-             'judaism.stackexchange.com',
-             'superuser.com', 'islam.stackexchange.com',
-             'math.stackexchange.com', 'academia.stackexchange.com',
-             'health.stackexchange.com', 'askubuntu.com',
-             'skeptics.stackexchange.com', 'politics.stackeschange.com'],
-         'reason': 'potentially bad keyword in {}',
-         'title': False, 'body': False, 'username': True,
-         'stripcodeblocks': False, 'body_summary': False,
-         'max_rep': 1, 'max_score': 1},
-        '''},
+        # {'regex': r'^John$', 'all': False,
+        #  'sites': [
+        #      'judaism.stackexchange.com',
+        #      'superuser.com', 'islam.stackexchange.com',
+        #      'math.stackexchange.com', 'academia.stackexchange.com',
+        #      'health.stackexchange.com', 'askubuntu.com',
+        #      'skeptics.stackexchange.com', 'politics.stackeschange.com'],
+        #  'reason': 'potentially bad keyword in {}',
+        #  'title': False, 'body': False, 'username': True,
+        #  'stripcodeblocks': False, 'body_summary': False,
+        #  'max_rep': 1, 'max_score': 1},
         # Corn troll on Blender.SE
         {'regex': r'\bcorn\b', 'all': False, 'sites': ['blender.stackexchange.com'],
          'reason': 'potentially bad keyword in {}', 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 1},
         # Bad keywords in titles only, all sites
         # The rule is supposed to trigger on stuff like f.r.e.e d.o.w.n.l.o.a.d
-        {'regex': r"(?i)\b(?!s.m.a.r.t|s.h.i.e.l.d|s.o.l.i.d|o.s.a.r.l)[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\.+[a-z]\b",
+        {'regex': r"(?i)\b(?!s.m.a.r.t.|s.h.i.e.l.d.|s.o.l.i.d.|o.s.a.r.l.)[a-z](?:\.+[a-z]){4,}\b",
          'all': True, 'sites': [], 'reason': "bad keyword in {}",
          'title': True, 'body': False, 'username': False,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
@@ -1191,7 +1189,7 @@ class FindSpam:
          'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Bad health-related keywords in titles and posts, health sites are exempt
-        {'regex': r"(?is)virility|diet ?(plan|pill)|\b(pro)?derma(?=[a-su-z ]\w)|(fat|(?<!dead[ -]?)weight)"
+        {'regex': r"(?is)virility|diet ?(plan|pill)|\b(pro)?derma(?=[a-su-z\W]\w)|(fat|(?<!dead[ -]?)weight)"
                   r"[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|erectile|\bherpes\b|colon ?(detox|clean)|\bpenis\b",
          'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com",
@@ -1598,26 +1596,24 @@ class FindSpam:
         result = []
         why = {'title': [], 'body': [], 'username': []}
         for rule in FindSpam.rules:
-            if 'commented-out' in rule:
-                continue
             if (post.is_answer and not rule.get('answers', True)) \
                     or (not post.is_answer and not rule.get('questions', True)):
-                continue
+                continue  # Post type mismatch
             title_to_check = post.title
             body_to_check = post.body.replace("&nsbp;", "").replace("\xAD", "") \
                                      .replace("\u200B", "").replace("\u200C", "")
             is_regex_check = 'regex' in rule
             if rule['stripcodeblocks']:
                 # use a placeholder to avoid triggering "few unique characters" when most of post is code
+                # XXX: "few unique characters" doesn't enable this, so remove placeholder?
                 body_to_check = regex.sub("(?s)<pre>.*?</pre>",
-                                          u"<pre><code>placeholder for omitted code/код block</pre></code>",
+                                          "<pre><code>placeholder for omitted code/код block</code></pre>",
                                           body_to_check)
                 body_to_check = regex.sub("(?s)<code>.*?</code>",
-                                          u"<pre><code>placeholder for omitted code/код block</pre></code>",
+                                          "<code>placeholder for omitted code/код block</code>",
                                           body_to_check)
             if rule['reason'] == 'Phone number detected in {}':
-                body_to_check = regex.sub("<img[^>]+>", "", body_to_check)
-                body_to_check = regex.sub("<a[^>]+>", "", body_to_check)
+                body_to_check = regex.sub("<(?:a|img)[^>]+>", "", body_to_check)
             if rule['all'] != (post.post_site in rule['sites']) and post.owner_rep <= rule['max_rep'] and \
                     post.post_score <= rule['max_score']:
                 matched_body = None
@@ -1632,7 +1628,7 @@ class FindSpam:
                 else:
                     assert 'method' in rule
 
-                    if 'whole_post' in rule and rule['whole_post']:
+                    if rule.get('whole_post'):
                         matched_title, matched_username, matched_body, why_post = rule['method'](post)
 
                         if matched_title:
@@ -1674,12 +1670,13 @@ class FindSpam:
 
     @staticmethod
     def generate_why(compiled_regex, matched_text, type_of_text, is_regex_check):
-        if is_regex_check:
-            matches = compiled_regex.finditer(matched_text)
-            why_for_matches = []
-            for match in matches:
-                span = match.span()
-                group = match.group().replace("\n", "")
-                why_for_matches.append(u"Position {}-{}: {}".format(span[0] + 1, span[1], group))
-            return type_of_text + u" - " + ", ".join(why_for_matches)
-        return ""
+        if not is_regex_check:
+            return ""
+
+        matches = compiled_regex.finditer(matched_text)
+        why_for_matches = []
+        for match in matches:
+            span = match.span()
+            group = match.group().replace("\n", "")
+            why_for_matches.append(u"Position {}-{}: {}".format(span[0] + 1, span[1], group))
+        return type_of_text + u" - " + ", ".join(why_for_matches)
