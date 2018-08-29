@@ -1157,7 +1157,7 @@ class FindSpam:
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 1},
         # Bad keywords in titles only, all sites
         # The rule is supposed to trigger on stuff like f.r.e.e d.o.w.n.l.o.a.d
-        {'regex': r"(?i)\b(?!s.m.a.r.t.|s.h.i.e.l.d.|s.o.l.i.d.|o.s.a.r.l.)[a-z](?:\.+[a-z]){4,}\b",
+        {'regex': r"(?i)\b(?!s.m.a.r.t|s.h.i.e.l.d|s.o.l.i.d|o.s.a.r.l).?[a-z](?:\.+[a-z]){4,}\b",
          'all': True, 'sites': [], 'reason': "bad keyword in {}",
          'title': True, 'body': False, 'username': False,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
@@ -1679,5 +1679,5 @@ class FindSpam:
         for match in matches:
             span = match.span()
             group = match.group().replace("\n", "")
-            why_for_matches.append(u"Position {}-{}: {}".format(span[0] + 1, span[1], group))
-        return type_of_text + u" - " + ", ".join(why_for_matches)
+            why_for_matches.append("Position {}-{}: {}".format(span[0] + 1, span[1], group))
+        return type_of_text + " - " + ", ".join(why_for_matches)
