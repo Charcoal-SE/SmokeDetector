@@ -5302,3 +5302,4 @@
 1535525172	tripleee	medlief
 1535525440	tripleee	[a-z_]*(?:1_*)?877[\W_]*715[\W_]*0222[a-z_]*
 1535525819	Tetsuya Yamamoto	educationbangla\.com
+1535527628	Glorfindel	customhealthplans\.com
