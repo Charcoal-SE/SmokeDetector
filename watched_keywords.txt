@@ -2951,7 +2951,6 @@
 1523998251	Glorfindel	matlabwork\.wordpress\.com
 1524023339	tripleee	couriertrackingstatus\.online
 1524023467	tripleee	(?:1\W*)?858\W*905\W*7790
-1524033408	tripleee	foodies\W?panda
 1524035987	tripleee	the\W?az\W?code
 1524046719	Byte Commander	awarepedia\.com
 1524046885	tripleee	casinoscroll\.com
