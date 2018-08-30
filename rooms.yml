@@ -326,6 +326,13 @@ stackexchange.com:
     commands: false
     msg_types:
       - site-scifi.stackexchange.com
+      
+  58631:  # The Restaurant at the End of the Universe
+    commands: true
+    watcher: true
+    msg_types:
+      - site-scifi.stackexchange.com
+      - no-phone number detected in title
 
   61165:  # The Awkward Silence
     commands: false
