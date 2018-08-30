@@ -133,6 +133,8 @@ class GlobalVars:
     location = config.get("Config", "location")
 
     metasmoke_ws = None
+    metasmoke_down = False
+    metasmoke_failures = 0  # Consecutive count, not cumulative
 
     try:
         chatexchange_u = config.get("Config", "ChatExchangeU")

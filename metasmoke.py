@@ -413,3 +413,36 @@ class Metasmoke:
         response = requests.get(GlobalVars.metasmoke_host + '/api/v2.0/posts/urls', params=payload).json()
 
         return response['items']
+
+    # Some sniffy stuff
+    @staticmethod
+    def get(url, *args, **kwargs):
+        if GlobalVars.metasmoke_down:
+            return None
+
+        response = None  # Should return None upon failure, if any
+        try:
+            response = requests.get(GlobalVars.metasmoke_host + url, *args, **args)
+        except Exception:
+            GlobalVars.metasmoke_failures += 1
+            raise
+        else:
+            GlobalVars.metasmoke_failures = 0  # Reset on success
+
+        return response
+
+    @staticmethod
+    def post(url, *args, **kwargs):
+        if GlobalVars.metasmoke_down:
+            return None
+
+        response = None  # Should return None upon failure, if any
+        try:
+            response = requests.post(GlobalVars.metasmoke_host + url, *args, **args)
+        except Exception:
+            GlobalVars.metasmoke_failures += 1
+            raise
+        else:
+            GlobalVars.metasmoke_failures = 0  # Reset on success
+
+        return response
