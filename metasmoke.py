@@ -24,6 +24,9 @@ from gitmanager import GitManager
 from blacklists import load_blacklists
 
 
+MAX_FAILURES = 10  # Preservative, 10 errors = MS down
+
+
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
 class Metasmoke:
     @staticmethod
@@ -416,33 +419,24 @@ class Metasmoke:
 
     # Some sniffy stuff
     @staticmethod
-    def get(url, *args, **kwargs):
-        if GlobalVars.metasmoke_down:
-            return None
+    def request_sender(method)
+        def func(url, *args, **kwargs):
+            if GlobalVars.metasmoke_down:
+                return None
 
-        response = None  # Should return None upon failure, if any
-        try:
-            response = requests.get(GlobalVars.metasmoke_host + url, *args, **args)
-        except Exception:
-            GlobalVars.metasmoke_failures += 1
-            raise
-        else:
-            GlobalVars.metasmoke_failures = 0  # Reset on success
+            response = None  # Should return None upon failure, if any
+            try:
+                response = method(GlobalVars.metasmoke_host + url, *args, **args)
+            except Exception:
+                GlobalVars.metasmoke_failures += 1
+                if GlobalVars.metasmoke_failures > MAX_FAILURES:
+                    GlobalVars.metasmoke_down = True
+                raise
+            else:
+                GlobalVars.metasmoke_failures = 0  # Reset on success
 
-        return response
+            return response
+        return func
 
-    @staticmethod
-    def post(url, *args, **kwargs):
-        if GlobalVars.metasmoke_down:
-            return None
-
-        response = None  # Should return None upon failure, if any
-        try:
-            response = requests.post(GlobalVars.metasmoke_host + url, *args, **args)
-        except Exception:
-            GlobalVars.metasmoke_failures += 1
-            raise
-        else:
-            GlobalVars.metasmoke_failures = 0  # Reset on success
-
-        return response
+    get = Metasmoke.request_sender(requests.get)
+    post = Metasmoke.request_sender(requests.post)
