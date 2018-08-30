@@ -91,7 +91,7 @@ if "ChatExchangeP" in os.environ:
     log('debug', "ChatExchange password loaded from environment")
     password = os.environ["ChatExchangeP"]
 elif GlobalVars.chatexchange_p:
-    log('info', "ChatExchange password loaded from config")
+    log('debug', "ChatExchange password loaded from config")
     password = GlobalVars.chatexchange_p
 else:
     log('error', "No ChatExchange password provided. Set it in config or provide it via environment variable")
