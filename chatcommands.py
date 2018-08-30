@@ -34,15 +34,10 @@ from classes.feedback import *
 #
 # System command functions below here
 
-# The following two commands are just bypasses for the "unrecognized command" message, so that pingbot
-# can respond instead.
-@command(aliases=['ping-help'])
-def ping_help():
-    return None
-
-
-@command()
-def groups():
+# This "null" command is just bypass for the "unrecognized command" message,
+# so that pingbot can respond instead.
+@command(aliases=['ping-help', 'groups'])
+def null():
     return None
 
 
@@ -380,30 +375,24 @@ def remotediff():
 def blame(msg):
     unlucky_victim = msg._client.get_user(random.choice(msg.room.get_current_user_ids()))
 
-    return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
-                                                                 msg._client.host,
-                                                                 unlucky_victim.id)
+    return "It's [{}](https://chat.{}/users/{})'s fault.".format(
+        unlucky_victim.name, msg._client.host, unlucky_victim.id)
 
 
 @command(str, whole_msg=True, aliases=["blame\u180E"])
 def blame2(msg, x):
     base = {"\u180E": 0, "\u200B": 1, "\u200C": 2, "\u200D": 3, "\u2060": 4, "\u2063": 5, "\uFEFF": 6}
-    user = 0
-
-    for i, char in enumerate(reversed(x)):
-        user += (len(base)**i) * base[char]
+    user = sum([(len(base)**i) * base[char] for i, char in enumerate(reversed(x))])
 
     try:
         unlucky_victim = msg._client.get_user(user)
-        return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
-                                                                     msg._client.host,
-                                                                     unlucky_victim.id)
+        return "It's [{}](https://chat.{}/users/{})'s fault.".format(i
+            unlucky_victim.name, msg._client.host, unlucky_victim.id)
 
     except requests.exceptions.HTTPError:
         unlucky_victim = msg.owner
-        return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
-                                                                     msg._client.host,
-                                                                     unlucky_victim.id)
+        return "It's [{}](https://chat.{}/users/{})'s fault.".format(
+            unlucky_victim.name, msg._client.host, unlucky_victim.id)
 
 
 # noinspection PyIncorrectDocstring

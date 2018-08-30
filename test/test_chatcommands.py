@@ -16,6 +16,10 @@ from fake import Fake
 from unittest.mock import patch
 
 
+def test_null():
+    assert chatcommands.null() is None
+
+
 def test_coffee():
     msg = Fake({"owner": {"name": "El'endia Starman"}})
 
