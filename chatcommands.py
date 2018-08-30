@@ -1592,7 +1592,10 @@ def true(feedback, msg, comment, alias_used="true"):
     feedback_type.send(post_url, feedback)
 
     post_id, site, post_type = fetch_post_id_and_site_from_url(post_url)
-    user = get_user_from_url(owner_url)
+    try:
+        user = get_user_from_url(owner_url)
+    except TypeError as e:
+        raise CmdException('Could not get user from URL {0!t}'.format(owner_url))
 
     if user is not None:
         if feedback_type.blacklist:
