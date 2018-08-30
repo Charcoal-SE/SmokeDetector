@@ -179,17 +179,14 @@ def setup_websocket(attempt, max_attempts):
         return None
 
 
-tries = 1
 max_tries = 5
-while tries <= max_tries:
+for tries in range(1, 1 + max_tries, 1):
     ws = setup_websocket(tries, max_tries)
     if ws:
         break
-    elif tries < max_tries:
-        tries += 1
-    elif tries == max_tries:
-        log('error', 'Max retries exceeded. Exiting, maybe a restart will kick things.')
-        os._exit(5)
+else:
+    log('error', 'Max retries exceeded. Exiting, maybe a restart will kick things.')
+    os._exit(5)
 
 GlobalVars.deletion_watcher = DeletionWatcher()
 
