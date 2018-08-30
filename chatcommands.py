@@ -1595,7 +1595,7 @@ def true(feedback, msg, comment, alias_used="true"):
     try:
         user = get_user_from_url(owner_url)
     except TypeError as e:
-        raise CmdException('Could not get user from URL {0!t}'.format(owner_url))
+        raise CmdException('Could not get user from URL {0!r}'.format(owner_url))
 
     if user is not None:
         if feedback_type.blacklist:
