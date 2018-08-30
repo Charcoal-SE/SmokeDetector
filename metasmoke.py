@@ -19,7 +19,7 @@ import apigetpost
 import spamhandling
 import classes
 import chatcommunicate
-from helpers import api_parameter_from_link, log, only_blacklists_changed
+from helpers import api_parameter_from_link, log, only_blacklists_changed, blacklist_integrity_check
 from gitmanager import GitManager
 from blacklists import load_blacklists
 
@@ -141,31 +141,15 @@ class Metasmoke:
                         if only_blacklists_changed(GitManager.get_remote_diff()):
                             commit_md = "[`{0}`](https://github.com/Charcoal-SE/SmokeDetector/commit/{0})" \
                                         .format(sha[:7])
-                            i = []  # Currently no issues with backlists
-                            for bl_file in glob('bad_*.txt') + glob('blacklisted_*.txt'):  # Check blacklists for issues
-                                with open(bl_file, 'r') as lines:
-                                    seen = dict()
-                                    for lineno, line in enumerate(lines, 1):
-                                        if line.endswith('\r\n'):
-                                            i.append("DOS line ending at `{0}:{1}` in {2}".format(bl_file, lineno,
-                                                                                                  commit_md))
-                                        if not line.endswith('\n'):
-                                            i.append("No newline at end of `{0}` in {1}".format(bl_file, commit_md))
-                                        if line == '\n':
-                                            i.append("Blank line at `{0}:{1}` in {2}".format(bl_file, lineno,
-                                                                                             commit_md))
-                                        if line in seen:
-                                            i.append("Duplicate entry of {0} at lines {1} and {2} of {3} in {4}"
-                                                     .format(line.rstrip('\n'), seen[line], lineno, bl_file, commit_md))
-                                        seen[line] = lineno
-                            if i == []:  # No issues
+                            integrity = blacklist_integrity_check()
+                            if len(integrity) == 0:  # No issues
                                 GitManager.pull_remote()
                                 load_blacklists()
                                 chatcommunicate.tell_rooms_with("debug", "No code modified in {0}, only blacklists"
                                                                 " reloaded.".format(commit_md))
                             else:
-                                i.append("please fix before pulling.")
-                                chatcommunicate.tell_rooms_with("debug", ", ".join(i))
+                                integrity.append("please fix before pulling.")
+                                chatcommunicate.tell_rooms_with("debug", ", ".join(integrity))
             elif "commit_status" in message:
                 c = message["commit_status"]
                 sha = c["commit_sha"][:7]

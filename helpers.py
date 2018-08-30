@@ -5,6 +5,7 @@ from datetime import datetime
 from termcolor import colored
 import requests
 import regex
+from glob import glob
 
 
 class Helpers:
@@ -131,6 +132,29 @@ def post_id_from_link(link):
 def to_metasmoke_link(post_url, protocol=True):
     return "{}//m.erwaysoftware.com/posts/uid/{}/{}".format(
         "https:" if protocol else "", api_parameter_from_link(post_url), post_id_from_link(post_url))
+
+
+def blacklist_integrity_check():
+    bl_files = glob('bad_*.txt') + glob('blacklisted_*.txt') + ['watched_keywords.txt']
+    seen = dict()
+    errors = []
+    for bl_file in bl_files:
+        with open(bl_file, 'r') as lines:
+            for lineno, line in enumerate(lines, 1):
+                if line.endswith('\r\n'):
+                    errors.append('{0}:{1}:DOS line ending'.format(bl_file, lineno))
+                elif not line.endswith('\n'):
+                    errors.append('{0}:{1}:No newline'.format(bl_file, lineno))
+                elif line == '\n':
+                    errors.append('{0}:{1}:Empty line'.format(bl_file, lineno))
+                elif bl_file == 'watched_keywords.txt':
+                    line = line.split('\t')[2]
+                    if line in seen:
+                        errors.append('{0}:{1}:Duplicate entry {2} (also {3})'.format(
+                            bl_file, lineno, line.rstrip('\n'), seen[line]))
+                    else:
+                        seen[line] = '{0}:{1}'.format(bl_file, lineno)
+    return errors
 
 
 class SecurityError(Exception):
