@@ -55,7 +55,7 @@ class Metasmoke:
                         GlobalVars.metasmoke_ws.send(payload)
                         log('error', e)
                         traceback.print_exc()
-            except websocket.WebSocketException:
+            except Exception:
                 log('error', "Couldn't bind to MS websocket")
                 if not has_succeeded:
                     break
