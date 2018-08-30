@@ -5324,3 +5324,4 @@
 1535556729	Makyen	smadavofficial\.com
 1535566032	Glorfindel	seleniuminterview\.com
 1535566046	Glorfindel	seleniumtpoint\.com
+1535602679	tripleee	[a-z_]*(?:1_*)?414[\W_]*326[\W_]*0192[a-z_]*
