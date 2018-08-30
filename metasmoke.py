@@ -56,9 +56,11 @@ class Metasmoke:
                         payload = json.dumps({"command": "subscribe",
                                               "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"})
                         GlobalVars.metasmoke_ws.send(payload)
+                        GlobalVars.metasmoke_failures += 1
                         log('error', e)
                         traceback.print_exc()
             except Exception:
+                GlobalVars.metasmoke_failures += 1
                 log('error', "Couldn't bind to MS websocket")
                 if not has_succeeded:
                     break
@@ -419,7 +421,7 @@ class Metasmoke:
 
     # Some sniffy stuff
     @staticmethod
-    def request_sender(method)
+    def request_sender(method):
         def func(url, *args, **kwargs):
             if GlobalVars.metasmoke_down:
                 return None
@@ -431,7 +433,7 @@ class Metasmoke:
                 GlobalVars.metasmoke_failures += 1
                 if GlobalVars.metasmoke_failures > MAX_FAILURES:
                     GlobalVars.metasmoke_down = True
-                raise
+                raise  # Maintain minimal difference to the original get/post
             else:
                 GlobalVars.metasmoke_failures = 0  # Reset on success
 
