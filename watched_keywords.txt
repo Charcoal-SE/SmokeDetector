@@ -5359,3 +5359,4 @@
 1535706918	Tetsuya Yamamoto	spycardssort\.com
 1535708895	tripleee	tele\W*consultation\W*services?
 1535711662	tripleee	Onlyoneyoulove
+1535715015	tripleee	mypragati\.org
