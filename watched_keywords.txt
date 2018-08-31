@@ -5363,5 +5363,4 @@
 1535715728	micsthepick	iqtestonline.net
 1535719884	iBug	wordpressdeveloperonline\.com
 1535734753	Thomas Ward	Evil-?Droid
-1535741848	doppelgreener	base
 1535741855	doppelgreener	base\.info
