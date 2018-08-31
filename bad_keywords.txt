@@ -1521,3 +1521,4 @@ alpha\W?xr
 new\W?power\W?girls
 retro\W?lean
 snore\W?be?\W?gone
+huffingtonpost.com/\S+/healthy-school-lunches
