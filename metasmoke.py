@@ -443,5 +443,5 @@ class Metasmoke:
             return response
         return func
 
-    get = request_sender(requests.get)
-    post = request_sender(requests.post)
+    get = request_sender.__func__(requests.get)
+    post = request_sender.__func__(requests.post)
