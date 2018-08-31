@@ -433,12 +433,15 @@ class Metasmoke:
                 GlobalVars.metasmoke_failures += 1
                 if GlobalVars.metasmoke_failures > MAX_FAILURES:
                     GlobalVars.metasmoke_down = True
-                raise  # Maintain minimal difference to the original get/post
+                    chatcommunicate.tell_rooms_with('debug', "**Warning**: {} latest connections to metasmoke have fa"
+                                                    "iled. Disabling metasmoke".format(GlobalVars.metasmoke_failures))
+                # No need to log here because it's re-raised
+                raise  # Maintain minimal difference to the original get/post methods
             else:
-                GlobalVars.metasmoke_failures = 0  # Reset on success
+                GlobalVars.metasmoke_failures = 0  # Reset on success, what about decrementing instead of resetting?
 
             return response
         return func
 
-    get = Metasmoke.request_sender(requests.get)
-    post = Metasmoke.request_sender(requests.post)
+    get = request_sender(requests.get)
+    post = request_sender(requests.post)
