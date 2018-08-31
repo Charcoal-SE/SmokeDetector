@@ -117,7 +117,7 @@ class GlobalVars:
         log('debug', "Configuration loaded from \"config\"")
     else:
         config.read('config.ci')
-        if "pytest" in sys.modules:
+        if "pytest" in sys.modules and os.path.isfile('config'):  # Another config found while running in pytest
             log('debug', "Running in pytest, force load config from \"config.ci\"")
         else:
             log('debug', "Configuration loaded from \"config.ci\"")
