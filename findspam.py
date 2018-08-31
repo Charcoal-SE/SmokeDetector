@@ -1624,7 +1624,12 @@ class FindSpam:
                 compiled_regex = None
                 if is_regex_check:
                     # using a named list \L in some regexes
-                    compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
+                    try:
+                        compiled_regex = rule['compiled_regex']
+                    except KeyError:
+                        compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
+                        rule['compiled_regex'] = compiled_regex
+
                     if rule['title'] and not post.is_answer:
                         matched_title = compiled_regex.findall(title_to_check)
                     if rule['username']:
