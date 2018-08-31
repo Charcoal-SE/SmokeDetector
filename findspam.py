@@ -1620,14 +1620,17 @@ class FindSpam:
                 body_to_check = regex.sub("<(?:a|img)[^>]+>", "", body_to_check)
             if rule['all'] != (post.post_site in rule['sites']) and post.owner_rep <= rule['max_rep'] and \
                     post.post_score <= rule['max_score']:
-                matched_body = None
+                matched_title, matched_username, matched_body = False, False, False
                 compiled_regex = None
                 if is_regex_check:
-                    compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
                     # using a named list \L in some regexes
-                    matched_title = False if post.is_answer else compiled_regex.findall(title_to_check)
-                    matched_username = compiled_regex.findall(post.user_name)
-                    if not post.body_is_summary or rule['body_summary']:
+                    compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
+                    if rule['title'] and not post.is_answer:
+                        matched_title = compiled_regex.findall(title_to_check)
+                    if rule['username']:
+                        matched_username = compiled_regex.findall(post.user_name)
+                    if (rule['body'] and not post.body_is_summary) \
+                            or (post.body_is_summary and rule['body_summary']):
                         matched_body = compiled_regex.findall(body_to_check)
                 else:
                     assert 'method' in rule
@@ -1645,16 +1648,20 @@ class FindSpam:
                             why["body"].append(u"Post - {}".format(why_post))
                             result.append(rule['reason'].replace("{}", "answer" if post.is_answer else "body"))
                     else:
-                        matched_title, why_title = rule['method'](title_to_check, post.post_site)
-                        if matched_title and rule['title']:
-                            why["title"].append(u"Title - {}".format(why_title))
-                        matched_username, why_username = rule['method'](post.user_name, post.post_site)
-                        if matched_username and rule['username']:
-                            why["username"].append(u"Username - {}".format(why_username))
-                        if not post.body_is_summary or rule['body_summary']:
+                        if rule['title']:
+                            matched_title, why_title = rule['method'](title_to_check, post.post_site)
+                        if rule['username']:
+                            matched_username, why_username = rule['method'](post.user_name, post.post_site)
+                        if (rule['body'] and not post.body_is_summary) \
+                                or (post.body_is_summary and rule['body_summary']):
                             matched_body, why_body = rule['method'](body_to_check, post.post_site)
-                            if matched_body and rule['body']:
-                                why["body"].append(u"Body - {}".format(why_body))
+
+                        if matched_title:
+                            why["title"].append(u"Title - {}".format(why_title))
+                        if matched_username:
+                            why["username"].append(u"Username - {}".format(why_username))
+                        if matched_body:
+                            why["body"].append(u"Body - {}".format(why_body))
                 if matched_title and rule['title']:
                     why["title"].append(FindSpam.generate_why(compiled_regex, title_to_check, u"Title", is_regex_check))
                     result.append(rule['reason'].replace("{}", "title"))
@@ -1664,7 +1671,7 @@ class FindSpam:
                     result.append(rule['reason'].replace("{}", "username"))
                 if matched_body and rule['body']:
                     why["body"].append(FindSpam.generate_why(compiled_regex, body_to_check, u"Body", is_regex_check))
-                    type_of_post = "answer" if post.is_answer else "body"
+                    type_of_post = ["body", "answer"][post.is_answer]
                     result.append(rule['reason'].replace("{}", type_of_post))
         result = list(set(result))
         result.sort()
