@@ -3,7 +3,6 @@
 import platform
 import time
 import json
-import subprocess as sp
 from datetime import datetime
 from threading import Lock
 
@@ -16,7 +15,8 @@ if 'windows' in str(platform.platform()).lower():
     # noinspection PyPep8Naming
     from classes import Git as git, GitError
 else:
-    from sh import git, ErrorReturnCode as GitError
+    from sh.contrib import git
+    from sh import ErrorReturnCode as GitError
 
 from helpers import log
 from globalvars import GlobalVars
@@ -283,12 +283,7 @@ class GitManager:
         if 'windows' in platform.platform().lower():
             return git.diff_filenames("deploy", "origin/deploy")
         else:
-            # sh.git gives more ASCII escape sequences than colors, can't rely on
-            try:
-                return sp.check_output(['git', 'diff', '--name-only', 'HEAD', 'origin/deploy'])\
-                    .decode("utf-8")
-            except sp.CalledProcessError:
-                return "."
+            return git("-c", "color.diff=false", "diff", "--name-only", "deploy", "origin/deploy")
 
     @staticmethod
     def pull_remote():
