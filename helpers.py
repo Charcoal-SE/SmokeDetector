@@ -66,13 +66,13 @@ def only_files_changed(diff, file_list):
 
 def only_blacklists_changed(diff):
     return only_files_changed(diff, [
-        "bad_keywords.txt", "blacklisted_usernames.txt", "blacklisted_websites.txt", "watched_keywords.txt"]
+        "bad_keywords.txt", "blacklisted_usernames.txt", "blacklisted_websites.txt", "watched_keywords.txt"])
 
 
 def only_findspam_changed(diff):
     return only_files_changed(diff, [
         "bad_keywords.txt", "blacklisted_usernames.txt", "blacklisted_websites.txt", "watched_keywords.txt",
-        "findspam.py"]
+        "findspam.py"])
 
 
 # FAIR WARNING: Sending HEAD requests to resolve a shortened link is generally okay - there aren't
