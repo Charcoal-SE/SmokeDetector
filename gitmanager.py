@@ -3,6 +3,7 @@
 import platform
 import time
 import json
+import subprocess as sp
 from datetime import datetime
 from threading import Lock
 
@@ -282,7 +283,12 @@ class GitManager:
         if 'windows' in platform.platform().lower():
             return git.diff_filenames("deploy", "origin/deploy")
         else:
-            return git("-c", "color.diff=false", "diff", "--name-only", "deploy", "origin/deploy")
+            # sh.git gives more ASCII escape sequences than colors, can't rely on
+            try:
+                return sp.check_output(['git', 'diff', '--name-only', 'HEAD', 'origin/deploy'])\
+                    .decode("utf-8")
+            except sp.CalledProcessError:
+                return "."
 
     @staticmethod
     def pull_remote():
