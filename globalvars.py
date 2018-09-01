@@ -34,9 +34,7 @@ def git_status():
 
 # We're not going to need this anymore, see commit message of 1931d30804a675df07887ce0466e558167feae57
 def strip_escape_chars(line):
-    line = str(line)
-    ansi_escape = regex.compile(r'(\x9B|\x1B\[)[0-?]*[ -\/]*[@-~]')
-    return ansi_escape.sub('', line).strip('=\r\r\x1b>\n"')
+    return str(line)
 
 
 # noinspection PyClassHasNoInit,PyDeprecation,PyUnresolvedReferences
