@@ -169,12 +169,7 @@ class Metasmoke:
                                     os._exit(8)
                                 GlobalVars.reload()
                                 findspam.FindSpam.reload_blacklists()
-                                chatcommunicate.tell_rooms_with(
-                                    'debug', "Blacklists reloaded without restarting at [rev {}]({}/commit/{})".format(
-                                        GlobalVars.commit_with_author, GlobalVars.bot_repository,
-                                        GlobalVars.commit['id']))
-                                if 'first_start' in sys.argv:
-                                    chatcommunicate.tell_rooms_with('debug', GlobalVars.s)
+                                chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart)
                             else:
                                 os._exit(3)
                         else:

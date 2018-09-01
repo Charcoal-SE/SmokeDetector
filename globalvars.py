@@ -85,6 +85,7 @@ class GlobalVars:
 
     s = ""
     s_reverted = ""
+    s_norestart = ""
     apiquota = -1
     bodyfetcher = None
     se_sites = []
@@ -199,6 +200,9 @@ class GlobalVars:
             "at [rev {}]({}/commit/{}) (running on {})".format(
                 GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
                 GlobalVars.commit['id'], GlobalVars.location)
+        GlobalVars.s_norestart = "[ {} ] Blacklists reloaded at [rev {}]({}/commit/{}) (running on {})".format(
+            GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+            GlobalVars.commit['id'], GlobalVars.location)
         GlobalVars.standby_message = \
             "[ {} ] SmokeDetector started in [standby mode](" \
             "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " \
