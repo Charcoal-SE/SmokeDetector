@@ -161,10 +161,8 @@ else:
 
 GlobalVars.deletion_watcher = DeletionWatcher()
 
-if "first_start" in sys.argv and GlobalVars.on_master:
-    chatcommunicate.tell_rooms_with("debug", GlobalVars.s)
-elif "first_start" in sys.argv and not GlobalVars.on_master:
-    chatcommunicate.tell_rooms_with("debug", GlobalVars.s_reverted)
+if "first_start" in sys.argv:
+    chatcommunicate.tell_rooms_with('debug', GlobalVars.s if GlobalVars.on_master else GlobalVars.s_reverted)
 
 Tasks.periodic(Metasmoke.send_statistics, interval=600)
 

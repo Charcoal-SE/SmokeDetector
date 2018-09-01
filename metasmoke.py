@@ -163,10 +163,18 @@ class Metasmoke:
                             chatcommunicate.tell_rooms_with('debug', s, notify_site="/ci")
                             if only_blacklists_changed(GitManager.get_remote_diff()):
                                 GitManager.pull_remote()
+                                if not GlobalVars.on_master:
+                                    # Restart if HEAD detached
+                                    log('warning', "Pulling remote with HEAD detached, checkout deploy")
+                                    os._exit(8)
                                 GlobalVars.reload()
                                 findspam.FindSpam.reload_blacklists()
                                 chatcommunicate.tell_rooms_with(
-                                    'debug', "Blacklists reloaded at rev {}".format(GlobalVars.commit_with_author))
+                                    'debug', "Blacklists reloaded without restarting at [rev {}]({}/commit/{})".format(
+                                        GlobalVars.commit_with_author, GlobalVars.bot_repository,
+                                        GlobalVars.commit['id']))
+                                if 'first_start' in sys.argv:
+                                    chatcommunicate.tell_rooms_with('debug', GlobalVars.s)
                             else:
                                 os._exit(3)
                         else:
