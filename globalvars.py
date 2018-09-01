@@ -193,16 +193,18 @@ class GlobalVars:
         GlobalVars.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {})".format(
             GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
             GlobalVars.commit['id'], GlobalVars.location)
-        GlobalVars.s_reverted = "[ {} ] SmokeDetector started in [reverted mode](" \
-                                "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
-                                "at [rev {}]({}/commit/{}) (running on {})".format(
-            GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
-            GlobalVars.commit['id'], GlobalVars.location)
-        GlobalVars.standby_message = "[ {} ] SmokeDetector started in [standby mode](" \
-                                "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " \
-                                "at [rev {}]({}/commit/{}) (running on {})".format(
-            GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
-            GlobalVars.commit['id'], GlobalVars.location)
+        GlobalVars.s_reverted = \
+            "[ {} ] SmokeDetector started in [reverted mode](" \
+            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
+            "at [rev {}]({}/commit/{}) (running on {})".format(
+                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+                GlobalVars.commit['id'], GlobalVars.location)
+        GlobalVars.standby_message = \
+            "[ {} ] SmokeDetector started in [standby mode](" \
+            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " \
+            "at [rev {}]({}/commit/{}) (running on {})".format(
+                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+                GlobalVars.commit['id'], GlobalVars.location)
 
 
 GlobalVars.reload()
