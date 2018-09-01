@@ -165,8 +165,8 @@ class Metasmoke:
                                 GitManager.pull_remote()
                                 GlobalVars.reload()
                                 findspam.FindSpam.reload_blacklists()
-                                chatcommunicate.tell_rooms_with('debug',
-                                    "Blacklists reloaded at rev {}".format(GlobalVars.commit_with_author))
+                                chatcommunicate.tell_rooms_with(
+                                    'debug', "Blacklists reloaded at rev {}".format(GlobalVars.commit_with_author))
                             else:
                                 os._exit(3)
                         else:
