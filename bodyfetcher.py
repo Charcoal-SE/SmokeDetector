@@ -240,9 +240,17 @@ class BodyFetcher:
 
         self.max_ids_modify_lock.release()
 
-        log('debug', "New IDs / Hybrid Intermediate IDs for {0}:".format(site))
-        log('debug', sorted(new_post_ids))
-        log('debug', sorted(posts))
+        log('debug', "New IDs / Hybrid Intermediate IDs for {}:".format(site))
+        if len(new_post_ids) > 30:
+            log('debug', "{} +{} more".format(sorted(new_post_ids)[:30], len(new_post_ids) - 30))
+        else:
+            log('debug', sorted(new_post_ids))
+        if len(new_post_ids) == len(posts):
+            log('debug', "[ *Identical* ]")
+        elif len(posts) > 30:
+            log('debug', "{} +{} more".format(sorted(posts)[:30], len(posts) - 30))
+        else:
+            log('debug', sorted(posts))
 
         question_modifier = ""
         pagesize_modifier = ""

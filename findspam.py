@@ -162,9 +162,10 @@ def misleading_link(s, site):
     href, text = search[1], search[2]
     try:
         parsed_href = tld.get_tld(href, as_object=True)
-        log('debug', parsed_href.domain, SE_SITES_DOMAINS)
         if parsed_href.fld in SE_SITES_DOMAINS:
+            log('debug', "{}: SE domain".format(parsed_href.fld))
             return False, ''
+        log('debug', "{}: not an SE domain".format(parsed_href.fld))
         if contains_tld(text) and ' ' not in text:
             parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True)
         else:
