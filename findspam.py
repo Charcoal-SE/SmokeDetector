@@ -1104,21 +1104,35 @@ class FindSpam:
         # buyabans.com spammer uses creative variations
         "Sri Lanka", "Srilanka", "Srilankan",
     ]
+
+    # Forward reference so they can be updated easily
+    rule_bad_keywords = {
+        # See PR 2322 for the reason of (?:^|\b) and (?:\b|$)
+        'regex': r"(?is)(?:^|\b)(?:{})(?:\b|$)|{}".format(
+            "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
+        'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
+        'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1}
+    rule_watched_keywords = {
+        'regex': r'(?is)(?:^|\b)(?:{})(?:\b|$)'.format('|'.join(GlobalVars.watched_keywords.keys())),
+        'reason': 'potentially bad keyword in {}',
+        'all': True, 'sites': [], 'title': True, 'body': True, 'username': True,
+        'stripcodeblocks': False, 'body_summary': True, 'max_rep': 30, 'max_score': 1}
+    rule_blacklisted_websites = {
+        'regex': u"(?i)({})".format("|".join(GlobalVars.blacklisted_websites)), 'all': True,
+        'sites': [], 'reason': "blacklisted website in {}", 'title': True, 'body': True, 'username': False,
+        'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 5}
+    rule_blacklisted_usernames = {
+        'regex': r"(?i)({})".format("|".join(GlobalVars.blacklisted_usernames)), 'all': True, 'sites': [],
+        'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
+        'body_summary': False, 'max_rep': 1, 'max_score': 0}
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
         #
         # Category: Bad keywords
         # The big list of bad keywords, for titles and posts
-        # See PR 2322 for the reason of (?:^|\b)
-        {'regex': r"(?is)(?:^|\b)(?:{})(?:\b|$)|{}".format(
-            "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
-         'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
-         'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1},
+        rule_bad_keywords,
         # The growing list of *potentially* bad keywords, for titles and posts
-        {'regex': r'(?is)(?:^|\b)(?:{})(?:\b|$)'.format('|'.join(GlobalVars.watched_keywords.keys())),
-         'reason': 'potentially bad keyword in {}',
-         'all': True, 'sites': [], 'title': True, 'body': True, 'username': True,
-         'stripcodeblocks': False, 'body_summary': True, 'max_rep': 30, 'max_score': 1},
+        rule_watched_keywords,
         # Pattern-matching product name: three keywords in a row at least once, or two in a row at least twice
         {'method': pattern_product_name, 'all': True, 'sites': [], 'reason': "pattern-matching product name in {}",
          'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True,
@@ -1259,9 +1273,7 @@ class FindSpam:
         #
         # Category: Suspicious links
         # Blacklisted sites
-        {'regex': u"(?i)({})".format("|".join(GlobalVars.blacklisted_websites)), 'all': True,
-         'sites': [], 'reason': "blacklisted website in {}", 'title': True, 'body': True, 'username': False,
-         'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 5},
+        rule_blacklisted_websites,
         # Suspicious sites
         {'regex': r"(?i)({}|[\w-]*?({})[\w-]*?\.(com?|net|org|in(fo)?|us|blogspot|wordpress))(?![^>]*<)".format(
             "|".join(pattern_websites), "|".join(bad_keywords_nwb)), 'all': True,
@@ -1541,9 +1553,7 @@ class FindSpam:
         #
         # Category: other
         # Blacklisted usernames
-        {'regex': r"(?i)({})".format("|".join(GlobalVars.blacklisted_usernames)), 'all': True, 'sites': [],
-         'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
-         'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        rule_blacklisted_usernames,
         {'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"],
          'reason': "blacklisted username", 'title': False, 'body': False, 'username': True,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
