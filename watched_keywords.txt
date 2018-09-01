@@ -5369,3 +5369,4 @@
 1535762647	Makyen	achthackers\.wordpress\.com
 1535762674	Makyen	hackservice@secmail\.pro
 1535786742	Makyen	solutionlogicmoney(?:@gmail\.com)?
+1535786752	Makyen	[a-z_]*(?:91_*)?8860[\W_]*675[\W_]*979[a-z_]*
