@@ -1526,4 +1526,3 @@ selfgrowth\.com/\S+/healthy_school_lunches
 custom\W?made\W?patch(?:es)?
 testro\W?x(?:\W?ultra)?
 keto\W?pro\W?x
-this_is_a_test_and_it_should_never_hit_xxx
