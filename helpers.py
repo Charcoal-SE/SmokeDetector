@@ -59,11 +59,20 @@ def log(log_level, *args):
     print(log_str)
 
 
-def only_blacklists_changed(diff):
-    blacklist_files = ["bad_keywords.txt", "blacklisted_usernames.txt", "blacklisted_websites.txt",
-                       "watched_keywords.txt"]
+def only_files_changed(diff, file_list):
     files_changed = diff.split()
-    return not any([f for f in files_changed if f not in blacklist_files])
+    return not any([f for f in files_changed if f not in file_list])
+
+
+def only_blacklists_changed(diff):
+    return only_files_changed(diff, [
+        "bad_keywords.txt", "blacklisted_usernames.txt", "blacklisted_websites.txt", "watched_keywords.txt"]
+
+
+def only_findspam_changed(diff):
+    return only_files_changed(diff, [
+        "bad_keywords.txt", "blacklisted_usernames.txt", "blacklisted_websites.txt", "watched_keywords.txt",
+        "findspam.py"]
 
 
 # FAIR WARNING: Sending HEAD requests to resolve a shortened link is generally okay - there aren't

@@ -84,6 +84,7 @@ class GlobalVars:
     s = ""
     s_reverted = ""
     s_norestart = ""
+    s_norestart2 = ""
     apiquota = -1
     bodyfetcher = None
     se_sites = []
@@ -176,7 +177,6 @@ class GlobalVars:
 
     @staticmethod
     def reload():
-        log('debug', "GlobalVars loaded")
         commit = git_commit_info()
         censored_committer_names = GlobalVars.censored_committer_names
         if md5(commit['author'][0].encode('utf-8')).hexdigest() in censored_committer_names:
@@ -201,12 +201,16 @@ class GlobalVars:
         GlobalVars.s_norestart = "[ {} ] Blacklists reloaded at [rev {}]({}/commit/{}) (running on {})".format(
             GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
             GlobalVars.commit['id'], GlobalVars.location)
+        GlobalVars.s_norestart2 = "[ {} ] FindSpam module reloaded at [rev {}]({}/commit/{}) (running on {})".format(
+            GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+            GlobalVars.commit['id'], GlobalVars.location)
         GlobalVars.standby_message = \
             "[ {} ] SmokeDetector started in [standby mode](" \
             "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " \
             "at [rev {}]({}/commit/{}) (running on {})".format(
                 GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
                 GlobalVars.commit['id'], GlobalVars.location)
+        log('debug', "GlobalVars loaded")
 
 
 GlobalVars.reload()

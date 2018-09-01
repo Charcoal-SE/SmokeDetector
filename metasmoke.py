@@ -1,6 +1,7 @@
 # coding=utf-8
 import json
 import requests
+import importlib  # for .reload()
 from globalvars import GlobalVars
 import threading
 # noinspection PyPackageRequirements
@@ -161,7 +162,8 @@ class Metasmoke:
                                 " succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"],
                                                                                              commit_sha=sha)
                             chatcommunicate.tell_rooms_with('debug', s, notify_site="/ci")
-                            if only_blacklists_changed(GitManager.get_remote_diff()):
+                            remote_diff = GitManager.get_remote_diff()
+                            if only_blacklists_changed(remote_diff):
                                 GitManager.pull_remote()
                                 if not GlobalVars.on_master:
                                     # Restart if HEAD detached
@@ -170,6 +172,15 @@ class Metasmoke:
                                 GlobalVars.reload()
                                 findspam.FindSpam.reload_blacklists()
                                 chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart)
+                            elif only_findspam_changed(remote_diff):
+                                GitManager.pull_remote()
+                                if not GlobalVars.on_master:
+                                    # Restart if HEAD detached
+                                    log('warning', "Pulling remote with HEAD detached, checkout deploy")
+                                    os._exit(8)
+                                GlobalVars.reload()
+                                importlib.reload(findspam)  # FindSpam.reload_blacklists() is auto-executed
+                                chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart2)
                             else:
                                 os._exit(3)
                         else:
