@@ -1622,7 +1622,7 @@ class FindSpam:
                 body_to_check = regex.sub("(?s)<code>.*?</code>",
                                           "<code>placeholder for omitted code/код block</code>",
                                           body_to_check)
-            if rule['reason'] == 'Phone number detected in {}':
+            if rule['reason'] == 'phone number detected in {}':
                 body_to_check = regex.sub("<(?:a|img)[^>]+>", "", body_to_check)
             matched_title, matched_username, matched_body = False, False, False
             compiled_regex = None
