@@ -104,35 +104,6 @@ load_files()
 filter_auto_ignored_posts()
 
 
-GlobalVars.s = "[ " + GlobalVars.chatmessage_prefix + " ] " \
-               "SmokeDetector started at [rev " +\
-               GlobalVars.commit_with_author +\
-               "](" + GlobalVars.bot_repository + "/commit/" +\
-               GlobalVars.commit['id'] +\
-               ") (running on " +\
-               GlobalVars.location +\
-               ")"
-GlobalVars.s_reverted = "[ " + GlobalVars.chatmessage_prefix + " ] " \
-                        "SmokeDetector started in [reverted mode](" + \
-                        "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
-                        "at [rev " + \
-                        GlobalVars.commit_with_author + \
-                        "](" + GlobalVars.bot_repository + "/commit/" + \
-                        GlobalVars.commit['id'] + \
-                        ") (running on " +\
-                        GlobalVars.location +\
-                        ")"
-GlobalVars.standby_message = "[ " + GlobalVars.chatmessage_prefix + " ] " \
-                             "SmokeDetector started in [standby mode](" + \
-                             "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " + \
-                             "at [rev " +\
-                             GlobalVars.commit_with_author +\
-                             "](" + GlobalVars.bot_repository + "/commit/" +\
-                             GlobalVars.commit['id'] +\
-                             ") (running on " +\
-                             GlobalVars.location +\
-                             ")"
-
 GlobalVars.standby_mode = "standby" in sys.argv
 
 chatcommunicate.init(username, password)

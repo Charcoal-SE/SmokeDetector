@@ -21,7 +21,7 @@ import classes
 import chatcommunicate
 from helpers import api_parameter_from_link, log, only_blacklists_changed, blacklist_integrity_check
 from gitmanager import GitManager
-from blacklists import load_blacklists
+import findspam
 
 
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
@@ -144,7 +144,7 @@ class Metasmoke:
                             integrity = blacklist_integrity_check()
                             if len(integrity) == 0:  # No issues
                                 GitManager.pull_remote()
-                                load_blacklists()
+                                findspam.FindSpam.reload_blacklists()
                                 chatcommunicate.tell_rooms_with("debug", "No code modified in {0}, only blacklists"
                                                                 " reloaded.".format(commit_md))
                             else:
@@ -161,8 +161,12 @@ class Metasmoke:
                                 " succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"],
                                                                                              commit_sha=sha)
                             chatcommunicate.tell_rooms_with("debug", s, notify_site="/ci")
-                            time.sleep(2)
-                            os._exit(3)
+                            if only_blacklists_changed(GitManager.get_remote_diff()):
+                                GitManager.pull_remote()
+                                findspam.FindSpam.reload_blacklists()
+                                chatcommunicate.tell_rooms_with("debug",)
+                            else:
+                                os._exit(3)
                         else:
                             s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
                                 "commit/{commit_sha}) succeeded.".format(ci_link=c["ci_url"], commit_sha=sha)
