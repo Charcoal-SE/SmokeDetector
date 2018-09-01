@@ -160,11 +160,13 @@ class Metasmoke:
                                 "commit/{commit_sha})"\
                                 " succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"],
                                                                                              commit_sha=sha)
-                            chatcommunicate.tell_rooms_with("debug", s, notify_site="/ci")
+                            chatcommunicate.tell_rooms_with('debug', s, notify_site="/ci")
                             if only_blacklists_changed(GitManager.get_remote_diff()):
                                 GitManager.pull_remote()
+                                GlobalVars.reload()
                                 findspam.FindSpam.reload_blacklists()
-                                chatcommunicate.tell_rooms_with("debug",)
+                                chatcommunicate.tell_rooms_with('debug',
+                                    "Blacklists reloaded at rev {}".format(GlobalVars.commit_with_author))
                             else:
                                 os._exit(3)
                         else:
