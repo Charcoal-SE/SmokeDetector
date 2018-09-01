@@ -21,7 +21,7 @@ import chatcommunicate
 
 from helpers import log
 from globalvars import GlobalVars
-from blacklists import load_blacklists
+import blacklists
 
 TLD_CACHE = []
 LEVEN_DOMAIN_DISTANCE = 3
@@ -967,9 +967,6 @@ def religion_troll(s, site):
     return offensive, 'Potential religion site troll post' if offensive else ''
 
 
-load_blacklists()
-
-
 # noinspection PyClassHasNoInit
 class FindSpam:
     bad_keywords_nwb = [  # "nwb" == "no word boundary"
@@ -1113,7 +1110,7 @@ class FindSpam:
         'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
         'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1}
     rule_watched_keywords = {
-        'regex': r'(?is)(?:^|\b)(?:{})(?:\b|$)'.format('|'.join(GlobalVars.watched_keywords.keys())),
+        'regex': r'(?is)(?:^|\b)(?:{})(?:\b|$)'.format("|".join(GlobalVars.watched_keywords.keys())),
         'reason': 'potentially bad keyword in {}',
         'all': True, 'sites': [], 'title': True, 'body': True, 'username': True,
         'stripcodeblocks': False, 'body_summary': True, 'max_rep': 30, 'max_score': 1}
@@ -1125,6 +1122,26 @@ class FindSpam:
         'regex': r"(?i)({})".format("|".join(GlobalVars.blacklisted_usernames)), 'all': True, 'sites': [],
         'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
         'body_summary': False, 'max_rep': 1, 'max_score': 0}
+
+    @staticmethod
+    def reload_blacklists():
+        blacklists.load_blacklists()
+        FindSpam.rule_bad_keywords['regex'] = r"(?is)(?:^|\b)(?:{})(?:\b|$)|{}".format(
+            "|".join(GlobalVars.bad_keywords), "|".join(FindSpam.bad_keywords_nwb))
+        FindSpam.rule_watched_keywords['regex'] = r'(?is)(?:^|\b)(?:{})(?:\b|$)'.format(
+            "|".join(GlobalVars.watched_keywords.keys()))
+        FindSpam.rule_blacklisted_websites['regex'] = r"(?i)({})".format(
+            "|".join(GlobalVars.blacklisted_websites))
+        FindSpam.rule_blacklisted_usernames['regex'] = r"(?i)({})".format(
+            "|".join(GlobalVars.blacklisted_usernames))
+
+        for rule in [FindSpam.rule_bad_keywords, FindSpam.rule_watched_keywords,
+                     FindSpam.rule_blacklisted_websites, FindSpam.rule_blacklisted_usernames]:
+            if 'compiled_regex' in rule:
+                del rule['compiled_regex']
+
+        log('debug', "Global blacklists reloaded")
+
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
         #
@@ -1710,3 +1727,6 @@ class FindSpam:
             group = match.group().replace("\n", "")
             why_for_matches.append("Position {}-{}: {}".format(span[0] + 1, span[1], group))
         return type_of_text + " - " + ", ".join(why_for_matches)
+
+
+FindSpam.reload_blacklists()
