@@ -1,9 +1,10 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
 from chatcommunicate import add_room, block_room, CmdException, command, get_report_data, is_privileged, message, \
-    tell_rooms
+    tell_rooms, tell_rooms_with
 # noinspection PyUnresolvedReferences
 from globalvars import GlobalVars
+import findspam
 from findspam import FindSpam
 # noinspection PyUnresolvedReferences
 from datetime import datetime
@@ -20,11 +21,12 @@ import random
 import requests
 import os
 import time
+import importlib
 from html import unescape
 from ast import literal_eval
 # noinspection PyCompatibility
 import regex
-from helpers import only_blacklists_changed, log, expand_shorthand_link, to_metasmoke_link
+from helpers import only_blacklists_changed, only_findspam_changed, log, expand_shorthand_link, to_metasmoke_link
 from classes import Post
 from classes.feedback import *
 
@@ -617,8 +619,16 @@ def pull():
     """
     if only_blacklists_changed(GitManager.get_remote_diff()):
         GitManager.pull_remote()
-        load_blacklists()
-        return "No code modified, only blacklists reloaded."
+        FindSpam.reload_blacklists()
+        GlobalVars.reload()
+        tell_rooms_with('debug', GlobalVars.s_norestart)
+        return
+    elif only_findspam_changed(GitManager.get_remote_diff()):
+        GitManager.pull_remote()
+        importlib.reload(findspam)
+        GlobalVars.reload()
+        tell_rooms_with('debug', GlobalVars.s_norestart2)
+        return
     else:
         request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/deploy')
         latest_sha = request.json()["object"]["sha"]
