@@ -5368,3 +5368,4 @@
 1535741902	Makyen	vOICe\.vOICe
 1535762647	Makyen	achthackers\.wordpress\.com
 1535762674	Makyen	hackservice@secmail\.pro
+1535786742	Makyen	solutionlogicmoney(?:@gmail\.com)?
