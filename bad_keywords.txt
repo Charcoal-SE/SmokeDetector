@@ -1526,3 +1526,4 @@ selfgrowth\.com/\S+/healthy_school_lunches
 custom\W?made\W?patch(?:es)?
 testro\W?x(?:\W?ultra)?
 keto\W?pro\W?x
+zynev
