@@ -136,7 +136,7 @@ class Metasmoke:
                                          why=why)
             elif "deploy_updated" in message:
                 sha = message["deploy_updated"]["head_commit"]["id"]
-                if sha != os.popen('git log -1 --pretty="%H"').read():
+                if sha != os.popen('git log -1 --pretty="%H"').read() and False:  # Disabled
                     if "autopull" in message["deploy_updated"]["head_commit"]["message"]:
                         if only_blacklists_changed(GitManager.get_remote_diff()):
                             commit_md = "[`{0}`](https://github.com/Charcoal-SE/SmokeDetector/commit/{0})" \
