@@ -10,7 +10,7 @@ def test_blacklist_integrity():
     if len(errors) == 1:
         raise ValueError(errors[0])
     elif len(errors) > 1:
-        raise ValueError("\n\t".join(["Multiple errors has occurred."] + errors))
+        raise ValueError("\n\t".join(["{} errors has occurred:".format(len(errors))] + errors))
 
 
 def test_blacklist_pull_diff():
