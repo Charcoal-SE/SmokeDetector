@@ -158,11 +158,12 @@ def blacklist_integrity_check():
                     errors.append('{0}:{1}:Empty line'.format(bl_file, lineno))
                 elif bl_file == 'watched_keywords.txt':
                     line = line.split('\t')[2]
-                    if line in seen:
-                        errors.append('{0}:{1}:Duplicate entry {2} (also {3})'.format(
-                            bl_file, lineno, line.rstrip('\n'), seen[line]))
-                    else:
-                        seen[line] = '{0}:{1}'.format(bl_file, lineno)
+
+                if line in seen:
+                    errors.append('{0}:{1}:Duplicate entry {2} (also {3})'.format(
+                        bl_file, lineno, line.rstrip('\n'), seen[line]))
+                else:
+                    seen[line] = '{0}:{1}'.format(bl_file, lineno)
     return errors
 
 
