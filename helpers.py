@@ -7,7 +7,6 @@ from termcolor import colored
 import requests
 import regex
 from glob import glob
-from excepthook import log_exception
 
 
 class Helpers:
