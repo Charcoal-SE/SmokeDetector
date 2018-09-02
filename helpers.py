@@ -67,6 +67,13 @@ def only_files_changed(diff, file_set):
 no_reboot_files = {
     "",  # In case an empty string comes out of str.split()
     "bad_keywords.txt", "blacklisted_usernames.txt", "blacklisted_websites.txt", "watched_keywords.txt",
+
+    # Dump whatever in. Trust the performance of set()
+    "config.ci", "config.sample", "Dockerfile", "InspectionReference.txt", "install_dependencies.sh",
+    "LICENSE-APACHE", "LICENSE-MIT",
+    "README.md", "requirements.txt", "setup.sh", "user_requirements.txt",
+    "tox_classes.ini", "tox_tests.ini", "tox.ini",
+    ".gitignore", ".circleci/config.yml", ".codeclimate.yml", ".pullapprove.yml", ".travis.yml"
 }
 no_reboot_modules = no_reboot_files.union({
     "findspam.py",
