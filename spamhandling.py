@@ -1,7 +1,7 @@
 # coding=utf-8
 import sys
 import random
-from findspam import FindSpam
+import findspam
 import datahandling
 import chatcommunicate
 from globalvars import GlobalVars
@@ -24,7 +24,7 @@ def should_whitelist_prevent_alert(user_url, reasons):
 
 # noinspection PyMissingTypeHints
 def check_if_spam(post):
-    test, why = FindSpam.test_post(post)
+    test, why = findspam.FindSpam.test_post(post)
     if datahandling.is_blacklisted_user(parsing.get_user_from_url(post.user_url)):
         test.append("blacklisted user")
         blacklisted_user_data = datahandling.get_blacklisted_user_data(parsing.get_user_from_url(post.user_url))

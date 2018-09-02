@@ -5,7 +5,6 @@ from chatcommunicate import add_room, block_room, CmdException, command, get_rep
 # noinspection PyUnresolvedReferences
 from globalvars import GlobalVars
 import findspam
-from findspam import FindSpam
 # noinspection PyUnresolvedReferences
 from datetime import datetime
 from utcdate import UtcDate
@@ -202,8 +201,8 @@ def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
                                     'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
                                     'site': "", 'IsAnswer': True, 'score': 0})
 
-    question_reasons, _ = FindSpam.test_post(question)
-    answer_reasons, _ = FindSpam.test_post(answer)
+    question_reasons, _ = findspam.FindSpam.test_post(question)
+    answer_reasons, _ = findspam.FindSpam.test_post(answer)
 
     # Filter out duplicates
     reasons = list(set(question_reasons) | set(answer_reasons))
@@ -252,7 +251,7 @@ def do_blacklist(blacklist_type, msg, force=False):
     # noinspection PyProtectedMember
     pattern = rebuild_str(msg.content_source.split(" ", 1)[1])
     try:
-        regex.compile(pattern, city=FindSpam.city_list)
+        regex.compile(pattern, city=findspam.FindSpam.city_list)
     except regex._regex_core.error:
         raise CmdException("An invalid pattern was provided, not blacklisting.")
 
@@ -619,7 +618,7 @@ def pull():
     """
     if only_blacklists_changed(GitManager.get_remote_diff()):
         GitManager.pull_remote()
-        FindSpam.reload_blacklists()
+        findspam.FindSpam.reload_blacklists()
         GlobalVars.reload()
         tell_rooms_with('debug', GlobalVars.s_norestart)
         return
@@ -864,7 +863,7 @@ def test(content, alias_used="test"):
                                       'owner': {'display_name': content, 'reputation': 1, 'link': ''},
                                       'site': site, 'IsAnswer': False, 'score': 0})
 
-    reasons, why_response = FindSpam.test_post(fakepost)
+    reasons, why_response = findspam.FindSpam.test_post(fakepost)
 
     if len(reasons) == 0:
         result += "Would not be caught as {}".format(kind)
