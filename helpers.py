@@ -77,7 +77,7 @@ def only_blacklists_changed(diff):
     return only_files_changed(diff, no_reboot_files)
 
 
-def only_module_changed(diff):
+def only_modules_changed(diff):
     return only_files_changed(diff, no_reboot_modules)
 
 
