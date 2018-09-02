@@ -32,9 +32,7 @@ def git_status():
         raise OSError("Git error:\n" + e.output) from e
 
 
-# We're not going to need this anymore, see commit message of 1931d30804a675df07887ce0466e558167feae57
-def strip_escape_chars(line):
-    return str(line)
+# We don't need strip_escape_chars() anymore, see commit message of 1931d30804a675df07887ce0466e558167feae57
 
 
 # noinspection PyClassHasNoInit,PyDeprecation,PyUnresolvedReferences
