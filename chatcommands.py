@@ -623,7 +623,7 @@ def pull():
         GlobalVars.reload()
         tell_rooms_with('debug', GlobalVars.s_norestart)
         return
-    elif only_findspam_changed(GitManager.get_remote_diff()):
+    elif only_modules_changed(GitManager.get_remote_diff()):
         GitManager.pull_remote()
         importlib.reload(findspam)
         GlobalVars.reload()

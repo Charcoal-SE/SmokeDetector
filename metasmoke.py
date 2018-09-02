@@ -177,7 +177,7 @@ class Metasmoke:
                         GlobalVars.reload()
                         findspam.FindSpam.reload_blacklists()
                         chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart)
-                    elif only_findspam_changed(remote_diff):
+                    elif only_modules_changed(remote_diff):
                         GitManager.pull_remote()
                         if not GlobalVars.on_master:
                             # Restart if HEAD detached
