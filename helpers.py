@@ -2,10 +2,12 @@
 import os
 import sys
 from datetime import datetime
+import importlib
 from termcolor import colored
 import requests
 import regex
 from glob import glob
+from excepthook import log_exception
 
 
 class Helpers:
@@ -41,7 +43,7 @@ def expand_shorthand_link(s):
 
 
 # noinspection PyMissingTypeHints
-def log(log_level, *args):
+def log(log_level, *args, f=False):
     levels = {
         'debug': [0, 'grey'],
         'info': [1, 'cyan'],
@@ -57,6 +59,25 @@ def log(log_level, *args):
     log_str = u"{} {}".format(colored("[{}]".format(datetime.now().isoformat()[11:-7]), color),
                               u"  ".join([str(x) for x in args]))
     print(log_str)
+
+    if f:  # Also to file
+        log_file(log_level, *args)
+
+
+def log_file(log_level, *args):
+    levels = {
+        'debug': 0,
+        'info': 1,
+        'warning': 2,
+        'error': 3,
+    }
+    if levels[log_level][0] < Helpers.min_log_level:
+        return
+
+    log_str = "[{}] {}: {}".format(datetime.now().isoformat()[11:-3], log_level.upper(),
+                                   "  ".join([str(x) for x in args]))
+    with open("errorLogs.txt", "a", encoding="utf-8") as f:
+        print(log_str, file=f)
 
 
 def only_files_changed(diff, file_set):
@@ -75,9 +96,10 @@ no_reboot_files = {
     "tox_classes.ini", "tox_tests.ini", "tox.ini",
     ".gitignore", ".circleci/config.yml", ".codeclimate.yml", ".pullapprove.yml", ".travis.yml"
 }
-no_reboot_modules = no_reboot_files.union({
+reloadable_modules = {
     "findspam.py",
-})
+}
+no_reboot_modules = no_reboot_files.union(reloadable_modules)
 
 
 def only_blacklists_changed(diff):
@@ -86,6 +108,23 @@ def only_blacklists_changed(diff):
 
 def only_modules_changed(diff):
     return only_files_changed(diff, no_reboot_modules)
+
+
+# WARNING: Dangerous! Only use this with only_modules_changed.
+def reload_changed_modules(diff):
+    diff = diff.split()
+    result = True
+    for s in diff:
+        if s not in reloadable_modules:
+            continue  # Don't do bad things
+
+        s = s.replace(".py", "")  # Relying on our naming convention
+        try:
+            # Some reliable approach
+            importlib.reload(sys.modules[s])
+        except (KeyError, ImportError):
+            result = False
+    return result
 
 
 # FAIR WARNING: Sending HEAD requests to resolve a shortened link is generally okay - there aren't

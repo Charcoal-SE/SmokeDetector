@@ -21,8 +21,8 @@ import apigetpost
 import spamhandling
 import classes
 import chatcommunicate
-from helpers import api_parameter_from_link, log, only_blacklists_changed, \
-    only_modules_changed, blacklist_integrity_check
+from helpers import api_parameter_from_link, log, only_blacklists_changed, log_exception, \
+    only_modules_changed, blacklist_integrity_check, reload_changed_modules
 from gitmanager import GitManager
 import findspam
 
@@ -67,15 +67,13 @@ class Metasmoke:
 
     @staticmethod
     def check_last_pingtime():
-        now = datetime.utcnow()
-        errlog = open('errorLogs.txt', 'a', encoding="utf-8")
         if GlobalVars.metasmoke_last_ping_time is None:
-            errlog.write("\nINFO/WARNING: SmokeDetector has not received a ping yet, forcing SmokeDetector restart "
-                         "to try and reset the connection states.\n%s UTC\n" % now)
+            log('warning', "SmokeDetector has not received a ping yet, forcing SmokeDetector restart "
+                           "to try and reset the connection states.", f=True)
             os._exit(10)
         elif GlobalVars.metasmoke_last_ping_time < (datetime.now() - timedelta(seconds=120)):
-            errlog.write("\nWARNING: Last metasmoke ping with a response was over 120 seconds ago, "
-                         "forcing SmokeDetector restart to reset all sockets.\n%s UTC\n" % now)
+            log('warning', "Last metasmoke ping with a response was over 120 seconds ago, "
+                           "forcing SmokeDetector restart to reset all sockets.", f=True)
             # os._exit(10)
         else:
             pass  # Do nothing
@@ -172,7 +170,7 @@ class Metasmoke:
                         GitManager.pull_remote()
                         if not GlobalVars.on_master:
                             # Restart if HEAD detached
-                            log('warning', "Pulling remote with HEAD detached, checkout deploy")
+                            log('warning', "Pulling remote with HEAD detached, checkout deploy", f=True)
                             os._exit(8)
                         GlobalVars.reload()
                         findspam.FindSpam.reload_blacklists()
@@ -181,10 +179,10 @@ class Metasmoke:
                         GitManager.pull_remote()
                         if not GlobalVars.on_master:
                             # Restart if HEAD detached
-                            log('warning', "Pulling remote with HEAD detached, checkout deploy")
+                            log('warning', "Pulling remote with HEAD detached, checkout deploy", f=True)
                             os._exit(8)
                         GlobalVars.reload()
-                        importlib.reload(findspam)  # FindSpam.reload_blacklists() is auto-executed
+                        reload_changed_modules()
                         chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart2)
                     else:
                         os._exit(3)
