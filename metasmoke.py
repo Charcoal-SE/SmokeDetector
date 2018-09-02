@@ -21,7 +21,7 @@ import apigetpost
 import spamhandling
 import classes
 import chatcommunicate
-from helpers import api_parameter_from_link, log, only_blacklists_changed, log_exception, \
+from helpers import api_parameter_from_link, log, only_blacklists_changed, \
     only_modules_changed, blacklist_integrity_check, reload_changed_modules
 from gitmanager import GitManager
 import findspam
