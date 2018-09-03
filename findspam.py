@@ -1145,7 +1145,7 @@ class FindSpam:
 
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
-        #
+
         # Category: Bad keywords
         # The big list of bad keywords, for titles and posts
         rule_bad_keywords,
@@ -1288,7 +1288,7 @@ class FindSpam:
          'sites': ["skeptics.stackexchange.com", "history.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        #
+
         # Category: Suspicious links
         # Blacklisted sites
         rule_blacklisted_websites,
@@ -1443,7 +1443,7 @@ class FindSpam:
          'reason': "body starts with title and ends in URL", 'whole_post': True, 'title': False, 'body': False,
          'username': False, 'body_summary': False, 'stripcodeblocks': False, 'max_rep': 1, 'max_score': 0,
          'answers': False},
-        #
+
         # Category: Suspicious contact information
         # Phone number in title
         {'method': has_phone_number, 'all': True,
@@ -1482,7 +1482,7 @@ class FindSpam:
                   r'\bICQ[ :]{0,5}\d{9}\b|\bwh?atsa+pp?[ :+]{0,5}\d{10}', 'all': True, 'sites': [],
          'reason': "messaging number in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        #
+
         # Category: Trolling
         # Offensive content in titles and posts
         {'method': religion_troll, 'all': False, 'sites': ['hindiusm.stackexchange.com', 'islam.stackexchange.com',
@@ -1565,10 +1565,10 @@ class FindSpam:
         {'method': luncheon_meat, 'all': False, 'sites': ['stackoverflow.com'], 'reason': "luncheon meat detected",
          'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
          'max_rep': 21, 'max_score': 0},
-        {'method': turkey2, 'all': False, 'sites': ['stackoverflow.com'], 'reason': "himalayan pink salt detected",
-         "whole_post": True, "title": False, "body": False, "username": False, "body_summary": False,
-         'stripcodeblocks': False, 'max_rep': 1, 'max_score': 0},
-        #
+        # {'method': turkey2, 'all': False, 'sites': ['stackoverflow.com'], 'reason': "himalayan pink salt detected",
+        #  "whole_post": True, "title": False, "body": False, "username": False, "body_summary": False,
+        #  'stripcodeblocks': False, 'max_rep': 1, 'max_score': 0},
+
         # Category: other
         # Blacklisted usernames
         rule_blacklisted_usernames,
