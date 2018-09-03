@@ -556,9 +556,9 @@ def errorlogs(count):
     return fetch_lines_from_error_log(count or 50)
 
 
-@command(privileged=True, aliases=["ms-down", "ms-up"], give_name=True)
-def metasmoke():
-    if alias_used == "metasmoke":
+@command(privileged=True, aliases=["ms-status", "ms-down", "ms-up"], give_name=True)
+def metasmoke(alias_used):
+    if alias_used in {"metasmoke", "ms-status"}:
         status_text = [
             "metasmoke is up. Currect failure count (consecutive): {}".format(GlobalVars.metasmoke_failures),
             "metasmoke is down. Currect failure count (consecutive): {}".format(GlobalVars.metasmoke_failures),
