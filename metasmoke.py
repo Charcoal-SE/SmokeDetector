@@ -445,3 +445,7 @@ class Metasmoke:
 
     get = request_sender.__func__(requests.get)
     post = request_sender.__func__(requests.post)
+
+    @staticmethod
+    def reset_failure_count():
+        GlobalVars.metasmoke_failures = 0
