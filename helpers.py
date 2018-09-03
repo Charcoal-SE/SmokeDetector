@@ -80,14 +80,14 @@ def log_file(log_level, *args):
         print(log_str, file=f)
 
 
-def log_exception(exctype, value, tb):
+def log_exception(exctype, value, tb, f=False):
     now = datetime.utcnow()
-    tr = '\n'.join((traceback.format_tb(tb)))
+    tr = '\n'.join(traceback.format_tb(tb))
     exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
     logged_msg = "{exception}\n{now} UTC\n{row}\n\n".format(exception=exception_only, now=now, row=tr)
-    log('error', logged_msg)
-    with open("errorLogs.txt", "a") as f:
-        f.write(logged_msg)
+    log('error', logged_msg, f=f)
+    with open("errorLogs.txt", "a") as fp:
+        fp.write(logged_msg)
 
 
 def only_files_changed(diff, file_set):
