@@ -5394,3 +5394,4 @@
 1535883810	iBug	livesmartt\.com
 1535902687	John Militer	bdjobsoccupation\.com
 1535944011	Makyen	info\.agapfinancefunds(?:@gmail\.com)?
+1535944596	Tetsuya Yamamoto	techgyo\.com
