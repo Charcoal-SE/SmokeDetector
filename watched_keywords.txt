@@ -5399,3 +5399,4 @@
 1535954808	Makyen	mytectra\.com
 1535956993	Makyen	marvelcorporate\.co
 1535957025	Makyen	aman\W*mehndiratta
+1535957692	Tetsuya Yamamoto	cableinternet-deals\.com
