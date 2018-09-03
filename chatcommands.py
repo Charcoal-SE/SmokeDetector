@@ -556,6 +556,23 @@ def errorlogs(count):
     return fetch_lines_from_error_log(count or 50)
 
 
+@command(privileged=True, aliases=["ms-down", "ms-up"], give_name=True)
+def metasmoke():
+    if alias_used == "metasmoke":
+        status_text = [
+            "metasmoke is up. Currect failure count (consecutive): {}".format(GlobalVars.metasmoke_failures),
+            "metasmoke is down. Currect failure count (consecutive): {}".format(GlobalVars.metasmoke_failures),
+        ]
+        return status_text[GlobalVars.metasmoke_down]
+    if alias_used == "ms-down":
+        GlobalVars.metasmoke_down = True
+        return "metasmoke is now considered down."
+    if alias_used == "ms-up":
+        GlobalVars.metasmoke_down = False
+        return "metasmoke is now considered up."
+    raise CmdException("Bad command alias. Blame a developer.")
+
+
 # noinspection PyIncorrectDocstring
 @command(aliases=["commands", "help"])
 def info():
