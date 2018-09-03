@@ -173,7 +173,7 @@ class Metasmoke:
                             log('warning', "Pulling remote with HEAD detached, checkout deploy", f=True)
                             os._exit(8)
                         GlobalVars.reload()
-                        findspam.reload_blacklists()
+                        findspam.FindSpam.reload_blacklists()
                         chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart)
                     elif only_modules_changed(remote_diff):
                         GitManager.pull_remote()
