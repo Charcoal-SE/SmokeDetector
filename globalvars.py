@@ -123,7 +123,7 @@ class GlobalVars:
     site_id_dict = {}
     post_site_id_to_question = {}
 
-    location = config.get("location", default="Continuous Integration")
+    location = config.get("location", "Continuous Integration")
 
     metasmoke_ws = None
 
