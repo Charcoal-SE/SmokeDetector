@@ -92,9 +92,10 @@ heinrich\W*(?:luitpold\W*)?himmler
 ante\W*paveli[cć]
 ^LGBT representative$
 muh[ae]mm[ae]d\W*the\W*pa?edophile
-^(?:.{1,8}|\S+)l?dl?s[ao]n$
+^(?:.{1,8}|\w+)l?dl?s[ao]n$
 ^eray$
 ^autolinkpk$
 ^PCBindex$
 ^Vico\W*Peißker$
 ^rayaz$
+customwristbands

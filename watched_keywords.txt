@@ -2157,7 +2157,6 @@
 1516721470	Glorfindel	otczeus
 1516748172	paper1111	art\Wchapel\W+84738
 1516760206	Tetsuya Yamamoto	saharveto\.com
-1516765168	iBug	bx-zone\.com
 1516788435	doppelgreener	bx-zone
 1516795126	iBug	rocketpaper\.net
 1516804605	CalvT븃	dogshunt\.com
@@ -2908,7 +2907,6 @@
 1523647467	Byte Commander	bambora\.com
 1523649126	WELZ	pokerdangal\.com
 1523653317	K.Dᴀᴠɪs	get\Wpranked
-1523654267	Byte Commander	hpsupports\.co
 1523697530	Suraj Rao	colorsinteriordesign\.in
 1523707871	Olivia Zoe	bdsm-bondage-fetish\.ch
 1523720287	Glorfindel	nollywoodmoviescripts\.com
@@ -3947,7 +3945,6 @@
 1529307132	Glorfindel	testunity\.com
 1529316727	Zoe	bust\W*full\W*cream
 1529327469	Zoe	maxwell\W*the\W*squirrel
-1529327870	Byte Commander	windowsclassroom\.com
 1529333215	Zoe	balaji\W*cargo\W*packers\W*pune
 1529333288	WELZ	balajicargopackers\.in
 1529356721	Makyen	evgravingplus\.weebly\.com
@@ -5334,3 +5331,79 @@
 1535618259	Glorfindel	dr\W?padmapriya
 1535633875	tripleee	8743827canadainc\.ca
 1535639051	Glorfindel	\d+\W?canada\W?inc
+1535682350	Makyen	mgmdomino\W*net
+1535682361	Makyen	D88FDB2E
+1535682372	Makyen	85577597038
+1535682382	Makyen	MGMPOPKER88
+1535682414	Makyen	doctorekpen222(?:@gmail\.com)?
+1535682427	Makyen	rammichael\.com
+1535682436	Makyen	codequiry\.com
+1535682446	Makyen	dooshopping\.uk\.com
+1535682454	Makyen	balenciagatriples\.us\.com
+1535683812	paper1111	runskor-se\.com
+1535684134	paper1111	de-schuheonline\.com
+1535688626	Tetsuya Yamamoto	leapfeed\.com
+1535692149	Makyen	e-visaindia\.net\.in
+1535692171	Makyen	cryptosoftindia\.com
+1535695635	iBug	Living\W*Foodz
+1535697683	tripleee	huffingtonpost\.com
+1535697997	tripleee	itronixsolutions?\.com
+1535701276	Glorfindel	chinawpcdeckingfloor\.com
+1535703611	Makyen	[a-z_]*(?:1_*)?617[\W_]*663[\W_]*8926[a-z_]*
+1535703780	Makyen	supercomputerslaptops\.com
+1535705512	iBug	escortglasgow\.info
+1535706166	Makyen	printerhelpnumbers\.co\.uk
+1535706428	tripleee	printer\W?help(?:\W?numbers?)?
+1535706918	Tetsuya Yamamoto	spycardssort\.com
+1535708895	tripleee	tele\W*consultation\W*services?
+1535711662	tripleee	Onlyoneyoulove
+1535715015	tripleee	mypragati\.org
+1535715728	micsthepick	iqtestonline.net
+1535719884	iBug	wordpressdeveloperonline\.com
+1535734753	Thomas Ward	Evil-?Droid
+1535741855	doppelgreener	base\.info
+1535741894	Makyen	seeingwithsound\.com
+1535741902	Makyen	vOICe\.vOICe
+1535762647	Makyen	achthackers\.wordpress\.com
+1535762674	Makyen	hackservice@secmail\.pro
+1535786742	Makyen	solutionlogicmoney(?:@gmail\.com)?
+1535786752	Makyen	[a-z_]*(?:91_*)?8860[\W_]*675[\W_]*979[a-z_]*
+1535787974	iBug	plfdentistry\.com
+1535738521	Nisse Engström	ugreetings\.com
+1535797552	Tetsuya Yamamoto	exltech\.in
+1535797682	Tetsuya Yamamoto	commercialpaintersmiami\.com
+1535836037	doppelgreener	t\.me/healthycoinofficial
+1535836041	doppelgreener	healthy\W?coin
+1535836053	doppelgreener	healthy\W?token
+1535837940	doppelgreener	miniimagesvideos\.com
+1535846743	Makyen	fastbet99\.top
+1535846748	Makyen	solaire99\.cc
+1535846754	Makyen	fontana99\.cc
+1535846759	Makyen	fortunebet99\.cc
+1535846768	Makyen	hokijudi99\.cc
+1535846772	Makyen	markasjudi\.cc
+1535846777	Makyen	starbet99\.top
+1535846782	Makyen	hokibet99\.cc
+1535846797	Makyen	nexiabet\.cc
+1535846803	Makyen	rfbet99\.cc
+1535846814	Makyen	startpage\.com
+1535868944	iBug	sexcomic\.org
+1535874046	Glorfindel	bankbalanceenquiry\.club
+1535883584	Glorfindel	medliever\W?cbd?
+1535902687	John Militer	bdjobsoccupation\.com
+1535944011	Makyen	info\.agapfinancefunds(?:@gmail\.com)?
+1535944596	Tetsuya Yamamoto	techgyo\.com
+1535950948	iBug	ssla\.co\.uk
+1535954808	Makyen	mytectra\.com
+1535956993	Makyen	marvelcorporate\.co
+1535957025	Makyen	aman\W*mehndiratta
+1535957692	Tetsuya Yamamoto	cableinternet-deals\.com
+1535958268	Tetsuya Yamamoto	pulsehyip\.com
+1535964069	Tetsuya Yamamoto	techpcvipers\.com
+1535966978	Tetsuya Yamamoto	avastcustomercare\.com
+1535967547	Tetsuya Yamamoto	baneh\.com
+1535967618	Tetsuya Yamamoto	yogenderempire\.com
+1535968055	Tetsuya Yamamoto	paragon-steels\.com
+1535970342	tripleee	itsmarttricks\.com
+1535970609	tripleee	mangesh\W*(?:\w+\W+)?dhulap
+1535972146	iBug	telstraemails\.com

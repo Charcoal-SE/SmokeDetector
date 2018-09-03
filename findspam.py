@@ -21,7 +21,7 @@ import chatcommunicate
 
 from helpers import log
 from globalvars import GlobalVars
-from blacklists import load_blacklists
+import blacklists
 
 TLD_CACHE = []
 LEVEN_DOMAIN_DISTANCE = 3
@@ -162,9 +162,10 @@ def misleading_link(s, site):
     href, text = search[1], search[2]
     try:
         parsed_href = tld.get_tld(href, as_object=True)
-        log('debug', parsed_href.domain, SE_SITES_DOMAINS)
         if parsed_href.fld in SE_SITES_DOMAINS:
+            log('debug', "{}: SE domain".format(parsed_href.fld))
             return False, ''
+        log('debug', "{}: not an SE domain".format(parsed_href.fld))
         if contains_tld(text) and ' ' not in text:
             parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True)
         else:
@@ -354,7 +355,7 @@ def pattern_product_name(s, site):
     # Always use (?: non-capturing groups ) in the keywords list
     keywords = [
         "Testo", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Aurora", "Diet", "Slim", "Premier", "(?:Pure)?Fit",
-        "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn",
+        "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Perfect",
         "Elite", "Force", "Exceptional", "Enhance(?:ment)?", "Nitro", "Max+", "Boost", "E?xtreme", "Grow",
         "Deep", "Male", "Pro", "Advanced", "Monster", "Divine", "Royale", "Angele*", "Trinity", "Andro",
         "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Boost(?:er)?",
@@ -967,9 +968,6 @@ def religion_troll(s, site):
     return offensive, 'Potential religion site troll post' if offensive else ''
 
 
-load_blacklists()
-
-
 # noinspection PyClassHasNoInit
 class FindSpam:
     bad_keywords_nwb = [  # "nwb" == "no word boundary"
@@ -1104,21 +1102,55 @@ class FindSpam:
         # buyabans.com spammer uses creative variations
         "Sri Lanka", "Srilanka", "Srilankan",
     ]
+
+    # Forward reference so they can be updated easily
+    rule_bad_keywords = {
+        # See PR 2322 for the reason of (?:^|\b) and (?:\b|$)
+        'regex': r"(?is)(?:^|\b)(?:{})(?:\b|$)|{}".format(
+            "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
+        'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
+        'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1}
+    rule_watched_keywords = {
+        'regex': r'(?is)(?:^|\b)(?:{})(?:\b|$)'.format("|".join(GlobalVars.watched_keywords.keys())),
+        'reason': 'potentially bad keyword in {}',
+        'all': True, 'sites': [], 'title': True, 'body': True, 'username': True,
+        'stripcodeblocks': False, 'body_summary': True, 'max_rep': 30, 'max_score': 1}
+    rule_blacklisted_websites = {
+        'regex': u"(?i)({})".format("|".join(GlobalVars.blacklisted_websites)), 'all': True,
+        'sites': [], 'reason': "blacklisted website in {}", 'title': True, 'body': True, 'username': False,
+        'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 5}
+    rule_blacklisted_usernames = {
+        'regex': r"(?i)({})".format("|".join(GlobalVars.blacklisted_usernames)), 'all': True, 'sites': [],
+        'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
+        'body_summary': False, 'max_rep': 1, 'max_score': 0}
+
+    @staticmethod
+    def reload_blacklists():
+        blacklists.load_blacklists()
+        FindSpam.rule_bad_keywords['regex'] = r"(?is)(?:^|\b)(?:{})(?:\b|$)|{}".format(
+            "|".join(GlobalVars.bad_keywords), "|".join(FindSpam.bad_keywords_nwb))
+        FindSpam.rule_watched_keywords['regex'] = r'(?is)(?:^|\b)(?:{})(?:\b|$)'.format(
+            "|".join(GlobalVars.watched_keywords.keys()))
+        FindSpam.rule_blacklisted_websites['regex'] = r"(?i)({})".format(
+            "|".join(GlobalVars.blacklisted_websites))
+        FindSpam.rule_blacklisted_usernames['regex'] = r"(?i)({})".format(
+            "|".join(GlobalVars.blacklisted_usernames))
+
+        for rule in [FindSpam.rule_bad_keywords, FindSpam.rule_watched_keywords,
+                     FindSpam.rule_blacklisted_websites, FindSpam.rule_blacklisted_usernames]:
+            if 'compiled_regex' in rule:
+                del rule['compiled_regex']
+
+        log('debug', "Global blacklists reloaded")
+
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
-        #
+
         # Category: Bad keywords
         # The big list of bad keywords, for titles and posts
-        # See PR 2322 for the reason of (?:^|\b)
-        {'regex': r"(?is)(?:^|\b)(?:{})(?:\b|$)|{}".format(
-            "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
-         'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
-         'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1},
+        rule_bad_keywords,
         # The growing list of *potentially* bad keywords, for titles and posts
-        {'regex': r'(?is)(?:^|\b)(?:{})(?:\b|$)'.format('|'.join(GlobalVars.watched_keywords.keys())),
-         'reason': 'potentially bad keyword in {}',
-         'all': True, 'sites': [], 'title': True, 'body': True, 'username': True,
-         'stripcodeblocks': False, 'body_summary': True, 'max_rep': 30, 'max_score': 1},
+        rule_watched_keywords,
         # Pattern-matching product name: three keywords in a row at least once, or two in a row at least twice
         {'method': pattern_product_name, 'all': True, 'sites': [], 'reason': "pattern-matching product name in {}",
          'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True,
@@ -1256,12 +1288,10 @@ class FindSpam:
          'sites': ["skeptics.stackexchange.com", "history.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        #
+
         # Category: Suspicious links
         # Blacklisted sites
-        {'regex': u"(?i)({})".format("|".join(GlobalVars.blacklisted_websites)), 'all': True,
-         'sites': [], 'reason': "blacklisted website in {}", 'title': True, 'body': True, 'username': False,
-         'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 5},
+        rule_blacklisted_websites,
         # Suspicious sites
         {'regex': r"(?i)({}|[\w-]*?({})[\w-]*?\.(com?|net|org|in(fo)?|us|blogspot|wordpress))(?![^>]*<)".format(
             "|".join(pattern_websites), "|".join(bad_keywords_nwb)), 'all': True,
@@ -1413,7 +1443,7 @@ class FindSpam:
          'reason': "body starts with title and ends in URL", 'whole_post': True, 'title': False, 'body': False,
          'username': False, 'body_summary': False, 'stripcodeblocks': False, 'max_rep': 1, 'max_score': 0,
          'answers': False},
-        #
+
         # Category: Suspicious contact information
         # Phone number in title
         {'method': has_phone_number, 'all': True,
@@ -1452,7 +1482,7 @@ class FindSpam:
                   r'\bICQ[ :]{0,5}\d{9}\b|\bwh?atsa+pp?[ :+]{0,5}\d{10}', 'all': True, 'sites': [],
          'reason': "messaging number in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        #
+
         # Category: Trolling
         # Offensive content in titles and posts
         {'method': religion_troll, 'all': False, 'sites': ['hindiusm.stackexchange.com', 'islam.stackexchange.com',
@@ -1535,15 +1565,13 @@ class FindSpam:
         {'method': luncheon_meat, 'all': False, 'sites': ['stackoverflow.com'], 'reason': "luncheon meat detected",
          'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
          'max_rep': 21, 'max_score': 0},
-        {'method': turkey2, 'all': False, 'sites': ['stackoverflow.com'], 'reason': "himalayan pink salt detected",
-         "whole_post": True, "title": False, "body": False, "username": False, "body_summary": False,
-         'stripcodeblocks': False, 'max_rep': 1, 'max_score': 0},
-        #
+        # {'method': turkey2, 'all': False, 'sites': ['stackoverflow.com'], 'reason': "himalayan pink salt detected",
+        #  "whole_post": True, "title": False, "body": False, "username": False, "body_summary": False,
+        #  'stripcodeblocks': False, 'max_rep': 1, 'max_score': 0},
+
         # Category: other
         # Blacklisted usernames
-        {'regex': r"(?i)({})".format("|".join(GlobalVars.blacklisted_usernames)), 'all': True, 'sites': [],
-         'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
-         'body_summary': False, 'max_rep': 1, 'max_score': 0},
+        rule_blacklisted_usernames,
         {'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"],
          'reason': "blacklisted username", 'title': False, 'body': False, 'username': True,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
@@ -1603,6 +1631,12 @@ class FindSpam:
             if (post.is_answer and not rule.get('answers', True)) \
                     or (not post.is_answer and not rule.get('questions', True)):
                 continue  # Post type mismatch
+
+            if rule['all'] == (post.post_site in rule['sites']) \
+                    or post.owner_rep > rule['max_rep'] \
+                    or post.post_score > rule['max_score']:
+                continue  # Post condition mismatch
+
             title_to_check = post.title
             body_to_check = post.body.replace("&nsbp;", "").replace("\xAD", "") \
                                      .replace("\u200B", "").replace("\u200C", "")
@@ -1616,56 +1650,66 @@ class FindSpam:
                 body_to_check = regex.sub("(?s)<code>.*?</code>",
                                           "<code>placeholder for omitted code/код block</code>",
                                           body_to_check)
-            if rule['reason'] == 'Phone number detected in {}':
+            if rule['reason'] == 'phone number detected in {}':
                 body_to_check = regex.sub("<(?:a|img)[^>]+>", "", body_to_check)
-            if rule['all'] != (post.post_site in rule['sites']) and post.owner_rep <= rule['max_rep'] and \
-                    post.post_score <= rule['max_score']:
-                matched_body = None
-                compiled_regex = None
-                if is_regex_check:
+            matched_title, matched_username, matched_body = False, False, False
+            compiled_regex = None
+            if is_regex_check:
+                # using a named list \L in some regexes
+                try:
+                    compiled_regex = rule['compiled_regex']
+                except KeyError:
                     compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
-                    # using a named list \L in some regexes
-                    matched_title = False if post.is_answer else compiled_regex.findall(title_to_check)
+                    rule['compiled_regex'] = compiled_regex
+
+                if rule['title'] and not post.is_answer:
+                    matched_title = compiled_regex.findall(title_to_check)
+                if rule['username']:
                     matched_username = compiled_regex.findall(post.user_name)
-                    if not post.body_is_summary or rule['body_summary']:
-                        matched_body = compiled_regex.findall(body_to_check)
+                if (rule['body'] and not post.body_is_summary) \
+                        or (post.body_is_summary and rule['body_summary']):
+                    matched_body = compiled_regex.findall(body_to_check)
+            else:
+                assert 'method' in rule
+
+                if rule.get('whole_post'):
+                    matched_title, matched_username, matched_body, why_post = rule['method'](post)
+
+                    if matched_title:
+                        why["title"].append(u"Title - {}".format(why_post))
+                        result.append(rule['reason'].replace("{}", "title"))
+                    if matched_username:
+                        why["username"].append(u"Username - {}".format(why_post))
+                        result.append(rule['reason'].replace("{}", "username"))
+                    if matched_body:
+                        why["body"].append(u"Post - {}".format(why_post))
+                        result.append(rule['reason'].replace("{}", "answer" if post.is_answer else "body"))
                 else:
-                    assert 'method' in rule
-
-                    if rule.get('whole_post'):
-                        matched_title, matched_username, matched_body, why_post = rule['method'](post)
-
-                        if matched_title:
-                            why["title"].append(u"Title - {}".format(why_post))
-                            result.append(rule['reason'].replace("{}", "title"))
-                        if matched_username:
-                            why["username"].append(u"Username - {}".format(why_post))
-                            result.append(rule['reason'].replace("{}", "username"))
-                        if matched_body:
-                            why["body"].append(u"Post - {}".format(why_post))
-                            result.append(rule['reason'].replace("{}", "answer" if post.is_answer else "body"))
-                    else:
+                    if rule['title']:
                         matched_title, why_title = rule['method'](title_to_check, post.post_site)
-                        if matched_title and rule['title']:
-                            why["title"].append(u"Title - {}".format(why_title))
+                    if rule['username']:
                         matched_username, why_username = rule['method'](post.user_name, post.post_site)
-                        if matched_username and rule['username']:
-                            why["username"].append(u"Username - {}".format(why_username))
-                        if not post.body_is_summary or rule['body_summary']:
-                            matched_body, why_body = rule['method'](body_to_check, post.post_site)
-                            if matched_body and rule['body']:
-                                why["body"].append(u"Body - {}".format(why_body))
-                if matched_title and rule['title']:
-                    why["title"].append(FindSpam.generate_why(compiled_regex, title_to_check, u"Title", is_regex_check))
-                    result.append(rule['reason'].replace("{}", "title"))
-                if matched_username and rule['username']:
-                    why["username"].append(FindSpam.generate_why(compiled_regex, post.user_name, u"Username",
-                                                                 is_regex_check))
-                    result.append(rule['reason'].replace("{}", "username"))
-                if matched_body and rule['body']:
-                    why["body"].append(FindSpam.generate_why(compiled_regex, body_to_check, u"Body", is_regex_check))
-                    type_of_post = "answer" if post.is_answer else "body"
-                    result.append(rule['reason'].replace("{}", type_of_post))
+                    if (rule['body'] and not post.body_is_summary) \
+                            or (post.body_is_summary and rule['body_summary']):
+                        matched_body, why_body = rule['method'](body_to_check, post.post_site)
+
+                    if matched_title:
+                        why["title"].append(u"Title - {}".format(why_title))
+                    if matched_username:
+                        why["username"].append(u"Username - {}".format(why_username))
+                    if matched_body:
+                        why["body"].append(u"Body - {}".format(why_body))
+            if matched_title and rule['title']:
+                why["title"].append(FindSpam.generate_why(compiled_regex, title_to_check, u"Title", is_regex_check))
+                result.append(rule['reason'].replace("{}", "title"))
+            if matched_username and rule['username']:
+                why["username"].append(FindSpam.generate_why(compiled_regex, post.user_name, u"Username",
+                                                             is_regex_check))
+                result.append(rule['reason'].replace("{}", "username"))
+            if matched_body and rule['body']:
+                why["body"].append(FindSpam.generate_why(compiled_regex, body_to_check, u"Body", is_regex_check))
+                type_of_post = ["body", "answer"][post.is_answer]
+                result.append(rule['reason'].replace("{}", type_of_post))
         result = list(set(result))
         result.sort()
         why = "\n".join(chain(filter(None, why["title"]), filter(None, why["body"]),
@@ -1684,3 +1728,6 @@ class FindSpam:
             group = match.group().replace("\n", "")
             why_for_matches.append("Position {}-{}: {}".format(span[0] + 1, span[1], group))
         return type_of_text + " - " + ", ".join(why_for_matches)
+
+
+FindSpam.reload_blacklists()

@@ -15,7 +15,8 @@ if 'windows' in str(platform.platform()).lower():
     # noinspection PyPep8Naming
     from classes import Git as git, GitError
 else:
-    from sh import git, ErrorReturnCode as GitError
+    from sh.contrib import git
+    from sh import ErrorReturnCode as GitError
 
 from helpers import log
 from globalvars import GlobalVars
@@ -274,7 +275,7 @@ class GitManager:
         if 'windows' in platform.platform().lower():
             return git.status_stripped()
         else:
-            return git("-c", "color.status=false", "status")
+            return git.status()
 
     @staticmethod
     def get_remote_diff():
@@ -282,7 +283,7 @@ class GitManager:
         if 'windows' in platform.platform().lower():
             return git.diff_filenames("deploy", "origin/deploy")
         else:
-            return git("-c", "color.diff=false", "diff", "--name-only", "deploy", "origin/deploy")
+            return git.diff("--name-only", "deploy", "origin/deploy")
 
     @staticmethod
     def pull_remote():

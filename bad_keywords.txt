@@ -1483,7 +1483,7 @@ cudamax
 Ziapro
 tone\W?fire(?:\W?garcinia)?
 ketogen\W?rx
-TreVulan
+TreVulan\w*
 sky\W?n\W?genix
 mia\W*pielle
 tonaki
@@ -1521,3 +1521,12 @@ alpha\W?xr
 new\W?power\W?girls
 retro\W?lean
 snore\W?be?\W?gone
+huffingtonpost.com/\S+/healthy-school-lunches
+selfgrowth\.com/\S+/healthy_school_lunches
+custom\W?made\W?patch(?:es)?
+testro\W?x(?:\W?ultra)?
+keto\W?pro\W?x
+zynev
+almaviva
+vital\W?progenix
+patroxidan

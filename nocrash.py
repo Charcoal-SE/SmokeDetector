@@ -14,7 +14,7 @@ if 'windows' in str(platform.platform()).lower():
     # noinspection PyPep8Naming
     from classes import Git as git
 else:
-    from sh import git
+    from sh.contrib import git
 
 # Set the Python Executable based on this being stored - we refer to this later on for subprocess calls.
 PY_EXECUTABLE = sys.executable

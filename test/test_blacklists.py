@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from glob import glob
-from helpers import only_blacklists_changed, blacklist_integrity_check
+from helpers import only_files_changed, blacklist_integrity_check
 
 
 def test_blacklist_integrity():
@@ -10,15 +10,12 @@ def test_blacklist_integrity():
     if len(errors) == 1:
         raise ValueError(errors[0])
     elif len(errors) > 1:
-        raise ValueError("\n\t".join(["Multiple errors has occurred."] + errors))
+        raise ValueError("\n\t".join(["{} errors has occurred:".format(len(errors))] + errors))
 
 
-def test_blacklist_pull_diff():
-    only_blacklists_diff = """watched_keywords.txt
-                              bad_keywords.txt
-                              blacklisted_websites.txt"""
-    assert only_blacklists_changed(only_blacklists_diff)
-    mixed_files_diff = """helpers.py
-                          test/test_blacklists.py
-                          blacklisted_usernames.txt"""
-    assert not only_blacklists_changed(mixed_files_diff)
+def test_remote_diff():
+    file_set = set("abcdefg")
+    true_diff = "a c d g"
+    false_diff = "a d g q"
+    assert only_files_changed(true_diff, file_set)
+    assert not only_files_changed(false_diff, file_set)

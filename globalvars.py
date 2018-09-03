@@ -32,12 +32,7 @@ def git_status():
         raise OSError("Git error:\n" + e.output) from e
 
 
-# This is needed later on for properly 'stripping' unicode weirdness out of git log data.
-# Otherwise, we can't properly work with git log data.
-def strip_escape_chars(line):
-    line = str(line)
-    ansi_escape = regex.compile(r'(\x9B|\x1B\[)[0-?]*[ -\/]*[@-~]')
-    return ansi_escape.sub('', line).strip('=\r\r\x1b>\n"')
+# We don't need strip_escape_chars() anymore, see commit message of 1931d30804a675df07887ce0466e558167feae57
 
 
 # noinspection PyClassHasNoInit,PyDeprecation,PyUnresolvedReferences
@@ -79,19 +74,15 @@ class GlobalVars:
     code_privileged_users = None
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
 
-    commit = git_commit_info()
-    if md5(commit['author'][0].encode('utf-8')).hexdigest() in censored_committer_names:
-        commit['author'] = censored_committer_names[md5(commit['author'][0].encode('utf-8')).hexdigest()]
-
-    commit_with_author = "`{}` (*{}*: {})".format(
-        commit['id'],
-        commit['author'][0] if type(commit['author']) in {list, tuple} else commit['author'],
-        commit['message'])
-
-    on_master = "HEAD detached" not in git_status()
+    # GlobalVars.reload()
+    commit = None
+    commit_with_author = None
+    on_master = None
 
     s = ""
     s_reverted = ""
+    s_norestart = ""
+    s_norestart2 = ""
     apiquota = -1
     bodyfetcher = None
     se_sites = []
@@ -117,7 +108,7 @@ class GlobalVars:
         log('debug', "Configuration loaded from \"config\"")
     else:
         config.read('config.ci')
-        if "pytest" in sys.modules:
+        if "pytest" in sys.modules and os.path.isfile('config'):  # Another config found while running in pytest
             log('debug', "Running in pytest, force load config from \"config.ci\"")
         else:
             log('debug', "Configuration loaded from \"config.ci\"")
@@ -183,3 +174,43 @@ class GlobalVars:
         flovis = Flovis(flovis_host)
     else:
         flovis = None
+
+    @staticmethod
+    def reload():
+        commit = git_commit_info()
+        censored_committer_names = GlobalVars.censored_committer_names
+        if md5(commit['author'][0].encode('utf-8')).hexdigest() in censored_committer_names:
+            commit['author'] = censored_committer_names[md5(commit['author'][0].encode('utf-8')).hexdigest()]
+        GlobalVars.commit = commit
+
+        GlobalVars.commit_with_author = "`{}` (*{}*: {})".format(
+            commit['id'],
+            commit['author'][0] if type(commit['author']) in {list, tuple} else commit['author'],
+            commit['message'])
+
+        GlobalVars.on_master = "HEAD detached" not in git_status()
+        GlobalVars.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {})".format(
+            GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+            GlobalVars.commit['id'], GlobalVars.location)
+        GlobalVars.s_reverted = \
+            "[ {} ] SmokeDetector started in [reverted mode](" \
+            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
+            "at [rev {}]({}/commit/{}) (running on {})".format(
+                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+                GlobalVars.commit['id'], GlobalVars.location)
+        GlobalVars.s_norestart = "[ {} ] Blacklists reloaded at [rev {}]({}/commit/{}) (running on {})".format(
+            GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+            GlobalVars.commit['id'], GlobalVars.location)
+        GlobalVars.s_norestart2 = "[ {} ] FindSpam module reloaded at [rev {}]({}/commit/{}) (running on {})".format(
+            GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+            GlobalVars.commit['id'], GlobalVars.location)
+        GlobalVars.standby_message = \
+            "[ {} ] SmokeDetector started in [standby mode](" \
+            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " \
+            "at [rev {}]({}/commit/{}) (running on {})".format(
+                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+                GlobalVars.commit['id'], GlobalVars.location)
+        log('debug', "GlobalVars loaded")
+
+
+GlobalVars.reload()
