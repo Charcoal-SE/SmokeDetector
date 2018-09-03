@@ -32,6 +32,7 @@ import requests
 # noinspection PyPackageRequirements
 from tld.utils import update_tld_names, TldIOError
 from helpers import log, Helpers
+from flovis import Flovis
 from tasks import Tasks
 
 import chatcommands
@@ -99,6 +100,8 @@ else:
 
 # We need an instance of bodyfetcher before load_files() is called
 GlobalVars.bodyfetcher = BodyFetcher()
+if GlobalVars.flovis_host:
+    GlobalVars.flovis = Flovis(GlobalVars.flovis_host)
 
 load_files()
 filter_auto_ignored_posts()

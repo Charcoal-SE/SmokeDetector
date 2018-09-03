@@ -13,7 +13,6 @@ import threading
 import regex
 import subprocess as sp
 import platform
-import flovis as Flovis
 
 
 def git_commit_info():
@@ -155,7 +154,7 @@ class GlobalVars:
     perspective_key = config.get("perspective_key")
 
     flovis_host = config.get("flovis_host")
-    flovis = Flovis.Flovis(flovis_host) if flovis_host is not None else None
+    flovis = None
 
     @staticmethod
     def reload():
