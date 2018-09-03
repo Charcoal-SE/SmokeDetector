@@ -5412,3 +5412,4 @@
 1535992214	tripleee	bazarbashi\.com
 1536000909	Glorfindel	gamersp
 1536015186	Makyen	^(?!.{1,7}(?:dl?san|(?:dl|ld)l?son)$)\w+ndson$
+1536015194	Makyen	^(?!.{1,7}(?:dl?san|(?:dl|ld)l?son)$)(?!\w+ndson$)\w{5,}l?dl?s[ao]n$
