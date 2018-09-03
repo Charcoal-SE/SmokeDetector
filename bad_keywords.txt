@@ -1528,3 +1528,4 @@ testro\W?x(?:\W?ultra)?
 keto\W?pro\W?x
 zynev
 almaviva
+vital\W?progenix
