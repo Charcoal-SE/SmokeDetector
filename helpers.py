@@ -14,15 +14,6 @@ class Helpers:
     min_log_level = 0
 
 
-# Allows use of `environ_or_none("foo") or "default"` shorthand
-# noinspection PyBroadException,PyMissingTypeHints
-def environ_or_none(key):
-    try:
-        return os.environ[key]
-    except KeyError:
-        return None
-
-
 def escape_format(s):
     return s.replace("{", "{{").replace("}", "}}")
 

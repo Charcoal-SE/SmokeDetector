@@ -7,7 +7,7 @@ from html.parser import HTMLParser
 from html import unescape
 from hashlib import md5
 from configparser import NoOptionError, RawConfigParser
-from helpers import environ_or_none, log
+from helpers import log
 import threading
 # noinspection PyCompatibility
 import regex
@@ -115,9 +115,9 @@ class GlobalVars:
 
     config = config_parser["Config"]  # It's a collections.OrderedDict now
 
-    # environ_or_none defined in helpers.py
-    bot_name = environ_or_none("SMOKEDETECTOR_NAME") or "SmokeDetector"
-    bot_repository = environ_or_none("SMOKEDETECTOR_REPO") or "//github.com/Charcoal-SE/SmokeDetector"
+    # environ_or_none replaced by os.environ.get (essentially dict.get)
+    bot_name = os.environ.get("SMOKEDETECTOR_NAME") or "SmokeDetector"
+    bot_repository = os.environ.get("SMOKEDETECTOR_REPO") or "//github.com/Charcoal-SE/SmokeDetector"
     chatmessage_prefix = "[{}]({})".format(bot_name, bot_repository)
 
     site_id_dict = {}
