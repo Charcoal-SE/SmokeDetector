@@ -15,3 +15,5 @@ location=location_here
 # Set GitHub keys
 # github_username=username@domain.com
 # github_password=p@55w0rd
+
+# Miscellaneous stuff. Recommend leaving the default values for production Smokey

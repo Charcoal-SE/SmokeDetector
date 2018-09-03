@@ -35,13 +35,6 @@ def git_status():
 # We don't need strip_escape_chars() anymore, see commit message of 1931d30804a675df07887ce0466e558167feae57
 
 
-def get_config(key, default=None):
-    try:
-        return GlobalVars.config.get("Config", key)
-    except NoOptionError:
-        return default
-
-
 # noinspection PyClassHasNoInit,PyDeprecation,PyUnresolvedReferences
 class GlobalVars:
     false_positives = []
@@ -108,17 +101,19 @@ class GlobalVars:
     post_scan_time = 0
     posts_scan_stats_lock = threading.Lock()
 
-    config = RawConfigParser()
+    config_parser = RawConfigParser()
 
     if os.path.isfile('config') and "pytest" not in sys.modules:
-        config.read('config')
+        config_parser.read('config')
         log('debug', "Configuration loaded from \"config\"")
     else:
-        config.read('config.ci')
+        config_parser.read('config.ci')
         if "pytest" in sys.modules and os.path.isfile('config'):  # Another config found while running in pytest
             log('debug', "Running in pytest, force load config from \"config.ci\"")
         else:
             log('debug', "Configuration loaded from \"config.ci\"")
+
+    config = config.parser["Config"]  # It's a collections.OrderedDict now
 
     # environ_or_none defined in helpers.py
     bot_name = environ_or_none("SMOKEDETECTOR_NAME") or "SmokeDetector"
@@ -128,7 +123,7 @@ class GlobalVars:
     site_id_dict = {}
     post_site_id_to_question = {}
 
-    location = get_config("location", default="Continuous Integration")
+    location = config.get("location", default="Continuous Integration")
 
     metasmoke_ws = None
 
@@ -136,30 +131,30 @@ class GlobalVars:
     chatexchange_p = config.get("ChatExchangeP")
 
     try:
-        metasmoke_host = config.get("Config", "metasmoke_host")
-    except NoOptionError:
+        metasmoke_host = config["metasmoke_host"]
+    except KeyError:
         metasmoke_host = None
         log('info', "metasmoke host not found. Set it as metasmoke_host in the config file. "
             "See https://github.com/Charcoal-SE/metasmoke.")
 
     try:
-        metasmoke_key = config.get("Config", "metasmoke_key")
-    except NoOptionError:
+        metasmoke_key = config["metasmoke_key"]
+    except KeyError:
         metasmoke_key = None
         log('info', "No metasmoke key found, which is okay if both are running on the same host")
 
     try:
-        metasmoke_ws_host = config.get("Config", "metasmoke_ws_host")
-    except NoOptionError:
+        metasmoke_ws_host = config["metasmoke_ws_host"]
+    except KeyError:
         metasmoke_ws_host = None
         log('info', "No metasmoke websocket host found, which is okay if you're anti-websocket")
 
-    github_username = get_config("github_username")
-    github_password = get_config("github_password")
+    github_username = config.get("github_username")
+    github_password = config.get("github_password")
 
-    perspective_key = get_config("perspective_key")
+    perspective_key = config.get("perspective_key")
 
-    flovis_host = get_config("flovis_host")
+    flovis_host = config.get("flovis_host")
     flovis = Flovis(flovis_host) if flovis_host is not None else None
 
     @staticmethod
