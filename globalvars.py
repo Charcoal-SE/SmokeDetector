@@ -113,7 +113,7 @@ class GlobalVars:
         else:
             log('debug', "Configuration loaded from \"config.ci\"")
 
-    config = config.parser["Config"]  # It's a collections.OrderedDict now
+    config = config_parser["Config"]  # It's a collections.OrderedDict now
 
     # environ_or_none defined in helpers.py
     bot_name = environ_or_none("SMOKEDETECTOR_NAME") or "SmokeDetector"
