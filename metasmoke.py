@@ -164,7 +164,6 @@ class Metasmoke:
                     s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
                         "commit/{commit_sha}) succeeded. Message contains 'autopull', pulling...".format(
                             ci_link=c["ci_url"], commit_sha=sha)
-                    chatcommunicate.tell_rooms_with('debug', s, notify_site="/ci")
                     remote_diff = GitManager.get_remote_diff()
                     if only_blacklists_changed(remote_diff):
                         GitManager.pull_remote()
@@ -185,6 +184,7 @@ class Metasmoke:
                         reload_changed_modules()
                         chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart2)
                     else:
+                        chatcommunicate.tell_rooms_with('debug', s, notify_site="/ci")
                         os._exit(3)
                 else:
                     s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
