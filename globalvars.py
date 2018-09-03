@@ -35,6 +35,13 @@ def git_status():
 # We don't need strip_escape_chars() anymore, see commit message of 1931d30804a675df07887ce0466e558167feae57
 
 
+def get_config(key, default=None):
+    try:
+        return GlobalVars.config.get("Config", key)
+    except NoOptionError:
+        return default
+
+
 # noinspection PyClassHasNoInit,PyDeprecation,PyUnresolvedReferences
 class GlobalVars:
     false_positives = []
@@ -121,16 +128,12 @@ class GlobalVars:
     site_id_dict = {}
     post_site_id_to_question = {}
 
-    location = config.get("Config", "location")
+    location = get_config("location", default="Continuous Integration")
 
     metasmoke_ws = None
 
-    try:
-        chatexchange_u = config.get("Config", "ChatExchangeU")
-        chatexchange_p = config.get("Config", "ChatExchangeP")
-    except NoOptionError:
-        chatexchange_u = None
-        chatexchange_p = None
+    chatexchange_u = config.get("ChatExchangeU")
+    chatexchange_p = config.get("ChatExchangeP")
 
     try:
         metasmoke_host = config.get("Config", "metasmoke_host")
@@ -142,36 +145,22 @@ class GlobalVars:
     try:
         metasmoke_key = config.get("Config", "metasmoke_key")
     except NoOptionError:
-        metasmoke_key = ""
+        metasmoke_key = None
         log('info', "No metasmoke key found, which is okay if both are running on the same host")
 
     try:
         metasmoke_ws_host = config.get("Config", "metasmoke_ws_host")
     except NoOptionError:
-        metasmoke_ws_host = ""
+        metasmoke_ws_host = None
         log('info', "No metasmoke websocket host found, which is okay if you're anti-websocket")
 
-    try:
-        github_username = config.get("Config", "github_username")
-        github_password = config.get("Config", "github_password")
-    except NoOptionError:
-        github_username = None
-        github_password = None
+    github_username = get_config("github_username")
+    github_password = get_config("github_password")
 
-    try:
-        perspective_key = config.get("Config", "perspective_key")
-    except NoOptionError:
-        perspective_key = None
+    perspective_key = get_config("perspective_key")
 
-    try:
-        flovis_host = config.get("Config", "flovis_host")
-    except NoOptionError:
-        flovis_host = None
-
-    if flovis_host is not None:
-        flovis = Flovis(flovis_host)
-    else:
-        flovis = None
+    flovis_host = get_config("flovis_host")
+    flovis = Flovis(flovis_host) if flovis_host is not None else None
 
     @staticmethod
     def reload():
