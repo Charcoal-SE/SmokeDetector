@@ -56,7 +56,7 @@ class Metasmoke:
                         payload = json.dumps({"command": "subscribe",
                                               "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"})
                         GlobalVars.metasmoke_ws.send(payload)
-                        log('error', e)
+                        log('error', e, f=True)
                         traceback.print_exc()
             except Exception:
                 log('error', "Couldn't bind to MS websocket")

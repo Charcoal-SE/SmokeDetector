@@ -1,6 +1,7 @@
 # coding=utf-8
 import os
 import sys
+import traceback
 from datetime import datetime
 import importlib
 from termcolor import colored
@@ -77,6 +78,16 @@ def log_file(log_level, *args):
                                    "  ".join([str(x) for x in args]))
     with open("errorLogs.txt", "a", encoding="utf-8") as f:
         print(log_str, file=f)
+
+
+def log_exception(exctype, value, tb):
+    now = datetime.utcnow()
+    tr = '\n'.join((traceback.format_tb(tb)))
+    exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
+    logged_msg = "{exception}\n{now} UTC\n{row}\n\n".format(exception=exception_only, now=now, row=tr)
+    log('error', logged_msg)
+    with open("errorLogs.txt", "a") as f:
+        f.write(logged_msg)
 
 
 def only_files_changed(diff, file_set):
