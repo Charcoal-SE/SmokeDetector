@@ -1431,6 +1431,7 @@ keto\W?blast
 keto\W?thermo\W?diet
 qnc\W?jelly\W?gamat
 TRIAL@>>\W*
+rapid\W*results(?:\W*keto|\W*diet)?
 smartcredit07
 boost\W?sx\W?pro
 almondhackingarena
@@ -1534,4 +1535,3 @@ golden\W?hero
 keto\W?fuel
 [a-z_]*(?:234_*)?9063230051[a-z_]*
 ring\W?ease
-rapid\W?results(?:\W?diet)?
