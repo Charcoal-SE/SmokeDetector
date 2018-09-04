@@ -37,6 +37,37 @@ def get_api_sitename_from_url(url):
         return None
 
 
+def api_parameter_from_link(link):
+    match = regex.compile(
+        r'((?:meta\.)?(?:(?:(?:math|(?:\w{2}\.)?stack)overflow|askubuntu|superuser|serverfault)|\w+)'
+        r'(?:\.meta)?)\.(?:stackexchange\.com|com|net)').search(link)
+    exceptions = {
+        'meta.superuser': 'meta.superuser',
+        'meta.serverfault': 'meta.serverfault',
+        'meta.askubuntu': 'meta.askubuntu',
+        'mathoverflow': 'mathoverflow.net',
+        'meta.mathoverflow': 'meta.mathoverflow.net',
+        'meta.stackexchange': 'meta'
+    }
+    if match:
+        if match[1] in exceptions:
+            return exceptions[match[1]]
+        elif 'meta.' in match[1] and 'stackoverflow' not in match[1]:
+            return '.'.join(match[1].split('.')[::-1])
+        else:
+            return match[1]
+    else:
+        return None
+
+
+def post_id_from_link(link):
+    match = regex.compile(r'(?:https?:)?//[^/]+/\w+/(\d+)').search(link)
+    if match:
+        return match[1]
+    else:
+        return None
+
+
 # noinspection PyBroadException,PyMissingTypeHints
 def fetch_post_url_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[.+]\(((?:http:)" \

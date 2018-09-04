@@ -21,7 +21,7 @@ import apigetpost
 import spamhandling
 import classes
 import chatcommunicate
-from helpers import api_parameter_from_link, log, only_blacklists_changed, \
+from helpers import log, only_blacklists_changed, \
     only_modules_changed, blacklist_integrity_check, reload_changed_modules
 from gitmanager import GitManager
 import findspam
@@ -407,7 +407,7 @@ class Metasmoke:
             response = requests.get(GlobalVars.metasmoke_host + "/api/v2.0/posts/urls", params=params).json()
         elif ids is not None:
             post_id, site = ids
-            site = api_parameter_from_link(site)
+            site = parsing.api_parameter_from_link(site)
             params = {"key": GlobalVars.metasmoke_key, "filter": "GFGJGHFJNFGNHKNIKHGGOMILHKLJIFFN"}
 
             response = requests.get("{}/api/v2.0/posts/uid/{}/{}".format(GlobalVars.metasmoke_host,

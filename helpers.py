@@ -153,44 +153,6 @@ def unshorten_link(url, request_type='HEAD', explicitly_ignore_security_warning=
     return url
 
 
-parser_regex = r'((?:meta\.)?(?:(?:(?:math|(?:\w{2}\.)?stack)overflow|askubuntu|superuser|serverfault)|\w+)' \
-               r'(?:\.meta)?)\.(?:stackexchange\.com|com|net)'
-parser = regex.compile(parser_regex)
-exceptions = {
-    'meta.superuser': 'meta.superuser',
-    'meta.serverfault': 'meta.serverfault',
-    'meta.askubuntu': 'meta.askubuntu',
-    'mathoverflow': 'mathoverflow.net',
-    'meta.mathoverflow': 'meta.mathoverflow.net',
-    'meta.stackexchange': 'meta'
-}
-
-
-def api_parameter_from_link(link):
-    match = parser.search(link)
-    if match:
-        if match[1] in exceptions.keys():
-            return exceptions[match[1]]
-        elif 'meta.' in match[1] and 'stackoverflow' not in match[1]:
-            return '.'.join(match[1].split('.')[::-1])
-        else:
-            return match[1]
-    else:
-        return None
-
-
-id_parser_regex = r'(?:https?:)?//[^/]+/\w+/(\d+)'
-id_parser = regex.compile(id_parser_regex)
-
-
-def post_id_from_link(link):
-    match = id_parser.search(link)
-    if match:
-        return match[1]
-    else:
-        return None
-
-
 def to_metasmoke_link(post_url, protocol=True):
     return "{}//m.erwaysoftware.com/posts/uid/{}/{}".format(
         "https:" if protocol else "", api_parameter_from_link(post_url), post_id_from_link(post_url))
