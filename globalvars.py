@@ -142,6 +142,9 @@ class GlobalVars:
     flovis_host = config.get("flovis_host")
     flovis = None
 
+    # Miscellaneous
+    log_time_format = config.get("log_time_format", "%H:%M:%S")
+
     @staticmethod
     def reload():
         commit = git_commit_info()

@@ -8,6 +8,7 @@ from termcolor import colored
 import requests
 import regex
 from glob import glob
+from globalvars import GlobalVars
 
 
 class Helpers:
@@ -46,10 +47,11 @@ def log(log_level, *args, f=False):
     if level < Helpers.min_log_level:
         return
 
-    color = (levels[log_level][1] if log_level in levels else 'white')
-    log_str = u"{} {}".format(colored("[{}]".format(datetime.now().isoformat()[11:-7]), color),
-                              u"  ".join([str(x) for x in args]))
-    print(log_str)
+    color = levels[log_level][1] if log_level in levels else 'white'
+    log_str = "{} {}".format(colored("[{}]".format(datetime.now().strftime(GlobalVars.log_time_format)),
+                                     color),
+                             "  ".join([str(x) for x in args]))
+    print(log_str, file=sys.stderr)
 
     if f:  # Also to file
         log_file(log_level, *args)
@@ -65,7 +67,7 @@ def log_file(log_level, *args):
     if levels[log_level][0] < Helpers.min_log_level:
         return
 
-    log_str = "[{}] {}: {}".format(datetime.now().isoformat()[11:-3], log_level.upper(),
+    log_str = "[{}] {}: {}".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), log_level.upper(),
                                    "  ".join([str(x) for x in args]))
     with open("errorLogs.txt", "a", encoding="utf-8") as f:
         print(log_str, file=f)
