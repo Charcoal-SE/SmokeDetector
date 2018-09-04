@@ -35,7 +35,7 @@ def git_status():
 
 # helpers.log not available here, get a replacement
 def log(l, *args):
-    print("[{}] {}".format(l.upper(), ' '.join([str(s) for s in args])), file=sys.stderr)
+    print("           {}".format(' '.join([str(s) for s in args])), file=sys.stderr)
 
 
 # noinspection PyClassHasNoInit,PyDeprecation,PyUnresolvedReferences
@@ -151,10 +151,6 @@ class GlobalVars:
 
     @staticmethod
     def reload():
-        reload_globalvars()
-
-
-def reload_globalvars():
         commit = git_commit_info()
         censored_committer_names = GlobalVars.censored_committer_names
         if md5(commit['author'][0].encode('utf-8')).hexdigest() in censored_committer_names:

@@ -1141,7 +1141,7 @@ class FindSpam:
             if 'compiled_regex' in rule:
                 del rule['compiled_regex']
 
-        log('debug', "Global blacklists reloaded")
+        log('debug', "Global blacklists loaded")
 
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
