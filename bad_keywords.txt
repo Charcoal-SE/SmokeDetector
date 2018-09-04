@@ -1536,3 +1536,4 @@ keto\W?fuel
 [a-z_]*(?:234_*)?9063230051[a-z_]*
 ring\W?ease
 gs-jj
+sera\W?labs
