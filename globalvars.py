@@ -116,7 +116,7 @@ class GlobalVars:
 
     # environ_or_none replaced by os.environ.get (essentially dict.get)
     bot_name = os.environ.get("SMOKEDETECTOR_NAME") or "SmokeDetector"
-    bot_repo_slug = os.enrivon.get("SMOKEDETECTOR_REPO") or "Charcoal-SE/SmokeDetector"
+    bot_repo_slug = os.environ.get("SMOKEDETECTOR_REPO") or "Charcoal-SE/SmokeDetector"
     bot_repository = "//github.com/{}".format(bot_repo_slug)
     chatmessage_prefix = "[{}]({})".format(bot_name, bot_repository)
 
