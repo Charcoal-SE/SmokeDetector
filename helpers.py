@@ -8,7 +8,6 @@ from termcolor import colored
 import requests
 import regex
 from glob import glob
-from globalvars import GlobalVars
 
 
 class Helpers:
@@ -48,7 +47,7 @@ def log(log_level, *args, f=False):
         return
 
     color = levels[log_level][1] if log_level in levels else 'white'
-    log_str = "{} {}".format(colored("[{}]".format(datetime.now().strftime(GlobalVars.log_time_format)),
+    log_str = "{} {}".format(colored("[{}]".format(datetime.now().isoformat()[11:-3]),
                                      color),
                              "  ".join([str(x) for x in args]))
     print(log_str, file=sys.stderr)

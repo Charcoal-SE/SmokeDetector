@@ -12,6 +12,7 @@ import threading
 import regex
 import subprocess as sp
 import platform
+from helpers import log
 
 
 def git_commit_info():
@@ -31,11 +32,6 @@ def git_status():
 
 
 # We don't need strip_escape_chars() anymore, see commit message of 1931d30804a675df07887ce0466e558167feae57
-
-
-# helpers.log not available here, get a replacement
-def log(l, *args):
-    print("           {}".format(' '.join([str(s) for s in args])), file=sys.stderr)
 
 
 # noinspection PyClassHasNoInit,PyDeprecation,PyUnresolvedReferences
