@@ -130,24 +130,9 @@ class GlobalVars:
     chatexchange_u = config.get("ChatExchangeU")
     chatexchange_p = config.get("ChatExchangeP")
 
-    try:
-        metasmoke_host = config["metasmoke_host"]
-    except KeyError:
-        metasmoke_host = None
-        log('info', "metasmoke host not found. Set it as metasmoke_host in the config file. "
-            "See https://github.com/Charcoal-SE/metasmoke.")
-
-    try:
-        metasmoke_key = config["metasmoke_key"]
-    except KeyError:
-        metasmoke_key = None
-        log('info', "No metasmoke key found, which is okay if both are running on the same host")
-
-    try:
-        metasmoke_ws_host = config["metasmoke_ws_host"]
-    except KeyError:
-        metasmoke_ws_host = None
-        log('info', "No metasmoke websocket host found, which is okay if you're anti-websocket")
+    metasmoke_host = config.get("metasmoke_host")
+    metasmoke_key = config.get("metasmoke_key")
+    metasmoke_ws_host = config.get("metasmoke_ws_host")
 
     github_username = config.get("github_username")
     github_password = config.get("github_password")

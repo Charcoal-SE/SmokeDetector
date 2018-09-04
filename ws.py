@@ -53,6 +53,14 @@ if any('--loglevel' in x for x in sys.argv):
 else:
     Helpers.min_log_level = 0
 
+if not GlobalVars.metasmoke_host:
+    log('info', "metasmoke host not found. Set it as metasmoke_host in the config file. "
+        "See https://github.com/Charcoal-SE/metasmoke.")
+if not GlobalVars.metasmoke_key:
+    log('info', "No metasmoke key found, which is okay if both are running on the same host")
+if not GlobalVars.metasmoke_ws_host:
+    log('info', "No metasmoke websocket host found, which is okay if you're anti-websocket")
+
 try:
     update_tld_names()
 except TldIOError as ioerr:
