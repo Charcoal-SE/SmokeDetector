@@ -153,11 +153,6 @@ def unshorten_link(url, request_type='HEAD', explicitly_ignore_security_warning=
     return url
 
 
-def to_metasmoke_link(post_url, protocol=True):
-    return "{}//m.erwaysoftware.com/posts/uid/{}/{}".format(
-        "https:" if protocol else "", api_parameter_from_link(post_url), post_id_from_link(post_url))
-
-
 def blacklist_integrity_check():
     bl_files = glob('bad_*.txt') + glob('blacklisted_*.txt') + ['watched_keywords.txt']
     seen = dict()

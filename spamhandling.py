@@ -10,7 +10,8 @@ import parsing
 import metasmoke
 import excepthook
 from classes import Post, PostParseError
-from helpers import log, to_metasmoke_link, escape_format
+from helpers import log, escape_format
+from parsing import to_metasmoke_link
 from tasks import Tasks
 
 

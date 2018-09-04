@@ -25,7 +25,7 @@ from html import unescape
 from ast import literal_eval
 # noinspection PyCompatibility
 import regex
-from helpers import only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, to_metasmoke_link
+from helpers import only_blacklists_changed, only_modules_changed, log, expand_shorthand_link
 from classes import Post
 from classes.feedback import *
 
