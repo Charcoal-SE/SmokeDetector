@@ -73,18 +73,24 @@ def to_metasmoke_link(post_url, protocol=True):
         "https:" if protocol else "", api_parameter_from_link(post_url), post_id_from_link(post_url))
 
 
+# Use (?P<name>) so we're not in the danger of messing up numeric groups
+msg_parser_regex = (
+    r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: "
+    r"(?P<post>\[(?P<title>.+)]\((?P<post_url>(?:http:)"
+    r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\).{,3})"
+    r" by (?:\[.+\]\((?P<owner_url>.+)\)|[\w ]*) on `[\w.]+`(?: \((?:@\S+\s?)+\))?"
+    r"(?: \[.+\]\(.+\))?$"
+)
+msg_parser = regex.compile(msg_parser_regex)
+
+
 # noinspection PyBroadException,PyMissingTypeHints
 def fetch_post_url_from_msg_content(content):
-    search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[.+]\(((?:http:)" \
-                   r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)(?:\?smokeypost=true)?\)" \
-                   r".{,3} by \[?.*\]?\(?(?:.*)\)? on `[\w.]+`(?: \(@.+\))?" \
-                   r"(?: \[.+\]\(.+\))?$"
-    match = regex.compile(search_regex).search(content)
+    match = msg_parser.search(content)
     if match is None:
         return None
     try:
-        url = match.group(1)
-        return url
+        return match.group("post_url")
     except IndexError:
         return None
 
@@ -132,14 +138,11 @@ def fetch_post_id_and_site_from_msg_content(content):
 
 # noinspection PyBroadException,PyMissingTypeHints
 def fetch_owner_url_from_msg_content(content):
-    search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[.+]\((?:(?:http:)" \
-                   r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\).{,3} by" \
-                   r" \[.+\]\((.+)\) on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
-    match = regex.compile(search_regex).search(content)
+    match = msg_parser.search(content)
     if match is None:
         return None
     try:
-        owner_url = match.group(1)
+        owner_url = match.group("owner_url")
         return owner_url
     except IndexError:
         return None
@@ -147,29 +150,22 @@ def fetch_owner_url_from_msg_content(content):
 
 # noinspection PyBroadException,PyMissingTypeHints
 def fetch_title_from_msg_content(content):
-    search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[(.+)]\((?:(?:http:)" \
-                   r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\).{,3} by" \
-                   r" \[?.*\]?\(?.*\)? on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
-    match = regex.compile(search_regex).search(content)
+    match = msg_parser.search(content)
     if match is None:
         return None
     try:
-        title = match.group(1)
-        return title
+        return match.group("title")
     except IndexError:
         return None
 
 
 # noinspection PyBroadException,PyMissingTypeHints
 def edited_message_after_postgone_command(content):
-    search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: (\[.+]\((?:(?:http:)" \
-                   r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\)) by \[?.*\]?\(?.*\)?" \
-                   r" on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
-    match = regex.compile(search_regex).search(content)
+    match = msg_parser.search(content)
     if match is None:
         return None
     try:
-        link = match.group(1)
+        link = match.group("post")
         return content.replace(link, "*(gone)*")
     except IndexError:
         return None
