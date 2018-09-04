@@ -33,6 +33,11 @@ def git_status():
 # We don't need strip_escape_chars() anymore, see commit message of 1931d30804a675df07887ce0466e558167feae57
 
 
+# helpers.log not available here, get a replacement
+def log(l, *args):
+    print("[{}] {}".format(l.upper(), ' '.join([str(s) for s in args])), file=sys.stderr)
+
+
 # noinspection PyClassHasNoInit,PyDeprecation,PyUnresolvedReferences
 class GlobalVars:
     false_positives = []
@@ -103,21 +108,19 @@ class GlobalVars:
 
     if os.path.isfile('config') and "pytest" not in sys.modules:
         config_parser.read('config')
-        # log('debug', "Configuration loaded from \"config\"")
+        log('debug', "Configuration loaded from \"config\"")
     else:
         config_parser.read('config.ci')
         if "pytest" in sys.modules and os.path.isfile('config'):  # Another config found while running in pytest
-            # log('debug', "Running in pytest, force load config from \"config.ci\"")
-            pass
+            log('debug', "Running in pytest, force load config from \"config.ci\"")
         else:
-            # log('debug', "Configuration loaded from \"config.ci\"")
-            pass
+            log('debug', "Configuration loaded from \"config.ci\"")
 
     config = config_parser["Config"]  # It's a collections.OrderedDict now
 
     # environ_or_none replaced by os.environ.get (essentially dict.get)
-    bot_name = os.environ.get("SMOKEDETECTOR_NAME") or "SmokeDetector"
-    bot_repo_slug = os.environ.get("SMOKEDETECTOR_REPO") or "Charcoal-SE/SmokeDetector"
+    bot_name = os.environ.get("SMOKEDETECTOR_NAME", "SmokeDetector")
+    bot_repo_slug = os.environ.get("SMOKEDETECTOR_REPO", "Charcoal-SE/SmokeDetector")
     bot_repository = "//github.com/{}".format(bot_repo_slug)
     chatmessage_prefix = "[{}]({})".format(bot_name, bot_repository)
 
@@ -148,6 +151,10 @@ class GlobalVars:
 
     @staticmethod
     def reload():
+        reload_globalvars()
+
+
+def reload_globalvars():
         commit = git_commit_info()
         censored_committer_names = GlobalVars.censored_committer_names
         if md5(commit['author'][0].encode('utf-8')).hexdigest() in censored_committer_names:
@@ -181,7 +188,7 @@ class GlobalVars:
             "at [rev {}]({}/commit/{}) (running on {})".format(
                 GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
                 GlobalVars.commit['id'], GlobalVars.location)
-        # log('debug', "GlobalVars loaded")
+        log('debug', "GlobalVars loaded")
 
 
 GlobalVars.reload()
