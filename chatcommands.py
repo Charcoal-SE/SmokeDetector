@@ -629,11 +629,12 @@ def pull():
         tell_rooms_with('debug', GlobalVars.s_norestart2)
         return
     else:
-        request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/deploy')
+        request = requests.get('https://api.github.com/repos/{}/git/refs/heads/deploy'.format(
+            GlobalVars.bot_repo_slug))
         latest_sha = request.json()["object"]["sha"]
         request = requests.get(
-            'https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/{commit_code}/statuses'.format(
-                commit_code=latest_sha))
+            'https://api.github.com/repos/{}/commits/{}/statuses'.format(
+                GlobalVars.bot_repo_slug, latest_sha))
         states = []
         for ci_status in request.json():
             state = ci_status["state"]

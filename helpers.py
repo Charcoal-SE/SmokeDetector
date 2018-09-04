@@ -144,7 +144,7 @@ def unshorten_link(url, request_type='HEAD', explicitly_ignore_security_warning=
     requester = requesters[request_type]
     response_code = 301
     headers = {'User-Agent': 'SmokeDetector/git (+https://github.com/Charcoal-SE/SmokeDetector)'}
-    while response_code in [301, 302, 303, 307, 308]:
+    while response_code in {301, 302, 303, 307, 308}:
         res = requester(url, headers=headers)
         response_code = res.status_code
         if 'Location' in res.headers:

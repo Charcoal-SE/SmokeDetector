@@ -127,7 +127,7 @@ class GitManager:
                                        blacklist.upper()),                                        # 8
                            "head": branch,
                            "base": "master"}
-                response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls",
+                response = requests.post("https://api.github.com/repos/{}/pulls".format(GlobalVars.bot_repo_slug),
                                          auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password),
                                          data=json.dumps(payload))
                 log('debug', response.json())

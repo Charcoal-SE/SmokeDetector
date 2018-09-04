@@ -142,8 +142,8 @@ class Metasmoke:
                 return  # Disabled
                 if "autopull" in message["deploy_updated"]["head_commit"]["message"]:
                     if only_blacklists_changed(GitManager.get_remote_diff()):
-                        commit_md = "[`{0}`](https://github.com/Charcoal-SE/SmokeDetector/commit/{0})" \
-                                    .format(sha[:7])
+                        commit_md = "[`{0}`](https://github.com/{1}/commit/{0})" \
+                                    .format(sha[:7], GlobalVars.bot_repo_slug)
                         integrity = blacklist_integrity_check()
                         if len(integrity) == 0:  # No issues
                             GitManager.pull_remote()
@@ -161,9 +161,9 @@ class Metasmoke:
 
             if c["status"] == "success":
                 if "autopull" in c["commit_message"]:
-                    s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
+                    s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/{repo}/" \
                         "commit/{commit_sha}) succeeded. Message contains 'autopull', pulling...".format(
-                            ci_link=c["ci_url"], commit_sha=sha)
+                            ci_link=c["ci_url"], repo=GlobalVars.bot_repo_slug, commit_sha=sha)
                     remote_diff = GitManager.get_remote_diff()
                     if only_blacklists_changed(remote_diff):
                         GitManager.pull_remote()
@@ -187,13 +187,13 @@ class Metasmoke:
                         chatcommunicate.tell_rooms_with('debug', s, notify_site="/ci")
                         os._exit(3)
                 else:
-                    s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
-                        "commit/{commit_sha}) succeeded.".format(ci_link=c["ci_url"], commit_sha=sha)
+                    s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/{repo}/commit/{commit_sha}) " \
+                        "succeeded.".format(ci_link=c["ci_url"], repo=GlobalVars.bot_repo_slug, commit_sha=sha)
 
                     chatcommunicate.tell_rooms_with("debug", s, notify_site="/ci")
             elif c["status"] == "failure":
-                s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
-                    "commit/{commit_sha}) failed.".format(ci_link=c["ci_url"], commit_sha=sha)
+                s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/{repo}/commit/{commit_sha}) " \
+                    "failed.".format(ci_link=c["ci_url"], repo=GlobalVars.bot_repo_slug, commit_sha=sha)
 
                 chatcommunicate.tell_rooms_with("debug", s, notify_site="/ci")
         elif "everything_is_broken" in message:
