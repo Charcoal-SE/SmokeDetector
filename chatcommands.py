@@ -557,14 +557,18 @@ def errorlogs(count):
     return fetch_lines_from_error_log(count or 50)
 
 
-@command(privileged=True, aliases=["ms-status", "ms-down", "ms-up"], give_name=True)
-def metasmoke(alias_used):
+@command(whole_msg=True, aliases=["ms-status", "ms-down", "ms-up"], give_name=True)
+def metasmoke(msg, alias_used):
     if alias_used in {"metasmoke", "ms-status"}:
         status_text = [
             "metasmoke is up. Currect failure count (consecutive): {}".format(GlobalVars.metasmoke_failures),
             "metasmoke is down. Currect failure count (consecutive): {}".format(GlobalVars.metasmoke_failures),
         ]
         return status_text[GlobalVars.metasmoke_down]
+    # The next aliases/functionalities require privilege
+    if not is_privileged(msg.owner, msg.room):
+        raise CmdException(GlobalVars.not_privileged_warning)
+
     if alias_used == "ms-down":
         GlobalVars.metasmoke_down = True
         return "metasmoke is now considered down."
