@@ -108,8 +108,10 @@ class GlobalVars:
         config_parser.read('config.ci')
         if "pytest" in sys.modules and os.path.isfile('config'):  # Another config found while running in pytest
             # log('debug', "Running in pytest, force load config from \"config.ci\"")
+            pass
         else:
             # log('debug', "Configuration loaded from \"config.ci\"")
+            pass
 
     config = config_parser["Config"]  # It's a collections.OrderedDict now
 
