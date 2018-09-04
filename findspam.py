@@ -1313,10 +1313,17 @@ class FindSpam:
          'title': True, 'body': True, 'username': False,
          'stripcodeblocks': True, 'body_summary': True,
          'max_rep': 1, 'max_score': 0},
+        # Potentially bad NS for domain in question, except SO
+        {'method': watched_ns_for_url_domain, 'all': True, 'sites': ["stackoverflow.com"],
+         'reason': 'potentially bad NS for domain in {}',
+         'title': True, 'body': True, 'username': False,
+         'stripcodeblocks': True, 'body_summary': True, 'questions': False,
+         'max_rep': 1, 'max_score': 0},
+        # This one's for answers, no SO exception
         {'method': watched_ns_for_url_domain, 'all': True, 'sites': [],
          'reason': 'potentially bad NS for domain in {}',
          'title': True, 'body': True, 'username': False,
-         'stripcodeblocks': True, 'body_summary': True,
+         'stripcodeblocks': True, 'body_summary': True, 'answers': False,
          'max_rep': 1, 'max_score': 0},
         # Country-name domains, travel and expats sites are exempt
         {'regex': r"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|"
