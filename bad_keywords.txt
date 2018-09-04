@@ -1537,3 +1537,4 @@ keto\W?fuel
 ring\W?ease
 gs-jj
 sera\W?labs
+pure\W?bhb(?:\W?keto)?
