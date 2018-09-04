@@ -133,8 +133,8 @@ def fetch_post_id_and_site_from_msg_content(content):
 # noinspection PyBroadException,PyMissingTypeHints
 def fetch_owner_url_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[.+]\((?:(?:http:)" \
-                   r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\) by \[.+\]\((.+)\)" \
-                   r" on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
+                   r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\).{,3} by" \
+                   r" \[.+\]\((.+)\) on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
     match = regex.compile(search_regex).search(content)
     if match is None:
         return None
@@ -148,8 +148,8 @@ def fetch_owner_url_from_msg_content(content):
 # noinspection PyBroadException,PyMissingTypeHints
 def fetch_title_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[(.+)]\((?:(?:http:)" \
-                   r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\) by \[?.*\]?\(?.*\)?" \
-                   r" on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
+                   r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\).{,3} by" \
+                   r" \[?.*\]?\(?.*\)? on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
     match = regex.compile(search_regex).search(content)
     if match is None:
         return None
