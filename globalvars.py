@@ -7,7 +7,6 @@ from html.parser import HTMLParser
 from html import unescape
 from hashlib import md5
 from configparser import NoOptionError, RawConfigParser
-from helpers import log
 import threading
 # noinspection PyCompatibility
 import regex
@@ -104,13 +103,13 @@ class GlobalVars:
 
     if os.path.isfile('config') and "pytest" not in sys.modules:
         config_parser.read('config')
-        log('debug', "Configuration loaded from \"config\"")
+        # log('debug', "Configuration loaded from \"config\"")
     else:
         config_parser.read('config.ci')
         if "pytest" in sys.modules and os.path.isfile('config'):  # Another config found while running in pytest
-            log('debug', "Running in pytest, force load config from \"config.ci\"")
+            # log('debug', "Running in pytest, force load config from \"config.ci\"")
         else:
-            log('debug', "Configuration loaded from \"config.ci\"")
+            # log('debug', "Configuration loaded from \"config.ci\"")
 
     config = config_parser["Config"]  # It's a collections.OrderedDict now
 
@@ -180,7 +179,7 @@ class GlobalVars:
             "at [rev {}]({}/commit/{}) (running on {})".format(
                 GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
                 GlobalVars.commit['id'], GlobalVars.location)
-        log('debug', "GlobalVars loaded")
+        # log('debug', "GlobalVars loaded")
 
 
 GlobalVars.reload()
