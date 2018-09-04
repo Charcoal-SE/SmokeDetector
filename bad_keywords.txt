@@ -1305,7 +1305,7 @@ unlimited\W?fit
 (?:1\W*)?800\W*450\W*8670
 iphone\W?data\W?recovery
 apeaksoft
-lutragen
+lutragen(?:\W?cream)?(?:\w*$)?
 D\W+Bal
 iq\W?180(?:\W?cognitive)?
 flawless\W?keto
