@@ -5077,7 +5077,6 @@
 1534485970	Makyen	ittrainingonline\.co\.in
 1534487036	tripleee	supportnumberireland\.com
 1534487121	Makyen	[a-z_]*353[\W_]*766803285[a-z_]*
-1534490295	tripleee	gs-jj
 1534497160	tripleee	logaster\.com
 1534501016	tripleee	peerless\W*skin
 1534501124	tripleee	inplant\W*training
