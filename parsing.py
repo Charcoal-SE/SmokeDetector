@@ -77,7 +77,7 @@ def to_metasmoke_link(post_url, protocol=True):
 def fetch_post_url_from_msg_content(content):
     search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[.+]\(((?:http:)" \
                    r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)(?:\?smokeypost=true)?\)" \
-                   r"\s?(?:\u270F\uFE0F|\U0001F437)?\sby \[?.*\]?\(?(?:.*)\)? on `[\w.]+`(?: \(@.+\))?" \
+                   r".{,3} by \[?.*\]?\(?(?:.*)\)? on `[\w.]+`(?: \(@.+\))?" \
                    r"(?: \[.+\]\(.+\))?$"
     match = regex.compile(search_regex).search(content)
     if match is None:
