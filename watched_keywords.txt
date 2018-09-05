@@ -5437,3 +5437,4 @@
 1536145150	Glorfindel	wikierror\.org
 1536145223	Makyen	kow17\W*(?:dot\W*)?com
 1536145227	Makyen	coupons\.pk
+1536146038	tripleee	spotluggageandlounge
