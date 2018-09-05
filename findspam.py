@@ -3,6 +3,7 @@
 
 import math
 import regex
+from json.decoder import JSONDecodeError
 from difflib import SequenceMatcher
 from urllib.parse import urlparse, unquote_plus
 from itertools import chain
@@ -848,7 +849,7 @@ def toxic_check(post):
                 }
             }
         }).json()
-    except (requests.exceptions.ConnectionError, json.JSONDecodeError):
+    except (requests.exceptions.ConnectionError, JSONDecodeError):
         return False, False, False, ""
 
     if "error" in response:
