@@ -5427,3 +5427,4 @@
 1536126957	Makyen	natwest\.onl
 1536126994	Makyen	amzn\.to/(?:2Ck80by|2wHBOtq|2NiXtBN|2Q5Stif)
 1536127062	Makyen	turbotax\.onl
+1536127463	iBug	retailloans\.in
