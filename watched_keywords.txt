@@ -5441,3 +5441,4 @@
 1536146074	tripleee	[a-z_]*(?:91_*)?9829644411[a-z_]*
 1536146804	tripleee	anexas\.net
 1536148532	tripleee	Sachin\W*Rastogi
+1536149312	Glorfindel	howtogethelpinwindows10f?\.com
