@@ -848,7 +848,7 @@ def toxic_check(post):
                 }
             }
         }).json()
-    except requests.exceptions.ConnectionError:
+    except (requests.exceptions.ConnectionError, json.JSONDecodeError):
         return False, False, False, ""
 
     if "error" in response:
