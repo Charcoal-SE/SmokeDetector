@@ -2686,7 +2686,6 @@
 1522243465	Glorfindel	freeaccountant\.co
 1522249813	Yvette Colomb	htmlpdfapi\.com
 1522255280	K.Dᴀᴠɪs	aolgoldsupport\.com
-1522256276	CalvT븃	termsfeed\.com
 1522263835	Glorfindel	installwhatsapp\.com
 1522266111	K.Dᴀᴠɪs	(?:sum+er\Wkolcak|adam\Wbarak)
 1522268376	Federico	gaflighttracker\.com
