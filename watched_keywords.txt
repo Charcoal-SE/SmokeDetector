@@ -4919,7 +4919,6 @@
 1533778858	Tetsuya Yamamoto	obatsakitlututbengkak\.com
 1533778890	Tetsuya Yamamoto	obatherbalterbaik14\.blogspot
 1533783993	paper1111	soundcloudmp3\.online
-1533791140	tripleee	apollo\W*(?:kidney\W*)?hospital\d*
 1533791167	tripleee	oetprate
 1533791957	tripleee	bostonairporttaxis\.com
 1533796130	Tetsuya Yamamoto	guidesinsider\.com
