@@ -5439,3 +5439,4 @@
 1536145227	Makyen	coupons\.pk
 1536146038	tripleee	spotluggageandlounge
 1536146074	tripleee	[a-z_]*(?:91_*)?9829644411[a-z_]*
+1536146804	tripleee	anexas\.net
