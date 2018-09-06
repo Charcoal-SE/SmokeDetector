@@ -5450,3 +5450,4 @@
 1536190787	Makyen	onestepitsolutions\.net
 1536200287	Tetsuya Yamamoto	kalkinemedia\.com
 1536200731	Tetsuya Yamamoto	ArabHackers46
+1536201287	Makyen	[a-z_]*(?:1_*)?567[\W_]*704[\W_]*1160[a-z_]*
