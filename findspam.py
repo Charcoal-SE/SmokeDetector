@@ -366,17 +366,12 @@ def pattern_product_name(s, site):
         keywords += [r"X[\dLOST]?", "Alpha", "Plus", "Prime", "Formula"]
     keywords = "|".join(keywords)
 
-    three_words = [(m[0],) + tuple(regex.split("[ -]", m[0])) for m in
-                   regex.compile(r"(?i)\b(?:{0})(?:[ -](?:{0})){{2,}}\b".format(keywords)).finditer(s)]
-    two_words = regex.compile(r"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
-    unique_three_words = sum([len(m[1:]) == len(set([regex.sub(r"(?i)X\d", "X0", w) for w in m[1:]]))
-                             for m in three_words])
-    unique_two_words = sum([len(m[1:]) == len(set([regex.sub(r"(?i)X\d", "X0", w) for w in m[1:]]))
-                           for m in two_words])
-    if unique_three_words >= 1:
-        return True, u"Pattern-matching product name *{}*".format(", ".join([match[0] for match in set(three_words)]))
-    elif unique_two_words >= 2:
-        return True, u"Pattern-matching product name *{}*".format(", ".join([match[0] for match in set(two_words)]))
+    matches = [(m[0],) + tuple(regex.split("[ -]", m[0])) for m in
+                   regex.compile(r"(?i)\b(?:{0})(?:[ -](?:{0}))+\b".format(keywords)).finditer(s)]
+    total_words = sum([len(set([regex.sub(r"(?i)X\d", "X0", w) for w in m[1:]]))
+                             for m in matches])
+    if total_words >= 3:
+        return True, u"Pattern-matching product name *{}*".format(", ".join([match[0] for match in set(matches)]))
     return False, ""
 
 
