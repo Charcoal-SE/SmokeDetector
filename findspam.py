@@ -1747,7 +1747,7 @@ class FindSpam:
             else:
                 spans[group].append(match.span())
         infos = [(sorted(spans[word]), word) for word in spans]
-        infos.sort(key=lambda info: info[1][0][0])  # Sort by starting position of first appearance
+        infos.sort(key=lambda info: info[0][0][0])  # Sort by starting position of first appearance
         return type_of_text + " - " + ", ".join([
             "Position {}: {}".format(
                 ", ".join(["{}-{}".format(a + 1, b) for a, b in span]),
