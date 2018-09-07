@@ -1735,27 +1735,30 @@ class FindSpam:
         return "Position {}-{}: {}".format(start + 1, end, group)
 
     @staticmethod
-    def generate_why(compiled_regex, matched_text, type_of_text, is_regex_check):
-        if not is_regex_check:
-            return ""
-
-        matches = compiled_regex.finditer(matched_text)
+    def match_infos(matches):
         spans = {}
         for match in matches:
-            group = match.group().replace("\n", "")
+            group = match.group().strip().replace("\n", "")
             if group not in spans:
                 spans[group] = [match.span()]
             else:
                 spans[group].append(match.span())
         infos = [(sorted(spans[word]), word) for word in spans]
         infos.sort(key=lambda info: info[0])  # Sort by positions of appearances
-        return type_of_text + " - " + ", ".join([
+        return ", ".join([
             "Position{} {}: {}".format(
                 "s" if len(span) > 1 else "",
                 ", ".join(["{}-{}".format(a + 1, b) for a, b in span]),
                 word
             )
             for span, word in infos])
+
+    @staticmethod
+    def generate_why(compiled_regex, matched_text, type_of_text, is_regex_check):
+        if not is_regex_check:
+            return ""
+        matches = compiled_regex.finditer(matched_text)
+        return "{} - {}".format(type_of_text, FindSpam.match_infos(matches))
 
 
 FindSpam.reload_blacklists()
