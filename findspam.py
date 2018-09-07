@@ -1738,7 +1738,19 @@ class FindSpam:
         if not is_regex_check:
             return ""
         matches = compiled_regex.finditer(matched_text)
-        return type_of_text + " - " + ", ".join([FindSpam.match_info(m) for m in matches])
+        spans = {}
+        for match in matches:
+            group = match.group().replace("\n", "")
+            if group not in spans:
+                spans[group] = [match.span()]
+            else:
+                spans[group].append(match.span())
+        infos = [(word, sorted(spans[word])) for word in spans]
+        infos.sort(key=lambda info: info[1][0][0])  # Sort by left boundary of first appearance
+        return type_of_text + " - " + ", ".join(
+            ["Position {}: {}".format(
+                ", ".join(["{}-{}".format(a + 1, b) for a, b in span]), word)
+                for word, span in infos])
 
 
 FindSpam.reload_blacklists()
