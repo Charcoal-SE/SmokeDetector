@@ -352,10 +352,10 @@ def has_health(s, site):   # flexible detection of health spam in titles
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def pattern_product_name(s, site):
-    # Always use (?: non-capturing groups ) in the keywords list
+    # Always use (?: non-capturing groups ) in the keywords list. Do NOT include hash or space in patterns
     keywords = [
         "Testo", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Aurora", "Diet", "Slim", "Premier", "(?:Pure)?Fit",
-        "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Perfect",
+        "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Perfect", "Shark", "Tank",
         "Elite", "Force", "Exceptional", "Enhance(?:ment)?", "Nitro", "Max+", "Boost", "E?xtreme", "Grow",
         "Deep", "Male", "Pro", "Advanced", "Monster", "Divine", "Royale", "Angele*", "Trinity", "Andro",
         "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Boost(?:er)?",
@@ -366,7 +366,8 @@ def pattern_product_name(s, site):
         keywords += [r"X[\dLOST]?", "Alpha", "Plus", "Prime", "Formula"]
     keywords = "|".join(keywords)
 
-    three_words = regex.compile(r"(?i)\b(({0})[ -]({0})[ -]({0}))\b".format(keywords)).findall(s)
+    three_words = [(m[0],) + tuple(regex.split("[ -]", m[0])) for m in
+        regex.compile(r"(?i)\b((?:{0})(?:[ -](?:{0})){{2,}})\b".format(keywords)).finditer(s)]
     two_words = regex.compile(r"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
     unique_three_words = sum([len(m[1:]) == len(set([regex.sub(r"(?i)X\d", "X0", w) for w in m[1:]]))
                              for m in three_words])
