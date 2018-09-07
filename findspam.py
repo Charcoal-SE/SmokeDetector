@@ -1750,7 +1750,7 @@ class FindSpam:
         infos.sort(key=lambda info: info[0])  # Sort by positions of appearances
         return type_of_text + " - " + ", ".join([
             "Position{} {}: {}".format(
-                ["", "s"][len(span) > 0],
+                ["", "s"][len(span) > 1],
                 ", ".join(["{}-{}".format(a + 1, b) for a, b in span]),
                 word
             )
