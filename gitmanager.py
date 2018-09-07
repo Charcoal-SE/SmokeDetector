@@ -278,6 +278,19 @@ class GitManager:
             return git.status()
 
     @staticmethod
+    def merge_abort():
+        if 'windows' in platform.platform().lower():
+            return  # No we don't do Windows
+        git.merge("--abort")
+
+    @staticmethod
+    def reset_head():
+        if 'windows' in platform.platform().lower():
+            return  # No we don't do Windows
+        git.reset("--hard", "HEAD")
+        git.clean("-f")
+
+    @staticmethod
     def get_remote_diff():
         git.fetch()
         if 'windows' in platform.platform().lower():

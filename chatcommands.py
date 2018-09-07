@@ -357,12 +357,6 @@ def unblacklist(msg, item, alias_used="unwatch"):
     return message
 
 
-# noinspection PyIncorrectDocstring
-@command(privileged=True)
-def gitstatus():
-    return GitManager.current_git_status()
-
-
 @command(privileged=True, aliases=["remote-diff", "remote_diff"])
 def remotediff():
     will_require_full_restart = "SmokeDetector will require a full restart to pull changes: " \
@@ -645,6 +639,24 @@ def pull():
             raise CmdException("CI build failed! :( Please check your commit.")
         elif "pending" in states or not states:
             raise CmdException("CI build is still pending, wait until the build has finished and then pull again.")
+
+
+@command(privileged=True, give_name=True, aliases=[
+    "gitstatus", "git-status", "git-help"
+])
+def git(alias_used="git"):
+    if alias_used == "git":
+        raise CmdException("Bad alias. Try another command")
+    if alias_used == "git-help":
+        return "Available commands: git-help, git-status, git-merge-abort, git-reset"
+
+    alias_used = alias_used.replace("-", "")
+    if alias_used == "gitstatus":
+        return GitManager.current_git_status()
+    elif alias_used == "gitmergeabort":
+        return GitManager.merge_abort()
+    elif alias_used == "gitreset":
+        return GitManager.reset_head()
 
 
 # noinspection PyIncorrectDocstring,PyProtectedMember
