@@ -367,9 +367,9 @@ def pattern_product_name(s, site):
     keywords = "|".join(keywords)
 
     matches = [(m[0],) + tuple(regex.split("[ -]", m[0])) for m in
-                   regex.compile(r"(?i)\b(?:{0})(?:[ -](?:{0}))+\b".format(keywords)).finditer(s)]
+               regex.compile(r"(?i)\b(?:{0})(?:[ -](?:{0}))+\b".format(keywords)).finditer(s)]
     total_words = sum([len(set([regex.sub(r"(?i)X\d", "X0", w) for w in m[1:]]))
-                             for m in matches])
+                      for m in matches])
     if total_words >= 3:
         return True, u"Pattern-matching product name *{}*".format(", ".join([match[0] for match in set(matches)]))
     return False, ""
