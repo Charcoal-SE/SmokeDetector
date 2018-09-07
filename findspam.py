@@ -443,13 +443,15 @@ def keyword_link(s, site):   # thanking keyword and a link in the same short ans
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def bad_link_text(s, site):   # suspicious text of a hyperlink
-    s = regex.sub("</?strong>|</?em>", "", s)  # remove font tags
+    s = regex.sub("</?(?:strong|em)>", "", s)  # remove font tags
     keywords = regex.compile(
         r"(?isu)"
         r"\b(buy|cheap) |live[ -]?stream|"
         r"\bmake (money|\$)|"
         r"\b(porno?|(whole)?sale|coins|luxury|coupons?|essays?|in \L<city>)\b|"
         r"\b\L<city>(?:\b.{1,20}\b)?(service|escort|call girls?)|"
+        r"\b(?:customer|recovery|technical|recovery)? ?(?:customer|support|service|repair|contact) "
+        r"(?:phone|hotline|helpline)? ?numbers?\b|"
         r"(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery|school|university)|"
         r"\b(writing (service|help)|essay (writing|tips))", city=FindSpam.city_list)
     links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
