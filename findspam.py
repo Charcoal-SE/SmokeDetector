@@ -366,13 +366,14 @@ def pattern_product_name(s, site):
         keywords += [r"X[\dLOST]?", "Alpha", "Plus", "Prime", "Formula"]
     keywords = "|".join(keywords)
 
-    matches = [(m[0],) + tuple(regex.split("[ -]", m[0])) for m in
-               regex.compile(r"(?i)\b(?:{0})(?:[ -](?:{0}))+\b".format(keywords)).finditer(s)]
-    total_words = sum([len(set([regex.sub(r"(?i)X\d", "X0", w) for w in m[1:]]))
+    match_items = list(regex.compile(r"(?i)\b(?:{0})(?:[ -](?:{0}))+\b".format(keywords)).finditer(s))
+    matches = [tuple(regex.split("[ -]", m[0])) for m in match_items]
+    # Total "unique words in each match"
+    total_words = sum([len(set([regex.sub(r"(?i)X\d", "X0", w) for w in m]))
                       for m in matches])
     if total_words >= 3:
         return True, u"Pattern-matching product name: {}".format(
-            ", ".join([FindSpam.match_info(match) for match in set(matches)]))
+            ", ".join([FindSpam.match_info(match) for match in matches]))
     return False, ""
 
 
