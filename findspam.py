@@ -371,7 +371,8 @@ def pattern_product_name(s, site):
     total_words = sum([len(set([regex.sub(r"(?i)X\d", "X0", w) for w in m[1:]]))
                       for m in matches])
     if total_words >= 3:
-        return True, u"Pattern-matching product name *{}*".format(", ".join([match[0] for match in set(matches)]))
+        return True, u"Pattern-matching product name: {}".format(
+            ", ".join([FindSpam.match_info(match) for match in set(matches)]))
     return False, ""
 
 
@@ -1726,17 +1727,17 @@ class FindSpam:
         return result, why
 
     @staticmethod
+    def match_info(match):
+        start, end = match.span()
+        group = match.group().replace("\n", "")
+        return "Position {}-{}: {}".format(start + 1, end, group)
+
+    @staticmethod
     def generate_why(compiled_regex, matched_text, type_of_text, is_regex_check):
         if not is_regex_check:
             return ""
-
         matches = compiled_regex.finditer(matched_text)
-        why_for_matches = []
-        for match in matches:
-            span = match.span()
-            group = match.group().replace("\n", "")
-            why_for_matches.append("Position {}-{}: {}".format(span[0] + 1, span[1], group))
-        return type_of_text + " - " + ", ".join(why_for_matches)
+        return type_of_text + " - " + ", ".join([FindSpam.match_info(m) for m in matches])
 
 
 FindSpam.reload_blacklists()
