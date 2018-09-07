@@ -1545,3 +1545,4 @@ stendora(?:\W?garcinia)?\w*
 active\W?life\W?detox
 bio\W?x(?:\W?garcinia)?
 ionicx\W?testo
+bhadanazz
