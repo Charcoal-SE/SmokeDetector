@@ -1737,6 +1737,7 @@ class FindSpam:
     def generate_why(compiled_regex, matched_text, type_of_text, is_regex_check):
         if not is_regex_check:
             return ""
+
         matches = compiled_regex.finditer(matched_text)
         spans = {}
         for match in matches:
@@ -1745,12 +1746,14 @@ class FindSpam:
                 spans[group] = [match.span()]
             else:
                 spans[group].append(match.span())
-        infos = [(word, sorted(spans[word])) for word in spans]
-        infos.sort(key=lambda info: info[1][0][0])  # Sort by left boundary of first appearance
-        return type_of_text + " - " + ", ".join(
-            ["Position {}: {}".format(
-                ", ".join(["{}-{}".format(a + 1, b) for a, b in span]), word)
-                for word, span in infos])
+        infos = [(sorted(spans[word]), word) for word in spans]
+        infos.sort(key=lambda info: info[1][0][0])  # Sort by starting position of first appearance
+        return type_of_text + " - " + ", ".join([
+            "Position {}: {}".format(
+                ", ".join(["{}-{}".format(a + 1, b) for a, b in span]),
+                word
+            )
+            for span, word in infos])
 
 
 FindSpam.reload_blacklists()
