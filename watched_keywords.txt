@@ -5472,4 +5472,4 @@
 1536300520	Tetsuya Yamamoto	pmplanetarynews\.com
 1536300576	Tetsuya Yamamoto	multichannelcreative\.co\.uk
 1536300763	Tetsuya Yamamoto	askjugadu\.com
-1536303687	iBug	easyhackingguru(?:@gmail\.com)
+1536303687	iBug	easyhackingguru(?:@gmail\.com)?
