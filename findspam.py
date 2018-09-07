@@ -373,7 +373,7 @@ def pattern_product_name(s, site):
                       for m in matches])
     if total_words >= 3:
         return True, u"Pattern-matching product name: {}".format(
-            ", ".join([FindSpam.match_info(match) for match in matches]))
+            ", ".join([FindSpam.match_info(match) for match in match_items]))
     return False, ""
 
 
