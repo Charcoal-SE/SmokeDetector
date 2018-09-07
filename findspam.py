@@ -367,7 +367,7 @@ def pattern_product_name(s, site):
     keywords = "|".join(keywords)
 
     three_words = [(m[0],) + tuple(regex.split("[ -]", m[0])) for m in
-        regex.compile(r"(?i)\b((?:{0})(?:[ -](?:{0})){{2,}})\b".format(keywords)).finditer(s)]
+                   regex.compile(r"(?i)\b((?:{0})(?:[ -](?:{0})){{2,}})\b".format(keywords)).finditer(s)]
     two_words = regex.compile(r"(?i)\b(({0})[ -]({0}))\b".format(keywords)).findall(s)
     unique_three_words = sum([len(m[1:]) == len(set([regex.sub(r"(?i)X\d", "X0", w) for w in m[1:]]))
                              for m in three_words])
