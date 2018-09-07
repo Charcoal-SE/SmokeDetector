@@ -5477,4 +5477,3 @@
 1536303906	iBug	herbal\W?hills
 1536313540	Tetsuya Yamamoto	marketingassignment\.co\.uk
 1536315810	Glorfindel	happydealmaker\.com
-1536315881	Glorfindel	https://stackoverflow.com/a/52219649/4751173
