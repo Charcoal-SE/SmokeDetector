@@ -51,7 +51,7 @@ SE_SITES_DOMAINS = ['stackoverflow.com', 'askubuntu.com', 'superuser.com', 'serv
 WHITELISTED_WEBSITES_REGEX = regex.compile(r"(?i)upload|\b(?:{})\b".format("|".join([
     "yfrog", "gfycat", "tinypic", "sendvid", "ctrlv", "prntscr", "gyazo", r"youtu\.?be", "past[ie]", "dropbox",
     "microsoft", "newegg", "cnet", "regex101", r"(?<!plus\.)google", "localhost", "ubuntu", "getbootstrap",
-    "jsfiddle\.net", "codepen\.io", "pastebin"
+    r"jsfiddle\.net", r"codepen\.io", "pastebin"
 ] + [se_dom.replace(".", r"\.") for se_dom in SE_SITES_DOMAINS])))
 
 if GlobalVars.perspective_key:
