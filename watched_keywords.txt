@@ -5483,5 +5483,4 @@
 1536325517	Glorfindel	2software\.net
 1536332129	Glorfindel	codegym\.cc
 1536336672	Makyen	npntraining\.com
-1536352073	Makyen	\$2,000,000\.00
 1536352098	Makyen	\W*\$2,000,000\.00
