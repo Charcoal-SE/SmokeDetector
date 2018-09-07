@@ -1544,3 +1544,4 @@ clipping\W?path\W?(service|quick)
 stendora(?:\W?garcinia)?\w*
 active\W?life\W?detox
 bio\W?x(?:\W?garcinia)?
+ionicx\W?testo
