@@ -610,35 +610,37 @@ def pull():
     Pull an update from GitHub
     :return: String on failure, None on success
     """
-    if only_blacklists_changed(GitManager.get_remote_diff()):
+    remote_diff = GitManager.get_remote_diff()
+    if only_blacklists_changed(remote_diff):
         GitManager.pull_remote()
         findspam.FindSpam.reload_blacklists()
         GlobalVars.reload()
         tell_rooms_with('debug', GlobalVars.s_norestart)
         return
-    elif only_modules_changed(GitManager.get_remote_diff()):
-        GitManager.pull_remote()
-        importlib.reload(findspam)
-        GlobalVars.reload()
-        tell_rooms_with('debug', GlobalVars.s_norestart2)
-        return
-    else:
-        request = requests.get('https://api.github.com/repos/{}/git/refs/heads/deploy'.format(
-            GlobalVars.bot_repo_slug))
-        latest_sha = request.json()["object"]["sha"]
-        request = requests.get(
-            'https://api.github.com/repos/{}/commits/{}/statuses'.format(
-                GlobalVars.bot_repo_slug, latest_sha))
-        states = []
-        for ci_status in request.json():
-            state = ci_status["state"]
-            states.append(state)
-        if "success" in states:
+
+    request = requests.get('https://api.github.com/repos/{}/git/refs/heads/deploy'.format(
+        GlobalVars.bot_repo_slug))
+    latest_sha = request.json()["object"]["sha"]
+    request = requests.get(
+        'https://api.github.com/repos/{}/commits/{}/statuses'.format(
+            GlobalVars.bot_repo_slug, latest_sha))
+    states = []
+    for ci_status in request.json():
+        state = ci_status["state"]
+        states.append(state)
+    if "success" in states:
+        if only_modules_changed(remote_diff):
+            GitManager.pull_remote()
+            importlib.reload(findspam)
+            GlobalVars.reload()
+            tell_rooms_with('debug', GlobalVars.s_norestart2)
+            return
+        else:
             os._exit(3)
-        elif "error" in states or "failure" in states:
-            raise CmdException("CI build failed! :( Please check your commit.")
-        elif "pending" in states or not states:
-            raise CmdException("CI build is still pending, wait until the build has finished and then pull again.")
+    elif "error" in states or "failure" in states:
+        raise CmdException("CI build failed! :( Please check your commit.")
+    elif "pending" in states or not states:
+        raise CmdException("CI build is still pending, wait until the build has finished and then pull again.")
 
 
 @command(privileged=True, give_name=True, aliases=[
