@@ -45,7 +45,8 @@ class GlobalVars:
     watched_keywords = {}
     ignored_posts = []
     auto_ignored_posts = []
-    startup_utc = datetime.utcnow().strftime("%H:%M:%S")
+    startup_utc_date = datetime.utcnow()
+    startup_utc = startup_utc_date.strftime("%H:%M:%S")
     latest_questions = []
     api_backoff_time = 0
     deletion_watcher = None

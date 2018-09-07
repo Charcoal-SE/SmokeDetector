@@ -7,7 +7,6 @@ from globalvars import GlobalVars
 import findspam
 # noinspection PyUnresolvedReferences
 from datetime import datetime
-from utcdate import UtcDate
 from apigetpost import api_get_post, PostData
 import datahandling
 from datahandling import *
@@ -796,7 +795,7 @@ def status():
     :return: A string
     """
     now = datetime.utcnow()
-    diff = now - UtcDate.startup_utc_date
+    diff = now - GlobalVars.startup_utc_date
 
     return 'Running since {time} UTC ({relative})'.format(time=GlobalVars.startup_utc, relative=td_format(diff))
 

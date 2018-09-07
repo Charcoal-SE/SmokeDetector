@@ -20,7 +20,6 @@ import traceback
 from bodyfetcher import BodyFetcher
 import chatcommunicate
 from datetime import datetime
-from utcdate import UtcDate
 from spamhandling import check_if_spam_json
 from globalvars import GlobalVars
 from datahandling import load_files, filter_auto_ignored_posts
@@ -202,7 +201,7 @@ while True:
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         now = datetime.utcnow()
-        delta = now - UtcDate.startup_utc_date
+        delta = now - GlobalVars.startup_utc_date
         seconds = delta.total_seconds()
         tr = traceback.format_exc()
         exception_only = ''.join(traceback.format_exception_only(type(e), e))\

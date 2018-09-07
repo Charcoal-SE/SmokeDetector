@@ -4,16 +4,16 @@ import os
 import traceback
 import threading
 import sys
-from utcdate import UtcDate
 # noinspection PyPackageRequirements
 from websocket import WebSocketConnectionClosedException
 import requests
 from helpers import log, log_exception
+from globavlars import GlobalVars
 
 
 # noinspection PyProtectedMember
 def uncaught_exception(exctype, value, tb):
-    delta = datetime.utcnow() - UtcDate.startup_utc_date
+    delta = datetime.utcnow() - GlobalVars.startup_utc_date
     log_exception(exctype, value, tb)
     if delta.total_seconds() < 180 and exctype not in \
             {KeyboardInterrupt, SystemExit, requests.ConnectionError, WebSocketConnectionClosedException}:
