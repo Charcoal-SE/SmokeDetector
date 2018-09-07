@@ -8,7 +8,7 @@ import sys
 from websocket import WebSocketConnectionClosedException
 import requests
 from helpers import log, log_exception
-from globavlars import GlobalVars
+from globalvars import GlobalVars
 
 
 # noinspection PyProtectedMember
