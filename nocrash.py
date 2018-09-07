@@ -1,5 +1,4 @@
-#!/usr/bin/python3
-# coding=utf-8
+#!/usr/bin/env python3
 
 # This script replaces the original nocrash.sh functionality with a pure Python approach.
 

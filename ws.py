@@ -1,4 +1,4 @@
-# coding=utf-8
+#!/usr/bin/env python3
 # requires https://pypi.python.org/pypi/websocket-client/
 
 from excepthook import uncaught_exception, install_thread_excepthook
