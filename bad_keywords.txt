@@ -1542,3 +1542,4 @@ body\W?thin\W?down
 jovian\W?chile
 clipping\W?path\W?(service|quick)
 stendora(?:\W?garcinia)?\w*
+active\W?life\W?detox
