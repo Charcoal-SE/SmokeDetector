@@ -491,7 +491,7 @@ def test_metasmoke():
     assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-up") == "metasmoke is now considered up."
     assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-status") == msg_source.format("up", 0)
     assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-down") == "metasmoke is now considered down."
-    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-status") == msg_source.format("up", 999)
+    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-status") == msg_source.format("down", 999)
     assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-up") == "metasmoke is now considered up."
     assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-status") == msg_source.format("up", 0)
 
