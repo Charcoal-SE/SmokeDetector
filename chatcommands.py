@@ -563,11 +563,11 @@ def metasmoke(msg, alias_used):
 
     if alias_used == "ms-down":
         GlobalVars.metasmoke_down = True
-        GlobalVars.metasmoke_failures = 0
+        GlobalVars.metasmoke_failures = 999
         return "metasmoke is now considered down."
     if alias_used == "ms-up":
         GlobalVars.metasmoke_down = False
-        GlobalVars.metasmoke_failures = 999
+        GlobalVars.metasmoke_failures = 0
         return "metasmoke is now considered up."
     raise CmdException("Bad command alias. Blame a developer.")
 
