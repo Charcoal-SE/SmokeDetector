@@ -469,6 +469,34 @@ def test_whitelisted_users():
         os.remove("whitelistedUsers.p")
 
 
+def test_metasmoke():
+    msg = Fake({
+        "owner": {
+            "name": "El'endia Starman",
+            "id": 1,
+            "is_moderator": False
+        },
+        "room": {
+            "id": 11540,
+            "_client": {
+                "host": "stackexchange.com"
+            }
+        },
+        "_client": {
+            "host": "stackexchange.com"
+        }
+    })
+    msg_source = "metasmoke is {}. Current failure count (consecutive): {}"
+
+    GlobalVars.metasmoke_down = False
+    GlobalVars.metasmoke_failures = 0
+    assert chatcommands.metasmoke(msg, alias_used="ms-status") == msg_source.format("up", 0)
+    assert chatcommands.metasmoke(msg, alias_used="ms-down") == "metasmoke is now considered down."
+    assert chatcommands.metasmoke(msg, alias_used="ms-status") == msg_source.format("up", 999)
+    assert chatcommands.metasmoke(msg, alias_used="ms-up") == "metasmoke is now considered up."
+    assert chatcommands.metasmoke(msg, alias_used="ms-status") == msg_source.format("up", 0)
+
+
 @pytest.mark.skipif(os.path.isfile("notifications.p"), reason="shouldn't overwrite file")
 def test_notifications():
     try:

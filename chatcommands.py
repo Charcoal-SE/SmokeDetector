@@ -553,8 +553,8 @@ def errorlogs(count):
 def metasmoke(msg, alias_used):
     if alias_used in {"metasmoke", "ms-status"}:
         status_text = [
-            "metasmoke is up. Currect failure count (consecutive): {}".format(GlobalVars.metasmoke_failures),
-            "metasmoke is down. Currect failure count (consecutive): {}".format(GlobalVars.metasmoke_failures),
+            "metasmoke is up. Current failure count (consecutive): {}".format(GlobalVars.metasmoke_failures),
+            "metasmoke is down. Current failure count (consecutive): {}".format(GlobalVars.metasmoke_failures),
         ]
         return status_text[GlobalVars.metasmoke_down]
     # The next aliases/functionalities require privilege
@@ -563,9 +563,11 @@ def metasmoke(msg, alias_used):
 
     if alias_used == "ms-down":
         GlobalVars.metasmoke_down = True
+        GlobalVars.metasmoke_failures = 0
         return "metasmoke is now considered down."
     if alias_used == "ms-up":
         GlobalVars.metasmoke_down = False
+        GlobalVars.metasmoke_failures = 999
         return "metasmoke is now considered up."
     raise CmdException("Bad command alias. Blame a developer.")
 
