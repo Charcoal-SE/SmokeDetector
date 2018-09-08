@@ -335,8 +335,12 @@ class Metasmoke:
     def update_code_privileged_users_list():
         payload = {'key': GlobalVars.metasmoke_key}
         headers = {'Content-type': 'application/json'}
-        response = Metasmoke.get("/api/users/code_privileged",
-                                 data=json.dumps(payload), headers=headers).json()['items']
+        try:
+            response = Metasmoke.get("/api/users/code_privileged",
+                                     data=json.dumps(payload), headers=headers).json()['items']
+        except Exception as e:
+            log('error', e)
+            return
 
         GlobalVars.code_privileged_users = set()
 
@@ -359,7 +363,11 @@ class Metasmoke:
             'filter': 'GKNJKLILHNFMJLFKINGJJHJOLGFHJF',  # id and autoflagged
             'urls': post_url
         }
-        response = Metasmoke.get("/api/v2.0/posts/urls", params=payload).json()
+        try:
+            response = Metasmoke.get("/api/v2.0/posts/urls", params=payload).json()
+        except Exception as e:
+            log('error', e)
+            return False, []
 
         if len(response["items"]) > 0 and response["items"][0]["autoflagged"]:
             # get flagger names
@@ -407,7 +415,6 @@ class Metasmoke:
     @staticmethod
     def post_auto_comment(msg, user, url=None, ids=None):
         if not GlobalVars.metasmoke_key:
-            log('info', 'Ignoring auto-comment')
             return
 
         response = None
