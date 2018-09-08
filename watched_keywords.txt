@@ -5488,3 +5488,4 @@
 1536373577	Makyen	dr\.olorun(?:@gmail\.com)?
 1536377232	iBug	lovesurvivorandlustsprovider(?:@gmail\.com)?
 1536384862	iBug	techtanic\.com
+1536387473	iBug	mhotmailsignin\.jigsy\.com
