@@ -427,7 +427,10 @@ class Metasmoke:
             site = parsing.api_parameter_from_link(site)
             params = {"key": GlobalVars.metasmoke_key, "filter": "GFGJGHFJNFGNHKNIKHGGOMILHKLJIFFN"}
 
-            response = Metasmoke.get("/api/v2.0/posts/uid/{}/{}".format(site, post_id), params=params).json()
+            try:
+                response = Metasmoke.get("/api/v2.0/posts/uid/{}/{}".format(site, post_id), params=params).json()
+            except AttributeError:
+                response = None
 
         if response and "items" in response and len(response["items"]) > 0:
             ms_id = response["items"][0]["id"]
@@ -448,7 +451,10 @@ class Metasmoke:
             'filter': 'HNKHHGINKFKGIKGLGKIILMKNHHGHFOL',  # posts.body, posts.created_at
             'urls': parsing.to_protocol_relative(post_url)
         }
-        response = Metasmoke.get('/api/v2.0/posts/urls', params=payload).json()
+        try:
+            response = Metasmoke.get('/api/v2.0/posts/urls', params=payload).json()
+        except AttributeError:
+            return None
 
         return response['items']
 
