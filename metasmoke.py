@@ -21,7 +21,6 @@ import apigetpost
 import spamhandling
 import classes
 import chatcommunicate
-import chatcommands  # For report_posts
 from helpers import log, only_blacklists_changed, \
     only_modules_changed, blacklist_integrity_check, reload_changed_modules
 from gitmanager import GitManager
@@ -111,6 +110,7 @@ class Metasmoke:
             post_site_id = parsing.fetch_post_id_and_site_from_url(message["fp"]["post_link"])
             datahandling.add_false_positive(post_site_id[0:2])
         elif "report" in message:
+            import chatcommands  # Do it here
             chatcommands.report_posts([message["report"]["post_link"]], "the metasmoke API", None,
                                       "the metasmoke API")
             return
