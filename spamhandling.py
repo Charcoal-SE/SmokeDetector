@@ -10,12 +10,8 @@ import parsing
 import metasmoke
 import excepthook
 from classes import Post, PostParseError
-from apigetpost import api_get_post
 from helpers import log, escape_format
-from datahandling import has_already_been_posted, is_false_positive, add_blacklisted_user, \
-    add_or_update_multiple_reporter
-from parsing import to_metasmoke_link, rebuild_str, to_protocol_relative, fetch_post_id_and_site_from_url, \
-    get_user_from_url
+from parsing import to_metasmoke_link
 from tasks import Tasks
 
 
@@ -83,105 +79,6 @@ def check_if_spam_json(json_data):
         return False, '', ''
     is_spam, reason, why = check_if_spam(post)
     return is_spam, reason, why
-
-
-def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
-    output = []
-    action_done = {"report": "reported", "report-force": "reported", "scan": "scanned"}[operation]
-    if reported_in is None:
-        reported_from = " by *{}*".format(reported_by)
-    else:
-        reported_from = " by user *{}* in room *{}*".format(reported_by, reported_in)
-
-    if custom_reason:
-        with_reason = " with reason: *{}*".format(custom_reason)
-
-    report_info = u"Post manually {}{}{}.\n\n".format(
-        action_done, reported_from, with_reason)
-
-    urls = list(set(urls))
-    users_to_blacklist = []
-
-    for index, url in enumerate(urls, start=1):
-        post_data = api_get_post(rebuild_str(url))
-
-        if post_data is None:
-            output.append("Post {}: That does not look like a valid post URL.".format(index))
-            continue
-
-        if post_data is False:
-            output.append("Post {}: Could not find data for this post in the API. "
-                          "It may already have been deleted.".format(index))
-            continue
-
-        if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive(
-                (post_data.post_id, post_data.site)):
-            # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
-            # this re-report might be attempting to correct that/fix a mistake/etc.
-
-            if GlobalVars.metasmoke_key is not None:
-                se_link = to_protocol_relative(post_data.post_url)
-                ms_link = to_metasmoke_link(se_link)
-                output.append("Post {}: Already recently reported [ [MS]({}) ]".format(index, ms_link))
-                continue
-            else:
-                output.append("Post {}: Already recently reported".format(index))
-                continue
-
-        url = to_protocol_relative(post_data.post_url)
-        post = Post(api_response=post_data.as_dict)
-        user = get_user_from_url(post_data.owner_url)
-
-        if fetch_post_id_and_site_from_url(url)[2] == "answer":
-            parent_data = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
-            post._is_answer = True
-            post._parent = Post(api_response=parent_data.as_dict)
-
-        scan_spam, scan_reasons, scan_why = check_if_spam(post)  # Scan it first
-
-        if operation in {"report", "report-force"}:  # Force blacklist user even if !!/report falls back to scan
-            users_to_blacklist.append((user, blacklist_by, post_data.post_url))
-
-        # Expand real scan results from dirty returm value when not "!!/scan"
-        # Presence of "scan_why" indicates the post IS spam but ignored
-        if operation != "scan" and (not scan_spam) and scan_why:
-            scan_spam = True
-            scan_reasons, scan_why = scan_reasons
-
-        # If "report-force" then jump to the next block
-        if scan_spam and operation in {"scan", "report"}:
-            handle_spam(post=post, reasons=scan_reasons, why=report_info + scan_why)
-            continue
-
-        # scan_spam == False or "report-force"
-        if operation in {"report", "report-force"}:
-            batch = ""
-            if len(urls) > 1:
-                batch = " (batch report: post {} out of {})".format(index, len(urls))
-
-            if scan_spam:
-                why_append = "This post would have also been caught for: " + ", ".join(scan_reasons).capitalize() + \
-                    '\n' + scan_why
-            else:
-                why_append = "This post would not have been caught otherwise."
-
-            handle_spam(post=post,
-                        reasons=["Manually reported " + post_data.post_type + batch],
-                        why=report_info + why_append)
-            continue
-
-        # scan_spam == False and "scan"
-        else:
-            if scan_why:
-                output.append("Post {}: Looks like spam but not reported: {}".format(index, scan_why.capitalize()))
-            else:
-                output.append("Post {}: This does not look like spam".format(index))
-
-    for item in users_to_blacklist:
-        add_blacklisted_user(*item)
-
-    if len(output):
-        return "\n".join(output)
 
 
 # noinspection PyBroadException,PyProtectedMember
