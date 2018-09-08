@@ -630,14 +630,6 @@ def is_offensive_post(s, site):
     return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
-def has_eltima(s, site):
-    reg = regex.compile(r"(?is)\beltima")
-    if reg.search(s) and len(s) <= 750:
-        return True, u"Bad keyword *eltima* and body length under 750 chars"
-    return False, ""
-
-
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def username_similar_website(post):
     s, username = post.body, post.user_name
@@ -1199,8 +1191,8 @@ class FindSpam:
         {'regex': r'(?i)[\w\s]{0,20}help(?: a)?(?: weak)? postgraduate student(?: to)? write(?: a)? book\??',
          'all': True, 'sites': [], 'reason': 'bad keyword in {}', 'title': True, 'body': False, 'username': False,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 20, 'max_score': 2},
-        # Eltima: separated into its own method so we can constrain length
-        {'method': has_eltima, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': False, 'body': True,
+        # Eltima: Nested lookarounds. AS LONG AS YOU DARE THINKING
+        {'regex': r"(?is)(?<=^(?=.{,750}$).*)\beltima", 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': False, 'body': True,
          'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 50, 'max_score': 0},
         # Fake-customer-service in title
         {'method': has_customer_service, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True,
