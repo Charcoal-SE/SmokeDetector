@@ -19,12 +19,11 @@ import random
 import requests
 import os
 import time
-import importlib
 from html import unescape
 from ast import literal_eval
 # noinspection PyCompatibility
 import regex
-from helpers import only_blacklists_changed, only_modules_changed, log, expand_shorthand_link
+from helpers import only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, reload_changed_modules
 from classes import Post
 from classes.feedback import *
 
@@ -630,7 +629,7 @@ def pull():
     if "success" in states:
         if only_modules_changed(remote_diff):
             GitManager.pull_remote()
-            importlib.reload(findspam)
+            reload_changed_modules()
             GlobalVars.reload()
             tell_rooms_with('debug', GlobalVars.s_norestart2)
             return
