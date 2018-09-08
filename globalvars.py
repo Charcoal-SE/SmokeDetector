@@ -127,6 +127,8 @@ class GlobalVars:
     location = config.get("location", "Continuous Integration")
 
     metasmoke_ws = None
+    metasmoke_down = False
+    metasmoke_failures = 0  # Consecutive count, not cumulative
 
     chatexchange_u = config.get("ChatExchangeU")
     chatexchange_p = config.get("ChatExchangeP")

@@ -27,6 +27,9 @@ from gitmanager import GitManager
 import findspam
 
 
+MAX_FAILURES = 10  # Preservative, 10 errors = MS down
+
+
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
 class Metasmoke:
     @staticmethod
@@ -50,15 +53,18 @@ class Metasmoke:
                         data = json.loads(a)
                         GlobalVars.metasmoke_last_ping_time = datetime.now()
                         Metasmoke.handle_websocket_data(data)
+                        Metasmoke.reset_failure_count()
                     except Exception as e:
                         GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host,
                                                                               origin=GlobalVars.metasmoke_host)
                         payload = json.dumps({"command": "subscribe",
                                               "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"})
                         GlobalVars.metasmoke_ws.send(payload)
+                        GlobalVars.metasmoke_failures += 1
                         log('error', e, f=True)
                         traceback.print_exc()
             except Exception:
+                GlobalVars.metasmoke_failures += 1
                 log('error', "Couldn't bind to MS websocket")
                 if not has_succeeded:
                     break
@@ -227,7 +233,7 @@ class Metasmoke:
 
             payload = {'post': post, 'key': metasmoke_key}
             headers = {'Content-type': 'application/json'}
-            requests.post(GlobalVars.metasmoke_host + "/posts.json", data=json.dumps(payload), headers=headers)
+            Metasmoke.post("/posts.json", data=json.dumps(payload), headers=headers)
         except Exception as e:
             log('error', e)
 
@@ -252,7 +258,7 @@ class Metasmoke:
             }
 
             headers = {'Content-type': 'application/json'}
-            requests.post(GlobalVars.metasmoke_host + "/feedbacks.json", data=json.dumps(payload), headers=headers)
+            Metasmoke.post("/feedbacks.json", data=json.dumps(payload), headers=headers)
 
         except Exception as e:
             log('error', e)
@@ -275,7 +281,7 @@ class Metasmoke:
             }
 
             headers = {'Content-type': 'application/json'}
-            requests.post(GlobalVars.metasmoke_host + "/deletion_logs.json", data=json.dumps(payload), headers=headers)
+            Metasmoke.post("/deletion_logs.json", data=json.dumps(payload), headers=headers)
         except Exception as e:
             log('error', e)
 
@@ -295,8 +301,8 @@ class Metasmoke:
             }
 
             headers = {'content-type': 'application/json'}
-            response = requests.post(GlobalVars.metasmoke_host + "/status-update.json",
-                                     data=json.dumps(payload), headers=headers)
+            response = Metasmoke.post("/status-update.json",
+                                      data=json.dumps(payload), headers=headers)
 
             try:
                 response = response.json()
@@ -329,8 +335,8 @@ class Metasmoke:
     def update_code_privileged_users_list():
         payload = {'key': GlobalVars.metasmoke_key}
         headers = {'Content-type': 'application/json'}
-        response = requests.get(GlobalVars.metasmoke_host + "/api/users/code_privileged",
-                                data=json.dumps(payload), headers=headers).json()['items']
+        response = Metasmoke.get("/api/users/code_privileged",
+                                 data=json.dumps(payload), headers=headers).json()['items']
 
         GlobalVars.code_privileged_users = set()
 
@@ -353,14 +359,14 @@ class Metasmoke:
             'filter': 'GKNJKLILHNFMJLFKINGJJHJOLGFHJF',  # id and autoflagged
             'urls': post_url
         }
-        response = requests.get(GlobalVars.metasmoke_host + "/api/v2.0/posts/urls", params=payload).json()
+        response = Metasmoke.get("/api/v2.0/posts/urls", params=payload).json()
 
         if len(response["items"]) > 0 and response["items"][0]["autoflagged"]:
             # get flagger names
             id = str(response["items"][0]["id"])
             payload = {'key': GlobalVars.metasmoke_key}
 
-            flags = requests.get(GlobalVars.metasmoke_host + "/api/v2.0/posts/" + id + "/flags", params=payload).json()
+            flags = Metasmoke.get("/api/v2.0/posts/" + id + "/flags", params=payload).json()
 
             if len(flags["items"]) > 0:
                 return True, [user["username"] for user in flags["items"][0]["autoflagged"]["users"]]
@@ -372,8 +378,8 @@ class Metasmoke:
         payload = {'key': GlobalVars.metasmoke_key}
         headers = {'Content-type': 'application/json'}
 
-        requests.post(GlobalVars.metasmoke_host + "/flagging/smokey_disable",
-                      data=json.dumps(payload), headers=headers)
+        Metasmoke.post("/flagging/smokey_disable",
+                       data=json.dumps(payload), headers=headers)
 
     @staticmethod
     def send_statistics():
@@ -395,8 +401,8 @@ class Metasmoke:
 
         if GlobalVars.metasmoke_host is not None:
             log('info', 'Sent statistics to metasmoke: ', payload['statistic'])
-            requests.post(GlobalVars.metasmoke_host + "/statistics.json",
-                          data=json.dumps(payload), headers=headers)
+            Metasmoke.post("/statistics.json",
+                           data=json.dumps(payload), headers=headers)
 
     @staticmethod
     def post_auto_comment(msg, user, url=None, ids=None):
@@ -408,15 +414,13 @@ class Metasmoke:
 
         if url is not None:
             params = {"key": GlobalVars.metasmoke_key, "urls": url, "filter": "GFGJGHFJNFGNHKNIKHGGOMILHKLJIFFN"}
-            response = requests.get(GlobalVars.metasmoke_host + "/api/v2.0/posts/urls", params=params).json()
+            response = Metasmoke.get("/api/v2.0/posts/urls", params=params).json()
         elif ids is not None:
             post_id, site = ids
             site = parsing.api_parameter_from_link(site)
             params = {"key": GlobalVars.metasmoke_key, "filter": "GFGJGHFJNFGNHKNIKHGGOMILHKLJIFFN"}
 
-            response = requests.get("{}/api/v2.0/posts/uid/{}/{}".format(GlobalVars.metasmoke_host,
-                                                                         site,
-                                                                         post_id), params=params).json()
+            response = Metasmoke.get("/api/v2.0/posts/uid/{}/{}".format(site, post_id), params=params).json()
 
         if response and "items" in response and len(response["items"]) > 0:
             ms_id = response["items"][0]["id"]
@@ -425,7 +429,7 @@ class Metasmoke:
                       "chat_user_id": user.id,
                       "chat_host": user._client.host}
 
-            requests.post("{}/api/v2.0/comments/post/{}".format(GlobalVars.metasmoke_host, ms_id), params=params)
+            Metasmoke.post("/api/v2.0/comments/post/{}".format(ms_id), params=params)
 
     @staticmethod
     def get_post_bodies_from_ms(post_url):
@@ -437,6 +441,37 @@ class Metasmoke:
             'filter': 'HNKHHGINKFKGIKGLGKIILMKNHHGHFOL',  # posts.body, posts.created_at
             'urls': parsing.to_protocol_relative(post_url)
         }
-        response = requests.get(GlobalVars.metasmoke_host + '/api/v2.0/posts/urls', params=payload).json()
+        response = Metasmoke.get('/api/v2.0/posts/urls', params=payload).json()
 
         return response['items']
+
+    # Some sniffy stuff
+    @staticmethod
+    def request_sender(method):
+        def func(url, *args, **kwargs):
+            if not GlobalVars.metasmoke_host or GlobalVars.metasmoke_down:
+                return None
+
+            response = None  # Should return None upon failure, if any
+            try:
+                response = method(GlobalVars.metasmoke_host + url, *args, **args)
+            except Exception:
+                GlobalVars.metasmoke_failures += 1
+                if GlobalVars.metasmoke_failures > MAX_FAILURES:
+                    GlobalVars.metasmoke_down = True
+                    chatcommunicate.tell_rooms_with('debug', "**Warning**: {} latest connections to metasmoke have fa"
+                                                    "iled. Disabling metasmoke".format(GlobalVars.metasmoke_failures))
+                # No need to log here because it's re-raised
+                raise  # Maintain minimal difference to the original get/post methods
+            else:
+                GlobalVars.metasmoke_failures = 0  # Reset on success, what about decrementing instead of resetting?
+
+            return response
+        return func
+
+    get = request_sender.__func__(requests.get)
+    post = request_sender.__func__(requests.post)
+
+    @staticmethod
+    def reset_failure_count():  # For use in other places
+        GlobalVars.metasmoke_failures = 0
