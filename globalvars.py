@@ -160,9 +160,9 @@ class GlobalVars:
             commit['message'])
 
         GlobalVars.on_master = "HEAD detached" not in git_status()
-        GlobalVars.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {})".format(
+        GlobalVars.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
             GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
-            GlobalVars.commit['id'], GlobalVars.location)
+            GlobalVars.commit['id'], GlobalVars.location, platform.python_version())
         GlobalVars.s_reverted = \
             "[ {} ] SmokeDetector started in [reverted mode](" \
             "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
