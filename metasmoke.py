@@ -472,6 +472,8 @@ class Metasmoke:
                 raise  # Maintain minimal difference to the original get/post methods
             else:
                 GlobalVars.metasmoke_failures -= 1
+                if GlobalVars.metasmoke_failures < 0:
+                    GlobalVars.metasmoke_failures = 0
 
             return response
         return func
@@ -482,3 +484,5 @@ class Metasmoke:
     @staticmethod
     def reset_failure_count():  # For use in other places
         GlobalVars.metasmoke_failures -= 1
+        if GlobalVars.metasmoke_failures < 0:
+            GlobalVars.metasmoke_failures = 0
