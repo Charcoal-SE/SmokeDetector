@@ -356,11 +356,11 @@ def pattern_product_name(s, site):
     # Always use (?: non-capturing groups ) in the keywords list. Do NOT include hash or space in patterns
     keywords = [
         "Testo", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Aurora", "Diet", "Slim", "Premier", "(?:Pure)?Fit",
-        "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Perfect", "Shark", "Tank",
+        "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Perfect", "Shark", "Tank", "Penis",
         "Elite", "Force", "Exceptional", "Enhance(?:ment)?", "Nitro", "Max+", "Boost", "E?xtreme", "Grow",
         "Deep", "Male", "Pro", "Advanced", "Monster", "Divine", "Royale", "Angele*", "Trinity", "Andro",
         "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Boost(?:er)?",
-        "Serum", "Supplement", "Fuel", "Cream", "Keto", "Rapid", "Tone", "Forskolin", "Neuro", "Luma"
+        "Serum", "Supplements?", "Fuel", "Cream", "Keto", "Rapid", "Tone", "Forskolin", "Neuro", "Luma"
         "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Premi(?:um|er)", "Vital", "Master", "Ultra", "Radiant(?:ly)?",
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
