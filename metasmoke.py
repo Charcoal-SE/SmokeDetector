@@ -461,7 +461,7 @@ class Metasmoke:
 
             response = None  # Should return None upon failure, if any
             try:
-                response = method(GlobalVars.metasmoke_host + url, *args, **args)
+                response = method(GlobalVars.metasmoke_host + url, *args, **kwargs)
             except Exception:
                 GlobalVars.metasmoke_failures += 1
                 if GlobalVars.metasmoke_failures > MAX_FAILURES:
