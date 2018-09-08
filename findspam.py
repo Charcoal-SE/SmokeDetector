@@ -1192,8 +1192,9 @@ class FindSpam:
          'all': True, 'sites': [], 'reason': 'bad keyword in {}', 'title': True, 'body': False, 'username': False,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 20, 'max_score': 2},
         # Eltima: Nested lookarounds. AS LONG AS YOU DARE THINKING
-        {'regex': r"(?is)(?<=^(?=.{,750}$).*)\beltima", 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': False, 'body': True,
-         'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 50, 'max_score': 0},
+        {'regex': r"(?is)(?<=^(?=.{,750}$).*)\beltima", 'all': True, 'sites': [], 'reason': "bad keyword in {}",
+         'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
+         'max_rep': 50, 'max_score': 0},
         # Fake-customer-service in title
         {'method': has_customer_service, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True,
          'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'questions': False,
