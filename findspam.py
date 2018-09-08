@@ -353,7 +353,8 @@ def has_health(s, site):   # flexible detection of health spam in titles
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def pattern_product_name(s, site):
-    # Always use (?: non-capturing groups ) in the keywords list. Do NOT include hash or space in patterns
+    # Prefer (?: non-capturing groups ) in the keywords list.
+    # Avoid including hash or space in patterns unless you know what it means
     keywords = [
         "Testo", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Aurora", "Diet", "Slim", "Premier", "(?:Pure)?Fit",
         "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Perfect", "Shark", "Tank", "Penis",
@@ -362,7 +363,7 @@ def pattern_product_name(s, site):
         "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Boost(?:er)?",
         "Serum", "Supplements?", "Fuel", "Cream", "Keto", "Rapid", "Tone", "Forskolin", "Neuro", "Luma"
         "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Premi(?:um|er)", "Vital", "Master", "Ultra", "Radiant(?:ly)?",
-        "Weight[- ](?:Loss|Reduction)",  # hahaha
+        "Weight[ -](?:Loss|Reduction)",  # hahaha
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords += [r"X[\dLOST]?", "Alpha", "Plus", "Prime", "Formula"]
