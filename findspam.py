@@ -362,6 +362,7 @@ def pattern_product_name(s, site):
         "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Boost(?:er)?",
         "Serum", "Supplements?", "Fuel", "Cream", "Keto", "Rapid", "Tone", "Forskolin", "Neuro", "Luma"
         "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Premi(?:um|er)", "Vital", "Master", "Ultra", "Radiant(?:ly)?",
+        "Weight[- ](?:Loss|Reduction)",  # hahaha
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords += [r"X[\dLOST]?", "Alpha", "Plus", "Prime", "Formula"]
