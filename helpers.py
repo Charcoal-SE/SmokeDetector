@@ -112,14 +112,9 @@ def only_modules_changed(diff):
     return only_files_changed(diff, no_reboot_modules)
 
 
-# WARNING: Dangerous! Only use this with only_modules_changed.
-def reload_changed_modules(diff):
-    diff = diff.split()
+def reload_modules():
     result = True
-    for s in diff:
-        if s not in reloadable_modules:
-            continue  # Don't do bad things
-
+    for s in reloadable_modules:
         s = s.replace(".py", "")  # Relying on our naming convention
         try:
             # Some reliable approach

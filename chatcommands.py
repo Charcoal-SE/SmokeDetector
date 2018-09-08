@@ -23,7 +23,7 @@ from html import unescape
 from ast import literal_eval
 # noinspection PyCompatibility
 import regex
-from helpers import only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, reload_changed_modules
+from helpers import only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, reload_modules
 from classes import Post
 from classes.feedback import *
 
@@ -629,7 +629,7 @@ def pull():
     if "success" in states:
         if only_modules_changed(remote_diff):
             GitManager.pull_remote()
-            reload_changed_modules()
+            reload_modules()
             GlobalVars.reload()
             tell_rooms_with('debug', GlobalVars.s_norestart2)
             return
@@ -660,16 +660,23 @@ def git(alias_used="git"):
 
 
 # noinspection PyIncorrectDocstring,PyProtectedMember
-@command(whole_msg=True, privileged=True, aliases=["restart"])
-def reboot(msg):
+@command(whole_msg=True, privileged=True, give_name=True, aliases=["restart", "reload"])
+def reboot(msg, alias_used="reboot"):
     """
     Forces a system exit with exit code = 5
     :param msg:
     :return: None
     """
-    tell_rooms("Goodbye, cruel world", ("debug", (msg._client.host, msg.room.id)), ())
-    time.sleep(3)
-    os._exit(5)
+    if alias_used in {"reboot", "restart"}:
+        tell_rooms("Goodbye, cruel world", ("debug", (msg._client.host, msg.room.id)), ())
+        time.sleep(3)
+        os._exit(5)
+    elif alias_used in {"reload"}:
+        reload_modules()
+        tell_rooms_with('debug', GlobalVars.s_norestart2)
+        time.sleep(3)
+    else:
+        raise RuntimeError("Invalid alias!")
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints

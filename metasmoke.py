@@ -22,7 +22,7 @@ import spamhandling
 import classes
 import chatcommunicate
 from helpers import log, only_blacklists_changed, \
-    only_modules_changed, blacklist_integrity_check, reload_changed_modules
+    only_modules_changed, blacklist_integrity_check, reload_modules
 from gitmanager import GitManager
 import findspam
 
@@ -185,7 +185,7 @@ class Metasmoke:
                             log('warning', "Pulling remote with HEAD detached, checkout deploy", f=True)
                             os._exit(8)
                         GlobalVars.reload()
-                        reload_changed_modules()
+                        reload_modules()
                         chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart2)
                     else:
                         chatcommunicate.tell_rooms_with('debug', s, notify_site="/ci")
