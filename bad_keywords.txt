@@ -1548,3 +1548,4 @@ ionicx\W?testo
 bhadanazz
 illuminatikingdom\d*(?:@gmail\.com)?
 teal\W?farms
+hair\W?juice(?:\W?accelerator)?
