@@ -1500,14 +1500,15 @@ class FindSpam:
          'stripcodeblocks': True, 'body_summary': False,
          'max_rep': 101, 'max_score': 5},
         # No whitespace, punctuation, or formatting in a post
-        {'regex': r"(?i)^<p>\w+</p>\s*$", 'all': True, 'sites': ["codegolf.stackexchange.com",
+        {'regex': r"(?i)^<p>[0-9a-z]+</p>\s*$", 'all': True, 'sites': ["codegolf.stackexchange.com",
                                                                  "puzzling.stackexchange.com"],
          'reason': "no whitespace in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
-         'body_summary': False, 'max_rep': 1, 'max_score': 0},
-        # No whitespace in title, stricter check
-        {'regex': r"(?i)^\s*[0-9a-z]{10,}\s*$", 'all': True, 'sites': [],
+         'body_summary': False, 'max_rep': 10000, 'max_score': 10000},
+        # No whitespace in title, stricter regex, looser rep requirement
+        {'regex': r"(?i)^\s*[0-9a-z]{10,}\s*$", 'all': True, 'sites': {"codegolf.stackexchange.com"
+                                                                       "puzzling.stackexchange.com"},
          'reason': "no whitespace in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
-         'body_summary': False, 'max_rep': 1, 'max_score': 0, 'answers': False},
+         'body_summary': False, 'max_rep': 10000, 'max_score': 10000, 'answers': False},
         # Numbers-only title
         {'regex': r"^(?=.*[0-9])[^\pL]*$", 'all': True, 'sites': ["math.stackexchange.com"],
          'reason': "numbers-only title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
