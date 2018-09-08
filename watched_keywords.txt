@@ -5489,3 +5489,4 @@
 1536377232	iBug	lovesurvivorandlustsprovider(?:@gmail\.com)?
 1536384862	iBug	techtanic\.com
 1536387473	iBug	mhotmailsignin\.jigsy\.com
+1536389225	iBug	trend\W?micro
