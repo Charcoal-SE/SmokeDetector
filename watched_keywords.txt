@@ -4937,7 +4937,6 @@
 1533871403	Tetsuya Yamamoto	autosuggestr\.com
 1533879126	Glorfindel	stdtestoptions\.info
 1533879610	Makyen	ipadsupportnumber\.com
-1533879656	Makyen	coupon[\W_]?codes?
 1533883912	Glorfindel	insdhyd\.com
 1533884378	Glorfindel	techlarix\.com
 1533884555	tripleee	ketoned
