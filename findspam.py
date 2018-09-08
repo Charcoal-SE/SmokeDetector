@@ -372,7 +372,7 @@ def pattern_product_name(s, site):
     match_items = list(regex.compile(r"(?i)\b(?:{0})(?:[ -](?:{0}))+\b".format(keywords)).finditer(s))
     matches = [tuple(regex.split("[ -]", m[0])) for m in match_items]
     # Total "unique words in each match"
-    total_words = sum([len(set([regex.sub(r"(?i)X\d", "X0", w) for w in m]))
+    total_words = sum([len(set([regex.sub(r"\d", "", w) for w in m]))
                       for m in matches])
     if total_words >= 3:
         return True, u"Pattern-matching product name: " + FindSpam.match_infos(match_items)
