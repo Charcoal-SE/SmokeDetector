@@ -1510,7 +1510,7 @@ class FindSpam:
          'reason': "no whitespace in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # No whitespace in title, stricter check
-        {'regex': r"(?i)^[0-9a-z]{10,}$", 'all': True, 'sites': [],
+        {'regex': r"(?i)^\s*[0-9a-z]{10,}\s*$", 'all': True, 'sites': [],
          'reason': "no whitespace in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Numbers-only title
