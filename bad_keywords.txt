@@ -1099,7 +1099,7 @@ androdna
 velaire
 (?<=/)xflo(?:$|[/?])
 flexinall
-phytolast
+phytolast\w*
 andras\Wfiber
 apower\W?(manager|mirror|pdf|rec|recover)
 video\W?download\W?capture
