@@ -46,10 +46,11 @@ def log(log_level, *args, f=False):
     if level < Helpers.min_log_level:
         return
 
-    color = (levels[log_level][1] if log_level in levels else 'white')
-    log_str = u"{} {}".format(colored("[{}]".format(datetime.now().isoformat()[11:-7]), color),
-                              u"  ".join([str(x) for x in args]))
-    print(log_str)
+    color = levels[log_level][1] if log_level in levels else 'white'
+    log_str = "{} {}".format(colored("[{}]".format(datetime.now().isoformat()[11:-3]),
+                                     color),
+                             "  ".join([str(x) for x in args]))
+    print(log_str, file=sys.stderr)
 
     if f:  # Also to file
         log_file(log_level, *args)
@@ -65,7 +66,7 @@ def log_file(log_level, *args):
     if levels[log_level][0] < Helpers.min_log_level:
         return
 
-    log_str = "[{}] {}: {}".format(datetime.now().isoformat()[11:-3], log_level.upper(),
+    log_str = "[{}] {}: {}".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), log_level.upper(),
                                    "  ".join([str(x) for x in args]))
     with open("errorLogs.txt", "a", encoding="utf-8") as f:
         print(log_str, file=f)
@@ -111,14 +112,9 @@ def only_modules_changed(diff):
     return only_files_changed(diff, no_reboot_modules)
 
 
-# WARNING: Dangerous! Only use this with only_modules_changed.
-def reload_changed_modules(diff):
-    diff = diff.split()
+def reload_modules():
     result = True
-    for s in diff:
-        if s not in reloadable_modules:
-            continue  # Don't do bad things
-
+    for s in reloadable_modules:
         s = s.replace(".py", "")  # Relying on our naming convention
         try:
             # Some reliable approach
@@ -144,56 +140,13 @@ def unshorten_link(url, request_type='HEAD', explicitly_ignore_security_warning=
     requester = requesters[request_type]
     response_code = 301
     headers = {'User-Agent': 'SmokeDetector/git (+https://github.com/Charcoal-SE/SmokeDetector)'}
-    while response_code in [301, 302, 303, 307, 308]:
+    while response_code in {301, 302, 303, 307, 308}:
         res = requester(url, headers=headers)
         response_code = res.status_code
         if 'Location' in res.headers:
             url = res.headers['Location']
 
     return url
-
-
-parser_regex = r'((?:meta\.)?(?:(?:(?:math|(?:\w{2}\.)?stack)overflow|askubuntu|superuser|serverfault)|\w+)' \
-               r'(?:\.meta)?)\.(?:stackexchange\.com|com|net)'
-parser = regex.compile(parser_regex)
-exceptions = {
-    'meta.superuser': 'meta.superuser',
-    'meta.serverfault': 'meta.serverfault',
-    'meta.askubuntu': 'meta.askubuntu',
-    'mathoverflow': 'mathoverflow.net',
-    'meta.mathoverflow': 'meta.mathoverflow.net',
-    'meta.stackexchange': 'meta'
-}
-
-
-def api_parameter_from_link(link):
-    match = parser.search(link)
-    if match:
-        if match[1] in exceptions.keys():
-            return exceptions[match[1]]
-        elif 'meta.' in match[1] and 'stackoverflow' not in match[1]:
-            return '.'.join(match[1].split('.')[::-1])
-        else:
-            return match[1]
-    else:
-        return None
-
-
-id_parser_regex = r'(?:https?:)?//[^/]+/\w+/(\d+)'
-id_parser = regex.compile(id_parser_regex)
-
-
-def post_id_from_link(link):
-    match = id_parser.search(link)
-    if match:
-        return match[1]
-    else:
-        return None
-
-
-def to_metasmoke_link(post_url, protocol=True):
-    return "{}//m.erwaysoftware.com/posts/uid/{}/{}".format(
-        "https:" if protocol else "", api_parameter_from_link(post_url), post_id_from_link(post_url))
 
 
 def blacklist_integrity_check():

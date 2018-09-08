@@ -127,7 +127,7 @@ class GitManager:
                                        blacklist.upper()),                                        # 8
                            "head": branch,
                            "base": "master"}
-                response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls",
+                response = requests.post("https://api.github.com/repos/{}/pulls".format(GlobalVars.bot_repo_slug),
                                          auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password),
                                          data=json.dumps(payload))
                 log('debug', response.json())
@@ -278,12 +278,25 @@ class GitManager:
             return git.status()
 
     @staticmethod
+    def merge_abort():
+        if 'windows' in platform.platform().lower():
+            return  # No we don't do Windows
+        git.merge("--abort")
+
+    @staticmethod
+    def reset_head():
+        if 'windows' in platform.platform().lower():
+            return  # No we don't do Windows
+        git.reset("--hard", "HEAD")
+        git.clean("-f")
+
+    @staticmethod
     def get_remote_diff():
         git.fetch()
         if 'windows' in platform.platform().lower():
-            return git.diff_filenames("deploy", "origin/deploy")
+            return git.diff_filenames("HEAD", "origin/deploy")
         else:
-            return git.diff("--name-only", "deploy", "origin/deploy")
+            return git.diff("--name-only", "HEAD", "origin/deploy")
 
     @staticmethod
     def pull_remote():

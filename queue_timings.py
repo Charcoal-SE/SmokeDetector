@@ -1,4 +1,4 @@
-# coding=utf-8
+#!/usr/bin/env python3
 # queue_timings.py
 # Analysis script for bodyfetcher queue timings. Call from the command line using Python 3.
 

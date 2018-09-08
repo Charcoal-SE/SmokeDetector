@@ -7,12 +7,12 @@ from html.parser import HTMLParser
 from html import unescape
 from hashlib import md5
 from configparser import NoOptionError, RawConfigParser
-from helpers import log
 import threading
 # noinspection PyCompatibility
 import regex
 import subprocess as sp
 import platform
+from helpers import log
 
 
 def git_commit_info():
@@ -45,7 +45,8 @@ class GlobalVars:
     watched_keywords = {}
     ignored_posts = []
     auto_ignored_posts = []
-    startup_utc = datetime.utcnow().strftime("%H:%M:%S")
+    startup_utc_date = datetime.utcnow()
+    startup_utc = startup_utc_date.strftime("%H:%M:%S")
     latest_questions = []
     api_backoff_time = 0
     deletion_watcher = None
@@ -115,8 +116,9 @@ class GlobalVars:
     config = config_parser["Config"]  # It's a collections.OrderedDict now
 
     # environ_or_none replaced by os.environ.get (essentially dict.get)
-    bot_name = os.environ.get("SMOKEDETECTOR_NAME") or "SmokeDetector"
-    bot_repository = os.environ.get("SMOKEDETECTOR_REPO") or "//github.com/Charcoal-SE/SmokeDetector"
+    bot_name = os.environ.get("SMOKEDETECTOR_NAME", "SmokeDetector")
+    bot_repo_slug = os.environ.get("SMOKEDETECTOR_REPO", "Charcoal-SE/SmokeDetector")
+    bot_repository = "//github.com/{}".format(bot_repo_slug)
     chatmessage_prefix = "[{}]({})".format(bot_name, bot_repository)
 
     site_id_dict = {}
@@ -125,28 +127,15 @@ class GlobalVars:
     location = config.get("location", "Continuous Integration")
 
     metasmoke_ws = None
+    metasmoke_down = False
+    metasmoke_failures = 0  # Consecutive count, not cumulative
 
     chatexchange_u = config.get("ChatExchangeU")
     chatexchange_p = config.get("ChatExchangeP")
 
-    try:
-        metasmoke_host = config["metasmoke_host"]
-    except KeyError:
-        metasmoke_host = None
-        log('info', "metasmoke host not found. Set it as metasmoke_host in the config file. "
-            "See https://github.com/Charcoal-SE/metasmoke.")
-
-    try:
-        metasmoke_key = config["metasmoke_key"]
-    except KeyError:
-        metasmoke_key = None
-        log('info', "No metasmoke key found, which is okay if both are running on the same host")
-
-    try:
-        metasmoke_ws_host = config["metasmoke_ws_host"]
-    except KeyError:
-        metasmoke_ws_host = None
-        log('info', "No metasmoke websocket host found, which is okay if you're anti-websocket")
+    metasmoke_host = config.get("metasmoke_host")
+    metasmoke_key = config.get("metasmoke_key")
+    metasmoke_ws_host = config.get("metasmoke_ws_host")
 
     github_username = config.get("github_username")
     github_password = config.get("github_password")
@@ -155,6 +144,9 @@ class GlobalVars:
 
     flovis_host = config.get("flovis_host")
     flovis = None
+
+    # Miscellaneous
+    log_time_format = config.get("log_time_format", "%H:%M:%S")
 
     @staticmethod
     def reload():
@@ -170,9 +162,9 @@ class GlobalVars:
             commit['message'])
 
         GlobalVars.on_master = "HEAD detached" not in git_status()
-        GlobalVars.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {})".format(
+        GlobalVars.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
             GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
-            GlobalVars.commit['id'], GlobalVars.location)
+            GlobalVars.commit['id'], GlobalVars.location, platform.python_version())
         GlobalVars.s_reverted = \
             "[ {} ] SmokeDetector started in [reverted mode](" \
             "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \

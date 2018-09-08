@@ -1,4 +1,4 @@
-# coding=utf-8
+#!/usr/bin/env python3
 # requires https://pypi.python.org/pypi/websocket-client/
 
 from excepthook import uncaught_exception, install_thread_excepthook
@@ -20,7 +20,6 @@ import traceback
 from bodyfetcher import BodyFetcher
 import chatcommunicate
 from datetime import datetime
-from utcdate import UtcDate
 from spamhandling import check_if_spam_json
 from globalvars import GlobalVars
 from datahandling import load_files, filter_auto_ignored_posts
@@ -52,6 +51,14 @@ if any('--loglevel' in x for x in sys.argv):
         Helpers.min_log_level = 0
 else:
     Helpers.min_log_level = 0
+
+if not GlobalVars.metasmoke_host:
+    log('info', "metasmoke host not found. Set it as metasmoke_host in the config file. "
+        "See https://github.com/Charcoal-SE/metasmoke.")
+if not GlobalVars.metasmoke_key:
+    log('info', "No metasmoke key found, which is okay if both are running on the same host")
+if not GlobalVars.metasmoke_ws_host:
+    log('info', "No metasmoke websocket host found, which is okay if you're anti-websocket")
 
 try:
     update_tld_names()
@@ -194,7 +201,7 @@ while True:
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         now = datetime.utcnow()
-        delta = now - UtcDate.startup_utc_date
+        delta = now - GlobalVars.startup_utc_date
         seconds = delta.total_seconds()
         tr = traceback.format_exc()
         exception_only = ''.join(traceback.format_exception_only(type(e), e))\

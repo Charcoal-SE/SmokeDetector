@@ -58,6 +58,12 @@ def test_location():
     assert chatcommands.location() == GlobalVars.location
 
 
+def test_version():
+    assert chatcommands.version() == '{id} [{commit_name}]({repository}/commit/{commit_code})'.format(
+        id=GlobalVars.location, commit_name=GlobalVars.commit_with_author,
+        commit_code=GlobalVars.commit['id'], repository=GlobalVars.bot_repository)
+
+
 @patch("chatcommands.datetime")
 def test_hats(date):
     date.side_effect = datetime.datetime
@@ -461,6 +467,33 @@ def test_whitelisted_users():
     except:
         # Cleanup
         os.remove("whitelistedUsers.p")
+
+
+def test_metasmoke():
+    msg = Fake({
+        "owner": {
+            "name": "El'endia Starman",
+            "id": 1,
+            "is_moderator": False
+        },
+        "room": {
+            "id": 11540,
+            "_client": {
+                "host": "stackexchange.com"
+            }
+        },
+        "_client": {
+            "host": "stackexchange.com"
+        }
+    })
+    msg_source = "metasmoke is {}. Current failure count (consecutive): {}"
+
+    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-up") == "metasmoke is now considered up."
+    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-status") == msg_source.format("up", 0)
+    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-down") == "metasmoke is now considered down."
+    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-status") == msg_source.format("down", 999)
+    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-up") == "metasmoke is now considered up."
+    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-status") == msg_source.format("up", 0)
 
 
 @pytest.mark.skipif(os.path.isfile("notifications.p"), reason="shouldn't overwrite file")

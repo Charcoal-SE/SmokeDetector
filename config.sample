@@ -16,4 +16,5 @@ location=location_here
 # github_username=username@domain.com
 # github_password=p@55w0rd
 
-# Miscellaneous stuff. Recommend leaving the default values for production Smokey
+# Miscellaneous customization. Recommend leaving the default values for production Smokey
+# log_time_format=%H:%M:%S

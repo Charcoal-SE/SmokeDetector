@@ -1,8 +1,8 @@
 import itertools
 import regex
 
-from metasmoke import Metasmoke
 from tasks import Tasks
+import metasmoke
 
 
 class Feedback:
@@ -21,7 +21,7 @@ class Feedback:
 
     @staticmethod
     def send_custom(type, url, msg):
-        Tasks.do(Metasmoke.send_feedback_for_post, url, type, msg.owner.name, msg.owner.id, msg._client.host)
+        Tasks.do(metasmoke.Metasmoke.send_feedback_for_post, url, type, msg.owner.name, msg.owner.id, msg._client.host)
 
 
 TRUE_FEEDBACKS = {

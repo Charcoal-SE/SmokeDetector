@@ -66,7 +66,7 @@ class TSVDictParser(BlacklistParser):
         list = {}
         with open(self._filename, 'r', encoding='utf-8') as f:
             for lineno, line in enumerate(f, 1):
-                if regex.compile('^\s*(?:#|$)').match(line):
+                if regex.compile(r'^\s*(?:#|$)').match(line):
                     continue
                 try:
                     when, by_whom, what = line.rstrip().split('\t')
