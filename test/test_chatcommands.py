@@ -488,8 +488,7 @@ def test_metasmoke():
     })
     msg_source = "metasmoke is {}. Current failure count (consecutive): {}"
 
-    GlobalVars.metasmoke_down = False
-    GlobalVars.metasmoke_failures = 0
+    assert chatcommands.metasmoke(msg, alias_used="ms-up") == "metasmoke is now considered up."
     assert chatcommands.metasmoke(msg, alias_used="ms-status") == msg_source.format("up", 0)
     assert chatcommands.metasmoke(msg, alias_used="ms-down") == "metasmoke is now considered down."
     assert chatcommands.metasmoke(msg, alias_used="ms-status") == msg_source.format("up", 999)
