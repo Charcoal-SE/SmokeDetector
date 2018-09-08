@@ -1500,8 +1500,8 @@ class FindSpam:
          'stripcodeblocks': True, 'body_summary': False,
          'max_rep': 101, 'max_score': 5},
         # No whitespace, punctuation, or formatting in a post
-        {'regex': r"(?i)^<p>[0-9a-z]+</p>\s*$", 'all': True, 'sites': ["codegolf.stackexchange.com",
-                                                                 "puzzling.stackexchange.com"],
+        {'regex': r"(?i)^<p>[0-9a-z]+</p>\s*$", 'all': True, 'sites': {"codegolf.stackexchange.com",
+                                                                       "puzzling.stackexchange.com"},
          'reason': "no whitespace in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 10000, 'max_score': 10000},
         # No whitespace in title, stricter regex, looser rep requirement
