@@ -5487,3 +5487,4 @@
 1536373569	Makyen	dev\.scottsbasslessons\.com
 1536373577	Makyen	dr\.olorun(?:@gmail\.com)?
 1536377232	iBug	lovesurvivorandlustsprovider(?:@gmail\.com)?
+1536384862	iBug	techtanic\.com
