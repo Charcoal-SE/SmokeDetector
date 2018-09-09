@@ -63,7 +63,7 @@ def log_file(log_level, *args):
         'warning': 2,
         'error': 3,
     }
-    if levels[log_level][0] < Helpers.min_log_level:
+    if levels[log_level] < Helpers.min_log_level:
         return
 
     log_str = "[{}] {}: {}".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), log_level.upper(),
