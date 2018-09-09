@@ -17,6 +17,7 @@ from gitmanager import GitManager
 import threading
 import random
 import requests
+import sys
 import os
 import time
 from html import unescape
@@ -525,6 +526,13 @@ def unblock(msg, room_id):
 
 
 # --- Administration Commands --- #
+ALIVE_MSG = [
+    'Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee',
+    'Watching this endless list of new questions *never* gets boring', 'Kinda sorta',
+    'You should totally drop that and use jQuery', '¯\_(ツ)_/¯',
+]
+
+
 # noinspection PyIncorrectDocstring
 @command(aliases=["live"])
 def alive():
@@ -532,10 +540,7 @@ def alive():
     Returns a string indicating the process is still active
     :return: A string
     """
-    return random.choice(['Yup', 'You doubt me?', 'Of course',
-                          '... did I miss something?', 'plz send teh coffee',
-                          'Watching this endless list of new questions *never* gets boring',
-                          'Kinda sorta'])
+    return random.choice(ALIVE_MSG)
 
 
 # noinspection PyIncorrectDocstring
@@ -553,8 +558,8 @@ def errorlogs(count):
 def metasmoke(msg, alias_used):
     if alias_used in {"metasmoke", "ms-status"}:
         status_text = [
-            "metasmoke is up. Current failure count (consecutive): {}".format(GlobalVars.metasmoke_failures),
-            "metasmoke is down. Current failure count (consecutive): {}".format(GlobalVars.metasmoke_failures),
+            "metasmoke is up. Current failure count: {}".format(GlobalVars.metasmoke_failures),
+            "metasmoke is down. Current failure count: {}".format(GlobalVars.metasmoke_failures),
         ]
         return status_text[GlobalVars.metasmoke_down]
     # The next aliases/functionalities require privilege

@@ -49,9 +49,7 @@ def test_wut():
 
 
 def test_alive():
-    assert chatcommands.alive() in ['Yup', 'You doubt me?', 'Of course', '... did I miss something?',
-                                    'plz send teh coffee', 'Kinda sorta',
-                                    'Watching this endless list of new questions *never* gets boring']
+    assert chatcommands.alive() in chatcommands.ALIVE_MSG
 
 
 def test_location():
@@ -486,7 +484,7 @@ def test_metasmoke():
             "host": "stackexchange.com"
         }
     })
-    msg_source = "metasmoke is {}. Current failure count (consecutive): {}"
+    msg_source = "metasmoke is {}. Current failure count: {}"
 
     assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-up") == "metasmoke is now considered up."
     assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-status") == msg_source.format("up", 0)
