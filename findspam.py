@@ -1551,7 +1551,7 @@ class FindSpam:
          'reason': 'image by low-rep user', 'title': False, 'body': True, 'username': False, 'body_summary': False,
          'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
         # Link inside nested blockquotes
-        {'regex': r'(?:<blockquote>\s*){6}<p><a href="([^<>]+)"[^<>]*>\1</a>\s*</p>\s*</blockquote>', 'all': True,
+        {'regex': r'(?:<blockquote>\s*){3,}<p><a href="([^<>]+)"[^<>]*>\1</a>\s*</p>\s*</blockquote>', 'all': True,
          'sites': [], 'reason': 'link inside deeply nested blockquotes', 'title': False, 'body': True,
          'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
         # Mostly dots in post
