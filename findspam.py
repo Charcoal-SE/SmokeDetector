@@ -621,7 +621,7 @@ def is_offensive_post(s, site):
         r"whore|cunt|jerk(ing)?\W?off|cumm(y|ie)|butthurt|queef|lesbo|"
         r"bitche?|(eat|suck|throbbing|sw[oe]ll(en|ing)?)\b.{0,20}\b(cock|dick)|dee[sz]e? nut[sz]|"
         r"dumb\W?ass|wet\W?puss(y|ie)?|slut+y?|shot\W?my\W?(hot\W?)?load)s?)\b")
-    matches = offensive.finditer(s)
+    matches = list(offensive.finditer(s))
     len_of_match = 0
     text_matched = []
     for match in matches:
@@ -629,7 +629,8 @@ def is_offensive_post(s, site):
         text_matched.append(match.group(0))
 
     if len_of_match / len(s) >= 0.015:  # currently at 1.5%, this can change if it needs to
-        return True, "Offensive keyword{}: *{}*".format("s" if len(text_matched) > 1 else "", ", ".join(text_matched))
+        return True, "Offensive keyword{}: *{}*".format("s" if len(text_matched) > 1 else "",
+                                                        FindSpam.match_infos(matches))
     return False, ""
 
 
