@@ -1230,7 +1230,7 @@ cortyx\W?clarity
 the\W?away\W?days
 magnumax
 keto\W?advanced
-rs\W?gold
+(?:os)?rs\W?gold
 keto\W?tone(?:\W?diet)?
 eye\W?serum\W?magic
 jet\W?pro\W?x
