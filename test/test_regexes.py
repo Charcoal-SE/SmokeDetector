@@ -93,6 +93,7 @@ But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, Fal
     ('Advanced BSWT', '<p><a href="......">Product Name</a> Advanced BSWT is a must-have <a href="https://example.com">https://example.com</a></p>', '', '', False, False, True),
     ('IDNA misleading link', '<a href="http://www.h%c3%a5nd.no">http://www.h\u00E5nd.no</a>', '', '', False, False, False),
     ('Mostly punctuation', ';[].[.[.&_$)_\\*&_@$.[;*/-!#*&)(_.\'].1\\)!#_', '', '', False, False, True),
+    ('Few unique', 'asdssdadasssaadaddadaaaadadsssssaaddadassssdadadsssadadassssdaaasdddsaaa', '', '', False, False, True),
 ])
 def test_regexes(title, body, username, site, body_is_summary, is_answer, match):
     # If we want to test answers separately, this should be changed
