@@ -217,7 +217,12 @@ def has_repeating_words(s, site):
 def has_few_characters(s, site):
     s = regex.sub("</?(?:p|strong|em)>", "", s).rstrip()  # remove HTML paragraph tags from posts
     uniques = len(set(s) - {"\n", "\t"})
-    if (len(s) >= 30 and uniques <= 6) or (len(s) >= 100 and uniques <= 15):  # reduce if false reports appear
+    length = len(s)
+    thresholds = [  # LBound, UBound, MaxUnique
+        (30, 36, 6), (36, 42, 7), (42, 48, 8), (48, 54, 9), (54, 60, 10),
+        (60, 70, 11), (70, 80, 12), (80, 90, 13), (90, 100, 14), (100, 2**30, 15),
+    ]
+    if any([t[0] <= length < t[1] and uniques <= t[2] for t in thresholds]):
         if uniques >= 5 and site == "math.stackexchange.com":
             # Special case for Math.SE: Uniques case may trigger false-positives.
             return False, ""
