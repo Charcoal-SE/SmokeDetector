@@ -1507,7 +1507,7 @@ class FindSpam:
          'reason': "no whitespace in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 10000, 'max_score': 10000},
         # No whitespace in title, stricter regex, looser rep requirement
-        {'regex': r"(?i)^\s*[0-9a-z]{10,}\s*$", 'all': True, 'sites': {"codegolf.stackexchange.com"
+        {'regex': r"(?i)^\s*[0-9a-z]{20,}\s*$", 'all': True, 'sites': {"codegolf.stackexchange.com"
                                                                        "puzzling.stackexchange.com"},
          'reason': "no whitespace in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 10000, 'max_score': 10000, 'answers': False},
