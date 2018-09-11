@@ -228,7 +228,7 @@ def has_few_characters(s, site):
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def has_repeating_characters(s, site):
     s = s.strip().replace("\u200B", "").replace("\u200C", "")  # Strip leading and trailing spaces
-    if "\n" in s or "<code>" in s or "<pre>" in s:
+    if "\n\n" in s or "<code>" in s or "<pre>" in s:
         return False, ""
     s = regex.sub(URL_REGEX, "", s)  # Strip URLs for this check
     if not s:

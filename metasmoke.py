@@ -147,9 +147,9 @@ class Metasmoke:
                                      reasons=["Manually reported " + post_data.post_type],
                                      why=why)
         elif "deploy_updated" in message:
+            return  # Disabled
             sha = message["deploy_updated"]["head_commit"]["id"]
             if sha != os.popen('git log -1 --pretty="%H"').read():
-                return  # Disabled
                 if "autopull" in message["deploy_updated"]["head_commit"]["message"]:
                     if only_blacklists_changed(GitManager.get_remote_diff()):
                         commit_md = "[`{0}`](https://github.com/{1}/commit/{0})" \
@@ -216,6 +216,9 @@ class Metasmoke:
         if GlobalVars.metasmoke_host is None:
             log('info', 'Attempted to send stats but metasmoke_host is undefined. Ignoring.')
             return
+        elif GlobalVars.metasmoke_down:
+            log('warning', "Metasmoke down, not sending stats.")
+            return
 
         metasmoke_key = GlobalVars.metasmoke_key
 
@@ -241,6 +244,9 @@ class Metasmoke:
     def send_feedback_for_post(post_link, feedback_type, user_name, user_id, chat_host):
         if GlobalVars.metasmoke_host is None:
             log('info', 'Received chat feedback but metasmoke_host is undefined. Ignoring.')
+            return
+        elif GlobalVars.metasmoke_down:
+            log('warning', "Metasmoke is down, not sending feedback")
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -268,6 +274,9 @@ class Metasmoke:
         if GlobalVars.metasmoke_host is None:
             log('info', 'Attempted to send deletion data but metasmoke_host is undefined. Ignoring.')
             return
+        elif GlobalVars.metasmoke_down:
+            log('warning', "Metasmoke is down, not sending deletion stats")
+            return
 
         metasmoke_key = GlobalVars.metasmoke_key
 
@@ -289,6 +298,9 @@ class Metasmoke:
     def send_status_ping():
         if GlobalVars.metasmoke_host is None:
             log('info', 'Attempted to send status ping but metasmoke_host is undefined. Not sent.')
+            return
+        elif GlobalVars.metasmoke_down:
+            log('info', "Metasmoke is down, wat?")
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -333,6 +345,10 @@ class Metasmoke:
 
     @staticmethod
     def update_code_privileged_users_list():
+        if GlobalVars.metasmoke_down:
+            log('warning', "Metasmoke is down, can't update code provilege list")
+            return
+
         payload = {'key': GlobalVars.metasmoke_key}
         headers = {'Content-type': 'application/json'}
         try:
