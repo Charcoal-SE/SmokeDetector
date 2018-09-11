@@ -5547,3 +5547,4 @@
 1536705413	Makyen	[a-z_]*(?:1_*)?414[\W_]*522[\W_]*1127[a-z_]*
 1536705424	Makyen	healthcareltfse(?:@gmail\.com)?
 1536705437	Makyen	sidalinco
+1536706779	Makyen	flexiontoken\.io
