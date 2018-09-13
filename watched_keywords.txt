@@ -5540,7 +5540,6 @@
 1536667220	iBug	msofficetechnicalsupportnumbers\.com
 1536669555	tripleee	gloriouscaterers\.com
 1536673221	Byte Commander	decor(holding\.com|flooring\.net)
-1536690894	Makyen	(?:regenerative\W*medicine|stem\W*cell\W*therapy)\W*houston
 1536692696	Makyen	[a-z_]*(?:1_*)?888[\W_]*274[\W_]*1968[a-z_]*
 1536705402	Makyen	bestchemsales\.com
 1536705413	Makyen	[a-z_]*(?:1_*)?414[\W_]*522[\W_]*1127[a-z_]*
