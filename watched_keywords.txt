@@ -5558,3 +5558,4 @@
 1536763268	Glorfindel	whatstatus\.co
 1536763286	Glorfindel	launcherapk\.info
 1536798802	Makyen	emailcustomersupportnumber\.com
+1536798812	Makyen	GURILARICO\W*GURU
