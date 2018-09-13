@@ -407,6 +407,10 @@ class Metasmoke:
 
     @staticmethod
     def send_statistics():
+        if GlobalVars.metasmoke_down:
+            log('warning', "Metasmoke is down, not sending statistics")
+            return
+
         GlobalVars.posts_scan_stats_lock.acquire()
         if GlobalVars.post_scan_time != 0:
             posts_per_second = GlobalVars.num_posts_scanned / GlobalVars.post_scan_time

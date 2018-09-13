@@ -278,7 +278,7 @@ def do_blacklist(blacklist_type, msg, force=False):
 
     try:
         code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
-    except (requests.exceptions.ConnectionError, json.decoder.JSONDecodeError):
+    except (requests.exceptions.ConnectionError, json.decoder.JSONDecodeError, TypeError):
         code_permissions = False  # Because we need the system to assume that we don't have code privs.
         metasmoke_down = True
 
@@ -529,7 +529,7 @@ def unblock(msg, room_id):
 ALIVE_MSG = [
     'Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee',
     'Watching this endless list of new questions *never* gets boring', 'Kinda sorta',
-    'You should totally drop that and use jQuery', '¯\_(ツ)_/¯',
+    'You should totally drop that and use jQuery', r'¯\\_(ツ)_/¯',
 ]
 
 

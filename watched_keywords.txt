@@ -5484,7 +5484,6 @@
 1536391295	iBug	thevideos\.us
 1536392495	Makyen	ceme188\.website
 1536392502	Makyen	sahabatceme\.com
-1536424279	NobodyNada	scansnapdriver\.com
 1536449372	Makyen	oakcapitalmanagements(?:@gmail\.com)?
 1536441219	Erik the Outgolfer	lickevic\.info
 1536470227	Makyen	Larryblackhathacksolution(?:@gmail\.com)?
@@ -5541,7 +5540,6 @@
 1536667220	iBug	msofficetechnicalsupportnumbers\.com
 1536669555	tripleee	gloriouscaterers\.com
 1536673221	Byte Commander	decor(holding\.com|flooring\.net)
-1536690894	Makyen	(?:regenerative\W*medicine|stem\W*cell\W*therapy)\W*houston
 1536692696	Makyen	[a-z_]*(?:1_*)?888[\W_]*274[\W_]*1968[a-z_]*
 1536705402	Makyen	bestchemsales\.com
 1536705413	Makyen	[a-z_]*(?:1_*)?414[\W_]*522[\W_]*1127[a-z_]*
@@ -5549,3 +5547,40 @@
 1536705437	Makyen	sidalinco
 1536706779	Makyen	flexiontoken\.io
 1536722497	Shree	newtecharmor\.com
+1536738069	Glorfindel	wampinstitute\.in
+1536749038	Byte Commander	geek-squad\.us
+1536752626	paper1111	uniglobemarkets\.com
+1536756462	Zoe	jovialevents\.com
+1536757141	paper1111	marouan-ben-mansour\.com
+1536761940	iBug	sodepami\.vn
+1536762830	Glorfindel	favycoin\.com
+1536762892	Glorfindel	commercialtrust\.co\.uk
+1536763268	Glorfindel	whatstatus\.co
+1536763286	Glorfindel	launcherapk\.info
+1536798802	Makyen	emailcustomersupportnumber\.com
+1536798812	Makyen	GURILARICO\W*GURU
+1536798826	Makyen	dr\.gurilarico(?:@gmail\.com)?
+1536798837	Makyen	[a-z_]*(?:1_*)?832[\W_]*263[\W_]*7128[a-z_]*
+1536798846	Makyen	[a-z_]*(?:1_*)?932[\W_]*653[\W_]*8703[a-z_]*
+1536798857	Makyen	[a-z_]*(?:1_*)?877[\W_]*57[\W_]*1[\W_]*5111[a-z_]*
+1536798870	Makyen	creativehomebuying@solution4u\.com
+1536798881	Makyen	[a-z_]*(?:1_*)?801[\W_]*753[\W_]*8846[a-z_]*
+1536798892	Makyen	yolufadi@memphis\.edu
+1536798909	Makyen	eogeorge@memphis\.edu
+1536798920	Makyen	elizabethcole3222(?:@yahoo\.com)?
+1536812231	tripleee	741003700
+1536819472	Makyen	audacitydownload\.com
+1536819498	Makyen	hptechsupportnumbers\.com
+1536824675	Makyen	247recovery@tech-center.com
+1536825811	Glorfindel	freshcalendars\.com
+1536826389	Tetsuya Yamamoto	hotelbedding-newcon\.com
+1536826402	Tetsuya Yamamoto	hotelsupplies-newcon\.com
+1536827974	Tetsuya Yamamoto	robo-soft\.com
+1536830837	Tetsuya Yamamoto	johnmarkfinancialfunds
+1536833132	Glorfindel	audfree\.com
+1536839990	iBug	digitalpike\.com
+1536840843	iBug	gamesupportonline\.com
+1536842789	tripleee	[a-z_]*(?:1_*)?365[\W_]*300[\W_]*3916[a-z_]*
+1536849184	Glorfindel	itineraires-lointains\.fr
+1536849194	Glorfindel	amazontedx\.com
+1536849202	Glorfindel	diversesign\.com\.au

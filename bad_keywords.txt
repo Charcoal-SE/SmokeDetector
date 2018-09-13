@@ -1564,3 +1564,8 @@ bio\W?x
 paltrox
 ultimate\W?test\W?max
 houston-tx/regenerative-medicine/
+paltrox\W?t
+recapture\W?360(?:\W?cream)?\w*
+love\Wspells?
+(?:regenerative\W*medicine|stem\W*cell\W*therapy)\W*houston
+keto\W?bhb(?:\W?\d+)?
