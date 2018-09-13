@@ -5580,3 +5580,4 @@
 1536839990	iBug	digitalpike\.com
 1536840843	iBug	gamesupportonline\.com
 1536849184	Glorfindel	itineraires-lointains\.fr
+1536849194	Glorfindel	amazontedx\.com
