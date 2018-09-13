@@ -5559,3 +5559,4 @@
 1536763286	Glorfindel	launcherapk\.info
 1536798802	Makyen	emailcustomersupportnumber\.com
 1536798812	Makyen	GURILARICO\W*GURU
+1536798826	Makyen	dr\.gurilarico(?:@gmail\.com)?
