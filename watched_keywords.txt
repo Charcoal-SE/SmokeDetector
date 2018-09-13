@@ -5561,3 +5561,4 @@
 1536798812	Makyen	GURILARICO\W*GURU
 1536798826	Makyen	dr\.gurilarico(?:@gmail\.com)?
 1536798837	Makyen	[a-z_]*(?:1_*)?832[\W_]*263[\W_]*7128[a-z_]*
+1536798846	Makyen	[a-z_]*(?:1_*)?932[\W_]*653[\W_]*8703[a-z_]*
