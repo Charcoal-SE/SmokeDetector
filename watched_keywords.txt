@@ -5589,3 +5589,4 @@
 1536859398	bertieb	futuretechmagazine\.net
 1536862526	Makyen	technologyaol\.doodlekit\.com
 1536862630	Makyen	onlinephptraining\.com
+1536868921	Makyen	cyberspywear(?:@gmail\.com)?
