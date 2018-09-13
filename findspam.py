@@ -634,8 +634,7 @@ def is_offensive_post(s, site):
         text_matched.append(match.group(0))
 
     if len_of_match / len(s) >= 0.015:  # currently at 1.5%, this can change if it needs to
-        return True, "Offensive keyword{}: *{}*".format("s" if len(text_matched) > 1 else "",
-                                                        FindSpam.match_infos(matches))
+        return True, "Offensive keyword: {}".format(FindSpam.match_infos(matches))
     return False, ""
 
 

@@ -5580,3 +5580,6 @@
 1536839990	iBug	digitalpike\.com
 1536840843	iBug	gamesupportonline\.com
 1536842789	tripleee	[a-z_]*(?:1_*)?365[\W_]*300[\W_]*3916[a-z_]*
+1536849184	Glorfindel	itineraires-lointains\.fr
+1536849194	Glorfindel	amazontedx\.com
+1536849202	Glorfindel	diversesign\.com\.au
