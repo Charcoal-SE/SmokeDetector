@@ -5567,3 +5567,4 @@
 1536798881	Makyen	[a-z_]*(?:1_*)?801[\W_]*753[\W_]*8846[a-z_]*
 1536798892	Makyen	yolufadi@memphis\.edu
 1536798909	Makyen	eogeorge@memphis\.edu
+1536798920	Makyen	elizabethcole3222(?:@yahoo\.com)?
