@@ -5579,3 +5579,4 @@
 1536833132	Glorfindel	audfree\.com
 1536839990	iBug	digitalpike\.com
 1536840843	iBug	gamesupportonline\.com
+1536842789	tripleee	[a-z_]*(?:1_*)?365[\W_]*300[\W_]*3916[a-z_]*
