@@ -5560,3 +5560,4 @@
 1536798802	Makyen	emailcustomersupportnumber\.com
 1536798812	Makyen	GURILARICO\W*GURU
 1536798826	Makyen	dr\.gurilarico(?:@gmail\.com)?
+1536798837	Makyen	[a-z_]*(?:1_*)?832[\W_]*263[\W_]*7128[a-z_]*
