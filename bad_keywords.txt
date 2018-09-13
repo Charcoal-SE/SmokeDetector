@@ -1566,3 +1566,4 @@ ultimate\W?test\W?max
 houston-tx/regenerative-medicine/
 paltrox\W?t
 recapture\W?360(?:\W?cream)?\w*
+love\Wspells?
