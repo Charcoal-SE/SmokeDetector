@@ -5594,3 +5594,4 @@
 1536900497	tripleee	rock\W?erect
 1536904435	tripleee	[a-z_]*(?:1_*)?612[\W_]*440[\W_]*6724[a-z_]*
 1536904610	Makyen	brianpeters147(?:@gmail\.com)?
+1536904838	Tetsuya Yamamoto	qshore\.com
