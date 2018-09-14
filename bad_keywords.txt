@@ -1569,3 +1569,4 @@ recapture\W?360(?:\W?cream)?\w*
 love\Wspells?
 (?:regenerative\W*medicine|stem\W*cell\W*therapy)\W*houston
 keto\W?bhb(?:\W?\d+)?
+[a-z_]*(?:1_*)?844[\W_]*617[\W_]*9531[a-z_]*

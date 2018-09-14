@@ -3776,7 +3776,6 @@
 1528441945	Zoe	^stack\W*overflow\W*fake\W*knowledge$
 1528444301	tripleee	nris\.com
 1528446158	tripleee	mixxkart\.com
-1528446325	Makyen	[a-z_]*(?:1_*)?844[\W_]*617[\W_]*9531[a-z_]*
 1528451939	Glorfindel	pycker\.com
 1528455872	Zoe	logisticinfotech\.com
 1528462664	Glorfindel	towelrootapkfree\.blogspot\.com
