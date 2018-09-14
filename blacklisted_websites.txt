@@ -2258,4 +2258,4 @@ cart2add\.com
 scansnapdriver\.com
 facts4health\.com
 hptechsupportnumbers\.com
-neftegaz-energy-consultant.business\.site
+neftegaz-energy-consultant\.business\.site
