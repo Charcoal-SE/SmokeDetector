@@ -1576,3 +1576,4 @@ VitalityTech(?:\W?Testosterone)?(?!\.com)
 terrapure\W?cbd
 retinollift\W?dk
 intell\W?x(?:\W?pro)?
+rapid\W?trim(?:\W?keto)?
