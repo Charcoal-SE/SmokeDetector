@@ -1572,3 +1572,4 @@ keto\W?bhb(?:\W?\d+)?
 [a-z_]*(?:1_*)?844[\W_]*617[\W_]*9531[a-z_]*
 (?<=/)yahoo-email
 htx-me
+VitalityTech(?:\W?Testosterone)?
