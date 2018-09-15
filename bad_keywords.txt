@@ -1574,3 +1574,4 @@ keto\W?bhb(?:\W?\d+)?
 htx-me
 VitalityTech(?:\W?Testosterone)?(?!\.com)
 terrapure\W?cbd
+retinollift\W?dk
