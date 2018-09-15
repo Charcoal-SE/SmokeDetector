@@ -1573,3 +1573,4 @@ keto\W?bhb(?:\W?\d+)?
 (?<=/)yahoo-email
 htx-me
 VitalityTech(?:\W?Testosterone)?(?!\.com)
+terrapure\W?cbd
