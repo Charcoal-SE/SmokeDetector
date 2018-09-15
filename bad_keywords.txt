@@ -1575,3 +1575,4 @@ htx-me
 VitalityTech(?:\W?Testosterone)?(?!\.com)
 terrapure\W?cbd
 retinollift\W?dk
+intell\W?x(?:\W?pro)?
