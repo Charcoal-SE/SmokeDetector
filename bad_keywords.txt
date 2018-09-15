@@ -97,7 +97,7 @@ smartican
 фальшивы(е|х) (деньги|денег|купюры?)
 raging\W?lion
 retrodynamic\W?formula
-^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$
+(?<=^.{,199})(contact|offer|join).{,99}\d{9}(?=.{,99}$)
 krojam(soft|cleaner)?
 filessearch\W?tool
 teksonit
@@ -128,7 +128,7 @@ slotobit
 putlocker
 vimax
 (contact|call) us (today|now)
-Thierno(_| )?M.(_| )Sow
+Thierno[ _]?M.[ _]Sow
 maxtropin
 geniux
 we are a team of (highly|professionals)
