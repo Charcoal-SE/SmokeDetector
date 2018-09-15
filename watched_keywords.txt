@@ -5614,3 +5614,4 @@
 1536995605	Makyen	ndsreporting\.com
 1537002312	iBug	healthwho\.com
 1537008680	iBug	jimdosite\.com
+1537014943	iBug	classboat\.com
