@@ -34,7 +34,7 @@ maxx\W?test\W?3000
 orvigomax
 cheap\W?wigs?
 jivam
-^(?s).{0,200}brain\W?power
+(?<=^(?s).{0,200})brain\W?power
 maximum\W?shred
 black\W?label\W?no
 bagprada
