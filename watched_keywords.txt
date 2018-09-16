@@ -5623,3 +5623,4 @@
 1537053667	Makyen	lord\W*hack2000(?:@mail\.com)?
 1537061236	Makyen	1960nobs\.com\.ng
 1537067231	Makyen	murphycyberhack\.com
+1537067247	Makyen	cyberhacks789(?:@gmail\.com)?
