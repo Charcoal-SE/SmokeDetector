@@ -5625,3 +5625,4 @@
 1537067291	Makyen	[a-z_]*(?:1_*)?628[\W_]*203[\W_]*7169[a-z_]*(?#murphycyberhack.com & cyberhacks789@gmail.com)
 1537067311	Makyen	[a-z_]*(?:1_*)?317[\W_]*561[\W_]*6706[a-z_]*(?#murphycyberhack.com & cyberhacks789@gmail.com)
 1537070048	iBug	giasutriviet\.edu\.vn
+1537070071	iBug	Trung\W?Tam\W?Gia\W?Su(?:\W?Tri\W?Viet)?
