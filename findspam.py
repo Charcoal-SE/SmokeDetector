@@ -830,6 +830,14 @@ def mostly_punctuations(s, site):
         return False, ""
 
 
+def no_whitespace(s, site):
+    if regex.compile(r"(?is)^[0-9a-z]{20,}\s*$").match(s):
+        return True, "No whitespace or formatting in title"
+    elif regex.compile(r"(?is)^<p>[0-9a-z]+</p>\s*$").match(s):
+        return True, "No whitespace or formatting in body"
+    return False, ""
+
+
 def toxic_check(post):
     s = strip_urls_and_tags(post.body)[:3000]
 
@@ -1506,13 +1514,11 @@ class FindSpam:
          'stripcodeblocks': True, 'body_summary': False,
          'max_rep': 101, 'max_score': 5},
         # No whitespace, punctuation, or formatting in a post
-        {'regex': r"(?i)^<p>[0-9a-z]+</p>\s*$", 'all': True, 'sites': {"codegolf.stackexchange.com",
-                                                                       "puzzling.stackexchange.com"},
+        {'method': no_whitespace, 'all': True, 'sites': {"codegolf.stackexchange.com", "puzzling.stackexchange.com"},
          'reason': "no whitespace in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 10000, 'max_score': 10000},
-        # No whitespace in title, stricter regex, looser rep requirement
-        {'regex': r"(?i)^\s*[0-9a-z]{20,}\s*$", 'all': True, 'sites': {"codegolf.stackexchange.com"
-                                                                       "puzzling.stackexchange.com"},
+        # No whitespace in title, stricter regex (see method)
+        {'method': no_whitespace, 'all': True, 'sites': {"codegolf.stackexchange.com" "puzzling.stackexchange.com"},
          'reason': "no whitespace in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 10000, 'max_score': 10000, 'answers': False},
         # Numbers-only title
