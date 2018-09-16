@@ -830,10 +830,10 @@ def mostly_punctuations(s, site):
         return False, ""
 
 
-def no_whitespace(s, site):
-    if regex.compile(r"(?is)^[0-9a-z]{20,}\s*$").match(s):
+def no_whitespace(s, site, body=True):
+    if (not body) and regex.compile(r"(?is)^[0-9a-z]{20,}\s*$").match(s):
         return True, "No whitespace or formatting in title"
-    elif regex.compile(r"(?is)^<p>[0-9a-z]+</p>\s*$").match(s):
+    elif body and regex.compile(r"(?is)^<p>[0-9a-z]+</p>\s*$").match(s):
         return True, "No whitespace or formatting in body"
     return False, ""
 
@@ -1514,11 +1514,13 @@ class FindSpam:
          'stripcodeblocks': True, 'body_summary': False,
          'max_rep': 101, 'max_score': 5},
         # No whitespace, punctuation, or formatting in a post
-        {'method': no_whitespace, 'all': True, 'sites': {"codegolf.stackexchange.com", "puzzling.stackexchange.com"},
+        {'method': lambda s, site: no_whitespace(s, site, body=True),
+         'all': True, 'sites': {"codegolf.stackexchange.com", "puzzling.stackexchange.com"},
          'reason': "no whitespace in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 10000, 'max_score': 10000},
         # No whitespace in title, stricter regex (see method)
-        {'method': no_whitespace, 'all': True, 'sites': {"codegolf.stackexchange.com" "puzzling.stackexchange.com"},
+        {'method': lambda s, site: no_whitespace(s, site, body=False),
+         'all': True, 'sites': {"codegolf.stackexchange.com", "puzzling.stackexchange.com"},
          'reason': "no whitespace in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 10000, 'max_score': 10000, 'answers': False},
         # Numbers-only title
