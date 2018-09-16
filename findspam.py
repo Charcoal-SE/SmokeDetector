@@ -419,7 +419,7 @@ def keyword_email(s, site):   # a keyword and an email in the same post
 def pattern_email(s, site):
     pattern = regex.compile(r"(?i)(?<![=#/])\b(dr|[A-z0-9_.%+-]*"
                             r"(loan|hack|financ|fund|spell|temple|herbal|spiritual|atm|heal|priest|classes|"
-                            r"investment))[A-z0-9_.%+-]*"
+                            r"investment|illuminati|vampire?))[A-z0-9_.%+-]*"
                             r"@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b"
                             ).search(s)
     if pattern:
