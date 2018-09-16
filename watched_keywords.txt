@@ -5627,3 +5627,4 @@
 1537070048	iBug	giasutriviet\.edu\.vn
 1537070071	iBug	Trung\W?Tam\W?Gia\W?Su(?:\W?Tri\W?Viet)?
 1537073514	Makyen	(?:info@)?bitsearch\.co\.kr(?#Bitcoin recovery)
+1537081344	Glorfindel	kidwalkers\.com
