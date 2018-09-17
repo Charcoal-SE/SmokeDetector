@@ -5639,3 +5639,4 @@
 1537162333	tripleee	howtorestartiphone\.info
 1537175235	Glorfindel	technogiants\.net
 1537178174	Glorfindel	feedify\.net
+1537178304	iBug	vancedtube\.com
