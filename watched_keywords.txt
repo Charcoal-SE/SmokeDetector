@@ -5640,3 +5640,4 @@
 1537175235	Glorfindel	technogiants\.net
 1537178174	Glorfindel	feedify\.net
 1537178304	iBug	vancedtube\.com
+1537178559	Glorfindel	itoolsdownload\.com
