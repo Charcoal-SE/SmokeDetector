@@ -5634,3 +5634,4 @@
 1537094864	Glorfindel	borosoraa\.blogspot\.com
 1537099022	tripleee	srf-indonesia\.web\.id
 1537157589	tripleee	natural\W?herbal\W?remedy(?:\W?blog)?
+1537157652	Tetsuya Yamamoto	supplementfather\.com
