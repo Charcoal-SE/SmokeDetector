@@ -4027,7 +4027,6 @@
 1529671987	doppelgreener	za\.gl
 1529672133	Zoe	most\W*addict(ed|ive)\W*games?\W*of
 1529687972	Byte Commander	mcerdem82
-1529697546	Andy	data-flair\.training
 1529733521	Makyen	primeloanlice@gmail\.com
 1529753358	Glorfindel	wikisol
 1529764596	Makyen	[a-z_]*44[\W_]*800[\W_]*404[\W_]*9463[a-z_]*
