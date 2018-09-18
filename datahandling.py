@@ -55,7 +55,6 @@ def _dump_pickle(path, item, protocol=pickle.HIGHEST_PROTOCOL):
         pickle.dump(item, f, protocol=protocol)
 
 
-
 def _remove_pickle(path):
     try:
         os.remove(path)
