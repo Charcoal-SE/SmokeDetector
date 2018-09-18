@@ -1578,3 +1578,4 @@ intell\W?x(?:\W?pro)?
 rapid\W?trim(?:\W?keto)?
 htx[ -]me
 better\W?strength\W?maximizer
+rapid\W?spot
