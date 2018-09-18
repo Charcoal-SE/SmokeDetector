@@ -50,8 +50,8 @@ def _load_pickle(path, encoding='utf-8'):
 def _dump_pickle(path, item, protocol=pickle.HIGHEST_PROTOCOL):
     if not os.path.isdir(PICKLE_STORAGE):
         os.mkdir(PICKLE_STORAGE)
-    path = os.path.join(PICKLE_STORAGE, path)
-    with open(path, "wb") as f:
+    newpath = os.path.join(PICKLE_STORAGE, path)
+    with open(newpath, "wb") as f:
         pickle.dump(item, f, protocol=protocol)
 
 
@@ -97,6 +97,8 @@ def load_files():
         GlobalVars.bodyfetcher.previous_max_ids = _load_pickle("bodyfetcherMaxIds.p", encoding='utf-8')
     if _has_pickle("bodyfetcherQueueTimings.p"):
         GlobalVars.bodyfetcher.queue_timings = _load_pickle("bodyfetcherQueueTimings.p", encoding='utf-8')
+    if _has_pickle("codePrivileges.p"):
+        GlobalVars.code_privileged_users = _load_pickle("codePrivileges.p", encoding='utf-8')
     blacklists.load_blacklists()
 
 
@@ -158,6 +160,7 @@ def is_code_privileged(site, user_id):
     if GlobalVars.code_privileged_users is None:
         Metasmoke.update_code_privileged_users_list()
 
+    _dump_pickle("codePrivileges.p", GlobalVars.code_privileged_users)
     # For now, disable the moderator override on code/blacklist changes
     return (site, user_id) in GlobalVars.code_privileged_users
 
