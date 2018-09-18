@@ -55,6 +55,19 @@ def _dump_pickle(path, item, protocol=pickle.HIGHEST_PROTOCOL):
         pickle.dump(item, f, protocol=protocol)
 
 
+
+def _remove_pickle(path):
+    try:
+        os.remove(path)
+    except OSError:
+        pass
+    path = os.path.join(PICKLE_STORAGE, path)
+    try:
+        os.remove(path)
+    except OSError:
+        pass
+
+
 def _has_pickle(path):
     newpath = os.path.join(PICKLE_STORAGE, path)
     return os.path.isfile(newpath) or os.path.isfile(path)
