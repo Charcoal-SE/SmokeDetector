@@ -5658,3 +5658,4 @@
 1537271119	Glorfindel	answiz\.com
 1537293190	Glorfindel	clevermosaics\.com
 1537308115	Makyen	createwebinar\.com
+1537308130	Makyen	app-reviews\.org
