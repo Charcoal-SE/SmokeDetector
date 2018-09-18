@@ -3,7 +3,7 @@ import os
 # noinspection PyPep8Naming
 import pickle
 from datetime import datetime
-from metasmoke import Metasmoke
+import metasmoke
 import requests
 import json
 import time
@@ -155,12 +155,15 @@ def is_auto_ignored_post(postid_site_tuple):
     return False
 
 
-# noinspection PyUnusedLocal
+def update_code_privileged_users_list():
+    metasmoke.Metasmoke.update_code_privileged_users_list()
+    _dump_pickle("codePrivileges.p", GlobalVars.code_privileged_users)
+
+
 def is_code_privileged(site, user_id):
     if GlobalVars.code_privileged_users is None:
-        Metasmoke.update_code_privileged_users_list()
+        update_code_privileged_users_list()
 
-    _dump_pickle("codePrivileges.p", GlobalVars.code_privileged_users)
     # For now, disable the moderator override on code/blacklist changes
     return (site, user_id) in GlobalVars.code_privileged_users
 
@@ -458,7 +461,7 @@ def append_pings(original_message, names):
 def has_community_bumped_post(post_url, post_content):
     if GlobalVars.metasmoke_key is not None and GlobalVars.metasmoke_host is not None:
         try:
-            ms_posts = Metasmoke.get_post_bodies_from_ms(post_url)
+            ms_posts = metasmoke.Metasmoke.get_post_bodies_from_ms(post_url)
             if not ms_posts:
                 return False
 

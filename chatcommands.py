@@ -729,6 +729,7 @@ def amicodeprivileged(msg):
     :param msg:
     :return: A string
     """
+    update_code_privileged_users_list()
     if is_code_privileged(msg._client.host, msg.owner.id):
         return "\u2713 You are a code-privileged user."
 
