@@ -30,7 +30,9 @@ Next, copy `config.sample` to a new file called `config`, and edit the values re
 To run, use `python3 nocrash.py` (preferably in a daemon-able mode, like a `screen` session.)
 You can also use `python3 ws.py`, but then SmokeDetector will be shut down after 6 hours; when running from `nocrash.py`, it will be restarted. (This is to be sure that closed websockets, if any, are reopened.)
 
-SmokeDetector only supports Stack Exchange logins for now.
+SmokeDetector only supports Stack Exchange logins,
+and runs on Python 3.4 or higher,
+for now.
 
 ## License
 
