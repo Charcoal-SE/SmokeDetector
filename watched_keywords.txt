@@ -5608,7 +5608,6 @@
 1536994904	Makyen	realdealdocumentation@protonmail\.com
 1536995523	Makyen	realdeal-docs\.com
 1536995605	Makyen	ndsreporting\.com
-1537002312	iBug	healthwho\.com
 1537008680	iBug	jimdosite\.com
 1537014943	iBug	classboat\.com
 1537031436	Makyen	christopher101atmhackers(?:@gmail\.com)?
