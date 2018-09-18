@@ -613,6 +613,7 @@ def watched_ns_for_url_domain(s, site):
         'fatcow.com.',
         'vedigitize.us.',
         'serverpars.com.',
+        'cloudns.net.',
     ])
 
 
