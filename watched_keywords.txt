@@ -5529,7 +5529,6 @@
 1536664808	tripleee	odysseytravels\.net
 1536665937	tripleee	hghtherapydoctor\.us
 1536666381	Shree	technauto\.com
-1536667220	iBug	msofficetechnicalsupportnumbers\.com
 1536669555	tripleee	gloriouscaterers\.com
 1536673221	Byte Commander	decor(holding\.com|flooring\.net)
 1536692696	Makyen	[a-z_]*(?:1_*)?888[\W_]*274[\W_]*1968[a-z_]*
