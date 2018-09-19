@@ -5668,5 +5668,4 @@
 1537328332	Makyen	237[\W_]*683775558(?#whatsapp)
 1537328360	Makyen	1I-ZjZaTXZs(?#youtube video; IELTS & TOEFL, ESOL certificate spammer)
 1537334320	tripleee	wowblackfriday\.com
-1537338963	Makyen	\W*فروشگاه اينترنتي\W*(?#online store)
 1537339513	Glorfindel	celebspedia\.com
