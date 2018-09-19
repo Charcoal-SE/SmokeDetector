@@ -5676,3 +5676,4 @@
 1537347538	Tetsuya Yamamoto	starcampaigns\.xyz
 1537352217	Glorfindel	\w*-keepvid\.com
 1537352233	Glorfindel	mp3skulls\.tube
+1537352255	Glorfindel	youtube\d+-mp3\.org
