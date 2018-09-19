@@ -5681,3 +5681,4 @@
 1537360124	Shree	cometchat\.com
 1537364208	Glorfindel	tniel\.net
 1537368256	Makyen	cryptodraw\.org
+1537368286	Makyen	@eos\.wallet\.claim(?#part of a path on medium.com)
