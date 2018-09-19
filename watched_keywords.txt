@@ -5669,3 +5669,4 @@
 1537328360	Makyen	1I-ZjZaTXZs(?#youtube video; IELTS & TOEFL, ESOL certificate spammer)
 1537334320	tripleee	wowblackfriday\.com
 1537339513	Glorfindel	celebspedia\.com
+1537340389	iBug	\w*فروشگاه اينترنتي\w*(?#online store)
