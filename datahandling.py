@@ -50,6 +50,8 @@ def _load_pickle(path, encoding='utf-8'):
 def _dump_pickle(path, item, protocol=pickle.HIGHEST_PROTOCOL):
     if not os.path.isdir(PICKLE_STORAGE):
         os.mkdir(PICKLE_STORAGE)
+    if os.path.isfile(path):  # Remove old one
+        os.remove(path)
     newpath = os.path.join(PICKLE_STORAGE, path)
     with open(newpath, "wb") as f:
         pickle.dump(item, f, protocol=protocol)
