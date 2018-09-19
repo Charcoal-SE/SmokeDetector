@@ -2,7 +2,7 @@
 # noinspection PyCompatibility
 
 import math
-import regex
+import regex_proxy as regex
 from difflib import SequenceMatcher
 from urllib.parse import urlparse, unquote_plus
 from itertools import chain
