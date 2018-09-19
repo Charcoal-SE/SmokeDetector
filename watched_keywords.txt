@@ -5670,3 +5670,4 @@
 1537334320	tripleee	wowblackfriday\.com
 1537339513	Glorfindel	celebspedia\.com
 1537340389	iBug	\w*فروشگاه اينترنتي\w*(?#online store)
+1537341278	bertieb	247quickbooks\.us
