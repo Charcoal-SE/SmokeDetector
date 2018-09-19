@@ -5506,7 +5506,6 @@
 1536586274	paper1111	cruisebay\.com
 1536602327	Makyen	halloweenday2018\.com
 1536602776	Makyen	mfpvision\.com
-1536604761	Glorfindel	queryhelp\.com
 1536606487	Glorfindel	northfulton\.com
 1536622037	Makyen	jameswalton7781(?:@gmail\.com)?
 1536628191	Makyen	ieltsexpats(?:@yahoo\.com)?
