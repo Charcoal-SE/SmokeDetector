@@ -5674,3 +5674,4 @@
 1537341694	Tetsuya Yamamoto	gisondolaw\.com
 1537342604	Tetsuya Yamamoto	videshitraveller\.com
 1537347538	Tetsuya Yamamoto	starcampaigns\.xyz
+1537352217	Glorfindel	\w*-keepvid\.com
