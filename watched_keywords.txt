@@ -5672,3 +5672,4 @@
 1537340389	iBug	\w*فروشگاه اينترنتي\w*(?#online store)
 1537341278	bertieb	247quickbooks\.us
 1537341694	Tetsuya Yamamoto	gisondolaw\.com
+1537342604	Tetsuya Yamamoto	videshitraveller\.com
