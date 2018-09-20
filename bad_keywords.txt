@@ -392,9 +392,10 @@ jolique
 clemix
 nuavive
 evanti
-\w*毕业证\w*
+# we rely on regex.WORD for correct Chinese boundary
+毕业证
 i\Wdidn't\Wfind\Wthe\Wright\Wsolution\Wfrom\Wthe\Winternet
-\w*レーザーポインター\w*
+レーザーポインター
 ultra\Wpure\Wturmeric
 libidogene
 suisse\Wrenewal
@@ -1341,7 +1342,7 @@ vera\W?slim
 verism\W?training(?:\W?online)?
 thermo\W?burn
 vita\W?silk
-\w*学历认证\w*
+学历认证
 forskothin
 \d*jobsexam
 premier\W?keto
