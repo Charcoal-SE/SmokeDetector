@@ -5684,3 +5684,4 @@
 1537368286	Makyen	@eos\.wallet\.claim(?#part of a path on medium.com)
 1537368313	Makyen	escortintoronto\.info
 1537375371	bertieb	infomint\.net
+1537421526	Tetsuya Yamamoto	tvforsa\.com
