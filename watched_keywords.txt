@@ -5702,3 +5702,4 @@
 1537462826	Makyen	teamweedforbuds2018(?#sub-domain of blacklisted site)
 1537463166	Glorfindel	investmentnovel\.com
 1537477967	Makyen	joshua\.dp\.lloyd(?:@gmail\.com)?
+1537477981	Makyen	teamweedforbuds(?:@protonmail\.com)?
