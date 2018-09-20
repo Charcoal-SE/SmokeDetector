@@ -4616,7 +4616,6 @@
 1532491987	Makyen	hydfgh\.[\w-]+\.com
 1532492002	Makyen	givology\.org/~hydfgh
 1532492375	Makyen	calendarhour\.com
-1532495874	Makyen	outlooktechnicalsupportnumbers\.com
 1532500887	Glorfindel	drkenholz\.com
 1532504410	Glorfindel	cryptoexchange4u\.com
 1532504467	Glorfindel	monkeybuggy
