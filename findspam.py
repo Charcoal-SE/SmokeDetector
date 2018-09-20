@@ -379,7 +379,7 @@ def pattern_product_name(s, site):
     # Total "unique words in each match"
     total_words = sum(n for n in
                       [len(set([regex.sub(r"\d", "", w) for w in m]))
-                      for m in matches]
+                       for m in matches]
                       if n >= 2)
     if total_words >= 3:
         return True, u"Pattern-matching product name: " + FindSpam.match_infos(match_items)
