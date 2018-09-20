@@ -10,6 +10,7 @@ from datetime import datetime
 from apigetpost import api_get_post, PostData
 import datahandling
 from datahandling import *
+from metasmoke import Metasmoke
 from blacklists import load_blacklists
 from parsing import *
 from spamhandling import check_if_spam, handle_spam
