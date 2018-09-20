@@ -1684,7 +1684,7 @@ class FindSpam:
                 try:
                     compiled_regex = rule['compiled_regex']
                 except KeyError:
-                    compiled_regex = regex.compile(rule['regex'], regex.UNICODE | regex.WORD, city=FindSpam.city_list)
+                    compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
                     rule['compiled_regex'] = compiled_regex
 
                 if rule['title'] and not post.is_answer:
