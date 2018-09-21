@@ -2290,4 +2290,4 @@ printerhealthandcare\.com
 gpssupportaustralia\.com
 4crack\.pw
 facts4order\.com
-escort\W+\.info
+escort\w+\.info
