@@ -559,6 +559,7 @@ def bad_ns_for_url_domain(s, site):
         'aapkeaajanese.website.',
         'healthymum.org.',
         'escortdomain.net.',
+        'syrahost.com.',
     ])
 
 
@@ -606,7 +607,6 @@ def watched_ns_for_url_domain(s, site):
         'greengeeks.com.',
         'supportaus.com.',
         'utecho.com.',
-        'syrahost.com.',
         '256gbserver.com.',
         'solutionsinfini.org.',
         'dnsdomen.com.',
