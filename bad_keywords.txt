@@ -1584,3 +1584,4 @@ green\W?coffee\W?grano
 lojesete
 top\Wshelf\Waaa\Wbuds
 nuvi
+[a-z_]*(?:61_*)?1[\W_]*800[\W_]*215[\W_]*732[a-z_]*
