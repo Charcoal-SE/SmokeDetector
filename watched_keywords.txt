@@ -5711,3 +5711,4 @@
 1537511072	tripleee	marketsandmarkets\.com
 1537513118	Glorfindel	sinranpack\.com
 1537513500	Makyen	[a-z_]*86[\W_]*551[\W_]*62570198[a-z_]*(?#sinranpack.com)
+1537513509	Makyen	anhui\W*xinyuan\W*packing\W*technology
