@@ -1015,8 +1015,9 @@ class FindSpam:
         r"(enstella|recoverysoftware|removevirus|support(number|help|quickbooks)|techhelp|calltech|exclusive|"
         r"onlineshop|video(course|classes|tutorial(?!s))|vipmodel|(?<!word)porn|wholesale|inboxmachine|(get|buy)cheap|"
         r"escort|diploma|(govt|government)jobs|extramoney|earnathome|spell(caster|specialist)|profits|"
-        r"seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online-?(training|solution))"
-        r"[\w-]*?\.(co|net|org|in(\W|fo)|us|ir|wordpress|blogspot|tumblr|webs\.)",
+        r"seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online-?(training|solution)"
+        r"|babasupport)"
+        r"[\w-]*\.(co|net|org|in(\W|fo)|us|ir|wordpress|blogspot|tumblr|webs\.)",
         r"(replica(?!t)|rs\d?gold|rssong|runescapegold|maxgain|e-cash|mothers?day|phone-?number|fullmovie|tvstream|"
         r"trainingin|dissertation|(placement|research)-?(paper|statement|essay)|digitalmarketing|infocampus|"
         r"cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|"
@@ -1042,9 +1043,10 @@ class FindSpam:
         r"writing[\w-]{5})[\w-]*?)\.(co|net|org|in(\W|fo)|us|us)",
         r"(top|best|expert)\d\w{0,15}\.in\W", r"\dth(\.co)?\.in", r"(jobs|in)\L<city>\.in",
         r"[\w-](recovery|repairs?|rescuer|(?<!epoch|font)converter)(pro|kit)?\.(com|net)",
-        r"(corrupt|repair)[\w-]*?\.blogspot", r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)?[\w-]{0,10}"
-                                              r"(account|tech|customer|support|service|phone|help)[\w-]{0,10}(service|"
-                                              r"care|help|recovery|support|phone|number)",
+        r"(corrupt|repair)[\w-]*?\.blogspot",
+        r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)?[\w-]{0,10}"
+        r"(account|tech|customer|support|service|phone|help)[\w-]{0,10}(service|"
+        r"care|help|recovery|support|phone|number)",
         r"http\S*?(essay|resume|thesis|dissertation|paper)-?writing",
         r"fix[\w-]*?(files?|tool(box)?)\.com", r"(repair|recovery|fix)tool(box)?\.(co|net|org)",
         r"smart(pc)?fixer\.(co|net|org)",
