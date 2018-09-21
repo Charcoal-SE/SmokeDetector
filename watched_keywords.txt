@@ -5703,3 +5703,4 @@
 1537463166	Glorfindel	investmentnovel\.com
 1537477967	Makyen	joshua\.dp\.lloyd(?:@gmail\.com)?
 1537477981	Makyen	teamweedforbuds(?:@protonmail\.com)?
+1537490822	Tetsuya Yamamoto	eijazah\.com
