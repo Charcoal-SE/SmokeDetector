@@ -5721,3 +5721,4 @@
 1537527752	tripleee	[a-z_]* 9212477204[a-z_]*
 1537527783	tripleee	[a-z_]*9212577708[a-z_]*
 1537528675	tripleee	puspack\.in
+1537529422	tripleee	uaetechnician\.ae
