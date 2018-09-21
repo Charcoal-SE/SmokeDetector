@@ -5720,3 +5720,4 @@
 1537527740	tripleee	[a-z_]*9212468527[a-z_]*
 1537527752	tripleee	[a-z_]* 9212477204[a-z_]*
 1537527783	tripleee	[a-z_]*9212577708[a-z_]*
+1537528675	tripleee	puspack\.in
