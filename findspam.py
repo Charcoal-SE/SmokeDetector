@@ -2,7 +2,7 @@
 # noinspection PyCompatibility
 
 import math
-import regex_proxy as regex
+import regex
 from difflib import SequenceMatcher
 from urllib.parse import urlparse, unquote_plus
 from itertools import chain
@@ -1151,12 +1151,6 @@ class FindSpam:
             "|".join(GlobalVars.blacklisted_websites))
         FindSpam.rule_blacklisted_usernames['regex'] = r"(?i)({})".format(
             "|".join(GlobalVars.blacklisted_usernames))
-
-        for rule in [FindSpam.rule_bad_keywords, FindSpam.rule_watched_keywords,
-                     FindSpam.rule_blacklisted_websites, FindSpam.rule_blacklisted_usernames]:
-            if 'compiled_regex' in rule:
-                del rule['compiled_regex']
-
         log('debug', "Global blacklists loaded")
 
     rules = [
@@ -1685,11 +1679,7 @@ class FindSpam:
             compiled_regex = None
             if is_regex_check:
                 # using a named list \L in some regexes
-                try:
-                    compiled_regex = rule['compiled_regex']
-                except KeyError:
-                    compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
-                    rule['compiled_regex'] = compiled_regex
+                compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
 
                 if rule['title'] and not post.is_answer:
                     matched_title = compiled_regex.findall(title_to_check)
