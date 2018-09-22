@@ -392,9 +392,7 @@ jolique
 clemix
 nuavive
 evanti
-\w*毕业证\w*
 i\Wdidn't\Wfind\Wthe\Wright\Wsolution\Wfrom\Wthe\Winternet
-\w*レーザーポインター\w*
 ultra\Wpure\Wturmeric
 libidogene
 suisse\Wrenewal
@@ -1341,7 +1339,6 @@ vera\W?slim
 verism\W?training(?:\W?online)?
 thermo\W?burn
 vita\W?silk
-\w*学历认证\w*
 forskothin
 \d*jobsexam
 premier\W?keto
