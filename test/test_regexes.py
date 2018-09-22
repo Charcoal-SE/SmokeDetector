@@ -18,7 +18,7 @@ from helpers import log
     ('Yay titles!', 'bbbbbbbbbbbabcdefghijklmnop', '', 'stackoverflow.com', False, False, True),
     ('kkkkkkkkkkkkkkkkkkkkkkkkkkkk', 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbb', '', 'stackoverflow.com', True, False, True),
     ('99999999999', '', '', 'stackoverflow.com', False, False, True),
-    ('Spam spam spam', '', 'babylisscurl', 'stackoverflow.com', False, False, True),
+    ('Spam spam spam', '', 'garciniacambogiaforskolin', 'stackoverflow.com', False, False, True),
     ('Question', '111111111111111111111111111111111111', '', 'stackoverflow.com', False, False, True),
     ('Question', 'I have this number: 111111111111111', '', 'stackoverflow.com', False, False, False),
     ('Random title', '$$$$$$$$$$$$', '', 'superuser.com', False, False, True),
