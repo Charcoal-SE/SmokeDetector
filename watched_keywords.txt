@@ -5733,3 +5733,4 @@
 1537607241	Glorfindel	globalattestation\.com
 1537607251	Glorfindel	attestationservices\.com
 1537608493	Glorfindel	filefixutility\.com
+1537638492	Makyen	[a-z_]*(?:1(?:_*|[a-z]{0,4}))?888(?:[\W_]*|[a-z]{0,4})617(?:[\W_]*|[a-z]{0,4})4777[a-z_]*(?#binance; uses a more obfuscated number than most)
