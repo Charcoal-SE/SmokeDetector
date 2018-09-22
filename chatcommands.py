@@ -1487,6 +1487,7 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
     else:
         reported_from = " by user *{}* in room *{}*".format(reported_by, reported_in)
 
+    with_reason = ""
     if custom_reason:
         with_reason = " with reason: *{}*".format(custom_reason)
 
