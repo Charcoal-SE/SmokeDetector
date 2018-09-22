@@ -1307,6 +1307,8 @@ def report(msg, args, alias_used="report"):
         if alias_used in {"report", "report-force"}:  # Force blacklist user even if !!/report falls back to scan
             if user is not None:
                 message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
+            else:
+                message_url = ""
             users_to_blacklist.append((user, message_url, post_data.post_url))
 
         # Expand real scan results from dirty returm value when not "!!/scan"
