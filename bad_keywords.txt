@@ -1584,3 +1584,30 @@ nuvi
 [a-z_]*(?:61_*)?1[\W_]*800[\W_]*215[\W_]*732[a-z_]*
 legendz\W?xl
 ambrosina
+kidney\W?bean\W?extract
+acai\W?(?:berr(?:y|ies)|palm)
+lumisse
+(?:poker|casino)\W*online
+online\W*(?:poker|casino)
+caralluma
+diabazole
+nitro\W?slim
+slimatrex
+bellavei
+opuderm
+follicure
+\w*kreatine
+revolyn
+3073598075
+revimax
+d-bal
+dianabol
+viatropin
+satta\W?matka\w*
+nordic\W*loan\W*firm(?:@gmail\W*com)?
+safflower\W?oil
+ramsedave121(?:@gma?il\.com)?
+(meg|test)adrox
+unique(?:\W|doc)?producers?
+skin ?care
+herbal ?care

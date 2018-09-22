@@ -985,29 +985,25 @@ def religion_troll(s, site):
 # noinspection PyClassHasNoInit
 class FindSpam:
     bad_keywords_nwb = [  # "nwb" == "no word boundary"
-        u"ಌ", "vashi?k[ae]r[ae]n", "babyli(ss|cious)", "garcinia", "cambogia", "acai ?berr",
-        "(eye|skin|aging) ?cream", "b ?a ?m ?((w ?o ?w)|(w ?a ?r))", "online ?it ?guru",
-        "abam26", "watch2live", "cogniq", "(serum|lift) ?eye", "tophealth", "poker[ -]?online",
-        "caralluma", r"male\Wperf(?!ormer)", "anti[- ]?aging", "lumisse", "(ultra|berry|body)[ -]?ketone",
-        "(cogni|oro)[ -]?(lift|plex)", "diabazole", "forskolin", "tonaderm", "luma(genex|lift)",
+        u"ಌ", "vashi?k[ae]r[ae]n", "garcinia", "cambogia", "forskolin",
+        "(eye|skin|aging) ?cream", "b ?a ?m ?(?:w ?o ?w|w ?a ?r)", "cogniq",
+        r"male\Wperf(?!ormer)", "anti[- ]?aging", "(ultra|berry|body)[ -]?ketone",
+        "(cogni|oro)[ -]?(lift|plex)",
         "(skin|face|eye)[- ]?(serum|therapy|hydration|tip|renewal|gel|lotion|cream)",
-        "(skin|eye)[- ]?lift", "(skin|herbal) ?care", "nuando[ -]?instant", "\\bnutra", "nitro[ -]?slim",
-        "aimee[ -]?cream", "slimatrex", "cosmitone", "smile[ -]?pro[ -]?direct", "bellavei", "opuderm",
-        r"contact (me|us)\W*<a ", "follicure", "kidney[ -]?bean[ -]?extract", "ecoflex",
-        r"\brsgold", "bellavei", "goji ?xtreme", "lumagenex", "ajkobeshoes", "kreatine",
-        "packers.{0,15}(movers|logistic).{0,25}</a>", "guaranteedprofitinvestment",
-        "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)",
-        "renuva(cell|derm)", " %uh ", " %ah ", "svelme", "tapsi ?sarkar", "viktminskning",
-        "unique(doc)?producers", "green ?tone ?pro", "troxyphen", "seremolyn", "revolyn",
+        r"\bnutra",
+        r"contact (me|us)\W*<a ", "ecoflex",
+        r"\brsgold",
+        "packers.{0,15}(movers|logistic)(?:.{,25}</a>)",
+        "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)(?:ment)?",
+        " %[au]h ", "tapsi ?sarkar",
         "(?:networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing|"
-        "salesforce|joomla)( certification)? (courses?|training).{0,25}</a>",
+        "salesforce|joomla)( certification)? (courses?|training)(?=.{,25}</a>)",
         r"(?:design|development|compan(y|ies)|training|courses?|automation)(\b.{1,8}\b)?\L<city>\b",
         r"\b\L<city>(\b.{1,8}\b)?(?:tour)",  # TODO: Populate this "after city" keyword list
-        u"Ｃ[Ｏ0]Ｍ", "ecoflex", "no2factor", "no2blast", "sunergetic", "capilux", "sante ?avis",
-        "enduros", "dianabol", r"ICQ#?\d{4}-?\d{5}", "3073598075", "lumieres", "viarex", "revimax",
-        "celluria", "viatropin", "(meg|test)adrox", "nordic ?loan ?firm", r"safflower\Woil",
-        "(essay|resume|article|dissertation|thesis) ?writing ?service", "satta ?matka", r"b\W?o\W?j\W?i\W?t\W?e\W?r",
-        r"rams[ey]+\W?dave", "(🐽|🐷){3,}", "毕业证", "レーザーポインター", "学历认证",
+        u"Ｃ[Ｏ0]Ｍ", "sunergetic", "capilux",
+        r"ICQ#?\d{4}-?\d{5}", "viarex",
+        r"b\W?o\W?j\W?i\W?t\W?e\W?r",
+        "(🐽|🐷){3,}", "毕业证", "レーザーポインター", "学历认证",
     ]
 
     # Patterns: the top four lines are the most straightforward, matching any site with this string in domain name
@@ -1016,18 +1012,18 @@ class FindSpam:
         r"onlineshop|video(course|classes|tutorial(?!s))|vipmodel|(?<!word)porn|wholesale|inboxmachine|(get|buy)cheap|"
         r"escort|diploma|(govt|government)jobs|extramoney|earnathome|spell(caster|specialist)|profits|"
         r"seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online-?(training|solution)"
-        r"|babasupport)"
-        r"[\w-]*\.(co|net|org|in(\W|fo)|us|ir|wordpress|blogspot|tumblr|webs\.)",
+        r"|\bbabasupport\b)"
+        r"[\w-]*\.(com?|net|org|in(\W|fo)|us|ir|wordpress|blogspot|tumblr|webs(?=\.)|info)",
         r"(replica(?!t)|rs\d?gold|rssong|runescapegold|maxgain|e-cash|mothers?day|phone-?number|fullmovie|tvstream|"
-        r"trainingin|dissertation|(placement|research)-?(paper|statement|essay)|digitalmarketing|infocampus|"
+        r"trainingin|dissertation|(placement|research)-?(paper|statement|essay)|digitalmarketing|infocampus|freetrial|"
         r"cracked\w{3}|bestmover|relocation|\w{4}mortgage|loans|revenue|testo[-bsx]|cleanse|cleansing|detox|supplement|"
-        r"lubricant|serum|wrinkle|topcare|freetrial)[\w-]*?\.(co|net|org|in(\W|fo)|us|"
-        r"wordpress|blogspot|tumblr|webs\.)",
+        r"lubricant|serum|lift(eye|skin)|(skin|eye)lift|luma(genex|lift)|renuva|svelme|santeavis|wrinkle|topcare)"
+        r"[\w-]*\.(com?|net|org|in(\W|fo)|us|ir|wordpress|blogspot|tumblr|webs(?=\.)|info)",
         r"(drivingschool|crack-?serial|serial-?(key|crack)|freecrack|appsfor(pc|mac)|probiotic|remedies|heathcare|"
         r"sideeffect|meatspin|packers\S{0,3}movers|(buy|sell)\S{0,12}cvv|goatse|burnfat|gronkaffe|muskel|"
         r"tes(tos)?terone|nitric(storm|oxide)|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|slimbody|"
-        r"moist|lefair|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone)[\w-]*?\.(co|net|org|in(\W|fo)|us|"
-        r"wordpress|blogspot|tumblr|webs\.)",
+        r"slimatrex|moist|lefair|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone)"
+        r"[\w-]*\.(com?|net|org|in(\W|fo)|us|ir|wordpress|blogspot|tumblr|webs(?=\.)|info)",
         r"(moving|\w{10}spell|[\w-]{3}password|(?!greatfurniture)\w{5}deal|(?!nfood)\w{5}facts|\w\dfacts|\Btoyshop|"
         r"[\w-]{5}cheats|"
         r"(?!djangogirls\.org(?:$|[/?]))[\w-]{6}girls|"
@@ -1040,7 +1036,7 @@ class FindSpam:
         r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
         r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
         r"((essay|resume|click2)\w{6,}|(essays|(research|term)paper|examcollection|[\w-]{5}writing|"
-        r"writing[\w-]{5})[\w-]*?)\.(co|net|org|in(\W|fo)|us|us)",
+        r"writing[\w-]{5})[\w-]*?)\.(com?|net|org|in(\W|fo)|us|us)",
         r"(top|best|expert)\d\w{0,15}\.in\W", r"\dth(\.co)?\.in", r"(jobs|in)\L<city>\.in",
         r"[\w-](recovery|repairs?|rescuer|(?<!epoch|font)converter)(pro|kit)?\.(com|net)",
         r"(corrupt|repair)[\w-]*?\.blogspot",
@@ -1236,7 +1232,7 @@ class FindSpam:
          'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Bad health-related keywords in titles and posts, health sites are exempt
-        {'regex': r"(?is)virility|diet ?(plan|pill)|\b(pro)?derma(?=[a-su-z\W]\w)|(fat|(?<!dead[ -]?)weight)"
+        {'regex': r"(?is)virility|diet ?(plan|pill)|serum|\b(pro)?derma(?=[a-su-z\W]\w)|(fat|(?<!dead[ -]?)weight)"
                   r"[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|erectile|\bherpes\b|colon ?(detox|clean)|\bpenis\b",
          'all': True,
          'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com",
