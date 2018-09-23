@@ -1612,3 +1612,4 @@ unique(?:\W|doc)?producers?
 skin ?care
 herbal ?care
 relief\W?hemp\W?cbd
+andro[ -]dna
