@@ -5718,7 +5718,7 @@
 1537524411	Shree	office-comsetup-install\.com
 1537524735	tripleee	[a-z_]*(?:1_*)?888[\W_]*480[\W_]*8[\W_]*444[a-z_]*
 1537527740	tripleee	[a-z_]*9212468527[a-z_]*
-1537527752	tripleee	[a-z_]* 9212477204[a-z_]*
+1537527752	tripleee	[a-z_]*9212477204[a-z_]*
 1537527783	tripleee	[a-z_]*9212577708[a-z_]*
 1537528675	tripleee	puspack\.in
 1537529422	tripleee	uaetechnician\.ae
@@ -5727,8 +5727,8 @@
 1537535037	tripleee	kineticgroup\.ae
 1537554438	Makyen	technicaltricks\.co\.in(?#check for "id" query parameter, may be affiliation)
 1537555249	Makyen	hustlemillenial\.com
-0	iBug	abam26
-0	iBug	watch2live
+1537570000	iBug	abam26
+1537571000	iBug	watch2live
 1537594771	iBug	onlinelicpolicy\.in
 1537607241	Glorfindel	globalattestation\.com
 1537607251	Glorfindel	attestationservices\.com
