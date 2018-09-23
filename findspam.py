@@ -358,8 +358,6 @@ def has_health(s, site):   # flexible detection of health spam in titles
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def pattern_product_name(s, site):
-    # Prefer (?: non-capturing groups ) in the keywords list.
-    # Avoid including hash or space in patterns unless you know what it means
     keywords = [
         "Testo", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Aurora", "Diet", "Slim", "Premier", "(?:Pure)?Fit",
         "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Perfect", "Shark", "Tank", "Penis",
@@ -368,19 +366,16 @@ def pattern_product_name(s, site):
         "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Boost(?:er)?",
         "Serum", "Supplements?", "Fuel", "Cream", "Keto", "Rapid", "Tone", "Forskolin", "Neuro", "Luma"
         "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Premi(?:um|er)", "Vital", "Master", "Ultra", "Radiant(?:ly)?",
-        "Weight[ -](?:Loss|Reduction)",  # hahaha
+        "Weight[ -](?:Loss|Reduction)",
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords += [r"X[\dLOST]?", "Alpha", "Plus", "Prime", "Formula"]
     keywords = "|".join(keywords)
 
-    match_items = list(regex.compile(r"(?i)\b(?:{0})(?:[ -](?:{0}))+\b".format(keywords)).finditer(s))
-    matches = [tuple(regex.split("[ -]", m[0])) for m in match_items]
+    match_items = list(regex.compile(r"(?i)\b(?P<x>{0})(?:[ -](?P<x>{0}))+\b".format(keywords)).finditer(s))
+    matches = [m.captures("x") for m in match_items]
     # Total "unique words in each match"
-    total_words = sum(n for n in
-                      [len(set([regex.sub(r"\d", "", w) for w in m]))
-                       for m in matches]
-                      if n >= 2)
+    total_words = sum(filter(lambda n: n >= 2, [len(set([regex.sub(r"\d", "", w) for w in m])) for m in matches]
     if total_words >= 3:
         return True, u"Pattern-matching product name: " + FindSpam.match_infos(match_items)
     return False, ""
@@ -388,7 +383,7 @@ def pattern_product_name(s, site):
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def what_is_this_pharma_title(s, site):   # title "what is this Xxxx?"
-    if regex.compile(r'^what is this (?:[A-Z]|https?://)').match(s):
+    if regex.compile(r'^what is this (?:[A-Z][a-z]+|https?://)').match(s):
         return True, u'Title starts with "what is this"'
     else:
         return False, ""
