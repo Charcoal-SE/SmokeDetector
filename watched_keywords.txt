@@ -5739,3 +5739,4 @@
 1537683658	Shree	taniforex\.com
 1537720576	Makyen	noor\.spellcaster(?:@gmail\.com)?
 1537755218	Tetsuya Yamamoto	fairmontmedical\.com
+1537762404	Makyen	[a-z_]*(?:1_*)?301[\W_]*259[\W_]*1209[a-z_]*(?#counterfeits, robertsonjohnsonfox)
