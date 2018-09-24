@@ -39,11 +39,10 @@ def check_if_spam(post):
                 why = why[:-1]
             if blacklisted_post_url:
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
-                why += u"\nBlacklisted user - blacklisted for {} ({}) by {}".format(
-                    blacklisted_post_url, to_metasmoke_link(rel_url), blacklisted_by
-                )
+                why += "\nBlacklisted user - blacklisted for {} ({}) by {}".format(
+                    blacklisted_post_url, to_metasmoke_link(rel_url), blacklisted_by)
             else:
-                why += u"\n" + u"Blacklisted user - blacklisted by {}".format(blacklisted_by)
+                why += "\n" + u"Blacklisted user - blacklisted by {}".format(blacklisted_by)
     if test:
         result = None
         if datahandling.has_already_been_posted(post.post_site, post.post_id, post.title):
@@ -117,13 +116,13 @@ def handle_spam(post, reasons, why):
         # We'll insert reason list later
         edited = '' if not post.edited else ' \u270F\uFE0F'
         if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
-            s = u" {{}}: [{}]({}){} by a deleted user on `{}`".format(
+            s = " {{}}: [{}]({}){} by a deleted user on `{}`".format(
                 sanitized_title, post_url, edited, shortened_site)
             username = ""
         else:
             username = post.user_name.strip()
             escaped_username = escape_format(parsing.escape_markdown(username))
-            s = u" {{}}: [{}]({}){} by [{}]({}) on `{}`".format(
+            s = " {{}}: [{}]({}){} by [{}]({}) on `{}`".format(
                 sanitized_title, post_url, edited, escaped_username, poster_url, shortened_site)
 
         Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
