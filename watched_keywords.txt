@@ -5740,3 +5740,4 @@
 1537755218	Tetsuya Yamamoto	fairmontmedical\.com
 1537762404	Makyen	[a-z_]*(?:1_*)?301[\W_]*259[\W_]*1209[a-z_]*(?#counterfeits, robertsonjohnsonfox)
 1537762416	Makyen	robertsonjohnsonfox(?:@gmail\.com)?
+1537766143	tripleee	[a-z_]*(?:44_*)?800[\W_]*088[\W_]*5887[a-z_]*
