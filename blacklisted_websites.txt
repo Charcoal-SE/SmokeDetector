@@ -2310,3 +2310,4 @@ australiasupplement\.com(?:\.au)?
 usaquickbookscustomersupportnumber
 x4advise\.com
 hpcustomercarenumber\.com
+tplinkroutersupport\.com
