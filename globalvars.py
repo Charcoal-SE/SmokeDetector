@@ -156,7 +156,7 @@ class GlobalVars:
             commit['author'] = censored_committer_names[md5(commit['author'][0].encode('utf-8')).hexdigest()]
         GlobalVars.commit = commit
 
-        GlobalVars.commit_with_author = "`{}` (*{}*: {})".format(
+        GlobalVars.commit_with_author = "`{}` ({}: {})".format(
             commit['id'],
             commit['author'][0] if type(commit['author']) in {list, tuple} else commit['author'],
             commit['message'])
