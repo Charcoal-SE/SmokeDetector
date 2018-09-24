@@ -4491,7 +4491,6 @@
 1531940014	Makyen	ride-executive\.com
 1531940036	Makyen	\W*온라인경마사이트\W*
 1531945734	Makyen	watchonlineclub\.com
-1531946479	Erik the Outgolfer	routerchatsupport\.co\.uk
 1531951809	Makyen	iptvsat\.info
 1531951821	Makyen	filmiato\.com
 1531965259	Tetsuya Yamamoto	removalcompanyinlondon\.co\.uk
