@@ -369,7 +369,7 @@ def pattern_product_name(s, site):
         "Weight[ -](?:Loss|Reduction)",
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
-        keywords += [r"X[\dLOST]?", "Alpha", "Plus", "Prime", "Formula"]
+        keywords += [r"X[\dLRT]?", "Alpha", "Plus", "Prime", "Formula"]
     keywords = "|".join(keywords)
 
     match_items = list(regex.compile(r"(?i)\b(?P<x>{0})(?:[ -](?P<x>{0}))+\b".format(keywords)).finditer(s))
