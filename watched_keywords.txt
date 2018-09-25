@@ -5771,3 +5771,4 @@
 1537874134	tripleee	techfuzz\.net
 1537875060	tripleee	[a-z_]*(?:56_*)?9[\W_]*4039[\W_]*5279[a-z_]*
 1537876101	Glorfindel	vedicratna\.com
+1537878789	tripleee	zegaapparelreviews\.com
