@@ -358,22 +358,25 @@ def has_health(s, site):   # flexible detection of health spam in titles
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def pattern_product_name(s, site):
-    keywords = [
-        "Testo", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Aurora", "Diet", "Slim", "Premier", "(?:Pure)?Fit",
-        "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Perfect", "Shark", "Tank", "Penis", "Pills?",
+    required_keywords = [
+        "Testo", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Forskolin", "Diet", "Slim", "Serum", "(?:Pure)?Fit",
+        "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Shark", "Tank", "Penis", "Pills?",
         "Elite", "Force", "Exceptional", "Enhance(?:ment)?", "Nitro", "Max+", "Boost", "E?xtreme", "Grow",
-        "Deep", "Male", "Pro", "Advanced", "Monster", "Divine", "Royale", "Angele*", "Trinity", "Andro",
-        "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Boost(?:er)?", "Therm[ao]",
-        "Serum", "Supplements?", "Fuel", "Cream", "Keto", "Rapid", "Tone", "Forskolin", "Neuro", "Luma"
-        "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Premi(?:um|er)", "Vital", "Master", "Ultra", "Radiant(?:ly)?",
-        "Weight[ -](?:Loss|Reduction)",
+        "Pure", "Skin", "Muscle", "Therm[ao]", "Neuro", "Luma", "Rapid", "Tone", "Keto", "Fuel", "Cream",
+        "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Male", "Weight[ -](?:Loss|Reduction)", "Radiant(?:ly)?",
+        "Hyper(?:tone)?", "Boost(?:er)?", "Youth", "Monster",
+    ]
+    keywords = required_keywords + [
+        "Deep", "Pro", "Advanced", "Divine", "Royale", "Angele*", "Trinity", "Andro",
+        "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect",
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
-        keywords += [r"X[\dLRT]?", "Alpha", "Plus", "Prime", "Formula"]
+        keywords.extend([r"X[\dLRT]?", "Alpha", "Plus", "Prime", "Formula"])
     keywords = "|".join(keywords)
+    required = regex.compile(r"(?i)\b({})\b".format("|".join(required_keywords)))
 
     match_items = regex.compile(r"(?i)\b(?P<x>{0})(?:[ -](?P<x>{0}))+\b".format(keywords)).finditer(s)
-    matches = [m.captures("x") for m in match_items]
+    matches = [m.captures("x") for m in match_items if required.match(m.group(0))]
     # Total "unique words in each match"
     total_words = sum(filter(lambda n: n >= 2, [len(set([regex.sub(r"\d", "", w) for w in m])) for m in matches]))
     if total_words >= 3:
