@@ -1833,6 +1833,9 @@ def autoflagged(msg):
     :param msg:
     :return: A string
     """
+    # sneaky!
+    update_reason_weights()
+
     post_data = get_report_data(msg)
 
     if not post_data:
