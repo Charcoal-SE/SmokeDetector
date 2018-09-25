@@ -1232,6 +1232,7 @@ def report(msg, args, alias_used="report"):
                            "one go.".format(alias_used, wait))
 
     output = []
+    alias_used = alias_used or "report"
 
     argsraw = args.split(' "', 1)
     urls = argsraw[0].split(' ')
@@ -1393,8 +1394,6 @@ def allspam(msg, url):
 
 def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
     output = []
-    if not isinstance(operation, str):
-        raise ValueError("Error: argument operation is {!r}".format(operation))
     action_done = {"report": "reported", "report-force": "reported", "scan": "scanned"}[operation]
     if reported_in is None:
         reported_from = " by *{}*".format(reported_by)
