@@ -26,10 +26,13 @@ def should_whitelist_prevent_alert(user_url, reasons):
 def sum_weight(reasons: list):
     if not GlobalVars.reason_weights:
         datahandling.update_reason_weights()
+    elif time.time() - GlobalVars.reason_weights['last_updated'] > 86400 * 7:
+        Tasks.do(datahandling.update_reason_weights)
     s = 0
+    weights = GlobalVars.reason_weights
     for r in reasons:
         try:
-            s += GlobalVars.reason_weights[r]
+            s += weights[r]
         except KeyError:
             pass  # s += 0
     return s
