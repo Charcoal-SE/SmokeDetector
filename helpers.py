@@ -96,13 +96,11 @@ no_reboot_files = {
     "LICENSE-APACHE", "LICENSE-MIT",
     "README.md", "requirements.txt", "setup.sh", "user_requirements.txt",
     "tox_classes.ini", "tox_tests.ini", "tox.ini",
-    ".gitignore", ".circleci/config.yml", ".codeclimate.yml", ".pullapprove.yml", ".travis.yml"
+    ".gitignore", ".gitattribute", ".circleci/config.yml", ".codeclimate.yml", ".pullapprove.yml", ".travis.yml",
 }
-reloadable_modules = {
+no_reboot_modules = no_reboot_files | {
     "findspam.py",
 }
-no_reboot_modules = no_reboot_files.union(reloadable_modules)
-
 
 def only_blacklists_changed(diff):
     return only_files_changed(diff, no_reboot_files)
