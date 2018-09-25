@@ -114,7 +114,10 @@ def handle_spam(post, reasons, why):
         datahandling.add_why(post.post_site, post.post_id, why)
     if post.is_answer and post.post_id is not None and post.post_id is not "":
         datahandling.add_post_site_id_link((post.post_id, post.post_site, "answer"), post.parent.post_id)
-    reason_weight = sum_weight(reasons)
+    if GlobalVars.reason_weights or GlobalVars.metasmoke_key:
+        reason_weight_s = " ({})".format(sum_weight(reasons))
+    else:  # No reason weight if neither cache nor MS
+        reason_weight_s = ""
     try:
         # If the post is an answer type post, the 'title' is going to be blank, so when posting the
         # message contents we need to set the post title to the *parent* title, so the message in the
@@ -155,7 +158,7 @@ def handle_spam(post, reasons, why):
             reason = ", ".join(reasons[:reason_count])
             if len(reasons) > reason_count:
                 reason += ", +{} more".format(len(reasons) - reason_count)
-            reason = reason.capitalize() + " ({})".format(reason_weight)
+            reason = reason.capitalize() + reason_weight_s
             message = prefix_ms + s.format(reason)  # Insert reason list
             if len(message) <= 500:
                 break  # Problem solved, stop attempting

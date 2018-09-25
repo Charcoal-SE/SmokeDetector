@@ -173,16 +173,12 @@ def is_code_privileged(site, user_id):
 
 
 def update_reason_weights():
-    if GlobalVars.reason_weights is None:
-        pass
-    if not os.path.isfile("rw.csv"):
-        return
     d = {'last_updated': datetime.utcnow().date()}
-    with open("rw.csv", "r") as f:
-        next(f)  # Pass the first line
-        for line in f:
-            _id, reason, weight = line.split(",")
-            d[reason.lower()] = int(weight)
+    items = metasmoke.Metasmoke.get_reason_weights()
+    if not items:
+        return  # No update
+    for item in items:
+        d[item['reason_name'].lower()] = item['weight']
     GlobalVars.reason_weights = d
     _dump_pickle("reasonWeights.p", GlobalVars.reason_weights)
 

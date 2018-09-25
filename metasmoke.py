@@ -479,6 +479,28 @@ class Metasmoke:
 
         return response['items']
 
+    @staticmethod
+    def get_reason_weights():
+        if not GlobalVars.metasmoke_key:
+            return None
+
+        payload = {
+            'key': GlobalVars.metasmoke_key,
+            'per_page': 100,
+            'page': 1,
+        }
+        items = []
+        try:
+            while True:
+                response = Metasmoke.get('/api/v2.0/reasons', params=payload).json()
+                items.extend(response['items'])
+                if not response['has_more']:
+                    break
+                payload['page'] += 1
+        except AttributeError:
+            return None
+        return items
+
     # Some sniffy stuff
     @staticmethod
     def request_sender(method):
