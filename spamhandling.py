@@ -137,7 +137,7 @@ def handle_spam(post, reasons, why):
             escaped_username = escape_format(parsing.escape_markdown(username))
             s = " {{}}: [{}]({}){} by [{}]({}) on `{}`".format(
                 sanitized_title, post_url, edited, escaped_username, poster_url, shortened_site)
-        s = "**{}** ".format(reason_weight) + s
+        s = " **{}** ".format(reason_weight) + s
 
         Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
                  post.title_ignore_type, post_url, reasons, post.body, username,
