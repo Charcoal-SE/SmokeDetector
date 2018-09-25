@@ -5757,3 +5757,4 @@
 1537853718	tripleee	[a-z_]*(?:237_*)?697930531[a-z_]*
 1537853730	tripleee	originaldocuments\d+
 1537853785	tripleee	adrohearingaid\.com
+1537858890	Tetsuya Yamamoto	dreamzconsultants\.com
