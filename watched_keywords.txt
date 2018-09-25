@@ -5724,7 +5724,6 @@
 1537608493	Glorfindel	filefixutility\.com
 1537638492	Makyen	[a-z_]*(?:1(?:_*|[a-z]{0,4}))?888(?:[\W_]*|[a-z]{0,4})617(?:[\W_]*|[a-z]{0,4})4777[a-z_]*(?#binance; uses a more obfuscated number than most)
 1537638504	Makyen	hotunblockedgames\.com
-1537638683	Makyen	uaewebsitedevelopment\.com
 1537683658	Shree	taniforex\.com
 1537720576	Makyen	noor\.spellcaster(?:@gmail\.com)?
 1537755218	Tetsuya Yamamoto	fairmontmedical\.com
