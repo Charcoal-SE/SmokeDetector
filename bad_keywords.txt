@@ -1619,3 +1619,4 @@ nano\W?glutathione
 curalin
 appkodes
 nerve\W?renew
+trim\W?pill(?:\W?keto)?
