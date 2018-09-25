@@ -360,7 +360,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
 def pattern_product_name(s, site):
     keywords = [
         "Testo", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Aurora", "Diet", "Slim", "Premier", "(?:Pure)?Fit",
-        "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Perfect", "Shark", "Tank", "Penis",
+        "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Perfect", "Shark", "Tank", "Penis", "Pills?",
         "Elite", "Force", "Exceptional", "Enhance(?:ment)?", "Nitro", "Max+", "Boost", "E?xtreme", "Grow",
         "Deep", "Male", "Pro", "Advanced", "Monster", "Divine", "Royale", "Angele*", "Trinity", "Andro",
         "Pure", "Skin", "Sea", "Muscle", "Ascend", "Youth", "Hyper(?:tone)?", "Boost(?:er)?",
