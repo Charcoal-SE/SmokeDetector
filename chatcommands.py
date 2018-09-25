@@ -1393,6 +1393,8 @@ def allspam(msg, url):
 
 def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
     output = []
+    if not isinstance(operation, str):
+        raise ValueError("Error: argument operation is {!r}".format(operation))
     action_done = {"report": "reported", "report-force": "reported", "scan": "scanned"}[operation]
     if reported_in is None:
         reported_from = " by *{}*".format(reported_by)
