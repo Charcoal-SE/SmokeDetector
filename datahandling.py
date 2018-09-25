@@ -101,6 +101,8 @@ def load_files():
         GlobalVars.bodyfetcher.queue_timings = _load_pickle("bodyfetcherQueueTimings.p", encoding='utf-8')
     if _has_pickle("codePrivileges.p"):
         GlobalVars.code_privileged_users = _load_pickle("codePrivileges.p", encoding='utf-8')
+    if _has_pickle("reasonWeights.p"):
+        GlobalVars.reason_weights = _load_pickle("reasonWeights.p", encoding='utf-8')
     blacklists.load_blacklists()
 
 
@@ -168,6 +170,21 @@ def is_code_privileged(site, user_id):
 
     # For now, disable the moderator override on code/blacklist changes
     return (site, user_id) in GlobalVars.code_privileged_users
+
+
+def update_reason_weights():
+    if GlobalVars.reason_weights is None:
+        pass
+    if not os.path.isfile("rw.csv"):
+        return
+    d = {}
+    with open("rw.csv", "r") as f:
+        next(f)  # Pass the first line
+        for line in f:
+            _id, reason, weight = line.split(",")
+            d[reason.lower()] = int(weight)
+    GlobalVars.reason_weights = d
+    _dump_pickle("reasonWeights.p", GlobalVars.reason_weights)
 
 # methods to add/remove whitelisted/blacklisted users, ignored posts, ...
 

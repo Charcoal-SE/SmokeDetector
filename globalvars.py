@@ -91,6 +91,7 @@ class GlobalVars:
     listen_to_these_if_edited = []
     multiple_reporters = []
     api_calls_per_site = {}
+    reason_weights = {}
 
     standby_message = ""
     standby_mode = False

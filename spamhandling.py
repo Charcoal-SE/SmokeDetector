@@ -23,6 +23,18 @@ def should_whitelist_prevent_alert(user_url, reasons):
     return not any(r for r in set(reasons) if "username" not in r)
 
 
+def sum_weight(reasons: list):
+    if not GlobalVars.reason_weights:
+        datahandling.update_reason_weights()
+    s = 0
+    for r in reasons:
+        try:
+            s += GlobalVars.reason_weights[r]
+        except KeyError:
+            pass  # s += 0
+    return s
+
+
 # noinspection PyMissingTypeHints
 def check_if_spam(post):
     test, why = findspam.FindSpam.test_post(post)
@@ -98,6 +110,7 @@ def handle_spam(post, reasons, why):
         datahandling.add_why(post.post_site, post.post_id, why)
     if post.is_answer and post.post_id is not None and post.post_id is not "":
         datahandling.add_post_site_id_link((post.post_id, post.post_site, "answer"), post.parent.post_id)
+    reason_weight = sum_weight(reasons)
     try:
         # If the post is an answer type post, the 'title' is going to be blank, so when posting the
         # message contents we need to set the post title to the *parent* title, so the message in the
@@ -124,6 +137,7 @@ def handle_spam(post, reasons, why):
             escaped_username = escape_format(parsing.escape_markdown(username))
             s = " {{}}: [{}]({}){} by [{}]({}) on `{}`".format(
                 sanitized_title, post_url, edited, escaped_username, poster_url, shortened_site)
+        s = "**{}** ".format(reason_weight) + s
 
         Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
                  post.title_ignore_type, post_url, reasons, post.body, username,
