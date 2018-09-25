@@ -1235,7 +1235,7 @@ def report(msg, args, alias_used="report"):
 
     argsraw = args.split(' "', 1)
     urls = argsraw[0].split(' ')
-    action_done = "scanned" if alias_used == "scan" else "reported"
+
     message_url = "https://chat.{0}/transcript/{1}?m={2}".format(msg._client.host, msg.room.id, msg.id)
 
     # Handle determining whether a custom report reason was provided.
