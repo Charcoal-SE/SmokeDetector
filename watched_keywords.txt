@@ -5309,7 +5309,6 @@
 1535703611	Makyen	[a-z_]*(?:1_*)?617[\W_]*663[\W_]*8926[a-z_]*
 1535703780	Makyen	supercomputerslaptops\.com
 1535705512	iBug	escortglasgow\.info
-1535706166	Makyen	printerhelpnumbers\.co\.uk
 1535706428	tripleee	printer\W?help(?:\W?numbers?)?
 1535706918	Tetsuya Yamamoto	spycardssort\.com
 1535708895	tripleee	tele\W*consultation\W*services?
