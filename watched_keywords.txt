@@ -5764,3 +5764,4 @@
 1537867387	Glorfindel	SMSGadget
 1537867411	Tetsuya Yamamoto	starpathdolls\.com
 1537868505	Glorfindel	shareuploadfile\.com
+1537869942	Glorfindel	Cute\W*Web\W*Email\W*Address\W*Extractor
