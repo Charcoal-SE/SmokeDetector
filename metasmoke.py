@@ -118,8 +118,8 @@ class Metasmoke:
             datahandling.add_false_positive(post_site_id[0:2])
         elif "report" in message:
             import chatcommands  # Do it here
-            chatcommands.report_posts([message["report"]["post_link"]], "the metasmoke API", None,
-                                      "the metasmoke API")
+            chatcommands.report_posts([message["report"]["post_link"]], message["report"]["user"],
+                                      None, "the metasmoke API")
             return
             post_data = apigetpost.api_get_post(message["report"]["post_link"])
             if post_data is None or post_data is False:
