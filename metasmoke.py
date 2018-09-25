@@ -119,34 +119,7 @@ class Metasmoke:
         elif "report" in message:
             import chatcommands  # Do it here
             chatcommands.report_posts([message["report"]["post_link"]], message["report"]["user"],
-                                      None, "the metasmoke API")
-            return
-            post_data = apigetpost.api_get_post(message["report"]["post_link"])
-            if post_data is None or post_data is False:
-                return
-            if datahandling.has_already_been_posted(post_data.site, post_data.post_id, post_data.title) \
-                    and not datahandling.is_false_positive((post_data.post_id, post_data.site)):
-                return
-            user = parsing.get_user_from_url(post_data.owner_url)
-            post = classes.Post(api_response=post_data.as_dict)
-
-            scan_spam, scan_reasons, scan_why = spamhandling.check_if_spam(post)
-            if scan_spam:
-                why_append = u"This post would have also been caught for: " + \
-                    u", ".join(scan_reasons).capitalize() + "\n" + scan_why
-            else:
-                why_append = u"This post would not have been caught otherwise."
-
-            # Add user to blacklist *after* post is scanned
-            if user is not None:
-                datahandling.add_blacklisted_user(user, "metasmoke", post_data.post_url)
-
-            why = u"Post manually reported by user *{}* from metasmoke.\n\n{}".format(
-                message["report"]["user"], why_append)
-
-            spamhandling.handle_spam(post=post,
-                                     reasons=["Manually reported " + post_data.post_type],
-                                     why=why)
+                                      True, "the metasmoke API")
         elif "deploy_updated" in message:
             return  # Disabled
             sha = message["deploy_updated"]["head_commit"]["id"]

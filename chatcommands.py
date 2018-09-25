@@ -1484,6 +1484,8 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
     action_done = {"report": "reported", "report-force": "reported", "scan": "scanned"}[operation]
     if reported_in is None:
         reported_from = " by *{}*".format(reported_by)
+    elif reported_in is True:
+        reported_from = " by *{}* from the metasmoke API".format(reported_by)
     else:
         reported_from = " by user *{}* in room *{}*".format(reported_by, reported_in)
 
