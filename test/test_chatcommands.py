@@ -198,8 +198,8 @@ def test_report(handle_spam):
             "SmokeDetector's chat messages getting rate-limited too much, which would slow down reports."
         )
 
-        assert chatcommands.report('a a a a a "invalid"""', original_msg=msg) \
-            .startswith("You cannot provide multiple custom report reasons.")
+        # assert chatcommands.report('a a a a a "invalid"""', original_msg=msg) \
+        #     .startswith("You cannot provide multiple custom report reasons.")
 
         assert chatcommands.report('https://stackoverflow.com/q/1', original_msg=msg) == \
             "Post 1: Could not find data for this post in the API. It may already have been deleted."
