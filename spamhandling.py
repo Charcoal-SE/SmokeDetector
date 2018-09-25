@@ -138,14 +138,14 @@ def handle_spam(post, reasons, why):
         # We'll insert reason list later
         edited = '' if not post.edited else ' \u270F\uFE0F'
         if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
-            s = " {{}}: [{}]({}){} by a deleted user on `{}`".format(
-                sanitized_title, post_url, edited, shortened_site)
+            s = " {{}}{}: [{}]({}){} by a deleted user on `{}`".format(
+                reason_weight_s, sanitized_title, post_url, edited, shortened_site)
             username = ""
         else:
             username = post.user_name.strip()
             escaped_username = escape_format(parsing.escape_markdown(username))
-            s = " {{}}: [{}]({}){} by [{}]({}) on `{}`".format(
-                sanitized_title, post_url, edited, escaped_username, poster_url, shortened_site)
+            s = " {{}}{}: [{}]({}){} by [{}]({}) on `{}`".format(
+                reason_weight_s, sanitized_title, post_url, edited, escaped_username, poster_url, shortened_site)
 
         Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
                  post.title_ignore_type, post_url, reasons, post.body, username,
@@ -160,7 +160,7 @@ def handle_spam(post, reasons, why):
             reason = ", ".join(reasons[:reason_count])
             if len(reasons) > reason_count:
                 reason += ", +{} more".format(len(reasons) - reason_count)
-            reason = reason.capitalize() + reason_weight_s
+            reason = reason.capitalize()
             message = prefix_ms + s.format(reason)  # Insert reason list
             if len(message) <= 500:
                 break  # Problem solved, stop attempting
