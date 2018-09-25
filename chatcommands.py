@@ -1231,7 +1231,6 @@ def report(msg, args, alias_used="report"):
                            "wait 30 seconds after you've reported multiple posts in "
                            "one go.".format(alias_used, wait))
 
-    output = []
     alias_used = alias_used or "report"
 
     argsraw = args.split(' "', 1)
@@ -1263,7 +1262,7 @@ def report(msg, args, alias_used="report"):
     if 1 < len(urls) > output.count("\n") + 1:
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
 
-    if len(output) > 0:
+    if output:
         return output
 
 
@@ -1393,7 +1392,7 @@ def allspam(msg, url):
 
 
 def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
-    output = []
+    operation = operation or "report"
     action_done = {"report": "reported", "report-force": "reported", "scan": "scanned"}[operation]
     if reported_in is None:
         reported_from = " by *{}*".format(reported_by)
@@ -1411,6 +1410,7 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
 
     urls = list(set(urls))
     users_to_blacklist = []
+    output = []
 
     for index, url in enumerate(urls, start=1):
         post_data = api_get_post(rebuild_str(url))
@@ -1493,6 +1493,7 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
 
     if len(output):
         return "\n".join(output)
+    return None
 
 
 @command(str, str, privileged=True, whole_msg=True)
