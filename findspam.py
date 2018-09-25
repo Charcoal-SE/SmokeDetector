@@ -361,13 +361,13 @@ def pattern_product_name(s, site):
     required_keywords = [
         "Testo", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Forskolin", "Diet", "Slim", "Serum", "(?:Pure)?Fit",
         "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Shark", "Tank", "Penis", "Pills?",
-        "Elite", "Force", "Exceptional", "Enhance(?:ment)?", "Nitro", "Max+", "Boost", "E?xtreme", "Grow",
+        "Elite", "Exceptional", "Enhance(?:ment)?", "Nitro", "Boost", "E?xtreme", "Grow",
         "Pure", "Skin", "Muscle", "Therm[ao]", "Neuro", "Luma", "Rapid", "Tone", "Keto", "Fuel", "Cream",
         "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Male", "Weight[ -](?:Loss|Reduction)", "Radiant(?:ly)?",
         "Hyper(?:tone)?", "Boost(?:er)?", "Youth", "Monster",
     ]
     keywords = required_keywords + [
-        "Deep", "Pro", "Advanced", "Divine", "Royale", "Angele*", "Trinity", "Andro",
+        "Deep", "Pro", "Advanced", "Divine", "Royale", "Angele*", "Trinity", "Andro", "Max+", "Force",
         "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect",
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
