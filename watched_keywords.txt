@@ -5769,3 +5769,4 @@
 1537873753	Glorfindel	unfitpc\.com
 1537873903	Glorfindel	venturalocksmithca\.com
 1537874134	tripleee	techfuzz\.net
+1537875060	tripleee	[a-z_]*(?:56_*)?9[\W_]*4039[\W_]*5279[a-z_]*
