@@ -6,6 +6,7 @@ import datahandling
 import chatcommunicate
 from globalvars import GlobalVars
 from datetime import datetime
+import time
 import parsing
 import metasmoke
 import excepthook
