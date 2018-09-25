@@ -1236,6 +1236,7 @@ def report(msg, args, alias_used="report"):
     argsraw = args.split(' "', 1)
     urls = argsraw[0].split(' ')
     action_done = "scanned" if alias_used == "scan" else "reported"
+    message_url = "https://chat.{0}/transcript/{1}?m={2}".format(msg._client.host, msg.room.id, msg.id)
 
     # Handle determining whether a custom report reason was provided.
     try:
@@ -1244,18 +1245,8 @@ def report(msg, args, alias_used="report"):
             custom_reason = argsraw[1][:-1]
         else:
             custom_reason = argsraw[1]
-
-        # Deny cases of multiple close reasons, in which case custom_reason will still have " chars in it.
-        if '"' in custom_reason:
-            raise CmdException("You cannot provide multiple custom report reasons. "
-                               "Please review the permitted !!/report syntax in the documentation "
-                               "for guidance on using custom report reasons.")
-
-        report_info = u"Post manually {} by user *{}* in room *{}* with reason: *{}*.\n\n".format(
-            action_done, msg.owner.name, msg.room.name, custom_reason)
     except IndexError:
-        report_info = u"Post manually {} by user *{}* in room *{}*.\n\n".format(
-            action_done, msg.owner.name, msg.room.name)
+        custom_reason = None
 
     urls = list(set(urls))
 
@@ -1265,87 +1256,8 @@ def report(msg, args, alias_used="report"):
                            "SmokeDetector's chat messages getting rate-limited too much, "
                            "which would slow down reports.".format(alias_used))
 
-    users_to_blacklist = []
-
-    for index, url in enumerate(urls, start=1):
-        post_data = api_get_post(rebuild_str(url))
-
-        if post_data is None:
-            output.append("Post {}: That does not look like a valid post URL.".format(index))
-            continue
-
-        if post_data is False:
-            output.append("Post {}: Could not find data for this post in the API. "
-                          "It may already have been deleted.".format(index))
-            continue
-
-        if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive(
-                (post_data.post_id, post_data.site)):
-            # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
-            # this re-report might be attempting to correct that/fix a mistake/etc.
-
-            if GlobalVars.metasmoke_key is not None:
-                se_link = to_protocol_relative(post_data.post_url)
-                ms_link = to_metasmoke_link(se_link)
-                output.append("Post {}: Already recently reported [ [MS]({}) ]".format(index, ms_link))
-                continue
-            else:
-                output.append("Post {}: Already recently reported".format(index))
-                continue
-
-        url = to_protocol_relative(post_data.post_url)
-        post = Post(api_response=post_data.as_dict)
-        user = get_user_from_url(post_data.owner_url)
-
-        if fetch_post_id_and_site_from_url(url)[2] == "answer":
-            parent_data = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
-            post._is_answer = True
-            post._parent = Post(api_response=parent_data.as_dict)
-
-        scan_spam, scan_reasons, scan_why = check_if_spam(post)  # Scan it first
-
-        if alias_used in {"report", "report-force"}:  # Force blacklist user even if !!/report falls back to scan
-            if user is not None:
-                message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
-                users_to_blacklist.append((user, message_url, post_data.post_url))
-
-        # Expand real scan results from dirty returm value when not "!!/scan"
-        # Presence of "scan_why" indicates the post IS spam but ignored
-        if alias_used != "scan" and (not scan_spam) and scan_why:
-            scan_spam = True
-            scan_reasons, scan_why = scan_reasons
-
-        # If alias_used == "report-force" then jump to the next block
-        if scan_spam and alias_used in {"scan", "report"}:
-            handle_spam(post=post, reasons=scan_reasons, why=report_info + scan_why)
-            continue
-
-        # scan_spam == False or alias_used == "report-force"
-        if alias_used in {"report", "report-force"}:
-            batch = ""
-            if len(urls) > 1:
-                batch = " (batch report: post {} out of {})".format(index, len(urls))
-
-            if scan_spam:
-                why_append = u"This post would have also been caught for: " + ", ".join(scan_reasons).capitalize() + \
-                    '\n' + scan_why
-            else:
-                why_append = u"This post would not have been caught otherwise."
-
-            handle_spam(post=post,
-                        reasons=["Manually reported " + post_data.post_type + batch],
-                        why=report_info + why_append)
-            continue
-
-        # scan_spam == False and alias_used == "scan"
-        else:
-            if scan_why:
-                output.append("Post {}: Looks like spam but not reported: {}".format(index, scan_why.capitalize()))
-            else:
-                output.append("Post {}: This does not look like spam".format(index))
-
-    for item in users_to_blacklist:
-        add_blacklisted_user(*item)
+    # report_posts(urls, reported_by, reported_in, blacklist_by, operation="report", custom_reason=None):
+    output = report_posts(urls, msg.owner.name, msg.room.name, message_url, alias_used, custom_reason)
 
     if 1 < len(urls) > len(output):
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
@@ -1489,12 +1401,12 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
     else:
         reported_from = " by user *{}* in room *{}*".format(reported_by, reported_in)
 
-    with_reason = ""
     if custom_reason:
         with_reason = " with reason: *{}*".format(custom_reason)
+    else:
+        with_reason = ""
 
-    report_info = u"Post manually {}{}{}.\n\n".format(
-        action_done, reported_from, with_reason)
+    report_info = "Post manually {}{}{}.\n\n".format(action_done, reported_from, with_reason)
 
     urls = list(set(urls))
     users_to_blacklist = []
