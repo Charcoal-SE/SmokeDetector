@@ -33,6 +33,8 @@ def sum_weight(reasons: list):
     weights = GlobalVars.reason_weights
     for r in reasons:
         try:
+            if "(" in r:
+                r = regex.sub(r"\s*\(.*$", "", r)
             s += weights[r.lower()]
         except KeyError:
             pass  # s += 0
