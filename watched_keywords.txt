@@ -421,7 +421,6 @@
 1500316026	NobodyNada	tawidevelopers\.com
 1500352930	tripleee	arkdots\.com
 1500353110	tripleee	lawcancer\.cf
-1500353299	tripleee	curalin
 1500354018	tripleee	photoeditor360\.com
 1500364935	tripleee	vrhuntertech\.com
 1500368329	tripleee	serapelle
