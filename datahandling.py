@@ -177,7 +177,7 @@ def update_reason_weights():
         pass
     if not os.path.isfile("rw.csv"):
         return
-    d = {'last_updated': time.time()}
+    d = {'last_updated': datetime.utcnow().date()}
     with open("rw.csv", "r") as f:
         next(f)  # Pass the first line
         for line in f:

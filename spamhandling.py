@@ -6,7 +6,6 @@ import datahandling
 import chatcommunicate
 from globalvars import GlobalVars
 from datetime import datetime
-import time
 import parsing
 import metasmoke
 import excepthook
@@ -27,7 +26,8 @@ def should_whitelist_prevent_alert(user_url, reasons):
 def sum_weight(reasons: list):
     if not GlobalVars.reason_weights:
         datahandling.update_reason_weights()
-    elif time.time() - GlobalVars.reason_weights['last_updated'] > 86400 * 7:
+    now = datetime.utcnow()
+    if now.date() != GlobalVars.reason_weights['last_updated'] and now.hour >= 1:
         Tasks.do(datahandling.update_reason_weights)
     s = 0
     weights = GlobalVars.reason_weights
