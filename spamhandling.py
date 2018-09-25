@@ -79,9 +79,11 @@ def check_if_spam(post):
         else:
             return False, (test, why), result
 
-    # XXX: Return an empty string for "why" if the post isn't scanned as spam
-    # Don't touch if unsure, you'll break !!/report
     return False, None, ""
+    # Return value: (True, reasons, why) if post is spam
+    #               (False, None, "") if post is not spam
+    #               (False, (reasons, why), ignore_info) if post is spam but ignored
+    # This is required because !!/report will check for 3rd tuple item to decide if it's not spam or spam but ignored
 
 
 # noinspection PyMissingTypeHints
@@ -115,7 +117,7 @@ def handle_spam(post, reasons, why):
     if post.is_answer and post.post_id is not None and post.post_id is not "":
         datahandling.add_post_site_id_link((post.post_id, post.post_site, "answer"), post.parent.post_id)
     if GlobalVars.reason_weights or GlobalVars.metasmoke_key:
-        reason_weight_s = " ({})".format(sum_weight(reasons))
+        reason_weight_s = " ({:,})".format(sum_weight(reasons))
     else:  # No reason weight if neither cache nor MS
         reason_weight_s = ""
     try:
