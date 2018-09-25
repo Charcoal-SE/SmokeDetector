@@ -137,7 +137,6 @@ def handle_spam(post, reasons, why):
             escaped_username = escape_format(parsing.escape_markdown(username))
             s = " {{}}: [{}]({}){} by [{}]({}) on `{}`".format(
                 sanitized_title, post_url, edited, escaped_username, poster_url, shortened_site)
-        s = " **{}** ".format(reason_weight) + s
 
         Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
                  post.title_ignore_type, post_url, reasons, post.body, username,
@@ -152,7 +151,7 @@ def handle_spam(post, reasons, why):
             reason = ", ".join(reasons[:reason_count])
             if len(reasons) > reason_count:
                 reason += ", +{} more".format(len(reasons) - reason_count)
-            reason = reason.capitalize()
+            reason = reason.capitalize() + " ({})".format(reason_weight)
             message = prefix_ms + s.format(reason)  # Insert reason list
             if len(message) <= 500:
                 break  # Problem solved, stop attempting

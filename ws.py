@@ -92,7 +92,7 @@ elif GlobalVars.chatexchange_u:
     log('debug', "ChatExchange username loaded from config")
     username = GlobalVars.chatexchange_u
 else:
-    log('debug', "No ChatExchange username provided. Set it in config or provide it via environment variable")
+    log('error', "No ChatExchange username provided. Set it in config or provide it via environment variable")
     os._exit(6)
 
 if "ChatExchangeP" in os.environ:
