@@ -33,7 +33,7 @@ def sum_weight(reasons: list):
     weights = GlobalVars.reason_weights
     for r in reasons:
         try:
-            s += weights[r]
+            s += weights[r.lower()]
         except KeyError:
             pass  # s += 0
     return s
