@@ -5767,3 +5767,4 @@
 1537869942	Glorfindel	Cute\W*Web\W*Email\W*Address\W*Extractor
 1537873357	iBug	onlinequranacademy\.co
 1537873753	Glorfindel	unfitpc\.com
+1537873903	Glorfindel	venturalocksmithca\.com
