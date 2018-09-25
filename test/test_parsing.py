@@ -14,7 +14,7 @@ with open("test/data_test_parsing.txt", "r", encoding="utf-8") as f:
 
 # noinspection PyMissingTypeHints
 @pytest.mark.parametrize("input_data, parse_method, expected", [
-    ('Testing * escaping of ] special [ characters', escape_markdown, 'Testing \* escaping of \] special \[ characters'),
+    ('Testing * escaping of ] special [ characters', escape_markdown, r'Testing \* escaping of \] special \[ characters'),
     ('HTML &#39; unescaping&lt;', unescape_title, 'HTML \' unescaping<'),
     ('http://physics.stackexchange.com/users/7433/manishearth', get_user_from_url, ('7433', 'physics.stackexchange.com')),
     ('http://softwarerecs.stackexchange.com/users/46/undo', get_user_from_url, ('46', 'softwarerecs.stackexchange.com')),
