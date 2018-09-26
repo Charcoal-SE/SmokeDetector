@@ -5801,3 +5801,4 @@
 1537957354	iBug	noidaproperty\.info
 1537960402	doppelgreener	binaryoptionssolutions
 1537960433	doppelgreener	jamestradings
+1537960641	Glorfindel	telecoms\W*supermarket
