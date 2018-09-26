@@ -481,7 +481,7 @@ def has_community_bumped_post(post_url, post_content):
                 return False
 
             return any(post['body'] == post_content for post in ms_posts)
-        except (requests.exceptions.ConnectionError, json.decoder.JSONDecodeError):
+        except (requests.exceptions.ConnectionError, ValueError):
             return False  # MS is down, so assume it is not bumped
     return False
 
