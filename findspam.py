@@ -1620,10 +1620,10 @@ class FindSpam:
          'max_rep': 50, 'max_score': 0, 'questions': False, 'whole_post': True},
 
         # Answer similar to existing answer on post
-        {'method': similar_answer, 'all': True, 'sites': ["codegolf.stackexchange.com"],
-         'reason': "answer similar to existing answer on post", 'whole_post': True,
-         'title': False, 'body': False, 'username': False, 'stripcodeblocks': False,
-         'max_rep': 50, 'max_score': 0},
+        # {'method': similar_answer, 'all': True, 'sites': ["codegolf.stackexchange.com"],
+        #  'reason': "answer similar to existing answer on post", 'whole_post': True,
+        #  'title': False, 'body': False, 'username': False, 'stripcodeblocks': False,
+        #  'max_rep': 50, 'max_score': 0},
 
         # A single character is utilized in a high percentage of the post
         {'method': character_utilization_ratio, 'all': False, 'sites': ["judaism.stackexchange.com"],
