@@ -375,7 +375,7 @@ def pattern_product_name(s, site):
     keywords = "|".join(keywords)
     required = regex.compile(r"(?i)\b({})\b".format("|".join(required_keywords)))
 
-    match_items = regex.compile(r"(?i)\b(?P<x>{0})(?:[ -](?P<x>{0}))+\b".format(keywords)).finditer(s)
+    match_items = list(regex.compile(r"(?i)\b(?P<x>{0})(?:[ -](?P<x>{0}))+\b".format(keywords)).finditer(s))
     matches = [m.captures("x") for m in match_items if required.match(m.group(0))]
     # Total "unique words in each match"
     total_words = sum(filter(lambda n: n >= 2, [len(set([regex.sub(r"\d", "", w) for w in m])) for m in matches]))
