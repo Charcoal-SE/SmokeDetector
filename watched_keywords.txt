@@ -5790,3 +5790,4 @@
 1537935475	Makyen	RbfO6yzaVpM(?#YouTube video)
 1537938572	Shree	hotmailnumber\.com
 1537938805	tripleee	[a-z_]*(?:1_*)?844[\W_]*305[\W_]*6556[a-z_]*
+1537940774	Tetsuya Yamamoto	ujjawalpackers\.in
