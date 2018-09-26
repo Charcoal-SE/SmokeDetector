@@ -1665,12 +1665,8 @@ class FindSpam:
             if rule['stripcodeblocks']:
                 # use a placeholder to avoid triggering "few unique characters" when most of post is code
                 # XXX: "few unique characters" doesn't enable this, so remove placeholder?
-                body_to_check = regex.sub("(?s)<pre>.*?</pre>",
-                                          "<pre><code>placeholder for omitted code/код block</code></pre>",
-                                          body_to_check)
-                body_to_check = regex.sub("(?s)<code>.*?</code>",
-                                          "<code>placeholder for omitted code/код block</code>",
-                                          body_to_check)
+                body_to_check = regex.sub("(?s)<pre>.*?</pre>", "", body_to_check)
+                body_to_check = regex.sub("(?s)<code>.*?</code>", "", body_to_check)
             if rule['reason'] == 'phone number detected in {}':
                 body_to_check = regex.sub("<(?:a|img)[^>]+>", "", body_to_check)
             matched_title, matched_username, matched_body = False, False, False
