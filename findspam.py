@@ -1257,7 +1257,7 @@ class FindSpam:
          'sites': ["rus.stackexchange.com"], 'reason': "English text in {} on a localized site", 'title': True,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # Roof repair
-        {'regex': u"roof repair", 'all': True,
+        {'regex': "roof repair", 'all': True,
          'sites': ["diy.stackexchange.com", "outdoors.stackexchange.com", "mechanics.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
          'body_summary': True, 'max_rep': 11, 'max_score': 0},
@@ -1427,7 +1427,7 @@ class FindSpam:
          'reason': 'non-English link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True,
          'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
         # Link text is one character within a word
-        {'regex': r'(?iu)\w<a href="[^"]+" rel="nofollow( noreferrer)?">.</a>\w', 'all': True,
+        {'regex': r'(?iu)\S<a href="[^"]+" rel="nofollow( noreferrer)?">.</a>\S', 'all': True,
          'sites': [], 'reason': 'one-character link in {}', 'title': False, 'body': True, 'username': False,
          'stripcodeblocks': True, 'body_summary': False, 'max_rep': 11, 'max_score': 1},
         # Link text consists of punctuation, answers only
@@ -1491,7 +1491,7 @@ class FindSpam:
         {'method': pattern_email, 'all': True, 'sites': [], 'reason': "pattern-matching email in {}", 'title': True,
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
         # QQ/ICQ/WhatsApp... numbers, for all sites
-        {'regex': r'(?i)(?<![a-z0-9])Q{1,2}(?:(?:[vw]|[^a-z0-9])\D{0,8})?\d{5}[.-]?\d{4,5}(?!["\d])|'
+        {'regex': r'(?i)(?<![a-z0-9])QQ?(?:(?:\w*[vw]x?|[^a-z0-9])\D{0,8})?\d{5}[.-]?\d{4,5}(?!["\d])|'
                   r'\bICQ[ :]{0,5}\d{9}\b|\bwh?atsa+pp?[ :+]{0,5}\d{10}', 'all': True, 'sites': [],
          'reason': "messaging number in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
