@@ -5355,7 +5355,6 @@
 1535958268	Tetsuya Yamamoto	pulsehyip\.com
 1535964069	Tetsuya Yamamoto	techpcvipers\.com
 1535966978	Tetsuya Yamamoto	avastcustomercare\.com
-1535967547	Tetsuya Yamamoto	baneh\.com
 1535967618	Tetsuya Yamamoto	yogenderempire\.com
 1535968055	Tetsuya Yamamoto	paragon-steels\.com
 1535970609	tripleee	mangesh\W*(?:\w+\W+)?dhulap
