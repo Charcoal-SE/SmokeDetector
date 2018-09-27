@@ -61,24 +61,20 @@ def error(message):
 
 while not stoprunning:
     log('Starting with persistent_arguments {!r}'.format(persistent_arguments))
-    # print "[NoCrash] Switch to Standby? %s" % switch_to_standby
 
     if count == 0:
         if 'standby' in persistent_arguments:
-            switch_to_standby = False  # Necessary for the while loop
-            command = (PY_EXECUTABLE + ' ws.py standby').split()
+            command = [PY_EXECUTABLE, 'ws.py', 'standby']
         else:
-            command = (PY_EXECUTABLE + ' ws.py first_start').split()
+            command = [PY_EXECUTABLE, 'ws.py', 'first_start']
     else:
-        if not ('standby' in persistent_arguments):
-            command = (PY_EXECUTABLE + ' ws.py').split()
+        if 'standby' not in persistent_arguments:
+            command = [PY_EXECUTABLE, 'ws.py']
         else:
-            command = (PY_EXECUTABLE + ' ws.py standby').split()
+            command = [PY_EXECUTABLE, 'ws.py', 'standby']
 
-    try:
+    if 'standby' in persistent_arguments:
         persistent_arguments.remove('standby')
-    except ValueError:
-        pass  # We're OK if the argument isn't in the list.
 
     try:
         ecode = sp.call(command + persistent_arguments, env=os.environ.copy())
