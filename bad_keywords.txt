@@ -1624,3 +1624,4 @@ keto\W?fit(\W?(?:diet|premium))?
 (?:happy\W?)?diwali\W?(?:image|picture)s?(?:\W?hd)?\d*
 UU2PdUt_s_k(?#YouTube of Keto Lean)
 mega\W?leans(?:\W?forskolin)?
+paraglow\W?cream
