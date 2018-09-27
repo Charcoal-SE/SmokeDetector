@@ -360,15 +360,15 @@ def has_health(s, site):   # flexible detection of health spam in titles
 def pattern_product_name(s, site):
     required_keywords = [
         "Testo", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Forskolin", "Diet", "Slim", "Serum", "(?:Pure)?Fit",
-        "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Shark", "Tank", "Penis", "Pills?",
+        "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Shark", "Tank", "Penis", "Pills?", "CBD",
         "Elite", "Exceptional", "Enhance(?:ment)?", "Nitro", "Boost", "E?xtreme", "Grow",
         "Pure", "Skin", "Muscle", "Therm[ao]", "Neuro", "Luma", "Rapid", "Tone", "Keto", "Fuel", "Cream",
         "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Male", "Weight[ -](?:Loss|Reduction)", "Radiant(?:ly)?",
         "Hyper(?:tone)?", "Boost(?:er)?", "Youth", "Monster",
     ]
     keywords = required_keywords + [
-        "Deep", "Pro", "Advanced?", "Divine", "Royale", "Angele*", "Trinity", "Andro", "Max+", "Force",
-        "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect", "Bio",
+        "Deep", "Pro", "Advanced?", "Divine", "Royale", "Angele*", "Trinity", "Andro", "Max+", "Force", "Health",
+        "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect", "Bio", "Natural", "Oil",
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords.extend([r"X[\dLRT]?", "Alpha", "Plus", "Prime", "Formula"])
