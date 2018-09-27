@@ -301,11 +301,11 @@ def do_blacklist(blacklist_type, msg, force=False):
             GitManager.pull_local()
             GlobalVars.reload()
             findspam.FindSpam.reload_blacklists()
-            chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart)
+            tell_rooms_with('debug', GlobalVars.s_norestart)
             time.sleep(2)
-            return "ahhhhh debugging!"
-        except Exception as e:
-            return "{}: {}".format(type(e).__name__, str(e))
+            return None
+        except Exception:
+            pass
     return result
 
 
@@ -378,11 +378,11 @@ def unblacklist(msg, item, alias_used="unwatch"):
             GitManager.pull_local()
             GlobalVars.reload()
             findspam.FindSpam.reload_blacklists()
-            chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart)
+            tell_rooms_with('debug', GlobalVars.s_norestart)
             time.sleep(2)
-            return "ahhhhh debugging!"
-        except Exception as e:
-            return "{}: {}".format(type(e).__name__, str(e))
+            return None
+        except Exception:
+            pass
     return message
 
 
