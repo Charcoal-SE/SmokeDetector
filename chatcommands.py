@@ -292,6 +292,19 @@ def do_blacklist(blacklist_type, msg, force=False):
         metasmoke_down=metasmoke_down
     )
 
+    if only_blacklists_changed(GitManager.get_local_diff()):
+        try:
+            if not GlobalVars.on_master:
+                # Restart if HEAD detached
+                log('warning', "Pulling remote with HEAD detached, checkout deploy", f=True)
+                os._exit(8)
+            GitManager.pull_local()
+            GlobalVars.reload()
+            findspam.FindSpam.reload_blacklists()
+            chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart)
+            return
+        except Exception:
+            pass
     return result
 
 

@@ -18,7 +18,7 @@ else:
     from sh.contrib import git
     from sh import ErrorReturnCode as GitError
 
-from helpers import log
+from helpers import log, only_blacklists_changed
 from globalvars import GlobalVars
 from blacklists import *
 
@@ -299,5 +299,22 @@ class GitManager:
             return git.diff("--name-only", "HEAD", "origin/deploy")
 
     @staticmethod
+    def get_local_diff():
+        if 'windows' in platform.platform().lower():
+            return git.diff_filenames("HEAD", "master")
+        else:
+            return git.diff("--name-only", "HEAD", "master")
+
+    @staticmethod
     def pull_remote():
         git.pull()
+
+    @staticmethod
+    def pull_local():
+        diff = GitManager.get_local_diff()
+        if not only_blacklists_changed(diff):
+            return
+        try:
+            git.merge("--ff-only", "master")
+        except GitError:
+            return
