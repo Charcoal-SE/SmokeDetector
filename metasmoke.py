@@ -81,7 +81,7 @@ class Metasmoke:
                 and not GlobalVars.metasmoke_down:
             log('warning', "Last metasmoke ping with a response was over 120 seconds ago, "
                            "forcing SmokeDetector restart to reset all sockets.", f=True)
-            os._exit(10)
+            # os._exit(10)
         else:
             pass  # Do nothing
 
