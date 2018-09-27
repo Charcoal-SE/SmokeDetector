@@ -5813,3 +5813,4 @@
 1538047283	tripleee	[a-z_]*(?:234_*)?7089275769[a-z_]*
 1538050459	iBug	david\W?bank\W?manager(?:\Wgmail\.com)?
 1538052299	tripleee	[a-z_]*(?:1_*)?[\W_]*712[\W_]*292[\W_]*2655[a-z_]*
+1538061144	Glorfindel	downloader\.vip
