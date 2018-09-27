@@ -283,7 +283,7 @@ def do_blacklist(blacklist_type, msg, force=False):
         code_permissions = False  # Because we need the system to assume that we don't have code privs.
         metasmoke_down = True
 
-    _, result = GitManager.add_to_blacklist(
+    _status, result = GitManager.add_to_blacklist(
         blacklist=blacklist_type,
         item_to_blacklist=pattern,
         username=msg.owner.name,
@@ -291,6 +291,9 @@ def do_blacklist(blacklist_type, msg, force=False):
         code_permissions=code_permissions,
         metasmoke_down=metasmoke_down
     )
+
+    if not _status:
+        raise CmdException(result)
 
     if only_blacklists_changed(GitManager.get_local_diff()):
         try:
@@ -368,6 +371,9 @@ def unblacklist(msg, item, alias_used="unwatch"):
     _status, message = GitManager.remove_from_blacklist(
         rebuild_str(pattern), msg.owner.name, blacklist_type,
         code_privileged=code_privs, metasmoke_down=metasmoke_down)
+
+    if not _status:
+        raise CmdException(result)
 
     if only_blacklists_changed(GitManager.get_local_diff()):
         try:
