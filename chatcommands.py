@@ -296,12 +296,13 @@ def do_blacklist(blacklist_type, msg, force=False):
         try:
             if not GlobalVars.on_master:
                 # Restart if HEAD detached
-                log('warning', "Pulling remote with HEAD detached, checkout deploy", f=True)
+                log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
                 os._exit(8)
             GitManager.pull_local()
             GlobalVars.reload()
             findspam.FindSpam.reload_blacklists()
             chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart)
+            time.sleep(2)
             return
         except Exception:
             pass
@@ -367,6 +368,21 @@ def unblacklist(msg, item, alias_used="unwatch"):
     _status, message = GitManager.remove_from_blacklist(
         rebuild_str(pattern), msg.owner.name, blacklist_type,
         code_privileged=code_privs, metasmoke_down=metasmoke_down)
+
+    if only_blacklists_changed(GitManager.get_local_diff()):
+        try:
+            if not GlobalVars.on_master:
+                # Restart if HEAD detached
+                log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
+                os._exit(8)
+            GitManager.pull_local()
+            GlobalVars.reload()
+            findspam.FindSpam.reload_blacklists()
+            chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart)
+            time.sleep(2)
+            return
+        except Exception:
+            pass
     return message
 
 
