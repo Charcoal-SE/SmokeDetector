@@ -304,8 +304,8 @@ def do_blacklist(blacklist_type, msg, force=False):
             chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart)
             time.sleep(2)
             return "ahhhhh debugging!"
-        except Exception:
-            pass
+        except Exception as e:
+            return "{}: {}".format(type(e).__name__, str(e))
     return result
 
 
@@ -381,8 +381,8 @@ def unblacklist(msg, item, alias_used="unwatch"):
             chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart)
             time.sleep(2)
             return "ahhhhh debugging!"
-        except Exception:
-            pass
+        except Exception as e:
+            return "{}: {}".format(type(e).__name__, str(e))
     return message
 
 
