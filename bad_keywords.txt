@@ -1420,7 +1420,6 @@ lean\W?belly\W?breakthrough
 auto\W+link\W+(?:international|int\W+pakistan)
 keto\W?x
 rvxadryl
-keto\W?fit\W?diet
 vita\W*trim
 natural\W?keto
 hackmarvel4(?:@gmail.com)?
