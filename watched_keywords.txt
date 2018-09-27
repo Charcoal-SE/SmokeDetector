@@ -5818,3 +5818,4 @@
 1538070472	Glorfindel	hotstar\.onl
 1538070490	Glorfindel	messenger\.red
 1538070510	Glorfindel	subwaysurfers\.vip
+1538070564	Glorfindel	psiphon\.vip
