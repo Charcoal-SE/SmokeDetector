@@ -275,7 +275,11 @@ class GitManager:
         if 'windows' in platform.platform().lower():
             return git.status_stripped()
         else:
-            return git.status()
+            return str(git.status())
+
+    @staticmethod
+    def current_branch():
+        return str(git('rev-parse', '--abbrev-ref', 'HEAD')).strip()
 
     @staticmethod
     def merge_abort():
@@ -316,5 +320,6 @@ class GitManager:
             return
         try:
             git.merge("--ff-only", "master")
+            git.push("origin", "deploy")
         except GitError:
             return
