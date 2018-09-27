@@ -54,14 +54,14 @@ def check_if_spam(post):
             else:
                 blacklisted_by = blacklisted_user_data[1]
             blacklisted_post_url = blacklisted_user_data[2]
-            if why and why[-1] != "\n":
-                why += "\n"
+            if why and why[-1] == "\n":
+                why = why[:-1]
             if blacklisted_post_url:
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
-                why += "Blacklisted user - blacklisted for {} ({}) by {}".format(
+                why += "\nBlacklisted user - blacklisted for {} ({}) by {}".format(
                     blacklisted_post_url, to_metasmoke_link(rel_url), blacklisted_by)
             else:
-                why += "Blacklisted user - blacklisted by {}".format(blacklisted_by)
+                why += "\n" + u"Blacklisted user - blacklisted by {}".format(blacklisted_by)
     if test:
         result = None
         if datahandling.has_already_been_posted(post.post_site, post.post_id, post.title):

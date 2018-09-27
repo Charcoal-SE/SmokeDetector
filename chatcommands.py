@@ -1461,7 +1461,7 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
 
         # If "report-force" then jump to the next block
         if scan_spam and operation in {"scan", "report"}:
-            handle_spam(post=post, reasons=scan_reasons, why=report_info + scan_why)
+            handle_spam(post=post, reasons=scan_reasons, why=report_info + scan_why.lstrip())
             continue
 
         # scan_spam == False or "report-force"
