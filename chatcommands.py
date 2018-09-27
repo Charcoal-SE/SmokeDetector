@@ -303,7 +303,7 @@ def do_blacklist(blacklist_type, msg, force=False):
             findspam.FindSpam.reload_blacklists()
             chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart)
             time.sleep(2)
-            return
+            return "ahhhhh debugging!"
         except Exception:
             pass
     return result
@@ -380,7 +380,7 @@ def unblacklist(msg, item, alias_used="unwatch"):
             findspam.FindSpam.reload_blacklists()
             chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart)
             time.sleep(2)
-            return
+            return "ahhhhh debugging!"
         except Exception:
             pass
     return message
