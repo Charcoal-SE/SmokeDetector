@@ -367,8 +367,8 @@ def pattern_product_name(s, site):
         "Hyper(?:tone)?", "Boost(?:er)?", "Youth", "Monster",
     ]
     keywords = required_keywords + [
-        "Deep", "Pro", "Advanced", "Divine", "Royale", "Angele*", "Trinity", "Andro", "Max+", "Force",
-        "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect",
+        "Deep", "Pro", "Advanced?", "Divine", "Royale", "Angele*", "Trinity", "Andro", "Max+", "Force",
+        "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect", "Bio",
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords.extend([r"X[\dLRT]?", "Alpha", "Plus", "Prime", "Formula"])
