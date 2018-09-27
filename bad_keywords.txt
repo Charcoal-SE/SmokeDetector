@@ -1619,5 +1619,4 @@ curalin
 appkodes
 nerve\W?renew
 trim\W?pill(?:\W?keto)?
-keto\W?fit
 keto\W?lean
