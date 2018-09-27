@@ -368,7 +368,7 @@ def unblacklist(msg, item, alias_used="unwatch"):
         metasmoke_down = True
 
     pattern = msg.content_source.split(" ", 1)[1]
-    _status, message = GitManager.remove_from_blacklist(
+    _status, result = GitManager.remove_from_blacklist(
         rebuild_str(pattern), msg.owner.name, blacklist_type,
         code_privileged=code_privs, metasmoke_down=metasmoke_down)
 
@@ -389,7 +389,7 @@ def unblacklist(msg, item, alias_used="unwatch"):
             return None
         except Exception:
             pass
-    return message
+    return result
 
 
 @command(privileged=True, aliases=["remote-diff", "remote_diff"])
