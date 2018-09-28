@@ -5849,3 +5849,4 @@
 1538172709	Makyen	gomeetingmtl2018(?:@gmail\.com)?
 1538172729	Makyen	easychair\.org(?#Generic paper submission site)
 1538174890	Makyen	(?:spirit\.)?reservation\W?phone\W?number\.com(?#Fake Spirit Airlines reservation number)
+1538174955	Makyen	(?:airlines-phone-number|airlines-number|spiritairlinesphonenumber|airlines-contact-number)\.com(?#Additional domains associated with 1-855-968-8387; Fake Spirit Airlines reservation number)
