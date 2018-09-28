@@ -219,15 +219,15 @@ def get_user_from_list_command(cmd):  # for example, !!/addblu is a list command
 def url_to_shortlink(url):
     id_and_site = fetch_post_id_and_site_from_url(url)
     if id_and_site is None:
-        return url
+        return None
     if id_and_site[2] == "question":
-        return "http://{}/questions/{}".format(id_and_site[1], id_and_site[0])
+        return "https://{}/questions/{}".format(id_and_site[1], id_and_site[0])
         # We're using "/questions" and not "/q" here because when the URL
         # is made protocol-relative, /q would redirect to http even if the
         # shortlink is https. Same for /a. But there we still use /a because
         # there is no /answers or something like that.
     else:
-        return "http://{}/a/{}".format(id_and_site[1], id_and_site[0])
+        return "https://{}/a/{}".format(id_and_site[1], id_and_site[0])
 
 
 # noinspection PyMissingTypeHints

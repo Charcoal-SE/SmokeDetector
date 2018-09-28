@@ -1446,7 +1446,7 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
     normalized_urls = []
     for url in urls:
         t = url_to_shortlink(url)
-        if t == url:
+        if not t:
             normalized_urls.append("That does not look like a valid post URL.")
         elif t not in normalized_urls:
             normalized_urls.append(t)
@@ -1548,7 +1548,9 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
 
 @command(str, str, privileged=True, whole_msg=True)
 def feedback(msg, post_url, feedback):
-    post_url = url_to_shortlink(post_url)[5:]
+    post_url = url_to_shortlink(post_url)[6:]
+    if not post_url:
+        raise CmdException("No such feedback.")
 
     for feedbacks in (TRUE_FEEDBACKS, FALSE_FEEDBACKS, NAA_FEEDBACKS):
         if feedback in feedbacks:
