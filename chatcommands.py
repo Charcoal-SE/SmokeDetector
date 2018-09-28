@@ -1295,8 +1295,8 @@ def report(msg, args, alias_used="report"):
     for url in urls:
         t = url_to_shortlink(url)
         if t == url:
-            normalized_urls.append("An invalid URL was provided.")
-        if t not in normalized_urls:
+            normalized_urls.append("That does not look like a valid post URL.")
+        elif t not in normalized_urls:
             normalized_urls.append(t)
         else:
             normalized_urls.append("A duplicate URL was provided")
