@@ -1285,13 +1285,22 @@ def report(msg, args, alias_used="report"):
     except IndexError:
         custom_reason = None
 
-    urls = list(set(urls))
-
     if len(urls) > 5:
         raise CmdException("To avoid SmokeDetector reporting posts too slowly, you can "
                            "{} at most 5 posts at a time. This is to avoid "
                            "SmokeDetector's chat messages getting rate-limited too much, "
                            "which would slow down reports.".format(alias_used))
+
+    normalized_urls = []
+    for url in urls:
+        t = url_to_shortlink(url)
+        if t == url:
+            normalized_urls.append("An invalid URL was provided.")
+        if t not in normalized_urls:
+            normalized_urls.append(t)
+        else:
+            normalized_urls.append("A duplicate URL was provided")
+    urls = normalized_urls
 
     # report_posts(urls, reported_by, reported_in, blacklist_by, operation="report", custom_reason=None):
     output = report_posts(urls, msg.owner.name, msg.room.name, message_url, alias_used, custom_reason)
@@ -1445,11 +1454,15 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
 
     report_info = "Post manually {}{}{}.\n\n".format(action_done, reported_from, with_reason)
 
-    urls = list(set(urls))
     users_to_blacklist = []
     output = []
 
     for index, url in enumerate(urls, start=1):
+        if not url.startswith("http://") and not url.startswith("https://"):
+            # Return the bad URL directly.
+            output.append("Post {}: {}".format(index, url))
+            continue
+
         post_data = api_get_post(rebuild_str(url))
 
         if post_data is None:
