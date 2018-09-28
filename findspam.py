@@ -1754,7 +1754,11 @@ class FindSpam:
         return ", ".join([
             "Position{} {}: {}".format(
                 "s" if len(span) > 1 else "",
-                ", ".join(["{}-{}".format(a + 1, b) for a, b in span]),
+                ", ".join(
+                    ["{}-{}".format(a, b) for a, b in span]
+                    if len(span) < 5 else
+                    ["{}-{}".format(a, b) for a, b in span[:3]] + ["+{} more".format(len(span) - 3)]
+                ),
                 word
             )
             for span, word in infos])
