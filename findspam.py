@@ -559,6 +559,7 @@ def bad_ns_for_url_domain(s, site):
         'healthymum.org.',
         'escortdomain.net.',
         'syrahost.com.',
+        'dnsdomen.com.',
     ])
 
 
@@ -607,7 +608,6 @@ def watched_ns_for_url_domain(s, site):
         'utecho.com.',
         '256gbserver.com.',
         'solutionsinfini.org.',
-        'dnsdomen.com.',
         'ownmyserver.com.',
         'websitewelcome.com.',
         'fatcow.com.',
