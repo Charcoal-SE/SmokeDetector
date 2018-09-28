@@ -5828,3 +5828,4 @@
 1538122017	tripleee	[a-z_]*(?:91_*)?7411218493[a-z_]*
 1538125066	iBug	financialstreet\.in
 1538125097	iBug	testosterall
+1538130429	iBug	escortlarnaca\.info
