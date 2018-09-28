@@ -614,6 +614,7 @@ def watched_ns_for_url_domain(s, site):
         'vedigitize.us.',
         'serverpars.com.',
         'cloudns.net.',
+        'namedc.com.',
     ])
 
 
