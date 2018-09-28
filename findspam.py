@@ -891,6 +891,9 @@ def body_starts_with_title(post):
         return False, False, False, ""
     ending_url = ending_url.replace("Link at end: ", "")
 
+    if regex.compile(r"</?(?:pre|code)>").search(post.body):
+        return False, False, False, ""
+
     s = strip_urls_and_tags(post.body).replace(" ", "").replace("\n", "")
     if similar_ratio(s[:len(t)], t) >= BODY_TITLE_SIMILAR_RATIO:
         return False, False, True, "Body starts with title and ends in URL: " + ending_url
