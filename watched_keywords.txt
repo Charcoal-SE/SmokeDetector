@@ -5838,3 +5838,4 @@
 1538146494	Glorfindel	mrprefect\.ml
 1538146688	Makyen	nepalguideinfo\.com
 1538146697	Makyen	[a-z_]*977[\W_]*1[\W_]*4252196[a-z_]*
+1538146706	Makyen	[a-z_]*977[\W_]*1[\W_]*9841613822[a-z_]*
