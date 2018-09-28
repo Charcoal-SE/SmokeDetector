@@ -5841,3 +5841,4 @@
 1538146706	Makyen	[a-z_]*977[\W_]*1[\W_]*9841613822[a-z_]*
 1538146715	Makyen	sanjibtrekguide(?:@gmail\.com)
 1538147499	iBug	hintel-tech\.com
+1538152967	Glorfindel	kratoslab\.com
