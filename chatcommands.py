@@ -1291,17 +1291,6 @@ def report(msg, args, alias_used="report"):
                            "SmokeDetector's chat messages getting rate-limited too much, "
                            "which would slow down reports.".format(alias_used))
 
-    normalized_urls = []
-    for url in urls:
-        t = url_to_shortlink(url)
-        if t == url:
-            normalized_urls.append("That does not look like a valid post URL.")
-        elif t not in normalized_urls:
-            normalized_urls.append(t)
-        else:
-            normalized_urls.append("A duplicate URL was provided")
-    urls = normalized_urls
-
     # report_posts(urls, reported_by, reported_in, blacklist_by, operation="report", custom_reason=None):
     output = report_posts(urls, msg.owner.name, msg.room.name, message_url, alias_used, custom_reason)
 
@@ -1453,6 +1442,17 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
         with_reason = ""
 
     report_info = "Post manually {}{}{}.\n\n".format(action_done, reported_from, with_reason)
+
+    normalized_urls = []
+    for url in urls:
+        t = url_to_shortlink(url)
+        if t == url:
+            normalized_urls.append("That does not look like a valid post URL.")
+        elif t not in normalized_urls:
+            normalized_urls.append(t)
+        else:
+            normalized_urls.append("A duplicate URL was provided.")
+    urls = normalized_urls
 
     users_to_blacklist = []
     output = []
