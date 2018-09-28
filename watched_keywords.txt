@@ -5824,3 +5824,4 @@
 1538087449	Makyen	yallagoallive\.zendesk\.com
 1538101353	iBug	Rob7ak
 1538112700	Shree	chlworldwide\.com
+1538119117	Glorfindel	zero2launch\.io
