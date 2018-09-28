@@ -5848,3 +5848,4 @@
 1538172700	Makyen	eventbrite\.com(?#Generic event registration site;Qs may be about use)
 1538172709	Makyen	gomeetingmtl2018(?:@gmail\.com)?
 1538172729	Makyen	easychair\.org(?#Generic paper submission site)
+1538174890	Makyen	(?:spirit\.)?reservation\W?phone\W?number\.com(?#Fake Spirit Airlines reservation number)
