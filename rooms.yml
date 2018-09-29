@@ -599,8 +599,4 @@ stackoverflow.com:
       - 6296561  # Zoe
       # NOTICE: please don't add new users until you have Room Owner approval. Art is an RO.
       
-  167826: # temp room
-    commands: false
-    msg_types:
-      - site-stackoverflow.com
-      - experimental
+  # 167826: # temp room (gone already)
