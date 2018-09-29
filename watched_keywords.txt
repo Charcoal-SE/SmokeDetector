@@ -5856,3 +5856,4 @@
 1538206542	Glorfindel	webhostingonedollar\.com
 1538209894	Glorfindel	easystepfinance\.com
 1538212446	Glorfindel	cilix\d+
+1538215373	Glorfindel	cardprince\.com
