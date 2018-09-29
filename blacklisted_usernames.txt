@@ -102,3 +102,4 @@ customwristbands
 ^MORGAN CHAN$
 ^ZoeXie$
 ^بانه$
+^king[\W_]*excel$
