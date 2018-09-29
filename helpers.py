@@ -149,6 +149,9 @@ def unshorten_link(url, request_type='HEAD', explicitly_ignore_security_warning=
     return url
 
 
+pcre_comment = regex.compile(r"\(\?#(?<!(?:[^\\]|^)(?:\\\\)*\\\(\?#)[^)]*\)")
+
+
 def blacklist_integrity_check():
     bl_files = glob('bad_*.txt') + glob('blacklisted_*.txt') + ['watched_keywords.txt']
     seen = dict()
@@ -156,6 +159,7 @@ def blacklist_integrity_check():
     for bl_file in bl_files:
         with open(bl_file, 'r') as lines:
             for lineno, line in enumerate(lines, 1):
+                line = pcre_comment.sub(line, "")
                 if line.endswith('\r\n'):
                     errors.append('{0}:{1}:DOS line ending'.format(bl_file, lineno))
                 elif not line.endswith('\n'):
