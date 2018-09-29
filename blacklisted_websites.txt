@@ -2355,3 +2355,4 @@ routers-support\.com
 gpssupportservices\.co\.uk
 vitamind3pro\.com
 supplementgate\.com
+gmailhelplinenumber\.co(?:\.uk)?
