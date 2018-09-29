@@ -5859,3 +5859,4 @@
 1538215373	Glorfindel	cardprince\.com
 1538215387	Glorfindel	giftcardgit\.com
 1538255188	Makyen	^king\W*excel$
+1538255514	Makyen	Dose\W*for\W*Excel
