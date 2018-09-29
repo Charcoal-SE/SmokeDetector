@@ -1757,8 +1757,8 @@ class FindSpam:
                 "s" if len(span) > 1 else "",
                 ", ".join(
                     ["{}-{}".format(a, b) for a, b in span]
-                    if len(span) < 5 else
-                    ["{}-{}".format(a, b) for a, b in span[:3]] + ["+{} more".format(len(span) - 3)]
+                    if len(span) < 14 else
+                    ["{}-{}".format(a, b) for a, b in span[:12]] + ["+{} more".format(len(span) - 12)]
                 ),
                 word
             )
