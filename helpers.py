@@ -159,7 +159,6 @@ def blacklist_integrity_check():
     for bl_file in bl_files:
         with open(bl_file, 'r') as lines:
             for lineno, line in enumerate(lines, 1):
-                line = pcre_comment.sub(line, "")
                 if line.endswith('\r\n'):
                     errors.append('{0}:{1}:DOS line ending'.format(bl_file, lineno))
                 elif not line.endswith('\n'):
@@ -169,6 +168,7 @@ def blacklist_integrity_check():
                 elif bl_file == 'watched_keywords.txt':
                     line = line.split('\t')[2]
 
+                line = pcre_comment.sub(line, "")
                 if line in seen:
                     errors.append('{0}:{1}:Duplicate entry {2} (also {3})'.format(
                         bl_file, lineno, line.rstrip('\n'), seen[line]))
