@@ -364,7 +364,7 @@ def pattern_product_name(s, site):
         "Elite", "Exceptional", "Enhance(?:ment)?", "Nitro", "Boost(?:er)?", "Supplements?",
         "Pure", "Skin", "Muscle", "Therm[ao]", "Neuro", "Luma", "Rapid", "Tone", "Keto", "Fuel", "Cream",
         "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Male", "Weight[ -](?:Loss|Reduction)", "Radiant(?:ly)?",
-        "Hyper(?:tone)?", "Boost(?:er)?", "Youth", "Monster", "Enlarge(?:ment)"
+        "Hyper(?:tone)?", "Boost(?:er|ing)?", "Youth", "Monster", "Enlarge(?:ment)"
     ]
     keywords = required_keywords + [
         "Deep", "Pro", "Advanced?", "Divine", "Royale", "Angele*", "Trinity", "Andro", "Max+", "Force", "Health",
