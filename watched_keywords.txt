@@ -5851,3 +5851,4 @@
 1538174890	Makyen	(?:spirit\.)?reservation\W?phone\W?number\.com(?#Fake Spirit Airlines reservation number)
 1538174955	Makyen	(?:airlines-phone-number|airlines-number|spiritairlinesphonenumber|airlines-contact-number)\.com(?#Additional domains associated with 1-855-968-8387; Fake Spirit Airlines reservation number)
 1538174964	Makyen	[a-z_]*(?:1_*)?855[\W_]*968[\W_]*8387[a-z_]*(?#Fake Spirit Airlines reservation number)
+1538188181	iBug	praltrix
