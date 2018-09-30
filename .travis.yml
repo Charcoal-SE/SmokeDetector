@@ -2,11 +2,12 @@ language: python
 sudo: false
 python:
   - '3.6'
-  - '3.4'  # We want compatibility
+  - '3.5'
 install:
   - pip3 install -r requirements.txt --upgrade
   - pip3 install -r user_requirements.txt --upgrade
   - pip3 install pytest-cov codecov python-coveralls
+  - pip3 uninstall pytest-capturelog
 script:
   - flake8 --config=tox_tests.ini ./test/
   - flake8 --config=tox_classes.ini ./classes/
@@ -15,8 +16,6 @@ script:
 branches:
   only:
     - master
-    - travis
-    - debugging
 cache:
   directories:
     - $HOME/virtualenv/python3.6.*
