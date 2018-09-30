@@ -5861,3 +5861,4 @@
 1538255514	Makyen	Dose\W*for\W*Excel
 1538267330	Makyen	[a-z_]*237[\W_]*670672102[a-z_]*(?#WhatsApp)
 1538286452	iBug	nicennaughty\.com(?:\.np)?
+1538294432	iBug	coleus
