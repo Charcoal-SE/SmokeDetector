@@ -885,7 +885,7 @@ def body_starts_with_title(post):
     t = post.title.strip().replace(" ", "")
 
     # Safeguard for answers, should never hit
-    if len(t) <= 10:
+    if post.is_answer or len(t) <= 10:
         log('warning', "Length of post title is 10 characters or less. This is highly abnormal")
         return False, False, False, ""
 
@@ -1002,7 +1002,7 @@ class FindSpam:
         " %[au]h ", "tapsi ?sarkar",
         "(?:networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing|"
         "salesforce|joomla)( certification)? (courses?|training)(?=.{,25}</a>)",
-        r"(?:design|development|compan(y|ies)|training|courses?|automation|policy)"
+        r"(?:design|development|compan(y|ies)|training|courses?|automation|policy|sex)"
         r"(\b.{1,8}\b)?\L<city>\b",
         r"\b\L<city>(\b.{1,8}\b)?(?:tour)",  # TODO: Populate this "after city" keyword list
         u"Ｃ[Ｏ0]Ｍ", "sunergetic", "capilux",
