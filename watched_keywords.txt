@@ -5863,3 +5863,4 @@
 1538286452	iBug	nicennaughty\.com(?:\.np)?
 1538294432	iBug	coleus
 1538294592	iBug	sydfact\.com
+1538297590	iBug	cinemaexpress\.com
