@@ -18,6 +18,7 @@ branches:
     - master
 cache:
   directories:
+    - $HOME/virtualenv/python3.5.*
     - $HOME/virtualenv/python3.6.*
     - $HOME/.cache/pip
 before_cache:
