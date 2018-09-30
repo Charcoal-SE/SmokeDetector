@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from glob import glob
-from helpers import only_files_changed, blacklist_integrity_check
+from helpers import files_changed, blacklist_integrity_check
 
 
 def test_blacklist_integrity():
@@ -15,7 +15,7 @@ def test_blacklist_integrity():
 
 def test_remote_diff():
     file_set = set("abcdefg")
-    true_diff = "a c d g"
-    false_diff = "a d g q"
-    assert only_files_changed(true_diff, file_set)
-    assert not only_files_changed(false_diff, file_set)
+    true_diff = "a c k p"
+    false_diff = "h j q t"
+    assert files_changed(true_diff, file_set)
+    assert not files_changed(false_diff, file_set)
