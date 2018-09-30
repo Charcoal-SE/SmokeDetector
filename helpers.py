@@ -82,34 +82,31 @@ def log_exception(exctype, value, tb, f=False):
         fp.write(logged_msg)
 
 
-def only_files_changed(diff, file_set):
-    files_changed = set(diff.split())
-    return len(files_changed - file_set) == 0
+def files_changed(diff, file_set):
+    changed = set(diff.split())
+    return bool(len(changed & file_set))
 
 
-no_reboot_files = {
-    "",  # In case an empty string comes out of str.split()
-    "bad_keywords.txt", "blacklisted_usernames.txt", "blacklisted_websites.txt", "watched_keywords.txt",
+core_files = {
+    "apigetpost.py", "blacklists.py", "bodyfetcher.py", "chatcommands.py", "chatcommunicate.py",
+    "chatexchange_extension.py", "datahandling.py", "deletionwatcher.py", "excepthook.py", "flovis.py",
+    "gitmanager.py", "globalvars.py", "helpers.py", "metasmoke.py", "nocrash.py", "parsing.py", "spamhandling.py",
+    "tasks.py", "ws.py",
 
-    # Dump whatever in. Trust the performance of set()
-    "config.ci", "config.sample", "Dockerfile", "InspectionReference.txt", "install_dependencies.sh",
-    "LICENSE-APACHE", "LICENSE-MIT",
-    "README.md", "requirements.txt", "setup.sh", "user_requirements.txt",
-    "tox_classes.ini", "tox_tests.ini", "tox.ini",
-    ".gitignore", ".circleci/config.yml", ".codeclimate.yml", ".pullapprove.yml", ".travis.yml"
+    "classes/feedback.py", "classes/_Git_Windows.py", "classes/__init__.py", "classes/_Post.py",
 }
 reloadable_modules = {
     "findspam.py",
 }
-no_reboot_modules = no_reboot_files.union(reloadable_modules)
+module_files = core_files | reloadable_modules
 
 
 def only_blacklists_changed(diff):
-    return only_files_changed(diff, no_reboot_files)
+    return not files_changed(diff, module_files)
 
 
 def only_modules_changed(diff):
-    return only_files_changed(diff, no_reboot_modules)
+    return not files_changed(diff, core_files)
 
 
 def reload_modules():
