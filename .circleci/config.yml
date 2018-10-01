@@ -31,7 +31,6 @@ jobs:
           command: |
             git config user.name SmokeDetector
             git config user.email "smokey@erwaysoftware.com"
-      - save_cache:
       - run:
           name: Pytest
           command: env/bin/python3 -W default::Warning -m pytest test
