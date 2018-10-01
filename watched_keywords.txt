@@ -5888,3 +5888,4 @@
 1538396337	Glorfindel	getasmurf\.com
 1538396549	Glorfindel	w9toys\.com
 1538406059	Makyen	killexams(?:\.com)?(?#Used as both domain name and company/product name)
+1538412551	Makyen	e\.foundation(?#domain)
