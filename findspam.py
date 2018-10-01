@@ -198,17 +198,11 @@ def misleading_link(s, site):
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def has_repeating_words(s, site):
-    words = regex.split(r"[\s.,;!/\()\[\]+_-]", s)
-    words = [word for word in words if word != ""]
-    streak = 0
-    prev = ""
-    for word in words:
-        if word == prev and word.isalpha() and len(word) > 1:
-            streak += 1
-        else:
-            streak = 0
-        prev = word
-        if streak >= 5 and streak * len(word) >= 0.2 * len(s):
+    matcher = regex.compile(r"(?P<words>(?P<word>[^\W_]+))(?:[][\s.,;!/\()+_-]+(?P<words>(?P=word))){4,}")
+    for match in matcher.finditer(s):
+        words = match.captures("words")
+        word = match.group("word")
+        if len(words) >= 5 and len(word) * len(words) >= 0.2 * len(s):
             return True, "Repeated word: *{}*".format(word)
     return False, ""
 
