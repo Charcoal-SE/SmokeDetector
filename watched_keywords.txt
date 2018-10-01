@@ -5884,3 +5884,4 @@
 1538391767	doppelgreener	biafinecream\.com
 1538392811	tripleee	[a-z_]*(?:1_*)?360[\W_]*650[\W_]*3000[a-z_]*
 1538393658	Glorfindel	wyvernchuck
+1538394054	tripleee	[a-z_]*(?:1_*)?667[\W_]*308[\W_]*3018[a-z_]*
