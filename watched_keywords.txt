@@ -5876,3 +5876,4 @@
 1538379082	Tetsuya Yamamoto	graduationinoneyearuniversities\.com
 1538379579	Tetsuya Yamamoto	buyieltswithoutexam\.com
 1538380283	Makyen	[a-z_]*(?:1_*)?646[\W_]*877[\W_]*0890[a-z_]*(?#buyieltswithoutexams)
+1538380292	Makyen	ielts\Wcert(?#Skype for buyieltswithoutexams)
