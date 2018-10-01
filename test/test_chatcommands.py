@@ -172,6 +172,7 @@ def test_watch(monkeypatch):
     monkeypatch.setattr("gitmanager.GitManager.add_to_blacklist", lambda *args, **kwargs: (True, "Hahaha"))
     assert wrap_watch("male enhancement", True) == "Hahaha"
 
+
 @patch("chatcommands.handle_spam")
 def test_report(handle_spam):
     # Documentation: The process before scanning the post is identical regardless of alias_used.
@@ -614,5 +615,3 @@ def test_inqueue():
     assert chatcommands.inqueue("https://codegolf.stackexchange.com/a/1") == "Can't check for answers."
     assert chatcommands.inqueue("https://stackoverflow.com/q/1") == "Not in queue."
     assert chatcommands.inqueue("https://codegolf.stackexchange.com/q/1") == "#1 in queue."
-
-
