@@ -198,7 +198,8 @@ def misleading_link(s, site):
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 def has_repeating_words(s, site):
-    matcher = regex.compile(r"(?P<words>(?P<word>[^\W_]+))(?:[][\s.,;!/\()+_-]+(?P<words>(?P=word))){4,}")
+    matcher = regex.compile(r"(?P<words>(?P<word>[a-z]+))(?:[][\s.,;!/\()+_-]+(?P<words>(?P=word))){4,}",
+                            flags=regex.I | regex.V0)
     for match in matcher.finditer(s):
         words = match.captures("words")
         word = match.group("word")
