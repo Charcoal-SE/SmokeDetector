@@ -608,3 +608,34 @@ def test_inqueue():
     assert chatcommands.inqueue("https://codegolf.stackexchange.com/a/1") == "Can't check for answers."
     assert chatcommands.inqueue("https://stackoverflow.com/q/1") == "Not in queue."
     assert chatcommands.inqueue("https://codegolf.stackexchange.com/q/1") == "#1 in queue."
+
+
+def test_watch(monkeypatch):
+    monkeypatch.setattr("chatcommunicate.is_privileged", lambda *args: True)
+    monkeypatch.setattr("gitmanager.GitManager.prepare_git_for_operation", lambda *args: (True, None))
+    msg = Fake({
+        "content_source": "",
+        "owner": {
+            "name": "SmokeDetector",
+            "id": 1,
+            "is_moderator": True
+        },
+        "room": {
+            "_client": {
+                "host": "stackexchange.com"
+            },
+            "id": 11540
+        },
+        "_client": {
+            "host": "stackexchange.com"
+        },
+    })
+    msg.content_source = "!!/watch male enhancement"
+    assert chatcommands.watch("", alias_used="watch", original_msg=msg).startswith("That pattern looks like it's already caught")
+
+    msg.content_source = "!!/watch trimfire"
+    assert chatcommands.watch("", alias_used="watch-force", original_msg=msg).startswith("Already watched")
+
+    msg.content_source = "!!/watch male enhancement"
+    monkeypatch.setattr("gitmanager.GitManager.add_to_blacklist", lambda *args, **kwargs: (True, "Hahaha"))
+    assert chatcommands.watch("", alias_used="watch-force", original_msg=msg) == "Hahaha"

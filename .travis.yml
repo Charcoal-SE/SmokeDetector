@@ -8,6 +8,9 @@ install:
   - pip3 install -r user_requirements.txt --upgrade
   - pip3 install pytest-cov codecov python-coveralls
   - pip3 uninstall pytest-capturelog || true
+before_script:
+  - git config user.name SmokeDetector
+  - git config user.email "smokey@erwaysoftware.com"
 script:
   - flake8 --config=tox_tests.ini ./test/
   - flake8 --config=tox_classes.ini ./classes/
