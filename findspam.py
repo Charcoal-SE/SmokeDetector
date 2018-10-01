@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # noinspection PyCompatibility
 
+import sys
 import math
 import regex
 from difflib import SequenceMatcher
