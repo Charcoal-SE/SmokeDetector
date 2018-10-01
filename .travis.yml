@@ -7,7 +7,7 @@ install:
   - pip3 install -r requirements.txt --upgrade
   - pip3 install -r user_requirements.txt --upgrade
   - pip3 install pytest-cov codecov python-coveralls
-  - pip3 uninstall pytest-capturelog
+  - pip3 uninstall pytest-capturelog || true
 script:
   - flake8 --config=tox_tests.ini ./test/
   - flake8 --config=tox_classes.ini ./classes/
