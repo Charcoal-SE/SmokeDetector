@@ -103,3 +103,4 @@ customwristbands
 ^ZoeXie$
 ^بانه$
 ^king[\W_]*excel$
+bella johsan
