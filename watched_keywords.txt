@@ -5886,3 +5886,4 @@
 1538393658	Glorfindel	wyvernchuck
 1538394054	tripleee	[a-z_]*(?:1_*)?667[\W_]*308[\W_]*3018[a-z_]*
 1538396337	Glorfindel	getasmurf\.com
+1538396549	Glorfindel	w9toys\.com
