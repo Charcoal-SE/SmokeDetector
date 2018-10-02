@@ -5893,3 +5893,4 @@
 1538438686	Makyen	cyber-wizard\.com
 1538451028	Makyen	latinrose66(?:@gmail\.com)?
 1538455458	Tetsuya Yamamoto	surveyguide\.net
+1538457990	Makyen	[a-z_]*(?:1_*)?206[\W_]*946[\W_]*9152[a-z_]*(?#hackinvade)
