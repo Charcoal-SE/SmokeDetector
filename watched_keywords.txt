@@ -5891,3 +5891,4 @@
 1538412551	Makyen	e\.foundation(?#domain)
 1538438676	Makyen	kevinmitnick(?:@cyber-wizard\.com)?
 1538438686	Makyen	cyber-wizard\.com
+1538451028	Makyen	latinrose66(?:@gmail\.com)?
