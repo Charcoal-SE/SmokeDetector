@@ -5892,3 +5892,4 @@
 1538438676	Makyen	kevinmitnick(?:@cyber-wizard\.com)?
 1538438686	Makyen	cyber-wizard\.com
 1538451028	Makyen	latinrose66(?:@gmail\.com)?
+1538455458	Tetsuya Yamamoto	surveyguide\.net
