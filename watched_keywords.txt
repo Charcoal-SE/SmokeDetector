@@ -5890,3 +5890,4 @@
 1538406059	Makyen	killexams(?:\.com)?(?#Used as both domain name and company/product name)
 1538412551	Makyen	e\.foundation(?#domain)
 1538438676	Makyen	kevinmitnick(?:@cyber-wizard\.com)?
+1538438686	Makyen	cyber-wizard\.com
