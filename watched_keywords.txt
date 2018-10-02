@@ -5895,3 +5895,4 @@
 1538455458	Tetsuya Yamamoto	surveyguide\.net
 1538457990	Makyen	[a-z_]*(?:1_*)?206[\W_]*946[\W_]*9152[a-z_]*(?#hackinvade)
 1538457998	Makyen	hackinvade(?:@gmail\.com)?
+1538460248	Tetsuya Yamamoto	chrismasterjohnphd\.com
