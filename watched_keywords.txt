@@ -5921,3 +5921,4 @@
 1538494083	Makyen	mikecraig\W*recovery(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?(?#somewhat obfuscated email + text)
 1538494098	Makyen	sportlogiq(?:\.com)?(?#potential recruiting spam as question)
 1538509182	Glorfindel	confirmshaming\.tumblr\.com
+1538515696	Makyen	sketchywebsite\.net
