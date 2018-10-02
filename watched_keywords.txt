@@ -5919,3 +5919,4 @@
 1538494059	Makyen	drboadiherbalhome1(?:@gmail\.com)?
 1538494070	Makyen	(?:admin\W*(?:at\W*)?)?scamrecoveryinc(?:\W*(?:dot\W*)?com)?(?#somewhat obfuscated email + domain)
 1538494083	Makyen	mikecraig\W*recovery(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?(?#somewhat obfuscated email + text)
+1538494098	Makyen	sportlogiq(?:\.com)?(?#potential recruiting spam as question)
