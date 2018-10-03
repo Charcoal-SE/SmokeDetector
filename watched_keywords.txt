@@ -5925,3 +5925,4 @@
 1538528649	Tetsuya Yamamoto	guru99\.com
 1538534466	Tetsuya Yamamoto	tkqlhce\.com
 1538536149	tripleee	interserver\.net
+1538537712	iBug	retard(?:ed)?s?
