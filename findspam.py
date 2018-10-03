@@ -1412,7 +1412,7 @@ class FindSpam:
          'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False,
          'max_rep': 1, 'max_score': 0},
         # Link text without Latin characters
-        {'regex': u">[^\s0-9A-Za-z<'\"]{3,}</a>", 'all': True,
+        {'regex': u">\s*([^\s0-9A-Za-z<'\"]\s*){3,}</a>", 'all': True,
          'sites': ["ja.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com",
                    "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com",
                    "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com",
