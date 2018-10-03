@@ -1640,3 +1640,4 @@ nutri\W?burn
 greenlifenutrition\d*(?!\.com)
 keto\W?plus(?:\W?diet)?
 healthsupplementfordiet
+ultra\W*last(?:\W*xxl)
