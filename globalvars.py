@@ -29,7 +29,7 @@ def git_ref():
         return sp.check_output(['git', 'symbolic-ref', '-q', 'HEAD'], stderr=sp.STDOUT).decode('utf-8').strip()
     except sp.CalledProcessError as e:
         if e.returncode == 1:
-            return 'detached'
+            return '$detached'  # Have a special character so Git never generates this output
         else:
             raise OSError("Git error:\n" + e.output) from e
 
@@ -167,7 +167,7 @@ class GlobalVars:
             commit['author'][0] if type(commit['author']) in {list, tuple} else commit['author'],
             commit['message'])
 
-        GlobalVars.on_master = git_ref() == 'refs/heads/master'
+        GlobalVars.on_master = git_ref() != '$detached'
         GlobalVars.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
             GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
             GlobalVars.commit['id'], GlobalVars.location, platform.python_version())
