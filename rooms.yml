@@ -599,4 +599,38 @@ stackoverflow.com:
       - 6296561  # Zoe
       # NOTICE: please don't add new users until you have Room Owner approval. Art is an RO.
       
-  # 167826: # temp room (gone already)
+  167826:
+    commands: true
+    
+    msg_types:
+      - site-stackoverflow.com
+      
+    privileges:
+      - 3160466  # ArtOfCode
+      - 1849664  # Undo
+      - 3002139  # Baum mit Augen
+      - 3476191  # Nobody Nada
+      - 5292302  # Petter Friberg
+      - 4688119  # Ashish Ahuja
+      - 4099593  # Bhargav Rao
+      - 1743880  # Tunaki
+      - 559745   # Floern
+      - 4687348  # FelixSFD
+      - 6375113  # Bugs
+      - 4622463  # angussidney
+      - 563532   # Rob
+      - 4050842  # Thaillie
+      - 1915448  # g00glen00b
+      - 4766556  # quartata
+      - 4733879  # chade_
+      - 4875631  # FrankerZ
+      - 5827005  # GrumpyCrouton
+      - 5781745  # K.Davis
+      - 264607   # BlackICE
+      - 397817   # Stephen Kennedy
+      - 4946380  # Mithrandir
+      - 3773011  # Makyen
+      - 965146   # Shree
+      - 6707985  # geisterfurz007
+      - 6723642  # heather
+      - 6296561  # Zoe
