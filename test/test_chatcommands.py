@@ -12,6 +12,7 @@ import os
 import pytest
 import regex
 import types
+from sh.contrib import git
 
 from fake import Fake
 from unittest.mock import patch
