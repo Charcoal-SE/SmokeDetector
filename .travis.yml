@@ -12,6 +12,8 @@ before_script:
   - git config user.name SmokeDetector
   - git config user.email "smokey@erwaysoftware.com"
   - git fetch --depth=3 origin deploy
+  - git checkout -b deploy origin/deploy
+  - git checkout master
 script:
   - flake8 --config=tox_tests.ini ./test/
   - flake8 --config=tox_classes.ini ./classes/
