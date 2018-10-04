@@ -5798,7 +5798,6 @@
 1537963463	Shree	japanologytranslation\.co\.uk
 1538003634	Makyen	cartitleloanscalifornia\.com
 1538016756	Makyen	projecttopics\.org
-1538024867	Shree	majesticessays\.com
 1538026607	Tetsuya Yamamoto	lobachemie\.com
 1538026659	Tetsuya Yamamoto	maydoduonghuyet\.net\.vn
 1538029927	Tetsuya Yamamoto	diwaliimages2018\.site
@@ -5931,6 +5930,18 @@
 1538579302	Makyen	drogbekhiluherbalhome(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?(?#obfuscated email + text)
 1538582928	Makyen	cashinasnap\.com
 1538582963	Makyen	ziphop\.in
-1538586658	Makyen	healthcare350\.com
 1538588158	Makyen	escortgoa\.info
 1538593226	Makyen	[a-z_]*(?:1_*)?833[\W_]*228[\W_]*1682[a-z_]*(?#cryptophonesupport.com)
+1538603994	Tetsuya Yamamoto	autolikesfree\.net
+1538604116	Tetsuya Yamamoto	lingopie\.com
+1538604589	Makyen	droidapkhub\.com
+1538620987	Tetsuya Yamamoto	pktechhunt\.in
+1538624135	Tetsuya Yamamoto	baenglishnotes\.com
+1538628072	Tetsuya Yamamoto	viralinterest\.com
+1538635932	tripleee	efatoora
+1538638944	Tetsuya Yamamoto	healthjumpprograming\.com
+1538638998	Tetsuya Yamamoto	suhuhealth\.blogspot\.com
+1538639433	Glorfindel	longartikel\.blogspot\.com
+1538643518	Tetsuya Yamamoto	koibhi\.com
+1538645948	Glorfindel	leadsuniversal\.com
+1538646129	Glorfindel	toppik\W*hair

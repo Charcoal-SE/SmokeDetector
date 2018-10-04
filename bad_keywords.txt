@@ -1556,10 +1556,9 @@ pro\W?keto(?:\W?rx)?
 derma\W*correct
 teal\W*farms
 bio\W?x
-paltrox
 ultimate\W?test\W?max
 houston-tx/regenerative-medicine/
-paltrox\W?t
+paltrox(?:\W*(?:t|rx))?
 recapture\W?360(?:\W?cream)?\w*
 love\Wspells?
 (?:regenerative\W*medicine|stem\W*cell\W*therapy)\W*houston
@@ -1641,3 +1640,4 @@ greenlifenutrition\d*(?!\.com)
 keto\W?plus(?:\W?diet)?
 healthsupplementfordiet
 ultra\W*last(?:\W*xxl)?
+testo drive 365 (?:canada|performance(?: plus)?)?(?#product name)
