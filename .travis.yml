@@ -12,6 +12,7 @@ before_script:
   - git config user.name SmokeDetector
   - git config user.email "smokey@erwaysoftware.com"
   - git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+  - git fetch origin --depth=3
 script:
   - flake8 --config=tox_tests.ini ./test/
   - flake8 --config=tox_classes.ini ./classes/
