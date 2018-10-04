@@ -149,28 +149,31 @@ def test_watch(monkeypatch):
 
         return chatcommands.watch(pattern, alias_used=cmd, original_msg=msg)
 
-    # Invalid regex
-    resp = wrap_watch(r'?')
-    assert "An invalid pattern was provided" in resp
+    try:
+        # Invalid regex
+        resp = wrap_watch(r'?')
+        assert "An invalid pattern was provided" in resp
 
-    # This is one of the perpetually condemned spam domains, blacklisted forever
-    resp = wrap_watch(r'israelbigmarket')
-    assert "That pattern looks like it's already caught" in resp
+        # This is one of the perpetually condemned spam domains, blacklisted forever
+        resp = wrap_watch(r'israelbigmarket')
+        assert "That pattern looks like it's already caught" in resp
 
-    # The phone number here is the first one in this format in bad_keywords.txt
-    resp = wrap_watch(r'[a-z_]*(?:1_*)?913[\W_]*608[\W_]*4584[a-z_]*')
-    assert "Mostly non-latin" not in resp
-    assert "Bad keyword in answer" in resp
-    assert "Bad keyword in body" in resp
+        # The phone number here is the first one in this format in bad_keywords.txt
+        resp = wrap_watch(r'[a-z_]*(?:1_*)?913[\W_]*608[\W_]*4584[a-z_]*')
+        assert "Mostly non-latin" not in resp
+        assert "Bad keyword in answer" in resp
+        assert "Bad keyword in body" in resp
 
-    # XXX TODO: figure out how to trigger duplicate entry separately
-    monkeypatch.setattr("chatcommunicate.is_privileged", lambda *args: True)
-    monkeypatch.setattr("gitmanager.GitManager.prepare_git_for_operation", lambda *args: (True, None))
+        # XXX TODO: figure out how to trigger duplicate entry separately
+        monkeypatch.setattr("chatcommunicate.is_privileged", lambda *args: True)
+        monkeypatch.setattr("gitmanager.GitManager.prepare_git_for_operation", lambda *args: (True, None))
 
-    assert wrap_watch("trimfire", True).startswith("Already watched")
+        assert wrap_watch("trimfire", True).startswith("Already watched")
 
-    monkeypatch.setattr("gitmanager.GitManager.add_to_blacklist", lambda *args, **kwargs: (True, "Hahaha"))
-    assert wrap_watch("male enhancement", True) == "Hahaha"
+        monkeypatch.setattr("gitmanager.GitManager.add_to_blacklist", lambda *args, **kwargs: (True, "Hahaha"))
+        assert wrap_watch("male enhancement", True) == "Hahaha"
+    finally:
+        git.checkout("master")
 
 
 @patch("chatcommands.handle_spam")
