@@ -11,9 +11,7 @@ install:
 before_script:
   - git config user.name SmokeDetector
   - git config user.email "smokey@erwaysoftware.com"
-  - git pull --depth=7
-  - git checkout -b deploy origin/deploy
-  - git checkout master
+  - git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 script:
   - flake8 --config=tox_tests.ini ./test/
   - flake8 --config=tox_classes.ini ./classes/
