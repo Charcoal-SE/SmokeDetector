@@ -989,7 +989,7 @@ def religion_troll(s, site):
 # noinspection PyClassHasNoInit
 class FindSpam:
     bad_keywords_nwb = [  # "nwb" == "no word boundary"
-        u"ಌ", "vashi?k[ae]r[ae]n", "garcinia", "cambogia", "forskolin",
+        u"ಌ", "vashi?k[ae]r[ae]n", "garcinia", "cambogia", "forskolin", "cbd\W?oil"
         "(eye|skin|aging) ?cream", "b ?a ?m ?(?:w ?o ?w|w ?a ?r)", "cogniq",
         r"male\Wperf(?!ormer)", "anti[- ]?aging", "(ultra|berry|body)[ -]?ketone",
         "(cogni|oro)[ -]?(lift|plex)",
