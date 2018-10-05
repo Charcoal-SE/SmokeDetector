@@ -1642,3 +1642,4 @@ healthsupplementfordiet
 ultra\W*last(?:\W*xxl)?
 testo drive 365 (?:canada|performance(?: plus)?)?(?#product name)
 testo\W?drive
+(?<=/)apple-id
