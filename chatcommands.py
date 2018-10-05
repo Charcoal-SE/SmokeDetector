@@ -297,7 +297,7 @@ def do_blacklist(blacklist_type, msg, force=False):
     if not _status:
         raise CmdException(result)
 
-    if only_blacklists_changed(GitManager.get_local_diff()):
+    if code_permissions and only_blacklists_changed(GitManager.get_local_diff()):
         try:
             if not GlobalVars.on_master:
                 # Restart if HEAD detached
