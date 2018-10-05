@@ -1644,3 +1644,4 @@ testo drive 365 (?:canada|performance(?: plus)?)?(?#product name)
 testo\W?drive
 (?<=/)apple-id
  毕业证
+ 学历认证
