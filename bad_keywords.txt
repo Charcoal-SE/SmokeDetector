@@ -755,7 +755,6 @@ neuactive
 force\W?fit\W?xl
 youthful\W?balance\W?serum
 dolce\W?vita\W?cream
-cbd\W?oil
 le\W?allure
 sinrex
 majestic\W?slim
