@@ -5967,10 +5967,8 @@
 1538738408	Shree	swantutorsonline\.com
 1538739459	Shree	ph375guide\.com
 1538742202	Shree	domymathhomework\.org
-1538746375	gparyani	tanishatray4Saveyra
 1538750390	Zoe	kolkataservicecentre\.in
 1538750436	Zoe	kolkata\W*repair\W*centre
 1538753497	Makyen	prnt\.sc/l1qxo1(?#image used in westcrypt.info spam)
 1538753503	Makyen	prnt\.sc/kshxtc(?#image used in westcrypt.info spam)
 1538753509	Makyen	westcrypt\.info
-1538746313	Sonic the Inclusive Werehog	tanishatray4Saveyra
