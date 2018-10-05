@@ -5978,3 +5978,4 @@
 1538761277	Makyen	lambangdaihocnhanh\.com
 1538761284	Makyen	lambangdaihocgoc\.com
 1538769756	Makyen	[a-z_]*(?:1_*)?877[\W_]*735[\W_]*9298[a-z_]*(?#Fake airline support: airlinechangeflights.com)
+1538769789	Makyen	airlinechangeflights\.com
