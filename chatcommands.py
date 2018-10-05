@@ -1294,10 +1294,9 @@ def report(msg, args, alias_used="report"):
     # report_posts(urls, reported_by, reported_in, blacklist_by, operation="report", custom_reason=None):
     output = report_posts(urls, msg.owner.name, msg.room.name, message_url, alias_used, custom_reason)
 
-    if 1 < len(urls) > output.count("\n") + 1:
-        add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
-
     if output:
+        if 1 < len(urls) > output.count("\n") + 1:
+            add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
         return output
 
 
