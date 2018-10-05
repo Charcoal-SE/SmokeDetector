@@ -24,14 +24,8 @@ def git_commit_info():
     return {'id': full_id[:7], 'id_full': full_id, 'author': author, 'message': message}
 
 
-def git_ref():
-    try:
-        return sp.check_output(['git', 'symbolic-ref', '-q', 'HEAD'], stderr=sp.STDOUT).decode('utf-8').strip()
-    except sp.CalledProcessError as e:
-        if e.returncode == 1:
-            return '$detached'  # Have a special character so Git never generates this output
-        else:
-            raise OSError("Git error:\n" + e.output) from e
+def git_ref_q():
+    return sp.run(['git', 'symbolic-ref', '-q', 'HEAD']).returncode == 0
 
 
 # We don't need strip_escape_chars() anymore, see commit message of 1931d30804a675df07887ce0466e558167feae57
@@ -167,7 +161,7 @@ class GlobalVars:
             commit['author'][0] if type(commit['author']) in {list, tuple} else commit['author'],
             commit['message'])
 
-        GlobalVars.on_master = git_ref() != '$detached'
+        GlobalVars.on_master = git_ref_q()
         GlobalVars.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
             GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
             GlobalVars.commit['id'], GlobalVars.location, platform.python_version())
