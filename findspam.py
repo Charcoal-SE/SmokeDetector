@@ -365,7 +365,7 @@ def pattern_product_name(s, site):
     keywords = required_keywords + [
         "Deep", "Pro", "Advanced?", "Divine", "Royale", "Angele*", "Trinity", "Andro", "Max+", "Force", "Health",
         "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect", "Bio", "Natural", "Oil",
-        "E?xtreme", "(?:Pure)?Fit", "Thirsty?", "Grow", "Complete",
+        "E?xtreme", "(?:Pure)?Fit", "Thirsty?", "Grow", "Complete", "Reviews?"
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords.extend([r"X[\dLRT]?", "Alpha", "Plus", "Prime", "Formula"])
