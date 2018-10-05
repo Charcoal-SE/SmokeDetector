@@ -1008,7 +1008,7 @@ class FindSpam:
         u"Ｃ[Ｏ0]Ｍ", "sunergetic", "capilux",
         r"ICQ#?\d{4}-?\d{5}", "viarex",
         r"b\W?o\W?j\W?i\W?t\W?e\W?r",
-        "(🐽|🐷){3,}", "毕业证", "レーザーポインター", "学历认证",
+        "(?:🐽|🐷){3,}",
     ]
 
     # Patterns: the top four lines are the most straightforward, matching any site with this string in domain name
