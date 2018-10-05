@@ -1689,8 +1689,6 @@ class FindSpam:
                         or (post.body_is_summary and rule['body_summary']):
                     matched_body = compiled_regex.findall(body_to_check)
             else:
-                assert 'method' in rule
-
                 if rule.get('whole_post'):
                     matched_title, matched_username, matched_body, why_post = rule['method'](post)
 
