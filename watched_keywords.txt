@@ -5957,3 +5957,4 @@
 1538719998	Shree	Enduro Stack
 1538720647	Shree	iphonesupportnumber\.com
 1538721396	tripleee	[a-z_]*(?:91_*)?855[\W_]*317[\W_]*7744[a-z_]*
+1538723971	Tetsuya Yamamoto	choppinggamechillyc\.com
