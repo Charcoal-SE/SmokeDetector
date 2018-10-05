@@ -1123,12 +1123,13 @@ class FindSpam:
     # Forward reference so they can be updated easily
     rule_bad_keywords = {
         # See PR 2322 for the reason of (?:^|\b) and (?:\b|$)
-        'regex': r"(?is)(?:^|\b)(?:{})(?:\b|$)|{}".format(
+        # (?w:\b) is also useful
+        'regex': r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
             "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
         'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
         'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1}
     rule_watched_keywords = {
-        'regex': r'(?is)(?:^|\b)(?:{})(?:\b|$)'.format("|".join(GlobalVars.watched_keywords.keys())),
+        'regex': r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format("|".join(GlobalVars.watched_keywords.keys())),
         'reason': 'potentially bad keyword in {}',
         'all': True, 'sites': [], 'title': True, 'body': True, 'username': True,
         'stripcodeblocks': False, 'body_summary': True, 'max_rep': 30, 'max_score': 1}
