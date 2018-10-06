@@ -5982,3 +5982,4 @@
 1538806414	Makyen	appslure\.com
 1538810435	iBug	immunisip\.com
 1538811709	iBug	kcyberservices25
+1538824172	iBug	mov-recovery\.com
