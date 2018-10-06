@@ -120,7 +120,11 @@ def handle_spam(post, reasons, why):
     if post.is_answer and post.post_id is not None and post.post_id is not "":
         datahandling.add_post_site_id_link((post.post_id, post.post_site, "answer"), post.parent.post_id)
     if GlobalVars.reason_weights or GlobalVars.metasmoke_key:
-        reason_weight_s = " ({:,})".format(sum_weight(reasons))
+        reason_weight = sum_weight(reasons)
+        if reason_weight >= 1000:
+            reason_weight_s = " (**{:,}**)".format(sum_weight(reasons))
+        else:
+            reason_weight_s = " ({:,})".format(sum_weight(reasons))
     else:  # No reason weight if neither cache nor MS
         reason_weight_s = ""
     try:
