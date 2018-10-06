@@ -5986,3 +5986,4 @@
 1538836969	Erik the Outgolfer	Greatlapola67@gmail\.com
 1538838346	Erik the Outgolfer	decodingdevops\.com
 1538841760	Makyen	[a-z_]*(?:1_*)?650[\W_]*822[\W_]*8110[a-z_]*(?#buyonlinemedicalcannabis.com)
+1538841774	Makyen	buyonlinemedicalcannabis\.com
