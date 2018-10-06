@@ -909,8 +909,7 @@ def body_starts_with_title(post):
         return False, False, True, "Body starts with title and ends in URL: " + ending_url
 
     # Final check: Body contains title verbatim
-    if post.post_site != "stackoverflow.com" and \
-            t in strip_urls_and_tags(post.body).replace(" ", "").replace("\n", ""):
+    if t in strip_urls_and_tags(post.body).replace(" ", "").replace("\n", ""):
         return False, False, True, "Body contains title and ends in URL: " + ending_url
     return False, False, False, ""
 
