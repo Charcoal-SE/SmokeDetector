@@ -38,12 +38,8 @@ class PostData:
             'up_vote_count': self.up_vote_count,
             'down_vote_count': self.down_vote_count,
             'edited': (self.creation_date != self.last_edit_date),
+            'IsAnswer': getattr(self, 'IsAnswer', False),
         }
-        # noinspection PyBroadException
-        try:
-            dictdata['IsAnswer'] = getattr(self, 'IsAnswer')
-        except AttributeError:
-            dictdata['IsAnswer'] = False  # Assume it's not an answer
 
         return dictdata
 
