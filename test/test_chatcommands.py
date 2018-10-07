@@ -149,7 +149,7 @@ def test_watch(monkeypatch):
         return chatcommands.watch(pattern, alias_used=cmd, original_msg=msg)
 
     # Prevent from attempting to check privileges with Metasmoke
-    monkeypatch.setattr("GlobalVars.code_privileged_users", [1, 161943])
+    monkeypatch.setattr(GlobalVars, "code_privileged_users", [1, 161943])
 
     try:
         # Invalid regex
