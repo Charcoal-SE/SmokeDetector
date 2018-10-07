@@ -94,6 +94,9 @@ core_files = {
     "tasks.py", "ws.py",
 
     "classes/feedback.py", "classes/_Git_Windows.py", "classes/__init__.py", "classes/_Post.py",
+
+    # Before these are made reloadable
+    "rooms.yml",
 }
 reloadable_modules = {
     "findspam.py",
