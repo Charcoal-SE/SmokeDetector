@@ -5998,3 +5998,4 @@
 1538874066	Makyen	grameencomputerbd\.com
 1538874076	Makyen	[a-z_]*(?:1_*)?647[\W_]*795[\W_]*2526[a-z_]*(?#iamastonerforreal@gmail.com)
 1538874085	Makyen	iamastonerforreal(?:@gmail\.com)
+1538875561	Makyen	l86pxnn9nraxsb8zus8szq-on\.drv\.tw
