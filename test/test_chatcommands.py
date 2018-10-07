@@ -145,10 +145,11 @@ def test_watch(monkeypatch):
             "content_source": '!!/{0} {1}'.format(cmd, pattern)
         })
         msg.room._client = msg._client
-        # Prevent from attempting to check privileges with Metasmoke
-        GlobalVars.code_privileged_users = [1, 161943]
 
         return chatcommands.watch(pattern, alias_used=cmd, original_msg=msg)
+
+    # Prevent from attempting to check privileges with Metasmoke
+    monkeypatch.setattr("GlobalVars.code_privileged_users", [1, 161943])
 
     try:
         # Invalid regex
