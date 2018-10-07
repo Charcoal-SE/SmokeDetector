@@ -6002,3 +6002,4 @@
 1538887991	Makyen	[a-z_]*(?:1_*)?518[\W_]*978[\W_]*0149[a-z_]*(?#kenlynch@gmail.com)
 1538888018	Makyen	kenlynch@gmail\.com
 1538890770	Makyen	canabro\.us(?#mail order marijuana)
+1538890780	Makyen	mail\W*order\W*marijuana
