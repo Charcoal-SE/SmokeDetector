@@ -4322,7 +4322,6 @@
 1531289791	Glorfindel	futurebiomed\.com
 1531290398	Makyen	[a-z_]*(?:1_*)?855[\W_]*205[\W_]*4069[a-z_]*
 1531291393	Makyen	amcham\.org\.hk
-1531295413	Glorfindel	safaryar\.net
 1531295825	Makyen	amazonprimesupportnumber\.com
 1531296787	Glorfindel	dumps\W?with\W?pin
 1531296914	Makyen	way\.com
