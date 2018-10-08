@@ -6014,3 +6014,4 @@
 1538942881	Makyen	dailymyshopping\.com
 1538966486	iBug	saurki\.com
 1538968530	Tetsuya Yamamoto	topvpn100\.com
+1538975207	iBug	vajracode(?:\.net)?
