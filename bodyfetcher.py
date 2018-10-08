@@ -46,7 +46,7 @@ class BodyFetcher:
         "expatriates.stackexchange.com": 1,
         "genealogy.stackexchange.com": 1,
         "ham.stackexchange.com": 1,
-        "health.stackexchange.com": 1,
+        "medicalsciences.stackexchange.com": 1,
         "history.stackexchange.com": 1,
         "meta.stackexchange.com": 1,
         "money.stackexchange.com": 1,
