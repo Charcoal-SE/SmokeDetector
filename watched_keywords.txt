@@ -3253,7 +3253,6 @@
 1525908727	Byte Commander	seoexpertspk\.com
 1525911965	DJMcMayhem	metropollitan\.com
 1525925733	Makyen	(?:(?:m(?:[^a-z]|&\w+;)*)+(?:o(?:[^a-z]|&\w+;)*)+(?:t(?:[^a-z]|&\w+;)*)+(?:h(?:[^a-z]|&\w+;)*)+(?:e(?:[^a-z]|&\w+;)*)*(?:r(?:[^a-z]|&\w+;)*)+)?(?:f(?:[^a-z]|&\w+;)*)+(?:u(?:[^a-z]|&\w+;)*)+(?:(?:[^a-z]|&\w+;)*[ck])+(?<!fuck)(?<!fuk)(?:[^a-z]|&\w+;)*(?:(?:i(?:[^a-z]|&\w+;)*)+(?:n(?:[^a-z]|&\w+;)*)+(?:g(?:[^a-z]|&\w+;)*)+|(?:e(?:[^a-z]|&\w+;)*)+(?:[rd](?:[^a-z]|&\w+;)*)+)?(?:s(?:[^a-z]|&\w+;)*)*
-1525929262	Makyen	bitmex\.com
 1525933074	Suraj Rao	jskcindia\.com
 1525938622	tripleee	clappia(?:\.com)?
 1525939654	tripleee	qualitysteroid\.com
