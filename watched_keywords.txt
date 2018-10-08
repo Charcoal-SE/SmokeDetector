@@ -6024,3 +6024,4 @@
 1538999757	Shree	way4supplement\.com
 1539001298	tripleee	wbc\W?india
 1539002572	tripleee	[a-z_]*(?:1_*)?844[\W_]*444[\W_]*4[\W_]*148[a-z_]*
+1539006645	Glorfindel	fastestvpn\.com
