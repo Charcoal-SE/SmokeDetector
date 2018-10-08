@@ -6017,3 +6017,4 @@
 1538975207	iBug	vajracode(?:\.net)?
 1538977989	Tetsuya Yamamoto	abigforum\.com
 1538989252	Tetsuya Yamamoto	retailpharmaindia\.com
+1538989343	Tetsuya Yamamoto	luanvan1080\.com
