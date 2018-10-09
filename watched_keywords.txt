@@ -5940,7 +5940,6 @@
 1538643518	Tetsuya Yamamoto	koibhi\.com
 1538645948	Glorfindel	leadsuniversal\.com
 1538646129	Glorfindel	toppik\W*hair
-1538652409	tripleee	ethereumpro\.net
 1538652924	Shree	hhpsoftware\.com
 1538653859	tripleee	[a-z_]*0?11[\W_]*4290[\W_]*8899[a-z_]*
 1538654209	Shree	slideshare\.net
