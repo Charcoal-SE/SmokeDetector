@@ -168,7 +168,7 @@ def blacklist_integrity_check():
                 elif bl_file == 'watched_keywords.txt':
                     line = line.split('\t')[2]
 
-                # line = pcre_comment.sub(line, "")
+                line = pcre_comment.sub("", line)
                 if line in seen:
                     errors.append('{0}:{1}:Duplicate entry {2} (also {3})'.format(
                         bl_file, lineno, line.rstrip('\n'), seen[line]))
