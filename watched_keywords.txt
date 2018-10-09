@@ -6028,3 +6028,4 @@
 1539046890	WELZ	adpublisher\.co
 1539047020	WELZ	satwanesia\.com
 1539050388	Tetsuya Yamamoto	iramlak\.biz
+1539051801	Makyen	^Sek Channgam$(?#User that is trolling cross-site using short non-English posts)
