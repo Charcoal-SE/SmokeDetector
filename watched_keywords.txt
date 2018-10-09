@@ -6034,3 +6034,4 @@
 1539069827	Glorfindel	truedial
 1539069995	Tetsuya Yamamoto	trafficintegration\.com
 1539071880	Glorfindel	under-the-open-sky\.com
+1539075432	Tetsuya Yamamoto	cryptobrowser\.site
