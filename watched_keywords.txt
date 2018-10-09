@@ -4209,7 +4209,6 @@
 1530699434	Mithrandir	internetexplorerbrowsersupport\.com
 1530701766	doppelgreener	padmeshgupta\.com
 1530708036	paper1111	closedcaptioncreator\.com
-1530708523	paper1111	autoportal\.com
 1530708862	paper1111	trinity-graphics\.net
 1530755239	Makyen	digizo\.ir
 1530755273	Makyen	\W*۰۹۳۶۶۰۱۰۴۳۲\W*
