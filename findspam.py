@@ -1193,7 +1193,7 @@ class FindSpam:
         #      'judaism.stackexchange.com',
         #      'superuser.com', 'islam.stackexchange.com',
         #      'math.stackexchange.com', 'academia.stackexchange.com',
-        #      'health.stackexchange.com', 'askubuntu.com',
+        #      'medicalsciences.stackexchange.com', 'askubuntu.com',
         #      'skeptics.stackexchange.com', 'politics.stackeschange.com'],
         #  'reason': 'potentially bad keyword in {}',
         #  'title': False, 'body': False, 'username': True,
@@ -1225,7 +1225,7 @@ class FindSpam:
                   r"product|strateg(y|ies)|gel|lotion|cream|treatment|method|school|expert)|fat ?burn(er|ing)?|"
                   r"muscle|testo ?[sx]\w*|body ?build(er|ing)|wrinkle|probiotic|acne|peni(s|le)|erection)s?\b|"
                   r"(beauty|skin) care\b", 'all': True,
-         'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com",
+         'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
                    "skeptics.stackexchange.com", "robotics.stackexchange.com", "blender.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
          'body_summary': False, 'max_rep': 1, 'max_score': 0},
@@ -1242,7 +1242,7 @@ class FindSpam:
         {'regex': r"(?is)virility|diet ?(plan|pill)|serum|\b(pro)?derma(?=[a-su-z\W]\w)|(fat|(?<!dead[ -]?)weight)"
                   r"[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|erectile|\bherpes\b|colon ?(detox|clean)|\bpenis\b",
          'all': True,
-         'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com",
+         'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
                    "skeptics.stackexchange.com", "bicycles.stackexchange.com", "islam.stackexchange.com",
                    "pets.stackexchange.com", "parenting.stackexchange.com"],
          'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
@@ -1352,7 +1352,7 @@ class FindSpam:
         # Suspicious health-related websites, health sites are exempt
         {'regex': r"(?i)(bodybuilding|workout|fitness(?!e)|diet|perfecthealth|muscle|nutrition(?!ix)|"
                   r"prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)", 'all': True,
-         'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "health.stackexchange.com",
+         'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
                    "skeptics.stackexchange.com", "bicycles.stackexchange.com"],
          'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True,
          'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 2},
@@ -1480,7 +1480,7 @@ class FindSpam:
                   r"[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': False,
          'sites': ["biology.stackexchange.com", "bitcoin.stackexchange.com", "ell.stackexchange.com",
                    "english.stackexchange.com", "expatriates.stackexchange.com", "gaming.stackexchange.com",
-                   "health.stackexchange.com", "money.stackexchange.com", "parenting.stackexchange.com",
+                   "medicalsciences.stackexchange.com", "money.stackexchange.com", "parenting.stackexchange.com",
                    "rpg.stackexchange.com", "scifi.stackexchange.com", "travel.stackexchange.com",
                    "worldbuilding.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True,
          'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1,
@@ -1507,7 +1507,7 @@ class FindSpam:
         # Category: Trolling
         # Offensive content in titles and posts
         {'method': religion_troll, 'all': False, 'sites': ['hindiusm.stackexchange.com', 'islam.stackexchange.com',
-                                                           'judaism.stackexchange.com', 'health.stackexchange.com'],
+                                                           'judaism.stackexchange.com', 'medicalsciences.stackexchange.com'],
          'reason': 'offensive {} detected', 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
          'body_summary': True, 'max_rep': 101, 'max_score': 1},
         {'method': is_offensive_post, 'all': True, 'sites': [], 'reason': "offensive {} detected", 'title': True,
