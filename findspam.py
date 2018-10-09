@@ -1507,7 +1507,8 @@ class FindSpam:
         # Category: Trolling
         # Offensive content in titles and posts
         {'method': religion_troll, 'all': False, 'sites': ['hindiusm.stackexchange.com', 'islam.stackexchange.com',
-                                                           'judaism.stackexchange.com', 'medicalsciences.stackexchange.com'],
+                                                           'judaism.stackexchange.com',
+                                                           'medicalsciences.stackexchange.com'],
          'reason': 'offensive {} detected', 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
          'body_summary': True, 'max_rep': 101, 'max_score': 1},
         {'method': is_offensive_post, 'all': True, 'sites': [], 'reason': "offensive {} detected", 'title': True,
