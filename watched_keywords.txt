@@ -3769,7 +3769,6 @@
 1528476655	Makyen	test-dpc-apk\.com
 1528480689	NobodyNada	ca(vs|valiers)?vswarriors
 1528480707	Glorfindel	fourfinal\.ca
-1528492615	NobodyNada	printerssupport\.org
 1528492662	NobodyNada	felixmbouna57@gmail\.com
 1528501987	Makyen	[a-z_]*(?:1_*)?800[\W_]*916[\W_]*9563[a-z_]*
 1528507831	Makyen	plex\.software
