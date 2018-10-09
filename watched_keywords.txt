@@ -6040,3 +6040,4 @@
 1539087220	Shree	keepuhealthy\.com
 1539107665	Makyen	extract\.me
 1539107674	Makyen	[a-z_]*(?:1_*)?817[\W_]*729[\W_]*8866[a-z_]*(?#Whatsapp; ramsedave121)
+1539107682	Makyen	ghanaeducationnews\.com
