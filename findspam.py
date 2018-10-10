@@ -619,6 +619,7 @@ def watched_ns_for_url_domain(s, site):
         'a2hosting.com.',
         'md-in-20.webhostbox.net.',
         'md-in-51.webhostbox.net.',
+        'cybercastco.com.',
     ])
 
 
