@@ -6,7 +6,7 @@ from helpers import log
 
 
 # noinspection PyMissingTypeHints
-@pytest.mark.parametrize("title, body, username, site, body_is_summary, is_answer, match", [
+@pytest.mark.parametrize("title, body, username, site, body_is_summary, is_answer, expected_spam", [
     ('18669786819 gmail customer service number 1866978-6819 gmail support number', '', '', '', False, False, True),
     ('18669786819 gmail customer service number 1866978-6819 gmail support number', '', '', '', True, False, True),
     ('Is there any http://www.hindawi.com/ template for Cloud-Oriented Data Center Networking?', '', '', '', False, False, True),
@@ -95,7 +95,7 @@ But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, Fal
     ('Mostly punctuation', ';[].[.[.&_$)_\\*&_@$.[;*/-!#*&)(_.\'].1\\)!#_', '', '', False, False, True),
     ('Few unique', 'asdss, dadasssaadadda, daaaadadsss, ssa,,,addadas,ss\nsdadadsssadadas, sss\ndaaasdddsaaa, asd', '', '', False, False, True),
 ])
-def test_findspam(title, body, username, site, body_is_summary, is_answer, match):
+def test_findspam(title, body, username, site, body_is_summary, is_answer, expected_spam):
     post = Post(api_response={'title': title, 'body': body,
                               'owner': {'display_name': username, 'reputation': 1, 'link': ''},
                               'site': site, 'question_id': '1', 'IsAnswer': is_answer,
@@ -103,9 +103,7 @@ def test_findspam(title, body, username, site, body_is_summary, is_answer, match
     result = FindSpam.test_post(post)[0]
     log('info', title)
     log('info', "Result:", result)
-    isspam = False
-    if len(result) > 0:
-        isspam = True
-    if match != isspam:
-        print((body, match))
-    assert match == isspam
+    scan_spam = (len(result) > 0)
+    if scan_spam != expected_spam:
+        print("Expected {1} on {}".format(body, expected_spam))
+    assert scan_spam == expected_spam
