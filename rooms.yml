@@ -111,6 +111,7 @@ stackexchange.com:
       - 269502   # micsthepick
       - 205533   # Videonauth
       - 275329   # iBug
+      - 341413   # iBot (iBug's sock)
       - 78973    # gparyani
       - 318454   # Jake Symons
       - 202339   # Nog Shine
@@ -126,6 +127,9 @@ stackexchange.com:
       - 340148   # Shree
       - 80316    # Erik the Outgolfer
       - 165839   # Melebius
+      - 242419   # AquariusOne (Thomas Ward's sock)
+      - 37642    # scaaahu
+      - 185195   # Machavity
 
   65945:  # Charcoal Test
     commands: true
@@ -239,6 +243,7 @@ stackexchange.com:
       - 269502   # micsthepick
       - 205533   # Videonauth
       - 275329   # iBug
+      - 341413   # iBot (iBug's sock)
       - 78973    # gparyani
       - 318454   # Jake Symons
       - 202339   # Nog Shine
@@ -325,6 +330,13 @@ stackexchange.com:
     commands: false
     msg_types:
       - site-scifi.stackexchange.com
+      
+  58631:  # The Restaurant at the End of the Universe
+    commands: true
+    watcher: true
+    msg_types:
+      - site-scifi.stackexchange.com
+      - no-phone number detected in title
 
   61165:  # The Awkward Silence
     commands: false
@@ -547,6 +559,9 @@ stackoverflow.com:
       - 4032703  # EJoshuaS
       - 522444   # Hovercraft Full Of Eels
       - 397817   # Stephen Kennedy
+      - 18157    # Jim Garrison
+      - 469080   # Michael Dodd
+      - 7296893  # Erik von Asmuth  
       # NOTICE: please don't add new users until you have Room Owner approval
 
   111347:  # SOBotics
@@ -586,8 +601,38 @@ stackoverflow.com:
       - 6296561  # Zoe
       # NOTICE: please don't add new users until you have Room Owner approval. Art is an RO.
       
-  167826: # temp room
-    commands: false
+  167826:
+    commands: true
+    
     msg_types:
       - site-stackoverflow.com
-      - experimental
+      
+    privileges:
+      - 3160466  # ArtOfCode
+      - 1849664  # Undo
+      - 3002139  # Baum mit Augen
+      - 3476191  # Nobody Nada
+      - 5292302  # Petter Friberg
+      - 4688119  # Ashish Ahuja
+      - 4099593  # Bhargav Rao
+      - 1743880  # Tunaki
+      - 559745   # Floern
+      - 4687348  # FelixSFD
+      - 6375113  # Bugs
+      - 4622463  # angussidney
+      - 563532   # Rob
+      - 4050842  # Thaillie
+      - 1915448  # g00glen00b
+      - 4766556  # quartata
+      - 4733879  # chade_
+      - 4875631  # FrankerZ
+      - 5827005  # GrumpyCrouton
+      - 5781745  # K.Davis
+      - 264607   # BlackICE
+      - 397817   # Stephen Kennedy
+      - 4946380  # Mithrandir
+      - 3773011  # Makyen
+      - 965146   # Shree
+      - 6707985  # geisterfurz007
+      - 6723642  # heather
+      - 6296561  # Zoe

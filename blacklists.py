@@ -65,19 +65,20 @@ class BasicListParser(BlacklistParser):
 
 class TSVDictParser(BlacklistParser):
     def parse(self):
-        list = {}
+        dct = {}
         with open(self._filename, 'r', encoding='utf-8') as f:
             for lineno, line in enumerate(f, 1):
-                if regex.compile('^\s*(?:#|$)').match(line):
+                if regex.compile(r'^\s*(?:#|$)').match(line):
                     continue
                 try:
                     when, by_whom, what = line.rstrip().split('\t')
                 except ValueError as err:
                     log('error', '{0}:{1}:{2}'.format(self._filename, lineno, err))
                     continue
-                list[what] = {'when': when, 'by': by_whom}
+                if what[0] != "#":
+                    dct[what] = {'when': when, 'by': by_whom}
 
-        return list
+        return dct
 
     def add(self, item: Union[str, dict]):
         with open(self._filename, 'a+', encoding='utf-8') as f:

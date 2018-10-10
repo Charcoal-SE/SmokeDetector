@@ -8,7 +8,7 @@ jobs:
       - restore_cache:
           key: deps-{{ .Branch }}-{{ checksum "requirements.txt" }}
       - run:
-          name: Install Python dependencies in venv
+          name: install python dependencies in venv
           command: |
             python3 -m venv env
             env/bin/pip3 install -r requirements.txt --upgrade
@@ -26,6 +26,11 @@ jobs:
       - run:
           name: Lint code
           command: env/bin/python3 -m flake8 ./
+      - run:
+          name: Prepare Git for test
+          command: |
+            git config user.name SmokeDetector
+            git config user.email "smokey@erwaysoftware.com"
       - run:
           name: Pytest
           command: env/bin/python3 -W default::Warning -m pytest test

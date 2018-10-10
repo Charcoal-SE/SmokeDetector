@@ -1,16 +1,18 @@
 # coding=utf-8
 import sys
 import random
-from findspam import FindSpam
+import findspam
 import datahandling
 import chatcommunicate
 from globalvars import GlobalVars
-from datetime import datetime
+from datetime import datetime, timedelta
+import regex
 import parsing
 import metasmoke
 import excepthook
 from classes import Post, PostParseError
-from helpers import log, to_metasmoke_link, escape_format
+from helpers import log, escape_format
+from parsing import to_metasmoke_link
 from tasks import Tasks
 
 
@@ -22,13 +24,27 @@ def should_whitelist_prevent_alert(user_url, reasons):
     return not any(r for r in set(reasons) if "username" not in r)
 
 
+def sum_weight(reasons: list):
+    if not GlobalVars.reason_weights:
+        datahandling.update_reason_weights()
+    now = datetime.utcnow() - timedelta(minutes=15)
+    if now.date() != GlobalVars.reason_weights['last_updated'] and now.hour >= 1:
+        Tasks.do(datahandling.update_reason_weights)
+    s = 0
+    weights = GlobalVars.reason_weights
+    for r in reasons:
+        try:
+            if "(" in r:
+                r = regex.sub(r"\s*\(.*$", "", r)
+            s += weights[r.lower()]
+        except KeyError:
+            pass  # s += 0
+    return s
+
+
 # noinspection PyMissingTypeHints
 def check_if_spam(post):
-    # if not post.body:
-    #     body = ""
-    # test, why = FindSpam.test_post(title, body, user_name, post_site,
-    # is_answer, body_is_summary, owner_rep, post_score)
-    test, why = FindSpam.test_post(post)
+    test, why = findspam.FindSpam.test_post(post)
     if datahandling.is_blacklisted_user(parsing.get_user_from_url(post.user_url)):
         test.append("blacklisted user")
         blacklisted_user_data = datahandling.get_blacklisted_user_data(parsing.get_user_from_url(post.user_url))
@@ -38,13 +54,14 @@ def check_if_spam(post):
             else:
                 blacklisted_by = blacklisted_user_data[1]
             blacklisted_post_url = blacklisted_user_data[2]
+            if why and why[-1] == "\n":
+                why = why[:-1]
             if blacklisted_post_url:
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
-                why += u"\nBlacklisted user - blacklisted for {} ({}) by {}".format(
-                    blacklisted_post_url, to_metasmoke_link(rel_url), blacklisted_by
-                )
+                why += "\nBlacklisted user - blacklisted for {} ({}) by {}".format(
+                    blacklisted_post_url, to_metasmoke_link(rel_url), blacklisted_by)
             else:
-                why += u"\n" + u"Blacklisted user - blacklisted by {}".format(blacklisted_by)
+                why += "\n" + u"Blacklisted user - blacklisted by {}".format(blacklisted_by)
     if test:
         result = None
         if datahandling.has_already_been_posted(post.post_site, post.post_id, post.title):
@@ -65,9 +82,11 @@ def check_if_spam(post):
         else:
             return False, (test, why), result
 
-    # XXX: Return an empty string for "why" if the post isn't scanned as spam
-    # Don't touch if unsure, you'll break !!/report
     return False, None, ""
+    # Return value: (True, reasons, why) if post is spam
+    #               (False, None, "") if post is not spam
+    #               (False, (reasons, why), ignore_info) if post is spam but ignored
+    # This is required because !!/report will check for 3rd tuple item to decide if it's not spam or spam but ignored
 
 
 # noinspection PyMissingTypeHints
@@ -100,6 +119,14 @@ def handle_spam(post, reasons, why):
         datahandling.add_why(post.post_site, post.post_id, why)
     if post.is_answer and post.post_id is not None and post.post_id is not "":
         datahandling.add_post_site_id_link((post.post_id, post.post_site, "answer"), post.parent.post_id)
+    if GlobalVars.reason_weights or GlobalVars.metasmoke_key:
+        reason_weight = sum_weight(reasons)
+        if reason_weight >= 1000:
+            reason_weight_s = " (**{:,}**)".format(reason_weight)
+        else:
+            reason_weight_s = " ({:,})".format(reason_weight)
+    else:  # No reason weight if neither cache nor MS
+        reason_weight_s = ""
     try:
         # If the post is an answer type post, the 'title' is going to be blank, so when posting the
         # message contents we need to set the post title to the *parent* title, so the message in the
@@ -118,14 +145,14 @@ def handle_spam(post, reasons, why):
         # We'll insert reason list later
         edited = '' if not post.edited else ' \u270F\uFE0F'
         if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
-            s = u" {{}}: [{}]({}){} by a deleted user on `{}`".format(
-                sanitized_title, post_url, edited, shortened_site)
+            s = " {{}}{}: [{}]({}){} by a deleted user on `{}`".format(
+                reason_weight_s, sanitized_title, post_url, edited, shortened_site)
             username = ""
         else:
             username = post.user_name.strip()
             escaped_username = escape_format(parsing.escape_markdown(username))
-            s = u" {{}}: [{}]({}){} by [{}]({}) on `{}`".format(
-                sanitized_title, post_url, edited, escaped_username, poster_url, shortened_site)
+            s = " {{}}{}: [{}]({}){} by [{}]({}) on `{}`".format(
+                reason_weight_s, sanitized_title, post_url, edited, escaped_username, poster_url, shortened_site)
 
         Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
                  post.title_ignore_type, post_url, reasons, post.body, username,

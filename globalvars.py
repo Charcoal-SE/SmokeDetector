@@ -7,13 +7,12 @@ from html.parser import HTMLParser
 from html import unescape
 from hashlib import md5
 from configparser import NoOptionError, RawConfigParser
-from helpers import environ_or_none, log
 import threading
 # noinspection PyCompatibility
 import regex
 import subprocess as sp
 import platform
-from flovis import Flovis
+from helpers import log
 
 
 def git_commit_info():
@@ -22,22 +21,14 @@ def git_commit_info():
     except sp.CalledProcessError as e:
         raise OSError("Git error:\n" + e.output) from e
     short_id, full_id, author, message = data.strip().split("\n")
-    return {'id': short_id, 'id_full': full_id, 'author': author, 'message': message}
+    return {'id': full_id[:7], 'id_full': full_id, 'author': author, 'message': message}
 
 
-def git_status():
-    try:
-        return sp.check_output(['git', 'status'], stderr=sp.STDOUT).decode('utf-8').strip()
-    except sp.CalledProcessError as e:
-        raise OSError("Git error:\n" + e.output) from e
+def git_ref_q():
+    return sp.run(['git', 'symbolic-ref', '-q', 'HEAD']).returncode == 0
 
 
-# This is needed later on for properly 'stripping' unicode weirdness out of git log data.
-# Otherwise, we can't properly work with git log data.
-def strip_escape_chars(line):
-    line = str(line)
-    ansi_escape = regex.compile(r'(\x9B|\x1B\[)[0-?]*[ -\/]*[@-~]')
-    return ansi_escape.sub('', line).strip('=\r\r\x1b>\n"')
+# We don't need strip_escape_chars() anymore, see commit message of 1931d30804a675df07887ce0466e558167feae57
 
 
 # noinspection PyClassHasNoInit,PyDeprecation,PyUnresolvedReferences
@@ -53,7 +44,8 @@ class GlobalVars:
     watched_keywords = {}
     ignored_posts = []
     auto_ignored_posts = []
-    startup_utc = datetime.utcnow().strftime("%H:%M:%S")
+    startup_utc_date = datetime.utcnow()
+    startup_utc = startup_utc_date.strftime("%H:%M:%S")
     latest_questions = []
     api_backoff_time = 0
     deletion_watcher = None
@@ -81,19 +73,15 @@ class GlobalVars:
     code_privileged_users = None
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
 
-    commit = git_commit_info()
-    if md5(commit['author'][0].encode('utf-8')).hexdigest() in censored_committer_names:
-        commit['author'] = censored_committer_names[md5(commit['author'][0].encode('utf-8')).hexdigest()]
-
-    commit_with_author = "`{}` (*{}*: {})".format(
-        commit['id'],
-        commit['author'][0] if type(commit['author']) in {list, tuple} else commit['author'],
-        commit['message'])
-
-    on_master = "HEAD detached" not in git_status()
+    # GlobalVars.reload()
+    commit = None
+    commit_with_author = None
+    on_master = None
 
     s = ""
     s_reverted = ""
+    s_norestart = ""
+    s_norestart2 = ""
     apiquota = -1
     bodyfetcher = None
     se_sites = []
@@ -102,6 +90,7 @@ class GlobalVars:
     listen_to_these_if_edited = []
     multiple_reporters = []
     api_calls_per_site = {}
+    reason_weights = {}
 
     standby_message = ""
     standby_mode = False
@@ -112,74 +101,91 @@ class GlobalVars:
     post_scan_time = 0
     posts_scan_stats_lock = threading.Lock()
 
-    config = RawConfigParser()
+    config_parser = RawConfigParser()
 
     if os.path.isfile('config') and "pytest" not in sys.modules:
-        config.read('config')
+        config_parser.read('config')
         log('debug', "Configuration loaded from \"config\"")
     else:
-        config.read('config.ci')
-        if "pytest" in sys.modules:
+        config_parser.read('config.ci')
+        if "pytest" in sys.modules and os.path.isfile('config'):  # Another config found while running in pytest
             log('debug', "Running in pytest, force load config from \"config.ci\"")
         else:
             log('debug', "Configuration loaded from \"config.ci\"")
 
-    # environ_or_none defined in helpers.py
-    bot_name = environ_or_none("SMOKEDETECTOR_NAME") or "SmokeDetector"
-    bot_repository = environ_or_none("SMOKEDETECTOR_REPO") or "//github.com/Charcoal-SE/SmokeDetector"
+    config = config_parser["Config"]  # It's a collections.OrderedDict now
+
+    # environ_or_none replaced by os.environ.get (essentially dict.get)
+    bot_name = os.environ.get("SMOKEDETECTOR_NAME", "SmokeDetector")
+    bot_repo_slug = os.environ.get("SMOKEDETECTOR_REPO", "Charcoal-SE/SmokeDetector")
+    bot_repository = "//github.com/{}".format(bot_repo_slug)
     chatmessage_prefix = "[{}]({})".format(bot_name, bot_repository)
 
     site_id_dict = {}
     post_site_id_to_question = {}
 
-    location = config.get("Config", "location")
+    location = config.get("location", "Continuous Integration")
 
     metasmoke_ws = None
+    metasmoke_down = False
+    metasmoke_failures = 0  # Consecutive count, not cumulative
 
-    try:
-        chatexchange_u = config.get("Config", "ChatExchangeU")
-        chatexchange_p = config.get("Config", "ChatExchangeP")
-    except NoOptionError:
-        chatexchange_u = None
-        chatexchange_p = None
+    chatexchange_u = config.get("ChatExchangeU")
+    chatexchange_p = config.get("ChatExchangeP")
 
-    try:
-        metasmoke_host = config.get("Config", "metasmoke_host")
-    except NoOptionError:
-        metasmoke_host = None
-        log('info', "metasmoke host not found. Set it as metasmoke_host in the config file. "
-            "See https://github.com/Charcoal-SE/metasmoke.")
+    metasmoke_host = config.get("metasmoke_host")
+    metasmoke_key = config.get("metasmoke_key")
+    metasmoke_ws_host = config.get("metasmoke_ws_host")
 
-    try:
-        metasmoke_key = config.get("Config", "metasmoke_key")
-    except NoOptionError:
-        metasmoke_key = ""
-        log('info', "No metasmoke key found, which is okay if both are running on the same host")
+    github_username = config.get("github_username")
+    github_password = config.get("github_password")
 
-    try:
-        metasmoke_ws_host = config.get("Config", "metasmoke_ws_host")
-    except NoOptionError:
-        metasmoke_ws_host = ""
-        log('info', "No metasmoke websocket host found, which is okay if you're anti-websocket")
+    perspective_key = config.get("perspective_key")
 
-    try:
-        github_username = config.get("Config", "github_username")
-        github_password = config.get("Config", "github_password")
-    except NoOptionError:
-        github_username = None
-        github_password = None
+    flovis_host = config.get("flovis_host")
+    flovis = None
 
-    try:
-        perspective_key = config.get("Config", "perspective_key")
-    except NoOptionError:
-        perspective_key = None
+    # Miscellaneous
+    log_time_format = config.get("log_time_format", "%H:%M:%S")
 
-    try:
-        flovis_host = config.get("Config", "flovis_host")
-    except NoOptionError:
-        flovis_host = None
+    valid_content = """This is a totally valid post that should never be caught. Any blacklist or watchlist item that triggers on this item should be avoided. java.io.BbbCccDddException: nothing wrong found. class Safe { perfect valid code(int float &#%$*v a b c =+ /* - 0 1 2 3 456789.EFGQ} English 中文Français Español Português Italiano Deustch ~@#%*-_/'()?!:;" vvv kkk www sss ttt mmm absolute std::adjacent_find (power).each do |s| bbb end ert zal l gsopsq kdowhs@ xjwk* %_sooqmzb xjwpqpxnf."""  # noqa: E501
 
-    if flovis_host is not None:
-        flovis = Flovis(flovis_host)
-    else:
-        flovis = None
+    @staticmethod
+    def reload():
+        commit = git_commit_info()
+        censored_committer_names = GlobalVars.censored_committer_names
+        if md5(commit['author'][0].encode('utf-8')).hexdigest() in censored_committer_names:
+            commit['author'] = censored_committer_names[md5(commit['author'][0].encode('utf-8')).hexdigest()]
+        GlobalVars.commit = commit
+
+        GlobalVars.commit_with_author = "`{}` ({}: {})".format(
+            commit['id'],
+            commit['author'][0] if type(commit['author']) in {list, tuple} else commit['author'],
+            commit['message'])
+
+        GlobalVars.on_master = git_ref_q()
+        GlobalVars.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
+            GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+            GlobalVars.commit['id'], GlobalVars.location, platform.python_version())
+        GlobalVars.s_reverted = \
+            "[ {} ] SmokeDetector started in [reverted mode](" \
+            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
+            "at [rev {}]({}/commit/{}) (running on {})".format(
+                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+                GlobalVars.commit['id'], GlobalVars.location)
+        GlobalVars.s_norestart = "[ {} ] Blacklists reloaded at [rev {}]({}/commit/{}) (running on {})".format(
+            GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+            GlobalVars.commit['id'], GlobalVars.location)
+        GlobalVars.s_norestart2 = "[ {} ] FindSpam module reloaded at [rev {}]({}/commit/{}) (running on {})".format(
+            GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+            GlobalVars.commit['id'], GlobalVars.location)
+        GlobalVars.standby_message = \
+            "[ {} ] SmokeDetector started in [standby mode](" \
+            "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " \
+            "at [rev {}]({}/commit/{}) (running on {})".format(
+                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+                GlobalVars.commit['id'], GlobalVars.location)
+        log('debug', "GlobalVars loaded")
+
+
+GlobalVars.reload()

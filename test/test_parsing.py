@@ -14,7 +14,7 @@ with open("test/data_test_parsing.txt", "r", encoding="utf-8") as f:
 
 # noinspection PyMissingTypeHints
 @pytest.mark.parametrize("input_data, parse_method, expected", [
-    ('Testing * escaping of ] special [ characters', escape_markdown, 'Testing \* escaping of \] special \[ characters'),
+    ('Testing * escaping of ] special [ characters', escape_markdown, r'Testing \* escaping of \] special \[ characters'),
     ('HTML &#39; unescaping&lt;', unescape_title, 'HTML \' unescaping<'),
     ('http://physics.stackexchange.com/users/7433/manishearth', get_user_from_url, ('7433', 'physics.stackexchange.com')),
     ('http://softwarerecs.stackexchange.com/users/46/undo', get_user_from_url, ('46', 'softwarerecs.stackexchange.com')),
@@ -33,12 +33,12 @@ with open("test/data_test_parsing.txt", "r", encoding="utf-8") as f:
     ('1234 stackoverflow.com', get_user_from_list_command, ('1234', 'stackoverflow.com')),
     ('4321 communitybuilding.stackexchange.com', get_user_from_list_command, ('4321', 'communitybuilding.stackexchange.com')),
     ('1 stackoverflow', get_user_from_list_command, ('1', 'stackoverflow.com')),
-    ('http://stackoverflow.com/questions/1/title-here', url_to_shortlink, 'http://stackoverflow.com/questions/1'),
-    ('http://stackoverflow.com/questions/1/title-here/2#2', url_to_shortlink, 'http://stackoverflow.com/a/2'),
-    ('http://writers.stackexchange.com/questions/1/%2f%2f', url_to_shortlink, 'http://writers.stackexchange.com/questions/1'),
-    ('http://writers.stackexchange.com/questions/1/%2f%2f/2#2', url_to_shortlink, 'http://writers.stackexchange.com/a/2'),
-    ('http://mathoverflow.net/q/1', url_to_shortlink, 'http://mathoverflow.net/questions/1'),
-    ('http://stackoverflow.com/users/1234/abcd', user_url_to_shortlink, 'http://stackoverflow.com/users/1234'),
+    ('http://stackoverflow.com/questions/1/title-here', url_to_shortlink, 'https://stackoverflow.com/questions/1'),
+    ('http://stackoverflow.com/questions/1/title-here/2#2', url_to_shortlink, 'https://stackoverflow.com/a/2'),
+    ('http://writers.stackexchange.com/questions/1/%2f%2f', url_to_shortlink, 'https://writers.stackexchange.com/questions/1'),
+    ('http://writers.stackexchange.com/questions/1/%2f%2f/2#2', url_to_shortlink, 'https://writers.stackexchange.com/a/2'),
+    ('http://mathoverflow.net/q/1', url_to_shortlink, 'https://mathoverflow.net/questions/1'),
+    ('http://stackoverflow.com/users/1234/abcd', user_url_to_shortlink, 'https://stackoverflow.com/users/1234'),
     ('http://stackexchange.com', to_protocol_relative, '//stackexchange.com'),
     ('https://stackexchange.com', to_protocol_relative, '//stackexchange.com'),
     ('//stackexchange.com', to_protocol_relative, '//stackexchange.com'),
@@ -125,3 +125,41 @@ def test_post_parse_errors():
     except PostParseError:
         pass
     assert failure is None
+
+
+@pytest.mark.parametrize('link, param', [
+    ('stackoverflow.com', 'stackoverflow'),
+    ('//stackoverflow.com', 'stackoverflow'),
+    ('https://stackoverflow.com', 'stackoverflow'),
+    ('https://stackoverflow.com/', 'stackoverflow'),
+    ('//stackoverflow.com/questions/12345678', 'stackoverflow'),
+    ('//stackoverflow.com/a/12345678', 'stackoverflow'),
+    ('mathoverflow.net', 'mathoverflow.net'),
+    ('superuser.com', 'superuser'),
+    ('serverfault.com', 'serverfault'),
+    ('askubuntu.com', 'askubuntu'),
+    ('3dprinting.stackexchange.com', '3dprinting'),
+    ('blender.stackexchange.com', 'blender'),
+    ('//blender.stackexchange.com', 'blender'),
+    ('https://blender.stackexchange.com', 'blender'),
+    ('https://blender.stackexchange.com/', 'blender'),
+    ('//blender.stackexchange.com/questions/123456', 'blender'),
+    ('//blender.stackexchange.com/a/123456', 'blender'),
+    ('meta.stackoverflow.com', 'meta.stackoverflow'),
+    ('//meta.stackoverflow.com', 'meta.stackoverflow'),
+    ('https://meta.stackoverflow.com', 'meta.stackoverflow'),
+    ('https://meta.stackoverflow.com/', 'meta.stackoverflow'),
+    ('//meta.stackoverflow.com/questions/12345678', 'meta.stackoverflow'),
+    ('//meta.stackoverflow.com/a/12345678', 'meta.stackoverflow'),
+    ('meta.mathoverflow.net', 'meta.mathoverflow.net'),
+    ('meta.superuser.com', 'meta.superuser'),
+    ('meta.serverfault.com', 'meta.serverfault'),
+    ('meta.askubuntu.com', 'meta.askubuntu'),
+    ('3dprinting.meta.stackexchange.com', '3dprinting.meta'),
+    ('blender.meta.stackexchange.com', 'blender.meta'),
+    ('meta.stackexchange.com', 'meta'),
+    ('ja.stackoverflow.com', 'ja.stackoverflow'),
+    ('meta.ja.stackoverflow.com', 'meta.ja.stackoverflow')
+])
+def test_api_parameter_from_link(link, param):
+    assert api_parameter_from_link(link) == param

@@ -15,9 +15,10 @@ if 'windows' in str(platform.platform()).lower():
     # noinspection PyPep8Naming
     from classes import Git as git, GitError
 else:
-    from sh import git, ErrorReturnCode as GitError
+    from sh.contrib import git
+    from sh import ErrorReturnCode as GitError
 
-from helpers import log
+from helpers import log, only_blacklists_changed
 from globalvars import GlobalVars
 from blacklists import *
 
@@ -132,7 +133,7 @@ class GitManager:
                                        blacklist.upper()),                                        # 8
                            "head": branch,
                            "base": "master"}
-                response = requests.post("https://api.github.com/repos/Charcoal-SE/SmokeDetector/pulls",
+                response = requests.post("https://api.github.com/repos/{}/pulls".format(GlobalVars.bot_repo_slug),
                                          auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password),
                                          data=json.dumps(payload))
                 log('debug', response.json())
@@ -280,16 +281,51 @@ class GitManager:
         if 'windows' in platform.platform().lower():
             return git.status_stripped()
         else:
-            return git("-c", "color.status=false", "status")
+            return str(git.status())
+
+    @staticmethod
+    def current_branch():
+        return str(git('rev-parse', '--abbrev-ref', 'HEAD')).strip()
+
+    @staticmethod
+    def merge_abort():
+        if 'windows' in platform.platform().lower():
+            return  # No we don't do Windows
+        git.merge("--abort")
+
+    @staticmethod
+    def reset_head():
+        if 'windows' in platform.platform().lower():
+            return  # No we don't do Windows
+        git.reset("--hard", "HEAD")
+        git.clean("-f")
 
     @staticmethod
     def get_remote_diff():
         git.fetch()
         if 'windows' in platform.platform().lower():
-            return git.diff_filenames("deploy", "origin/deploy")
+            return git.diff_filenames("HEAD", "origin/deploy")
         else:
-            return git("-c", "color.diff=false", "diff", "--name-only", "deploy", "origin/deploy")
+            return git.diff("--name-only", "HEAD", "origin/deploy")
+
+    @staticmethod
+    def get_local_diff():
+        if 'windows' in platform.platform().lower():
+            return git.diff_filenames("HEAD", "master")
+        else:
+            return git.diff("--name-only", "HEAD", "master")
 
     @staticmethod
     def pull_remote():
         git.pull()
+
+    @staticmethod
+    def pull_local():
+        diff = GitManager.get_local_diff()
+        if not only_blacklists_changed(diff):
+            return
+        try:
+            git.merge("--ff-only", "master")
+            git.push("origin", "deploy")
+        except GitError:
+            return

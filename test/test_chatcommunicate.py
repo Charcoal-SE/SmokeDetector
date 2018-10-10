@@ -1,6 +1,7 @@
 import chatcommunicate
 import chatcommands
 from globalvars import GlobalVars
+from datahandling import _remove_pickle
 
 import collections
 import io
@@ -142,7 +143,7 @@ def test_pickle_rick(dump):
         assert isinstance(call[0], chatcommunicate.LastMessages)
         assert isinstance(call[1], io.IOBase) and call[1].name == "messageData.p"
     finally:
-        os.remove("messageData.p")
+        _remove_pickle("messageData.p")
 
 
 @patch("chatcommunicate._pickle_run")

@@ -183,7 +183,7 @@ class Post:
         # noinspection PyBroadException
         try:
             return self._answers
-        except:
+        except AttributeError:
             return None
 
     @property
@@ -226,7 +226,7 @@ class Post:
     def post_url(self):
         try:
             return str(self._post_url)
-        except:
+        except (AttributeError, ValueError):
             return "NoLink"
 
     @property

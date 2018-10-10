@@ -4,7 +4,7 @@ fifabay
 long\W?path\W?tool
 # documentation: the (?!negative match) syntax won't work in the metasmoke search site
 # but it works for smoke detector.
-(?!code\W|script\W)writing services?
+(?<!code\W|script\W)writing services?
 tosterone
 we (offer|give out) (loans?|funds?|funding)
 skin\W?(endear|royale|cell\W?pro|opulent|ology|centric)
@@ -34,7 +34,7 @@ maxx\W?test\W?3000
 orvigomax
 cheap\W?wigs?
 jivam
-^(?s).{0,200}brain\W?power
+(?<=^(?s).{0,200})brain\W?power
 maximum\W?shred
 black\W?label\W?no
 bagprada
@@ -97,7 +97,7 @@ smartican
 фальшивы(е|х) (деньги|денег|купюры?)
 raging\W?lion
 retrodynamic\W?formula
-^.{0,199}(contact|offer|join).{0,99}\d{9}.{0,99}$
+(?<=^.{,199})(contact|offer|join).{,99}\d{9}(?=.{,99}$)
 krojam(soft|cleaner)?
 filessearch\W?tool
 teksonit
@@ -128,7 +128,7 @@ slotobit
 putlocker
 vimax
 (contact|call) us (today|now)
-Thierno(_| )?M.(_| )Sow
+Thierno[ _]?M.[ _]Sow
 maxtropin
 geniux
 we are a team of (highly|professionals)
@@ -392,9 +392,7 @@ jolique
 clemix
 nuavive
 evanti
-\W*毕业证\W*
 i\Wdidn't\Wfind\Wthe\Wright\Wsolution\Wfrom\Wthe\Winternet
-\W*レーザーポインター\W*
 ultra\Wpure\Wturmeric
 libidogene
 suisse\Wrenewal
@@ -757,7 +755,6 @@ neuactive
 force\W?fit\W?xl
 youthful\W?balance\W?serum
 dolce\W?vita\W?cream
-cbd\W?oil
 le\W?allure
 sinrex
 majestic\W?slim
@@ -1099,7 +1096,7 @@ androdna
 velaire
 (?<=/)xflo(?:$|[/?])
 flexinall
-phytolast
+phytolast\w*
 andras\Wfiber
 apower\W?(manager|mirror|pdf|rec|recover)
 video\W?download\W?capture
@@ -1230,7 +1227,7 @@ cortyx\W?clarity
 the\W?away\W?days
 magnumax
 keto\W?advanced
-rs\W?gold
+(?:os)?rs\W?gold
 keto\W?tone(?:\W?diet)?
 eye\W?serum\W?magic
 jet\W?pro\W?x
@@ -1258,7 +1255,7 @@ rapid\W?trim\W?ultra
 onycosolve
 pro\W?bio\W?slim
 healthy\W?king
-outback\W?vision\W?protocol
+outback\W?vision\W?protoc(?:ol)?
 MP3XD
 smart\W?collagen
 nutrition\W?curcumin
@@ -1305,7 +1302,7 @@ unlimited\W?fit
 (?:1\W*)?800\W*450\W*8670
 iphone\W?data\W?recovery
 apeaksoft
-lutragen
+lutragen(?:\W?cream)?(?:\w*$)?
 D\W+Bal
 iq\W?180(?:\W?cognitive)?
 flawless\W?keto
@@ -1341,7 +1338,6 @@ vera\W?slim
 verism\W?training(?:\W?online)?
 thermo\W?burn
 vita\W?silk
-\W*学历认证\W*
 forskothin
 \d*jobsexam
 premier\W?keto
@@ -1423,7 +1419,6 @@ lean\W?belly\W?breakthrough
 auto\W+link\W+(?:international|int\W+pakistan)
 keto\W?x
 rvxadryl
-keto\W?fit\W?diet
 vita\W*trim
 natural\W?keto
 hackmarvel4(?:@gmail.com)?
@@ -1431,7 +1426,7 @@ keto\W?blast
 keto\W?thermo\W?diet
 qnc\W?jelly\W?gamat
 TRIAL@>>\W*
-rapid\W*results\W*keto
+rapid\W*results(?:\W*keto|\W*diet)?
 smartcredit07
 boost\W?sx\W?pro
 almondhackingarena
@@ -1456,7 +1451,7 @@ keto\W?fire
 kara\W?keto
 keto\W?go
 creme\W?des\W?palmier
-(?:\W*</a>(?!.*?</?code).*?nutrition.*?plan|nutrition(?!.*?</?code)(?=.*?</a>).*?plan)
+(?:\w*</a>(?!.*?</?code).*?nutrition.*?plan|nutrition(?!.*?</?code)(?=.*?</a>).*?plan)
 keto\W?(natural\W?)?blend
 slim\W?999
 l\W?averla
@@ -1484,7 +1479,7 @@ cudamax
 Ziapro
 tone\W?fire(?:\W?garcinia)?
 ketogen\W?rx
-TreVulan
+TreVulan\w*
 sky\W?n\W?genix
 mia\W*pielle
 tonaki
@@ -1493,3 +1488,168 @@ fob\W*rotterdam
 neftegazoiltrading
 [a-z_]*(?:1_*)?844[\W_]*443[\W_]*3244[a-z_]*
 sun\W?chips
+[a-z_]*(?:0?80_*)?4110[\W_]*3383[a-z_]*
+[a-z_]*(?:91_*)?9066[\W_]*638[\W_]*196[a-z_]*
+mission-impossible-fallout
+phendora
+apollo\W*(?:kidney\W*)?hospital\d*(?!(?:[^<]|<(?!code>)(?!/code))*</code>)
+[a-z_]*(?:91_*)?9343[\W_]*518[\W_]*612[a-z_]*
+Purexen
+smart\W?stream\W?alliance(?:\W?llc)?
+beach\W?slim
+south\W?beach(?:\W?diet)?
+kleanse\W*diet
+imaginea
+cbd\W?plus
+(?:premium\W?)?pure\W?keto
+Pure\W?Ravishing
+exam\W?passing\W?assurance
+regal\W?keto
+ultra\W?slim
+dumpsdumps380@gmail\.com
+Medallion\W?Finance
+[a-z_]*(?:1_*)?972[\W_]*534[\W_]*5446[a-z_]*
+pil\W?pedia(?!\.com)
+leanfors
+foodies\W?panda(?!\.com)
+medlief
+alpha\W?xr
+new\W?power\W?girls
+retro\W?lean
+snore\W?be?\W?gone
+huffingtonpost.com/\S+/healthy-school-lunches
+selfgrowth\.com/\S+/healthy_school_lunches
+custom\W?made\W?patch(?:es)?
+testro\W?x(?:\W?ultra)?
+keto\W?pro\W?x
+zynev
+almaviva
+vital\W?progenix
+patroxidan
+vito\W?brain
+golden\W?hero
+keto\W?fuel
+[a-z_]*(?:234_*)?9063230051[a-z_]*
+ring\W?ease
+gs-jj
+sera\W?labs
+pure\W?bhb(?:\W?keto)?
+body\W?thin\W?down
+jovian\W?chile
+clipping\W?path\W?(service|quick)
+stendora(?:\W?garcinia)?\w*
+active\W?life\W?detox
+bio\W?x(?:\W?garcinia)?
+ionicx\W?testo
+bhadanazz
+illuminatikingdom\d*(?:@gmail\.com)?
+hair\W?juice(?:\W?accelerator)?
+maxadrex
+(?:facebook|whatsapp|email|yahoo|twitter|skype|paypal|website|server|credit|account).{,12}hack(?:er|ing)s?\b
+keto\W?primal(?:\W?diet)?
+vascular\W?x
+prime\W?slim(?:\W?forskolin)?
+active\W?luminous(?:\W?serum)?
+supreme\W?test(?:\W?x)?(?:\W?boost)?
+revitalize\W?serum
+pro\W?keto(?:\W?rx)?
+derma\W*correct
+teal\W*farms
+bio\W?x
+ultimate\W?test\W?max
+houston-tx/regenerative-medicine/
+paltrox(?:\W*(?:t|rx))?
+recapture\W?360(?:\W?cream)?\w*
+love\Wspells?
+(?:regenerative\W*medicine|stem\W*cell\W*therapy)\W*houston
+keto\W?bhb(?:\W?\d+)?
+[a-z_]*(?:1_*)?844[\W_]*617[\W_]*9531[a-z_]*
+(?<=/)yahoo-email
+VitalityTech(?:\W?Testosterone)?(?!\.com)
+terrapure\W?cbd
+retinollift\W?dk
+intell\W?x(?:\W?pro)?
+rapid\W?trim(?:\W?keto)?
+htx[ -]me
+better\W?strength\W?maximizer
+rapid\W?spot
+surgexon
+green\W?coffee\W?grano
+lojesete
+top\Wshelf\Waaa\Wbuds
+nuvi
+[a-z_]*(?:61_*)?1[\W_]*800[\W_]*215[\W_]*732[a-z_]*
+legendz\W?xl
+ambrosina
+kidney\W?bean\W?extract
+acai\W?(?:berr(?:y|ies)|palm)
+lumisse
+(?:poker|casino)\W*online
+online\W*(?:poker|casino)
+caralluma
+diabazole
+nitro\W?slim
+slimatrex
+bellavei
+opuderm
+follicure
+\w*kreatine
+revolyn
+3073598075
+revimax
+d-bal
+dianabol
+viatropin
+satta\W?matka\w*
+nordic\W*loan\W*firm(?:@gmail\W*com)?
+safflower\W?oil
+ramsedave121(?:@gma?il\.com)?
+(meg|test)adrox
+unique(?:\W|doc)?producers?
+skin ?care
+herbal ?care
+relief\W?hemp\W?cbd
+andro[ -]dna
+therma\W?trim
+one\W?two\W?slim
+nano\W?glutathione
+curalin
+appkodes
+nerve\W?renew
+trim\W?pill(?:\W?keto)?
+keto\W?lean
+keto\W?fit(\W?(?:diet|premium))?
+(?:happy\W?)?diwali\W?(?:image|picture)s?(?:\W?hd)?\d*
+UU2PdUt_s_k(?#YouTube of Keto Lean)
+mega\W?leans(?:\W?forskolin)?
+paraglow\W?cream
+keto\W?thrive(?:\W?diet)?
+gidae\W?cream
+keto\W?10
+testo\W?blend
+protecvital\W?plus
+boost\W?thirst\W?now
+primalis\W?rx
+keto\W?one
+tru\W?garcinia\W?360
+xtr14\W?testro
+pure\W?turmeric\W?curcumin
+enter\W?keto
+nutri\W?burn
+greenlifenutrition\d*(?!\.com)
+keto\W?plus(?:\W?diet)?
+healthsupplementfordiet
+ultra\W*last(?:\W*xxl)?
+testo drive 365 (?:canada|performance(?: plus)?)?(?#product name)
+testo\W?drive
+(?<=/)apple-id
+ 毕业证
+ 学历认证
+ レーザーポインター
+surge\W?rx
+alpha\W?flex\W?xt
+enduro\W?stack
+keto\W?max\W?diet
+blitz\W*protocol
+weight\W*loss\W*plus
+nutrivano(?:\W?forskolin)?

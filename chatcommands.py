@@ -1,16 +1,16 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
 from chatcommunicate import add_room, block_room, CmdException, command, get_report_data, is_privileged, message, \
-    tell_rooms
+    tell_rooms, tell_rooms_with
 # noinspection PyUnresolvedReferences
 from globalvars import GlobalVars
-from findspam import FindSpam
+import findspam
 # noinspection PyUnresolvedReferences
 from datetime import datetime
-from utcdate import UtcDate
 from apigetpost import api_get_post, PostData
 import datahandling
 from datahandling import *
+from metasmoke import Metasmoke
 from blacklists import load_blacklists
 from parsing import *
 from spamhandling import check_if_spam, handle_spam
@@ -18,13 +18,14 @@ from gitmanager import GitManager
 import threading
 import random
 import requests
+import sys
 import os
 import time
 from html import unescape
 from ast import literal_eval
 # noinspection PyCompatibility
 import regex
-from helpers import only_blacklists_changed, log, expand_shorthand_link, to_metasmoke_link
+from helpers import only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, reload_modules
 from classes import Post
 from classes.feedback import *
 
@@ -34,15 +35,10 @@ from classes.feedback import *
 #
 # System command functions below here
 
-# The following two commands are just bypasses for the "unrecognized command" message, so that pingbot
-# can respond instead.
-@command(aliases=['ping-help'])
-def ping_help():
-    return None
-
-
-@command()
-def groups():
+# This "null" command is just bypass for the "unrecognized command" message,
+# so that pingbot can respond instead.
+@command(aliases=['ping-help', 'groups'])
+def null():
     return None
 
 
@@ -205,8 +201,8 @@ def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
                                     'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
                                     'site': "", 'IsAnswer': True, 'score': 0})
 
-    question_reasons, _ = FindSpam.test_post(question)
-    answer_reasons, _ = FindSpam.test_post(answer)
+    question_reasons, _ = findspam.FindSpam.test_post(question)
+    answer_reasons, _ = findspam.FindSpam.test_post(answer)
 
     # Filter out duplicates
     reasons = list(set(question_reasons) | set(answer_reasons))
@@ -255,9 +251,11 @@ def do_blacklist(blacklist_type, msg, force=False):
     # noinspection PyProtectedMember
     pattern = rebuild_str(msg.content_source.split(" ", 1)[1])
     try:
-        regex.compile(pattern, city=FindSpam.city_list)
+        r = regex.compile(pattern, city=findspam.FindSpam.city_list)
     except regex._regex_core.error:
-        raise CmdException("An invalid pattern was provided, not blacklisting.")
+        raise CmdException("An invalid pattern was provided, please check your command.")
+    if r.search(GlobalVars.valid_content):
+        raise CmdException("That pattern is probably too broad, refusing to commit.")
 
     if not force:
         if regex.match(r'(?:\[a-z_]\*)?(?:\(\?:)?\d+(?:[][\\W_*()?:]+\d+)+(?:\[a-z_]\*)?$', pattern):
@@ -283,11 +281,11 @@ def do_blacklist(blacklist_type, msg, force=False):
 
     try:
         code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
-    except (requests.exceptions.ConnectionError, json.decoder.JSONDecodeError):
+    except (requests.exceptions.ConnectionError, ValueError, TypeError):
         code_permissions = False  # Because we need the system to assume that we don't have code privs.
         metasmoke_down = True
 
-    _, result = GitManager.add_to_blacklist(
+    _status, result = GitManager.add_to_blacklist(
         blacklist=blacklist_type,
         item_to_blacklist=pattern,
         username=msg.owner.name,
@@ -296,6 +294,23 @@ def do_blacklist(blacklist_type, msg, force=False):
         metasmoke_down=metasmoke_down
     )
 
+    if not _status:
+        raise CmdException(result)
+
+    if code_permissions and only_blacklists_changed(GitManager.get_local_diff()):
+        try:
+            if not GlobalVars.on_master:
+                # Restart if HEAD detached
+                log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
+                os._exit(8)
+            GitManager.pull_local()
+            GlobalVars.reload()
+            findspam.FindSpam.reload_blacklists()
+            tell_rooms_with('debug', GlobalVars.s_norestart)
+            time.sleep(2)
+            return None
+        except Exception:
+            pass
     return result
 
 
@@ -354,21 +369,33 @@ def unblacklist(msg, item, alias_used="unwatch"):
     metasmoke_down = False
     try:
         code_privs = is_code_privileged(msg._client.host, msg.owner.id)
-    except (requests.exceptions.ConnectionError, json.decoder.JSONDecodeError):
+    except (requests.exceptions.ConnectionError, ValueError):
         code_privs = False
         metasmoke_down = True
 
     pattern = msg.content_source.split(" ", 1)[1]
-    _status, message = GitManager.remove_from_blacklist(
+    _status, result = GitManager.remove_from_blacklist(
         rebuild_str(pattern), msg.owner.name, blacklist_type,
         code_privileged=code_privs, metasmoke_down=metasmoke_down)
-    return message
 
+    if not _status:
+        raise CmdException(result)
 
-# noinspection PyIncorrectDocstring
-@command(privileged=True)
-def gitstatus():
-    return GitManager.current_git_status()
+    if only_blacklists_changed(GitManager.get_local_diff()):
+        try:
+            if not GlobalVars.on_master:
+                # Restart if HEAD detached
+                log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
+                os._exit(8)
+            GitManager.pull_local()
+            GlobalVars.reload()
+            findspam.FindSpam.reload_blacklists()
+            tell_rooms_with('debug', GlobalVars.s_norestart)
+            time.sleep(2)
+            return None
+        except Exception:
+            pass
+    return result
 
 
 @command(privileged=True, aliases=["remote-diff", "remote_diff"])
@@ -384,30 +411,24 @@ def remotediff():
 def blame(msg):
     unlucky_victim = msg._client.get_user(random.choice(msg.room.get_current_user_ids()))
 
-    return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
-                                                                 msg._client.host,
-                                                                 unlucky_victim.id)
+    return "It's [{}](https://chat.{}/users/{})'s fault.".format(
+        unlucky_victim.name, msg._client.host, unlucky_victim.id)
 
 
 @command(str, whole_msg=True, aliases=["blame\u180E"])
 def blame2(msg, x):
     base = {"\u180E": 0, "\u200B": 1, "\u200C": 2, "\u200D": 3, "\u2060": 4, "\u2063": 5, "\uFEFF": 6}
-    user = 0
-
-    for i, char in enumerate(reversed(x)):
-        user += (len(base)**i) * base[char]
+    user = sum([(len(base)**i) * base[char] for i, char in enumerate(reversed(x))])
 
     try:
         unlucky_victim = msg._client.get_user(user)
-        return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
-                                                                     msg._client.host,
-                                                                     unlucky_victim.id)
+        return "It's [{}](https://chat.{}/users/{})'s fault.".format(
+            unlucky_victim.name, msg._client.host, unlucky_victim.id)
 
     except requests.exceptions.HTTPError:
         unlucky_victim = msg.owner
-        return "It's [{}](https://chat.{}/users/{})'s fault.".format(unlucky_victim.name,
-                                                                     msg._client.host,
-                                                                     unlucky_victim.id)
+        return "It's [{}](https://chat.{}/users/{})'s fault.".format(
+            unlucky_victim.name, msg._client.host, unlucky_victim.id)
 
 
 # noinspection PyIncorrectDocstring
@@ -547,6 +568,13 @@ def unblock(msg, room_id):
 
 
 # --- Administration Commands --- #
+ALIVE_MSG = [
+    'Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee',
+    'Watching this endless list of new questions *never* gets boring', 'Kinda sorta',
+    'You should totally drop that and use jQuery', r'¯\\_(ツ)\_/¯',
+]
+
+
 # noinspection PyIncorrectDocstring
 @command(aliases=["live"])
 def alive():
@@ -554,10 +582,7 @@ def alive():
     Returns a string indicating the process is still active
     :return: A string
     """
-    return random.choice(['Yup', 'You doubt me?', 'Of course',
-                          '... did I miss something?', 'plz send teh coffee',
-                          'Watching this endless list of new questions *never* gets boring',
-                          'Kinda sorta'])
+    return random.choice(ALIVE_MSG)
 
 
 # noinspection PyIncorrectDocstring
@@ -569,6 +594,29 @@ def errorlogs(count):
     :return: A string
     """
     return fetch_lines_from_error_log(count or 50)
+
+
+@command(whole_msg=True, aliases=["ms-status", "ms-down", "ms-up"], give_name=True)
+def metasmoke(msg, alias_used):
+    if alias_used in {"metasmoke", "ms-status"}:
+        status_text = [
+            "metasmoke is up. Current failure count: {}".format(GlobalVars.metasmoke_failures),
+            "metasmoke is down. Current failure count: {}".format(GlobalVars.metasmoke_failures),
+        ]
+        return status_text[GlobalVars.metasmoke_down]
+    # The next aliases/functionalities require privilege
+    if not is_privileged(msg.owner, msg.room):
+        raise CmdException(GlobalVars.not_privileged_warning)
+
+    if alias_used == "ms-down":
+        GlobalVars.metasmoke_down = True
+        GlobalVars.metasmoke_failures = 999
+        return "metasmoke is now considered down."
+    if alias_used == "ms-up":
+        GlobalVars.metasmoke_down = False
+        GlobalVars.metasmoke_failures = 0
+        return "metasmoke is now considered up."
+    raise CmdException("Bad command alias. Blame a developer.")
 
 
 # noinspection PyIncorrectDocstring
@@ -630,39 +678,75 @@ def pull():
     Pull an update from GitHub
     :return: String on failure, None on success
     """
-    if only_blacklists_changed(GitManager.get_remote_diff()):
+    remote_diff = GitManager.get_remote_diff()
+    if only_blacklists_changed(remote_diff):
         GitManager.pull_remote()
-        load_blacklists()
-        return "No code modified, only blacklists reloaded."
-    else:
-        request = requests.get('https://api.github.com/repos/Charcoal-SE/SmokeDetector/git/refs/heads/deploy')
-        latest_sha = request.json()["object"]["sha"]
-        request = requests.get(
-            'https://api.github.com/repos/Charcoal-SE/SmokeDetector/commits/{commit_code}/statuses'.format(
-                commit_code=latest_sha))
-        states = []
-        for ci_status in request.json():
-            state = ci_status["state"]
-            states.append(state)
-        if "success" in states:
+        findspam.FindSpam.reload_blacklists()
+        GlobalVars.reload()
+        tell_rooms_with('debug', GlobalVars.s_norestart)
+        return
+
+    request = requests.get('https://api.github.com/repos/{}/git/refs/heads/deploy'.format(
+        GlobalVars.bot_repo_slug))
+    latest_sha = request.json()["object"]["sha"]
+    request = requests.get(
+        'https://api.github.com/repos/{}/commits/{}/statuses'.format(
+            GlobalVars.bot_repo_slug, latest_sha))
+    states = []
+    for ci_status in request.json():
+        state = ci_status["state"]
+        states.append(state)
+    if "success" in states:
+        if only_modules_changed(remote_diff):
+            GitManager.pull_remote()
+            reload_modules()
+            GlobalVars.reload()
+            tell_rooms_with('debug', GlobalVars.s_norestart2)
+            return
+        else:
             os._exit(3)
-        elif "error" in states or "failure" in states:
-            raise CmdException("CI build failed! :( Please check your commit.")
-        elif "pending" in states or not states:
-            raise CmdException("CI build is still pending, wait until the build has finished and then pull again.")
+    elif "error" in states or "failure" in states:
+        raise CmdException("CI build failed! :( Please check your commit.")
+    elif "pending" in states or not states:
+        raise CmdException("CI build is still pending, wait until the build has finished and then pull again.")
+
+
+@command(privileged=True, give_name=True, aliases=[
+    "gitstatus", "git-status", "git-help"
+])
+def git(alias_used="git"):
+    if alias_used == "git":
+        raise CmdException("Bad alias. Try another command")
+    if alias_used == "git-help":
+        return "Available commands: git-help, git-status, git-merge-abort, git-reset"
+
+    alias_used = alias_used.replace("-", "")
+    if alias_used == "gitstatus":
+        return GitManager.current_git_status()
+    elif alias_used == "gitmergeabort":
+        return GitManager.merge_abort()
+    elif alias_used == "gitreset":
+        return GitManager.reset_head()
 
 
 # noinspection PyIncorrectDocstring,PyProtectedMember
-@command(whole_msg=True, privileged=True, aliases=["restart"])
-def reboot(msg):
+@command(whole_msg=True, privileged=True, give_name=True, aliases=["restart", "reload"])
+def reboot(msg, alias_used="reboot"):
     """
     Forces a system exit with exit code = 5
     :param msg:
     :return: None
     """
-    tell_rooms("Goodbye, cruel world", ("debug", (msg._client.host, msg.room.id)), ())
-    time.sleep(3)
-    os._exit(5)
+    if alias_used in {"reboot", "restart"}:
+        tell_rooms("Goodbye, cruel world", ("debug", (msg._client.host, msg.room.id)), ())
+        time.sleep(3)
+        os._exit(5)
+    elif alias_used in {"reload"}:
+        reload_modules()
+        tell_rooms_with('debug', GlobalVars.s_norestart2)
+        time.sleep(3)
+    else:
+        raise RuntimeError("Invalid alias!")
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
@@ -687,6 +771,7 @@ def amicodeprivileged(msg):
     :param msg:
     :return: A string
     """
+    update_code_privileged_users_list()
     if is_code_privileged(msg._client.host, msg.owner.id):
         return "\u2713 You are a code-privileged user."
 
@@ -787,7 +872,7 @@ def status():
     :return: A string
     """
     now = datetime.utcnow()
-    diff = now - UtcDate.startup_utc_date
+    diff = now - GlobalVars.startup_utc_date
 
     return 'Running since {time} UTC ({relative})'.format(time=GlobalVars.startup_utc, relative=td_format(diff))
 
@@ -823,7 +908,7 @@ def standby(msg, location_search, alias_used="standby"):
 
 
 # noinspection PyIncorrectDocstring
-@command(str, aliases=["test-q", "test-a", "test-u", "test-t"], give_name=True)
+@command(str, aliases=["test-q", "test-a", "test-u", "test-t", "test-json"], give_name=True)
 def test(content, alias_used="test"):
     """
     Test an answer to determine if it'd be automatically reported
@@ -863,13 +948,52 @@ def test(content, alias_used="test"):
         fakepost = Post(api_response={'title': content, 'body': "Valid question body",
                                       'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
                                       'site': site, 'IsAnswer': False, 'score': 0})
+    elif alias_used == "test-json":
+        # Only load legit json object
+        try:
+            json_obj = json.loads(content)
+        except ValueError as e:
+            raise CmdException("Error: {}".format(e))
+        if not isinstance(json_obj, dict):
+            raise CmdException("Only accepts a json object as input")
+        # List of valid keys and their corresponding classes
+        valid_keys = [
+            ('title', str), ('body', str), ('username', str), ('type', str),
+            ('reputation', int), ('score', int)
+        ]
+        right_types = list(filter(lambda p: p[0] in json_obj and isinstance(json_obj[p[0]], p[1]), valid_keys))
+        wrong_types = list(filter(lambda p: p[0] in json_obj and not isinstance(json_obj[p[0]], p[1]), valid_keys))
+        # Alert if valid key is of wrong class
+        if len(wrong_types) > 0:
+            raise CmdException("Invalid type: {}".format(", ".join(
+                ["{} should be {}".format(x, y.__name__) for (x, y) in wrong_types])))
+        # Alert if none of the valid keys are used
+        elif len(right_types) == 0:
+            raise CmdException("At least one of the following keys needed: {}".format(", ".join(
+                ["{} ({})".format(x, y.__name__) for (x, y) in valid_keys])))
+        # Craft a fake response
+        fake_response = {
+            'title': json_obj['title'] if 'title' in json_obj else 'Valid post title',
+            'body': json_obj['body'] if 'body' in json_obj else 'Valid post body',
+            'owner': {
+                'display_name': json_obj['username'] if 'username' in json_obj else 'Valid username',
+                'reputation': json_obj['reputation'] if 'reputation' in json_obj else 0,
+                'link': ''
+            },
+            'IsAnswer': 'type' in json_obj and not json_obj['type'] == "question",
+            'site': site,
+            'score': json_obj['score'] if 'score' in json_obj else 0
+        }
+        # Handle that pluralization bug
+        kind = "an answer" if fake_response['IsAnswer'] else "a question"
+        fakepost = Post(api_response=fake_response)
     else:
         kind = "a post, title or username"
         fakepost = Post(api_response={'title': content, 'body': content,
                                       'owner': {'display_name': content, 'reputation': 1, 'link': ''},
                                       'site': site, 'IsAnswer': False, 'score': 0})
 
-    reasons, why_response = FindSpam.test_post(fakepost)
+    reasons, why_response = findspam.FindSpam.test_post(fakepost)
 
     if len(reasons) == 0:
         result += "Would not be caught as {}".format(kind)
@@ -1148,11 +1272,12 @@ def report(msg, args, alias_used="report"):
                            "wait 30 seconds after you've reported multiple posts in "
                            "one go.".format(alias_used, wait))
 
-    output = []
+    alias_used = alias_used or "report"
 
     argsraw = args.split(' "', 1)
     urls = argsraw[0].split(' ')
-    action_done = "scanned" if alias_used == "scan" else "reported"
+
+    message_url = "https://chat.{0}/transcript/{1}?m={2}".format(msg._client.host, msg.room.id, msg.id)
 
     # Handle determining whether a custom report reason was provided.
     try:
@@ -1161,20 +1286,8 @@ def report(msg, args, alias_used="report"):
             custom_reason = argsraw[1][:-1]
         else:
             custom_reason = argsraw[1]
-
-        # Deny cases of multiple close reasons, in which case custom_reason will still have " chars in it.
-        if '"' in custom_reason:
-            raise CmdException("You cannot provide multiple custom report reasons. "
-                               "Please review the permitted !!/report syntax in the documentation "
-                               "for guidance on using custom report reasons.")
-
-        report_info = u"Post manually {} by user *{}* in room *{}* with reason: *{}*.\n\n".format(
-            action_done, msg.owner.name, msg.room.name, custom_reason)
     except IndexError:
-        report_info = u"Post manually {} by user *{}* in room *{}*.\n\n".format(
-            action_done, msg.owner.name, msg.room.name)
-
-    urls = list(set(urls))
+        custom_reason = None
 
     if len(urls) > 5:
         raise CmdException("To avoid SmokeDetector reporting posts too slowly, you can "
@@ -1182,87 +1295,13 @@ def report(msg, args, alias_used="report"):
                            "SmokeDetector's chat messages getting rate-limited too much, "
                            "which would slow down reports.".format(alias_used))
 
-    for index, url in enumerate(urls, start=1):
-        post_data = api_get_post(rebuild_str(url))
+    # report_posts(urls, reported_by, reported_in, blacklist_by, operation="report", custom_reason=None):
+    output = report_posts(urls, msg.owner.name, msg.room.name, message_url, alias_used, custom_reason)
 
-        if post_data is None:
-            output.append("Post {}: That does not look like a valid post URL.".format(index))
-            continue
-
-        if post_data is False:
-            output.append("Post {}: Could not find data for this post in the API. "
-                          "It may already have been deleted.".format(index))
-            continue
-
-        if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive(
-                (post_data.post_id, post_data.site)):
-            # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
-            # this re-report might be attempting to correct that/fix a mistake/etc.
-
-            if GlobalVars.metasmoke_key is not None:
-                se_link = to_protocol_relative(post_data.post_url)
-                ms_link = to_metasmoke_link(se_link)
-                output.append("Post {}: Already recently reported [ [MS]({}) ]".format(index, ms_link))
-                continue
-            else:
-                output.append("Post {}: Already recently reported".format(index))
-                continue
-
-        url = to_protocol_relative(post_data.post_url)
-        post = Post(api_response=post_data.as_dict)
-        user = get_user_from_url(post_data.owner_url)
-
-        if fetch_post_id_and_site_from_url(url)[2] == "answer":
-            parent_data = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
-            post._is_answer = True
-            post._parent = Post(api_response=parent_data.as_dict)
-
-        scan_spam, scan_reasons, scan_why = check_if_spam(post)  # Scan it first
-
-        # Expand real scan results from dirty returm value when not "!!/scan"
-        # Presence of "scan_why" indicates the post IS spam but ignored
-        if alias_used != "scan" and (not scan_spam) and scan_why:
-            scan_spam = True
-            scan_reasons, scan_why = scan_reasons
-
-        # If alias_used == "report-force" then jump to the next block
-        if scan_spam and alias_used in {"scan", "report"}:
-            handle_spam(post=post, reasons=scan_reasons, why=report_info + scan_why)
-            continue
-
-        # scan_spam == False or alias_used == "report-force"
-        if alias_used in {"report", "report-force"}:
-            if user is not None:
-                message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
-                add_blacklisted_user(user, message_url, post_data.post_url)
-
-            batch = ""
-            if len(urls) > 1:
-                batch = " (batch report: post {} out of {})".format(index, len(urls))
-
-            if scan_spam:
-                why_append = u"This post would have also been caught for: " + ", ".join(scan_reasons).capitalize() + \
-                    '\n' + scan_why
-            else:
-                why_append = u"This post would not have been caught otherwise."
-
-            handle_spam(post=post,
-                        reasons=["Manually reported " + post_data.post_type + batch],
-                        why=report_info + why_append)
-            continue
-
-        # scan_spam == False and alias_used == "scan"
-        else:
-            if scan_why:
-                output.append("Post {}: Looks like spam but not reported: {}".format(index, scan_why.capitalize()))
-            else:
-                output.append("Post {}: This does not look like spam".format(index))
-
-    if 1 < len(urls) > len(output):
-        add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
-
-    if len(output) > 0:
-        return "\n".join(output)
+    if output:
+        if 1 < len(urls) > output.count("\n") + 1:
+            add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
+        return output
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
@@ -1390,9 +1429,131 @@ def allspam(msg, url):
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
 
 
+def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
+    operation = operation or "report"
+    action_done = {"report": "reported", "report-force": "reported", "scan": "scanned"}[operation]
+    if reported_in is None:
+        reported_from = " by *{}*".format(reported_by)
+    elif reported_in is True:
+        reported_from = " by *{}* from the metasmoke API".format(reported_by)
+    else:
+        reported_from = " by user *{}* in room *{}*".format(reported_by, reported_in)
+
+    if custom_reason:
+        with_reason = " with reason: *{}*".format(custom_reason)
+    else:
+        with_reason = ""
+
+    report_info = "Post manually {}{}{}.\n\n".format(action_done, reported_from, with_reason)
+
+    normalized_urls = []
+    for url in urls:
+        t = url_to_shortlink(url)
+        if not t:
+            normalized_urls.append("That does not look like a valid post URL.")
+        elif t not in normalized_urls:
+            normalized_urls.append(t)
+        else:
+            normalized_urls.append("A duplicate URL was provided.")
+    urls = normalized_urls
+
+    users_to_blacklist = []
+    output = []
+
+    for index, url in enumerate(urls, start=1):
+        if not url.startswith("http://") and not url.startswith("https://"):
+            # Return the bad URL directly.
+            output.append("Post {}: {}".format(index, url))
+            continue
+
+        post_data = api_get_post(rebuild_str(url))
+
+        if post_data is None:
+            output.append("Post {}: That does not look like a valid post URL.".format(index))
+            continue
+
+        if post_data is False:
+            output.append("Post {}: Could not find data for this post in the API. "
+                          "It may already have been deleted.".format(index))
+            continue
+
+        if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive(
+                (post_data.post_id, post_data.site)):
+            # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
+            # this re-report might be attempting to correct that/fix a mistake/etc.
+
+            if GlobalVars.metasmoke_key is not None:
+                se_link = to_protocol_relative(post_data.post_url)
+                ms_link = to_metasmoke_link(se_link)
+                output.append("Post {}: Already recently reported [ [MS]({}) ]".format(index, ms_link))
+                continue
+            else:
+                output.append("Post {}: Already recently reported".format(index))
+                continue
+
+        url = to_protocol_relative(post_data.post_url)
+        post = Post(api_response=post_data.as_dict)
+        user = get_user_from_url(post_data.owner_url)
+
+        if fetch_post_id_and_site_from_url(url)[2] == "answer":
+            parent_data = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
+            post._is_answer = True
+            post._parent = Post(api_response=parent_data.as_dict)
+
+        scan_spam, scan_reasons, scan_why = check_if_spam(post)  # Scan it first
+
+        if operation in {"report", "report-force"}:  # Force blacklist user even if !!/report falls back to scan
+            if user is not None:
+                users_to_blacklist.append((user, blacklist_by, post_data.post_url))
+
+        # Expand real scan results from dirty returm value when not "!!/scan"
+        # Presence of "scan_why" indicates the post IS spam but ignored
+        if operation != "scan" and (not scan_spam) and scan_why:
+            scan_spam = True
+            scan_reasons, scan_why = scan_reasons
+
+        # If "report-force" then jump to the next block
+        if scan_spam and operation in {"scan", "report"}:
+            handle_spam(post=post, reasons=scan_reasons, why=report_info + scan_why.lstrip())
+            continue
+
+        # scan_spam == False or "report-force"
+        if operation in {"report", "report-force"}:
+            batch = ""
+            if len(urls) > 1:
+                batch = " (batch report: post {} out of {})".format(index, len(urls))
+
+            if scan_spam:
+                why_append = "This post would have also been caught for: " + ", ".join(scan_reasons).capitalize() + \
+                    '\n' + scan_why
+            else:
+                why_append = "This post would not have been caught otherwise."
+
+            handle_spam(post=post,
+                        reasons=["Manually reported " + post_data.post_type + batch],
+                        why=report_info + why_append)
+            continue
+
+        # scan_spam == False and "scan"
+        else:
+            if scan_why:
+                output.append("Post {}: Looks like spam but not reported: {}".format(index, scan_why.capitalize()))
+            else:
+                output.append("Post {}: This does not look like spam".format(index))
+
+    for item in users_to_blacklist:
+        add_blacklisted_user(*item)
+
+    if len(output):
+        return "\n".join(output)
+    return None
+
+
 @command(str, str, privileged=True, whole_msg=True)
 def feedback(msg, post_url, feedback):
-    post_url = url_to_shortlink(post_url)[5:]
+    post_url = url_to_shortlink(post_url)[6:]
+    if not post_url:
+        raise CmdException("No such feedback.")
 
     for feedbacks in (TRUE_FEEDBACKS, FALSE_FEEDBACKS, NAA_FEEDBACKS):
         if feedback in feedbacks:
@@ -1590,7 +1751,10 @@ def true(feedback, msg, comment, alias_used="true"):
     feedback_type.send(post_url, feedback)
 
     post_id, site, post_type = fetch_post_id_and_site_from_url(post_url)
-    user = get_user_from_url(owner_url)
+    try:
+        user = get_user_from_url(owner_url)
+    except TypeError as e:
+        raise CmdException('Could not get user from URL {0!r}'.format(owner_url))
 
     if user is not None:
         if feedback_type.blacklist:
@@ -1640,6 +1804,9 @@ def autoflagged(msg):
     :param msg:
     :return: A string
     """
+    # sneaky!
+    update_reason_weights()
+
     post_data = get_report_data(msg)
 
     if not post_data:

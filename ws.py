@@ -1,4 +1,4 @@
-# coding=utf-8
+#!/usr/bin/env python3
 # requires https://pypi.python.org/pypi/websocket-client/
 
 from excepthook import uncaught_exception, install_thread_excepthook
@@ -20,7 +20,6 @@ import traceback
 from bodyfetcher import BodyFetcher
 import chatcommunicate
 from datetime import datetime
-from utcdate import UtcDate
 from spamhandling import check_if_spam_json
 from globalvars import GlobalVars
 from datahandling import load_files, filter_auto_ignored_posts
@@ -32,6 +31,7 @@ import requests
 # noinspection PyPackageRequirements
 from tld.utils import update_tld_names, TldIOError
 from helpers import log, Helpers
+from flovis import Flovis
 from tasks import Tasks
 
 import chatcommands
@@ -51,6 +51,14 @@ if any('--loglevel' in x for x in sys.argv):
         Helpers.min_log_level = 0
 else:
     Helpers.min_log_level = 0
+
+if not GlobalVars.metasmoke_host:
+    log('info', "metasmoke host not found. Set it as metasmoke_host in the config file. "
+        "See https://github.com/Charcoal-SE/metasmoke.")
+if not GlobalVars.metasmoke_key:
+    log('info', "No metasmoke key found, which is okay if both are running on the same host")
+if not GlobalVars.metasmoke_ws_host:
+    log('info', "No metasmoke websocket host found, which is okay if you're anti-websocket")
 
 try:
     update_tld_names()
@@ -84,14 +92,14 @@ elif GlobalVars.chatexchange_u:
     log('debug', "ChatExchange username loaded from config")
     username = GlobalVars.chatexchange_u
 else:
-    log('debug', "No ChatExchange username provided. Set it in config or provide it via environment variable")
+    log('error', "No ChatExchange username provided. Set it in config or provide it via environment variable")
     os._exit(6)
 
 if "ChatExchangeP" in os.environ:
     log('debug', "ChatExchange password loaded from environment")
     password = os.environ["ChatExchangeP"]
 elif GlobalVars.chatexchange_p:
-    log('info', "ChatExchange password loaded from config")
+    log('debug', "ChatExchange password loaded from config")
     password = GlobalVars.chatexchange_p
 else:
     log('error', "No ChatExchange password provided. Set it in config or provide it via environment variable")
@@ -99,39 +107,12 @@ else:
 
 # We need an instance of bodyfetcher before load_files() is called
 GlobalVars.bodyfetcher = BodyFetcher()
+if GlobalVars.flovis_host:
+    GlobalVars.flovis = Flovis(GlobalVars.flovis_host)
 
 load_files()
 filter_auto_ignored_posts()
 
-
-GlobalVars.s = "[ " + GlobalVars.chatmessage_prefix + " ] " \
-               "SmokeDetector started at [rev " +\
-               GlobalVars.commit_with_author +\
-               "](" + GlobalVars.bot_repository + "/commit/" +\
-               GlobalVars.commit['id'] +\
-               ") (running on " +\
-               GlobalVars.location +\
-               ")"
-GlobalVars.s_reverted = "[ " + GlobalVars.chatmessage_prefix + " ] " \
-                        "SmokeDetector started in [reverted mode](" + \
-                        "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
-                        "at [rev " + \
-                        GlobalVars.commit_with_author + \
-                        "](" + GlobalVars.bot_repository + "/commit/" + \
-                        GlobalVars.commit['id'] + \
-                        ") (running on " +\
-                        GlobalVars.location +\
-                        ")"
-GlobalVars.standby_message = "[ " + GlobalVars.chatmessage_prefix + " ] " \
-                             "SmokeDetector started in [standby mode](" + \
-                             "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " + \
-                             "at [rev " +\
-                             GlobalVars.commit_with_author +\
-                             "](" + GlobalVars.bot_repository + "/commit/" +\
-                             GlobalVars.commit['id'] +\
-                             ") (running on " +\
-                             GlobalVars.location +\
-                             ")"
 
 GlobalVars.standby_mode = "standby" in sys.argv
 
@@ -179,24 +160,19 @@ def setup_websocket(attempt, max_attempts):
         return None
 
 
-tries = 1
 max_tries = 5
-while tries <= max_tries:
+for tries in range(1, 1 + max_tries, 1):
     ws = setup_websocket(tries, max_tries)
     if ws:
         break
-    elif tries < max_tries:
-        tries += 1
-    elif tries == max_tries:
-        log('error', 'Max retries exceeded. Exiting, maybe a restart will kick things.')
-        os._exit(5)
+else:
+    log('error', 'Max retries exceeded. Exiting, maybe a restart will kick things.')
+    os._exit(5)
 
 GlobalVars.deletion_watcher = DeletionWatcher()
 
-if "first_start" in sys.argv and GlobalVars.on_master:
-    chatcommunicate.tell_rooms_with("debug", GlobalVars.s)
-elif "first_start" in sys.argv and not GlobalVars.on_master:
-    chatcommunicate.tell_rooms_with("debug", GlobalVars.s_reverted)
+if "first_start" in sys.argv:
+    chatcommunicate.tell_rooms_with('debug', GlobalVars.s if GlobalVars.on_master else GlobalVars.s_reverted)
 
 Tasks.periodic(Metasmoke.send_statistics, interval=600)
 
@@ -225,7 +201,7 @@ while True:
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         now = datetime.utcnow()
-        delta = now - UtcDate.startup_utc_date
+        delta = now - GlobalVars.startup_utc_date
         seconds = delta.total_seconds()
         tr = traceback.format_exc()
         exception_only = ''.join(traceback.format_exception_only(type(e), e))\

@@ -37,18 +37,60 @@ def get_api_sitename_from_url(url):
         return None
 
 
+def api_parameter_from_link(link):
+    match = regex.compile(
+        r'((?:meta\.)?(?:(?:(?:math|(?:\w{2}\.)?stack)overflow|askubuntu|superuser|serverfault)|\w+)'
+        r'(?:\.meta)?)\.(?:stackexchange\.com|com|net)').search(link)
+    exceptions = {
+        'meta.superuser': 'meta.superuser',
+        'meta.serverfault': 'meta.serverfault',
+        'meta.askubuntu': 'meta.askubuntu',
+        'mathoverflow': 'mathoverflow.net',
+        'meta.mathoverflow': 'meta.mathoverflow.net',
+        'meta.stackexchange': 'meta'
+    }
+    if match:
+        if match[1] in exceptions:
+            return exceptions[match[1]]
+        elif 'meta.' in match[1] and 'stackoverflow' not in match[1]:
+            return '.'.join(match[1].split('.')[::-1])
+        else:
+            return match[1]
+    else:
+        return None
+
+
+def post_id_from_link(link):
+    match = regex.compile(r'(?:https?:)?//[^/]+/\w+/(\d+)').search(link)
+    if match:
+        return match[1]
+    else:
+        return None
+
+
+def to_metasmoke_link(post_url, protocol=True):
+    return "{}//m.erwaysoftware.com/posts/uid/{}/{}".format(
+        "https:" if protocol else "", api_parameter_from_link(post_url), post_id_from_link(post_url))
+
+
+# Use (?P<name>) so we're not in the danger of messing up numeric groups
+msg_parser_regex = (
+    r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: "
+    r"(?P<post>\[(?P<title>.+)]\((?P<post_url>(?:https?:)"
+    r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:https?:)?\/\/[\w.]+\/[qa]\/\d+/?)\).{,3})"
+    r" by (?:\[.+\]\((?P<owner_url>.+)\)|[\w ]*) on `[\w.]+`(?: \((?:@\S+\s?)+\))?"
+    r"(?: \[.+\]\(.+\))?$"
+)
+msg_parser = regex.compile(msg_parser_regex)
+
+
 # noinspection PyBroadException,PyMissingTypeHints
 def fetch_post_url_from_msg_content(content):
-    search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[.+]\(((?:http:)" \
-                   r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)(?:\?smokeypost=true)?\)" \
-                   r"\s?(?:\u270F\uFE0F|\U0001F437)?\sby \[?.*\]?\(?(?:.*)\)? on `[\w.]+`(?: \(@.+\))?" \
-                   r"(?: \[.+\]\(.+\))?$"
-    match = regex.compile(search_regex).search(content)
+    match = msg_parser.search(content)
     if match is None:
         return None
     try:
-        url = match.group(1)
-        return url
+        return match.group("post_url")
     except IndexError:
         return None
 
@@ -96,14 +138,11 @@ def fetch_post_id_and_site_from_msg_content(content):
 
 # noinspection PyBroadException,PyMissingTypeHints
 def fetch_owner_url_from_msg_content(content):
-    search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[.+]\((?:(?:http:)" \
-                   r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\) by \[.+\]\((.+)\)" \
-                   r" on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
-    match = regex.compile(search_regex).search(content)
+    match = msg_parser.search(content)
     if match is None:
         return None
     try:
-        owner_url = match.group(1)
+        owner_url = match.group("owner_url")
         return owner_url
     except IndexError:
         return None
@@ -111,29 +150,22 @@ def fetch_owner_url_from_msg_content(content):
 
 # noinspection PyBroadException,PyMissingTypeHints
 def fetch_title_from_msg_content(content):
-    search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: \[(.+)]\((?:(?:http:)" \
-                   r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\) by \[?.*\]?\(?.*\)?" \
-                   r" on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
-    match = regex.compile(search_regex).search(content)
+    match = msg_parser.search(content)
     if match is None:
         return None
     try:
-        title = match.group(1)
-        return title
+        return match.group("title")
     except IndexError:
         return None
 
 
 # noinspection PyBroadException,PyMissingTypeHints
 def edited_message_after_postgone_command(content):
-    search_regex = r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: (\[.+]\((?:(?:http:)" \
-                   r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:http:)?\/\/[\w.]+\/[qa]\/\d+/?)\)) by \[?.*\]?\(?.*\)?" \
-                   r" on `[\w.]+`(?: \(@.+\))?(?: \[.+\]\(.+\))?$"
-    match = regex.compile(search_regex).search(content)
+    match = msg_parser.search(content)
     if match is None:
         return None
     try:
-        link = match.group(1)
+        link = match.group("post")
         return content.replace(link, "*(gone)*")
     except IndexError:
         return None
@@ -187,15 +219,15 @@ def get_user_from_list_command(cmd):  # for example, !!/addblu is a list command
 def url_to_shortlink(url):
     id_and_site = fetch_post_id_and_site_from_url(url)
     if id_and_site is None:
-        return url
+        return None
     if id_and_site[2] == "question":
-        return "http://{}/questions/{}".format(id_and_site[1], id_and_site[0])
+        return "https://{}/questions/{}".format(id_and_site[1], id_and_site[0])
         # We're using "/questions" and not "/q" here because when the URL
         # is made protocol-relative, /q would redirect to http even if the
         # shortlink is https. Same for /a. But there we still use /a because
         # there is no /answers or something like that.
     else:
-        return "http://{}/a/{}".format(id_and_site[1], id_and_site[0])
+        return "https://{}/a/{}".format(id_and_site[1], id_and_site[0])
 
 
 # noinspection PyMissingTypeHints
@@ -203,7 +235,7 @@ def user_url_to_shortlink(url):
     user_id_and_site = get_user_from_url(url)
     if user_id_and_site is None:
         return url
-    return "http://{}/users/{}".format(user_id_and_site[1], user_id_and_site[0])
+    return "https://{}/users/{}".format(user_id_and_site[1], user_id_and_site[0])
 
 
 # noinspection PyMissingTypeHints

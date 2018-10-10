@@ -1,6 +1,6 @@
 # coding=utf-8
 from spamhandling import check_if_spam, check_if_spam_json
-from datahandling import add_blacklisted_user, add_whitelisted_user
+from datahandling import add_blacklisted_user, add_whitelisted_user, _remove_pickle
 from blacklists import load_blacklists
 from parsing import get_user_from_url
 import pytest
@@ -101,7 +101,7 @@ def test_blacklisted_user():
     is_spam, reason, _ = check_if_spam(post)
     assert is_spam is True
     # cleanup
-    os.remove("blacklistedUsers.p")
+    _remove_pickle("blacklistedUsers.p")
 
 
 # noinspection PyMissingTypeHints
@@ -136,4 +136,4 @@ def test_whitelisted_user():
     is_spam, reason, _ = check_if_spam(post)
     assert is_spam is False
     # cleanup
-    os.remove("whitelistedUsers.p")
+    _remove_pickle("whitelistedUsers.p")

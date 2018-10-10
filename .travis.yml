@@ -2,11 +2,19 @@ language: python
 sudo: false
 python:
   - '3.6'
-  - '3.4'  # We want compatibility
+  - '3.5'
 install:
   - pip3 install -r requirements.txt --upgrade
   - pip3 install -r user_requirements.txt --upgrade
   - pip3 install pytest-cov codecov python-coveralls
+  - pip3 uninstall pytest-capturelog || true
+before_script:
+  - git config user.name SmokeDetector
+  - git config user.email "smokey@erwaysoftware.com"
+  - git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+  - git fetch origin --depth=3
+  - git checkout --track origin/deploy
+  - git checkout master
 script:
   - flake8 --config=tox_tests.ini ./test/
   - flake8 --config=tox_classes.ini ./classes/
@@ -15,10 +23,9 @@ script:
 branches:
   only:
     - master
-    - travis
-    - debugging
 cache:
   directories:
+    - $HOME/virtualenv/python3.5.*
     - $HOME/virtualenv/python3.6.*
     - $HOME/.cache/pip
 before_cache:

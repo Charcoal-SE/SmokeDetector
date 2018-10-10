@@ -194,18 +194,25 @@ def on_msg(msg, client):
     message = msg.message
     if message.owner.id == client._br.user_id:
         return
+    if message.content.startswith("<div class='partial'>"):
+        message.content = message.content[21:]
+        if message.content.endswith("</div>"):
+            message.content = message.content[:-6]
 
     room_data = _rooms[(client.host, message.room.id)]
 
     if message.parent:
-        if message.parent.owner.id == client._br.user_id:
-            strip_mention = regex.sub("^(<span class=(\"|')mention(\"|')>)?@.*?(</span>)? ", "", message.content)
-            cmd = GlobalVars.parser.unescape(strip_mention)
+        try:
+            if message.parent.owner.id == client._br.user_id:
+                strip_mention = regex.sub("^(<span class=(\"|')mention(\"|')>)?@.*?(</span>)? ", "", message.content)
+                cmd = GlobalVars.parser.unescape(strip_mention)
 
-            result = dispatch_reply_command(message.parent, message, cmd)
+                result = dispatch_reply_command(message.parent, message, cmd)
 
-            if result:
-                _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
+                if result:
+                    _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
+        except ValueError:
+            pass
     elif message.content.lower().startswith("sd "):
         result = dispatch_shorthand_command(message)
 

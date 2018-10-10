@@ -1,23 +1,17 @@
 # coding=utf-8
 import os
 import sys
+import traceback
 from datetime import datetime
+import importlib
 from termcolor import colored
 import requests
 import regex
+from glob import glob
 
 
 class Helpers:
     min_log_level = 0
-
-
-# Allows use of `environ_or_none("foo") or "default"` shorthand
-# noinspection PyBroadException,PyMissingTypeHints
-def environ_or_none(key):
-    try:
-        return os.environ[key]
-    except KeyError:
-        return None
 
 
 def escape_format(s):
@@ -40,7 +34,7 @@ def expand_shorthand_link(s):
 
 
 # noinspection PyMissingTypeHints
-def log(log_level, *args):
+def log(log_level, *args, f=False):
     levels = {
         'debug': [0, 'grey'],
         'info': [1, 'cyan'],
@@ -52,17 +46,82 @@ def log(log_level, *args):
     if level < Helpers.min_log_level:
         return
 
-    color = (levels[log_level][1] if log_level in levels else 'white')
-    log_str = u"{} {}".format(colored("[{}]".format(datetime.now().isoformat()[11:-7]), color),
-                              u"  ".join([str(x) for x in args]))
-    print(log_str)
+    color = levels[log_level][1] if log_level in levels else 'white'
+    log_str = "{} {}".format(colored("[{}]".format(datetime.now().isoformat()[11:-3]),
+                                     color),
+                             "  ".join([str(x) for x in args]))
+    print(log_str, file=sys.stderr)
+
+    if f:  # Also to file
+        log_file(log_level, *args)
+
+
+def log_file(log_level, *args):
+    levels = {
+        'debug': 0,
+        'info': 1,
+        'warning': 2,
+        'error': 3,
+    }
+    if levels[log_level] < Helpers.min_log_level:
+        return
+
+    log_str = "[{}] {}: {}".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), log_level.upper(),
+                                   "  ".join([str(x) for x in args]))
+    with open("errorLogs.txt", "a", encoding="utf-8") as f:
+        print(log_str, file=f)
+
+
+def log_exception(exctype, value, tb, f=False):
+    now = datetime.utcnow()
+    tr = '\n'.join(traceback.format_tb(tb))
+    exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
+    logged_msg = "{exception}\n{now} UTC\n{row}\n\n".format(exception=exception_only, now=now, row=tr)
+    log('error', logged_msg, f=f)
+    with open("errorLogs.txt", "a") as fp:
+        fp.write(logged_msg)
+
+
+def files_changed(diff, file_set):
+    changed = set(diff.split())
+    return bool(len(changed & file_set))
+
+
+core_files = {
+    "apigetpost.py", "blacklists.py", "bodyfetcher.py", "chatcommands.py", "chatcommunicate.py",
+    "chatexchange_extension.py", "datahandling.py", "deletionwatcher.py", "excepthook.py", "flovis.py",
+    "gitmanager.py", "globalvars.py", "helpers.py", "metasmoke.py", "nocrash.py", "parsing.py", "spamhandling.py",
+    "tasks.py", "ws.py",
+
+    "classes/feedback.py", "classes/_Git_Windows.py", "classes/__init__.py", "classes/_Post.py",
+
+    # Before these are made reloadable
+    "rooms.yml",
+}
+reloadable_modules = {
+    "findspam.py",
+}
+module_files = core_files | reloadable_modules
 
 
 def only_blacklists_changed(diff):
-    blacklist_files = ["bad_keywords.txt", "blacklisted_usernames.txt", "blacklisted_websites.txt",
-                       "watched_keywords.txt"]
-    files_changed = diff.split()
-    return not any([f for f in files_changed if f not in blacklist_files])
+    return not files_changed(diff, module_files)
+
+
+def only_modules_changed(diff):
+    return not files_changed(diff, core_files)
+
+
+def reload_modules():
+    result = True
+    for s in reloadable_modules:
+        s = s.replace(".py", "")  # Relying on our naming convention
+        try:
+            # Some reliable approach
+            importlib.reload(sys.modules[s])
+        except (KeyError, ImportError):
+            result = False
+    return result
 
 
 # FAIR WARNING: Sending HEAD requests to resolve a shortened link is generally okay - there aren't
@@ -81,7 +140,7 @@ def unshorten_link(url, request_type='HEAD', explicitly_ignore_security_warning=
     requester = requesters[request_type]
     response_code = 301
     headers = {'User-Agent': 'SmokeDetector/git (+https://github.com/Charcoal-SE/SmokeDetector)'}
-    while response_code in [301, 302, 303, 307, 308]:
+    while response_code in {301, 302, 303, 307, 308}:
         res = requester(url, headers=headers)
         response_code = res.status_code
         if 'Location' in res.headers:
@@ -90,47 +149,32 @@ def unshorten_link(url, request_type='HEAD', explicitly_ignore_security_warning=
     return url
 
 
-parser_regex = r'((?:meta\.)?(?:(?:(?:math|(?:\w{2}\.)?stack)overflow|askubuntu|superuser|serverfault)|\w+)' \
-               r'(?:\.meta)?)\.(?:stackexchange\.com|com|net)'
-parser = regex.compile(parser_regex)
-exceptions = {
-    'meta.superuser': 'meta.superuser',
-    'meta.serverfault': 'meta.serverfault',
-    'meta.askubuntu': 'meta.askubuntu',
-    'mathoverflow': 'mathoverflow.net',
-    'meta.mathoverflow': 'meta.mathoverflow.net',
-    'meta.stackexchange': 'meta'
-}
+pcre_comment = regex.compile(r"\(\?#(?<!(?:[^\\]|^)(?:\\\\)*\\\(\?#)[^)]*\)")
 
 
-def api_parameter_from_link(link):
-    match = parser.search(link)
-    if match:
-        if match[1] in exceptions.keys():
-            return exceptions[match[1]]
-        elif 'meta.' in match[1] and 'stackoverflow' not in match[1]:
-            return '.'.join(match[1].split('.')[::-1])
-        else:
-            return match[1]
-    else:
-        return None
+def blacklist_integrity_check():
+    bl_files = glob('bad_*.txt') + glob('blacklisted_*.txt') + glob('watched_*.txt')
+    seen = dict()
+    errors = []
+    for bl_file in bl_files:
+        with open(bl_file, 'r') as lines:
+            for lineno, line in enumerate(lines, 1):
+                if line.endswith('\r\n'):
+                    errors.append('{0}:{1}:DOS line ending'.format(bl_file, lineno))
+                elif not line.endswith('\n'):
+                    errors.append('{0}:{1}:No newline'.format(bl_file, lineno))
+                elif line == '\n':
+                    errors.append('{0}:{1}:Empty line'.format(bl_file, lineno))
+                elif bl_file == 'watched_keywords.txt':
+                    line = line.split('\t')[2]
 
-
-id_parser_regex = r'(?:https?:)?//[^/]+/\w+/(\d+)'
-id_parser = regex.compile(id_parser_regex)
-
-
-def post_id_from_link(link):
-    match = id_parser.search(link)
-    if match:
-        return match[1]
-    else:
-        return None
-
-
-def to_metasmoke_link(post_url, protocol=True):
-    return "{}//m.erwaysoftware.com/posts/uid/{}/{}".format(
-        "https:" if protocol else "", api_parameter_from_link(post_url), post_id_from_link(post_url))
+                line = pcre_comment.sub("", line)
+                if line in seen:
+                    errors.append('{0}:{1}:Duplicate entry {2} (also {3})'.format(
+                        bl_file, lineno, line.rstrip('\n'), seen[line]))
+                else:
+                    seen[line] = '{0}:{1}'.format(bl_file, lineno)
+    return errors
 
 
 class SecurityError(Exception):

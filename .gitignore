@@ -73,6 +73,9 @@ bodyfetcherMaxIds.p
 messageData.p
 deletionIDs.p
 
+# - Newer than newer format pickle files:
+pickles/
+
 # Settings files
 .settings/
 

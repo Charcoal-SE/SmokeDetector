@@ -1,6 +1,7 @@
 # coding=utf-8
 import json
 import requests
+import importlib  # for .reload()
 from globalvars import GlobalVars
 import threading
 # noinspection PyPackageRequirements
@@ -13,15 +14,20 @@ import sys
 import traceback
 import time
 import os
+import subprocess as sp
 import datahandling
 import parsing
 import apigetpost
 import spamhandling
 import classes
 import chatcommunicate
-from helpers import api_parameter_from_link, log, only_blacklists_changed
+from helpers import log, only_blacklists_changed, \
+    only_modules_changed, blacklist_integrity_check, reload_modules
 from gitmanager import GitManager
-from blacklists import load_blacklists
+import findspam
+
+
+MAX_FAILURES = 10  # Preservative, 10 errors = MS down
 
 
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
@@ -47,15 +53,18 @@ class Metasmoke:
                         data = json.loads(a)
                         GlobalVars.metasmoke_last_ping_time = datetime.now()
                         Metasmoke.handle_websocket_data(data)
+                        Metasmoke.reset_failure_count()
                     except Exception as e:
                         GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host,
                                                                               origin=GlobalVars.metasmoke_host)
                         payload = json.dumps({"command": "subscribe",
                                               "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"})
                         GlobalVars.metasmoke_ws.send(payload)
-                        log('error', e)
+                        GlobalVars.metasmoke_failures += 1
+                        log('error', e, f=True)
                         traceback.print_exc()
-            except websocket.WebSocketException:
+            except Exception:
+                GlobalVars.metasmoke_failures += 1
                 log('error', "Couldn't bind to MS websocket")
                 if not has_succeeded:
                     break
@@ -64,15 +73,14 @@ class Metasmoke:
 
     @staticmethod
     def check_last_pingtime():
-        now = datetime.utcnow()
-        errlog = open('errorLogs.txt', 'a', encoding="utf-8")
         if GlobalVars.metasmoke_last_ping_time is None:
-            errlog.write("\nINFO/WARNING: SmokeDetector has not received a ping yet, forcing SmokeDetector restart "
-                         "to try and reset the connection states.\n%s UTC\n" % now)
+            log('warning', "SmokeDetector has not received a ping yet, forcing SmokeDetector restart "
+                           "to try and reset the connection states.", f=True)
             os._exit(10)
-        elif GlobalVars.metasmoke_last_ping_time < (datetime.now() - timedelta(seconds=120)):
-            errlog.write("\nWARNING: Last metasmoke ping with a response was over 120 seconds ago, "
-                         "forcing SmokeDetector restart to reset all sockets.\n%s UTC\n" % now)
+        elif GlobalVars.metasmoke_last_ping_time < (datetime.now() - timedelta(seconds=120)) \
+                and not GlobalVars.metasmoke_down:
+            log('warning', "Last metasmoke ping with a response was over 120 seconds ago, "
+                           "forcing SmokeDetector restart to reset all sockets.", f=True)
             # os._exit(10)
         else:
             pass  # Do nothing
@@ -81,123 +89,109 @@ class Metasmoke:
     def handle_websocket_data(data):
         if "message" not in data:
             return
-
         message = data['message']
-        if isinstance(message, Iterable):
-            if "message" in message:
-                chatcommunicate.tell_rooms_with("metasmoke", message['message'])
-            elif "autoflag_fp" in message:
-                event = message["autoflag_fp"]
+        if not isinstance(message, Iterable):
+            return
 
-                chatcommunicate.tell_rooms(event["message"], ("debug", "site-" + event["site"]),
-                                           ("no-site-" + event["site"],), notify_site="/autoflag_fp")
-            elif "exit" in message:
-                os._exit(message["exit"])
-            elif "blacklist" in message:
-                ids = (message['blacklist']['uid'], message['blacklist']['site'])
+        if "message" in message:
+            chatcommunicate.tell_rooms_with("metasmoke", message['message'])
+        elif "autoflag_fp" in message:
+            event = message["autoflag_fp"]
 
-                datahandling.add_blacklisted_user(ids, "metasmoke", message['blacklist']['post'])
-                datahandling.last_feedbacked = (ids, time.time() + 60)
-            elif "unblacklist" in message:
-                ids = (message['unblacklist']['uid'], message['unblacklist']['site'])
-                datahandling.remove_blacklisted_user(ids)
-            elif "naa" in message:
-                post_site_id = parsing.fetch_post_id_and_site_from_url(message["naa"]["post_link"])
-                datahandling.add_ignored_post(post_site_id[0:2])
-            elif "fp" in message:
-                post_site_id = parsing.fetch_post_id_and_site_from_url(message["fp"]["post_link"])
-                datahandling.add_false_positive(post_site_id[0:2])
-            elif "report" in message:
-                post_data = apigetpost.api_get_post(message["report"]["post_link"])
-                if post_data is None or post_data is False:
-                    return
-                if datahandling.has_already_been_posted(post_data.site, post_data.post_id, post_data.title) \
-                        and not datahandling.is_false_positive((post_data.post_id, post_data.site)):
-                    return
-                user = parsing.get_user_from_url(post_data.owner_url)
-                post = classes.Post(api_response=post_data.as_dict)
+            chatcommunicate.tell_rooms(event["message"], ("debug", "site-" + event["site"]),
+                                       ("no-site-" + event["site"],), notify_site="/autoflag_fp")
+        elif "exit" in message:
+            os._exit(message["exit"])
+        elif "blacklist" in message:
+            ids = (message['blacklist']['uid'], message['blacklist']['site'])
 
-                scan_spam, scan_reasons, scan_why = spamhandling.check_if_spam(post)
-                if scan_spam:
-                    why_append = u"This post would have also been caught for: " + \
-                        u", ".join(scan_reasons).capitalize() + "\n" + scan_why
-                else:
-                    why_append = u"This post would not have been caught otherwise."
-
-                # Add user to blacklist *after* post is scanned
-                if user is not None:
-                    datahandling.add_blacklisted_user(user, "metasmoke", post_data.post_url)
-
-                why = u"Post manually reported by user *{}* from metasmoke.\n\n{}".format(
-                    message["report"]["user"], why_append)
-
-                spamhandling.handle_spam(post=post,
-                                         reasons=["Manually reported " + post_data.post_type],
-                                         why=why)
-            elif "deploy_updated" in message:
-                sha = message["deploy_updated"]["head_commit"]["id"]
-                if sha != os.popen('git log -1 --pretty="%H"').read():
-                    if "autopull" in message["deploy_updated"]["head_commit"]["message"]:
-                        if only_blacklists_changed(GitManager.get_remote_diff()):
-                            commit_md = "[`{0}`](https://github.com/Charcoal-SE/SmokeDetector/commit/{0})" \
-                                        .format(sha[:7])
-                            i = []  # Currently no issues with backlists
-                            for bl_file in glob('bad_*.txt') + glob('blacklisted_*.txt'):  # Check blacklists for issues
-                                with open(bl_file, 'r') as lines:
-                                    seen = dict()
-                                    for lineno, line in enumerate(lines, 1):
-                                        if line.endswith('\r\n'):
-                                            i.append("DOS line ending at `{0}:{1}` in {2}".format(bl_file, lineno,
-                                                                                                  commit_md))
-                                        if not line.endswith('\n'):
-                                            i.append("No newline at end of `{0}` in {1}".format(bl_file, commit_md))
-                                        if line == '\n':
-                                            i.append("Blank line at `{0}:{1}` in {2}".format(bl_file, lineno,
-                                                                                             commit_md))
-                                        if line in seen:
-                                            i.append("Duplicate entry of {0} at lines {1} and {2} of {3} in {4}"
-                                                     .format(line.rstrip('\n'), seen[line], lineno, bl_file, commit_md))
-                                        seen[line] = lineno
-                            if i == []:  # No issues
-                                GitManager.pull_remote()
-                                load_blacklists()
-                                chatcommunicate.tell_rooms_with("debug", "No code modified in {0}, only blacklists"
-                                                                " reloaded.".format(commit_md))
-                            else:
-                                i.append("please fix before pulling.")
-                                chatcommunicate.tell_rooms_with("debug", ", ".join(i))
-            elif "commit_status" in message:
-                c = message["commit_status"]
-                sha = c["commit_sha"][:7]
-                if c["commit_sha"] != os.popen('git log -1 --pretty="%H"').read():
-                    if c["status"] == "success":
-                        if "autopull" in c["commit_message"]:
-                            s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
-                                "commit/{commit_sha})"\
-                                " succeeded. Message contains 'autopull', pulling...".format(ci_link=c["ci_url"],
-                                                                                             commit_sha=sha)
-                            chatcommunicate.tell_rooms_with("debug", s, notify_site="/ci")
-                            time.sleep(2)
-                            os._exit(3)
+            datahandling.add_blacklisted_user(ids, "metasmoke", message['blacklist']['post'])
+            datahandling.last_feedbacked = (ids, time.time() + 60)
+        elif "unblacklist" in message:
+            ids = (message['unblacklist']['uid'], message['unblacklist']['site'])
+            datahandling.remove_blacklisted_user(ids)
+        elif "naa" in message:
+            post_site_id = parsing.fetch_post_id_and_site_from_url(message["naa"]["post_link"])
+            datahandling.add_ignored_post(post_site_id[0:2])
+        elif "fp" in message:
+            post_site_id = parsing.fetch_post_id_and_site_from_url(message["fp"]["post_link"])
+            datahandling.add_false_positive(post_site_id[0:2])
+        elif "report" in message:
+            import chatcommands  # Do it here
+            chatcommands.report_posts([message["report"]["post_link"]], message["report"]["user"],
+                                      True, "the metasmoke API")
+        elif "deploy_updated" in message:
+            return  # Disabled
+            sha = message["deploy_updated"]["head_commit"]["id"]
+            if sha != os.popen('git log -1 --pretty="%H"').read():
+                if "autopull" in message["deploy_updated"]["head_commit"]["message"]:
+                    if only_blacklists_changed(GitManager.get_remote_diff()):
+                        commit_md = "[`{0}`](https://github.com/{1}/commit/{0})" \
+                                    .format(sha[:7], GlobalVars.bot_repo_slug)
+                        integrity = blacklist_integrity_check()
+                        if len(integrity) == 0:  # No issues
+                            GitManager.pull_remote()
+                            findspam.reload_blacklists()
+                            chatcommunicate.tell_rooms_with("debug", "No code modified in {0}, only blacklists"
+                                                            " reloaded.".format(commit_md))
                         else:
-                            s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
-                                "commit/{commit_sha}) succeeded.".format(ci_link=c["ci_url"], commit_sha=sha)
+                            integrity.append("please fix before pulling.")
+                            chatcommunicate.tell_rooms_with("debug", ", ".join(integrity))
+        elif "commit_status" in message:
+            c = message["commit_status"]
+            sha = c["commit_sha"][:7]
+            if c["commit_sha"] == sp.check_output(["git", "log", "-1", "--pretty=%H"]).decode('utf-8').strip():
+                return  # Same rev, nothing to do
 
-                            chatcommunicate.tell_rooms_with("debug", s, notify_site="/ci")
-                    elif c["status"] == "failure":
-                        s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/Charcoal-SE/SmokeDetector/" \
-                            "commit/{commit_sha}) failed.".format(ci_link=c["ci_url"], commit_sha=sha)
+            if c["status"] == "success":
+                if "autopull" in c["commit_message"] or c["commit_message"].startswith("!"):
+                    s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/{repo}/" \
+                        "commit/{commit_sha}) succeeded. Message contains 'autopull', pulling...".format(
+                            ci_link=c["ci_url"], repo=GlobalVars.bot_repo_slug, commit_sha=sha)
+                    remote_diff = GitManager.get_remote_diff()
+                    if only_blacklists_changed(remote_diff):
+                        GitManager.pull_remote()
+                        if not GlobalVars.on_master:
+                            # Restart if HEAD detached
+                            log('warning', "Pulling remote with HEAD detached, checkout deploy", f=True)
+                            os._exit(8)
+                        GlobalVars.reload()
+                        findspam.FindSpam.reload_blacklists()
+                        chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart)
+                    elif only_modules_changed(remote_diff):
+                        GitManager.pull_remote()
+                        if not GlobalVars.on_master:
+                            # Restart if HEAD detached
+                            log('warning', "Pulling remote with HEAD detached, checkout deploy", f=True)
+                            os._exit(8)
+                        GlobalVars.reload()
+                        reload_modules()
+                        chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart2)
+                    else:
+                        chatcommunicate.tell_rooms_with('debug', s, notify_site="/ci")
+                        os._exit(3)
+                else:
+                    s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/{repo}/commit/{commit_sha}) " \
+                        "succeeded.".format(ci_link=c["ci_url"], repo=GlobalVars.bot_repo_slug, commit_sha=sha)
 
-                        chatcommunicate.tell_rooms_with("debug", s, notify_site="/ci")
-            elif "everything_is_broken" in message:
-                if message["everything_is_broken"] is True:
-                    os._exit(6)
+                    chatcommunicate.tell_rooms_with("debug", s, notify_site="/ci")
+            elif c["status"] == "failure":
+                s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/{repo}/commit/{commit_sha}) " \
+                    "failed.".format(ci_link=c["ci_url"], repo=GlobalVars.bot_repo_slug, commit_sha=sha)
+
+                chatcommunicate.tell_rooms_with("debug", s, notify_site="/ci")
+        elif "everything_is_broken" in message:
+            if message["everything_is_broken"] is True:
+                os._exit(6)
 
     @staticmethod
     def send_stats_on_post(title, link, reasons, body, username, user_link, why, owner_rep,
                            post_score, up_vote_count, down_vote_count):
         if GlobalVars.metasmoke_host is None:
             log('info', 'Attempted to send stats but metasmoke_host is undefined. Ignoring.')
+            return
+        elif GlobalVars.metasmoke_down:
+            log('warning', "Metasmoke down, not sending stats.")
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -216,7 +210,7 @@ class Metasmoke:
 
             payload = {'post': post, 'key': metasmoke_key}
             headers = {'Content-type': 'application/json'}
-            requests.post(GlobalVars.metasmoke_host + "/posts.json", data=json.dumps(payload), headers=headers)
+            Metasmoke.post("/posts.json", data=json.dumps(payload), headers=headers)
         except Exception as e:
             log('error', e)
 
@@ -224,6 +218,9 @@ class Metasmoke:
     def send_feedback_for_post(post_link, feedback_type, user_name, user_id, chat_host):
         if GlobalVars.metasmoke_host is None:
             log('info', 'Received chat feedback but metasmoke_host is undefined. Ignoring.')
+            return
+        elif GlobalVars.metasmoke_down:
+            log('warning', "Metasmoke is down, not sending feedback")
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -241,7 +238,7 @@ class Metasmoke:
             }
 
             headers = {'Content-type': 'application/json'}
-            requests.post(GlobalVars.metasmoke_host + "/feedbacks.json", data=json.dumps(payload), headers=headers)
+            Metasmoke.post("/feedbacks.json", data=json.dumps(payload), headers=headers)
 
         except Exception as e:
             log('error', e)
@@ -250,6 +247,9 @@ class Metasmoke:
     def send_deletion_stats_for_post(post_link, is_deleted):
         if GlobalVars.metasmoke_host is None:
             log('info', 'Attempted to send deletion data but metasmoke_host is undefined. Ignoring.')
+            return
+        elif GlobalVars.metasmoke_down:
+            log('warning', "Metasmoke is down, not sending deletion stats")
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -264,7 +264,7 @@ class Metasmoke:
             }
 
             headers = {'Content-type': 'application/json'}
-            requests.post(GlobalVars.metasmoke_host + "/deletion_logs.json", data=json.dumps(payload), headers=headers)
+            Metasmoke.post("/deletion_logs.json", data=json.dumps(payload), headers=headers)
         except Exception as e:
             log('error', e)
 
@@ -272,6 +272,9 @@ class Metasmoke:
     def send_status_ping():
         if GlobalVars.metasmoke_host is None:
             log('info', 'Attempted to send status ping but metasmoke_host is undefined. Not sent.')
+            return
+        elif GlobalVars.metasmoke_down:
+            log('info', "Metasmoke is down, wat?")
             return
 
         metasmoke_key = GlobalVars.metasmoke_key
@@ -284,16 +287,16 @@ class Metasmoke:
             }
 
             headers = {'content-type': 'application/json'}
-            response = requests.post(GlobalVars.metasmoke_host + "/status-update.json",
-                                     data=json.dumps(payload), headers=headers)
+            response = Metasmoke.post("/status-update.json",
+                                      data=json.dumps(payload), headers=headers)
 
             try:
                 response = response.json()
+                GlobalVars.metasmoke_last_ping_time = datetime.now()  # Otherwise the ping watcher will exit(10)
 
                 if 'failover' in response and GlobalVars.standby_mode:
                     if response['failover']:
                         GlobalVars.standby_mode = False
-                        GlobalVars.metasmoke_last_ping_time = datetime.now()  # Otherwise the ping watcher will exit(10)
 
                         chatcommunicate.tell_rooms_with("debug", GlobalVars.location + " received failover signal.",
                                                         notify_site="/failover")
@@ -316,10 +319,18 @@ class Metasmoke:
 
     @staticmethod
     def update_code_privileged_users_list():
+        if GlobalVars.metasmoke_down:
+            log('warning', "Metasmoke is down, can't update code provilege list")
+            return
+
         payload = {'key': GlobalVars.metasmoke_key}
         headers = {'Content-type': 'application/json'}
-        response = requests.get(GlobalVars.metasmoke_host + "/api/users/code_privileged",
-                                data=json.dumps(payload), headers=headers).json()['items']
+        try:
+            response = Metasmoke.get("/api/users/code_privileged",
+                                     data=json.dumps(payload), headers=headers).json()['items']
+        except Exception as e:
+            log('error', e)
+            return
 
         GlobalVars.code_privileged_users = set()
 
@@ -342,14 +353,18 @@ class Metasmoke:
             'filter': 'GKNJKLILHNFMJLFKINGJJHJOLGFHJF',  # id and autoflagged
             'urls': post_url
         }
-        response = requests.get(GlobalVars.metasmoke_host + "/api/v2.0/posts/urls", params=payload).json()
+        try:
+            response = Metasmoke.get("/api/v2.0/posts/urls", params=payload).json()
+        except Exception as e:
+            log('error', e)
+            return False, []
 
         if len(response["items"]) > 0 and response["items"][0]["autoflagged"]:
             # get flagger names
             id = str(response["items"][0]["id"])
             payload = {'key': GlobalVars.metasmoke_key}
 
-            flags = requests.get(GlobalVars.metasmoke_host + "/api/v2.0/posts/" + id + "/flags", params=payload).json()
+            flags = Metasmoke.get("/api/v2.0/posts/" + id + "/flags", params=payload).json()
 
             if len(flags["items"]) > 0:
                 return True, [user["username"] for user in flags["items"][0]["autoflagged"]["users"]]
@@ -361,11 +376,15 @@ class Metasmoke:
         payload = {'key': GlobalVars.metasmoke_key}
         headers = {'Content-type': 'application/json'}
 
-        requests.post(GlobalVars.metasmoke_host + "/flagging/smokey_disable",
-                      data=json.dumps(payload), headers=headers)
+        Metasmoke.post("/flagging/smokey_disable",
+                       data=json.dumps(payload), headers=headers)
 
     @staticmethod
     def send_statistics():
+        if GlobalVars.metasmoke_down:
+            log('warning', "Metasmoke is down, not sending statistics")
+            return
+
         GlobalVars.posts_scan_stats_lock.acquire()
         if GlobalVars.post_scan_time != 0:
             posts_per_second = GlobalVars.num_posts_scanned / GlobalVars.post_scan_time
@@ -384,28 +403,28 @@ class Metasmoke:
 
         if GlobalVars.metasmoke_host is not None:
             log('info', 'Sent statistics to metasmoke: ', payload['statistic'])
-            requests.post(GlobalVars.metasmoke_host + "/statistics.json",
-                          data=json.dumps(payload), headers=headers)
+            Metasmoke.post("/statistics.json",
+                           data=json.dumps(payload), headers=headers)
 
     @staticmethod
     def post_auto_comment(msg, user, url=None, ids=None):
         if not GlobalVars.metasmoke_key:
-            log('info', 'Ignoring auto-comment')
             return
 
         response = None
 
         if url is not None:
             params = {"key": GlobalVars.metasmoke_key, "urls": url, "filter": "GFGJGHFJNFGNHKNIKHGGOMILHKLJIFFN"}
-            response = requests.get(GlobalVars.metasmoke_host + "/api/v2.0/posts/urls", params=params).json()
+            response = Metasmoke.get("/api/v2.0/posts/urls", params=params).json()
         elif ids is not None:
             post_id, site = ids
-            site = api_parameter_from_link(site)
+            site = parsing.api_parameter_from_link(site)
             params = {"key": GlobalVars.metasmoke_key, "filter": "GFGJGHFJNFGNHKNIKHGGOMILHKLJIFFN"}
 
-            response = requests.get("{}/api/v2.0/posts/uid/{}/{}".format(GlobalVars.metasmoke_host,
-                                                                         site,
-                                                                         post_id), params=params).json()
+            try:
+                response = Metasmoke.get("/api/v2.0/posts/uid/{}/{}".format(site, post_id), params=params).json()
+            except AttributeError:
+                response = None
 
         if response and "items" in response and len(response["items"]) > 0:
             ms_id = response["items"][0]["id"]
@@ -414,7 +433,7 @@ class Metasmoke:
                       "chat_user_id": user.id,
                       "chat_host": user._client.host}
 
-            requests.post("{}/api/v2.0/comments/post/{}".format(GlobalVars.metasmoke_host, ms_id), params=params)
+            Metasmoke.post("/api/v2.0/comments/post/{}".format(ms_id), params=params)
 
     @staticmethod
     def get_post_bodies_from_ms(post_url):
@@ -426,6 +445,66 @@ class Metasmoke:
             'filter': 'HNKHHGINKFKGIKGLGKIILMKNHHGHFOL',  # posts.body, posts.created_at
             'urls': parsing.to_protocol_relative(post_url)
         }
-        response = requests.get(GlobalVars.metasmoke_host + '/api/v2.0/posts/urls', params=payload).json()
+        try:
+            response = Metasmoke.get('/api/v2.0/posts/urls', params=payload).json()
+        except AttributeError:
+            return None
 
         return response['items']
+
+    @staticmethod
+    def get_reason_weights():
+        if not GlobalVars.metasmoke_key:
+            return None
+
+        payload = {
+            'key': GlobalVars.metasmoke_key,
+            'per_page': 100,
+            'page': 1,
+        }
+        items = []
+        try:
+            while True:
+                response = Metasmoke.get('/api/v2.0/reasons', params=payload).json()
+                items.extend(response['items'])
+                if not response['has_more']:
+                    break
+                payload['page'] += 1
+        except AttributeError:
+            return None
+        return items
+
+    # Some sniffy stuff
+    @staticmethod
+    def request_sender(method):
+        def func(url, *args, **kwargs):
+            if not GlobalVars.metasmoke_host or GlobalVars.metasmoke_down:
+                return None
+
+            response = None  # Should return None upon failure, if any
+            try:
+                response = method(GlobalVars.metasmoke_host + url, *args, **kwargs)
+            except Exception:
+                GlobalVars.metasmoke_failures += 1
+                if GlobalVars.metasmoke_failures > MAX_FAILURES:
+                    GlobalVars.metasmoke_down = True
+                    chatcommunicate.tell_rooms_with('debug', "**Warning**: {} latest connections to metasmoke have fa"
+                                                    "iled. Disabling metasmoke".format(GlobalVars.metasmoke_failures))
+                # No need to log here because it's re-raised
+                raise  # Maintain minimal difference to the original get/post methods
+            else:
+                GlobalVars.metasmoke_failures -= 1
+                if GlobalVars.metasmoke_failures < 0:
+                    GlobalVars.metasmoke_failures = 0
+
+            return response
+        return func
+
+    get = request_sender.__func__(requests.get)
+    post = request_sender.__func__(requests.post)
+
+    @staticmethod
+    def reset_failure_count():  # For use in other places
+        GlobalVars.metasmoke_failures -= 1
+        if GlobalVars.metasmoke_failures < 0:
+            GlobalVars.metasmoke_failures = 0

@@ -5,15 +5,21 @@ from apigetpost import api_get_post
 from parsing import to_protocol_relative
 from classes._Post import Post
 from globalvars import GlobalVars
+from datahandling import _remove_pickle
 
 import datetime
 import os
 import pytest
 import regex
 import types
+from sh.contrib import git
 
 from fake import Fake
 from unittest.mock import patch
+
+
+def test_null():
+    assert chatcommands.null() is None
 
 
 def test_coffee():
@@ -45,13 +51,17 @@ def test_wut():
 
 
 def test_alive():
-    assert chatcommands.alive() in ['Yup', 'You doubt me?', 'Of course', '... did I miss something?',
-                                    'plz send teh coffee', 'Kinda sorta',
-                                    'Watching this endless list of new questions *never* gets boring']
+    assert chatcommands.alive() in chatcommands.ALIVE_MSG
 
 
 def test_location():
     assert chatcommands.location() == GlobalVars.location
+
+
+def test_version():
+    assert chatcommands.version() == '{id} [{commit_name}]({repository}/commit/{commit_code})'.format(
+        id=GlobalVars.location, commit_name=GlobalVars.commit_with_author,
+        commit_code=GlobalVars.commit['id'], repository=GlobalVars.bot_repository)
 
 
 @patch("chatcommands.datetime")
@@ -119,7 +129,7 @@ def test_deprecated_blacklist():
     assert chatcommands.blacklist("").startswith("The !!/blacklist command has been deprecated.")
 
 
-def test_watch():
+def test_watch(monkeypatch):
     # XXX TODO: expand
     def wrap_watch(pattern, force=False):
         cmd = 'watch{0}'.format('-force' if force else '')
@@ -135,26 +145,37 @@ def test_watch():
             "content_source": '!!/{0} {1}'.format(cmd, pattern)
         })
         msg.room._client = msg._client
-        # Prevent from attempting to check privileges with Metasmoke
-        GlobalVars.code_privileged_users = [1, 161943]
 
         return chatcommands.watch(pattern, alias_used=cmd, original_msg=msg)
 
-    # Invalid regex
-    resp = wrap_watch(r'?')
-    assert "An invalid pattern was provided" in resp
+    # Prevent from attempting to check privileges with Metasmoke
+    monkeypatch.setattr(GlobalVars, "code_privileged_users", [1, 161943])
 
-    # This is one of the perpetually condemned spam domains, blacklisted forever
-    resp = wrap_watch(r'israelbigmarket')
-    assert "That pattern looks like it's already caught" in resp
+    try:
+        # Invalid regex
+        resp = wrap_watch(r'?')
+        assert "An invalid pattern was provided" in resp
 
-    # The phone number here is the first one in this format in bad_keywords.txt
-    resp = wrap_watch(r'[a-z_]*(?:1_*)?913[\W_]*608[\W_]*4584[a-z_]*')
-    assert "Mostly non-latin" not in resp
-    assert "Bad keyword in answer" in resp
-    assert "Bad keyword in body" in resp
+        # This is one of the perpetually condemned spam domains, blacklisted forever
+        resp = wrap_watch(r'israelbigmarket')
+        assert "That pattern looks like it's already caught" in resp
 
-    # XXX TODO: figure out how to trigger duplicate entry separately
+        # The phone number here is the first one in this format in bad_keywords.txt
+        resp = wrap_watch(r'[a-z_]*(?:1_*)?913[\W_]*608[\W_]*4584[a-z_]*')
+        assert "Mostly non-latin" not in resp
+        assert "Bad keyword in answer" in resp
+        assert "Bad keyword in body" in resp
+
+        # XXX TODO: figure out how to trigger duplicate entry separately
+        monkeypatch.setattr("chatcommunicate.is_privileged", lambda *args: True)
+        monkeypatch.setattr("gitmanager.GitManager.prepare_git_for_operation", lambda *args: (True, None))
+
+        assert wrap_watch("trimfire", True).startswith("Already watched")
+
+        monkeypatch.setattr("gitmanager.GitManager.add_to_blacklist", lambda *args, **kwargs: (True, "Hahaha"))
+        assert wrap_watch("male enhancement", True) == "Hahaha"
+    finally:
+        git.checkout("master")
 
 
 @patch("chatcommands.handle_spam")
@@ -189,8 +210,8 @@ def test_report(handle_spam):
             "SmokeDetector's chat messages getting rate-limited too much, which would slow down reports."
         )
 
-        assert chatcommands.report('a a a a a "invalid"""', original_msg=msg) \
-            .startswith("You cannot provide multiple custom report reasons.")
+        # assert chatcommands.report('a a a a a "invalid"""', original_msg=msg) \
+        #     .startswith("You cannot provide multiple custom report reasons.")
 
         assert chatcommands.report('https://stackoverflow.com/q/1', original_msg=msg) == \
             "Post 1: Could not find data for this post in the API. It may already have been deleted."
@@ -388,7 +409,7 @@ def test_blacklisted_users():
             "Error: Could not find the given site."
     finally:
         # Cleanup
-        os.remove("blacklistedUsers.p")
+        _remove_pickle("blacklistedUsers.p")
 
 
 @pytest.mark.skipif(os.path.isfile("whitelistedUsers.p"), reason="shouldn't overwrite file")
@@ -456,7 +477,34 @@ def test_whitelisted_users():
             "Error: Could not find the given site."
     except:
         # Cleanup
-        os.remove("whitelistedUsers.p")
+        _remove_pickle("whitelistedUsers.p")
+
+
+def test_metasmoke():
+    msg = Fake({
+        "owner": {
+            "name": "El'endia Starman",
+            "id": 1,
+            "is_moderator": False
+        },
+        "room": {
+            "id": 11540,
+            "_client": {
+                "host": "stackexchange.com"
+            }
+        },
+        "_client": {
+            "host": "stackexchange.com"
+        }
+    })
+    msg_source = "metasmoke is {}. Current failure count: {}"
+
+    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-up") == "metasmoke is now considered up."
+    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-status") == msg_source.format("up", 0)
+    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-down") == "metasmoke is now considered down."
+    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-status") == msg_source.format("down", 999)
+    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-up") == "metasmoke is now considered up."
+    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-status") == msg_source.format("up", 0)
 
 
 @pytest.mark.skipif(os.path.isfile("notifications.p"), reason="shouldn't overwrite file")
@@ -554,7 +602,7 @@ def test_notifications():
             "That notification configuration is already registered."
     finally:
         # Cleanup
-        os.remove("notifications.p")
+        _remove_pickle("notifications.p")
 
 
 def test_inqueue():

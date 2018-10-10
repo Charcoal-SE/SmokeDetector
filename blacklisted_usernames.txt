@@ -3,7 +3,7 @@ tejveer ?iq
 ser?vice pemanas?
 \bnigg[aeu][rh]?
 \b(fuck(er|ing)?|penis)\b
-^\w{0,3}w.{0,2}ng.?d.{0,2}ng\w{0,3}$
+# ^\w{0,3}w.{0,2}ng.?d.{0,2}ng\w{0,3}$
 dlqudals
 [a-z ]{3,}juri(?:ns|sa|ya|yam|ym)$
 ^[a-z]+jiibond$
@@ -53,7 +53,6 @@ JoeClark
 ^mike alec$
 ^Madhav sharma$
 car\W?insurance
-^xiao(?:xi|zhu)$
 lavinia\W?stark
 rosanna\W?cart
 annalee899
@@ -85,7 +84,6 @@ istanbul\W?hair\W?transplant
 away\W?days
 Racist
 Reihmann
-rayaz
 \w*\d+\W+Virk$
 Charles\WRane
 adol(?:f|ph)\W*hitler
@@ -93,7 +91,16 @@ heinrich\W*(?:luitpold\W*)?himmler
 ante\W*paveli[cć]
 ^LGBT representative$
 muh[ae]mm[ae]d\W*the\W*pa?edophile
-^.{1,7}dl?san$
 ^eray$
 ^autolinkpk$
 ^PCBindex$
+^Vico\W*Peißker$
+^rayaz$
+customwristbands
+^.{1,7}(?:dl?san|(?:dl|ld)l?son)$
+^\w{1,}(?:dl?san|(?:dl|ld)l?son)(?<!donaldson)$
+^MORGAN CHAN$
+^ZoeXie$
+^بانه$
+^king[\W_]*excel$
+bella johsan
