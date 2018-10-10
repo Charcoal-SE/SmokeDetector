@@ -95,9 +95,7 @@ But when I try to run it using</p>""", 'Pacman', 'stackoverflow.com', False, Fal
     ('Mostly punctuation', ';[].[.[.&_$)_\\*&_@$.[;*/-!#*&)(_.\'].1\\)!#_', '', '', False, False, True),
     ('Few unique', 'asdss, dadasssaadadda, daaaadadsss, ssa,,,addadas,ss\nsdadadsssadadas, sss\ndaaasdddsaaa, asd', '', '', False, False, True),
 ])
-def test_regexes(title, body, username, site, body_is_summary, is_answer, match):
-    # If we want to test answers separately, this should be changed
-    # is_answer = False
+def test_findspam(title, body, username, site, body_is_summary, is_answer, match):
     post = Post(api_response={'title': title, 'body': body,
                               'owner': {'display_name': username, 'reputation': 1, 'link': ''},
                               'site': site, 'question_id': '1', 'IsAnswer': is_answer,
