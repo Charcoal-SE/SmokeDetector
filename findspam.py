@@ -24,7 +24,6 @@ from helpers import log
 from globalvars import GlobalVars
 import blacklists
 
-NUMBER_CACHE = {}
 TLD_CACHE = []
 LEVEN_DOMAIN_DISTANCE = 3
 SIMILAR_THRESHOLD = 0.95
@@ -73,6 +72,7 @@ URL_REGEX = regex.compile(
     r"""|(?:(?:[A-Za-z\u00a1-\uffff0-9]-?)*[A-Za-z\u00a1-\uffff0-9]+)(?:\.(?:[A-Za-z\u00a1-\uffff0-9]-?)"""
     r"""*[A-Za-z\u00a1-\uffff0-9]+)*(?:\.(?:[A-Za-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.U)
 TAG_REGEX = regex.compile(r"</?[abcdehiklopsu][^>]+>|\w+://", regex.U)
+NUMBER_REGEX = regex.compile(r'\b[a-z_]*\+?(?:\d[\W_]*){8,13}\d(?=[a-z_]|\b)', regex.U)
 
 UNIFORM = math.log(1 / 36)
 UNIFORM_PRIOR = math.log(1 / 5)
@@ -305,30 +305,21 @@ def has_phone_number(s, site):
 
 
 # noinspection PyMissingTypeHints
-def check_numbers(s, numlist):
+def check_numbers(s, numlist, numlist_normalized=None):
     """
     Extract sequences of possible phone numbers. Check extracted numbers
     against verbatim match (identical to item in list) or normalized match
     (digits are identical, but spacing or punctuation contains differences).
     """
-    global NUMBER_CACHE
+    numlist_normalized = numlist_normalized or set()
     matches = []
-    if not NUMBER_CACHE:
-        # Extract between 9 and 14 digits
-        number_re = r'\b[a-z_]*\+?(?:\d[\W_]*){8,13}\d(?=[a-z_]|\b)'
-        NUMBER_CACHE['re'] = regex.compile(number_re)
-    if not id(numlist) in NUMBER_CACHE:
-        normalized = [regex.sub(r"[^\d]", "", entry) for entry in numlist]
-        log('debug', 'normalized id(numlist) {0}: {1} entries'.format(
-            id(numlist), len(normalized)))
-        NUMBER_CACHE[id(numlist)] = normalized
-    for number_candidate in NUMBER_CACHE['re'].findall(s):
+    for number_candidate in NUMBER_REGEX.findall(s):
         if number_candidate in numlist:
             matches.append('{0} found verbatim'.format(number_candidate))
             continue
         # else
         normalized_candidate = regex.sub(r"[^\d]", "", number_candidate)
-        if normalized_candidate in NUMBER_CACHE[id(numlist)]:
+        if normalized_candidate in numlist_normalized:
             matches.append('{0} found normalized'.format(normalized_candidate))
     if matches:
         return True, '; '.join(matches)
@@ -336,12 +327,22 @@ def check_numbers(s, numlist):
         return False, ''
 
 
-def check_blacklisted_numbers(s, site, *args):
-    return check_numbers(s, GlobalVars.blacklisted_numbers)
+def process_numlist(numlist):
+    processed = set(numlist)  # Sets are faster than Hong Kong journalists!
+    normalized = {regex.sub(r"\D", "", entry) for entry in numlist}
+    return processed, normalized
 
 
-def check_watched_numbers(s, site, *args):
-    return check_numbers(s, GlobalVars.watched_numbers)
+def check_blacklisted_numbers(s, site):
+    return check_numbers(s,
+                         GlobalVars.blacklisted_numbers,
+                         GlobalVars.blacklisted_numbers_normalized)
+
+
+def check_watched_numbers(s, site):
+    return check_numbers(s,
+                         GlobalVars.watched_numbers,
+                         GlobalVars.watched_numbers_normalized)
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
@@ -1196,6 +1197,10 @@ class FindSpam:
             "|".join(GlobalVars.blacklisted_websites))
         FindSpam.rule_blacklisted_usernames['regex'] = r"(?i)({})".format(
             "|".join(GlobalVars.blacklisted_usernames))
+        GlobalVars.blacklisted_numbers, GlobalVars.blacklisted_numbers_normalized = \
+            process_numlist(GlobalVars.blacklisted_numbers)
+        GlobalVars.watched_numbers, GlobalVars.watched_numbers_normalized = \
+            process_numlist(GlobalVars.watched_numbers)
         log('debug', "Global blacklists loaded")
 
     rules = [
