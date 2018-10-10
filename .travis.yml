@@ -1,7 +1,6 @@
 language: python
 sudo: false
 python:
-  - '3.6'
   - '3.5'
 install:
   - pip3 install -r requirements.txt --upgrade
@@ -11,7 +10,8 @@ install:
 before_script:
   - git config user.name SmokeDetector
   - git config user.email "smokey@erwaysoftware.com"
-  - git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+  - git config remote.origin.fetch "+refs/heads/master:refs/remotes/origin/master"
+  - git config --add remote.origin.fetch "+refs/heads/deploy:refs/remotes/origin/deploy"
   - git fetch origin --depth=3
   - git checkout --track origin/deploy
   - git checkout master
@@ -26,7 +26,6 @@ branches:
 cache:
   directories:
     - $HOME/virtualenv/python3.5.*
-    - $HOME/virtualenv/python3.6.*
     - $HOME/.cache/pip
 before_cache:
   - rm -f $HOME/.cache/pip/log/debug.log
