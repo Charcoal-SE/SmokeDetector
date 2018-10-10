@@ -70,7 +70,8 @@ URL_REGEX = regex.compile(
     r"""(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])"""
     r"""(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))"""
     r"""|(?:(?:[A-Za-z\u00a1-\uffff0-9]-?)*[A-Za-z\u00a1-\uffff0-9]+)(?:\.(?:[A-Za-z\u00a1-\uffff0-9]-?)"""
-    r"""*[A-Za-z\u00a1-\uffff0-9]+)*(?:\.(?:[A-Za-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.UNICODE)
+    r"""*[A-Za-z\u00a1-\uffff0-9]+)*(?:\.(?:[A-Za-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.U)
+TAG_REGEX = regex.compile(r"</?[abcdehiklopsu][^>]+>|\w+://", regex.U)
 
 UNIFORM = math.log(1 / 36)
 UNIFORM_PRIOR = math.log(1 / 5)
@@ -793,7 +794,7 @@ def similar_answer(post):
 
 # noinspection PyMissingTypeHints
 def strip_urls_and_tags(s):
-    return regex.sub(URL_REGEX, "", regex.sub(r"</?[abcdehiklopsu][^>]+>|\w+://", "", s))
+    return URL_REGEX.sub("", TAG_REGEX.sub("", s))
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
