@@ -3774,7 +3774,6 @@
 1528507831	Makyen	plex\.software
 1528518247	Makyen	rimamorshed9@gmail\.com
 1528518261	Makyen	freelancer\.com/u/rimamorshed
-1528520681	Makyen	buyessays\.us
 1528521754	Makyen	darkinfo(?:\W*|\W*at\W*)protonmail\.com
 1528526457	Makyen	/freetraining/
 1528526481	Makyen	aws-596f86582865%22
