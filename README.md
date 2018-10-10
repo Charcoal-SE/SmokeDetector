@@ -10,7 +10,7 @@ Example [chat post](https://chat.stackexchange.com/transcript/11540?m=17962164#1
 
 ![Example chat post](https://i.stack.imgur.com/oLyfb.png)
 
-User documentation is in the [wiki](https://charcoal-se.org/smokey).
+User documentation is in the [wiki](https://charcoal-se.org/smokey).//commend added
 
 To set up, use
 
