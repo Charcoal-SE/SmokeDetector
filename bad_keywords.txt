@@ -1652,3 +1652,4 @@ keto\W?max\W?diet
 blitz\W*protocol
 weight\W*loss\W*plus
 nutrivano(?:\W?forskolin)?
+mindzr\W?brain
