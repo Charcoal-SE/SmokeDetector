@@ -6067,3 +6067,4 @@
 1539219067	Makyen	fuckface(?#Should add "face" suffix to the various obscenity regexes)
 1539228740	tripleee	pyrixinc\.com
 1539228809	tripleee	andrew-programming\.com
+1539236108	Tetsuya Yamamoto	techsupportdubai\.com
