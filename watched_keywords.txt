@@ -6065,3 +6065,4 @@
 1539208825	Makyen	[a-z_]*(?:0_*)?27603493288[a-z_]*(?#dr. wava; spellcaster)
 1539216582	Makyen	hackpowerpros(?:\W*(?:a\W*t\W*)?g\W*(?:e\W*)*m\W*a\W*(?:i\W*l\W*|l\W*e\W*)(?:d\W*o\W*t\W*)?c\W*o\W*m)?(?#obfuscated email + text)
 1539219067	Makyen	fuckface(?#Should add "face" suffix to the various obscenity regexes)
+1539228740	tripleee	pyrixinc\.com
