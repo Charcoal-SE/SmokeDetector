@@ -5532,7 +5532,6 @@
 1536826402	Tetsuya Yamamoto	hotelsupplies-newcon\.com
 1536827974	Tetsuya Yamamoto	robo-soft\.com
 1536830837	Tetsuya Yamamoto	johnmarkfinancialfunds
-1536833132	Glorfindel	audfree\.com
 1536839990	iBug	digitalpike\.com
 1536840843	iBug	gamesupportonline\.com
 1536842789	tripleee	[a-z_]*(?:1_*)?365[\W_]*300[\W_]*3916[a-z_]*
