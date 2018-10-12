@@ -662,10 +662,14 @@ def asn_for_url_host(s, site, asn_list):
                 log('debug', 'ASN: too many invalid TLDs; abandoning post')
                 return False, ""
             continue
+        if '.'.join(hostname.lower().split('.')[-2:]) in SE_SITES_DOMAINS:
+            log('debug', 'Skipping {0}'.format(hostname))
+            continue
         a = dns_query(hostname, 'a')
         if a is not None:
             if asn_list:
                 for addr in set([str(x) for x in a]):
+                    log('debug', 'ASN: IP {0} for hostname {1}'.format(addr, hostname))
                     asn = asn_query(addr)
                     if asn in asn_list:
                         return True, '{0} address {1} in ASN {2}'.format(
