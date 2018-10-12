@@ -495,6 +495,37 @@ def bad_pattern_in_url(s, site):
         return False, ""
 
 
+def dns_query(label, qtype):
+    try:
+        starttime = datetime.now()
+        answer = dns.resolver.query(label, qtype)
+    except dns.exception.DNSException as exc:
+        if str(exc).startswith('None of DNS query names exist:'):
+            log('debug', 'DNS label {0} not found; skipping'.format(label))
+        else:
+            endtime = datetime.now()
+            log('warning', 'DNS error {0} (duration: {1})'.format(
+                exc, endtime - starttime))
+        return None
+    endtime = datetime.now()
+    log('debug', '{0} query duration: {1}'.format(qtype, endtime - starttime))
+    return answer
+
+
+def asn_query(ip):
+    '''
+    http://www.team-cymru.com/IP-ASN-mapping.html
+    '''
+    pi = list(reversed(ip.split('.')))
+    asn = dns_query('.'.join(pi + ['origin.asn.cymru.com.']), 'txt')
+    if asn is not None:
+        for txt in set([str(x) for x in asn]):
+            log('debug', '{0}: Raw ASN lookup result: {1}'.format(ip, txt))
+            if ' | ' in txt:
+                return txt.split(' | ')[0].strip('"')
+    return None
+
+
 def ns_for_url_domain(s, site, nslist):
     invalid_tld_count = 0
 
@@ -513,29 +544,18 @@ def ns_for_url_domain(s, site, nslist):
             log('debug', '{0} has no valid tld; skipping'.format(domain))
             invalid_tld_count += 1
             if invalid_tld_count > 3:
-                log('debug', 'too many invalid TLDs; abandoning post')
+                log('debug', 'NS: too many invalid TLDs; abandoning post')
                 return False, ""
             continue
-        try:
-            starttime = datetime.now()
-            ns = dns.resolver.query(domain, 'ns')
-        except dns.exception.DNSException as exc:
-            if str(exc).startswith('None of DNS query names exist:'):
-                log('debug', 'domain {0} not found; skipping'.format(domain))
-                continue
-            endtime = datetime.now()
-            log('warning', 'DNS error {0} (duration: {1})'.format(
-                exc, endtime - starttime))
-            continue
-        endtime = datetime.now()
-        log('debug', 'NS query duration {0}'.format(endtime - starttime))
-        nameservers = set([server.target.to_text() for server in ns])
-        for ns_candidate in nslist:
-            if (type(ns_candidate) is set and nameservers == ns_candidate) or \
-                any(ns.endswith('.{0}'.format(ns_candidate))
-                    for ns in nameservers):
-                return True, '{domain} NS suspicious {ns}'.format(
-                    domain=domain, ns=','.join(nameservers))
+        ns = dns_query(domain, 'ns')
+        if ns is not None:
+            nameservers = set([server.target.to_text() for server in ns])
+            for ns_candidate in nslist:
+                if (type(ns_candidate) is set and nameservers == ns_candidate) \
+                    or any(ns.endswith('.{0}'.format(ns_candidate))
+                           for ns in nameservers):
+                    return True, '{domain} NS suspicious {ns}'.format(
+                        domain=domain, ns=','.join(nameservers))
     return False, ""
 
 
@@ -622,6 +642,54 @@ def watched_ns_for_url_domain(s, site):
         'cybercastco.com.',
         'web4africa.com.',
     ])
+
+
+# ######## FIXME: code duplication and inefficiencies, refactor w/ NS check
+def asn_for_url_host(s, site, asn_list):
+    invalid_tld_count = 0
+
+    hostnames = []
+    for link in post_links(s):
+        hostname = urlparse(link).hostname
+        if hostname is None:
+            hostname = urlparse('http://' + link).hostname
+        hostnames.append(hostname)
+
+    for hostname in set(hostnames):
+        if not tld.get_tld(hostname, fix_protocol=True, fail_silently=True):
+            log('debug', '{0} has no valid tld; skipping'.format(hostname))
+            invalid_tld_count += 1
+            if invalid_tld_count > 3:
+                log('debug', 'ASN: too many invalid TLDs; abandoning post')
+                return False, ""
+            continue
+        if '.'.join(hostname.lower().split('.')[-2:]) in SE_SITES_DOMAINS:
+            log('debug', 'Skipping {0}'.format(hostname))
+            continue
+        a = dns_query(hostname, 'a')
+        if a is not None:
+            if asn_list:
+                for addr in set([str(x) for x in a]):
+                    log('debug', 'ASN: IP {0} for hostname {1}'.format(addr, hostname))
+                    asn = asn_query(addr)
+                    if asn in asn_list:
+                        return True, '{0} address {1} in ASN {2}'.format(
+                            hostname, addr, asn)
+    return False, ""
+
+
+def watched_asn_for_url_hostname(s, site):
+    return asn_for_url_host(
+        s, site,
+        # Watched ASN list
+        [
+            '3842',    # RAMNODE - RamNode LLC, US
+            '8100',    # ASN-QUADRANET-GLOBAL - QuadraNet Enterprises LLC, US
+            '34788',   # NMM-AS D - 02742 Friedersdorf Hauptstrasse 68, DE
+            '40676',   # AS40676 - Psychz Networks, US
+            '46261',   # QUICKPACKET - QuickPacket, LLC, US
+            '395970',  # IONSWITCH - IonSwitch, LLC, US
+        ])
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
@@ -1341,6 +1409,11 @@ class FindSpam:
          'reason': 'potentially bad NS for domain in {}',
          'title': True, 'body': True, 'username': False,
          'stripcodeblocks': True, 'body_summary': True, 'questions': False,
+         'max_rep': 1, 'max_score': 0},
+        {'method': watched_asn_for_url_hostname, 'all': True, 'sites': [],
+         'reason': 'potentially bad ASN for hostname in {}',
+         'title': True, 'body': True, 'username': False,
+         'stripcodeblocks': True, 'body_summary': True,
          'max_rep': 1, 'max_score': 0},
         # Country-name domains, travel and expats sites are exempt
         {'regex': r"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|"
