@@ -6087,3 +6087,4 @@
 1539299588	Makyen	 ledger\W*(?:customer\W*)? support
 1539302638	Makyen	lentbitcoin\.com
 1539307755	Tetsuya Yamamoto	technewuk\.com
+1539307830	Tetsuya Yamamoto	banehforoosh\.com
