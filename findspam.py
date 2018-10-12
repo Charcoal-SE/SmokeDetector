@@ -682,7 +682,9 @@ def watched_asn_for_url_hostname(s, site):
         s, site,
         # Watched ASN list
         [
+            '3842',    # RAMNODE - RamNode LLC, US
             '8100',    # ASN-QUADRANET-GLOBAL - QuadraNet Enterprises LLC, US
+            '34788',   # NMM-AS D - 02742 Friedersdorf Hauptstrasse 68, DE
             '40676',   # AS40676 - Psychz Networks, US
             '46261',   # QUICKPACKET - QuickPacket, LLC, US
             '395970',  # IONSWITCH - IonSwitch, LLC, US
