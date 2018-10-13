@@ -265,7 +265,7 @@ def do_blacklist(blacklist_type, msg, force=False):
         else:
             is_phone = False
 
-        is_watchlist = bool(blacklist_type == 'watch_keyword')
+        is_watchlist = bool("watch" in blacklist_type)
 
         concretized_pattern = pattern.replace("\\W", " ").replace("\\.", ".").replace("\\d", "8")
 
