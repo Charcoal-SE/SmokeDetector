@@ -259,8 +259,8 @@ def do_blacklist(blacklist_type, msg, force=False):
             raise CmdException("That pattern is probably too broad, refusing to commit.")
 
     if not force:
-        if regex.match(r'(?:\[a-z_]\*)?(?:\(\?:)?\d+(?:[][\\W_*()?:]+\d+)+(?:\[a-z_]\*)?$', pattern) or \
-                "number" in blacklist_type:
+        if "number" in blacklist_type or \
+                regex.match(r'(?:\[a-z_]\*)?(?:\(\?:)?\d+(?:[][\\W_*()?:]+\d+)+(?:\[a-z_]\*)?$', pattern):
             is_phone = True
         else:
             is_phone = False
