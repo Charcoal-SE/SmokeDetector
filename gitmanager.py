@@ -76,7 +76,7 @@ class GitManager:
 
             now = str(int(time.time()))
 
-            if blacklist_type in [Blacklist.WATCHED_KEYWORDS]:
+            if blacklist_type in {Blacklist.WATCHED_KEYWORDS, Blacklist.WATCHED_NUMBERS}:
                 op = 'watch'
                 item = item_to_blacklist
                 item_to_blacklist = "\t".join([now, username, item])
