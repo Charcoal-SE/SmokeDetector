@@ -249,7 +249,7 @@ def do_blacklist(blacklist_type, msg, force=False):
                                                                      id=msg.owner.id)
 
     # noinspection PyProtectedMember
-    if not "number" in blacklist_type:
+    if "number" not in blacklist_type:
         pattern = rebuild_str(msg.content_source.split(" ", 1)[1])
         try:
             r = regex.compile(pattern, city=findspam.FindSpam.city_list)
