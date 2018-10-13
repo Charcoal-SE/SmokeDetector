@@ -267,7 +267,8 @@ def do_blacklist(blacklist_type, msg, force=False):
 
         is_watchlist = bool("watch" in blacklist_type)
 
-        concretized_pattern = pattern.replace("\\W", " ").replace("\\.", ".").replace("\\d", "8")
+        concretized_pattern = pattern.replace("\\W", "-").replace("\\.", ".").replace("\\d", "8")
+        concretized_pattern = regex.sub(r"[+*?][+?]?|\{\d*(?:,\d*)?\}", "", concretized_pattern)
 
         for username in False, True:
             reasons = check_blacklist(
