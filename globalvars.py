@@ -26,7 +26,7 @@ def git_commit_info():
 
 def git_ref():
     git_cp = sp.run(['git', 'symbolic-ref', '--short', '-q', 'HEAD'], stdout=sp.PIPE)
-    return git.cp.stdout.decode("utf-8").strip()  # not on branch = empty output
+    return git_cp.stdout.decode("utf-8").strip()  # not on branch = empty output
 
 
 # We don't need strip_escape_chars() anymore, see commit message of 1931d30804a675df07887ce0466e558167feae57
