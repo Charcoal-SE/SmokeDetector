@@ -248,9 +248,9 @@ def do_blacklist(blacklist_type, msg, force=False):
     chat_user_profile_link = "https://chat.{host}/users/{id}".format(host=msg._client.host,
                                                                      id=msg.owner.id)
 
-    # noinspection PyProtectedMember
+    pattern = rebuild_str(msg.content_source.split(" ", 1)[1])
+
     if "number" not in blacklist_type:
-        pattern = rebuild_str(msg.content_source.split(" ", 1)[1])
         try:
             r = regex.compile(pattern, city=findspam.FindSpam.city_list)
         except regex._regex_core.error:
@@ -259,7 +259,8 @@ def do_blacklist(blacklist_type, msg, force=False):
             raise CmdException("That pattern is probably too broad, refusing to commit.")
 
     if not force:
-        if regex.match(r'(?:\[a-z_]\*)?(?:\(\?:)?\d+(?:[][\\W_*()?:]+\d+)+(?:\[a-z_]\*)?$', pattern):
+        if regex.match(r'(?:\[a-z_]\*)?(?:\(\?:)?\d+(?:[][\\W_*()?:]+\d+)+(?:\[a-z_]\*)?$', pattern) or \
+                "number" in blacklist_type:
             is_phone = True
         else:
             is_phone = False
