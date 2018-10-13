@@ -53,9 +53,15 @@ class GitManager:
         elif blacklist == "username":
             blacklist_type = Blacklist.USERNAMES
             ms_search_option = "&username_is_regex=1&username="
+        elif blacklist == "number":
+            blacklist_type = Blacklist.NUMBERS
+            ms_search_option = "&body="
         elif blacklist == "watch_keyword":
             blacklist_type = Blacklist.WATCHED_KEYWORDS
             ms_search_option = "&body_is_regex=1&body="
+        elif blacklist == "watch_number":
+            blacklist_type = Blacklist.WATCHED_NUMBERS
+            ms_search_option = "&body="
         else:
             return (False, 'GitManager: blacklist is not recognized. Blame a developer.')
 
@@ -195,10 +201,10 @@ class GitManager:
             git.checkout("master")
 
             if blacklist_type == "watch":
-                blacklists = [Blacklist.WATCHED_KEYWORDS]
+                blacklists = [Blacklist.WATCHED_KEYWORDS, Blacklist.WATCHED_NUMBERS]
                 list_type = "watchlist"
             elif blacklist_type == "blacklist":
-                blacklists = [Blacklist.KEYWORDS, Blacklist.WEBSITES, Blacklist.USERNAMES]
+                blacklists = [Blacklist.KEYWORDS, Blacklist.WEBSITES, Blacklist.USERNAMES, Blacklist.NUMBERS]
                 list_type = "blacklist"
             else:
                 return False, "`blacklist_type` not set, blame a developer."

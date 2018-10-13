@@ -318,9 +318,11 @@ def do_blacklist(blacklist_type, msg, force=False):
 @command(str, whole_msg=True, privileged=True, give_name=True, aliases=["blacklist-keyword",
                                                                         "blacklist-website",
                                                                         "blacklist-username",
+                                                                        "blacklist-number",
                                                                         "blacklist-keyword-force",
                                                                         "blacklist-website-force",
-                                                                        "blacklist-username-force"])
+                                                                        "blacklist-username-force",
+                                                                        "blacklist-number-force"])
 def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     """
     Adds a pattern to the blacklist and commits/pushes to GitHub
@@ -335,7 +337,8 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
 
 # noinspection PyIncorrectDocstring
 @command(str, whole_msg=True, privileged=True, give_name=True,
-         aliases=["watch-keyword", "watch-force", "watch-keyword-force"])
+         aliases=["watch-keyword", "watch-force", "watch-keyword-force",
+                  "watch-number", "watch-number-force"])
 def watch(msg, pattern, alias_used="watch"):
     """
     Adds a pattern to the watched keywords list and commits/pushes to GitHub
@@ -344,7 +347,8 @@ def watch(msg, pattern, alias_used="watch"):
     :return: A string
     """
 
-    return do_blacklist("watch_keyword", msg, force=alias_used.split("-")[-1] == "force")
+    return do_blacklist("watch_number" if "number" in alias_used else "watch_keyword",
+                        msg, force=alias_used.split("-")[-1] == "force")
 
 
 @command(str, whole_msg=True, privileged=True, give_name=True, aliases=["unwatch"])
