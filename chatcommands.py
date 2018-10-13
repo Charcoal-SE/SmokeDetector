@@ -213,7 +213,7 @@ def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
         filter_out.append("potentially bad keyword")
     # Ignore "Mostly non-latin body/answer" for phone number watches
     elif is_phone:
-        filter_out.append("mostly non-latin")
+        filter_out.append("mostly non-latin", "phone number detected", "messaging number detected")
 
     if filter_out:
         reasons = list(filter(
