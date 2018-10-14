@@ -729,6 +729,7 @@ def watched_asn_for_url_hostname(s, site):
             '8100',    # ASN-QUADRANET-GLOBAL - QuadraNet Enterprises LLC, US
             '22612',   # NAMECHEAP-NET - Namecheap, Inc., US
             '24778',   # DATAPIPE-UK, GB
+            '31863',   # DACEN-2 - Centrilogic, Inc., US
             '34788',   # NMM-AS D - 02742 Friedersdorf Hauptstrasse 68, DE
             '40676',   # AS40676 - Psychz Networks, US
             '45839',   # SHINJIRU-MY-AS-AP Shinjiru Technology Sdn Bhd, MY
