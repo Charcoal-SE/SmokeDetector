@@ -6117,4 +6117,3 @@
 1539473286	Makyen	guiadesenvolvedor\.herokuapp\.com
 1539473295	Makyen	nowinseo\.ir
 1539473304	Makyen	setupoffice\.co\.uk
-1539477765	Makyen	support\W*office(?<!\.office)\.com
