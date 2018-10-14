@@ -6133,3 +6133,4 @@
 1539535782	Glorfindel	lustyhome\.com
 1539540297	Makyen	bottrader\.site\.com\.br
 1539540338	Makyen	ace75(?:\Wnet)?(?#obfuscated ace75.net)
+1539540347	Makyen	ace68
