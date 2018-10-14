@@ -5976,7 +5976,6 @@
 1538843291	Makyen	在线购买杂草(?#Buy weed online)
 1538857351	Erik the Outgolfer	supremetechnologies007@gmail\.com
 1538859072	Makyen	bn51\.net
-1538859209	Makyen	콜걸(?#Call girl)
 1538863133	Makyen	cocoebooks\.blogspot\.com
 1538874055	Makyen	hackingloop6(?:\W*(?:a\W*t\W*)?g\W*m\W*a\W*i\W*l\W*(?:d\W*o\W*t\W*)?c\W*o\W*m)?(?#obfuscated email + text)
 1538874066	Makyen	grameencomputerbd\.com
