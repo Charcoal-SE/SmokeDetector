@@ -6132,3 +6132,4 @@
 1539540347	Makyen	ace68
 1539541548	Glorfindel	btcapi\.org
 1539542196	Makyen	출장안마(?#business trip massage)
+1539543472	Makyen	\w*콜걸\w*(?#call girl)
