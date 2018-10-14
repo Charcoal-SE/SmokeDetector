@@ -3846,7 +3846,6 @@
 1528879299	Makyen	keyactivation\.net
 1528880411	Glorfindel	fcsmap\.com
 1528880421	Glorfindel	explore\.ne\.jp
-1528880976	Makyen	\W*電子タバコ\W*
 1528881593	Glorfindel	btctools\.info
 1528884173	Zoe	niponcase\.com
 1528885753	Zoe	generalknowledgequiz\.in
