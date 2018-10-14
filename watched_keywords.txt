@@ -6052,7 +6052,6 @@
 1539175956	tripleee	xanax\.website
 1539178410	WELZ	pcsolutionhd\.com
 1539178454	WELZ	pc\W?solution\W?hd
-1539178631	WELZ	support\W*office\.com
 1539208798	Makyen	illuminatipowerful666(?:@gmail\.com)?
 1539208815	Makyen	dr\.?wavas?(?:@gmail\.com)?
 1539208825	Makyen	[a-z_]*(?:0_*)?27603493288[a-z_]*(?#dr. wava; spellcaster)
