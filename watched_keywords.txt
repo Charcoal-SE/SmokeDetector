@@ -6135,3 +6135,4 @@
 1539543487	Makyen	\w*電子タバコ\w*(?#electronic cigarette)
 1539544840	Erik the Outgolfer	mobiletecpro\.com
 1539545688	Erik the Outgolfer	CRUD SQLITE
+1539550211	Makyen	qualyartpinturas\.com\.br
