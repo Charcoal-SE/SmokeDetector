@@ -738,6 +738,7 @@ def watched_asn_for_url_hostname(s, site):
             '29405',   # VNET-AS, SK
             '31863',   # DACEN-2 - Centrilogic, Inc., US
             '34788',   # NMM-AS D - 02742 Friedersdorf Hauptstrasse 68, DE
+            '36352',   # AS-COLOCROSSING - ColoCrossing, US
             '40676',   # AS40676 - Psychz Networks, US
             '45839',   # SHINJIRU-MY-AS-AP Shinjiru Technology Sdn Bhd, MY
             '46261',   # QUICKPACKET - QuickPacket, LLC, US
