@@ -1264,9 +1264,9 @@ class FindSpam:
     @staticmethod
     def reload_blacklists():
         blacklists.load_blacklists()
-        FindSpam.rule_bad_keywords['regex'] = r"(?is)(?:^|\b)(?:{})(?:\b|$)|{}".format(
+        FindSpam.rule_bad_keywords['regex'] = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
             "|".join(GlobalVars.bad_keywords), "|".join(FindSpam.bad_keywords_nwb))
-        FindSpam.rule_watched_keywords['regex'] = r'(?is)(?:^|\b)(?:{})(?:\b|$)'.format(
+        FindSpam.rule_watched_keywords['regex'] = r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format(
             "|".join(GlobalVars.watched_keywords.keys()))
         FindSpam.rule_blacklisted_websites['regex'] = r"(?i)({})".format(
             "|".join(GlobalVars.blacklisted_websites))
