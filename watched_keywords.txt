@@ -6138,3 +6138,4 @@
 1539570174	Tetsuya Yamamoto	everydayessence\.shop
 1539570197	Tetsuya Yamamoto	curious-soapmaker\.com
 1539570307	Tetsuya Yamamoto	readquranbook\.com
+1539574238	Makyen	\w*電子タバコ\w*(?#electronic cigarette)
