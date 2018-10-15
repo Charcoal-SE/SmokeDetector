@@ -6130,7 +6130,6 @@
 1539540338	Makyen	ace75(?:\Wnet)?(?#obfuscated ace75.net)
 1539540347	Makyen	ace68
 1539541548	Glorfindel	btcapi\.org
-1539542196	Makyen	출장안마(?#business trip massage)
 1539544840	Erik the Outgolfer	mobiletecpro\.com
 1539545688	Erik the Outgolfer	CRUD SQLITE
 1539550211	Makyen	qualyartpinturas\.com\.br
