@@ -735,6 +735,7 @@ def watched_asn_for_url_hostname(s, site):
             # '22612', # Moderate FPs, don't double up -- NAMECHEAP-NET - Namecheap, Inc., US
             # '26496', # Massive FPs do not watch -- AS-26496-GO-DADDY-COM-LLC - GoDaddy.com, LLC, US
             '24778',   # DATAPIPE-UK, GB
+            '29405',   # VNET-AS, SK
             '31863',   # DACEN-2 - Centrilogic, Inc., US
             '34788',   # NMM-AS D - 02742 Friedersdorf Hauptstrasse 68, DE
             '40676',   # AS40676 - Psychz Networks, US
