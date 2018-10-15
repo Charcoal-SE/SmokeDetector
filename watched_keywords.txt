@@ -6148,3 +6148,4 @@
 1539588937	Tetsuya Yamamoto	whiteshaarks\.com
 1539590728	Tetsuya Yamamoto	validdocumentsonline\.com
 1539591569	Tetsuya Yamamoto	911custom\.com
+1539591617	Glorfindel	3\W*dot\W*technologies
