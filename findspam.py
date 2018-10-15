@@ -727,7 +727,9 @@ def watched_asn_for_url_hostname(s, site):
         [
             '3842',    # RAMNODE - RamNode LLC, US
             '8100',    # ASN-QUADRANET-GLOBAL - QuadraNet Enterprises LLC, US
+            #'20013'   # FPs do not watch -- CYRUSONE - CyrusOne LLC, US
             '22612',   # NAMECHEAP-NET - Namecheap, Inc., US
+            #'26496',  # Massive FPs do not watch -- AS-26496-GO-DADDY-COM-LLC - GoDaddy.com, LLC, US
             '24778',   # DATAPIPE-UK, GB
             '31863',   # DACEN-2 - Centrilogic, Inc., US
             '34788',   # NMM-AS D - 02742 Friedersdorf Hauptstrasse 68, DE
