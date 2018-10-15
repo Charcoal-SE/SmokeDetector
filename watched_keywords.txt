@@ -6139,3 +6139,4 @@
 1539570307	Tetsuya Yamamoto	readquranbook\.com
 1539574238	Makyen	\w*電子タバコ\w*(?#electronic cigarette)
 1539574246	Makyen	\w*콜걸\w*(?#call girl)
+1539574429	Makyen	\w*출장안마\w*(?#business trip massage)
