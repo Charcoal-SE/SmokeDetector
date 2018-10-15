@@ -1643,9 +1643,9 @@ ultra\W*last(?:\W*xxl)?
 testo drive 365 (?:canada|performance(?: plus)?)?(?#product name)
 testo\W?drive
 (?<=/)apple-id
- 毕业证
- 学历认证
- レーザーポインター
+毕业证
+学历认证
+レーザーポインター
 surge\W?rx
 alpha\W?flex\W?xt
 enduro\W?stack
