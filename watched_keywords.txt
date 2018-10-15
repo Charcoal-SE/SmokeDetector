@@ -6078,7 +6078,6 @@
 1539292668	gparyani	trucos-para\.com
 1539299588	Makyen	 ledger\W*(?:customer\W*)? support
 1539302638	Makyen	lentbitcoin\.com
-1539307755	Tetsuya Yamamoto	technewuk\.com
 1539307830	Tetsuya Yamamoto	banehforoosh\.com
 1539308517	Tetsuya Yamamoto	nidicareers\.com
 1539308830	Tetsuya Yamamoto	voipphonebuy\.com
