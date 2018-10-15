@@ -6149,3 +6149,4 @@
 1539590728	Tetsuya Yamamoto	validdocumentsonline\.com
 1539591569	Tetsuya Yamamoto	911custom\.com
 1539591617	Glorfindel	3\W*dot\W*technologies
+1539596355	Tetsuya Yamamoto	seo4sme\.net
