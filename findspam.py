@@ -729,7 +729,7 @@ def watched_asn_for_url_hostname(s, site):
             '8100',    # ASN-QUADRANET-GLOBAL - QuadraNet Enterprises LLC, US
             # '16509', # FPs do not watch -- AMAZON-02 - Amazon.com, Inc., US
             # '20013'  # FPs do not watch -- CYRUSONE - CyrusOne LLC, US
-            '22612',   # NAMECHEAP-NET - Namecheap, Inc., US
+            # '22612', # Moderate FPs, don't double up -- NAMECHEAP-NET - Namecheap, Inc., US
             # '26496', # Massive FPs do not watch -- AS-26496-GO-DADDY-COM-LLC - GoDaddy.com, LLC, US
             '24778',   # DATAPIPE-UK, GB
             '31863',   # DACEN-2 - Centrilogic, Inc., US
