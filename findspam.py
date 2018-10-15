@@ -683,6 +683,7 @@ def watched_ns_for_url_domain(s, site):
         'md-in-51.webhostbox.net.',
         'cybercastco.com.',
         'web4africa.com.',
+        'puredownloads.website.',
     ])
 
 
