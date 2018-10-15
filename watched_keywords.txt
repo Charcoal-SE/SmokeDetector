@@ -6135,7 +6135,6 @@
 1539545688	Erik the Outgolfer	CRUD SQLITE
 1539550211	Makyen	qualyartpinturas\.com\.br
 1539551767	Makyen	viraltagz\.com
-1539565970	Makyen	電子タバコ(?#electronic cigarette)
 1539570174	Tetsuya Yamamoto	everydayessence\.shop
 1539570197	Tetsuya Yamamoto	curious-soapmaker\.com
 1539570307	Tetsuya Yamamoto	readquranbook\.com
