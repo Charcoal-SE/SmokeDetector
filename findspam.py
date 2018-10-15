@@ -734,6 +734,7 @@ def watched_asn_for_url_hostname(s, site):
             '40676',   # AS40676 - Psychz Networks, US
             '45839',   # SHINJIRU-MY-AS-AP Shinjiru Technology Sdn Bhd, MY
             '46261',   # QUICKPACKET - QuickPacket, LLC, US
+            '54290',   # HOSTWINDS - Hostwinds LLC., US
             '395970',  # IONSWITCH - IonSwitch, LLC, US
         ])
 
