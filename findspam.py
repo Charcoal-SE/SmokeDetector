@@ -685,6 +685,7 @@ def watched_ns_for_url_domain(s, site):
         'web4africa.com.',
         'puredownloads.website.',
         'hostblast.net.',
+        'webhouse.sk.',
     ])
 
 
