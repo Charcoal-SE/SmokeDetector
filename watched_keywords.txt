@@ -6183,3 +6183,4 @@
 1539687248	doppelspooker	sugarcrm
 1539687258	doppelspooker	tactionsoftware\.com
 1539687533	iBug	walmartcreditcardpay\.com
+1539688237	doppelspooker	creditcard[\w\-]*\.com?
