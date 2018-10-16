@@ -104,3 +104,4 @@ customwristbands
 ^بانه$
 ^king[\W_]*excel$
 bella johsan
+kajel\Wbajwa
