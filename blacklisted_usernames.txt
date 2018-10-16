@@ -105,3 +105,4 @@ customwristbands
 ^king[\W_]*excel$
 bella johsan
 kajel\Wbajwa
+jakri\Wkatra
