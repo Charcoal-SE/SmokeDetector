@@ -6161,3 +6161,4 @@
 1539648994	Makyen	t\.me/samuel_leach0
 1539649004	Makyen	bitcoin\.miners694(?:@gmail\.com)?
 1539650377	Tetsuya Yamamoto	al-ahmadi\.com
+1539650397	Tetsuya Yamamoto	ledafarm\.ru
