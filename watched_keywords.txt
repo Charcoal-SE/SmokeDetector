@@ -6185,3 +6185,4 @@
 1539687533	iBug	walmartcreditcardpay\.com
 1539688270	doppelspooker	creditcard[\w\d\-]*\.com?
 1539690011	Glorfindel	ambrainv\.com
+1539702869	Glorfindel	trishamishra\.com
