@@ -2417,3 +2417,4 @@ screenshotwindows\.net
 net-raft\.com
 starglamours\.com
 technewuk\.com
+atomicuschart\.com
