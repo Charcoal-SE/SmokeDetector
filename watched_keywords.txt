@@ -6184,3 +6184,4 @@
 1539687258	doppelspooker	tactionsoftware\.com
 1539687533	iBug	walmartcreditcardpay\.com
 1539688270	doppelspooker	creditcard[\w\d\-]*\.com?
+1539690011	Glorfindel	ambrainv\.com
