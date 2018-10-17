@@ -4901,7 +4901,6 @@
 1533894560	Shree	expressdocuments\d+(?:@gmail\.com)?
 1533897866	Glorfindel	carlson ?\W?media
 1533902897	Zoe	btcbinaryhacks
-1533902756	Federico	Cybershieldnotch
 1533903284	Zoe	protocolhacks
 1533903545	Zoe	gotouniversity(?:\.com)?
 1533903848	Zoe	revacalibration\.com
