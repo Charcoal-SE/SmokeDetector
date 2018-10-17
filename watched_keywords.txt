@@ -6207,3 +6207,4 @@
 1539783863	Suraj Rao	oodlestechnologies\.com
 1539789877	Zoe	whatsapp\W*for\W*ecommerce(?:\.com)?
 1539794052	Erik the Outgolfer	Vampirelordtransformerchanging@gmail\.com
+1539795431	Glorfindel	superthirty\.com
