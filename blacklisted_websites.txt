@@ -2419,3 +2419,4 @@ starglamours\.com
 technewuk\.com
 atomicuschart\.com
 supplementtrade\.com
+j\W*a\W*n\W*g\W*f\W*f\W*(?:컴|c\W*o\W*m)?(?#obfuscated jangff.com)
