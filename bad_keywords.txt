@@ -1660,3 +1660,4 @@ titan\W?testo
 niwali
 juvinex
 [a-z_]*(?:1_*)?833.{0,4}272.{0,4}777[a-z_]*
+teamweedforbuds(?:2018)?(?:@protonmail\.com)?(?#Watches both the e-mail address and part of a domain.)
