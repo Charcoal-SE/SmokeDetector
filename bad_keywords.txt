@@ -1659,3 +1659,4 @@ vandexafil\W?ultra
 titan\W?testo
 niwali
 juvinex
+[a-z_]*(?:1_*)?833.{0,4}272.{0,4}777[a-z_]*
