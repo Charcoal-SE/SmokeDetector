@@ -6192,3 +6192,4 @@
 1539724822	Makyen	[a-z_]*(?:1_*)?833[\W_]*272[\W_]*(?:0|\w)?[\W_]*777[a-z_]*(?#833-272-0777 obfuscated)
 1539724997	doppelspooker	833.{0,10}272
 1539741368	Makyen	microsoftlivesupport\.com
+1539745245	Tetsuya Yamamoto	kofk-bearings\.com
