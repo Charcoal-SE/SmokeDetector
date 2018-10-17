@@ -506,7 +506,7 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
         r"(?i)(^| )(airlines?|apple|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
         r"lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|sage|windows?|yahoo)($| )")
     support = regex.compile(r"(?i)(^| )(customer|care|helpline|reservation|phone|recovery|service|support|contact|"
-                            r"tech|technical|telephone|number)($| )")
+                            r"help|tech|technical|telephone|number)($| )")
     for link_text in links:
         keywords_match = keywords.search(link_text)
         if keywords_match:
