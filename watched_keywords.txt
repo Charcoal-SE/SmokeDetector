@@ -6201,3 +6201,4 @@
 1539760538	Tetsuya Yamamoto	drcosti\.com
 1539761099	Shree	info(?:@tripnetra\.com)
 1539763231	Tetsuya Yamamoto	toptenss\.com
+1539763653	Glorfindel	juxtunes\.com
