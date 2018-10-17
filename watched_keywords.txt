@@ -6206,3 +6206,4 @@
 1539767075	Glorfindel	indovapes\.com
 1539783863	Suraj Rao	oodlestechnologies\.com
 1539784439	Erik the Outgolfer	Vampirelordtransformerchanging@gmail\.com
+1539789877	Zoe	whatsapp\W*for\W*ecommerce(?:\.com)?
