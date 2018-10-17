@@ -5662,7 +5662,6 @@
 1537457144	Makyen	bkIQCeYS5NE(?#YouTube video)
 1537463166	Glorfindel	investmentnovel\.com
 1537477967	Makyen	joshua\.dp\.lloyd(?:@gmail\.com)?
-1537477981	Makyen	teamweedforbuds(?:@protonmail\.com)?
 1537490822	Tetsuya Yamamoto	eijazah\.com
 1537500813	Tetsuya Yamamoto	qxorm\.com
 1537507207	Shree	wholesaledestinations\.com
