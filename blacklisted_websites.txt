@@ -2420,3 +2420,4 @@ technewuk\.com
 atomicuschart\.com
 supplementtrade\.com
 j\W*a\W*n\W*g\W*f\W*f\W*(?:컴|c\W*o\W*m)?(?#obfuscated jangff.com)
+\b[a-z_]*(?:1_*)?833[\W_]*272[\W_]*(?:\w[\W_]*)?777[a-z_]*\b(?#833-272-0777 obfuscated; abuse website blacklist for more weight/reasons; remove when this spam spree stops)
