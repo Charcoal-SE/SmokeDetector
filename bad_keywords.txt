@@ -1662,3 +1662,4 @@ juvinex
 [a-z_]*(?:1_*)?833.{0,4}272.{0,4}777[a-z_]*
 teamweedforbuds(?:2018)?(?:@protonmail\.com)?(?#Watches both the e-mail address and part of a domain.)
 migrating(?:\Wfrom)?\W(?:.{0,40})?(?:google\W)?drive\Wto\W(?:google\W)?team\Wdrive
+vida\W?tone\W?keto
