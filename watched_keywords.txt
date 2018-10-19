@@ -6239,3 +6239,4 @@
 1539965056	Makyen	internetadvertisingcompany\.us
 1539965066	Makyen	dr\.corobospellhome(?:@gmail\.com)?
 1539965076	Makyen	instantdatacare\.com
+1539981688	Erik the Outgolfer	safirak\.com
