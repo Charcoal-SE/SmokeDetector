@@ -6249,3 +6249,4 @@
 1540005476	Tetsuya Yamamoto	ferek\.happy
 1540009816	Makyen	spadeshelp(?:@gmail\.com)?
 1540018482	Makyen	amazonhealthstorediet\.over-blog\.com
+1540018491	Makyen	9e3bf58e7db(?#medium.com post for amazonhealthstore.com)
