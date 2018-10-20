@@ -89,11 +89,12 @@ class GitManager:
                 return (False, 'Already {}ed on line {} of {}'.format(op, line, blacklist_file_name))
 
             watch_removed = False
-            if blacklist_type not in [Blacklist.WATCHED_KEYWORDS]:
-                watcher = Blacklist(Blacklist.WATCHED_KEYWORDS)
-                if watcher.exists(item_to_blacklist):
-                    watch_removed = True
-                    watcher.remove(item_to_blacklist)
+            if blacklist_type not in {Blacklist.WATCHED_KEYWORDS, Blacklist.WATCHED_NUMBERS}:
+                for watcher_type in {Blacklist.WATCHED_KEYWORDS, Blacklist.WATCHED_NUMBERS}:
+                    watcher = Blacklist(watcher_type)
+                    if watcher.exists(item_to_blacklist):
+                        watch_removed = True
+                        watcher.remove(item_to_blacklist)
 
             blacklister.add(item_to_blacklist)
 
@@ -104,10 +105,10 @@ class GitManager:
 
             git.add(blacklist_file_name)
             if watch_removed:
-                git.add('watched_keywords.txt')
+                git.add('watched_keywords.txt', 'watched_numbers.txt')
 
             git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
-                       "-m", u"Auto {0} of `{1}` by {2} --autopull".format(op, item, username))
+                       "-m", "Auto {0} of `{1}` by {2} --autopull".format(op, item, username))
 
             if code_permissions:
                 git.checkout("master")
