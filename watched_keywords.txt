@@ -6246,3 +6246,4 @@
 1540000943	Makyen	ISLAMIA\W*ENGLISH\W*LANGUAGE.{0,20}ACADEMY
 1540001024	Makyen	OTORPIAPIA(?:@gmail\.com)?
 1540001113	Makyen	/Custom-PVC-Patches(?#URL path fragment seen with gs-jj.com)
+1540005476	Tetsuya Yamamoto	ferek\.happy
