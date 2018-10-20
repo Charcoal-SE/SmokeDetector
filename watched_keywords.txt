@@ -6248,3 +6248,4 @@
 1540001113	Makyen	/Custom-PVC-Patches(?#URL path fragment seen with gs-jj.com)
 1540005476	Tetsuya Yamamoto	ferek\.happy
 1540009816	Makyen	spadeshelp(?:@gmail\.com)?
+1540018482	Makyen	amazonhealthstorediet\.over-blog\.com
