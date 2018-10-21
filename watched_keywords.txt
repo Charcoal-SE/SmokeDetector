@@ -6269,3 +6269,4 @@
 1540148231	Glorfindel	wanderungen-und-abenteuer\.de
 1540148179	JoErNanO	hikingbna\.com
 1540153511	Erik the Outgolfer	romancecompass\.com
+1540159704	Tetsuya Yamamoto	linuxsecrets\.com
