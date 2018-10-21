@@ -5057,7 +5057,6 @@
 1534751527	Tetsuya Yamamoto	internetserviceproviders\.co
 1534751843	iBug	brothersoft\.com
 1534752809	tripleee	[a-z_]*(?:91_*)?9694[\W_]*102[\W_]*888[a-z_]*
-1534752969	tripleee	[a-z_]*01204330760[a-z_]*
 1534752982	tripleee	[a-z_]*8802820025[a-z_]*
 1534753066	Makyen	mathematrix\.xyz
 1534753509	tripleee	sagarkidiary\.com
