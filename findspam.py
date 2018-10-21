@@ -1131,8 +1131,9 @@ class FindSpam:
         " %[au]h ", "tapsi ?sarkar",
         "(?:networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing|"
         "salesforce|joomla)( certification)? (courses?|training)(?=.{,25}</a>)",
-        r"(?:design|development|compan(y|ies)|training|courses?|automation|policy|sex)"
-        r"(\b.{1,8}\b)?\L<city>\b",
+        r"(?:design|development|compan(?:y|ies)|institute|training|courses?|jobs?|automation|policy|sex)"
+        r"\W*(?:center|centre|institute|work))?"
+        r"(?:\b.{1,8}\b)?\L<city>\b",
         r"\b\L<city>(\b.{1,8}\b)?(?:tour)",  # TODO: Populate this "after city" keyword list
         u"Ｃ[Ｏ0]Ｍ", "sunergetic", "capilux",
         r"ICQ#?\d{4}-?\d{5}", "viarex",
