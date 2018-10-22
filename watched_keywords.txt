@@ -671,7 +671,6 @@
 1503465537	tripleee	hicheng\.net
 1503468304	tripleee	khalilstarsports\.com
 1503471369	Mithrandir	butyjordansklep\.pl
-1503472360	tripleee	disk-partition\.com
 1503481261	tripleee	coolcab\.at
 1503484157	tripleee	occamsresearch\.com
 1503485125	tripleee	tahir-naushad\.com
