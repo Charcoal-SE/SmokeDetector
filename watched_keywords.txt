@@ -6274,3 +6274,4 @@
 1540182333	tripleee	disk-partition\.com
 1540186764	Tetsuya Yamamoto	hatarcsarda\.com
 1540187829	Makyen	^Tonya Rabish$(?#User spams Avdshare)
+1540190708	Tetsuya Yamamoto	artelogic\.net
