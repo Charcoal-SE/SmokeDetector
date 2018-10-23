@@ -146,8 +146,6 @@ def pickle_last_messages():
 def send_messages():
     while True:
         room, msg, report_data = _msg_queue.get()
-        if room.room.id == 89:
-            msg = msg.upper()
 
         full_retries = 0
 
