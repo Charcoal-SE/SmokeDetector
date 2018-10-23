@@ -18,7 +18,7 @@ class SocketScience:
         encoded = msgpack.dumps(payload)
 
         # Messages can be 500 chars, but we need to leave space for control and message ident
-        chunks = [encoded[i:i+485] for i in range(0, len(encoded), 485)]
+        chunks = [encoded[i:i + 485] for i in range(0, len(encoded), 485)]
         message_id = random.randint(1000, 9999)
 
         chunks[0] = "\u0002" + str(message_id) + chunks[0]
@@ -28,7 +28,6 @@ class SocketScience:
 
         for chunk in chunks:
             chatcommunicate.tell_rooms_with("direct", chunk)
-
 
     @staticmethod
     def receive(content):
@@ -62,7 +61,6 @@ class SocketScience:
             log('debug', 'SocketScience received malformed direct message')
             log('debug', content)
 
-
     @staticmethod
     def handle(content):
         global _pings
@@ -84,7 +82,6 @@ class SocketScience:
             if _switch_task is not None:
                 _switch_task.cancel()
 
-
     @staticmethod
     def check_recent_pings():
         global _pings
@@ -99,7 +96,6 @@ class SocketScience:
             # No active Smokeys. Wait a random number of seconds, then switch to active.
             sleep = random.randint(0, 30)
             _switch_task = Tasks.later(SocketScience.switch_to_active, after=sleep)
-
 
     @staticmethod
     def switch_to_active():
