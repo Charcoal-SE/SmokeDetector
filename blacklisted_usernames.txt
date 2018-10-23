@@ -108,3 +108,4 @@ kajel\Wbajwa
 jakri\Wkatra
 denya\Wgarda
 (?-i:^[a-z]{5}\W[a-z]{4}a$)
+Greg-449
