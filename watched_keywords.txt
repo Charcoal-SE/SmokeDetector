@@ -6293,3 +6293,4 @@
 1540277744	Tetsuya Yamamoto	ijariit\.com
 1540278021	Glorfindel	dcode\W*interiors?
 1540279527	Tetsuya Yamamoto	tripnetra\.com
+1540284333	Glorfindel	stockholdingdms\.com
