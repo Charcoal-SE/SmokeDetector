@@ -147,6 +147,11 @@ def pickle_last_messages():
 def send_messages():
     while True:
         room, msg, report_data = _msg_queue.get()
+        if len(msg) > 500:
+            log('warn', 'Discarded the following message because it was over 500 characters')
+            log('warn', msg)
+            _msg_queue.task_done()
+            continue
 
         full_retries = 0
 
