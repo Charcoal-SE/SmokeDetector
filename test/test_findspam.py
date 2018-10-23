@@ -105,5 +105,5 @@ def test_findspam(title, body, username, site, body_is_summary, is_answer, expec
     log('info', "Result:", result)
     scan_spam = (len(result) > 0)
     if scan_spam != expected_spam:
-        print("Expected {1} on {}".format(body, expected_spam))
+        print("Expected {1} on {0}".format(body, expected_spam))
     assert scan_spam == expected_spam
