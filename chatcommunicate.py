@@ -21,6 +21,7 @@ from excepthook import log_exception
 from globalvars import GlobalVars
 from parsing import fetch_post_id_and_site_from_url, fetch_post_url_from_msg_content, fetch_owner_url_from_msg_content
 from tasks import Tasks
+from socketscience import SocketScience
 
 LastMessages = collections.namedtuple("LastMessages", ["messages", "reports"])
 
@@ -188,6 +189,8 @@ def send_messages():
 
 
 def on_msg(msg, client):
+    global _room_roles
+
     if not isinstance(msg, events.MessagePosted) and not isinstance(msg, events.MessageEdited):
         return
 
@@ -199,7 +202,8 @@ def on_msg(msg, client):
         if message.content.endswith("</div>"):
             message.content = message.content[:-6]
 
-    room_data = _rooms[(client.host, message.room.id)]
+    room_ident = (client.host, message.room.id)
+    room_data = _rooms[room_ident]
 
     if message.parent:
         try:
@@ -229,6 +233,8 @@ def on_msg(msg, client):
 
             if time.time() < expires_in:
                 Tasks.do(metasmoke.Metasmoke.post_auto_comment, message.content_source, message.owner, ids=ids)
+    elif 'direct' in _room_roles and room_ident in _room_roles['direct']:
+        SocketScience.receive(message.content_source.replace("\u200B", "").replace("\u200C", ""))
 
 
 def tell_rooms_with(prop, msg, notify_site="", report_data=None):

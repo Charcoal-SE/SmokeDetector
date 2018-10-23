@@ -25,6 +25,7 @@ from helpers import log, only_blacklists_changed, \
     only_modules_changed, blacklist_integrity_check, reload_modules
 from gitmanager import GitManager
 import findspam
+from socketscience import SocketScience
 
 
 MAX_FAILURES = 10  # Preservative, 10 errors = MS down
@@ -274,8 +275,11 @@ class Metasmoke:
             log('info', 'Attempted to send status ping but metasmoke_host is undefined. Not sent.')
             return
         elif GlobalVars.metasmoke_down:
-            log('info', "Metasmoke is down, wat?")
-            return
+            payload = {
+                "location": GlobalVars.location,
+                "timestamp": time.time()
+            }
+            SocketScience.send(payload)
 
         metasmoke_key = GlobalVars.metasmoke_key
 
