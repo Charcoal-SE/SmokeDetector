@@ -6297,3 +6297,4 @@
 1540286509	Glorfindel	shabdhaclinic\.com
 1540289555	Shree	vcetests\.com
 1540291777	Shree	windowstuts\.net
+1540292168	Glorfindel	legendfromheaven\.com
