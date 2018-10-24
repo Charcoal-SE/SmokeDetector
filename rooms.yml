@@ -358,6 +358,7 @@ stackexchange.com:
     commands: false
     msg_types:
       - site-russian.stackexchange.com
+      - site-rus.stackexchange.com
       - site-german.stackexchange.com
       - site-korean.stackexchange.com
       - site-esperanto.stackexchange.com
