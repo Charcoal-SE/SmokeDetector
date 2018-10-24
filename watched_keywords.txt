@@ -6212,7 +6212,6 @@
 1539872781	WELZ	icepick\.io
 1539873013	Zoe	plasticsurgery\.review
 1539877140	doppelspooker	lexus\W?domino(web)?
-1539877196	doppelspooker	123helpline\.com
 1539884615	Erik the Outgolfer	gracesmithluv772@gmail\.com
 1539884648	Makyen	lendingplus\.info(?:@gmail\.com)?
 1539884659	Makyen	OLORUNODUDUWASPIRITUALTEMPLE(?:@gmail\.com)?
