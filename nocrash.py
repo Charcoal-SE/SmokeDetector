@@ -38,7 +38,7 @@ def log(message):
 
 
 def warn(message):
-    logging.warn('[NoCrash] {}'.format(message))
+    logging.warning('[NoCrash] {}'.format(message))
 
 
 def error(message):
