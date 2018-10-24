@@ -349,7 +349,7 @@ def refresh_sites():
     url = "https://api.stackexchange.com/2.2/sites"
     while has_more:
         params = {
-            'filter': '!%29Qpa1bTB_jCkeaZsqiQ8pDwI',
+            'filter': '!)Qpa1bTB_jCkeaZsqiQ8pDwI',
             'key': 'IAkbitmze4B8KpacUfLqkw((',
             'page': page,
             'pagesize': 500
