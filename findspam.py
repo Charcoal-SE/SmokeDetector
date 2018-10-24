@@ -740,6 +740,7 @@ def watched_asn_for_url_hostname(s, site):
             '31863',   # DACEN-2 - Centrilogic, Inc., US
             '36352',   # AS-COLOCROSSING - ColoCrossing, US
             '40676',   # AS40676 - Psychz Networks, US
+            '43317',   # FISHNET-AS, RU
             '45839',   # SHINJIRU-MY-AS-AP Shinjiru Technology Sdn Bhd, MY
             '46261',   # QUICKPACKET - QuickPacket, LLC, US
             '54290',   # HOSTWINDS - Hostwinds LLC., US
