@@ -75,7 +75,7 @@ def test_init(room_config, client_constructor, thread):
 
     room_config.side_effect = lambda _: room_config.get_original()("test/test_rooms.yml")
     GlobalVars.standby_mode = True
-    chatcommunicate.init("shoutouts", "to simpleflips")
+    chatcommunicate.init("shoutouts", "to simpleflips", try_cookies=False)
 
     assert len(chatcommunicate._rooms) == 0
 
@@ -104,7 +104,7 @@ def test_init(room_config, client_constructor, thread):
             raise Exception()
 
     client.login.side_effect = throw_every_other
-    chatcommunicate.init("shoutouts", "to simpleflips")
+    chatcommunicate.init("shoutouts", "to simpleflips", try_cookies=False)
 
     assert client_constructor.call_count == 3
     client_constructor.assert_any_call("stackexchange.com")
