@@ -73,20 +73,6 @@ class Metasmoke:
                     time.sleep(10)
 
     @staticmethod
-    def check_last_pingtime():
-        if GlobalVars.metasmoke_last_ping_time is None:
-            log('warning', "SmokeDetector has not received a ping yet, forcing SmokeDetector restart "
-                           "to try and reset the connection states.", f=True)
-            os._exit(10)
-        elif GlobalVars.metasmoke_last_ping_time < (datetime.now() - timedelta(seconds=120)) \
-                and not GlobalVars.metasmoke_down:
-            log('warning', "Last metasmoke ping with a response was over 120 seconds ago, "
-                           "forcing SmokeDetector restart to reset all sockets.", f=True)
-            # os._exit(10)
-        else:
-            pass  # Do nothing
-
-    @staticmethod
     def handle_websocket_data(data):
         if "message" not in data:
             return

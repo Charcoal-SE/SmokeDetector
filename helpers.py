@@ -39,6 +39,7 @@ def log(log_level, *args, f=False):
         'debug': [0, 'grey'],
         'info': [1, 'cyan'],
         'warning': [2, 'yellow'],
+        'warn': [2, 'yellow'],
         'error': [3, 'red']
     }
 

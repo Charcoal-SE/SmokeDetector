@@ -118,7 +118,6 @@ GlobalVars.standby_mode = "standby" in sys.argv
 
 chatcommunicate.init(username, password)
 Tasks.periodic(Metasmoke.send_status_ping, interval=60)
-Tasks.periodic(Metasmoke.check_last_pingtime, interval=30)
 
 if GlobalVars.standby_mode:
     chatcommunicate.tell_rooms_with("debug", GlobalVars.standby_message)
