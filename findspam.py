@@ -688,6 +688,7 @@ def watched_ns_for_url_domain(s, site):
         'puredownloads.website.',
         'hostblast.net.',
         'webhouse.sk.',
+        'guzelhosting.com.',
     ])
 
 
