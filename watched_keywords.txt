@@ -5577,7 +5577,6 @@
 1537081344	Glorfindel	kidwalkers\.com
 1537088277	JoErNanO	homecityflights\.com
 1537091243	Glorfindel	shortkeys\.top
-1537091317	Glorfindel	paykeyy\.com
 1537094864	Glorfindel	borosoraa\.blogspot
 1537099022	tripleee	srf-indonesia\.web\.id
 1537157589	tripleee	natural\W?herbal\W?remedy(?:\W?blog)?
