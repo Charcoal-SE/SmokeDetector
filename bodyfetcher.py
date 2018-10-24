@@ -253,7 +253,7 @@ class BodyFetcher:
             log('debug', sorted(posts))
 
         question_modifier = ""
-        pagesize_modifier = ""
+        pagesize_modifier = {}
 
         if site == "stackoverflow.com":
             # Not all SO questions are shown in the realtime feed. We now
@@ -263,15 +263,20 @@ class BodyFetcher:
             else:
                 pagesize = "25"
 
-            pagesize_modifier = "&pagesize={pagesize}" \
-                                "&min={time_length}".format(pagesize=pagesize, time_length=str(self.last_activity_date))
+            pagesize_modifier = {
+                'pagesize': pagesize,
+                'min': str(self.last_activity_date)
+            }
         else:
             question_modifier = "/{0}".format(";".join([str(post) for post in posts]))
 
-        url = "https://api.stackexchange.com/2.2/questions{q_modifier}?site={site}" \
-              "&filter=!*xq08dCDNr)PlxxXfaN8ntivx(BPlY_8XASyXLX-J7F-)VK*Q3KTJVkvp*&key=IAkbitmze4B8KpacUfLqkw((" \
-              "{optional_min_query_param}".format(q_modifier=question_modifier, site=site,
-                                                  optional_min_query_param=pagesize_modifier)
+        url = "https://api.stackexchange.com/2.2/questions{}".format(question_modifier)
+        params = {
+            'filter': '!*xq08dCDNr)PlxxXfaN8ntivx(BPlY_8XASyXLX-J7F-)VK*Q3KTJVkvp*',
+            'key': 'IAkbitmze4B8KpacUfLqkw((',
+            'site': site
+        }
+        params.update(pagesize_modifier)
 
         # wait to make sure API has/updates post data
         time.sleep(3)
@@ -282,7 +287,7 @@ class BodyFetcher:
             time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
         try:
             time_request_made = datetime.now().strftime('%H:%M:%S')
-            response = requests.get(url, timeout=20).json()
+            response = requests.get(url, params=params, timeout=20).json()
         except (requests.exceptions.Timeout, requests.ConnectionError, Exception):
             # Any failure in the request being made (timeout or otherwise) should be added back to
             # the queue.

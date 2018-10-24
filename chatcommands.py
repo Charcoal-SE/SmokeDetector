@@ -1177,13 +1177,13 @@ def whois(msg, role):
         raise CmdException("That is not a user level I can check. "
                            "I know about {0}".format(", ".join(set(VALID_ROLES.values()))))
 
-    filter = "HMMKFJ"
-    ms_route = "https://metasmoke.erwaysoftware.com/api/v2.0/users/with_role/{}?key={}&per_page=100&filter={}".format(
-        VALID_ROLES[role],
-        GlobalVars.metasmoke_key,
-        filter)
-
-    user_response = requests.get(ms_route)
+    ms_route = "https://metasmoke.erwaysoftware.com/api/v2.0/users/with_role/{}".format(VALID_ROLES[role])
+    params = {
+        'filter': 'HMMKFJ',
+        'key': GlobalVars.metasmoke_key,
+        'per_page': 100
+    }
+    user_response = requests.get(ms_route, params=params)
     user_response.encoding = 'utf-8-sig'
     user_response = user_response.json()
 
@@ -1316,6 +1316,8 @@ def allspam(msg, url):
     :param url: A user profile URL
     :return:
     """
+
+    api_key = 'IAkbitmze4B8KpacUfLqkw(('
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
         raise CmdException("You can execute the !!/allspam command again in {} seconds. "
@@ -1335,10 +1337,12 @@ def allspam(msg, url):
         if GlobalVars.api_backoff_time > time.time():
             time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
         # Fetch sites
-        api_filter = "!6Pbp)--cWmv(1"
-        request_url = "http://api.stackexchange.com/2.2/users/{}/associated?filter={}&key=IAkbitmze4B8KpacUfLqkw((" \
-            .format(user[0], api_filter)
-        res = requests.get(request_url).json()
+        request_url = "http://api.stackexchange.com/2.2/users/{}/associated".format(user[0])
+        params = {
+            'filter': '!6Pbp)--cWmv(1',
+            'key': api_key
+        }
+        res = requests.get(request_url, params=params).json()
         if "backoff" in res:
             if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
                 GlobalVars.api_backoff_time = time.time() + res["backoff"]
@@ -1361,10 +1365,13 @@ def allspam(msg, url):
         if GlobalVars.api_backoff_time > time.time():
             time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
         # Fetch posts
-        api_filter = "!)Q4RrMH0DC96Y4g9yVzuwUrW"
-        request_url = "http://api.stackexchange.com/2.2/users/{}/posts?site={}&filter={}&key=IAkbitmze4B8KpacUfLqkw((" \
-            .format(u_id, u_site, api_filter)
-        res = requests.get(request_url).json()
+        request_url = "http://api.stackexchange.com/2.2/users/{}/posts".format(u_id)
+        params = {
+            'filter': '!)Q4RrMH0DC96Y4g9yVzuwUrW',
+            'key': api_key,
+            'site': u_site
+        }
+        res = requests.get(request_url, params=params).json()
         if "backoff" in res:
             if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
                 GlobalVars.api_backoff_time = time.time() + res["backoff"]
@@ -1401,10 +1408,13 @@ def allspam(msg, url):
                 if GlobalVars.api_backoff_time > time.time():
                     time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
                 # Fetch posts
-                filter = "!*Jxb9s5EOrE51WK*"
-                req_url = "http://api.stackexchange.com/2.2/answers/{}?site={}&filter={}&key=IAkbitmze4B8KpacUfLqkw((" \
-                    .format(post['post_id'], u_site, filter)
-                answer_res = requests.get(req_url).json()
+                req_url = "http://api.stackexchange.com/2.2/answers/{}".format(post['post_id'])
+                params = {
+                    'filter': '!*Jxb9s5EOrE51WK*',
+                    'key': api_key,
+                    'site': u_site
+                }
+                answer_res = requests.get(req_url, params=params).json()
                 if "backoff" in res:
                     if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
                         GlobalVars.api_backoff_time = time.time() + res["backoff"]
