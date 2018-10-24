@@ -40,11 +40,11 @@ class Flovis:
             def run():
                 try:
                     self.ws.run_forever()
+                except websocket._exceptions.WebSocketConnectionClosedException:
+                    log('error', 'Flovis websocket closed unexpectedly, assuming problems and nullifying ws')
                 except websocket._exceptions.WebSocketException as e:
                     if "socket is already opened" not in str(e):
                         raise
-                except websocket._exceptions.WebSocketConnectionClosedException:
-                    log('error', 'Flovis websocket closed unexpectedly, assuming problems and nullifying ws')
                 except (AttributeError, OSError) as e:
                     log('error', str(e))
                 finally:
