@@ -62,7 +62,7 @@ _pickle_run = threading.Event()
 _cookies = {}
 
 
-def init(username, password):
+def init(username, password, try_cookies=True):
     global _clients
     global _rooms
     global _room_data
@@ -73,7 +73,7 @@ def init(username, password):
         client = Client(site)
         logged_in = False
 
-        if os.path.exists("cookies.p"):
+        if try_cookies and os.path.exists("cookies.p"):
             with open("cookies.p", "rb") as f:
                 _cookies = pickle.load(f)
 
@@ -117,8 +117,9 @@ def init(username, password):
     threading.Thread(name="pickle ---rick--- runner", target=pickle_last_messages, daemon=True).start()
     threading.Thread(name="message sender", target=send_messages, daemon=True).start()
 
-    with open("cookies.p", "wb") as f:
-        pickle.dump(_cookies, f, protocol=pickle.HIGHEST_PROTOCOL)
+    if try_cookies:
+        with open("cookies.p", "wb") as f:
+            pickle.dump(_cookies, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 def join_command_rooms():

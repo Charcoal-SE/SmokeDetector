@@ -62,7 +62,7 @@ def test_init(room_config, client_constructor, thread):
     threw_exception = False
 
     try:
-        chatcommunicate.init("shoutouts", "to simpleflips")
+        chatcommunicate.init("shoutouts", "to simpleflips", try_cookies=False)
     except Exception as e:
         assert str(e) == "Failed to log into " + next(iter(chatcommunicate._clients)) + ", max retries exceeded"
         threw_exception = True
@@ -78,7 +78,6 @@ def test_init(room_config, client_constructor, thread):
     chatcommunicate.init("shoutouts", "to simpleflips")
 
     assert len(chatcommunicate._rooms) == 0
-    assert client.login.call_count == 3
 
     assert client_constructor.call_count == 3
     client_constructor.assert_any_call("stackexchange.com")
@@ -106,9 +105,6 @@ def test_init(room_config, client_constructor, thread):
 
     client.login.side_effect = throw_every_other
     chatcommunicate.init("shoutouts", "to simpleflips")
-
-    assert client.login.call_count == 6
-    assert counter == 6
 
     assert client_constructor.call_count == 3
     client_constructor.assert_any_call("stackexchange.com")
