@@ -72,6 +72,7 @@ bodyfetcherQueueTimings.p
 bodyfetcherMaxIds.p
 messageData.p
 deletionIDs.p
+cookies.p
 
 # - Newer than newer format pickle files:
 pickles/

@@ -1,4 +1,4 @@
-git+https://github.com/Manishearth/ChatExchange.git@a0307e431ea29983f846e770629f25bffb8c3814
+git+https://github.com/ArtOfCode-/ChatExchange.git@271f8390284e20206c1c73199615ef63efc0238c
 pbs>=0.110
 packaging>=16.8
 appdirs>=1.4.3

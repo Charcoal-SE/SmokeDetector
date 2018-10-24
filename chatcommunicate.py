@@ -1,4 +1,5 @@
 from chatexchange import events
+from chatexchange.browser import LoginError
 from chatexchange.messages import Message
 from chatexchange_extension import Client
 import collections
@@ -58,25 +59,44 @@ _msg_queue = queue.Queue()
 
 _pickle_run = threading.Event()
 
+_cookies = {}
+
 
 def init(username, password):
     global _clients
     global _rooms
     global _room_data
     global _last_messages
+    global _cookies
 
     for site in _clients.keys():
         client = Client(site)
+        logged_in = False
 
-        for retry in range(10):
+        if os.path.exists("cookies.p"):
+            with open("cookies.p", "rb") as f:
+                _cookies = pickle.load(f)
+
             try:
-                client.login(username, password)
-                break
-            except Exception as e:
+                client.login_with_cookie(_cookies[site])
+                logged_in = True
+                log('debug', 'Logged in using cached cookies')
+            except LoginError as e:
                 exc_type, exc_obj, exc_tb = sys.exc_info()
                 log('debug', 'Login error {}: {}'.format(exc_type.__name__, exc_obj))
-        else:
-            raise Exception("Failed to log into " + site + ", max retries exceeded")
+                log('debug', 'Falling back to credential-based login')
+                del _cookies[site]
+
+        if not logged_in:
+            for retry in range(3):
+                try:
+                    _cookies[site] = client.login(username, password)
+                    break
+                except Exception as e:
+                    exc_type, exc_obj, exc_tb = sys.exc_info()
+                    log('debug', 'Login error {}: {}'.format(exc_type.__name__, exc_obj))
+            else:
+                raise Exception("Failed to log into " + site + ", max retries exceeded")
 
         _clients[site] = client
 
@@ -96,6 +116,9 @@ def init(username, password):
 
     threading.Thread(name="pickle ---rick--- runner", target=pickle_last_messages, daemon=True).start()
     threading.Thread(name="message sender", target=send_messages, daemon=True).start()
+
+    with open("cookies.p", "wb") as f:
+        pickle.dump(_cookies, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 
 def join_command_rooms():
