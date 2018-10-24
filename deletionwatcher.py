@@ -123,8 +123,12 @@ class DeletionWatcher:
 
         for site, posts in saved.items():
             ids = ";".join(post_id for post_id in posts if not DeletionWatcher._ignore((post_id, site)))
-            uri = "https://api.stackexchange.com/2.2/posts/{}?site={}&key=IAkbitmze4B8KpacUfLqkw((".format(ids, site)
-            res = requests.get(uri)
+            uri = "https://api.stackexchange.com/2.2/posts/{}".format(ids)
+            params = {
+                'site': site,
+                'key': 'IAkbitmze4B8KpacUfLqkw(('
+            }
+            res = requests.get(uri, params=params)
             json = res.json()
 
             if "items" not in json:
