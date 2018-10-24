@@ -4036,7 +4036,6 @@
 1529904284	tripleee	jtfreshly\.co\.uk
 1529905750	tripleee	OSRSA10
 1529910857	Makyen	bestrobotsguide\.com
-1529911150	A J	jagrankiparty\.com
 1529911257	tripleee	[a-z_]*(?:91_*)?9213123120[a-z_]*
 1529911292	tripleee	[a-z_]*(?:91_*)?9810235505[a-z_]*
 1529911340	tripleee	bookingevents\.in
