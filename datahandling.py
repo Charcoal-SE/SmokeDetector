@@ -346,11 +346,17 @@ def fetch_lines_from_error_log(line_count):
 def refresh_sites():
     has_more = True
     page = 1
+    url = "https://api.stackexchange.com/2.2/sites"
     while has_more:
-        response = requests.get("https://api.stackexchange.com/2.2/sites"
-                                "?filter=!%29Qpa1bTB_jCkeaZsqiQ8pDwI&pagesize=500&page=" + str(page) +
-                                "&key=IAkbitmze4B8KpacUfLqkw((")
-        data = json.loads(response.text)
+        params = {
+            'filter': '!%29Qpa1bTB_jCkeaZsqiQ8pDwI',
+            'key': 'IAkbitmze4B8KpacUfLqkw((',
+            'page': page,
+            'pagesize': 500
+        }
+        response = requests.get(url, params=params)
+
+        data = response.json()
         if "error_message" in data:
             return False, data["error_message"]
         if "items" not in data:
