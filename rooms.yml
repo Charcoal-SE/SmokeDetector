@@ -353,6 +353,26 @@ stackexchange.com:
     commands: false
     msg_types:
       - site-japanese.stackexchange.com
+      
+  84778:
+    commands: false
+    msg_types:
+      - site-russian.stackexchange.com
+      - site-german.stackexchange.com
+      - site-korean.stackexchange.com
+      - site-esperanto.stackexchange.com
+      - site-french.stackexchange.com
+      - site-spanish.stackexchange.com
+      - site-chinese.stackexchange.com
+      - site-japanese.stackexchange.com
+      - site-italian.stackexchange.com
+      - site-portuguese.stackexchange.com
+      - site-ukrainian.stackexchange.com
+      - site-latin.stackexchange.com
+      - site-ru.stackoverflow.com
+      - site-pt.stackoverflow.com
+      - site-ja.stackoverflow.com
+      - site-es.stackoverflow.com
 
 meta.stackexchange.com:
   89:  # Tavern on the Meta
