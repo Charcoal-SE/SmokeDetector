@@ -1653,7 +1653,7 @@ keto\W?max\W?diet
 blitz\W*protocol
 weight\W*loss\W*plus
 nutrivano(?:\W?forskolin)?
-mindzr\W?brain
+mindzr(?:\W?brain)?
 vandexafil\W?ultra
 [a-z_]*(?:1_*)?844[\W_]*444[\W_]*4[\W_]*148[a-z_]*
 titan\W?testo
