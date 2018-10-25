@@ -674,26 +674,17 @@ def master():
     os._exit(8)
 
 
-@command(privileged=True)
-def pip_update():
+@command(privileged=True, aliases=['pip-update-force'], give_name=True)
+def pip_update(alias_used="pip-update"):
     """
     Initiate `pip` requirement updates in userspace, or warn if we're in a venv.
     :return: None
     """
-    if not is_venv():
+    if alias_used == 'pip-update-force' or is_venv():
+        os._exit(20)
+    else:
         raise CmdException("Smokey is not running in a Python virtualenv.  Updating may cause other unrelated things "
                            "to break.  Use pip-force to force the pip update anyways.")
-    else:
-        os._exit(20)
-
-
-@command(privileged=True)
-def pip_force():
-    """
-    Force `pip` upgrades regardless of env.
-    :return: None
-    """
-    os._exit(20)
 
 
 # noinspection PyIncorrectDocstring,PyProtectedMember
