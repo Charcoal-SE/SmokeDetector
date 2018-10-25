@@ -683,8 +683,8 @@ def pip_update(alias_used="pip-update"):
     if alias_used == 'pip-update-force' or is_venv():
         os._exit(20)
     else:
-        raise CmdException("Smokey is not running in a Python virtualenv.  Updating may cause other unrelated things "
-                           "to break.  Use pip-force to force the pip update anyways.")
+        raise CmdException("SmokeDetector  is not running in a Python virtualenv. Updating may cause other unrelated "
+                           "things to break.  Use `pip-update-force` to force the update anyways.")
 
 
 # noinspection PyIncorrectDocstring,PyProtectedMember
