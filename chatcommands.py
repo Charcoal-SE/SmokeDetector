@@ -674,7 +674,7 @@ def master():
     os._exit(8)
 
 
-@command(privileged=True, aliases=['pip-update'])
+@command(privileged=True)
 def pip_update():
     """
     Initiate `pip` requirement updates in userspace, or warn if we're in a venv.
