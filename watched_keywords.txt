@@ -6322,3 +6322,4 @@
 1540462811	doppelspooker	[\w\d]*password[\w\d]*\.weebly\.com
 1540463647	tripleee	jammer-shop\.com
 1540463955	doppelspooker	[\w\d\-]*jammer[\w\d\-]*\.com?
+1540464747	doppelspooker	youtube2video\.com
