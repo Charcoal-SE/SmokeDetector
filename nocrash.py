@@ -33,6 +33,11 @@ stoprunning = False
 ecode = None  # Define this to prevent errors
 
 
+def is_venv():
+    return (hasattr(sys, 'real_prefix') or
+            (hasattr(sys, 'base_prefix') and sys.base_prefix != sys.prefix))
+
+
 def log(message):
     logging.info('[NoCrash] {}'.format(message))
 
@@ -155,11 +160,17 @@ while not stoprunning:
         crashcount = 0
 
         log('Initiating automated `pip` upgrade calls within userspace.')
+        if is_venv():
+            command = "python3 -m pip install --upgrade -r "
+        else:
+            command = "python3 -m pip install --upgrade -user -r "
+            warn("This may break your user-level package space, this is on you, and not the Charcoal team.")
+
         sleep(5)
         errored = False
         for filename in ['requirements.txt', 'user_requirements.txt']:
             try:
-                ecode = sp.call('python3 -m pip install --upgrade --user -r ' + filename, env=os.environ.copy())
+                ecode = sp.call(command + filename, env=os.environ.copy())
             except sp.SubprocessError:
                 errored = True
                 exc_type, exc_obj, exc_tb = sys.exc_info()
