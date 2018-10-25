@@ -143,6 +143,22 @@ while not stoprunning:
         sleep(5)
         count = 0
 
+    elif ecode == 20:
+        log('Initiating automated `pip` upgrade calls within userspace.')
+        sleep(5)
+        errored = False
+        for filename in ['requirements.txt', 'user_requirements.txt']:
+            try:
+                ecode = sp.call('pip3 install --upgrade --user -r ' + filename, env=os.environ.copy())
+            except sp.SubprocessError:
+                errored = True
+                exc_type, exc_obj, exc_tb = sys.exc_info()
+                log("subprocess.call() error {0}: {1}".format(exc_type.__name__, exc_obj))
+
+        if errored:
+            error('Could not upgrade PIP, please check the logs. Terminating...')
+            break
+
     else:
         error('Died for unknown reason -- check logs.  Sleeping before restart')
         sleep(5)
