@@ -25,7 +25,7 @@ from html import unescape
 from ast import literal_eval
 # noinspection PyCompatibility
 import regex
-from helpers import only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, reload_modules
+from helpers import only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, reload_modules, is_venv
 from classes import Post
 from classes.feedback import *
 
@@ -677,10 +677,21 @@ def master():
 @command(privileged=True, aliases=['pip-update'])
 def pip_update():
     """
-    Initiate `pip` requirement updates in userspace.
+    Initiate `pip` requirement updates in userspace, or warn if we're in a venv.
     :return: None
     """
-    # Exit code 20 triggers the pip calls in nocrash.py
+    if not is_venv():
+        raise CmdException("Smokey is not running in a Python virtualenv.  Updating may cause other unrelated things "
+                           "to break.  Use pip-force to force the pip update anyways.")
+    else:
+        os._exit(20)
+
+@command(privileged=True, aliases=['pip-force'])
+def pip_force():
+    """
+    Force `pip` upgrades regardless of env.
+    :return: None
+    """
     os._exit(20)
 
 

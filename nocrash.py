@@ -9,6 +9,7 @@ from time import sleep
 import logging
 import sys
 from getpass import getpass
+from helpers import is_venv
 if 'windows' in str(platform.platform()).lower():
     # noinspection PyPep8Naming
     from classes import Git as git
@@ -31,11 +32,6 @@ count = 0
 crashcount = 0
 stoprunning = False
 ecode = None  # Define this to prevent errors
-
-
-def is_venv():
-    return (hasattr(sys, 'real_prefix') or
-            (hasattr(sys, 'base_prefix') and sys.base_prefix != sys.prefix))
 
 
 def log(message):
@@ -163,8 +159,7 @@ while not stoprunning:
         if is_venv():
             command = "python3 -m pip install --upgrade -r "
         else:
-            command = "python3 -m pip install --upgrade -user -r "
-            warn("This may break your user-level package space, this is on you, and not the Charcoal team.")
+            command = "python3 -m pip install --upgrade --user -r "
 
         sleep(5)
         errored = False
