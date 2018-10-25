@@ -157,7 +157,7 @@ while not stoprunning:
 
         if errored:
             error('Could not upgrade PIP, please check the logs. Terminating...')
-            break
+            stoprunning = True
 
     else:
         error('Died for unknown reason -- check logs.  Sleeping before restart')
