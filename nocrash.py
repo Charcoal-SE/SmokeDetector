@@ -149,7 +149,7 @@ while not stoprunning:
         errored = False
         for filename in ['requirements.txt', 'user_requirements.txt']:
             try:
-                ecode = sp.call('pip3 install --upgrade --user -r ' + filename, env=os.environ.copy())
+                ecode = sp.call('python3 -m pip install --upgrade --user -r ' + filename, env=os.environ.copy())
             except sp.SubprocessError:
                 errored = True
                 exc_type, exc_obj, exc_tb = sys.exc_info()
