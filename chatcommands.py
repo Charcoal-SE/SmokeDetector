@@ -674,6 +674,16 @@ def master():
     os._exit(8)
 
 
+@command(privileged=True, aliases=['pip-update'])
+def pip_update():
+    """
+    Initiate `pip` requirement updates in userspace.
+    :return: None
+    """
+    # Exit code 20 triggers the pip calls in nocrash.py
+    os._exit(20)
+
+
 # noinspection PyIncorrectDocstring,PyProtectedMember
 @command(privileged=True)
 def pull():
