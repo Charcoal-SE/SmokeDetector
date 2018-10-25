@@ -6315,7 +6315,6 @@
 1540445650	tripleee	internshipinchennai\.org\.in
 1540448700	Tetsuya Yamamoto	decormyplace\.in
 1540449446	Tetsuya Yamamoto	leptosinpusat\.com
-1540449989	Tetsuya Yamamoto	jobsbud\.com
 1540453589	Tetsuya Yamamoto	freelancinggig\.com
 1540458795	Tetsuya Yamamoto	allonlineshopbd\.com
 1540462769	doppelspooker	hotmailpassword\d{0,3}\.weebly\.com
