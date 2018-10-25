@@ -686,6 +686,7 @@ def pip_update():
     else:
         os._exit(20)
 
+
 @command(privileged=True, aliases=['pip-force'])
 def pip_force():
     """
