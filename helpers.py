@@ -53,6 +53,9 @@ def log(log_level, *args, f=False):
                              "  ".join([str(x) for x in args]))
     print(log_str, file=sys.stderr)
 
+    if level == 3:
+        traceback.print_stack()
+
     if f:  # Also to file
         log_file(log_level, *args)
 
