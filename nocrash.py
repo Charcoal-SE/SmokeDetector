@@ -144,6 +144,16 @@ while not stoprunning:
         count = 0
 
     elif ecode == 20:
+        log('Pull in new updates beforeo we do `pip` upgrades.')
+        if 'windows' not in str(platform.platform()).lower():
+            git.checkout('deploy')
+            git.pull()
+        else:
+            warn('Not pulling updates; we are on Windows')
+
+        count = 0
+        crashcount = 0
+
         log('Initiating automated `pip` upgrade calls within userspace.')
         sleep(5)
         errored = False
