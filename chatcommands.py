@@ -687,7 +687,7 @@ def pip_update():
         os._exit(20)
 
 
-@command(privileged=True, aliases=['pip-force'])
+@command(privileged=True)
 def pip_force():
     """
     Force `pip` upgrades regardless of env.
