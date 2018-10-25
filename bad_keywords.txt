@@ -1675,3 +1675,4 @@ covee
 caviar\W?lift
 adderall
 ketolyn
+auvela(?:\W?cream)?
