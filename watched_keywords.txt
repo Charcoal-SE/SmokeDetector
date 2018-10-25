@@ -6320,3 +6320,4 @@
 1540458795	Tetsuya Yamamoto	allonlineshopbd\.com
 1540462769	doppelspooker	hotmailpassword\d{0,3}\.weebly\.com
 1540462811	doppelspooker	[\w\d]*password[\w\d]*\.weebly\.com
+1540463647	tripleee	jammer-shop\.com
