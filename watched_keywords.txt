@@ -6323,3 +6323,4 @@
 1540463955	doppelspooker	[\w\d\-]*jammer[\w\d\-]*\.com?
 1540464747	doppelspooker	youtube2video\.com
 1540485449	Erik the Outgolfer	sweetandcute\.com
+1540487480	Erik the Outgolfer	homeopathybd\.com
