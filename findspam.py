@@ -403,12 +403,12 @@ def pattern_product_name(s, site):
         "Elite", "Exceptional", "Enhance(?:ment)?", "Nitro", "Boost(?:er)?", "Supplements?",
         "Pure", "Skin", "Muscle", "Therm[ao]", "Neuro", "Luma", "Rapid", "Tone", "Keto", "Fuel", "Cream",
         "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Male", "Weight[ -](?:Loss|Reduction)", "Radiant(?:ly)?",
-        "Hyper(?:tone)?", "Boost(?:er|ing)?", "Youth", "Monster", "Enlarge(?:ment)"
+        "Hyper(?:tone)?", "Boost(?:er|ing)?", "Youth", "Monster", "Enlarge(?:ment)", "Obat",
     ]
     keywords = required_keywords + [
         "Deep", "Pro", "Advanced?", "Divine", "Royale", "Angele*", "Trinity", "Andro", "Max+", "Force", "Health",
         "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect", "Bio", "Natural", "Oil",
-        "E?xtreme", "(?:Pure)?Fit", "Thirsty?", "Grow", "Complete", "Reviews?", "Bloom(?:ing)?",
+        "E?xtreme", "(?:Pure)?Fit", "Thirsty?", "Grow", "Complete", "Reviews?", "Bloom(?:ing)?", "BHB", "Pure",
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords.extend([r"X[\dLRT]?", "Alpha", "Plus", "Prime", "Formula"])
@@ -418,7 +418,7 @@ def pattern_product_name(s, site):
     match_items = list(regex.compile(r"(?i)\b(?P<x>{0})(?:[ -](?P<x>{0}))+\b".format(keywords)).finditer(s))
     matches = [m.captures("x") for m in match_items if required.search(m.group(0))]
     # Total "unique words in each match"
-    total_words = sum(filter(lambda n: n >= 2, [len(set([regex.sub(r"\d", "", w) for w in m])) for m in matches]))
+    total_words = sum([n for n in [len(set([regex.sub(r"\d", "", w) for w in m])) for m in matches] if n >= 2])
     if total_words >= 3:
         return True, u"Pattern-matching product name: " + FindSpam.match_infos(match_items)
     return False, ""
@@ -426,7 +426,7 @@ def pattern_product_name(s, site):
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 def what_is_this_pharma_title(s, site):   # title "what is this Xxxx?"
-    if regex.compile(r'^what is this (?:[A-Z][a-z]+|https?://)').match(s):
+    if regex.compile(r'(?i)^what is this (?:(?-i:[A-Z][a-z]+)|https?://)').match(s):
         return True, u'Title starts with "what is this"'
     else:
         return False, ""
