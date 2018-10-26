@@ -80,7 +80,7 @@ class GlobalVars:
     code_privileged_users = None
     censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
 
-    # GlobalVars.reload()
+    # these are loaded in GlobalVars.reload()
     commit = None
     commit_with_author = None
     on_master = None
@@ -91,6 +91,7 @@ class GlobalVars:
     s_norestart2 = ""
     apiquota = -1
     bodyfetcher = None
+    cookies = None
     se_sites = []
     why_data = []
     notifications = []

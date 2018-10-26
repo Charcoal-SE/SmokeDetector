@@ -60,41 +60,38 @@ _msg_queue = queue.Queue()
 
 _pickle_run = threading.Event()
 
-_cookies = {}
-
 
 def init(username, password, try_cookies=True):
     global _clients
     global _rooms
     global _room_data
     global _last_messages
-    global _cookies
 
     for site in _clients.keys():
         client = Client(site)
         logged_in = False
 
-        if try_cookies and os.path.exists("cookies.p"):
-            with open("cookies.p", "rb") as f:
-                _cookies = pickle.load(f)
-                if _cookies is None:
-                    os.remove("cookies.p")
-                else:
-                    try:
-                        if _cookies[site] is not None:
-                            client.login_with_cookie(_cookies[site])
-                            logged_in = True
-                            log('debug', 'Logged in using cached cookies')
-                    except LoginError as e:
-                        exc_type, exc_obj, exc_tb = sys.exc_info()
-                        log('debug', 'Login error {}: {}'.format(exc_type.__name__, exc_obj))
-                        log('debug', 'Falling back to credential-based login')
-                        del _cookies[site]
+        if try_cookies:
+            if GlobalVars.cookies is None:
+                datahandling._remove_pickle("cookies.p")
+            else:
+                cookies = GlobalVars.cookies
+                try:
+                    if cookies[site] is not None:
+                        client.login_with_cookie(cookies[site])
+                        logged_in = True
+                        log('debug', 'Logged in using cached cookies')
+                except LoginError as e:
+                    exc_type, exc_obj, exc_tb = sys.exc_info()
+                    log('debug', 'Login error {}: {}'.format(exc_type.__name__, exc_obj))
+                    log('debug', 'Falling back to credential-based login')
+                    del cookies[site]
+                    datahandling.dump_cookies()
 
         if not logged_in:
             for retry in range(3):
                 try:
-                    _cookies[site] = client.login(username, password)
+                    GlobalVars.cookies[site] = client.login(username, password)
                     break
                 except Exception as e:
                     exc_type, exc_obj, exc_tb = sys.exc_info()
@@ -122,8 +119,7 @@ def init(username, password, try_cookies=True):
     threading.Thread(name="message sender", target=send_messages, daemon=True).start()
 
     if try_cookies:
-        with open("cookies.p", "wb") as f:
-            pickle.dump(_cookies, f, protocol=pickle.HIGHEST_PROTOCOL)
+        datahandling.dump_cookies()
 
 
 def join_command_rooms():
