@@ -413,7 +413,7 @@ def pattern_product_name(s, site):
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords.extend([r"X[\dLRT]?", "Alpha", "Plus", "Prime", "Formula", "Max+"])
     keywords = regex.compile(r"(?i)\b(?P<x>{0})(?:[ -]?(?P<x>{0}))+\b".format("|".join(keywords)))
-    required = regex.compile(r"(?i)\b({})\b".format("|".join(required_keywords)))
+    required = regex.compile(r"(?i){}".format("|".join(required_keywords)))
 
     match_items = list(keywords.finditer(s))
     matches = [m.captures("x") for m in match_items if required.search(m.group(0))]
