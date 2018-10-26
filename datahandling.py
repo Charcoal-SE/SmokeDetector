@@ -11,6 +11,7 @@ import math
 # noinspection PyCompatibility
 import regex
 
+from parsing import api_parameter_from_link, post_id_from_link
 from globalvars import GlobalVars
 import blacklists
 
