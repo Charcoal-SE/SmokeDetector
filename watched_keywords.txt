@@ -6333,3 +6333,4 @@
 1540522341	Makyen	^emily\W*snail$(?#username who posts spam about disk-partition.com)
 1540530669	tripleee	SPACEWEBHACKS
 1540536843	Tetsuya Yamamoto	customersolutioncare\.com
+1540536941	Tetsuya Yamamoto	qqklik55\.com
