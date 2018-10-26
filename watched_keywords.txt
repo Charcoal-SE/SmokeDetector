@@ -5329,7 +5329,6 @@
 1535966978	Tetsuya Yamamoto	avastcustomercare\.com
 1535967618	Tetsuya Yamamoto	yogenderempire\.com
 1535968055	Tetsuya Yamamoto	paragon-steels\.com
-1535970609	tripleee	mangesh\W*(?:\w+\W+)?dhulap
 1535972146	iBug	telstraemails\.com
 1535978792	tripleee	hkr016\.ooo
 1535979043	Tetsuya Yamamoto	wisledge\.com
@@ -6331,3 +6330,23 @@
 1540514267	Makyen	softlytips\.com
 1540516842	gparyani	pritamfreelancer\.blogspot\.com
 1540519722	Makyen	info\.fastservice22(?:@gmail\.com)?
+1540522341	Makyen	^emily\W*snail$(?#username who posts spam about disk-partition.com)
+1540530669	tripleee	SPACEWEBHACKS
+1540536843	Tetsuya Yamamoto	customersolutioncare\.com
+1540536941	Tetsuya Yamamoto	qqklik55\.com
+1540537419	Glorfindel	railway\W*result
+1540537580	Glorfindel	brushyourideas\.com
+1540538278	tripleee	bookbus\.asia
+1540539082	Tetsuya Yamamoto	FINANCEHACKERS01
+1540539471	Tetsuya Yamamoto	retinolmd\.weebly\.com
+1540540830	Makyen	technicalsupportforantivirus\.com
+1540542725	Makyen	(?:belinda@)?crovellbio\.com(?#email and domain)
+1540543465	Glorfindel	chcsi\.org
+1540544156	tripleee	ignite\W*no\W?2
+1540547290	Erik the Outgolfer	folivora\.ai
+1540548168	Erik the Outgolfer	Igesame
+1540548594	Erik the Outgolfer	techtoogle\.com
+1540554142	tripleee	csrservices\.wordpress
+1540554298	Erik the Outgolfer	language-school\.hk
+1540557459	Erik the Outgolfer	renbergfinancialserviceorg\W?@\W?gmail\W?\.\W?com
+1540557948	Erik the Outgolfer	amritshairnbeauty\.com

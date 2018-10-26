@@ -208,7 +208,7 @@ def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
     reasons = list(set(question_reasons) | set(answer_reasons))
 
     # Filter out watchlist results
-    filter_out = ["potentially bad ns"]
+    filter_out = ["potentially bad ns", "potentially bad asn"]
     if not is_watchlist:
         filter_out.append("potentially bad keyword")
     # Ignore "Mostly non-latin body/answer" for phone number watches

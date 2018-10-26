@@ -103,6 +103,8 @@ def load_files():
         GlobalVars.code_privileged_users = _load_pickle("codePrivileges.p", encoding='utf-8')
     if _has_pickle("reasonWeights.p"):
         GlobalVars.reason_weights = _load_pickle("reasonWeights.p", encoding='utf-8')
+    if _has_pickle("cookies.p"):
+        GlobalVars.cookies = _load_pickle("cookies.p", encoding='utf-8')
     blacklists.load_blacklists()
 
 
@@ -517,3 +519,7 @@ def can_report_now(user_id, chat_host):
                 return True, True
             return False, math.ceil(can_report_again - now)
     return True, True
+
+
+def dump_cookies():
+    _dump_pickle("cookies.p", GlobalVars.cookies)
