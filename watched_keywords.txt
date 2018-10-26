@@ -6331,3 +6331,4 @@
 1540514267	Makyen	softlytips\.com
 1540516842	gparyani	pritamfreelancer\.blogspot\.com
 1540519722	Makyen	info\.fastservice22(?:@gmail\.com)?
+1540522341	Makyen	^emily\W*snail$(?#username who posts spam about disk-partition.com)
