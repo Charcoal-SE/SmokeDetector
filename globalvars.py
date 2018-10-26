@@ -66,6 +66,10 @@ class GlobalVars:
         "potentially bad keyword in username",
         "potentially bad NS for domain in title",
         "potentially bad NS for domain in body",
+        "potentially bad NS for domain in answer",
+        "potentially bad ASN for domain in title",
+        "potentially bad ASN for domain in body",
+        "potentially bad ASN for domain in answer",
         "toxic body detected",
         "toxic answer detected",
     }
