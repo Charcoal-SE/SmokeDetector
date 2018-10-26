@@ -196,6 +196,7 @@ def add_whitelisted_user(user):
 def add_blacklisted_user(user, message_url, post_url):
     if is_blacklisted_user(user) or user is None:
         return
+    post_url = metasmoke.Metasmoke.resolve_post_link(post_url)
     GlobalVars.blacklisted_users.append((user, message_url, post_url))
     _dump_pickle("blacklistedUsers.p", GlobalVars.blacklisted_users)
 
