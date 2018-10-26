@@ -438,7 +438,7 @@ class Metasmoke:
             return response.url
         except Exception as e:
             log('error', "{}: {}".format(type(e).__name__, str(e)))
-            return post_url
+            return None
 
     @staticmethod
     def get_post_bodies_from_ms(post_url):

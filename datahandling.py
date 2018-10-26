@@ -193,7 +193,7 @@ def resolve_ms_link(post_url):
         return GlobalVars.ms_posts[identifier]
 
     ms_url = metasmoke.Metasmoke.resolve_post_link(post_url)
-    if ms_url == post_url:  # resolution failed
+    if not ms_url:  # resolution failed
         GlobalVars.ms_posts[identifier] = None
     else:
         GlobalVars.ms_posts[identifier] = ms_url
