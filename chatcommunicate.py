@@ -81,9 +81,10 @@ def init(username, password, try_cookies=True):
                     os.remove("cookies.p")
                 else:
                     try:
-                        client.login_with_cookie(_cookies[site])
-                        logged_in = True
-                        log('debug', 'Logged in using cached cookies')
+                        if _cookies[site] is not None:
+                            client.login_with_cookie(_cookies[site])
+                            logged_in = True
+                            log('debug', 'Logged in using cached cookies')
                     except LoginError as e:
                         exc_type, exc_obj, exc_tb = sys.exc_info()
                         log('debug', 'Login error {}: {}'.format(exc_type.__name__, exc_obj))
