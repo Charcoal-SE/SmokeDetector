@@ -6340,3 +6340,4 @@
 1540539082	Tetsuya Yamamoto	FINANCEHACKERS01
 1540539471	Tetsuya Yamamoto	retinolmd\.weebly\.com
 1540540830	Makyen	technicalsupportforantivirus\.com
+1540542725	Makyen	(?:belinda@)?crovellbio\.com(?#email and domain)
