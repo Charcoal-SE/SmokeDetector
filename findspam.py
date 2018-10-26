@@ -401,21 +401,21 @@ def pattern_product_name(s, site):
         "Testo(?:sterone)?s?", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Forskolin", "Diet", "Slim", "Serum",
         "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Shark", "Tank", "Peni(?:s|le)", "Pills?", "CBD",
         "Elite", "Exceptional", "Enhance(?:ment)?", "Nitro", "Boost(?:er)?", "Supplements?",
-        "Pure", "Skin", "Muscle", "Therm[ao]", "Neuro", "Luma", "Rapid", "Tone", "Keto", "Fuel", "Cream",
-        "(?:Anti-)?Ag(?:ed?|ing)", "Trim", "Male", "Weight[ -](?:Loss|Reduction)", "Radiant(?:ly)?",
+        "Skin", "Muscle", "Therm[ao]", "Neuro", "Luma", "Rapid", "Tone", "Keto", "Fuel", "Cream",
+        "(?:Anti)?[ -]?Ag(?:ed?|ing)", "Trim", "Male", "Weight[ -](?:Loss|Reduction)", "Radiant(?:ly)?",
         "Hyper(?:tone)?", "Boost(?:er|ing)?", "Youth", "Monster", "Enlarge(?:ment)", "Obat",
     ]
     keywords = required_keywords + [
-        "Deep", "Pro", "Advanced?", "Divine", "Royale", "Angele*", "Trinity", "Andro", "Max+", "Force", "Health",
+        "Deep", "Pro", "Advanced?", "Divine", "Royale", "Angele*", "Trinity", "Andro", "Force", "Health",
         "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect", "Bio", "Natural", "Oil",
-        "E?xtreme", "(?:Pure)?Fit", "Thirsty?", "Grow", "Complete", "Reviews?", "Bloom(?:ing)?", "BHB", "Pure",
+        "E?xtreme", "Fit", "Thirsty?", "Grow", "Complete", "Reviews?", "Bloom(?:ing)?", "BHB", "Pure",
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
-        keywords.extend([r"X[\dLRT]?", "Alpha", "Plus", "Prime", "Formula"])
-    keywords = "|".join(keywords)
+        keywords.extend([r"X[\dLRT]?", "Alpha", "Plus", "Prime", "Formula", "Max+"])
+    keywords = regex.compile(r"(?i)\b(?P<x>{0})(?:[ -]?(?P<x>{0}))+\b".format("|".join(keywords)))
     required = regex.compile(r"(?i)\b({})\b".format("|".join(required_keywords)))
 
-    match_items = list(regex.compile(r"(?i)\b(?P<x>{0})(?:[ -](?P<x>{0}))+\b".format(keywords)).finditer(s))
+    match_items = list(keywords.finditer(s))
     matches = [m.captures("x") for m in match_items if required.search(m.group(0))]
     # Total "unique words in each match"
     total_words = sum([n for n in [len(set([regex.sub(r"\d", "", w) for w in m])) for m in matches] if n >= 2])
