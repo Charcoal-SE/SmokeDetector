@@ -99,6 +99,7 @@ class GlobalVars:
     multiple_reporters = []
     api_calls_per_site = {}
     reason_weights = {}
+    metasmoke_links = {}
 
     standby_message = ""
     standby_mode = False

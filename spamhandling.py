@@ -58,8 +58,9 @@ def check_if_spam(post):
                 why = why[:-1]
             if blacklisted_post_url:
                 rel_url = blacklisted_post_url.replace("http:", "", 1)
+                ms_url = datahandling.resolve_ms_link(rel_url) or to_metasmoke_link(rel_url)
                 why += "\nBlacklisted user - blacklisted for {} ({}) by {}".format(
-                    blacklisted_post_url, to_metasmoke_link(rel_url), blacklisted_by)
+                    blacklisted_post_url, ms_url, blacklisted_by)
             else:
                 why += "\n" + u"Blacklisted user - blacklisted by {}".format(blacklisted_by)
     if test:
