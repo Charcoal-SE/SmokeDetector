@@ -59,15 +59,11 @@ def test_init(room_config, client_constructor, thread):
     client_constructor.return_value = client
 
     client.login.side_effect = Exception()
-    threw_exception = False
 
-    try:
+    # https://stackoverflow.com/questions/23337471/
+    with pytest.raises(Exception) as e:
         chatcommunicate.init("shoutouts", "to simpleflips", try_cookies=False)
-    except Exception as e:
-        assert str(e) == "Failed to log into " + next(iter(chatcommunicate._clients)) + ", max retries exceeded"
-        threw_exception = True
-
-    assert threw_exception
+    assert str(e) == "Failed to log into " + next(iter(chatcommunicate._clients)) + ", max retries exceeded"
 
     client.login.side_effect = None
     client.login.reset_mock()
