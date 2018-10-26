@@ -6260,7 +6260,6 @@
 1540159704	Tetsuya Yamamoto	linuxsecrets\.com
 1540161398	Makyen	chirurgie-en-tunisie\.com
 1540178932	Tetsuya Yamamoto	kodi\.ninja
-1540182333	tripleee	disk-partition\.com
 1540186764	Tetsuya Yamamoto	hatarcsarda\.com
 1540187829	Makyen	^Tonya Rabish$(?#User spams Avdshare)
 1540190708	Tetsuya Yamamoto	artelogic\.net
