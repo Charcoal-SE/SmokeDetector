@@ -109,3 +109,4 @@ jakri\Wkatra
 denya\Wgarda
 (?-i:^[a-z]{5}\W[a-z]{4}a$)
 Tyron P
+^mangesh\W*(?:\w+\W+)?dhulap$
