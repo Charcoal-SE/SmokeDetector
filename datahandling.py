@@ -190,15 +190,15 @@ def update_reason_weights():
 
 def resolve_ms_link(post_url):
     identifier = (api_parameter_from_link(post_url), post_id_from_link(post_url))
-    if identifier in GlobalVars.ms_posts:
-        return GlobalVars.ms_posts[identifier]
+    if identifier in GlobalVars.metasmoke_links:
+        return GlobalVars.metasmoke_links[identifier]
 
     ms_url = metasmoke.Metasmoke.resolve_post_link(post_url)
     if not ms_url:  # resolution failed
-        GlobalVars.ms_posts[identifier] = None
+        GlobalVars.metasmoke_links[identifier] = None
     else:
-        GlobalVars.ms_posts[identifier] = ms_url
-    _dump_pickle("metasmokeLinks.p", GlobalVars.ms_posts)
+        GlobalVars.metasmoke_links[identifier] = ms_url
+    _dump_pickle("metasmokeLinks.p", GlobalVars.metasmoke_links)
 
 
 # methods to add/remove whitelisted/blacklisted users, ignored posts, ...
