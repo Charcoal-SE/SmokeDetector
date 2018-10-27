@@ -11,6 +11,7 @@ import math
 # noinspection PyCompatibility
 import regex
 
+from parsing import api_parameter_from_link, post_id_from_link
 from globalvars import GlobalVars
 import blacklists
 
@@ -105,6 +106,8 @@ def load_files():
         GlobalVars.reason_weights = _load_pickle("reasonWeights.p", encoding='utf-8')
     if _has_pickle("cookies.p"):
         GlobalVars.cookies = _load_pickle("cookies.p", encoding='utf-8')
+    if _has_pickle("metasmokeLinks.p"):
+        GlobalVars.metasmoke_links = _load_pickle("metasmokeLinks.p", encoding='utf-8')
     blacklists.load_blacklists()
 
 
@@ -183,6 +186,20 @@ def update_reason_weights():
         d[item['reason_name'].lower()] = item['weight']
     GlobalVars.reason_weights = d
     _dump_pickle("reasonWeights.p", GlobalVars.reason_weights)
+
+
+def resolve_ms_link(post_url):
+    identifier = (api_parameter_from_link(post_url), post_id_from_link(post_url))
+    if identifier in GlobalVars.ms_posts:
+        return GlobalVars.ms_posts[identifier]
+
+    ms_url = metasmoke.Metasmoke.resolve_post_link(post_url)
+    if not ms_url:  # resolution failed
+        GlobalVars.ms_posts[identifier] = None
+    else:
+        GlobalVars.ms_posts[identifier] = ms_url
+    _dump_pickle("metasmokeLinks.p", GlobalVars.ms_posts)
+
 
 # methods to add/remove whitelisted/blacklisted users, ignored posts, ...
 

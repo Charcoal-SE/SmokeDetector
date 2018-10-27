@@ -426,6 +426,21 @@ class Metasmoke:
             Metasmoke.post("/api/v2.0/comments/post/{}".format(ms_id), params=params)
 
     @staticmethod
+    def resolve_post_link(post_url):
+        try:
+            ms_location = "/posts/uid/{}/{}".format(
+                parsing.api_parameter_from_link(post_url),
+                parsing.post_id_from_link(post_url)
+            )
+            response = Metasmoke.get(ms_location, allow_redirects=True, timeout=5.000)  # Strict timeout requirement
+            if response.url.endswith("posts"):  # Redirected to /posts... meh
+                raise ValueError("No post found on MS for {!r}".format(post_url))
+            return response.url
+        except Exception as e:
+            log('error', "{}: {}".format(type(e).__name__, str(e)))
+            return None
+
+    @staticmethod
     def get_post_bodies_from_ms(post_url):
         if not GlobalVars.metasmoke_key:
             return None
@@ -470,6 +485,9 @@ class Metasmoke:
         def func(url, *args, **kwargs):
             if not GlobalVars.metasmoke_host or GlobalVars.metasmoke_down:
                 return None
+
+            if 'timeout' not in kwargs:
+                kwargs['timeout'] = 10.000  # Don't throttle by MS
 
             response = None  # Should return None upon failure, if any
             try:
