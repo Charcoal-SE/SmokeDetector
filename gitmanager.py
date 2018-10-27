@@ -11,14 +11,14 @@ import requests
 from requests.auth import HTTPBasicAuth
 
 from urllib.parse import quote_plus
-if 'windows' in str(platform.platform()).lower():
+if 'windows' in platform.platform().lower():
     # noinspection PyPep8Naming
     from classes import Git as git, GitError
 else:
     from sh.contrib import git
     from sh import ErrorReturnCode as GitError
 
-from helpers import log, only_blacklists_changed
+from helpers import log, log_exception, only_blacklists_changed
 from globalvars import GlobalVars
 from blacklists import *
 
@@ -262,8 +262,11 @@ class GitManager:
 
         try:
             git.pull()
-        except GitError:
-            pass
+        except GitError as e:
+            if 'windows' in platform.platform().lower():
+                return False, "Not doing this, we're on Windows."
+            log_exception(*sys.exc_info())
+            return False, "`git pull` has failed. This shouldn't happen. Details have been logged."
 
         git.remote.update()
         if 'windows' in platform.platform().lower():
