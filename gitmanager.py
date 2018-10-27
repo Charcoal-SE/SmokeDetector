@@ -266,16 +266,20 @@ class GitManager:
             pass
 
         git.remote.update()
-        at_tip = git.rev_parse("refs/remotes/origin/master").strip() == git.rev_parse("master").strip() \
-            if 'windows' in platform.platform().lower() else \
-            git("rev-parse", "refs/remotes/origin/master").strip() == git("rev-parse", "master").strip()
-        if not at_tip:
-            return (False, "HEAD isn't at tip of origin's master branch")
+        if 'windows' in platform.platform().lower():
+            local_ref = git.rev_parse("refs/remotes/origin/master").strip()
+            remote_ref = git.rev_parse("master").strip()
+        else:
+            local_ref = git("rev-parse", "refs/remotes/origin/master").strip()
+            remote_ref = git("rev-parse", "master").strip()
+        if local_ref != remote_ref:
+            return False, "HEAD isn't at tip of origin's master branch (local {}, remote {})".format(
+                local_ref, remote_ref)
 
         if blacklist_file_name in git.status():
-            return (False, "{0} is modified locally. This is probably bad.".format(blacklist_file_name))
+            return False, "`{}` is modified locally. This is probably bad.".format(blacklist_file_name)
 
-        return (True, None)
+        return True, None
 
     @staticmethod
     def current_git_status():
