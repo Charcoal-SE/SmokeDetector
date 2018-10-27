@@ -91,7 +91,7 @@ class GlobalVars:
     s_norestart2 = ""
     apiquota = -1
     bodyfetcher = None
-    cookies = None
+    cookies = {}
     se_sites = []
     why_data = []
     notifications = []
