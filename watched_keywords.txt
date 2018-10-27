@@ -5623,7 +5623,6 @@
 1537352217	Glorfindel	\w*-keepvid\.com
 1537352233	Glorfindel	mp3skulls\.tube
 1537352255	Glorfindel	youtube\d+-mp3\.org
-1537353862	iBug	sysinspire\.com
 1537358686	Glorfindel	braingroom
 1537360124	Shree	cometchat\.com
 1537364208	Glorfindel	tniel\.net
