@@ -74,6 +74,7 @@ def init(username, password, try_cookies=True):
         if try_cookies:
             if GlobalVars.cookies is None:
                 datahandling._remove_pickle("cookies.p")
+                GlobalVars.cookies = {}
             else:
                 cookies = GlobalVars.cookies
                 try:
