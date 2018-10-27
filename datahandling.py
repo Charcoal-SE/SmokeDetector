@@ -199,6 +199,7 @@ def resolve_ms_link(post_url):
     else:
         GlobalVars.metasmoke_links[identifier] = ms_url
     _dump_pickle("metasmokeLinks.p", GlobalVars.metasmoke_links)
+    return ms_url
 
 
 # methods to add/remove whitelisted/blacklisted users, ignored posts, ...
