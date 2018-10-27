@@ -78,7 +78,7 @@ def init(username, password, try_cookies=True):
             else:
                 cookies = GlobalVars.cookies
                 try:
-                    if cookies[site] is not None:
+                    if site in cookies and cookies[site] is not None:
                         client.login_with_cookie(cookies[site])
                         logged_in = True
                         log('debug', 'Logged in using cached cookies')
