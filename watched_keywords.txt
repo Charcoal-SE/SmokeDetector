@@ -6363,3 +6363,4 @@
 1540597265	K.Dᴀᴠɪs	DR\WIFADE
 1540597357	K.Dᴀᴠɪs	ifadesolutionspell\d*(?:@gmail\.com)?
 1540606873	Makyen	c\W*y\W*b\W*e\W*r\W*h\W*a\W*c\W*k\W*e\W*r\W*7\W*2\W*1\W*(?:\W*(?:a\W*t\W*)?g\W*m\W*a\W*i\W*l\W*(?:d\W*o\W*t\W*)?c\W*o\W*m)?(?#obfuscated email, text: cyberhacker721@gmail.com)
+1540620131	Makyen	fixwindows10connections\.com
