@@ -106,8 +106,8 @@ def load_files():
         GlobalVars.reason_weights = _load_pickle("reasonWeights.p", encoding='utf-8')
     if _has_pickle("cookies.p"):
         GlobalVars.cookies = _load_pickle("cookies.p", encoding='utf-8')
-    if _has_pickle("metasmokeLinks.p"):
-        GlobalVars.metasmoke_links = _load_pickle("metasmokeLinks.p", encoding='utf-8')
+    if _has_pickle("metasmokePostIds.p"):
+        GlobalVars.metasmoke_ids = _load_pickle("metasmokePostIds.p", encoding='utf-8')
     blacklists.load_blacklists()
 
 
@@ -190,17 +190,23 @@ def update_reason_weights():
 
 def resolve_ms_link(post_url):
     identifier = (api_parameter_from_link(post_url), post_id_from_link(post_url))
-    if identifier in GlobalVars.metasmoke_links:
-        return GlobalVars.metasmoke_links[identifier]
+    if identifier in GlobalVars.metasmoke_ids:
+        if isinstance(GlobalVars.metasmoke_ids[identifier], int):
+            ms_url = (GlobalVars.metasmoke_host.rstrip("/") + "/post/{}").format(ms_post_id)
+            return ms_url
+        elif GlobalVars.metasmoke_ids[identifier] is None:
+            return None
+        else:
+            del GlobalVars.metasmoke_ids[identifier]
 
     ms_posts = metasmoke.Metasmoke.get_post_bodies_from_ms(post_url)
     if not ms_posts:  # Empty
-        ms_url = None
+        ms_post_id = None
     else:
         ms_post_id = max([post['id'] for post in ms_posts])
         ms_url = (GlobalVars.metasmoke_host.rstrip("/") + "/post/{}").format(ms_post_id)
-    GlobalVars.metasmoke_links[identifier] = ms_url
-    _dump_pickle("metasmokeLinks.p", GlobalVars.metasmoke_links)
+    GlobalVars.metasmoke_ids[identifier] = ms_post_id  # Store numeric IDs, strings are hard to handle
+    _dump_pickle("metasmokePostIds.p", GlobalVars.metasmoke_ids)
     return ms_url
 
 
