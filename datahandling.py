@@ -192,7 +192,8 @@ def resolve_ms_link(post_url):
     identifier = (api_parameter_from_link(post_url), post_id_from_link(post_url))
     if identifier in GlobalVars.metasmoke_ids:
         if isinstance(GlobalVars.metasmoke_ids[identifier], int):
-            ms_url = (GlobalVars.metasmoke_host.rstrip("/") + "/post/{}").format(ms_post_id)
+            ms_url = (GlobalVars.metasmoke_host.rstrip("/") + "/post/{}").format(
+                GlobalVars.metasmoke_ids[identifier])
             return ms_url
         elif GlobalVars.metasmoke_ids[identifier] is None:
             return None
@@ -202,6 +203,7 @@ def resolve_ms_link(post_url):
     ms_posts = metasmoke.Metasmoke.get_post_bodies_from_ms(post_url)
     if not ms_posts:  # Empty
         ms_post_id = None
+        ms_url = None
     else:
         ms_post_id = max([post['id'] for post in ms_posts])
         ms_url = (GlobalVars.metasmoke_host.rstrip("/") + "/post/{}").format(ms_post_id)
