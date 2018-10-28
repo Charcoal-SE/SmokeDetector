@@ -198,7 +198,7 @@ def resolve_ms_link(post_url):
         ms_url = None
     else:
         ms_post_id = max([post['id'] for post in ms_posts])
-        ms_url = (GlobalVars.metasmoke_host + "/post/{}").replace("//", "/").format(ms_post_id)
+        ms_url = (GlobalVars.metasmoke_host.rstrip("/") + "/post/{}").format(ms_post_id)
     GlobalVars.metasmoke_links[identifier] = ms_url
     _dump_pickle("metasmokeLinks.p", GlobalVars.metasmoke_links)
     return ms_url
