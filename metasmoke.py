@@ -426,28 +426,13 @@ class Metasmoke:
             Metasmoke.post("/api/v2.0/comments/post/{}".format(ms_id), params=params)
 
     @staticmethod
-    def resolve_post_link(post_url):
-        try:
-            ms_location = "/posts/uid/{}/{}".format(
-                parsing.api_parameter_from_link(post_url),
-                parsing.post_id_from_link(post_url)
-            )
-            response = Metasmoke.get(ms_location, allow_redirects=True, timeout=5.000)  # Strict timeout requirement
-            if response.url.endswith("posts"):  # Redirected to /posts... meh
-                raise ValueError("No post found on MS for {!r}".format(post_url))
-            return response.url
-        except Exception as e:
-            log('error', "{}: {}".format(type(e).__name__, str(e)))
-            return None
-
-    @staticmethod
     def get_post_bodies_from_ms(post_url):
         if not GlobalVars.metasmoke_key:
             return None
 
         payload = {
             'key': GlobalVars.metasmoke_key,
-            'filter': 'HNKHHGINKFKGIKGLGKIILMKNHHGHFOL',  # posts.body, posts.created_at
+            'filter': 'GHOOIJGNLKHIIOIKGILKIJGHFMNKKGFJ',  # posts.id, posts.body, posts.created_at
             'urls': parsing.to_protocol_relative(post_url)
         }
         try:
