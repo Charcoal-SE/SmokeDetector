@@ -1497,7 +1497,7 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
 
             if GlobalVars.metasmoke_key is not None:
                 se_link = to_protocol_relative(post_data.post_url)
-                ms_link = to_metasmoke_link(se_link)
+                ms_link = resolve_ms_link(se_link) or to_metasmoke_link(se_link)
                 output.append("Post {}: Already recently reported [ [MS]({}) ]".format(index, ms_link))
                 continue
             else:
