@@ -164,7 +164,6 @@ csoftglobal\.com
 nmeasoft\.com
 remorecover\.com
 kliring\.co\.id
-\bpatch\.com\b
 ajgilworld\.com
 santomais
 viilms
