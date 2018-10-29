@@ -276,8 +276,8 @@ class GitManager:
             local_ref = git("rev-parse", "refs/remotes/origin/master").strip()
             remote_ref = git("rev-parse", "master").strip()
         if local_ref != remote_ref:
-            local_log = git.log(r"--pretty=`\[%h\]` %cn: %s", "-1", str(local_ref))
-            remote_log = git.log(r"--pretty=`\[%h\]` %cn: %s", "-1", str(remote_ref))
+            local_log = git.log(r"--pretty=`\[%h\]` %cn: %s", "-1", str(local_ref)).strip()
+            remote_log = git.log(r"--pretty=`\[%h\]` %cn: %s", "-1", str(remote_ref)).strip()
             return False, "HEAD isn't at tip of origin's master branch (local {}, remote {})".format(
                 local_log, remote_log)
 
