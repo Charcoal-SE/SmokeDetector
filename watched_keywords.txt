@@ -6376,3 +6376,4 @@
 1540793837	Tetsuya Yamamoto	rvonlinegaming\.com
 1540794806	Tetsuya Yamamoto	fijiguide\.com
 1540796520	Makyen	\w*키스\w*(?#kiss)
+1540797143	Tetsuya Yamamoto	synkronizer\.com
