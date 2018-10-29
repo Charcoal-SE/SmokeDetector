@@ -24,7 +24,9 @@ from helpers import log
 from globalvars import GlobalVars
 import blacklists
 
+
 TLD_CACHE = []
+DNS_CACHE = dict()
 LEVEN_DOMAIN_DISTANCE = 3
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
@@ -540,6 +542,10 @@ def bad_pattern_in_url(s, site):
 
 
 def dns_query(label, qtype):
+    global DNS_CACHE
+    if (label, qtype) in DNS_CACHE:
+        log('debug', 'dns_query: returning cached value')
+        return DNS_CACHE[(label, qtype)]['result']
     try:
         starttime = datetime.now()
         answer = dns.resolver.query(label, qtype)
@@ -553,6 +559,15 @@ def dns_query(label, qtype):
         return None
     endtime = datetime.now()
     log('debug', '{0} query duration: {1}'.format(qtype, endtime - starttime))
+    DNS_CACHE[(label, qtype)] = {'result': answer, 'timestamp': endtime}
+    # Periodic amortized cache cleanup: clean out oldest 500 entries
+    if len(DNS_CACHE.keys()) >= 1500:
+        log('debug', 'Initiating cleanup of DNS_CACHE')
+        old = sorted(DNS_CACHE, key=lambda k: DNS_CACHE[k]['timestamp']))[0:500]
+        for oldest in old:
+            del DNS_CACHE[oldest]
+        log('debug', 'DNS cleanup took an additional {0} seconds'.format(
+            datetime.now()-end))
     return answer
 
 
