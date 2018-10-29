@@ -354,7 +354,7 @@ stackexchange.com:
     msg_types:
       - site-japanese.stackexchange.com
       
-  84778:
+  84778:  # The Terminal
     commands: false
     msg_types:
       #- site-russian.stackexchange.com
@@ -374,6 +374,7 @@ stackexchange.com:
       - site-pt.stackoverflow.com
       - site-ja.stackoverflow.com
       - site-es.stackoverflow.com
+      - delay
 
 meta.stackexchange.com:
   89:  # Tavern on the Meta
