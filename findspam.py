@@ -547,6 +547,8 @@ def purge_cache(cachevar, limit):
     Trim down cache variable to the specified number of newest entries.
     '''
     oldest = sorted(cachevar, key=lambda k: cachevar[k]['timestamp'])[0:limit]
+    log('debug', 'purge_cache({0}): age of oldest entry is {1}'.format(
+        limit, datetime.now() - cachevar[oldest[0]]['timestamp']))
     for old in oldest:
         del cachevar[old]
 
