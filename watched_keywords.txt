@@ -6372,3 +6372,4 @@
 1540790054	iBug	opss1[0O]{2}4\.com
 1540790087	iBug	securamsys\.com(?:\.au)?
 1540793172	Tetsuya Yamamoto	sapglobe\.com
+1540793313	Makyen	superiorconstructiononline\.com
