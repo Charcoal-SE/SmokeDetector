@@ -78,7 +78,6 @@ class GlobalVars:
     parser.unescape = unescape
 
     code_privileged_users = None
-    censored_committer_names = {"3f4ed0f38df010ce300dba362fa63a62": "Undo1"}
 
     # these are loaded in GlobalVars.reload()
     commit = None
@@ -162,9 +161,6 @@ class GlobalVars:
     @staticmethod
     def reload():
         commit = git_commit_info()
-        censored_committer_names = GlobalVars.censored_committer_names
-        if md5(commit['author'][0].encode('utf-8')).hexdigest() in censored_committer_names:
-            commit['author'] = censored_committer_names[md5(commit['author'][0].encode('utf-8')).hexdigest()]
         GlobalVars.commit = commit
 
         GlobalVars.commit_with_author = "`{}` ({}: {})".format(
