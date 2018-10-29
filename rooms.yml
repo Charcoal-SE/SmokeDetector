@@ -355,7 +355,7 @@ stackexchange.com:
       - site-japanese.stackexchange.com
       
   84778:  # The Terminal
-    commands: false
+    commands: true
     msg_types:
       #- site-russian.stackexchange.com
       - site-rus.stackexchange.com
