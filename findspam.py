@@ -734,9 +734,6 @@ def watched_ns_for_url_domain(s, site):
 
 def asn_for_url_host(s, site, asn_list):
     for hostname in post_hosts(s, check_tld=True):
-        if '.'.join(hostname.lower().split('.')[-2:]) in SE_SITES_DOMAINS:
-            log('debug', 'Skipping {0}'.format(hostname))
-            continue
         a = dns_query(hostname, 'a')
         if a is not None:
             if asn_list:
@@ -887,6 +884,9 @@ def post_hosts(post, check_tld=False):
         hostname = urlparse(link).hostname
         if hostname is None:
             hostname = urlparse('http://' + link).hostname
+        if '.'.join(hostname.lower().split('.')[-2:]) in SE_SITES_DOMAINS:
+            log('debug', 'Skipping {0}'.format(hostname))
+            continue
 
         if check_tld:
             if not tld.get_tld(hostname, fix_protocol=True, fail_silently=True):
