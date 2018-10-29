@@ -168,9 +168,7 @@ class GlobalVars:
         GlobalVars.commit = commit
 
         GlobalVars.commit_with_author = "`{}` ({}: {})".format(
-            commit['id'],
-            commit['author'][0] if type(commit['author']) in {list, tuple} else commit['author'],
-            commit['message'])
+            commit['id'], commit['author'], commit['message'])
 
         GlobalVars.on_master = git_ref()
         GlobalVars.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
