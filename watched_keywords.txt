@@ -6412,3 +6412,4 @@
 1540908788	iBug	bestsafe-laborprotection\.com
 1540918170	WELZ	stqatools\.com
 1540922326	K.Dᴀᴠɪs	premiumdev\.com
+1540925851	Makyen	blakedocumentsandservices(?:@gmail\.com)?
