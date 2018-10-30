@@ -367,7 +367,7 @@ def block_room(room_id, site, time):
 
 
 class ChatCommand:
-    def __init__(self, *type_signature, reply=False, whole_msg=False, privileged=False,
+    def __init__(self, type_signature, reply=False, whole_msg=False, privileged=False,
                  arity=None, aliases=None, give_name=False):
         self.type_signature = type_signature
         self.reply = reply
