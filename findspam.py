@@ -1757,8 +1757,8 @@ class FindSpam:
         # Category: other
         # Blacklisted usernames
         rule_blacklisted_usernames,
-        {'regex': r'^[A-Z]{1}[a-z]{3,7}(19\d{2})$', 'all': False, 'reason': "blacklisted {}",
-         'sites': {"drupal.stackexchange.com", "askubuntu.com"}, 'title': False, 'username': True,
+        {'regex': r'^[A-Z][a-z]{3,7}(19\d{2})$', 'all': False, 'reason': "blacklisted {}",
+         'sites': {"drupal.stackexchange.com"}, 'title': False, 'username': True,
          'body': False, 'body_summary': False, 'stripcodeblocks': False, 'max_rep': 1, 'max_score': 0},
         {'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"],
          'reason': "blacklisted username", 'title': False, 'body': False, 'username': True,
