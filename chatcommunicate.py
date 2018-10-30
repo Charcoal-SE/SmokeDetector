@@ -409,7 +409,7 @@ class ChatCommand:
     def __repr__(self):
         return "{}({}, reply={}, whole_msg={}, privileged={}, arity={}, aliases={}, give_name={})" \
             .format(
-                self.__class__.__name__, ", ".join([str(s) for s in self.type_signature]), self.reply,
+                self.__class__.__name__, ", ".join([s.__name__ for s in self.type_signature]), self.reply,
                 self.whole_msg, self.privileged,
                 self.arity, self.aliases, self.give_name
             )
