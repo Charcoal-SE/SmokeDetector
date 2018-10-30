@@ -416,6 +416,7 @@ class ChatCommand:
 
 def command(*type_signature, reply=False, whole_msg=False, privileged=False, arity=None, aliases=None, give_name=False):
     aliases = aliases or []
+
     def decorator(func):
         f = ChatCommand(type_signature, reply, whole_msg, privileged, arity, aliases, give_name)
         f.__func__ = func
