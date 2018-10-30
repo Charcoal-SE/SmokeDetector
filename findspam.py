@@ -71,7 +71,7 @@ URL_REGEX = regex.compile(
     r"""(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))"""
     r"""|(?:(?:[A-Za-z\u00a1-\uffff0-9]-?)*[A-Za-z\u00a1-\uffff0-9]+)(?:\.(?:[A-Za-z\u00a1-\uffff0-9]-?)"""
     r"""*[A-Za-z\u00a1-\uffff0-9]+)*(?:\.(?:[A-Za-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.U)
-TAG_REGEX = regex.compile(r"</?[abcdehiklopsu][^>]+>|\w+://", regex.U)
+TAG_REGEX = regex.compile(r"</?[abcdehiklopsu][^>]+?>|\w+://", regex.U)
 NUMBER_REGEX = regex.compile(r'(?<=\D|^)\+?(?:\d[\W_]*){8,13}\d(?=\D|$)', regex.U | regex.I)
 
 UNIFORM = math.log(1 / 36)
@@ -936,9 +936,9 @@ def mostly_dots(s, site):
     body = regex.sub(r"(?s)<pre([\w=\" -]*)?>.*?</pre>", "", s)
     body = regex.sub(r"(?s)<code>.*?</code>", "", body)
 
-    body = strip_urls_and_tags(body)
+    body = TAG_REGEX.sub("", body)
 
-    s = strip_urls_and_tags(s)
+    s = TAG_REGEX.sub("", s)
     if not s:
         return False, ""
 
