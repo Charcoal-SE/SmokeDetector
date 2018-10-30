@@ -6408,3 +6408,4 @@
 1540896849	tripleee	(?-i:^[a-z]{5}\W[a-z]{4}a$)
 1540899054	Shree	findcontactslive\.com
 1540902102	tripleee	propse\W?rx
+1540904927	tripleee	pcsteps\.com
