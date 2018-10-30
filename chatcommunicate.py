@@ -366,40 +366,61 @@ def block_room(room_id, site, time):
         _rooms[(site, room_id)].block_time = time
 
 
-def command(*type_signature, reply=False, whole_msg=False, privileged=False, arity=None, aliases=None, give_name=False):
-    if aliases is None:
-        aliases = []
+class ChatCommand:
+    def __init__(self, *type_signature, reply=False, whole_msg=False, privileged=False, arity=None, aliases=None, give_name=False):
+        self.type_signature = type_signature
+        self.reply = reply
+        self.whole_msg = whole_msg
+        self.privileged = privileged
+        self.arity = arity
+        self.aliases = aliases or []
+        self.give_name = give_name
+        self.__func__ = None
 
-    def decorator(func):
-        def f(*args, original_msg=None, alias_used=None, quiet_action=False):
-            if privileged and not is_privileged(original_msg.owner, original_msg.room):
-                return GlobalVars.not_privileged_warning
+    def __call__(self, *args, original_msg=None, alias_used=None, quiet_action=False):
+        if self.privileged and not is_privileged(original_msg.owner, original_msg.room):
+            return GlobalVars.not_privileged_warning
 
-            if whole_msg:
-                processed_args = [original_msg]
-            else:
-                processed_args = []
+        if self.whole_msg:
+            processed_args = [original_msg]
+        else:
+            processed_args = []
 
+        try:
             try:
-                try:
-                    processed_args.extend([coerce(arg) if arg else arg for coerce, arg in zip(type_signature, args)])
-                except ValueError as e:
-                    return "Invalid input type given for an argument"
+                processed_args.extend([coerce(arg) if arg else arg for coerce, arg in zip(self.type_signature, args)])
+            except ValueError as e:
+                return "Invalid input type given for an argument"
 
-                if give_name:
-                    result = func(*processed_args, alias_used=alias_used)
-                else:
-                    result = func(*processed_args)
+            if self.give_name:
+                result = self.__func__(*processed_args, alias_used=alias_used)
+            else:
+                result = self.__func__(*processed_args)
 
-                return result if not quiet_action else ""
-            except CmdException as e:
-                return str(e)
-            except Exception:  # Everything else
-                log_exception(*sys.exc_info())
-                return "I hit an error while trying to run that command; run `!!/errorlogs` for details."
+            return result if not quiet_action else ""
+        except CmdException as e:
+            return str(e)
+        except Exception:  # Everything else
+            log_exception(*sys.exc_info())
+            return "I hit an error while trying to run that command; run `!!/errorlogs` for details."
+
+    def __repr__(self):
+        return "{}({}, reply={}, whole_msg={}, privileged={}, arity={}, aliases={}, give_name={})" \
+            .format(
+                self.__class__.__name__, ", ".join([str(s) for s in self.type_signature]), self.reply,
+                self.whole_msg, self.privileged,
+                self.arity, self.aliases, self.give_name
+            )
+
+
+def command(*type_signature, reply=False, whole_msg=False, privileged=False, arity=None, aliases=None, give_name=False):
+    def decorator(func):
+        f = ChatCommand(type_signature, reply, whole_msg, privileged, arity, aliases, give_name)
+        f.__func__ = func
 
         cmd = (f, arity if arity else (len(type_signature), len(type_signature)))
 
+        aliases = aliases or []
         if reply:
             _reply_commands[func.__name__] = cmd
 
