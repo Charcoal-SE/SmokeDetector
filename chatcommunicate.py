@@ -367,7 +367,8 @@ def block_room(room_id, site, time):
 
 
 class ChatCommand:
-    def __init__(self, *type_signature, reply=False, whole_msg=False, privileged=False, arity=None, aliases=None, give_name=False):
+    def __init__(self, *type_signature, reply=False, whole_msg=False, privileged=False,
+                 arity=None, aliases=None, give_name=False):
         self.type_signature = type_signature
         self.reply = reply
         self.whole_msg = whole_msg
@@ -414,13 +415,13 @@ class ChatCommand:
 
 
 def command(*type_signature, reply=False, whole_msg=False, privileged=False, arity=None, aliases=None, give_name=False):
+    aliases = aliases or []
     def decorator(func):
         f = ChatCommand(type_signature, reply, whole_msg, privileged, arity, aliases, give_name)
         f.__func__ = func
 
         cmd = (f, arity if arity else (len(type_signature), len(type_signature)))
 
-        aliases = aliases or []
         if reply:
             _reply_commands[func.__name__] = cmd
 
