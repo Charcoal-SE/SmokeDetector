@@ -6392,3 +6392,4 @@
 1540817892	tripleee	rankify\d+
 1540832338	Glorfindel	ligaqq
 1540844047	Glorfindel	fiverr\.com
+1540865212	Makyen	shopelegance\.co\.uk
