@@ -635,6 +635,8 @@ def ns_is_host(s, site):
     '''
     for hostname in post_hosts(s, check_tld=True):
         host_ip = dns_query(hostname, 'a')
+        if host_ip is None:
+            continue
         domain = get_domain(hostname, full=True)
         nameservers = dns_query(domain, 'ns')
         if nameservers is not None:
