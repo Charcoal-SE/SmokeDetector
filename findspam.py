@@ -689,6 +689,7 @@ def watched_ns_for_url_domain(s, site):
         'hostblast.net.',
         'webhouse.sk.',
         'guzelhosting.com.',
+        'solidhosting.pro.',
     ])
 
 
