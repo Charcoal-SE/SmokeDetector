@@ -6402,3 +6402,4 @@
 1540887012	Glorfindel	itsolusenz\.com
 1540888368	Shree	phonique\.com
 1540890072	Glorfindel	safegenericpharmacy\.com
+1540893268	tripleee	natural\W*herbal\W*gardens?(?:\W*com)?
