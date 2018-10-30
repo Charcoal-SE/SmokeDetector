@@ -33,9 +33,7 @@ from tld.utils import update_tld_names, TldIOError
 from helpers import log, Helpers
 from flovis import Flovis
 from tasks import Tasks
-
 import chatcommands
-
 levels = {
     'debug': 0,
     'info': 1,
@@ -134,8 +132,6 @@ def check_socket_connections():
     for client in chatcommunicate._clients.values():
         if client.last_activity and (datetime.utcnow() - client.last_activity).total_seconds() >= 60:
             os._exit(10)
-
-
 # noinspection PyProtectedMember
 def restart_automatically():
     Metasmoke.send_statistics()
