@@ -6406,3 +6406,4 @@
 1540893419	Shree	acrosstanzaniaexpeditions\.com
 1540895134	Shree	literaturereviewwritingservice\.com
 1540895963	tripleee	adsspirit\.com
+1540896849	tripleee	(?-i:^[a-z]{5}\W[a-z]{4}a$)
