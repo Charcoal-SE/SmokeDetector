@@ -389,7 +389,8 @@ class ChatCommand:
 
         try:
             try:
-                processed_args.extend([coerce(arg) if arg else arg for coerce, arg in zip(self.type_signature, args)])
+                processed_args.extend(
+                    [(coerce(arg) if arg else arg) for coerce, arg in zip(self.type_signature, args)])
             except ValueError as e:
                 return "Invalid input type given for an argument"
 
