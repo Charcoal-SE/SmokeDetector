@@ -60,7 +60,7 @@ class DeletionWatcher:
                             post_id, _, post_type, post_url, callbacks = self.posts[action]
                             del self.posts[action]
 
-                            if not post_type == "answer" or ("aId" in data and str(data["aId"]) == post_id):
+                            if not post_type == "Answer" or ("aId" in data and str(data["aid"]) == post_id):
                                 self.socket.send("-" + action)
                                 Tasks.do(metasmoke.Metasmoke.send_deletion_stats_for_post, post_url, True)
 
