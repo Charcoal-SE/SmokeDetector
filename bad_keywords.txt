@@ -1464,7 +1464,6 @@ Keep\WTry2fit
 keto\W?fast\W?diet
 daniel\W+tan
 slim\W?wave
-/(?:(?:how-to-)?fix-(?:error-(?:\d+-in-)?)?)?(?:asus|canon|epson|fire-tv|ipad|hotmail|hp-printer|lenovo|lexmark|quickbooks)-
 belly\W?burn
 hackethics008(?:@gmail\.com)?
 smart\W?body\W?max
