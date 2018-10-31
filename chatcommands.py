@@ -1596,7 +1596,7 @@ def dump_data():
     return None
 
 
-@command(int, privileged=True, aliased=['load-data'])
+@command(int, privileged=True, aliases=['load-data'])
 def load_data(msg_id):
     msg = get_message(msg_id)
     if msg.owner.id != 120914:  # TODO: implement an is_self() in chatcommunicate, don't use magic numbers
