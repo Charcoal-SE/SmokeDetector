@@ -1589,6 +1589,16 @@ def feedback(msg, post_url, feedback):
     raise CmdException("No such feedback.")
 
 
+@command(privileged=True, aliases=['dump-data'])
+def dump_data():
+    return NotImplemented
+
+
+@command(int, privileged=True, aliased=['load-data'])
+def load_data(msg_id):
+    return NotImplemented
+
+
 #
 #
 # Subcommands go below here
