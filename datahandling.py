@@ -220,7 +220,7 @@ def resolve_ms_link(post_url):
 def add_whitelisted_user(user):
     if user in GlobalVars.whitelisted_users or user is None:
         return
-    GlobalVars.whitelisted_users.append(user)
+    GlobalVars.whitelisted_users.add(user)
     _dump_pickle("whitelistedUsers.p", GlobalVars.whitelisted_users)
 
 
