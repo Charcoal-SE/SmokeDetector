@@ -16,9 +16,10 @@ def test_smokey_transfer(monkeypatch):
     blacklisted_users = {1: (2, 3), 4: (5, 6)}
     mp.setattr(GlobalVars, 'blacklisted_users', blacklisted_users)
 
-    s = SmokeyTransfer.dump()
+    s, metadata = SmokeyTransfer.dump()
     assert s.startswith(SmokeyTransfer.HEADER + "\n\n")
     assert s.endswith("\n\n" + SmokeyTransfer.ENDING)
+    assert isinstance(metadata['lengths'], dict)
     print(s)
     SmokeyTransfer.load(s, False)
     assert GlobalVars.blacklisted_users == blacklisted_users

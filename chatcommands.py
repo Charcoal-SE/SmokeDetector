@@ -1592,7 +1592,7 @@ def feedback(msg, post_url, feedback):
 @command(privileged=True, aliases=['dump-data'])
 def dump_data():
     try:
-        s = SmokeyTransfer.dump()
+        s, metadata = SmokeyTransfer.dump()
         tell_rooms_with('dump', s)
     except Exception:
         log_exception(*sys.exc_info())

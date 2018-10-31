@@ -595,7 +595,7 @@ class SmokeyTransfer:
             cls.HEADER,
             '\n'.join([b64_s[i:i + chunk_size] for i in range(0, len(b64_s), chunk_size)]),
             cls.ENDING)
-        return s
+        return s, data['_metadata']
 
     @classmethod
     def load(cls, s, merge=False):
