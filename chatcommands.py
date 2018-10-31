@@ -1591,12 +1591,22 @@ def feedback(msg, post_url, feedback):
 
 @command(privileged=True, aliases=['dump-data'])
 def dump_data():
-    return NotImplemented
+    s = SmokeyTransfer.dump()
+    tell_rooms_with('dump', s)
+    return None
 
 
 @command(int, privileged=True, aliased=['load-data'])
 def load_data(msg_id):
-    return NotImplemented
+    msg = get_message(msg_id)
+    if msg.owner.id != 120914:  # TODO: implement an is_self() in chatcommunicate, don't use magic numbers
+        raise CmdException("Message owner is not SmokeDetector, refusing to load")
+    try:
+        s = msg.content_source
+        SmokeyTransfer.load(s)
+    except ValueError as e:
+        raise CmdException(str(e)) from None
+    return None
 
 
 #
