@@ -590,7 +590,7 @@ class SmokeyTransfer:
         # need to transfer via chat, so text only
         b64_s = base64.b64encode(z_data).decode('ascii')
 
-        chunk_size = 512
+        chunk_size = 64  # The same value as GnuPG armored output
         s = "{}\n\n{}\n\n{}".format(
             cls.HEADER,
             '\n'.join([b64_s[i:i + chunk_size] for i in range(0, len(b64_s), chunk_size)]),
