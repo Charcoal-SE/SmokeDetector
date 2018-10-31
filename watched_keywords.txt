@@ -6426,3 +6426,4 @@
 1540962763	tripleee	occupymia\.org
 1540962977	tripleee	cabso
 1540964187	Makyen	drokukutemple(?:@gmail\.com)?
+1540966357	Makyen	supplements?cost(?!\.com)
