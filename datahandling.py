@@ -614,8 +614,19 @@ class SmokeyTransfer:
                 raise ValueError("Invalid data (data type is not dict)")
 
             # happy extracting
+            warnings = []
             for item_info in cls.ITEMS:
                 key, obj, attr, *_ = item_info
-                setattr(obj, attr, data[key])
+                item = data[key]
+                try:
+                    length = len(item)
+                except TypeError:
+                    length = None
+                if length != data['_metadata']['lengths'][key]:
+                    warnings.append("Length of {!r} mismatch (recorded {}, actual {})".format(
+                        key, data['_metadata']['lengths'][key], length))
+                setattr(obj, attr, item)
+            if warnings:
+                raise Warning("Warning: " + ', '.join(warnings))
         except ValueError as e:
             raise e from None
