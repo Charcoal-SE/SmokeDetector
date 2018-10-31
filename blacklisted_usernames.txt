@@ -110,3 +110,4 @@ denya\Wgarda
 Tyron P
 ^mangesh\W*(?:\w+\W+)?dhulap$
 praveen kumar Lakhara
+^daveclark966$
