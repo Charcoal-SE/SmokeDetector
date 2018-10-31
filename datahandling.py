@@ -599,10 +599,12 @@ class SmokeyTransfer:
 
     @classmethod
     def load(cls, s, merge=False):
-        s = s.strip()
-        if not (s.startswith(cls.HEADER + "\n") and s.endswith("\n" + cls.ENDING)):
+        try:
             # While it generates a blank line after the header and before the ending,
             # it should also accept data that does not contain the blank lines
+            lbound, rbound = s.index(cls.HEADER + "\n"), s.rindex("\n" + cls.ENDING)
+            s = s[lbound + len(cls.HEADER):rbound].strip()
+        except ValueError:
             raise ValueError("Invalid data (invalid header or ending)")
         s = ''.join(s.split())  # Clear whitespaces
 
