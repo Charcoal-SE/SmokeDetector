@@ -675,12 +675,19 @@ def master():
 
 
 # noinspection PyIncorrectDocstring,PyProtectedMember
-@command(privileged=True)
-def pull():
+@command(int, privileged=True, arity=(0, 1))
+def pull(count=None):
     """
     Pull an update from GitHub
     :return: String on failure, None on success
     """
+    if count:
+        try:
+            git.pull(count)
+            return
+        except Exception as e:
+            raise CmdException(str(e))
+
     remote_diff = GitManager.get_remote_diff()
     if only_blacklists_changed(remote_diff):
         GitManager.pull_remote()

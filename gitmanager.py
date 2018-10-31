@@ -339,3 +339,10 @@ class GitManager:
             git.push("origin", "deploy")
         except GitError:
             return
+
+    @staticmethod
+    def recover_from_history(count):
+        if count <= 0:
+            raise ValueError("Cannot reset to {} revisions before HEAD".format(count))
+        git.reset("--hard", "HEAD~{}".format(count))
+        git.pull()
