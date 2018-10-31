@@ -12,7 +12,7 @@ Example [chat post](https://chat.stackexchange.com/transcript/11540?m=17962164#1
 
 User documentation is in the [wiki](https://charcoal-se.org/smokey).
 
-To set up, use
+To set up, please use
 
 ```
 git config user.email "smokey@erwaysoftware.com"
