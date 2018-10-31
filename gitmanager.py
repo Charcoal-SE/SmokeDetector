@@ -42,7 +42,7 @@ class GitManager:
         if item_to_blacklist == "":
             return (False, 'GitManager: item_to_blacklist is not defined. Blame a developer.')
 
-        item_to_blacklist = item_to_blacklist.replace("\\s", " ")
+        # item_to_blacklist = item_to_blacklist.replace("\\s", " ")
 
         if blacklist == "website":
             blacklist_type = Blacklist.WEBSITES
