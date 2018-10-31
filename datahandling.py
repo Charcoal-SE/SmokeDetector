@@ -557,10 +557,11 @@ class SmokeyTransfer:
     ENDING = "-----END SMOKEY DATA BLOCK-----"
 
     ITEMS = [
-        # (dict_key, object, attr[, post_processing])
+        # (dict_key, object, attr[, type, post_processing])
         ('blacklisted_users', GlobalVars, 'blacklisted_users'),
         ('whitelisted_users', GlobalVars, 'whitelisted_users'),
         ('ignored_posts', GlobalVars, 'ignored_posts'),
+        ('notifications', GlobalVars, 'notifications'),
     ]
 
     @classmethod
