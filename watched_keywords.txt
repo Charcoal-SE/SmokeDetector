@@ -6417,5 +6417,4 @@
 1540946829	K.Dᴀᴠɪs	stfu
 1540948118	DJMcSpookem	zeveroh
 1540948455	Makyen	logoventures\.com\.au
-1540954692	iBug	DATABASEHACKERSERVICES *(?:@|at) *GMAIL *(?:dot|\.) *COM
 1540954732	iBug	DATABASEHACKERSERVICES(?: *(?:@|at) *GMAIL *(?:dot|\.) *COM)?
