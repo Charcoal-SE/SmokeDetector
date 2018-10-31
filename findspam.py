@@ -24,7 +24,10 @@ from helpers import log
 from globalvars import GlobalVars
 import blacklists
 
+
 TLD_CACHE = []
+DNS_CACHE = dict()
+LINK_CACHE = dict()
 LEVEN_DOMAIN_DISTANCE = 3
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
@@ -539,7 +542,27 @@ def bad_pattern_in_url(s, site):
         return False, ""
 
 
+def purge_cache(cachevar, limit):
+    '''
+    Trim down cache variable to the specified number of newest entries.
+    '''
+    oldest = sorted(cachevar, key=lambda k: cachevar[k]['timestamp'])[0:limit + 1]
+    remaining = oldest.pop()
+    now = datetime.now()
+    log('debug', 'purge_cache({0}): age of oldest entry is {1}'.format(
+        limit, now - cachevar[oldest[0]]['timestamp']))
+    log('debug', 'purge_cache({0}): oldest remaining entry is {1}'.format(
+        limit, now - cachevar[remaining]['timestamp']))
+    for old in oldest:
+        del cachevar[old]
+
+
 def dns_query(label, qtype):
+    global DNS_CACHE
+    if (label, qtype) in DNS_CACHE:
+        log('debug', 'dns_query: returning cached {0} value for {1}'.format(
+            qtype, label))
+        return DNS_CACHE[(label, qtype)]['result']
     try:
         starttime = datetime.now()
         answer = dns.resolver.query(label, qtype)
@@ -553,6 +576,13 @@ def dns_query(label, qtype):
         return None
     endtime = datetime.now()
     log('debug', '{0} query duration: {1}'.format(qtype, endtime - starttime))
+    DNS_CACHE[(label, qtype)] = {'result': answer, 'timestamp': endtime}
+    # Periodic amortized cache cleanup: clean out oldest 1000 entries
+    if len(DNS_CACHE.keys()) >= 1500:
+        log('debug', 'Initiating cleanup of DNS_CACHE')
+        purge_cache(DNS_CACHE, 1000)
+        log('debug', 'DNS cleanup took an additional {0} seconds'.format(
+            datetime.now() - endtime))
     return answer
 
 
@@ -571,8 +601,6 @@ def asn_query(ip):
 
 
 def ns_for_url_domain(s, site, nslist):
-    invalid_tld_count = 0
-
     if "pytest" in sys.modules:
         for nsentry in nslist:
             if isinstance(nsentry, set):
@@ -583,14 +611,11 @@ def ns_for_url_domain(s, site, nslist):
                 assert nsentry.endswith('.'),\
                     "Missing final dot on NS entry {0}".format(nsentry)
 
-    for domain in set([get_domain(link, full=True) for link in post_links(s)]):
-        if not tld.get_tld(domain, fix_protocol=True, fail_silently=True):
-            log('debug', '{0} has no valid tld; skipping'.format(domain))
-            invalid_tld_count += 1
-            if invalid_tld_count > 3:
-                log('debug', 'NS: too many invalid TLDs; abandoning post')
-                return False, ""
-            continue
+    domains = []
+    for hostname in post_hosts(s, check_tld=True):
+        domains.append(get_domain(hostname, full=True))
+
+    for domain in set(domains):
         ns = dns_query(domain, 'ns')
         if ns is not None:
             nameservers = set([server.target.to_text() for server in ns])
@@ -601,6 +626,29 @@ def ns_for_url_domain(s, site, nslist):
                     return True, '{domain} NS suspicious {ns}'.format(
                         domain=domain, ns=','.join(nameservers))
     return False, ""
+
+
+def ns_is_host(s, site):
+    '''
+    Check if the host name in a link resolves to the same IP address
+    as the IP addresses of all its name servers.
+    '''
+    for hostname in post_hosts(s, check_tld=True):
+        host_ip = dns_query(hostname, 'a')
+        if host_ip is None:
+            continue
+        domain = get_domain(hostname, full=True)
+        nameservers = dns_query(domain, 'ns')
+        if nameservers is not None:
+            ns_ips = []
+            for ns in nameservers:
+                this_ns_ips = dns_query(str(ns), 'a')
+                if this_ns_ips is not None:
+                    ns_ips.extend([str(ip) for ip in this_ns_ips])
+            ns_ip_set = set(ns_ips)
+            if all(ip == host_ip for ip in ns_ip_set):
+                return True, 'Suspicious nameservers: all IP addresses for {0} are {1}'.format(hostname, host_ip)
+    return False, ''
 
 
 def bad_ns_for_url_domain(s, site):
@@ -694,28 +742,8 @@ def watched_ns_for_url_domain(s, site):
     ])
 
 
-# ######## FIXME: code duplication and inefficiencies, refactor w/ NS check
 def asn_for_url_host(s, site, asn_list):
-    invalid_tld_count = 0
-
-    hostnames = []
-    for link in post_links(s):
-        hostname = urlparse(link).hostname
-        if hostname is None:
-            hostname = urlparse('http://' + link).hostname
-        hostnames.append(hostname)
-
-    for hostname in set(hostnames):
-        if not tld.get_tld(hostname, fix_protocol=True, fail_silently=True):
-            log('debug', '{0} has no valid tld; skipping'.format(hostname))
-            invalid_tld_count += 1
-            if invalid_tld_count > 3:
-                log('debug', 'ASN: too many invalid TLDs; abandoning post')
-                return False, ""
-            continue
-        if '.'.join(hostname.lower().split('.')[-2:]) in SE_SITES_DOMAINS:
-            log('debug', 'Skipping {0}'.format(hostname))
-            continue
+    for hostname in post_hosts(s, check_tld=True):
         a = dns_query(hostname, 'a')
         if a is not None:
             if asn_list:
@@ -817,18 +845,74 @@ def post_links(post):
     """
     Helper function to extract URLs from a piece of HTML.
     """
+    global LINK_CACHE
+
+    if post in LINK_CACHE:
+        log('debug', 'Returning cached links for post')
+        return LINK_CACHE[post]['links']
+
     # Fix stupid spammer tricks
+    edited_post = post
     for p in COMMON_MALFORMED_PROTOCOLS:
-        post = post.replace(p[0], p[1])
+        edited_post = edited_post.replace(p[0], p[1])
 
     links = []
-    for l in regex.findall(URL_REGEX, post):
+    for l in regex.findall(URL_REGEX, edited_post):
         if l[-1].isalnum():
             links.append(l)
         else:
             links.append(l[:-1])
 
-    return set(links)
+    if len(LINK_CACHE.keys()) >= 15:
+        log('debug', 'Trimming LINK_CACHE down to 5 entries')
+        purge_cache(LINK_CACHE, 10)
+        log('debug', 'LINK_CACHE purged')
+
+    linkset = set(links)
+    LINK_CACHE[post] = {'links': linkset, 'timestamp': datetime.now()}
+    return linkset
+
+
+def post_hosts(post, check_tld=False):
+    '''
+    Return list of hostnames from the post_links() output.
+
+    With check_tld=True, check if the links have valid TLDs; abandon and
+    return an empty result if too many don't (limit is currently hardcoded
+    at 3 invalid links).
+
+    Augment LINK_CACHE with parsed hostnames.
+    '''
+    global LINK_CACHE
+
+    if post in LINK_CACHE and 'hosts' in LINK_CACHE[post]:
+        return LINK_CACHE[post]['hosts']
+
+    invalid_tld_count = 0
+    hostnames = []
+    for link in post_links(post):
+        hostname = urlparse(link).hostname
+        if hostname is None:
+            hostname = urlparse('http://' + link).hostname
+        if '.'.join(hostname.lower().split('.')[-2:]) in SE_SITES_DOMAINS:
+            log('debug', 'Skipping {0}'.format(hostname))
+            continue
+
+        if check_tld:
+            if not tld.get_tld(hostname, fix_protocol=True, fail_silently=True):
+                log('debug', '{0} has no valid tld; skipping'.format(hostname))
+                invalid_tld_count += 1
+                if invalid_tld_count > 3:
+                    log('debug', 'post_hosts: too many invalid TLDs; abandoning post')
+                    hostnames = []
+                    break
+                continue
+
+        hostnames.append(hostname)
+
+    hostset = set(hostnames)
+    LINK_CACHE[post]['hosts'] = hostset
+    return hostset
 
 
 # noinspection PyMissingTypeHints
@@ -1494,6 +1578,11 @@ class FindSpam:
          'max_rep': 1, 'max_score': 0},
         {'method': watched_asn_for_url_hostname, 'all': True, 'sites': [],
          'reason': 'potentially bad ASN for hostname in {}',
+         'title': True, 'body': True, 'username': False,
+         'stripcodeblocks': True, 'body_summary': True,
+         'max_rep': 1, 'max_score': 0},
+        {'method': ns_is_host, 'all': True, 'sites': [],
+         'reason': 'potentially problematic NS configuration in {}',
          'title': True, 'body': True, 'username': False,
          'stripcodeblocks': True, 'body_summary': True,
          'max_rep': 1, 'max_score': 0},
