@@ -1,7 +1,7 @@
-# coding=utf-8
 import os
-# noinspection PyPep8Naming
 import pickle
+import zlib
+import base64
 from datetime import datetime
 import metasmoke
 import requests
@@ -550,3 +550,59 @@ def can_report_now(user_id, chat_host):
 
 def dump_cookies():
     _dump_pickle("cookies.p", GlobalVars.cookies)
+
+
+class SmokeyTransfer:
+    HEADER = "-----BEGIN SMOKEY DATA BLOCK-----"
+    ENDING = "-----END SMOKEY DATA BLOCK-----"
+
+    ITEMS = [
+        # (dict_key, object, attr[, post_processing])
+        ('blacklisted_users', GlobalVars, 'blacklisted_users'),
+        ('whitelisted_users', GlobalVars, 'whitelisted_users'),
+        ('ignored_posts', GlobalVars, 'ignored_posts'),
+    ]
+
+    @classmethod
+    def create_data_for_transfer(cls):
+        # Trust Python's GIL here
+        data = {'version': 0}  # Reserve a version key here in case it'll be useful
+        data['blacklisted_users'] = GlobalVars.blacklisted_users
+        data['whitelisted_users'] = GlobalVars.whitelisted_users
+        data['ignored_posts'] = GlobalVars.ignored_posts
+
+        # hopefully the pickle won't be more than a few MiB
+        raw_data = pickle.dumps(data, protocol=pickle.HIGHEST_PROTOCOL)
+        # let's save some traffic
+        z_data = zlib.compress(raw_data, 9)
+        # need to transfer via chat, so text only
+        b64_s = base64.b64encode(z_data).decode('ascii')
+
+        chunk_size = 512
+        s = "{}\n\n{}\n\n{}".format(
+            cls.HEADER,
+            '\n'.join([b64_s[i:i + chunk_size] for i in range(0, len(b64_s), chunk_size)]),
+            cls.ENDING)
+        return s
+
+    @classmethod
+    def restore_data_from_transfer(cls, s, merge=False):
+        s = s.strip()
+        if not (s.startswith(cls.HEADER + "\n") and s.endswith("\n" + cls.ENDING)):
+            # While it generates a blank line after the header and before the ending,
+            # it should also accept data that does not contain the blank lines
+            raise ValueError("Invalid data (invalid header or ending)")
+
+        try:
+            z_data = s[len(cls.HEADER):-len(cls.ENDING)].strip().encode('ascii')
+            raw_data = zlib.uncompress(z_data)
+            data = pickle.loads(raw_data, encoding='utf-8')
+            if type(data) is not dict:
+                raise ValueError("Invalid data (data type is not dict)")
+
+            # happy extracting
+            for item_info in cls.ITEMS:
+                key, obj, attr, *_ = item_info
+                setattr(obj, attr, data)
+        except ValueError as e:
+            raise e from None
