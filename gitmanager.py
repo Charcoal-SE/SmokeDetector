@@ -270,11 +270,11 @@ class GitManager:
 
         git.remote.update()
         if 'windows' in platform.platform().lower():
-            local_ref = git.rev_parse("refs/remotes/origin/master").strip()
-            remote_ref = git.rev_parse("master").strip()
+            remote_ref = git.rev_parse("refs/remotes/origin/master").strip()
+            local_ref = git.rev_parse("master").strip()
         else:
-            local_ref = git("rev-parse", "refs/remotes/origin/master").strip()
-            remote_ref = git("rev-parse", "master").strip()
+            remote_ref = git("rev-parse", "refs/remotes/origin/master").strip()
+            local_ref = git("rev-parse", "master").strip()
         if local_ref != remote_ref:
             local_log = git.log(r"--pretty=`[%h]` *%cn*: %s", "-1", str(local_ref)).strip()
             remote_log = git.log(r"--pretty=`[%h]` *%cn*: %s", "-1", str(remote_ref)).strip()
@@ -346,3 +346,17 @@ class GitManager:
             raise ValueError("Cannot reset to {} revisions before HEAD".format(count))
         git.reset("--hard", "HEAD~{}".format(count))
         git.pull()
+
+    @staticmethod
+    def sync_remote():
+        if 'windows' in platform.platform().lower():
+            return False, "We don't do Windows"
+
+        try:
+            git('rev-parse', 'temp')
+            git.branch('-D', 'temp')
+        except GitError:  # local branch 'temp' doesn't exist
+            pass
+        git.checkout('-b', 'temp', 'origin/master')
+        git.branch('-M', 'master')
+        return True, 'Voilà!'

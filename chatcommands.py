@@ -721,6 +721,19 @@ def pull(count=None):
         raise CmdException("CI build is still pending, wait until the build has finished and then pull again.")
 
 
+@command(whole_msg=True, aliases=['pull-sync'])
+def sync_remote(msg):
+    """
+    Force a branch sync from origin/master with [git branch -M]
+    :param msg:
+    :return: A string containing a response message
+    """
+    if not is_code_privileged(msg._client.host, msg.owner.id):
+        raise CmdException("You don't have code privileges to run this command.")
+
+    return GitManager.sync_remote()[1]
+
+
 @command(privileged=True, give_name=True, aliases=[
     "gitstatus", "git-status", "git-help"
 ])
