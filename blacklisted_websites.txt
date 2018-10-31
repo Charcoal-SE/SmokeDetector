@@ -2446,3 +2446,4 @@ daddysupplement\.com
 techenoid\.com
 internshipinchennai\.org\.in
 (?<![a-z0-9-])ica\.in(?![a-z0-9-])
+allavsoft\.com
