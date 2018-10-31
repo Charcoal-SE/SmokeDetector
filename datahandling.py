@@ -82,6 +82,8 @@ def load_files():
         GlobalVars.false_positives = _load_pickle("falsePositives.p", encoding='utf-8')
     if _has_pickle("whitelistedUsers.p"):
         GlobalVars.whitelisted_users = _load_pickle("whitelistedUsers.p", encoding='utf-8')
+        if not isinstance(GlobalVars.whitelisted_users, set):
+            GlobalVars.whitelisted_users = set(GlobalVars.whitelisted_users)
     if _has_pickle("blacklistedUsers.p"):
         GlobalVars.blacklisted_users = _load_pickle("blacklistedUsers.p", encoding='utf-8')
         if not isinstance(GlobalVars.blacklisted_users):

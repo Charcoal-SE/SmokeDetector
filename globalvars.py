@@ -37,8 +37,8 @@ class GlobalVars:
     on_windows = 'windows' in platform.platform().lower()
 
     false_positives = []
-    whitelisted_users = []
-    blacklisted_users = []
+    whitelisted_users = set()
+    blacklisted_users = dict()
     blacklisted_usernames = []
     blacklisted_websites = []
     blacklisted_numbers = []
