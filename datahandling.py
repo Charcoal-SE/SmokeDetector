@@ -84,6 +84,8 @@ def load_files():
         GlobalVars.whitelisted_users = _load_pickle("whitelistedUsers.p", encoding='utf-8')
     if _has_pickle("blacklistedUsers.p"):
         GlobalVars.blacklisted_users = _load_pickle("blacklistedUsers.p", encoding='utf-8')
+        if not isinstance(GlobalVars.blacklisted_users):
+            GlobalVars.blacklisted_users = {data[0]: data[1:] for data in GlobalVars.blacklisted_users}
     if _has_pickle("ignoredPosts.p"):
         GlobalVars.ignored_posts = _load_pickle("ignoredPosts.p", encoding='utf-8')
     if _has_pickle("autoIgnoredPosts.p"):
@@ -138,17 +140,14 @@ def is_whitelisted_user(user):
 
 # noinspection PyMissingTypeHints
 def is_blacklisted_user(user):
-    for blacklisted_user in GlobalVars.blacklisted_users:
-        if user == blacklisted_user[0]:
-            return True
-    return False
+    return user in GlobalVars.blacklisted_users
 
 
 def get_blacklisted_user_data(user):
-    for blacklisted_user in GlobalVars.blacklisted_users:
-        if user == blacklisted_user[0]:
-            return blacklisted_user
-    return ()
+    try:
+        return (user,) + tuple(GlobalVars.blacklisted_users[user])
+    except KeyError:
+        return ()
 
 
 # noinspection PyMissingTypeHints
@@ -226,7 +225,7 @@ def add_whitelisted_user(user):
 def add_blacklisted_user(user, message_url, post_url):
     if is_blacklisted_user(user) or user is None:
         return
-    GlobalVars.blacklisted_users.append((user, message_url, post_url))
+    GlobalVars.blacklisted_users[user] = (message_url, post_url)
     _dump_pickle("blacklistedUsers.p", GlobalVars.blacklisted_users)
 
 
@@ -262,7 +261,7 @@ def remove_blacklisted_user(user):
     blacklisted_user_data = get_blacklisted_user_data(user)
     if not blacklisted_user_data:
         return False
-    GlobalVars.blacklisted_users.remove(blacklisted_user_data)
+    GlobalVars.blacklisted_users.pop(blacklisted_user_data[0])
     _dump_pickle("blacklistedUsers.p", GlobalVars.blacklisted_users)
     return True
 
