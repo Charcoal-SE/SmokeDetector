@@ -1684,3 +1684,4 @@ nutri\W?sleep(?:\W?rx)?
 geno\W?drive
 naturalherbalgardens
 (?<=:?//(?:[\w-]*\.)*[\w-]*(?<![./](?:stackexchange|stackoverflow)\.com)(?<![./]serverfault\.com)(?<![./](?:superuser|askubuntu|stackapps)\.com)(?<![./]mathoverflow\.net)(?<![./](?:costco|lenovo|github)\.com)(?<![./](?:imgur|epson|canon|apple)\.com)(?<![./]asus\.com)(?<![./]ibm\.com)(?:/[\w-]*)*)/(?:(?:how-to-)?fix-(?:error-(?:\d+-in-)?)?)?(?:asus|canon|epson|fire-tv|ipad|hotmail|hp-printer|lenovo|lexmark|quickbooks)-
+allavsoft(?!\.com)
