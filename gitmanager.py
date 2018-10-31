@@ -11,7 +11,8 @@ import requests
 from requests.auth import HTTPBasicAuth
 
 from urllib.parse import quote_plus
-if 'windows' in platform.platform().lower():
+from globalvars import GlobalVars
+if GlobalVars.on_windows:
     # noinspection PyPep8Naming
     from classes import Git as git, GitError
 else:
@@ -19,7 +20,6 @@ else:
     from sh import ErrorReturnCode as GitError
 
 from helpers import log, log_exception, only_blacklists_changed
-from globalvars import GlobalVars
 from blacklists import *
 
 
@@ -263,13 +263,13 @@ class GitManager:
         try:
             git.pull()
         except GitError as e:
-            if 'windows' in platform.platform().lower():
+            if GlobalVars.on_windows:
                 return False, "Not doing this, we're on Windows."
             log_exception(*sys.exc_info())
             return False, "`git pull` has failed. This shouldn't happen. Details have been logged."
 
         git.remote.update()
-        if 'windows' in platform.platform().lower():
+        if GlobalVars.on_windows:
             remote_ref = git.rev_parse("refs/remotes/origin/master").strip()
             local_ref = git.rev_parse("master").strip()
         else:
@@ -288,7 +288,7 @@ class GitManager:
 
     @staticmethod
     def current_git_status():
-        if 'windows' in platform.platform().lower():
+        if GlobalVars.on_windows:
             return git.status_stripped()
         else:
             return str(git.status())
@@ -299,13 +299,13 @@ class GitManager:
 
     @staticmethod
     def merge_abort():
-        if 'windows' in platform.platform().lower():
+        if GlobalVars.on_windows:
             return  # No we don't do Windows
         git.merge("--abort")
 
     @staticmethod
     def reset_head():
-        if 'windows' in platform.platform().lower():
+        if GlobalVars.on_windows:
             return  # No we don't do Windows
         git.reset("--hard", "HEAD")
         git.clean("-f")
@@ -313,14 +313,14 @@ class GitManager:
     @staticmethod
     def get_remote_diff():
         git.fetch()
-        if 'windows' in platform.platform().lower():
+        if GlobalVars.on_windows:
             return git.diff_filenames("HEAD", "origin/deploy")
         else:
             return git.diff("--name-only", "HEAD", "origin/deploy")
 
     @staticmethod
     def get_local_diff():
-        if 'windows' in platform.platform().lower():
+        if GlobalVars.on_windows:
             return git.diff_filenames("HEAD", "master")
         else:
             return git.diff("--name-only", "HEAD", "master")
@@ -342,7 +342,7 @@ class GitManager:
 
     @staticmethod
     def sync_remote():
-        if 'windows' in platform.platform().lower():
+        if GlobalVars.on_windows:
             return False, "We don't do Windows"
 
         try:

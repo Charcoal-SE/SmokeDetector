@@ -9,7 +9,9 @@ from time import sleep
 import logging
 import sys
 from getpass import getpass
-if 'windows' in str(platform.platform()).lower():
+on_windows = 'windows' in platform.platform().lower()
+
+if on_windows:
     # noinspection PyPep8Naming
     from classes import Git as git
 else:
@@ -88,7 +90,7 @@ while not stoprunning:
 
     if ecode == 3:
         log('Pull in new updates')
-        if 'windows' not in str(platform.platform()).lower():
+        if not on_windows:
             git.checkout('deploy')
             git.pull()
         else:
@@ -104,7 +106,7 @@ while not stoprunning:
 
         if crashcount == 2:
             log('Crash count triggered reverted state')
-            if 'windows' not in str(platform.platform()).lower():
+            if not on_windows:
                 git.checkout('HEAD~1')
             else:
                 warn('Not reverting; we are on Windows')
@@ -130,7 +132,7 @@ while not stoprunning:
     elif ecode == 8:
         log('Checkout deploy')
         # print "[NoCrash] Checkout Deploy"
-        if 'windows' not in str(platform.platform()).lower():
+        if not on_windows:
             git.checkout('deploy')
         else:
             warn('Not checking out deploy branch; we are on Windows')

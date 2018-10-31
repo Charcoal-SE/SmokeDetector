@@ -34,6 +34,8 @@ def git_ref():
 
 # noinspection PyClassHasNoInit,PyDeprecation,PyUnresolvedReferences
 class GlobalVars:
+    on_windows = 'windows' in platform.platform().lower()
+
     false_positives = []
     whitelisted_users = []
     blacklisted_users = []
