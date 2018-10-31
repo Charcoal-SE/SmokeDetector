@@ -581,7 +581,7 @@ class SmokeyTransfer:
                 length = len(item)
             except TypeError:
                 length = None  # len() is inapplicable
-            data['_metadata']['lengths']['key'] = length
+            data['_metadata']['lengths'][key] = length
 
         # hopefully the pickle won't be more than a few MiB
         raw_data = pickle.dumps(data, protocol=pickle.HIGHEST_PROTOCOL)
@@ -609,8 +609,8 @@ class SmokeyTransfer:
         s = ''.join(s.split())  # Clear whitespaces
 
         try:
-            z_data = s[len(cls.HEADER):-len(cls.ENDING)].strip().encode('ascii')
-            raw_data = zlib.uncompress(z_data)
+            z_data = base64.b64decode(s.encode('ascii'))
+            raw_data = zlib.decompress(z_data)
             data = pickle.loads(raw_data, encoding='utf-8')
             if type(data) is not dict:
                 raise ValueError("Invalid data (data type is not dict)")
@@ -630,5 +630,5 @@ class SmokeyTransfer:
                 setattr(obj, attr, item)
             if warnings:
                 raise Warning("Warning: " + ', '.join(warnings))
-        except ValueError as e:
-            raise e from None
+        except (ValueError, zlib.error) as e:
+            raise ValueError(str(e)) from None
