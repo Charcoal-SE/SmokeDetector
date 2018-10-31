@@ -6431,4 +6431,3 @@
 1540971749	tripleee	(?-i:^(?!kriti arora)[a-z]{5}\W[a-z]{4}a$)
 1540973189	Glorfindel	romio\W*ringbell
 1540974578	Shree	eniyianimasyonfilmleri\.com
-1540975211	tripleee	jewish\W+people(?:\W+\w){0,3}kill(?#Pittsburgh holocaust kook)
