@@ -567,10 +567,21 @@ class SmokeyTransfer:
     @classmethod
     def dump(cls):
         # Trust Python's GIL here
-        data = {'version': 0}  # Reserve a version key here in case it'll be useful
+        data = {'_metadata': {
+            'time': time.time(),
+            'location': GlobalVars.location,
+            'rev': GlobalVars.commit['id_full'],
+            'lengths': {},  # can be used for validation
+        }}  # some metadata, in case they're useful
         for item_info in cls.ITEMS:
             key, obj, attr, *_ = item_info
-            data[key] = getattr(obj, attr)
+            item = getattr(obj, attr)
+            data[key] = item
+            try:
+                length = len(item)
+            except TypeError:
+                length = None  # len() is inapplicable
+            data['_metadata']['lengths']['key'] = length
 
         # hopefully the pickle won't be more than a few MiB
         raw_data = pickle.dumps(data, protocol=pickle.HIGHEST_PROTOCOL)
