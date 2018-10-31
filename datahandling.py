@@ -619,6 +619,8 @@ class SmokeyTransfer:
             warnings = []
             for item_info in cls.ITEMS:
                 key, obj, attr, *_ = item_info
+                if key not in data:
+                    continue  # Allow partial transfer
                 item = data[key]
                 try:
                     length = len(item)
