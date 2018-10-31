@@ -6428,3 +6428,4 @@
 1540966357	Makyen	supplements?cost(?!\.com)
 1540967613	Shree	phphelp\.net
 1540970683	Makyen	debonisdental\.com
+1540971749	tripleee	(?-i:^(?!kriti arora)[a-z]{5}\W[a-z]{4}a$)
