@@ -683,7 +683,7 @@ def pull(count=None):
     """
     if count:
         try:
-            git.pull(count)
+            GitManager.recover_from_history(count)
             return
         except Exception as e:
             raise CmdException(str(e))
