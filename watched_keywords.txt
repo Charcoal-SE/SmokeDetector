@@ -6468,3 +6468,4 @@
 1541077194	Glorfindel	bnp-steroid\.com
 1541082561	Erik the Outgolfer	jaibiz2day\.com
 1541090189	Erik the Outgolfer	olubahivherbalcure@gmail\.com
+1541093199	K.Dᴀᴠɪs	dr\.wadada\d*@(?:yahoo|gmail)\.com
