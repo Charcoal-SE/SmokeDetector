@@ -225,15 +225,19 @@ def on_msg(msg, client):
         return
 
     message = msg.message
+    room_ident = (client.host, message.room.id)
+    room_data = _rooms[room_ident]
+
     if message.owner.id == client._br.user_id:
+        if 'direct' in _room_roles and room_ident in _room_roles['direct']:
+            SocketScience.receive(message.content_source.replace("\u200B", "").replace("\u200C", ""))
+
         return
+
     if message.content.startswith("<div class='partial'>"):
         message.content = message.content[21:]
         if message.content.endswith("</div>"):
             message.content = message.content[:-6]
-
-    room_ident = (client.host, message.room.id)
-    room_data = _rooms[room_ident]
 
     if message.parent:
         try:
