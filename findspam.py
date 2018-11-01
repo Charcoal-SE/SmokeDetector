@@ -637,6 +637,7 @@ def ns_is_host(s, site):
         host_ip = dns_query(hostname, 'a')
         if host_ip is None:
             continue
+        host_ips = set([str(x) for x in host_ip])
         domain = get_domain(hostname, full=True)
         nameservers = dns_query(domain, 'ns')
         if nameservers is not None:
@@ -645,9 +646,8 @@ def ns_is_host(s, site):
                 this_ns_ips = dns_query(str(ns), 'a')
                 if this_ns_ips is not None:
                     ns_ips.extend([str(ip) for ip in this_ns_ips])
-            ns_ip_set = set(ns_ips)
-            if all(ip == host_ip for ip in ns_ip_set):
-                return True, 'Suspicious nameservers: all IP addresses for {0} are {1}'.format(hostname, host_ip)
+            if set(ns_ips) == host_ips:
+                return True, 'Suspicious nameservers: all IP addresses for {0} are in set {1}'.format(hostname, host_ips)
     return False, ''
 
 
