@@ -647,7 +647,8 @@ def ns_is_host(s, site):
                 if this_ns_ips is not None:
                     ns_ips.extend([str(ip) for ip in this_ns_ips])
             if set(ns_ips) == host_ips:
-                return True, 'Suspicious nameservers: all IP addresses for {0} are in set {1}'.format(hostname, host_ips)
+                return True, 'Suspicious nameservers: all IP addresses for {0} are in set {1}'.format(
+                    hostname, host_ips)
     return False, ''
 
 
