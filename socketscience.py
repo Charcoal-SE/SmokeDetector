@@ -9,6 +9,24 @@ from tasks import Tasks
 
 
 class SocketScience:
+    """
+    Use this class to send application data directly to other Smokey instances. This is intended for configuration or
+    co-ordination data, etc - it is not for human-readable messages.
+
+    Call SocketScience.send(payload) to send data. payload is a dict; use a key for each type of data (so, for example,
+    you could send {'ping': time.time(), 'metasmoke_status': 'down'} to send two distinct message types in one payload.
+    Clients can register callbacks for these message types to be notified and perform actions when they come in.
+
+    Code example:
+
+        def ping_callback(ping_data):
+            log('debug', '{} pinged at {}'.format(ping_data['location'], ping_data['time'])
+
+        SocketScience.register('ping', ping_callback)
+
+        SocketScience.send({'ping': {'location': GlobalVars.location, 'time': time.time()}})
+    """
+
     _incomplete_messages = {}
     _pings = []
     _switch_task = None
