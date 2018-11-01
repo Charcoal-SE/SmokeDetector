@@ -37,18 +37,19 @@ class SocketScience:
         encoded = msgpack.dumps(payload)
 
         if single_message:
-            message_id = random.randint(1000, 9999)
-            content = ".\n\u0002{}{}\u0003".format(message_id, encoded)
+            message_id = random.randint(0, 9999)
+            content = ".\n\u0002{:04}{}\u0003".format(message_id, encoded)
             chatcommunicate.tell_rooms_with("direct", content)
         else:
             # Messages can be 500 chars, but we need to leave space for control and message ident
-            chunks = [encoded[i:i + 485] for i in range(0, len(encoded), 485)]
-            message_id = random.randint(1000, 9999)
+            chunk_size = 485
+            chunks = [encoded[i:i + chunk_size] for i in range(0, len(encoded), chunk_size)]
+            message_id = "{:04}".format(random.randint(0, 9999))
 
-            chunks[0] = "\u0002" + str(message_id) + chunks[0]
-            chunks[-1] = chunks[-1] + str(message_id) + "\u0003"
+            chunks[0] = "\u0002" + message_id + chunks[0]
+            chunks[-1] = chunks[-1] + message_id + "\u0003"
             for n in range(1, len(chunks) - 1):
-                chunks[n] = "\u0016" + str(message_id) + chunks[n]
+                chunks[n] = "\u0016" + message_id + chunks[n]
 
             for chunk in chunks:
                 chatcommunicate.tell_rooms_with("direct", chunk)
@@ -61,29 +62,29 @@ class SocketScience:
 
         # U+0002 STX START OF TEXT; U+0003 ETX END OF TEXT; U+0016 SYN SYNCHRONOUS IDLE
         if content.startswith("\u0002") and content.endswith("\u0003"):
-            decoded = msgpack.loads(regex.sub(r"\d{4}\u0003", "", regex.sub(r"^\u0002\d{4}", "", content)))
+            decoded = msgpack.loads(content[5:-5])
             SocketScience.handle(decoded)
 
         # STX indicates probably valid, but incomplete - wait for another message with content and ETX.
         elif content.startswith("\u0002") and not content.endswith("\u0003"):
-            message_id = regex.match(r"^\u0002(\d{4})", content)[1]
+            message_id = int(content[1:5])
             _incomplete_messages[message_id] = content
 
         # No STX but ends with ETX, so probably a completion of a previous message.
         elif not content.startswith("\u0002") and content.endswith("\u0003"):
-            message_id = regex.match(r"(\d{4})\u0003$", content)[1]
+            message_id = int(content[-5:-1])
             complete = _incomplete_messages[message_id] + content
-            decoded = msgpack.loads(regex.sub(r"\d{4}\u0003", "", regex.sub(r"^\u0002\d{4}", "", complete)))
+            decoded = msgpack.loads(regex.sub(r"^\u0002\d{4}|\d{4}\u0003", "", complete))
             SocketScience.handle(decoded)
 
         # Starts with SYN and message ID - continuation but not completion of previous message.
         elif content.startswith("\u0016"):
-            message_id = regex.match(r"^\u0016(\d{4})", content)[1]
-            _incomplete_messages[message_id] += regex.sub(r"^\u0016\d{4}", "", content)
+            message_id = int(content[1:5])
+            _incomplete_messages[message_id] += content[5:]
 
         # Single multiline message instead of chunked.
         elif content.startswith(".\n\u0002"):
-            decoded = msgpack.loads(regex.sub(r"\d{4}\u0003", "", regex.sub(r"^.\n\u0002\d{4}", "", content)))
+            decoded = msgpack.loads(regex.sub(r"\d{4}\u0003.*", "", content[7:]))
             SocketScience.handle(decoded)
 
         else:
