@@ -2448,3 +2448,4 @@ internshipinchennai\.org\.in
 (?<![a-z0-9-])ica\.in(?![a-z0-9-])
 allavsoft\.com
 hptechnicalsupportphonenumbersusa\.com
+800supportnumber\.com
