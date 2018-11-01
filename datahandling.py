@@ -1,7 +1,7 @@
-# coding=utf-8
 import os
-# noinspection PyPep8Naming
 import pickle
+import zlib
+import base64
 from datetime import datetime
 import metasmoke
 import requests
@@ -551,3 +551,87 @@ def can_report_now(user_id, chat_host):
 
 def dump_cookies():
     _dump_pickle("cookies.p", GlobalVars.cookies)
+
+
+class SmokeyTransfer:
+    HEADER = "-----BEGIN SMOKEY DATA BLOCK-----"
+    ENDING = "-----END SMOKEY DATA BLOCK-----"
+
+    ITEMS = [
+        # (dict_key, object, attr, type, post_processing)
+        ('blacklisted_users', GlobalVars, 'blacklisted_users', None, None),
+        ('whitelisted_users', GlobalVars, 'whitelisted_users', None, None),
+        ('ignored_posts', GlobalVars, 'ignored_posts', None, None),
+        ('notifications', GlobalVars, 'notifications', None, None),
+    ]
+
+    @classmethod
+    def dump(cls):
+        # Trust Python's GIL here
+        data = {'_metadata': {
+            'time': time.time(),
+            'location': GlobalVars.location,
+            'rev': GlobalVars.commit['id_full'],
+            'lengths': {},  # can be used for validation
+        }}  # some metadata, in case they're useful
+        for item_info in cls.ITEMS:
+            key, obj, attr, obj_type, _ = item_info
+            item = getattr(obj, attr)
+            data[key] = item
+            try:
+                length = len(item)
+            except TypeError:
+                length = None  # len() is inapplicable
+            data['_metadata']['lengths'][key] = length
+
+        # hopefully the pickle won't be more than a few MiB
+        raw_data = pickle.dumps(data, protocol=pickle.HIGHEST_PROTOCOL)
+        # let's save some traffic
+        z_data = zlib.compress(raw_data, 9)
+        # need to transfer via chat, so text only
+        b64_s = base64.b64encode(z_data).decode('ascii')
+
+        chunk_size = 64  # The same value as GnuPG armored output
+        s = "{}\n\n{}\n\n{}".format(
+            cls.HEADER,
+            '\n'.join([b64_s[i:i + chunk_size] for i in range(0, len(b64_s), chunk_size)]),
+            cls.ENDING)
+        return s, data['_metadata']
+
+    @classmethod
+    def load(cls, s, merge=False):
+        try:
+            # While it generates a blank line after the header and before the ending,
+            # it should also accept data that does not contain the blank lines
+            lbound, rbound = s.index(cls.HEADER + "\n"), s.rindex("\n" + cls.ENDING)
+            s = s[lbound + len(cls.HEADER):rbound].strip()
+        except ValueError:
+            raise ValueError("Invalid data (invalid header or ending)")
+        s = ''.join(s.split())  # Clear whitespaces
+
+        try:
+            z_data = base64.b64decode(s.encode('ascii'))
+            raw_data = zlib.decompress(z_data)
+            data = pickle.loads(raw_data, encoding='utf-8')
+            if type(data) is not dict:
+                raise ValueError("Invalid data (data type is not dict)")
+
+            # happy extracting
+            warnings = []
+            for item_info in cls.ITEMS:
+                key, obj, attr, obj_type, proc = item_info
+                if key not in data:
+                    continue  # Allow partial transfer
+                item = data[key]
+                try:
+                    length = len(item)
+                except TypeError:
+                    length = None
+                if length != data['_metadata']['lengths'][key]:
+                    warnings.append("Length of {!r} mismatch (recorded {}, actual {})".format(
+                        key, data['_metadata']['lengths'][key], length))
+                setattr(obj, attr, item)
+            if warnings:
+                raise Warning("Warning: " + ', '.join(warnings))
+        except (ValueError, zlib.error) as e:
+            raise ValueError(str(e)) from None

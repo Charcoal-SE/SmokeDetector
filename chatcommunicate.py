@@ -445,6 +445,12 @@ def message(msg):
     return msg
 
 
+def get_message(id, host="stackexchange.com"):
+    if host not in _clients:
+        raise ValueError("Invalid host")
+    return _clients[host].get_message(int(id))
+
+
 def dispatch_command(msg):
     command_parts = GlobalVars.parser.unescape(msg.content).split(" ", 1)
 

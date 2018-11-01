@@ -1589,6 +1589,32 @@ def feedback(msg, post_url, feedback):
     raise CmdException("No such feedback.")
 
 
+@command(privileged=True, aliases=['dump-data'])
+def dump_data():
+    try:
+        s, metadata = SmokeyTransfer.dump()
+        tell_rooms_with('dump', s)
+    except Exception:
+        log_exception(*sys.exc_info())
+        raise CmdException("Failed to dump data. Run `!!/errorlogs` for details.")
+    return "Data successfully dumped"
+
+
+@command(int, privileged=True, aliases=['load-data'])
+def load_data(msg_id):
+    msg = get_message(msg_id)
+    if msg.owner.id != 120914:  # TODO: implement an is_self() in chatcommunicate, don't use magic numbers
+        raise CmdException("Message owner is not SmokeDetector, refusing to load")
+    try:
+        SmokeyTransfer.load(msg.content_source)
+    except ValueError as e:
+        raise CmdException(str(e)) from None
+    except Exception:
+        log_exception(*sys.exc_info())
+        raise CmdException("Failed to load data. Run `!!/errorlogs` for details.")
+    return "Data successfully loaded"
+
+
 #
 #
 # Subcommands go below here
