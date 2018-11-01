@@ -6460,3 +6460,4 @@
 1541055079	iBug	gamesmodapk\.info
 1541056737	Tetsuya Yamamoto	narutoshippudenfillerlist\.com
 1541060572	tripleee	(?-i:^openInvent$)
+1541061318	tripleee	(?-i:^Ember Leona$)
