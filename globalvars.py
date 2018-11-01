@@ -72,6 +72,9 @@ class GlobalVars:
         "potentially bad ASN for domain in title",
         "potentially bad ASN for domain in body",
         "potentially bad ASN for domain in answer",
+        "potentially problematic NS configuration in title",
+        "potentially problematic NS configuration in body",
+        "potentially problematic NS configuration in answer",
         "toxic body detected",
         "toxic answer detected",
     }
