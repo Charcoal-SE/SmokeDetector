@@ -740,7 +740,7 @@ def watched_ns_for_url_domain(s, site):
         'guzelhosting.com.',
         'solidhosting.pro.',
         'justhost.com.',
-        'stupidblogger.com',
+        'stupidblogger.com.',
     ])
 
 
