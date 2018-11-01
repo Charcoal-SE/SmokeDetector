@@ -557,11 +557,11 @@ class SmokeyTransfer:
     ENDING = "-----END SMOKEY DATA BLOCK-----"
 
     ITEMS = [
-        # (dict_key, object, attr[, type, post_processing])
-        ('blacklisted_users', GlobalVars, 'blacklisted_users'),
-        ('whitelisted_users', GlobalVars, 'whitelisted_users'),
-        ('ignored_posts', GlobalVars, 'ignored_posts'),
-        ('notifications', GlobalVars, 'notifications'),
+        # (dict_key, object, attr, type, post_processing)
+        ('blacklisted_users', GlobalVars, 'blacklisted_users', None, None),
+        ('whitelisted_users', GlobalVars, 'whitelisted_users', None, None),
+        ('ignored_posts', GlobalVars, 'ignored_posts', None, None),
+        ('notifications', GlobalVars, 'notifications', None, None),
     ]
 
     @classmethod
@@ -574,7 +574,7 @@ class SmokeyTransfer:
             'lengths': {},  # can be used for validation
         }}  # some metadata, in case they're useful
         for item_info in cls.ITEMS:
-            key, obj, attr, *_ = item_info
+            key, obj, attr, obj_type, _ = item_info
             item = getattr(obj, attr)
             data[key] = item
             try:
@@ -618,7 +618,7 @@ class SmokeyTransfer:
             # happy extracting
             warnings = []
             for item_info in cls.ITEMS:
-                key, obj, attr, *_ = item_info
+                key, obj, attr, obj_type, proc = item_info
                 if key not in data:
                     continue  # Allow partial transfer
                 item = data[key]
