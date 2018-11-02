@@ -1696,3 +1696,4 @@ pof
 filehippo
 dafont
 magnum\W?pump(?:\W?xr)?
+retro\W?vigor
