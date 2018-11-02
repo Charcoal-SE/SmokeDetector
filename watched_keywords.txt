@@ -5294,7 +5294,6 @@
 1535786752	Makyen	[a-z_]*(?:91_*)?8860[\W_]*675[\W_]*979[a-z_]*
 1535787974	iBug	plfdentistry\.com
 1535738521	Nisse Engström	ugreetings\.com
-1535797552	Tetsuya Yamamoto	exltech\.in
 1535797682	Tetsuya Yamamoto	commercialpaintersmiami\.com
 1535836037	doppelgreener	t\.me/healthycoinofficial
 1535836041	doppelgreener	healthy\W?coin
