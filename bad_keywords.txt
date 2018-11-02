@@ -1695,3 +1695,4 @@ pof
 123movies
 filehippo
 dafont
+magnum\W?pump(?:\W?xr)?
