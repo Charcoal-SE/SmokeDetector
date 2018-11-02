@@ -6472,3 +6472,4 @@
 1541109174	Makyen	(?:AAA|medical|ounce|gram)s?.{0,20}\bbuds?
 1541126968	Tetsuya Yamamoto	gurgaonescortsservice\.club
 1541131821	Shree	wrfg\.org
+1541132346	A J	catholicvote\.org
