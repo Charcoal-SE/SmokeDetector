@@ -742,6 +742,7 @@ def watched_ns_for_url_domain(s, site):
         'solidhosting.pro.',
         'justhost.com.',
         'stupidblogger.com.',
+        'orangewebsite.com.',
     ])
 
 
