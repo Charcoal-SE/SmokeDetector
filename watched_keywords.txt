@@ -6497,3 +6497,4 @@
 1541230661	Makyen	(?:100%\W*|money\W*back\W*)+.{0,20}guarant\w*
 1541240227	Erik the Outgolfer	dumpsprofessor\.us
 1541246622	Erik the Outgolfer	pensacolaautosalvage\.com
+1541248129	Glorfindel	freerobuxgenerator\.com
