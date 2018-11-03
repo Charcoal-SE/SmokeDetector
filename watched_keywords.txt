@@ -6497,3 +6497,4 @@
 1541214718	iBug	\w*tpoint\.com
 1541230661	Makyen	(?:100%\W*|money\W*back\W*)+.{0,20}guarant\w*
 1541240227	Erik the Outgolfer	dumpsprofessor\.us
+1541240711	bertieb	medtravels\.in
