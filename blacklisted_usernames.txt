@@ -111,4 +111,3 @@ Tyron P
 ^mangesh\W*(?:\w+\W+)?dhulap$
 praveen kumar Lakhara
 ^(?-i:daveclark966)$
-^\w*h[ou]+sken$
