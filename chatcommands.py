@@ -409,9 +409,24 @@ def approve(msg, pr_id):
 
     # Forward this, because checks are better placed in gitmanager.py
     try:
-        return GitManager.merge_pull_request(msg, pr_id)
+        message = GitManager.merge_pull_request(pr_id)
+        if code_permissions and only_blacklists_changed(GitManager.get_local_diff()):
+            try:
+                if not GlobalVars.on_master:
+                    # Restart if HEAD detached
+                    log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
+                    os._exit(8)
+                GitManager.pull_local()
+                GlobalVars.reload()
+                findspam.FindSpam.reload_blacklists()
+                tell_rooms_with('debug', GlobalVars.s_norestart)
+                time.sleep(2)
+                return None
+            except Exception:
+                pass
+        return message
     except Exception as e:
-        return str(e)
+        raise CmdException(str(e))
 
 
 @command(privileged=True, aliases=["remote-diff", "remote_diff"])
