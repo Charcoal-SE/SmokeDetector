@@ -401,6 +401,19 @@ def unblacklist(msg, item, alias_used="unwatch"):
     return result
 
 
+@command(int, privileged=True, whole_msg=True)
+def approve(msg, pr_id):
+    code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
+    if not code_permissions:
+        raise CmdException("You need code privileges to approve pull requests")
+
+    # Forward this, because checks are better placed in gitmanager.py
+    try:
+        return GitManager.merge_pull_request(msg, pr_id)
+    except Exception as e:
+        return str(e)
+
+
 @command(privileged=True, aliases=["remote-diff", "remote_diff"])
 def remotediff():
     will_require_full_restart = "SmokeDetector will require a full restart to pull changes: " \
