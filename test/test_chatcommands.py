@@ -195,7 +195,7 @@ def test_approve(monkeypatch):
     monkeypatch.setattr(GlobalVars, "code_privileged_users", [])
     assert chatcommands.approve(8888, original_msg=msg).startswith("You need code privileges")
 
-    monkeypatch.setattr(GlobalVars, "code_privileged_users", [1])
+    monkeypatch.setattr(GlobalVars, "code_privileged_users", [('stackexchange.com', 1)])
     with monkeypatch.context() as m:
         # Oh no GitHub is down
         m.setattr("requests.get", lambda *args, **kwargs: None)
