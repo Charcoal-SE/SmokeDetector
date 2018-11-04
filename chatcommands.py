@@ -1,7 +1,7 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
 from chatcommunicate import add_room, block_room, CmdException, command, get_report_data, is_privileged, message, \
-    tell_rooms, tell_rooms_with
+    tell_rooms, tell_rooms_with, get_message
 # noinspection PyUnresolvedReferences
 from globalvars import GlobalVars
 import findspam
