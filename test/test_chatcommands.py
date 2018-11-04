@@ -179,6 +179,30 @@ def test_watch(monkeypatch):
         git.checkout("master")
 
 
+def test_approve(monkeypatch):
+    msg = Fake({
+        "_client": {
+            "host": "stackexchange.com",
+            "get_user": lambda id: Fake({"name": "name", "id": id})
+        },
+        "owner": {"name": "L'imperatore", "id": 1},
+        "room": {"id": 11540, "get_current_user_ids": lambda: []},
+        "content_source": '!!/approve -1'
+    })
+    msg.room._client = msg._client
+
+    # Prevent from attempting to check privileges with Metasmoke
+    monkeypatch.setattr(GlobalVars, "code_privileged_users", [])
+    assert chatcommands.approve(8888, original_msg=msg).startswith("You need code privileges")
+
+    monkeypatch.setattr(GlobalVars, "code_privileged_users", [1])
+    with monkeypatch.context() as m:
+        # Oh no GitHub is down
+        m.setattr("requests.get", lambda *args, **kwargs: None)
+        assert chatcommands.approve(8888, original_msg=msg) == "Cannot connect to GitHub API"
+    assert chatcommands.approve(2518, original_msg=msg).startswith("PR #2518 is not created by me")
+
+
 @patch("chatcommands.handle_spam")
 def test_report(handle_spam):
     # Documentation: The process before scanning the post is identical regardless of alias_used.
