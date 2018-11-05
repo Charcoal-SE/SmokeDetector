@@ -6518,3 +6518,4 @@
 1541358135	Makyen	cjislam\.weebly\.com
 1541389891	Tetsuya Yamamoto	packersandmoversvadodara\.biz
 1541389928	Tetsuya Yamamoto	packersandmoversludhiana\.biz
+1541390019	Tetsuya Yamamoto	packersandmovers\w*\.biz
