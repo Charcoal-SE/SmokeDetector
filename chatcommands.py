@@ -1593,6 +1593,7 @@ def feedback(msg, post_url, feedback):
 def dump_data():
     try:
         s, metadata = SmokeyTransfer.dump()
+        s = "{}, {}, {}\n{}".format(metadata['time'], metadata['location'], metadata['rev'], s)
         tell_rooms_with('dump', s)
     except Exception:
         log_exception(*sys.exc_info())
