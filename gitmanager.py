@@ -353,3 +353,13 @@ class GitManager:
         git.checkout('-b', 'temp', 'origin/master')
         git.branch('-M', 'master')
         return True, 'Voilà!'
+
+    @staticmethod
+    def sync_remote_2():
+        try:
+            if GlobalVars.on_master == "master":
+                git.checkout("deploy")
+            git.branch('--create-reflog', '-f', 'master', '-t', 'origin/master')
+            return True, "this is working!"
+        except Exception as e:
+            return False, str(e)
