@@ -257,7 +257,7 @@ class GitManager:
         return True, 'Removed `{}` from {}'.format(item, list_type)
 
     @classmethod
-    def merge_pull_request(cls, pr_id):
+    def merge_pull_request(cls, pr_id, commit_msg=""):
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
         if not response:
             raise ConnectionError("Cannot connect to GitHub API")
@@ -277,7 +277,8 @@ class GitManager:
 
             git.fetch('origin', '+refs/pull/{}/merge'.format(pr_id))
             git.merge('FETCH_HEAD', '--no-ff', '-m', 'Merge pull request #{} from {}/{} --autopull'.format(
-                pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref))
+                      pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref),
+                      '-m', commit_msg)
             git.push()
             return "Merged pull request [#{0}](https://github.com/{1}/pulls/{0}).".format(
                 pr_id, GlobalVars.bot_repo_slug)

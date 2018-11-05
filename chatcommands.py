@@ -409,8 +409,10 @@ def approve(msg, pr_id):
 
     # Forward this, because checks are better placed in gitmanager.py
     try:
-        message = GitManager.merge_pull_request(pr_id)
-        if code_permissions and only_blacklists_changed(GitManager.get_local_diff()):
+        message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
+        commit_msg = "Approved by {} in {}\n{}".format(msg.owner.name, msg.room.name, message_url)
+        message = GitManager.merge_pull_request(pr_id, commit_msg)
+        if only_blacklists_changed(GitManager.get_local_diff()):
             try:
                 if not GlobalVars.on_master:
                     # Restart if HEAD detached
