@@ -6535,3 +6535,4 @@
 1541430617	Shree	romanbaz\.ir
 1541435424	Makyen	hoabinhreal(?:\.com)?(?#domain and URL path fragment)
 1541435980	Makyen	usassetrecords\.com
+1541444491	Makyen	ingles-madrid\.com
