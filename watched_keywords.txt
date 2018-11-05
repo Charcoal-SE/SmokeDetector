@@ -6520,3 +6520,4 @@
 1541389928	Tetsuya Yamamoto	packersandmoversludhiana\.biz
 1541390019	Tetsuya Yamamoto	packersandmovers\w*\.biz
 1541390992	Tetsuya Yamamoto	pcacares\.org
+1541395537	Tetsuya Yamamoto	technicalustad\.com
