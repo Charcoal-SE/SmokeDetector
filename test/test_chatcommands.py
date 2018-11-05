@@ -183,11 +183,11 @@ def test_approve(monkeypatch):
     msg = Fake({
         "_client": {
             "host": "stackexchange.com",
-            "get_user": lambda id: Fake({"name": "name", "id": id})
         },
+        "id": 88888888,
         "owner": {"name": "L'imperatore", "id": 1},
-        "room": {"id": 11540, "get_current_user_ids": lambda: []},
-        "content_source": '!!/approve -1'
+        "room": {"id": 11540, "name": "Continuous Integration", "_client": None},
+        "content_source": '!!/approve 8888',
     })
     msg.room._client = msg._client
 
