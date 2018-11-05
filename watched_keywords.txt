@@ -6537,3 +6537,4 @@
 1541435980	Makyen	usassetrecords\.com
 1541444491	Makyen	ingles-madrid\.com
 1541445643	Makyen	itianscompany\.com
+1541451941	Makyen	mtgarticles\.com
