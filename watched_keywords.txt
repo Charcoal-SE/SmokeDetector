@@ -6525,3 +6525,4 @@
 1541413987	Glorfindel	rkvitsolutions
 1541414019	Glorfindel	rkvitsolutionspvtltd\.blogspot\.com
 1541414912	Makyen	\bwatch\b.{0,80}\b(?:online|stream|live|movie|TV)s?\b
+1541416318	tripleee	raynatour\.com
