@@ -6553,3 +6553,4 @@
 1541501228	Shree	makerfab\.blogspot\.com
 1541501817	Shree	itcompanion\.ru
 1541504249	iBug	^[a-z]{4,6}[sd]?a+[sd]$
+1541504449	iBot	a{9999}
