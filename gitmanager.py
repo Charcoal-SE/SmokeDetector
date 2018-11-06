@@ -278,7 +278,7 @@ class GitManager:
         return True, 'Removed `{}` from {}'.format(item, list_type)
 
     @classmethod
-    def merge_pull_request(cls, pr_id, commit_msg=""):
+    def merge_pull_request(cls, pr_id, comment=""):
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
         if not response:
             raise ConnectionError("Cannot connect to GitHub API")
@@ -289,14 +289,16 @@ class GitManager:
             raise ValueError("PR description is malformed. Blame a developer")
         ref = pr_info['head']['ref']
 
+        if comment:  # yay we have comments now
+            GitHubManager.comment_on_thread(pr_id, comment)
+
         try:
             # Remote checks passed, good to go here
             cls.gitmanager_lock.acquire()
             git.checkout('master')
             git.fetch('origin', '+refs/pull/{}/merge'.format(pr_id))
             git.merge('FETCH_HEAD', '--no-ff', '-m', 'Merge pull request #{} from {}/{} --autopull'.format(
-                      pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref),
-                      '-m', commit_msg)
+                      pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref))
             git.push()
             try:
                 git.push('-d', 'origin', ref)
