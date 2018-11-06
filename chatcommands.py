@@ -410,7 +410,7 @@ def approve(msg, pr_id):
     # Forward this, because checks are better placed in gitmanager.py
     try:
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
-        comment = "{} [approved]({}) this PR in {}\n\n{}".format(
+        comment = "{} [approved]({}) this PR in {}\n\n![Approved by SmokeyApprove]({})".format(
             msg.owner.name, message_url, msg.room.name,
             # The image of (code-admins|approved) from PullApprove
             "https://camo.githubusercontent.com/18c997a6b1ac764dfd43963f5071d03a3c7fc97b/68747470733a2f2f696d672e7368"
