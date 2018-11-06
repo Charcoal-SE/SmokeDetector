@@ -6552,7 +6552,6 @@
 1541500309	Shree	info@bkash\.in
 1541501228	Shree	makerfab\.blogspot\.com
 1541501817	Shree	itcompanion\.ru
-1541504249	iBug	^[a-z]{4,6}[sd]?a+[sd]$
 1541504732	Tetsuya Yamamoto	nativespanishtapas\.com
 1541508128	bertieb	hotelsafes\.com
 1541510444	tripleee	jubahjdm
