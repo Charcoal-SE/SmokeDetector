@@ -256,6 +256,36 @@ class GitManager:
         # With no exception raised, list_type should be set
         return True, 'Removed `{}` from {}'.format(item, list_type)
 
+    @classmethod
+    def merge_pull_request(cls, pr_id, commit_msg=""):
+        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
+        if not response:
+            raise ConnectionError("Cannot connect to GitHub API")
+        pr_info = response.json()
+        if pr_info["user"]["login"] != "SmokeDetector":
+            raise ValueError("PR #{} is not created by me, so I can't approve it".format(pr_id))
+        if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
+            raise ValueError("PR description is malformed. Blame a developer")
+        ref = pr_info['head']['ref']
+
+        try:
+            # Remote checks passed, good to go here
+            cls.gitmanager_lock.acquire()
+            status, message = cls.prepare_git_for_operation()
+            if not status:
+                raise OSError(message)
+
+            git.fetch('origin', '+refs/pull/{}/merge'.format(pr_id))
+            git.merge('FETCH_HEAD', '--no-ff', '-m', 'Merge pull request #{} from {}/{} --autopull'.format(
+                      pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref),
+                      '-m', commit_msg)
+            git.push()
+            return "Merged pull request [#{0}](https://github.com/{1}/pulls/{0}).".format(
+                pr_id, GlobalVars.bot_repo_slug)
+        finally:
+            git.checkout('deploy')
+            cls.gitmanager_lock.release()
+
     @staticmethod
     def prepare_git_for_operation(blacklist_file_name):
         git.checkout('master')

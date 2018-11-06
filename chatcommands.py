@@ -401,6 +401,36 @@ def unblacklist(msg, item, alias_used="unwatch"):
     return result
 
 
+@command(int, privileged=True, whole_msg=True)
+def approve(msg, pr_id):
+    code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
+    if not code_permissions:
+        raise CmdException("You need code privileges to approve pull requests")
+
+    # Forward this, because checks are better placed in gitmanager.py
+    try:
+        message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
+        commit_msg = "Approved by {} in {}\n{}".format(msg.owner.name, msg.room.name, message_url)
+        message = GitManager.merge_pull_request(pr_id, commit_msg)
+        if only_blacklists_changed(GitManager.get_local_diff()):
+            try:
+                if not GlobalVars.on_master:
+                    # Restart if HEAD detached
+                    log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
+                    os._exit(8)
+                GitManager.pull_local()
+                GlobalVars.reload()
+                findspam.FindSpam.reload_blacklists()
+                tell_rooms_with('debug', GlobalVars.s_norestart)
+                time.sleep(2)
+                return None
+            except Exception:
+                pass
+        return message
+    except Exception as e:
+        raise CmdException(str(e))
+
+
 @command(privileged=True, aliases=["remote-diff", "remote_diff"])
 def remotediff():
     will_require_full_restart = "SmokeDetector will require a full restart to pull changes: " \
