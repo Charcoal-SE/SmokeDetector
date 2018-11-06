@@ -277,7 +277,11 @@ class GitManager:
                       pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref),
                       '-m', commit_msg)
             git.push()
-            git.push('-d', 'origin', ref)
+            try:
+                git.push('-d', 'origin', ref)
+            except GitError as e:
+                # TODO: PR merged, but branch deletion has something wrong, generate some text
+                pass
             return "Merged pull request [#{0}](https://github.com/{1}/pulls/{0}).".format(
                 pr_id, GlobalVars.bot_repo_slug)
         finally:
