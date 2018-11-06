@@ -6543,3 +6543,4 @@
 1541476328	K.Dᴀᴠɪs	datascicon\.tech
 1541484702	iBug	^[a-z]{4,6}[asd]a*[sd]$
 1541488671	K.Dᴀᴠɪs	khosango\.com
+1541490577	K.Dᴀᴠɪs	gizmolad\.com
