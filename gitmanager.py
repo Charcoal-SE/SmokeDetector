@@ -23,6 +23,29 @@ from helpers import log, log_exception, only_blacklists_changed
 from blacklists import *
 
 
+class GitHubManager:
+    auth = HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password)
+    repo = GlobalVars.bot_repo_slug
+
+    @classmethod
+    def create_pull_request(cls, payload):
+        """
+        Creates a pull request on GitHub, returns the json'd response
+        """
+        if isinstance(payload, dict):
+            payload = json.dumps(payload)
+        response = requests.post("https://api.github.com/repos/{}/pulls".format(cls.repo),
+                                 auth=cls.auth, data=payload)
+        return response.json()
+
+    @classmethod
+    def comment_on_thread(cls, thread_id, body):
+        url = "https://api.github.com/repos/{}/issues/{}/comments".format(cls.repo, thread_id)
+        payload = json.dumps({'body': body})
+        response = requests.post(url, auth=cls.auth, data=payload)
+        return response.json()
+
+
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
 class GitManager:
     gitmanager_lock = Lock()
@@ -134,23 +157,21 @@ class GitManager:
                                        blacklist.upper()),                                        # 8
                            "head": branch,
                            "base": "master"}
-                response = requests.post("https://api.github.com/repos/{}/pulls".format(GlobalVars.bot_repo_slug),
-                                         auth=HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password),
-                                         data=json.dumps(payload))
-                log('debug', response.json())
+                response = GitHubManager.create_pull_request(payload)
+                log('debug', response)
                 try:
                     git.checkout("deploy")  # Return to deploy, pending the accept of the PR in Master.
                     git.branch('-D', branch)  # Delete the branch in the local git tree since we're done with it.
-                    url = response.json()["html_url"]
+                    url, pr_num = response["html_url"], response["number"]
                     if metasmoke_down:
                         return (True,
                                 "MS is not reachable, so I can't see if you have code privileges, but I've "
                                 "[created PR#{1} for you]({0}).".format(
-                                    url, url.split('/')[-1]))
+                                    url, pr_num))
                     else:
                         return (True,
                                 "You don't have code privileges, but I've [created PR#{1} for you]({0}).".format(
-                                    url, url.split('/')[-1]))
+                                    url, pr_num))
 
                 except KeyError:
                     git.checkout("deploy")  # Return to deploy
@@ -167,13 +188,13 @@ class GitManager:
 
                     # Error capture/checking for any "invalid" GH reply without an 'html_url' item,
                     # which will throw a KeyError.
-                    if "bad credentials" in str(response.json()['message']).lower():
+                    if "bad credentials" in str(response['message']).lower():
                         # Capture the case when GH credentials are bad or invalid
                         return (False, "Something is wrong with the GH credentials, tell someone to check them.")
                     else:
                         # Capture any other invalid response cases.
                         return (False, "A bad or invalid reply was received from GH, the message was: %s" %
-                                response.json()['message'])
+                                response['message'])
         except Exception as err:
             with open('errorLogs.txt', 'a', encoding="utf-8") as f:
                 f.write("{dt} {message}".format(dt=datetime.now().strftime('%Y-%m-%d %H:%M:%s'), message=str(err)))

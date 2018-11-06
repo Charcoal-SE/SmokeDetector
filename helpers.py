@@ -49,7 +49,7 @@ def log(log_level, *args, f=False):
 
     color = levels[log_level][1] if log_level in levels else 'white'
     log_str = "{} {}".format(colored("[{}]".format(datetime.now().isoformat()[11:-3]),
-                                     color),
+                                     color, attrs=['bold']),
                              "  ".join([str(x) for x in args]))
     print(log_str, file=sys.stderr)
 
