@@ -1707,4 +1707,3 @@ vitahair\W*max
 luma\W?slim
 supreme\W?x
 viva\W?x
-ultra\W?diet
