@@ -1706,3 +1706,4 @@ vitahair\W*max
 (?:up\W*a\W*cup.{0,40}?(?:breast|pills|bust|cream|</a>\W*)s?|(?:breast|pills|bust|cream|\W*</a>).{0,40}?up\W*a\W*cup)
 luma\W?slim
 supreme\W?x
+viva\W?x
