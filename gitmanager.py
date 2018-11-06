@@ -305,7 +305,7 @@ class GitManager:
             except GitError as e:
                 # TODO: PR merged, but branch deletion has something wrong, generate some text
                 pass
-            return "Merged pull request [#{0}](https://github.com/{1}/pulls/{0}).".format(
+            return "Merged pull request [#{0}](https://github.com/{1}/pull/{0}).".format(
                 pr_id, GlobalVars.bot_repo_slug)
         finally:
             git.checkout('deploy')
