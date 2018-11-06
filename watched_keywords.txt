@@ -6555,4 +6555,3 @@
 1541504249	iBug	^[a-z]{4,6}[sd]?a+[sd]$
 1541504732	Tetsuya Yamamoto	nativespanishtapas\.com
 1541504994	iBot	a{8888}
-1541505233	iBot	a{9998}
