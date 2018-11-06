@@ -277,6 +277,7 @@ class GitManager:
                       pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref),
                       '-m', commit_msg)
             git.push()
+            git.push('-d', 'origin', 'ref')
             return "Merged pull request [#{0}](https://github.com/{1}/pulls/{0}).".format(
                 pr_id, GlobalVars.bot_repo_slug)
         finally:
