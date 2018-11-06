@@ -271,10 +271,7 @@ class GitManager:
         try:
             # Remote checks passed, good to go here
             cls.gitmanager_lock.acquire()
-            status, message = cls.prepare_git_for_operation()
-            if not status:
-                raise OSError(message)
-
+            git.checkout('master')
             git.fetch('origin', '+refs/pull/{}/merge'.format(pr_id))
             git.merge('FETCH_HEAD', '--no-ff', '-m', 'Merge pull request #{} from {}/{} --autopull'.format(
                       pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref),
