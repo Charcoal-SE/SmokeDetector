@@ -1708,3 +1708,4 @@ luma\W?slim
 supreme\W?x
 viva\W?x
 bhb\W?800
+hyperion
