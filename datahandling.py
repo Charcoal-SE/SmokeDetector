@@ -361,7 +361,7 @@ def fetch_lines_from_error_log(count):
         return "Please request an exception count greater than zero."
     logs = ErrorLogs.fetch_last(count)
     s = '\n'.join([
-        ">>> {2} on {0} at {1}Z: {3}\n{4}".format(
+        "### {2} on {0} at {1}Z: {3}\n{4}".format(
             GlobalVars.location, datetime.utcfromtimestamp(time).isoformat(),
             name, message, tb)
         for time, name, message, tb in logs])
