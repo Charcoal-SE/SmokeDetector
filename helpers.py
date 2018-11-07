@@ -8,6 +8,27 @@ from termcolor import colored
 import requests
 import regex
 from glob import glob
+import sqlite3
+
+
+class ErrorLogs:
+    db = sqlite3.connect("errorLogs.db")
+
+    if db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='error_logs'").fetchone() is None:
+        # Table 'error_logs' doesn't exist
+        db.execute("CREATE TABLE error_logs (time REAL PRIMARY KEY ASC, classname TEXT, message TEXT, traceback TEXT)")
+        db.commit()
+
+    @classmethod
+    def add(cls, time, classname, message, traceback):
+        cls.db.execute("INSERT INTO error_logs VALUES (?, ?, ?, ?)",
+                       (time, classname, message, traceback))
+        cls.db.commit()
+
+    @classmethod
+    def fetch_last(cls, n):
+        cursor = cls.db.execute("SELECT * FROM error_logs ORDER BY time DESC LIMIT.?", (int(n),))
+        return cursor.fetchall()
 
 
 class Helpers:
@@ -82,8 +103,7 @@ def log_exception(exctype, value, tb, f=False):
     exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
     logged_msg = "{exception}\n{now} UTC\n{row}\n\n".format(exception=exception_only, now=now, row=tr)
     log('error', logged_msg, f=f)
-    with open("errorLogs.txt", "a") as fp:
-        fp.write(logged_msg)
+    ErrorLogs.add(now.timestamp(), exctype.__name__, str(value), tr)
 
 
 def files_changed(diff, file_set):

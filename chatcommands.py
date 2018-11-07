@@ -630,7 +630,7 @@ def errorlogs(count):
     :param count:
     :return: A string
     """
-    return fetch_lines_from_error_log(count or 50)
+    return fetch_lines_from_error_log(count or 2)
 
 
 @command(whole_msg=True, aliases=["ms-status", "ms-down", "ms-up"], give_name=True)

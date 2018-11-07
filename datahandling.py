@@ -14,6 +14,7 @@ import regex
 from parsing import api_parameter_from_link, post_id_from_link
 from globalvars import GlobalVars
 import blacklists
+from helpers import ErrorLogs
 
 last_feedbacked = None
 PICKLE_STORAGE = "pickles/"
@@ -353,21 +354,21 @@ def has_already_been_posted(host, post_id, title):
 
 
 # noinspection PyUnusedLocal
-def fetch_lines_from_error_log(line_count):
-    if not os.path.isfile("errorLogs.txt"):
-        return "The error log file does not exist."
-    if line_count <= 0:
-        return "Please request a line count greater than zero."
-    lines = []
-    with open("errorLogs.txt", "r") as f:
-        lines = f.readlines()[-line_count:]
-    formatted_lines = []
-    for line in lines:
-        formatted_lines.append("    " + line.rstrip())
-    fetched = os.linesep.join(formatted_lines)
-    if fetched.rstrip() == "":
-        return "The fetched part is empty. Please try another line count."
-    return fetched
+def fetch_lines_from_error_log(count):
+    if not os.path.isfile("errorLogs.db"):
+        return "The error log database does not exist."
+    if count <= 0:
+        return "Please request an exception count greater than zero."
+    logs = ErrorLogs.fetch_last(count)
+    s = '\n'.join([
+        ">>> {2} on {0} at {1}Z: {3}\n{4}".format(
+            GlobalVars.location, datetime.utcfromtimestamp(time).isoformat(),
+            name, message, tb)
+        for time, name, message, tb in logs])
+    if s:
+        return s
+    else:
+        return "The fetched log is empty."
 
 
 # method to check whether a SE site exists:
