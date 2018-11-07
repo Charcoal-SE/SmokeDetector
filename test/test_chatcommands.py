@@ -5,7 +5,7 @@ from apigetpost import api_get_post
 from parsing import to_protocol_relative
 from classes._Post import Post
 from globalvars import GlobalVars
-from datahandling import _remove_pickle
+from datahandling import _remove_pickle, remove_all_blacklisted_users
 
 import datetime
 import os
@@ -265,7 +265,7 @@ def test_report(handle_spam):
         assert call["why"].startswith("Post manually scanned by user *El'endia Starman* in room *Charcoal HQ*.")
 
         # Now with report-force
-        GlobalVars.blacklisted_users.clear()
+        remove_all_blacklisted_users()
         GlobalVars.latest_questions.clear()
         assert chatcommands.report(test_post_url, original_msg=msg, alias_used="report-force") is None
         _, call = handle_spam.call_args_list[-1]
@@ -282,7 +282,7 @@ def test_report(handle_spam):
         # Can use report command multiple times in 30s if only one URL was used
         assert chatcommands.report('https://stackoverflow.com/q/1732348', original_msg=msg, alias_used="report") is None
     finally:
-        GlobalVars.blacklisted_users.clear()
+        remove_all_blacklisted_users()
         GlobalVars.latest_questions.clear()
 
 
@@ -363,7 +363,7 @@ def test_allspam(handle_spam):
         assert call["why"] == "User manually reported by *El'endia Starman* in room *Charcoal HQ*.\n"
 
     finally:
-        GlobalVars.blacklisted_users.clear()
+        remove_all_blacklisted_users()
 
 
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"), reason="shouldn't overwrite file")
@@ -434,7 +434,7 @@ def test_blacklisted_users():
             "Error: Could not find the given site."
     finally:
         # Cleanup
-        _remove_pickle("blacklistedUsers.p")
+        remove_all_blacklisted_users()
 
 
 @pytest.mark.skipif(os.path.isfile("whitelistedUsers.p"), reason="shouldn't overwrite file")

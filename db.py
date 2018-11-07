@@ -43,6 +43,15 @@ def commit():
     return GlobalVars.local_db.commit()
 
 
+def vacuum():
+    # Need a workaround here, see https://github.com/ghaering/pysqlite/issues/109#issuecomment-277506491
+    old_isolevel = GlobalVars.local_db.isolation_level
+    GlobalVars.local_db.isolation_level = None
+    result = GlobalVars.local_db.execute("VACUUM")
+    GlobalVars.local_db.isolation_level = old_isolevel
+    return result
+
+
 def table_exists(table: str="sqlite_master"):
     if not GlobalVars.local_db:
         return False

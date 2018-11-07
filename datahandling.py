@@ -284,6 +284,13 @@ def remove_blacklisted_user(user):
     return True
 
 
+def remove_all_blacklisted_users():
+    # For use with CI
+    db.execute("DELETE FROM blacklisted_users")
+    db.vacuum()
+    db.commit()
+
+
 # noinspection PyMissingTypeHints
 def remove_whitelisted_user(user):
     if user not in GlobalVars.whitelisted_users:
