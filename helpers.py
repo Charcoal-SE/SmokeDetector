@@ -12,23 +12,30 @@ import sqlite3
 
 
 class ErrorLogs:
-    db = sqlite3.connect("errorLogs.db")
+    # SQLite threading limitation !?!?!?
 
+    db = sqlite3.connect("errorLogs.db")
     if db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='error_logs'").fetchone() is None:
         # Table 'error_logs' doesn't exist
         db.execute("CREATE TABLE error_logs (time REAL PRIMARY KEY ASC, classname TEXT, message TEXT, traceback TEXT)")
         db.commit()
+    db.close()
 
     @classmethod
     def add(cls, time, classname, message, traceback):
+        cls.db = sqlite3.connect("errorLogs.db")
         cls.db.execute("INSERT INTO error_logs VALUES (?, ?, ?, ?)",
                        (time, classname, message, traceback))
         cls.db.commit()
+        cls.db.close()
 
     @classmethod
     def fetch_last(cls, n):
-        cursor = cls.db.execute("SELECT * FROM error_logs ORDER BY time DESC LIMIT.?", (int(n),))
-        return cursor.fetchall()
+        cls.db = sqlite3.connect("errorLogs.db")
+        cursor = cls.db.execute("SELECT * FROM error_logs ORDER BY time DESC LIMIT ?", (int(n),))
+        data = cursor.fetchall()
+        cls.db.close()
+        return data
 
 
 class Helpers:
