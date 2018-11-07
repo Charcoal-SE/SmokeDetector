@@ -23,14 +23,10 @@ def execute(query_string: str, parameters: tuple, action="all"):
         return cursor
 
 
-def executemany(query_string: str, parameters: Iterable):
+def executemany(query_string: str, parameters):
     if not GlobalVars.local_db:
         raise ValueError("DB is not connected")
-    cursor = GlobalVars.local_db.executemany(query_string, parameters)
-    if fetchall:
-        return cursor.fetchall()
-    else:
-        return cursor
+    return GlobalVars.local_db.executemany(query_string, parameters)
 
 
 def commit():
@@ -45,7 +41,7 @@ def commit():
 def table_exists(table):
     if not GlobalVars.local_db:
         return False
-    return bool(db_exec)
+    return (execute("SELECT name FROM sqlite_master WHERE type='table' AND name=?", table, "one") is not None)
 
 
 def create_table_if_not_exist(table, s):
