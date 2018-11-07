@@ -78,6 +78,7 @@ cookies.p
 pickles/
 
 # - Too new to be pickle:
+pytest.db
 smokedetector.db
 
 # Settings files

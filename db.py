@@ -1,3 +1,4 @@
+import sys
 import os
 import sqlite3
 
@@ -8,7 +9,10 @@ def initialize():
     if GlobalVars.local_db:
         # there's already a sqlite3.Connection
         return
-    GlobalVars.local_db = sqlite3.connect("smokedetector.db")
+    if 'pytest' in sys.modules:
+        GlobalVars.local_db = sqlite3.connect("pytest.db")
+    else:
+        GlobalVars.local_db = sqlite3.connect("smokedetector.db")
     return GlobalVars.local_db
 
 
