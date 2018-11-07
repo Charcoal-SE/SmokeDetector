@@ -9,9 +9,10 @@ def initialize():
         # there's already a sqlite3.Connection
         return
     GlobalVars.local_db = sqlite3.connect("smokedetector.db")
+    return GlobalVars.local_db
 
 
-def execute(query_string: str, parameters: tuple, action="all"):
+def execute(query_string: str, parameters: tuple=(), action: str=""):
     if not GlobalVars.local_db:
         raise ValueError("DB is not connected")
     cursor = GlobalVars.local_db.execute(query_string, parameters)
@@ -23,7 +24,7 @@ def execute(query_string: str, parameters: tuple, action="all"):
         return cursor
 
 
-def executemany(query_string: str, parameters):
+def executemany(query_string: str, parameters=[()]):
     if not GlobalVars.local_db:
         raise ValueError("DB is not connected")
     return GlobalVars.local_db.executemany(query_string, parameters)
@@ -38,17 +39,19 @@ def commit():
     return GlobalVars.local_db.commit()
 
 
-def table_exists(table):
+def table_exists(table: str="sqlite_master"):
     if not GlobalVars.local_db:
         return False
-    return (execute("SELECT name FROM sqlite_master WHERE type='table' AND name=?", table, "one") is not None)
+    return (execute("SELECT name FROM sqlite_master WHERE type='table' AND name=?", [table], "one") is not None)
 
 
 def create_table_if_not_exist(table, s):
     # Bad approach here, any better ideas?
     if table_exists(table):
         return
-    return execute("CREATE TABLE {table} ({cols})".format(table=table, cols=s))
+    result = execute("CREATE TABLE {table} ({cols})".format(table=table, cols=s))
+    commit()
+    return result
 
 
 # Query here or in datahandling.py (?)

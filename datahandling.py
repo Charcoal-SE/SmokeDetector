@@ -76,6 +76,10 @@ def _has_pickle(path):
     return os.path.isfile(newpath) or os.path.isfile(path)
 
 
+def create_database():
+    db.create_table_if_not_exist("blacklisted_users", "id INTEGER, site TEXT, message_url TEXT, post_url TEXT")
+
+
 # methods to load files and filter data in them:
 # load_blacklists() is defined in a separate module blacklists.py, though
 def load_files():
@@ -85,12 +89,11 @@ def load_files():
         GlobalVars.whitelisted_users = _load_pickle("whitelistedUsers.p", encoding='utf-8')
         if not isinstance(GlobalVars.whitelisted_users, set):
             GlobalVars.whitelisted_users = set(GlobalVars.whitelisted_users)
+
     if _has_pickle("blacklistedUsers.p"):
         GlobalVars.blacklisted_users = _load_pickle("blacklistedUsers.p", encoding='utf-8')
         if not isinstance(GlobalVars.blacklisted_users, dict):
             GlobalVars.blacklisted_users = {data[0]: data[1:] for data in GlobalVars.blacklisted_users}
-        db.create_table_if_not_exist(
-            "blacklisted_users", "id INTEGER, site TEXT, message_url TEXT, post_url TEXT")
         for key, value in GlobalVars.blacklisted_users.items():
             user = db.execute("SELECT * FROM blacklisted_users WHERE id=? AND site=?", key)
             if user is not None:
@@ -151,12 +154,14 @@ def is_whitelisted_user(user):
 
 # noinspection PyMissingTypeHints
 def is_blacklisted_user(user):
+    if user is None:
+        return False
     cursor = db.execute("SELECT id, site FROM blacklisted_users WHERE id=? AND site=?", user)
     return (cursor.fetchone() is not None)
 
 
 def get_blacklisted_user_data(user):
-    row = db.execute("SELECT id, site, message_url, post_url FROM blacklisted_users WHERE"
+    row = db.execute("SELECT id, site, message_url, post_url FROM blacklisted_users WHERE "
                      "id=? AND site=?", user).fetchone()
     if row is None:
         return None
@@ -275,8 +280,7 @@ def remove_blacklisted_user(user):
     blacklisted_user_data = get_blacklisted_user_data(user)
     if not blacklisted_user_data:
         return False
-    GlobalVars.blacklisted_users.pop(blacklisted_user_data[0])
-    _dump_pickle("blacklistedUsers.p", GlobalVars.blacklisted_users)
+    db.execute("DELETE FROM blacklisted_users WHERE id=? AND site=?", user)
     return True
 
 
@@ -647,3 +651,6 @@ class SmokeyTransfer:
                 raise Warning("Warning: " + ', '.join(warnings))
         except (ValueError, zlib.error) as e:
             raise ValueError(str(e)) from None
+
+
+create_database()  # We need it here or CI fails
