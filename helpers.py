@@ -37,6 +37,19 @@ class ErrorLogs:
         cls.db.close()
         return data
 
+    @classmethod
+    def truncate(cls, n=100):
+        """
+        Truncate the DB and keep only N latest exceptions
+        """
+        cls.db = sqlite3.connect("errorLogs.db")
+        cursor = cls.db.execute(
+            "DELETE FROM error_logs WHERE time IN "
+            "(SELECT time FROM error_logs ORDER BY time DESC LIMIT -1 OFFSET ?)", (int(n),))
+        data = cursor.fetchall()
+        cls.db.close()
+        return data
+
 
 class Helpers:
     min_log_level = 0
