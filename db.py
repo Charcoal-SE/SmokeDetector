@@ -11,10 +11,22 @@ def initialize():
     GlobalVars.local_db = sqlite3.connect("smokedetector.db")
 
 
-def execute(query_string: str, parameters: tuple, fetchall: bool=False):
+def execute(query_string: str, parameters: tuple, action="all"):
     if not GlobalVars.local_db:
         raise ValueError("DB is not connected")
-    cursor = GlobalVars.local_db(query_string, parameters)
+    cursor = GlobalVars.local_db.execute(query_string, parameters)
+    if action == "all":
+        return cursor.fetchall()
+    elif action == "one":
+        return cursor.fetchone()
+    else:
+        return cursor
+
+
+def executemany(query_string: str, parameters: Iterable):
+    if not GlobalVars.local_db:
+        raise ValueError("DB is not connected")
+    cursor = GlobalVars.local_db.executemany(query_string, parameters)
     if fetchall:
         return cursor.fetchall()
     else:

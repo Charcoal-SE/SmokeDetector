@@ -13,6 +13,7 @@ import regex
 
 from parsing import api_parameter_from_link, post_id_from_link
 from globalvars import GlobalVars
+import db
 import blacklists
 
 last_feedbacked = None
@@ -88,8 +89,14 @@ def load_files():
         GlobalVars.blacklisted_users = _load_pickle("blacklistedUsers.p", encoding='utf-8')
         if not isinstance(GlobalVars.blacklisted_users, dict):
             GlobalVars.blacklisted_users = {data[0]: data[1:] for data in GlobalVars.blacklisted_users}
-    elif True:
-        pass
+        db.create_table_if_not_exist(
+            "blacklisted_users", "id INTEGER, site TEXT, message_url TEXT, post_url TEXT")
+        for key, value in GlobalVars.blacklisted_users.items():
+            user = db.execute("SELECT * FROM blacklisted_users WHERE id=? AND site=?", key)
+            if user is not None:
+                db.execute("INSERT INTO blacklisted_users VALUES (?, ?, ?, ?)", key + tuple(value))
+        db.commit()
+        _remove_pickle("blacklistedUsers.p")
     if _has_pickle("ignoredPosts.p"):
         GlobalVars.ignored_posts = _load_pickle("ignoredPosts.p", encoding='utf-8')
     if _has_pickle("autoIgnoredPosts.p"):
@@ -144,14 +151,16 @@ def is_whitelisted_user(user):
 
 # noinspection PyMissingTypeHints
 def is_blacklisted_user(user):
-    return user in GlobalVars.blacklisted_users
+    cursor = db.execute("SELECT id, site FROM blacklisted_users WHERE id=? AND site=?", user)
+    return (cursor.fetchone() is not None)
 
 
 def get_blacklisted_user_data(user):
-    try:
-        return (user,) + tuple(GlobalVars.blacklisted_users[user])
-    except KeyError:
-        return ()
+    row = db.execute("SELECT id, site, message_url, post_url FROM blacklisted_users WHERE"
+                     "id=? AND site=?", user).fetchone()
+    if row is None:
+        return None
+    return ((row[0], row[1]), row[2], row[3])
 
 
 # noinspection PyMissingTypeHints
@@ -227,10 +236,11 @@ def add_whitelisted_user(user):
 
 
 def add_blacklisted_user(user, message_url, post_url):
-    if is_blacklisted_user(user) or user is None:
+    if user is None or is_blacklisted_user(user):
         return
-    GlobalVars.blacklisted_users[user] = (message_url, post_url)
-    _dump_pickle("blacklistedUsers.p", GlobalVars.blacklisted_users)
+    db.execute("INSERT INTO blacklisted_users VALUES (?, ?, ?, ?)",
+               (user[0], user[1], message_url, post_url))
+    db.commit()
 
 
 def add_auto_ignored_post(postid_site_tuple):
