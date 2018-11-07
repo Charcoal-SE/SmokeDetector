@@ -88,6 +88,8 @@ def load_files():
         GlobalVars.blacklisted_users = _load_pickle("blacklistedUsers.p", encoding='utf-8')
         if not isinstance(GlobalVars.blacklisted_users, dict):
             GlobalVars.blacklisted_users = {data[0]: data[1:] for data in GlobalVars.blacklisted_users}
+    elif True:
+        pass
     if _has_pickle("ignoredPosts.p"):
         GlobalVars.ignored_posts = _load_pickle("ignoredPosts.p", encoding='utf-8')
     if _has_pickle("autoIgnoredPosts.p"):

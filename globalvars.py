@@ -34,7 +34,11 @@ def git_ref():
 
 # noinspection PyClassHasNoInit,PyDeprecation,PyUnresolvedReferences
 class GlobalVars:
+    # Environment
     on_windows = 'windows' in platform.platform().lower()
+
+    # SQLite 3
+    local_db = None  # the DB connection
 
     false_positives = []
     whitelisted_users = set()

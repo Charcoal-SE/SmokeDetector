@@ -77,6 +77,9 @@ cookies.p
 # - Newer than newer format pickle files:
 pickles/
 
+# - Too new to be pickle:
+smokedetector.db
+
 # Settings files
 .settings/
 
