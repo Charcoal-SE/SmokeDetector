@@ -81,6 +81,7 @@ pickles/
 .settings/
 
 # Error logs
+errorLogs.db
 errorLogs.txt
 errorLogs.txt.*
 errorlog.txt
