@@ -3615,7 +3615,6 @@
 1527748648	JAD	purplemelon\.in
 1527748891	tripleee	whitebitcoin\.io
 1527750150	tripleee	30minutemoneymethods\.com
-1527750186	tripleee	socialsalerep\.com
 1527751676	tripleee	(?:dr\W*)?simon\W?ourian(?:\W*md)?
 1527755876	tripleee	dbconvert\.com
 1527760237	Zoe	zuaneducation\.com
