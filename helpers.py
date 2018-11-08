@@ -35,7 +35,7 @@ class ErrorLogs:
     def add(cls, time, classname, message, traceback):
         db = cls.get_db()
         db.execute("INSERT INTO error_logs VALUES (?, ?, ?, ?)",
-                       (time, classname, message, traceback))
+                   (time, classname, message, traceback))
         db.commit()
 
     @classmethod
