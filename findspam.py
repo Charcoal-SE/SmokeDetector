@@ -743,6 +743,7 @@ def watched_ns_for_url_domain(s, site):
         'justhost.com.',
         'stupidblogger.com.',
         'orangewebsite.com.',
+        'omnilinks.net.',
     ])
 
 
