@@ -6604,3 +6604,4 @@
 1541730383	iBug	(?-i:SEO|seo)$
 1541741926	Tetsuya Yamamoto	bhavitra\.com
 1541745858	K.Dᴀᴠɪs	understandbetter\.co
+1541748396	Tetsuya Yamamoto	cleverinspections\.com
