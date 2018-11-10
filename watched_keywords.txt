@@ -6624,3 +6624,4 @@
 1541832155	Makyen	jews?.{0,20}9\W*11
 1541832910	Makyen	jews?.{0,20}\bwtc(?#Similar to jews...9-11, which was seen in deleted spam on aviation)
 1541870791	Makyen	xaydunghoabinhreal(?:@gmail\.com)?
+1541870902	Makyen	Thông\W*tin\W*liên\W*hệ(?#translation: contact information)
