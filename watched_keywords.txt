@@ -6620,5 +6620,4 @@
 1541831796	K.Dᴀᴠɪs	oxygennest\.com
 1541831834	Makyen	theodorejamesonfinance(?:@gmail\.com)?
 1541831878	Makyen	makemyessay\.com
-1541832081	Makyen	jews?.{0,20}9/?11
 1541832093	K.Dᴀᴠɪs	^nig$
