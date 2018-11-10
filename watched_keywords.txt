@@ -6626,3 +6626,4 @@
 1541870791	Makyen	xaydunghoabinhreal(?:@gmail\.com)?
 1541870902	Makyen	Thông\W*tin\W*liên\W*hệ(?#translation: contact information)
 1541872186	Makyen	catlight\.io
+1541875990	Makyen	izmirdetabelareklam\.com
