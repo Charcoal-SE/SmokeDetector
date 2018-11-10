@@ -6618,3 +6618,4 @@
 1541830644	K.Dᴀᴠɪs	cleantalk\.org
 1541831371	K.Dᴀᴠɪs	Equinox\W*IT\W*Solutions
 1541831796	K.Dᴀᴠɪs	oxygennest\.com
+1541831834	Makyen	theodorejamesonfinance(?:@gmail\.com)?
