@@ -5489,7 +5489,6 @@
 1536761940	iBug	sodepami\.vn
 1536762830	Glorfindel	favycoin\.com
 1536762892	Glorfindel	commercialtrust\.co\.uk
-1536763268	Glorfindel	whatstatus\.co
 1536763286	Glorfindel	launcherapk\.info
 1536798802	Makyen	emailcustomersupportnumber\.com
 1536798812	Makyen	GURILARICO\W*GURU
