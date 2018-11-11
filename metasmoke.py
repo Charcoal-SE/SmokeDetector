@@ -362,10 +362,9 @@ class Metasmoke:
 
         # The first report of a URL is the only one that will be autoflagged. MS responses to the
         # /posts/urls endpoint have the oldest report last.
-        first_report_index = len(response["items"]) - 1
-        if first_report_index > -1 and response["items"][first_report_index]["autoflagged"]:
+        if len(response["items"]) > 0 and response["items"][-1]["autoflagged"]:
             # get flagger names
-            id = str(response["items"][first_report_index]["id"])
+            id = str(response["items"][-1]["id"])
             payload = {'key': GlobalVars.metasmoke_key}
 
             flags = Metasmoke.get("/api/v2.0/posts/" + id + "/flags", params=payload).json()
