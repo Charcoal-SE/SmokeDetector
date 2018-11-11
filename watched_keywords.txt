@@ -6634,3 +6634,4 @@
 1541947660	Erik the Outgolfer	x-crypto\.com
 1541951514	Makyen	adictec\.com
 1541956141	Erik the Outgolfer	theextractor@solution4u\.com
+1541958911	Makyen	tezos\.foundation(?#domain name)
