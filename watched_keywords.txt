@@ -219,7 +219,6 @@
 1498462912	tripleee	bandar99\.online
 1498466013	Glorfindel	deutsche-rednerschule\.de
 1498469035	Glorfindel	xtremedigitalsignage\.com
-1498488240	Glorfindel	seo-google\.co\.il
 1498537575	tripleee	tescore
 1498542424	Glorfindel	javaenotes\.com
 1498545203	tripleee	dbalmaxhub\.com
