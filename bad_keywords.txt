@@ -1711,3 +1711,4 @@ happy\W?diwali
 keto\W?kinetics
 jubile
 cosmedique
+(?:hyperion\b(?:.{0,40}(?:males?|boost\w*|performance|/(?!\w*>)))|\w*supplement.{0,40}hyperion)
