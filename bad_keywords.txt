@@ -1712,3 +1712,4 @@ hyperion
 happy\W?diwali
 keto\W?kinetics
 jubile
+cosmedique
