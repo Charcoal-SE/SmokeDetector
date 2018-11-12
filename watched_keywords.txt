@@ -6655,3 +6655,4 @@
 1542020562	Erik the Outgolfer	csindian\.com
 1542021690	Erik the Outgolfer	fitrepublik\.com
 1542028103	Glorfindel	windowserrors\.org
+1542028271	Glorfindel	appuals\.com
