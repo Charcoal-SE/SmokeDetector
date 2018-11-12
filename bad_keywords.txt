@@ -1390,7 +1390,6 @@ rose\W?diamond(?:\W?beauty)?
 peraglow
 liva\W?derma
 konect(?!\.(?:co\.za|uni-koblenz)\b)(?:\W?nutra\?Wketo)?
-hyperion\W?male\W?no2\W?booster
 total\W?tone
 retro\W?slim
 narvi\W?testo
@@ -1708,7 +1707,6 @@ luma\W?slim
 supreme\W?x
 viva\W?x
 bhb\W?800
-hyperion
 happy\W?diwali
 keto\W?kinetics
 jubile
