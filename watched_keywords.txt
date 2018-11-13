@@ -6660,3 +6660,4 @@
 1542042109	WELZ	rajasri\.com
 1542047078	Erik the Outgolfer	wittyflick\.com
 1542047492	Erik the Outgolfer	deqto\.com
+1542067456	Makyen	adagbaspiritualtemple(?:@gmail\.com)?
