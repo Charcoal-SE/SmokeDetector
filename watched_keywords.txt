@@ -6671,4 +6671,3 @@
 1542093000	Makyen	markazahan\.com
 1542094752	tripleee	abrostate\.com
 1542096610	Glorfindel	iayude\.com
-1542097784	K.Dᴀᴠɪs	KEVINMITNICK\d*(?:@GMAIL.COM)?
