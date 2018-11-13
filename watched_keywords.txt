@@ -6673,3 +6673,4 @@
 1542097917	K.Dᴀᴠɪs	KEVINMITNICK\d*(?:@GMAIL\.COM)?
 1542101724	Glorfindel	mipcsuite\.com
 1542101945	Glorfindel	rootkhpdownload\.com
+1542113202	tripleee	techvj73\.blogspot
