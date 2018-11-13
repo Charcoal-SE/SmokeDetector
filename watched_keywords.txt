@@ -6663,3 +6663,4 @@
 1542067456	Makyen	adagbaspiritualtemple(?:@gmail\.com)?
 1542072504	Rob	cleantalk
 1542072551	K.Dᴀᴠɪs	lakelandobserver\.com
+1542073052	Makyen	lost\W*as\W*they\W*couldn't\W*input\W*the\W*symbols\W*correctly(?#used in cleantalk posts linked by Rob)
