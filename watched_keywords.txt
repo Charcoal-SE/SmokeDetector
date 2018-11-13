@@ -6672,3 +6672,4 @@
 1542094752	tripleee	abrostate\.com
 1542096610	Glorfindel	iayude\.com
 1542097917	K.Dᴀᴠɪs	KEVINMITNICK\d*(?:@GMAIL\.COM)?
+1542101724	Glorfindel	mipcsuite\.com
