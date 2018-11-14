@@ -1087,11 +1087,22 @@ def watched_ip_for_url_hostname(s, site):
         # Watched IP list
         [
             # AS 22612 NAMECHEAP-NET
-            '104.219.248.45',  # drugs 360nutra / timesnutrition etc
-            '104.219.248.81',  # drugs supplement4world / supplementgod etc
-            '198.54.115.65',   # drugs goldencondor / visit4supplements etc
-            '198.54.116.85',   # drugs mummydiet.org
-            '198.54.120.134',  # drugs advisorwellness / health4supplement etc
+            '104.219.248.45',   # drugs 360nutra / timesnutrition etc
+            '104.219.248.81',   # drugs supplement4world / supplementgod etc
+            '198.54.115.65',    # drugs goldencondor / visit4supplements etc
+            '198.54.116.85',    # drugs mummydiet.org
+            '198.54.120.134',   # drugs advisorwellness / health4supplement etc
+            # AS 26496 AS-26496-GO-DADDY-COM-LLC
+            '23.229.180.169',   # drugs health4supplement / supplements4lifetime etc
+            '23.229.217.167',   # drugs popsupplement / daddysupplement etc
+            '23.229.233.231',   # drugs ultavivegarcinia.es / refollium.in etc
+            '107.180.3.93',     # drugs amazonhealthstore / click2fitness etc
+            '107.180.24.240',   # drugs deal2supplement / first2order etc
+            '107.180.59.131',   # drugs kingofsupplement.com
+            '160.153.129.38',   # drugs supplementswellness / buyketodiet etc
+            '160.153.129.238',  # drugs bestenhancement / supplementskingpro etc
+            '166.62.28.116',    # fake-tech-support printertechsupportnumbers.com
+            '192.186.227.225',  # drugs topwellnessguru / healthcare350 etc
         ])
 
 
@@ -1100,7 +1111,10 @@ def bad_ip_for_url_hostname(s, site):
         s, site,
         # Blacklisted IP list
         [
+            # AS 26347 DREAMHOST-AS
             '75.119.210.224',  # triplet-spam
+            # AS 26496 AS-26496-GO-DADDY-COM-LLC
+            '107.180.78.164',  # gs-jj.com
         ])
 
 
