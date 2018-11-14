@@ -5834,7 +5834,6 @@
 1538380301	Makyen	(?:\w+\W*)?(?:at|@)\W*buyieltswithoutexams\W*(?:dot|\.)\W*com
 1538381365	paper1111	jaineyehospital\.com
 1538384559	tripleee	bestcontentwriter\.in
-1538385832	Tetsuya Yamamoto	tridindia\.com
 1538386688	Glorfindel	igct-lpg\.com
 1538391767	doppelgreener	biafinecream\.com
 1538392811	tripleee	[a-z_]*(?:1_*)?360[\W_]*650[\W_]*3000[a-z_]*
