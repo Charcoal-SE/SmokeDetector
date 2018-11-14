@@ -6686,3 +6686,4 @@
 1542194121	Erik the Outgolfer	ecksdee\.co\.uk
 1542195675	Erik the Outgolfer	newhairstyleforboys\.com
 1542196267	Erik the Outgolfer	(?:youtu\.be/|youtube\.com/watch\?v=)G6qOx4aJPC4
+1542196448	Erik the Outgolfer	indiaparenting\.com
