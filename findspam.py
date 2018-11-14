@@ -1066,17 +1066,55 @@ def watched_ns_for_url_domain(s, site):
     ])
 
 
+def ip_for_url_host(s, site, ip_list):
+    # ######## FIXME: code duplication
+    for hostname in post_hosts(s, check_tld=True):
+        a = dns_query(hostname, 'a')
+        if a is not None:
+            # ######## TODO: allow blocking of IP ranges with regex or CIDR
+            for addr in set([str(x) for x in a]):
+                log('debug', 'IP: IP {0} for hostname {1}'.format(
+                    addr, hostname))
+                if addr in ip_list:
+                    return True, '{0} address {1} is blocked'.format(
+                        hostname, addr)
+    return False, ""
+
+
+def watched_ip_for_url_hostname(s, site):
+    return ip_for_url_host(
+        s, site,
+        # Watched IP list
+        [
+            # AS 22612 NAMECHEAP-NET
+            '104.219.248.45',  # drugs 360nutra / timesnutrition etc
+            '104.219.248.81',  # drugs supplement4world / supplementgod etc
+            '198.54.115.65',   # drugs goldencondor / visit4supplements etc
+            '198.54.116.85',   # drugs mummydiet.org
+            '198.54.120.134',  # drugs advisorwellness / health4supplement etc
+        ])
+
+
+def bad_ip_for_url_hostname(s, site):
+    return ip_for_url_host(
+        s, site,
+        # Blacklisted IP list
+        [
+            '75.119.210.224',  # triplet-spam
+        ])
+
+
 def asn_for_url_host(s, site, asn_list):
     for hostname in post_hosts(s, check_tld=True):
         a = dns_query(hostname, 'a')
         if a is not None:
-            if asn_list:
-                for addr in set([str(x) for x in a]):
-                    log('debug', 'ASN: IP {0} for hostname {1}'.format(addr, hostname))
-                    asn = asn_query(addr)
-                    if asn in asn_list:
-                        return True, '{0} address {1} in ASN {2}'.format(
-                            hostname, addr, asn)
+            for addr in set([str(x) for x in a]):
+                log('debug', 'ASN: IP {0} for hostname {1}'.format(
+                    addr, hostname))
+                asn = asn_query(addr)
+                if asn in asn_list:
+                    return True, '{0} address {1} in ASN {2}'.format(
+                        hostname, addr, asn)
     return False, ""
 
 
