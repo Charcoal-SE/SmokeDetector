@@ -6685,3 +6685,4 @@
 1542193702	Erik the Outgolfer	my-roku-com-link\.com
 1542194121	Erik the Outgolfer	ecksdee\.co\.uk
 1542195675	Erik the Outgolfer	newhairstyleforboys\.com
+1542196267	Erik the Outgolfer	(?:youtu\.be/|youtube\.com/watch\?v=)G6qOx4aJPC4
