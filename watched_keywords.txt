@@ -6678,3 +6678,4 @@
 1542179206	Tetsuya Yamamoto	mysmartapp\.in
 1542182948	Tetsuya Yamamoto	host-tracker\.com
 1542183989	K.Dᴀᴠɪs	motomorrelli(?:@hotmail\.com)?(?#ms-post-138537)
+1542184579	K.Dᴀᴠɪs	estrattoredati\.com
