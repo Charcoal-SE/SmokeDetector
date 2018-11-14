@@ -1712,4 +1712,3 @@ cosmedique
 (?:hyperion\b(?:.{0,40}(?:males?|boost\w*|performance|/(?!\w*>)))|\w*supplement.{0,40}hyperion)
 123movies[a-z]*
 privy\W?farms(?:\W?keto)?
-lucky\W?patcher
