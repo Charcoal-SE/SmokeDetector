@@ -6697,4 +6697,3 @@
 1542243188	Tetsuya Yamamoto	internetan\.gratis
 1542243619	Tetsuya Yamamoto	painpillsnow\.com
 1542245294	WELZ	andreimatorin\.com
-1542248610	Makyen	123(?!movies\b)[a-z]{4,}(?:\.[a-z]{2,}|["/-])(?#short, but when added was 98.3%TP on MS)
