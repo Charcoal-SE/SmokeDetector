@@ -116,3 +116,4 @@ fag+(?:ot)?
 (?-i:^Dorothy Daugherty$)
 ^Tonya Rabish$(?#User spams Avdshare)
 (?-i:^Sophie Cheng$)
+(?-i:^Cade Song$)
