@@ -6734,3 +6734,4 @@
 1542374536	tripleee	foley-stage\.com
 1542386771	doppelgreener	scamcalls
 1542386803	doppelgreener	spamgroup
+1542391166	doppelgreener	spam\.group
