@@ -767,6 +767,7 @@ def watched_asn_for_url_hostname(s, site):
         # Watched ASN list
         [
             '3842',    # RAMNODE - RamNode LLC, US
+            '3595',    # GNAXNET-AS - zColo, US
             # '16509', # FPs do not watch -- AMAZON-02 - Amazon.com, Inc., US
             '18229',   # CTRLS-AS-IN CtrlS Datacenters Ltd., IN
             '19318',   # IS-AS-1 - Interserver, Inc, US
