@@ -6673,7 +6673,6 @@
 1542131498	Erik the Outgolfer	michaelroland727\W?@\W?gmail\W?\.\W?com
 1542143830	Erik the Outgolfer	visauae\.net
 1542164589	Tetsuya Yamamoto	undangancinta\.com
-1542175549	Tetsuya Yamamoto	365solar\.xyz
 1542179206	Tetsuya Yamamoto	mysmartapp\.in
 1542182948	Tetsuya Yamamoto	host-tracker\.com
 1542183989	K.Dᴀᴠɪs	motomorrelli(?:@hotmail\.com)?(?#ms-post-138537)
