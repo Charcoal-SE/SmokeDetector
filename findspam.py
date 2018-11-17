@@ -1222,7 +1222,7 @@ class FindSpam:
         r"male\Wperf(?!ormer)", "anti[- ]?aging", "(ultra|berry|body)[ -]?ketone",
         "(cogni|oro)[ -]?(lift|plex)",
         "(skin|face|eye)[- ]?(serum|therapy|hydration|tip|renewal|gel|lotion|cream)",
-        r"\bnutra",
+        r"\bnutra(?!l(?:|y|ity|i[sz]ing|i[sz]ed?)s?\b)",
         r"contact (me|us)\W*<a ", "ecoflex",
         r"\brsgold",
         "packers.{0,15}(movers|logistic)(?:.{,25}</a>)",
