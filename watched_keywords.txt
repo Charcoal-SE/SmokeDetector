@@ -6736,3 +6736,4 @@
 1542409961	Byte Commander	photographybackground\.ga
 1542426909	Makyen	macsupportnumber\.com
 1542433493	NobodyNada	thermo\Wsculpt\Wpro
+1542433611	Makyen	dr\.ojokaspelltemple(?:@gmail\.com)?
