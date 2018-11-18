@@ -1418,10 +1418,11 @@ class FindSpam:
         {'method': what_is_this_pharma_title, 'all': True, 'sites': [], 'reason': 'Pattern-matching title',
          'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
          'answers': False, 'max_rep': 1, 'max_score': 1},
-        # gratis at the beginning of post, SoftwareRecs is exempt
+        # gratis near the beginning of post or in title, SoftwareRecs and es.stackoverflow.com are exempt
         {'regex': r"(?is)(?<=^.{,200})\bgratis\b", 'all': True,
-         'sites': ['softwarerecs.stackexchange.com'], 'reason': "bad keyword in {}", 'title': True, 'body': True,
-         'username': False, 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11, 'max_score': 0},
+         'sites': ['softwarerecs.stackexchange.com', 'es.stackoverflow.com'],
+         'reason': "potentially bad keyword in {}", 'title': True, 'body': True, 'username': False,
+         'stripcodeblocks': False, 'body_summary': True, 'max_rep': 11, 'max_score': 0},
         # Bad keywords in titles and usernames, all sites
         {'regex': r"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|"
                   r"kisn)\b)(?=.*?care).*products?\b|(?=.*?packer).*mover|(online|certification).*?training|"
