@@ -6752,3 +6752,4 @@
 1542598538	Makyen	tingsu\.github\.io(?#posted in a request for users to take an off-site survey)
 1542608970	Tetsuya Yamamoto	besthvlpspraygun\.com
 1542612982	iBug	best\W*offer
+1542612998	iBug	buy\snow
