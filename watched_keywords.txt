@@ -6771,3 +6771,4 @@
 1542635202	tripleee	moshaveretahsili\d*
 1542645165	K.Dᴀᴠɪs	miniproreviews\.com
 1542650688	K.Dᴀᴠɪs	justquarry\.com
+1542656412	Erik the Outgolfer	darkcracker\W?(?:@|at)\W?protonmail\W?(?:\.|dot)\W?com
