@@ -6754,3 +6754,4 @@
 1542612982	iBug	best\W*offer
 1542612998	iBug	buy\snow
 1542613108	Tetsuya Yamamoto	hawkishmart\.com
+1542613208	Tetsuya Yamamoto	seatoursdubai\.com
