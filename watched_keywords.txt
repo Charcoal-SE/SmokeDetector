@@ -6773,3 +6773,4 @@
 1542650688	K.Dᴀᴠɪs	justquarry\.com
 1542656412	Erik the Outgolfer	darkcracker\W?(?:@|at)\W?protonmail\W?(?:\.|dot)\W?com
 1542668140	Makyen	alreemas\.com
+1542679375	K.Dᴀᴠɪs	soniastevens1995(?:@gmail\.com)?
