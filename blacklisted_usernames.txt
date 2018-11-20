@@ -117,3 +117,4 @@ fag+(?:ot)?
 ^Tonya Rabish$(?#User spams Avdshare)
 (?-i:^Sophie Cheng$)
 (?-i:^Cade Song$)
+hrisikesh saloi‭
