@@ -1718,3 +1718,4 @@ technicalsupporttollfree\.co
 thermo\W?sculpt\W?pro
 slim4vit
 prime\W?skin
+thermo\W*sculpt(?:\W*pro)?
