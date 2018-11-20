@@ -118,3 +118,4 @@ fag+(?:ot)?
 (?-i:^Sophie Cheng$)
 (?-i:^Cade Song$)
 hrisikesh\W*saloi?
+^horny\Wprofessor$
