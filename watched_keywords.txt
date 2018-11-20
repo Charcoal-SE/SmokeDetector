@@ -6782,3 +6782,4 @@
 1542717688	bertieb	smartcityprestige\.com
 1542721261	tripleee	getclayton\.com
 1542722724	tripleee	airportlimotoronto\.com
+1542732738	K.Dᴀᴠɪs	flowwright(?:\.com)?
