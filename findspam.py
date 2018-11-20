@@ -788,6 +788,7 @@ def watched_asn_for_url_hostname(s, site):
             '47583',   # AS-HOSTINGER, LT
             '54290',   # HOSTWINDS - Hostwinds LLC., US
             '62731',   # 247RACK-COM - 247RACK.com, US
+            '197695',  # AS-REG, RU
             '393960',  # HOST4GEEKS-LLC - Host4Geeks LLC, US
             '395970',  # IONSWITCH - IonSwitch, LLC, US
         ])
