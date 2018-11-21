@@ -1087,6 +1087,7 @@ def watched_ip_for_url_hostname(s, site):
         # Watched IP list
         [
             # AS 22612 NAMECHEAP-NET
+            '68.65.122.36',     # drugs reviewscart.co.uk / purefitketopills.com
             '104.219.248.45',   # drugs 360nutra / timesnutrition etc
             '104.219.248.81',   # drugs supplement4world / supplementgod etc
             '198.54.115.65',    # drugs goldencondor / visit4supplements etc
