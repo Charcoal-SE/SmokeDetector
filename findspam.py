@@ -779,6 +779,7 @@ def watched_asn_for_url_hostname(s, site):
             '24778',   # DATAPIPE-UK, GB
             '29073',   # QUASINETWORKS, NL
             '31863',   # DACEN-2 - Centrilogic, Inc., US
+            '36024',   # AS-TIERP-36024 - TierPoint, LLC, US
             '36352',   # AS-COLOCROSSING - ColoCrossing, US
             '40676',   # AS40676 - Psychz Networks, US
             '42831',   # UKSERVERS-AS UK Dedicated Servers, Hosting and Co-Location, GB
