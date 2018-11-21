@@ -1100,6 +1100,7 @@ def watched_ip_for_url_hostname(s, site):
             '23.229.233.231',   # drugs ultavivegarcinia.es / refollium.in etc
             '107.180.3.93',     # drugs amazonhealthstore / click2fitness etc
             '107.180.24.240',   # drugs deal2supplement / first2order etc
+            '107.180.40.103',   # drugs + seo getbestdelight / seotipandsolution
             '107.180.59.131',   # drugs kingofsupplement.com
             '160.153.129.38',   # drugs supplementswellness / buyketodiet etc
             '160.153.129.238',  # drugs bestenhancement / supplementskingpro etc
