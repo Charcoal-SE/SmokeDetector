@@ -6831,3 +6831,4 @@
 1542892402	Glorfindel	playgames\d+\.com
 1542901212	iBug	//ibb\.co/iuUCsA
 1542902562	Zoe	realestatebydesignteam\.com
+1542902969	Zoe	FxKart\.com
