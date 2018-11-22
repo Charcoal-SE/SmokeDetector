@@ -6828,3 +6828,4 @@
 1542889993	tripleee	allsportsnewsbd\.com
 1542890973	WELZ	flatpyramid\.com
 1542892383	Glorfindel	winclubehelp\.com
+1542892402	Glorfindel	playgames\d+\.com
