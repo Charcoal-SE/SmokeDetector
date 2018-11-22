@@ -634,7 +634,6 @@ primal\W?growth
 slender\W?rx
 illuminati\W*(brotherhood|church|future|masons|society)\d*
 sbobet
-puria
 primex
 stackt\W?360
 perlelux
