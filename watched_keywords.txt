@@ -6830,3 +6830,4 @@
 1542892383	Glorfindel	winclubehelp\.com
 1542892402	Glorfindel	playgames\d+\.com
 1542901212	iBug	//ibb\.co/iuUCsA
+1542902562	Zoe	realestatebydesignteam\.com
