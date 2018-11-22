@@ -6814,3 +6814,4 @@
 1542867745	K.Dᴀᴠɪs	getmagnetiques\.com
 1542867777	K.Dᴀᴠɪs	sera\Wchews
 1542868848	K.Dᴀᴠɪs	asdaservices\d*(?:@gmail\.com)?
+1542869383	Makyen	^daveclark966$(?#abuse the watchlist to get an additional detection reason in order to trigger autoflagging for a persistent spammer)
