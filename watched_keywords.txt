@@ -6816,3 +6816,4 @@
 1542868848	K.Dᴀᴠɪs	asdaservices\d*(?:@gmail\.com)?
 1542869383	Makyen	^daveclark966$(?#abuse the watchlist to get an additional detection reason in order to trigger autoflagging for a persistent spammer)
 1542870200	tripleee	virtatrade\.com
+1542873442	tripleee	santhanakarthikeyan
