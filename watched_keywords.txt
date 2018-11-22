@@ -6813,3 +6813,4 @@
 1542866960	K.Dᴀᴠɪs	solitairetimes\.com
 1542867745	K.Dᴀᴠɪs	getmagnetiques\.com
 1542867777	K.Dᴀᴠɪs	sera\Wchews
+1542868848	K.Dᴀᴠɪs	asdaservices\d*(?:@gmail\.com)?
