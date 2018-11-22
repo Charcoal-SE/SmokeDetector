@@ -6820,3 +6820,4 @@
 1542875137	tripleee	sandrawilliam(?:\d+\w*)?(?:@gmail\.com)?
 1542877328	tripleee	animoto\.com
 1542878671	Tetsuya Yamamoto	supriyagill\.com
+1542879723	Tetsuya Yamamoto	lazyysunday\.com
