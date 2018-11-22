@@ -6818,4 +6818,3 @@
 1542870200	tripleee	virtatrade\.com
 1542873442	tripleee	santhanakarthikeyan
 1542873558	tripleee	cybervillianxposed(?:@gmail\.com)?
-1542873574	tripleee	sandrawilliam\d*(?:@gmail\.com)?
