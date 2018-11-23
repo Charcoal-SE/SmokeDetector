@@ -6844,3 +6844,4 @@
 1542958126	tripleee	getbestdelight\.com
 1542958409	tripleee	go\W?medii
 1542971347	Shree	rapitasystems\.com
+1542975816	Shree	ishop-anthony\d*@yandex\.com
