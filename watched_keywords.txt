@@ -6848,3 +6848,4 @@
 1542979595	CalvT	reverseimagesearch\.app
 1542982122	Makyen	romemarypaul(?:@gmail\.com)?
 1542984953	CalvT	power4man\.pro
+1542984973	CalvT	ooopsman\.pro
