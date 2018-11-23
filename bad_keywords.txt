@@ -1719,3 +1719,4 @@ prime\W?skin
 thermo\W*sculpt(?:\W*pro)?
 puria(?!\W*hadinejad|\W*developer|\W*jahanbani)
 alpha\W*titan
+le\W*salle(?:\W*cream)?
