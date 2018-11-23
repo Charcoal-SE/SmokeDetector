@@ -554,7 +554,9 @@ def purge_cache(cachevar, limit):
     log('debug', 'purge_cache({0}): oldest remaining entry is {1}'.format(
         limit, now - cachevar[remaining]['timestamp']))
     for old in oldest:
-        del cachevar[old]
+        # Guard against KeyError; race condition?
+        if old in cachevar:
+            del cachevar[old]
 
 
 def dns_query(label, qtype):
