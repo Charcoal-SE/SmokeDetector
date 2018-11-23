@@ -68,10 +68,10 @@ def test_version():
 def test_hats(date):
     date.side_effect = datetime.datetime
 
-    date.utcnow.return_value = datetime.datetime(2017, 12, 12, hour=23)
+    date.utcnow.return_value = datetime.datetime(2018, 12, 11, hour=23)
     assert chatcommands.hats() == "WE LOVE HATS! Winter Bash will begin in 0 days, 1 hour, 0 minutes, and 0 seconds."
 
-    date.utcnow.return_value = datetime.datetime(2018, 1, 2, hour=23)
+    date.utcnow.return_value = datetime.datetime(2019, 1, 2, hour=23)
     assert chatcommands.hats() == "Winter Bash won't end for 0 days, 1 hour, 0 minutes, and 0 seconds. GO EARN SOME HATS!"
 
 
