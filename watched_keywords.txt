@@ -6836,3 +6836,4 @@
 1542928827	Makyen	thosedocs\.com
 1542932081	Makyen	community\.helpdeskz\.com
 1542938662	K.Dᴀᴠɪs	Subscribe (?:to\s)?my channel
+1542938737	K.Dᴀᴠɪs	Mind\W*Touch\W*Tech
