@@ -1721,3 +1721,4 @@ puria(?!\W*hadinejad|\W*developer|\W*jahanbani)
 alpha\W*titan
 le\W*salle(?:\W*cream)?
 (?:active\W*)?revitalizing\W*moisturizer
+ignite\W*no\W?2
