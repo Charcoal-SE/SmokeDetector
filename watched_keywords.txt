@@ -6844,3 +6844,4 @@
 1542954121	Shree	jiansong\d*(?:@gmail\.com)
 1542955453	Glorfindel	a?arienggo
 1542956568	tripleee	dhruvramlabra
+1542958126	tripleee	getbestdelight\.com
