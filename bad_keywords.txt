@@ -1658,7 +1658,6 @@ juvinex
 teamweedforbuds(?:2018)?(?:@protonmail\.com)?(?#Watches both the e-mail address and part of a domain.)
 migrating(?:\Wfrom)?\W(?:.{0,40})?(?:google\W)?drive\Wto\W(?:google\W)?team\Wdrive
 vida\W?tone\W?keto
-isabelle\W*s\W*(?:luxuriance|richness)\W*cream
 Ketozin
 softaken
 Tatkal\W?Software
