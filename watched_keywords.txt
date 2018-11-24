@@ -6854,3 +6854,4 @@
 1543026693	K.Dᴀᴠɪs	\d+\W*(?:Day|Week|Month) Diet program
 1543028483	K.Dᴀᴠɪs	(?-i:2RapxFZ)
 1543056200	Makyen	sarkariduniya\.com
+1543056957	Makyen	web3mantra\.com
