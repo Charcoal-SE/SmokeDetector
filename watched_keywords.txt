@@ -6852,3 +6852,4 @@
 1542985832	CalvT	klarvinduer\.dk
 1543006765	Makyen	topguardians\.com
 1543026693	K.Dᴀᴠɪs	\d+\W*(?:Day|Week|Month) Diet program
+1543028483	K.Dᴀᴠɪs	(?-i:2RapxFZ)
