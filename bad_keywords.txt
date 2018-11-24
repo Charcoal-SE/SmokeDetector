@@ -1722,3 +1722,4 @@ le\W*salle(?:\W*cream)?
 (?:active\W*)?revitalizing\W*moisturizer
 ignite\W*no\W?2
 isabelle\W*s\W*(?:luxuriance|richness)(?:\W*cream)?
+alvera\W?tone
