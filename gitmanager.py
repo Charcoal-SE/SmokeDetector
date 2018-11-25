@@ -299,7 +299,7 @@ class GitManager:
             git.fetch('origin', '+refs/pull/{}/merge'.format(pr_id))
             git.merge('FETCH_HEAD', '--no-ff', '-m', 'Merge pull request #{} from {}/{} --autopull'.format(
                       pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref))
-            git.push()
+            git.push('origin', 'master')
             try:
                 git.push('-d', 'origin', ref)
             except GitError as e:
