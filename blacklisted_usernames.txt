@@ -112,7 +112,6 @@ Tyron P
 praveen kumar Lakhara
 ^(?-i:daveclark966)$
 ^\w{1,3}h[ou]+sken$
-fag+(?:ot)?
 (?-i:^Dorothy Daugherty$)
 ^Tonya Rabish$(?#User spams Avdshare)
 (?-i:^Sophie Cheng$)
