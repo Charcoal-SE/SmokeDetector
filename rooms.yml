@@ -137,7 +137,7 @@ stackexchange.com:
     commands: true
     
     msg_types:
-      - direct
+      #- direct
       - dump
 
   65945:  # Charcoal Test
