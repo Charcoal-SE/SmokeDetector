@@ -1723,3 +1723,4 @@ le\W*salle(?:\W*cream)?
 ignite\W*no\W?2
 isabelle\W*s\W*(?:luxuriance|richness)(?:\W*cream)?
 alvera\W?tone
+green\W?force(?:\W?keto)?
