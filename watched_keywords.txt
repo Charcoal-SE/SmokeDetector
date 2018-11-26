@@ -6889,3 +6889,4 @@
 1543252522	Makyen	best-vegas\.com
 1543252765	Makyen	hc360\.in
 1543254775	Makyen	essaycyber\.com
+1543257354	K.Dᴀᴠɪs	^f(?:_|u)\w+?mod(?:orator)?\s?$
