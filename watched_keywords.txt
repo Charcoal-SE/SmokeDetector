@@ -6880,3 +6880,4 @@
 1543202557	Tetsuya Yamamoto	componentpro\.com
 1543203793	Tetsuya Yamamoto	proaccountingsupport\.com
 1543203923	Tetsuya Yamamoto	lusciousbite\.com
+1543204132	Tetsuya Yamamoto	learnthenew\.com
