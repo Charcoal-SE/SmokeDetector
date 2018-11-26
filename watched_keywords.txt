@@ -6884,3 +6884,4 @@
 1543211481	tripleee	lock\W+whats\W?app
 1543213454	iBug	fag+(?:ot)?
 1543214052	Tetsuya Yamamoto	afastainlesskb\.com
+1543216108	Tetsuya Yamamoto	teamtweaks\.com
