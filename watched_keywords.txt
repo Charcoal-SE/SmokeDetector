@@ -6890,3 +6890,4 @@
 1543252765	Makyen	hc360\.in
 1543254775	Makyen	essaycyber\.com
 1543257796	K.Dᴀᴠɪs	^fu\w+mod(?:[eo]rat[eo]r)?s?$
+1543262108	bertieb	safeproxysite\.club
