@@ -1712,7 +1712,6 @@ quick\Wburn\Wketo
 evolution\Wlean\Wketo
 technicalsupporttollfree\.co
 (?:hyperion\b(?:.{0,40}?(?:males?|boost\w*|performance|/"\W*))|\w*supplement.{0,40}?hyperion)
-thermo\W?sculpt\W?pro
 slim4vit
 prime\W?skin
 thermo\W*sculpt(?:\W*pro)?
