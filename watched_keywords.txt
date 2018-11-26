@@ -6883,3 +6883,4 @@
 1543213454	iBug	fag+(?:ot)?
 1543214052	Tetsuya Yamamoto	afastainlesskb\.com
 1543216108	Tetsuya Yamamoto	teamtweaks\.com
+1543220662	Shree	betcity\.ru
