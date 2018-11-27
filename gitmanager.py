@@ -396,20 +396,6 @@ class GitManager:
             return
 
     @staticmethod
-    def sync_remote_2():
-        if GlobalVars.on_windows:
-            return False, "We don't do Windows"
-
-        try:
-            git('rev-parse', 'temp')
-            git.branch('-D', 'temp')
-        except GitError:  # local branch 'temp' doesn't exist
-            pass
-        git.checkout('-b', 'temp', 'origin/master')
-        git.branch('-M', 'master')
-        return True, 'Voilà!'
-
-    @staticmethod
     def sync_remote():
         if GlobalVars.on_windows:
             return False, "We don't do Windows"
