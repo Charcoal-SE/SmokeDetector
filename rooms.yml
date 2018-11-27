@@ -379,6 +379,12 @@ stackexchange.com:
       - site-ja.stackoverflow.com
       - site-es.stackoverflow.com
       - delay
+      
+  27:  # Stack Apps
+    commands: false
+    watcher: false
+    msg_types:
+      - site-stackapps.com
 
 meta.stackexchange.com:
   89:  # Tavern on the Meta
@@ -669,9 +675,3 @@ stackoverflow.com:
       - 6707985  # geisterfurz007
       - 6723642  # heather
       - 6296561  # Zoe
-
-  27:  # Stack Apps
-    commands: false
-    watcher: false
-    msg_types:
-      - site-stackapps.com
