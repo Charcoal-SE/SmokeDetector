@@ -669,3 +669,9 @@ stackoverflow.com:
       - 6707985  # geisterfurz007
       - 6723642  # heather
       - 6296561  # Zoe
+
+  27:  # Stack Apps
+    commands: false
+    watcher: false
+    msg_types:
+      - site-stackapps.com
