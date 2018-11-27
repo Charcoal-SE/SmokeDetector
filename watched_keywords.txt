@@ -6891,3 +6891,4 @@
 1543254775	Makyen	essaycyber\.com
 1543257796	K.Dᴀᴠɪs	^fu\w+mod(?:[eo]rat[eo]r)?s?$
 1543262108	bertieb	safeproxysite\.club
+1543279666	Tetsuya Yamamoto	delighthoster\.com
