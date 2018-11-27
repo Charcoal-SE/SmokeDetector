@@ -6893,3 +6893,4 @@
 1543262108	bertieb	safeproxysite\.club
 1543279666	Tetsuya Yamamoto	delighthoster\.com
 1543283829	Tetsuya Yamamoto	medekyfitness\.com
+1543293275	iBug	^Kris\s*Leith$
