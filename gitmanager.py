@@ -396,7 +396,7 @@ class GitManager:
             return
 
     @staticmethod
-    def sync_remote():
+    def sync_remote_2():
         if GlobalVars.on_windows:
             return False, "We don't do Windows"
 
@@ -410,11 +410,14 @@ class GitManager:
         return True, 'Voilà!'
 
     @staticmethod
-    def sync_remote_2():
+    def sync_remote():
+        if GlobalVars.on_windows:
+            return False, "We don't do Windows"
+
         try:
-            if GlobalVars.on_master == "master":
+            if GlobalVars.on_master != "deploy":
                 git.checkout("deploy")
             git.branch('--create-reflog', '-f', 'master', '-t', 'origin/master')
-            return True, "this is working!"
+            return True, "wow, this is working!"
         except Exception as e:
             return False, str(e)
