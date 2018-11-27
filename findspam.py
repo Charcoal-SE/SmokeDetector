@@ -1094,6 +1094,7 @@ def watched_ip_for_url_hostname(s, site):
             '198.54.115.65',    # drugs goldencondor / visit4supplements etc
             '198.54.116.51',    # drugs reviewsgear / crazy-bulk-review etc
             '198.54.116.85',    # drugs mummydiet.org
+            '198.54.116.110',   # drugs epbhub / healtylifetimesupplement etc
             '198.54.120.134',   # drugs advisorwellness / health4supplement etc
             '198.54.126.109',   # escorts + buy-likes
             # AS 26496 AS-26496-GO-DADDY-COM-LLC
