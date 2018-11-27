@@ -6895,3 +6895,4 @@
 1543283829	Tetsuya Yamamoto	medekyfitness\.com
 1543293275	iBug	^Kris\s*Leith$
 1543294583	iBug	ulfocus\.info
+1543294722	Tetsuya Yamamoto	coneizza\.com
