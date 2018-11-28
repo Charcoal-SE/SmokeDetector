@@ -6939,3 +6939,4 @@
 1543402704	tripleee	sdcreation\.in
 1543404885	tripleee	innotek\.ml
 1543419523	Glorfindel	itechcraft\.com
+1543429854	Glorfindel	paperswizard\.com
