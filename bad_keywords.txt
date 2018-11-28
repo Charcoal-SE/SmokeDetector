@@ -1729,3 +1729,4 @@ slim\W?select(?:\W?keto)?
 zederex
 azur\W?derma
 capillique
+sera\W?chews
