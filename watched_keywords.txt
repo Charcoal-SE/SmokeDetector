@@ -6802,7 +6802,6 @@
 1542853721	Makyen	drakioya17spellhome(?:@gmail\.com)?
 1542866942	K.Dᴀᴠɪs	coolmathgamesjunction\.net
 1542866960	K.Dᴀᴠɪs	solitairetimes\.com
-1542867777	K.Dᴀᴠɪs	sera\Wchews
 1542868848	K.Dᴀᴠɪs	asdaservices\d*(?:@gmail\.com)?
 1542869383	Makyen	^daveclark966$(?#abuse the watchlist to get an additional detection reason in order to trigger autoflagging for a persistent spammer)
 1542873442	tripleee	santhanakarthikeyan
