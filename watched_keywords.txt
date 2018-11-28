@@ -6943,3 +6943,4 @@
 1543429930	Makyen	bestcheeseslicers\.com
 1543430998	Makyen	escobarthebest(?:@jabber\.hot-chilli\.net)?
 1543431017	Makyen	THELIONC(?#telegram)
+1543431072	Makyen	essayservicescanner\.com
