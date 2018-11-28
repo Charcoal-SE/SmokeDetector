@@ -6941,3 +6941,4 @@
 1543419523	Glorfindel	itechcraft\.com
 1543429854	Glorfindel	paperswizard\.com
 1543429930	Makyen	bestcheeseslicers\.com
+1543430998	Makyen	escobarthebest(?:@jabber\.hot-chilli\.net)?
