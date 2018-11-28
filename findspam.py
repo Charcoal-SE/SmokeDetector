@@ -1111,6 +1111,8 @@ def watched_ip_for_url_hostname(s, site):
             '160.153.129.238',  # drugs bestenhancement / supplementskingpro etc
             '166.62.28.116',    # fake-tech-support printertechsupportnumbers.com
             '192.186.227.225',  # drugs topwellnessguru / healthcare350 etc
+            # AS 394695 PUBLIC-DOMAIN-REGISTRY - PDR, US
+            '162.215.253.205',  # drugs escorts drozien.com nehasuri.in etc
         ])
 
 
