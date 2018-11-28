@@ -6934,3 +6934,4 @@
 1543391756	Glorfindel	worldscreen\.com
 1543394828	Tetsuya Yamamoto	echodevicesupport\.com
 1543396012	tripleee	(?-i:^kelvin$)
+1543398011	Tetsuya Yamamoto	mysaifco\.com
