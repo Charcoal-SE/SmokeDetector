@@ -1212,7 +1212,6 @@
 1508764061	tripleee	fynsis\.com
 1508767429	bwDraco	movieboxappz\.com
 1508772404	tripleee	cassiopeiastudio\.com
-1508777493	bwDraco	treasurebox
 1508777497	bwDraco	collision\W?express
 1508791180	Mithrandir	fdsfs
 1508817954	Suraj Rao	tutorialslife\.com
