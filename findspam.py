@@ -406,15 +406,16 @@ def pattern_product_name(s, site):
         "Elite", "Exceptional", "Enhance(?:ment)?", "Nitro", "Boost(?:er)?", "Supplements?",
         "Skin", "Muscle", "Therm[ao]", "Neuro", "Luma", "Rapid", "Tone", "Keto", "Fuel", "Cream",
         "(?:Anti)?[ -]?Ag(?:ed?|ing)", "Trim", "Male", "Weight[ -](?:Loss|Reduction)", "Radiant(?:ly)?",
-        "Hyper(?:tone)?", "Boost(?:er|ing)?", "Youth", "Monster", "Enlarge(?:ment)", "Obat",
+        "Hyper(?:tone)?", "Boost(?:er|ing)?", "Youth", "Monster", "Enlarge(?:ment)", "Obat", "Nutri",
     ]
     keywords = required_keywords + [
         "Deep", "Pro", "Advanced?", "Divine", "Royale", "Angele*", "Trinity", "Andro", "Force", "Health",
         "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect", "Bio", "Natural", "Oil",
-        "E?xtreme", "Fit", "Thirsty?", "Grow", "Complete", "Reviews?", "Bloom(?:ing)?", "BHB", "Pure",
+        "E?xtreme", "Fit", "Thirsty?", "Grow", "Complete", "Reviews?", "Bloom(?:ing)?", "BHB", "Pure", "Quick",
+        "Titan", "X[LRT]",
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
-        keywords.extend([r"X[\dLRT]?", "Alpha", "Plus", "Prime", "Formula", "Max+"])
+        keywords.extend([r"X\d?", "Alpha", "Plus", "Prime", "Formula", "Max+"])
     keywords = regex.compile(r"(?i)\b(?P<x>{0})(?:[ -]?(?P<x>{0}))+\b".format("|".join(keywords)))
     required = regex.compile(r"(?i){}".format("|".join(required_keywords)))
 
