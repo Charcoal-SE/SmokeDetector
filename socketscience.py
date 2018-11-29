@@ -32,8 +32,8 @@ class SocketScience:
     _switch_task = None
     _callbacks = {}
 
-    @staticmethod
-    def send(payload, single_message=True):
+    @classmethod
+    def send(cls, payload, single_message=True):
         encoded = msgpack.dumps(payload)
 
         if single_message:
@@ -54,10 +54,8 @@ class SocketScience:
             for chunk in chunks:
                 chatcommunicate.tell_rooms_with("direct", chunk)
 
-    @staticmethod
-    def receive(content):
-        global _incomplete_messages
-
+    @classmethod
+    def receive(cls, content):
         content = content.strip()
 
         # U+0002 STX START OF TEXT; U+0003 ETX END OF TEXT; U+0016 SYN SYNCHRONOUS IDLE
@@ -73,42 +71,36 @@ class SocketScience:
         # STX indicates probably valid, but incomplete - wait for another message with content and ETX.
         elif content.startswith("\u0002") and not content.endswith("\u0003"):
             message_id = int(content[1:5])
-            _incomplete_messages[message_id] = content
+            cls._incomplete_messages[message_id] = content
 
         # No STX but ends with ETX, so probably a completion of a previous message.
         elif not content.startswith("\u0002") and content.endswith("\u0003"):
             message_id = int(content[-5:-1])
-            complete = _incomplete_messages[message_id] + content
+            complete = cls._incomplete_messages[message_id] + content
             decoded = msgpack.loads(regex.sub(r"^\u0002\d{4}|\d{4}\u0003", "", complete))
             SocketScience.handle(decoded)
 
         # Starts with SYN and message ID - continuation but not completion of previous message.
         elif content.startswith("\u0016"):
             message_id = int(content[1:5])
-            _incomplete_messages[message_id] += content[5:]
+            cls._incomplete_messages[message_id] += content[5:]
 
         else:
             log('warn', 'SocketScience received malformed direct message')
             log('debug', content)
 
-    @staticmethod
-    def register(prop, cb):
-        global _callbacks
+    @classmethod
+    def register(cls, prop, cb):
+        if prop not in cls._callbacks:
+            cls._callbacks[prop] = []
 
-        if prop not in _callbacks:
-            _callbacks[prop] = []
+        cls._callbacks[prop].append(cb)
 
-        _callbacks[prop].append(cb)
-
-    @staticmethod
-    def handle(content):
-        global _pings
-        global _switch_task
-        global _callbacks
-
+    @classmethod
+    def handle(cls, content):
         for k, d in content.items():
-            if k in _callbacks:
-                for cb in _callbacks[k]:
+            if k in cls._callbacks:
+                for cb in cls._callbacks[k]:
                     cb(d)
 
         if "metasmoke_state" in content:
@@ -123,16 +115,13 @@ class SocketScience:
                 GlobalVars.metasmoke_down = False
 
         if "ping" in content:
-            _pings.append({"timestamp": content["ping"], "location": content["location"]})
-            if _switch_task is not None:
-                _switch_task.cancel()
+            cls._pings.append({"timestamp": content["ping"], "location": content["location"]})
+            if cls._switch_task is not None:
+                cls._switch_task.cancel()
 
-    @staticmethod
-    def check_recent_pings():
-        global _pings
-        global _switch_task
-
-        recent = _pings.sort(key=lambda p: p["timestamp"]).reverse()
+    @classmethod
+    def check_recent_pings(cls):
+        recent = cls._pings.sort(key=lambda p: p["timestamp"]).reverse()
         if len(recent) >= 1:
             most_recent = recent[0]["timestamp"]
             now = time.time()
@@ -140,7 +129,7 @@ class SocketScience:
         if now - most_recent >= 90 or len(recent) == 0:
             # No active Smokeys. Wait a random number of seconds, then switch to active.
             sleep = random.randint(0, 30)
-            _switch_task = Tasks.later(SocketScience.switch_to_active, after=sleep)
+            cls._switch_task = Tasks.later(SocketScience.switch_to_active, after=sleep)
 
     @staticmethod
     def switch_to_active():
