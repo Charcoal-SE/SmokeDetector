@@ -6968,3 +6968,4 @@
 1543482350	Tetsuya Yamamoto	cooperativecomputing\.com
 1543490089	Makyen	(?:buy\b.{0,400}?</?a(?: [^>]*|)>\W*|\W*</a>.{0,400}?\bbuy)(?#buy before, in, or after a link within 400 characters; was 2145/2077/67/8 when watched)
 1543494985	Makyen	accesscontrols\.com\.au
+1543509674	WELZ	mam-solutions\.com
