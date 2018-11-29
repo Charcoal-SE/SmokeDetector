@@ -6971,3 +6971,4 @@
 1543509674	WELZ	mam-solutions\.com
 1543521868	Makyen	essayhave\.com
 1543530249	WELZ	premiereltg\.com
+1543534544	K.Dᴀᴠɪs	blackhatlord(?:@protonmail\.com)?
