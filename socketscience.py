@@ -65,6 +65,11 @@ class SocketScience:
             decoded = msgpack.loads(content[5:-5])
             SocketScience.handle(decoded)
 
+        # Single multiline message instead of chunked.
+        elif content.startswith(".\n\u0002"):
+            decoded = msgpack.loads(regex.sub(r"\d{4}\u0003.*", "", content[7:]))
+            SocketScience.handle(decoded)
+
         # STX indicates probably valid, but incomplete - wait for another message with content and ETX.
         elif content.startswith("\u0002") and not content.endswith("\u0003"):
             message_id = int(content[1:5])
@@ -81,11 +86,6 @@ class SocketScience:
         elif content.startswith("\u0016"):
             message_id = int(content[1:5])
             _incomplete_messages[message_id] += content[5:]
-
-        # Single multiline message instead of chunked.
-        elif content.startswith(".\n\u0002"):
-            decoded = msgpack.loads(regex.sub(r"\d{4}\u0003.*", "", content[7:]))
-            SocketScience.handle(decoded)
 
         else:
             log('warn', 'SocketScience received malformed direct message')
