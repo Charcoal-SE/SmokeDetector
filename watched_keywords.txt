@@ -6956,3 +6956,4 @@
 1543476112	Makyen	vriligy
 1543476123	Makyen	dapoxetine
 1543476136	Makyen	tazzle
+1543476145	Makyen	(?:super\W*)?vidalista
