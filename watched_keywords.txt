@@ -6965,3 +6965,4 @@
 1543479332	Tetsuya Yamamoto	cwe\.ae
 1543481075	Tetsuya Yamamoto	signin-email\.com
 1543481756	Tetsuya Yamamoto	readyhealthpoint\.com
+1543482350	Tetsuya Yamamoto	cooperativecomputing\.com
