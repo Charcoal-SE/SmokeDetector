@@ -60,12 +60,12 @@ class SocketScience:
 
         # U+0002 STX START OF TEXT; U+0003 ETX END OF TEXT; U+0016 SYN SYNCHRONOUS IDLE
         if content.startswith("\u0002") and content.endswith("\u0003"):
-            decoded = msgpack.loads(bytes(content[5:-5]))
+            decoded = msgpack.loads(bytes(content[5:-5], "utf-8"))
             SocketScience.handle(decoded)
 
         # Single multiline message instead of chunked.
         elif content.startswith(".\n\u0002"):
-            decoded = msgpack.loads(bytes(regex.sub(r"\d{4}\u0003.*", "", content[7:])))
+            decoded = msgpack.loads(bytes(regex.sub(r"\d{4}\u0003.*", "", content[7:]), "utf-8"))
             SocketScience.handle(decoded)
 
         # STX indicates probably valid, but incomplete - wait for another message with content and ETX.
@@ -77,7 +77,7 @@ class SocketScience:
         elif not content.startswith("\u0002") and content.endswith("\u0003"):
             message_id = int(content[-5:-1])
             complete = cls._incomplete_messages[message_id] + content
-            decoded = msgpack.loads(bytes(regex.sub(r"^\u0002\d{4}|\d{4}\u0003", "", complete)))
+            decoded = msgpack.loads(bytes(regex.sub(r"^\u0002\d{4}|\d{4}\u0003", "", complete), "utf-8"))
             SocketScience.handle(decoded)
 
         # Starts with SYN and message ID - continuation but not completion of previous message.
