@@ -4121,7 +4121,6 @@
 1530248519	Makyen	supplementaustralia\.weebly\.com
 1530250953	Makyen	webque\.in
 1530252146	tripleee	cheapcartaiwan\.com
-1530264951	tripleee	medypharma\.com
 1530265437	tripleee	asiansealing\.in
 1530267177	tripleee	snow\W?teeth
 1530269228	tripleee	[a-z_]*(?:1_*)?414[\W_]*454[\W_]*9493[a-z_]*
