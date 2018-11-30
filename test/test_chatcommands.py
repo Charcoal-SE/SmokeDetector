@@ -250,7 +250,7 @@ def test_report(handle_spam):
         assert isinstance(call["post"], Post)
         assert call["reasons"] == ["Manually reported answer"]
         assert call["why"] == (
-            "Post manually reported by user *El'endia Starman* in room *Charcoal HQ* with reason: *~o.O~*."
+            "Post manually reported by user *ArtOfCode* in room *Charcoal HQ* with reason: *~o.O~*."
             "\n\nThis post would not have been caught otherwise."
         )
 
@@ -262,7 +262,7 @@ def test_report(handle_spam):
 
         _, call = handle_spam.call_args_list[-1]
         assert isinstance(call["post"], Post)
-        assert call["why"].startswith("Post manually scanned by user *El'endia Starman* in room *Charcoal HQ*.")
+        assert call["why"].startswith("Post manually scanned by user *ArtOfCode* in room *Charcoal HQ*.")
 
         # Now with report-force
         GlobalVars.blacklisted_users.clear()
@@ -351,7 +351,7 @@ def test_allspam(handle_spam):
         _, call = handle_spam.call_args_list[0]
         assert isinstance(call["post"], Post)
         assert call["reasons"] == ["Manually reported answer"]
-        assert call["why"] == "User manually reported by *El'endia Starman* in room *Charcoal HQ*.\n"
+        assert call["why"] == "User manually reported by *ArtOfCode* in room *Charcoal HQ*.\n"
 
         handle_spam.reset_mock()
         assert chatcommands.allspam("http://meta.stackexchange.com/users/373807", original_msg=msg) is None
@@ -360,7 +360,7 @@ def test_allspam(handle_spam):
         _, call = handle_spam.call_args_list[0]
         assert isinstance(call["post"], Post)
         assert call["reasons"] == ["Manually reported answer"]
-        assert call["why"] == "User manually reported by *El'endia Starman* in room *Charcoal HQ*.\n"
+        assert call["why"] == "User manually reported by *ArtOfCode* in room *Charcoal HQ*.\n"
 
     finally:
         GlobalVars.blacklisted_users.clear()
