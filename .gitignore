@@ -37,6 +37,7 @@ nosetests.xml
 .project
 .pydevproject
 .idea/
+.vscode
 
 # False positives, whitelisted/blacklisted users, ignored posts, etc.
 # - Old format text files:
