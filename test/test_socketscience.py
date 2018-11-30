@@ -3,8 +3,7 @@ import pytest
 
 
 @pytest.mark.parametrize('content', [
-    ".\n\u00022046b'\x82\xa8location\xabHenders/EC2\xa9timestamp\xcbA\xd6\xff\xb6~\xaay\xc3'\u0003",
-    ".\n\u00023786b'\x82\xa8location\xabHenders/EC2\xa9timestamp\xcbA\xd6\xff\xb5\x8e\x9c \x93'\u0003"
+    ".\n\x023359gaRwaW5ngqhsb2NhdGlvbqtIZW5kZXJzL0VDMql0aW1lc3RhbXDOWseSrg==\x03"
 ])
 def test_receive(content):
     def handle_ping(data):
