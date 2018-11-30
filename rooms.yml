@@ -9,130 +9,126 @@ stackexchange.com:
       - experimental
 
     privileges:
-      - 117490   # Normal Human
-      - 66258    # Andy
-      - 31768    # ManishEarth
-      - 103081   # hichris123
-      - 73046    # Undo
-      - 88521    # ProgramFOX
-      - 59776    # Doorknob
-      - 31465    # Seth
-      - 88577    # Santa Claus
-      - 34124    # Andrew Leach
-      - 54229    # apnorton
-      - 20459    # S.L. Barth
-      - 32436    # tchrist
-      - 30477    # Brock Adams
-      - 58529    # ferrybig
-      - 145208   # Robert Longson
-      - 178825   # Ms Yvette
-      - 171800   # JAL
-      - 64978    # PeterJ
-      - 125141   # Jeffrey Bosboom
-      - 54902    # bummi
-      - 135450   # M.A.R.
-      - 145604   # Quill
-      - 60548    # rene
-      - 121401   # michaelpri
-      - 116218   # JamesENL
-      - 82927    # Braiam
-      - 11606    # bwDraco
-      - 19761    # Ilmari Karonen
-      - 108271   # Andrew T.
-      - 171054   # Magisch
-      - 190011   # Petter Friberg
-      - 165661   # Tunaki
-      - 145086   # Wai Ha Lee
-      - 137665   # ByteCommander
-      - 147884   # wythagoras
-      - 186395   # Åna
-      - 181293   # Ashish Ahuja
-      - 163686   # Gothdo
-      - 145827   # angussidney
-      - 244748   # Supreme Leader SnokeDetector (angussidney's sock)
-      - 121520   # ArtOfCode
-      - 244382   # Lt. A. Code (ArtOfCode's sock to test things with)
-      - 137388   # QPaysTaxes
-      - 212311   # Ryan Bemrose
-      - 172397   # Kyll
-      - 224538   # FrankerZ
-      - 61202    # OldSkool
-      - 56166    # Jan Dvorak
-      - 133966   # DavidPostill
-      - 22839    # djsmiley2k
-      - 97389    # Kaz Wolfe
-      - 144962   # DJMcMayhem
-      - 139423   # NobodyNada
-      - 62118    # tripleee
-      - 130558   # Registered User
-      - 128113   # Avery
-      - 164318   # Glorfindel
-      - 175347   # Floern
-      - 180274   # Alexander O'Mara
-      - 158742   # Rob
-      - 207356   # 4castle
-      - 133031   # Mithrandir
-      - 215671   # Locutus of Borg (Mithrandir's Sock)
-      - 169713   # Mego
-      - 126657   # Cerbrus
-      - 10145    # Thomas Ward
-      - 161943   # J F
-      - 195967   # CaffeineAddiction
-      - 5363     # Stijn
-      - 248139   # FelixSFD
-      - 156721   # D-side
-      - 167070   # quartata
-      - 172450   # Hovercraft Full Of Eels
-      - 56200    # Eric Leschinski
-      - 211021   # Henders
-      - 255290   # Gypsy Spellweaver
-      - 64521    # CalvT
-      - 165474   # Hyper Neutrino
-      - 281362   # Hyper Neutrino v2
-      - 169252   # Cai
-      - 155243   # Nisse Engström
-      - 69330    # Sconibulus
-      - 164187   # Okx
-      - 202619   # John Militer
-      - 262693   # suraj
-      - 11287    # Martin Sleziak
-      - 88588    # NVZ
-      - 281674   # paper1111
-      - 279119   # Tetsuya Yamamoto
-      - 307652   # Ajay Brahmakshatriya
-      - 238145   # Owen Hines
-      - 268731   # Sagar V
-      - 205208   # a-j
-      - 234375   # Jarko Dubbeldam
-      - 139041   # Catija
-      - 305737   # Tinkeringbell
-      - 210948   # WELZ
-      - 156050   # Makyen
-      - 269502   # micsthepick
-      - 205533   # Videonauth
-      - 275329   # iBug
-      - 341413   # iBot (iBug's sock)
-      - 78973    # gparyani
-      - 318454   # Jake Symons
-      - 202339   # Nog Shine
-      - 37096    # Lynn Crumbling
-      - 223524   # K.Davis
-      - 252743   # Christopher
-      - 165415   # Princess Luna
-      - 301688   # Grant Garrison
-      - 311852   # Filnor
-      - 113120   # Gaurang Tandon
-      - 153555   # bertieb
-      - 40662    # Frenzy Li
-      - 340148   # Shree
-      - 80316    # Erik the Outgolfer
-      - 165839   # Melebius
-      - 242419   # AquariusOne (Thomas Ward's sock)
-      - 37642    # scaaahu
-      - 185195   # Machavity
-      - 379519   # Devealte
-      - 276623   # EJoshuaS
-      - 309143   # sau226
+      - 2848444  # Santa Claus
+      - 8181207  # WELZ
+      - 1245478  # CalvT
+      - 9584324  # Supreme Leader SnokeDetector
+      - 3193304  # NVZ
+      - 272446  # Rob
+      - 267077  # Martin Sleziak
+      - 1212053  # ManishEarth
+      - 7627686  # Åna
+      - 1435254  # Suraj Rao
+      - 6473006  # Zoe
+      - 6062499  # Filnor
+      - 5963824  # Ashish Ahuja
+      - 7034529  # Magisch
+      - 2372500  # D-side
+      - 3802375  # Alexander O'Mara
+      - 4642421  # michaelpri
+      - 6887735  # Petter Friberg
+      - 5655434  # Owen Hines
+      - 4314782  # DJMcMayhem
+      - 8510281  # Tinkeringbell
+      - 9926590  # paper1111
+      - 2575625  # Henders
+      - 8507897  # Tetsuya Yamamoto
+      - 4252138  # Nisse Engström
+      - 2034372  # Kaz Wolfe
+      - 3986488  # Ave
+      - 1878548  # bummi
+      - 8561994  # Locutus of Borg
+      - 11533608  # Grant Garrison
+      - 2477436  # gparyani
+      - 12596055  # Devealte
+      - 281857  # rene
+      - 4911344  # Yvette Colomb
+      - 5018541  # EJoshuaS
+      - 6816483  # J F
+      - 9572642  # Lt. A. Code
+      - 4248202  # NobodyNada
+      - 6109921  # quartata
+      - 1677570  # Ferrybig
+      - 468289  # tripleee
+      - 3046327  # hichris123
+      - 2094462  # QPaysTaxes
+      - 3457374  # ArtOfCode
+      - 216196  # tchrist
+      - 411877  # Shree
+      - 1445276  # Wai Ha Lee
+      - 5950537  # micsthepick
+      - 2058164  # Cerbrus
+      - 4000711  # Quill
+      - 63984  # Andy
+      - 1780938  # Sconibulus
+      - 4440133  # Jeffrey Bosboom
+      - 1464473  # Frenzy Li
+      - 8116083  # Videonauth
+      - 331514  # Lynn Crumbling
+      - 1208323  # Seth
+      - 3359942  # Andrew T.
+      - 2927268  # Mego
+      - 89883  # Stijn
+      - 9507971  # AquariusOne
+      - 253560  # scaaahu
+      - 131474  # Brock Adams
+      - 74727  # Oldskool
+      - 10839766  # HyperNeutrino
+      - 2809239  # JAL
+      - 3841881  # M.A.R. ಠ_ಠ
+      - 2287191  # FrankerZ
+      - 1936546  # Tunaki
+      - 3979517  # Catija
+      - 2259853  # Cai
+      - 7624963  # K.Dᴀᴠɪs
+      - 178805  # Ilmari Karonen
+      - 354360  # djsmiley2k
+      - 1029387  # Robert Longson
+      - 9933161  # Gypsy Spellweaver
+      - 7884440  # Christopher 2EZ 4RTZ
+      - 5962654  # FelixSFD
+      - 1241839  # Andrew Leach
+      - 4230755  # DavidPostill
+      - 1703573  # Undo
+      - 347241  # bwDraco
+      - 435342  # Ryan Bemrose
+      - 4314736  # Okx
+      - 4768421  # Michał Perłakowski
+      - 233608  # John Dvorak
+      - 2751107  # Machavity
+      - 5221606  # Paul Stenne
+      - 8105092  # John Militer
+      - 3947134  # CaffeineAddiction
+      - 1266491  # Doorknob
+      - 7886663  # iBug
+      - 9176804  # JAD
+      - 199671  # Eric Leschinski
+      - 4657998  # Makyen
+      - 11798870  # sau226
+      - 6132527  # A J
+      - 297701  # Thomas Ward
+      - 247613  # Hovercraft Full Of Eels
+      - 5869449  # angussidney
+      - 13183561  # iBot
+      - 5129611  # Mithrandir
+      - 6241661  # wythagoras
+      - 2824081  # Sagar V
+      - 2771931  # EKons
+      - 5612515  # Byte Commander
+      - 3408190  # Ajay Brahmakshatriya
+      - 3094403  # ProgramFOX
+      - 365844  # Melebius
+      - 1750581  # PeterJ
+      - 5905206  # bertieb
+      - 1123059  # apnorton
+      - 6085540  # Glorfindel
+      - 3136569  # Gaurang Tandon
+      - 429324  # S.L. Barth
+      - 416592  # Braiam
+      - 12007967  # Jake Symons
+      - 2734210  # JamesENL
+      - 7569646  # 4castle
+      - 5029344  # Registered User
       
   84821:
     commands: true
@@ -301,85 +297,78 @@ meta.stackexchange.com:
       - no-no whitespace in answer
 
     privileges:
-      - 315433   # Normal Human
-      - 244519   # CRABOLO
-      - 244382   # TGMCians
-      - 194047   # Jan Dvorak
-      - 158100   # rene
-      - 178438   # Manishearth
-      - 237685   # hichris123
-      - 215468   # Undo
-      - 229438   # ProgramFOX
-      - 180276   # Doorknob
-      - 161974   # Lynn Crumbling
-      - 186281   # Andy
-      - 266094   # Unihedro
-      - 245167   # Infinite Recursion
-      - 230261   # Jason C
-      - 213575   # Braiam
-      - 241919   # Andrew T.
-      - 203389   # backwards-Seth
-      - 202832   # Mooseman
-      - 160017   # bwDraco
-      - 201151   # bummi
-      - 188558   # Frank
-      - 229166   # Santa Claus
-      - 159034   # Kevin Brown
-      - 203972   # PeterJ
-      - 188673   # Alexis King
-      - 258672   # AstroCB
-      - 227577   # Sam
-      - 255735   # cybermonkey
-      - 279182   # Ixrec
-      - 271104   # James
-      - 220428   # Qantas 94 Heavy
-      - 153355   # tchrist
-      - 238426   # Ed Cottrell
-      - 166899   # Second Rikudo
-      - 287999   # ASCIIThenANSI
-      - 208518   # JNat
-      - 284141   # michaelpri
-      - 260312   # vaultah
-      - 244062   # SouravGhosh
-      - 152859   # Shadow Wizard
-      - 201314   # apnorton
-      - 280934   # M.A.Ramezani
-      - 200235   # durron597
-      - 148310   # Awesome Poodles / Brock Adams
-      - 168333   # S.L. Barth
-      - 257207   # Unikitty
-      - 244282   # DroidDev
-      - 163250   # Cupcake
-      - 298265   # BoomsPlus
-      - 253560   # josilber
-      - 244254   # misterManSam
-      - 188189   # Robert Longson
-      - 174699   # Ilmari Karonen
-      - 202362   # chmod 666 telkitty
-      - 289717   # Quill
-      - 237813   # bjb568
-      - 311345   # Simon Klaver
-      - 171881   # rekire
-      - 260388   # Pandya
-      - 310756   # Ms Yvette
-      - 262399   # Jeffrey Bosboom
-      - 242209   # JAL
-      - 280883   # ByteCommander
-      - 302251   # kos
-      - 262823   # ArtOfCode
-      - 215067   # Ferrybig
-      - 308386   # Magisch
-      - 285368   # angussidney
-      - 158829   # Thomas Ward
-      - 294691   # Mithrandir
-      - 203553   # CalvT
-      - 289971   # Hyper Neutrino
-      - 346854   # DonQuiKong
-      - 284336   # Catija
-      - 310369   # quartata
-      - 350567   # iDebug (iBug on SO)
-      - 377214   # Sonic the Anonymous Hedgehog (gparyani elsewhere)
-      - 163529   # Shree
+      - 2734210  # JamesENL
+      - 212518  # Alexis King
+      - 4440133  # Jeffrey Bosboom
+      - 1212053  # ManishEarth
+      - 1399708  # JNat
+      - 216196  # tchrist
+      - 2052845  # Qantas 94 Heavy
+      - 429324  # S.L. Barth
+      - 531689  # J. Musser
+      - 3232583  # Ixrec
+      - 347241  # bwDraco
+      - 281857  # rene
+      - 6551576  # SamsungNote7Plus
+      - 201110  # Shadow Wizard
+      - 1677570  # Ferrybig
+      - 1029387  # Robert Longson
+      - 1872335  # TGMCians
+      - 3310555  # misterManSam
+      - 2809239  # JAL
+      - 7034529  # Magisch
+      - 6070438  # ASCIIThenANSI
+      - 4140743  # Pandya
+      - 5129611  # Mithrandir
+      - 1245478  # CalvT
+      - 3648514  # CRABOLO
+      - 3457374  # ArtOfCode
+      - 233608  # John Dvorak
+      - 1703573  # Undo
+      - 1968644  # durron597
+      - 2848444  # Santa Claus
+      - 3572172  # Infinite Recursion
+      - 5423050  # kos
+      - 1960597  # Simon Klaver
+      - 1266491  # Doorknob
+      - 4000711  # Quill
+      - 331514  # Lynn Crumbling
+      - 3934463  # Unicode
+      - 5869449  # angussidney
+      - 2775391  # DroidDev
+      - 3094403  # ProgramFOX
+      - 1878548  # bummi
+      - 1750581  # PeterJ
+      - 416592  # Braiam
+      - 411877  # Shree
+      - 1279912  # Mooseman
+      - 3979517  # Catija
+      - 131474  # Brock Adams
+      - 2662014  # vaultah
+      - 2348349  # Ed Cottrell
+      - 2497975  # Sourav Ghosh
+      - 6109921  # quartata
+      - 1123059  # apnorton
+      - 4911344  # Yvette Colomb
+      - 3841881  # M.A.R. ಠ_ಠ
+      - 9739821  # DonQuiKong
+      - 7886663  # iBug
+      - 974068  # rekire
+      - 178805  # Ilmari Karonen
+      - 4642421  # michaelpri
+      - 4451090  # Unihedron
+      - 297701  # Thomas Ward
+      - 4101518  # AstroCB
+      - 466356  # Madara Uchiha
+      - 3046327  # hichris123
+      - 305991  # Jason C
+      - 2539078  # cybermonkey
+      - 3717584  # josliber
+      - 2591787  # Sam
+      - 1208323  # Seth
+      - 2477436  # gparyani
+      - 3359942  # Andrew T.
+
   1181:
     commands: true
     
@@ -388,16 +377,14 @@ meta.stackexchange.com:
       - experimental
     
     privileges:
-      - 285368   # angussidney
-      - 262823   # ArtOfCode
-      - 186281   # Andy
-      - 215468   # Undo
-      - 158829   # Thomas Ward
-      - 310369   # quartata
-      - 203553   # CalvT
-      - 294691   # Mithrandir
-      - 315433   # Normal Human
-      - 158100   # rene
+      - 6109921  # quartata
+      - 1245478  # CalvT
+      - 5129611  # Mithrandir
+      - 3457374  # ArtOfCode
+      - 63984  # Andy
+      - 297701  # Thomas Ward
+      - 281857  # rene
+      - 5869449  # angussidney
 
 
 stackoverflow.com:
@@ -409,90 +396,88 @@ stackoverflow.com:
       - site-stackoverflow.com
 
     privileges:
-      - 1849664  # Undo
-      - 2581872  # hichris123
-      - 1198729  # Manishearth
-      - 3717023  # Normal Human aka 1999
-      - 2619912  # ProgramFOX
-      - 578411   # rene
-      - 1043380  # gunr2171
-      - 2246344  # Sam
-      - 2756409  # TylerH
-      - 1768232  # durron597
-      - 359284   # Kevin Brown
-      - 258400   # easwee
-      - 3622940  # Unihedron
-      - 3204551  # Deduplicator
-      - 4342498  # NathanOliver
-      - 4639281  # Tiny Giant
-      - 3093387  # josilber
-      - 1652962  # cimmanon
-      - 1677912  # Mogsdad
-      - 656243   # Lynn Crumbling
-      - 3933332  # Rizier123
-      - 2422013  # cybermonkey
-      - 3478852  # Nisse Engström
-      - 2302862  # Siguza
-      - 1324     # Paul Roub
-      - 1743880  # Tunaki
-      - 1663001  # DavidG
-      - 2415822  # JAL
-      - 4174897  # Kyll
-      - 5299236  # Kevin Guan
-      - 4050842  # Thaillie
-      - 1816093  # Drew
-      - 874188   # Triplee
-      - 880772   # approxiblue
-      - 1835379  # Cerbrus
-      - 3956566  # JamesENL
-      - 2357233  # Ms Yvette
-      - 3155639  # AlexanderOMara
-      - 462627   # Praveen Kumar
-      - 4490559  # intboolstring
-      - 1364007  # Wai Ha Lee
-      - 1699210  # bummi
-      - 563532   # Rob
-      - 5389107  # Magisch
-      - 4099593  # bhargav-rao
-      - 1542723  # Ferrybig
-      - 2025923  # Tushar
-      - 5292302  # Petter Friberg
-      - 792066   # Braiam
-      - 5666987  # Ian
-      - 3160466  # ArtOfCode
-      - 4688119  # Ashish Ahuja
-      - 3476191  # Nobody Nada
-      - 2227743  # Eric D
-      - 821878   # Ryan Bemrose
-      - 4875631  # FrankerZ
-      - 2958086  # Compass
-      - 499214   # JanDvorak
-      - 5647260  # Andrew L.
-      - 559745   # Floern
-      - 5743988  # 4castle
-      - 4622463  # angussidney
-      - 603346   # Thomas Ward
-      - 3002139  # Baum mit Augen
-      - 1863564  # QPaysTaxes
-      - 4687348  # FelixSFD
-      - 4751173  # Glorfindel
-      - 2233391  # henders
-      - 4805174  # kayess
-      - 2370483  # Machavity
-      - 1873567  # CalvT
-      - 4826457  # suraj
-      - 8242698  # user0042
-      - 3773011  # Makyen
-      - 2858773  # Ajay Brahmakshatriya
-      - 4032703  # EJoshuaS
-      - 522444   # Hovercraft Full Of Eels
-      - 397817   # Stephen Kennedy
-      - 18157    # Jim Garrison
-      - 469080   # Michael Dodd
-      - 7296893  # Erik von Asmuth  
-      - 5781745  # K.Davis
-      - 965146   # Shree
-      - 5958455  # iBug
+      - 270038  # Floern
+      - 416592  # Braiam
+      - 472339  # approxiblue
+      - 3540948  # Compass
+      - 3094403  # ProgramFOX
+      - 1212053  # ManishEarth
+      - 1936546  # Tunaki
+      - 3717584  # josliber
+      - 1878548  # bummi
+      - 5113734  # Bhargav Rao
+      - 2663825  # Siguza
+      - 6887735  # Petter Friberg
+      - 233608  # John Dvorak
+      - 2094462  # QPaysTaxes
+      - 3457374  # ArtOfCode
+      - 11236892  # user0042
+      - 4879045  # Rizier123
+      - 3408190  # Ajay Brahmakshatriya
+      - 1831749  # DavidG
+      - 5044366  # Thaillie
+      - 3598048  # Baum mit Augen
+      - 4451090  # Unihedron
+      - 2032926  # Drew
+      - 7424117  # Li357
+      - 1245478  # CalvT
+      - 411877  # Shree
+      - 210807  # Praveen Kumar
+      - 6899023  # Kevin Guan
+      - 1445276  # Wai Ha Lee
+      - 1968644  # durron597
+      - 7452831  # Ian
+      - 999  # Paul Roub
+      - 9850721  # Erik von Asmuth
+      - 2575625  # Henders
+      - 268821  # Tiny Giant
+      - 5221606  # Paul Stenne
+      - 7034529  # Magisch
+      - 1036128  # gunr2171
+      - 2751107  # Machavity
+      - 6164808  # kayess
+      - 3802375  # Alexander O'Mara
+      - 3273747  # TylerH
+      - 5678307  # intboolstring
+      - 1703573  # Undo
+      - 5018541  # EJoshuaS
+      - 1677570  # Ferrybig
+      - 4252138  # Nisse Engström
+      - 2306806  # Tushar
+      - 6085540  # Glorfindel
+      - 3868683  # Deduplicator
+      - 2591787  # Sam
+      - 468289  # tripleee
+      - 272446  # Rob
+      - 2809239  # JAL
+      - 247613  # Hovercraft Full Of Eels
+      - 297701  # Thomas Ward
+      - 4657998  # Makyen
+      - 4911344  # Yvette Colomb
+      - 1851431  # Mogsdad
+      - 1435254  # Suraj Rao
+      - 214848  # Michael Dodd
+      - 4248202  # NobodyNada
+      - 94692  # easwee
+      - 5460139  # NathanOliver
+      - 1818331  # cimmanon
+      - 281857  # rene
+      - 170826  # Stephen Kennedy
+      - 9760  # Jim Garrison
+      - 2287191  # FrankerZ
+      - 3046327  # hichris123
+      - 2734210  # JamesENL
+      - 7624963  # K.Dᴀᴠɪs
+      - 331514  # Lynn Crumbling
+      - 147868  # Kevin Brown
+      - 2058164  # Cerbrus
+      - 435342  # Ryan Bemrose
+      - 5963824  # Ashish Ahuja
+      - 7569646  # 4castle
+      - 5962654  # FelixSFD
+      - 2539078  # cybermonkey
+      - 5869449  # angussidney
+      - 7886663  # iBug
       # NOTICE: please don't add new users until you have Room Owner approval
 
   111347:  # SOBotics
@@ -502,34 +487,34 @@ stackoverflow.com:
       - site-stackoverflow.com
 
     privileges:
-      - 3160466  # ArtOfCode
-      - 1849664  # Undo
-      - 3002139  # Baum mit Augen
-      - 3476191  # Nobody Nada
-      - 5292302  # Petter Friberg
-      - 4688119  # Ashish Ahuja
-      - 4099593  # Bhargav Rao
-      - 1743880  # Tunaki
-      - 559745   # Floern
-      - 4687348  # FelixSFD
-      - 6375113  # Bugs
-      - 4622463  # angussidney
-      - 563532   # Rob
-      - 4050842  # Thaillie
-      - 1915448  # g00glen00b
-      - 4766556  # quartata
-      - 4733879  # chade_
-      - 4875631  # FrankerZ
-      - 5827005  # GrumpyCrouton
-      - 5781745  # K.Davis
-      - 264607   # BlackICE
-      - 397817   # Stephen Kennedy
-      - 4946380  # Mithrandir
-      - 3773011  # Makyen
-      - 965146   # Shree
-      - 6707985  # geisterfurz007
-      - 6723642  # heather
-      - 6296561  # Zoe
+      - 270038  # Floern
+      - 1936546  # Tunaki
+      - 5113734  # Bhargav Rao
+      - 6887735  # Petter Friberg
+      - 8998609  # geisterfurz007
+      - 3457374  # ArtOfCode
+      - 5044366  # Thaillie
+      - 3598048  # Baum mit Augen
+      - 411877  # Shree
+      - 97573  # BlackICE
+      - 6062499  # Filnor
+      - 2161358  # g00glen00b
+      - 8655359  # heather
+      - 7690566  # GrumpyCrouton
+      - 1703573  # Undo
+      - 8502585  # Bugs
+      - 272446  # Rob
+      - 5129611  # Mithrandir
+      - 4657998  # Makyen
+      - 6109921  # quartata
+      - 4248202  # NobodyNada
+      - 2287191  # FrankerZ
+      - 7624963  # K.Dᴀᴠɪs
+      - 6473006  # Zoe
+      - 5962654  # FelixSFD
+      - 5963824  # Ashish Ahuja
+      - 170826  # Stephen Kennedy
+      - 5869449  # angussidney
       # NOTICE: please don't add new users until you have Room Owner approval. Art is an RO.
       
   167826:
@@ -539,31 +524,31 @@ stackoverflow.com:
       - site-stackoverflow.com
       
     privileges:
-      - 3160466  # ArtOfCode
-      - 1849664  # Undo
-      - 3002139  # Baum mit Augen
-      - 3476191  # Nobody Nada
-      - 5292302  # Petter Friberg
-      - 4688119  # Ashish Ahuja
-      - 4099593  # Bhargav Rao
-      - 1743880  # Tunaki
-      - 559745   # Floern
-      - 4687348  # FelixSFD
-      - 6375113  # Bugs
-      - 4622463  # angussidney
-      - 563532   # Rob
-      - 4050842  # Thaillie
-      - 1915448  # g00glen00b
-      - 4766556  # quartata
-      - 4733879  # chade_
-      - 4875631  # FrankerZ
-      - 5827005  # GrumpyCrouton
-      - 5781745  # K.Davis
-      - 264607   # BlackICE
-      - 397817   # Stephen Kennedy
-      - 4946380  # Mithrandir
-      - 3773011  # Makyen
-      - 965146   # Shree
-      - 6707985  # geisterfurz007
-      - 6723642  # heather
-      - 6296561  # Zoe
+      - 270038  # Floern
+      - 1936546  # Tunaki
+      - 5113734  # Bhargav Rao
+      - 6887735  # Petter Friberg
+      - 8998609  # geisterfurz007
+      - 3457374  # ArtOfCode
+      - 5044366  # Thaillie
+      - 3598048  # Baum mit Augen
+      - 411877  # Shree
+      - 97573  # BlackICE
+      - 6062499  # Filnor
+      - 2161358  # g00glen00b
+      - 8655359  # heather
+      - 7690566  # GrumpyCrouton
+      - 1703573  # Undo
+      - 8502585  # Bugs
+      - 272446  # Rob
+      - 5129611  # Mithrandir
+      - 4657998  # Makyen
+      - 6109921  # quartata
+      - 4248202  # NobodyNada
+      - 2287191  # FrankerZ
+      - 7624963  # K.Dᴀᴠɪs
+      - 6473006  # Zoe
+      - 5962654  # FelixSFD
+      - 5963824  # Ashish Ahuja
+      - 170826  # Stephen Kennedy
+      - 5869449  # angussidney
