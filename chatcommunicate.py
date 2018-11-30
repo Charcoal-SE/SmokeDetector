@@ -147,6 +147,7 @@ def parse_room_config(path):
     for site, site_rooms in room_dict.items():
         for roomid, room in site_rooms.items():
             room_identifier = (site, roomid)
+            print("Process {}".format(room_identifier))
             rooms[room_identifier] = room
             if "privileges" in room and "inherit" in room["privileges"]:
                 inherits.append({'from': (site, room["privileges"]["inherit"]), 'to': room_identifier})
