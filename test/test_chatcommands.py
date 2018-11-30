@@ -195,7 +195,7 @@ def test_approve(monkeypatch):
     monkeypatch.setattr(GlobalVars, "code_privileged_users", [])
     assert chatcommands.approve(8888, original_msg=msg).startswith("You need code privileges")
 
-    monkeypatch.setattr(GlobalVars, "code_privileged_users", [('stackexchange.com', 1)])
+    monkeypatch.setattr(GlobalVars, "code_privileged_users", [('stackexchange.com', 121520)])
     with monkeypatch.context() as m:
         # Oh no GitHub is down
         m.setattr("requests.get", lambda *args, **kwargs: None)
@@ -271,7 +271,7 @@ def test_report(handle_spam):
         _, call = handle_spam.call_args_list[-1]
         assert isinstance(call["post"], Post)
         assert call["why"].startswith(
-            "Post manually reported by user *El'endia Starman* in room *Charcoal HQ*."
+            "Post manually reported by user *ArtOfCode* in room *Charcoal HQ*."
             "\n\nThis post would have also been caught for:"
         )
 
@@ -291,8 +291,8 @@ def test_allspam(handle_spam):
     try:
         msg = Fake({
             "owner": {
-                "name": "El'endia Starman",
-                "id": 1,
+                "name": "ArtOfCode",
+                "id": 121520,
                 "is_moderator": False
             },
             "room": {
