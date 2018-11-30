@@ -234,7 +234,7 @@ class Rule:
 
             if self.title and not post.is_answer:
                 matches = list(compiled_regex.finditer(post.title))
-                result.append()bool(matches), reason_title, "Title - " + FindSpam.match_infos(matches)))
+                result.append((bool(matches), reason_title, "Title - " + FindSpam.match_infos(matches)))
             else:
                 result.append((False, "", ""))
 
@@ -255,6 +255,29 @@ class Rule:
         # "result" format: [(title_spam, reason, why), (username_spam, reason, why), (body_spam, reason, why)
         assert len(result) == 3
         return result
+
+    def __call__(self, *args):
+        # Preserve the functionality of a function
+        if self.func:
+            return self.func(*args)
+        else:
+            raise TypeError("This rule has no function set, can't call")
+
+
+# what if a function does more than one job?
+def create_rule(regex=None, *, reason=None, all=True, sites=[],
+                title=True, body=True, body_summary=False, username=False,
+                max_score=1, max_rep=1, question=True, answer=True, stripcodeblocks=False):
+    if not isinstance(reason, str):
+        raise ValueError("reason must be a string")
+
+    if regex is not None:
+        # Standalone mode
+        pass
+    else:
+        # Decorator-generator mode
+        pass
+    raise NotImplementedError()
 
 
 def is_whitelisted_website(url):
