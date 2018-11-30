@@ -42,10 +42,10 @@ class SocketScience:
 
     @classmethod
     def receive(cls, content):
-        content = base64.b64decode(content.strip())
+        content = content.strip()
 
         if content.startswith(".\n\u0002"):
-            decoded = msgpack.loads(content[7:-5])
+            decoded = msgpack.loads(base64.b64decode(content[7:-1]))
             SocketScience.handle(decoded)
 
         else:
