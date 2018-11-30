@@ -764,7 +764,7 @@ def sync_remote(msg):
 
 
 @command(privileged=True, give_name=True, aliases=[
-    "gitstatus", "git-status", "git-help"
+    "gitstatus", "git-status", "git-help", "git-merge-abort", "git-reset"
 ])
 def git(alias_used="git"):
     if alias_used == "git":
