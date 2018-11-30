@@ -6141,7 +6141,6 @@
 1539709054	Makyen	scienceping\.com
 1539709075	Makyen	vietping\.com
 1539713708	Glorfindel	famousjacket\.com
-1539724997	doppelspooker	833.{0,10}272
 1539741368	Makyen	microsoftlivesupport\.com
 1539745245	Tetsuya Yamamoto	kofk-bearings\.com
 1539754402	Tetsuya Yamamoto	fotisdentallabcn\.com
