@@ -136,11 +136,21 @@ def join_command_rooms():
 def parse_room_config(path):
     with open(path, "r") as room_config:
         room_dict = yaml.load(room_config.read())
+        inherits = []
+        rooms = {}
 
         for site, site_rooms in room_dict.items():
             for roomid, room in site_rooms.items():
                 room_identifier = (site, roomid)
-                _privileges[room_identifier] = set(room["privileges"]) if "privileges" in room else set()
+                rooms[room_identifier] = room
+                if "privileges" in room and "inherit" in room["privileges"]:
+                    inherits.append({'from': (site, room["privileges"]["inherit"]), 'to': room_identifier})
+                    if "additional" in room["privileges"]:
+                        _privileges[room_identifier] = set(room["privileges"]["additional"])
+                elif "privileges" in room:
+                    _privileges[room_identifier] = set(room["privileges"])
+                else:
+                    _privileges[room_identifier] = set()
 
                 if "commands" in room and room["commands"]:
                     _command_rooms.add(room_identifier)
@@ -150,6 +160,16 @@ def parse_room_config(path):
 
                 if "msg_types" in room:
                     add_room(room_identifier, room["msg_types"])
+
+        for inherit in inherits:
+            if inherit["from"] in rooms:
+                if room_identifier in _privileges:
+                    _privileges[room_identifier] = _privileges[room_identifier] | rooms[inherit["from"]]["privileges"]
+                else:
+                    _privileges[room_identifier] = rooms[inherit["from"]]["privileges"]
+            else:
+                log('warn', 'Room {} on {} specified privilege inheritance from {}, but no such room exists'.format(
+                    inherit["to"][1], inherit["to"][1], inherit["from"][1]))
 
 
 def add_room(room, roles):
