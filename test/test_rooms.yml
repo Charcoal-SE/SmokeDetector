@@ -4,8 +4,8 @@ stackexchange.com:
     watcher: true
 
     privileges:
-      - 1
-      - 16070
+      - 3457374
+      - 297701
 
     msg_types:
       - debug
@@ -13,6 +13,9 @@ stackexchange.com:
 
   30332:
     commands: true
+
+    privileges:
+      inherit: 11540
 
   3:
     watcher: true
@@ -27,7 +30,7 @@ meta.stackexchange.com:
     watcher: true
 
     privileges:
-      - 42
+      - 3457374
 
     msg_types:
       - metatavern
@@ -40,9 +43,8 @@ stackoverflow.com:
     watcher: false
 
     privileges:
-      - 1337
-      - 256
-      - 4766556
+      - 3457374
+      - 297701
 
     msg_types:
       - all
