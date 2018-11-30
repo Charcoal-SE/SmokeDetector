@@ -121,6 +121,142 @@ ENGLISH = {
 ENGLISH_PRIOR = math.log(4 / 5)
 
 
+class PostFilter:
+    """
+    General filter for SE posts
+
+    See __init__ for default values
+    """
+
+    def __init__(self, all_sites=True, sites=None, max_rep=1, max_score=0, question=True, answer=True):
+        self.all_sites = all_sites
+        self.sites = set(sites) if sites is not None else set()
+        self.max_rep = max_rep
+        self.max_score = max_score
+        self.question = question
+        self.answer = answer
+
+    def match(self, post):
+        """
+        See if a post matches this filter
+        """
+        if (post.is_answer and not self.answer) or (not post.is_answer and not self.question):
+            # Wrong post type
+            return False
+        elif self.all_sites != post.post_site in self.sites:
+            # Post is on wrong site
+            return False
+        elif (post.owner_rep > self.max_rep) or (post.post_score > self.max_score):
+            # High score or high rep
+            return False
+        else:
+            return True
+
+
+class Rule:
+    """
+    A single spam-checking rule
+    """
+
+    default_filter = PostFilter()
+
+    def __init__(self, item, reason, title=True, body=True, body_summary=True, username=True, filter=None,
+                 stripcodeblocks=False, whole_post=False):
+        self.regex = None
+        self.func = None
+        if isinstance(item, (str, URL_REGEX.__class__)):
+            self.regex = item
+        else:
+            self.func = item
+        self.reason = reason
+        self.title = title
+        self.body = body
+        self.body_summary = body_summary
+        self.username = username
+        self.filter = filter or Rule.default_filter
+        self.stripcodeblocks = stripcodeblocks
+        self.whole_post = False
+
+    def match(self, post):
+        """
+        Run this rule against a post. Returns a list of 3 tuples, each in (match, reason, why) format
+        """
+        if not self.filter.match(post):
+            # Post not matching the filter
+            return [(False, "", "")] * 3
+
+        body_to_check = post.body.replace("&nsbp;", "").replace("\xAD", "") \
+                                 .replace("\u200B", "").replace("\u200C", "")
+        body_name = "body" if not post.is_answer else "answer"
+        reason_title = self.reason.replace("{}", "title")
+        reason_username = self.reason.replace("{}", "username")
+        reason_body = self.reason.replace("{}", body_name)
+
+        if self.stripcodeblocks:
+            # use a placeholder to avoid triggering "few unique characters" when most of post is code
+            # XXX: "few unique characters" doesn't enable this, so remove placeholder?
+            body_to_check = regex.sub("(?s)<pre>.*?</pre>", "\ncode\n", body_to_check)
+            body_to_check = regex.sub("(?s)<code>.*?</code>", "\ncode\n", body_to_check)
+        if self.reason == 'phone number detected in {}':
+            body_to_check = regex.sub("<(?:a|img)[^>]+>", "", body_to_check)
+
+        matched_title, matched_body, matched_username = False, False, False
+        result = []
+        if self.func:  # Functional check takes precedence over regex check
+            if self.whole_post:
+                matched_title, matched_username, matched_body, why_text = self.func(post)
+                result.append((matched_title, reason_title, "Title - " + why_text))
+                result.append((matched_username, reason_username, "Username - " + why_text))
+                result.append((matched_body, reason_body, "Post - " + why_text))
+            else:
+                if self.title and not post.is_answer:
+                    matched_title, why_text = self.func(post.title)
+                    result.append((matched_title, reason_title, "Title - " + why_text))
+                else:
+                    result.append((False, "", ""))
+
+                if self.username:
+                    matched_username, why_text = self.func(post.user_name)
+                    result.append((matched_username, reason_username, "Username - " + why_text))
+                else:
+                    result.append((False, "", ""))
+
+                if self.body and not post.body_is_summary:
+                    matched_body, why_text = self.func(body_to_check)
+                    result.append((matched_body, reason_body, "Body - " + why_text))
+                elif self.body_summary and post.body_is_summary:
+                    matched_body, _ = self.func(body_to_check)
+                    result.append((matched_body, "", ""))
+                else:
+                    result.append((False, "", ""))
+        elif self.regex:
+            compiled_regex = regex.compile(self.regex, regex.UNICODE, city=FindSpam.city_list)
+
+            if self.title and not post.is_answer:
+                matches = list(compiled_regex.finditer(post.title))
+                result.append()bool(matches), reason_title, "Title - " + FindSpam.match_infos(matches)))
+            else:
+                result.append((False, "", ""))
+
+            if self.username:
+                matches = list(compiled_regex.finditer(post.user_name))
+                result.append((bool(matches), reason_username, "Username - " + FindSpam.match_infos(matches)))
+            else:
+                result.append((False, "", ""))
+            if (self.body and not post.body_is_summary) \
+                    or (self.body_summary and post.body_is_summary):
+                matches = list(compiled_regex.finditer(body_to_check))
+                result.append((bool(matches), reason_body, "Body - " + FindSpam.match_infos(matches)))
+            else:
+                result.append((False, "", ""))
+        else:
+            raise TypeError("A rule must have either 'func' or 'regex' valid!")
+
+        # "result" format: [(title_spam, reason, why), (username_spam, reason, why), (body_spam, reason, why)
+        assert len(result) == 3
+        return result
+
+
 def is_whitelisted_website(url):
     # Imported from method link_at_end
     return bool(WHITELISTED_WEBSITES_REGEX.search(url))
@@ -1924,84 +2060,21 @@ class FindSpam:
     @staticmethod
     def test_post(post):
         result = []
-        why = {'title': [], 'body': [], 'username': []}
+        why_title, why_username, why_body = [], [], []
         for rule in FindSpam.rules:
-            if (post.is_answer and not rule.get('answers', True)) \
-                    or (not post.is_answer and not rule.get('questions', True)):
-                continue  # Post type mismatch
-
-            if rule['all'] == (post.post_site in rule['sites']) \
-                    or post.owner_rep > rule['max_rep'] \
-                    or post.post_score > rule['max_score']:
-                continue  # Post condition mismatch
-
-            title_to_check = post.title
-            body_to_check = post.body.replace("&nsbp;", "").replace("\xAD", "") \
-                                     .replace("\u200B", "").replace("\u200C", "")
-            is_regex_check = 'regex' in rule
-            if rule['stripcodeblocks']:
-                # use a placeholder to avoid triggering "few unique characters" when most of post is code
-                # XXX: "few unique characters" doesn't enable this, so remove placeholder?
-                body_to_check = regex.sub("(?s)<pre>.*?</pre>", "\ncode\n", body_to_check)
-                body_to_check = regex.sub("(?s)<code>.*?</code>", "\ncode\n", body_to_check)
-            if rule['reason'] == 'phone number detected in {}':
-                body_to_check = regex.sub("<(?:a|img)[^>]+>", "", body_to_check)
-            matched_title, matched_username, matched_body = False, False, False
-            compiled_regex = None
-            if is_regex_check:
-                # using a named list \L in some regexes
-                compiled_regex = regex.compile(rule['regex'], regex.UNICODE, city=FindSpam.city_list)
-
-                if rule['title'] and not post.is_answer:
-                    matched_title = compiled_regex.findall(title_to_check)
-                if rule['username']:
-                    matched_username = compiled_regex.findall(post.user_name)
-                if (rule['body'] and not post.body_is_summary) \
-                        or (post.body_is_summary and rule['body_summary']):
-                    matched_body = compiled_regex.findall(body_to_check)
-            else:
-                if rule.get('whole_post'):
-                    matched_title, matched_username, matched_body, why_post = rule['method'](post)
-
-                    if matched_title:
-                        why["title"].append(u"Title - {}".format(why_post))
-                        result.append(rule['reason'].replace("{}", "title"))
-                    if matched_username:
-                        why["username"].append(u"Username - {}".format(why_post))
-                        result.append(rule['reason'].replace("{}", "username"))
-                    if matched_body:
-                        why["body"].append(u"Post - {}".format(why_post))
-                        result.append(rule['reason'].replace("{}", "answer" if post.is_answer else "body"))
-                else:
-                    if rule['title']:
-                        matched_title, why_title = rule['method'](title_to_check, post.post_site)
-                    if rule['username']:
-                        matched_username, why_username = rule['method'](post.user_name, post.post_site)
-                    if (rule['body'] and not post.body_is_summary) \
-                            or (post.body_is_summary and rule['body_summary']):
-                        matched_body, why_body = rule['method'](body_to_check, post.post_site)
-
-                    if matched_title:
-                        why["title"].append(u"Title - {}".format(why_title))
-                    if matched_username:
-                        why["username"].append(u"Username - {}".format(why_username))
-                    if matched_body:
-                        why["body"].append(u"Body - {}".format(why_body))
-            if matched_title and rule['title']:
-                why["title"].append(FindSpam.generate_why(compiled_regex, title_to_check, u"Title", is_regex_check))
-                result.append(rule['reason'].replace("{}", "title"))
-            if matched_username and rule['username']:
-                why["username"].append(FindSpam.generate_why(compiled_regex, post.user_name, u"Username",
-                                                             is_regex_check))
-                result.append(rule['reason'].replace("{}", "username"))
-            if matched_body and rule['body']:
-                why["body"].append(FindSpam.generate_why(compiled_regex, body_to_check, u"Body", is_regex_check))
-                type_of_post = ["body", "answer"][post.is_answer]
-                result.append(rule['reason'].replace("{}", type_of_post))
+            title, username, body = rule.match(post)
+            if title[0]:
+                result.append(title[1])
+                why_title.append(title[2])
+            if username[0]:
+                result.append(username[1])
+                why_username.append(username[2])
+            if body[0]:
+                result.append(body[1])
+                why_body.append(body[2])
         result = list(set(result))
         result.sort()
-        why = "\n".join(chain(filter(None, why["title"]), filter(None, why["body"]),
-                              filter(None, why["username"]))).strip()
+        why = "\n".join(why_title + why_username + why_body).strip()
         return result, why
 
     @staticmethod
@@ -2032,13 +2105,6 @@ class FindSpam:
                 word
             )
             for span, word in infos])
-
-    @staticmethod
-    def generate_why(compiled_regex, matched_text, type_of_text, is_regex_check):
-        if not is_regex_check:
-            return ""
-        matches = compiled_regex.finditer(matched_text)
-        return "{} - {}".format(type_of_text, FindSpam.match_infos(matches))
 
 
 FindSpam.reload_blacklists()
