@@ -210,22 +210,22 @@ class Rule:
                 result.append((matched_body, reason_body, "Post - " + why_text))
             else:
                 if self.title and not post.is_answer:
-                    matched_title, why_text = self.func(post.title)
+                    matched_title, why_text = self.func(post.title, post.post_site)
                     result.append((matched_title, reason_title, "Title - " + why_text))
                 else:
                     result.append((False, "", ""))
 
                 if self.username:
-                    matched_username, why_text = self.func(post.user_name)
+                    matched_username, why_text = self.func(post.user_name, post.post_site)
                     result.append((matched_username, reason_username, "Username - " + why_text))
                 else:
                     result.append((False, "", ""))
 
                 if self.body and not post.body_is_summary:
-                    matched_body, why_text = self.func(body_to_check)
+                    matched_body, why_text = self.func(body_to_check, post.post_site)
                     result.append((matched_body, reason_body, "Body - " + why_text))
                 elif self.body_summary and post.body_is_summary:
-                    matched_body, _ = self.func(body_to_check)
+                    matched_body, _ = self.func(body_to_check, post.post_site)
                     result.append((matched_body, "", ""))
                 else:
                     result.append((False, "", ""))
@@ -265,19 +265,29 @@ class Rule:
 
 
 # what if a function does more than one job?
-def create_rule(regex=None, *, reason=None, all=True, sites=[],
+def create_rule(reason=None, regex=None, *, all=True, sites=[],
                 title=True, body=True, body_summary=False, username=False,
                 max_score=1, max_rep=1, question=True, answer=True, stripcodeblocks=False):
     if not isinstance(reason, str):
         raise ValueError("reason must be a string")
 
+    post_filter = PostFilter(all_sites=all, sites=sites, max_score=max_score, max_rep=max_rep,
+                             question=question, answer=answer)
     if regex is not None:
         # Standalone mode
-        pass
+        rule = Rule(regex, reason=reason, filter=post_filter,
+                    title=title, body=body, body_summary=body_summary, username=username,
+                    stripcodeblocks=stripcodeblocks)
+        FindSpam.rules.append(rule)
+        return rule
     else:
         # Decorator-generator mode
-        pass
-    raise NotImplementedError()
+        def decorator(func):
+            rule = Rule(func, reason=reason, filter=post_filter,
+                        title=title, body=body, body_summary=body_summary, username=username,
+                        stripcodeblocks=stripcodeblocks)
+            return rule
+        return decorator
 
 
 def is_whitelisted_website(url):
