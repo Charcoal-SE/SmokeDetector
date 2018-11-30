@@ -104,8 +104,8 @@ def test_privileged():
 
     msg = Fake({
         "owner": {
-            "name": "El'endia Starman",
-            "id": 1,
+            "name": "ArtOfCode",
+            "id": 121520,
             "is_moderator": False
         },
         "room": {
@@ -139,7 +139,7 @@ def test_watch(monkeypatch):
                 "host": "stackexchange.com",
                 "get_user": lambda id: Fake({"name": "J F", "id": id})
             },
-            "owner": {"name": "El'endia Starman", "id": 1},
+            "owner": {"name": "ArtOfCode", "id": 121520},
             "room": {"id": 11540, "get_current_user_ids": lambda: [161943]},
             # Ouch, this is iffy
             # Prevent an error from deep inside do_blacklist
@@ -185,7 +185,7 @@ def test_approve(monkeypatch):
             "host": "stackexchange.com",
         },
         "id": 88888888,
-        "owner": {"name": "L'imperatore", "id": 1},
+        "owner": {"name": "ArtOfCode", "id": 121520},
         "room": {"id": 11540, "name": "Continuous Integration", "_client": None},
         "content_source": '!!/approve 8888',
     })
@@ -211,8 +211,8 @@ def test_report(handle_spam):
     try:
         msg = Fake({
             "owner": {
-                "name": "El'endia Starman",
-                "id": 1,
+                "name": "ArtOfCode",
+                "id": 121520,
                 "is_moderator": False
             },
             "room": {
@@ -371,8 +371,8 @@ def test_blacklisted_users():
     try:
         msg = Fake({
             "owner": {
-                "name": "El'endia Starman",
-                "id": 1,
+                "name": "ArtOfCode",
+                "id": 121520,
                 "is_moderator": False
             },
             "room": {
@@ -508,8 +508,8 @@ def test_whitelisted_users():
 def test_metasmoke():
     msg = Fake({
         "owner": {
-            "name": "El'endia Starman",
-            "id": 1,
+            "name": "ArtOfCode",
+            "id": 121520,
             "is_moderator": False
         },
         "room": {

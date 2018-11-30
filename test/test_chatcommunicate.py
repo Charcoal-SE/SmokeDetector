@@ -34,12 +34,12 @@ def test_parse_room_config():
     assert ("stackexchange.com", 54445) not in chatcommunicate._watcher_rooms
     assert ("stackoverflow.com", 111347) not in chatcommunicate._watcher_rooms
 
-    assert chatcommunicate._privileges[("stackexchange.com", 11540)] == {1, 16070}
-    assert chatcommunicate._privileges[("stackexchange.com", 30332)] == set()
+    assert chatcommunicate._privileges[("stackexchange.com", 11540)] == {121520, 10145}
+    assert chatcommunicate._privileges[("stackexchange.com", 30332)] == {121520, 10145}
     assert chatcommunicate._privileges[("stackexchange.com", 3)] == set()
     assert chatcommunicate._privileges[("stackexchange.com", 54445)] == set()
-    assert chatcommunicate._privileges[("meta.stackexchange.com", 89)] == {42}
-    assert chatcommunicate._privileges[("stackoverflow.com", 111347)] == {1337, 256, 4766556}
+    assert chatcommunicate._privileges[("meta.stackexchange.com", 89)] == {262823}
+    assert chatcommunicate._privileges[("stackoverflow.com", 111347)] == {3160466, 603346}
 
     assert len(chatcommunicate._room_roles) == 5
     assert chatcommunicate._room_roles["debug"] == {("stackexchange.com", 11540)}
