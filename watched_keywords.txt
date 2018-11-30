@@ -6973,3 +6973,4 @@
 1543530249	WELZ	premiereltg\.com
 1543534544	K.Dᴀᴠɪs	blackhatlord(?:@protonmail\.com)?
 1543540235	Tetsuya Yamamoto	sierracoin\.net
+1543540551	Tetsuya Yamamoto	planmyshifting\.com
