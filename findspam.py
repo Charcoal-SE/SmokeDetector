@@ -267,7 +267,7 @@ class Rule:
 # what if a function does more than one job?
 def create_rule(reason=None, regex=None, *, all=True, sites=[],
                 title=True, body=True, body_summary=False, username=False,
-                max_score=1, max_rep=1, question=True, answer=True, stripcodeblocks=False):
+                max_score=0, max_rep=1, question=True, answer=True, stripcodeblocks=False):
     if not isinstance(reason, str):
         raise ValueError("reason must be a string")
 
