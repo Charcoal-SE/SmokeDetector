@@ -147,7 +147,9 @@ stackexchange.com:
       - experimental
 
     privileges:
-      inherit: 11540
+      inherit:
+        site: stackexchange.com
+        room: 11540
 
   3877:  # Raiders of the Lost Downboat
     commands: false

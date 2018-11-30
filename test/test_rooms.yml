@@ -15,7 +15,9 @@ stackexchange.com:
     commands: true
 
     privileges:
-      inherit: 11540
+      inherit:
+        site: stackexchange.com
+        room: 11540
 
   3:
     watcher: true

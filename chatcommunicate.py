@@ -150,7 +150,8 @@ def parse_room_config(path):
             print("Process {}".format(room_identifier))
             rooms[room_identifier] = room
             if "privileges" in room and "inherit" in room["privileges"]:
-                inherits.append({'from': (site, room["privileges"]["inherit"]), 'to': room_identifier})
+                inherits.append({'from': (room["privileges"]["inherit"]["site"],
+                                          room["privileges"]["inherit"]["room"]), 'to': room_identifier})
                 if "additional" in room["privileges"]:
                     _privileges[room_identifier] =\
                         set([user_data[x][host_fields[site]] for x in room["privileges"]["additional"]])
