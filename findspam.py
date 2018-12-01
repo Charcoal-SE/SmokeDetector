@@ -141,7 +141,7 @@ class PostFilter:
         if (post.is_answer and not self.answer) or (not post.is_answer and not self.question):
             # Wrong post type
             return False
-        elif self.all_sites != post.post_site in self.sites:
+        elif self.all_sites == (post.post_site in self.sites):
             # Post is on wrong site
             return False
         elif (post.owner_rep > self.max_rep) or (post.post_score > self.max_score):
