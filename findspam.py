@@ -264,6 +264,98 @@ class Rule:
             raise TypeError("This rule has no function set, can't call")
 
 
+class FindSpam:
+    rules = []
+
+    rule_bad_keywords = {
+        # See PR 2322 for the reason of (?:^|\b) and (?:\b|$)
+        # (?w:\b) is also useful
+        'regex': r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
+            "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
+        'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
+        'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1}
+    rule_watched_keywords = {
+        'regex': r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format("|".join(GlobalVars.watched_keywords.keys())),
+        'reason': 'potentially bad keyword in {}',
+        'all': True, 'sites': [], 'title': True, 'body': True, 'username': True,
+        'stripcodeblocks': False, 'body_summary': True, 'max_rep': 30, 'max_score': 1}
+    rule_blacklisted_websites = {
+        'regex': u"(?i)({})".format("|".join(GlobalVars.blacklisted_websites)), 'all': True,
+        'sites': [], 'reason': "blacklisted website in {}", 'title': True, 'body': True, 'username': False,
+        'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 5}
+    rule_blacklisted_usernames = {
+        'regex': r"(?i)({})".format("|".join(GlobalVars.blacklisted_usernames)), 'all': True, 'sites': [],
+        'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
+        'body_summary': False, 'max_rep': 1, 'max_score': 0}
+
+
+    @staticmethod
+    def reload_blacklists():
+        blacklists.load_blacklists()
+        FindSpam.rule_bad_keywords['regex'] = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
+            "|".join(GlobalVars.bad_keywords), "|".join(FindSpam.bad_keywords_nwb))
+        FindSpam.rule_watched_keywords['regex'] = r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format(
+            "|".join(GlobalVars.watched_keywords.keys()))
+        FindSpam.rule_blacklisted_websites['regex'] = r"(?i)({})".format(
+            "|".join(GlobalVars.blacklisted_websites))
+        FindSpam.rule_blacklisted_usernames['regex'] = r"(?i)({})".format(
+            "|".join(GlobalVars.blacklisted_usernames))
+        GlobalVars.blacklisted_numbers, GlobalVars.blacklisted_numbers_normalized = \
+            process_numlist(GlobalVars.blacklisted_numbers)
+        GlobalVars.watched_numbers, GlobalVars.watched_numbers_normalized = \
+            process_numlist(GlobalVars.watched_numbers)
+        log('debug', "Global blacklists loaded")
+
+    @staticmethod
+    def test_post(post):
+        result = []
+        why_title, why_username, why_body = [], [], []
+        for rule in FindSpam.rules:
+            title, username, body = rule.match(post)
+            if title[0]:
+                result.append(title[1])
+                why_title.append(title[2])
+            if username[0]:
+                result.append(username[1])
+                why_username.append(username[2])
+            if body[0]:
+                result.append(body[1])
+                why_body.append(body[2])
+        result = list(set(result))
+        result.sort()
+        why = "\n".join(why_title + why_username + why_body).strip()
+        return result, why
+
+    @staticmethod
+    def match_info(match):
+        start, end = match.span()
+        group = match.group().replace("\n", "")
+        return "Position {}-{}: {}".format(start + 1, end, group)
+
+    @staticmethod
+    def match_infos(matches):
+        spans = {}
+        for match in matches:
+            group = match.group().strip().replace("\n", "")
+            if group not in spans:
+                spans[group] = [match.span()]
+            else:
+                spans[group].append(match.span())
+        infos = [(sorted(spans[word]), word) for word in spans]
+        infos.sort(key=lambda info: info[0])  # Sort by positions of appearances
+        return ", ".join([
+            "Position{} {}: {}".format(
+                "s" if len(span) > 1 else "",
+                ", ".join(
+                    ["{}-{}".format(a, b) for a, b in span]
+                    if len(span) < 14 else
+                    ["{}-{}".format(a, b) for a, b in span[:12]] + ["+{} more".format(len(span) - 12)]
+                ),
+                word
+            )
+            for span, word in infos])
+
+
 # what if a function does more than one job?
 def create_rule(reason=None, regex=None, *, all=True, sites=[],
                 title=True, body=True, body_summary=False, username=False,
@@ -283,6 +375,12 @@ def create_rule(reason=None, regex=None, *, all=True, sites=[],
     else:
         # Decorator-generator mode
         def decorator(func):
+            if isinstance(func, Rule):
+                func = func.func  # Extract the real function from the created rule to allow multi-creation
+                try:
+                    func.__call__
+                except AttributeError:
+                    raise ValueError("This rule does not contain a function, can't recreate") from None
             rule = Rule(func, reason=reason, filter=post_filter,
                         title=title, body=body, body_summary=body_summary, username=username,
                         stripcodeblocks=stripcodeblocks)
@@ -327,6 +425,7 @@ def contains_tld(s):
     return any(('.' + x) in s for x in TLD_CACHE)
 
 
+@create_rule("misleading link", title=False, max_rep=10, max_score=1, stripcodeblocks=True)
 def misleading_link(s, site):
     link_regex = r"<a href=\"([^\"]+)\"[^>]*>([^<]+)<\/a>"
     compiled = regex.compile(link_regex)
@@ -372,6 +471,7 @@ def misleading_link(s, site):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
+@create_rule("repeating words in {}", max_rep=11, stripcodeblocks=True)
 def has_repeating_words(s, site):
     matcher = regex.compile(r"(?P<words>(?P<word>[a-z]+))(?:[][\s.,;!/\()+_-]+(?P<words>(?P=word))){4,}",
                             flags=regex.I | regex.V0)
@@ -384,6 +484,7 @@ def has_repeating_words(s, site):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
+@create_rule("few unique characters in {}", title=False, max_rep=10000, max_score=10000)
 def has_few_characters(s, site):
     s = regex.sub("</?(?:p|strong|em)>", "", s).rstrip()  # remove HTML paragraph tags from posts
     uniques = len(set(s) - {"\n", "\t"})
@@ -401,6 +502,7 @@ def has_few_characters(s, site):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
+@create_rule("repeating characters in {}", stripcodeblocks=True, max_rep=10000, max_score=10000)
 def has_repeating_characters(s, site):
     s = s.strip().replace("\u200B", "").replace("\u200C", "")  # Strip leading and trailing spaces
     if "\n\n" in s or "<code>" in s or "<pre>" in s:
@@ -418,6 +520,10 @@ def has_repeating_characters(s, site):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
+@create_rule("link at end of {}", title=False, all=False, sites=[
+    "superuser.com", "askubuntu.com", "drupal.stackexchange.com", "meta.stackexchange.com",
+    "security.stackexchange.com", "patents.stackexchange.com", "money.stackexchange.com",
+    "gaming.stackexchange.com", "arduino.stackexchange.com", "workplace.stackexchange.com"])
 def link_at_end(s, site):   # link at end of question, on selected sites
     s = regex.sub("</?(?:strong|em|p)>", "", s)
     match = regex.compile(r"(?i)https?://(?:[.A-Za-z0-9-]*/?[.A-Za-z0-9-]*/?|plus\.google\.com/"
@@ -428,6 +534,13 @@ def link_at_end(s, site):   # link at end of question, on selected sites
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
+@create_rule("non-English link in {}", title=False, question=False, stripcodeblocks=True, sites=[
+    "pt.stackoverflow.com", "es.stackoverflow.com", "ja.stackoverflow.com", "ru.stackoverflow.com",
+    "rus.stackexchange.com", "islam.stackexchange.com", "japanese.stackexchange.com", "hinduism.stackexchange.com",
+    "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com",
+    "russian.stackexchange.com", "french.stackexchange.com", "portuguese.stackexchange.com", "spanish.stackexchange.com",
+    "codegolf.stackexchange.com", "korean.stackexchange.com", "esperanto.stackexchange.com",
+    "ukrainian.stackexchange.com"])
 def non_english_link(s, site):   # non-english link in short answer
     if len(s) < 600:
         links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
@@ -441,6 +554,14 @@ def non_english_link(s, site):   # non-english link in short answer
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
+@create_rule("mostly non-Latin {}", stripcodeblocks=True, sites=[
+    "stackoverflow.com", "ja.stackoverflow.com", "pt.stackoverflow.com", "es.stackoverflow.com",
+    "islam.stackexchange.com", "japanese.stackexchange.com", "anime.stackexchange.com",
+    "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com",
+    "chinese.stackexchange.com", "french.stackexchange.com", "spanish.stackexchange.com",
+    "portuguese.stackexchange.com", "codegolf.stackexchange.com", "korean.stackexchange.com",
+    "ukrainian.stackexchange.com"])
+@create_rule("mostly non-Latin {}", all=False, sites=["stackoverflow.com"], stripcodeblocks=True, question=False)
 def mostly_non_latin(s, site):   # majority of post is in non-Latin, non-Cyrillic characters
     word_chars = regex.sub(r'(?u)[\W0-9]|http\S*', "", s)
     non_latin_chars = regex.sub(r"(?u)\p{script=Latin}|\p{script=Cyrillic}", "", word_chars)
@@ -450,6 +571,8 @@ def mostly_non_latin(s, site):   # majority of post is in non-Latin, non-Cyrilli
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
+@create_rule("phone number detected in {}", body=False, sites=[
+    "patents.stackexchange.com", "math.stackexchange.com", "mathoverflow.net"])
 def has_phone_number(s, site):
     if regex.compile(r"(?i)\b(address(es)?|run[- ]?time|error|value|server|hostname|timestamp|warning|code|"
                      r"(sp)?exception|version|chrome|1234567)\b", regex.UNICODE).search(s):
@@ -505,12 +628,14 @@ def process_numlist(numlist):
     return processed, normalized
 
 
+@create_rule("bad phone number in {}", body_summary=True, max_rep=5, max_score=1, stripcodeblocks=True)
 def check_blacklisted_numbers(s, site):
     return check_numbers(s,
                          GlobalVars.blacklisted_numbers,
                          GlobalVars.blacklisted_numbers_normalized)
 
 
+@create_rule("potentially bad keyword in {}", body_summary=True, max_rep=5, max_score=1, stripcodeblocks=True)
 def check_watched_numbers(s, site):
     return check_numbers(s,
                          GlobalVars.watched_numbers,
@@ -518,7 +643,8 @@ def check_watched_numbers(s, site):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-def has_customer_service(s, site):  # flexible detection of customer service in titles
+@create_rule("bad keyword in {}")
+def has_customer_service(s, site):  # flexible detection of customer service
     s = s[0:300].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
     s = regex.sub(r"[^A-Za-z0-9\s]", "", s)   # deobfuscate
     phrase = regex.compile(r"(tech(nical)? support)|((support|service|contact|help(line)?) (telephone|phone|"
@@ -538,7 +664,12 @@ def has_customer_service(s, site):  # flexible detection of customer service in 
     return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+# Bad health-related keywords in titles, health sites are exempt
+@create_rule("bad keyword in {}", body=False, all=False, sites=[
+    "stackoverflow.com", "superuser.com", "askubuntu.com", "drupal.stackexchange.com",
+    "meta.stackexchange.com", "security.stackexchange.com", "webapps.stackexchange.com",
+    "apple.stackexchange.com", "graphicdesign.stackexchange.com", "workplace.stackexchange.com",
+    "patents.stackexchange.com", "money.stackexchange.com", "gaming.stackexchange.com", "arduino.stackexchange.com"])
 def has_health(s, site):   # flexible detection of health spam in titles
     s = s[0:200]   # if applied to body, the beginning should be enough: otherwise many false positives
     capitalized = len(regex.compile(r"\b[A-Z][a-z]").findall(s)) >= 5   # words beginning with uppercase letter
@@ -567,7 +698,9 @@ def has_health(s, site):   # flexible detection of health spam in titles
     return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+# Pattern-matching product name: three keywords in a row at least once, or two in a row at least twice
+@create_rule("pattern-matching product name in {}", body_summary=True, stripcodeblocks=True, answers=False,
+             max_rep=4, max_score=1)
 def pattern_product_name(s, site):
     required_keywords = [
         "Testo(?:sterone)?s?", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Forskolin", "Diet", "Slim", "Serum",
@@ -597,7 +730,7 @@ def pattern_product_name(s, site):
     return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+@create_rule("pattern-matching title", body=False, max_score=1)
 def what_is_this_pharma_title(s, site):   # title "what is this Xxxx?"
     if regex.compile(r'(?i)^what is this (?:(?-i:[A-Z][a-z]+)|https?://)').match(s):
         return True, u'Title starts with "what is this"'
@@ -605,7 +738,7 @@ def what_is_this_pharma_title(s, site):   # title "what is this Xxxx?"
         return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+@create_rule("bad keyword with email in {}", stripcodeblocks=True)
 def keyword_email(s, site):   # a keyword and an email in the same post
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
         return False, ""
@@ -629,7 +762,7 @@ def keyword_email(s, site):   # a keyword and an email in the same post
     return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+@create_rule("pattern-matching email in {}", stripcodeblocks=True)
 def pattern_email(s, site):
     pattern = regex.compile(r"(?i)(?<![=#/])\b(dr|[A-z0-9_.%+-]*"
                             r"(loan|hack|financ|fund|spell|temple|herbal|spiritual|atm|heal|priest|classes|"
@@ -641,7 +774,7 @@ def pattern_email(s, site):
     return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+@create_rule("bad keyword with a link in {}", title=False, question=False)
 def keyword_link(s, site):   # thanking keyword and a link in the same short answer
     if len(s) > 400:
         return False, ""
@@ -661,7 +794,7 @@ def keyword_link(s, site):   # thanking keyword and a link in the same short ans
     return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+@create_rule("bad keyword in link text in {}", title=False, stripcodeblocks=True)
 def bad_link_text(s, site):   # suspicious text of a hyperlink
     s = regex.sub("</?(?:strong|em)>", "", s)  # remove font tags
     keywords = regex.compile(
@@ -694,7 +827,7 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
     return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+@create_rule("bad pattern in URL {}", title=False, body_summary=True, stripcodeblocks=True)
 def bad_pattern_in_url(s, site):
     patterns = [
         r'[^"]*-reviews?(?:-(?:canada|(?:and|or)-scam))?/?',
@@ -800,6 +933,7 @@ def ns_for_url_domain(s, site, nslist):
     return False, ""
 
 
+@create_rule("potentially problematic NS configuration in {}", stripcodeblocks=True, body_summary=True)
 def ns_is_host(s, site):
     '''
     Check if the host name in a link resolves to the same IP address
@@ -824,6 +958,7 @@ def ns_is_host(s, site):
     return False, ''
 
 
+@create_rule("bad NS for domain in {}", body_summary=True, stripcodeblocks=True)
 def bad_ns_for_url_domain(s, site):
     return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name!
@@ -848,6 +983,10 @@ def bad_ns_for_url_domain(s, site):
     ])
 
 
+# This applies to all answers, and non-SO questions
+@create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, answer=False,
+             sites=["stackoverflow.com"])
+@create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, question=False)
 def watched_ns_for_url_domain(s, site):
     return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name here either!
@@ -936,6 +1075,7 @@ def asn_for_url_host(s, site, asn_list):
     return False, ""
 
 
+@create_rule("potentially bad ASN for hostname in {}", body_summary=True, stripcodeblocks=True)
 def watched_asn_for_url_hostname(s, site):
     return asn_for_url_host(
         s, site,
@@ -971,7 +1111,7 @@ def watched_asn_for_url_hostname(s, site):
         ])
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+@create_rule("offensive {} detected", body_summary=True, max_rep=101, max_score=2, stripcodeblocks=True)
 def is_offensive_post(s, site):
     if not s:
         return False, ""
@@ -996,7 +1136,7 @@ def is_offensive_post(s, site):
     return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
+@create_rule("username similar to website in {}", title=False, body_summary=True, question=False, whole_post=True)
 def username_similar_website(post):
     s, username = post.body, post.user_name
     sim_ratio, sim_webs = perform_similarity_checks(s, username)
@@ -1009,7 +1149,8 @@ def username_similar_website(post):
         return False, False, False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
+@create_rule("single character over used in post", max_rep=20, body_summary=True,
+             all=False, sites=["judaism.stackexchange.com"])
 def character_utilization_ratio(s, site):
     s = strip_urls_and_tags(s)
     counter = Counter(s)
@@ -1177,7 +1318,8 @@ def get_domain(s, full=False):
     return domain
 
 
-# noinspection PyMissingTypeHints
+# create_rule("answer similar to existing answer on post", whole_post=True, max_rep=50
+#             all=True, sites=["codegolf.stackexchange.com"])
 def similar_answer(post):
     if not post.parent:
         return False, False, False, ""
@@ -1202,7 +1344,7 @@ def strip_urls_and_tags(s):
     return URL_REGEX.sub("", TAG_REGEX.sub("", s))
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+@create_rule("mostly dots in {}", max_rep=50, sites=["codegolf.stackexchange.com"])
 def mostly_dots(s, site):
     if not s:
         return False, ""
@@ -1224,7 +1366,8 @@ def mostly_dots(s, site):
         return False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+@create_rule("mostly punctuation marks in {}",
+             sites=["math.stackexchange.com", "mathoverflow.net"])
 def mostly_punctuations(s, site):
     body = regex.sub(r"(?s)<pre([\w=\" -]*)?>.*?</pre>", "", s)
     body = regex.sub(r"(?s)<code>.*?</code>", "", body)
@@ -1244,12 +1387,23 @@ def mostly_punctuations(s, site):
         return False, ""
 
 
+# TODO: split this function into two
 def no_whitespace(s, site, body=True):
     if (not body) and regex.compile(r"(?is)^[0-9a-z]{20,}\s*$").match(s):
         return True, "No whitespace or formatting in title"
     elif body and regex.compile(r"(?is)^<p>[0-9a-z]+</p>\s*$").match(s):
         return True, "No whitespace or formatting in body"
     return False, ""
+
+
+@create_rule("no whitespace in {}", body=False, max_rep=10000, max_score=10000)
+def no_whitespace_title(s, site):
+    return no_whitespace(s, site, body=False)
+
+
+@create_rule("no whitespace in {}", title=False, max_rep=10000, max_score=10000, answer=False)
+def no_whitespace_body(s, site):
+    return no_whitespace(s, site, body=True)
 
 
 def toxic_check(post):
@@ -1287,7 +1441,12 @@ def toxic_check(post):
     return False, False, False, ""
 
 
-# noinspection PyUnusedLocal,PyMissingTypeHints
+if GlobalVars.perspective_key:  # don't bother if we don't have a key, since it's expensive
+    toxic_check = create_rule("toxic {} detected", whole_post=True, max_rep=101, max_score=2)(toxic_check)
+
+
+@create_rule("body starts with title and ends in URL", whole_post=True, answer=False,
+             sites=["codegolf.stackexchange.com"])
 def body_starts_with_title(post):
     t = post.title.strip().replace(" ", "")
 
@@ -1321,6 +1480,8 @@ def body_starts_with_title(post):
     return False, False, False, ""
 
 
+@create_rule("luncheon meat detected", title=False, max_rep=21,
+             all=False, sites=["stackoverflow.com"])
 def luncheon_meat(s, site):  # Random "signature" like asdfghjkl
     s = regex.search(r"<p>\s*?(\S{8,})\s*?</p>$", s.lower())
 
@@ -1342,6 +1503,7 @@ def luncheon_meat(s, site):  # Random "signature" like asdfghjkl
     return p2 > p1, "match: {}, p1: {}, p2: {}".format(s[1], p1, p2)
 
 
+@create_rule("himalayan pink salt detected", whole_post=True, disabled=True)
 def turkey2(post):
     if regex.search("([01]{8}|zoe)", post.body):
         pingable = chatcommunicate._clients["stackexchange.com"].get_room(11540).get_pingable_user_names()
@@ -1356,6 +1518,9 @@ def turkey2(post):
 
 
 # FLEE WHILE YOU STILL CAN.
+@create_rule("offensive {} detected", all=False, stripcodeblocks=True, max_rep=101, max_score=1,
+             sites=["hindiusm.stackexchange.com", "islam.stackexchange.com",
+                    "judaism.stackexchange.com", "medicalsciences.stackexchange.com"])
 def religion_troll(s, site):
     regexes = [
         r'(?:(?:Rubellite\W*(?:Fae|Yaksi)|Sarvabhouma|Rohit|Anisha|Ahmed\W*Bkhaty|Anubhav\W*Jha|Vineet\W*Aggarwal|Josh'
@@ -1530,43 +1695,6 @@ class FindSpam:
     ]
 
     # Forward reference so they can be updated easily
-    rule_bad_keywords = {
-        # See PR 2322 for the reason of (?:^|\b) and (?:\b|$)
-        # (?w:\b) is also useful
-        'regex': r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
-            "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
-        'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
-        'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1}
-    rule_watched_keywords = {
-        'regex': r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format("|".join(GlobalVars.watched_keywords.keys())),
-        'reason': 'potentially bad keyword in {}',
-        'all': True, 'sites': [], 'title': True, 'body': True, 'username': True,
-        'stripcodeblocks': False, 'body_summary': True, 'max_rep': 30, 'max_score': 1}
-    rule_blacklisted_websites = {
-        'regex': u"(?i)({})".format("|".join(GlobalVars.blacklisted_websites)), 'all': True,
-        'sites': [], 'reason': "blacklisted website in {}", 'title': True, 'body': True, 'username': False,
-        'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 5}
-    rule_blacklisted_usernames = {
-        'regex': r"(?i)({})".format("|".join(GlobalVars.blacklisted_usernames)), 'all': True, 'sites': [],
-        'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
-        'body_summary': False, 'max_rep': 1, 'max_score': 0}
-
-    @staticmethod
-    def reload_blacklists():
-        blacklists.load_blacklists()
-        FindSpam.rule_bad_keywords['regex'] = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
-            "|".join(GlobalVars.bad_keywords), "|".join(FindSpam.bad_keywords_nwb))
-        FindSpam.rule_watched_keywords['regex'] = r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format(
-            "|".join(GlobalVars.watched_keywords.keys()))
-        FindSpam.rule_blacklisted_websites['regex'] = r"(?i)({})".format(
-            "|".join(GlobalVars.blacklisted_websites))
-        FindSpam.rule_blacklisted_usernames['regex'] = r"(?i)({})".format(
-            "|".join(GlobalVars.blacklisted_usernames))
-        GlobalVars.blacklisted_numbers, GlobalVars.blacklisted_numbers_normalized = \
-            process_numlist(GlobalVars.blacklisted_numbers)
-        GlobalVars.watched_numbers, GlobalVars.watched_numbers_normalized = \
-            process_numlist(GlobalVars.watched_numbers)
-        log('debug', "Global blacklists loaded")
 
     rules = [
         # Sites in sites[] will be excluded if 'all' == True.  Whitelisted if 'all' == False.
@@ -1590,7 +1718,6 @@ class FindSpam:
          'title': True, 'body': True, 'username': False,
          'stripcodeblocks': True, 'body_summary': True,
          'max_rep': 5, 'max_score': 1},
-        # Pattern-matching product name: three keywords in a row at least once, or two in a row at least twice
         {'method': pattern_product_name, 'all': True, 'sites': [], 'reason': "pattern-matching product name in {}",
          'title': True, 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True,
          'answers': False, 'max_rep': 4, 'max_score': 1},
@@ -1647,7 +1774,6 @@ class FindSpam:
         {'method': has_customer_service, 'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True,
          'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'questions': False,
          'max_rep': 1, 'max_score': 0},
-        # Bad health-related keywords in titles, health sites are exempt
         {'regex': r"(?i)\b((beauty|skin|health|face|eye)[- ]?(serum|therapy|hydration|tip|renewal|shop|store|lyft|"
                   r"product|strateg(y|ies)|gel|lotion|cream|treatment|method|school|expert)|fat ?burn(er|ing)?|"
                   r"muscle|testo ?[sx]\w*|body ?build(er|ing)|wrinkle|probiotic|acne|peni(s|le)|erection)s?\b|"
@@ -2089,55 +2215,6 @@ class FindSpam:
                       "reason": "toxic {} detected", "whole_post": True,
                       "title": False, "body": False, "username": False, "body_summary": False,
                       "stripcodeblocks": False, "max_rep": 101, "max_score": 2})
-
-    @staticmethod
-    def test_post(post):
-        result = []
-        why_title, why_username, why_body = [], [], []
-        for rule in FindSpam.rules:
-            title, username, body = rule.match(post)
-            if title[0]:
-                result.append(title[1])
-                why_title.append(title[2])
-            if username[0]:
-                result.append(username[1])
-                why_username.append(username[2])
-            if body[0]:
-                result.append(body[1])
-                why_body.append(body[2])
-        result = list(set(result))
-        result.sort()
-        why = "\n".join(why_title + why_username + why_body).strip()
-        return result, why
-
-    @staticmethod
-    def match_info(match):
-        start, end = match.span()
-        group = match.group().replace("\n", "")
-        return "Position {}-{}: {}".format(start + 1, end, group)
-
-    @staticmethod
-    def match_infos(matches):
-        spans = {}
-        for match in matches:
-            group = match.group().strip().replace("\n", "")
-            if group not in spans:
-                spans[group] = [match.span()]
-            else:
-                spans[group].append(match.span())
-        infos = [(sorted(spans[word]), word) for word in spans]
-        infos.sort(key=lambda info: info[0])  # Sort by positions of appearances
-        return ", ".join([
-            "Position{} {}: {}".format(
-                "s" if len(span) > 1 else "",
-                ", ".join(
-                    ["{}-{}".format(a, b) for a, b in span]
-                    if len(span) < 14 else
-                    ["{}-{}".format(a, b) for a, b in span[:12]] + ["+{} more".format(len(span) - 12)]
-                ),
-                word
-            )
-            for span, word in infos])
 
 
 FindSpam.reload_blacklists()
