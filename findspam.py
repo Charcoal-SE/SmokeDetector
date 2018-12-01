@@ -412,7 +412,7 @@ def pattern_product_name(s, site):
         "Deep", "Pro", "Advanced?", "Divine", "Royale", "Angele*", "Trinity", "Andro", "Force", "Health",
         "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect", "Bio", "Natural", "Oil",
         "E?xtreme", "Fit", "Thirsty?", "Grow", "Complete", "Reviews?", "Bloom(?:ing)?", "BHB", "Pure", "Quick",
-        "Titan", "X[LRT]", "Supply",
+        "Titan", "X[LRT]", "Supply", "Power",
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords.extend([r"X\d?", "Alpha", "Plus", "Prime", "Formula", "Max+"])
