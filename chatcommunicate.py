@@ -171,13 +171,17 @@ def parse_room_config(path):
 
     for inherit in inherits:
         if inherit["from"] in rooms:
+            from_privs = _privileges[inherit["from"]]
+            from_accounts = [k for k, v in user_data.items() if v[host_fields[inherit["from"][0]]] in from_privs]
+            inherit_from = set([user_data[x][host_fields[inherit["to"][0]]] for x in from_accounts])
+
             if inherit["to"] in _privileges:
                 before = _privileges[inherit["to"]]
-                _privileges[inherit["to"]] = _privileges[inherit["to"]] | _privileges[inherit["from"]]
+                _privileges[inherit["to"]] = _privileges[inherit["to"]] | inherit_from
                 log('debug', '{} inheriting privs from {} with additional: before {}, after {}'.format(
                     inherit["to"], inherit["from"], before, _privileges[inherit["to"]]))
             else:
-                _privileges[inherit["to"]] = _privileges[inherit["from"]]
+                _privileges[inherit["to"]] = inherit_from
         else:
             log('warn', 'Room {} on {} specified privilege inheritance from {}, but no such room exists'.format(
                 inherit["to"][1], inherit["to"][1], inherit["from"][1]))
