@@ -172,7 +172,10 @@ def parse_room_config(path):
     for inherit in inherits:
         if inherit["from"] in rooms:
             if inherit["to"] in _privileges:
+                before = _privileges[inherit["to"]]
                 _privileges[inherit["to"]] = _privileges[inherit["to"]] | _privileges[inherit["from"]]
+                log('debug', '{} inheriting privs from {} with additional: before {}, after {}'.format(
+                    inherit["to"], inherit["from"], before, _privileges[inherit["to"]]))
             else:
                 _privileges[inherit["to"]] = _privileges[inherit["from"]]
         else:
