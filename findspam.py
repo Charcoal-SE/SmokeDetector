@@ -349,6 +349,7 @@ class FindSpam:
 def create_rule(reason=None, regex=None, func=None, *, all=True, sites=[],
                 title=True, body=True, body_summary=False, username=False,
                 max_score=0, max_rep=1, question=True, answer=True, stripcodeblocks=False,
+                whole_post=False,  # For some functions
                 disabled=False):  # yeah, disabled=True is intuitive
     if not isinstance(reason, str):
         raise ValueError("reason must be a string")
@@ -374,7 +375,7 @@ def create_rule(reason=None, regex=None, func=None, *, all=True, sites=[],
                     func.__call__
                 except AttributeError:
                     raise ValueError("This rule does not contain a function, can't recreate") from None
-            rule = Rule(func, reason=reason, filter=post_filter,
+            rule = Rule(func, reason=reason, filter=post_filter, whole_post=whole_post,
                         title=title, body=body, body_summary=body_summary, username=username,
                         stripcodeblocks=stripcodeblocks)
             if not disabled:
