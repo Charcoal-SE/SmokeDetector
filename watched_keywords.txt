@@ -7001,3 +7001,4 @@
 1543645814	Shree	kabis\.org\.in
 1543648349	Makyen	tutorialstack\.in
 1543650470	Shree	aryaniwashotel\.wordpress\.com
+1543650728	Makyen	skoolstore\.com
