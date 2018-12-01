@@ -124,8 +124,6 @@ ENGLISH_PRIOR = math.log(4 / 5)
 class PostFilter:
     """
     General filter for SE posts
-
-    See __init__ for default values
     """
 
     def __init__(self, all_sites=True, sites=None, max_rep=1, max_score=0, question=True, answer=True):
@@ -288,7 +286,6 @@ class FindSpam:
         'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
         'body_summary': False, 'max_rep': 1, 'max_score': 0}
 
-
     @staticmethod
     def reload_blacklists():
         blacklists.load_blacklists()
@@ -357,12 +354,14 @@ class FindSpam:
 
 
 # what if a function does more than one job?
-def create_rule(reason=None, regex=None, *, all=True, sites=[],
+def create_rule(reason=None, regex=None, func=None, *, all=True, sites=[],
                 title=True, body=True, body_summary=False, username=False,
                 max_score=0, max_rep=1, question=True, answer=True, stripcodeblocks=False):
     if not isinstance(reason, str):
         raise ValueError("reason must be a string")
 
+    if not (body or body_summary or username):  # title-only
+        answer = False  # answers have no titles, this saves some loops
     post_filter = PostFilter(all_sites=all, sites=sites, max_score=max_score, max_rep=max_rep,
                              question=question, answer=answer)
     if regex is not None:
@@ -385,7 +384,11 @@ def create_rule(reason=None, regex=None, *, all=True, sites=[],
                         title=title, body=body, body_summary=body_summary, username=username,
                         stripcodeblocks=stripcodeblocks)
             return rule
-        return decorator
+
+        if func is not None:  # Function is supplied, no need to decorate
+            return decorator(func)
+        else:  # real decorator mode
+            return decorator
 
 
 def is_whitelisted_website(url):
@@ -538,9 +541,9 @@ def link_at_end(s, site):   # link at end of question, on selected sites
     "pt.stackoverflow.com", "es.stackoverflow.com", "ja.stackoverflow.com", "ru.stackoverflow.com",
     "rus.stackexchange.com", "islam.stackexchange.com", "japanese.stackexchange.com", "hinduism.stackexchange.com",
     "judaism.stackexchange.com", "buddhism.stackexchange.com", "chinese.stackexchange.com",
-    "russian.stackexchange.com", "french.stackexchange.com", "portuguese.stackexchange.com", "spanish.stackexchange.com",
-    "codegolf.stackexchange.com", "korean.stackexchange.com", "esperanto.stackexchange.com",
-    "ukrainian.stackexchange.com"])
+    "russian.stackexchange.com", "french.stackexchange.com", "portuguese.stackexchange.com",
+    "spanish.stackexchange.com", "codegolf.stackexchange.com", "korean.stackexchange.com",
+    "esperanto.stackexchange.com", "ukrainian.stackexchange.com"])
 def non_english_link(s, site):   # non-english link in short answer
     if len(s) < 600:
         links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
@@ -1442,7 +1445,7 @@ def toxic_check(post):
 
 
 if GlobalVars.perspective_key:  # don't bother if we don't have a key, since it's expensive
-    toxic_check = create_rule("toxic {} detected", whole_post=True, max_rep=101, max_score=2)(toxic_check)
+    toxic_check = create_rule("toxic {} detected", func=toxic_check, whole_post=True, max_rep=101, max_score=2)
 
 
 @create_rule("body starts with title and ends in URL", whole_post=True, answer=False,
