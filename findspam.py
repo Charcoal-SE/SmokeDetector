@@ -1792,7 +1792,7 @@ create_rule("bad keyword in {}", r"(?i)(?<!truth )serum|\b(?<!to )supplements\b"
 create_rule("bad keyword in {}", r"Son of (?:David|man)", all=False, sites=["scifi.stackexchange.com"],
             username=True)
 create_rule("bad keyword in {}", r"holocaust\W(witnesses|belie(f|vers?)|denier)", all=False,
-            sites=["skeptics.stackexchange.com", "history.stackexchange.com"],
+            sites=["skeptics.stackexchange.com", "history.stackexchange.com"])
 
 # Category: Suspicious links
 # Suspicious sites
@@ -1804,7 +1804,7 @@ create_rule("pattern-matching website in {}",
 create_rule("pattern-matching website in {}",
             r"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|"
             r"spain|sweden)\w{0,4}\.(com|net)",
-            'sites': ["travel.stackexchange.com", "expatriates.stackexchange.com"],
+            sites=["travel.stackexchange.com", "expatriates.stackexchange.com"],
             username=True, body_summary=True)
 # The TLDs of Iran, Pakistan, and Tokelau in answers
 create_rule("pattern-matching website in {}",
@@ -1842,155 +1842,160 @@ create_rule("repeated URL at end of long post",
             r")",
             title=False, stripcodeblocks=True)
 # non-linked .tk site at the end of an answer
-create_rule(r'(?is)\w{3}(?<![/.]tcl)\.tk(?:</strong>)?\W*</p>\s*$', 'all': True,
- 'sites': [], 'reason': 'pattern-matching website in {}', 'title': False, 'body': True, 'username': False,
- 'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
+create_rule("pattern-matching website in {}",
+            r'(?is)\w{3}(?<![/.]tcl)\.tk(?:</strong>)?\W*</p>\s*$',
+            title=False, question=False)
 # non-linked site at the end of a short answer
-create_rule(r'(?is)(?<=^.{,350})\w{6}\.(com|co\.uk)(?:</strong>)?\W*</p>\s*$', 'all': True,
- 'sites': [], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False,
- 'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
+create_rule("link at end of {}",
+            r'(?is)(?<=^.{,350})\w{6}\.(com|co\.uk)(?:</strong>)?\W*</p>\s*$',
+            title=False, question=False)
 # Shortened URL near the end of question
-create_rule(r"(?is)://(?:w+\.)?(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|"
-          r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
-          r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us|adyou\.co|buff\.ly|ow\.ly|tgig\.ir)/(?=.{,200}$)",
- 'all': True, 'sites': ["superuser.com", "askubuntu.com"], 'reason': "shortened URL in {}", 'title': False,
- 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False,
- 'max_rep': 1, 'max_score': 0},
+create_rule("shortened URL in {}",
+            r"(?is)://(?:w+\.)?(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|"
+            r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
+            r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us|adyou\.co|buff\.ly|ow\.ly|tgig\.ir)/(?=.{,200}$)",
+            sites=["superuser.com", "askubuntu.com"],
+            title=False, answer=False)
 # Shortened URL in an answer
-create_rule(r"(?is)://(?:w+\.)?(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|"
-          r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
-          r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us|adyou\.co|buff\.ly|ow\.ly)/",
- 'all': True, 'sites': ["codegolf.stackexchange.com"], 'reason': "shortened URL in {}", 'title': False,
- 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False,
- 'max_rep': 1, 'max_score': 0},
+create_rule("shortened URL in {}",
+            r"(?is)://(?:w+\.)?(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|"
+            r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
+            r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us|adyou\.co|buff\.ly|ow\.ly)/",
+            sites=["codegolf.stackexchange.com"],
+            stripcodeblocks=True, question=False)
 # Link text without Latin characters
-create_rule(r">\s*([^\s0-9A-Za-z<'\"]\s*){3,}</a>", 'all': True,
- 'sites': ["ja.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com",
-           "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com",
-           "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com",
-           "codegolf.stackexchange.com", "korean.stackexchange.com", "ukrainian.stackexchange.com"],
- 'reason': 'non-Latin link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True,
- 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
+create_rule("non-Latin link in {}",
+            r">\s*([^\s0-9A-Za-z<'\"]\s*){3,}</a>",
+            sites=["ja.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com",
+                   "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com",
+                   "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com",
+                   "codegolf.stackexchange.com", "korean.stackexchange.com", "ukrainian.stackexchange.com"],
+            title=False, stripcodeblocks=False, question=False)
 # Link text is one character within a word
-create_rule(r'(?iu)\w<a href="[^"]+" rel="nofollow( noreferrer)?">.</a>\w', 'all': True,
- 'sites': [], 'reason': 'one-character link in {}', 'title': False, 'body': True, 'username': False,
- 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 11, 'max_score': 1},
+create_rule("one-character link in {}",
+            r'(?iu)\w<a href="[^"]+" rel="nofollow( noreferrer)?">.</a>\w',
+            title=False, stripcodeblocks=True, max_rep=11, max_score=1)
 # Link text consists of punctuation, answers only
-create_rule(r'(?iu)rel="nofollow( noreferrer)?">(?!><>)\W+</a>', 'all': True,
- 'sites': ["codegolf.stackexchange.com"], 'reason': 'linked punctuation in {}', 'title': False, 'body': True,
- 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 11,
- 'max_score': 1},
+create_rule("linked punctuation in {}",
+            r'(?iu)rel="nofollow( noreferrer)?">(?!><>)\W+</a>',
+            sites=["codegolf.stackexchange.com"],
+            title=False, stripcodeblocks=True, max_rep=11, max_score=1, question=False)
 # URL in title, some sites are exempt
-create_rule(r"(?i)https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}|"
-          r"\w{3,}\.(com|net)\b.*\w{3,}\.(com|net)\b", 'all': True,
- 'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com",
-           "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com",
-           "unix.stackexchange.com", "webmasters.stackexchange.com"], 'reason': "URL in title",
- 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
- 'max_rep': 11, 'max_score': 0},
+create_rule("URL in title",
+            r"(?i)https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}|"
+            r"\w{3,}\.(com|net)\b.*\w{3,}\.(com|net)\b",
+            sites=["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com",
+                   "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com",
+                   "unix.stackexchange.com", "webmasters.stackexchange.com"],
+            body=False, max_rep=11)
 # URL-only title, for the exempt sites
-create_rule(r"(?i)^https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}(/\S*)?$",
- 'all': False,
- 'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com",
-           "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com",
-           "unix.stackexchange.com", "webmasters.stackexchange.com"], 'reason': "URL-only title",
- 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
- 'max_rep': 11, 'max_score': 0},
+create_rule("URL-only title",
+            r"(?i)^https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}(/\S*)?$",
+            all=False,
+            sites=["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com",
+                   "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com",
+                   "unix.stackexchange.com", "webmasters.stackexchange.com"],
+            body=False, max_rep=11)
 
 # Category: Suspicious contact information
 # Phone number in post
-create_rule(r"(?s)(?<=^.{,250})\b1 ?[-(. ]8\d{2}[-). ] ?\d{3}[-. ]\d{4}\b", 'all': True,
- 'sites': ["math.stackexchange.com"], 'reason': "phone number detected in {}", 'title': False,
- 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
+create_rule("phone number detected in {}",
+            r"(?s)(?<=^.{,250})\b1 ?[-(. ]8\d{2}[-). ] ?\d{3}[-. ]\d{4}\b",
+            sites=["math.stackexchange.com"],
+            title=False, stripcodeblocks=False)
 # Email check for answers on selected sites
-create_rule(r"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
-          r"[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': False,
- 'sites': ["biology.stackexchange.com", "bitcoin.stackexchange.com", "ell.stackexchange.com",
-           "english.stackexchange.com", "expatriates.stackexchange.com", "gaming.stackexchange.com",
-           "medicalsciences.stackexchange.com", "money.stackexchange.com", "parenting.stackexchange.com",
-           "rpg.stackexchange.com", "scifi.stackexchange.com", "travel.stackexchange.com",
-           "worldbuilding.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True,
- 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1,
- 'max_score': 0},
+create_rule("email in {}",
+            r"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
+            r"[A-z0-9_.%+-]+\.[A-z]{2,4}\b",
+            all=False,
+            sites=["biology.stackexchange.com", "bitcoin.stackexchange.com", "ell.stackexchange.com",
+                   "english.stackexchange.com", "expatriates.stackexchange.com", "gaming.stackexchange.com",
+                   "medicalsciences.stackexchange.com", "money.stackexchange.com", "parenting.stackexchange.com",
+                   "rpg.stackexchange.com", "scifi.stackexchange.com", "travel.stackexchange.com",
+                   "worldbuilding.stackexchange.com"],
+            stripcodeblocks=True, question=False)
 # Email check for questions: check only at the end, and on selected sites
-create_rule(r"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
-          r"[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s)(?=.{,100}$)", 'all': False,
- 'sites': ["money.stackexchange.com", "travel.stackexchange.com", "gamedev.stackexchange.com",
-           "gaming.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True,
- 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1,
- 'max_score': 0},
+create_rule("email in {}",
+            r"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
+            r"[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s)(?=.{,100}$)",
+            all=False,
+            sites=["money.stackexchange.com", "travel.stackexchange.com", "gamedev.stackexchange.com",
+                   "gaming.stackexchange.com"],
+            stripcodeblocks=True, answer=False)
 # QQ/ICQ/WhatsApp... numbers, for all sites
-create_rule(r'(?i)(?<![a-z0-9])QQ?(?:(?:\w*[vw]x?|[^a-z0-9])\D{0,8})?\d{5}[.-]?\d{4,5}(?!["\d])|'
-          r'\bICQ[ :]{0,5}\d{9}\b|\bwh?atsa+pp?[ :+]{0,5}\d{10}', 'all': True, 'sites': [],
- 'reason': "messaging number in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
- 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+create_rule("messaging number in {}",
+            r'(?i)(?<![a-z0-9])QQ?(?:(?:\w*[vw]x?|[^a-z0-9])\D{0,8})?\d{5}[.-]?\d{4,5}(?!["\d])|'
+            r'\bICQ[ :]{0,5}\d{9}\b|\bwh?atsa+pp?[ :+]{0,5}\d{10}',
+            stripcodeblocks=True)
 
 # Category: Trolling
 # Offensive title: titles are more sensitive
-create_rule(r"(?i)\bfuck|(?<!brain)fuck(ers?|ing)?\b", 'all': True, 'sites': [],
- 'reason': "offensive {} detected", 'title': True, 'body': False, 'username': False,
- 'stripcodeblocks': True, 'body_summary': False,
- 'max_rep': 101, 'max_score': 5},
+create_rule("offensive {} detected",
+            r"(?i)\bfuck|(?<!brain)fuck(ers?|ing)?\b",
+            body=False, max_rep=101, max_score=5)
 # Numbers-only title
-create_rule(r"^(?=.*[0-9])[^\pL]*$", 'all': True, 'sites': ["math.stackexchange.com"],
- 'reason': "numbers-only title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
- 'body_summary': False, 'max_rep': 50, 'max_score': 0},
+create_rule("numbers-only title",
+            r"^(?=.*[0-9])[^\pL]*$",
+            sites=["math.stackexchange.com"],
+            body=False, max_rep=50, max_score=5)
 # One unique character in title
-create_rule(r"^(.)\1+$", 'all': True, 'sites': [], 'reason': "{} has only one unique char", 'title': True,
- 'body': False, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1000000,
- 'max_score': 1000000},
+create_rule("{} has only one unique char",
+            r"^(.)\1+$",
+            body=False, max_rep=1000000, max_score=10000)
 # Parenting troll
-create_rule(r"(?i)\b(erica|jeff|er1ca|spam|moderator)\b", 'all': False, 'sites': ["parenting.stackexchange.com"],
- 'reason': "bad keyword in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
- 'body_summary': True, 'max_rep': 50, 'max_score': 0},
+create_rule("bad keyword in {}",
+            r"(?i)\b(erica|jeff|er1ca|spam|moderator)\b",
+            all=False, sites=["parenting.stackexchange.com"],
+            title=False, body_summary=True, max_rep=50)
 # Code Review troll
-create_rule(r"JAMAL", 'all': False, 'sites': ["codereview.stackexchange.com"],
- 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False,
- 'body_summary': True, 'max_rep': 1, 'max_score': 0},
+create_rule("bad keyword in {}",
+            r"JAMAL",
+            all=False, sites=["codereview.stackexchange.com"],
+            username=True, body_summary=True)
 # Academia kangaroos
-create_rule(r"(?i)kangaroos", 'all': False, 'sites': ["academia.stackexchange.com"],
- 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False,
- 'body_summary': False, 'max_rep': 1, 'max_score': 0},
-create_rule(r"(?i)\b\<a href=\".{0,25}\.xyz\"( rel=\"nofollow( noreferrer)?\")?\>.{0,15}google.{0,15}\<\/a\>\b",
- 'all': True, 'sites': [], 'reason': 'non-Google "google search" link in {}', 'title': False, 'body': True,
- 'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
+create_rule("bad keyword in {}"
+            r"(?i)kangaroos",
+            all=False, sites=["academia.stackexchange.com"])
+create_rule('non-Google "google search" link in {}',
+            r"(?i)\b\<a href=\".{0,25}\.xyz\"( rel=\"nofollow( noreferrer)?\")?\>.{0,15}google.{0,15}\<\/a\>\b",
+            title=False, stripcodeblocks=True)
 # Academia image by low-rep user
-create_rule(r'\<img src="[^"]+"(?: alt="[^"]+")?>', 'all': False, 'sites': ['academia.stackexchange.com'],
- 'reason': 'image by low-rep user', 'title': False, 'body': True, 'username': False, 'body_summary': False,
- 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
+create_rule('image by low-rep user',
+            r'\<img src="[^"]+"(?: alt="[^"]+")?>',
+            all=False, sites=["academia.stackexchange.com"],
+            title=False, stripcodeblocks=True)
 # Link inside nested blockquotes
-create_rule(r'(?:<blockquote>\s*){3,}<p><a href="([^<>]+)"[^<>]*>\1</a>\s*</p>\s*</blockquote>', 'all': True,
- 'sites': [], 'reason': 'link inside deeply nested blockquotes', 'title': False, 'body': True,
- 'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
+create_rule('link inside deeply nested blockquotes',
+            r'(?:<blockquote>\s*){3,}<p><a href="([^<>]+)"[^<>]*>\1</a>\s*</p>\s*</blockquote>',
+            title=False, stripcodeblocks=True)
 # Title ends with Comma (IPS Troll)
-create_rule(r".*\,$", 'all': False, 'sites': ['interpersonal.stackexchange.com'],
- 'reason': "title ends with comma", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
- 'body_summary': False, 'max_rep': 50, 'max_score': 0},
+create_rule("title ends with comma",
+            r".*\,$",
+            all=False, sites=['interpersonal.stackexchange.com'],
+            body=False, max_rep=50)
 # Title starts and ends with a forward slash
-create_rule(r"^\/.*\/$", 'all': True, 'sites': [], 'reason': "title starts and ends with a forward slash",
- 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
- 'max_rep': 1, 'max_score': 0},
+create_rule("title starts and ends with a forward slash",
+            r"^\/.*\/$",
+            body=False)
 
 # Category: other
-create_rule(r'^[A-Z][a-z]{3,7}(19\d{2})$', 'all': False, 'reason': "blacklisted {}",
- 'sites': {"drupal.stackexchange.com"}, 'title': False, 'username': True,
- 'body': False, 'body_summary': False, 'stripcodeblocks': False, 'max_rep': 1, 'max_score': 0},
-create_rule(u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"],
- 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True,
- 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
-create_rule(u"(?i)^keshav$", 'all': False, 'sites': ["judaism.stackexchange.com"],
- 'reason': "blacklisted username", 'title': False, 'body': False, 'username': True,
- 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+create_rule("blacklisted username",
+            r'^[A-Z][a-z]{3,7}(19\d{2})$',
+            all=False, sites=["drupal.stackexchange.com"],
+            title=False, body=False, username=True)
+create_rule("blacklisted username",
+            r"(?i)^jeff$",
+            all=False, sites=["parenting.stackexchange.com"],
+            title=False, body=False, username=True)
+create_rule("blacklisted username",
+            r"(?i)^keshav$",
+            all=False, sites=["judaism.stackexchange.com"],
+            title=False, body=False, username=True)
 # Judaism etc troll, 2018-04-18 (see also disabled watch above)
-create_rule(u'(?i)^john$',
- 'all': False, 'sites': [
-     'hinduism.stackexchange.com',
-     'judaism.stackexchange.com',
-     'islam.stackexchange.com'],
- 'reason': 'blacklisted username',
- 'title': False, 'body': False, 'username': True,
- 'stripcodeblocks': False, 'body_summary': False,
- 'max_rep': 1, 'max_score': 0},
+create_rule("blacklisted username", r'(?i)^john$',
+            all=False,
+            sites=['hinduism.stackexchange.com', 'judaism.stackexchange.com', 'islam.stackexchange.com'],
+            title=False, body=False, username=True)
 
 
 FindSpam.reload_blacklists()
