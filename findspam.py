@@ -1735,151 +1735,136 @@ create_rule('potentially bad keyword in {}', r'^John$', all=False,
             title=False, body=False, username=True,
             disabled=True)
 # Corn troll on Blender.SE
-{'regex': r'\bcorn\b', 'all': False, 'sites': ['blender.stackexchange.com'],
- 'reason': 'potentially bad keyword in {}', 'title': True, 'body': True, 'username': True,
- 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 1},
+create_rule("potentially bad keyword in {}", r'\bcorn\b', all=False, sites=['blender.stackexchange.com'],
+            username=True)
 # Bad keywords in titles only, all sites
 # The rule is supposed to trigger on stuff like f.r.e.e d.o.w.n.l.o.a.d
-{'regex': r"(?i)\b(?!s.m.a.r.t|s.h.i.e.l.d|s.o.l.i.d|o.s.a.r.l).?[a-z](?:\.+[a-z]){4,}\b",
- 'all': True, 'sites': [], 'reason': "bad keyword in {}",
- 'title': True, 'body': False, 'username': False,
- 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
-{'regex': r'(?i)[\w\s]{0,20}help(?: a)?(?: weak)? postgraduate student(?: to)? write(?: a)? book\??',
- 'all': True, 'sites': [], 'reason': 'bad keyword in {}', 'title': True, 'body': False, 'username': False,
- 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 20, 'max_score': 2},
-# Eltima: Nested lookarounds. AS LONG AS YOU DARE THINKING
-{'regex': r"(?is)(?<=^(?=.{,750}$).*)\beltima", 'all': True, 'sites': [], 'reason': "bad keyword in {}",
- 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
- 'max_rep': 50, 'max_score': 0},
-{'regex': r"(?i)\b((beauty|skin|health|face|eye)[- ]?(serum|therapy|hydration|tip|renewal|shop|store|lyft|"
-          r"product|strateg(y|ies)|gel|lotion|cream|treatment|method|school|expert)|fat ?burn(er|ing)?|"
-          r"muscle|testo ?[sx]\w*|body ?build(er|ing)|wrinkle|probiotic|acne|peni(s|le)|erection)s?\b|"
-          r"(beauty|skin) care\b", 'all': True,
- 'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
-           "skeptics.stackexchange.com", "robotics.stackexchange.com", "blender.stackexchange.com"],
- 'reason': "bad keyword in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
- 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+create_rule("bad keyword in {}", r"(?i)\b(?!s.m.a.r.t|s.h.i.e.l.d|s.o.l.i.d|o.s.a.r.l).?[a-z](?:\.+[a-z]){4,}\b",
+            body=False)
+create_rule("bad keyword in {}",
+            r'(?i)[\w\s]{0,20}help(?: a)?(?: weak)? postgraduate student(?: to)? write(?: a)? book\??',
+            body=False, max_rep=20, max_score=2)
+# Eltima: Nested lookarounds for length limit
+create_rule("bad keyword in {}", r"(?is)(?<=^(?=.{,750}$).*)\beltima",
+            title=False, max_rep=50)
+create_rule("bad keyword in {}",
+            r"(?i)\b((beauty|skin|health|face|eye)[- ]?(serum|therapy|hydration|tip|renewal|shop|store|lyft|"
+            r"product|strateg(y|ies)|gel|lotion|cream|treatment|method|school|expert)|fat ?burn(er|ing)?|"
+            r"muscle|testo ?[sx]\w*|body ?build(er|ing)|wrinkle|probiotic|acne|peni(s|le)|erection)s?\b|"
+            r"(beauty|skin) care\b",
+            sites=["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
+                   "skeptics.stackexchange.com", "robotics.stackexchange.com", "blender.stackexchange.com"],
+            body=False)
 # Bad health-related keywords in titles and posts, health sites are exempt
-{'regex': r"(?is)virility|diet ?(plan|pill)|serum|\b(pro)?derma(?=[a-su-z\W]\w)|(fat|(?<!dead[ -]?)weight)"
-          r"[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|erectile|\bherpes\b|colon ?(detox|clean)|\bpenis\b",
- 'all': True,
- 'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
-           "skeptics.stackexchange.com", "bicycles.stackexchange.com", "islam.stackexchange.com",
-           "pets.stackexchange.com", "parenting.stackexchange.com"],
- 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
- 'body_summary': True, 'max_rep': 1, 'max_score': 0},
+create_rule("bad keyword in {}",
+            r"(?is)virility|diet ?(plan|pill)|serum|\b(pro)?derma(?=[a-su-z\W]\w)|(fat|(?<!dead[ -]?)weight)"
+            r"[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|erectile|\bherpes\b|colon ?(detox|clean)|\bpenis\b",
+            sites=["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
+                   "skeptics.stackexchange.com", "bicycles.stackexchange.com", "islam.stackexchange.com",
+                   "pets.stackexchange.com", "parenting.stackexchange.com"],
+            body_summary=True, stripcodeblocks=True)
 # Korean character in title: requires 3
-{'regex': r"(?i)\p{Script=Hangul}.*\p{Script=Hangul}.*\p{Script=Hangul}", 'all': True,
- 'sites': ["korean.stackexchange.com"], 'reason': "Korean character in {}", 'title': True, 'body': False,
- 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+create_rule("Korean character in {}", r"(?i)\p{Script=Hangul}.*\p{Script=Hangul}.*\p{Script=Hangul}",
+            sites=["korean.stackexchange.com"], body=False)
 # Chinese characters in title: requires 3
-{'regex': r"(?i)\p{Script=Han}.*\p{Script=Han}.*\p{Script=Han}", 'all': True,
- 'sites': ["chinese.stackexchange.com", "japanese.stackexchange.com", "ja.stackoverflow.com"],
- 'reason': "Chinese character in {}", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
- 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+create_rule("Chinese character in {}", r"(?i)\p{Script=Han}.*\p{Script=Han}.*\p{Script=Han}",
+            sites=["chinese.stackexchange.com", "japanese.stackexchange.com", "ja.stackoverflow.com"],
+            body=False)
 # Hindi character in title
-{'regex': r"(?i)\p{Script=Devanagari}", 'all': True,
- 'sites': ["hinduism.stackexchange.com"], 'reason': "Hindi character in {}", 'title': True, 'body': False,
- 'username': False, 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+create_rule("Hindi character in {}", r"(?i)\p{Script=Devanagari}",
+            sites=["hinduism.stackexchange.com"], body=False)
 # English text on non-English site: rus.SE only
-{'regex': r"(?i)^[a-z0-9_\W]*[a-z]{3}[a-z0-9_\W]*$", 'all': False,
- 'sites': ["rus.stackexchange.com"], 'reason': "English text in {} on a localized site", 'title': True,
- 'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+create_rule("English text in {} on a localized site", r"(?i)^[a-z0-9_\W]*[a-z]{3}[a-z0-9_\W]*$",
+            all=False, sites=["rus.stackexchange.com"], stripcodeblocks=True)
 # Roof repair
-{'regex': "roof repair", 'all': True,
- 'sites': ["diy.stackexchange.com", "outdoors.stackexchange.com", "mechanics.stackexchange.com"],
- 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
- 'body_summary': True, 'max_rep': 11, 'max_score': 0},
+create_rule("bad keyword in {}", "roof repair",
+            sites=["diy.stackexchange.com", "outdoors.stackexchange.com", "mechanics.stackexchange.com"],
+            stripcodeblocks=True, body_summary=True, max_rep=11)
 # Bad keywords (only include link at end sites + SO, the other sites give false positives for these keywords)
-{'regex': r"(?i)(?<!truth )serum|\b(?<!to )supplements\b", 'all': False,
- 'sites': ["stackoverflow.com", "superuser.com", "askubuntu.com", "drupal.stackexchange.com",
-           "meta.stackexchange.com", "security.stackexchange.com", "webapps.stackexchange.com",
-           "apple.stackexchange.com", "graphicdesign.stackexchange.com", "workplace.stackexchange.com",
-           "patents.stackexchange.com", "money.stackexchange.com", "gaming.stackexchange.com",
-           "arduino.stackexchange.com"],
- 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
- 'body_summary': True, 'max_rep': 1, 'max_score': 0},
+create_rule("bad keyword in {}", r"(?i)(?<!truth )serum|\b(?<!to )supplements\b", all=False,
+            sites=["stackoverflow.com", "superuser.com", "askubuntu.com", "drupal.stackexchange.com",
+                   "meta.stackexchange.com", "security.stackexchange.com", "webapps.stackexchange.com",
+                   "apple.stackexchange.com", "graphicdesign.stackexchange.com", "workplace.stackexchange.com",
+                   "patents.stackexchange.com", "money.stackexchange.com", "gaming.stackexchange.com",
+                   "arduino.stackexchange.com"],
+            stripcodeblocks=True, body_summary=True)
 # Jesus Christ, the Son of God, on SciFi.
-{'regex': r"Son of (David|man)", 'all': False,
- 'sites': ["scifi.stackexchange.com"],
- 'reason': "bad keyword in {}", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
- 'body_summary': False, 'max_rep': 1, 'max_score': 0},
-{'regex': r"holocaust\W(witnesses|belie(f|vers?)|denier)", 'all': False,
- 'sites': ["skeptics.stackexchange.com", "history.stackexchange.com"],
- 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False,
- 'body_summary': False, 'max_rep': 1, 'max_score': 0},
+create_rule("bad keyword in {}", r"Son of (?:David|man)", all=False, sites=["scifi.stackexchange.com"],
+            username=True)
+create_rule("bad keyword in {}", r"holocaust\W(witnesses|belie(f|vers?)|denier)", all=False,
+            sites=["skeptics.stackexchange.com", "history.stackexchange.com"],
 
 # Category: Suspicious links
 # Suspicious sites
-{'regex': r"(?i)({}|[\w-]*?({})[\w-]*?\.(com?|net|org|in(fo)?|us|blogspot|wordpress))(?![^>]*<)".format(
-    "|".join(pattern_websites), "|".join(bad_keywords_nwb)), 'all': True,
- 'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': False,
-    'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 1},
+create_rule("pattern-matching website in {}",
+            r"(?i)({}|[\w-]*?({})[\w-]*?\.(com?|net|org|in(fo)?|us|blogspot|wordpress))(?![^>]*<)".format(
+                "|".join(pattern_websites), "|".join(bad_keywords_nwb)),
+            stripcodeblocks=True, body_summary=True, max_score=1)
 # Country-name domains, travel and expats sites are exempt
-{'regex': r"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|"
-          r"spain|sweden)\w{0,4}\.(com|net)", 'all': True,
- 'sites': ["travel.stackexchange.com", "expatriates.stackexchange.com"],
- 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True,
- 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
+create_rule("pattern-matching website in {}",
+            r"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|"
+            r"spain|sweden)\w{0,4}\.(com|net)",
+            'sites': ["travel.stackexchange.com", "expatriates.stackexchange.com"],
+            username=True, body_summary=True)
 # The TLDs of Iran, Pakistan, and Tokelau in answers
-{'regex': r'(?i)http\S*(?<![/.]tcl)\.(ir|pk|tk)[/"<]', 'all': True,
- 'sites': [], 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True,
- 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 1, 'max_score': 0, 'questions': False},
+create_rule("pattern-matching website in {}",
+            r'(?i)http\S*(?<![/.]tcl)\.(ir|pk|tk)[/"<]',
+            username=True, body_summary=True, question=False)
 # Suspicious health-related websites, health sites are exempt
-{'regex': r"(?i)(bodybuilding|workout|fitness(?!e)|diet|perfecthealth|muscle|nutrition(?!ix)|"
-          r"prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)", 'all': True,
- 'sites': ["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
-           "skeptics.stackexchange.com", "bicycles.stackexchange.com"],
- 'reason': "pattern-matching website in {}", 'title': True, 'body': True, 'username': True,
- 'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 2},
+create_rule("pattern-matching website in {}",
+            r"(?i)(bodybuilding|workout|fitness(?!e)|diet|perfecthealth|muscle|nutrition(?!ix)|"
+            r"prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)",
+            sites=["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
+                   "skeptics.stackexchange.com", "bicycles.stackexchange.com"],
+            username=True, body_summary=True, max_rep=4, max_score=2)
 # Links preceded by arrows >>>
-{'regex': r"(?is)(?:>>+|@+>+|==\s*>+|={4,}|===>+|= = =|Read More|Click Here).{,20}"
-          r"https?://(?!i\.stack\.imgur\.com)(?=.{,200}$)", 'all': True,
- 'sites': [], 'reason': "link following arrow in {}", 'title': True, 'body': True, 'username': True,
- 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 11, 'max_score': 0},
+create_rule("link following arrow in {}",
+            r"(?is)(?:>>+|@+>+|==\s*>+|={4,}|===>+|= = =|Read More|Click Here).{,20}"
+            r"https?://(?!i\.stack\.imgur\.com)(?=.{,200}$)",
+            stripcodeblocks=True, answer=False, max_rep=11)
 # Link at the end of a short answer
-{'regex': r'(?is)(?<=^.{,350})<a href="https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,4}'
-          r'/?\w{0,2}/?|(?:plus\.google|www\.facebook)\.com/[\w/]+)"[^<]*</a>(?:</strong>)?\W*</p>\s*$'
-          r'|\[/url\]\W*</p>\s*$',
- 'all': True, 'sites': ["raspberrypi.stackexchange.com", "softwarerecs.stackexchange.com"],
- 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
- 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
+create_rule("link at end of {}",
+            r'(?is)(?<=^.{,350})<a href="https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,4}'
+            r'/?\w{0,2}/?|(?:plus\.google|www\.facebook)\.com/[\w/]+)"[^<]*</a>(?:</strong>)?\W*</p>\s*$'
+            r'|\[/url\]\W*</p>\s*$',
+            sites=["raspberrypi.stackexchange.com", "softwarerecs.stackexchange.com"],
+            title=False, question=False)
 # URL repeated at end of post
-{'regex': r"(?s)<a href=\"(?:http://%20)?(https?://(?:(?:www\.)?"
-    r"[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,10}/?"
-    r"[\w-]{0,40}?/?|(?:plus\.google|www\.facebook)\.com/[\w/]+))"
-    r"\" rel=\"nofollow( noreferrer)?\">"
-    r"(?="
-    r".{300,}<a href=\"(?:http://%20)?\1\" "
-    r"rel=\"nofollow( noreferrer)?\">(?:http://%20)?\1</a>"
-    r"(?:</strong>)?\W*</p>\s*$"
-    r")", 'all': True,
- 'sites': [], 'reason': 'repeated URL at end of long post', 'title': False, 'body': True, 'username': False,
- 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
+create_rule("repeated URL at end of long post",
+            r"(?s)<a href=\"(?:http://%20)?(https?://(?:(?:www\.)?"
+            r"[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,10}/?"
+            r"[\w-]{0,40}?/?|(?:plus\.google|www\.facebook)\.com/[\w/]+))"
+            r"\" rel=\"nofollow( noreferrer)?\">"
+            r"(?="
+            r".{300,}<a href=\"(?:http://%20)?\1\" "
+            r"rel=\"nofollow( noreferrer)?\">(?:http://%20)?\1</a>"
+            r"(?:</strong>)?\W*</p>\s*$"
+            r")",
+            title=False, stripcodeblocks=True)
 # non-linked .tk site at the end of an answer
-{'regex': r'(?is)\w{3}(?<![/.]tcl)\.tk(?:</strong>)?\W*</p>\s*$', 'all': True,
+create_rule(r'(?is)\w{3}(?<![/.]tcl)\.tk(?:</strong>)?\W*</p>\s*$', 'all': True,
  'sites': [], 'reason': 'pattern-matching website in {}', 'title': False, 'body': True, 'username': False,
  'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
 # non-linked site at the end of a short answer
-{'regex': r'(?is)(?<=^.{,350})\w{6}\.(com|co\.uk)(?:</strong>)?\W*</p>\s*$', 'all': True,
+create_rule(r'(?is)(?<=^.{,350})\w{6}\.(com|co\.uk)(?:</strong>)?\W*</p>\s*$', 'all': True,
  'sites': [], 'reason': 'link at end of {}', 'title': False, 'body': True, 'username': False,
  'stripcodeblocks': False, 'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
 # Shortened URL near the end of question
-{'regex': r"(?is)://(?:w+\.)?(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|"
+create_rule(r"(?is)://(?:w+\.)?(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|"
           r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
           r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us|adyou\.co|buff\.ly|ow\.ly|tgig\.ir)/(?=.{,200}$)",
  'all': True, 'sites': ["superuser.com", "askubuntu.com"], 'reason': "shortened URL in {}", 'title': False,
  'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False,
  'max_rep': 1, 'max_score': 0},
 # Shortened URL in an answer
-{'regex': r"(?is)://(?:w+\.)?(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|"
+create_rule(r"(?is)://(?:w+\.)?(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|"
           r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
           r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us|adyou\.co|buff\.ly|ow\.ly)/",
  'all': True, 'sites': ["codegolf.stackexchange.com"], 'reason': "shortened URL in {}", 'title': False,
  'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False,
  'max_rep': 1, 'max_score': 0},
 # Link text without Latin characters
-{'regex': r">\s*([^\s0-9A-Za-z<'\"]\s*){3,}</a>", 'all': True,
+create_rule(r">\s*([^\s0-9A-Za-z<'\"]\s*){3,}</a>", 'all': True,
  'sites': ["ja.stackoverflow.com", "ru.stackoverflow.com", "rus.stackexchange.com", "islam.stackexchange.com",
            "japanese.stackexchange.com", "hinduism.stackexchange.com", "judaism.stackexchange.com",
            "buddhism.stackexchange.com", "chinese.stackexchange.com", "russian.stackexchange.com",
@@ -1887,16 +1872,16 @@ create_rule('potentially bad keyword in {}', r'^John$', all=False,
  'reason': 'non-Latin link in {}', 'title': False, 'body': True, 'username': False, 'stripcodeblocks': True,
  'body_summary': False, 'questions': False, 'max_rep': 1, 'max_score': 0},
 # Link text is one character within a word
-{'regex': r'(?iu)\w<a href="[^"]+" rel="nofollow( noreferrer)?">.</a>\w', 'all': True,
+create_rule(r'(?iu)\w<a href="[^"]+" rel="nofollow( noreferrer)?">.</a>\w', 'all': True,
  'sites': [], 'reason': 'one-character link in {}', 'title': False, 'body': True, 'username': False,
  'stripcodeblocks': True, 'body_summary': False, 'max_rep': 11, 'max_score': 1},
 # Link text consists of punctuation, answers only
-{'regex': r'(?iu)rel="nofollow( noreferrer)?">(?!><>)\W+</a>', 'all': True,
+create_rule(r'(?iu)rel="nofollow( noreferrer)?">(?!><>)\W+</a>', 'all': True,
  'sites': ["codegolf.stackexchange.com"], 'reason': 'linked punctuation in {}', 'title': False, 'body': True,
  'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 11,
  'max_score': 1},
 # URL in title, some sites are exempt
-{'regex': r"(?i)https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}|"
+create_rule(r"(?i)https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}|"
           r"\w{3,}\.(com|net)\b.*\w{3,}\.(com|net)\b", 'all': True,
  'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com",
            "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com",
@@ -1904,7 +1889,7 @@ create_rule('potentially bad keyword in {}', r'^John$', all=False,
  'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
  'max_rep': 11, 'max_score': 0},
 # URL-only title, for the exempt sites
-{'regex': r"(?i)^https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}(/\S*)?$",
+create_rule(r"(?i)^https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}(/\S*)?$",
  'all': False,
  'sites': ["stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "es.stackoverflow.com",
            "ja.stackoverflow.com", "superuser.com", "askubuntu.com", "serverfault.com",
@@ -1914,11 +1899,11 @@ create_rule('potentially bad keyword in {}', r'^John$', all=False,
 
 # Category: Suspicious contact information
 # Phone number in post
-{'regex': r"(?s)(?<=^.{,250})\b1 ?[-(. ]8\d{2}[-). ] ?\d{3}[-. ]\d{4}\b", 'all': True,
+create_rule(r"(?s)(?<=^.{,250})\b1 ?[-(. ]8\d{2}[-). ] ?\d{3}[-. ]\d{4}\b", 'all': True,
  'sites': ["math.stackexchange.com"], 'reason': "phone number detected in {}", 'title': False,
  'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': True, 'max_rep': 1, 'max_score': 0},
 # Email check for answers on selected sites
-{'regex': r"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
+create_rule(r"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
           r"[A-z0-9_.%+-]+\.[A-z]{2,4}\b", 'all': False,
  'sites': ["biology.stackexchange.com", "bitcoin.stackexchange.com", "ell.stackexchange.com",
            "english.stackexchange.com", "expatriates.stackexchange.com", "gaming.stackexchange.com",
@@ -1928,76 +1913,76 @@ create_rule('potentially bad keyword in {}', r'^John$', all=False,
  'username': False, 'stripcodeblocks': True, 'body_summary': False, 'questions': False, 'max_rep': 1,
  'max_score': 0},
 # Email check for questions: check only at the end, and on selected sites
-{'regex': r"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
+create_rule(r"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
           r"[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s)(?=.{,100}$)", 'all': False,
  'sites': ["money.stackexchange.com", "travel.stackexchange.com", "gamedev.stackexchange.com",
            "gaming.stackexchange.com"], 'reason': "email in {}", 'title': True, 'body': True,
  'username': False, 'stripcodeblocks': True, 'body_summary': False, 'answers': False, 'max_rep': 1,
  'max_score': 0},
 # QQ/ICQ/WhatsApp... numbers, for all sites
-{'regex': r'(?i)(?<![a-z0-9])QQ?(?:(?:\w*[vw]x?|[^a-z0-9])\D{0,8})?\d{5}[.-]?\d{4,5}(?!["\d])|'
+create_rule(r'(?i)(?<![a-z0-9])QQ?(?:(?:\w*[vw]x?|[^a-z0-9])\D{0,8})?\d{5}[.-]?\d{4,5}(?!["\d])|'
           r'\bICQ[ :]{0,5}\d{9}\b|\bwh?atsa+pp?[ :+]{0,5}\d{10}', 'all': True, 'sites': [],
  'reason': "messaging number in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': True,
  'body_summary': False, 'max_rep': 1, 'max_score': 0},
 
 # Category: Trolling
 # Offensive title: titles are more sensitive
-{'regex': r"(?i)\bfuck|(?<!brain)fuck(ers?|ing)?\b", 'all': True, 'sites': [],
+create_rule(r"(?i)\bfuck|(?<!brain)fuck(ers?|ing)?\b", 'all': True, 'sites': [],
  'reason': "offensive {} detected", 'title': True, 'body': False, 'username': False,
  'stripcodeblocks': True, 'body_summary': False,
  'max_rep': 101, 'max_score': 5},
 # Numbers-only title
-{'regex': r"^(?=.*[0-9])[^\pL]*$", 'all': True, 'sites': ["math.stackexchange.com"],
+create_rule(r"^(?=.*[0-9])[^\pL]*$", 'all': True, 'sites': ["math.stackexchange.com"],
  'reason': "numbers-only title", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
  'body_summary': False, 'max_rep': 50, 'max_score': 0},
 # One unique character in title
-{'regex': r"^(.)\1+$", 'all': True, 'sites': [], 'reason': "{} has only one unique char", 'title': True,
+create_rule(r"^(.)\1+$", 'all': True, 'sites': [], 'reason': "{} has only one unique char", 'title': True,
  'body': False, 'username': False, 'stripcodeblocks': True, 'body_summary': False, 'max_rep': 1000000,
  'max_score': 1000000},
 # Parenting troll
-{'regex': r"(?i)\b(erica|jeff|er1ca|spam|moderator)\b", 'all': False, 'sites': ["parenting.stackexchange.com"],
+create_rule(r"(?i)\b(erica|jeff|er1ca|spam|moderator)\b", 'all': False, 'sites': ["parenting.stackexchange.com"],
  'reason': "bad keyword in {}", 'title': False, 'body': True, 'username': False, 'stripcodeblocks': False,
  'body_summary': True, 'max_rep': 50, 'max_score': 0},
 # Code Review troll
-{'regex': r"JAMAL", 'all': False, 'sites': ["codereview.stackexchange.com"],
+create_rule(r"JAMAL", 'all': False, 'sites': ["codereview.stackexchange.com"],
  'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True, 'stripcodeblocks': False,
  'body_summary': True, 'max_rep': 1, 'max_score': 0},
 # Academia kangaroos
-{'regex': r"(?i)kangaroos", 'all': False, 'sites': ["academia.stackexchange.com"],
+create_rule(r"(?i)kangaroos", 'all': False, 'sites': ["academia.stackexchange.com"],
  'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': False, 'stripcodeblocks': False,
  'body_summary': False, 'max_rep': 1, 'max_score': 0},
-{'regex': r"(?i)\b\<a href=\".{0,25}\.xyz\"( rel=\"nofollow( noreferrer)?\")?\>.{0,15}google.{0,15}\<\/a\>\b",
+create_rule(r"(?i)\b\<a href=\".{0,25}\.xyz\"( rel=\"nofollow( noreferrer)?\")?\>.{0,15}google.{0,15}\<\/a\>\b",
  'all': True, 'sites': [], 'reason': 'non-Google "google search" link in {}', 'title': False, 'body': True,
  'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
 # Academia image by low-rep user
-{'regex': r'\<img src="[^"]+"(?: alt="[^"]+")?>', 'all': False, 'sites': ['academia.stackexchange.com'],
+create_rule(r'\<img src="[^"]+"(?: alt="[^"]+")?>', 'all': False, 'sites': ['academia.stackexchange.com'],
  'reason': 'image by low-rep user', 'title': False, 'body': True, 'username': False, 'body_summary': False,
  'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
 # Link inside nested blockquotes
-{'regex': r'(?:<blockquote>\s*){3,}<p><a href="([^<>]+)"[^<>]*>\1</a>\s*</p>\s*</blockquote>', 'all': True,
+create_rule(r'(?:<blockquote>\s*){3,}<p><a href="([^<>]+)"[^<>]*>\1</a>\s*</p>\s*</blockquote>', 'all': True,
  'sites': [], 'reason': 'link inside deeply nested blockquotes', 'title': False, 'body': True,
  'username': False, 'body_summary': False, 'stripcodeblocks': True, 'max_rep': 1, 'max_score': 0},
 # Title ends with Comma (IPS Troll)
-{'regex': r".*\,$", 'all': False, 'sites': ['interpersonal.stackexchange.com'],
+create_rule(r".*\,$", 'all': False, 'sites': ['interpersonal.stackexchange.com'],
  'reason': "title ends with comma", 'title': True, 'body': False, 'username': False, 'stripcodeblocks': False,
  'body_summary': False, 'max_rep': 50, 'max_score': 0},
 # Title starts and ends with a forward slash
-{'regex': r"^\/.*\/$", 'all': True, 'sites': [], 'reason': "title starts and ends with a forward slash",
+create_rule(r"^\/.*\/$", 'all': True, 'sites': [], 'reason': "title starts and ends with a forward slash",
  'title': True, 'body': False, 'username': False, 'stripcodeblocks': False, 'body_summary': False,
  'max_rep': 1, 'max_score': 0},
 
 # Category: other
-{'regex': r'^[A-Z][a-z]{3,7}(19\d{2})$', 'all': False, 'reason': "blacklisted {}",
+create_rule(r'^[A-Z][a-z]{3,7}(19\d{2})$', 'all': False, 'reason': "blacklisted {}",
  'sites': {"drupal.stackexchange.com"}, 'title': False, 'username': True,
  'body': False, 'body_summary': False, 'stripcodeblocks': False, 'max_rep': 1, 'max_score': 0},
-{'regex': u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"],
+create_rule(u"(?i)^jeff$", 'all': False, 'sites': ["parenting.stackexchange.com"],
  'reason': "blacklisted username", 'title': False, 'body': False, 'username': True,
  'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
-{'regex': u"(?i)^keshav$", 'all': False, 'sites': ["judaism.stackexchange.com"],
+create_rule(u"(?i)^keshav$", 'all': False, 'sites': ["judaism.stackexchange.com"],
  'reason': "blacklisted username", 'title': False, 'body': False, 'username': True,
  'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
 # Judaism etc troll, 2018-04-18 (see also disabled watch above)
-{'regex': u'(?i)^john$',
+create_rule(u'(?i)^john$',
  'all': False, 'sites': [
      'hinduism.stackexchange.com',
      'judaism.stackexchange.com',
@@ -2006,10 +1991,6 @@ create_rule('potentially bad keyword in {}', r'^John$', all=False,
  'title': False, 'body': False, 'username': True,
  'stripcodeblocks': False, 'body_summary': False,
  'max_rep': 1, 'max_score': 0},
-# disabled
-{'regex': r'(?i)(?:(?:[^\dr]\d{3}|_\d{5})$|juri(?:[yr]?am?)?|(?:bond|max|vaxer|jems|tz?osan)$)', 'all': False,
- 'sites': [], 'reason': 'blacklisted username (medium)', 'title': False, 'body': False, 'username': True,
- 'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
 
 
 FindSpam.reload_blacklists()
