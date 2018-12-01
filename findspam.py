@@ -173,7 +173,7 @@ class Rule:
         self.username = username
         self.filter = filter or Rule.default_filter
         self.stripcodeblocks = stripcodeblocks
-        self.whole_post = False
+        self.whole_post = whole_post
 
     def match(self, post):
         """
