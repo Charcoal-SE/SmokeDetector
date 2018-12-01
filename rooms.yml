@@ -299,77 +299,41 @@ meta.stackexchange.com:
       - no-no whitespace in answer
 
     privileges:
-      - 2734210  # JamesENL
-      - 212518  # Alexis King
-      - 4440133  # Jeffrey Bosboom
-      - 1212053  # ManishEarth
-      - 1399708  # JNat
-      - 216196  # tchrist
-      - 2052845  # Qantas 94 Heavy
-      - 429324  # S.L. Barth
-      - 531689  # J. Musser
-      - 3232583  # Ixrec
-      - 347241  # bwDraco
-      - 281857  # rene
-      - 6551576  # SamsungNote7Plus
-      - 201110  # Shadow Wizard
-      - 1677570  # Ferrybig
-      - 1029387  # Robert Longson
-      - 1872335  # TGMCians
-      - 3310555  # misterManSam
-      - 2809239  # JAL
-      - 7034529  # Magisch
-      - 6070438  # ASCIIThenANSI
-      - 4140743  # Pandya
-      - 5129611  # Mithrandir
-      - 1245478  # CalvT
-      - 3648514  # CRABOLO
-      - 3457374  # ArtOfCode
-      - 233608  # John Dvorak
-      - 1703573  # Undo
-      - 1968644  # durron597
-      - 2848444  # Santa Claus
-      - 3572172  # Infinite Recursion
-      - 5423050  # kos
-      - 1960597  # Simon Klaver
-      - 1266491  # Doorknob
-      - 4000711  # Quill
-      - 331514  # Lynn Crumbling
-      - 3934463  # Unicode
-      - 5869449  # angussidney
-      - 2775391  # DroidDev
-      - 3094403  # ProgramFOX
-      - 1878548  # bummi
-      - 1750581  # PeterJ
-      - 416592  # Braiam
-      - 411877  # Shree
-      - 1279912  # Mooseman
-      - 3979517  # Catija
-      - 131474  # Brock Adams
-      - 2662014  # vaultah
-      - 2348349  # Ed Cottrell
-      - 2497975  # Sourav Ghosh
-      - 6109921  # quartata
-      - 1123059  # apnorton
-      - 4911344  # Yvette Colomb
-      - 3841881  # M.A.R. ಠ_ಠ
-      - 9739821  # DonQuiKong
-      - 7886663  # iBug
-      - 974068  # rekire
-      - 178805  # Ilmari Karonen
-      - 4642421  # michaelpri
-      - 4451090  # Unihedron
-      - 297701  # Thomas Ward
-      - 4101518  # AstroCB
-      - 466356  # Madara Uchiha
-      - 3046327  # hichris123
-      - 305991  # Jason C
-      - 2539078  # cybermonkey
-      - 3717584  # josliber
-      - 2591787  # Sam
-      - 1208323  # Seth
-      - 2477436  # gparyani
-      - 3359942  # Andrew T.
+      inherit:
+        site: stackexchange.com
+        room: 11540
+      additional:
+        - 212518  # Alexis King
+        - 1399708  # JNat
+        - 2052845  # Qantas 94 Heavy
+        - 531689  # J. Musser
+        - 3232583  # Ixrec
+        - 6551576  # SamsungNote7Plus
+        - 201110  # Shadow Wizard
+        - 1872335  # TGMCians
+        - 3310555  # misterManSam
+        - 6070438  # ASCIIThenANSI
+        - 4140743  # Pandya
+        - 3648514  # CRABOLO
+        - 1968644  # durron597
+        - 3572172  # Infinite Recursion
+        - 5423050  # kos
+        - 1960597  # Simon Klaver
+        - 3934463  # Unicode
+        - 2775391  # DroidDev
+        - 1279912  # Mooseman
+        - 2662014  # vaultah
+        - 2348349  # Ed Cottrell
+        - 2497975  # Sourav Ghosh
+        - 9739821  # DonQuiKong
+        - 974068  # rekire
+        - 4451090  # Unihedron
+        - 4101518  # AstroCB
+        - 466356  # Madara Uchiha
+        - 305991  # Jason C
+        - 2539078  # cybermonkey
+        - 3717584  # josliber
+        - 2591787  # Sam
 
   1181:
     commands: true
