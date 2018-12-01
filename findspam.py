@@ -228,7 +228,7 @@ class Rule:
                 else:
                     result.append((False, "", ""))
         elif self.regex:
-            compiled_regex = regex.compile(self.regex, regex.UNICODE, city=FindSpam.city_list)
+            compiled_regex = regex.compile(self.regex, regex.UNICODE, city=city_list)
 
             if self.title and not post.is_answer:
                 matches = list(compiled_regex.finditer(post.title))
@@ -806,7 +806,7 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
         r"\b(?:customer|recovery|technical|recovery)? ?(?:customer|support|service|repair|contact) "
         r"(?:phone|hotline|helpline)? ?numbers?\b|"
         r"(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery|school|university)|"
-        r"\b(writing (service|help)|essay (writing|tips))", city=FindSpam.city_list)
+        r"\b(writing (service|help)|essay (writing|tips))", city=city_list)
     links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
     business = regex.compile(
         r"(?i)(^| )(airlines?|apple|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
