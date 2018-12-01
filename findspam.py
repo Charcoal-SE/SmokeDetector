@@ -265,37 +265,24 @@ class Rule:
 class FindSpam:
     rules = []
 
-    rule_bad_keywords = {
+    # supplied at the bottom of this file
+    rule_bad_keywords = None
+    rule_watched_keywords = None
+    rule_blacklisted_websites = None
+    rule_blacklisted_usernames = None
+
+    @classmethod
+    def reload_blacklists(cls):
+        blacklists.load_blacklists()
         # See PR 2322 for the reason of (?:^|\b) and (?:\b|$)
         # (?w:\b) is also useful
-        'regex': r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
-            "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb)),
-        'all': True, 'sites': [], 'reason': "bad keyword in {}", 'title': True, 'body': True, 'username': True,
-        'stripcodeblocks': False, 'body_summary': True, 'max_rep': 4, 'max_score': 1}
-    rule_watched_keywords = {
-        'regex': r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format("|".join(GlobalVars.watched_keywords.keys())),
-        'reason': 'potentially bad keyword in {}',
-        'all': True, 'sites': [], 'title': True, 'body': True, 'username': True,
-        'stripcodeblocks': False, 'body_summary': True, 'max_rep': 30, 'max_score': 1}
-    rule_blacklisted_websites = {
-        'regex': u"(?i)({})".format("|".join(GlobalVars.blacklisted_websites)), 'all': True,
-        'sites': [], 'reason': "blacklisted website in {}", 'title': True, 'body': True, 'username': False,
-        'stripcodeblocks': False, 'body_summary': True, 'max_rep': 50, 'max_score': 5}
-    rule_blacklisted_usernames = {
-        'regex': r"(?i)({})".format("|".join(GlobalVars.blacklisted_usernames)), 'all': True, 'sites': [],
-        'reason': "blacklisted username", 'title': False, 'body': False, 'username': True, 'stripcodeblocks': False,
-        'body_summary': False, 'max_rep': 1, 'max_score': 0}
-
-    @staticmethod
-    def reload_blacklists():
-        blacklists.load_blacklists()
-        FindSpam.rule_bad_keywords['regex'] = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
-            "|".join(GlobalVars.bad_keywords), "|".join(FindSpam.bad_keywords_nwb))
-        FindSpam.rule_watched_keywords['regex'] = r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format(
+        cls.rule_bad_keywords.regex = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
+            "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb))
+        cls.rule_watched_keywords.regex = r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format(
             "|".join(GlobalVars.watched_keywords.keys()))
-        FindSpam.rule_blacklisted_websites['regex'] = r"(?i)({})".format(
+        cls.rule_blacklisted_websites.regex = r"(?i)({})".format(
             "|".join(GlobalVars.blacklisted_websites))
-        FindSpam.rule_blacklisted_usernames['regex'] = r"(?i)({})".format(
+        cls.rule_blacklisted_usernames.regex = r"(?i)({})".format(
             "|".join(GlobalVars.blacklisted_usernames))
         GlobalVars.blacklisted_numbers, GlobalVars.blacklisted_numbers_normalized = \
             process_numlist(GlobalVars.blacklisted_numbers)
@@ -2188,36 +2175,18 @@ class FindSpam:
         {'regex': r'(?i)(?:(?:[^\dr]\d{3}|_\d{5})$|juri(?:[yr]?am?)?|(?:bond|max|vaxer|jems|tz?osan)$)', 'all': False,
          'sites': [], 'reason': 'blacklisted username (medium)', 'title': False, 'body': False, 'username': True,
          'stripcodeblocks': False, 'body_summary': False, 'max_rep': 1, 'max_score': 0},
-
-        # User name similar to link
-        {'method': username_similar_website, 'all': True, 'sites': [], 'reason': "username similar to website in {}",
-         'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
-         'max_rep': 50, 'max_score': 0, 'questions': False, 'whole_post': True},
-
-        # Answer similar to existing answer on post
-        # {'method': similar_answer, 'all': True, 'sites': ["codegolf.stackexchange.com"],
-        #  'reason': "answer similar to existing answer on post", 'whole_post': True,
-        #  'title': False, 'body': False, 'username': False, 'stripcodeblocks': False,
-        #  'max_rep': 50, 'max_score': 0},
-
-        # A single character is utilized in a high percentage of the post
-        {'method': character_utilization_ratio, 'all': False, 'sites': ["judaism.stackexchange.com"],
-         'reason': "single character over used in post",
-         'title': False, 'body': True, 'username': False, 'stripcodeblocks': False, 'body_summary': True,
-         'max_rep': 20, 'max_score': 0},
-
-        # Link text points to a different domain than the href
-        {'method': misleading_link, 'all': True, 'sites': [], 'reason': 'misleading link', 'title': False,
-         'body': True, 'username': False, 'stripcodeblocks': True, 'body_summary': False,
-         'max_rep': 10, 'max_score': 1},
     ]
 
-    # Toxic content using Perspective
-    if GlobalVars.perspective_key:  # don't bother if we don't have a key, since it's expensive
-        rules.append({"method": toxic_check, "all": True, "sites": [],
-                      "reason": "toxic {} detected", "whole_post": True,
-                      "title": False, "body": False, "username": False, "body_summary": False,
-                      "stripcodeblocks": False, "max_rep": 101, "max_score": 2})
-
+# General blacklists, regex will be filled at the reload_blacklist() call at the bottom
+FindSpam.rule_bad_keywords = create_rule("bad keyword in {}", regex="",
+                                         username=True, body_summary=True,
+                                         max_rep=4, max_score=1)
+FindSpam.rule_watched_keywords = create_rule("potentially bad keyword in {}", regex="",
+                                             username=True, body_summary=True,
+                                             max_rep=30, max_score=1)
+FindSpam.rule_blacklisted_websites = create_rule("blacklisted website in {}", regex="", body_summary=True,
+                                                 max_rep=50, max_score=5)
+FindSpam.rule_blacklisted_usernames = create_rule("blacklisted username", regex="",
+                                                  title=False, body=False, username=True)
 
 FindSpam.reload_blacklists()
