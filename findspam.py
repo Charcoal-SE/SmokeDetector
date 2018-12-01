@@ -698,7 +698,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
 
 
 # Pattern-matching product name: three keywords in a row at least once, or two in a row at least twice
-@create_rule("pattern-matching product name in {}", body_summary=True, stripcodeblocks=True, answers=False,
+@create_rule("pattern-matching product name in {}", body_summary=True, stripcodeblocks=True, answer=False,
              max_rep=4, max_score=1)
 def pattern_product_name(s, site):
     required_keywords = [
