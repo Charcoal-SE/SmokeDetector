@@ -209,8 +209,8 @@ def has_repeating_words(s, site):
     for match in matcher.finditer(s):
         words = match.captures("words")
         word = match.group("word")
-        if len(words) >= 5 and len(word) * len(words) >= 0.2 * len(s):
-            return True, "Repeated word: *{}*".format(word)
+        if len(words) >= 5 and len(word) * len(words) >= 0.18 * len(s):
+            return True, "Repeated word: {}*{}".format(repr(word), len(words))
     return False, ""
 
 
