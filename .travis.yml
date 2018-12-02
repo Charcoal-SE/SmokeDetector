@@ -10,13 +10,7 @@ install:
   - pip3 install pytest-cov codecov python-coveralls
   - pip3 uninstall pytest-capturelog || true
 before_script:
-  - git config user.name SmokeDetector
-  - git config user.email "smokey@erwaysoftware.com"
-  - git config remote.origin.fetch "+refs/heads/master:refs/remotes/origin/master"
-  - git config --add remote.origin.fetch "+refs/heads/deploy:refs/remotes/origin/deploy"
-  - git fetch origin --depth=3
-  - git checkout --track origin/deploy
-  - git checkout master
+  - sh test/spinup_git.sh
 script:
   - flake8 --config=tox_tests.ini ./test/
   - flake8 --config=tox_classes.ini ./classes/
