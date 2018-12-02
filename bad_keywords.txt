@@ -1736,3 +1736,4 @@ treasurebox
 andro\W?boost(?:\W?x)?
 pro\W?testo\W?elite
 urogenx
+fbcandy(?!\.com)
