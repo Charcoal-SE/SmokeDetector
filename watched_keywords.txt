@@ -7010,3 +7010,4 @@
 1543689966	Makyen	verywellfit\.com
 1543689983	Makyen	linlin\.chan\.522(?#URL path)
 1543689998	Makyen	contactxpert\.com
+1543714328	Makyen	bestbikeguides\.com
