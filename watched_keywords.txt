@@ -7023,3 +7023,4 @@
 1543812923	iBug	scrap\W*car
 1543812977	bwDraco	fast\W*cash\W*for\W*cars
 1543812986	Tetsuya Yamamoto	dentistparkslope\.com
+1543813000	Tetsuya Yamamoto	dataretainers\.com
