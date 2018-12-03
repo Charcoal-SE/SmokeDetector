@@ -30,7 +30,7 @@ def test_validate_yaml():
         for room_id, room in site_rooms.items():
             if "privileges" not in room:
                 continue
-            
+
             if "additional" in room["privileges"]:
                 privileged_users.append(room["privileges"]["additional"])
 
