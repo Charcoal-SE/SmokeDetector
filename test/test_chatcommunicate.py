@@ -10,9 +10,38 @@ import os.path
 import pytest
 import threading
 import time
+import yaml
 
 from fake import Fake
 from unittest.mock import Mock, patch
+
+
+def test_validate_yaml():
+    with open("rooms.yml", "r") as f:
+        room_data = yaml.load(f.read())
+
+    with open("users.yml", "r") as f:
+        user_data = yaml.load(f.read())
+
+    flatten = lambda l: [item for sublist in l for item in sublist]
+    privileged_users = []
+
+    for site, site_rooms in room_data.items():
+        for room_id, room in site_rooms.items():
+            if "privileges" not in room:
+                continue
+            
+            if "additional" in room["privileges"]:
+                privileged_users.append(room["privileges"]["additional"])
+
+            if "inherit" not in room["privileges"]:
+                privileged_users.append(room["privileges"])
+
+    privileged_users = set(flatten(privileged_users))
+
+    for uid in privileged_users:
+        if uid not in user_data:
+            pytest.fail("Privileged user {} does not have a corresponding entry in users.yml".format(uid))
 
 
 def test_parse_room_config():
