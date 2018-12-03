@@ -405,14 +405,14 @@ def pattern_product_name(s, site):
         "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Shark", "Tank", "Peni(?:s|le)", "Pills?", "CBD",
         "Elite", "Exceptional", "Enhance(?:ment)?", "Nitro", "Boost(?:er)?", "Supplements?",
         "Skin", "Muscle", "Therm[ao]", "Neuro", "Luma", "Rapid", "Tone", "Keto", "Fuel", "Cream",
-        "(?:Anti)?[ -]?Ag(?:ed?|ing)", "Trim", "Male", "Weight[ -](?:Loss|Reduction)", "Radiant(?:ly)?",
+        "(?:Anti)?[ -]?Aging", "Trim", "Male", "Weight[ -](?:Loss|Reduction)", "Radiant(?:ly)?",
         "Hyper(?:tone)?", "Boost(?:er|ing)?", "Youth", "Monster", "Enlarge(?:ment)", "Obat", "Nutri",
     ]
     keywords = required_keywords + [
         "Deep", "Pro", "Advanced?", "Divine", "Royale", "Angele*", "Trinity", "Andro", "Force", "Health",
         "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect", "Bio", "Natural", "Oil",
         "E?xtreme", "Fit", "Thirsty?", "Grow", "Complete", "Reviews?", "Bloom(?:ing)?", "BHB", "Pure", "Quick",
-        "Titan", "X[LRT]", "Supply", "Power",
+        "Titan", "X[LRT]", "Supply", "Power", "Aged?",
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords.extend([r"X\d?", "Alpha", "Plus", "Prime", "Formula", "Max+"])
