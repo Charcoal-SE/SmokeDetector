@@ -7037,3 +7037,4 @@
 1543860705	Makyen	dietplan1\.com
 1543864541	Makyen	dietplan[a-z0-9-]+\.(?<!usa\.)com(?#dietplan.com and dietplanusa.com are already blacklisted)
 1543873988	Makyen	^\s*<p>\s*?<a href="(?!(?:[a-z]+:)?//(?:[^/.]+\.)*(?:(?:example|apple|google|github|i\.stack\.imgur|stackexchange|stackoverflow|serverfault|superuser|askubuntu|stackapps)\.com|mathoverflow\.net|github\.io|edu|wikipedia\.org)[/"])\W*(?#Post begins with link; test for potential new detection; at watch 12649/12409/175/73)
+1543874874	Makyen	^\s*<p>\s*<a href="(?:(?:[a-z]+:)?//(?:[^/.]+\.)*(?:(?:apple|google|github|i\.stack\.imgur|stackexchange|stackoverflow|serverfault|superuser|askubuntu|stackapps)\.com|mathoverflow\.net|github\.io|edu|wikipedia\.org)[/"])\W*(?#Post begins with link: lower %TP domains; at watch 776/448/281/60)
