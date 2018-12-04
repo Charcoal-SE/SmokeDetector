@@ -7050,3 +7050,4 @@
 1543907692	K.Dᴀᴠɪs	sonaebuy\.wordpress\.com
 1543911817	Shree	male-extraa\.com
 1543913212	Makyen	rocketagarbatti\.com
+1543913222	Makyen	ekpentemple(?:@gmail\.com)?
