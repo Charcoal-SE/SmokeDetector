@@ -6,7 +6,7 @@ SmokeDetector
 
 Headless chatbot that detects spam and posts it to chatrooms. Uses [ChatExchange](https://github.com/Manishearth/ChatExchange), takes questions from the Stack Exchange [realtime tab](https://stackexchange.com/questions?tab=realtime), and accesses answers via the [Stack Exchange API](https://api.stackexchange.com/).
 
-Example [chat post](https://chat.stackexchange.com/transcript/11540?m=17962164#17962164):
+Example [chat post](https://chat.stackexchange.com/transcript/message/43579469):
 
 ![Example chat post](https://i.stack.imgur.com/oLyfb.png)
 
