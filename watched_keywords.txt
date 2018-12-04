@@ -7052,3 +7052,4 @@
 1543913212	Makyen	rocketagarbatti\.com
 1543913222	Makyen	ekpentemple(?:@gmail\.com)?
 1543913453	Makyen	WhatsScoreApp(?#facebook)
+1543913573	Shree	digitaltool\.us
