@@ -199,67 +199,66 @@ class Rule:
             body_to_check = regex.sub("<(?:a|img)[^>]+>", "", body_to_check)
 
         matched_title, matched_body, matched_username = False, False, False
-        result = []
+        result_title, result_username, result_body = None, None, None
         if self.func:  # Functional check takes precedence over regex check
             if self.whole_post:
                 matched_title, matched_username, matched_body, why_text = self.func(post)
-                result.append((matched_title, reason_title, "Title - " + why_text))
-                result.append((matched_username, reason_username, "Username - " + why_text))
-                result.append((matched_body, reason_body, "Post - " + why_text))
+                result_title = (matched_title, reason_title, "Title - " + why_text)
+                result_username = (matched_username, reason_username, "Username - " + why_text)
+                result_body = (matched_body, reason_body, "Post - " + why_text)
             else:
                 if self.title and not post.is_answer:
                     matched_title, why_text = self.func(post.title, post.post_site)
-                    result.append((matched_title, reason_title, "Title - " + why_text))
+                    result_title = (matched_title, reason_title, "Title - " + why_text)
                 else:
-                    result.append((False, "", ""))
+                    result_title = (False, "", "")
 
                 if self.username:
                     matched_username, why_text = self.func(post.user_name, post.post_site)
-                    result.append((matched_username, reason_username, "Username - " + why_text))
+                    result_username = (matched_username, reason_username, "Username - " + why_text)
                 else:
-                    result.append((False, "", ""))
+                    result_username = (False, "", "")
 
                 if self.body and not post.body_is_summary:
                     matched_body, why_text = self.func(body_to_check, post.post_site)
-                    result.append((matched_body, reason_body, "Body - " + why_text))
+                    result_body = (matched_body, reason_body, "Body - " + why_text)
                 elif self.body_summary and post.body_is_summary:
-                    matched_body, _ = self.func(body_to_check, post.post_site)
-                    result.append((matched_body, "", ""))
+                    matched_body, useless = self.func(body_to_check, post.post_site)
+                    result_body = (matched_body, "", "")
                 else:
-                    result.append((False, "", ""))
+                    result_body = (False, "", "")
         elif self.regex:
             compiled_regex = regex.compile(self.regex, regex.UNICODE, city=city_list)
 
             if self.title and not post.is_answer:
                 matches = list(compiled_regex.finditer(post.title))
-                result.append((bool(matches), reason_title, "Title - " + FindSpam.match_infos(matches)))
+                result_title = (bool(matches), reason_title, "Title - " + FindSpam.match_infos(matches))
             else:
-                result.append((False, "", ""))
+                result_title = (False, "", "")
 
             if self.username:
                 matches = list(compiled_regex.finditer(post.user_name))
-                result.append((bool(matches), reason_username, "Username - " + FindSpam.match_infos(matches)))
+                result_username = (bool(matches), reason_username, "Username - " + FindSpam.match_infos(matches))
             else:
-                result.append((False, "", ""))
+                result_username = (False, "", "")
+
             if (self.body and not post.body_is_summary) \
                     or (self.body_summary and post.body_is_summary):
                 matches = list(compiled_regex.finditer(body_to_check))
-                result.append((bool(matches), reason_body, "Body - " + FindSpam.match_infos(matches)))
+                result_body = (bool(matches), reason_body, "Body - " + FindSpam.match_infos(matches))
             else:
-                result.append((False, "", ""))
+                result_body = (False, "", "")
         else:
             raise TypeError("A rule must have either 'func' or 'regex' valid!")
 
-        # "result" format: [(title_spam, reason, why), (username_spam, reason, why), (body_spam, reason, why)
-        assert len(result) == 3
-        return result
+        # "result" format: tuple((title_spam, reason, why), (username_spam, reason, why), (body_spam, reason, why))
+        return result_title, result_username, result_body
 
-    def __call__(self, *args):
+    def __call__(self, *args, **kwargs):
         # Preserve the functionality of a function
         if self.func:
-            return self.func(*args)
-        else:
-            raise TypeError("This rule has no function set, can't call")
+            return self.func(*args, **kwargs)
+        raise TypeError("This rule has no function set, can't call")
 
 
 class FindSpam:
