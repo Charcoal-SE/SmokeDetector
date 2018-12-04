@@ -7040,3 +7040,4 @@
 1543876213	Makyen	^\s*<p>\s*<a href="(?:(?:[a-z]+:)?//(?:[^/.]+\.)*(?:(?:apple|google|github|stackexchange|stackoverflow|serverfault|superuser|askubuntu|stackapps)\.com|mathoverflow\.net|github\.io|edu|wikipedia\.org)[/"])\W*(?#Post begins with link: lower %TP domains; no imgur; at watch 210/146/44/24)
 1543880555	Makyen	heavenmanga\.com
 1543886028	Tetsuya Yamamoto	captionandquote\.com
+1543886121	Tetsuya Yamamoto	airlinesticketvip\.com
