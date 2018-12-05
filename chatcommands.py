@@ -750,8 +750,8 @@ def pull():
         raise CmdException("CI build is still pending, wait until the build has finished and then pull again.")
 
 
-@command(whole_msg=True, aliases=['pull-sync'])
-def sync_remote(msg):
+@command(whole_msg=True, aliases=['pull-sync', 'pull-sync-force'], give_name=True)
+def sync_remote(msg, alias_used='pull-sync'):
     """
     Force a branch sync from origin/master with [git branch -M]
     :param msg:
@@ -759,6 +759,8 @@ def sync_remote(msg):
     """
     if not is_code_privileged(msg._client.host, msg.owner.id):
         raise CmdException("You don't have code privileges to run this command.")
+    if 'force' not in alias_used:
+        raise CmdException("This command is deprecated, append `-force` if you really need to do that.")
 
     return GitManager.sync_remote()[1]
 

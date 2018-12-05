@@ -313,17 +313,16 @@ class GitManager:
 
     @staticmethod
     def prepare_git_for_operation(blacklist_file_name):
-        git.checkout('master')
-
         try:
-            git.pull()
+            git.checkout('master')
+            git.remote.update()
+            git.reset('--hard', 'origin/master')
         except GitError as e:
             if GlobalVars.on_windows:
                 return False, "Not doing this, we're on Windows."
             log_exception(*sys.exc_info())
             return False, "`git pull` has failed. This shouldn't happen. Details have been logged."
 
-        git.remote.update()
         if GlobalVars.on_windows:
             remote_ref = git.rev_parse("refs/remotes/origin/master").strip()
             local_ref = git.rev_parse("master").strip()
@@ -335,9 +334,6 @@ class GitManager:
             remote_log = git.log(r"--pretty=`[%h]` *%cn*: %s", "-1", str(remote_ref)).strip()
             return False, "HEAD isn't at tip of origin's master branch (local {}, remote {})".format(
                 local_log, remote_log)
-
-        if blacklist_file_name in git.status():
-            return False, "`{}` is modified locally. This is probably bad.".format(blacklist_file_name)
 
         return True, None
 
