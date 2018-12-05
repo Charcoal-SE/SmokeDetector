@@ -1742,3 +1742,4 @@ emollient\W?cream
 pain\W?absolve(?:\W?rx)?
 vision\W?rx(?:\W?\d+)?
 tarvos\W?testo
+undangan\W*pernikahan
