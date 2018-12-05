@@ -12,6 +12,7 @@ import os
 import pytest
 import regex
 import types
+import requests
 from sh.contrib import git
 
 from fake import Fake
