@@ -25,7 +25,7 @@ cache:
     - $HOME/virtualenv/python3.5.*
     - $HOME/.cache/pip
 before_cache:
-  - rm -f $TRAVIS_HOME/.cache/pip/log/debug.log
-  - rm -rf $TRAVIS_HOME/.cache/pip/http
+  - rm -f $HOME/.cache/pip/log/debug.log
+  - rm -rf $HOME/.cache/pip/http
 after_success:
   - coveralls
