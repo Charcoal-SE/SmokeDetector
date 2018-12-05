@@ -7086,3 +7086,4 @@
 1544025685	Makyen	safetradebinaryoptions\.com
 1544030152	Makyen	unity3d.com/partners/[\w.-]*\?_ga=(?#paid partnership link)
 1544038694	Makyen	newresponsivetheme\.com
+1544039833	Makyen	bodyologycenter\.com
