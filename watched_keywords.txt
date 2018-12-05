@@ -7071,3 +7071,4 @@
 1543953349	Makyen	drosalumese(?:@gmail\W*(?:at\W*)?com)?
 1543956373	Makyen	wifi-smart-home\.co\.uk
 1543964177	Makyen	gurgaonescorts\.services
+1543972569	CalvT	partsofspeech\.net
