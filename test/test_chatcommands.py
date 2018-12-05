@@ -198,8 +198,10 @@ def test_approve(monkeypatch):
     monkeypatch.setattr(GlobalVars, "code_privileged_users", [('stackexchange.com', 121520)])
     with monkeypatch.context() as m:
         # Oh no GitHub is down
+        original_get = requests.get
         m.setattr("requests.get", lambda *args, **kwargs: None)
         assert chatcommands.approve(8888, original_msg=msg) == "Cannot connect to GitHub API"
+        m.setattr("requests.get", original_get)
     assert chatcommands.approve(2518, original_msg=msg).startswith("PR #2518 is not created by me")
 
 
