@@ -1741,3 +1741,4 @@ shred\W?pro\W?elite
 emollient\W?cream
 pain\W?absolve(?:\W?rx)?
 vision\W?rx(?:\W?\d+)?
+tarvos\W?testo
