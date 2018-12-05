@@ -252,7 +252,7 @@ def do_blacklist(blacklist_type, msg, force=False):
 
     if "number" not in blacklist_type:
         try:
-            r = regex.compile(pattern, city=findspam.FindSpam.city_list)
+            r = regex.compile(pattern, city=findspam.city_list)
         except regex._regex_core.error:
             raise CmdException("An invalid pattern was provided, please check your command.")
         if r.search(GlobalVars.valid_content):
