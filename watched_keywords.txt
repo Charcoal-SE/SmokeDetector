@@ -7089,3 +7089,4 @@
 1544039833	Makyen	bodyologycenter\.com
 1544039896	Zoe	Bodyology\W*Center
 1544047985	Makyen	oooms\.org
+1544059393	Tetsuya Yamamoto	omnicontrols\.com
