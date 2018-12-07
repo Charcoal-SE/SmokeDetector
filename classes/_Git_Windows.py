@@ -79,7 +79,7 @@ class Git:
         _call_process(execcmd)
 
     # remote.update
-    class remote:
+    class remote:  # noqa: N801
         @staticmethod
         def update(*args):
             execcmd = "git remote update " + " ".join(args)
