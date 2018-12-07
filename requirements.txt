@@ -4,7 +4,7 @@ packaging>=16.8
 appdirs>=1.4.3
 beautifulsoup4>=4.6.0
 requests>=2.18.4
-websocket-client==0.42.1
+websocket-client>=0.54.0
 coverage>=4.5.1
 pytest>=3.4.1
 phonenumbers>=8.8.11
