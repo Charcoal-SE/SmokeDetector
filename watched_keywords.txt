@@ -7129,3 +7129,4 @@
 1544208955	Makyen	paydayloansbunny\.ca
 1544210972	Makyen	\w+-data-recovery(?#uaetechnician URL path, but a bit generic)
 1544211009	Makyen	\w+-web-development(?#uaetechnician URL path, but a bit generic)
+1544211859	Makyen	^Sunidhi Singh$(?#uaetechnician user)
