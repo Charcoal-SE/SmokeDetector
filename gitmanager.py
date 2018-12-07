@@ -131,7 +131,8 @@ class GitManager:
                 git.add('watched_keywords.txt', 'watched_numbers.txt')
 
             git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
-                       "-m", "Auto {0} of `{1}` by {2} --autopull".format(op, item, username))
+                       "-m", "Auto {0} of `{1}` by {2}".format(op, item, username),
+                       "-m", "autopull")
 
             if code_permissions:
                 git.checkout("master")
@@ -254,7 +255,8 @@ class GitManager:
 
             git.add(file_name)
             git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
-                       '-m', 'Auto un{} of `{}` by {} --autopull'.format(blacklist_type, item, username))
+                       '-m', 'Auto un{} of `{}` by {}'.format(blacklist_type, item, username),
+                       '-m', 'autopull')
 
             git.checkout('master')
             git.merge(branch)
