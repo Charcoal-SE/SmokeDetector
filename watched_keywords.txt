@@ -5648,7 +5648,6 @@
 1537527752	tripleee	[a-z_]*9212477204[a-z_]*
 1537527783	tripleee	[a-z_]*9212577708[a-z_]*
 1537528675	tripleee	puspack\.in
-1537529422	tripleee	uaetechnician\.ae
 1537532061	tripleee	[a-z_]*(?:1_*)?937[\W_]*414[\W_]*8554[a-z_]*
 1537534712	tripleee	technokids
 1537535037	tripleee	kineticgroup\.ae
