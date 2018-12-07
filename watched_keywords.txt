@@ -7120,3 +7120,4 @@
 1544178940	Shree	blackitetour\.com
 1544179050	Shree	spaceelevators\.org
 1544194272	Makyen	joshpagesolution(?:@gmail\W*(?:dot\W*)?com)?
+1544194690	Glorfindel	amitpanta\.com
