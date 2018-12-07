@@ -361,6 +361,7 @@ stackoverflow.com:
 
     msg_types:
       - site-stackoverflow.com
+      - no-allspam
 
     privileges:
       - 270038   # Floern

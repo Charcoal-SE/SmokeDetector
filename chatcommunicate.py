@@ -419,6 +419,15 @@ class ChatCommand:
         self.__func__ = None
 
     def __call__(self, *args, original_msg=None, alias_used=None, quiet_action=False):
+        disable_key = "no-" + self.__func__.__name__
+        try:
+            room_identifier = (original_msg.room._client.host, original_msg.room.id)
+            if disable_key in _room_roles and room_identifier in _room_roles[disable_key]:
+                return "This command is disabled in this room"
+        except AttributeError:
+            # Test cases in CI don't contain enough data
+            pass
+
         if self.privileged and not is_privileged(original_msg.owner, original_msg.room):
             return GlobalVars.not_privileged_warning
 
