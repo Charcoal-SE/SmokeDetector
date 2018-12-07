@@ -204,7 +204,7 @@ def test_approve(monkeypatch):
         assert chatcommands.approve(8888, original_msg=msg) == "Cannot connect to GitHub API"
         m.setattr("requests.get", original_get)
     assert chatcommands.approve(2518, original_msg=msg).startswith("PR #2518 is not created by me") \
-        or chatcommands.approve(2518, original_msg=msg).startswith("Cannot") \
+        or chatcommands.approve(2518, original_msg=msg).startswith("Cannot")
 
 
 @patch("chatcommands.handle_spam")
