@@ -7127,3 +7127,4 @@
 1544208899	Makyen	goodhealth13\.com
 1544208947	Makyen	manufacturedhomeloans\.com
 1544208955	Makyen	paydayloansbunny\.ca
+1544210972	Makyen	\w+-data-recovery(?#uaetechnician URL path, but a bit generic)
