@@ -697,7 +697,6 @@ hemptide
 nature\W?boost
 power\W?max\W?e?xtreme
 true\W?cbd\W?oil
-10\W?cloud
 complex\W?cbd
 sexual\W?coexistence
 provixi?n
