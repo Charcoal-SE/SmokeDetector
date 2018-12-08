@@ -1308,7 +1308,7 @@ def invite(msg, room_id, roles):
 
 # --- Post Responses --- #
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=False, give_name=True, aliases=["scan", "report-force"])
+@command(str, whole_msg=True, privileged=False, give_name=True, aliases=["scan", "report-force", "report-direct"])
 def report(msg, args, alias_used="report"):
     """
     Report a post (or posts)
@@ -1542,7 +1542,7 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
             continue
 
         if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive(
-                (post_data.post_id, post_data.site)) and "force" not in operation:
+                (post_data.post_id, post_data.site)) and operation not in {"report-force", "report-direct"}:
             # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
             # this re-report might be attempting to correct that/fix a mistake/etc.
 
@@ -1577,12 +1577,12 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
             scan_reasons, scan_why = scan_reasons
 
         # Always handle if reported
-        if scan_spam:
+        if scan_spam and operation != "report-direct":
             handle_spam(post=post, reasons=scan_reasons, why=report_info + scan_why.lstrip())
             continue
 
         # scan_spam == False
-        if operation in {"report", "report-force"}:
+        if operation in {"report", "report-force", "report-direct"}:
             batch = ""
             if len(urls) > 1:
                 batch = " (batch report: post {} out of {})".format(index, len(urls))

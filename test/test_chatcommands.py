@@ -268,10 +268,10 @@ def test_report(handle_spam):
         assert isinstance(call["post"], Post)
         assert call["why"].startswith("Post manually scanned by user *ArtOfCode* in room *Charcoal HQ*.")
 
-        # Now with report-force
+        # Now with report-direct
         GlobalVars.blacklisted_users.clear()
         GlobalVars.latest_questions.clear()
-        assert chatcommands.report(test_post_url, original_msg=msg, alias_used="report-force") is None
+        assert chatcommands.report(test_post_url, original_msg=msg, alias_used="report-direct") is None
         _, call = handle_spam.call_args_list[-1]
         assert isinstance(call["post"], Post)
         assert call["why"].startswith(
