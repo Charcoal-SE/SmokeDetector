@@ -131,8 +131,7 @@ class GitManager:
                 git.add('watched_keywords.txt', 'watched_numbers.txt')
 
             git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
-                       "-m", "Auto {0} of `{1}` by {2}".format(op, item, username),
-                       "-m", "autopull")
+                       "-m", "Auto {0} of `{1}` by {2}".format(op, item, username))
 
             if code_permissions:
                 git.checkout("master")
@@ -255,8 +254,7 @@ class GitManager:
 
             git.add(file_name)
             git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
-                       '-m', 'Auto un{} of `{}` by {}'.format(blacklist_type, item, username),
-                       '-m', 'autopull')
+                       '-m', 'Auto un{} of `{}` by {}'.format(blacklist_type, item, username))
 
             git.checkout('master')
             git.merge(branch)
@@ -299,7 +297,7 @@ class GitManager:
             cls.gitmanager_lock.acquire()
             git.checkout('master')
             git.fetch('origin', '+refs/pull/{}/merge'.format(pr_id))
-            git.merge('FETCH_HEAD', '--no-ff', '-m', 'Merge pull request #{} from {}/{} --autopull'.format(
+            git.merge('FETCH_HEAD', '--no-ff', '-m', 'Merge pull request #{} from {}/{}'.format(
                       pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref))
             git.push('origin', 'master')
             try:

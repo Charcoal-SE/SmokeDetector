@@ -131,7 +131,8 @@ class Metasmoke:
                 return  # Same rev, nothing to do
 
             if c["status"] == "success":
-                if "autopull" in c["commit_message"] or c["commit_message"].startswith("!"):
+                if "autopull" in c["commit_message"] or c["commit_message"].startswith("!") or \
+                        c["commit_message"].startswith("Auto "):
                     s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/{repo}/" \
                         "commit/{commit_sha}) succeeded. Message contains 'autopull', pulling...".format(
                             ci_link=c["ci_url"], repo=GlobalVars.bot_repo_slug, commit_sha=sha)
