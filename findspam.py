@@ -1378,11 +1378,17 @@ def mostly_punctuations(s, site):
 
     punct_re = regex.compile(r"[[:punct:]]")
     all_punc = punct_re.findall(body.replace(".", ""))
-    count = max([all_punc.count(punc) for punc in set(all_punc)]) if all_punc else 0
+    if not all_punc:
+        return False, ""
+
+    all_punc_set = list(set(all_punc))  # Remove duplicate
+    all_counts = [all_punc.count(punc) for punc in all_punc_set]
+    count = max(all_counts)
     frequency = count / len(s)
+    max_punc = all_punc_set[all_counts.index(count)]
 
     if frequency >= PUNCTUATION_RATIO:
-        return True, u"Post contains {} punctuation marks out of {} characters".format(count, len(s))
+        return True, u"Post contains {} marks of {!r} out of {} characters".format(count, max_punc, len(s))
     else:
         return False, ""
 
