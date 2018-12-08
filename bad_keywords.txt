@@ -1744,3 +1744,4 @@ undangan\W*pernikahan
 super\W?\w\W?keto
 curafen
 keto(?:sis)?\W?advanced
+lean\W?keto
