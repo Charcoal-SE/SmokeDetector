@@ -1495,7 +1495,7 @@ def allspam(msg, url):
 
 def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
     operation = operation or "report"
-    action_done = {"report": "reported", "report-force": "reported", "scan": "scanned"}[operation]
+    action_done = "scanned" if operation == "scan" else "reported"
     if reported_in is None:
         reported_from = " by *{}*".format(reported_by)
     elif reported_in is True:
