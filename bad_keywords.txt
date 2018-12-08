@@ -1744,3 +1744,4 @@ tarvos\W?testo
 undangan\W*pernikahan
 super\W?\w\W?keto
 curafen
+keto(?:sis)?\W?advanced
