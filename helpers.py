@@ -218,7 +218,7 @@ def blacklist_integrity_check():
                     errors.append('{0}:{1}:No newline'.format(bl_file, lineno))
                 elif line == '\n':
                     errors.append('{0}:{1}:Empty line'.format(bl_file, lineno))
-                elif bl_file == 'watched_keywords.txt':
+                elif bl_file.startswith('watched_'):
                     line = line.split('\t')[2]
 
                 line = pcre_comment.sub("", line)
