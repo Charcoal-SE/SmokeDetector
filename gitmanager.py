@@ -269,6 +269,7 @@ class GitManager:
 
         except Exception as e:
             log('error', '{}: {}'.format(type(e).__name__, e))
+            log_exception(*sys.exc_info())
             return False, 'Git operations failed for unspecified reasons.'
         finally:
             git.checkout('deploy')
