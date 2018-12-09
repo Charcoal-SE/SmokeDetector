@@ -7133,3 +7133,4 @@
 1544261827	Glorfindel	travelscams\.org
 1544290088	Zoe	myteches\.com
 1544300206	Makyen	bharatplaza\.com
+1544323331	Makyen	(?:dr)?poriaedalat\.com
