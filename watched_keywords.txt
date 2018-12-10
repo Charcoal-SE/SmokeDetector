@@ -7154,3 +7154,4 @@
 1544466452	Makyen	officekeyactivate\.com
 1544466461	Makyen	my-mcafee-activate\.com
 1544474142	Makyen	evensi\.us
+1544474692	Makyen	go\W?medii(?:\.com)?
