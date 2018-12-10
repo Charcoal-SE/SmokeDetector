@@ -1745,3 +1745,4 @@ super\W?\w\W?keto
 curafen
 keto(?:sis)?\W?advanced
 lean\W?keto
+(?-i:3YfwOFZlfOQ|ZLaICQSlxm4|8bkyn6GvHF0|i1tPcR9xhnQ)(?#youtu.be videos from a cryptocurrency spammer)
