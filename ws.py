@@ -30,7 +30,7 @@ import time
 import requests
 # noinspection PyPackageRequirements
 from tld.utils import update_tld_names, TldIOError
-from helpers import log, Helpers
+from helpers import log, Helpers, log_exception
 from flovis import Flovis
 from tasks import Tasks
 
@@ -208,8 +208,7 @@ while True:
         n = os.linesep
         logged_msg = str(now) + " UTC" + n + exception_only + n + tr + n + n
         log('error', logged_msg)
-        with open("errorLogs.txt", "a") as f:
-            f.write(logged_msg)
+        log_exception(exc_type, exc_obj, exc_tb)
         if seconds < 180 and exc_type not in {websocket.WebSocketConnectionClosedException, requests.ConnectionError}:
             # noinspection PyProtectedMember
             os._exit(4)

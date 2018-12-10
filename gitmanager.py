@@ -196,8 +196,7 @@ class GitManager:
                         return (False, "A bad or invalid reply was received from GH, the message was: %s" %
                                 response['message'])
         except Exception as err:
-            with open('errorLogs.txt', 'a', encoding="utf-8") as f:
-                f.write("{dt} {message}".format(dt=datetime.now().strftime('%Y-%m-%d %H:%M:%s'), message=str(err)))
+            log_exception(*sys.exc_info())
             return (False, "Git functions failed for unspecified reasons, details may be in error log.")
         finally:
             # Always return to `deploy` branch when done with anything.
