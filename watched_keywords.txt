@@ -7156,3 +7156,4 @@
 1544474142	Makyen	evensi\.us
 1544474692	Makyen	go\W?medii(?:\.com)?
 1544483426	Makyen	fatdecimatorsystem320215926\.wordpress\.com
+1544483467	Makyen	redteadetoxdothealth\.wordpress\.com
