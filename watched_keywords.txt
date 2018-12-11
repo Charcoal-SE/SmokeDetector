@@ -7178,4 +7178,3 @@
 1544567259	Makyen	shine\.tv
 1544567267	Makyen	endemolshineuk\.com
 1544567318	Makyen	notebookcheck\.net
-1544567342	Makyen	\bcervello\b.{0,80}?supplement\w*\b
