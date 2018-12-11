@@ -7179,3 +7179,4 @@
 1544567267	Makyen	endemolshineuk\.com
 1544567318	Makyen	notebookcheck\.net
 1544567435	Makyen	cervello\b.{0,80}?supplement\w*
+1544567900	Makyen	yodo\.online
