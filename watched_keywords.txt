@@ -7180,3 +7180,4 @@
 1544567435	Makyen	cervello\b.{0,80}?supplement\w*
 1544567900	Makyen	yodo\.online
 1544568388	Makyen	gadwin\.com
+1544587640	Tetsuya Yamamoto	ivyzen\.net
