@@ -4345,7 +4345,6 @@
 1531461712	Makyen	sites\.google\.com/site/ketotonedietblog
 1531462608	Tetsuya Yamamoto	officecom\.org
 1531470872	Glorfindel	freewing-model\.com
-1531470913	iBug	atten
 1531478839	Makyen	rapid-results-keto\.tumblr\.com
 1531478856	Makyen	sites\.google\.com/site/rapidresultsketo
 1531478871	Makyen	theshubhamgroup\.com
