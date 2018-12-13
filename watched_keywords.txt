@@ -7207,3 +7207,4 @@
 1544682508	Tetsuya Yamamoto	freelancetoindia\.com
 1544684060	Tetsuya Yamamoto	pill4pedia\.com
 1544684116	tripleee	pill\W?4\W?pedia
+1544685144	Tetsuya Yamamoto	jfkinn\.com
