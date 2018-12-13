@@ -7117,7 +7117,6 @@
 1544208955	Makyen	paydayloansbunny\.ca
 1544210972	Makyen	\w+-data-recovery(?#uaetechnician URL path, but a bit generic)
 1544211859	Makyen	^Sunidhi Singh$(?#uaetechnician user)
-1544248314	Makyen	supremeessaywritingservice\.com
 1544250332	Shree	globalexportlines\.com
 1544261827	Glorfindel	travelscams\.org
 1544290088	Zoe	myteches\.com
