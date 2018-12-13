@@ -7203,3 +7203,4 @@
 1544674518	Makyen	\w*(?:约炮|約炮)\w*(?#slang for sex)
 1544680688	Tetsuya Yamamoto	hifigadget\.com
 1544681529	Tetsuya Yamamoto	satishbrothersandsons\.com
+1544682225	Tetsuya Yamamoto	germanycar\.com\.vn
