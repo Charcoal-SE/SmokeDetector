@@ -7212,7 +7212,6 @@
 1544687016	Tetsuya Yamamoto	darwinbox\.com
 1544687611	Tetsuya Yamamoto	ferrotec-nord\.com
 1544689237	Tetsuya Yamamoto	tplcontest\.com
-1544690890	Tetsuya Yamamoto	edusson\.com
 1544691989	Tetsuya Yamamoto	hemisphericalhead\.com
 1544692003	Tetsuya Yamamoto	wanpipe\.com
 1544692018	Tetsuya Yamamoto	steelhemisphere\.com
