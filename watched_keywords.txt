@@ -7225,4 +7225,3 @@
 1544721976	tripleee	bestitemes\.com
 1544725514	Makyen	estatesponsors\.com
 1544750741	Tetsuya Yamamoto	travelgraphics\.org
-1544754336	Makyen	logi\.com
