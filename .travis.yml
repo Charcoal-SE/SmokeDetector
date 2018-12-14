@@ -1,6 +1,6 @@
 dist: xenial
 language: python
-sudo: false
+sudo: true
 python:
   - '3.5'
 
@@ -25,7 +25,10 @@ cache:
     - $HOME/virtualenv/python3.5.*
     - $HOME/.cache/pip
 before_cache:
-  - rm -f $HOME/.cache/pip/log/debug.log
-  - rm -rf $HOME/.cache/pip/http
+  - sudo rm -f $HOME/.cache/pip/log/debug.log
+  - sudo rm -rf $HOME/.cache/pip/http
+before_deploy:
+  - sudo rm -f $HOME/.cache/pip/log/debug.log
+  - sudo rm -rf $HOME/.cache/pip/http
 after_success:
   - coveralls
