@@ -7232,3 +7232,4 @@
 1544767031	Tetsuya Yamamoto	acumenbusiness\.com\.au
 1544771971	K.Dᴀᴠɪs	ejoin\W*(?:@|at)\W*ejointech\W*(?:\.|dot)\W*com
 1544772263	K.Dᴀᴠɪs	ejoin(?:\W*tech)?
+1544773480	Tetsuya Yamamoto	britishessaywriting\.co\.uk
