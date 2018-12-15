@@ -1721,7 +1721,7 @@ FindSpam.rule_blacklisted_usernames = create_rule("blacklisted username", regex=
                                                   title=False, body=False, username=True)
 
 # keto whatever diet
-create_rule("pattern-matching product name in {}", r"\bketo(?:ne|genic)?\W*\w*\W*diet\b"
+create_rule("pattern-matching product name in {}", r"\bketo(?:ne|genic)?\W*\w*\W*diet\b",
             body_summary=True, stripcodeblocks=True, answer=False, max_rep=4, max_score=1)
 # gratis near the beginning of post or in title, SoftwareRecs and es.stackoverflow.com are exempt
 create_rule("potentially bad keyword in {}", r"(?is)(?<=^.{,200})\bgratis\b",
