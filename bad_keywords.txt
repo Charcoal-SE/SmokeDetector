@@ -1746,4 +1746,3 @@ keto(?:sis)?\W?advanced
 lean\W?keto
 (?-i:3YfwOFZlfOQ|ZLaICQSlxm4|8bkyn6GvHF0|i1tPcR9xhnQ)(?#youtu.be videos from a cryptocurrency spammer)
 keto\W?ultimate\W?diet
-daniel\W+tan(?=.*\bseo(?:\b|pressor\b))
