@@ -25,10 +25,18 @@ cache:
     - $HOME/virtualenv/python3.5.*
     - $HOME/.cache/pip
 before_cache:
-  - sudo rm -f $HOME/.cache/pip/log/debug.log
-  - sudo rm -rf $HOME/.cache/pip/http
+  - sudo chown -R $USER.$USER $HOME/.cache
+  - rm -f $HOME/.cache/pip/log/debug.log
+  - rm -rf $HOME/.cache/pip/http
+  - sudo chown -R $USER.$USER /home/travis/.cache
+  - rm -f /home/travis/.cache/pip/log/debug.log
+  - rm -rf /home/travis/.cache/pip/http
 before_deploy:
-  - sudo rm -f $HOME/.cache/pip/log/debug.log
-  - sudo rm -rf $HOME/.cache/pip/http
+  - sudo chown -R $USER.$USER $HOME/.cache
+  - rm -f $HOME/.cache/pip/log/debug.log
+  - rm -rf $HOME/.cache/pip/http
+  - sudo chown -R $USER.$USER /home/travis/.cache
+  - rm -f /home/travis/.cache/pip/log/debug.log
+  - rm -rf /home/travis/.cache/pip/http
 after_success:
   - coveralls
