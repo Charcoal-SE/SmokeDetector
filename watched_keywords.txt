@@ -7278,3 +7278,4 @@
 1545072815	Makyen	absolute-design\.co\.uk
 1545072824	Makyen	supportservicehelp\.com
 1545073905	Zoe	gimespace\.com
+1545111246	Tetsuya Yamamoto	assurancesolutionhome
