@@ -7279,3 +7279,4 @@
 1545113181	Makyen	gadgetsright\.com
 1545113236	Makyen	DPJJPGv3TV6f7bRSvZiP8Q(?#hackmd.io page)
 1545113927	Makyen	(?<!<\/?code>.*?)buy\s*now(?!.*?<\/?code>)(?#buy now: no code)
+1545114506	Tetsuya Yamamoto	dpgpapers\.com
