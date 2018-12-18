@@ -7282,3 +7282,4 @@
 1545114506	Tetsuya Yamamoto	dpgpapers\.com
 1545115789	Tetsuya Yamamoto	selectconcierge\.com
 1545117096	Tetsuya Yamamoto	unidax\.com
+1545119372	Makyen	(?s:\W*\$109.95.{0,400}?periods?|periods?.{0,400}?\$109.95)
