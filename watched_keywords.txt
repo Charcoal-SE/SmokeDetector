@@ -5804,7 +5804,6 @@
 1538299146	Glorfindel	pricekart\.com
 1538299176	Glorfindel	mobikart\.com
 1538309117	iBug	onepost\.in
-1538338616	Makyen	hackwhitewizard(?:@tutanota\.com)?
 1538358644	iBug	Herbal\W?Sejagat
 1538373293	tripleee	sexdating1\.com
 1538374252	tripleee	ibelitetutor\.com
