@@ -3451,7 +3451,6 @@
 1527054011	Makyen	\w*jj(?:aa|bb|cc|dd|ee|ff|gg|hh|ii|jj|kk|ll|mm|nn|oo|pp|qq|rr|ss|tt|uu|vv|ww|xx|yy|zz)u\W*com\w*
 1527057324	tripleee	skytechdigitals\.com
 1527061064	tripleee	^adverd$
-1527061970	tripleee	instantassignment\.co\.uk
 1527068217	Glorfindel	ebookmyseat\.in
 1527071718	tripleee	allchatroom\.com
 1527074569	tripleee	saffloswer
