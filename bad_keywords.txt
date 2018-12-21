@@ -1750,3 +1750,4 @@ daniel\W+tan(?=.{0,400}?\bseo(?:\b|pressor\b))
 rootgatehacks(?:\W*(?:at\W*)?tutanota(?:\W*(?:dot\W*)?com)?)?
 hackwhitewizard(?:\W*(?:at\W*)?tutanota(?:\W*(?:dot\W*)?com)?)?
 keto\W?direct
+Prestige\W?Smart
