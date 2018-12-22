@@ -1,7 +1,9 @@
+import os
 import pytest
 import helpers
 
 
+@pytest.mark.skipif("CHINA" in os.environ, reason="")
 @pytest.mark.parametrize('shortened, original', [
     ('https://goo.gl/kAb9rz', 'https://charcoal-se.org/'),
     ('https://bit.ly/2jhMbxn', 'https://charcoal-se.org/'),
