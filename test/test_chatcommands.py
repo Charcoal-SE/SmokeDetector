@@ -62,7 +62,7 @@ def test_location():
 def test_version():
     assert chatcommands.version() == '{id} [{commit_name}]({repository}/commit/{commit_code})'.format(
         id=GlobalVars.location, commit_name=GlobalVars.commit_with_author,
-        commit_code=GlobalVars.commit['id'], repository=GlobalVars.bot_repository)
+        commit_code=GlobalVars.commit.id, repository=GlobalVars.bot_repository)
 
 
 @patch("chatcommands.datetime")

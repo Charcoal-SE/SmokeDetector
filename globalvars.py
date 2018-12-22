@@ -2,6 +2,7 @@
 
 import sys
 import os
+from collections import namedtuple
 from datetime import datetime
 from html.parser import HTMLParser
 from html import unescape
@@ -15,13 +16,17 @@ import platform
 from helpers import log
 
 
+CommitInfo = namedtuple('CommitInfo', ['id', 'id_full', 'author', 'message'])
+
+
 def git_commit_info():
     try:
-        data = sp.check_output(['git', 'log', '-1', '--pretty=%h%n%H%n%an%n%s'], stderr=sp.STDOUT).decode('utf-8')
+        data = sp.check_output(['git', 'rev-list', '-1', '--pretty=%H%n%an%n%s', 'HEAD'],
+                               stderr=sp.STDOUT).decode('utf-8')
     except sp.CalledProcessError as e:
         raise OSError("Git error:\n" + e.output) from e
-    short_id, full_id, author, message = data.strip().split("\n")
-    return {'id': full_id[:7], 'id_full': full_id, 'author': author, 'message': message}
+    _, full_id, author, message = data.strip().split("\n")
+    return CommitInfo(id=full_id[:7], id_full=full_id, author=author, message=message)
 
 
 def git_ref():
@@ -165,34 +170,33 @@ class GlobalVars:
 
     @staticmethod
     def reload():
-        commit = git_commit_info()
-        GlobalVars.commit = commit
+        GlobalVars.commit = commit = git_commit_info()
 
         GlobalVars.commit_with_author = "`{}` ({}: {})".format(
-            commit['id'], commit['author'], commit['message'])
+            commit.id, commit.author, commit.message)
 
         GlobalVars.on_master = git_ref()
         GlobalVars.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
             GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
-            GlobalVars.commit['id'], GlobalVars.location, platform.python_version())
+            GlobalVars.commit.id, GlobalVars.location, platform.python_version())
         GlobalVars.s_reverted = \
             "[ {} ] SmokeDetector started in [reverted mode](" \
             "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
             "at [rev {}]({}/commit/{}) (running on {})".format(
                 GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
-                GlobalVars.commit['id'], GlobalVars.location)
+                GlobalVars.commit.id, GlobalVars.location)
         GlobalVars.s_norestart = "[ {} ] Blacklists reloaded at [rev {}]({}/commit/{}) (running on {})".format(
             GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
-            GlobalVars.commit['id'], GlobalVars.location)
+            GlobalVars.commit.id, GlobalVars.location)
         GlobalVars.s_norestart2 = "[ {} ] FindSpam module reloaded at [rev {}]({}/commit/{}) (running on {})".format(
             GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
-            GlobalVars.commit['id'], GlobalVars.location)
+            GlobalVars.commit.id, GlobalVars.location)
         GlobalVars.standby_message = \
             "[ {} ] SmokeDetector started in [standby mode](" \
             "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " \
             "at [rev {}]({}/commit/{}) (running on {})".format(
                 GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
-                GlobalVars.commit['id'], GlobalVars.location)
+                GlobalVars.commit.id, GlobalVars.location)
         log('debug', "GlobalVars loaded")
 
 

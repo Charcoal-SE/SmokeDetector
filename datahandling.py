@@ -572,7 +572,7 @@ class SmokeyTransfer:
         data = {'_metadata': {
             'time': time.time(),
             'location': GlobalVars.location,
-            'rev': GlobalVars.commit['id_full'],
+            'rev': GlobalVars.commit.id_full,
             'lengths': {},  # can be used for validation
         }}  # some metadata, in case they're useful
         for item_info in cls.ITEMS:

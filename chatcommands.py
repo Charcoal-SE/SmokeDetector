@@ -1090,7 +1090,7 @@ def version():
 
     return '{id} [{commit_name}]({repository}/commit/{commit_code})'.format(id=GlobalVars.location,
                                                                             commit_name=GlobalVars.commit_with_author,
-                                                                            commit_code=GlobalVars.commit['id'],
+                                                                            commit_code=GlobalVars.commit.id,
                                                                             repository=GlobalVars.bot_repository)
 
 
