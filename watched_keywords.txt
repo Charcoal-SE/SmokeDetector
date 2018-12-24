@@ -7366,3 +7366,4 @@
 1545650483	Shree	excel-ads\.com
 1545656562	WELZ	hostprix\.com
 1545657430	iBug	programmergate\.com
+1545668240	iBug	Adisotech
