@@ -296,7 +296,7 @@ class GitManager:
             # Remote checks passed, good to go here
             cls.gitmanager_lock.acquire()
             git.checkout('master')
-            git.fetch('origin', '+refs/pull/{}/merge'.format(pr_id))
+            git.fetch('origin', '+refs/pull/{}/head'.format(pr_id))
             git.merge('FETCH_HEAD', '--no-ff', '-m', 'Merge pull request #{} from {}/{}'.format(
                       pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref))
             git.push('origin', 'master')
