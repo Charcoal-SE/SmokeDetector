@@ -148,6 +148,9 @@ while not stoprunning:
         sleep(5)
         count = 0
 
+    elif 'standby' in exit_info or 'no_standby' in exit_info:
+        pass  # skip the 'else' block below
+
     else:
         error('Died for unknown reason -- check logs.  Sleeping before restart')
         sleep(5)

@@ -22,7 +22,7 @@ def exit_mode(*args, code=0):
 
     with open("exit.txt", "w") as f:
         print("\n".join(args), file=f)
-    sys.exit(code)
+    os._exit(code)
 
 
 class ErrorLogs:
