@@ -286,9 +286,7 @@ class Metasmoke:
                 GlobalVars.metasmoke_last_ping_time = datetime.now()  # Otherwise the ping watcher will exit(10)
 
                 if 'pull' in response:
-                    GitManager.pull_remote()
-                    reload_modules()
-                    GlobalVars.reload()
+                    exit_mode("pull_update")
 
                 if 'failover' in response and GlobalVars.standby_mode:
                     if response['failover']:
