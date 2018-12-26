@@ -25,7 +25,7 @@ from html import unescape
 from ast import literal_eval
 # noinspection PyCompatibility
 import regex
-from helpers import only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, reload_modules
+from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, reload_modules
 from classes import Post
 from classes.feedback import *
 
@@ -305,7 +305,7 @@ def do_blacklist(blacklist_type, msg, force=False):
             if not GlobalVars.on_master:
                 # Restart if HEAD detached
                 log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
-                os._exit(8)
+                exit_mode("checkout_deploy")
             GitManager.pull_local()
             GlobalVars.reload()
             findspam.FindSpam.reload_blacklists()
@@ -389,7 +389,7 @@ def unblacklist(msg, item, alias_used="unwatch"):
             if not GlobalVars.on_master:
                 # Restart if HEAD detached
                 log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
-                os._exit(8)
+                exit_mode("checkout_deploy")
             GitManager.pull_local()
             GlobalVars.reload()
             findspam.FindSpam.reload_blacklists()
@@ -423,7 +423,7 @@ def approve(msg, pr_id):
                 if not GlobalVars.on_master:
                     # Restart if HEAD detached
                     log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
-                    os._exit(8)
+                    exit_mode("checkout_deploy")
                 GitManager.pull_local()
                 GlobalVars.reload()
                 findspam.FindSpam.reload_blacklists()
@@ -707,7 +707,7 @@ def master():
     Forces a system exit with exit code = 8
     :return: None
     """
-    os._exit(8)
+    exit_mode("checkout_deploy")
 
 
 # noinspection PyIncorrectDocstring,PyProtectedMember
@@ -743,7 +743,7 @@ def pull():
             tell_rooms_with('debug', GlobalVars.s_norestart2)
             return
         else:
-            os._exit(3)
+            exit_mode('pull_update')
     elif "error" in states or "failure" in states:
         raise CmdException("CI build failed! :( Please check your commit.")
     elif "pending" in states or not states:
@@ -794,7 +794,7 @@ def reboot(msg, alias_used="reboot"):
     if alias_used in {"reboot", "restart"}:
         tell_rooms("Goodbye, cruel world", ("debug", (msg._client.host, msg.room.id)), ())
         time.sleep(3)
-        os._exit(5)
+        exit_mode("reboot")
     elif alias_used in {"reload"}:
         reload_modules()
         tell_rooms_with('debug', GlobalVars.s_norestart2)
@@ -891,7 +891,7 @@ def stappit(msg, location_search):
         tell_rooms("Goodbye, cruel world", ((msg._client.host, msg.room.id)), ())
 
         time.sleep(3)
-        os._exit(6)
+        exit_mode("shutdown")
 
 
 def td_format(td_object):
@@ -958,7 +958,7 @@ def standby(msg, location_search, alias_used="standby"):
                    ("debug", (msg._client.host, msg.room.id)), (), notify_site="/standby")
 
         time.sleep(3)
-        os._exit(7)
+        exit_mode("standby")
 
 
 # noinspection PyIncorrectDocstring

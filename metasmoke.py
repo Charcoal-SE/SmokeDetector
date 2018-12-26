@@ -21,7 +21,7 @@ import apigetpost
 import spamhandling
 import classes
 import chatcommunicate
-from helpers import log, only_blacklists_changed, \
+from helpers import log, exit_mode, only_blacklists_changed, \
     only_modules_changed, blacklist_integrity_check, reload_modules
 from gitmanager import GitManager
 import findspam
@@ -142,7 +142,7 @@ class Metasmoke:
                         if not GlobalVars.on_master:
                             # Restart if HEAD detached
                             log('warning', "Pulling remote with HEAD detached, checkout deploy", f=True)
-                            os._exit(8)
+                            exit_mode("checkout_deploy")
                         GlobalVars.reload()
                         findspam.FindSpam.reload_blacklists()
                         chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart)
@@ -151,13 +151,13 @@ class Metasmoke:
                         if not GlobalVars.on_master:
                             # Restart if HEAD detached
                             log('warning', "Pulling remote with HEAD detached, checkout deploy", f=True)
-                            os._exit(8)
+                            exit_mode("checkout_deploy")
                         GlobalVars.reload()
                         reload_modules()
                         chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart2)
                     else:
                         chatcommunicate.tell_rooms_with('debug', s, notify_site="/ci")
-                        os._exit(3)
+                        exit_mode("pull_update")
                 else:
                     s = "[CI]({ci_link}) on [`{commit_sha}`](https://github.com/{repo}/commit/{commit_sha}) " \
                         "succeeded.".format(ci_link=c["ci_url"], repo=GlobalVars.bot_repo_slug, commit_sha=sha)
@@ -170,7 +170,7 @@ class Metasmoke:
                 chatcommunicate.tell_rooms_with("debug", s, notify_site="/ci")
         elif "everything_is_broken" in message:
             if message["everything_is_broken"] is True:
-                os._exit(6)
+                exit_mode("shutdown")
 
     @staticmethod
     def send_stats_on_post(title, link, reasons, body, username, user_link, why, owner_rep,
@@ -301,11 +301,11 @@ class Metasmoke:
                         chatcommunicate.tell_rooms_with("debug",
                                                         GlobalVars.location + " entering metasmoke-forced standby.")
                         time.sleep(2)
-                        os._exit(7)
+                        exit_mode("standby")
 
                 if 'shutdown' in response:
                     if response['shutdown']:
-                        os._exit(6)
+                        exit_mode("shutdown")
 
             except Exception:  # TODO: What could happen here?
                 pass

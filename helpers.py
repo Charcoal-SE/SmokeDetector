@@ -13,6 +13,13 @@ import sqlite3
 
 
 def exit_mode(*args, code=0):
+    args = set(args)
+
+    if not (args & {'standby', 'no_standby'}):
+        from globalvars import GlobalVars
+        standby = 'standby' if GlobalVars.standby_mode else 'no_standby'
+        args.add(standby)
+
     with open("exit.txt", "w") as f:
         print("\n".join(args), file=f)
     sys.exit(code)

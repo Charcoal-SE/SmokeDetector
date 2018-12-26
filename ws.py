@@ -30,7 +30,7 @@ import time
 import requests
 # noinspection PyPackageRequirements
 from tld.utils import update_tld_names, TldIOError
-from helpers import log, Helpers, log_exception
+from helpers import exit_mode, log, Helpers, log_exception
 from flovis import Flovis
 from tasks import Tasks
 
@@ -93,7 +93,7 @@ elif GlobalVars.chatexchange_u:
     username = GlobalVars.chatexchange_u
 else:
     log('error', "No ChatExchange username provided. Set it in config or provide it via environment variable")
-    os._exit(6)
+    exit_mode("shutdown")
 
 if "ChatExchangeP" in os.environ:
     log('debug', "ChatExchange password loaded from environment")
@@ -103,7 +103,7 @@ elif GlobalVars.chatexchange_p:
     password = GlobalVars.chatexchange_p
 else:
     log('error', "No ChatExchange password provided. Set it in config or provide it via environment variable")
-    os._exit(6)
+    exit_mode("shutdown")
 
 # We need an instance of bodyfetcher before load_files() is called
 GlobalVars.bodyfetcher = BodyFetcher()
@@ -133,13 +133,13 @@ if GlobalVars.standby_mode:
 def check_socket_connections():
     for client in chatcommunicate._clients.values():
         if client.last_activity and (datetime.utcnow() - client.last_activity).total_seconds() >= 60:
-            os._exit(10)
+            exit_mode("socket_failure")
 
 
 # noinspection PyProtectedMember
 def restart_automatically():
     Metasmoke.send_statistics()
-    os._exit(5)
+    exit_mode("reboot")
 
 
 Tasks.periodic(check_socket_connections, interval=90)
@@ -166,7 +166,7 @@ for tries in range(1, 1 + max_tries, 1):
         break
 else:
     log('error', 'Max retries exceeded. Exiting, maybe a restart will kick things.')
-    os._exit(5)
+    exit_mode("reboot")
 
 GlobalVars.deletion_watcher = DeletionWatcher()
 
@@ -211,7 +211,7 @@ while True:
         log_exception(exc_type, exc_obj, exc_tb)
         if seconds < 180 and exc_type not in {websocket.WebSocketConnectionClosedException, requests.ConnectionError}:
             # noinspection PyProtectedMember
-            os._exit(4)
+            exit_mode("early_exception")
         ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
         ws.send("155-questions-active")
 

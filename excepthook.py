@@ -7,7 +7,7 @@ import sys
 # noinspection PyPackageRequirements
 from websocket import WebSocketConnectionClosedException
 import requests
-from helpers import log, log_exception
+from helpers import exit_mode, log, log_exception
 from globalvars import GlobalVars
 
 
@@ -17,7 +17,7 @@ def uncaught_exception(exctype, value, tb):
     log_exception(exctype, value, tb)
     if delta.total_seconds() < 180 and exctype not in \
             {KeyboardInterrupt, SystemExit, requests.ConnectionError, WebSocketConnectionClosedException}:
-        os._exit(4)
+        exit_mode("early_exception")
     else:
         os._exit(1)
 

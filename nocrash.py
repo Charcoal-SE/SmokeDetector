@@ -75,23 +75,27 @@ while not stoprunning:
         else:
             command = [PY_EXECUTABLE, 'ws.py', 'standby']
 
-    if 'standby' in persistent_arguments:
-        persistent_arguments.remove('standby')
-
     try:
         ecode = sp.call(command + persistent_arguments, env=os.environ.copy())
     except sp.SubprocessError:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         log("subprocess.call() error {0}: {1}".format(exc_type.__name__, exc_obj))
     except (KeyboardInterrupt, SystemExit):
-        ecode = 6
+        sys.exit()
 
     with open("exit.txt", "r") as f:
         exit_info = [s.strip() for s in f]
+    exit_info = [s for s in exit_info if s]  # Filter empty strings
+    os.remove("exit.txt")
 
-    log('Exited with ecode {}'.format(ecode))
+    log('Exit information: [{}] {}'.format(ecode, ", ".join(exit_info)))
 
-    if ecode == 3:
+    if 'no_standby' in exit_info and 'standby' in persistent_arguments:
+        persistent_arguments.remove('standby')
+    elif 'standby' in exit_info and 'standby' not in persistent_arguments:
+        persistent_arguments.append('standby')
+
+    if 'pull_update' in exit_info:
         log('Pull in new updates')
         if not on_windows:
             git.checkout('deploy')
@@ -102,7 +106,7 @@ while not stoprunning:
         count = 0
         crashcount = 0
 
-    elif ecode == 4:
+    elif 'early_exception' in exit_info:
         count += 1
         log('Incremented crash count: {}; sleeping before restart'.format(count))
         sleep(5)
@@ -120,19 +124,15 @@ while not stoprunning:
         else:
             crashcount += 1
 
-    elif ecode == 5:
+    elif 'reboot' in exit_info:
         log('Rebooting')
         count = 0
 
-    elif ecode == 6:
+    elif ecode < 0 or 'shutdown' in exit_info:
         log('Stopping')
         stoprunning = True
 
-    elif ecode == 7:
-        log('Adding "standby" to persistent arguments')
-        persistent_arguments.append("standby")
-
-    elif ecode == 8:
+    elif 'checkout_deploy' in exit_info:
         log('Checkout deploy')
         # print "[NoCrash] Checkout Deploy"
         if not on_windows:
@@ -143,7 +143,7 @@ while not stoprunning:
         count = 0
         crashcount = 0
 
-    elif ecode == 10:
+    elif 'socket_failure' in exit_info:
         warn('Socket failure, sleeping to hopefully let network recover')
         sleep(5)
         count = 0
