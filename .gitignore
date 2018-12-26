@@ -1,3 +1,4 @@
+# Python cache
 *.py[cod]
 
 # C extensions
@@ -78,6 +79,10 @@ cookies.p
 # - Newer than newer format pickle files:
 pickles/
 
+# Temp files for communication between nocrash.py and ws.py
+launch.txt
+exit.txt
+
 # Settings files
 .settings/
 
@@ -91,7 +96,6 @@ errorlog.txt
 *.swp
 
 # Cache
-test/.cache/
 .cache/
 
 # Configuration and credential files
