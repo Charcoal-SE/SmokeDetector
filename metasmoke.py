@@ -285,7 +285,7 @@ class Metasmoke:
                 response = response.json()
                 GlobalVars.metasmoke_last_ping_time = datetime.now()  # Otherwise the ping watcher will exit(10)
 
-                if 'pull' in response:
+                if response.get('pull_update', False):
                     exit_mode("pull_update")
 
                 if 'failover' in response and GlobalVars.standby_mode:
@@ -295,14 +295,13 @@ class Metasmoke:
                         chatcommunicate.tell_rooms_with("debug", GlobalVars.location + " received failover signal.",
                                                         notify_site="/failover")
 
-                    if response['standby']:
-                        chatcommunicate.tell_rooms_with("debug",
-                                                        GlobalVars.location + " entering metasmoke-forced standby.")
-                        time.sleep(2)
-                        exit_mode("standby")
+                if response.get('standby', False):
+                    chatcommunicate.tell_rooms_with("debug",
+                                                    GlobalVars.location + " entering metasmoke-forced standby.")
+                    time.sleep(2)
+                    exit_mode("standby")
 
-                if 'shutdown' in response:
-                    if response['shutdown']:
+                if response.get('shutdown', False):
                         exit_mode("shutdown")
 
             except Exception:  # TODO: What could happen here?
