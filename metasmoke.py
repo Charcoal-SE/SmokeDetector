@@ -279,7 +279,7 @@ class Metasmoke:
 
             headers = {'content-type': 'application/json'}
             response = Metasmoke.post("/status-update.json",
-                                      data=json.dumps(payload), headers=headers)
+                                      data=json.dumps(payload), headers=headers, ignore_down=True)
 
             try:
                 response = response.json()
@@ -471,8 +471,8 @@ class Metasmoke:
     # Some sniffy stuff
     @staticmethod
     def request_sender(method):
-        def func(url, *args, **kwargs):
-            if not GlobalVars.metasmoke_host or GlobalVars.metasmoke_down:
+        def func(url, *args, ignore_down=False, **kwargs):
+            if not GlobalVars.metasmoke_host or (GlobalVars.metasmoke_down and not ignore_down):
                 return None
 
             if 'timeout' not in kwargs:
