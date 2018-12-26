@@ -86,6 +86,9 @@ while not stoprunning:
     except (KeyboardInterrupt, SystemExit):
         ecode = 6
 
+    with open("exit.txt", "r") as f:
+        exit_info = [s.strip() for s in f]
+
     log('Exited with ecode {}'.format(ecode))
 
     if ecode == 3:

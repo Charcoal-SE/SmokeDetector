@@ -12,6 +12,13 @@ from glob import glob
 import sqlite3
 
 
+
+def exit_mode(*args, code=0):
+    with open("exit.txt", "w") as f:
+        print("\n".join(args), file=f)
+    sys.exit(code)
+
+
 class ErrorLogs:
     DB_FILE = "errorLogs.db"
     # SQLite threading limitation !?!?!?
@@ -143,8 +150,8 @@ def files_changed(diff, file_set):
 core_files = {
     "apigetpost.py", "blacklists.py", "bodyfetcher.py", "chatcommands.py", "chatcommunicate.py",
     "chatexchange_extension.py", "datahandling.py", "deletionwatcher.py", "excepthook.py", "flovis.py",
-    "gitmanager.py", "globalvars.py", "helpers.py", "metasmoke.py", "nocrash.py", "parsing.py", "spamhandling.py",
-    "socketscience.py", "tasks.py", "ws.py",
+    "gitmanager.py", "globalvars.py", "helpers.py", "metasmoke.py", "nocrash.py", "parsing.py",
+    "spamhandling.py", "socketscience.py", "tasks.py", "ws.py",
 
     "classes/feedback.py", "classes/_Git_Windows.py", "classes/__init__.py", "classes/_Post.py",
 
