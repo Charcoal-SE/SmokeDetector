@@ -5538,7 +5538,6 @@
 1537052999	Makyen	secretoperations@usa\.com
 1537053667	Makyen	lord\W*hack2000(?:@mail\.com)?
 1537061236	Makyen	1960nobs\.com\.ng
-1537067231	Makyen	murphycyberhack\.com
 1537067247	Makyen	cyberhacks789(?:@gmail\.com)?
 1537067291	Makyen	[a-z_]*(?:1_*)?628[\W_]*203[\W_]*7169[a-z_]*(?#murphycyberhack.com & cyberhacks789@gmail.com)
 1537067311	Makyen	[a-z_]*(?:1_*)?317[\W_]*561[\W_]*6706[a-z_]*(?#murphycyberhack.com & cyberhacks789@gmail.com)
