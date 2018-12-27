@@ -14,6 +14,7 @@ import sys
 import threading
 import time
 import yaml
+import shlex
 
 import datahandling
 import metasmoke
@@ -575,7 +576,7 @@ def dispatch_reply_command(msg, reply, full_cmd):
 
 
 def dispatch_shorthand_command(msg):
-    commands = GlobalVars.parser.unescape(msg.content[3:]).lower().split()
+    commands = shlex.split(GlobalVars.parser.unescape(msg.content[3:]).lower())
 
     if len(commands) == 0:
         return
@@ -603,4 +604,5 @@ def dispatch_shorthand_command(msg):
             else:
                 output.append("[:{}] <processed without return value>".format(message.id))
 
-    return "\n".join(output) if should_return_output else ""
+    if should_return_output:
+        return "\n".join(output)
