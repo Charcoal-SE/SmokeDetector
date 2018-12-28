@@ -7422,3 +7422,4 @@
 1545977872	Tetsuya Yamamoto	spectrablinds\.com
 1545978339	Makyen	southeastconsultantfinancialgroupsllc\.webnode\.com
 1545978351	Makyen	southeastfinancialconsultant(?:@(?:zoho|aol)\.com)?
+1545978366	Tetsuya Yamamoto	geek-customer-care\.com
