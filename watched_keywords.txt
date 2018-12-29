@@ -7440,3 +7440,4 @@
 1546059501	Makyen	hugemulexlreview(?:(?:\.bravesites|\.simplesite)\.com)?
 1546059514	Makyen	karenflanagan\.jigsy\.com
 1546059583	Makyen	114629500609806269449(?#on plus.google.com)
+1546060113	Makyen	in\.pinterest\.com
