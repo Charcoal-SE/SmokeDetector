@@ -11,7 +11,7 @@ from apigetpost import api_get_post, PostData
 import datahandling
 from datahandling import *
 from metasmoke import Metasmoke
-from blacklists import load_blacklists
+from blacklists import load_blacklists, Blacklist
 from parsing import *
 from spamhandling import check_if_spam, handle_spam
 from gitmanager import GitManager
@@ -1065,6 +1065,41 @@ def test(content, alias_used="test"):
             result += why_response
 
     return result
+
+
+def bisect_regex(s, regexes):
+    compiled = regex.compile(r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))".format("|".join([r for r, i in regexes])),
+                             city=findspam.city_list)
+    match = compiled.search(s)
+    if not match:
+        return []
+    if len(regexes) <= 1:  # atom element found
+        return regexes
+
+    mid_len = (len(regexes) - 1).bit_length() - 1
+    mid = 2 ** mid_len
+    return bisect_regex(s, regexes[:mid]) + bisect_regex(s, regexes[mid:])
+
+
+@command(str, privileged=True, aliases=['what'])
+def bisect(s):
+    regexes = []
+    regexes.extend(Blacklist(Blacklist.KEYWORDS).each(True))
+    regexes.extend(Blacklist(Blacklist.WEBSITES).each(True))
+    regexes.extend(Blacklist(Blacklist.USERNAMES).each(True))
+    regexes.extend(Blacklist(Blacklist.WATCHED_KEYWORDS).each(True))
+
+    matching = bisect_regex(s, regexes)
+
+    if not matching:
+        return "{!r} is not caught by a blacklist or watchlist item.".format(s)
+
+    if len(matching) == 1:
+        r, (l, f) = matching[0]
+        return "Matched by `{}` on line {} of {}".format(r, l, f)
+    else:
+        return "Matched by the following regexes:\n" + "\n".join(
+            "{} on line {} of {}".format(r, l, f) for r, (l, f) in matching)
 
 
 # noinspection PyIncorrectDocstring

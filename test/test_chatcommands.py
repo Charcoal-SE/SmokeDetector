@@ -65,6 +65,24 @@ def test_version():
         commit_code=GlobalVars.commit.id, repository=GlobalVars.bot_repository)
 
 
+def test_bisect():
+    chatcommunicate.parse_room_config("test/test_rooms.yml")
+    msg = Fake({
+        "owner": {
+            "name": "ArtOfCode",
+            "id": 121520,
+            "is_moderator": True
+        },
+        "room": {
+            "_client": {
+                "host": "stackexchange.com"
+            },
+            "id": 11540
+        }
+    })
+    assert chatcommands.bisect("oOo]essayssos.com[OoO", original_msg=msg) == r"Matched by `essayssos\.com` on line 1 of watched_keywords.txt"
+
+
 @patch("chatcommands.datetime")
 def test_hats(date):
     date.side_effect = datetime.datetime

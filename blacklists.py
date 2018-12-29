@@ -51,6 +51,17 @@ class BasicListParser(BlacklistParser):
             f.truncate()
             f.writelines(items)
 
+    def each(self, with_info=False):
+        # info = (filename, lineno)
+        if with_info:
+            with open(self._filename, 'r', encoding='utf-8') as f:
+                for i, line in enumerate(f, start=1):
+                    yield line.rstrip("\n"), (i, self._filename)
+        else:
+            with open(self._filename, 'r', encoding='utf-8') as f:
+                for line in f:
+                    yield line.rstrip("\n")
+
     def exists(self, item: str):
         item = item.lower()
 
@@ -101,6 +112,19 @@ class TSVDictParser(BlacklistParser):
             f.truncate()
             f.writelines(items)
 
+    def each(self, with_info=False):
+        # info = (filename, lineno)
+        if with_info:
+            with open(self._filename, 'r', encoding='utf-8') as f:
+                for i, line in enumerate(f, start=1):
+                    if line.count('\t') == 2:
+                        yield line.rstrip("\n").split('\t')[2], (i, self._filename)
+        else:
+            with open(self._filename, 'r', encoding='utf-8') as f:
+                for line in f:
+                    if line.count('\t') == 2:
+                        yield line.rstrip("\n").split('\t')[2]
+
     def exists(self, item: Union[str, dict]):
         if isinstance(item, dict):
             item = item[2]
@@ -139,6 +163,9 @@ class Blacklist:
 
     def remove(self, item):
         return self._parser.remove(item)
+
+    def each(self, with_info=False):
+        return self._parser.each(with_info=with_info)
 
     def exists(self, item):
         return self._parser.exists(item)
