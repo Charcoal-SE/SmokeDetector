@@ -81,6 +81,7 @@ def test_bisect():
         }
     })
     assert chatcommands.bisect("oOo]essayssos.com[OoO", original_msg=msg) == r"Matched by `essayssos\.com` on line 1 of watched_keywords.txt"
+    assert chatcommands.bisect("OoOasdfghjklOoO", original_msg=msg) == r"'OoOasdfghjklOoO' is not caught by a blacklist or watchlist item."
 
 
 @patch("chatcommands.datetime")
