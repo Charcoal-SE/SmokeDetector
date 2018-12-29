@@ -7438,3 +7438,4 @@
 1545997880	Shree	genesischiropractic\.sg
 1546059258	Makyen	diigo\.com(?!/annotated/)
 1546059501	Makyen	hugemulexlreview(?:(?:\.bravesites|\.simplesite)\.com)?
+1546059514	Makyen	karenflanagan\.jigsy\.com
