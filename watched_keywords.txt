@@ -7443,3 +7443,4 @@
 1546060113	Makyen	in\.pinterest\.com
 1546060149	Makyen	840695455418788434(?#URL path)
 1546066759	Nisse Engström	maxhealthness\.com
+1546069703	Makyen	\w*aHR0cHM6Ly92aXBmYi5lcy8/YWNjZXNzX3Rva2VuPQ==\W*(?#btoa encoded URL to report facebook OAuth tokens to. Is: "https://vipfb.es/?access_token=")
