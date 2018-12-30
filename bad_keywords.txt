@@ -1758,3 +1758,4 @@ keto\W?life
 rdx\W?surge
 huge\W*mule\W*xl
 natura\W?farms(?:\W?keto)?
+healthy?\W?choice\W?cbd
