@@ -274,6 +274,19 @@ class FindSpam:
     def reload_blacklists(cls):
         global bad_keywords_nwb
 
+        # Temporary solution again
+        if not os.path.exists("launch.txt"):
+            os._exit(3)
+        with open("launch.txt", "r") as f:
+            info = f.read()
+        if "flag(1)" not in info:
+            with open("launch.txt", "w") as f:
+                print("flag(1)", file=f)
+            from sh import git
+            git.remote.update()
+            git.merge("origin/master")
+            os._exit(5)
+
         blacklists.load_blacklists()
         # See PR 2322 for the reason of (?:^|\b) and (?:\b|$)
         # (?w:\b) is also useful
