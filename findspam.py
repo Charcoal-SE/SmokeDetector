@@ -1832,7 +1832,7 @@ create_rule("pattern-matching website in {}",
             username=True, body_summary=True, max_rep=4, max_score=2)
 # Links preceded by arrows >>>
 create_rule("link following arrow in {}",
-            r"(?is)(?:>>+|@+>+|==\s*>+|={4,}|===>+|= = =|Read More|Click Here).{,20}"
+            r"(?is)(?:>>+|[@:]+>+|==\s*>+|={4,}|===>+|= = =|Read More|Click Here).{,20}"
             r"https?://(?!i\.stack\.imgur\.com)(?=.{,200}$)",
             stripcodeblocks=True, answer=False, max_rep=11)
 # Link at the end of a short answer
