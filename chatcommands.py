@@ -743,7 +743,7 @@ def pull():
             tell_rooms_with('debug', GlobalVars.s_norestart2)
             return
         else:
-            exit_mode('pull_update')
+            exit_mode('pull_update', code=3)
     elif "error" in states or "failure" in states:
         raise CmdException("CI build failed! :( Please check your commit.")
     elif "pending" in states or not states:
@@ -958,7 +958,7 @@ def standby(msg, location_search, alias_used="standby"):
                    ("debug", (msg._client.host, msg.room.id)), (), notify_site="/standby")
 
         time.sleep(3)
-        exit_mode("standby")
+        exit_mode("standby", code=7)
 
 
 # noinspection PyIncorrectDocstring
