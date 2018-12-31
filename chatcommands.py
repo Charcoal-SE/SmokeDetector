@@ -457,14 +457,14 @@ def blame(msg):
 @command(str, whole_msg=True, aliases=["blame\u180E"])
 def blame2(msg, x):
     base = {"\u180E": 0, "\u200B": 1, "\u200C": 2, "\u200D": 3, "\u2060": 4, "\u2063": 5, "\uFEFF": 6}
-    user = sum([(len(base)**i) * base[char] for i, char in enumerate(reversed(x))])
-
     try:
+        user = sum([(len(base)**i) * base[char] for i, char in enumerate(reversed(x))])
+
         unlucky_victim = msg._client.get_user(user)
         return "It's [{}](https://chat.{}/users/{})'s fault.".format(
             unlucky_victim.name, msg._client.host, unlucky_victim.id)
 
-    except requests.exceptions.HTTPError:
+    except (KeyError, requests.exceptions.HTTPError):
         unlucky_victim = msg.owner
         return "It's [{}](https://chat.{}/users/{})'s fault.".format(
             unlucky_victim.name, msg._client.host, unlucky_victim.id)
