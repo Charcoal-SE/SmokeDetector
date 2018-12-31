@@ -141,7 +141,7 @@ def log_file(log_level, *args):
 
 def log_exception(exctype, value, tb, f=False):
     now = datetime.utcnow()
-    tr = '\n'.join(traceback.format_tb(tb))
+    tr = ''.join(traceback.format_tb(tb))
     exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
     logged_msg = "{exception}\n{now} UTC\n{row}\n\n".format(exception=exception_only, now=now, row=tr)
     log('error', logged_msg, f=f)
