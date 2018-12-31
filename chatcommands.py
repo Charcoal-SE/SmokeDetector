@@ -891,7 +891,7 @@ def stappit(msg, location_search):
         tell_rooms("Goodbye, cruel world", ((msg._client.host, msg.room.id)), ())
 
         time.sleep(3)
-        exit_mode("shutdown")
+        exit_mode("shutdown", code=6)
 
 
 def td_format(td_object):
