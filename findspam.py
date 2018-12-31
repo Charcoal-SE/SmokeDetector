@@ -275,12 +275,6 @@ class FindSpam:
     def reload_blacklists(cls):
         global bad_keywords_nwb
 
-        # Temporary solution
-        if not os.path.exists("launch.txt"):
-            with open("launch.txt", "w"):
-                pass
-            os._exit(3)
-
         blacklists.load_blacklists()
         # See PR 2322 for the reason of (?:^|\b) and (?:\b|$)
         # (?w:\b) is also useful
