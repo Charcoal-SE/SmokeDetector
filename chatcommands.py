@@ -743,7 +743,7 @@ def pull():
             tell_rooms_with('debug', GlobalVars.s_norestart2)
             return
         else:
-            exit_mode('pull_update', code=3)
+            exit_mode('pull_update')
     elif "error" in states or "failure" in states:
         raise CmdException("CI build failed! :( Please check your commit.")
     elif "pending" in states or not states:
@@ -891,7 +891,7 @@ def stappit(msg, location_search):
         tell_rooms("Goodbye, cruel world", ((msg._client.host, msg.room.id)), ())
 
         time.sleep(3)
-        exit_mode("shutdown", code=6)
+        exit_mode("shutdown")
 
 
 def td_format(td_object):
@@ -958,7 +958,7 @@ def standby(msg, location_search, alias_used="standby"):
                    ("debug", (msg._client.host, msg.room.id)), (), notify_site="/standby")
 
         time.sleep(3)
-        exit_mode("standby", code=7)
+        exit_mode("standby")
 
 
 # noinspection PyIncorrectDocstring
