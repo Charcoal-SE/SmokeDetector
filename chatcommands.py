@@ -542,7 +542,7 @@ def wut():
 @command(aliases=["zomg_hats"])
 def hats():
     wb_start = datetime(2018, 12, 12, 0, 0, 0)
-    wb_end = datetime(2019, 1, 3, 0, 0, 0)
+    wb_end = datetime(2019, 1, 2, 0, 0, 0)
     now = datetime.utcnow()
     return_string = ""
     if wb_start > now:
