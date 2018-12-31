@@ -9,6 +9,7 @@ from urllib.parse import urlparse, unquote_plus
 from itertools import chain
 from collections import Counter
 from datetime import datetime
+import os
 import os.path as path
 
 # noinspection PyPackageRequirements
@@ -275,11 +276,10 @@ class FindSpam:
         global bad_keywords_nwb
 
         # Temporary solution
-        import os
         if not os.path.exists("launch.txt"):
             with open("launch.txt", "w"):
                 pass
-            exit_mode("pull_update", code=3)
+            os._exit(3)
 
         blacklists.load_blacklists()
         # See PR 2322 for the reason of (?:^|\b) and (?:\b|$)
