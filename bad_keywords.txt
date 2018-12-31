@@ -1759,3 +1759,4 @@ rdx\W?surge
 huge\W*mule\W*xl
 natura\W?farms(?:\W?keto)?
 healthy?\W?choice\W?cbd
+into\W?keto(?:\W?diet)?
