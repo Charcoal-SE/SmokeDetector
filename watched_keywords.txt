@@ -7457,3 +7457,4 @@
 1546317129	Shree	astrolika\.com
 1546321675	Makyen	ajk\.http\.downloader(?#Google Play Store app)
 1546322183	Makyen	HTTP\s+downloader(?=.{0,80}?play)(?#A Google Play store app)
+1546323084	Shree	easysynopsis\.com
