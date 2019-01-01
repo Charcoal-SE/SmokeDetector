@@ -2544,3 +2544,4 @@ maxhealthness\.com
 crontabgenerator\.org
 supplementpapa\.com
 healingbenefit\.com
+httpdownloader\.rf\.gd
