@@ -92,7 +92,7 @@ class GlobalVars:
     # these are loaded in GlobalVars.reload()
     commit = None
     commit_with_author = None
-    on_master = None
+    on_branch = None
 
     s = ""
     s_reverted = ""
@@ -175,7 +175,7 @@ class GlobalVars:
         GlobalVars.commit_with_author = "`{}` ({}: {})".format(
             commit.id, commit.author, commit.message)
 
-        GlobalVars.on_master = git_ref()
+        GlobalVars.on_branch = git_ref()
         GlobalVars.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
             GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
             GlobalVars.commit.id, GlobalVars.location, platform.python_version())

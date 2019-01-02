@@ -302,7 +302,7 @@ def do_blacklist(blacklist_type, msg, force=False):
 
     if code_permissions and only_blacklists_changed(GitManager.get_local_diff()):
         try:
-            if not GlobalVars.on_master:
+            if not GlobalVars.on_branch:
                 # Restart if HEAD detached
                 log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
                 exit_mode("checkout_deploy")
@@ -386,7 +386,7 @@ def unblacklist(msg, item, alias_used="unwatch"):
 
     if only_blacklists_changed(GitManager.get_local_diff()):
         try:
-            if not GlobalVars.on_master:
+            if not GlobalVars.on_branch:
                 # Restart if HEAD detached
                 log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
                 exit_mode("checkout_deploy")
@@ -420,7 +420,7 @@ def approve(msg, pr_id):
         message = GitManager.merge_pull_request(pr_id, comment)
         if only_blacklists_changed(GitManager.get_local_diff()):
             try:
-                if not GlobalVars.on_master:
+                if not GlobalVars.on_branch:
                     # Restart if HEAD detached
                     log('warning', "Pulling local with HEAD detached, checkout deploy", f=True)
                     exit_mode("checkout_deploy")

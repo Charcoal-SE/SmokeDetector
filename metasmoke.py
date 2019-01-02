@@ -139,7 +139,7 @@ class Metasmoke:
                     remote_diff = GitManager.get_remote_diff()
                     if only_blacklists_changed(remote_diff):
                         GitManager.pull_remote()
-                        if not GlobalVars.on_master:
+                        if not GlobalVars.on_branch:
                             # Restart if HEAD detached
                             log('warning', "Pulling remote with HEAD detached, checkout deploy", f=True)
                             exit_mode("checkout_deploy")
@@ -148,7 +148,7 @@ class Metasmoke:
                         chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart)
                     elif only_modules_changed(remote_diff):
                         GitManager.pull_remote()
-                        if not GlobalVars.on_master:
+                        if not GlobalVars.on_branch:
                             # Restart if HEAD detached
                             log('warning', "Pulling remote with HEAD detached, checkout deploy", f=True)
                             exit_mode("checkout_deploy")

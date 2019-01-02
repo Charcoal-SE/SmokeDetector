@@ -397,7 +397,7 @@ class GitManager:
             return False, "We don't do Windows"
 
         try:
-            if GlobalVars.on_master != "deploy":
+            if GlobalVars.on_branch != "deploy":
                 git.checkout("deploy")
             git.branch('--create-reflog', '-f', 'master', '-t', 'origin/master')
             return True, "wow, this is working!"
