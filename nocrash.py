@@ -90,8 +90,8 @@ while not stoprunning:
         exit_info = [s for s in exit_info if s]  # Filter empty strings
         os.remove("exit.txt")
     except FileNotFoundError:
-        # Do nothing
-        pass
+        # Assume something wrong has happened
+        exit_info = []
 
     log('Exit information: [{}] {}'.format(ecode, ", ".join(exit_info)))
 
