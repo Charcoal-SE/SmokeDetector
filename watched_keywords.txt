@@ -5934,7 +5934,6 @@
 1538888018	Makyen	kenlynch@gmail\.com
 1538890770	Makyen	canabro\.us(?#mail order marijuana)
 1538890780	Makyen	mail\W*order\W*marijuana
-1538892952	iBug	topwellnessblog\.com
 1538928016	Erik the Outgolfer	franklymiller417@gmail\.com
 1538931395	Glorfindel	droid\W*apk\W*hub
 1538933826	Glorfindel	pingponglab\.com
