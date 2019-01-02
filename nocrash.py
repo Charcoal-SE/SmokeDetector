@@ -9,6 +9,7 @@ from time import sleep
 import logging
 import sys
 from getpass import getpass
+
 on_windows = 'windows' in platform.platform().lower()
 
 if on_windows:
@@ -83,10 +84,14 @@ while not stoprunning:
     except (KeyboardInterrupt, SystemExit):
         sys.exit()
 
-    with open("exit.txt", "r") as f:
-        exit_info = [s.strip() for s in f]
-    exit_info = [s for s in exit_info if s]  # Filter empty strings
-    os.remove("exit.txt")
+    try:
+        with open("exit.txt", "r") as f:
+            exit_info = [s.strip() for s in f]
+        exit_info = [s for s in exit_info if s]  # Filter empty strings
+        os.remove("exit.txt")
+    except FileNotFoundError:
+        # Do nothing
+        pass
 
     log('Exit information: [{}] {}'.format(ecode, ", ".join(exit_info)))
 
