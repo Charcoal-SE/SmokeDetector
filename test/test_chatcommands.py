@@ -149,7 +149,7 @@ def test_deprecated_blacklist():
     assert chatcommands.blacklist("").startswith("The !!/blacklist command has been deprecated.")
 
 
-@pytest.mark.skipif(GlobalVars.on_master != "master", reason="avoid branch checkout")
+@pytest.mark.skipif(GlobalVars.on_branch != "master", reason="avoid branch checkout")
 def test_watch(monkeypatch):
     # XXX TODO: expand
     def wrap_watch(pattern, force=False):
