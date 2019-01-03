@@ -1081,14 +1081,15 @@ def bisect_regex(s, regexes):
     return bisect_regex(s, regexes[:mid]) + bisect_regex(s, regexes[mid:])
 
 
-@command(str, privileged=True, aliases=['what'])
-def bisect(s):
+@command(str, privileged=True, whole_msg=True, aliases=['what'])
+def bisect(msg, s):
     regexes = []
     regexes.extend(Blacklist(Blacklist.KEYWORDS).each(True))
     regexes.extend(Blacklist(Blacklist.WEBSITES).each(True))
     regexes.extend(Blacklist(Blacklist.USERNAMES).each(True))
     regexes.extend(Blacklist(Blacklist.WATCHED_KEYWORDS).each(True))
 
+    s = rebuild_str(msg.content_source.split(" ", 1)[1])
     matching = bisect_regex(s, regexes)
 
     if not matching:
