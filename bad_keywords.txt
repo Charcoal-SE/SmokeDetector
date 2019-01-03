@@ -1765,3 +1765,4 @@ merril\W?farms(?:\W?keto)?
 trialix
 htsindia(?!\.com)
 spartan\W?body(?:\W?keto)?
+lean\W?diet
