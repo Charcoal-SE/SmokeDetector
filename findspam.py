@@ -1086,6 +1086,9 @@ def watched_ip_for_url_hostname(s, site):
         s, site,
         # Watched IP list
         [
+	    # AS  20068 - HAWKHOST - Hawk Host Inc., CA.
+	    '172.96.187.196',   # fake-tech-support driver-canon.com
+	    '198.252.105.94',   # fake-tech-support asia-canon.com etc
             # AS 22612 NAMECHEAP-NET
             '68.65.122.36',     # drugs reviewscart.co.uk / purefitketopills.com
             '104.219.248.45',   # drugs 360nutra / timesnutrition etc
