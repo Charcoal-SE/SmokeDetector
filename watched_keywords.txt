@@ -5249,7 +5249,6 @@
 1535692149	Makyen	e-visaindia\.net\.in
 1535692171	Makyen	cryptosoftindia\.com
 1535695635	iBug	Living\W*Foodz
-1535697683	tripleee	huffingtonpost\.com
 1535697997	tripleee	itronixsolutions?\.com
 1535701276	Glorfindel	chinawpcdeckingfloor\.com
 1535703611	Makyen	[a-z_]*(?:1_*)?617[\W_]*663[\W_]*8926[a-z_]*
