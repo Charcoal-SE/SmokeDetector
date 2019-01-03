@@ -1089,7 +1089,10 @@ def bisect(msg, s):
     regexes.extend(Blacklist(Blacklist.USERNAMES).each(True))
     regexes.extend(Blacklist(Blacklist.WATCHED_KEYWORDS).each(True))
 
-    s = rebuild_str(msg.content_source.split(" ", 1)[1])
+    try:
+        s = rebuild_str(msg.content_source.split(" ", 1)[1])
+    except AttributeError:
+        pass
     matching = bisect_regex(s, regexes)
 
     if not matching:
@@ -1097,7 +1100,11 @@ def bisect(msg, s):
 
     if len(matching) == 1:
         r, (l, f) = matching[0]
-        return "Matched by `{}` on line {} of {}".format(r, l, f)
+        m = "Matched by `{}` on line {} of {}".format(r, l, f)
+        if len(m) >= 485:
+            return "\n\n    " + m
+        else:
+            return m
     else:
         return "Matched by the following regexes:\n" + "\n".join(
             "{} on line {} of {}".format(r, l, f) for r, (l, f) in matching)

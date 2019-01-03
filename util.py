@@ -26,7 +26,7 @@ def utility(name, description):
 @utility("bisect", "finds out which blacklist/watchlist item matches a string")
 def util_bisect(*args):
     for s in args:
-        print(chatcommands.bisect.__func__(s) + "\n")
+        print(chatcommands.bisect.__func__(None, s) + "\n")
 
 
 @utility("exit", "exit this utility (interactive mode)")
