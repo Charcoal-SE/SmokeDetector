@@ -1410,7 +1410,7 @@ def no_whitespace_title(s, site):
     return no_whitespace(s, site, body=False)
 
 
-@create_rule("no whitespace in {}", title=False, max_rep=10000, max_score=10000, answer=False)
+@create_rule("no whitespace in {}", title=False, max_rep=10000, max_score=10000)
 def no_whitespace_body(s, site):
     return no_whitespace(s, site, body=True)
 
