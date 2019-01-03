@@ -7505,3 +7505,4 @@
 1546535762	Makyen	dfimoveis\.com\.br
 1546538819	Makyen	androidokay\.ir
 1546551351	Makyen	freeperfectmoney\.com
+1546556114	K.Dᴀᴠɪs	ephinney\w+@gmail\.com
