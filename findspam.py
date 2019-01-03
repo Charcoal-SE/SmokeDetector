@@ -1125,6 +1125,7 @@ def bad_ip_for_url_hostname(s, site):
             # AS 26347 DREAMHOST-AS
             '75.119.210.224',  # triplet-spam
             # AS 26496 AS-26496-GO-DADDY-COM-LLC
+	    '104.25.50.105',   # crbtech.in
             '107.180.78.164',  # gs-jj.com
         ])
 
