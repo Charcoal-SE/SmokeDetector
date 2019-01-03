@@ -78,10 +78,13 @@ def test_bisect():
                 "host": "stackexchange.com"
             },
             "id": 11540
-        }
+        },
+        "content_source": None
     })
-    assert chatcommands.bisect("oOo]essayssos.com[OoO", original_msg=msg) == r"Matched by `essayssos\.com` on line 1 of watched_keywords.txt"
-    assert chatcommands.bisect("OoOasdfghjklOoO", original_msg=msg) == r"'OoOasdfghjklOoO' is not caught by a blacklist or watchlist item."
+    msg.content_source = "!!/bisect :::essayssos.com:::"
+    assert chatcommands.bisect(None, original_msg=msg) == r"Matched by `essayssos\.com` on line 1 of watched_keywords.txt"
+    msg.content_source = "!!/bisect OoOasdfghjklOoO"
+    assert chatcommands.bisect(None, original_msg=msg) == r"'OoOasdfghjklOoO' is not caught by a blacklist or watchlist item."
 
 
 @patch("chatcommands.datetime")
