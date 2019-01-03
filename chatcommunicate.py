@@ -284,7 +284,11 @@ def on_msg(msg, client):
                 result = dispatch_reply_command(message.parent, message, cmd)
 
                 if result:
-                    _msg_queue.put((room_data, ":{} {}".format(message.id, result), None))
+                    if "\n" not in str(result) and len(result) >= 488:
+                        response = ":{}\n{}"
+                    else:
+                        response = ":{} {}"
+                    _msg_queue.put((room_data, response.format(message.id, result), None))
         except ValueError:
             pass
     elif message.content.lower().startswith("sd "):
