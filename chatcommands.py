@@ -1084,9 +1084,9 @@ def bisect_regex(s, regexes):
 @command(str, privileged=True, whole_msg=True, aliases=['what'])
 def bisect(msg, s):
     regexes = []
-    regexes.extend(Blacklist(Blacklist.KEYWORDS).each(True))
-    regexes.extend(Blacklist(Blacklist.WEBSITES).each(True))
     regexes.extend(Blacklist(Blacklist.USERNAMES).each(True))
+    regexes.extend(Blacklist(Blacklist.WEBSITES).each(True))
+    regexes.extend(Blacklist(Blacklist.KEYWORDS).each(True))
     regexes.extend(Blacklist(Blacklist.WATCHED_KEYWORDS).each(True))
 
     try:
@@ -1100,7 +1100,8 @@ def bisect(msg, s):
 
     if len(matching) == 1:
         r, (l, f) = matching[0]
-        m = "Matched by `{}` on line {} of {}".format(r, l, f)
+        m = "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/master/{2}#L{1})".format(
+            r, l, f, GlobalVars.bot_repo_slug)
         if len(m) >= 485:
             return "\n\n    " + m
         else:
