@@ -302,10 +302,10 @@ def on_msg(msg, client):
             _msg_queue.put((room_data, s.format(message.id, result), None))
     elif classes.feedback.FEEDBACK_REGEX.search(message.content) \
             and is_privileged(message.owner, message.room) and datahandling.last_feedbacked:
-            ids, expires_in = datahandling.last_feedbacked
+        ids, expires_in = datahandling.last_feedbacked
 
-            if time.time() < expires_in:
-                Tasks.do(metasmoke.Metasmoke.post_auto_comment, message.content_source, message.owner, ids=ids)
+        if time.time() < expires_in:
+            Tasks.do(metasmoke.Metasmoke.post_auto_comment, message.content_source, message.owner, ids=ids)
     elif 'direct' in _room_roles and room_ident in _room_roles['direct']:
         SocketScience.receive(message.content_source.replace("\u200B", "").replace("\u200C", ""))
 
