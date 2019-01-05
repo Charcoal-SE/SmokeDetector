@@ -117,7 +117,8 @@ def log(log_level, *args, f=False):
     print(log_str, file=sys.stderr)
 
     if level == 3:
-        traceback.print_stack()
+        exc_tb = sys.exc_info()[2]
+        print("".join(traceback.format_tb(exc_tb)), file=sys.stderr)
 
     if f:  # Also to file
         log_file(log_level, *args)
