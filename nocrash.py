@@ -8,7 +8,6 @@ import subprocess as sp
 from time import sleep
 import logging
 import sys
-from getpass import getpass
 
 on_windows = 'windows' in platform.platform().lower()
 
