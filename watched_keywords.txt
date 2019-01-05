@@ -7182,7 +7182,6 @@
 1544635774	Makyen	kirilmazmakina\.com
 1544635783	Makyen	ca\.papersowl\.com
 1544635791	Makyen	wobbiewobbit\.com
-1544638108	Makyen	48hourfitness\.com
 1544654286	Makyen	atten\.com
 1544674518	Makyen	\w*(?:约炮|約炮)\w*(?#slang for sex)
 1544680688	Tetsuya Yamamoto	hifigadget\.com
