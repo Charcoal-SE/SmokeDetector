@@ -485,7 +485,7 @@ class Metasmoke:
                 response = method(GlobalVars.metasmoke_host + url, *args, **kwargs)
             except Exception:
                 GlobalVars.metasmoke_failures += 1
-                if GlobalVars.metasmoke_failures > MAX_FAILURES:
+                if GlobalVars.metasmoke_failures > MAX_FAILURES and not GlobalVars.metasmoke_down:
                     GlobalVars.metasmoke_down = True
                     chatcommunicate.tell_rooms_with('debug', "**Warning**: {} latest connections to metasmoke have fa"
                                                     "iled. Disabling metasmoke".format(GlobalVars.metasmoke_failures))
