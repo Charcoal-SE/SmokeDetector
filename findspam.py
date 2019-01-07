@@ -712,8 +712,8 @@ def pattern_product_name(s, site):
         "Hyper(?:tone)?", "Boost(?:er|ing)?", "Youth", "Monster", "Enlarge(?:ment)", "Obat", "Nutri",
     ]
     keywords = required_keywords + [
-        "(?<=(?:keto(?:ne|genic)?|diet)\W*)\w+(?=\W*(?:keto(?:ne|genic)?|diet))",  # Tricky approach
-        "\w+(?=(?:\W*(?:keto(?:ne|genic)?|diet)){2,})",  # Another one
+        r"(?<=(?:keto(?:ne|genic)?|diet)\W*)\w+(?=\W*(?:keto(?:ne|genic)?|diet))",  # Tricky approach
+        r"\w+(?=(?:\W*(?:keto(?:ne|genic)?|diet)){2,})",  # Another one
         "Deep", "Pro", "Advanced?", "Divine", "Royale", "Angele*", "Trinity", "Andro", "Force", "Health",
         "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect", "Bio", "Natural", "Oil",
         "E?xtreme", "Fit", "Thirsty?", "Grow", "Complete", "Reviews?", "Bloom(?:ing)?", "BHB", "Pure", "Quick",
