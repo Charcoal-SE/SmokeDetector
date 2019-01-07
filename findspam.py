@@ -712,6 +712,8 @@ def pattern_product_name(s, site):
         "Hyper(?:tone)?", "Boost(?:er|ing)?", "Youth", "Monster", "Enlarge(?:ment)", "Obat", "Nutri",
     ]
     keywords = required_keywords + [
+        "(?<=(?:keto(?:ne|genic)?|diet)\W*)\w+(?=\W*(?:keto(?:ne|genic)?|diet))",  # Tricky approach
+        "\w+(?=(?:\W*(?:keto(?:ne|genic)?|diet)){2,})",  # Another one
         "Deep", "Pro", "Advanced?", "Divine", "Royale", "Angele*", "Trinity", "Andro", "Force", "Health",
         "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect", "Bio", "Natural", "Oil",
         "E?xtreme", "Fit", "Thirsty?", "Grow", "Complete", "Reviews?", "Bloom(?:ing)?", "BHB", "Pure", "Quick",
@@ -1723,9 +1725,6 @@ FindSpam.rule_blacklisted_websites = create_rule("blacklisted website in {}", re
 FindSpam.rule_blacklisted_usernames = create_rule("blacklisted username", regex="",
                                                   title=False, body=False, username=True)
 
-# keto whatever diet
-create_rule("pattern-matching product name in {}", r"\bketo(?:ne|genic)?\W*\w*\W*diet\b",
-            body_summary=True, stripcodeblocks=True, answer=False, max_rep=4, max_score=1)
 # gratis near the beginning of post or in title, SoftwareRecs and es.stackoverflow.com are exempt
 create_rule("potentially bad keyword in {}", r"(?is)(?<=^.{,200})\bgratis\b",
             sites=['softwarerecs.stackexchange.com', 'es.stackoverflow.com'],
