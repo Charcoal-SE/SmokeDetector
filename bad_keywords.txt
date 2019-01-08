@@ -1767,3 +1767,4 @@ spartan\W?body(?:\W?keto)?
 lean\W?diet
 hydralyft
 hydra\W?life
+viral\W?rx
