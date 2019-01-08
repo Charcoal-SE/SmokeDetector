@@ -1934,7 +1934,7 @@ supplement4order\.com
 sathyainfo\.com
 supplementwarriors\.com
 themuhammadramzan\.com
-hbmbzone\.com
+hbmbzone(?:\W?com)?
 angelcoin\.money
 healthcares360\.com
 freemp3download\.xyz
