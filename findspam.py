@@ -706,22 +706,23 @@ def pattern_product_name(s, site):
     required_keywords = [
         "Testo(?:sterone)?s?", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Forskolin", "Diet", "Slim", "Serum",
         "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Shark", "Tank", "Peni(?:s|le)", "Pills?", "CBD",
-        "Elite", "Exceptional", "Enhance(?:ment)?", "Nitro", "Boost(?:er)?", "Supplements?",
+        "Elite", "Exceptional", "Enhance(?:ment)?", "Nitro", "Boost(?:er)?", "Suppl[ei]ments?",
         "Skin", "Muscle", "Therm[ao]", "Neuro", "Luma", "Rapid", "Tone", "Keto", "Fuel", "Cream",
-        "(?:Anti)?[ -]?Aging", "Trim", "Male", "Weight[ -](?:Loss|Reduction)", "Radiant(?:ly)?",
-        "Hyper(?:tone)?", "Boost(?:er|ing)?", "Youth", "Monster", "Enlarge(?:ment)", "Obat", "Nutri",
+        "(?:Anti)?[ -]?Aging", "Trim", "Male", "Weight", "Radiant(?:ly)?",
+        "Boost(?:er|ing)?", "Youth", "Monster", "Enlarge(?:ment)", "Obat", "Nutri",
     ]
     keywords = required_keywords + [
-        r"(?<=(?:keto(?:ne|genic)?|diet)\W*)\w+(?=\W*(?:keto(?:ne|genic)?|diet))",  # Tricky approach
-        r"\w+(?=(?:\W*(?:keto(?:ne|genic)?|diet)){2,})",  # Another one
+        r"(?<=(?:keto\w*|diet)\W*)\w+(?=\W*(?:keto\w*|diet))",  # Tricky approach
+        r"\w+(?=-)(?=(?:\W*(?:keto\w*|diet)){2,})",  # Another one
         "Deep", "Pro", "Advanced?", "Divine", "Royale", "Angele*", "Trinity", "Andro", "Force", "Health",
-        "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect", "Bio", "Natural", "Oil",
-        "E?xtreme", "Fit", "Thirsty?", "Grow", "Complete", "Reviews?", "Bloom(?:ing)?", "BHB", "Pure", "Quick",
-        "Titan", "X[LRT]", "Supply", "Power", "Aged?", "Ultimate",
+        "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect", "Bio", "Natural?", "Oil",
+        "E?xtreme", "Fit", "Thirsty?", "Grow", "Complete", "Reviews?", "Bloom(?:ing)?", "BHB", "Pures?t?", "Quick",
+        "Titan", "Hyper", "X[LRT]", "[R]X", "Supply", "Power", "Aged?", "Ultimate", "Surge",
+        "(?<=Weight\W*)(?:Loss|Reduction)",
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords.extend([r"X\d?", "Alpha", "Plus", "Prime", "Formula", "Max+"])
-    keywords = regex.compile(r"(?i)\b(?P<x>{0})(?:[ -]?(?P<x>{0}))+\b".format("|".join(keywords)))
+    keywords = regex.compile(r"(?i)\b(?P<x>{0})(?:[ -]*(?P<x>{0}))+\b".format("|".join(keywords)))
     required = regex.compile(r"(?i){}".format("|".join(required_keywords)))
 
     match_items = list(keywords.finditer(s))
