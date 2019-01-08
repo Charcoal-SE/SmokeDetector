@@ -7561,3 +7561,4 @@
 1546900398	Makyen	sqlservermanagementstudio\.org
 1546908068	Makyen	vf\.pretrapide(?:@gmail\.com)?
 1546922735	Tetsuya Yamamoto	iphoneservicelocations\.com
+1546929218	Tetsuya Yamamoto	papasidhdi\.com
