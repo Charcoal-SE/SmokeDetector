@@ -6,7 +6,7 @@ beautifulsoup4>=4.6.0
 requests>=2.18.4
 websocket-client>=0.54.0
 coverage>=4.5.1
-pytest>=3.4.1
+pytest>=3.6.0
 phonenumbers>=8.8.11
 flake8~=3.6.0
 pep8-naming==0.7.0
