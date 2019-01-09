@@ -1769,4 +1769,3 @@ hydralyft
 hydra\W?life
 viral\W?rx
 <a href="https://compitionpoint\.com/[^"]*" rel="nofollow noreferrer">(?:[^<>\w]+\w+)*continue reading</a>
-9apps\.ooo
