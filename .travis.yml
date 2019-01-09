@@ -11,7 +11,7 @@ before_install:
 install:
   - pip3 install -r requirements.txt --upgrade
   - pip3 install -r user_requirements.txt --upgrade
-  - pip3 install pytest-cov codecov python-coveralls
+  - pip3 install pytest-cov==2.6.1 codecov python-coveralls
   - pip3 uninstall pytest-capturelog || true
 before_script:
   - sh test/spinup_git.sh
