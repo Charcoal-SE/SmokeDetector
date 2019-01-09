@@ -3404,7 +3404,6 @@
 1526807480	Zoe	uitableviewwithimagesandlabel\.blogspot\.[a-z]{2,5}
 1526807613	Zoe	usemailsupportnumber\.com
 1526815866	paper1111	821620\.com
-1526816894	paper1111	9apps\.ooo
 1526816903	paper1111	aptoide\.vip
 1526823878	Zoe	(?:aa?ron(?:\W*hall)?)\W*(?:(?:is|are|a)\W*?)*\W*(?:(?:(?:jealous|and|you)*\W*)+(?:dumbass|dirty|gay|jew(?:s|ish)?|(?:mother\W*)?fuck(?:ing)?)+\W*)+
 1526830025	Zoe	techobserver\.net
