@@ -2556,3 +2556,4 @@ sharktankpedia\.com
 campaign4africa\.org
 compitionpoint\.com
 9apps\.ooo
+plex\.software
