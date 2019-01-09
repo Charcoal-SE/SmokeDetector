@@ -6583,7 +6583,7 @@
 1541902578	K.Dᴀᴠɪs	belfastvibe\.com
 1541903410	Shree	newlifeinvestement(?:@gmail\.com)
 1541918469	Makyen	adwebstudio\.com
-1541921255	Makyen	watch\b.{0,80}\b(?:online|stream|live|movie|TV)s?
+1541921255	Makyen	watch\b[^.!?]{0,80}\b(?:online|stream|live|movie|TV)s?
 1541939477	Erik the Outgolfer	vaghtvisa\.com
 1541946268	Glorfindel	wirestork\.com
 1541947660	Erik the Outgolfer	x-crypto\.com
