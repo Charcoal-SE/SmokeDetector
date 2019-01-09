@@ -128,11 +128,11 @@ while not stoprunning:
         else:
             crashcount += 1
 
-    elif 'reboot' in exit_info:
+    elif 'reboot' in exit_info or 'restart' in exit_info:
         log('Rebooting')
         count = 0
 
-    elif ecode < 0 or 'shutdown' in exit_info:
+    elif ecode == -1 or 'shutdown' in exit_info:
         log('Stopping')
         stoprunning = True
 

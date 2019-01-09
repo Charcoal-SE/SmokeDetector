@@ -19,7 +19,7 @@ def uncaught_exception(exctype, value, tb):
             {KeyboardInterrupt, SystemExit, requests.ConnectionError, WebSocketConnectionClosedException}:
         exit_mode("early_exception")
     else:
-        os._exit(1)
+        exit_mode("restart")
 
 
 def install_thread_excepthook():
