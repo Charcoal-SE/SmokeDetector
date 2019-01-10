@@ -708,7 +708,7 @@ def pattern_product_name(s, site):
         "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Shark", "Tank", "Peni(?:s|le)", "Pills?", "CBD",
         "Elite", "Exceptional", "Enhance(?:ment)?", "Nitro", "Boost(?:er)?", "Suppl[ei]ments?",
         "Skin", "Muscle", "Therm[ao]", "Neuro", "Luma", "Rapid", "Tone", "Keto", "Fuel", "Cream",
-        "(?:Anti)?[ -]?Aging", "Trim", "Male", "Weight\W?(?:Loss|Reduction)", "Radiant(?:ly)?",
+        "(?:Anti)?[ -]?Aging", "Trim", "Male", r"Weight\W?(?:Loss|Reduction)", "Radiant(?:ly)?",
         "Boost(?:er|ing)?", "Youth", "Monster", "Enlarge(?:ment)", "Obat", "Nutri",
     ]
     keywords = required_keywords + [
