@@ -1536,7 +1536,6 @@ bhadanazz
 illuminatikingdom\d*(?:@gmail\.com)?
 hair\W?juice(?:\W?accelerator)?
 maxadrex
-(?:facebook|whatsapp|email|yahoo|twitter|skype|paypal|website|server|credit|account).{,12}hack(?:er|ing)s?\b
 keto\W?primal(?:\W?diet)?
 vascular\W?x
 prime\W?slim(?:\W?forskolin)?
