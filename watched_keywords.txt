@@ -7604,3 +7604,4 @@
 1547120546	Makyen	(?:facebook|whatsapp|email|yahoo|twitter|skype|paypal|website|server|credit|account).{0,12}hack(?:er|ing)s?(?<!serversforhackers)(?#orig in blacklist 2018-09-08; 10TP/11FP to 2019-01-10; moved to watchlist)
 1547120738	Makyen	homeworkprospect\.com
 1547121250	Shree	sexologistdoctors\.com
+1547124269	CalvT	partnersworld
