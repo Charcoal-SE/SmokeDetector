@@ -1769,3 +1769,4 @@ hydra\W?life
 viral\W?rx
 <a href="https://compitionpoint\.com/[^"]*" rel="nofollow noreferrer">(?:[^<>\w]+\w+)*continue reading</a>
 green\W?coffee(?:(?:5k\W?)?diet)?
+waist\.click
