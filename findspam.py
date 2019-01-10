@@ -708,7 +708,7 @@ def pattern_product_name(s, site):
         "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Shark", "Tank", "Peni(?:s|le)", "Pills?", "CBD",
         "Elite", "Exceptional", "Enhance(?:ment)?", "Nitro", "Boost(?:er)?", "Suppl[ei]ments?",
         "Skin", "Muscle", "Therm[ao]", "Neuro", "Luma", "Rapid", "Tone", "Keto", "Fuel", "Cream",
-        "(?:Anti)?[ -]?Aging", "Trim", "Male", "Weight", "Radiant(?:ly)?",
+        "(?:Anti)?[ -]?Aging", "Trim", "Male", "Weight\W?(?:Loss|Reduction)", "Radiant(?:ly)?",
         "Boost(?:er|ing)?", "Youth", "Monster", "Enlarge(?:ment)", "Obat", "Nutri",
     ]
     keywords = required_keywords + [
@@ -718,7 +718,6 @@ def pattern_product_name(s, site):
         "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect", "Bio", "Natural?", "Oil",
         "E?xtreme", "Fit", "Thirsty?", "Grow", "Complete", "Reviews?", "Bloom(?:ing)?", "BHB", "Pures?t?", "Quick",
         "Titan", "Hyper", "X[LRT]", "[R]X", "Supply", "Power", "Aged?", "Ultimate", "Surge",
-        r"(?<=Weight\W*)(?:Loss|Reduction)",
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords.extend([r"X\d?", "Alpha", "Plus", "Prime", "Formula", "Max+"])
