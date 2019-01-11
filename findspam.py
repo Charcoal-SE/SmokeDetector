@@ -1100,6 +1100,7 @@ def watched_asn_for_url_hostname(s, site):
             '31863',   # DACEN-2 - Centrilogic, Inc., US
             '34119',   # WILDCARD-AS Wildcard UK Limited, GB
             '36024',   # AS-TIERP-36024 - TierPoint, LLC, US
+            '36351',   # SOFTLAYER - SoftLayer Technologies Inc., US
             '36352',   # AS-COLOCROSSING - ColoCrossing, US
             '40676',   # AS40676 - Psychz Networks, US
             '42831',   # UKSERVERS-AS UK Dedicated Servers, Hosting and Co-Location, GB
