@@ -7630,3 +7630,4 @@
 1547205455	Shree	aidm\.org\.in
 1547206227	tripleee	downloadbyme\.com
 1547211583	tripleee	carwise\.ae
+1547213854	tripleee	thinkingtech\.in
