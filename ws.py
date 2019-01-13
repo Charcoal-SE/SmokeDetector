@@ -36,6 +36,16 @@ from tasks import Tasks
 
 import chatcommands
 
+
+if os.path.isfile("plugin.py"):
+    try:
+        import plugin
+    except Exception:
+        exc_type, exc_obj, exc_tb = sys.exc_info()
+        error_msg = "{}: {}\n".format(exc_type.__name__, exc_obj, traceback.format_tb(exc_tb))
+        log('warning', "Error while importing plugin:\n" + error_msg)
+        # Ignore and move on
+
 levels = {
     'debug': 0,
     'info': 1,

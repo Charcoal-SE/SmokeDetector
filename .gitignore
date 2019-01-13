@@ -1,6 +1,9 @@
 # Python cache
 *.py[cod]
 
+# Plugin (lol)
+/plugin.py
+
 # C extensions
 *.so
 
