@@ -7641,3 +7641,4 @@
 1547318167	Makyen	hleatherjackets\.com
 1547336410	Makyen	(?<!^)(?-i:AMPK)(?!$)
 1547344958	Makyen	brucedavid004(?:@gmail\.com)?
+1547350133	Makyen	techsolina\.com
