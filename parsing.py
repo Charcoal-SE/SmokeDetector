@@ -75,7 +75,7 @@ def to_metasmoke_link(post_url, protocol=True):
 
 # Use (?P<name>) so we're not in the danger of messing up numeric groups
 msg_parser_regex = (
-    r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)-]+: "
+    r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)*-]+: "
     r"(?P<post>\[(?P<title>.+)]\((?P<post_url>(?:https?:)"
     r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:https?:)?\/\/[\w.]+\/[qa]\/\d+/?)\).{,3})"
     r" by (?:\[.+\]\((?P<owner_url>.+)\)|[\w ]*) on `[\w.]+`(?: \((?:@\S+\s?)+\))?"
