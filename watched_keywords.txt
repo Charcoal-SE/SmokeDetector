@@ -7673,3 +7673,4 @@
 1547527838	Makyen	laroche-?cherise(?#URL path)
 1547527852	Makyen	sugarbalancepower\.podbean\.com
 1547532292	tripleee	felovena01\.blogspot
+1547532753	iBug	\W*:-.{,10}://
