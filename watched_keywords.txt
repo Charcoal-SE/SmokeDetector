@@ -7686,3 +7686,4 @@
 1547555333	Shree	wowtexts\.com
 1547571409	Makyen	wittyanswer\.com
 1547571775	Makyen	manifestspellcast\.wordpress\.com
+1547571794	Makyen	manifestspellcast(?:@gmail\.com)?
