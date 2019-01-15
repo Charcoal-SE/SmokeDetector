@@ -15,11 +15,10 @@ User documentation is in the [wiki](https://charcoal-se.org/smokey).
 To set up, please use
 
 ```
-git config user.email "smokey@erwaysoftware.com"
-git config user.name "SmokeDetector"
-
 git clone https://github.com/Charcoal-SE/SmokeDetector.git
 cd SmokeDetector
+git config user.email "smokey@erwaysoftware.com"
+git config user.name "SmokeDetector"
 git checkout deploy
 sudo pip3 install -r requirements.txt --upgrade
 pip3 install --user -r user_requirements.txt --upgrade
