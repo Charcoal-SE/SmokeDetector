@@ -7671,3 +7671,4 @@
 1547527821	Makyen	(?-i:Sugar Balance)
 1547527830	Makyen	sugar-balance(?#URL path)
 1547527838	Makyen	laroche-?cherise(?#URL path)
+1547527852	Makyen	sugarbalancepower\.podbean\.com
