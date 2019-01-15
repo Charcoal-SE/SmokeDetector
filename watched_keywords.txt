@@ -7669,3 +7669,4 @@
 1547511190	Makyen	zwerllottomanagement(?:@gmail\.com)?
 1547514433	Tetsuya Yamamoto	agreeya\.com
 1547527821	Makyen	(?-i:Sugar Balance)
+1547527830	Makyen	sugar-balance(?#URL path)
