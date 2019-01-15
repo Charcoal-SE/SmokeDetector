@@ -7668,4 +7668,3 @@
 1547499647	Zoe	modapk\.pro
 1547511190	Makyen	zwerllottomanagement(?:@gmail\.com)?
 1547514433	Tetsuya Yamamoto	agreeya\.com
-1547525423	Tetsuya Yamamoto	Sugar\W*Balance
