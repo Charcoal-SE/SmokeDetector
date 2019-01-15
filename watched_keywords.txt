@@ -7685,3 +7685,4 @@
 1547549157	iBug	androidcertificationtraining\.wordpress
 1547555333	Shree	wowtexts\.com
 1547571409	Makyen	wittyanswer\.com
+1547571775	Makyen	manifestspellcast\.wordpress\.com
