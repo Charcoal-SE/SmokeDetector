@@ -10,8 +10,13 @@ Example [chat post](https://chat.stackexchange.com/transcript/message/43579469):
 
 ![Example chat post](https://i.stack.imgur.com/oLyfb.png)
 
+## Documentation
+
 User documentation is in the [wiki](https://charcoal-se.org/smokey).
 
+Detailed documentation for [setting up and running SmokeDetector is in the wiki](https://charcoal-se.org/smokey/Set-Up-and-Run-SmokeDetector).
+
+### Basic setup
 To set up, please use
 
 ```
@@ -30,6 +35,8 @@ To run, use `python3 nocrash.py` (preferably in a daemon-able mode, like a `scre
 You can also use `python3 ws.py`, but then SmokeDetector will be shut down after 6 hours;
 when running from `nocrash.py`, it will be restarted.
 (This is to be sure that closed websockets, if any, are reopened.)
+
+## Requirements
 
 SmokeDetector only supports Stack Exchange logins,
 and runs on Python 3.5 or higher,
