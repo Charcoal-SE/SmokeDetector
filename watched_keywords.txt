@@ -7674,3 +7674,4 @@
 1547527852	Makyen	sugarbalancepower\.podbean\.com
 1547532292	tripleee	felovena01\.blogspot
 1547532753	iBug	\W*:-.{,10}://
+1547532983	iBug	^[a-z]{4,}erk$
