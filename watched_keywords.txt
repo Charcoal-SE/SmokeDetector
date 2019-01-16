@@ -5306,7 +5306,6 @@
 1535979068	Tetsuya Yamamoto	kmk33\.com
 1535992214	tripleee	bazarbashi\.com
 1536000909	Glorfindel	gamersp
-1536016847	Makyen	^(?!.{1,7}(?:dl?san|(?:dl|ld)l?son)$)\w{5,}l?dl?s[ao]n$
 1536032679	Tetsuya Yamamoto	culqi\.com
 1536043214	Glorfindel	iift\.testbag\.com
 1536045269	Glorfindel	fossbeta\.com
