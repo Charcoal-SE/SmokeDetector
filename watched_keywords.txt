@@ -7705,3 +7705,4 @@
 1547626004	Tetsuya Yamamoto	methodtodo\.online
 1547626927	Makyen	raiditem(?!\.com)(?:cs|s)
 1547629102	Tetsuya Yamamoto	netsolutions\.com
+1547629439	tripleee	techcluesblog\.com
