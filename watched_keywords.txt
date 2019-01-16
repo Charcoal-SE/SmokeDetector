@@ -7704,3 +7704,4 @@
 1547625528	tripleee	voilgas
 1547626004	Tetsuya Yamamoto	methodtodo\.online
 1547626927	Makyen	raiditem(?!\.com)(?:cs|s)
+1547629102	Tetsuya Yamamoto	netsolutions\.com
