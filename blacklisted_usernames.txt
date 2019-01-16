@@ -122,3 +122,4 @@ hrisikesh\W*saloi?
 ^Russ Palmer$
 ^yujie zhao$
 ^pinkcoke$
+(?-i:^Richard Learner$)
