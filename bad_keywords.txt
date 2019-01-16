@@ -1771,3 +1771,4 @@ waist\.click
 gracinia
 (?:k\d\W?)?slim\W?keto
 cachet\W?cbd
+zen\W?men(?:\W?z4)?
