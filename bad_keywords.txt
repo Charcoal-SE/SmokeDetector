@@ -1776,3 +1776,4 @@ prache\W?cream
 keto\W?dragon\W?s(?:\W?den)?
 digital\W?platter
 sizevitrexx
+advanced\W?cardio(?:\W?rx)?
