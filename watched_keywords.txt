@@ -7718,3 +7718,4 @@
 1547699295	Tetsuya Yamamoto	webhilltech\.com
 1547705426	Tetsuya Yamamoto	techtoreview\.com
 1547706729	tripleee	demandware
+1547708141	tripleee	fashion2day\.co\.uk
