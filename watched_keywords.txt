@@ -7723,3 +7723,4 @@
 1547715946	Tetsuya Yamamoto	united.airlines-phonenumber\.com
 1547717466	Tetsuya Yamamoto	hite-engineering\.com
 1547717661	tripleee	creative\W?bio
+1547717808	tripleee	bio\W?array
