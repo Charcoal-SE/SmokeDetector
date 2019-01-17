@@ -108,7 +108,7 @@ def should_rescan_later(post, reasons, why):
     # Whether a post should be re-scanned later, see https://github.com/Charcoal-SE/metasmoke/issues/565
     if post.post_site == "wordpress.stackexchange.com" and not post.is_answer and \
             "bad keyword in body" in reasons and "manually reported question" not in reasons and \
-            sum_weight(reasons) <= 100:
+            0 < sum_weight(reasons) <= 100:
         if 2 <= datetime.utcnow().hour <= 14:  # Extended "spam hour"
             return True
     return False
@@ -120,14 +120,14 @@ def rescan_later(previous_post, previous_reasons, previous_why, time=30):
         nonlocal previous_post, previous_reasons, previous_why, timeout
         post = api_get_post(post.post_url)
         if not post:
-            # Something wrong
+            # Something wrong, handle previous result
             handle_spam(previous_post, previous_reasons, previous_why)
         if post.title == previous_post.title and post.body == previous_post.body:
-            # Nothing changed
+            # Nothing changed, save some CPU
             handle_spam(previous_post, previous_reasons, previous_why)
         is_spam, reasons, why = check_if_spam(post)
         if is_spam:
-            why = why.rstrip("\n") + "\n\nPost is edited in grace period\nPreviously caught for reasons: " + \
+            why = why.rstrip("\n") + "\n\nPost is edited in grace period\nPreviously caught for: " + \
                 ", ".join(previous_reasons).capitalize()
             handle_spam(post, reasons, why)
     return Tasks.later(rescan, after=time)
