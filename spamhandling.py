@@ -14,6 +14,7 @@ from classes import Post, PostParseError
 from helpers import log, escape_format
 from parsing import to_metasmoke_link
 from tasks import Tasks
+from apigetpost import api_get_post
 
 
 # noinspection PyMissingTypeHints
@@ -90,6 +91,7 @@ def check_if_spam(post):
     # This is required because !!/report will check for 3rd tuple item to decide if it's not spam or spam but ignored
 
 
+
 # noinspection PyMissingTypeHints
 def check_if_spam_json(json_data):
     try:
@@ -100,6 +102,35 @@ def check_if_spam_json(json_data):
         return False, '', ''
     is_spam, reason, why = check_if_spam(post)
     return is_spam, reason, why
+
+
+def should_rescan_later(post, reasons, why):
+    # Whether a post should be re-scanned later, see https://github.com/Charcoal-SE/metasmoke/issues/565
+    if post.post_site == "wordpress.stackexchange.com" and not post.is_answer and \
+            "bad keyword in body" in reasons and "manually reported question" not in reasons and \
+            sum_weight(reasons) <= 100:
+        if 2 <= datetime.utcnow().hour <= 14:  # Extended "spam hour"
+            return True
+    return False
+
+
+def rescan_later(previous_post, previous_reasons, previous_why, time=30):
+    # TODO: populate this function
+    def rescan():
+        nonlocal previous_post, previous_reasons, previous_why, timeout
+        post = api_get_post(post.post_url)
+        if not post:
+            # Something wrong
+            handle_spam(previous_post, previous_reasons, previous_why)
+        if post.title == previous_post.title and post.body == previous_post.body:
+            # Nothing changed
+            handle_spam(previous_post, previous_reasons, previous_why)
+        is_spam, reasons, why = check_if_spam(post)
+        if is_spam:
+            why = why.rstrip("\n") + "\n\nPost is edited in grace period\nPreviously caught for reasons: " + \
+                ", ".join(previous_reasons).capitalize()
+            handle_spam(post, reasons, why)
+    return Tasks.later(rescan, after=time)
 
 
 # noinspection PyBroadException,PyProtectedMember
