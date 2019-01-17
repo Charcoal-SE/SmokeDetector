@@ -1472,8 +1472,13 @@ def body_starts_with_title(post):
 
     end_in_url, ending_url = link_at_end(post.body, None)
     if not end_in_url:
-        return False, False, False, ""
-    ending_url = ending_url.replace("Link at end: ", "")
+        # Experimental: Body *starts* with URL
+        match = regex.search(r'^<p><a href="([^"]*)"', post.body)
+        if not match:
+            return False, False, False, ""
+        ending_url = match.group(1)
+    else:
+        ending_url = ending_url.replace("Link at end: ", "")
 
     if regex.compile(r"</?(?:pre|code)>").search(post.body):
         return False, False, False, ""
