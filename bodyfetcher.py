@@ -336,8 +336,8 @@ class BodyFetcher:
                     if GlobalVars.flovis is not None and 'question_id' in post:
                         GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, post['question_id'],
                                                 {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
-                    if should_rescan_later(post_, reasons, why):
-                        rescan_later(post_, reasons, why)
+                    if should_rescan_later(post_, reason, why):
+                        rescan_later(post_, reason, why)
                     else:
                         handle_spam(post=post_, reasons=reason, why=why)
                 except Exception as e:

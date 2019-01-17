@@ -91,7 +91,6 @@ def check_if_spam(post):
     # This is required because !!/report will check for 3rd tuple item to decide if it's not spam or spam but ignored
 
 
-
 # noinspection PyMissingTypeHints
 def check_if_spam_json(json_data):
     try:
@@ -118,7 +117,7 @@ def rescan_later(previous_post, previous_reasons, previous_why, time=30):
     # TODO: populate this function
     def rescan():
         nonlocal previous_post, previous_reasons, previous_why, timeout
-        post = api_get_post(post.post_url)
+        post = api_get_post(previous_post.post_url)
         if not post:
             # Something wrong, handle previous result
             handle_spam(previous_post, previous_reasons, previous_why)
