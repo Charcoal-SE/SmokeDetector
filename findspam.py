@@ -706,18 +706,19 @@ def pattern_product_name(s, site):
     required_keywords = [
         "Testo(?:sterone)?s?", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Forskolin", "Diet", "Slim", "Serum",
         "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Shark", "Tank", "Peni(?:s|le)", "Pills?", "CBD",
-        "Elite", "Exceptional", "Enhance(?:ment)?", "Nitro", "Boost(?:er)?", "Suppl[ei]ments?",
+        "Elite", "Exceptional", "Enhance(?:ment)?", "Nitro", "Suppl[ei]ments?",
         "Skin", "Muscle", "Therm[ao]", "Neuro", "Luma", "Rapid", "Tone", "Keto", "Fuel", "Cream",
         "(?:Anti)?[ -]?Aging", "Trim", "Male", r"Weight\W?(?:Loss|Reduction)", "Radiant(?:ly)?",
-        "Boost(?:er|ing)?", "Youth", "Monster", "Enlarge(?:ment)", "Obat", "Nutri",
+        "Boost(?:er|ing)?s?", "Youth", "Monster", "Enlarge(?:ment)", "Obat", "Nutr[ai]",
     ]
     keywords = required_keywords + [
-        r"(?<=(?:keto\w*|diet)\W*)\w+(?=\W*(?:keto\w*|diet))",  # Tricky approach
-        r"\w+(?=-)(?=(?:\W*(?:keto\w*|diet)){2,})",  # Another one
-        "Deep", "Pro", "Advanced?", "Divine", "Royale", "Angele*", "Trinity", "Andro", "Force", "Health",
+        r"(?<=(?:keto\w*|diet)\W*)\w+(?=\W*(?:keto\w*|diet))",  # Tricky approach for "keto whatever diet"
+        # r"\w+(?=-)(?=(?:\W*(?:keto\w*|diet)){2,})",  # Too dangerous
+        "Deep", "Pro", "Advanced?", "Divine", "Royale?", "Angele*", "Trinity", "Andro", "Force", "Healthy?",
         "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect", "Bio", "Natural?", "Oil",
         "E?xtreme", "Fit", "Thirsty?", "Grow", "Complete", "Reviews?", "Bloom(?:ing)?", "BHB", "Pures?t?", "Quick",
-        "Titan", "Hyper", "X[LRT]", "[R]X", "Supply", "Power", "Aged?", "Ultimate", "Surge",
+        "Titan", "Hyper", "X[LRT]", "[R]X", "Supply", "Power", "Aged?", "Ultimate", "Surge", "(?<!e)Xtra",
+        "Brain",
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords.extend([r"X\d?", "Alpha", "Plus", "Prime", "Formula", "Max+"])
