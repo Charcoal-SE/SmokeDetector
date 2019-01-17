@@ -116,7 +116,7 @@ def should_rescan_later(post, reasons, why):
 def rescan_later(previous_post, previous_reasons, previous_why, time=30):
     # TODO: populate this function
     def rescan():
-        nonlocal previous_post, previous_reasons, previous_why, timeout
+        nonlocal previous_post, previous_reasons, previous_why, time
         post = api_get_post(previous_post.post_url)
         if not post:
             # Something wrong, handle previous result
