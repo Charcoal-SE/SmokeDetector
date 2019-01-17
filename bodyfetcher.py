@@ -1,5 +1,5 @@
 # coding=utf-8
-from spamhandling import handle_spam, check_if_spam
+from spamhandling import handle_spam, check_if_spam, should_rescan_later, rescan_later
 from datahandling import (add_or_update_api_data, clear_api_data, store_bodyfetcher_queue, store_bodyfetcher_max_ids,
                           store_queue_timings)
 from chatcommunicate import tell_rooms_with
@@ -336,9 +336,10 @@ class BodyFetcher:
                     if GlobalVars.flovis is not None and 'question_id' in post:
                         GlobalVars.flovis.stage('bodyfetcher/api_response/spam', site, post['question_id'],
                                                 {'post': pnb, 'check_if_spam': [is_spam, reason, why]})
-                    handle_spam(post=post_,
-                                reasons=reason,
-                                why=why)
+                    if should_rescan_later(post_, reasons, why):
+                        rescan_later(post_, reasons, why)
+                    else:
+                        handle_spam(post=post_, reasons=reason, why=why)
                 except Exception as e:
                     log('error', "Exception in handle_spam:", e)
             elif GlobalVars.flovis is not None and 'question_id' in post:
