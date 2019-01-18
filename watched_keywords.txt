@@ -7742,3 +7742,4 @@
 1547796464	Makyen	scriptsanddesigns\.co\.in
 1547796474	Makyen	pmmodinews\.com
 1547797661	tripleee	youtube\W?desktop\W?notifier
+1547799385	tripleee	printercustomerservice\d*\.blogspot
