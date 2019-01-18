@@ -1475,7 +1475,7 @@ def body_starts_with_title(post):
     if not end_in_url:
         # Experimental: Body *starts* with URL
         match = regex.search(r'^<p><a href="([^"]*)"', post.body)
-        if not match:
+        if not match or match:  # Disable for now
             return False, False, False, ""
         ending_url = match.group(1)
     else:
