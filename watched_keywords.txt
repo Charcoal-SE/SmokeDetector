@@ -7744,3 +7744,4 @@
 1547797661	tripleee	youtube\W?desktop\W?notifier
 1547799385	tripleee	printercustomerservice\d*\.blogspot
 1547800389	Glorfindel	pp\.io
+1547800448	tripleee	borxi\.com
