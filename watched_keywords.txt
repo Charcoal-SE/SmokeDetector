@@ -7750,3 +7750,4 @@
 1547804984	tripleee	datadriveninvestor
 1547806068	tripleee	arlo
 1547811516	tripleee	mcafeeactivate\.website
+1547811555	tripleee	origamistudios\.us
