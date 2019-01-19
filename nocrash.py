@@ -92,7 +92,7 @@ while not stoprunning:
         # Assume something wrong has happened
         exit_info = []
 
-    log('Exit information: [{}] {}'.format(ecode, ", ".join(exit_info)))
+    log('Exit information: [{}] {}'.format(ecode, ", ".join(exit_info) or "None"))
 
     if 'no_standby' in exit_info and 'standby' in persistent_arguments:
         persistent_arguments.remove('standby')
