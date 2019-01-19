@@ -7767,3 +7767,4 @@
 1547867326	Makyen	(?:li@)?moyangoffice\.com
 1547879358	Makyen	errorcode0x\.com
 1547879399	Makyen	questionsgems\.com
+1547879498	Makyen	superfitsupplement\.com
