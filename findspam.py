@@ -734,14 +734,6 @@ def pattern_product_name(s, site):
     return False, ""
 
 
-@create_rule("pattern-matching title", body=False, max_score=1)
-def what_is_this_pharma_title(s, site):   # title "what is this Xxxx?"
-    if regex.compile(r'(?i)^what is this (?:(?-i:[A-Z][a-z]+)|https?://)').match(s):
-        return True, u'Title starts with "what is this"'
-    else:
-        return False, ""
-
-
 @create_rule("bad keyword with email in {}", stripcodeblocks=True)
 def keyword_email(s, site):   # a keyword and an email in the same post
     if regex.compile("<pre>|<code>").search(s) and site == "stackoverflow.com":  # Avoid false positives on SO
