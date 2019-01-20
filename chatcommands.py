@@ -1604,7 +1604,10 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
             post._is_answer = True
             post._parent = Post(api_response=parent_data.as_dict)
 
-        scan_spam, scan_reasons, scan_why = check_if_spam(post)  # Scan it first
+        if operation == "report-direct":
+            scan_spam, scan_reasons, scan_why = False, [], ""
+        else:
+            scan_spam, scan_reasons, scan_why = check_if_spam(post)  # Scan it first
 
         if operation in {"report", "report-force"}:  # Force blacklist user even if !!/report falls back to scan
             if user is not None:

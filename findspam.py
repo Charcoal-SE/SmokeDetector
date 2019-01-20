@@ -473,8 +473,6 @@ def misleading_link(s, site):
 # noinspection PyUnusedLocal,PyMissingTypeHints,PyTypeChecker
 @create_rule("repeating words in {}", max_rep=11, stripcodeblocks=True)
 def has_repeating_words(s, site):
-    return False, ""
-
     # RegEx DoS warning!!!
     matcher = regex.compile(r"(?P<words>(?P<word>[a-z]+))(?:[][\s.,;!/\()+_-]+(?P<words>(?P=word))){4,}",
                             flags=regex.I | regex.S | regex.V0)
