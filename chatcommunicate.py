@@ -545,7 +545,7 @@ def dispatch_command(msg):
                 return func(*args, original_msg=msg, alias_used=command_name, quiet_action=quiet_action)
 
 
-def dispatch_reply_command(msg, reply, full_cmd):
+def dispatch_reply_command(msg, reply, full_cmd, comment=True):
     command_parts = full_cmd.lower().split(" ", 1)
 
     if len(command_parts) == 2:
@@ -571,7 +571,7 @@ def dispatch_reply_command(msg, reply, full_cmd):
             args.extend([None] * (max_arity - len(args)))
 
             return func(msg, *args, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
-    elif is_privileged(reply.owner, reply.room):
+    elif comment and is_privileged(reply.owner, reply.room):
         post_data = get_report_data(msg)
 
         if post_data:
@@ -579,7 +579,7 @@ def dispatch_reply_command(msg, reply, full_cmd):
 
 
 def dispatch_shorthand_command(msg):
-    commands = shlex.split(GlobalVars.parser.unescape(msg.content[3:]).lower())
+    commands = shlex.split(GlobalVars.parser.unescape(msg.content).lower())[1:]
 
     if len(commands) == 0:
         return
@@ -599,7 +599,7 @@ def dispatch_shorthand_command(msg):
         if current_command == "-":
             output.append("[:{}] <skipped>".format(message.id))
         else:
-            result = dispatch_reply_command(message, msg, current_command)
+            result = dispatch_reply_command(message, msg, current_command, comment=False)
 
             if result:
                 should_return_output = True
