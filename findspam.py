@@ -474,7 +474,7 @@ def misleading_link(s, site):
 @create_rule("repeating words in {}", max_rep=11, stripcodeblocks=True)
 def has_repeating_words(s, site):
     # RegEx DoS warning!!!
-    matcher = regex.compile(r"(?P<words>(?P<word>[a-z]+))(?:[][\s.,;!/\()+_-]+(?P<words>(?P=word))){4,}",
+    matcher = regex.compile(r"\b(?P<words>(?P<word>[a-z]+))(?:[][\s.,;!/\()+_-]+(?P<words>(?P=word))){4,}\b",
                             flags=regex.I | regex.S | regex.V0)
     for match in matcher.finditer(s):
         words = match.captures("words")
