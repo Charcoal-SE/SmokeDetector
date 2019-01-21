@@ -7806,3 +7806,4 @@
 1548073078	Glorfindel	doctor-telephone\.fr
 1548073370	tripleee	fassihfayyaz\.com
 1548076877	tripleee	checkseo\.in
+1548077124	tripleee	(?-i:^Harry Stylesheet$)
