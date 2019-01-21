@@ -7809,3 +7809,4 @@
 1548077124	tripleee	(?-i:^Harry Stylesheet$)
 1548079114	tripleee	heavengames\.com
 1548081675	Nisse Engström	hspads\.com
+1548094061	Makyen	\W*<p>\s*(?:details?\.*)?\s*(?:www\.)?gocash7\.com\s*</p>\W*(?#a bit abusive, as it effectively duplicates a blacklist. Gets 3+ reasons on persistent spammer.)
