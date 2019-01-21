@@ -7799,3 +7799,4 @@
 1548066025	tripleee	garminexpress\.de
 1548066037	tripleee	bitdefendercentral\.de
 1548066046	tripleee	chargebackexpertz\.com
+1548066073	tripleee	tomdiesel\.co\.zw
