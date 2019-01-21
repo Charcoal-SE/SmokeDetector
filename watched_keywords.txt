@@ -7807,3 +7807,4 @@
 1548073370	tripleee	fassihfayyaz\.com
 1548076877	tripleee	checkseo\.in
 1548077124	tripleee	(?-i:^Harry Stylesheet$)
+1548079114	tripleee	heavengames\.com
