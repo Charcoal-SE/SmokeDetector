@@ -7798,3 +7798,4 @@
 1548063860	Tetsuya Yamamoto	aigtechnologies\.in
 1548066025	tripleee	garminexpress\.de
 1548066037	tripleee	bitdefendercentral\.de
+1548066046	tripleee	chargebackexpertz\.com
