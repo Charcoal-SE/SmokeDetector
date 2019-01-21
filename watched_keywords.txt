@@ -7812,3 +7812,4 @@
 1548094061	Makyen	\W*<p>\s*(?:details?\.*)?\s*(?:www\.)?gocash7\.com\s*</p>\W*(?#a bit abusive, as it effectively duplicates a blacklist. Gets 3+ reasons on persistent spammer.)
 1548094702	Makyen	(?-i:LUKE MEREDITH)(?#gocash7.com)
 1548099566	Makyen	(?-i:yjBIzNId5Yk)(?#YouTube video self-promotion)
+1548108189	Makyen	shangosolutiontemple(?:\W*(?:at\W*)?yahoo\W*(?:dot\W*)?com)?
