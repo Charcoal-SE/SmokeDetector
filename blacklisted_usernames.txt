@@ -123,3 +123,4 @@ hrisikesh\W*saloi?
 ^yujie zhao$
 ^pinkcoke$
 (?-i:^Richard Learner$)
+(?-i:-^Harry Stylesheet$)
