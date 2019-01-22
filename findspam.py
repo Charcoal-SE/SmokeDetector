@@ -12,6 +12,7 @@ from datetime import datetime
 import time
 import os
 import os.path as path
+from threading import Thread
 
 # noinspection PyPackageRequirements
 import tld
@@ -279,6 +280,7 @@ class FindSpam:
 
     loop = GlobalVars.async_loop
     rules = []
+    rules_alt = []
 
     # supplied at the bottom of this file
     rule_bad_keywords = None
@@ -311,6 +313,26 @@ class FindSpam:
     def test_post(cls, post):
         result = []
         why_title, why_username, why_body = [], [], []
+
+        def alternate_job(rule):
+            nonlocal result, why_title, why_username, why_body
+            title, username, body = rule.match(post)
+            if title[0]:
+                result.append(title[1])
+                why_title.append(title[2])
+            if username[0]:
+                result.append(username[1])
+                why_username.append(username[2])
+            if body[0]:
+                result.append(body[1])
+                why_body.append(body[2])
+
+        alt_threads = []
+        for rule in FindSpam.rules_alt:
+            thread = Thread(target=alternate_job)
+            alt_threads.append(thread)
+            thread.start()
+
         for rule in FindSpam.rules:
             title, username, body = rule.match(post)
             if title[0]:
@@ -322,6 +344,10 @@ class FindSpam:
             if body[0]:
                 result.append(body[1])
                 why_body.append(body[2])
+
+        for thread in alt_threads:
+            thread.join()
+
         result = list(set(result))
         result.sort()
         why = "\n".join(sorted(why_title + why_username + why_body)).strip()
@@ -365,7 +391,8 @@ def create_rule(reason=None, regex=None, func=None, *, all=True, sites=[],
                 title=True, body=True, body_summary=False, username=False,
                 max_score=0, max_rep=1, question=True, answer=True, stripcodeblocks=False,
                 whole_post=False,  # For some functions
-                disabled=False):  # yeah, disabled=True is intuitive
+                disabled=False,  # yeah, disabled=True is intuitive
+                alternate=False):  # Run on alternate thread, for network-based checks like DNS
     if not isinstance(reason, str):
         raise ValueError("reason must be a string")
 
@@ -373,14 +400,19 @@ def create_rule(reason=None, regex=None, func=None, *, all=True, sites=[],
         answer = False  # answers have no titles, this saves some loops
     post_filter = PostFilter(all_sites=all, sites=sites, max_score=max_score, max_rep=max_rep,
                              question=question, answer=answer)
+
     if regex is not None:
         # Standalone mode
         rule = Rule(regex, reason=reason, filter=post_filter,
                     title=title, body=body, body_summary=body_summary, username=username,
                     stripcodeblocks=stripcodeblocks)
         if not disabled:
-            FindSpam.rules.append(rule)
+            if alternate:
+                FindSpam.rules_alt.append(rule)
+            else:
+                FindSpam.rules.append(rule)
         return rule
+
     else:
         # Decorator-generator mode
         def decorator(func):
@@ -394,7 +426,10 @@ def create_rule(reason=None, regex=None, func=None, *, all=True, sites=[],
                         title=title, body=body, body_summary=body_summary, username=username,
                         stripcodeblocks=stripcodeblocks)
             if not disabled:
-                FindSpam.rules.append(rule)
+                if alternate:
+                    FindSpam.rules_alt.append(rule)
+                else:
+                    FindSpam.rules.append(rule)
             return rule
 
         if func is not None:  # Function is supplied, no need to decorate
@@ -945,7 +980,8 @@ def ns_for_url_domain(s, site, nslist):
     return False, ""
 
 
-@create_rule("potentially problematic NS configuration in {}", stripcodeblocks=True, body_summary=True)
+@create_rule("potentially problematic NS configuration in {}", stripcodeblocks=True, body_summary=True,
+             alternate=True)
 def ns_is_host(s, site):
     '''
     Check if the host name in a link resolves to the same IP address
@@ -970,7 +1006,7 @@ def ns_is_host(s, site):
     return False, ''
 
 
-@create_rule("bad NS for domain in {}", body_summary=True, stripcodeblocks=True)
+@create_rule("bad NS for domain in {}", body_summary=True, stripcodeblocks=True, alternate=True)
 def bad_ns_for_url_domain(s, site):
     return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name!
@@ -997,8 +1033,9 @@ def bad_ns_for_url_domain(s, site):
 
 # This applies to all answers, and non-SO questions
 @create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, answer=False,
-             sites=["stackoverflow.com"])
-@create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, question=False)
+             sites=["stackoverflow.com"], alternate=True)
+@create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, question=False,
+             alternate=True)
 def watched_ns_for_url_domain(s, site):
     return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name here either!
@@ -1161,7 +1198,7 @@ def asn_for_url_host(s, site, asn_list):
     return False, ""
 
 
-@create_rule("potentially bad ASN for hostname in {}", body_summary=True, stripcodeblocks=True)
+@create_rule("potentially bad ASN for hostname in {}", body_summary=True, stripcodeblocks=True, alternate=True)
 def watched_asn_for_url_hostname(s, site):
     return asn_for_url_host(
         s, site,
@@ -1540,7 +1577,8 @@ def toxic_check(post):
 
 
 if GlobalVars.perspective_key:  # don't bother if we don't have a key, since it's expensive
-    toxic_check = create_rule("toxic {} detected", func=toxic_check, whole_post=True, max_rep=101, max_score=2)
+    toxic_check = create_rule("toxic {} detected", func=toxic_check, whole_post=True, max_rep=101, max_score=2,
+                              alternate=True)
 
 
 @create_rule("body starts with title and ends in URL", whole_post=True, answer=False,
