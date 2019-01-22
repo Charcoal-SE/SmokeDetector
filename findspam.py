@@ -301,21 +301,24 @@ class FindSpam:
         result = []
         why_title, why_username, why_body = [], [], []
 
-        def alternate_job():
+        def alternate_job(rule):
             nonlocal result, why_title, why_username, why_body
-            for rule in FindSpam.rules_alt:
-                title, username, body = rule.match(post)
-                if title[0]:
-                    result.append(title[1])
-                    why_title.append(title[2])
-                if username[0]:
-                    result.append(username[1])
-                    why_username.append(username[2])
-                if body[0]:
-                    result.append(body[1])
-                    why_body.append(body[2])
-        alt_thread = Thread(target=alternate_job)
-        alt_thread.start()
+            title, username, body = rule.match(post)
+            if title[0]:
+                result.append(title[1])
+                why_title.append(title[2])
+            if username[0]:
+                result.append(username[1])
+                why_username.append(username[2])
+            if body[0]:
+                result.append(body[1])
+                why_body.append(body[2])
+
+        alt_threads = []
+        for rule in FindSpam.rules_alt:
+            thread = Thread(target=alternate_job)
+            alt_threads.append(thread)
+            thread.start()
 
         for rule in FindSpam.rules:
             title, username, body = rule.match(post)
@@ -328,7 +331,9 @@ class FindSpam:
             if body[0]:
                 result.append(body[1])
                 why_body.append(body[2])
-        alt_thread.join()
+
+        for thread in alt_threads:
+            thread.join()
 
         result = list(set(result))
         result.sort()
