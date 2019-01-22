@@ -1,5 +1,5 @@
 # coding=utf-8
-from spamhandling import check_if_spam, check_if_spam_json
+from spamhandling import check_if_spam, check_if_spam_json, should_rescan_later
 from datahandling import add_blacklisted_user, add_whitelisted_user, _remove_pickle
 from blacklists import load_blacklists
 from parsing import get_user_from_url
@@ -7,6 +7,29 @@ import pytest
 import os
 import json
 from classes import Post
+from unittest.mock import patch
+from datetime import datetime
+
+
+@patch("spamhandling.datetime")
+def test_should_rescan_later(dt, monkeypatch):
+    __import__("datahandling").update_reason_weights()
+    __import__("spamhandling").GlobalVars.reason_weights["bad keyword in body"] = 97
+    # Spam hour
+    dt.utcnow.return_value = datetime(1970, 1, 1, 8, 0, 0)
+    post = Post(api_response={})
+    post._post_site = "wordpress.stackexchange.com"
+    post._is_answer = False
+    assert should_rescan_later(post, ["bad keyword in body"], "") is True
+    assert should_rescan_later(post, ["blacklisted website in body"], "") is False
+    assert should_rescan_later(post, ["bad keyword in body", "manually reported question"], "") is False
+
+    post._post_site = "stackoverflow.com"
+    assert should_rescan_later(post, ["bad keyword in body"], "") is False
+
+    dt.utcnow.return_value = datetime(1970, 1, 1, 20, 0, 0)
+    post._post_site = "wordpress.stackexchange.com"
+    assert should_rescan_later(post, ["bad keyword in body"], "") is False
 
 
 load_blacklists()

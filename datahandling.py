@@ -181,9 +181,7 @@ def is_code_privileged(site, user_id):
 
 def update_reason_weights():
     d = {'last_updated': datetime.utcnow().date()}
-    items = metasmoke.Metasmoke.get_reason_weights()
-    if not items:
-        return  # No update
+    items = metasmoke.Metasmoke.get_reason_weights() or {}
     for item in items:
         d[item['reason_name'].lower()] = item['weight']
     GlobalVars.reason_weights = d
