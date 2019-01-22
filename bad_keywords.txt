@@ -1785,3 +1785,4 @@ maxeral\W?max(?:\W?workout)?
 insta\W?slim
 testo(?:sterone)?\W?rush
 first\W*check.{0,20}?\$55o
+magnum\W?trt
