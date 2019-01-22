@@ -208,7 +208,7 @@ def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
     reasons = list(set(question_reasons) | set(answer_reasons))
 
     # Filter out watchlist results
-    filter_out = ["potentially bad ns", "potentially bad asn"]
+    filter_out = ["potentially bad ns", "potentially bad asn", "potentially problematic"]
     if not is_watchlist:
         filter_out.append("potentially bad keyword")
     # Ignore "Mostly non-latin body/answer" for phone number watches
@@ -216,15 +216,14 @@ def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
         filter_out.extend(["mostly non-latin", "phone number detected", "messaging number detected"])
 
     if filter_out:
-        reasons = list(filter(
-            lambda reason: all([x not in reason.lower() for x in filter_out]), reasons))
+        reasons = [reason for reason in reasons if all([x not in reason.lower() for x in filter_out])]
 
     return reasons
 
 
 def format_blacklist_reasons(reasons):
     # Capitalize
-    reasons = list(map(lambda reason: reason.capitalize(), reasons))
+    reasons = [reason.capitalize() for reason in reasons]
 
     # Join
     if len(reasons) < 3:
@@ -255,7 +254,7 @@ def do_blacklist(blacklist_type, msg, force=False):
             r = regex.compile(pattern, city=findspam.city_list)
         except regex._regex_core.error:
             raise CmdException("An invalid pattern was provided, please check your command.")
-        if r.search(GlobalVars.valid_content):
+        if r.search(GlobalVars.valid_content) is not None:
             raise CmdException("That pattern is probably too broad, refusing to commit.")
 
     if not force:
