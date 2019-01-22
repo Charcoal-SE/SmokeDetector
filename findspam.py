@@ -12,6 +12,7 @@ from datetime import datetime
 import time
 import os
 import os.path as path
+from threading import Thread
 
 # noinspection PyPackageRequirements
 import tld
@@ -299,6 +300,7 @@ class FindSpam:
         start_time = time.time()
         result = []
         why_title, why_username, why_body = [], [], []
+
         def alternate_job():
             nonlocal result, why_title, why_username, why_body
             for rule in FindSpam.rules_alt:
@@ -1016,7 +1018,8 @@ def bad_ns_for_url_domain(s, site):
 # This applies to all answers, and non-SO questions
 @create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, answer=False,
              sites=["stackoverflow.com"], alternate=True)
-@create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, question=False, alternate=True)
+@create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, question=False,
+             alternate=True)
 def watched_ns_for_url_domain(s, site):
     return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name here either!
@@ -1106,7 +1109,7 @@ def asn_for_url_host(s, site, asn_list):
     return False, ""
 
 
-@create_rule("potentially bad ASN for hostname in {}", body_summary=True, stripcodeblocks=Truealternate=True)
+@create_rule("potentially bad ASN for hostname in {}", body_summary=True, stripcodeblocks=True, alternate=True)
 def watched_asn_for_url_hostname(s, site):
     return asn_for_url_host(
         s, site,
