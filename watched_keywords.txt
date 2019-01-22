@@ -7830,3 +7830,4 @@
 1548163401	tripleee	cables4computer\.com
 1548165746	tripleee	takeintopc\.com
 1548167863	tripleee	industrynewsupdate\.com
+1548190265	doppelgreener	ivalentinstag2019\.de
