@@ -297,6 +297,22 @@ class FindSpam:
     def test_post(post):
         result = []
         why_title, why_username, why_body = [], [], []
+        def alternate_job():
+            nonlocal result, why_title, why_username, why_body
+            for rule in FindSpam.rules_alt:
+                title, username, body = rule.match(post)
+                if title[0]:
+                    result.append(title[1])
+                    why_title.append(title[2])
+                if username[0]:
+                    result.append(username[1])
+                    why_username.append(username[2])
+                if body[0]:
+                    result.append(body[1])
+                    why_body.append(body[2])
+        alt_thread = Thread(target=alternate_job)
+        alt_thread.start()
+
         for rule in FindSpam.rules:
             title, username, body = rule.match(post)
             if title[0]:
@@ -308,18 +324,8 @@ class FindSpam:
             if body[0]:
                 result.append(body[1])
                 why_body.append(body[2])
-        # TODO: get the following for-loop to run in an alternate thread
-        for rule in FindSpam.rules_alt:
-            title, username, body = rule.match(post)
-            if title[0]:
-                result.append(title[1])
-                why_title.append(title[2])
-            if username[0]:
-                result.append(username[1])
-                why_username.append(username[2])
-            if body[0]:
-                result.append(body[1])
-                why_body.append(body[2])
+        alt_thread.join()
+
         result = list(set(result))
         result.sort()
         why = "\n".join(why_title + why_username + why_body).strip()
