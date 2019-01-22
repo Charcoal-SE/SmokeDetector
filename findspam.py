@@ -264,6 +264,7 @@ class Rule:
 
 class FindSpam:
     rules = []
+    rules_alt = []
 
     # supplied at the bottom of this file
     rule_bad_keywords = None
@@ -297,6 +298,18 @@ class FindSpam:
         result = []
         why_title, why_username, why_body = [], [], []
         for rule in FindSpam.rules:
+            title, username, body = rule.match(post)
+            if title[0]:
+                result.append(title[1])
+                why_title.append(title[2])
+            if username[0]:
+                result.append(username[1])
+                why_username.append(username[2])
+            if body[0]:
+                result.append(body[1])
+                why_body.append(body[2])
+        # TODO: get the following for-loop to run in an alternate thread
+        for rule in FindSpam.rules_alt:
             title, username, body = rule.match(post)
             if title[0]:
                 result.append(title[1])
@@ -350,7 +363,8 @@ def create_rule(reason=None, regex=None, func=None, *, all=True, sites=[],
                 title=True, body=True, body_summary=False, username=False,
                 max_score=0, max_rep=1, question=True, answer=True, stripcodeblocks=False,
                 whole_post=False,  # For some functions
-                disabled=False):  # yeah, disabled=True is intuitive
+                disabled=False,  # yeah, disabled=True is intuitive
+                alternate=False):  # Run on alternate thread, for network-based checks like DNS
     if not isinstance(reason, str):
         raise ValueError("reason must be a string")
 
@@ -358,14 +372,19 @@ def create_rule(reason=None, regex=None, func=None, *, all=True, sites=[],
         answer = False  # answers have no titles, this saves some loops
     post_filter = PostFilter(all_sites=all, sites=sites, max_score=max_score, max_rep=max_rep,
                              question=question, answer=answer)
+
     if regex is not None:
         # Standalone mode
         rule = Rule(regex, reason=reason, filter=post_filter,
                     title=title, body=body, body_summary=body_summary, username=username,
                     stripcodeblocks=stripcodeblocks)
         if not disabled:
-            FindSpam.rules.append(rule)
+            if alternate:
+                FindSpam.rules_alt.append(rule)
+            else:
+                FindSpam.rules.append(rule)
         return rule
+
     else:
         # Decorator-generator mode
         def decorator(func):
@@ -379,7 +398,10 @@ def create_rule(reason=None, regex=None, func=None, *, all=True, sites=[],
                         title=title, body=body, body_summary=body_summary, username=username,
                         stripcodeblocks=stripcodeblocks)
             if not disabled:
-                FindSpam.rules.append(rule)
+                if alternate:
+                    FindSpam.rules_alt.append(rule)
+                else:
+                    FindSpam.rules.append(rule)
             return rule
 
         if func is not None:  # Function is supplied, no need to decorate
