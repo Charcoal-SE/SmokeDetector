@@ -962,7 +962,8 @@ def ns_for_url_domain(s, site, nslist):
     return False, ""
 
 
-@create_rule("potentially problematic NS configuration in {}", stripcodeblocks=True, body_summary=True)
+@create_rule("potentially problematic NS configuration in {}", stripcodeblocks=True, body_summary=True,
+             alternate=True)
 def ns_is_host(s, site):
     '''
     Check if the host name in a link resolves to the same IP address
@@ -987,7 +988,7 @@ def ns_is_host(s, site):
     return False, ''
 
 
-@create_rule("bad NS for domain in {}", body_summary=True, stripcodeblocks=True)
+@create_rule("bad NS for domain in {}", body_summary=True, stripcodeblocks=True, alternate=True)
 def bad_ns_for_url_domain(s, site):
     return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name!
@@ -1014,8 +1015,8 @@ def bad_ns_for_url_domain(s, site):
 
 # This applies to all answers, and non-SO questions
 @create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, answer=False,
-             sites=["stackoverflow.com"])
-@create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, question=False)
+             sites=["stackoverflow.com"], alternate=True)
+@create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, question=False, alternate=True)
 def watched_ns_for_url_domain(s, site):
     return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name here either!
@@ -1105,7 +1106,7 @@ def asn_for_url_host(s, site, asn_list):
     return False, ""
 
 
-@create_rule("potentially bad ASN for hostname in {}", body_summary=True, stripcodeblocks=True)
+@create_rule("potentially bad ASN for hostname in {}", body_summary=True, stripcodeblocks=Truealternate=True)
 def watched_asn_for_url_hostname(s, site):
     return asn_for_url_host(
         s, site,
@@ -1484,7 +1485,8 @@ def toxic_check(post):
 
 
 if GlobalVars.perspective_key:  # don't bother if we don't have a key, since it's expensive
-    toxic_check = create_rule("toxic {} detected", func=toxic_check, whole_post=True, max_rep=101, max_score=2)
+    toxic_check = create_rule("toxic {} detected", func=toxic_check, whole_post=True, max_rep=101, max_score=2,
+                              alternate=True)
 
 
 @create_rule("body starts with title and ends in URL", whole_post=True, answer=False,
