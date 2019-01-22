@@ -97,7 +97,6 @@ muh[ae]mm[ae]d\W*the\W*pa?edophile
 ^Vico\W*Peißker$
 ^rayaz$
 customwristbands
-^\w{1,}(?:dl?san|(?:dl|ld)l?son)(?<!donaldson)$
 ^MORGAN CHAN$
 ^ZoeXie$
 ^بانه$
