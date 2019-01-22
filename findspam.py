@@ -9,6 +9,7 @@ from urllib.parse import urlparse, unquote_plus
 from itertools import chain
 from collections import Counter
 from datetime import datetime
+import time
 import os
 import os.path as path
 
@@ -295,6 +296,7 @@ class FindSpam:
 
     @staticmethod
     def test_post(post):
+        start_time = time.time()
         result = []
         why_title, why_username, why_body = [], [], []
         def alternate_job():
@@ -329,6 +331,8 @@ class FindSpam:
         result = list(set(result))
         result.sort()
         why = "\n".join(why_title + why_username + why_body).strip()
+        end_time = time.time()
+        log('debug', "Scanning took {} seconds".format(end_time - start_time))
         return result, why
 
     @staticmethod
