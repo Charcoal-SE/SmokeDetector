@@ -3607,7 +3607,6 @@
 1527768067	tripleee	cellogica
 1527768526	tripleee	[a-z_]*(?:1_*)?325[\W_]*740[\W_]*7730[a-z_]*
 1527768563	tripleee	gilbert\W?loan\W?firm
-1527768841	tripleee	nucleustechnologies\.com
 1527770684	tripleee	cognizance\W?rpm
 1527777049	Suraj Rao	nearplace\.com
 1527781189	Makyen	tourismntravel\.com
