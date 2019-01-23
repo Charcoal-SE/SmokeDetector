@@ -5607,7 +5607,6 @@
 1537439771	tripleee	[a-z_]*(?:44_*)?744[\W_]*810[\W_]*7389[a-z_]*
 1537439724	Shree	crimpsonjordan(?:@gmail\.com)
 1537457020	Makyen	initiationilluminaticenter(?:@gmail\.com)?
-1537457041	Makyen	[a-z_]*(?:1_*)?508[\W_]*819[\W_]*2672[a-z_]*(?#illuminati)
 1537457054	Makyen	675452902(?#ICQ for a hacker)
 1537457064	Makyen	hackitbackd00r(?:@gmail\.com)?
 1537457099	Makyen	rushr00t000(?#skype for a hacker)
