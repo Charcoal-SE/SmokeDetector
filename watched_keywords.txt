@@ -7837,3 +7837,4 @@
 1548213549	tripleee	quang\W?vinh
 1548214062	Tetsuya Yamamoto	govslive\.de
 1548218019	Tetsuya Yamamoto	digitalfloats\.com
+1548221216	tripleee	(?-i:^Vinson$)
