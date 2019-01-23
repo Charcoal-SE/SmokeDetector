@@ -1081,6 +1081,8 @@ def ip_for_url_host(s, site, ip_list):
     return False, ""
 
 
+@create_rule("potentially bad IP for hostname in {}",
+    stripcodeblocks=True, body_summary=True)
 def watched_ip_for_url_hostname(s, site):
     return ip_for_url_host(
         s, site,
@@ -1120,6 +1122,8 @@ def watched_ip_for_url_hostname(s, site):
         ])
 
 
+@create_rule("bad IP for hostname in {}",
+    stripcodeblocks=True, body_summary=True)
 def bad_ip_for_url_hostname(s, site):
     return ip_for_url_host(
         s, site,
