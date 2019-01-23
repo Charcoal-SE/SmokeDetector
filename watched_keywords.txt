@@ -7839,3 +7839,4 @@
 1548221216	tripleee	(?-i:^Vinson$)
 1548222145	Tetsuya Yamamoto	tatiliks\.com
 1548222154	Tetsuya Yamamoto	seodahisi\.com
+1548225028	Tetsuya Yamamoto	churchofdevil666\.wordpress\.com
