@@ -6901,7 +6901,6 @@
 1543384779	Tetsuya Yamamoto	splendidinteriors\.in
 1543391756	Glorfindel	worldscreen\.com
 1543394828	Tetsuya Yamamoto	echodevicesupport\.com
-1543396012	tripleee	(?-i:^kelvin$)
 1543398011	Tetsuya Yamamoto	mysaifco\.com
 1543398357	Tetsuya Yamamoto	prestigesmartcity\.info
 1543398848	Tetsuya Yamamoto	syntegre\.com
