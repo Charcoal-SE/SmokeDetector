@@ -1786,3 +1786,4 @@ insta\W?slim
 testo(?:sterone)?\W?rush
 first\W*check.{0,20}?\$55o
 magnum\W?trt
+ultra\W?stren\W?x(?:\W?booster)?
