@@ -1066,17 +1066,90 @@ def watched_ns_for_url_domain(s, site):
     ])
 
 
+def ip_for_url_host(s, site, ip_list):
+    # ######## FIXME: code duplication
+    for hostname in post_hosts(s, check_tld=True):
+        a = dns_query(hostname, 'a')
+        if a is not None:
+            # ######## TODO: allow blocking of IP ranges with regex or CIDR
+            for addr in set([str(x) for x in a]):
+                log('debug', 'IP: IP {0} for hostname {1}'.format(
+                    addr, hostname))
+                if addr in ip_list:
+                    return True, '{0} address {1} is blocked'.format(
+                        hostname, addr)
+    return False, ""
+
+
+@create_rule("potentially bad IP for hostname in {}",
+             stripcodeblocks=True, body_summary=True)
+def watched_ip_for_url_hostname(s, site):
+    return ip_for_url_host(
+        s, site,
+        # Watched IP list
+        [
+            # AS  20068 - HAWKHOST - Hawk Host Inc., CA.
+            '172.96.187.196',   # fake-tech-support driver-canon.com
+            '198.252.105.94',   # fake-tech-support asia-canon.com etc
+            # AS 22612 NAMECHEAP-NET
+            '68.65.122.36',     # drugs reviewscart.co.uk / purefitketopills.com
+            '104.219.248.45',   # drugs 360nutra / timesnutrition etc
+            '104.219.248.81',   # drugs supplement4world / supplementgod etc
+            '162.213.255.36',   # drugs / visit-my-website / cryptocurrency
+            '198.54.115.65',    # drugs goldencondor / visit4supplements etc
+            '198.54.116.51',    # drugs reviewsgear / crazy-bulk-review etc
+            '198.54.116.85',    # drugs mummydiet.org
+            '198.54.116.110',   # drugs epbhub / healtylifetimesupplement etc
+            '198.54.120.134',   # drugs advisorwellness / health4supplement etc
+            '198.54.126.109',   # escorts + buy-likes
+            # AS 26496 AS-26496-GO-DADDY-COM-LLC
+            '23.229.180.169',   # drugs health4supplement / supplements4lifetime etc
+            '23.229.217.167',   # drugs popsupplement / daddysupplement etc
+            '23.229.233.231',   # drugs ultavivegarcinia.es / refollium.in etc
+            '107.180.3.93',     # drugs amazonhealthstore / click2fitness etc
+            '107.180.24.240',   # drugs deal2supplement / first2order etc
+            '107.180.34.212',   # fake-tech-support 123helpline / allitexpert
+            '107.180.40.103',   # drugs + seo getbestdelight / seotipandsolution
+            '107.180.47.58',    # drugs + travel
+            '107.180.59.131',   # drugs kingofsupplement.com
+            '160.153.129.38',   # drugs supplementswellness / buyketodiet etc
+            '160.153.129.238',  # drugs bestenhancement / supplementskingpro etc
+            '166.62.28.116',    # fake-tech-support printertechsupportnumbers.com
+            '192.186.227.225',  # drugs topwellnessguru / healthcare350 etc
+            # AS 394695 PUBLIC-DOMAIN-REGISTRY - PDR, US
+            '116.206.104.141',  # fake-tech-support fake-diplomas
+            '162.215.253.205',  # drugs escorts drozien.com nehasuri.in etc
+        ])
+
+
+@create_rule("bad IP for hostname in {}",
+             stripcodeblocks=True, body_summary=True)
+def bad_ip_for_url_hostname(s, site):
+    return ip_for_url_host(
+        s, site,
+        # Blacklisted IP list
+        [
+            # AS 26347 DREAMHOST-AS
+            '75.119.210.224',  # triplet-spam
+            # AS 26496 AS-26496-GO-DADDY-COM-LLC
+            '104.25.50.105',   # crbtech.in
+            '107.180.78.164',  # gs-jj.com
+            # AS 32475 - SINGLEHOP-LLC - SingleHop LLC, US
+            '172.96.187.196'   # fake-tech-support canonfreedownload etc
+        ])
+
+
 def asn_for_url_host(s, site, asn_list):
     for hostname in post_hosts(s, check_tld=True):
         a = dns_query(hostname, 'a')
         if a is not None:
-            if asn_list:
-                for addr in set([str(x) for x in a]):
-                    log('debug', 'ASN: IP {0} for hostname {1}'.format(addr, hostname))
-                    asn = asn_query(addr)
-                    if asn in asn_list:
-                        return True, '{0} address {1} in ASN {2}'.format(
-                            hostname, addr, asn)
+            for addr in set([str(x) for x in a]):
+                log('debug', 'ASN: IP {0} for hostname {1}'.format(
+                    addr, hostname))
+                asn = asn_query(addr)
+                if asn in asn_list:
+                    return True, '{0} address {1} in ASN {2}'.format(
+                        hostname, addr, asn)
     return False, ""
 
 
