@@ -7874,3 +7874,4 @@
 1548333615	tripleee	grandapk\.com
 1548333644	tripleee	apkring\.com
 1548333738	tripleee	hatenablog\.com
+1548338654	tripleee	allitfeed\.com
