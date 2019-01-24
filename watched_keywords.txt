@@ -7856,3 +7856,4 @@
 1548314385	Tetsuya Yamamoto	softwaredownloadhelp\.com
 1548314547	Tetsuya Yamamoto	dumpskey\.com
 1548314890	Tetsuya Yamamoto	homeocares\.com
+1548315918	Tetsuya Yamamoto	narmadatech\.com
