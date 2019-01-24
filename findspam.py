@@ -1082,15 +1082,15 @@ def ip_for_url_host(s, site, ip_list):
 
 
 @create_rule("potentially bad IP for hostname in {}",
-    stripcodeblocks=True, body_summary=True)
+             stripcodeblocks=True, body_summary=True)
 def watched_ip_for_url_hostname(s, site):
     return ip_for_url_host(
         s, site,
         # Watched IP list
         [
-	    # AS  20068 - HAWKHOST - Hawk Host Inc., CA.
-	    '172.96.187.196',   # fake-tech-support driver-canon.com
-	    '198.252.105.94',   # fake-tech-support asia-canon.com etc
+            # AS  20068 - HAWKHOST - Hawk Host Inc., CA.
+            '172.96.187.196',   # fake-tech-support driver-canon.com
+            '198.252.105.94',   # fake-tech-support asia-canon.com etc
             # AS 22612 NAMECHEAP-NET
             '68.65.122.36',     # drugs reviewscart.co.uk / purefitketopills.com
             '104.219.248.45',   # drugs 360nutra / timesnutrition etc
@@ -1123,7 +1123,7 @@ def watched_ip_for_url_hostname(s, site):
 
 
 @create_rule("bad IP for hostname in {}",
-    stripcodeblocks=True, body_summary=True)
+             stripcodeblocks=True, body_summary=True)
 def bad_ip_for_url_hostname(s, site):
     return ip_for_url_host(
         s, site,
@@ -1132,10 +1132,10 @@ def bad_ip_for_url_hostname(s, site):
             # AS 26347 DREAMHOST-AS
             '75.119.210.224',  # triplet-spam
             # AS 26496 AS-26496-GO-DADDY-COM-LLC
-	    '104.25.50.105',   # crbtech.in
+            '104.25.50.105',   # crbtech.in
             '107.180.78.164',  # gs-jj.com
-	    # AS 32475 - SINGLEHOP-LLC - SingleHop LLC, US
-	    '172.96.187.196'   # fake-tech-support canonfreedownload etc
+            # AS 32475 - SINGLEHOP-LLC - SingleHop LLC, US
+            '172.96.187.196'   # fake-tech-support canonfreedownload etc
         ])
 
 
