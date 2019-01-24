@@ -7862,3 +7862,4 @@
 1548317021	tripleee	(?-i:^preya sing$)
 1548320594	Tetsuya Yamamoto	viewtoptenbest\.com
 1548320757	Tetsuya Yamamoto	analyticspath\.com
+1548323273	tripleee	acesoa\.com
