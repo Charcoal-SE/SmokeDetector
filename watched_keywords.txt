@@ -7849,3 +7849,4 @@
 1548287191	NobodyNada	locksmithboys\.com
 1548299181	Makyen	data-flair\.training
 1548305348	Tetsuya Yamamoto	ejobsresults\.com
+1548306098	Tetsuya Yamamoto	blog\.sven\.space
