@@ -7867,3 +7867,4 @@
 1548326188	tripleee	situstaruhanqq288\.com
 1548326208	tripleee	mejataruhanqq288\.com
 1548326219	tripleee	infobolaqq288\.com
+1548327151	tripleee	champions(?:hip)?\W?rings?
