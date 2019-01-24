@@ -1076,7 +1076,7 @@ def ip_for_url_host(s, site, ip_list):
                 log('debug', 'IP: IP {0} for hostname {1}'.format(
                     addr, hostname))
                 if addr in ip_list:
-                    return True, '{0} address {1} is blocked'.format(
+                    return True, '{0} suspicious IP address {1}'.format(
                         hostname, addr)
     return False, ""
 
