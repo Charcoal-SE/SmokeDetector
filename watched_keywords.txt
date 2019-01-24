@@ -7870,3 +7870,4 @@
 1548327151	tripleee	champions(?:hip)?\W?rings?
 1548328111	tripleee	(?-i:^Sikha Singh$)
 1548332766	tripleee	setscholars\.net
+1548332989	tripleee	suntekstore\.com
