@@ -7861,3 +7861,4 @@
 1548316658	tripleee	bizsys\.dk
 1548317021	tripleee	(?-i:^preya sing$)
 1548320594	Tetsuya Yamamoto	viewtoptenbest\.com
+1548320757	Tetsuya Yamamoto	analyticspath\.com
