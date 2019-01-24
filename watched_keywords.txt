@@ -7871,3 +7871,4 @@
 1548328111	tripleee	(?-i:^Sikha Singh$)
 1548332766	tripleee	setscholars\.net
 1548332989	tripleee	suntekstore\.com
+1548333615	tripleee	grandapk\.com
