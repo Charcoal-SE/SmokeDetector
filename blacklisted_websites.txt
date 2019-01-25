@@ -1554,7 +1554,7 @@ coppercrushing\.com
 bassaminfotech\.com
 tophealthmart\.com
 cloudprint\.io
-keyboardtester\.co(?!=m)
+keyboardtester\.co(?!m)
 buysupplementcanada\.ca
 supplement350\.com
 rsorder\.com
