@@ -2581,4 +2581,4 @@ viewholidaytrip\.com
 nucleustechnologies\.com
 worldwidesupplement\.com
 weightlossdietplans\.info
-cd-genomics.com
+cd-genomics\.com
