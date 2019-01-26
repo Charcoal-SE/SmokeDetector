@@ -7904,3 +7904,4 @@
 1548501691	Shree	developer\.glido\.com\.ng
 1548503277	Asuna	idliga168\.com
 1548505821	fortunate_man	luminati\.io
+1548516628	Asuna	rihawebtech\.com
