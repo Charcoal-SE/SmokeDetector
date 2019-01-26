@@ -295,7 +295,6 @@ class FindSpam:
 
     @staticmethod
     def test_post(post):
-        start_time = time.time()
         result = []
         why_title, why_username, why_body = [], [], []
         for rule in FindSpam.rules:
@@ -312,11 +311,6 @@ class FindSpam:
         result = list(set(result))
         result.sort()
         why = "\n".join(why_title + why_username + why_body).strip()
-        end_time = time.time()
-        if "pytest" in sys.modules:
-            with open("pip-log.txt", "a") as f:
-                print("{} sec".format(end_time - start_time), file=f)
-        log('debug', "Scanning took {} seconds".format(end_time - start_time))
         return result, why
 
     @staticmethod
