@@ -205,25 +205,25 @@ class Rule:
         if self.func:  # Functional check takes precedence over regex check
             if self.whole_post:
                 matched_title, matched_username, matched_body, why_text = self.func(post)
-                result_title = (matched_title, reason_title, "Title - " + why_text)
-                result_username = (matched_username, reason_username, "Username - " + why_text)
-                result_body = (matched_body, reason_body, "Post - " + why_text)
+                result_title = (matched_title, reason_title, reason_title + " - " + why_text)
+                result_username = (matched_username, reason_username, reason_username + " - " + why_text)
+                result_body = (matched_body, reason_body, reason_body + " - " + why_text)
             else:
                 if self.title and not post.is_answer:
                     matched_title, why_text = self.func(post.title, post.post_site)
-                    result_title = (matched_title, reason_title, "Title - " + why_text)
+                    result_title = (matched_title, reason_title, reason_title + " - " + why_text)
                 else:
                     result_title = (False, "", "")
 
                 if self.username:
                     matched_username, why_text = self.func(post.user_name, post.post_site)
-                    result_username = (matched_username, reason_username, "Username - " + why_text)
+                    result_username = (matched_username, reason_username, reason_username + " - " + why_text)
                 else:
                     result_username = (False, "", "")
 
                 if self.body and not post.body_is_summary:
                     matched_body, why_text = self.func(body_to_check, post.post_site)
-                    result_body = (matched_body, reason_body, "Body - " + why_text)
+                    result_body = (matched_body, reason_body, reason_body + " - " + why_text)
                 elif self.body_summary and post.body_is_summary:
                     matched_body, useless = self.func(body_to_check, post.post_site)
                     result_body = (matched_body, "", "")
@@ -234,20 +234,23 @@ class Rule:
 
             if self.title and not post.is_answer:
                 matches = list(compiled_regex.finditer(post.title))
-                result_title = (bool(matches), reason_title, "Title - " + FindSpam.match_infos(matches))
+                result_title = (bool(matches), reason_title,
+                                reason_title + " - " + FindSpam.match_infos(matches))
             else:
                 result_title = (False, "", "")
 
             if self.username:
                 matches = list(compiled_regex.finditer(post.user_name))
-                result_username = (bool(matches), reason_username, "Username - " + FindSpam.match_infos(matches))
+                result_username = (bool(matches), reason_username,
+                                   reason_username + " - " + FindSpam.match_infos(matches))
             else:
                 result_username = (False, "", "")
 
             if (self.body and not post.body_is_summary) \
                     or (self.body_summary and post.body_is_summary):
                 matches = list(compiled_regex.finditer(body_to_check))
-                result_body = (bool(matches), reason_body, "Body - " + FindSpam.match_infos(matches))
+                result_body = (bool(matches), reason_body,
+                               reason_body + " - " + FindSpam.match_infos(matches))
             else:
                 result_body = (False, "", "")
         else:
@@ -310,7 +313,7 @@ class FindSpam:
                 why_body.append(body[2])
         result = list(set(result))
         result.sort()
-        why = "\n".join(why_title + why_username + why_body).strip()
+        why = "\n".join(sorted(why_title + why_username + why_body)).strip()
         return result, why
 
     @staticmethod
