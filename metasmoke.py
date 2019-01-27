@@ -185,8 +185,8 @@ class Metasmoke:
         metasmoke_key = GlobalVars.metasmoke_key
 
         try:
-            if len(why) > 2048:
-                why = why[:1024] + '...' + why[-1021:]  # Basic maths
+            if len(why) > 4096:
+                why = why[:2048] + ' ... ' + why[-2043:]  # Basic maths
 
             post = {'title': title, 'link': link, 'reasons': reasons,
                     'body': body, 'username': username, 'user_link': user_link,

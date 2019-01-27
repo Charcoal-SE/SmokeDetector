@@ -741,7 +741,7 @@ def pattern_product_name(s, site):
     # Total "unique words in each match"
     total_words = sum([n for n in [len(set([regex.sub(r"\d", "", w) for w in m])) for m in matches] if n >= 2])
     if total_words >= 3:
-        return True, u"Pattern-matching product name: " + FindSpam.match_infos(match_items)
+        return True, FindSpam.match_infos(match_items)
     return False, ""
 
 
@@ -1219,7 +1219,7 @@ def is_offensive_post(s, site):
         text_matched.append(match.group(0))
 
     if len_of_match / len(s) >= 0.015:  # currently at 1.5%, this can change if it needs to
-        return True, "Offensive keyword: {}".format(FindSpam.match_infos(matches))
+        return True, FindSpam.match_infos(matches)
     return False, ""
 
 

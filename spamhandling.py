@@ -123,9 +123,9 @@ def handle_spam(post, reasons, why):
     if GlobalVars.reason_weights or GlobalVars.metasmoke_key:
         reason_weight = sum_weight(reasons)
         if reason_weight >= 1000:
-            reason_weight_s = " (**{:,}**)".format(reason_weight)
+            reason_weight_s = " (**{}**)".format(reason_weight)
         else:
-            reason_weight_s = " ({:,})".format(reason_weight)
+            reason_weight_s = " ({})".format(reason_weight)
     else:  # No reason weight if neither cache nor MS
         reason_weight_s = ""
     try:
