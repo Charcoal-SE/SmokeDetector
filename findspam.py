@@ -1892,13 +1892,13 @@ create_rule("pattern-matching website in {}",
             stripcodeblocks=True, body_summary=True, max_score=1)
 # Country-name domains, travel and expats sites are exempt
 create_rule("pattern-matching website in {}",
-            r"(?i)([\w-]{6}|shop)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|"
+            r"(?i)\b(?:[\w-]{6,}|\w*shop\w*)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|"
             r"spain|sweden)\w{0,4}\.(com|net)",
             sites=["travel.stackexchange.com", "expatriates.stackexchange.com"],
             username=True, body_summary=True)
 # The TLDs of Iran, Pakistan, and Tokelau in answers
 create_rule("pattern-matching website in {}",
-            r'(?i)http\S*(?<![/.]tcl)\.(ir|pk|tk)[/"<]',
+            r'(?i)http\S*?(?<![/.]tcl)\.(ir|pk|tk)(?=[/"<])',
             username=True, body_summary=True, question=False)
 # Suspicious health-related websites, health sites are exempt
 create_rule("pattern-matching website in {}",
