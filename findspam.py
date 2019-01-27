@@ -1838,7 +1838,7 @@ create_rule("potentially bad keyword in {}", r'\bcorn\b', all=False, sites=['ble
             username=True)
 # Bad keywords in titles only, all sites
 # The rule is supposed to trigger on stuff like f.r.e.e d.o.w.n.l.o.a.d
-create_rule("bad keyword in {}", r"(?i)\b(?!s.m.a.r.t|s.h.i.e.l.d|s.o.l.i.d|o.s.a.r.l).?[a-z](?:\.+[a-z]){4,}\b",
+create_rule("bad keyword in {}", r"(?i)\b(?!s.m.a.r.t|s.h.i.e.l.d|s.o.l.i.d|o.s.a.r.l)[a-z](?:\.+[a-z]){4,}\b",
             body=False)
 create_rule("bad keyword in {}",
             r'(?i)[\w\s]{0,20}help(?: a)?(?: weak)? postgraduate student(?: to)? write(?: a)? book\??',
