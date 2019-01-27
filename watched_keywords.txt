@@ -7912,3 +7912,4 @@
 1548597741	Zoe	jvz3\.com
 1548604840	iBug	mywifiexthelp(?:\.net)?
 1548607330	Makyen	shamimc36(?:@gmail\.com)?
+1548608955	doppelgreener	(cash|love|money) spell
