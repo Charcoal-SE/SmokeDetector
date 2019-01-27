@@ -7908,3 +7908,4 @@
 1548540042	Makyen	hugoplumbingtx\.com
 1548542010	Makyen	mygofunnel\.com
 1548542226	Makyen	power\W*lead\W*system
+1548558394	Makyen	adamokpoko(?:@gmail\.com)?
