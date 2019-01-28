@@ -7915,3 +7915,4 @@
 1548650219	ArtOfCode	riha\W*web\W*tech(?:\.com)?
 1548653262	iBug	rbt201\.ru
 1548666694	Sonic the Introverted Hedgehog	thechiletimes\.cl
+1548673917	Shree	toursandtaxi\.com
