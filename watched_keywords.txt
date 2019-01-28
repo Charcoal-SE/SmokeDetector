@@ -7914,3 +7914,4 @@
 1548608955	doppelgreener	(cash|love|money) spell
 1548613843	Zoe	sheswaitingforyou\.blogspot
 1548650219	ArtOfCode	riha\W*web\W*tech(?:\.com)?
+1548653262	iBug	rbt201\.ru
