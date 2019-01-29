@@ -7927,3 +7927,4 @@
 1548735128	Tetsuya Yamamoto	chinesehsks\.com
 1548736338	Tetsuya Yamamoto	salesforcebofc\.com
 1548736435	Tetsuya Yamamoto	wegatech\.com
+1548737612	Nisse Engström	alltechskills\.net
