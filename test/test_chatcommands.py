@@ -86,7 +86,7 @@ def test_bisect():
     msg.content_source = "!!/bisect OoOasdfghjklOoO"
     assert chatcommands.bisect(None, original_msg=msg) == r"'OoOasdfghjklOoO' is not caught by a blacklist or watchlist item."
 
-    
+
 """
 @patch("chatcommands.datetime")
 def test_hats(date):
