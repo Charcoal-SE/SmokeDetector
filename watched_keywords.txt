@@ -7926,3 +7926,4 @@
 1548733606	Tetsuya Yamamoto	uptheproduction\.com
 1548735128	Tetsuya Yamamoto	chinesehsks\.com
 1548736338	Tetsuya Yamamoto	salesforcebofc\.com
+1548736435	Tetsuya Yamamoto	wegatech\.com
