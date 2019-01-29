@@ -2051,6 +2051,12 @@ create_rule("bad keyword in {}",
             r"JAMAL",
             all=False, sites=["codereview.stackexchange.com"],
             username=True, body_summary=True)
+# Eggplant emoji
+create_rule("potentially bad keyword in {}",
+            r"\U0001F346",  # Unicode value for the eggplant emoji
+            sites=["es.stackoverflow.com", "pt.stackoverflow.com", "ru.stackoverflow.com", "ja.stackoverflow.com",
+                   "rus.stackexchange.com"],
+            max_rep=5000, max_score=3)
 # Academia kangaroos
 create_rule("bad keyword in {}"
             r"(?i)kangaroos",
