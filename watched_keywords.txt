@@ -7925,4 +7925,3 @@
 1548733597	Tetsuya Yamamoto	chandinch\.ir
 1548733606	Tetsuya Yamamoto	uptheproduction\.com
 1548735128	Tetsuya Yamamoto	chinesehsks\.com
-1548735624	Makyen	^(?=Q)Z(?#testing; matches nothing)
