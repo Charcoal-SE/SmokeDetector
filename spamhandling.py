@@ -28,7 +28,8 @@ def sum_weight(reasons: list):
     if not GlobalVars.reason_weights:
         datahandling.update_reason_weights()
     now = datetime.utcnow() - timedelta(minutes=15)
-    if now.date() != GlobalVars.reason_weights['last_updated'] and now.hour >= 1:
+    if 'last_updated' not in GlobalVars.reason_weights or \
+            (now.date() != GlobalVars.reason_weights['last_updated'] and now.hour >= 1):
         Tasks.do(datahandling.update_reason_weights)
     s = 0
     weights = GlobalVars.reason_weights
