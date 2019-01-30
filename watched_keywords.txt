@@ -7952,3 +7952,4 @@
 1548816665	Tetsuya Yamamoto	my-doll\.com
 1548816794	Tetsuya Yamamoto	reservationsdeal\.com
 1548824388	Tetsuya Yamamoto	hayatkhalvat\.com
+1548827743	Makyen	^homeocares?$
