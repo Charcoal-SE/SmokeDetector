@@ -7954,3 +7954,4 @@
 1548824388	Tetsuya Yamamoto	hayatkhalvat\.com
 1548827743	Makyen	^homeocares?$
 1548828035	Makyen	terragreen\W*coin
+1548829796	Shree	atrc\.net\.pk
