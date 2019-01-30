@@ -7964,3 +7964,4 @@
 1548847119	Glorfindel	cateringcompany\.in
 1548849899	Shree	mailsstore\.com
 1548852272	Shree	tallysolutions-uae\.com
+1548879711	Zoe	buy\W*(?:you\W*tube|instagram)\W*(?:views?|subscribers?|followers?)
