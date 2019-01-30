@@ -286,6 +286,7 @@ class Metasmoke:
                 GlobalVars.metasmoke_last_ping_time = datetime.now()  # Otherwise the ping watcher will exit(10)
 
                 if response.get('pull_update', False):
+                    log('info', "Received pull command from MS ping response")
                     exit_mode("pull_update")
 
                 if 'failover' in response and GlobalVars.standby_mode:

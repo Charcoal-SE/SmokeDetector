@@ -149,6 +149,10 @@ def log_exception(exctype, value, tb, f=False):
     ErrorLogs.add(now.timestamp(), exctype.__name__, str(value), tr)
 
 
+def log_current_exception(f=False):
+    log_exception(*sys.exc_info(), f)
+
+
 def files_changed(diff, file_set):
     changed = set(diff.split())
     return bool(len(changed & file_set))
