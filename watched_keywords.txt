@@ -7951,3 +7951,4 @@
 1548816436	Tetsuya Yamamoto	1234movies\.xyz
 1548816665	Tetsuya Yamamoto	my-doll\.com
 1548816794	Tetsuya Yamamoto	reservationsdeal\.com
+1548824388	Tetsuya Yamamoto	hayatkhalvat\.com
