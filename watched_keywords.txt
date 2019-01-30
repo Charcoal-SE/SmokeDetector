@@ -7953,3 +7953,4 @@
 1548816794	Tetsuya Yamamoto	reservationsdeal\.com
 1548824388	Tetsuya Yamamoto	hayatkhalvat\.com
 1548827743	Makyen	^homeocares?$
+1548828035	Makyen	terragreen\W*coin
