@@ -24,6 +24,7 @@ import chatcommunicate
 
 from helpers import log
 from globalvars import GlobalVars
+from tasks import new_async_loop
 import blacklists
 
 
@@ -273,6 +274,10 @@ class Rule:
 
 
 class FindSpam:
+    if not GlobalVars.async_loop:
+        GlobalVars.async_loop = new_async_loop("FindSpam")
+
+    loop = GlobalVars.async_loop
     rules = []
 
     # supplied at the bottom of this file
@@ -302,8 +307,8 @@ class FindSpam:
             process_numlist(GlobalVars.watched_numbers)
         log('debug', "Global blacklists loaded")
 
-    @staticmethod
-    def test_post(post):
+    @classmethod
+    def test_post(cls, post):
         result = []
         why_title, why_username, why_body = [], [], []
         for rule in FindSpam.rules:

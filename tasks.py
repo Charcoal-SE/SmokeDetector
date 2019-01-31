@@ -30,7 +30,8 @@ class Tasks:
 
     @classmethod
     def periodic(cls, func, *args, interval=None, **kwargs):
-        async def f():
+        @asyncio.coroutine
+        def f():
             while True:
                 yield from asyncio.sleep(interval)
                 func(*args, **kwargs)
@@ -39,6 +40,12 @@ class Tasks:
         cls.loop._write_to_self()
 
         return handle
+
+
+def new_aync_loop(name=None):
+    loop = asyncio.new_event_loop()
+    Thread(target=loop.run_forever, name=name).start()
+    return loop
 
 
 threading.Thread(name="tasks", target=Tasks._run, daemon=True).start()
