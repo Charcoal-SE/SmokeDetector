@@ -280,6 +280,60 @@ class Rule:
             return self.func(*args, **kwargs)
         raise TypeError("This rule has no function set, can't call")
 
+    # Avoid code duplication?
+    async def async_match(self, post):
+        if not self.filter.match(post):
+            # Post not matching the filter
+            return [(False, "", "")] * 3
+
+        body_to_check = post.body.replace("&nsbp;", "").replace("\xAD", "") \
+                                 .replace("\u200B", "").replace("\u200C", "")
+        body_name = "body" if not post.is_answer else "answer"
+        reason_title = self.reason.replace("{}", "title")
+        reason_username = self.reason.replace("{}", "username")
+        reason_body = self.reason.replace("{}", body_name)
+
+        if self.stripcodeblocks:
+            # use a placeholder to avoid triggering "few unique characters" when most of post is code
+            # XXX: "few unique characters" doesn't enable this, so remove placeholder?
+            body_to_check = regex.sub("(?s)<pre>.*?</pre>", "\ncode\n", body_to_check)
+            body_to_check = regex.sub("(?s)<code>.*?</code>", "\ncode\n", body_to_check)
+
+        matched_title, matched_body, matched_username = False, False, False
+        result_title, result_username, result_body = None, None, None
+        if self.whole_post:
+            matched_title, matched_username, matched_body, why_text = await self.func(post)
+            result_title = (matched_title, reason_title,
+                            reason_title.capitalize() + " - " + why_text)
+            result_username = (matched_username, reason_username,
+                               reason_username.capitalize() + " - " + why_text)
+            result_body = (matched_body, reason_body,
+                           reason_body.capitalize() + " - " + why_text)
+        else:
+            if self.title and not post.is_answer:
+                matched_title, why_text = await self.func(post.title, post.post_site)
+                result_title = (matched_title, reason_title,
+                                reason_title.capitalize() + " - " + why_text)
+            else:
+                result_title = (False, "", "")
+
+            if self.username:
+                matched_username, why_text = await self.func(post.user_name, post.post_site)
+                result_username = (matched_username, reason_username,
+                                   reason_username.capitalize() + " - " + why_text)
+            else:
+                result_username = (False, "", "")
+
+            if self.body and not post.body_is_summary:
+                matched_body, why_text = await self.func(body_to_check, post.post_site)
+                result_body = (matched_body, reason_body,
+                               reason_body.capitalize() + " - " + why_text)
+            elif self.body_summary and post.body_is_summary:
+                matched_body, useless = await self.func(body_to_check, post.post_site)
+                result_body = (matched_body, "", "")
+            else:
+                result_body = (False, "", "")
+
 
 class FindSpam:
     if not GlobalVars.async_loop:
@@ -326,7 +380,7 @@ class FindSpam:
         coroutines = []
         futures = []
         for rule in FindSpam.rules_alt:
-            co = rule.match(post)
+            co = rule.async_match(post)
             fu = asyncio.run_coroutine_threadsafe(co, cls.loop)
             coroutines.append(co)
             futures.append(fu)
