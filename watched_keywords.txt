@@ -7959,7 +7959,6 @@
 1548836069	Tetsuya Yamamoto	quantumitinnovation\.com
 1548838800	Tetsuya Yamamoto	expovan\.com
 1548838993	Tetsuya Yamamoto	advanceinnovationgroup\.com
-1548844760	angussidney	letslearntech\.com
 1548846285	CalvT	palesoko\.com
 1548847119	Glorfindel	cateringcompany\.in
 1548849899	Shree	mailsstore\.com
