@@ -7992,3 +7992,4 @@
 1548933807	Shree	thebestvacuumcleaner\.net
 1548939474	ArtOfCode	light-novel\.online
 1548953536	Makyen	nclmaz\.com
+1548953547	Makyen	newcovenantlifeministryaz(?:@gmail\.com)?
