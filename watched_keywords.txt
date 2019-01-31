@@ -7969,3 +7969,4 @@
 1548881629	Makyen	iternas-academy.com
 1548898644	Nisse Engström	chatsdosti\.com
 1548903426	Nisse Engström	atoxchain\.io
+1548903492	Nisse Engström	wafcoin\.net
