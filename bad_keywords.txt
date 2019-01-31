@@ -1792,3 +1792,4 @@ Finfree\W*Enterprise
 sc\W?a\W?cream
 truu\W?keto
 enzothrust
+ketoviante(?:\W?diet)?
