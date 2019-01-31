@@ -7993,3 +7993,4 @@
 1548939474	ArtOfCode	light-novel\.online
 1548953536	Makyen	nclmaz\.com
 1548953547	Makyen	newcovenantlifeministryaz(?:@gmail\.com)?
+1548953555	Makyen	diabetescares\.in
