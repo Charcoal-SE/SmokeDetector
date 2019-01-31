@@ -7966,7 +7966,6 @@
 1548852272	Shree	tallysolutions-uae\.com
 1548879711	Zoe	buy\W*(?:you\W*tube|instagram)\W*(?:views?|subscribers?|followers?)
 1548879785	Zoe	kfollow
-1548881629	Makyen	iternas-academy.com
 1548898644	Nisse Engström	chatsdosti\.com
 1548903426	Nisse Engström	atoxchain\.io
 1548903492	Nisse Engström	wafcoin\.net
