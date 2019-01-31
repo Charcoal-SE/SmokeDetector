@@ -1038,7 +1038,7 @@ async def ns_for_url_domain(s, site, nslist):
     for domain in set(domains):
         ns = await dns_query(domain, 'ns')
         if ns is not None:
-            nameservers = set([server.target.to_text() for server in ns])
+            nameservers = set([result.host + "." for result in ns])
             for ns_candidate in nslist:
                 if (type(ns_candidate) is set and nameservers == ns_candidate) \
                     or any(ns.endswith('.{0}'.format(ns_candidate))
