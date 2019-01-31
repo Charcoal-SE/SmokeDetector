@@ -30,8 +30,7 @@ class Tasks:
 
     @classmethod
     def periodic(cls, func, *args, interval=None, **kwargs):
-        @asyncio.coroutine
-        def f():
+        async def f():
             while True:
                 yield from asyncio.sleep(interval)
                 func(*args, **kwargs)
