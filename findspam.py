@@ -978,6 +978,7 @@ def purge_cache(cachevar, limit):
 # TODO: get asyncdns working here
 async def dns_query(label, qtype):
     global DNS_CACHE
+    qtype = qtype.upper()
     if (label, qtype) in DNS_CACHE:
         log('debug', 'dns_query: returning cached {0} value for {1}'.format(
             qtype, label))
