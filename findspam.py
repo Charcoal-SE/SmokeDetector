@@ -400,7 +400,7 @@ class FindSpam:
                 why_body.append(body[2])
 
         # Collect results from coroutines
-        asyncio.wait_for(coroutines, 0)  # 0 = Forever
+        asyncio.wait_for(coroutines, None)  # timeout = None aka never
         for fu in futures:
             assert fu.done()
             title, username, body = fu.result()
@@ -986,8 +986,8 @@ async def dns_query(label, qtype):
     try:
         starttime = datetime.now()
         answer = await dns.resolver.query(label, qtype)  # TODO TODO TODO
-    except dns.exception.DNSException as exc:
-        if str(exc).startswith('None of DNS query names exist:'):
+    except aiodns.error.DNSError as exc:
+        if "Domain name not found" in str(exc):
             log('debug', 'DNS label {0} not found; skipping'.format(label))
         else:
             endtime = datetime.now()
