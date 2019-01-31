@@ -42,9 +42,9 @@ class Tasks:
         return handle
 
 
-def new_aync_loop(name=None):
+def new_async_loop(name=None, daemon=True):
     loop = asyncio.new_event_loop()
-    threading.Thread(target=loop.run_forever, name=name).start()
+    threading.Thread(target=loop.run_forever, name=name, daemon=daemon).start()
     return loop
 
 

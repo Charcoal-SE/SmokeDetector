@@ -286,7 +286,7 @@ class FindSpam:
         GlobalVars.async_loop = new_async_loop("FindSpam")
 
     loop = GlobalVars.async_loop
-    dns.resolver = aiodns.Resolver(loop=loop)
+    dns.resolver = aiodns.DNSResolver(loop=loop)
     rules = []
     rules_alt = []
 
