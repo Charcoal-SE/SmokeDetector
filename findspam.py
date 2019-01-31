@@ -333,6 +333,7 @@ class Rule:
                 result_body = (matched_body, "", "")
             else:
                 result_body = (False, "", "")
+        return result_title, result_username, result_body
 
 
 class FindSpam:
