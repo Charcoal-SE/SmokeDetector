@@ -44,7 +44,7 @@ class Tasks:
 
 def new_aync_loop(name=None):
     loop = asyncio.new_event_loop()
-    Thread(target=loop.run_forever, name=name).start()
+    threading.Thread(target=loop.run_forever, name=name).start()
     return loop
 
 

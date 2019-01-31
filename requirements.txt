@@ -15,5 +15,7 @@ termcolor>=1.1.0
 sh>=1.12.14
 typing>=3.6.4
 dnspython>=1.15.0
+aiodns>=1.2.0
+aiohttp>=3.5.0
 PyYAML>=3.12
 msgpack-python>=0.5.6

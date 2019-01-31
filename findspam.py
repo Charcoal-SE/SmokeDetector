@@ -13,13 +13,14 @@ import time
 import os
 import os.path as path
 from threading import Thread
+import asyncio
 
 # noinspection PyPackageRequirements
 import tld
 # noinspection PyPackageRequirements
 from tld.utils import TldDomainNotFound
 import phonenumbers
-import dns.resolver
+import aiodns
 import requests
 import chatcommunicate
 
@@ -27,6 +28,11 @@ from helpers import log
 from globalvars import GlobalVars
 from tasks import new_async_loop
 import blacklists
+
+
+# Cheap trick to create compatible code :)
+class dns:  # noqa: N801
+    resolver = None  # To be populated later
 
 
 TLD_CACHE = []
@@ -279,6 +285,7 @@ class FindSpam:
         GlobalVars.async_loop = new_async_loop("FindSpam")
 
     loop = GlobalVars.async_loop
+    dns.resolver = aiodns.Resolver(loop=loop)
     rules = []
     rules_alt = []
 
@@ -1545,25 +1552,20 @@ def no_whitespace_body(s, site):
     return no_whitespace(s, site, body=True)
 
 
-# TODO: get aiohttp working here
 async def toxic_check(post):
     s = strip_urls_and_tags(post.body)[:3000]
 
     if not s:
         return False, False, False, ""
 
+    payload = {
+        "comment": {"text": s},
+        "requestedAttributes": {"TOXICITY": {"scoreType": "PROBABILITY"}}
+    }
     try:
-        response = await requests.post(PERSPECTIVE, json={  # TODO TODO TODO
-            "comment": {
-                "text": s
-            },
-
-            "requestedAttributes": {
-                "TOXICITY": {
-                    "scoreType": "PROBABILITY"
-                }
-            }
-        }).json()
+        async with aiohttp.ClientSession() as session:
+            async with session.post(PERSPECTIVE, json=payload) as raw_response:
+                response = await raw_response.json()
     except (requests.exceptions.ConnectionError, ValueError):
         return False, False, False, ""
 
