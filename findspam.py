@@ -975,7 +975,6 @@ def purge_cache(cachevar, limit):
             del cachevar[old]
 
 
-# TODO: get asyncdns working here
 async def dns_query(label, qtype):
     global DNS_CACHE
     qtype = qtype.upper()
@@ -985,7 +984,7 @@ async def dns_query(label, qtype):
         return DNS_CACHE[(label, qtype)]['result']
     try:
         starttime = datetime.now()
-        answer = await dns.resolver.query(label, qtype)  # TODO TODO TODO
+        answer = await dns.resolver.query(label, qtype)
     except aiodns.error.DNSError as exc:
         if "Domain name not found" in str(exc):
             log('debug', 'DNS label {0} not found; skipping'.format(label))
@@ -1012,8 +1011,8 @@ async def asn_query(ip):
     '''
     pi = list(reversed(ip.split('.')))
     asn = await dns_query('.'.join(pi + ['origin.asn.cymru.com.']), 'txt')
-    if asn is not None:
-        for txt in set([str(x) for x in asn]):
+    if asn:
+        for txt in set([x.text.decode("utf-8") for x in asn]):
             log('debug', '{0}: Raw ASN lookup result: {1}'.format(ip, txt))
             if ' | ' in txt:
                 return txt.split(' | ')[0].strip('"')
@@ -1059,15 +1058,15 @@ async def ns_is_host(s, site):
         host_ip = await dns_query(hostname, 'a')
         if host_ip is None:
             continue
-        host_ips = set([str(x) for x in host_ip])
+        host_ips = set([x.host for x in host_ip])
         domain = get_domain(hostname, full=True)
         nameservers = await dns_query(domain, 'ns')
         if nameservers is not None:
             ns_ips = []
             for ns in nameservers:
-                this_ns_ips = await dns_query(str(ns), 'a')
+                this_ns_ips = await dns_query(ns.host, 'a')
                 if this_ns_ips is not None:
-                    ns_ips.extend([str(ip) for ip in this_ns_ips])
+                    ns_ips.extend([ip.host for ip in this_ns_ips])
             if set(ns_ips) == host_ips:
                 return True, 'Suspicious nameservers: all IP addresses for {0} are in set {1}'.format(
                     hostname, host_ips)
@@ -1185,7 +1184,7 @@ async def ip_for_url_host(s, site, ip_list):
         a = await dns_query(hostname, 'a')
         if a is not None:
             # ######## TODO: allow blocking of IP ranges with regex or CIDR
-            for addr in set([str(x) for x in a]):
+            for addr in set([x.host for x in a]):
                 log('debug', 'IP: IP {0} for hostname {1}'.format(
                     addr, hostname))
                 if addr in ip_list:
@@ -1255,8 +1254,8 @@ async def bad_ip_for_url_hostname(s, site):
 async def asn_for_url_host(s, site, asn_list):
     for hostname in post_hosts(s, check_tld=True):
         a = await dns_query(hostname, 'a')
-        if a is not None:
-            for addr in set([str(x) for x in a]):
+        if a:
+            for addr in set([x.host for x in a]):
                 log('debug', 'ASN: IP {0} for hostname {1}'.format(
                     addr, hostname))
                 asn = await asn_query(addr)
