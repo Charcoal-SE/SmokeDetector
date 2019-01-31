@@ -1055,7 +1055,7 @@ async def ns_is_host(s, site):
     as the IP addresses of all its name servers.
     '''
     for hostname in post_hosts(s, check_tld=True):
-        host_ip = dns_query(hostname, 'a')
+        host_ip = await dns_query(hostname, 'a')
         if host_ip is None:
             continue
         host_ips = set([str(x) for x in host_ip])
