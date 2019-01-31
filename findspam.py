@@ -400,9 +400,8 @@ class FindSpam:
                 why_body.append(body[2])
 
         # Collect results from coroutines
-        asyncio.wait_for(coroutines, None)  # timeout = None aka never
+        # asyncio.wait_for(coroutines, None)
         for fu in futures:
-            assert fu.result() is not None
             title, username, body = fu.result()
             if title[0]:
                 result.append(title[1])
