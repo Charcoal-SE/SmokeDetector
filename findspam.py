@@ -314,25 +314,16 @@ class FindSpam:
         result = []
         why_title, why_username, why_body = [], [], []
 
-        def alternate_job(rule):
-            nonlocal result, why_title, why_username, why_body
-            title, username, body = rule.match(post)
-            if title[0]:
-                result.append(title[1])
-                why_title.append(title[2])
-            if username[0]:
-                result.append(username[1])
-                why_username.append(username[2])
-            if body[0]:
-                result.append(body[1])
-                why_body.append(body[2])
-
-        alt_threads = []
+        # Get those coroutines kicked off
+        coroutines = []
+        futures = []
         for rule in FindSpam.rules_alt:
-            thread = Thread(target=alternate_job)
-            alt_threads.append(thread)
-            thread.start()
+            co = rule.match(post)
+            fu = asyncio.run_coroutine_threadsafe(co, cls.loop)
+            coroutines.append(co)
+            futures.append(fu)
 
+        # Run the main stuff
         for rule in FindSpam.rules:
             title, username, body = rule.match(post)
             if title[0]:
@@ -345,8 +336,20 @@ class FindSpam:
                 result.append(body[1])
                 why_body.append(body[2])
 
-        for thread in alt_threads:
-            thread.join()
+        # Collect results from coroutines
+        asyncio.wait_for(coroutines, 0)  # 0 = Forever
+        for fu in futures:
+            assert fu.done()
+            title, username, body = fu.result()
+            if title[0]:
+                result.append(title[1])
+                why_title.append(title[2])
+            if username[0]:
+                result.append(username[1])
+                why_username.append(username[2])
+            if body[0]:
+                result.append(body[1])
+                why_body.append(body[2])
 
         result = list(set(result))
         result.sort()
@@ -909,7 +912,8 @@ def purge_cache(cachevar, limit):
             del cachevar[old]
 
 
-def dns_query(label, qtype):
+# TODO: get asyncdns working here
+async def dns_query(label, qtype):
     global DNS_CACHE
     if (label, qtype) in DNS_CACHE:
         log('debug', 'dns_query: returning cached {0} value for {1}'.format(
@@ -917,7 +921,7 @@ def dns_query(label, qtype):
         return DNS_CACHE[(label, qtype)]['result']
     try:
         starttime = datetime.now()
-        answer = dns.resolver.query(label, qtype)
+        answer = await dns.resolver.query(label, qtype)  # TODO TODO TODO
     except dns.exception.DNSException as exc:
         if str(exc).startswith('None of DNS query names exist:'):
             log('debug', 'DNS label {0} not found; skipping'.format(label))
@@ -938,12 +942,12 @@ def dns_query(label, qtype):
     return answer
 
 
-def asn_query(ip):
+async def asn_query(ip):
     '''
     http://www.team-cymru.com/IP-ASN-mapping.html
     '''
     pi = list(reversed(ip.split('.')))
-    asn = dns_query('.'.join(pi + ['origin.asn.cymru.com.']), 'txt')
+    asn = await dns_query('.'.join(pi + ['origin.asn.cymru.com.']), 'txt')
     if asn is not None:
         for txt in set([str(x) for x in asn]):
             log('debug', '{0}: Raw ASN lookup result: {1}'.format(ip, txt))
@@ -952,7 +956,7 @@ def asn_query(ip):
     return None
 
 
-def ns_for_url_domain(s, site, nslist):
+async def ns_for_url_domain(s, site, nslist):
     if "pytest" in sys.modules:
         for nsentry in nslist:
             if isinstance(nsentry, set):
@@ -968,7 +972,7 @@ def ns_for_url_domain(s, site, nslist):
         domains.append(get_domain(hostname, full=True))
 
     for domain in set(domains):
-        ns = dns_query(domain, 'ns')
+        ns = await dns_query(domain, 'ns')
         if ns is not None:
             nameservers = set([server.target.to_text() for server in ns])
             for ns_candidate in nslist:
@@ -982,7 +986,7 @@ def ns_for_url_domain(s, site, nslist):
 
 @create_rule("potentially problematic NS configuration in {}", stripcodeblocks=True, body_summary=True,
              alternate=True)
-def ns_is_host(s, site):
+async def ns_is_host(s, site):
     '''
     Check if the host name in a link resolves to the same IP address
     as the IP addresses of all its name servers.
@@ -993,11 +997,11 @@ def ns_is_host(s, site):
             continue
         host_ips = set([str(x) for x in host_ip])
         domain = get_domain(hostname, full=True)
-        nameservers = dns_query(domain, 'ns')
+        nameservers = await dns_query(domain, 'ns')
         if nameservers is not None:
             ns_ips = []
             for ns in nameservers:
-                this_ns_ips = dns_query(str(ns), 'a')
+                this_ns_ips = await dns_query(str(ns), 'a')
                 if this_ns_ips is not None:
                     ns_ips.extend([str(ip) for ip in this_ns_ips])
             if set(ns_ips) == host_ips:
@@ -1007,8 +1011,8 @@ def ns_is_host(s, site):
 
 
 @create_rule("bad NS for domain in {}", body_summary=True, stripcodeblocks=True, alternate=True)
-def bad_ns_for_url_domain(s, site):
-    return ns_for_url_domain(s, site, [
+async def bad_ns_for_url_domain(s, site):
+    return await ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name!
         {'ns1.md-95.bigrockservers.com.', 'ns2.md-95.bigrockservers.com.'},
         {'ns1.md-99.bigrockservers.com.', 'ns2.md-99.bigrockservers.com.'},
@@ -1036,8 +1040,8 @@ def bad_ns_for_url_domain(s, site):
              sites=["stackoverflow.com"], alternate=True)
 @create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, question=False,
              alternate=True)
-def watched_ns_for_url_domain(s, site):
-    return ns_for_url_domain(s, site, [
+async def watched_ns_for_url_domain(s, site):
+    return await ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name here either!
         # {'dns1.namecheaphosting.com.', 'dns2.namecheaphosting.com.'},
         # {'dns11.namecheaphosting.com.', 'dns12.namecheaphosting.com.'},
@@ -1111,10 +1115,10 @@ def watched_ns_for_url_domain(s, site):
     ])
 
 
-def ip_for_url_host(s, site, ip_list):
+async def ip_for_url_host(s, site, ip_list):
     # ######## FIXME: code duplication
     for hostname in post_hosts(s, check_tld=True):
-        a = dns_query(hostname, 'a')
+        a = await dns_query(hostname, 'a')
         if a is not None:
             # ######## TODO: allow blocking of IP ranges with regex or CIDR
             for addr in set([str(x) for x in a]):
@@ -1127,9 +1131,9 @@ def ip_for_url_host(s, site, ip_list):
 
 
 @create_rule("potentially bad IP for hostname in {}",
-             stripcodeblocks=True, body_summary=True)
-def watched_ip_for_url_hostname(s, site):
-    return ip_for_url_host(
+             stripcodeblocks=True, body_summary=True, alternate=True)
+async def watched_ip_for_url_hostname(s, site):
+    return await ip_for_url_host(
         s, site,
         # Watched IP list
         [
@@ -1168,9 +1172,9 @@ def watched_ip_for_url_hostname(s, site):
 
 
 @create_rule("bad IP for hostname in {}",
-             stripcodeblocks=True, body_summary=True)
-def bad_ip_for_url_hostname(s, site):
-    return ip_for_url_host(
+             stripcodeblocks=True, body_summary=True, alternate=True)
+async def bad_ip_for_url_hostname(s, site):
+    return await ip_for_url_host(
         s, site,
         # Blacklisted IP list
         [
@@ -1184,14 +1188,14 @@ def bad_ip_for_url_hostname(s, site):
         ])
 
 
-def asn_for_url_host(s, site, asn_list):
+async def asn_for_url_host(s, site, asn_list):
     for hostname in post_hosts(s, check_tld=True):
-        a = dns_query(hostname, 'a')
+        a = await dns_query(hostname, 'a')
         if a is not None:
             for addr in set([str(x) for x in a]):
                 log('debug', 'ASN: IP {0} for hostname {1}'.format(
                     addr, hostname))
-                asn = asn_query(addr)
+                asn = await asn_query(addr)
                 if asn in asn_list:
                     return True, '{0} address {1} in ASN {2}'.format(
                         hostname, addr, asn)
@@ -1199,8 +1203,8 @@ def asn_for_url_host(s, site, asn_list):
 
 
 @create_rule("potentially bad ASN for hostname in {}", body_summary=True, stripcodeblocks=True, alternate=True)
-def watched_asn_for_url_hostname(s, site):
-    return asn_for_url_host(
+async def watched_asn_for_url_hostname(s, site):
+    return await asn_for_url_host(
         s, site,
         # Watched ASN list
         [
@@ -1541,14 +1545,15 @@ def no_whitespace_body(s, site):
     return no_whitespace(s, site, body=True)
 
 
-def toxic_check(post):
+# TODO: get aiohttp working here
+async def toxic_check(post):
     s = strip_urls_and_tags(post.body)[:3000]
 
     if not s:
         return False, False, False, ""
 
     try:
-        response = requests.post(PERSPECTIVE, json={
+        response = await requests.post(PERSPECTIVE, json={  # TODO TODO TODO
             "comment": {
                 "text": s
             },
