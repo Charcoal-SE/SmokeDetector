@@ -7998,3 +7998,4 @@
 1548954034	Makyen	paynepain6_redteax\.pay(?=\.clickbank\.net)(?#If blacklisted, use the full domain without the lookahead)
 1548987237	Tetsuya Yamamoto	printersetupservices\.com
 1548987392	Tetsuya Yamamoto	ganatunes\.com
+1548987806	Tetsuya Yamamoto	citizenshipforsale\.net
