@@ -7996,3 +7996,4 @@
 1548953555	Makyen	diabetescares\.in
 1548954025	Makyen	topredteadetoxblog(?=\.wordpress\.com)(?#If blacklisted, use the full domain without the lookahead)
 1548954034	Makyen	paynepain6_redteax\.pay(?=\.clickbank\.net)(?#If blacklisted, use the full domain without the lookahead)
+1548987237	Tetsuya Yamamoto	printersetupservices\.com
