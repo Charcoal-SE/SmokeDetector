@@ -426,7 +426,7 @@ class Metasmoke:
         if response and "items" in response and len(response["items"]) > 0:
             ms_id = response["items"][0]["id"]
             params = {"key": GlobalVars.metasmoke_key,
-                      "text": msg,
+                      "text": msg[:1].upper() + msg[1:],  # Capitalise the first letter of the comment
                       "chat_user_id": user.id,
                       "chat_host": user._client.host}
 
