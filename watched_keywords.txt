@@ -8047,3 +8047,4 @@
 1549299046	Makyen	addaudiotovideo\.com
 1549299108	Makyen	weblium\.com
 1549303691	Makyen	^[a-z]{4,}erk(?<!Landoperk)(?<!codeherk)(?<!waltwhiterk)(?<!SilverK)(?<!NacOJerk)(?<!Stromwerk)$(?#Add additional FP usernames when detected; original: 1547532983 iBug)
+1549304978	Makyen	(?-i:UMHT54Rjnng)(?#YouTube video)
