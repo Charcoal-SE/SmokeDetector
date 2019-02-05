@@ -736,7 +736,7 @@ def pattern_product_name(s, site):
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords.extend([r"X\d?", "Alpha", "Plus", "Prime", "Formula", "Max+"])
-    keywords = regex.compile(r"(?i)\b(?P<x>{0})(?:[ -]*(?:{1})?(?P<x>{0}))+\b".format(
+    keywords = regex.compile(r"(?i)\b(?P<x>{0})(?:[ -]*(?:(?:{1})[ -]*)?(?P<x>{0}))+\b".format(
         "|".join(keywords), "|".join(conjunctions)))
     required = regex.compile(r"(?i){}".format("|".join(required_keywords)))
 
