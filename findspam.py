@@ -718,7 +718,7 @@ def pattern_product_name(s, site):
         "Testo(?:sterone)?s?", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Forskolin", "Diet", "Slim", "Serum",
         "Junivive", "Gain", "Allure", "Nuvella", "Blast", "Burn", "Shark", "Tank", "Peni(?:s|le)", "Pills?", "CBD",
         "Elite", "Exceptional", "Enhance(?:ment)?", "Nitro", "Suppl[ei]ments?",
-        "Skin", "Muscle", "Therm[ao]", "Neuro", "Luma", "Rapid", "Tone", "Keto", "Fuel", "Cream",
+        "Skin", "Muscle", "Therm[ao]", "Neuro", "Luma", "Rapid", "Tone", "Keto", "Cream",
         "(?:Anti)?[ -]?Aging", "Trim", "Male", r"Weight\W?(?:Loss|Reduction)", "Radiant(?:ly)?",
         "Boost(?:er|ing)?s?", "Youth", "Monster", "Enlarge(?:ment)", "Obat", "Nutr[ai]",
     ]
@@ -729,14 +729,14 @@ def pattern_product_name(s, site):
         "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect", "Bio", "Natural?", "Oil",
         "E?xtreme", "Fit", "Thirsty?", "Grow", "Complete", "Reviews?", "Bloom(?:ing)?", "BHB", "Pures?t?", "Quick",
         "Titan", "Hyper", "X[LRT]", "[R]X", "Supply", "Power", "Aged?", "Ultimate", "Surge", "(?<!e)Xtra",
-        "Brain",
+        "Brain", "Fuel", "Melt",
     ]
     conjunctions = [  # lol, for "keto melt and trim"
-        "And", "For", "With", "In", "This",
+        "And", "For", "With", "In", "This", "To", "About", "Or", "Where", "What", "Is", "A",
     ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords.extend([r"X\d?", "Alpha", "Plus", "Prime", "Formula", "Max+"])
-    keywords = regex.compile(r"(?i)\b(?P<x>{0})(?:[ -]*(?:(?:{1})[ -]*)?(?P<x>{0}))+\b".format(
+    keywords = regex.compile(r"(?i)\b(?P<x>{0})(?:[ -]*(?:(?:{1})[ -]*)*(?P<x>{0}))+\b".format(
         "|".join(keywords), "|".join(conjunctions)))
     required = regex.compile(r"(?i){}".format("|".join(required_keywords)))
 
