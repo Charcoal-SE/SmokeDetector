@@ -731,9 +731,13 @@ def pattern_product_name(s, site):
         "Titan", "Hyper", "X[LRT]", "[R]X", "Supply", "Power", "Aged?", "Ultimate", "Surge", "(?<!e)Xtra",
         "Brain",
     ]
+    conjunctions = [  # lol, for "keto melt and trim"
+        "And", "For", "With", "In", "This",
+    ]
     if site not in {"math.stackexchange.com", "mathoverflow.net"}:
         keywords.extend([r"X\d?", "Alpha", "Plus", "Prime", "Formula", "Max+"])
-    keywords = regex.compile(r"(?i)\b(?P<x>{0})(?:[ -]*(?P<x>{0}))+\b".format("|".join(keywords)))
+    keywords = regex.compile(r"(?i)\b(?P<x>{0})(?:[ -]*(?:{1})?(?P<x>{0}))+\b".format(
+        "|".join(keywords), "|".join(conjunctions)))
     required = regex.compile(r"(?i){}".format("|".join(required_keywords)))
 
     match_items = list(keywords.finditer(s))
