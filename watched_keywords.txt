@@ -5351,7 +5351,6 @@
 1536200731	Tetsuya Yamamoto	ArabHackers46
 1536201287	Makyen	[a-z_]*(?:1_*)?567[\W_]*704[\W_]*1160[a-z_]*
 1536212049	Tetsuya Yamamoto	ssis\.ae
-1536213070	Tetsuya Yamamoto	cryptobitcoinsguide\.com
 1536217496	Tetsuya Yamamoto	niim\.co\.in
 1536218411	Glorfindel	drvinaysamuelgaikwad\.com
 1536221731	Tetsuya Yamamoto	solomofy\.com
