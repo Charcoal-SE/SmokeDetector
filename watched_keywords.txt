@@ -8076,3 +8076,4 @@
 1549427538	Tetsuya Yamamoto	ideal-shops\.com
 1549427805	Tetsuya Yamamoto	amazontrial\.com
 1549435580	Makyen	^\s*(?:<[\w/]+\s*>\s*)+\d+\s*(?:<[\w/]+\s*>\s*)+$(?#expanded version of ^<p>\d+</p>$)
+1549436714	Makyen	vampirelordtransformerchanging(?:@outlook\.com)?
