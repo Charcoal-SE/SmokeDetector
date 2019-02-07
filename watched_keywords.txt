@@ -8074,7 +8074,6 @@
 1549426963	Tetsuya Yamamoto	buyonlinesupplement\.com
 1549427210	Tetsuya Yamamoto	kosttilskuddanmark\.dk
 1549427538	Tetsuya Yamamoto	ideal-shops\.com
-1549427805	Tetsuya Yamamoto	amazontrial\.com
 1549435580	Makyen	^\s*(?:<[\w/]+\s*>\s*)+\d+\s*(?:<[\w/]+\s*>\s*)+$(?#expanded version of ^<p>\d+</p>$)
 1549436714	Makyen	vampirelordtransformerchanging(?:@outlook\.com)?
 1549436752	Makyen	perfect4health(?!\.com)(?:seo|s)?
