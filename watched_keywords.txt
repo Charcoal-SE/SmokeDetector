@@ -5372,7 +5372,6 @@
 1536300576	Tetsuya Yamamoto	multichannelcreative\.co\.uk
 1536300763	Tetsuya Yamamoto	askjugadu\.com
 1536303687	iBug	easyhackingguru(?:@gmail\.com)?
-1536303848	iBug	indiamart\.com
 1536303906	iBug	herbal\W?hills
 1536313540	Tetsuya Yamamoto	marketingassignment\.co\.uk
 1536315810	Glorfindel	happydealmaker\.com
@@ -8119,3 +8118,5 @@
 1549536058	bertieb	lottery-spells\.com
 1549539893	Glorfindel	thesisleader\.com
 1549546062	bertieb	harmoniumguru\.in
+1549549492	bertieb	love-and-lottery-spells-expert\.com
+1549566502	bertieb	lukaynakliyat\.com
