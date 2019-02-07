@@ -8105,3 +8105,4 @@
 1549517568	Tetsuya Yamamoto	exafluence\.com
 1549519988	Tetsuya Yamamoto	seotoolserp\.com
 1549521277	Tetsuya Yamamoto	dlmlanguagelab\.com
+1549521294	iBug	<a[^>*]>\W*best
