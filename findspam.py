@@ -12,28 +12,19 @@ from datetime import datetime
 import time
 import os
 import os.path as path
-from threading import Thread
-import asyncio
 
 # noinspection PyPackageRequirements
 import tld
 # noinspection PyPackageRequirements
 from tld.utils import TldDomainNotFound
 import phonenumbers
-import aiodns
-import aiohttp
+import dns.resolver
 import requests
 import chatcommunicate
 
 from helpers import log
 from globalvars import GlobalVars
-from tasks import new_async_loop
 import blacklists
-
-
-# Cheap trick to create compatible code :)
-class dns:  # noqa: N801
-    resolver = None  # To be populated later
 
 
 TLD_CACHE = []
@@ -280,70 +271,9 @@ class Rule:
             return self.func(*args, **kwargs)
         raise TypeError("This rule has no function set, can't call")
 
-    # Avoid code duplication?
-    async def async_match(self, post):
-        if not self.filter.match(post):
-            # Post not matching the filter
-            return [(False, "", "")] * 3
-
-        body_to_check = post.body.replace("&nsbp;", "").replace("\xAD", "") \
-                                 .replace("\u200B", "").replace("\u200C", "")
-        body_name = "body" if not post.is_answer else "answer"
-        reason_title = self.reason.replace("{}", "title")
-        reason_username = self.reason.replace("{}", "username")
-        reason_body = self.reason.replace("{}", body_name)
-
-        if self.stripcodeblocks:
-            # use a placeholder to avoid triggering "few unique characters" when most of post is code
-            # XXX: "few unique characters" doesn't enable this, so remove placeholder?
-            body_to_check = regex.sub("(?s)<pre>.*?</pre>", "\ncode\n", body_to_check)
-            body_to_check = regex.sub("(?s)<code>.*?</code>", "\ncode\n", body_to_check)
-
-        matched_title, matched_body, matched_username = False, False, False
-        result_title, result_username, result_body = None, None, None
-        if self.whole_post:
-            matched_title, matched_username, matched_body, why_text = await self.func(post)
-            result_title = (matched_title, reason_title,
-                            reason_title.capitalize() + " - " + why_text)
-            result_username = (matched_username, reason_username,
-                               reason_username.capitalize() + " - " + why_text)
-            result_body = (matched_body, reason_body,
-                           reason_body.capitalize() + " - " + why_text)
-        else:
-            if self.title and not post.is_answer:
-                matched_title, why_text = await self.func(post.title, post.post_site)
-                result_title = (matched_title, reason_title,
-                                reason_title.capitalize() + " - " + why_text)
-            else:
-                result_title = (False, "", "")
-
-            if self.username:
-                matched_username, why_text = await self.func(post.user_name, post.post_site)
-                result_username = (matched_username, reason_username,
-                                   reason_username.capitalize() + " - " + why_text)
-            else:
-                result_username = (False, "", "")
-
-            if self.body and not post.body_is_summary:
-                matched_body, why_text = await self.func(body_to_check, post.post_site)
-                result_body = (matched_body, reason_body,
-                               reason_body.capitalize() + " - " + why_text)
-            elif self.body_summary and post.body_is_summary:
-                matched_body, useless = await self.func(body_to_check, post.post_site)
-                result_body = (matched_body, "", "")
-            else:
-                result_body = (False, "", "")
-        return result_title, result_username, result_body
-
 
 class FindSpam:
-    if not GlobalVars.async_loop:
-        GlobalVars.async_loop = new_async_loop("FindSpam")
-
-    loop = GlobalVars.async_loop
-    dns.resolver = aiodns.DNSResolver(loop=loop)
     rules = []
-    rules_alt = []
 
     # supplied at the bottom of this file
     rule_bad_keywords = None
@@ -372,21 +302,10 @@ class FindSpam:
             process_numlist(GlobalVars.watched_numbers)
         log('debug', "Global blacklists loaded")
 
-    @classmethod
-    def test_post(cls, post):
+    @staticmethod
+    def test_post(post):
         result = []
         why_title, why_username, why_body = [], [], []
-
-        # Get those coroutines kicked off
-        coroutines = []
-        futures = []
-        for rule in FindSpam.rules_alt:
-            co = rule.async_match(post)
-            fu = asyncio.run_coroutine_threadsafe(co, cls.loop)
-            coroutines.append(co)
-            futures.append(fu)
-
-        # Run the main stuff
         for rule in FindSpam.rules:
             title, username, body = rule.match(post)
             if title[0]:
@@ -398,21 +317,6 @@ class FindSpam:
             if body[0]:
                 result.append(body[1])
                 why_body.append(body[2])
-
-        # Collect results from coroutines
-        # asyncio.wait_for(coroutines, None)
-        for fu in futures:
-            title, username, body = fu.result()
-            if title[0]:
-                result.append(title[1])
-                why_title.append(title[2])
-            if username[0]:
-                result.append(username[1])
-                why_username.append(username[2])
-            if body[0]:
-                result.append(body[1])
-                why_body.append(body[2])
-
         result = list(set(result))
         result.sort()
         why = "\n".join(sorted(why_title + why_username + why_body)).strip()
@@ -456,8 +360,7 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
                 title=True, body=True, body_summary=False, username=False,
                 max_score=0, max_rep=1, question=True, answer=True, stripcodeblocks=False,
                 whole_post=False,  # For some functions
-                disabled=False,  # yeah, disabled=True is intuitive
-                alternate=False):  # Run on alternate thread, for network-based checks like DNS
+                disabled=False):  # yeah, disabled=True is intuitive
     if not isinstance(reason, str):
         raise ValueError("reason must be a string")
 
@@ -465,19 +368,14 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
         answer = False  # answers have no titles, this saves some loops
     post_filter = PostFilter(all_sites=all, sites=sites, max_score=max_score, max_rep=max_rep,
                              question=question, answer=answer)
-
     if regex is not None:
         # Standalone mode
         rule = Rule(regex, reason=reason, filter=post_filter,
                     title=title, body=body, body_summary=body_summary, username=username,
                     stripcodeblocks=stripcodeblocks)
         if not disabled:
-            if alternate:
-                FindSpam.rules_alt.append(rule)
-            else:
-                FindSpam.rules.append(rule)
+            FindSpam.rules.append(rule)
         return rule
-
     else:
         # Decorator-generator mode
         def decorator(func):
@@ -491,10 +389,7 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
                         title=title, body=body, body_summary=body_summary, username=username,
                         stripcodeblocks=stripcodeblocks)
             if not disabled:
-                if alternate:
-                    FindSpam.rules_alt.append(rule)
-                else:
-                    FindSpam.rules.append(rule)
+                FindSpam.rules.append(rule)
             return rule
 
         if func is not None:  # Function is supplied, no need to decorate
@@ -978,18 +873,17 @@ def purge_cache(cachevar, limit):
             del cachevar[old]
 
 
-async def dns_query(label, qtype):
+def dns_query(label, qtype):
     global DNS_CACHE
-    qtype = qtype.upper()
     if (label, qtype) in DNS_CACHE:
         log('debug', 'dns_query: returning cached {0} value for {1}'.format(
             qtype, label))
         return DNS_CACHE[(label, qtype)]['result']
     try:
         starttime = datetime.now()
-        answer = await dns.resolver.query(label, qtype)
-    except aiodns.error.DNSError as exc:
-        if "Domain name not found" in str(exc):
+        answer = dns.resolver.query(label, qtype)
+    except dns.exception.DNSException as exc:
+        if str(exc).startswith('None of DNS query names exist:'):
             log('debug', 'DNS label {0} not found; skipping'.format(label))
         else:
             endtime = datetime.now()
@@ -1008,21 +902,21 @@ async def dns_query(label, qtype):
     return answer
 
 
-async def asn_query(ip):
+def asn_query(ip):
     '''
     http://www.team-cymru.com/IP-ASN-mapping.html
     '''
     pi = list(reversed(ip.split('.')))
-    asn = await dns_query('.'.join(pi + ['origin.asn.cymru.com.']), 'txt')
-    if asn:
-        for txt in set([x.text.decode("utf-8") for x in asn]):
+    asn = dns_query('.'.join(pi + ['origin.asn.cymru.com.']), 'txt')
+    if asn is not None:
+        for txt in set([str(x) for x in asn]):
             log('debug', '{0}: Raw ASN lookup result: {1}'.format(ip, txt))
             if ' | ' in txt:
                 return txt.split(' | ')[0].strip('"')
     return None
 
 
-async def ns_for_url_domain(s, site, nslist):
+def ns_for_url_domain(s, site, nslist):
     if "pytest" in sys.modules:
         for nsentry in nslist:
             if isinstance(nsentry, set):
@@ -1038,9 +932,9 @@ async def ns_for_url_domain(s, site, nslist):
         domains.append(get_domain(hostname, full=True))
 
     for domain in set(domains):
-        ns = await dns_query(domain, 'ns')
+        ns = dns_query(domain, 'ns')
         if ns is not None:
-            nameservers = set([result.host + "." for result in ns])
+            nameservers = set([server.target.to_text() for server in ns])
             for ns_candidate in nslist:
                 if (type(ns_candidate) is set and nameservers == ns_candidate) \
                     or any(ns.endswith('.{0}'.format(ns_candidate))
@@ -1050,35 +944,34 @@ async def ns_for_url_domain(s, site, nslist):
     return False, ""
 
 
-@create_rule("potentially problematic NS configuration in {}", stripcodeblocks=True, body_summary=True,
-             alternate=True)
-async def ns_is_host(s, site):
+@create_rule("potentially problematic NS configuration in {}", stripcodeblocks=True, body_summary=True)
+def ns_is_host(s, site):
     '''
     Check if the host name in a link resolves to the same IP address
     as the IP addresses of all its name servers.
     '''
     for hostname in post_hosts(s, check_tld=True):
-        host_ip = await dns_query(hostname, 'a')
+        host_ip = dns_query(hostname, 'a')
         if host_ip is None:
             continue
-        host_ips = set([x.host for x in host_ip])
+        host_ips = set([str(x) for x in host_ip])
         domain = get_domain(hostname, full=True)
-        nameservers = await dns_query(domain, 'ns')
+        nameservers = dns_query(domain, 'ns')
         if nameservers is not None:
             ns_ips = []
             for ns in nameservers:
-                this_ns_ips = await dns_query(ns.host, 'a')
+                this_ns_ips = dns_query(str(ns), 'a')
                 if this_ns_ips is not None:
-                    ns_ips.extend([ip.host for ip in this_ns_ips])
+                    ns_ips.extend([str(ip) for ip in this_ns_ips])
             if set(ns_ips) == host_ips:
                 return True, 'Suspicious nameservers: all IP addresses for {0} are in set {1}'.format(
                     hostname, host_ips)
     return False, ''
 
 
-@create_rule("bad NS for domain in {}", body_summary=True, stripcodeblocks=True, alternate=True)
-async def bad_ns_for_url_domain(s, site):
-    return await ns_for_url_domain(s, site, [
+@create_rule("bad NS for domain in {}", body_summary=True, stripcodeblocks=True)
+def bad_ns_for_url_domain(s, site):
+    return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name!
         {'ns1.md-95.bigrockservers.com.', 'ns2.md-95.bigrockservers.com.'},
         {'ns1.md-99.bigrockservers.com.', 'ns2.md-99.bigrockservers.com.'},
@@ -1103,11 +996,10 @@ async def bad_ns_for_url_domain(s, site):
 
 # This applies to all answers, and non-SO questions
 @create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, answer=False,
-             sites=["stackoverflow.com"], alternate=True)
-@create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, question=False,
-             alternate=True)
-async def watched_ns_for_url_domain(s, site):
-    return await ns_for_url_domain(s, site, [
+             sites=["stackoverflow.com"])
+@create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, question=False)
+def watched_ns_for_url_domain(s, site):
+    return ns_for_url_domain(s, site, [
         # Don't forget the trailing dot on the resolved name here either!
         # {'dns1.namecheaphosting.com.', 'dns2.namecheaphosting.com.'},
         # {'dns11.namecheaphosting.com.', 'dns12.namecheaphosting.com.'},
@@ -1181,13 +1073,13 @@ async def watched_ns_for_url_domain(s, site):
     ])
 
 
-async def ip_for_url_host(s, site, ip_list):
+def ip_for_url_host(s, site, ip_list):
     # ######## FIXME: code duplication
     for hostname in post_hosts(s, check_tld=True):
-        a = await dns_query(hostname, 'a')
+        a = dns_query(hostname, 'a')
         if a is not None:
             # ######## TODO: allow blocking of IP ranges with regex or CIDR
-            for addr in set([x.host for x in a]):
+            for addr in set([str(x) for x in a]):
                 log('debug', 'IP: IP {0} for hostname {1}'.format(
                     addr, hostname))
                 if addr in ip_list:
@@ -1197,9 +1089,9 @@ async def ip_for_url_host(s, site, ip_list):
 
 
 @create_rule("potentially bad IP for hostname in {}",
-             stripcodeblocks=True, body_summary=True, alternate=True)
-async def watched_ip_for_url_hostname(s, site):
-    return await ip_for_url_host(
+             stripcodeblocks=True, body_summary=True)
+def watched_ip_for_url_hostname(s, site):
+    return ip_for_url_host(
         s, site,
         # Watched IP list
         [
@@ -1238,9 +1130,9 @@ async def watched_ip_for_url_hostname(s, site):
 
 
 @create_rule("bad IP for hostname in {}",
-             stripcodeblocks=True, body_summary=True, alternate=True)
-async def bad_ip_for_url_hostname(s, site):
-    return await ip_for_url_host(
+             stripcodeblocks=True, body_summary=True)
+def bad_ip_for_url_hostname(s, site):
+    return ip_for_url_host(
         s, site,
         # Blacklisted IP list
         [
@@ -1254,23 +1146,23 @@ async def bad_ip_for_url_hostname(s, site):
         ])
 
 
-async def asn_for_url_host(s, site, asn_list):
+def asn_for_url_host(s, site, asn_list):
     for hostname in post_hosts(s, check_tld=True):
-        a = await dns_query(hostname, 'a')
-        if a:
-            for addr in set([x.host for x in a]):
+        a = dns_query(hostname, 'a')
+        if a is not None:
+            for addr in set([str(x) for x in a]):
                 log('debug', 'ASN: IP {0} for hostname {1}'.format(
                     addr, hostname))
-                asn = await asn_query(addr)
+                asn = asn_query(addr)
                 if asn in asn_list:
                     return True, '{0} address {1} in ASN {2}'.format(
                         hostname, addr, asn)
     return False, ""
 
 
-@create_rule("potentially bad ASN for hostname in {}", body_summary=True, stripcodeblocks=True, alternate=True)
-async def watched_asn_for_url_hostname(s, site):
-    return await asn_for_url_host(
+@create_rule("potentially bad ASN for hostname in {}", body_summary=True, stripcodeblocks=True)
+def watched_asn_for_url_hostname(s, site):
+    return asn_for_url_host(
         s, site,
         # Watched ASN list
         [
@@ -1611,20 +1503,24 @@ def no_whitespace_body(s, site):
     return no_whitespace(s, site, body=True)
 
 
-async def toxic_check(post):
+def toxic_check(post):
     s = strip_urls_and_tags(post.body)[:3000]
 
     if not s:
         return False, False, False, ""
 
-    payload = {
-        "comment": {"text": s},
-        "requestedAttributes": {"TOXICITY": {"scoreType": "PROBABILITY"}}
-    }
     try:
-        async with aiohttp.ClientSession() as session:
-            async with session.post(PERSPECTIVE, json=payload) as raw_response:
-                response = await raw_response.json()
+        response = requests.post(PERSPECTIVE, json={
+            "comment": {
+                "text": s
+            },
+
+            "requestedAttributes": {
+                "TOXICITY": {
+                    "scoreType": "PROBABILITY"
+                }
+            }
+        }).json()
     except (requests.exceptions.ConnectionError, ValueError):
         return False, False, False, ""
 
@@ -1643,8 +1539,7 @@ async def toxic_check(post):
 
 
 if GlobalVars.perspective_key:  # don't bother if we don't have a key, since it's expensive
-    toxic_check = create_rule("toxic {} detected", func=toxic_check, whole_post=True, max_rep=101, max_score=2,
-                              alternate=True)
+    toxic_check = create_rule("toxic {} detected", func=toxic_check, whole_post=True, max_rep=101, max_score=2)
 
 
 @create_rule("body starts with title and ends in URL", whole_post=True, answer=False,
