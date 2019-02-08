@@ -8128,3 +8128,4 @@
 1549611974	Tetsuya Yamamoto	wellness-to-go\.com
 1549612106	Tetsuya Yamamoto	internetcourses\.in
 1549613718	Makyen	yvangodard\.me
+1549613734	Makyen	\W*/yvangodard
