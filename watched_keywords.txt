@@ -7747,7 +7747,6 @@
 1547847980	NobodyNada	fastbet\.online
 1547862777	Tetsuya Yamamoto	8bitworkshop\.com
 1547867326	Makyen	(?:li@)?moyangoffice\.com
-1547879399	Makyen	questionsgems\.com
 1547888810	Shree	toprankingseo\.net
 1547888846	Shree	ssogen\.com
 1547893649	bertieb	qualitypropestcontrol\.com
