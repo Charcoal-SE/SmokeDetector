@@ -356,7 +356,7 @@ class FindSpam:
 # The Creator of all the spam check rules
 # Do NOT touch the default values unless you want to break things
 # what if a function does more than one job?
-def create_rule(reason=None, regex=None, func=None, *, all=True, sites=[],
+def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
                 title=True, body=True, body_summary=False, username=False,
                 max_score=0, max_rep=1, question=True, answer=True, stripcodeblocks=False,
                 whole_post=False,  # For some functions
