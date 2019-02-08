@@ -8133,3 +8133,4 @@
 1549613777	Makyen	a1936rw6u9-8w4i2k8ugfnd516(?#subdomain of hop.clickbank.net)
 1549613876	Tetsuya Yamamoto	resimyukle\.com\.tr
 1549613989	Tetsuya Yamamoto	coursesblog\.com
+1549614182	Tetsuya Yamamoto	thefitnessvibes\.com
