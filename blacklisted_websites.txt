@@ -2134,7 +2134,7 @@ cbdoiltryshop\.com
 crackedlicense\.com
 healthaware1\.com
 biztechcs\.com
-pilpedia\.com
+pilpedia\.?com
 trybionutrition\.com
 drozus\.com
 livestream247\.net
