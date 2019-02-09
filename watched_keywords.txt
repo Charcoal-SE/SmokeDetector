@@ -8160,3 +8160,4 @@
 1549732506	Makyen	facetimeonandroid\.com
 1549732511	Makyen	dito\.online
 1549732516	Makyen	tonusjournal\.com
+1549732615	Makyen	cryptojacking\.worm(?:\W*(?:at\W*)gmail(?:\W*(?:dot\W*)com))?
