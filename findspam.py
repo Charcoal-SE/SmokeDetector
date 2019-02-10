@@ -490,7 +490,7 @@ def has_repeating_words(s, site):
         words = match.captures("words")
         word = match.group("word")
         if len(words) >= 5 and len(word) * len(words) >= 0.18 * len(s):
-            return True, "Repeated word: {}*{}".format(repr(word), len(words))
+            return True, "{}*{}".format(repr(word), len(words))
     return False, ""
 
 
@@ -525,7 +525,7 @@ def has_repeating_characters(s, site):
     matches = regex.compile(r"([^\s\d_.])(\1{9,})", regex.UNICODE).findall(s)
     match = "".join(["".join(match) for match in matches])
     if len(match) / len(s) >= REPEATED_CHARACTER_RATIO:  # Repeating characters make up >= 20 percent
-        return True, "Repeated character: {}".format(", ".join(
+        return True, "{}".format(", ".join(
             ["{}*{}".format(repr(match[0]), len(''.join(match))) for match in matches]))
     return False, ""
 
