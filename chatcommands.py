@@ -612,7 +612,7 @@ def unblock(msg, room_id):
 ALIVE_MSG = [
     'Yup', 'You doubt me?', 'Of course', '... did I miss something?', 'plz send teh coffee',
     'Watching this endless list of new questions *never* gets boring', 'Kinda sorta',
-    'You should totally drop that and use jQuery', r'¯\\_(ツ)\_/¯',
+    'You should totally drop that and use jQuery', r'¯\\_(ツ)\_/¯', '... good question',
 ]
 
 
