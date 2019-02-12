@@ -1795,3 +1795,4 @@ enzothrust
 keto\W?viante(?:\W?diet)?
 zephrofel
 maxwell\W?keto
+serexin
