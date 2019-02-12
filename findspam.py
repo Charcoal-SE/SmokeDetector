@@ -59,6 +59,12 @@ WHITELISTED_WEBSITES_REGEX = regex.compile(r"(?i)upload|\b(?:{})\b".format("|".j
     "microsoft", "newegg", "cnet", "regex101", r"(?<!plus\.)google", "localhost", "ubuntu", "getbootstrap",
     r"jsfiddle\.net", r"codepen\.io", "pastebin"
 ] + [se_dom.replace(".", r"\.") for se_dom in SE_SITES_DOMAINS])))
+COUNTRY = [
+    # N Europe
+    "Iceland", "Denmark", "Sweden", "Norway",
+    # Oceania
+    "Australia", "New Zealand", "NewZealand",
+]
 
 if GlobalVars.perspective_key:
     PERSPECTIVE = "https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=" + GlobalVars.perspective_key
