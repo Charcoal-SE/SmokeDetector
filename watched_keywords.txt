@@ -4471,7 +4471,7 @@
 1532054290	Makyen	britishtheopen\.de
 1532054299	Makyen	drochesolutiontempel(?:@gmail\.com)?
 1532054546	Makyen	oche\W*herbal\W*cream
-1532054899	Makyen	^.{1,15}(?<!ice\W?)cream$
+1532054899	Makyen	^.{1,15}(?<!ice)(?<!ice[\W_])(?<!^blues)(?<!^blus)(?<!\bs)(?<!^colors)(?<!\bhells)(?<!^wolfs)(?<!^eyes)(?<!^stars)(?<!^ols)(?<!^dream)(?<!^stealths)(?<!^krispy)(?<!^cameo)(?<!^coffeewith)(?<!^soft )(?<!^hand)(?<!^doughnut face)(?<!^don)cream$(?#add additional exclusions as more legit users are detected)
 1532057688	Makyen	customer-carehelpline\.com
 1532057699	Makyen	[a-z_]*(?:1_*)?844[\W_]*794[\W_]*2729[a-z_]*
 1532066355	Makyen	[a-z_]*080[\W_]*3506[\W_]*1723[a-z_]*
