@@ -546,13 +546,15 @@ def dispatch_command(msg):
 
 
 def dispatch_reply_command(msg, reply, full_cmd, comment=True):
-    command_parts = full_cmd.lower().split(" ", 1)
+    command_parts = full_cmd.split(" ", 1)
 
     if len(command_parts) == 2:
         cmd, args = command_parts
     else:
         cmd, = command_parts
         args = ""
+
+    cmd = cmd.lower()
 
     quiet_action = cmd[-1] == "-"
     cmd = regex.sub(r"\W*$", "", cmd)
