@@ -6949,7 +6949,6 @@
 1543571072	Shree	ftimmobilien24\.com
 1543571827	Shree	safewalkbangalore\.com
 1543574716	Shree	pkinstitute\.com\.pk
-1543576749	Shree	smallbusiness\.chron\.com
 1543578715	Shree	militarymade\.ca
 1543578956	Shree	siddhagiri\.net
 1543597495	CalvT	confidenceclub\.com\.au
