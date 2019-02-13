@@ -8205,3 +8205,4 @@
 1550072377	Machavity	dxminds\.com
 1550085726	Makyen	nepalexcursiontreks\.com
 1550085735	Makyen	designerrs\.com
+1550085744	Makyen	ezo_yildiz(?:@outlook\.com)?
