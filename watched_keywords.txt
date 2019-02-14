@@ -8207,7 +8207,6 @@
 1550085735	Makyen	designerrs\.com
 1550085744	Makyen	ezo_yildiz(?:@outlook\.com)?
 1550085753	Makyen	techczargroup\.com
-1550085762	Makyen	bitcoinofficial\.org
 1550085769	Makyen	mygreet\.in
 1550090976	Makyen	jadootv\.com
 1550101351	Makyen	ceton.live-ff\.info
