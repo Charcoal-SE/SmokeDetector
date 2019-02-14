@@ -8226,3 +8226,4 @@
 1550158507	Makyen	ondayemek\.com
 1550158517	Makyen	dindar\.net
 1550158527	Makyen	gaziantepuyducu\.net
+1550158541	Makyen	istanbulbeyazesyaservisim\.com
