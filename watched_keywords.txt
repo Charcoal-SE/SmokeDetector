@@ -8237,3 +8237,4 @@
 1550246538	Makyen	apk-and-more\.blogspot\.com
 1550246547	Makyen	southern\W*restoration
 1550246556	Makyen	steveseocarner(?:@gmail\.com)?
+1550272614	Tetsuya Yamamoto	programstore\.ir
