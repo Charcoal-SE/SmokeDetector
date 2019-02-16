@@ -8240,3 +8240,4 @@
 1550275328	Makyen	rxsale\.site
 1550294031	Makyen	pcriver\.com
 1550294061	Makyen	softlay\.net
+1550294905	Makyen	powgen(?=\W*male\W*enhancement)
