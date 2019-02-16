@@ -1798,3 +1798,4 @@ maxwell\W?keto
 serexin
 angeletta\W?skin
 cial\W?rx
+vampirelordtransformerchanging(?:@[a-z0-9-]+\.com)?
