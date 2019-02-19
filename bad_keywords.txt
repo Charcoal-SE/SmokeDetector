@@ -1800,3 +1800,4 @@ angeletta\W?skin
 cial\W?rx
 vampirelordtransformerchanging(?:@[a-z0-9-]+\.com)?
 hyper\W*testo
+beam\W?skin
