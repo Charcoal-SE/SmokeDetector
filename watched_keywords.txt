@@ -8308,3 +8308,4 @@
 1550574917	Makyen	prestigefinsburypark\.gen\.in
 1550575839	Makyen	watchoscarslive\.com
 1550576721	Glorfindel	celldwellertribe\.com
+1550576922	Glorfindel	Mondovino\W*Film
