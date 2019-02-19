@@ -8311,3 +8311,4 @@
 1550576922	Glorfindel	Mondovino\W*Film
 1550578875	Makyen	bakabaspelltemple(?:@gmail\.com)?
 1550580271	Makyen	evyom\.com
+1550581733	Sonic the Introverted Hedgehog	ikeymonitor\.com
