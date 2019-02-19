@@ -8309,3 +8309,4 @@
 1550575839	Makyen	watchoscarslive\.com
 1550576721	Glorfindel	celldwellertribe\.com
 1550576922	Glorfindel	Mondovino\W*Film
+1550578875	Makyen	bakabaspelltemple(?:@gmail\.com)?
