@@ -8191,7 +8191,6 @@
 1550037632	Makyen	^Naveen Parmar$
 1550039608	Tetsuya Yamamoto	tokyotechie\.com
 1550039811	Tetsuya Yamamoto	unboundb2b\.com
-1550042418	Tetsuya Yamamoto	products4reviews\.com
 1550044605	Tetsuya Yamamoto	professionalqa\.com
 1550044825	Makyen	(?-i:/2F9Idmr)(?#bit.ly for professionalqa.com)
 1550044885	Makyen	(?-i:/2zmA0Yg)(?#bit.ly for professionalqa.com)
