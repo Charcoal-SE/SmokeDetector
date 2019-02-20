@@ -2606,3 +2606,4 @@ certificationgenie\.com
 loufida\.com(?#additional examples of this domain as spam provided by Samuel Liew in chat)
 socialprachar\.com
 visitworldnutrition\.com
+usa4supplement\.com
