@@ -8332,3 +8332,4 @@
 1550667556	Glorfindel	digifutura\.com
 1550669267	tripleee	clonesoftech\.com
 1550680791	bertieb	howtomergepstfiles\.com
+1550682489	bertieb	browsers\.wtf
