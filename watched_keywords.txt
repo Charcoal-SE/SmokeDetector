@@ -8317,7 +8317,6 @@
 1550595191	Makyen	classicocredito(?:@gmail\.com)?
 1550609196	Makyen	dissertationeducators\.co\.uk
 1550614887	Makyen	pantallasparalamparas\.es
-1550617760	Makyen	vapedubaimall\.com
 1550634054	Tetsuya Yamamoto	null48\.net
 1550581733	Sonic the Introverted Hedgehog	ikeymonitor\.com
 1550636932	Shree	obuduyang(?:@gmail\.com)
