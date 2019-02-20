@@ -2612,3 +2612,4 @@ vapedubaimall\.com
 products4reviews\.com
 youtube2video\.com
 tgw\.onl
+\b(?<!-)tgw\.onl(?!-)\b
