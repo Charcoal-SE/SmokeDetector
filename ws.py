@@ -70,6 +70,16 @@ if not GlobalVars.metasmoke_key:
 if not GlobalVars.metasmoke_ws_host:
     log('info', "No metasmoke websocket host found, which is okay if you're anti-websocket")
 
+
+# noinspection PyProtectedMember
+def restart_automatically():
+    Metasmoke.send_statistics()
+    exit_mode("reboot")
+
+
+# Restart after 6 hours, put this thing here so it doesn't get stuck at updating TLD or logging in indefinitely
+Tasks.later(restart_automatically, after=21600)
+
 try:
     update_tld_names()
 except TldIOError as ioerr:
@@ -146,14 +156,7 @@ def check_socket_connections():
             exit_mode("socket_failure")
 
 
-# noinspection PyProtectedMember
-def restart_automatically():
-    Metasmoke.send_statistics()
-    exit_mode("reboot")
-
-
 Tasks.periodic(check_socket_connections, interval=90)
-Tasks.later(restart_automatically, after=21600)
 
 log('info', '{} active'.format(GlobalVars.location))
 log('info', 'MS host: {}'.format(GlobalVars.metasmoke_host))
