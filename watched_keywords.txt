@@ -8343,3 +8343,4 @@
 1550721832	iBug	online\W*help\W*hub(?:\.com)?
 1550724437	Tetsuya Yamamoto	lampungservice\.com
 1550729348	Tetsuya Yamamoto	crackwar\.com
+1550729657	Tetsuya Yamamoto	orangeglobal\.in
