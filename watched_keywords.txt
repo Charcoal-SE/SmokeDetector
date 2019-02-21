@@ -8342,3 +8342,4 @@
 1550719133	Tetsuya Yamamoto	twominfun\.com
 1550721832	iBug	online\W*help\W*hub(?:\.com)?
 1550724437	Tetsuya Yamamoto	lampungservice\.com
+1550729348	Tetsuya Yamamoto	crackwar\.com
