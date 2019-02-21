@@ -8358,3 +8358,4 @@
 1550748228	Shree	cover-letter-format\.com
 1550749893	Glorfindel	bugalter
 1550752954	Makyen	bugalter\.kiev\.ua
+1550753180	Makyen	fixedfloat\.com
