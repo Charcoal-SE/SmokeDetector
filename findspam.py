@@ -1202,6 +1202,7 @@ def watched_asn_for_url_hostname(s, site):
             '62731',   # 247RACK-COM - 247RACK.com, US
             '133711',  # HBSGZB-AS Home Broadband Services LLP, IN
             '197695',  # AS-REG, RU
+            '200000',  # UKRAINE-AS, UA
             '393960',  # HOST4GEEKS-LLC - Host4Geeks LLC, US
             '206349',  # BLUEANGELHOST, BG.
             '395970',  # IONSWITCH - IonSwitch, LLC, US
