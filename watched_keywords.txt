@@ -8359,3 +8359,4 @@
 1550749893	Glorfindel	bugalter
 1550752954	Makyen	bugalter\.kiev\.ua
 1550753180	Makyen	fixedfloat\.com
+1550770445	Makyen	tradingview\.com
