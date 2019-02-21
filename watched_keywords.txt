@@ -8349,3 +8349,4 @@
 1550730370	Tetsuya Yamamoto	genericday\.com
 1550732361	Tetsuya Yamamoto	theoutdoorpicks\.com
 1550732694	Tetsuya Yamamoto	stoodq\.com
+1550739149	Tetsuya Yamamoto	ridhimanalloys\.com
