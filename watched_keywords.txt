@@ -8341,3 +8341,4 @@
 1550718789	Tetsuya Yamamoto	kientrucarcviet(?:@gmail\.com)
 1550719133	Tetsuya Yamamoto	twominfun\.com
 1550721832	iBug	online\W*help\W*hub(?:\.com)?
+1550724437	Tetsuya Yamamoto	lampungservice\.com
