@@ -8375,3 +8375,4 @@
 1550812942	Shree	customheat\.com\.au
 1550813477	Shree	instantshadeumbrellas\.com\.au
 1550814785	Makyen	(?:look(?:s|ing|ed)?.{0,40}?young(?:er|est)?|young(?:er|est)?.{0,40}?look(?:s|ing|ed)?)(?=.*?(?:<a\b|</a>))(?!.*?(?:<code\b|</code>))(?#looks younger with link and no code; 608/608/0/0 when added ~2019-02-22 05:50UTC)
+1550815170	tripleee	qpaf6
