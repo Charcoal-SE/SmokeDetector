@@ -1076,6 +1076,7 @@ def watched_ns_for_url_domain(s, site):
         'omnilinks.net.',
         'servconfig.com.',
         'siteground.biz.',
+        'cetpainfotech.com.',
     ])
 
 
