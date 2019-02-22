@@ -8383,3 +8383,4 @@
 1550823607	Tetsuya Yamamoto	prozpekt\.com
 1550824110	Tetsuya Yamamoto	mailware\.com
 1550826977	Tetsuya Yamamoto	canon.com-ijsetup\.com
+1550826997	Tetsuya Yamamoto	com-ijsetup\.com
