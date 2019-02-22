@@ -1805,3 +1805,4 @@ kalis\W?keto
 (?<=\.\w{1,5})/(?:\w+-keto|keto-\w+)(?=["/< ]|$)(?#product name like keto-xx in URL)
 gkjwb
 k[ae]lis\W?keto
+qpaf6
