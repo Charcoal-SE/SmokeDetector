@@ -8385,3 +8385,4 @@
 1550826997	Tetsuya Yamamoto	com-ijsetup\.com
 1550828568	Tetsuya Yamamoto	nortoncomsetup\.fr
 1550829019	Tetsuya Yamamoto	atmdomino\.com
+1550829184	Tetsuya Yamamoto	bitdefenderlogin\.me
