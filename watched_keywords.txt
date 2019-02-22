@@ -4974,7 +4974,6 @@
 1534414366	tripleee	skn\W?renew
 1534421887	tripleee	[a-z_]*(?:1_*)?844[\W_]*850[\W_]*8475[a-z_]*
 1534421987	tripleee	printerofflinehelp\.com
-1534426200	Makyen	airport24x7\.com
 1534426219	Makyen	t\.me/GIKEEglobal
 1534426954	Makyen	translate-document\.com
 1534431986	Makyen	startthenewcareer\.blogspot\.com
