@@ -8398,3 +8398,4 @@
 1550907977	Shree	papersplanet\.co\.uk
 1550911419	Shree	gps-map-updates\.com
 1550914263	Shree	smlwindia\.com
+1550920914	Shree	drisongspellhome(?:@gmail\.com)
