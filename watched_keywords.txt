@@ -8409,3 +8409,4 @@
 1550997824	Shree	society6\.com
 1551008659	doppelgreener	victorsunited\.com
 1551042330	Undo	com.appmaster.akash
+1551068236	Makyen	adodoadodospellcaster(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
