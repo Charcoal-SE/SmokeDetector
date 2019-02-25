@@ -2606,7 +2606,7 @@ certificationgenie\.com
 loufida\.com(?#additional examples of this domain as spam provided by Samuel Liew in chat)
 socialprachar\.com
 visitworldnutrition\.com
-usa4supplement\.com
+usa4supplement\W?com
 fitnesshub\.over-blog\.com
 vapedubaimall\.com
 products4reviews\.com
