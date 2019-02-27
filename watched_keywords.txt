@@ -7395,7 +7395,6 @@
 1545989565	Tetsuya Yamamoto	spycardsshop\.com
 1545989715	Tetsuya Yamamoto	indianfilmhistory\.com
 1545995446	Shree	smartresto\.in
-1545995817	Shree	sqworl\.com
 1545997480	Shree	lovedollpalace\.com
 1545997880	Shree	genesischiropractic\.sg
 1546059258	Makyen	diigo\.com(?!/annotated/)
