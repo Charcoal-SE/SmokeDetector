@@ -1078,6 +1078,7 @@ def watched_ns_for_url_domain(s, site):
         'servconfig.com.',
         'siteground.biz.',
         'cetpainfotech.com.',
+        'sttdns.com.',
     ])
 
 
