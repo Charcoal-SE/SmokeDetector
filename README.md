@@ -17,9 +17,10 @@ User documentation is in the [wiki](https://charcoal-se.org/smokey).
 Detailed documentation for [setting up and running SmokeDetector is in the wiki](https://charcoal-se.org/smokey/Set-Up-and-Run-SmokeDetector).
 
 ### Basic setup
-To set up, please use
 
-```
+To set up SmokeDetector, please use
+
+```shell
 git clone https://github.com/Charcoal-SE/SmokeDetector.git
 cd SmokeDetector
 git config user.email "smokey@erwaysoftware.com"
@@ -35,6 +36,24 @@ To run, use `python3 nocrash.py` (preferably in a daemon-able mode, like a `scre
 You can also use `python3 ws.py`, but then SmokeDetector will be shut down after 6 hours;
 when running from `nocrash.py`, it will be restarted.
 (This is to be sure that closed websockets, if any, are reopened.)
+
+### Virtual environment setup
+
+Running in a [virtual environment](https://docs.python.org/3/tutorial/venv.html) is a good way to isolate dependency packages from your local system. To set up SmokeDetector in a virtual environment, please use
+
+```shell
+git clone https://github.com/Charcoal-SE/SmokeDetector.git
+cd SmokeDetector
+git config user.email "smokey@erwaysoftware.com"
+git config user.name "SmokeDetector"
+git checkout deploy
+
+python3 -m venv env
+env/bin/pip3 install -r requirements.txt --upgrade
+env/bin/pip3 install --user -r user_requirements.txt --upgrade
+```
+
+Next, copy the config file and edit as said above. To run SmokeDetector in this virtual environment, use `env/bin/python3 nocrash.py`.
 
 ## Requirements
 
