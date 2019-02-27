@@ -785,9 +785,10 @@ def pattern_email(s, site):
                             r"(loan|hack|financ|fund|spell|temple|herbal|spiritual|atm|heal|priest|classes|"
                             r"investment|illuminati|vampire?))[A-z0-9_.%+-]*"
                             r"@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})[A-z0-9_.%+-]+\.[A-z]{2,4}\b"
-                            ).search(s)
+                            ).finditer(s)
+    pattern = list(pattern)
     if pattern:
-        return True, u"Pattern-matching email {}".format(pattern.group(0))
+        return True, FindSpam.match_infos(pattern)
     return False, ""
 
 
