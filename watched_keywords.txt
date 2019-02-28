@@ -3905,7 +3905,6 @@
 1529386235	Glorfindel	calendartemplatefree\.com
 1529386249	Glorfindel	calendartemplate\W?free
 1529387733	tripleee	alfrescoadventure\d+
-1529390015	tripleee	mersad(?:\W?web)?
 1529391547	tripleee	hot\W?body\W?secrets?
 1529391572	tripleee	lean\W?body\W?hacks
 1529391597	tripleee	te60\W?shred
