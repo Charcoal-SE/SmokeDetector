@@ -2632,3 +2632,4 @@ supplementengine\.co\.za
 evensi\.us
 yumpu\.com
 authorstream\.com
+edocr\.com
