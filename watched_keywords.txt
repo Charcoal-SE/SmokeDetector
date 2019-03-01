@@ -8483,3 +8483,4 @@
 1551413606	Makyen	mayankchandel\.co\.nf
 1551416212	iBug	indolytics(?:\.com)?
 1551416447	Makyen	(?-i:RlUNC\.jpg)(?#imgur)
+1551421131	Makyen	bharatfullmoviedownload\d*(?:\.[\w-]*\w)*
