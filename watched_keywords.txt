@@ -8482,4 +8482,3 @@
 1551405754	Makyen	clippingpathperfectionist\.com
 1551413606	Makyen	mayankchandel\.co\.nf
 1551416212	iBug	indolytics(?:\.com)?
-1551416425	Makyen	(?-i:RlUNC.jpg)(?#imgur)
