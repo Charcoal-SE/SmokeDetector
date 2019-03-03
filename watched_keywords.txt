@@ -8506,3 +8506,4 @@
 1551522526	Zoe	intellirage\W*brain
 1551527647	Zoe	thebestprice-online\.com
 1551564674	Makyen	primal\W*pro(?:\W*XR)
+1551595671	Makyen	^vinod kumar$
