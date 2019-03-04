@@ -8281,7 +8281,6 @@
 1550559959	Makyen	(?-i:WYuIl.png)(?#i.stack.imgur.com spam)
 1550560279	Shree	txbrewing\.com
 1550562157	Makyen	littlegreenman93(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
-1550562736	bertieb	samuraipaper\.com
 1550564390	Shree	marveledu\.com
 1550565192	Shree	pdfreaderpro\.com
 1550571433	Shree	tandemnz\.co\.nz
