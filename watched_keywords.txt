@@ -8511,6 +8511,7 @@
 1551614501	doppelgreener	digitalproguru\.com
 1551623676	Nisse Engström	dieseltester-cn\.com
 1551641284	Makyen	worldwidedonations\.com
+1551673504	FrankerZ	print\("SyntaxError: invalid syntax"\)\W*(?#used by a trol, circa 2019-03-03; see PR#2660)
 1551686878	Shree	patronageinstitute\.com
 1551691470	tripleee	turtlepac\.com
 1551692695	Shree	vidhya360\.in
