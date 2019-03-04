@@ -125,3 +125,4 @@ hrisikesh\W*saloi?
 (?-i:^shiv\W?guptag?$)
 muralidharaB
 ^albertlee$
+^Biplab Mahanta‭$
