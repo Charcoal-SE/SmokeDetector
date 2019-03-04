@@ -124,3 +124,5 @@ hrisikesh\W*saloi?
 (?-i:^[a-z]+(?:dl?san|(?:dl|ld)l?son)(?<!donaldson)(?<!zhcdsan)(?<!ygoldson)$)
 (?-i:^shiv\W?guptag?$)
 muralidharaB
+^albertlee$
+^Biplab Mahanta‭$

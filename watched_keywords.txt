@@ -7848,7 +7848,6 @@
 1548333738	tripleee	hatenablog\.com
 1548338654	tripleee	allitfeed\.com
 1548338517	Machavity	plumbwize\.ca
-1548344954	Asuna	infatica\.io
 1548347447	tripleee	faircom\.com
 1548385313	Tetsuya Yamamoto	likigram\.com
 1548391985	Sonic the Introverted Hedgehog	Homeocare International
@@ -8282,7 +8281,6 @@
 1550559959	Makyen	(?-i:WYuIl.png)(?#i.stack.imgur.com spam)
 1550560279	Shree	txbrewing\.com
 1550562157	Makyen	littlegreenman93(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
-1550562736	bertieb	samuraipaper\.com
 1550564390	Shree	marveledu\.com
 1550565192	Shree	pdfreaderpro\.com
 1550571433	Shree	tandemnz\.co\.nz
@@ -8513,4 +8511,12 @@
 1551614501	doppelgreener	digitalproguru\.com
 1551623676	Nisse Engström	dieseltester-cn\.com
 1551641284	Makyen	worldwidedonations\.com
-1551673504	FrankerZ	print\("SyntaxError: invalid syntax"\)\W*
+1551673504	FrankerZ	print\("SyntaxError: invalid syntax"\)\W*(?#used by a trol, circa 2019-03-03; see PR#2660)
+1551686878	Shree	patronageinstitute\.com
+1551691470	tripleee	turtlepac\.com
+1551692695	Shree	vidhya360\.in
+1551696020	Shree	locatebusiness\.net
+1551696846	tripleee	cognixia\.com
+1551696864	tripleee	pestongpestcontrol\.com
+1551701883	tripleee	munichmotorworks\.ae
+1551705682	tripleee	specsy
