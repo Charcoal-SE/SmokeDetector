@@ -8459,7 +8459,6 @@
 1551329913	Tetsuya Yamamoto	10000coders\.com
 1551330170	Tetsuya Yamamoto	sonyphotorecovery\.com
 1551330431	Tetsuya Yamamoto	downloadbook\.info
-1551332078	Shree	indiehackers\.com
 1551332581	Tetsuya Yamamoto	immerpact\.com
 1551333321	Tetsuya Yamamoto	loanonmind\.com
 1551336595	Shree	marshallpackers\.com
