@@ -1468,7 +1468,7 @@ menage\W?beauty
 cudamax
 Ziapro
 tone\W?fire(?:\W?garcinia)?
-ketogen\W?rx
+ketogen\W?r?x
 TreVulan\w*
 sky\W?n\W?genix
 mia\W*pielle
