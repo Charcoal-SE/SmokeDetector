@@ -7039,7 +7039,6 @@
 1544047985	Makyen	oooms\.org
 1544059393	Tetsuya Yamamoto	omnicontrols\.com
 1544060382	Tetsuya Yamamoto	printertechsupportusa\.com
-1544060439	Tetsuya Yamamoto	mhrwriter\.co\.uk
 1544060713	Tetsuya Yamamoto	newsalltripura\.in
 1544075290	Shree	creditassistancecompany(?:@gmail\.com)
 1544078908	Tetsuya Yamamoto	agriculture-machine\.com
