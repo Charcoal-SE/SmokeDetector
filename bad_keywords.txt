@@ -1818,3 +1818,4 @@ livewave\W*tv\W*antenna
 infatica
 king\W?servers
 kamadex
+advcnd
