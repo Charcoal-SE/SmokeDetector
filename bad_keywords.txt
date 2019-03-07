@@ -1820,3 +1820,4 @@ king\W?servers
 kamadex
 advcnd
 trim\W?keto
+velocity\W?trim
