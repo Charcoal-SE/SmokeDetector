@@ -8574,3 +8574,4 @@
 1552025666	tripleee	dailyrepeats\.com
 1552031263	tripleee	sauditourguide\.com
 1552036727	tripleee	aftertwelth\.in
+1552036787	tripleee	winningwithshopify\.com
