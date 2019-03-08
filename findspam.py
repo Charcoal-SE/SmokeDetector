@@ -59,12 +59,11 @@ WHITELISTED_WEBSITES_REGEX = regex.compile(r"(?i)upload|\b(?:{})\b".format("|".j
     "microsoft", "newegg", "cnet", "regex101", r"(?<!plus\.)google", "localhost", "ubuntu", "getbootstrap",
     r"jsfiddle\.net", r"codepen\.io", "pastebin"
 ] + [se_dom.replace(".", r"\.") for se_dom in SE_SITES_DOMAINS])))
-ASN_WHITELISTED_WEBSITES = ["docs.unity3d.com", "trac.ffmpeg.org", "bitcoincore.org", "ffmpeg.org",
-                            "latex.codecogs.com", "www.advancedcustomfields.com", "name.com",
-                            "businessbloomer.com", "wkhtmltopdf.org", "www.thefreedictionary.com",
-                            "ruby-doc.org", "www.site.com.br", "www.ffmpeg.org", "unity3d.com",
-                            "test.ooo-pnu.ru", "swift.org", "site2.com", "rxweb.io", "www.tenforums.com",
-                            "www.rhydolabz.com"]
+ASN_WHITELISTED_WEBSITES = ["unity3d.com", "ffmpeg.org", "bitcoincore.org", "latex.codecogs.com",
+                            "advancedcustomfields.com", "name.com", "businessbloomer.com",
+                            "wkhtmltopdf.org", "thefreedictionary.com", "ruby-doc.org",
+                            "site.com.br", "test.ooo-pnu.ru", "swift.org", "site2.com",
+                            "rxweb.io", "tenforums.com", "rhydolabz.com"]
 # ^^ top 20 FP hosts that get reported due to 'bad ASN', collated by regex parsing
 # https://metasmoke.erwaysoftware.com/data/sql/queries/164-bad-asn-in-false-positives
 COUNTRY = [
@@ -1165,8 +1164,8 @@ def bad_ip_for_url_hostname(s, site):
 
 def asn_for_url_host(s, site, asn_list):
     for hostname in post_hosts(s, check_tld=True):
-        if hostname in ASN_WHITELISTED_WEBSITES:
-            log('debug', 'Skipping ASN check for hostname {1}'.format(
+        if any(hostname == x or hostname.endswith("."+x) for x in ASN_WHITELISTED_WEBSITES):
+            log('debug', 'Skipping ASN check for hostname {0}'.format(
                 hostname))
             continue
         a = dns_query(hostname, 'a')
