@@ -8571,3 +8571,4 @@
 1552023014	tripleee	podbean\.com
 1552023040	tripleee	classtell\.com
 1552024571	tripleee	fusiontechnology\.in
+1552025666	tripleee	dailyrepeats\.com
