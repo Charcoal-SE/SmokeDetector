@@ -982,6 +982,7 @@ def bad_ns_for_url_domain(s, site):
         # Don't forget the trailing dot on the resolved name!
         {'ns1.md-95.bigrockservers.com.', 'ns2.md-95.bigrockservers.com.'},
         {'ns1.md-99.bigrockservers.com.', 'ns2.md-99.bigrockservers.com.'},
+        {'alex.ns.cloudflare.com.', 'lana.ns.cloudflare.com.'},
         {'apollo.ns.cloudflare.com.', 'liz.ns.cloudflare.com.'},
         {'ara.ns.cloudflare.com.', 'greg.ns.cloudflare.com.'},
         {'brenda.ns.cloudflare.com.', 'merlin.ns.cloudflare.com.'},
