@@ -982,7 +982,6 @@ def bad_ns_for_url_domain(s, site):
         # Don't forget the trailing dot on the resolved name!
         {'ns1.md-95.bigrockservers.com.', 'ns2.md-95.bigrockservers.com.'},
         {'ns1.md-99.bigrockservers.com.', 'ns2.md-99.bigrockservers.com.'},
-        {'alex.ns.cloudflare.com.', 'lana.ns.cloudflare.com.'},
         {'apollo.ns.cloudflare.com.', 'liz.ns.cloudflare.com.'},
         {'ara.ns.cloudflare.com.', 'greg.ns.cloudflare.com.'},
         {'brenda.ns.cloudflare.com.', 'merlin.ns.cloudflare.com.'},
@@ -1017,6 +1016,8 @@ def watched_ns_for_url_domain(s, site):
         {'adi.ns.cloudflare.com.', 'miles.ns.cloudflare.com.'},
         {'aida.ns.cloudflare.com.', 'lloyd.ns.cloudflare.com.'},
         {'ajay.ns.cloudflare.com.', 'lia.ns.cloudflare.com.'},
+        {'alex.ns.cloudflare.com.', 'kara.ns.cloudflare.com.'},
+        {'alex.ns.cloudflare.com.', 'lana.ns.cloudflare.com.'},
         {'anirban.ns.cloudflare.com.', 'janet.ns.cloudflare.com.'},
         {'betty.ns.cloudflare.com.', 'kai.ns.cloudflare.com.'},
         {'bonnie.ns.cloudflare.com.', 'guss.ns.cloudflare.com.'},
