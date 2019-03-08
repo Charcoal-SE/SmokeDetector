@@ -8588,3 +8588,4 @@
 1552040879	tripleee	apnetv\.co\.in
 1552040888	tripleee	gamesofthronesseason8\.com
 1552042668	tripleee	united-airlines-flights\.com
+1552044114	bertieb	reviewparks\.com
