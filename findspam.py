@@ -1860,6 +1860,9 @@ create_rule("bad keyword in {}", r"(?i)\b(?!s.m.a.r.t|s.h.i.e.l.d|s.o.l.i.d|o.s.
 create_rule("bad keyword in {}",
             r'(?i)[\w\s]{0,20}help(?: a)?(?: weak)? postgraduate student(?: to)? write(?: a)? book\??',
             body=False, max_rep=20, max_score=2)
+# Requested by Mithrandir 2019-03-08
+create_rule("potentially bad keyword in {}", r'^v\w{3,5}\Wkumar$',
+            title=False, body=False, username=True, sites=['scifi.stackexchange.com'])
 # Eltima: Nested lookarounds for length limit
 create_rule("bad keyword in {}", r"(?is)(?<=^(?=.{,750}$).*)\beltima",
             title=False, max_rep=50)
