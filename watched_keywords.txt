@@ -8573,3 +8573,4 @@
 1552024571	tripleee	fusiontechnology\.in
 1552025666	tripleee	dailyrepeats\.com
 1552031263	tripleee	sauditourguide\.com
+1552036727	tripleee	aftertwelth\.in
