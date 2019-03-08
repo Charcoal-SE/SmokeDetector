@@ -8587,3 +8587,4 @@
 1552040871	tripleee	pinoytvstar\.com
 1552040879	tripleee	apnetv\.co\.in
 1552040888	tripleee	gamesofthronesseason8\.com
+1552042668	tripleee	united-airlines-flights\.com
