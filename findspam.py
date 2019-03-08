@@ -1164,7 +1164,7 @@ def bad_ip_for_url_hostname(s, site):
 
 def asn_for_url_host(s, site, asn_list):
     for hostname in post_hosts(s, check_tld=True):
-        if any(hostname == x or hostname.endswith("."+x) for x in ASN_WHITELISTED_WEBSITES):
+        if any(hostname == x or hostname.endswith("." + x) for x in ASN_WHITELISTED_WEBSITES):
             log('debug', 'Skipping ASN check for hostname {0}'.format(
                 hostname))
             continue
