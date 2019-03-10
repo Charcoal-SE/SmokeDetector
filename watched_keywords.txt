@@ -8613,3 +8613,4 @@
 1552187845	Makyen	tuxfiles\.org
 1552196134	Makyen	nortonsetup-key\.com
 1552196141	Makyen	dmitry\.bazhenovsky
+1552196153	Makyen	pokgoip(?:@gmail\.com)?
