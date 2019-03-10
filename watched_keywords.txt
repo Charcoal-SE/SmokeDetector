@@ -8608,3 +8608,4 @@
 1552179365	Makyen	eshopfirst\.com
 1552179375	Makyen	watkinsheating\.com
 1552179391	Makyen	bassama2020a(?:/W*(?:at\W*)?gmail/W*(?:dot\W*)?com)?
+1552179399	Makyen	(?-i:sOQEf\.jpg)(?#i.stack.imgur.com)
