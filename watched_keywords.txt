@@ -8607,3 +8607,4 @@
 1552179354	Makyen	pest-control-hail
 1552179365	Makyen	eshopfirst\.com
 1552179375	Makyen	watkinsheating\.com
+1552179391	Makyen	bassama2020a(?:/W*(?:at\W*)?gmail/W*(?:dot\W*)?com)?
