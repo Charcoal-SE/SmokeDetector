@@ -8624,3 +8624,4 @@
 1552216181	doppelgreener	apexsettings\.net
 1552216191	doppelgreener	apexskins\.net
 1552216311	doppelgreener	tellthebelltacos\.com
+1552217105	Zoe	dexerto\.com
