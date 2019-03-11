@@ -8649,3 +8649,4 @@
 1552304119	double-beep	offers4cart\.com
 1552304168	double-beep	sites\.google\.com/site/offers4cart*
 1552304385	double-beep	alonetone\.com
+1552304419	double-beep	medium\.com/@tolsiodkrow
