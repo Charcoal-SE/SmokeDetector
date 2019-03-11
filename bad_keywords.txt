@@ -1822,3 +1822,5 @@ advcnd
 trim\W?keto
 velocity\W?trim
 (?<=/)ketosis(?:-\w+)+
+thepilpedia
+alkatone
