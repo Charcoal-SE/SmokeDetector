@@ -1824,3 +1824,4 @@ velocity\W?trim
 (?<=/)ketosis(?:-\w+)+
 thepilpedia
 alkatone
+viril\W?pump
