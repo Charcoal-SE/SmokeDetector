@@ -1862,7 +1862,8 @@ create_rule("bad keyword in {}",
             body=False, max_rep=20, max_score=2)
 # Requested by Mithrandir 2019-03-08
 create_rule("potentially bad keyword in {}", r'^v\w{3,5}\Wkumar$',
-            title=False, body=False, username=True, sites=['scifi.stackexchange.com'])
+            title=False, body=False, username=True,
+            all=False, sites=['scifi.stackexchange.com'])
 # Eltima: Nested lookarounds for length limit
 create_rule("bad keyword in {}", r"(?is)(?<=^(?=.{,750}$).*)\beltima",
             title=False, max_rep=50)
