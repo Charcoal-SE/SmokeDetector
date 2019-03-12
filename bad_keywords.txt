@@ -835,7 +835,7 @@ rapid\W?lift\W?fx
 tru\W?testo
 melatrol
 power\W?muscle\W?blast
-avella
+avella(?!$)
 health\W?supplements\W?reviews
 zmax\W?male
 platinum\W?cleanse\W?xl
