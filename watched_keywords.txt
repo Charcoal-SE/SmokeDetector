@@ -8657,3 +8657,4 @@
 1552333781	Makyen	thesuccess\.pk
 1552353784	Tetsuya Yamamoto	mh-softs\.com
 1552361664	Makyen	insurancemarketz\.com
+1552361766	Makyen	WONDERSLOVESPELL(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
