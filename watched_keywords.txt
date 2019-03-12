@@ -8668,3 +8668,4 @@
 1552393847	double-beep	fortifive\.com
 1552395310	double-beep	redactry\.com
 1552394829	double-beep	getuserreviews\.com
+1552395750	tripleee	indianewsread\.blogspot
