@@ -8691,3 +8691,4 @@
 1552477012	tripleee	okoko\W?spell\W?temple\d*
 1552480151	tripleee	mootanroo\.com
 1552480375	tripleee	obudu(?:\W?yang)?
+1552480395	tripleee	umzugsfirma-junker-berlin\.de
