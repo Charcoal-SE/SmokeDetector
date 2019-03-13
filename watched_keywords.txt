@@ -8676,3 +8676,4 @@
 1552444180	Tetsuya Yamamoto	captcha-killer\.com
 1552447106	Makyen	captcha\W*killer
 1552448888	Tetsuya Yamamoto	appleinfoway\.com
+1552460407	tripleee	nikepars\.com
