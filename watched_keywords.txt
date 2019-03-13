@@ -8673,3 +8673,4 @@
 1552442064	Tetsuya Yamamoto	worldofsupplement\.com
 1552442096	Tetsuya Yamamoto	southernrestorationinc\.com
 1552442169	Tetsuya Yamamoto	panold\.com
+1552444180	Tetsuya Yamamoto	captcha-killer\.com
