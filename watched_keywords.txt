@@ -8677,3 +8677,4 @@
 1552447106	Makyen	captcha\W*killer
 1552448888	Tetsuya Yamamoto	appleinfoway\.com
 1552460407	tripleee	nikepars\.com
+1552464459	tripleee	custom(?:ized?)?\W?(?:embroidered\W?)?patch(?:es)?
