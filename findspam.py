@@ -59,11 +59,12 @@ WHITELISTED_WEBSITES_REGEX = regex.compile(r"(?i)upload|\b(?:{})\b".format("|".j
     "microsoft", "newegg", "cnet", "regex101", r"(?<!plus\.)google", "localhost", "ubuntu", "getbootstrap",
     r"jsfiddle\.net", r"codepen\.io", "pastebin"
 ] + [se_dom.replace(".", r"\.") for se_dom in SE_SITES_DOMAINS])))
-ASN_WHITELISTED_WEBSITES = ["unity3d.com", "ffmpeg.org", "bitcoincore.org", "latex.codecogs.com",
-                            "advancedcustomfields.com", "name.com", "businessbloomer.com",
-                            "wkhtmltopdf.org", "thefreedictionary.com", "ruby-doc.org",
-                            "site.com.br", "test.ooo-pnu.ru", "swift.org", "site2.com",
-                            "rxweb.io", "tenforums.com", "rhydolabz.com"]
+ASN_WHITELISTED_WEBSITES = [
+    "unity3d.com", "ffmpeg.org", "bitcoincore.org", "latex.codecogs.com",
+    "advancedcustomfields.com", "name.com", "businessbloomer.com",
+    "wkhtmltopdf.org", "thefreedictionary.com", "ruby-doc.org",
+    "site.com.br", "test.ooo-pnu.ru", "swift.org", "site2.com",
+    "rxweb.io", "tenforums.com", "rhydolabz.com", "javatpoint.com"]
 # ^^ top 20 FP hosts that get reported due to 'bad ASN', collated by regex parsing
 # https://metasmoke.erwaysoftware.com/data/sql/queries/164-bad-asn-in-false-positives
 COUNTRY = [
@@ -1089,6 +1090,7 @@ def watched_ns_for_url_domain(s, site):
         'siteground.biz.',
         'cetpainfotech.com.',
         'sttdns.com.',
+        'hover.com.',
     ])
 
 
