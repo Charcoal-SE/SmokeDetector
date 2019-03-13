@@ -8679,3 +8679,4 @@
 1552460407	tripleee	nikepars\.com
 1552464459	tripleee	custom(?:ized?)?\W?(?:embroidered\W?)?patch(?:es)?
 1552464671	tripleee	embroidered\W?patch(?:es)?
+1552466204	Tetsuya Yamamoto	thomsondata\.com
