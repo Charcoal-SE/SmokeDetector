@@ -8727,3 +8727,4 @@
 1552560560	Shree	resetpasswords\.net
 1552562092	tripleee	patelmeet\.in
 1552569890	tripleee	bestguitars\.in
+1552571081	tripleee	besttechmag\.puzl\.com
