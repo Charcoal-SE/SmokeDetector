@@ -5933,7 +5933,6 @@
 1538992975	Glorfindel	fuselabcreative\.com
 1538999757	Shree	way4supplement\.com
 1539001298	tripleee	wbc\W?india
-1539006645	Glorfindel	fastestvpn\.com
 1539017864	Glorfindel	thecrazybuyers\.com
 1539028931	Erik the Outgolfer	dar[kl]tracker01@gmail\.com
 1539046890	WELZ	adpublisher\.co
