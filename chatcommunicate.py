@@ -138,7 +138,7 @@ def parse_room_config(path):
     with open(path, "r") as room_config:
         room_dict = yaml.load(room_config.read())
 
-    with open("users.yml", "r") as user_config:
+    with open("users.yml", "r", encoding="utf-8") as user_config:
         user_data = yaml.load(user_config.read())
 
     inherits = []
