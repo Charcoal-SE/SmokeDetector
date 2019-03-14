@@ -8733,3 +8733,4 @@
 1552582211	double-beep	bankstatementpdfedit\.com
 1552581258	double-beep	editingbankstatements\.com
 1552581433	double-beep	tawk\.to/chat/5b056f7bd0f6723da57ecd06
+1552587067	double-beep	medium\.com/@FrankHarri
