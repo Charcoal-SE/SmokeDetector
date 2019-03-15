@@ -8768,3 +8768,4 @@
 1552655989	double-beep	saundragarza\.inube\.com
 1552656037	double-beep	saundragarza\.inube\.com
 1552656632	double-beep	feedsfloor\.com
+1552656801	double-beep	saundragarza\.storychief\.io
