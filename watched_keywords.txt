@@ -8755,3 +8755,4 @@
 1552647580	tripleee	krhicranes.com
 1552648468	tripleee	foligrow?(?:\W?xt)?
 1552648565	tripleee	cagatay\W?ulusoy
+1552650116	tripleee	beautyshealthy\.com
