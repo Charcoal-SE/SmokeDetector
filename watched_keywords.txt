@@ -8744,3 +8744,5 @@
 1552611707	bertieb	1xtechnologies\.com
 1552627285	Shree	sipotek\.net
 1552629327	double-beep	twitter\.com/Supplementpilot
+1552629591	double-beep	classic\W*credito
+1552629818	double-beep	classico\W*credito
