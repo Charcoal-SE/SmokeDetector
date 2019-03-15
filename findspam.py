@@ -1091,6 +1091,7 @@ def watched_ns_for_url_domain(s, site):
         'cetpainfotech.com.',
         'sttdns.com.',
         'hover.com.',
+        'stechsky.com.',
     ])
 
 
