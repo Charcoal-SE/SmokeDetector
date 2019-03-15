@@ -8764,6 +8764,7 @@
 1552657733	Glorfindel	kinemasterforpcdownload\.co
 1552657745	Glorfindel	kingrootapkforpcdownload\.com
 1552657755	Glorfindel	kinemasterpcguide
+1552661015	double-beep	medium\.com/@davidbourg
 1552662665	Makyen	madam\W*kate\W*robinson
 1552655989	double-beep	saundragarza\.inube\.com
 1552656632	double-beep	feedsfloor\.com
