@@ -488,8 +488,10 @@ class Metasmoke:
                 GlobalVars.metasmoke_failures += 1
                 if GlobalVars.metasmoke_failures >= MAX_FAILURES and not GlobalVars.metasmoke_down:
                     GlobalVars.metasmoke_down = True
-                    chatcommunicate.tell_rooms_with('debug', "**Warning**: {} latest connections to metasmoke have fa"
-                                                    "iled. Disabling metasmoke".format(GlobalVars.metasmoke_failures))
+                    chatcommunicate.tell_rooms_with(
+                        'debug', "**Warning**: {}: {} latest connections to '
+                        'metasmoke have failed. Disabling metasmoke".format(
+                            GlovalVars.location, GlobalVars.metasmoke_failures))
                 # No need to log here because it's re-raised
                 raise  # Maintain minimal difference to the original get/post methods
             else:
