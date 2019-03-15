@@ -8763,3 +8763,4 @@
 1552657295	Mithrandir	deltaexchange\.io
 1552657733	Glorfindel	kinemasterforpcdownload\.co
 1552657745	Glorfindel	kingrootapkforpcdownload\.com
+1552657755	Glorfindel	kinemasterpcguide
