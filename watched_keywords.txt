@@ -7771,7 +7771,6 @@
 1548094702	Makyen	(?-i:LUKE MEREDITH)(?#gocash7.com)
 1548099566	Makyen	(?-i:yjBIzNId5Yk)(?#YouTube video self-promotion)
 1548108189	Makyen	shangosolutiontemple(?:\W*(?:at\W*)?yahoo\W*(?:dot\W*)?com)?
-1548108198	Makyen	freefbhacks\.com
 1548129773	Makyen	24hoursbitcoinminer(?:@gmail\.com)?
 1548134037	tripleee	topdau\.net
 1548135100	Tetsuya Yamamoto	texttwist\.online
