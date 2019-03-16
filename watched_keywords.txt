@@ -8780,3 +8780,4 @@
 1552731082	double-beep	quora\.com/link/Captain-Marvel-2019-2
 1552747914	Erik the Outgolfer	iccricketworldcup2019\.com
 1552734525	double-beep	jagrankiparty\.co\.in
+1552734640	double-beep	medium\.com/@walgreensdiet
