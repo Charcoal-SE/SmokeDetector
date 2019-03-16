@@ -720,7 +720,7 @@ def pull(alias_used='pull'):
     :return: String on failure, None on success
     """
     remote_diff = GitManager.get_remote_diff()
-    if not alias_used == "pull-force" and only_blacklists_changed(remote_diff):
+    if (not alias_used == "pull-force") and only_blacklists_changed(remote_diff):
         GitManager.pull_remote()
         findspam.FindSpam.reload_blacklists()
         GlobalVars.reload()
