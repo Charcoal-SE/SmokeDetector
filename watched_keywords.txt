@@ -8800,3 +8800,4 @@
 1552842308	tripleee	yehhaimohabbat\.com
 1552845218	tripleee	clippingbiz\.com
 1552845334	tripleee	clipping\W?biz
+1552882894	Tetsuya Yamamoto	edureviewer\.com
