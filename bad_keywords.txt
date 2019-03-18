@@ -1296,7 +1296,7 @@ unlimited\W?fit
 iphone\W?data\W?recovery
 apeaksoft
 lutragen(?:\W?cream)?(?:\w*$)?
-D\W+Bal
+D[ -]Bal
 iq\W?180(?:\W?cognitive)?
 flawless\W?keto
 suck\W*?(?:(?:the|of)?\W*?(?:lingam|phallus)\W*?)+
