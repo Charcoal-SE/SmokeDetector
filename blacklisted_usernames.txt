@@ -129,3 +129,4 @@ muralidharaB
 ^Sonam Agarwal$
 ^cnhonest$
 ^Victoria Tegg$
+(?-i:^Babar Nawaz$)
