@@ -8814,3 +8814,4 @@
 1552888932	tripleee	jabongcashbackoffers\.blogspot
 1552888940	tripleee	amazon-cashbackoffers\.blogspot
 1552889022	tripleee	amazon-cashback-offers\.blogspot
+1552889029	tripleee	amazon-cash-back-offers-discounts\.blogspot
