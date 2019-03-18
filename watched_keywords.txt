@@ -8811,3 +8811,4 @@
 1552888913	tripleee	cash-back-coupons\.blogspot
 1552888924	tripleee	flipkartdealofthedayindia\.blogspot
 1552888928	tripleee	nomadic-matt\.blogspot
+1552888932	tripleee	jabongcashbackoffers\.blogspot
