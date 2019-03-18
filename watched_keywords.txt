@@ -8804,3 +8804,4 @@
 1552888467	tripleee	profsurv\.com
 1552888476	tripleee	aragon\.ws
 1552888486	tripleee	assist-info54\.com
+1552888517	tripleee	latest-flipkart-offers\.blogspot
