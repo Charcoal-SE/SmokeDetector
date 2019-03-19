@@ -8836,3 +8836,4 @@
 1552980991	Tetsuya Yamamoto	printablecalendar\.pictures
 1552982728	tripleee	ielts\W?professionals?(?:@outlook\.com)?
 1552983507	Tetsuya Yamamoto	mkshastriji\.com
+1552987281	tripleee	getprintersolution\.com
