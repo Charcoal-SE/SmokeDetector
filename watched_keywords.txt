@@ -7168,7 +7168,6 @@
 1544750741	Tetsuya Yamamoto	travelgraphics\.org
 1544759561	Tetsuya Yamamoto	freeonlinecoursesite\.com
 1544766632	Tetsuya Yamamoto	latestnewsbuzz\.co\.in
-1544766890	Tetsuya Yamamoto	cybergurulink\.strikingly\.com
 1544766924	Tetsuya Yamamoto	dailyonlinejobs\.com
 1544767031	Tetsuya Yamamoto	acumenbusiness\.com\.au
 1544771971	K.Dᴀᴠɪs	ejoin\W*(?:@|at)\W*ejointech\W*(?:\.|dot)\W*com
