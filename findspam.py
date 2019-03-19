@@ -1143,6 +1143,7 @@ def watched_ip_for_url_hostname(s, site):
             '107.180.59.131',   # drugs kingofsupplement.com
             '160.153.129.38',   # drugs supplementswellness / buyketodiet etc
             '160.153.129.238',  # drugs bestenhancement / supplementskingpro etc
+            '166.62.6.66',      # fake-tech-support + hosting ms-officesetup etc
             '166.62.28.116',    # fake-tech-support printertechsupportnumbers.com
             '192.186.227.225',  # drugs topwellnessguru / healthcare350 etc
             # AS 394695 PUBLIC-DOMAIN-REGISTRY - PDR, US
