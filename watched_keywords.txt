@@ -8662,7 +8662,6 @@
 1552442169	Tetsuya Yamamoto	panold\.com
 1552444180	Tetsuya Yamamoto	captcha-killer\.com
 1552447106	Makyen	captcha\W*killer
-1552448888	Tetsuya Yamamoto	appleinfoway\.com
 1552460407	tripleee	nikepars\.com
 1552464459	tripleee	custom(?:ized?)?\W?(?:embroidered\W?)?patch(?:es)?
 1552464671	tripleee	embroidered\W?patch(?:es)?
