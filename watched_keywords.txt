@@ -8872,3 +8872,4 @@
 1553099348	iBug	hd\W?testo
 1553099369	iBug	lasambucalifestyle\.com
 1553099810	doppelgreener	afid=10110
+1553103138	double-beep	cdome\.comodo\.com
