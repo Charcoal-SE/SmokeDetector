@@ -8857,3 +8857,4 @@
 1553060650	Tetsuya Yamamoto	helpsupplement\.tk
 1553061384	Makyen	indiafantasy\.com
 1553061406	Makyen	helpsupplement\.(?:tk|ml|cf|ga|gq)
+1553063062	tripleee	weheartit\.com
