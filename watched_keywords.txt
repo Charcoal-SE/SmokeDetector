@@ -8859,3 +8859,4 @@
 1553061406	Makyen	helpsupplement\.(?:tk|ml|cf|ga|gq)
 1553063062	tripleee	weheartit\.com
 1553065800	Tetsuya Yamamoto	mytrainingbangalore\.com
+1553068000	Tetsuya Yamamoto	batrainingpennsylvania\.com
