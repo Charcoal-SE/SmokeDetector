@@ -8871,3 +8871,4 @@
 1553090826	tripleee	qqcoba99\.biz
 1553099348	iBug	hd\W?testo
 1553099369	iBug	lasambucalifestyle\.com
+1553099810	doppelgreener	afid=10110
