@@ -5190,7 +5190,6 @@
 1535528658	Glorfindel	moblemehr\.com
 1535529010	Glorfindel	goldenfreight\.ir
 1535529549	Tetsuya Yamamoto	neginirannovinclinic\.com
-1535532410	Glorfindel	basic-bytes\.com
 1535532995	tripleee	atozsourcecode\.com
 1535533423	Glorfindel	thecrowndentalcare\.com
 1535534200	Tetsuya Yamamoto	rcg\.com\.pk
