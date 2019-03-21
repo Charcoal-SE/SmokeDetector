@@ -130,3 +130,4 @@ muralidharaB
 ^cnhonest$
 ^Victoria Tegg$
 (?-i:^Babar Nawaz$)
+(?-i:^Yvette Rogers$)
