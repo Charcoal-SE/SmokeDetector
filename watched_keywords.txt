@@ -8885,3 +8885,4 @@
 1553144421	Makyen	lady\W*cafai(?:\W*(?:at\W*)?yahoo\W*(?:dot\W*)?com)?(?#Obfuscated email + "lady cafai")
 1553145344	Makyen	campaign4africa\.(?:tk|ml|gq)
 1553145367	Makyen	httpcampaign4africa-tk
+1553149729	tripleee	cmsconstruct\.com
