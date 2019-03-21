@@ -8881,3 +8881,4 @@
 1553114457	tripleee	jesussupplement\.over-blog\.com
 1553144245	Makyen	piguide\.dev
 1553144265	Makyen	freenaruto\.com
+1553144288	Makyen	ladycafaiherbalcenter(?:\W*com)?(?#Obfuscated domain)
