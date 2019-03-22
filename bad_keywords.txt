@@ -1836,3 +1836,4 @@ bioW?tech\W?pro
 duraflex
 mara\W?nutra
 Andro\W*Testo(?:-Pro)?
+xyz\W?smart(?:\W?collagen)?
