@@ -4146,7 +4146,6 @@
 1530575766	Makyen	[a-z_]*(?:1_*)?980[\W_]*220[\W_]*3690[a-z_]*
 1530575774	Makyen	onlinepassportproducers\.com
 1530580759	Makyen	fashionbirdz\.com
-1530591099	Makyen	hasweightoffers\.com
 1530594938	Frenzy Li	growth\W*xtreme
 1530606394	Byte Commander	^Cade\W+Song$
 1530610408	Mithrandir	whowillwin\.in
