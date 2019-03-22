@@ -8917,3 +8917,4 @@
 1553246754	double-beep	pcbgogo\.com
 1553246417	double-beep	triumphant\W*finance\W*(?:Company)?LTD(?:@gmail\.com)?
 1553247350	double-beep	musicalsource\.co\.uk
+1553247588	double-beep	delivery\.acm\.org
