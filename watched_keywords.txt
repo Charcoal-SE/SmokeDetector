@@ -8922,3 +8922,4 @@
 1553248496	tripleee	2ujWLco(?#bit.ly redirector)
 1553248567	tripleee	efin\.cx(?#target of bit.ly/2ujWLco)
 1553248615	tripleee	bmudzingwa8
+1553249594	tripleee	ourdoctorclinic\.com
