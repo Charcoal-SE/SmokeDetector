@@ -8639,7 +8639,6 @@
 1552361664	Makyen	insurancemarketz\.com
 1552361766	Makyen	WONDERSLOVESPELL(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
 1552363827	Makyen	jemploi\.fr
-1552373847	Glorfindel	flightsbird\.com
 1552376280	Glorfindel	datavare
 1552379842	tripleee	limitedfortrials\.com
 1552381379	tripleee	highlytechno\.com
