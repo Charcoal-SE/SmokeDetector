@@ -1836,3 +1836,4 @@ bioW?tech\W?pro
 duraflex
 mara\W?nutra
 Andro\W*Testo(?:-Pro)?
+com\.appmaster\.akash(?#please tp, watch requested by mod MartijnPieters)
