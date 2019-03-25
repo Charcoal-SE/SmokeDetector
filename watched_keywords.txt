@@ -8758,7 +8758,6 @@
 1552731082	double-beep	quora\.com/link/Captain-Marvel-2019-2
 1552747914	Erik the Outgolfer	iccricketworldcup2019\.com
 1552734640	double-beep	medium\.com/@walgreensdiet
-1552734667	double-beep	dougopdesim\.blogspot\.com
 1552735010	double-beep	maxrobustxtreme\.nl
 1552735541	double-beep	wikibioonline\.xyz
 1552746095	double-beep	expatriates\.com
