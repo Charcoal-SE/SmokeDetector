@@ -8956,3 +8956,4 @@
 1553507025	tripleee	accountwizy\.com
 1553510711	bertieb	hbo-go-com-activate\.com
 1553512487	tripleee	yogclub\.com
+1553518606	tripleee	https?://[^<>"'\s]+-(canada|australia|africa|france|ireland|finland|usa|singapore|india|new-zealand|espana|italy|switzerland|belgium|d[ae]nmark|sweden|norway|poland|portugal|austria|sverige|polska|romania)/(?=[<>"'\s]|$)
