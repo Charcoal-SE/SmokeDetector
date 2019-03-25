@@ -8947,3 +8947,4 @@
 1553396947	Makyen	PRATAP\W*PURANIK
 1553423549	Shree	metersawgeek\.com
 1553486416	Makyen	fushimavina(?:\.com)?(?#domain and URL path in multiple domains)
+1553486436	Makyen	nguoi-su-dung
