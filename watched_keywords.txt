@@ -8949,3 +8949,4 @@
 1553486416	Makyen	fushimavina(?:\.com)?(?#domain and URL path in multiple domains)
 1553486436	Makyen	nguoi-su-dung
 1553494909	Makyen	adobecustomercares\.com
+1553495533	tripleee	logicspice\.com
