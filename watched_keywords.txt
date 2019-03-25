@@ -8868,7 +8868,6 @@
 1553103377	double-beep	uchetechs\.com
 1553104247	double-beep	scan-score\.com
 1553104671	double-beep	papatyapeyzaj\.net
-1553114457	tripleee	jesussupplement\.over-blog\.com
 1553144245	Makyen	piguide\.dev
 1553144265	Makyen	freenaruto\.com
 1553144288	Makyen	ladycafaiherbalcenter(?:\W*com)?(?#Obfuscated domain)
