@@ -1840,3 +1840,4 @@ com\.appmaster\.akash(?#please tp and mod flag; requested by mod MartijnPieters)
 xyz\W?smart(?:\W?collagen)?
 whole\W?greens
 enzo\W?last
+gentiv(?:\W?ultra)?
