@@ -8969,3 +8969,4 @@
 1553587585	Glorfindel	Studio72
 1553588343	tripleee	aress\.support(?#promotional footer should be removed, maybe unwatch in a month or two)
 1553588618	tripleee	ketopuredietz\.over-blog\.com
+1553589031	Shree	ecommercewebsitedeveloper\.in
