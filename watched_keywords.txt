@@ -8992,3 +8992,4 @@
 1553669683	tripleee	firstcall\.co\.in
 1553673228	tripleee	easyprintersupport\.com
 1553674292	tripleee	apporio\.com
+1553674348	tripleee	uber\W?clone
