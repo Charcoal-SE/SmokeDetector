@@ -8587,7 +8587,6 @@
 1552179399	Makyen	(?-i:sOQEf\.jpg)(?#i.stack.imgur.com)
 1552179408	Makyen	whynotgems\.com
 1552187845	Makyen	tuxfiles\.org
-1552196134	Makyen	nortonsetup-key\.com
 1552196141	Makyen	dmitry\.bazhenovsky
 1552196153	Makyen	pokgoip(?:@gmail\.com)?
 1552196165	Makyen	(?-i:1HByDJR9Ck5CdIwTl-v_IzcaVhsG8aKaA)
