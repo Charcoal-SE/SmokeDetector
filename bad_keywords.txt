@@ -1845,3 +1845,4 @@ nutri\W?life(?:\W?keto)?
 nutra\W?kick
 keto\W?hack
 viaxyl
+keto\W*max(?:\W*\d+)?
