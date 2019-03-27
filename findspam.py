@@ -1096,6 +1096,7 @@ def watched_ns_for_url_domain(s, site):
         'sttdns.com.',
         'hover.com.',
         'stechsky.com.',
+        'loopbytes.com.',
     ])
 
 
