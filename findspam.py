@@ -1169,6 +1169,7 @@ def bad_ip_for_url_hostname(s, site):
             # AS 26496 AS-26496-GO-DADDY-COM-LLC
             '104.25.50.105',   # crbtech.in
             '107.180.78.164',  # gs-jj.com
+            '160.153.75.129',  # itunessupport.org
             # AS 32475 - SINGLEHOP-LLC - SingleHop LLC, US
             '172.96.187.196'   # fake-tech-support canonfreedownload etc
         ])
