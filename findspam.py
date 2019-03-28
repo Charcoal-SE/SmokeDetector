@@ -1097,6 +1097,7 @@ def watched_ns_for_url_domain(s, site):
         'hover.com.',
         'stechsky.com.',
         'loopbyte.com.',
+        'sgp61.siteground.asia.',
     ])
 
 
