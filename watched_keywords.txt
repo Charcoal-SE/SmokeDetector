@@ -3636,7 +3636,6 @@
 1527927692	Makyen	shawncostellogolf21
 1527932740	A J	jquerytraining\.com
 1527932858	Zoe	alertfreejob\.com
-1527936496	Videonauth	cryptoexchangescript\.com
 1527944254	Zoe	karait\.com
 1527948328	Zoe	softknoll\.com
 1527951446	Byte Commander	acharya\W*institute
@@ -9019,3 +9018,21 @@
 1553763513	Shree	servicefry\.com
 1553763549	tripleee	fmoviesc\.to
 1553769263	Glorfindel	homeradonpros\.com
+1553804483	Erik the Outgolfer	cheapigfollowers\.com
+1553802130	double-beep	onsiteassistances\.com
+1553818273	Makyen	israelalpha00(?:@gmail\.com)?
+1553831809	Makyen	sexrealdoll\.com
+1553841098	Makyen	sterlitepower\.com
+1553841120	Makyen	myseokhazana\.com
+1553841144	Makyen	dietgreencoffeereview\.com
+1553844379	Makyen	20829\W*Valley\W*Blvd
+1553844399	Makyen	5280\W*Oakmount\W*Crescent
+1553844418	Makyen	soft-outlet\.ltd
+1553844592	Makyen	nist\.edu\.pk
+1553844683	Makyen	fitnessbenz\.com
+1553847805	Glorfindel	tintran\.org
+1553847909	Glorfindel	microsoftechgeek\.blogspot\.com
+1553848722	Sonic the Wizard Werehog	patentseo\.net
+1553852433	Glorfindel	rightdeed\.com
+1553856858	tripleee	trepium\.com
+1553865988	double-beep	whg-heide\.de

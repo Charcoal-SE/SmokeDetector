@@ -1099,6 +1099,7 @@ def watched_ns_for_url_domain(s, site):
         'stechsky.com.',
         'loopbyte.com.',
         'sgp61.siteground.asia.',
+        'letter.org.in.',
     ])
 
 
