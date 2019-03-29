@@ -959,7 +959,7 @@
 1506076711	tripleee	9880141442
 1506103192	NobodyNada	appnaz\.com
 1506143345	NobodyNada	5\WHour\WForce
-1506325152	Glorfindel	@DigitEMB
+1506325152	Glorfindel	medium\.com/@DigitEMB
 1506328960	Glorfindel	elocenter\.net
 1506329024	Glorfindel	vinpearls-namhoian\.com
 1506336835	suraj	krivtsov(?:oil)?(?:gas)?consultants?@(?:yandex|mail)\.ru
@@ -3945,7 +3945,7 @@
 1529573647	CalvT	install-ota\.com
 1529574764	CalvT	800it\.ae
 1529577247	Mithrandir	atoall\.com
-1529577416	doppelgreener	#bestskillet
+1529577416	doppelgreener	(?<=#)bestskillet
 1529578176	doppelgreener	shopifywebexpert\.com
 1529579865	tripleee	deep\W?belly\W?detox
 1529581756	tripleee	eckovation\.com
@@ -5576,7 +5576,7 @@
 1537360124	Shree	cometchat\.com
 1537364208	Glorfindel	tniel\.net
 1537368256	Makyen	cryptodraw\.org
-1537368286	Makyen	@eos\.wallet\.claim(?#part of a path on medium.com)
+1537368286	Makyen	medium\.com/@eos\.wallet\.claim(?#part of a path on medium.com)
 1537368313	Makyen	escortintoronto\.info
 1537375371	bertieb	infomint\.net
 1537421526	Tetsuya Yamamoto	tvforsa\.com
@@ -6760,7 +6760,7 @@
 1542889993	tripleee	allsportsnewsbd\.com
 1542892383	Glorfindel	winclubehelp\.com
 1542892402	Glorfindel	playgames\d+\.com
-1542901212	iBug	//ibb\.co/iuUCsA
+1542901212	iBug	:?//ibb\.co/iuUCsA
 1542902562	Zoe	realestatebydesignteam\.com
 1542902969	Zoe	FxKart\.com
 1542912804	Zoe	2QNYct3
@@ -8230,7 +8230,7 @@
 1550440182	Makyen	92q\.com
 1550449737	Makyen	crunchyroll\.com
 1550457149	Makyen	profile_blue_pill
-1550457159	Makyen	@mecha31(?#telegram)
+1550457159	Makyen	(?<=@)mecha31(?#telegram)
 1550457167	Makyen	valentin garreau(?#facebook)
 1550457179	Makyen	quickarturhack(?:@gmail\.com)?
 1550464782	Shree	zabaza\.logan@yahoo\.com
