@@ -9040,3 +9040,4 @@
 1553885329	Makyen	ecommerceservices\.co\.in
 1553900444	Zoe	arabicfonts\.net
 1553901596	Zoe	hindifonts\.net
+1553901638	Zoe	nepalifonts\.net
