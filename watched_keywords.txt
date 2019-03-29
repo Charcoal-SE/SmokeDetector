@@ -9029,3 +9029,4 @@
 1553841144	Makyen	dietgreencoffeereview\.com
 1553844379	Makyen	20829\W*Valley\W*Blvd
 1553844399	Makyen	5280\W*Oakmount\W*Crescent
+1553844418	Makyen	soft-outlet\.ltd
