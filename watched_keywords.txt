@@ -9030,3 +9030,4 @@
 1553844379	Makyen	20829\W*Valley\W*Blvd
 1553844399	Makyen	5280\W*Oakmount\W*Crescent
 1553844418	Makyen	soft-outlet\.ltd
+1553844592	Makyen	nist\.edu\.pk
