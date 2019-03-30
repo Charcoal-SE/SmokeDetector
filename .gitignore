@@ -110,3 +110,6 @@ setp.sh
 .DS_Store
 
 .pytest_cache/
+
+# Editor backups
+*.bak
