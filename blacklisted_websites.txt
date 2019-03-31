@@ -2726,4 +2726,3 @@ nutrition4deal\.com
 jumblesolver\.online
 machomanhealth\.com
 cryptoexchangescript\.com
-clickbank\.net(?!.*</?code>)
