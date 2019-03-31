@@ -3954,7 +3954,6 @@
 1529591649	tripleee	recoverfilesdata\.com
 1529635429	NobodyNada	leawo(\.org)?
 1529649106	Makyen	bsrpro\.hop\.clickbank\.net
-1529649115	Makyen	clickbank\.net
 1529649141	Makyen	bestsellerrankingpro\.com
 1529649150	Makyen	jfgsu8945639dg7gnk
 1529649200	Makyen	Tom\W*Corson\W*Knowles
