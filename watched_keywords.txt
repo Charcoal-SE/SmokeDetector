@@ -9092,3 +9092,4 @@
 1554116013	double-beep	livestreamc\.blogspot\.com
 1554117572	double-beep	medium\.com/@oyaarlorow
 1554143145	Makyen	(?:\d{4}\W*)?frozen\W*four(?:\W*(?:\d{4}|live|buffalo|tickets|dates?|packages?|\.html))?
+1554144720	JoErNanO	ticketaudit\.com
