@@ -1787,7 +1787,6 @@ first\W*check.{0,20}?\$55o
 magnum\W?trt
 ultra\W?stren\W?x(?:\W?booster)?
 Finfree\W*Enterprise
-\[/url\]
 sc\W?a\W?cream
 truu\W?keto
 enzothrust
