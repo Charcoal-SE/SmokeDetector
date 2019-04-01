@@ -2727,3 +2727,4 @@ jumblesolver\.online
 machomanhealth\.com
 cryptoexchangescript\.com
 clickbank\.net(?!.*?</?code>)
+bullguard-support\.co\.uk
