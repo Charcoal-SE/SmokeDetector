@@ -9079,3 +9079,4 @@
 1554106253	double-beep	g1ant\.com
 1554108175	Makyen	mountfacenepal\.com
 1554108210	Makyen	usahealthcart\.com
+1554115042	double-beep	(?:@)?qq\.com
