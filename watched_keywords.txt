@@ -9098,3 +9098,4 @@
 1554168139	Makyen	\W*?\[/url\]\W*
 1554171846	Makyen	tasogare\.com
 1554171868	Makyen	hackercode\.com
+1554171887	Makyen	hackft\.com
