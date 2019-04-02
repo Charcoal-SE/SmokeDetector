@@ -9107,3 +9107,4 @@
 1554187268	Makyen	cutt\.u(?:s)(?#abuse the watchlist to get more detections on a spam surge)
 1554187287	Makyen	v\.h(?:t)(?#abuse the watchlist to get more detections on a spam surge)
 1554195615	Shree	manmachine\.in
+1554197837	Makyen	(?-i:EY5ge)
