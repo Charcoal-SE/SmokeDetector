@@ -9105,5 +9105,5 @@
 1554182917	Shree	myboatride\.com
 1554186115	Makyen	hotstar\.com
 1554186140	Makyen	redirengine\.com
-1554187268	Makyen	cutt\.us(?#abuse the watchlist to get more detections on a spam surge)
-1554187287	Makyen	v\.ht(?#abuse the watchlist to get more detections on a spam surge)
+1554187268	Makyen	cutt\.u(?:s)(?#abuse the watchlist to get more detections on a spam surge)
+1554187287	Makyen	v\.h(?:t)(?#abuse the watchlist to get more detections on a spam surge)
