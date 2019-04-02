@@ -9105,3 +9105,4 @@
 1554182917	Shree	myboatride\.com
 1554186115	Makyen	hotstar\.com
 1554186140	Makyen	redirengine\.com
+1554187268	Makyen	cutt\.us(?#abuse the watchlist to get more detections on a spam surge)
