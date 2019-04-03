@@ -137,9 +137,9 @@ def handle_spam(post, reasons, why):
         sanitized_title = parsing.sanitize_title(post.title if not post.is_answer else post.parent.title)
         sanitized_title = escape_format(sanitized_title).strip()
 
-        prefix = u"[ [SmokeDetector](//goo.gl/eLDYqh) ]"
+        prefix = u"[ [SmokeDetector](//git.io/vyDZv) ]"
         if GlobalVars.metasmoke_key:
-            prefix_ms = u"[ [SmokeDetector](//goo.gl/eLDYqh) | [MS]({}) ]".format(
+            prefix_ms = u"[ [SmokeDetector](//git.io/vyDZv) | [MS]({}) ]".format(
                 to_metasmoke_link(post_url, protocol=False))
         else:
             prefix_ms = prefix
