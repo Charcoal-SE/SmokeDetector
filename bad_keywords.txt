@@ -1848,3 +1848,7 @@ keto\W*max(?:\W*\d+)?
 keto\W*hack
 usahealthcart
 w+x*sex+
+lucineux
+ketogenic\W?accelerator
+auras\W?wave(?:\W?keto)?
+awa\W?derm

@@ -2727,6 +2727,12 @@ machomanhealth\.com
 cryptoexchangescript\.com
 clickbank\.net(?!.*?</?code>)
 bullguard-support\.co\.uk
-v\.ht
+//v\.ht
 cutt\.us
 weblium\.com
+easyprintersupport\.com
+techjockey\.com
+usahealthcart\.com
+growth4uhealth\.com
+healthysupplementstalk\.com
+allrecipes\.com

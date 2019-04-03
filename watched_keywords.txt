@@ -284,7 +284,6 @@
 1499160941	tripleee	808-189-0272
 1499164716	Glorfindel	garagedoorsrepairwheaton\.com
 1499165456	Glorfindel	putlockerbay\.world
-1499166774	tripleee	techjockey\.com
 1499167896	tripleee	inblogslife\.com
 1499168056	tripleee	asiafm99\.com
 1499170251	Mithrandir	kidmoto
@@ -5062,7 +5061,6 @@
 1534958521	Zoe	statementofpurposemba\.net
 1534990450	Makyen	ios-data-recovery\.com
 1535001348	Makyen	genuinemeaning\.com
-1535002994	tripleee	a2hosting\.com
 1535003497	Makyen	bitportal\.io
 1535003506	Makyen	fixhomenetwork\.com
 1535004157	tripleee	yunju0925
@@ -8815,7 +8813,6 @@
 1552983507	Tetsuya Yamamoto	mkshastriji\.com
 1552987281	tripleee	getprintersolution\.com
 1552990394	tripleee	pnytrainings\.com
-1552990415	tripleee	growth4uhealth\.com
 1552992493	Shree	locksmithsandiego\.us
 1552994179	tripleee	secretprotools\.com
 1552997377	Shree	lapshop\.in
@@ -8985,7 +8982,6 @@
 1553668000	tripleee	rs4uk\.com
 1553669556	tripleee	databaseserviceprovider\.com
 1553669683	tripleee	firstcall\.co\.in
-1553673228	tripleee	easyprintersupport\.com
 1553674348	tripleee	uber\W?clone
 1553682673	tripleee	fleetquid\.co\.uk
 1553683545	tripleee	erankita\.ml
@@ -9077,7 +9073,6 @@
 1554102853	Zoe	delhiescorts\.club
 1554106253	double-beep	g1ant\.com
 1554108175	Makyen	mountfacenepal\.com
-1554108210	Makyen	usahealthcart\.com
 1554115509	Glorfindel	butlermortgage\.ca
 1554116639	double-beep	lapura\.over-blog\.com
 1554117199	double-beep	fit2point\.com
@@ -9114,3 +9109,26 @@
 1554197959	Makyen	customerservicesforyou\.com
 1554197980	Makyen	alternativenumber\.com
 1554213075	double-beep	codekavala\.blogspot\.com
+1554262006	Makyen	moteefe\.com
+1554262529	Makyen	rip\W*nipsey\W*hussle
+1554262567	Makyen	teechip\.com
+1554262592	Makyen	clara\W*cyber\W*tech(?:@outlook\.com)?
+1554264202	Makyen	moniqueoquinn
+1554268147	Shree	senseinteriors\.in
+1554270699	Shree	techcombo\.co\.in
+1554271012	Shree	routerfixiya\.com
+1554271102	tripleee	routerfixya\.com
+1554274761	tripleee	officecomsetup\.us
+1554275722	tripleee	bulkaccountshop\.com
+1554276020	Makyen	mywifiextlocal\.net
+1554276043	tripleee	pixelloid\.com
+1554277124	Makyen	^sfgfdhdfhkjk$
+1554279472	Glorfindel	bestguitars
+1554284679	tripleee	harga\W?max(?:\W?enhancer)?
+1554286100	tripleee	vascularcarecenter\.com
+1554287374	Glorfindel	dotravel\.com
+1554293821	tripleee	kuflink\.co\.uk
+1554295268	tripleee	econohotel
+1554305074	Zoe	theninehertz\.com
+1554306814	Zoe	sexchat
+1554307090	Zoe	best\W*(?:(?:double\W*)?anal\W*fisting|casual\W*dating)(?:\W*site)?
