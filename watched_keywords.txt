@@ -9124,3 +9124,4 @@
 1554277124	Makyen	^sfgfdhdfhkjk$
 1554279472	Glorfindel	bestguitars
 1554284679	tripleee	harga\W?max(?:\W?enhancer)?
+1554286100	tripleee	vascularcarecenter\.com
