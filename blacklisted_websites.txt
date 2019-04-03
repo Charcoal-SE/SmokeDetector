@@ -1857,7 +1857,7 @@ supplementvalleysite\.wordpress\.com
 rs3gold\.com?
 dompetpoker\.net
 yodse\.io
- iranzirnevis\.com
+iranzirnevis\.com
 broxer\.com
 fluper\.com
 supplements2017\.com
@@ -2639,7 +2639,7 @@ moneyonlineinvestment\.com
 careerjobs360\.in
 mumybear\.over-blog\.com
 supplement2trend\.com
-ello\.co
+\b(?<!-)ello\.co(?![.-])\b
 ttlink\.com
 samuraipaper\.com
 nutrahygiene\.com
@@ -2728,7 +2728,7 @@ cryptoexchangescript\.com
 clickbank\.net(?!.*?</?code>)
 bullguard-support\.co\.uk
 //v\.ht
-cutt\.us
+\b(?<!-)cutt\.us(?![.-])\b
 weblium\.com
 easyprintersupport\.com
 techjockey\.com
