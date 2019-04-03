@@ -1850,3 +1850,4 @@ usahealthcart
 w+x*sex+
 lucineux
 ketogenic\W?accelerator
+auras\W?wave(?:\W?keto)?
