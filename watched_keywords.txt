@@ -9117,3 +9117,4 @@
 1554262592	Makyen	clara\W*cyber\W*tech(?:@outlook\.com)?
 1554264202	Makyen	moniqueoquinn
 1554268147	Shree	senseinteriors\.in
+1554270699	Shree	techcombo\.co\.in
