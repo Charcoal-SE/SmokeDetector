@@ -43,8 +43,8 @@ ChatSim
 service\W?solahart
 junisse
 profactor\W?t
-(fake|novelty|quality|buy(ing)?|sell(ing)?|offer).{,20}(passport|driver'?s? licen[cs]e|ID card|green card|residence permit|toefl|Ielts)s?
-(?<=^.{,200})(support|service|helpline)(\W?phone)?\W?number
+(fake|novelty|quality|buy(ing)?|sell(ing)?|offer).{0,20}(passport|driver'?s? licen[cs]e|ID card|green card|residence permit|toefl|Ielts)s?
+(?<=^.{0,200})(support|service|helpline)(\W?phone)?\W?number
 [a-z_]*(?:1_*)?866[\W_]*978[\W_]*(6819|6762)[a-z_]*
 (mcafee|hotmail|gmail|outlook|yahoo|lexmark (printer)?) ?(password( recovery)?|tech)? ?((customer|technical) (support|service))? (support|contact|telephone|help(line)?|phone) number
 kitchen for sale
@@ -97,7 +97,7 @@ smartican
 фальшивы(е|х) (деньги|денег|купюры?)
 raging\W?lion
 retrodynamic\W?formula
-(?<=^.{,199})(contact|offer|join).{,99}\d{9}(?=.{,99}$)
+(?<=^.{0,199})(contact|offer|join).{0,99}\d{9}(?=.{0,99}$)
 krojam(soft|cleaner)?
 filessearch\W?tool
 teksonit
@@ -119,7 +119,7 @@ lost lover? back
 service proposal essay
 enetdocumentation
 okaygoods
-(love|miracle).{,120}spell ?casters?
+(love|miracle).{0,120}spell ?casters?
 black\W?magic\W?specialist
 great\Wspell\Wcaster
 viagra
