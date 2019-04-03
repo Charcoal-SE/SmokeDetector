@@ -1709,11 +1709,11 @@ bad_keywords_nwb = [  # "nwb" == "no word boundary"
     r"\bnutra(?!l(?:|y|ity|i[sz]ing|i[sz]ed?)s?\b)",
     r"contact (me|us)\W*<a ", "ecoflex",
     r"\brsgold",
-    "packers.{0,15}(movers|logistic)(?:.{,25}</a>)",
+    "packers.{0,15}(movers|logistic)(?:.{0,25}</a>)",
     "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)(?:ment)?",
     " %[au]h ", "tapsi ?sarkar",
     "(?:networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing|"
-    "salesforce|joomla)( certification)? (courses?|training)(?=.{,25}</a>)",
+    "salesforce|joomla)( certification)? (courses?|training)(?=.{0,25}</a>)",
     r"(?:design|development|compan(?:y|ies)|institute|training|courses?|jobs?|automation|sex|services?)"
     r"\W*(?:center|centre|institute|work|provider)?"
     r"(?:\b.{1,8}\b)?\L<city>\b",
@@ -1854,7 +1854,7 @@ FindSpam.rule_blacklisted_usernames = create_rule("blacklisted username", regex=
                                                   title=False, body=False, username=True)
 
 # gratis near the beginning of post or in title, SoftwareRecs and es.stackoverflow.com are exempt
-create_rule("potentially bad keyword in {}", r"(?is)(?<=^.{,200})\bgratis\b",
+create_rule("potentially bad keyword in {}", r"(?is)(?<=^.{0,200})\bgratis\b",
             sites=['softwarerecs.stackexchange.com', 'es.stackoverflow.com'],
             body_summary=True, max_rep=11)
 # Bad keywords in titles and usernames, all sites
@@ -1890,7 +1890,7 @@ create_rule("potentially bad keyword in {}", r'^v\w{3,5}\Wkumar$',
             title=False, body=False, username=True,
             all=False, sites=['scifi.stackexchange.com'])
 # Eltima: Nested lookarounds for length limit
-create_rule("bad keyword in {}", r"(?is)(?<=^(?=.{,750}$).*)\beltima",
+create_rule("bad keyword in {}", r"(?is)(?<=^(?=.{0,750}$).*)\beltima",
             title=False, max_rep=50)
 create_rule("bad keyword in {}",
             r"(?i)\b((beauty|skin|health|face|eye)[- ]?(serum|therapy|hydration|tip|renewal|shop|store|lyft|"
@@ -1964,12 +1964,12 @@ create_rule("pattern-matching website in {}",
             username=True, body_summary=True, max_rep=4, max_score=2)
 # Links preceded by arrows >>>
 create_rule("link following arrow in {}",
-            r"(?is)(?:>>+|[@:]+>+|==\s*>+|={4,}|===>+|= = =|Read More|Click Here).{,20}"
-            r"https?://(?!i\.stack\.imgur\.com)(?=.{,200}$)",
+            r"(?is)(?:>>+|[@:]+>+|==\s*>+|={4,}|===>+|= = =|Read More|Click Here).{0,20}"
+            r"https?://(?!i\.stack\.imgur\.com)(?=.{0,200}$)",
             stripcodeblocks=True, answer=False, max_rep=11)
 # Link at the end of a short answer
 create_rule("link at end of {}",
-            r'(?is)(?<=^.{,350})<a href="https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,4}'
+            r'(?is)(?<=^.{0,350})<a href="https?://(?:(?:www\.)?[\w-]+\.(?:blogspot\.|wordpress\.|co\.)?\w{2,4}'
             r'/?\w{0,2}/?|(?:plus\.google|www\.facebook)\.com/[\w/]+)"[^<]*</a>(?:</strong>)?\W*</p>\s*$'
             r'|\[/url\]\W*</p>\s*$',
             sites=["raspberrypi.stackexchange.com", "softwarerecs.stackexchange.com"],
@@ -1992,13 +1992,13 @@ create_rule("pattern-matching website in {}",
             title=False, question=False)
 # non-linked site at the end of a short answer
 create_rule("link at end of {}",
-            r'(?is)(?<=^.{,350})\w{6}\.(com|co\.uk)(?:</strong>)?\W*</p>\s*$',
+            r'(?is)(?<=^.{0,350})\w{6}\.(com|co\.uk)(?:</strong>)?\W*</p>\s*$',
             title=False, question=False)
 # Shortened URL near the end of question
 create_rule("shortened URL in {}",
             r"(?is)://(?:w+\.)?(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|"
             r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
-            r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us|adyou\.co|buff\.ly|ow\.ly|tgig\.ir)/(?=.{,200}$)",
+            r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us|adyou\.co|buff\.ly|ow\.ly|tgig\.ir)/(?=.{0,200}$)",
             sites=["superuser.com", "askubuntu.com"],
             title=False, answer=False)
 # Shortened URL in an answer
@@ -2045,7 +2045,7 @@ create_rule("URL-only title",
 # Category: Suspicious contact information
 # Phone number in post
 create_rule("phone number detected in {}",
-            r"(?s)(?<=^.{,250})\b1 ?[-(. ]8\d{2}[-). ] ?\d{3}[-. ]\d{4}\b",
+            r"(?s)(?<=^.{0,250})\b1 ?[-(. ]8\d{2}[-). ] ?\d{3}[-. ]\d{4}\b",
             sites=["math.stackexchange.com"],
             title=False, stripcodeblocks=False)
 # Email check for answers on selected sites
@@ -2062,7 +2062,7 @@ create_rule("email in {}",
 # Email check for questions: check only at the end, and on selected sites
 create_rule("email in {}",
             r"(?i)(?<![=#/])\b[A-z0-9_.%+-]+@(?!(example|domain|site|foo|\dx)\.[A-z]{2,4})"
-            r"[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s)(?=.{,100}$)",
+            r"[A-z0-9_.%+-]+\.[A-z]{2,4}\b(?s)(?=.{0,100}$)",
             all=False,
             sites=["money.stackexchange.com", "travel.stackexchange.com", "gamedev.stackexchange.com",
                    "gaming.stackexchange.com"],
