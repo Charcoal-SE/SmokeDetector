@@ -77,7 +77,7 @@ def to_metasmoke_link(post_url, protocol=True):
 msg_parser_regex = (
     r"^\[ \[SmokeDetector\]\([^)]*\)(?: \| \[.+\]\(.+\))? \] [\w\s,:+\(\)*-]+: "
     r"(?P<post>\[(?P<title>.+)]\((?P<post_url>(?:https?:)"
-    r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:https?:)?\/\/[\w.]+\/[qa]\/\d+/?)\).{,3})"
+    r"?\/\/[\w.]+\/questions\/\d+(?:\/.*)?|(?:https?:)?\/\/[\w.]+\/[qa]\/\d+/?)\).{0,3})"
     r" by (?:\[.+\]\((?P<owner_url>.+)\)|[\w ]*) on `[\w.]+`(?: \((?:@\S+\s?)+\))?"
     r"(?: \[.+\]\(.+\))?$"
 )
