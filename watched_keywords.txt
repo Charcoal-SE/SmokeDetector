@@ -5147,7 +5147,7 @@
 1535391048	tripleee	open-us\.de
 1535391055	tripleee	collegeseriesworld\.de
 1535391068	tripleee	usopenslive\.com
-1535397496	iBug	^\w{,3}w.{,2}ng.?d.{,2}ng\w{0,3}$
+1535397496	iBug	^\w{0,3}w.{0,2}ng.?d.{0,2}ng\w{0,3}$
 1535408158	Tetsuya Yamamoto	sportsbetting\.ag
 1535409430	Makyen	RAF=KLE0XXDZ
 1535409447	Makyen	affid=vocel
@@ -7614,7 +7614,7 @@
 1547527838	Makyen	laroche-?cherise(?#URL path)
 1547527852	Makyen	sugarbalancepower\.podbean\.com
 1547532292	tripleee	felovena01\.blogspot
-1547532753	iBug	\W*:-.{,10}://
+1547532753	iBug	\W*:-.{0,10}://
 1547533167	Tetsuya Yamamoto	stubmuster\.com
 1547535092	Tetsuya Yamamoto	courseworkz\.com
 1547535127	Tetsuya Yamamoto	roboelements\.com
@@ -7655,7 +7655,7 @@
 1547640164	Shree	infigic\.com
 1547640253	Shree	jinnieworld\.net
 1547641186	Shree	williampenn\.net
-1547656749	iBug	a\S{,8}holes*
+1547656749	iBug	a\S{0,8}holes*
 1546687415	Nisse Engström	cablesforless\.com
 1547658787	Makyen	techoleaksofficial\.com
 1547664342	tripleee	professionalghostwriter\.com
