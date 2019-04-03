@@ -9114,3 +9114,4 @@
 1554197959	Makyen	customerservicesforyou\.com
 1554197980	Makyen	alternativenumber\.com
 1554262006	Makyen	moteefe\.com
+1554262529	Makyen	rip\W*nipsey\W*hussle
