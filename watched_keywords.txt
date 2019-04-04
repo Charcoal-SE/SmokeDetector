@@ -8945,7 +8945,7 @@
 1553510711	bertieb	hbo-go-com-activate\.com
 1553512487	tripleee	yogclub\.com
 1553518606	tripleee	https?://[^<>"'\s]+-(canada|australia|africa|france|ireland|finland|usa|singapore|india|new-zealand|espana|italy|switzerland|belgium|d[ae]nmark|sweden|norway|poland|portugal|austria|sverige|polska|romania)/(?=[<>"'\s]|$)
-1553518908	tripleee	https?://[^<>"'\s]+-(uk|ca|fr|es|za|de|au|it|dk|br|nz|be|se|us|ch|nl|at|id|no|ie|sg|pt|hr|pl|mx|lt|lu|fi|kr)/(?=[<>"'\s]|$)
+1553518908	tripleee	https?://[^<>"'\s]+(?!<=[?/][A-Za-z][A-Za-z])-(uk|ca|fr|es|za|de|au|it|dk|br|nz|be|se|us|ch|nl|at|id|no|ie|sg|pt|hr|pl|mx|lt|lu|fi|kr)/(?=[<>"'\s]|$)
 1553549845	Makyen	jualcytotecaborsi\.com
 1553549875	Makyen	obataborsi\.win
 1553549909	Makyen	jualaborsi\.com
