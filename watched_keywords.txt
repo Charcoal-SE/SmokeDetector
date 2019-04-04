@@ -9137,3 +9137,4 @@
 1554326972	Makyen	allmightbazulartemple(?:@gmail\.com)?
 1554332784	Makyen	mypaper\.pchome\.com\.tw/saksnaar/
 1554333283	Sonic the Wizard Werehog	msmilonmedicalholl\.business\.site
+1554344350	Makyen	42\.0\.5\.244(?#not being used as an IP address in a URL)
