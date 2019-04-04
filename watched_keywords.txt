@@ -7965,7 +7965,6 @@
 1549068595	Makyen	mebeljeparaberkualtas(?:\.blogspot\.com)?
 1549089260	Makyen	bmconsultantsindia\.com
 1549089488	Makyen	Prof-Jali
-1549092530	Shree	klifftechnologies\.com
 1549097351	Shree	howwebs\.com
 1549118867	ArtOfCode	pestsworld\.net
 1549125943	Zoe	tenping\.kr
