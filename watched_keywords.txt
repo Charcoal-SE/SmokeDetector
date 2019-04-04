@@ -9158,3 +9158,4 @@
 1554369722	tripleee	cruisebay
 1554379175	tripleee	^\s*disc\W*losure\s*$
 1554379795	tripleee	deadtrigger2modapk\.com
+1554379825	tripleee	hungrysharkworldmodapk\.net
