@@ -9157,3 +9157,4 @@
 1554369489	tripleee	bitcoinqrgenerator\.info
 1554369722	tripleee	cruisebay
 1554378184	tripleee	ahmadsoftware\.com
+1554379175	tripleee	^\s*disc\W*losure\s*$
