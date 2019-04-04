@@ -1822,7 +1822,7 @@ trim\W?keto
 velocity\W?trim
 (?<=/)ketosis(?:-\w+)+
 thepilpedia
-alka\W*tone
+alka\W*tone(?:\W*keto)?
 viril\W?pump
 supreme\W?vigor
 ultra\W?sk
