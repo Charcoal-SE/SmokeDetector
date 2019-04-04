@@ -4395,7 +4395,6 @@
 1531762068	Makyen	[a-z_]*(?:1_*)?800[\W_]*503[\W_]*3075[a-z_]*
 1531762076	Makyen	souvikcreations\.in
 1531762939	Thomas Ward	techysupport\.co
-1531799175	Tetsuya Yamamoto	ltssecure\.com
 1531809386	Glorfindel	codeadjust
 1531809532	Glorfindel	shoviv\.com
 1531809626	Tetsuya Yamamoto	delta-airlines-reservations\.com
