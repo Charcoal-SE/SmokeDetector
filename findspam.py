@@ -1827,6 +1827,7 @@ city_list = [
     "Rajkot", "Surat", "Telangana", "Udaipur", "Uttarakhand",
     "Noida", "Pune", "Rohini", "Trivandrum", "Thiruvananthapuram",
     "Nashik", "Gurgaon", "Gurugram", "Kochi", "Ernakulam", "Nagpur", "Dehradun",
+    "Neemrana",
     # yes, these aren't cities but...
     "India", "Pakistan",
     # buyabans.com spammer uses creative variations
