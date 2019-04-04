@@ -9159,3 +9159,4 @@
 1554379175	tripleee	^\s*disc\W*losure\s*$
 1554379795	tripleee	deadtrigger2modapk\.com
 1554379825	tripleee	hungrysharkworldmodapk\.net
+1554379848	tripleee	freepcgamesdownloadhub\.com
