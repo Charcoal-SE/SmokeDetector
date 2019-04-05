@@ -9173,3 +9173,4 @@
 1554440972	tripleee	malvikaadhikari\.com
 1554440994	tripleee	ethnickart\.com
 1554443734	Makyen	^<p>(?:[asdfghjkl; \r\n]|</?p>)+$
+1554444622	Makyen	^(?-i:[sdfghjkl]{6,40})$
