@@ -1125,7 +1125,9 @@ def watched_ip_for_url_hostname(s, site):
         s, site,
         # Watched IP list
         [
-            # AS  20068 - HAWKHOST - Hawk Host Inc., CA.
+            # AS 8560 ONEANDONE-AS Brauerstrasse 48, DE
+            '62.151.180.33',    # visit-my-website ltssecure.com / ltssoc
+            # AS 20068 - HAWKHOST - Hawk Host Inc., CA.
             '172.96.187.196',   # fake-tech-support driver-canon.com
             '198.252.105.94',   # fake-tech-support asia-canon.com etc
             # AS 22612 NAMECHEAP-NET
