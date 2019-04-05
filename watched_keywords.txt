@@ -2485,7 +2485,6 @@
 1520882503	Glorfindel	howtogethelpinwindows10\.co
 1520907077	WELZ	plasticbidet\.com
 1520907152	WELZ	aquatownbidet\.com
-1520917730	tripleee	lts\W?secure
 1520918729	tripleee	(?:7\W*)?914\W*611\W*04\W*44
 1520919103	tripleee	golden\W?farms
 1520929210	K.Dᴀᴠɪs	hacknet\W*(?:@|at)\W*cyberservice\W*(?:dot\W*)?com
