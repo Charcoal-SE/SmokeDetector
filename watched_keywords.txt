@@ -9198,3 +9198,4 @@
 1554488637	Erik the Outgolfer	Vampirelord\d+
 1554494890	Blue	digitalnewhunt\.in
 1554494930	Blue	howtokaise\.com
+1554506474	Makyen	r-exams\.org
