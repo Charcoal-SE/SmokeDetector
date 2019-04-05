@@ -9195,3 +9195,4 @@
 1554472549	Blue	yukampus\.com
 1554472565	Blue	doagama\.com
 1554484800	Makyen	ilmizindagi\.com
+1554488637	Erik the Outgolfer	Vampirelord\d+
