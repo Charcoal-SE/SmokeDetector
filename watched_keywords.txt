@@ -9172,3 +9172,4 @@
 1554440952	tripleee	sabinakhan\.net
 1554440972	tripleee	malvikaadhikari\.com
 1554440994	tripleee	ethnickart\.com
+1554443734	Makyen	^<p>(?:[asdfghjkl; \r\n]|</?p>)+$
