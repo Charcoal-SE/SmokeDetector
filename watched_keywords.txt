@@ -9182,3 +9182,4 @@
 1554451816	tripleee	catering-tangerang\.com
 1554401094	double-beep	priestkorkmazaza\.blogspot\.com
 1554401203	double-beep	leakedmovies\.cinemax21\.org
+1554401250	double-beep	aborgela\.com
