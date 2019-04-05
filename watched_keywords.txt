@@ -9062,7 +9062,6 @@
 1554044947	Makyen	sunflycasinochips\.com
 1554059109	Glorfindel	mandala\.co\.id
 1554064883	Makyen	osam\.sid(?:@gmail\.com)?
-1554069243	Makyen	neeksex\.com
 1554072277	Makyen	odungaspelltemple(?:@gmail\.com)?
 1554078301	Makyen	finessehackers\.com
 1554078349	Makyen	finessehackers@gmail.com
