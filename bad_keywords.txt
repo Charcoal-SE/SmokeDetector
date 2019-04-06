@@ -1854,3 +1854,4 @@ auras\W?wave(?:\W?keto)?
 awa\W?derm
 v\W*a\W*s\W*h\W*i\W*k\W*a\W*r\W*a\W*n(?#Obfuscated vashikaran)
 lts\W?secure(?!\.com\b)
+limotorsh
