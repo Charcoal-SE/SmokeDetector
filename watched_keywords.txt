@@ -9221,3 +9221,4 @@
 1554554135	Zoe	aussiewebdevelopment\.com
 1554554155	Zoe	pubsigs\.com
 1554566742	Glorfindel	rangerexpert\.com
+1554573105	Erik the Outgolfer	alldocumentasap\d+
