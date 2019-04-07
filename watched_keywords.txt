@@ -9224,3 +9224,4 @@
 1554573105	Erik the Outgolfer	alldocumentasap\d+
 1554604396	Makyen	takelessons\.com
 1554604417	Makyen	piano-reviews\.com
+1554604440	Makyen	doctorbatorsolutiontemple(?:@gmail\.com)?
