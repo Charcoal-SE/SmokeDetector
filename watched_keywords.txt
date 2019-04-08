@@ -9231,3 +9231,4 @@
 1554664891	Makyen	com\.encrypt\.bit\.socialmedialocker\.app
 1554673560	Makyen	andyroid\.mihanblog\.com
 1554691444	Makyen	webnovel\.online
+1554691472	Makyen	chinesewuxia\.world
