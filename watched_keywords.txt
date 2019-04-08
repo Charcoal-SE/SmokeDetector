@@ -9246,3 +9246,4 @@
 1554745036	Makyen	nx3corp\.com
 1554752139	Makyen	webghosthackers(?:@gmail\.com)
 1554756032	Makyen	filehippoz\.com
+1554761984	Makyen	redhackar\d+(?:@gmail\.com)?(?#We've seen redhackar8920)
