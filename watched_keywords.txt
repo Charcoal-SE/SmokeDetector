@@ -9274,3 +9274,4 @@
 1554831656	Olivia	poker\W*(?:bot\W*|recorder\W*)?o[cs]r
 1554839194	Olivia	staticip\.io
 1554839552	Makyen	zoloft75\.com
+1554839571	Makyen	lasix0\.com
