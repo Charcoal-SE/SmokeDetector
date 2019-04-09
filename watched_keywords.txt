@@ -9268,3 +9268,4 @@
 1554810863	tripleee	easyturkishpassport\.com
 1554811538	tripleee	officeshoppie\.com
 1554812602	tripleee	codesuwant\.com
+1554816718	Glorfindel	techavidus\.com
