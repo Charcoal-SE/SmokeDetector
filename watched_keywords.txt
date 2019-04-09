@@ -6713,7 +6713,6 @@
 1542727257	bertieb	latestgadget\.co
 1542727243	bertieb	domainglo\.com
 1542732738	K.Dᴀᴠɪs	flowwright(?:\.com)?
-1542734362	CalvT	games\.lol
 1542746099	Erik the Outgolfer	sqribe\.app
 1542747497	Makyen	sanjuanchemdry\.com
 1542748479	K.Dᴀᴠɪs	birdiesoftware\.com
