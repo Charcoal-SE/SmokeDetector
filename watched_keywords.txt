@@ -6800,7 +6800,7 @@
 1543148258	Zoe	mmcash\.cc
 1543148284	Zoe	Make\W*Money\W*Gold\W*Miner
 1543157336	Zoe	Dr\W*Agbazara
-1543157682	Zoe	a\W*g\W*b\W*a\W*z\W*a\W*r\W*a\W*(?:at|@)\W*g\W*m\W*a\W*i\W*l\W*c\W*o\W*m
+1543157682	Zoe	a\W*g\W*b\W*a\W*z\W*a\W*r\W*a\W*(?:a\W*t\W*)?\W*g\W*m\W*a\W*i\W*l\W*(?:d\W*o\W*t\W*)?c\W*o\W*m
 1543187632	WELZ	ajawbk\.com
 1543202272	Tetsuya Yamamoto	hoasenphat\.com
 1543202557	Tetsuya Yamamoto	componentpro\.com
