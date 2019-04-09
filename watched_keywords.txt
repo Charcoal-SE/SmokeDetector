@@ -9271,4 +9271,3 @@
 1554816718	Glorfindel	techavidus\.com
 1554822565	Makyen	mandalmart\.com
 1554831497	Olivia	pokerocr\.com
-1554831619	Olivia	poker\W*(?:bot\W*|recorder\W*)o[cs]r
