@@ -9257,3 +9257,4 @@
 1554793830	tripleee	hash\.fish
 1554801351	tripleee	batterieprofessionnel\.com
 1554801572	tripleee	arraydict\.com
+1554803260	Glorfindel	lugsto\.com
