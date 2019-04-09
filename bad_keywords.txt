@@ -1855,3 +1855,4 @@ awa\W?derm
 v\W*a\W*s\W*h\W*i\W*k\W*a\W*r\W*a\W*n(?#Obfuscated vashikaran)
 lts\W?secure(?!\.com\b)
 limotorsh
+C\W*Y\W*B\W*E\W*R\W*S\W*P\W*Y\W*C\W*L\W*O\W*W\W*N\W*(?:a\W*t\W*)?\W*G\W*M\W*A\W*I\W*L\W*(?:d\W*o\W*t\W*)?C\W*O\W*M
