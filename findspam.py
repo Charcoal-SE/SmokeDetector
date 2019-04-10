@@ -1029,6 +1029,7 @@ def watched_ns_for_url_domain(s, site):
         {'anirban.ns.cloudflare.com.', 'janet.ns.cloudflare.com.'},
         {'betty.ns.cloudflare.com.', 'kai.ns.cloudflare.com.'},
         {'bonnie.ns.cloudflare.com.', 'guss.ns.cloudflare.com.'},
+        {'brad.ns.cloudflare.com.', 'brenda.ns.cloudflare.com.'},
         {'chip.ns.cloudflare.com.', 'cruz.ns.cloudflare.com.'},
         {'chris.ns.cloudflare.com.', 'tess.ns.cloudflare.com.'},
         {'dana.ns.cloudflare.com.', 'piotr.ns.cloudflare.com.'},
