@@ -8459,7 +8459,7 @@
 1551522526	Zoe	intellirage\W*brain
 1551527647	Zoe	thebestprice-online\.com
 1551564674	Makyen	primal\W*pro(?:\W*XR)
-1551595671	Makyen	^vinod kumar$
+1551595671	Makyen	^(?-i:vinod kumar)$
 1551609088	Shree	bizlistpro\.com
 1551611024	Zoe	5mastery\.com
 1551612377	Shree	whalesofcrypto\.com
