@@ -5068,7 +5068,6 @@
 1535021393	A J	firstindiandetectiveagency\.com
 1535022881	tripleee	akurat\.co
 1535023814	tripleee	avenzamaps\.com
-1535026457	tripleee	germanlanguageclassesinpune\.com
 1535039402	Makyen	magicalspain\.com
 1535041183	Makyen	qeys\.io
 1535084316	Makyen	anduoc\.com
