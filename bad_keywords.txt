@@ -1860,3 +1860,4 @@ choice\W?labs(?:\W?keto)?
 nulante
 shape\W*x2(?:\W*fitness|\W*keto)+
 rapuvex
+beta\W?keto
