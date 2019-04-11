@@ -1861,3 +1861,4 @@ nulante
 shape\W*x2(?:\W*fitness|\W*keto)+
 rapuvex
 beta\W?keto
+cerisea\W?medica
