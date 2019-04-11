@@ -9318,3 +9318,4 @@
 1554977097	tripleee	apkeditorpro\.net
 1554978164	tripleee	hostsailor\.com
 1554978242	tripleee	androidnativecode\.com
+1554980690	tripleee	oxford\.com\.pk
