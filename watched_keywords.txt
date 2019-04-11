@@ -9319,3 +9319,4 @@
 1554978164	tripleee	hostsailor\.com
 1554978242	tripleee	androidnativecode\.com
 1554980690	tripleee	oxford\.com\.pk
+1554980841	tripleee	oxford\W?garments
