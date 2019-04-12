@@ -9337,3 +9337,4 @@
 1555060793	tripleee	indianareia\.com
 1555061805	tripleee	neuon\.ai
 1555063271	tripleee	astrozcafe\.com
+1555066014	tripleee	universalchemicals\.co\.in
