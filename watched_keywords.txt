@@ -1341,7 +1341,6 @@
 1509599714	tripleee	bitcoinscashout\.com
 1509599890	tripleee	termium\.com
 1509600226	tripleee	healthtrendz\.co
-1509600946	tripleee	lutreviasingapore\.com
 1509601011	tripleee	tuturblog\.id
 1509604956	tripleee	(?<=[-/])focus\W?fast(?=[-/<"])
 1509610727	tripleee	medsdelta
