@@ -1224,6 +1224,7 @@ def watched_asn_for_url_hostname(s, site):
             '29073',   # QUASINETWORKS, NL
             '31083',   # TELEPOINT, BG.
             '31863',   # DACEN-2 - Centrilogic, Inc., US
+            '32244',   # LIQUIDWEB - Liquid Web, L.L.C, US
             '34119',   # WILDCARD-AS Wildcard UK Limited, GB
             '36024',   # AS-TIERP-36024 - TierPoint, LLC, US
             '36351',   # SOFTLAYER - SoftLayer Technologies Inc., US
