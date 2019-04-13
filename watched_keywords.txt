@@ -7839,7 +7839,6 @@
 1548478655	Makyen	bestqualitypvas\.com
 1548482743	Makyen	meatballly\.com
 1548482914	Makyen	(?-i:Check SEO [tT]ool)
-1548494886	Nisse Engström	bitcoinmix\.org
 1548498613	Asuna	microsoftliveassist\.com
 1548498628	Asuna	winchatsupport\.com
 1548500570	Asuna	allmyclass\.com
