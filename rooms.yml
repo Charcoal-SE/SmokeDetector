@@ -135,6 +135,13 @@ stackexchange.com:
       - 214848   # Michael Dodd
       - 14688437 # double-beep
       - 8505551 # TuringTux
+      
+  84821:
+    commands: true
+    
+    msg_types:
+      - direct
+      - dump
 
   65945:  # Charcoal Test
     commands: true
@@ -518,15 +525,3 @@ stackoverflow.com:
       - 5963824  # Ashish Ahuja
       - 170826   # Stephen Kennedy
       - 5869449  # angussidney
-      
-  191226:  # Socket Science
-    commands: true
-    
-    privileges:
-      inherit:
-        site: stackexchange.com
-        room: 11540
-    
-    msg_types:
-      - direct
-      - dump
