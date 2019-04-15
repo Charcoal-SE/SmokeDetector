@@ -136,3 +136,4 @@ muralidharaB
 (?-i:^arkramos$)
 ^shopmedi\W?online$
 ^limoo\W?torsh$
+^swetha\W?reddy$
