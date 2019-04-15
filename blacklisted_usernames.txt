@@ -134,3 +134,4 @@ muralidharaB
 (?-i:^Kelli Fisher$)
 ^alliance\W?pro
 (?-i:^arkramos$)
+^shopmedi\W?online$
