@@ -135,3 +135,4 @@ muralidharaB
 ^alliance\W?pro
 (?-i:^arkramos$)
 ^shopmedi\W?online$
+^limoo\W?torsh$
