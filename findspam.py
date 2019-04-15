@@ -1107,6 +1107,7 @@ def watched_ns_for_url_domain(s, site):
         'sgp61.siteground.asia.',
         'letter.org.in.',
         'dynamicnetips.com.',
+        'w3softech.com.',
     ])
 
 
