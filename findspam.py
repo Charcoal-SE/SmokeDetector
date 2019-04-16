@@ -1006,6 +1006,7 @@ def bad_ns_for_url_domain(s, site):
         'escortdomain.net.',
         'syrahost.com.',
         'dnsdomen.com.',
+        'letter.org.in.',
     ])
 
 
@@ -1104,7 +1105,6 @@ def watched_ns_for_url_domain(s, site):
         'stechsky.com.',
         'loopbyte.com.',
         'sgp61.siteground.asia.',
-        'letter.org.in.',
         'dynamicnetips.com.',
         'w3softech.com.',
         'blockchainhelp.pro.',
