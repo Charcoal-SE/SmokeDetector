@@ -1147,7 +1147,6 @@ def watched_ip_for_url_hostname(s, site):
             '198.54.116.51',    # drugs reviewsgear / crazy-bulk-review etc
             '198.54.116.85',    # drugs mummydiet.org
             '198.54.116.110',   # drugs epbhub / healtylifetimesupplement etc
-            '198.54.120.134',   # drugs advisorwellness / health4supplement etc
             '198.54.126.109',   # escorts + buy-likes
             # AS 26496 AS-26496-GO-DADDY-COM-LLC
             '23.229.180.169',   # drugs health4supplement / supplements4lifetime etc
@@ -1179,6 +1178,8 @@ def bad_ip_for_url_hostname(s, site):
         s, site,
         # Blacklisted IP list
         [
+            # AS 22612 NAMECHEAP-NET
+            '198.54.120.134',   # drugs advisorwellness / health4supplement etc
             # AS 26347 DREAMHOST-AS
             '75.119.210.224',  # triplet-spam
             # AS 26496 AS-26496-GO-DADDY-COM-LLC
