@@ -9410,3 +9410,4 @@
 1555420112	Machavity	american-technology\.net
 1555420899	double-beep	ultra\W*fit\W*strength
 1555432821	Sonic the Wizard Werehog	underlinejobs\.com
+1555438586	tripleee	dr\W?patrick(?:\W?spellcaster(?:@gmail\Wcom)?)?
