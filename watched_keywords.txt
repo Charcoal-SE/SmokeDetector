@@ -5234,7 +5234,6 @@
 1535706918	Tetsuya Yamamoto	spycardssort\.com
 1535708895	tripleee	tele\W*consultation\W*services?
 1535711662	tripleee	Onlyoneyoulove
-1535715015	tripleee	mypragati\.org
 1535715728	micsthepick	iqtestonline.net
 1535719884	iBug	wordpressdeveloperonline\.com
 1535734753	Thomas Ward	Evil-?Droid
