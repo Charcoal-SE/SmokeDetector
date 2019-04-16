@@ -9393,3 +9393,4 @@
 1555395252	Shree	digiwinx\.com\.sg
 1555395358	tripleee	alex\W?morttan(?:@gmail\.com)?
 1555395812	tripleee	certs4sale\.com
+1555396502	tripleee	bingrewards\.info
