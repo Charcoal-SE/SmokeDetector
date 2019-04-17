@@ -9449,4 +9449,5 @@
 1555519678	Makyen	buydriverlicenseonline\.com
 1555519904	double-beep	butterfly\W*backup(?!\.readthedocs\.io)
 1555520151	double-beep	ketoweightloss-plus\.com
+1555520652	double-beep	excelr\.com
 1555520510	double-beep	themachinemaker\.com
