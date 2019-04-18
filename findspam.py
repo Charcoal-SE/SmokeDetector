@@ -64,7 +64,7 @@ ASN_WHITELISTED_WEBSITES = [
     "advancedcustomfields.com", "name.com", "businessbloomer.com",
     "wkhtmltopdf.org", "thefreedictionary.com", "ruby-doc.org",
     "site.com.br", "test.ooo-pnu.ru", "swift.org", "site2.com",
-    "rxweb.io", "tenforums.com", "rhydolabz.com", "javatpoint.com"]
+    "rxweb.io", "tenforums.com", "rhydolabz.com", "javatpoint.com", "writingexplained.org"]
 # ^^ top 20 FP hosts that get reported due to 'bad ASN', collated by regex parsing
 # https://metasmoke.erwaysoftware.com/data/sql/queries/164-bad-asn-in-false-positives
 COUNTRY = [
