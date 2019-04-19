@@ -9473,3 +9473,4 @@
 1555625616	Erik the Outgolfer	headiesupplies\.com
 1555630841	Makyen	blankcard\d+@gmail\.com(?#actually seen: blankcard46@gmail.com)
 1555646561	Makyen	spec-zone\.com
+1555646590	Makyen	vampireworldgroup(?:@gmail\.com)
