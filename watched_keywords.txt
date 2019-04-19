@@ -9481,3 +9481,4 @@
 1555664509	Makyen	aanyalinen\.com
 1555665794	Makyen	gfrhdw\.tumblr\.com
 1555665819	Makyen	keto\W*buzz\W*united\W*kingdom\W*\d*
+1555669191	Makyen	/@wellnestips(?#medium)
