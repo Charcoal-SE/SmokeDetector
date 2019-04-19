@@ -65,20 +65,20 @@ ASN_WHITELISTED_WEBSITES = [
     "wkhtmltopdf.org", "thefreedictionary.com", "ruby-doc.org",
     "site.com.br", "test.ooo-pnu.ru", "swift.org", "site2.com",
     "rxweb.io", "tenforums.com", "rhydolabz.com", "javatpoint.com",
-# ^^ top 20 FP hosts that get reported due to 'bad ASN', collated by regex parsing
-# https://metasmoke.erwaysoftware.com/data/sql/queries/164-bad-asn-in-false-positives
-#As of 2019-04-18, the following had >=6 ASN detections which were FP
+    # ^^ top 20 FP hosts that get reported due to 'bad ASN', collated by regex parsing
+    # https://metasmoke.erwaysoftware.com/data/sql/queries/164-bad-asn-in-false-positives
+    # As of 2019-04-18, the following had >=6 ASN detections which were FP
     "ampps.com", "bintray.com", "config.ru", "datetime.date", "myexample.com",
     "mywiki.wooledge.org", "sevenforums.com", "ultimatefreehost.in", "wa.me", "web.com",
-#As of 2019-04-18, the following had 5 ASN detections which were FP
+    # As of 2019-04-18, the following had 5 ASN detections which were FP
     "androidforums.com", "getclayton.com", "indeed.com", "math.net",
     "mobilefirstplatform.ibmcloud.com", "ss.ms", "table.to",
-#As of 2019-04-18, the following had 4 ASN detections which were FP
+    # As of 2019-04-18, the following had 4 ASN detections which were FP
     "code.kx.com", "daniweb.com", "files.catbox.moe", "greatrecipetips.com", "html5up.net",
     "irc.freenode.net", "italian-stresser.online", "meteocaldas.com", "techpowerup.com",
     "unit-conversion.info", "wicked.io",
-#not being added: bitcoinofficial.org, learn-neural-networks.com
-#As of 2019-04-18, the following had 3 ASN detections which were FP
+    # not being added: bitcoinofficial.org, learn-neural-networks.com
+    # As of 2019-04-18, the following had 3 ASN detections which were FP
     "bankingifsccodes.com", "bethelp.byethost3.com", "calculator.net", "change.by",
     "clover.com", "cognimem.com", "csde.epizy.com", "docker.bintray.io", "domaine.com",
     "dreamstime.com", "embedded101.com", "emildeveloping.com", "extjs.eu", "fixer.io",
@@ -87,11 +87,11 @@ ASN_WHITELISTED_WEBSITES = [
     "pdf.datasheetcatalog.com", "php.info", "pool.sks-keyservers.net", "reg.ru", "scaan.in",
     "shop.btownmedia.com", "smtp.sendgrid.net", "sysengineering.ru", "techspot.com",
     "testking.com", "thecollegeroar.com", "ursuscode.com", "vwo.com",
-#Not added:
-#000webhostapp.com  This domain would be reasonable to add if it didn't also whitelist all subdomains.
-#As of 2019-04-18, the following had 2 ASN detections which were FP, and appeared to be common.
+    # Not added:
+    # 000webhostapp.com  This domain would be reasonable to add if it didn't also whitelist all subdomains.
+    # As of 2019-04-18, the following had 2 ASN detections which were FP, and appeared to be common.
     "wikileaks.org",
-#Added to prevent having 3 detections on just the domain.
+    # Added to prevent having 3 detections on just the domain.
     "writingexplained.org"]
 COUNTRY = [
     # N Europe
