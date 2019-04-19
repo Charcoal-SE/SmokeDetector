@@ -1865,5 +1865,5 @@ cerisea\W?medica
 extend\W?male
 natura\W?vitality(?:\W?keto)?
 rlz\W?pills
-bandarqq?
-domin[io]qq
+bandar\W*qq?
+domin[io]\W*qq
