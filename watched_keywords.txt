@@ -9477,3 +9477,4 @@
 1555649996	Shree	certsmarket\.com
 1555653815	Shree	brucedavid\d*(?:@gmail\.com)
 1555655043	Shree	examguarantee\.com
+1555664420	Makyen	shoparcade\.com
