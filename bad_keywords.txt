@@ -93,7 +93,7 @@ whizz\W?systems?
 intellux
 viooz
 smartican
-(?<!')t\Wcomplex
+(?<!')t[ -]complex
 фальшивы(е|х) (деньги|денег|купюры?)
 raging\W?lion
 retrodynamic\W?formula
