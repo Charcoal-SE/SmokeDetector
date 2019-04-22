@@ -489,7 +489,7 @@ class Metasmoke:
                 if GlobalVars.metasmoke_failures >= MAX_FAILURES and not GlobalVars.metasmoke_down:
                     GlobalVars.metasmoke_down = True
                     chatcommunicate.tell_rooms_with(
-                        'debug', '**Warning**: {}: {} latest connections to ' +
+                        'debug', '**Warning**: {}: {} latest connections to '
                         'metasmoke have failed. Disabling metasmoke'.format(
                             GlobalVars.location, GlobalVars.metasmoke_failures))
                 # No need to log here because it's re-raised
