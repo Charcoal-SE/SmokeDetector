@@ -1608,7 +1608,7 @@ vyantixrxtry\.com
 usadietplan\.com
 wpcare24\.com
 topnetworkingworld\.com
-ekeeda\.com
+\b(?<!-)ekeeda\.com(?![.-])\b
 australiafitness\.com\.au
 monily\.com
 randyrun\.com
