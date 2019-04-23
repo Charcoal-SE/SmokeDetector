@@ -2723,7 +2723,7 @@ nutrition4deal\.com
 jumblesolver\.online
 machomanhealth\.com
 cryptoexchangescript\.com
-clickbank\.net(?!.*?</?code>)
+\.(?:hop|pay)\.clickbank\.net(?<!example\.(?:hop|pay)\.clickbank\.net)(?!.*?</?code>)
 bullguard-support\.co\.uk
 //v\.ht
 \b(?<!-)cutt\.us(?![.-])\b
