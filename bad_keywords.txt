@@ -1869,3 +1869,4 @@ bandar\W*qq?
 domin[io]\W*qq
 keto\W*buzz(?:\W*reviews?)?
 risagen
+vita\W?health
