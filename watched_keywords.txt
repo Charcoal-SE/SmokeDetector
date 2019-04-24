@@ -9592,3 +9592,4 @@
 1556114729	tripleee	lyscience
 1556130191	Machavity	etsy\.me
 1556141624	Makyen	premiumdataware\W*(?:dot\W*)?com(?#obfuscated domain)
+1556141656	Makyen	premium\W+dataware(?#Company name)
