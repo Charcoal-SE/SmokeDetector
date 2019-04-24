@@ -9585,4 +9585,3 @@
 1556098194	tripleee	viet5g\.com
 1556098588	tripleee	trendook\.com
 1556098826	tripleee	anikatechsupport\.co\.uk
-1556099403	Erik the Outgolfer	rod\w?financing\d?
