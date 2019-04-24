@@ -9581,3 +9581,4 @@
 1556086798	Glorfindel	com\.CRE8\.LudoChat
 1556088116	tripleee	1kdaily
 1556089775	Makyen	credit card coins
+1556089930	Makyen	I\s*just\s*got\s*paid\s*\$6784
