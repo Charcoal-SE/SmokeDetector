@@ -137,3 +137,4 @@ muralidharaB
 ^shopmedi\W?online$
 ^limoo\W?torsh$
 ^swetha\W?reddy$
+(?-i:^Mangmoom GGMOSAMBIX$)
