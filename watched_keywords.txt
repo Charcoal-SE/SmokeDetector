@@ -9596,3 +9596,4 @@
 1556175206	tripleee	bulkcheapammo\.com
 1556179011	Makyen	1kdaily(?#Abuse the watchlist to get an extra detection for persistent recent spam.)
 1556180571	Makyen	entramax
+1556184949	double-beep	mealqi\.com
