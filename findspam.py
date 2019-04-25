@@ -1136,6 +1136,7 @@ def watched_ns_for_url_domain(s, site):
         'dynamicnetips.com.',
         'w3softech.com.',
         'blockchainhelp.pro.',
+        'specializedtest.com.',
     ])
 
 
