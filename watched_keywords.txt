@@ -9577,7 +9577,6 @@
 1556084859	tripleee	getdohelp\.com
 1556084887	tripleee	systematicqms\.com
 1556086798	Glorfindel	com\.CRE8\.LudoChat
-1556088116	tripleee	1kdaily
 1556089775	Makyen	credit card coins
 1556089930	Makyen	I\s*just\s*got\s*paid\s*\$6784
 1556092612	tripleee	forumpakistan\.com\.pk
