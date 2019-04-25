@@ -9594,4 +9594,3 @@
 1556141686	Makyen	bitkwin\.com
 1556141718	Makyen	premiumdataware(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)(?#obfuscated email)
 1556175206	tripleee	bulkcheapammo\.com
-1556178850	Makyen	1kdaily[^. \w]+us
