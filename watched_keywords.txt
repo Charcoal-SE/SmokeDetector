@@ -9593,7 +9593,6 @@
 1556141686	Makyen	bitkwin\.com
 1556141718	Makyen	premiumdataware(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)(?#obfuscated email)
 1556175206	tripleee	bulkcheapammo\.com
-1556179011	Makyen	1kdaily(?#Abuse the watchlist to get an extra detection for persistent recent spam.)
 1556180571	Makyen	entramax
 1556184949	double-beep	mealqi\.com
 1556185059	Zoe	webdesigninghouse\.com
