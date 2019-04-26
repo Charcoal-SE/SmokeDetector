@@ -1877,3 +1877,4 @@ slimlook
 holistic\W?bliss(?:\W?keto)?
 rod\W?financing\d*
 alluvia
+lucky\W?patcher
