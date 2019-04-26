@@ -9616,10 +9616,10 @@
 1556262375	tripleee	live\W?net\W?tv
 1556262414	tripleee	showbox
 1556263138	tripleee	webrence\.com
-1556264359	tripleee	listsituspoker.com
-1556264359	tripleee	poker88indo.com
-1556264359	tripleee	generasiqq.club
-1556264359	tripleee	grup99.com
-1556264359	tripleee	happyqq.site
-1556264359	tripleee	inikartu.online
-1556264359	tripleee	inipoin.online
+1556264359	tripleee	listsituspoker\.com
+1556264359	tripleee	poker88indo\.com
+1556264359	tripleee	generasiqq\.club
+1556264359	tripleee	grup99\.com
+1556264359	tripleee	happyqq\.site
+1556264359	tripleee	inikartu\.online
+1556264359	tripleee	inipoin\.online
