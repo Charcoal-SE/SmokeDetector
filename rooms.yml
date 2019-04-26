@@ -136,6 +136,7 @@ stackexchange.com:
       - 14688437 # double-beep
       - 8505551  # TuringTux
       - 11311023   # avazula
+      - 11267045   # MEE the setup wizard
 
   65945:  # Charcoal Test
     commands: true
