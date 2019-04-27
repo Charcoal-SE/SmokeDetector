@@ -2782,4 +2782,3 @@ aanyalinen\.com
 cialisneabd\.com
 healthleans\.com
 webrence\.com
-\b(?<!-)binfer\.com(?![.-])\b
