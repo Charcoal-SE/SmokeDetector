@@ -9639,3 +9639,4 @@
 1556287381	Olivia	flightmytrip\.com
 1556289212	Glorfindel	^James\sKirkbond$
 1556324359	Makyen	getitdoneapps\.wordpress\.com
+1556325193	Makyen	bakabalovespell(?:@gmail\.com)?
