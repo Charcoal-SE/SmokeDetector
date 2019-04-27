@@ -2783,3 +2783,4 @@ cialisneabd\.com
 healthleans\.com
 webrence\.com
 fresherzones\.com
+\b(?<!-)binfer\.com(?![.-])\b
