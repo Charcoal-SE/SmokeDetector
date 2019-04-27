@@ -9640,3 +9640,4 @@
 1556289212	Glorfindel	^James\sKirkbond$
 1556324359	Makyen	getitdoneapps\.wordpress\.com
 1556325193	Makyen	bakabalovespell(?:@gmail\.com)?
+1556332659	Makyen	oscarwhitehackersworld(?:@gmail\.com)?
