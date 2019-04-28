@@ -136,6 +136,5 @@ muralidharaB
 (?-i:^arkramos$)
 ^shopmedi\W?online$
 ^limoo\W?torsh$
-^swetha\W?reddy$
 (?-i:^Mangmoom GGMOSAMBIX$)
 ^.{0,3}wingding.{0,3}$
