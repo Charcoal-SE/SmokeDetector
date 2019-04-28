@@ -2785,3 +2785,4 @@ webrence\.com
 fresherzones\.com
 \b(?<!-)binfer\.com(?![.-])\b
 compare-text-files\.com
+cutwin\.com
