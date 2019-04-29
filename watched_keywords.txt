@@ -9658,3 +9658,4 @@
 1556474464	Makyen	buydocuments\.authenticonline(?:@gmail\.com)?
 1556474577	Makyen	Authentic\W*Documents?\W*Providers?
 1556502935	Makyen	ritlweb\.com
+1556502964	Makyen	/suogakun
