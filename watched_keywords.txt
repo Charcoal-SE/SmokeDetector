@@ -9663,3 +9663,4 @@
 1556503050	Makyen	kakoicos\.com
 1556510720	Makyen	javascriptstutorial\.com
 1556513419	tripleee	odemi\.in
+1556514850	tripleee	^\w{5}2ch$
