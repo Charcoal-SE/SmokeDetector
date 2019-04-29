@@ -9664,5 +9664,4 @@
 1556510720	Makyen	javascriptstutorial\.com
 1556513419	tripleee	odemi\.in
 1556514911	tripleee	^\w{4,5}2ch$
-1556515139	tripleee	keytone
 1556518246	tripleee	exkash\.net
