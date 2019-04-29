@@ -1880,3 +1880,4 @@ radiant\W?farms(?:\W?keto)?
 binfer(?!\.com)
 black\W?latte
 keytones?
+omega\W?gro(\W?(?:dht|hair))?
