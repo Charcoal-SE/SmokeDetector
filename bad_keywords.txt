@@ -1878,3 +1878,4 @@ alluvia
 lucky\W?patcher
 radiant\W?farms(?:\W?keto)?
 binfer(?!\.com)
+black\W?latte
