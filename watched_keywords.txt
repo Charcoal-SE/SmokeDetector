@@ -8900,7 +8900,6 @@
 1553275360	Machavity	bowtricks\.com
 1553285702	double-beep	abanslogistics\.lk
 1553285118	double-beep	csdesignstudios\.com
-1553305710	Makyen	expressdocumentsonline\.com
 1553305731	Makyen	maxderwin2(?:@gmail\.com)?
 1553305793	Makyen	lukyvin
 1553306264	Makyen	careersearchurgent(?:@gmail\.com)?
