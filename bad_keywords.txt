@@ -1883,3 +1883,4 @@ keytones?
 omega\W?gro(\W?(?:dht|hair))?
 level8(?:\W?keto)?
 Flightsbird
+simply\W?turmeric
