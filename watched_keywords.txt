@@ -9694,3 +9694,4 @@
 1556644731	Makyen	dacrazynewfie69(?:@gmail\.com)?
 1556656814	Makyen	savitrigupta\.com
 1556656844	Makyen	musicrush\.com
+1556656878	Makyen	globalcapitalretriever\W*(?:dot\W*)?strikingly\W*(?:dot\W*)?com
