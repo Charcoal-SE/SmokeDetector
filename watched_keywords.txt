@@ -7453,7 +7453,6 @@
 1546602764	tripleee	atsshopping\.com
 1546613908	tripleee	myhairact\.com
 1546668166	Nisse Engström	buybestonlineelectronicmusickeyboard\.blogspot\.com
-1546710255	iBug	shark\W*tank
 1546727300	Makyen	1jKzHZw_oPGRzQdqg_yOkZS__3jHqba2B
 1546727306	Makyen	tipstersportal\.com
 1546727311	Makyen	xpertphp\.com
