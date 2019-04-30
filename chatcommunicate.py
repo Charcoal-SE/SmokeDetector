@@ -136,10 +136,10 @@ def join_command_rooms():
 
 def parse_room_config(path):
     with open(path, "r") as room_config:
-        room_dict = yaml.load(room_config.read())
+        room_dict = yaml.safe_load(room_config.read())
 
     with open("users.yml", "r", encoding="utf-8") as user_config:
-        user_data = yaml.load(user_config.read())
+        user_data = yaml.safe_load(user_config.read())
 
     inherits = []
     rooms = {}
