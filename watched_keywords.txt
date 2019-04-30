@@ -9675,3 +9675,4 @@
 1556574418	Makyen	skylinktechnes(?:@yahoo\.com)?
 1556574538	Machavity	expressdocumentsonline\.com
 1556574568	Machavity	helena6q4
+1556584629	Makyen	roseparker\d+(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?(?#seen: roseparker3037)
