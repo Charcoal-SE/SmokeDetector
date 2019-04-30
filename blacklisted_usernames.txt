@@ -139,3 +139,4 @@ muralidharaB
 (?-i:^Mangmoom GGMOSAMBIX$)
 ^.{0,3}wingding.{0,3}$
 ^myboatride$
+^Manmachine Group$
