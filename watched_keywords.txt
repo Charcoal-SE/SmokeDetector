@@ -9696,3 +9696,4 @@
 1556656844	Makyen	musicrush\.com
 1556656878	Makyen	globalcapitalretriever\W*(?:dot\W*)?strikingly\W*(?:dot\W*)?com
 1556656909	Makyen	gcapitalretriever(?:\W*(?:at\W*)?outlook\W*(?:dot\W*)?com)?(?#email & skype)
+1556656940	Makyen	global\W*capital\W*retriever
