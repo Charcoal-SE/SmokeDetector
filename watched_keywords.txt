@@ -9711,3 +9711,4 @@
 1556714294	Olivia	cheyat\.com
 1556098415	double-beep	momentrim-keto\.strikingly\.com
 1556627932	double-beep	medical\W*loans
+1556727844	double-beep	(?:best\W*)?handwritten\W*novels
