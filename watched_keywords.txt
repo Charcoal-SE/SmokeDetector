@@ -9707,3 +9707,4 @@
 1556703061	double-beep	allclientservice\.com
 1556709938	Olivia	arianasign\.com
 1556711469	iBug	safetywagon\.com
+1556711487	iBug	safety\W*wagon(?!\.com)
