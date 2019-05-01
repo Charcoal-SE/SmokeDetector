@@ -9713,3 +9713,4 @@
 1556627932	double-beep	medical\W*loans
 1556727844	double-beep	(?:best\W*)?handwritten\W*novels
 1556729535	double-beep	Systematic\W*Quality\W*Management\W*Systems
+1556732360	Machavity	kstu\.kz
