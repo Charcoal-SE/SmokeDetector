@@ -9710,3 +9710,4 @@
 1556711487	iBug	safety\W*wagon(?!\.com)
 1556714294	Olivia	cheyat\.com
 1556098415	double-beep	momentrim-keto\.strikingly\.com
+1556627932	double-beep	medical\W*loans
