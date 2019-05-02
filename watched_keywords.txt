@@ -9721,3 +9721,4 @@
 1556785977	tripleee	siemreapprivatetour\.com
 1556786014	tripleee	besthealthherbalcentre(?:\.com)?
 1556786053	tripleee	magichimalayatreks\.com
+1556787024	tripleee	baccaratbro\.com
