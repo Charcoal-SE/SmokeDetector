@@ -1887,3 +1887,4 @@ fantastic\W?keto
 viva\W?thrive(?:\W?keto)?
 keto\W?flex(?:\W?diet)?
 slim\W?look(?:\Wforskolin)?
+retinol\W?re
