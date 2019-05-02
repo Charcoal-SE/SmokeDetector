@@ -9720,3 +9720,4 @@
 1556784401	tripleee	xuatkhaunhatban\.vn
 1556785977	tripleee	siemreapprivatetour\.com
 1556786014	tripleee	besthealthherbalcentre(?:\.com)?
+1556786053	tripleee	magichimalayatreks\.com
