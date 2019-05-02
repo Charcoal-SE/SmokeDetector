@@ -9741,3 +9741,4 @@
 1556834251	Makyen	chiefdrluckysolutionhome\.website2\.me
 1556834622	Machavity	chiefdrlucky(?:@gmail\.com)?
 1556835902	Erik the Outgolfer	regencyfinancecompany(?:09)(?:@gmail\.com)
+1556835989	Erik the Outgolfer	regencyfinancecompany\d*(?:@gmail\.com)
