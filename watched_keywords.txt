@@ -7158,7 +7158,6 @@
 1544772263	K.Dᴀᴠɪs	ejoin(?:\W*tech)?
 1544773480	Tetsuya Yamamoto	britishessaywriting\.co\.uk
 1544778132	Tetsuya Yamamoto	bollywoodblastz\.com
-1544780910	Tetsuya Yamamoto	customer-care-help\.com
 1544781059	Shree	androstackxblog\.wordpress\.com
 1544786543	Glorfindel	jelvix\.com
 1544786735	Glorfindel	mold\W*(\w*\W*)?service
