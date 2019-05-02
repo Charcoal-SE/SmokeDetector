@@ -1885,3 +1885,4 @@ Flightsbird
 simply\W?turmeric
 fantastic\W?keto
 viva\W?thrive(?:\W?keto)?
+keto\W?flex(?:\W?diet)?
