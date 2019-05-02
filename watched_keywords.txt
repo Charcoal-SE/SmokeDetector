@@ -9740,5 +9740,4 @@
 1556827597	tripleee	2shorte\.com
 1556834251	Makyen	chiefdrluckysolutionhome\.website2\.me
 1556834622	Machavity	chiefdrlucky(?:@gmail\.com)?
-1556835989	Erik the Outgolfer	regencyfinancecompany\d*(?:@gmail\.com)
 1556836012	Erik the Outgolfer	regencyfinancecompany\d*(?:@gmail\.com)?
