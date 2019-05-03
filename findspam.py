@@ -1876,7 +1876,8 @@ city_list = [
     "Rajkot", "Surat", "Telangana", "Udaipur", "Uttarakhand",
     "Noida", "Pune", "Rohini", "Trivandrum", "Thiruvananthapuram",
     "Nashik", "Gurgaon", "Gurugram", "Kochi", "Ernakulam", "Nagpur", "Dehradun",
-    "Neemrana", "Raipur", "Faridabad",
+    "Neemrana", "Raipur", "Faridabad", "Kan[hj]angad",
+    "Trichy", "Tiruchirappalli", "Tiruchi", "Trichinopoly",
     # yes, these aren't cities but...
     "India", "Pakistan",
     # buyabans.com spammer uses creative variations
