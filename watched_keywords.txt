@@ -5546,7 +5546,6 @@
 1537308130	Makyen	app-reviews\.org
 1537308143	Makyen	237682929882(?#whatsapp)
 1537308156	Makyen	Lufaca312
-1537308172	Makyen	[a-z_]*(?:1_*)?314[\W_]*833[\W_]*9209[a-z_]*
 1537308363	Makyen	billhackwizard(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?(?#hacker, partially obfuscated email)
 1537326669	Tetsuya Yamamoto	adminieltsbristishonline\.wordpress
 1537328314	Makyen	wiserone224(?:@gmail.com)?
