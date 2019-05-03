@@ -1889,3 +1889,4 @@ keto\W?flex(?:\W?diet)?
 slim\W?look(?:\Wforskolin)?
 retinol\W?re
 entramax
+billhackwizard(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?(?#hacker, partially obfuscated email)
