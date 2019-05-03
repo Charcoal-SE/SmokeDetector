@@ -1273,6 +1273,7 @@ def watched_asn_for_url_hostname(s, site):
             '43317',   # FISHNET-AS, RU
             '45839',   # SHINJIRU-MY-AS-AP Shinjiru Technology Sdn Bhd, MY
             '46261',   # QUICKPACKET - QuickPacket, LLC, US
+            '46844',   # ST-BGP - Sharktech, US
             '47583',   # AS-HOSTINGER, LT
             '49335',   # NCONNECT-AS, RU
             '50673',   # SERVERIUS-AS, NL
