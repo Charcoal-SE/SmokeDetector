@@ -9741,3 +9741,4 @@
 1556836012	Erik the Outgolfer	regencyfinancecompany\d*(?:@gmail\.com)?
 1556850480	Makyen	havelogo\.com
 1556858925	tripleee	avinahome\.com
+1556859072	tripleee	solutionhealthherbalclinic\.com
