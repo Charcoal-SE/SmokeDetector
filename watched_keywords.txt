@@ -9768,3 +9768,4 @@
 1556958862	tripleee	homemovie\.app\.link
 1556959015	tripleee	tupmovie\.com(?#redirect target from homemovie.app.link)
 1556979836	Olivia	ielts\W*essentials
+1556979932	Olivia	genuineieltscertificates\W*(?:at\W*)?yahoo\W*(?:dot\W*)?com
