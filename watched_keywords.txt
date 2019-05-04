@@ -9774,3 +9774,4 @@
 1556984228	Makyen	scr888-apk-download
 1556992017	Glorfindel	shopofexile\.com
 1556992032	Glorfindel	anysolutionsgaming\.com
+1556993927	Byte Commander	gadgetmeasure\.com
