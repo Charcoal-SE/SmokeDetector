@@ -9775,3 +9775,4 @@
 1556992017	Glorfindel	shopofexile\.com
 1556992032	Glorfindel	anysolutionsgaming\.com
 1556993927	Byte Commander	gadgetmeasure\.com
+1556996663	Byte Commander	yo-kart\.com
