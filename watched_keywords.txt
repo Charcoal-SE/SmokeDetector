@@ -7973,7 +7973,6 @@
 1549265757	Tetsuya Yamamoto	bengaluruq\.com
 1549266561	Tetsuya Yamamoto	zitrend\.fun
 1549281186	Shree	wonga\.investment(?:@gmail\.com)
-1549289982	Wai Ha Lee	signyourdoc\.com
 1549299017	Makyen	papersjunction\.co\.uk
 1549299046	Makyen	addaudiotovideo\.com
 1549303691	Makyen	^[a-z]{4,}erk(?<!Landoperk)(?<!codeherk)(?<!waltwhiterk)(?<!SilverK)(?<!NacOJerk)(?<!Stromwerk)(?<!SpencerK)(?<!Bleuderk)(?<!GameMasterK)(?<!FrazzerK)(?<!berserk)(?<!Canberk)(?<!SummerK)(?<!Superjerk)(?<!CapoZerk)(?<!rajeerk)(?<!Woodwoerk)(?<!AleksanderK)(?<!souperk)(?<!QuestionerK)(?<!meetmeRK)(?<!nachtwerk)(?<!Pryzerk)(?<!Bossjerk)(?<!iceberk)(?<!Shadowjerk)$(?#Add additional FP usernames when detected; original: 1547532983 iBug)
