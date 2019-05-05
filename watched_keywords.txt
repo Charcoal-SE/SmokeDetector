@@ -598,7 +598,6 @@
 1502949035	Glorfindel	miraclebeautysalonatl\.com
 1502954069	Glorfindel	hotmailemaillogin\.net
 1502955676	tripleee	l\W?argin(?:ine)?
-1502969219	CalvT븃	alldaygeneric\.com
 1502973604	Glorfindel	saturam\.com
 1502982679	tripleee	convertlotusnotesnsf\.com
 1503003785	quartata	alltipsfinder\.com
