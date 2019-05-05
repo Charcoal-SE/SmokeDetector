@@ -9782,3 +9782,4 @@
 1557045045	Shree	gocrazyfitness\.com
 1557047591	Makyen	tahvocr(?:@gmail\.com)?
 1557047604	Makyen	serntz2019(?:@gmail\.com)?
+1557047618	Makyen	alice\W*a\W*digital\W*home\W*optimization\W*system
