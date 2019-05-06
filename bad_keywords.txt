@@ -1893,3 +1893,4 @@ billhackwizard(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?(?#hacker, partially obfus
 momentrim
 organa(?:\W?keto)?
 neural\W?fusion(?:\W?brain)?
+keto\W?zen(?:\W?diet)?
