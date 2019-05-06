@@ -9806,3 +9806,4 @@
 1557142159	tripleee	cheating\W*devices?
 1557143744	Shree	4squarelogic\.com
 1557146157	Glorfindel	economicjournal\.co
+1557146930	tripleee	^conor\W?white$
