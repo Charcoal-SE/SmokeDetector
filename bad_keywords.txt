@@ -1892,3 +1892,4 @@ entramax
 billhackwizard(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?(?#hacker, partially obfuscated email)
 momentrim
 organa(?:\W?keto)?
+neural\W?fusion(?:\W?brain)?
