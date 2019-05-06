@@ -9803,3 +9803,4 @@
 1557139236	tripleee	directindirectspeech\.com
 1557141427	tripleee	shimendu\W?ervaringen
 1557141690	tripleee	kktashguru\.com
+1557142159	tripleee	cheating\W*devices?
