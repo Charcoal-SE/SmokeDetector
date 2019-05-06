@@ -9801,3 +9801,4 @@
 1557136708	tripleee	getmyoffer-capitalone-com
 1557138241	Glorfindel	bentecc\.com
 1557138996	tripleee	kaghazbaz\.com
+1557139236	tripleee	directindirectspeech\.com
