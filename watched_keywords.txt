@@ -9805,3 +9805,4 @@
 1557141690	tripleee	kktashguru\.com
 1557142159	tripleee	cheating\W*devices?
 1557143744	Shree	4squarelogic\.com
+1557146157	Glorfindel	economicjournal\.co
