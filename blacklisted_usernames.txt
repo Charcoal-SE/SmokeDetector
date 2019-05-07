@@ -145,3 +145,4 @@ ameliaalby
 ^livewire\W?india$
 ^andymark$
 ^MathJerry$
+Kishankant\s+Yadav
