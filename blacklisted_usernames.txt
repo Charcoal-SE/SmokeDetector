@@ -143,3 +143,7 @@ muralidharaB
 ^mason ?java$
 ameliaalby
 Genny\s+Swiss
+^livewire\W?india$
+^andymark$
+^MathJerry$
+Kishankant\s+Yadav

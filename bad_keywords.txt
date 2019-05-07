@@ -1475,7 +1475,7 @@ neftegaz\w+@[-\w]+(\.[-\w]+)+
 fob\W*rotterdam
 neftegazoiltrading
 [a-z_]*(?:1_*)?844[\W_]*443[\W_]*3244[a-z_]*
-sun\W?chips
+sun\W?chips(?!$)
 [a-z_]*(?:0?80_*)?4110[\W_]*3383[a-z_]*
 [a-z_]*(?:91_*)?9066[\W_]*638[\W_]*196[a-z_]*
 mission-impossible-fallout
@@ -1888,3 +1888,10 @@ viva\W?thrive(?:\W?keto)?
 keto\W?flex(?:\W?diet)?
 slim\W?look(?:\Wforskolin)?
 retinol\W?re
+entramax
+billhackwizard(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?(?#hacker, partially obfuscated email)
+momentrim
+organa(?:\W?keto)?
+neural\W?fusion(?:\W?brain)?
+keto\W?zen(?:\W?diet)?
+thermo\W?fight

@@ -1079,6 +1079,7 @@ def watched_ns_for_url_domain(s, site):
         {'kia.ns.cloudflare.com.', 'noah.cs.cloudflare.com.'},
         {'laura.ns.cloudflare.com.', 'terin.ns.cloudflare.com.'},
         {'mark.ns.cloudflare.com.', 'wanda.ns.cloudflare.com.'},
+        {'meg.ns.cloudflare.com.', 'theo.ns.cloudflare.com.'},
         {'naomi.ns.cloudflare.com.', 'tim.ns.cloudflare.com.'},
         {'norm.ns.cloudflare.com.', 'olga.ns.cloudflare.com.'},
         {'olga.ns.cloudflare.com.', 'seth.ns.cloudflare.com.'},
@@ -1139,6 +1140,8 @@ def watched_ns_for_url_domain(s, site):
         'w3softech.com.',
         'blockchainhelp.pro.',
         'specializedtest.com.',
+        'macsol.co.in.',
+        'inmotionhosting.com.',
     ])
 
 
@@ -1272,6 +1275,7 @@ def watched_asn_for_url_hostname(s, site):
             '43317',   # FISHNET-AS, RU
             '45839',   # SHINJIRU-MY-AS-AP Shinjiru Technology Sdn Bhd, MY
             '46261',   # QUICKPACKET - QuickPacket, LLC, US
+            '46844',   # ST-BGP - Sharktech, US
             '47583',   # AS-HOSTINGER, LT
             '49335',   # NCONNECT-AS, RU
             '50673',   # SERVERIUS-AS, NL
@@ -1874,7 +1878,8 @@ city_list = [
     "Rajkot", "Surat", "Telangana", "Udaipur", "Uttarakhand",
     "Noida", "Pune", "Rohini", "Trivandrum", "Thiruvananthapuram",
     "Nashik", "Gurgaon", "Gurugram", "Kochi", "Ernakulam", "Nagpur", "Dehradun",
-    "Neemrana", "Raipur", "Faridabad",
+    "Neemrana", "Raipur", "Faridabad", "Kanhangad", "Kanhanjad",
+    "Trichy", "Tiruchirappalli", "Tiruchi", "Trichinopoly",
     # yes, these aren't cities but...
     "India", "Pakistan",
     # buyabans.com spammer uses creative variations

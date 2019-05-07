@@ -598,7 +598,6 @@
 1502949035	Glorfindel	miraclebeautysalonatl\.com
 1502954069	Glorfindel	hotmailemaillogin\.net
 1502955676	tripleee	l\W?argin(?:ine)?
-1502969219	CalvT븃	alldaygeneric\.com
 1502973604	Glorfindel	saturam\.com
 1502982679	tripleee	convertlotusnotesnsf\.com
 1503003785	quartata	alltipsfinder\.com
@@ -2509,7 +2508,6 @@
 1521094665	tripleee	anyrent\.in
 1521100057	Glorfindel	viniscookbook\.com
 1521100429	micsthepick	optigen\W?iq
-1521110031	tripleee	f1krazy
 1521110186	Glorfindel	convertertools\.org
 1521111121	Glorfindel	arysontechnologies\.com
 1520947926	WELZ	btcerich\.com
@@ -4918,7 +4916,6 @@
 1534316985	Glorfindel	isocials\.org
 1534318134	tripleee	altencalsoftlabs\.com
 1534318786	tripleee	indotravelteam\.com
-1534321176	Makyen	popsugar\.com
 1534332401	tripleee	[a-z_]*(?:1_*)?845[\W_]*422[\W_]*4913[a-z_]*
 1534333891	Shree	personal-mail-archiver\.com
 1534333966	Erik the Outgolfer	download-instagram\.com
@@ -5546,8 +5543,6 @@
 1537308130	Makyen	app-reviews\.org
 1537308143	Makyen	237682929882(?#whatsapp)
 1537308156	Makyen	Lufaca312
-1537308172	Makyen	[a-z_]*(?:1_*)?314[\W_]*833[\W_]*9209[a-z_]*
-1537308363	Makyen	billhackwizard(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?(?#hacker, partially obfuscated email)
 1537326669	Tetsuya Yamamoto	adminieltsbristishonline\.wordpress
 1537328314	Makyen	wiserone224(?:@gmail.com)?
 1537328332	Makyen	237[\W_]*683775558(?#whatsapp)
@@ -7977,7 +7972,6 @@
 1549265757	Tetsuya Yamamoto	bengaluruq\.com
 1549266561	Tetsuya Yamamoto	zitrend\.fun
 1549281186	Shree	wonga\.investment(?:@gmail\.com)
-1549289982	Wai Ha Lee	signyourdoc\.com
 1549299017	Makyen	papersjunction\.co\.uk
 1549299046	Makyen	addaudiotovideo\.com
 1549303691	Makyen	^[a-z]{4,}erk(?<!Landoperk)(?<!codeherk)(?<!waltwhiterk)(?<!SilverK)(?<!NacOJerk)(?<!Stromwerk)(?<!SpencerK)(?<!Bleuderk)(?<!GameMasterK)(?<!FrazzerK)(?<!berserk)(?<!Canberk)(?<!SummerK)(?<!Superjerk)(?<!CapoZerk)(?<!rajeerk)(?<!Woodwoerk)(?<!AleksanderK)(?<!souperk)(?<!QuestionerK)(?<!meetmeRK)(?<!nachtwerk)(?<!Pryzerk)(?<!Bossjerk)(?<!iceberk)(?<!Shadowjerk)$(?#Add additional FP usernames when detected; original: 1547532983 iBug)
@@ -8397,7 +8391,6 @@
 1551327889	Makyen	vien\.tech
 1551328733	Shree	allfootballschedules\.co
 1551329371	Tetsuya Yamamoto	clashroyaleapk\.net
-1551329449	Tetsuya Yamamoto	supplementmegastore\.net
 1551329913	Tetsuya Yamamoto	10000coders\.com
 1551330170	Tetsuya Yamamoto	sonyphotorecovery\.com
 1551330431	Tetsuya Yamamoto	downloadbook\.info
@@ -8728,7 +8721,6 @@
 1552731082	double-beep	quora\.com/link/Captain-Marvel-2019-2
 1552747914	Erik the Outgolfer	iccricketworldcup2019\.com
 1552734640	double-beep	medium\.com/@walgreensdiet
-1552735010	double-beep	maxrobustxtreme\.nl
 1552735541	double-beep	wikibioonline\.xyz
 1552746095	double-beep	expatriates\.com
 1552746285	double-beep	medium\.com/@debradecker
@@ -9149,7 +9141,6 @@
 1554440994	tripleee	ethnickart\.com
 1554443734	Makyen	^<p>(?:[asdfghjkl;\s]|<\/?p>){0,30}[asdfghjkl]*(?=(?:[asdfghjkl;\s]|<\/?p>)*$)
 1554444622	Makyen	^(?-i:[sdfghjkl]{6,40})$
-1554446527	tripleee	momentrim
 1554446650	tripleee	toparticlesubmissionsites\.com(?#from bit.ly/2K1rZQf)
 1554449537	tripleee	yoctel\.com
 1554449488	gparyani	Persatuan Insurans Am Malaysia
@@ -9586,7 +9577,6 @@
 1556141686	Makyen	bitkwin\.com
 1556141718	Makyen	premiumdataware(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)(?#obfuscated email)
 1556175206	tripleee	bulkcheapammo\.com
-1556180571	Makyen	entramax
 1556184949	double-beep	mealqi\.com
 1556185059	Zoe	webdesigninghouse\.com
 1556186072	tripleee	bahamasyachtcharters\.com
@@ -9734,3 +9724,96 @@
 1556793335	Shree	global-ecommerce-services\.com
 1556793367	Shree	mage-extensions-themes\.com
 1556793729	Shree	quickandeasyloanservice\.com
+1556799738	Shree	nursingcasestudy\.org
+1556804631	Machavity	webpanda-solutions\.com
+1556810398	Machavity	ulaff\.net
+1556818307	Machavity	oxylabs\.io
+1556827597	tripleee	2shorte\.com
+1556834251	Makyen	chiefdrluckysolutionhome\.website2\.me
+1556834622	Machavity	chiefdrlucky(?:@gmail\.com)?
+1556836012	Erik the Outgolfer	regencyfinancecompany\d*(?:@gmail\.com)?
+1556850480	Makyen	havelogo\.com
+1556858925	tripleee	avinahome\.com
+1556859072	tripleee	solutionhealthherbalclinic\.com
+1556860487	tripleee	cerybra\.com
+1556861339	Makyen	gravityinnovativesolutions\.in
+1556863813	Makyen	shorturl\.at(?#Service counts clicks)
+1556864428	tripleee	drshashibhushan\.com
+1556864601	tripleee	healthyaudit\.com
+1556866050	tripleee	advicedam\.info
+1556866118	tripleee	amayze(?:\W?life(?:\W?forskolin)?)?
+1556867810	double-beep	apollocannabis\.ca
+1556869617	tripleee	share-ask\.com
+1556869646	tripleee	web1expert\.com
+1556874930	tripleee	securityjavascript\.com
+1556874946	tripleee	jshint\.com
+1556884424	tripleee	rajandental\.com
+1556887660	Glorfindel	revless\.com
+1556900294	Machavity	turtlebody
+1556905893	tripleee	themailitemsguide\.com
+1556910768	Machavity	gofoms\.com
+1556939860	Makyen	michealsnow179(?:@gmail\.com)?
+1556940369	Machavity	wikiep\.com
+1556940701	Makyen	agenpokerku\.com
+1556944012	Makyen	mr\s*michael\s*snow
+1556944366	Shree	macrofaretry\.com
+1556947967	Shree	reliablemaidservices\.co\.in
+1556953952	Shree	malegra\smedicine
+1556954155	Makyen	davidpfisher24(?:@gmail\.com)?
+1556958862	tripleee	homemovie\.app\.link
+1556959015	tripleee	tupmovie\.com(?#redirect target from homemovie.app.link)
+1556979836	Olivia	ielts\W*essentials
+1556979932	Olivia	genuineieltscertificates\W*(?:at\W*)?yahoo\W*(?:dot\W*)?com
+1556982635	Machavity	pin\.tt
+1556984213	Makyen	onegold88\.com
+1556984228	Makyen	scr888-apk-download
+1556992017	Glorfindel	shopofexile\.com
+1556992032	Glorfindel	anysolutionsgaming\.com
+1556993927	Byte Commander	gadgetmeasure\.com
+1556996663	Byte Commander	yo-kart\.com
+1557000150	Makyen	420topnotchweed\.com
+1557001835	Makyen	thewebblinders\.in
+1557033540	Makyen	gamalaptop\.vn
+1557033893	Shree	aryaamoney\.com
+1557045045	Shree	gocrazyfitness\.com
+1557047591	Makyen	tahvocr(?:@gmail\.com)?
+1557047604	Makyen	serntz2019(?:@gmail\.com)?
+1557047618	Makyen	alice\W*a\W*digital\W*home\W*optimization\W*system
+1557066198	Olivia	fagget
+1557085010	Olivia	rathicouplings\.com
+1557116947	Makyen	drjohnsoco(?:@outlook\.com)?
+1557117164	Makyen	/p/owdywq(?#coderwall.com)
+1557119485	tripleee	yakinzo
+1557121030	Shree	nvertisuniversity\.ac\.in
+1557122174	tripleee	hiddenbrains\.com
+1557136039	JoErNanO	qldschoolholidays\.com\.au
+1557135998	JoErNanO	nswschoolholidays\.net\.au
+1557136081	JoErNanO	vicschoolholidays\.com\.au
+1557136118	Makyen	tahico\.vn
+1557136136	JoErNanO	toplettertemplate\.com
+1557136144	JoErNanO	topformtemplates\.com
+1557136335	tripleee	think-cell\.com
+1557136348	Makyen	/@KETOXCGDiet
+1557136367	Shree	solemole\.com
+1557136559	Makyen	ringhotwater\.com\.au
+1557136708	tripleee	getmyoffer-capitalone-com
+1557138241	Glorfindel	bentecc\.com
+1557138996	tripleee	kaghazbaz\.com
+1557139236	tripleee	directindirectspeech\.com
+1557141427	tripleee	shimendu\W?ervaringen
+1557141690	tripleee	kktashguru\.com
+1557142159	tripleee	cheating\W*devices?
+1557143744	Shree	4squarelogic\.com
+1557146157	Glorfindel	economicjournal\.co
+1557146930	tripleee	^conor\W?white$
+1557155131	Byte Commander	mysportdab\.com
+1557155155	Byte Commander	techmachos\.com
+1557159791	Machavity	mahendraeyehospital\.com
+1557160576	Machavity	andriod\.com
+1557203666	tripleee	antisnoringchinstrap
+1557208337	tripleee	molitics\.in
+1557210110	tripleee	sai\W?ma\W?nish\W?naidu
+1557210825	tripleee	epubor\.com
+1557160084	double-beep	(?:(mahendra|best)\W*)?eye\W*hospital
+1556971921	double-beep	deemeshoudit\.com
+1556795078	double-beep	blockchainappfactory\.com
