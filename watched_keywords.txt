@@ -4916,7 +4916,6 @@
 1534316985	Glorfindel	isocials\.org
 1534318134	tripleee	altencalsoftlabs\.com
 1534318786	tripleee	indotravelteam\.com
-1534321176	Makyen	popsugar\.com
 1534332401	tripleee	[a-z_]*(?:1_*)?845[\W_]*422[\W_]*4913[a-z_]*
 1534333891	Shree	personal-mail-archiver\.com
 1534333966	Erik the Outgolfer	download-instagram\.com
