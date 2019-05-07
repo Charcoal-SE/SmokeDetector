@@ -9814,3 +9814,4 @@
 1557208337	tripleee	molitics\.in
 1557210110	tripleee	sai\W?ma\W?nish\W?naidu
 1557210825	tripleee	epubor\.com
+1557160084	double-beep	(?:(mahendra|best)\W*)?eye\W*hospital
