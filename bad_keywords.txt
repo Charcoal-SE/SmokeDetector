@@ -1894,3 +1894,4 @@ momentrim
 organa(?:\W?keto)?
 neural\W?fusion(?:\W?brain)?
 keto\W?zen(?:\W?diet)?
+thermo\W?fight
