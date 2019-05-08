@@ -147,3 +147,4 @@ Genny\s+Swiss
 ^andymark$
 ^MathJerry$
 Kishankant\s+Yadav
+^cruisebay$
