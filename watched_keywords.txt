@@ -5344,7 +5344,6 @@
 1536300520	Tetsuya Yamamoto	pmplanetarynews\.com
 1536300576	Tetsuya Yamamoto	multichannelcreative\.co\.uk
 1536300763	Tetsuya Yamamoto	askjugadu\.com
-1536303687	iBug	easyhackingguru(?:@gmail\.com)?
 1536303906	iBug	herbal\W?hills
 1536313540	Tetsuya Yamamoto	marketingassignment\.co\.uk
 1536315810	Glorfindel	happydealmaker\.com
