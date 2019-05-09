@@ -6574,7 +6574,6 @@
 1542072551	K.Dᴀᴠɪs	lakelandobserver\.com
 1542073052	Makyen	lost\W*as\W*they\W*couldn't\W*input\W*the\W*symbols\W*correctly(?#used in cleantalk posts linked by Rob)
 1542084479	K.Dᴀᴠɪs	qinvitation\.com
-1542084496	K.Dᴀᴠɪs	fordogsreviews\.com
 1542085691	Makyen	circuitbread\.com
 1542087150	Tetsuya Yamamoto	aspessolarproducts\.com
 1542093000	Makyen	markazahan\.com
