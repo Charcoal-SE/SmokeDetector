@@ -9871,3 +9871,4 @@
 1557396353	tripleee	thethreatreport\.com
 1557396581	tripleee	sdadtechnology\.com
 1557402276	tripleee	microcustomercare\.com
+1557402815	tripleee	governmenttopnews\.com
