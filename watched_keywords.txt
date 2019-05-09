@@ -8897,7 +8897,6 @@
 1553486436	Makyen	nguoi-su-dung
 1553494909	Makyen	adobecustomercares\.com
 1553495533	tripleee	logicspice\.com
-1553495785	tripleee	nobedad\.com
 1553496193	tripleee	opera\.support
 1553498500	tripleee	naijajobscan\.com
 1553501703	tripleee	luuvyou2\.blogspot
