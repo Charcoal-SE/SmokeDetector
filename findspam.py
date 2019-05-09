@@ -1765,7 +1765,8 @@ bad_keywords_nwb = [  # "nwb" == "no word boundary"
     " %[au]h ", "tapsi ?sarkar",
     "(?:networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing|"
     "salesforce|joomla)( certification)? (courses?|training)(?=.{0,25}</a>)",
-    r"(?:design|development|compan(?:y|ies)|institute|training|courses?|jobs?|automation|sex|services?)"
+    r"(?:design|development|compan(?:y|ies)|expert|institute|classes|schools?|training|courses?|jobs?"
+    r"|automation|sex|services?|kindergarten)"
     r"\W*(?:center|centre|institute|work|provider)?"
     r"(?:\b.{1,8}\b)?\L<city>\b",
     r"\b\L<city>(\b.{1,8}\b)?(?:tour)",  # TODO: Populate this "after city" keyword list
