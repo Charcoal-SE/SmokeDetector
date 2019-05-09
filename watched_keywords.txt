@@ -9872,3 +9872,4 @@
 1557396581	tripleee	sdadtechnology\.com
 1557402276	tripleee	microcustomercare\.com
 1557402815	tripleee	governmenttopnews\.com
+1557402876	tripleee	gov(?:(?:ern)?m)?(?:en)?t\W?top\W?news
