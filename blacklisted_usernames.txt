@@ -149,3 +149,4 @@ Genny\s+Swiss
 Kishankant\s+Yadav
 ^cruisebay$
 ^jiansong$
+prestige\W?smart\W?city
