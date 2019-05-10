@@ -9911,3 +9911,4 @@
 1557519121	Makyen	vietguru(?:\W*(?:at\W*)?programmer\W*(?:dot\W*)?net)?
 1557520098	Makyen	^Mary Baker$(?#Temporary to add a detection to multi-site spam)
 1557520818	Makyen	xurl\.es
+1557520830	Makyen	(?-i:zt607)
