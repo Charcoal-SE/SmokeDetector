@@ -9898,3 +9898,4 @@
 1557470104	tripleee	softwareplat\.com
 1557472488	tripleee	planview\.com
 1557474073	tripleee	slowcomputerissue\.com
+1557474157	gparyani	如果您预装的是Windows操作系统
