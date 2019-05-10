@@ -9906,3 +9906,4 @@
 1557489299	Makyen	codinghelp\.tk
 1557492057	Makyen	dixit.{0,20}(?:\W*(?:weight|loss|diet|plan))+
 1557502052	Machavity	trdmoz\.com
+1557502139	Machavity	juicermoz\.com
