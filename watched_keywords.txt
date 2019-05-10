@@ -9766,7 +9766,6 @@
 1557000150	Makyen	420topnotchweed\.com
 1557001835	Makyen	thewebblinders\.in
 1557033540	Makyen	gamalaptop\.vn
-1557033893	Shree	aryaamoney\.com
 1557045045	Shree	gocrazyfitness\.com
 1557047591	Makyen	tahvocr(?:@gmail\.com)?
 1557047604	Makyen	serntz2019(?:@gmail\.com)?
