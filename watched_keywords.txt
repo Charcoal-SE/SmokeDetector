@@ -9903,6 +9903,6 @@
 1557483528	Shree	northpolewebservice\.com
 1557484399	tripleee	paperplatemachinemanufacturers\.com
 1557485843	tripleee	comfortcarz\.com
-1557489273	Makyen	articlerewritehelp.com
-1557489285	Makyen	angulartutorial.tk
-1557489299	Makyen	codinghelp.tk
+1557489273	Makyen	articlerewritehelp\.com
+1557489285	Makyen	angulartutorial\.tk
+1557489299	Makyen	codinghelp\.tk
