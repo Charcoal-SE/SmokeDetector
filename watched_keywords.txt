@@ -9905,3 +9905,4 @@
 1557489273	Makyen	articlerewritehelp\.com
 1557489285	Makyen	angulartutorial\.tk
 1557489299	Makyen	codinghelp\.tk
+1557492057	Makyen	dixit.{0,20}(?:\W*(?:weight|loss|diet|plan))+
