@@ -9908,3 +9908,4 @@
 1557502052	Machavity	trdmoz\.com
 1557502139	Machavity	juicermoz\.com
 1557508823	Machavity	ufa4live\.com
+1557519121	Makyen	vietguru(?:\W*(?:at\W*)?programmer\W*(?:dot\W*)?net)?
