@@ -9890,3 +9890,4 @@
 1557446266	Machavity	javsin\.com
 1557447076	Machavity	balogunspelltemple\.com
 1557447169	Makyen	balogunlovespelltemple\.com
+1557447195	Makyen	drbalogungreatspelltemple(?:@gmail\.com)?
