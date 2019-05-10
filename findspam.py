@@ -1142,6 +1142,7 @@ def watched_ns_for_url_domain(s, site):
         'specializedtest.com.',
         'macsol.co.in.',
         'inmotionhosting.com.',
+        'myhostindia.com.',
     ])
 
 
