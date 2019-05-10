@@ -1900,4 +1900,4 @@ jiansong19(?:@gmail\.com)?
 easyhackingguru(?:@gmail\.com)?
 provexum
 noticeably\W?skin(?:\W?cream)?
-quickfundsrecovery(?:\W*@\W*gmail\W*\.\W*com)?
+quickfundsrecovery(?:\W*(?:at\W*)?gmail(?:\W*(?:dot\W*)?com)?)?
