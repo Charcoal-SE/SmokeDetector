@@ -1884,6 +1884,7 @@ city_list = [
     "Nashik", "Gurgaon", "Gurugram", "Kochi", "Ernakulam", "Nagpur", "Dehradun",
     "Neemrana", "Raipur", "Faridabad", "Kanhangad", "Kanhanjad",
     "Trichy", "Tiruchirappalli", "Tiruchi", "Trichinopoly",
+    "Kerala", "Mangalore", "Mangaluru",
     # yes, these aren't cities but...
     "India", "Pakistan",
     # buyabans.com spammer uses creative variations
