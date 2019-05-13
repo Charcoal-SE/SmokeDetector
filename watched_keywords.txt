@@ -3591,7 +3591,6 @@
 1527750150	tripleee	30minutemoneymethods\.com
 1527751676	tripleee	(?:dr\W*)?simon\W?ourian(?:\W*md)?
 1527755876	tripleee	dbconvert\.com
-1527760237	Zoe	zuaneducation\.com
 1527760876	Zoe	papersediting\.com
 1527768067	tripleee	cellogica
 1527768526	tripleee	[a-z_]*(?:1_*)?325[\W_]*740[\W_]*7730[a-z_]*
