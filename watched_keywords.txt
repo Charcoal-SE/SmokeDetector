@@ -9947,3 +9947,4 @@
 1557740451	tripleee	energynews\.gr
 1557746043	tripleee	afilnet\.com
 1557747131	tripleee	blackmagicno1\.blogspot
+1557747437	tripleee	revesoft\.com
