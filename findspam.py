@@ -1204,6 +1204,7 @@ def watched_ip_for_url_hostname(s, site):
             # AS 55293 A2HOSTING - A2 Hosting, Inc., US
             '162.254.252.93',   # paper-writing etc appsocio doneessays etc
             # AS 394695 PUBLIC-DOMAIN-REGISTRY - PDR, US
+            '103.21.58.29',     # software-development infinigic / apporio.com
             '116.206.104.141',  # fake-tech-support fake-diplomas
             '162.215.253.205',  # drugs escorts drozien.com nehasuri.in etc
         ])
