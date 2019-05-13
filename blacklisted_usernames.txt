@@ -152,3 +152,4 @@ Kishankant\s+Yadav
 prestige\W?smart\W?city
 ^tanvi agarwal$
 ^webdesigninghouse wdh$
+^Niaran$
