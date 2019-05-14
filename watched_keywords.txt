@@ -9958,3 +9958,4 @@
 1557794913	Makyen	sheltonbernice\d+(?:@yahoo\.com)?(?#sheltonbernice74@yahoo.com seen)
 1557799347	Makyen	princeidialu(?:@outlook\.com)?
 1557799428	Makyen	android-premium-apps\.blogspot\.com
+1557811955	tripleee	unique-elevators\.com
