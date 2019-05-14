@@ -9970,3 +9970,4 @@
 1557851907	double-beep	videos\.repair
 1557851985	double-beep	pro2col\.com
 1557852071	double-beep	bunafarmacie\.ro
+1557852448	double-beep	^Alex(?:andre)? Bat(?:ts)?
