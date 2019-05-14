@@ -9975,3 +9975,4 @@
 1557861539	Makyen	htpowlaser\.com
 1557861563	Makyen	hammad\.apk(?#URL path)
 1557861583	Makyen	profit-boom\.pro
+1557862668	Glorfindel	ag5\.com
