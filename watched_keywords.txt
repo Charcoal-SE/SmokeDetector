@@ -8937,7 +8937,6 @@
 1553674348	tripleee	uber\W?clone
 1553682673	tripleee	fleetquid\.co\.uk
 1553683545	tripleee	erankita\.ml
-1553684172	tripleee	aptechvisa\.com
 1553686351	tripleee	happyeasterweek\.org
 1553686536	tripleee	biographyofficials\.com
 1553686830	tripleee	hirdavatfirsat\.com
