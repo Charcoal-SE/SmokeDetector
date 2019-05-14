@@ -1194,6 +1194,7 @@ def watched_ip_for_url_hostname(s, site):
             '107.180.40.103',   # drugs + seo getbestdelight / seotipandsolution
             '107.180.47.58',    # drugs + travel
             '107.180.59.131',   # drugs kingofsupplement.com
+            '148.72.211.163',   # hostingride.in
             '160.153.129.38',   # drugs supplementswellness / buyketodiet etc
             '160.153.129.238',  # drugs bestenhancement / supplementskingpro etc
             '166.62.6.66',      # fake-tech-support + hosting ms-officesetup etc
