@@ -7599,7 +7599,6 @@
 1547549157	iBug	androidcertificationtraining\.wordpress
 1547555333	Shree	wowtexts\.com
 1547571409	Makyen	wittyanswer\.com
-1547571775	Makyen	manifestspellcast\.wordpress\.com
 1547578626	Makyen	happybabyguides\.com
 1547584813	Makyen	audacity\.onl
 1547584823	Makyen	findmyiphone\.onl
