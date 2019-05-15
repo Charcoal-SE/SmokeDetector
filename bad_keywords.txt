@@ -1904,3 +1904,4 @@ envy\W?naturals(?:\W?keto)?
 brain\W?dumps
 manifestspellcast(?!\.wordpress\.com)(?:@gmail\.com)?
 alluvia(?:\W*(?:labs|anti|aging|ageless|cream))+
+(?:(keto|forskolin)\W?)?kc3000
