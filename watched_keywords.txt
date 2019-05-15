@@ -9975,3 +9975,4 @@
 1557861583	Makyen	profit-boom\.pro
 1557862668	Glorfindel	ag5\.com
 1557885452	Makyen	eurekainfotech\.in
+1557892131	Makyen	alluvia(?!\W*(?:labs|anti|aging|ageless|cream))
