@@ -9991,3 +9991,4 @@
 1557926795	doppelgreener	mtg-proxies-cards\.com
 1557926872	Nisse Engström	kingcitation\.com
 1557929200	Nisse Engström	capyba\.ru
+1557933761	Olivia	securedrecovery\W*(?:at\W*)?protonmail\W*(?:dot\W*)?com
