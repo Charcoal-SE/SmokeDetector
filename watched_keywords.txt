@@ -9993,3 +9993,4 @@
 1557929200	Nisse Engström	capyba\.ru
 1557933761	Olivia	securedrecovery\W*(?:at\W*)?protonmail\W*(?:dot\W*)?com
 1557940901	Machavity	sebacorp\.com
+1557942372	Machavity	cashhomebuyers\.pro
