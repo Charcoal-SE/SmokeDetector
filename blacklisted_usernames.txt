@@ -155,3 +155,4 @@ prestige\W?smart\W?city
 ^Niaran$
 hostingride
 bestchange
+^Semo Diaz$
