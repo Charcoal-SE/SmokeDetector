@@ -1903,3 +1903,4 @@ quickfundsrecovery(?:\W*(?:at\W*)?gmail(?:\W*(?:dot\W*)?com)?)?
 envy\W?naturals(?:\W?keto)?
 brain\W?dumps
 manifestspellcast(?!\.wordpress\.com)(?:@gmail\.com)?
+alluvia(?:\W*(?:labs|anti|aging|ageless|cream))+
