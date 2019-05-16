@@ -10006,3 +10006,4 @@
 1557852448	double-beep	^Alex(?:andre)? Bat(?:ts)?
 1557744548	double-beep	atallcures\.com
 1557987265	Makyen	75engebook
+1557988815	tripleee	\w*sunwin
