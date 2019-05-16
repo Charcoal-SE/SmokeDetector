@@ -10007,3 +10007,4 @@
 1557744548	double-beep	atallcures\.com
 1557987265	Makyen	75engebook
 1557988815	tripleee	\w*sunwin
+1557989921	tripleee	geniusspecs\.com
