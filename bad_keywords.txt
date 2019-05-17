@@ -1907,3 +1907,4 @@ alluvia(?:\W*(?:labs|anti|aging|ageless|cream))+
 (?:(keto|forskolin)\W?)?kc3000
 mmoah
 mindvalley
+arya\W?money
