@@ -1909,3 +1909,4 @@ mmoah
 mindvalley
 arya\W?money
 nitroalis(?:\W?rx)?
+yooslim
