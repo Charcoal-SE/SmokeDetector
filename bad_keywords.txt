@@ -1908,3 +1908,4 @@ alluvia(?:\W*(?:labs|anti|aging|ageless|cream))+
 mmoah
 mindvalley
 arya\W?money
+nitroalis(?:\W?rx)?
