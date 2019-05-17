@@ -8940,7 +8940,6 @@
 1553688694	tripleee	splash-labs\.com
 1553690740	double-beep	suplementarios\.es
 1553698199	Makyen	gextonfoundation\.org
-1553698425	Makyen	avastsupporthelpnumber\.com
 1553703961	Glorfindel	alter-solutions\.de
 1553728220	Makyen	fairsupplement\.com
 1553743335	Makyen	bigdatacloud\.net
