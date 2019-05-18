@@ -10057,3 +10057,4 @@
 1558158295	Makyen	^amelia\W*alby$
 1558174381	Zoe	cheapwebhosting\.stream
 1558175739	double-beep	dlwordpress\.com
+1558175753	double-beep	dlandroid24\.com
