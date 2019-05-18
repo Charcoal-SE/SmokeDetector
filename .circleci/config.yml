@@ -3,6 +3,8 @@ jobs:
   build:
     docker:
       - image: circleci/python:3.6-stretch
+    branches:
+      ignore: deploy
     steps:
       - checkout
       - restore_cache:
