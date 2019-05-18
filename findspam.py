@@ -1820,6 +1820,7 @@ pattern_websites = [
     r"http\S*?(essay|resume|thesis|dissertation|paper)-?writing",
     r"fix[\w-]*?(files?|tool(box)?)\.com", r"(repair|recovery|fix)tool(box)?\.(co|net|org)",
     r"smart(pc)?fixer\.(co|net|org)",
+    r"errorcode0x\.(?:com?)",
     r"password[\w-]*?(cracker|unlocker|reset|buster|master|remover)\.(co|net)",
     r"crack[\w-]*?(serial|soft|password)[\w-]*?\.(co|net)",
     r"(downloader|pdf)converter\.(com|net)",
