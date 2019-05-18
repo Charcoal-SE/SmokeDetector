@@ -1910,3 +1910,4 @@ mindvalley
 arya\W?money
 nitroalis(?:\W?rx)?
 yooslim
+elijahcapitals(?:@gmail.com)?
