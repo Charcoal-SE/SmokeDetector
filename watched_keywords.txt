@@ -10054,3 +10054,4 @@
 1558124629	Machavity	spesialiskandungan\.com
 1558157573	Makyen	slnwatersupplies\.com
 1558155445	double-beep	ipolk(?:@virtuar\.com)?
+1558158295	Makyen	^amelia\W*alby$
