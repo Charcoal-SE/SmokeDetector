@@ -8070,7 +8070,7 @@
 1549732506	Makyen	facetimeonandroid\.com
 1549732511	Makyen	dito\.online
 1549732516	Makyen	tonusjournal\.com
-1549732615	Makyen	cryptojacking\.worm(?:\W*(?:at\W*)gmail(?:\W*(?:dot\W*)com))?
+1549732615	Makyen	cryptojacking\.worm(?:\W*(?:at\W*)?gmail(?:\W*(?:dot\W*)?com)?)?
 1549739549	Makyen	hostpoco\.com
 1549739628	Nisse Engström	jailbreakinstall\.com
 1549795570	Zoe	commselect\.net
