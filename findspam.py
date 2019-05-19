@@ -1200,8 +1200,6 @@ def watched_ip_for_url_hostname(s, site):
             '166.62.6.66',      # fake-tech-support + hosting ms-officesetup etc
             '166.62.28.116',    # fake-tech-support printertechsupportnumbers.com
             '192.186.227.225',  # drugs topwellnessguru / healthcare350 etc
-            # AS 24940 HETZNER-AS, DE
-            '138.201.185.58',   # idea-soft.ir / sitecode.ir / npco.net
             # AS 55293 A2HOSTING - A2 Hosting, Inc., US
             '162.254.252.93',   # paper-writing etc appsocio doneessays etc
             # AS 394695 PUBLIC-DOMAIN-REGISTRY - PDR, US
@@ -1220,6 +1218,8 @@ def bad_ip_for_url_hostname(s, site):
         [
             # AS 22612 NAMECHEAP-NET
             '198.54.120.134',   # drugs advisorwellness / health4supplement etc
+            # AS 24940 HETZNER-AS, DE
+            '138.201.185.58',   # idea-soft.ir / sitecode.ir / npco.net
             # AS 26347 DREAMHOST-AS
             '75.119.210.224',  # triplet-spam
             # AS 26496 AS-26496-GO-DADDY-COM-LLC
