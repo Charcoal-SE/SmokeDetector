@@ -1144,6 +1144,7 @@ def watched_ns_for_url_domain(s, site):
         'macsol.co.in.',
         'inmotionhosting.com.',
         'myhostindia.com.',
+        'lfmserver.com.',
     ])
 
 
