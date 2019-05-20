@@ -1102,8 +1102,8 @@ def bisect(msg, s):
 
     if len(matching) == 1:
         r, (l, f) = matching[0]
-        return "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/master/{2}#L{1})".format(
-            r, l, f, GlobalVars.bot_repo_slug)
+        return "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1})".format(
+            r, l, f, GlobalVars.bot_repo_slug, GlobalVars.commit.id)
     else:
         return "Matched by the following regexes:\n" + "\n".join(
             "{} on line {} of {}".format(r, l, f) for r, (l, f) in matching)
