@@ -9638,7 +9638,6 @@
 1556584629	Makyen	roseparker\d+(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?(?#seen: roseparker3037)
 1556592132	Makyen	ironclad\W*testo
 1556592161	Makyen	power\W*muscle\W*body
-1556592190	Makyen	imfaceplate\.com
 1556605217	Shree	whatsappgroupjoinlinklist\.com
 1556606092	double-beep	Epi\W*Test\W*Max
 1556607267	tripleee	buy-pharmacycheapest\.com
