@@ -10102,3 +10102,4 @@
 1558351334	tripleee	abtrainings\.com
 1558351365	doppelgreener	special offer
 1558351784	doppelgreener	(order|today|shop|special|now|offer)\W(order|today|shop|special|now|offer)
+1558352212	tripleee	untappedreviews\.com
