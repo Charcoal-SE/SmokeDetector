@@ -7584,7 +7584,6 @@
 1547527838	Makyen	laroche-?cherise(?#URL path)
 1547527852	Makyen	sugarbalancepower\.podbean\.com
 1547532292	tripleee	felovena01\.blogspot
-1547532753	iBug	\W*:-.{0,10}://
 1547533167	Tetsuya Yamamoto	stubmuster\.com
 1547535092	Tetsuya Yamamoto	courseworkz\.com
 1547535127	Tetsuya Yamamoto	roboelements\.com
