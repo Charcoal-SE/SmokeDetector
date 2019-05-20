@@ -10060,7 +10060,6 @@
 1558177733	Shree	jeewangarg\.com
 1558178215	Makyen	manbelaspelltemple1(?:@gmail\.com)?
 1558201346	Makyen	localanesthesia\.net
-1558212654	Makyen	^Saad Aziz$
 1558219924	Erik the Outgolfer	miniamazonshop\.com
 1558228469	Makyen	trifixblackhat1(?:\W*(?:at\W*)?gmail(?:\W*(?:dot\W*)?com)?)?
 1558234426	Makyen	megapoker88\.site
