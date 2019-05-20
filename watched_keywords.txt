@@ -10078,3 +10078,4 @@
 1558327807	Makyen	fau[ck]+(?:er|ed|ing)?s?
 1558328202	tripleee	argeseanul\.com
 1558328543	tripleee	r\W*a\W*p\W*e
+1558328830	Makyen	R\W*A\W*(?:Y\W*)?P\W*I\W*S\W*T
