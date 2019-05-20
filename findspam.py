@@ -1145,6 +1145,7 @@ def watched_ns_for_url_domain(s, site):
         'inmotionhosting.com.',
         'myhostindia.com.',
         'lfmserver.com.',
+        'symbolhostpremiumdns.com.',
     ])
 
 
