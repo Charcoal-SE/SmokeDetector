@@ -10076,3 +10076,4 @@
 1558324320	Makyen	drakokoba(?:@gmail\.com)?
 1558324339	Makyen	coinfinanceproinvestors
 1558324359	Makyen	xp-pen\.com
+1558327807	Makyen	fau[ck]+(?:er|ed|ing)?s?
