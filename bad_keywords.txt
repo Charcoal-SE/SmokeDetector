@@ -1912,3 +1912,4 @@ yooslim
 errorcode0x(?:\.com)(?#abuse keyword blacklist to get 3 detections on persistent spammer)
 elijahcapitals(?:@gmail.com)?
 pure\W?life\W?keto
+power\W*efficiency\W*guide(?:\W?system)(?:\W*reviews?)?
