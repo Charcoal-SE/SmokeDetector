@@ -10130,3 +10130,4 @@
 1558414981	Makyen	/@sehisarow(?#medium.com)
 1558417981	tripleee	mycord\.com
 1558418221	Makyen	theinfo24\.com
+1558421974	tripleee	scirp\.org
