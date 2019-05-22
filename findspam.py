@@ -1147,6 +1147,7 @@ def watched_ns_for_url_domain(s, site):
         'lfmserver.com.',
         'symbolhostpremiumdns.com.',
         'hostgator.in.',
+        'hostspicy.com.',
     ])
 
 
