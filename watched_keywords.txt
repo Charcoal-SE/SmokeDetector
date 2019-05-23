@@ -10187,3 +10187,4 @@
 1558612916	Byte Commander	247wcabs\.com
 1558613216	Byte Commander	taxi.{1,20}london\W+luton\W+airport
 1558617675	tripleee	^pranjal patil$
+1558618341	Glorfindel	redwerk\.com
