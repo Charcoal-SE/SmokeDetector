@@ -1148,6 +1148,7 @@ def watched_ns_for_url_domain(s, site):
         'symbolhostpremiumdns.com.',
         'hostgator.in.',
         'hostspicy.com.',
+        'ewebguru.com.',
     ])
 
 
