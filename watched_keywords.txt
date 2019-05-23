@@ -4683,7 +4683,6 @@
 1533204413	Mithrandir	\?id=1445793225
 1533204516	Mithrandir	http://[-\w]{4,20}\.\w{2,63}/[-\w]{1,30}?(reviews?|creams?|movie[-\w]{1,8}online(-free)?|online[-\w]{1,8}movie)[-\w]{1,30}?/?
 1533206670	doppelgreener	diet c\b
-1533209512	iBug	keto(?:nes?)?
 1533210851	tripleee	livechatzone\.com
 1533213690	tripleee	usaesta\.co\.uk
 1533215002	doppelgreener	deccanrummy\.com
