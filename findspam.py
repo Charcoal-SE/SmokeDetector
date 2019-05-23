@@ -1924,6 +1924,11 @@ FindSpam.rule_blacklisted_usernames = create_rule("blacklisted username", regex=
 create_rule("potentially bad keyword in {}", r"(?is)(?<=^.{0,200})\bgratis\b",
             sites=['softwarerecs.stackexchange.com', 'es.stackoverflow.com'],
             body_summary=True, max_rep=11)
+# Watch keto(?:nes?)?, but exempt Chemistry. Was a watch added by iBug on 1533209512.
+create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)",
+            sites=['chemistry.stackexchange.com'],
+            username=True, body_summary=True,
+            max_rep=30, max_score=1)
 # Bad keywords in titles and usernames, all sites
 create_rule("bad keyword in {}",
             r"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|"
