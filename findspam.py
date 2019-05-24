@@ -1208,7 +1208,6 @@ def watched_ip_for_url_hostname(s, site):
             '162.254.252.93',   # paper-writing etc appsocio doneessays etc
             # AS 394695 PUBLIC-DOMAIN-REGISTRY - PDR, US
             '103.21.58.29',     # software-development infinigic / apporio.com
-            '116.206.104.141',  # fake-tech-support fake-diplomas
             '162.215.253.205',  # drugs escorts drozien.com nehasuri.in etc
         ])
 
@@ -1233,6 +1232,8 @@ def bad_ip_for_url_hostname(s, site):
             '160.153.75.129',  # itunessupport.org
             # AS 32475 - SINGLEHOP-LLC - SingleHop LLC, US
             '172.96.187.196'   # fake-tech-support canonfreedownload etc
+            # AS 394695 PUBLIC-DOMAIN-REGISTRY - PDR, US
+            '116.206.104.141',  # fake-tech-support fake-diplomas
         ])
 
 
