@@ -10216,3 +10216,4 @@
 1558693619	double-beep	fantasy\W*power\W*11
 1558695209	tripleee	collegelifenetwork\.com
 1558695354	tripleee	10bestrated\.com
+1558697005	tripleee	amxdetectives\.com
