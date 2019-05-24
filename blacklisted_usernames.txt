@@ -159,7 +159,6 @@ bestchange
 ^preeti agarwal$
 ^gchristophergloss$
 ^Saad Aziz$
-^Anuj$
 ^Charlene Eudora$
 ^suogakun$
 (?-i:^Digital Track$)
