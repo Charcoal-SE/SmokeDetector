@@ -1176,8 +1176,6 @@ def watched_ip_for_url_hostname(s, site):
         [
             # AS 8560 ONEANDONE-AS Brauerstrasse 48, DE
             '62.151.180.33',    # visit-my-website ltssecure.com / ltssoc
-            # AS 15169 GOOGLE - Google LLC, US
-            '23.236.62.147',    # googleusercontent.com lots of hits
             # AS 20068 - HAWKHOST - Hawk Host Inc., CA.
             '172.96.187.196',   # fake-tech-support driver-canon.com
             '198.252.105.94',   # fake-tech-support asia-canon.com etc
@@ -1188,6 +1186,7 @@ def watched_ip_for_url_hostname(s, site):
             '162.213.255.36',   # drugs / visit-my-website / cryptocurrency
             '198.54.115.65',    # drugs goldencondor / visit4supplements etc
             '198.54.116.51',    # drugs reviewsgear / crazy-bulk-review etc
+            '198.54.116.71',    # drugs + fake-tech-support guidemenutrition etc
             '198.54.116.85',    # drugs mummydiet.org
             '198.54.126.109',   # escorts + buy-likes
             # AS 26496 AS-26496-GO-DADDY-COM-LLC
@@ -1210,7 +1209,6 @@ def watched_ip_for_url_hostname(s, site):
             '162.254.252.93',   # paper-writing etc appsocio doneessays etc
             # AS 394695 PUBLIC-DOMAIN-REGISTRY - PDR, US
             '103.21.58.29',     # software-development infinigic / apporio.com
-            '116.206.104.141',  # fake-tech-support fake-diplomas
             '162.215.253.205',  # drugs escorts drozien.com nehasuri.in etc
         ])
 
@@ -1235,6 +1233,8 @@ def bad_ip_for_url_hostname(s, site):
             '160.153.75.129',  # itunessupport.org
             # AS 32475 - SINGLEHOP-LLC - SingleHop LLC, US
             '172.96.187.196'   # fake-tech-support canonfreedownload etc
+            # AS 394695 PUBLIC-DOMAIN-REGISTRY - PDR, US
+            '116.206.104.141',  # fake-tech-support fake-diplomas
         ])
 
 
