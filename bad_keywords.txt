@@ -1925,3 +1925,4 @@ inviga
 nitro\W?strength
 Keto\W?Supreme
 visit\W*link\W*(?:and|&)\W*read\W*more\W*info(?:rmation)?
+(?:refresh\W*)?ultra\W*keto
