@@ -1928,3 +1928,4 @@ visit\W*link\W*(?:and|&)\W*read\W*more\W*info(?:rmation)?
 thrive\W*society\W*keto
 snapslim\W*keto
 Essential(?:\W*)?keto
+(?:(?:Opti|Radiant)\W*)?Farms\W*Keto
