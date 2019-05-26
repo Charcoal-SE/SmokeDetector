@@ -1929,3 +1929,4 @@ thrive\W*society\W*keto
 snapslim\W*keto
 Essential(?:\W*)?keto
 (?:(?:Opti|Radiant)\W*)?Farms\W*Keto
+keto\W?top
