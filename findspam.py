@@ -769,7 +769,7 @@ def pattern_product_name(s, site):
         "Sea", "Ascend", "Premi(?:um|er)", "Master", "Ultra", "Vital", "Perfect", "Bio", "Natural?", "Oil",
         "E?xtreme", "Fit", "Thirsty?", "Grow", "Complete", "Reviews?", "Bloom(?:ing)?", "BHB", "Pures?t?", "Quick",
         "Titan", "Hyper", "X[LRT]", "[R]X", "Supply", "Power", "Aged?", "Ultimate", "Surge", "(?<!e)Xtra",
-        "Brain", "Fuel", "Melt", "Fire", "Tank",
+        "Brain", "Fuel", "Melt", "Fire", "Tank", "Life",
     ]
     conjunctions = [  # lol, for "keto melt and trim"
         "And", "For", "With", "In", "This", "To", "About", "Or", "Where", "What", "Is", "A",
