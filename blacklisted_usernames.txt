@@ -165,3 +165,4 @@ bestchange
 ^user95957$(?#ell troll 2019-05-23)
 (?-i:^NGFCET$)
 red(?:\s+)?switches
+(?-i:^Khoa Dang$)
