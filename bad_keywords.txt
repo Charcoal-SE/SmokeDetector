@@ -1930,3 +1930,4 @@ snapslim\W*keto
 Essential(?:\W*)?keto
 (?:(?:Opti|Radiant)\W*)?Farms\W*Keto
 keto\W?top
+joyelle(?:\W?derma(?:\W?cream)?)?
