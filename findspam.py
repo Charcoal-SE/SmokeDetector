@@ -1048,6 +1048,7 @@ def watched_ns_for_url_domain(s, site):
         'namecheaphosting.com.',  # has FPs, don't blacklist again
         # 'domaincontrol.com.',
         # {'dns1.registrar-servers.com.', 'dns2.registrar-servers.com.'},
+        {'abby.ns.cloudflare.com.', 'tom.ns.cloudflare.com.'},
         {'adi.ns.cloudflare.com.', 'miles.ns.cloudflare.com.'},
         {'aida.ns.cloudflare.com.', 'lloyd.ns.cloudflare.com.'},
         {'ajay.ns.cloudflare.com.', 'lia.ns.cloudflare.com.'},
