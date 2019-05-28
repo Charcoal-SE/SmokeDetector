@@ -619,7 +619,7 @@ do you need (\w* )?(\w* )loan
 endo\W?oil
 (?!pro/test)pro\Wtest\W?180
 beast\W?mode
-verutum\W?rx
+verutum(?:\W?rx)?
 rejuvalex
 core\W?e?xtreme
 peak\W?xplode
