@@ -10297,3 +10297,4 @@
 1559082490	Erik the Outgolfer	Skunkdoctoe?r\d*(?:@gmail\.com)?
 1559083104	Makyen	(?-i:7rUAn.jpg)
 1559083121	Makyen	(?-i:RfAuB.jpg)
+1559087391	Makyen	(?:(?-i:D)SOM(?=.*\bmarketing\b)|(?:\bmarketing\b.*)(?-i:D)SOM)
