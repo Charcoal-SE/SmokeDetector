@@ -10290,3 +10290,4 @@
 1559066747	Makyen	gilipollas(?#asshole)
 1559067649	Byte Commander	4cashpath\.com
 1558978155	double-beep	isemc\.com
+1559056610	double-beep	CRYTOMAXHACKER(?:@GMAIL\.COM)?
