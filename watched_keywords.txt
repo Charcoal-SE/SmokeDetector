@@ -10316,3 +10316,4 @@
 1559118993	tripleee	abscbnpinoy\.com
 1559123350	Makyen	shrjzmtr\.imblogs\.net
 1559123368	Makyen	shrjzmtr\.fitnell\.com
+1559123385	Makyen	shrjzmtr\.full-design\.com
