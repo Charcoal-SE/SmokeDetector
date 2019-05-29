@@ -10301,3 +10301,4 @@
 1559087437	Makyen	indianhotdeal\.com
 1559095938	Machavity	^ECHO HAN$
 1559099820	Makyen	vampirelordcenter(?:@gmail\.com)?
+1559105925	Makyen	wbevs\.com
