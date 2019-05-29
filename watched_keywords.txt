@@ -10305,3 +10305,4 @@
 1559105944	Makyen	cord\W*blood\W*donate
 1559106255	Makyen	الشيخ الروحاني
 1559109824	Makyen	admissionblock\.com
+1559109843	Makyen	soleermetico\.com
