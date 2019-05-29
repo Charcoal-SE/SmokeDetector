@@ -10300,3 +10300,4 @@
 1559087391	Makyen	(?:(?-i:D)SOM(?=.*\bmarketing\b)|(?:\bmarketing\b.*)(?-i:D)SOM)
 1559087437	Makyen	indianhotdeal\.com
 1559095938	Machavity	^ECHO HAN$
+1559099820	Makyen	vampirelordcenter(?:@gmail\.com)?
