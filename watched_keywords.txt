@@ -3055,7 +3055,7 @@
 1524863201	Glorfindel	obatextenzeasli\.com
 1524871974	quartata	aeroportos\.weebly\.com
 1524880074	Rob	nutrinext\w*
-1524899826	Makyen	90creditspecialist
+1524899826	Makyen	90creditspecialist(?:\W*(?:a\W*t\W*)?g\W*m\W*a\W*i\W*l\W*(?:d\W*o\W*t\W*)?c\W*o\W*m)?(?#obfuscated email + text)
 1524906579	Zoe	doze\.buzz
 1524910702	Zoe	massmailservers\.net
 1524912058	Zoe	amarleen\.com
