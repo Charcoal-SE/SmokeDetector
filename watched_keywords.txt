@@ -10322,3 +10322,4 @@
 1559123446	Makyen	shrjzmtr(?!\.imblogs\.net|\.fitnell\.com|\.full-design\.com|\.canariblogs\.com|\.blogerus\.com)
 1559126649	double-beep	rohanicentre\.com
 1559126807	Byte Commander	matchaoutlet
+1559127735	double-beep	jmc(?:\W*)?cargo
