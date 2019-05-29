@@ -10327,3 +10327,4 @@
 1559154297	Makyen	labdeck\.com
 1559126836	double-beep	swan\W*tours?
 1559127599	double-beep	theccm\.co\.uk
+1559130037	double-beep	tantraspells\.com
