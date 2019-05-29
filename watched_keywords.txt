@@ -10330,3 +10330,4 @@
 1559130037	double-beep	tantraspells\.com
 1559131291	double-beep	creditspecialist(?:@protonmail\.ch)?
 1559158756	double-beep	2017worldjunior\.com
+1559159065	Makyen	elims\.org\.ua
