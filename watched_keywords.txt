@@ -10320,3 +10320,4 @@
 1559123405	Makyen	shrjzmtr\.canariblogs\.com
 1559123428	Makyen	shrjzmtr\.blogerus\.com
 1559123446	Makyen	shrjzmtr(?!\.imblogs\.net|\.fitnell\.com|\.full-design\.com|\.canariblogs\.com|\.blogerus\.com)
+1559126649	double-beep	rohanicentre\.com
