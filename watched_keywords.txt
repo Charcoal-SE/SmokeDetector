@@ -10303,3 +10303,4 @@
 1559099820	Makyen	vampirelordcenter(?:@gmail\.com)?
 1559105925	Makyen	wbevs\.com
 1559105944	Makyen	cord\W*blood\W*donate
+1559106255	Makyen	الشيخ الروحاني
