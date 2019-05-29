@@ -10318,3 +10318,4 @@
 1559123368	Makyen	shrjzmtr\.fitnell\.com
 1559123385	Makyen	shrjzmtr\.full-design\.com
 1559123405	Makyen	shrjzmtr\.canariblogs\.com
+1559123428	Makyen	shrjzmtr\.blogerus\.com
