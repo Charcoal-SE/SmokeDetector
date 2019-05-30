@@ -10015,7 +10015,6 @@
 1558019130	double-beep	wallyngam90(?:@gmail\.com)?
 1558019316	double-beep	tracynash5
 1558019524	double-beep	jamesscotthacker(?:@gmail\.com)?
-1558027750	Machavity	^Ajay Singh$
 1558023141	double-beep	onlinemedchems\.com
 1558048260	Nisse Engström	femalelifesecret\.com
 1558048287	Nisse Engström	beautybycagla\.com
