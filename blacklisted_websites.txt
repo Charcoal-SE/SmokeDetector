@@ -2729,7 +2729,7 @@ techjockey\.com
 usahealthcart\.com
 growth4uhealth\.com
 healthysupplementstalk\.com
-allrecipes\.com
+allrecipes\.com/collections
 ltssecure\.com
 klifftechnologies\.com
 ketoultra\.net
