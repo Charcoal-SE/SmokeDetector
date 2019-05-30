@@ -10356,3 +10356,4 @@
 1559208193	Makyen	nbmrkosl\.ampedpages\.com
 1559208212	Makyen	nbmrkosl\.fitnell\.com
 1559208230	Makyen	nbmrkosl\.isblog\.net
+1559208250	Makyen	nbmrkosl\.canariblogs\.com
