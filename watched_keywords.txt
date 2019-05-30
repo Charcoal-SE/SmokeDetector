@@ -10358,3 +10358,4 @@
 1559208230	Makyen	nbmrkosl\.isblog\.net
 1559208250	Makyen	nbmrkosl\.canariblogs\.com
 1559208269	Makyen	nbmrkosl\.blogerus\.com
+1559208287	Makyen	nbmrkosl(?!\.ampedpages\.com|\.fitnell\.com|\.isblog\.net|\.canariblogs\.com|\.blogerus\.com)
