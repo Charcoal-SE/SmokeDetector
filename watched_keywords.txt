@@ -10232,7 +10232,6 @@
 1558836770	Makyen	educba\.com
 1558885680	Byte Commander	apkstarz\.com
 1558886753	Makyen	doorall\.ir
-1558893380	double-beep	jobsday3\.com
 1558892061	double-beep	stellarinfo\.com
 1558897814	double-beep	ziwa\.ir
 1558861904	double-beep	slim\W*ambition(?:\W*keto)?
