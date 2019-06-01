@@ -10375,3 +10375,4 @@
 1559319628	Makyen	georgenegga\.wixsite\.com
 1559326776	Makyen	1\W*(online\W*)?wired(?=.{0,200}?\$600\b)
 1559359871	Shree	ukworld\.co
+1559383030	Shree	sharktankpedia\.org
