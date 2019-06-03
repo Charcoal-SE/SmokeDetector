@@ -1899,7 +1899,8 @@ city_list = [
     "Neemrana", "Raipur", "Faridabad", "Kanhangad", "Kanhanjad",
     "Trichy", "Tiruchirappalli", "Tiruchi", "Trichinopoly",
     "Kerala", "Mangalore", "Mangaluru", "Thane", "Bhiwandi", "Ghatkopar",
-    "Mulund","neemrana","kota","alwar","chittorgarh","bhilwara","banswarabhiwadi",
+    "Mulund", "Neemrana", "Kota", "Alwar", "Chittorgarh",
+    "Bhilwara", "Banswarabhiwadi",
     # yes, these aren't cities but...
     "India", "Pakistan",
     # buyabans.com spammer uses creative variations
