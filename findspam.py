@@ -1191,6 +1191,8 @@ def watched_ip_for_url_hostname(s, site):
             '198.54.116.71',    # drugs + fake-tech-support guidemenutrition etc
             '198.54.116.85',    # drugs mummydiet.org
             '198.54.126.109',   # escorts + buy-likes
+            # AS 23352 SERVERCENTRAL - Server Central Network, US
+            '198.38.82.90',     # software-utility osofttools instantdatacare etc
             # AS 26496 AS-26496-GO-DADDY-COM-LLC
             '23.229.180.169',   # drugs health4supplement / supplements4lifetime etc
             '23.229.217.167',   # drugs popsupplement / daddysupplement etc
