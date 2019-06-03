@@ -1275,6 +1275,7 @@ def watched_asn_for_url_hostname(s, site):
             '19969',   # JOESDATACENTER - Joe_s Datacenter, LLC, US.
             # '20013'  # FPs do not watch -- CYRUSONE - CyrusOne LLC, US
             # '22612', # Moderate FPs, don't double up -- NAMECHEAP-NET - Namecheap, Inc., US
+            '23352',   # SERVERCENTRAL - Server Central Network, US
             # '26496', # Massive FPs do not watch -- AS-26496-GO-DADDY-COM-LLC - GoDaddy.com, LLC, US
             '24778',   # DATAPIPE-UK, GB
             '29073',   # QUASINETWORKS, NL
