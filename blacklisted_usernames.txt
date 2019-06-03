@@ -167,3 +167,4 @@ bestchange
 red(?:\s+)?switches
 (?-i:^Khoa Dang$)
 ^Ajay Singh$
+(?-i:^quantumit$)
