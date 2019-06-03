@@ -1944,3 +1944,4 @@ ats\W*ost\W*to\W*pst\W*converter
 life\W*keto
 ^Не делайте вид что проблемы нeт!
 "Администрация не выносит критики
+performex(?:\W?keto(?:\W?heat)?)?
