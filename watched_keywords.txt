@@ -10414,3 +10414,4 @@
 1559639350	tripleee	universalinformatics\.com
 1559639828	tripleee	123inkjets\w*
 1559639985	tripleee	monktech\.us
+1559643568	Shree	indiator\.com
