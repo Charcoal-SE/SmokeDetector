@@ -10419,3 +10419,4 @@
 1559651687	tripleee	cbdlegalshop\.com
 1559651708	tripleee	cbd-nearby\.com
 1559651726	tripleee	cbdpremium\.com\.co
+1559651744	tripleee	cbdhempoil\.com\.co
