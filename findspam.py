@@ -1209,6 +1209,8 @@ def watched_ip_for_url_hostname(s, site):
             '166.62.6.66',      # fake-tech-support + hosting ms-officesetup etc
             '166.62.28.116',    # fake-tech-support printertechsupportnumbers.com
             '192.186.227.225',  # drugs topwellnessguru / healthcare350 etc
+            # AS 47583 (HOSTINGER) / AS 395111 (KVCHOSTING.COM) dual-homed
+            '185.201.10.72',    # drugs cbdpremium.com.co cbdhempoil.com.co etc
             # AS 55293 A2HOSTING - A2 Hosting, Inc., US
             '162.254.252.93',   # paper-writing etc appsocio doneessays etc
             # AS 394695 PUBLIC-DOMAIN-REGISTRY - PDR, US
