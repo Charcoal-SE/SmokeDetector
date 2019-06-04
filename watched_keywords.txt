@@ -10412,3 +10412,4 @@
 1559633769	tripleee	truelearnworld\.com
 1559636534	JoErNanO	easyrentcars\.com
 1559639350	tripleee	universalinformatics\.com
+1559639828	tripleee	123inkjets\w*
