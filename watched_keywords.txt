@@ -10411,3 +10411,4 @@
 1559631354	tripleee	cedcommerce\.com
 1559633769	tripleee	truelearnworld\.com
 1559636534	JoErNanO	easyrentcars\.com
+1559639350	tripleee	universalinformatics\.com
