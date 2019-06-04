@@ -10404,3 +10404,4 @@
 1559603962	Makyen	\w{0,20}?5894631599808235\w*
 1559609920	Makyen	evneznaiko\.com
 1559610430	Sonic the Bracketed Hedgehog	timesbuzzer\.com
+1559613848	Makyen	trenddia\.com
