@@ -10421,3 +10421,4 @@
 1559651726	tripleee	cbdpremium\.com\.co
 1559651744	tripleee	cbdhempoil\.com\.co
 1559651765	tripleee	www-cbdcapsules\.com
+1559652213	tripleee	www-cbdoil\.com
