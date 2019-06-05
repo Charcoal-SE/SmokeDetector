@@ -169,3 +169,4 @@ red(?:\s+)?switches
 ^Ajay Singh$
 (?-i:^quantumit$)
 (?-i:^dany login$)
+(?-i:^dhekitha$)
