@@ -168,3 +168,4 @@ red(?:\s+)?switches
 (?-i:^Khoa Dang$)
 ^Ajay Singh$
 (?-i:^quantumit$)
+(?-i:^dany login$)
