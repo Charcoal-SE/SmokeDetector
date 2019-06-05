@@ -170,3 +170,4 @@ red(?:\s+)?switches
 (?-i:^quantumit$)
 (?-i:^dany login$)
 (?-i:^dhekitha$)
+(?-i:^Caitlin Nickle$)
