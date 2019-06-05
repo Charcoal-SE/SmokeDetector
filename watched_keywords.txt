@@ -10443,3 +10443,4 @@
 1559716636	tripleee	tekab\.ru
 1559716732	tripleee	mtk
 1559717848	Shree	evyahospitals\.com
+1559720423	Glorfindel	gamesd\.?app
