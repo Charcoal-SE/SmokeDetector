@@ -1187,6 +1187,7 @@ def watched_ip_for_url_hostname(s, site):
             '104.219.248.81',   # drugs supplement4world / supplementgod etc
             '162.213.255.36',   # drugs / visit-my-website / cryptocurrency
             '198.54.115.65',    # drugs goldencondor / visit4supplements etc
+            '198.54.115.76',    # visit-my-website testmyinternetspeed.org etc
             '198.54.116.51',    # drugs reviewsgear / crazy-bulk-review etc
             '198.54.116.71',    # drugs + fake-tech-support guidemenutrition etc
             '198.54.116.85',    # drugs mummydiet.org
