@@ -10444,3 +10444,4 @@
 1559716732	tripleee	mtk
 1559717848	Shree	evyahospitals\.com
 1559720423	Glorfindel	gamesd\.?app
+1559722057	tripleee	luminleddisplay\.com
