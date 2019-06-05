@@ -2862,3 +2862,4 @@ osumare\.com
 skincarentrials\.com
 cedcommerce\.com
 roadrunneremaillogin\.com
+testmyinternetspeed\.org

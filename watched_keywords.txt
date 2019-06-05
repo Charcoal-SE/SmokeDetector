@@ -10376,7 +10376,6 @@
 1559281571	double-beep	aniyasolutionhome(?:@gmail\.com)?
 1559286566	double-beep	indeedseo\.com
 1559315089	double-beep	raidofinance\.eu
-1559392793	double-beep	testmyinternetspeed\.org
 1559421722	Makyen	Не делайте вид что проблемы нeт!
 1559438908	Makyen	canli\.co
 1559442766	Makyen	freetoolonline\.com
