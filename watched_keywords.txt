@@ -10446,3 +10446,4 @@
 1559720423	Glorfindel	gamesd\.?app
 1559722057	tripleee	luminleddisplay\.com
 1559724279	tripleee	genericshop24\.biz
+1559732817	tripleee	colorcorrectionchicago\.com
