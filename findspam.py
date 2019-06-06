@@ -1151,6 +1151,7 @@ def watched_ns_for_url_domain(s, site):
         'hostgator.in.',
         'hostspicy.com.',
         'ewebguru.com.',
+        'solidhosting.pro.',
     ])
 
 
