@@ -10472,3 +10472,4 @@
 1559843206	Machavity	blabdsp
 1559855113	Makyen	mega\.nz
 1559855131	Makyen	(?-i:XUMhDawQ!CMIBu1iJf1PG9sOJsbPY3QtaqVDTEL52ae3RhBToDRQ)
+1559855148	Makyen	cryptonight
