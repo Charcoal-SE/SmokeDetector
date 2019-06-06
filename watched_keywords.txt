@@ -6757,7 +6757,6 @@
 1543056200	Makyen	sarkariduniya\.com
 1543056957	Makyen	web3mantra\.com
 1543056970	Makyen	fttrading\.uk
-1543056984	Makyen	railwayrecruitmentgov\.in
 1543058257	Makyen	laravelecommerce\.com(?#AKA pofitec.com)
 1543058411	Makyen	customerhelplineaustralia\.com
 1543081122	Makyen	jsonworld\.com
