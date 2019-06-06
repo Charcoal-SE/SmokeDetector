@@ -171,3 +171,4 @@ red(?:\s+)?switches
 (?-i:^dany login$)
 (?-i:^dhekitha$)
 (?-i:^Caitlin Nickle$)
+^sofi\W?dial$
