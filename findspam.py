@@ -1280,6 +1280,7 @@ def watched_asn_for_url_hostname(s, site):
             '12488',   # KRYSTAL, GR
             # '16509', # FPs do not watch -- AMAZON-02 - Amazon.com, Inc., US
             '18229',   # CTRLS-AS-IN CtrlS Datacenters Ltd., IN
+            '18978',   # ENZUINC-US - Enzu Inc, US
             '19318',   # IS-AS-1 - Interserver, Inc, US
             '19969',   # JOESDATACENTER - Joe_s Datacenter, LLC, US.
             # '20013'  # FPs do not watch -- CYRUSONE - CyrusOne LLC, US
