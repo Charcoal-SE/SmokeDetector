@@ -10474,3 +10474,4 @@
 1559872715	Makyen	donald1stan(?:@gmail\.com)?
 1559886664	K.Dᴀᴠɪs	com\.pjumpod(?#Google Store App)
 1559890075	K.Dᴀᴠɪs	Kamagra
+1559890126	tripleee	all\W?day\W?generic
