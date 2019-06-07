@@ -1152,6 +1152,7 @@ def watched_ns_for_url_domain(s, site):
         'hostspicy.com.',
         'ewebguru.com.',
         'solidhosting.pro.',
+        'dnsowl.com.',
     ])
 
 
