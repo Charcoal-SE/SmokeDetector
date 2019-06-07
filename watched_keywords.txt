@@ -10477,3 +10477,4 @@
 1559890126	tripleee	all\W?day\W?generic
 1559890149	tripleee	online\W?drug\W?store
 1559898235	Byte Commander	ardorxp
+1559898947	tripleee	gtechtricks\.com
