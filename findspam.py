@@ -1912,7 +1912,8 @@ city_list = [
     "Trichy", "Tiruchirappalli", "Tiruchi", "Trichinopoly",
     "Kerala", "Mangalore", "Mangaluru", "Thane", "Bhiwandi", "Ghatkopar",
     "Mulund", "Neemrana", "Kota", "Alwar", "Chittorgarh",
-    "Bhilwara", "Banswarabhiwadi",
+    "Bhilwara", "Banswarabhiwadi", "Darjeeling", "Ajanta", "Malad",
+    "Colaba", "Lonavala",
     # yes, these aren't cities but...
     "India", "Pakistan",
     # buyabans.com spammer uses creative variations
