@@ -75,6 +75,11 @@ SmokeDetector only supports Stack Exchange logins,
 and runs on Python 3.5 or higher,
 for now.
 
+To allow committing blacklist and watchlist modifications
+back to GitHub,
+your system also needs Git 1.8 or higher,
+although we recommend Git 2.11+.
+
 ## License
 
 Licensed under either of
