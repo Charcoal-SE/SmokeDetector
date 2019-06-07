@@ -1305,6 +1305,7 @@ def watched_asn_for_url_hostname(s, site):
             '47583',   # AS-HOSTINGER, LT
             '49335',   # NCONNECT-AS, RU
             '50673',   # SERVERIUS-AS, NL
+            '53889',   # MICFO - Micfo, LLC., US
             '55002',   # DEFENSE-NET - Defense.Net, Inc, US.
             '54290',   # HOSTWINDS - Hostwinds LLC., US
             '62731',   # 247RACK-COM - 247RACK.com, US
