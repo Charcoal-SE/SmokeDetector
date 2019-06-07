@@ -10474,3 +10474,4 @@
 1559855131	Makyen	(?-i:XUMhDawQ!CMIBu1iJf1PG9sOJsbPY3QtaqVDTEL52ae3RhBToDRQ)
 1559855148	Makyen	cryptonight
 1559872715	Makyen	donald1stan(?:@gmail\.com)?
+1559886664	K.Dᴀᴠɪs	com\.pjumpod(?#Google Store App)
