@@ -10492,3 +10492,4 @@
 1559962299	Makyen	capital\W*city\W*loan\W*(?:and\W*)?jewelry
 1559968568	Makyen	pokergo8\.online
 1559972769	double-beep	predictoncrypto\.com
+1559973851	Makyen	e27\.co
