@@ -131,8 +131,10 @@ class GitManager:
             if watch_removed:
                 git.add('watched_keywords.txt', 'watched_numbers.txt')
 
-            git("-c", "user.name=SmokeDetector", "-c", "user.email=smokey@erwaysoftware.com",
-                "commit", "--author='SmokeDetector <smokey@erwaysoftware.com>'",
+            git("-c", "user.name=" + GlobalVars.git_name,
+                "-c", "user.email=" + GlobalVars.git_email,
+                "commit",
+                "--author={} <{}>".format(GlobalVars.git_name, GlobalVars.git_email),
                 "-m", "Auto {0} of `{1}` by {2}".format(op, item, username))
 
             if code_permissions:

@@ -158,6 +158,9 @@ class GlobalVars:
     metasmoke_key = config.get("metasmoke_key")
     metasmoke_ws_host = config.get("metasmoke_ws_host")
 
+    git_name = config.get("git_username", "SmokeDetector")
+    git_email = config.get("git_useremail", "smokey@erwaysoftware.com")
+
     github_username = config.get("github_username")
     github_password = config.get("github_password")
 
