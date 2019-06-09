@@ -10519,3 +10519,4 @@
 1560067056	Makyen	pyskool\.com
 1560067115	Makyen	mahadevestates\.com
 1560096930	Makyen	drjasonbitcoinminer(?:\W*(?:a\W*t\W*)?o\W*u\W*t\W*l\W*o\W*o\W*k\W*(?:d\W*o\W*t\W*)?c\W*o\W*m)?
+1560107512	Makyen	nixs\.in
