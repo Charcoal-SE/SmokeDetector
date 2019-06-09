@@ -10521,3 +10521,4 @@
 1560096930	Makyen	drjasonbitcoinminer(?:\W*(?:a\W*t\W*)?o\W*u\W*t\W*l\W*o\W*o\W*k\W*(?:d\W*o\W*t\W*)?c\W*o\W*m)?
 1560107512	Makyen	nixs\.in
 1560108578	Makyen	morningstar\.com
+1560108640	Makyen	americashealthrankings\.org(?!/api)
