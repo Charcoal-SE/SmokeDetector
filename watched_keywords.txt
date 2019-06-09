@@ -10511,3 +10511,4 @@
 1560019402	Makyen	(?:(?:zero|one|two|three|four|five|six|seven|eight|nine|ten)\W*(?:p\W*)*){9,}
 1560028765	Makyen	(?-i:UC2VeOYu81k7gkQwd6lLnUQQ)(?#youtube channel)
 1560049245	Machavity	etutorialspoint\.com
+1560055992	Makyen	smartkela\.com
