@@ -10518,3 +10518,4 @@
 1560056786	Makyen	star\W*wars\W*jedi\W*fallen\W*orders?\W*t\W*shirt
 1560067056	Makyen	pyskool\.com
 1560067115	Makyen	mahadevestates\.com
+1560096930	Makyen	drjasonbitcoinminer(?:\W*(?:a\W*t\W*)?o\W*u\W*t\W*l\W*o\W*o\W*k\W*(?:d\W*o\W*t\W*)?c\W*o\W*m)?
