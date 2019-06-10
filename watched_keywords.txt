@@ -10523,3 +10523,4 @@
 1560108578	Makyen	morningstar\.com
 1560108640	Makyen	americashealthrankings\.org(?!/api)
 1560112694	Machavity	peachyessay\.com
+1560137681	Makyen	(?-i:UCFIawk4L0-SDU72qI2WaiVQ)
