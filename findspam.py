@@ -1914,7 +1914,9 @@ city_list = [
     "Kerala", "Mangalore", "Mangaluru", "Thane", "Bhiwandi", "Ghatkopar",
     "Mulund", "Neemrana", "Kota", "Alwar", "Chittorgarh",
     "Bhilwara", "Banswarabhiwadi", "Darjeeling", "Ajanta", "Malad",
-    "Colaba", "Lonavala",
+    "Colaba", "Lonavala", "Marine Lines", "Kandivali", "Worli", "Andheri",
+    "Lokhandwala",
+
     # yes, these aren't cities but...
     "India", "Pakistan",
     # buyabans.com spammer uses creative variations
