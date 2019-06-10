@@ -173,3 +173,4 @@ red(?:\s+)?switches
 (?-i:^Caitlin Nickle$)
 ^sofi\W?dial$
 tonny123
+johnjorge
