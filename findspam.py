@@ -1153,6 +1153,7 @@ def watched_ns_for_url_domain(s, site):
         'ewebguru.com.',
         'solidhosting.pro.',
         'dnsowl.com.',
+        'elitegifthouse.com.',
     ])
 
 
