@@ -1916,7 +1916,8 @@ city_list = [
     "Mulund", "Neemrana", "Kota", "Alwar", "Chittorgarh",
     "Bhilwara", "Banswarabhiwadi", "Darjeeling", "Ajanta", "Malad",
     "Colaba", "Lonavala", "Marine Lines", "Kandivali", "Worli", "Andheri",
-    "Lokhandwala",
+    "Lokhandwala", "Haldwani", "Bhimtal", "Almora", "Rishikesh", "Haridwar", 
+    "Ramnagar, "Jim Corbett",
 
     # yes, these aren't cities but...
     "India", "Pakistan",
