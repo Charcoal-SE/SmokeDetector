@@ -1154,6 +1154,7 @@ def watched_ns_for_url_domain(s, site):
         'solidhosting.pro.',
         'dnsowl.com.',
         'elitegifthouse.com.',
+        'teclab.info.',
     ])
 
 
