@@ -8179,7 +8179,7 @@
 1550449737	Makyen	crunchyroll\.com
 1550457149	Makyen	profile_blue_pill
 1550457159	Makyen	(?<=@)mecha31(?#telegram)
-1550457179	Makyen	quickarturhack(?:@gmail\.com)?
+1550457179	Makyen	quickarturhack(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
 1550464782	Shree	zabaza\.logan@yahoo\.com
 1550468091	Makyen	honingds\.com
 1550475362	Makyen	high[\W_]ranking[\W_]*solutions
