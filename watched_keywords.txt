@@ -10587,3 +10587,4 @@
 1560337344	tripleee	blankcard\d*(?:@gmail\.com)?
 1560349952	Glorfindel	DedicatedHosting4u
 1560352494	Makyen	quickydocs\.com
+1560357025	Makyen	lojaagropecuaria\.com\.br
