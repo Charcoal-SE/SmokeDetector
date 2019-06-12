@@ -10577,3 +10577,4 @@
 1560324977	tripleee	www-office\.uk
 1560325078	tripleee	weltrade\.com
 1560326229	tripleee	tazc\.com\.my
+1560328627	tripleee	manishafashion\.com
