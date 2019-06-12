@@ -1554,31 +1554,10 @@ def strip_urls_and_tags(s):
     return URL_REGEX.sub("", TAG_REGEX.sub("", s))
 
 
-@create_rule("mostly dots in {}", max_rep=50, sites=["codegolf.stackexchange.com"])
-def mostly_dots(s, site):
-    if not s:
-        return False, ""
-
-    # Strip code blocks here rather than with `stripcodeblocks` so we get the length of the whole post
-    body = regex.sub(r"(?s)<pre([\w=\" -]*)?>.*?</pre>", "", s)
-    body = regex.sub(r"(?s)<code>.*?</code>", "", body)
-
-    body = TAG_REGEX.sub("", body)
-
-    s = TAG_REGEX.sub("", s)
-    if not s:
-        return False, ""
-
-    dot_count = body.count(".")
-    if dot_count / len(s) >= 0.4:
-        return True, u"Post contains {} dots out of {} characters".format(dot_count, len(s))
-    else:
-        return False, ""
-
-
-@create_rule("mostly punctuation marks in {}",
-             sites=["math.stackexchange.com", "mathoverflow.net"])
+@create_rule("mostly punctuation marks in {}", max_rep=50,
+             sites=["math.stackexchange.com", "mathoverflow.net", "codegolf.stackexchange.com"])
 def mostly_punctuations(s, site):
+    # Strip code blocks here rather than with `stripcodeblocks` so we get the length of the whole post in s
     body = regex.sub(r"(?s)<pre([\w=\" -]*)?>.*?</pre>", "", s)
     body = regex.sub(r"(?s)<code>.*?</code>", "", body)
     body = strip_urls_and_tags(body)
@@ -1587,39 +1566,35 @@ def mostly_punctuations(s, site):
         return False, ""
 
     punct_re = regex.compile(r"[[:punct:]]")
-    all_punc = punct_re.findall(body.replace(".", ""))
+    all_punc = punct_re.findall(body)
     if not all_punc:
         return False, ""
 
-    all_punc_set = list(set(all_punc))  # Remove duplicate
-    all_counts = [all_punc.count(punc) for punc in all_punc_set]
-    count = max(all_counts)
-    frequency = count / len(s)
-    max_punc = all_punc_set[all_counts.index(count)]
+    num_punc = len(all_punc)
+    all_punc_set = list(set(all_punc))  # Remove duplicates
+    overall_frequency = num_punc / len(s)
 
-    if frequency >= PUNCTUATION_RATIO:
-        return True, u"Post contains {} marks of {!r} out of {} characters".format(count, max_punc, len(s))
+    if overall_frequency >= PUNCTUATION_RATIO:
+        return True, u"Post contains {} marks of {!r} out of {} characters".format(num_punc,
+                                                                                   "".join(all_punc_set), len(s))
     else:
         return False, ""
 
 
-# TODO: split this function into two
-def no_whitespace(s, site, body=True):
-    if (not body) and regex.compile(r"(?is)^[0-9a-z]{20,}\s*$").match(s):
-        return True, "No whitespace or formatting in title"
-    elif body and regex.compile(r"(?is)^<p>[0-9a-z]+</p>\s*$").match(s):
-        return True, "No whitespace or formatting in body"
-    return False, ""
-
-
 @create_rule("no whitespace in {}", body=False, max_rep=10000, max_score=10000)
 def no_whitespace_title(s, site):
-    return no_whitespace(s, site, body=False)
+    if regex.compile(r"(?is)^[0-9a-z]{20,}\s*$").match(s):
+        return True, "No whitespace or formatting in title"
+    else:
+        return False, ""
 
 
 @create_rule("no whitespace in {}", title=False, max_rep=10000, max_score=10000)
 def no_whitespace_body(s, site):
-    return no_whitespace(s, site, body=True)
+    if regex.compile(r"(?is)^<p>[0-9a-z]+</p>\s*$").match(s):
+        return True, "No whitespace or formatting in body"
+    else:
+        return False, ""
 
 
 def toxic_check(post):
@@ -2180,10 +2155,6 @@ create_rule("numbers-only title",
             r"^(?=.*[0-9])[^\pL]*$",
             sites=["math.stackexchange.com"],
             body=False, max_rep=50, max_score=5)
-# One unique character in title
-create_rule("{} has only one unique char",
-            r"^(.)\1+$",
-            body=False, max_rep=1000000, max_score=10000)
 # Parenting troll
 create_rule("bad keyword in {}",
             r"(?i)\b(erica|jeff|er1ca|spam|moderator)\b",
