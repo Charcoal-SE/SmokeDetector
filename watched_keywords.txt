@@ -10599,3 +10599,4 @@
 1560380999	Makyen	surfacetablethelp\.com
 1560386540	Machavity	adaptcourses\.com\.au
 1560386611	Machavity	adaptlearning\.org
+1560387281	Machavity	xpertcube\.com
