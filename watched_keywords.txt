@@ -10630,3 +10630,4 @@
 1560466448	Makyen	healthlinegroup\.com
 1560466914	Makyen	onlineghosthacker\d+(?:@gmail\.com)?(?#onlineghosthacker247 seen)
 1560466936	Makyen	online\W*ghost\W*hacker
+1560469115	Makyen	devdrive\.org
