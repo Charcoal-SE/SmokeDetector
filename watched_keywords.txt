@@ -10626,4 +10626,3 @@
 1560449978	Makyen	hotmail-customernumber\.com
 1560450038	Makyen	correcttechno\.com
 1560458681	Makyen	6(?<=\$6)00\b\W*(?:(?:a|per|every)\W*day|reliably|constantly|consistently)(?#keep as a watch to add an additional detection reason)
-1560465708	Machavity	 thechrisbaum1968(?:@gmail\.com)
