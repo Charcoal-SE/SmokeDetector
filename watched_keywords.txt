@@ -10628,3 +10628,4 @@
 1560458681	Makyen	6(?<=\$6)00\b\W*(?:(?:a|per|every)\W*day|reliably|constantly|consistently)(?#keep as a watch to add an additional detection reason)
 1560465758	Machavity	thechrisbaum1968(?:@gmail\.com)?
 1560466448	Makyen	healthlinegroup\.com
+1560466914	Makyen	onlineghosthacker\d+(?:@gmail\.com)?(?#onlineghosthacker247 seen)
