@@ -10638,3 +10638,4 @@
 1560492710	Makyen	flightradar\.co\.uk
 1560494341	Shree	bharatdefencekavach\.com
 1560495700	Shree	blog\.baljotsingh\.in
+1560508254	double-beep	qdexitechnology\.com
