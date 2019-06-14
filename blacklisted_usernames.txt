@@ -174,3 +174,4 @@ red(?:\s+)?switches
 ^sofi\W?dial$
 tonny123
 johnjorge
+quickbooks
