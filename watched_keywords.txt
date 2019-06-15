@@ -8897,7 +8897,7 @@
 1553588343	tripleee	aress\.support(?#promotional footer should be removed, maybe unwatch in a month or two)
 1553588618	tripleee	ketopuredietz\.over-blog\.com
 1553589031	Shree	ecommercewebsitedeveloper\.in
-1553590065	tripleee	green\W?vibe
+1553590065	tripleee	green\W*vibe(?!\W*keto)
 1553591810	tripleee	newhdmovi\.com
 1553595492	tripleee	easy\.gr
 1553600192	Shree	skydigitalworld\.com
