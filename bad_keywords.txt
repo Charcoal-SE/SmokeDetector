@@ -1966,3 +1966,4 @@ opti\W?farms(?:\W?keto)?
 keto\W*mode
 Social\W*Prachar
 green\W*vibe\W*keto
+krygen\W*xl
