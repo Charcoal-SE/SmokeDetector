@@ -10661,3 +10661,4 @@
 1560592417	double-beep	sharktankreview\.com
 1560593272	double-beep	famiar\.com
 1560594539	double-beep	supplementmegamart\.org
+1560594704	double-beep	elegantservices\.ae
