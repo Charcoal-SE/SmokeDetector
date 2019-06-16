@@ -10671,3 +10671,4 @@
 1560618115	Makyen	qwas\.ca
 1560621909	Makyen	ntanzielvis\d+(?:@gmail\.com)?(?#ntanzielvis31 seen)
 1560658735	angussidney	geometryhub\.net(?#Temporarily watching to make sure the user doesn't promote their site any further)
+1560659473	Makyen	best\W*in\W*the\W*world\W*pack\W*drake\W*shirts?
