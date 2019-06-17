@@ -177,3 +177,4 @@ johnjorge
 quickbooks
 ^Lauren\s+Bedford$
 (?-i:^Bella Jullia$)
+(?-i:^billyhenry$)
