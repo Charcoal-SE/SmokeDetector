@@ -175,3 +175,4 @@ red(?:\s+)?switches
 tonny123
 johnjorge
 quickbooks
+^Lauren\s+Bedford$
