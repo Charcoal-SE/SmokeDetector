@@ -1967,3 +1967,4 @@ keto\W*mode
 Social\W*Prachar
 green\W*vibe\W*keto
 krygen\W*xl
+radiant\W?swift(?:\W?keto)?
