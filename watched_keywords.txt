@@ -10688,3 +10688,4 @@
 1560698099	double-beep	vitalcrown\.com
 1560771509	double-beep	rajjitaxi\.com
 1560771756	tripleee	spastrong\.com
+1560775388	tripleee	&utm_term=qlik&
