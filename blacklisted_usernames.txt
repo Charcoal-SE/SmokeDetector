@@ -166,7 +166,7 @@ bestchange
 (?-i:^NGFCET$)
 red(?:\s+)?switches
 (?-i:^Khoa Dang$)
-^Ajay Singh$
+(?-i:^Ajay Singh$)
 (?-i:^quantumit$)
 (?-i:^dany login$)
 (?-i:^dhekitha$)
