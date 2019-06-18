@@ -10703,3 +10703,4 @@
 1560842354	tripleee	download\.zone
 1560843296	Makyen	getsetwild\.com
 1560843985	tripleee	gsb\W?infotech
+1560846619	tripleee	technoxmart\.com
