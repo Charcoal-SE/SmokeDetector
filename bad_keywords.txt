@@ -1969,3 +1969,4 @@ green\W*vibe\W*keto
 krygen\W*xl
 radiant\W?swift(?:\W?keto)?
 (?:(?:life|quality)\W*)?nutra\W*keto
+legends\W*keto
