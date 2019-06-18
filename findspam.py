@@ -1155,6 +1155,7 @@ def watched_ns_for_url_domain(s, site):
         'dnsowl.com.',
         'elitegifthouse.com.',
         'teclab.info.',
+        'jawatankosong.biz.',
     ])
 
 
