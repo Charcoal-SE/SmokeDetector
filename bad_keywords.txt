@@ -1379,7 +1379,7 @@ luminary\W?v
 rose\W?diamond(?:\W?beauty)?
 peraglow
 liva\W?derma
-konect(?!\.(?:co\.za|uni-koblenz)\b)(?:\W?nutra\?Wketo)?
+konect(?!\.(?:co\.za|uni-koblenz)\b)(?:\W*nutra\W*keto)?
 total\W?tone
 retro\W?slim
 narvi\W?testo
