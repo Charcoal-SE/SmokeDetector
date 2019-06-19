@@ -1156,7 +1156,7 @@ def watched_ns_for_url_domain(s, site):
         'elitegifthouse.com.',
         'teclab.info.',
         'jawatankosong.biz.',
-        'isnpk.com',
+        'isnpk.com.',
     ])
 
 
