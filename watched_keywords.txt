@@ -10611,7 +10611,6 @@
 1560412528	Makyen	(?-i:36AR01FTmWIC)
 1560420612	Makyen	(?-i:GwDGE4XUQck)
 1560420631	Makyen	(?-i:x7b0brn)
-1560420931	Makyen	fast\W*burn\W*keto
 1560428439	Machavity	reviewscart\.co\.uk
 1560429100	tripleee	themotorsmasters\.com
 1560431619	tripleee	certificatessuccess
