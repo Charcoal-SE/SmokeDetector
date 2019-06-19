@@ -10744,3 +10744,4 @@
 1560971331	tripleee	smarthealthadv\.com
 1560971903	Machavity	retinol\W*lift
 1560983116	Makyen	clipam\.ir
+1560983134	Makyen	(?-i:2XPs0sP)
