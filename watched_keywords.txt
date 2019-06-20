@@ -10767,3 +10767,4 @@
 1561036549	tripleee	ranktaxaccounting\.com
 1561039240	tripleee	goto\.com\.pk
 1561042860	Makyen	imagesstockphotos\.com
+1561042992	Makyen	clkim\.com
