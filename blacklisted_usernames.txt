@@ -179,4 +179,3 @@ quickbooks
 (?-i:^Bella Jullia$)
 (?-i:^billyhenry$)
 (?-i:^Jiao Cao$)
-^Kavita Yadav$
