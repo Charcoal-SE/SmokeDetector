@@ -1033,6 +1033,8 @@ def bad_ns_for_url_domain(s, site):
         'syrahost.com.',
         'dnsdomen.com.',
         'letter.org.in.',
+        'utecho.com.',
+
     ])
 
 
@@ -1107,7 +1109,6 @@ def watched_ns_for_url_domain(s, site):
         'hawkhost.com.',  # has FPs, don't move to blacklist
         'greengeeks.com.',
         'supportaus.com.',
-        'utecho.com.',
         '256gbserver.com.',
         'solutionsinfini.org.',
         'ownmyserver.com.',
