@@ -10752,3 +10752,4 @@
 1560995687	Makyen	solutionhome\d+(?:@gmail\.com)?(?#solutionhome10 seen)
 1561001294	Makyen	nexgenitsolutions\.in
 1561002321	Makyen	supplecient\.com
+1561007786	tripleee	caprincekathuriaclasses\.com
