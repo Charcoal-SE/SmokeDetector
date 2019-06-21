@@ -10775,3 +10775,4 @@
 1561077763	Makyen	mvfernan@ra\.rockwell\.com
 1561077782	Makyen	(?<!\bmvfernan@)ra\.rockwell\.com
 1561077836	Makyen	vonetta\W*fernandes
+1561077856	Makyen	brassring\.com
