@@ -10790,3 +10790,4 @@
 1561128625	Machavity	(?-i:^sudha bhise$)
 1561137063	Thomas Ward	smsc\.ru
 1561144652	Makyen	miracle\W*ritual\W*(?:cream|review)
+1561144671	Makyen	(?-i:2WZ1f95)
