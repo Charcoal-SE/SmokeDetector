@@ -10407,7 +10407,6 @@
 1559659091	Machavity	mydealstm\.com
 1559661853	double-beep	berbagiide\.com
 1559664928	JoErNanO	nannybag\.com
-1559667945	K.Dᴀᴠɪs	shirdicabservice\.com
 1559681083	Nisse Engström	dreampharmacy\.org
 1559681109	Nisse Engström	EnglishTestingBot
 1559681129	Makyen	english-testing-bot\.net\.ua
