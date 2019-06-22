@@ -1974,3 +1974,4 @@ fast\W*burn\W*keto
 ketozol
 keto\W*charge
 ketoxol
+noblespellhome(?:@(?:\W*)?outlook.(?:\W*)?com)?
