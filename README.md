@@ -69,6 +69,53 @@ Next, copy the config file and edit as said above.
 To run SmokeDetector in this virtual environment, use
 `env/bin/python3 nocrash.py`.
 
+### Docker setup
+
+Running in a [Docker container](https://www.docker.com/resources/what-container)
+is an even better way to isolate dependency packages from your local system.
+To set up SmokeDetector in a Docker container, follow the steps below.
+
+1. Grab the [Dockerfile](Dockerfile) and build an image of SmokeDetector:
+
+  ```shell
+  DATE=$(date +%F)
+  mkdir temp
+  cd temp
+  wget https://raw.githubusercontent.com/Charcoal-SE/SmokeDetector/master/Dockerfile
+  docker build -t smokey:$DATE .
+  ```
+
+2. Create a container from the image you just built
+
+  ```shell
+  docker create --name=mysmokedetector smokedetector:$DATE
+  ```
+
+3. Start the container.
+  Don't worry, SmokeDetector won't run until it's ready,
+  so you have the chance to edit the configuration file before SmokeDetector runs.
+
+  Copy `config.sample` to a new file named `config`
+  and edit the values required,
+  then copy the file into the container with this command:
+
+  ```shell
+  docker cp config mysmokedetector:/home/smokey/SmokeDetector/config
+  ```
+
+4. If you would like to set up additional stuff (SSH, Git etc.),
+  you can do so with a Bash shell in the container:
+
+  ```shell
+  docker exec -it mysmokedetector bash
+  ```
+
+  After you're ready, put a file named `ready` under `/home/smokey`:
+
+  ```shell
+  touch ~smokey/ready
+  ```
+
 ## Requirements
 
 SmokeDetector only supports Stack Exchange logins,
