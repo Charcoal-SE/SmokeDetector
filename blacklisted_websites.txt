@@ -2900,3 +2900,4 @@ clashroyaleapk\.net
 shirdicabservice\.com
 smartspidering\.com
 \b(?<!-)thepilpedia\.com
+pillsdrive\.com
