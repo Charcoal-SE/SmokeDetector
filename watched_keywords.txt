@@ -10823,3 +10823,4 @@
 1561355372	Makyen	coinpedia\.org
 1561356530	Makyen	welnesscare\.com
 1561356550	Makyen	gdsfthbn\.tumblr\.com
+1561356623	Makyen	swap\.ng
