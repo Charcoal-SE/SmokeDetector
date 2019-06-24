@@ -2128,7 +2128,7 @@ cbdoiltryshop\.com
 crackedlicense\.com
 healthaware1\.com
 biztechcs\.com
-pilpedia\.?com
+\b(?<!-)pilpedia\.?com
 trybionutrition\.com
 drozus\.com
 livestream247\.net
@@ -2899,3 +2899,4 @@ fixthephoto\.com
 clashroyaleapk\.net
 shirdicabservice\.com
 smartspidering\.com
+\b(?<!-)thepilpedia\.com
