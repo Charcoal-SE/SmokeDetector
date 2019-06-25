@@ -1974,4 +1974,4 @@ fast\W*burn\W*keto
 ketozol
 keto\W*charge
 ketoxol
-(?:alpha\W?)?labs\W?keto
+(?:alpha\W*)?labs\W*keto
