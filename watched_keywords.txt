@@ -10894,3 +10894,4 @@
 1561477088	Makyen	supplementcave\.com
 1561477155	Makyen	ultavivegarcinia\.es
 1561478193	Machavity	(?-i:^Finlay Cedar$)
+1561478230	Machavity	(?-i:^John myers$)
