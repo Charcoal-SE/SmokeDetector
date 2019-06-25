@@ -10857,3 +10857,4 @@
 1561416229	Machavity	udemy\.com/[\w-]*/\?couponCode=
 1561421309	Machavity	innerbody\.com
 1561436481	Shree	ablazelining\.com
+1561439796	Shree	mumybear\.org
