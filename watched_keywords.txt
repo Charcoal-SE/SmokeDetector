@@ -10889,3 +10889,4 @@
 1561470226	Machavity	answersfromtheuniverse\.com
 1561470396	Machavity	cloud.*\.blogspot\.com
 1561476931	Makyen	questtrustcompany\.com
+1561476972	Makyen	kumar\W*urban\W*development
