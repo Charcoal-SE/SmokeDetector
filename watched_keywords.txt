@@ -10919,3 +10919,4 @@
 1561535130	Makyen	nutritioun\.com
 1561535150	Makyen	nutritioun(?!\.com)
 1561535174	Makyen	bioinvitagen
+1561535208	Makyen	healthinsideinfo\.com
