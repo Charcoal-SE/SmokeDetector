@@ -10369,7 +10369,6 @@
 1559561139	tripleee	assignmentspot\.co\.uk
 1559561167	tripleee	indigodisplays\.co\.uk
 1559538928	double-beep	mediaarea\.net
-1559564151	tripleee	techgiga\.net
 1559564949	tripleee	skillohub\.com
 1559565610	double-beep	devopsrider\.com
 1559573698	Chris	godforeye\.com

@@ -2903,3 +2903,4 @@ smartspidering\.com
 pillsdrive\.com
 diveintohealth\.org
 totalcureherbsfoundation(?:\W*c\W*o\W*m)?
+techgiga\.net
