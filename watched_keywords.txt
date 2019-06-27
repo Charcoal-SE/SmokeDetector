@@ -10930,3 +10930,4 @@
 1561567283	Machavity	Irgdigital\.com
 1561569207	Machavity	developerhelps\.com
 1561578701	Machavity	(?-i:^netgearcare$)
+1561612243	Shree	mysoreonedaytrip\.com
