@@ -10952,3 +10952,4 @@
 1561666304	Makyen	u=7870732(?#jefit\.com)
 1561666327	Makyen	reign\W*energy\W*drink
 1561666369	Makyen	redbytes\.in
+1561666411	Makyen	cnpolishing\.com
