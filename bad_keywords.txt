@@ -1977,3 +1977,4 @@ ketoxol
 (?:alpha\W*)?labs\W*keto
 keto\W*ultra\W*diet(?!\.com(?<=keto-ultra-diet\.com))
 super\W*cut\W*keto(?:\W*\d+)?
+keto\W*dietz(?!\.com(?<=ketodietz\.com))(?:\W*\d+)?
