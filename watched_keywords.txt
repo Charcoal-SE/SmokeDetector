@@ -10968,3 +10968,4 @@
 1561666778	Makyen	megasupplementmart\.com
 1561669427	Makyen	bradleyabbottloanfirm(?:@gmail\.com)?
 1561623087	double-beep	realtekconsulting\.net
+1561678253	Byte Commander	^john\W+gava$
