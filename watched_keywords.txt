@@ -10944,3 +10944,4 @@
 1561666113	Makyen	latitudesport
 1561666132	Makyen	datzitgaming
 1561666153	Makyen	textbookgaming
+1561666172	Makyen	apn-portal\.com
