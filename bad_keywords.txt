@@ -1219,7 +1219,7 @@ cortyx\W?clarity
 the\W?away\W?days
 magnumax
 (?:os)?rs\W?gold
-keto\W?tone(?:\W?diet)?
+keto\W?tone(?:\W*(?:diet|avis|france|fr|new\W*zealand|nz|\d+))*
 eye\W?serum\W?magic
 jet\W?pro\W?x
 size\W?gain\W?plus
