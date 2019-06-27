@@ -10964,3 +10964,4 @@
 1561666590	Makyen	letsfindtoday\.com
 1561666611	Makyen	toofair\.com
 1561666631	Makyen	epiphany(?=\.esportsify\.com)
+1561666650	Makyen	welnessdeal\.com
