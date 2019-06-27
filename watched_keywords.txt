@@ -10812,7 +10812,6 @@
 1561324268	Makyen	suitsu\.biz
 1561336908	Makyen	onlineblankatmhacker(?:@gmail\.com)?
 1561348947	Makyen	qjykf120\.com
-1561354977	Makyen	urinereview\.com
 1561355030	Makyen	nitrofollowers\.com
 1561355049	Makyen	vital\W*max\W*keto
 1561355372	Makyen	coinpedia\.org
