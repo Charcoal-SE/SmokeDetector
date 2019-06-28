@@ -10964,7 +10964,6 @@
 1561666650	Makyen	welnessdeal\.com
 1561666778	Makyen	megasupplementmart\.com
 1561669427	Makyen	bradleyabbottloanfirm(?:@gmail\.com)?
-1561623087	double-beep	realtekconsulting\.net
 1561678253	Byte Commander	^john\W+gava$
 1561682963	Nisse Engström	tendang\.com
 1561699041	Makyen	wedontpayfullme\.tumblr\.com
