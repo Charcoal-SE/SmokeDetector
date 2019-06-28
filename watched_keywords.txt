@@ -10978,3 +10978,4 @@
 1561706334	Makyen	dealmecoupon\.com
 1561708752	Makyen	templeofanswer(?:@hotmail\.co\.uk)?
 1561708771	Makyen	gogbetsg\.com
+1561708789	Makyen	captionz\.biz
