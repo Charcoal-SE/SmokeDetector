@@ -10976,3 +10976,4 @@
 1561706298	Makyen	rivexa\W*plus
 1561706315	Makyen	usafullreview\.com
 1561706334	Makyen	dealmecoupon\.com
+1561708752	Makyen	templeofanswer(?:@hotmail\.co\.uk)?
