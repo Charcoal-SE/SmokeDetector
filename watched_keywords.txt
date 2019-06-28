@@ -10970,3 +10970,4 @@
 1561678253	Byte Commander	^john\W+gava$
 1561682963	Nisse Engström	tendang\.com
 1561699041	Makyen	wedontpayfullme\.tumblr\.com
+1561699059	Makyen	dailydealsreview\.info
