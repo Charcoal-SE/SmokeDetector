@@ -10824,7 +10824,6 @@
 1561357658	Makyen	assignmenttigers\.co\.uk
 1561357704	Makyen	vital-keto-suisse\.over-blog\.com
 1561358461	Glorfindel	missionsecurity\.com
-1561359732	Makyen	keto-ultra-diet\.com
 1561359752	Makyen	(?-i:8lUG4VCQ2s4)
 1561359792	Makyen	pure\W*fit\W*keto\W*uk(\W*\d+)?
 1561359836	Makyen	healthandfitnesstip4u\.blogspot\.com
