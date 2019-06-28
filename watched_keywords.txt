@@ -10974,3 +10974,4 @@
 1561701408	Shree	assertive-media\.co\.uk
 1561704446	Makyen	over-blog\.com(?#76 hits on SE, so not a blacklist)
 1561706298	Makyen	rivexa\W*plus
+1561706315	Makyen	usafullreview\.com
