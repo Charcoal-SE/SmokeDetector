@@ -11006,3 +11006,4 @@
 1561783935	Makyen	mymidnightheart\.com
 1561783954	Makyen	activator\W*pro\W*muscle
 1561783972	Makyen	my\W*midnight\W*heart(?!\.com(?<=mymidnightheart\.com))
+1561816258	Machavity	Use\Wangle\Wbrackets\Wto\Wforce\Wlinking
