@@ -11010,3 +11010,4 @@
 1561818089	Machavity	luckypatcherinfo\.com
 1561784824	double-beep	hellojinri\.com
 1561825873	Makyen	thebackplane\.com
+1561825891	Makyen	(?:ultra\W*)?nano\W*xl
