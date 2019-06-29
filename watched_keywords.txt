@@ -11008,3 +11008,4 @@
 1561783972	Makyen	my\W*midnight\W*heart(?!\.com(?<=mymidnightheart\.com))
 1561816258	Machavity	Use\Wangle\Wbrackets\Wto\Wforce\Wlinking
 1561818089	Machavity	luckypatcherinfo\.com
+1561784824	double-beep	hellojinri\.com
