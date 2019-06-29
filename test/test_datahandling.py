@@ -26,7 +26,7 @@ def test_smokey_transfer(monkeypatch):
 
     with pytest.raises(ValueError) as e:
         SmokeyTransfer.load("hahaha")
-    assert "invalid data" in str(e).lower()
+    assert "invalid data" in str(e.value).lower()
 
     with pytest.raises(ValueError):
         SmokeyTransfer.load(SmokeyTransfer.HEADER + "\nmmmmmm\n" + SmokeyTransfer.ENDING)
