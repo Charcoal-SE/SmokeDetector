@@ -1259,7 +1259,7 @@ nutriti?ous\W?health
 diet\W?keto
 slim\W?xtra
 fuel\W?fit\W?max
-rapid\W?tone
+rapid\W*tone(?:\W*(?:diet|\d+))*
 clash\W?of\W?clans\W?hack
 saint\W?elias
 k(?!eto-ultra-diet\.com)eto\W*ultra(\W*diet)?(\W*com)?
