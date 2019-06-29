@@ -11017,3 +11017,4 @@
 1561825986	Makyen	delver\W*research\W*(?:and\W*)?analytic\W*solution
 1561826104	Makyen	chairsadvisor\.com
 1561826240	Makyen	tour\W*travel\W*360(?!\.com(?<=tourtravel360\.com))
+1561834381	Makyen	(?-i:N0keg.jpg)
