@@ -1972,7 +1972,7 @@ radiant\W?swift(?:\W?keto)?
 legends\W*keto
 fast\W*burn\W*keto
 ketozol
-keto\W*charge
+keto\W*charge(?:\W*(?:shark|tank|diet|\d+))*
 ketoxol
 (?:alpha\W*)?labs\W*keto
 keto\W*ultra\W*diet(?!\.com(?<=keto-ultra-diet\.com))
