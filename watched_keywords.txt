@@ -11025,3 +11025,4 @@
 1561927733	Makyen	nutrifitsupplementsscamgmailcom
 1561927770	Makyen	gupivurewo
 1561927788	Makyen	nutrifitsupplements\.com
+1561927838	Makyen	nutri\W*fit\W*supplements(?!\.com(?<=nutrifitsupplements\.com))(?:\W*web)?
