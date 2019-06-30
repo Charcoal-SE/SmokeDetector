@@ -11026,3 +11026,4 @@
 1561927770	Makyen	gupivurewo
 1561927788	Makyen	nutrifitsupplements\.com
 1561927838	Makyen	nutri\W*fit\W*supplements(?!\.com(?<=nutrifitsupplements\.com))(?:\W*web)?
+1561929557	Makyen	(?<=\.\w{1,5})/(?!\w+-keto|keto-\w+\b["/< ]|$)(?:[\w-]+-keto[\w-]*|keto-[\w-]+)(?=["/< ]|$)(?#expanded product name like keto-xx in URL)
