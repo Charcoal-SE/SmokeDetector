@@ -7134,7 +7134,7 @@
 1544786543	Glorfindel	jelvix\.com
 1544786735	Glorfindel	mold\W*(\w*\W*)?service
 1544808345	Makyen	customerssupporthelpline\.com
-1544823761	Makyen	(?:(?<!<\/?code>.*?)buy\b(?!.*?<\/?code>).{0,400}?<\/?a(?: [^>]*|)>\W*|\W*(?<!<\/?code>.*?)<\/a>(?!.*?<\/?code>).{0,400}?\bbuy)(?#buy before, in, or after a link within 400 characters without code; when watched, was 3077/2878/194/14 minus 12/2/10/0: 2018-12-14T21:43Z, or so)
+1544823761	Makyen	(?:(?<!<\/?code>.*?)buy\b(?!.*?<\/?code>).{0,400}?<\/?a(?=(?: [^>]*|)>)[ >]\W*|\W*(?<!<\/?code>.*?)<\/a>(?!.*?<\/?code>).{0,400}?\bbuy)(?#buy before, in, or after a link within 400 characters without code; when watched, was 3077/2878/194/14 minus 12/2/10/0: 2018-12-14T21:43Z, or so)
 1544859091	Sonic the Inclusive Hedgehog	theweddingfile\.in
 1544861515	Makyen	cartrends\.in
 1544861770	Makyen	iamhja\.com
