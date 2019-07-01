@@ -10968,7 +10968,6 @@
 1561699041	Makyen	wedontpayfullme\.tumblr\.com
 1561699059	Makyen	dailydealsreview\.info
 1561699080	Makyen	dailyteer\.com
-1561700466	Makyen	topdietbrand\.com
 1561701369	Shree	footballtipstonight\.com
 1561701408	Shree	assertive-media\.co\.uk
 1561704446	Makyen	over-blog\.com(?#76 hits on SE, so not a blacklist)
