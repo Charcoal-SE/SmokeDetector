@@ -11041,3 +11041,4 @@
 1561996343	Makyen	nepalplanettreks\.com
 1561996364	Makyen	nepal\W*planet\W*treks\W*(?:and\W*)?expeditions
 1561996495	Makyen	sanjibtrekguide(?:\W*(?:at\W*)?gmail(?:\W*(?:dot\W*)?com)?)?
+1561997656	Machavity	travelnearby\.com
