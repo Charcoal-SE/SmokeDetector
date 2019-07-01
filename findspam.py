@@ -1933,6 +1933,15 @@ create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)
             sites=['chemistry.stackexchange.com'],
             username=True, body_summary=True,
             max_rep=30, max_score=1)
+# Watch (?-i:SEO|seo)$, but exempt Webmasters for titles, but not usernames. Was a watch by iBug on 1541730383. (pt1)
+create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo)$",
+            sites=['webmasters.stackexchange.com'],
+            title=True, body=False, username=False,
+            max_rep=30, max_score=1)
+# Watch (?-i:SEO|seo)$, but exempt Webmasters for titles, but not usernames. Was a watch by iBug on 1541730383. (pt2)
+create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo)$",
+            title=False, body=False, username=True,
+            max_rep=30, max_score=1)
 # Bad keywords in titles and usernames, all sites
 create_rule("bad keyword in {}",
             r"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|"
