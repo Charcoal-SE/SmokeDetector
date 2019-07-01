@@ -1980,4 +1980,4 @@ super\W*cut\W*keto(?:\W*\d+)?
 keto\W*dietz(?!\.com(?<=ketodietz\.com))(?:\W*\d+)?
 slim\W*linic\W*keto(?:\W*(?:web|\d+))*
 prime\W*x\W*Factor
-(?<=>)https?://www\.4cashpath\.com(?=/</a>)(?#Additional detection/weight on 4cashpath; detect bare link)
+(?<=>)https?://(?:www\.)?4cashpath\.com(?=/</a>)(?#Additional detection/weight on 4cashpath; detect bare link)
