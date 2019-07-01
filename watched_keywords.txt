@@ -11041,3 +11041,4 @@
 1561996301	Makyen	gloriaallejothe
 1561996322	Makyen	officecomsetuphelp\.com
 1561996343	Makyen	nepalplanettreks\.com
+1561996364	Makyen	nepal\W*planet\W*treks\W*(?:and\W*)?expeditions
