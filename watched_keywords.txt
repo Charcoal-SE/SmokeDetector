@@ -6492,7 +6492,6 @@
 1541709864	Erik the Outgolfer	itslivetv\.de
 1541714834	Glorfindel	uniquehijabs\.com
 1541718477	K.Dᴀᴠɪs	chatbotbay\.com
-1541730383	iBug	(?-i:SEO|seo)$
 1541741926	Tetsuya Yamamoto	bhavitra\.com
 1541745858	K.Dᴀᴠɪs	understandbetter\.co
 1541748396	Tetsuya Yamamoto	cleverinspections\.com
