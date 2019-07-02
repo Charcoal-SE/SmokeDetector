@@ -11068,3 +11068,4 @@
 1562090246	Machavity	hpdriversprint\.com
 1562093782	Machavity	lb-total\.ru
 1562095869	Makyen	ketounlimited?
+1562095892	Makyen	youtube2video(?!\.com)
