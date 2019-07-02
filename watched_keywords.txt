@@ -11043,3 +11043,4 @@
 1562002728	Machavity	c\W*y\W*p\W*h\W*e\W*r\W*w\W*h\W*i\W*t\W*e\W*h\W*a\W*t\W*h(?:\W*(?:a\W*t\W*)?g\W*m\W*a\W*i\W*l(?:\W*(?:d\W*o\W*t\W*)?c\W*o\W*m)?)?
 1562004622	Makyen	yourinception\.com
 1562007385	Makyen	4cashpath(?#A bit abusive, but should get a third detection on these)
+1562034959	Makyen	bellacova
