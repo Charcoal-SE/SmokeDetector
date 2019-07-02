@@ -1,5 +1,5 @@
 # Keep this Python image version manually maintained
-FROM python:3.7-stretch
+FROM python:3.7
 
 RUN adduser --disabled-password --force-badname smokey --gecos smokey && \
     su --login smokey sh -c '\
