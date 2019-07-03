@@ -11088,3 +11088,4 @@
 1562164762	Makyen	peoria\W*fresh(?:\W*skin)?\W*cream
 1562164895	Makyen	cisdem\.com
 1562164965	Makyen	keto\W*enhanced\W*slim\W*united\W*kingdom
+1562165092	Makyen	keto\W*advance\W*france?
