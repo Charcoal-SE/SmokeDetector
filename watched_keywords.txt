@@ -11100,3 +11100,4 @@
 1562168483	Makyen	ageless\W*male\W*tonight(\W*\d+)?
 1562168504	Makyen	andmcintosh\.blogspot\.com
 1562168531	Makyen	andmcintosh
+1562168552	Makyen	adventuringparties\.com
