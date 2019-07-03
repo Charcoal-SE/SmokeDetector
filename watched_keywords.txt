@@ -11090,3 +11090,4 @@
 1562164965	Makyen	keto\W*enhanced\W*slim\W*united\W*kingdom
 1562165092	Makyen	keto\W*advance\W*france?
 1562165181	Makyen	gayakosoemailportalinfo
+1562165231	Makyen	nsdm\W*india(?!\.com(?<=nsdmindia\.com))
