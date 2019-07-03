@@ -11080,3 +11080,4 @@
 1562124742	Makyen	lagudangdut
 1562124762	Makyen	lagump3
 1562124785	Makyen	bdownload\W*lagu(?!indo\.net(?<=downloadlaguindo\.net))(?:\W*indo(?:nesia)?|\w*)?
+1562132257	Makyen	varikosette(?:\W*(?:cruz|verde|precio|varicose|veins))*
