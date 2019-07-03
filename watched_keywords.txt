@@ -11095,3 +11095,4 @@
 1562165300	Makyen	stacnovina10(?=\.over-blog\.com)
 1562166234	Makyen	adrena\W*stack
 1562166255	Makyen	ketodietwalmart\.com
+1562168414	Makyen	keto\W*enhanced\W*slim(?:\W*united\W*kingdom|\W*uk)?
