@@ -11087,3 +11087,4 @@
 1562164734	Makyen	infinitekind\.tenderapp\.com
 1562164762	Makyen	peoria\W*fresh(?:\W*skin)?\W*cream
 1562164831	Makyen	(?<=keto\W*)advance\W*france?
+1562164895	Makyen	cisdem\.com
