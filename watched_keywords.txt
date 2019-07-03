@@ -11079,3 +11079,4 @@
 1562124721	Makyen	gudanglagu
 1562124742	Makyen	lagudangdut
 1562124762	Makyen	lagump3
+1562124785	Makyen	bdownload\W*lagu(?!indo\.net(?<=downloadlaguindo\.net))(?:\W*indo(?:nesia)?|\w*)?
