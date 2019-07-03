@@ -11108,3 +11108,4 @@
 1562168658	Makyen	bitcointransactionaccelerator\.com
 1562168678	Makyen	exclusivetaken\.info
 1562168700	Makyen	para\W*axe?\W*plus
+1562168723	Makyen	tableau\W*public
