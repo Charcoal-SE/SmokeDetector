@@ -11082,3 +11082,4 @@
 1562124785	Makyen	bdownload\W*lagu(?!indo\.net(?<=downloadlaguindo\.net))(?:\W*indo(?:nesia)?|\w*)?
 1562132257	Makyen	varikosette(?:\W*(?:cruz|verde|precio|varicose|veins))*
 1562135649	Glorfindel	solutionshint\.com
+1562147130	Glorfindel	whfpackage\.com
