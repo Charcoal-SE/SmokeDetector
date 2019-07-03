@@ -11107,3 +11107,4 @@
 1562168635	Makyen	abrahamrodriguezen
 1562168658	Makyen	bitcointransactionaccelerator\.com
 1562168678	Makyen	exclusivetaken\.info
+1562168700	Makyen	para\W*axe?\W*plus
