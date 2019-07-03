@@ -11084,3 +11084,4 @@
 1562135649	Glorfindel	solutionshint\.com
 1562147130	Glorfindel	whfpackage\.com
 1562151808	Glorfindel	sqrrl\.in
+1562164734	Makyen	infinitekind\.tenderapp\.com
