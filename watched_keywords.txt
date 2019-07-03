@@ -11086,3 +11086,4 @@
 1562151808	Glorfindel	sqrrl\.in
 1562164734	Makyen	infinitekind\.tenderapp\.com
 1562164762	Makyen	peoria\W*fresh(?:\W*skin)?\W*cream
+1562164831	Makyen	(?<=keto\W*)advance\W*france?
