@@ -11149,3 +11149,4 @@
 1562276013	Makyen	trastra(?!\.com)
 1562276033	Makyen	trastra\.com
 1562276077	Makyen	sachinglobalmarketing(?:@gmail\.com)?
+1562276241	Makyen	aegis\W*vitality(?:\W*(?:keto|prior|\d+))*
