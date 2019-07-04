@@ -10867,7 +10867,6 @@
 1561451526	Makyen	luntrimdiet
 1561451566	Makyen	pcbjhy\.com
 1561451588	Makyen	dream\W*fx
-1561451607	Makyen	supplementblend\.com
 1561451673	Makyen	top\W*organic\W*keto
 1561464436	A J	eskaypay
 1561464455	JoErNanO	fortunetours\.in
