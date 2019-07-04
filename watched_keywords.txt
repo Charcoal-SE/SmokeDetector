@@ -11121,3 +11121,4 @@
 1562209576	Machavity	bersatutv\.com
 1562215571	Makyen	iDealshare
 1562215592	Makyen	VideoGo
+1562217720	Makyen	neu\W*natural\W*cbd
