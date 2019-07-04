@@ -11136,3 +11136,4 @@
 1562246616	JoErNanO	dubaydailytours\.com
 1562275687	Makyen	uglakasrow
 1562275707	Makyen	organix
+1562275768	Makyen	keketo\W*diet(?:\W*\d+)?
