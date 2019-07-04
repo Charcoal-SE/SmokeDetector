@@ -91,6 +91,8 @@ ASN_WHITELISTED_WEBSITES = [
     # 000webhostapp.com  This domain would be reasonable to add if it didn't also whitelist all subdomains.
     # As of 2019-04-18, the following had 2 ASN detections which were FP, and appeared to be common.
     "wikileaks.org",
+    # Additional added not as part of a systematic investigation:
+    "ntp.org",
     # Added to prevent having 3 detections on just the domain.
     "writingexplained.org"]
 COUNTRY = [
