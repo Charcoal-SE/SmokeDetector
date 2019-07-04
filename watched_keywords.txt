@@ -11129,3 +11129,4 @@
 1562219643	Makyen	(?-i:htw6w)
 1562219666	Makyen	myfitnesspharm\.com
 1562219695	Makyen	my\W*fitness\W*pharm(?!\.com(?<=myfitnesspharm\.com))
+1562222748	Shree	iccaps\.co\.in
