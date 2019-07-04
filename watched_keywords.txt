@@ -11146,3 +11146,4 @@
 1562275953	Makyen	herbalist\W*oils\W*cbd
 1562275973	Makyen	(?-i:vvMPTJwg9po)
 1562275993	Makyen	top10guider\.com
+1562276013	Makyen	trastra(?!\.com)
