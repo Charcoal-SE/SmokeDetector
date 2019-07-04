@@ -11137,3 +11137,4 @@
 1562275687	Makyen	uglakasrow
 1562275707	Makyen	organix
 1562275768	Makyen	keketo\W*diet(?:\W*\d+)?
+1562275786	Makyen	bizdownloader\.com
