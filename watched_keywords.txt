@@ -11124,3 +11124,4 @@
 1562217720	Makyen	neu\W*natural\W*cbd
 1562217766	Makyen	topcbdoilhub\.com
 1562219060	Makyen	testo\W*man(?:\W*uk)?
+1562219400	Makyen	keketo\W*diet
