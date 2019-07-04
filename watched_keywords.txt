@@ -11128,3 +11128,4 @@
 1562219621	Makyen	alturl\.com
 1562219643	Makyen	(?-i:htw6w)
 1562219666	Makyen	myfitnesspharm\.com
+1562219695	Makyen	my\W*fitness\W*pharm(?!\.com(?<=myfitnesspharm\.com))
