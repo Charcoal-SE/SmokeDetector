@@ -11123,7 +11123,6 @@
 1562217720	Makyen	neu\W*natural\W*cbd
 1562217766	Makyen	topcbdoilhub\.com
 1562219060	Makyen	testo\W*man(?:\W*uk)?
-1562219400	Makyen	keketo\W*diet
 1562219621	Makyen	alturl\.com
 1562219643	Makyen	(?-i:htw6w)
 1562219666	Makyen	myfitnesspharm\.com
