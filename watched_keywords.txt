@@ -11131,3 +11131,4 @@
 1562219695	Makyen	my\W*fitness\W*pharm(?!\.com(?<=myfitnesspharm\.com))
 1562222748	Shree	iccaps\.co\.in
 1562222972	Shree	worldastrologyindia\.com
+1562232386	Shree	partydecorationsjaipur\.in
