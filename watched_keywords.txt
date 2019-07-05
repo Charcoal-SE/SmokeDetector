@@ -11158,5 +11158,4 @@
 1562308255	Makyen	(?-i:cFU97HNqjtc)
 1562308294	Makyen	keto(?:\W*(?:prime|rx|\d+))+
 1562308547	Makyen	mkhurramov9500(?:@gmail\.com)?
-1562309365	Makyen	utm_source=magentostackexchange
 1562309389	Makyen	keto(?:\W*(?:pure|direct))+
