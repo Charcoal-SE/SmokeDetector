@@ -11158,3 +11158,4 @@
 1562308255	Makyen	(?-i:cFU97HNqjtc)
 1562308294	Makyen	keto(?:\W*(?:prime|rx|\d+))+
 1562308547	Makyen	mkhurramov9500(?:@gmail\.com)?
+1562309996	Makyen	keto\W*pure(?:\W*direct)?
