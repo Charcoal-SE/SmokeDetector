@@ -9113,7 +9113,6 @@
 1554460788	Blue	vixra\.org
 1554462033	double-beep	nelaanna
 1554462456	tripleee	vasthi\.com
-1554462646	Blue	sloopengine\.io
 1554464726	tripleee	cyberopslabs\.com
 1554465138	tripleee	sangeethacs\.in
 1554466653	tripleee	wordupapp\.co
