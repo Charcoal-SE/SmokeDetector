@@ -11152,3 +11152,4 @@
 1562276279	Makyen	healthfitnessskin\.com
 1562276299	Makyen	sera\W*relief(?:\W*(?:CBD|Oil))*
 1562276317	Makyen	totalhealthcares\.org
+1562296720	Machavity	litextension\.com
