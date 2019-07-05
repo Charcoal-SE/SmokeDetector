@@ -1983,3 +1983,4 @@ prime\W*x\W*Factor
 (?<=>)https?://(?:www\.)?4cashpath\.com(?=/</a>)(?#Additional detection/weight on 4cashpath; detect bare link)
 keto\W*plan\W*classic\W*formula
 primo\W*boost\W*keto(?:\W*\d+)?
+com\.CRE8\.LudoChat
