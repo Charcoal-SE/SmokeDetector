@@ -1621,7 +1621,7 @@ pure\W?turmeric\W?curcumin
 enter\W?keto
 nutri\W?burn
 greenlifenutrition\d*(?!\.com)
-keto\W?plus(?:\W?diet)?
+keto\W*plus(?:\W*(?:diet|\d+)*
 healthsupplementfordiet
 ultra\W*last(?:\W*xxl)?
 testo drive 365 (?:canada|performance(?: plus)?)?(?#product name)
