@@ -1985,3 +1985,4 @@ keto\W*plan\W*classic\W*formula
 primo\W*boost\W*keto(?:\W*\d+)?
 com\.CRE8\.LudoChat
 utm_source=magentostackexchange
+v?irilaxyn\W*rx(?:\W*\d+)*
