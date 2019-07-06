@@ -1986,3 +1986,4 @@ primo\W*boost\W*keto(?:\W*\d+)?
 com\.CRE8\.LudoChat
 utm_source=magentostackexchange
 v?irilaxyn\W*rx(?:\W*\d+)*
+(?:ultra\W*)?nano\W*xl
