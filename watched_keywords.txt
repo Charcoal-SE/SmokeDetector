@@ -11200,3 +11200,4 @@
 1562434449	Makyen	emailsaccountrecovery\.com
 1562434477	Makyen	supplementoffer\.info
 1562449266	Machavity	thebeardeddragons\.org
+1562452275	Makyen	fitness\W*pro\W*centre
