@@ -11208,3 +11208,4 @@
 1562458399	Makyen	[\w-]*?spellhome[\w-]*(?:\.[\w-]+\.\w+)(?#spellhome in domain-like text)
 1562462157	Makyen	templeofsuccessandlove1(?:@gmail\.com)?
 1562474829	Makyen	shineskinbd\.com
+1562474848	Makyen	mrtechhnology\.co\.in
