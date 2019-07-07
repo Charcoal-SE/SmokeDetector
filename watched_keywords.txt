@@ -11221,3 +11221,4 @@
 1562496842	Shree	invstoc\.com
 1562504184	Machavity	fullstackdeveloper2791\.blogspot\.com
 1562515931	Makyen	jigodaymailonlinecom
+1562515950	Makyen	heartset(?=\.wixsite\.com)
