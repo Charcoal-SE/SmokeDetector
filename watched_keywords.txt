@@ -11206,3 +11206,4 @@
 1562456477	Erik the Outgolfer	obaspellhome(?:@gmail\.com)?
 1562458054	Makyen	dr\W*oba
 1562458399	Makyen	[\w-]*?spellhome[\w-]*(?:\.[\w-]+\.\w+)(?#spellhome in domain-like text)
+1562462157	Makyen	templeofsuccessandlove1(?:@gmail\.com)?
