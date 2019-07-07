@@ -11223,3 +11223,4 @@
 1562515931	Makyen	jigodaymailonlinecom
 1562515950	Makyen	heartset(?=\.wixsite\.com)
 1562515976	Makyen	top\W*10\W*best
+1562516000	Makyen	zitanmuhe(?:@163\.com)?
