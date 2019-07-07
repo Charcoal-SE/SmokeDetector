@@ -11226,3 +11226,4 @@
 1562516020	Makyen	live\W*active\W*keto(\W*\d+)?
 1562523262	Makyen	24hours?\W*btc\W*doubler
 1562523282	Makyen	double\W*your\W*bitcoin
+1562540053	Byte Commander	theclickinfo\.com
