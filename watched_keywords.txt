@@ -11205,3 +11205,4 @@
 1562452313	Makyen	droseiboh12(?:@gmail\.com)?
 1562456477	Erik the Outgolfer	obaspellhome(?:@gmail\.com)?
 1562458054	Makyen	dr\W*oba
+1562458399	Makyen	[\w-]*?spellhome[\w-]*(?:\.[\w-]+\.\w+)(?#spellhome in domain-like text)
