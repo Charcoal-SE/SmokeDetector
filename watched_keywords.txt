@@ -11225,3 +11225,4 @@
 1562516000	Makyen	zitanmuhe(?:@163\.com)?
 1562516020	Makyen	live\W*active\W*keto(\W*\d+)?
 1562523262	Makyen	24hours?\W*btc\W*doubler
+1562523282	Makyen	double\W*your\W*bitcoin
