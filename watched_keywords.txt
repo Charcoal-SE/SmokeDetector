@@ -11143,7 +11143,6 @@
 1562276241	Makyen	aegis\W*vitality(?:\W*(?:keto|prior|\d+))*
 1562276261	Makyen	alpha\W*femme(?:\W*(?:keto|genix|ca))*
 1562276279	Makyen	healthfitnessskin\.com
-1562276299	Makyen	sera\W*relief(?:\W*(?:CBD|Oil))*
 1562276317	Makyen	totalhealthcares\.org
 1562296720	Machavity	litextension\.com
 1562296771	Makyen	bonafidevisa\.com

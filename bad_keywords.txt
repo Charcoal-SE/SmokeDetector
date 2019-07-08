@@ -1988,3 +1988,4 @@ utm_source=magentostackexchange
 v?irilaxyn\W*rx(?:\W*\d+)*
 (?:ultra\W*)?nano\W*xl(?:\W*\d+)*
 [\w-]*?spellhome[\w-]*(?:\W*(?:at\W*)?(?:gmail|hotmail|outlook|yahoo|live)(?:\W*(?:dot\W*)?com)?)
+sera\W*relief(?:\W*(?:CBD|Oil))*
