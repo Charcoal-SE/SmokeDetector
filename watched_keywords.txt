@@ -11230,3 +11230,4 @@
 1562562563	Makyen	office-offiicecom\.com
 1562564568	Makyen	pgc\.info
 1562565352	Makyen	cbd\W*premium\W*pure
+1562572704	Shree	sahrzad\.net
