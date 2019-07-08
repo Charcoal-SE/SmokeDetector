@@ -11210,7 +11210,6 @@
 1562474848	Makyen	mrtechhnology\.co\.in
 1562474868	Makyen	mrtech\W*enterprises
 1562475056	Machavity	greathomedepot\.com
-1562476035	Makyen	doublebitcoin24hours\.blogspot\.com/
 1562478501	Makyen	topspyingapps\.com
 1562478708	Makyen	nbafinals-live\.net
 1562479615	Makyen	(?-i:2FLRWii)
