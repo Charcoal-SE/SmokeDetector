@@ -11235,3 +11235,4 @@
 1562604104	Makyen	discountzoneca\.com
 1562604131	Makyen	renuvo(?:\w*(?:cbd|hemp|oil))+
 1562632645	Makyen	mikecryptoacademy\.com
+1562648953	Makyen	wellnesswebpro\.com
