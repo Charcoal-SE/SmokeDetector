@@ -11245,3 +11245,4 @@
 1562656525	Makyen	edisonjohnston\d+(?:@gmail\.com)?
 1562657593	Makyen	dealershiplocator\.com
 1562661147	A J	aimircg\.com
+1562668075	Glorfindel	abcooz\.com
