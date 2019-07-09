@@ -3491,7 +3491,6 @@
 1527326133	Makyen	98194064(?:38|90)
 1527326145	Makyen	Best\W*Abacus\W*Maths
 1527326363	Makyen	InkNik(?:\.com)
-1527341885	J F	cyberhelp\d*
 1527345117	iBug	eevdenevenakliyat\.org
 1527378088	Makyen	amzn\.to/2LwctZe
 1527396667	Makyen	tropical\W*travels\.ga
