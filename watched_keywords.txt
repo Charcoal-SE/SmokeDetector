@@ -11244,3 +11244,4 @@
 1562656501	Makyen	edison\W*johns?ton(?:W*hacking\W*Group)?
 1562656525	Makyen	edisonjohnston\d+(?:@gmail\.com)?
 1562657593	Makyen	dealershiplocator\.com
+1562661147	A J	aimircg\.com
