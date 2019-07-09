@@ -11253,3 +11253,4 @@
 1562692484	Makyen	(?-i:FF4KUBkrMk8BpQ5g6)
 1562692513	Makyen	sscs@gmx\.com
 1562692534	Makyen	softwaretestingboard\.com
+1562692631	Makyen	global\W*hunt\W*technologies(?!\.com(?<!globalhunttechnologies\.com))
