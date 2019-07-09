@@ -11255,3 +11255,4 @@
 1562692534	Makyen	softwaretestingboard\.com
 1562692631	Makyen	global\W*hunt\W*technologies(?!\.com(?<!globalhunttechnologies\.com))
 1562693809	Makyen	notepad\.software
+1562693834	Makyen	filezilla\.software
