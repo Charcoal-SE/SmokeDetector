@@ -11269,3 +11269,4 @@
 1562748949	Glorfindel	cabinmarket\.ca
 1562749070	Makyen	batten-machinery\.com
 1562749136	Makyen	No\W*5\W*1st\W*branch\W*lingang\W*2nd\W*road
+1562749157	Makyen	zhoushan\W*batten\W*import\W*(?:and\W*)?export
