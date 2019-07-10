@@ -11264,3 +11264,4 @@
 1562744563	Makyen	Precio\W*del\W*Dólar
 1562744587	Makyen	(?-i:2d3kyhLzsdhEtFAfA)
 1562744614	Makyen	origins\W*keto(?:\W*\d+)?
+1562745231	Makyen	treknepalhimalayas\.com
