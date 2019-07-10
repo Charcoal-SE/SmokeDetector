@@ -11288,3 +11288,4 @@
 1562759092	Makyen	picco\W*sales\W*buds(?!\.com(?<=piccosalesbuds\.com))
 1562765038	Machavity	leewayhertz\.com
 1562767396	Machavity	wellspringivfsurrogacy\.com
+1562767586	Machavity	ivf\Wtreatment
