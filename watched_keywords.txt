@@ -11260,3 +11260,4 @@
 1562733557	Makyen	jbspends\.com
 1562733598	Makyen	marathon\W*keto(?:\W*\d+)?
 1562744498	Glorfindel	drakshavalli
+1562744544	Makyen	davidosasu4(?:@gmail\.com)?
