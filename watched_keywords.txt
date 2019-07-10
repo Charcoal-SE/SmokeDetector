@@ -11272,3 +11272,4 @@
 1562749157	Makyen	zhoushan\W*batten\W*import\W*(?:and\W*)?export
 1562752052	Nisse Engström	viuom\.com
 1562752080	Nisse Engström	perfectshikhe\.com
+1562752176	Nisse Engström	esalesclub\.com
