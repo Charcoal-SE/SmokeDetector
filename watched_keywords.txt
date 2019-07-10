@@ -11280,3 +11280,4 @@
 1562754960	Makyen	id448189857
 1562754983	Makyen	id518830108
 1562755460	Makyen	leadbody\.com
+1562755633	Makyen	keto\W*jolt(?:\W*(?:favorings?|reviews?|\d+))*
