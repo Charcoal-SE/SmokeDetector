@@ -11285,3 +11285,4 @@
 1562756594	Makyen	nucentix\W*blood\W*sugar\W*gs\W*85(?:\W*review)?
 1562756613	Makyen	wiuuwook
 1562759034	Makyen	piccosalesbuds\.com
+1562759092	Makyen	picco\W*sales\W*buds(?!\.com(?<=piccosalesbuds\.com))
