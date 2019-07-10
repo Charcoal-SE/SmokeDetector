@@ -11262,3 +11262,4 @@
 1562744498	Glorfindel	drakshavalli
 1562744544	Makyen	davidosasu4(?:@gmail\.com)?
 1562744563	Makyen	Precio\W*del\W*Dólar
+1562744587	Makyen	(?-i:2d3kyhLzsdhEtFAfA)
