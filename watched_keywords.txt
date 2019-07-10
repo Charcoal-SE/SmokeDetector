@@ -11266,3 +11266,4 @@
 1562744614	Makyen	origins\W*keto(?:\W*\d+)?
 1562745231	Makyen	treknepalhimalayas\.com
 1562745285	Makyen	pandoraforgotpassword\.com
+1562748949	Glorfindel	cabinmarket\.ca
