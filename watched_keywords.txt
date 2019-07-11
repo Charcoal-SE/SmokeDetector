@@ -11303,3 +11303,4 @@
 1562846902	Glorfindel	5536\W*9137\W*5246\W*8484
 1562847512	Glorfindel	на\W*еду\W*рублей
 1562858541	Nisse Engström	nextdeal\.in
+1562866965	Nisse Engström	achtransferconsultant
