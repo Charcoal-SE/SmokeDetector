@@ -11291,3 +11291,4 @@
 1562817705	Makyen	drosasu25(?:@gmail\.com)?
 1562817728	Makyen	drogbohighspiritualspellcaster(?:@gmail\.com)?
 1562817749	Makyen	sky8g\.com
+1562820901	Makyen	keto\W*flux(?:\W*(?:reviews?|\d+))*
