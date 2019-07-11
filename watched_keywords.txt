@@ -11293,3 +11293,4 @@
 1562820901	Makyen	keto\W*flux(?:\W*(?:reviews?|\d+))*
 1562823278	Makyen	superbattestation\.com
 1562826922	Makyen	rkstudy\.com
+1562826985	Makyen	rkei2215(?:gmail\.com)?
