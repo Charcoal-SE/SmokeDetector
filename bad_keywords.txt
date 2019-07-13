@@ -1993,4 +1993,4 @@ sera\W*relief(?:\W*(?:CBD|Oil))*
 cyberhelp\d*(?:\W*(?:(?:at|via)\W*)?gmail(?:\W*(?:dot\W*)?com)?)?
 simply\W*fit\W*keto(?:\W*\d+)*
 alpha\W*femme(?:\W*(?:keto|genix|ca))*
-keto\W*jolt(?:\W*(?:favorings?|reviews?|\d+))*
+keto\W*jolt(?:\W*(?:favorings?|reviews?|diet|\d+))*
