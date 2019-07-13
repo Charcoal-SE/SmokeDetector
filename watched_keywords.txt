@@ -11276,7 +11276,6 @@
 1562754960	Makyen	id448189857
 1562754983	Makyen	id518830108
 1562755460	Makyen	leadbody\.com
-1562755633	Makyen	keto\W*jolt(?:\W*(?:favorings?|reviews?|\d+))*
 1562755651	Makyen	keto\W*bodytone(?:\W*\d+)?
 1562756594	Makyen	nucentix\W*blood\W*sugar\W*gs\W*85(?:\W*review)?
 1562756613	Makyen	wiuuwook
