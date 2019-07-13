@@ -11324,3 +11324,4 @@
 1562997094	Makyen	akadstatus\.com
 1562997121	Makyen	diet\W*anatomy\W*keto(?:\W*\d+)?
 1562998146	Makyen	xiaogcn\.com
+1562998165	Makyen	mobapkr\.org
