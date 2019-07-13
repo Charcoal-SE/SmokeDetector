@@ -150,13 +150,13 @@ Kishankant\s+Yadav
 ^cruisebay$
 ^jiansong$
 prestige\W?smart\W?city
-^tanvi agarwal$
+^(?-i:tanvi agarwal)$
 ^webdesigninghouse wdh$
 ^Niaran$
 hostingride
 bestchange
 ^Semo Diaz$
-^preeti agarwal$
+^(?-i:preeti agarwal)$
 ^gchristophergloss$
 ^Saad Aziz$
 ^Charlene Eudora$
