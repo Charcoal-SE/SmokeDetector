@@ -11352,3 +11352,4 @@
 1563049993	K.Dᴀᴠɪs	hokipasti\.com
 1563050013	K.Dᴀᴠɪs	cheatpasti\.com
 1563064688	Makyen	spellspecialistcaster937(?:@gmail\.com)?
+1563064708	Makyen	dr\W*sango
