@@ -183,3 +183,4 @@ quickbooks
 ^Ielts And Visa Tips$
 (?-i:^Tech to Review$)
 (?-i:^Multi-Programming Solutions$)
+^crossword.?2.?puzzles(\.com)?$
