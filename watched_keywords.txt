@@ -5169,7 +5169,7 @@
 1535536400	Glorfindel	thermalcameras\.guide
 1535537248	tripleee	[a-z_]*(?:1_*)?866[\W_]*395[\W_]*6999[a-z_]*
 1535538554	Glorfindel	creative-bioarray\.com
-1535538792	tripleee	creative-bio\w+
+1535538792	tripleee	creative-bio\w+\b(?!\.com(?<=creative-biostructure\.com))(?!\.com(?<=creative-biolabs\.com))(?!\.com(?<=creative-biogene\.com))(?!\.com(?<=creative-bioarray\.com))
 1535539729	tripleee	ibackpage\.com
 1535541408	tripleee	myowncats\.com
 1535542219	tripleee	tournet\.co
