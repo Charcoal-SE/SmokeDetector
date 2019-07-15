@@ -182,3 +182,4 @@ quickbooks
 (?-i:^Kavita Yadav$)
 ^Ielts And Visa Tips$
 (?-i:^Tech to Review$)
+(?-i:^Multi-Programming Solutions$)
