@@ -1995,3 +1995,4 @@ simply\W*fit\W*keto(?:\W*\d+)*
 alpha\W*femme(?:\W*(?:keto|genix|ca|\d+))*
 keto\W*jolt(?:\W*(?:favorings?|reviews?|diet|\d+))*
 keto\W*body(?:\W*(?:tone|web|\d+))*
+safe\W*meds\W*keto(?:\W*burn)?
