@@ -181,3 +181,4 @@ quickbooks
 (?-i:^Jiao Cao$)
 (?-i:^Kavita Yadav$)
 ^Ielts And Visa Tips$
+(?-i:^Tech to Review$)
