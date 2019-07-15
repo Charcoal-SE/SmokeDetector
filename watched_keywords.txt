@@ -11394,5 +11394,3 @@
 1563213565	Makyen	thesoulrider\.net
 1563213778	Makyen	uppercaseconverter\.com
 1563213800	Makyen	skincareadvisor\.org
-1563216678	Makyen	creative-biolabs\.com
-1563216699	Makyen	creative-biogene\.com
