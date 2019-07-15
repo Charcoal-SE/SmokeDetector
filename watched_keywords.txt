@@ -11386,3 +11386,4 @@
 1563213350	Makyen	salaried\W*database\W*delhi
 1563213374	Makyen	addictivetips\.com
 1563213433	Makyen	american-airlines-flights\.com
+1563213458	Makyen	renuvo(?:\W*(?:oil|cbd|\d+))*
