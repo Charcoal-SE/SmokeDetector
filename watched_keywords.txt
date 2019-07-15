@@ -11384,3 +11384,4 @@
 1563213311	Makyen	acctmanagerrobert(?:@gmail\.com)?
 1563213330	Makyen	nutonen(?:\W*(?:review|\d+))*
 1563213350	Makyen	salaried\W*database\W*delhi
+1563213374	Makyen	addictivetips\.com
