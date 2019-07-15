@@ -11388,3 +11388,4 @@
 1563213433	Makyen	american-airlines-flights\.com
 1563213458	Makyen	renuvo(?:\W*(?:oil|cbd|\d+))*
 1563213479	Makyen	dermalift(?:\W*anti\W*aging\W*cream)?
+1563213503	Makyen	sharkpills\.com
