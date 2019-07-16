@@ -11420,3 +11420,4 @@
 1563262505	Makyen	ketones?\W*science(?:\W*(?:ke(?:to)?|\d+))*
 1563263529	Makyen	phalogenics
 1563267303	double-beep	a\.m\.gurin(?:@mail\.ru)?
+1563268667	double-beep	 xingiahanvisa\.net
