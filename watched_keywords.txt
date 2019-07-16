@@ -5939,7 +5939,6 @@
 1539216582	Makyen	hackpowerpros(?:\W*(?:a\W*t\W*)?g\W*(?:e\W*)*m\W*a\W*(?:i\W*l\W*|l\W*e\W*)(?:d\W*o\W*t\W*)?c\W*o\W*m)?(?#obfuscated email + text)
 1539219067	Makyen	fuckface(?#Should add "face" suffix to the various obscenity regexes)
 1539228809	tripleee	andrew-programming\.com
-1539236108	Tetsuya Yamamoto	techsupportdubai\.com
 1539236167	Tetsuya Yamamoto	sexbrisbane\.club
 1539237024	Tetsuya Yamamoto	alphaacademicwritingservices\.com
 1539238813	Tetsuya Yamamoto	instarocketpro\.com
