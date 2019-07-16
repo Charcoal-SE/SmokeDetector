@@ -11417,3 +11417,4 @@
 1563262361	Makyen	skincareadvisor(?!\.org)
 1563262380	Makyen	(?-i:x7deem2)
 1563262400	Makyen	(?-i:IwInuvlxeAM)
+1563262505	Makyen	ketones?\W*science(?:\W*(?:ke(?:to)?|\d+))*
