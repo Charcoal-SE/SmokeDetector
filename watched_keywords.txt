@@ -11429,3 +11429,4 @@
 1563301103	Makyen	how2createafilterinphpmysql\.home\.blog
 1563283734	double-beep	appsapk\.com
 1563291030	double-beep	worksilver\.com
+1563291172	double-beep	softlogicasas\.com
