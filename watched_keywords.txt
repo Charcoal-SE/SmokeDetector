@@ -11437,3 +11437,4 @@
 1563317878	Makyen	creditscorefix(?:@repairman\.com)?
 1563317901	Makyen	repairman\.com
 1563329748	Makyen	highclassloanfund(?:@gmail\.com)?
+1563337480	Shree	fundsindia\.com
