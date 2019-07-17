@@ -10172,7 +10172,7 @@
 1558683351	double-beep	Fibre(?:\W*)?sales
 1558683702	Makyen	^Anuj$
 1558689609	double-beep	decoenligne\.org
-1558693619	double-beep	fantasy\W*power\W*11
+1558693619	double-beep	fantasy\W*power\W*11(?!\.com(?<=fantasypower11\.com))
 1558695209	tripleee	collegelifenetwork\.com
 1558695354	tripleee	10bestrated\.com
 1558697005	tripleee	amxdetectives\.com
