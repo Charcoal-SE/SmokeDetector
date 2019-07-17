@@ -1997,4 +1997,3 @@ keto\W*body(?:\W*(?:tone|web|\d+))*
 safe\W*meds\W*keto(?:\W*burn)?
 ezytone(?:\W?detox(?:\W?patch)?)?
 aegis\W*vitality(?:\W*(?:keto|prior|\d+))*
-staminamaker\.com
