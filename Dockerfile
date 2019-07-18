@@ -9,4 +9,4 @@ RUN adduser --disabled-password --force-badname smokey --gecos smokey && \
     pip3 install -r ~smokey/SmokeDetector/requirements.txt --upgrade && \
     rm -rf /root/* /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-CMD ["su", "--login", "smokey", "-c", "/home/smokey/SmokeDetector/docker-startup.sh"]
+CMD ["su", "--login", "smokey", "-c", "/home/smokey/SmokeDetector/docker-startup.sh standby"]
