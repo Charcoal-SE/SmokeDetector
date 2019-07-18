@@ -1998,3 +1998,4 @@ safe\W*meds\W*keto(?:\W*burn)?
 ezytone(?:\W?detox(?:\W?patch)?)?
 aegis\W*vitality(?:\W*(?:keto|prior|\d+))*
 markmoelloanhouse(?:@hotmail\.com)?
+proline\W*keto
