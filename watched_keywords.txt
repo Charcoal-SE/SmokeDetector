@@ -11461,3 +11461,4 @@
 1563435085	Makyen	gutunala
 1563435103	Makyen	s5ux5mou
 1563435125	Makyen	mega\W*keto(?:\W*\d+)?
+1563435146	Makyen	letsfindtoday(?!\.com)
