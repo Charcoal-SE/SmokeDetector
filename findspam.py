@@ -119,7 +119,7 @@ URL_REGEX = regex.compile(
     r"""|\b(?:(?:[A-Za-z\u00a1-\uffff0-9]-?)*[A-Za-z\u00a1-\uffff0-9]+)(?:\.(?:[A-Za-z\u00a1-\uffff0-9]-?)"""
     r"""*[A-Za-z\u00a1-\uffff0-9]+)*(?:\.(?:[A-Za-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:/\S*)?""", regex.U)
 TAG_REGEX = regex.compile(r"</?[abcdehiklopsu][^>]*?>|\w+://", regex.U)
-NUMBER_REGEX = regex.compile(r'(?<=\D|^)\+?(?:\d[\W_]*){8,13}\d(?=\D|$)', regex.U | regex.I)
+NUMBER_REGEX = regex.compile(r'(?<=\D|^)\+?(?:\d[\W_]*){8,19}\d(?=\D|$)', regex.U | regex.I)
 
 UNIFORM = math.log(1 / 36)
 UNIFORM_PRIOR = math.log(1 / 5)
