@@ -11467,3 +11467,4 @@
 1563435359	Makyen	readingstuffs
 1563435380	Makyen	sf180\W*keto
 1563438753	Makyen	cancer-oncology\.cmesociety\.com
+1563438774	Makyen	pulsusglobal\.com
