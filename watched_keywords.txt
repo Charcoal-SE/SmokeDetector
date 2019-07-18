@@ -11119,7 +11119,6 @@
 1562276033	Makyen	trastra\.com
 1562276077	Makyen	sachinglobalmarketing(?:@gmail\.com)?
 1562276279	Makyen	healthfitnessskin\.com
-1562296720	Machavity	litextension\.com
 1562296771	Makyen	bonafidevisa\.com
 1562301062	Makyen	trainingpune\.in
 1562308214	Makyen	freetempsms\.com
