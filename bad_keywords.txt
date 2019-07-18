@@ -1824,7 +1824,7 @@ ultra\W?sk
 gentiv\W?ultra
 kiss\W?anime
 dark\W?net\W?markets(?:\W?link)?
-braindumps?4it
+braindumps?4it(?!\.com(?<=braindumps4it\.com))
 breast\W?actives?
 bioW?tech\W?pro
 duraflex
