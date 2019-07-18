@@ -11457,3 +11457,4 @@
 1563433349	Makyen	msbi\W*online\W*training
 1563432440	double-beep	tegutoys\.ae
 1563433975	double-beep	giasuinfo\.com
+1563434347	Makyen	(?-i:dtfd0\.jpg)
