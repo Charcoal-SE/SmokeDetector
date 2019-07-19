@@ -11491,3 +11491,4 @@
 1563513077	Shree	southbankundercroft\.com
 1563515433	tripleee	woo\W?paylabs(?:\W?amazonpay)?
 1563515455	tripleee	clicksubhadeep
+1563516701	Shree	inlinguabangalore\.com
