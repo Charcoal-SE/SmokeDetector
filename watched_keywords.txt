@@ -11490,3 +11490,4 @@
 1563441174	double-beep	m-arabi\.com
 1563513077	Shree	southbankundercroft\.com
 1563515433	tripleee	woo\W?paylabs(?:\W?amazonpay)?
+1563515455	tripleee	clicksubhadeep
