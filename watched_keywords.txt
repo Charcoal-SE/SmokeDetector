@@ -11510,3 +11510,4 @@
 1563533309	tripleee	ecomoney-ssd\.com
 1563533340	tripleee	eco\W*money\W*ssd
 1563534399	tripleee	photoandvideoedits\.com
+1563539729	Machavity	(?-i:^Byekhen$)
