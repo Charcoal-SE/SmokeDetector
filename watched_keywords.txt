@@ -11492,3 +11492,4 @@
 1563515433	tripleee	woo\W?paylabs(?:\W?amazonpay)?
 1563515455	tripleee	clicksubhadeep
 1563516701	Shree	inlinguabangalore\.com
+1563519418	tripleee	gurgaonclinics\.com
