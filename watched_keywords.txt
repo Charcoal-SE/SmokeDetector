@@ -9394,7 +9394,7 @@
 1555584134	Glorfindel	sinemafilms
 1555589702	Shree	kazimaperfumers\.in
 1555592827	Glorfindel	dumps4prep
-1555612495	Makyen	cservices\.uk@protonmail\.ch
+1555612495	Makyen	cservices\.uk(?:@protonmail\.ch)?
 1555620526	Makyen	beytullah\.net
 1555620559	Makyen	beytullahdotnet
 1555620648	Makyen	develop-commercial-automations-with-entity-framework-devexpress-and-c
@@ -11487,5 +11487,4 @@
 1563485510	Makyen	speakjunction\.com
 1563489190	Makyen	iconcreditrepair(?:@gmail.com)?
 1563507749	Machavity	isportsapi\.com
-1563511416	Shree	cservices\.uk
 1563441174	double-beep	m-arabi\.com
