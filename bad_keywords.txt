@@ -2000,3 +2000,4 @@ aegis\W*vitality(?:\W*(?:keto|prior|\d+))*
 markmoelloanhouse(?:@hotmail\.com)?
 proline\W*keto
 на\W*еду\W*рублей
+tutanota
