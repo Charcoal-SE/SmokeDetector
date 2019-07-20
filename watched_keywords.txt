@@ -11529,3 +11529,4 @@
 1563607070	Makyen	/@getrappl
 1563607097	Makyen	getrappeltepetrolgamescom\.over-blog\.com
 1563614354	Makyen	ketoviantesf\.blogspot\.com
+1563614389	Makyen	(\d+\W*)?garcinia\W*vita(?:\W*(?:scam|review|uk|\d+))*
