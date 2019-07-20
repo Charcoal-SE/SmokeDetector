@@ -11545,3 +11545,4 @@
 1563615539	Makyen	f[na]{2}f\W*world\W*download(?!\.com(?<=fanfworlddownload\.com))(?:\W*free)?
 1563615676	Makyen	churchofilluminatiinitiation(?:@gmail\.com)?
 1563621704	Glorfindel	nuralife\.com
+1563637150	double-beep	mtvvma2019\.live
