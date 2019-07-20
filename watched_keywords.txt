@@ -11522,3 +11522,4 @@
 1563598522	Makyen	sydneycitysigns\.com\.au
 1563598595	Makyen	buildamasjid\.net
 1563600428	Makyen	searchenginejournal\.com
+1563600448	Makyen	canon80d\.com
