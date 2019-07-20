@@ -11542,3 +11542,4 @@
 1563614832	Makyen	atmmachine137(?:@gmail\.com)?
 1563614899	Makyen	coworkrz\.com
 1563615490	Makyen	fanfworlddownload\.com
+1563615539	Makyen	f[na]{2}f\W*world\W*download(?!\.com(?<=fanfworlddownload\.com))(?:\W*free)?
