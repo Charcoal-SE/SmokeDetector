@@ -11564,3 +11564,4 @@
 1563726746	Makyen	maxoel\W*yachts
 1563726765	Makyen	diziti\.com
 1563726786	Makyen	vote-onlin\.com
+1563727037	Makyen	wuhu\W*paiers(?!\.com(?<=wuhu-paiers\.com))(?:\W*commodity\W*co\W*ltd)?
