@@ -2002,3 +2002,4 @@ proline\W*keto
 на\W*еду\W*рублей
 tutanota
 buy, sell and use Libra cryptocurrency. All information in one place
+supercut(?:\W?keto)?
