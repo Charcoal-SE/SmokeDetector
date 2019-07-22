@@ -11603,3 +11603,4 @@
 1563834779	Makyen	20to20\.biz
 1563834811	Makyen	dlfun\.ir
 1563834841	Makyen	downloadbazan\.ir
+1563834877	Makyen	zamennews\.ir
