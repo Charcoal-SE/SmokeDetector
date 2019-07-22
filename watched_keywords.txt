@@ -11572,3 +11572,4 @@
 1563772109	Makyen	jmc\W*car\W*transport(?:ation)?
 1563773299	tripleee	surveyinfoz\.com
 1563773346	tripleee	mariosmsk\.com
+1563773370	tripleee	helpmeta\.blogspot
