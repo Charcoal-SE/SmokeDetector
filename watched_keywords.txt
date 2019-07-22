@@ -11502,7 +11502,6 @@
 1563533309	tripleee	ecomoney-ssd\.com
 1563533340	tripleee	eco\W*money\W*ssd
 1563534399	tripleee	photoandvideoedits\.com
-1563539729	Machavity	(?-i:^Byekhen$)
 1563540796	Machavity	hackerkelvinmckinnon\d*(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?(?#hackerkelvinmckinnon14489 seen)
 1563546550	double-beep	mjklutybyda(?:@gmail\.com)?
 1563549548	Makyen	bestbuyerguides\.com

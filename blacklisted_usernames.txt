@@ -185,3 +185,4 @@ quickbooks
 (?-i:^Multi-Programming Solutions$)
 ^crossword.?2.?puzzles(\.com)?$
 (?-i:^Kate White$)
+(?-i:^Byekhen$)
