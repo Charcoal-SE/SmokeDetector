@@ -11571,3 +11571,4 @@
 1563772087	tripleee	fabulamaps\.com
 1563772109	Makyen	jmc\W*car\W*transport(?:ation)?
 1563773299	tripleee	surveyinfoz\.com
+1563773346	tripleee	mariosmsk\.com
