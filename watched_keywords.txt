@@ -5681,7 +5681,6 @@
 1538026607	Tetsuya Yamamoto	lobachemie\.com
 1538026659	Tetsuya Yamamoto	maydoduonghuyet\.net\.vn
 1538029927	Tetsuya Yamamoto	diwaliimages2018\.site
-1538038935	Tetsuya Yamamoto	jmcargoindia\.com
 1538042678	iBug	paraglow(?!\W?cream)
 1538045548	Shree	besttrailcamerapro\.com
 1538047283	tripleee	[a-z_]*(?:234_*)?7089275769[a-z_]*
