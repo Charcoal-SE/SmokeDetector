@@ -11599,3 +11599,4 @@
 1563812777	Machavity	(?-i:^Muhammad Waqar$)
 1563818617	Makyen	cybergoldpro(?:@(?:gmail|outlook)\.com)?
 1563818639	Makyen	cybergoldprofessional
+1563827889	Glorfindel	fineapkapps\.com
