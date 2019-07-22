@@ -4100,7 +4100,7 @@
 1530345013	Makyen	bestringtonesfree\.net
 1530345112	Makyen	watchstreamvsliveonline\.com
 1529923214	A J	tiaracle\.com
-1530346826	Makyen	wizardcyprushacker(?:@gmail.com)?
+1530346826	Makyen	wizardcyprushacker(?:@gmail\.com)?
 1530349477	Makyen	tops-int\.com
 1530352029	Makyen	organic\W?fungus\W?nuker
 1530352385	Makyen	yeshopy\.com
@@ -4354,7 +4354,7 @@
 1531715198	Tetsuya Yamamoto	fordbinhdinh\.net
 1531715708	Tetsuya Yamamoto	thunkapp\.com
 1531715814	Tetsuya Yamamoto	thunksoftware
-1531718708	Makyen	\W*(?:>>>+|@+>>+|@@+>+|== *>>+|={4,}|===>+|= = =|(?:Read More|Click Here)).{0,20}https?://(?!(?:i\.stack\.imgur\.com|(?:[\w-]+\.)*(?:(?:stack(?:exchange|overflow)|superuser|serverfault|askubuntu|stackapps|google|w3schools|javarevisited.blogspot|github)\.com|(?:mathoverflow|sstatic)\.net|(?:(?:archive|mozilla|scikit-learn)\.org))))(?!(?:[^<]|<[^c]|<c[^o]|<co[^d]|<cod[^e]|<code[^>])*?</code>)(?=.{201,}$)(?#Test adjustment to link following arrow, allowing for links further from the end of the post.)
+1531718708	Makyen	\W*(?:>>>+|@+>>+|@@+>+|== *>>+|={4,}|===>+|= = =|(?:Read More|Click Here)).{0,20}https?://(?!(?:i\.stack\.imgur\.com|(?:[\w-]+\.)*(?:(?:stack(?:exchange|overflow)|superuser|serverfault|askubuntu|stackapps|google|w3schools|javarevisited\.blogspot|github)\.com|(?:mathoverflow|sstatic)\.net|(?:(?:archive|mozilla|scikit-learn)\.org))))(?!(?:[^<]|<[^c]|<c[^o]|<co[^d]|<cod[^e]|<code[^>])*?</code>)(?=.{201,}$)(?#Test adjustment to link following arrow, allowing for links further from the end of the post.)
 1531722754	Tetsuya Yamamoto	ludokinggames\.com
 1531722813	Makyen	carogallo\.\w*\.com
 1531722997	iBug	happywheelshappy\.com
@@ -4477,7 +4477,7 @@
 1532176611	Glorfindel	techmazza\.com
 1532178290	A J	abroadimmigration\.com
 1532186389	Glorfindel	govtjobalertindia\.blogspot\.com
-1532193256	Makyen	dr\.obho(?:greatspell(?:@gmail.com)?)?
+1532193256	Makyen	dr\.obho(?:greatspell(?:@gmail\.com)?)?
 1532193286	Makyen	live4k-sports\.blogspot\.com
 1532211320	Makyen	sweetupdate\.com
 1532231516	Makyen	areazipcode\.org
@@ -4574,7 +4574,7 @@
 1532684867	Makyen	ismyprivatekeysafe\.com
 1532685348	Makyen	counselorindelhi\.in
 1532685382	Makyen	vestureindia\.com
-1532685597	Makyen	freedomsat.co(?:m|\.uk)
+1532685597	Makyen	freedomsat\.co(?:m|\.uk)
 1532686092	Makyen	experienceumrah\.co\.uk
 1532685748	bertieb	embeddedschool\.in
 1532688307	Makyen	freesteamcodesnosurvey\.com
@@ -4842,7 +4842,7 @@
 1533902897	Zoe	btcbinaryhacks
 1533903545	Zoe	gotouniversity(?:\.com)?
 1533903848	Zoe	revacalibration\.com
-1533919894	Makyen	bhargavanathareddy.wixsite.com
+1533919894	Makyen	bhargavanathareddy\.wixsite\.com
 1533919905	Makyen	driversepson\.com
 1533952323	Makyen	monitorywizard247(?:@gmail\.com)?
 1533965718	Tetsuya Yamamoto	bestreading\.club
@@ -4877,7 +4877,7 @@
 1534209750	Tetsuya Yamamoto	simplyhealthyfamily\.org
 1534215864	Makyen	eejacn\.com
 1534215874	Makyen	xingtuo\.en\.alibaba\.com
-1534215882	Makyen	www.eejafr\.com
+1534215882	Makyen	eejafr\.com
 1534215891	Makyen	EEJA\W*(?:Machinery|XT)
 1534215899	Makyen	Foshan\W(?:DECI|Naihai)
 1534215925	Makyen	jobfusion\.in
@@ -5213,7 +5213,7 @@
 1535706918	Tetsuya Yamamoto	spycardssort\.com
 1535708895	tripleee	tele\W*consultation\W*services?
 1535711662	tripleee	Onlyoneyoulove
-1535715728	micsthepick	iqtestonline.net
+1535715728	micsthepick	iqtestonline\.net
 1535719884	iBug	wordpressdeveloperonline\.com
 1535734753	Thomas Ward	Evil-?Droid
 1535741855	doppelgreener	base\.info
@@ -5430,7 +5430,7 @@
 1536798920	Makyen	elizabethcole3222(?:@yahoo\.com)?
 1536812231	tripleee	741003700
 1536819472	Makyen	audacitydownload\.com
-1536824675	Makyen	247recovery@tech-center.com
+1536824675	Makyen	247recovery@tech-center\.com
 1536825811	Glorfindel	freshcalendars\.com
 1536826389	Tetsuya Yamamoto	hotelbedding-newcon\.com
 1536826402	Tetsuya Yamamoto	hotelsupplies-newcon\.com
@@ -5527,7 +5527,7 @@
 1537308143	Makyen	237682929882(?#whatsapp)
 1537308156	Makyen	Lufaca312
 1537326669	Tetsuya Yamamoto	adminieltsbristishonline\.wordpress
-1537328314	Makyen	wiserone224(?:@gmail.com)?
+1537328314	Makyen	wiserone224(?:@gmail\.com)?
 1537328332	Makyen	237[\W_]*683775558(?#whatsapp)
 1537328360	Makyen	1I-ZjZaTXZs(?#youtube video; IELTS & TOEFL, ESOL certificate spammer)
 1537334320	tripleee	wowblackfriday\.com
@@ -5624,7 +5624,7 @@
 1537795886	Glorfindel	excelunlockertool\.com
 1537798224	Glorfindel	tongkhomica\.com
 1537814534	Makyen	allblogsite\.com
-1537816346	Byte Commander	mcentertainment.org
+1537816346	Byte Commander	mcentertainment\.org
 1537816512	Byte Commander	atlanta\W+strip(pers|\W+clubs)
 1537853718	tripleee	[a-z_]*(?:237_*)?697930531[a-z_]*
 1537853730	tripleee	originaldocuments\d+
@@ -6805,7 +6805,7 @@
 1543320077	Shree	ariamedtour\.com
 1543326380	tripleee	padkala\.com
 1543328112	tripleee	allitexpert\.com
-1543337438	Makyen	\W*<a (?!href="https://i.stack.imgur.com/)[^>]+>(?:[^<]|<[^/]|</[^a])*error code 0x[0-9a-f]+(?#Error code in link text)
+1543337438	Makyen	\W*<a (?!href="https://i\.stack\.imgur\.com/)[^>]+>(?:[^<]|<[^/]|</[^a])*error code 0x[0-9a-f]+(?#Error code in link text)
 1543344548	NobodyNada	driversupport\.com
 1543345421	Makyen	realnotesonly(?:@gmail\.com)?
 1543345549	Makyen	abhisheksharma\.online
@@ -6974,7 +6974,7 @@
 1544017639	Glorfindel	pharmaxchange\.info
 1544025664	Makyen	01861c2d9cd9076cc9(?#an upwork profile)
 1544025685	Makyen	safetradebinaryoptions\.com
-1544030152	Makyen	unity3d.com/partners/[\w.-]*\?_ga=(?#paid partnership link)
+1544030152	Makyen	unity3d\.com/partners/[\w.-]*\?_ga=(?#paid partnership link)
 1544038694	Makyen	newresponsivetheme\.com
 1544039833	Makyen	bodyologycenter\.com
 1544039896	Zoe	Bodyology\W*Center
@@ -7022,7 +7022,7 @@
 1544324468	Makyen	anonymous\W*(?:dot\W*)?squadd\W*(?:at\W*)?gmail\W*(?:dot\W*)?com(?#Obfuscated anonymous.squadd@gmail.com)
 1544337679	Shree	voodoospell\d*(?:@gmail\.com)
 1544351547	Makyen	^\s*<p>\s*(?:</?\w+/?>\s*)*<a href="(?:(?:[a-z]+:)?//(?:[^" >/.]*\.)*(?:youtube\.com|youtu\.be)[/"])\W*(?![\W\w]*?</(?:code|blockquote)>)(?#Separate start with youtube watch; lower TP rate, but most TP are not otherwise detected)
-1544351575	Makyen	^\s*<p>\s*(?:</?\w+/?>\s*)*<a href="(?!(?:[a-z]+:)?//(?:[^" >/.]*\.)*(?:(?:quora|medium|googleusercontent|youtube|microsoft|unity3d|wso|merriam-webster|oracle|magento|example|apple|google|github|imgur|stackexchange|stackoverflow|serverfault|superuser|askubuntu)\.com|(?:(?:lvcharts|php|jsfiddle|mathoverflow)\.net)|github\.io|youtu.be|edu|(?:(?:drupal|python|isc|khronos|mongodb|open-std|dartlang|apache|pydata|gnu|js|wordpress|wikipedia)\.org))[/"])\W*(?![\W\w]*?</(?:code|blockquote)>)
+1544351575	Makyen	^\s*<p>\s*(?:</?\w+/?>\s*)*<a href="(?!(?:[a-z]+:)?//(?:[^" >/.]*\.)*(?:(?:quora|medium|googleusercontent|youtube|microsoft|unity3d|wso|merriam-webster|oracle|magento|example|apple|google|github|imgur|stackexchange|stackoverflow|serverfault|superuser|askubuntu)\.com|(?:(?:lvcharts|php|jsfiddle|mathoverflow)\.net)|github\.io|youtu\.be|edu|(?:(?:drupal|python|isc|khronos|mongodb|open-std|dartlang|apache|pydata|gnu|js|wordpress|wikipedia)\.org))[/"])\W*(?![\W\w]*?</(?:code|blockquote)>)
 1544398401	Makyen	swftoapkconverter\.com
 1544406739	Makyen	batikprasetyo\.com
 1544406846	Makyen	batikaqila\.com
@@ -7177,7 +7177,7 @@
 1545114506	Tetsuya Yamamoto	dpgpapers\.com
 1545115789	Tetsuya Yamamoto	selectconcierge\.com
 1545117096	Tetsuya Yamamoto	unidax\.com
-1545119372	Makyen	(?s:\W*\$109.95.{0,400}?periods?|periods?.{0,400}?\$109.95)
+1545119372	Makyen	(?s:\W*\$109\.95.{0,400}?periods?|periods?.{0,400}?\$109\.95)
 1545120858	Shree	michaelnordmannloanfirm(?:@gmail\.com)
 1545120872	tripleee	fincarebank\.com
 1545121540	tripleee	websiteforstudents\.com
@@ -7235,8 +7235,8 @@
 1545443767	Makyen	BOBHACKER911(?:\W*GMA)?
 1545457329	NobodyNada	hopetutors\.com
 1545473302	Shree	activedevelopment\.com
-1545475534	Glorfindel	alliancepublicadjusters.com
-1545475545	Glorfindel	techkabir.com
+1545475534	Glorfindel	alliancepublicadjusters\.com
+1545475545	Glorfindel	techkabir\.com
 1545488380	Glorfindel	capthatt\.com
 1545492549	rene	wealthchn\.com
 1545526867	Makyen	dealerkit\.co
@@ -7616,7 +7616,7 @@
 1547708141	tripleee	fashion2day\.co\.uk
 1547710291	tripleee	alpha\W?omega\W?inc
 1547711288	tripleee	wismad\.com
-1547715946	Tetsuya Yamamoto	united.airlines-phonenumber\.com
+1547715946	Tetsuya Yamamoto	united\.airlines-phonenumber\.com
 1547717466	Tetsuya Yamamoto	hite-engineering\.com
 1547717661	tripleee	creative\W?bio
 1547717808	tripleee	bio\W?array
@@ -7682,7 +7682,7 @@
 1548052095	Tetsuya Yamamoto	earsmate\.com
 1548052590	Makyen	realdealsupply\.com
 1548052620	Makyen	webhostingbuddy\.com
-1548052960	Makyen	blackmarket.us.uk(?:@gmail\.com)?
+1548052960	Makyen	blackmarket\.us\.uk(?:@gmail\.com)?
 1548052961	Makyen	black\W*market\W*chemicals
 1548052967	tripleee	black\W?market
 1548053878	Tetsuya Yamamoto	netpoint\.systems
@@ -7924,7 +7924,7 @@
 1549130358	Makyen	z97\.ir
 1549130375	Makyen	freeproductkeys\.org
 1549177159	Makyen	techiecheez\.com
-1549192556	Zoe	cosine.website
+1549192556	Zoe	cosine\.website
 1549214744	Zoe	artheducation\.com
 1549214862	Rob	leons@ironsrc\.com
 1549215501	Makyen	shorelineamphitheatretickets\.info
@@ -7953,7 +7953,7 @@
 1549355579	Shree	thehillside\.co\.in
 1549356770	Shree	sunvilla\.in
 1549363310	Shree	jobsforeveryonehere\.blogspot\.com
-1549369511	Shree	www.nascarlivetv\.com
+1549369511	Shree	nascarlivetv\.com
 1549371337	Makyen	(?-i:JKYycmcgT3s)(?#YouTube video; self-promotion)
 1549371352	Makyen	bit\.ly/(?-i:2MUZpQC)(?#entrancezone.com)
 1549371361	Makyen	entrancezone\.com
@@ -8073,7 +8073,7 @@
 1549916206	doppelgreener	daviddocumentconsultant
 1549916213	doppelgreener	david\.powell554
 1549927845	Makyen	chamberc564(?:@yahoo\.com)?
-1549927849	Makyen	wonga.investment(?:@gmail\.com)?
+1549927849	Makyen	wonga\.investment(?:@gmail\.com)?
 1549927854	Makyen	drfrank1238(?:@gmail\.com)?
 1549885643	bertieb	beeindia\.in
 1549938862	Makyen	vex-3\.com
@@ -8101,7 +8101,7 @@
 1550085753	Makyen	techczargroup\.com
 1550085769	Makyen	mygreet\.in
 1550090976	Makyen	jadootv\.com
-1550101351	Makyen	ceton.live-ff\.info
+1550101351	Makyen	ceton\.live-ff\.info
 1550118926	Sonic the Introverted Hedgehog	yaalherman\.com
 1550122341	Shree	cuencacigars\.com
 1550125367	Tetsuya Yamamoto	globalexpressdocuments\.com
@@ -8189,8 +8189,8 @@
 1550554491	Shree	cupidlove\.potenzaglobalsolutions\.com
 1550556816	Shree	nestvalonline\.org
 1550558330	Shree	picsurely\.com
-1550559951	Makyen	(?-i:u9Pve.jpg)(?#i.stack.imgur.com spam)
-1550559959	Makyen	(?-i:WYuIl.png)(?#i.stack.imgur.com spam)
+1550559951	Makyen	(?-i:u9Pve\.jpg)(?#i.stack.imgur.com spam)
+1550559959	Makyen	(?-i:WYuIl\.png)(?#i.stack.imgur.com spam)
 1550560279	Shree	txbrewing\.com
 1550562157	Makyen	littlegreenman93(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
 1550564390	Shree	marveledu\.com
@@ -8369,7 +8369,7 @@
 1551349227	Makyen	mersad\W?web
 1551353310	tripleee	woodenstreet\.co\.uk
 1551362654	Nisse Engström	Fitbeauty365\.com
-1551380012	Glorfindel	dantri.com
+1551380012	Glorfindel	dantri\.com
 1551392141	Makyen	americaloancompany242(?:@gmail\.com)?
 1551405754	Makyen	clippingpathperfectionist\.com
 1551413606	Makyen	mayankchandel\.co\.nf
@@ -8467,7 +8467,7 @@
 1551946355	tripleee	syossetjerichotribune\.com
 1551952636	tripleee	line4choice\.com
 1551954063	tripleee	123hp-com\.com
-1551957338	Shree	vocational-courses\.co.\in
+1551957338	Shree	vocational-courses\.co\.in
 1552021869	Makyen	themarketingheaven\.com
 1552022931	tripleee	zohosites
 1552022984	tripleee	home\.blog
@@ -8657,7 +8657,7 @@
 1552638713	tripleee	bhb
 1552641125	tripleee	srkresidency\.com
 1552642870	tripleee	stacy\W?seo(?:\W?marketing)?
-1552647580	tripleee	krhicranes.com
+1552647580	tripleee	krhicranes\.com
 1552648468	tripleee	foligrow?(?:\W?xt)?
 1552648565	tripleee	cagatay\W?ulusoy
 1552650116	tripleee	beautyshealthy\.com
@@ -8918,7 +8918,7 @@
 1553703961	Glorfindel	alter-solutions\.de
 1553743335	Makyen	bigdatacloud\.net
 1553744248	Makyen	couponforless\.com
-1553744278	Makyen	coastmentalhealth.com
+1553744278	Makyen	coastmentalhealth\.com
 1553744307	Makyen	coast\W*mental\W*health
 1553748092	Makyen	merosa@india\.com
 1553748122	Makyen	merosa@firemail\.cc
@@ -8983,7 +8983,7 @@
 1554064883	Makyen	osam\.sid(?:@gmail\.com)?
 1554072277	Makyen	odungaspelltemple(?:@gmail\.com)?
 1554078301	Makyen	finessehackers\.com
-1554078349	Makyen	finessehackers@gmail.com
+1554078349	Makyen	finessehackers@gmail\.com
 1554095144	Shree	mcjbazaar\.com
 1554097632	Makyen	klinik-aborsiaman\.com
 1554102853	Zoe	delhiescorts\.club
@@ -9084,7 +9084,7 @@
 1554424797	Makyen	xn--ygba1c
 1554424821	Makyen	fastpassportproducers\d*(?:@gmail\.com)?
 1554424840	Makyen	REALPASSPORT24
-1554432777	Makyen	(?-i:KGmWC.jpg)
+1554432777	Makyen	(?-i:KGmWC\.jpg)
 1554432799	Makyen	henhousesecure(?:@gmail\.com)?
 1554432821	Makyen	templerun3\.co
 1554434087	Makyen	سكس
@@ -9146,7 +9146,7 @@
 1554604417	Makyen	piano-reviews\.com
 1554604440	Makyen	doctorbatorsolutiontemple(?:@gmail\.com)?
 1554631454	Nisse Engström	mycoaching\.in
-1554657358	Makyen	20to20.ir
+1554657358	Makyen	20to20\.ir
 1554664891	Makyen	com\.encrypt\.bit\.socialmedialocker\.app
 1554673560	Makyen	andyroid\.mihanblog\.com
 1554691444	Makyen	webnovel\.online
@@ -9278,7 +9278,7 @@
 1555145492	Makyen	webezy\.co\.uk
 1555145518	Makyen	slot44\.online
 1555147990	Olivia	countoflanguages\.com
-1555150901	Glorfindel	newbaroque.org
+1555150901	Glorfindel	newbaroque\.org
 1555150971	Glorfindel	seostart\.co
 1555151662	Glorfindel	steuersoftware-tests\.de
 1555179132	Zoe	karmablackhair\.com
@@ -9347,7 +9347,7 @@
 1555466618	Makyen	伪造
 1555475969	Makyen	Osauyilovespell(?:@yahoo\.com)?
 1555475996	Makyen	Osauyilovgespellhelp(?:@gmail\.com)?
-1555481441	John Dvorak	http://www.motobolapoker.poker/
+1555481441	John Dvorak	motobolapoker\.poker
 1555488381	Glorfindel	tiredeets\.com
 1555494663	Makyen	/projects/aboleo/aboleo(?#kickstarter)
 1555494690	Makyen	butterfly-backup\.readthedocs\.io
@@ -9461,7 +9461,7 @@
 1555925709	Makyen	kathyrichardfinance(?:@hotmail\.com)?
 1555926333	double-beep	sofidial\.com
 1555929206	Olivia	csschopper\.com
-1555928589	double-beep	ielts.qualifications77(?:@yahoo\.com)?
+1555928589	double-beep	ielts\.qualifications77(?:@yahoo\.com)?
 1555929522	Olivia	ieltsonline30(?:@gmail\.com)?
 1555930356	bertieb	fullcircleeducation\.in
 1555930957	Olivia	Full\W*Circle\W*Education
@@ -9535,7 +9535,7 @@
 1556260004	Makyen	(?-i:2PyxMvB)(?#bit.ly)
 1556260032	Makyen	binaryfolks\.com
 1556261730	Shree	felix-its\.com
-1556262266	tripleee	www-tutuapp.com
+1556262266	tripleee	www-tutuapp\.com
 1556262375	tripleee	live\W?net\W?tv
 1556262414	tripleee	showbox
 1556264359	tripleee	listsituspoker\.com
@@ -10099,7 +10099,7 @@
 1558453576	Machavity	010innovations\.com
 1558454391	Makyen	adilegal\.com
 1558454420	Makyen	tools\.pingdom\.com
-1558454438	Makyen	gearhunts.com
+1558454438	Makyen	gearhunts\.com
 1558454746	Makyen	custompackagingpro\.com
 1558458927	Machavity	fonvirtual\.com
 1558456433	double-beep	dr\.uwenboherbalhome(?:@gmail\.com)?
@@ -10175,7 +10175,7 @@
 1558705080	Machavity	13mscreativeagency\.com
 1558707413	Zoe	appsaraby\.com
 1558719980	Makyen	wpdevpowers\.com
-1558729206	Makyen	i\.stack\.imgur\.com/(?-i:YE9Ue.jpg)
+1558729206	Makyen	(?-i:YE9Ue\.jpg)
 1558735097	Olivia	strawhatmanga\.com
 1558772094	Makyen	nfjkwdkufjfw\.tumblr\.com
 1558772108	Makyen	zapworld\.in
@@ -10245,8 +10245,8 @@
 1559059434	double-beep	jpg4png\.com
 1559068923	double-beep	unappliances\.com
 1559082490	Erik the Outgolfer	Skunkdoctoe?r\d*(?:@gmail\.com)?
-1559083104	Makyen	(?-i:7rUAn.jpg)
-1559083121	Makyen	(?-i:RfAuB.jpg)
+1559083104	Makyen	(?-i:7rUAn\.jpg)
+1559083121	Makyen	(?-i:RfAuB\.jpg)
 1559087391	Makyen	(?:(?-i:D)SOM(?=.*\bmarketing\b)|(?:\bmarketing\b.*)(?-i:D)SOM)
 1559087437	Makyen	indianhotdeal\.com
 1559095938	Machavity	^ECHO HAN$
@@ -10256,7 +10256,7 @@
 1559106255	Makyen	الشيخ الروحاني
 1559109824	Makyen	admissionblock\.com
 1559109843	Makyen	soleermetico\.com
-1559109866	Makyen	forum.mtasa\.com
+1559109866	Makyen	forum\.mtasa\.com
 1559109889	Makyen	identity-france\.fr
 1559109909	Makyen	orbxsystems\.com
 1559109929	Makyen	rccsonline\.com
@@ -10404,7 +10404,7 @@
 1559796374	tripleee	aobindia\.com
 1559798371	tripleee	emailnumbersupport\.com
 1559798537	Makyen	(?-i:ZGyOcrgRbQTgPg)
-1559801582	Makyen	(?-i:o7TSD.png)(?#i.stack.imgur.com)
+1559801582	Makyen	(?-i:o7TSD\.png)(?#i.stack.imgur.com)
 1559801601	Makyen	jasonlong2007s(?:@gmail\.com)
 1559801619	Makyen	rocsalrow
 1559801638	Makyen	snooth\.com
@@ -10974,7 +10974,7 @@
 1561825986	Makyen	delver\W*research\W*(?:and\W*)?analytic\W*solution
 1561826104	Makyen	chairsadvisor\.com
 1561826240	Makyen	tour\W*travel\W*360(?!\.com(?<=tourtravel360\.com))
-1561834381	Makyen	(?-i:N0keg.jpg)
+1561834381	Makyen	(?-i:N0keg\.jpg)
 1561834399	Makyen	ag7144427(?:@gmail\.com)?
 1561841556	Makyen	healthdio\.com
 1561882214	Nisse Engström	bookishrestaurant\.com
@@ -11010,7 +11010,7 @@
 1562049164	Shree	albawadimetals\.com
 1562050268	Makyen	nikesa\W*row
 1562050288	Makyen	7z\W*password\W*recovery
-1562050308	Makyen	(?-i:yl94k.png)
+1562050308	Makyen	(?-i:yl94k\.png)
 1562053132	Glorfindel	excellentwebworld\.com
 1562053698	Makyen	Illuminesse
 1562053717	Makyen	IVDM
@@ -11476,7 +11476,7 @@
 1563469700	K.Dᴀᴠɪs	HD\W*Streamz
 1563477791	Makyen	safetygearpro\.com
 1563485510	Makyen	speakjunction\.com
-1563489190	Makyen	iconcreditrepair(?:@gmail.com)?
+1563489190	Makyen	iconcreditrepair(?:@gmail\.com)?
 1563507749	Machavity	isportsapi\.com
 1563441174	double-beep	m-arabi\.com
 1563513077	Shree	southbankundercroft\.com
