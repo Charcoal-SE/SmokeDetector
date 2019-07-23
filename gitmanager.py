@@ -54,12 +54,6 @@ class GitManager:
     @classmethod
     def add_to_blacklist(cls, blacklist='', item_to_blacklist='', username='', chat_profile_link='',
                          code_permissions=False, metasmoke_down=False):
-        if git.config("--get", "user.name", _ok_code=[0, 1]) == "":
-            return (False, 'Tell someone to run `git config user.name "SmokeDetector"`')
-
-        if git.config("--get", "user.email", _ok_code=[0, 1]) == "":
-            return (False, 'Tell someone to run `git config user.email "smokey@erwaysoftware.com"`')
-
         if blacklist == "":
             return (False, 'GitManager: blacklist is not defined. Blame a developer.')
 
@@ -256,8 +250,11 @@ class GitManager:
             manager.remove(item)
 
             git.add(file_name)
-            git.commit("--author='SmokeDetector <smokey@erwaysoftware.com>'",
-                       '-m', 'Auto un{} of `{}` by {}'.format(blacklist_type, item, username))
+            git("-c", "user.name=" + GlobalVars.git_name,
+                "-c", "user.email=" + GlobalVars.git_email,
+                "commit",
+                "--author={} <{}>".format(GlobalVars.git_name, GlobalVars.git_email),
+                '-m', 'Auto un{} of `{}` by {}'.format(blacklist_type, item, username))
 
             git.checkout('master')
             git.merge(branch)
