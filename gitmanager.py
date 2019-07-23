@@ -302,7 +302,7 @@ class GitManager:
                 "-c", "user.email=" + GlobalVars.git_email,
                 "merge",
                 'FETCH_HEAD', '--no-ff', '-m', 'Merge pull request #{} from {}/{}'.format(
-                 pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref))
+                    pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref))
             git.push('origin', 'master')
             try:
                 git.push('-d', 'origin', ref)
