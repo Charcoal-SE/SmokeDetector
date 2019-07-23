@@ -11629,3 +11629,4 @@
 1563898012	Makyen	xsketogenicsli\d*(?# xsketogenicslim005 and xsketogenicslim seen)
 1563898034	Makyen	oklahoma\W*football(?:\W*live\W*streaming)?
 1563898052	Makyen	oklahomafootballupdates\.com
+1563898074	Makyen	louisville\W*cardinals\W*football
