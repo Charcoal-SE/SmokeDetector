@@ -11627,3 +11627,4 @@
 1563897974	Makyen	auburnfootballgame\.com
 1563897991	Makyen	auburn\W*tigers\W*football
 1563898012	Makyen	xsketogenicsli\d*(?# xsketogenicslim005 and xsketogenicslim seen)
+1563898034	Makyen	oklahoma\W*football(?:\W*live\W*streaming)?
