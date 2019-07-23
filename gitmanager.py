@@ -298,8 +298,11 @@ class GitManager:
             cls.gitmanager_lock.acquire()
             git.checkout('master')
             git.fetch('origin', '+refs/pull/{}/head'.format(pr_id))
-            git.merge('FETCH_HEAD', '--no-ff', '-m', 'Merge pull request #{} from {}/{}'.format(
-                      pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref))
+            git("-c", "user.name=" + GlobalVars.git_name,
+                "-c", "user.email=" + GlobalVars.git_email,
+                "merge",
+                'FETCH_HEAD', '--no-ff', '-m', 'Merge pull request #{} from {}/{}'.format(
+                 pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref))
             git.push('origin', 'master')
             try:
                 git.push('-d', 'origin', ref)
