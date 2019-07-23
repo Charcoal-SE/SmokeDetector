@@ -11618,3 +11618,4 @@
 1563864075	tripleee	cloud-connect\.in
 1563864982	tripleee	msoignoli(?:@diversant\.com)?
 1563865002	tripleee	diversant\.com
+1563866928	tripleee	freeapp\.vip
