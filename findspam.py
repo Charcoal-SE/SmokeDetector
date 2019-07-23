@@ -1892,7 +1892,7 @@ pattern_websites = [
     r"buyviewsutube",
     r"(?:celebrity-?)?net-?worth", "richestcelebrities",
     r"ufc\wfight\wnight",  # Chiesa vs Lee spam
-    r"football" # football live streaming spam
+    r"football"  # football live streaming spam
 ]
 city_list = [
     "Agra", "Amritsar", "Bangalore", "Bhopal", "Chandigarh",
