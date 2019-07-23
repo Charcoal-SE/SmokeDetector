@@ -11632,3 +11632,4 @@
 1563898074	Makyen	louisville\W*cardinals\W*football
 1563898099	Makyen	louisvillefootballnews\.com
 1563898121	Makyen	learningsutras\.net
+1563898142	Makyen	michigan\W*wolverines\W*football
