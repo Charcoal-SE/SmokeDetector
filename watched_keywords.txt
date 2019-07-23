@@ -11630,3 +11630,4 @@
 1563898034	Makyen	oklahoma\W*football(?:\W*live\W*streaming)?
 1563898052	Makyen	oklahomafootballupdates\.com
 1563898074	Makyen	louisville\W*cardinals\W*football
+1563898099	Makyen	louisvillefootballnews\.com
