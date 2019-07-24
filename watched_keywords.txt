@@ -11536,7 +11536,6 @@
 1563636219	double-beep	waqarshakeel786(?:@gmail\.com)?
 1563637932	Makyen	meetwaqarshakeel
 1563637150	double-beep	mtvvma2019\.live
-1563641698	Makyen	practicegigs\.com
 1563653632	Machavity	cromoplasticacmc\.de
 1563656997	Makyen	/@wael\.alsaad
 1563664572	Makyen	assistanceforall\.com
