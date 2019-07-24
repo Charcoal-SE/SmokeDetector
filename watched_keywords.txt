@@ -11636,3 +11636,4 @@
 1563898162	Makyen	michiganfootballinfo\.com
 1563911983	K.Dᴀᴠɪs	programmingtutorial\.org
 1563926231	Makyen	dastgahelser\.ir
+1563930803	Makyen	hamzardblankatm(?:@gmail\.com)?
