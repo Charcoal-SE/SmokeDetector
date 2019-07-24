@@ -1163,6 +1163,7 @@ def watched_ns_for_url_domain(s, site):
         'tigerexpertz.com.',
         'cloudnstools.com.',
         'turnkeywebspace.com.',
+        'namedc.com.',
     ])
 
 
