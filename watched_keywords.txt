@@ -11664,3 +11664,4 @@
 1563986047	Makyen	pocket2coins
 1563986066	Makyen	sharepoint-artfulbits\.com
 1563986079	Makyen	carmainstant\.hatenablog\.com
+1563986093	Makyen	(?:keto\W*)?GX800(?:\W*\d+)?
