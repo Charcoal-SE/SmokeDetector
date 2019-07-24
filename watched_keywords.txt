@@ -11659,3 +11659,4 @@
 1563963234	Makyen	เสือมังกรออนไลน์
 1563964450	Shree	positivefast\.com
 1563964601	Makyen	idealizeer\.com
+1563964625	Makyen	idealizeer(?!\.com)
