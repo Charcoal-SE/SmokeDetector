@@ -4379,7 +4379,6 @@
 1531762076	Makyen	souvikcreations\.in
 1531762939	Thomas Ward	techysupport\.co
 1531809386	Glorfindel	codeadjust
-1531809532	Glorfindel	shoviv\.com
 1531809626	Tetsuya Yamamoto	delta-airlines-reservations\.com
 1531810194	Tetsuya Yamamoto	shraddhaenglish\.com
 1531810836	Glorfindel	pulsosocial\.com
