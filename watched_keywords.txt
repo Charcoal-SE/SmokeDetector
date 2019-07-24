@@ -4781,7 +4781,6 @@
 1533675249	doppelgreener	apmediahouse\.com
 1533676195	Zoe	allcoinhodler(?:\.com)?
 1533682655	Tetsuya Yamamoto	synlogics\.com
-1533690142	Makyen	worldofvampir(?:@hotmail\.com)?
 1533699652	tripleee	[a-z_]*(?:0?20_*)?7731[\W_]*7417[a-z_]*
 1533704793	Makyen	[a-z_]*(?:1_*)?518[\W_]*740[\W_]*0715[a-z_]*
 1533709260	tripleee	lenovosupport\.org
