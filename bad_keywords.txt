@@ -1993,7 +1993,7 @@ cyberhelp\d*(?:\W*(?:(?:at|via)\W*)?gmail(?:\W*(?:dot\W*)?com)?)?
 simply\W*fit\W*keto(?:\W*\d+)*
 alpha\W*femme(?:\W*(?:keto|genix|ca|\d+))*
 keto\W*jolt(?:\W*(?:favorings?|reviews?|diet|\d+))*
-keto\W*body(?:\W*(?:tone|web|\d+))*
+keto\W*body(?:\W*(?:tone|avis|fr|web|\d+))*
 safe\W*meds\W*keto(?:\W*burn)?
 ezytone(?:\W?detox(?:\W?patch)?)?
 aegis\W*vitality(?:\W*(?:keto|prior|\d+))*
