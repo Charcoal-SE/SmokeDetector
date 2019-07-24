@@ -11642,3 +11642,4 @@
 1563935053	Makyen	saudiqbal\.com
 1563935073	Makyen	wizardsafetyhacker(?:@gmail\.com)?
 1563935632	Makyen	dermacourt\W*cream
+1563943594	tripleee	5536\W*9137\W*5246\W*8484(?# also blacklisted, but force this pesky spammer to trigger three detections)
