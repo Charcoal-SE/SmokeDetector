@@ -11654,3 +11654,4 @@
 1563960339	tripleee	fakeornot\.in
 1563960365	tripleee	floodledlight\.com
 1563963143	Makyen	qc-lcd\.com
+1563963162	Makyen	maoshengelectronics\.com
