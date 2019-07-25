@@ -11672,3 +11672,4 @@
 1564009387	Makyen	bandardepowd24jam\.tk
 1564009405	Makyen	melatipoker88\.com
 1564012624	Makyen	springdoc\.org
+1564016941	Makyen	cyber\W*golden\W*hacker(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
