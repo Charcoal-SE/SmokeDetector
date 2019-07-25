@@ -10920,7 +10920,6 @@
 1561666590	Makyen	letsfindtoday\.com
 1561666611	Makyen	toofair\.com
 1561666631	Makyen	epiphany(?=\.esportsify\.com)
-1561666650	Makyen	welnessdeal\.com
 1561666778	Makyen	megasupplementmart\.com
 1561669427	Makyen	bradleyabbottloanfirm(?:@gmail\.com)?
 1561678253	Byte Commander	^john\W+gava$
