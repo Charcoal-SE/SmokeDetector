@@ -11712,3 +11712,4 @@
 1564181696	Makyen	facebook\.com/events/\d+
 1564181770	Makyen	sparrohacker(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?(?:com)?)?
 1564184465	Makyen	energo-watt\.com\.ua
+1564184484	Makyen	cuadaiviet(?!\.com)(?:@gmail\.com)
