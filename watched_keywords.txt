@@ -11704,3 +11704,4 @@
 1564178592	Makyen	iiadm\.in
 1564178607	Makyen	paceseatingindia\.com
 1564178634	Makyen	maryhimsel\.degrootloan(?:@aol\.com)?
+1564179178	Makyen	guru\W*information\W*technology
