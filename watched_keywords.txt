@@ -11714,3 +11714,4 @@
 1564184465	Makyen	energo-watt\.com\.ua
 1564184484	Makyen	cuadaiviet(?!\.com)(?:@gmail\.com)
 1564184515	Makyen	playpianofluently\.com
+1564184530	Makyen	allworldfeed\.com
