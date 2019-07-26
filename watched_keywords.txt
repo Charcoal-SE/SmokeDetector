@@ -11711,3 +11711,4 @@
 1564181678	Makyen	736991720090682(?# URL path)
 1564181696	Makyen	facebook\.com/events/\d+
 1564181770	Makyen	sparrohacker(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?(?:com)?)?
+1564184465	Makyen	energo-watt\.com\.ua
