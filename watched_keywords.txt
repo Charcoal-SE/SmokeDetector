@@ -11743,3 +11743,4 @@
 1564211364	Makyen	slim\W*physics\W*keto(?:\W*(?:diet|review|\d+))*
 1564229798	angussidney	eaglegate\.com\.au
 1564243871	Makyen	cupcake2048\.com
+1564263279	Makyen	bharattaxi\.com
