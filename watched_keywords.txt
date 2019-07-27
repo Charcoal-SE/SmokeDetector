@@ -11726,3 +11726,4 @@
 1564188929	Makyen	mentyor\.com
 1564188944	Makyen	paykasamobil\.com
 1564188962	Makyen	eSoftTools
+1564206545	Makyen	bivirkninger(?:\W*de)?
