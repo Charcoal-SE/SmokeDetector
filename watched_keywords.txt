@@ -11731,7 +11731,7 @@
 1564206577	Makyen	(?-i:eabPdhJz92E)
 1564206590	Makyen	enhancenutritionldn\.com
 1564206601	Makyen	keto\W*extra\W*strength
-1564206619	Makyen	fyt\W*lyft\W*keto
+1564206619	Makyen	fyt\W*lyft\W*keto(?:\W*\d+)?
 1564206771	Makyen	womenshealthmag\.com
 1564207407	Makyen	warmreviews\.com
 1564208264	Makyen	fildena\W*100
