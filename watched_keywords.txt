@@ -11745,3 +11745,4 @@
 1564263307	Makyen	gamingcpus\.com
 1564263325	Makyen	FinanceGroup(?# no \W between words)
 1564263343	Makyen	digital\W*floats(?!\.com(?<=digitalfloats\.com))
+1564269640	bmike	ios-jailbreak\.com
