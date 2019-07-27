@@ -11728,3 +11728,4 @@
 1564188962	Makyen	eSoftTools
 1564206545	Makyen	bivirkninger(?:\W*de)?
 1564206561	Makyen	mikinikarow
+1564206577	Makyen	(?-i:eabPdhJz92E)
