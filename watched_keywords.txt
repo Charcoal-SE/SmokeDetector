@@ -11739,3 +11739,4 @@
 1564209725	Nisse Engström	pokervip11\.club
 1564211294	Makyen	infinity\W*boost(?:\W*\d+)?
 1564211314	Makyen	printland\.in
+1564211352	Makyen	pokervip\d*(?# pokervip88, pokervip11.club seen)
