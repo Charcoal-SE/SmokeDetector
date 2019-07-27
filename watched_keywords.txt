@@ -11724,3 +11724,4 @@
 1564188892	Makyen	searchmobilecomputing\.techtarget\.com
 1564188910	Makyen	unixsolutions\.in
 1564188929	Makyen	mentyor\.com
+1564188944	Makyen	paykasamobil\.com
