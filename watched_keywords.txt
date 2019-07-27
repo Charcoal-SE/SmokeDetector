@@ -11732,3 +11732,4 @@
 1564206590	Makyen	enhancenutritionldn\.com
 1564206601	Makyen	keto\W*extra\W*strength
 1564206619	Makyen	fyt\W*lyft\W*keto
+1564206771	Makyen	womenshealthmag\.com
