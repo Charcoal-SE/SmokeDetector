@@ -2982,3 +2982,4 @@ welnessdeal\.com
 healthperfect\.net
 guruits\.com
 trywithpopchips\.com
+(?<!services@)oxpahat\.org(?#The email address is covered by a keyword)
