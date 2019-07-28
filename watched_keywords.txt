@@ -5066,7 +5066,6 @@
 1535176787	Makyen	stripeman\.com
 1535211117	Makyen	[a-z_]*(?:1_*)?869[\W_]*712[\W_]*1622[a-z_]*
 1535212069	Makyen	top10pillows\.com
-1535213619	Makyen	services@oxpahat\.org
 1535218120	Makyen	pxtovw\.com
 1535218129	Makyen	techspecs\.io
 1535218138	Makyen	fancytextgenerators\.com
