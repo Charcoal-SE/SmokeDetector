@@ -11756,3 +11756,4 @@
 1564327572	Makyen	apidkgon\.hatenablog\.com
 1564333270	Makyen	REWE\W*(?:and\W*)?ROSSMANN
 1564336582	Nisse Engström	cartoonhdpro\.com
+1564349366	Makyen	(?-i:^Ajay Singh$)
