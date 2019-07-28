@@ -11747,3 +11747,4 @@
 1564263343	Makyen	digital\W*floats(?!\.com(?<=digitalfloats\.com))
 1564269640	bmike	ios-jailbreak\.com
 1564285617	Makyen	suretraders4u(?:@gmail\.com)?
+1564291738	Shree	springcleaning\.ae
