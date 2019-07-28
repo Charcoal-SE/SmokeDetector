@@ -2,7 +2,7 @@ powerigfaustralia
 ewebtonic\.in
 healthcaresup
 filerepairforum
-beauty(skin|forever)
+beauty(?:skin|forever)
 innovativehostingcorp
 lxwpro-t
 casque-beatsbydre
@@ -67,7 +67,7 @@ diabacordoesitwork
 mixresult\.com
 win-ipad\.
 mecharithm\.com
-healthy?(advise|finder|booklet|order|rewind|flyup|buzzer|victory|peters|guide)
+healthy?(?:advise|finder|booklet|order|rewind|flyup|buzzer|victory|peters|guide)
 hyperglycemiaabout
 waffor\.com
 feedcabal\.com
@@ -134,10 +134,10 @@ onlinegiftdeal\.com
 articlebullet\.com
 regeasypro\.com
 registryware\.org
-smartfixer\.(net|org)
+smartfixer\.(?:net|org)
 chirbit\.com
 dlllibrary\.net
-wisefixer\.(com|net|org)
+wisefixer\.(?:com|net|org)
 dojobsonline\.com
 /mu6\.me/
 password-?unlocker\.com
@@ -182,7 +182,7 @@ bigasoft\.com
 opclub07\.com
 tekpirates\.com
 tryapext\.com
-essays(origin|council)\.com
+essays(?:origin|council)\.com
 caseism\.com
 vanskeys\.com
 cheapessaywritingservice
@@ -196,17 +196,17 @@ anonymousvpnsoftware\.com
 mmfsolutions\.sg
 ungeekit\.com
 ecouponcode\.com
-wasel(pro)?\.com
-i-spire\.(com|net)
+wasel(?:pro)?\.com
+i-spire\.(?:com|net)
 sandangku\.com
 iwasl\.com
-vpn(faqs|answers|4games)\.com
+vpn(?:faqs|answers|4games)\.com
 airmore\.com
 showmore\.com
 unblockingtwitter\.com
 openingblockedsite\.com
 credenceresearch\.com
-arabic(soft)?downloads?\.com
+arabic(?:soft)?downloads?\.com
 braindumpsvalid
 cardsbymellc\.com
 codek\.tv
@@ -227,7 +227,7 @@ xtremenitro
 surfmegeek
 techittricks\.com
 din571\.com
-(premium|priceless)-inkjet\.com
+(?:premium|priceless)-inkjet\.com
 meatspin
 techappzone\.com
 wdtel\.com
@@ -255,7 +255,7 @@ jetcheats\.com
 cheatio\.com
 empiremountainbikes
 assignmentcamp\.co
-optimalstack(facts|products)
+optimalstack(?:facts|products)
 x4facts
 techjobs\.sulekha\.com
 litindia\.in
@@ -307,7 +307,7 @@ flexihub\.com
 websiteseochecker\.com
 fullsoftversion\.com
 hotfrog\.ca
-snorg(content|tees)\.com
+snorg(?:content|tees)\.com
 webtechcoupons
 diwaliimages\d+\.in
 architecturedesign\.tk
@@ -326,7 +326,7 @@ safewiper\.com
 ostoto\.com
 academicservices\.us
 writerspk\.com
-musclebuilding(products|base)
+musclebuilding(?:products|base)
 Blogdolllar\.net
 bendul\.com
 megatachoco
@@ -336,7 +336,7 @@ creative-proteomics
 revommerce\.com
 opendatascience\.com
 123trainings
-(bestof|beta)cheat\.com
+(?:bestof|beta)cheat\.com
 surejob\.in
 israelbigmarket
 savemantra\.com
@@ -355,7 +355,7 @@ fastunsecured\.com
 fullchatroom\.com
 ecartbasiccartlead
 edigitalplace\.com
-plagiarismchecker\.(us|com)
+plagiarismchecker\.(?:us|com)
 excelanto\.com
 trylxwprot
 geniusbrain
@@ -395,7 +395,7 @@ jihosoft\.com
 mahnazmezon\.com
 technical-care\.com
 skyformation\.com
-shifting(expert|solutions)\.in
+shifting(?:expert|solutions)\.in
 bandsawjudge\.com
 liveestorebuilder\.com
 exampracticequestions\.com
@@ -485,7 +485,7 @@ lyonstechnologies
 serialkeygeneratorfree\.com
 routeperfect\.com
 tupely\.com
-apk(heart|safe)\.com
+apk(?:heart|safe)\.com
 nimblemessaging\.com
 oleville\.net
 nutribulletrecipes\.org
@@ -493,7 +493,7 @@ wirexapp\.com
 x4up\.org
 decalontop\.com
 mobile57\.com
-learn(spicy|perfact)
+learn(?:spicy|perfact)
 getfitness\.in
 trustwiko\.com
 attendasoft
@@ -686,7 +686,7 @@ ideaflix\.com
 usadrugguide\.com
 proofy\.io
 torrentsvpn\.com
-techexperiment\.blogspot\.(com|sg)
+techexperiment\.blogspot\.(?:com|sg)
 dutraeconomicus\.com
 acewriters\.org
 backupbird\.com
@@ -703,7 +703,7 @@ moviemaniaonline\.com
 SELLCVV\.SHOP
 biohunter\.in
 bizpro9\.com
-selenium-venkat\.blogspot\.(com|sg|in)
+selenium-venkat\.blogspot\.(?:com|sg|in)
 injectfollowers\.com
 chandigarhdentist\.com
 xtrfact\.com
@@ -760,7 +760,7 @@ spiritualsadhana\.com
 hotsupplement\.com
 charmspandorasoldes\.com
 theconstantprofitsclub\.com
-amazfitpace\.(com|org|net)
+amazfitpace\.(?:com|org|net)
 eincar\.com
 bloggerclass\.tk
 myhealthpeak\.com
@@ -802,7 +802,7 @@ mobiles6\.com
 purelifegreencoffeebeanadvice\.com
 hexagoninfosoft\.com
 credosystemz\.com
-tekshapers\.(in|com)
+tekshapers\.(?:in|com)
 priceseries\.com
 tourspress\.com
 strongtesterone\.com
@@ -823,7 +823,7 @@ trimplexeliteavis\.com
 forexlivealerts\.info
 comptiabraindumps\.com
 assignmenthelp\w*\.co
-fblikes\.(com|net)
+fblikes\.(?:com|net)
 freejobform\.in
 valentinesday2017i\.com
 guidemehealth\.com
@@ -952,7 +952,7 @@ nutritionofenergy\.com
 crackedmuscles\.com
 nitroshredadvice\.com
 thehealthvictory\.com
-supplementq\.(co(m|\.uk)|org)
+supplementq\.(?:co(?:m|\.uk)|org)
 skinliftsup\.com
 supplementplatform\.com
 skincaresfreetrial\.com
@@ -982,7 +982,7 @@ slimdietera\.com
 wellnesssupplement\.com
 endcrack\.wordpress\.com
 platinumcleanserinfo\.com
-health2facts\.(com|org)
+health2facts\.(?:com|org)
 skin4up\.com
 gadgetsbowl\.com
 microadia\.net
@@ -997,7 +997,7 @@ growmewise\.com
 probioticspotency\.com
 supplementvalley\.com
 appleofhealth\.com
-garanntor\.(com|ng|co\.(za|ke))
+garanntor\.(?:com|ng|co\.(?:za|ke))
 travianr\.com
 ampronix\.com
 mylaviveeyeserum\.com
@@ -1494,7 +1494,7 @@ vbagetech\.com
 browseplay\.com
 semmiami\.com
 office-comsetup\.com
-(customer|tech|technical)-?(support|service)(?<!photographerstechsupport)(?<!vbtechsupport)(?<!paypal-techsupport)\.com
+(?:customer|tech|technical)-?(?:support|service)(?<!photographerstechsupport)(?<!vbtechsupport)(?<!paypal-techsupport)\.com
 livetecs\.com
 obatpelancarhaidterbaik\.com
 el-watnya\.com
@@ -1656,7 +1656,7 @@ viralsupplements\.com
 fineproxy\.org
 createmyfreeapp\.com
 muscle4supplement\.com
-(adult)?sextoyindia\.com
+(?:adult)?sextoyindia\.com
 merabheja\.com
 wellness4healthy\.com
 essayshark\.com

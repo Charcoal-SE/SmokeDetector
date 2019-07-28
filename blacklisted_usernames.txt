@@ -2,7 +2,7 @@
 tejveer ?iq
 ser?vice pemanas?
 \bnigg[aeu][rh]?
-\b(fuck(er|ing)?|penis)\b
+\b(?:fuck(?:er|ing)?|penis)\b
 # ^\w{0,3}w.{0,2}ng.?d.{0,2}ng\w{0,3}$
 dlqudals
 [a-z ]{3,}juri(?:ns|sa|ya|yam|ym)$
@@ -32,7 +32,7 @@ JAAFAR LENDING
 Shirley J Mintz
 shifflettkristen
 maccolar
-limeprox(y|ies)
+limeprox(?:y|ies)
 ^dongfang$
 Da Whole Truth
 Merit Campus
@@ -183,7 +183,7 @@ quickbooks
 ^Ielts And Visa Tips$
 (?-i:^Tech to Review$)
 (?-i:^Multi-Programming Solutions$)
-^crossword.?2.?puzzles(\.com)?$
+^crossword.?2.?puzzles(?:\.com)?$
 (?-i:^Kate White$)
 (?-i:^Byekhen$)
 (?-i:^Muhammad Waqar$)
