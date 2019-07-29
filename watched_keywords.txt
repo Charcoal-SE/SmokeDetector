@@ -11655,7 +11655,6 @@
 1563986047	Makyen	pocket2coins
 1563986066	Makyen	sharepoint-artfulbits\.com
 1563986079	Makyen	carmainstant\.hatenablog\.com
-1563986093	Makyen	(?:keto\W*)?GX800(?:\W*\d+)?
 1563989836	Machavity	freepandoraapk\.info
 1563990300	Machavity	kinhmayxuc\.net
 1563993615	tripleee	HarpTEK4l6o(?# youtube link)
