@@ -2013,3 +2013,4 @@ sugar\W*mummy(?:\W*connection)?
 services@oxpahat\.org
 rejuve\W?allure(?:\W?cream)?
 (?:keto\W*)?GX800(?:\W*\d+)?
+fyt\W*lyft\W*keto(?:\W*\d+)?
