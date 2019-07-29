@@ -11770,3 +11770,4 @@
 1564383089	Makyen	inner\W*tranquil(?:\W*(?:oil|CBD|[\da-f]+))+
 1564387282	tripleee	yelloyello\.com
 1564388464	A J	everfreshkitchen\.com
+1564389380	tripleee	ahackear\.com
