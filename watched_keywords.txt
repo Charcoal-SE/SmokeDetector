@@ -11765,3 +11765,4 @@
 1564376413	Makyen	testoampxx\.com
 1564378445	Makyen	racebrakeshop\.com
 1564382078	Makyen	prime\W*time\W*boost(\w*\d+)?
+1564382125	Makyen	vital\W*source(?:\W*(?:oil|cbd|bromelain|\d+)){2,}
