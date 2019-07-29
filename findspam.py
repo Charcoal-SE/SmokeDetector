@@ -92,7 +92,7 @@ ASN_WHITELISTED_WEBSITES = [
     # As of 2019-04-18, the following had 2 ASN detections which were FP, and appeared to be common.
     "wikileaks.org",
     # Additional added not as part of a systematic investigation:
-    "ntp.org", "cpu-world.com", "caniuse.com",
+    "ntp.org", "cpu-world.com", "caniuse.com", "guru99.com",
     # Added to prevent having 3 detections on just the domain.
     "writingexplained.org"]
 COUNTRY = [
