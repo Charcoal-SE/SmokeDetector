@@ -2985,3 +2985,4 @@ trywithpopchips\.com
 (?<!services@)oxpahat\.org(?#The email address is covered by a keyword)
 slimtonewellness\.com
 hyalurolift\.fr
+getwellnessdeal\.com
