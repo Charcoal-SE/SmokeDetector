@@ -11794,3 +11794,4 @@
 1564467748	Makyen	sintek\W*oil
 1564467768	Makyen	sales\.sinteloil(?:@bk\.ru)?
 1564467789	Makyen	benhthoaihoadotsongco\.vn
+1564467808	Makyen	flashandarrowcrossover\.weebly\.com
