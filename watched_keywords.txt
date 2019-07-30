@@ -11789,3 +11789,4 @@
 1564464674	tripleee	innomatics\.in
 1564467659	Makyen	hohonony
 1564467682	Makyen	sunshinesoftwares\.com
+1564467705	Makyen	(?:merde|putain|bordel)
