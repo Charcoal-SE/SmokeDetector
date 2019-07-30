@@ -11803,3 +11803,4 @@
 1564487418	tripleee	ocr\.space(?# requested by MartijnPieters)
 1564487437	tripleee	ui\.vision(?# requested by MartijnPieters)
 1564487462	tripleee	imacros\.net(?# requested by MartijnPieters)
+1564488388	tripleee	canonprintersupport247\.com
