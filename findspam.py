@@ -1164,6 +1164,7 @@ def watched_ns_for_url_domain(s, site):
         'cloudnstools.com.',
         'turnkeywebspace.com.',
         'namedc.com.',
+        'hostinger.in.',
     ])
 
 
