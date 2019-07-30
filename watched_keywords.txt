@@ -11790,3 +11790,4 @@
 1564467659	Makyen	hohonony
 1564467682	Makyen	sunshinesoftwares\.com
 1564467705	Makyen	(?:merde|putain|bordel)
+1564467728	Makyen	acheter\b.{0,80}?(?:passeports?|cartes? d\W*identit[ée]|(?:actes?|certificat)\W*de\W*naissance|permis\W*de\W*conduire)
