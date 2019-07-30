@@ -662,7 +662,7 @@ prime\W?ageless
 biofit
 vigotrex
 tharlax\W?rx
-zarza
+zarza(?!$)
 rarete
 divine\W?cbd
 pure\W?force\W?x
