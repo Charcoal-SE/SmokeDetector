@@ -11807,3 +11807,4 @@
 1564489426	tripleee	bakera(?:\W?it)?
 1564490182	tripleee	central\W?recruitment
 1564518195	Makyen	importantie\.wixsite\.com
+1564518215	Makyen	(?-i:WkthYC0Ka-A)
