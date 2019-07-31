@@ -11824,3 +11824,4 @@
 1564556195	Makyen	(?-i:mwYSDYPLK0s)
 1564556213	Makyen	ketogenic_*accelerator\w*
 1564556233	Makyen	loktomarow
+1564556251	Makyen	cbd\W*coffee
