@@ -11827,3 +11827,4 @@
 1564556251	Makyen	cbd\W*coffee
 1564556319	Makyen	rapid\W*keto\W*x(?:\W*\d+)?
 1564557142	Makyen	vital\W*source\W*cbd
+1564557659	tripleee	salesleaf\.com
