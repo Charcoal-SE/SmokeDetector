@@ -11825,3 +11825,4 @@
 1564556213	Makyen	ketogenic_*accelerator\w*
 1564556233	Makyen	loktomarow
 1564556251	Makyen	cbd\W*coffee
+1564556319	Makyen	rapid\W*keto\W*x(?:\W*\d+)?
