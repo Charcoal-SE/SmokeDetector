@@ -11822,3 +11822,4 @@
 1564550779	tripleee	(?:keto\W?)emagrecedor
 1564555641	tripleee	indiavine\.com
 1564556195	Makyen	(?-i:mwYSDYPLK0s)
+1564556213	Makyen	ketogenic_*accelerator\w*
