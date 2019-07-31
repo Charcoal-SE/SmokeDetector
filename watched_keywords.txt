@@ -511,7 +511,6 @@
 1501175814	quartata	couppay\.ind\.in
 1501250114	Glorfindel	wklaw\.com
 1501278997	doppelgreener	modup\.net
-1501323411	Glorfindel	kellytechno\.com
 1501347530	Glorfindel	gadgetspirit\.com
 1501350484	Glorfindel	taxi-airports-transfer\.com
 1501365414	Undo	Louis\W*A\W*Coffelt
