@@ -11843,3 +11843,4 @@
 1564587908	rene	www-acmarket\.com
 1564587928	rene	pubg-apk\.com
 1564593070	Jeff Schaller	shipa1\.com
+1564593143	Makyen	ship\W*a1(?!\.com(?<=shipa1\.com))
