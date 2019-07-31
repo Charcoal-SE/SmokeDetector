@@ -1192,13 +1192,15 @@ def watched_ip_for_url_hostname(s, site):
         [
             # AS 8560 ONEANDONE-AS Brauerstrasse 48, DE
             '62.151.180.33',    # visit-my-website ltssecure.com / ltssoc
-            # AS 14061 (DIGITALOCEAN-ASN - DigitalOcean, LLC, US
+            # AS 14061 DIGITALOCEAN-ASN - DigitalOcean, LLC, US
             '139.59.83.45',     # fake-tech-support techjockey.com
             # AS 15169 GOOGLE - Google LLC, US
             '216.239.32.21',    # 3[2468].21 IP quadruplet has large number of
             '216.239.34.21',    # spam hits, including drugs, games etc
             '216.239.36.21',    # technoxmart 4gtricks gtagame100 winmilliongame
             '216.239.38.21',    # zumagame100 subway-game fitnesslakes etc etc
+            # AS 19318 IS-AS-1 - Interserver, Inc, US
+            '69.10.35.52',      # exitech.in
             # AS 20068 - HAWKHOST - Hawk Host Inc., CA.
             '172.96.187.196',   # fake-tech-support driver-canon.com
             '198.252.105.94',   # fake-tech-support asia-canon.com etc
