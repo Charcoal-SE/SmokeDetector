@@ -1233,6 +1233,8 @@ def watched_ip_for_url_hostname(s, site):
             '166.62.6.66',      # fake-tech-support + hosting ms-officesetup etc
             '166.62.28.116',    # fake-tech-support printertechsupportnumbers.com
             '192.186.227.225',  # drugs topwellnessguru / healthcare350 etc
+            # AS 46606 UNIFIEDLAYER-AS-1 - Unified Layer, US
+            '50.87.189.77',     # avdshare.com
             # AS 47583 (HOSTINGER) - also notice dual-homed below
             '185.224.137.142',  # drugs healthforeverplus supplementoffer.info etc
             # AS 47583 (HOSTINGER) / AS 395111 (KVCHOSTING.COM) dual-homed
