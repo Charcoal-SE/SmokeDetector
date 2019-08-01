@@ -11857,4 +11857,3 @@
 1564635822	Makyen	(?-i:9AHzqt9w0Gk)
 1564641572	Makyen	ketovit
 1564644082	tripleee	agrawalcorporate\.com
-1564644146	tripleee	agrawal(?:\W?corporate)?(\W?market)?(\W?gurukul)?
