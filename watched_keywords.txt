@@ -11859,3 +11859,4 @@
 1564644082	tripleee	agrawalcorporate\.com
 1564644755	Makyen	agrawal(?:[\W_]*(?:corporate(?!\.com(?<=agrawalcorporate\.com))|market|gurukul))+
 1564651492	Makyen	keygen[\W_]*xl
+1564651533	Makyen	zephrofel\.info
