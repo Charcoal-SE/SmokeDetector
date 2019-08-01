@@ -186,3 +186,4 @@ quickbooks
 (?-i:^Kate White$)
 (?-i:^Byekhen$)
 (?-i:^Muhammad Waqar$)
+^fibre\W?sales$
