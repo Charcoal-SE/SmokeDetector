@@ -11879,3 +11879,4 @@
 1564741228	tripleee	athensphotonews\.com
 1564741256	tripleee	elitereaders\.com
 1564742446	tripleee	esolutions\.net\.in
+1564742535	tripleee	mannatarora\.com
