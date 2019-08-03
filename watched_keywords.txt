@@ -11909,3 +11909,4 @@
 1564824065	tripleee	hacking\W?problem
 1564824331	tripleee	(?:\w\W){3,}@(?:\W\w){3,}
 1564835721	Makyen	johnyb098(?:@gmail\.com)?
+1564835742	Makyen	nuradiance(?:\W*(?:lift|cream|face|\d+))*
