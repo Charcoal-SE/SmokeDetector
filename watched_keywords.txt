@@ -11902,3 +11902,4 @@
 1564816502	Makyen	proline\W*diet\W*(?:canada|ca)
 1564817173	Makyen	ultra\W*beauty\W*cream
 1564817408	Makyen	xs\W*ketogenic\W*slim
+1564817458	Makyen	keto\W*fast\W*x2
