@@ -11913,3 +11913,4 @@
 1564835760	Makyen	wespywhatsapp(?:@gmail\.com)?
 1564835780	Makyen	keto\W*unlimited
 1564835797	Makyen	eliz\W*keto
+1564835814	Makyen	h(?<=gofundme\.com/h)elp-me-make-a-flight-simulator
