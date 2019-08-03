@@ -11899,3 +11899,4 @@
 1564814550	Makyen	(?:1|one)\W*(?:2|two)\W*(?:1|one)\W*driving(?!\.com(?<=121driving\.com))(?:\W*school)?
 1564815757	Makyen	ketoviante\.info
 1564815775	Makyen	keto[\W_]*t911(?:[\W_]*(?:reviews?|\d+))*
+1564815795	Makyen	control[\W_]*x[\W_]*keto(?:[\W_]*\d+)?
