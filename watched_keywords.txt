@@ -11899,3 +11899,4 @@
 1564815757	Makyen	ketoviante\.info
 1564815775	Makyen	keto[\W_]*t911(?:[\W_]*(?:reviews?|\d+))*
 1564815795	Makyen	control[\W_]*x[\W_]*keto(?:[\W_]*\d+)?
+1564816502	Makyen	proline\W*diet\W*(?:canada|ca)
