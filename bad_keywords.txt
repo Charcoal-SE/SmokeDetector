@@ -2010,7 +2010,7 @@ worldofvampir(?:@hotmail\.com)?
 (?:(?:buy|what\W*is)\W*)*balanced\W*body\W*keto
 sugar\W*mummy(?:\W*connection)?
 services@oxpahat\.org
-rejuve\W?allure(?:\W?cream)?
+rejuve\W*allure(?:\W*cream)?
 (?:keto\W*)?GX800(?:\W*\d+)?
 fyt\W*lyft\W*keto(?:\W*\d+)?
 (?:sharp\W?)?tv\W?repair\W?dubai

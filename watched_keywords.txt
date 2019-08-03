@@ -11662,7 +11662,6 @@
 1564036122	Makyen	zimtana\W*row
 1564037356	Shree	celebsoutfits.com
 1564039678	Makyen	cellucor\W*super\W*hd
-1564039746	Makyen	rejuve\W*allure\W*cream
 1564041033	Makyen	sathishkvn\.tk
 1564041407	Makyen	buzrush\.com
 1564043183	Makyen	(?:admin@)?dmit\.us
