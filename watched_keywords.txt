@@ -11897,3 +11897,4 @@
 1564814512	Makyen	121driving\.com
 1564814533	Makyen	idrotherapy(?:cream)?
 1564814550	Makyen	(?:1|one)\W*(?:2|two)\W*(?:1|one)\W*driving(?!\.com(?<=121driving\.com))(?:\W*school)?
+1564815757	Makyen	ketoviante\.info
