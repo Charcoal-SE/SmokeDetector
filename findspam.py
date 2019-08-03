@@ -5,7 +5,7 @@ import sys
 import math
 import regex
 from difflib import SequenceMatcher
-from urllib.parse import urlparse, unquote_plus
+from urllib.parse import urlparse, unquote_/plus
 from itertools import chain
 from collections import Counter
 from datetime import datetime
@@ -1194,11 +1194,6 @@ def watched_ip_for_url_hostname(s, site):
             '62.151.180.33',    # visit-my-website ltssecure.com / ltssoc
             # AS 14061 DIGITALOCEAN-ASN - DigitalOcean, LLC, US
             '139.59.83.45',     # fake-tech-support techjockey.com
-            # AS 15169 GOOGLE - Google LLC, US
-            '216.239.32.21',    # 3[2468].21 IP quadruplet has large number of
-            '216.239.34.21',    # spam hits, including drugs, games etc
-            '216.239.36.21',    # technoxmart 4gtricks gtagame100 winmilliongame
-            '216.239.38.21',    # zumagame100 subway-game fitnesslakes etc etc
             # AS 19318 IS-AS-1 - Interserver, Inc, US
             '69.10.35.52',      # exitech.in
             # AS 20068 - HAWKHOST - Hawk Host Inc., CA.
