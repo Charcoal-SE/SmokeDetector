@@ -11923,3 +11923,4 @@
 1564863965	Makyen	telegramgrouplink1\.blogspot\.com
 1564863984	Makyen	t\.me/joinchat/fuck2me
 1564867629	Makyen	drahmedusman5104(?:@gmail\.com)?
+1564867647	Makyen	dr\W*ahmed\W*usman
