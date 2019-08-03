@@ -11896,3 +11896,4 @@
 1564813046	Makyen	business\.e\.910(?:@gmail\.com)?
 1564813063	Makyen	control\W*x\W*keto
 1564814512	Makyen	121driving\.com
+1564814533	Makyen	idrotherapy(?:cream)?
