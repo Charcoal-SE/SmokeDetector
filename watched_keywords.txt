@@ -11908,4 +11908,3 @@
 1564817685	Makyen	dell\W*printer\W*errors
 1564823994	tripleee	traghettionline\.net
 1564824065	tripleee	hacking\W?problem
-1564824113	tripleee	{\S\s}{3,}@{\s\S}{3,}
