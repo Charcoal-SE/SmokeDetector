@@ -11912,3 +11912,4 @@
 1564835742	Makyen	nuradiance(?:\W*(?:lift|cream|face|\d+))*
 1564835760	Makyen	wespywhatsapp(?:@gmail\.com)?
 1564835780	Makyen	keto\W*unlimited
+1564835797	Makyen	eliz\W*keto
