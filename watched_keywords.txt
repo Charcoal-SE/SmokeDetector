@@ -11927,3 +11927,4 @@
 1564895829	Makyen	thehealthvlog\.com
 1564895846	Makyen	fantastic\W*keto
 1564902911	tripleee	skymalldispensary\.com
+1564915276	tripleee	hyscq(?# allurl.com redirector)
