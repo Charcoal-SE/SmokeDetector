@@ -11930,3 +11930,4 @@
 1564915276	tripleee	hyscq(?# allurl.com redirector)
 1564915294	tripleee	best-financing-options-for-online\.com
 1564919346	tripleee	fair4body\.blogspot
+1564919366	tripleee	fair\W?4\W?body
