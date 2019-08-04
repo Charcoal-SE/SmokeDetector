@@ -278,6 +278,11 @@ stackexchange.com:
     msg_types:
       - site-stackapps.com
 
+  96491:  # Jeff's U&L smokedetector roomThe Studio
+    commands: false
+    msg_types:
+      - site-unix.stackexchange.com
+
 meta.stackexchange.com:
   89:  # Tavern on the Meta
     commands: true
