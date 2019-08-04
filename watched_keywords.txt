@@ -11933,3 +11933,4 @@
 1564923357	tripleee	raul\W*bestpro
 1564934171	double-beep	yorconstruction\.com
 1564938663	Makyen	top10tobuy\.in
+1564962738	Makyen	saldorantulwod(?:@ya\.ru)?
