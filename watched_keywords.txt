@@ -11971,3 +11971,4 @@
 1565041217	Makyen	clickstore\.kerihosting\.com
 1565041236	Makyen	websales\.kerihosting\.com
 1565041255	Makyen	nuwanhealthtips\.kerihosting\.com
+1565041276	Makyen	nuwansolar\.kerihosting\.com
