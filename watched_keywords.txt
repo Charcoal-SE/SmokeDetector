@@ -11935,3 +11935,4 @@
 1564938663	Makyen	top10tobuy\.in
 1564962738	Makyen	saldorantulwod(?:@ya\.ru)?
 1564981010	Shree	accuweather\.com
+1564981037	Shree	battingforvermont\.com
