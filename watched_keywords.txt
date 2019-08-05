@@ -10566,7 +10566,6 @@
 1560450038	Makyen	correcttechno\.com
 1560458681	Makyen	6(?<=\$6)00\b\W*(?:(?:a|per|every)\W*day|reliably|constantly|consistently)(?#keep as a watch to add an additional detection reason)
 1560465758	Machavity	thechrisbaum1968(?:@gmail\.com)?
-1560466448	Makyen	healthlinegroup\.com
 1560466914	Makyen	onlineghosthacker\d+(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?(?:com)?)?(?#onlineghosthacker247 seen)
 1560466936	Makyen	online\W*ghost\W*hacker
 1560469115	Makyen	devdrive\.org
