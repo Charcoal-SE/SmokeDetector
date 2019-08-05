@@ -1926,7 +1926,7 @@ thrive\W*society\W*keto
 snapslim\W*keto
 Essential(?:\W*)?keto
 (?:(?:Opti|Radiant)\W*)?Farms\W*Keto
-keto\W?top
+keto\W*top(?:\W*(?:diet|pills?|tablets?|org|work|\d+))*
 joyelle(?:\W?derma(?:\W?cream)?)?
 healthy\W?keto\W?nation
 essential\W?cbd\W?extract
