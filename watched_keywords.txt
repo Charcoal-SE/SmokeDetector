@@ -11965,3 +11965,4 @@
 1565026983	Makyen	bestdocumentservice\.com
 1565036221	Makyen	tronbomb\.io
 1565036254	Makyen	tron[\W_]*(?:ix[\W_]*)?bomb(?!\.io(?<=tronbomb\.io))
+1565041155	Makyen	nuwan\.kerihosting\.com
