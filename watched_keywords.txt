@@ -8813,7 +8813,6 @@
 1553246754	double-beep	pcbgogo\.com
 1553246417	double-beep	triumphant\W*finance\W*(?:Company)?LTD(?:@gmail\.com)?
 1553247350	double-beep	musicalsource\.co\.uk
-1553247588	double-beep	delivery\.acm\.org
 1553248259	double-beep	antnan\.com
 1553248496	tripleee	2ujWLco(?#bit.ly redirector)
 1553248567	tripleee	efin\.cx(?#target of bit.ly/2ujWLco)
