@@ -1897,7 +1897,8 @@ pattern_websites = [
     r"buyviewsutube",
     r"(?:celebrity-?)?net-?worth", "richestcelebrities",
     r"ufc\wfight\wnight",  # Chiesa vs Lee spam
-    r"[\w-]{0,100}football[\w-]{0,100}(?:\.[\w-]{0,100})*\.(com?|net|org|in(fo)?|us|blogspot|wordpress|live)"  # football live streaming spam
+    # football live streaming spam
+    r"[\w-]{0,100}football[\w-]{0,100}(?:\.[\w-]{0,100})*\.(com?|net|org|in(fo)?|us|blogspot|wordpress|live)"
 ]
 city_list = [
     "Agra", "Amritsar", "Bangalore", "Bhopal", "Chandigarh",
