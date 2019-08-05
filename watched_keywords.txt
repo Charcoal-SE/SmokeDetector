@@ -11960,4 +11960,3 @@
 1565001189	Makyen	isfindia\.net
 1565001506	Makyen	offlinefreewarefiles\.com
 1565004986	tripleee	sixteeninches\.com
-1565006187	Makyen	z(?!z)z
