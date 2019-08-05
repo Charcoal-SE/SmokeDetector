@@ -11968,3 +11968,4 @@
 1565041155	Makyen	nuwan\.kerihosting\.com
 1565041175	Makyen	skytravel\.kerihosting\.com
 1565041195	Makyen	deals\.kerihosting\.com
+1565041217	Makyen	clickstore\.kerihosting\.com
