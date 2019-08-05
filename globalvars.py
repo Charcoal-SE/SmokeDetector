@@ -14,20 +14,9 @@ import regex
 import subprocess as sp
 import platform
 from helpers import log
-if 'windows' in platform.platform().lower():
-    # noinspection PyPep8Naming
-    from classes import Git as git, GitError
-else:
-    from sh.contrib import git
 
 
 CommitInfo = namedtuple('CommitInfo', ['id', 'id_full', 'author', 'message'])
-
-git_url = git.config("--get", "remote.origin.url").strip()
-git_url_split = git_url.split("/")
-git_user_repo = "Charcoal-SE/SmokeDetector"
-if git_url[0:19] == "https://github.com/":
-    git_user_repo = "{}/{}".format(git_url_split[3], git_url_split[4][0:-4])
 
 
 def git_commit_info():
@@ -147,6 +136,12 @@ class GlobalVars:
 
     config = config_parser["Config"]  # It's a collections.OrderedDict now
 
+    # environ_or_none replaced by os.environ.get (essentially dict.get)
+    bot_name = os.environ.get("SMOKEDETECTOR_NAME", "SmokeDetector")
+    bot_repo_slug = os.environ.get("SMOKEDETECTOR_REPO", "Charcoal-SE/SmokeDetector")
+    bot_repository = "//github.com/{}".format(bot_repo_slug)
+    chatmessage_prefix = "[{}]({})".format(bot_name, bot_repository)
+
     site_id_dict = {}
     post_site_id_to_question = {}
 
@@ -176,12 +171,6 @@ class GlobalVars:
 
     # Miscellaneous
     log_time_format = config.get("log_time_format", "%H:%M:%S")
-
-    # environ_or_none replaced by os.environ.get (essentially dict.get)
-    bot_name = os.environ.get("SMOKEDETECTOR_NAME", git_name)
-    bot_repo_slug = os.environ.get("SMOKEDETECTOR_REPO", git_user_repo)
-    bot_repository = "//github.com/{}".format(bot_repo_slug)
-    chatmessage_prefix = "[{}]({})".format(bot_name, bot_repository)
 
     valid_content = """This is a totally valid post that should never be caught. Any blacklist or watchlist item that triggers on this item should be avoided. java.io.BbbCccDddException: nothing wrong found. class Safe { perfect valid code(int float &#%$*v a b c =+ /* - 0 1 2 3 456789.EFGQ} English 中文Français Español Português Italiano Deustch ~@#%*-_/'()?!:;" vvv kkk www sss ttt mmm absolute std::adjacent_find (power).each do |s| bbb end ert zal l gsopsq kdowhs@ xjwk* %_sooqmzb xjwpqpxnf.  Please don't blacklist disk-partition.com, it's a valid domain (though it also gets spammed rather frequently)."""  # noqa: E501
 

@@ -12,7 +12,6 @@ import requests
 from requests.auth import HTTPBasicAuth
 
 from urllib.parse import quote_plus
-from urllib.parse import quote
 from globalvars import GlobalVars
 if GlobalVars.on_windows:
     # noinspection PyPep8Naming
@@ -51,15 +50,6 @@ class GitHubManager:
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
 class GitManager:
     gitmanager_lock = Lock()
-
-    @classmethod
-    def get_origin_or_auth(cls):
-        git_url = git.config("--get", "remote.origin.url").strip()
-        if git_url[0:19] == "https://github.com/" and GlobalVars.github_username and GlobalVars.github_password:
-            preformat_url = ('https://{}:{}@github.com/' + git_url[19:])
-            return preformat_url.format(quote(GlobalVars.github_username), quote(GlobalVars.github_password))
-        else:
-            return "origin"
 
     @classmethod
     def add_to_blacklist(cls, blacklist='', item_to_blacklist='', username='', chat_profile_link='',
@@ -141,14 +131,13 @@ class GitManager:
                 "--author={} <{}>".format(GlobalVars.git_name, GlobalVars.git_email),
                 "-m", "Auto {0} of `{1}` by {2}".format(op, item, username))
 
-            origin_or_auth = cls.get_origin_or_auth()
             if code_permissions:
                 git.checkout("master")
                 git.merge(branch)
-                git.push(origin_or_auth, "master")
+                git.push("origin", "master")
                 git.branch('-D', branch)  # Delete the branch in the local git tree since we're done with it.
             else:
-                git.push(origin_or_auth, branch)
+                git.push("origin", branch)
                 git.checkout("master")
 
                 if GlobalVars.github_username is None or GlobalVars.github_password is None:
@@ -269,8 +258,7 @@ class GitManager:
 
             git.checkout('master')
             git.merge(branch)
-            origin_or_auth = cls.get_origin_or_auth()
-            git.push(origin_or_auth, 'master')
+            git.push('origin', 'master')
 
             try:
                 git.branch('-D', branch)
@@ -309,16 +297,15 @@ class GitManager:
             # Remote checks passed, good to go here
             cls.gitmanager_lock.acquire()
             git.checkout('master')
-            origin_or_auth = cls.get_origin_or_auth()
-            git.fetch(origin_or_auth, '+refs/pull/{}/head'.format(pr_id))
+            git.fetch('origin', '+refs/pull/{}/head'.format(pr_id))
             git("-c", "user.name=" + GlobalVars.git_name,
                 "-c", "user.email=" + GlobalVars.git_email,
                 "merge",
                 'FETCH_HEAD', '--no-ff', '-m', 'Merge pull request #{} from {}/{}'.format(
                     pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref))
-            git.push(origin_or_auth, 'master')
+            git.push('origin', 'master')
             try:
-                git.push('-d', origin_or_auth, ref)
+                git.push('-d', 'origin', ref)
             except GitError as e:
                 # TODO: PR merged, but branch deletion has something wrong, generate some text
                 pass
@@ -404,8 +391,7 @@ class GitManager:
             return
         try:
             git.merge("--ff-only", "master")
-            origin_or_auth = cls.get_origin_or_auth()
-            git.push(origin_or_auth, "deploy")
+            git.push("origin", "deploy")
         except GitError:
             return
 
