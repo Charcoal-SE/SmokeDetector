@@ -82,7 +82,7 @@ def test_bisect():
         "content_source": None
     })
     msg.content_source = "!!/bisect :::essayssos.com:::"
-    assert chatcommands.bisect(None, original_msg=msg) == r"Matched by `essayssos\.com` on [line 1 of watched_keywords.txt](https://github.com/Charcoal-SE/SmokeDetector/blob/{}/watched_keywords.txt#L1)".format(GlobalVars.commit.id)
+    assert chatcommands.bisect(None, original_msg=msg) == r"Matched by `essayssos\.com` on [line 1 of watched_keywords.txt](https://github.com/{}/blob/{}/watched_keywords.txt#L1)".format(GlobalVars.bot_repo_slug, GlobalVars.commit.id)
     msg.content_source = "!!/bisect OoOasdfghjklOoO"
     assert chatcommands.bisect(None, original_msg=msg) == r"'OoOasdfghjklOoO' is not caught by a blacklist or watchlist item."
 
