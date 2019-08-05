@@ -11966,3 +11966,4 @@
 1565036221	Makyen	tronbomb\.io
 1565036254	Makyen	tron[\W_]*(?:ix[\W_]*)?bomb(?!\.io(?<=tronbomb\.io))
 1565041155	Makyen	nuwan\.kerihosting\.com
+1565041175	Makyen	skytravel\.kerihosting\.com
