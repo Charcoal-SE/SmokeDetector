@@ -139,6 +139,7 @@ stackexchange.com:
       - 11267045 # MEE the setup wizard
       - 170826   # Stephen Kennedy
       - 13177264 # Jenayah
+      - 11630962 # Maktest
 
   65945:  # Charcoal Test
     commands: true
