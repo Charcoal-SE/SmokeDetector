@@ -12001,3 +12001,4 @@
 1565117093	double-beep	goigai\.vip
 1565118611	Makyen	g[áa]i\W*g[ọo]i
 1565120089	Makyen	oimtec\.com
+1565128051	Makyen	hackermaster\d+(?:@gmail\.com)(?# hackermaster963@gmail.com seen)
