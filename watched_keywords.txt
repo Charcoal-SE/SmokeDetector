@@ -11982,3 +11982,4 @@
 1565065154	Makyen	trtadvisors\.com
 1565065174	Makyen	(?-i:SU4pu\.jpg)
 1565065192	Makyen	marketingcloudguru\.com
+1565065212	Makyen	ij\W*start\W*canon(?!\.co\.uk(?<=ijstartcanon\.co\.uk))
