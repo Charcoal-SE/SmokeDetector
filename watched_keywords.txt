@@ -11990,3 +11990,4 @@
 1565076961	tripleee	3spos\.com
 1565080439	tripleee	codingtag\.com
 1565082319	double-beep	tgcindia\.com
+1565085787	double-beep	gyansagarinstitute\.com
