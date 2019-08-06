@@ -280,7 +280,7 @@ stackexchange.com:
       - site-stackapps.com
 
   96491:  # Jeff's U&L smokedetector room
-    commands: false
+    commands: true
     msg_types:
       - site-unix.stackexchange.com
 
