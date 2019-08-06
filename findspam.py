@@ -1165,6 +1165,7 @@ def watched_ns_for_url_domain(s, site):
         'turnkeywebspace.com.',
         'namedc.com.',
         'hostinger.in.',
+        'doodledigital.net.',
     ])
 
 
