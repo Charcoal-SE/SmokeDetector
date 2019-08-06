@@ -11983,3 +11983,4 @@
 1565065192	Makyen	marketingcloudguru\.com
 1565065212	Makyen	ij\W*start\W*canon(?!\.co\.uk(?<=ijstartcanon\.co\.uk))
 1565066563	tripleee	kayakfisherly\.com
+1565068211	double-beep	e2etrainingacademy\.com
