@@ -11991,4 +11991,3 @@
 1565080439	tripleee	codingtag\.com
 1565082319	double-beep	tgcindia\.com
 1565085787	double-beep	gyansagarinstitute\.com
-1565087941	Shree	lobexwritingservices\.com
