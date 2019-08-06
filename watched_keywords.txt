@@ -11999,3 +11999,4 @@
 1565113347	Makyen	career31\.com
 1565114652	double-beep	housemaster\.od\.ua
 1565117093	double-beep	goigai\.vip
+1565118611	Makyen	g[áa]i\W*g[ọo]i
