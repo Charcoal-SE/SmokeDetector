@@ -1167,6 +1167,7 @@ def watched_ns_for_url_domain(s, site):
         'hostinger.in.',
         'doodledigital.net.',
         'site5.com.',
+        'indianshosting.com.',
     ])
 
 
