@@ -2024,3 +2024,4 @@ peak\W?surge
 https-walgreensdiet-com
 control[\W_]*x[\W_]*keto(?:[\W_]*\d+)?
 abrielle
+res[\W_]*v[\W_]*1000
