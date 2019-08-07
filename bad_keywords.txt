@@ -2022,3 +2022,4 @@ body\W?start\W?keto
 keto\W?extra\W?strength
 peak\W?surge
 https-walgreensdiet-com
+control[\W_]*x[\W_]*keto(?:[\W_]*\d+)?
