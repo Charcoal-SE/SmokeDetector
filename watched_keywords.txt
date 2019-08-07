@@ -12040,3 +12040,4 @@
 1565202119	Makyen	propersix(?!\.network|\.com)
 1565202141	Makyen	propersix\.com
 1565202161	Makyen	propersix\.network
+1565202184	Makyen	(?-i:IKAIe\.jpg)
