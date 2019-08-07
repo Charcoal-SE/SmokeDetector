@@ -12010,3 +12010,4 @@
 1565156779	tripleee	spyrosys\.com
 1565160010	Makyen	activator[\W_]*pro[\W_]*testosterone
 1565160117	Makyen	ageless(?:[\W_]*face)?[\W_]*cream
+1565160138	Makyen	abrielle[\W_]*ageless(?:(?:[\W_]*face)?[\W_]*cream)?
