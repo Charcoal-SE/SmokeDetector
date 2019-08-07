@@ -12029,3 +12029,4 @@
 1565167689	Makyen	pdtvjobs\.com
 1565168232	Makyen	vdiskrecovery\.com
 1565168428	Makyen	unlimited[\W_]*abundance(?:[\W_]*review)?
+1565168447	Makyen	supplementsbureau\.com
