@@ -11841,7 +11841,7 @@
 1564629595	Makyen	cftophp\.com
 1564629857	Makyen	rockset\.com(?<!docs\.rockset\.com)
 1564635822	Makyen	(?-i:9AHzqt9w0Gk)
-1564641572	Makyen	ketovit(?:\W*(?:forskolin|reviews?|\d+))*
+1564641572	Makyen	(?:forskolin[\W_]*)?ketovit(?!\.blogspot\.com(?<=forskolin-ketovit\.blogspot\.com))(?:[\W_]*(?:forskolin|reviews?|diet|\d+))*
 1564644082	tripleee	agrawalcorporate\.com
 1564644755	Makyen	agrawal(?:[\W_]*(?:corporate(?!\.com(?<=agrawalcorporate\.com))|market|gurukul))+
 1564651492	Makyen	keygen[\W_]*xl
