@@ -2003,7 +2003,7 @@ tutanota
 buy, sell and use Libra cryptocurrency. All information in one place
 supercut(?:\W?keto)?
 wizardcyprushacker(?:@gmail\.com)?
-spring[\W_]*hall[\W_]*health[\W_]*keto(?:[\W_]*(?:diet|[\da-f]{2,}|\d+))*
+spring[\W_]*hall[\W_]*health[\W_]*keto(?:[\W_]*(?:pill|diet|[\da-f]{2,}|\d+)s?)*
 nutrifitsupplementsweb
 rigor\W?x
 worldofvampir(?:@hotmail\.com)?
