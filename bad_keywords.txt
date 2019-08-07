@@ -1511,7 +1511,7 @@ zynev
 almaviva
 vital\W?progenix
 patroxidan
-vito\W?brain
+vito[\W_]*brain(?:[\W_]*(?:review|\d+))*
 golden\W?hero
 keto\W?fuel
 [a-z_]*(?:234_*)?9063230051[a-z_]*
