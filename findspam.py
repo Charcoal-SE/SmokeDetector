@@ -1220,13 +1220,10 @@ def watched_ip_for_url_hostname(s, site):
             '198.38.82.90',     # software-utility osofttools instantdatacare etc
             # AS 26496 AS-26496-GO-DADDY-COM-LLC
             '23.229.180.169',   # drugs health4supplement / supplements4lifetime etc
-            '23.229.217.167',   # drugs popsupplement / daddysupplement etc
             '23.229.233.231',   # drugs ultavivegarcinia.es / refollium.in etc
-            '107.180.24.240',   # drugs deal2supplement / first2order etc
             '107.180.34.212',   # fake-tech-support 123helpline / allitexpert
             '107.180.40.103',   # drugs + seo getbestdelight / seotipandsolution
             '107.180.47.58',    # drugs + travel
-            '107.180.59.131',   # drugs kingofsupplement.com
             '148.72.211.163',   # hostingride.in
             '160.153.92.5',     # uaetechnician.com
             '160.153.129.38',   # drugs supplementswellness / buyketodiet etc
@@ -1265,8 +1262,11 @@ def bad_ip_for_url_hostname(s, site):
             # AS 26347 DREAMHOST-AS
             '75.119.210.224',  # triplet-spam
             # AS 26496 AS-26496-GO-DADDY-COM-LLC
+            '23.229.217.167',  # drugs popsupplement / daddysupplement etc
             '104.25.50.105',   # crbtech.in
             '107.180.3.93',    # drugs amazonhealthstore / click2fitness etc
+            '107.180.24.240',  # drugs deal2supplement / first2order etc
+            '107.180.59.131',  # drugs kingofsupplement.com
             '107.180.78.164',  # gs-jj.com
             '160.153.75.129',  # itunessupport.org
             # AS 32475 - SINGLEHOP-LLC - SingleHop LLC, US
