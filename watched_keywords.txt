@@ -11964,7 +11964,7 @@
 1565041236	Makyen	websales\.kerihosting\.com
 1565041255	Makyen	nuwanhealthtips\.kerihosting\.com
 1565041276	Makyen	nuwansolar\.kerihosting\.com
-1565044333	Makyen	accountinghelplineusa
+1565044333	Makyen	accountinghelplineusa(?!\.weebly\.com)(?!\.yolasite\.com)
 1565057319	Machavity	binokula\.com
 1565065055	Makyen	valyrajoyvasquez\.wixsite\.com
 1565065075	Makyen	janmashtami\W*status
@@ -12044,3 +12044,4 @@
 1565202204	Makyen	(?-i:gU1gE\.jpg)
 1565202225	Makyen	(?-i:U98mB\.png)
 1565214433	Makyen	accountinghelplineusa\.weebly\.com
+1565214633	Makyen	accountinghelplineusa\.yolasite\.com
