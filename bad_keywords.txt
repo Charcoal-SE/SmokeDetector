@@ -2023,5 +2023,5 @@ keto\W?extra\W?strength
 peak\W?surge
 https-walgreensdiet-com
 control[\W_]*x[\W_]*keto(?:[\W_]*\d+)?
-abrielle
+abrielle(?:[\W_]*(?:ageless|face|cream|\d+))*
 res[\W_]*v[\W_]*1000
