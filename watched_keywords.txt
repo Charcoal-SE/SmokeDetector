@@ -12020,3 +12020,4 @@
 1565165020	Makyen	gurgaon[\W_]*clinics(?!\.com(?<=gurgaonclinics\.com))
 1565165173	Makyen	(?-i:OnQDiRdm_Rc)
 1565165193	Makyen	(?-i:x7fdov0)
+1565165212	Makyen	medanta
