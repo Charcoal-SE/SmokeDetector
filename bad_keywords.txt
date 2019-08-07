@@ -1785,7 +1785,7 @@ Finfree\W*Enterprise
 sc\W?a\W?cream
 truu\W?keto
 enzothrust
-keto\W?viante(?:\W?diet)?
+keto[\W_]*viante(?!\.info(?<=ketoviante\.info))(?:[\W_]*(?:diet|plan|\d+))*
 zephrofel
 maxwell\W?keto
 serexin
