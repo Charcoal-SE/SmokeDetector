@@ -1511,7 +1511,7 @@ zynev
 almaviva
 vital\W?progenix
 patroxidan
-vito[\W_]*brain(?:[\W_]*(?:review|\d+))*
+vito[\W_]*brain(?:[\W_]*(?:review|\d+)s?)*
 golden\W?hero
 keto\W?fuel
 [a-z_]*(?:234_*)?9063230051[a-z_]*
@@ -1785,9 +1785,9 @@ Finfree\W*Enterprise
 sc\W?a\W?cream
 truu\W?keto
 enzothrust
-keto[\W_]*viante(?!\.info(?<=ketoviante\.info))(?:[\W_]*(?:diet|plan|\d+))*
+keto[\W_]*viante(?!\.info(?<=ketoviante\.info))(?:[\W_]*(?:diet|plan|\d+)s?)*
 zephrofel
-maxwell[\W_]*keto(?:[\W_]*(?:diet|plan|\d+))*
+maxwell[\W_]*keto(?:[\W_]*(?:diet|plan|\d+)s?)*
 serexin
 angeletta\W?skin
 cial\W?rx
