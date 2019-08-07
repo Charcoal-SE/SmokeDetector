@@ -188,3 +188,4 @@ quickbooks
 (?-i:^Muhammad Waqar$)
 ^fibre\W?sales$
 ^harryred123$
+(?-i:^arcviet$)
