@@ -1787,7 +1787,7 @@ truu\W?keto
 enzothrust
 keto[\W_]*viante(?!\.info(?<=ketoviante\.info))(?:[\W_]*(?:diet|plan|\d+))*
 zephrofel
-maxwell\W?keto
+maxwell[\W_]*keto(?:[\W_]*(?:diet|plan|\d+))*
 serexin
 angeletta\W?skin
 cial\W?rx
