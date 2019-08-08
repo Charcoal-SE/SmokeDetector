@@ -12048,3 +12048,4 @@
 1565242611	Shree	fbackpage\.com
 1565244021	Makyen	exam[\W_]*dumps?
 1565247526	tripleee	dgchips\.com
+1565249113	Makyen	(?-i:kamSoTZUIyI)
