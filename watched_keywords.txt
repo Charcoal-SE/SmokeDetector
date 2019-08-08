@@ -12058,3 +12058,4 @@
 1565254386	Makyen	(?-i:x7fgsnz)
 1565257501	Byte Commander	resbee\.org
 1565258093	Makyen	comparecheapssl\.com
+1565259501	Makyen	lifestream[\W_]*labs(?:[\W_]*(?:oil|cbd|\d+))*
