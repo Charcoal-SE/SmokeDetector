@@ -12053,3 +12053,4 @@
 1565250398	Makyen	ftyee
 1565250414	Makyen	jack-beard-growth\.pen\.io
 1565250425	Makyen	jack-beard-growth\.blogspot\.com
+1565250435	Makyen	iserver[\W_]*admin(?!\.com(?<=iserveradmin\.com))
