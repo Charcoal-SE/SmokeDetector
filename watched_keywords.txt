@@ -12047,3 +12047,4 @@
 1565238959	tripleee	genuinechemistry\.com
 1565242611	Shree	fbackpage\.com
 1565244021	Makyen	exam[\W_]*dumps?
+1565247526	tripleee	dgchips\.com
