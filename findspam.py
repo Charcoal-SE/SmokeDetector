@@ -1200,6 +1200,8 @@ def watched_ip_for_url_hostname(s, site):
             '104.25.224.105',   # rsorder.com jollyhers.com
             # AS 14061 DIGITALOCEAN-ASN - DigitalOcean, LLC, US
             '139.59.83.45',     # fake-tech-support techjockey.com
+            # AS 16276 (OVH, FR
+            '158.69.166.236',   # braindumps4it.com
             # AS 19318 IS-AS-1 - Interserver, Inc, US
             '69.10.35.52',      # exitech.in
             # AS 20068 - HAWKHOST - Hawk Host Inc., CA.
