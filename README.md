@@ -140,6 +140,7 @@ at your option.
 
 ### Contribution Licensing
 
-Any contribution intentionally submitted for inclusion in the work by you,
+By submitting your contribution for inclusion in the work
 as defined in the [Apache-2.0 license](https://www.apache.org/licenses/LICENSE-2.0),
-shall be dual licensed as above, without any additional terms or conditions. 
+you agree that it be dual licensed as above,
+without any additional terms or conditions. 
