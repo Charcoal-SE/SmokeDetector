@@ -2026,3 +2026,4 @@ control[\W_]*x[\W_]*keto(?:[\W_]*(?:fit|\d+))*
 abrielle(?:[\W_]*(?:ageless|face|cream|\d+))*
 res[\W_]*v[\W_]*1000
 top\W*organic\W*keto
+prime[\W_]*time[\W_]*boost(?:[\W_]*(?:testosterone|\d+))*
