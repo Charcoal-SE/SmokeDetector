@@ -1200,13 +1200,15 @@ def watched_ip_for_url_hostname(s, site):
             '104.25.224.105',   # rsorder.com jollyhers.com
             # AS 14061 DIGITALOCEAN-ASN - DigitalOcean, LLC, US
             '139.59.83.45',     # fake-tech-support techjockey.com
-            # AS 16276 (OVH, FR
+            # AS 16276 OVH, FR
             '158.69.166.236',   # braindumps4it.com
             # AS 19318 IS-AS-1 - Interserver, Inc, US
             '69.10.35.52',      # exitech.in
-            # AS 20068 - HAWKHOST - Hawk Host Inc., CA.
+            # AS 20068 HAWKHOST - Hawk Host Inc., CA.
             '172.96.187.196',   # fake-tech-support driver-canon.com
             '198.252.105.94',   # fake-tech-support asia-canon.com etc
+            # AS 22611 IMH-WEST - InMotion Hosting, Inc., US/US)
+            '209.182.203.249',  # mindmajix.com
             # AS 22612 NAMECHEAP-NET
             '68.65.122.36',     # drugs reviewscart.co.uk / purefitketopills.com
             '104.219.248.45',   # drugs 360nutra / timesnutrition etc
