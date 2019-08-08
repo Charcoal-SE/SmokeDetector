@@ -12055,3 +12055,4 @@
 1565250435	Makyen	iserver[\W_]*admin(?!\.com(?<=iserveradmin\.com))
 1565250450	Makyen	jack[\W_]*beard[\W_]*growth(?!\.pen\.io(?<=jack-beard-growth\.pen\.io))(?!\.blogspot\.com(?<=jack-beard-growth\.blogspot\.com))
 1565252475	Makyen	charliehaimon\.blogspot\.com
+1565252502	Makyen	charliehaimon
