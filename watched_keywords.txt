@@ -12045,3 +12045,4 @@
 1565231009	Makyen	taboola\W*agency
 1565231031	Makyen	topic=5172621
 1565238959	tripleee	genuinechemistry\.com
+1565241477	Makyen	prime[\W_]*time[\W_]*boost(?:[\W_]*(?:testosterone|\d+))*
