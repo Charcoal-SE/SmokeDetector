@@ -12073,3 +12073,4 @@
 1565332094	tripleee	rbuJZ0TH-C4(?# youtube link)
 1565333227	double-beep	usmandrhazim(?:@gmail\.com)?
 1565333663	tripleee	momnewsdaily\.com
+1565334366	tripleee	astertoursandtravel\.com
