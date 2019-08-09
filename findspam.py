@@ -237,8 +237,8 @@ class Rule:
         if self.stripcodeblocks:
             # use a placeholder to avoid triggering "few unique characters" when most of post is code
             # XXX: "few unique characters" doesn't enable this, so remove placeholder?
-            body_to_check = regex.sub("(?s)<pre>.*?</pre>", "\ncode\n", body_to_check)
-            body_to_check = regex.sub("(?s)<code>.*?</code>", "\ncode\n", body_to_check)
+            body_to_check = regex.sub("(?s)<pre>.*?</pre>", "\nstripped pre\n", body_to_check)
+            body_to_check = regex.sub("(?s)<code>.*?</code>", "\nstripped code\n", body_to_check)
         if self.reason == 'phone number detected in {}':
             body_to_check = regex.sub("<(?:a|img)[^>]+>", "", body_to_check)
 
