@@ -1032,7 +1032,6 @@ def bad_ns_for_url_domain(s, site):
         'aapkeaajanese.website.',
         'healthymum.org.',
         'escortdomain.net.',
-        'syrahost.com.',
         'dnsdomen.com.',
         'letter.org.in.',
         'utecho.com.',
@@ -1109,6 +1108,7 @@ def watched_ns_for_url_domain(s, site):
         'offshoric.com.',
         'freehostia.com.',
         'hawkhost.com.',  # has FPs, don't move to blacklist
+        'syrahost.com.',  # Demoted back to watch 2019-08-09 -- 27/55
         'greengeeks.com.',
         'supportaus.com.',
         '256gbserver.com.',
