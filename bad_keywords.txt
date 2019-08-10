@@ -1965,7 +1965,7 @@ keto\W*mode
 Social\W*Prachar
 green\W*vibe\W*keto
 krygen\W*xl
-radiant\W?swift(?:\W?keto)?
+radiant[\W_]*swift(?:[\W_]*(?:keto|fit|\d+|[\da-f]{4,}))*
 (?:(?:life|quality)\W*)?nutra\W*keto
 legends\W*keto
 fast\W*burn\W*keto
