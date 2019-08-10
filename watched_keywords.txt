@@ -12094,3 +12094,4 @@
 1565420346	Makyen	(?-i:8djpUVs3BiI)
 1565420354	Makyen	(?:buy[\W_]*)?sure[\W_]*botanicals(?:[\W_]*(?:cbd|review)s?)+
 1565420365	Makyen	ketopure-org\.over-blog\.com
+1565420422	Makyen	topcbdoilhub(?!\.over-blog\.com)(?!\.blogspot\.com)
