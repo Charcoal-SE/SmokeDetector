@@ -12088,3 +12088,4 @@
 1565414367	Makyen	shuttle-paris-airports\.com
 1565416472	Makyen	crypto\W*revolution(?:\W*review)?
 1565417533	Nisse Engström	sggreek\.com
+1565418708	Nisse Engström	mysuncraft\.com
