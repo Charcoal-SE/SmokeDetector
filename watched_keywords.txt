@@ -12098,3 +12098,4 @@
 1565420450	Makyen	topcbdoilhub\.over-blog\.com
 1565420467	Makyen	modular[\W_]*wardrobe(?:[\W_]*(?:manufacturers|design))+
 1565420477	Makyen	helmesharow
+1565420660	Makyen	topcbdoilhub\.blogspot\.com
