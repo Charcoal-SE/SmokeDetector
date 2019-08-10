@@ -12103,3 +12103,4 @@
 1565422710	Makyen	dx[\W_]*amp(?:[\W_]*male[\W_]*enhancement)?
 1565428374	Makyen	^thelghome$
 1565428766	Shree	digitalwebline\.com
+1565428936	Makyen	boyue99\.com
