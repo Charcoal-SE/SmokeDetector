@@ -12096,3 +12096,4 @@
 1565420365	Makyen	ketopure-org\.over-blog\.com
 1565420422	Makyen	topcbdoilhub(?!\.over-blog\.com)(?!\.blogspot\.com)
 1565420450	Makyen	topcbdoilhub\.over-blog\.com
+1565420467	Makyen	modular[\W_]*wardrobe(?:[\W_]*(?:manufacturers|design))+
