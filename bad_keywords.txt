@@ -2028,3 +2028,4 @@ res[\W_]*v[\W_]*1000
 top\W*organic\W*keto
 prime[\W_]*time[\W_]*boost(?:[\W_]*(?:testosterone|\d+))*
 uae\W*technician(?!\.com(?<=uaetechnician\.com))
+xpert\W*konjac(?:[\W_]*(?:avis|acheter|officiel|ici|\d+))*
