@@ -12082,3 +12082,4 @@
 1565390836	Makyen	firstpier\.com
 1565390845	Makyen	bittitanrobot(?:@gmail\.com)?
 1565409817	Makyen	freemididownload\.com
+1565409824	Makyen	344755063141592(?#Facebook event)
