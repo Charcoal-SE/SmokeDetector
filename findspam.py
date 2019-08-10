@@ -235,8 +235,7 @@ class Rule:
         reason_body = self.reason.replace("{}", body_name)
 
         if self.stripcodeblocks:
-            # use a placeholder to avoid triggering "few unique characters" when most of post is code
-            # XXX: "few unique characters" doesn't enable this, so remove placeholder?
+            # use a placeholder to avoid triggering "linked punctuation" on code-only links
             body_to_check = regex.sub("(?s)<pre>.*?</pre>", "\nstripped pre\n", body_to_check)
             body_to_check = regex.sub("(?s)<code>.*?</code>", "\nstripped code\n", body_to_check)
         if self.reason == 'phone number detected in {}':
