@@ -236,10 +236,9 @@ class Rule:
 
         if self.stripcodeblocks:
             # use a placeholder to avoid triggering "few unique characters" when most of post is code
-            # "few unique characters" doesn't enable this, so remove placeholder?
-            # placeholder removed, do NOT enable this option for "few unique chars"
-            body_to_check = regex.sub("(?s)<pre>.*?</pre>", "\n", body_to_check)
-            body_to_check = regex.sub("(?s)<code>.*?</code>", "\n", body_to_check)
+            # XXX: "few unique characters" doesn't enable this, so remove placeholder?
+            body_to_check = regex.sub("(?s)<pre>.*?</pre>", "\nstripped pre\n", body_to_check)
+            body_to_check = regex.sub("(?s)<code>.*?</code>", "\nstripped code\n", body_to_check)
         if self.reason == 'phone number detected in {}':
             body_to_check = regex.sub("<(?:a|img)[^>]+>", "", body_to_check)
 
@@ -540,7 +539,6 @@ def has_repeating_words(s, site):
 # noinspection PyUnusedLocal,PyMissingTypeHints
 @create_rule("few unique characters in {}", title=False, max_rep=10000, max_score=10000)
 def has_few_characters(s, site):
-    # WARNING: Do NOT enable stripcodeblocks, there's no more placeholders
     s = regex.sub("</?(?:p|strong|em)>", "", s).rstrip()  # remove HTML paragraph tags from posts
     uniques = len(set(s) - {"\n", "\t"})
     length = len(s)
