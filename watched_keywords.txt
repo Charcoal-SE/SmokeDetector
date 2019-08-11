@@ -12115,7 +12115,7 @@
 1565488911	Makyen	exchangedatabaserepair\.weebly\.com
 1565488920	Makyen	leonard_70746
 1565488929	Makyen	356035802006970(?#facebook event)
-1565488954	Makyen	total[\W_]*fit(?:[\W_]*(?:keto|diet\d+)s?)+
+1565488954	Makyen	total[\W_]*fit(?:[\W_]*(?:keto|diet|\d+)s?)+
 1565488967	Makyen	allsupplementdiet\.over-blog\.com
 1565503452	Makyen	printer-hpdrivers\.com
 1565518497	Makyen	camprouytr
