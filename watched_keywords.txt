@@ -12125,3 +12125,4 @@
 1565525039	Makyen	mva\.com
 1565525297	Makyen	trim[\W_]*fit[\W_]*keto(?:[\W_]*(?:review|diet|\d+|[\da-f]{4,})s?)*
 1565525305	Makyen	platinum[\W_]*fit[\W_]*keto(?:[\W_]*(?:review|diet|\d+|[\da-f]{4,})s?)*
+1565525326	Makyen	super[\W_]*fit[\W_]*keto(?:[\W_]*(?:review|diet|\d+|[\da-f]{4,})s?)*
