@@ -2029,3 +2029,4 @@ top\W*organic\W*keto
 prime[\W_]*time[\W_]*boost(?:[\W_]*(?:testosterone|\d+))*
 uae\W*technician(?!\.com(?<=uaetechnician\.com))
 xpert\W*konjac(?:[\W_]*(?:avis|acheter|officiel|ici|\d+))*
+max[\W_]*fit[\W_]*keto(?:[\W_]*(?:review|diet|\d+|[\da-f]{4,})s?)*
