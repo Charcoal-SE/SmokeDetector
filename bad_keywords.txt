@@ -1271,7 +1271,7 @@ asha24
 action\W?pro
 bone\W?oak
 ever\W?erect
-purefit\W?keto
+purefit[\W_]*keto
 fur\W?fag
 237650092947
 bonte\W?cream
