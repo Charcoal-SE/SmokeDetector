@@ -11282,7 +11282,6 @@
 1563030360	double-beep	cutthephoto\.com
 1563030375	double-beep	clippingpathstation\.com
 1563031509	Nisse Engström	backgroundchanger\.com
-1563034255	Makyen	iyabiyehealinghome(?:@gmail\.com)?
 1563036947	Makyen	allindiawatches\.com
 1563037732	Makyen	powellcorderoy\.org
 1563037754	Makyen	edriversupports\.com
