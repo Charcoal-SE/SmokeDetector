@@ -2022,7 +2022,7 @@ body\W?start\W?keto
 keto\W?extra\W?strength
 peak\W?surge
 https-walgreensdiet-com
-control[\W_]*x[\W_]*keto(?:[\W_]*(?:fit|\d+))*
+control[\W_]*x[\W_]*keto(?:[\W_]*(?:review|web|fit|\d+)s?)*(?!\.aircus\.com(?<=controlxketoreview\.aircus\.com))(?!\.bravesites\.com(?<=controlxketoweb\.bravesites\.com))(?!-x-keto\.jigsy\.com(?<=control-x-keto\.jigsy\.com))(?!\.health\.blog(?<=controlxketoreview\.health\.blog))
 abrielle(?:[\W_]*(?:ageless|face|cream|\d+))*
 res[\W_]*v[\W_]*1000
 top\W*organic\W*keto
