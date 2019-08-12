@@ -1169,6 +1169,7 @@ def watched_ns_for_url_domain(s, site):
         'indianshosting.com.',
         'zonedns.vn.',
         'cetpajobs.com.',
+        'thesecurededicatedserver.com.',
     ])
 
 
