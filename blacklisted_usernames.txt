@@ -189,3 +189,4 @@ quickbooks
 ^fibre\W?sales$
 ^harryred123$
 (?-i:^arcviet$)
+(?-i:^faramondsmith$)
