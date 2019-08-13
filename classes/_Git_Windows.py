@@ -1,6 +1,7 @@
 import shlex
 import subprocess as sp
 import platform
+from helpers import log
 
 if 'windows' not in platform.platform().lower():
     raise NotImplementedError("Use the `sh` module's `git` from PyPI instead!")
@@ -10,7 +11,9 @@ GitError = sp.CalledProcessError
 
 
 def _call_process(execcmd, _ok_code=None, return_data=False):
-    proc = sp.Popen(shlex.split(execcmd), stdout=sp.PIPE, stderr=sp.PIPE, shell=True)
+    execcmd = ('git',) + execcmd
+    log('debug', 'Windows Git:', execcmd, '::  _ok_code:', _ok_code, '::  return_data', return_data)
+    proc = sp.Popen(execcmd, stdout=sp.PIPE, stderr=sp.PIPE, shell=True)
     (stdout, stderr) = proc.communicate()
     retcode = proc.returncode
     if retcode != 0:
@@ -20,103 +23,62 @@ def _call_process(execcmd, _ok_code=None, return_data=False):
             raise GitError(retcode, execcmd, stdout, stderr)
 
     if return_data:
-        return stdout, stderr, retcode
+        to_return = (stdout, stderr, retcode)
+        if return_data == 'data':
+            to_return = stdout.decode('UTF-8')
+        log('debug', 'Windows Git:', execcmd, '::  returning:', to_return)
+        return to_return
 
 
-class Git:
-    # add
+class Git(object):
+    # git
+    def __init__(self, *args):
+        if len(args) > 0:
+            _call_process(args)
+
+    def __getattribute__(self, name):
+        def interceptor(*args, **kwargs):
+            adjusted_name = name.replace('_', '-')
+            return_data_for = ('status', 'diff', 'log', 'rev-parse')
+            if adjusted_name in return_data_for:
+                kwargs['return_data'] = 'data'
+            return _call_process((adjusted_name,) + args, **kwargs)
+        try:
+            method_in_class = object.__getattribute__(self, name)
+        except AttributeError:
+            return interceptor
+        else:
+            return method_in_class
+
+    # git
     @staticmethod
-    def add(*args):
-        execcmd = "git add " + " ".join(args)
-        _call_process(execcmd)
-
-    # branch
-    @staticmethod
-    def branch(*args):
-        execcmd = "git branch " + " ".join(args)
-        _call_process(execcmd)
-
-    # Checkout
-    @staticmethod
-    def checkout(*args):
-        execcmd = "git checkout " + " ".join(args)
-        _call_process(execcmd)
-
-    # commit
-    @staticmethod
-    def commit(*args):
-        execcmd = "git commit " + " ".join(args)
-        _call_process(execcmd)
+    def __call__(*args, **kwargs):
+        _call_process(args, **kwargs)
 
     # Config
     @staticmethod
-    def config(*args, _ok_code=None):
-        execcmd = "git config " + " ".join(args)
-        _call_process(execcmd, _ok_code=_ok_code)
-
-    # merge
-    @staticmethod
-    def merge(*args):
-        execcmd = "git merge " + " ".join(args)
-        _call_process(execcmd)
-
-    # fetch
-    @staticmethod
-    def fetch(*args):
-        execcmd = "git fetch " + " ".join(args)
-        _call_process(execcmd)
-
-    # pull
-    @staticmethod
-    def pull(*args):
-        execcmd = "git pull " + " ".join(args)
-        _call_process(execcmd)
-
-    # push
-    @staticmethod
-    def push(*args):
-        execcmd = "git push " + " ".join(args)
-        _call_process(execcmd)
+    def config(*args, **kwargs):
+        _call_process(('config',) + args, **kwargs)
 
     # remote.update
     class remote:  # noqa: N801
         @staticmethod
-        def update(*args):
-            execcmd = "git remote update " + " ".join(args)
-            _call_process(execcmd)
-
-    # reset
-    @staticmethod
-    def reset(*args):
-        execcmd = "git reset " + " ".join(args)
-        _call_process(execcmd)
-
-    # rev-parse
-    @staticmethod
-    def rev_parse(*args):
-        execcmd = "git rev-parse " + " ".join(args)
-        return _call_process(execcmd, return_data=True)[0].decode('UTF-8')
-
-    # status
-    @staticmethod
-    def status(*args):
-        execcmd = "git status " + " ".join(args)
-        return _call_process(execcmd, return_data=True)[0].decode('UTF-8')
+        def update(*args, **kwargs):
+            _call_process(('remote', 'update',) + args, **kwargs)
 
     # status with colours stripped
     @staticmethod
-    def status_stripped(*args):
-        execcmd = "git -c color.status=false status " + " ".join(args)
-        return _call_process(execcmd, return_data=True)[0].decode('UTF-8')
-
-    # diff
-    @staticmethod
-    def diff(*args):
-        execcmd = "git diff " + " ".join(args)
-        return _call_process(execcmd, return_data=True)[0].decode('UTF-8')
+    def status_stripped(*args, **kwargs):
+        if 'return_data' not in kwargs:
+            kwargs['return_data'] = True
+        return _call_process(('-c', 'color.status=false', 'status',) + args, **kwargs)
 
     # diff with colours stripped, filenames only
     @staticmethod
-    def diff_filenames(*args):
-        execcmd = "git -c color.diff=false diff --name-only " + " ".join(args)
-        return _call_process(execcmd, return_data=True)[0].decode('UTF-8')
+    def diff_filenames(*args, **kwargs):
+        if 'return_data' not in kwargs:
+            kwargs['return_data'] = True
+        return _call_process(('-c', 'color.diff=false', 'diff', '--name-only',) + args, **kwargs)
+
+
+git = Git()

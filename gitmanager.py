@@ -15,8 +15,7 @@ from urllib.parse import quote_plus
 from globalvars import GlobalVars
 if GlobalVars.on_windows:
     # noinspection PyPep8Naming
-    from classes import Git as git
-    from classes._Git_Windows import GitError
+    from classes._Git_Windows import git, GitError
 else:
     from sh.contrib import git
     from sh import ErrorReturnCode as GitError
