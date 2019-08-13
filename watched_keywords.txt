@@ -12181,3 +12181,4 @@
 1565714757	Makyen	support-sudip-chakma-\d*
 1565714769	Makyen	m\.p-y\.tm
 1565714779	Makyen	originId_96692
+1565714789	Makyen	(?:venerable\W*)?suman\W*jyoti\W*thero
