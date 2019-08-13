@@ -190,3 +190,4 @@ quickbooks
 ^harryred123$
 (?-i:^arcviet$)
 (?-i:^faramondsmith$)
+(?-i:^Neeta Panchal$)
