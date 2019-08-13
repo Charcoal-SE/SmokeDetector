@@ -12178,3 +12178,4 @@
 1565711315	Makyen	buradabiliyorum\.com
 1565714465	Makyen	bugbros\.com
 1565714747	Makyen	milaap\.org
+1565714757	Makyen	support-sudip-chakma-\d*
