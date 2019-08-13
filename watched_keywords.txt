@@ -12173,3 +12173,4 @@
 1565693779	double-beep	fitdiettrends\.com
 1565694255	double-beep	freeessays\.page
 1565698743	tripleee	palayeshcood\.com
+1565698782	tripleee	pala\W?yesh\w*
