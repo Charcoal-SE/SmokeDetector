@@ -12176,3 +12176,4 @@
 1565698782	tripleee	pala\W?yesh\w*
 1565707212	double-beep	astobr\.com
 1565711315	Makyen	buradabiliyorum\.com
+1565714465	Makyen	bugbros\.com
