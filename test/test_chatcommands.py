@@ -13,7 +13,11 @@ import pytest
 import regex
 import types
 import requests
-from sh.contrib import git
+if GlobalVars.on_windows:
+    # noinspection PyPep8Naming
+    from classes._Git_Windows import git
+else:
+    from sh.contrib import git
 
 from fake import Fake
 from unittest.mock import patch
