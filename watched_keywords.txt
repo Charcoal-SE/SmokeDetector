@@ -12197,3 +12197,4 @@
 1565765904	Makyen	veloura[\W*_]*(?:anti[\W*_]*ageing[\W*_]*)?cream
 1565766673	Makyen	casino261(?!\.co\b)
 1565769179	tripleee	hy-outdoorsports\.com
+1565770168	tripleee	tellthebelll\.us
