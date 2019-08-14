@@ -84,7 +84,6 @@ qboffers\.com
 webbuildersguide\.com
 idealshare\.net
 lankabpoacademy\.com
-\Wfita\.in\W
 evomailserver\.com
 gameart\.net
 voonik\.com
@@ -3025,4 +3024,3 @@ letsfindtoday\.com
 letsfindtoday\.wordpress\.com
 beingcert\.com
 multi-programming\.com
-fita\.in
