@@ -12203,3 +12203,4 @@
 1565778348	tripleee	sanatastrologer\.com
 1565778612	tripleee	rjwcewu-kju(?# youtube link)
 1565778821	tripleee	com\W?surrogate
+1565794552	Machavity	ajphotographer\.ca
