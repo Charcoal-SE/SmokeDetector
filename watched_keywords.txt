@@ -10847,7 +10847,6 @@
 1561535130	Makyen	nutritioun\.com
 1561535150	Makyen	nutritioun(?!\.com)
 1561535174	Makyen	bioinvitagen
-1561535208	Makyen	healthinsideinfo\.com
 1561535228	Makyen	penishealthlife\.net
 1561538875	Makyen	adviceduniya\.com
 1561539253	Shree	mspace\.in
