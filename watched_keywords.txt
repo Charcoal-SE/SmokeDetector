@@ -12189,3 +12189,4 @@
 1565757767	double-beep	china-cncrouterlaser\.com
 1565758951	Makyen	canon\.no
 1565758960	Makyen	ijcanon\.co\.uk
+1565759006	Makyen	canon-europe\.com
