@@ -12198,3 +12198,4 @@
 1565766673	Makyen	casino261(?!\.co\b)
 1565769179	tripleee	hy-outdoorsports\.com
 1565770168	tripleee	tellthebelll\.us
+1565772089	tripleee	hager\W?werken
