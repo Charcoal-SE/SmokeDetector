@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# coding=utf-8
 # A CLI utility for various Smokey functions
 
 import sys

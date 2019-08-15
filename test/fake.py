@@ -1,3 +1,4 @@
+# coding=utf-8
 class Fake:
     def __init__(self, d, spec=None):
         for key, value in d.items():

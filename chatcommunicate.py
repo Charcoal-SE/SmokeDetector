@@ -1,3 +1,4 @@
+# coding=utf-8
 from chatexchange import events
 from chatexchange.browser import LoginError
 from chatexchange.messages import Message

@@ -1,3 +1,4 @@
+# coding=utf-8
 # noinspection PyUnresolvedReferences
 import chatcommunicate  # coverage
 import chatcommands
