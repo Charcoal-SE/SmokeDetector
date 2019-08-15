@@ -12217,3 +12217,4 @@
 1565850459	Makyen	judi\b(?!\W?online)(?!\W*(?:kartu|poker\w*|togel|taruhan)\b).{0,140}?\b(?:bola|online|kartu|poker\w*|taruhan|togel)
 1565850469	Makyen	togel\b(?!\W?online).{0,140}?\b(?:bola|online|kartu|poker\w*|taruhan|judi)
 1565859660	Makyen	abdullah\.today
+1565877275	Machavity	officialfishingnetwork\.com
