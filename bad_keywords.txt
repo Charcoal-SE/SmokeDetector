@@ -2037,3 +2037,4 @@ judi\W*poker\w*
 judi\W*togel
 (?:taruhan\W*judi|judi\W*taruhan)
 agen\W*judi
+fastestvpn(?!\.com)
