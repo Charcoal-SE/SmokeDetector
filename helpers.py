@@ -228,7 +228,7 @@ def blacklist_integrity_check():
     seen = dict()
     errors = []
     for bl_file in bl_files:
-        with open(bl_file, 'r') as lines:
+        with open(bl_file, 'r', encoding="utf-8") as lines:
             for lineno, line in enumerate(lines, 1):
                 if line.endswith('\r\n'):
                     errors.append('{0}:{1}:DOS line ending'.format(bl_file, lineno))
