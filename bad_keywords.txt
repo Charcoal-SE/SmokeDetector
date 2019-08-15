@@ -2034,3 +2034,4 @@ body[\W_]*fit[\W_]*keto(?:[\W_]*(?:review|diet|\d+|[\da-f]{4,})s?)*
 iyabiyehealinghome(?:@gmail\.com)?
 judi\W*kartu
 judi\W*poker\w*
+judi\W*togel
