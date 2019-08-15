@@ -1823,7 +1823,7 @@ supreme\W?vigor
 ultra\W?sk
 gentiv\W?ultra
 kiss\W?anime
-dark\W?net\W?markets(?:\W?link)?
+darknetmarketslink(?=\.com)(?#Intentional double-detection of this site)
 braindumps?4it(?!\.com(?<=braindumps4it\.com))
 breast\W?actives?
 bioW?tech\W?pro
