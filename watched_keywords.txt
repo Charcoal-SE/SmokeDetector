@@ -12222,3 +12222,4 @@
 1565881915	Makyen	چت روم مشهد
 1565881949	Makyen	مشهد چت
 1565896662	Makyen	dark\W*net\W*market(?:s|places?)?(?!\.site(?<=darknet-markets\.site))(?:\W*links?(?!\.com(?<=darknetmarketslink\.com)))?
+1565897481	Makyen	nightmare\W*market(?:place)?s?
