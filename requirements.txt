@@ -17,3 +17,4 @@ typing>=3.6.4
 dnspython>=1.15.0
 PyYAML>=3.12
 msgpack-python>=0.5.6
+colorama>=0.4.1

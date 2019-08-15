@@ -5,6 +5,12 @@ import traceback
 from datetime import datetime
 import importlib
 import threading
+# termcolor doesn't work properly in PowerShell or cmd on Windows, so use colorama.
+import platform
+platform_text = platform.platform().lower()
+if 'windows' in platform_text and 'cygwin' not in platform_text:
+    from colorama import init as colorama_init
+    colorama_init()
 from termcolor import colored
 import requests
 import regex
