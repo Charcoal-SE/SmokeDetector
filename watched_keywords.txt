@@ -12218,3 +12218,4 @@
 1565850469	Makyen	togel\b(?!\W?online).{0,140}?\b(?:bola|online|kartu|poker\w*|taruhan|judi)
 1565859660	Makyen	abdullah\.today
 1565877275	Machavity	officialfishingnetwork\.com
+1565881870	Makyen	bombchat\.ir
