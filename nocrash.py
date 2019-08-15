@@ -84,7 +84,7 @@ while not stoprunning:
         sys.exit()
 
     try:
-        with open("exit.txt", "r") as f:
+        with open("exit.txt", "r", encoding="utf-8") as f:
             exit_info = [s.strip() for s in f]
         exit_info = [s for s in exit_info if s]  # Filter empty strings
         os.remove("exit.txt")

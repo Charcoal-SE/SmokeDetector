@@ -83,7 +83,7 @@ Tasks.later(restart_automatically, after=21600)
 try:
     update_tld_names()
 except TldIOError as ioerr:
-    with open('errorLogs.txt', 'a') as errlogs:
+    with open('errorLogs.txt', 'a', encoding="utf-8") as errlogs:
         if "permission denied:" in str(ioerr).lower():
             if "/usr/local/lib/python" in str(ioerr) and "/dist-packages/" in str(ioerr):
                 errlogs.write("WARNING: Cannot update TLD names, due to `tld` being system-wide installed and not "

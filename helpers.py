@@ -20,7 +20,7 @@ def exit_mode(*args, code=0):
         standby = 'standby' if GlobalVars.standby_mode else 'no_standby'
         args.add(standby)
 
-    with open("exit.txt", "w") as f:
+    with open("exit.txt", "w", encoding="utf-8") as f:
         print("\n".join(args), file=f)
     os._exit(code)
 

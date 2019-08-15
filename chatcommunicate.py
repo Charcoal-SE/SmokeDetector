@@ -135,7 +135,7 @@ def join_command_rooms():
 
 
 def parse_room_config(path):
-    with open(path, "r") as room_config:
+    with open(path, "r", encoding="utf-8") as room_config:
         room_dict = yaml.safe_load(room_config.read())
 
     with open("users.yml", "r", encoding="utf-8") as user_config:
