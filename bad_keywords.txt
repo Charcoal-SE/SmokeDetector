@@ -2035,3 +2035,4 @@ iyabiyehealinghome(?:@gmail\.com)?
 judi\W*kartu
 judi\W*poker\w*
 judi\W*togel
+(?:taruhan\W*judi|judi\W*taruhan)
