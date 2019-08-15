@@ -2032,3 +2032,4 @@ xpert\W*konjac(?:[\W_]*(?:avis|acheter|officiel|ici|\d+))*
 max[\W_]*fit[\W_]*keto(?:[\W_]*(?:review|diet|\d+|[\da-f]{4,})s?)*
 body[\W_]*fit[\W_]*keto(?:[\W_]*(?:review|diet|\d+|[\da-f]{4,})s?)*
 iyabiyehealinghome(?:@gmail\.com)?
+judi\W*kartu
