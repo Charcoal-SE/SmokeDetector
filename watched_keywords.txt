@@ -12231,3 +12231,4 @@
 1565918433	Makyen	biogenx-official\.mystrikingly\.com
 1565918510	Makyen	biogenx(?!-official\.mystrikingly\.com)(?:\W*(?:official|testosterone\booster|\d+))*
 1565918529	Makyen	fbisupplement\.over-blog\.com
+1565918726	Jeff Schaller	trukky.com
