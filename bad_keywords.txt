@@ -798,7 +798,7 @@ rapiture
 tressurge
 ephamere
 cannabinoid\W?complex
-body\W?slim\W?down
+body[\W_]*slim[\W_]*down(?!\.fr(?<=bodyslimdown\.fr))
 pusys
 (?:(?:p[eni]{3,4}s{1,2})|(?:d[ick]{2,4})|pussy)\W(?:is\W)?\.?[0-9]+\.?(?:[0-9]+)?\W?(?:in|inch(?:es)?|cm|centimet(?:er|re)s?)
 fukc(?:ing)?
