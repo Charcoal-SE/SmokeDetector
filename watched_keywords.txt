@@ -12229,3 +12229,4 @@
 1565918392	Makyen	(?-i:2UNCnYh-plE)(?#YouTube)
 1565918413	Makyen	(?-i:pF1n1E_d2Yc)(?#YouTube)
 1565918433	Makyen	biogenx-official\.mystrikingly\.com
+1565918510	Makyen	biogenx(?!-official\.mystrikingly\.com)(?:\W*(?:official|testosterone\booster|\d+))*
