@@ -35,10 +35,6 @@ class GitHubManager:
         """
         if isinstance(payload, dict):
             payload = json.dumps(payload)
-        print('GlobalVars.github_username:', GlobalVars.github_username)
-        print('GlobalVars.github_password:', GlobalVars.github_password)
-        print('cls:', cls)
-        print('cls.auth:', cls.auth)
         response = requests.post("https://api.github.com/repos/{}/pulls".format(cls.repo),
                                  auth=cls.auth, data=payload)
         return response.json()
