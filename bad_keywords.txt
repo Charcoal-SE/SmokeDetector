@@ -1703,7 +1703,7 @@ slim4vit
 prime\W?skin
 thermo\W*sculpt(?:\W*pro)?
 puria(?!\W*hadinejad|\W*developer|\W*jahanbani)
-alpha\W*titan
+alpha[\W_]*titan(?:[\W_]*(?:testo|canada|\d+)s?)*
 le\W*salle(?:\W*cream)?
 (?:active\W*)?revitalizing\W*moisturizer
 ignite\W*no\W?2
