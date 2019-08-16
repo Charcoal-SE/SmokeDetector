@@ -1905,7 +1905,7 @@ mmoah
 mindvalley
 arya\W?money
 nitroalis(?:\W?rx)?
-yooslim
+yoo[\W_]*slim(?:[\W_]*(?:avis|france|fr|konjac|garcinia|\d+|[\da-f]{4,})s?)*
 errorcode0x(?:\.com)(?#abuse keyword blacklist to get 3 detections on persistent spammer)
 elijahcapitals(?:@gmail.com)?
 pure\W?life\W?keto
