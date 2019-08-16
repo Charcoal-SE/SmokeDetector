@@ -11,9 +11,9 @@ if 'windows' not in platform.platform().lower():
 GitError = sp.CalledProcessError
 
 
-def _call_process(execcmd, _ok_code=None, return_data=False):
+def _call_process(execcmd, _ok_code=None, return_data=False, return_tuple=False):
     execcmd = ('git',) + execcmd
-    log('debug', 'Windows Git:', execcmd, '::  _ok_code:', _ok_code, '::  return_data', return_data)
+    log('debug', 'Windows Git:', execcmd, '::  _ok_code:', _ok_code, '::  return_data', return_data, '::  return_tuple', return_tuple)
     proc = sp.Popen(execcmd, stdout=sp.PIPE, stderr=sp.PIPE, shell=True)
     (stdout, stderr) = proc.communicate()
     retcode = proc.returncode
@@ -22,12 +22,12 @@ def _call_process(execcmd, _ok_code=None, return_data=False):
             pass
         else:
             raise GitError(retcode, execcmd, stdout, stderr)
-
     if return_data:
+        log('debug', 'Windows Git:', execcmd, '::  returning data:', stdout)
+        return stdout
+    if return_tuple:
         to_return = (stdout, stderr, retcode)
-        if return_data == 'data':
-            to_return = stdout.decode('UTF-8')
-        log('debug', 'Windows Git:', execcmd, '::  returning:', to_return)
+        log('debug', 'Windows Git:', execcmd, '::  returning tuple:', to_return)
         return to_return
 
 
@@ -42,7 +42,7 @@ class Git(object):
             adjusted_name = name.replace('_', '-')
             return_data_for = ('status', 'diff', 'log', 'rev-parse')
             if adjusted_name in return_data_for:
-                kwargs['return_data'] = 'data'
+                kwargs['return_data'] = True
             return _call_process((adjusted_name,) + args, **kwargs)
         try:
             method_in_class = object.__getattribute__(self, name)
