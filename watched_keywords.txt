@@ -12234,3 +12234,4 @@
 1565918726	Jeff Schaller	trukky\.com
 1565930582	Shree	columbiaasia\.com
 1565930812	Shree	columbiaasiahospital\d*(?:@gmail\.com)
+1565933754	Shree	(?i)info@SHAMMAclinic\.com
