@@ -12250,3 +12250,4 @@
 1565980582	Makyen	ilanguage\W*service(?!\.com(?<=ilanguageservice\.com))(?!\.business\.site(?<=ilanguageservice\.business\.site))
 1565990552	Makyen	7skype\.com
 1565990568	Makyen	mjoyon01(?:medium)
+1565990610	Makyen	awaretalks\W*com(?<!awaretalks\.com)
