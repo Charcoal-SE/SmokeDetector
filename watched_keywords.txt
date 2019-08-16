@@ -12263,3 +12263,4 @@
 1565995348	Makyen	elite-leather\.com
 1565995369	Makyen	tehranrepairs\.ir
 1565995391	Makyen	tehranpiper\.ir
+1565995413	Makyen	global[\W_]*digital[\W_]*talent[\W_]*acquisition[\W_]*market
