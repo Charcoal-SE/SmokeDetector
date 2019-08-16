@@ -12262,3 +12262,4 @@
 1565993978	Makyen	printland(?!\.in(?<=printland\.in))
 1565995348	Makyen	elite-leather\.com
 1565995369	Makyen	tehranrepairs\.ir
+1565995391	Makyen	tehranpiper\.ir
