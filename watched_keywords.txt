@@ -12249,3 +12249,4 @@
 1565980542	Makyen	ilanguageservice\.business\.site
 1565980582	Makyen	ilanguage\W*service(?!\.com(?<=ilanguageservice\.com))(?!\.business\.site(?<=ilanguageservice\.business\.site))
 1565990140	Makyen	q(?!q)q
+1565990179	Maktest	z(?!z)z
