@@ -12259,3 +12259,4 @@
 1565993685	Makyen	(?-i:CdbEA\.jpg)
 1565993925	Makyen	mjoyon01
 1565993948	Makyen	(?-i:^Alena Rawat$)
+1565993978	Makyen	printland(?!\.in(?<=printland\.in))
