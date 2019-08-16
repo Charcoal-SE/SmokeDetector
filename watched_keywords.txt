@@ -12255,3 +12255,4 @@
 1565990646	Makyen	sensa[\W_]*skin(?:[\W_]*(?:system|uk|\d+)s?)*
 1565992493	Makyen	bodyslimdown\.fr
 1565993606	Makyen	sandrinechellymodelactress\.info
+1565993654	Makyen	sandrine\W*chelly
