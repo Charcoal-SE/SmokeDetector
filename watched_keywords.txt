@@ -12251,3 +12251,4 @@
 1565990552	Makyen	7skype\.com
 1565990568	Makyen	mjoyon01(?:medium)
 1565990610	Makyen	awaretalks\W*com(?<!awaretalks\.com)
+1565990622	Makyen	slim[\W_]*36[\W_]*avis(?:[\W_]*\d+)*
