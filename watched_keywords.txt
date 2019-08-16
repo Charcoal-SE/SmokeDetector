@@ -12253,3 +12253,4 @@
 1565990610	Makyen	awaretalks\W*com(?<!awaretalks\.com)
 1565990622	Makyen	slim[\W_]*36[\W_]*avis(?:[\W_]*\d+)*
 1565990646	Makyen	sensa[\W_]*skin(?:[\W_]*(?:system|uk|\d+)s?)*
+1565992493	Makyen	bodyslimdown\.fr
