@@ -12276,3 +12276,4 @@
 1566031323	Makyen	aliensupplement\.over-blog\.com
 1566031342	Makyen	lean-boost-keto-\d+\.webself\.net(?#-11 and -44 seen)
 1566031362	Makyen	leanboostketo\.mystrikingly\.com
+1566031385	Makyen	(?-i:LscZR425n2c)
