@@ -12287,3 +12287,4 @@
 1566062086	Makyen	bestpillstoday\.se
 1566062107	Makyen	johnsonjohnsononline(?:@gmail\.com)?
 1566062128	Makyen	(443) 646-3324
+1566062149	Makyen	best[\W_]*pills[\W_]*today(?!(?<=bestpillstoday)\.(?:se|com))
