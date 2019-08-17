@@ -12271,3 +12271,4 @@
 1566021288	Makyen	sandrinechellymodelactress(?:\.info)?(?#without the \.info is error by spammer)
 1566031034	Makyen	smoreworld\.com
 1566031094	Makyen	garcinia[\W_]*slim[\W_]*2000
+1566031121	Makyen	408686049853976(?#facebook event)
