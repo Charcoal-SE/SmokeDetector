@@ -2039,3 +2039,4 @@ judi\W*togel
 agen\W*judi
 fastestvpn(?!\.com)
 yooforic(?:[\W_]*(?:CBD|gum|\d+))*
+supplementshub2019
