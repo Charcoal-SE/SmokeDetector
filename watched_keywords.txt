@@ -12268,7 +12268,6 @@
 1566020177	Nisse Engström	ajoyepower\.com
 1566020984	Makyen	ketoweightloss\.over-blog\.com
 1566021288	Makyen	sandrinechellymodelactress(?:\.info)?(?#without the \.info is error by spammer)
-1566031034	Makyen	smoreworld\.com
 1566031094	Makyen	garcinia[\W_]*slim[\W_]*2000
 1566031121	Makyen	408686049853976(?#facebook event)
 1566031250	Makyen	lean[\W_]*boost(?!(?<=lean-boost)-keto-44\.webself\.net)(?!(?<=leanboost)keto\.blogspot\.com)(?:[\W_]*(?:keto|diet|now|new|bhb|formula|\d+|[\da-f]{4,}))*
