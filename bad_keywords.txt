@@ -2041,3 +2041,4 @@ fastestvpn(?!\.com)
 yooforic(?:[\W_]*(?:CBD|gum|\d+))*
 supplementshub2019
 CBD gum
+Bodytone
