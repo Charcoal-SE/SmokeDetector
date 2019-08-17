@@ -12270,3 +12270,4 @@
 1566020984	Makyen	ketoweightloss\.over-blog\.com
 1566021288	Makyen	sandrinechellymodelactress(?:\.info)?(?#without the \.info is error by spammer)
 1566031034	Makyen	smoreworld\.com
+1566031094	Makyen	garcinia[\W_]*slim[\W_]*2000
