@@ -1992,7 +1992,7 @@ cyberhelp\d*(?:\W*(?:(?:at|via)\W*)?gmail(?:\W*(?:dot\W*)?com)?)?
 (?:simply|simple)[\W_]*fit\W*keto(?:[\W_]*\d+)*
 alpha\W*femme(?:\W*(?:keto|genix|ca|\d+))*
 keto\W*jolt(?:\W*(?:favorings?|reviews?|diet|\d+))*
-keto\W*body(?:\W*(?:tone|avis|fr|web|\d+))*
+keto[\W_]*body(?!tone\.com(?<=keto-bodytone\.com))(?:[\W_]*(?:tone|avis|france|fr|web|review|\d+|[\da-f]{4,}))*
 safe\W*meds\W*keto(?:\W*burn)?
 ezytone(?:\W?detox(?:\W?patch)?)?
 aegis\W*vitality(?:\W*(?:keto|prior|\d+))*
