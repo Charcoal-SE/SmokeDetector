@@ -12268,3 +12268,4 @@
 1566019352	Nisse Engström	howtomakedeliciousfood\.com
 1566020177	Nisse Engström	ajoyepower\.com
 1566020984	Makyen	ketoweightloss\.over-blog\.com
+1566021288	Makyen	sandrinechellymodelactress(?:\.info)?(?#without the \.info is error by spammer)
