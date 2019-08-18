@@ -554,7 +554,7 @@ def test_metasmoke():
             "host": "stackexchange.com"
         }
     })
-    msg_source = "metasmoke is {}. Current failure count: {}"
+    msg_source = "metasmoke is {}. Current failure count: {} " + "({id})".format(id=GlobalVars.location)
 
     assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-up") == "metasmoke is now considered up."
     assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-status") == msg_source.format("up", 0)
