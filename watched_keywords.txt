@@ -12305,3 +12305,4 @@
 1566103247	Makyen	morganjimcryptonary(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
 1566107576	Makyen	adixbathfittings\.com
 1566141361	Makyen	flexuline-93\.webself\.net
+1566141381	Makyen	flexuline(?!-93\.webself\.net)
