@@ -641,8 +641,10 @@ def errorlogs(count):
 def metasmoke(msg, alias_used):
     if alias_used in {"metasmoke", "ms-status"}:
         status_text = [
-            "metasmoke is up. Current failure count: {}".format(GlobalVars.metasmoke_failures),
-            "metasmoke is down. Current failure count: {}".format(GlobalVars.metasmoke_failures),
+            "metasmoke is up. Current failure count: {} ({id})".format(id=GlobalVars.location,
+                                                                     GlobalVars.metasmoke_failures),
+            "metasmoke is down. Current failure count: {} ({id})".format(id=GlobalVars.location,
+                                                                       GlobalVars.metasmoke_failures),
         ]
         return status_text[GlobalVars.metasmoke_down]
     # The next aliases/functionalities require privilege
