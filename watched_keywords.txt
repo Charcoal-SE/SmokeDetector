@@ -12307,3 +12307,4 @@
 1566141361	Makyen	flexuline-93\.webself\.net
 1566141381	Makyen	flexuline(?!-93\.webself\.net)
 1566141404	Makyen	dr\W*sangare
+1566141449	Makyen	drsangare01(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
