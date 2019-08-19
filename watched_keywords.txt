@@ -12344,3 +12344,4 @@
 1566220021	Machavity	yspanel\.com
 1566220062	Machavity	ysbackupboard\.com
 1566236938	Makyen	wikifactory\.com
+1566236960	Makyen	uiux\.studio
