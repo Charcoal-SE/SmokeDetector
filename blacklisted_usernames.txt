@@ -192,3 +192,4 @@ quickbooks
 (?-i:^faramondsmith$)
 (?-i:^Neeta Panchal$)
 (?-i:^Kajal Patil$)
+Aborsi‭
