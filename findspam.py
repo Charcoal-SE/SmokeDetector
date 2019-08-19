@@ -2072,8 +2072,9 @@ create_rule("pattern-matching website in {}",
             username=True, body_summary=True, question=False)
 # Suspicious health-related websites, health sites are exempt
 create_rule("pattern-matching website in {}",
-            r"(?i)(bodybuilding|workout|fitness(?!e)|diet|perfecthealth|muscle|nutrition(?!ix)|"
-            r"prostate)[\w-]*?\.(com|co\.|net|org|info|in\W)",
+            r"(?i)(?:bodybuilding|workout|fitness(?!e)|diet(?!pi\.com(?<=(?<!-)\bdietpi\.com)\b(?![.-]))|"
+            r"perfecthealth|muscle|nutrition(?!ix)|prostate)"
+            r"[\w-]*?\.(?:com|co\.|net|org|info|in\W)",
             sites=["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
                    "skeptics.stackexchange.com", "bicycles.stackexchange.com"],
             username=True, body_summary=True, max_rep=4, max_score=2)
