@@ -2042,3 +2042,4 @@ yooforic(?:[\W_]*(?:CBD|gum|\d+))*
 supplementshub2019
 CBD[\W_]*gum
 cytotec
+platinum[\W_]*fit(?:[\W_]*(?:keto|review|diet|\d+|[\da-f]{4,})s?)*
