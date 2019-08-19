@@ -12349,3 +12349,4 @@
 1566237072	Makyen	herbalsupplementreview\.jigsy\.com
 1566237092	Makyen	herbalsupplementreview\.hatenablog\.com
 1566237167	Makyen	herbalsupplementreview\.kinja\.com
+1566237188	Makyen	herbalsupplementreview\.tumblr\.com
