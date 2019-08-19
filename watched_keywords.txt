@@ -12335,3 +12335,4 @@
 1566207361	Makyen	(?i:HuvY6hAy3xw)
 1566207402	Makyen	velofel-south-africa-64\.webself\.net
 1566207422	Makyen	velofel[\W_]*south[\W_]*africa(?:[\W_]*\d+)?(?!\.webself\.net(?<=velofel-south-africa-64\.webself\.net))
+1566207884	Byte Commander	odataware
