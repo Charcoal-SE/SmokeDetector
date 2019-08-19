@@ -12323,3 +12323,4 @@
 1566204602	Makyen	biogenx-testosterone-booster-42\.webself\.net
 1566204625	Makyen	id1363278866(?#itunes)
 1566204647	Makyen	co\.sosmethod\.mobile
+1566204669	Makyen	sos\W*method(?!\.co(?<=sosmethod\.co))(?!\.mobile(?<=co\.sosmethod\.mobile))
