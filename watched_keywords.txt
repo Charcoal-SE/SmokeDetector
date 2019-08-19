@@ -12347,3 +12347,4 @@
 1566236960	Makyen	uiux\.studio
 1566237052	Makyen	herbalsupplementreview\.bravesites\.com
 1566237072	Makyen	herbalsupplementreview\.jigsy\.com
+1566237092	Makyen	herbalsupplementreview\.hatenablog\.com
