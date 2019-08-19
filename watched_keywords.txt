@@ -12353,3 +12353,4 @@
 1566237273	Makyen	herbalsupplementreview\.blogspot\.com
 1566237294	Makyen	herbalsupplementreview(?!\.(?:com|bravesites\.com|jigsy\.com|hatenablog\.com|kinja\.com|tumblr\.com|blogspot\.com))
 1566237326	Makyen	(?-i:7yMoaGuK)
+1566237350	Makyen	636907572285213099(?#pinterest)
