@@ -12112,7 +12112,6 @@
 1565525031	Makyen	brotherprintersupport247\.com
 1565525039	Makyen	mva\.com
 1565525297	Makyen	trim[\W_]*fit[\W_]*keto(?:[\W_]*(?:review|diet|\d+|[\da-f]{4,})s?)*
-1565525305	Makyen	platinum[\W_]*fit[\W_]*keto(?:[\W_]*(?:review|diet|\d+|[\da-f]{4,})s?)*
 1565525326	Makyen	super[\W_]*fit[\W_]*keto(?:[\W_]*(?:review|diet|\d+|[\da-f]{4,})s?)*
 1565525334	Makyen	(?:skinny|thin|lithe)[\W_]*fit[\W_]*keto(?:[\W_]*(?:review|diet|\d+|[\da-f]{4,})s?)*
 1565536390	Makyen	dr[\W_]*iyabiye
@@ -12311,3 +12310,5 @@
 1566174663	Makyen	lildickyearthtshirts
 1566175656	Makyen	unitednationalmasons(?:@protonmail\.ch)?
 1566182356	Makyen	thuongthuong\.vn
+1566191087	Stormblessed	danielle6751(?:\W*(?:at\W*)?outlook\W*(?:dot\W*)?com)?
+1566190921	Stormblessed	^(?-i:Alain scott)$
