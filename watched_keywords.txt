@@ -12361,3 +12361,4 @@
 1566243479	Machavity	qqcasa\.com
 1566258661	Machavity	potbd\.com
 1566263599	Makyen	allpcb\.com
+1566269217	Machavity	(?-i:^jitendra kumar$)
