@@ -1352,7 +1352,8 @@ def invite(msg, room_id, roles):
 
 # --- Post Responses --- #
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=False, give_name=True, aliases=["scan", "report-force", "report-direct"])
+@command(str, whole_msg=True, privileged=False, give_name=True,
+         aliases=["scan", "scan-force", "report-force", "report-direct"])
 def report(msg, args, alias_used="report"):
     """
     Report a post (or posts)
@@ -1539,6 +1540,9 @@ def allspam(msg, url):
 
 def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
     operation = operation or "report"
+    is_forced = operation in {"scan-force", "report-force", "report-direct"}
+    if operation == "scan-force":
+        operation = "scan"
     action_done = "scanned" if operation == "scan" else "reported"
     if reported_in is None:
         reported_from = " by *{}*".format(reported_by)
@@ -1586,7 +1590,7 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
             continue
 
         if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive(
-                (post_data.post_id, post_data.site)) and operation not in {"report-force", "report-direct"}:
+                (post_data.post_id, post_data.site)) and not is_forced:
             # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
             # this re-report might be attempting to correct that/fix a mistake/etc.
 
@@ -1618,9 +1622,15 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
             if user is not None:
                 users_to_blacklist.append((user, blacklist_by, post_data.post_url))
 
+        # scan_spam == False indicates that the post is not spam, but it is also set to False
+        # when the post is spam, but has been previously reported. In that case, the scan_reasons
+        # is a tuple with what would be the list of reasons as the first entry and what would
+        # be the why as the second. This converts that output back into what they would be
+        # if the post wasn't previously reported for the cases where we want to process it
+        # as such.
         # Expand real scan results from dirty returm value when not "!!/scan"
         # Presence of "scan_why" indicates the post IS spam but ignored
-        if operation != "scan" and (not scan_spam) and scan_why:
+        if (operation != "scan" or is_forced) and (not scan_spam) and scan_why:
             scan_spam = True
             scan_reasons, scan_why = scan_reasons
 
