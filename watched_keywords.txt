@@ -8744,7 +8744,6 @@
 1553060266	Tetsuya Yamamoto	novapublishers\.com
 1553060536	Tetsuya Yamamoto	buybestsuperfans\.com
 1553060650	Tetsuya Yamamoto	helpsupplement\.tk
-1553061384	Makyen	indiafantasy\.com
 1553061406	Makyen	helpsupplement\.(?:tk|ml|cf|ga|gq)
 1553065800	Tetsuya Yamamoto	mytrainingbangalore\.com
 1553068000	Tetsuya Yamamoto	batrainingpennsylvania\.com
