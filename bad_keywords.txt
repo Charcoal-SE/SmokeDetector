@@ -1458,7 +1458,7 @@ printer-error-code-messages
 supercharge\W?male
 keto\W?bloom
 [a-z_]*(?:1_*)?800[\W_]*294[\W_]*1752[a-z_]*
-praltrix
+praltrix(?!\.info(?<=praltrix\.info))
 diet\W*pills?
 menage\W?beauty
 cudamax
