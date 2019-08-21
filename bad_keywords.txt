@@ -1621,7 +1621,7 @@ pure\W?turmeric\W?curcumin
 enter\W?keto
 nutri\W?burn
 greenlifenutrition\d*(?!\.com)
-keto[\W_]*plus(?:[\W_]*(?:diet|en|nicaragua|chile|col[uo]mbia|precio|ecuador|spain|costa\W*rica|mercadona|es|espana|premier|za|(?<! )keto|austria|\d+)s?)*
+keto[\W_]*plus(?:[\W_]*(?:diet|el|salvador|en|nicaragua|chile|col[uo]mbia|precio|ecuador|spain|costa\W*rica|mercadona|es|espana|premier|za|(?<! )keto|austria|\d+|[\da-f]{4,})s?)*
 healthsupplementfordiet
 ultra\W*last(?:\W*xxl)?
 testo drive 365 (?:canada|performance(?: plus)?)?(?#product name)
