@@ -12389,3 +12389,4 @@
 1566374705	Makyen	heptopic\.com
 1566378222	Makyen	maple\W*real\W*estate(?!\.net(?<=maplerealestate\.net))
 1566379847	Makyen	testo[\W_]*genix(?:[\W_]*(?:xl|muscle|\d+)s?)*
+1566380460	Shree	standardlifeloanplc(?:@gmail\.com)
