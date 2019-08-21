@@ -1954,7 +1954,7 @@ keto\W?zones?
 active\W?luxe
 Slim\W*X\W*Genie\W*Keto
 slim\W?swift
-keto\W?vatru
+keto[\W_]*vatru(?:[\W_]*(?:diet|official|\d+)s)*
 oniton
 yeah\W?keto
 extenze
