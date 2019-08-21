@@ -12397,3 +12397,4 @@
 1566382648	double-beep	samishleather\.com
 1566383481	double-beep	turbotaxsupportnumber\.com
 1566385408	double-beep	illuminatiempire084(?:\W*@\W*gmail\W*\.\W*com)?
+1566385696	double-beep	healthinfluencer\.net
