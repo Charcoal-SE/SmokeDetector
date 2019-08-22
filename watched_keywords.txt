@@ -12412,3 +12412,4 @@
 1566449247	Makyen	summitmigration\.com\.au
 1566449907	Shree	jkdnsolution\.com
 1566450994	Makyen	cinderella[\W_]*solution(?:[\W_]*(?:review|\d+))*
+1566451014	Makyen	ultimatediethack\.com
