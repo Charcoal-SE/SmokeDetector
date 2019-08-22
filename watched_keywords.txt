@@ -12286,7 +12286,6 @@
 1566072004	Makyen	lovelysharma\.com
 1566072025	Makyen	malta-300k
 1566072047	Makyen	visa\W*processing\W*consultant
-1566072070	Makyen	ketopromos\.com
 1566072092	Makyen	contactsupportphonenumber\.co\.uk
 1566072291	Makyen	dietpillsrevolution\.com
 1566082968	Stormblessed	review-with-raju\.com
