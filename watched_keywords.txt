@@ -12406,3 +12406,4 @@
 1566415057	Makyen	cytotectuntas\.com
 1566415262	Makyen	(?:more\.)?cash61\.com
 1566431987	Makyen	drhassanherbscure(?:@gmail\.com)?
+1566432039	Makyen	healthy?\W*choice(?:\W*cbd)?
