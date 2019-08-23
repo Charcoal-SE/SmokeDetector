@@ -12460,3 +12460,4 @@
 1566537626	Shree	professionallawyer\.me
 1566537703	Makyen	share/Yqaap(?#fiverr)
 1566538226	Shree	mybkexperiences\.com
+1566538756	Makyen	digimanthan(?!\.com)(?:[\W_]*digital)?
