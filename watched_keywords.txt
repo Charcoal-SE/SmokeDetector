@@ -11466,7 +11466,7 @@
 1563607070	Makyen	/@getrappl
 1563607097	Makyen	getrappeltepetrolgamescom\.over-blog\.com
 1563614354	Makyen	ketoviantesf\.blogspot\.com
-1563614389	Makyen	(?:\d+\W*)?garcinia\W*vita(?:\W*(?:scam|review|uk|\d+))*
+1563614389	Makyen	(?:\d+\W*)?garcinia[\W_]*vita(?!hollandandbarrett\.blogspot\.com(?<=garciniavitahollandandbarrett\.blogspot\.com))(?:[\W_]*(?:scam|review|uk|holand|and|barret+|\d+|[\da-f]{4,}))*
 1563614425	Makyen	purefitketopills\.over-blog\.com
 1563614514	Makyen	(?-i:c2P8-AycbcI)
 1563614541	Makyen	contactderujason30(?:@gmail\.com)?
