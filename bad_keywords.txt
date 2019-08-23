@@ -541,7 +541,7 @@ boost\W?excel
 power\W?testo
 888\W*337\W*5333
 ^where.*hyderabad\?$
-alpha\W*testo(?:\W*(?:boost|\d+))*
+alpha[\W_]*testo(?!-boost-42\.webself\.net(?<=alpha-testo-boost-42\.webself\.net))(?:[\W_]*(?:boost?|male|size|enhancement|formula|\d+|[\da-f]{4,}))*
 clevastin
 xymax
 neuro\W?boost
