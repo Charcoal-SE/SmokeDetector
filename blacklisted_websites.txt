@@ -357,7 +357,6 @@ edigitalplace\.com
 plagiarismchecker\.(?:us|com)
 excelanto\.com
 trylxwprot
-geniusbrain
 clazwork
 doorgrow\.com
 ibworldacademy
