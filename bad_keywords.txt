@@ -1349,7 +1349,7 @@ shark\W?tank\W?weight\W?loss
 (?:muhammad)\W*(?:(?:(?:was|a|is)\W*)*(?:(?:schizophrenic|psycho(?:pathic)|delusional|suicidal|megalomaniac|madman|savage|warlord|(?:mother\W*)?fuck(?:ing)?|bastard)\W*)+)+
 realvampirekingdom
 tone\W?slim
-essence\W?of\W?argan
+essence[\W_]*of[\W_]*argan(?!\.org(?<=essenceofargan\.org))
 ultrapur
 power\W?trim\W?1200
 pryazine
