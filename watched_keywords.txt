@@ -10431,7 +10431,7 @@
 1560009738	Machavity	joggingaddiction\.com
 1560018288	Makyen	dridahosasolutioncenter(?:@gmail\.com)?
 1560019383	Makyen	one\W*(?:p\W*)*eight\W*(?:p\W*)*six\W*(?:p\W*)*six\W*(?:p\W*)*nine\W*(?:p\W*)*four\W*(?:p\W*)*zero\W*(?:p\W*)*zero\W*(?:p\W*)*zero\W*(?:p\W*)*zero\W*(?:p\W*)*five
-1560019402	Makyen	(?:(?:zero|one|two|three|four|five|six|seven|eight|nine|ten)\W*(?:p\W*)*){9,}(?!(?:[^<]|<[^c]|<c[^o]|<co[^d]|<cod[^e]|<code[^>])*?</code>)
+1560019402	Makyen	(?:zero|one|two|three|four|five|six|seven|eight|nine|ten)(?:\W*(?:p\W*)*(?:zero|one|two|three|four|five|six|seven|eight|nine|ten)){8,}(?!(?:[^<]|<[^c]|<c[^o]|<co[^d]|<cod[^e]|<code[^>])*?<\/code>)
 1560028765	Makyen	(?-i:UC2VeOYu81k7gkQwd6lLnUQQ)(?#youtube channel)
 1560049245	Machavity	etutorialspoint\.com
 1560055992	Makyen	smartkela\.com
@@ -12360,6 +12360,7 @@
 1566322376	double-beep	stockintraday\.com
 1566327047	Zoe	abitshadow\.com
 1566333770	Stormblessed	diamondcontractors\.com
+1566337478	Stormblessed	ABST TOKEN LIMITED CAMPAIGN
 1566357938	Shree	sattakingnow\.in
 1566359833	Shree	tricubes\.com
 1566370386	Makyen	supplementscan\.com
@@ -12486,3 +12487,4 @@
 1566577410	Makyen	(?:my[\W_]*last[\W_]*month[\W_]*paycheck[\W_]*was[\W_]*for[\W_]*)?11000[\W_]*dollars
 1566589079	Makyen	dr-hassan-herbal-cure-for-herpes\.business\.site
 1566600624	Stormblessed	rocketr\.net
+1566606047	Stormblessed	immotalspiritualhealinghome(?:\W*(?:at\W*)?outlook\W*(?:dot\W*)?com)?
