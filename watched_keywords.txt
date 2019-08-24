@@ -12492,3 +12492,4 @@
 1566609845	Makyen	fix-printer-problem\.blogspot\.com
 1566610019	Makyen	freecoursesites\.online
 1566613583	Makyen	^(?:\s*<p>\s*(?:<\/?\w+\/?>\s*)*(?:<a href="[^>]*>)?\W*<img src="[^>]*>(?:<\/?\w+\/?>\s*)*)+$
+1566623038	Makyen	comehomekd\.com
