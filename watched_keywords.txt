@@ -12490,3 +12490,4 @@
 1566606047	Stormblessed	immotalspiritualhealinghome(?:\W*(?:at\W*)?outlook\W*(?:dot\W*)?com)?
 1566600691	Stormblessed	Game Launcher Creator
 1566609845	Makyen	fix-printer-problem\.blogspot\.com
+1566610019	Makyen	freecoursesites\.online
