@@ -966,10 +966,10 @@ def standby(msg, location_search, alias_used="standby"):
 
 
 # noinspection PyIncorrectDocstring
-@command(str, aliases=["test-q", "test-a", "test-u", "test-t", "test-json"], give_name=True)
+@command(str, aliases=["test-q", "test-question", "test-a", "test-answer", "test-u", "test-user", "test-t", "test-title", "test-j", "test-json"], give_name=True)
 def test(content, alias_used="test"):
     """
-    Test an answer to determine if it'd be automatically reported
+    Test content provided in chat to determine if it'd be automatically reported
     :param content:
     :return: A string
     """
@@ -986,27 +986,27 @@ def test(content, alias_used="test"):
         option_count += 1
     content = content.split(' ', option_count)[-1]  # Strip parsed options
 
-    if alias_used == "test-q":
+    if alias_used in ["test-q", "test-question"]:
         kind = "a question"
         fakepost = Post(api_response={'title': 'Valid title', 'body': content,
                                       'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
                                       'site': site, 'IsAnswer': False, 'score': 0})
-    elif alias_used == "test-a":
+    elif alias_used in ["test-a", "test-answer"]:
         kind = "an answer"
         fakepost = Post(api_response={'title': 'Valid title', 'body': content,
                                       'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
                                       'site': site, 'IsAnswer': True, 'score': 0})
-    elif alias_used == "test-u":
+    elif alias_used in ["test-u", "test-user"]:
         kind = "a username"
         fakepost = Post(api_response={'title': 'Valid title', 'body': "Valid question body",
                                       'owner': {'display_name': content, 'reputation': 1, 'link': ''},
                                       'site': site, 'IsAnswer': False, 'score': 0})
-    elif alias_used == "test-t":
+    elif alias_used in ["test-t", "test-title"]:
         kind = "a title"
         fakepost = Post(api_response={'title': content, 'body': "Valid question body",
                                       'owner': {'display_name': "Valid username", 'reputation': 1, 'link': ''},
                                       'site': site, 'IsAnswer': False, 'score': 0})
-    elif alias_used == "test-json":
+    elif alias_used in ["test-j", "test-json"]:
         # Only load legit json object
         try:
             json_obj = json.loads(content)
