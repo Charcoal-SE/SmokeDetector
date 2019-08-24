@@ -12506,3 +12506,4 @@
 1566658470	double-beep	cybersecurity\.com
 1566658587	double-beep	snapplole\.com
 1566663022	Makyen	rixosys\.com
+1566663031	Makyen	glowsigns\.in
