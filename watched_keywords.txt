@@ -6094,7 +6094,6 @@
 1539934663	Mithrandir	nitrazepam
 1539947757	Zoe	mathtyping\.com
 1539948446	Zoe	Ecphasis\W*Infotech
-1539951314	WELZ	jobsish\.com
 1539942197	bertieb	7downloads\.com
 1539965021	Makyen	wilsoncyberservice\.com
 1539965031	Makyen	wilsoncyberservice(?:\W*(?:a\W*t\W*)?g\W*m\W*a\W*i\W*l\W*(?:d\W*o\W*t\W*)?c\W*o\W*m)(?#partially obfuscated email, text: wilsoncyberservice)
@@ -7451,7 +7450,6 @@
 1546945514	Shree	brotherprintersupport\.org
 1546949585	Makyen	booksforfree\.club
 1546949608	Shree	7mcar\.com
-1546949714	Shree	tigwall\.com
 1546953932	tripleee	zindgisavaro?\.com
 1546957799	tripleee	apotik-acing\.com
 1546969713	Makyen	webawards\.top
@@ -10433,7 +10431,7 @@
 1560009738	Machavity	joggingaddiction\.com
 1560018288	Makyen	dridahosasolutioncenter(?:@gmail\.com)?
 1560019383	Makyen	one\W*(?:p\W*)*eight\W*(?:p\W*)*six\W*(?:p\W*)*six\W*(?:p\W*)*nine\W*(?:p\W*)*four\W*(?:p\W*)*zero\W*(?:p\W*)*zero\W*(?:p\W*)*zero\W*(?:p\W*)*zero\W*(?:p\W*)*five
-1560019402	Makyen	(?:(?:zero|one|two|three|four|five|six|seven|eight|nine|ten)\W*(?:p\W*)*){9,}
+1560019402	Makyen	(?:zero|one|two|three|four|five|six|seven|eight|nine|ten)(?:\W*(?:p\W*)*(?:zero|one|two|three|four|five|six|seven|eight|nine|ten)){8,}(?!(?:[^<]|<[^c]|<c[^o]|<co[^d]|<cod[^e]|<code[^>])*?<\/code>)
 1560028765	Makyen	(?-i:UC2VeOYu81k7gkQwd6lLnUQQ)(?#youtube channel)
 1560049245	Machavity	etutorialspoint\.com
 1560055992	Makyen	smartkela\.com
@@ -10523,7 +10521,6 @@
 1560379960	Byte Commander	KissandTellTravels
 1560379987	Byte Commander	branayboykins\.inteletravel\.com
 1560380803	Makyen	jm6434166(?:@gmail\.com)?
-1560380821	Makyen	worldcareshope\.com
 1560380999	Makyen	surfacetablethelp\.com
 1560386540	Machavity	adaptcourses\.com\.au
 1560386611	Machavity	adaptlearning\.org
@@ -11318,7 +11315,6 @@
 1563213458	Makyen	renuvo(?:\W*(?:oil|cbd|\d+))*
 1563213479	Makyen	dermalift(?:\W*anti\W*aging\W*cream)?
 1563213503	Makyen	sharkpills\.com
-1563213524	Makyen	sharktankoffs\.com
 1563213544	Makyen	(?-i:_h3t0y_NUTk)
 1563213565	Makyen	thesoulrider\.net
 1563213778	Makyen	uppercaseconverter\.com
@@ -11468,7 +11464,7 @@
 1563607070	Makyen	/@getrappl
 1563607097	Makyen	getrappeltepetrolgamescom\.over-blog\.com
 1563614354	Makyen	ketoviantesf\.blogspot\.com
-1563614389	Makyen	(?:\d+\W*)?garcinia\W*vita(?:\W*(?:scam|review|uk|\d+))*
+1563614389	Makyen	(?:\d+\W*)?garcinia[\W_]*vita(?!hollandandbarrett\.blogspot\.com(?<=garciniavitahollandandbarrett\.blogspot\.com))(?:[\W_]*(?:scam|review|uk|holand|and|barret+|\d+|[\da-f]{4,}))*
 1563614425	Makyen	purefitketopills\.over-blog\.com
 1563614514	Makyen	(?-i:c2P8-AycbcI)
 1563614541	Makyen	contactderujason30(?:@gmail\.com)?
@@ -11511,7 +11507,6 @@
 1563752744	Byte Commander	Sosostris
 1563766061	Machavity	tesfatravel\.com
 1563771909	tripleee	myviago\.com
-1563772087	tripleee	fabulamaps\.com
 1563772109	Makyen	jmc\W*car\W*transport(?:ation)?
 1563773299	tripleee	surveyinfoz\.com
 1563773346	tripleee	mariosmsk\.com
@@ -11812,7 +11807,6 @@
 1564607589	Makyen	rubberfloorings\.in
 1564607608	Makyen	lytechx\.com
 1564607625	Makyen	kimbino\.ca
-1564607650	Makyen	nutritionca\.com
 1564607671	Makyen	peaksurge\W*forskolin(\W*\d+)?
 1564611862	Machavity	cashcoin\.tech
 1564619966	Makyen	techcustomercare\.com
@@ -12135,7 +12129,6 @@
 1565589731	double-beep	carmellimo\.com
 1565594426	Makyen	(?-i:x7fry8l)
 1565594434	Makyen	(?-i:67E_rU5y2DM)
-1565598883	double-beep	fitnessproductcenter\.com
 1565601196	tripleee	travelopro\.com
 1565605557	Shree	online\.tm-systems\.com\.au
 1565606798	double-beep	ieltsasap(?:\W*yahoo\W*com)?
@@ -12160,7 +12153,6 @@
 1565690703	Shree	emetechnologies\.com
 1565691025	Shree	kseYmCI2Slc(?# youtube link)
 1565693423	double-beep	22-7\.co\.in
-1565693779	double-beep	fitdiettrends\.com
 1565694255	double-beep	freeessays\.page
 1565698743	tripleee	palayeshcood\.com
 1565698782	tripleee	pala\W?yesh\w*
@@ -12278,7 +12270,7 @@
 1566039635	Shree	qiuqiu992\.site
 1566055449	Makyen	457519994829275(?#YouTube event)
 1566055472	Makyen	(?-i:pxQJN4FWUyE)
-1566055529	Makyen	ultra[\W_]*fast[\W_]*keto(?:[\W_]*\d+)?
+1566055529	Makyen	ultra[\W_]*fast[\W_]*keto(?:[\W_]*(?:boost|review|world|care|shope|\d+|[\da-f]{4,}))*
 1566053642	Stormblessed	libtard
 1566056640	Makyen	garciniabodyprobuy\.com
 1566062086	Makyen	bestpillstoday\.se
@@ -12289,9 +12281,7 @@
 1566072004	Makyen	lovelysharma\.com
 1566072025	Makyen	malta-300k
 1566072047	Makyen	visa\W*processing\W*consultant
-1566072070	Makyen	ketopromos\.com
 1566072092	Makyen	contactsupportphonenumber\.co\.uk
-1566072291	Makyen	dietpillsrevolution\.com
 1566082968	Stormblessed	review-with-raju\.com
 1566082697	Stormblessed	forible\.xyz
 1566083240	Makyen	dfactual\.com
@@ -12332,7 +12322,7 @@
 1566207338	Makyen	(?i:k82awuF9oAc88Tv0Syi85A)
 1566207361	Makyen	(?i:HuvY6hAy3xw)
 1566207402	Makyen	velofel-south-africa-64\.webself\.net
-1566207422	Makyen	velofel[\W_]*south[\W_]*africa(?:[\W_]*\d+)?(?!\.webself\.net(?<=velofel-south-africa-64\.webself\.net))
+1566207422	Makyen	velofel[\W_]*south[\W_]*africa(?:[\W_]*(?:\d+|[\da-f]{4,}))?(?!\.webself\.net(?<=velofel-south-africa-64\.webself\.net))
 1566207884	Byte Commander	odataware
 1566208640	Makyen	(?-i:VOsV-V5Ym-c)
 1566209144	Makyen	ericagomez_40357
@@ -12354,7 +12344,6 @@
 1566237350	Makyen	636907572285213099(?#pinterest)
 1566237371	Makyen	thiastravelservices\.com
 1566237392	Makyen	startjobs\.pk
-1566237460	Makyen	nutrigen(?:[\W_]*(?:diet(?:ary)?|forskolin|loose|weight|with(?:out)?|\d+|[\da-f]{4,})s?)*
 1566243262	Makyen	illuminatiworldoffamous(?:@gmail\.com)?
 1566243479	Machavity	qqcasa\.com
 1566258661	Machavity	potbd\.com
@@ -12372,3 +12361,129 @@
 1566327047	Zoe	abitshadow\.com
 1566333770	Stormblessed	diamondcontractors\.com
 1566337478	Stormblessed	ABST TOKEN LIMITED CAMPAIGN
+1566357938	Shree	sattakingnow\.in
+1566359833	Shree	tricubes\.com
+1566370386	Makyen	supplementscan\.com
+1566370462	Makyen	velofelmaleenhancement\.wordpress
+1566371127	double-beep	caviarsco\.com
+1566371359	Makyen	apkals\.com
+1566372725	double-beep	fireupchips\.org
+1566374272	Makyen	647832545713323(?#facebook event)
+1566374337	Makyen	keto-plus-el-salvador\.mystrikingly\.com
+1566374357	Makyen	francesupplement\.over-blog\.com
+1566374378	Makyen	keto-plus-el-salvador-82\.webself\.net
+1566374432	Makyen	2427064214285906(?#facebook event)
+1566374478	Makyen	supplementstore\.over-blog\.com
+1566374637	Makyen	keto-vatru-official\.mystrikingly\.com
+1566374656	Makyen	keto-vatru-44\.webself\.net
+1566374679	Makyen	sisiziiz
+1566374705	Makyen	heptopic\.com
+1566378222	Makyen	maple\W*real\W*estate(?!\.net(?<=maplerealestate\.net))
+1566380460	Shree	standardlifeloanplc(?:@gmail\.com)
+1566381725	Makyen	ketovatrusouthafrica\.blogspot\.com
+1566381758	Makyen	jhonwinsen
+1566381862	Makyen	approved\W*science\W*keto
+1566382622	double-beep	prevalentdigital\.in
+1566382648	double-beep	samishleather\.com
+1566383481	double-beep	turbotaxsupportnumber\.com
+1566385408	double-beep	illuminatiempire084(?:\W*@\W*gmail\W*\.\W*com)?
+1566385696	double-beep	healthinfluencer\.net
+1566385995	Shree	prevalentdigital\.com
+1566389507	Machavity	revivalflooring\.com
+1566397948	double-beep	gsmgurus\.org
+1566414808	Makyen	(?-i:xHxYC\.png)
+1566414818	Makyen	(?-i:hdszq\.jpg)
+1566414877	Makyen	b[\W_]*i[\W_]*t[\W_]*c[\W_]*o[\W_]*i[\W_]*n[\W_]*r[\W_]*e[\W_]*c[\W_]*o[\W_]*v[\W_]*e[\W_]*r[\W_]*y[\W_]*(?:a[\W_]*t[\W_]*)?c[\W_]*o[\W_]*n[\W_]*s[\W_]*u[\W_]*l[\W_]*t[\W_]*a[\W_]*n[\W_]*t[\W_]*(?:d[\W_]*o[\W_]*t[\W_]*)?c[\W_]*o[\W_]*m(?#obfuscated bitcoinrecovery@consultant.com)
+1566415057	Makyen	cytotectuntas\.com
+1566415262	Makyen	(?:more\.)?cash61\.com
+1566431987	Makyen	drhassanherbscure(?:@gmail\.com)?
+1566432039	Makyen	healthy?\W*choice(?:\W*cbd)?
+1566447394	Shree	globedocuments@hotmail\.com
+1566447478	Makyen	(?-i:AZ433)(?#fiverr)
+1566449247	Makyen	summitmigration\.com\.au
+1566449907	Shree	jkdnsolution\.com
+1566450994	Makyen	cinderella[\W_]*solution(?:[\W_]*(?:review|\d+))*
+1566451014	Makyen	ultimatediethack\.com
+1566452226	Shree	curvearro\.com
+1566453992	Makyen	jemilorow
+1566454001	Makyen	(?-i:ANg5CdtHnuQ)
+1566454012	Makyen	Chebees
+1566454051	Makyen	alpha-testo-boost-42\.webself\.net
+1566454706	Makyen	pil4pedia\.com
+1566455339	Makyen	codemyway\.com
+1566456457	Shree	computerrepairuae\.webs\.com
+1566457010	Shree	myophis\.com
+1566462048	Shree	campinggears\.ph
+1566462259	Shree	boximost\.com
+1566462357	double-beep	hiro-official-site\.com
+1566462386	double-beep	innoraft\.com
+1566463802	Makyen	rookamaxko\.over-blog\.com
+1566465595	double-beep	recover-transfer-data\.com
+1566465616	double-beep	rippleelectrical\.co\.nz
+1566466037	double-beep	cyberflix\.fun
+1566466448	double-beep	seoservices\.one
+1566469389	Shree	quickbooksnumber\.com
+1566469964	Shree	247quickbooks\.com
+1566471583	double-beep	printeroffline\.co
+1566471821	double-beep	thedigitechsolutions\.com
+1566471915	double-beep	hanureddyrealty\.com
+1566471937	double-beep	allaroundsecurityny\.com
+1566474263	double-beep	readthedocs\.org
+1566474279	double-beep	graphhenegraphics\.com
+1566474346	double-beep	elithairtransplant\.com
+1566479284	double-beep	magecomp\.com
+1566484106	Machavity	pixeltechnologies\.in
+1566486552	Makyen	(?-i:0haA_1n7GSE)
+1566486561	Makyen	viftech\.com
+1566486637	Makyen	ketogenicdietpills\.com
+1566487175	Makyen	buinolahapp
+1566487580	Makyen	trialketobodytone\.blogspot\.com
+1566487622	Makyen	keto-bodytone-review\.over-blog\.com
+1566487658	Makyen	trialketobodytone\.mystrikingly\.com
+1566487716	Makyen	trialketobodytone\.hatenablog\.com
+1566489336	Makyen	iepm\.ir
+1566489344	Makyen	off-shop\.ir
+1566489354	Makyen	projebama\.ir
+1566492691	double-beep	antideo\.com
+1566494225	Machavity	astrologerdurgaprasad\.com
+1566496127	Machavity	compraromega3\.com
+1566500905	double-beep	idealcamper\.com
+1566511676	Makyen	virgolovespell(?:@gmail\.com)?
+1566518990	Makyen	judgejudge754
+1566525455	Makyen	coinpumpcrew
+1566537373	Shree	billsschedulechallenge\.com
+1566537617	Makyen	natures?[\W_]*choice[\W_]*keto(?:[\W_]*(?:\d+|[\da-f]{4,}))*
+1566537626	Shree	professionallawyer\.me
+1566537703	Makyen	share/Yqaap(?#fiverr)
+1566538226	Shree	mybkexperiences\.com
+1566538756	Makyen	digimanthan(?!\.com)(?:[\W_]*digital)?
+1566538877	Makyen	tambutarow
+1566540681	Makyen	iselldog469(?:@gmail\.com)?
+1566541840	Makyen	essenceofargan\.org
+1566548764	Shree	dentist-pune\.com
+1566549639	Makyen	email-helplinecenter\.com
+1566549962	double-beep	grahaak\.com
+1566550019	double-beep	csspoints\.com
+1566550540	Makyen	jacksonbill_62284
+1566550611	Makyen	garciniavitahollandandbarrett\.blogspot\.com
+1566552895	Makyen	welloxpharma\.com
+1566552905	Makyen	wealthpediaa\.com
+1566553969	Makyen	(?-i:3UiUYYVVASk)
+1566559720	Shree	quicken-helpnumber\.com
+1566561755	Shree	beta\.u\.is
+1566564353	Machavity	celesteehairtransplant\.com
+1566571677	Machavity	bestforlives\.com
+1566573993	Makyen	(?-i:P1SWx\.jpg)
+1566574003	Makyen	shayari_zone
+1566574012	Makyen	PornClubSex
+1566574021	Makyen	top5amazon
+1566574032	Makyen	HindiHDmovies_4k
+1566574041	Makyen	war_hd_download
+1566574051	Makyen	NetflixMovies_Web_Series
+1566574060	Makyen	medical_notes_book
+1566574071	Makyen	ghazalshayari
+1566574308	Makyen	(?-i:uA0W9\.jpg)
+1566574319	Makyen	redditpharmacy\.com
+1566577410	Makyen	(?:my[\W_]*last[\W_]*month[\W_]*paycheck[\W_]*was[\W_]*for[\W_]*)?11000[\W_]*dollars
+1566589079	Makyen	dr-hassan-herbal-cure-for-herpes\.business\.site
+1566606047	Stormblessed	immotalspiritualhealinghome(?:\W*(?:at\W*)?outlook\W*(?:dot\W*)?com)?

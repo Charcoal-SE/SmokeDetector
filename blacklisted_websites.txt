@@ -174,7 +174,6 @@ shopnhlbruins\.com
 mon-rasage\.fr
 systweak\.com
 downloadscanpst\.com
-downloadgames
 gameshop4u\.com
 laustan\.com
 listoffreeware\.com
@@ -358,7 +357,6 @@ edigitalplace\.com
 plagiarismchecker\.(?:us|com)
 excelanto\.com
 trylxwprot
-geniusbrain
 clazwork
 doorgrow\.com
 ibworldacademy
@@ -2681,7 +2679,7 @@ alonetone\.com
 supplementsell\.blogspot
 purefitketopills\.com
 dougopdesim\.blogspot
-strikingly\.com
+\b(?<!-)strikingly\.com(?![.-])\b
 appleinfoway\.com
 freecouponcode\.over-blog\.com
 daftarbolasport\.com
@@ -3036,3 +3034,15 @@ smoreworld\.com
 keto-bodytone\.com
 indiafantasy\.com
 thedevicesupport\.org
+mystrikingly\.com
+sharktankoffs\.com
+praltrix\.info
+nutritionca\.com
+fabulamaps\.com
+ketopromos\.com
+dietpillsrevolution\.com
+fitnessproductcenter\.com
+worldcareshope\.com
+fitdiettrends\.com
+tigwall\.com
+jobsish\.com

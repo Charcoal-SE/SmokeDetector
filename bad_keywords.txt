@@ -541,7 +541,7 @@ boost\W?excel
 power\W?testo
 888\W*337\W*5333
 ^where.*hyderabad\?$
-alpha\W*testo(?:\W*(?:boost|\d+))*
+alpha[\W_]*testo(?!-boost-42\.webself\.net(?<=alpha-testo-boost-42\.webself\.net))(?:[\W_]*(?:boost?|male|size|enhancement|formula|\d+|[\da-f]{4,}))*
 clevastin
 xymax
 neuro\W?boost
@@ -1349,7 +1349,7 @@ shark\W?tank\W?weight\W?loss
 (?:muhammad)\W*(?:(?:(?:was|a|is)\W*)*(?:(?:schizophrenic|psycho(?:pathic)|delusional|suicidal|megalomaniac|madman|savage|warlord|(?:mother\W*)?fuck(?:ing)?|bastard)\W*)+)+
 realvampirekingdom
 tone\W?slim
-essence\W?of\W?argan
+essence[\W_]*of[\W_]*argan(?!\.org(?<=essenceofargan\.org))
 ultrapur
 power\W?trim\W?1200
 pryazine
@@ -1458,7 +1458,7 @@ printer-error-code-messages
 supercharge\W?male
 keto\W?bloom
 [a-z_]*(?:1_*)?800[\W_]*294[\W_]*1752[a-z_]*
-praltrix
+praltrix(?!\.info(?<=praltrix\.info))
 diet\W*pills?
 menage\W?beauty
 cudamax
@@ -1621,7 +1621,7 @@ pure\W?turmeric\W?curcumin
 enter\W?keto
 nutri\W?burn
 greenlifenutrition\d*(?!\.com)
-keto[\W_]*plus(?:[\W_]*(?:diet|en|nicaragua|chile|col[uo]mbia|precio|ecuador|spain|costa\W*rica|mercadona|es|espana|premier|za|(?<! )keto|austria|\d+)s?)*
+keto[\W_]*plus(?:[\W_]*(?:diet|el|salvador|en|nicaragua|chile|col[uo]mbia|precio|ecuador|spain|costa\W*rica|mercadona|es|espana|premier|za|(?<! )keto|austria|\d+|[\da-f]{4,})s?)*
 healthsupplementfordiet
 ultra\W*last(?:\W*xxl)?
 testo drive 365 (?:canada|performance(?: plus)?)?(?#product name)
@@ -1741,7 +1741,6 @@ rootgatehacks(?:\W*(?:at\W*)?tutanota(?:\W*(?:dot\W*)?com)?)?
 hackwhitewizard(?:\W*(?:at\W*)?tutanota(?:\W*(?:dot\W*)?com)?)?
 keto\W?direct
 Prestige\W?Smart
-health\W?choice(?:\W?cbd)?
 viralis(?:\W?rx)?
 andro\W?stack(?:\W?x\w?)?
 keto\W?life
@@ -1954,7 +1953,7 @@ keto\W?zones?
 active\W?luxe
 Slim\W*X\W*Genie\W*Keto
 slim\W?swift
-keto\W?vatru
+keto[\W_]*vatru(?!\.blogspot\.com(?<=ketovatrusouthafrica\.blogspot\.com))(?:[\W_]*(?:diet|official|south|africa|\d+|[\da-f]{4,})s)*
 oniton
 yeah\W?keto
 extenze
@@ -1964,7 +1963,7 @@ opti\W?farms(?:\W?keto)?
 keto\W*mode
 Social\W*Prachar
 green\W*vibe\W*keto
-krygen[\W_]*xl(?:[\W_]*(?:male|enhancement|\d+)s?)*
+krygen[\W_]*xl(?:[\W_]*(?:male|enhancement|united|kingdom|herbal|douleur|enhancement|pill|\d+|[\da-f]{4,})s?)*
 radiant[\W_]*swift(?:[\W_]*(?:keto|fit|\d+|[\da-f]{4,}))*
 (?:(?:life|quality)\W*)?nutra\W*keto
 legends\W*keto
@@ -2044,3 +2043,7 @@ CBD[\W_]*gum
 aborsi
 cytotec
 platinum[\W_]*fit(?:[\W_]*(?:keto|review|diet|new|\d+|[\da-f]{4,})s?)*
+velofel
+nutrigen(?:[\W_]*(?:diet(?:ary)?|forskolin|loose|weight|with(?:out)?|\d+|[\da-f]{4,})s?)*
+testo[\W_]*genix(?:[\W_]*(?:xl|muscle|\d+)s?)*
+95[\W_]*bucks[\W_]*every[\W_]*hour
