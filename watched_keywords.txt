@@ -12495,3 +12495,4 @@
 1566623038	Makyen	comehomekd\.com
 1566623086	Makyen	sunraised[\W_]*hemp[\W_]*oil(?:[\W_]*(?:\d+|[\da-f]{4,}))*
 1566625341	Makyen	trioangle\.com
+1566627114	Makyen	ultramax[\W_]*testo(?:[\W_]*(?:enhancer|\d+))*
