@@ -12504,5 +12504,4 @@
 1566648636	Olivia	darussalam\.pk
 1566650634	double-beep	tollerence\.ml
 1566658470	double-beep	cybersecurity\.com
-1566658520	double-beep	2captcha\.com
 1566658587	double-beep	snapplole\.com
