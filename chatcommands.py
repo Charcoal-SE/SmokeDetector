@@ -966,7 +966,9 @@ def standby(msg, location_search, alias_used="standby"):
 
 
 # noinspection PyIncorrectDocstring
-@command(str, aliases=["test-q", "test-question", "test-a", "test-answer", "test-u", "test-user", "test-t", "test-title", "test-j", "test-json"], give_name=True)
+@command(str, aliases=["test-q", "test-question", "test-a", "test-answer", "test-u", "test-user",
+                       "test-t", "test-title", "test-j", "test-json"],
+         give_name=True)
 def test(content, alias_used="test"):
     """
     Test content provided in chat to determine if it'd be automatically reported
