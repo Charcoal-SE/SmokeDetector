@@ -12527,3 +12527,4 @@
 1566714754	Makyen	skin[\W_]*science[\W_]*cbd
 1566715530	Makyen	snapplole(?!\.com)
 1566719101	Shree	nestofbest\.com
+1566737861	Machavity	media900\.com
