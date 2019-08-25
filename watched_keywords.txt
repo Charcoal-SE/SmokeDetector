@@ -12523,3 +12523,4 @@
 1566675413	double-beep	nashreonline\.com
 1566696023	Makyen	(?<=[\s</.-])(?-i:MONEY)(?=\s*[\w(),:;.&/\\<?!£$€-])
 1566699593	Makyen	(?-i:AAAAAER1kBgdJKJDbx7XIw)
+1566706276	Makyen	guidenepal(?:@gmail\.com)?
