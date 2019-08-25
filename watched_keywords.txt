@@ -12521,3 +12521,4 @@
 1566672245	Makyen	dunescorts\.in
 1566672294	Makyen	dunescortservice\.com
 1566675413	double-beep	nashreonline\.com
+1566696023	Makyen	(?<=[\s</.-])(?-i:MONEY)(?=\s*[\w(),:;.&/\\<?!£$€-])
