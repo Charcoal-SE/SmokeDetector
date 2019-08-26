@@ -12535,3 +12535,4 @@
 1566797657	tripleee	igracebeauty\.com
 1566798829	Makyen	sarkariresultsin\.in
 1566798942	Makyen	igrace\W*beauty(?!\.com(?<=igracebeauty\.com))
+1566799807	Makyen	randomcube\.co\.uk
