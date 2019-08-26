@@ -12556,3 +12556,4 @@
 1566834798	Makyen	paper\.li
 1566834808	Makyen	e-1566796381
 1566834817	Makyen	xs[\W_]*ketogenic[\W_]*slim
+1566834828	Makyen	aria[\W_]*cream(?:[\W_]*(?:uk|celine|ever-enduring|cream|\d+))*
