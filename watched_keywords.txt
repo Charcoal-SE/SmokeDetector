@@ -4242,7 +4242,6 @@
 1531209503	Makyen	bestschoolsincoimbatore\.com
 1531209865	Glorfindel	phonyspy
 1531209912	Glorfindel	iactivate\W?host
-1531211757	Glorfindel	treks\W?himalaya
 1531217612	Byte Commander	innostack\.in
 1531220631	Byte Commander	solutionremarks\.com
 1531249014	Glorfindel	mideo
