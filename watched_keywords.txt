@@ -12564,3 +12564,4 @@
 1566834924	Makyen	ketogenic-valley-keto-42\.webself\.net
 1566835195	Makyen	north[\W_]*valley[\W_]*(?:[\W_]*(?:oil|cbd))+
 1566840689	Makyen	theredhackergroup(?:@gmail\.com)?
+1566845554	Makyen	jnpfeiffer03(?:\W*(?:at\W*)?gmail(?:\W*(?:dot\W*)?com)?)?
