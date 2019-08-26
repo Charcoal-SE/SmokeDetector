@@ -12541,3 +12541,4 @@
 1566819732	Glorfindel	zycapsfactory\.com
 1566824036	Machavity	consumersbase\.com
 1566826725	double-beep	techhelphero\.com
+1566828926	double-beep	blogsareforever\.com
