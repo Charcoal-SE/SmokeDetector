@@ -11513,7 +11513,6 @@
 1563776661	tripleee	khdvalvesautomation\.com
 1563780168	Makyen	post\.php\?post_id=77
 1563780511	tripleee	walhala
-1563780784	tripleee	ketohour\.com
 1563781927	tripleee	inbox\W?dollars
 1563781946	tripleee	vindale\W?research
 1563781970	tripleee	pinecone\W?research
