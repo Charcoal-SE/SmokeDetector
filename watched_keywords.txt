@@ -12580,3 +12580,4 @@
 1566887430	tripleee	aptrongurgaon\.in
 1566887454	tripleee	aptron\W?gurgaon(?!\.in)
 1566888474	Makyen	truegossiper\.com
+1566888484	Makyen	ketopillsstore\.com
