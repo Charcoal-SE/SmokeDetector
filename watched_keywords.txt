@@ -12597,3 +12597,4 @@
 1566922680	Machavity	raskruty\.ru
 1566925601	Machavity	toppossystem\.com
 1566925615	Machavity	getdpd\.com
+1566925632	Machavity	ruler\.onl
