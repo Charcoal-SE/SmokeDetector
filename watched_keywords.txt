@@ -12578,3 +12578,4 @@
 1566884000	Makyen	uoltarow
 1566884041	Makyen	(?-i:fiZ3GkPwTRY)
 1566887430	tripleee	aptrongurgaon\.in
+1566887454	tripleee	aptron\W?gurgaon(?!\.in)
