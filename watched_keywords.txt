@@ -12585,3 +12585,4 @@
 1566891195	Makyen	official-webs
 1566905854	double-beep	english-guru\.institute
 1566910928	Machavity	mag-corp\.com
+1566910954	Machavity	MBSsensors\.com
