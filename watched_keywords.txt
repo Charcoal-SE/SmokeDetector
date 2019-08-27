@@ -12582,3 +12582,4 @@
 1566888474	Makyen	truegossiper\.com
 1566888484	Makyen	ketopillsstore\.com
 1566888525	Makyen	(?:keto[\W_]*])?pro[\W_]*slim[\W_]*diet(?:[\W_]*(?:australia|\d+))*
+1566891148	Makyen	berqproperties\.com
