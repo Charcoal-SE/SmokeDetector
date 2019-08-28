@@ -11869,7 +11869,7 @@
 1564863943	Makyen	techsupportalert\.com
 1564863965	Makyen	telegramgrouplink1\.blogspot\.com
 1564863984	Makyen	t\.me/joinchat/fuck2me
-1564867629	Makyen	drahmedusman5104(?:@gmail\.com)?
+1564867629	Makyen	drahmedusman5104(?:\W*(?:at\W*)?gmail(?:\W*(?:dot\W*)?com)?)?
 1564867647	Makyen	dr\W*ahmed\W*usman
 1564895829	Makyen	thehealthvlog\.com
 1564895846	Makyen	fantastic\W*keto
