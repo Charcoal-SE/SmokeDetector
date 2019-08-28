@@ -12638,6 +12638,5 @@
 1567015028	Makyen	wallstreetmojo\.com
 1567022434	Machavity	funclubcasino\.com
 1567031931	Makyen	全国留学生信息服务网
-1567032153	Makyen	diploma899\d*
 1567032161	Makyen	文凭购买
 1567032357	Makyen	假文凭
