@@ -12610,3 +12610,4 @@
 1566963920	Makyen	dochoihahuy89
 1566974817	Shree	englishvocabulary\.ir
 1566975089	Makyen	topdietbrand[\W_]*com(?#obfuscated domain)
+1566975099	Makyen	nolatreve(?:[\W_]*(?:anti|aging|france|\d+))*
