@@ -12613,3 +12613,4 @@
 1566975099	Makyen	nolatreve(?:[\W_]*(?:anti|aging|france|\d+))*
 1566975107	Makyen	keto[\W_]*extreme[\W_]*fat[\W_]*burner
 1566975362	Glorfindel	clickohow\.com
+1566979358	Glorfindel	bubbletechno\.com
