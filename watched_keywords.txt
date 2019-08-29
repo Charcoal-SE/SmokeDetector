@@ -12661,3 +12661,4 @@
 1567100350	Makyen	coolutils(?!\.com)
 1567100550	Jeff Schaller	teer-result\.net
 1567102399	Makyen	nanoarch[\W_]*software(?!\.com(?<=nanoarchsoftware\.com))
+1567104407	Makyen	medicalcaresouth\.com
