@@ -40,7 +40,7 @@ class Git(object):
     def __getattribute__(self, name):
         def interceptor(*args, **kwargs):
             adjusted_name = name.replace('_', '-')
-            return_data_for = ('status', 'diff', 'log', 'rev-parse')
+            return_data_for = ('config', 'status', 'diff', 'log', 'rev-parse')
             if adjusted_name in return_data_for:
                 kwargs['return_data'] = True
             return _call_process((adjusted_name,) + args, **kwargs)
@@ -55,11 +55,6 @@ class Git(object):
     @staticmethod
     def __call__(*args, **kwargs):
         _call_process(args, **kwargs)
-
-    # Config
-    @staticmethod
-    def config(*args, **kwargs):
-        _call_process(('config',) + args, **kwargs)
 
     # remote.update
     class remote:  # noqa: N801
