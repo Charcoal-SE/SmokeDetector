@@ -12670,3 +12670,4 @@
 1567104508	Makyen	atrisse[\W_]*skin(?:[\W_]*cream)?
 1567104516	Makyen	appsinject\.com
 1567104761	Makyen	ketogenicvalleyketoreviews\.mystrikingly\.com
+1567104769	Makyen	ketogenic-valley-keto-69\.webself\.net
