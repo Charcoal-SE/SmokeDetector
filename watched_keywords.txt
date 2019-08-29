@@ -12659,3 +12659,4 @@
 1567097736	Makyen	(?-i:p9LNk7-1Sl)
 1567100278	Makyen	^(?-i:Davv+y(?:_\d+)?)$
 1567100350	Makyen	coolutils(?!\.com)
+1567100550	Jeff Schaller	teer-result\.net
