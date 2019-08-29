@@ -21,6 +21,7 @@ def _call_process(execcmd, _ok_code=None, return_data=False, return_tuple=False)
         if _ok_code and retcode in _ok_code:
             pass
         else:
+            log('error', 'Error: Windows Git:', execcmd, '::  retcode:', retcode, '::  stdout:', stdout, '::  stderr:', stderr)
             raise GitError(retcode, execcmd, stdout, stderr)
     if return_data:
         to_return = stdout.decode("utf-8")
