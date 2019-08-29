@@ -12667,3 +12667,4 @@
 1567104481	Makyen	custom[\W_]*fantasy[\W_]*mobile[\W_]*app
 1567104489	Makyen	spectrumrealtyservices\.com
 1567104498	Makyen	(?-i:x7iiljt)
+1567104508	Makyen	atrisse[\W_]*skin(?:[\W_]*cream)?
