@@ -12665,3 +12665,4 @@
 1567104462	Makyen	(?-i:zgch5\.jpg)
 1567104471	Makyen	appsdevelopment\.in
 1567104481	Makyen	custom[\W_]*fantasy[\W_]*mobile[\W_]*app
+1567104489	Makyen	spectrumrealtyservices\.com
