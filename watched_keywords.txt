@@ -12663,3 +12663,4 @@
 1567102399	Makyen	nanoarch[\W_]*software(?!\.com(?<=nanoarchsoftware\.com))
 1567104407	Makyen	medicalcaresouth\.com
 1567104462	Makyen	(?-i:zgch5\.jpg)
+1567104471	Makyen	appsdevelopment\.in
