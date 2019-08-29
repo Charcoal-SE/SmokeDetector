@@ -3064,3 +3064,4 @@ medicfitonline\.store
 tripnetra\.com
 supplementsworld\.org
 diploma899\d*(?<=\d)(?#Abuse the blacklist to get more weight/reasons for a surge of spam)
+wealthpediaa\.com
