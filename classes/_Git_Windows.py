@@ -23,8 +23,9 @@ def _call_process(execcmd, _ok_code=None, return_data=False, return_tuple=False)
         else:
             raise GitError(retcode, execcmd, stdout, stderr)
     if return_data:
-        log('debug', 'Windows Git:', execcmd, '::  returning data:', stdout)
-        return stdout
+        to_return = stdout.decode("utf-8")
+        log('debug', 'Windows Git:', execcmd, '::  returning data:', to_return)
+        return to_return
     if return_tuple:
         to_return = (stdout, stderr, retcode)
         log('debug', 'Windows Git:', execcmd, '::  returning tuple:', to_return)
