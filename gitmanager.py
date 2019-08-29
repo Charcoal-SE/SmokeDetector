@@ -52,8 +52,8 @@ class GitHubManager:
 class GitManager:
     gitmanager_lock = Lock()
 
-    @classmethod
-    def get_origin_or_auth(cls):
+    @staticmethod
+    def get_origin_or_auth():
         git_url = git.config("--get", "remote.origin.url").strip()
         if git_url[0:19] == "https://github.com/" and GlobalVars.github_username and GlobalVars.github_password:
             preformat_url = ('https://{}:{}@github.com/' + git_url[19:])
@@ -397,8 +397,8 @@ class GitManager:
     def pull_remote():
         git.pull()
 
-    @staticmethod
-    def pull_local():
+    @classmethod
+    def pull_local(cls):
         diff = GitManager.get_local_diff()
         if not only_blacklists_changed(diff):
             return
