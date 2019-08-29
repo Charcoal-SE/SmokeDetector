@@ -12674,3 +12674,4 @@
 1567104783	Makyen	ketogenicvalleyketoreviews\.blogspot\.com
 1567111093	Makyen	4kfullhdfilmizle\.net
 1567111242	Makyen	tamfullhdfilmi+zle\.com
+1567111655	Makyen	\w{0,40}fullhdfilmi+zle(?:\.[\w-]*)?
