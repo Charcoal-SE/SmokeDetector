@@ -12657,3 +12657,4 @@
 1567097619	Makyen	healthstrikes\.com
 1567097717	Makyen	computerwali\.com
 1567097736	Makyen	(?-i:p9LNk7-1Sl)
+1567100278	Makyen	^(?-i:Davv+y(?:_\d+)?)$
