@@ -16,7 +16,7 @@ import platform
 from helpers import log
 if 'windows' in platform.platform().lower():
     # noinspection PyPep8Naming
-    from classes import Git as git, GitError
+    from classes._Git_Windows import git, GitError
 else:
     from sh.contrib import git
 
