@@ -12644,3 +12644,4 @@
 1567036385	Makyen	buyweednewzealand\.com
 1567047400	Makyen	free[\W_]*trial[\W_]*offer
 1567055521	Makyen	printererrorcode\.com
+1567056018	Makyen	(?-i:kiEe8sN-yHE)
