@@ -12688,3 +12688,4 @@
 1567203156	Makyen	(?-i:zP0VDWqUbvU)
 1567203164	Makyen	dradanikesolutionhome(?:@outlook\.com)?
 1567203173	Makyen	dr[\W_]*omoa
+1567203210	Makyen	alexghacklord(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
