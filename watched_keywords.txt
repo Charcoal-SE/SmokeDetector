@@ -12675,3 +12675,4 @@
 1567111242	Makyen	tamfullhdfilmi+zle\.com
 1567111655	Makyen	\w{0,40}fullhdfilmi+zle(?:\.[\w-]*)?
 1567136830	Machavity	customersupportnumber-usa\.com
+1567138482	Shree	bestbuyat\.com
