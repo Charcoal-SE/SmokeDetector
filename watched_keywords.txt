@@ -10616,7 +10616,6 @@
 1560837288	double-beep	bestbookcentre\.com
 1560841255	tripleee	childlearning\.in
 1560842354	tripleee	download\.zone
-1560843296	Makyen	getsetwild\.com
 1560843985	tripleee	gsb\W?infotech
 1560847331	tripleee	brasilem5\.org
 1560847350	tripleee	dmhut\.com

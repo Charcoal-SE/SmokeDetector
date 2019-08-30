@@ -3067,3 +3067,4 @@ diploma899\d*(?<=\d)(?#Abuse the blacklist to get more weight/reasons for a surg
 wealthpediaa\.com
 pil4pedia\.com
 ketoplusdietreviews\.com
+getsetwild\.com
