@@ -12682,3 +12682,4 @@
 1567173930	double-beep	cybersecurty\.com
 1567196951	Makyen	fikiravm\.com
 1567196960	Makyen	sirketi\.net
+1567198290	Makyen	e­ar­n[\W_]*7438[\W_]*i­n[\W_]*f­our[\W_]*w­e­e­ks
