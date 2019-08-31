@@ -12716,3 +12716,4 @@
 1567245157	Makyen	collegica(?:[\W_]*+(?:skin|care|moisturizer|cream))++
 1567245188	Makyen	mcal\.in
 1567245221	Makyen	exogenous[\W_]*+keto(?:[\W_]*+(?:ca|\d+))*+
+1567245235	Makyen	famousmoviejackets\.com
