@@ -12696,3 +12696,4 @@
 1567226735	Makyen	sunday[\W_]*scaries[\W_]*cbd[\W_]*gummies
 1567226743	Makyen	primedzblog\.blogspot\.com
 1567226751	Makyen	primedz(?!\.com)
+1567228068	Makyen	\d++[\W_]*+httpsmaptiacomalphafemme[\W_]*+ketogenix
