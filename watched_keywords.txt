@@ -12693,3 +12693,4 @@
 1567221846	Makyen	custom-necklace\.com
 1567223472	Makyen	fashionwatchtime\.com
 1567223485	Makyen	bestluxurysale\.com
+1567226735	Makyen	sunday[\W_]*scaries[\W_]*cbd[\W_]*gummies
