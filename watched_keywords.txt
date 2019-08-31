@@ -12730,3 +12730,4 @@
 1567254610	double-beep	must11\.com
 1567254904	double-beep	newsesp\.com
 1567254914	double-beep	wanderviews\.net
+1567254922	double-beep	techranc\.com
