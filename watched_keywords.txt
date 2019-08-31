@@ -12694,3 +12694,4 @@
 1567223472	Makyen	fashionwatchtime\.com
 1567223485	Makyen	bestluxurysale\.com
 1567226735	Makyen	sunday[\W_]*scaries[\W_]*cbd[\W_]*gummies
+1567226743	Makyen	primedzblog\.blogspot\.com
