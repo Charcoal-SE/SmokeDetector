@@ -12710,3 +12710,4 @@
 1567244985	Makyen	viga[\W_]*+plus(?:[\W_]*+(?:france|\d++))*+
 1567245012	Makyen	supplementcrunch\.com
 1567245025	Makyen	ally[\W_]*+natural(?:[\W_]*+(?:oil|cbd|\d++))*+
+1567245043	Makyen	trubodx(?!keto\.wordpress\.com)(?:[\W_]*+(?:keto|\d++))*+
