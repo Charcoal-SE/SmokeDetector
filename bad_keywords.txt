@@ -2048,3 +2048,4 @@ testo[\W_]*genix(?:[\W_]*(?:xl|muscle|\d+)s?)*
 95[\W_]*bucks[\W_]*every[\W_]*hour
 hi\W*q\W*keto
 diploma899\d*
+quickarturhack(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
