@@ -12778,3 +12778,4 @@
 1567420173	double-beep	naijafocus\.com\.ng
 1567421051	double-beep	ishiakuherbalcure(?:@gmail\.com)?
 1567425680	double-beep	bcgnz\.co\.nz
+1567428022	double-beep	hindisanskrittutor\.in
