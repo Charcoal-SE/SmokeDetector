@@ -12762,3 +12762,4 @@
 1567361419	Stormblessed	bitrush
 1567369817	Makyen	(?<=fiverr.com/)modern_writer
 1567372713	Makyen	scrabblewordfinder\.vip
+1567395005	Makyen	fastnewsfeed\.com
