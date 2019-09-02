@@ -12764,3 +12764,4 @@
 1567372713	Makyen	scrabblewordfinder\.vip
 1567395005	Makyen	fastnewsfeed\.com
 1567395014	Makyen	grpsinternational\.com
+1567395024	Makyen	(?-i:UCjEADaiyImb8BIkMmwLTpEA)(?#YouTube channel)
