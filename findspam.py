@@ -1958,9 +1958,27 @@ FindSpam.rule_blacklisted_usernames = create_rule("blacklisted username", regex=
 create_rule("potentially bad keyword in {}", r"(?is)(?<=^.{0,200})\bgratis\b",
             sites=['softwarerecs.stackexchange.com', 'es.stackoverflow.com'],
             body_summary=True, max_rep=11)
-# Watch keto(?:nes?)?, but exempt Chemistry. Was a watch added by iBug on 1533209512.
-create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)",
-            sites=['chemistry.stackexchange.com'],
+# Blacklist keto(?:nes?)?, but exempt Chemistry. Was a watch added by iBug on 1533209512.
+# not medicalsciences, fitness, biology
+create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)",
+            sites=['chemistry.stackexchange.com',
+                   'medicalsciences.stackexchange.com',
+                   'fitness.stackexchange.com',
+                   'biology.stackexchange.com',
+                   'stackoverflow.com'],
+            username=True, body_summary=True,
+            max_rep=4, max_score=1)
+# Blacklist keto(?:nes?)?, but exempt Chemistry. Was a watch added by iBug on 1533209512.
+# Stack Overflow, but not in code
+create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)", all=False, stripcodeblocks=True,
+            sites=['stackoverflow.com'],
+            username=True, body_summary=True,
+            max_rep=4, max_score=1)
+# Watch keto(?:nes?)? on sites where it's not blacklisted, exempt Chemistry. Was a watch added by iBug on 1533209512.
+create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)", all=False,
+            sites=['medicalsciences.stackexchange.com',
+                   'fitness.stackexchange.com',
+                   'biology.stackexchange.com'],
             username=True, body_summary=True,
             max_rep=30, max_score=1)
 # Watch (?-i:SEO|seo)$, but exempt Webmasters for titles, but not usernames. Was a watch by iBug on 1541730383. (pt1)
