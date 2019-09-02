@@ -149,7 +149,6 @@ stackexchange.com:
     msg_types:
       - debug
       - all
-      - site-no-stackoverflow.com
       - experimental
 
     privileges:
