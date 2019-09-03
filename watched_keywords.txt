@@ -12807,3 +12807,4 @@
 1567497496	tripleee	dqtech\.vn
 1567498488	Makyen	myavastlogin\.com
 1567498496	Makyen	officesetupp\.us
+1567498505	Makyen	rand-mcnally-update\.com
