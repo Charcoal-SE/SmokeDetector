@@ -12793,3 +12793,4 @@
 1567488947	Makyen	amazondumps\.us
 1567488954	Makyen	(?-i:4m2_WvkBfZs)
 1567488971	Makyen	currentlyteustloans(?:@gmail\.com)?
+1567488980	Makyen	dukan[\W_]*+diet
