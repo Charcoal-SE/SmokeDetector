@@ -2049,3 +2049,4 @@ testo[\W_]*genix(?:[\W_]*(?:xl|muscle|\d+)s?)*
 hi\W*q\W*keto
 diploma899\d*
 quickarturhack(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
+kuni(?:\W?(?:skin\W?care|cream))
