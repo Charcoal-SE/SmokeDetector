@@ -12796,3 +12796,4 @@
 1567488980	Makyen	dukan[\W_]*+diet
 1567488988	Makyen	nizuni\.com
 1567488998	Makyen	nizuni(?!\.com)(?:[\W_]*+(?:charlotte|street|restaurant|review|thoughtful|japanese|cooking|\d+))*
+1567489092	Makyen	pro[\W_]*+blast[\W_]*+xl
