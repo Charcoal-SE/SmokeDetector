@@ -12599,7 +12599,7 @@
 1566963920	Makyen	dochoihahuy89
 1566974817	Shree	englishvocabulary\.ir
 1566975089	Makyen	topdietbrand[\W_]*com(?#obfuscated domain)
-1566975099	Makyen	nolatreve(?:[\W_]*(?:anti|aging|france|\d+))*
+1566975099	Makyen	nolatreve(?:[\W_]*+(?:anti|aging|france|fr|skin|cream|\d+))*
 1566975107	Makyen	keto[\W_]*extreme[\W_]*fat[\W_]*burner
 1566975362	Glorfindel	clickohow\.com
 1566979358	Glorfindel	bubbletechno\.com
