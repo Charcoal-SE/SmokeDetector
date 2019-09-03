@@ -12808,3 +12808,4 @@
 1567498488	Makyen	myavastlogin\.com
 1567498496	Makyen	officesetupp\.us
 1567498505	Makyen	rand-mcnally-update\.com
+1567500911	Glorfindel	cleaningstartup\.com
