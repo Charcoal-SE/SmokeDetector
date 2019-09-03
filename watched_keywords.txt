@@ -3779,7 +3779,7 @@
 1528838695	Zoe	ganja-juice\.com
 1528839835	Zoe	real\W*spell\W*caster
 1528844912	NobodyNada	copelandcolman@gmail\.com
-1528845453	Makyen	ogbefunhearlingtemple(?:@gmail\.com)?
+1528845453	Makyen	ogbefunhearlingtemple(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1528845465	Makyen	dr\W*ogbefun
 1528864430	tripleee	netgear\W?powerline
 1528865529	tripleee	mindvalley\.com
