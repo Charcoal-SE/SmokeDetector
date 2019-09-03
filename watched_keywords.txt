@@ -12800,3 +12800,4 @@
 1567490804	double-beep	homeyconfinement\.com
 1567491003	Makyen	kuni[\W_]*+skincare[\W_]*+serum
 1567491101	double-beep	hepclivefree\.com
+1567492088	double-beep	smcrealty\.com
