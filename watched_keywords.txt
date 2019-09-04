@@ -12826,3 +12826,4 @@
 1567574613	tripleee	anujjindal\.in
 1567581408	tripleee	shareits\.xyz
 1567588696	Makyen	wwwnortonactivate\.org (?#Yes, with the www)
+1567588837	Makyen	nortonactivate\.org
