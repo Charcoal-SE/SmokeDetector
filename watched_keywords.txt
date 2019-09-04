@@ -12828,3 +12828,4 @@
 1567588696	Makyen	wwwnortonactivate\.org (?#Yes, with the www)
 1567588837	Makyen	nortonactivate\.org
 1567590247	Makyen	wholestack\.in
+1567590256	Makyen	(?-i:in5CT\.jpg)
