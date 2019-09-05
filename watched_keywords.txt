@@ -12838,3 +12838,4 @@
 1567610309	Makyen	pielbeauty\.com
 1567635939	Makyen	saara\.kemi(?:@gmail\.com)?
 1567663492	Makyen	vggroups\.com
+1567663521	Makyen	digitalmarketingagencyindelhiblog\.blogspot\.com
