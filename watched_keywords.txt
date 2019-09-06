@@ -12763,7 +12763,6 @@
 1567395024	Makyen	(?-i:UCjEADaiyImb8BIkMmwLTpEA)(?#YouTube channel)
 1567398924	Makyen	caohcuong(?:@gmail\.com)?
 1567398934	Makyen	119437009854(?#G Suite)
-1567403140	Makyen	thesupplementcop\.com
 1567404309	Makyen	epasswordrecovery\.com
 1567405777	double-beep	technxt\.net
 1567408410	tripleee	autobodycu\.org
