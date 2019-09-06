@@ -193,3 +193,4 @@ quickbooks
 (?-i:^Neeta Panchal$)
 (?-i:^Kajal Patil$)
 ^(?-i:imaginea)$
+^Pooja\sSen$
