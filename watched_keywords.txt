@@ -9639,7 +9639,6 @@
 1556863813	Makyen	shorturl\.at(?#Service counts clicks)
 1556864428	tripleee	drshashibhushan\.com
 1556864601	tripleee	healthyaudit\.com
-1556866050	tripleee	advicedam\.info
 1556866118	tripleee	amayze(?:\W?life(?:\W?forskolin)?)?
 1556867810	double-beep	apollocannabis\.ca
 1556869617	tripleee	share-ask\.com
