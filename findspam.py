@@ -1171,6 +1171,7 @@ def watched_ns_for_url_domain(s, site):
         'zonedns.vn.',
         'cetpajobs.com.',
         'thesecurededicatedserver.com.',
+        'ipage.com.',
     ])
 
 
