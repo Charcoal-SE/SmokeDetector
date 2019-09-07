@@ -10740,7 +10740,7 @@
 1561356773	Makyen	nofap\.com
 1561357598	Makyen	go2article\.com
 1561357617	Makyen	awebcity\.com
-1561357638	Makyen	wattpad\.com
+1561357638	Makyen	wattpad\.com(?!/docs/api)
 1561357658	Makyen	assignmenttigers\.co\.uk
 1561357704	Makyen	vital-keto-suisse\.over-blog\.com
 1561358461	Glorfindel	missionsecurity\.com
