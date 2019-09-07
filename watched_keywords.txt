@@ -12880,3 +12880,4 @@
 1567855468	Makyen	crossfaktor[\W_]*+booster(?!\.wordpress\.com(?<=crossfaktorbooster\.wordpress\.com))
 1567855476	Makyen	crossfaktorbooster\.wordpress\.com
 1567855522	Makyen	(?:master|modern)[\W_]*+keto[\W_]*+rx(?:[\W_]*+(?:review|d+))*
+1567856316	Makyen	prince\.zlato
