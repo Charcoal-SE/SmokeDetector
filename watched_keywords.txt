@@ -10919,7 +10919,6 @@
 1561826240	Makyen	tour\W*travel\W*360(?!\.com(?<=tourtravel360\.com))
 1561834381	Makyen	(?-i:N0keg\.jpg)
 1561834399	Makyen	ag7144427(?:@gmail\.com)?
-1561841556	Makyen	healthdio\.com
 1561882214	Nisse Engström	bookishrestaurant\.com
 1561904692	Sonic the Anonymous WizHog	bbbootstrap\.com
 1561927733	Makyen	nutrifitsupplementsscamgmailcom
