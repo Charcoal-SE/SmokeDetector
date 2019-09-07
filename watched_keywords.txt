@@ -12565,7 +12565,6 @@
 1566905854	double-beep	english-guru\.institute
 1566910928	Machavity	mag-corp\.com
 1566910954	Machavity	MBSsensors\.com
-1566911177	Machavity	pillsfect\.com
 1566912755	Machavity	techstuff\.website
 1566912789	Machavity	technviews\.com
 1566912959	Machavity	wpnethi\.com

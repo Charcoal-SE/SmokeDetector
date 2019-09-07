@@ -3085,3 +3085,4 @@ homify\.co\.uk
 (?:(?:capital|legionesports|latitudesport|datzitgaming|epiphany|textbookgaming)\.)?esportsify\.com
 ketopillsstore\.com
 myfitnesspharm\.com
+pillsfect\.com
