@@ -9502,7 +9502,7 @@
 1556261730	Shree	felix-its\.com
 1556262266	tripleee	www-tutuapp\.com
 1556262375	tripleee	live\W?net\W?tv
-1556262414	tripleee	showbox
+1556262414	tripleee	showbox(?!\.(?:ooo|run|kim)\b|apk\.biz\b)(?=[.</]|(?:[\W_]*+for)?[\W_]*+(?:download|apk|app))\w*
 1556264359	tripleee	listsituspoker\.com
 1556264359	tripleee	poker88indo\.com
 1556264359	tripleee	generasiqq\.club
