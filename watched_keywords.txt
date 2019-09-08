@@ -12240,7 +12240,7 @@
 1566039635	Shree	qiuqiu992\.site
 1566055449	Makyen	457519994829275(?#YouTube event)
 1566055472	Makyen	(?-i:pxQJN4FWUyE)
-1566055529	Makyen	ultra[\W_]*fast[\W_]*keto(?:[\W_]*(?:boost|review|world|care|shope|\d+|[\da-f]{4,}))*
+1566055529	Makyen	ultra[\W_]*fast(?:[\W_]*boost)?[\W_]*keto(?:[\W_]*(?:boost|review|world|care|shope|usa|\d+|[\da-f]{4,}))*\w*
 1566053642	Stormblessed	libtard
 1566056640	Makyen	garciniabodyprobuy\.com
 1566062086	Makyen	bestpillstoday\.se
