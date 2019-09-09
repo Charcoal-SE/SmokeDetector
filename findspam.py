@@ -2058,7 +2058,7 @@ create_rule("Hindi character in {}", r"(?i)\p{Script=Devanagari}",
 create_rule("English text in {} on a localized site", r"(?i)^[a-z0-9_\W]*[a-z]{3}[a-z0-9_\W]*$",
             all=False, sites=["rus.stackexchange.com"], stripcodeblocks=True)
 # Roof repair
-create_rule("bad keyword in {}", "roof repair",
+create_rule("bad keyword in {}", r"(?is)roof repair",
             sites=["diy.stackexchange.com", "outdoors.stackexchange.com", "mechanics.stackexchange.com"],
             stripcodeblocks=True, body_summary=True, max_rep=11)
 # Bad keywords (only include link at end sites + SO, the other sites give false positives for these keywords)
