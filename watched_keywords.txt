@@ -12922,3 +12922,4 @@
 1568020133	Makyen	piperhacker123\.wixsite\.com
 1568020164	Makyen	sunset[\W_]*+keto
 1568020471	Makyen	skytocryptohacker(?:@gmail\.com)?
+1568023138	tripleee	mcafeeactivate-setup\.info
