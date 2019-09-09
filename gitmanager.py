@@ -367,14 +367,10 @@ class GitManager:
 
     @staticmethod
     def merge_abort():
-        if GlobalVars.on_windows:
-            return  # No we don't do Windows
         git.merge("--abort")
 
     @staticmethod
     def reset_head():
-        if GlobalVars.on_windows:
-            return  # No we don't do Windows
         git.reset("--hard", "HEAD")
         git.clean("-f")
 
@@ -411,9 +407,6 @@ class GitManager:
 
     @staticmethod
     def sync_remote():
-        if GlobalVars.on_windows:
-            return False, "We don't do Windows"
-
         try:
             if GlobalVars.on_branch != "deploy":
                 git.checkout("deploy")
