@@ -1241,6 +1241,7 @@ def watched_ip_for_url_hostname(s, site):
             '192.186.227.225',  # drugs topwellnessguru / healthcare350 etc
             # AS 46606 UNIFIEDLAYER-AS-1 - Unified Layer, US
             '50.87.189.77',     # avdshare.com
+            '162.241.148.157',  # fake-tech-support en-mcafee setupmwnow etc
             '192.185.227.177',  # zooksoftware.com
             # AS 47583 (HOSTINGER) - also notice dual-homed below
             '185.224.137.142',  # drugs healthforeverplus supplementoffer.info etc
