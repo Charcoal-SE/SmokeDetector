@@ -12907,3 +12907,4 @@
 1568008783	tripleee	amx\W?detectives(?!\.com)
 1568009728	tripleee	mfmcafee\.com
 1568009774	tripleee	setupmenow\.com
+1568009786	tripleee	gonortonnorton\.com
