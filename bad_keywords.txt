@@ -1567,8 +1567,6 @@ ambrosina
 kidney\W?bean\W?extract
 acai\W?(?:berr(?:y|ies)|palm)
 lumisse
-(?:poker|casino)\W*online
-online\W*(?:poker|casino)
 caralluma
 diabazole
 nitro\W?slim
