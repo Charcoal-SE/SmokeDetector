@@ -12924,3 +12924,4 @@
 1568023404	tripleee	63388f01d68be9ff(?# skype id)
 1568023414	double-beep	kuznetsovgavriil\.Mikhailovich(?:@mail\.ru)?
 1568023467	tripleee	GOST\W*305\W*82
+1568027342	tripleee	2lWXkI2(?# bit.ly redirector)
