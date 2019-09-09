@@ -2072,8 +2072,12 @@ create_rule("bad keyword in {}", r"(?i)(?<!truth )serum|\b(?<!to )supplements\b"
 # Jesus Christ, the Son of God, on SciFi.
 create_rule("bad keyword in {}", r"Son of (?:David|man)", all=False, sites=["scifi.stackexchange.com"],
             username=True)
+# Holocaust troll
 create_rule("bad keyword in {}", r"holocaust\W(witnesses|belie(f|vers?)|denier)", all=False,
             sites=["skeptics.stackexchange.com", "history.stackexchange.com"])
+# Online poker, except poker.SE
+create_rule("bad keyword in {}", r"(?:(?:poker|casino)\W*online|online\W*(?:poker|casino))", all=True,
+            sites=["poker.stackexchange.com"])
 
 # Category: Suspicious links
 # Suspicious sites
