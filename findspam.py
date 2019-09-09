@@ -2076,7 +2076,7 @@ create_rule("bad keyword in {}", r"Son of (?:David|man)", all=False, sites=["sci
 create_rule("bad keyword in {}", r"holocaust\W(witnesses|belie(f|vers?)|denier)", all=False,
             sites=["skeptics.stackexchange.com", "history.stackexchange.com"])
 # Online poker, except poker.SE
-create_rule("bad keyword in {}", r"(?:(?:poker|casino)\W*online|online\W*(?:poker|casino))", all=True,
+create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?:(?:poker|casino)\W*online|online\W*(?:poker|casino))(?:\b|(?w:\b)|$)", all=True,
             sites=["poker.stackexchange.com"])
 
 # Category: Suspicious links
