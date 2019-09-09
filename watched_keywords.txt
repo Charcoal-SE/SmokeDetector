@@ -12925,3 +12925,4 @@
 1568023414	double-beep	kuznetsovgavriil\.Mikhailovich(?:@mail\.ru)?
 1568023467	tripleee	GOST\W*305\W*82
 1568027342	tripleee	2lWXkI2(?# bit.ly redirector)
+1568038592	Erik the Outgolfer	foreignexchange\.llc
