@@ -12904,3 +12904,4 @@
 1567976148	Makyen	thecinematictalks\.com
 1568006647	tripleee	asiaxxi\.net
 1568007246	tripleee	firestick-solution\.com
+1568008783	tripleee	amx\W?detectives(?!\.com)
