@@ -80,3 +80,7 @@ class Git(object):
 
 
 git = Git()
+git_version = git.version(return_data=True).strip()
+if ('indows' not in git_version):
+    log('error', 'Error: Windows Git: git is not a Windows version: ', git_version)
+    raise NotImplementedError('The git program being used, ' + git_version + ', is not a Windows based version. Be sure you installed Git for Windows and that it is in your path before any other versions (e.g. before Cygwin).')
