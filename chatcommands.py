@@ -840,6 +840,25 @@ def sync_remote(msg, alias_used='pull-sync'):
     return GitManager.sync_remote()[1]
 
 
+@command(whole_msg=True, privileged=True, give_name=True, aliases=['pull-sync-hard',
+                                                                   'pull-sync-hard-force',
+                                                                   'pull-sync-hard-reboot',
+                                                                   'pull-sync-hard-reboot-force'])
+def sync_remote_hard(msg, alias_used='pull-sync-hard'):
+    """
+    Force a branch sync from origin/master and origin/deploy
+    :param msg:
+    :return: A string containing a response message or None
+    """
+    if not is_code_privileged(msg._client.host, msg.owner.id):
+        raise CmdException("You don't have code privileges to run this command.")
+    if 'reboot' in alias_used:
+        GitManager.sync_remote_hard(True)
+        reboot(msg, alias_used="reboot")
+
+    return GitManager.sync_remote_hard(False)[1]
+
+
 @command(privileged=True, give_name=True, aliases=[
     "gitstatus", "git-status", "git-help", "git-merge-abort", "git-reset"
 ])

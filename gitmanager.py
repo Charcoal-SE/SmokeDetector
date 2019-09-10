@@ -411,6 +411,20 @@ class GitManager:
             if GlobalVars.on_branch != "deploy":
                 git.checkout("deploy")
             git.branch('--create-reflog', '-f', 'master', '-t', 'origin/master')
-            return True, "wow, this is working!"
+            return True, "Synced to origin/master. You'll probably want to !!/reboot now."
+        except Exception as e:
+            return False, str(e)
+
+    @staticmethod
+    def sync_remote_hard(reboot):
+        try:
+            git.fetch('--force')
+            git.checkout('master', '--force')
+            git.reset('origin/master', '--hard')
+            git.checkout('deploy', '--force')
+            git.reset('origin/deploy', '--hard')
+            git.checkout('master', '--force')
+            git.checkout('deploy', '--force')
+            return True, "Synced hard to origin/master and origin/deploy. You'll probably want to !!/reboot now."
         except Exception as e:
             return False, str(e)
