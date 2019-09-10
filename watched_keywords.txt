@@ -3999,7 +3999,7 @@
 1529928741	Mithrandir	digitalteacher\.in
 1529929455	tripleee	[a-z_]*(?:91_*)?8055052151[a-z_]*
 1529930183	tripleee	[a-z_]*(?:08_*)?9335[\W_]*8310[a-z_]*
-1529930217	tripleee	adarose\d*
+1529930217	tripleee	ada[\W_]*+rose\d*+(?!\.com\.au(?<=adarose\.com\.au))
 1529932065	tripleee	voipterminator\.com
 1529932642	tripleee	itabix\.com
 1529943700	Glorfindel	24freelancernews\.blogspot\.com
