@@ -12945,3 +12945,4 @@
 1568160314	Makyen	blogging-dunia\.blogspot\.com
 1568160326	Makyen	(?-i:mmbeV.jpg)
 1568160338	Makyen	rajapkvqq\.net
+1568160348	Makyen	pure[\W_]*+liave
