@@ -12947,3 +12947,4 @@
 1568160338	Makyen	rajapkvqq\.net
 1568160348	Makyen	pure[\W_]*+liave
 1568160357	Makyen	(?-i:0RCf3\.png)
+1568160377	Makyen	hpcartridgeshop\.co\.uk
