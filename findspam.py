@@ -1172,6 +1172,10 @@ def watched_ns_for_url_domain(s, site):
         'cetpajobs.com.',
         'thesecurededicatedserver.com.',
         'ipage.com.',
+        'rumahweb.com.',
+        'rumahweb.net.',
+        'rumahweb.org.',
+        'rumahweb.biz.',
     ])
 
 
