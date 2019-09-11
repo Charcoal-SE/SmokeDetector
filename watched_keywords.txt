@@ -10805,7 +10805,6 @@
 1561487111	Machavity	paierspeter
 1561487247	Machavity	dylanryhan2(?:@gmail\.com)?
 1561507782	Machavity	digitaldawgpoundhackergroup
-1561526433	Shree	typingbaba\.com
 1561527643	Makyen	(?-i:q-noOZyjQto)
 1561527661	Makyen	netdevv\.com
 1561527680	Makyen	(?-i:nFTec5q)
