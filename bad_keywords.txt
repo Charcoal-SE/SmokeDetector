@@ -884,7 +884,7 @@ alpha\W?king
 bio\W?slim
 shanti\W?cbd
 steel\W?focus
-sky\W?test
+sky[\W_]*+test[\W_]*+testosterone
 apk-download-youtube-downloader
 kimotti
 (?:1\W*)?888\W*787\W*9274
