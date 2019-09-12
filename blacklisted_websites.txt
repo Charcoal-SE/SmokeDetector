@@ -2721,7 +2721,7 @@ bullguard-support\.co\.uk
 weblium\.com
 easyprintersupport\.com
 techjockey\.com
-usahealthcart\.com
+usahealthcart[\W_]*+com
 growth4uhealth\.com
 healthysupplementstalk\.com
 allrecipes\.com/collections
