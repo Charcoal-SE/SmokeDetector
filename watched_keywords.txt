@@ -11588,7 +11588,6 @@
 1564016941	Makyen	cyber\W*golden\W*hacker(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
 1564023963	Machavity	latestnews23\.com\.ng
 1564023986	Machavity	borwap\.com\.ng
-1564028793	Makyen	theoriginofspeciousnonsense\.com
 1564029610	Makyen	loveu2zindagi\.com
 1564032577	Makyen	jimmypotts080(?:@gmail\.com)?
 1564035351	Shree	top10music\.ir
