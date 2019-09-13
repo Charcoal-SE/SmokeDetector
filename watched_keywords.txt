@@ -12999,3 +12999,4 @@
 1568377451	double-beep	flooringfitness\.com
 1568380933	Makyen	jouwweb\.nl
 1568380943	Makyen	muscle\.poetry\.blog
+1568380952	Makyen	blog\.hatena\.ne\.jp
