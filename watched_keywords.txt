@@ -13004,3 +13004,4 @@
 1568381009	Makyen	ketofit-czechia\.over-blog\.com
 1568381026	Makyen	ketofitrecenze\.wixsite\.com
 1568381057	Makyen	smithjenny\.blogspot\.com
+1568381129	Makyen	jennysmith\.hatenablog\.com(?#URL path)
