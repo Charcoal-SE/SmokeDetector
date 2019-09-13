@@ -14,7 +14,7 @@ on_windows = 'windows' in platform.platform().lower()
 
 if on_windows:
     # noinspection PyPep8Naming
-    from classes import Git as git
+    from classes._Git_Windows import git
 else:
     from sh.contrib import git
 
@@ -102,11 +102,8 @@ while not stoprunning:
 
     if 'pull_update' in exit_info:
         log('Pull in new updates')
-        if not on_windows:
-            git.checkout('deploy')
-            git.pull()
-        else:
-            warn('Not pulling updates; we are on Windows')
+        git.checkout('deploy')
+        git.pull()
 
         count = 0
         crashcount = 0
@@ -118,10 +115,7 @@ while not stoprunning:
 
         if crashcount == 2:
             log('Crash count triggered reverted state')
-            if not on_windows:
-                git.checkout('HEAD~1')
-            else:
-                warn('Not reverting; we are on Windows')
+            git.checkout('HEAD~1')
 
             count = 0
             crashcount = 0
@@ -140,10 +134,7 @@ while not stoprunning:
     elif 'checkout_deploy' in exit_info:
         log('Checkout deploy')
         # print "[NoCrash] Checkout Deploy"
-        if not on_windows:
-            git.checkout('deploy')
-        else:
-            warn('Not checking out deploy branch; we are on Windows')
+        git.checkout('deploy')
 
         count = 0
         crashcount = 0
