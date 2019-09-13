@@ -8,7 +8,7 @@ import threading
 import websocket
 try:
     from collections.abc import Iterable
-except ModuleNotFoundError:
+except ImportError:
     from collections import Iterable
 from datetime import datetime, timedelta
 from glob import glob
