@@ -1177,6 +1177,7 @@ def watched_ns_for_url_domain(s, site):
         'rumahweb.org.',
         'rumahweb.biz.',
         'contabo.net.',
+        'crazydomains.com.',
     ])
 
 
