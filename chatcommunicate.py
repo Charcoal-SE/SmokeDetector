@@ -113,10 +113,11 @@ def init(username, password, try_cookies=True):
         join_command_rooms()
 
     if os.path.isfile("messageData.p"):
-        try:
-            _last_messages = pickle.load(open("messageData.p", "rb"))
-        except EOFError:
-            pass
+        with open("messageData.p", "rb") as messages_file:
+            try:
+                _last_messages = pickle.load(messages_file)
+            except EOFError:
+                pass
 
     threading.Thread(name="pickle ---rick--- runner", target=pickle_last_messages, daemon=True).start()
     threading.Thread(name="message sender", target=send_messages, daemon=True).start()
