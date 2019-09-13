@@ -205,11 +205,6 @@ stackexchange.com:
     msg_types:
       - site-ru.stackoverflow.com
 
-  47869:  # Magento - Charcoal SmokeDetector Reports
-    commands: false
-    msg_types:
-      - site-magento.stackexchange.com
-
   11:     # Role-Playing Games General Chat
     commands: false
     msg_types:
