@@ -6,7 +6,10 @@ from globalvars import GlobalVars
 import threading
 # noinspection PyPackageRequirements
 import websocket
-from collections import Iterable
+try:
+    from collections.abc import Iterable
+except ModuleNotFoundError:
+    from collections import Iterable
 from datetime import datetime, timedelta
 from glob import glob
 from regex import sub
