@@ -2052,3 +2052,4 @@ nolatreve(?:[\W_]*+(?:anti|aging|france|fr|skin|cream|\d+))*
 pro[\W_]*+blast[\W_]*+xl
 fitness\W*pro\W*centre(?!\.com(?<=fitnessprocentre\.com))
 ketotrin
+pharma\W*flex\W*rx
