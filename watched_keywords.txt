@@ -13010,3 +13010,4 @@
 1568389066	Machavity	(?-i:pn_jTnM_eUU)
 1568389388	Machavity	t602xp(?:@gmail\.com)?
 1568389708	Machavity	rbgroup\.aero
+1568401155	double-beep	gettechnologynews\.com
