@@ -12954,7 +12954,6 @@
 1568198324	tripleee	inovies\.com
 1568198634	tripleee	(?-i:^raheel-kamil$)
 1568200156	tripleee	acecomp\.co\.in
-1568200845	tripleee	dragonsdenketo\.com
 1568218183	double-beep	bobbyalex293(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1568221168	Makyen	musicstudiokit\.com
 1568232755	Machavity	guiaxescorts\.com
