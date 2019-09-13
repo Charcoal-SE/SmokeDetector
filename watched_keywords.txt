@@ -13002,3 +13002,4 @@
 1568380952	Makyen	blog\.hatena\.ne\.jp
 1568380963	Makyen	flooringfitness(?!\.com)
 1568381009	Makyen	ketofit-czechia\.over-blog\.com
+1568381026	Makyen	ketofitrecenze\.wixsite\.com
