@@ -13005,3 +13005,4 @@
 1568381026	Makyen	ketofitrecenze\.wixsite\.com
 1568381057	Makyen	smithjenny\.blogspot\.com
 1568381129	Makyen	jennysmith\.hatenablog\.com(?#URL path)
+1568384571	Machavity	mortiselockset\.tumblr\.com
