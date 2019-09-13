@@ -525,6 +525,7 @@ def dispatch_command(msg):
     if command_name not in _prefix_commands:
         return "No such command '{}'.".format(command_name)
     else:
+        log('debug', 'Command received: ' + msg.content)
         func, (min_arity, max_arity) = _prefix_commands[command_name]
 
         if max_arity == 0:
