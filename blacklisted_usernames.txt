@@ -194,3 +194,4 @@ quickbooks
 ^(?-i:imaginea)$
 ^Pooja\sSen$
 ^(?-i:RajeevS)$
+(?-i:^Barkha Verma$)
