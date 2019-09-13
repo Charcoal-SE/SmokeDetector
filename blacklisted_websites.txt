@@ -3072,7 +3072,7 @@ skincareadvisor\.org
 stillbonsoftware\.com
 uaedatarecovery\.com
 hulksupplement\.com
-slimfitdiets\.com
+slimfitdiets[\W_]*+com
 news4supplements\.org
 thesupplementcop\.com
 supplementscan\.com
