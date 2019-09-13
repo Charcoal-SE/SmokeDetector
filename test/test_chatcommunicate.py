@@ -19,10 +19,10 @@ from unittest.mock import Mock, patch
 
 def test_validate_yaml():
     with open("rooms.yml", "r") as f:
-        room_data = yaml.load(f.read())
+        room_data = yaml.safe_load(f.read())
 
     with open("users.yml", "r") as f:
-        user_data = yaml.load(f.read())
+        user_data = yaml.safe_load(f.read())
 
     flatten = lambda l: [item for sublist in l for item in sublist]
     privileged_users = []
