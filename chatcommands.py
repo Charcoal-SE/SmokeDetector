@@ -235,6 +235,67 @@ def format_blacklist_reasons(reasons):
     return reason_string
 
 
+def sub_to_unchanged(reg_exp, replace, text, max_passes=10, count=0, flags=0):
+    """
+    Applies a regex substitution as many times as is needed to no longer make a change.
+    :param regex:
+    :param replace:
+    :param text:
+    :param max_passes:
+    :param count:
+    :param flags:
+    :return: A string
+    """
+    prev_text = ""
+    max_passes = max_passes + 1 if max_passes else max_passes
+    while (text and text != prev_text and max_passes != 1):
+        prev_text = text
+        text = regex.sub(reg_exp, replace, text, count=count, flags=flags)
+        max_passes -= 1
+    return text
+
+
+def get_test_text_from_regex(pattern):
+    """
+    Converts regex text supplied in a command to text which can be tested for double-dipping
+    :param A string:
+    :return: A string
+    """
+    pattern = regex.sub(r"(?<!\\)\(\?\#[^\)]*\)", "", pattern)  # Remove comments: comments can have no nested ()
+    pattern = regex.sub(r"(?<!\\)\[\\W_\][*?+]*", "-", pattern)  # Replace typical sets
+    pattern = regex.sub(r"(?<!\\)\[\\da-f\]\{4,\}+?", "0123", pattern)  # Replace typical sets
+    pattern = regex.sub(r"(?<!\\)\[\\da-f\][*?+]*", "0", pattern)  # Replace typical sets
+    pattern = regex.sub(r"(?<!\\)\[\^a-z0-9-\][*?+]*", "_", pattern)  # Replace typical sets
+    # Replace common named sets
+    pattern = pattern.replace(r"\W", "-").replace(r"\w", "a").replace(r"\.", ".").replace(r"\d", "8")
+    pattern = pattern.replace(r"\s", " ").replace(r"\S", "b").replace(r"\n", "\n").replace(r"\r", "\r")
+    pattern = regex.sub(r"(?<!\\)\$", "", pattern)  # Remove end assertion
+    pattern = regex.sub(r"(?<![\\\[])\^", "", pattern)  # Remove start assertion
+    pattern = regex.sub(r"(?<!\\)\\[Bb]", "", pattern)  # Remove wordbreak assertion
+    pattern = regex.sub(r"(?<!\\)\[(?!\^|\\)(.)(?:[^\]]|(?<=\\)])*\]", r"\1", pattern)  # Replace positive sets
+    # Remove optional groups (still want to test this text)
+    # pattern = sub_to_unchanged(r"\((?:\?:|(?!\?))(?:[^\(\)]|(?<=\\)[()])*\)(?:[*?][+?]?|\{0?,\d+\}[+?]?)",
+    #                            "", pattern)
+    # Remove optional characters
+    pattern = regex.sub(r"(?:\\.|(?<!\\)[^+*}()[\]])(?:[*?][+?]?|\{0?,\d+\}[+?]?)", "", pattern)
+    # Remove lookarounds.
+    pattern = sub_to_unchanged(r"\(\?<?[!=](?:[^\(\)]|(?<=\\)[()])*\)", "", pattern)
+    # Remove () and (?:) from non-optional groupings
+    pattern = sub_to_unchanged(r"\((?:\?:|(?!\?))((?:[^\(\)]|(?<=\\)[()])*)\)(?![*?][+?]?|\{0?,\d+\}[+?]?)",
+                               r"\1", pattern)
+    # Remove optional groups (still want to test this text)
+    # pattern = sub_to_unchanged(r"\((?:\?:|(?!\?))(?:[^\(\)]|(?<=\\)[()])*\)(?:[*?][+?]?|\{0?,\d+\}[+?]?)",
+    #                            "", pattern)
+    # drop flags: https://regex101.com/r/smAiks/1/
+    pattern = sub_to_unchanged(r"(?<!\\)\(\?[a-zA-Z-]+(?::((?:[^\(\)]|(?<=\\)[()])*))?\)", r"\1", pattern)
+    pattern = regex.sub(r"(?<!\\)(?:(?<!(?<!\\)\()[+*?][+?]?|\{\d*(?:,\d*)?\}[+?]?)", "", pattern)  # Common quantifiers
+    # Remove () and (?:) from groupings
+    pattern = sub_to_unchanged(r"\((?:\?:|(?!\?))((?:[^\(\)]|(?<=\\)[()])*)\)", r"\1", pattern)
+    # Remove lookarounds (again).
+    pattern = sub_to_unchanged(r"\(\?<?[!=](?:[^\(\)]|(?<=\\)[()])*\)", "", pattern)
+    return pattern
+
+
 def do_blacklist(blacklist_type, msg, force=False):
     """
     Adds a string to the website blacklist and commits/pushes to GitHub
@@ -250,9 +311,7 @@ def do_blacklist(blacklist_type, msg, force=False):
     append_force_to_do = "; append `-force` if you really want to do that."
 
     pattern = rebuild_str(msg.content_source.split(" ", 1)[1])
-    has_unquoted_dot = ""
-    if regex.search(r"(?<!\\)\.", pattern):
-        has_unquoted_dot = 'The regex provided contains an unquoted `.`; in most cases it should be `\\.`'
+    has_unquoted_dot = 'Pattern contains an unquoted "." (use \\.)' if regex.search(r"(?<!\\)\.", pattern) else ""
 
     if "number" not in blacklist_type:
         try:
@@ -271,15 +330,14 @@ def do_blacklist(blacklist_type, msg, force=False):
 
         is_watchlist = bool("watch" in blacklist_type)
 
-        concretized_pattern = pattern.replace("\\W", "-").replace("\\.", ".").replace("\\d", "8")
-        concretized_pattern = regex.sub(r"[+*?][+?]?|\{\d*(?:,\d*)?\}", "", concretized_pattern)
+        concretized_pattern = get_test_text_from_regex(pattern)
 
         for username in False, True:
             reasons = check_blacklist(
                 concretized_pattern, is_username=username, is_watchlist=is_watchlist, is_phone=is_phone)
 
             if reasons:
-                has_unquoted_dot = ", and " + has_unquoted_dot.lower() if has_unquoted_dot else ""
+                has_unquoted_dot = ", and " + has_unquoted_dot if has_unquoted_dot else ""
                 raise CmdException(
                     "That pattern looks like it's already caught by " +
                     format_blacklist_reasons(reasons) + has_unquoted_dot + append_force_to_do)
