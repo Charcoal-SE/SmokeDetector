@@ -13021,3 +13021,4 @@
 1568430421	Makyen	(?-i:ch8l8\.jpg)
 1568436291	Makyen	wellnessoffersdeal\.com
 1568437038	Makyen	wildjuicery\.com
+1568437048	Makyen	veluxton(?:[\W_]*+(?:booster|testo(?:sterone)?|\d++)s?)*
