@@ -13032,3 +13032,4 @@
 1568477296	Makyen	vixeamanplusil\.wixsite\.com
 1568477306	Makyen	vixea-manplus-israel\.over-blog\.com
 1568477372	Makyen	blood[\W_]*+sugar[\W_]*+ultra(?:[\W_]*+(?:canada|ca|\d+|[\da-f]{4,}))*
+1568477385	Makyen	just[\W_]*+keto[\W_]*+diet(?:[\W_]*+(?:review|\d+|[\da-f]{4,})s?)*
