@@ -13029,3 +13029,4 @@
 1568477032	Makyen	vmaks(?:[\W_]*+(?:venus|in|bangalore|builders?|pvt\.?|ltd\.?|\d+))+
 1568477252	Makyen	arihantwebtech\.com
 1568477261	Makyen	freeboxtemplates\.co\.uk
+1568477296	Makyen	vixeamanplusil\.wixsite\.com
