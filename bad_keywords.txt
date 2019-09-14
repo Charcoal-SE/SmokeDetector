@@ -2053,3 +2053,4 @@ pro[\W_]*+blast[\W_]*+xl
 fitness\W*pro\W*centre(?!\.com(?<=fitnessprocentre\.com))
 ketotrin
 pharma\W*flex\W*rx
+ultra[\W_]*+fast(?:[\W_]*+boost)?[\W_]*+keto(?:[\W_]*+(?:boost|review|world|care|shope|usa|scam|\d++|[\da-f]{4,}+)s?)*+\w*+
