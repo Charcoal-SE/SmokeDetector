@@ -13027,3 +13027,4 @@
 1568476988	Makyen	fitnesscarefox\.com
 1568477009	Makyen	alphaassignmenthelp\.com
 1568477032	Makyen	vmaks(?:[\W_]*+(?:venus|in|bangalore|builders?|pvt\.?|ltd\.?|\d+))+
+1568477252	Makyen	arihantwebtech\.com
