@@ -2049,7 +2049,7 @@ diploma899\d*
 quickarturhack(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
 kuni(?:\W?(?:skin\W?care|cream))
 nolatreve(?:[\W_]*+(?:anti|aging|france|fr|skin|cream|\d+))*
-pro[\W_]*+blast[\W_]*+xl
+pro[\W_]*+blast[\W_]*+xl(?:[\W_]*+(?:review|\d+|[\da-f]{4,}+)s?)*+
 fitness\W*pro\W*centre(?!\.com(?<=fitnessprocentre\.com))
 ketotrin
 pharma\W*flex\W*rx
