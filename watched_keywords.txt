@@ -13048,3 +13048,4 @@
 1568499252	Makyen	12345863(?#a licensing number)
 1568499277	Makyen	homeandroofrepair(@gmail\.com)?
 1568499284	Makyen	homeandroofrepair\.com
+1568502357	Makyen	richiedhackexpert(?:[\W_]*+(?:(?:at|via)[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
