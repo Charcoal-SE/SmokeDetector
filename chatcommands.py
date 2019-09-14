@@ -311,7 +311,9 @@ def do_blacklist(blacklist_type, msg, force=False):
     append_force_to_do = "; append `-force` if you really want to do that."
 
     pattern = rebuild_str(msg.content_source.split(" ", 1)[1])
-    has_unquoted_dot = 'Pattern contains an unquoted "." (use \\.)' if regex.search(r"(?<!\\)\.", pattern) else ""
+    has_unescaped_dot = ""
+    if regex.search(r"(?<!\\)\.", pattern):
+        has_unescaped_dot = 'The regex contains an unescaped "`.`"; in most cases, it should be "`\\.`"'
 
     if "number" not in blacklist_type:
         try:
@@ -337,13 +339,13 @@ def do_blacklist(blacklist_type, msg, force=False):
                 concretized_pattern, is_username=username, is_watchlist=is_watchlist, is_phone=is_phone)
 
             if reasons:
-                has_unquoted_dot = ", and " + has_unquoted_dot if has_unquoted_dot else ""
+                has_unescaped_dot = "; in addition, " + has_unescaped_dot.lower() if has_unescaped_dot else ""
                 raise CmdException(
                     "That pattern looks like it's already caught by " +
-                    format_blacklist_reasons(reasons) + has_unquoted_dot + append_force_to_do)
+                    format_blacklist_reasons(reasons) + has_unescaped_dot + append_force_to_do)
 
-        if has_unquoted_dot:
-            raise CmdException(has_unquoted_dot + append_force_to_do)
+        if has_unescaped_dot:
+            raise CmdException(has_unescaped_dot + append_force_to_do)
 
     metasmoke_down = False
 
