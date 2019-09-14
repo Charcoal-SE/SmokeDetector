@@ -13043,3 +13043,4 @@
 1568477595	Makyen	meritstep\.com
 1568477710	Makyen	pega[\W_]*+online[\W_]*+training
 1568497814	Makyen	tampungqq\.net
+1568497849	Makyen	(?-i:TtEN)(?#clk.ink)
