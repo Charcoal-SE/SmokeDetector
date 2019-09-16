@@ -13075,3 +13075,4 @@
 1568623732	Makyen	bennet(?!global\.com)[\W_]*+global
 1568623741	Makyen	anycarkeymade\.com
 1568623922	Makyen	pro[\W_]*+vita[\W_]*+keto
+1568623930	Makyen	total[\W_]*+burn[\W_]*+keto
