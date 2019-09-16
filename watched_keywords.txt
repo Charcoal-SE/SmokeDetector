@@ -13072,3 +13072,4 @@
 1568623557	Makyen	nulaslimavis\.wixsite\.com
 1568623566	Makyen	nulaslim-avis\.over-blog\.com
 1568623721	Makyen	bennetglobal\.com
+1568623732	Makyen	bennet(?!global\.com)[\W_]*+global
