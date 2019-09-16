@@ -13069,3 +13069,4 @@
 1568623385	Makyen	prasadvasu76(?:@gmail\.com)?
 1568623434	Makyen	">[^|<]{0,50}(?:(?:online|certification|training|course)[\W_]*+){2,}\s*[^|<]{0,50}(?:(?:online|certification|training|course)[\W_]*+){2,}\s*(?=a>)
 1568623490	Makyen	writecanvas\.in
+1568623557	Makyen	nulaslimavis\.wixsite\.com
