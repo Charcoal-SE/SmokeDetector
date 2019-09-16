@@ -10962,7 +10962,6 @@
 1562093782	Machavity	lb-total\.ru
 1562095869	Makyen	ketounlimited?
 1562095892	Makyen	youtube2video(?!\.com)
-1562095911	Makyen	/threads/670270
 1562095934	Makyen	latest\W*interior\W*design\W*trends
 1562095953	Makyen	fm\W*exhibition\W*tool\W*pack
 1562098000	Makyen	labdeck\.com
