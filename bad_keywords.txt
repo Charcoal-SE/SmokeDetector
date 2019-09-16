@@ -1253,7 +1253,7 @@ testogra
 gold\W?labs
 690616620
 brestrogen
-vixea(?:[\W_]*+(?:manplus|male|enhancement|israel|il|\d+|[\da-f]{4,}))*+
+vixea(?:[\W_]*+(?:man|plus|male|enhancement|israel|il|\d+|[\da-f]{4,}))*+
 anadrole
 nutriti?ous\W?health
 diet\W?keto
