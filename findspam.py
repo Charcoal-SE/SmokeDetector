@@ -1179,6 +1179,7 @@ def watched_ns_for_url_domain(s, site):
         'contabo.net.',
         'crazydomains.com.',
         'servers-servers.com.',
+        'ddos-guard.net.',
     ])
 
 
