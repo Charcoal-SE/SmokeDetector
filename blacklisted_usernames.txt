@@ -198,3 +198,4 @@ quickbooks
 (?-i:^jothikumaraaron$)
 (?-i:^manjuladevi$)
 (?-i:^ashagap$)
+(?-i:^oveiya$)
