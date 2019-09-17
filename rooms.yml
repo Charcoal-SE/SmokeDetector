@@ -142,6 +142,7 @@ stackexchange.com:
       - 11630962 # Maktest
       - 13563472 # Stormblessed
       - 14352942 # Daniil
+      - 785560   # Johannes Kuhn
 
   65945:  # Charcoal Test
     commands: true
