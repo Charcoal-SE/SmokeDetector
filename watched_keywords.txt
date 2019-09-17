@@ -12131,7 +12131,6 @@
 1565759006	Makyen	canon-europe\.com
 1565759332	Makyen	ijcanonsetup\.com
 1565759610	Makyen	ugp01.c-ij\.com
-1565759663	Makyen	ijstartcanon\.net
 1565763586	Shree	ufusoft\.com
 1565765904	Makyen	veloura[\W*_]*(?:anti[\W*_]*ageing[\W*_]*)?cream
 1565766673	Makyen	casino261(?!\.co\b)
