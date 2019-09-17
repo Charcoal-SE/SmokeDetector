@@ -6617,7 +6617,6 @@
 1542501100	NobodyNada	omniprofitcalculator\.com
 1542512795	Makyen	kicksonfire\.com
 1542521718	Shree	textparagraph\.tk
-1542524061	Shree	ij-startcanon\.com
 1542525636	Makyen	/AUTO_Techlife
 1542527157	Makyen	want\.page\.link
 1542561995	Makyen	i\.stack\.imgur\.com/JQCDj\.jpg
