@@ -1212,6 +1212,7 @@ def watched_ip_for_url_hostname(s, site):
             '139.59.83.45',     # fake-tech-support techjockey.com
             # AS 16509 AMAZON-02 - Amazon.com, Inc., US
             '52.66.203.156',    # uaetechnician.ae
+            '52.221.4.71',      # gangboard.com (also AS 38895??)
             # AS 16276 OVH, FR
             '158.69.166.236',   # braindumps4it.com
             # AS 19318 IS-AS-1 - Interserver, Inc, US
