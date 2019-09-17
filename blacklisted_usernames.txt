@@ -197,3 +197,4 @@ quickbooks
 (?-i:^Barkha Verma$)
 (?-i:^jothikumaraaron$)
 (?-i:^manjuladevi$)
+(?-i:^ashagap$)
