@@ -3111,3 +3111,4 @@ thesanofi\.com
 modelescortsindelhi\.com
 \b(?<!-)clk\.ink(?![.-])\b(?#links paid per click)
 penishealthlife\.net
+factsofhealth\.info
