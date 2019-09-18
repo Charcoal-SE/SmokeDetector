@@ -2543,7 +2543,7 @@
 1521496366	WELZ	sweet\W*16\W*(?:basketball)?
 1521498617	WELZ	pcsoftwarereview\.com
 1521523390	tripleee	asiavacuumpumps\.com
-1521524018	K.Dᴀᴠɪs	dad(?:dy)?.*(?:fricc|r8p)
+1521524018	K.Dᴀᴠɪs	dad(?:dy)?.{0,80}(?:fricc|r8p)
 1521529459	K.Dᴀᴠɪs	foxalert\.io
 1521558236	WELZ	stockmetrix\.net
 1521559327	WELZ	bitcoin\W?global\.?org
@@ -2969,7 +2969,7 @@
 1524416551	Zoe	simcitymodapk\.info
 1524416539	Zoe	dolphinemulatorapk\.info
 1524424812	WELZ	phone\W?scam\W?app
-1524424822	WELZ	.+1310489717
+1524424822	WELZ	id1310489717(?#URL path)
 1524451698	Tetsuya Yamamoto	tamsutre\.com
 1524462316	Makyen	phone-systems\.net\.au
 1524466693	tripleee	topnewshindi\.com
@@ -10198,7 +10198,7 @@
 1559082490	Erik the Outgolfer	Skunkdoctoe?r\d*(?:@gmail\.com)?
 1559083104	Makyen	(?-i:7rUAn\.jpg)
 1559083121	Makyen	(?-i:RfAuB\.jpg)
-1559087391	Makyen	(?:(?-i:D)SOM(?=.*\bmarketing\b)|(?:\bmarketing\b.*)(?-i:D)SOM)
+1559087391	Makyen	(?:(?-i:D)SOM\b.{0,120}\bmarketing|\bmarketing\b.{0,120}\b(?-i:D)SOM)
 1559087437	Makyen	indianhotdeal\.com
 1559095938	Machavity	^ECHO HAN$
 1559099820	Makyen	vampirelordcenter(?:@gmail\.com)?
@@ -10785,7 +10785,7 @@
 1561465620	Shree	almillat\.com
 1561466532	Machavity	jimajomu\.over-blog\.com
 1561470226	Machavity	answersfromtheuniverse\.com
-1561470396	Machavity	cloud.*\.blogspot\.com
+1561470396	Machavity	cloud[\w-]*+\.blogspot\.com
 1561476931	Makyen	questtrustcompany\.com
 1561476972	Makyen	kumar\W*urban\W*development
 1561476990	Makyen	kul\W*kumar\W*builders
@@ -11586,7 +11586,7 @@
 1564032577	Makyen	jimmypotts080(?:@gmail\.com)?
 1564035351	Shree	top10music\.ir
 1564036122	Makyen	zimtana\W*row
-1564037356	Shree	celebsoutfits.com
+1564037356	Shree	celebsoutfits\.com
 1564039678	Makyen	cellucor\W*super\W*hd
 1564041033	Makyen	sathishkvn\.tk
 1564041407	Makyen	buzrush\.com
@@ -11834,7 +11834,7 @@
 1564838475	Makyen	gameforatintheschool\.weebly\.com
 1564862062	tripleee	mayoreodedistribuidor\.com
 1564863833	Makyen	aalsham1@g\.emporia\.edu
-1564863926	Makyen	(?-i:LLcy9.png)
+1564863926	Makyen	(?-i:LLcy9\.png)
 1564863943	Makyen	techsupportalert\.com
 1564863965	Makyen	telegramgrouplink1\.blogspot\.com
 1564863984	Makyen	t\.me/joinchat/fuck2me
@@ -12128,7 +12128,7 @@
 1565758960	Makyen	ijcanon\.co\.uk
 1565759006	Makyen	canon-europe\.com
 1565759332	Makyen	ijcanonsetup\.com
-1565759610	Makyen	ugp01.c-ij\.com
+1565759610	Makyen	ugp01\.c-ij\.com
 1565763586	Shree	ufusoft\.com
 1565765904	Makyen	veloura[\W*_]*(?:anti[\W*_]*ageing[\W*_]*)?cream
 1565766673	Makyen	casino261(?!\.co\b)
@@ -12724,7 +12724,7 @@
 1567355763	Makyen	healthlinesplus\.com
 1567368755	double-beep	warrensinvestors(?:@gmail\.com)
 1567361419	Stormblessed	bitrush
-1567369817	Makyen	(?<=fiverr.com/)modern_writer
+1567369817	Makyen	(?<=fiverr\.com/)modern_writer
 1567372713	Makyen	scrabblewordfinder\.vip
 1567395005	Makyen	fastnewsfeed\.com
 1567395014	Makyen	grpsinternational\.com
@@ -12927,7 +12927,7 @@
 1568132873	double-beep	technoenhance\.com
 1568139043	Makyen	issuu\.com
 1568160314	Makyen	blogging-dunia\.blogspot\.com
-1568160326	Makyen	(?-i:mmbeV.jpg)
+1568160326	Makyen	(?-i:mmbeV\.jpg)
 1568160338	Makyen	rajapkvqq\.net
 1568160348	Makyen	pure[\W_]*+liave
 1568160357	Makyen	(?-i:0RCf3\.png)
