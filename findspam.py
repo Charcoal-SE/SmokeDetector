@@ -1264,6 +1264,8 @@ def watched_ip_for_url_hostname(s, site):
             '185.201.11.205',   # drugs www-cbdcapsules.com www-cbdoil.com etc
             # AS 55293 A2HOSTING - A2 Hosting, Inc., US
             '162.254.252.93',   # paper-writing etc appsocio doneessays etc
+            # AS 62282 RACKRAY UAB Rakrejus, LT
+            '195.181.242.11',   # printererrorrepair.com
             # AS 394695 PUBLIC-DOMAIN-REGISTRY - PDR, US
             '103.21.58.29',     # software-development infinigic / apporio.com
             '162.215.253.205',  # drugs escorts drozien.com nehasuri.in etc
