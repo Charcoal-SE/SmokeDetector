@@ -9822,7 +9822,6 @@
 1557590055	Makyen	cheapsslsecurity\.com
 1557590072	Makyen	iserveradmin\.com
 1557590084	Makyen	bestvpshostings\.com
-1557590097	Makyen	ignissta\.com
 1557590744	Makyen	cicghost\W*(?:at\W*)?protonmail\W*(?:dot\W*)?com
 1557632237	Makyen	cmhelpline\.in
 1557633130	Machavity	coinb\.(?:in|dev)
