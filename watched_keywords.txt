@@ -10553,7 +10553,6 @@
 1560579683	Makyen	strengthplans\.com
 1560578878	double-beep	linuxliner\.xyz
 1560582041	Makyen	poonchiu20(?:@(?:yahoo|outlook)\.com)?
-1560584826	Glorfindel	steelpurchase\.com
 1560586941	Makyen	wellnessnutratrials\.com
 1560609812	double-beep	mbbsgh\.com
 1560592417	double-beep	sharktankreview\.com
