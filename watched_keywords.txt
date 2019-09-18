@@ -13110,3 +13110,4 @@
 1568774196	Makyen	nba2king\.com
 1568774204	Makyen	supplementspeak\.com
 1568774349	Makyen	emylia[\W_]*+cream
+1568774987	Machavity	ketodietviews\.com
