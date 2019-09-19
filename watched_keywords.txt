@@ -13148,3 +13148,4 @@
 1568858380	Makyen	elite[\W_]*+male[\W_]*+performance
 1568858413	Makyen	jhorowitz33
 1568858422	Makyen	queanspedia\.xyz
+1568858433	Makyen	(?-i:dlUuw\.jpg)
