@@ -13147,3 +13147,4 @@
 1568858337	Makyen	(?-i:8gvBs_hPoys)
 1568858380	Makyen	elite[\W_]*+male[\W_]*+performance
 1568858413	Makyen	jhorowitz33
+1568858422	Makyen	queanspedia\.xyz
