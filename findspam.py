@@ -1121,6 +1121,7 @@ def watched_ns_for_url_domain(s, site):
         'namedc.com.',
         'wixdns.net.',
         'a2hosting.com.',
+        'md-19.webhostbox.net.',
         'md-in-20.webhostbox.net.',
         'md-in-51.webhostbox.net.',
         'cybercastco.com.',
