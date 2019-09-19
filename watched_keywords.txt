@@ -13150,3 +13150,4 @@
 1568858422	Makyen	queanspedia\.xyz
 1568858433	Makyen	(?-i:dlUuw\.jpg)
 1568858442	Makyen	(?-i:lmKSQ\.jpg)
+1568858452	Makyen	100%\s*(?:of\s*)?US\s*citizens\s*have\s*signed
