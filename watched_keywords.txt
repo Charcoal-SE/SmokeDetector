@@ -13158,3 +13158,4 @@
 1568874317	tripleee	xanax\W*addictions
 1568876519	tripleee	ko\W?beards?
 1568876636	Makyen	lacynash\.kinja\.com
+1568876657	Makyen	(?-i:sZlSc\.jpg)
