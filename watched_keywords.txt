@@ -13144,3 +13144,4 @@
 1568854616	Makyen	rima[\W_]*+residence(?!\.com(?<=rimaresidence\.com))
 1568858295	Makyen	sharktankdietreviews\.hatenablog\.com
 1568858328	Makyen	(?<=>)interior designers?</a>\W*
+1568858337	Makyen	(?-i:8gvBs_hPoys)
