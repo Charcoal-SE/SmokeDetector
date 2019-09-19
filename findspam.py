@@ -1185,6 +1185,7 @@ def watched_ns_for_url_domain(s, site):
         'ocpdns.com.',
         'wpxhosting.com.',
         'hostpapa.com.',
+        'zonode.com.',
     ])
 
 
