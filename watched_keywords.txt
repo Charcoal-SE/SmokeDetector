@@ -13142,3 +13142,4 @@
 1568854596	Makyen	alhajidan(@yahoo\.com)?
 1568854606	Makyen	mysore[\W_]*+one[\W_]*+day[\W_]*+trip(?!\.com(?<=mysoreonedaytrip\.com))
 1568854616	Makyen	rima[\W_]*+residence(?!\.com(?<=rimaresidence\.com))
+1568858295	Makyen	sharktankdietreviews\.hatenablog\.com
