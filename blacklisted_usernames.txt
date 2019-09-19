@@ -201,3 +201,4 @@ quickbooks
 (?-i:^oveiya$)
 (?-i:^siva sreedhar$)
 (?-i:^seanbrian channel$)
+(?-i:^sunnyaroraww$)
