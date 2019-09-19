@@ -13161,3 +13161,4 @@
 1568876657	Makyen	(?-i:sZlSc\.jpg)
 1568876692	Makyen	sharktankdietreview\.blogspot\.com
 1568876728	Makyen	sharktankdietreviews\.wordpress\.com
+1568876794	tripleee	Tapes\W*to\W*digital
