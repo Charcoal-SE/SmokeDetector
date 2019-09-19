@@ -1182,6 +1182,7 @@ def watched_ns_for_url_domain(s, site):
         'ddos-guard.net.',
         'vhostplatform.com.',
         'ocpdns.com.',
+        'wpxhosting.com.',
     ])
 
 
