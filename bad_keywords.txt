@@ -2057,3 +2057,4 @@ ultra[\W_]*+fast(?:[\W_]*+boost)?[\W_]*+keto(?:[\W_]*+(?:boost|review|world|care
 drjasonbitcoinminer(?:<\/?(?:strong|em)>)*(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?+(?:strong>|em>)*o[\W_]*+u[\W_]*+t[\W_]*+l[\W_]*+o[\W_]*+o[\W_]*+k(?:<\/?(?:strong|em)>)*[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?+c[\W_]*+o[\W_]*+m)?
 /threads/670270
 nulaslim(?!-avis\.over-blog\.com)(?!avis\.wixsite\.com)(?:[\W_]*+(?:avis|forum|france|fr|\d+|[\da-f]{4,}+)s?)*
+buy[\W_]*+xanax[\W_]*+online

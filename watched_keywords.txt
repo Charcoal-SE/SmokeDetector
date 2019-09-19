@@ -13114,7 +13114,6 @@
 1568786659	Makyen	simplienglish\.com
 1568786756	tripleee	cellutrak\.ca
 1568787190	Shree	xanaxaddictions\.jimdofree\.com
-1568787277	Makyen	buy[\W_]*+xanax[\W_]*+online
 1568788190	tripleee	airrichelieu\.com
 1568789138	Shree	mestainc\.net
 1568789378	Makyen	104\.248\.95\.148
