@@ -13171,3 +13171,4 @@
 1568918040	Makyen	double[\W_]*+x(?:[\W_]*+(?:enhancement|male))+
 1568918149	Makyen	ketotrinsouthafric\.wixsite\.com
 1568918158	Makyen	adderallmeds\.hatenablog\.com
+1568918170	Makyen	iron[\W_]*+core[\W_]*+edge(?:[\W_]*+(?:australia|nz|uk|enhancement|male|\d++|[\da-f]{4,}+))*
