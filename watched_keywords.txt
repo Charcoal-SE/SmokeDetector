@@ -13140,3 +13140,4 @@
 1568847961	Makyen	sinikartu\.com
 1568849558	Makyen	amadorislivia0(?:@gmail\.com)?
 1568854596	Makyen	alhajidan(@yahoo\.com)?
+1568854606	Makyen	mysore[\W_]*+one[\W_]*+day[\W_]*+trip(?!\.com(?<=mysoreonedaytrip\.com))
