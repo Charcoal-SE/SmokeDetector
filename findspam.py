@@ -1186,6 +1186,7 @@ def watched_ns_for_url_domain(s, site):
         'wpxhosting.com.',
         'hostpapa.com.',
         'zonode.com.',
+        'cabanova.net.',
     ])
 
 
