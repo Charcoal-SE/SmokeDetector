@@ -2060,3 +2060,4 @@ nulaslim(?!-avis\.over-blog\.com)(?!avis\.wixsite\.com)(?:[\W_]*+(?:avis|forum|f
 buy[\W_]*+xanax[\W_]*+online
 dynamic\W?fitter(?:\W?keto)?
 emylia\W?cream
+purple[\W_]*+clay[\W_]*+teapot\b.{0,40}?</a
