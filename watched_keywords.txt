@@ -13185,3 +13185,4 @@
 1568963930	Makyen	brother-customerservice\.com
 1568964795	Makyen	magicjack[\W_]*+help[\W_]*+line[\W_]*+number
 1568964805	Makyen	linuxteck\.com
+1568965063	Makyen	dienmaynewsun\.com
