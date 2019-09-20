@@ -28,7 +28,7 @@ def exit_mode(*args, code=0):
 
     with open("exit.txt", "w", encoding="utf-8") as f:
         print("\n".join(args), file=f)
-    log('debug', 'Exiting with args:' + ', '.join(args) or 'None')
+    log('debug', 'Exiting with args: {}'.format(', '.join(args) or 'None'))
     os._exit(code)
 
 
