@@ -4071,7 +4071,6 @@
 1530232671	Makyen	res\W?q\W?natural
 1530239501	Makyen	judbandarqonline\.blogspot\.com
 1530239509	Makyen	rankinghero\.com/en/members/31730/
-1530239516	Makyen	agen-sakong-bandarq-online\.over-blog\.com
 1530239526	Makyen	agenbandarsakong99\.wordpress\.com
 1530239531	Makyen	tanyakode\.lawatek\.com
 1530239538	Makyen	agenbandarsakong\.unblog\.fr
@@ -6103,7 +6102,6 @@
 1540001113	Makyen	/Custom-PVC-Patches(?#URL path fragment seen with gs-jj.com)
 1540005476	Tetsuya Yamamoto	ferek\.happy
 1540009816	Makyen	spadeshelp(?:@gmail\.com)?
-1540018482	Makyen	amazonhealthstorediet\.over-blog\.com
 1540018491	Makyen	9e3bf58e7db(?#medium.com post for amazonhealthstore.com)
 1540018499	Makyen	XXZwIlQ60FE(?#youtu.be video for amazonhealthstore.com)
 1540018510	Makyen	amazonhealthstorediet
@@ -8008,7 +8006,6 @@
 1549694898	Makyen	islamicquotess\.com
 1549694905	Makyen	funnyshortquotes\.com
 1549694911	Makyen	gillanidata\.com
-1549696703	Makyen	fitnessdiet2019\.over-blog\.com
 1549703149	Nisse Engström	howtounlockphonewithpattern\.com
 1549715113	Nisse Engström	seogroupbuy\.org
 1549716132	Nisse Engström	andaazfashion\.co\.uk
@@ -8596,7 +8593,6 @@
 1552571081	tripleee	besttechmag\.puzl\.com
 1552573069	tripleee	veelead\.com
 1552581092	double-beep	cubit-insurance\.co\.uk
-1552582062	double-beep	burnfat\.over-blog\.com
 1552582211	double-beep	bankstatementpdfedit\.com
 1552581258	double-beep	editingbankstatements\.com
 1552581433	double-beep	tawk\.to/chat/5b056f7bd0f6723da57ecd06
@@ -8844,7 +8840,6 @@
 1553585705	tripleee	atlant\W?gel
 1553587585	Glorfindel	Studio72
 1553588343	tripleee	aress\.support(?#promotional footer should be removed, maybe unwatch in a month or two)
-1553588618	tripleee	ketopuredietz\.over-blog\.com
 1553589031	Shree	ecommercewebsitedeveloper\.in
 1553590065	tripleee	green\W*vibe(?!\W*keto)
 1553591810	tripleee	newhdmovi\.com
@@ -8951,7 +8946,6 @@
 1554106253	double-beep	g1ant\.com
 1554108175	Makyen	mountfacenepal\.com
 1554115509	Glorfindel	butlermortgage\.ca
-1554116639	double-beep	lapura\.over-blog\.com
 1554117199	double-beep	fit2point\.com
 1554118935	Glorfindel	matchbanker\.mx
 1554109948	double-beep	verwall\.com
@@ -10128,7 +10122,6 @@
 1558735097	Olivia	strawhatmanga\.com
 1558772094	Makyen	nfjkwdkufjfw\.tumblr\.com
 1558772108	Makyen	zapworld\.in
-1558772128	Makyen	keto-buzz-pills\.over-blog\.com
 1558778382	double-beep	lazadasales\.com
 1558808066	Makyen	go-roku-com-hdcp\.com
 1558819186	Makyen	drewanherbalhome(?:@gmail\.com)?
@@ -10643,7 +10636,6 @@
 1560983116	Makyen	clipam\.ir
 1560983134	Makyen	(?-i:2XPs0sP)
 1560983153	Makyen	gmailsupportpedia\.com
-1560983173	Makyen	morsupplement\.over-blog\.com
 1560983191	Makyen	1325937127547077(?#URL path)
 1560985230	Machavity	scottloanhomeplc
 1560985292	Makyen	ttmdonation(?:@gmail\.com)?
@@ -10651,7 +10643,6 @@
 1561001294	Makyen	nexgenitsolutions\.in
 1561007786	tripleee	caprincekathuriaclasses\.com
 1561009968	Makyen	(?-i:q7jnoq)
-1561009987	Makyen	aristocratholdings\.over-blog\.com
 1561010026	Makyen	(?-i:qEKEuEFvc3A)
 1561010268	Makyen	allegiantairlinesreservations\.com
 1561011450	tripleee	brightcareermaker\.com
@@ -10731,7 +10722,6 @@
 1561357617	Makyen	awebcity\.com
 1561357638	Makyen	wattpad\.com(?!/docs/api)
 1561357658	Makyen	assignmenttigers\.co\.uk
-1561357704	Makyen	vital-keto-suisse\.over-blog\.com
 1561358461	Glorfindel	missionsecurity\.com
 1561359752	Makyen	(?-i:8lUG4VCQ2s4)
 1561359792	Makyen	pure\W*fit\W*keto\W*uk(?:\W*\d+)?
@@ -10780,7 +10770,6 @@
 1561465008	Machavity	jeromesdeli\.com
 1561465124	Machavity	xo-cdp\.com
 1561465620	Shree	almillat\.com
-1561466532	Machavity	jimajomu\.over-blog\.com
 1561470226	Machavity	answersfromtheuniverse\.com
 1561470396	Machavity	cloud[\w-]*+\.blogspot\.com
 1561476931	Makyen	questtrustcompany\.com
@@ -10976,7 +10965,6 @@
 1562165092	Makyen	keto\W*advance\W*france?
 1562165181	Makyen	gayakosoemailportalinfo
 1562165231	Makyen	nsdm\W*india(?!\.com(?<=nsdmindia\.com))
-1562165300	Makyen	stacnovina10(?=\.over-blog\.com)
 1562166234	Makyen	adrena\W*stack
 1562168414	Makyen	keto\W*enhanced\W*slim(?:\W*united\W*kingdom|\W*uk)?
 1562168459	Makyen	supercutketoweb
@@ -11422,16 +11410,13 @@
 1563601216	Makyen	benjonehackatmcard(?:@gmail\.com)?
 1563602277	Makyen	(?-i:Yihmh0aI_58)
 1563607070	Makyen	/@getrappl
-1563607097	Makyen	getrappeltepetrolgamescom\.over-blog\.com
 1563614354	Makyen	ketoviantesf\.blogspot\.com
 1563614389	Makyen	(?:\d+\W*)?garcinia[\W_]*vita(?!hollandandbarrett\.blogspot\.com(?<=garciniavitahollandandbarrett\.blogspot\.com))(?:[\W_]*(?:scam|review|uk|holand|and|barret+|\d+|[\da-f]{4,}))*
-1563614425	Makyen	purefitketopills\.over-blog\.com
 1563614514	Makyen	(?-i:c2P8-AycbcI)
 1563614541	Makyen	contactderujason30(?:@gmail\.com)?
 1563614566	Makyen	support@callvertise\.com
 1563614588	Makyen	support_72594
 1563614616	Makyen	callvertise\.com
-1563614689	Makyen	ketodietpillsz\.over-blog\.com
 1563614753	Makyen	wonder\W*full\W*keto(?:\W*\d+)?
 1563614808	Makyen	gardenaxis\.com
 1563614832	Makyen	atmmachine137(?:@gmail\.com)?
@@ -11623,7 +11608,6 @@
 1564184560	Makyen	ignousynopsis\.com
 1564184575	Makyen	loksetarrow
 1564184587	Makyen	cuadaiviet\.com
-1564184599	Makyen	gauvisimand25\.over-blog\.com
 1564188875	Makyen	uxurtaxi\.com
 1564188892	Makyen	searchmobilecomputing\.techtarget\.com
 1564188910	Makyen	unixsolutions\.in
@@ -11691,7 +11675,6 @@
 1564394719	Makyen	jasonrussell0
 1564394747	Makyen	ketogenic\W*anatomy(?:\W*(?:keto|\d+))*
 1564394779	Makyen	childpleeez\.com
-1564394955	Makyen	keto-bodytone-com\.over-blog\.com
 1564396960	tripleee	bsscommerce\.com
 1564402918	Glorfindel	embersnacks
 1564405639	tripleee	printersetup\.org
@@ -12024,9 +12007,7 @@
 1565420336	Makyen	ketopureorg\.tumblr\.com
 1565420346	Makyen	(?-i:8djpUVs3BiI)
 1565420354	Makyen	(?:(?:where[\W_]*to[\W_]*)?buy[\W_]*)?sure[\W_]*botanicals(?:[\W_]*(?:cbd|review|oil|\d+)s?)*
-1565420365	Makyen	ketopure-org\.over-blog\.com
 1565420422	Makyen	topcbdoilhub(?!\.over-blog\.com)(?!\.blogspot\.com)
-1565420450	Makyen	topcbdoilhub\.over-blog\.com
 1565420467	Makyen	modular[\W_]*wardrobe(?:[\W_]*(?:manufacturers|design))+
 1565420477	Makyen	helmesharow
 1565420660	Makyen	topcbdoilhub\.blogspot\.com
@@ -12048,7 +12029,6 @@
 1565488920	Makyen	leonard_70746
 1565488929	Makyen	356035802006970(?#facebook event)
 1565488954	Makyen	total[\W_]*fit(?:[\W_]*(?:keto|diet|\d+)s?)+
-1565488967	Makyen	allsupplementdiet\.over-blog\.com
 1565503452	Makyen	printer-hpdrivers\.com
 1565518497	Makyen	camprouytr
 1565518516	Makyen	(?-i:d4s92\.jpg)
@@ -12164,7 +12144,6 @@
 1565918413	Makyen	(?-i:pF1n1E_d2Yc)(?#YouTube)
 1565918433	Makyen	biogenx-official\.mystrikingly\.com
 1565918510	Makyen	biogenx(?!-official\.mystrikingly\.com)(?!-reviews\.mystrikingly\.com)(?!testobooste\.wixsite\.com)(?!-testosterone-booster-42\.webself\.net)(?:\W*(?:official|testo(?:sterone)?|boost(?:er?)?|review|new|\d+)s?)*
-1565918529	Makyen	fbisupplement\.over-blog\.com
 1565918726	Jeff Schaller	trukky\.com
 1565930582	Shree	columbiaasia\.com
 1565930812	Shree	columbiaasiahospital\d*(?:@gmail\.com)
@@ -12203,7 +12182,6 @@
 1566009278	Machavity	Instaeasy
 1566019352	Nisse Engström	howtomakedeliciousfood\.com
 1566020177	Nisse Engström	ajoyepower\.com
-1566020984	Makyen	ketoweightloss\.over-blog\.com
 1566021288	Makyen	sandrinechellymodelactress(?:\.info)?(?#without the \.info is error by spammer)
 1566031094	Makyen	garcinia[\W_]*slim[\W_]*2000
 1566031121	Makyen	408686049853976(?#facebook event)
@@ -12262,7 +12240,6 @@
 1566204840	Makyen	774627882956112(?#facebook event)
 1566204863	Makyen	bonygory
 1566204898	Makyen	iamakhilapriya
-1566204922	Makyen	supplementjesus\.over-blog\.com
 1566204951	Makyen	tone-keto-avis-67\.webself\.net
 1566207313	Makyen	confidentpedia\.com
 1566207338	Makyen	(?i:k82awuF9oAc88Tv0Syi85A)
@@ -12315,10 +12292,8 @@
 1566372725	double-beep	fireupchips\.org
 1566374272	Makyen	647832545713323(?#facebook event)
 1566374337	Makyen	keto-plus-el-salvador\.mystrikingly\.com
-1566374357	Makyen	francesupplement\.over-blog\.com
 1566374378	Makyen	keto-plus-el-salvador-82\.webself\.net
 1566374432	Makyen	2427064214285906(?#facebook event)
-1566374478	Makyen	supplementstore\.over-blog\.com
 1566374637	Makyen	keto-vatru-official\.mystrikingly\.com
 1566374656	Makyen	keto-vatru-44\.webself\.net
 1566374679	Makyen	sisiziiz
@@ -12361,7 +12336,6 @@
 1566462259	Shree	boximost\.com
 1566462357	double-beep	hiro-official-site\.com
 1566462386	double-beep	innoraft\.com
-1566463802	Makyen	rookamaxko\.over-blog\.com
 1566465595	double-beep	recover-transfer-data\.com
 1566465616	double-beep	rippleelectrical\.co\.nz
 1566466037	double-beep	cyberflix\.fun
@@ -12381,7 +12355,6 @@
 1566486561	Makyen	viftech\.com
 1566487175	Makyen	buinolahapp
 1566487580	Makyen	trialketobodytone\.blogspot\.com
-1566487622	Makyen	keto-bodytone-review\.over-blog\.com
 1566487658	Makyen	trialketobodytone\.mystrikingly\.com
 1566487716	Makyen	trialketobodytone\.hatenablog\.com
 1566489336	Makyen	iepm\.ir
@@ -12453,7 +12426,6 @@
 1566663616	Makyen	keto-vatru-south-africa-90\.webself\.net
 1566663617	Makyen	ketovatrusouthafri\.wixsite\.com
 1566663618	Makyen	ketovatru-south-africa\.mystrikingly\.com
-1566663619	Makyen	supplementtree\.over-blog\.com
 1566663620	Makyen	ultra-fast-keto-boost-official-store\.mystrikingly\.com
 1566663621	Makyen	ultra-fast-keto-boost-46\.webself\.net
 1566663622	Makyen	alpha-testo-boost-47\.webself\.net
@@ -12860,7 +12832,6 @@
 1567861142	Makyen	(?-i:x7ke9bp)
 1567861150	Makyen	(?-i:7QmUG32Zrjk)
 1567861259	Makyen	pcasta\.com
-1567861285	Makyen	supplementsworld\.over-blog\.com
 1567865052	Makyen	yesxenmagme\.tumblr\.com
 1567885092	Makyen	(?<=fiverr\.com/)shuvonill
 1567886772	Makyen	infobazaar\.000webhostapp\.com
@@ -12983,7 +12954,6 @@
 1568380943	Makyen	muscle\.poetry\.blog
 1568380952	Makyen	blog\.hatena\.ne\.jp
 1568380963	Makyen	flooringfitness(?!\.com)
-1568381009	Makyen	ketofit-czechia\.over-blog\.com
 1568381026	Makyen	ketofitrecenze\.wixsite\.com
 1568381057	Makyen	smithjenny\.blogspot\.com
 1568381129	Makyen	jennysmith\.hatenablog\.com(?#URL path)
@@ -13015,10 +12985,8 @@
 1568477252	Makyen	arihantwebtech\.com
 1568477261	Makyen	freeboxtemplates\.co\.uk
 1568477296	Makyen	vixeamanplusil\.wixsite\.com
-1568477306	Makyen	vixea-manplus-israel\.over-blog\.com
 1568477372	Makyen	blood[\W_]*+sugar[\W_]*+ultra(?:[\W_]*+(?:canada|ca|\d+|[\da-f]{4,}))*
 1568477385	Makyen	just[\W_]*+keto[\W_]*+diet(?:[\W_]*+(?:review|\d+|[\da-f]{4,})s?)*
-1568477394	Makyen	dietforhealth\.over-blog\.com
 1568477501	Makyen	regime[\W_]*+keto(?:[\W_]*+(?:avis|\d+|[\da-f]{4,}))*
 1568477535	Makyen	dietary[\W_]*+nature(?:[\W_]*+(?:keto|supplement|\d+|[\da-f]{4,})s?)+
 1568477552	Makyen	(?-i:2kh5Scm)
@@ -13057,7 +13025,6 @@
 1568623434	Makyen	">[^|<]{0,50}(?:(?:online|certification|training|course)[\W_]*+){2,}\s*[^|<]{0,50}(?:(?:online|certification|training|course)[\W_]*+){2,}\s*(?=a>)
 1568623490	Makyen	writecanvas\.in
 1568623557	Makyen	nulaslimavis\.wixsite\.com
-1568623566	Makyen	nulaslim-avis\.over-blog\.com
 1568623721	Makyen	bennetglobal\.com
 1568623732	Makyen	bennet(?!global\.com)[\W_]*+global
 1568623741	Makyen	anycarkeymade\.com
@@ -13169,7 +13136,6 @@
 1568918149	Makyen	ketotrinsouthafric\.wixsite\.com
 1568918158	Makyen	adderallmeds\.hatenablog\.com
 1568918170	Makyen	iron[\W_]*+core[\W_]*+edge(?:[\W_]*+(?:australia|nz|uk|enhancement|male|\d++|[\da-f]{4,}+))*
-1568918227	Makyen	ketotrin-south-africa\.over-blog\.com
 1568925098	Makyen	homemart\.co\.nz
 1568925663	Makyen	1a810bf505(?#fiverr.com)
 1568942765	Makyen	shirtpatches\.com

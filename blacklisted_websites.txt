@@ -2557,7 +2557,6 @@ airlinesreservation\.org
 gocash7\.com
 ncyclopedia\.in
 visiblefactors\.com
-supplement4world\.over-blog\.com
 supplementsleader\.com
 addwish\.com
 airlinesphonenumbers\.org
@@ -2597,7 +2596,6 @@ loufida\.com(?#additional examples of this domain as spam provided by Samuel Lie
 socialprachar\.com
 visitworldnutrition\.com
 usa4supplement\W?com
-fitnesshub\.over-blog\.com
 vapedubaimall\.com
 products4reviews\.com
 youtube2video\.com
@@ -2627,7 +2625,6 @@ customer-care-tollfree\.com
 lukaynakliyat\.com
 moneyonlineinvestment\.com
 careerjobs360\.in
-mumybear\.over-blog\.com
 supplement2trend\.com
 \b(?<!-)ello\.co(?![.-])\b
 ttlink\.com
@@ -2680,7 +2677,6 @@ purefitketopills\.com
 dougopdesim\.blogspot
 \b(?<!-)strikingly\.com(?![.-])\b
 appleinfoway\.com
-freecouponcode\.over-blog\.com
 daftarbolasport\.com
 bolamnc\.com
 kosttilskuddanmark\.dk
@@ -2694,8 +2690,6 @@ wellness2buy\.com
 bitcoincorewallet\.org
 ethereumandmistwallet\.org
 jagrankiparty\.co\.in
-dont-payfull\.over-blog\.com
-jesussupplement\.over-blog\.com
 healthcarepill\.com
 fitnessway\.org
 clixsense\.com
@@ -2706,7 +2700,6 @@ apporio\.com
 10-0-0-0-1-ip\.com
 10-0-0-0-1\.org
 nortonsetup-key\.com
-supplementpolice\.over-blog\.com
 hptechnicalsupport247\.com
 rapidtonesharktank\.com
 pureipos\.com
@@ -3009,7 +3002,6 @@ certstalk\.com
 ketoviante\.info
 jbspends\.com
 ketopointsupplements\.com
-supplementscity\.over-blog\.com
 time2trends\.com
 support-help2web\.com
 helpfindevan\.com
@@ -3056,7 +3048,6 @@ techserviceus\.com
 ketohour\.com
 marketresearchfuture\.com
 nutrifitsupplements\.com
-aliensupplement\.over-blog\.com
 emailsaccountrecovery\.com
 paper\.li
 medicfitonline\.store
