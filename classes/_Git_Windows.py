@@ -35,9 +35,9 @@ def _call_process(execcmd, _ok_code=None, return_data=True, return_tuple=False):
 
 class Git(object):
     # git
-    def __init__(self, *args):
+    def __init__(self, *args, **kwargs):
         if len(args) > 0:
-            _call_process(args)
+            return _call_process(args, **kwargs)
 
     def __getattribute__(self, name):
         def interceptor(*args, **kwargs):
@@ -53,13 +53,13 @@ class Git(object):
     # git
     @staticmethod
     def __call__(*args, **kwargs):
-        _call_process(args, **kwargs)
+        return _call_process(args, **kwargs)
 
     # remote.update
     class remote:  # noqa: N801
         @staticmethod
         def update(*args, **kwargs):
-            _call_process(('remote', 'update',) + args, **kwargs)
+            return _call_process(('remote', 'update',) + args, **kwargs)
 
     # status with colours stripped
     @staticmethod
