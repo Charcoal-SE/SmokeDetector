@@ -202,3 +202,4 @@ quickbooks
 (?-i:^siva sreedhar$)
 (?-i:^seanbrian channel$)
 (?-i:^sunnyaroraww$)
+(?-i:^Anna Justin$)
