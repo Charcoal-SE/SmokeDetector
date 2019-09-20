@@ -22,10 +22,16 @@ else:
 PY_EXECUTABLE = sys.executable
 
 # Log to errorlog.txt so that !!/errorlogs shows us restarts
+logging_format_string = '%(asctime)s:%(levelname)s:%(message)s'
 logging.basicConfig(
     filename='errorlog.txt',
     level=logging.INFO,
-    format='%(asctime)s:%(levelname)s:%(message)s')
+    format=logging_format_string)
+# Also log to the console, so SD runners can look at consolidated output in the console.
+console_logger = logging.StreamHandler()
+console_logger.setLevel(logging.DEBUG)
+console_logger.setFormatter(logging.Formatter(logging_format_string))
+logging.getLogger().addHandler(console_logger)
 
 options = {"standby", "charcoal-hq-only", "no-chat", "no-git-user-check"}
 persistent_arguments = sys.argv
