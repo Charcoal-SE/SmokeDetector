@@ -13179,3 +13179,4 @@
 1569043257	Makyen	^dragonnaturally naturally$
 1569043460	Makyen	bandox[\W_]*+extreme
 1569049653	Nisse Engström	technofinite\.com
+1569069732	Nisse Engström	etilalkolsiparis\.com
