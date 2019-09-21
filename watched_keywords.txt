@@ -13184,3 +13184,4 @@
 1569084634	Makyen	\d{2,}+[\W_]*+hour[^s].{0,80}?\b(?:on|with)\b.{0,80}?(?:laptop|computer)\w*
 1569093882	Makyen	mahoganylendinggroup(?:@gmail\.com)?
 1569095906	Makyen	flow[\W_]*+fusion(?:[\W_]*+(?:enhancement|male|pills|\d++|[\da-f]{4,}+))*
+1569095914	Makyen	ultra[\W_]*+fast[\W_]*+boost
