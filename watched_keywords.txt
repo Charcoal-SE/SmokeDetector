@@ -13180,3 +13180,4 @@
 1569043460	Makyen	bandox[\W_]*+extreme
 1569049653	Nisse Engström	technofinite\.com
 1569069732	Nisse Engström	etilalkolsiparis\.com
+1569082183	Makyen	johnmbailey(?:@teleworm\.usally)?
