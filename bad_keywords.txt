@@ -2059,6 +2059,6 @@ drjasonbitcoinminer(?:<\/?(?:strong|em)>)*(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?+(?:str
 nulaslim(?!-avis\.over-blog\.com)(?!avis\.wixsite\.com)(?:[\W_]*+(?:avis|forum|france|fr|\d+|[\da-f]{4,}+)s?)*
 buy[\W_]*+xanax[\W_]*+online
 dynamic\W?fitter(?:\W?keto)?
-emylia[\W_]*+cream
+emylia[\W_]*+cream(?:[\W_]*+(?:australia|review|\d++|[\da-f]{4,}+)s?)*
 purple[\W_]*+clay[\W_]*+teapot\b.{0,40}?</a
 beligra
