@@ -2040,7 +2040,7 @@ CBD[\W_]*+gum
 aborsi
 cytotec
 platinum[\W_]*+fit(?:[\W_]*+(?:keto|review|diet|new|\d++|[\da-f]{4,}+)s?)*
-velofel
+velofel(?:[\W_]*+(?:south|africa|price|nz|new|zealand|si|paris|netherlands|turkey|\d+|[\da-f]{4,}))*
 nutrigen(?:[\W_]*+(?:diet(?:ary)?|forskolin|loose|weight|with(?:out)?|\d++|[\da-f]{4,}+)s?)*
 testo[\W_]*+genix(?:[\W_]*+(?:xl|muscle|\d++)s?)*
 95[\W_]*+bucks[\W_]*+every[\W_]*+hour
