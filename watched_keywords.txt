@@ -13189,3 +13189,4 @@
 1569096016	Makyen	/@jaqlinesmith
 1569096102	Makyen	emyliacreamreviews\.blogspot\.com
 1569096483	Makyen	cartransportgurgaon\.in
+1569096493	Makyen	jmc(?:[\W_]*+(?:freight|car|transport))+
