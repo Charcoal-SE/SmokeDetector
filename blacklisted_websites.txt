@@ -2962,7 +2962,7 @@ krygen-xl-33\.webself\.net
 t\.me/Libra_info
 jmcargoindia\.com
 wuschools\.com
-atozfitnesstalks\.com
+atozfitnesstalks[\W_]*+com
 help54\.com
 treadwellalaska2014\.com
 practicegigs\.com
