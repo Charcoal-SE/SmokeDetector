@@ -13185,3 +13185,4 @@
 1569093882	Makyen	mahoganylendinggroup(?:@gmail\.com)?
 1569095906	Makyen	flow[\W_]*+fusion(?:[\W_]*+(?:enhancement|male|pills|\d++|[\da-f]{4,}+))*
 1569095914	Makyen	ultra[\W_]*+fast[\W_]*+boost
+1569095922	Makyen	myfitnesspharmclub\.blogspot\.com
