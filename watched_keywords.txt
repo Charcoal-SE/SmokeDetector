@@ -13181,3 +13181,4 @@
 1569049653	Nisse Engström	technofinite\.com
 1569069732	Nisse Engström	etilalkolsiparis\.com
 1569082183	Makyen	johnmbailey(?:@teleworm\.usally)?
+1569084634	Makyen	\d{2,}+[\W_]*+hour[^s].{0,80}?\b(?:on|with)\b.{0,80}?(?:laptop|computer)\w*
