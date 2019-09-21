@@ -13177,3 +13177,4 @@
 1569042345	Makyen	brother-printer-offline\.com
 1569043087	Makyen	hp-printer-offline\.com
 1569043257	Makyen	^dragonnaturally naturally$
+1569043460	Makyen	bandox[\W_]*+extreme
