@@ -1141,8 +1141,9 @@ def test(content, alias_used="test"):
     return result
 
 
-def bisect_regex(s, regexes):
-    compiled = regex.compile(r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))".format("|".join([r for r, i in regexes])),
+def bisect_regex(s, regexes, bookend=True):
+    regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)({})"
+    compiled = regex.compile(regex_to_format.format("|".join([r for r, i in regexes])),
                              city=findspam.city_list)
     match = compiled.search(s)
     if not match:
@@ -1152,22 +1153,25 @@ def bisect_regex(s, regexes):
 
     mid_len = (len(regexes) - 1).bit_length() - 1
     mid = 2 ** mid_len
-    return bisect_regex(s, regexes[:mid]) + bisect_regex(s, regexes[mid:])
+    return bisect_regex(s, regexes[:mid], bookend=bookend) + bisect_regex(s, regexes[mid:], bookend=bookend)
 
 
 @command(str, privileged=True, whole_msg=True, aliases=['what'])
 def bisect(msg, s):
+    bookended_regexes = []
+    non_bookended_regexes = []
     regexes = []
-    regexes.extend(Blacklist(Blacklist.USERNAMES).each(True))
-    regexes.extend(Blacklist(Blacklist.WEBSITES).each(True))
-    regexes.extend(Blacklist(Blacklist.KEYWORDS).each(True))
-    regexes.extend(Blacklist(Blacklist.WATCHED_KEYWORDS).each(True))
+    non_bookended_regexes.extend(Blacklist(Blacklist.USERNAMES).each(True))
+    non_bookended_regexes.extend(Blacklist(Blacklist.WEBSITES).each(True))
+    bookended_regexes.extend(Blacklist(Blacklist.KEYWORDS).each(True))
+    bookended_regexes.extend(Blacklist(Blacklist.WATCHED_KEYWORDS).each(True))
 
     try:
         s = rebuild_str(msg.content_source.split(" ", 1)[1])
     except AttributeError:
         pass
-    matching = bisect_regex(s, regexes)
+    matching = bisect_regex(s, bookended_regexes, bookend=True)
+    matching.extend(bisect_regex(s, non_bookended_regexes, bookend=False))
 
     if not matching:
         return "{!r} is not caught by a blacklist or watchlist item.".format(s)
