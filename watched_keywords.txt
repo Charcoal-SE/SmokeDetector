@@ -13178,3 +13178,4 @@
 1569043087	Makyen	hp-printer-offline\.com
 1569043257	Makyen	^dragonnaturally naturally$
 1569043460	Makyen	bandox[\W_]*+extreme
+1569049653	Nisse Engström	technofinite\.com
