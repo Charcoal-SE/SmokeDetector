@@ -13236,4 +13236,3 @@
 1569252398	Makyen	(?:online.{0,40}pelicula|peliculas.{0,40}online)
 1569252460	Makyen	mannyedk(?:[\W_]*+(?:at[\W_]*+)?+gmail(?:[\W_]*+(?:dot[\W_]*+)?+com)?)?
 1569259877	Machavity	dorfidreader\.com
-1569266817	Machavity	civicuk\.com
