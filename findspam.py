@@ -1253,6 +1253,7 @@ def watched_ip_for_url_hostname(s, site):
             '107.180.40.103',   # drugs + seo getbestdelight / seotipandsolution
             '107.180.41.149',   # technoblink.com
             '107.180.47.58',    # drugs + travel
+            '148.72.198.100',   # sushkom.com
             '148.72.211.163',   # hostingride.in
             '160.153.90.166',   # shoviv.com
             '160.153.92.5',     # uaetechnician.com
