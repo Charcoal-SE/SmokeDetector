@@ -12965,7 +12965,6 @@
 1568429118	Makyen	thinksisu\.org
 1568430413	Makyen	drugsorderonline\.net
 1568430421	Makyen	(?-i:ch8l8\.jpg)
-1568436291	Makyen	wellnessoffersdeal\.com
 1568437038	Makyen	wildjuicery\.com
 1568437048	Makyen	veluxton(?:[\W_]*+(?:booster|testo(?:sterone)?|pill|\d++)s?)*
 1568440308	Makyen	drjyoticlinic\.com
