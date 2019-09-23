@@ -13216,3 +13216,4 @@
 1569207334	Makyen	3celectrons\.com
 1569208429	Makyen	vladtech83(?:[\W_]*+(?:at[\W_]*+)?+gmail[\W_]*+(?:dot[\W_]*+)?+com)?
 1569212310	Makyen	ceilpower\.com\.au
+1569213168	Makyen	findoutadoctor\.com
