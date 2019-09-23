@@ -13233,3 +13233,4 @@
 1569252325	Makyen	derma[\W_]*+vi[\W_]*+cream
 1569252350	Makyen	blogabet(?:[\W_]*+(?:dot[\W_]*+)?+com)?
 1569252363	Makyen	(?:new[\W_]*+(?:dot[\W_]*+)?)?bettingexpert(?:[\W_]*+(?:dot[\W_]*+)?+com)?
+1569252380	Makyen	spdycoding\.com
