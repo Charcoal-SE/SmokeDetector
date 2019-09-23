@@ -12630,7 +12630,6 @@
 1567244765	Makyen	arihantcapital\.com
 1567244942	Makyen	(?:(?:beauty|glamour|fashion|product|skin|jewelry)[\W_]*+retouch(?:ing)?[\W_]*+){3,}
 1567244953	Makyen	trubodxketo\.wordpress\.com
-1567244985	Makyen	viga[\W_]*+plus(?:[\W_]*+(?:france|\d++))*+
 1567245012	Makyen	supplementcrunch\.com
 1567245025	Makyen	ally[\W_]*+natural(?:[\W_]*+(?:oil|cbd|\d++))*+
 1567245043	Makyen	trubodx(?!keto\.wordpress\.com)(?:[\W_]*+(?:keto|\d++))*+
