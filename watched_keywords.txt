@@ -12664,7 +12664,6 @@
 1567265887	Machavity	latestdigitalthings\.com
 1567266897	Machavity	moneypug\.co\.uk
 1567267566	Machavity	guitaranswerguy\.com
-1567269008	Machavity	fontvilla\.com
 1567269028	Machavity	onlinejobs\.ph
 1567274285	Makyen	ieltscheckup(?:@yahoo\.com)
 1567274295	Makyen	ieltsverification(?:@outlook\.com)
