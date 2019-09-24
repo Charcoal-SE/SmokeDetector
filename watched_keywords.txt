@@ -13252,5 +13252,4 @@
 1569327187	tripleee	contact-customer-service\.co
 1569328897	Machavity	servicenm@hotmail\.com
 1569335214	JoErNanO	airportmohali\.com
-1569341537	Makyen	psychic[\W_]*+anastasia
 1569341579	Makyen	psychicanastasia\.net
