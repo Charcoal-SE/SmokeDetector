@@ -13239,3 +13239,4 @@
 1569272254	Makyen	geotech\.com\.pk
 1569272282	Makyen	priest[\W_]*+udene
 1569272786	Makyen	priestudene555(?:@gmail\.com)?
+1569298508	Makyen	loansharkinginvestment(?:@gmail\.com)?
