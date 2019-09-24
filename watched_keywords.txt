@@ -13254,3 +13254,4 @@
 1569341579	Makyen	psychicanastasia\.net
 1569341623	Makyen	psychic[\W_]*+anastasia(?!\.net(?<=psychicanastasia\.net))
 1569344839	Makyen	naturalnhealthy\.com
+1569352846	Machavity	caphefin\.com
