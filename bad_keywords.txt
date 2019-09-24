@@ -2067,3 +2067,4 @@ viga[\W_]*+plus(?:[\W_]*+(?:france|\d++))*+
 keto\W*regime
 vasa[\W_]*+max
 bandox[\W_]*+extreme
+flow[\W_]*+fusion(?:[\W_]*+(?:male(?:[\W_]*+enhancement)?|enhancement|pills|\d++|[\da-f]{4,}+))*
