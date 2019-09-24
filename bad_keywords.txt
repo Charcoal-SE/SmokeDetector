@@ -2065,3 +2065,4 @@ beligra
 willianloanfirm\d+(?:@gmail\.com)?(?#willianloanfirm6 seen)
 viga[\W_]*+plus(?:[\W_]*+(?:france|\d++))*+
 keto\W*regime
+vasa[\W_]*+max
