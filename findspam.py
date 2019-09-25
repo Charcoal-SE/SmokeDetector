@@ -2031,7 +2031,7 @@ create_rule("bad keyword in {}",
             r"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|"
             r"kisn)\b)(?=.*?care).*products?\b|(?=.*?packer).*mover|(online|certification).*?training|"
             r"\bvs\b.*\b(live|vivo)\b|(?<!can |uld )\bwe offer\b|payday loan|смотреть.*онлайн|"
-            r"watch\b.{0,50}(online|episode|free)|episode.{0,50}\bsub\b",
+            r"watch\b.{0,50}(online|episode|free\b)|episode.{0,50}\bsub\b",
             title=True, body=False, username=True)
 # Car insurance spammers (username only)
 create_rule("bad keyword in {}", r"car\Win",
