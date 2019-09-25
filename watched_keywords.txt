@@ -13276,3 +13276,4 @@
 1569410931	Shree	darkhorsell\.com
 1569410972	Shree	bhbujjwalsaini\.com
 1569414310	tripleee	ripenapps\.com
+1569415373	tripleee	\W*copy\W?this\W?website\W*
