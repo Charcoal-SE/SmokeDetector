@@ -3133,4 +3133,4 @@ alertpills\.com
 today22\.com
 easeus\.com
 careerdose\.com
-e­a­r­n­7­4­\.c­o­m\W*
+e[\W_]*+a[\W_]*+r[\W_]*+n[\W_]*+7[\W_]*+4[\W_]*+c[\W_]*+o[\W_]*+m(?#obfuscated earn74.com)
