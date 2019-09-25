@@ -1035,7 +1035,7 @@ def bad_ns_for_url_domain(s, site):
         'dnsdomen.com.',
         'letter.org.in.',
         'utecho.com.',
-
+        'siteground.asia.',
     ])
 
 
@@ -1137,8 +1137,7 @@ def watched_ns_for_url_domain(s, site):
         'orangewebsite.com.',
         'omnilinks.net.',
         'servconfig.com.',
-        'siteground.biz.',
-        'siteground.asia.',
+        'siteground.biz.',  # unlike siteground.asia, this gets significant FPs
         'cetpainfotech.com.',
         'sttdns.com.',
         'hover.com.',
