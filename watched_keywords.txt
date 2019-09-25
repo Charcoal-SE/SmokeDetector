@@ -13279,3 +13279,4 @@
 1569415373	tripleee	\W*copy\W?this\W?website\W*
 1569416647	tripleee	simply-contact\.com
 1569423061	Kulfy	fakazamusic\.co
+1569425504	Makyen	windowshades\.net
