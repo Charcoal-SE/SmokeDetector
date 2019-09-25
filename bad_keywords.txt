@@ -1409,7 +1409,7 @@ keto\W?x
 rvxadryl
 vita\W*trim
 natural\W?keto
-hackmarvel4(?:@gmail.com)?
+hackmarvel4(?:[\W_]*+(?:at[\W_]*+)?+gmail(?:[\W_]*+(?:dot[\W_]*+)?+com)?)?
 keto\W?blast
 keto\W?thermo\W?diet
 qnc\W?jelly\W?gamat
