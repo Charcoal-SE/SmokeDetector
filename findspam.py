@@ -1245,6 +1245,7 @@ def watched_ip_for_url_hostname(s, site):
             '198.54.116.71',    # drugs + fake-tech-support guidemenutrition etc
             '198.54.116.85',    # drugs mummydiet.org
             '198.54.116.110',   # drugs unitedstatesupplement usa4supplement etc
+            '198.54.126.94',    # drugs letsfindtoday healthlione etc
             '198.54.126.109',   # escorts + buy-likes
             '198.187.31.245',   # drugs ketohour ketopromos healthperfect etc
             # AS 23352 SERVERCENTRAL - Server Central Network, US
