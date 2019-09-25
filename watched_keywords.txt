@@ -13268,3 +13268,4 @@
 1569401967	Shree	electrical-technology\.com
 1569402004	Makyen	illuminatimembershipcentre(?:@gmail\.com)?
 1569402779	Makyen	letsrun\.com
+1569403776	Shree	schoolplanetgist\.com
