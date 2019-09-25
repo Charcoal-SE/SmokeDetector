@@ -408,10 +408,12 @@ class GitManager:
     @staticmethod
     def sync_remote():
         try:
-            if GlobalVars.on_branch != "deploy":
-                git.checkout("deploy")
+            git.fetch('--force')
+            git.checkout('master', '--force')
+            git.branch('--create-reflog', '-f', 'deploy', '-t', 'origin/deploy')
+            git.checkout('deploy', '--force')
             git.branch('--create-reflog', '-f', 'master', '-t', 'origin/master')
-            return True, "Synced to origin/master. You'll probably want to !!/reboot now."
+            return True, "Synced to origin/master and origin/deploy. You'll probably want to !!/reboot now."
         except Exception as e:
             return False, str(e)
 
