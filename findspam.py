@@ -1190,6 +1190,7 @@ def watched_ns_for_url_domain(s, site):
         'cabanova.net.',
         'server.plus.',
         'fcomet.com.',
+        'securehostdns.com.',
     ])
 
 
