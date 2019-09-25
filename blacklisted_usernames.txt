@@ -203,3 +203,4 @@ quickbooks
 (?-i:^seanbrian channel$)
 (?-i:^sunnyaroraww$)
 (?-i:^Anna Justin$)
+I'm smart lol
