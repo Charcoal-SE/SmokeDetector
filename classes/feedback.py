@@ -1,11 +1,12 @@
 # coding=utf-8
+# import requirements
 import itertools
 import regex
 
 from tasks import Tasks
 import metasmoke
 
-
+# Define feedback function
 class Feedback:
     TRUE_POSITIVE = "tp"
     FALSE_POSITIVE = "fp"
@@ -24,7 +25,8 @@ class Feedback:
     def send_custom(type, url, msg):
         Tasks.do(metasmoke.Metasmoke.send_feedback_for_post, url, type, msg.owner.name, msg.owner.id, msg._client.host)
 
-
+#correct feedbacks
+        
 TRUE_FEEDBACKS = {
     "true": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=False),
     "tp": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=False),
@@ -43,6 +45,8 @@ TRUE_FEEDBACKS = {
     "vand": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=True),
     "vandalism": Feedback(Feedback.TRUE_POSITIVE, blacklist=False, always_silent=False)
 }
+
+# Incorrect feedbacks
 
 FALSE_FEEDBACKS = {
     "false": Feedback(Feedback.FALSE_POSITIVE, blacklist=False, always_silent=False),
