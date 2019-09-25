@@ -2066,6 +2066,6 @@ willianloanfirm\d+(?:@gmail\.com)?(?#willianloanfirm6 seen)
 viga[\W_]*+plus(?:[\W_]*+(?:france|\d++))*+
 keto\W*regime
 vasa[\W_]*+max
-bandox(?:[\W_]*+(?:extreme|male(?:[\W_*+enhancement)?))?
+bandox(?:[\W_]*+(?:extreme|male|enhancement))*
 flow[\W_]*+fusion(?:[\W_]*+(?:male(?:[\W_]*+enhancement)?|enhancement|pills|\d++|[\da-f]{4,}+))*
 leptitox
