@@ -3134,3 +3134,4 @@ today22\.com
 easeus\.com
 careerdose\.com
 e[\W_]*+a[\W_]*+r[\W_]*+n[\W_]*+7[\W_]*+4[\W_]*+c[\W_]*+o[\W_]*+m(?#obfuscated earn74.com)
+\bhackmarvel4\b(?#abuse the website blacklist to get more detections/weight on a persistent spammer)
