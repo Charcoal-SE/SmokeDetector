@@ -13294,3 +13294,4 @@
 1569474813	tripleee	42gears\.com
 1569475710	Makyen	(?-i:UFkGr\.jpg)
 1569477531	Makyen	(?-i:JVQs5\.jpg)
+1569482468	tripleee	free\W*(?:\w+\W+)?gift\W*card
