@@ -2071,3 +2071,4 @@ flow[\W_]*+fusion(?:[\W_]*+(?:male(?:[\W_]*+enhancement)?|enhancement|pills|\d++
 leptitox
 bionatrol
 veluxton(?:[\W_]*+(?:booster|testo(?:sterone)?|pill|\d++)s?)*
+halo\W?hair
