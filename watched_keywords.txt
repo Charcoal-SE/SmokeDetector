@@ -13296,3 +13296,4 @@
 1569482468	tripleee	free\W*(?:\w+\W+)?gift\W*card
 1569483513	tripleee	aurumwellness\.in
 1569484355	tripleee	gummies
+1569489188	tripleee	whitespiderpdx\.com
