@@ -13295,3 +13295,4 @@
 1569477531	Makyen	(?-i:JVQs5\.jpg)
 1569482468	tripleee	free\W*(?:\w+\W+)?gift\W*card
 1569483513	tripleee	aurumwellness\.in
+1569484355	tripleee	gummies
