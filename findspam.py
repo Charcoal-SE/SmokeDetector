@@ -1286,6 +1286,8 @@ def watched_ip_for_url_hostname(s, site):
             '162.254.252.93',   # paper-writing etc appsocio doneessays etc
             # AS 62282 RACKRAY UAB Rakrejus, LT
             '195.181.242.11',   # printererrorrepair.com
+            # AS 262254 DANCOM LTD, BZ
+            '190.115.18.177',   # fake-tech-support garminlogin avglogin etc
             # AS 394695 PUBLIC-DOMAIN-REGISTRY - PDR, US
             '103.21.58.29',     # software-development infinigic / apporio.com
             '162.215.253.205',  # drugs escorts drozien.com nehasuri.in etc
