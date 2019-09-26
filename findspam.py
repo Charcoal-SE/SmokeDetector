@@ -1036,6 +1036,7 @@ def bad_ns_for_url_domain(s, site):
         'letter.org.in.',
         'utecho.com.',
         'siteground.asia.',
+        'ddos-guard.net.',
     ])
 
 
@@ -1180,7 +1181,6 @@ def watched_ns_for_url_domain(s, site):
         'contabo.net.',
         'crazydomains.com.',
         'servers-servers.com.',
-        'ddos-guard.net.',
         'vhostplatform.com.',
         'ocpdns.com.',
         'wpxhosting.com.',
