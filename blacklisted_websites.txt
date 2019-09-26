@@ -3138,3 +3138,4 @@ gisinfomedia\.blogspot\.com
 pilspedia\.com
 buyonlinecare\.com
 2basetechnologies\.com
+(?:more\.)?cash61\.com
