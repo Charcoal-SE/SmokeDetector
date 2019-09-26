@@ -13145,7 +13145,6 @@
 1568976754	tripleee	careactive\.com
 1568977194	tripleee	pipeservice\.ir
 1568977430	tripleee	اشکان حسینی
-1568978665	tripleee	pilspedia\.com
 1568981998	tripleee	cmolds\.com
 1568994200	Machavity	subash-khatiwada\.com\.np
 1569000836	JoErNanO	trekking\.top\-nepal\.com
