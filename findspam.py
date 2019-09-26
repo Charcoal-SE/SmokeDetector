@@ -1288,6 +1288,7 @@ def watched_ip_for_url_hostname(s, site):
             '195.181.242.11',   # printererrorrepair.com
             # AS 262254 DANCOM LTD, BZ
             '190.115.18.177',   # fake-tech-support garminlogin avglogin etc
+            '190.115.18.194',   # fake-tech-support kaspersky-login etc
             # AS 394695 PUBLIC-DOMAIN-REGISTRY - PDR, US
             '103.21.58.29',     # software-development infinigic / apporio.com
             '162.215.253.205',  # drugs escorts drozien.com nehasuri.in etc
