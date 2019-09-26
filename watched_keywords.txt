@@ -13287,7 +13287,6 @@
 1569432966	Makyen	6287776558899(?#URL query parameter)
 1569440203	Machavity	Subscribe\Wto\WPewDiePie
 1569440507	Makyen	spent\s*\$100\s*quadrillion
-1569463088	Makyen	gisinfomedia\.blogspot\.com
 1569463649	Makyen	ampfibian\.com\.au
 1569463657	Makyen	(?-i:KGAFy\.png)
 1569467797	Makyen	travelgear\.vn
