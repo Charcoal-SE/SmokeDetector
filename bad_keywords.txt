@@ -2070,3 +2070,4 @@ bandox(?:[\W_]*+(?:extreme|male|enhancement))*
 flow[\W_]*+fusion(?:[\W_]*+(?:male(?:[\W_]*+enhancement)?|enhancement|pills|\d++|[\da-f]{4,}+))*
 leptitox
 bionatrol
+veluxton(?:[\W_]*+(?:booster|testo(?:sterone)?|pill|\d++)s?)*
