@@ -7657,7 +7657,6 @@
 1548054005	Tetsuya Yamamoto	senator\.co\.in
 1548054963	Tetsuya Yamamoto	stlmedicalsolutions\.com
 1548062895	tripleee	globalcool\.com
-1548063056	Tetsuya Yamamoto	2basetechnologies\.com
 1548063860	Tetsuya Yamamoto	aigtechnologies\.in
 1548066025	tripleee	garminexpress\.de
 1548066037	tripleee	bitdefendercentral\.de

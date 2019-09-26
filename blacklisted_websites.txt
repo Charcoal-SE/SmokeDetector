@@ -3137,3 +3137,4 @@ e[\W_]*+a[\W_]*+r[\W_]*+n[\W_]*+7[\W_]*+4[\W_]*+c[\W_]*+o[\W_]*+m(?#obfuscated e
 gisinfomedia\.blogspot\.com
 pilspedia\.com
 buyonlinecare\.com
+2basetechnologies\.com
