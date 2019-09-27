@@ -3143,3 +3143,4 @@ kingtipper\.com
 educastles\.com
 hostsailor\.com
 sharktankdietreview\.blogspot
+\b(?<!-)(?:max\.)?pays12\.com(?![.-])\b
