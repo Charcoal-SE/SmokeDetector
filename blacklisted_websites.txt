@@ -3141,3 +3141,4 @@ buyonlinecare\.com
 (?:more\.)?cash61\.com
 kingtipper\.com
 educastles\.com
+hostsailor\.com
