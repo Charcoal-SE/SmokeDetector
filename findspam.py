@@ -1191,6 +1191,7 @@ def watched_ns_for_url_domain(s, site):
         'fcomet.com.',
         'securehostdns.com.',
         'stackpathdns.net.',
+        'net4india.com.',
     ])
 
 
