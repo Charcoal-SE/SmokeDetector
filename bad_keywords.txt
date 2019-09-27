@@ -2073,3 +2073,4 @@ bionatrol
 veluxton(?:[\W_]*+(?:booster|testo(?:sterone)?|pill|\d++)s?)*
 halo\W?hair
 cbd[\W_]*+miracle[\W_]*+pain[\W_]*+patch
+activator[\W_]*+pro
