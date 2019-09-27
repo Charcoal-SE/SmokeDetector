@@ -1193,6 +1193,7 @@ def watched_ns_for_url_domain(s, site):
         'securehostdns.com.',
         'stackpathdns.net.',
         'net4india.com.',
+        'hostsailor.com.',
     ])
 
 
