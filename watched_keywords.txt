@@ -13381,3 +13381,4 @@
 1569772450	Stormblessed	4G LTE Mobile Proxies
 1569772477	Stormblessed	neonaire\.com
 1569782248	Makyen	(?:want|give|money|pay|[24]0)\b.{0,60}shanksr
+1569782508	Stormblessed	paytm
