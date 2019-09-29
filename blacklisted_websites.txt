@@ -3144,3 +3144,4 @@ educastles\.com
 hostsailor\.com
 sharktankdietreview\.blogspot
 \b(?<!-)(?:max\.)?pays12\.com(?![.-])\b
+\bshanksr(?:@gmail\.com)?\b(?#Abuse the website blacklist to get more detections and weight on a persistent spammer/troll)
