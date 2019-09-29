@@ -123,7 +123,7 @@ great\Wspell\Wcaster
 viagra
 cialis
 slotobit
-putlocker
+(?:putlocker.{0,100}?\b(?:movies?|watch)|(?:movies?|watch)\b.{0,100}?putlocker\w*)
 vimax
 (?:contact|call) us (?:today|now)
 Thierno[ _]?M.[ _]Sow
