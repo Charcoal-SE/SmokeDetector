@@ -9021,7 +9021,6 @@
 1554365710	Zoe	Website\W*designer\W*(?:in\W*)?delhi
 1554367127	tripleee	slainstitute\.com
 1554367916	Glorfindel	dkin\.in
-1554368194	Zoe	brotherprintersupportpro\.us
 1554369489	tripleee	bitcoinqrgenerator\.info
 1554369722	tripleee	cruisebay
 1554379175	tripleee	^\s*disc\W*losure\s*$
