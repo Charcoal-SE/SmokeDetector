@@ -3147,3 +3147,4 @@ sharktankdietreview\.blogspot
 \bshanksr(?:@gmail\.com)?\b(?#Abuse the website blacklist to get more detections and weight on a persistent spammer/troll)
 theccm\.co\.uk
 brotherprintersupportpro\.us
+unitedsupplementreviews\.com
