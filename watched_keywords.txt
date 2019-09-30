@@ -13389,3 +13389,4 @@
 1569824731	tripleee	office-product-key-setup\.com
 1569825437	tripleee	nrzee\.com
 1569827833	tripleee	hulucomactivatecode\.com
+1569827842	tripleee	malwarebytes-mac\.com
