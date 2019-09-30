@@ -11728,7 +11728,6 @@
 1564587928	rene	pubg-apk\.com
 1564593070	Jeff Schaller	shipa1\.com
 1564593143	Makyen	ship\W*a1(?!\.com(?<=shipa1\.com))
-1564603390	Makyen	nutrapills\.com
 1564604547	Makyen	759798422(?:@qq\.com)?
 1564607589	Makyen	rubberfloorings\.in
 1564607608	Makyen	lytechx\.com
