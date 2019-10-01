@@ -1280,7 +1280,9 @@ def watched_ip_for_url_hostname(s, site):
             '166.62.6.66',      # fake-tech-support + hosting ms-officesetup etc
             '166.62.28.116',    # fake-tech-support printertechsupportnumbers.com
             '192.186.227.225',  # drugs topwellnessguru / healthcare350 etc
-            # AS-43317 FISHNET-AS, RU
+            # AS 33182 DIMENOC - HostDime.com, Inc., US
+            '199.168.190.252',  # drugs makreviews.com
+            # AS 43317 FISHNET-AS, RU
             '77.73.70.10',      # applesupportnumber.net
             # AS 46606 UNIFIEDLAYER-AS-1 - Unified Layer, US
             '50.87.189.77',     # avdshare.com
