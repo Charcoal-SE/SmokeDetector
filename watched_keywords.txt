@@ -13420,3 +13420,4 @@
 1569904204	Makyen	ketobodytonesacm\.bravesites\.com
 1569904212	Makyen	ketobodytonescam(?!\.page\.tl)(?!\.bravesites\.com)
 1569905192	tripleee	(?-i:^\w+2ch$)
+1569911094	tripleee	testequip\.com\.au
