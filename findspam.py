@@ -4,7 +4,7 @@
 import sys
 import math
 import regex
-from difflib import SequenceMatcher
+from difflib import SequenceMatcher/watched ns
 from urllib.parse import urlparse, unquote_plus
 from itertools import chain
 from collections import Counter
@@ -1195,6 +1195,7 @@ def watched_ns_for_url_domain(s, site):
         'net4india.com.',
         'hostsailor.com.',
         'mbah.men.',
+        'nanosupercloud.com.',
     ])
 
 
