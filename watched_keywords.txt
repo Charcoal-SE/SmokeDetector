@@ -13419,3 +13419,4 @@
 1569904195	Makyen	ysnccv\.simplesite\.com
 1569904204	Makyen	ketobodytonesacm\.bravesites\.com
 1569904212	Makyen	ketobodytonescam(?!\.page\.tl)(?!\.bravesites\.com)
+1569905192	tripleee	(?-i:^\w+2ch$)
