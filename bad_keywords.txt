@@ -2078,3 +2078,4 @@ nuvo[\W_]*+ketosis
 shanksr@gmail\.com
 weeslim(?:[\W_]*+avis)?
 loberton
+iron[\W_]*+core[\W_]*+edge(?:[\W_]*+(?:australia|nz|uk|enhancement|male|\d++|[\da-f]{4,}+))*
