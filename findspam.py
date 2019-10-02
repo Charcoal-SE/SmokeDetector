@@ -1269,6 +1269,7 @@ def watched_ip_for_url_hostname(s, site):
             '23.229.180.169',   # drugs health4supplement / supplements4lifetime etc
             '23.229.233.231',   # drugs ultavivegarcinia.es / refollium.in etc
             '50.62.35.175',     # gs-jj patchesline.com shirtpatches.com
+            '107.180.1.245',    # mmf cash61.com pays12com
             '107.180.34.212',   # fake-tech-support 123helpline / allitexpert
             '107.180.40.103',   # drugs + seo getbestdelight / seotipandsolution
             '107.180.41.149',   # technoblink.com
