@@ -1976,7 +1976,7 @@ city_list = [
     "Ludhiana", "Mumbai", "Madurai", "Patna", "Portland",
     "Rajkot", "Surat", "Telangana", "Udaipur", "Uttarakhand",
     "Noida", "Pune", "Rohini", "Trivandrum", "Thiruvananthapuram",
-    "Nashik", "Gurgaon", "Gurugram", "Kochi", "Ernakulam", "Nagpur", "Dehradun",
+    "Nashik", "Gurgaon", "Gurugram", "Kochi", "Ernakulam", "Nagpur",
     "Neemrana", "Raipur", "Faridabad", "Kanhangad", "Kanhanjad",
     "Trichy", "Tiruchirappalli", "Tiruchi", "Trichinopoly",
     "Kerala", "Mangalore", "Mangaluru", "Thane", "Bhiwandi", "Ghatkopar",
@@ -1984,7 +1984,7 @@ city_list = [
     "Bhilwara", "Banswarabhiwadi", "Darjeeling", "Ajanta", "Malad",
     "Colaba", "Lonavala", "Marine Lines", "Kandivali", "Worli", "Andheri",
     "Lokhandwala", "Haldwani", "Bhimtal", "Almora", "Rishikesh", "Haridwar",
-    "Ramnagar", "Jim Corbett", "Nainital",
+    "Ramnagar", "Jim Corbett", "Nainital", "Dehradun", "Dehrdun",
 
     # yes, these aren't cities but...
     "India", "Pakistan",
