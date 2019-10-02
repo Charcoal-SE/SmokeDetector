@@ -1196,6 +1196,7 @@ def watched_ns_for_url_domain(s, site):
         'hostsailor.com.',
         'mbah.men.',
         'nanosupercloud.com.',
+        'himalayanwebinfo.com.',
     ])
 
 
