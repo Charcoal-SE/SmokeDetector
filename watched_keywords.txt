@@ -13450,3 +13450,4 @@
 1570020718	Stormblessed	faux\W?(?:n|and)\W?cotton
 1570023887	Machavity	gameloop\.me
 1570025074	Machavity	greencartsdispensary\.com
+1570036127	Glorfindel	citadelmortgages\.ca
