@@ -13448,3 +13448,4 @@
 1570017130	tripleee	donparkersales\.com
 1570020464	Machavity	fauxncotton\.com
 1570023887	Machavity	gameloop\.me
+1570025074	Machavity	greencartsdispensary\.com
