@@ -13446,4 +13446,4 @@
 1570016427	Stormblessed	CIOB
 1570016550	tripleee	zylophin(?:[\W_]?rx)?
 1570017130	tripleee	donparkersales\.com
-1570017628	Stormblessed	\w?\w?ounis\W?\d\d\d?\d?
+1570017628	Stormblessed	\w{0,2}ounis\W?\d{2,4}
