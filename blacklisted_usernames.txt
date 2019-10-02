@@ -206,3 +206,4 @@ quickbooks
 (?-i:^Tripnexts$)
 (?-i:^yash$)
 (?-i:^Arun A K$)
+(?-i:^ForeignExchange$)
