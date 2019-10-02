@@ -13447,3 +13447,4 @@
 1570016550	tripleee	zylophin(?:[\W_]?rx)?
 1570017130	tripleee	donparkersales\.com
 1570020464	Machavity	fauxncotton\.com
+1570020718	Stormblessed	faux\W?and\W?cotton
