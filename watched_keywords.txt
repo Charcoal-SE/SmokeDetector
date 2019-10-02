@@ -13437,3 +13437,4 @@
 1569994312	tripleee	enterprisearchs\.com
 1569994573	tripleee	key-norton\.com
 1569994813	Makyen	student-login\.info
+1570001845	tripleee	royal\W*developer
