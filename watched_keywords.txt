@@ -13376,6 +13376,7 @@
 1569782248	Makyen	(?:want|give|money|pay|[24]0)\b.{0,60}shanksr
 1569801049	Makyen	uptowngames\.org
 1569815532	Makyen	steven\.robert364(?:@gmail\.com)?
+1569816548	Stormblessed	Mr\W+Steven\W+Robert
 1569818968	Makyen	gym-expert\.com
 1569820145	Shree	training@janbasktrainig\.com
 1569820719	tripleee	janbask
