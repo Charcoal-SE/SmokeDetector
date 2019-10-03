@@ -13471,3 +13471,4 @@
 1570101526	tripleee	[\w\d]*,\W*c\W*o\W*m
 1570101780	tripleee	bupa\.com
 1570115308	Makyen	bestridinglawnmower\.com
+1570118292	Makyen	healthstoregems\.com
