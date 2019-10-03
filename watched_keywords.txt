@@ -13468,3 +13468,4 @@
 1570100551	Glorfindel	seondex\.com
 1570100564	Glorfindel	saglikfit\.com
 1570101364	tripleee	dio\d+
+1570101392	tripleee	,\W*n\W*e\W*t
