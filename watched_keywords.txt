@@ -13457,3 +13457,4 @@
 1570067894	Machavity	SECDatabase
 1570068101	Makyen	(?:(?:hijos[\W_]*+de[\W_]*+)?puta|mierda)
 1570072581	Machavity	DXM5CJ20
+1570072789	Makyen	dengxingmei(?:@foxmail\.com)?
