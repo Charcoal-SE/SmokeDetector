@@ -13458,3 +13458,4 @@
 1570068101	Makyen	(?:(?:hijos[\W_]*+de[\W_]*+)?puta|mierda)
 1570072581	Machavity	DXM5CJ20
 1570072789	Makyen	dengxingmei(?:@foxmail\.com)?
+1570072818	Stormblessed	Ms. Deng
