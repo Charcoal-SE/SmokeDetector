@@ -13469,3 +13469,4 @@
 1570100564	Glorfindel	saglikfit\.com
 1570101364	tripleee	dio\d+
 1570101392	tripleee	,\W*n\W*e\W*t
+1570101526	tripleee	[\w\d]*,\W*c\W*o\W*m
