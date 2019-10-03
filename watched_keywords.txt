@@ -9021,7 +9021,6 @@
 1554365710	Zoe	Website\W*designer\W*(?:in\W*)?delhi
 1554367127	tripleee	slainstitute\.com
 1554367916	Glorfindel	dkin\.in
-1554368194	Zoe	brotherprintersupportpro\.us
 1554369489	tripleee	bitcoinqrgenerator\.info
 1554369722	tripleee	cruisebay
 1554379175	tripleee	^\s*disc\W*losure\s*$
@@ -9991,7 +9990,7 @@
 1558351231	doppelgreener	order now
 1558351288	doppelgreener	shop now
 1558351365	doppelgreener	special offer
-1558351784	doppelgreener	(?:order|today|shop|special|now|offer)\W(?:order|today|shop|special|now|offer)(?<!order\Worder)
+1569875927	ArtOfCode	(?:order|shop|special)\W(?:today|now|offer)(?<!order\Worder)
 1558352212	tripleee	untappedreviews\.com
 1558354955	tripleee	whatpeopleswant\.com
 1558356650	tripleee	padharo\.co
@@ -10214,7 +10213,6 @@
 1559130225	double-beep	handyfiles\.com
 1559134458	Zoe	docs\.google\.com/forms/d/e/1FAIpQLSd9YI0IbCVZYvwwVvm8nXtAxImWYvq1tezDfZ7Jrlqcho1O6w
 1559126836	double-beep	swan\W*tours?
-1559127599	double-beep	theccm\.co\.uk
 1559130037	double-beep	tantraspells\.com
 1559131291	double-beep	creditspecialist(?:@protonmail\.ch)?
 1559158756	double-beep	2017worldjunior\.com
@@ -11007,7 +11005,6 @@
 1562275932	Makyen	indiavisitonline\.in
 1562275953	Makyen	herbalist\W*oils\W*cbd
 1562275973	Makyen	(?-i:vvMPTJwg9po)
-1562275993	Makyen	top10guider\.com
 1562276013	Makyen	trastra(?!\.com)
 1562276033	Makyen	trastra\.com
 1562276077	Makyen	sachinglobalmarketing(?:@gmail\.com)?
@@ -11361,7 +11358,6 @@
 1563477791	Makyen	safetygearpro\.com
 1563489190	Makyen	iconcreditrepair(?:@gmail\.com)?
 1563507749	Machavity	isportsapi\.com
-1563441174	double-beep	m-arabi\.com
 1563513077	Shree	southbankundercroft\.com
 1563515433	tripleee	woo\W?paylabs(?:\W?amazonpay)?
 1563515455	tripleee	clicksubhadeep
@@ -11719,7 +11715,6 @@
 1564560464	Shree	info\.yes4me\.net
 1564564898	tripleee	frontier-internet\.net
 1564567345	tripleee	rootsonwhytedental\.com
-1564569787	tripleee	quebythesea\.com
 1564570573	tripleee	helloworldprogramming\.in
 1564572876	Federico	codebeautify\.org
 1564574718	tripleee	bcobookings\.es
@@ -11730,7 +11725,6 @@
 1564587928	rene	pubg-apk\.com
 1564593070	Jeff Schaller	shipa1\.com
 1564593143	Makyen	ship\W*a1(?!\.com(?<=shipa1\.com))
-1564603390	Makyen	nutrapills\.com
 1564604547	Makyen	759798422(?:@qq\.com)?
 1564607589	Makyen	rubberfloorings\.in
 1564607608	Makyen	lytechx\.com
@@ -11931,7 +11925,7 @@
 1565183627	tripleee	dragonsupportbyexperts\.com
 1565202078	Makyen	playroom\.co\.ua
 1565202099	Makyen	enrgtech\.co\.uk
-1565202119	Makyen	propersix(?!\.network|\.com)
+1565202119	Makyen	propersix(?!\.network|\.com|\.trade)
 1565202161	Makyen	propersix\.network
 1565202184	Makyen	(?-i:IKAIe\.jpg)
 1565202204	Makyen	(?-i:gU1gE\.jpg)
@@ -12857,7 +12851,6 @@
 1568023414	double-beep	kuznetsovgavriil\.Mikhailovich(?:@mail\.ru)?
 1568023467	tripleee	GOST\W*305\W*82
 1568027342	tripleee	2lWXkI2(?# bit.ly redirector)
-1568038592	Erik the Outgolfer	foreignexchange\.llc
 1568043913	Machavity	u3d\.as/1sNc
 1568043927	Machavity	sisus\.co
 1568051211	Machavity	doiteasily\.com
@@ -13112,7 +13105,6 @@
 1568918040	Makyen	double[\W_]*+x(?:[\W_]*+(?:enhancement|male))+
 1568918149	Makyen	ketotrinsouthafric\.wixsite\.com
 1568918158	Makyen	adderallmeds\.hatenablog\.com
-1568918170	Makyen	iron[\W_]*+core[\W_]*+edge(?:[\W_]*+(?:australia|nz|uk|enhancement|male|\d++|[\da-f]{4,}+))*
 1568925098	Makyen	homemart\.co\.nz
 1568925663	Makyen	1a810bf505(?#fiverr.com)
 1568942765	Makyen	shirtpatches\.com
@@ -13360,4 +13352,112 @@
 1569700339	Makyen	digilitica\.com
 1569702655	Makyen	dr[\W_]*+twaha
 1569702698	Makyen	drlregbeyen10000(?:@gmail\.com)?
-1569706454	Stormblessed	jtattoo\.net
+1569706454	Stormblessed	jtattoo(?:\.net)?
+1569707175	Makyen	machinehackers(?:[\W_]*+(?:at[\W_]*+)?+outlook(?:[\W_]*+(?:dot[\W_]*+)?+com)?)?
+1569708794	Makyen	cytotecaborsiampuh\.com
+1569708804	Makyen	(?-i:RqAjz\.jpg)
+1569709435	Machavity	aiphotolabs\.com
+1569712009	Makyen	Unchase\.unchaseopenapiconnectedservice
+1569732771	Makyen	cv-by-jvnc-sat
+1569736983	Makyen	axlllow\.000webhostapp\.com
+1569751131	Shree	apnapedia\.com
+1569758341	Shree	drugbars\.com
+1569767094	Makyen	sanofi_the
+1569767103	Makyen	(?-i:yr9sQ4fbAI4)
+1569767113	Makyen	quizzzpopppp\.000webhostapp\.com
+1569767122	Makyen	ebrahimtv\.com
+1569767132	Makyen	mkanews\.in
+1569767141	Makyen	sunnyleonexxx\.in
+1569767150	Makyen	incarts\.blogspot
+1569767159	Makyen	newswalaraja\.blogspot
+1569768209	Makyen	raymondquickloan(?:@gmail\.com)?
+1569772450	Stormblessed	4G LTE Mobile Proxies
+1569772477	Stormblessed	neonaire\.com
+1569782248	Makyen	(?:want|give|money|pay|[24]0)\b.{0,60}shanksr
+1569801049	Makyen	uptowngames\.org
+1569815532	Makyen	steven\.robert364(?:@gmail\.com)?
+1569818968	Makyen	gym-expert\.com
+1569820145	Shree	training@janbasktrainig\.com
+1569820719	tripleee	janbask
+1569822125	Makyen	stella[\W_]*+maeson[\W_]*+cream
+1569822794	Makyen	saatchiart\.com
+1569824731	tripleee	office-product-key-setup\.com
+1569825437	tripleee	nrzee\.com
+1569827833	tripleee	hulucomactivatecode\.com
+1569827842	tripleee	malwarebytes-mac\.com
+1569829092	Makyen	(?-i:yAs4O\.jpg)
+1569829102	Makyen	propersix\.trade
+1569830668	Makyen	organicsupplementdietprogram\.com
+1569831760	tripleee	spoto\.net
+1569831818	tripleee	burniva
+1569835724	JoErNanO	aktis\.rent
+1569836648	Glorfindel	apialarm\.com
+1569838728	tripleee	ityrecare\.com
+1569839976	tripleee	obatcytotecaborsi\.com
+1569842372	Shree	cngedele\.com
+1569842402	Shree	hi-liteelectricinc\.ca
+1569842490	Shree	signcompany\.ir
+1569845337	tripleee	passive-earning\.com
+1569846824	tripleee	stambros
+1569847425	tripleee	weallight\.com
+1569848361	tripleee	triptotajagra\.com
+1569856748	Machavity	thepcsoft
+1569859678	Machavity	chichawatninews\.com
+1569862807	Machavity	konkurs\.belinfund\.by
+1569862861	Makyen	code-learn\.com
+1569862886	Machavity	(?-i:tz4wpq88bri7g2zg)
+1569867093	Makyen	customercare-usa\.com
+1569885987	Makyen	aibonsafety\.com
+1569886006	Makyen	danielsilva59491(?:@gmail\.com)
+1569894510	Makyen	aryawartapackers\.com
+1569902621	Nisse Engström	jamesonch\.com
+1569904186	Makyen	ketobodytonescam\.page\.tl
+1569904195	Makyen	ysnccv\.simplesite\.com
+1569904204	Makyen	ketobodytonesacm\.bravesites\.com
+1569904212	Makyen	ketobodytonescam(?!\.page\.tl)(?!\.bravesites\.com)
+1569905192	tripleee	(?-i:^\w+2ch$)
+1569911094	tripleee	testequip\.com\.au
+1569911105	tripleee	te2\.com\.au
+1569913108	Shree	(?:info@)?smsinbd\.com
+1569913111	tripleee	smsinbd\.com
+1569914091	tripleee	ketogenicpedia\.com
+1569915520	Makyen	pressurecoach\.com
+1569916143	Makyen	cities-localgov\.com
+1569924398	tripleee	computerdeskcorner\.com
+1569924575	tripleee	shopthisnow\.in
+1569925895	tripleee	kachin
+1569928424	tripleee	hit2k\.com
+1569929399	tripleee	swiftgreenfilters\.com
+1569932779	Glorfindel	wpthemesindia
+1569936460	Machavity	usefertilizer\.com
+1569943009	Machavity	grabz\.it
+1569950365	Machavity	(?-i:^G C$)
+1569957323	Machavity	techythought\.com
+1569971338	Makyen	drirosisolutioncenter(?:@gmail\.com)?
+1569990142	tripleee	pratiyogitakosh\.com
+1569994312	tripleee	enterprisearchs\.com
+1569994573	tripleee	key-norton\.com
+1569994813	Makyen	student-login\.info
+1570001845	tripleee	royal\W*developer
+1570007787	tripleee	lovelyrani\.com
+1570010102	Shree	studywholenight\.com
+1570010404	tripleee	nguonhangtot\.com\.vn
+1570013292	tripleee	4rabet\.com
+1570016409	Stormblessed	college of contract management
+1570016427	Stormblessed	CIOB
+1570016550	tripleee	zylophin(?:[\W_]?rx)?
+1570017130	tripleee	donparkersales\.com
+1570017628	Stormblessed	\w{0,2}ounis\W?\d{2,4}
+1570020464	Machavity	fauxncotton\.com
+1570020718	Stormblessed	faux\W?(?:n|and)\W?cotton
+1570023887	Machavity	gameloop\.me
+1570025074	Machavity	greencartsdispensary\.com
+1570036127	Glorfindel	citadelmortgages\.ca
+1570039125	Machavity	citizenpath\.com
+1570047662	Machavity	piccash\.net
+1570057177	Machavity	examplecodefree\.blogspot\.com
+1570067894	Machavity	SECDatabase
+1570068101	Makyen	(?:(?:hijos[\W_]*+de[\W_]*+)?puta|mierda)
+1570072581	Machavity	DXM5CJ20
+1570072789	Makyen	dengxingmei(?:@foxmail\.com)?
+1570072818	Stormblessed	Ms\W+Deng

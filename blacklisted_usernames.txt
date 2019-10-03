@@ -205,3 +205,5 @@ quickbooks
 (?-i:^Anna Justin$)
 (?-i:^Tripnexts$)
 (?-i:^yash$)
+(?-i:^Arun A K$)
+(?-i:^ForeignExchange$)
