@@ -13464,3 +13464,4 @@
 1570079943	tripleee	softakensoftware\.com
 1570080674	tripleee	devicesupport\.net
 1570087211	Glorfindel	ancensored\.com
+1570098187	Glorfindel	halcyontek\.com
