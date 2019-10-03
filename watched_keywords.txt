@@ -13465,3 +13465,4 @@
 1570080674	tripleee	devicesupport\.net
 1570087211	Glorfindel	ancensored\.com
 1570098187	Glorfindel	halcyontek\.com
+1570100551	Glorfindel	seondex\.com
