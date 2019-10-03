@@ -13466,3 +13466,4 @@
 1570087211	Glorfindel	ancensored\.com
 1570098187	Glorfindel	halcyontek\.com
 1570100551	Glorfindel	seondex\.com
+1570100564	Glorfindel	saglikfit\.com
