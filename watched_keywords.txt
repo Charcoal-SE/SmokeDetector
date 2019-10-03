@@ -13447,3 +13447,16 @@
 1570016550	tripleee	zylophin(?:[\W_]?rx)?
 1570017130	tripleee	donparkersales\.com
 1570017628	Stormblessed	\w{0,2}ounis\W?\d{2,4}
+1570020464	Machavity	fauxncotton\.com
+1570020718	Stormblessed	faux\W?(?:n|and)\W?cotton
+1570023887	Machavity	gameloop\.me
+1570025074	Machavity	greencartsdispensary\.com
+1570036127	Glorfindel	citadelmortgages\.ca
+1570039125	Machavity	citizenpath\.com
+1570047662	Machavity	piccash\.net
+1570057177	Machavity	examplecodefree\.blogspot\.com
+1570067894	Machavity	SECDatabase
+1570068101	Makyen	(?:(?:hijos[\W_]*+de[\W_]*+)?puta|mierda)
+1570072581	Machavity	DXM5CJ20
+1570072789	Makyen	dengxingmei(?:@foxmail\.com)?
+1570072818	Stormblessed	Ms\W+Deng
