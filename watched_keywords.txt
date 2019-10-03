@@ -13467,3 +13467,4 @@
 1570098187	Glorfindel	halcyontek\.com
 1570100551	Glorfindel	seondex\.com
 1570100564	Glorfindel	saglikfit\.com
+1570101364	tripleee	dio\d+
