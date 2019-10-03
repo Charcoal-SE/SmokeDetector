@@ -1987,6 +1987,7 @@ city_list = [
     "Colaba", "Lonavala", "Marine Lines", "Kandivali", "Worli", "Andheri",
     "Lokhandwala", "Haldwani", "Bhimtal", "Almora", "Rishikesh", "Haridwar",
     "Ramnagar", "Jim Corbett", "Nainital", "Dehradun", "Dehrdun",
+    "Visakhapatnam",
 
     # yes, these aren't cities but...
     "India", "Pakistan",
