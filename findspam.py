@@ -1194,6 +1194,9 @@ def watched_ns_for_url_domain(s, site):
         'stackpathdns.net.',
         'net4india.com.',
         'hostsailor.com.',
+        'mbah.men.',
+        'nanosupercloud.com.',
+        'himalayanwebinfo.com.',
     ])
 
 
@@ -1219,6 +1222,8 @@ def watched_ip_for_url_hostname(s, site):
         s, site,
         # Watched IP list
         [
+            # AS 3842 RAMNODE - RamNode LLC, US
+            '168.235.103.177',  # gmailtechnicalsupportnumbers.com
             # AS 8560 ONEANDONE-AS Brauerstrasse 48, DE
             '62.151.180.33',    # visit-my-website ltssecure.com / ltssoc
             # AS 13335 CLOUDFLARENET - Cloudflare, Inc., US
@@ -1245,6 +1250,7 @@ def watched_ip_for_url_hostname(s, site):
             '104.219.248.45',   # drugs 360nutra / timesnutrition etc
             '104.219.248.81',   # drugs supplement4world / supplementgod etc
             '162.213.255.36',   # drugs / visit-my-website / cryptocurrency
+            '192.64.118.108',   # drugs hbmbzone products4reviews epbhub etc
             '198.54.115.65',    # drugs goldencondor / visit4supplements etc
             '198.54.115.76',    # visit-my-website testmyinternetspeed.org etc
             '198.54.116.51',    # drugs reviewsgear / crazy-bulk-review etc
@@ -1257,11 +1263,13 @@ def watched_ip_for_url_hostname(s, site):
             # AS 23352 SERVERCENTRAL - Server Central Network, US
             '198.38.82.90',     # software-utility osofttools instantdatacare etc
             # AS 24940 HETZNER-AS, DE
+            '5.9.24.179',       # multi-programming.com
             '144.76.185.135',   # shuftipro.com
             # AS 26496 AS-26496-GO-DADDY-COM-LLC
             '23.229.180.169',   # drugs health4supplement / supplements4lifetime etc
             '23.229.233.231',   # drugs ultavivegarcinia.es / refollium.in etc
             '50.62.35.175',     # gs-jj patchesline.com shirtpatches.com
+            '107.180.1.245',    # mmf cash61.com pays12com
             '107.180.34.212',   # fake-tech-support 123helpline / allitexpert
             '107.180.40.103',   # drugs + seo getbestdelight / seotipandsolution
             '107.180.41.149',   # technoblink.com
@@ -1275,11 +1283,14 @@ def watched_ip_for_url_hostname(s, site):
             '166.62.6.66',      # fake-tech-support + hosting ms-officesetup etc
             '166.62.28.116',    # fake-tech-support printertechsupportnumbers.com
             '192.186.227.225',  # drugs topwellnessguru / healthcare350 etc
-            # AS-43317 FISHNET-AS, RU
+            # AS 33182 DIMENOC - HostDime.com, Inc., US
+            '199.168.190.252',  # drugs makreviews.com
+            # AS 43317 FISHNET-AS, RU
             '77.73.70.10',      # applesupportnumber.net
             # AS 46606 UNIFIEDLAYER-AS-1 - Unified Layer, US
             '50.87.189.77',     # avdshare.com
             '162.241.148.157',  # fake-tech-support en-mcafee setupmwnow etc
+            '192.185.129.109',  # fake-tech-support 24x7technicalhelp etc
             '192.185.227.177',  # zooksoftware.com
             # AS 47583 (HOSTINGER) - also notice dual-homed below
             '185.224.137.142',  # drugs healthforeverplus supplementoffer.info etc
@@ -1967,7 +1978,7 @@ city_list = [
     "Ludhiana", "Mumbai", "Madurai", "Patna", "Portland",
     "Rajkot", "Surat", "Telangana", "Udaipur", "Uttarakhand",
     "Noida", "Pune", "Rohini", "Trivandrum", "Thiruvananthapuram",
-    "Nashik", "Gurgaon", "Gurugram", "Kochi", "Ernakulam", "Nagpur", "Dehradun",
+    "Nashik", "Gurgaon", "Gurugram", "Kochi", "Ernakulam", "Nagpur",
     "Neemrana", "Raipur", "Faridabad", "Kanhangad", "Kanhanjad",
     "Trichy", "Tiruchirappalli", "Tiruchi", "Trichinopoly",
     "Kerala", "Mangalore", "Mangaluru", "Thane", "Bhiwandi", "Ghatkopar",
@@ -1975,7 +1986,7 @@ city_list = [
     "Bhilwara", "Banswarabhiwadi", "Darjeeling", "Ajanta", "Malad",
     "Colaba", "Lonavala", "Marine Lines", "Kandivali", "Worli", "Andheri",
     "Lokhandwala", "Haldwani", "Bhimtal", "Almora", "Rishikesh", "Haridwar",
-    "Ramnagar", "Jim Corbett", "Nainital",
+    "Ramnagar", "Jim Corbett", "Nainital", "Dehradun", "Dehrdun",
 
     # yes, these aren't cities but...
     "India", "Pakistan",
