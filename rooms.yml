@@ -151,8 +151,6 @@ stackexchange.com:
 
     msg_types:
       - debug
-      - all
-      - experimental
 
     privileges:
       inherit:
