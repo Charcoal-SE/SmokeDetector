@@ -13455,3 +13455,4 @@
 1570047662	Machavity	piccash\.net
 1570057177	Machavity	examplecodefree\.blogspot\.com
 1570067894	Machavity	SECDatabase
+1570068101	Makyen	(?:(?:hijos[\W_]*+de[\W_]*+)?puta|mierda)
