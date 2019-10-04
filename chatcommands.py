@@ -1713,7 +1713,9 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
 
         # Always handle if reported
         if scan_spam and operation != "report-direct":
-            handle_spam(post=post, reasons=scan_reasons, why=report_info + scan_why.lstrip())
+            comment = report_info + scan_why.lstrip()
+            handle_spam(post=post, reasons=scan_reasons, why=comment)
+            Tasks.later(Metasmoke.post_auto_comment, comment, reported_by, url=url, after=300)
             continue
 
         # scan_spam == False
@@ -1728,9 +1730,11 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
             else:
                 why_append = "This post would not have been caught otherwise."
 
+            comment = report_info + why_append
             handle_spam(post=post,
                         reasons=["Manually reported " + post_data.post_type + batch],
-                        why=report_info + why_append)
+                        why=comment)
+            Tasks.later(Metasmoke.post_auto_comment, comment, reported_by, url=url, after=300)
             continue
 
         # scan_spam == False and "scan"
