@@ -13476,3 +13476,4 @@
 1570133773	Makyen	hackerslist\.co
 1570147750	Makyen	harryloanlimited(?:@(?:utlook|gmail)\.com)?
 1570150112	Makyen	(?:\b(?<!-)|_)(?:(?:b[\W_]*+m[\W_]*+w|dio|boss|sod|white)(?:[\W_]*+\d)+[\W_]*+n[\W_]*+e[\W_]*+t|(?:callgroub)(?:[\W_]*+\d)+[\W_]*+c[\W_]*+o[\W_]*+m)(?:\b(?![.-])|_)(?#domains from spam wave 2019-10-03, with generic numbers; blacklist if no FP in a few days)
+1570163565	Stormblessed	cmi\W+qualification
