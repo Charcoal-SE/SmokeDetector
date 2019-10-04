@@ -844,7 +844,7 @@ def sync_remote(msg, alias_used='pull-sync'):
                                                                    'pull-sync-hard-force',
                                                                    'pull-sync-hard-reboot',
                                                                    'pull-sync-hard-reboot-force'])
-def sync_remote_hard(msg, alias_used='pull-sync-hard'):
+def sync_remote_hard(msg, original_msg=None, alias_used='pull-sync-hard'):
     """
     Force a branch sync from origin/master and origin/deploy
     :param msg:
@@ -854,7 +854,7 @@ def sync_remote_hard(msg, alias_used='pull-sync-hard'):
         raise CmdException("You don't have code privileges to run this command.")
     if 'reboot' in alias_used:
         GitManager.sync_remote_hard(True)
-        reboot(msg, alias_used="reboot")
+        reboot(msg, original_msg=original_msg, alias_used="reboot")
 
     return GitManager.sync_remote_hard(False)[1]
 
