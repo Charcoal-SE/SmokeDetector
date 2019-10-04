@@ -825,7 +825,7 @@ def pull(alias_used='pull'):
         raise CmdException("CI build is still pending, wait until the build has finished and then pull again.")
 
 
-@command(whole_msg=True, aliases=['pull-sync', 'pull-sync-force'], give_name=True)
+@command(whole_msg=True, privileged=True, give_name=True, aliases=['pull-sync', 'pull-sync-force'])
 def sync_remote(msg, alias_used='pull-sync'):
     """
     Force a branch sync from origin/master with [git branch -M]
