@@ -28,6 +28,7 @@ import regex
 from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, reload_modules
 from classes import Post
 from classes.feedback import *
+from tasks import Tasks
 
 
 # TODO: Do we need uid == -2 check?  Turn into "is_user_valid" check
@@ -844,7 +845,7 @@ def sync_remote(msg, alias_used='pull-sync'):
                                                                    'pull-sync-hard-force',
                                                                    'pull-sync-hard-reboot',
                                                                    'pull-sync-hard-reboot-force'])
-def sync_remote_hard(msg, original_msg=None, alias_used='pull-sync-hard'):
+def sync_remote_hard(msg, alias_used='pull-sync-hard'):
     """
     Force a branch sync from origin/master and origin/deploy
     :param msg:
@@ -852,13 +853,15 @@ def sync_remote_hard(msg, original_msg=None, alias_used='pull-sync-hard'):
     """
     if not is_code_privileged(msg._client.host, msg.owner.id):
         raise CmdException("You don't have code privileges to run this command.")
-    if 'reboot' in alias_used:
-        GitManager.sync_remote_hard()
-        tell_rooms("Rebooting", ("debug", (msg._client.host, msg.room.id)), ())
-        time.sleep(3)
-        exit_mode("reboot")
 
-    return GitManager.sync_remote_hard()[1]
+    # Not enough information is passed to commands to send an actual reply. Thus, the reboot
+    # is scheduled to happen later and we return the results of the GitManager function, which
+    # is the text that's sent as a reply to the user.
+    if 'reboot' in alias_used:
+        Tasks.later(reboot, msg, original_msg=msg, alias_used="reboot", after=5)
+        return GitManager.sync_remote_hard()[1] + " Automatically rebooting in a few seconds."
+
+    return GitManager.sync_remote_hard()[1] + " You'll probably want to !!/reboot now."
 
 
 @command(privileged=True, give_name=True, aliases=[

@@ -427,6 +427,6 @@ class GitManager:
             git.reset('origin/deploy', '--hard')
             git.checkout('master', '--force')
             git.checkout('deploy', '--force')
-            return True, "Synced hard to origin/master and origin/deploy. You'll probably want to !!/reboot now."
+            return True, "Synced hard to origin/master and origin/deploy."
         except Exception as e:
             return False, str(e)
