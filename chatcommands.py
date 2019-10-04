@@ -313,7 +313,10 @@ def do_blacklist(blacklist_type, msg, force=False):
     pattern = rebuild_str(msg.content_source.split(" ", 1)[1])
     has_unescaped_dot = ""
     # Test for . without \., but not in comments.
-    if regex.search(r"(?<!\\)\.", regex.sub(r"(?<!\\)\(\?\#[^\)]*\)", "", pattern)):
+    test_for_unescaped_dot = regex.sub(r"(?<!\\)\(\?\#[^\)]*\)", "", pattern)  # remove comments
+    # Remove character sets, where . doesn't need to be escaped.
+    test_for_unescaped_dot = regex.sub(r"(?<!\\)\[(?:[^\]]|(?<=\\)\])*\]", "", test_for_unescaped_dot)
+    if regex.search(r"(?<!\\)\.", test_for_unescaped_dot):
         has_unescaped_dot = 'The regex contains an unescaped "`.`"; in most cases, it should be "`\\.`"'
 
     if "number" not in blacklist_type:
