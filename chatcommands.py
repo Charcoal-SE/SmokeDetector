@@ -853,10 +853,12 @@ def sync_remote_hard(msg, original_msg=None, alias_used='pull-sync-hard'):
     if not is_code_privileged(msg._client.host, msg.owner.id):
         raise CmdException("You don't have code privileges to run this command.")
     if 'reboot' in alias_used:
-        GitManager.sync_remote_hard(True)
-        reboot(msg, original_msg=original_msg, alias_used="reboot")
+        GitManager.sync_remote_hard()
+        tell_rooms("Rebooting", ("debug", (msg._client.host, msg.room.id)), ())
+        time.sleep(3)
+        exit_mode("reboot")
 
-    return GitManager.sync_remote_hard(False)[1]
+    return GitManager.sync_remote_hard()[1]
 
 
 @command(privileged=True, give_name=True, aliases=[

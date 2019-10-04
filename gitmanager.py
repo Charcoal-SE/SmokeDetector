@@ -418,7 +418,7 @@ class GitManager:
             return False, str(e)
 
     @staticmethod
-    def sync_remote_hard(reboot):
+    def sync_remote_hard():
         try:
             git.fetch('--force')
             git.checkout('master', '--force')
