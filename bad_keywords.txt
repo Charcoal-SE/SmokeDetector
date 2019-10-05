@@ -2082,3 +2082,4 @@ iron[\W_]*+core[\W_]*+edge(?:[\W_]*+(?:australia|nz|uk|enhancement|male|\d++|[\d
 https://i\.stack\.imgur\.com/7Rdoj\.jpg(?#dickpick)
 callgroub11(?:，|,|\.)c\W*o\W*m
 ntanzielvis\d+(?:@gmail\.com)?(?#ntanzielvis31 seen)
+cash61\.com(?#Abuse the keyword blacklist to get more weight on the domain of a persistent spammer.)
