@@ -3165,3 +3165,4 @@ dio\d+\W*(?:,|\.)\W*n\W*e\W*t
 supplementvilla\.com
 ketodietviews\.com
 clck\.ru
+add2cartsupplements\.com
