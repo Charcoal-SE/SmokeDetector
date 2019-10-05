@@ -207,3 +207,4 @@ quickbooks
 (?-i:^yash$)
 (?-i:^Arun A K$)
 (?-i:^ForeignExchange$)
+Mining Champ
