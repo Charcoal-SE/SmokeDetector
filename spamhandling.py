@@ -181,11 +181,7 @@ def handle_spam(post, reasons, why):
         without_roles = tuple(["no-" + reason for reason in reasons]) + ("site-no-" + post.post_site,)
 
         if any("offensive" in reason for reason in reasons):
-            new_title = "(potentially offensive - see MS for details)"
-            Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
-                     new_title, post_url, reasons, post.body, username,
-                     post.user_link, why, post.owner_rep, post.post_score,
-                     post.up_vote_count, post.down_vote_count)
+            message = "(potentially offensive - see MS for details)"
 
         if set(reasons) - GlobalVars.experimental_reasons == set() and \
                 not why.startswith("Post manually "):
