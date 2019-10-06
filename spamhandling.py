@@ -136,6 +136,8 @@ def handle_spam(post, reasons, why):
         # in a proper way in chat messages.
         sanitized_title = parsing.sanitize_title(post.title if not post.is_answer else post.parent.title)
         sanitized_title = escape_format(sanitized_title).strip()
+        # Remove title if it is potentially offensive
+        message_title = sanitized_title if 'offensive title detected' not in reasons else '(Potentially offensive title -- see MS for details)'
 
         prefix = u"[ [SmokeDetector](//git.io/vyDZv) ]"
         if GlobalVars.metasmoke_key:
@@ -148,13 +150,13 @@ def handle_spam(post, reasons, why):
         edited = '' if not post.edited else ' \u270F\uFE0F'
         if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
             s = " {{}}{}: [{}]({}){} by a deleted user on `{}`".format(
-                reason_weight_s, sanitized_title, post_url, edited, shortened_site)
+                reason_weight_s, message_title, post_url, edited, shortened_site)
             username = ""
         else:
             username = post.user_name.strip()
             escaped_username = escape_format(parsing.escape_markdown(username))
             s = " {{}}{}: [{}]({}){} by [{}]({}) on `{}`".format(
-                reason_weight_s, sanitized_title, post_url, edited, escaped_username, poster_url, shortened_site)
+                reason_weight_s, message_title, post_url, edited, escaped_username, poster_url, shortened_site)
 
         Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
                  post.title_ignore_type, post_url, reasons, post.body, username,

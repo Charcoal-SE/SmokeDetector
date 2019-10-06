@@ -1,5 +1,5 @@
 # coding=utf-8
-from spamhandling import check_if_spam, check_if_spam_json
+from spamhandling import check_if_spam, check_if_spam_json, handle_spam
 from datahandling import add_blacklisted_user, add_whitelisted_user, _remove_pickle
 from blacklists import load_blacklists
 from parsing import get_user_from_url
@@ -7,6 +7,9 @@ import pytest
 import os
 import json
 from classes import Post
+from unittest.mock import MagicMock, ANY
+import chatcommunicate
+from globalvars import GlobalVars
 
 
 load_blacklists()
@@ -15,6 +18,27 @@ with open("test/data_test_spamhandling.txt", "r", encoding="utf-8") as f:
     # noinspection PyRedeclaration
     test_data_inputs = f.readlines()
 
+class StringMatcher:
+    def __init__(self, containing, without):
+        self.containing = containing
+        self.without = without
+
+    def __eq__(self, other):
+        return self.containing in other and self.without not in other
+
+def mock_post(title = '',
+              body = '',
+              site = 'stackoverflow.com',
+              link = 'https://stackoverflow.com/a/1732454',
+              owner = {'link': 'https://stackoverflow.com/users/102937/robert-harvey'}):
+    api_response = {
+        "title": title,
+        "body": body,
+        "site": site,
+        "link": link,
+        "owner": owner
+    }
+    return Post(api_response=api_response)
 
 # noinspection PyMissingTypeHints
 @pytest.mark.parametrize("title, body, username, site, match", [
@@ -74,7 +98,6 @@ def test_check_if_spam(title, body, username, site, match):
     is_spam, reason, _ = check_if_spam(post)
     assert match == is_spam
 
-
 # noinspection PyMissingTypeHints
 @pytest.mark.parametrize("data, match", [
     (test_data_inputs[0], False)
@@ -87,6 +110,19 @@ def test_check_if_spam_json(data, match):
     is_spam, reason, _ = check_if_spam_json(None)
     assert not is_spam
 
+def test_handle_spam():
+    GlobalVars.deletion_watcher = MagicMock() # Mock the deletion watcher in test
+    chatcommunicate.tell_rooms = MagicMock()
+    post = mock_post(title = 'fuck')
+    is_spam, reasons, why = check_if_spam(post)
+    handle_spam(post, reasons, why)
+    chatcommunicate.tell_rooms.assert_called_once_with(
+        StringMatcher(containing = 'Potentially offensive title', without = 'fucker'),
+        ANY,
+        ANY,
+        notify_site = ANY,
+        report_data = ANY
+    )
 
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"),
                     reason="shouldn't overwrite file")
