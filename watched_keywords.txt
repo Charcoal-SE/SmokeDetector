@@ -13509,3 +13509,4 @@
 1570393532	WELZ	tekvdo\.com
 1570393558	WELZ	gotodesigno\.com
 1570394339	Makyen	tribler\.org
+1570394349	Makyen	hearingx3reviews(?!\.com)
