@@ -136,8 +136,12 @@ def handle_spam(post, reasons, why):
         # in a proper way in chat messages.
         sanitized_title = parsing.sanitize_title(post.title if not post.is_answer else post.parent.title)
         sanitized_title = escape_format(sanitized_title).strip()
+
         # Remove title if it is potentially offensive
-        message_title = sanitized_title if 'offensive title detected' not in reasons else '(Potentially offensive title -- see MS for details)'
+        if 'offensive title detected' not in reasons:
+            message_title = sanitized_title
+        else:
+            message_title = '(Potentially offensive title -- see MS for details)'
 
         prefix = u"[ [SmokeDetector](//git.io/vyDZv) ]"
         if GlobalVars.metasmoke_key:
