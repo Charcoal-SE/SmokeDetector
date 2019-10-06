@@ -144,6 +144,9 @@ def handle_spam(post, reasons, why):
         else:
             prefix_ms = prefix
 
+        if "Offensive title detected" in reasons:
+            sanitized_title = ''
+
         # We'll insert reason list later
         edited = '' if not post.edited else ' \u270F\uFE0F'
         if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
@@ -179,9 +182,6 @@ def handle_spam(post, reasons, why):
             message = (prefix_ms + s)[:500]  # Truncate directly and keep MS link
 
         without_roles = tuple(["no-" + reason for reason in reasons]) + ("site-no-" + post.post_site,)
-
-        if any("offensive" in reason for reason in reasons):
-            message = "(potentially offensive - see MS for details)"
 
         if set(reasons) - GlobalVars.experimental_reasons == set() and \
                 not why.startswith("Post manually "):
