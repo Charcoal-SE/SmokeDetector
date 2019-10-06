@@ -115,7 +115,22 @@ def test_check_if_spam_json(data, match):
     assert not is_spam
 
 
-def test_handle_spam():
+def test_handle_spam_repeating_characters():
+    GlobalVars.deletion_watcher = MagicMock()  # Mock the deletion watcher in test
+    chatcommunicate.tell_rooms = MagicMock()
+    post = mock_post(title='aaaaaaaaaaaaaa')
+    is_spam, reasons, why = check_if_spam(post)
+    handle_spam(post, reasons, why)
+    chatcommunicate.tell_rooms.assert_called_once_with(
+        StringMatcher(containing='aaaaaaaaaaaaaa', without='Potentially offensive title'),
+        ANY,
+        ANY,
+        notify_site=ANY,
+        report_data=ANY
+    )
+
+
+def test_handle_spam_offensive_title():
     GlobalVars.deletion_watcher = MagicMock()  # Mock the deletion watcher in test
     chatcommunicate.tell_rooms = MagicMock()
     post = mock_post(title='fuck')
