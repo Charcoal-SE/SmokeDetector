@@ -13501,3 +13501,4 @@
 1570320293	Stormblessed	\W*[【】]\W*
 1570322019	Makyen	mr[\W_]*+moore[\W_]*+peterson
 1570322037	Makyen	petersonmoore5(?:@outlook\.com)
+1570343809	Makyen	breakyourownnews\.com
