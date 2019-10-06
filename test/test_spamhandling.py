@@ -122,7 +122,7 @@ def test_handle_spam():
     is_spam, reasons, why = check_if_spam(post)
     handle_spam(post, reasons, why)
     chatcommunicate.tell_rooms.assert_called_once_with(
-        StringMatcher(containing='Potentially offensive title', without='fucker'),
+        StringMatcher(containing='Potentially offensive title', without='fuck'),
         ANY,
         ANY,
         notify_site=ANY,
