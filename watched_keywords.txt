@@ -13036,7 +13036,6 @@
 1568774178	Makyen	(?-i:x7l9tc9)
 1568774188	Makyen	(?-i:vqQfuVM3Z6Q)
 1568774196	Makyen	nba2king\.com
-1568774987	Machavity	ketodietviews\.com
 1568776832	Makyen	canondriverwindows\.com
 1568780648	tripleee	onlinedevtools\.in
 1568783990	tripleee	conservativeuspageant\.com
@@ -13482,3 +13481,29 @@
 1570166274	tripleee	mashivatech\.com
 1570196199	Makyen	anuncicarbh\.com
 1570223696	Makyen	earned[\W_]*+\d+[\W_]*+last[\W_]*+month
+1570225472	Makyen	jumajuma7754
+1570227409	Machavity	innovative-ss\.com
+1570251097	Stormblessed	bricklanecurryfestival\.com
+1570256877	Makyen	skintone4you\.com
+1570256886	Makyen	listnutrics\.com
+1570259344	tripleee	travtasy\.com
+1570270166	Nisse Engström	onhaxcrack\.me
+1570270301	Nisse Engström	infervour\.com
+1570275275	Kulfy	pinorest\.rozblog\.com
+1570275382	Kulfy	nowsazan\.parsiblog\.com
+1570291953	JoErNanO	fetchbus\.com
+1570306640	Makyen	customwritings\.com
+1570306661	Makyen	customwritings(?!\.com)
+1570313665	ArtOfCode	spiritualsadhana\.com
+1570314468	Makyen	mihmansho\.com
+1570316228	Makyen	soonsoon754
+1570316253	Makyen	illuminatiihome65(?:@gmail\.com)?
+1570320293	Stormblessed	\W*[【】]\W*
+1570322019	Makyen	mr[\W_]*+moore[\W_]*+peterson
+1570322037	Makyen	petersonmoore5(?:@outlook\.com)
+1570343809	Makyen	breakyourownnews\.com
+1570345516	Makyen	(?-i:2Ve3hhw)(?#bit.ly link shortener)
+1570348919	Makyen	theothertrack\.com
+1570362652	Nisse Engström	mobdos\.com
+1570368884	JoErNanO	cleanabzar\.com
+1570370314	Glorfindel	chessnextmove\.info
