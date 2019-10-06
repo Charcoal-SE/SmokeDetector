@@ -13502,3 +13502,4 @@
 1570322019	Makyen	mr[\W_]*+moore[\W_]*+peterson
 1570322037	Makyen	petersonmoore5(?:@outlook\.com)
 1570343809	Makyen	breakyourownnews\.com
+1570345516	Makyen	(?-i:2Ve3hhw)(?#bit.ly link shortener)
