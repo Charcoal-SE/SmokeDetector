@@ -18,6 +18,7 @@ with open("test/data_test_spamhandling.txt", "r", encoding="utf-8") as f:
     # noinspection PyRedeclaration
     test_data_inputs = f.readlines()
 
+
 class StringMatcher:
     def __init__(self, containing, without):
         self.containing = containing
@@ -26,11 +27,12 @@ class StringMatcher:
     def __eq__(self, other):
         return self.containing in other and self.without not in other
 
-def mock_post(title = '',
-              body = '',
-              site = 'stackoverflow.com',
-              link = 'https://stackoverflow.com/a/1732454',
-              owner = {'link': 'https://stackoverflow.com/users/102937/robert-harvey'}):
+
+def mock_post(title='',
+              body='',
+              site='stackoverflow.com',
+              link='https://stackoverflow.com/a/1732454',
+              owner={'link': 'https://stackoverflow.com/users/102937/robert-harvey'}):
     api_response = {
         "title": title,
         "body": body,
@@ -39,6 +41,7 @@ def mock_post(title = '',
         "owner": owner
     }
     return Post(api_response=api_response)
+
 
 # noinspection PyMissingTypeHints
 @pytest.mark.parametrize("title, body, username, site, match", [
@@ -98,6 +101,7 @@ def test_check_if_spam(title, body, username, site, match):
     is_spam, reason, _ = check_if_spam(post)
     assert match == is_spam
 
+
 # noinspection PyMissingTypeHints
 @pytest.mark.parametrize("data, match", [
     (test_data_inputs[0], False)
@@ -110,19 +114,21 @@ def test_check_if_spam_json(data, match):
     is_spam, reason, _ = check_if_spam_json(None)
     assert not is_spam
 
+
 def test_handle_spam():
-    GlobalVars.deletion_watcher = MagicMock() # Mock the deletion watcher in test
+    GlobalVars.deletion_watcher = MagicMock()  # Mock the deletion watcher in test
     chatcommunicate.tell_rooms = MagicMock()
-    post = mock_post(title = 'fuck')
+    post = mock_post(title='fuck')
     is_spam, reasons, why = check_if_spam(post)
     handle_spam(post, reasons, why)
     chatcommunicate.tell_rooms.assert_called_once_with(
-        StringMatcher(containing = 'Potentially offensive title', without = 'fucker'),
+        StringMatcher(containing='Potentially offensive title', without='fucker'),
         ANY,
         ANY,
-        notify_site = ANY,
-        report_data = ANY
+        notify_site=ANY,
+        report_data=ANY
     )
+
 
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"),
                     reason="shouldn't overwrite file")
