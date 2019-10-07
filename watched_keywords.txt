@@ -13521,3 +13521,4 @@
 1570448485	Makyen	kamilastark(?#medium.com)
 1570451650	Nisse Engström	ESSE77\.COM
 1570452234	WELZ	onushospitals\.com
+1570452965	WELZ	folkd\.com
