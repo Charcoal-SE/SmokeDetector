@@ -13529,3 +13529,4 @@
 1570462348	Makyen	barbarianxlreviews\.com
 1570468491	Makyen	it\s*costs\s*just\s*\$\d+
 1570468578	Makyen	a\s*true\s*bargain\s*really
+1570478849	Makyen	sohbet
