@@ -2084,3 +2084,4 @@ callgroub11(?:，|,|\.)c\W*o\W*m
 ntanzielvis\d+(?:@gmail\.com)?(?#ntanzielvis31 seen)
 cash61\.com(?#Abuse the keyword blacklist to get more weight on the domain of a persistent spammer.)
 robux[\W_]*+now[\W_]*+for[\W_]*+free
+gsmagentodev(?:@gmail\.com)?
