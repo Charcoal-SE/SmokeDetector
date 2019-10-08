@@ -13531,3 +13531,4 @@
 1570468578	Makyen	a\s*true\s*bargain\s*really
 1570478849	Makyen	sohbet
 1570509679	Makyen	kenchandbibesy\.com
+1570511200	Makyen	jennyseocarner(?:@gmail\.com)?
