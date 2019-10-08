@@ -2302,7 +2302,7 @@ bomdinhluonghoachat\.vn
 testoultra\.co\.za
 australiasupplement\.com\.au
 belkinroutersupportnumber\.com
-baneh\.com
+\b(?<![^\W_]-)baneh\.com(?![.-][^\W_])\b
 ufa007\.com
 wellnesstrials\.org
 iraimmigration\.com
