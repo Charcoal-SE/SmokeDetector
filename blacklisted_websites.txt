@@ -1601,7 +1601,7 @@ vyantixrxtry\.com
 usadietplan\.com
 wpcare24\.com
 topnetworkingworld\.com
-\b(?<!-)ekeeda\.com(?![.-])\b
+\b(?<![^\W_]-)ekeeda\.com(?![.-][^\W_])\b
 australiafitness\.com\.au
 monily\.com
 randyrun\.com
@@ -2122,7 +2122,7 @@ cbdoiltryshop\.com
 crackedlicense\.com
 healthaware1\.com
 biztechcs\.com
-\b(?<!-)pilpedia\.?com
+\b(?<![^\W_]-)pilpedia\.?com(?![.-][^\W_])\b
 trybionutrition\.com
 drozus\.com
 livestream247\.net
@@ -2624,7 +2624,7 @@ lukaynakliyat\.com
 moneyonlineinvestment\.com
 careerjobs360\.in
 supplement2trend\.com
-\b(?<!-)ello\.co(?![.-])\b
+\b(?<![^\W_]-)ello\.co(?![.-][^\W_])\b
 ttlink\.com
 samuraipaper\.com
 nutrahygiene\.com
@@ -2673,7 +2673,7 @@ alonetone\.com
 supplementsell\.blogspot
 purefitketopills\.com
 dougopdesim\.blogspot
-\b(?<!-)strikingly\.com(?![.-])\b
+\b(?<![^\W_]-)strikingly\.com(?![.-][^\W_])\b
 appleinfoway\.com
 daftarbolasport\.com
 bolamnc\.com
@@ -2708,7 +2708,7 @@ cryptoexchangescript\.com
 \.(?:hop|pay)\.clickbank\.net(?<!example\.(?:hop|pay)\.clickbank\.net)(?!.*?</?code>)
 bullguard-support\.co\.uk
 //v\.ht
-\b(?<!-)cutt\.us(?![.-])\b
+\b(?<![^\W_]-)cutt\.us(?![.-][^\W_])\b
 weblium\.com
 easyprintersupport\.com
 techjockey\.com
@@ -2767,7 +2767,7 @@ cialisneabd\.com
 healthleans\.com
 webrence\.com
 fresherzones\.com
-\b(?<!-)binfer\.com(?![.-])\b
+\b(?<![^\W_]-)binfer\.com(?![.-][^\W_])\b
 compare-text-files\.com
 cutwin\.com
 dumpsit\.com
@@ -2885,7 +2885,7 @@ fixthephoto\.com
 clashroyaleapk\.net
 shirdicabservice\.com
 smartspidering\.com
-\b(?<!-)thepilpedia\.com
+\b(?<![^\W_]-)thepilpedia\.com(?![.-][^\W_])\b
 pillsdrive\.com
 diveintohealth\.org
 totalcureherbsfoundation(?:\W*c\W*o\W*m)?
@@ -3098,7 +3098,7 @@ dragonsdenketo\.com
 portal4fitness\.com
 thesanofi\.com
 modelescortsindelhi\.com
-\b(?<!-)clk\.ink(?![.-])\b(?#links paid per click)
+\b(?<![^\W_]-)clk\.ink(?![.-][^\W_])\b(?#links paid per click)
 penishealthlife\.net
 factsofhealth\.info
 ijstartcanon\.com
@@ -3114,8 +3114,8 @@ brotherprintersupport247\.com
 chinaclayteapot\.com
 customer-care-help-number\.com
 cabanova\.com
-\b(?<!-)ning\.com(?![.-])\b
-\b(?<!-)inube\.com(?![.-])\b
+\b(?<![^\W_]-)ning\.com(?![.-][^\W_])\b
+\b(?<![^\W_]-)inube\.com(?![.-][^\W_])\b
 over-blog\.com
 supplementspeak\.com
 lifewizsupplements\.com
@@ -3142,7 +3142,7 @@ kingtipper\.com
 educastles\.com
 hostsailor\.com
 sharktankdietreview\.blogspot
-\b(?<!-)(?:max\.)?pays12\.com(?![.-])\b
+\b(?<![^\W_]-)(?:max\.)?pays12\.com(?![.-][^\W_])\b
 \bshanksr(?:@gmail\.com)?\b(?#Abuse the website blacklist to get more detections and weight on a persistent spammer/troll)
 theccm\.co\.uk
 brotherprintersupportpro\.us
