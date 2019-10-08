@@ -208,3 +208,4 @@ quickbooks
 (?-i:^Arun A K$)
 (?-i:^ForeignExchange$)
 (?-i:^Jacob Ethan$)
+(?-i:^CoolGuy6969$)
