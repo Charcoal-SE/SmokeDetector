@@ -13566,3 +13566,4 @@
 1570615371	Shree	realdumpspdf\.com
 1570616554	tripleee	codingelements\.com
 1570617494	tripleee	eaccountinghelp\.com
+1570621776	tripleee	generatechange\.tv
