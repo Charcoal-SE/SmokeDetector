@@ -13550,3 +13550,4 @@
 1570565697	Machavity	(?-i:^Zezo$)
 1570566138	Machavity	buyprescriptionz(?:\.|\W*dot\W*)co
 1570590344	Nisse Engström	hitac-co\.com
+1570592971	Makyen	digitalcurrency14(?:[\W_]*+(?:at[\W_]*+)?+gmail[\W_]*+(?:dot[\W_]*+)?+com)?
