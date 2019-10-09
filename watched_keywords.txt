@@ -13570,3 +13570,4 @@
 1570625796	tripleee	arabesquerugs\.com
 1570634391	Glorfindel	otl-pharma\.com
 1570635524	Machavity	copy\W*this\W*(?:site|link)
+1570635558	Makyen	(?-i:cAn\s+eArn)
