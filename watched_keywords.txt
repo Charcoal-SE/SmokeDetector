@@ -13551,3 +13551,4 @@
 1570590344	Nisse Engström	hitac-co\.com
 1570592971	Makyen	digitalcurrency14(?:[\W_]*+(?:at[\W_]*+)?+gmail[\W_]*+(?:dot[\W_]*+)?+com)?
 1570598110	Makyen	mygreatlakeslogin\.com
+1570598225	Makyen	richardtradings001(?:[\W_]*+(?:at[\W_]*+)?+gmail[\W_]*+(?:dot[\W_]*+)?+com)?
