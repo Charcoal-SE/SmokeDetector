@@ -204,7 +204,6 @@ quickbooks
 (?-i:^sunnyaroraww$)
 (?-i:^Anna Justin$)
 (?-i:^Tripnexts$)
-(?-i:^yash$)
 (?-i:^Arun A K$)
 (?-i:^ForeignExchange$)
 (?-i:^Jacob Ethan$)
