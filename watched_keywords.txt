@@ -13461,7 +13461,6 @@
 1570100564	Glorfindel	saglikfit\.com
 1570101780	tripleee	bupa\.com
 1570115308	Makyen	bestridinglawnmower\.com
-1570118292	Makyen	healthstoregems\.com
 1570118312	Makyen	white44\.net
 1570118348	Makyen	customersupport-phonenumber\.com
 1570118595	Makyen	martinwayterproduction\.com
