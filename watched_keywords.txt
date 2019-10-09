@@ -13559,3 +13559,4 @@
 1570603488	Makyen	keto[^\W_]*+original(?:[^\W_]*+(?:recenze|review|\d++|[\da-f]{4,}+)s?)*
 1570604901	Makyen	vegusbet\.net
 1570610223	tripleee	zone\W*online\W*game
+1570611995	tripleee	queenpoker99\.poker
