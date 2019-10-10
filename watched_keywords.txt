@@ -13436,7 +13436,6 @@
 1570013292	tripleee	4rabet\.com
 1570016409	Stormblessed	college of contract management
 1570016427	Stormblessed	CIOB
-1570016550	tripleee	zylophin(?:[\W_]?rx)?
 1570017130	tripleee	donparkersales\.com
 1570017628	Stormblessed	\w{0,2}ounis\W?\d{2,4}
 1570020464	Machavity	fauxncotton\.com
