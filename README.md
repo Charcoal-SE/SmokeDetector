@@ -116,6 +116,27 @@ To set up SmokeDetector in a Docker container, follow the steps below.
   touch ~smokey/ready
   ```
 
+#### Automate Docker deployment with Docker Compose
+
+I'll assume you have the basic ideas of Docker and Docker Compose.
+
+The first thing you need is a properly filled `config` file.
+You can start with [the sample](config.sample).
+
+Create a directory (name it whatever you like),
+place the `config` file and [`docker-compose.yml` file](docker-compose.yml).
+Run `docker-compose up -d` and your SmokeDetector instance is up.
+
+If you want additional control like memory and CPU constraint,
+you can edit `docker-compose.yml` and add the following keys to `smokey`.
+The example values are recommended values.
+
+```yaml
+restart: always  # when your host reboots Smokey can autostart
+mem_limit: 512M
+cpus: 0.5  # Recommend 2.0 or more for spam waves
+```
+
 ## Requirements
 
 SmokeDetector only supports Stack Exchange logins,

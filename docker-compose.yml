@@ -1,0 +1,8 @@
+version: '2.3'
+
+services:
+  web:
+    image: smokey:latest
+    build: .
+    volumes:
+      - config:/home/smokey/SmokeDetector/config
