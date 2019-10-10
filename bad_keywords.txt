@@ -2085,3 +2085,4 @@ cash61\.com(?#Abuse the keyword blacklist to get more weight on the domain of a 
 robux[\W_]*+now[\W_]*+for[\W_]*+free
 gsmagentodev(?:@gmail\.com)?
 zylophin(?:[\W_]?rx)?
+onlineghosthacker\d+(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?(?:com)?)?(?#onlineghosthacker247 seen)
