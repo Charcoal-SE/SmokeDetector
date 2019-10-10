@@ -13577,3 +13577,4 @@
 1570659765	Das_Geek	atomxplus\.com
 1570660114	Undo	playboyistanbul\.com
 1570677633	angussidney	com\.smartio(?#Android package name)
+1570680000	tripleee	amgodata\.com
