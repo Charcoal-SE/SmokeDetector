@@ -116,7 +116,7 @@ To set up SmokeDetector in a Docker container, follow the steps below.
   touch ~smokey/ready
   ```
 
-#### Automate Docker deploymeny with Docker Compose
+#### Automate Docker deployment with Docker Compose
 
 I'll assume you have the basic ideas of Docker and Docker Compose.
 
