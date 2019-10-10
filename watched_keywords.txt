@@ -13582,3 +13582,4 @@
 1570680063	Makyen	uyonlinecare\.com
 1570680071	Makyen	governmenthorizons\.org
 1570680079	Makyen	heartbeat\.fritz\.ai
+1570680087	Makyen	gemcraft\.in(?:@gmail\.com)
