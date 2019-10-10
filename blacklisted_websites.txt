@@ -2577,7 +2577,7 @@ bucket4order\.com
 supplementsell\.com
 sharktankdietreviews\.com
 jbnproduct\.com
-amazonhealthhub\.com
+amazonhealthhub[\W_]*+com
 zipwellnessoffer\.com
 cryptobitcoinsguide\.com
 amazontrial\.com
