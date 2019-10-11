@@ -13620,3 +13620,4 @@
 1570799214	double-beep	customerservicephone-number\.com
 1570799545	double-beep	luxy\.ae
 1570812516	Machavity	tetesitv\.com
+1570829715	Makyen	schoolfees\.com\.ng
