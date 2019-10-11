@@ -12897,7 +12897,6 @@
 1568280483	tripleee	velofelmale\.info
 1568298833	Machavity	cojective\.online
 1568298857	Machavity	sunflaker\.com
-1568304981	Machavity	znacmaintenance\.com
 1568301958	Daniil	haydash\.com
 1568314505	Machavity	quickhelpsupport\.com
 1568323899	Makyen	audext\.com
