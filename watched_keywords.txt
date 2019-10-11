@@ -462,7 +462,7 @@
 1500717664	Glorfindel	hiralsharma\.com
 1500719569	Glorfindel	happynewyear\d*images\.com
 1500760733	Mithrandir	Blackstar@gmail
-1500811942	Mithrandir	ihundespelltemple@gmail\.com
+1500811942	Mithrandir	ihundespelltemple(?:@gmail\.com)?
 1500812468	Mithrandir	thietbigiaothongdaian
 1500813034	Mithrandir	techcheater
 1500881802	Glorfindel	luminaanalytics\.com
