@@ -2086,3 +2086,4 @@ robux[\W_]*+now[\W_]*+for[\W_]*+free
 gsmagentodev(?:@gmail\.com)?
 zylophin(?:[\W_]?rx)?
 onlineghosthacker\d+(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?(?:com)?)?(?#onlineghosthacker247 seen)
+diamond[\W_]*+247[\W_]*+keto
