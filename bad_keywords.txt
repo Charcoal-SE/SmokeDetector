@@ -2088,3 +2088,4 @@ zylophin(?:[\W_]?rx)?
 onlineghosthacker\d+(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?(?:com)?)?(?#onlineghosthacker247 seen)
 diamond[\W_]*+247[\W_]*+keto
 trubodx(?!keto\.wordpress\.com)(?:[\W_]*+(?:keto|\d++))*+
+today22(?=\.com)(?#Abuse the keyword blacklist to get another detection on a persistent spammer.)
