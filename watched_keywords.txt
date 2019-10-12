@@ -13630,3 +13630,4 @@
 1570840396	Makyen	fettleride\.com
 1570840406	Makyen	flexamove(?:[\W_]*+harga)?
 1570840417	Makyen	yersomerso56
+1570840435	Makyen	alphadocumentsonline\.com
