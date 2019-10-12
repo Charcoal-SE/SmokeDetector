@@ -13645,3 +13645,4 @@
 1570840920	Makyen	getsetwild(?!\.com)
 1570840932	Makyen	cariinfo\.id
 1570840942	Makyen	(?-i:5LCS2\.jpg)
+1570840968	Makyen	com\.vismera_rcq\.myapplication
