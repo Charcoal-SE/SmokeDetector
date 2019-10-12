@@ -13641,3 +13641,4 @@
 1570840853	Makyen	aegisvitalityforskolin\.jigsy\.com
 1570840861	Makyen	aegis[\W_]*+vitality(?:[\W_]*+(?:forskolin|\d+))*
 1570840900	Makyen	https-supplementblend-com
+1570840910	Makyen	ginkgo[\W_]*+biloba
