@@ -94,7 +94,7 @@ ASN_WHITELISTED_WEBSITES = [
     # Additional added not as part of a systematic investigation:
     "ntp.org", "cpu-world.com", "caniuse.com", "guru99.com", "fontawesome.com",
     # Added to prevent having 3 detections on just the domain.
-    "writingexplained.org"]
+    "writingexplained.org", "eitren.com"]
 COUNTRY = [
     # N Europe
     "Iceland", "Denmark", "Sweden", "Norway",
