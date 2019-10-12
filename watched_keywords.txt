@@ -13651,3 +13651,4 @@
 1570855737	Makyen	intuittechsupportcenter\.us
 1570850976	Stormblessed	pushfry\.com
 1570853847	Stormblessed	w88atm\.com
+1570851304	Stormblessed	(?-i:^louis jack$)
