@@ -4775,7 +4775,6 @@
 1533712142	Glorfindel	hightidefestival
 1533712148	Tetsuya Yamamoto	hightidefestival\.org
 1533712410	tripleee	sotegirt
-1533712510	Glorfindel	sportsblog\.com
 1533719437	tripleee	read\W+before\W+(?:you\W+)?buy
 1533720091	tripleee	email\W*(?:customer\W*)?support
 1533720292	iBug	hp\W?printer\W?(?:customer\W?)?support
