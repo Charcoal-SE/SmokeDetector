@@ -13665,3 +13665,4 @@
 1570913365	Makyen	affiliatecommissionapps\.com
 1570957569	iBug	haavara\w*
 1570963096	double-beep	songspk24\.info
+1570965518	Nisse Engström	aireacondicionadomadrid\.net
