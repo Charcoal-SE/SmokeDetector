@@ -13664,3 +13664,4 @@
 1570910426	Makyen	escorts[\W_]*+de[\W_]*+lujo
 1570910605	Makyen	bryanwilliams4444(?:@gmail\.com)?
 1570913365	Makyen	affiliatecommissionapps\.com
+1570957569	iBug	haavara\w*
