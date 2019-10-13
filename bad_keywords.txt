@@ -2089,3 +2089,4 @@ onlineghosthacker\d+(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?(?:com)?)?(?#onlineghosth
 diamond[\W_]*+247[\W_]*+keto
 trubodx(?!keto\.wordpress\.com)(?:[\W_]*+(?:keto|\d++))*+
 today22(?=\.com)(?#Abuse the keyword blacklist to get another detection on a persistent spammer.)
+redhackar\d+(?:@gmail\.com)?(?#We've seen redhackar8920)
