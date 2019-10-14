@@ -281,6 +281,11 @@ stackexchange.com:
     msg_types:
       - site-unix.stackexchange.com
 
+  46061:  # La Tertulia
+    commands: false
+    msg_types:
+      - site-spanish.stackexchange.com
+
 meta.stackexchange.com:
   89:  # Tavern on the Meta
     commands: true
