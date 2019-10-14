@@ -21,8 +21,16 @@ else:
     from sh.contrib import git
 
 
+# Python 3.5.0 is the bare minimum needed to run SmokeDetector
 if tuple(int(x) for x in platform.python_version_tuple()) < (3, 5, 0):
     raise RuntimeError("SmokeDetector requires Python version 3.5 or newer to run.")
+
+# However, we're considering the potential to deprecate 3.5 so we need to prepare
+# from this with a warning in the logs about it.
+if tuple(int(x) for x in platform.python_version_tuple()) < (3, 6, 0):
+    log('warning', 'SmokeDetector may remove support for versions of Python before '
+                   '3.6.0 in the future, please consider upgrading your instances of '
+                   'SmokeDetector to use Python 3.6 or newer.')
 
 CommitInfo = namedtuple('CommitInfo', ['id', 'id_full', 'author', 'message'])
 
