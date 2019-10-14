@@ -21,6 +21,9 @@ else:
     from sh.contrib import git
 
 
+if tuple(int(x) for x in platform.python_version_tuple()) < (3, 5, 0):
+    raise RuntimeError("SmokeDetector requires Python version 3.5 or newer to run.")
+
 CommitInfo = namedtuple('CommitInfo', ['id', 'id_full', 'author', 'message'])
 
 git_url = git.config("--get", "remote.origin.url").strip()
