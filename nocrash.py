@@ -18,7 +18,11 @@ if on_windows:
 else:
     from sh.contrib import git
 
-# Set the Python Executable based on this being stored - we refer to this later on for subprocess calls.
+if tuple(int(x) for x in platform.python_version_tuple()) < (3, 5, 0):
+    raise RuntimeError("Requires Python version 3.5 or newer.")
+
+# Set the Python Executable based on this being stored - we refer to this later
+# on for subprocess calls.
 PY_EXECUTABLE = sys.executable
 
 # Log to errorlog.txt so that !!/errorlogs shows us restarts
