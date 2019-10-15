@@ -13693,3 +13693,4 @@
 1571117765	Makyen	mass[\W_]*+m1x(?:[\W_]*+(?:reviews|\d+))*
 1571117777	Makyen	proextender
 1571117848	Makyen	maleenhancementlife\.com
+1571118548	Makyen	arlo-techsolution\.com
