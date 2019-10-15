@@ -13699,3 +13699,4 @@
 1571121389	Makyen	timeout\.com
 1571121420	Makyen	evans\.beck004(?:@gmail\.com)?
 1571121575	Makyen	amjad@martech\.ae
+1571121587	Makyen	cctvsolutions[\W_]*+net
