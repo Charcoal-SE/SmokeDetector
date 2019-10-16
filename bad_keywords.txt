@@ -2092,3 +2092,4 @@ today22(?=\.com)(?#Abuse the keyword blacklist to get another detection on a per
 redhackar\d+(?:@gmail\.com)?(?#We've seen redhackar8920)
 nupetit
 apotik
+selamat
