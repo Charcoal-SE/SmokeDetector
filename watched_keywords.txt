@@ -13746,3 +13746,4 @@
 1571211481	Makyen	radiate-digital\.com
 1571213029	Makyen	klinik(?=.{0,40}?\baborsi\b)
 1571213082	Makyen	mysecureisp\.com
+1571220882	Glorfindel	sociablekit\.com
