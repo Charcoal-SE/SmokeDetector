@@ -4168,7 +4168,6 @@
 1530856188	Makyen	erections?
 1530856208	Makyen	Genius\W*IT\W*(?:Solutions|training)?
 1530862058	Glorfindel	kinematicsmedsol\.com
-1530863025	Makyen	rgyan\.com
 1530864532	Glorfindel	adib24\.com
 1530866335	Makyen	supportsquicken\.com
 1530866347	Makyen	[a-z_]*(?:1_*)?855[\W_]*718[\W_]*2888[a-z_]*
