@@ -13732,3 +13732,4 @@
 1571186129	Makyen	miss[\W_]*+jinda[\W_]*+jaicheang
 1571186158	Makyen	jossklinik\.com
 1571202565	Makyen	rumahkotak\.com
+1571202577	Makyen	(?-i:pMhHI\.jpg)
