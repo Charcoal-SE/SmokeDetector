@@ -2093,3 +2093,4 @@ redhackar\d+(?:@gmail\.com)?(?#We've seen redhackar8920)
 nupetit
 apotik
 penggugur
+klinik(?=.{0,40}?\baborsi\b)
