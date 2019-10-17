@@ -13755,3 +13755,4 @@
 1571260928	Makyen	bomb[\W_]*+cyclone(?:[\W_]*+(?:t|shirts?|2019)){2,}
 1571260939	Makyen	shubhastro2(?:@gmail\.com)?
 1571262277	Makyen	sexta7n\.com
+1571272384	Makyen	joinfuck\.com
