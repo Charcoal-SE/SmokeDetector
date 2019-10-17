@@ -13777,3 +13777,4 @@
 1571342466	Makyen	☛.{0,20}(?:(?:[a-z0-9-]+\.)+[a-z0-9-]+\b|.{0,20}https?://(?!i\.stack\.imgur\.com))
 1571346357	Makyen	bizzone\.com\.ng
 1571346399	Makyen	euniquetech\.com
+1571347665	Makyen	sottoo\.com
