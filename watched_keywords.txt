@@ -13799,3 +13799,4 @@
 1571431389	Makyen	obataborsidokter\.xyz
 1571431545	Makyen	secureone-vanilla\.com
 1571431556	Makyen	(?-i:VIdVz\.png)
+1571431568	Makyen	OneVanilla(?:[\W_]*+(?:gift|card|balance|prepaid))*
