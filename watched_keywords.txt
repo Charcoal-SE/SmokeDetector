@@ -591,7 +591,6 @@
 1502871152	tripleee	privatoria
 1502874048	tripleee	smallbusinessforums\.org
 1502918427	Mithrandir	geekact\.com
-1502918444	Mithrandir	tplinklogin\.net
 1502948352	tripleee	gesundheitsberichten\.de
 1502949035	Glorfindel	miraclebeautysalonatl\.com
 1502954069	Glorfindel	hotmailemaillogin\.net
