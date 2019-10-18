@@ -13797,3 +13797,4 @@
 1571424608	Machavity	facebook\.com/nflstreamguide
 1571428458	Makyen	world[\W_]*+cyber[\W_]*+tech
 1571431389	Makyen	obataborsidokter\.xyz
+1571431545	Makyen	secureone-vanilla\.com
