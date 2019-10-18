@@ -13798,3 +13798,4 @@
 1571428458	Makyen	world[\W_]*+cyber[\W_]*+tech
 1571431389	Makyen	obataborsidokter\.xyz
 1571431545	Makyen	secureone-vanilla\.com
+1571431556	Makyen	(?-i:VIdVz\.png)
