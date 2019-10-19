@@ -13816,3 +13816,4 @@
 1571504038	Makyen	(?-i:x7mv9dy)
 1571504048	Makyen	eminence[\W_]*+vitality(?:[\W_]*+keto)?
 1571504106	Makyen	universetale\.com
+1571504118	Makyen	autonewsreporter\.com
