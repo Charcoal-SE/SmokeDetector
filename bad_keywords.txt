@@ -2094,3 +2094,4 @@ nupetit
 apotik
 penggugur
 klinik(?=.{0,40}?\baborsi\b)
+making\W*over\W*\$2000
