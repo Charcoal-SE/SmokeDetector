@@ -13823,3 +13823,4 @@
 1571505015	Makyen	virtual-staging\.archicgi\.com
 1571515585	Makyen	(?:bts[\W_]*+(?:logo[\W_]*+)?)?make[\W_]*+it[\W_]*+right(?:[\W_]*+(?:logo|t[\W_]*+shirt|[\da-f]{4,}))+
 1571518074	Makyen	jrmudancasbrasilia\.com\.br
+1571521842	Makyen	dewapokerqq\.pagexl\.com
