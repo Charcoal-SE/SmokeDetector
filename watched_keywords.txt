@@ -13805,3 +13805,4 @@
 1571454640	Stormblessed	intelliflare[\W_]*+iq
 1571461785	double-beep	escortservicemumbai\.net
 1571465026	Makyen	immunis[\W_]*+ip(?!\.com(?<=immunisip\.com))
+1571474774	double-beep	imarketninja\.com
