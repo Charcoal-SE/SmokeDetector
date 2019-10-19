@@ -13814,3 +13814,4 @@
 1571504013	Makyen	ketogeniks
 1571504026	Makyen	(?-i:K-JzvG4IFxM)
 1571504038	Makyen	(?-i:x7mv9dy)
+1571504048	Makyen	eminence[\W_]*+vitality(?:[\W_]*+keto)?
