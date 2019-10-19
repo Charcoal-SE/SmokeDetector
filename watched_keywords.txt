@@ -13806,3 +13806,4 @@
 1571465026	Makyen	immunis[\W_]*+ip(?!\.com(?<=immunisip\.com))
 1571474774	double-beep	imarketninja\.com
 1571474794	double-beep	powermindinstitute\.in
+1571474822	double-beep	topwellnessmart\.com
