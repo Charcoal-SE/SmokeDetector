@@ -5436,7 +5436,6 @@
 1536904838	Tetsuya Yamamoto	qshore\.com
 1536906928	Tetsuya Yamamoto	aseangol\.online
 1536907678	Tetsuya Yamamoto	chlorostech\.com
-1536910844	Tetsuya Yamamoto	teachbesttech\.org
 1536910944	Tetsuya Yamamoto	annaifathimacollege\.edu\.in
 1536914815	tripleee	hacklord\d+
 1536923670	tripleee	1445124833
