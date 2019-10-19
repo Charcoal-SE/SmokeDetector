@@ -13819,3 +13819,4 @@
 1571504118	Makyen	autonewsreporter\.com
 1571504131	Makyen	techerudition\.com
 1571504142	Makyen	mahogany[\W_]*+lending[\W_]*+group(?!(?<=mahogany-lending-group)\.business\.site)(?:@gmail\.com)?
+1571504152	Makyen	mahogany-lending-group\.business\.site
