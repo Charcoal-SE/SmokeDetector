@@ -13821,3 +13821,4 @@
 1571504152	Makyen	mahogany-lending-group\.business\.site
 1571504166	Makyen	alenewilson
 1571505015	Makyen	virtual-staging\.archicgi\.com
+1571515585	Makyen	(?:bts[\W_]*+(?:logo[\W_]*+)?)?make[\W_]*+it[\W_]*+right(?:[\W_]*+(?:logo|t[\W_]*+shirt|[\da-f]{4,}))+
