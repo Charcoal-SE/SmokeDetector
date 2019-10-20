@@ -26,6 +26,15 @@ class Any:
         return True
 
 
+def _save_problem_pickle(path):
+    # Keep the most recent copy of a pickle file which had an error.
+    errorpath = path + '-error'
+    if os.path.isfile(errorpath):
+        os.remove(errorpath)
+    if os.path.isfile(path):
+        os.rename(path, errorpath)
+
+
 def _load_pickle(path, encoding='utf-8'):
     newpath = os.path.join(PICKLE_STORAGE, path)
     if os.path.isfile(newpath):
@@ -34,7 +43,7 @@ def _load_pickle(path, encoding='utf-8'):
         with open(path, mode="rb") as f:
             return pickle.load(f, encoding=encoding)
     except UnicodeDecodeError:
-        os.remove(path)
+        _save_problem_pickle(path)
 
         if "apicalls" in path.lower():
             return {}
@@ -42,11 +51,11 @@ def _load_pickle(path, encoding='utf-8'):
         if "bodyfetcher" in path.lower():
             return {}
     except EOFError:
-        os.remove(path)
+        _save_problem_pickle(path)
         raise
     except pickle.UnpicklingError as err:
         if 'pickle data was truncated' in str(err).lower():
-            os.remove(path)
+            _save_problem_pickle(path)
         raise
 
 
