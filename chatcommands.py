@@ -854,14 +854,15 @@ def sync_remote_hard(msg, alias_used='pull-sync-hard'):
     if not is_code_privileged(msg._client.host, msg.owner.id):
         raise CmdException("You don't have code privileges to run this command.")
 
+    git_response = GitManager.sync_remote_hard()[1]
     # Not enough information is passed to commands to send an actual reply. Thus, the reboot
     # is scheduled to happen later and we return the results of the GitManager function, which
     # is the text that's sent as a reply to the user.
     if 'reboot' in alias_used:
         Tasks.later(reboot, msg, original_msg=msg, alias_used="reboot", after=5)
-        return GitManager.sync_remote_hard()[1] + " Automatically rebooting in a few seconds."
+        return git_response + " Automatically rebooting in a few seconds."
 
-    return GitManager.sync_remote_hard()[1] + " You'll probably want to !!/reboot now."
+    return git_response + " You'll probably want to !!/reboot now."
 
 
 @command(privileged=True, give_name=True, aliases=[
