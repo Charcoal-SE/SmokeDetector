@@ -30,24 +30,24 @@ def _load_pickle(path, encoding='utf-8'):
     newpath = os.path.join(PICKLE_STORAGE, path)
     if os.path.isfile(newpath):
         path = newpath
-    with open(path, mode="rb") as f:
-        try:
+    try:
+        with open(path, mode="rb") as f:
             return pickle.load(f, encoding=encoding)
-        except UnicodeDecodeError:
-            os.remove(path)
+    except UnicodeDecodeError:
+        os.remove(path)
 
-            if "apicalls" in path.lower():
-                return {}
+        if "apicalls" in path.lower():
+            return {}
 
-            if "bodyfetcher" in path.lower():
-                return {}
-        except EOFError:
+        if "bodyfetcher" in path.lower():
+            return {}
+    except EOFError:
+        os.remove(path)
+        raise
+    except pickle.UnpicklingError as err:
+        if 'pickle data was truncated' in str(err).lower():
             os.remove(path)
-            raise
-        except pickle.UnpicklingError as err:
-            if 'pickle data was truncated' in str(err).lower():
-                os.remove(path)
-            raise
+        raise
 
 
 def _dump_pickle(path, item, protocol=pickle.HIGHEST_PROTOCOL):
