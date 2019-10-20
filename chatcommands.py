@@ -1354,11 +1354,14 @@ def willbenotified(msg, room_id, se_site):
     return "No, you won't be notified for that site in that room."
 
 
-RETURN_NAMES = {"admin": ["admin", "admins"], "code_admin": ["code admin", "code admins"]}
+RETURN_NAMES = {"admin": ["admin", "admins"], "blacklist_manager": ["blacklist manager", "blacklist manager"]}
 VALID_ROLES = {"admin": "admin",
-               "code_admin": "code_admin",
+               "code_admin": "blacklist_manager",
                "admins": "admin",
-               "codeadmins": "code_admin"}
+               "codeadmins": "blacklist_manager",
+               "blacklist_manager": "blacklist_manager",
+               "blacklister": "blacklist_manager",
+               "blacklisters": "blacklist_manager"}
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
