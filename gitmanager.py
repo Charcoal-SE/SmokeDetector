@@ -222,9 +222,11 @@ class GitManager:
         if not code_privileged:
             if metasmoke_down:
                 return False, "MS is offline, and I can't determine if you are a blacklist manager or not. " \
-                              "If you are a blacklist manager, then wait for MS to be back up before running this command."
+                              "If you are a blacklist manager, then wait for MS to be back up before running " \
+                              "this command."
             else:
-                return False, "Ask a blacklist manager to run that for you. Use `!!/whois blacklister` to find out who's here."
+                return False, "Ask a blacklist manager to run that for you. Use `!!/whois blacklister` to find " \
+                              "out who's here."
 
         try:
             cls.gitmanager_lock.acquire()
