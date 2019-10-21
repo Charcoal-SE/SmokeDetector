@@ -7485,7 +7485,6 @@
 1547194886	Tetsuya Yamamoto	chrisansgroup\.com
 1547196891	Tetsuya Yamamoto	mashhadbranding\.blogfa\.com
 1547199902	tripleee	biginternet\.ca
-1547201896	Makyen	netnic\.org
 1547202682	tripleee	fondofrecipes\.blogspot
 1547205455	Shree	aidm\.org\.in
 1547211583	tripleee	carwise\.ae
