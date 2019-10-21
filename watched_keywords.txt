@@ -13849,3 +13849,4 @@
 1571634561	Makyen	throwedpresents\.com
 1571653183	Glorfindel	veryutils\.com
 1571655394	Glorfindel	antivirustotalsecurity\.com
+1571655449	Glorfindel	digitiquehub\.com
