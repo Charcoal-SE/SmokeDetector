@@ -13899,3 +13899,4 @@
 1571740638	Makyen	thauheuhrow
 1571740648	Makyen	taserdawn
 1571740659	Makyen	(?-i:GIG5V\.jpg)
+1571740671	Makyen	best[\W_]*+dental[\W_]*+(?:\w+[\W_]*+)?clinic
