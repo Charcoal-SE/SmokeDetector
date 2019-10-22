@@ -13920,3 +13920,4 @@
 1571752615	Machavity	tuffclassified\.com
 1571752589	Stormblessed	dillardlamor@gmail\.com
 1571760348	Das_Geek	myprogrammingschool\.com
+1571773249	Makyen	juice[\W_]*+n[\W_]*+java[\W_]*+cafe
