@@ -13917,3 +13917,4 @@
 1571745431	Shree	hipstoredownloads\.com
 1571751025	Machavity	dillard\W*deonte
 1571752393	Machavity	(?-i:^Michael Stathopulo$)
+1571752615	Machavity	tuffclassified\.com
