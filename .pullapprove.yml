@@ -8,7 +8,7 @@ group_defaults:
     enabled: true
 
 groups:
-  code-admins:
+  blacklisters:
     required: 1
     users:
       - angussidney
