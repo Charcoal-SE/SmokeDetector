@@ -13902,3 +13902,4 @@
 1571740671	Makyen	best[\W_]*+dental[\W_]*+(?:\w+[\W_]*+)?clinic
 1571740726	Makyen	wikitechy\.com
 1571740746	Makyen	adebanjoopeyemia(?:@gmail\.com)?
+1571740758	Makyen	drrafiadentist\.ae
