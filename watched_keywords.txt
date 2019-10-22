@@ -5529,7 +5529,6 @@
 1537421542	Tetsuya Yamamoto	tvonlinebola\.com
 1537421556	Tetsuya Yamamoto	totalsportek\.com
 1537422184	tripleee	yalla-shoot\.com
-1537425257	Tetsuya Yamamoto	technobrigadeinfotech\.com
 1537426154	Tetsuya Yamamoto	artificialeyesindia\.com
 1537436407	Shree	instantbulksmtp\.com
 1537439771	tripleee	[a-z_]*(?:44_*)?744[\W_]*810[\W_]*7389[a-z_]*
