@@ -13918,5 +13918,4 @@
 1571751025	Machavity	dillard\W*deonte
 1571752393	Machavity	(?-i:^Michael Stathopulo$)
 1571752615	Machavity	tuffclassified\.com
-1571752566	Stormblessed	michael\.veksler@tech-center\.com
 1571752589	Stormblessed	dillardlamor@gmail\.com
