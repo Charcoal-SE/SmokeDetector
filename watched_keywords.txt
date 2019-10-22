@@ -13706,7 +13706,6 @@
 1571155736	Makyen	oliveruncarow
 1571155749	Makyen	hameshomese
 1571155760	Makyen	edwardwellen
-1571155772	Makyen	pillsenergy\.com
 1571155783	Makyen	belovneft\.com
 1571155798	Makyen	belov[\W_]*+neft[\W_]*+llc
 1571155832	Makyen	infiniterecovery\.com
