@@ -13922,3 +13922,4 @@
 1571760348	Das_Geek	myprogrammingschool\.com
 1571773249	Makyen	juice[\W_]*+n[\W_]*+java[\W_]*+cafe
 1571773832	Makyen	thirdthought\.msae\.org
+1571794754	Makyen	lacvietaudio(?:@gmail\.com)?
