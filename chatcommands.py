@@ -1354,7 +1354,7 @@ def willbenotified(msg, room_id, se_site):
     return "No, you won't be notified for that site in that room."
 
 
-RETURN_NAMES = {"admin": ["admin", "admins"], "blacklist_manager": ["blacklist manager", "blacklist manager"]}
+RETURN_NAMES = {"admin": ["admin", "admins"], "blacklist_manager": ["blacklist manager", "blacklist managers"]}
 VALID_ROLES = {"admin": "admin",
                "code_admin": "blacklist_manager",
                "admins": "admin",
