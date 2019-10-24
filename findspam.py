@@ -1197,6 +1197,7 @@ def watched_ns_for_url_domain(s, site):
         'mbah.men.',
         'nanosupercloud.com.',
         'himalayanwebinfo.com.',
+        'imanagewebs.com.',
     ])
 
 
