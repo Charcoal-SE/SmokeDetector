@@ -1230,6 +1230,7 @@ def watched_ip_for_url_hostname(s, site):
             # AS 13335 CLOUDFLARENET - Cloudflare, Inc., US
             '104.25.224.105',   # rsorder.com jollyhers.com
             '104.27.172.129',   # setupcanonprinter.com
+            '104.31.94.238',    # easyprintersupport.com
             '104.31.95.238',    # easyprintersupport.com
             # AS 14061 DIGITALOCEAN-ASN - DigitalOcean, LLC, US
             '139.59.83.45',     # fake-tech-support techjockey.com
