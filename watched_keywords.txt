@@ -13799,7 +13799,6 @@
 1571474822	double-beep	topwellnessmart\.com
 1571477488	double-beep	mumycares\.com
 1571503977	Makyen	91[\W_]*+9[O0][O0]4[O0][O0]9481
-1571503988	Makyen	aqualeva(?:[\W_]*+(?:cream|face|\d+))*
 1571504000	Makyen	dermatin[\W_]*+moisturizer(?:[\W_]*+cream)?
 1571504013	Makyen	ketogeniks
 1571504026	Makyen	(?-i:K-JzvG4IFxM)
