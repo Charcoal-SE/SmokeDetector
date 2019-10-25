@@ -145,6 +145,7 @@ stackexchange.com:
       - 785560   # Johannes Kuhn
       - 11725517 # Kulfy
       - 15776767 # Das_Geek
+      - 10317043 # treyBake
 
   65945:  # Charcoal Test
     commands: true
@@ -459,6 +460,7 @@ stackoverflow.com:
       - 1023850  # Cœur
       - 6473006  # Zoe
       - 3963457  # Nick A
+      - 10317043 # treyBake
       # NOTICE: please don't add new users until you have Room Owner approval
 
   111347:  # SOBotics
