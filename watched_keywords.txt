@@ -6704,7 +6704,6 @@
 1542955453	Glorfindel	a?arienggo
 1542956568	tripleee	dhruvramlabra
 1542958126	tripleee	getbestdelight\.com
-1542971347	Shree	rapitasystems\.com
 1542975816	Shree	ishop-anthony\d*@yandex\.com
 1542979595	CalvT	reverseimagesearch\.app
 1542982122	Makyen	romemarypaul(?:@gmail\.com)?
