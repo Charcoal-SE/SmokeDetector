@@ -13960,3 +13960,4 @@
 1571986761	Makyen	famaga[\W_]*+group
 1571986773	Makyen	famaga\.com
 1571986839	Makyen	add2cart\.org
+1571987607	Glorfindel	factocert
