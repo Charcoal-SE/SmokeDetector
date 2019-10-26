@@ -13972,3 +13972,4 @@
 1572033557	Glorfindel	procracksoft\.com
 1572062487	Makyen	(?:muie|la\s+naiba|rahat|păsărică)(?#Romanian offensive)
 1572062500	Makyen	gicseh\.com
+1572062511	Makyen	usbullionreserve\.com
