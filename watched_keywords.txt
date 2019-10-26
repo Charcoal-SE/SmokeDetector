@@ -13977,3 +13977,4 @@
 1572086235	Makyen	naturally[\W_]*+him
 1572086247	Makyen	officialscrabbledictionary(?:\.weebly\.com)?
 1572086257	Makyen	thecryptosupport\.com
+1572086270	Makyen	scrabblewordfinders\.blogspot\.[a-z0-9-]+
