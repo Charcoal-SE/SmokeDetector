@@ -13979,3 +13979,4 @@
 1572086257	Makyen	thecryptosupport\.com
 1572086270	Makyen	scrabblewordfinders\.blogspot\.[a-z0-9-]+
 1572086341	Makyen	officialscrabblewordfinder(?:\.yolasite\.com)?
+1572086353	Makyen	misterlau\.com
