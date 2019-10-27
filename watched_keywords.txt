@@ -13992,3 +13992,4 @@
 1572194523	Makyen	khoe247\.vn
 1572194552	Makyen	viemdaitrang247
 1572194579	Makyen	ĐỪNG[\W_]*+BỎ[\W_]*+LỠ
+1572194608	Makyen	(?:tAG6Y\.jpg)
