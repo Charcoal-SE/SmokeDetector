@@ -119,7 +119,7 @@ hrisikesh\W*saloi?
 ^yujie zhao$
 ^pinkcoke$
 (?-i:^Richard Learner$)
-(?-i:^[a-z]+(?:dl?san|(?:dl|ld)l?son)(?<!donaldson)(?<!zhcdsan)(?<!ygoldson)$)
+(?-i:^[a-z]+(?:dl?san|(?:dl|ld)l?son)(?<!donaldson)(?<!zhcdsan)(?<!ygoldson)(?<!tdsan)(?<!nreynoldson)$)
 (?-i:^shiv\W?guptag?$)
 muralidharaB
 ^albertlee$
