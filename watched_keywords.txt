@@ -13996,3 +13996,4 @@
 1572194667	Makyen	gnu[\W_]*+linux[\W_]*+activation[\W_]*+technologies
 1572204409	Makyen	john3m5\.wixsite\.com
 1572212092	Makyen	visaprocess313(?:@gmail\.com)?
+1572212120	Makyen	atahualpa\.com
