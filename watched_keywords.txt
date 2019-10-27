@@ -13994,3 +13994,4 @@
 1572194579	Makyen	ĐỪNG[\W_]*+BỎ[\W_]*+LỠ
 1572194608	Makyen	(?:tAG6Y\.jpg)
 1572194637	Makyen	(?-i:GLAT)
+1572194667	Makyen	gnu[\W_]*+linux[\W_]*+activation[\W_]*+technologies
