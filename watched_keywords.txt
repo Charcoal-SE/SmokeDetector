@@ -14017,3 +14017,4 @@
 1572279222	Makyen	newhappybirthdaywishes\.com
 1572279278	Makyen	filewhopper\.com
 1572279307	Makyen	filewhopper(?!\.com)
+1572279341	Makyen	bolsale\.com
