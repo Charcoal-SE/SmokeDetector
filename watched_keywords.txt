@@ -14018,3 +14018,4 @@
 1572279278	Makyen	filewhopper\.com
 1572279307	Makyen	filewhopper(?!\.com)
 1572279341	Makyen	bolsale\.com
+1572279371	Makyen	(?-i:ATS19ODO)
