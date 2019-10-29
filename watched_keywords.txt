@@ -14052,3 +14052,4 @@
 1572338970	tripleee	slimworks
 1572340538	tripleee	akdoorsteps\.com
 1572342862	tripleee	rush\W*remedy
+1572348449	tripleee	aiobjectives\.com
