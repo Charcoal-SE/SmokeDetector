@@ -14053,3 +14053,4 @@
 1572340538	tripleee	akdoorsteps\.com
 1572342862	tripleee	rush\W*remedy
 1572348449	tripleee	aiobjectives\.com
+1572353673	tripleee	topicaltalks\.com
