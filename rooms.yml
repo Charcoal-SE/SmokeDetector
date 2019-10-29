@@ -7,6 +7,7 @@ stackexchange.com:
       - metasmoke
       - all
       - experimental
+      - no-offensive-mask
 
     privileges:
       - 2848444  # Santa Claus
@@ -152,6 +153,7 @@ stackexchange.com:
 
     msg_types:
       - debug
+      - offensive-mask
 
     privileges:
       inherit:
@@ -163,31 +165,37 @@ stackexchange.com:
     watcher: true
     msg_types:
       - site-askubuntu.com
+      - offensive-mask
 
   2165:  # CRUDE
     commands: false
     msg_types:
       - site-math.stackexchange.com
+      - offensive-mask
 
   95:  # English Language & Usage chat
     commands: false
     msg_types:
       - site-english.stackexchange.com
+      - offensive-mask
 
   388:  # Parenting chat
     commands: false
     msg_types:
       - site-parenting.stackexchange.com
+      - offensive-mask
 
   8089:  # mempool
     commands: false
     msg_types:
       - site-bitcoin.stackexchange.com
+      - offensive-mask
 
   468:  # V'dibarta Bam
     commands: false
     msg_types:
       - site-judaism.stackexchange.com
+      - offensive-mask
 
   35068:  # Money.SE - Smoke Detector
     commands: false
@@ -196,41 +204,49 @@ stackexchange.com:
       - no-all-caps title
       - no-all-caps body
       - no-all-caps answer
+      - offensive-mask
 
   34620:  # Whisper
     commands: false
     msg_types:
       - site-ethereum.stackexchange.com
+      - offensive-mask
 
   22462:  # Russian.SO General Room
     commands: false
     msg_types:
       - site-ru.stackoverflow.com
+      - offensive-mask
 
   11:     # Role-Playing Games General Chat
     commands: false
     msg_types:
       - site-rpg.stackexchange.com
+      - offensive-mask
 
   24938:  # Language Overflow
     commands: false
     msg_types:
       - site-ell.stackexchange.com
+      - offensive-mask
 
   38932:  # The Studio
     commands: false
     msg_types:
       - site-crafts.stackexchange.com
+      - offensive-mask
 
   56223:  # The Spam Blot
     commands: false
     msg_types:
       - site-graphicdesign.stackexchange.com
+      - offensive-mask
 
   59281:  # SFF Cleanup room
     commands: false
     msg_types:
       - site-scifi.stackexchange.com
+      - offensive-mask
       
   58631:  # The Restaurant at the End of the Universe
     commands: true
@@ -238,16 +254,19 @@ stackexchange.com:
     msg_types:
       - site-scifi.stackexchange.com
       - no-phone number detected in title
+      - offensive-mask
 
   61165:  # The Awkward Silence
     commands: false
     msg_types:
       - site-interpersonal.stackexchange.com
+      - offensive-mask
 
   511:
     commands: false
     msg_types:
       - site-japanese.stackexchange.com
+      - offensive-mask
       
   84778:  # The Terminal
     commands: true
@@ -270,22 +289,26 @@ stackexchange.com:
       - site-ja.stackoverflow.com
       - site-es.stackoverflow.com
       - delay
+      - offensive-mask
       
   27:  # Stack Apps
     commands: false
     watcher: false
     msg_types:
       - site-stackapps.com
+      - offensive-mask
 
   96491:  # Jeff's U&L smokedetector room
     commands: true
     msg_types:
       - site-unix.stackexchange.com
+      - offensive-mask
 
   46061:  # La Tertulia
     commands: false
     msg_types:
       - site-spanish.stackexchange.com
+      - offensive-mask
 
 meta.stackexchange.com:
   89:  # Tavern on the Meta
@@ -309,6 +332,7 @@ meta.stackexchange.com:
       - no-offensive body detected
       - no-no whitespace in body
       - no-no whitespace in answer
+      - offensive-mask
 
     privileges:
       inherit:
@@ -353,6 +377,7 @@ meta.stackexchange.com:
     msg_types:
       - all
       - experimental
+      - offensive-mask
     
     privileges:
       - 6109921  # quartata
@@ -373,6 +398,7 @@ stackoverflow.com:
     msg_types:
       - site-stackoverflow.com
       - no-allspam
+      - no-offensive-mask
 
     privileges:
       - 270038   # Floern
@@ -468,6 +494,7 @@ stackoverflow.com:
 
     msg_types:
       - site-stackoverflow.com
+      - offensive-mask
 
     privileges:
       - 270038   # Floern
@@ -506,6 +533,7 @@ stackoverflow.com:
     
     msg_types:
       - site-stackoverflow.com
+      - offensive-mask
       
     privileges:
       - 270038   # Floern

@@ -105,10 +105,8 @@ def check_if_spam_json(json_data):
 
 # noinspection PyBroadException,PyProtectedMember
 def handle_spam(post, reasons, why):
-    post_url = parsing.to_protocol_relative(parsing.url_to_shortlink(post.post_url))
-    poster_url = parsing.to_protocol_relative(parsing.user_url_to_shortlink(post.user_url))
-    shortened_site = post.post_site.replace("stackexchange.com", "SE")  # site.stackexchange.com -> site.SE
     datahandling.append_to_latest_questions(post.post_site, post.post_id, post.title if not post.is_answer else "")
+
     if len(reasons) == 1 and ("all-caps title" in reasons or
                               "repeating characters in title" in reasons or
                               "repeating characters in body" in reasons or
@@ -117,72 +115,34 @@ def handle_spam(post, reasons, why):
                               "repeating words in body" in reasons or
                               "repeating words in answer" in reasons):
         datahandling.add_auto_ignored_post((post.post_id, post.post_site, datetime.now()))
+
     if why is not None and why != "":
         datahandling.add_why(post.post_site, post.post_id, why)
+
     if post.is_answer and post.post_id is not None and post.post_id is not "":
         datahandling.add_post_site_id_link((post.post_id, post.post_site, "answer"), post.parent.post_id)
-    if GlobalVars.reason_weights or GlobalVars.metasmoke_key:
-        reason_weight = sum_weight(reasons)
-        if reason_weight >= 1000:
-            reason_weight_s = " (**{}**)".format(reason_weight)
-        else:
-            reason_weight_s = " ({})".format(reason_weight)
-    else:  # No reason weight if neither cache nor MS
-        reason_weight_s = ""
+
     try:
-        # If the post is an answer type post, the 'title' is going to be blank, so when posting the
-        # message contents we need to set the post title to the *parent* title, so the message in the
-        # chat is properly constructed with parent title instead. This will make things 'print'
-        # in a proper way in chat messages.
-        sanitized_title = parsing.sanitize_title(post.title if not post.is_answer else post.parent.title)
-        sanitized_title = escape_format(sanitized_title).strip()
-
-        # Remove title if it is potentially offensive
-        if 'offensive title detected' not in reasons:
-            message_title = sanitized_title
-        else:
-            message_title = '(Potentially offensive title -- see MS for details)'
-
-        prefix = u"[ [SmokeDetector](//git.io/vyDZv) ]"
-        if GlobalVars.metasmoke_key:
-            prefix_ms = u"[ [SmokeDetector](//git.io/vyDZv) | [MS]({}) ]".format(
-                to_metasmoke_link(post_url, protocol=False))
-        else:
-            prefix_ms = prefix
-
-        # We'll insert reason list later
-        edited = '' if not post.edited else ' \u270F\uFE0F'
+        post_url = parsing.to_protocol_relative(parsing.url_to_shortlink(post.post_url))
+        poster_url = parsing.to_protocol_relative(parsing.user_url_to_shortlink(post.user_url))
         if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
-            s = " {{}}{}: [{}]({}){} by a deleted user on `{}`".format(
-                reason_weight_s, message_title, post_url, edited, shortened_site)
             username = ""
         else:
             username = post.user_name.strip()
-            escaped_username = escape_format(parsing.escape_markdown(username))
-            s = " {{}}{}: [{}]({}){} by [{}]({}) on `{}`".format(
-                reason_weight_s, message_title, post_url, edited, escaped_username, poster_url, shortened_site)
 
         Tasks.do(metasmoke.Metasmoke.send_stats_on_post,
                  post.title_ignore_type, post_url, reasons, post.body, username,
                  post.user_link, why, post.owner_rep, post.post_score,
                  post.up_vote_count, post.down_vote_count)
 
-        log('debug', GlobalVars.parser.unescape(s).encode('ascii', errors='replace'))
+        offensive_mask = 'offensive title detected' in reasons
+        message = build_message(post, reasons)
+        if offensive_mask:
+            post.title = "(potentially offensive title -- see MS for details)"
+            clean_message = build_message(post, reasons)
+
+        log('debug', GlobalVars.parser.unescape(message).encode('ascii', errors='replace'))
         GlobalVars.deletion_watcher.subscribe(post_url)
-
-        reason = message = None
-        for reason_count in range(5, 0, -1):  # Try 5 reasons and all the way down to 1
-            reason = ", ".join(reasons[:reason_count])
-            if len(reasons) > reason_count:
-                reason += ", +{} more".format(len(reasons) - reason_count)
-            reason = reason.capitalize()
-            message = prefix_ms + s.format(reason)  # Insert reason list
-            if len(message) <= 500:
-                break  # Problem solved, stop attempting
-
-        s = s.format(reason)  # Later code needs this variable
-        if len(message) > 500:
-            message = (prefix_ms + s)[:500]  # Truncate directly and keep MS link
 
         without_roles = tuple(["no-" + reason for reason in reasons]) + ("site-no-" + post.post_site,)
 
@@ -191,7 +151,83 @@ def handle_spam(post, reasons, why):
             chatcommunicate.tell_rooms(message, ("experimental",),
                                        without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
         else:
-            chatcommunicate.tell_rooms(message, ("all", "site-" + post.post_site),
-                                       without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
+            if offensive_mask:
+                chatcommunicate.tell_rooms(message, ("all", "site-" + post.post_site),
+                                           without_roles + ("offensive-mask"), notify_site=post.post_site,
+                                           report_data=(post_url, poster_url))
+                chatcommunicate.tell_rooms(clean_message, ("all", "site-" + post.post_site),
+                                           without_roles + ("no-offensive-mask"), notify_site=post.post_site,
+                                           report_data=(post_url, poster_url))
+            else:
+                chatcommunicate.tell_rooms(message, ("all", "site-" + post.post_site),
+                                           without_roles, notify_site=post.post_site,
+                                           report_data=(post_url, poster_url))
     except Exception as e:
         excepthook.uncaught_exception(*sys.exc_info())
+
+
+def build_message(post, reasons):
+    # This is the main report format. Username and user link are deliberately not separated as with title and post
+    # link, because we may want to use "by a deleted user" rather than a username+link.
+    message_format = "{prefix_ms} {{reasons}} ({reason_weight}): [{title}]({post_url}) by {user} on {site}"
+
+    # Post URL, user URL, and site details are all easy - just data from the post object, transformed a bit
+    # via datahandling.
+    post_url = parsing.to_protocol_relative(parsing.url_to_shortlink(post.post_url))
+    poster_url = parsing.to_protocol_relative(parsing.user_url_to_shortlink(post.user_url))
+    shortened_site = post.post_site.replace("stackexchange.com", "SE")  # site.stackexchange.com -> site.SE
+
+    # Message prefix. There's always a link to SmokeDetector; if we have a metasmoke key, there's also a link to the
+    # post's MS record. If we *don't* have a MS key, it's a fair assumption that the post won't be in metasmoke as
+    # we didn't have a key to create a record for it.
+    prefix = u"[ [SmokeDetector](//git.io/vyDZv) ]"
+    if GlobalVars.metasmoke_key:
+        prefix = u"[ [SmokeDetector](//git.io/vyDZv) | [MS]({}) ]".format(
+            to_metasmoke_link(post_url, protocol=False))
+
+    # If we have reason weights cached (GlobalVars.reason_weights) we can calculate total weight for this report;
+    # likewise, if we have a MS key, we can fetch the weights and then calculate. If we have neither, tough luck.
+    if GlobalVars.reason_weights or GlobalVars.metasmoke_key:
+        reason_weight = sum_weight(reasons)
+        if reason_weight >= 1000:
+            reason_weight = "**{}**".format(reason_weight)
+        else:
+            reason_weight = "{}".format(reason_weight)
+    else:
+        reason_weight = ""
+
+    # If the post is an answer, it doesn't have a title, so we use the question's title instead. Either way, we
+    # make sure it's escaped. We also add the edited indicator here.
+    sanitized_title = parsing.sanitize_title(post.title if not post.is_answer else post.parent.title)
+    sanitized_title = escape_format(sanitized_title).strip()
+    sanitized_title = sanitized_title + ('' if not post.edited else ' \u270F\uFE0F')
+
+    # If we have user details available, we'll linkify the username. If we don't, we call it a deleted user.
+    if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
+        user = "a deleted user"
+    else:
+        username = post.user_name.strip()
+        escaped_username = escape_format(parsing.escape_markdown(username))
+        user = "[{}]({})".format(escaped_username, poster_url)
+
+    # Build the main body of the message. The next step is to insert the reason list while keeping the message
+    # under 500 characters long.
+    message = message_format.format(prefix_ms=prefix, reason_weight=reason_weight, title=sanitized_title,
+                                    post_url=post_url, user=user, site=shortened_site)
+
+    for reason_count in range(5, 0, -1):
+        reason = ", ".join(reasons[:reason_count])
+        if len(reasons) > reason_count:
+            reason += ", +{} more".format(len(reasons) - reason_count)
+        reason = reason.capitalize()
+        attempt = message.format(reasons=reason)
+        if len(attempt) <= 500:
+            message = attempt
+            break
+
+    # If the message is still longer than 500 chars after trying to reduce the reason list, we're out of options,
+    # so just cut the end of the message off.
+    if len(message) > 500:
+        message = message[:500]
+
+    return message
