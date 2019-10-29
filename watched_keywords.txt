@@ -13457,7 +13457,6 @@
 1570314468	Makyen	mihmansho\.com
 1570316228	Makyen	soonsoon754
 1570316253	Makyen	illuminatiihome65(?:@gmail\.com)?
-1570320293	Stormblessed	\W*[【】]\W*
 1570322019	Makyen	mr[\W_]*+moore[\W_]*+peterson
 1570322037	Makyen	petersonmoore5(?:@outlook\.com)
 1570343809	Makyen	breakyourownnews\.com
