@@ -12637,7 +12637,6 @@
 1567368755	double-beep	warrensinvestors(?:@gmail\.com)
 1567361419	Stormblessed	bitrush
 1567369817	Makyen	(?<=fiverr\.com/)modern_writer
-1567372713	Makyen	scrabblewordfinder\.vip
 1567395005	Makyen	fastnewsfeed\.com
 1567395014	Makyen	grpsinternational\.com
 1567395024	Makyen	(?-i:UCjEADaiyImb8BIkMmwLTpEA)(?#YouTube channel)

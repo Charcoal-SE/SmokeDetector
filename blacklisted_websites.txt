@@ -3225,3 +3225,4 @@ suplistar\.com
 testhouse\.net
 7zip\.vip
 applock\.ooo
+scrabblewordfinder\.vip
