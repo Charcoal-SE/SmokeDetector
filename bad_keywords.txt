@@ -2099,3 +2099,4 @@ michael\.veksler@tech-center\.com
 rezola
 aqualeva(?:[\W_]*+(?:cream|face|\d+))*
 exogenous[\W_]*+keto(?:[\W_]*+(?:ca|\d+))*+
+evaria
