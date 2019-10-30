@@ -75,7 +75,7 @@ class MetasmokeCache:
                           [1] a cache hit status - one of HIT-VALID, HIT-PERSISTENT, HIT-GENERATED, or MISS-NOGEN
         """
         def generator():
-            global uri, params
+            nonlocal uri, params
             if params is None:
                 params = {'page': 1, 'key': globalvars.GlobalVars.metasmoke_key}
             else:
