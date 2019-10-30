@@ -14065,3 +14065,4 @@
 1572420147	tripleee	mobileapplica\.com
 1572424888	Makyen	imstechnologiesgroup\.com
 1572424942	Makyen	clinxx[\W_]*+cream
+1572428776	Makyen	peau[\W_]*+jeune[\W_]*+avis
