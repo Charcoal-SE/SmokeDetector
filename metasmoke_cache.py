@@ -86,6 +86,8 @@ class MetasmokeCache:
                 resp = metasmoke.Metasmoke.get(uri, params=params)
                 if not resp.ok:
                     break
+                else:
+                    page = resp.json()
                 if 'items' in page:
                     items.extend(page['items'])
                 if page['has_more'] is False:
