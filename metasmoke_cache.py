@@ -141,5 +141,5 @@ def dump_cache_data():
 
 def is_website_whitelisted(domain):
     whitelist = MetasmokeCache.fetch_from_api('whitelisted-domains', '/api/v2.0/tags/name/whitelisted/domains',
-                                              params={'filter': 'HGGGFLHIHKIHOOH'}, expiry=3600)
+                                              params={'filter': 'HGGGFLHIHKIHOOH', 'per_page': '100'}, expiry=3600)
     return len(whitelist) > 0 and isinstance(whitelist[0], dict) and domain in map(lambda x: x['domain'], whitelist)
