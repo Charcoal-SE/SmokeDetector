@@ -84,7 +84,7 @@ class MetasmokeCache:
             items = []
             while True:
                 resp = metasmoke.Metasmoke.get(uri, params=params)
-                if not resp.ok:
+                if resp is None or not resp.ok:
                     break
                 else:
                     page = resp.json()
