@@ -17,6 +17,8 @@ import regex
 from glob import glob
 import sqlite3
 
+from metasmoke_cache import MetasmokeCache
+
 
 def exit_mode(*args, code=0):
     args = set(args)
@@ -82,6 +84,12 @@ class ErrorLogs:
 
 class Helpers:
     min_log_level = 0
+
+
+def is_website_whitelisted(domain):
+    whitelist = MetasmokeCache.fetch_from_api('whitelisted-domains', '/api/v2.0/tags/name/whitelisted/domains',
+                                              params={'filter': 'HGGGFLHIHKIHOOH'}, expiry=3600)
+    return domain in map(lambda x: x['domain'], whitelist)
 
 
 def escape_format(s):
