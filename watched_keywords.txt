@@ -14060,3 +14060,4 @@
 1572379478	Das_Geek	visa4uk\.ru
 1572379737	Machavity	try[\w\s]*g1ant
 1572412780	Makyen	agenslotidn\.com
+1572412792	Makyen	sure[\W_]*+cleanse
