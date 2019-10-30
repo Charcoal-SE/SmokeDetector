@@ -29,6 +29,7 @@ from helpers import log, exit_mode, only_blacklists_changed, \
 from gitmanager import GitManager
 import findspam
 from socketscience import SocketScience
+import metasmoke_cache
 
 
 MAX_FAILURES = 10  # Preservative, 10 errors = MS down
@@ -174,6 +175,9 @@ class Metasmoke:
         elif "everything_is_broken" in message:
             if message["everything_is_broken"] is True:
                 exit_mode("shutdown")
+        elif "domain_whitelist" in message:
+            if message["domain_whitelist"] == "refresh":
+                metasmoke_cache.MetasmokeCache.delete('whitelisted-domains')
 
     @staticmethod
     def send_stats_on_post(title, link, reasons, body, username, user_link, why, owner_rep,

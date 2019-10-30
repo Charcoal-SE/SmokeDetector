@@ -48,7 +48,7 @@ class MetasmokeCache:
                           [1] a cache hit status - one of HIT-VALID, HIT-PERSISTENT, HIT-GENERATED, or MISS-NOGEN
         """
         value, cache_status = MetasmokeCache.get(key)
-        if value:
+        if value is not None:
             # Cache hit. Doesn't matter what kind, because .get ensures it's valid. Return the item and status as-is.
             return value, cache_status
         elif value is None and generator is not None:
@@ -111,7 +111,7 @@ class MetasmokeCache:
         """
         MetasmokeCache._cache[key] = value
         if expiry is not None:
-            MetasmokeCache._expiries = int(time.time()) + expiry
+            MetasmokeCache._expiries[key] = int(time.time()) + expiry
 
         tasks.Tasks.do(dump_cache_data)
 
@@ -142,4 +142,4 @@ def dump_cache_data():
 def is_website_whitelisted(domain):
     whitelist = MetasmokeCache.fetch_from_api('whitelisted-domains', '/api/v2.0/tags/name/whitelisted/domains',
                                               params={'filter': 'HGGGFLHIHKIHOOH'}, expiry=3600)
-    return domain in map(lambda x: x['domain'], whitelist)
+    return len(whitelist) > 0 and isinstance(whitelist[0], dict) and domain in map(lambda x: x['domain'], whitelist)
