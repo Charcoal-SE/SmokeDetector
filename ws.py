@@ -14,6 +14,7 @@ install_thread_excepthook()
 # test it thoroughly.
 
 import os
+import platform
 # noinspection PyPackageRequirements
 import websocket
 from threading import Thread
@@ -63,6 +64,17 @@ if any('--loglevel' in x for x in sys.argv):
         Helpers.min_log_level = 0
 else:
     Helpers.min_log_level = 0
+
+# Python 3.5.0 is the bare minimum needed to run SmokeDetector
+if tuple(int(x) for x in platform.python_version_tuple()) < (3, 5, 0):
+    raise RuntimeError("SmokeDetector requires Python version 3.5 or newer to run.")
+
+# However, we're considering the potential to deprecate 3.5 so we need to prepare
+# from this with a warning in the logs about it.
+if tuple(int(x) for x in platform.python_version_tuple()) < (3, 6, 0):
+    log('warning', 'SmokeDetector may remove support for versions of Python before '
+                   '3.6.0 in the future, please consider upgrading your instances of '
+                   'SmokeDetector to use Python 3.6 or newer.')
 
 if not GlobalVars.metasmoke_host:
     log('info', "metasmoke host not found. Set it as metasmoke_host in the config file. "

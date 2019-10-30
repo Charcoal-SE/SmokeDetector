@@ -13,24 +13,12 @@ import threading
 import regex
 import subprocess as sp
 import platform
-from helpers import log
 if 'windows' in platform.platform().lower():
     # noinspection PyPep8Naming
     from classes._Git_Windows import git, GitError
 else:
     from sh.contrib import git
 
-
-# Python 3.5.0 is the bare minimum needed to run SmokeDetector
-if tuple(int(x) for x in platform.python_version_tuple()) < (3, 5, 0):
-    raise RuntimeError("SmokeDetector requires Python version 3.5 or newer to run.")
-
-# However, we're considering the potential to deprecate 3.5 so we need to prepare
-# from this with a warning in the logs about it.
-if tuple(int(x) for x in platform.python_version_tuple()) < (3, 6, 0):
-    log('warning', 'SmokeDetector may remove support for versions of Python before '
-                   '3.6.0 in the future, please consider upgrading your instances of '
-                   'SmokeDetector to use Python 3.6 or newer.')
 
 CommitInfo = namedtuple('CommitInfo', ['id', 'id_full', 'author', 'message'])
 
@@ -148,13 +136,8 @@ class GlobalVars:
 
     if os.path.isfile('config') and "pytest" not in sys.modules:
         config_parser.read('config')
-        log('debug', "Configuration loaded from \"config\"")
     else:
         config_parser.read('config.ci')
-        if "pytest" in sys.modules and os.path.isfile('config'):  # Another config found while running in pytest
-            log('debug', "Running in pytest, force load config from \"config.ci\"")
-        else:
-            log('debug', "Configuration loaded from \"config.ci\"")
 
     config = config_parser["Config"]  # It's a collections.OrderedDict now
 
@@ -225,7 +208,6 @@ class GlobalVars:
             "at [rev {}]({}/commit/{}) (running on {})".format(
                 GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
                 GlobalVars.commit.id, GlobalVars.location)
-        log('debug', "GlobalVars loaded")
 
 
 GlobalVars.reload()
