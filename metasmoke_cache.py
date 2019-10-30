@@ -1,8 +1,8 @@
 import time
-from datahandling import _dump_pickle
-from metasmoke import Metasmoke
-from globalvars import GlobalVars
-from tasks import Tasks
+import datahandling
+import metasmoke
+import globalvars
+import tasks
 
 
 class MetasmokeCache:
@@ -55,7 +55,7 @@ class MetasmokeCache:
             # Cache miss, but we have a generator available so we can gen a value and return that.
             value = generator()
             MetasmokeCache.insert(key, value, expiry)
-            Tasks.do(dump_cache_data)
+            tasks.Tasks.do(dump_cache_data)
             return value, 'HIT-GENERATED'
         else:
             # Cache miss, and we can't generate a value - that's a MISS-NOGEN.
@@ -77,13 +77,13 @@ class MetasmokeCache:
         def generator():
             global uri, params
             if params is None:
-                params = {'page': 1, 'key': GlobalVars.metasmoke_key}
+                params = {'page': 1, 'key': globalvars.GlobalVars.metasmoke_key}
             else:
-                params = params.update({'page': 1, 'key': GlobalVars.metasmoke_key})
+                params = params.update({'page': 1, 'key': globalvars.GlobalVars.metasmoke_key})
 
             items = []
             while True:
-                page = Metasmoke.get(uri, params=params).json()
+                page = metasmoke.Metasmoke.get(uri, params=params).json()
                 if 'items' in page:
                     items.extend(page['items'])
                 if page['has_more'] is False:
@@ -109,7 +109,7 @@ class MetasmokeCache:
         if expiry is not None:
             MetasmokeCache._expiries = int(time.time()) + expiry
 
-        Tasks.do(dump_cache_data)
+        tasks.Tasks.do(dump_cache_data)
 
     @staticmethod
     def delete(key):
@@ -121,7 +121,7 @@ class MetasmokeCache:
         """
         del MetasmokeCache._cache[key]
         del MetasmokeCache._expiries[key]
-        Tasks.do(dump_cache_data)
+        tasks.Tasks.do(dump_cache_data)
 
 
 def dump_cache_data():
@@ -131,7 +131,8 @@ def dump_cache_data():
 
     :returns: None
     """
-    _dump_pickle('metasmokeCacheData.p', {'cache': MetasmokeCache._cache, 'expiries': MetasmokeCache._expiries})
+    datahandling._dump_pickle('metasmokeCacheData.p',
+                              {'cache': MetasmokeCache._cache, 'expiries': MetasmokeCache._expiries})
 
 
 def is_website_whitelisted(domain):

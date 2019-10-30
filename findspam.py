@@ -23,7 +23,7 @@ import requests
 import chatcommunicate
 
 from helpers import log
-from metasmoke_cache import is_website_whitelisted
+import metasmoke_cache
 from globalvars import GlobalVars
 import blacklists
 
@@ -442,7 +442,7 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
 
 def is_whitelisted_website(url):
     # Imported from method link_at_end
-    return bool(WHITELISTED_WEBSITES_REGEX.search(url)) or is_website_whitelisted(url)
+    return bool(WHITELISTED_WEBSITES_REGEX.search(url)) or metasmoke_cache.is_website_whitelisted(url)
 
 
 def levenshtein(s1, s2):
