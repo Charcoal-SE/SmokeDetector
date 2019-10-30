@@ -6783,7 +6783,6 @@
 1543377728	Tetsuya Yamamoto	ukulelesreview\.com
 1543381420	Tetsuya Yamamoto	genodrivepills\.com
 1543381750	Shree	gologica\.com
-1543383188	Makyen	vashikaranlovespell\.com
 1543383635	Tetsuya Yamamoto	codenull\.online
 1543384183	Shree	codelist\.cc
 1543384194	Tetsuya Yamamoto	codenull\.net
@@ -12358,7 +12357,6 @@
 1566609845	Makyen	fix-printer-problem\.blogspot\.com
 1566610019	Makyen	freecoursesites\.online
 1566613583	Makyen	^(?:\s*<p>\s*(?:<\/?\w+\/?>\s*)*(?:<a href="[^>]*>)?\W*<img src="[^>]*>(?:<\/?\w+\/?>\s*)*)+$
-1566623038	Makyen	comehomekd\.com
 1566623086	Makyen	sunraised[\W_]*hemp[\W_]*oil(?:[\W_]*(?:\d+|[\da-f]{4,}))*
 1566625341	Makyen	trioangle\.com
 1566627114	Makyen	ultramax[\W_]*testo(?:[\W_]*(?:enhancer|\d+))*
@@ -13904,7 +13902,6 @@
 1571794762	Makyen	audiolacviet\.com
 1571803756	Makyen	latestupdatedtricks\.com
 1571810197	Jenayah	vanancaptioning\.net
-1571810667	tripleee	takeapills\.com
 1571811345	tripleee	technical-education\.com
 1571815322	tripleee	casino-korea\.com
 1571815946	rene	olmtopstconverterultimate\.com
@@ -14059,3 +14056,30 @@
 1572368679	double-beep	familytreemakersupport\.com
 1572379478	Das_Geek	visa4uk\.ru
 1572379737	Machavity	try[\w\s]*g1ant
+1572412780	Makyen	agenslotidn\.com
+1572412792	Makyen	sure[\W_]*+cleanse
+1572412802	Makyen	oxbridgeessays\.com
+1572418104	A J	jimare\.com
+1572418600	Makyen	uduehiherbalcare(?:@gmail\.com)?
+1572419357	Makyen	krogerfeedback\.pro
+1572420147	tripleee	mobileapplica\.com
+1572424888	Makyen	imstechnologiesgroup\.com
+1572424942	Makyen	clinxx[\W_]*+cream
+1572428776	Makyen	peau[\W_]*+jeune[\W_]*+avis
+1572428786	Makyen	omegamaxx
+1572428820	Makyen	juventus[\W_]*+cream
+1572428831	Makyen	onlinehacker4hire(?:@gmail\.com)?
+1572430953	Makyen	josepinkrow
+1572430965	Makyen	kakenhames
+1572436154	tripleee	internetinjustice\.com
+1572437799	double-beep	ketofitstore\.com
+1572437871	tripleee	cvsmedshop\.com
+1572437884	tripleee	a-pvpchem\.com
+1572437897	tripleee	cancermedspharmacy\.org
+1572437909	double-beep	diamondusedcars\.org
+1572437920	tripleee	vapesshop\.org
+1572442781	Machavity	plotgraphs\.com
+1572443950	double-beep	1motorcarnews\.com
+1572449383	Makyen	paperpk-jobs\.com
+1572449994	Machavity	pdf2word\.io
+1572462615	tripleee	empiremarket-link\.com

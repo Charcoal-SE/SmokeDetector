@@ -2101,3 +2101,4 @@ aqualeva(?:[\W_]*+(?:cream|face|\d+))*
 exogenous[\W_]*+keto(?:[\W_]*+(?:ca|\d+))*+
 evaria
 doctorekpen\w*(?:@gmail\.com)?
+atmmachine\d+(?:@gmail\.com)?

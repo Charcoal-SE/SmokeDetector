@@ -50,7 +50,6 @@ JoeClark
 ^gesture(?: screen)?$
 ^jhon lee$
 ^mike alec$
-^Madhav sharma$
 car\W?insurance
 lavinia\W?stark
 rosanna\W?cart
