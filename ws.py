@@ -23,8 +23,9 @@ import chatcommunicate
 from datetime import datetime
 from spamhandling import check_if_spam_json
 from globalvars import GlobalVars
-from datahandling import load_files, filter_auto_ignored_posts
+from datahandling import _load_pickle, PICKLE_STORAGE, load_files, filter_auto_ignored_posts
 from metasmoke import Metasmoke
+from metasmoke_cache import MetasmokeCache
 from deletionwatcher import DeletionWatcher
 import json
 import time
@@ -76,6 +77,18 @@ if not GlobalVars.metasmoke_ws_host:
 def restart_automatically():
     Metasmoke.send_statistics()
     exit_mode("reboot")
+
+
+def load_ms_cache_data():
+    """
+    Load cached data from a pickle file on disk. Should really only need to be called once, on startup.
+
+    :returns: None
+    """
+    if os.path.isfile(os.path.join(PICKLE_STORAGE, 'metasmokeCacheData.p')):
+        data = _load_pickle('metasmokeCacheData.p')
+        MetasmokeCache._cache = data['cache']
+        MetasmokeCache._expiries = data['expiries']
 
 
 # Restart after 6 hours, put this thing here so it doesn't get stuck at updating TLD or logging in indefinitely
@@ -132,6 +145,7 @@ if GlobalVars.flovis_host:
     GlobalVars.flovis = Flovis(GlobalVars.flovis_host)
 
 load_files()
+load_ms_cache_data()
 filter_auto_ignored_posts()
 
 

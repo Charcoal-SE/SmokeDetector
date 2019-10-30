@@ -16,7 +16,6 @@ from parsing import api_parameter_from_link, post_id_from_link
 from globalvars import GlobalVars
 import blacklists
 from helpers import ErrorLogs
-from metasmoke_cache import MetasmokeCache
 
 last_feedbacked = None
 PICKLE_STORAGE = "pickles/"
@@ -125,7 +124,6 @@ def load_files():
     if _has_pickle("metasmokePostIds.p"):
         GlobalVars.metasmoke_ids = _load_pickle("metasmokePostIds.p", encoding='utf-8')
     blacklists.load_blacklists()
-    MetasmokeCache.load_cache_data()
 
 
 def filter_auto_ignored_posts():
