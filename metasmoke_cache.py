@@ -1,6 +1,5 @@
 import time
-from os.path import isfile, join
-from datahandling import _load_pickle, _dump_pickle, PICKLE_STORAGE
+from datahandling import _dump_pickle
 from metasmoke import Metasmoke
 from globalvars import GlobalVars
 from tasks import Tasks
@@ -133,3 +132,9 @@ def dump_cache_data():
     :returns: None
     """
     _dump_pickle('metasmokeCacheData.p', {'cache': MetasmokeCache._cache, 'expiries': MetasmokeCache._expiries})
+
+
+def is_website_whitelisted(domain):
+    whitelist = MetasmokeCache.fetch_from_api('whitelisted-domains', '/api/v2.0/tags/name/whitelisted/domains',
+                                              params={'filter': 'HGGGFLHIHKIHOOH'}, expiry=3600)
+    return domain in map(lambda x: x['domain'], whitelist)

@@ -22,7 +22,8 @@ import dns.resolver
 import requests
 import chatcommunicate
 
-from helpers import log, is_website_whitelisted
+from helpers import log
+from metasmoke_cache import is_website_whitelisted
 from globalvars import GlobalVars
 import blacklists
 
