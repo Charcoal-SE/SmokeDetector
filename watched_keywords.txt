@@ -14088,3 +14088,4 @@
 1572522520	Makyen	healthstrikes(?!\.com)
 1572522746	Makyen	maleenhancementtips\.com
 1572523063	Makyen	skin[\W_]*+perfecta
+1572523090	Makyen	darrelloorow
