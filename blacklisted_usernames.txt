@@ -209,3 +209,4 @@ quickbooks
 (?-i:^CoolGuy6969$)
 (?-i:Eva Wei$)
 \bcunt\d*\b
+(?-i:^usbullionreserve$)
