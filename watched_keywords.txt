@@ -14085,3 +14085,4 @@
 1572512095	Shree	businessapac\.com
 1572522467	Makyen	B075V2R4SF
 1572522506	Makyen	healthwellnessissuez\.blogspot
+1572522520	Makyen	healthstrikes(?!\.com)
