@@ -1200,6 +1200,7 @@ def watched_ns_for_url_domain(s, site):
         'himalayanwebinfo.com.',
         'imanagewebs.com.',
         'xincache.com.',
+        'ui-dns.com.',
     ])
 
 
