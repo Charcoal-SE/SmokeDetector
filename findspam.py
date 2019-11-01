@@ -1202,6 +1202,7 @@ def watched_ns_for_url_domain(s, site):
         'imanagewebs.com.',
         'xincache.com.',
         'ui-dns.com.',
+        'supercp.com.',
     ])
 
 
