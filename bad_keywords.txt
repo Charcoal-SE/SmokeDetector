@@ -2103,3 +2103,4 @@ evaria
 doctorekpen\w*(?:@gmail\.com)?
 atmmachine\d+(?:@gmail\.com)?
 clinxx
+vitariche
