@@ -210,3 +210,4 @@ quickbooks
 (?-i:Eva Wei$)
 \bcunt\d*\b
 (?-i:^usbullionreserve$)
+(?-i:^khadim hussain$)
