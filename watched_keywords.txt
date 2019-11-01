@@ -14103,3 +14103,4 @@
 1572547140	Makyen	mr[\W_]*+hillian[\W_]*+qeen
 1572547246	Makyen	ultrafastketoboostwebsite\.blogspot
 1572547473	Machavity	zoowho\.com
+1572569551	Makyen	ghalibsolutionlimited(?:@gmail\.com)?
