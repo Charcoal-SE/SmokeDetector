@@ -212,3 +212,4 @@ quickbooks
 (?-i:^usbullionreserve$)
 (?-i:^khadim hussain$)
 (?-i:^stevensegui$)
+(^-i:^Jivendro Adriaans$)
