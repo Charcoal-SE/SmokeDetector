@@ -211,3 +211,4 @@ quickbooks
 \bcunt\d*\b
 (?-i:^usbullionreserve$)
 (?-i:^khadim hussain$)
+(?-i:^stevensegui$)
