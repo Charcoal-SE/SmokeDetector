@@ -14125,3 +14125,4 @@
 1572693767	Makyen	(?-i:8hJQ2Egfvus)
 1572694190	Makyen	thenutritionsclinic\.com
 1572694217	Makyen	thenutritionsclinic(?!\.com)
+1572704310	double-beep	pustudy\.com
