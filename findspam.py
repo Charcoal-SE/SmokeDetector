@@ -1203,6 +1203,7 @@ def watched_ns_for_url_domain(s, site):
         'xincache.com.',
         'ui-dns.com.',
         'supercp.com.',
+        'crystalregistry.com.',
     ])
 
 
