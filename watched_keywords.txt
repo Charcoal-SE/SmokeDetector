@@ -14140,3 +14140,4 @@
 1572812172	Makyen	(?-i:xP6Ee)
 1572812202	Makyen	vk[\W_]*+aassociates(?!\.com(?<=vkaassociates\.com))
 1572812230	Makyen	(?-i:9e0MuvajmJ)
+1572812257	Makyen	rickandmortytv\.online
