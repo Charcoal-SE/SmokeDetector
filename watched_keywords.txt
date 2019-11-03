@@ -14131,3 +14131,4 @@
 1572736530	Machavity	tardodty\.com
 1572749562	Makyen	solitaire\.onl
 1572749587	Makyen	shareit\.onl
+1572749612	Makyen	ucbrowser\.vip
