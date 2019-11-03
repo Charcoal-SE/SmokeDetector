@@ -7,22 +7,22 @@ import html
 
 
 class PostData:
-    def __init__(self):
-        self.post_id = None
-        self.post_url = None
-        self.post_type = None
-        self.site = None
-        self.owner_url = None
-        self.owner_name = None
-        self.owner_rep = None
-        self.title = None
-        self.body = None
-        self.score = None
-        self.up_vote_count = None
-        self.down_vote_count = None
-        self.question_id = None
-        self.creation_date = None
-        self.last_edit_date = None
+    def __init__(self, id, url, type, site, owner_url, owner_name, owner_rep, title, body, score, ups, downs, qid, date, lastEdit):
+        self.post_id = id
+        self.post_url = url
+        self.post_type = type
+        self.site = site
+        self.owner_url = owner_url
+        self.owner_name = owner_name
+        self.owner_rep = owner_rep
+        self.title = title
+        self.body = body
+        self.score = score
+        self.up_vote_count = ups
+        self.down_vote_count = downs
+        self.question_id = qid
+        self.creation_date = date
+        self.last_edit_date = lastEdit
 
     @property
     def as_dict(self):

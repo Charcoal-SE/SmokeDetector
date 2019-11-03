@@ -1558,21 +1558,15 @@ def allspam(msg, url):
         # Add blacklisted user - use most downvoted post as post URL
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
         add_blacklisted_user(user, message_url, sorted(posts, key=lambda x: x['score'])[0]['owner']['link'])
-        # TODO: Postdata refactor, figure out a better way to use apigetpost
         for post in posts:
-            post_data = PostData()
-            post_data.post_id = post['post_id']
-            post_data.post_url = url_to_shortlink(post['link'])
+            post_data = PostData(post['post_id'], url=url_to_shortlink(post['link']), title=post['title'],
+                                 body=post['body'], score=post['score'], ups=post['up_vote_count'],
+                                 downs=post['down_vote_count'], owner_name=unescape(post['owner']['display_name']),
+                                 owner_url=post['owner']['link'], owner_rep=post['owner']['reputation'], date=None,
+                                 lastEdit=None, qid=None, site=None, type=None)
             *discard, post_data.site, post_data.post_type = fetch_post_id_and_site_from_url(
                 url_to_shortlink(post['link']))
-            post_data.title = unescape(post['title'])
-            post_data.owner_name = unescape(post['owner']['display_name'])
-            post_data.owner_url = post['owner']['link']
-            post_data.owner_rep = post['owner']['reputation']
-            post_data.body = post['body']
-            post_data.score = post['score']
-            post_data.up_vote_count = post['up_vote_count']
-            post_data.down_vote_count = post['down_vote_count']
+
             if post_data.post_type == "answer":
                 # Annoyingly we have to make another request to get the question ID, since it is only returned by the
                 # /answers route
