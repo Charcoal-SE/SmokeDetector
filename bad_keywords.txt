@@ -2104,3 +2104,4 @@ doctorekpen\w*(?:@gmail\.com)?
 atmmachine\d+(?:@gmail\.com)?
 clinxx
 vitariche
+new[\W_]*+user[\W_]*+peasants?
