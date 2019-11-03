@@ -14138,3 +14138,4 @@
 1572802313	Makyen	u=232515
 1572812081	Makyen	I\b.{0,40}?https://stackoverflow\.com/users/1
 1572812172	Makyen	(?-i:xP6Ee)
+1572812202	Makyen	vk[\W_]*+aassociates(?!\.com(?<=vkaassociates\.com))
