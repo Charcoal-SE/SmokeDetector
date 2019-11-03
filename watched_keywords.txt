@@ -14137,3 +14137,4 @@
 1572788762	Nisse Engström	vkaassociates\.com
 1572802313	Makyen	u=232515
 1572812081	Makyen	I\b.{0,40}?https://stackoverflow\.com/users/1
+1572812172	Makyen	(?-i:xP6Ee)
