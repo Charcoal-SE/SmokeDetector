@@ -14143,3 +14143,4 @@
 1572812257	Makyen	rickandmortytv\.online
 1572812286	Makyen	kardesim[\W_]*+rahattan[\W_]*+gelsıkıntı
 1572812315	Makyen	geniuswebhackers(?:@gmail\.com)?
+1572825959	Makyen	arsenalloancenters(?:@gmail\.com)?
