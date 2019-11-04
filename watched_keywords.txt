@@ -14172,3 +14172,4 @@
 1572889062	Machavity	indeedmoney\.com
 1572890657	Machavity	montana\W*clive(?:@gmail\.com)?
 1572896734	Machavity	aomeitech\.com
+1572896774	Daniil	ccleaner\.com
