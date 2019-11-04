@@ -215,3 +215,4 @@ quickbooks
 (^-i:^Jivendro Adriaans$)
 (?-i:^Jimmy Johnson$)
 (?-i:^aliinam$)
+ (?-i:^Steve Jones$)
