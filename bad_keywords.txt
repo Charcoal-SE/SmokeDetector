@@ -2107,3 +2107,4 @@ vitariche
 new[\W_]*+user[\W_]*+peasants?
 insta[\W_]*+keto
 intelliflare[\W_]*+iq
+2019/10/31/what-is-simple-linear-model/
