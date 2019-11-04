@@ -13766,7 +13766,6 @@
 1571432382	Makyen	blurblur754
 1571453311	Makyen	drbadoresolutioncenter(?:@gmail\.com)?
 1571454584	Stormblessed	intelliflareiqboost\.com
-1571454640	Stormblessed	intelliflare[\W_]*+iq
 1571461785	double-beep	escortservicemumbai\.net
 1571465026	Makyen	immunis[\W_]*+ip(?!\.com(?<=immunisip\.com))
 1571474774	double-beep	imarketninja\.com
