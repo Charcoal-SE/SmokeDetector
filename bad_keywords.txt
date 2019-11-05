@@ -2096,7 +2096,7 @@ penggugur
 klinik(?=.{0,40}?\baborsi\b)
 making\W*over\W*\$2000
 michael\.veksler@tech-center\.com
-rezola
+rezola(?!growth\.info(?<=rezolagrowth\.info))(?:[\W_]*+(?:growth|hair|\d+))*
 aqualeva(?:[\W_]*+(?:cream|face|\d+))*
 exogenous[\W_]*+keto(?:[\W_]*+(?:ca|\d+))*+
 evaria

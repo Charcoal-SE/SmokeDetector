@@ -13562,7 +13562,6 @@
 1570779904	tripleee	janbaskdigitaldesign\.com
 1570780458	tripleee	klinikspesial01\.blogspot\.com
 1570781889	tripleee	rocknfunevents\.com
-1570784387	tripleee	rezola(?:[\W_]*+(?:growth|hair|\d+))*
 1570784669	tripleee	techblogize\.com
 1570787791	tripleee	muaranauli2323(?# @medium)
 1570787821	tripleee	theskilldesk\.com
