@@ -3148,7 +3148,7 @@ unitedsupplementreviews\.com
 teachmeuk\.co\.uk
 nutrapills\.com
 quebythesea\.com
-totaldiet4you\.com
+totaldiet4you[\W_]*+com(?#obfuscated domain)
 m-arabi\.com
 mcafeeproductactivation\.com
 top10guider\.com
