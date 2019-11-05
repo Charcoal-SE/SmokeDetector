@@ -8958,7 +8958,6 @@
 1554197980	Makyen	alternativenumber\.com
 1554213075	double-beep	codekavala\.blogspot\.com
 1554262529	Makyen	rip\W*nipsey\W*hussle
-1554262567	Makyen	teechip\.com
 1554262592	Makyen	clara\W*cyber\W*tech(?:@outlook\.com)?
 1554264202	Makyen	moniqueoquinn
 1554268147	Shree	senseinteriors\.in
