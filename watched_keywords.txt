@@ -14185,3 +14185,4 @@
 1572955419	Makyen	peau[\W_]*+jeune[\W_]*+creme(?!\.moonfruit\.com(?<=peau-jeune-creme\.moonfruit\.com))(?:[\W_]*+(?:fr|france|review|\d+))*
 1572955449	Makyen	gaitcon
 1572955478	Makyen	(?-i:JMVoD\.jpg)
+1572955669	Makyen	envy[\W_]*+us[\W_]*+canada(?:[\W_]*+(?:jealousy|review|\d+))*
