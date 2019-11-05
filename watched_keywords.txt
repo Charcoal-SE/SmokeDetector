@@ -11930,7 +11930,6 @@
 1565322241	Nisse Engström	theangelnumber\.com
 1565328095	tripleee	vyeRWASomVM(?# youtube link)
 1565330548	tripleee	drvaishalisharma\.com
-1565331628	tripleee	sevenmentor\.com
 1565331914	tripleee	organiccitysounds\.com
 1565332094	tripleee	rbuJZ0TH-C4(?# youtube link)
 1565333227	double-beep	usmandrhazim(?:@gmail\.com)?
