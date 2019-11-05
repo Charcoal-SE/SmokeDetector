@@ -14192,3 +14192,4 @@
 1572957101	Makyen	rezolagrowth\.info
 1572957324	Makyen	best[\W_]*+fiber[\W_]*+optic[\W_]*+christmas[\W_]*+tree
 1572960893	tripleee	ligaq\.site
+1572970588	Machavity	airswap\.io
