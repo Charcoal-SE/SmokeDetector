@@ -14191,3 +14191,4 @@
 1572956200	Glorfindel	providore[\W_]*+gifts(?!\.co\.nz(?<=providoregifts\.co\.nz))
 1572957101	Makyen	rezolagrowth\.info
 1572957324	Makyen	best[\W_]*+fiber[\W_]*+optic[\W_]*+christmas[\W_]*+tree
+1572960893	tripleee	ligaq\.site
