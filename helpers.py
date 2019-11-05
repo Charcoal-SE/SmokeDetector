@@ -16,6 +16,8 @@ import requests
 import regex
 from glob import glob
 import sqlite3
+import json
+from itertools import product
 
 
 def exit_mode(*args, code=0):
@@ -141,10 +143,38 @@ def log_file(log_level, *args):
     if levels[log_level] < Helpers.min_log_level:
         return
 
-    log_str = "[{}] {}: {}".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), log_level.upper(),
-                                   "  ".join([str(x) for x in args]))
-    with open("errorLogs.txt", "a", encoding="utf-8") as f:
-        print(log_str, file=f)
+    try:
+        log_str = "[{}] {}: {}".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), log_level.upper(),
+                                    "  ".join([str(x) for x in args]))
+        with open("errorLogs.txt", "a", encoding="utf-8") as f:
+            print(log_str, file=f)
+    except Exception as err:
+        print("File creation failed." + str(err))
+
+def log_json_file(log_level, *args, fname, dict_data):
+    levels = { 'debug': 0, 'info': 1, 'warning': 2, 'error': 3}
+    if levels[log_level < Helpers.min_log_level]:
+        print("Unable to access attribute")
+        return
+    infile = open(f_name, "r")
+    json_con = infile.read()
+    load = json.loads(json_con)
+
+    for key in dict_data.keys():
+           print(key,":", dict_data[key])
+        myJson = json.dumps(dict_data)
+
+    try:
+        log_str = "[{}] {}: {}".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), log_level.upper(),
+                                    "  ".join([str(x) for x in args]))
+        with open("errorLogs.json", "a", encoding="utf-8") as f:
+            # print(log_str, file=f)
+            json.dump(final_dict, fp, indent=4)
+            print("\nSuccess. Data stored in ---> {0}".format(jsonfile))
+    except Exception as err:
+        print("Json creation failed." + str(err))
+        
+
 
 
 def log_exception(exctype, value, tb, f=False):
