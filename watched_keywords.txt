@@ -14179,3 +14179,4 @@
 1572936152	tripleee	visualsubtitling\.com
 1572938121	tripleee	do18\.net
 1572939668	tripleee	ongraph\.com
+1572944761	Glorfindel	wordsdoctorate\.com
