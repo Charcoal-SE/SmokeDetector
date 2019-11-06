@@ -14198,3 +14198,4 @@
 1573007032	Makyen	ongraph[\W_]*+technologies
 1573008943	Makyen	flowfusion122\.blogspot
 1573009848	Makyen	E3B8-E07D
+1573009891	Makyen	penggugur-janin\.com
