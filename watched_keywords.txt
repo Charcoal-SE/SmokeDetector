@@ -14211,3 +14211,4 @@
 1573031816	Makyen	dasosmith\.blogspot
 1573036294	Makyen	katieillssrow
 1573036323	Makyen	dominallsiet
+1573038378	Makyen	fitness[\W_]*+mega[\W_]*+mart(?!\.com)
