@@ -1206,6 +1206,7 @@ def watched_ns_for_url_domain(s, site):
         'ui-dns.com.',
         'supercp.com.',
         'crystalregistry.com.',
+        'herosite.pro.',
     ])
 
 
