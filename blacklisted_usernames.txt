@@ -218,3 +218,4 @@ quickbooks
 (?-i:^Scarlet\s*Grace$)
 (?-i:^nanny5557$)
 (?-i:^kh?ah?dh?im hussai[mn]$)
+(?-i:^Mary Skula$)
