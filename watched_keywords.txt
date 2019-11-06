@@ -14207,3 +14207,4 @@
 1573022770	Makyen	2409620376024196(?#Facebook event)
 1573022786	Makyen	jeune[\W_]*+peau(?:[\W_]*+(?:france|cream|face|skin|\d+))+
 1573023508	Shree	admitkard\.com
+1573029752	tripleee	simulanis\.com
