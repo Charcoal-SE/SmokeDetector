@@ -1552,9 +1552,13 @@ def post_hosts(post, check_tld=False):
     invalid_tld_count = 0
     hostnames = []
     for link in post_links(post):
-        hostname = urlparse(link).hostname
-        if hostname is None:
-            hostname = urlparse('http://' + link).hostname
+        try:
+            hostname = urlparse(link).hostname
+            if hostname is None:
+                hostname = urlparse('http://' + link).hostname
+        except ValueError as err:
+            log('debug', 'ValueError {0} when parsing {1}'.format(err, link))
+            continue
         if '.'.join(hostname.lower().split('.')[-2:]) in SE_SITES_DOMAINS:
             log('debug', 'Skipping {0}'.format(hostname))
             continue
