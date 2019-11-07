@@ -1266,7 +1266,6 @@ def watched_ip_for_url_hostname(s, site):
             '104.219.248.45',   # drugs 360nutra / timesnutrition etc
             '104.219.248.81',   # drugs supplement4world / supplementgod etc
             '162.213.255.36',   # drugs / visit-my-website / cryptocurrency
-            '192.64.118.108',   # drugs hbmbzone products4reviews epbhub etc
             '198.54.115.65',    # drugs goldencondor / visit4supplements etc
             '198.54.115.76',    # visit-my-website testmyinternetspeed.org etc
             '198.54.116.51',    # drugs reviewsgear / crazy-bulk-review etc
@@ -1342,6 +1341,7 @@ def bad_ip_for_url_hostname(s, site):
         # Blacklisted IP list
         [
             # AS 22612 NAMECHEAP-NET
+            '192.64.118.108',   # drugs hbmbzone products4reviews epbhub etc
             '198.54.116.110',   # drugs epbhub / healtylifetimesupplement etc
             '198.54.120.134',   # drugs advisorwellness / health4supplement etc
             '198.187.29.252',   # drugs nutraslimdiet skintone4you hulksupplement
