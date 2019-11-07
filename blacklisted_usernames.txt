@@ -219,3 +219,4 @@ quickbooks
 (?-i:^nanny5557$)
 (?-i:^kh?ah?dh?im hussai[mn]$)
 (?-i:^Mary Skula$)
+(?-i:^Pandora Service$)
