@@ -14226,7 +14226,6 @@
 1573098082	Makyen	nhà[\W_]*+thuốc
 1573103014	tripleee	ibusiness\.co\.za
 1573107799	Makyen	solusihoki\.com
-1573107835	Makyen	click2nextorder\.com
 1573108051	Shree	ledmii\.com
 1573108261	Makyen	totalketopills\.com
 1573108273	Makyen	cookpad\.com
