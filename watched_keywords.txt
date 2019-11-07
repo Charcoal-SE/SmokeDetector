@@ -14223,3 +14223,4 @@
 1573093364	Makyen	sitesadd\.com
 1573093406	Makyen	prettyescortsinbangalore\.com
 1573097812	Machavity	caythuoc\.vn
+1573098082	Makyen	nhà[\W_]*+thuốc
