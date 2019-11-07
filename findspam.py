@@ -1275,7 +1275,6 @@ def watched_ip_for_url_hostname(s, site):
             '198.54.116.110',   # drugs unitedstatesupplement usa4supplement etc
             '198.54.126.94',    # drugs letsfindtoday healthlione etc
             '198.54.126.109',   # escorts + buy-likes
-            '198.187.29.252',   # drugs nutraslimdiet skintone4you hulksupplement
             '198.187.31.245',   # drugs ketohour ketopromos healthperfect etc
             # AS 23352 SERVERCENTRAL - Server Central Network, US
             '198.38.82.90',     # software-utility osofttools instantdatacare etc
@@ -1347,6 +1346,7 @@ def bad_ip_for_url_hostname(s, site):
             # AS 22612 NAMECHEAP-NET
             '198.54.116.110',   # drugs epbhub / healtylifetimesupplement etc
             '198.54.120.134',   # drugs advisorwellness / health4supplement etc
+            '198.187.29.252',   # drugs nutraslimdiet skintone4you hulksupplement
             # AS 24940 HETZNER-AS, DE
             '138.201.185.58',   # idea-soft.ir / sitecode.ir / npco.net
             # AS 26347 DREAMHOST-AS
