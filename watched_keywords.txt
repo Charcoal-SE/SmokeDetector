@@ -14225,3 +14225,4 @@
 1573097812	Machavity	caythuoc\.vn
 1573098082	Makyen	nhà[\W_]*+thuốc
 1573103014	tripleee	ibusiness\.co\.za
+1573107799	Makyen	solusihoki\.com
