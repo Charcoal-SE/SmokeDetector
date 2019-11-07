@@ -14231,3 +14231,4 @@
 1573108261	Makyen	totalketopills\.com
 1573108273	Makyen	cookpad\.com
 1573108293	Makyen	mokes[\W_]*+technology[\W_]*+co
+1573110553	Makyen	dtempcounselling\.org
