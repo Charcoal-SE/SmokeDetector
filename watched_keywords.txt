@@ -14292,3 +14292,4 @@
 1573267748	Makyen	chinajhzb\.com
 1573269329	Makyen	guangzhou[\W_]*+junheng[\W_]*+jewelry(?:[\W_]*+co[\W_]*+ltd)?
 1573272100	Makyen	motivation456\.com
+1573280234	Makyen	hotjatt\.com
