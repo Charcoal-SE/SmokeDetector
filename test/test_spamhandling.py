@@ -7,7 +7,8 @@ import pytest
 import os
 import json
 from classes import Post
-from unittest.mock import MagicMock, ANY
+from unittest import TestCase
+from unittest.mock import MagicMock, call, ANY, DEFAULT
 import chatcommunicate
 from globalvars import GlobalVars
 
@@ -19,7 +20,7 @@ with open("test/data_test_spamhandling.txt", "r", encoding="utf-8") as f:
     test_data_inputs = f.readlines()
 
 
-class StringMatcher:
+class Matcher:
     def __init__(self, containing, without):
         self.containing = containing
         self.without = without
@@ -28,19 +29,96 @@ class StringMatcher:
         return self.containing in other and self.without not in other
 
 
-def mock_post(title='',
-              body='',
-              site='stackoverflow.com',
-              link='https://stackoverflow.com/a/1732454',
-              owner={'link': 'https://stackoverflow.com/users/102937/robert-harvey'}):
-    api_response = {
-        "title": title,
-        "body": body,
-        "site": site,
-        "link": link,
-        "owner": owner
-    }
-    return Post(api_response=api_response)
+def print_mock_args(*args, **kwargs):
+    print('\nMock called with:\n\targs:', args)
+    print('\tkwargs:', kwargs)
+    return DEFAULT
+
+
+class TestRoomReports(TestCase):
+
+    auto_post_id = 1732454
+
+    @classmethod
+    def mock_post(cls,
+                  title='',
+                  body='',
+                  site='stackoverflow.com',
+                  link='https://stackoverflow.com/q/1732454',
+                  owner={'link': 'https://stackoverflow.com/users/102937/robert-harvey'},
+                  post_id=1732454,
+                  is_question=True,
+                  increment_auto_post_id=True):
+        if increment_auto_post_id:
+            cls.auto_post_id += 1
+            link = 'https://stackoverflow.com/{}/{}'.format('q' if is_question else 'a', cls.auto_post_id)
+            post_id = cls.auto_post_id
+        api_response = {
+            "title": title,
+            "body": body,
+            "site": site,
+            "link": link,
+            "owner": owner
+        }
+        if is_question:
+            api_response['question_id'] = post_id
+        else:
+            api_response['answer_id'] = post_id
+        return Post(api_response=api_response)
+
+    @classmethod
+    def setUpClass(cls):
+        # Remember the originals of the methods we are going to mock
+        cls.orig_deletion_watcher = GlobalVars.deletion_watcher
+        cls.orig_tell_rooms = chatcommunicate.tell_rooms
+        GlobalVars.deletion_watcher = MagicMock(spec=GlobalVars.deletion_watcher, wraps=None)  # Mock the deletion watcher in test
+        chatcommunicate.tell_rooms = MagicMock(spec=cls.orig_tell_rooms, wraps=None, side_effect=print_mock_args)  # Mock the tell_rooms, so we can test how it was called
+
+    @classmethod
+    def tearDownClass(cls):
+        # Clean up from mocking
+        GlobalVars.deletion_watcher = cls.orig_deletion_watcher
+        chatcommunicate.tell_rooms = cls.orig_tell_rooms
+
+    def setUp(self):
+        print('\n\n-------------------------------Set up test------------------------------------')
+        chatcommunicate.tell_rooms.reset_mock
+        # .reset_mock counts as a call. We don't want that.
+        chatcommunicate.tell_rooms.call_count = 0
+
+    @classmethod
+    def test_handle_spam_repeating_characters(cls):
+        post = cls.mock_post(title='aaaaaaaaaaaaaa')
+        is_spam, reasons, why = check_if_spam(post)
+        handle_spam(post=post, reasons=reasons, why=why)
+        chatcommunicate.tell_rooms.assert_called_once_with(
+            Matcher(containing='aaaaaaaaaaaaaa', without='Potentially offensive title'),
+            ANY,
+            ANY,
+            notify_site=ANY,
+            report_data=ANY
+        )
+
+    @classmethod
+    def test_handle_spam_offensive_title(cls):
+        post = cls.mock_post(title='fuck')
+        is_spam, reasons, why = check_if_spam(post)
+        handle_spam(post=post, reasons=reasons, why=why)
+        call_a = call(
+            Matcher(containing='fuck', without='potentially offensive title'),
+            ANY,
+            Matcher(containing='offensive-mask', without='no-offensive-mask'),
+            notify_site=ANY,
+            report_data=ANY
+        )
+        call_b = call(
+            Matcher(containing='potentially offensive title', without='fuck'),
+            ANY,
+            Matcher(containing='no-offensive-mask', without='offensive-mask'),
+            notify_site=ANY,
+            report_data=ANY
+        )
+        chatcommunicate.tell_rooms.assert_has_calls([call_a, call_b])
 
 
 # noinspection PyMissingTypeHints
@@ -113,36 +191,6 @@ def test_check_if_spam_json(data, match):
     # Check that a malformed post isn't reported as spam
     is_spam, reason, _ = check_if_spam_json(None)
     assert not is_spam
-
-
-def test_handle_spam_repeating_characters():
-    GlobalVars.deletion_watcher = MagicMock()  # Mock the deletion watcher in test
-    chatcommunicate.tell_rooms = MagicMock()
-    post = mock_post(title='aaaaaaaaaaaaaa')
-    is_spam, reasons, why = check_if_spam(post)
-    handle_spam(post, reasons, why)
-    chatcommunicate.tell_rooms.assert_called_once_with(
-        StringMatcher(containing='aaaaaaaaaaaaaa', without='Potentially offensive title'),
-        ANY,
-        ANY,
-        notify_site=ANY,
-        report_data=ANY
-    )
-
-
-def test_handle_spam_offensive_title():
-    GlobalVars.deletion_watcher = MagicMock()  # Mock the deletion watcher in test
-    chatcommunicate.tell_rooms = MagicMock()
-    post = mock_post(title='fuck')
-    is_spam, reasons, why = check_if_spam(post)
-    handle_spam(post, reasons, why)
-    chatcommunicate.tell_rooms.assert_called_once_with(
-        StringMatcher(containing='Potentially offensive title', without='fuck'),
-        ANY,
-        ANY,
-        notify_site=ANY,
-        report_data=ANY
-    )
 
 
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"),
