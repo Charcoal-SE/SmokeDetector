@@ -233,6 +233,10 @@ class Post:
     def title(self):
         return str(self._title)
 
+    @title.setter
+    def title(self, value):
+        self._title = value
+
     @property
     def user_link(self):
         # Alias for self.user_url
