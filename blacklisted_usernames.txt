@@ -220,3 +220,4 @@ quickbooks
 (?-i:^kh?ah?dh?im hussai[mn]$)
 (?-i:^Mary Skula$)
 (?-i:^Pandora Service$)
+(?-i:^Angela Yui‭$)
