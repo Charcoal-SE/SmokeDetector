@@ -14289,3 +14289,4 @@
 1573263597	Makyen	ralph[\W_]*+(?:p[\W_]*+)?torello(?#Used by a troll in the body of their posts)
 1573263642	Makyen	master[\W_]*+race
 1573267731	Makyen	in[\W_]*+front[\W_]*+of[\W_]*+new[\W_]*+york[\W_]*+city[\W_]*+hall(?#trolling)
+1573267748	Makyen	chinajhzb\.com
