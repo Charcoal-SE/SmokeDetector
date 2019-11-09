@@ -14303,3 +14303,4 @@
 1573336319	Makyen	avengersdiet(?!\.com)
 1573336338	Makyen	igeajayi47(?:@gmail\.com)?
 1573336421	Makyen	la[\W_]*+lune[\W_]*+cream
+1573338707	Stormblessed	Dr\. Irosi
