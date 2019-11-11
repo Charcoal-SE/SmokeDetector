@@ -13925,7 +13925,6 @@
 1571989774	Makyen	neural-network-trading-bot
 1571989785	Makyen	(?-i:YTNNTRBT)
 1571989798	Makyen	(?-i:rFw4Hojb1J8Ridg7A)
-1571997968	Shree	devleadz\.ae
 1572030940	double-beep	carmeloanthonylakers\.online
 1572031909	double-beep	hostingfrance\.net
 1572033052	Makyen	activehacker109(?:@gmail\.com)?
