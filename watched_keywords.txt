@@ -14311,3 +14311,4 @@
 1573408534	Makyen	sharp-services1\.blogspot
 1573408555	Makyen	(?-i:Maintenance[\s\.]Sharp)(?#Facebook URL path and company name)
 1573449257	Shree	bestairsoftsniperrifle\.co
+1573450238	Makyen	(?-i:FRUgU\.jpg)
