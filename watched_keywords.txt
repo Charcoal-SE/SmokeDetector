@@ -14330,3 +14330,4 @@
 1573494541	Makyen	glatks\.eu5\.org
 1573494605	Makyen	notabug\.org/GLAT
 1573494987	Machavity	snappymovie\.com
+1573499058	Machavity	infplans\.com
