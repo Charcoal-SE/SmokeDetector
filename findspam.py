@@ -2022,7 +2022,7 @@ city_list = [
     "Haldwani", "Haridwar", "Hyderabad",
     "Jaipur", "Jalandhar", "Jim Corbett",
     "Kandivali", "Kanhangad", "Kanhanjad", "Kerala", "Kochi", "Kolkata", "Kota",
-    "Lokhandwala", "Lonavala", "Ludhiana",    
+    "Lokhandwala", "Lonavala", "Ludhiana",
     "Marine Lines", "Mumbai", "Madurai", "Malad", "Mangalore", "Mangaluru", "Mulund",
     "Nagpur", "Nainital", "Nashik", "Neemrana", "Noida",
     "Patna", "Pune",
@@ -2031,7 +2031,7 @@ city_list = [
     "Telangana", "Tiruchi", "Tiruchirappalli", "Thane",
     "Trichinopoly", "Trichy", "Trivandrum", "Thiruvananthapuram",
     "Udaipur", "Uttarakhand",
-    "Visakhapatnam","Worli", 
+    "Visakhapatnam", "Worli",
     # not in India
     "Dubai", "Portland",
     # yes, these aren't cities but...
