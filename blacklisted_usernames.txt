@@ -221,3 +221,4 @@ quickbooks
 (?-i:^Mary Skula$)
 (?-i:^Pandora Service$)
 (?-i:^Angela Yui‭$)
+(?-i:^mari devleadz$)
