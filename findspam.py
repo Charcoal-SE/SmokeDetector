@@ -1115,6 +1115,7 @@ def watched_ns_for_url_domain(s, site):
         {'ns43.domaincontrol.com.', 'ns44.domaincontrol.com.'},  # FPs, don't blacklist
         {'ns57.domaincontrol.com.', 'ns58.domaincontrol.com.'},
         {'ns59.domaincontrol.com.', 'ns60.domaincontrol.com.'},
+        {'ns75.domaincontrol.com.', 'ns76.domaincontro..com.'},
         'supercloudapps.com.',
         'vultr.com.',  # has FPs, don't move to blacklist
         'directory92.com.',
