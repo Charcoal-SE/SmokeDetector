@@ -1314,7 +1314,6 @@ def watched_ip_for_url_hostname(s, site):
             '50.87.189.77',     # avdshare.com
             '162.241.148.13',   # fake-tech-support officekeyactivate en-us-mcafee etc
             '162.241.148.157',  # fake-tech-support en-mcafee setupmwnow etc
-            '162.241.216.230',  # aiobjectives.com
             '192.185.129.109',  # fake-tech-support 24x7technicalhelp etc
             '192.185.227.177',  # zooksoftware.com
             # AS 47583 (HOSTINGER) - also notice dual-homed below
@@ -1365,6 +1364,8 @@ def bad_ip_for_url_hostname(s, site):
             '160.153.75.129',  # itunessupport.org
             # AS 32475 - SINGLEHOP-LLC - SingleHop LLC, US
             '172.96.187.196'   # fake-tech-support canonfreedownload etc
+            # AS 46606 UNIFIEDLAYER-AS-1 - Unified Layer, US
+            '162.241.216.230',  # aiobjectives.com
             # AS 394695 PUBLIC-DOMAIN-REGISTRY - PDR, US
             '116.206.104.141',  # fake-tech-support fake-diplomas
             '162.251.85.146',   # drugs thesupplementcop skincareadvisor etc
