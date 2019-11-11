@@ -14327,3 +14327,4 @@
 1573480194	Machavity	^alex.*mwangi$
 1573490570	Nisse Engström	ruletoyunlaribedava\.com
 1573494396	Makyen	aircleaners\.com
+1573494541	Makyen	glatks\.eu5\.org
