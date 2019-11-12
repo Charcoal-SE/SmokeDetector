@@ -223,3 +223,4 @@ quickbooks
 (?-i:^Angela Yui‭$)
 (?-i:^mari devleadz$)
 (?-i:^khadim$)
+(?-i:^Raj$)
