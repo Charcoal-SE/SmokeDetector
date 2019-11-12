@@ -14337,3 +14337,4 @@
 1573520308	Makyen	sayeedhossen018
 1573520323	Makyen	256852(?<=lesse\.com\.br/limesurvey/index\.php/256852)
 1573520339	Makyen	lesse\.com\.br/limesurvey
+1573534383	Makyen	spyderreviews\.com
