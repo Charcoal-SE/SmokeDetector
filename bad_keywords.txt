@@ -2111,3 +2111,4 @@ intelliflare[\W_]*+iq
 ogbefunhearlingtemple(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 cyberfiles\.hacker(?:@gmail\.com)?
 ketogeniks
+evo[\W_]*+elite(?:[\W_]*+keto)?
