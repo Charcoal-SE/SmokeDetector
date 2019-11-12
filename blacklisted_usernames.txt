@@ -222,3 +222,4 @@ quickbooks
 (?-i:^Pandora Service$)
 (?-i:^Angela Yui‭$)
 (?-i:^mari devleadz$)
+(?-i:^khadim$)
