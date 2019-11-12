@@ -14356,3 +14356,4 @@
 1573558530	tripleee	^(?-i:(?!dfdfdsfsd$)[sdfghjkl]{6,40})$
 1573558854	Glorfindel	medinova-pharmaceuticals\.com
 1573562334	tripleee	expatcarbuyers\.com
+1573562373	tripleee	rootersports\.com
