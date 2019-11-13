@@ -1254,6 +1254,8 @@ def watched_ip_for_url_hostname(s, site):
             '139.59.83.45',     # fake-tech-support techjockey.com
             # AS 14618 AMAZON-AES - Amazon.com, Inc., US
             '3.230.72.35',      # gangboard.com
+            # AS 15169 GOOGLE - Google LLC, US
+            '54.72.135.216',    # rootersports.com spectrum.chat etc
             # AS 16276 OVH, FR
             '54.38.180.85',     # izmorelen.com
             # AS 16509 AMAZON-02 - Amazon.com, Inc., US
