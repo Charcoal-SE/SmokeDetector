@@ -14394,3 +14394,4 @@
 1573655998	Machavity	electrobot\.co
 1573657458	Machavity	nashvilletowcompany\.com
 1573661725	Das_Geek	joshdriod\.com
+1573664359	Machavity	(?-i:^Raj$)
