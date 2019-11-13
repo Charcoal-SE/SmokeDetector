@@ -1304,6 +1304,7 @@ def watched_ip_for_url_hostname(s, site):
             '160.153.129.38',   # drugs supplementswellness / buyketodiet etc
             '160.153.129.238',  # drugs bestenhancement / supplementskingpro etc
             '166.62.6.66',      # fake-tech-support + hosting ms-officesetup etc
+            '166.62.27.56',     # drugs click2nextorder welnesscare supplement4menia etc
             '166.62.28.114',    # pst-splitter.com affordablehousinggurgaon.in etc
             '166.62.28.116',    # fake-tech-support printertechsupportnumbers.com
             '192.186.227.225',  # drugs topwellnessguru / healthcare350 etc
