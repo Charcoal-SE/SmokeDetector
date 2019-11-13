@@ -223,7 +223,6 @@ quickbooks
 (?-i:^Angela Yui‭$)
 (?-i:^mari devleadz$)
 (?-i:^khadim$)
-(?-i:^Raj$)
 (-i:^Vishnu Jangid$)
 (?-i:^Anna Sotnikova$)
 devleadz
