@@ -14380,3 +14380,4 @@
 1573631810	Makyen	newsletter4healhzones\.info
 1573631907	Makyen	nutralite[\W_]*+cbd[\W_]*+pain[\W_]*+cream
 1573634258	tripleee	(?-i:^Sunderam Saxena$)
+1573636082	tripleee	fritzjiang
