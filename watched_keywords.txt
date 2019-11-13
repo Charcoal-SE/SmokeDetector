@@ -14381,3 +14381,4 @@
 1573631907	Makyen	nutralite[\W_]*+cbd[\W_]*+pain[\W_]*+cream
 1573634258	tripleee	(?-i:^Sunderam Saxena$)
 1573636082	tripleee	fritzjiang
+1573636139	Makyen	504492810407710(?#Facebook event)
