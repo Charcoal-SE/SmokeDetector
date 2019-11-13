@@ -287,7 +287,7 @@ class BodyFetcher:
 
         GlobalVars.api_request_lock.release()
 
-        if len(message_hq) > 0 and not "site is required" in message_hq:
+        if len(message_hq) > 0 and "site is required" not in message_hq:
             tell_rooms_with("debug", message_hq.strip())
 
         if "items" not in response:
