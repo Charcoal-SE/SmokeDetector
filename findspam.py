@@ -1284,6 +1284,7 @@ def watched_ip_for_url_hostname(s, site):
             '198.38.82.90',     # software-utility osofttools instantdatacare etc
             # AS 24940 HETZNER-AS, DE
             '5.9.24.179',       # multi-programming.com
+            '144.76.108.227',   # fake-tech-support epasswordrecovery numberforhelp
             '144.76.185.135',   # shuftipro.com
             # AS 26496 AS-26496-GO-DADDY-COM-LLC
             '23.229.180.169',   # drugs health4supplement / supplements4lifetime etc
