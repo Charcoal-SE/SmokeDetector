@@ -225,3 +225,4 @@ quickbooks
 (?-i:^khadim$)
 (?-i:^Raj$)
 (-i:^Vishnu Jangid$)
+(?-i:^Anna Sotnikova$)
