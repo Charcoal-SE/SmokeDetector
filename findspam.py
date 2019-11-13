@@ -1334,6 +1334,8 @@ def watched_ip_for_url_hostname(s, site):
             '162.254.252.93',   # paper-writing etc appsocio doneessays etc
             # AS 62282 RACKRAY UAB Rakrejus, LT
             '195.181.242.11',   # printererrorrepair.com
+            # AS 63949 LINODE-AP Linode, LLC, US
+            '45.79.5.95',       # drugs reviews4buyers newsletter4healhzones etc
             # AS 210250 WPX, BG
             '194.1.147.28',     # getsetwild.com
             '194.1.147.38',     # getsetwild.com
