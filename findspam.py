@@ -1334,6 +1334,9 @@ def watched_ip_for_url_hostname(s, site):
             '162.254.252.93',   # paper-writing etc appsocio doneessays etc
             # AS 62282 RACKRAY UAB Rakrejus, LT
             '195.181.242.11',   # printererrorrepair.com
+            # AS 210250 WPX, BG
+            '194.1.147.28',     # getsetwild.com
+            '194.1.147.38',     # getsetwild.com
             # AS 262254 DANCOM LTD, BZ
             '190.115.18.177',   # fake-tech-support garminlogin avglogin etc
             '190.115.18.194',   # fake-tech-support kaspersky-login etc
