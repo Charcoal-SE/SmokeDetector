@@ -14379,3 +14379,4 @@
 1573629322	Makyen	biobirexagen
 1573629338	Makyen	mkborewells\.in
 1573631810	Makyen	newsletter4healhzones\.info
+1573631907	Makyen	nutralite[\W_]*+cbd[\W_]*+pain[\W_]*+cream
