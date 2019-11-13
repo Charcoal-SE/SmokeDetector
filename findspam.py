@@ -1300,6 +1300,7 @@ def watched_ip_for_url_hostname(s, site):
             '107.180.41.149',   # technoblink.com
             '107.180.47.58',    # drugs + travel
             '107.180.54.250',   # fake-tech-support mapsupdates gmailcustomerservicenumber
+            '107.180.58.40',    # drugs supplementspeak supplementdose etc
             '132.148.29.42',    # techindiainfotech.com
             '148.72.198.100',   # sushkom.com
             '148.72.211.163',   # hostingride.in
