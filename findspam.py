@@ -1285,6 +1285,7 @@ def watched_ip_for_url_hostname(s, site):
             '198.54.126.94',    # drugs letsfindtoday healthlione etc
             '198.54.126.109',   # escorts + buy-likes
             '199.188.200.16',   # drugs totalketopills ketostorepills
+            '199.188.200.109',  # drugs atozfitnesstalks awaretalks etc
             # AS 23352 SERVERCENTRAL - Server Central Network, US
             '198.38.82.90',     # software-utility osofttools instantdatacare etc
             # AS 24940 HETZNER-AS, DE
