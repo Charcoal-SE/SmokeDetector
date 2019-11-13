@@ -224,3 +224,4 @@ quickbooks
 (?-i:^mari devleadz$)
 (?-i:^khadim$)
 (?-i:^Raj$)
+(-i:^Vishnu Jangid$)
