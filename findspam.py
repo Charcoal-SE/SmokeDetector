@@ -860,7 +860,7 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
         r"\b\L<city>(?:\b.{1,20}\b)?(service|escort|call girls?)|"
         r"\b(?:customer|recovery|technical|recovery)? ?(?:customer|support|service|repair|contact) "
         r"(?:phone|hotline|helpline)? ?numbers?\b|"
-        r"(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|repair|recovery|school|university)|"
+        r"(best|make|full|hd|software|cell|data)[\w ]{1,20}(online|service|company|agency|repair|recovery|school|university)|"
         r"\b(writing (service|help)|essay (writing|tips))", city=city_list)
     links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
     business = regex.compile(
@@ -1920,7 +1920,7 @@ bad_keywords_nwb = [  # "nwb" == "no word boundary"
     " %[au]h ", "tapsi ?sarkar",
     "(?:networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing|"
     "salesforce|joomla)( certification)? (courses?|training)(?=.{0,25}</a>)",
-    r"(?:design|development|compan(?:y|ies)|expert|institute|classes|schools?|training|courses?|jobs?"
+    r"(?:design|development|compan(?:y|ies)|agen(?:ts?|c(?:y|ies))|expert|institute|classes|schools?|training|courses?|jobs?"
     r"|automation|sex|services?|kindergarten)"
     r"\W*(?:center|centre|institute|work|provider)?"
     r"(?:\b.{1,8}\b)?\L<city>\b",
