@@ -1379,16 +1379,16 @@ def bad_ip_for_url_hostname(s, site):
             # AS 24940 HETZNER-AS, DE
             '138.201.185.58',   # idea-soft.ir / sitecode.ir / npco.net
             # AS 26347 DREAMHOST-AS
-            '75.119.210.224',  # triplet-spam
+            '75.119.210.224',   # triplet-spam
             # AS 26496 AS-26496-GO-DADDY-COM-LLC
-            '23.229.217.167',  # drugs popsupplement / daddysupplement etc
-            '104.25.50.105',   # crbtech.in
-            '107.180.3.93',    # drugs amazonhealthstore / click2fitness etc
-            '107.180.24.240',  # drugs deal2supplement / first2order etc
-            '107.180.59.131',  # drugs kingofsupplement.com
-            '107.180.78.164',  # gs-jj.com
-            '132.148.29.42',   # techindiainfotech.com
-            '160.153.75.129',  # itunessupport.org
+            '23.229.217.167',   # drugs popsupplement / daddysupplement etc
+            '104.25.50.105',    # crbtech.in
+            '107.180.3.93',     # drugs amazonhealthstore / click2fitness etc
+            '107.180.24.240',   # drugs deal2supplement / first2order etc
+            '107.180.59.131',   # drugs kingofsupplement.com
+            '107.180.78.164',   # gs-jj.com
+            '132.148.29.42',    # techindiainfotech.com
+            '160.153.75.129',   # itunessupport.org
             # AS 32244 LIQUIDWEB - Liquid Web, L.L.C, US
             '69.167.167.150',   # drugs healthdietalert healthytalkz etc
             # AS 32475 - SINGLEHOP-LLC - SingleHop LLC, US
