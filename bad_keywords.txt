@@ -2115,3 +2115,4 @@ evo[\W_]*+elite(?:[\W_]*+keto)?
 peau[\W_]*+jeune(?:[\W_]*+cream)?
 biovirexagen
 percocet
+eminence[\W_]*+vitality(?:[\W_]*+keto)?

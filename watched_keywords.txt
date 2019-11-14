@@ -13761,7 +13761,6 @@
 1571504000	Makyen	dermatin[\W_]*+moisturizer(?:[\W_]*+cream)?
 1571504026	Makyen	(?-i:K-JzvG4IFxM)
 1571504038	Makyen	(?-i:x7mv9dy)
-1571504048	Makyen	eminence[\W_]*+vitality(?:[\W_]*+keto)?
 1571504106	Makyen	universetale\.com
 1571504118	Makyen	autonewsreporter\.com
 1571504131	Makyen	techerudition\.com
