@@ -13321,7 +13321,6 @@
 1569820145	Shree	training@janbasktrainig\.com
 1569820719	tripleee	janbask
 1569822125	Makyen	stella[\W_]*+maeson[\W_]*+cream
-1569822794	Makyen	saatchiart\.com
 1569825437	tripleee	nrzee\.com
 1569827833	tripleee	hulucomactivatecode\.com
 1569827842	tripleee	malwarebytes-mac\.com
