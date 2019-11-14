@@ -1305,7 +1305,6 @@ def watched_ip_for_url_hostname(s, site):
             '107.180.47.58',    # drugs + travel
             '107.180.54.250',   # fake-tech-support mapsupdates gmailcustomerservicenumber
             '107.180.58.40',    # drugs supplementspeak supplementdose etc
-            '132.148.29.42',    # techindiainfotech.com
             '148.72.198.100',   # sushkom.com
             '148.72.211.163',   # hostingride.in
             '160.153.90.166',   # shoviv.com
@@ -1388,6 +1387,7 @@ def bad_ip_for_url_hostname(s, site):
             '107.180.24.240',  # drugs deal2supplement / first2order etc
             '107.180.59.131',  # drugs kingofsupplement.com
             '107.180.78.164',  # gs-jj.com
+            '132.148.29.42',   # techindiainfotech.com
             '160.153.75.129',  # itunessupport.org
             # AS 32244 LIQUIDWEB - Liquid Web, L.L.C, US
             '69.167.167.150',   # drugs healthdietalert healthytalkz etc
