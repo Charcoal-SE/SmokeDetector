@@ -14397,3 +14397,4 @@
 1573686218	Das_Geek	pelis24\.mobi
 1573709770	tripleee	(?-i:^Muhammad Ali$)
 1573714277	Makyen	digipe\.co
+1573715061	tripleee	commoncelebrity\.com
