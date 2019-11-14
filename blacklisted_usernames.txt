@@ -226,3 +226,4 @@ quickbooks
 (-i:^Vishnu Jangid$)
 (?-i:^Anna Sotnikova$)
 devleadz
+(?-i:^Molitics - Media of Politics$)
