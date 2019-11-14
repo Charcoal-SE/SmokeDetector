@@ -14403,3 +14403,4 @@
 1573715272	Makyen	(?-i:h8oEH\.jpg)
 1573715302	Makyen	aryal\.ir
 1573715332	Makyen	coaching[\W_]*+aryal
+1573716197	Makyen	foodandnutritiontips\.com
