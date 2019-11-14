@@ -1319,8 +1319,6 @@ def watched_ip_for_url_hostname(s, site):
             '166.62.28.116',    # fake-tech-support printertechsupportnumbers.com
             '192.186.227.225',  # drugs topwellnessguru / healthcare350 etc
             '198.71.233.179',   # drugs & random pilspedia.com / upleaks.cn
-            # AS 32244 LIQUIDWEB - Liquid Web, L.L.C, US
-            '69.167.167.150',   # drugs healthdietalert healthytalkz etc
             # AS 32475 SINGLEHOP-LLC - SingleHop LLC, US
             '172.96.186.189'    # gambling judilivegame caracurang cheatpkvpro etc
             # AS 33182 DIMENOC - HostDime.com, Inc., US
@@ -1391,6 +1389,8 @@ def bad_ip_for_url_hostname(s, site):
             '107.180.59.131',  # drugs kingofsupplement.com
             '107.180.78.164',  # gs-jj.com
             '160.153.75.129',  # itunessupport.org
+            # AS 32244 LIQUIDWEB - Liquid Web, L.L.C, US
+            '69.167.167.150',   # drugs healthdietalert healthytalkz etc
             # AS 32475 - SINGLEHOP-LLC - SingleHop LLC, US
             '172.96.187.196'   # fake-tech-support canonfreedownload etc
             # AS 46606 UNIFIEDLAYER-AS-1 - Unified Layer, US
