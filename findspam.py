@@ -1254,6 +1254,7 @@ def watched_ip_for_url_hostname(s, site):
             '104.31.95.238',    # easyprintersupport.com
             # AS 14061 DIGITALOCEAN-ASN - DigitalOcean, LLC, US
             '139.59.83.45',     # fake-tech-support techjockey.com
+            '139.59.91.71',     # housing prestigeelysian.in etc
             # AS 14618 AMAZON-AES - Amazon.com, Inc., US
             '3.230.72.35',      # gangboard.com
             # AS 15169 GOOGLE - Google LLC, US
