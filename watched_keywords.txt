@@ -14147,7 +14147,6 @@
 1572885918	Makyen	(?-i:lDpOkpIPlts)
 1572886021	Makyen	(?-i:Tt1U3\.jpg)
 1572886050	Makyen	(?-i:__JP2R48S6k)
-1572889062	Machavity	indeedmoney\.com
 1572890657	Machavity	montana\W*clive(?:@gmail\.com)?
 1572896734	Machavity	aomeitech\.com
 1572901782	Makyen	initiationlodgeofilluminati(?:@gmail\.com)?
