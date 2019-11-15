@@ -2116,3 +2116,4 @@ peau[\W_]*+jeune(?:[\W_]*+cream)?
 biovirexagen
 percocet
 eminence[\W_]*+vitality(?:[\W_]*+keto)?
+vialift[\W_]*+xl(?:[\W_]*+(?:review|improvement|enhancement|building|muscle|pill|usa|male|\d+|[\da-f]{4,})s?)*
