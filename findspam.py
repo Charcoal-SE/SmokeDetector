@@ -1134,19 +1134,19 @@ def watched_ns_for_url_domain(s, site):
         {'ns59.domaincontrol.com.', 'ns60.domaincontrol.com.'},
         {'ns75.domaincontrol.com.', 'ns76.domaincontro..com.'},
         'supercloudapps.com.',
-        #'vultr.com.', -- 64/169 over a year
+        # 'vultr.com.', -- 64/169 over a year
         'directory92.com.',
         'offshoric.com.',
         'freehostia.com.',
         'hawkhost.com.',  # has FPs, don't move to blacklist
-        #'syrahost.com.', -- 29/64 over a year
+        # 'syrahost.com.', -- 29/64 over a year
         'greengeeks.com.',
         'supportaus.com.',
         '256gbserver.com.',
         'solutionsinfini.org.',
         'ownmyserver.com.',
         'websitewelcome.com.',
-        #'fatcow.com.', -- 9/39 over a year
+        # 'fatcow.com.', -- 9/39 over a year
         'vedigitize.us.',
         'serverpars.com.',
         'namedc.com.',
@@ -1162,7 +1162,7 @@ def watched_ns_for_url_domain(s, site):
         'webhouse.sk.',
         'guzelhosting.com.',
         'solidhosting.pro.',
-        #'justhost.com.', -- 14/52 over a year
+        # 'justhost.com.', -- 14/52 over a year
         'stupidblogger.com.',
         'orangewebsite.com.',
         'omnilinks.net.',
@@ -1178,7 +1178,7 @@ def watched_ns_for_url_domain(s, site):
         'blockchainhelp.pro.',
         'specializedtest.com.',
         'macsol.co.in.',
-        #'inmotionhosting.com.', -- 37/216 over 6 months
+        # 'inmotionhosting.com.', -- 37/216 over 6 months
         'myhostindia.com.',
         'lfmserver.com.',
         'symbolhostpremiumdns.com.',
