@@ -1110,6 +1110,7 @@ def watched_ns_for_url_domain(s, site):
         {'pablo.ns.cloudflare.com.', 'pola.ns.cloudflare.com.'},
         {'sara.ns.cloudflare.com.', 'theo.ns.cloudflare.com.'},
         {'stan.ns.cloudflare.com.', 'vera.ns.cloudflare.com.'},
+        {'sue.ns.cloudflare.com.', 'thomas.ns.cloudflare.com.'},
         'mihanwebhost.com.',  # FPs, don't blacklist
         'offshoreracks.com.',
         'sathyats.net.',
