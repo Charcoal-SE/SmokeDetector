@@ -14432,3 +14432,4 @@
 1573771552	Das_Geek	propr\.me
 1573789809	Makyen	(?-i:0lgT9\.png)
 1573789824	Makyen	\bn(?<![^\W_]-n)9\.cl(?![.-][^\W_])\b(?#domain n9.cl with bookends)
+1573789839	Makyen	mu8m(?<=n9\.cl/mu8m)
