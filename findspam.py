@@ -1056,6 +1056,7 @@ def watched_ns_for_url_domain(s, site):
         # {'dns1.registrar-servers.com.', 'dns2.registrar-servers.com.'},
         {'abby.ns.cloudflare.com.', 'rick.ns.cloudflare.com.'},
         {'abby.ns.cloudflare.com.', 'tom.ns.cloudflare.com.'},
+        {'ada.ns.cloudflare.com.', 'arch.ns.cloudflare.com.'},
         {'adi.ns.cloudflare.com.', 'miles.ns.cloudflare.com.'},
         {'adi.ns.cloudflare.com.', 'mitch.ns.cloudflare.com.'},
         {'adrian.ns.cloudflare.com.', 'amit.ns.cloudflare.com.'},
