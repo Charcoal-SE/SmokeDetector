@@ -227,3 +227,4 @@ quickbooks
 (?-i:^Anna Sotnikova$)
 devleadz
 (?-i:^Molitics - Media of Politics$)
+(?-i:^Learntu Torials Point$)
