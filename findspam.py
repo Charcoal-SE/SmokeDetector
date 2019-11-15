@@ -1339,6 +1339,7 @@ def watched_ip_for_url_hostname(s, site):
             '77.73.70.10',      # applesupportnumber.net
             # AS 46606 UNIFIEDLAYER-AS-1 - Unified Layer, US
             '50.87.189.77',     # avdshare.com
+            '162.241.67.249',   # wwwofficecomsetup.com
             '162.241.148.13',   # fake-tech-support officekeyactivate en-us-mcafee etc
             '162.241.148.157',  # fake-tech-support en-mcafee setupmwnow etc
             '192.185.129.109',  # fake-tech-support 24x7technicalhelp etc
