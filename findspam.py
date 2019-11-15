@@ -1091,7 +1091,7 @@ def watched_ns_for_url_domain(s, site):
         {'elliot.ns.cloudflare.com.', 'sue.ns.cloudflare.com.'},
         {'elma.ns.cloudflare.com.', 'hank.ns.cloudflare.com.'},
         {'elma.ns.cloudflare.com.', 'seth.ns.cloudflare.com.'},
-        {'elsa.ns.cloudflare.com.', 'theo.ns.cloudflare.com.'},
+        # {'elsa.ns.cloudflare.com.', 'theo.ns.cloudflare.com.'}, -- 0/112 over 7 months
         {'ernest.ns.cloudflare.com.', 'pat.ns.cloudflare.com.'},
         {'eva.ns.cloudflare.com.', 'hank.ns.cloudflare.com.'},
         {'george.ns.cloudflare.com.', 'lady.ns.cloudflare.com.'},
@@ -1134,19 +1134,19 @@ def watched_ns_for_url_domain(s, site):
         {'ns59.domaincontrol.com.', 'ns60.domaincontrol.com.'},
         {'ns75.domaincontrol.com.', 'ns76.domaincontro..com.'},
         'supercloudapps.com.',
-        'vultr.com.',  # has FPs, don't move to blacklist
+        #'vultr.com.', -- 64/169 over a year
         'directory92.com.',
         'offshoric.com.',
         'freehostia.com.',
         'hawkhost.com.',  # has FPs, don't move to blacklist
-        'syrahost.com.',  # Demoted back to watch 2019-08-09 -- 27/55
+        #'syrahost.com.', -- 29/64 over a year
         'greengeeks.com.',
         'supportaus.com.',
         '256gbserver.com.',
         'solutionsinfini.org.',
         'ownmyserver.com.',
         'websitewelcome.com.',
-        'fatcow.com.',
+        #'fatcow.com.', -- 9/39 over a year
         'vedigitize.us.',
         'serverpars.com.',
         'namedc.com.',
@@ -1162,15 +1162,15 @@ def watched_ns_for_url_domain(s, site):
         'webhouse.sk.',
         'guzelhosting.com.',
         'solidhosting.pro.',
-        'justhost.com.',
+        #'justhost.com.', -- 14/52 over a year
         'stupidblogger.com.',
         'orangewebsite.com.',
         'omnilinks.net.',
         'servconfig.com.',
-        'siteground.biz.',  # unlike siteground.asia, this gets significant FPs
+        'siteground.biz.',  # unlike siteground.asia, this gets significant FPs, but also some weight 1
         'cetpainfotech.com.',
         'sttdns.com.',
-        'hover.com.',
+        # 'hover.com.', -- 21/291 over 8 months (some weight 1)
         'stechsky.com.',
         'loopbyte.com.',
         'dynamicnetips.com.',
@@ -1178,7 +1178,7 @@ def watched_ns_for_url_domain(s, site):
         'blockchainhelp.pro.',
         'specializedtest.com.',
         'macsol.co.in.',
-        'inmotionhosting.com.',
+        #'inmotionhosting.com.', -- 37/216 over 6 months
         'myhostindia.com.',
         'lfmserver.com.',
         'symbolhostpremiumdns.com.',
