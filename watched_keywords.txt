@@ -14456,3 +14456,4 @@
 1573822850	Makyen	daniel_savchenko(?<=t\.me/daniel_savchenko)
 1573825757	double-beep	learntutorialspoint\.com
 1573825773	tripleee	beerdoll\.com
+1573827857	Das_Geek	yayajohnson\d*(?:@gmail\.com)?
