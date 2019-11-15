@@ -1270,6 +1270,7 @@ def watched_ip_for_url_hostname(s, site):
             # AS 14618 AMAZON-AES - Amazon.com, Inc., US
             '3.230.72.35',      # gangboard.com
             # AS 15169 GOOGLE - Google LLC, US
+            '23.236.62.147',    # random spam sites
             '35.202.42.57',     # fake-tech-support monktech etc
             '54.72.135.216',    # rootersports.com spectrum.chat etc
             # AS 16276 OVH, FR
