@@ -1444,48 +1444,48 @@ def watched_asn_for_url_hostname(s, site):
         s, site,
         # Watched ASN list
         [
-            '3842',    # RAMNODE - RamNode LLC, US
+            # '3842',    # RAMNODE - RamNode LLC, US -- 122/284 over 1 year
             '3595',    # GNAXNET-AS - zColo, US
-            '12488',   # KRYSTAL, GR
+            '12488',   # KRYSTAL, GR -- 94/161 over a year
             # '16509', # FPs do not watch -- AMAZON-02 - Amazon.com, Inc., US
             '18229',   # CTRLS-AS-IN CtrlS Datacenters Ltd., IN
-            '18978',   # ENZUINC-US - Enzu Inc, US
-            '19318',   # IS-AS-1 - Interserver, Inc, US
+            # '18978',   # ENZUINC-US - Enzu Inc, US
+            # '19318',   # IS-AS-1 - Interserver, Inc, US -- 67/162 over a year
             '19969',   # JOESDATACENTER - Joe_s Datacenter, LLC, US.
             # '20013'  # FPs do not watch -- CYRUSONE - CyrusOne LLC, US
             # '22612', # Moderate FPs, don't double up -- NAMECHEAP-NET - Namecheap, Inc., US
-            '23352',   # SERVERCENTRAL - Server Central Network, US
+            '23352',   # SERVERCENTRAL - Server Central Network, US -- 29/80 over 5 months but many weight 1
             # '26496', # Massive FPs do not watch -- AS-26496-GO-DADDY-COM-LLC - GoDaddy.com, LLC, US
             '24778',   # DATAPIPE-UK, GB
             '27176',   # DATAWAGON - DataWagon LLC, US.
             '29073',   # QUASINETWORKS, NL
-            '31083',   # TELEPOINT, BG.
-            '31863',   # DACEN-2 - Centrilogic, Inc., US
-            '32244',   # LIQUIDWEB - Liquid Web, L.L.C, US
-            '34119',   # WILDCARD-AS Wildcard UK Limited, GB
+            # '31083',   # TELEPOINT, BG. -- 21/97 over a year
+            # '31863',   # DACEN-2 - Centrilogic, Inc., US -- 32/76 over a year
+            # '32244',   # LIQUIDWEB - Liquid Web, L.L.C, US -- 164/714 over 7 months
+            # '34119',   # WILDCARD-AS Wildcard UK Limited, GB -- 32/173 over a year
             '35916',   # MULTA-ASN1 - MULTACOM CORPORATION, US
-            '36024',   # AS-TIERP-36024 - TierPoint, LLC, US
-            '36351',   # SOFTLAYER - SoftLayer Technologies Inc., US
-            '36352',   # AS-COLOCROSSING - ColoCrossing, US
-            '40676',   # AS40676 - Psychz Networks, US
-            '42831',   # UKSERVERS-AS UK Dedicated Servers, Hosting and Co-Location, GB
+            # '36024',   # AS-TIERP-36024 - TierPoint, LLC, US -- 1/49 over a year, do not add back
+            # '36351',   # SOFTLAYER - SoftLayer Technologies Inc., US -- 377/1288 over a year, very noisy
+            # '36352',   # AS-COLOCROSSING - ColoCrossing, US -- 48/140 over a year
+            # '40676',   # AS40676 - Psychz Networks, US -- 61/132 over a year
+            '42831',   # UKSERVERS-AS UK Dedicated Servers, Hosting and Co-Location, GB -- 9/39 over a year
             '43317',   # FISHNET-AS, RU
             '45815',   # HOSTCOIN-AS-IN-AP ESDS Software Solution Pvt. Ltd., IN
             '45839',   # SHINJIRU-MY-AS-AP Shinjiru Technology Sdn Bhd, MY
-            '46261',   # QUICKPACKET - QuickPacket, LLC, US
+            # '46261',   # QUICKPACKET - QuickPacket, LLC, US -- 4/24 over 10 months
             '46844',   # ST-BGP - Sharktech, US
-            '47583',   # AS-HOSTINGER, LT
+            '47583',   # AS-HOSTINGER, LT -- 254/554 but many recent weight 1
             '49335',   # NCONNECT-AS, RU
-            '50673',   # SERVERIUS-AS, NL
+            # '50673',   # SERVERIUS-AS, NL -- 17/77 over 10 months
             '53889',   # MICFO - Micfo, LLC., US
-            '55002',   # DEFENSE-NET - Defense.Net, Inc, US.
-            '54290',   # HOSTWINDS - Hostwinds LLC., US
+            # '54290',   # HOSTWINDS - Hostwinds LLC., US -- 22/58 over a year
+            # '55002',   # DEFENSE-NET - Defense.Net, Inc, US. -- 11/100 over a yeasr
             '62134',   # IHNET-EU, US.
             '62731',   # 247RACK-COM - 247RACK.com, US
             '133296',  # WEBWERKS-AS-IN Web Werks India Pvt. Ltd., IN
             '133711',  # HBSGZB-AS Home Broadband Services LLP, IN
-            '197695',  # AS-REG, RU
-            '200000',  # UKRAINE-AS, UA
+            '197695',  # AS-REG, RU -- 32/173 over a year but many weight 1
+            '200000',  # UKRAINE-AS, UA -- 15/64 over 8 months burt many weight 1
             '206349',  # BLUEANGELHOST, BG.
             '262254',  # DANCOM LTD, BZ
             '393960',  # HOST4GEEKS-LLC - Host4Geeks LLC, US
