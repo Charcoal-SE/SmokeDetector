@@ -487,8 +487,8 @@ def approve(msg, pr_id):
         comment = "[Approved]({}) by [{}]({}) in {}\n\n![Approved with SmokeyApprove]({})".format(
             message_url, msg.owner.name, chat_user_profile_link, msg.room.name,
             # The image of (code-admins|approved) from PullApprove
-            "https://camo.githubusercontent.com/18c997a6b1ac764dfd43963f5071d03a3c7fc97b/68747470733a2f2f696d672e7368"
-            "69656c64732e696f2f62616467652f636f64652d2d61646d696e732d617070726f7665642d627269676874677265656e2e737667")
+            "https://camo.githubusercontent.com/7d7689a88a6788541a0a87c6605c4fdc2475569f/68747470733a2f2f696d672e"
+            "736869656c64732e696f2f62616467652f626c61636b6c6973746572732d617070726f7665642d627269676874677265656e")
         message = GitManager.merge_pull_request(pr_id, comment)
         if only_blacklists_changed(GitManager.get_local_diff()):
             try:
