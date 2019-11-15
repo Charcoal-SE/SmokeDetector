@@ -13833,7 +13833,6 @@
 1571704887	Makyen	abhishekkumarsahoo55(?:@gmail\.com)?
 1571718574	Makyen	creolecrackers\.com
 1571719369	Makyen	mancualenhan\.com
-1571722737	Shree	geektech\.support
 1571724135	Makyen	sonthuy\.vn
 1571724156	Makyen	phongbanve\.vn
 1571724181	Makyen	thekoreanstyleshop\.com
