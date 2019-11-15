@@ -1277,10 +1277,10 @@ def watched_ip_for_url_hostname(s, site):
             '35.202.42.57',     # fake-tech-support monktech etc
             '54.72.135.216',    # rootersports.com spectrum.chat etc
             '207.174.213.34',   # random spam sites
-            #'216.239.32.21',    # random spam sites but many FPs
-            #'216.239.34.21',    # random spam sites but many FPs
-            #'216.239.36.21',    # random spam sites but many FPs
-            #'216.239.38.21',    # random spam sites but many FPs
+            # '216.239.32.21',    # random spam sites but many FPs
+            # '216.239.34.21',    # random spam sites but many FPs
+            # '216.239.36.21',    # random spam sites but many FPs
+            # '216.239.38.21',    # random spam sites but many FPs
             # AS 16276 OVH, FR
             '54.38.180.85',     # izmorelen.com
             # AS 16509 AMAZON-02 - Amazon.com, Inc., US
