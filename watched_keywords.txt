@@ -14438,3 +14438,4 @@
 1573800695	tripleee	rstrainings\.com
 1573800728	tripleee	marketsquarepgh\.com
 1573800805	tripleee	umoviez\.com
+1573802528	Glorfindel	uaetranslation\.com
