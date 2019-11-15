@@ -14454,3 +14454,4 @@
 1573821245	tripleee	myfreshweedstores\.com
 1573821702	tripleee	hjpuD(?# shorturl.at redirect)
 1573822850	Makyen	daniel_savchenko(?<=t\.me/daniel_savchenko)
+1573825757	double-beep	learntutorialspoint\.com
