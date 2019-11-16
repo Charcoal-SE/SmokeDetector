@@ -1304,6 +1304,7 @@ def watched_ip_for_url_hostname(s, site):
             '198.54.116.51',    # drugs reviewsgear / crazy-bulk-review etc
             '198.54.116.71',    # drugs + fake-tech-support guidemenutrition etc
             '198.54.116.85',    # drugs mummydiet.org
+            '198.54.116.113',   # random toolsadventure petreviewz
             '198.54.120.43',    # joblinks99.com
             '198.54.126.94',    # drugs letsfindtoday healthlione etc
             '198.54.126.109',   # escorts + buy-likes
