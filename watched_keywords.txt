@@ -14481,3 +14481,4 @@
 1573967575	Makyen	(?-i:MY6pU\.jpg)
 1573967590	Makyen	crypto[\W_]*+paid[\W_]*+signals?
 1573967606	Makyen	free[\W_]*+crypto(?:[\W_]*+tra?ding)?[\W_]*+signals?
+1573969874	Makyen	shivatechnical\.com
