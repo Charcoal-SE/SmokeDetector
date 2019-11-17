@@ -6,7 +6,7 @@
 import platform
 import os
 import subprocess as sp
-from time import sleep
+from time import sleep, gmtime
 import logging
 import sys
 
@@ -31,6 +31,7 @@ logging.basicConfig(
     filename='errorlog.txt',
     level=logging.INFO,
     format=logging_format_string)
+logging.Formatter.converter = gmtime
 # Also log to the console, so SD runners can look at consolidated output in the console.
 console_logger = logging.StreamHandler()
 console_logger.setLevel(logging.DEBUG)
