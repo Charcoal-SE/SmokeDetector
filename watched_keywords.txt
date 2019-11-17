@@ -14483,3 +14483,4 @@
 1573967606	Makyen	free[\W_]*+crypto(?:[\W_]*+tra?ding)?[\W_]*+signals?
 1573969874	Makyen	shivatechnical\.com
 1573972603	Makyen	notakeweket\.hatenablog\.com
+1573975338	Makyen	where-am-i\.live
