@@ -14479,3 +14479,4 @@
 1573940038	Makyen	movieplex\.xyz
 1573940072	Makyen	terminator[\W_]*+dark[\W_]*+fate.{0,40}stream(?:ing)?
 1573967575	Makyen	(?-i:MY6pU\.jpg)
+1573967590	Makyen	crypto[\W_]*+paid[\W_]*+signals?
