@@ -14485,3 +14485,4 @@
 1573972603	Makyen	notakeweket\.hatenablog\.com
 1573975338	Makyen	where-am-i\.live
 1573975352	Makyen	cfcs\.co\.in
+1573981790	Makyen	johnyjack6(?#URL path)
