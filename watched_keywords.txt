@@ -14240,7 +14240,6 @@
 1573189530	Makyen	asif2209
 1573193392	Shree	skillscourses\.org
 1573193512	Makyen	health4order(?#Google site)
-1573193526	Makyen	orderfitness\.org
 1573195951	Makyen	avg\.comretail\.net
 1573199531	Glorfindel	activateroku\.net
 1573200421	tripleee	jiemidashi\.com
