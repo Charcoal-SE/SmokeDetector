@@ -14510,3 +14510,4 @@
 1574072876	Glorfindel	officesetup\.uk\.com
 1574073361	tripleee	mark1events\.com
 1574076036	tripleee	vridhisoftech\.com
+1574076175	tripleee	day1tech\.sg
