@@ -1343,6 +1343,7 @@ def watched_ip_for_url_hostname(s, site):
             '166.62.27.56',     # drugs click2nextorder welnesscare supplement4menia etc
             '166.62.28.114',    # pst-splitter.com affordablehousinggurgaon.in etc
             '166.62.28.116',    # fake-tech-support printertechsupportnumbers.com
+            '184.168.131.241',  # random spam sites but also nltk.org
             '192.186.227.225',  # drugs topwellnessguru / healthcare350 etc
             '198.71.233.179',   # drugs & random pilspedia.com / upleaks.cn
             # AS 32475 SINGLEHOP-LLC - SingleHop LLC, US
