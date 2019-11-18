@@ -2047,7 +2047,7 @@ hi[\W_]*+q[\W_]*+keto
 diploma899\d*+
 quickarturhack(?:[\W_]*+(?:at[\W_]*+)?+gmail[\W_]*+(?:dot[\W_]*+)?+com)?
 kuni(?:[\W_]*+(?:skin[\W_]*+care|cream))+
-nolatreve(?:[\W_]*+(?:anti|aging|france|fr|skin|cream|\d++))*
+nolatreve(?:[\W_]*+(?:anti|aging|france|fr|cream|skin|south|africa|review|\d++|[\da-f]{4,})s?)*
 pro[\W_]*+blast[\W_]*+xl(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+)s?)*
 fitness[\W_]*+pro[\W_]*+centre(?!\.com(?<=fitnessprocentre\.com))
 ketotrin
