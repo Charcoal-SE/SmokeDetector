@@ -1346,7 +1346,6 @@ def watched_ip_for_url_hostname(s, site):
             '184.168.131.241',  # random spam sites but also nltk.org
             '192.186.227.225',  # drugs topwellnessguru / healthcare350 etc
             '198.71.233.179',   # drugs & random pilspedia.com / upleaks.cn
-            '216.239.38.21',    # random
             # AS 32475 SINGLEHOP-LLC - SingleHop LLC, US
             '172.96.186.189'    # gambling judilivegame caracurang cheatpkvpro etc
             # AS 33182 DIMENOC - HostDime.com, Inc., US
