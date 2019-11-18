@@ -1390,6 +1390,7 @@ def watched_ip_for_url_hostname(s, site):
             '103.21.59.174',    # random southafricapackages.com
             '162.215.253.205',  # drugs escorts drozien.com nehasuri.in etc
             '204.11.58.143',    # drugs wintersupplement ketopillsstore etc
+            '204.11.58.156',    # fake-tech-support smatustech comretail.net etc
             '204.11.58.189',    # visit-my-website random hits
             '204.11.59.175',    # fake-tech-support brotherprinteuk etc
             '208.91.198.82',    # drugs + training rstrainings + random
