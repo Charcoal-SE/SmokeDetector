@@ -14543,3 +14543,4 @@
 1574157153	tripleee	coltfreeze\.com
 1574158841	Glorfindel	thoatvidiadem\.net
 1574161113	tripleee	gaze[\W_]*+beauty(?:[\W_]*+cream)?
+1574161152	tripleee	sunnowrow
