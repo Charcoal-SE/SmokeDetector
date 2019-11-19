@@ -1355,8 +1355,10 @@ def watched_ip_for_url_hostname(s, site):
             '172.96.186.189'    # gambling judilivegame caracurang cheatpkvpro etc
             # AS 33182 DIMENOC - HostDime.com, Inc., US
             '199.168.190.252',  # drugs makreviews.com
-            # SOFTLAYER - SoftLayer Technologies Inc., US
+            # AS 36351 SOFTLAYER - SoftLayer Technologies Inc., US
             '37.60.254.112',    # drugs ofastore.in factforfitness healthcareresult etc
+            # AS 38719 DREAMSCAPE-AS-AP Dreamscape Networks Limited, AU
+            '163.47.73.97',     # drugs horlaxendeutschland.de fitnessfact.co.za etc
             # AS 43317 FISHNET-AS, RU
             '77.73.70.10',      # applesupportnumber.net
             # AS 46606 UNIFIEDLAYER-AS-1 - Unified Layer, US
