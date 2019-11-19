@@ -14545,3 +14545,4 @@
 1574161113	tripleee	gaze[\W_]*+beauty(?:[\W_]*+cream)?
 1574161152	tripleee	sunnowrow
 1574162877	tripleee	sfdigital\.co\.uk
+1574164234	double-beep	jaspercolin\.com
