@@ -14549,3 +14549,4 @@
 1574101569	Das_Geek	allpaperworld\.com
 1574114276	Jenayah	qualityessay\.com
 1574166819	tripleee	siddibio\.co\.in
+1574166878	tripleee	accu[\W_]*+feet(?:[\W_]*+in[\W_]*+soles)?
