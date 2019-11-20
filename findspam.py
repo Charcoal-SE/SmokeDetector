@@ -1285,6 +1285,7 @@ def watched_ip_for_url_hostname(s, site):
             # '216.239.38.21',    # random spam sites but many FPs
             # AS 16276 OVH, FR
             '54.38.180.85',     # izmorelen.com
+            '178.33.233.149',   # games bombom.host starblastgame.tk etc
             # AS 16509 AMAZON-02 - Amazon.com, Inc., US
             '34.208.88.151',    # edbmails.cxom
             '52.66.203.156',    # uaetechnician.ae
