@@ -2118,3 +2118,4 @@ percocet
 eminence[\W_]*+vitality(?:[\W_]*+keto)?
 vialift[\W_]*+xl(?:[\W_]*+(?:review|improvement|enhancement|building|muscle|pill|usa|male|\d+|[\da-f]{4,})s?)*
 k[\W_]*+shred(?:[\W_]*+(?:review|\d+|[\da-f]{4,})s?)*
+games[\W_]*+bx(?!\.(?:pro|tk))(?:daily)?\d*
