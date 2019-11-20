@@ -996,6 +996,8 @@ def ns_is_host(s, site):
     as the IP addresses of all its name servers.
     '''
     for hostname in post_hosts(s, check_tld=True):
+        if metasmoke_cache.is_website_whitelisted(hostname):
+            continue
         host_ip = dns_query(hostname, 'a')
         if host_ip is None:
             continue
