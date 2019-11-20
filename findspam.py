@@ -1395,6 +1395,7 @@ def watched_ip_for_url_hostname(s, site):
             '190.115.18.194',   # fake-tech-support kaspersky-login etc
             '190.115.26.62',    # fake-tech-support avastloginn etc
             # AS 394695 PUBLIC-DOMAIN-REGISTRY - PDR, US
+            '45.113.122.66',    # drugs + random
             '103.21.58.29',     # software-development infinigic / apporio.com
             '103.21.59.174',    # random southafricapackages.com
             '103.211.216.80',   # random powermindinstitute.in ooisolutions.com
