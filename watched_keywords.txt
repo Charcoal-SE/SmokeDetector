@@ -13157,7 +13157,6 @@
 1569307272	Makyen	tainternational\.co
 1569307985	tripleee	go-roku-express\.com
 1569310345	tripleee	noithatkenli\.vn
-1569313727	Glorfindel	gamesbx(?!\.tk)
 1569314142	Shree	superior\.edu\.pk
 1569314743	Shree	exportersindia\.com
 1569318669	Shree	khooger\.news
