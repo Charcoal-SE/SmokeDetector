@@ -1397,6 +1397,7 @@ def watched_ip_for_url_hostname(s, site):
             # AS 394695 PUBLIC-DOMAIN-REGISTRY - PDR, US
             '103.21.58.29',     # software-development infinigic / apporio.com
             '103.21.59.174',    # random southafricapackages.com
+            '103.211.216.80',   # random powermindinstitute.in ooisolutions.com
             '162.215.253.205',  # drugs escorts drozien.com nehasuri.in etc
             '204.11.58.143',    # drugs wintersupplement ketopillsstore etc
             '204.11.58.156',    # fake-tech-support smatustech comretail.net etc
