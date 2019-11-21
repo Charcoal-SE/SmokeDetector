@@ -1522,6 +1522,7 @@ def watched_asn_for_url_hostname(s, site):
             # '55002',   # DEFENSE-NET - Defense.Net, Inc, US. -- 11/100 over a yeasr
             '62134',   # IHNET-EU, US.
             '62731',   # 247RACK-COM - 247RACK.com, US
+            '63068',   # CROCWEB - CrocWeb, CA
             '133296',  # WEBWERKS-AS-IN Web Werks India Pvt. Ltd., IN
             '133711',  # HBSGZB-AS Home Broadband Services LLP, IN
             '197695',  # AS-REG, RU -- 32/173 over a year but many weight 1
