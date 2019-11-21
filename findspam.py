@@ -1240,6 +1240,7 @@ def watched_ns_for_url_domain(s, site):
         'trouble-free.net.',
         'asurawebhosting.com.',
         'dnspod.net.',
+        'hostwhitelabel.com.',
     ])
 
 
