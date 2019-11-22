@@ -1414,6 +1414,7 @@ def watched_ip_for_url_hostname(s, site):
             '45.113.122.66',    # drugs + random
             '103.21.58.29',     # software-development infinigic / apporio.com
             '103.21.59.174',    # random southafricapackages.com
+            '103.53.40.64',     # fake-tech-support supportservicehelp etc
             '103.211.216.80',   # random powermindinstitute.in ooisolutions.com
             '162.215.253.205',  # drugs escorts drozien.com nehasuri.in etc
             '204.11.58.143',    # drugs wintersupplement ketopillsstore etc
