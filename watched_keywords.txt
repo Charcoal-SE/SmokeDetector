@@ -1360,7 +1360,6 @@
 1509700616	tripleee	cognitune
 1509701233	tripleee	nu\W?clarity
 1509712941	tripleee	womanparadise\.in
-1509821855	quartata	cpagrip\.com
 1509823086	Mithrandir	parismasters\.co
 1509874602	rene	watchonmovies\.com
 1509875324	Glorfindel	knowledgeuniverseonline\.com
