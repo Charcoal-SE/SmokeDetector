@@ -1761,7 +1761,7 @@ gracinia
 (?:k\d\W?)?slim\W?keto
 cachet\W?cbd
 zen\W?men(?:\W?z4)?
-prache\W?cream
+prache[\W_]*+(?:anti[\W_]*+ag(?:e|ing)[\W_]*+|skin[\W_]*+)?cream
 keto\W?dragon\W?s(?:\W?den)?
 digital\W?platter
 sizevitrexx
