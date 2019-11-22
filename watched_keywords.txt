@@ -7296,7 +7296,6 @@
 1546230167	Shree	couponndeal\.com
 1546230997	Shree	naati\.com\.au
 1546238891	Shree	softwebtuts\.com
-1546249311	Glorfindel	eglobeits
 1546249554	Makyen	pepa\.ir
 1546255458	Shree	mypoojabox\.in
 1546280259	iBug	bigpixelgraphics\.com
