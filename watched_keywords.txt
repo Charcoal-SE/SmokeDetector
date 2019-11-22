@@ -14630,3 +14630,4 @@
 1574405562	Makyen	free[\W_]*+cell[\W_]*+keto
 1574405750	Makyen	siddaganga(?:[\W_]*+(?:oil|bio|industries|llp))*
 1574405769	Makyen	naturewings\.com
+1574405866	Makyen	sarahsblessingcbdoil\.info
