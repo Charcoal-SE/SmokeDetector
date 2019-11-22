@@ -2097,7 +2097,7 @@ klinik(?=.{0,40}?\baborsi\b)
 making\W*over\W*\$2000
 michael\.veksler@tech-center\.com
 rezola(?!growth\.info(?<=rezolagrowth\.info))(?:[\W_]*+(?:growth|hair|\d+))*
-aqualeva(?:[\W_]*+(?:cream|face|\d+))*
+aqualeva(?:[\W_]*+(?:cream|face|skin|anti|wrinkle|serum|\d+|[\da-f]{4,})s?)*
 exogenous[\W_]*+keto(?:[\W_]*+(?:ca|\d+))*+
 evaria
 doctorekpen\w*(?:@gmail\.com)?
