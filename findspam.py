@@ -1362,6 +1362,7 @@ def watched_ip_for_url_hostname(s, site):
             '160.153.138.71',   # random kisansatta moveonwards.co.uk numbersplus.ca
             '166.62.6.66',      # fake-tech-support + hosting ms-officesetup etc
             '166.62.27.56',     # drugs click2nextorder welnesscare supplement4menia etc
+            '166.62.28.97',     # escorts housing etc
             '166.62.28.114',    # pst-splitter.com affordablehousinggurgaon.in etc
             '166.62.28.116',    # fake-tech-support printertechsupportnumbers.com
             '166.62.103.37',    # gs-jj.com various domains
