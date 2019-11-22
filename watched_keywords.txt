@@ -14645,3 +14645,4 @@
 1574415027	tripleee	eglobeits(?!\.com\b)
 1574416797	Glorfindel	rewardbloggers\.com
 1574416889	Glorfindel	cubexsoft\.com
+1574418777	tripleee	ahua\.in
