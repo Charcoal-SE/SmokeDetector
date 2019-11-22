@@ -988,7 +988,7 @@ nexacell
 (?:1\W*)?417\W*323\W*2635
 andbrain\.com
 cyberwizardhack
-chocolite
+chocolite(?!$)
 master\W?testo
 derma\W?active
 mass\W?cut\W?pro
