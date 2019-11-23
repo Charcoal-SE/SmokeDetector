@@ -2120,3 +2120,4 @@ vialift[\W_]*+xl(?:[\W_]*+(?:review|improvement|enhancement|building|muscle|pill
 k[\W_]*+shred(?:[\W_]*+(?:review|\d+|[\da-f]{4,})s?)*
 games[\W_]*+bx(?!\.(?:pro|tk))(?:daily)?\d*
 vegusbet(?!\.net)
+black[\W_]*+label[\W_]*+x(?:[\W_]*+(?:pill|review|\d|[\da-f]{4,})s?)*
