@@ -14662,3 +14662,4 @@
 1574480449	Machavity	mediasoftb\.com
 1574484513	Makyen	solitairefreesolitaire\.com
 1574484636	Makyen	rigidhackpro
+1574484723	Makyen	fasthackresults(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
