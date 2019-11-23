@@ -14653,3 +14653,4 @@
 1574453788	Makyen	onlinethacker4hire(?:@gmail\.com)?
 1574453893	Makyen	(?-i:CpggB8YndCr0viRwrqTl5L)
 1574473465	Makyen	lifemotivation\.net
+1574473481	Makyen	yakim\.org\.ua
