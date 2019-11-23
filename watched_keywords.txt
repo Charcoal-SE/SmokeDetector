@@ -13613,7 +13613,6 @@
 1571007899	Makyen	danielbohm232(?:@gmail\.com)?
 1571021522	Nisse Engström	developerstroop\.com
 1571027154	Makyen	genuinechemsales\.com
-1571031162	Makyen	aweekchallenge\.com
 1571032565	Makyen	menloparktech\.com
 1571032595	Makyen	shuraa\.com
 1571037776	Makyen	onlinism\.com
