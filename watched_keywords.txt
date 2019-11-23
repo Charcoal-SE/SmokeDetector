@@ -14663,4 +14663,3 @@
 1574484636	Makyen	rigidhackpro
 1574484723	Makyen	fasthackresults(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1574487680	Makyen	(?-i:1sbLV\.jpg)
-1574487703	Makyen	vegusbet(?!\.net)
