@@ -568,3 +568,15 @@ stackoverflow.com:
       - 5963824  # Ashish Ahuja
       - 170826   # Stephen Kennedy
       - 5869449  # angussidney
+
+  202954:  # Charcoal Test SO
+    commands: true
+
+    msg_types:
+      - debug
+      - no-offensive-mask
+
+    privileges:
+      inherit:
+        site: stackexchange.com
+        room: 11540
