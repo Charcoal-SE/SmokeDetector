@@ -155,7 +155,6 @@ stackexchange.com:
     commands: true
 
     msg_types:
-      - debug
       - offensive-mask
 
     privileges:
