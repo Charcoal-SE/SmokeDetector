@@ -14707,3 +14707,4 @@
 1574664635	Makyen	myron[\W_]*+homes(?!\.in(?<=myronhomes\.in))
 1574664645	Makyen	(?-i:CITmzaGvbu0)
 1574666224	tripleee	ameotech\.com
+1574666506	Makyen	tutorialshelper\.com
