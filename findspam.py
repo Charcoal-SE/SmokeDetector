@@ -1331,6 +1331,7 @@ def watched_ip_for_url_hostname(s, site):
             '198.187.29.122',   # random hoshangabad.store darkhorsell.com
             '198.187.31.221',   # drugs portal4fitness move2.fitness etc
             '199.188.200.16',   # drugs totalketopills ketostorepills
+            '199.188.200.90',   # drugs goldencondor.org infervour.com
             '199.188.200.109',  # drugs atozfitnesstalks awaretalks etc
             '199.192.31.7',     # gambling indonesian IP-only
             # AS 23352 SERVERCENTRAL - Server Central Network, US
