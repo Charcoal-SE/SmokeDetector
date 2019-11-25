@@ -1243,6 +1243,7 @@ def watched_ns_for_url_domain(s, site):
         'asurawebhosting.com.',
         'dnspod.net.',
         'hostwhitelabel.com.',
+        'xpertns.com.',
     ])
 
 
