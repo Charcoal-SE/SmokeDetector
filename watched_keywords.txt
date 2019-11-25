@@ -14709,4 +14709,4 @@
 1574668550	tripleee	quranforkids\.com
 1574675062	tripleee	customersuportservice\.com
 1574680049	Glorfindel	elearncollege\.com
-1574689861	Das_Geek	clydedigital\.co
+1574689861	Das_Geek	clydedigital\.co\.uk
