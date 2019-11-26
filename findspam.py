@@ -1394,6 +1394,7 @@ def watched_ip_for_url_hostname(s, site):
             '162.241.67.249',   # wwwofficecomsetup.com
             '162.241.148.13',   # fake-tech-support officekeyactivate en-us-mcafee etc
             '162.241.148.157',  # fake-tech-support en-mcafee setupmwnow etc
+            '162.241.253.48',   # fake-tech-support techiesupportnumber fiksqb
             '192.185.129.109',  # fake-tech-support 24x7technicalhelp etc
             '192.185.227.177',  # zooksoftware.com
             # Dual-homed 46606 + AS 26337 OIS1 - Oso Grande IP Services, LLC, US
