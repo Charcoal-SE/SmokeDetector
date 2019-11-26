@@ -1244,6 +1244,7 @@ def watched_ns_for_url_domain(s, site):
         'dnspod.net.',
         'hostwhitelabel.com.',
         'xpertns.com.',
+        'site4now.net.',
     ])
 
 
