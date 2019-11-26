@@ -1264,7 +1264,7 @@ def ip_for_url_host(s, site, ip_list):
 
 @create_rule("potentially bad IP for hostname in {}",
              stripcodeblocks=True, body_summary=True)
-def watched_ip_for_url_hostname(s, site):
+def hwatched_ip_for_url_hostname(s, site):
     return ip_for_url_host(
         s, site,
         # Watched IP list
@@ -1276,6 +1276,7 @@ def watched_ip_for_url_hostname(s, site):
             # AS 8560 ONEANDONE-AS Brauerstrasse 48, DE
             '62.151.180.33',    # visit-my-website ltssecure.com / ltssoc
             # AS 13335 CLOUDFLARENET - Cloudflare, Inc., US
+            '23.227.38.32',     # random
             '104.25.224.105',   # rsorder.com jollyhers.com
             '104.27.172.43',    # sevenmentor.com
             '104.27.172.129',   # setupcanonprinter.com
