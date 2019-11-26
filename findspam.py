@@ -1271,6 +1271,8 @@ def watched_ip_for_url_hostname(s, site):
         [
             # AS 3842 RAMNODE - RamNode LLC, US
             '168.235.103.177',  # gmailtechnicalsupportnumbers.com
+            # AS 8075 MICROSOFT-CORP-MSN-AS-BLOCK - Microsoft Corporation, US
+            '13.92.159.95',     # babasupport.org
             # AS 8560 ONEANDONE-AS Brauerstrasse 48, DE
             '62.151.180.33',    # visit-my-website ltssecure.com / ltssoc
             # AS 13335 CLOUDFLARENET - Cloudflare, Inc., US
