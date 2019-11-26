@@ -10938,7 +10938,6 @@
 1562215571	Makyen	iDealshare
 1562215592	Makyen	VideoGo
 1562217720	Makyen	neu\W*natural\W*cbd
-1562219060	Makyen	testo\W*man(?:\W*uk)?
 1562219621	Makyen	alturl\.com
 1562219643	Makyen	(?-i:htw6w)
 1562219695	Makyen	my[\W_]*+fitness[\W_]*+pharm\w*(?!\.com(?<=myfitnesspharm\.com))(?!\.blogspot\.com(?<=myfitnesspharmclub\.blogspot\.com))
