@@ -6,7 +6,6 @@
 # Please stick to that format for maximum brevity - this file could get _very_ long otherwise.
 #
 # This file is in numerical order, please try to keep it that way when you add new users :)
-
 999: [999, 163669, 141629, 1324]  # Paul Roub
 9760: [9760, 2366, 136253, 18157]  # Jim Garrison
 63984: [63984, 66258, 186281, 189134]  # Andy
@@ -217,5 +216,6 @@
 13563472: [13563472, 363380, 399694, 9986421]  # Stormblessed
 14352942: [14352942, 381237, 416943, 10367815] # Daniil
 14688437: [14688437, 387151, 435726, 10607772]  # double-beep
+14952682: [14952682, 411740, 651518, 10795151]  # JL2210
 15185282: [15185282, 414253, 476201, 10957435]  # Chipster
 15776767: [15776767, 420172, 525551, 11384392]  # Das_Geek
