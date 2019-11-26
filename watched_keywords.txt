@@ -14728,5 +14728,4 @@
 1574760615	tripleee	unitedgraphic\.com\.sg
 1574761251	tripleee	paramhomes\.com
 1574761273	tripleee	megahd\.online
-1574763100	tripleee	allianzebposervices\.com
 1574763143	tripleee	matchlessly\.com
