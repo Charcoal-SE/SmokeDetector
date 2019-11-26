@@ -2124,3 +2124,4 @@ black[\W_]*+label[\W_]*+x(?:[\W_]*+(?:pill|review|\d|[\da-f]{4,})s?)*
 gandu(?!$|['"])
 superior[\W_]*+flux
 allmightbazulartemple(?:@gmail\.com)?
+testo[\W_]*+man(?:[\W_]*+(?:uk|pill|ultra|with|xl|nano|supplement|muscle|\d++|[\da-f]{4,}+)s?)*
