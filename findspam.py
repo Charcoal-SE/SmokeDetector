@@ -1407,6 +1407,8 @@ def watched_ip_for_url_hostname(s, site):
             # AS 55293 A2HOSTING - A2 Hosting, Inc., US
             '85.187.128.14',    # random visit-my-website fresherzones taxoplawgy etc
             '162.254.252.93',   # paper-writing etc appsocio doneessays etc
+            # AS 58640 NEXTRA-IN NEXTRA TELESERVICES PVT. LTD., IN
+            '103.228.112.110',  # random blogspam
             # AS 59253 LEASEWEB-APAC-SIN-11 Leaseweb Asia Pacific pte. ltd., SG"
             '172.96.191.212',   # indonesian gambling poker88asia02 etc
             # AS 62282 RACKRAY UAB Rakrejus, LT
