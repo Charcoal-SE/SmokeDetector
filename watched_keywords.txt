@@ -14724,3 +14724,4 @@
 1574753356	tripleee	health[\W_]*+virile(?!\.com)\d*
 1574753422	tripleee	vita[\W_]*+move
 1574753773	tripleee	webdevelopermano\.wordpress\.com
+1574756172	Jenayah	facts\.ae
