@@ -1331,6 +1331,7 @@ def watched_ip_for_url_hostname(s, site):
             '198.54.120.131',   # drugs hyalurolift.fr sarahsblessingcbdoil.nl etc
             '198.54.126.94',    # drugs letsfindtoday healthlione etc
             '198.54.126.109',   # escorts + buy-likes
+            '198.54.126.125',   # drugs + random
             '198.54.126.127',   # drugs fitcareketo healthsupplementbucket
             '198.187.29.22',    # drugs biznutrition maximumenhancement etc
             '198.187.29.122',   # random hoshangabad.store darkhorsell.com
