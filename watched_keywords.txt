@@ -14742,3 +14742,4 @@
 1574787677	Machavity	roxsport\.club
 1574788865	Machavity	h4ck3r
 1574789512	Makyen	testo[\W_]*+vital
+1574789549	Makyen	lizardsquadhackgroup(?:@gmail\.com)?
