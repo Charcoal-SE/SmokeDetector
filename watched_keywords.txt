@@ -14722,3 +14722,4 @@
 1574746833	tripleee	certificate[\W_]*+of[\W_]*+authority(?# see https://meta.stackexchange.com/q/339063)
 1574751776	tripleee	fiksqb\.com
 1574753317	tripleee	healthvirile\.com
+1574753356	tripleee	health[\W_]*+virile(?!\.com)\d*
