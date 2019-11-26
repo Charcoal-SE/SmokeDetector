@@ -14725,3 +14725,4 @@
 1574753422	tripleee	vita[\W_]*+move
 1574753773	tripleee	webdevelopermano\.wordpress\.com
 1574756172	Jenayah	facts\.ae
+1574758925	Glorfindel	www-happybirthdaywishes\.com
