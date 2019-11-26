@@ -14746,3 +14746,4 @@
 1574790929	Machavity	getfirstnaukri\.com
 1574792104	Das_Geek	ssrtechvision\.com
 1574792553	Makyen	rapitasystems\.com
+1574796239	Das_Geek	griyaaborsicom\.wordpress\.com
