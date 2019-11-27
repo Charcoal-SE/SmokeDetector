@@ -13538,7 +13538,6 @@
 1570784669	tripleee	techblogize\.com
 1570787791	tripleee	muaranauli2323(?# @medium)
 1570787821	tripleee	theskilldesk\.com
-1570793578	tripleee	i-nortonsetup\.info
 1570799214	double-beep	customerservicephone-number\.com
 1570799545	double-beep	luxy\.ae
 1570812516	Machavity	tetesitv\.com
