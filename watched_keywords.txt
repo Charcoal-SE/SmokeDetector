@@ -13565,7 +13565,6 @@
 1570840861	Makyen	aegis[\W_]*+vitality(?:[\W_]*+(?:forskolin|\d+))*
 1570840900	Makyen	https-supplementblend-com
 1570840910	Makyen	ginkgo[\W_]*+biloba
-1570840920	Makyen	getsetwild(?!\.com)
 1570840932	Makyen	cariinfo\.id
 1570840942	Makyen	(?-i:5LCS2\.jpg)
 1570840968	Makyen	com\.vismera_rcq\.myapplication
