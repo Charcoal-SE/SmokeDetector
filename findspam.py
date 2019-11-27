@@ -1320,6 +1320,7 @@ def watched_ip_for_url_hostname(s, site):
             '68.65.122.36',     # drugs reviewscart.co.uk / purefitketopills.com
             '104.219.248.81',   # drugs supplement4world / supplementgod etc
             '162.213.255.36',   # drugs / visit-my-website / cryptocurrency
+            '198.54.114.148'    # drugs fitose onnitsupplements etc + random
             '198.54.114.168',   # fake-tech-support symnorton + drugs
             '198.54.115.11',    # drugs top10sideeffects testrot3online.info etc
             '198.54.115.65',    # drugs goldencondor / visit4supplements etc
