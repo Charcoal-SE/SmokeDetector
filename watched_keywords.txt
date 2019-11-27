@@ -12610,7 +12610,6 @@
 1567409673	tripleee	ishagarg\.in
 1567418649	double-beep	tastyvn\.com
 1567418680	double-beep	hookupgeek\.com
-1567419786	double-beep	hprinterofficial\.com
 1567420162	double-beep	cashmender\.com
 1567420173	double-beep	naijafocus\.com\.ng
 1567421051	double-beep	ishiakuherbalcure(?:@gmail\.com)?
