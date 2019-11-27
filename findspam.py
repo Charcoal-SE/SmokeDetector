@@ -1078,6 +1078,7 @@ def watched_ns_for_url_domain(s, site):
         {'bonnie.ns.cloudflare.com.', 'guss.ns.cloudflare.com.'},
         {'boyd.ns.cloudflare.com.', 'jasmine.ns.cloudflare.com.'},
         {'brad.ns.cloudflare.com.', 'brenda.ns.cloudflare.com.'},
+        {'brad.ns.cloudflare.com.', 'lily.ns.cloudflare.com.'},
         {'brenda.ns.cloudflare.com.', 'theo.ns.cloudflare.com.'},
         {'bruce.ns.cloudflare.com.', 'chan.ns.cloudflare.com.'},
         {'carol.ns.cloudflare.com.', 'guy.ns.cloudflare.com.'},
