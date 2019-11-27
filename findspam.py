@@ -1404,6 +1404,7 @@ def watched_ip_for_url_hostname(s, site):
             '162.241.253.48',   # fake-tech-support techiesupportnumber fiksqb
             '192.185.129.109',  # fake-tech-support 24x7technicalhelp etc
             '192.185.227.177',  # zooksoftware.com
+            '192.185.154.20',   # fake-tech-support accountantsquad etc
             # Dual-homed 46606 + AS 26337 OIS1 - Oso Grande IP Services, LLC, US
             '108.179.246.38',   # fake-tech-support customerservicephone-number etc
             # AS 47583 (HOSTINGER) - also notice dual-homed below
