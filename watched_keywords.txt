@@ -14792,3 +14792,4 @@
 1574901598	Makyen	whatsyourdreamcar\.com
 1574901614	Makyen	onefunnelaway\.com
 1574915445	Makyen	117\.53\.44\.195
+1574915476	Makyen	dr\b[\W_]*+didik
