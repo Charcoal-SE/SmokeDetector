@@ -14814,3 +14814,4 @@
 1574924630	Makyen	ketopluspastillas
 1574924802	Makyen	testo[\W_]*+alpha[\W_]*+ex
 1574924881	Makyen	my-mcafee-login\.com
+1574926606	Makyen	dumpscafe\.com
