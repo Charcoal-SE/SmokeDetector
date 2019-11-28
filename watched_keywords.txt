@@ -14812,3 +14812,4 @@
 1574924584	Makyen	bangalore[\W_]*+university
 1574924608	Makyen	nguyenquyen142857
 1574924630	Makyen	ketopluspastillas
+1574924802	Makyen	testo[\W_]*+alpha[\W_]*+ex
