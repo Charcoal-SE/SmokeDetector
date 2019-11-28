@@ -14832,3 +14832,4 @@
 1574961624	Makyen	black[\W_]*+friday[\W_]*+deals?
 1574961971	Makyen	victor@aim\.dev
 1574962016	Makyen	aim\.dev
+1574962041	Makyen	quora\.com/unanswered
