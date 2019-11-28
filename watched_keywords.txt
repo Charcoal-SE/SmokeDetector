@@ -14819,7 +14819,7 @@
 1574928856	tripleee	rissafety\.com
 1574928881	tripleee	6smarketers\.com
 1574928901	tripleee	6s[\W_]*+marketers(?!\.com)
-1574928956	tripleee	i4pzk
+1574928956	tripleee	i4pzk(?:\.app\.link)?
 1574929400	tripleee	espnplusactivate\.com
 1574929723	Makyen	webroot-com-safe\.com
 1574929987	Makyen	(?-i:RrVY9\.jpg)
