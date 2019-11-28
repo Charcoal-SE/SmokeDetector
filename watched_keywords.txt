@@ -14830,3 +14830,4 @@
 1574935574	Glorfindel	moore\W*finance
 1574937839	tripleee	affinityvr\.com
 1574961624	Makyen	black[\W_]*+friday[\W_]*+deals?
+1574961971	Makyen	victor@aim\.dev
