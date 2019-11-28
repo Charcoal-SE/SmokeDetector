@@ -14809,3 +14809,4 @@
 1574919770	tripleee	RCMB[\W_]*+college
 1574921328	tripleee	ontrack\.com
 1574924446	tripleee	mattseocarner(?:@gmail\.com)?
+1574924584	Makyen	bangalore[\W_]*+university
