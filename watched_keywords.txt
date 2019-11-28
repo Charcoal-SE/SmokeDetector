@@ -14821,3 +14821,4 @@
 1574928901	tripleee	6s[\W_]*+marketers(?!\.com)
 1574928956	tripleee	i4pzk
 1574929400	tripleee	espnplusactivate\.com
+1574929723	Makyen	webroot-com-safe\.com
