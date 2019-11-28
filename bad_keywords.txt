@@ -878,7 +878,7 @@ pure\W?prime
 \w*cyberwiz\w*@gmail\.com
 le\W?fior
 bellaire\W?skin
-alpha\W?king
+alpha\W?king(?!$)
 /phone-mirror(?=[/"<-]|$)
 bio\W?slim
 shanti\W?cbd
