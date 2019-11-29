@@ -230,3 +230,4 @@ devleadz
 (?-i:^Learntu Torials Point$)
 (?-i:^AskFeeds$)
 (?-i:^bellahadid$)
+(?-i:^Victor Lew$)
