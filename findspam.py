@@ -7,7 +7,6 @@ import regex
 from difflib import SequenceMatcher
 from urllib.parse import urlparse, unquote_plus
 from itertools import chain
-from collections import Counter
 from datetime import datetime
 import time
 import os
@@ -1289,6 +1288,7 @@ def watched_ip_for_url_hostname(s, site):
             # AS 14061 DIGITALOCEAN-ASN - DigitalOcean, LLC, US
             '139.59.83.45',     # fake-tech-support techjockey.com
             '139.59.91.71',     # housing prestigeelysian.in etc
+            '167.71.86.179',    # office-product-key-setup.com
             # AS 14618 AMAZON-AES - Amazon.com, Inc., US
             '3.230.72.35',      # gangboard.com
             # AS 15169 GOOGLE - Google LLC, US
