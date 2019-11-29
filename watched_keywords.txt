@@ -13615,7 +13615,6 @@
 1571112890	Makyen	samplecbdoil\.live
 1571117765	Makyen	mass[\W_]*+m1x(?:[\W_]*+(?:reviews|\d+))*
 1571117777	Makyen	proextender
-1571118548	Makyen	arlo-techsolution\.com
 1571120357	Makyen	techmen\.net
 1571121377	Makyen	adollshouselondon\.com
 1571121389	Makyen	timeout\.com
