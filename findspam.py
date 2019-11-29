@@ -7,6 +7,7 @@ import regex
 from difflib import SequenceMatcher
 from urllib.parse import urlparse, unquote_plus
 from itertools import chain
+from collections import Counter
 from datetime import datetime
 import time
 import os
