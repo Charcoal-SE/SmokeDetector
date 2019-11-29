@@ -14167,7 +14167,6 @@
 1573038378	Makyen	fitness[\W_]*+mega[\W_]*+mart(?!\.com)
 1573038393	Makyen	tumaf\.com
 1573038403	Makyen	spaceforrock(?:@gmail\.com)?
-1573038411	Makyen	fitnessmegamart\.com
 1573040723	Shree	techgropse\.com
 1573063621	Daniil	solutiontemples\.com
 1573071937	Machavity	aishakatuba33\W*(?:@\W*gmail\W*\.\W*com)
