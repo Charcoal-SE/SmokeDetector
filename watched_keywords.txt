@@ -14845,3 +14845,4 @@
 1575009549	Makyen	249192
 1575009861	Makyen	hatha[\W_]*+yoga[\W_]*+school[\W_]*+rishikesh(?:@gmail\.com)?
 1575009990	Makyen	oldtown88\.com
+1575010210	Makyen	bespokecommunity\.com
