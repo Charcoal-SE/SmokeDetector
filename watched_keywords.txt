@@ -14843,3 +14843,4 @@
 1575008769	Makyen	watchman-pypi\.com
 1575009524	Makyen	(?-i:X-SSAzwDvyo)
 1575009549	Makyen	249192
+1575009861	Makyen	hatha[\W_]*+yoga[\W_]*+school[\W_]*+rishikesh(?:@gmail\.com)?
