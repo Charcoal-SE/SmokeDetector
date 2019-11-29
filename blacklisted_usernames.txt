@@ -232,3 +232,4 @@ devleadz
 (?-i:^bellahadid$)
 (?-i:^Victor Lew$)
 (?-i:^ErikHimmel$)
+(?-i:^jordan belfort$)
