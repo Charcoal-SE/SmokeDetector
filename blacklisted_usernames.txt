@@ -229,3 +229,4 @@ devleadz
 (?-i:^Molitics - Media of Politics$)
 (?-i:^Learntu Torials Point$)
 (?-i:^AskFeeds$)
+(?-i:^bellahadid$)
