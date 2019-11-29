@@ -1334,6 +1334,7 @@ def watched_ip_for_url_hostname(s, site):
             '198.54.116.113',   # random toolsadventure petreviewz
             '198.54.120.43',    # joblinks99.com
             '198.54.120.131',   # drugs hyalurolift.fr sarahsblessingcbdoil.nl etc
+            '198.54.125.56',    # drugs keto4us.org
             '198.54.126.94',    # drugs letsfindtoday healthlione etc
             '198.54.126.109',   # escorts + buy-likes
             '198.54.126.125',   # drugs + random
