@@ -1339,6 +1339,7 @@ def watched_ip_for_url_hostname(s, site):
             '198.54.126.127',   # drugs fitcareketo healthsupplementbucket
             '198.187.29.22',    # drugs biznutrition maximumenhancement etc
             '198.187.29.122',   # random hoshangabad.store darkhorsell.com
+            '198.187.29.187',   # drugs ketofitstore demandsupplement etc
             '198.187.31.221',   # drugs portal4fitness move2.fitness etc
             '198.187.31.226',   # fake-tech-support + random
             '199.188.200.16',   # drugs totalketopills ketostorepills
