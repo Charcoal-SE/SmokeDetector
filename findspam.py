@@ -1392,6 +1392,7 @@ def watched_ip_for_url_hostname(s, site):
             '192.186.227.225',  # drugs topwellnessguru / healthcare350 etc
             '198.71.233.179',   # drugs & random pilspedia.com / upleaks.cn
             # AS 29873 BIZLAND-SD - The Endurance International Group, Inc., US
+            '65.254.248.183',   # drugs myhealthreviews.org truesupplementsfacts
             '66.96.147.113',    # fake-tech-support + random blogspam
             # AS 32475 SINGLEHOP-LLC - SingleHop LLC, US
             '172.96.186.189'    # gambling judilivegame caracurang cheatpkvpro etc
