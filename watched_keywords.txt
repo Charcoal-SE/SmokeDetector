@@ -14001,7 +14001,6 @@
 1572419357	Makyen	krogerfeedback\.pro
 1572420147	tripleee	mobileapplica\.com
 1572424888	Makyen	imstechnologiesgroup\.com
-1572428776	Makyen	peau[\W_]*+jeune[\W_]*+avis
 1572428786	Makyen	omegamaxx
 1572428820	Makyen	juventus[\W_]*+cream
 1572428831	Makyen	onlinehacker4hire(?:@gmail\.com)?
@@ -14130,7 +14129,6 @@
 1572945155	tripleee	izmirelen\.com
 1572946584	tripleee	giribaz\.com
 1572953078	Kulfy	peau-jeune-creme\.moonfruit\.com
-1572955419	Makyen	peau[\W_]*+jeune[\W_]*+creme(?!\.moonfruit\.com(?<=peau-jeune-creme\.moonfruit\.com))(?:[\W_]*+(?:fr|france|review|\d+))*
 1572955449	Makyen	gaitcon
 1572955478	Makyen	(?-i:JMVoD\.jpg)
 1572955669	Makyen	envy[\W_]*+us[\W_]*+canada(?:[\W_]*+(?:jealousy|review|\d+))*
@@ -14157,7 +14155,6 @@
 1573018819	Shree	truesmm\.com
 1573019691	Makyen	vservtech\.com
 1573022770	Makyen	2409620376024196(?#Facebook event)
-1573022786	Makyen	jeune[\W_]*+peau(?:[\W_]*+(?:france|cream|face|skin|\d+))+
 1573023508	Shree	admitkard\.com
 1573029752	tripleee	simulanis\.com
 1573031816	Makyen	dasosmith\.blogspot

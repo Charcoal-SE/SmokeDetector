@@ -2111,7 +2111,7 @@ ogbefunhearlingtemple(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?
 cyberfiles\.hacker(?:@gmail\.com)?
 ketogeniks
 evo[\W_]*+elite(?:[\W_]*+keto)?
-peau[\W_]*+jeune(?:[\W_]*+cream)?
+(?:peau[\W_]*+jeune|jeune[\W_]*+peau)(?!-creme\.moonfruit\.com(?<=peau-jeune-creme\.moonfruit\.com))(?:[\W_]*+(?:cream|creme|skin|france|fr|belgium|be|netherlands|avis|anti|aging|\d++|[\da-f]{4,}+)s?)*
 biovirexagen
 percocet
 eminence[\W_]*+vitality(?:[\W_]*+keto)?
