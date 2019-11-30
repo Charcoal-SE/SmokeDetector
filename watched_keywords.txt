@@ -14874,3 +14874,4 @@
 1575141964	Makyen	noble[\W_]*+hemp(?:[\W_]*+(?:oil|cbd|\d++))*
 1575141989	Makyen	technologylatestworld\.blogspot
 1575142006	Makyen	biggertrader50(?:@gmail\.com)?
+1575142027	Makyen	maestro_seller(?:@yahoo\.com)?
