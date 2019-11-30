@@ -14868,3 +14868,4 @@
 1575101366	Makyen	pickermovie\.com
 1575111488	double-beep	duasfor\.com
 1575141715	Makyen	top10guider(?!\.com)
+1575141732	Makyen	illumia[\W_]*+cosmeceuticals
