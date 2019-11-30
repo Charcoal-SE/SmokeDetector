@@ -3176,7 +3176,7 @@ healthstoregems\.com
 organicsupplementdietprogram\.com
 geosalary\.com
 znacmaintenance\.com
-skintone4you\.com
+skintone4you[\W_]*+com
 miningchamp\.com
 sportsblog\.com
 megasupplementmart\.com
