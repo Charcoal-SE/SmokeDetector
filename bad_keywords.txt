@@ -1102,7 +1102,7 @@ trilixton
 slim\W?trim
 (?<=[/?])mrx[-/"<]
 suplementodiet
-tevida
+tevida(?:[\W_]*+(?:canada|never|underestimate|the|influence|\d++|[\da-f]{4,}+)s?)*
 total\W?radiance
 age\W?repair
 sg\W?11\W?brain
