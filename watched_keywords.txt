@@ -14881,3 +14881,4 @@
 1575145978	Makyen	capricorn[\W_]*+bakery(?!\.com(?<=capricornbakery\.com))
 1575146035	Makyen	supper-fast-keto-boost\.tumblr\.com
 1575146294	Makyen	ultram
+1575146391	Makyen	anytxt\.net
