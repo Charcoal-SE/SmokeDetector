@@ -14860,3 +14860,4 @@
 1575078456	Makyen	(?-i:4xIBDK7Mpps)
 1575087110	Makyen	basketballlegends666\.net
 1575096806	Makyen	8371856490055483207
+1575096824	Makyen	iz[\W_]*+belt(?:[\W_]*+(?:iz|\d++|[\da-f]{4,}+))
