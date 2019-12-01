@@ -14352,7 +14352,6 @@
 1573686108	Makyen	co-recovery\.com
 1573696267	Makyen	yalanci\.neocities\.org
 1573686218	Das_Geek	pelis24\.mobi
-1573709770	tripleee	(?-i:^Muhammad Ali$)
 1573714277	Makyen	digipe\.co
 1573715061	tripleee	commoncelebrity\.com
 1573715186	Makyen	lalahuooo777
