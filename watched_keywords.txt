@@ -14919,3 +14919,4 @@
 1575303959	Makyen	guten[\W_]*+preis
 1575303985	Makyen	konicaminolta-driver\.com
 1575313908	Glorfindel	gome2stuff\.xyz
+1575313924	Glorfindel	home2stuff\.xyz
