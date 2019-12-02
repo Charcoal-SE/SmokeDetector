@@ -1367,6 +1367,7 @@ def watched_ip_for_url_hostname(s, site):
             '107.180.1.207'     # drugs velofelmale.info healthyaustralia.com.au etc
             '107.180.1.245',    # mmf cash61.com fox120 (blogspam?)
             '107.180.1.245',    # mmf cash61.com pays12com
+            '107.180.27.68',    # drugs ketodietfitness fitnesshealthpills etc
             '107.180.34.212',   # fake-tech-support 123helpline / allitexpert
             '107.180.39.226',   # drugs + escorts keto4diets etc + hotescortsjaipur
             '107.180.40.103',   # drugs + seo getbestdelight / seotipandsolution
