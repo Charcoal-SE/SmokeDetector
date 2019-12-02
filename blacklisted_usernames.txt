@@ -234,3 +234,4 @@ devleadz
 (?-i:^ErikHimmel$)
 (?-i:^jordan belfort$)
 (?-i:^Alexmiller$)
+(?-i:^deeppal$)
