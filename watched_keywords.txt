@@ -14917,3 +14917,4 @@
 1575296716	Glorfindel	profit-gesundheitsservice\.de
 1575298283	Das_Geek	lovepeacegrowth\.in
 1575303959	Makyen	guten[\W_]*+preis
+1575303985	Makyen	konicaminolta-driver\.com
