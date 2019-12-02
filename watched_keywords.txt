@@ -14901,3 +14901,4 @@
 1575262090	Nisse Engström	ataribreakout\.online
 1575262167	Nisse Engström	drivingdirectionss\.com
 1575262273	Nisse Engström	mapquest-drivingdirections\.com
+1575262344	Nisse Engström	shell-shockers\.online
