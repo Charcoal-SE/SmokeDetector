@@ -1454,6 +1454,7 @@ def watched_ip_for_url_hostname(s, site):
             '103.21.59.174',    # random southafricapackages.com
             '103.53.40.64',     # fake-tech-support supportservicehelp etc
             '103.211.216.80',   # random powermindinstitute.in ooisolutions.com
+            '111.118.215.156',  # fake-tech-support + random
             '162.215.241.244',  # drugs supplementstore4u + rvonlinegaming.com
             '162.215.253.205',  # drugs escorts drozien.com nehasuri.in etc
             '162.251.85.134',   # fake-tech-support printers etc
