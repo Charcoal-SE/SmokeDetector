@@ -2149,7 +2149,7 @@ pattern_websites = [
 city_list = [
     "Agra", "Ajanta", "Almora", "Alwar", "Amritsar", "Andheri",
     "Bangalore", "Banswarabhiwadi", "Bhilwara", "Bhimtal", "Bhiwandi", "Bhopal",
-    "Chandigarh",
+    "Calcutta", "Calicut", "Chandigarh",
     "Chennai", "Chittorgarh", "Coimbatore", "Colaba",
     "Darjeeling", "Dehradun", "Dehrdun", "Delhi", "Durgapur",
     "Ernakulam", "Faridabad",
