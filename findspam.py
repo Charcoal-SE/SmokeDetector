@@ -2337,9 +2337,9 @@ create_rule("pattern-matching website in {}",
             r"spain|sweden)\w{0,4}\.(com|net)",
             sites=["travel.stackexchange.com", "expatriates.stackexchange.com"],
             username=True, body_summary=True)
-# The TLDs of Iran, Pakistan, and Tokelau in answers
+# The TLDs of Iran, Pakistan, United Arab Emirates, or Tokelau in answers
 create_rule("pattern-matching website in {}",
-            r'(?i)http\S*?(?<![/.]tcl)\.(ir|pk|tk)(?=[/"<])',
+            r'(?i)http\S*?(?<![/.]tcl)\.(ae|ir|pk|tk)(?=[/"<])',
             username=True, body_summary=True, question=False)
 # Suspicious health-related websites, health sites are exempt
 create_rule("pattern-matching website in {}",
