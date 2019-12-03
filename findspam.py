@@ -1328,6 +1328,7 @@ def watched_ip_for_url_hostname(s, site):
             # AS 22612 NAMECHEAP-NET
             '68.65.122.36',     # drugs reviewscart.co.uk / purefitketopills.com
             '104.219.248.81',   # drugs supplement4world / supplementgod etc
+            '104.219.248.111',  # fake-tech-support + random
             '162.213.255.36',   # drugs / visit-my-website / cryptocurrency
             '198.54.114.148'    # drugs fitose onnitsupplements etc + random
             '198.54.114.150',   # drugs muscleplusfacts.org myhealthyera etc
