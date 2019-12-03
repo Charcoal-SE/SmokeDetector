@@ -14922,3 +14922,4 @@
 1575331567	Makyen	agbakaspelltemple(?:[\W_]*+gmail[\W_]*+com)?
 1575331596	Makyen	doctor[\W_]*+agbaka
 1575337398	Makyen	doctor[\W_]*+taiye
+1575337413	Makyen	dr\.taiye(?:@gmail\.com)?
