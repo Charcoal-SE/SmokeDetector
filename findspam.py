@@ -1337,6 +1337,7 @@ def watched_ip_for_url_hostname(s, site):
             '198.54.115.11',    # drugs top10sideeffects testrot3online.info etc
             '198.54.115.65',    # drugs goldencondor / visit4supplements etc
             '198.54.115.76',    # visit-my-website testmyinternetspeed.org etc
+            '198.54.115.158',   # drugs supplementsforfitness tophealthychat etc
             '198.54.115.178',   # drugs + random dreewhispers.xyz
             '198.54.116.24',    # drugs fitnesreviews pillsdrive
             '198.54.116.51',    # drugs reviewsgear / crazy-bulk-review etc
