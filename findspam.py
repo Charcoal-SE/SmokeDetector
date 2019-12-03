@@ -1284,6 +1284,8 @@ def watched_ip_for_url_hostname(s, site):
             '62.151.180.33',    # visit-my-website ltssecure.com / ltssoc
             # AS 13335 CLOUDFLARENET - Cloudflare, Inc., US
             '23.227.38.32',     # random
+            '104.24.122.102',   # drugs + buy-my-thing
+            '104.24.123.102',   # drugs + buy-my-thing
             '104.25.224.105',   # rsorder.com jollyhers.com
             '104.27.172.43',    # sevenmentor.com
             '104.27.172.129',   # setupcanonprinter.com
