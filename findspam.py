@@ -1328,6 +1328,7 @@ def watched_ip_for_url_hostname(s, site):
             '104.219.248.81',   # drugs supplement4world / supplementgod etc
             '162.213.255.36',   # drugs / visit-my-website / cryptocurrency
             '198.54.114.148'    # drugs fitose onnitsupplements etc + random
+            '198.54.114.150',   # drugs muscleplusfacts.org myhealthyera etc
             '198.54.114.168',   # fake-tech-support symnorton + drugs
             '198.54.114.236',   # drugs fake-tech-support + random
             '198.54.115.11',    # drugs top10sideeffects testrot3online.info etc
