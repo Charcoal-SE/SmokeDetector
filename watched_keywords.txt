@@ -14923,3 +14923,4 @@
 1575331596	Makyen	doctor[\W_]*+agbaka
 1575337398	Makyen	doctor[\W_]*+taiye
 1575337413	Makyen	dr\.taiye(?:@gmail\.com)?
+1575345426	Nisse Engström	drillingrig\.ltd
