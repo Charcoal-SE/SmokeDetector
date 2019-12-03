@@ -1329,6 +1329,7 @@ def watched_ip_for_url_hostname(s, site):
             '162.213.255.36',   # drugs / visit-my-website / cryptocurrency
             '198.54.114.148'    # drugs fitose onnitsupplements etc + random
             '198.54.114.168',   # fake-tech-support symnorton + drugs
+            '198.54.114.236',   # drugs fake-tech-support + random
             '198.54.115.11',    # drugs top10sideeffects testrot3online.info etc
             '198.54.115.65',    # drugs goldencondor / visit4supplements etc
             '198.54.115.76',    # visit-my-website testmyinternetspeed.org etc
