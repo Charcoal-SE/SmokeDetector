@@ -14920,3 +14920,4 @@
 1575303985	Makyen	konicaminolta-driver\.com
 1575313924	Glorfindel	home2stuff\.xyz
 1575331567	Makyen	agbakaspelltemple(?:[\W_]*+gmail[\W_]*+com)?
+1575331596	Makyen	doctor[\W_]*+agbaka
