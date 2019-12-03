@@ -14924,3 +14924,4 @@
 1575337398	Makyen	doctor[\W_]*+taiye
 1575337413	Makyen	dr\.taiye(?:@gmail\.com)?
 1575345426	Nisse Engström	drillingrig\.ltd
+1575346129	Makyen	taian[\W_]*+kaiqi(?:[\W_]*+(?:trade|co|ltd))*
