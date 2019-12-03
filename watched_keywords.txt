@@ -14934,3 +14934,4 @@
 1575356598	Shree	gamesmylittlepony\.com
 1575357746	iBug	webdesignerdubai\.ae
 1575358115	iBug	myeveschoice\.com
+1575358136	iBug	v\W?tight
