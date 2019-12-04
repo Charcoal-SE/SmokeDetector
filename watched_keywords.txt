@@ -14958,3 +14958,4 @@
 1575457982	Makyen	canon-printer-customer-service\.com
 1575458004	Makyen	este[\W_]*+organics(?:[\W_]*+serum)?
 1575458020	Makyen	superbowl2020info\.com
+1575458344	Makyen	twizted1zgaming\.com
