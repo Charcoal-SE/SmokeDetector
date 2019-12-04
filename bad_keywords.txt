@@ -2129,3 +2129,4 @@ getsetwild(?!\.com)
 illumia[\W_]*+cosmeceuticals
 noida[\W_]*+news
 luniesse
+enrg[\W_]*+tech(?!\.co\.uk)
