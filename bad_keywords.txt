@@ -2128,3 +2128,4 @@ testo[\W_]*+man(?:[\W_]*+(?:uk|pill|ultra|with|xl|nano|supplement|muscle|\d++|[\
 getsetwild(?!\.com)
 illumia[\W_]*+cosmeceuticals
 noida[\W_]*+news
+luniesse
