@@ -14420,7 +14420,7 @@
 1573862600	Machavity	dothodanghung\.com
 1573863224	Machavity	mynextemployee\.com
 1573885348	Makyen	(?-i:aZlmW\.jpg)
-1573885364	Makyen	ksx[\W_]*+pills
+1573885364	Makyen	ksx[\W_]*+pills(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+)s?)*
 1573885378	Makyen	(?-i:x4s67K6YiW0)
 1573885479	Makyen	purii[\W_]*+derm[\W_]*+cream
 1573885696	Makyen	ielts[\W_]*+answer(@outlook\.com)?
