@@ -178,9 +178,9 @@ def blacklist(_):
     Returns a string which explains the usage of the new blacklist commands.
     :return: A string
     """
-    raise CmdException("The !!/blacklist command has been deprecated. "
-                       "Please use !!/blacklist-website, !!/blacklist-username,"
-                       "!!/blacklist-keyword, or perhaps !!/watch-keyword. "
+    raise CmdException("The `!!/blacklist` command has been deprecated. "
+                       "Please use `!!/blacklist-website`, `!!/blacklist-username`, "
+                       "`!!/blacklist-keyword`, or perhaps `!!/watch-keyword`. "
                        "Remember to escape dots in URLs using \\.")
 
 
