@@ -14959,3 +14959,4 @@
 1575458004	Makyen	este[\W_]*+organics(?:[\W_]*+serum)?
 1575458020	Makyen	superbowl2020info\.com
 1575458344	Makyen	twizted1zgaming\.com
+1575458364	Makyen	cfpnationalchampionship2020\.com
