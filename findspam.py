@@ -1103,6 +1103,7 @@ def watched_ns_for_url_domain(s, site):
         {'elma.ns.cloudflare.com.', 'hank.ns.cloudflare.com.'},
         {'elma.ns.cloudflare.com.', 'seth.ns.cloudflare.com.'},
         # {'elsa.ns.cloudflare.com.', 'theo.ns.cloudflare.com.'}, -- 0/112 over 7 months
+        {'eric.ns.cloudflare.com.', 'michelle.ns.cloudflare.com.'},
         {'ernest.ns.cloudflare.com.', 'pat.ns.cloudflare.com.'},
         {'eva.ns.cloudflare.com.', 'hank.ns.cloudflare.com.'},
         {'george.ns.cloudflare.com.', 'lady.ns.cloudflare.com.'},
