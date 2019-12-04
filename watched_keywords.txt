@@ -11868,7 +11868,6 @@
 1565179979	tripleee	stronghold\.sg
 1565183627	tripleee	dragonsupportbyexperts\.com
 1565202078	Makyen	playroom\.co\.ua
-1565202099	Makyen	enrgtech\.co\.uk
 1565202119	Makyen	propersix(?!\.network|\.com|\.trade)
 1565202161	Makyen	propersix\.network
 1565202184	Makyen	(?-i:IKAIe\.jpg)
