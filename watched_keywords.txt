@@ -14950,3 +14950,4 @@
 1575440508	tripleee	\w*abstar\w*
 1575444234	tripleee	cityfurnish\.com
 1575450142	tripleee	mywifiexte\.net
+1575450641	tripleee	astromarriagesolution\.com
