@@ -1430,6 +1430,7 @@ def watched_ip_for_url_hostname(s, site):
             # AS 43317 FISHNET-AS, RU
             '77.73.70.10',      # applesupportnumber.net
             # AS 43754 ASIATECH, IR
+            '93.115.150.142',   # random Iranian visit-my-website
             '185.141.168.43',   # random Iranian visit-my-website
             # AS 46606 UNIFIEDLAYER-AS-1 - Unified Layer, US
             '50.87.189.77',     # avdshare.com
