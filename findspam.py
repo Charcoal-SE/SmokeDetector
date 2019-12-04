@@ -1429,6 +1429,8 @@ def watched_ip_for_url_hostname(s, site):
             '163.47.73.97',     # drugs horlaxendeutschland.de fitnessfact.co.za etc
             # AS 43317 FISHNET-AS, RU
             '77.73.70.10',      # applesupportnumber.net
+            # AS 43754 ASIATECH, IR
+            '185.141.168.43',   # random Iranian visit-my-website
             # AS 46606 UNIFIEDLAYER-AS-1 - Unified Layer, US
             '50.87.189.77',     # avdshare.com
             '162.241.67.249',   # wwwofficecomsetup.com
