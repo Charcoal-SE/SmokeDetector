@@ -156,7 +156,7 @@ def test_privileged():
 
 
 def test_deprecated_blacklist():
-    assert chatcommands.blacklist("").startswith("The !!/blacklist command has been deprecated.")
+    assert chatcommands.blacklist("").startswith("The `!!/blacklist` command has been deprecated.")
 
 
 @pytest.mark.skipif(GlobalVars.on_branch != "master", reason="avoid branch checkout")
