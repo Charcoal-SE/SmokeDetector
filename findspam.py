@@ -1253,7 +1253,7 @@ def watched_ns_for_url_domain(s, site):
         'xpertns.com.',
         'site4now.net.',
         {'vip1.alidns.com.', 'vip2.alidns.com.'},
-        'globat.com',
+        'globat.com.',
     ])
 
 
