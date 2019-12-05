@@ -14000,7 +14000,6 @@
 1572424888	Makyen	imstechnologiesgroup\.com
 1572428786	Makyen	omegamaxx
 1572428820	Makyen	juventus[\W_]*+cream
-1572428831	Makyen	onlinehacker4hire(?:@gmail\.com)?
 1572430953	Makyen	josepinkrow
 1572430965	Makyen	kakenhames
 1572437871	tripleee	cvsmedshop\.com
