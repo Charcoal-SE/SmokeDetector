@@ -2131,3 +2131,4 @@ noida[\W_]*+news
 luniesse
 enrg[\W_]*+tech(?!\.co\.uk)
 onlinehacker4hire(?:@gmail\.com)?
+acv[\W_]*+plus
