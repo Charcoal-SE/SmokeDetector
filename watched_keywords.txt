@@ -14982,3 +14982,4 @@
 1575504628	Makyen	jasonnecaise\.pen\.io
 1575504643	Makyen	41163990(?#URL path)
 1575504663	Makyen	boost[\W_]*+xtra
+1575504679	Makyen	minihere\.com
