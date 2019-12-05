@@ -15012,3 +15012,4 @@
 1575575782	Makyen	windows10screenshot\.com
 1575575804	Makyen	41149746(?#URL path)
 1575575881	Makyen	chupame(?#offensive: Spanish)
+1575575898	Makyen	polla(?#offensive: Spanish)
