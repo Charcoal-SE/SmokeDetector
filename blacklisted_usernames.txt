@@ -237,3 +237,4 @@ devleadz
 (?-i:^deeppal$)
 (?-i:^Apurva Abstar$)
 (?-i:^harryjackson$)
+(?-i:^Jainish Patel$)
