@@ -240,3 +240,4 @@ devleadz
 (?-i:^Jainish Patel$)
 (?-i:^Daisy Yardley$)
 (?-i:^StraitsResearch$)
+(?-i:^Bruce Hank$)
