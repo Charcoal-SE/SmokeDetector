@@ -1418,6 +1418,7 @@ def watched_ip_for_url_hostname(s, site):
             # AS 29873 BIZLAND-SD - The Endurance International Group, Inc., US
             '65.254.248.183',   # drugs myhealthreviews.org truesupplementsfacts
             '66.96.145.108',    # travel + random ubltravels.com ublauditing.com
+            '66.96.147.110',    # software-download + random
             '66.96.147.113',    # fake-tech-support + random blogspam
             # AS 32475 SINGLEHOP-LLC - SingleHop LLC, US
             '172.96.186.189'    # gambling judilivegame caracurang cheatpkvpro etc
