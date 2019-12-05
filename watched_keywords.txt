@@ -13621,7 +13621,6 @@
 1571124698	Makyen	gamesbx\.tk
 1571124709	Makyen	trendsnowgames\.net
 1571125364	double-beep	echonews\.in
-1571125908	Makyen	riteketopills\.com
 1571128789	Makyen	imtiazali3214
 1571130610	double-beep	last\W*2-4\W*day
 1571131968	double-beep	printersupportme\.com
