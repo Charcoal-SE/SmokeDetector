@@ -13405,7 +13405,6 @@
 1570291953	JoErNanO	fetchbus\.com
 1570306640	Makyen	customwritings\.com
 1570306661	Makyen	customwritings(?!\.com)
-1570313665	ArtOfCode	spiritualsadhana\.com
 1570314468	Makyen	mihmansho\.com
 1570316228	Makyen	soonsoon754
 1570316253	Makyen	illuminatiihome65(?:@gmail\.com)?
