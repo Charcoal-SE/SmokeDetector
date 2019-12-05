@@ -239,3 +239,4 @@ devleadz
 (?-i:^harryjackson$)
 (?-i:^Jainish Patel$)
 (?-i:^Daisy Yardley$)
+(?-i:^StraitsResearch$)
