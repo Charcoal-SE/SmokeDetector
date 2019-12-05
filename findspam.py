@@ -1260,6 +1260,7 @@ def watched_ns_for_url_domain(s, site):
         {'vip1.alidns.com.', 'vip2.alidns.com.'},
         'globat.com.',
         'idwebhost.id.',
+        {'ns16225425293.a2dns.com.', 'ns16225425298.a2dns.com.'},
     ])
 
 
