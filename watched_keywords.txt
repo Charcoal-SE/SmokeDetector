@@ -15004,3 +15004,4 @@
 1575564378	Machavity	Sologenic
 1575565622	Machavity	techfiver\.com
 1575565793	Machavity	truyen-cuoi\.net
+1575571350	Das_Geek	staffan(?:[\W_]*+(?:at[\W_]*+)?brickselectric(?:[\W_]*+(?:dot[\W_]*+)?se)?)?
