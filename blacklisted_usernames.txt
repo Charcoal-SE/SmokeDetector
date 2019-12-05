@@ -238,3 +238,4 @@ devleadz
 (?-i:^Apurva Abstar$)
 (?-i:^harryjackson$)
 (?-i:^Jainish Patel$)
+(?-i:^Daisy Yardley$)
