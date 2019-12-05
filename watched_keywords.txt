@@ -15015,3 +15015,4 @@
 1575575898	Makyen	polla(?#offensive: Spanish)
 1575575916	Makyen	putos(?#offensive: Spanish)
 1575575935	Makyen	zorra(?#offensive: Spanish)
+1575575997	Makyen	sologenic\.com
