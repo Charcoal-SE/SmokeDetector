@@ -1470,6 +1470,7 @@ def watched_ip_for_url_hostname(s, site):
             '104.152.168.31',   # random visit-my-website in India
             # AS 63949 LINODE-AP Linode, LLC, US
             '45.79.5.95',       # drugs reviews4buyers newsletter4healhzones etc
+            '176.58.96.134',    # drugs orderfitness.org demandsupplement etc
             # AS 210250 WPX, BG
             '194.1.147.28',     # getsetwild.com
             '194.1.147.38',     # getsetwild.com
@@ -1569,7 +1570,7 @@ def watched_asn_for_url_hostname(s, site):
             # '18978',   # ENZUINC-US - Enzu Inc, US
             # '19318',   # IS-AS-1 - Interserver, Inc, US -- 67/162 over a year
             '19969',   # JOESDATACENTER - Joe_s Datacenter, LLC, US.
-            # '20013'  # FPs do not watch -- CYRUSONE - CyrusOne LLC, US
+            # '20013', # FPs do not watch -- CYRUSONE - CyrusOne LLC, US
             # '22612', # Moderate FPs, don't double up -- NAMECHEAP-NET - Namecheap, Inc., US
             '23352',   # SERVERCENTRAL - Server Central Network, US -- 29/80 over 5 months but many weight 1
             # '26496', # Massive FPs do not watch -- AS-26496-GO-DADDY-COM-LLC - GoDaddy.com, LLC, US
