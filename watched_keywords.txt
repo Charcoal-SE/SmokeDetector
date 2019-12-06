@@ -15036,3 +15036,4 @@
 1575622267	tripleee	cybjurnal\.com
 1575622425	tripleee	dailyimagefunda\.com
 1575622725	tripleee	digitalyogi\.co\.in
+1575622836	tripleee	konarkevents\.com
