@@ -15055,3 +15055,4 @@
 1575653926	Machavity	(?-i:^DemitriEsak$)
 1575657512	Das_Geek	mp3downy\.com
 1575674438	Makyen	digital[\W_]*+yogi(?!\.co\.in(?<=digitalyogi\.co\.in))
+1575674457	Makyen	localbitcoin[\W_]*+clone[\W_]*+script
