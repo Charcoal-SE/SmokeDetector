@@ -1486,7 +1486,7 @@ def report(msg, args, alias_used="report"):
     # Handle determining whether a custom report reason was provided.
     try:
         # Custom handle trailing quotation marks at the end of the custom reason, which could happen.
-        if argsraw[1][-1] is '"':
+        if argsraw[1][-1] == '"':
             custom_reason = argsraw[1][:-1]
         else:
             custom_reason = argsraw[1]
