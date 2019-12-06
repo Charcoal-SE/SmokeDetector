@@ -15052,3 +15052,4 @@
 1575646427	Machavity	xesario\.com
 1575646934	Machavity	(?-i:LaEsg3nxF8M)
 1575652342	Das_Geek	movieclubzone\.com
+1575653926	Machavity	(?-i:^DemitriEsak$)
