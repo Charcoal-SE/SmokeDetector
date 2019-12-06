@@ -96,12 +96,6 @@ ASN_WHITELISTED_WEBSITES = [
     "ntp.org", "cpu-world.com", "caniuse.com", "guru99.com", "fontawesome.com",
     # Added to prevent having 3 detections on just the domain.
     "writingexplained.org", "eitren.com"]
-COUNTRY = [
-    # N Europe
-    "Iceland", "Denmark", "Sweden", "Norway",
-    # Oceania
-    "Australia", "New Zealand", "NewZealand",
-]
 
 if GlobalVars.perspective_key:
     PERSPECTIVE = "https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=" + GlobalVars.perspective_key
