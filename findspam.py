@@ -679,16 +679,20 @@ def process_numlist(numlist):
 
 @create_rule("bad phone number in {}", body_summary=True, max_rep=5, max_score=1, stripcodeblocks=True)
 def check_blacklisted_numbers(s, site):
-    return check_numbers(s,
-                         GlobalVars.blacklisted_numbers,
-                         GlobalVars.blacklisted_numbers_normalized)
+    return check_numbers(
+        s,
+        GlobalVars.blacklisted_numbers,
+        GlobalVars.blacklisted_numbers_normalized
+    )
 
 
 @create_rule("potentially bad keyword in {}", body_summary=True, max_rep=5, max_score=1, stripcodeblocks=True)
 def check_watched_numbers(s, site):
-    return check_numbers(s,
-                         GlobalVars.watched_numbers,
-                         GlobalVars.watched_numbers_normalized)
+    return check_numbers(
+        s,
+        GlobalVars.watched_numbers,
+        GlobalVars.watched_numbers_normalized
+    )
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
@@ -983,6 +987,20 @@ def ns_for_url_domain(s, site, nslist):
     return False, ""
 
 
+def get_ns_ips(domain):
+    """
+    Extract IP addresses of name server(s) for a domain
+    """
+    ns_ips = []
+    nameservers = dns_query(domain, 'ns')
+    if nameservers is not None:
+        for ns in nameservers:
+            this_ns_ips = dns_query(str(ns), 'a')
+            if this_ns_ips is not None:
+                ns_ips.extend([str(ip) for ip in this_ns_ips])
+    return ns_ips
+
+
 @create_rule("potentially problematic NS configuration in {}", stripcodeblocks=True, body_summary=True)
 def ns_is_host(s, site):
     '''
@@ -996,17 +1014,9 @@ def ns_is_host(s, site):
         if host_ip is None:
             continue
         host_ips = set([str(x) for x in host_ip])
-        domain = get_domain(hostname, full=True)
-        nameservers = dns_query(domain, 'ns')
-        if nameservers is not None:
-            ns_ips = []
-            for ns in nameservers:
-                this_ns_ips = dns_query(str(ns), 'a')
-                if this_ns_ips is not None:
-                    ns_ips.extend([str(ip) for ip in this_ns_ips])
-            if set(ns_ips) == host_ips:
-                return True, 'Suspicious nameservers: all IP addresses for {0} are in set {1}'.format(
-                    hostname, host_ips)
+        if host_ips and set(get_ns_ips(get_domain(hostname, full=True))) == host_ips:
+            return True, 'Suspicious nameservers: all IP addresses for {0} are in set {1}'.format(
+                hostname, host_ips)
     return False, ''
 
 
@@ -1270,6 +1280,9 @@ def ip_for_url_host(s, site, ip_list):
                 if addr in ip_list:
                     return True, '{0} suspicious IP address {1}'.format(
                         hostname, addr)
+        for ip in set(get_ns_ips(hostname)):
+            if ip in ip_list:
+                return True, '{0} suspicious IP address {1} for NS'.format(hostname, ip)
     return False, ""
 
 
