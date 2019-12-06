@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from findspam import FindSpam
+from findspam import FindSpam, ip_for_url_host, get_ns_ips
 import pytest
 from classes import Post
 from helpers import log
@@ -123,3 +123,21 @@ def test_findspam(title, body, username, site, body_is_summary, is_answer, expec
     if scan_spam != expected_spam:
         print("Expected {1} on {0}".format(body, expected_spam))
     assert scan_spam == expected_spam
+
+
+# noinspection PyMissingTypeHints
+@pytest.mark.parametrize("title, body, username, expected_spam", [
+    ('A title', '<p><a href="https://triple.ee/ns-test">foo</a>', 'tripleee', True),
+    ('A title', '<p><a href="https://charcoal-se.org/ns-test">foo</a>', 'tripleee', False),
+])
+def test_ns(title, body, username, expected_spam):
+    blacklisted_ip = get_ns_ips('triple.ee')[0]
+    site = 'stackoverflow.com'
+    # post = Post(api_response={'title': title, 'body': body,
+    #                          'owner': {'display_name': username, 'reputation': 1, 'link': ''},
+    #                          'site': site, 'question_id': '1', 'IsAnswer': False,
+    #                          'BodyIsSummary': False, 'score': 0})
+    what, why = ip_for_url_host(body, site, [blacklisted_ip])
+    assert what is expected_spam
+    if expected_spam:
+        assert ' suspicious IP address {0} for NS'.format(blacklisted_ip) in why
