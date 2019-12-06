@@ -394,7 +394,7 @@ class FindSpam:
             for span, word in infos])
 
 
-########################################################################################################################
+################################################################################
 # The Creator of all the spam check rules
 # Do NOT touch the default values unless you want to break things
 # what if a function does more than one job?
@@ -1426,7 +1426,7 @@ def watched_ip_for_url_hostname(s, site):
             '66.96.147.110',    # software-download + random
             '66.96.147.113',    # fake-tech-support + random blogspam
             # AS 32475 SINGLEHOP-LLC - SingleHop LLC, US
-            '172.96.186.189'    # gambling judilivegame caracurang cheatpkvpro etc
+            '172.96.186.189',   # gambling judilivegame caracurang cheatpkvpro etc
             # AS 33182 DIMENOC - HostDime.com, Inc., US
             '199.168.190.252',  # drugs makreviews.com
             # AS 36351 SOFTLAYER - SoftLayer Technologies Inc., US
@@ -1527,7 +1527,7 @@ def bad_ip_for_url_hostname(s, site):
             # AS 32244 LIQUIDWEB - Liquid Web, L.L.C, US
             '69.167.167.150',   # drugs healthdietalert healthytalkz etc
             # AS 32475 - SINGLEHOP-LLC - SingleHop LLC, US
-            '172.96.187.196'   # fake-tech-support canonfreedownload etc
+            '172.96.187.196',  # fake-tech-support canonfreedownload etc
             # AS 46606 UNIFIEDLAYER-AS-1 - Unified Layer, US
             '162.241.216.230',  # aiobjectives.com
             # AS 394695 PUBLIC-DOMAIN-REGISTRY - PDR, US
