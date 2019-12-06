@@ -15030,3 +15030,4 @@
 1575606884	Makyen	eyeem\.com
 1575606911	Makyen	girlsaskguys\.com
 1575606937	Makyen	bucketlist\.org
+1575606966	Makyen	Bất[\W_]*+Động[\W_]*+Sản
