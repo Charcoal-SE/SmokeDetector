@@ -241,3 +241,4 @@ devleadz
 (?-i:^Daisy Yardley$)
 (?-i:^StraitsResearch$)
 (?-i:^Bruce Hank$)
+(?-i:^Emma Parker$)
