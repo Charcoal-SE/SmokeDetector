@@ -15075,3 +15075,4 @@
 1575744818	Makyen	otomatis
 1575744832	Makyen	bechmutaw\.hatenablog\.com
 1575744864	Makyen	biosbypass\.com
+1575744916	Makyen	primal[\W_]*+core
