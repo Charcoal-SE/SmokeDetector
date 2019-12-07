@@ -15072,3 +15072,4 @@
 1575744763	Makyen	ultra[\W_]*+cbd[\W_]*+extract(?:[\W_]*+(?:australia|au|\d++|[\da-f]{4,}+))*
 1575744781	Makyen	(?-i:Mq4VEx4s2HI)
 1575744800	Makyen	obatpembesaroriginal
+1575744818	Makyen	otomatis
