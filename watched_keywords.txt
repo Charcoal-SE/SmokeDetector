@@ -15080,3 +15080,4 @@
 1575744984	Makyen	spring[\W_]*+boot[\W_]*+training(?=.{0,20}</a>)
 1575745022	Makyen	hadnankhan\.hatenablog\.com
 1575745059	Makyen	vibrant[\W_]*+enhanced(?:[\W_]*+(?:keto|\d++|[\da-f]{4,}+))*
+1575745092	Makyen	mildaccounting\.com
