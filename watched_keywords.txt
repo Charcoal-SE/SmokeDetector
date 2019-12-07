@@ -15063,3 +15063,4 @@
 1575697713	Makyen	nexttechinstitute\.in
 1575697729	Makyen	nexttech[\W_]*+institute(?!\.in(?<=nexttechinstitute\.in))
 1575715375	Glorfindel	vatboxuae\.com
+1575730615	Machavity	northwestindianaconcretecutting\.com
