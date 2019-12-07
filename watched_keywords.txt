@@ -15076,3 +15076,4 @@
 1575744832	Makyen	bechmutaw\.hatenablog\.com
 1575744864	Makyen	biosbypass\.com
 1575744916	Makyen	primal[\W_]*+core
+1575744932	Makyen	creditsmartspy(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
