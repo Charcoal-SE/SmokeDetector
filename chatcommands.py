@@ -1,12 +1,25 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
-from chatcommunicate import add_room, block_room, CmdException, command, get_report_data, is_privileged, message, \
-    tell_rooms, tell_rooms_with, get_message
+from datetime import datetime
+import threading
+import random
+import requests
+import sys
+import os
+import time
+import collections
+from html import unescape
+from ast import literal_eval
+
+# noinspection PyCompatibility
+import regex
+
+# noinspection PyUnresolvedReferences
+from chatcommunicate import add_room, block_room, CmdException, command, get_report_data, \
+    is_privileged, message, tell_rooms, tell_rooms_with, get_message
 # noinspection PyUnresolvedReferences
 from globalvars import GlobalVars
 import findspam
-# noinspection PyUnresolvedReferences
-from datetime import datetime
 from apigetpost import api_get_post, PostData
 import datahandling
 from datahandling import *
@@ -15,20 +28,8 @@ from blacklists import load_blacklists, Blacklist
 from parsing import *
 from spamhandling import check_if_spam, handle_spam
 from gitmanager import GitManager
-import threading
-import random
-import requests
-import sys
-import os
-import time
-import collections
-import subprocess
-from html import unescape
-from ast import literal_eval
-# noinspection PyCompatibility
-import regex
-from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, \
-    reload_modules, chunk_list
+from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, \
+    expand_shorthand_link, reload_modules, chunk_list
 from classes import Post
 from classes.feedback import *
 from classes.dnsresolver import dns_resolve
