@@ -15067,3 +15067,4 @@
 1575744635	Makyen	(?-i:binxe0_hTAA)
 1575744655	Makyen	dennisfrazer\.blogspot
 1575744677	Makyen	aanabrasheed(?#fiverr.com)
+1575744695	Makyen	candidatezip(?!\.com(?<=candidatezip\.com))
