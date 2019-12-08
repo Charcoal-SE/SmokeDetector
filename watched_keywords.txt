@@ -15106,3 +15106,4 @@
 1575826993	Makyen	hacksgamesk\.com
 1575827021	Makyen	slotomania
 1575827053	Makyen	hack(?:er|ing|s)*(?:[\W_]*+(?:cheat|online|free|coin)s?)+
+1575827083	Makyen	(?-i:2qk52ih)(?#bit.ly)
