@@ -15098,3 +15098,4 @@
 1575810675	Makyen	188bet\.com
 1575810699	Makyen	188bet(?!\.com)
 1575810727	Makyen	taruhan(?:[\W_]*+online)?
+1575810778	Makyen	blithadscrap\.hatenablog\.com
