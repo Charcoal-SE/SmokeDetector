@@ -15095,3 +15095,4 @@
 1575810597	Makyen	hybris[\W_]*+c4c[\W_]*+training
 1575810624	Makyen	sap[\W_]*+hybris[\W_]*+cloud(?:[\W_]*+for)?[\W_]*+client[\W_]*+training
 1575810651	Makyen	keobet88\.com
+1575810675	Makyen	188bet\.com
