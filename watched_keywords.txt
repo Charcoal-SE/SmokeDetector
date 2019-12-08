@@ -15097,3 +15097,4 @@
 1575810651	Makyen	keobet88\.com
 1575810675	Makyen	188bet\.com
 1575810699	Makyen	188bet(?!\.com)
+1575810727	Makyen	taruhan(?:[\W_]*+online)?
