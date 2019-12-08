@@ -15085,3 +15085,4 @@
 1575785195	Makyen	elisabt\.ir
 1575810346	Makyen	keto[\W_]*+twenty[\W_]*+one
 1575810371	Makyen	opo6\.com
+1575810392	Makyen	isaar30\.com
