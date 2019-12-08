@@ -200,7 +200,8 @@ def build_message(post, reasons):
     # make sure it's escaped. We also add the edited indicator here.
     sanitized_title = parsing.sanitize_title(post.title if not post.is_answer else post.parent.title)
     sanitized_title = escape_format(sanitized_title).strip()
-    sanitized_title = sanitized_title + ('' if not post.edited else ' \u270F\uFE0F')
+    if post.edited:  # Append a pencil emoji for edited posts
+        sanitized_title += ' \u270F\uFE0F'
 
     # If we have user details available, we'll linkify the username. If we don't, we call it a deleted user.
     if not post.user_name.strip() or (not poster_url or poster_url.strip() == ""):
