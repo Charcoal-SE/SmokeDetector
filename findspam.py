@@ -2349,8 +2349,8 @@ create_rule("bad keyword in {}", r"(?i)(?<!truth )serum|\b(?<!to )supplements\b"
 create_rule("bad keyword in {}", r"Son of (?:David|man)", all=False, sites=["scifi.stackexchange.com"],
             username=True)
 # Holocaust troll
-create_rule("bad keyword in {}", r"(?is)holocaust\W(witnesses|belie(f|vers?)|denier)", all=False,
-            sites=["skeptics.stackexchange.com", "history.stackexchange.com"])
+create_rule("bad keyword in {}", r"(?is)holocaust\W(witnesses|belie(?:f|vers?)|deni(?:er|al)|is\Wreal)",
+            all=False, sites=["skeptics.stackexchange.com", "history.stackexchange.com"])
 # Online poker, except poker.SE
 create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?:(?:poker|casino)\W*online"
             r"|online\W*(?:poker|casino))(?:\b|(?w:\b)|$)", all=True,
