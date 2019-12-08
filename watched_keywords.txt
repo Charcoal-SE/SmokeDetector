@@ -15082,3 +15082,4 @@
 1575745059	Makyen	vibrant[\W_]*+enhanced(?:[\W_]*+(?:keto|\d++|[\da-f]{4,}+))*
 1575745092	Makyen	mildaccounting\.com
 1575784002	Makyen	ultraboost
+1575785195	Makyen	elisabt\.ir
