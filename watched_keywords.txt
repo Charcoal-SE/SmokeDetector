@@ -15093,3 +15093,4 @@
 1575810548	Makyen	(?-i:DcPQg\.jpg)
 1575810569	Makyen	(?-i:_v5jMr41w4)
 1575810597	Makyen	hybris[\W_]*+c4c[\W_]*+training
+1575810624	Makyen	sap[\W_]*+hybris[\W_]*+cloud(?:[\W_]*+for)?[\W_]*+client[\W_]*+training
