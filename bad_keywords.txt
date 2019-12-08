@@ -867,7 +867,7 @@ rapid\W?boost
 grs\W?ultra
 donna\W?belle
 max\W?trim(?:\W?365)?
-ultra\W?boost
+ultra\Wboost
 revital\W?eyes
 phyto\W?power\W?caps
 (?:1\W*)?540\W*227\W*7725
