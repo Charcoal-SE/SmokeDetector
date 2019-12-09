@@ -104,8 +104,6 @@ def test_hats(date):
     assert chatcommands.hats() == "Winter Bash won't end for 0 days, 1 hour, 0 minutes, and 0 seconds. GO EARN SOME HATS!"
 """
 
-def test_location():
-    assert chatcommands.location() == GlobalVars.location
 
 def test_info():
     assert chatcommands.info() == "I'm " + GlobalVars.chatmessage_prefix +\
