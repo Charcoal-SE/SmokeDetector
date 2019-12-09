@@ -2498,7 +2498,6 @@
 1521100057	Glorfindel	viniscookbook\.com
 1521100429	micsthepick	optigen\W?iq
 1521110186	Glorfindel	convertertools\.org
-1521111121	Glorfindel	arysontechnologies\.com
 1520947926	WELZ	btcerich\.com
 1520949439	K.Dᴀᴠɪs	api\W*amplience\W*(?:dot\W*)?net
 1521112190	Glorfindel	appexperts\.ae
