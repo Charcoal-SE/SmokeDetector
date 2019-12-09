@@ -34,18 +34,18 @@ class BlacklistParser:
 
 class BasicListParser(BlacklistParser):
     def parse(self):
-        with open(self._filename, 'r', encoding='utf-8') as f:
+        with open(self._filename, 'r', encoding='utf-8', newline='\n') as f:
             return [line.rstrip() for line in f if len(line.rstrip()) > 0 and line[0] != '#']
 
     def add(self, item: str):
-        with open(self._filename, 'a+', encoding='utf-8') as f:
+        with open(self._filename, 'a+', encoding='utf-8', newline='\n') as f:
             last_char = f.read()[-1:]
             if last_char not in ['', '\n']:
                 item = '\n' + item
             f.write(item + '\n')
 
     def remove(self, item: str):
-        with open(self._filename, 'r+', encoding='utf-8') as f:
+        with open(self._filename, 'r+', encoding='utf-8', newline='\n') as f:
             items = f.readlines()
             items = [x for x in items if item not in x]
             f.seek(0)
@@ -55,18 +55,18 @@ class BasicListParser(BlacklistParser):
     def each(self, with_info=False):
         # info = (filename, lineno)
         if with_info:
-            with open(self._filename, 'r', encoding='utf-8') as f:
+            with open(self._filename, 'r', encoding='utf-8', newline='\n') as f:
                 for i, line in enumerate(f, start=1):
                     yield line.rstrip("\n"), (i, self._filename)
         else:
-            with open(self._filename, 'r', encoding='utf-8') as f:
+            with open(self._filename, 'r', encoding='utf-8', newline='\n') as f:
                 for line in f:
                     yield line.rstrip("\n")
 
     def exists(self, item: str):
         item = item.lower()
 
-        with open(self._filename, 'r', encoding='utf-8') as f:
+        with open(self._filename, 'r', encoding='utf-8', newline='\n') as f:
             lines = f.readlines()
             for i, x in enumerate(lines, start=1):
                 if item == x.lower().rstrip('\n'):
@@ -78,7 +78,7 @@ class BasicListParser(BlacklistParser):
 class TSVDictParser(BlacklistParser):
     def parse(self):
         dct = {}
-        with open(self._filename, 'r', encoding='utf-8') as f:
+        with open(self._filename, 'r', encoding='utf-8', newline='\n') as f:
             for lineno, line in enumerate(f, 1):
                 if regex.compile(r'^\s*(?:#|$)').match(line):
                     continue
@@ -93,7 +93,7 @@ class TSVDictParser(BlacklistParser):
         return dct
 
     def add(self, item: Union[str, dict]):
-        with open(self._filename, 'a+', encoding='utf-8') as f:
+        with open(self._filename, 'a+', encoding='utf-8', newline='\n') as f:
             if isinstance(item, dict):
                 item = '{}\t{}\t{}'.format(item[0], item[1], item[2])
             last_char = f.read()[-1:]
@@ -105,7 +105,7 @@ class TSVDictParser(BlacklistParser):
         if isinstance(item, dict):
             item = item[2]
 
-        with open(self._filename, 'r+', encoding='utf-8') as f:
+        with open(self._filename, 'r+', encoding='utf-8', newline='\n') as f:
             items = f.readlines()
             items = [x for x in items if ('\t' not in x) or
                      (len(x.split('\t')) == 3 and x.split('\t')[2].strip() != item)]
@@ -116,12 +116,12 @@ class TSVDictParser(BlacklistParser):
     def each(self, with_info=False):
         # info = (filename, lineno)
         if with_info:
-            with open(self._filename, 'r', encoding='utf-8') as f:
+            with open(self._filename, 'r', encoding='utf-8', newline='\n') as f:
                 for i, line in enumerate(f, start=1):
                     if line.count('\t') == 2:
                         yield line.rstrip("\n").split('\t')[2], (i, self._filename)
         else:
-            with open(self._filename, 'r', encoding='utf-8') as f:
+            with open(self._filename, 'r', encoding='utf-8', newline='\n') as f:
                 for line in f:
                     if line.count('\t') == 2:
                         yield line.rstrip("\n").split('\t')[2]
@@ -131,7 +131,7 @@ class TSVDictParser(BlacklistParser):
             item = item[2]
         item = item.split('\t')[-1]
 
-        with open(self._filename, 'r', encoding='utf-8') as f:
+        with open(self._filename, 'r', encoding='utf-8', newline='\n') as f:
             lines = f.readlines()
             for i, x in enumerate(lines, start=1):
                 if '\t' not in x:
