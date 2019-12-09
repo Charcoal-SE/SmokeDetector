@@ -242,3 +242,4 @@ devleadz
 (?-i:^StraitsResearch$)
 (?-i:^Bruce Hank$)
 (?-i:^Emma Parker$)
+(?-i:^selinajodi$)
