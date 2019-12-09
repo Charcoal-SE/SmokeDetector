@@ -14628,7 +14628,6 @@
 1574484723	Makyen	fasthackresults(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1574487680	Makyen	(?-i:1sbLV\.jpg)
 1574489401	Makyen	ublauditing\.com
-1574489831	double-beep	svrtechnologies\.video
 1574490003	double-beep	instanthelpsolution\.com
 1574493913	double-beep	imagesdownloadhd\.com
 1574527451	Makyen	harisystems\.com
