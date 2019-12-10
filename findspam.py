@@ -1480,6 +1480,8 @@ def watched_ip_for_url_hostname(s, site):
             # AS 63949 LINODE-AP Linode, LLC, US
             '45.79.5.95',       # drugs reviews4buyers newsletter4healhzones etc
             '176.58.96.134',    # drugs orderfitness.org demandsupplement etc
+            # AS 64425 SKB-ENTERPRISE, NL
+            '5.182.210.2',      # fake-tech-support + random
             # AS 210250 WPX, BG
             '194.1.147.28',     # getsetwild.com
             '194.1.147.38',     # getsetwild.com
