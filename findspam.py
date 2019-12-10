@@ -1345,6 +1345,7 @@ def watched_ip_for_url_hostname(s, site):
             '209.182.203.249',  # mindmajix.com
             # AS 22612 NAMECHEAP-NET
             '68.65.122.36',     # drugs reviewscart.co.uk / purefitketopills.com
+            '68.65.122.152',    # gocrazyfitness.com / pakistanrailwayjobs.com
             '104.219.248.81',   # drugs supplement4world / supplementgod etc
             '104.219.248.111',  # fake-tech-support + random
             '162.213.255.36',   # drugs / visit-my-website / cryptocurrency
