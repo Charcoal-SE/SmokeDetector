@@ -15132,3 +15132,4 @@
 1575935010	Das_Geek	havana60\.com
 1575956033	tripleee	[a-z]+https?://[a-z0-9]+
 1575956386	tripleee	srchoo\.com
+1575957991	Shree	teenpaticards\.com
