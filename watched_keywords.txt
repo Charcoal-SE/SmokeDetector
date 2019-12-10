@@ -15133,3 +15133,4 @@
 1575956033	tripleee	[a-z]+https?://[a-z0-9]+
 1575956386	tripleee	srchoo\.com
 1575957991	Shree	teenpaticards\.com
+1575960446	Shree	agenbakarat\.net
