@@ -15033,7 +15033,6 @@
 1575627262	tripleee	ludhianafun\.co\.in
 1575628417	tripleee	tanhajifullmovie\.info
 1575628489	tripleee	depositpulsaidn\.com
-1575628678	tripleee	\w+https?://\w+
 1575630950	tripleee	hacknos\.com
 1575632605	tripleee	gratisdumps\.com
 1575635754	tripleee	highnesscloud\.com
