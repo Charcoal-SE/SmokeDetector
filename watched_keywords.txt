@@ -13369,7 +13369,6 @@
 1570072581	Machavity	DXM5CJ20
 1570072789	Makyen	dengxingmei(?:@foxmail\.com)?
 1570072818	Stormblessed	Ms\W+Deng
-1570079943	tripleee	softakensoftware\.com
 1570080674	tripleee	devicesupport\.net
 1570087211	Glorfindel	ancensored\.com
 1570098187	Glorfindel	halcyontek\.com
