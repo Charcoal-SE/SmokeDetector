@@ -12493,7 +12493,6 @@
 1567097736	Makyen	(?-i:p9LNk7-1Sl)
 1567100278	Makyen	^(?-i:Davv+y(?:_\d+)?)$
 1567100350	Makyen	coolutils(?!\.com)
-1567100550	Jeff Schaller	teer-result\.net
 1567102399	Makyen	nanoarch[\W_]*software(?!\.com(?<=nanoarchsoftware\.com))
 1567104407	Makyen	medicalcaresouth\.com
 1567104462	Makyen	(?-i:zgch5\.jpg)
