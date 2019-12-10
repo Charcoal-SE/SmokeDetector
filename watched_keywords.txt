@@ -15155,3 +15155,4 @@
 1576009136	Machavity	studyclerk\.com
 1576009908	Makyen	greatowen(?<=@greatowen)
 1576013207	Machavity	medicalleechco\.com
+1576013838	Makyen	(?-i:atq4gp)(?#rebrand.ly)
