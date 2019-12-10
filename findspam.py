@@ -1265,6 +1265,7 @@ def watched_ns_for_url_domain(s, site):
         'globat.com.',
         'idwebhost.id.',
         {'ns16225425293.a2dns.com.', 'ns16225425298.a2dns.com.'},
+        'flaunt7.com.',
     ])
 
 
