@@ -10658,7 +10658,6 @@
 1561348947	Makyen	qjykf120\.com
 1561355030	Makyen	nitrofollowers\.com
 1561355049	Makyen	vital\W*max\W*keto
-1561355372	Makyen	coinpedia\.org
 1561356550	Makyen	gdsfthbn\.tumblr\.com
 1561356623	Makyen	swap\.ng
 1561356773	Makyen	nofap\.com
