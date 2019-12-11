@@ -15170,3 +15170,4 @@
 1576034131	Makyen	conotharama\.hatenablog\.com
 1576034150	Makyen	alertspill\.com
 1576034196	Makyen	trackimei\.net
+1576034213	Makyen	track[\W_]*+imei(?!\.net(?<=trackimei\.net))
