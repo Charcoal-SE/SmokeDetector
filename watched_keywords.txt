@@ -15176,3 +15176,4 @@
 1576042017	Makyen	qoinup(?!\.com)
 1576042394	tripleee	pikchat\.co
 1576042435	tripleee	pik[\W_]*+(?:chat(?!\.pro)|messenger)
+1576042469	tripleee	megaketomart\.com
