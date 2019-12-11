@@ -15182,3 +15182,4 @@
 1576059755	tripleee	oodlestechnologies\.com
 1576060045	Shree	casaderamo\.com
 1576060372	tripleee	getgeek\.co
+1576060541	tripleee	oodles[\W_]*+technologies(?!\.com)
