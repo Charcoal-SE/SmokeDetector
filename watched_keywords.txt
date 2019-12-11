@@ -15186,3 +15186,4 @@
 1576061083	tripleee	chotosite\.com
 1576062657	tripleee	easd-design\.com
 1576066288	tripleee	pokerdom\.moscow
+1576066479	tripleee	rise[\W_]*+digi[\W_]*+tech
