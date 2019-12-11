@@ -243,3 +243,4 @@ devleadz
 (?-i:^Bruce Hank$)
 (?-i:^Emma Parker$)
 (?-i:^selinajodi$)
+(?-i:^PutraSSJ$)
