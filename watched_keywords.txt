@@ -15185,3 +15185,4 @@
 1576060541	tripleee	oodles[\W_]*+technologies(?!\.com)
 1576061083	tripleee	chotosite\.com
 1576062657	tripleee	easd-design\.com
+1576066288	tripleee	pokerdom\.moscow
