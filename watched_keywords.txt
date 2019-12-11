@@ -15172,3 +15172,4 @@
 1576034196	Makyen	trackimei\.net
 1576034213	Makyen	track[\W_]*+imei(?!\.net(?<=trackimei\.net))
 1576034232	Makyen	imei[\W_]*+tracker
+1576034248	Makyen	livesupportonlinechat\.com
