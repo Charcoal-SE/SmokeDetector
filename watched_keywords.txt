@@ -15184,3 +15184,4 @@
 1576060372	tripleee	getgeek\.co
 1576060541	tripleee	oodles[\W_]*+technologies(?!\.com)
 1576061083	tripleee	chotosite\.com
+1576062657	tripleee	easd-design\.com
