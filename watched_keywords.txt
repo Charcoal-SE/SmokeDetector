@@ -15177,3 +15177,4 @@
 1576042435	tripleee	pik[\W_]*+(?:chat(?!\.pro)|messenger)
 1576042469	tripleee	megaketomart\.com
 1576046873	tripleee	sixtic\.com
+1576052278	Glorfindel	joyoshare
