@@ -15174,3 +15174,4 @@
 1576034232	Makyen	imei[\W_]*+tracker
 1576034248	Makyen	livesupportonlinechat\.com
 1576042017	Makyen	qoinup(?!\.com)
+1576042394	tripleee	pikchat\.co
