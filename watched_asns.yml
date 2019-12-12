@@ -1,0 +1,88 @@
+Schema: yaml_asn
+Schema_version: '2019120601'
+items:
+- asn: '3842'
+  comment: 122/284 over 1 year
+  disable: true
+- asn: '3595'
+- asn: '12488'
+- asn: '16509'
+  comment: FPs; do not watch
+  disable: true
+- asn: '18229'
+- asn: '18978'
+  disable: true
+- asn: '19318'
+  comment: ' 67/162 over a year'
+  disable: true
+- asn: '19969'
+- asn: '20013'
+  comment: FPs; do not watch
+  disable: true
+- asn: '22612'
+  comment: Moderate FPs, don't double up
+  disable: true
+- asn: '23352'
+- asn: '26496'
+  comment: Massive FPs; do not watch
+  disable: true
+- asn: '24778'
+- asn: '27176'
+- asn: '29073'
+- asn: '31083'
+  comment: 21/97 over a year
+  disable: true
+- asn: '31863'
+  comment: 32/76 over a year
+  disable: true
+- asn: '32244'
+  comment: 164/714 over 7 months
+  disable: true
+- asn: '34119'
+  comment: 32/173 over a year
+  disable: true
+- asn: '35916'
+- asn: '36024'
+  comment: 1/49 over a year, do not add back
+  disable: true
+- asn: '36351'
+  comment: 377/1288 over a year, very noisy
+  disable: true
+- asn: '36352'
+  comment: 48/140 over a year
+  disable: true
+- asn: '40676'
+  comment: 61/132 over a year
+  disable: true
+- asn: '42831'
+- asn: '43317'
+- asn: '45815'
+- asn: '45839'
+- asn: '46261'
+  comment: 4/24 over 10 months
+  disable: true
+- asn: '46844'
+- asn: '47583'
+- asn: '49335'
+- asn: '50673'
+  comment: 17/77 over 10 months
+  disable: true
+- asn: '53889'
+- asn: '54290'
+  comment: 22/58 over a year
+  disable: true
+- asn: '55002'
+  comment: 11/100 over a yeasr
+  disable: true
+- asn: '62134'
+- asn: '62731'
+- asn: '63068'
+- asn: '133296'
+- asn: '133711'
+- asn: '197695'
+- asn: '200000'
+- asn: '203226'
+- asn: '206349'
+- asn: '262254'
+- asn: '393960'
+- asn: '395970'
