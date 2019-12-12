@@ -10959,7 +10959,8 @@
 1562308214	Makyen	freetempsms\.com
 1562308234	Makyen	hichikirow
 1562308255	Makyen	(?-i:cFU97HNqjtc)
-1562308294	Makyen	keto(?:\W*(?:prime|rx|\d+))+
+1562308294	Makyen	keto(?:[\W_]*+(?:prime|rx))+(?:[\W_]*+(?:diet|za|\d++|[\da-f]{4,}+))*
+1562308295	Makyen	keto[\W_]*+\d++
 1562308547	Makyen	mkhurramov9500(?:@gmail\.com)?
 1562309996	Makyen	keto\W*pure(?:\W*(?:direct|canada|ca|org|org|pill|uk|\d+)s?)*
 1562310126	Makyen	louis-vuittonpascher\.fr
