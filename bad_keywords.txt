@@ -2133,3 +2133,4 @@ enrg[\W_]*+tech(?!\.co\.uk)
 onlinehacker4hire(?:@gmail\.com)?
 acv[\W_]*+plus
 renegade[\W_]*+meta(?:[\W_]*+pro)?
+ultra[\W_]*+cbd[\W_]*+extract(?:[\W_]*+(?:australia|au|\d++|[\da-f]{4,}+))*
