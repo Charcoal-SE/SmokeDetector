@@ -15243,3 +15243,4 @@
 1576174723	Makyen	wenewcoder\.hatenablog\.com
 1576174744	Makyen	rvxd14\.wixsite\.com
 1576174783	Makyen	cbdhempoiltoday\.com
+1576174817	Makyen	company[\W_]*+cleaning[\W_]*+tanks[\W_]*+jeddah
