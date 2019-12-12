@@ -15238,3 +15238,4 @@
 1576174547	Makyen	appsandreports\.com
 1576174575	Makyen	(?-i:TF2Qf\.png)
 1576174598	Makyen	cureconsult(?!\.com)
+1576174633	Makyen	sexual[\W_]*+power
