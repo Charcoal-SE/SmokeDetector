@@ -1622,7 +1622,7 @@ def watched_asn_for_url_hostname(s, site):
             '133711',  # HBSGZB-AS Home Broadband Services LLP, IN
             '197695',  # AS-REG, RU -- 32/173 over a year but many weight 1
             '200000',  # UKRAINE-AS, UA -- 15/64 over 8 months burt many weight 1
-            '203226'.  # IHCRU Internet-Hosting Ltd, Moscow, Russia, RU
+            '203226',  # IHCRU Internet-Hosting Ltd, Moscow, Russia, RU
             '206349',  # BLUEANGELHOST, BG.
             '262254',  # DANCOM LTD, BZ
             '393960',  # HOST4GEEKS-LLC - Host4Geeks LLC, US
