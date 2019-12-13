@@ -332,12 +332,16 @@ class FindSpam:
         # (?w:\b) is also useful
         cls.rule_bad_keywords.regex = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
             "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb))
+        cls.rule_bad_keywords.sanity_check()
         cls.rule_watched_keywords.regex = r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format(
             "|".join(GlobalVars.watched_keywords.keys()))
+        cls.rule_watched_keywords.sanity_check()
         cls.rule_blacklisted_websites.regex = r"(?i)({})".format(
             "|".join(GlobalVars.blacklisted_websites))
+        cls.rule_blacklisted_websites.sanity_check()
         cls.rule_blacklisted_usernames.regex = r"(?i)({})".format(
             "|".join(GlobalVars.blacklisted_usernames))
+        cls.rule_blacklisted_usernames.sanity_check()
         GlobalVars.blacklisted_numbers, GlobalVars.blacklisted_numbers_normalized = \
             process_numlist(GlobalVars.blacklisted_numbers)
         GlobalVars.watched_numbers, GlobalVars.watched_numbers_normalized = \
