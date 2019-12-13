@@ -3336,3 +3336,4 @@ satriasafety\.com
 jammer-shop\.com
 onlinedevtools\.in
 naked-girls\.online
+i[\W_]*+n[\W_]*+t[\W_]*+i[\W_]*+m[\W_]*+c[\W_]*+o[\W_]*+n[\W_]*+t[\W_]*+a[\W_]*+[\W_]*+c[\W_]*+t[\W_]*+c[\W_]*+o[\W_]*+m(!<=intimcontact\.com)
