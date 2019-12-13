@@ -15263,7 +15263,6 @@
 1576219410	tripleee	jarvistechnical\.com
 1576219664	tripleee	ecochoicewindows\.ca
 1576220464	tripleee	keenethics\.com
-1576227965	tripleee	naked-girls\.online
 1576227979	tripleee	mocdoc\.in
 1576228769	tripleee	Indo[\W_]*+Global[\W_]*+Chamber[\W_]*+of[\W]*+Commerce
 1576228864	tripleee	studyfrnd\.com
