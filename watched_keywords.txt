@@ -15254,3 +15254,4 @@
 1576217139	tripleee	krogerfeedback\.app
 1576217160	tripleee	krogerfeedback\.com
 1576217178	tripleee	krogerfeedback(?!\.com)
+1576217431	Makyen	(?-i:ogwRS\.png)
