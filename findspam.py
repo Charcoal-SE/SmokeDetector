@@ -198,7 +198,7 @@ class Rule:
     default_filter = PostFilter()
 
     def __init__(self, item, reason, title=True, body=True, body_summary=True, username=True, filter=None,
-                 stripcodeblocks=False, whole_post=False):
+                 stripcodeblocks=False, whole_post=False, skip_creation_sanity_check=False):
         self.regex = None
         self.func = None
         if isinstance(item, (str, URL_REGEX.__class__)):
@@ -213,6 +213,12 @@ class Rule:
         self.filter = filter or Rule.default_filter
         self.stripcodeblocks = stripcodeblocks
         self.whole_post = whole_post
+        if not skip_creation_sanity_check:
+            self.sanity_check()
+
+    def sanity_check(self):
+        if not self.func and not self.regex:
+            raise TypeError("A rule must have either 'func' or 'regex' valid! : {}".format(self.reason))
 
     def match(self, post):
         """
@@ -296,7 +302,7 @@ class Rule:
             else:
                 result_body = (False, "", "")
         else:
-            raise TypeError("A rule must have either 'func' or 'regex' valid!")
+            raise TypeError("To match, a rule must have either 'func' or 'regex' valid! : {}".format(self.reason))
 
         # "result" format: tuple((title_spam, reason, why), (username_spam, reason, why), (body_spam, reason, why))
         return result_title, result_username, result_body
@@ -396,7 +402,8 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
                 title=True, body=True, body_summary=False, username=False,
                 max_score=0, max_rep=1, question=True, answer=True, stripcodeblocks=False,
                 whole_post=False,  # For some functions
-                disabled=False):  # yeah, disabled=True is intuitive
+                disabled=False,  # yeah, disabled=True is intuitive
+                skip_creation_sanity_check=False):
     if not isinstance(reason, str):
         raise ValueError("reason must be a string")
 
@@ -408,7 +415,7 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
         # Standalone mode
         rule = Rule(regex, reason=reason, filter=post_filter,
                     title=title, body=body, body_summary=body_summary, username=username,
-                    stripcodeblocks=stripcodeblocks)
+                    stripcodeblocks=stripcodeblocks, skip_creation_sanity_check=skip_creation_sanity_check)
         if not disabled:
             FindSpam.rules.append(rule)
         return rule
@@ -423,7 +430,7 @@ def create_rule(reason, regex=None, func=None, *, all=True, sites=[],
                     raise ValueError("This rule does not contain a function, can't recreate") from None
             rule = Rule(func, reason=reason, filter=post_filter, whole_post=whole_post,
                         title=title, body=body, body_summary=body_summary, username=username,
-                        stripcodeblocks=stripcodeblocks)
+                        stripcodeblocks=stripcodeblocks, skip_creation_sanity_check=skip_creation_sanity_check)
             if not disabled:
                 FindSpam.rules.append(rule)
             return rule
@@ -2235,14 +2242,15 @@ city_list = [
 # General blacklists, regex will be filled at the reload_blacklist() call at the bottom
 FindSpam.rule_bad_keywords = create_rule("bad keyword in {}", regex="",
                                          username=True, body_summary=True,
-                                         max_rep=4, max_score=1)
+                                         max_rep=4, max_score=1, skip_creation_sanity_check=True)
 FindSpam.rule_watched_keywords = create_rule("potentially bad keyword in {}", regex="",
                                              username=True, body_summary=True,
-                                             max_rep=30, max_score=1)
+                                             max_rep=30, max_score=1, skip_creation_sanity_check=True)
 FindSpam.rule_blacklisted_websites = create_rule("blacklisted website in {}", regex="", body_summary=True,
-                                                 max_rep=50, max_score=5)
+                                                 max_rep=50, max_score=5, skip_creation_sanity_check=True)
 FindSpam.rule_blacklisted_usernames = create_rule("blacklisted username", regex="",
-                                                  title=False, body=False, username=True)
+                                                  title=False, body=False, username=True,
+                                                  skip_creation_sanity_check=True)
 
 # gratis near the beginning of post or in title, SoftwareRecs and es.stackoverflow.com are exempt
 create_rule("potentially bad keyword in {}", r"(?is)(?<=^.{0,200})\bgratis\b",
