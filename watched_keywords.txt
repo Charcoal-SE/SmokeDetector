@@ -15272,4 +15272,4 @@
 1576231010	Shree	10chosen\.com
 1576234044	Shree	sms2connect\.com
 1576234727	tripleee	intimcontact\.com
-1576234916	tripleee	\AAnswer: [CLICK HERE][1]
+1576234916	tripleee	\AAnswer: \[CLICK HERE\]\[1\]
