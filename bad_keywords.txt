@@ -1706,7 +1706,7 @@ isabelle\W*s\W*(?:luxuriance|richness)(?:\W*cream)?
 alvera\W?tone
 green\W?force(?:\W?keto)?
 quick\W?burn(?:\W?keto)?
-vital[\W_]*keto(?:[\W_]*(?:belgium|review|\d+)s?)*
+vital[\W_]*keto(?:[\W_]*(?:belgium|review|client|schweiz|\d+)s?)*
 slim\W?select(?:\W?keto)?
 zederex
 azur\W?derma
