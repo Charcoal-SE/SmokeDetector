@@ -15268,3 +15268,4 @@
 1576228769	tripleee	Indo[\W_]*+Global[\W_]*+Chamber[\W_]*+of[\W]*+Commerce
 1576228864	tripleee	studyfrnd\.com
 1576230946	Shree	freeppsspp\.info
+1576230969	Shree	huntingscan\.com
