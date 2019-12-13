@@ -2313,7 +2313,7 @@ create_rule("potentially bad keyword in {}", r'^v\w{3,5}\Wkumar$',
             title=False, body=False, username=True,
             all=False, sites=['scifi.stackexchange.com'])
 # Eltima: Nested lookarounds for length limit
-create_rule("bad keyword in {}", r"(?is)(?<=^(?=.{0,750}$).*)\beltima",
+create_rule("bad keyword in {}", r"(?is)\beltima(?<=^(?=.{0,750}$).*)",
             title=False, max_rep=50)
 create_rule("bad keyword in {}",
             r"(?i)\b((beauty|skin|health|face|eye)[- ]?(serum|therapy|hydration|tip|renewal|shop|store|lyft|"
