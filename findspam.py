@@ -810,7 +810,8 @@ def keyword_email(s, site):   # a keyword and an email in the same post
                             r"career|employment|candidate|loan|lover|husband|wife|marriage|illuminati|brotherhood|"
                             r"(join|contact) (me|us|him)|reach (us|him)|spell(caster)?|doctor|cancer|krebs|"
                             r"(cheat|hack)(er|ing)?|spying|passport|seaman|scam|pics|vampire|bless(ed)?|atm|miracle|"
-                            r"cure|testimony|kidney|hospital|wetting)s?\b|(?<=\s)Dr\.?(?=\s)|\$ ?[0-9,.]{4}|@qq\.com|"
+                            r"cure|testimony|kidney|hospital|wetting)s?\b|(?<=\s)Dr\.?(?=\s)|"
+                            r"\$(?<!\$\$) ?[0-9,.]{4}(?!\(\w+(?:\.\w+)*:\d+\))(?![^\n]+[\n]+\s+at \w)|@qq\.com|"
                             r"\b(?:герпес|муж|жена|доктор|болезн))").findall(s)
     keyword = [t[0] for t in keyword]
     email = regex.compile(r"(?<![=#/])\b[A-z0-9_.%+-]+\b(?:@|\s*\(?at\)?\s*)\b(?!(example|domain|site|foo|\dx)"
