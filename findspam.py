@@ -1485,6 +1485,8 @@ def watched_ip_for_url_hostname(s, site):
             '176.58.96.134',    # drugs orderfitness.org demandsupplement etc
             # AS 64425 SKB-ENTERPRISE, NL
             '5.182.210.2',      # fake-tech-support + random
+            # AS 203226 IHCRU Internet-Hosting Ltd, Moscow, Russia, RU
+            '46.254.21.98',     # naked-girls.online etc
             # AS 210250 WPX, BG
             '194.1.147.28',     # getsetwild.com
             '194.1.147.38',     # getsetwild.com
