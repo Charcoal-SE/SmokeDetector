@@ -15253,3 +15253,4 @@
 1576216428	tripleee	streamlk\.com
 1576217139	tripleee	krogerfeedback\.app
 1576217160	tripleee	krogerfeedback\.com
+1576217178	tripleee	krogerfeedback(?!\.com)
