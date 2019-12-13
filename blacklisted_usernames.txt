@@ -244,4 +244,3 @@ devleadz
 (?-i:^Emma Parker$)
 (?-i:^selinajodi$)
 (?-i:^PutraSSJ$)
-(?-i:^Cure8Consult$)
