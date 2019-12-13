@@ -109,8 +109,8 @@ class GlobalVars:
 
     s = ""
     s_reverted = ""
-    s_norestart = ""
-    s_norestart2 = ""
+    s_norestart_blacklists = ""
+    s_norestart_findspam = ""
     apiquota = -1
     bodyfetcher = None
     cookies = {}
@@ -196,12 +196,14 @@ class GlobalVars:
             "at [rev {}]({}/commit/{}) (running on {})".format(
                 GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
                 GlobalVars.commit.id, GlobalVars.location)
-        GlobalVars.s_norestart = "[ {} ] Blacklists reloaded at [rev {}]({}/commit/{}) (running on {})".format(
-            GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
-            GlobalVars.commit.id, GlobalVars.location)
-        GlobalVars.s_norestart2 = "[ {} ] FindSpam module reloaded at [rev {}]({}/commit/{}) (running on {})".format(
-            GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
-            GlobalVars.commit.id, GlobalVars.location)
+        GlobalVars.s_norestart_blacklists = \
+            "[ {} ] Blacklists reloaded at [rev {}]({}/commit/{}) (running on {})".format(
+                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+                GlobalVars.commit.id, GlobalVars.location)
+        GlobalVars.s_norestart_findspam = \
+            "[ {} ] FindSpam module reloaded at [rev {}]({}/commit/{}) (running on {})".format(
+                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+                GlobalVars.commit.id, GlobalVars.location)
         GlobalVars.standby_message = \
             "[ {} ] SmokeDetector started in [standby mode](" \
             "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " \

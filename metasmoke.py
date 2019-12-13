@@ -149,7 +149,7 @@ class Metasmoke:
                             exit_mode("checkout_deploy")
                         GlobalVars.reload()
                         findspam.FindSpam.reload_blacklists()
-                        chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart)
+                        chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart_blacklists)
                     elif only_modules_changed(remote_diff):
                         GitManager.pull_remote()
                         if not GlobalVars.on_branch:
@@ -158,7 +158,7 @@ class Metasmoke:
                             exit_mode("checkout_deploy")
                         GlobalVars.reload()
                         reload_modules()
-                        chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart2)
+                        chatcommunicate.tell_rooms_with('debug', GlobalVars.s_norestart_findspam)
                     else:
                         chatcommunicate.tell_rooms_with('debug', s, notify_site="/ci")
                         exit_mode("pull_update")

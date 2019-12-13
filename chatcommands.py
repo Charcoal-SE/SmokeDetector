@@ -381,7 +381,7 @@ def do_blacklist(blacklist_type, msg, force=False):
             GitManager.pull_local()
             GlobalVars.reload()
             findspam.FindSpam.reload_blacklists()
-            tell_rooms_with('debug', GlobalVars.s_norestart)
+            tell_rooms_with('debug', GlobalVars.s_norestart_blacklists)
             time.sleep(2)
             return None
         except Exception:
@@ -465,7 +465,7 @@ def unblacklist(msg, item, alias_used="unwatch"):
             GitManager.pull_local()
             GlobalVars.reload()
             findspam.FindSpam.reload_blacklists()
-            tell_rooms_with('debug', GlobalVars.s_norestart)
+            tell_rooms_with('debug', GlobalVars.s_norestart_blacklists)
             time.sleep(2)
             return None
         except Exception:
@@ -499,7 +499,7 @@ def approve(msg, pr_id):
                 GitManager.pull_local()
                 GlobalVars.reload()
                 findspam.FindSpam.reload_blacklists()
-                tell_rooms_with('debug', GlobalVars.s_norestart)
+                tell_rooms_with('debug', GlobalVars.s_norestart_blacklists)
                 time.sleep(2)
                 return None
             except Exception:
@@ -798,7 +798,7 @@ def pull(alias_used='pull'):
         GitManager.pull_remote()
         findspam.FindSpam.reload_blacklists()
         GlobalVars.reload()
-        tell_rooms_with('debug', GlobalVars.s_norestart)
+        tell_rooms_with('debug', GlobalVars.s_norestart_blacklists)
         return
 
     request = requests.get('https://api.github.com/repos/{}/git/refs/heads/deploy'.format(
@@ -816,7 +816,7 @@ def pull(alias_used='pull'):
             GitManager.pull_remote()
             reload_modules()
             GlobalVars.reload()
-            tell_rooms_with('debug', GlobalVars.s_norestart2)
+            tell_rooms_with('debug', GlobalVars.s_norestart_findspam)
             return
         else:
             exit_mode('pull_update', code=3)
@@ -897,7 +897,7 @@ def reboot(msg, alias_used="reboot"):
         exit_mode("reboot")
     elif alias_used in {"reload"}:
         reload_modules()
-        tell_rooms_with('debug', GlobalVars.s_norestart2)
+        tell_rooms_with('debug', GlobalVars.s_norestart_findspam)
         time.sleep(3)
     else:
         raise RuntimeError("Invalid alias!")
