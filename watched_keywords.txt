@@ -15294,3 +15294,4 @@
 1576301232	Makyen	(?-i:32a3b6xSLWs)
 1576304921	Makyen	male[\W_]*+ultra[\W_]*+core
 1576326706	Makyen	maleultracore\.wixsite\.com
+1576326719	Makyen	identifyscam\.hatenablog\.com
