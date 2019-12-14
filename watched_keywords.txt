@@ -15295,3 +15295,4 @@
 1576304921	Makyen	male[\W_]*+ultra[\W_]*+core
 1576326706	Makyen	maleultracore\.wixsite\.com
 1576326719	Makyen	identifyscam\.hatenablog\.com
+1576326732	Makyen	joviebelsison\.wixsite\.com
