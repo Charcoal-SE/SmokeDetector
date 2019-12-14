@@ -15304,3 +15304,4 @@
 1576326919	Makyen	retro[\W_]*+x[\W_]*+power
 1576326935	Makyen	tracedeals\.in
 1576334379	tripleee	theelectricsmoker\.com
+1576339067	Makyen	purihair101\.hatenablog\.com
