@@ -15305,3 +15305,4 @@
 1576326935	Makyen	tracedeals\.in
 1576334379	tripleee	theelectricsmoker\.com
 1576339067	Makyen	purihair101\.hatenablog\.com
+1576339084	Makyen	puri[\W_]*+hair(?!(?<=purihair)101\.hatenablog\.com)(?:[\W_]*+(?:\d++|[\da-f]{4,}))*
