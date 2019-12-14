@@ -15307,3 +15307,4 @@
 1576339067	Makyen	purihair101\.hatenablog\.com
 1576339084	Makyen	puri[\W_]*+hair(?!(?<=purihair)101\.hatenablog\.com)(?:[\W_]*+(?:\d++|[\da-f]{4,}))*
 1576339102	Makyen	(?-i:XNxch\.jpg)
+1576339116	Makyen	googletvstream\.com
