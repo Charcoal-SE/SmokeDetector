@@ -15293,3 +15293,4 @@
 1576301216	Makyen	turbo2288(?:@hotmail\.com)?
 1576301232	Makyen	(?-i:32a3b6xSLWs)
 1576304921	Makyen	male[\W_]*+ultra[\W_]*+core
+1576326706	Makyen	maleultracore\.wixsite\.com
