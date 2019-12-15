@@ -15124,7 +15124,7 @@
 1575915293	Machavity	(?-i:PLsMjNmqC7C2QGCG4ccVp1SFr5cKR1Bx2s)
 1575927794	Das_Geek	airlinesphonesnumber\.com
 1575935010	Das_Geek	havana60\.com
-1575956033	tripleee	[a-z]+https?://[a-z0-9]+
+1575956033	tripleee	\w+https?://(?=(?:[^<]|<(?!/)){0,100}$)
 1575956386	tripleee	srchoo\.com
 1575957991	Shree	teenpaticards\.com
 1575960446	Shree	agenbakarat\.net
