@@ -15332,3 +15332,4 @@
 1576443494	Makyen	(?-i:3Hr9ZoGQ4vhjx1wf7fmtX88tk35G78pWRN)
 1576443513	Makyen	10minsbitcoindoubler(?:@fastservice\.com)?
 1576451877	Machavity	magazeena\.com
+1576452013	Machavity	ponzi\.wtf
