@@ -15363,3 +15363,4 @@
 1576513750	Makyen	youaresogay\.com
 1576513774	Makyen	you(?:[\W*_]*+|(?<=<\/)\w+(?=>)|(?<=<)\w+(?=>))*are(?:[\W*_]*|(?<=<\/)\w+(?=>)|(?<=<)\w+(?=>))*(?:so(?:[\W*_]*|(?<=<\/)\w+(?=>)|(?<=<)\w+(?=>))*)?gay(?!\.com(?<=youaresogay\.com))
 1576513816	Eliah Kagan	kopfhörer\s+test
+1576515096	tripleee	pagamentocontas\.com\.br
