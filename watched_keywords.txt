@@ -15341,3 +15341,4 @@
 1576476199	Makyen	highway[\W_]*+87[\W_]*+keto
 1576477210	tripleee	panditnmshrimali\.com
 1576478157	Makyen	(?:bhb[\W_]*+)?ketophin(?:[\W_]*+bhb)?
+1576478626	Makyen	simthanglong\.vn
