@@ -15365,3 +15365,4 @@
 1576513816	Eliah Kagan	kopfhörer\s+test
 1576515096	tripleee	pagamentocontas\.com\.br
 1576516587	Makyen	>(?:░░░░█[^\w█]+█[^\w▀]+▀\W+?|░░░░▓█[^\w▄]+▄▄▀▀█\W+|>[^\w▄]+▄▌▒▒▀▒▒▐▄<|[^\w▄]+(?:▄▄[^\w▄]+▄▄|▄▌▒▒▀▒▒▐▄))\W{0,10}?<\/?(?#specific NSFW character art)
+1576510484	Das_Geek	doctorstellaidemudia\.weebly\.com
