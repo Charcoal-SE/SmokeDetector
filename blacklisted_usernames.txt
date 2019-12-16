@@ -245,3 +245,4 @@ devleadz
 (?-i:^selinajodi$)
 (?-i:^PutraSSJ$)
 (?-i:^Cure[Cc]onsult$)
+(?-i:^adi mishra$)
