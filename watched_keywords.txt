@@ -15367,3 +15367,4 @@
 1576516587	Makyen	>(?:░░░░█[^\w█]+█[^\w▀]+▀\W+?|░░░░▓█[^\w▄]+▄▄▀▀█\W+|>[^\w▄]+▄▌▒▒▀▒▒▐▄<|[^\w▄]+(?:▄▄[^\w▄]+▄▄|▄▌▒▒▀▒▒▐▄))\W{0,10}?<\/?(?#specific NSFW character art)
 1576510484	Das_Geek	doctorstellaidemudia\.weebly\.com
 1576521914	Das_Geek	gorentos@bitmessage\.ch
+1576531569	Machavity	dukunpelet\.info
