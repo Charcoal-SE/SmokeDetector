@@ -15354,3 +15354,4 @@
 1576487786	tripleee	convertmp3\.cc
 1576489633	tripleee	prostate[\W_]*+911
 1576491797	tripleee	helathlktip\.club
+1576491840	tripleee	jurassicworld\.com
