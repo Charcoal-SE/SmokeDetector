@@ -15342,3 +15342,4 @@
 1576478157	Makyen	(?:bhb[\W_]*+)?ketophin(?:[\W_]*+bhb)?
 1576478626	Makyen	simthanglong\.vn
 1576478668	Makyen	tentigopowernetherlands\.com
+1576480111	tripleee	usage-of-artificial-technology-in-agriculture
