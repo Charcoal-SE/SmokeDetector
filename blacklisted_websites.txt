@@ -3342,3 +3342,4 @@ x[\W_]*(?:%[\da-f]{2,}[\W_]*)*n[\W_]*(?:%[\da-f]{2,}[\W_]*)*d[\W_]*(?:%[\da-f]{2
 unitedtorrent\.com
 showbox\.bio
 enter-norton\.com
+instanthelpsolution\.com
