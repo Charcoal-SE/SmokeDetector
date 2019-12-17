@@ -1466,6 +1466,7 @@ def watched_ip_for_url_hostname(s, site):
             # AS 46606 UNIFIEDLAYER-AS-1 - Unified Layer, US
             '50.87.189.77',     # avdshare.com
             '69.195.94.36',     # training tscer.org uoce.org etc
+            '162.144.180.64',   # training rcmb.in + random
             '162.241.67.249',   # wwwofficecomsetup.com
             '162.241.148.13',   # fake-tech-support officekeyactivate en-us-mcafee etc
             '162.241.148.157',  # fake-tech-support en-mcafee setupmwnow etc
