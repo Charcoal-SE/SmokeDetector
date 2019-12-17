@@ -14840,7 +14840,6 @@
 1575096824	Makyen	iz[\W_]*+belt(?:[\W_]*+(?:iz|\d++|[\da-f]{4,}+))
 1575099675	Makyen	(?-i:_QJjTcE6NH0)
 1575099694	Makyen	mcafee-activate-product-key\.org
-1575100951	Makyen	supplementgo\.com
 1575101099	Makyen	autocoder\.io
 1575101229	Makyen	citydoc\.net
 1575101366	Makyen	pickermovie\.com
