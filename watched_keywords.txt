@@ -3410,7 +3410,6 @@
 1527012058	Glorfindel	typeset\.io
 1527022333	Zoe	songspkzz\.com
 1527035065	Tetsuya Yamamoto	notron-setup\.com
-1527040390	Makyen	hackerone\.com
 1527040437	Makyen	jobert\W*abma
 1527047415	Makyen	\w*jjbbu\.com\w*
 1527049175	Makyen	assignmentbang\.com
