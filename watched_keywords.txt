@@ -15374,3 +15374,4 @@
 1576567024	tripleee	myshapewear\.co
 1576569062	tripleee	organicfertilizermachinery\.com
 1576569976	Makyen	essaybooks4u\.com
+1576572614	tripleee	dental[\W_]*+implants?
