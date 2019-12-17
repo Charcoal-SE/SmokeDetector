@@ -15371,3 +15371,4 @@
 1576535432	Das_Geek	thedarkcracker(?:[\W_]*+(?:at[\W_]*+)?protonmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1576537260	Das_Geek	measuringpisquaringphi\.com
 1576533894	Das_Geek	promatia\.com
+1576555506	Makyen	eminencevitalityketoreview\.hatenablog\.com
