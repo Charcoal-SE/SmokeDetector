@@ -15420,3 +15420,4 @@
 1576677804	Makyen	southwestnumber\.bravesites\.com
 1576677805	Makyen	southwestnumber\.pressfolios\.com
 1576677806	Makyen	southwest-number\.webnode\.com
+1576678492	Das_Geek	splunktutorial\.com
