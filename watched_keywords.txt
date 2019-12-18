@@ -15398,3 +15398,4 @@
 1576664855	Shree	mudrahome\.com
 1576664938	Shree	gpsliveupdates\.com
 1576665172	Shree	fwpower\.co\.uk
+1576669230	tripleee	maxatron(?:[\W_]*+plus)?
