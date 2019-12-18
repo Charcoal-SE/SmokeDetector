@@ -14113,7 +14113,6 @@
 1572955669	Makyen	envy[\W_]*+us[\W_]*+canada(?:[\W_]*+(?:jealousy|review|\d+))*
 1572955699	Makyen	complete[\W_]*+strength[\W_]*+cbd[\W_]*+tincture
 1572955730	Makyen	peteachorow
-1572955763	Makyen	empowered[\W_]*+boost
 1572956129	Glorfindel	providoregifts\.co\.nz
 1572956200	Glorfindel	providore[\W_]*+gifts(?!\.co\.nz(?<=providoregifts\.co\.nz))
 1572957324	Makyen	best[\W_]*+fiber[\W_]*+optic[\W_]*+christmas[\W_]*+tree
