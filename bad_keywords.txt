@@ -2139,4 +2139,3 @@ gedeon(?:[\W_]*+keto)?
 RCMB[\W_]*+college
 (?:bhb[\W_]*+)?keto[\W_]*+phin(?:[\W_]*+bhb)?
 puri[\W_]*+hair(?!(?<=purihair)101\.hatenablog\.com)(?:[\W_]*+(?:\d++|[\da-f]{4,}))*
-empowered[\W_]*+boos
