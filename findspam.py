@@ -1450,6 +1450,8 @@ def watched_ip_for_url_hostname(s, site):
             '66.96.145.108',    # travel + random ubltravels.com ublauditing.com
             '66.96.147.110',    # software-download + random
             '66.96.147.113',    # fake-tech-support + random blogspam
+            # AS 30148 SUCURI-SEC - Sucuri, US
+            '192.124.249.2',    # random
             # AS 32475 SINGLEHOP-LLC - SingleHop LLC, US
             '172.96.186.189',   # gambling judilivegame caracurang cheatpkvpro etc
             # AS 33182 DIMENOC - HostDime.com, Inc., US
