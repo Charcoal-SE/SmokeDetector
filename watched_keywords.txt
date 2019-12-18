@@ -14099,7 +14099,6 @@
 1572919194	Makyen	TrendingTee
 1572933911	Shree	suvidhasafety\.com
 1572933943	Shree	volio\.net
-1572934975	tripleee	geektechsupport\.co\.uk
 1572935078	tripleee	rze[\W_]*+max
 1572936015	tripleee	2BGtCMi(?# bit.ly redirector from spammer's profile)
 1572936152	tripleee	visualsubtitling\.com
