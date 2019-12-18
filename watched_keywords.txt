@@ -15408,3 +15408,4 @@
 1576674123	Makyen	(?-i:pVtWI\.jpg)
 1576674977	tripleee	south[\W_]*+west[\W_]*+number
 1576675005	tripleee	\A(?:<p>)?!\[enter image description here\](https://i\.stack\.imgur\.com/[.\w]+)\s*(?:</p>)?\Z
+1576677172	Makyen	richardmorgans1983(?:@gmail\.com)?
