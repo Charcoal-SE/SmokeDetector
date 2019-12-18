@@ -12395,7 +12395,7 @@
 1566834914	Makyen	(?:what[\W_]*is[\W_]*)?ketogenic[\W_]*valley(?!-keto-42\.webself\.net(?<=ketogenic-valley-keto-42\.webself\.net))(?:[\W_]*(?:keto|diet|review|advanced|weight|loss|pill|\d+|[\da-f]{4,})s?)*
 1566834924	Makyen	ketogenic-valley-keto-42\.webself\.net
 1566835195	Makyen	north[\W_]*valley[\W_]*(?:[\W_]*(?:oil|cbd))+
-1566840689	Makyen	theredhackergroup(?:@gmail\.com)?
+1566840689	Makyen	theredhackergroup(?:\W*(?:at\W*)?gmail(?:\W*(?:dot\W*)?com)?)?
 1566845554	Makyen	jnpfeiffer03(?:\W*(?:at\W*)?gmail(?:\W*(?:dot\W*)?com)?)?
 1566848271	Machavity	broadi\.cn
 1566848528	Machavity	idware\.net
