@@ -15406,10 +15406,17 @@
 1576673987	Makyen	bandar268\.com
 1576674017	Makyen	485198972112590(?#facebook event)
 1576674123	Makyen	(?-i:pVtWI\.jpg)
-1576674977	tripleee	south[\W_]*+west[\W_]*+number
+1576674977	tripleee	south[\W_]*+west[\W_]*+number(?!(?<=southwestnumber)(?:\.tumblr\.com|\.wordpress\.com|\.hatenablog\.com|\.livejournal\.com|\.bravesites\.com|\.pressfolios\.com))(?!(?<=southwest-number)\.webnode\.com)
 1576675005	tripleee	\A(?:<p>)?!\[enter image description here\](https://i\.stack\.imgur\.com/[.\w]+)\s*(?:</p>)?\Z
 1576677172	Makyen	richardmorgans1983(?:@gmail\.com)?
 1576677593	Makyen	ericcarlson955(?:@aol\.com)?
 1576677672	Makyen	user/991813(?#feedsfloor.com)
 1576677703	Makyen	southwest\.aircus\.com
 1576677721	Makyen	wildernesssworldss\.wixsite\.com
+1576677800	Makyen	southwestnumber\.tumblr\.com
+1576677801	Makyen	southwestnumber\.wordpress\.com
+1576677802	Makyen	southwestnumber\.hatenablog\.com
+1576677803	Makyen	southwestnumber\.livejournal\.com
+1576677804	Makyen	southwestnumber\.bravesites\.com
+1576677805	Makyen	southwestnumber\.pressfolios\.com
+1576677806	Makyen	southwest-number\.webnode\.com
