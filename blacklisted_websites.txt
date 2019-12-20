@@ -3355,3 +3355,4 @@ webnet\.com\.pk
 mywifiexte\.net
 errorsdoc\.com
 calculatored\.com
+video\.blog
