@@ -1525,6 +1525,7 @@ def watched_ip_for_url_hostname(s, site):
             '162.215.241.244',  # drugs supplementstore4u + rvonlinegaming.com
             '162.215.253.205',  # drugs escorts drozien.com nehasuri.in etc
             '162.251.85.134',   # fake-tech-support printers etc
+            '199.79.62.149',    # fake-tech-support yahoo-contact.net etc
             '204.11.58.143',    # drugs wintersupplement ketopillsstore etc
             '204.11.58.156',    # fake-tech-support smatustech comretail.net etc
             '204.11.58.189',    # visit-my-website random hits
