@@ -15474,3 +15474,4 @@
 1576821980	Makyen	designer[\W_]*+bodyz
 1576821999	Makyen	dr[\W_]*+parag[\W_]*+telang(?!\.com(?<=drparagtelang\.com))
 1576822727	Makyen	yahoo-contact\.net
+1576835759	tripleee	printer-offline\.com
