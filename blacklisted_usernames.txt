@@ -246,4 +246,3 @@ devleadz
 (?-i:^PutraSSJ$)
 (?-i:^Cure[Cc]onsult$)
 (?-i:^adi mishra$)
-(?-i:^Ulia Haynes$)
