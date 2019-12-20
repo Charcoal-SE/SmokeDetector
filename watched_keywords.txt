@@ -15467,3 +15467,4 @@
 1576784242	Das_Geek	flowingtravel\.com
 1576798356	Das_Geek	itucapsa\.com
 1576810064	Makyen	itucapsa(?!\.com)
+1576810112	Makyen	captainspyhacker2(?:\W*(?:at\W*)?gmail(?:\W*(?:dot\W*)?com)?)?
