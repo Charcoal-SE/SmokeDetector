@@ -15219,7 +15219,6 @@
 1576174575	Makyen	(?-i:TF2Qf\.png)
 1576174598	Makyen	cureconsult(?!\.com)
 1576174633	Makyen	sexual[\W_]*+power
-1576174658	Makyen	completefoods\.co
 1576174723	Makyen	wenewcoder\.hatenablog\.com
 1576174744	Makyen	rvxd14\.wixsite\.com
 1576174783	Makyen	cbdhempoiltoday\.com
