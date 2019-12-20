@@ -15470,3 +15470,4 @@
 1576810112	Makyen	captainspyhacker2(?:\W*(?:at\W*)?gmail(?:\W*(?:dot\W*)?com)?)?
 1576813162	Makyen	provexum4\.hatenablog\.com
 1576820350	Makyen	emailscustomercare\.com
+1576821962	Makyen	drparagtelang\.com
