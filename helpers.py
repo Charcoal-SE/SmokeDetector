@@ -203,6 +203,7 @@ def reload_modules():
 
 
 def unshorten_link(url, request_type='GET', depth=10, explicitly_ignore_security_warning=False):
+    orig_url = url
     response_code = 301
     headers = {'User-Agent': 'SmokeDetector/git (+https://github.com/Charcoal-SE/SmokeDetector)'}
     for tries in range(depth):
@@ -215,6 +216,8 @@ def unshorten_link(url, request_type='GET', depth=10, explicitly_ignore_security
             # No more redirects, stop
             break
         url = res.headers['Location']
+    else:
+        raise ValueError("Too many redirects ({}) for URL {!r}".format(depth, orig_url))
     return url
 
 
