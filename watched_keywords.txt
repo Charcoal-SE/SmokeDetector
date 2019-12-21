@@ -15507,3 +15507,4 @@
 1576924314	Makyen	iemploymentnews\.com
 1576924328	Makyen	special[\W_]*+offer[\W_]*+(?:4|for)[\W_]*+health(?!(?<=specialoffer4health)(?:\.com|\.blogspot|\.tumblr\.com|\.hatenablog\.com|\.wordpress\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1576924716	Makyen	saveplus(?:[\W_]*+(?:coupon|code|\d++|[\da-f]{4,}+)s?)*(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+1576925797	Makyen	supplementspeak\.hatenablog\.com
