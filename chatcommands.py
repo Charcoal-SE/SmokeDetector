@@ -1248,13 +1248,13 @@ def bisect_number(msg, s):
         else:
             l, f = verbatim_match
             return "Matched verbatim on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1})".format(
-                l, f, GlobalVars.bot_repo_slug, GlobalVars.commit.id)
+                "", l, f, GlobalVars.bot_repo_slug, GlobalVars.commit.id)
     else:
         if len(normalized_match) == 1:
             l, f = normalized_match[0]
             return "Not matched verbatim, but normalized on" \
                    "[line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1})".format(
-                       l, f, GlobalVars.bot_repo_slug, GlobalVars.commit.id)
+                       "", l, f, GlobalVars.bot_repo_slug, GlobalVars.commit.id)
         response = "Not matched verbatim, but normalized on"
         for l, f in normalized_match:
             response += "\n- line {} of {}".format(l, f)
