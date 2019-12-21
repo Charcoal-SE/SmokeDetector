@@ -2141,3 +2141,4 @@ RCMB[\W_]*+college
 puri[\W_]*+hair(?!(?<=purihair)101\.hatenablog\.com)(?:[\W_]*+(?:\d++|[\da-f]{4,}))*
 empowered[\W_]*+boost
 biogenix[\W_]*+rx
+setup-buddypress-with-multisite(?#URL path)
