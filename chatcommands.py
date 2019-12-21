@@ -21,6 +21,7 @@ import requests
 import sys
 import os
 import time
+import collections
 from html import unescape
 from ast import literal_eval
 # noinspection PyCompatibility
@@ -1211,6 +1212,53 @@ def bisect(msg, s):
     else:
         return "Matched by the following regexes:\n" + "\n".join(
             "{} on line {} of {}".format(r, l, f) for r, (l, f) in matching)
+
+
+@command(str, privileged=True, whole_msg=True, aliases=['bisect-number'])
+def bisect_number(msg, s):
+    try:
+        number = rebuild_str(msg.content_source.split(" ", 1)[1])
+    except AttributeError:
+        pass
+    normalized = regex.sub(r"\D", "", number)
+
+    # Assume raw number strings don't duplicate
+    numbers = dict(Blacklist(Blacklist.NUMBERS).each(True))
+    numbers.update(Blacklist(Blacklist.WATCHED_NUMBERS).each(True))
+    # But normalized numbers surely duplicate
+    normalized_numbers = collections.defaultdict(list)
+    for item, info in numbers.items():
+        item_norm = regex.sub(r"\D", "", item)
+        normalized_numbers[item_norm].append(info)
+
+    normalized_match = normalized_numbers.get(normalized)
+    if not normalized_match:
+        return "{!r} is not caught by a blacklist or watchlist number.".format(number)
+    verbatim_match = numbers.get(number)
+    if verbatim_match:
+        # A verbatim match is ALWAYS a normalized match as well
+        # Something would be seriously wrong if this throws ValueError
+        normalized_match.remove(verbatim_match)
+        if normalized_match:
+            l, f = verbatim_match
+            response = "Matched verbatim on line {} of {}, and also normalized on".format(l, f)
+            for l, f in normalized_match:
+                response += "\n- line {} of {}".format(l, f)
+            return response
+        else:
+            l, f = verbatim_match
+            return "Matched verbatim on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1})".format(
+                l, f, GlobalVars.bot_repo_slug, GlobalVars.commit.id)
+    else:
+        if len(normalized_match) == 1:
+            l, f = normalized_match[0]
+            return "Not matched verbatim, but normalized on" \
+                   "[line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1})".format(
+                       l, f, GlobalVars.bot_repo_slug, GlobalVars.commit.id)
+        response = "Not matched verbatim, but normalized on"
+        for l, f in normalized_match:
+            response += "\n- line {} of {}".format(l, f)
+        return response
 
 
 # noinspection PyIncorrectDocstring
