@@ -15500,3 +15500,4 @@
 1576901820	Makyen	turmeric[\W_]*+cbd[\W_]*+oil(?!(?<=turmericcbdoil)0\.hatenablog\.com)(?:[\W_]*+(?:\d++|{\da-f]{4,}+))*
 1576905582	Shree	bicxmoney\.xyz
 1576905732	Shree	belepes\.xyz
+1576905792	Shree	logowanie\.xyz
