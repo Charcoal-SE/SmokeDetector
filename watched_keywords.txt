@@ -15505,3 +15505,4 @@
 1576914320	Eliah Kagan	specialoffer4health\.wordpress\.com
 1576924300	Makyen	spiritwolf06071994(?:@gmail\.com)?
 1576924314	Makyen	iemploymentnews\.com
+1576924328	Makyen	special[\W_]*+offer[\W_]*+(?:4|for)[\W_]*+health(?!(?<=specialoffer4health)(?:\.com|\.blogspot|\.tumblr\.com|\.hatenablog\.com|\.wordpress\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
