@@ -209,7 +209,7 @@ def unshorten_link(url, request_type='GET', depth=10, explicitly_ignore_security
     for tries in range(depth):
         if response_code not in [301, 302, 303, 307, 308]:
             break
-        res = requests.request(request_type, url, headers=headers, stream=True)
+        res = requests.request(request_type, url, headers=headers, stream=True, allow_redirects=False)
         res.connection.close()  # Discard response body for GET requests
         response_code = res.status_code
         if 'Location' not in res.headers:
