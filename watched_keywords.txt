@@ -15511,3 +15511,4 @@
 1576925819	Makyen	vialis(?:[\W_]*+(?:enhancement|male|\d++|[\da-f]{4,}+))*
 1576940532	double-beep	bestdeadliftshoes\.com
 1576940581	double-beep	projectguide\.org
+1576945606	Makyen	javabetsports\.com
