@@ -1214,7 +1214,7 @@ def bisect(msg, s):
             "{} on line {} of {}".format(r, l, f) for r, (l, f) in matching)
 
 
-@command(str, privileged=True, whole_msg=True, aliases=['bisect-number'])
+@command(str, privileged=True, whole_msg=True, aliases=['bisect-number', 'what-number'])
 def bisect_number(msg, s):
     try:
         number = rebuild_str(msg.content_source.split(" ", 1)[1])
