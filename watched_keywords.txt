@@ -15497,3 +15497,4 @@
 1576896789	Makyen	descargatelo720p\.xyz
 1576901501	Makyen	m-bJaTvmCaI
 1576901806	Makyen	turmericcbdoil0\.hatenablog\.com
+1576901820	Makyen	turmeric[\W_]*+cbd[\W_]*+oil(?!(?<=turmericcbdoil)0\.hatenablog\.com)(?:[\W_]*+(?:\d++|{\da-f]{4,}+))*
