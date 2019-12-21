@@ -510,7 +510,7 @@ def approve(msg, pr_id):
         raise CmdException(str(e))
 
 
-@command(privileged=True, aliases=["remote-diff"])
+@command(privileged=True, aliases=["remote-diff", "remote_diff"])
 def remotediff():
     will_require_full_restart = "SmokeDetector will require a full restart to pull changes: " \
                                 "{}".format(str(not only_blacklists_changed(GitManager.get_remote_diff())))
@@ -1185,7 +1185,7 @@ def bisect_regex(s, regexes, bookend=True):
     return bisect_regex(s, regexes[:mid], bookend=bookend) + bisect_regex(s, regexes[mid:], bookend=bookend)
 
 
-@command(str, privileged=True, whole_msg=True)
+@command(str, privileged=True, whole_msg=True, aliases=['what'])
 def bisect(msg, s):
     bookended_regexes = []
     non_bookended_regexes = []
@@ -1214,7 +1214,7 @@ def bisect(msg, s):
             "{} on line {} of {}".format(r, l, f) for r, (l, f) in matching)
 
 
-@command(str, privileged=True, whole_msg=True)
+@command(str, privileged=True, whole_msg=True, aliases=['bisect-number'])
 def bisect_number(msg, s):
     try:
         number = rebuild_str(msg.content_source.split(" ", 1)[1])
@@ -1356,7 +1356,7 @@ def migrate_notifications():
 
 
 # noinspection PyIncorrectDocstring,PyMissingTypeHints
-@command(whole_msg=True)
+@command(whole_msg=True, aliases=["unnotify-all"])
 def unnotify_all(msg):
     """
     Unsubscribes a user to all events
@@ -1842,7 +1842,7 @@ def feedback(msg, post_url, feedback):
     raise CmdException("No such feedback.")
 
 
-@command(privileged=True)
+@command(privileged=True, aliases=['dump-data'])
 def dump_data():
     try:
         s, metadata = SmokeyTransfer.dump()
@@ -1854,7 +1854,7 @@ def dump_data():
     return "Data successfully dumped"
 
 
-@command(int, privileged=True)
+@command(int, privileged=True, aliases=['load-data'])
 def load_data(msg_id):
     msg = get_message(msg_id)
     if msg.owner.id != 120914:  # TODO: implement an is_self() in chatcommunicate, don't use magic numbers
