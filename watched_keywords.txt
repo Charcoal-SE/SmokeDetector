@@ -13773,7 +13773,6 @@
 1571664173	Machavity	productmsoffice\.com
 1571664199	Machavity	aumcafee\.com
 1571667420	Machavity	(?-i:^amazingsummer$)
-1571669361	Machavity	hit2day\.com
 1571670702	Machavity	freelicensekeys\.com
 1571671207	Makyen	kkbk0005910
 1571671233	Makyen	chinese\.bonyad\.org
