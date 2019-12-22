@@ -480,12 +480,12 @@ def command(*type_signature, reply=False, whole_msg=False, privileged=False, ari
         cmd = (f, arity if arity else (len(type_signature), len(type_signature)))
 
         if reply:
-            _reply_commands[func.__name__] = cmd
+            _reply_commands[func.__name__.replace('_', '-')] = cmd
 
             for alias in aliases:
                 _reply_commands[alias] = cmd
         else:
-            _prefix_commands[func.__name__] = cmd
+            _prefix_commands[func.__name__.replace("_", "-")] = cmd
 
             for alias in aliases:
                 _prefix_commands[alias] = cmd
@@ -521,7 +521,7 @@ def dispatch_command(msg):
     command_name = cmd[3:].lower()
 
     quiet_action = command_name[-1] == "-"
-    command_name = regex.sub(r"[[:punct:]]*$", "", command_name)
+    command_name = regex.sub(r"[[:punct:]]*$", "", command_name).replace("_", "-")
 
     if command_name not in _prefix_commands:
         return "No such command '{}'.".format(command_name)

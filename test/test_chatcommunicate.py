@@ -277,13 +277,13 @@ def test_on_msg(get_last_messages, post_msg):
     }, spec=chatcommunicate.events.MessagePosted)
 
     mock_command = Mock(side_effect=lambda *_, **kwargs: "hi" if not kwargs["quiet_action"] else "")
-    chatcommunicate._prefix_commands["a_command"] = (mock_command, (0, 0))
+    chatcommunicate._prefix_commands["a-command"] = (mock_command, (0, 0))
 
     chatcommunicate.on_msg(msg3, client)
 
     assert post_msg.call_count == 1
     assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
-    mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a_command", quiet_action=False)
+    mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a-command", quiet_action=False)
 
     post_msg.reset_mock()
     mock_command.reset_mock()
@@ -292,33 +292,33 @@ def test_on_msg(get_last_messages, post_msg):
     chatcommunicate.on_msg(msg3, client)
 
     post_msg.assert_not_called()
-    mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a_command", quiet_action=True)
+    mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a-command", quiet_action=True)
 
     post_msg.reset_mock()
     mock_command.reset_mock()
 
-    chatcommunicate._prefix_commands["a_command"] = (mock_command, (0, 1))
+    chatcommunicate._prefix_commands["a-command"] = (mock_command, (0, 1))
     chatcommunicate.on_msg(msg3, client)
 
     post_msg.assert_not_called()
-    mock_command.assert_called_once_with(None, original_msg=msg3.message, alias_used="a_command", quiet_action=True)
+    mock_command.assert_called_once_with(None, original_msg=msg3.message, alias_used="a-command", quiet_action=True)
 
     post_msg.reset_mock()
     mock_command.reset_mock()
 
-    msg3.message.content = "!!/a_command 1 2 3"
+    msg3.message.content = "!!/a-command 1 2 3"
     chatcommunicate.on_msg(msg3, client)
 
     assert post_msg.call_count == 1
     assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
-    mock_command.assert_called_once_with("1 2 3", original_msg=msg3.message, alias_used="a_command", quiet_action=False)
+    mock_command.assert_called_once_with("1 2 3", original_msg=msg3.message, alias_used="a-command", quiet_action=False)
 
     post_msg.reset_mock()
     mock_command.reset_mock()
 
-    chatcommunicate._prefix_commands["a_command"] = (mock_command, (1, 2))
+    chatcommunicate._prefix_commands["a-command"] = (mock_command, (1, 2))
 
-    msg3.message.content = "!!/a_command"
+    msg3.message.content = "!!/a-command"
     chatcommunicate.on_msg(msg3, client)
 
     assert post_msg.call_count == 1
@@ -328,7 +328,7 @@ def test_on_msg(get_last_messages, post_msg):
     post_msg.reset_mock()
     mock_command.reset_mock()
 
-    msg3.message.content = "!!/a_command 1 2 oatmeal"
+    msg3.message.content = "!!/a-command 1 2 oatmeal"
     chatcommunicate.on_msg(msg3, client)
 
     assert post_msg.call_count == 1
@@ -338,21 +338,21 @@ def test_on_msg(get_last_messages, post_msg):
     post_msg.reset_mock()
     mock_command.reset_mock()
 
-    msg3.message.content = "!!/a_command- 1 2"
+    msg3.message.content = "!!/a-command- 1 2"
     chatcommunicate.on_msg(msg3, client)
 
     post_msg.assert_not_called()
-    mock_command.assert_called_once_with("1", "2", original_msg=msg3.message, alias_used="a_command", quiet_action=True)
+    mock_command.assert_called_once_with("1", "2", original_msg=msg3.message, alias_used="a-command", quiet_action=True)
 
     post_msg.reset_mock()
     mock_command.reset_mock()
 
-    msg3.message.content = "!!/a_command 3"
+    msg3.message.content = "!!/a-command 3"
     chatcommunicate.on_msg(msg3, client)
 
     assert post_msg.call_count == 1
     assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
-    mock_command.assert_called_once_with("3", None, original_msg=msg3.message, alias_used="a_command", quiet_action=False)
+    mock_command.assert_called_once_with("3", None, original_msg=msg3.message, alias_used="a-command", quiet_action=False)
 
     post_msg.reset_mock()
     mock_command.reset_mock()
