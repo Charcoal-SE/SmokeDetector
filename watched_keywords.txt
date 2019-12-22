@@ -15526,3 +15526,4 @@
 1576986793	Makyen	faregamovie\.com
 1576989697	Makyen	treks[\W_]*+himalaya(?!\.com(?<=trekshimalaya\.com))
 1576993189	Shree	acsrplaustralia\.com
+1576995230	Shree	templateed\.com
