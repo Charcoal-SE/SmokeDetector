@@ -15524,3 +15524,4 @@
 1576947306	Makyen	watchonlinemovies\.org\.in
 1576958170	Makyen	movie-stream\.xyz
 1576986793	Makyen	faregamovie\.com
+1576989697	Makyen	treks[\W_]*+himalaya(?!\.com(?<=trekshimalaya\.com))
