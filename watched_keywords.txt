@@ -15527,3 +15527,4 @@
 1576989697	Makyen	treks[\W_]*+himalaya(?!\.com(?<=trekshimalaya\.com))
 1576993189	Shree	acsrplaustralia\.com
 1576995230	Shree	templateed\.com
+1577000187	Shree	techsforever\.info
