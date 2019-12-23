@@ -15546,3 +15546,4 @@
 1577076844	Makyen	myshopy\.org
 1577076861	Makyen	hair[\W_]*+revital[\W_]*+x(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+))*
 1577080655	Makyen	supreme[\W_]*+rx(?:[\W_]*+(?:pill|\d++|[\da-f]{4,}+)s?)*
+1577082410	Makyen	wordpresssupport\.co
