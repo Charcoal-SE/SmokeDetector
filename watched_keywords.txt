@@ -15541,3 +15541,4 @@
 1577039514	Makyen	spal-tv-online\.blogspot
 1577041405	Makyen	cnnsports24\.blogspot
 1577070437	Makyen	arnoldpatrick109(?:@gmail\.com)?
+1577070481	Makyen	masterhacker\.guru
