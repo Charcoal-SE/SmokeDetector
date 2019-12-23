@@ -15572,3 +15572,4 @@
 1577138915	Makyen	skilledmigrationconsultants\.in
 1577138929	Makyen	surecleanseketoofficial\.blogspot
 1577138965	Makyen	(?-i:I-AimTsXp84)
+1577138981	Makyen	facts4supplement(?!\.com)(?!\.org)(?!\.hatenablog\.com)(?!\.blogspot\b)
