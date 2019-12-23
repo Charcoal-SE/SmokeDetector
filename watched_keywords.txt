@@ -15573,3 +15573,4 @@
 1577138929	Makyen	surecleanseketoofficial\.blogspot
 1577138965	Makyen	(?-i:I-AimTsXp84)
 1577138981	Makyen	facts4supplement(?!\.com)(?!\.org)(?!\.hatenablog\.com)(?!\.blogspot\b)
+1577138998	Makyen	pingtool\.org
