@@ -1,7 +1,7 @@
 # Keep this Python image version manually maintained
 FROM python:3.7
 
-RUN adduser --disabled-password --force-badname smokey --gecos smokey && \
+RUN adduser --disabled-password smokey --gecos smokey && \
     su --login smokey sh -c '\
         git clone --depth=50 --no-single-branch https://github.com/Charcoal-SE/SmokeDetector.git && \
         cd SmokeDetector && \
