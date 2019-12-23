@@ -15548,3 +15548,4 @@
 1577080655	Makyen	supreme[\W_]*+rx(?:[\W_]*+(?:pill|\d++|[\da-f]{4,}+)s?)*
 1577082410	Makyen	wordpresssupport\.co
 1577086584	Makyen	viga[\W_]*+extrait
+1577086604	Makyen	packaging\.vip
