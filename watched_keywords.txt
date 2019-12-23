@@ -15574,3 +15574,4 @@
 1577138965	Makyen	(?-i:I-AimTsXp84)
 1577138981	Makyen	facts4supplement(?!\.com)(?!\.org)(?!\.hatenablog\.com)(?!\.blogspot\b)
 1577138998	Makyen	pingtool\.org
+1577139012	Makyen	facts4supplementus\.tumblr\.com
