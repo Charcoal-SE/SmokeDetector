@@ -43,7 +43,7 @@ ChatSim
 service\W?solahart
 junisse
 profactor\W?t
-(?:fake|novelty|quality|buy(?:ing)?|sell(?:ing)?|offer).{0,20}(?:passport|driver'?s? licen[cs]e|ID card|green card|residence permit|toefl|Ielts)s?
+(?:fake|novelty|quality|buy(?:ing)?|sell(?:ing)?|offer|comprar|fabricante|vender).{0,20}(?:passport|driver'?s? licen[cs]e|ID card|green card|residence permit|toefl|Ielts|pasaportes|licencias[\W_]*+de[\W_]*+conducir|tarjetas[\W_]*+de[\W_]*+identificación)s?
 (?<=^.{0,200})(?:support|service|helpline)(?:\W?phone)?\W?number
 [a-z_]*(?:1_*)?866[\W_]*978[\W_]*(?:6819|6762)[a-z_]*
 (?:mcafee|hotmail|gmail|outlook|yahoo|lexmark (?:printer)?) ?(?:password(?: recovery)?|tech)? ?(?:(?:customer|technical) (?:support|service))? (?:support|contact|telephone|help(?:line)?|phone) number
