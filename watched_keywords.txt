@@ -15590,3 +15590,4 @@
 1577161783	Makyen	efbdred\.hatenablog\.com
 1577162300	Makyen	jamesethicalhacker(?:[W_]*+(?:at[W_]*+)?gmail(?:[W_]*+(?:dot[W_]*+)?com)?)?
 1577162314	Makyen	jamescyberhacker6(?:[W_]*+(?:at[W_]*+)?gmail(?:[W_]*+(?:dot[W_]*+)?com)?)?
+1577158680	Eliah Kagan	jasaaqiqah\.com
