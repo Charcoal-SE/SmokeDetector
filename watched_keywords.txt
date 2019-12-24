@@ -15205,7 +15205,6 @@
 1576161306	Das_Geek	nexus-home\.com
 1576162259	Das_Geek	ximeconn\.com
 1576174368	Makyen	discovermleiha\.ae
-1576174385	Makyen	plug[\W_]*+n[\W_]*+pure(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1576174410	Makyen	xdlsealing\.com
 1576174424	Makyen	bestsupplementforhealth\.com
 1576174454	Makyen	thepillsstore\.com
