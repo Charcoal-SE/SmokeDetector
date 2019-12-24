@@ -152,8 +152,8 @@ stackexchange.com:
       - 11230997 # SecretAgentMan
       - 14952682 # JL2210
       - 8643622  # Columbia says Reinstate Monica
-      - 519526 # Eliah Kagan
-      - 4146267 # robsiemb
+      - 519526   # Eliah Kagan
+      - 4146267  # robsiemb
 
   65945:  # Charcoal Test
     commands: true
