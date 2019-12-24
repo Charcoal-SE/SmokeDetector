@@ -15167,7 +15167,6 @@
 1576066479	tripleee	rise[\W_]*+digi[\W_]*+tech
 1576066628	tripleee	digitaledgeinstitute\.com
 1576066793	tripleee	bytegenius\.in
-1576075254	double-beep	breathegreenplugnpure\.info
 1576078129	tripleee	fliponic\.com
 1576082307	Das_Geek	technicalsquard\.com
 1576091006	Das_Geek	create[\W_]+several[\W_]+staging[\W_]+and[\W_]+development[\W_]+branches
