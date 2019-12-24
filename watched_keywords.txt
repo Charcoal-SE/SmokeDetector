@@ -15587,3 +15587,4 @@
 1577147305	Makyen	rajapkv\.id
 1577157194	Makyen	flix-play\.best
 1577158120	Makyen	(?:ver\b.{0,80}?\b(?:en\s*l[íi]nea|transmisi[óo]n|en\s*vivo|pel[íi]cula|TV)s?(?<=<a href.*?)|ver\b(?=.*?</a>).{0,80}?\b(?:en\s*l[íi]nea|transmisi[óo]n|en\s*vivo|pel[íi]cula|TV)s?)(?#Spanish version of movie watch)
+1577158680	Eliah Kagan	jasaaqiqah\.com
