@@ -15645,3 +15645,4 @@
 1577286836	Makyen	(?-i:CGP707pfpRo)
 1577286869	Makyen	hordofa_b(?:@yahoo\.com)?
 1577286897	Makyen	juventus[w_]*+ageless[w_]*+moisturizer(?:[w_]*+(?:review|creme|cream|d++|[da-f]{4,}+)s?)*
+1577286912	Makyen	hyalurolift[w_]*+creme(?:[w_]*+(?:review|d++|[da-f]{4,}+)s?)*
