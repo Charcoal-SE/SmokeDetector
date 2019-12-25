@@ -15649,3 +15649,4 @@
 1577286931	Makyen	formax[w_]*+lean(?:[w_]*+(?:review|pill|d++|[da-f]{4,}+)s?)*
 1577286946	Makyen	peaujeunecreme\.storychief\.io
 1577286962	Makyen	peaujeunecremeavis\.wixsite\.com
+1577292968	Jenayah	ambrares\.com
