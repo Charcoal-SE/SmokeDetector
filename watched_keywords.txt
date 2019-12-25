@@ -15627,3 +15627,4 @@
 1577256694	Makyen	ryzex[w_]*+male(?:[w_]*+(?:pill|enhancement|d++|[da-f]{4,}+)s?)*
 1577256713	Makyen	(?-i:Z_PXogJb8u4)
 1577256732	Makyen	topdietbrand(?!\.com)
+1577257470	Shree	grvacademy\.com
