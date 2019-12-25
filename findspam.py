@@ -1679,12 +1679,15 @@ def is_offensive_post(s, site):
 
 @create_rule("username similar to website in {}", title=False, body_summary=True, question=False, whole_post=True)
 def username_similar_website(post):
-    s, username = post.body, post.user_name
-    sim_ratio, sim_webs = perform_similarity_checks(s, username)
+    body, username = post.body, post.user_name
+    body_lowercase = body.lower()
+    sim_ratio, sim_webs = perform_similarity_checks(body, username)
     if sim_ratio >= SIMILAR_THRESHOLD:
         return False, False, True, "Username `{}` similar to {}, ratio={}".format(
             username,
-            ', '.join(['*{}* at position {}-{}'.format(w, s.index(w), s.index(w) + len(w)) for w in sim_webs]),
+            ', '.join(['*{}* at position {}-{}'.format(w,
+                                                       body_lowercase.index(w.lower()),
+                                                       body_lowercase.index(w.lower()) + len(w)) for w in sim_webs]),
             sim_ratio)
     else:
         return False, False, False, ""
