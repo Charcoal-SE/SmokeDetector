@@ -15643,3 +15643,4 @@
 1577286800	Makyen	facebookcustomer-service\.com
 1577286817	Makyen	illumia[w_]*+skin[w_]*+care(?:[w_]*+(?:review|d++|[da-f]{4,}+)s?)*
 1577286836	Makyen	(?-i:CGP707pfpRo)
+1577286869	Makyen	hordofa_b(?:@yahoo\.com)?
