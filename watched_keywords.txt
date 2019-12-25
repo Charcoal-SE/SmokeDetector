@@ -15646,3 +15646,4 @@
 1577286869	Makyen	hordofa_b(?:@yahoo\.com)?
 1577286897	Makyen	juventus[w_]*+ageless[w_]*+moisturizer(?:[w_]*+(?:review|creme|cream|d++|[da-f]{4,}+)s?)*
 1577286912	Makyen	hyalurolift[w_]*+creme(?:[w_]*+(?:review|d++|[da-f]{4,}+)s?)*
+1577286931	Makyen	formax[w_]*+lean(?:[w_]*+(?:review|pill|d++|[da-f]{4,}+)s?)*
