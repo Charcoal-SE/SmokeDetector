@@ -2143,3 +2143,4 @@ empowered[\W_]*+boost
 biogenix[\W_]*+rx
 setup-buddypress-with-multisite(?#URL path)
 plug[\W_]*+n[\W_]*+pure(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+luxe[\W_]*+trim(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
