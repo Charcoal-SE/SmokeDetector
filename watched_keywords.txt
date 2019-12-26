@@ -15703,3 +15703,4 @@
 1577376290	Makyen	kostik\.info\.tr
 1577376312	Makyen	kimyamax\.com
 1577376458	Makyen	pozitifkimya\.com
+1577376477	Makyen	euroafricatravel\.co\.uk
