@@ -13659,7 +13659,6 @@
 1571287818	Shree	londonhousingreport\.com
 1571301942	Shree	realestatebelek\.com
 1571302272	Shree	evpvacuum\.com
-1571302435	Shree	realestateallturkey\.com
 1571302550	Shree	travwo\.com
 1571306071	Shree	xjl-recycmachine\.com
 1571312174	Shree	autoindica\.com
