@@ -15660,5 +15660,4 @@
 1577332745	Makyen	filmywap
 1577332765	Makyen	movierulz
 1577332783	Makyen	tamilrockers
-1577334675	Makyen	(?:full|movies?|watch(?:es)?|online|free|downloads?|stream(?:s|ing)?)(?:[\w_]*+(?:full|movies?|watch(?:es)?|online|free|downloads?|stream(?:s|ing)?)){2,}
 1577334998	Eliah Kagan	xpoopx\.com
