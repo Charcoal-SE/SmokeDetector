@@ -15686,3 +15686,4 @@
 1577350475	Makyen	(?-i:T3wiJ\.jpg)
 1577351863	Eliah Kagan	router-login\.info
 1577365811	double-beep	jobsclan\.com
+1577365939	double-beep	worldjuniors2020live\.com
