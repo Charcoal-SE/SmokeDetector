@@ -15714,3 +15714,4 @@
 1577394510	Eliah Kagan	portal4fitness(?!\.com)(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1577397083	Makyen	24x7assignmenthelp\.com
 1577397103	Makyen	yubico\.com
+1577396042	Eliah Kagan	maccrack\.club
