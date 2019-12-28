@@ -1164,7 +1164,7 @@ nitric\W?boost\W?xl
 zdorov\W?propolis
 super\W?boost\W?perform\W?xl
 vita\W?x
-keto\W?trim
+keto[w_]*+trim(?:review|[w_]*+(?:d++|[da-f]{4,}+)s?)*
 ropaxin(?:\W*t)?
 cognivex
 hydrox\W?slim
