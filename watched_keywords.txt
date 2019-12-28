@@ -12716,7 +12716,7 @@
 1567853593	double-beep	zeftaviation\.in
 1567855468	Makyen	crossfaktor[\W_]*+booster(?!\.wordpress\.com(?<=crossfaktorbooster\.wordpress\.com))
 1567855476	Makyen	crossfaktorbooster\.wordpress\.com
-1567855522	Makyen	(?:master|modern)[\W_]*+keto[\W_]*+rx(?:[\W_]*+(?:review|d+))*
+1567855522	Makyen	(?:master|modern)[\W_]*+keto[\W_]*+rx(?:[\W_]*+(?:review|\d+))*
 1567856316	Makyen	prince\.zlato
 1567861133	Makyen	(?-i:5XblG0biIOc)
 1567861142	Makyen	(?-i:x7ke9bp)
@@ -15580,15 +15580,15 @@
 1577147305	Makyen	rajapkv\.id
 1577157194	Makyen	flix-play\.best
 1577158120	Makyen	(?:ver\b.{0,80}?\b(?:en\s*l[íi]nea|transmisi[óo]n|en\s*vivo|pel[íi]cula|TV)s?(?<=<a href.*?)|ver\b(?=.*?</a>).{0,80}?\b(?:en\s*l[íi]nea|transmisi[óo]n|en\s*vivo|pel[íi]cula|TV)s?)(?#Spanish version of movie watch)
-1577161629	Makyen	evianne[W_]*+cream(?:[W_]*+(?:uk|review|d++|[da-f]{4,}+))*
+1577161629	Makyen	evianne[\W_]*+cream(?:[\W_]*+(?:uk|review|\d++|[\da-f]{4,}+))*
 1577161783	Makyen	efbdred\.hatenablog\.com
-1577162300	Makyen	jamesethicalhacker(?:[W_]*+(?:at[W_]*+)?gmail(?:[W_]*+(?:dot[W_]*+)?com)?)?
-1577162314	Makyen	jamescyberhacker6(?:[W_]*+(?:at[W_]*+)?gmail(?:[W_]*+(?:dot[W_]*+)?com)?)?
+1577162300	Makyen	jamesethicalhacker(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1577162314	Makyen	jamescyberhacker6(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1577158680	Eliah Kagan	jasaaqiqah\.com
 1577165555	Makyen	queensartsandtrends\.com
 1577166696	Makyen	prathamvision\.com
 1577169674	Shree	adbizdirectory\.com
-1577169691	Makyen	ultimate[w_]*+cbd(?:[w_]*+(?:labs|oil|d++|[da-f]{4,}+))*
+1577169691	Makyen	ultimate[\W_]*+cbd(?:[\W_]*+(?:labs|oil|\d++|[\da-f]{4,}+))*
 1577170002	Makyen	n4gm\.com
 1577169950	Eliah Kagan	datmyphuoc3giare\.com
 1577170672	Makyen	jinjiptv\.com
@@ -15609,7 +15609,7 @@
 1577211459	Makyen	fitnesscenter4u\.com
 1577214990	Makyen	kntechram\.blogspot
 1577215015	Makyen	antonovich-design\.com
-1577215030	Makyen	supreme(?:[w_]*+garcinia)?[w_]*+max(?:[w_]*+(?:pill|review|d++|[da-f]{4,}+)s?)*
+1577215030	Makyen	supreme(?:[\W_]*+garcinia)?[\W_]*+max(?:[\W_]*+(?:pill|review|\d++|[\da-f]{4,}+)s?)*
 1577227058	Eliah Kagan	7warriors\.com
 1577229205	Eliah Kagan	CFTManager\.com
 1577230047	Eliah Kagan	inaugment\.com
@@ -15619,7 +15619,7 @@
 1577252853	Makyen	leo\.solomon719(?:@gmail\.com)?
 1577253383	Shree	contact-mail-support\.com
 1577255121	Makyen	bestinterviewquestion\.com
-1577256694	Makyen	ryzex[w_]*+male(?:[w_]*+(?:pill|enhancement|d++|[da-f]{4,}+)s?)*
+1577256694	Makyen	ryzex[\W_]*+male(?:[\W_]*+(?:pill|enhancement|\d++|[\da-f]{4,}+)s?)*
 1577256713	Makyen	(?-i:Z_PXogJb8u4)
 1577256732	Makyen	topdietbrand(?!\.com)
 1577257470	Shree	grvacademy\.com
@@ -15629,19 +15629,19 @@
 1577258457	Eliah Kagan	bois\.us
 1577258446	Eliah Kagan	yorg3\.online
 1577262416	Eliah Kagan	draifuwalifecenter\.wordpress\.com
-1577263401	Makyen	brand[w_]*+locus(?:[w_]*+(?:d++|[da-f]{4,}+))*
+1577263401	Makyen	brand[\W_]*+locus(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1577265713	Shree	be-practical\.com
 1577271848	Shree	moviesinhindi\.com
 1577271874	Shree	trustedmedsshop\.com
 1577285672	Makyen	(?-i:A9CAV\.jpg)
 1577282035	Jenayah	onlinetvplay\.com
 1577286800	Makyen	facebookcustomer-service\.com
-1577286817	Makyen	illumia[w_]*+skin[w_]*+care(?:[w_]*+(?:review|d++|[da-f]{4,}+)s?)*
+1577286817	Makyen	illumia[\W_]*+skin[\W_]*+care(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+)s?)*
 1577286836	Makyen	(?-i:CGP707pfpRo)
 1577286869	Makyen	hordofa_b(?:@yahoo\.com)?
-1577286897	Makyen	juventus[w_]*+ageless[w_]*+moisturizer(?:[w_]*+(?:review|creme|cream|d++|[da-f]{4,}+)s?)*
-1577286912	Makyen	hyalurolift[w_]*+creme(?:[w_]*+(?:review|d++|[da-f]{4,}+)s?)*
-1577286931	Makyen	formax[w_]*+lean(?:[w_]*+(?:review|pill|d++|[da-f]{4,}+)s?)*
+1577286897	Makyen	juventus[\W_]*+ageless[\W_]*+moisturizer(?:[\W_]*+(?:review|creme|cream|\d++|[\da-f]{4,}+)s?)*
+1577286912	Makyen	hyalurolift[\W_]*+creme(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+)s?)*
+1577286931	Makyen	formax[\W_]*+lean(?:[\W_]*+(?:review|pill|\d++|[\da-f]{4,}+)s?)*
 1577286946	Makyen	peaujeunecreme\.storychief\.io
 1577286962	Makyen	peaujeunecremeavis\.wixsite\.com
 1577292968	Jenayah	ambrares\.com
@@ -15757,7 +15757,7 @@
 1577502028	Eliah Kagan	lewatinaja\.com
 1577502236	Eliah Kagan	award9ja\.com
 1577502301	Eliah Kagan	bluemap\.co
-1577514036	Makyen	alpha[w_]*+dietary(?:[w_]*+(?:testosterone|d++|[da-f]{4,}+))*
+1577514036	Makyen	alpha[\W_]*+dietary(?:[\W_]*+(?:testosterone|\d++|[\da-f]{4,}+))*
 1577514096	Makyen	ketotrin\.info
 1577515137	Makyen	topdietbrande
 1577515156	Makyen	(?-i:YVvZx3s5Zf0)(?#youtu\.be)
