@@ -15783,3 +15783,4 @@
 1577568654	Makyen	betvole(?!\.xyz)
 1577568673	Makyen	betvole\.xyz
 1577568689	Makyen	girisrehberi\.xyz
+1577568713	Makyen	guncelgiris\.xyz
