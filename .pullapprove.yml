@@ -41,6 +41,7 @@ groups:
       - Undo1
       - WELZ-gh
       - DasGeek
+      - EliahKagan
     author_approval:
       ignored: true
     reject_value: -1
