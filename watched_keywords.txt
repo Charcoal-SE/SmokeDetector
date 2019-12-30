@@ -15818,3 +15818,4 @@
 1577682635	Makyen	naughtyspin\.co\.uk
 1577685208	Makyen	notepadplusplusdownload\.com
 1577686138	Makyen	naughtyspin(?!\.co\.uk)(?:[\W_]*+(?:uk|\d++|[\da-f]{4,}+))*
+1577686695	Eliah Kagan	traffici5\.com
