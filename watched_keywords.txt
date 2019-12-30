@@ -15817,3 +15817,4 @@
 1577670629	Eliah Kagan	reetmarket\.blogspot
 1577682635	Makyen	naughtyspin\.co\.uk
 1577685208	Makyen	notepadplusplusdownload\.com
+1577686138	Makyen	naughtyspin(?!\.co\.uk)(?:[\W_]*+(?:uk|\d++|[\da-f]{4,}+))*
