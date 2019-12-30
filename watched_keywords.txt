@@ -15040,7 +15040,6 @@
 1575744832	Makyen	bechmutaw\.hatenablog\.com
 1575744864	Makyen	biosbypass\.com
 1575744916	Makyen	primal[\W_]*+core(?:[\W_]*+(?:testosterone|powerpoint|ppt|presentation|\d++|[\da-f]{4,}+))*
-1575744932	Makyen	creditsmartspy(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1575744984	Makyen	spring[\W_]*+boot[\W_]*+training(?=.{0,20}</a>)
 1575745022	Makyen	hadnankhan\.hatenablog\.com
 1575745059	Makyen	vibrant[\W_]*+enhanced(?:[\W_]*+(?:keto|\d++|[\da-f]{4,}+))*
