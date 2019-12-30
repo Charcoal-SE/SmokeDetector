@@ -15814,3 +15814,4 @@
 1577656686	Makyen	airport[\W_]*+transfer[\W_]*+from[\W_]*+purley
 1577662393	Makyen	healthynewscenter\.org
 1577669353	Makyen	bkhost(?!\.vn)
+1577670629	Eliah Kagan	reetmarket\.blogspot
