@@ -15834,4 +15834,3 @@
 1577703286	tripleee	plus-hulu\.com
 1577703308	tripleee	dwightcrane\.com
 1577703597	Eliah Kagan	csware\.org
-1577705477	Glorfindel	roku\.comlink\.uk\.net
