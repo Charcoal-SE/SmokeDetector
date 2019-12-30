@@ -1,0 +1,42 @@
+Schema: yaml_ns
+Schema_version: '2019120601'
+items:
+- ns:
+  - ns1.md-95.bigrockservers.com.
+  - ns2.md-95.bigrockservers.com.
+- ns:
+  - ns1.md-99.bigrockservers.com.
+  - ns2.md-99.bigrockservers.com.
+- ns:
+  - apollo.ns.cloudflare.com.
+  - liz.ns.cloudflare.com.
+- ns:
+  - ara.ns.cloudflare.com.
+  - greg.ns.cloudflare.com.
+- ns:
+  - brenda.ns.cloudflare.com.
+  - merlin.ns.cloudflare.com.
+- ns:
+  - chip.ns.cloudflare.com.
+  - lola.ns.cloudflare.com.
+- ns:
+  - jay.ns.cloudflare.com.
+  - jule.ns.cloudflare.com.
+- ns:
+  - lee.ns.cloudflare.com.
+  - ulla.ns.cloudflare.com.
+- ns:
+  - lloyd.ns.cloudflare.com.
+  - reza.ns.cloudflare.com.
+- ns: 247support-number.com.
+- ns: promoocodes.com.
+- ns: myassignmenthelp.co.uk.
+- ns: socialmonkee.com.
+- ns: aapkeaajanese.website.
+- ns: healthymum.org.
+- ns: escortdomain.net.
+- ns: dnsdomen.com.
+- ns: letter.org.in.
+- ns: utecho.com.
+- ns: siteground.asia.
+- ns: ddos-guard.net.
