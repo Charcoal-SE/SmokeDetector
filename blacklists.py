@@ -301,7 +301,7 @@ class YAMLParserASN(YAMLParserCIDR):
         if 'asn' not in item:
             raise ValueError('Item must have member field "asn": {0!r}'.format(item))
         asn = int(item['asn'])
-        if asn <= 0 or asn >= 4_200_000_000 or 64496 <= asn <= 131071 or asn == 23456:
+        if asn <= 0 or asn >= 4200000000 or 64496 <= asn <= 131071 or asn == 23456:
             raise ValueError('Not a valid public AS number: {0}'.format(asn))
 
 
