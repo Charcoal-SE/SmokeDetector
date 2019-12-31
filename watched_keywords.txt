@@ -15866,3 +15866,4 @@
 1577771026	Makyen	(?-i:u44xSFQG2hs)(?#youtu\.be)
 1577771046	Makyen	krill[\W_]*+oil[\W_]*+plus(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1577771063	Makyen	healthygossips\.com
+1577771080	Makyen	celebritysuits\.com
