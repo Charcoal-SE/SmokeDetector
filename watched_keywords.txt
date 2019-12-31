@@ -15868,3 +15868,4 @@
 1577771080	Makyen	celebritysuits\.com
 1577772476	Shree	dreampairshoes\.com
 1577773766	Makyen	dream[\W_]*+pairs[\W_]*+shoes?(?!\.com(?<=dreampairshoes\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1577775045	tripleee	farmingsimulator20\.com
