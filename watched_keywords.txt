@@ -15878,3 +15878,4 @@
 1577785044	Makyen	hearing[\W_]*+aid[\W_]*+centre[\W_]*+experts
 1577785162	Makyen	play[\W_]*+school[\W_]*+in[\W_]*+kilpauk
 1577798577	Machavity	hacksol\.net
+1577834142	Makyen	financier\.com
