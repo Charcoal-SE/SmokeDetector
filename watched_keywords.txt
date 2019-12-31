@@ -15873,3 +15873,4 @@
 1577779877	tripleee	ximeconn(?!\.com)
 1577781609	Eliah Kagan	thenewsfetcher\.com
 1577782517	Makyen	techtman\.tech
+1577784591	Eliah Kagan	drrajatkandhari\.com
