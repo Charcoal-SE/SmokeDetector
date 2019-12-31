@@ -15871,3 +15871,4 @@
 1577775045	tripleee	farmingsimulator20\.com
 1577779268	double-beep	sci-hub\.ltd
 1577779877	tripleee	ximeconn(?!\.com)
+1577781609	Eliah Kagan	thenewsfetcher\.com
