@@ -15906,3 +15906,4 @@
 1577904290	Makyen	sattamatka\.company
 1577911652	Makyen	aeedah\.hatenablog\.com
 1577911671	Makyen	ketoultrafitofficial\.blogspot
+1577912191	Makyen	south[\W_]*+beach(?![\W_]*+(?:diet|food|keto|eat(?:ing)?|weight|$)s?)
