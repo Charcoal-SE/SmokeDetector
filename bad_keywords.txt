@@ -1312,7 +1312,7 @@ maverick\W?beard\W?growth
 lumineri
 skinny\W*?fit\W*?keto
 744043126
-south\W?beach\W?keto
+south[\W_]*+beach(?:[\W_]*+(?:diet|food|keto|eat(?:ing)?|weight|$)s?)+
 viexa\W*?man\W*?plus
 florenceloans1@gmail\.com
 virilagrax
@@ -1481,7 +1481,6 @@ apollo\W*(?:kidney\W*)?hospital\d*(?!(?:[^<]|<(?!code>)(?!/code))*</code>)
 Purexen
 smart\W?stream\W?alliance(?:\W?llc)?
 beach\W?slim
-south\W?beach(?:\W?diet)?
 kleanse\W*diet
 cbd\W?plus
 (?:premium\W?)?pure\W?keto
