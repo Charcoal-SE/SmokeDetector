@@ -15941,3 +15941,4 @@
 1577976788	Das_Geek	conflictfreeresolutions\.com
 1577977034	Machavity	(?-i:^Nancy-Pamela$)
 1577982347	Das_Geek	gravitytheorycream\.food\.blog
+1577982800	Das_Geek	gurukullinfosystems\.com
