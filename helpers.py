@@ -202,12 +202,12 @@ def reload_modules():
     return result
 
 
-def unshorten_link(url, request_type='GET', depth=10, explicitly_ignore_security_warning=False):
+def unshorten_link(url, request_type='GET', depth=10):
     orig_url = url
     response_code = 301
     headers = {'User-Agent': 'SmokeDetector/git (+https://github.com/Charcoal-SE/SmokeDetector)'}
     for tries in range(depth):
-        if response_code not in [301, 302, 303, 307, 308]:
+        if response_code not in {301, 302, 303, 307, 308}:
             break
         res = requests.request(request_type, url, headers=headers, stream=True, allow_redirects=False)
         res.connection.close()  # Discard response body for GET requests
