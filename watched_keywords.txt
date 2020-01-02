@@ -15926,3 +15926,4 @@
 1577947546	Makyen	new[\W_]*+hair[\W_]*+glow(?!care\.weebly\.com(?<=newhairglowcare\.weebly\.com))(?:[\W_]*+(?:care|\d++|[\da-f]{4,}+))*
 1577947561	Makyen	newhairglowcare\.weebly\.com
 1577947892	Makyen	asterdermatology\.com
+1577953918	Eliah Kagan	drnirenrao\.com
