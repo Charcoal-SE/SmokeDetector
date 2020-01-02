@@ -15939,3 +15939,4 @@
 1577974718	Das_Geek	studybaywriters\.com
 1577976713	Das_Geek	promodigitalmedia\.com
 1577976788	Das_Geek	conflictfreeresolutions\.com
+1577977034	Machavity	(?-i:^Nancy-Pamela$)
