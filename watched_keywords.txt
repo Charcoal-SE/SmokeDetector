@@ -15953,3 +15953,4 @@
 1577996002	Makyen	usalostlovespellswordwidelluminati\.blogspot
 1578003866	Eliah Kagan	lottomatic\.org
 1578004688	Eliah Kagan	mamarizia666\.doodlekit\.com
+1578004710	Eliah Kagan	mamarizia666(?!\.doodlekit\.com)
