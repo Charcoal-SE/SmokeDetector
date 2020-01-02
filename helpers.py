@@ -202,28 +202,22 @@ def reload_modules():
     return result
 
 
-# FAIR WARNING: Sending HEAD requests to resolve a shortened link is generally okay - there aren't
-# as many exploits that work on just HEAD responses. If you specify sending a GET request, you
-# acknowledge that this will fetch the full, potentially unsafe response from the shortener.
-def unshorten_link(url, request_type='HEAD', explicitly_ignore_security_warning=False):
-    requesters = {
-        'GET': requests.get,
-        'HEAD': requests.head
-    }
-    if request_type not in requesters:
-        raise KeyError('Unavailable request_type {}'.format(request_type))
-    if request_type == 'GET' and not explicitly_ignore_security_warning:
-        raise SecurityError('Potentially unsafe request type GET not acknowledged')
-
-    requester = requesters[request_type]
+def unshorten_link(url, request_type='GET', depth=10):
+    orig_url = url
     response_code = 301
     headers = {'User-Agent': 'SmokeDetector/git (+https://github.com/Charcoal-SE/SmokeDetector)'}
-    while response_code in {301, 302, 303, 307, 308}:
-        res = requester(url, headers=headers)
+    for tries in range(depth):
+        if response_code not in {301, 302, 303, 307, 308}:
+            break
+        res = requests.request(request_type, url, headers=headers, stream=True, allow_redirects=False)
+        res.connection.close()  # Discard response body for GET requests
         response_code = res.status_code
-        if 'Location' in res.headers:
-            url = res.headers['Location']
-
+        if 'Location' not in res.headers:
+            # No more redirects, stop
+            break
+        url = res.headers['Location']
+    else:
+        raise ValueError("Too many redirects ({}) for URL {!r}".format(depth, orig_url))
     return url
 
 
