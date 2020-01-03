@@ -15600,7 +15600,6 @@
 1577194102	Makyen	rm721196(?:@gmail\.com)?
 1577201083	Makyen	sexdate24\.club
 1577197985	Eliah Kagan	techive\.in
-1577211459	Makyen	fitnesscenter4u\.com
 1577214990	Makyen	kntechram\.blogspot
 1577215015	Makyen	antonovich-design\.com
 1577215030	Makyen	supreme(?:[\W_]*+garcinia)?[\W_]*+max(?:[\W_]*+(?:pill|review|\d++|[\da-f]{4,}+)s?)*
