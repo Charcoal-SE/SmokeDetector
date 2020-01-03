@@ -70,6 +70,9 @@ items:
   - betty.ns.cloudflare.com.
   - kai.ns.cloudflare.com.
 - ns:
+  - betty.ns.cloudflare.com.
+  - ken.ns.cloudflare.com.
+- ns:
   - bonnie.ns.cloudflare.com.
   - guss.ns.cloudflare.com.
 - ns:
