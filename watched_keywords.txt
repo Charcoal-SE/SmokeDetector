@@ -15987,3 +15987,4 @@
 1578062141	tripleee	onlinedivorcetexas\.com
 1578063077	tripleee	onlinedivorce(?!(?:texas|wa)\.com)\w+
 1578063969	tripleee	moving-me\.com
+1578065259	Machavity	dashsdk\.com
