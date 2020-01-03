@@ -15981,3 +15981,4 @@
 1578053517	tripleee	inoxoft\.com
 1578054749	Eliah Kagan	worldofvampire(?!\.business\.site)
 1578054917	Eliah Kagan	octoparse\.es
+1578056409	tripleee	smartanaliz\.com
