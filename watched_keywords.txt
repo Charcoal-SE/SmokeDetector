@@ -15985,3 +15985,4 @@
 1578058392	tripleee	GenoRSmith
 1578058417	tripleee	pastillas
 1578062141	tripleee	onlinedivorcetexas\.com
+1578063077	tripleee	onlinedivorce(?!(?:texas|wa)\.com)\w+
