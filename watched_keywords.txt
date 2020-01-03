@@ -15988,3 +15988,4 @@
 1578063077	tripleee	onlinedivorce(?!(?:texas|wa)\.com)\w+
 1578063969	tripleee	moving-me\.com
 1578065259	Machavity	dashsdk\.com
+1578072090	double-beep	its123movies\.com
