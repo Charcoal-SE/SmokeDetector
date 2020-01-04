@@ -15997,3 +15997,4 @@
 1578111806	Makyen	nzddred\.hatenablog\.com
 1578111822	Makyen	ameddinebi\.tumblr\.com
 1578117616	Makyen	(?-i:tdseZwsuDYM)(?#youtu.be)
+1578117659	Makyen	wave[\W_]*+health[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
