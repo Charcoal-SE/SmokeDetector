@@ -15999,3 +15999,4 @@
 1578117616	Makyen	(?-i:tdseZwsuDYM)(?#youtu.be)
 1578117659	Makyen	wave[\W_]*+health[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1578118031	Makyen	new[\W_]*+glo[\W_]*+hair(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1578118676	Makyen	instant[\W_]*+keto(?:[\W_]*+(?:ca|canada|\d++|[\da-f]{4,}+))*
