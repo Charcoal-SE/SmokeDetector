@@ -2150,3 +2150,4 @@ creditsmartspy(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 evianne[\W_]*+cream(?:[\W_]*+(?:uk|review|\d++|[\da-f]{4,}+))*
 pure[\W_]*+muscle[\W_]*+growth
 zydenafil
+(?:lapura|(?-i:L)a[\W_]*+(?-i:P)ura)(?:[\W_]*+(?:cream|creme|aging|anti|review|wrinkle|freezing|moisturizer|\d++|[\da-f]{4,}+)s?)*
