@@ -16035,3 +16035,4 @@
 1578220338	Eliah Kagan	celaxrynrxofficial\.blogspot
 1578220616	Eliah Kagan	celaxryn(?!rxofficial\.blogspot)(?:_rx)?
 1578220740	Eliah Kagan	new-tv24\.blogspot
+1578224348	Eliah Kagan	tavanno\.com
