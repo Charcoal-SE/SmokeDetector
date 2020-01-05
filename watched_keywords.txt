@@ -16034,3 +16034,4 @@
 1578217029	Eliah Kagan	liber\.xyz
 1578220284	Eliah Kagan	hdrmovies4u\.com
 1578220338	Eliah Kagan	celaxrynrxofficial\.blogspot
+1578220616	Eliah Kagan	celaxryn(?!rxofficial\.blogspot)(?:_rx)?
