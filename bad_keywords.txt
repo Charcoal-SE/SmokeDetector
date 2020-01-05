@@ -1983,7 +1983,7 @@ sera\W*relief(?:\W*(?:CBD|Oil))*
 (?:keto\W*)?cleanse\W*pro
 cyberhelp\d*(?:\W*(?:(?:at|via)\W*)?gmail(?:\W*(?:dot\W*)?com)?)?
 (?:simply|simple)[\W_]*fit\W*keto(?:[\W_]*\d+)*
-alpha[\W_]*femme(?:[\W_]*(?:keto|genix|ca|united|kingdom|uk|com|\d+|[\da-f]{4,}))*
+alpha[\W_]*femme(?:[\W_]*(?:keto|genix|ca|united|kingdom|uk|com|pill|\d+|[\da-f]{4,})s?)*
 keto\W*jolt(?:\W*(?:favorings?|reviews?|diet|\d+))*
 keto[\W_]*body(?!tone\.com(?<=keto-bodytone\.com))(?:[\W_]*(?:tone|avis|france|fr|web|review|\d+|[\da-f]{4,}))*
 safe\W*meds\W*keto(?:\W*burn)?
