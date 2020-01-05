@@ -16042,3 +16042,4 @@
 1578231898	Machavity	myhospitall\.org
 1578235797	Eliah Kagan	livepctv\.co
 1578236917	Eliah Kagan	Golden\s+Globes\s+2020
+1578237108	Eliah Kagan	psl2020\.net
