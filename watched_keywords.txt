@@ -16089,3 +16089,4 @@
 1578326214	Das_Geek	janbasktrainig\.com
 1578336645	Glorfindel	awl\W*golf
 1578344129	Machavity	(?-i:^Jimmy Johnson$)
+1578350457	Makyen	drgurulovespelltemple(?:@yahoo\.com)?
