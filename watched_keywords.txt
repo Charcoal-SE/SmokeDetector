@@ -16064,3 +16064,4 @@
 1578288089	Makyen	massageathome-nyc\.com
 1578288107	Makyen	gluco[\W_]*+neuro(?!\.page\.tl(?<=gluconeuro\.page\.tl))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1578288125	Makyen	gybfcv\.tumblr\.com
+1578288143	Makyen	gluconeuro\.page\.tl
