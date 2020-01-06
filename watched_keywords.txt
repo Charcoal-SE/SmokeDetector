@@ -16062,3 +16062,4 @@
 1578273015	Makyen	you[\W_]*+can[\W_]*+not[\W_]*+block[\W_]*+me
 1578283035	Makyen	cakasalt\.com
 1578288089	Makyen	massageathome-nyc\.com
+1578288107	Makyen	gluco[\W_]*+neuro(?!\.page\.tl(?<=gluconeuro\.page\.tl))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
