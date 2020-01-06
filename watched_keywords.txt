@@ -10470,7 +10470,6 @@
 1560492710	Makyen	flightradar\.co\.uk
 1560494341	Shree	bharatdefencekavach\.com
 1560495700	Shree	blog\.baljotsingh\.in
-1560511672	tripleee	ubports?(?:dev(?:nl)?)?
 1560514487	tripleee	raysrender\.com
 1560514870	tripleee	bepanahpyaartv\.net
 1560507495	double-beep	roslynlimousine\.com
