@@ -213,7 +213,6 @@ quickbooks
 (?-i:^khadim hussain$)
 (?-i:^stevensegui$)
 (^-i:^Jivendro Adriaans$)
-(?-i:^Jimmy Johnson$)
 (?-i:^aliinam$)
 (?-i:^Scarlet\s*Grace$)
 (?-i:^nanny5557$)
