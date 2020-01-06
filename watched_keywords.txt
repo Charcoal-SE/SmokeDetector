@@ -10909,7 +10909,6 @@
 1562168615	Makyen	24hrslovespell(?:\W*(?:a\W*t\W*)?g\W*m\W*a\W*i\W*l(?:\W*(?:d\W*o\W*t\W*)?c\W*o\W*m)?)?
 1562168635	Makyen	abrahamrodriguezen
 1562168658	Makyen	bitcointransactionaccelerator\.com
-1562168678	Makyen	exclusivetaken\.info
 1562168700	Makyen	para\W*axe?\W*plus
 1562173695	Machavity	royalshop\.org
 1562175270	Machavity	myluciddreams\.com
