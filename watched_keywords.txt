@@ -16090,3 +16090,4 @@
 1578336645	Glorfindel	awl\W*golf
 1578344129	Machavity	(?-i:^Jimmy Johnson$)
 1578350457	Makyen	drgurulovespelltemple(?:@yahoo\.com)?
+1578362696	Makyen	erikfinman@aol\.com
