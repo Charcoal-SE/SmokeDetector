@@ -16097,3 +16097,4 @@
 1578371849	Makyen	itedcv\.tumblr\.com
 1578374197	Eliah Kagan	globalrefundsint\.com
 1578374419	Eliah Kagan	globalrefundsint(?!\.com)
+1578374648	Eliah Kagan	elite\s+vitality\s+me
