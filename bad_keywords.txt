@@ -2154,3 +2154,4 @@ zydenafil
 filmywap(?!\.com)
 movierulz(?!\.com)
 keto[\W_]*+thin(?:[\W_]*+(?:thin|state|official|pill|review\d++|[\da-f]{4,}+)s?)*
+testo[\W_]*+(?:plus[\W_]*+)?247(?:[\W_]*+(?:muscle|building|canada|ca|performance|\d++|[\da-f]{4,}+))*
