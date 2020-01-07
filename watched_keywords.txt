@@ -16125,3 +16125,4 @@
 1578404963	tripleee	denta[\W_]*+smile
 1578407927	Das_Geek	headnorthdigital\.com
 1578409083	Eliah Kagan	proxyway\.com
+1578409636	Das_Geek	crosswordassistant\.com
