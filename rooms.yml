@@ -204,7 +204,7 @@ stackexchange.com:
       - offensive-mask
 
   35068:  # Money.SE - Smoke Detector
-    commands: false
+    commands: true
     msg_types:
       - site-money.stackexchange.com
       - no-all-caps title
