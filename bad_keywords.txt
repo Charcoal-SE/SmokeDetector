@@ -1001,7 +1001,7 @@ colastrina
 alpha\W?pro(?:\Wmuscle)?
 bioflex
 ageless\W?youth
-keto\W?burn(?:\W?protocol)?
+keto[\W_]*+burn[\W_]*+(?!xtremescam\.page\.tl(?<=ketoburnxtremescam\.page\.tl))(?:[\W_]*+(?:protocol|e?xtreme|scam|pill|review|\d++|[\da-f]{4,}+)s?)*
 nikon-d50-dslr-camera-24-1mp-1080i-video-3-0-vari-angle-lcd
 write-my-dissertation
 apex\W?mastermind
