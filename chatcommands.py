@@ -323,7 +323,7 @@ def do_blacklist(blacklist_type, msg, force=False):
             has_unescaped_dot = 'The regex contains an unescaped "`.`"; in most cases, it should be "`\\.`"'
 
         try:
-            r = regex.compile(pattern, city=findspam.city_list)
+            r = regex.compile(pattern, city=findspam.city_list, ignore_unused=True)
         except regex._regex_core.error:
             raise CmdException("An invalid pattern was provided, please check your command.")
         if r.search(GlobalVars.valid_content) is not None:
@@ -1173,7 +1173,8 @@ def test(content, alias_used="test"):
 def bisect_regex(s, regexes, bookend=True):
     regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)({})"
     compiled = regex.compile(regex_to_format.format("|".join([r for r, i in regexes])),
-                             city=findspam.city_list)
+                             city=findspam.city_list,
+                             ignore_unused=True)
     match = compiled.search(s)
     if not match:
         return []

@@ -278,7 +278,7 @@ class Rule:
                 else:
                     result_body = (False, "", "")
         elif self.regex:
-            compiled_regex = regex.compile(self.regex, regex.UNICODE, city=city_list)
+            compiled_regex = regex.compile(self.regex, regex.UNICODE, city=city_list, ignore_unused=True)
 
             if self.title and not post.is_answer:
                 matches = list(compiled_regex.finditer(post.title))
@@ -872,7 +872,7 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
         r"(?:phone|hotline|helpline)? ?numbers?\b|"
         r"(best|make|full|hd|software|cell|data|media)[\w ]{1,20}"
         r"" r"(online|service|company|agency|repair|recovery|school|university)|"
-        r"\b(writing (service|help)|essay (writing|tips))", city=city_list)
+        r"\b(writing (service|help)|essay (writing|tips))", city=city_list, ignore_unused=True)
     links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
     business = regex.compile(
         r"(?i)(^| )(airlines?|apple|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
