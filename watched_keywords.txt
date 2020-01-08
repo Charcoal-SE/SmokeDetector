@@ -16146,3 +16146,4 @@
 1578459635	Eliah Kagan	1656871025(?#amazon)
 1578461858	Eliah Kagan	travancoreayurveda\.com
 1578461946	Eliah Kagan	travancore\s+ayurveda
+1578465439	tripleee	gadget[\W_]*+reviews
