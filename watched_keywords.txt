@@ -16150,3 +16150,4 @@
 1578465756	tripleee	jennextmentors\.com
 1578471741	tripleee	webmdcorp\.com
 1578471775	tripleee	epicmusicla\.com
+1578471806	Makyen	herbal[\W_]*+native(?:[\W_]*+(?:oil|cbd|\d++|[\da-f]{4,}+))*
