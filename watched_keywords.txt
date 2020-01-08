@@ -16155,3 +16155,4 @@
 1578471838	Makyen	denta[\W_]*+smile(?:[\W_]*+teeth[\W_]*+whitening)?(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1578472085	Makyen	(?-i:NPmeIdhJ-w0)(?#youtu.be)
 1578472105	Makyen	epic[\W_]*+music[\W_]*+la(?!\.com(?<=epicmusicla\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1578472236	Makyen	fusion[\W_]*+rise(?:[\W_]*+(?:keto|\d++|[\da-f]{4,}+))*
