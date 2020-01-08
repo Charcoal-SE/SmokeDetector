@@ -16135,3 +16135,4 @@
 1578436916	Machavity	speechpad\.pw
 1578437049	Das_Geek	casystem\.com\.mx
 1578438823	Makyen	ralphcnb(?#twitter.com)
+1578443358	Makyen	(?:\W?♦[\w\s,.]{0,50}?\d[km]\d+ gold badges?\d*(?=(?:(?:[\d ]+?(?:silver|bronze) badges?){1,2}(?:\s*(?:elected \d{4}|appointed \d+\/\d+\/\d+))?(?:<\/p>\s*)?)(?:(?:(?:<p>)?[\w\s-]++♦[\w\s,.]{0,50}?\d[km]\d+ gold badges?\d*)(?:[\d ]+?(?:silver|bronze) badges?){1,2}(?:\s*(?:elected \d{4}|appointed \d+\/\d+\/\d+))?(?:<\/p>\s*)?){2}))
