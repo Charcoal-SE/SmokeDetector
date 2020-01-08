@@ -15488,7 +15488,6 @@
 1576924328	Makyen	special[\W_]*+offer[\W_]*+(?:4|for)[\W_]*+health(?!(?<=specialoffer4health)(?:\.com|\.blogspot|\.tumblr\.com|\.hatenablog\.com|\.wordpress\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1576924716	Makyen	saveplus(?:[\W_]*+(?:coupon|code|\d++|[\da-f]{4,}+)s?)*(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1576925797	Makyen	supplementspeak\.hatenablog\.com
-1576925819	Makyen	vialis(?:[\W_]*+(?:enhancement|male|\d++|[\da-f]{4,}+))*
 1576940532	double-beep	bestdeadliftshoes\.com
 1576945606	Makyen	javabetsports\.com
 1576945630	Makyen	agil[\W_]*+flex[\W_]*+avis(?:[\W_]*+(?:\d++|[\da-f]{4,}))
