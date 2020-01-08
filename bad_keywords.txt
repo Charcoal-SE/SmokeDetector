@@ -2156,3 +2156,4 @@ movierulz(?!\.com)
 keto[\W_]*+thin(?:[\W_]*+(?:thin|state|official|pill|review\d++|[\da-f]{4,}+)s?)*
 testo[\W_]*+(?:plus[\W_]*+)?247(?:[\W_]*+(?:muscle|building|canada|ca|performance|\d++|[\da-f]{4,}+))*
 ralph[\W_]*+(?:p[\W_]*+)?torello(?#Used by a troll in the body of their posts)
+celaxryn(?!rxofficial\.blogspot)(?:[\W_]*+(?:rx|official|\d++|[\da-f]{4,}+))*
