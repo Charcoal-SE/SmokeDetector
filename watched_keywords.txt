@@ -16138,3 +16138,4 @@
 1578443358	Makyen	(?:\W?♦[\w\s,.]{0,50}?\d[km]\d+ gold badges?\d*(?=(?:(?:[\d ]+?(?:silver|bronze) badges?){1,2}(?:\s*(?:elected \d{4}|appointed \d+\/\d+\/\d+))?(?:<\/p>\s*)?)(?:(?:(?:<p>)?[\w\s-]++♦[\w\s,.]{0,50}?\d[km]\d+ gold badges?\d*)(?:[\d ]+?(?:silver|bronze) badges?){1,2}(?:\s*(?:elected \d{4}|appointed \d+\/\d+\/\d+))?(?:<\/p>\s*)?){2}))
 1578448009	Makyen	dr[\W_]*+aigbe
 1578448023	Makyen	draigbeherbalhome(?:@gmail\.com)?
+1578448173	Makyen	dremmanuel2
