@@ -222,6 +222,9 @@ items:
   - kia.ns.cloudflare.com.
   - noah.ns.cloudflare.com.
 - ns:
+  - kurt.ns.cloudflare.com.
+  - nina.ns.cloudflare.com.
+- ns:
   - lady.ns.cloudflare.com.
   - mitch.ns.cloudflare.com.
 - ns:
