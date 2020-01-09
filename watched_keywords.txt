@@ -16195,3 +16195,4 @@
 1578567688	tripleee	invigorate[\W_]*+now(?:[\W_]*+elite)?
 1578568575	tripleee	ramada-spi\.com
 1578568601	tripleee	blendinggadgets\.com
+1578568883	Eliah Kagan	viabeautycreamofficial\.blogspot
