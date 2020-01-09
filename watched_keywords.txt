@@ -16186,3 +16186,4 @@
 1578555759	Eliah Kagan	jotrin\.com
 1578555780	Eliah Kagan	jotrin(?!\.com)
 1578556687	Eliah Kagan	websolutioncentre\.com
+1578558059	Eliah Kagan	yahoo-mailsupport\.com
