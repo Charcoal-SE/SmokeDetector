@@ -16194,3 +16194,4 @@
 1578565942	tripleee	guideinstant\.com
 1578567688	tripleee	invigorate[\W_]*+now(?:[\W_]*+elite)?
 1578568575	tripleee	ramada-spi\.com
+1578568601	tripleee	blendinggadgets\.com
