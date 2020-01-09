@@ -16176,3 +16176,4 @@
 1578549891	Makyen	nutralite[\W_]*+cbd(?:[\W_]*+(?:pain|freeze|cream|\d++|[\da-f]{4,}+))*
 1578550574	tripleee	fathom\.in
 1578551062	tripleee	petbrilliant\.com
+1578551898	Eliah Kagan	uchearts\.com
