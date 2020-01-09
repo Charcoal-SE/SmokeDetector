@@ -154,6 +154,7 @@ stackexchange.com:
       - 8643622  # Columbia says Reinstate Monica
       - 519526   # Eliah Kagan
       - 4146267  # robsiemb
+      - 2063361  # Dharman
 
   65945:  # Charcoal Test
     commands: true
@@ -495,6 +496,9 @@ stackoverflow.com:
       - 10317043 # treyBake
       - 15185282 # Chipster
       - 11230997 # SecretAgentMan
+      - 4146267  # robsiemb
+      - 14952682 # JL2210
+      - 2063361  # Dharman
       # NOTICE: please don't add new users until you have Room Owner approval
 
   111347:  # SOBotics
