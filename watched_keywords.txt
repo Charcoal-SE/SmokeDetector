@@ -16184,3 +16184,4 @@
 1578553394	Eliah Kagan	buybulktablets\.com
 1578553819	Eliah Kagan	quickexpertsolution\.com
 1578555759	Eliah Kagan	jotrin\.com
+1578555780	Eliah Kagan	jotrin(?!\.com)
