@@ -16192,3 +16192,4 @@
 1578564275	Eliah Kagan	nutrislate\.com
 1578565587	tripleee	goadvantageinsurance\.com
 1578565942	tripleee	guideinstant\.com
+1578567688	tripleee	invigorate[\W_]*+now(?:[\W_]*+elite)?
