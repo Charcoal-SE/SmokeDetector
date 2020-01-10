@@ -3376,3 +3376,4 @@ digitalgoldman\.com\.au
 omysexydoll\.com
 downeovea\.hatenablog\.com
 torello\.directory(?<!developer\.torello\.directory)
+cryptofundrecovery[\W_]*+com
