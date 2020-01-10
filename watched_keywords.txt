@@ -16230,3 +16230,4 @@
 1578642490	tripleee	Kaps18
 1578642877	Makyen	izydaisy\.com
 1578642905	Makyen	izydaisy(?!\.com)
+1578643289	tripleee	cadd[\W_]*+technologies
