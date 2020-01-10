@@ -16215,3 +16215,4 @@
 1578627659	Makyen	routerguide\.org
 1578627868	Makyen	weirransprayer\.com
 1578627887	Makyen	hangzhou[\W_]*+weirran(?:[\W_]*+(?:machinery|Co|Ltd|\d++|[\da-f]{4,}+))*
+1578627907	Makyen	fertilizer[\W_]*+tank[\W_]*+sprayer
