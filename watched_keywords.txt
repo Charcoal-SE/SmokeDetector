@@ -16232,3 +16232,4 @@
 1578642905	Makyen	izydaisy(?!\.com)
 1578643289	tripleee	cadd[\W_]*+technologies
 1578643315	tripleee	delving[\W_]*+rd(?:[\W_]*+india)?
+1578647742	tripleee	datingreviews\.online
