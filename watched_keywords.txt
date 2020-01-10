@@ -16224,3 +16224,4 @@
 1578636401	tripleee	dekel[\W_]*+surgical(?!\.com)
 1578638323	Makyen	indoxxi
 1578638603	Makyen	dwa21(?!\.org)
+1578638621	Makyen	dwa21\.org
