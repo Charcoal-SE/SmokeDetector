@@ -16229,3 +16229,4 @@
 1578642240	Makyen	searchangout\.com
 1578642490	tripleee	Kaps18
 1578642877	Makyen	izydaisy\.com
+1578642905	Makyen	izydaisy(?!\.com)
