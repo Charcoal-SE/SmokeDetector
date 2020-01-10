@@ -1423,7 +1423,7 @@ hackdigg(?:ATgmailcom)?
 maximum\W?power\W?xl
 Quick\W?Tone
 [a-z_]*(?:1_*)?855[\W_]*409[\W_]*2300[a-z_]*
-keto\W*blaze
+(?:official[\W_]*+)?keto[\W_]*+blaze(?:[\W_]*+(?:e?xtreme|pill|\d++|[\da-f]{4,}+)s?)*
 purefit\W?stellatrim
 keto\W?renew
 nutralite\W?keto
