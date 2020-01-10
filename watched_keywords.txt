@@ -16225,3 +16225,4 @@
 1578638323	Makyen	indoxxi
 1578638603	Makyen	dwa21(?!\.org)
 1578638621	Makyen	dwa21\.org
+1578639134	Makyen	keto[\W_]*+forcera(?:[\W_]*+(?:canada|\d++|[\da-f]{4,}+))*
