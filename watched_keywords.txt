@@ -16262,3 +16262,4 @@
 1578721848	Makyen	supplement4muscle(?!\.blogspot\b)(?!\.com)(?!\.over-blog\.com)
 1578721862	Makyen	djsupplement\.com
 1578721877	Makyen	supplement4muscle\.blogspot
+1578722004	Makyen	(?:official[\W_]*+)?nature[\W_]*+crave[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
