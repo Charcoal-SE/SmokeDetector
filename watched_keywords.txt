@@ -16261,3 +16261,4 @@
 1578721827	Makyen	stelladatarecovery
 1578721848	Makyen	supplement4muscle(?!\.blogspot\b)(?!\.com)(?!\.over-blog\.com)
 1578721862	Makyen	djsupplement\.com
+1578721877	Makyen	supplement4muscle\.blogspot
