@@ -16256,3 +16256,4 @@
 1578699730	Das_Geek	kombiservisi\.biz\.tr
 1578720139	Machavity	southrivertech\.com
 1578720182	Machavity	srthelpdesk\.com
+1578721789	Makyen	cannabliss[\W_]*+(?:[\W_]*+(?:oil|cbd|\d++|[\da-f]{4,}+))*
