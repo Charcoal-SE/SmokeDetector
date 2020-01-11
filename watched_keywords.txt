@@ -16295,3 +16295,4 @@
 1578773029	tripleee	serialnumbersfree\.com
 1578773071	tripleee	manycam(?:[\W_]*+|%20)pro
 1578778632	Makyen	tennisshoesguides\.com
+1578778766	Makyen	butionfone\.hatenablog\.com
