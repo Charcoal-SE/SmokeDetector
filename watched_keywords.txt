@@ -16328,3 +16328,4 @@
 1578835641	Eliah Kagan	dailymovielinks
 1578836018	Eliah Kagan	vfghd\.com
 1578843592	Glorfindel	speciallyshoes\.com
+1578843611	Glorfindel	minequotes\.com
