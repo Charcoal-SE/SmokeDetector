@@ -3378,3 +3378,4 @@ torello\.directory(?<!developer\.torello\.directory)
 cryptofundrecovery[\W_]*+com
 thecustomerssupport\.com
 identifyscam\.hatenablog\.com
+sudgelibest\.hatenablog\.com
