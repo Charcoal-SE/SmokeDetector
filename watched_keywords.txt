@@ -15634,7 +15634,7 @@
 1577328818	Makyen	(?-i:HsKD1\.png)
 1577332783	Makyen	tamilrockers
 1577334998	Eliah Kagan	xpoopx\.com
-1577335417	Makyen	(?:full|movies?|watch(?:es)?|online|free|downloads?|stream(?:s|ing)?)(?:[\W_]*+\w+){0,5}(?:[\W_]*+(?:full|movies?|watch(?:es)?|online|free|downloads?|stream(?:s|ing)?)){2,}
+1577335417	Makyen	(?:full|movies?|watch(?:es)?|online|free|downloads?|stream(?:s|ing)?)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?:[\W_]*+\w+){0,5}?(?:[\W_]*+(?:full|movies?|watch(?:es)?|online|free|downloads?|stream(?:s|ing)?)){2,}
 1577335418	Makyen	(?:films?|complets?|regarder(?:s|es)?|t[ée]l[ée]chargements|en\s*ligne|gratuits?|diffusion|courant)(?:[\W_]*+\w+){0,5}(?:[\W_]*+(?:films?|complets?|regarder(?:s|es)?|t[ée]l[ée]chargements|en\s*ligne|gratuits?|diffusion|courant)){2,}(?#French verion)
 1577338751	Shree	makepassportphoto\.com
 1577339554	Shree	contactusa-directory\.com
