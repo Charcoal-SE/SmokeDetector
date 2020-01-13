@@ -16352,3 +16352,4 @@
 1578907445	tripleee	peak[\W_]*+zen(?:|\W_]*+cbd)?
 1578907503	Eliah Kagan	fitpedia\.org
 1578907605	tripleee	helpmcafee\.uk\.net
+1578907646	Eliah Kagan	wellnessoffersdeal\.blogspot
