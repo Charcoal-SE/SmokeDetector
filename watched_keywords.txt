@@ -16362,3 +16362,4 @@
 1578910269	Eliah Kagan	ricoh\.co\.in
 1578910479	tripleee	alpha[\W_]*+thunder(?:[\W_]*+testo)?
 1578911225	tripleee	windows10compatible\.com
+1578912692	Eliah Kagan	globalcoach\.in
