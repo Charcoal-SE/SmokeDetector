@@ -2044,7 +2044,7 @@ testo[\W_]*+genix(?:[\W_]*+(?:xl|muscle|\d++)s?)*
 hi[\W_]*+q[\W_]*+keto
 diploma899\d*+
 quickarturhack(?:[\W_]*+(?:at[\W_]*+)?+gmail[\W_]*+(?:dot[\W_]*+)?+com)?
-kuni(?:[\W_]*+(?:skin[\W_]*+care|cream))+
+kuni(?:[\W_]*+(?:skin|care|cream|creme|\d++|[\da-f]{4,}))+
 nolatreve(?:[\W_]*+(?:anti|aging|france|fr|cream|skin|south|africa|review|\d++|[\da-f]{4,})s?)*
 pro[\W_]*+blast[\W_]*+xl(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+)s?)*
 fitness[\W_]*+pro[\W_]*+centre(?!\.com(?<=fitnessprocentre\.com))
