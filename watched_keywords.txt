@@ -16361,3 +16361,4 @@
 1578909288	Eliah Kagan	expertscape\.com
 1578909613	tripleee	housefull
 1578910269	Eliah Kagan	ricoh\.co\.in
+1578910479	tripleee	alpha[\W_]*+thunder(?:[\W_]*+testo)?
