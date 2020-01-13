@@ -86,6 +86,9 @@ items:
   - lily.ns.cloudflare.com.
 - ns:
   - brenda.ns.cloudflare.com.
+  - merlin.ns.cloudflare.com.
+- ns:
+  - brenda.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
   - bruce.ns.cloudflare.com.
