@@ -16349,3 +16349,4 @@
 1578904482	tripleee	sochinki\.top
 1578906643	Eliah Kagan	(?-i:EwkH3c5H4eM)(?#youtu\.be)
 1578906708	tripleee	hpprintersupportpro\.net
+1578907445	tripleee	peak[\W_]*+zen(?:|\W_]*+cbd)?
