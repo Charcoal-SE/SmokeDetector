@@ -16321,7 +16321,6 @@
 1578805663	Makyen	johnschri(?#medium.com)
 1578805704	Makyen	biologik(?:[\W_]*+(?:keto|forcera|\d++|[\da-f]{4,}+))*
 1578805730	Makyen	(?-i:TL4HA7tTSDs)(?#youtu.be)
-1578805751	Makyen	electricengineer13\.com
 1578805768	Makyen	(?-i:IU1xw\.jpg)
 1578830585	Jenayah	filmywaptv\.com
 1578835641	Eliah Kagan	dailymovielinks
