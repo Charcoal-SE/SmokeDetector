@@ -16347,3 +16347,4 @@
 1578900696	Makyen	blood[\W_]*+sugar[\W_]*+premier(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1578900735	Makyen	virgildizon\.com
 1578904482	tripleee	sochinki\.top
+1578906643	Eliah Kagan	(?-i:EwkH3c5H4eM)(?#youtu\.be)
