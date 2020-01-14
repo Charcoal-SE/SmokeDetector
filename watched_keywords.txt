@@ -16397,3 +16397,4 @@
 1578985346	tripleee	koyopacker(?!\.com)
 1578985378	tripleee	machinery[\W_]*+co[\W_]*+ltd
 1578987296	tripleee	worldgenuinedocument\.com
+1578988755	tripleee	99cnet\.com
