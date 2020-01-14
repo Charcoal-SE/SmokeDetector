@@ -219,6 +219,9 @@ items:
   - jocelyn.ns.cloudflare.com.
   - seth.ns.cloudflare.com.
 - ns:
+  - jonah.ns.cloudflare.com.
+  - zita.ns.cloudflare.com.
+- ns:
   - kia.ns.cloudflare.com.
   - mitch.ns.cloudflare.com.
 - ns:
