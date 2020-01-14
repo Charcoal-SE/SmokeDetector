@@ -16422,3 +16422,4 @@
 1579007291	Byte Commander	snapdealcouponswinner\.com
 1579018715	Das_Geek	catkolga@yandex\.ru
 1579018822	Das_Geek	paypal\.me
+1579019023	Das_Geek	share\W+this
