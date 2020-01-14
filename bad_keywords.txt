@@ -368,7 +368,7 @@ nuviante
 silkalike
 vitaeyes
 neutratone
-luminis
+luminis(?:[\W_]*+(?:skin|care|advanced?|serum|\d++|[\da-f]{4,}+))+
 biocore
 visible\Wallure
 eye\Wroyale
