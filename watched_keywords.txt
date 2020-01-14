@@ -16390,3 +16390,4 @@
 1578956363	Eliah Kagan	ncaaf-championship-live\.blogspot
 1578977838	Makyen	bursaatlas\.com
 1578979193	Makyen	newtacticalflashlight\.com
+1578979213	Makyen	flashlight[\W_]*+x900(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
