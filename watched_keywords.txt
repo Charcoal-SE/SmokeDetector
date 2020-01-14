@@ -16395,3 +16395,4 @@
 1578982796	tripleee	codercraz
 1578985304	tripleee	koyopacker\.com
 1578985346	tripleee	koyopacker(?!\.com)
+1578985378	tripleee	machinery[\W_]*+co[\W_]*+ltd
