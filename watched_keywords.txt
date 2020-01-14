@@ -16407,3 +16407,4 @@
 1578994029	tripleee	nagashare\.com
 1578994312	tripleee	live[\W_]*+plus
 1578994754	Eliah Kagan	obdkk\.com
+1578995218	Eliah Kagan	puresoftware\.com
