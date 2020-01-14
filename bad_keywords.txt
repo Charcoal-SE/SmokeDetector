@@ -54,7 +54,6 @@ pcerror-fix
 filerepairtool
 combatpcviruses
 jobstribune
-join the (?:great )?illuminati
 brorsoft
 remo\W?recover
 kinnaristeel
