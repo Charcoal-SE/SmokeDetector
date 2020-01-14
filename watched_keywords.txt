@@ -16394,3 +16394,4 @@
 1578982604	tripleee	mytaxio\.com
 1578982796	tripleee	codercraz
 1578985304	tripleee	koyopacker\.com
+1578985346	tripleee	koyopacker(?!\.com)
