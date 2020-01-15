@@ -16447,3 +16447,4 @@
 1579083664	tripleee	active[\W_]*+pedal(?:[\W_]*+cbd)?
 1579084816	tripleee	wikizn\.com
 1579084840	tripleee	omsoftware\.net
+1579087254	Shree	247pharmacymart\.com
