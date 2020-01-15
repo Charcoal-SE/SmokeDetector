@@ -16430,3 +16430,4 @@
 1579066614	Makyen	hectorcater\.pen\.io
 1579066630	Makyen	@hectorcater(?!\.pen\.io)
 1579066651	Makyen	(?-i:598486237967969365)(?#in.pinterest.com)
+1579066685	Makyen	demandsupplement-109672277228502(?#facebook.com)
