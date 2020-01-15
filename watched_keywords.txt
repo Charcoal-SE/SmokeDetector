@@ -7580,7 +7580,6 @@
 1547800448	tripleee	borxi\.com
 1547800853	tripleee	ztable\.net
 1547804967	Makyen	emergingindiagroup\.com
-1547804984	tripleee	datadriveninvestor
 1547806068	tripleee	arlo
 1547811516	tripleee	mcafeeactivate\.website
 1547811555	tripleee	origamistudios\.us
