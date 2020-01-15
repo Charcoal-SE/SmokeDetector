@@ -16446,3 +16446,4 @@
 1579083615	tripleee	automic
 1579083664	tripleee	active[\W_]*+pedal(?:[\W_]*+cbd)?
 1579084816	tripleee	wikizn\.com
+1579084840	tripleee	omsoftware\.net
