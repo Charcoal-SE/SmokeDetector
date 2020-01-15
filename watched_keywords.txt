@@ -14137,7 +14137,6 @@
 1573103014	tripleee	ibusiness\.co\.za
 1573107799	Makyen	solusihoki\.com
 1573108051	Shree	ledmii\.com
-1573108273	Makyen	cookpad\.com
 1573108293	Makyen	mokes[\W_]*+technology[\W_]*+co
 1573110553	Makyen	dtempcounselling\.org
 1573110644	Makyen	fundrecovery04(?:@gmai[lm]\.com)?
