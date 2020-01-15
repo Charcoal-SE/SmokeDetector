@@ -14278,7 +14278,6 @@
 1573574015	Das_Geek	cheonan-apple\.com
 1573580753	Das_Geek	gookygoods\.com
 1573580771	Das_Geek	dealscontinue\.com
-1573586789	Das_Geek	nfstash\.com
 1573588225	Das_Geek	stackquery\.com
 1573588475	tripleee	realacademics\.co\.uk
 1573603356	Machavity	validexamdumps\.com
