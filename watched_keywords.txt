@@ -16458,3 +16458,4 @@
 1579095653	Eliah Kagan	evianneream(?!\.blogspot)
 1579095673	Eliah Kagan	evianneream\.blogspot
 1579095694	Eliah Kagan	evianne\W+ream
+1579096032	Eliah Kagan	(?-i:JD2JtHp-RDs)(?#youtu\.be)
