@@ -16506,3 +16506,4 @@
 1579200165	Machavity	infinity-cable-products\.com
 1579200327	Machavity	free-sports\.net
 1579217733	Makyen	siondcompali\.hatenablog\.com
+1579217764	Makyen	active[\W_]*+surge(?:[\W_]*+(?:enhancement|male|\d++|[\da-f]{4,}+))*
