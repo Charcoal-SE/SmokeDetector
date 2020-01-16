@@ -134,6 +134,9 @@ items:
   - mimi.ns.cloudflare.com.
 - ns:
   - dora.ns.cloudflare.com.
+  - west.ns.cloudflare.com.
+- ns:
+  - dora.ns.cloudflare.com.
   - woz.ns.cloudflare.com.
 - ns:
   - duke.ns.cloudflare.com.
