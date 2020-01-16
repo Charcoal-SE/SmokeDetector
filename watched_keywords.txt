@@ -16476,3 +16476,4 @@
 1579149706	tripleee	voxpow\.com
 1579155423	tripleee	b\.app
 1579157876	tripleee	workshalas\.com
+1579158062	Makyen	supplementrise(?!\.com)
