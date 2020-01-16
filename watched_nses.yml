@@ -235,6 +235,9 @@ items:
   - nina.ns.cloudflare.com.
 - ns:
   - kurt.ns.cloudflare.com.
+  - pat.ns.cloudflare.com.
+- ns:
+  - kurt.ns.cloudflare.com.
   - tricia.ns.cloudflare.com.
 - ns:
   - lady.ns.cloudflare.com.
