@@ -2127,7 +2127,6 @@ getsetwild(?!\.com)
 illumia[\W_]*+cosmeceuticals
 noida[\W_]*+news
 luniesse
-enrg[\W_]*+tech(?!\.co\.uk)
 onlinehacker4hire(?:@gmail\.com)?
 acv[\W_]*+plus
 renegade[\W_]*+meta(?:[\W_]*+pro)?
