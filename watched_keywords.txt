@@ -16525,3 +16525,4 @@
 1579245206	Makyen	pure[\W_]*+lv[\W_]*+cream(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1579245235	Makyen	hikingnepal\.com
 1579245265	Makyen	takeapillss(?#medium.com)
+1579246569	tripleee	mastersoftwaresolutions\.com
