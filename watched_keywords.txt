@@ -13515,7 +13515,6 @@
 1570839962	Makyen	(?-i:Bbtxi0p0X_M)
 1570839971	Makyen	(?-i:uG_VgfJL564)
 1570839981	Makyen	prodocsexpress\.com
-1570840386	Makyen	crackdaily\.com
 1570840396	Makyen	fettleride\.com
 1570840406	Makyen	flexamove(?:[\W_]*+harga)?
 1570840417	Makyen	yersomerso56
