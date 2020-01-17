@@ -16518,3 +16518,4 @@
 1579218300	Makyen	wircianghamsul\.hatenablog\.com
 1579218384	Makyen	arhamtechnosoft\.com
 1579218411	Makyen	shadowscrew0(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1579236501	Makyen	riyadh-transfer\.blogspot
