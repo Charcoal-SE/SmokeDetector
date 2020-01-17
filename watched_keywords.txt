@@ -16553,3 +16553,4 @@
 1579286844	Machavity	ufchd\.xyz
 1579289997	Machavity	checkwalmartgiftcardbalance\.com
 1579302098	Makyen	universal[\W_]*+hacktech(?:@gmail\.com)?
+1579302125	Makyen	r?evita[\W_]*+(?:cream|face|skin)(?:[\W_]*+(?:cream|face|skin|\d++|[\da-f]{4,}+))*
