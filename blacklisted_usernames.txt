@@ -247,5 +247,4 @@ devleadz
 (?-i:^adi mishra$)
 (?-i:^Shakhaz Alishka$)
 (?-i:^Andre Green$)
-(?-i:^Enrg Tech$)
 (?-i:^Vijay Mann$)
