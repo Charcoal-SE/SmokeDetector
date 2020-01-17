@@ -16467,7 +16467,6 @@
 1579116233	Makyen	nutramini\.com
 1579116543	Eliah Kagan	songkick\.com
 1579119169	Eliah Kagan	aryana-group\.com
-1579119304	Eliah Kagan	gdpr360\.com
 1579128078	Das_Geek	kingled\.ir
 1579128119	Eliah Kagan	limos4\.com
 1579149706	tripleee	voxpow\.com
