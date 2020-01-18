@@ -16569,3 +16569,4 @@
 1579328578	Makyen	edumanialk
 1579328609	Makyen	healthykitchen101\.com
 1579329258	Makyen	megaplex[\W_]*+keto(?:[\W_]*+(?:blend|\d++|[\da-f]{4,}+))*
+1579329290	Makyen	breville[\W_]*+800cpxl(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
