@@ -16563,3 +16563,4 @@
 1579327777	Makyen	electro[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1579327805	Makyen	(?-i:xYcdX\.jpg)
 1579327836	Makyen	rocks[\W_]*+player(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1579327865	Makyen	shoppy\.gg/@G\.bryan
