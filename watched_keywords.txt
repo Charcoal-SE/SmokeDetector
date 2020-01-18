@@ -16560,3 +16560,4 @@
 1579323284	Makyen	(?-i:1tGIBRdiWjI)(?#youtu.be)
 1579323314	Makyen	(?-i:hUYBY6LXqsY)(?#youtu.be)
 1579327749	Makyen	ovodomino\.blogspot
+1579327777	Makyen	electro[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
