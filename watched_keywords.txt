@@ -6453,7 +6453,8 @@
 1541802622	K.Dᴀᴠɪs	airdelights\.com
 1541823430	K.Dᴀᴠɪs	lzzgmachine\.com
 1541830163	K.Dᴀᴠɪs	wicc\.\/pr1
-1541830266	K.Dᴀᴠɪs	Wayki(?:Chain|Bet)
+1541830266	K.Dᴀᴠɪs	waykichain(?!\.com)
+1541830267	K.Dᴀᴠɪs	waykibet
 1541830644	K.Dᴀᴠɪs	cleantalk\.org
 1541831371	K.Dᴀᴠɪs	Equinox\W*IT\W*Solutions
 1541831796	K.Dᴀᴠɪs	oxygennest\.com
