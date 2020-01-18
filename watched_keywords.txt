@@ -16589,3 +16589,4 @@
 1579359892	Eliah Kagan	(?-i:2FThKIC)(?#bit.ly)
 1579360103	Eliah Kagan	health\d+\.wordpress\.com
 1579360420	Eliah Kagan	myemergencyvets\.com
+1579360518	Eliah Kagan	helen\W*toombs\d*
