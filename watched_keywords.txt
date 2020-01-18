@@ -16573,3 +16573,4 @@
 1579329320	Makyen	waykichain\.com
 1579329348	Makyen	supplementslove\.com
 1579329475	Makyen	clearway[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1579331028	Makyen	lightning[\W_]*+keto(?:[\W_]*+(?:review|pill|diet|tank|shark|\d++|[\da-f]{4,}+)s?)*
