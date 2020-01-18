@@ -16600,3 +16600,4 @@
 1579389709	Makyen	mrs[\W_]*+zaafirah
 1579389746	Makyen	zulujam\.com
 1579389776	Makyen	mp3music\.co\.za
+1579389808	Makyen	justbaze\.com
