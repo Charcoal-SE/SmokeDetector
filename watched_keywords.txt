@@ -16588,3 +16588,4 @@
 1579359768	Eliah Kagan	(?-i:ObzuN9QESmg)(?#youtu.be)
 1579359892	Eliah Kagan	(?-i:2FThKIC)(?#bit.ly)
 1579360103	Eliah Kagan	health\d+\.wordpress\.com
+1579360420	Eliah Kagan	myemergencyvets\.com
