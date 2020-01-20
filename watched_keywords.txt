@@ -14259,7 +14259,6 @@
 1573547255	Makyen	yejadg\.ir
 1573547744	Shree	illuminaticult0666(?:@gmail\.com)?
 1573548783	Shree	ahansazan\.com
-1573554759	Shree	offshoreclippingpath\.com
 1573549960	Kulfy	YesMovies
 1573558530	tripleee	^(?-i:(?!dfdfdsfsd$)[sdfghjkl]{6,40})$
 1573558854	Glorfindel	medinova-pharmaceuticals\.com
