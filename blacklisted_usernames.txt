@@ -248,3 +248,4 @@ devleadz
 (?-i:^Shakhaz Alishka$)
 (?-i:^Andre Green$)
 (?-i:^Vijay Mann$)
+(?-i:^okfine$)
