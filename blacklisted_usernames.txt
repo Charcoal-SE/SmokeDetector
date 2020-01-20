@@ -65,7 +65,7 @@ donald\W*j?\.?\W*trump
 ^yolo_does_not_detect_me$
 ^christine roebuck$
 techelpp
-\W?router$
+^(?:ap+le|tplink)[\W_]*+router$
 \b(?:moth(?:e?r|a))?fu+[ck]+(?:[ei]ng*|e[dr])?\b
 (?:hurriyet|turkish)(?:daily)?news
 tour\W?packages
