@@ -16633,3 +16633,4 @@
 1579524083	Eliah Kagan	mulesoftchicago\.com
 1579524119	Eliah Kagan	mulesoft\s+training
 1579524151	Eliah Kagan	eloquentgift\.com
+1579524503	Eliah Kagan	architectoria\.com
