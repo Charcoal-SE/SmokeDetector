@@ -350,41 +350,41 @@ def test_allspam(handle_spam):
         assert chatcommands.allspam("test", original_msg=msg) == "That doesn't look like a valid user URL."
 
         # If this code lasts long enough to fail, I'll be happy
-        assert chatcommands.allspam("http://stackexchange.com/users/10000000000", original_msg=msg) == \
+        assert chatcommands.allspam("https://stackexchange.com/users/10000000000", original_msg=msg) == \
             "The specified user does not appear to exist."
 
-        assert chatcommands.allspam("http://stackexchange.com/users/5869449", original_msg=msg) == (
+        assert chatcommands.allspam("https://stackexchange.com/users/5869449", original_msg=msg) == (
             "The specified user has an abnormally high number of accounts. Please consider flagging for moderator "
             "attention, otherwise use !!/report on the user's posts individually."
         )
 
-        assert chatcommands.allspam("http://stackexchange.com/users/11683", original_msg=msg) == (
+        assert chatcommands.allspam("https://stackexchange.com/users/11683", original_msg=msg) == (
             "The specified user's reputation is abnormally high. Please consider flagging for moderator attention, "
             "otherwise use !!/report on the posts individually."
         )
 
-        assert chatcommands.allspam("http://stackoverflow.com/users/22656", original_msg=msg) == (
+        assert chatcommands.allspam("https://stackoverflow.com/users/22656", original_msg=msg) == (
             "The specified user's reputation is abnormally high. Please consider flagging for moderator attention, "
             "otherwise use !!/report on the posts individually."
         )
 
-        assert chatcommands.allspam("http://stackexchange.com/users/12108751", original_msg=msg) == \
+        assert chatcommands.allspam("https://stackexchange.com/users/12108751", original_msg=msg) == \
             "The specified user hasn't posted anything."
 
-        assert chatcommands.allspam("http://stackoverflow.com/users/8846458", original_msg=msg) == \
+        assert chatcommands.allspam("https://stackoverflow.com/users/8846458", original_msg=msg) == \
             "The specified user has no posts on this site."
 
         # This test is for users with <100rep but >15 posts
         # If this breaks in the future because the below user eventually gets 100 rep (highly unlikely), use the following
         # data.SE query to find a new target. Alternatively, get a sock to post 16 answers in the sandbox.
         # https://stackoverflow.com/users/7052649/vibin (look for low rep but >1rep users, 1rep users are usually suspended)
-        assert chatcommands.allspam("http://stackoverflow.com/users/7052649", original_msg=msg) == (
+        assert chatcommands.allspam("https://stackoverflow.com/users/7052649", original_msg=msg) == (
             "The specified user has an abnormally high number of spam posts. Please consider flagging for moderator "
             "attention, otherwise use !!/report on the posts individually."
         )
 
         # Valid user for allspam command
-        assert chatcommands.allspam("http://stackexchange.com/users/12108974", original_msg=msg) is None
+        assert chatcommands.allspam("https://stackexchange.com/users/12108974", original_msg=msg) is None
 
         assert handle_spam.call_count == 1
         _, call = handle_spam.call_args_list[0]
@@ -393,7 +393,7 @@ def test_allspam(handle_spam):
         assert call["why"] == "User manually reported by *ArtOfCode* in room *Charcoal HQ*.\n"
 
         handle_spam.reset_mock()
-        assert chatcommands.allspam("http://meta.stackexchange.com/users/373807", original_msg=msg) is None
+        assert chatcommands.allspam("https://meta.stackexchange.com/users/373807", original_msg=msg) is None
 
         assert handle_spam.call_count == 1
         _, call = handle_spam.call_args_list[0]
@@ -427,18 +427,18 @@ def test_blacklisted_users():
         })
 
         # Format: !!/*blu profileurl
-        assert chatcommands.isblu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        assert chatcommands.isblu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
             "User is not blacklisted (`4622463` on `stackoverflow.com`)."
-        assert chatcommands.addblu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        assert chatcommands.addblu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
             "User blacklisted (`4622463` on `stackoverflow.com`)."
         # TODO: Edit command to check and not blacklist again, add test
-        assert chatcommands.isblu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        assert chatcommands.isblu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
             "User is blacklisted (`4622463` on `stackoverflow.com`)."
-        assert chatcommands.rmblu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        assert chatcommands.rmblu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
             "User removed from blacklist (`4622463` on `stackoverflow.com`)."
-        assert chatcommands.isblu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        assert chatcommands.isblu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
             "User is not blacklisted (`4622463` on `stackoverflow.com`)."
-        assert chatcommands.rmblu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        assert chatcommands.rmblu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
             "User is not blacklisted."
 
         # Format: !!/*blu userid sitename
@@ -457,9 +457,9 @@ def test_blacklisted_users():
             "User is not blacklisted."
 
         # Invalid input
-        assert chatcommands.addblu("http://meta.stackexchange.com/users", original_msg=msg) == \
+        assert chatcommands.addblu("https://meta.stackexchange.com/users", original_msg=msg) == \
             "Invalid format. Valid format: `!!/addblu profileurl` *or* `!!/addblu userid sitename`."
-        assert chatcommands.rmblu("http://meta.stackexchange.com/", original_msg=msg) == \
+        assert chatcommands.rmblu("https://meta.stackexchange.com/", original_msg=msg) == \
             "Invalid format. Valid format: `!!/rmblu profileurl` *or* `!!/rmblu userid sitename`."
         assert chatcommands.isblu("msklkldsklaskd", original_msg=msg) == \
             "Invalid format. Valid format: `!!/isblu profileurl` *or* `!!/isblu userid sitename`."
@@ -497,18 +497,18 @@ def test_whitelisted_users():
         })
 
         # Format: !!/*wlu profileurl
-        assert chatcommands.iswlu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        assert chatcommands.iswlu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
             "User is not whitelisted (`4622463` on `stackoverflow.com`)."
-        assert chatcommands.addwlu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        assert chatcommands.addwlu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
             "User whitelisted (`4622463` on `stackoverflow.com`)."
         # TODO: Add test here as well
-        assert chatcommands.iswlu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        assert chatcommands.iswlu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
             "User is whitelisted (`4622463` on `stackoverflow.com`)."
-        assert chatcommands.rmwlu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        assert chatcommands.rmwlu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
             "User removed from whitelist (`4622463` on `stackoverflow.com`)."
-        assert chatcommands.iswlu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        assert chatcommands.iswlu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
             "User is not whitelisted (`4622463` on `stackoverflow.com`)."
-        assert chatcommands.rmwlu("http://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
+        assert chatcommands.rmwlu("https://stackoverflow.com/users/4622463/angussidney", original_msg=msg) == \
             "User is not whitelisted."
 
         # Format: !!/*wlu userid sitename
@@ -527,9 +527,9 @@ def test_whitelisted_users():
             "User is not whitelisted."
 
         # Invalid input
-        assert chatcommands.addwlu("http://meta.stackexchange.com/users", original_msg=msg) == \
+        assert chatcommands.addwlu("https://meta.stackexchange.com/users", original_msg=msg) == \
             "Invalid format. Valid format: `!!/addwlu profileurl` *or* `!!/addwlu userid sitename`."
-        assert chatcommands.rmwlu("http://meta.stackexchange.com/", original_msg=msg) == \
+        assert chatcommands.rmwlu("https://meta.stackexchange.com/", original_msg=msg) == \
             "Invalid format. Valid format: `!!/rmwlu profileurl` *or* `!!/rmwlu userid sitename`."
         assert chatcommands.iswlu("msklkldsklaskd", original_msg=msg) == \
             "Invalid format. Valid format: `!!/iswlu profileurl` *or* `!!/iswlu userid sitename`."

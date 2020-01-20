@@ -126,7 +126,7 @@ class TestRoomReports(TestCase):
     ('18669786819 gmail customer service number 1866978-6819 gmail support number', '', '', '', True),
     ('Is there any http://www.hindawi.com/ template for Cloud-Oriented Data Center Networking?', '', '', '', True),
     ('', '', 'bagprada', '', True),
-    ('12 Month Loans quick @ http://www.quick12monthpaydayloans.co.uk/Elimination of collateral pledging', '', '', '', True),
+    ('12 Month Loans quick @ https://www.quick12monthpaydayloans.co.uk/Elimination of collateral pledging', '', '', '', True),
     ('support for yahoo mail 18669786819 @call for helpline number', '', '', '', True),
     ('yahoo email tech support 1 866 978 6819 Yahoo Customer Phone Number ,Shortest Wait', '', '', '', True),
     ('Not a phone number 192.168.0.1', 'Not a phone number 192.168.0.1', '', '', False),
@@ -139,15 +139,15 @@ class TestRoomReports(TestCase):
     ('How to avoid objects when traveling at greater than .75 light speed. or How Not to Go SPLAT?', '', 'bowlturner', '', False),
     ('Is it unfair to regrade prior work after detecting cheating?', '', 'Village', '', False),
     ('Inner workings of muscles', '', '', 'fitness.stackexchange.com', False),
-    ('Cannot access http://stackoverflow.com/ with proxy enabled', '', '', 'superuser.com', False),
+    ('Cannot access https://stackoverflow.com/ with proxy enabled', '', '', 'superuser.com', False),
     ('kkkkkkkkkkkkkkkkkkkkkkkkkkkk', '<p>bbbbbbbbbbbbbbbbbbbbbb</p>', '', 'stackoverflow.com', True),
     ('This this this this this this this this', '<p>This this this this this this this this</p>', '', 'math.stackexchange.com', True),
-    ('Raw link at end', """<p>This this this this this this this this <a href="http://example.net/harmless/">http://example.org/pesky-reviews-and-scam</a></p>""", '', 'drupal.stackexchange.com', True),
+    ('Raw link at end', """<p>This this this this this this this this <a href="https://example.net/harmless/">https://example.org/pesky-reviews-and-scam</a></p>""", '', 'drupal.stackexchange.com', True),
     ('Enhance SD Male Enhancement Supplements', '', '', '', True),
     ('Test case for bad pattern in URL',
-     '<p><a href="http://example.com/bad-reviews-canada/" rel="nofollow noreferrer">Cliquez ici</a></p>', '', '', True),
+     '<p><a href="https://example.com/bad-reviews-canada/" rel="nofollow noreferrer">Cliquez ici</a></p>', '', '', True),
     ('Another test case for bad URL pattern',
-     '<p><a href="http://example.net/harmless/">http://example.org/pesky-reviews-and-scam</a></p>', '', '', True),
+     '<p><a href="https://example.net/harmless/">https://example.org/pesky-reviews-and-scam</a></p>', '', '', True),
     ('FP test for bad URL pattern',
      '''<p>Don't trigger on link to <a href="https://askubuntu.com/questions-about-reviews">this StackExchange member site</a></p>''', '', '', False),
     ('FP test for bad URL pattern',
@@ -196,7 +196,7 @@ def test_check_if_spam_json(data, match):
 @pytest.mark.skipif(os.path.isfile("blacklistedUsers.p"),
                     reason="shouldn't overwrite file")
 def test_blacklisted_user():
-    user_url = 'http://stackoverflow.com/users/1/jeff-atwood'
+    user_url = 'https://stackoverflow.com/users/1/jeff-atwood'
     user = get_user_from_url(user_url)
     add_blacklisted_user(user, "", "")
     # Construct a "fake" post object in API-format
@@ -213,10 +213,10 @@ def test_blacklisted_user():
 @pytest.mark.skipif(os.path.isfile("whitelistedUsers.p"),
                     reason="shouldn't overwrite file")
 def test_whitelisted_user():
-    user_url = 'http://stackoverflow.com/users/2/geoff-dalgas'
+    user_url = 'https://stackoverflow.com/users/2/geoff-dalgas'
     user = get_user_from_url(user_url)
     add_whitelisted_user(user)
-    user_url2 = 'http://stackoverflow.com/users/0/test'
+    user_url2 = 'https://stackoverflow.com/users/0/test'
     user2 = get_user_from_url(user_url2)
     add_whitelisted_user(user2)
     post = Post(api_response={'title': '', 'body': '',

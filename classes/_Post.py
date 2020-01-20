@@ -83,7 +83,7 @@ class Post:
 
         if "ownerUrl" not in data:
             # owner's account doesn't exist anymore, no need to post it in chat:
-            # http://chat.stackexchange.com/transcript/message/18380776#18380776
+            # https://chat.stackexchange.com/transcript/message/18380776#18380776
             return
 
         element_map = {
