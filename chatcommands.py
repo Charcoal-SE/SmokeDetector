@@ -996,7 +996,7 @@ def stappit(msg, location_search):
 
 
 def td_format(td_object):
-    # source: http://stackoverflow.com/a/13756038/5244995
+    # source: https://stackoverflow.com/a/13756038/5244995
     seconds = int(td_object.total_seconds())
     periods = [
         ('year', 60 * 60 * 24 * 365),
@@ -1587,7 +1587,7 @@ def allspam(msg, url):
         if GlobalVars.api_backoff_time > time.time():
             time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
         # Fetch sites
-        request_url = "http://api.stackexchange.com/2.2/users/{}/associated".format(user[0])
+        request_url = "https://api.stackexchange.com/2.2/users/{}/associated".format(user[0])
         params = {
             'filter': '!6Pbp)--cWmv(1',
             'key': api_key
@@ -1615,7 +1615,7 @@ def allspam(msg, url):
         if GlobalVars.api_backoff_time > time.time():
             time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
         # Fetch posts
-        request_url = "http://api.stackexchange.com/2.2/users/{}/posts".format(u_id)
+        request_url = "https://api.stackexchange.com/2.2/users/{}/posts".format(u_id)
         params = {
             'filter': '!)Q4RrMH0DC96Y4g9yVzuwUrW',
             'key': api_key,
@@ -1658,7 +1658,7 @@ def allspam(msg, url):
                 if GlobalVars.api_backoff_time > time.time():
                     time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
                 # Fetch posts
-                req_url = "http://api.stackexchange.com/2.2/answers/{}".format(post['post_id'])
+                req_url = "https://api.stackexchange.com/2.2/answers/{}".format(post['post_id'])
                 params = {
                     'filter': '!*Jxb9s5EOrE51WK*',
                     'key': api_key,
