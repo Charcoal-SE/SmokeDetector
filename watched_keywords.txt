@@ -16619,3 +16619,4 @@
 1579467730	Makyen	terbaik
 1579467761	Makyen	neko[\W_]*+neko
 1579482990	Makyen	info\.acefinanceltd(?:@gmail\.com)?
+1579487469	Eliah Kagan	stringmanolo\.ml
