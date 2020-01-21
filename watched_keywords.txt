@@ -16657,3 +16657,4 @@
 1579586415	Makyen	mydigital[\W_]*+housing
 1579587736	Makyen	(?-i:NIRxdLQJ9mg)(?#youtu.be)
 1579587850	Shree	optbazaar\.com
+1579589292	Shree	gurukulpreschool\.com
