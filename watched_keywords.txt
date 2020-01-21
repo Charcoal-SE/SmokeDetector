@@ -16654,3 +16654,4 @@
 1579585744	tripleee	(?-i:^franzink‭$)
 1579586348	Makyen	(?-i:e7m205ZIxBE)
 1579586384	Makyen	apolon[\W_]*+rugs(?!\.com(?<=apolonrugs\.com))
+1579586415	Makyen	mydigital[\W_]*+housing
