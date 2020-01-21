@@ -16656,3 +16656,4 @@
 1579586384	Makyen	apolon[\W_]*+rugs(?!\.com(?<=apolonrugs\.com))
 1579586415	Makyen	mydigital[\W_]*+housing
 1579587736	Makyen	(?-i:NIRxdLQJ9mg)(?#youtu.be)
+1579587850	Shree	optbazaar\.com
