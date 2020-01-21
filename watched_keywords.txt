@@ -16651,3 +16651,4 @@
 1579576032	Eliah Kagan	bestlaptopshub\.com
 1579576225	Eliah Kagan	landumatt(?:@gmail\.com)?
 1579585282	Shree	apolonrugs\.com
+1579585744	tripleee	(?-i:^franzink‭$)
