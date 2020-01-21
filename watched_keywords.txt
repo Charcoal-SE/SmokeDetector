@@ -16202,7 +16202,6 @@
 1578631500	Makyen	tipswins\.com
 1578635262	tripleee	teshnews
 1578635481	Makyen	(?-i:DCgt8f2vcc4)(?#youtu.be)
-1578635498	Makyen	buddysupplement\.com
 1578636381	tripleee	dekelsurgical\.com
 1578636401	tripleee	dekel[\W_]*+surgical(?!\.com)
 1578638323	Makyen	indoxxi
