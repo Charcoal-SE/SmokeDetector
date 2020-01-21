@@ -1,6 +1,7 @@
 Schema: yaml_asn
 Schema_version: '2019120601'
 items:
+- asn: '3223'
 - asn: '3842'
   comment: 122/284 over 1 year
   disable: true
