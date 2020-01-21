@@ -16648,3 +16648,4 @@
 1579547524	Makyen	dr[\W_]*+okisin
 1579547539	Makyen	dr\.okisinsolutiontemple(?:@gmail\.com)?
 1579557202	Eliah Kagan	hard-reset-cell\.com\.br
+1579576032	Eliah Kagan	bestlaptopshub\.com
