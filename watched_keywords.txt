@@ -16689,3 +16689,4 @@
 1579673978	Shree	go-roku-activate\.com
 1579675333	Makyen	e[\W_]*+khool
 1579675368	Makyen	sortsoln\.com
+1579675398	Makyen	1?844[\W_]*+232[\W_]*+o2o2
