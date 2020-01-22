@@ -16680,3 +16680,4 @@
 1579639494	Machavity	(?-i:^credit\W*fixers$)
 1579642454	Makyen	xtreme-trader\.com
 1579642749	Makyen	xtreme[\W_]*+trader(?!\.com(?<=xtreme-trader\.com))(?:[\W_]*+(?:signals|\d++|[\da-f]{4,}+))*
+1579663189	Makyen	cryptocyberhacker(?:@gmail\.com)?
