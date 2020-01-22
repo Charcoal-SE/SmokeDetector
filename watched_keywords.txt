@@ -16690,3 +16690,4 @@
 1579675333	Makyen	e[\W_]*+khool
 1579675368	Makyen	sortsoln\.com
 1579675398	Makyen	1?844[\W_]*+232[\W_]*+o2o2
+1579675429	Makyen	slimymedkapseln(?#facebook.com)
