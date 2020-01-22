@@ -16693,3 +16693,4 @@
 1579675429	Makyen	slimymedkapseln(?#facebook.com)
 1579678846	Makyen	mapupdates\.org
 1579678876	Makyen	(?-i:Y_SyQzjqWVI)(?#youtu.be)
+1579678907	Makyen	healing[\W_]*+fx(?:[\W_]*+(?:oil|cbd|\d++|[\da-f]{4,}+))*
