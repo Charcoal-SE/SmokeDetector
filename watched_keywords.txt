@@ -16712,3 +16712,4 @@
 1579693165	Shree	ontrendingpk\.com
 1579695697	tripleee	on[\W_]*+passive(?!\.com)
 1579695733	tripleee	onpassive\.com
+1579695827	tripleee	uk[\W_]*+essays
