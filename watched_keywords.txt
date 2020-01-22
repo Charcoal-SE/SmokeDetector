@@ -16709,3 +16709,4 @@
 1579690398	tripleee	cjavapoint\.blogspot\.com
 1579690464	tripleee	ooe[\W_]*+consultancy(?!\.com)
 1579690500	tripleee	ooeconsultancy\.com
+1579691384	Shree	getaccounting\.co
