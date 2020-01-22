@@ -16699,3 +16699,4 @@
 1579684500	Makyen	getpczone\.com
 1579684527	Makyen	al[\W_]*+roker(?:[\W_]*+(?:loss|weight))(?:[\W_]*+(?:loss|weight|\d++|[\da-f]{4,}+))*
 1579684556	Makyen	lionsupp\.com
+1579684588	Makyen	lionsupp-107933720755017(?#facebook.com)
