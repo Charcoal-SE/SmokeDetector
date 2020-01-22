@@ -16692,3 +16692,4 @@
 1579675398	Makyen	1?844[\W_]*+232[\W_]*+o2o2
 1579675429	Makyen	slimymedkapseln(?#facebook.com)
 1579678846	Makyen	mapupdates\.org
+1579678876	Makyen	(?-i:Y_SyQzjqWVI)(?#youtu.be)
