@@ -16728,3 +16728,4 @@
 1579704243	Eliah Kagan	epl-live247\.blogspot
 1579704956	Eliah Kagan	johnhasrecords(?:@gmail\.com)?
 1579705713	Eliah Kagan	jeremysmit\.tumblr\.com
+1579705790	Eliah Kagan	(?-i:2THWuOi)(?#bit.ly)
