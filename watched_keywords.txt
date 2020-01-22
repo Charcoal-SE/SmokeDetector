@@ -16695,3 +16695,4 @@
 1579678876	Makyen	(?-i:Y_SyQzjqWVI)(?#youtu.be)
 1579678907	Makyen	healing[\W_]*+fx(?:[\W_]*+(?:oil|cbd|\d++|[\da-f]{4,}+))*
 1579678933	Makyen	scholareview\.com
+1579684231	tripleee	allbestshayari\.com
