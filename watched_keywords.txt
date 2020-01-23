@@ -16769,3 +16769,4 @@
 1579770747	Eliah Kagan	teletopshop\.com
 1579771682	tripleee	opinionstage\.com
 1579774348	tripleee	elementary[\W_]*+travel
+1579774398	tripleee	collegewrestling2020\.live
