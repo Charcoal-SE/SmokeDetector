@@ -16768,3 +16768,4 @@
 1579770505	Eliah Kagan	(?-i:CIkOhiM0nko)(?#youtu.be)
 1579770747	Eliah Kagan	teletopshop\.com
 1579771682	tripleee	opinionstage\.com
+1579774348	tripleee	elementary[\W_]*+travel
