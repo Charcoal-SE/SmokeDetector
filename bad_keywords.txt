@@ -2168,3 +2168,4 @@ countdown[\W_]*+keto(?:[\W_]*+(?:nz|new[\W_]*+zealand|\d++|[\da-f]{4,}+))*
 illumia
 cricket[\W_]*dugout(?!\.com)
 new[\W_]*+glo[\W_]*+hair(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+electro[\W_]*+keto(?:[\W_]*+(?:diet|pill|review|\d++|[\da-f]{4,}+)s?)*
