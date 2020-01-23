@@ -228,6 +228,9 @@ items:
   - jonah.ns.cloudflare.com.
   - zita.ns.cloudflare.com.
 - ns:
+  - karl.ns.cloudflare.com.
+  - uma.ns.cloudflare.com.
+- ns:
   - kia.ns.cloudflare.com.
   - mitch.ns.cloudflare.com.
 - ns:
