@@ -16760,3 +16760,4 @@
 1579767052	tripleee	whatsappsociety\.com
 1579768754	tripleee	naturalmadhunashini\.com
 1579768809	tripleee	sogoteleshopping1(?:@gmail\.com)?
+1579768844	tripleee	sogo[\W_]*+teleshopping\d*(?!@gmail\.com)
