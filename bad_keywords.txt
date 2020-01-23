@@ -2167,3 +2167,4 @@ viaxxl(?:[\W_]*+(?:enhancement|male|\d++|[\da-f]{4,}+))*
 countdown[\W_]*+keto(?:[\W_]*+(?:nz|new[\W_]*+zealand|\d++|[\da-f]{4,}+))*
 illumia
 cricket[\W_]*dugout(?!\.com)
+new[\W_]*+glo[\W_]*+hair(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
