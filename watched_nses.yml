@@ -255,6 +255,9 @@ items:
   - liv.ns.cloudflare.com.
   - seth.ns.cloudflare.com.
 - ns:
+  - marge.ns.cloudflare.com.
+  - skip.ns.cloudflare.com.
+- ns:
   - mark.ns.cloudflare.com.
   - wanda.ns.cloudflare.com.
 - ns:
