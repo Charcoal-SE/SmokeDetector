@@ -1946,7 +1946,7 @@ keto\W?zones?
 active\W?luxe
 Slim\W*X\W*Genie\W*Keto
 slim\W?swift
-keto[\W_]*vatru(?!\.blogspot\.com(?<=ketovatrusouthafrica\.blogspot\.com))(?!diet\.info(?<=ketovatrudiet\.info))(?:[\W_]*(?:diet|official|south|africa|\d+|[\da-f]{4,})s?)*
+keto[\W_]*vatru(?!\.blogspot\.com(?<=ketovatrusouthafrica\.blogspot\.com))(?!diet\.info(?<=ketovatrudiet\.info))(?:[\W_]*(?:diet|official|pill|south|africa|za|review|\d+|[\da-f]{4,})s?)*
 oniton
 yeah\W?keto
 extenze
