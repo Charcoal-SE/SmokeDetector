@@ -249,3 +249,4 @@ devleadz
 (?-i:^Andre Green$)
 (?-i:^Vijay Mann$)
 (?-i:^okfine$)
+village\W*talkies
