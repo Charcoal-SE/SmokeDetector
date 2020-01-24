@@ -511,7 +511,7 @@ yourdailymovie\.com
 ipinteria\.com
 blogines\.com
 stepupheights\.com
-gfix\.in
+\b(?<![^\W_]-)gfix\.in(?![.-][^\W_])\b
 aminoprimexl\.com
 vbscore\.com
 blueeagleindia\.com
