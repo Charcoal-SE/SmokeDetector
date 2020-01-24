@@ -11662,7 +11662,6 @@
 1564635822	Makyen	(?-i:9AHzqt9w0Gk)
 1564641572	Makyen	(?:forskolin[\W_]*)?ketovit(?!\.blogspot\.com(?<=forskolin-ketovit\.blogspot\.com))(?:[\W_]*(?:forskolin|reviews?|diet|\d+))*
 1564644082	tripleee	agrawalcorporate\.com
-1564644755	Makyen	agrawal(?:[\W_]*(?:corporate(?!\.com(?<=agrawalcorporate\.com))|market|gurukul))+
 1564651492	Makyen	keygen[\W_]*xl
 1564651581	Makyen	amiquor\.ga
 1564658499	tripleee	coolfreights\.com
