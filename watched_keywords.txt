@@ -16827,3 +16827,4 @@
 1579870313	Eliah Kagan	contactbook\.app
 1579873849	Eliah Kagan	mamamponye\.com
 1579876117	Eliah Kagan	pill?ow\s+pill?ow
+1579876328	Machavity	(?-i:^user65193$)
