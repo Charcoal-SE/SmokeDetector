@@ -16801,3 +16801,4 @@
 1579843873	Makyen	(?-i:77QjJuVo0qg)(?#YouTube)
 1579843902	Makyen	(?-i:H9yQDx1Qg8k)(?#YouTube)
 1579844309	Makyen	(?-i:phKa4utCFTE)(?#youtu.be)
+1579844336	Makyen	glamour[\W_]*+skin[\W_]*+cream(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
