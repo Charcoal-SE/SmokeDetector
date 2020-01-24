@@ -2243,7 +2243,7 @@ smore\.com
 topsupplements\.co\.za
 bodyprodiets\.com
 supplementxt\.com
-queryhelp\.com
+\b(?<![^\W_]-)queryhelp\.com(?![.-][^\W_])\b
 ringtonedownload\.in
 indiaeve\.com
 outlooktechnicalsupportnumbers\.com
