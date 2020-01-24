@@ -16794,3 +16794,4 @@
 1579816200	Makyen	(?-i:_i_WG76Skf4)(?#YouTube)
 1579817246	Eliah Kagan	(?-i:Nvk5iYioclE)(?#youtu.be)
 1579817773	Eliah Kagan	(?-i:375a42f)(?#bit.ly)
+1579825772	Nisse Engström	cryptosine\.com
