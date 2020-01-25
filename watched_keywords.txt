@@ -14901,7 +14901,6 @@
 1575469886	treyBake	GeekBee\.io
 1575470214	tripleee	juegosdefriv2021\.com
 1575472320	Machavity	hikeontreks\.com
-1575473819	tripleee	richfly2\.com
 1575478839	Makyen	last[\W_]*+month(?:[\W_]*+s)?[\W_]*+online[\W_]*+earning
 1575479336	Makyen	17593(?<=\$17593)
 1575466833	Das_Geek	andishmandproject\.com
