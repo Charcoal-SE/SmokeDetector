@@ -16839,3 +16839,4 @@
 1579934072	Makyen	aquarock(?!\.in)
 1579934101	Makyen	doralozy(?!\.pen\.io)(?#medium.com)
 1579934131	Makyen	doralozy\.pen\.io
+1579934252	Makyen	rapidrupee\.in
