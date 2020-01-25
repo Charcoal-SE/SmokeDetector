@@ -16848,3 +16848,4 @@
 1579936310	Makyen	infused[\W_]*+skin[\W_]*+serum(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1579938898	Makyen	hsbuy\.org
 1579940705	double-beep	gharbaar\.com
+1579940904	double-beep	webrootsafez\.com
