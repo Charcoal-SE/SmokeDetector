@@ -16868,3 +16868,4 @@
 1579971363	Eliah Kagan	zohabd\.com
 1579974958	Makyen	(?<![^\W_]-)(?<=\W|^)mail\.ru(?=\W|$)(?![.-][^\W_])
 1579978101	Machavity	hulk\W*pills
+1579992330	Makyen	kshanance(?:@gmail\.com)?
