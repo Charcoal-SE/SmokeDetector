@@ -16843,3 +16843,4 @@
 1579934434	Makyen	jetblueairlinesofficialsite\.com
 1579934465	Makyen	(?-i:6PIMS\.jpg)
 1579934549	Makyen	neotouch\.in
+1579936249	Makyen	healthygossips(?#sites.google.com)
