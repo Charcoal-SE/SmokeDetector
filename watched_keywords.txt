@@ -16868,3 +16868,4 @@
 1579960137	Eliah Kagan	wifjobalert\.com
 1579962237	Eliah Kagan	alturka\.com
 1579971363	Eliah Kagan	zohabd\.com
+1579974958	Makyen	(?<![^\W_]-)(?<=\W|^)mail\.ru(?=\W|$)(?![.-][^\W_])
