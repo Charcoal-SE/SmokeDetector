@@ -3430,7 +3430,7 @@
 1527138247	tripleee	\W*ｏｋｄｂ７９\W*
 1527142090	Makyen	\W*(?:안마|마사지|알몸사진|애인대행)\W*
 1527142633	Tetsuya Yamamoto	exploresrilanka\.com
-1527144445	Makyen	\w*h+a+\W*h+a+\W*h+a+\w*(?!(?:[^<]|<[^c]|<c[^o]|<co[^d]|<cod[^e]|<code[^>])*?</code>)
+1527144445	Makyen	\w*h+a+\W*h+a+\W*h+a+\w*(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1527145181	Tetsuya Yamamoto	phpinterview\.in
 1527146048	Glorfindel	positivesingles
 1527146782	Glorfindel	zaptechsolutions\.com
@@ -3746,7 +3746,7 @@
 1528729675	Zoe	bho-cannabisonline\.com
 1528745948	Zoe	allexperts16\.blogspot
 1528765397	Makyen	iwikies\.com
-1528785079	Makyen	digital\W?marketing(?!(?:[^<]|<[^c]|<c[^o]|<co[^d]|<cod[^e]|<code[^>])*?</code>)
+1528785079	Makyen	digital\W?marketing(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1528794520	Zoe	kadinlarplajiservisi\.com
 1528794527	Zoe	Sarıyer\W*Altınkum\W*Kadınlar\W*Plajı\W*Servisi
 1528797923	tripleee	zylam
@@ -4032,7 +4032,7 @@
 1530102136	tripleee	qy1TAU
 1530105420	iBug	quickbookssupportcare\.com
 1530117191	tripleee	sumamemon
-1530127247	Makyen	promo\W*code(?!(?:[^<]|<[^c]|<c[^o]|<co[^d]|<cod[^e]|<code[^>])*?</code>)
+1530127247	Makyen	promo\W*code(?!(?:[^<]|<(?!\/?code>))*+<\/code>)s?
 1530162405	tripleee	cera\W?growth
 1530165354	Rob	stoxmarket\.com
 1530168634	Glorfindel	ancientbeninshrine
@@ -4328,7 +4328,7 @@
 1531715198	Tetsuya Yamamoto	fordbinhdinh\.net
 1531715708	Tetsuya Yamamoto	thunkapp\.com
 1531715814	Tetsuya Yamamoto	thunksoftware
-1531718708	Makyen	\W*(?:>>>+|@+>>+|@@+>+|== *>>+|={4,}|===>+|= = =|(?:Read More|Click Here)).{0,20}https?://(?!(?:i\.stack\.imgur\.com|(?:[\w-]+\.)*(?:(?:stack(?:exchange|overflow)|superuser|serverfault|askubuntu|stackapps|google|w3schools|javarevisited\.blogspot|github)\.com|(?:mathoverflow|sstatic)\.net|(?:(?:archive|mozilla|scikit-learn)\.org))))(?!(?:[^<]|<[^c]|<c[^o]|<co[^d]|<cod[^e]|<code[^>])*?</code>)(?=.{201,}$)(?#Test adjustment to link following arrow, allowing for links further from the end of the post.)
+1531718708	Makyen	\W*(?:>>>+|@+>>+|@@+>+|== *>>+|={4,}|===>+|= = =|(?:Read More|Click Here)).{0,20}https?://(?!(?:i\.stack\.imgur\.com|(?:[\w-]+\.)*(?:(?:stack(?:exchange|overflow)|superuser|serverfault|askubuntu|stackapps|google|w3schools|javarevisited\.blogspot|github)\.com|(?:mathoverflow|sstatic)\.net|(?:(?:archive|mozilla|scikit-learn)\.org))))(?!(?:[^<]|<(?!\/?code>))*+<\/code>)(?=.{201,}$)(?#Test adjustment to link following arrow, allowing for links further from the end of the post.)
 1531722754	Tetsuya Yamamoto	ludokinggames\.com
 1531722813	Makyen	carogallo\.\w*\.com
 1531722997	iBug	happywheelshappy\.com
@@ -10340,7 +10340,7 @@
 1560009738	Machavity	joggingaddiction\.com
 1560018288	Makyen	dridahosasolutioncenter(?:@gmail\.com)?
 1560019383	Makyen	one\W*(?:p\W*)*eight\W*(?:p\W*)*six\W*(?:p\W*)*six\W*(?:p\W*)*nine\W*(?:p\W*)*four\W*(?:p\W*)*zero\W*(?:p\W*)*zero\W*(?:p\W*)*zero\W*(?:p\W*)*zero\W*(?:p\W*)*five
-1560019402	Makyen	(?:zero|one|two|three|four|five|six|seven|eight|nine|ten)(?:\W*(?:p\W*)*(?:zero|one|two|three|four|five|six|seven|eight|nine|ten)){8,}(?!(?:[^<]|<[^c]|<c[^o]|<co[^d]|<cod[^e]|<code[^>])*?<\/code>)
+1560019402	Makyen	(?:zero|one|two|three|four|five|six|seven|eight|nine|ten)(?:\W*(?:p\W*)*(?:zero|one|two|three|four|five|six|seven|eight|nine|ten)){8,}(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1560028765	Makyen	(?-i:UC2VeOYu81k7gkQwd6lLnUQQ)(?#youtube channel)
 1560049245	Machavity	etutorialspoint\.com
 1560055992	Makyen	smartkela\.com
