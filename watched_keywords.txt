@@ -4032,6 +4032,7 @@
 1530102136	tripleee	qy1TAU
 1530105420	iBug	quickbookssupportcare\.com
 1530117191	tripleee	sumamemon
+1530127247	Makyen	promo\W*code(?!(?:[^<]|<[^c]|<c[^o]|<co[^d]|<cod[^e]|<code[^>])*?</code>)
 1530162405	tripleee	cera\W?growth
 1530165354	Rob	stoxmarket\.com
 1530168634	Glorfindel	ancientbeninshrine
