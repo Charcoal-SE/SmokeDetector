@@ -29,6 +29,7 @@ items:
 - ip: 54.72.135.216
 - ip: 54.187.146.180
 - ip: 207.174.213.34
+- ip: 207.174.213.126
 - comment: random spam sites but many FPs
   disable: true
   ip: 216.239.32.21
