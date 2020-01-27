@@ -16922,3 +16922,4 @@
 1580149002	Machavity	my123\.in
 1580153657	Eliah Kagan	dotnetwizardblog\.wordpress\.com
 1580157549	Eliah Kagan	roblox-promo-codes\.info
+1580158048	Eliah Kagan	promo\W*code(?!(?:[^<]|<[^c]|<c[^o]|<co[^d]|<cod[^e]|<code[^>])*?</code>)s?
