@@ -250,3 +250,4 @@ devleadz
 (?-i:^Vijay Mann$)
 (?-i:^okfine$)
 village\W*talkies
+quran[\W_]*+for[\W_]*+kids
