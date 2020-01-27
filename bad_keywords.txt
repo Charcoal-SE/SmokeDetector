@@ -2173,3 +2173,4 @@ sarah[\W]?s[\W_]*+blessing(?:[\W_]*+cbd(?:[\W_]*+oil)?)?
 zenith\W*labs
 agrawal(?:[\W_]*(?:corporate(?!\.com(?<=agrawalcorporate\.com))|market|gurukul))+
 (?:official[\W_]*+)?natures?[\W_]*+(?:crave|slim)[\W_]*+keto(?!reviews\.blogspot(?<=naturecraveketoreviews\.blogspot))(?:[\W_]*+(?:review|official|\d++|[\da-f]{4,}+)s?)*
+al[\W_]*+roker(?:[\W_]*+keto(?:[\W_]*+diets?)?)?
