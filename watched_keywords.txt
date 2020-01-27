@@ -16904,3 +16904,4 @@
 1580119099	tripleee	og[\W_]*+kush
 1580119368	tripleee	semaxin
 1580119640	Shree	picknhook\.com
+1580124257	Shree	drsunnydsolution1(?:@gmail\.com)?
