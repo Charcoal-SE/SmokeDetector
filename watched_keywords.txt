@@ -16953,3 +16953,4 @@
 1580203123	tripleee	sapbazar\.com
 1580204167	tripleee	inox[\W_]*+flatware(?!\.com)
 1580204265	tripleee	com-verify\.us
+1580205777	tripleee	bijliupkaran\.com
