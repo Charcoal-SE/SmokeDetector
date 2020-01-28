@@ -16977,3 +16977,4 @@
 1580222505	Machavity	(?-i:^mckay\Wnikki$)
 1580222554	Eliah Kagan	chinabestchems(?!\.com)
 1580231168	Machavity	skatingpoint\.com
+1580242060	Eliah Kagan	zzbots\.com
