@@ -16938,3 +16938,4 @@
 1580193692	Eliah Kagan	online\W+chem\W+junction
 1580193757	Eliah Kagan	technolearn\.in
 1580193896	Eliah Kagan	cheap\W+drugs
+1580193936	tripleee	techno[\W_]*+learn(?!\.in)
