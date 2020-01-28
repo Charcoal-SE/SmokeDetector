@@ -16951,3 +16951,4 @@
 1580198326	tripleee	chinabestchems\.com
 1580199285	tripleee	setup-windows10\.com
 1580203123	tripleee	sapbazar\.com
+1580204167	tripleee	inox[\W_]*+flatware(?!\.com)
