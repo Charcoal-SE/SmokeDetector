@@ -16966,3 +16966,4 @@
 1580220062	tripleee	thearensic(?!\.com)
 1580220390	Eliah Kagan	ratnaprabhadentalclinic\.com
 1580221064	Eliah Kagan	sinetecautomation\.com
+1580221097	Eliah Kagan	(?-i:olDQKy39hxQ)(?#youtu.be)
