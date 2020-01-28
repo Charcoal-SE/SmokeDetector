@@ -16975,3 +16975,4 @@
 1580221599	Eliah Kagan	allsupplementshop\.blogspot
 1580221783	Eliah Kagan	allsupplementshop(?!\.(?:com|blogspot))(?:_\w*)?
 1580222505	Machavity	(?-i:^mckay\Wnikki$)
+1580222554	Eliah Kagan	chinabestchems(?!\.com)
