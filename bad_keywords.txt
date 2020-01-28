@@ -2176,3 +2176,4 @@ agrawal(?:[\W_]*(?:corporate(?!\.com(?<=agrawalcorporate\.com))|market|gurukul))
 al[\W_]*+roker(?:[\W_]*+keto(?:[\W_]*+diets?)?)?
 neuphix(?:[\W_]*+cbd)?
 retinol\W*lift
+envy[\W_]*+us
