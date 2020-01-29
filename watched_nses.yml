@@ -177,9 +177,6 @@ items:
   - eva.ns.cloudflare.com.
   - hank.ns.cloudflare.com.
 - ns:
-  - george.ns.cloudflare.com.
-  - lady.ns.cloudflare.com.
-- ns:
   - gina.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
 - ns:

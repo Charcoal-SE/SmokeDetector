@@ -20,6 +20,9 @@ items:
   - chip.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
 - ns:
+  - george.ns.cloudflare.com.
+  - lady.ns.cloudflare.com.
+- ns:
   - jay.ns.cloudflare.com.
   - jule.ns.cloudflare.com.
 - ns:
