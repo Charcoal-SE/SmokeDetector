@@ -16997,3 +16997,4 @@
 1580284772	tripleee	essaysprofessor\.com
 1580285532	tripleee	platlnum[\W_]*+club
 1580294420	Shree	healthtalkrev.com
+1580294536	Shree	green-apex\.com
