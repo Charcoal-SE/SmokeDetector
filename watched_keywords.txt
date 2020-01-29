@@ -16995,6 +16995,5 @@
 1580284059	tripleee	reefmovers\.ae
 1580284772	tripleee	essaysprofessor\.com
 1580285532	tripleee	platlnum[\W_]*+club
-1580294420	Shree	healthtalkrev.com
 1580294536	Shree	green-apex\.com
 1580294781	Shree	barncomart\.com
