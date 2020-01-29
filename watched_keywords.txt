@@ -16997,3 +16997,4 @@
 1580285532	tripleee	platlnum[\W_]*+club
 1580294536	Shree	green-apex\.com
 1580294781	Shree	barncomart\.com
+1580298023	Shree	healthtalkrev\.com
