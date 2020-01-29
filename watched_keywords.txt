@@ -17000,3 +17000,4 @@
 1580298023	Shree	healthtalkrev\.com
 1580306310	Das_Geek	bitcoin[\W+](?:m|b)illionaire
 1580311484	Machavity	bestadvisers\.co\.uk
+1580314247	Das_Geek	gtatreeremoval\.ca
