@@ -16991,3 +16991,4 @@
 1580280862	tripleee	hugshs\.com
 1580280976	tripleee	elite[\W_]*+vitality
 1580281423	Shree	desktop-software\.com
+1580283850	tripleee	fortebs\.com
