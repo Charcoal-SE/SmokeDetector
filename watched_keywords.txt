@@ -16994,3 +16994,4 @@
 1580283850	tripleee	fortebs\.com
 1580283882	tripleee	forte[\W_]*+business(?:[\W_]*+solutions?)?
 1580284059	tripleee	reefmovers\.ae
+1580284772	tripleee	essaysprofessor\.com
