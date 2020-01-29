@@ -16986,3 +16986,4 @@
 1580274839	tripleee	aresearchguide\.com
 1580280460	tripleee	infobets\.net
 1580280521	tripleee	gladwev\.com
+1580280597	tripleee	powertechpollutioncontrols\.co\.in
