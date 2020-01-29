@@ -2179,3 +2179,4 @@ retinol\W*lift
 envy[\W_]*+us
 nutriverse(?:[\W_]*+keto)?
 clearsense(?:[\W_]*+cbd(?:[\W_]*+oil)?)?
+vital[\W_]*+xl
