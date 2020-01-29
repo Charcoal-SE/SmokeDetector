@@ -3101,7 +3101,6 @@ brotherprintersupport247\.com
 chinaclayteapot\.com
 customer-care-help-number\.com
 cabanova\.com
-\b(?<![^\W_]-)ning\.com(?![.-][^\W_])\b
 \b(?<![^\W_]-)inube\.com(?![.-][^\W_])\b
 over-blog\.com
 supplementspeak\.com
