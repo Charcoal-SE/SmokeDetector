@@ -17050,3 +17050,4 @@
 1580401889	Eliah Kagan	hackservice
 1580404070	Machavity	fundesertsafari\.com
 1580404372	Machavity	consultant(?:\.|\W*dot\W*)com
+1580405769	Eliah Kagan	info\.ghanapolice
