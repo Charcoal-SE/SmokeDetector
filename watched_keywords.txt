@@ -17041,3 +17041,4 @@
 1580392631	Das_Geek	shamela\.(?:org|ws)
 1580395696	tripleee	offerstorage\.com
 1580398577	Eliah Kagan	HP782
+1580398978	Eliah Kagan	(?-i:U_2DpasydwY)(?#YouTube)
