@@ -17030,3 +17030,4 @@
 1580367196	Makyen	hp-printer-support\.us
 1580367499	Makyen	thrust[\W_]*+rx(?:[\W_]*+(?:by|carlhank|review|\d++|[\da-f]{4,}+))*
 1580367992	Shree	rightwebguide\.com
+1580370580	tripleee	familytreemaker2019upgrade\.com
