@@ -17034,3 +17034,4 @@
 1580380877	tripleee	yoorshop\.hosting
 1580381289	Glorfindel	nlpcube\.com
 1580384679	Shree	sodexobenefitsindia\.com
+1580385298	tripleee	flexo[\W_]*+tech[\W_]*+products(?!\.com)
