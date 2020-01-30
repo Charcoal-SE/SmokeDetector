@@ -17022,3 +17022,4 @@
 1580352674	Makyen	(?-i:n5WknPgqMrQ)(?#YouTube)
 1580359832	tripleee	axis[\W_]*+bank(?:[\W_]*+customer[\W_]*+care)?
 1580359862	tripleee	suspendedceilingsqld\.com\.au
+1580361335	Makyen	suspended[\W_]*+ceilings[\W_]*+qld(?!\.com\.au(?<=suspendedceilingsqld\.com\.au))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
