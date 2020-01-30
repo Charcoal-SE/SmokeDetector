@@ -15347,7 +15347,6 @@
 1576664938	Shree	gpsliveupdates\.com
 1576665172	Shree	fwpower\.co\.uk
 1576669230	tripleee	maxatron(?:[\W_]*+plus)?
-1576669470	tripleee	gooff\.org
 1576670783	Shree	fmsdental\.org
 1576673922	Makyen	bullyingessay\.com
 1576673963	Makyen	redknifelottery\.com
