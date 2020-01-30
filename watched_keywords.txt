@@ -17032,3 +17032,4 @@
 1580375571	Shree	aspiringminds\.com
 1580378066	Shree	digitalmojo\.in
 1580378786	Shree	phonevsphone\.in
+1580379212	tripleee	clipping[\W_]*+path[\W_]*+product
