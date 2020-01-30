@@ -2183,3 +2183,4 @@ vital[\W_]*+xl
 Best Corporate Video Production Company
 top  Explainer Video Company
 semaxin
+amazin[\W_]*+brain
