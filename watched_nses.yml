@@ -64,6 +64,9 @@ items:
   - asa.ns.cloudflare.com.
   - plato.ns.cloudflare.com.
 - ns:
+  - barbara.ns.cloudflare.com.
+  - logan.ns.cloudflarem.com.
+- ns:
   - beau.ns.cloudflare.com.
   - jasmine.ns.cloudflare.com.
 - ns:
