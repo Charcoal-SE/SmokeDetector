@@ -17037,3 +17037,4 @@
 1580385298	tripleee	flexo[\W_]*+tech[\W_]*+products(?!\.com)
 1580387211	tripleee	(?:data[\W_]+?science|business[\W_]+?analytics)[\W_]+?courses?
 1580390328	tripleee	avianceschool\.com
+1580391447	tripleee	professionalastrologyproblemsolution\.com
