@@ -17038,3 +17038,4 @@
 1580387211	tripleee	(?:data[\W_]+?science|business[\W_]+?analytics)[\W_]+?courses?
 1580390328	tripleee	avianceschool\.com
 1580391447	tripleee	professionalastrologyproblemsolution\.com
+1580392631	Das_Geek	shamela\.(?:org|ws)
