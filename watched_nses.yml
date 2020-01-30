@@ -481,3 +481,6 @@ items:
 - ns: insightssuccess.com.
 - ns: pakihosting.com.
 - ns: onebyhosting.com.
+- ns:
+  - cns2015.webhostbox.net.
+  - cns2016.webhostbox.net.
