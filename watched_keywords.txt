@@ -16895,7 +16895,6 @@
 1580118704	Shree	news24online\.com
 1580119022	Shree	ganga420\.com
 1580119099	tripleee	og[\W_]*+kush
-1580119368	tripleee	semaxin
 1580119640	Shree	picknhook\.com
 1580124257	Shree	drsunnydsolution1(?:@gmail\.com)?
 1580124297	Shree	assureshift\.in
