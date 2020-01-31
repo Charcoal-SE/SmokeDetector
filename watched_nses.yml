@@ -213,6 +213,9 @@ items:
   - ines.ns.cloudflare.com.
   - terin.ns.cloudflare.com.
 - ns:
+  - irma.ns.cloudflare.com.
+  - rudy.ns.cloudflare.com.
+- ns:
   - isaac.ns.cloudflare.com.
   - tia.ns.cloudflare.com.
 - ns:
