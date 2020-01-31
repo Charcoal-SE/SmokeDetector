@@ -2185,3 +2185,4 @@ top  Explainer Video Company
 semaxin
 amazin[\W_]*+brain
 adnvcd[\W_]*+test
+cognitiva
