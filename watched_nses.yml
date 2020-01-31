@@ -133,6 +133,9 @@ items:
   - dana.ns.cloudflare.com.
   - ray.ns.cloudflare.com.
 - ns:
+  - dara.ns.cloudflare.com.
+  - rudy.ns.cloudflare.com.
+- ns:
   - desi.ns.cloudflare.com.
   - elmo.ns.cloudflare.com.
 - ns:
