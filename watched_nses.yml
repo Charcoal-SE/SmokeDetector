@@ -486,5 +486,5 @@ items:
   - cns2016.webhostbox.net.
 - ns: privatesever.com.
 - ns:
-  - ns1.cp-48.bigrockservers.com
-  - ns2.cp-48.bigrockservers.com
+  - ns1.cp-48.bigrockservers.com.
+  - ns2.cp-48.bigrockservers.com.
