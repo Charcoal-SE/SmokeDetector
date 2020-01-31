@@ -17090,3 +17090,4 @@
 1580489515	Eliah Kagan	oxitrim
 1580491309	Das_Geek	charlesleewisn(?:@gmail\.com)?
 1580503479	Das_Geek	alldus\.com
+1580508046	Makyen	(?-i:BECTL)(?#is.gd)
