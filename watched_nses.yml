@@ -340,7 +340,8 @@ items:
   ns:
   - ns43.domaincontrol.com.
   - ns44.domaincontrol.com.
-- ns:
+- comment: FPs, don't blacklist
+  ns:
   - ns57.domaincontrol.com.
   - ns58.domaincontrol.com.
 - ns:
@@ -348,7 +349,7 @@ items:
   - ns60.domaincontrol.com.
 - ns:
   - ns75.domaincontrol.com.
-  - ns76.domaincontro..com.
+  - ns76.domaincontrol.com.
 - ns:
   - ns77.domaincontrol.com.
   - ns78.domaincontrol.com.
