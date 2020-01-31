@@ -17069,3 +17069,4 @@
 1580453800	tripleee	nutra[\W_]*+cognitiva
 1580456562	Glorfindel	rizonjet\.com
 1580458783	tripleee	redsecurity\.info
+1580463391	Shree	ovenfresh\.in
