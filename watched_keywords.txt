@@ -17117,3 +17117,4 @@
 1580548226	Makyen	vibrantsourceketoboostofficial\.blogspot
 1580548247	Makyen	587719820108662620(?#pinterest.com)
 1580548267	Makyen	vibrant[\W_]*+source[\W_]*+keto(?!boostofficial\.blogspot(?<=vibrantsourceketoboostofficial\.blogspot))(?:[\W_]*+(?:boost|review|official|\d++|[\da-f]{4,}+)s?)*
+1580557012	double-beep	easyspanieltraining\.com
