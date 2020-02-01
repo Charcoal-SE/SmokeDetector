@@ -16823,7 +16823,7 @@
 1579934434	Makyen	jetblueairlinesofficialsite\.com
 1579934465	Makyen	(?-i:6PIMS\.jpg)
 1579934549	Makyen	neotouch\.in
-1579936249	Makyen	healthygossips(?#sites.google.com)
+1579936249	Makyen	healthygossips(?!\.com)s?(?#sites.google.com and medium)
 1579936281	Makyen	(?-i:RPH4B4oRePo)(?#youtu.be)
 1579936310	Makyen	infused[\W_]*+skin[\W_]*+serum(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1579938898	Makyen	hsbuy\.org
