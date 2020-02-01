@@ -16883,7 +16883,7 @@
 1580106024	tripleee	neuphix
 1580106059	Eliah Kagan	(?-i:z_zs3epyADw)(?#youtu.be)
 1580108692	Makyen	androdnatestoboostavis(?#facebook.com)
-1580109439	Makyen	bolaxol(?:[\W_]*+(?:real|reviews|\d++|[\da-f]{4,}+))*
+1580109439	Makyen	bolaxol(?:[\W_]*+(?:real|reviews?|\d++|[\da-f]{4,}+))*
 1580110355	Eliah Kagan	msgadvert\.com
 1580111474	tripleee	cricketkeeda\.com
 1580111943	tripleee	onlinefitpoint\.com
@@ -17063,7 +17063,7 @@
 1580442760	Shree	marsillpost\.com
 1580442819	Shree	jerrydrugstore\.com
 1580448277	Eliah Kagan	escortsaffair\.com
-1580452381	Eliah Kagan	dyna[\W_]*grow
+1580452381	Eliah Kagan	dyna[\W_]*+grow(?:[\W_]*+(?:xl|review|\d++|[\da-f]{4,}+)s?)*
 1580452400	Eliah Kagan	eugkoulx
 1580452437	Eliah Kagan	ketogenicprice\.com
 1580453800	tripleee	nutra[\W_]*+cognitiva
