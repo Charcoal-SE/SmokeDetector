@@ -17149,3 +17149,4 @@
 1580655799	Makyen	(?-i:GcQBm\.png)
 1580655832	Makyen	kristyk\.ashton(?#medium.com)
 1580655864	Makyen	umexaan\.com
+1580655895	Makyen	gravity[\W_]*+theory[\W_]*+cream(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
