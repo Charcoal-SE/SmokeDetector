@@ -14808,7 +14808,6 @@
 1575146294	Makyen	ultram
 1575146391	Makyen	anytxt\.net
 1575146432	Makyen	surgenx(?:[\W_]*+keto)?
-1575147327	Makyen	ubltravels\.com
 1575153899	Makyen	satilmadanal\.com
 1575154617	Nisse Engström	salut-itech\.com
 1575180686	Shree	vegus666\.com
