@@ -17173,3 +17173,4 @@
 1580710343	tripleee	pixel[\W_]*+hub(?!\.tech)
 1580712032	Shree	unearthedarcana\.com
 1580713544	tripleee	newsreaderweb\.com
+1580724729	Eliah Kagan	medhabuilders\.com
