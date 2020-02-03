@@ -17215,3 +17215,4 @@
 1580757360	Machavity	use\.expensify\.com
 1580757585	Eliah Kagan	sualaptop365\.edu\.vn
 1580757867	Eliah Kagan	paek[\W_]*ali(?:[\W_]*(?:bd|khan))?
+1580757927	Eliah Kagan	mybdtips\.com
