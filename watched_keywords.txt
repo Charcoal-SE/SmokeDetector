@@ -17201,3 +17201,4 @@
 1580737600	double-beep	glutenfreebreadmaker\.com
 1580737808	Byte Commander	gooff\.info
 1580739586	Machavity	viablogger\.com
+1580741636	Machavity	(?-i:BRr0Bz)
