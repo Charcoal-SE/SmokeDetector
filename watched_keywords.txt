@@ -17214,3 +17214,4 @@
 1580755436	Eliah Kagan	hamburg-bike(?#in shortlink to escort-hh.com)
 1580757360	Machavity	use\.expensify\.com
 1580757585	Eliah Kagan	sualaptop365\.edu\.vn
+1580757867	Eliah Kagan	paek[\W_]*ali(?:[\W_]*(?:bd|khan))?
