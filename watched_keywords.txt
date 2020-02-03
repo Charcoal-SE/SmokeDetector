@@ -17211,3 +17211,4 @@
 1580751065	Eliah Kagan	orion[\W_]*ivf
 1580754393	Das_Geek	hamburg-bike(?#  part of shortened link to escort/NSFW website)
 1580754627	Eliah Kagan	escort-hh\.com
+1580755069	Eliah Kagan	hoodia[\W_]+gordonii
