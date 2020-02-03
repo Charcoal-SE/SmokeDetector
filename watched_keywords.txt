@@ -17171,3 +17171,4 @@
 1580709859	Shree	pixelhub\.tech
 1580710323	tripleee	miyaqq\.site
 1580710343	tripleee	pixel[\W_]*+hub(?!\.tech)
+1580712032	Shree	unearthedarcana\.com
