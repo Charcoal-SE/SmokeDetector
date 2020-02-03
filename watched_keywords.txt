@@ -17209,6 +17209,5 @@
 1580750872	Eliah Kagan	wandyhackersworld88(?:@gmail\.com)?
 1580750990	Eliah Kagan	orionivfpune\.com
 1580751065	Eliah Kagan	orion[\W_]*ivf
-1580754393	Das_Geek	hamburg-bike(?#  part of shortened link to escort/NSFW website)
 1580754627	Eliah Kagan	escort-hh\.com
 1580755101	Eliah Kagan	hoodia[\W_]*gordonii
