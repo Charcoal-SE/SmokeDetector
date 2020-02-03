@@ -17190,3 +17190,4 @@
 1580728447	Shree	gamingtools\.ir
 1580728496	Shree	khanecheen\.ir
 1580728845	Shree	rabokala\.ir
+1580728986	Shree	game-digikala\.ir
