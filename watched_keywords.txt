@@ -17213,3 +17213,4 @@
 1580755101	Eliah Kagan	hoodia[\W_]*gordonii
 1580755436	Eliah Kagan	hamburg-bike(?#in shortlink to escort-hh.com)
 1580757360	Machavity	use\.expensify\.com
+1580757585	Eliah Kagan	sualaptop365\.edu\.vn
