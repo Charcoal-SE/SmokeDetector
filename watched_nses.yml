@@ -508,3 +508,7 @@ items:
   - ns1.cp-48.bigrockservers.com.
   - ns2.cp-48.bigrockservers.com.
 - ns: tenten.vn.
+- ns:
+  - rush.easydns.com.
+  - nirvana.easydns.net.
+  - motorhead.easydns.org.
