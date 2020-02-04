@@ -17217,3 +17217,4 @@
 1580757867	Eliah Kagan	paek[\W_]*ali(?:[\W_]*(?:bd|khan))?
 1580757927	Eliah Kagan	mybdtips\.com
 1580758962	Eliah Kagan	kudrjob(?:@gmail\.com)?
+1580787714	Nisse Engström	umandy\.com
