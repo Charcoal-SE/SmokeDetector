@@ -17228,3 +17228,4 @@
 1580797155	Makyen	eflowersrus(?:@gmail\.com)?
 1580797179	Makyen	e[\W_]*+flowers[\W_]*+(?:r|are)[\W_]*+us
 1580797207	Makyen	(?:care@)?freshflowerindia\.com
+1580798540	Makyen	gloxydermashop\.com
