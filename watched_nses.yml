@@ -335,6 +335,9 @@ items:
 - ns: sathyats.net.
 - ns: shared-host.org.
 - ns: web.com.ph.
+- ns:
+  - ns01.domaincontrol.com.
+  - ns02.domaincontrol.com.
 - comment: FPs, don't blacklist
   ns:
   - ns09.domaincontrol.com.
