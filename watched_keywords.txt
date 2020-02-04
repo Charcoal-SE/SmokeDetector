@@ -17236,3 +17236,4 @@
 1580805629	Eliah Kagan	vietnam9\.net
 1580806342	Eliah Kagan	(?:is(?:n't)?)?nox[\W_]*pro
 1580806478	Eliah Kagan	(?-i:zcxHdUC_qgc)(?#YouTube)
+1580807202	Eliah Kagan	(?-i:n(?<=-n)_ueUfZYxc)(?#YouTube)
