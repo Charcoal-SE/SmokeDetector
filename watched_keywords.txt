@@ -17226,3 +17226,4 @@
 1580794850	Eliah Kagan	vietnam-immigration\.org\.vn
 1580794962	Eliah Kagan	srebal(?:@umich\.edu)?
 1580797155	Makyen	eflowersrus(?:@gmail\.com)?
+1580797179	Makyen	e[\W_]*+flowers[\W_]*+(?:r|are)[\W_]*+us
