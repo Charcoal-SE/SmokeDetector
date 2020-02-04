@@ -17239,3 +17239,4 @@
 1580807510	Eliah Kagan	accessdoorsandpanels\.com
 1580807574	Eliah Kagan	bestaccessdoors\.com
 1580808125	Eliah Kagan	seonyeleneh\.com
+1580808167	Eliah Kagan	seonyeleneh(?!\.com)
