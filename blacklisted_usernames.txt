@@ -252,3 +252,4 @@ devleadz
 village\W*talkies
 quran[\W_]*+for[\W_]*+kids
 ^buy[\W_]*+buk[\W_]*tablets$
+(?-i:^Digiworld Expert$)
