@@ -17288,3 +17288,4 @@
 1580911765	Machavity	udemy\.com/[/\w-]*/\?(?:couponCode|referralCode)=
 1580913103	Machavity	chaindata\.club
 1580913794	Machavity	code-programmer\.com
+1580918848	Das_Geek	snaptubeapk\.xyz
