@@ -2183,7 +2183,7 @@ vital[\W_]*+xl
 Best Corporate Video Production Company
 top  Explainer Video Company
 semaxin
-amazin[\W_]*+brain
+amazin[\W_]*+brain(?:[\W_]*+(?:pill|supplement|\d++|[\da-f]{4,}+)s?)*
 adnvcd[\W_]*+test
 cognitiva
 maxx(?:[\W_]*+power)?[\W_]*+l[io]bido
