@@ -17295,3 +17295,4 @@
 1580927305	Makyen	ko-fi\.com
 1580927328	Makyen	supplementviewguide\.com
 1580929758	Makyen	ever[\W_]*+mixture(?:[\W_]*+(?:pure|oil|cbd|sx|\d++|[\da-f]{4,}+))*
+1580939381	Eliah Kagan	lizardsquad007(?:[\W_]*+(?:at[\W_]*+)?tutanota(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
