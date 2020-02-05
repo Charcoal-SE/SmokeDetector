@@ -2188,3 +2188,4 @@ adnvcd[\W_]*+test
 cognitiva
 maxx(?:[\W_]*+power)?[\W_]*+l[io]bido
 ssd(?:[\W_]*+activation)?[\W_]*+chemical
+Mangaian[\W_]*+tribe
