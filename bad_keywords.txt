@@ -2189,3 +2189,4 @@ cognitiva
 maxx(?:[\W_]*+power)?[\W_]*+l[io]bido
 ssd(?:[\W_]*+activation)?[\W_]*+chemical
 Mangaian[\W_]*+tribe
+thedarkcracker(?:[\W_]*+(?:at[\W_]*+)?protonmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
