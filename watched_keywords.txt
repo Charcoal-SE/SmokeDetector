@@ -17286,3 +17286,4 @@
 1580910860	Machavity	earnlearnduniya\.com
 1580911416	Das_Geek	5B8EFD46F7AF6514DD10(?#Udemy course referral code)
 1580911686	Machavity	udemy\.com/[\w-]*/\?(?:couponCode|referralCode)=
+1580911765	Machavity	udemy\.com/[/\w-]*/\?(?:couponCode|referralCode)=
