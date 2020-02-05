@@ -17256,3 +17256,4 @@
 1580861584	Eliah Kagan	playvideost\.online
 1580862139	Eliah Kagan	formule1endirect\.com
 1580864095	Eliah Kagan	GucciSnipesXX\w*
+1580864365	Eliah Kagan	lamotogp2020indiretta\.com
