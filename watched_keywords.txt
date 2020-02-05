@@ -17295,3 +17295,4 @@
 1580924934	Das_Geek	microsoftwindowssupportnumber\.com
 1580927305	Makyen	ko-fi\.com
 1580927328	Makyen	supplementviewguide\.com
+1580929758	Makyen	ever[\W_]*+mixture(?:[\W_]*+(?:pure|oil|cbd|sx|\d++|[\da-f]{4,}+))*
