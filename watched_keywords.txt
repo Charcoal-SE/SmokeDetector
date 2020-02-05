@@ -17268,3 +17268,4 @@
 1580890610	Eliah Kagan	perltrees\.com
 1580890633	Eliah Kagan	blogoutreachr\.com
 1580890772	Eliah Kagan	rod[\W_]*nysom(?#pen.io)
+1580890878	Eliah Kagan	xpotent(?:ial(?:l?y)?)?
