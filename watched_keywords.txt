@@ -16822,7 +16822,6 @@
 1579936249	Makyen	healthygossips(?!\.com)s?(?#sites.google.com and medium)
 1579936281	Makyen	(?-i:RPH4B4oRePo)(?#youtu.be)
 1579936310	Makyen	infused[\W_]*+skin[\W_]*+serum(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
-1579938898	Makyen	hsbuy\.org
 1579940705	double-beep	gharbaar\.com
 1579940904	double-beep	webrootsafez\.com
 1579942306	double-beep	robux\.uk
