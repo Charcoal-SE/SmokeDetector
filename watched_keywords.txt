@@ -17270,3 +17270,4 @@
 1580890772	Eliah Kagan	rod[\W_]*nysom(?#pen.io)
 1580890878	Eliah Kagan	xpotent(?:ial(?:l?y)?)?
 1580891072	Shree	bachtin\.com\.vn
+1580891492	Eliah Kagan	turkishphonenumber\.us
