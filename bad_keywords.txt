@@ -2192,3 +2192,4 @@ Mangaian[\W_]*+tribe
 thedarkcracker(?:[\W_]*+(?:at[\W_]*+)?protonmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 nature[\W_]*+crave
 abit[\W_]*+corp(?!\.com)(?:seo\d*)?
+UFC[\w\W]*Live\W*Stream
