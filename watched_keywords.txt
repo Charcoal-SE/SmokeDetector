@@ -17317,3 +17317,4 @@
 1580990016	tripleee	ravindercpa\.com
 1580990723	tripleee	netrack[\W_]*+india(?!\.com)
 1580996769	tripleee	assignmentjunkie\.co\.uk
+1581002623	Machavity	cards\.app
