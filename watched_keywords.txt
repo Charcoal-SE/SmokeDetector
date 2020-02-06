@@ -17332,5 +17332,4 @@
 1581016738	Eliah Kagan	healthyslimdiet\.tumblr\.com
 1581016830	Eliah Kagan	psee\.ly
 1581016902	Eliah Kagan	gladwev(?!\.com)
-1581021331	Machavity	kinto\.sh
 1581022187	Machavity	linqpad\.com

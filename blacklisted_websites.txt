@@ -3426,3 +3426,4 @@ agaraminfotech\.com
 dragonaturallyspeakings\.com
 snooth\.com
 newreactway\.com
+kinto\.sh
