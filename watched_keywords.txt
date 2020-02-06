@@ -17318,3 +17318,4 @@
 1580990723	tripleee	netrack[\W_]*+india(?!\.com)
 1580996769	tripleee	assignmentjunkie\.co\.uk
 1581002623	Machavity	cards\.app
+1581011118	Machavity	arbitrage-recycling\.com
