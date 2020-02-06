@@ -17315,3 +17315,4 @@
 1580989131	tripleee	food[\W_]*+service
 1580989661	tripleee	office[\W_]*+administration[\W_]*+course
 1580990016	tripleee	ravindercpa\.com
+1580990723	tripleee	netrack[\W_]*+india(?!\.com)
