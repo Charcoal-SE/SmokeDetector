@@ -17298,3 +17298,4 @@
 1580939381	Eliah Kagan	lizardsquad007(?:[\W_]*+(?:at[\W_]*+)?tutanota(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1580942180	Eliah Kagan	clarifiiusa\.com
 1580964621	Makyen	instagramcloneapps\.com
+1580964645	Makyen	instagram[\W_]*+clone[\W_]*+apps(?!\.com(?<=instagramcloneapps\.com))
