@@ -44,7 +44,9 @@ items:
 - ip: 3.230.72.35
 - ip: 34.234.62.63
 - ip: 54.210.121.111
-- ip: 23.236.62.147
+- comment: random spam sites but many FPs
+  disable: true
+  ip: 23.236.62.147
 - ip: 35.202.42.57
 - ip: 54.72.135.216
 - ip: 54.187.146.180
