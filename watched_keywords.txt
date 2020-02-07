@@ -17354,3 +17354,4 @@
 1581067585	Eliah Kagan	urdupoint\.com
 1581067811	Eliah Kagan	leon[\W_]*ryan(?#pen.io)
 1581069412	tripleee	marketwatch\.com
+1581070254	tripleee	lenvica\.com
