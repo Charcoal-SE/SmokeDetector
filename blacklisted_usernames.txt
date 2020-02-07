@@ -255,3 +255,4 @@ quran[\W_]*+for[\W_]*+kids
 (?-i:^Digiworld Expert$)
 ^Robert Will$
 (?-i:^rockzzz ajay$)
+(?-i:^insightssuccess$)
