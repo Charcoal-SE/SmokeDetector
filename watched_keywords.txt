@@ -17357,3 +17357,4 @@
 1581070254	tripleee	lenvica\.com
 1581071577	tripleee	pnews\.org
 1581072889	Shree	beautyheaven\.me\.uk
+1581072989	tripleee	tropic[\W_]*+pure[\W_]*+leaf(?:[\W_]*+cbd)?
