@@ -148,6 +148,9 @@ items:
   - dilbert.ns.cloudflare.com.
   - mimi.ns.cloudflare.com.
 - ns:
+  - dolly.ns.cloudflare.com.
+  - logan.ns.cloudflare.com.
+- ns:
   - dora.ns.cloudflare.com.
   - west.ns.cloudflare.com.
 - ns:
