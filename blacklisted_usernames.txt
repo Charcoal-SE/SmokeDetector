@@ -257,3 +257,4 @@ quran[\W_]*+for[\W_]*+kids
 (?-i:^rockzzz ajay$)
 (?-i:^insightssuccess$)
 (?-i:^James William$)
+(?-i:^Daniel Pham$)
