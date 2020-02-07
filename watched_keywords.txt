@@ -17352,3 +17352,4 @@
 1581067397	Eliah Kagan	arouza?(?:[\W_]*+ultimate)?
 1581067450	Eliah Kagan	(?-i:qzANA9qVvDI)(?#youtu.be)
 1581067585	Eliah Kagan	urdupoint\.com
+1581067811	Eliah Kagan	leon[\W_]*ryan(?#pen.io)
