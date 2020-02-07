@@ -17376,3 +17376,4 @@
 1581106909	Eliah Kagan	viacen(?:[\W_]*uk)?
 1581107021	Eliah Kagan	admissioninbangalore\.in
 1581107043	Eliah Kagan	rvceadmission\.blogspot
+1581107664	Eliah Kagan	shuftipro\.com
