@@ -17355,3 +17355,4 @@
 1581067811	Eliah Kagan	leon[\W_]*ryan(?#pen.io)
 1581069412	tripleee	marketwatch\.com
 1581070254	tripleee	lenvica\.com
+1581071577	tripleee	pnews\.org
