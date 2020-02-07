@@ -17364,3 +17364,4 @@
 1581075617	tripleee	arth[\W_]*+institute
 1581077135	tripleee	streak[\W_]*+keto
 1581080930	tripleee	acmarket\.website
+1581081049	tripleee	temotec(?:[\W_]*+learning[\W_]*+academy)?
