@@ -17345,3 +17345,4 @@
 1581058755	tripleee	fun[\W_]*+in[\W_]*+the[\W_]*+box
 1581061992	tripleee	bio-vision\.in
 1581062750	tripleee	arouza(?:[\W_]*+ultimate)?
+1581066173	tripleee	koenig-solutions\.com
