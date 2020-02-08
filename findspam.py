@@ -224,6 +224,7 @@ class Rule:
         """
         Run this rule against a post. Returns a list of 3 tuples, each in (match, reason, why) format
         """
+        log('debug', "Findspam rule {}".format(self.reason))
         if not self.filter.match(post):
             # Post not matching the filter
             return [(False, "", "")] * 3
