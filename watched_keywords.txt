@@ -17415,3 +17415,4 @@
 1581187237	ArtOfCode	2Cqcs
 1581188031	Makyen	(?:кунилингус|эромассаж|оргазма|сексе|сексом)(?#Russian NSFW content)
 1581195388	Eliah Kagan	humidaid\.com
+1581195434	Eliah Kagan	humidaid(?!\.com)
