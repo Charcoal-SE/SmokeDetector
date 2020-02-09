@@ -17430,3 +17430,4 @@
 1581253202	Eliah Kagan	cryptobtcmining1(?:@gmail\.com)?
 1581253234	Eliah Kagan	mason[\W_]+liam
 1581253414	Eliah Kagan	thetechyinfo\.com
+1581253712	Eliah Kagan	magnetshub\.com
