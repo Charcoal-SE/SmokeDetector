@@ -17465,3 +17465,4 @@
 1581345971	Machavity	(?-i:^Finley Mufutau$)
 1581348938	Machavity	bellabangs\.com
 1581352653	Das_Geek	datas-recovery\.com
+1581355512	Das_Geek	swagasoft\.com\.ng
