@@ -17458,3 +17458,4 @@
 1581340838	Eliah Kagan	(?-i:ZoU3V)(?#imgur)
 1581341947	tripleee	productlabel\.blogspot\.com
 1581341988	tripleee	ariy?an[\W_]*+packaging
+1581342563	Das_Geek	blogahp\.com
