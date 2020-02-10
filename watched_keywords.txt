@@ -17414,7 +17414,6 @@
 1581195388	Eliah Kagan	humidaid\.com
 1581195434	Eliah Kagan	humidaid(?!\.com)
 1581196143	Eliah Kagan	surveyharbor\.com
-1581196204	Eliah Kagan	tidakinginhamil\.com
 1581197526	Eliah Kagan	teluguace\.com
 1581206248	Eliah Kagan	drumoruherbalhome(?:@gmail\.com)?
 1581206467	Eliah Kagan	(?:doctor[\W_]|dr)[\W_]*umoru
