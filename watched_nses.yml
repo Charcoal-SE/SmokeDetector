@@ -332,9 +332,6 @@ items:
 - ns:
   - sue.ns.cloudflare.com.
   - thomas.ns.cloudflare.com.
-- ns:
-  - terin.ns.cloudflare.com.
-  - tess.ns.cloudflare.com.
 - comment: FPs, don't blacklist
   ns: mihanwebhost.com.
 - ns: offshoreracks.com.

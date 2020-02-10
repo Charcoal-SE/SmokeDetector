@@ -31,6 +31,9 @@ items:
 - ns:
   - lloyd.ns.cloudflare.com.
   - reza.ns.cloudflare.com.
+- ns:
+  - terin.ns.cloudflare.com.
+  - tess.ns.cloudflare.com.
 - ns: 247support-number.com.
 - ns: promoocodes.com.
 - ns: myassignmenthelp.co.uk.
