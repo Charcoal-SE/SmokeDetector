@@ -16992,7 +16992,6 @@
 1580323374	Machavity	cinecalidad\.plus
 1580325638	Das_Geek	mdnurulalam\.com
 1580325758	Das_Geek	shopy\.style
-1580330605	Das_Geek	shoes4golfers\.com
 1580331257	Machavity	airline-number\.com
 1580333623	Das_Geek	caninecompanionconsulting\.com
 1580352674	Makyen	(?-i:n5WknPgqMrQ)(?#YouTube)
