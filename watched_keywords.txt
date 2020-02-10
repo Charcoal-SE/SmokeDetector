@@ -17356,7 +17356,6 @@
 1581072889	Shree	beautyheaven\.me\.uk
 1581072989	tripleee	tropic[\W_]*+pure[\W_]*+leaf(?:[\W_]*+cbd)?
 1581073030	tripleee	bedguide\.in
-1581074165	Eliah Kagan	fitnescircle\.com
 1581074814	Eliah Kagan	star23enterprise\.com
 1581075587	Shree	nisssal\.wixsite\.com
 1581075617	tripleee	arth[\W_]*+institute
