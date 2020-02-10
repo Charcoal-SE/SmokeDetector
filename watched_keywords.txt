@@ -17166,7 +17166,6 @@
 1580725588	Eliah Kagan	ezinearticles\.com
 1580725644	Eliah Kagan	palashinternationals\.com
 1580725722	Eliah Kagan	aycup\.com\.tr
-1580725800	Eliah Kagan	amazon4expert\.org
 1580725975	Eliah Kagan	coimbatore-biz\.com
 1580726891	Eliah Kagan	tutorsindia\.com
 1580727021	Eliah Kagan	awk[\W_]*creations
