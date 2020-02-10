@@ -17449,3 +17449,4 @@
 1581330412	Eliah Kagan	businessdirectorys\.com
 1581331173	Eliah Kagan	thedigizones\.com
 1581331209	Eliah Kagan	thedigizones(?!\.com)
+1581336431	Shree	kananinternational\.com
