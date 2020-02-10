@@ -6286,7 +6286,6 @@
 1541043493	Tetsuya Yamamoto	gr3web\.com\.br
 1541044662	Shree	jamesdmeek0(?:@gmail\.com)
 1541045858	Tetsuya Yamamoto	webtiks\.com
-1541051187	Shree	couponswebdeal\.com
 1541053030	Shree	toppupmedia\.com
 1541053701	Shree	itwishes\.com
 1541055050	iBug	scoreheroapk\.live
