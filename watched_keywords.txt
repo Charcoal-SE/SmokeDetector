@@ -17451,3 +17451,4 @@
 1581331209	Eliah Kagan	thedigizones(?!\.com)
 1581336431	Shree	kananinternational\.com
 1581336858	tripleee	astrologer[\W_]*+kashiram
+1581336913	tripleee	(?-i:^david whalen$)
