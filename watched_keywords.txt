@@ -17453,3 +17453,4 @@
 1581336858	tripleee	astrologer[\W_]*+kashiram
 1581336913	tripleee	(?-i:^david whalen$)
 1581337745	Eliah Kagan	machhili\.com
+1581338172	tripleee	pulseroll\.com
