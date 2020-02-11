@@ -17481,3 +17481,4 @@
 1581422651	tripleee	kmg[\W_]*+dairy
 1581422717	tripleee	a2[\W_]*+milk
 1581434261	Machavity	tfs4jira-azure-devops-integration
+1581434333	Machavity	(?:-i:703379\.TFS4JIRA)
