@@ -17480,3 +17480,4 @@
 1581420098	Shree	viewmypaycheck\.co
 1581422651	tripleee	kmg[\W_]*+dairy
 1581422717	tripleee	a2[\W_]*+milk
+1581434261	Machavity	tfs4jira-azure-devops-integration
