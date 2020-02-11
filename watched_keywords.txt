@@ -17483,3 +17483,4 @@
 1581434261	Machavity	tfs4jira-azure-devops-integration
 1581434394	Machavity	(?-i:703379\.TFS4JIRA)
 1581447935	Das_Geek	happyholiquotess\.blogspot\.com
+1581448036	Das_Geek	sphynx\.company\.com
