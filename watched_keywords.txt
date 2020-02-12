@@ -17524,3 +17524,4 @@
 1581528879	Eliah Kagan	black[\W_]*line[\W_]*edge
 1581528906	Eliah Kagan	(?-i:tf2jgp4-01I)(?#YouTube)
 1581529295	Eliah Kagan	(?-i:uzbzabedyPM)(?#youtu.be)
+1581529309	Eliah Kagan	seocheckpoints\.com
