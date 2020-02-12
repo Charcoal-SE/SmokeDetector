@@ -17521,3 +17521,4 @@
 1581528784	Eliah Kagan	myprepaidbalance\.vip
 1581528803	Eliah Kagan	(?-i:0rVrgokaLUs)(?#youtu.be)
 1581528832	Eliah Kagan	onlinenoorulquran\.com
+1581528879	Eliah Kagan	black[\W_]*line[\W_]*edge
