@@ -17531,3 +17531,4 @@
 1581529584	Eliah Kagan	gs[\W_]*auto[\W_]*clicker
 1581538215	Eliah Kagan	randy331(?:@protonmail\.com)?
 1581541920	Eliah Kagan	bear[\W_]+is[\W_]+best
+1581542012	Eliah Kagan	aawillie01@(?:gmail\.com)?
