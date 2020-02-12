@@ -259,3 +259,4 @@ quran[\W_]*+for[\W_]*+kids
 (?-i:^James William$)
 (?-i:^Daniel Pham$)
 (?-i:^Sunday$)
+(?-i:^Talha Ahmed$)
