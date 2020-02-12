@@ -17528,3 +17528,4 @@
 1581529322	Eliah Kagan	supremeten\.com
 1581529340	Eliah Kagan	vores-mediehus\.dk
 1581529354	Eliah Kagan	autoclickerdownload\.com
+1581529584	Eliah Kagan	gs[\W_]*auto[\W_]*clicker
