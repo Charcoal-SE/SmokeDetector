@@ -14954,7 +14954,6 @@
 1575606911	Makyen	girlsaskguys\.com
 1575606937	Makyen	bucketlist\.org
 1575606966	Makyen	Bất[\W_]*+Động[\W_]*+Sản
-1575611318	Makyen	fitnesscheif\.com
 1575613382	Shree	msoft-office\.com
 1575622267	tripleee	cybjurnal\.com
 1575622425	tripleee	dailyimagefunda\.com
