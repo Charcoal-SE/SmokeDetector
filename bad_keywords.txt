@@ -2196,3 +2196,4 @@ UFC[\w\W]*Live\W*Stream
 viacen
 nox[\W_]*+pro
 revita
+fitawarezone(?!\.com)
