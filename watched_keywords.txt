@@ -17533,7 +17533,6 @@
 1581541920	Eliah Kagan	bear[\W_]+is[\W_]+best
 1581542012	Eliah Kagan	aawillie01@(?:gmail\.com)?
 1581542210	Eliah Kagan	wbmsmart\.com
-1581546377	gparyani	api\.whatsapp\.com
 1581550380	Eliah Kagan	mulanmovieonline\.com
 1581551326	Eliah Kagan	(?-i:PAzVMJ_6pbQ)(?#YouTube)
 1581551541	Eliah Kagan	speechpad\.pw
