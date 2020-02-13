@@ -17538,3 +17538,4 @@
 1581551541	Eliah Kagan	speechpad\.pw
 1581554542	Makyen	(?:chingas|perra|cabron)(?#Spanish offensive)
 1581556678	Makyen	manscaped
+1581569703	Makyen	ketoformationreviews(?#sites.google.com)
