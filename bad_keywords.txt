@@ -2195,3 +2195,4 @@ abit[\W_]*+corp(?!\.com)(?:seo\d*)?
 UFC[\w\W]*Live\W*Stream
 viacen
 nox[\W_]*+pro
+revita
