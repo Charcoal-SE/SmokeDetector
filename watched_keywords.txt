@@ -17551,3 +17551,4 @@
 1581580774	tripleee	holi-2020\.com
 1581581265	tripleee	rtutilities\.com
 1581588706	Shree	sarkariresultsexam\.com
+1581591270	tripleee	allsupplement_(?#twitter)
