@@ -248,6 +248,11 @@ def blacklist_integrity_check():
                     seen[line] = '{0}:{1}'.format(bl_file, lineno)
     return errors
 
+def chunk_list(list_in, chunk_size):
+    """
+    Split a list into chunks.
+    """
+    return [list_in[i:i + chunk_size] for i in range(0, len(list_in), chunk_size)]
 
 class SecurityError(Exception):
     pass

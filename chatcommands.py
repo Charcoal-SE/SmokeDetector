@@ -26,7 +26,7 @@ from html import unescape
 from ast import literal_eval
 # noinspection PyCompatibility
 import regex
-from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, reload_modules
+from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, reload_modules, chunk_list
 from classes import Post
 from classes.feedback import *
 from tasks import Tasks
@@ -323,7 +323,8 @@ def do_blacklist(blacklist_type, msg, force=False):
             has_unescaped_dot = 'The regex contains an unescaped "`.`"; in most cases, it should be "`\\.`"'
 
         try:
-            r = regex.compile(pattern, city=findspam.city_list, ignore_unused=True)
+            r = regex.compile(findspam.format_with_city_list(pattern))
+            # r = regex.compile(pattern, city=findspam.city_list, ignore_unused=True)
         except regex._regex_core.error:
             raise CmdException("An invalid pattern was provided, please check your command.")
         if r.search(GlobalVars.valid_content) is not None:
@@ -1172,9 +1173,10 @@ def test(content, alias_used="test"):
 
 def bisect_regex(s, regexes, bookend=True):
     regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)({})"
-    compiled = regex.compile(regex_to_format.format("|".join([r for r, i in regexes])),
-                             city=findspam.city_list,
-                             ignore_unused=True)
+    compiled = regex.compile(findspam.format_with_city_list(regex_to_format.format("|".join([r for r, i in regexes]))))
+    # compiled = regex.compile(regex_to_format.format("|".join([r for r, i in regexes])),
+    #                          city=findspam.city_list,
+    #                          ignore_unused=True)
     match = compiled.search(s)
     if not match:
         return []
@@ -1185,6 +1187,31 @@ def bisect_regex(s, regexes, bookend=True):
     mid = 2 ** mid_len
     return bisect_regex(s, regexes[:mid], bookend=bookend) + bisect_regex(s, regexes[mid:], bookend=bookend)
 
+def bisect_regex_one_by_one(test_text, regexes, bookend=True):
+    regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)({})"
+    results = []
+    for expresion in regexes:
+        # print('bisect: testing regex: {}'.format(expresion))
+        compiled = regex.compile(findspam.format_with_city_list(regex_to_format.format(expresion[0])))
+        # compiled = regex.compile(regex_to_format.format(expresion[0]),
+        #                          city=findspam.city_list,
+        #                          ignore_unused=True)
+        match = compiled.search(test_text)
+        if match:
+            # print('match: {}'.format(match))
+            results.append(expresion)
+    return results
+
+def bisect_regex_in_n_size_chunks(size, test_text, regexes, bookend=True):
+    regex_chunks = chunk_list(regexes, size)
+    results = []
+    for chunk in regex_chunks:
+        # print('bisect: testing regex chunk: {}'.format(chunk))
+        matches = bisect_regex(test_text, chunk, bookend)
+        if matches:
+            # print('matches: {}'.format(matches))
+            results.extend(matches)
+    return results
 
 @command(str, privileged=True, whole_msg=True, aliases=['what'])
 def bisect(msg, s):
@@ -1200,12 +1227,18 @@ def bisect(msg, s):
         s = rebuild_str(msg.content_source.split(" ", 1)[1])
     except AttributeError:
         pass
-    matching = bisect_regex(s, bookended_regexes, bookend=True)
-    matching.extend(bisect_regex(s, non_bookended_regexes, bookend=False))
+    matching = bisect_regex_in_n_size_chunks(64, s, bookended_regexes, bookend=True)
+    matching.extend(bisect_regex_in_n_size_chunks(64, s, non_bookended_regexes, bookend=False))
+    # matching = bisect_regex(s, bookended_regexes, bookend=True)
+    # matching.extend(bisect_regex(s, non_bookended_regexes, bookend=False))
+    # matching = bisect_regex_one_by_one(s, bookended_regexes, bookend=True)
+    # matching.extend(bisect_regex_one_by_one(s, non_bookended_regexes, bookend=False))
 
     if not matching:
         return "{!r} is not caught by a blacklist or watchlist item.".format(s)
 
+    print('matching: {}'.format(matching))
+    print('len(matching): {}'.format(len(matching)))
     if len(matching) == 1:
         r, (l, f) = matching[0]
         return "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1})".format(

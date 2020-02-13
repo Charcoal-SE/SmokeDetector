@@ -86,10 +86,16 @@ def test_bisect():
         },
         "content_source": None
     })
+    # test_text = "<p>shiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiit!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>\n"
+    # msg.content_source = "!!/bisect {}".format(test_text)
+    # assert chatcommands.bisect(None, original_msg=msg) == r"{!r} is not caught by a blacklist or watchlist item.".format(test_text)
     msg.content_source = "!!/bisect :::essayssos.com:::"
     assert chatcommands.bisect(None, original_msg=msg) == r"Matched by `essayssos\.com` on [line 1 of watched_keywords.txt](https://github.com/{}/blob/{}/watched_keywords.txt#L1)".format(GlobalVars.bot_repo_slug, GlobalVars.commit.id)
-    msg.content_source = "!!/bisect OoOasdfghjklOoO"
-    assert chatcommands.bisect(None, original_msg=msg) == r"'OoOasdfghjklOoO' is not caught by a blacklist or watchlist item."
+    test_text = "OoOasdfghjklOoO"
+    msg.content_source = "!!/bisect {}".format(test_text)
+    # msg.content_source = "!!/bisect OoOasdfghjklOoO"
+    # assert chatcommands.bisect(None, original_msg=msg) == r"'OoOasdfghjklOoO' is not caught by a blacklist or watchlist item."
+    assert chatcommands.bisect(None, original_msg=msg) == r"{!r} is not caught by a blacklist or watchlist item.".format(test_text)
 
 
 """

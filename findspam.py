@@ -224,7 +224,8 @@ class Rule:
         """
         Run this rule against a post. Returns a list of 3 tuples, each in (match, reason, why) format
         """
-        log('debug', "Findspam rule {}".format(self.reason))
+        # print("Findspam rule: {}".format(self.reason))
+        # print("Findspam regex: {}".format(self.regex))
         if not self.filter.match(post):
             # Post not matching the filter
             return [(False, "", "")] * 3
@@ -279,9 +280,11 @@ class Rule:
                 else:
                     result_body = (False, "", "")
         elif self.regex:
-            compiled_regex = regex.compile(self.regex, regex.UNICODE, city=city_list, ignore_unused=True)
+            compiled_regex = regex.compile(format_with_city_list(self.regex), regex.UNICODE)
+            # compiled_regex = regex.compile(self.regex, regex.UNICODE, city=city_list, ignore_unused=True)
 
             if self.title and not post.is_answer:
+                # print("title")
                 matches = list(compiled_regex.finditer(post.title))
                 result_title = (bool(matches), reason_title,
                                 reason_title.capitalize() + " - " + FindSpam.match_infos(matches))
@@ -289,6 +292,7 @@ class Rule:
                 result_title = (False, "", "")
 
             if self.username:
+                # print("username")
                 matches = list(compiled_regex.finditer(post.user_name))
                 result_username = (bool(matches), reason_username,
                                    reason_username.capitalize() + " - " + FindSpam.match_infos(matches))
@@ -297,6 +301,7 @@ class Rule:
 
             if (self.body and not post.body_is_summary) \
                     or (self.body_summary and post.body_is_summary):
+                # print("body")
                 matches = list(compiled_regex.finditer(body_to_check))
                 result_body = (bool(matches), reason_body,
                                reason_body.capitalize() + " - " + FindSpam.match_infos(matches))
@@ -863,7 +868,7 @@ def keyword_link(s, site):   # thanking keyword and a link in the same short ans
 @create_rule("bad keyword in link text in {}", title=False, stripcodeblocks=True)
 def bad_link_text(s, site):   # suspicious text of a hyperlink
     s = regex.sub("</?(?:strong|em)>", "", s)  # remove font tags
-    keywords = regex.compile(
+    keywords = regex.compile(format_with_city_list(
         r"(?isu)"
         r"\b(buy|cheap) |live[ -]?stream|"
         r"\bmake (money|\$)|"
@@ -873,7 +878,8 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
         r"(?:phone|hotline|helpline)? ?numbers?\b|"
         r"(best|make|full|hd|software|cell|data|media)[\w ]{1,20}"
         r"" r"(online|service|company|agency|repair|recovery|school|university)|"
-        r"\b(writing (service|help)|essay (writing|tips))", city=city_list, ignore_unused=True)
+        r"\b(writing (service|help)|essay (writing|tips))"))
+        # r"\b(writing (service|help)|essay (writing|tips))", city=city_list, ignore_unused=True)
     links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
     business = regex.compile(
         r"(?i)(^| )(airlines?|apple|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
@@ -1701,6 +1707,11 @@ city_list = [
     # buyabans.com spammer uses creative variations
     "Sri Lanka", "Srilanka", "Srilankan",
 ]
+city_list_as_group = '(?:{})'.format('|'.join(city_list))
+city_list_sub_regex = regex.compile(r'\\L<city>', regex.UNICODE)
+
+def format_with_city_list(regex_text):
+    return regex.sub(city_list_sub_regex, city_list_as_group, regex_text)
 
 
 ################################################################################
