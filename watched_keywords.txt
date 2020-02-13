@@ -13001,7 +13001,6 @@
 1568963919	Makyen	ketoproplus\.blogspot\.com
 1568963930	Makyen	brother-customerservice\.com
 1568964795	Makyen	magicjack[\W_]*+help[\W_]*+line[\W_]*+number
-1568964805	Makyen	linuxteck\.com
 1568965063	Makyen	dienmaynewsun\.com
 1568965072	Makyen	linhmkt
 1568965219	Makyen	sharktankdietreviews\.tumblr\.com
