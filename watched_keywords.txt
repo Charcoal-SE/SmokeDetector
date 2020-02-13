@@ -17547,3 +17547,4 @@
 1581574829	Makyen	keto[\W_]*+360(?:[\W_]*+(?:slim|advanced|pill|review|\d++|[\da-f]{4,}+)s?)*
 1581574864	Makyen	(?-i:4K4RUH4WkXc)(?#youtu.be)
 1581575350	tripleee	rkgoc\.in
+1581576116	tripleee	windowstechtalk\.com
