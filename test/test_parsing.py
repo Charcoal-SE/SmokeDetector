@@ -121,7 +121,7 @@ def test_post_parse_errors():
     failure = None
     try:
         failure = Post()
-        assert 'Post with no initializer did not fail' is False
+        assert 'Post with no initializer did not fail.' == 'An exception should have been generated and caught.'
     except PostParseError:
         pass
     assert failure is None

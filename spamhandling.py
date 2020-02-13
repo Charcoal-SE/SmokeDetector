@@ -119,7 +119,7 @@ def handle_spam(post, reasons, why):
     if why is not None and why != "":
         datahandling.add_why(post.post_site, post.post_id, why)
 
-    if post.is_answer and post.post_id is not None and post.post_id is not "":
+    if post.is_answer and post.post_id is not None and post.post_id != "":
         datahandling.add_post_site_id_link((post.post_id, post.post_site, "answer"), post.parent.post_id)
 
     try:

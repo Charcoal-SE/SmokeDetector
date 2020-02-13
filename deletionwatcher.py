@@ -114,7 +114,7 @@ class DeletionWatcher:
                 pickle_output[post_site].append(post_id)
 
         with open("deletionIDs.p", "wb") as pickle_file:
-                pickle.dump(pickle_output, pickle_file)
+            pickle.dump(pickle_output, pickle_file)
 
     @staticmethod
     def _check_batch(saved):

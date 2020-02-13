@@ -310,7 +310,7 @@ class Metasmoke:
                     exit_mode("standby")
 
                 if response.get('shutdown', False):
-                        exit_mode("shutdown")
+                    exit_mode("shutdown")
 
             except Exception:  # TODO: What could happen here?
                 pass
