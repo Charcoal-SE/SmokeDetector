@@ -2198,3 +2198,4 @@ nox[\W_]*+pro
 revita
 fitawarezone(?!\.com)
 astrologer[\W_]*+kashiram
+oasis[\W_]trim(?![\W_]*+keto)
