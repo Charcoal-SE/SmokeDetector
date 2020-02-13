@@ -2197,3 +2197,4 @@ viacen
 nox[\W_]*+pro
 revita
 fitawarezone(?!\.com)
+astrologer[\W_]*+kashiram
