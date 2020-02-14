@@ -17590,3 +17590,4 @@
 1581661680	Eliah Kagan	shanidev[\W_]*god[\W_]*tell[\W_]*me
 1581663247	Eliah Kagan	pillswant\.com
 1581664626	tripleee	mysore\.taxi
+1581665157	tripleee	shanidev
