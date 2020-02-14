@@ -17300,7 +17300,6 @@
 1580990723	tripleee	netrack[\W_]*+india(?!\.com)
 1580996769	tripleee	assignmentjunkie\.co\.uk
 1581002623	Machavity	cards\.app
-1581011118	Machavity	arbitrage-recycling\.com
 1581012618	Das_Geek	domzik\.com
 1581012870	Machavity	jorgebrasilico(?:@gmail\.com)?
 1581015732	Eliah Kagan	logixgenetics
