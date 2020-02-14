@@ -2598,7 +2598,7 @@ topteethwhiteningtips\.com
 800toolfreeno\.com
 fitnessalsonutrition\.com
 sqworl\.com
-cheezburger\.com
+\b(?<![^\W_]-)cheezburger\.com(?![.-][^\W_])\b
 supportservicehelp\.com
 cogniscient\.in
 supplementengine\.co\.za
