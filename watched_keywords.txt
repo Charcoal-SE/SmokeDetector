@@ -17639,3 +17639,4 @@
 1581762819	double-beep	edwebdevelopment\.com
 1581781905	Makyen	skip[\W_]*+hire[\W_]*+services
 1581781926	Makyen	shapoorjipallonjiinorthernlights\.com
+1581781949	Makyen	shapoorji[\W_]*+pallonji[\W_]*+northern[\W_]*+lights(?!\.com(?<=shapoorjipallonjiinorthernlights\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
