@@ -17642,3 +17642,4 @@
 1581781949	Makyen	shapoorji[\W_]*+pallonji[\W_]*+northern[\W_]*+lights(?!\.com(?<=shapoorjipallonjiinorthernlights\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1581781970	Makyen	emerald[\W_]*+essence(?:[\W_]*+(?:oil|cbd|review|\d++|[\da-f]{4,}+)s?)*
 1581782003	Makyen	ramulast(?:[\W_]*+(?:booster|testo|\d++|[\da-f]{4,}+))*
+1581782027	Makyen	blockchainappsdeveloper\.com
