@@ -17638,3 +17638,4 @@
 1581762358	double-beep	americanidolvoting\.com
 1581762819	double-beep	edwebdevelopment\.com
 1581781905	Makyen	skip[\W_]*+hire[\W_]*+services
+1581781926	Makyen	shapoorjipallonjiinorthernlights\.com
