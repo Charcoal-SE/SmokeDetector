@@ -17655,3 +17655,4 @@
 1581804835	Eliah Kagan	cryptowealthbot\.tumblr\.com
 1581804857	Eliah Kagan	cryptowealthbot\.blogspot
 1581804891	Eliah Kagan	turmeric[\W_]*total[\W_]*boost
+1581805690	Eliah Kagan	safakaza\.com
