@@ -17644,3 +17644,4 @@
 1581782003	Makyen	ramulast(?:[\W_]*+(?:booster|testo|\d++|[\da-f]{4,}+))*
 1581782027	Makyen	blockchainappsdeveloper\.com
 1581782110	Makyen	top10cbdoilstore\.com
+1581792533	Makyen	getdailybuzz\.com
