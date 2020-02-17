@@ -17677,3 +17677,4 @@
 1581927373	Eliah Kagan	Fastary
 1581927399	Eliah Kagan	(?-i:VsbwxnBLxkQ)(?#youtu.be)
 1581928279	Makyen	veona[\W_]*+creme(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1581928917	Eliah Kagan	ppowertv\.com
