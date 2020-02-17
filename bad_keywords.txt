@@ -2200,3 +2200,4 @@ fitawarezone(?!\.com)
 astrologer[\W_]*+kashiram
 oasis[\W_]trim(?![\W_]*+keto)
 fithub
+moore\W*finance
