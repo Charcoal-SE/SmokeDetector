@@ -17720,3 +17720,4 @@
 1582011395	Makyen	alpha[\W_]*+x[\W_]*+men(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1582011511	Makyen	(?-i:QvPeN\.png)
 1582013879	Makyen	ketoprimedietpills\.com
+1582013912	Makyen	slim[\W_]*+ensure[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
