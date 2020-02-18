@@ -2203,3 +2203,4 @@ fithub
 moore\W*finance
 shareit[\W_]+for[\W_]+pc
 vasoplexx
+Joyoshare
