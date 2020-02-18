@@ -17756,3 +17756,4 @@
 1582051348	Das_Geek	codecanyon\.net
 1582061089	Das_Geek	mdiware\.com
 1582062080	Makyen	(?-i:aYuD2\.png)
+1582062106	Makyen	ronikleylopessalgado(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
