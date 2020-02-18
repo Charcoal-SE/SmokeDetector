@@ -2201,3 +2201,4 @@ astrologer[\W_]*+kashiram
 oasis[\W_]trim(?![\W_]*+keto)
 fithub
 moore\W*finance
+shareit[\W_]+for[\W_]+pc
