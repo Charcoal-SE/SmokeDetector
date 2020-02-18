@@ -15100,7 +15100,6 @@
 1576042435	tripleee	pik[\W_]*+(?:chat(?!\.pro)|messenger)
 1576042469	tripleee	megaketomart\.com
 1576046873	tripleee	sixtic\.com
-1576052278	Glorfindel	joyoshare
 1576057066	Shree	b-123-hp\.com
 1576059755	tripleee	oodlestechnologies\.com
 1576060045	Shree	casaderamo\.com
