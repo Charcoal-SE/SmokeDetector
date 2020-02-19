@@ -17767,3 +17767,4 @@
 1582093910	Makyen	veterans[\W_]*+vitality(?:oil|cbd|[\W_]*+(?:\d++|[\da-f]{4,}+))+
 1582094427	Shree	sunriseivfgurgaon\.com
 1582094450	Shree	moneymakar\.com
+1582094754	Shree	technotanveer\.com
