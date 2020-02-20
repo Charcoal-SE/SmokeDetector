@@ -2205,3 +2205,4 @@ shareit[\W_]+for[\W_]+pc
 vasoplexx
 Joyoshare
 satta[\W_]*king
+(?:super\W*)?vidalista
