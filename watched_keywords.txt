@@ -17827,3 +17827,4 @@
 1582184364	Makyen	jellygamatasli\.atavist\.com
 1582185823	Makyen	(?-i:tOwL09nW_Wc)(?#youtu.be)
 1582185847	Makyen	beyond20s[\W_]*+skin(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1582185930	Makyen	tipztoday\.com
