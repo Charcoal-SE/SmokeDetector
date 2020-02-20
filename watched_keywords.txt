@@ -17805,3 +17805,4 @@
 1582175135	Makyen	(?-i:SzvbM\.jpg)
 1582178018	Makyen	microteklearning\.com
 1582178041	Makyen	microteklearninginc(?#facebook.com)
+1582178063	Makyen	microtklearning(?#twitter.com)
