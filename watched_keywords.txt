@@ -17824,3 +17824,4 @@
 1582181887	Makyen	maxx[\W_]*+boosted(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1582181910	Makyen	(?-i:K0cUWAoXcGc)(?#youtu.be)
 1582181933	Makyen	(?-i:m56k2\.jpg)
+1582184364	Makyen	jellygamatasli\.atavist\.com
