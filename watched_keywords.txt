@@ -16912,7 +16912,6 @@
 1580208837	tripleee	ansr\.com
 1580209014	tripleee	routererrorcode\.com
 1580209528	tripleee	ttp-hard-drills\.net
-1580211406	tripleee	antiersolutions\.com
 1580211486	tripleee	eloydi\.com
 1580215512	tripleee	pcmonks\.net
 1580220020	tripleee	thearensic\.com
