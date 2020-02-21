@@ -17868,3 +17868,4 @@
 1582267770	Makyen	(?-i:gZ5dcuBPQoY)(?#youtu.be)
 1582267792	Makyen	health[\W_]*+gold(?:[\W_]*+(?:oil|cbd|\d++|[\da-f]{4,}+))*
 1582267831	Makyen	surajestate\.com
+1582267853	Makyen	gagannulife\.com
