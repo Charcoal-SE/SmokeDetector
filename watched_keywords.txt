@@ -17881,3 +17881,4 @@
 1582305210	Eliah Kagan	fogwing\.io
 1582305395	Eliah Kagan	branding[\W_]*world
 1582305488	Eliah Kagan	sstechnovation\.in
+1582305590	Eliah Kagan	sstechnovation(?!\.in)
