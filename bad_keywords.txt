@@ -558,7 +558,7 @@ proactol
 elixir\Wrevolution
 testo\W?pro
 orviax
-wesleymarkhackers
+wesleymarkhackers(?:@gmail\.com)?
 titan\Wxplode
 alpha\Wsize\Wfuel
 xl\Wtest\Wplus
