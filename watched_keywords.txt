@@ -17908,3 +17908,4 @@
 1582353872	Makyen	gf4central\.com
 1582354967	Makyen	essence[\W_]*+cbd(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+))*
 1582357176	Makyen	doisongphapluat\.com
+1582357199	Makyen	rajkumarsdentistry\.in
