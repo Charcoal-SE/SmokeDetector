@@ -17919,3 +17919,4 @@
 1582360770	Makyen	allassignmenthelp(?!\.com)
 1582360929	Makyen	instant[\W_]*+assignment[\W_]*+help(?:[\W_]*+(?:online|\d++|[\da-f]{4,}+))*
 1582361131	Makyen	freecodezilla\.com
+1582361954	Eliah Kagan	(?-i:hI_y82hoFX4)(?#youtu.be)
