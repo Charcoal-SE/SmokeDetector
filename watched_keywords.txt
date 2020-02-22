@@ -17917,3 +17917,4 @@
 1582358319	Makyen	transferwesternunion623(?:@gmail\.com)?
 1582359127	Makyen	debtreliefsupport\.org
 1582360770	Makyen	allassignmenthelp(?!\.com)
+1582360929	Makyen	instant[\W_]*+assignment[\W_]*+help(?:[\W_]*+(?:online|\d++|[\da-f]{4,}+))*
