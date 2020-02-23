@@ -17943,3 +17943,4 @@
 1582468563	Makyen	infogeekers\.org
 1582468586	Makyen	(?-i:OeLRI\.png)
 1582469018	Makyen	techdibba\.blogspot
+1582469131	Makyen	techowish\.com
