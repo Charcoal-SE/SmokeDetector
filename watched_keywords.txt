@@ -17936,3 +17936,4 @@
 1582392465	Makyen	pagerhackconsults247(?:@gmail\.com)?
 1582407495	Makyen	timeofhealth\.org
 1582439613	Makyen	quadbikingindubai\.com
+1582439636	Makyen	platinum[\W_]*+adventure[\W_]*+tours
