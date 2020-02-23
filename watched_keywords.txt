@@ -17940,3 +17940,4 @@
 1582441366	Makyen	everest[\W_]*+base[\W_]*+camp[\W_]*+luxury[\W_]*+trek
 1582443156	Makyen	sattakingone\.in
 1582468541	Makyen	skyrocketmedia\.org
+1582468563	Makyen	infogeekers\.org
