@@ -17937,3 +17937,4 @@
 1582407495	Makyen	timeofhealth\.org
 1582439613	Makyen	quadbikingindubai\.com
 1582439636	Makyen	platinum[\W_]*+adventure[\W_]*+tours
+1582441366	Makyen	everest[\W_]*+base[\W_]*+camp[\W_]*+luxury[\W_]*+trek
