@@ -17508,7 +17508,7 @@
 1581554542	Makyen	(?:chingas|perra|cabron)(?#Spanish offensive)
 1581556678	Makyen	manscaped
 1581569703	Makyen	ketoformationreviews(?#sites.google.com)
-1581569718	Makyen	keto[\W_]*+formation[\W_]*+official(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1581569718	Makyen	keto[\W_]*+formation(?:[\W_]*+(?:official|diet|warning|benefit|side|effect|\d++|[\da-f]{4,}+)s?)*
 1581572709	Makyen	bionic[\W_]*+bliss(?:[\W_]*+(?:organic|oil|cbd|\d++|[\da-f]{4,}+))*
 1581572729	Makyen	(?-i:lhA3266cbIM)(?#youtu.be)
 1581573441	tripleee	rpachallenge\.com
@@ -17696,7 +17696,6 @@
 1582007416	Shree	getassist\.net
 1582008368	Shree	gadgetsick\.com
 1582009101	Makyen	(?-i:Nq69F0FGTLU)(?#YouTube)
-1582009116	Makyen	keto[\W_]*+formation(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1582009244	Makyen	pillsneed\.wordpress\.com
 1582009265	Makyen	pillsneedus(?#sites.google.com)
 1582009291	Makyen	gold[\W_]*+trim[\W_]*+x(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
