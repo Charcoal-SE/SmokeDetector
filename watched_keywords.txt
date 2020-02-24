@@ -17994,3 +17994,4 @@
 1582578798	Eliah Kagan	siftrics\.com
 1582586920	Eliah Kagan	autotiregauge\.com
 1582586944	Eliah Kagan	tiremanometer\.com
+1582587023	Eliah Kagan	Ningbo\W*Godeson(?:\W*Instrument\W*Tech)?
