@@ -17970,3 +17970,4 @@
 1582566348	Makyen	moneytap
 1582566370	Makyen	primeshop247\.com
 1582566394	Makyen	primeshop247(?!\.com)
+1582566452	Makyen	refugeehopes\.com
