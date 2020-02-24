@@ -17995,3 +17995,4 @@
 1582586920	Eliah Kagan	autotiregauge\.com
 1582586944	Eliah Kagan	tiremanometer\.com
 1582587023	Eliah Kagan	Ningbo\W*Godeson(?:\W*Instrument\W*Tech)?
+1582587691	Eliah Kagan	degreessymbolmac\.com
