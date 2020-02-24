@@ -1805,7 +1805,7 @@ infatica
 king\W?servers
 kamadex
 advcnd
-(?:oasis[\W_]*+)?trim[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+(?:oasis[\W_]*+)?trim[\W_]*+keto(?:[\W_]*+(?:fast|\d++|[\da-f]{4,}+))*
 velocity\W?trim
 (?<=/)ketosis(?:-\w+)+
 thepilpedia(?!\.com)
