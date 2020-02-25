@@ -18001,3 +18001,4 @@
 1582593587	Eliah Kagan	(?-i:Tav6H)(?#imgur)
 1582593891	Eliah Kagan	(?-i:aE5Zb)(?#imgur)
 1582594341	Eliah Kagan	(?-i:yWLdZ)(?#imgur)
+1582595281	Eliah Kagan	tran+(?:y|ie)s?
