@@ -18008,3 +18008,4 @@
 1582613673	Makyen	(?-i:K-ByBfIIYZc)(?#youtu.be)
 1582625192	Eliah Kagan	marvelmind\.com
 1582625260	Eliah Kagan	marvelmind(?!\.com)
+1582625398	Eliah Kagan	devmaster\W*app(?:@gmail\.com)?
