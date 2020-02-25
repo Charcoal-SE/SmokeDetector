@@ -2214,3 +2214,4 @@ dr\W*bakaba
 leniva(?:[\W_]*+(?:aging|anti|skin|cream|creme|reviews?|\d++|[\da-f]{4,}+))*
 digitalcurrency14(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?+g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?+c[\W_]*+o[\W_]*+m)?
 cyber\W*golden\W*hacker(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
+wuhan[\W_]*+hezhong[\W_]*+biochemical[\W_]*+manufacturing
