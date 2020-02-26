@@ -18029,3 +18029,4 @@
 1582647882	Eliah Kagan	hucker[\W_]*marius(?#medium)
 1582655204	Machavity	excelpedia\.net
 1582657723	Das_Geek	computershala\.com
+1582689419	Shree	luxemiss\.com
