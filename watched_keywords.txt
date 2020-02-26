@@ -18046,3 +18046,4 @@
 1582702187	Makyen	mailcot\.com
 1582702310	Makyen	mavcomm[\W_]*+group(?!\.com(?<=mavcommgroup\.com))
 1582704651	Makyen	saglikvitrin\.com
+1582704674	Makyen	curcumin[\W_]*+500
