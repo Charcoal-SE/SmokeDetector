@@ -18044,3 +18044,4 @@
 1582701221	Shree	toptechytips\.com
 1582701466	Shree	neweraeducation\.in
 1582702187	Makyen	mailcot\.com
+1582702310	Makyen	mavcomm[\W_]*+group(?!\.com(?<=mavcommgroup\.com))
