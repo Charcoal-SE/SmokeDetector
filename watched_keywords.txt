@@ -18060,3 +18060,4 @@
 1582738398	Makyen	mojosolutioncentre\.co\.za
 1582738671	Das_Geek	topsellervnc(?:@gmail\.com)?
 1582744243	Machavity	icetutor\.com
+1582762044	Makyen	cybercrack\.hackers(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
