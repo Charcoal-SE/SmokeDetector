@@ -368,7 +368,7 @@ silkalike
 vitaeyes
 neutratone
 luminis(?:[\W_]*+(?:skin|care|advanced?|serum|\d++|[\da-f]{4,}+))+
-biocore
+biocore(?<!github.com/biocore)(?!-stag\.utem\.edu\.my)
 visible\Wallure
 eye\Wroyale
 LinkFixer\WAdvanced
