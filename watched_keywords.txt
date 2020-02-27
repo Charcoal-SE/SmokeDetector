@@ -18066,3 +18066,4 @@
 1582777267	Shree	streetnet\.vn
 1582777299	Shree	streetnetmedia\.com
 1582782735	Shree	cypherace\.projanalytics\.com
+1582784862	Shree	video-softwares\.com
