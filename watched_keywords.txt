@@ -18125,3 +18125,4 @@
 1582907936	Makyen	zen[\W_]*+green(?:[\W_]*+(?:cbd|\d++|[\da-f]{4,}+))*
 1582908592	Makyen	businessindias\.com
 1582911965	Daniil Manokhin	github\.com/rakshitbharat/cleanify
+1582917290	Makyen	escortsforlondon\.co\.uk
