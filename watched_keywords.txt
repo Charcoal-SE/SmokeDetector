@@ -18122,3 +18122,4 @@
 1582897851	Makyen	attcustomerservicephonenumber\.com
 1582899439	Das_Geek	desertdreamtourism\.com
 1582904574	Makyen	huffingtonpostdotcom\.blogspot
+1582907936	Makyen	zen[\W_]*+green(?:[\W_]*+(?:cbd|\d++|[\da-f]{4,}+))*
