@@ -9934,7 +9934,6 @@
 1558357270	Machavity	fc\.lc
 1558357514	Machavity	shrink-service\.it
 1558357658	Machavity	clicksfly\.com
-1558357809	Machavity	gestyy\.com
 1558358825	Glorfindel	worldcupupdates\.org
 1558358977	Machavity	clk\.ink
 1558367533	double-beep	wordpressrun\.com
