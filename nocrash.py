@@ -37,7 +37,8 @@ console_logger.setLevel(logging.DEBUG)
 console_logger.setFormatter(logging.Formatter(logging_format_string))
 logging.getLogger().addHandler(console_logger)
 
-options = {"standby", "charcoal-hq-only", "no-chat", "no-git-user-check"}
+# options = {"standby", "no-git-user-check"}
+options = {"standby"}
 persistent_arguments = sys.argv
 
 count = 0
