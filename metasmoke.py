@@ -284,7 +284,7 @@ class Metasmoke:
             payload = {
                 'location': GlobalVars.location,
                 'key': metasmoke_key,
-                'standby': GlobalVars.standby_mode
+                'standby': GlobalVars.standby_mode or GlobalVars.no_se_activity_scan
             }
 
             headers = {'content-type': 'application/json'}
@@ -299,7 +299,8 @@ class Metasmoke:
                     log('info', "Received pull command from MS ping response")
                     exit_mode("pull_update")
 
-                if 'failover' in response and GlobalVars.standby_mode:
+                if ('failover' in response and GlobalVars.standby_mode and not GlobalVars.no_se_activity_scan):
+                    # If we're not scanning, then we don't want to become officially active due to failover.
                     if response['failover']:
                         GlobalVars.standby_mode = False
 

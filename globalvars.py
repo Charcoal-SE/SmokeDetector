@@ -125,6 +125,7 @@ class GlobalVars:
 
     standby_message = ""
     standby_mode = False
+    no_se_activity_scan = False
 
     api_request_lock = threading.Lock()
 

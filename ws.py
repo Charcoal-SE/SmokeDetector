@@ -162,6 +162,7 @@ filter_auto_ignored_posts()
 
 
 GlobalVars.standby_mode = "standby" in sys.argv
+GlobalVars.no_se_activity_scan = 'no_se_activity_scan' in sys.argv
 
 chatcommunicate.init(username, password)
 Tasks.periodic(Metasmoke.send_status_ping, interval=60)
@@ -218,7 +219,7 @@ Tasks.periodic(Metasmoke.send_statistics, interval=600)
 metasmoke_ws_t = Thread(name="metasmoke websocket", target=Metasmoke.init_websocket)
 metasmoke_ws_t.start()
 
-while True:
+while not GlobalVars.no_se_activity_scan:
     try:
         a = ws.recv()
         if a is not None and a != "":
@@ -256,3 +257,7 @@ while True:
         ws.send("155-questions-active")
 
         chatcommunicate.tell_rooms_with("debug", "Recovered from `" + exception_only + "`")
+
+while GlobalVars.no_se_activity_scan:
+    # Sleep for longer than the automatic restart
+    time.sleep(30000)
