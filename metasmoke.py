@@ -38,19 +38,21 @@ MAX_FAILURES = 10  # Preservative, 10 errors = MS down
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
 class Metasmoke:
     @staticmethod
+    def connect_websocket():
+        GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host,
+                                                              origin=GlobalVars.metasmoke_host)
+        payload = json.dumps({"command": "subscribe",
+                              "identifier": "{\"channel\":\"SmokeDetectorChannel\","
+                              "\"key\":\"" + GlobalVars.metasmoke_key + "\"}"})
+        GlobalVars.metasmoke_ws.send(payload)
+        GlobalVars.metasmoke_ws.settimeout(10)
+
+    @staticmethod
     def init_websocket():
         has_succeeded = False
         while True:
             try:
-                GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host,
-                                                                      origin=GlobalVars.metasmoke_host)
-                payload = json.dumps({"command": "subscribe",
-                                      "identifier": "{\"channel\":\"SmokeDetectorChannel\","
-                                      "\"key\":\"" + GlobalVars.metasmoke_key + "\"}"})
-                GlobalVars.metasmoke_ws.send(payload)
-
-                GlobalVars.metasmoke_ws.settimeout(10)
-
+                Metasmoke.connect_websocket()
                 has_succeeded = True
                 while True:
                     a = GlobalVars.metasmoke_ws.recv()
@@ -60,11 +62,7 @@ class Metasmoke:
                         Metasmoke.handle_websocket_data(data)
                         Metasmoke.reset_failure_count()
                     except Exception as e:
-                        GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host,
-                                                                              origin=GlobalVars.metasmoke_host)
-                        payload = json.dumps({"command": "subscribe",
-                                              "identifier": "{\"channel\":\"SmokeDetectorChannel\"}"})
-                        GlobalVars.metasmoke_ws.send(payload)
+                        Metasmoke.connect_websocket()
                         GlobalVars.metasmoke_failures += 1
                         log('error', e, f=True)
                         traceback.print_exc()
