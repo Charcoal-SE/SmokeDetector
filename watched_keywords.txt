@@ -18137,3 +18137,4 @@
 1582976093	Eliah Kagan	isespiritualspelltemple(?:@gmail\.com)?
 1582976161	Eliah Kagan	d(?:octo)?r[\W_]+ise
 1582976202	Eliah Kagan	(?:-i:vtLzffwHvWU)(?#youtu.be)
+1582976230	Eliah Kagan	(?-i:B9Gru0ihh5X)(?#instagram)
