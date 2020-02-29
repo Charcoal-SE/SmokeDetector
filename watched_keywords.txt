@@ -18150,3 +18150,4 @@
 1582979603	Eliah Kagan	fakedetail\.com
 1582979646	Eliah Kagan	toolscrunch\.com
 1582979902	Eliah Kagan	tampoly\.com
+1582979926	Eliah Kagan	maichethongminh(?:@gmail\.com)?
