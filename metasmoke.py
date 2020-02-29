@@ -50,7 +50,7 @@ class Metasmoke:
     @staticmethod
     def init_websocket():
         has_succeeded = False
-        while True:
+        while GlobalVars.metasmoke_key != "":
             try:
                 Metasmoke.connect_websocket()
                 has_succeeded = True
@@ -61,6 +61,8 @@ class Metasmoke:
                         GlobalVars.metasmoke_last_ping_time = datetime.now()
                         Metasmoke.handle_websocket_data(data)
                         Metasmoke.reset_failure_count()
+                    except ConnectionError:
+                        raise
                     except Exception as e:
                         Metasmoke.connect_websocket()
                         GlobalVars.metasmoke_failures += 1
@@ -77,6 +79,9 @@ class Metasmoke:
     @staticmethod
     def handle_websocket_data(data):
         if "message" not in data:
+            if "type" in data and data['type'] == "reject_subscription":
+                log('error', "MS WebSocket subscription was rejected. Check your MS key.")
+                raise ConnectionError("MS WebSocket connection rejected")
             return
         message = data['message']
         if not isinstance(message, Iterable):
