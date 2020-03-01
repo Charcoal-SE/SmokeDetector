@@ -29,10 +29,8 @@ def get_api_sitename_from_url(url):
     if match is None:
         return None
     try:
-        if match.group(1) == 'mathoverflow.net':
-            return 'mathoverflow.net'
-        else:
-            return match.group(1).split('.')[0]
+        domain = match.group(1)
+        return domain.replace('.stackexchange.com', '').replace('.com', '')
     except IndexError:
         return None
 
