@@ -18169,3 +18169,4 @@
 1583080301	Makyen	wellnessqualitiesk6\.wixsite\.com
 1583080333	Makyen	stronghealthtoday\.com
 1583080380	Makyen	wellness[\W_]*+qualities[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1583099147	Makyen	dr[\W_]*+okuns
