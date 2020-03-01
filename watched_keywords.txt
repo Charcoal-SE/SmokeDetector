@@ -18171,3 +18171,4 @@
 1583080380	Makyen	wellness[\W_]*+qualities[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1583099147	Makyen	dr[\W_]*+okuns
 1583099167	Makyen	herbal[\W_]*+home247(?!\.wixsite\.com(?<=herbalhome247\.wixsite\.com))(?:@yahoo\.com)?
+1583099189	Makyen	herbalhome247\.wixsite\.com
