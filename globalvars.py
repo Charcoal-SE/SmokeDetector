@@ -187,29 +187,31 @@ class GlobalVars:
         GlobalVars.commit_with_author = "`{}` ({}: {})".format(
             commit.id, commit.author, commit.message)
 
+        GlobalVars.commit_with_author_escaped = GlobalVars.commit_with_author.replace('[', '\\[').replace(']', '\\]')
+
         GlobalVars.on_branch = git_ref()
         GlobalVars.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
-            GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+            GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
             GlobalVars.commit.id, GlobalVars.location, platform.python_version())
         GlobalVars.s_reverted = \
             "[ {} ] SmokeDetector started in [reverted mode](" \
             "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
             "at [rev {}]({}/commit/{}) (running on {})".format(
-                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
                 GlobalVars.commit.id, GlobalVars.location)
         GlobalVars.s_norestart_blacklists = \
             "[ {} ] Blacklists reloaded at [rev {}]({}/commit/{}) (running on {})".format(
-                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
                 GlobalVars.commit.id, GlobalVars.location)
         GlobalVars.s_norestart_findspam = \
             "[ {} ] FindSpam module reloaded at [rev {}]({}/commit/{}) (running on {})".format(
-                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
                 GlobalVars.commit.id, GlobalVars.location)
         GlobalVars.standby_message = \
             "[ {} ] SmokeDetector started in [standby mode](" \
             "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " \
             "at [rev {}]({}/commit/{}) (running on {})".format(
-                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author, GlobalVars.bot_repository,
+                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
                 GlobalVars.commit.id, GlobalVars.location)
 
 

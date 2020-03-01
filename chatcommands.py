@@ -1283,10 +1283,12 @@ def version():
     :return: A string
     """
 
-    return '{id} [{commit_name}]({repository}/commit/{commit_code})'.format(id=GlobalVars.location,
-                                                                            commit_name=GlobalVars.commit_with_author,
-                                                                            commit_code=GlobalVars.commit.id,
-                                                                            repository=GlobalVars.bot_repository)
+    return '{id} [{commit_name}]({repository}/commit/{commit_code})'.format(
+        id=GlobalVars.location,
+        commit_name=GlobalVars.commit_with_author_escaped,
+        commit_code=GlobalVars.commit.id,
+        repository=GlobalVars.bot_repository
+    )
 
 
 # noinspection PyIncorrectDocstring
