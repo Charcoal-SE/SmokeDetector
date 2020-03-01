@@ -15558,7 +15558,7 @@
 1577286869	Makyen	hordofa_b(?:@yahoo\.com)?
 1577286897	Makyen	juventus[\W_]*+ageless[\W_]*+moisturizer(?:[\W_]*+(?:review|creme|cream|\d++|[\da-f]{4,}+)s?)*
 1577286912	Makyen	hyalurolift[\W_]*+creme(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+)s?)*
-1577286931	Makyen	formax[\W_]*+lean(?:[\W_]*+(?:review|pill|\d++|[\da-f]{4,}+)s?)*
+1577286931	Makyen	formax[\W_]*+lean(?:[\W_]*+(?:review|pill|official|offer|tial|\d++|[\da-f]{4,}+)s?)*
 1577286946	Makyen	peaujeunecreme\.storychief\.io
 1577286962	Makyen	peaujeunecremeavis\.wixsite\.com
 1577292968	Jenayah	ambrares\.com
