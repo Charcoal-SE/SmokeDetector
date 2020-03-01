@@ -66,7 +66,7 @@ def test_location():
 
 def test_version():
     assert chatcommands.version() == '{id} [{commit_name}]({repository}/commit/{commit_code})'.format(
-        id=GlobalVars.location, commit_name=GlobalVars.commit_with_author,
+        id=GlobalVars.location, commit_name=GlobalVars.commit_with_author_escaped,
         commit_code=GlobalVars.commit.id, repository=GlobalVars.bot_repository)
 
 
