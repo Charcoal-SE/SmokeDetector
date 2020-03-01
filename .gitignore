@@ -113,3 +113,7 @@ setp.sh
 
 # Editor backups
 *.bak
+
+# Extraneous files
+* shortcut *
+* link *
