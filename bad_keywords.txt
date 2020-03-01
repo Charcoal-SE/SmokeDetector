@@ -2217,3 +2217,4 @@ cyber\W*golden\W*hacker(?:\W*(?:at\W*)?gmail\W*(?:dot\W*)?com)?
 wuhan[\W_]*+hezhong[\W_]*+biochemical[\W_]*+manufacturing
 my[\W_]*digital[\W_]*housing
 reviewmypills(?!\.com)(?!\.tumblr\.com)
+pyramideye\.hack(?:[\W_]*+(?:at[\W_]*+)?outlook(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
