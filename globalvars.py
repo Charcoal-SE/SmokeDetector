@@ -187,7 +187,17 @@ class GlobalVars:
         GlobalVars.commit_with_author = "`{}` ({}: {})".format(
             commit.id, commit.author, commit.message)
 
-        GlobalVars.commit_with_author_escaped = GlobalVars.commit_with_author.replace('[', '\\[').replace(']', '\\]')
+        # We don't want to escape `[` and `]` when they are within code.
+        split_commit_with_author = GlobalVars.commit_with_author.split('`')
+        split_length = len(split_commit_with_author)
+        for index in range(0, split_length, 2):
+            split_commit_with_author[index] = split_commit_with_author[index].replace('[', '\\[').replace(']', '\\]')
+        # There's not an even number of ` characters, so the parsing hack failed, but we assume the last one needs
+        # escaping.
+        if not split_length % 2:
+            split_commit_with_author[-1] = split_commit_with_author[-1].replace('[', '\\[').replace(']', '\\]')
+
+        GlobalVars.commit_with_author_escaped = '`'.join(split_commit_with_author)
 
         GlobalVars.on_branch = git_ref()
         GlobalVars.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
