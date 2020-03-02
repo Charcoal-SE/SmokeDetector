@@ -18210,3 +18210,4 @@
 1583160029	Eliah Kagan	better-converter\.com
 1583160591	Das_Geek	cryptoatmhacker(?:@gmail\.com)?
 1583162757	Das_Geek	indiaastrologyfoundation\.in
+1583173454	Eliah Kagan	you\s+idiots?
