@@ -18212,3 +18212,4 @@
 1583162757	Das_Geek	indiaastrologyfoundation\.in
 1583173454	Eliah Kagan	you\s+idiots?
 1583186145	Makyen	leewilliam664(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1583188895	Makyen	take-screenshot\.com
