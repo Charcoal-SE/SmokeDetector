@@ -18173,3 +18173,4 @@
 1583099167	Makyen	herbal[\W_]*+home247(?!\.wixsite\.com(?<=herbalhome247\.wixsite\.com))(?:@yahoo\.com)?
 1583099189	Makyen	herbalhome247\.wixsite\.com
 1583099958	Makyen	eibik\.com
+1583110377	Makyen	asiavirtualsolutions\.com
