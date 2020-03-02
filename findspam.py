@@ -917,7 +917,7 @@ def purge_cache(cachevar, limit):
     '''
     oldest = sorted(cachevar, key=lambda k: cachevar[k]['timestamp'])[0:limit + 1]
     remaining = oldest.pop()
-    now = datetime.now()
+    now = datetime.utcnow()
     log('debug', 'purge_cache({0}): age of oldest entry is {1}'.format(
         limit, now - cachevar[oldest[0]]['timestamp']))
     log('debug', 'purge_cache({0}): oldest remaining entry is {1}'.format(
@@ -935,17 +935,17 @@ def dns_query(label, qtype):
             qtype, label))
         return DNS_CACHE[(label, qtype)]['result']
     try:
-        starttime = datetime.now()
+        starttime = datetime.utcnow()
         answer = dns.resolver.query(label, qtype)
     except dns.exception.DNSException as exc:
         if str(exc).startswith('None of DNS query names exist:'):
             log('debug', 'DNS label {0} not found; skipping'.format(label))
         else:
-            endtime = datetime.now()
+            endtime = datetime.utcnow()
             log('warning', 'DNS error {0} (duration: {1})'.format(
                 exc, endtime - starttime))
         return None
-    endtime = datetime.now()
+    endtime = datetime.utcnow()
     log('debug', '{0} query duration: {1}'.format(qtype, endtime - starttime))
     DNS_CACHE[(label, qtype)] = {'result': answer, 'timestamp': endtime}
     # Periodic amortized cache cleanup: clean out oldest 1000 entries
@@ -953,7 +953,7 @@ def dns_query(label, qtype):
         log('debug', 'Initiating cleanup of DNS_CACHE')
         purge_cache(DNS_CACHE, 1000)
         log('debug', 'DNS cleanup took an additional {0} seconds'.format(
-            datetime.now() - endtime))
+            datetime.utcnow() - endtime))
     return answer
 
 
@@ -1194,7 +1194,7 @@ def post_links(post):
         log('debug', 'LINK_CACHE purged')
 
     linkset = set(links)
-    LINK_CACHE[post] = {'links': linkset, 'timestamp': datetime.now()}
+    LINK_CACHE[post] = {'links': linkset, 'timestamp': datetime.utcnow()}
     return linkset
 
 

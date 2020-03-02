@@ -114,7 +114,7 @@ def handle_spam(post, reasons, why):
                               "repeating words in title" in reasons or
                               "repeating words in body" in reasons or
                               "repeating words in answer" in reasons):
-        datahandling.add_auto_ignored_post((post.post_id, post.post_site, datetime.now()))
+        datahandling.add_auto_ignored_post((post.post_id, post.post_site, datetime.utcnow()))
 
     if why is not None and why != "":
         datahandling.add_why(post.post_site, post.post_id, why)

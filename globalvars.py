@@ -70,7 +70,7 @@ class GlobalVars:
     api_backoff_time = 0
     deletion_watcher = None
 
-    metasmoke_last_ping_time = datetime.now()
+    metasmoke_last_ping_time = datetime.utcnow()
     not_privileged_warning = \
         "You are not a privileged user. Please see " \
         "[the privileges wiki page](https://charcoal-se.org/smokey/Privileges) for " \
