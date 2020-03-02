@@ -18145,7 +18145,6 @@
 1582979061	Eliah Kagan	takethiscourse\.net
 1582979082	Eliah Kagan	alpacku\.com
 1582979109	Eliah Kagan	phenomenalsoftwares\.com
-1582979603	Eliah Kagan	fakedetail\.com
 1582979646	Eliah Kagan	toolscrunch\.com
 1582979902	Eliah Kagan	tampoly\.com
 1582979926	Eliah Kagan	maichethongminh(?:@gmail\.com)?
