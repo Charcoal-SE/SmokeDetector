@@ -18187,3 +18187,4 @@
 1583134214	Makyen	smart[\W_]*+blood[\W_]*+sugar(?:[\W_]*+(?:book|trick|\d++|[\da-f]{4,}+))*
 1583139882	Shree	nova88online118\.com
 1583146257	Shree	articleted\.com
+1583147123	double-beep	coinsclone\.com
