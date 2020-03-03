@@ -2219,3 +2219,4 @@ my[\W_]*digital[\W_]*housing
 reviewmypills(?!\.com)(?!\.tumblr\.com)
 pyramideye\.hack(?:[\W_]*+(?:at[\W_]*+)?outlook(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 muslim[\W_]*astrologer
+eSoftTools
