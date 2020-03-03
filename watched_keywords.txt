@@ -17747,7 +17747,6 @@
 1582103893	Shree	 web-services\.co\.in
 1582103996	Shree	hotstreaming\.site
 1582104586	Shree	codextent\.com
-1582105412	Eliah Kagan	reviewstore\.co\.uk
 1582105767	Eliah Kagan	(?-i:WyOYe54wXww)(?#YouTube)
 1582105825	Eliah Kagan	(?-i:0lG1OyLKKYA)(?#youtu.be)
 1582105881	Eliah Kagan	(?-i:DxuhRXiZ9sA)(?#youtu.be)
