@@ -18219,3 +18219,4 @@
 1583197340	Eliah Kagan	aiflexsports\.com
 1583197569	Eliah Kagan	aiflex(?!-fitness\.com\b)
 1583199407	Eliah Kagan	yallacleaning\.com
+1583205253	Machavity	(?-i:XDsHRsavCas)
