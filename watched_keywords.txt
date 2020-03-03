@@ -18248,5 +18248,4 @@
 1583241589	Eliah Kagan	cryptogeek\.info
 1583241621	Eliah Kagan	cryptogeek(?!\.info)
 1583241702	Eliah Kagan	barmingdentalcentre\.co\.uk
-1583242053	Eliah Kagan	murl\.com
 1583242078	Eliah Kagan	(?-i:mZr9G)(?#murl)
