@@ -18266,3 +18266,4 @@
 1583266899	Makyen	wellnesscarepills[\W_]*+com
 1583266948	Makyen	bitroz\.com
 1583266969	Makyen	reviewsforsupplement\.blogspot
+1583267095	Makyen	naadia[\W_]*+mirza
