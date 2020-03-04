@@ -18284,3 +18284,4 @@
 1583308273	Makyen	electroketonew(?#sites.google.com)
 1583308296	Makyen	diet[\W_]*+clarity[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1583309278	tripleee	thedesigntrip\.com
+1583310480	Shree	royalcbd\.com
