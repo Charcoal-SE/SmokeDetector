@@ -17434,7 +17434,6 @@
 1581434394	Machavity	(?-i:703379\.TFS4JIRA)
 1581447935	Das_Geek	happyholiquotess\.blogspot\.com
 1581448036	Das_Geek	sphynx\.company\.com
-1581450760	Machavity	vzlom\.alexei@gmail\.com
 1581451218	Machavity	filmstream\.cc
 1581453659	Machavity	seo25\.com
 1581454506	Das_Geek	(?-i:^markwinds$)
