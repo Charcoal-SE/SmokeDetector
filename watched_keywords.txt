@@ -18297,3 +18297,4 @@
 1583327690	Eliah Kagan	black[\W_]+line[\W_]*edge
 1583328033	Eliah Kagan	(?-i:mWL4MQXwwJk)(?#youtu.be)
 1583328616	Eliah Kagan	godotmarketplace\.com
+1583330624	Eliah Kagan	travelersdoor\.com
