@@ -260,3 +260,4 @@ quran[\W_]*+for[\W_]*+kids
 (?-i:^Daniel Pham$)
 (?-i:^Sunday$)
 ^Quora Expert$
+(?-i:^sowmya g$)
