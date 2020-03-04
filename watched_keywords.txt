@@ -18286,3 +18286,4 @@
 1583309278	tripleee	thedesigntrip\.com
 1583310480	Shree	royalcbd\.com
 1583311702	tripleee	luxeinterno\.com
+1583311747	tripleee	luxe[\W_]*+interno(?!\.com)
