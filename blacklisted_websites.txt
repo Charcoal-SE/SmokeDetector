@@ -3049,7 +3049,7 @@ uaedatarecovery\.com
 hulksupplement\.com
 slimfitdiets[\W_]*+com
 news4supplements\.org
-thesupplementcop\.com
+thesupplementcop[\W_]*+com
 supplementscan\.com
 advicedam\.info
 bluestacks\.vip
