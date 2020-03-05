@@ -18334,3 +18334,4 @@
 1583398769	tripleee	society[\W_]*+now(?!\.in)
 1583402014	Shree	laloge\.com
 1583406573	tripleee	futureconnectgroup\.com
+1583406602	tripleee	future[\W_]*+connect(?:[\W_]*+training)?
