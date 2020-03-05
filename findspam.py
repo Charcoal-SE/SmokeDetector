@@ -281,9 +281,15 @@ class Rule:
                 else:
                     result_body = (False, "", "")
         elif self.regex:
-            compiled_regex = regex.compile(format_with_city_list(self.regex), regex.UNICODE)
+            # compiled_regex = regex.compile(format_with_city_list(self.regex), regex.UNICODE)
             # //compiled_regex = regex.compile(format_with_city_list(self.regex, is_target_rule), regex.UNICODE)
             # compiled_regex = regex.compile(self.regex, regex.UNICODE, city=city_list, ignore_unused=True)
+            try:
+                compiled_regex = self.compiled_regex
+            except AttributeError:
+                compiled_regex = regex.compile(format_with_city_list(self.regex), regex.UNICODE)
+                self.compiled_regex = compiled_regex
+                regex.purge()  # Don't keep the regex in the cache.
 
             if self.title and not post.is_answer:
                 # print("title")
@@ -340,15 +346,31 @@ class FindSpam:
         # (?w:\b) is also useful
         cls.rule_bad_keywords.regex = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
             "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb))
+        try:
+            del cls.rule_bad_keywords.compiled_regex
+        except AttributeError:
+            pass
         cls.rule_bad_keywords.sanity_check()
         cls.rule_watched_keywords.regex = r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format(
             "|".join(GlobalVars.watched_keywords.keys()))
+        try:
+            del cls.rule_watched_keywords.compiled_regex
+        except AttributeError:
+            pass
         cls.rule_watched_keywords.sanity_check()
         cls.rule_blacklisted_websites.regex = r"(?i)({})".format(
             "|".join(GlobalVars.blacklisted_websites))
+        try:
+            del cls.rule_blacklisted_websites.compiled_regex
+        except AttributeError:
+            pass
         cls.rule_blacklisted_websites.sanity_check()
         cls.rule_blacklisted_usernames.regex = r"(?i)({})".format(
             "|".join(GlobalVars.blacklisted_usernames))
+        try:
+            del cls.rule_blacklisted_usernames.compiled_regex
+        except AttributeError:
+            pass
         cls.rule_blacklisted_usernames.sanity_check()
         GlobalVars.blacklisted_numbers, GlobalVars.blacklisted_numbers_normalized = \
             process_numlist(GlobalVars.blacklisted_numbers)
