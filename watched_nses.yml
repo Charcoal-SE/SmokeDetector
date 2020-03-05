@@ -229,6 +229,9 @@ items:
   - rudy.ns.cloudflare.com.
 - ns:
   - isaac.ns.cloudflare.com.
+  - kami.ns.cloudflare.com.
+- ns:
+  - isaac.ns.cloudflare.com.
   - tia.ns.cloudflare.com.
 - ns:
   - isla.ns.cloudflare.com.
