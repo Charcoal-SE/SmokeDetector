@@ -18333,3 +18333,4 @@
 1583397514	tripleee	visasforindia\.in
 1583398769	tripleee	society[\W_]*+now(?!\.in)
 1583402014	Shree	laloge\.com
+1583406573	tripleee	futureconnectgroup\.com
