@@ -18317,7 +18317,6 @@
 1583384937	Shree	alternativestips\.com
 1583385056	Shree	thc-grower\.com
 1583386221	tripleee	oxybreathpro\.info
-1583386306	tripleee	oxy[\W_]*+br(?:ea)?th(?:[\W_]*+pro(?:(?!\.)[\W_]+info)?)?
 1583387020	Nisse Engström	dumpsexpert\.com
 1583388073	Makyen	dumpsexpert(?!\.com)
 1583388195	tripleee	selectmytutor\.co\.uk
