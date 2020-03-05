@@ -262,3 +262,4 @@ quran[\W_]*+for[\W_]*+kids
 ^Quora Expert$
 (?-i:^sowmya g$)
 (?-i:^Sheeba Karan$)
+(?-i:^ekeeda engineering$)
