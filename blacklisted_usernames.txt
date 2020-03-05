@@ -264,3 +264,4 @@ quran[\W_]*+for[\W_]*+kids
 (?-i:^Sheeba Karan$)
 (?-i:^ekeeda engineering$)
 oxybreath
+omysexydoll
