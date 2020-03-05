@@ -2225,3 +2225,4 @@ gladwev(?!\.com)
 d(?:octo)?r[\W_]*oduduwa
 liebespuppen
 sexpuppen
+oxy[\W_]*+br(?:ea?)?th(?:[\W_]*+pro(?:(?!\.)[\W_]+info)?)?
