@@ -18349,3 +18349,4 @@
 1583427913	Eliah Kagan	videohubapp\.com
 1583428233	Eliah Kagan	jive[\W_]*(?:mini[\W_]*)?pods?
 1583432373	Makyen	alshamstech\.ae
+1583434054	Makyen	jualobataborsiasli\.com
