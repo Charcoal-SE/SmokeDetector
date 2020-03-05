@@ -18337,3 +18337,4 @@
 1583406602	tripleee	future[\W_]*+connect(?:[\W_]*+training)?
 1583407300	Shree	canticleindia\.com
 1583408431	Shree	itworx\.com
+1583411138	Shree	bestgearsreview\.com
