@@ -18347,3 +18347,4 @@
 1583427073	Eliah Kagan	sarah\.abaza(?:@itworx\.com)?
 1583427885	Eliah Kagan	(?-i:lQN74)\.png
 1583427913	Eliah Kagan	videohubapp\.com
+1583428233	Eliah Kagan	jive[\W_]*(?:mini[\W_]*)?pods?
