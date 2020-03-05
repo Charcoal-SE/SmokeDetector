@@ -18330,3 +18330,4 @@
 1583391942	Makyen	dokterkandunganmuda\.blogspot
 1583393534	Makyen	instafollowers\.co
 1583393659	Makyen	(?-i:UVWudP_JBKc)(?#youtu.be)
+1583394959	Makyen	ideal[\W_]*+slim(?:[\W_]*+(?:italy|recensioni|\d++|[\da-f]{4,}+))*
