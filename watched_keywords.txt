@@ -18343,3 +18343,4 @@
 1583417928	Das_Geek	gali-result\.in
 1583418104	Das_Geek	gonitro\.com
 1583425033	Eliah Kagan	(?-i:KLLi9VbKC2TgyM1u8)(?#forms.gle)
+1583425127	Eliah Kagan	buzzfeednewz\.com
