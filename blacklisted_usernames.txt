@@ -263,6 +263,5 @@ quran[\W_]*+for[\W_]*+kids
 (?-i:^sowmya g$)
 (?-i:^Sheeba Karan$)
 (?-i:^ekeeda engineering$)
-oxybreath
 omysexydoll
 sexdollxing‭
