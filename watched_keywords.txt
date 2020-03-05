@@ -18326,3 +18326,4 @@
 1583390535	Makyen	agil[\W_]*+flex[\W_]*+france(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1583391058	Makyen	supplementstore4u(?!\.com)
 1583391079	Makyen	supplementstore4u\.com
+1583391761	Makyen	puravida(?:[\W_]*+(?:care|cream|skin))+(?:[\W_]*+(?:care|cream|skin|\d++|[\da-f]{4,}+))*
