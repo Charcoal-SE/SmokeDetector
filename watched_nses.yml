@@ -270,6 +270,9 @@ items:
   - lady.ns.cloudflare.com.
   - mitch.ns.cloudflare.com.
 - ns:
+  - lara.ns.cloudflare.com.
+  - sterling.ns.cloudflare.com.
+- ns:
   - laura.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
