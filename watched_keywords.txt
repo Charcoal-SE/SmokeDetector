@@ -18364,3 +18364,4 @@
 1583464676	Eliah Kagan	linsheng\.com
 1583464725	Eliah Kagan	linsheng(?!\.com)
 1583465645	Eliah Kagan	protegerjavascript\.com
+1583470833	Shree	tourism-rajasthan\.com
