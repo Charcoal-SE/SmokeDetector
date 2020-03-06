@@ -18367,3 +18367,4 @@
 1583475559	tripleee	csi4092(?#skype)
 1583475582	tripleee	huvle\.com
 1583475607	tripleee	huvle(?!\.com)
+1583476215	tripleee	fazie\W*+wadood
