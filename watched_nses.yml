@@ -37,6 +37,9 @@ items:
   - aida.ns.cloudflare.com.
   - lloyd.ns.cloudflare.com.
 - ns:
+  - aiden.ns.cloudflare.com.
+  - leah.ns.cloudflare.com.
+- ns:
   - ajay.ns.cloudflare.com.
   - lia.ns.cloudflare.com.
 - ns:
