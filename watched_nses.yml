@@ -46,6 +46,9 @@ items:
   - alla.ns.cloudflare.com.
   - kirk.ns.cloudflare.com.
 - ns:
+  - andy.ns.cloudflare.com.
+  - leah.ns.cloudflare.com.
+- ns:
   - anirban.ns.cloudflare.com.
   - janet.ns.cloudflare.com.
 - ns:
