@@ -18395,3 +18395,4 @@
 1583516792	Eliah Kagan	(?-i:2mvYgeuGM6k)(?#youtu.be)
 1583528158	Eliah Kagan	d(?:octo)?r[\W_]*+olorun(?:@gmail\.com)?
 1583529039	Das_Geek	scam\.directory
+1583529150	Das_Geek	jaymedicalmarijuana\.com
