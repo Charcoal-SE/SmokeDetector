@@ -82,6 +82,9 @@ items:
   - beau.ns.cloudflare.com.
   - jasmine.ns.cloudflare.com.
 - ns:
+  - bella.ns.cloudflare.com.
+  - duke.ns.cloudflare.com.
+- ns:
   - ben.ns.cloudflare.com.
   - kami.ns.cloudflare.com.
 - ns:
