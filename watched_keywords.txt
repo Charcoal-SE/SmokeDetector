@@ -18369,3 +18369,4 @@
 1583475607	tripleee	huvle(?!\.com)
 1583476215	tripleee	fazie\W*+wadood
 1583476805	tripleee	mahindraalcove-chandivali\.com
+1583479614	tripleee	aofygold\.in
