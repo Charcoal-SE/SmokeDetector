@@ -18432,3 +18432,4 @@
 1583602611	Makyen	getketoshred
 1583602633	Makyen	oasis[\W_]*+keto(?:[\W_]*+(?:canada|ca|\d++|[\da-f]{4,}+))*
 1583605665	Makyen	wirexapp\.com
+1583610829	Makyen	facebook\.com
