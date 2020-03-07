@@ -18433,3 +18433,4 @@
 1583602633	Makyen	oasis[\W_]*+keto(?:[\W_]*+(?:canada|ca|\d++|[\da-f]{4,}+))*
 1583605665	Makyen	wirexapp\.com
 1583610853	Makyen	homey-app\.online
+1583620606	Eliah Kagan	novusbars\.com
