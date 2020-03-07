@@ -18431,3 +18431,4 @@
 1583602185	Eliah Kagan	realexamcollection(?!\.com)
 1583602588	Makyen	(?-i:IKyyMKtOpTY)(?#YouTube)
 1583602611	Makyen	getketoshred
+1583602633	Makyen	oasis[\W_]*+keto(?:[\W_]*+(?:canada|ca|\d++|[\da-f]{4,}+))*
