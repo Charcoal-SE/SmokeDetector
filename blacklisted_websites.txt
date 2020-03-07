@@ -485,7 +485,6 @@ apk(?:heart|safe)\.com
 nimblemessaging\.com
 oleville\.net
 nutribulletrecipes\.org
-wirexapp\.com
 x4up\.org
 decalontop\.com
 mobile57\.com
