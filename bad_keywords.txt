@@ -2228,3 +2228,4 @@ sexpuppen
 oxy[\W_]*+br(?:ea?)?th(?:[\W_]*+pro(?:(?!\.)[\W_]+info)?)?
 oko[\W_]*+watt
 kehamilan
+d(?:octo)?r[\W_]*+olorun(?:@gmail\.com)?
