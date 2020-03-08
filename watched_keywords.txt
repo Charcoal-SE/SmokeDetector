@@ -18455,3 +18455,4 @@
 1583685555	Eliah Kagan	trevolin\.com
 1583685579	Eliah Kagan	trevolin(?!\.com)
 1583696680	Glorfindel	manvipvn\.club
+1583700030	Makyen	detoxil(?:[\W_]*+(?:omega|formula|\d++|[\da-f]{4,}+))*
