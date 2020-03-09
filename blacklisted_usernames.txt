@@ -183,7 +183,6 @@ quickbooks
 ^crossword.?2.?puzzles(?:\.com)?$
 (?-i:^Kate White$)
 (?-i:^Byekhen$)
-(?-i:^Muhammad Waqar$)
 ^fibre\W?sales$
 ^harryred123$
 (?-i:^arcviet$)
