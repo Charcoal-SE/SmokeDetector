@@ -267,3 +267,4 @@ sexdollxing‭
 oxybr(?:ea?)?th(?:(?<=\Boxybr(?:ea?)?th)|\B)
 (?-i:^Dhara Jain$)
 (?-i:^meemu jose$)
+(?-i:^george nicholos$)
