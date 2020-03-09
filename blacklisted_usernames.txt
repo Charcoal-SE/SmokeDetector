@@ -259,7 +259,6 @@ quran[\W_]*+for[\W_]*+kids
 (?-i:^James William$)
 (?-i:^Daniel Pham$)
 (?-i:^Sunday$)
-^Quora Expert$
 (?-i:^sowmya g$)
 (?-i:^Sheeba Karan$)
 (?-i:^ekeeda engineering$)
