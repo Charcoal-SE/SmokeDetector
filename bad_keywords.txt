@@ -2230,3 +2230,4 @@ oko[\W_]*+watt
 kehamilan
 d(?:octo)?r[\W_]*+olorun(?:@gmail\.com)?
 unichrone(?!\.net)
+slimy[\W_]*+meds?
