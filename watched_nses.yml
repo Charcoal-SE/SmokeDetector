@@ -98,6 +98,9 @@ items:
   - guss.ns.cloudflare.com.
 - ns:
   - boyd.ns.cloudflare.com.
+  - emma.ns.cloudflare.com.
+- ns:
+  - boyd.ns.cloudflare.com.
   - jasmine.ns.cloudflare.com.
 - ns:
   - brad.ns.cloudflare.com.
