@@ -18462,3 +18462,4 @@
 1583719925	Machavity	oispice\.com
 1583719979	Machavity	(?-i:Dogcat\WZzs‭)
 1583722184	Makyen	gsmorigin\.com
+1583729483	Makyen	d(?:octo)?r[\W_]*+arans[\W_]*+turnner
