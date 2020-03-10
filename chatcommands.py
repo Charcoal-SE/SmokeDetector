@@ -1172,13 +1172,24 @@ def test(content, alias_used="test"):
     return result
 
 
-def bisect_regex(s, regexes, bookend=True):
+def bisect_regex(s, regexes, bookend=True, timeout=None):
     regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)({})"
-    compiled = regex.compile(findspam.format_with_city_list(regex_to_format.format("|".join([r for r, i in regexes]))))
-    # compiled = regex.compile(regex_to_format.format("|".join([r for r, i in regexes])),
-    #                          city=findspam.city_list,
-    #                          ignore_unused=True)
-    match = compiled.search(s)
+    formatted_regex = findspam.format_with_city_list(regex_to_format.format("|".join([r for r, i in regexes])))
+    compiled = regex.compile(formatted_regex)
+    # formatted_regex = regex_to_format.format("|".join([r for r, i in regexes]))
+    # compiled = regex.compile(formatted_regex, city=findspam.city_list, ignore_unused=True)
+    # It looks like a timeout only raises an error *after* the regex normally completes, at least on Windows.
+    try:
+        match = compiled.search(s, timeout=timeout)
+    # except TimeoutError:
+    #     # Log wich regex caused the error:
+    #     log('error', "bisect_regex got a timeout with the regex: {}".format(formatted_regex))
+    #     raise
+    except Exception:
+        # Log wich regex caused the error:
+        log('error', "bisect_regex got an error with the regex: {}".format(formatted_regex))
+        raise
+
     if not match:
         return []
     if len(regexes) <= 1:  # atom element found
@@ -1186,10 +1197,11 @@ def bisect_regex(s, regexes, bookend=True):
 
     mid_len = (len(regexes) - 1).bit_length() - 1
     mid = 2 ** mid_len
-    return bisect_regex(s, regexes[:mid], bookend=bookend) + bisect_regex(s, regexes[mid:], bookend=bookend)
+    return bisect_regex(s, regexes[:mid], bookend=bookend, timeout=timeout) + \
+        bisect_regex(s, regexes[mid:], bookend=bookend, timeout=timeout)
 
 
-def bisect_regex_one_by_one(test_text, regexes, bookend=True):
+def bisect_regex_one_by_one(test_text, regexes, bookend=True, timeout=None):
     regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)({})"
     results = []
     for expresion in regexes:
@@ -1198,19 +1210,19 @@ def bisect_regex_one_by_one(test_text, regexes, bookend=True):
         # compiled = regex.compile(regex_to_format.format(expresion[0]),
         #                          city=findspam.city_list,
         #                          ignore_unused=True)
-        match = compiled.search(test_text)
+        match = compiled.search(test_text, timeout=timeout)
         if match:
             # print('match: {}'.format(match))
             results.append(expresion)
     return results
 
 
-def bisect_regex_in_n_size_chunks(size, test_text, regexes, bookend=True):
+def bisect_regex_in_n_size_chunks(size, test_text, regexes, bookend=True, timeout=None):
     regex_chunks = chunk_list(regexes, size)
     results = []
     for chunk in regex_chunks:
         # print('bisect: testing regex chunk: {}'.format(chunk))
-        matches = bisect_regex(test_text, chunk, bookend)
+        matches = bisect_regex(test_text, chunk, bookend=bookend, timeout=timeout)
         if matches:
             # print('matches: {}'.format(matches))
             results.extend(matches)
@@ -1231,8 +1243,8 @@ def bisect(msg, s):
         s = rebuild_str(msg.content_source.split(" ", 1)[1])
     except AttributeError:
         pass
-    matching = bisect_regex_in_n_size_chunks(64, s, bookended_regexes, bookend=True)
-    matching.extend(bisect_regex_in_n_size_chunks(64, s, non_bookended_regexes, bookend=False))
+    matching = bisect_regex_in_n_size_chunks(64, s, bookended_regexes, bookend=True, timeout=10)
+    matching.extend(bisect_regex_in_n_size_chunks(64, s, non_bookended_regexes, bookend=False, timeout=10))
     # matching = bisect_regex(s, bookended_regexes, bookend=True)
     # matching.extend(bisect_regex(s, non_bookended_regexes, bookend=False))
     # matching = bisect_regex_one_by_one(s, bookended_regexes, bookend=True)
