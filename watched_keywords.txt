@@ -18503,3 +18503,4 @@
 1583841688	tripleee	body[\W_]*+care
 1583850805	Das_Geek	gilanmark\.com
 1583855531	Das_Geek	softoverview\.com
+1583856771	Das_Geek	peyari\.com
