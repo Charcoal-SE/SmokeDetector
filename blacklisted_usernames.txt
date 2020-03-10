@@ -66,13 +66,13 @@ donald\W*j?\.?\W*trump
 ^christine roebuck$
 techelpp
 ^(?:ap+le|tplink)[\W_]*+router$
-\b(?:moth(?:e?r|a))?fu+[ck]+(?:[ei]ng*|e[dr])?\b
+\b(?:moth(?:e?r|a))?fu+[ck]++(?:[ei]ng*+|e[dr])?\b
 (?:hurriyet|turkish)(?:daily)?news
 tour\W?packages
 sputnik\W?international
 daily\W?news
 ^Jack Hollywood$
-^router\W+sup*ort$
+^router\W+sup*+ort$
 fauk\W?usa
 michael\W?david\W?mills
 Hurriyet\W?Daily\W?News
@@ -81,13 +81,13 @@ istanbul\W?hair\W?transplant
 away\W?days
 Racist
 Reihmann
-\w*\d+\W+Virk$
+(?:[a-z_]*+\d++)++\W++Virk$
 Charles\WRane
-adol(?:f|ph)\W*hitler
-heinrich\W*(?:luitpold\W*)?himmler
-ante\W*paveli[cć]
+adol(?:f|ph)\W*+hitler
+heinrich\W*+(?:luitpold\W*+)?himmler
+ante\W*+paveli[cć]
 ^LGBT representative$
-muh[ae]mm[ae]d\W*the\W*pa?edophile
+muh[ae]mm[ae]d\W*+the\W*+pa?edophile
 ^eray$
 ^autolinkpk$
 ^PCBindex$
@@ -97,28 +97,28 @@ customwristbands
 ^MORGAN CHAN$
 ^ZoeXie$
 ^بانه$
-^king[\W_]*excel$
+^king[\W_]*+excel$
 bella johsan
 kajel\Wbajwa
 jakri\Wkatra
 denya\Wgarda
 Tyron P
-^mangesh\W*(?:\w+\W+)?dhulap$
+^mangesh\W*+(?:\w++\W++)?dhulap$
 praveen kumar Lakhara
 ^(?-i:daveclark966)$
-^\w{1,3}h[ou]+sken$
+^\w{1,3}h[ou]++sken$
 (?-i:^Dorothy Daugherty$)
 ^Tonya Rabish$(?#User spams Avdshare)
 (?-i:^Sophie Cheng$)
 (?-i:^Cade Song$)
-hrisikesh\W*saloi?
+hrisikesh\W*+saloi?
 ^horny\Wprofessor$
 ^sophossophia$
 ^Russ Palmer$
 ^yujie zhao$
 ^pinkcoke$
 (?-i:^Richard Learner$)
-(?-i:^[a-z]+(?:dl?san|(?:dl|ld)l?son)(?<!donaldson)(?<!zhcdsan)(?<!ygoldson)(?<!tdsan)(?<!nreynoldson)$)
+(?-i:^[a-z]++$(?:(?<=dsan$)|(?<=dlsan$)|(?<=(?:dl|ld)lson)|(?<=(?:dl|ld)son))(?<!donaldson$)(?<!zhcdsan$)(?<!ygoldson$)(?<!tdsan$)(?<!nreynoldson$))
 (?-i:^shiv\W?guptag?$)
 muralidharaB
 ^albertlee$
