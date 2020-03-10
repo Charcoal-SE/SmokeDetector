@@ -879,7 +879,6 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
         r"(best|make|full|hd|software|cell|data|media)[\w ]{1,20}"
         r"" r"(online|service|company|agency|repair|recovery|school|university)|"
         r"\b(writing (service|help)|essay (writing|tips))"))
-        # r"\b(writing (service|help)|essay (writing|tips))", city=city_list, ignore_unused=True)
     links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
     business = regex.compile(
         r"(?i)(^| )(airlines?|apple|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
@@ -1709,6 +1708,7 @@ city_list = [
 ]
 city_list_as_group = '(?:{})'.format('|'.join(city_list))
 city_list_sub_regex = regex.compile(r'\\L<city>', regex.UNICODE)
+
 
 def format_with_city_list(regex_text):
     return regex.sub(city_list_sub_regex, city_list_as_group, regex_text)
