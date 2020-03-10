@@ -103,6 +103,9 @@ items:
   - bonnie.ns.cloudflare.com.
   - guss.ns.cloudflare.com.
 - ns:
+  - bonnie.ns.cloudflare.com.
+  - todd.ns.cloudflare.com.
+- ns:
   - boyd.ns.cloudflare.com.
   - emma.ns.cloudflare.com.
 - ns:
