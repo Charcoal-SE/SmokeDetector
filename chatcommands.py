@@ -1173,7 +1173,7 @@ def test(content, alias_used="test"):
 
 
 def bisect_regex(s, regexes, bookend=True, timeout=None):
-    regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)({})"
+    regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)(?:{})"
     formatted_regex = findspam.format_with_city_list(regex_to_format.format("|".join([r for r, i in regexes])))
     compiled = regex.compile(formatted_regex)
     # formatted_regex = regex_to_format.format("|".join([r for r, i in regexes]))
@@ -1202,7 +1202,7 @@ def bisect_regex(s, regexes, bookend=True, timeout=None):
 
 
 def bisect_regex_one_by_one(test_text, regexes, bookend=True, timeout=None):
-    regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)({})"
+    regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)(?:{})"
     results = []
     for expresion in regexes:
         # print('bisect: testing regex: {}'.format(expresion))
