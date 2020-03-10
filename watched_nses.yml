@@ -101,6 +101,9 @@ items:
   - ken.ns.cloudflare.com.
 - ns:
   - bonnie.ns.cloudflare.com.
+  - chad.ns.cloudflare.com.
+- ns:
+  - bonnie.ns.cloudflare.com.
   - guss.ns.cloudflare.com.
 - ns:
   - bonnie.ns.cloudflare.com.
