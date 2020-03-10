@@ -295,6 +295,9 @@ items:
   - uma.ns.cloudflare.com.
 - ns:
   - kia.ns.cloudflare.com.
+  - kip.ns.cloudflare.com.
+- ns:
+  - kia.ns.cloudflare.com.
   - mitch.ns.cloudflare.com.
 - ns:
   - kia.ns.cloudflare.com.
