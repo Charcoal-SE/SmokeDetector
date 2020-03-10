@@ -133,6 +133,9 @@ items:
   - cass.ns.cloudflare.com.
   - justin.ns.cloudflare.com.
 - ns:
+  - chad.ns.cloudflare.com.
+  - elaine.ns.cloudflare.com.
+- ns:
   - chip.ns.cloudflare.com.
   - cruz.ns.cloudflare.com.
 - ns:
