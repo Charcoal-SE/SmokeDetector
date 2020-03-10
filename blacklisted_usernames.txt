@@ -269,3 +269,4 @@ oxybr(?:ea?)?th(?:(?<=\Boxybr(?:ea?)?th)|\B)
 (?-i:^george nicholos$)
 (?-i:^sunnyaroratw$)
 DailyRaiseQuestion
+(?-i:^Linda Goes East$)
