@@ -18465,7 +18465,6 @@
 1583729529	Makyen	vivo-ipl\.in
 1583731035	Makyen	safebreath[\W_]*+pro(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1583732328	Makyen	comet[\W_]*+line[\W_]*+consulting(?!\.com\.au(?<=cometlineconsulting\.com\.au))
-1583732839	Makyen	123hp\.co\.uk
 1583733216	Makyen	searchvearch\.com
 1583733297	tripleee	demfy\.com
 1583735815	Makyen	earnmoney\.pk
