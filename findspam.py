@@ -1982,18 +1982,26 @@ create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?:(?:poker|casino)\W*on
 #             r"(?i)(?:{}|(?:{})[\w-]*+\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress))(?![^<>]*+<)".format(
 #                 "|".join(pattern_websites), "|".join(bad_keywords_nwb)),
 #             stripcodeblocks=True, body_summary=True, max_score=1)
-# 0,15 got 31.11s, 30.50s
-# no captured lead-in got 29.84s, 30.94s, 30.25s
+# Without backtracking changes: no captured lead-in got 33.99s, 36.51s, 33.75s
+# [\w-]{{0,15}}? got 31.11s, 30.50s
+# With backtracking changes: no captured lead-in got 29.84s, 30.94s, 30.25s
+
+# Suspicious sites 1
 create_rule("pattern-matching website in {}",
             r"(?i)(?:{})(?![^>]*<)".format("|".join(pattern_websites)),
             stripcodeblocks=True, body_summary=True, max_score=1)
+# Suspicious sites 2
 create_rule("pattern-matching website in {}",
             # r"(?i)(?:[\w-]{{0,15}}?(?:{})[\w-]*+\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress))(?![^<>]*+<)".format(
             r"(?i)(?:(?:{})[\w-]*+\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress))(?![^<>]*+<)".format(
                 "|".join(bad_keywords_nwb)),
             stripcodeblocks=True, body_summary=True, max_score=1)
-# 0,15 got 29.96s, 29.90s
-# no captured lead-in got 29.91s, 29.90s, 29.31s
+# Without backtracking changes: no captured lead-in got 32.72s, 32.70s, 34.45s
+# [\w-]{{0,15}}? got 29.96s, 29.90s
+# With backtracking changes: no captured lead-in got 29.91s, 29.90s, 29.31s
+# With backtracking changes; with manual regex cache: 29.64s, 29.70s, 29.49s
+# ^ I expect it not to be much with the minor testing. In theory, it should matter more when running in real use.
+
 # Country-name domains, travel and expats sites are exempt
 create_rule("pattern-matching website in {}",
             r"(?i)\b(?:[\w-]{6,}|\w*shop\w*)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|"
