@@ -1175,11 +1175,12 @@ def test(content, alias_used="test"):
 def bisect_regex(s, regexes, bookend=True, timeout=None):
     regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)(?:{})"
     formatted_regex = findspam.format_with_city_list(regex_to_format.format("|".join([r for r, i in regexes])))
-    compiled = regex.compile(formatted_regex)
-    # formatted_regex = regex_to_format.format("|".join([r for r, i in regexes]))
-    # compiled = regex.compile(formatted_regex, city=findspam.city_list, ignore_unused=True)
-    # It looks like a timeout only raises an error *after* the regex normally completes, at least on Windows.
+    start_time = time.time()
     try:
+        compiled = regex.compile(formatted_regex)
+        # formatted_regex = regex_to_format.format("|".join([r for r, i in regexes]))
+        # compiled = regex.compile(formatted_regex, city=findspam.city_list, ignore_unused=True)
+        # It looks like a timeout only raises an error *after* the regex normally completes, at least on Windows.
         match = compiled.search(s, timeout=timeout)
     # except TimeoutError:
     #     # Log wich regex caused the error:
@@ -1187,7 +1188,8 @@ def bisect_regex(s, regexes, bookend=True, timeout=None):
     #     raise
     except Exception:
         # Log wich regex caused the error:
-        log('error', "bisect_regex got an error with the regex: {}".format(formatted_regex))
+        seconds = time.time() - start_time
+        log('error', "bisect_regex: in {} seconds, got an error with the regex: {}".format(seconds, formatted_regex))
         raise
 
     if not match:
