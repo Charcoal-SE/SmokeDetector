@@ -18533,3 +18533,4 @@
 1583916371	tripleee	yiwu[\W_]*+anime[\W_]*+star
 1583917401	tripleee	west[\W_]*+lake(?:[\W_]*+finance(?:[\W_]*+home)?)?
 1583918174	tripleee	vietthong\.vn
+1583918211	tripleee	zues[\W_]*+male
