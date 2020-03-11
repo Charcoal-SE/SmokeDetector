@@ -18550,3 +18550,4 @@
 1583945841	Eliah Kagan	calvillom882\.blogspot
 1583946198	Makyen	realbraindumps(?!\.com)
 1583946220	Makyen	instant[\W_]*+boost[\W_]*+brain(?:[\W_]*+(?:formula|\d++|[\da-f]{4,}+))*
+1583947422	Machavity	aamplugin\.com
