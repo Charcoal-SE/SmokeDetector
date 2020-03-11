@@ -18522,3 +18522,4 @@
 1583914092	Makyen	slim[\W_]*+x(?:[\W_]*+(?:nature|keto|\d++|[\da-f]{4,}+))*
 1583914118	Makyen	flat[\W_]*+belly[\W_]*+formula
 1583914144	Makyen	(?-i:B9j8v7bhGmB)(?#instagram.com)
+1583914170	Makyen	diets_men(?#twitter.com)
