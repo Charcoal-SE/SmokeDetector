@@ -1178,20 +1178,18 @@ def bisect_regex(s, regexes, bookend=True, timeout=None):
     start_time = time.time()
     try:
         compiled = regex.compile(formatted_regex)
-        # formatted_regex = regex_to_format.format("|".join([r for r, i in regexes]))
-        # compiled = regex.compile(formatted_regex, city=findspam.city_list, ignore_unused=True)
-        # It looks like a timeout only raises an error *after* the regex normally completes, at least on Windows.
         match = compiled.search(s, timeout=timeout)
-    # except TimeoutError:
-    #     # Log wich regex caused the error:
-    #     log('error', "bisect_regex got a timeout with the regex: {}".format(formatted_regex))
-    #     raise
     except Exception:
         # Log wich regex caused the error:
         seconds = time.time() - start_time
         log('error', "bisect_regex: in {} seconds, got an error with the regex: {}".format(seconds, formatted_regex))
         raise
 
+    seconds = time.time() - start_time
+    if seconds > 0.1:
+        # For debugging, if a regex is taking a long time, we want to know about it. This is about 5 times
+        # longer than the high end of what one group of 64 regexes normally takes in our tests.
+        log('debug', "bisect_regex: took {} seconds for the regex: {}".format(seconds, formatted_regex))
     if not match:
         return []
     if len(regexes) <= 1:  # atom element found
@@ -1207,14 +1205,9 @@ def bisect_regex_one_by_one(test_text, regexes, bookend=True, timeout=None):
     regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)(?:{})"
     results = []
     for expresion in regexes:
-        # print('bisect: testing regex: {}'.format(expresion))
         compiled = regex.compile(findspam.format_with_city_list(regex_to_format.format(expresion[0])))
-        # compiled = regex.compile(regex_to_format.format(expresion[0]),
-        #                          city=findspam.city_list,
-        #                          ignore_unused=True)
         match = compiled.search(test_text, timeout=timeout)
         if match:
-            # print('match: {}'.format(match))
             results.append(expresion)
     return results
 
@@ -1223,10 +1216,8 @@ def bisect_regex_in_n_size_chunks(size, test_text, regexes, bookend=True, timeou
     regex_chunks = chunk_list(regexes, size)
     results = []
     for chunk in regex_chunks:
-        # print('bisect: testing regex chunk: {}'.format(chunk))
         matches = bisect_regex(test_text, chunk, bookend=bookend, timeout=timeout)
         if matches:
-            # print('matches: {}'.format(matches))
             results.extend(matches)
     return results
 
@@ -1245,12 +1236,12 @@ def bisect(msg, s):
         s = rebuild_str(msg.content_source.split(" ", 1)[1])
     except AttributeError:
         pass
-    matching = bisect_regex_in_n_size_chunks(64, s, bookended_regexes, bookend=True, timeout=10)
-    matching.extend(bisect_regex_in_n_size_chunks(64, s, non_bookended_regexes, bookend=False, timeout=10))
-    # matching = bisect_regex(s, bookended_regexes, bookend=True)
-    # matching.extend(bisect_regex(s, non_bookended_regexes, bookend=False))
-    # matching = bisect_regex_one_by_one(s, bookended_regexes, bookend=True)
-    # matching.extend(bisect_regex_one_by_one(s, non_bookended_regexes, bookend=False))
+    # A timeout of 1 second is about 50 times longer than we're currently seeing. It should give
+    # us a good indication of when we have a regex that is not behaving as well as we'd like.
+    # If there is a regex which needs more than this, feel free to adjust the timeout. However,
+    # it would be better to look at how the regex might be rewritten.
+    matching = bisect_regex_in_n_size_chunks(64, s, bookended_regexes, bookend=True, timeout=1)
+    matching.extend(bisect_regex_in_n_size_chunks(64, s, non_bookended_regexes, bookend=False, timeout=1))
 
     if not matching:
         return "{!r} is not caught by a blacklist or watchlist item.".format(s)
