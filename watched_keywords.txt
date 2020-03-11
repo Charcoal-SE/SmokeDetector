@@ -18524,3 +18524,4 @@
 1583914144	Makyen	(?-i:B9j8v7bhGmB)(?#instagram.com)
 1583914170	Makyen	diets_men(?#twitter.com)
 1583914199	Makyen	(?-i:Q3WlkQK6pWs)(?#youtu.be)
+1583914223	Makyen	lipo[\W_]*+cla(?:[\W_]*+(?:exercises|review|prix|\d++|[\da-f]{4,}+))*
