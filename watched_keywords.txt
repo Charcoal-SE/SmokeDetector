@@ -18519,3 +18519,4 @@
 1583904942	Shree	fullestop\.com
 1583905334	tripleee	indipoker\.com
 1583906468	tripleee	catalinafoodprotectionllc\.com
+1583914092	Makyen	slim[\W_]*+x(?:[\W_]*+(?:nature|keto|\d++|[\da-f]{4,}+))*
