@@ -2233,3 +2233,4 @@ unichrone(?!\.net)
 slimy[\W_]*+meds?
 störsender
 churchofilluminatiinitiation(?:@gmail\.com)?
+bangalore[\W_]*+university
