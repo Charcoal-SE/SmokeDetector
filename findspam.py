@@ -224,9 +224,6 @@ class Rule:
         """
         Run this rule against a post. Returns a list of 3 tuples, each in (match, reason, why) format
         """
-        # print("Findspam rule: {}".format(self.reason))
-        # print("Findspam regex: {}".format(self.regex))
-        is_target_rule = self.reason == "pattern-matching website in {}"
         if not self.filter.match(post):
             # Post not matching the filter
             return [(False, "", "")] * 3
@@ -281,9 +278,6 @@ class Rule:
                 else:
                     result_body = (False, "", "")
         elif self.regex:
-            # compiled_regex = regex.compile(format_with_city_list(self.regex), regex.UNICODE)
-            # //compiled_regex = regex.compile(format_with_city_list(self.regex, is_target_rule), regex.UNICODE)
-            # compiled_regex = regex.compile(self.regex, regex.UNICODE, city=city_list, ignore_unused=True)
             try:
                 compiled_regex = self.compiled_regex
             except AttributeError:
@@ -292,7 +286,6 @@ class Rule:
                 regex.purge()  # Don't keep the regex in the cache.
 
             if self.title and not post.is_answer:
-                # print("title")
                 matches = list(compiled_regex.finditer(post.title))
                 result_title = (bool(matches), reason_title,
                                 reason_title.capitalize() + " - " + FindSpam.match_infos(matches))
@@ -300,7 +293,6 @@ class Rule:
                 result_title = (False, "", "")
 
             if self.username:
-                # print("username")
                 matches = list(compiled_regex.finditer(post.user_name))
                 result_username = (bool(matches), reason_username,
                                    reason_username.capitalize() + " - " + FindSpam.match_infos(matches))
@@ -309,7 +301,6 @@ class Rule:
 
             if (self.body and not post.body_is_summary) \
                     or (self.body_summary and post.body_is_summary):
-                # print("body")
                 matches = list(compiled_regex.finditer(body_to_check))
                 result_body = (bool(matches), reason_body,
                                reason_body.capitalize() + " - " + FindSpam.match_infos(matches))
@@ -1580,20 +1571,16 @@ def religion_troll(s, site):
 # TODO: migrate this old stub
 bad_keywords_nwb = [  # "nwb" == "no word boundary"
     u"ಌ",
-    # 58.24s, with 1 error
     "vashi?k[ae]r[ae]n",
     "garcinia",
     "cambogia",
     "forskolin",
-    # 90.45s, 86.80s, no error
     r"cbd\W?oil",
-    # 91.43s
     "(?:eye|skin|aging) ?cream",
     "b ?a ?m ?(?:w ?o ?w|w ?a ?r)",
     "cogniq",
     r"male\Wperf(?!ormer)",
     "anti[- ]?aging",
-    # 145.49s
     "(?:ultra|berry|body)[ -]?ketone",
     "(?:cogni|oro)[ -]?(?:lift|plex)",
     "(?:skin|face|eye)[- ]?(?:serum|therapy|hydration|tip|renewal|gel|lotion|cream)",
@@ -1690,7 +1677,7 @@ pattern_websites = [
     r"(?:corrupt|repair)[\w-]*+\.blogspot",
 
     # The following may have been intended to include (?:yahoo|gmail|hotmail|outlook|office|microsoft)?[\w-]{0,10}
-    # but, the regex made that superfluous.
+    # But, the regex made that superfluous.
     r"http\S*?"
     r"(?:account|tech|customer|support|service|phone|help)"
     r"[\w-]{0,10}"
@@ -1743,9 +1730,12 @@ pattern_websites = [
     r"[.\w-]{0,12}"
     r"\.(?:co|net|org|in(?:\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
 
-    # r"(?:\w{11}(?:idea|income|sale)|\w{6}(?<!notebook)(?:advice|problog|review))s?\.(?:co|net|in(?:\W|fo)|us)",
-    r"(?:\w{11}(?:idea|income|sale)|\w{6}(?:advice|problog|review)"
-    r"(?<!notebookadvice)(?<!notebookproblog)(?<!notebookreview))s?\.(?:co|net|in(?:\W|fo)|us)",
+    r"(?:"
+    r"\w{11}(?:idea|income|sale)|\w{6}(?:advice|problog|review)"
+    r"(?<!notebookadvice)(?<!notebookproblog)(?<!notebookreview)"
+    r")"
+    r"s?"
+    r"\.(?:co|net|in(?:\W|fo)|us)",
 
     r"-(?:poker|jobs)\.com",
     r"send[\w-]*?india\.(?:co|net|org|in(?:\W|fo)|us)",
@@ -1782,7 +1772,6 @@ pattern_websites = [
     "richestcelebrities",
     r"ufc\wfight\wnight",  # Chiesa vs Lee spam
     # football live streaming spam
-    # r"[\w-]{0,100}football[\w-]{0,100}+(?:\.[\w-]{0,100}+)*\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress|live)"
     r"football[\w-]{0,100}+(?:\.[\w-]{0,100}+)*\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress|live)"
 ]
 city_list = [
@@ -1819,10 +1808,6 @@ city_list_sub_regex = regex.compile(r'\\L<city>', regex.UNICODE)
 
 
 def format_with_city_list(regex_text):
-    # to_return = regex.sub(city_list_sub_regex, city_list_as_group, regex_text)
-    # if show:
-    #     print('City substituted regex = ', to_return)
-    # return to_return
     return regex.sub(city_list_sub_regex, city_list_as_group, regex_text)
 
 
@@ -1973,35 +1958,16 @@ create_rule("bad keyword in {}", r"(?is)holocaust\W(witnesses|belie(?:f|vers?)|d
 create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?:(?:poker|casino)\W*online"
             r"|online\W*(?:poker|casino))(?:\b|(?w:\b)|$)", all=True,
             sites=["poker.stackexchange.com"])
-
 # Category: Suspicious links
-# Suspicious sites
-# create_rule("pattern-matching website in {}",
-#             # r"(?i)(?:{}|[\w-]*?(?:{})[\w-]*+\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress))(?![^<>]*+<)".format(
-#             # r"(?i)(?:{}|[\w-]{{0,15}}?(?:{})[\w-]*+"
-#             r"(?i)(?:{}|(?:{})[\w-]*+\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress))(?![^<>]*+<)".format(
-#                 "|".join(pattern_websites), "|".join(bad_keywords_nwb)),
-#             stripcodeblocks=True, body_summary=True, max_score=1)
-# Without backtracking changes: no captured lead-in got 33.99s, 36.51s, 33.75s
-# [\w-]{{0,15}}? got 31.11s, 30.50s
-# With backtracking changes: no captured lead-in got 29.84s, 30.94s, 30.25s
-
 # Suspicious sites 1
 create_rule("pattern-matching website in {}",
             r"(?i)(?:{})(?![^>]*<)".format("|".join(pattern_websites)),
             stripcodeblocks=True, body_summary=True, max_score=1)
 # Suspicious sites 2
 create_rule("pattern-matching website in {}",
-            # r"(?i)(?:[\w-]{{0,15}}?(?:{})[\w-]*+\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress))(?![^<>]*+<)".format(
             r"(?i)(?:(?:{})[\w-]*+\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress))(?![^<>]*+<)".format(
                 "|".join(bad_keywords_nwb)),
             stripcodeblocks=True, body_summary=True, max_score=1)
-# Without backtracking changes: no captured lead-in got 32.72s, 32.70s, 34.45s
-# [\w-]{{0,15}}? got 29.96s, 29.90s
-# With backtracking changes: no captured lead-in got 29.91s, 29.90s, 29.31s
-# With backtracking changes; with manual regex cache: 29.64s, 29.70s, 29.49s
-# ^ I expect it not to be much with the minor testing. In theory, it should matter more when running in real use.
-
 # Country-name domains, travel and expats sites are exempt
 create_rule("pattern-matching website in {}",
             r"(?i)\b(?:[\w-]{6,}|\w*shop\w*)(australia|brazil|canada|denmark|france|india|mexico|norway|pakistan|"
