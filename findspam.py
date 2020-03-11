@@ -278,7 +278,12 @@ class Rule:
                 else:
                     result_body = (False, "", "")
         elif self.regex:
-            compiled_regex = regex.compile(self.regex, regex.UNICODE, city=city_list, ignore_unused=True)
+            try:
+                compiled_regex = self.compiled_regex
+            except AttributeError:
+                compiled_regex = regex.compile(format_with_city_list(self.regex), regex.UNICODE)
+                self.compiled_regex = compiled_regex
+                regex.purge()  # Don't keep the regex in the cache.
 
             if self.title and not post.is_answer:
                 matches = list(compiled_regex.finditer(post.title))
@@ -332,15 +337,31 @@ class FindSpam:
         # (?w:\b) is also useful
         cls.rule_bad_keywords.regex = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
             "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb))
+        try:
+            del cls.rule_bad_keywords.compiled_regex
+        except AttributeError:
+            pass
         cls.rule_bad_keywords.sanity_check()
         cls.rule_watched_keywords.regex = r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format(
             "|".join(GlobalVars.watched_keywords.keys()))
+        try:
+            del cls.rule_watched_keywords.compiled_regex
+        except AttributeError:
+            pass
         cls.rule_watched_keywords.sanity_check()
         cls.rule_blacklisted_websites.regex = r"(?i)({})".format(
             "|".join(GlobalVars.blacklisted_websites))
+        try:
+            del cls.rule_blacklisted_websites.compiled_regex
+        except AttributeError:
+            pass
         cls.rule_blacklisted_websites.sanity_check()
         cls.rule_blacklisted_usernames.regex = r"(?i)({})".format(
             "|".join(GlobalVars.blacklisted_usernames))
+        try:
+            del cls.rule_blacklisted_usernames.compiled_regex
+        except AttributeError:
+            pass
         cls.rule_blacklisted_usernames.sanity_check()
         GlobalVars.blacklisted_numbers, GlobalVars.blacklisted_numbers_normalized = \
             process_numlist(GlobalVars.blacklisted_numbers)
@@ -862,7 +883,7 @@ def keyword_link(s, site):   # thanking keyword and a link in the same short ans
 @create_rule("bad keyword in link text in {}", title=False, stripcodeblocks=True)
 def bad_link_text(s, site):   # suspicious text of a hyperlink
     s = regex.sub("</?(?:strong|em)>", "", s)  # remove font tags
-    keywords = regex.compile(
+    keywords = regex.compile(format_with_city_list(
         r"(?isu)"
         r"\b(buy|cheap) |live[ -]?stream|"
         r"\bmake (money|\$)|"
@@ -872,7 +893,7 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
         r"(?:phone|hotline|helpline)? ?numbers?\b|"
         r"(best|make|full|hd|software|cell|data|media)[\w ]{1,20}"
         r"" r"(online|service|company|agency|repair|recovery|school|university)|"
-        r"\b(writing (service|help)|essay (writing|tips))", city=city_list, ignore_unused=True)
+        r"\b(writing (service|help)|essay (writing|tips))"))
     links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
     business = regex.compile(
         r"(?i)(^| )(airlines?|apple|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
@@ -1549,127 +1570,209 @@ def religion_troll(s, site):
 
 # TODO: migrate this old stub
 bad_keywords_nwb = [  # "nwb" == "no word boundary"
-    u"ಌ", "vashi?k[ae]r[ae]n", "garcinia", "cambogia", "forskolin", r"cbd\W?oil",
-    "(eye|skin|aging) ?cream", "b ?a ?m ?(?:w ?o ?w|w ?a ?r)", "cogniq",
-    r"male\Wperf(?!ormer)", "anti[- ]?aging", "(ultra|berry|body)[ -]?ketone",
-    "(cogni|oro)[ -]?(lift|plex)",
-    "(skin|face|eye)[- ]?(serum|therapy|hydration|tip|renewal|gel|lotion|cream)",
+    u"ಌ",
+    "vashi?k[ae]r[ae]n",
+    "garcinia",
+    "cambogia",
+    "forskolin",
+    r"cbd\W?oil",
+    "(?:eye|skin|aging) ?cream",
+    "b ?a ?m ?(?:w ?o ?w|w ?a ?r)",
+    "cogniq",
+    r"male\Wperf(?!ormer)",
+    "anti[- ]?aging",
+    "(?:ultra|berry|body)[ -]?ketone",
+    "(?:cogni|oro)[ -]?(?:lift|plex)",
+    "(?:skin|face|eye)[- ]?(?:serum|therapy|hydration|tip|renewal|gel|lotion|cream)",
     r"\bnutra(?!l(?:|y|ity|i[sz]ing|i[sz]ed?)s?\b)",
-    r"contact (me|us)\W*<a ", "ecoflex",
+    r"contact (?:me|us)\W*<a ",
+    "ecoflex",
     r"\brsgold",
-    "packers.{0,15}(movers|logistic)(?:.{0,25}</a>)",
-    "(brain|breast|male|penile|penis)[- ]?(enhance|enlarge|improve|boost|plus|peak)(?:ment)?",
-    " %[au]h ", "tapsi ?sarkar",
-    "(?:networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing|"
-    "salesforce|joomla)( certification)? (courses?|training)(?=.{0,25}</a>)",
-    r"(?:design|development|compan(?:y|ies)|agen(?:ts?|c(?:y|ies))|expert|institute|classes|schools?|"
-    r"" r"training|courses?|jobs?|automation|sex|services?|kindergarten)"
-    r"\W*(?:center|centre|institute|work|provider)?"
+    "packers.{0,15}(?:movers|logistic)(?:.{0,25}</a>)",
+    "(?:brain|breast|male|penile|penis)[- ]?(?:enhance|enlarge|improve|boost|plus|peak)(?:ment)?",
+    " %[au]h ",
+    "tapsi ?sarkar",
+
+    r"(?:"
+    r"networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing"
+    r"|salesforce|joomla"
+    r")"
+    r"(?: certification)? (?:courses?|training)(?=.{0,25}</a>)",
+
+    r"(?:"
+    r"design|development|compan(?:y|ies)|agen(?:ts?|c(?:y|ies))|expert|institute|classes|schools?"
+    r"|training|courses?|jobs?|automation|sex|services?|kindergarten"
+    r")"
+    r"\W*+(?:center|centre|institute|work|provider)?"
+
     r"(?:\b.{1,8}\b)?\L<city>\b",
-    r"\b\L<city>(\b.{1,8}\b)?(?:tour)",  # TODO: Populate this "after city" keyword list
-    u"Ｃ[Ｏ0]Ｍ", "sunergetic", "capilux",
-    r"ICQ#?\d{4}-?\d{5}", "viarex",
+    r"\b\L<city>(?:\b.{1,8}\b)?(?:tour)",  # TODO: Populate this "after city" keyword list
+    u"Ｃ[Ｏ0]Ｍ",
+    "sunergetic",
+    "capilux",
+    r"ICQ#?\d{4}-?\d{5}",
+    "viarex",
     r"b\W?o\W?j\W?i\W?t\W?e\W?r",
-    "(?:🐽|🐷){3,}",
+    "(?:🐽|🐷){3,}+",
 ]
 
 # Patterns: the top four lines are the most straightforward, matching any site with this string in domain name
 pattern_websites = [
-    r"(enstella|recoverysoftware|removevirus|support(number|help|quickbooks)|techhelp|calltech|exclusive|"
-    r"onlineshop|video(course|classes|tutorial(?!s))|vipmodel|(?<!word)porn|wholesale|inboxmachine|(get|buy)cheap|"
-    r"escort|diploma|(govt|government)jobs|extramoney|earnathome|spell(caster|specialist)|profits|"
-    r"seo-?(tool|service|trick|market)|onsale|fat(burn|loss)|(\.|//|best)cheap|online-?(training|solution)"
-    r"|\bbabasupport\b|movieshook|where\w*to\w*buy)"
-    r"[\w-]*\.(com?|net|org|in(\W|fo)|us|ir|wordpress|blogspot|tumblr|webs(?=\.)|info)",
-    r"(replica(?!t)|rs\d?gold|rssong|runescapegold|maxgain|e-cash|mothers?day|phone-?number|fullmovie|tvstream|"
-    r"trainingin|dissertation|(placement|research)-?(paper|statement|essay)|digitalmarketing|infocampus|freetrial|"
-    r"cracked\w{3}|bestmover|relocation|\w{4}mortgage|revenue|testo[-bsx]|cleanse|cleansing|detox|suppl[ei]ment|"
-    r"loan|herbal|serum|lift(eye|skin)|(skin|eye)lift|luma(genex|lift)|renuva|svelme|santeavis|wrinkle|topcare)"
-    r"[\w-]*\.(com?|net|org|in(\W|fo)|us|ir|wordpress|blogspot|tumblr|webs(?=\.)|info)",
-    r"(drivingschool|crack-?serial|serial-?(key|crack)|freecrack|appsfor(pc|mac)|probiotic|remedies|heathcare|"
-    r"sideeffect|meatspin|packers\S{0,3}movers|(buy|sell)\S{0,12}cvv|goatse|burnfat|gronkaffe|muskel|"
-    r"tes(tos)?terone|nitric(storm|oxide)|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|slimbody|"
-    r"slimatrex|moist|lefair|derma(?![nt])|xtrm|factorx|(?<!app)nitro(?!us)|endorev|ketone)"
-    r"[\w-]*\.(com?|net|org|in(\W|fo)|us|ir|wordpress|blogspot|tumblr|webs(?=\.)|info)",
-    r"(moving|\w{10}spell|[\w-]{3}password|(?!greatfurniture)\w{5}deal|(?!nfood)\w{5}facts|\w\dfacts|\Btoyshop|"
-    r"[\w-]{5}cheats|"
-    r"(?!djangogirls\.org(?:$|[/?]))[\w-]{6}girls|"
-    r"clothing|shoes(inc)?|cheatcode|cracks|credits|-wallet|refunds|truo?ng|viet|"
-    r"trang)\.(co|net|org|in(\W|fo)|us)",
-    r"(health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
-    r"(//|www\.)healthy?\w{5,}\.com",
-    r"https?://[\w-.]\.repair\W", r"https?://[\w-.]{10,}\.(top|help)\W",
-    r"filefix(er)?\.com", r"\.page\.tl\W", r"infotech\.(com|net|in)",
-    r"\.(com|net)/(xtra|muscle)[\w-]", r"http\S*?\Wfor-sale\W",
-    r"fifa\d+[\w-]*?\.com", r"[\w-](giveaway|jackets|supplys|male)\.com",
-    r"((essay|resume|click2)\w{6,}|(essays|(research|term)paper|examcollection|[\w-]{5}writing|"
-    r"writing[\w-]{5})[\w-]*?)\.(com?|net|org|in(\W|fo)|us|us)",
-    r"(top|best|expert)\d\w{0,15}\.in\W", r"\dth(\.co)?\.in", r"(jobs|in)\L<city>\.in",
-    r"[\w-](recovery|repairs?|rescuer|(?<!epoch|font)converter)(pro|kit)?\.(com|net)",
-    r"(corrupt|repair)[\w-]*?\.blogspot",
-    r"http\S*?(yahoo|gmail|hotmail|outlook|office|microsoft)?[\w-]{0,10}"
-    r"(account|tech|customer|support|service|phone|help)[\w-]{0,10}(service|"
-    r"care|help|recovery|support|phone|number)",
-    r"http\S*?(essay|resume|thesis|dissertation|paper)-?writing",
-    r"fix[\w-]*?(files?|tool(box)?)\.com", r"(repair|recovery|fix)tool(box)?\.(co|net|org)",
-    r"smart(pc)?fixer\.(co|net|org)",
+    r"(?:"
+    r"enstella|recoverysoftware|removevirus|support(?:number|help|quickbooks)|techhelp|calltech|exclusive"
+    r"|onlineshop|video(?:course|classes|tutorial(?!s))|vipmodel|porn(?<!wordporn)|wholesale|inboxmachine"
+    r"|(?:get|buy)cheap|escort|diploma|gov(?:t|ernment)jobs|extramoney|earnathome|spell(?:caster|specialist)|profits"
+    r"|seo-?(?:tool|service|trick|market)|onsale|fat(?:burn|loss)|(?:\.|//|best)cheap|online-?(?:training|solution)"
+    r"|\bbabasupport\b|movieshook|where\w*to\w*buy"
+    r")"
+    r"[\w-]*+\.(?:com?|net|org|in(?:\W|fo)|us|ir|wordpress|blogspot|tumblr|webs(?=\.)|info)",
+
+    r"(?:"
+    r"replica(?!t)|rs\d?gold|rssong|runescapegold|maxgain|e-cash|mothers?day|phone-?number|fullmovie|tvstream"
+    r"|trainingin|dissertation|(?:placement|research)-?(?:paper|statement|essay)|digitalmarketing|infocampus|freetrial"
+    r"|cracked\w{3}|bestmover|relocation|\w{4}mortgage|revenue|testo[-bsx]|cleanse|cleansing|detox|suppl[ei]ment"
+    r"|loan|herbal|serum|lift(?:eye|skin)|(?:skin|eye)lift|luma(?:genex|lift)|renuva|svelme|santeavis|wrinkle|topcare"
+    r")"
+    r"[\w-]*+\.(?:com?|net|org|in(?:\W|fo)|us|ir|wordpress|blogspot|tumblr|webs(?=\.)|info)",
+
+    r"(?:"
+    r"drivingschool|crack-?serial|serial-?(?:key|crack)|freecrack|appsfor(?:pc|mac)|probiotic|remedies|heathcare"
+    r"|sideeffect|meatspin|packers\S{0,3}movers|(?:buy|sell)\S{0,12}cvv|goatse|burnfat|gronkaffe|muskel"
+    r"|tes(?:tos)?terone|nitric(?:storm|oxide)|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|slimbody"
+    r"|slimatrex|moist|lefair|derma(?![nt])|xtrm|factorx|nitro(?<!appnitro)(?!us)|endorev|ketone"
+    r")"
+    r"[\w-]*+\.(?:com?|net|org|in(?:\W|fo)|us|ir|wordpress|blogspot|tumblr|webs(?=\.)|info)",
+
+    r"(?:"
+    r"moving|\w{10}spell|[\w-]{3}password|\w{5}deal(?<!greatfurnituredeal)|\w{5}facts(?<!nfoodfacts)|\w\dfacts"
+    r"|\Btoyshop"
+    r"|[\w-]{5}cheats"
+    r"|[\w-]{6}girls(?<!djangogirls)(?!\.org(?:$|[/?]))"
+    r"|clothing|shoes(?:inc)?|cheatcode|cracks|credits|-wallet|refunds|truo?ng|viet|trang"
+    r")"
+    r"\.(?:co|net|org|in(?:\W|fo)|us)",
+
+    r"(?:health|earn|max|cash|wage|pay|pocket|cent|today)[\w-]{0,6}\d+\.com",
+    r"(?://|www\.)healthy?\w{5,}+\.com",
+    r"https?://[\w-.]\.repair\W",
+    r"https?://[\w-.]{10,}\.(?:top|help)\W",
+    r"filefix(?:er)?\.com",
+    r"\.page\.tl\W",
+    r"infotech\.(?:com|net|in)",
+    r"\.(?:com|net)/(?:xtra|muscle)[\w-]",
+    r"http\S*?\Wfor-sale\W",
+    r"fifa\d+[\w-]*+\.com",
+    r"[\w-](?:giveaway|jackets|supplys|male)\.com",
+
+    r"(?:"
+    r"(?:essay|resume|click2)\w{6,}"
+    r"|(?:essays|(?:research|term)paper|examcollection|[\w-]{5}writing|writing[\w-]{5})[\w-]*+"
+    r")"
+    r"\.(?:com?|net|org|in(?:\W|fo)|us|us)",
+
+    r"(?:top|best|expert)\d\w{0,15}+\.in\W",
+    r"\dth(?:\.co)?\.in",
+    r"(?:jobs|in)-?\L<city>\.in",
+    r"[\w-](?:recovery|repairs?|rescuer|converter(?<!(?:epoch|font)converter))(?:pro|kit)?\.(?:com|net)",
+    r"(?:corrupt|repair)[\w-]*+\.blogspot",
+
+    # The following may have been intended to include (?:yahoo|gmail|hotmail|outlook|office|microsoft)?[\w-]{0,10}
+    # But, the regex made that superfluous.
+    r"http\S*?"
+    r"(?:account|tech|customer|support|service|phone|help)"
+    r"[\w-]{0,10}"
+    r"(?:service|care|help|recovery|support|phone|number)",
+
+    r"http\S*?(?:essay|resume|thesis|dissertation|paper)-?writing",
+    r"fix[\w-]*?(?:files?|tool(?:box)?)\.com",
+    r"(?:repair|recovery|fix)tool(?:box)?\.(?:co|net|org)",
+    r"smart(?:pc)?fixer\.(?:co|net|org)",
     r"errorcode0x\.(?:com?)",
-    r"password[\w-]*?(cracker|unlocker|reset|buster|master|remover)\.(co|net)",
-    r"crack[\w-]*?(serial|soft|password)[\w-]*?\.(co|net)",
-    r"(downloader|pdf)converter\.(com|net)",
-    r"ware[\w-]*?download\.(com|net|info|in\W)",
-    r"((\d|\w{3})livestream|livestream(ing|s))[\w]*?\.(com|net|tv)", r"\w+vs\w+live\.(com|net|tv)",
-    r"(play|watch|cup|20)[\w-]*?(live|online)\.(com|net|tv)", r"worldcup\d[\w-]*?\.(com|net|tv|blogspot)",
-    r"https?://(\w{5,}tutoring\w*|cheat[\w-.]{3,}|xtreme[\w-]{5,})\.",
-    r"(platinum|paying|acai|buy|premium|premier|ultra|thebest|best|[/.]try)[\w]{10,}\.(co|net|org|in(\W|fo)|us)",
-    r"(training|institute|marketing)[\w-]{6,}[\w.-]*?\.(co|net|org|in(\W|fo)|us)",
-    r"[\w-](courses?|training)[\w-]*?\.in/",
-    r"\w{9}(buy|roofing)\.(co|net|org|in(\W|fo)|us)",
-    # (something)health.(something)
-    r"(vitamin|dive|hike|love|strong|ideal|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|"
-    r"prostate)[\w-]*?health[\w-]*?\.(co|net|org|in(\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
-    # (something)cream.(something)
-    r"(eye|skin|age|aging)[\w-]*?cream[\w-]*?\.(co|net|org|in(\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
-    # (keyword)(something)(keyword)(something).(something)
-    r"(acai|advance|aging|alpha|beauty|belle|beta|biotic|body|boost(?! solution)|brain(?!tree)|burn|colon|"
-    r"[^s]cream|cr[eè]me|derma|ecig|eye|face(?!book)|fat|formula|geniu[sx]|grow|hair|health|herbal|ideal|luminous|"
-    r"male|medical|medicare|muscle|natura|no2|nutrition|optimal|pearl|perfect|phyto|probio|rejuven|revive|ripped|"
-    r"rx|scam|shred|skin|slim|super|testo|[/.]top|trim|[/.]try|ultra|ultra|vapor|vita|weight|wellness|xplode|yoga|"
-    r"young|youth)[\w]{0,20}(about|advi[sc]|assess|blog|brazil|canada|care|center|centre|chat|complex(?!ity)|"
-    r"congress|consult|critic|critique|cure|denmark|discussion|doctor|dose|essence|essential|extract|fact|formula|"
-    r"france|funct?ion|genix|guide|help|idea|info|jacked|l[iy]ft|mag|market|max|mexico|norway|nutrition|order|plus|"
-    r"points|policy|potency|power|practice|pro|program|report|review|rewind|site|slim|solution|suppl(y|ier)|sweden|"
-    r"tip|trial|try|world|zone)[.\w-]{0,12}\.(co|net|org|in(\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
-    r"(\w{11}(idea|income|sale)|\w{6}(?<!notebook)(advice|problog|review))s?\.(co|net|in(\W|fo)|us)",
-    r"-(poker|jobs)\.com", r"send[\w-]*?india\.(co|net|org|in(\W|fo)|us)",
-    r"(file|photo|android|iphone)recovery[\w-]*?\.(co|net|org|in(\W|fo)|us)",
-    r"(videos?|movies?|watch)online[\w-]*?\.", r"hd(video|movie)[\w-]*?\.",
-    r"backlink(?!(o\.|watch))[\w-]*?\.(co|net|org|in(\W|fo)|us)",
-    r"(replica[^nt]\w{5,}|\wrolex)\.(co|net|org|in(\W|fo)|us)",
-    r"customer(service|support)[\w-]*?\.(co|net|org|in(\W|fo)|us)",
-    r"conferences?alert[\w-]*?\.(co|net|org|in(\W|fo)|us)",
-    r"seo\.com(?!/\w)", r"\Wseo(?!sitecheckup)[\w-]{10,}\.(com|net|in\W)",
-    r"(?<!site)24x7[\w-]*?\.(co|net|org|in(\W|fo)|us)",
-    r"backlink[\w-]*?\.(com|net|de|blogspot)",
-    r"(software|developers|packers|movers|logistic|service)[\w-]*?india\.(com|in\W)",
-    r"scam[\w-]*?(book|alert|register|punch)[\w-]*?\.(co|net|org|in(\W|fo)|us)",
-    r"http\S*?crazy(mass|bulk)", r'http\S*\.com\.com[/"<]',
+    r"password[\w-]*?(?:cracker|unlocker|reset|buster|master|remover)\.(?:co|net)",
+    r"crack[\w-]*?(?:serial|soft|password)[\w-]*+\.(?:co|net)",
+    r"(?:downloader|pdf)converter\.(?:com|net)",
+    r"ware[\w-]*?download\.(?:com|net|info|in\W)",
+    r"(?:(?:\d|\w{3})livestream|livestream(?:ing|s))[\w]*+\.(?:com|net|tv)",
+    r"\wvs\w+live\.(?:com|net|tv)",
+    r"(?:play|watch|cup|20)[\w-]*?(?:live|online)\.(?:com|net|tv)",
+    r"worldcup\d[\w-]*+\.(?:com|net|tv|blogspot)",
+    r"https?://(?:\w{5,}tutoring\w*+|cheat[\w-.]{3,}+|xtreme[\w-]{5,}+)\.",
+    r"(?:platinum|paying|acai|buy|premium|premier|ultra|thebest|best|[/.]try)\w{10,}+\.(?:co|net|org|in(?:\W|fo)|us)",
+    r"(?:training|institute|marketing)[\w-]{6}[\w.-]*+\.(?:co|net|org|in(?:\W|fo)|us)",
+    r"[\w-](?:courses?|training)[\w-]*+\.in/",
+    r"\w{9}(?:buy|roofing)\.(?:co|net|org|in(?:\W|fo)|us)",
+
+    # (?:something)health.(?:something)
+    r"(?:vitamin|dive|hike|love|strong|ideal|natural|pro|magic|beware|top|best|free|cheap|allied|nutrition|prostate)"
+    r"[\w-]*?health[\w-]*+"
+    r"\.(?:co|net|org|in(?:\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
+
+    # (?:something)cream.(?:something)
+    r"(?:eye|skin|age|aging)[\w-]*?cream[\w-]*+"
+    r"\.(?:co|net|org|in(?:\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
+
+    # (?:keyword)(?:something)(?:keyword)(?:something).(?:something)
+    r"(?:"
+    r"acai|advance|aging|alpha|beauty|belle|beta|biotic|body|boost(?! solution)|brain(?!tree)|burn|colon"
+    r"|[^s]cream|cr[eè]me|derma|ecig|eye|face(?!book)|fat|formula|geniu[sx]|grow|hair|health|herbal|ideal|luminous"
+    r"|male|medical|medicare|muscle|natura|no2|nutrition|optimal|pearl|perfect|phyto|probio|rejuven|revive|ripped"
+    r"|rx|scam|shred|skin|slim|super|testo|[/.]top|trim|[/.]try|ultra|ultra|vapor|vita|weight|wellness|xplode|yoga"
+    r"|young|youth"
+    r")"
+    r"[\w]{0,20}"
+    r"(?:"
+    r"about|advi[sc]|assess|blog|brazil|canada|care|center|centre|chat|complex(?!ity)"
+    r"|congress|consult|critic|critique|cure|denmark|discussion|doctor|dose|essence|essential|extract|fact|formula"
+    r"|france|funct?ion|genix|guide|help|idea|info|jacked|l[iy]ft|mag|market|max|mexico|norway|nutrition|order|plus"
+    r"|points|policy|potency|power|practice|pro|program|report|review|rewind|site|slim|solution|suppl(?:y|ier)|sweden"
+    r"|tip|trial|try|world|zone"
+    r")"
+    r"[.\w-]{0,12}"
+    r"\.(?:co|net|org|in(?:\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
+
+    r"(?:"
+    r"\w{11}(?:idea|income|sale)|\w{6}(?:advice|problog|review)"
+    r"(?<!notebookadvice)(?<!notebookproblog)(?<!notebookreview)"
+    r")"
+    r"s?"
+    r"\.(?:co|net|in(?:\W|fo)|us)",
+
+    r"-(?:poker|jobs)\.com",
+    r"send[\w-]*?india\.(?:co|net|org|in(?:\W|fo)|us)",
+    r"(?:file|photo|android|iphone)recovery[\w-]*+\.(?:co|net|org|in(?:\W|fo)|us)",
+    r"(?:videos?|movies?|watch)online[\w-]*+\.",
+    r"hd(?:video|movie)[\w-]*+\.",
+    r"backlink(?!(?:o\.|watch))[\w-]*+\.(?:co|net|org|in(?:\W|fo)|us)",
+    r"(?:replica[^nt]\w{5,}+|\wrolex)\.(?:co|net|org|in(?:\W|fo)|us)",
+    r"customer(?:service|support)[\w-]*+\.(?:co|net|org|in(?:\W|fo)|us)",
+    r"conferences?alert[\w-]*+\.(?:co|net|org|in(?:\W|fo)|us)",
+    r"seo\.com(?!/\w)",
+    r"\Wseo(?!sitecheckup)[\w-]{10,}+\.(?:com|net|in\W)",
+    r"24x7(?<!site24x7)[\w-]*+\.(?:co|net|org|in(?:\W|fo)|us)",
+    r"backlink[\w-]*+\.(?:com|net|de|blogspot)",
+    r"(?:software|developers|packers|movers|logistic|service)[\w-]*?india\.(?:com|in\W)",
+    r"scam[\w-]*?(?:book|alert|register|punch)[\w-]*+\.(?:co|net|org|in(?:\W|fo)|us)",
+    r"http\S*?crazy(?:mass|bulk)",
+    r'http\S*\.com\.com[/"<]',
     r"https?://[^/\s]{8,}healer",
     r'reddit\.com/\w{6}/"',
-    r"world[\w-]*?cricket[\w-]*?\.(co|net|org|in(\W|fo)|us)",
-    r"(credit|online)[\w-]*?loan[\w-]*?\.(co|net|org|in(\W|fo)|us)",
-    r"worldcup\d+live\.(com?|net|org|in(\W|fo)|us)",
-    r"((concrete|beton)-?mixer|crusher)[\w-]*?\.(co|net)",
-    r"\w{7}formac\.(com|net|org)",
-    r"sex\.(com|net|info)", r"https?://(www\.)?sex",
-    r"[\w-]{12}\.(webs|66ghz)\.com", r'online\.us[/"<]',
+    r"world[\w-]*?cricket[\w-]*+\.(?:co|net|org|in(?:\W|fo)|us)",
+    r"(?:credit|online)[\w-]*?loan[\w-]*+\.(?:co|net|org|in(?:\W|fo)|us)",
+    r"worldcup\d+live\.(?:com?|net|org|in(?:\W|fo)|us)",
+    r"(?:(?:concrete|beton)-?mixer|crusher)[\w-]*+\.(?:co|net)",
+    r"\w{7}formac\.(?:com|net|org)",
+    r"sex\.(?:com|net|info)",
+    r"https?://(?:www\.)?sex",
+    r"[\w-]{12}\.(?:webs|66ghz)\.com",
+    r'online\.us[/"<]',
     r"ptvsports\d+.com",
     r"youth\Wserum",
     r"buyviewsutube",
-    r"(?:celebrity-?)?net-?worth", "richestcelebrities",
+    r"(?:celebrity-?)?net-?worth",
+    "richestcelebrities",
     r"ufc\wfight\wnight",  # Chiesa vs Lee spam
     # football live streaming spam
-    r"[\w-]{0,100}football[\w-]{0,100}(?:\.[\w-]{0,100})*\.(com?|net|org|in(fo)?|us|blogspot|wordpress|live)"
+    r"football[\w-]{0,100}+(?:\.[\w-]{0,100}+)*\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress|live)"
 ]
 city_list = [
     "Agra", "Ajanta", "Almora", "Alwar", "Amritsar", "Andheri",
@@ -1700,6 +1803,12 @@ city_list = [
     # buyabans.com spammer uses creative variations
     "Sri Lanka", "Srilanka", "Srilankan",
 ]
+city_list_as_group = '(?:{})'.format('|'.join(city_list))
+city_list_sub_regex = regex.compile(r'\\L<city>', regex.UNICODE)
+
+
+def format_with_city_list(regex_text):
+    return regex.sub(city_list_sub_regex, city_list_as_group, regex_text)
 
 
 ################################################################################
@@ -1849,12 +1958,15 @@ create_rule("bad keyword in {}", r"(?is)holocaust\W(witnesses|belie(?:f|vers?)|d
 create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?:(?:poker|casino)\W*online"
             r"|online\W*(?:poker|casino))(?:\b|(?w:\b)|$)", all=True,
             sites=["poker.stackexchange.com"])
-
 # Category: Suspicious links
-# Suspicious sites
+# Suspicious sites 1
 create_rule("pattern-matching website in {}",
-            r"(?i)({}|[\w-]*?({})[\w-]*?\.(com?|net|org|in(fo)?|us|blogspot|wordpress))(?![^>]*<)".format(
-                "|".join(pattern_websites), "|".join(bad_keywords_nwb)),
+            r"(?i)(?:{})(?![^>]*<)".format("|".join(pattern_websites)),
+            stripcodeblocks=True, body_summary=True, max_score=1)
+# Suspicious sites 2
+create_rule("pattern-matching website in {}",
+            r"(?i)(?:(?:{})[\w-]*+\.(?:com?|net|org|in(?:fo)?|us|blogspot|wordpress))(?![^<>]*+<)".format(
+                "|".join(bad_keywords_nwb)),
             stripcodeblocks=True, body_summary=True, max_score=1)
 # Country-name domains, travel and expats sites are exempt
 create_rule("pattern-matching website in {}",

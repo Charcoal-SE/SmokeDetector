@@ -4679,7 +4679,7 @@
 1533363208	iBug	UCwkpKdiW4S4CGTg60Xky30Q
 1533364051	iBug	worldwidedocuments7(?:\W*gmail\.com)?
 1533364076	iBug	worldwidedocumentation\.com
-1533364736	Makyen	[a-z_]*(?:44[\W_]*)?753[\W_]*718[\W_]*2633[a-z_]*
+1533364736	Makyen	[a-z_]*+(?:44[\W_]*+)?753[\W_]*+718[\W_]*+2633[a-z_]*+
 1533367416	Glorfindel	kvktech\.com
 1533367447	Glorfindel	dillashaw\W?vs\W?garbrandt\W?\d+
 1533378160	doppelgreener	wordunscrambler\.co
@@ -4692,19 +4692,19 @@
 1533464440	Glorfindel	himalayan\.online
 1533471561	doppelgreener	turmeric\Wdiet
 1533473251	Glorfindel	thinkiit\.in
-1533515227	Makyen	[a-z_]*(?:1_*)?984[\W_]*329[\W_]*5944[a-z_]*
+1533515227	Makyen	[a-z_]*+(?:1_*+)?984[\W_]*+329[\W_]*+5944[a-z_]*+
 1533515237	Makyen	agborjerryyan12(?:@gmail\.com)?
 1533515246	Makyen	greatidodotemple(?:@gmail\.com)?
-1533515258	Makyen	[a-z_]*234[\W_]*903[\W_]*0451[\W_]*450[a-z_]*
+1533515258	Makyen	[a-z_]*+234[\W_]*+903[\W_]*+0451[\W_]*+450[a-z_]*+
 1533522443	Makyen	quickesthacker(?:@gmail\.com)?
 1533524916	Tetsuya Yamamoto	ankarakanalacimi\.com
 1533528425	iBug	ringtonemob\.net
 1533528570	Tetsuya Yamamoto	lipsonhips\.com
 1533528684	Tetsuya Yamamoto	bigbet66\.com
 1533528869	Tetsuya Yamamoto	onlineconvertfree\.com
-1533529629	tripleee	[a-z_]*(?:91_*)?999[\W_]*303[\W_]*6692[a-z_]*
-1533529752	tripleee	[a-z_]*(?:91_*)?8977[\W_]*700[\W_]*900[a-z_]*
-1533531518	Makyen	[a-z_]*(?:1_*)?845[\W_]*579[\W_]*0207[a-z_]*
+1533529629	tripleee	[a-z_]*+(?:91_*+)?999[\W_]*+303[\W_]*+6692[a-z_]*+
+1533529752	tripleee	[a-z_]*+(?:91_*+)?8977[\W_]*+700[\W_]*+900[a-z_]*+
+1533531518	Makyen	[a-z_]*+(?:1_*+)?845[\W_]*+579[\W_]*+0207[a-z_]*+
 1533532672	tripleee	ganjaprint\.com
 1533534754	gparyani	orangescrum\.com
 1533536197	Makyen	hotelroyaledecasa\.com
@@ -4724,19 +4724,19 @@
 1533569557	iBug	essaymap\.org
 1533578122	iBug	techhack\.ga
 1533611664	tripleee	lofacts\.com
-1533620919	tripleee	[a-z_]*(?:1_*)?800[\W_]*610[\W_]*6962[a-z_]*
-1533623276	Makyen	\w*[\w-]*factforhealth(?!\.com)[\w-]*\w*
+1533620919	tripleee	[a-z_]*+(?:1_*+)?800[\W_]*+610[\W_]*+6962[a-z_]*+
+1533623276	Makyen	[\w-]*factforhealth(?!\.com)[\w-]*
 1533625292	tripleee	apahouse\.com
 1533625614	Glorfindel	phdassistance\.com
 1533627283	Glorfindel	techseek\.org
 1533628275	tripleee	quickproaccounting\.com
 1533628843	Glorfindel	cheapflightstolisbon\.co
-1533629376	tripleee	cheap\W?flights\W?to(?:\W?\w+)+\.co\w*
+1533629376	tripleee	cheap\W?flights\W?to(?:\W?\w+)+\.co\w*+
 1533629767	Makyen	williamsloanfundshelp(?:@gmail\.com)?
 1533629829	Glorfindel	fhacyberservics
 1533630904	Makyen	diamondloanfirm24(?:@gmail\.com)?
-1533630921	Makyen	[a-z_]*(?:1_*)?903[\W_]*568[\W_]*0039[a-z_]*
-1533631690	Makyen	diamond\W*loan\W*firm
+1533630921	Makyen	[a-z_]*+(?:1_*+)?903[\W_]*+568[\W_]*+0039[a-z_]*+
+1533631690	Makyen	diamond\W*+loan\W*+firm
 1533633651	Glorfindel	reviewmediaone\.blogspot\.com
 1533656908	Makyen	recoverygenius(?:@gmail\.com)?
 1533657082	Zoe	kikforpcwindows\.com
