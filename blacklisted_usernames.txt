@@ -271,3 +271,4 @@ oxybr(?:ea?)?th(?:(?<=\Boxybr(?:ea?)?th)|\B)
 DailyRaiseQuestion
 (?-i:^Linda Goes East$)
 (?-i:^Shelley Morris$)
+(?-i:^redgillbistro$)
