@@ -273,3 +273,4 @@ DailyRaiseQuestion
 (?-i:^Shelley Morris$)
 (?-i:^redgillbistro$)
 (?-i:^Henry Nelson$)
+(?-i:^fono suonerietele$)
