@@ -237,6 +237,9 @@ items:
   - eva.ns.cloudflare.com.
   - hank.ns.cloudflare.com.
 - ns:
+  - felicity.ns.cloudflare.com.
+  - lily.ns.cloudflare.com.
+- ns:
   - gina.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
 - ns:
