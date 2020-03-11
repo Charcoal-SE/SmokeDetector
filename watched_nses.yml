@@ -50,6 +50,9 @@ items:
   - lana.ns.cloudflare.com.
 - ns:
   - alla.ns.cloudflare.com.
+  - ed.ns.cloudflare.com.
+- ns:
+  - alla.ns.cloudflare.com.
   - kirk.ns.cloudflare.com.
 - ns:
   - amir.ns.cloudflare.com.
