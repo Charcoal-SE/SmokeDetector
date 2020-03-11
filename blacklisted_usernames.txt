@@ -5,8 +5,8 @@ ser?vice pemanas?
 \b(?:fuck(?:er|ing)?|penis)\b
 # ^\w{0,3}w.{0,2}ng.?d.{0,2}ng\w{0,3}$
 dlqudals
-[a-z ]{3,}juri(?:ns|sa|ya|yam|ym)$
-^[a-z]+jiibond$
+^.*+$(?:(?<=juri(?:ns|sa|ya|ym)$|(?<=juriyam$)))
+^[a-z]++$(?<=jiibond$)
 Marlin Woods
 xiguai
 Dr\.? Madonna
@@ -61,7 +61,7 @@ emilie\W?larsen
 air\W?purifier\W?reviews
 Cum\W?Juice
 agen judi
-donald\W*j?\.?\W*trump
+donald\W*+j?\.?\W*+trump
 ^yolo_does_not_detect_me$
 ^christine roebuck$
 techelpp
