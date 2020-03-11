@@ -272,3 +272,4 @@ DailyRaiseQuestion
 (?-i:^Linda Goes East$)
 (?-i:^Shelley Morris$)
 (?-i:^redgillbistro$)
+(?-i:^Henry Nelson$)
