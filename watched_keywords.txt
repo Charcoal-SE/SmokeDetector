@@ -18551,3 +18551,4 @@
 1583946198	Makyen	realbraindumps(?!\.com)
 1583946220	Makyen	instant[\W_]*+boost[\W_]*+brain(?:[\W_]*+(?:formula|\d++|[\da-f]{4,}+))*
 1583947422	Machavity	aamplugin\.com
+1583949028	Das_Geek	welderreview\.com
