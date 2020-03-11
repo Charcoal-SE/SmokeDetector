@@ -18534,3 +18534,4 @@
 1583918174	tripleee	vietthong\.vn
 1583918211	tripleee	zues[\W_]*+male
 1583920823	tripleee	bubbly[\W_]*+belle(?:[\W_]*+bath[\W_]*+bomb)?
+1583922650	tripleee	suonerie
