@@ -157,6 +157,9 @@ items:
   - chuck.ns.cloudflare.com.
   - vida.ns.cloudflare.com.
 - ns:
+  - clark.ns.cloudflare.com.
+  - kiki.ns.cloudflare.com.
+- ns:
   - cory.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
 - ns:
