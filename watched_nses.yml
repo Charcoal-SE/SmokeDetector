@@ -152,6 +152,9 @@ items:
   - tess.ns.cloudflare.com.
 - ns:
   - chuck.ns.cloudflare.com.
+  - jill.ns.cloudflare.com.
+- ns:
+  - chuck.ns.cloudflare.com.
   - vida.ns.cloudflare.com.
 - ns:
   - cory.ns.cloudflare.com.
