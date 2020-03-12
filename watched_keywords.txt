@@ -18588,3 +18588,4 @@
 1584034374	tripleee	apprentus\.fr
 1584045484	Eliah Kagan	calculatored(?!\.com)
 1584046183	Eliah Kagan	srishti[\W_]*+lodge
+1584046279	Eliah Kagan	gopeshwar[\W_]*+hotels
