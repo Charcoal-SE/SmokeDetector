@@ -18115,7 +18115,6 @@
 1582979902	Eliah Kagan	tampoly\.com
 1582979926	Eliah Kagan	maichethongminh(?:@gmail\.com)?
 1582979992	Eliah Kagan	polyminhhiep
-1582980435	Eliah Kagan	productscop\.com
 1582980475	Eliah Kagan	(?-i:5qW82FARyFk)(?#YouTube)
 1582980514	Eliah Kagan	(?-i:1wArXW0eCR4)(?#youtu.be)
 1582981539	Eliah Kagan	bitcoinqrcodemaker\.com
