@@ -274,3 +274,4 @@ DailyRaiseQuestion
 (?-i:^redgillbistro$)
 (?-i:^Henry Nelson$)
 (?-i:^fono suonerietele$)
+(?-i:^Anshul Gelani$)
