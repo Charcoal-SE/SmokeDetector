@@ -18587,3 +18587,4 @@
 1584034305	tripleee	e-scraper\.com
 1584034374	tripleee	apprentus\.fr
 1584045484	Eliah Kagan	calculatored(?!\.com)
+1584046183	Eliah Kagan	srishti[\W_]*+lodge
