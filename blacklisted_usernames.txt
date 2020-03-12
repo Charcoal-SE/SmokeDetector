@@ -276,3 +276,4 @@ DailyRaiseQuestion
 (?-i:^fono suonerietele$)
 (?-i:^Anshul Gelani$)
 (?-i:^Riffi D'souza$)
+(?-i:^Suzan Jackson$)
