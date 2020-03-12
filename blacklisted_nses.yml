@@ -17,6 +17,9 @@ items:
   - brenda.ns.cloudflare.com.
   - merlin.ns.cloudflare.com.
 - ns:
+  - burt.ns.cloudflare.com.
+  - naomi.ns.cloudflare.com.
+- ns:
   - chip.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
 - ns:

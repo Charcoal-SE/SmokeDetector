@@ -139,9 +139,6 @@ items:
   - bruce.ns.cloudflare.com.
   - chan.ns.cloudflare.com.
 - ns:
-  - burt.ns.cloudflare.com.
-  - naomi.ns.cloudflare.com.
-- ns:
   - carol.ns.cloudflare.com.
   - guy.ns.cloudflare.com.
 - ns:
