@@ -342,6 +342,9 @@ items:
   - lara.ns.cloudflare.com.
   - sterling.ns.cloudflare.com.
 - ns:
+  - lars.ns.cloudflare.com.
+  - nadia.ns.cloudflare.com.
+- ns:
   - laura.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
