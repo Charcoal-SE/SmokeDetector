@@ -18585,3 +18585,4 @@
 1584024742	tripleee	churchofjesuschrist\.org
 1584027065	Makyen	myapklab\.com
 1584034305	tripleee	e-scraper\.com
+1584034374	tripleee	apprentus\.fr
