@@ -182,6 +182,9 @@ items:
   - kirk.ns.cloudflare.com.
 - ns:
   - dana.ns.cloudflare.com.
+  - pedro.ns.cloudflare.com.
+- ns:
+  - dana.ns.cloudflare.com.
   - piotr.ns.cloudflare.com.
 - ns:
   - dana.ns.cloudflare.com.
