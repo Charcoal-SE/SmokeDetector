@@ -275,3 +275,4 @@ DailyRaiseQuestion
 (?-i:^Henry Nelson$)
 (?-i:^fono suonerietele$)
 (?-i:^Anshul Gelani$)
+(?-i:^Riffi D'souza$)
