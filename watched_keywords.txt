@@ -18579,3 +18579,4 @@
 1583989072	tripleee	intraday[\W_]*+trading
 1583990812	Shree	hpprinterdriverss\.com
 1583991948	tripleee	eviannce
+1583992058	tripleee	foligray
