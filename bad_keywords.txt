@@ -2235,3 +2235,4 @@ störsender
 churchofilluminatiinitiation(?:@gmail\.com)?
 bangalore[\W_]*+university
 lipo[\W_]*+cla(?:[\W_]*+(?:exercises|review|prix|\d++|[\da-f]{4,}+))*
+luxe[\W_]*+bella(?:[\W_]*+cream)?

@@ -18575,7 +18575,6 @@
 1583990812	Shree	hpprinterdriverss\.com
 1583991948	tripleee	eviannce
 1583992058	tripleee	foligray
-1583997902	tripleee	luxe[\W_]*+bella(?:[\W_]*+cream)?
 1583998026	tripleee	skin[\W_]*+bliss
 1583999844	tripleee	beaquarium\.com
 1584001605	tripleee	hunzabazar\.com
