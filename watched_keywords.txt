@@ -18581,3 +18581,4 @@
 1583997902	tripleee	luxe[\W_]*+bella(?:[\W_]*+cream)?
 1583998026	tripleee	skin[\W_]*+bliss
 1583999844	tripleee	beaquarium\.com
+1584001605	tripleee	hunzabazar\.com
