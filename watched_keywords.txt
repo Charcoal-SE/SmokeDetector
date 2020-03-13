@@ -18611,3 +18611,4 @@
 1584085426	Makyen	(?-i:OLeS-zHewXs)(?#youtu.be)
 1584085728	Makyen	purefect[\W_]*+cbd(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1584085750	Makyen	buyonlineclass\.com
+1584088794	Makyen	everlean(?:[\W_]*+(?:healthy|reviews?|\d++|[\da-f]{4,}+))*
