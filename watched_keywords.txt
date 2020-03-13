@@ -18601,3 +18601,4 @@
 1584074635	tripleee	whatiswhere\.com
 1584076093	tripleee	empowered[\W_]*+x[\W_]*+energy\d*+
 1584077660	tripleee	hemp[\W_]*+max[\W_]*+lab
+1584078630	Makyen	(?-i:nw8OQea)(?#firsturl.de)
