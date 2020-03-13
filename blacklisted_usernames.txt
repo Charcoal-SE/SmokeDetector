@@ -277,3 +277,4 @@ DailyRaiseQuestion
 (?-i:^Anshul Gelani$)
 (?-i:^Riffi D'souza$)
 (?-i:^Suzan Jackson$)
+(?-i:^Natasha Willams$)
