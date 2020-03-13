@@ -18287,7 +18287,6 @@
 1583384868	Shree	talesbuzz\.com
 1583384892	Shree	techwithgeeks\.com
 1583384914	Shree	bulletintech\.com
-1583384937	Shree	alternativestips\.com
 1583385056	Shree	thc-grower\.com
 1583387020	Nisse Engström	dumpsexpert\.com
 1583388073	Makyen	dumpsexpert(?!\.com)
