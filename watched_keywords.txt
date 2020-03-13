@@ -18629,3 +18629,4 @@
 1584113870	Makyen	slimsfitpills(?#sites.google.com)
 1584113899	Makyen	sli?ms?[\W_]*+fit[\W_]*+pill(?!s\b(?<=slimsfitpills\b))(?!s\.wordpress\.com(?<=slimsfitpill))(?!s\.blogspot(?<=slimfitpills))s?(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1584113944	Makyen	customerservice-number\.net
+1584116035	Machavity	technoviral\.com
