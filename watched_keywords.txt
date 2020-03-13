@@ -18624,3 +18624,4 @@
 1584113531	Makyen	kindlecustomerservices\.com
 1584113576	Makyen	green[\W_]*+leaves[\W_]*+cbd(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1584113600	Makyen	(?-i:vhkmzGf-GVU)(?#youtu.be)
+1584113624	Makyen	slmfitpills\.wordpress\.com
