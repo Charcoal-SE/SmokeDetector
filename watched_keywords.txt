@@ -18076,7 +18076,6 @@
 1582896875	Makyen	peterswattsy
 1582896898	Makyen	sashido\.io
 1582896980	Makyen	hollywood[\W_]*+keto(?:[\W_]*+(?:pill|ca|\d++|[\da-f]{4,}+)s?)*
-1582897851	Makyen	attcustomerservicephonenumber\.com
 1582899439	Das_Geek	desertdreamtourism\.com
 1582904574	Makyen	huffingtonpostdotcom\.blogspot
 1582907936	Makyen	zen[\W_]*+green(?:[\W_]*+(?:cbd|\d++|[\da-f]{4,}+))*
