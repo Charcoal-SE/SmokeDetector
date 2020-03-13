@@ -169,6 +169,9 @@ items:
   - cory.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
 - ns:
+  - curt.ns.cloudflare.com.
+  - jean.ns.cloudflare.com.
+- ns:
   - damon.ns.cloudflare.com.
   - naomi.ns.cloudflare.com.
 - ns:
