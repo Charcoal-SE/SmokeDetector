@@ -18639,3 +18639,4 @@
 1584138749	Makyen	cartoonxxx\.in
 1584142968	Makyen	ivc[\W_]*+services(?!\.com(?<=ivc-services\.com))
 1584142993	Makyen	flashingfile\.com
+1584143017	Makyen	rdpguard\.com
