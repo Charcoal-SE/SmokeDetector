@@ -18608,3 +18608,4 @@
 1584084607	tripleee	yourstory\.com
 1584085207	Makyen	new[\W_]*+hoodia(?:[\W_]*+(?:reduction|weight|\d++|[\da-f]{4,}+))*
 1584085228	Makyen	keto[\W_]*+bodz(?:[\W_]*+(?:keto|\d++|[\da-f]{4,}+))*
+1584085426	Makyen	(?-i:OLeS-zHewXs)(?#youtu.be)
