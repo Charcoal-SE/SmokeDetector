@@ -278,3 +278,4 @@ DailyRaiseQuestion
 (?-i:^Riffi D'souza$)
 (?-i:^Suzan Jackson$)
 (?-i:^Natasha Willams$)
+^freeforex\Wforex$
