@@ -1812,7 +1812,7 @@ viril\W?pump
 supreme\W?vigor
 ultra\W?sk
 gentiv\W?ultra
-kiss\W?anime
+kiss[\W_]*+anime(?!\.li(?<=kissanime\.li))(?!\.co(?<=kiss-anime\.co))
 darknetmarketslink(?=\.com)(?#Intentional double-detection of this site)
 braindumps?4it(?!\.com(?<=braindumps4it\.com))
 breast\W?actives?
