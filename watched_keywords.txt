@@ -18606,3 +18606,4 @@
 1584080735	Makyen	ghostrifles\.com
 1584084578	tripleee	sataware\.com
 1584084607	tripleee	yourstory\.com
+1584085207	Makyen	new[\W_]*+hoodia(?:[\W_]*+(?:reduction|weight|\d++|[\da-f]{4,}+))*
