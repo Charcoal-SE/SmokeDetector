@@ -18622,3 +18622,4 @@
 1584113461	Makyen	rank-higher\.ca
 1584113487	Makyen	kingscages\.com
 1584113531	Makyen	kindlecustomerservices\.com
+1584113576	Makyen	green[\W_]*+leaves[\W_]*+cbd(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
