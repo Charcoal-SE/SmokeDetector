@@ -18637,3 +18637,4 @@
 1584127360	Das_Geek	binarymaps\.com
 1584129955	Das_Geek	icareindia\.net
 1584138749	Makyen	cartoonxxx\.in
+1584142968	Makyen	ivc[\W_]*+services(?!\.com(?<=ivc-services\.com))
