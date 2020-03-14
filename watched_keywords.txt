@@ -18650,3 +18650,4 @@
 1584205592	Makyen	(?-i:FOH6_LNKMX4)(?#youtu.be)
 1584205619	Makyen	amazontrialcom(?#sites.google.com)
 1584205644	Makyen	crunchbase\.com
+1584205664	Makyen	bellariva[\W_]*+skincare[\W_]*+cream(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
