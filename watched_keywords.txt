@@ -18665,3 +18665,4 @@
 1584206263	Makyen	hemp[\W_]*+oil[\W_]*+tincture[\W_]*+(?:canada|ca)(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1584221265	Makyen	i[\W_]*+have[\W_]*+been[\W_]*+an[\W_]*+internet[\W_]*+troll
 1584222241	Machavity	cryptoinvestor\.miners@gmail\.com
+1584222742	Makyen	did[\W_]*+(?:no)?t\b.{0,30}?\braises?
