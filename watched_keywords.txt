@@ -18657,3 +18657,4 @@
 1584205872	Makyen	seelatest\.com
 1584205943	Makyen	534180290799687(?#facebook.com/events)
 1584205973	Makyen	(?-i:B9tKSc0Bxsy)(?#instagram.com)
+1584205994	Makyen	gadagodospiritualtemple(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
