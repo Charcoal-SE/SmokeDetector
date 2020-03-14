@@ -15275,7 +15275,6 @@
 1576601188	Das_Geek	pickmywoodrouter\.com
 1576603341	Makyen	mrtechsolution\.in
 1576609933	Makyen	topapkmods\.com
-1576616725	Das_Geek	maketecheasier\.com
 1576618448	Das_Geek	herkules\.com
 1576633365	Makyen	mygeeky\.org
 1576633383	Makyen	(?-i:uyzt6\.jpg)
