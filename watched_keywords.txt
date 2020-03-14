@@ -18646,3 +18646,4 @@
 1584170667	Makyen	bellariva[\W_]*+cream(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1584200425	Makyen	medicatedstuff\.com
 1584205489	Makyen	draggarwalsclinic\.com
+1584205513	Makyen	dr[\W_]*+aggarwal(?!sclinic\.com(?<=draggarwalsclinic\.com))(?:[\W_]*+s[\W_]*+clinic)?
