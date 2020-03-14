@@ -18663,3 +18663,4 @@
 1584206160	Makyen	(?-i:4klASUkQf7s)(?#YouTube)
 1584206217	Makyen	nutritionstall\.com
 1584206238	Makyen	keto[\W_]*+shred(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1584206263	Makyen	hemp[\W_]*+oil[\W_]*+tincture[\W_]*+(?:canada|ca)(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
