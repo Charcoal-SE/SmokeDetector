@@ -18662,3 +18662,4 @@
 1584206089	Makyen	(?-i:Ab60ofAOl0Y)(?#youtu.be)
 1584206160	Makyen	(?-i:4klASUkQf7s)(?#YouTube)
 1584206217	Makyen	nutritionstall\.com
+1584206238	Makyen	keto[\W_]*+shred(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
