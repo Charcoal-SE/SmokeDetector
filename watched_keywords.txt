@@ -18640,3 +18640,4 @@
 1584142968	Makyen	ivc[\W_]*+services(?!\.com(?<=ivc-services\.com))
 1584142993	Makyen	flashingfile\.com
 1584146271	Makyen	cyberpunkclothing\.net
+1584149034	Machavity	purplerockscissors\.com
