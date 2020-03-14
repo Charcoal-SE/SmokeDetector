@@ -18649,3 +18649,4 @@
 1584205513	Makyen	dr[\W_]*+aggarwal(?!sclinic\.com(?<=draggarwalsclinic\.com))(?:[\W_]*+s[\W_]*+clinic)?
 1584205592	Makyen	(?-i:FOH6_LNKMX4)(?#youtu.be)
 1584205619	Makyen	amazontrialcom(?#sites.google.com)
+1584205644	Makyen	crunchbase\.com
