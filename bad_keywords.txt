@@ -2238,3 +2238,4 @@ luxe[\W_]*+bella(?:[\W_]*+cream)?
 horny[\W_]*+goat[\W_]*+weed
 evianne[\W_]*+crea?me?(?:[\W_]*+(?:uk|review|\d++|[\da-f]{4,}+))*
 arlo[\W_]*+app
+creditsolution63(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?

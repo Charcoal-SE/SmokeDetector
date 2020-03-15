@@ -18237,7 +18237,6 @@
 1583293357	Makyen	organicchems\.wordpress\.com
 1583294201	Shree	phucsonglong\.com
 1583295456	Makyen	ghedathanhminh(?:@gmail\.com)?
-1583295821	Makyen	creditsolution63(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1583297754	Shree	societynow\.in
 1583300501	Shree	prodatalabs\.com
 1583306314	Shree	goxxbet\.com
