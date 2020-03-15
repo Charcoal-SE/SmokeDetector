@@ -18669,3 +18669,4 @@
 1584230582	Makyen	(?:del[\W_]*+)?cazzo(?#Italian offensive)
 1584231997	Makyen	kingsv388\.biz
 1584236940	Makyen	bssthemes\.com
+1584251679	Makyen	zahra\.moridi(?:@gmail\.com)?
