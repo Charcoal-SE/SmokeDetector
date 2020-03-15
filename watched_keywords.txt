@@ -18667,3 +18667,4 @@
 1584222241	Machavity	cryptoinvestor\.miners@gmail\.com
 1584222742	Makyen	did[\W_]*+(?:no)?t\b.{0,30}?\braises?
 1584230582	Makyen	(?:del[\W_]*+)?cazzo(?#Italian offensive)
+1584231997	Makyen	kingsv388\.biz
