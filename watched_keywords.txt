@@ -18685,3 +18685,4 @@
 1584328431	Makyen	anigacos\.com
 1584329116	Makyen	(?-i:Qo7P9\.jpg)
 1584329659	Makyen	china-vanepump\.com
+1584338827	Makyen	prime\.trt\.official(?#facebook.com)
