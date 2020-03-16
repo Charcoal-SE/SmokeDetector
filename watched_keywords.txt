@@ -18702,3 +18702,4 @@
 1584342466	Makyen	letsfindtoday\.hatenablog\.com
 1584342765	Eliah Kagan	beshle\.com
 1584343940	Eliah Kagan	techie-marketer\.com
+1584345429	Eliah Kagan	mcafee[\W_]*+activates?
