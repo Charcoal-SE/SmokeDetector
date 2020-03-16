@@ -18626,7 +18626,6 @@
 1584116035	Machavity	technoviral\.com
 1584116062	Machavity	techmaan\.com
 1584117445	Machavity	myhousecollections\.com
-1584119432	Machavity	shop\.filippoloreti\.com
 1584126375	Machavity	metrocazar\.com
 1584127360	Das_Geek	binarymaps\.com
 1584129955	Das_Geek	icareindia\.net
