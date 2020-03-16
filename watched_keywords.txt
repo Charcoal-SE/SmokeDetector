@@ -18729,3 +18729,4 @@
 1584354086	Eliah Kagan	sa[\W_]*+gaming
 1584354114	Eliah Kagan	sa168s(?!\.com)
 1584354179	Eliah Kagan	sagame66(?:@sa168s\.com)?
+1584354299	Eliah Kagan	(?-i:Nbqb1p1Wchg)(?#youtu.be)
