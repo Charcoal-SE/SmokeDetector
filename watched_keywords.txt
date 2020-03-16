@@ -18688,3 +18688,4 @@
 1584338827	Makyen	prime\.trt\.official(?#facebook.com)
 1584338851	Makyen	prime[\W_]*+trt(?!\.official(?<=prime\.trt\.official))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1584339562	Makyen	SPAM SPAM SPAM SPAM SPAM
+1584339691	Makyen	(?-i:L7gsqlE-Rfk)(?#youtu.be)
