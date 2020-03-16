@@ -18705,3 +18705,4 @@
 1584346228	Eliah Kagan	(?-i:mtJYEdraGas)(?#youtu.be)
 1584346275	Eliah Kagan	vikeshsingh\.info
 1584346421	Eliah Kagan	primal[\W_]*+grow(?:[\W_]*+pro)?
+1584348253	Eliah Kagan	eadatahandlers\.co\.ke
