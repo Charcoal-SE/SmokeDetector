@@ -18670,7 +18670,6 @@
 1584251679	Makyen	zahra\.moridi(?:@gmail\.com)?
 1584273887	Nisse Engström	thokhoahanoi\.com
 1584282885	Makyen	(?-i:IjGYi\.jpg)
-1584282963	Makyen	blog\.vikeshsingh\.info
 1584283012	Makyen	pendej[oa]s?(?#Spanish offensive)
 1584283040	Makyen	(?-i:NJp14BeTjAs)(?#youtu.be)
 1584283064	Makyen	keepthetech\.com
