@@ -18686,3 +18686,4 @@
 1584329116	Makyen	(?-i:Qo7P9\.jpg)
 1584329659	Makyen	china-vanepump\.com
 1584338827	Makyen	prime\.trt\.official(?#facebook.com)
+1584338851	Makyen	prime[\W_]*+trt(?!\.official(?<=prime\.trt\.official))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
