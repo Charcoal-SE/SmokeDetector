@@ -18764,3 +18764,4 @@
 1584474420	Makyen	(?-i:1chvWC0aBeQ)(?#youtu.be)
 1584474446	Makyen	freefoxmedia\.com
 1584474473	Makyen	(?-i:2WmoXum)(?#bit.ly)
+1584474504	Makyen	brad\.sapkota(?<=@brad\.sapkota)(?#medium.com)
