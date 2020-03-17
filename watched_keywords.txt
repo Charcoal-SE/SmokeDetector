@@ -17991,7 +17991,6 @@
 1582697949	Makyen	foxdm\.net
 1582700918	Shree	mavcommgroup\.com
 1582701221	Shree	toptechytips\.com
-1582701466	Shree	neweraeducation\.in
 1582702187	Makyen	mailcot\.com
 1582702310	Makyen	mavcomm[\W_]*+group(?!\.com(?<=mavcommgroup\.com))
 1582704651	Makyen	saglikvitrin\.com
