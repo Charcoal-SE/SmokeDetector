@@ -18767,3 +18767,4 @@
 1584474504	Makyen	brad\.sapkota(?<=@brad\.sapkota)(?#medium.com)
 1584474528	Makyen	coinsee\.org
 1584479813	Makyen	(?-i:33yvaTK)(?#bit.ly)
+1584482791	Makyen	(?-i:RDwwHE0xozI)(?#youtu.be)
