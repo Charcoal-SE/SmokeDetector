@@ -2240,3 +2240,4 @@ evianne[\W_]*+crea?me?(?:[\W_]*+(?:uk|review|\d++|[\da-f]{4,}+))*
 arlo[\W_]*+app
 creditsolution63(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 keto[\W_]*+bodz(?:[\W_]*+(?:keto|\d++|[\da-f]{4,}+))*
+diets_men(?<=twitter\.com/diets_men)
