@@ -279,3 +279,4 @@ DailyRaiseQuestion
 (?-i:^Natasha Willams$)
 ^freeforex\Wforex$
 (?-i:^barbieshrimp$)
+^Imaginea$
