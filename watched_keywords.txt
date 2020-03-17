@@ -18695,7 +18695,6 @@
 1584342765	Eliah Kagan	beshle\.com
 1584343940	Eliah Kagan	techie-marketer\.com
 1584345429	Eliah Kagan	mcafee[\W_]*+activates?
-1584346203	Eliah Kagan	totalfitnesspoints\.com
 1584346228	Eliah Kagan	(?-i:mtJYEdraGas)(?#youtu.be)
 1584346275	Eliah Kagan	vikeshsingh\.info
 1584346421	Eliah Kagan	primal[\W_]*+grow(?:[\W_]*+pro)?
