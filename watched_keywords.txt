@@ -18761,3 +18761,4 @@
 1584474245	Makyen	(?-i:B9zfnq4hUhN)(?#instagram.com)
 1584474296	Makyen	thunder[\W_]*+testosterone(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1584474394	Makyen	donaldjohnson5466(?:@gmail\.com)?
+1584474420	Makyen	(?-i:1chvWC0aBeQ)(?#youtu.be)
