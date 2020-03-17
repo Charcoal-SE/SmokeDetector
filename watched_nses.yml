@@ -309,6 +309,9 @@ items:
   - jean.ns.cloudflare.com.
   - piotr.ns.cloudflare.com.
 - ns:
+  - jerry.ns.cloudflare.com.
+  - june.ns.cloudflare.com.
+- ns:
   - jim.ns.cloudflare.com.
   - nadia.ns.cloudflare.com.
 - ns:
