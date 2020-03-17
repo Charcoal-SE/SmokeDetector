@@ -17738,7 +17738,6 @@
 1582175090	Makyen	57561727\.aspx
 1582175112	Makyen	(?-i:Ql6lE\.jpg)
 1582175135	Makyen	(?-i:SzvbM\.jpg)
-1582178018	Makyen	microteklearning\.com
 1582178041	Makyen	microteklearninginc(?#facebook.com)
 1582178063	Makyen	microtklearning(?#twitter.com)
 1582178085	Makyen	(?-i:5gKYe\.jpg)
