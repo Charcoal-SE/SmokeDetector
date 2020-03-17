@@ -18752,3 +18752,4 @@
 1584432849	tripleee	hotelsunnsnow\.com
 1584432898	tripleee	udonpu[\W_]*+car[\W_]*+rent
 1584434107	tripleee	mysoretrips\.com
+1584434361	tripleee	WPBeginner
