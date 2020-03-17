@@ -189,7 +189,6 @@ quickbooks
 (?-i:^faramondsmith$)
 (?-i:^Neeta Panchal$)
 (?-i:^Kajal Patil$)
-^(?-i:imaginea)$
 ^Pooja\sSen$
 ^(?-i:RajeevS)$
 (?-i:^Barkha Verma$)
