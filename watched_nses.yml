@@ -226,9 +226,6 @@ items:
   - elliot.ns.cloudflare.com.
   - lila.ns.cloudflare.com.
 - ns:
-  - elliot.ns.cloudflare.com.
-  - sue.ns.cloudflare.com.
-- ns:
   - elma.ns.cloudflare.com.
   - hank.ns.cloudflare.com.
 - ns:

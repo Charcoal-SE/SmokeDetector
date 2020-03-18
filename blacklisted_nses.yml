@@ -23,6 +23,9 @@ items:
   - chip.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
 - ns:
+  - elliot.ns.cloudflare.com.
+  - sue.ns.cloudflare.com.
+- ns:
   - george.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
 - ns:
