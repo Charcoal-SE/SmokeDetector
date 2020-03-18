@@ -18799,3 +18799,4 @@
 1584542503	Machavity	hutbephotsach\.net
 1584543229	M--	biologyteach\.com
 1584543784	Machavity	info@pers\.com
+1584545256	Makyen	biologyteach(?!\.com)(?:@yahoo\.com)?
