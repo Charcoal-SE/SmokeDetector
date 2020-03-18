@@ -234,7 +234,6 @@ devleadz
 (?-i:^deeppal$)
 (?-i:^Apurva Abstar$)
 (?-i:^harryjackson$)
-(?-i:^Jainish Patel$)
 (?-i:^Daisy Yardley$)
 (?-i:^StraitsResearch$)
 (?-i:^Bruce Hank$)
