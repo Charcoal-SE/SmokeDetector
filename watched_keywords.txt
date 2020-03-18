@@ -18774,3 +18774,4 @@
 1584509626	tripleee	Regional\s+College\s+of\s+Management\s+Bangalore
 1584511488	Makyen	sparkketoreviews\.com
 1584511561	Makyen	spark[\W_]*+keto(?!reviews\.com(?<=sparkketoreviews\.com))(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+)s?)*
+1584512104	Makyen	streetinsider\.com(?#Prelim looks like we really want only streetinsider\.com/SI+Newswire)
