@@ -18770,3 +18770,4 @@
 1584500767	Shree	ixqprint\.com
 1584508453	tripleee	dr[\W_]*+maleki\d*
 1584509425	tripleee	placement[\W_]*+colleges?
+1584509558	tripleee	(?:best|top)\s+mba(?:\s+\S+){0,3}colleges?
