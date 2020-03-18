@@ -18776,3 +18776,4 @@
 1584511561	Makyen	spark[\W_]*+keto(?!reviews\.com(?<=sparkketoreviews\.com))(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+)s?)*
 1584512104	Makyen	streetinsider\.com(?#Prelim looks like we really want only streetinsider\.com/SI+Newswire)
 1584514129	Makyen	hyper[\W_]*+plus[\W_]*+male[\W_]*+enhancement(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1584514169	Makyen	hardcore[\W_]*+ketogenic[\W_]*+diet[\W_]*+trims(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
