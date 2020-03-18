@@ -2242,3 +2242,4 @@ creditsolution63(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 keto[\W_]*+bodz(?:[\W_]*+(?:keto|\d++|[\da-f]{4,}+))*
 diets_men(?<=twitter\.com/diets_men)
 bellariva
+hyper[\W_]*+plus
