@@ -3526,3 +3526,4 @@ totalfitnesspoints\.com
 neweraeducation\.in
 imaginea\.com
 assureshift\.in
+marketwatch\.com/(?:press-release/(?!illumina-introduces)(?!strathspey-crown)(?!prizmtm-brings)(?!new-report-organ-transplant)|official)
