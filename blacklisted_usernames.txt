@@ -279,3 +279,4 @@ DailyRaiseQuestion
 ^freeforex\Wforex$
 (?-i:^barbieshrimp$)
 ^Imaginea$
+(?-i:^Manglada Tech$)
