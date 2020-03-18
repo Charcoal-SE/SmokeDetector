@@ -18769,3 +18769,4 @@
 1584483044	Makyen	bellsouthemail-login\.com
 1584500767	Shree	ixqprint\.com
 1584508453	tripleee	dr[\W_]*+maleki\d*
+1584509425	tripleee	placement[\W_]*+colleges?
