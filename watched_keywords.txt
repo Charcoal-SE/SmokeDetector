@@ -18778,3 +18778,4 @@
 1584514129	Makyen	hyper[\W_]*+plus[\W_]*+male[\W_]*+enhancement(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1584514169	Makyen	hardcore[\W_]*+ketogenic[\W_]*+diet[\W_]*+trims(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1584515404	Makyen	lilylisto\.com
+1584519105	tripleee	fastaw\.com
