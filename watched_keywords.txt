@@ -18850,3 +18850,4 @@
 1584621717	Eliah Kagan	terabyte\.ae
 1584624035	Eliah Kagan	(?:d(?:octo)r[\W_]*+)?wonder[\W_]*+spell[\W_]*+home(?:@yahoo\.com)?
 1584624072	Eliah Kagan	(?-i:PnL7LqboNGU)(?#youtu.be)
+1584624982	Machavity	navicosoft\.com
