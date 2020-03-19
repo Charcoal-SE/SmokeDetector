@@ -18833,3 +18833,4 @@
 1584616942	Eliah Kagan	stillbon[\W_]*+lead[\W_]*+extractor
 1584617085	Eliah Kagan	zook[\W_]*+data[\W_]*+recovery
 1584617125	Eliah Kagan	(?-i:NbNrK)\.png
+1584617150	Eliah Kagan	(?-i:2U1ZO6N)(?#bit.ly)
