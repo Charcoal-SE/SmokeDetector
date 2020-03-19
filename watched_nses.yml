@@ -303,6 +303,9 @@ items:
   - jake.ns.cloudflare.com.
   - sofia.ns.cloudflare.com.
 - ns:
+  - janet.ns.cloudflare.com.
+  - lou.ns.cloudflare.com.
+- ns:
   - jean.ns.cloudflare.com.
   - piotr.ns.cloudflare.com.
 - ns:
