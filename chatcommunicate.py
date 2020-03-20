@@ -326,16 +326,22 @@ def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
     msg = msg.rstrip()
     target_rooms = set()
 
+    # Go through the list of properties in "has" and add all rooms which have any of those properties
+    # to the target_rooms set. _room_roles contains a list of rooms for each property.
     for prop_has in has:
         if isinstance(prop_has, tuple):
+            # If the current prop_has is a tuple, then it's assumed to be a descriptor of a specific room.
+            # The format is: (_client.host, room.id)
             target_rooms.add(prop_has)
 
         if prop_has not in _room_roles:
+            # No rooms have this property.
             continue
 
         for room in _room_roles[prop_has]:
             if all(map(lambda prop: prop not in _room_roles or room not in _room_roles[prop], hasnt)):
                 if room not in _rooms:
+                    # If SD is not already in the room, then join the room.
                     site, roomid = room
                     deletion_watcher = room in _watcher_rooms
 
