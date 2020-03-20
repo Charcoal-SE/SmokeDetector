@@ -18873,3 +18873,4 @@
 1584686524	Makyen	casinototnhat\.vn
 1584686606	Makyen	vesisorb
 1584686633	Makyen	douglas[\W_]*+laboratories(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1584686658	Makyen	hardcore[\W_]*+ketogenic(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
