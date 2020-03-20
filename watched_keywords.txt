@@ -18865,3 +18865,4 @@
 1584672688	Makyen	american[\W_]*+loan[\W_]*+firm[\W_]*+fainace[\W_]*+company(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1584672712	Makyen	(?-i:ALFFC)
 1584672732	Makyen	americaloanfirmfinacialcompany(?:@gmail\.com)?
+1584675488	Makyen	addmotor\.com
