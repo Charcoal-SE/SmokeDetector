@@ -2244,3 +2244,4 @@ diets_men(?<=twitter\.com/diets_men)
 bellariva
 hyper[\W_]*+plus
 emerald[\W_]*+essence(?:[\W_]*+(?:oil|cbd|review|\d++|[\da-f]{4,}+)s?)*
+arouza?(?:[\W_]*+ultimate)?
