@@ -3529,3 +3529,5 @@ assureshift\.in
 marketwatch\.com/(?:press-release/(?!illumina-introduces)(?!strathspey-crown)(?!prizmtm-brings)(?!new-report-organ-transplant)|official)
 mangladatech\.com
 ketotop-diet\.com
+kakoicos\.com
+winxdvd\.com

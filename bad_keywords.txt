@@ -2115,7 +2115,7 @@ vialift[\W_]*+xl(?:[\W_]*+(?:review|improvement|enhancement|building|muscle|pill
 k[\W_]*+shred(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+)s?)*
 games[\W_]*+bx(?!\.(?:pro|tk))(?:daily)?\d*+
 vegusbet(?!\.net)
-black[\W_]*+label[\W_]*+x(?:[\W_]*+(?:pill|review|\d++|[\da-f]{4,}+)s?)*
+black[\W_]*+label(?!\s*=)[\W_]*+x(?!\s*=)(?:[\W_]*+(?:pill|review|\d++|[\da-f]{4,}+)s?)*
 emylia[\W_]*+skin(?:[\W_]*+(?:au|review|cream|australia|\d++|[\da-f]{4,}+)s?)*
 gandu(?!$|['"])
 superior[\W_]*+flux
@@ -2243,3 +2243,6 @@ keto[\W_]*+bodz(?:[\W_]*+(?:keto|\d++|[\da-f]{4,}+))*
 diets_men(?<=twitter\.com/diets_men)
 bellariva
 hyper[\W_]*+plus
+emerald[\W_]*+essence(?:[\W_]*+(?:oil|cbd|review|\d++|[\da-f]{4,}+)s?)*
+arouza?(?:[\W_]*+ultimate)?
+bitcoin[\W_]*+revolution

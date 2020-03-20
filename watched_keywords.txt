@@ -9459,7 +9459,6 @@
 1556502935	Makyen	ritlweb\.com
 1556502964	Makyen	/suogakun
 1556502994	Makyen	babyblog\.ru
-1556503050	Makyen	kakoicos\.com
 1556510720	Makyen	javascriptstutorial\.com
 1556513419	tripleee	odemi\.in
 1556514911	tripleee	^\w{4,5}2ch$
@@ -13434,7 +13433,6 @@
 1570694109	Makyen	bentrap
 1570694119	Makyen	(?-i:n96-53ex8Ho)
 1570694127	Makyen	toko-herbal\.net
-1570694910	tripleee	winxdvd\.com
 1570699412	tripleee	maxenius\.com
 1570701604	tripleee	edit-proofread\.com
 1570715757	Machavity	(?-i:FuRQy\.jpg)
@@ -14887,7 +14885,7 @@
 1575564378	Machavity	Sologenic
 1575565622	Machavity	techfiver\.com
 1575565793	Machavity	truyen-cuoi\.net
-1575571350	Das_Geek	staffan(?:[\W_]*+(?:at[\W_]*+)?brickselectric(?:[\W_]*+(?:dot[\W_]*+)?se)?)?
+1575571350	Das_Geek	staffan(?:[\W_]*+(?:at[\W_]*+)?brickselectric(?:[\W_]*+(?:dot[\W_]*+)?se)?)
 1575571435	Das_Geek	xvideosincesto\.com
 1575573605	Das_Geek	myconcertos\.com
 1575575767	Makyen	pinterestmarketingblog\.com
@@ -17265,7 +17263,6 @@
 1581066978	Eliah Kagan	maxvit\.net
 1581067002	Eliah Kagan	(?-i:VbcE4aYAwg8)(?#YouTube)
 1581067034	Eliah Kagan	(?-i:4jLSd92_wdM)(?#YouTube)
-1581067397	Eliah Kagan	arouza?(?:[\W_]*+ultimate)?
 1581067450	Eliah Kagan	(?-i:qzANA9qVvDI)(?#youtu.be)
 1581067585	Eliah Kagan	urdupoint\.com
 1581067811	Eliah Kagan	leon[\W_]*ryan(?#pen.io)
@@ -17565,7 +17562,6 @@
 1581781905	Makyen	skip[\W_]*+hire[\W_]*+services
 1581781926	Makyen	shapoorjipallonjiinorthernlights\.com
 1581781949	Makyen	shapoorji[\W_]*+pallonji[\W_]*+northern[\W_]*+lights(?!\.com(?<=shapoorjipallonjiinorthernlights\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
-1581781970	Makyen	emerald[\W_]*+essence(?:[\W_]*+(?:oil|cbd|review|\d++|[\da-f]{4,}+)s?)*
 1581782003	Makyen	ramulast(?:[\W_]*+(?:booster|testo|\d++|[\da-f]{4,}+))*
 1581782027	Makyen	blockchainappsdeveloper\.com
 1581782110	Makyen	top10cbdoilstore\.com
@@ -18790,7 +18786,6 @@
 1584527569	tripleee	groupfio\.com
 1584529869	tripleee	openfiles\.org
 1584532240	Shree	speedpdf
-1584533876	Shree	[W*]?creditkaro\.com
 1584534140	Glorfindel	singhlogsiticsllc\.com
 1584536430	tripleee	(?-i:qqChYU9u_vw)(?# youtube)
 1584536457	tripleee	(?-i:tguwBB12PLg)(?# youtube)
@@ -18801,3 +18796,104 @@
 1584543784	Machavity	info@pers\.com
 1584545256	Makyen	biologyteach(?!\.com)(?:@yahoo\.com)?
 1584545622	M--	uzairch\.com
+1584548946	Makyen	bhojpuriyadhamaal\.com
+1584557090	Jenayah	tezadvise\.com
+1584558704	Machavity	mywifiext-net\.support
+1584558728	Machavity	wifiextassist\.com
+1584571217	Makyen	sheikhmbuga5(?:@gmail\.com)?
+1584588826	tripleee	jualobatpembesarpenisdenpasar\.com
+1584588864	tripleee	robuxgenerators\.co
+1584589037	tripleee	freewingg-model\.com
+1584589655	Shree	creditkaro\.com
+1584593347	Shree	johnherrman\.tumblr\.com
+1584596115	tripleee	gyrojob\.co\.in
+1584597434	Shree	upyourviews\.com
+1584602782	Nisse Engström	QuestionAnswerOnline
+1584603506	tripleee	shutstudio\.com
+1584605080	tripleee	nadesignbuilders\.com
+1584611361	Eliah Kagan	technolup\.com
+1584611418	Eliah Kagan	(?-i:mJCOt3-HyuA)(?#youtu.be)
+1584611980	Eliah Kagan	(?-i:PNUltSbfff4)(?#youtu.be)
+1584612302	Eliah Kagan	techymore\.com
+1584612631	Eliah Kagan	(?-i:Pt6MNWF25ak)(?#youtu.be)
+1584613828	Eliah Kagan	(?-i:eBjm3)\.jpg
+1584613899	Eliah Kagan	(?-i:KD8t2)\.jpg
+1584615117	Eliah Kagan	inkasrulebook(?#bit.ly)
+1584615163	Eliah Kagan	inkasyoutube(?#bit.ly)
+1584615189	Eliah Kagan	(?-i:7uwWs)\.jpg
+1584615213	Eliah Kagan	(?-i:cG4Pv)\.jpg
+1584615241	Eliah Kagan	(?-i:omxQl)\.jpg
+1584615266	Eliah Kagan	(?-i:wJhKz)\.jpg
+1584615660	Eliah Kagan	garminnuviupdates\.com
+1584616287	Eliah Kagan	exploredwellness\.com
+1584616315	Eliah Kagan	limpidstones\.com
+1584616757	Eliah Kagan	videoonline\.pk
+1584616782	Eliah Kagan	(?-i:ro-ldsWTMt0)(?#youtu.be)
+1584616942	Eliah Kagan	stillbon[\W_]*+lead[\W_]*+extractor
+1584617085	Eliah Kagan	zook[\W_]*+data[\W_]*+recovery
+1584617125	Eliah Kagan	(?-i:NbNrK)\.png
+1584617150	Eliah Kagan	(?-i:2U1ZO6N)(?#bit.ly)
+1584617178	Eliah Kagan	(?-i:ndL0K)\.png
+1584617644	Eliah Kagan	(?-i:w83w0p)(?#gestyy)
+1584617763	Eliah Kagan	gotowebinar\.com
+1584617788	Eliah Kagan	brainkart\.com
+1584617863	Eliah Kagan	(?-i:dCb2TZsZxl8)(?#youtu.be)
+1584618318	Eliah Kagan	safemask
+1584619162	Eliah Kagan	pxcode\.io
+1584619352	Eliah Kagan	PokerClub88
+1584619875	Eliah Kagan	seoensea\.nl
+1584621102	Eliah Kagan	(?-i:iLSn9z-MnVo)(?#YouTube)
+1584621127	Eliah Kagan	(?-i:xSG307_SqEs)(?#youtu.be)
+1584621156	Eliah Kagan	(?-i:Q77MM)\.jpg
+1584621519	Eliah Kagan	(?-i:AS1M5ltFCmw)(?#youtu.be)
+1584621717	Eliah Kagan	terabyte\.ae
+1584624035	Eliah Kagan	(?:d(?:octo)r[\W_]*+)?wonder[\W_]*+spell[\W_]*+home(?:@yahoo\.com)?
+1584624072	Eliah Kagan	(?-i:PnL7LqboNGU)(?#youtu.be)
+1584624982	Machavity	navicosoft\.com
+1584625116	Eliah Kagan	gladiatorbusiness\.co\.uk
+1584625745	Machavity	roseawa79@gmail\.com
+1584625774	tripleee	alphahealthmart\.com
+1584627506	Machavity	drillanddriver\.com
+1584632903	Makyen	cigsweb\.com
+1584634608	Makyen	sitewebroot\.com
+1584638557	Machavity	ecommercehouse\.com
+1584645210	Das_Geek	successbux\.com
+1584645244	Das_Geek	gptplanet\.com
+1584645268	Das_Geek	cashmagnetapp\.com
+1584672652	Makyen	customenamelpins\.com
+1584672688	Makyen	american[\W_]*+loan[\W_]*+firm[\W_]*+fainace[\W_]*+company(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1584672712	Makyen	(?-i:ALFFC)
+1584672732	Makyen	americaloanfirmfinacialcompany(?:@gmail\.com)?
+1584675488	Makyen	addmotor\.com
+1584677961	Shree	expressminicab\.com
+1584680735	tripleee	unicongroup\.in
+1584682914	tripleee	bizprospex\.com
+1584683017	tripleee	godrej-property\.com
+1584686524	Makyen	casinototnhat\.vn
+1584686606	Makyen	vesisorb
+1584686633	Makyen	douglas[\W_]*+laboratories(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1584686658	Makyen	hardcore[\W_]*+ketogenic(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1584686794	Makyen	xosodaiviet\.net
+1584688008	Glorfindel	omgeeky\.com
+1584688309	Glorfindel	gyp\W*pro
+1584688333	Glorfindel	gypproplastering\.com
+1584688871	tripleee	oceansof-games\.com
+1584693341	tripleee	sujersey\.com
+1584693386	tripleee	mytrikot\.com
+1584695314	Nisse Engström	lifepage\.in
+1584695732	Shree	hisleepindia\.com
+1584697171	Jenayah	moveonspace\.com
+1584697186	Jenayah	bestmachete\.co
+1584704339	Shree	explicandoo\.com
+1584707095	tripleee	blueweaveconsulting\.com
+1584707116	Machavity	indiatourhelp\.tk
+1584708521	Jenayah	daga12h\.com
+1584708624	Jenayah	dagatructiep12h
+1584710584	Machavity	humanitiesconference\.com
+1584711444	tripleee	winxdesigner\.com
+1584712957	Machavity	^sophia\Wworld$
+1584713252	WELZ	einfach\Wumzug
+1584717879	Makyen	iluminatihood123(?:@gmail\.com)?
+1584725020	Jenayah	techpoil\.com
+1584730391	Kulfy	foolsvilla\.blogspot\.com
+1584732215	Machavity	mehrabian9090(?:@gmail\.com)
