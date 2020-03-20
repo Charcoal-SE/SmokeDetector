@@ -14885,7 +14885,7 @@
 1575564378	Machavity	Sologenic
 1575565622	Machavity	techfiver\.com
 1575565793	Machavity	truyen-cuoi\.net
-1575571350	Das_Geek	staffan(?:[\W_]*+(?:at[\W_]*+)?brickselectric(?:[\W_]*+(?:dot[\W_]*+)?se)?)?
+1575571350	Das_Geek	staffan(?:[\W_]*+(?:at[\W_]*+)?brickselectric(?:[\W_]*+(?:dot[\W_]*+)?se)?)
 1575571435	Das_Geek	xvideosincesto\.com
 1575573605	Das_Geek	myconcertos\.com
 1575575767	Makyen	pinterestmarketingblog\.com
@@ -18881,4 +18881,18 @@
 1584693386	tripleee	mytrikot\.com
 1584695314	Nisse Engström	lifepage\.in
 1584695732	Shree	hisleepindia\.com
+1584697171  Jenayah moveonspace\.com
 1584697186	Jenayah	bestmachete\.co
+1584704339	Shree	explicandoo\.com
+1584707095	tripleee	blueweaveconsulting\.com
+1584707116	Machavity	indiatourhelp\.tk
+1584708521	Jenayah	daga12h\.com
+1584708624	Jenayah	dagatructiep12h
+1584710584	Machavity	humanitiesconference\.com
+1584711444	tripleee	winxdesigner\.com
+1584712957	Machavity	^sophia\Wworld$
+1584713252	WELZ	einfach\Wumzug
+1584717879	Makyen	iluminatihood123(?:@gmail\.com)?
+1584725020	Jenayah	techpoil\.com
+1584730391	Kulfy	foolsvilla\.blogspot\.com
+1584732215	Machavity	mehrabian9090(?:@gmail\.com)
