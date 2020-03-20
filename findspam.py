@@ -94,6 +94,7 @@ ASN_WHITELISTED_WEBSITES = [
     "wikileaks.org",
     # Additional added not as part of a systematic investigation:
     "ntp.org", "cpu-world.com", "caniuse.com", "guru99.com", "fontawesome.com",
+    "nirsoft.net",
     # Added to prevent having 3 detections on just the domain.
     "writingexplained.org", "eitren.com"]
 
