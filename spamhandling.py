@@ -148,7 +148,7 @@ def handle_spam(post, reasons, why):
 
         if set(reasons) - GlobalVars.experimental_reasons == set() and \
                 not why.startswith("Post manually "):
-            chatcommunicate.tell_rooms(message, ("experimental",),
+            chatcommunicate.tell_rooms(message, ("experimental-all-sites",),
                                        without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
         else:
             if offensive_mask:

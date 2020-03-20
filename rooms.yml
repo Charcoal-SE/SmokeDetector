@@ -6,7 +6,7 @@ stackexchange.com:
       - debug
       - metasmoke
       - all-sites
-      - experimental
+      - experimental-all-sites
       - no-offensive-mask
 
     privileges:
@@ -385,7 +385,7 @@ meta.stackexchange.com:
     
     msg_types:
       - all-sites
-      - experimental
+      - experimental-all-sites
       - offensive-mask
     
     privileges:
