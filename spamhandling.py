@@ -152,14 +152,14 @@ def handle_spam(post, reasons, why):
                                        without_roles, notify_site=post.post_site, report_data=(post_url, poster_url))
         else:
             if offensive_mask:
-                chatcommunicate.tell_rooms(message, ("all", "site-" + post.post_site),
+                chatcommunicate.tell_rooms(message, ("all-sites", "site-" + post.post_site),
                                            without_roles + ("offensive-mask",), notify_site=post.post_site,
                                            report_data=(post_url, poster_url))
-                chatcommunicate.tell_rooms(clean_message, ("all", "site-" + post.post_site),
+                chatcommunicate.tell_rooms(clean_message, ("all-sites", "site-" + post.post_site),
                                            without_roles + ("no-offensive-mask",), notify_site=post.post_site,
                                            report_data=(post_url, poster_url))
             else:
-                chatcommunicate.tell_rooms(message, ("all", "site-" + post.post_site),
+                chatcommunicate.tell_rooms(message, ("all-sites", "site-" + post.post_site),
                                            without_roles, notify_site=post.post_site,
                                            report_data=(post_url, poster_url))
     except Exception as e:
