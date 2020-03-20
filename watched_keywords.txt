@@ -18862,3 +18862,4 @@
 1584645244	Das_Geek	gptplanet\.com
 1584645268	Das_Geek	cashmagnetapp\.com
 1584672652	Makyen	customenamelpins\.com
+1584672688	Makyen	american[\W_]*+loan[\W_]*+firm[\W_]*+fainace[\W_]*+company(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
