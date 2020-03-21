@@ -5,8 +5,8 @@ stackexchange.com:
     msg_types:
       - debug
       - metasmoke
-      - all
-      - experimental
+      - all-sites
+      - experimental-all-sites
       - no-offensive-mask
 
     privileges:
@@ -325,7 +325,7 @@ meta.stackexchange.com:
     watcher: true
 
     msg_types:
-      - all
+      - all-sites
       - metatavern
       - delay
       - site-no-stackoverflow.com
@@ -384,8 +384,8 @@ meta.stackexchange.com:
     commands: true
     
     msg_types:
-      - all
-      - experimental
+      - all-sites
+      - experimental-all-sites
       - offensive-mask
     
     privileges:
