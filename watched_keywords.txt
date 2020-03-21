@@ -18904,3 +18904,4 @@
 1584777778	Makyen	suvicharimages\.com
 1584777819	Makyen	immunity[\W_]*+plus[\W_]*+with[\W_]*+gut[\W_]*+cleanse(?:[\W_]*+(?:system|\d++|[\da-f]{4,}+))*
 1584777844	Makyen	cblmhfh\.com
+1584777888	Makyen	nutravitali(?:[\W_]*+(?:keto|vital|\d++|[\da-f]{4,}+))*
