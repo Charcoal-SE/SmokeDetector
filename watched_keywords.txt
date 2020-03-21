@@ -18915,3 +18915,4 @@
 1584804182	Jenayah	up4pc\.com
 1584792922	Jenayah	10hunts\.com
 1584805987	Makyen	geek[\W_]*+tiger[\W_]*+tech(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1584806086	Makyen	(?-i:s7j1F\.jpg)
