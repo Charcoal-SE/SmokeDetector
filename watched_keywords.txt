@@ -18919,3 +18919,4 @@
 1584805965	Jenayah	cctvcameracentre\.co\.uk
 1584806549	Makyen	wp-multisite-content-copier-pro
 1584806574	Makyen	wordpress-multisite-user-syncunsync
+1584806600	Makyen	woocommerce-multisite-product-sync
