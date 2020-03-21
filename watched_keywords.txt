@@ -18917,3 +18917,4 @@
 1584805987	Makyen	geek[\W_]*+tiger[\W_]*+tech(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1584806086	Makyen	(?-i:s7j1F\.jpg)
 1584805965	Jenayah	cctvcameracentre\.co\.uk
+1584806549	Makyen	wp-multisite-content-copier-pro
