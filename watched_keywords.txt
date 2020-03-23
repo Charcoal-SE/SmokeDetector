@@ -18935,3 +18935,4 @@
 1584946079	tripleee	plagiarism-removal\.com
 1584946167	tripleee	imarticus(?:[\W_]*+learning)?
 1584955685	tripleee	iDealshare(?![\W_]+VideoGo)
+1584955856	tripleee	(?<!iDealshare )VideoGo
