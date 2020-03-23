@@ -18947,3 +18947,4 @@
 1584994127	Makyen	(?-i:9PKPL1y17v0)(?#youtu.be)
 1584995535	Machavity	dogecoin\.com
 1585003739	Makyen	dr-iyaya-herbal-remedy\.webnode\.com
+1585003761	Makyen	d(?:octo)?r[\W_]*+ia?yaya(?!-herbal-remedy\.webnode\.com(?<=dr-iyaya-herbal-remedy\.webnode\.com))(?:@gmail\.com)?
