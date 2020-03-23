@@ -370,6 +370,9 @@ items:
   - nadia.ns.cloudflare.com.
 - ns:
   - laura.ns.cloudflare.com.
+  - major.ns.cloudflare.com.
+- ns:
+  - laura.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
   - laura.ns.cloudflare.com.
