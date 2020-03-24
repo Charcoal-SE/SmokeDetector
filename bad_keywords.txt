@@ -2248,3 +2248,4 @@ arouza?(?:[\W_]*+ultimate)?
 bitcoin[\W_]*+revolution
 (?-i:iDealshare[\W_]++VideoGo)
 formax[\W_]*+lean
+thedigizones(?!\.com)
