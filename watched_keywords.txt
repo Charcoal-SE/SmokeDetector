@@ -18954,3 +18954,4 @@
 1585037981	tripleee	nileplay\.com
 1585038130	tripleee	wordsaregod\.com
 1585038158	tripleee	sphoorti\.com
+1585038246	tripleee	atmaluhur\.ac\.id
