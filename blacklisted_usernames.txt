@@ -280,3 +280,4 @@ DailyRaiseQuestion
 (?-i:^barbieshrimp$)
 ^Imaginea$
 (?-i:^Manglada Tech$)
+(?-i:^abhishek jain$)
