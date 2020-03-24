@@ -18969,3 +18969,4 @@
 1585060954	tripleee	factboyz\.com
 1585065441	tripleee	anyconv\.com
 1585069826	Makyen	420suppliesshop\.com
+1585073128	tripleee	(?<!Erik )west[\W_]*+lake(?:[\W_]*+finance(?:[\W_]*+home)?)?
