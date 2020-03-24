@@ -18956,3 +18956,4 @@
 1585038158	tripleee	sphoorti\.com
 1585038246	tripleee	atmaluhur\.ac\.id
 1585038345	tripleee	fruition[\W_]*+tuition
+1585038650	tripleee	appbrowzer
