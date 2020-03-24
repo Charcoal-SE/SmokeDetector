@@ -18966,3 +18966,4 @@
 1585056140	tripleee	immunity[\W_]*+plus
 1585059307	tripleee	betclan\.com
 1585059792	Machavity	coronadatasource\.org
+1585060042	Machavity	hidden-roku-channels\.com
