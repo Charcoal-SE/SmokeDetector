@@ -18960,3 +18960,4 @@
 1585038947	tripleee	appbrowzer\.com
 1585038975	tripleee	appbrowzer(?!\.com)
 1585040875	tripleee	confiduss\.com
+1585050309	tripleee	koreandramahd\.com
