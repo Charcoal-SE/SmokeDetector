@@ -18964,3 +18964,4 @@
 1585050576	tripleee	kissasian\.site
 1585054032	Machavity	ovoindonesia\.com
 1585056140	tripleee	immunity[\W_]*+plus
+1585059307	tripleee	betclan\.com
