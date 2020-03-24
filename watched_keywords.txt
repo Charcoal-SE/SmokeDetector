@@ -10885,7 +10885,6 @@
 1562208993	Makyen	dr\W*ehi
 1562209576	Machavity	bersatutv\.com
 1562217720	Makyen	neu\W*natural\W*cbd
-1562219621	Makyen	alturl\.com
 1562219643	Makyen	(?-i:htw6w)
 1562219695	Makyen	my[\W_]*+fitness[\W_]*+pharm\w*(?!\.com(?<=myfitnesspharm\.com))(?!\.blogspot\.com(?<=myfitnesspharmclub\.blogspot\.com))
 1562222748	Shree	iccaps\.co\.in
