@@ -2247,3 +2247,4 @@ emerald[\W_]*+essence(?:[\W_]*+(?:oil|cbd|review|\d++|[\da-f]{4,}+)s?)*
 arouza?(?:[\W_]*+ultimate)?
 bitcoin[\W_]*+revolution
 (?-i:iDealshare[\W_]++VideoGo)
+formax[\W_]*+lean
