@@ -133,6 +133,9 @@ items:
   - brad.ns.cloudflare.com.
   - lily.ns.cloudflare.com.
 - ns:
+  - braden.ns.cloudflare.com.
+  - georgia.ns.cloudflare.com.
+- ns:
   - brenda.ns.cloudflare.com.
   - merlin.ns.cloudflare.com.
 - ns:
