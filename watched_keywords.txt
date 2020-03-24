@@ -18958,3 +18958,4 @@
 1585038345	tripleee	fruition[\W_]*+tuition
 1585038676	tripleee	freerecharge
 1585038947	tripleee	appbrowzer\.com
+1585038975	tripleee	appbrowzer(?!\.com)
