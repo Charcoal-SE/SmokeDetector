@@ -384,6 +384,9 @@ items:
   - lorna.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
 - ns:
+  - major.ns.cloudflare.com.
+  - rosa.ns.cloudflare.com.
+- ns:
   - marge.ns.cloudflare.com.
   - skip.ns.cloudflare.com.
 - ns:
