@@ -18986,3 +18986,4 @@
 1585127320	tripleee	clearalist\.com
 1585127679	tripleee	earnwithkp\.com
 1585128606	tripleee	total[\W_]*+shield[\W_]*+max
+1585137935	tripleee	dankrevolutionstore\.com
