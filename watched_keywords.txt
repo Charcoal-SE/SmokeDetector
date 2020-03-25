@@ -18978,3 +18978,4 @@
 1585105703	Makyen	dusko\.petrovski(?:@gmail\.com)?
 1585105777	Makyen	pengeluaranhkg\.com
 1585105803	Makyen	thoptv\.mobi
+1585105830	Makyen	thoptv[\W_]*+apk
