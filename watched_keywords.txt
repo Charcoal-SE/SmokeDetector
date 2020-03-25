@@ -18985,3 +18985,4 @@
 1585120867	tripleee	prima[\W_]*+terra(?:[\W_]*+essence)?
 1585127320	tripleee	clearalist\.com
 1585127679	tripleee	earnwithkp\.com
+1585128606	tripleee	total[\W_]*+shield[\W_]*+max
