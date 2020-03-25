@@ -18981,3 +18981,4 @@
 1585105830	Makyen	thoptv[\W_]*+apk
 1585110131	tripleee	kathleenmaynavarro
 1585115142	tripleee	electricmotorshafts\.com
+1585115578	tripleee	immunity[\W_]*+oil
