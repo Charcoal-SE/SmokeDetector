@@ -381,6 +381,9 @@ items:
   - laura.ns.cloudflare.com.
   - terin.ns.cloudflare.com.
 - ns:
+  - lennon.ns.cloudflare.com.
+  - melina.ns.cloudflare.com.
+- ns:
   - liv.ns.cloudflare.com.
   - seth.ns.cloudflare.com.
 - ns:
