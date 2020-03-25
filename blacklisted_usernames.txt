@@ -281,3 +281,4 @@ DailyRaiseQuestion
 ^Imaginea$
 (?-i:^Manglada Tech$)
 (?-i:^abhishek jain$)
+(?-i:^Alex Tony$)
