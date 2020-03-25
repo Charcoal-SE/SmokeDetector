@@ -18988,3 +18988,4 @@
 1585128606	tripleee	total[\W_]*+shield[\W_]*+max
 1585137935	tripleee	dankrevolutionstore\.com
 1585137989	tripleee	diyagupta\.com
+1585149858	Makyen	bitdust\.io
