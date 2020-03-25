@@ -390,6 +390,9 @@ items:
   - lennon.ns.cloudflare.com.
   - melina.ns.cloudflare.com.
 - ns:
+  - lily.ns.cloudflare.com.
+  - wesley.ns.cloudflare.com.
+- ns:
   - liv.ns.cloudflare.com.
   - seth.ns.cloudflare.com.
 - ns:
