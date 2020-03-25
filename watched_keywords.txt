@@ -18984,3 +18984,4 @@
 1585116084	Shree	techevolutions\.com
 1585118852	tripleee	pedialogy\.org
 1585120867	tripleee	prima[\W_]*+terra(?:[\W_]*+essence)?
+1585127320	tripleee	clearalist\.com
