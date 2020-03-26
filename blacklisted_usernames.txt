@@ -283,3 +283,4 @@ DailyRaiseQuestion
 (?-i:^abhishek jain$)
 (?-i:^Alex Tony$)
 (?-i:^Mritunjay Jadon$)
+(?-i:^jammertech$)
