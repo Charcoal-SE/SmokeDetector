@@ -2249,3 +2249,4 @@ bitcoin[\W_]*+revolution
 formax[\W_]*+lean
 thedigizones(?!\.com)
 Regional\s+College\s+of\s+Management\s+Bangalore
+intellipaat(?!\.com)
