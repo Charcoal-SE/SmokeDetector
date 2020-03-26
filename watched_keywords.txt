@@ -18999,3 +18999,4 @@
 1585204593	tripleee	kana[\W_]*+bears?
 1585207952	tripleee	gummies(?<!(?:cbd|chill\Wplus|chill|halo\Whair)\Wgummies)
 1585220506	tripleee	akplumbers\.com
+1585220552	tripleee	thinkpalm\.com
