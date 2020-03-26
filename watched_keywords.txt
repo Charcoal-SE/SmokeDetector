@@ -18041,7 +18041,6 @@
 1582859841	Shree	alufoil\.cn
 1582861759	Makyen	(?-i:TyyDhvDJyL)(?#t.co)
 1582869281	Makyen	testovance
-1582869886	Shree	muthoottumini\.com
 1582872597	double-beep	nationalsafetyschool\.com
 1582872681	Shree	freesearch\.naukri\.com
 1582872886	double-beep	imarticus\.org
@@ -18757,7 +18756,6 @@
 1584508453	tripleee	dr[\W_]*+maleki\d*
 1584509425	tripleee	placement[\W_]*+colleges?
 1584509558	tripleee	(?:best|top)\s+mba(?:\s+\S+){0,3}colleges?
-1584509626	tripleee	Regional\s+College\s+of\s+Management\s+Bangalore
 1584511488	Makyen	sparkketoreviews\.com
 1584511561	Makyen	spark[\W_]*+keto(?!reviews\.com(?<=sparkketoreviews\.com))(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+)s?)*
 1584512104	Makyen	streetinsider\.com(?#Prelim looks like we really want only streetinsider\.com/SI+Newswire)
@@ -18971,3 +18969,30 @@
 1585069826	Makyen	420suppliesshop\.com
 1585073128	tripleee	(?<!Erik )west[\W_]*+lake(?:[\W_]*+finance(?:[\W_]*+home)?)?
 1585077129	M--	OussamaAlouat\.github\.io
+1585085551	Makyen	hmuhyrf851(?:@gmail\.com)?
+1585085583	Makyen	bonushp\.com
+1585085609	Makyen	royalflush88
+1585086464	Machavity	(?-i:2KNVKk)(?#fiverr spam)
+1585087616	Makyen	zunnoorain00(?:@gmail\.com)?
+1585105703	Makyen	dusko\.petrovski(?:@gmail\.com)?
+1585105777	Makyen	pengeluaranhkg\.com
+1585105803	Makyen	thoptv\.mobi
+1585105830	Makyen	thoptv[\W_]*+apk
+1585110131	tripleee	kathleenmaynavarro
+1585115142	tripleee	electricmotorshafts\.com
+1585115578	tripleee	immunity[\W_]*+oil
+1585116084	Shree	techevolutions\.com
+1585118852	tripleee	pedialogy\.org
+1585120867	tripleee	prima[\W_]*+terra(?:[\W_]*+essence)?
+1585127320	tripleee	clearalist\.com
+1585127679	tripleee	earnwithkp\.com
+1585128606	tripleee	total[\W_]*+shield[\W_]*+max
+1585137935	tripleee	dankrevolutionstore\.com
+1585137989	tripleee	diyagupta\.com
+1585149858	Makyen	bitdust\.io
+1585150056	Jenayah	printererrorassistant\.com
+1585153373	tripleee	pharmastores\.com
+1585164921	Nisse Engström	howto\.bid
+1585174624	Makyen	buymoviejacket\.com
+1585192013	Makyen	(?-i:5uKzE03J9OAA)(?#YouTube)
+1585193339	Makyen	abctay\.com
