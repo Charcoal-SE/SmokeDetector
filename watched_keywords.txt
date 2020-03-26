@@ -18997,3 +18997,4 @@
 1585193339	Makyen	abctay\.com
 1585204219	Makyen	xosodaiphat\.net
 1585204593	tripleee	kana[\W_]*+bears?
+1585207952	tripleee	gummies(?<!(?:cbd|chill\Wplus|chill|halo\Whair)\Wgummies)
