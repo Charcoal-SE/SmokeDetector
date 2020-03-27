@@ -19021,3 +19021,4 @@
 1585289917	tripleee	waves2cure\.com
 1585294718	tripleee	w3samples\.com
 1585295718	tripleee	ourcodingschool\.com
+1585296079	tripleee	luma[\W_]*+clear
