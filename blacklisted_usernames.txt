@@ -284,3 +284,4 @@ DailyRaiseQuestion
 (?-i:^Alex Tony$)
 (?-i:^Mritunjay Jadon$)
 (?-i:^jammertech$)
+(?-i:^Kavita$)
