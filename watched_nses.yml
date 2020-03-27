@@ -52,6 +52,9 @@ items:
   - ali.ns.cloudflare.com.
   - clay.ns.cloudflare.com.
 - ns:
+  - ali.ns.cloudflare.com.
+  - gerald.ns.cloudflare.com.
+- ns:
   - alla.ns.cloudflare.com.
   - ed.ns.cloudflare.com.
 - ns:
