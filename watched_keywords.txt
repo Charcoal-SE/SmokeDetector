@@ -19023,3 +19023,4 @@
 1585310474	tripleee	signalboostermumbai\.in
 1585312509	tripleee	myndsolution\.com
 1585312533	tripleee	mynd[\W_]*+solution(?!\.com)
+1585314178	tripleee	navette-paris-aeroport\.com
