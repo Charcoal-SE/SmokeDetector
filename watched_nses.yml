@@ -318,6 +318,9 @@ items:
   - hal.ns.cloudflare.com.
   - tia.ns.cloudflare.com.
 - ns:
+  - ian.ns.cloudflare.com.
+  - melissa.ns.cloudflare.com.
+- ns:
   - ines.ns.cloudflare.com.
   - terin.ns.cloudflare.com.
 - ns:
