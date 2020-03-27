@@ -1,6 +1,7 @@
 Schema: yaml_cidr
 Schema_version: '2019120601'
 items:
+- ip: 103.20.214.78
 - ip: 103.21.58.29
 - ip: 103.21.59.174
 - ip: 103.21.59.22
