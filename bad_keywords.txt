@@ -2251,3 +2251,4 @@ thedigizones(?!\.com)
 Regional\s+College\s+of\s+Management\s+Bangalore
 intellipaat(?!\.com)
 (?:cbd|chill(?:[\W]*+plus)|halo[\W_]*+hair)[\W_]*+gummies
+safebreath[\W_]*+pro(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
