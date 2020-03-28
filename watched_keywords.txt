@@ -19041,3 +19041,4 @@
 1585388949	Makyen	ranainfo\.com
 1585388973	Makyen	tdnewstv\.com
 1585410644	Makyen	shopdepo(?#facebook.com)
+1585410766	Makyen	depo[\W_]*+fashion\d*
