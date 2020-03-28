@@ -19059,3 +19059,4 @@
 1585428632	Makyen	filma24\.is
 1585431332	Makyen	staycure\.com
 1585431359	Makyen	staycure(?!\.com)
+1585438018	Makyen	robertocs\.com
