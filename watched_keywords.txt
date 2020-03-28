@@ -19045,3 +19045,4 @@
 1585410876	Makyen	(?-i:UCvBE0GTtUNJgduDzJclTh0A)(?#YouTube channel)
 1585410938	Makyen	uisheng
 1585410964	Makyen	nagapkv\.xyz
+1585410990	Makyen	nagapkv(?!\.xyz)
