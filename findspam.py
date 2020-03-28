@@ -2170,6 +2170,11 @@ create_rule("blacklisted username", r'(?i)^john$',
             all=False,
             sites=['hinduism.stackexchange.com', 'judaism.stackexchange.com', 'islam.stackexchange.com'],
             title=False, body=False, username=True)
+# Workplace troll, 2020-03-28
+create_rule("blacklisted username",
+            r"(?i)raise(?!oul(?<=^samuraiseoul)$)(?!r(?<=^indofraiser)$)(?!lvan(?<=^Santhosh Thamaraiselvan)$)",
+            all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
+            title=False, body=False, username=True)
 
 
 FindSpam.reload_blacklists()
