@@ -19047,4 +19047,3 @@
 1585410964	Makyen	nagapkv\.xyz
 1585410990	Makyen	nagapkv(?!\.xyz)
 1585411013	Makyen	glassbottlewholesale\.com
-1585425821	Makyen	d(?:octo)r[\W_]+osasu
