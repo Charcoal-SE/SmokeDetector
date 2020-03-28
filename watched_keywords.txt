@@ -19040,3 +19040,4 @@
 1585388827	Makyen	edraw[\W_]*+max(?:[\W_]*+(?:license|key|\d++|[\da-f]{4,}+))*
 1585388949	Makyen	ranainfo\.com
 1585388973	Makyen	tdnewstv\.com
+1585400824	Jenayah	(?i)depo ?fashion
