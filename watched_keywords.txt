@@ -19042,3 +19042,4 @@
 1585388973	Makyen	tdnewstv\.com
 1585410644	Makyen	shopdepo(?#facebook.com)
 1585410766	Makyen	depo[\W_]*+fashion\d*
+1585410876	Makyen	(?-i:UCvBE0GTtUNJgduDzJclTh0A)(?#YouTube channel)
