@@ -19048,3 +19048,4 @@
 1585411013	Makyen	glassbottlewholesale\.com
 1585426223	Kulfy	affiliaterecovery(?:[\W_]*+(?:dot[\W_]*+)?com)?
 1585427027	Makyen	bartkasch(?:[\W_]*+(?:at[\W_]*+)?affiliaterecovery(?:[\W_]*+(?:dot[\W_]*+)?com)?)
+1585427052	Makyen	mr[\W_]*+bart[\W_]*+kasch
