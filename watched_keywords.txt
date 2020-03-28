@@ -19050,3 +19050,4 @@
 1585427027	Makyen	bartkasch(?:[\W_]*+(?:at[\W_]*+)?affiliaterecovery(?:[\W_]*+(?:dot[\W_]*+)?com)?)
 1585427052	Makyen	mr[\W_]*+bart[\W_]*+kasch
 1585428411	Makyen	marvel\.to
+1585428440	Makyen	hulu\.to
