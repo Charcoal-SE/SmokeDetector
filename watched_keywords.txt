@@ -19037,3 +19037,4 @@
 1585388751	Makyen	cylophinrx
 1585388775	Makyen	daftarjudiceme\.co
 1585388802	Makyen	crackwatch\.org
+1585388827	Makyen	edraw[\W_]*+max(?:[\W_]*+(?:license|key|\d++|[\da-f]{4,}+))*
