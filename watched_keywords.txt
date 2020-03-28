@@ -19032,3 +19032,4 @@
 1585341074	Machavity	jaipurhotescorts\.com
 1585387705	Makyen	durostrong
 1585387731	Makyen	medibrandox\.com
+1585387756	Makyen	medibrandox(?!\.com)
