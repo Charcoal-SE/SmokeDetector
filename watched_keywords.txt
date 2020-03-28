@@ -19060,3 +19060,4 @@
 1585431332	Makyen	staycure\.com
 1585431359	Makyen	staycure(?!\.com)
 1585438018	Makyen	robertocs\.com
+1585438044	Makyen	(?-i:h6(?<=-h6)ygU-ObMs)(?#YouTube)
