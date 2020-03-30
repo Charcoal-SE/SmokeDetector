@@ -337,6 +337,9 @@ items:
   - jeremy.ns.cloudflare.com.
 - ns:
   - jade.ns.cloudflare.com.
+  - josh.ns.cloudflare.com.
+- ns:
+  - jade.ns.cloudflare.com.
   - matt.ns.cloudflare.com.
 - ns:
   - jake.ns.cloudflare.com.
