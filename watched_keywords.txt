@@ -19092,3 +19092,4 @@
 1585570082	Glorfindel	kasperskyhelps\.com
 1585571735	tripleee	amperordirect\.com
 1585573763	tripleee	gamingdish\.com
+1585573789	tripleee	gamingwind\.com
