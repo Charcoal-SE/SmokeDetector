@@ -19098,3 +19098,4 @@
 1585596103	Makyen	nutritionidea\.com
 1585607455	Makyen	born2slay\.com
 1585610469	Makyen	todayssarkariresult\.com
+1585612606	Makyen	d(?:octo)?r[\W_]*+tunde
