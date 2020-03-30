@@ -285,3 +285,4 @@ DailyRaiseQuestion
 (?-i:^Mritunjay Jadon$)
 (?-i:^jammertech$)
 (?-i:^Kavita$)
+(?-i:^Leeten Smith$)
