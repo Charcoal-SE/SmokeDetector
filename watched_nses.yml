@@ -459,6 +459,9 @@ items:
   - rita.ns.cloudflare.com.
   - west.ns.cloudflare.com.
 - ns:
+  - sam.ns.cloudflare.com.
+  - vera.ns.cloudflare.com.
+- ns:
   - sara.ns.cloudflare.com.
   - seth.ns.cloudflare.com.
 - ns:
