@@ -336,6 +336,9 @@ items:
   - isla.ns.cloudflare.com.
   - jeremy.ns.cloudflare.com.
 - ns:
+  - jade.ns.cloudflare.com.
+  - matt.ns.cloudflare.com.
+- ns:
   - jake.ns.cloudflare.com.
   - sofia.ns.cloudflare.com.
 - ns:
