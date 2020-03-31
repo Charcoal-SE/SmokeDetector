@@ -288,3 +288,4 @@ DailyRaiseQuestion
 (?-i:^Leeten Smith$)
 ^bert[\W_]*+linsheng‭$
 (?-i:^keyword out$)
+(?-i:^mehdi rezghi$)
