@@ -2253,3 +2253,4 @@ intellipaat(?!\.com)
 (?:cbd|chill(?:[\W]*+plus)|halo[\W_]*+hair)[\W_]*+gummies
 safebreath[\W_]*+pro(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 d(?:octo)?r[\W_]*+osasu\d*+(?:@gmail\.com)?
+immunity[\W_]*+blend
