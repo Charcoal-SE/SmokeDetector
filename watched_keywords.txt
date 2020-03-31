@@ -19109,3 +19109,4 @@
 1585644778	tripleee	rm-modaedesign\.it
 1585644907	tripleee	immune[\W_]*+911
 1585652471	tripleee	techknowspro\.com
+1585653501	tripleee	bangsatogel\.com
