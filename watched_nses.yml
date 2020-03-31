@@ -230,6 +230,9 @@ items:
   - terry.ns.cloudflare.com.
 - ns:
   - dilbert.ns.cloudflare.com.
+  - meg.ns.cloudflare.com.
+- ns:
+  - dilbert.ns.cloudflare.com.
   - mimi.ns.cloudflare.com.
 - ns:
   - dolly.ns.cloudflare.com.
