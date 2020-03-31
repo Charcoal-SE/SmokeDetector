@@ -19104,3 +19104,4 @@
 1585626170	Makyen	d(?:octo)?r[\W_]*+oyinbo
 1585626195	Makyen	prophetoyinbojesus(?:@gma\.com)?
 1585636416	tripleee	avalonhosting\.services
+1585642246	tripleee	promoteabhi\.com
