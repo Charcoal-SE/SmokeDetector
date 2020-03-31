@@ -2254,3 +2254,4 @@ intellipaat(?!\.com)
 safebreath[\W_]*+pro(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 d(?:octo)?r[\W_]*+osasu\d*+(?:@gmail\.com)?
 immunity[\W_]*+blend
+total[\W_]*+defense[\W_]*+immunity
