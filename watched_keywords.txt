@@ -19114,3 +19114,4 @@
 1585657962	tripleee	globexoutreach\.com
 1585662605	tripleee	k9erp\.com
 1585669222	Jenayah	safetydoggiecollars\.com
+1585676876	tripleee	raging[\W_]*+leo
