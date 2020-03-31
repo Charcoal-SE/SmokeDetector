@@ -19108,3 +19108,4 @@
 1585643251	tripleee	jiupengap\.com
 1585643278	tripleee	jiupengap(?!\.com)
 1585644778	tripleee	rm-modaedesign\.it
+1585644907	tripleee	immune[\W_]*+911
