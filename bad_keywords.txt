@@ -93,7 +93,6 @@ t(?<!'t)[ -]complex
 фальшивы(?:е|х) (?:деньги|денег|купюры?)
 raging\W?lion
 retrodynamic\W?formula
-(?:contact|offer|join)(?<=^.{0,207}).{0,99}?\d{9}(?=.{0,99}+$)
 krojam(?:soft|cleaner)?
 filessearch\W?tool
 teksonit
