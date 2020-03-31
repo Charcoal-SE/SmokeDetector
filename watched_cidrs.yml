@@ -384,7 +384,8 @@ items:
   ip: 216.239.38.21
 - ip: 23.185.0.4
 - ip: 23.227.38.32
-- ip: 23.227.38.64
+- comment: lots of *.myshopify.com sites, some legit / FP
+  ip: 23.227.38.64
 - ip: 23.229.180.169
 - ip: 23.229.233.231
 - comment: random spam sites but many FPs
