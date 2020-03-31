@@ -426,6 +426,9 @@ items:
   - lennon.ns.cloudflare.com.
   - melina.ns.cloudflare.com.
 - ns:
+  - lex.ns.cloudflare.com.
+  - tori.ns.cloudflare.com.
+- ns:
   - lily.ns.cloudflare.com.
   - wesley.ns.cloudflare.com.
 - ns:
