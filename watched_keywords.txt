@@ -18887,7 +18887,6 @@
 1584777819	Makyen	immunity[\W_]*+plus[\W_]*+with[\W_]*+gut[\W_]*+cleanse(?:[\W_]*+(?:system|\d++|[\da-f]{4,}+))*
 1584777844	Makyen	cblmhfh\.com
 1584777888	Makyen	nutravitali(?:[\W_]*+(?:keto|vital|\d++|[\da-f]{4,}+))*
-1584778710	Makyen	ultra[\W_]*+x[\W_]*+prime(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1584787330	Jenayah	(?i)mtravis039(?:@gmail\.com)
 1584788137	tripleee	allyoucanpurchase\.com
 1584788166	tripleee	realearnmoney\.com
