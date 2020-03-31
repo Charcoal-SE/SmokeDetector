@@ -19102,3 +19102,4 @@
 1585616382	Makyen	trendinwealth\.com
 1585621223	Makyen	weinformed\.com
 1585626170	Makyen	d(?:octo)?r[\W_]*+oyinbo
+1585626195	Makyen	prophetoyinbojesus(?:@gma\.com)?
