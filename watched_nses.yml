@@ -475,6 +475,9 @@ items:
   - seth.ns.cloudflare.com.
 - ns:
   - pablo.ns.cloudflare.com.
+  - paris.ns.cloudflare.com.
+- ns:
+  - pablo.ns.cloudflare.com.
   - pola.ns.cloudflare.com.
 - ns:
   - rita.ns.cloudflare.com.
