@@ -19118,3 +19118,4 @@
 1585691185	Makyen	(?:contact|offer|join)(?<=^.{0,207}).{0,99}?\d{9}(?=.{0,99}+$)
 1585706146	Makyen	iponwire\.com
 1585709388	Makyen	vseti
+1585710432	Makyen	fightingscams(?:@aol\.com)?
