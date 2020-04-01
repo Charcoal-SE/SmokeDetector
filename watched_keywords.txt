@@ -19124,3 +19124,4 @@
 1585732112	tripleee	nousinfosystems\.com
 1585733497	Nisse Engström	mbmc\.at
 1585733528	Nisse Engström	irconcrete\.com
+1585739970	tripleee	windows-kernel-defense-and-attack-for-beginners-to-expert
