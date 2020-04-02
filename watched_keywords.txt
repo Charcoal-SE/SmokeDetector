@@ -19138,3 +19138,4 @@
 1585799336	Makyen	darkhunts\.com
 1585807750	tripleee	iscoupon\.com
 1585807776	tripleee	gibl\.in
+1585808135	tripleee	/coupons/
