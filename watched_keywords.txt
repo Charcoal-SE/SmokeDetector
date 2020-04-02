@@ -18930,7 +18930,6 @@
 1584995535	Machavity	dogecoin\.com
 1585003739	Makyen	dr-iyaya-herbal-remedy\.webnode\.com
 1585003761	Makyen	d(?:octo)?r[\W_]*+ia?yaya(?!-herbal-remedy\.webnode\.com(?<=dr-iyaya-herbal-remedy\.webnode\.com))(?:@gmail\.com)?
-1585027111	Sonic the Anonymous Hedgehog	3MEDS
 1585030651	Shree	adityaenterprises\.in\.net
 1585030921	tripleee	allkitchenchimney\.com
 1585033075	Glorfindel	swimintheriver\.com
