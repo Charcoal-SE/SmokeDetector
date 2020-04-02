@@ -19138,3 +19138,4 @@
 1585807750	tripleee	iscoupon\.com
 1585807776	tripleee	gibl\.in
 1585808135	tripleee	/coupons/
+1585810769	tripleee	oxfordepi\.com
