@@ -1,7 +1,9 @@
 # coding=utf-8
 from typing import Union
+
 import regex
 import yaml
+import dns.resolver
 
 from globalvars import GlobalVars
 from helpers import log
@@ -221,6 +223,10 @@ class YAMLParserCIDR(BlacklistParser):
         else:
             raise ValueError('Item needs to have an "ip" member field: {0!r}'.format(item))
 
+    def validate(self):
+        for item in self._parse():
+            self._validate(item)
+
     def add(self, item):
         self._validate(item)
         prikey = self.SCHEMA_PRIKEY
@@ -272,18 +278,34 @@ class YAMLParserNS(YAMLParserCIDR):
     SCHEMA_PRIKEY = 'ns'
 
     def _validate(self, item):
+        def item_check(ns):
+            if not host_regex.match(ns):
+                raise ValueError(
+                    '{0} does not look like a valid host name'.format(item['ns']))
+            if item.get('disable', None):
+                return False
+            try:
+                addr = dns.resolver.query(ns, 'a')
+                log('debug', '{0} resolved to {1}'.format(
+                    ns, ','.join(x.to_text() for x in addr)))
+            except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
+                if not item.get('pass', None):
+                    soa = dns.resolver.query(ns, 'soa')
+                    log('debug', '{0} has no A record; SOA is {1}'.format(
+                        ns, ';'.join(s.to_text() for s in soa)))
+            return True
+
         host_regex = regex.compile(r'^([a-z0-9][-a-z0-9]*\.){2,}$')
         if 'ns' not in item:
             raise ValueError('Item must have member field "ns": {0!r}'.format(item))
-        if isinstance(str, item['ns']):
-            if not host_regex.match(item['ns']):
-                raise ValueError(
-                    '{0} does not look like a valid host name'.format(item['ns']))
-        elif isinstance(list, item['ns']):
+        if isinstance(item['ns'], str):
+            return item_check(item['ns'])
+        elif isinstance(item['ns'], list):
+            accept = True
             for ns in item['ns']:
-                if not host_regex.match(ns):
-                    raise ValueError(
-                        '{0} does not look like a valid host name'.format(ns))
+                if not item_check(ns):
+                    accept = False
+            return accept
         else:
             raise ValueError(
                 'Member "ns" must be either string or list of strings: {0!r}'.format(
@@ -337,3 +359,6 @@ class Blacklist:
 
     def exists(self, item):
         return self._parser.exists(item)
+
+    def validate(self):
+        return self._parser.validate()

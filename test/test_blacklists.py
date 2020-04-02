@@ -6,7 +6,7 @@ from os import unlink
 
 import pytest
 
-from blacklists import Blacklist, YAMLParserCIDR, YAMLParserASN
+from blacklists import Blacklist, YAMLParserCIDR, YAMLParserASN, YAMLParserNS
 from helpers import files_changed, blacklist_integrity_check
 
 
@@ -25,6 +25,10 @@ def test_remote_diff():
     false_diff = "h j q t"
     assert files_changed(true_diff, file_set)
     assert not files_changed(false_diff, file_set)
+
+
+def yaml_validate_existing(filename, cls):
+    return Blacklist((filename, cls)).validate()
 
 
 def test_yaml_blacklist():
@@ -56,6 +60,9 @@ def test_yaml_blacklist():
     assert '3.4.5.6' not in blacklist.parse()
     unlink('test_ip.yml')
 
+    yaml_validate_existing('blacklisted_cidrs.yml', YAMLParserCIDR)
+    yaml_validate_existing('watched_cidrs.yml', YAMLParserCIDR)
+
 
 def test_yaml_asn():
     with open('test_asn.yml', 'w') as y:
@@ -84,3 +91,10 @@ def test_yaml_asn():
     blacklist.remove({'asn': '345'})
     assert '345' not in blacklist.parse()
     unlink('test_asn.yml')
+
+    yaml_validate_existing('watched_asns.yml', YAMLParserASN)
+
+
+def test_yaml_nses():
+    yaml_validate_existing('blacklisted_nses.yml', YAMLParserNS)
+    yaml_validate_existing('watched_nses.yml', YAMLParserNS)
