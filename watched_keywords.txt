@@ -19158,3 +19158,4 @@
 1585847813	tripleee	swag(?:ing|ers?)
 1585848573	tripleee	blackpods1\.com
 1585850672	Machavity	^logmyerq$
+1585850884	Makyen	techeffigytutorials\.blogspot
