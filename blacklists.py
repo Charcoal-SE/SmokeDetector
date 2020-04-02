@@ -196,8 +196,8 @@ class YAMLParserCIDR(BlacklistParser):
     def _validate(self, item):
         ip_regex = regex.compile(r'''
             (?(DEFINE)(?P<octet>
-              1[0-9]{0,2}|2(?:[0-4][0-9])??|25[0-5]?|2[6-9]|[3-9][0-9]?))
-            ^(?&octet)(?:\.(?&octet)){3}$''', regex.X)
+              0|1[0-9]{0,2}|2(?:[0-4][0-9]?)?|25[0-5]?|2[6-9]|[3-9][0-9]?))
+            ^(?!0)(?&octet)(?:\.(?&octet)){3}$''', regex.X)
 
         if 'ip' in item:
             if not ip_regex.match(item['ip']):
