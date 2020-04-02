@@ -101,7 +101,7 @@ items:
   - lee.ns.cloudflare.com.
 - ns:
   - barbara.ns.cloudflare.com.
-  - logan.ns.cloudflarem.com.
+  - logan.ns.cloudflare.com.
 - ns:
   - bart.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
@@ -698,7 +698,7 @@ items:
 - ns: mycyberhosting.com.
 - ns: webnode.com.
 - ns: printdns.com.
-- ns: websiteseverbox.com.
+- ns: websiteserverbox.com.
 - ns: loanwalle.com.
 - ns: mochahost.com.
 - ns: v-sys.org.
