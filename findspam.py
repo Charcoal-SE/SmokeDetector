@@ -344,14 +344,16 @@ class FindSpam:
             pass
         cls.rule_bad_keywords.sanity_check()
         cls.rule_watched_keywords.regex = r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format(
-            "|".join(GlobalVars.watched_keywords.keys()))
+            "|".join(list(GlobalVars.watched_keywords.keys()) + [
+                regex.escape(x) for x in GlobalVars.watched_cidrs]))
         try:
             del cls.rule_watched_keywords.compiled_regex
         except AttributeError:
             pass
         cls.rule_watched_keywords.sanity_check()
         cls.rule_blacklisted_websites.regex = r"(?i)({})".format(
-            "|".join(GlobalVars.blacklisted_websites))
+            "|".join(GlobalVars.blacklisted_websites + [
+                regex.escape(x) for x in GlobalVars.blacklisted_cidrs]))
         try:
             del cls.rule_blacklisted_websites.compiled_regex
         except AttributeError:
