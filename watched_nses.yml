@@ -92,9 +92,6 @@ items:
   - max.ns.cloudflare.com.
 - ns:
   - art.ns.cloudflare.com.
-  - lena.ns.cloudflare.com.
-- ns:
-  - art.ns.cloudflare.com.
   - sharon.ns.cloudflare.com.
 - ns:
   - asa.ns.cloudflare.com.
