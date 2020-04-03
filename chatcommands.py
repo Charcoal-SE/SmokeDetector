@@ -1709,9 +1709,9 @@ def allspam(msg, url):
                     'site': u_site
                 }
                 answer_res = requests.get(req_url, params=params).json()
-                if "backoff" in res:
-                    if GlobalVars.api_backoff_time < time.time() + res["backoff"]:
-                        GlobalVars.api_backoff_time = time.time() + res["backoff"]
+                if "backoff" in answer_res:
+                    if GlobalVars.api_backoff_time < time.time() + answer_res["backoff"]:
+                        GlobalVars.api_backoff_time = time.time() + answer_res["backoff"]
                 GlobalVars.api_request_lock.release()
                 # Finally, set the attribute
                 post_data.question_id = answer_res['items'][0]['question_id']
