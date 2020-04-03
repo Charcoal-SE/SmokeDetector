@@ -19174,3 +19174,4 @@
 1585885460	Makyen	150/7/6[\W+]*+Nguyễn[\W+]*+Trãi
 1585885488	Makyen	cptcwtuh
 1585885510	Makyen	tamlonggroup\.page\.tl
+1585885536	Makyen	newsforpc\.com
