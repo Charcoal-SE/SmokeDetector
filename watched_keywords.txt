@@ -19178,3 +19178,4 @@
 1585901873	Makyen	techrnews\.xyz
 1585902726	Makyen	listsofketofoods\.com
 1585902751	Makyen	hempmarketreport\.com
+1585902776	Makyen	patriot[\W_]*+supreme[\W_]*+cbd(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
