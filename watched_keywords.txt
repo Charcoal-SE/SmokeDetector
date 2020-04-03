@@ -19172,3 +19172,4 @@
 1585885032	tripleee	tam[\W_]*+long[\W_]*+group(?!\.com)
 1585885164	Makyen	shadownethacker44(?:@gmail\.com)?
 1585885460	Makyen	150/7/6[\W+]*+Nguyễn[\W+]*+Trãi
+1585885488	Makyen	cptcwtuh
