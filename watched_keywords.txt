@@ -11194,7 +11194,6 @@
 1563337480	Shree	fundsindia\.com
 1563337795	tripleee	sportswaale\.in
 1563342259	Makyen	grepow\.com
-1563344972	Glorfindel	zapbuild\.com
 1563345841	tripleee	marine\W?flex(?:\W?ultra)?
 1563347448	tripleee	notifyvisitors\.com
 1563348156	tripleee	stuvalley\.com
