@@ -2259,3 +2259,4 @@ mountain[\W_]*+sky
 tst[\W_]*+2500
 3MEDS
 (?:peau(?!jeuneavis\.fr\b)[\W_]*+jeune|jeune[\W_]*+peau)(?!-creme\.moonfruit\.com(?<=peau-jeune-creme\.moonfruit\.com))(?:[\W_]*+(?:cream|creme|skin|france|fr|belgium|be|netherlands|avis|anti|aging|\d++|[\da-f]{4,}+)s?)*
+supreme[\W_]*+rx(?:[\W_]*+(?:pill|\d++|[\da-f]{4,}+)s?)*
