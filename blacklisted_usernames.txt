@@ -289,3 +289,4 @@ DailyRaiseQuestion
 ^bert[\W_]*+linsheng‭$
 (?-i:^keyword out$)
 (?-i:^mehdi rezghi$)
+(?-i:^Renu KumAri$)
