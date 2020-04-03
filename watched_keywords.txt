@@ -19185,3 +19185,4 @@
 1585917935	tripleee	extendaline\.com
 1585917961	tripleee	extendaline(?!\.com)
 1585926476	Machavity	affiliate-system\.org
+1585927587	Machavity	ufa-wb998\.com
