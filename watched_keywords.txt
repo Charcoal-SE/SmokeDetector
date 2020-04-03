@@ -8077,7 +8077,6 @@
 1550399600	Shree	luggagetoship\.com
 1550430299	Makyen	manualbirds\.com
 1550440182	Makyen	92q\.com
-1550449737	Makyen	crunchyroll\.com
 1550457149	Makyen	profile_blue_pill
 1550457159	Makyen	(?<=@)mecha31(?#telegram)
 1550464782	Shree	zabaza\.logan@yahoo\.com
