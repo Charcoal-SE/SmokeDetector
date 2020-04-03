@@ -19175,3 +19175,4 @@
 1585885488	Makyen	cptcwtuh
 1585885510	Makyen	tamlonggroup\.page\.tl
 1585885536	Makyen	newsforpc\.com
+1585890173	Makyen	befit[\W_]*+keto[\W_]*+cut(?:[\W_]*+(?:official|\d++|[\da-f]{4,}+))*
