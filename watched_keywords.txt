@@ -17868,7 +17868,6 @@
 1582522706	Makyen	meta[\W_]*+boost[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1582522757	Makyen	nicoreindia\.com
 1582522778	Makyen	bestunderdesktreadmill\.com
-1582522800	Makyen	peaujeuneavis\.fr
 1582522892	Makyen	eidmubarakimages\.us
 1582523732	Shree	aoqunbrush\.com
 1582531095	Makyen	technocareapk\.com
