@@ -19184,3 +19184,4 @@
 1585912054	tripleee	aattk\.net
 1585917935	tripleee	extendaline\.com
 1585917961	tripleee	extendaline(?!\.com)
+1585926476	Machavity	affiliate-system\.org
