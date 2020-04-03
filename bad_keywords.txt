@@ -2258,3 +2258,4 @@ ultra[\W_]*+x[\W_]*+prime(?:[\W_]*+testo(?:sterone)?)?(?:[\W_]*+(?:\d++|[\da-f]{
 mountain[\W_]*+sky
 tst[\W_]*+2500
 3MEDS
+(?:peau(?!jeuneavis\.fr\b)[\W_]*+jeune|jeune[\W_]*+peau)(?!-creme\.moonfruit\.com(?<=peau-jeune-creme\.moonfruit\.com))(?:[\W_]*+(?:cream|creme|skin|france|fr|belgium|be|netherlands|avis|anti|aging|\d++|[\da-f]{4,}+)s?)*
