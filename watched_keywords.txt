@@ -19209,7 +19209,6 @@
 1586014012	Makyen	moneyfirstliv\.com
 1586014038	Makyen	dotnetpattern\.com
 1586014065	Makyen	bitcoin[\W_]*+storm(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
-1586014092	Makyen	eden[\W_]*+beauty[\W_]*+reviews[\W_]*+cream(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1586014136	Makyen	237922694069627(?#facebook.com/events)
 1586014170	Makyen	pure-chemical\.com
 1586014197	Makyen	(?-i:GyZJq\.png)
