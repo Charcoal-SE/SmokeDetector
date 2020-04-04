@@ -19221,3 +19221,4 @@
 1586015417	Makyen	battoexeconverter\.com
 1586025745	Makyen	kliniksahabatdokter\.hatenablog\.com
 1586039925	Makyen	nextbuy\.in
+1586039951	Makyen	happn\.in
