@@ -2260,3 +2260,4 @@ tst[\W_]*+2500
 3MEDS
 (?:peau[\W_]*+jeune|jeune[\W_]*+peau)(?!-creme\.moonfruit\.com(?<=peau-jeune-creme\.moonfruit\.com)\b)(?!\.fr(?<=peaujeuneavis\.fr)\b)(?!\.com(?<=peaujeunecream\.com)\b)(?!cremeavis\.wixsite\.com(?<=peaujeunecremeavis\.wixsite\.com)\b)(?!creme\.storychief\.io(?<=peaujeunecreme\.storychief\.io)\b)(?:[\W_]*+(?:cream|creme|skin|france|fr|belgium|be|netherlands|avis|anti|aging|\d++|[\da-f]{4,}+)s?)*
 supreme[\W_]*+rx(?:[\W_]*+(?:pill|\d++|[\da-f]{4,}+)s?)*
+(?:rapid[\W_]*+)?keto(?:[\W_]*+(?:prime|rx))+(?:[\W_]*+(?:diet|za|uruguay|\d++|[\da-f]{4,}+))*
