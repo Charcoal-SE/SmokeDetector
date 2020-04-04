@@ -19192,3 +19192,4 @@
 1585933838	Makyen	biztechpost\.com
 1585942007	Machavity	educationplatform\.co\.za
 1585949366	Machavity	hired\.com
+1585961017	Makyen	cylophin[\W_]*+rx(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
