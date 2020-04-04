@@ -19220,3 +19220,4 @@
 1586014490	Makyen	eden[\W_]*+beauty(?:[\W_]*+(?:reviews|cream|creme|\d++|[\da-f]{4,}+))*
 1586015417	Makyen	battoexeconverter\.com
 1586025745	Makyen	kliniksahabatdokter\.hatenablog\.com
+1586039925	Makyen	nextbuy\.in
