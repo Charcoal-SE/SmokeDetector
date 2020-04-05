@@ -19108,7 +19108,7 @@
 1585691185	Makyen	(?:contact|offer|join)(?<=^.{0,207}).{0,99}?\d{9}(?=.{0,99}+$)
 1585706146	Makyen	iponwire\.com
 1585709388	Makyen	vseti
-1585710432	Makyen	fightingscams(?:@aol\.com)?
+1585710432	Makyen	fightingscams(?:[\W_]*+(?:at[\W_]*+)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1585715967	tripleee	wondercap\.com
 1585716336	tripleee	p2play88\.org
 1585716691	tripleee	handyman-dubai\.com
