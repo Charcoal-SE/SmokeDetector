@@ -19166,7 +19166,7 @@
 1585885488	Makyen	cptcwtuh
 1585885510	Makyen	tamlonggroup\.page\.tl
 1585885536	Makyen	newsforpc\.com
-1585890173	Makyen	befit[\W_]*+keto[\W_]*+cut(?:[\W_]*+(?:official|review|\d++|[\da-f]{4,}+))*
+1585890173	Makyen	befit[\W_]*+keto[\W_]*+cut(?:[\W_]*+(?:official|review|pill|for|usa|\d++|[\da-f]{4,}+)s?)*
 1585901873	Makyen	techrnews\.xyz
 1585902726	Makyen	listsofketofoods\.com
 1585902751	Makyen	hempmarketreport\.com
