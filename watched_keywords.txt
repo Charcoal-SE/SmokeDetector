@@ -19253,3 +19253,4 @@
 1586150343	Makyen	ultra[\W_]*+slim(?<!\b(?:compaq|hp|seagate|iphone|usff)\b.{0,30}?ultra[\W_]*+slim)(?!.{0,30}?\b(?:laptop|form\s*+factor|bluetooth))
 1586155071	gparyani	monarac\.net
 1586156650	tripleee	woodenwand\.org
+1586156677	tripleee	21[\W_]*+dukes
