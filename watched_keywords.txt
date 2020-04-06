@@ -19258,3 +19258,4 @@
 1586157339	tripleee	suavebesto\.com
 1586157566	tripleee	swaransoft\.com
 1586157595	tripleee	swaran[\W_]*+soft(?!\.com)
+1586157975	tripleee	nested-consultants\.com
