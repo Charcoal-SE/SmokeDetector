@@ -70,13 +70,11 @@ class BasicListParser(BlacklistParser):
 
     def each(self, with_info=False):
         # info = (filename, lineno)
-        if with_info:
-            with open(self._filename, 'r', encoding='utf-8') as f:
-                for i, line in enumerate(f, start=1):
+        with open(self._filename, 'r', encoding='utf-8') as f:
+            for i, line in enumerate(f, start=1):
+                if with_info:
                     yield line.rstrip("\n"), (i, self._filename)
-        else:
-            with open(self._filename, 'r', encoding='utf-8') as f:
-                for line in f:
+                else:
                     yield line.rstrip("\n")
 
     def exists(self, item: str):
@@ -92,6 +90,9 @@ class BasicListParser(BlacklistParser):
 
 
 class TSVDictParser(BlacklistParser):
+    """
+    Parser for 3-column TSV file with "when" (Unix timestamp), "who", and "what" fields.
+    """
     def parse(self):
         dct = {}
         with open(self._filename, 'r', encoding='utf-8') as f:
@@ -131,15 +132,12 @@ class TSVDictParser(BlacklistParser):
 
     def each(self, with_info=False):
         # info = (filename, lineno)
-        if with_info:
-            with open(self._filename, 'r', encoding='utf-8') as f:
-                for i, line in enumerate(f, start=1):
-                    if line.count('\t') == 2:
+        with open(self._filename, 'r', encoding='utf-8') as f:
+            for i, line in enumerate(f, start=1):
+                if line.count('\t') == 2:
+                    if with_info:
                         yield line.rstrip("\n").split('\t')[2], (i, self._filename)
-        else:
-            with open(self._filename, 'r', encoding='utf-8') as f:
-                for line in f:
-                    if line.count('\t') == 2:
+                    else:
                         yield line.rstrip("\n").split('\t')[2]
 
     def exists(self, item: Union[str, dict]):
