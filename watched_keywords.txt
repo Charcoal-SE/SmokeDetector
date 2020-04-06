@@ -19259,3 +19259,4 @@
 1586157566	tripleee	swaransoft\.com
 1586157595	tripleee	swaran[\W_]*+soft(?!\.com)
 1586157975	tripleee	nested-consultants\.com
+1586158000	tripleee	nested[\W_]*+consultants(?!\.com)
