@@ -44,12 +44,16 @@ items:
 - ns: promoocodes.com.
 - ns: myassignmenthelp.co.uk.
 - ns: socialmonkee.com.
-- ns: aapkeaajanese.website.
+- comment: no longer in DNS 2020-04-02
+  disable: true
+  ns: aapkeaajanese.website.
 - ns: healthymum.org.
 - ns: escortdomain.net.
 - ns: dnsdomen.com.
 - ns: letter.org.in.
-- ns: utecho.com.
+- comment: no longer in DNS 2020-04-02
+  disable: true
+  ns: uteco.com.
 - ns: siteground.asia.
 - ns: ddos-guard.net.
 - ns: orangewebsite.com.

@@ -95,9 +95,6 @@ items:
   - max.ns.cloudflare.com.
 - ns:
   - art.ns.cloudflare.com.
-  - lena.ns.cloudflare.com.
-- ns:
-  - art.ns.cloudflare.com.
   - sharon.ns.cloudflare.com.
 - ns:
   - asa.ns.cloudflare.com.
@@ -107,7 +104,7 @@ items:
   - lee.ns.cloudflare.com.
 - ns:
   - barbara.ns.cloudflare.com.
-  - logan.ns.cloudflarem.com.
+  - logan.ns.cloudflare.com.
 - ns:
   - bart.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
@@ -528,7 +525,9 @@ items:
   ns: mihanwebhost.com.
 - ns: offshoreracks.com.
 - ns: sathyats.net.
-- ns: shared-host.org.
+- comment: no longer responding 2020-04-02
+  disable: true
+  ns: shared-host.org.
 - ns: web.com.ph.
 - ns:
   - ns01.domaincontrol.com.
@@ -569,7 +568,9 @@ items:
 - ns: greengeeks.com.
 - ns: supportaus.com.
 - ns: 256gbserver.com.
-- ns: solutionsinfini.org.
+- comment: no longer responding 2020-04-02
+  disable: true
+  ns: solutionsinfini.org.
 - ns: ownmyserver.com.
 - ns: websitewelcome.com.
 - comment: 9/39 over a year
@@ -577,7 +578,9 @@ items:
   ns: fatcow.com.
 - ns: vedigitize.us.
 - ns: serverpars.com.
-- ns: namedc.com.
+- comment: no longer responding 2020-04-02
+  disable: true
+  ns: namedc.com.
 - ns: wixdns.net.
 - ns: a2hosting.com.
 - ns: md-19.webhostbox.net.
@@ -585,7 +588,9 @@ items:
 - ns: md-in-51.webhostbox.net.
 - ns: cybercastco.com.
 - ns: web4africa.com.
-- ns: puredownloads.website.
+- comment: no longer responding 2020-04-02
+  disable: true
+  ns: puredownloads.website.
 - ns: hostblast.net.
 - ns: webhouse.sk.
 - ns: guzelhosting.com.
@@ -596,17 +601,20 @@ items:
 - ns: stupidblogger.com.
 - ns: omnilinks.net.
 - ns: servconfig.com.
-- comment: unlike siteground.asia, this gets significant FPs, but also some weight
-    1
+- comment: unlike siteground.asia, this gets significant FPs, but also some weight 1
   ns: siteground.biz.
 - ns: cetpainfotech.com.
-- ns: sttdns.com.
+- comment: no longer responding 2020-04-02
+  disable: true
+  ns: sttdns.com.
 - comment: 21/291 over 8 months (some weight 1)
   disable: true
   ns: hover.com.
 - ns: stechsky.com.
 - ns: loopbyte.com.
-- ns: dynamicnetips.com.
+- comment: lo longer responding 2020-04-02
+  disable: true
+  ns: dynamicnetips.com.
 - ns: w3softech.com.
 - ns: blockchainhelp.pro.
 - ns: specializedtest.com.
@@ -623,7 +631,9 @@ items:
 - ns: solidhosting.pro.
 - ns: dnsowl.com.
 - ns: elitegifthouse.com.
-- ns: teclab.info.
+- comment: no longer responding 2020-04-02
+  disable: true
+  ns: teclab.info.
 - ns: jawatankosong.biz.
 - ns: isnpk.com.
 - ns: tigerexpertz.com.
@@ -665,7 +675,9 @@ items:
 - ns: crystalregistry.com.
 - ns: herosite.pro.
 - ns: trouble-free.net.
-- ns: asurawebhosting.com.
+- comment: no longer responding 2020-04-02
+  disable: true
+  ns: asurawebhosting.com.
 - ns: dnspod.net.
 - ns: hostwhitelabel.com.
 - ns: xpertns.com.
@@ -686,9 +698,13 @@ items:
 - ns: websitepixel.co.in.
 - ns: v9hosting.com.
 - ns: hosterpk.com.
-- ns: onlinemenshop.com.
+- comment: no longer responding 2020-04-02
+  disable: true
+  ns: onlinemenshop.com.
 - ns: mywahosting.com.
-- ns: goatcr.com.
+- comment: timeout 2020-04-02
+  disable: true
+  ns: goatcr.com.
 - ns: insightssuccess.com.
 - ns: pakihosting.com.
 - ns: onebyhosting.com.
@@ -713,7 +729,7 @@ items:
 - ns: mycyberhosting.com.
 - ns: webnode.com.
 - ns: printdns.com.
-- ns: websiteseverbox.com.
+- ns: websiteserverbox.com.
 - ns: loanwalle.com.
 - ns: mochahost.com.
 - ns: v-sys.org.
@@ -722,13 +738,17 @@ items:
 - ns: uberhost.in.
 - ns: hichina.com.
 - ns: pavietnam.vn.
-- ns: dns-parking.net.
+- comment: timeout 2020-04-02
+  disable: true
+  ns: dns-parking.net.
 - ns: host.com.pk.
 - ns: genxwhosting.com.
 - ns: phase8.net.
 - ns: bigcommerce.com.
 - ns: dns-diy.com.
-- ns: multicshost.com.
+- comment: does not exist, but is claimed by muthoottumini.com
+  pass: true
+  ns: multicshost.com.
 - ns: webzinfotech.in.
 - ns: bluella.net.
 - ns: osplabs.com.
