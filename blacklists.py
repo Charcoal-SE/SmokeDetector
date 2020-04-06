@@ -91,7 +91,8 @@ class BasicListParser(BlacklistParser):
 
 class TSVDictParser(BlacklistParser):
     """
-    Parser for 3-column TSV file with "when" (Unix timestamp), "who", and "what" fields.
+    Parser for 3-column TSV file with "when" (Unix timestamp), "who", and
+    "what" fields.
     """
     def parse(self):
         dct = {}
@@ -102,7 +103,8 @@ class TSVDictParser(BlacklistParser):
                 try:
                     when, by_whom, what = line.rstrip().split('\t')
                 except ValueError as err:
-                    log('error', '{0}:{1}:{2}'.format(self._filename, lineno, err))
+                    log('error', '{0}:{1}:{2}'.format(
+                        self._filename, lineno, err))
                     continue
                 if what[0] != "#":
                     dct[what] = {'when': when, 'by': by_whom}
@@ -124,8 +126,9 @@ class TSVDictParser(BlacklistParser):
 
         with open(self._filename, 'r+', encoding='utf-8') as f:
             items = f.readlines()
-            items = [x for x in items if ('\t' not in x) or
-                     (len(x.split('\t')) == 3 and x.split('\t')[2].strip() != item)]
+            items = [
+                x for x in items if ('\t' not in x) or
+                (len(x.split('\t')) == 3 and x.split('\t')[2].strip() != item)]
             f.seek(0)
             f.truncate()
             f.writelines(items)
@@ -136,7 +139,8 @@ class TSVDictParser(BlacklistParser):
             for i, line in enumerate(f, start=1):
                 if line.count('\t') == 2:
                     if with_info:
-                        yield line.rstrip("\n").split('\t')[2], (i, self._filename)
+                        yield line.rstrip("\n").split('\t')[2], (
+                            i, self._filename)
                     else:
                         yield line.rstrip("\n").split('\t')[2]
 
@@ -159,7 +163,8 @@ class TSVDictParser(BlacklistParser):
 
 class YAMLParserCIDR(BlacklistParser):
     """
-    YAML parser for IP blacklist (name suggests we should move to proper CIDR eventually).
+    YAML parser for IP blacklist (name suggests we should move to proper
+    CIDR eventually).
 
     Base class for parsers for YAML files with simple schema validation.
     """
@@ -175,11 +180,13 @@ class YAMLParserCIDR(BlacklistParser):
         with open(self._filename, 'r', encoding='utf-8') as f:
             y = yaml.safe_load(f)
         if y['Schema'] != self.SCHEMA_VARIANT:
-            raise ValueError('Schema variant: got {0}, but expected {1}'.format(
-                y['Schema'], self.SCHEMA_VARIANT))
+            raise ValueError(
+                'Schema variant: got {0}, but expected {1}'.format(
+                    y['Schema'], self.SCHEMA_VARIANT))
         if y['Schema_version'] > self.SCHEMA_VERSION:
-            raise ValueError('Schema version {0} is bigger than supported {1}'.format(
-                y['Schema_version'], self.SCHEMA_VERSION))
+            raise ValueError(
+                'Schema version {0} is bigger than supported {1}'.format(
+                    y['Schema_version'], self.SCHEMA_VERSION))
         for item in y['items']:
             if not keep_disabled and item.get('disable'):
                 continue
@@ -208,25 +215,31 @@ class YAMLParserCIDR(BlacklistParser):
 
         if 'ip' in item:
             if not ip_regex.match(item['ip']):
-                raise ValueError('Field "ip" is not a valid IP address: {0}'.format(
-                    item['ip']))
+                raise ValueError(
+                    'Field "ip" is not a valid IP address: {0}'.format(
+                        item['ip']))
             '''
             if 'cidr' in item:
                 raise ValueError(
-                    'Cannot have both "ip" and "cidr" members: {0!r}'.format(item))
+                    'Cannot have both "ip" and "cidr" members: {0!r}'.format(
+                        item))
         elif 'cidr' in item:
             if not 'base' in item['cidr'] or not 'mask' in item['cidr']:
-                raise ValueError('Field "cidr" must have members "base" and "mask"')
+                raise ValueError(
+                    'Field "cidr" must have members "base" and "mask"')
             if not ip_regex.match(item['cidr']['base']):
-                raise ValueError('Field "base" is not a valid IP address: {0}'.format(
-                    item['cidr']['base']))
+                raise ValueError(
+                    'Field "base" is not a valid IP address: {0}'.format(
+                        item['cidr']['base']))
             mask = int(item['cidr']['mask'])
             if mask < 0 or mask > 32:
-                raise ValueError('Field "mask" must be between 0 and 32: {0}'.format(
-                    item['cidr']['mask']))
+                raise ValueError(
+                    'Field "mask" must be between 0 and 32: {0}'.format(
+                        item['cidr']['mask']))
             '''
         else:
-            raise ValueError('Item needs to have an "ip" member field: {0!r}'.format(item))
+            raise ValueError(
+                'Item needs to have an "ip" member field: {0!r}'.format(item))
 
     def validate(self):
         for item in self._parse():
@@ -292,7 +305,8 @@ class YAMLParserNS(YAMLParserCIDR):
         def item_check(ns):
             if not host_regex.match(ns):
                 raise ValueError(
-                    '{0} does not look like a valid host name'.format(item['ns']))
+                    '{0} does not look like a valid host name'.format(
+                        item['ns']))
             if item.get('disable', None):
                 return False
             try:
@@ -314,7 +328,8 @@ class YAMLParserNS(YAMLParserCIDR):
 
         host_regex = regex.compile(r'^([a-z0-9][-a-z0-9]*\.){2,}$')
         if 'ns' not in item:
-            raise ValueError('Item must have member field "ns": {0!r}'.format(item))
+            raise ValueError(
+                'Item must have member field "ns": {0!r}'.format(item))
         if isinstance(item['ns'], str):
             return item_check(item['ns'])
         elif isinstance(item['ns'], list):
@@ -325,8 +340,8 @@ class YAMLParserNS(YAMLParserCIDR):
             return accept
         else:
             raise ValueError(
-                'Member "ns" must be either string or list of strings: {0!r}'.format(
-                    item['ns']))
+                'Member "ns" must be either string or list of strings: '
+                '{0!r}'.format(item['ns']))
 
 
 class YAMLParserASN(YAMLParserCIDR):
@@ -338,9 +353,11 @@ class YAMLParserASN(YAMLParserCIDR):
 
     def _validate(self, item):
         if 'asn' not in item:
-            raise ValueError('Item must have member field "asn": {0!r}'.format(item))
+            raise ValueError(
+                'Item must have member field "asn": {0!r}'.format(item))
         asn = int(item['asn'])
-        if asn <= 0 or asn >= 4200000000 or 64496 <= asn <= 131071 or asn == 23456:
+        if asn <= 0 or asn >= 4200000000 or \
+                64496 <= asn <= 131071 or asn == 23456:
             raise ValueError('Not a valid public AS number: {0}'.format(asn))
 
 

@@ -453,7 +453,6 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     :param pattern:
     :return: A string
     """
-
     parts = alias_used.split("-")
     return do_blacklist(parts[1], msg, force=len(parts) > 2)
 
