@@ -88,6 +88,100 @@ class BasicListParser(BlacklistParser):
 
         return False, -1
 
+    def already_caught(self, string_to_test):
+        """
+        Test a candidate string; return a list of reasons if it is already
+        caught.
+
+        The method not_reject_reasons returns a list of reasons which do not
+        cause a rejection to be returned; in other words, they are removed
+        from the reasons.
+        """
+        ownerdict = {'display_name': 'Valid username',
+                     'reputation': 1, 'link': ''}
+        querydict = {'title': 'Valid title', 'body': 'Valid body',
+                     'owner': None, 'site': "", 'IsAnswer': None, 'score': 0}
+        reasons = set()
+        for answerp in False, True:
+            for userp in False, True:
+                owner = ownerdict.copy()
+                question = querydict.copy()
+                if userp:
+                    owner['display_name'] = string_to_test
+                else:
+                    query['body'] = string_to_test
+                question['owner'] = owner
+                question['IsAnswer'] = answerp
+                verdicts, _ = findspam.FindSpam.test_post(question)
+                reasons.update(set(verdicts))
+
+        filter_out = self.not_reject_reasons()
+        return [reason for reason in reasons
+                if all([x not in reason.lower() for x in filter_out])]
+
+    def not_reject_reasons(self):
+        """
+        Which reasons should be filtered out when deciding whether something
+        is not acceptable to add to a blacklist?
+
+        Called by the already_caught method; provides hooks for the
+        WatchMixin and PhoneMixin classes.
+        """
+        filter_out = [
+            "potentially bad ns",
+            "potentially bad asn",
+            "potentially problematic",
+            "potentially bad ip"]
+        filter_out.append(self._watch_not_reject_reasons())
+        filter_out.append(self._phone_not_reject_reasons())
+        return []
+
+    def _watch_not_reject_reasons(self):
+        """
+        Return extended reasons to reject a blacklist addition for watch
+        lists.
+
+        No-op in the base class; populated in WatchMixin.
+        """
+        return []
+
+    def _phone_not_reject_reasons(self):
+        """
+        Return additional reasons to reject a blacklist addition for phone
+        lists.
+
+        No-op in the base class; populated in PhoneMixin.
+        """
+        return []
+
+    def regextype(self):
+        """
+        Whether to perform regex validation etc on candidate patterns.
+
+        True in the base class; overridden by PhoneMixin.
+        """
+        return True
+
+
+class WatchMixin:
+    """
+    Mixin to create watch behavior from a base class
+    """
+    def _watch_not_reject_reasons(self):
+        return ["potentially bad keyword"]
+
+
+class PhoneMixin:
+    """
+    Mixin to create phone number class behavior from a base class
+    """
+    def additional_filtered_out_reasons(self):
+        return ["mostly non-latin", "phone number detected",
+                "messaging number detected"]
+
+    def regextype(self):
+        return False
+
 
 class TSVDictParser(BlacklistParser):
     """
@@ -159,6 +253,14 @@ class TSVDictParser(BlacklistParser):
                 if len(splat) == 3 and splat[2].strip() == item:
                     return True, i
         return False, -1
+
+
+class PhoneParser(BasicListParser, PhoneMixin):
+    pass
+
+
+class TSVDictWatchedPhoneParser(TSVDictParser, PhoneMixin, WatchMixin):
+    pass
 
 
 class YAMLParserCIDR(BlacklistParser):
@@ -365,9 +467,9 @@ class Blacklist:
     KEYWORDS = ('bad_keywords.txt', BasicListParser)
     WEBSITES = ('blacklisted_websites.txt', BasicListParser)
     USERNAMES = ('blacklisted_usernames.txt', BasicListParser)
-    NUMBERS = ('blacklisted_numbers.txt', BasicListParser)
+    NUMBERS = ('blacklisted_numbers.txt', PhoneParser)
     WATCHED_KEYWORDS = ('watched_keywords.txt', TSVDictParser)
-    WATCHED_NUMBERS = ('watched_numbers.txt', TSVDictParser)
+    WATCHED_NUMBERS = ('watched_numbers.txt', TSVDictWatchedPhoneParser)
     NSES = ('blacklisted_nses.yml', YAMLParserNS)
     WATCHED_NSES = ('watched_nses.yml', YAMLParserNS)
     CIDRS = ('blacklisted_cidrs.yml', YAMLParserCIDR)
