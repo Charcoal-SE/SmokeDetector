@@ -19250,3 +19250,4 @@
 1586139649	Makyen	writelovespell(?:@gmail\.com)?
 1586141780	Nisse Engström	securecash\.com\.au
 1586150265	Makyen	agencycouch\.com
+1586150343	Makyen	ultra[\W_]*+slim(?<!\b(?:compaq|hp|seagate|iphone|usff)\b.{0,30}?ultra[\W_]*+slim)(?!.{0,30}?\b(?:laptop|form\s*+factor|bluetooth))
