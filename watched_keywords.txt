@@ -18706,7 +18706,6 @@
 1584426427	Makyen	mywebworld\.co\.uk
 1584428751	tripleee	camfixya\.com
 1584429216	tripleee	resetepson\.org
-1584429785	tripleee	w11stop\.com
 1584432849	tripleee	hotelsunnsnow\.com
 1584432898	tripleee	udonpu[\W_]*+car[\W_]*+rent
 1584434107	tripleee	mysoretrips\.com
