@@ -698,7 +698,9 @@ items:
 - ns: r53.com.ua.
 - ns: biswasit.com.
 - ns: serverhostgroup.com.
-- ns: websitepixel.co.in.
+- comment: no longer responding 2020-04-07
+  disable: true
+  ns: websitepixel.co.in.
 - ns: v9hosting.com.
 - ns: hosterpk.com.
 - comment: no longer responding 2020-04-02
