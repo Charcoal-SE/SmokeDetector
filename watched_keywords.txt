@@ -19282,7 +19282,6 @@
 1586201500	Makyen	bestiptvresellers\.com
 1586201905	Makyen	(?-i:B7Qwc\.jpg)
 1586201932	Makyen	208789607067980(?#facebook.com/events)
-1586219498	Makyen	balena\.io
 1586222144	Makyen	phoenixts\.com
 1586238248	tripleee	singapoolstoday\.com
 1586242475	tripleee	allisoncanty\.com
