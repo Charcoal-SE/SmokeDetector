@@ -445,6 +445,9 @@ items:
   - melina.ns.cloudflare.com.
 - ns:
   - lex.ns.cloudflare.com.
+  - miki.ns.cloudflare.com.
+- ns:
+  - lex.ns.cloudflare.com.
   - tori.ns.cloudflare.com.
 - ns:
   - lily.ns.cloudflare.com.
