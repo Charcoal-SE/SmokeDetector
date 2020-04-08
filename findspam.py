@@ -1872,7 +1872,7 @@ create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo
 create_rule("potentially bad keyword in {}",
             r"(?is)(?:^|\b|(?w:\b))(?:poo+p?(?:y|ie|ed|er)?s?|piss+|pee+"
             r"|(?:smash|slash|behead)(?:ing|ed)?|vandali[sz](ing|ed?)?)(?:\b|(?w:\b)|$)", all=False,
-            sites=['workplace.stackexchange.com'],
+            sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
             max_rep=30, max_score=1)
 # Bad keywords in titles and usernames, all sites
