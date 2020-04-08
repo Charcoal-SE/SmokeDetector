@@ -19302,3 +19302,4 @@
 1586324888	Makyen	crackingkeys\.com
 1586326148	tripleee	t3terminal\.com
 1586330968	tripleee	tricksnyou\.com
+1586332839	tripleee	raletta[\W_]*+technology
