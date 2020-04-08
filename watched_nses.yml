@@ -714,7 +714,6 @@ items:
   disable: true
   ns: goatcr.com.
 - ns: insightssuccess.com.
-- ns: pakihosting.com.
 - ns: onebyhosting.com.
 - ns:
   - cns2015.webhostbox.net.
