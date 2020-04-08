@@ -124,6 +124,9 @@ items:
   - betty.ns.cloudflare.com.
   - ken.ns.cloudflare.com.
 - ns:
+  - bob.ns.cloudflare.com.
+  - rose.ns.cloudflare.com.
+- ns:
   - bonnie.ns.cloudflare.com.
   - chad.ns.cloudflare.com.
 - ns:
