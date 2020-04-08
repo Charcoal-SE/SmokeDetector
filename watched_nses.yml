@@ -729,7 +729,9 @@ items:
   - rush.easydns.com.
   - nirvana.easydns.net.
   - motorhead.easydns.org.
-- ns: aakibuki.com.
+- comment: timeout 2020-04-08
+  disable: true
+  ns: aakibuki.com.
 - ns: cloudhostdns.net.
 - ns: elsner.com.
 - ns: dnschamp.com.
