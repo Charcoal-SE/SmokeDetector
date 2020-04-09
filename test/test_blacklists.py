@@ -60,8 +60,6 @@ def test_yaml_blacklist():
     assert '3.4.5.6' not in blacklist.parse()
     unlink('test_ip.yml')
 
-    # Temporarily disable to work aroud #3793
-    return None
     yaml_validate_existing('blacklisted_cidrs.yml', YAMLParserCIDR)
     yaml_validate_existing('watched_cidrs.yml', YAMLParserCIDR)
 
@@ -94,13 +92,9 @@ def test_yaml_asn():
     assert '345' not in blacklist.parse()
     unlink('test_asn.yml')
 
-    # Temporarily disable to work aroud #3793
-    return None
     yaml_validate_existing('watched_asns.yml', YAMLParserASN)
 
 
 def test_yaml_nses():
-    # Temporarily disable to work around #3793
-    return None
     yaml_validate_existing('blacklisted_nses.yml', YAMLParserNS)
     yaml_validate_existing('watched_nses.yml', YAMLParserNS)
