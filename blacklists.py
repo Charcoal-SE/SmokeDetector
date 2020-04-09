@@ -293,6 +293,10 @@ class YAMLParserNS(YAMLParserCIDR):
                     soa = dns.resolver.query(ns, 'soa')
                     log('debug', '{0} has no A record; SOA is {1}'.format(
                         ns, ';'.join(s.to_text() for s in soa)))
+            except dns.resolver.NoNameservers:
+                if not item.get('pass', None):
+                    log('warn', '{0} has no available servers to service DNS '
+                                'request.'.format(ns))
             return True
 
         host_regex = regex.compile(r'^([a-z0-9][-a-z0-9]*\.){2,}$')
