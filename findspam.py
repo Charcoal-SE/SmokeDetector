@@ -1625,6 +1625,7 @@ pattern_websites = [
     r"|(?:get|buy)cheap|escort|diploma|gov(?:t|ernment)jobs|extramoney|earnathome|spell(?:caster|specialist)|profits"
     r"|seo-?(?:tool|service|trick|market)|onsale|fat(?:burn|loss)|(?:\.|//|best)cheap|online-?(?:training|solution)"
     r"|\bbabasupport\b|movieshook|where\w*to\w*buy"
+    r"|norton(?!\.com(?<=[^\da-z-]norton\.com))"
     r")"
     r"[\w-]*+\.(?:com?|net|org|in(?:\W|fo)|us|ir|wordpress|blogspot|tumblr|webs(?=\.)|info)",
 
