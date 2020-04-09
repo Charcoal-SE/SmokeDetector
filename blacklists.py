@@ -295,7 +295,7 @@ class YAMLParserNS(YAMLParserCIDR):
                         ns, ';'.join(s.to_text() for s in soa)))
             except dns.resolver.NoNameservers:
                 if not item.get('pass', None):
-                    log('debug', '{0} has no available servers to service DNS '
+                    log('warn', '{0} has no available servers to service DNS '
                                  'request.'.format(ns))
             return True
 
