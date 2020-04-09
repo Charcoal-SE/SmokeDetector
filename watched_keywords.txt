@@ -19341,3 +19341,4 @@
 1586440096	Machavity	etcnews\.tv
 1586443886	Makyen	eastnaija\.com
 1586449494	Machavity	paxful\.com
+1586450428	Machavity	bitroz(?:\.com|)
