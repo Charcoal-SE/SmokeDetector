@@ -2176,7 +2176,7 @@ create_rule("blacklisted username",
             r"(?i)raise(?!oul(?<=^samuraiseoul)$)(?!r(?<=^indofraiser)$)(?!lvan(?<=^Santhosh Thamaraiselvan)$)",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             title=False, body=False, username=True)
-create_rule("bad keyword in {}"
+create_rule("bad keyword in {}",
             r"(?is)(?:^|\b|(?w:\b))"
             r"(?:"  # Begin group of bookended regexes
             r"nigg+[aeu][rh]?s?"
