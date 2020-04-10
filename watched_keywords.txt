@@ -18958,7 +18958,7 @@
 1585115578	tripleee	immunity[\W_]*+oil
 1585116084	Shree	techevolutions\.com
 1585118852	tripleee	pedialogy\.org
-1585120867	tripleee	prima[\W_]*+terra(?:[\W_]*+essence)?
+1585120867	tripleee	prima[\W_]*+terra(?:[\W_]*+(?:essence|cream|creme|\d++|[\da-f]{4,}+))*
 1585127320	tripleee	clearalist\.com
 1585127679	tripleee	earnwithkp\.com
 1585128606	tripleee	total[\W_]*+shield[\W_]*+max
