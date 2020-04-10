@@ -2177,7 +2177,11 @@ create_rule("blacklisted username",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             title=False, body=False, username=True)
 create_rule("bad keyword in {}"
-            r"(?i)\bnigg+[aeu][rh]?s?",
+            r"(?is)(?:^|\b|(?w:\b))"
+            r"(?:"  # Begin group of bookended regexes
+            r"nigg+[aeu][rh]?s?"
+            r")"
+            r"(?:\b|(?w:\b)|$)",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
             max_rep=4, max_score=1)
