@@ -19358,3 +19358,4 @@
 1586520045	Machavity	truecoverage\.com
 1586527336	Machavity	jobtoday\.info
 1586532619	Machavity	(?-i:^Editor World$)
+1586538363	Machavity	yourwebpal\.com
