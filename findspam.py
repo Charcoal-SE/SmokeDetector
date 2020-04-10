@@ -2176,6 +2176,11 @@ create_rule("blacklisted username",
             r"(?i)raise(?!oul(?<=^samuraiseoul)$)(?!r(?<=^indofraiser)$)(?!lvan(?<=^Santhosh Thamaraiselvan)$)",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             title=False, body=False, username=True)
+create_rule("bad keyword in {}"
+            r"(?i)\bnigg+[aeu][rh]?s?",
+            all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
+            username=True, body_summary=True,
+            max_rep=4, max_score=1)
 
 
 FindSpam.reload_blacklists()
