@@ -1871,9 +1871,14 @@ create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo
             max_rep=30, max_score=1)
 # Watch poo+p?(?:y|ie)?s? on The Workplace, due to a persistent spammer
 create_rule("potentially bad keyword in {}",
-            r"(?is)(?:^|\b|(?w:\b))(?:poo+p?(?:y|ie|ed|er)?s?|piss+|pee+"
-            r"|(?:smash|slash|behead)(?:ing|ed)?|vandali[sz](ing|ed?)?)(?:\b|(?w:\b)|$)", all=False,
-            sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
+            r"(?:"
+            r"(?is)(?:^|\b|(?w:\b))"  # Beging bookending
+            r"(?:poo+p?(?:y|ie|ed|er)?s?|piss+|pee+"
+            r"|(?:smash|slash|behead)(?:ing|ed)?|vandali[sz](ing|ed?)?)"
+            r"(?:\b|(?w:\b)|$)"  # End bookending
+            r"|(?-i:^(?:<p>[\sA-Z\d.,]{0,100}+)(?=[\sA-Z\d.,]*+<\/p>(?:\s*+<p>[\sA-Z\d.,]*+<\/p>)*$))"
+            r")",
+            all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
             max_rep=30, max_score=1)
 # Bad keywords in titles and usernames, all sites
