@@ -2179,7 +2179,7 @@ create_rule("blacklisted username",
 create_rule("bad keyword in {}",
             r"(?is)(?:^|\b|(?w:\b))"
             r"(?:"  # Begin group of bookended regexes
-            r"nigg+[aeu][rh]?s?"
+            r"nigg+[aeu][rh]?s?|fag+(?:[oe]t)?s?|semen|mindless[\W_]*+moron"
             r")"
             r"(?:\b|(?w:\b)|$)",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
