@@ -19409,3 +19409,4 @@
 1586634235	Makyen	omglancers\.com
 1586637028	Makyen	buzzsocial\.ca
 1586643430	Makyen	pcivault\.io
+1586645703	Makyen	shikaku-sh\.hatenablog\.com
