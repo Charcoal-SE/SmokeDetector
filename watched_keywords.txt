@@ -19382,3 +19382,4 @@
 1586585834	Makyen	mediaboxhd\.xyz
 1586587170	Makyen	firstoptionrecovery\.com
 1586601537	Makyen	belle[\W_]*+oasis(?:[\W_]*+(?:cream|creme|trial|offer|\d++|[\da-f]{4,}+))*
+1586601640	Makyen	pepsindia\.com
