@@ -19379,3 +19379,4 @@
 1586583191	Makyen	jtechnical\.net
 1586583217	Makyen	devfacts\.com
 1586585649	Makyen	buzrush(?!\.com)
+1586585746	Makyen	newcoupon\.net
