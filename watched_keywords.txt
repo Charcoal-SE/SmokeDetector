@@ -19373,3 +19373,4 @@
 1586567530	Makyen	scaminator\.com
 1586568138	Makyen	[$s]av[$s]ue97
 1586578501	Makyen	thermosense[\W_]*+thermometer(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1586578527	Makyen	naturatensi
