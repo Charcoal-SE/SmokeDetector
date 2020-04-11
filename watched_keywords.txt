@@ -19371,3 +19371,4 @@
 1586562060	Makyen	andamanbliss\.com
 1586562192	Makyen	andaman(?!bliss\.com(?<=andamanbliss\.com)\b)(?:[\W_]*+(?:tour(?:ism|ing)?|package|travel|company|bliss|\d++|[\da-f]{4,}+)s?)*
 1586567530	Makyen	scaminator\.com
+1586568138	Makyen	[$s]av[$s]ue97
