@@ -19384,3 +19384,4 @@
 1586601537	Makyen	belle[\W_]*+oasis(?:[\W_]*+(?:cream|creme|trial|offer|\d++|[\da-f]{4,}+))*
 1586601640	Makyen	pepsindia\.com
 1586601675	Makyen	peps[\W_]*+india(?!\.com(?<=pepsindia\.com))
+1586602146	Makyen	evergreenllc2020(?#medium.com)
