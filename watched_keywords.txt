@@ -19370,3 +19370,4 @@
 1586561968	Makyen	germcide[\W_]*+x(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1586562060	Makyen	andamanbliss\.com
 1586562192	Makyen	andaman(?!bliss\.com(?<=andamanbliss\.com)\b)(?:[\W_]*+(?:tour(?:ism|ing)?|package|travel|company|bliss|\d++|[\da-f]{4,}+)s?)*
+1586567530	Makyen	scaminator\.com
