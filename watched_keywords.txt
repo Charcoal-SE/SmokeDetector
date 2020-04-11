@@ -19388,3 +19388,4 @@
 1586602173	Makyen	evergreen[\W_]*+technologies(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1586602200	Makyen	evergreentech\.online
 1586602267	Makyen	(?-i:SoYrHXQ6Rp8)(?#youtu.be)
+1586602359	Makyen	(?-i:UCPyeQQp4CfprsybVr8rgBlQ)(?#YouTube channel)
