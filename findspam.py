@@ -1876,11 +1876,21 @@ create_rule("potentially bad keyword in {}",
             r"(?:poo+p?(?:y|ie|ed|er)?s?|piss+|pee+"
             r"|(?:smash|slash|behead)(?:ing|ed)?|vandali[sz](ing|ed?)?)"
             r"(?:\b|(?w:\b)|$)"  # End bookending
-            r"|(?-i:^(?:<p>[\sA-Z\d.,]{0,100}+)(?=[\sA-Z\d.,]*+<\/p>(?:\s*+<p>[\sA-Z\d.,]*+<\/p>)*$))"
             r")",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
             max_rep=30, max_score=1)
+# Non-bookended watch for TWP of all-caps posts (currently without any other formatting than <p>).
+# This is a separate rule, because it will consume up to 100 characters, which, if not separate,
+# will tend to mask other watch matches which we want to show up separately in the why data.
+create_rule("potentially bad keyword in {}",
+            r"(?:"
+            r"(?-i:^(?:<p>[\sA-Z\d.,]{0,100}+)(?=[\sA-Z\d.,]*+<\/p>(?:\s*+<p>[\sA-Z\d.,]*+<\/p>)*$))"
+            r")",
+            all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
+            username=True, body_summary=True,
+            max_rep=30, max_score=1)
+
 # Bad keywords in titles and usernames, all sites
 create_rule("bad keyword in {}",
             r"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|"
