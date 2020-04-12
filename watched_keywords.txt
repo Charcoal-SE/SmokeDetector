@@ -19430,3 +19430,4 @@
 1586716753	Makyen	uowdubai\.ac\.ae
 1586722221	Makyen	fzseriesproduction\.blogspot
 1586726423	Makyen	lightroofs\.com
+1586726820	Makyen	xamarinlife(?#medium.com)
