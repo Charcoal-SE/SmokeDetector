@@ -2188,13 +2188,15 @@ create_rule("blacklisted username", r'(?i)^john$',
             title=False, body=False, username=True)
 # Workplace troll, 2020-03-28
 create_rule("blacklisted username",
-            r"(?i)raise(?!oul(?<=^samuraiseoul)$)(?!r(?<=^indofraiser)$)(?!lvan(?<=^Santhosh Thamaraiselvan)$)",
+            r"(?i)raise(?!oul(?<=^samuraiseoul)$)(?!r(?<=^indofraiser)$)(?!lvan(?<=^Santhosh Thamaraiselvan)$)"
+            r"|^kilisi$",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
-            title=False, body=False, username=True)
+            title=False, body=False, username=True,
+            max_rep=11, max_score=1)
 create_rule("bad keyword in {}",
             r"(?is)(?:^|\b|(?w:\b))"
             r"(?:"  # Begin group of bookended regexes
-            r"nigg+[aeu][rh]?s?|fag+(?:[oe]t)?s?|semen|mindless[\W_]*+morons?"
+            r"n[i1]gg+[aeu][rh]?s?|negr[o0]s?|fag+(?:[oe]t)?s?|semen|mindless[\W_]*+morons?"
             r"|meets?[\W_]*+(?:the[\W_]*+)?quality[\W_]*+standards?"
             r"|foreskins?"
             r")"
