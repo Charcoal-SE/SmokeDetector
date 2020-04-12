@@ -19427,3 +19427,4 @@
 1586703882	Makyen	torajagroup
 1586703906	Makyen	toraja4d
 1586713273	Makyen	hubsmobile\.com
+1586716753	Makyen	uowdubai\.ac\.ae
