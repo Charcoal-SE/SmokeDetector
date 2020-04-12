@@ -297,6 +297,8 @@ class YAMLParserNS(YAMLParserCIDR):
                 if not item.get('pass', None):
                     log('warn', '{0} has no available servers to service DNS '
                                 'request.'.format(ns))
+            except dns.resolver.Timeout:
+                log('warn', '{0}: DNS lookup timed out.'.format(ns))
             return True
 
         host_regex = regex.compile(r'^([a-z0-9][-a-z0-9]*\.){2,}$')
