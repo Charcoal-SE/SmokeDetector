@@ -2196,6 +2196,7 @@ create_rule("bad keyword in {}",
             r"(?:"  # Begin group of bookended regexes
             r"nigg+[aeu][rh]?s?|fag+(?:[oe]t)?s?|semen|mindless[\W_]*+morons?"
             r"|meets?[\W_]*+(?:the[\W_]*+)?quality[\W_]*+standards?"
+            r"|foreskins?"
             r")"
             r"(?:\b|(?w:\b)|$)",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
