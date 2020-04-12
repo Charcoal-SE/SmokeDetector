@@ -1879,7 +1879,7 @@ create_rule("potentially bad keyword in {}",
             r")",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
-            max_rep=30, max_score=1)
+            max_rep=100, max_score=1)
 # Non-bookended watch for TWP of all-caps posts (currently without any other formatting than <p>).
 # This is a separate rule, because it will consume up to 100 characters, which, if not separate,
 # will tend to mask other watch matches which we want to show up separately in the why data.
@@ -1889,7 +1889,7 @@ create_rule("potentially bad keyword in {}",
             r")",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
-            max_rep=30, max_score=1)
+            max_rep=100, max_score=1)
 
 # Bad keywords in titles and usernames, all sites
 create_rule("bad keyword in {}",
@@ -2188,11 +2188,13 @@ create_rule("blacklisted username", r'(?i)^john$',
             title=False, body=False, username=True)
 # Workplace troll, 2020-03-28
 create_rule("blacklisted username",
-            r"(?i)raise(?!oul(?<=^samuraiseoul)$)(?!r(?<=^indofraiser)$)(?!lvan(?<=^Santhosh Thamaraiselvan)$)"
-            r"|^kilisi$",
+            r"(?i)(?:"
+            r"raise(?!oul(?<=^samuraiseoul)$)(?!r(?<=^indofraiser)$)(?!lvan(?<=^Santhosh Thamaraiselvan)$)"
+            r"|^kilisi$|(?-iKKK)|darkcygnus|JewsKilledOurLord"
+            r")",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             title=False, body=False, username=True,
-            max_rep=11, max_score=1)
+            max_rep=100, max_score=1)
 create_rule("bad keyword in {}",
             r"(?is)(?:^|\b|(?w:\b))"
             r"(?:"  # Begin group of bookended regexes
@@ -2203,7 +2205,7 @@ create_rule("bad keyword in {}",
             r"(?:\b|(?w:\b)|$)",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
-            max_rep=4, max_score=1)
+            max_rep=100, max_score=1)
 
 
 FindSpam.reload_blacklists()
