@@ -19436,3 +19436,4 @@
 1586737949	Makyen	officecom-setupms\.com
 1586737978	Makyen	office\.comsetup\.download
 1586739544	Makyen	serviceandrepaircenterindia\.com
+1586743256	Makyen	nbloyal\.com
