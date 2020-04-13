@@ -19447,3 +19447,4 @@
 1586761823	Makyen	(?:granite[\W_]*+x100|x100[\W_]*+granite)(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1586773025	Nisse Engström	crazycodder\.blogspot\.com
 1586774703	Nisse Engström	flipepic\.com
+1586775198	Glorfindel	myotakuworld\.com
