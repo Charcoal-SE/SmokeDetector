@@ -19444,3 +19444,4 @@
 1586759093	Makyen	allessaywriter\.com
 1586760853	Makyen	hbeautytips\.com
 1586760962	Makyen	vivid[\W_]*+glow[\W_]*+cream(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1586761823	Makyen	(?:granite[\W_]*+x100|x100[\W_]*+granite)(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
