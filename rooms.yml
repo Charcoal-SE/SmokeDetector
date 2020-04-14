@@ -1,3 +1,4 @@
+# Before adding new users here, make sure they are in users.yml
 stackexchange.com:
   11540:  # Charcoal HQ
     commands: true
