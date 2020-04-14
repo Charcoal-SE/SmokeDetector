@@ -14545,7 +14545,6 @@
 1574615061	Stormblessed	qqokbetfun\.com
 1574619847	Kulfy	dreewhispers\.xyz
 1574619901	Kulfy	akshatvasistha\.com
-1574628600	Makyen	cygucciferhigh(?:@gmail\.com)?
 1574629740	Makyen	gandu(?=['"])
 1574653039	Makyen	biblemiracle\.wordpress\.com
 1574655241	Shree	myronhomes\.in
