@@ -19457,3 +19457,4 @@
 1586816685	Makyen	escortsjaipur\.com
 1586830523	Makyen	print-labels\.net
 1586830550	Makyen	cup[\W_]*+seal[\W_]*+labels(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1586837420	Makyen	apkrapido\.com
