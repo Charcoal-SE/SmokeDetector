@@ -60,6 +60,14 @@ WHITELISTED_WEBSITES_REGEX = regex.compile(r"(?i)upload|\b(?:{})\b".format("|".j
     "microsoft", "newegg", "cnet", "regex101", r"(?<!plus\.)google", "localhost", "ubuntu", "getbootstrap",
     r"jsfiddle\.net", r"codepen\.io", "pastebin", r"nltk\.org", r"xahlee\.info", r"ergoemacs\.org"
 ] + [se_dom.replace(".", r"\.") for se_dom in SE_SITES_DOMAINS])))
+URL_SHORTENER = r"(?:{})".format('|'.join(regex.escape(site) for site in (
+    '9nl.me', 'adf.ly', 'adfoc.us', 'adyou.co', 'alturl.com', 'amzn.to',
+    'bfy.tw', 'bit.do', 'bit.ly', 'bluenik.com', 'buff.ly',
+    'cl.ly', 'clkmein.com', 'dyo.gs', 'fb.me', 'goo.gl',
+    'is.gd', 'j.mp', 'ow.ly', 'post.ly', 'rurl.us', 'surl.cn.com'
+    't.co', 'tiny.cc', 'tinyurl.com', 'tr.im', 'tgig.ir',
+    'wp.me',
+    )))
 ASN_WHITELISTED_WEBSITES = [
     "unity3d.com", "ffmpeg.org", "bitcoincore.org", "latex.codecogs.com",
     "advancedcustomfields.com", "name.com", "businessbloomer.com",
@@ -2039,16 +2047,12 @@ create_rule("link at end of {}",
             title=False, question=False)
 # Shortened URL near the end of question
 create_rule("shortened URL in {}",
-            r"(?is)://(?:w+\.)?(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|"
-            r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
-            r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us|adyou\.co|buff\.ly|ow\.ly|tgig\.ir)/(?=.{0,200}$)",
+            r"(?is)://(?:w+\.)?" + URL_SHORTENER + r"/(?=.{0,200}$)",
             sites=["superuser.com", "askubuntu.com"],
             title=False, answer=False)
 # Shortened URL in an answer
 create_rule("shortened URL in {}",
-            r"(?is)://(?:w+\.)?(goo\.gl|bit\.ly|bit\.do|tinyurl\.com|fb\.me|cl\.ly|t\.co|is\.gd|j\.mp|tr\.im|"
-            r"wp\.me|alturl\.com|tiny\.cc|9nl\.me|post\.ly|dyo\.gs|bfy\.tw|amzn\.to|adf\.ly|adfoc\.us|"
-            r"surl\.cn\.com|clkmein\.com|bluenik\.com|rurl\.us|adyou\.co|buff\.ly|ow\.ly)/",
+            r"(?is)://(?:w+\.)?" + URL_SHORTENER + r"/",
             sites=["codegolf.stackexchange.com"],
             stripcodeblocks=True, question=False)
 # Link text without Latin characters
