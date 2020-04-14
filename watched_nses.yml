@@ -134,6 +134,9 @@ items:
   - guss.ns.cloudflare.com.
 - ns:
   - bonnie.ns.cloudflare.com.
+  - tim.ns.cloudflare.com.
+- ns:
+  - bonnie.ns.cloudflare.com.
   - todd.ns.cloudflare.com.
 - ns:
   - boyd.ns.cloudflare.com.
