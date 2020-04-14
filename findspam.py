@@ -63,11 +63,12 @@ WHITELISTED_WEBSITES_REGEX = regex.compile(r"(?i)upload|\b(?:{})\b".format("|".j
 URL_SHORTENER = r"(?:{})".format('|'.join(regex.escape(site) for site in (
     '9nl.me', 'adf.ly', 'adfoc.us', 'adyou.co', 'alturl.com', 'amzn.to',
     'bfy.tw', 'bit.do', 'bit.ly', 'bluenik.com', 'buff.ly',
-    'cl.ly', 'clkmein.com', 'dyo.gs', 'fb.me', 'goo.gl',
+    'cl.ly', 'clkmein.com', 'dyo.gs', 'fb.me', 'goo.gl',  # doctored; see below
     'is.gd', 'j.mp', 'ow.ly', 'post.ly', 'rurl.us', 'surl.cn.com'
     't.co', 'tiny.cc', 'tinyurl.com', 'tr.im', 'tgig.ir',
     'wp.me',
-    )))
+)))
+URL_SHORTENER = URL_SHORTENER.replace(r'goo\.gl', r'goo\.gl(?![?&/]maps/)')
 ASN_WHITELISTED_WEBSITES = [
     "unity3d.com", "ffmpeg.org", "bitcoincore.org", "latex.codecogs.com",
     "advancedcustomfields.com", "name.com", "businessbloomer.com",
