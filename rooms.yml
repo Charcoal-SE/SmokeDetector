@@ -158,6 +158,7 @@ stackexchange.com:
       - 17078244 # Daniil Manokhin
       - 8629256  # M--
       - 15062967 # Adrian Mole
+      - 1599858  #luuklag
 
   65945:  # Charcoal Test
     commands: true
