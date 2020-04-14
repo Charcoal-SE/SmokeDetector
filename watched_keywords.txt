@@ -14227,7 +14227,6 @@
 1573651316	tripleee	handmade
 1573655998	Machavity	electrobot\.co
 1573657458	Machavity	nashvilletowcompany\.com
-1573661725	Das_Geek	joshdriod\.com
 1573681364	Makyen	88115339(?#URL path)
 1573686040	Das_Geek	apartmentsnearme\.biz
 1573686108	Makyen	co-recovery\.com
