@@ -19488,3 +19488,4 @@
 1586928291	tripleee	vaytien[\W_]*+a[\W_]*+z(?!\.com)
 1586928728	tripleee	morganfinancialrecovery\.com
 1586931193	Makyen	kalpataruindia\.in
+1586937644	Kulfy	thesoftking\.com
