@@ -19493,3 +19493,4 @@
 1586939251	Makyen	archer[\W_]*+mechanical(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1586941409	Makyen	(?-i:RCMB)
 1586942655	Makyen	my-wifiext\.net
+1586942817	tripleee	connectmoney\.in
