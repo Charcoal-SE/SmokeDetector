@@ -893,7 +893,7 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
         r"\b(?:customer|recovery|technical|recovery)? ?(?:customer|support|service|repair|contact) "
         r"(?:phone|hotline|helpline)? ?numbers?\b|"
         r"(best|make|full|hd|software|cell|data|media)[\w ]{1,20}"
-        r"" r"(online|service|company|agency|repair|recovery|school|university)|"
+        r"" r"(online|service|company|agency|repair|recovery|school|universit(?:y|ies)|college)|"
         r"\b(writing (service|help)|essay (writing|tips))"))
     links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
     business = regex.compile(
@@ -1602,7 +1602,7 @@ bad_keywords_nwb = [  # "nwb" == "no word boundary"
 
     r"(?:"
     r"design|development|compan(?:y|ies)|agen(?:ts?|c(?:y|ies))|expert|institute|classes|schools?"
-    r"|training|courses?|jobs?|automation|sex|services?|kindergarten"
+    r"|colleges?|universit(?:y|ies)|training|courses?|jobs?|automation|sex|services?|kindergarten"
     r")"
     r"\W*+(?:center|centre|institute|work|provider)?"
 
