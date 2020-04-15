@@ -19494,3 +19494,4 @@
 1586941409	Makyen	(?-i:RCMB)
 1586942655	Makyen	my-wifiext\.net
 1586942817	tripleee	connectmoney\.in
+1586942888	tripleee	college[\W_]++for[\W_]++placement
