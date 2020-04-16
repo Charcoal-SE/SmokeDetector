@@ -19512,3 +19512,4 @@
 1587030706	tripleee	inphinit
 1587035497	tripleee	international[\W_]*+recovery[\W_]*+agent
 1587040975	Machavity	legal-translations\.com\.au
+1587042899	Machavity	kapwing\.com
