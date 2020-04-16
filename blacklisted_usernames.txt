@@ -295,3 +295,4 @@ DailyRaiseQuestion
 Alabama_KKK
 JewsKilledOurLord
 lustresparasala
+(?-i:^lily jones$)
