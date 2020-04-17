@@ -19525,3 +19525,4 @@
 1587090136	Makyen	lifeguard[\W_]*+labs(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1587090162	Makyen	ntfstool\.com
 1587101827	Makyen	gossipfunda\.com
+1587102012	Makyen	(?-i:wphkg\.jpg)
