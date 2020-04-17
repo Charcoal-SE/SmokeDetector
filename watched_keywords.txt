@@ -19535,3 +19535,4 @@
 1587113010	tripleee	(?-i:^best buy$)
 1587126167	Machavity	getupdraft\.com
 1587134621	Machavity	herox\.com
+1587137837	Machavity	^camera24(?:x|)7$
