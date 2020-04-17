@@ -19527,3 +19527,4 @@
 1587101827	Makyen	gossipfunda\.com
 1587102012	Makyen	(?-i:wphkg\.jpg)
 1587102127	Makyen	sattaresultchart\.com
+1587102235	Makyen	pandamedya\.com\.tr
