@@ -19528,3 +19528,4 @@
 1587102012	Makyen	(?-i:wphkg\.jpg)
 1587102127	Makyen	sattaresultchart\.com
 1587102235	Makyen	pandamedya\.com\.tr
+1587102261	Makyen	worldmissionmagazine\.com
