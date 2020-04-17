@@ -19537,3 +19537,4 @@
 1587134621	Machavity	herox\.com
 1587137837	Machavity	^camera24(?:x|)7$
 1587137923	Machavity	mytechnicalapps\.com
+1587139802	Machavity	cityexam\.com
