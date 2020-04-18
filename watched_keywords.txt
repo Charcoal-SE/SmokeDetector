@@ -17537,7 +17537,6 @@
 1581781949	Makyen	shapoorji[\W_]*+pallonji[\W_]*+northern[\W_]*+lights(?!\.com(?<=shapoorjipallonjiinorthernlights\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1581782003	Makyen	ramulast(?:[\W_]*+(?:booster|testo|\d++|[\da-f]{4,}+))*
 1581782027	Makyen	blockchainappsdeveloper\.com
-1581782110	Makyen	top10cbdoilstore\.com
 1581792533	Makyen	getdailybuzz\.com
 1581792886	Machavity	silentprint\.in
 1581803445	Eliah Kagan	bikernewyork\.com
