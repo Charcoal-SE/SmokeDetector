@@ -19542,3 +19542,4 @@
 1587168211	Makyen	pub-3825058102777\d+
 1587169765	Makyen	pakistanenvironment\.com
 1587179086	Makyen	upliftlk\.com
+1587179112	Makyen	(?-i:weYFU\.jpg)
