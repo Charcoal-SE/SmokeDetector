@@ -107,8 +107,7 @@ def load_ms_cache_data():
 Tasks.later(restart_automatically, after=21600)
 
 try:
-    if GlobalVars.metasmoke_host:
-        update_tld_names()
+    update_tld_names()
 except TldIOError as ioerr:
     with open('errorLogs.txt', 'a', encoding="utf-8") as errlogs:
         if "permission denied:" in str(ioerr).lower():
@@ -130,7 +129,12 @@ except TldIOError as ioerr:
             pass
 
         else:
-            raise ioerr
+            # That we were unable to update the TLD names isn't actually a fatal error, so just log it and continue.
+            error_text = str(ioerr)
+            errlogs.write("WARNING: {}".format(error_text))
+            errlogs.close()
+            log('warning', error_text)
+            pass
 
 if "ChatExchangeU" in os.environ:
     log('debug', "ChatExchange username loaded from environment")
