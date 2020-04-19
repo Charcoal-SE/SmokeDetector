@@ -497,10 +497,15 @@ def contains_tld(s):
 
     # Hackity hack.
     if len(TLD_CACHE) == 0:
-        with open(path.join(tld.defaults.NAMES_LOCAL_PATH_PARENT, tld.defaults.NAMES_LOCAL_PATH),
-                  'r', encoding="utf-8") as f:
-            TLD_CACHE = [x.rstrip('\n') for x in f.readlines() if x.rstrip('\n') and
-                         not x.strip().startswith('//')]
+        try:
+            with open(path.join(tld.defaults.NAMES_LOCAL_PATH_PARENT, tld.defaults.NAMES_LOCAL_PATH),
+                      'r', encoding="utf-8") as f:
+                TLD_CACHE = [x.rstrip('\n') for x in f.readlines() if x.rstrip('\n') and
+                             not x.strip().startswith('//')]
+        except AttributeError as err:
+            if "module 'tld.defaults' has no attribute 'NAMES_LOCAL_PATH'" in str(err):
+                return False
+            raise err
 
     return any(('.' + x) in s for x in TLD_CACHE)
 
