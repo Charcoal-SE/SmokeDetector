@@ -2190,7 +2190,7 @@ create_rule("blacklisted username", r'(?i)^john$',
 create_rule("blacklisted username",
             r"(?i)(?:"
             r"raise(?!oul(?<=^samuraiseoul)$)(?!r(?<=^indofraiser)$)(?!lvan(?<=^Santhosh Thamaraiselvan)$)"
-            r"|^kilisi$|(?-i:KKK)|darkcygnus|JewsKilledOurLord"
+            r"|^kilisi$|(?-i:KKK)|darkcygnus|JewsKilledOurLord|(?i:suck(?!s(?<=AgileSucks|ScrumSucks)))"
             r")",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             title=False, body=False, username=True,
