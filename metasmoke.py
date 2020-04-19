@@ -30,6 +30,7 @@ from gitmanager import GitManager
 import findspam
 from socketscience import SocketScience
 import metasmoke_cache
+from ssl import CERT_NONE
 
 
 MS_WEBSOCKET_LONG_INTERVAL = 60
@@ -152,7 +153,8 @@ class Metasmoke:
     @staticmethod
     def connect_websocket():
         GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host,
-                                                              origin=GlobalVars.metasmoke_host)
+                                                              origin=GlobalVars.metasmoke_host,
+                                                              sslopt={"cert_reqs": CERT_NONE})
         payload = json.dumps({"command": "subscribe",
                               "identifier": "{\"channel\":\"SmokeDetectorChannel\","
                               "\"key\":\"" + GlobalVars.metasmoke_key + "\"}"})
@@ -633,6 +635,7 @@ class Metasmoke:
 
             response = None  # Should return None upon failure, if any
             try:
+                kwargs['verify'] = False  # Don't verify metasmokes's SSL cert.
                 response = method(GlobalVars.metasmoke_host + url, *args, **kwargs)
             except Exception:
                 GlobalVars.MSStatus.failed()
