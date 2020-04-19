@@ -107,7 +107,8 @@ def load_ms_cache_data():
 Tasks.later(restart_automatically, after=21600)
 
 try:
-    update_tld_names()
+    if GlobalVars.metasmoke_host:
+        update_tld_names()
 except TldIOError as ioerr:
     with open('errorLogs.txt', 'a', encoding="utf-8") as errlogs:
         if "permission denied:" in str(ioerr).lower():
