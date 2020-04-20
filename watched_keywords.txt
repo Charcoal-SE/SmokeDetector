@@ -19579,3 +19579,4 @@
 1587359352	Makyen	ecbihplc
 1587359380	Makyen	eco[\W_]*+golden[\W_]*+bridge(?:[\W_]*+(?:investment|holdings|private|limited|company|\d++|[\da-f]{4,}+))*
 1587359594	Makyen	s[\W_]*+k[\W_]*+shastri[\W_]*+ji
+1587359620	Makyen	s\.kshastriastroguru(?:@gmail\.com)?
