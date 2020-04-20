@@ -8197,7 +8197,6 @@
 1550897940	Shree	surveyhelper\.net
 1550907480	Glorfindel	quipmo\.com
 1550907977	Shree	papersplanet\.co\.uk
-1550911419	Shree	gps-map-updates\.com
 1550914263	Shree	smlwindia\.com
 1550920914	Shree	drisongspellhome(?:@gmail\.com)
 1550925212	Makyen	ezizio\.com
