@@ -19580,3 +19580,4 @@
 1587359594	Makyen	s[\W_]*+k[\W_]*+shastri[\W_]*+ji
 1587359620	Makyen	s\.kshastriastroguru(?:@gmail\.com)?
 1587359646	Makyen	extramaritalrelations\.wordpress\.com
+1587361197	Makyen	ymedz\.com
