@@ -19589,3 +19589,4 @@
 1587361904	tripleee	(?-i:j0qcnz)(?# tiny.cc)
 1587367213	tripleee	volgopoint\.com
 1587367244	tripleee	volgo[\W_]*+shop(?:ping|s)?
+1587367269	tripleee	volgo[\W_]*+point(?!\.com)
