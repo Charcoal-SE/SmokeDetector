@@ -19577,3 +19577,4 @@
 1587359303	Makyen	e2fdc15403de3601
 1587359327	Makyen	soo[\W_]*+hwan[\W_]*+jeong[\W_]*+ceo
 1587359352	Makyen	ecbihplc
+1587359380	Makyen	eco[\W_]*+golden[\W_]*+bridge(?:[\W_]*+(?:investment|holdings|private|limited|company|\d++|[\da-f]{4,}+))*
