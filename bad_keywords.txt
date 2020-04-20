@@ -2262,3 +2262,6 @@ supreme[\W_]*+rx(?:[\W_]*+(?:pill|\d++|[\da-f]{4,}+)s?)*
 (?:rapid[\W_]*+)?keto(?:[\W_]*+(?:prime|rx))+(?:[\W_]*+(?:diet|za|uruguay|\d++|[\da-f]{4,}+))*
 cygucciferhigh(?:@gmail\.com)?
 emagtramina
+(?-i:a99d8\.jpg)
+Kamagra
+primal[\W_]*+grow(?:[\W_]*+pro)?

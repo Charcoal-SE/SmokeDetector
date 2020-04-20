@@ -10275,7 +10275,6 @@
 1559855148	Makyen	cryptonight
 1559872715	Makyen	donald1stan(?:@gmail\.com)?
 1559886664	K.Dᴀᴠɪs	com\.pjumpod(?#Google Store App)
-1559890075	K.Dᴀᴠɪs	Kamagra
 1559890126	tripleee	all\W?day\W?generic
 1559890149	tripleee	online\W?drug\W?store
 1559898235	Byte Commander	ardorxp
@@ -18509,7 +18508,6 @@
 1583999844	tripleee	beaquarium\.com
 1584001605	tripleee	hunzabazar\.com
 1584002881	tripleee	eyeglasseslink\.com
-1584006319	Shree	techbigs\.com
 1584014743	tripleee	(?-i:5ynfoyqqbYE)(?#youtube)
 1584016795	tripleee	qldcashforcars\.com\.au
 1584016994	tripleee	(?-i:5QMeXZ8zkjI)(?#youtube)
@@ -18644,7 +18642,6 @@
 1584345429	Eliah Kagan	mcafee[\W_]*+activates?
 1584346228	Eliah Kagan	(?-i:mtJYEdraGas)(?#youtu.be)
 1584346275	Eliah Kagan	vikeshsingh\.info
-1584346421	Eliah Kagan	primal[\W_]*+grow(?:[\W_]*+pro)?
 1584348253	Eliah Kagan	eadatahandlers\.co\.ke
 1584348280	Shree	greletpatricia01(?:@gmail\.com)?
 1584348417	Eliah Kagan	chop\s+off\s+your\s+balls
@@ -19546,3 +19543,54 @@
 1587195455	Makyen	keto[\W_]*+biotic(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1587202372	doppelgreener	cricket betting tips
 1587203164	Kulfy	thelinuxuser\.com
+1587213889	Nisse Engström	wildlifehubpakistan\.blogspot\.com
+1587214947	Makyen	klariecannacare\.com
+1587219049	Makyen	churchofsataninitiationtemple(?:@gmail\.com)?
+1587219870	Makyen	krishitool\.com
+1587220099	Makyen	saddatruck\.com
+1587220251	Makyen	rehab-quotes\.online
+1587229880	Makyen	(?-i:BENJAMIN DOUGLAS)
+1587229933	Makyen	douglasloanfirm2(?:@gmail\.com)?
+1587231045	Makyen	cypressbikes\.com
+1587232757	Makyen	mynezam\.ir
+1587234012	Makyen	designmaker\.shop
+1587236755	Shree	bachaobijli\.in
+1587238863	Makyen	essaysmate\.com
+1587239780	Makyen	allassignmentsolution\.com
+1587241372	Makyen	nanosupergreaterup28(?:@gmail\.com)?
+1587269451	Makyen	genosar\.amir(?:@gmail\.com)?
+1587295525	Makyen	bestforbabyreviews\.com
+1587297886	Makyen	bestgamingmouse\.tech
+1587313756	Zoe	marijuanasshops(?:\.com)?
+1587322368	Jenayah	upstrackingit\.com
+1587322416	Jenayah	upstrackingpro\.com
+1587336257	Makyen	fakazavibes\.com
+1587346176	Makyen	jamesglarryloanhome(?:@gmail\.com)?
+1587350050	Makyen	(?-i:JqgSP\.jpg)
+1587350076	Makyen	(?-i:kMwwX\.jpg)
+1587350102	Makyen	zerodeze\.blogspot
+1587354516	Nisse Engström	vemaybaydimy\.org\.vn
+1587359144	Makyen	info_bitsafest@yahoo\.com
+1587359235	Makyen	soohwan\.ecogoldeninvestment(?:@gmail\.com)?
+1587359303	Makyen	e2fdc15403de3601
+1587359327	Makyen	soo[\W_]*+hwan[\W_]*+jeong[\W_]*+ceo
+1587359352	Makyen	ecbihplc
+1587359380	Makyen	eco[\W_]*+golden[\W_]*+bridge(?:[\W_]*+(?:investment|holdings|private|limited|company|\d++|[\da-f]{4,}+))*
+1587359594	Makyen	s[\W_]*+k[\W_]*+shastri[\W_]*+ji
+1587359620	Makyen	s\.kshastriastroguru(?:@gmail\.com)?
+1587359646	Makyen	extramaritalrelations\.wordpress\.com
+1587361197	Makyen	ymedz\.com
+1587361222	Makyen	(?-i:GY8Uq\.jpg)
+1587361765	tripleee	(?-i:5t63wSR)(?# cutt.ly)
+1587361790	Makyen	jhootamahee(?#medium.com)
+1587361817	Makyen	201098578918065(?#URL path)
+1587361847	Makyen	(?-i:2VjqXm9)(?#on.mktw.net)
+1587361873	Makyen	mktw\.net
+1587361904	tripleee	(?-i:j0qcnz)(?# tiny.cc)
+1587367213	tripleee	volgopoint\.com
+1587367244	tripleee	volgo[\W_]*+shop(?:ping|s)?
+1587367269	tripleee	volgo[\W_]*+point(?!\.com)
+1587371154	tripleee	genefactor
+1587371420	Makyen	provia[\W_]*+max(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1587371445	Makyen	ringhacking231(?:@gmail\.com)?
+1587371466	Makyen	tophealthbrand\.com

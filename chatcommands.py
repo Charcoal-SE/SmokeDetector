@@ -1470,13 +1470,13 @@ def whois(msg, role):
         raise CmdException("That is not a user level I can check. "
                            "I know about {0}".format(", ".join(set(VALID_ROLES.values()))))
 
-    ms_route = "https://metasmoke.erwaysoftware.com/api/v2.0/users/with_role/{}".format(VALID_ROLES[role])
+    ms_route = "/api/v2.0/users/with_role/{}".format(VALID_ROLES[role])
     params = {
         'filter': 'HMMKFJ',
         'key': GlobalVars.metasmoke_key,
         'per_page': 100
     }
-    user_response = requests.get(ms_route, params=params)
+    user_response = Metasmoke.get(ms_route, params=params)
     user_response.encoding = 'utf-8-sig'
     user_response = user_response.json()
 
