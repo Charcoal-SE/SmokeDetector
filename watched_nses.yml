@@ -59,6 +59,9 @@ items:
   - val.ns.cloudflare.com.
 - ns:
   - ali.ns.cloudflare.com.
+  - boyd.ns.cloudflare.com.
+- ns:
+  - ali.ns.cloudflare.com.
   - clay.ns.cloudflare.com.
 - ns:
   - ali.ns.cloudflare.com.
