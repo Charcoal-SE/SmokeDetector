@@ -19584,7 +19584,6 @@
 1587361765	tripleee	(?-i:5t63wSR)(?# cutt.ly)
 1587361790	Makyen	jhootamahee(?#medium.com)
 1587361817	Makyen	201098578918065(?#URL path)
-1587361847	Makyen	(?-i:2VjqXm9)(?#on.mktw.net)
 1587361873	Makyen	mktw\.net
 1587361904	tripleee	(?-i:j0qcnz)(?# tiny.cc)
 1587367213	tripleee	volgopoint\.com
