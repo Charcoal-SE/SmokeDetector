@@ -19594,3 +19594,4 @@
 1587378085	Zoe	ninjamerchstore\.com
 1587380412	tripleee	sculpt[\W_]*+diet
 1587385547	tripleee	cheenta\.com
+1587391885	Machavity	giftstoindia24x7\.com
