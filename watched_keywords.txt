@@ -19603,3 +19603,4 @@
 1587408779	Machavity	kizi1000\.xyz
 1587408807	Machavity	y8game\.club
 1587408887	Machavity	kizi5\.club
+1587408942	Machavity	friv8\.(?:culb|club)
