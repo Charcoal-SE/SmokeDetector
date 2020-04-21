@@ -19609,3 +19609,4 @@
 1587424710	Makyen	agil[\W_]*+flex(?:[\W_]*+(?:avis|en|france|joint|pain|\d++|[\da-f]{4,}+))*
 1587429810	Makyen	gsm910(?#brave.com)
 1587429840	Makyen	luckyfish
+1587429872	Makyen	casinoroyale\.bet
