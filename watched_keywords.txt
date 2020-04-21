@@ -19636,3 +19636,4 @@
 1587493622	Makyen	wewriteessay\.co\.uk
 1587495044	Makyen	(?-i:nxfXUhHg8Z4)(?#youtu.be)
 1587498279	Makyen	devopsmyway\.com
+1587498305	Makyen	cloudjavascript\.com
