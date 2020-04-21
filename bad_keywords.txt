@@ -2266,3 +2266,4 @@ Kamagra
 primal[\W_]*+grow(?:[\W_]*+pro)?
 (?-i:2VjqXm9)(?#on.mktw.net)
 (?-i:j0qcnz)(?# tiny.cc)
+phalogenics
