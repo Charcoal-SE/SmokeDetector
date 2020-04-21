@@ -2268,3 +2268,4 @@ primal[\W_]*+grow(?:[\W_]*+pro)?
 (?-i:j0qcnz)(?# tiny.cc)
 phalogenics
 barxbuddy(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+))*
+unichrone(?!\.(?:com|net))
