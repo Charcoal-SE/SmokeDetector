@@ -300,3 +300,4 @@ lustresparasala
 (?-i:^sexdollxing$)
 (?-i:^Marco Cappoli$)
 (?-i:^Manish Kushwaha$)
+(?-i:^Văn Đình Hưng$)
