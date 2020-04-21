@@ -19617,3 +19617,4 @@
 1587430044	Makyen	k8vr661q(?#rollercoin.com)
 1587436715	Makyen	kiss[\W_]*+anime(?!\.li(?<=kissanime\.li))(?!\.co(?<=kiss-anime\.co))
 1587441099	Makyen	slenderized[\W_]*+keto(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+)s?)*
+1587443092	tripleee	glasshitech\.com
