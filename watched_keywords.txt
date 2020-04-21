@@ -19638,3 +19638,4 @@
 1587498279	Makyen	devopsmyway\.com
 1587498305	Makyen	cloudjavascript\.com
 1587498329	Makyen	goodmorningimageshddownload\.com
+1587498354	Makyen	(?-i:wDXqu\.jpg)
