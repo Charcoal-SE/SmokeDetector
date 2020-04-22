@@ -19657,4 +19657,3 @@
 1587561105	Nisse Engström	freshfilmzone\.com
 1587574162	tripleee	pmp[\W_]*+back[\W_]*+door
 1587574246	tripleee	(?:(?:CAPM|CI[PS]M|CIPT|PMP|CSM)\W+){4,}
-1587574303	tripleee	ielts\.?legit(?:@yahoo\.com)?
