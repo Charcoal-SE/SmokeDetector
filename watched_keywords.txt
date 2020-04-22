@@ -19663,3 +19663,4 @@
 1587587958	Makyen	mxplayer\.pro
 1587589757	Machavity	tfsbloggerax\.wordpress\.com
 1587589903	Machavity	fossilizedcustoms\.com
+1587594904	Makyen	newsanddevelopments\.blogspot
