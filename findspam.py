@@ -504,47 +504,33 @@ def levenshtein(s1, s2):
     return previous_row[-1]
 
 
-def contains_tld(s):
-    global TLD_CACHE
-
-    # Hackity hack.
-    if len(TLD_CACHE) == 0:
-        try:
-            with open(path.join(tld.defaults.NAMES_LOCAL_PATH_PARENT, tld.defaults.NAMES_LOCAL_PATH),
-                      'r', encoding="utf-8") as f:
-                TLD_CACHE = [x.rstrip('\n') for x in f.readlines() if x.rstrip('\n') and
-                             not x.strip().startswith('//')]
-        except AttributeError as err:
-            if "module 'tld.defaults' has no attribute 'NAMES_LOCAL_PATH'" in str(err):
-                return False
-            raise err
-
-    return any(('.' + x) in s for x in TLD_CACHE)
-
-
 @create_rule("misleading link", title=False, max_rep=10, max_score=1, stripcodeblocks=True)
 def misleading_link(s, site):
-    link_regex = r"<a href=\"([^\"]+)\"[^>]*>([^<]+)<\/a>"
+    # Regex that finds the href value and the link text from an HTML <a>, if the link text
+    # doesn't contain a '<' or space.
+    link_regex = r"<a href=\"([^\"]++)\"[^>]*+>\s*+([^< ]++)\s*+<\/a>"
     compiled = regex.compile(link_regex)
     search = compiled.search(s)
     if search is None:
+        # The s string contained no HTML <a> elements with an href and link text matching the link_regex.
         return False, ''
 
     href, text = search[1], search[2]
+    if '.' not in text:
+        # To have a first level domain, the link text must contain a '.'.
+        return False, ''
     try:
         parsed_href = tld.get_tld(href, as_object=True)
         if parsed_href.fld in SE_SITES_DOMAINS:
-            log('debug', "{}: SE domain".format(parsed_href.fld))
             return False, ''
-        log('debug', "{}: not an SE domain".format(parsed_href.fld))
-        if contains_tld(text) and ' ' not in text:
-            parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True)
-        else:
-            raise tld.exceptions.TldBadUrl('Link text is not a URL')
+        parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True)
+        if parsed_text.fld == parsed_text.tld:
+            # The link text doesn't have a valid domain (i.e. the FLD must be more than just the TLD).
+            return False, ''
     except (tld.exceptions.TldDomainNotFound, tld.exceptions.TldBadUrl, ValueError) as err:
         return False, ''
 
-    if site == 'stackoverflow.com' and parsed_text.fld.split('.')[-1] in SAFE_EXTENSIONS:
+    if site == 'stackoverflow.com' and parsed_text.tld in SAFE_EXTENSIONS:
         return False, ''
 
     if levenshtein(parsed_href.domain, parsed_text.domain) <= LEVEN_DOMAIN_DISTANCE:  # Preempt
