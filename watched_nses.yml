@@ -235,6 +235,9 @@ items:
   - dara.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
 - ns:
+  - dave.ns.cloudflare.com.
+  - lorna.ns.cloudflare.com.
+- ns:
   - dean.ns.cloudflare.com.
   - sofia.ns.cloudflare.com.
 - ns:
