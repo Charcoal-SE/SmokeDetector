@@ -541,7 +541,9 @@ items:
 - ip: 5.9.24.179
 - ip: 50.62.35.175
 - ip: 50.62.35.40
-- ip: 50.63.202.47
+- comment: 0/33 over 3 months -- do not watch again
+  disable: true
+  ip: 50.63.202.47
 - ip: 50.87.189.77
 - ip: 50.116.78.51
 - ip: 50.116.78.52
