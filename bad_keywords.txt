@@ -2269,3 +2269,4 @@ phalogenics
 barxbuddy(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+))*
 unichrone(?!\.(?:com|net))
 thermosense[\W_]*+thermometer(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+ieltswithoutexam\W*(?:at\W*)?yahoo\W*(?:dot\W*)?com
