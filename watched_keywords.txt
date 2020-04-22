@@ -19642,3 +19642,4 @@
 1587498768	Makyen	jobbacking\.com
 1587514880	Makyen	drleeds\.com
 1587514905	Makyen	treatmentmatch\.org
+1587514930	Makyen	(?-i:2XU2ANK)(?#bit.ly)
