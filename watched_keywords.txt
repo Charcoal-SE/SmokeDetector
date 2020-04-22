@@ -19646,3 +19646,4 @@
 1587535788	Makyen	ubikon\.co\.in
 1587536700	tripleee	snoril
 1587538474	tripleee	(?-i:^Diljit singh$)
+1587538677	tripleee	(?:(?:Accenture|HDFC|Cisco|HCL|TCS|IBM|Reliance Capital|Capgemini|SAP|Pin click)\W+){4,}
