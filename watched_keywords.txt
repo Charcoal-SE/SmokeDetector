@@ -19645,3 +19645,4 @@
 1587514956	Makyen	rocufast(?:[\W_]*+(?:vitamin|c|immunity|booster|\d++|[\da-f]{4,}+))*
 1587535788	Makyen	ubikon\.co\.in
 1587536700	tripleee	snoril
+1587538474	tripleee	(?-i:^Diljit singh$)
