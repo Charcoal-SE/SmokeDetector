@@ -19674,3 +19674,4 @@
 1587631271	Makyen	wellness[\W_]*+farmers(?:[\W_]*+(?:cbd|lavender|oil|\d++|[\da-f]{4,}+))*
 1587631291	Makyen	revenueriver\.co
 1587632259	Makyen	zbtechs\.com
+1587634801	tripleee	jarvisqqpkv\.website
