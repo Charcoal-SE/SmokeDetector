@@ -533,6 +533,10 @@ def misleading_link(s, site):
     if site == 'stackoverflow.com' and parsed_text.tld in SAFE_EXTENSIONS:
         return False, ''
 
+    if href.endswith('/' + text):
+        # Don't detect URLs like "https://example.com/foo.txt" for link text "foo.txt".
+        return False, ''
+
     if levenshtein(parsed_href.domain, parsed_text.domain) <= LEVEN_DOMAIN_DISTANCE:  # Preempt
         return False, ''
 
