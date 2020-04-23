@@ -536,7 +536,7 @@ def misleading_link(s, site):
     except (tld.exceptions.TldDomainNotFound, tld.exceptions.TldBadUrl, ValueError) as err:
         return False, ''
 
-    if site == 'stackoverflow.com' and parsed_text.tld in SAFE_EXTENSIONS:
+    if site == 'stackoverflow.com' and parsed_text.fld.split('.')[-1] in SAFE_EXTENSIONS:
         return False, ''
 
     if href.endswith('/' + text):
