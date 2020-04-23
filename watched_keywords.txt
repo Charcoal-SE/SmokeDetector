@@ -19666,3 +19666,4 @@
 1587594904	Makyen	newsanddevelopments\.blogspot
 1587617986	tripleee	studymonday\.com
 1587625909	tripleee	(?-i:^ronanjenifer$)
+1587626219	tripleee	myra[\W_]*+(?:dental[\W_]*+)?clinic?
