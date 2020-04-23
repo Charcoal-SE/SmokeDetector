@@ -22,8 +22,8 @@ script:
   - python3 -W default::Warning -m pytest --cov=chatcommunicate --cov=findspam --cov=globalvars --cov=spamhandling --cov=datahandling --cov=chatcommands --cov=helpers test
 
 branches:
-  only:
-    - master
+  except:
+    - deploy
 cache:
   directories:
     - $HOME/virtualenv/python3.5.*
