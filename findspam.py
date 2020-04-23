@@ -366,7 +366,7 @@ class FindSpam:
             pass
         cls.rule_bad_keywords.sanity_check()
         cls.rule_watched_keywords.regex = r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format(
-            "|".join(GlobalVars.watched_keywords.keys()))
+            "|".join(GlobalVars.watched_keywords))
         try:
             del cls.rule_watched_keywords.compiled_regex
         except AttributeError:
