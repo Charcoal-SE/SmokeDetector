@@ -19665,3 +19665,4 @@
 1587589903	Machavity	fossilizedcustoms\.com
 1587594904	Makyen	newsanddevelopments\.blogspot
 1587617986	tripleee	studymonday\.com
+1587625909	tripleee	(?-i:^ronanjenifer$)
