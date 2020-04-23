@@ -524,7 +524,12 @@ def misleading_link(s, site):
         if parsed_href.fld in SE_SITES_DOMAINS:
             return False, ''
         parsed_text = tld.get_tld(text, fix_protocol=True, as_object=True)
-        if parsed_text.fld == parsed_text.tld:
+        # Testing that the .tld parses out the same with an added subdomain is needed to work with tld version 0.9.0.
+        # By the time that package gets to version 0.9.8, it doesn't improperly split TLDs like co.uk.
+        # So, once the tld package is updated on all SD intances to be ~=0.12 the code for
+        # parsed_text_fld_with_extra_subdomain is not needed.
+        parsed_text_fld_with_extra_subdomain = tld.get_tld('foo.' + parsed_text.fld, fix_protocol=True, as_object=True)
+        if parsed_text.fld == parsed_text.tld or parsed_text.tld != parsed_text_fld_with_extra_subdomain.tld:
             # The link text doesn't have a valid domain (i.e. the FLD must be more than just the TLD).
             return False, ''
     except (tld.exceptions.TldDomainNotFound, tld.exceptions.TldBadUrl, ValueError) as err:
