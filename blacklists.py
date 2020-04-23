@@ -10,18 +10,32 @@ from helpers import log
 
 
 def load_blacklists():
-    GlobalVars.bad_keywords = Blacklist(Blacklist.KEYWORDS).parse()
-    GlobalVars.watched_keywords = Blacklist(Blacklist.WATCHED_KEYWORDS).parse()
-    GlobalVars.blacklisted_websites = Blacklist(Blacklist.WEBSITES).parse()
-    GlobalVars.blacklisted_usernames = Blacklist(Blacklist.USERNAMES).parse()
-    GlobalVars.blacklisted_numbers = Blacklist(Blacklist.NUMBERS).parse()
-    GlobalVars.watched_numbers = Blacklist(Blacklist.WATCHED_NUMBERS).parse()
-    GlobalVars.blacklisted_nses = Blacklist(Blacklist.NSES).parse()
-    GlobalVars.watched_nses = Blacklist(Blacklist.WATCHED_NSES).parse()
-    GlobalVars.blacklisted_cidrs = Blacklist(Blacklist.CIDRS).parse()
-    GlobalVars.watched_cidrs = Blacklist(Blacklist.WATCHED_CIDRS).parse()
-    # GlobalVars.blacklisted_asns = Blacklist(Blacklist.ASNS).parse()
-    GlobalVars.watched_asns = Blacklist(Blacklist.WATCHED_ASNS).parse()
+    bwdict = GlobalVars.git_black_watch_lists
+
+    bwdict['bad_keywords'] = Blacklist(
+        'bad_keywords.txt', BasicListParser)
+    bwdict['watched_keywords'] = Watchlist(
+        'watched_keywords.txt', TSVDictParser)
+    bwdict['blacklisted_websites'] = Blacklist(
+        'blacklisted_websites.txt', BasicListParser)
+    bwdict['blacklisted_usernames'] = UserBlacklist(
+        'blacklisted_usernames.txt', BasicListParser)
+    bwdict['blacklisted_numbers'] = PhoneBlacklist(
+        'blacklisted_numbers.txt', BasicListParser)
+    bwdict['watched_numbers'] = PhoneWatchlist(
+        'watched_numbers.txt', TSVDictParser)
+    bwdict['blacklisted_nses'] = NetBlacklist(
+        'blacklisted_nses.yml', YAMLParserNS)
+    bwdict['watched_nses'] = NetWatchlist(
+        'watched_nses.yml', YAMLParserNS)
+    bwdict['blacklisted_cidrs'] = NetBlacklist(
+        'blacklisted_cidrs.yml', YAMLParserCIDR)
+    bwdict['watched_cidrs'] = NetWatchlist(
+        'watched_cidrs.yml', YAMLParserCIDR)
+    # bwdict['blacklisted_asns'] = NetBlacklist(
+    #    'blacklisted_asns.yml', YAMLParserASN)
+    bwdict['watched_asns'] = NetWatchlist(
+        'watched_asns.yml', YAMLParserASN)
 
 
 class BlacklistParser:
@@ -29,12 +43,12 @@ class BlacklistParser:
         self._filename = filename
 
     def parse(self):
-        return None
+        return []
 
     def add(self, item):
         pass
 
-    def remove(self, item):
+    def delete(self, item):
         pass
 
     def exists(self, item):
@@ -60,7 +74,7 @@ class BasicListParser(BlacklistParser):
                 item = '\n' + item
             f.write(item + '\n')
 
-    def remove(self, item: str):
+    def delete(self, item: str):
         with open(self._filename, 'r+', encoding='utf-8') as f:
             items = f.readlines()
             items = [x for x in items if item not in x]
@@ -88,99 +102,24 @@ class BasicListParser(BlacklistParser):
 
         return False, -1
 
-    def already_caught(self, string_to_test):
-        """
-        Test a candidate string; return a list of reasons if it is already
-        caught.
 
-        The method not_reject_reasons returns a list of reasons which do not
-        cause a rejection to be returned; in other words, they are removed
-        from the reasons.
-        """
-        ownerdict = {'display_name': 'Valid username',
-                     'reputation': 1, 'link': ''}
-        querydict = {'title': 'Valid title', 'body': 'Valid body',
-                     'owner': None, 'site': "", 'IsAnswer': None, 'score': 0}
-        reasons = set()
-        for answerp in False, True:
-            for userp in False, True:
-                owner = ownerdict.copy()
-                question = querydict.copy()
-                if userp:
-                    owner['display_name'] = string_to_test
-                else:
-                    query['body'] = string_to_test
-                question['owner'] = owner
-                question['IsAnswer'] = answerp
-                verdicts, _ = findspam.FindSpam.test_post(question)
-                reasons.update(set(verdicts))
-
-        filter_out = self.not_reject_reasons()
-        return [reason for reason in reasons
-                if all([x not in reason.lower() for x in filter_out])]
-
-    def not_reject_reasons(self):
-        """
-        Which reasons should be filtered out when deciding whether something
-        is not acceptable to add to a blacklist?
-
-        Called by the already_caught method; provides hooks for the
-        WatchMixin and PhoneMixin classes.
-        """
-        filter_out = [
-            "potentially bad ns",
-            "potentially bad asn",
-            "potentially problematic",
-            "potentially bad ip"]
-        filter_out.append(self._watch_not_reject_reasons())
-        filter_out.append(self._phone_not_reject_reasons())
-        return []
-
-    def _watch_not_reject_reasons(self):
-        """
-        Return extended reasons to reject a blacklist addition for watch
-        lists.
-
-        No-op in the base class; populated in WatchMixin.
-        """
-        return []
-
-    def _phone_not_reject_reasons(self):
-        """
-        Return additional reasons to reject a blacklist addition for phone
-        lists.
-
-        No-op in the base class; populated in PhoneMixin.
-        """
-        return []
-
-    def regextype(self):
-        """
-        Whether to perform regex validation etc on candidate patterns.
-
-        True in the base class; overridden by PhoneMixin.
-        """
-        return True
-
-
-class WatchMixin:
+class WhoWhatWhenString(str):
     """
-    Mixin to create watch behavior from a base class
+    str wrapper with additional attributes for TSVDictParser to generate
     """
-    def _watch_not_reject_reasons(self):
-        return ["potentially bad keyword"]
+    def __new__(cls, seq, who, when, filename, lineno, *args, **kwargs):
+        self = super().__new__(cls, seq, *args, **kwargs)
+        self._who = who
+        self._when = when
+        self._filename = filename
+        self._lineno = lineno
+        return self
 
+    def when(self):
+        return self._when
 
-class PhoneMixin:
-    """
-    Mixin to create phone number class behavior from a base class
-    """
-    def additional_filtered_out_reasons(self):
-        return ["mostly non-latin", "phone number detected",
-                "messaging number detected"]
-
-    def regextype(self):
-        return False
+    def who(self):
+        return self._who
 
 
 class TSVDictParser(BlacklistParser):
@@ -189,7 +128,6 @@ class TSVDictParser(BlacklistParser):
     "what" fields.
     """
     def parse(self):
-        dct = {}
         with open(self._filename, 'r', encoding='utf-8') as f:
             for lineno, line in enumerate(f, 1):
                 if regex.compile(r'^\s*(?:#|$)').match(line):
@@ -201,23 +139,23 @@ class TSVDictParser(BlacklistParser):
                         self._filename, lineno, err))
                     continue
                 if what[0] != "#":
-                    dct[what] = {'when': when, 'by': by_whom}
+                    """
+                    yield WhoWhatWhenString(
+                        who=by_whom, when=when,
+                        filename=self._filename, lineno=lineno, what)
+                    """
+                    yield WhoWhatWhenString(seq=what, who=by_whom, when=when, filename=self._filename, lineno=lineno)
 
-        return dct
-
-    def add(self, item: Union[str, dict]):
+    def add(self, item: Union[str, WhoWhatWhenString]):
         with open(self._filename, 'a+', encoding='utf-8') as f:
-            if isinstance(item, dict):
-                item = '{}\t{}\t{}'.format(item[0], item[1], item[2])
+            if isinstance(item, WhoWhatWhenString):
+                item = '{}\t{}\t{}'.format(item.when(), item.who(), item)
             last_char = f.read()[-1:]
             if last_char not in ['', '\n']:
                 item = '\n' + item
             f.write(item + '\n')
 
-    def remove(self, item: Union[str, dict]):
-        if isinstance(item, dict):
-            item = item[2]
-
+    def delete(self, item: Union[str, WhoWhatWhenString]):
         with open(self._filename, 'r+', encoding='utf-8') as f:
             items = f.readlines()
             items = [
@@ -238,10 +176,9 @@ class TSVDictParser(BlacklistParser):
                     else:
                         yield line.rstrip("\n").split('\t')[2]
 
-    def exists(self, item: Union[str, dict]):
-        if isinstance(item, dict):
-            item = item[2]
-        item = item.split('\t')[-1]
+    def exists(self, item: Union[str, WhoWhatWhenString]):
+        if not isinstance(item, WhoWhatWhenString):
+            item = item.split('\t')[-1]
 
         with open(self._filename, 'r', encoding='utf-8') as f:
             lines = f.readlines()
@@ -253,14 +190,6 @@ class TSVDictParser(BlacklistParser):
                 if len(splat) == 3 and splat[2].strip() == item:
                     return True, i
         return False, -1
-
-
-class PhoneParser(BasicListParser, PhoneMixin):
-    pass
-
-
-class TSVDictWatchedPhoneParser(TSVDictParser, PhoneMixin, WatchMixin):
-    pass
 
 
 class YAMLParserCIDR(BlacklistParser):
@@ -360,10 +289,10 @@ class YAMLParserCIDR(BlacklistParser):
 
         self._write(add_callback)
 
-    def remove(self, item):
+    def delete(self, item):
         prikey = self.SCHEMA_PRIKEY
 
-        def remove_callback(d):
+        def delete_callback(d):
             for i, compare in enumerate(d['items']):
                 if compare[prikey] == item[prikey]:
                     break
@@ -372,7 +301,7 @@ class YAMLParserCIDR(BlacklistParser):
                     item[prikey], d['items']))
             del d['items'][i]
 
-        self._write(remove_callback)
+        self._write(delete_callback)
 
     # FIXME: enumerate gets YAML item array index, not line number
     def each(self, with_info=False):
@@ -384,7 +313,7 @@ class YAMLParserCIDR(BlacklistParser):
 
     def exists(self, item):
         item = item.lower()
-        for i, rec in self.each(with_info=True):
+        for rec, i in self.each(with_info=True):
             if item == rec:
                 return True, i
         return False, -1
@@ -463,23 +392,36 @@ class YAMLParserASN(YAMLParserCIDR):
             raise ValueError('Not a valid public AS number: {0}'.format(asn))
 
 
-class Blacklist:
-    KEYWORDS = ('bad_keywords.txt', BasicListParser)
-    WEBSITES = ('blacklisted_websites.txt', BasicListParser)
-    USERNAMES = ('blacklisted_usernames.txt', BasicListParser)
-    NUMBERS = ('blacklisted_numbers.txt', PhoneParser)
-    WATCHED_KEYWORDS = ('watched_keywords.txt', TSVDictParser)
-    WATCHED_NUMBERS = ('watched_numbers.txt', TSVDictWatchedPhoneParser)
-    NSES = ('blacklisted_nses.yml', YAMLParserNS)
-    WATCHED_NSES = ('watched_nses.yml', YAMLParserNS)
-    CIDRS = ('blacklisted_cidrs.yml', YAMLParserCIDR)
-    WATCHED_CIDRS = ('watched_cidrs.yml', YAMLParserCIDR)
-    # ASNS = ('blacklisted_asns.yml', YAMLParserASN)
-    WATCHED_ASNS = ('watched_asns.yml', YAMLParserASN)
+class Blacklist(list):
+    def __init__(self, filename, cls):
+        self._filename = filename
+        self._cls = cls
+        self._parser = cls(filename)
+        super().__init__(self._parser.parse())
 
-    def __init__(self, type):
-        self._filename = type[0]
-        self._parser = type[1](self._filename)
+    @staticmethod
+    def resolve(identifier):
+        """
+        Map identifier to the corresponding key in GlobalVars.git_black_watch_lists
+        """
+        mapping = {
+            'keyword': 'keywords',
+            'number': 'numbers',
+            'phone': 'numbers',
+            'asn': 'asns',
+            'ip': 'cidrs',
+            'ns': 'nses',
+        }
+        if 'watch' in identifier:
+            prefix = 'watched'
+        elif 'keyword' in identifier:
+            prefix = 'bad'
+        else:
+            prefix = 'blacklisted'
+        for term, suffix in mapping.items():
+            if term in identifier:
+                return '%s_%s' % (prefix, suffix)
+        raise KeyError('Blacklists.resolve(): Could not resolve %s' % identifier)
 
     def parse(self):
         return self._parser.parse()
@@ -487,7 +429,7 @@ class Blacklist:
     def add(self, item):
         return self._parser.add(item)
 
-    def remove(self, item):
+    def delete(self, item):
         return self._parser.remove(item)
 
     def each(self, with_info=False):
@@ -498,3 +440,206 @@ class Blacklist:
 
     def validate(self):
         return self._parser.validate()
+
+    #
+
+    def parserclass(self):
+        return self._cls
+
+    def filename(self):
+        return self._filename
+
+    def already_caught(self, string_to_test):
+        """
+        Test a candidate string; return a list of reasons if it is already
+        caught.
+
+        The method not_reject_reasons returns a list of reasons which do not
+        cause a rejection to be returned; in other words, they are removed
+        from the reasons.
+        """
+        ownerdict = {'display_name': 'Valid username',
+                     'reputation': 1, 'link': ''}
+        querydict = {'title': 'Valid title', 'body': 'Valid body',
+                     'owner': None, 'site': "", 'IsAnswer': None, 'score': 0}
+        reasons = set()
+        for answerp in False, True:
+            for userp in False, True:
+                owner = ownerdict.copy()
+                question = querydict.copy()
+                if userp:
+                    owner['display_name'] = string_to_test
+                else:
+                    question['body'] = string_to_test
+                question['owner'] = owner
+                question['IsAnswer'] = answerp
+                verdicts, _ = findspam.FindSpam.test_post(question)
+                reasons.update(set(verdicts))
+
+        filter_out = self.not_reject_reasons()
+        return [reason for reason in reasons
+                if all([x not in reason.lower() for x in filter_out])]
+
+    def not_reject_reasons(self):
+        """
+        Which reasons should be filtered out when deciding whether something
+        is not acceptable to add to a blacklist?
+
+        Called by the already_caught method; provides hooks for the
+        WatchMixin and PhoneMixin classes.
+        """
+        filter_out = [
+            "potentially bad ns",
+            "potentially bad asn",
+            "potentially problematic",
+            "potentially bad ip"]
+        filter_out.append(self._watch_not_reject_reasons())
+        filter_out.append(self._phone_not_reject_reasons())
+        return filter_out
+
+    def _watch_not_reject_reasons(self):
+        """
+        Return extended reasons to reject a blacklist addition for watch
+        lists.
+
+        No-op in the base class; populated in WatchMixin.
+        """
+        return []
+
+    def _phone_not_reject_reasons(self):
+        """
+        Return additional reasons to reject a blacklist addition for phone
+        lists.
+
+        No-op in the base class; populated in PhoneMixin.
+        """
+        return []
+
+    def regextype(self):
+        """
+        Whether to perform regex validation etc on candidate patterns.
+
+        True in the base class; overridden by NetMixin and PhoneMixin.
+        """
+        return True
+
+    def numbertype(self):
+        """
+        Whether to perform phone number normalizations.
+
+        False in the base class; overridden by PhoneMixin.
+        """
+        return False
+
+    def watchtype(self):
+        """
+        Whether this is a watchlist instead of a blacklist.
+
+        False in the base class; overridden by WatchMixin.
+        """
+        return False
+
+    def _ms_search_url_tail(self):
+        """
+        Class-specific URL tail for ms_search_url() method.
+        """
+        return "body_is_regex=1&body="
+
+    def ms_search_url(self):
+        """
+        Return URL to use for Metasmoke search.
+
+        Subclasses will want to override the _ms_search_url_tail method.
+        """
+        return 'https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{0}'.format(
+            self._ms_search_url_tail())
+
+
+class WatchMixin:
+    """
+    Mixin to create watch behavior from a base class
+    """
+    def _watch_not_reject_reasons(self):
+        return ["potentially bad keyword"]
+
+    def watchtype(self):
+        return True
+
+
+class UserMixin:
+    """
+    Mixin to create username class behavior from a base class
+    """
+    def _ms_search_url_tail(self):
+        return "username_is_regex=1&username="
+
+
+class NetMixin:
+    """
+    Mixin for net resources (hostname labels, IP addresses, etc)
+    """
+    def regextype(self):
+        return False
+
+
+class PhoneMixin(NetMixin):
+    """
+    Mixin to create phone number class behavior from a base class
+    """
+    def additional_filtered_out_reasons(self):
+        return ["mostly non-latin", "phone number detected",
+                "messaging number detected"]
+
+    def numbertype(self):
+        return True
+
+    def _ms_search_url_tail(self):
+        return "body="
+
+
+class Watchlist(WatchMixin, Blacklist):
+    pass
+
+
+class UserBlacklist(UserMixin, Blacklist):
+    pass
+
+
+class UserWatchlist(UserMixin, WatchMixin, Blacklist):
+    pass
+
+
+class NetBlacklist(NetMixin, Blacklist):
+    pass
+
+
+class NetWatchlist(NetMixin, WatchMixin, Blacklist):
+    pass
+
+
+class PhoneBlacklist(PhoneMixin, Blacklist):
+    pass
+
+
+class PhoneWatchlist(PhoneMixin, WatchMixin, Blacklist):
+    pass
+
+
+'''
+if __name__ == '__main__':
+    load_blacklists()
+    blacklist_id = Blacklist.resolve('watch-ip')
+    print(blacklist_id)
+    blacklister = GlobalVars.git_black_watch_lists[blacklist_id]
+    exists, line = blacklister.exists('103.10.200.62')
+    print(exists, line)
+    print('****')
+# """
+    for name, bwlist in GlobalVars.git_black_watch_lists.items():
+        print('{0} type: {1}'.format(name, type(bwlist)))
+        for method in ('regextype', 'numbertype', 'watchtype', 'not_reject_reasons'):
+            print('{0}.{1}() = {2}'.format(bwlist.filename(), method, getattr(bwlist, method)()))
+        for item in bwlist.each():
+            print('each[0]: %r' % item)
+            break
+'''
