@@ -19715,3 +19715,4 @@
 1587742947	Machavity	uvgullascollegeofmedicine\.in
 1587743123	Machavity	adingmovie\.com
 1587744426	Machavity	^techmartin$
+1587744671	Machavity	makeanexam\.com
