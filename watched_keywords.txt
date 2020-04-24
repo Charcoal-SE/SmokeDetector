@@ -19221,7 +19221,6 @@
 1586156650	tripleee	woodenwand\.org
 1586156677	tripleee	21[\W_]*+dukes
 1586011935	Jenayah	hostbring\.com
-1586157339	tripleee	suavebesto\.com
 1586157566	tripleee	swaransoft\.com
 1586157595	tripleee	swaran[\W_]*+soft(?!\.com)
 1586157975	tripleee	nested-consultants\.com
