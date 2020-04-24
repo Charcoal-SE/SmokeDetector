@@ -19714,3 +19714,4 @@
 1587741512	Machavity	rapprogtrain\.com
 1587742947	Machavity	uvgullascollegeofmedicine\.in
 1587743123	Machavity	adingmovie\.com
+1587744426	Machavity	^techmartin$
