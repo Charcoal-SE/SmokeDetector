@@ -19704,3 +19704,4 @@
 1587708188	Makyen	arenash\.com
 1587712411	tripleee	ajna[\W_]*+digital
 1587713886	tripleee	booktaxiairport\.blogspot\.com
+1587727171	Makyen	orientdetectors\.com
