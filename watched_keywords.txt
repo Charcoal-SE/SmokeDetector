@@ -19702,3 +19702,4 @@
 1587702949	tripleee	tăng cường sinh lý nam
 1587704456	Shree	greenbati\.com
 1587708188	Makyen	arenash\.com
+1587712411	tripleee	ajna[\W_]*+digital
