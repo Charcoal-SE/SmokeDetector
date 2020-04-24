@@ -1514,7 +1514,7 @@ jovian\W?chile
 clipping\W?path\W?(?:service|quick)
 stendora(?:\W?garcinia)?\w*+
 active\W?life\W?detox
-bio\W?x(?:\W?garcinia)?
+bio[\W_]*+x(?<!bio\s*+\(x)(?! 3700(?<=biox 3700))(?:[\W_]*+(?:garcinia|face|mask|review|keto|elan|genic|[yi]n|\d++|[\da-f]{4,}+)s?)*
 ionicx\W?testo
 bhadanazz
 illuminatikingdom\d*+(?:@gmail\.com)?
@@ -1529,7 +1529,6 @@ revitalize\W?serum
 pro\W?keto(?:\W?rx)?
 derma\W*correct
 teal\W*farms
-bio\W?x
 ultimate\W?test\W?max
 houston-tx/regenerative-medicine/
 paltrox(?:\W*(?:t|rx))?
