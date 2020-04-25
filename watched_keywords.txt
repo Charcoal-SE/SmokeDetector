@@ -19745,3 +19745,4 @@
 1587837808	Makyen	abcnewstime\.com
 1587837832	Makyen	listofjobtitles\.com
 1587837866	Makyen	(?-i:zB4MJzW_260)(?#YouTube)
+1587837893	Makyen	first[\W_]*+person[\W_]*+science(?!\.com(?<=firstpersonscience\.podbean\.com))(?:[\W_]*+(?:podcast|\d++|[\da-f]{4,}+))*
