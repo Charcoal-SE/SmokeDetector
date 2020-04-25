@@ -19742,3 +19742,4 @@
 1587823956	Zoe	resurge\W*(?:review|pills)
 1587828675	Makyen	(?-i:OpenAIresearch)(?<=bit\.ly/OpenAIresearch)
 1587837450	Jenayah	scaffoldingkb\.co\.uk
+1587837808	Makyen	abcnewstime\.com
