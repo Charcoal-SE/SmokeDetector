@@ -19743,3 +19743,4 @@
 1587828675	Makyen	(?-i:OpenAIresearch)(?<=bit\.ly/OpenAIresearch)
 1587837450	Jenayah	scaffoldingkb\.co\.uk
 1587837808	Makyen	abcnewstime\.com
+1587837832	Makyen	listofjobtitles\.com
