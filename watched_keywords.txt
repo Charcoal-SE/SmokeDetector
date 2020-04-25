@@ -19741,3 +19741,4 @@
 1587823557	Zoe	kibocode\.co
 1587823956	Zoe	resurge\W*(?:review|pills)
 1587828675	Makyen	(?-i:OpenAIresearch)(?<=bit\.ly/OpenAIresearch)
+1587837450	Jenayah	scaffoldingkb\.co\.uk
