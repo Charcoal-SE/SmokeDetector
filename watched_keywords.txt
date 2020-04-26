@@ -19774,3 +19774,4 @@
 1587912286	double-beep	videochatgirls\.net
 1587912877	double-beep	styleyoursmile\.ch
 1587921236	Makyen	ielts\.bc
+1587921505	Makyen	ielts\.net(?:@yahoo\.com)?
