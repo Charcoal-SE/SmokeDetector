@@ -19767,3 +19767,4 @@
 1587900261	Makyen	iamcuckold\.github\.io
 1587900293	Makyen	loves-spells\.com
 1587901125	Makyen	ovhcloud\.com
+1587901607	Makyen	blood[\W_]*+balance[\W_]*+formula[\W_]*+pills(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
