@@ -19759,3 +19759,4 @@
 1587888202	tripleee	aqari\.app
 1587890123	Zoe	muzei\.club
 1587900071	Makyen	diysbest\.com
+1587900098	Makyen	ozona[\W_]*+life[\W_]*+cbd(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
