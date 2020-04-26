@@ -19782,3 +19782,4 @@
 1587925486	Makyen	mespressinfo\.com
 1587925611	Glorfindel	cenpostmedia\.com
 1587926089	Makyen	whopills\.com
+1587926967	Makyen	tempwatch
