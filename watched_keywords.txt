@@ -19761,3 +19761,4 @@
 1587900071	Makyen	diysbest\.com
 1587900098	Makyen	ozona[\W_]*+life[\W_]*+cbd(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1587900125	Makyen	spampussypics
+1587900174	Makyen	(?-i:0wrgl\.jpg)
