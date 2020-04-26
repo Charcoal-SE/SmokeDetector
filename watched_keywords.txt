@@ -19275,7 +19275,6 @@
 1586326148	tripleee	t3terminal\.com
 1586330968	tripleee	tricksnyou\.com
 1586332839	tripleee	raletta[\W_]*+technology
-1586333020	tripleee	corona[\W_]*+millionaire
 1586337673	tripleee	eduiconbd\.com
 1586337710	tripleee	huvleview\.com
 1586337842	tripleee	gmail[\W_]*+(?:dot[\W_]*+)?com(?<!gmail\.com)

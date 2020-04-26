@@ -2270,3 +2270,4 @@ unichrone(?!\.(?:com|net))
 thermosense[\W_]*+thermometer(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 ieltswithoutexam\W*(?:at\W*)?yahoo\W*(?:dot\W*)?com
 ielts\W*+legit\W*(?:at\W*)?yahoo\W*(?:dot\W*)?com
+corona[\W_]*+millionaire
