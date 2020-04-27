@@ -19785,3 +19785,4 @@
 1587932174	Glorfindel	zoomscred\.com
 1587961430	tripleee	wuxiaworld\.online
 1587963322	tripleee	cinemapoker\.online
+1587963631	tripleee	cinema[\W_]*+poker(?![\W_]*+online)
