@@ -534,6 +534,9 @@ items:
   - pablo.ns.cloudflare.com.
   - pola.ns.cloudflare.com.
 - ns:
+  - princess.ns.cloudflare.com.
+  - rene.ns.cloudflare.com.
+- ns:
   - rita.ns.cloudflare.com.
   - rocky.ns.cloudflare.com.
 - ns:
