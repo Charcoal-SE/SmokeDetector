@@ -19669,7 +19669,6 @@
 1587631291	Makyen	revenueriver\.co
 1587632259	Makyen	zbtechs\.com
 1587634801	tripleee	jarvisqqpkv\.website
-1587634826	tripleee	pkv[\W_]*+games
 1587637842	Shree	galaxyeducationalservices\.com
 1587651716	Makyen	uniqueielts(?:@yahoo\.com)?
 1587651749	Makyen	modifyieltswithoutexam\.com
