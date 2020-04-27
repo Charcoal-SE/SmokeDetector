@@ -42,6 +42,7 @@ groups:
       - WELZ-gh
       - DasGeek
       - EliahKagan
+      - Daniil-M-beep
     author_approval:
       ignored: true
     reject_value: -1
