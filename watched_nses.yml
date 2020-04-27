@@ -480,6 +480,9 @@ items:
   - lex.ns.cloudflare.com.
   - tori.ns.cloudflare.com.
 - ns:
+  - lia.ns.cloudflare.com.
+  - pete.ns.cloudflare.com.
+- ns:
   - lily.ns.cloudflare.com.
   - wesley.ns.cloudflare.com.
 - ns:
