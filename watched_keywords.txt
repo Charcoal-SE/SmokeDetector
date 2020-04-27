@@ -19815,3 +19815,4 @@
 1588013385	double-beep	lemonyblog\.com
 1588030291	Makyen	gbojiespiritualtemple\.website2\.me
 1588030317	Makyen	gbojiespiritualtemple(?!\.website2\.me)(?:@(?:gmail|yahoo)\.com)?
+1588030344	Makyen	(?-i:NTImt6dLxo4)(?#youtu.be)
