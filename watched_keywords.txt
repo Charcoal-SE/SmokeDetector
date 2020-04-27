@@ -19799,3 +19799,4 @@
 1587987650	tripleee	roridoll\d*+(?!\.com)
 1587987614	Daniil	cmsfinance\.com
 1587987726	tripleee	printerfaq\.com
+1587987901	tripleee	rodsbooks\.com
