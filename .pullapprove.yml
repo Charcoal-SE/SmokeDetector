@@ -43,6 +43,7 @@ groups:
       - DasGeek
       - EliahKagan
       - Daniil-M-beep
+      - rschrieken
     author_approval:
       ignored: true
     reject_value: -1
