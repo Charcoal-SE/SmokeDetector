@@ -1975,7 +1975,7 @@ create_rule("bad keyword in {}", r"(?is)roof repair",
             sites=["diy.stackexchange.com", "outdoors.stackexchange.com", "mechanics.stackexchange.com"],
             stripcodeblocks=True, body_summary=True, max_rep=11)
 # Bad keywords (only include link at end sites + SO, the other sites give false positives for these keywords)
-create_rule("bad keyword in {}", r"(?i)(?<!truth )serum|\b(?<!to )supplements\b", all=False,
+create_rule("bad keyword in {}", r"(?i)serum(?<!truth serum)|\bsupplements(?<!to supplements)\b", all=False,
             sites=["stackoverflow.com", "superuser.com", "askubuntu.com", "drupal.stackexchange.com",
                    "meta.stackexchange.com", "security.stackexchange.com", "webapps.stackexchange.com",
                    "apple.stackexchange.com", "graphicdesign.stackexchange.com", "workplace.stackexchange.com",
