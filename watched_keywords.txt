@@ -19833,3 +19833,4 @@
 1588079049	Glorfindel	opendllfiles\.com
 1588079281	Makyen	apoganablackmagic\.com
 1588079326	Makyen	apoganalovespell(?:@gmail\.com)?
+1588079947	Daniil	aajithinfotech@gmail\.com
