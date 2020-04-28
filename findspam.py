@@ -1942,17 +1942,17 @@ create_rule("potentially bad keyword in {}", r'^v\w{3,5}\Wkumar$',
 create_rule("bad keyword in {}", r"(?is)\beltima(?<=^(?=.{0,750}$).*)",
             title=False, max_rep=50)
 create_rule("bad keyword in {}",
-            r"(?i)\b((beauty|skin|health|face|eye)[- ]?(serum|therapy|hydration|tip|renewal|shop|store|lyft|"
-            r"product|strateg(y|ies)|gel|lotion|cream|treatment|method|school|expert)|fat ?burn(er|ing)?|"
-            r"muscle|testo ?[sx]\w*|body ?build(er|ing)|wrinkle|probiotic|acne|peni(s|le)|erection)s?\b|"
-            r"(beauty|skin) care\b",
+            r"(?i)\b(?:(?:beauty|skin|health|face|eye)[- ]?(?:serum|therapy|hydration|tip|renewal|shop|store|lyft|"
+            r"product|strateg(?:y|ies)|gel|lotion|cream|treatment|method|school|expert)|fat ?burn(?:er|ing)?|"
+            r"muscle|testo ?[sx]\w*|body ?build(?:er|ing)|wrinkle|probiotic|acne|peni(?:s|le)|erection)s?\b|"
+            r"(?:beauty|skin) care\b",
             sites=["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
                    "skeptics.stackexchange.com", "robotics.stackexchange.com", "blender.stackexchange.com"],
             body=False)
 # Bad health-related keywords in titles and posts, health sites are exempt
 create_rule("bad keyword in {}",
-            r"(?is)virility|diet ?(plan|pill)|serum|\b(pro)?derma(?=[a-su-z\W]\w)|(fat|(?<!dead[ -]?)weight)"
-            r"[ -]?(loo?s[es]|reduction)|loo?s[es] ?weight|erectile|\bherpes\b|colon ?(detox|clean)|\bpenis\b",
+            r"(?is)virility|diet ?(?:plan|pill)|serum|\b(?:pro)?derma(?=[a-su-z\W]\w)|(?:fat|(?<!dead[ -]?)weight)"
+            r"[ -]?(?:loo?s[es]|reduction)|loo?s[es] ?weight|erectile|\bherpes\b|colon ?(?:detox|clean)|\bpenis\b",
             sites=["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
                    "skeptics.stackexchange.com", "bicycles.stackexchange.com", "islam.stackexchange.com",
                    "pets.stackexchange.com", "parenting.stackexchange.com"],
