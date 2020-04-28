@@ -305,3 +305,4 @@ lustresparasala
 (?-i:^jammerwelt$)
 (?-i:^Cogniscient Business Solutions$)
 (?-i:^ronanjenifer$)
+(?-i:^Learn Golf Online$)
