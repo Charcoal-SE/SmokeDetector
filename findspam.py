@@ -1951,8 +1951,9 @@ create_rule("bad keyword in {}",
             body=False)
 # Bad health-related keywords in titles and posts, health sites are exempt
 create_rule("bad keyword in {}",
-            r"(?is)virility|diet ?(?:plan|pill)|serum|\b(?:pro)?derma(?=[a-su-z\W]\w)|(?:fat|(?<!dead[ -]?)weight)"
-            r"[ -]?(?:loo?s[es]|reduction)|loo?s[es] ?weight|erectile|\bherpes\b|colon ?(?:detox|clean)|\bpenis\b",
+            r"(?is)virility|diet ?(?:plan|pill)|serum|\b(?:pro)?derma(?=[a-su-z\W]\w)"
+            r"|(?:fat|weight(?<!dead[ -]?weight))[ -]?(?:loo?s[es]|reduction)|loo?s[es] ?weight"
+            r"|erectile|\bherpes\b|colon ?(?:detox|clean)|\bpenis\b",
             sites=["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
                    "skeptics.stackexchange.com", "bicycles.stackexchange.com", "islam.stackexchange.com",
                    "pets.stackexchange.com", "parenting.stackexchange.com"],
