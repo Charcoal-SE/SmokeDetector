@@ -651,8 +651,9 @@ items:
 - ns: stupidblogger.com.
 - ns: omnilinks.net.
 - ns: servconfig.com.
-- comment: unlike siteground.asia, this gets significant FPs, but also some weight 1
+- comment: unlike siteground.asia, this gets significant FPs, but also some weight 1; see also subdomains
   ns: siteground.biz.
+- ns: m76.siteground.biz.
 - ns: cetpainfotech.com.
 - comment: no longer responding 2020-04-02
   disable: true
