@@ -2273,3 +2273,4 @@ ielts\W*+legit\W*(?:at\W*)?yahoo\W*(?:dot\W*)?com
 corona[\W_]*+millionaire
 pkv[\W_]*+games
 situs[\W_]*+judi
+rlx[\W_]*+male
