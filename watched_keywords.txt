@@ -19855,3 +19855,4 @@
 1588138121	Makyen	pcheckup\.com
 1588139143	Makyen	china-xingsheng\.net
 1588140299	Makyen	jitutogel\.net
+1588142822	Makyen	invigor[\W_]*+max(?:[\W_]*+(?:testosterone|\d++|[\da-f]{4,}+))*
