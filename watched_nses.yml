@@ -106,6 +106,9 @@ items:
   - art.ns.cloudflare.com.
   - sharon.ns.cloudflare.com.
 - ns:
+  - arya.ns.cloudflare.com.
+  - paul.ns.cloudflare.com.
+- ns:
   - asa.ns.cloudflare.com.
   - plato.ns.cloudflare.com.
 - ns:
