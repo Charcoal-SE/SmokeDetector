@@ -19863,3 +19863,4 @@
 1588152236	tripleee	abidalli\.com
 1588154245	Makyen	toolinspector\.com
 1588156247	tripleee	retailclouds\.com
+1588156286	tripleee	retail[\W_]*+cloud(?!\.com)s?\d*
