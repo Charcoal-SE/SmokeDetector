@@ -19875,3 +19875,4 @@
 1588168534	Makyen	virtus[\W_]*+strong(?:[\W_]*+(?:ca|canada|\d++|[\da-f]{4,}+))*
 1588169639	Makyen	(?-i:digitalmaina)(?#fiverr.com)
 1588173226	Machavity	(?-i:zuJt_lhACG8)
+1588173468	Machavity	tantrainsights\.com
