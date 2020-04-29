@@ -450,6 +450,9 @@ items:
   - kip.ns.cloudflare.com.
   - vita.ns.cloudflare.com.
 - ns:
+  - koa.ns.cloudflare.com.
+  - lila.ns.cloudflare.com.
+- ns:
   - kurt.ns.cloudflare.com.
   - nina.ns.cloudflare.com.
 - ns:
