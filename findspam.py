@@ -1949,14 +1949,28 @@ create_rule("bad keyword in {}",
             sites=["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
                    "skeptics.stackexchange.com", "robotics.stackexchange.com", "blender.stackexchange.com"],
             body=False)
-# Bad health-related keywords in titles and posts, health sites are exempt
+# Bad health-related keywords in titles and posts, health sites and SciFi are exempt
+# If you change some here, you should look at changing these for SciFi in the two below.
 create_rule("bad keyword in {}",
             r"(?is)virility|diet ?(?:plan|pill)|serum|\b(?:pro)?derma(?=[a-su-z\W]\w)"
             r"|(?:fat|weight(?<!dead[ -]?weight))[ -]?(?:loo?s[es]|reduction)|loo?s[es] ?weight"
             r"|erectile|\bherpes\b|colon ?(?:detox|clean)|\bpenis\b",
             sites=["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
                    "skeptics.stackexchange.com", "bicycles.stackexchange.com", "islam.stackexchange.com",
-                   "pets.stackexchange.com", "parenting.stackexchange.com"],
+                   "pets.stackexchange.com", "parenting.stackexchange.com", "scifi.stackexchange.com"],
+            body_summary=True, stripcodeblocks=True)
+# For SciFi, split the health-related keywords in titles and posts into "bad" and "potentially bad", and ignore "serum"
+create_rule("bad keyword in {}",
+            r"(?is)virility|diet ?(?:plan|pill)|\b(?:pro)?derma(?=[a-su-z\W]\w)"
+            r"|fat[ -]?(?:loo?s[es]|reduction)"
+            r"|erectile|\bherpes\b|colon ?(?:detox|clean)",
+            sites=["scifi.stackexchange.com"],
+            body_summary=True, stripcodeblocks=True)
+create_rule("potentially bad keyword in {}",
+            r"(?is)"
+            r"weight(?<!dead[ -]?weight)[ -]?(?:loo?s[es]|reduction)|loo?s[es] ?weight"
+            r"|\bpenis\b",
+            sites=["scifi.stackexchange.com"],
             body_summary=True, stripcodeblocks=True)
 # Korean character in title: requires 3
 create_rule("Korean character in {}", r"(?i)\p{Script=Hangul}.*\p{Script=Hangul}.*\p{Script=Hangul}",
