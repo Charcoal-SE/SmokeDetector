@@ -19884,3 +19884,4 @@
 1588214645	Makyen	bugbountyhacker(?:@protonmail\.com)?
 1588221160	tripleee	custom[\W_]*+boxes
 1588221216	tripleee	bexo
+1588223712	tripleee	cycheatpoker\.com
