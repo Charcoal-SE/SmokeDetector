@@ -19889,3 +19889,4 @@
 1588238607	tripleee	gemeiwaterpurifier\.com
 1588239853	Mithical	mt\.gox
 1588247283	Daniil	trakop\.com
+1588247514	Makyen	fleek[\W_]*+it[\W_]*+solutions(?!\.com(?<=fleekitsolutions\.com))
