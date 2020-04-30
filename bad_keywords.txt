@@ -1366,7 +1366,7 @@ premier\W?diet(?:\W?keto)?
 intelliboost\W?iq
 delhi\W*+escort
 sphere\W?labs
-epson-printer
+epson-printer(?!-utility)
 norton-setup
 luminary\W?v
 rose\W?diamond(?:\W?beauty)?
