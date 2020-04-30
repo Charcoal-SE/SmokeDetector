@@ -19883,3 +19883,4 @@
 1588207194	Makyen	freedom[\W_]*+mask(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1588214645	Makyen	bugbountyhacker(?:@protonmail\.com)?
 1588221160	tripleee	custom[\W_]*+boxes
+1588221216	tripleee	bexo
