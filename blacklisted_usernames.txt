@@ -306,3 +306,4 @@ lustresparasala
 (?-i:^Cogniscient Business Solutions$)
 (?-i:^ronanjenifer$)
 (?-i:^Learn Golf Online$)
+(?-i:^Ajna Digital$)
