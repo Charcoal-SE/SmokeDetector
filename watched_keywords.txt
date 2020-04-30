@@ -17675,7 +17675,7 @@
 1582114191	Eliah Kagan	thewebigirl\.com
 1582114392	Daniil Manokhin	procvaustralia\.com
 1582122064	Eliah Kagan	igpublicalert\.ga
-1582122508	Eliah Kagan	dragonhaze(?:@protonmail\.ch)?
+1582122508	Eliah Kagan	dragonhaze(?!$)(?:@protonmail\.ch)?
 1582133564	Eliah Kagan	texspert\.com
 1582134690	Eliah Kagan	insightfuldynamics\.co\.uk
 1582143861	Das_Geek	writingdiversely\.com
