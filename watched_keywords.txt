@@ -19881,3 +19881,4 @@
 1588186705	Makyen	apktvi
 1588207170	Makyen	deletevideofromyoutube\.com
 1588207194	Makyen	freedom[\W_]*+mask(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1588214645	Makyen	bugbountyhacker(?:@protonmail\.com)?
