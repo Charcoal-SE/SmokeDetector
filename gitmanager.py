@@ -299,9 +299,11 @@ class GitManager:
             raise ConnectionError("Cannot connect to GitHub API")
         pr_info = response.json()
         if pr_info["user"]["login"] != "SmokeDetector":
-            raise ValueError("PR #{} is not created by me, so I can't approve it".format(pr_id))
+            raise ValueError("PR #{} is not created by me, so I can't approve it.".format(pr_id))
         if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
-            raise ValueError("PR description is malformed. Blame a developer")
+            raise ValueError("PR description is malformed. Blame a developer.")
+        if pr_info["state"] != "open":
+            raise ValueError("PR #{} is not currently open, so I won't merge it.".format(pr_id))
         ref = pr_info['head']['ref']
 
         if comment:  # yay we have comments now
