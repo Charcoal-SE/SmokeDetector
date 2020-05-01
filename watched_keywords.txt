@@ -19694,7 +19694,7 @@
 1587702949	tripleee	tăng cường sinh lý nam
 1587704456	Shree	greenbati\.com
 1587708188	Makyen	arenash\.com
-1587712411	tripleee	ajna[\W_]*+digital
+1587712411	tripleee	ajna[\W_]*+digital(?!$(?<=(?-i:^Ajna Digital$)))
 1587713886	tripleee	booktaxiairport\.blogspot\.com
 1587727171	Makyen	orientdetectors\.com
 1587731494	Machavity	beyoung\.in
