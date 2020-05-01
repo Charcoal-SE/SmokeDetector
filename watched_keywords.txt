@@ -19934,3 +19934,4 @@
 1588316888	Makyen	flash-file\.info
 1588316915	Makyen	drkreidstein\.com
 1588316977	Makyen	carmanuals\.org
+1588317003	Makyen	magneticuniverse\.com
