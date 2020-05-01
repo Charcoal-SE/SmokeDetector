@@ -1425,7 +1425,7 @@
 1510399882	Glorfindel	361online
 1510401507	Glorfindel	elzool\.com
 1510407666	tripleee	medvedtrader\.com
-1510408047	tripleee	(?<=/)dmp[-/<"]
+1510408047	tripleee	dmp[\W_]*+(?:male|enhancement|review)(?:[\W_]*+(?:male|enhancement|review|\d++|[\da-f]{4,}+))*
 1510434742	Mithrandir	firstlibertyloans\.com
 1510434996	Mithrandir	hempsoftgels\.com
 1510435120	Mithrandir	make\W?money\W?online
