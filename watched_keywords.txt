@@ -19936,3 +19936,4 @@
 1588316977	Makyen	carmanuals\.org
 1588317003	Makyen	magneticuniverse\.com
 1588317028	Makyen	(?-i:username_to_id_bot)(?#t.me)
+1588318687	Makyen	assignment[\W_]*+writing(?:[\W_]*+(?:compan(?:y|ie)|service|\d++|[\da-f]{4,}+)s?)*
