@@ -19938,3 +19938,4 @@
 1588317028	Makyen	(?-i:username_to_id_bot)(?#t.me)
 1588318687	Makyen	assignment[\W_]*+writing(?:[\W_]*+(?:compan(?:y|ie)|service|\d++|[\da-f]{4,}+)s?)*
 1588318711	Makyen	gkquestionhindi\.in
+1588319194	Makyen	richardwolf89(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
