@@ -19948,3 +19948,4 @@
 1588327006	Makyen	sabflix\.com
 1588327937	Makyen	(?-i:^Amna$)
 1588329179	Glorfindel	ninistutor\.com
+1588332957	Daniil	cyber\.lord1010@gmail\.com
