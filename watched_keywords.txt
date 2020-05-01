@@ -19919,3 +19919,4 @@
 1588316283	Makyen	(?-i:7v9kWpHHDIo)(?#youtu.be)
 1588316309	Makyen	gcmsnotes\.com
 1588316335	Makyen	caipsnotes\.com
+1588316365	Makyen	primary[\W_]*+organics[\W_]*+cbd(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
