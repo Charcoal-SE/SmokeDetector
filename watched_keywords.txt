@@ -5295,7 +5295,7 @@
 1536325517	Glorfindel	2software\.net
 1536332129	Glorfindel	codegym\.cc
 1536336672	Makyen	npntraining\.com
-1536352098	Makyen	\W*\$2,000,000\.00
+1536352098	Makyen	\W*+2,000,000(?<=\$\W*2,000,000)(?:\.00)?(?#Common in illuminati spam)
 1536373569	Makyen	dev\.scottsbasslessons\.com
 1536377232	iBug	lovesurvivorandlustsprovider(?:@gmail\.com)?
 1536384862	iBug	techtanic\.com
