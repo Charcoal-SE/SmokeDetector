@@ -264,6 +264,8 @@ def get_test_text_from_regex(pattern):
     :param A string:
     :return: A string
     """
+    # Handle a specific common pattern that's now matched by a watch for obfuscated gmail.com.
+    pattern = pattern.replace(r"(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?", "@gmail.com")
     pattern = regex.sub(r"(?<!\\)\(\?\#[^\)]*\)", "", pattern)  # Remove comments: comments can have no nested ()
     pattern = regex.sub(r"(?<!\\)\[\\W_\][*?+]*", "-", pattern)  # Replace typical sets
     pattern = regex.sub(r"(?<!\\)\[\\da-f\]\{4,\}+?", "0123", pattern)  # Replace typical sets
