@@ -19986,3 +19986,4 @@
 1588456262	Makyen	(?-i:W3nagpYyXQ8)(?#YouTube)
 1588456287	Makyen	(?-i:x97uFKXceyE)(?#YouTube)
 1588459150	Makyen	priest[\W_]*+akpoka
+1588459171	Makyen	akpokaidristhegreatspellcaster(?:@gmail\.com)?
