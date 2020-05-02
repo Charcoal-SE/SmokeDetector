@@ -19981,3 +19981,4 @@
 1588445799	Makyen	keto[\W_]*+genix(?:[\W_]*+(?:pills|uk|\d++|[\da-f]{4,}+))*
 1588445828	Makyen	tophealthbrand\.wordpress\.com
 1588445880	Makyen	haadii2005(?:@gmail\.com)?
+1588445908	Makyen	mohamedelauzei(?:@gmail\.com)?
