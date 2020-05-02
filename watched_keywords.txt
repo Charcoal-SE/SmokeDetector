@@ -19975,3 +19975,4 @@
 1588444242	Makyen	online[\W_]*+free[\W_]*+pharmacy(?<!onlinefreepharmacy)(?:[\W_]*+(?:shop|\d++|[\da-f]{4,}+))*
 1588445569	Makyen	holygrailfutures\.com
 1588445595	Makyen	abcdefghijklmnopqrstuvwxyz0123456789\.org
+1588445661	Makyen	freshprimeketosis\.wixsite\.com
