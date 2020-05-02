@@ -219,6 +219,11 @@ def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
     if is_phone:
         filter_out.extend(["mostly non-latin", "phone number detected", "messaging number detected"])
 
+    # Filter out some reasons which commonly find the things added to the watch/blacklists
+    # If these are detected, then the user should almost always -force. Showing them gets people too used
+    # to just automatically using -force. Maybe a better UX strategy would be to have other reasons shown in bold.
+    filter_out.extend(["pattern-matching email", "pattern-matching website", "bad keyword with email",
+                       "bad ns for domain", "bad ip for hostname"])
     if filter_out:
         reasons = [reason for reason in reasons if all([x not in reason.lower() for x in filter_out])]
 
