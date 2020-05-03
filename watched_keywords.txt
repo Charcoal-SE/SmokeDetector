@@ -19991,3 +19991,4 @@
 1588466488	Makyen	mycryptoparadise\.com
 1588476684	Makyen	otherapk\.com
 1588481498	Makyen	d(?:octo)?r[\W_]*+ekpen
+1588482628	Makyen	(?-i:if745CpIr_Y)(?#youtu.be)
