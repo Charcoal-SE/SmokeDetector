@@ -20014,3 +20014,4 @@
 1588528342	Nisse Engström	sultanpoker\.org
 1588528395	Glorfindel	coupondip\.in
 1588528421	Nisse Engström	sultanpoker\.xyz
+1588528518	Makyen	sultan[\W_]*+poker(?!\.xyz(?<=sultanpoker\.xyz))(?!\.org(?<=sultanpoker\.org))
