@@ -19990,3 +19990,4 @@
 1588461350	Makyen	mhtrade\.herokuapp\.com
 1588466488	Makyen	mycryptoparadise\.com
 1588476684	Makyen	otherapk\.com
+1588481498	Makyen	d(?:octo)?r[\W_]*+ekpen
