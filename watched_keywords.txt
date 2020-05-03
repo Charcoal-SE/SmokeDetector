@@ -20016,3 +20016,4 @@
 1588528421	Nisse Engström	sultanpoker\.xyz
 1588528518	Makyen	sultan[\W_]*+poker(?!\.xyz(?<=sultanpoker\.xyz))(?!\.org(?<=sultanpoker\.org))
 1588531142	Makyen	themaidsservices\.com
+1588531226	Makyen	window[\W_]*+washing[\W_]*+company
