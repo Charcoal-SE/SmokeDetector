@@ -23,6 +23,9 @@ items:
   - burt.ns.cloudflare.com.
   - naomi.ns.cloudflare.com.
 - ns:
+  - cass.ns.cloudflare.com.
+  - justin.ns.cloudflare.com.
+- ns:
   - chip.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
 - ns:
