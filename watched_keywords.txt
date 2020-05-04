@@ -20028,3 +20028,4 @@
 1588557666	Makyen	fitandsafety\.com
 1588557689	Makyen	programmershelpdes\.wixsite\.com
 1588557715	Makyen	(?-i:honestman27)(?#t.me)
+1588564514	Makyen	e[\W_]*+m[\W_]*+global[\W_]*+insurance
