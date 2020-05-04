@@ -96,5 +96,27 @@ def test_yaml_asn():
 
 
 def test_yaml_nses():
+    with open('test_nses.yml', 'w') as y:
+        yaml.dump({
+            'Schema': 'yaml_ns',
+            'Schema_version': '2019120601',
+            'items': [
+                {'ns': 'example.com.'},
+                {'ns': 'example.net.', 'disable': True},
+                {'ns': 'example.org.', 'comment': 'comment'},
+            ]}, y)
+    blacklist = Blacklist(('test_nses.yml', YAMLParserNS))
+    assert 'example.com.' in blacklist.parse()
+    assert 'EXAMPLE.COM.' not in blacklist.parse()
+    with pytest.raises(ValueError) as e:
+        blacklist.add({'ns': 'example.com.'})
+    with pytest.raises(ValueError) as e:
+        blacklist.add({'ns': 'EXAMPLE.COM.'})
+    assert 'example.net.' not in blacklist.parse()
+    assert 'example.org.' in blacklist.parse()
+    blacklist.remove({'ns': 'example.org.'})
+    assert 'example.org.' not in blacklist.parse()
+    unlink('test_nses.yml')
+
     yaml_validate_existing('blacklisted_nses.yml', YAMLParserNS)
     yaml_validate_existing('watched_nses.yml', YAMLParserNS)

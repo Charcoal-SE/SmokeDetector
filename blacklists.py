@@ -42,9 +42,16 @@ class BlacklistParser:
 
 
 class BasicListParser(BlacklistParser):
+    def _normalize(self, input):
+        """
+        Wrapper to normalize a value. Default method just calls .rstrip()
+        """
+        return input.rstrip()
+
     def parse(self):
         with open(self._filename, 'r', encoding='utf-8') as f:
-            return [line.rstrip() for line in f if len(line.rstrip()) > 0 and line[0] != '#']
+            return [self._normalize(line)
+                    for line in f if len(line.rstrip()) > 0 and line[0] != '#']
 
     def add(self, item: str):
         with open(self._filename, 'a+', encoding='utf-8') as f:
@@ -276,6 +283,12 @@ class YAMLParserNS(YAMLParserCIDR):
     """
     SCHEMA_VARIANT = 'yaml_ns'
     SCHEMA_PRIKEY = 'ns'
+
+    def _normalize(self, item):
+        """
+        Normalize to lower case
+        """
+        return item.rstrip().lower()
 
     def _validate(self, item):
         def item_check(ns):
