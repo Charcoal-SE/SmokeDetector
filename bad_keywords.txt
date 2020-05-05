@@ -2195,7 +2195,7 @@ moore\W*+finance
 shareit[\W_]++for[\W_]++pc
 vasoplexx
 Joyoshare
-satta[\W_]*+king
+satta[\W_]*+king(?!\.care)(?:[\W_]*+care)?
 (?:super\W*+)?vidalista
 susancampbel11(?#telegram)
 flexuline(?!-93\.webself\.net)(?:[\W_]*+(?:muscle|builder|\d++))*
