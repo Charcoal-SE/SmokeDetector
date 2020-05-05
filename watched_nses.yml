@@ -46,6 +46,9 @@ items:
   - ajay.ns.cloudflare.com.
   - lia.ns.cloudflare.com.
 - ns:
+  - ajay.ns.cloudflare.com.
+  - sima.ns.cloudflare.com.
+- ns:
   - alex.ns.cloudflare.com.
   - lana.ns.cloudflare.com.
 - ns:
