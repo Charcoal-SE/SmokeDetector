@@ -1882,27 +1882,6 @@ create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo
 create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo)$",
             title=False, body=False, username=True,
             max_rep=30, max_score=1)
-# Watch poo+p?(?:y|ie)?s? on The Workplace, due to a persistent spammer
-create_rule("potentially bad keyword in {}",
-            r"(?:"
-            r"(?is)(?:^|\b|(?w:\b))"  # Beging bookending
-            r"(?:poo+p?(?:y|ie|ed|er)?s?|piss+|pee+"
-            r"|(?:smash|slash|behead)(?:ing|ed)?|vandali[sz](ing|ed?)?)"
-            r"(?:\b|(?w:\b)|$)"  # End bookending
-            r")",
-            all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
-            username=True, body_summary=True,
-            max_rep=100, max_score=1)
-# Non-bookended watch for TWP of all-caps posts (currently without any other formatting than <p>).
-# This is a separate rule, because it will consume up to 100 characters, which, if not separate,
-# will tend to mask other watch matches which we want to show up separately in the why data.
-create_rule("potentially bad keyword in {}",
-            r"(?:"
-            r"(?-i:^(?:<p>[\sA-Z\d.,]{0,100}+)(?=[\sA-Z\d.,]*+<\/p>(?:\s*+<p>[\sA-Z\d.,]*+<\/p>)*$))"
-            r")",
-            all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
-            username=True, body_summary=True,
-            max_rep=100, max_score=1)
 
 # Bad keywords in titles and usernames, all sites
 create_rule("bad keyword in {}",
@@ -2217,6 +2196,7 @@ create_rule("blacklisted username",
             r"(?i)(?:"
             r"raise(?!oul(?<=^samuraiseoul)$)(?!r(?<=^indofraiser)$)(?!lvan(?<=^Santhosh Thamaraiselvan)$)"
             r"|^kilisi$|(?-i:KKK)|darkcygnus|JewsKilledOurLord|(?i:suck(?!s(?<=AgileSucks|ScrumSucks)))"
+            r"Matthew Gaiser"
             r")",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             title=False, body=False, username=True,
@@ -2232,6 +2212,59 @@ create_rule("bad keyword in {}",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=True,
             max_rep=100, max_score=1)
+# Watch poo+p?(?:y|ie)?s? on The Workplace, due to a persistent spammer
+create_rule("potentially bad keyword in {}",
+            r"(?:"
+            r"(?is)(?:^|\b|(?w:\b))"  # Beging bookending
+            r"(?:poo+p?(?:y|ie|ed|er)?s?|piss+|pee+"
+            r"|(?:smash|slash|behead)(?:ing|ed)?|vandali[sz](ing|ed?)?)"
+            r"(?:\b|(?w:\b)|$)"  # End bookending
+            r")",
+            all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
+            username=True, body_summary=True,
+            max_rep=100, max_score=1)
+# Non-bookended watch for TWP of all-caps posts (currently without any other formatting than <p>).
+# This is a separate rule, because it will consume up to 100 characters, which, if not separate,
+# will tend to mask other watch matches which we want to show up separately in the why data.
+create_rule("potentially bad keyword in {}",
+            r"(?:"
+            r"(?-i:^(?:<p>[\sA-Z\d.,]{0,100}+)(?=[\sA-Z\d.,]*+<\/p>(?:\s*+<p>[\sA-Z\d.,]*+<\/p>)*$))"
+            r")",
+            all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
+            username=True, body_summary=True,
+            max_rep=100, max_score=1)
+# TWP: Watch for the re-use of the usernames of the top 100 users by reputation.
+create_rule("potentially bad keyword in {}",
+            r"(?:"
+            r"Joe Strazzere|Kilisi|HLGEM|gnasher729|Kate Gregory|enderland"
+            r"|(?-i:^Neo$)"  # Too short/common, but the troll has used it.
+            r"|motosubatsu|bethlakshmi"
+            r"|Vietnhi Phuvan|nvoigt|Philip Kendall|Lilienthal|DarkCygnus|Wesley Long|DJClayworth|mhoran_psprep"
+            # r"|Monica Cellio"  # Too common
+            r"|AndreiROM|IDrinkandIKnowThings|Hilmar|Jane S|keshlam|dwizum|Chris E|Sourav Ghosh|Justin Cave"
+            r"|thursdaysgeek|sf02|paparazzo|Telastyn|The Wandering Dev Manager|berry120"
+            # r"|Myles"  # Too short/common
+            # r"|Erik"  # Too short/common
+            r"|Dan Pichelman|David K|Philipp|Stephan Branczyk"
+            # r"|rath"  # Too short/common
+            r"|Patricia Shanahan|Xavier J|O\. Jones|HorusKol|Magisch|PeteCon|NotMe|jcmeloni|mcknz"
+            # r"|Oded"  # Too short/common
+            r"|Kent A\.|blankip"
+            # r"|jmac"  # Too short/common
+            r"|GreenMatt|Gregory Currie|pdr|joeqwerty|maple_shaft|Matthew Gaiser"
+            # r"|Daniel"  # Too short/common
+            r"|Twyxz|BigMadAndy|teego1967|Ertai87|user1666620|Julia Hayward|alroc|Player One|kevin cline|Ben Barden"
+            # r"|Kevin"  # Too short/common
+            r"|virolino|solarflare|Fattie|Thomas Owens|sevensevens|jcmack|JB King"
+            # r"|Dan"  # Too short/common
+            r"|PagMax|bharal|SaggingRufus|Karl Bielefeldt|JohnHC|Ed Heal|Jim G\.|cdkMoose"
+            # r"|Peter"  # Too short/common
+            r"|MrFox|Bill Leeper|SZCZERZO KŁY|Tymoteusz Paul|mxyzplk - SE stop being evil|Sascha|Dawny33"
+            r"|A\. I\. Breveleri|Borgh|FrustratedWithFormsDesigner|Dukeling|jimm101"
+            r")",
+            all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
+            username=True, body_summary=False, body=False, title=False,
+            max_rep=93, max_score=1)
 
 
 FindSpam.reload_blacklists()
