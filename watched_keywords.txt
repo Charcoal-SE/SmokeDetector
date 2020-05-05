@@ -20051,3 +20051,4 @@
 1588627200	Makyen	2050136020365860
 1588632645	Makyen	drokitiherbalhome100(?:@gmail\.com)?
 1588632671	Makyen	d(?:octo)?r[\W_]*+okiti
+1588643495	Makyen	sabkadentist\.com
