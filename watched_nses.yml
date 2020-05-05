@@ -227,6 +227,9 @@ items:
   - jerry.ns.cloudflare.com.
 - ns:
   - cory.ns.cloudflare.com.
+  - nadia.ns.cloudflare.com.
+- ns:
+  - cory.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
 - ns:
   - curt.ns.cloudflare.com.
