@@ -2275,3 +2275,4 @@ pkv[\W_]*+games
 situs[\W_]*+judi
 rlx[\W_]*+male
 vital[\W_]*+alpha
+360digitmg(?!\.com)
