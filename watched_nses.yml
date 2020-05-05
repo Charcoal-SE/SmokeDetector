@@ -88,6 +88,9 @@ items:
   - anna.ns.cloudflare.com.
   - tim.ns.cloudflare.com.
 - ns:
+  - apollo.ns.cloudflare.com.
+  - michelle.ns.cloudflare.com.
+- ns:
   - arch.ns.cloudflare.com.
   - bella.ns.cloudflare.com.
 - ns:
