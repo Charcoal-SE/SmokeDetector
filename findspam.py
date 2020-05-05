@@ -1812,9 +1812,9 @@ city_list = [
     "Udaipur", "Uttarakhand",
     "Visakhapatnam", "Worli",
     # not in India
-    "Dubai", "Portland",
+    "Dubai", "Lusail", "Portland",
     # yes, these aren't cities but...
-    "India", "Pakistan",
+    "India", "Pakistan", "Qatar",
     # buyabans.com spammer uses creative variations
     "Sri Lanka", "Srilanka", "Srilankan",
 ]
