@@ -20075,3 +20075,4 @@
 1588668083	Makyen	msccruises\.co\.uk
 1588668115	Makyen	msc[\W_]*+cruises(?:[\W_]*+(?:uk|ltd|\d++|[\da-f]{4,}+))*
 1588675348	tripleee	qtriangle\.com
+1588675373	tripleee	(?-i:2L2v940)(?# bit.ly)
