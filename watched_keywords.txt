@@ -20082,3 +20082,4 @@
 1588677742	tripleee	utopia[\W_]*+n2n
 1588677770	tripleee	utopia[\W_]*+p2p
 1588679535	Daniil	egyptluxuryprivatetours\.com
+1588682948	tripleee	vervelogic\.com
