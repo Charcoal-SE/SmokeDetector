@@ -20079,3 +20079,4 @@
 1588675397	tripleee	buzznor\.com
 1588675654	tripleee	bestmonitorwithspeakers\.com
 1588675770	Glorfindel	speedysep\.com
+1588677742	tripleee	utopia[\W_]*+n2n
