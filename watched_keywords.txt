@@ -20076,3 +20076,4 @@
 1588668115	Makyen	msc[\W_]*+cruises(?:[\W_]*+(?:uk|ltd|\d++|[\da-f]{4,}+))*
 1588675348	tripleee	qtriangle\.com
 1588675373	tripleee	(?-i:2L2v940)(?# bit.ly)
+1588675397	tripleee	buzznor\.com
