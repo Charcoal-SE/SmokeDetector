@@ -614,7 +614,7 @@ jacked\W?testo
 do you need (?:\w* )?(?:\w* )loan
 endo\W?oil
 pro(?!/test)\Wtest\W?180
-beast\W?mode
+beast[\W_]*+mode[\W_]*+boost(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 verutum(?:\W?rx)?
 rejuvalex
 core\W?e?xtreme
