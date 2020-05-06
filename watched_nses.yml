@@ -259,6 +259,9 @@ items:
   - dave.ns.cloudflare.com.
   - lorna.ns.cloudflare.com.
 - ns:
+  - dawn.ns.cloudflare.com.
+  - dom.ns.cloudflare.com.
+- ns:
   - dean.ns.cloudflare.com.
   - sofia.ns.cloudflare.com.
 - ns:
