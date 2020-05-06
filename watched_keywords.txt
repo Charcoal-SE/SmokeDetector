@@ -20101,3 +20101,4 @@
 1588749382	tripleee	seo\.app
 1588749485	tripleee	inkforall\.com
 1588749531	tripleee	ink[\W_]*+for[\W_]*+all(?!\.com)
+1588749857	Makyen	biofluxe(?:[\W_]*+(?:keto|diet|\d++|[\da-f]{4,}+))*
