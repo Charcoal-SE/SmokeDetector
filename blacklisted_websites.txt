@@ -301,7 +301,6 @@ multipelife\.com
 seasoncars\.com
 evolvedlifevisions\.com
 leptigentry\.com
-websiteseochecker\.com
 fullsoftversion\.com
 hotfrog\.ca
 snorg(?:content|tees)\.com
