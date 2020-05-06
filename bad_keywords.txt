@@ -2277,3 +2277,4 @@ rlx[\W_]*+male
 vital[\W_]*+alpha
 360digitmg(?!\.com)
 instant[\W_]*+boost[\W_]*+brain(?:[\W_]*+(?:formula|pill|review|\d++|[\da-f]{4,}+)s?)*
+बिकास\s*कुमार
