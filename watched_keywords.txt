@@ -20090,3 +20090,4 @@
 1588704349	Makyen	swdeveloper\.limequery\.com
 1588704374	Makyen	nadine\.eckerlein@st\.oth-regensburg\.de
 1588728872	Jeff Schaller	stackbulls\.com
+1588741275	Makyen	(?-i:DavinciproEA)(?#bit.ly)
