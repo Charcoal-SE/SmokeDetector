@@ -307,3 +307,4 @@ lustresparasala
 (?-i:^ronanjenifer$)
 (?-i:^Learn Golf Online$)
 (?-i:^Ajna Digital$)
+\bbikash[\W_]*+kumar[\W_]*+(?:yadav|shom)\b
