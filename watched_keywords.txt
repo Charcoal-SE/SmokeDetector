@@ -20094,3 +20094,4 @@
 1588741299	Makyen	(?-i:DavinciEAinfo)(?#bit.ly)
 1588741325	Makyen	jsonman\.bakchoi\.com
 1588741349	Makyen	cnblogs\.com
+1588741374	Makyen	crackedwin\.com
