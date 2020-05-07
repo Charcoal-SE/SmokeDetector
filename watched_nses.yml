@@ -450,6 +450,9 @@ items:
   - jonah.ns.cloudflare.com.
   - zita.ns.cloudflare.com.
 - ns:
+  - jose.ns.cloudflare.com.
+  - rafe.ns.cloudflare.com.
+- ns:
   - justin.ns.cloudflare.com.
   - vita.ns.cloudflare.com.
 - ns:
