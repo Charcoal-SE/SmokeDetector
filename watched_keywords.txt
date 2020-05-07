@@ -20161,3 +20161,4 @@
 1588888567	Makyen	greatpyramid\.org
 1588888597	Makyen	asamhsad2012(?:@gmail\.com)?
 1588895388	Makyen	ogudospellcaster(?:@gmail\.com)?
+1588895415	Makyen	d(?:octo)?r[\W_]*+ogudo
