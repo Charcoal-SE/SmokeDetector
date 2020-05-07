@@ -2279,3 +2279,4 @@ vital[\W_]*+alpha
 instant[\W_]*+boost[\W_]*+brain(?:[\W_]*+(?:formula|pill|review|\d++|[\da-f]{4,}+)s?)*
 बिकास\s*कुमार
 live[\W_]*+temp[\W_]*pro
+utopia[\W_]*+p2p
