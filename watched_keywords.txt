@@ -20147,3 +20147,4 @@
 1588851858	tripleee	homeemplye\.com
 1588862754	Machavity	^Andrew Shamin$
 1588864402	Makyen	(?-i:YmAor\.jpg)
+1588864427	Makyen	d(?:octo)?r[\W_]*+magic[\W_]*+finger(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
