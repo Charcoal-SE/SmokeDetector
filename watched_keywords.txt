@@ -20128,3 +20128,4 @@
 1588815620	Makyen	depositpokerbca\.xyz
 1588815644	Makyen	bonuspokerqq\.xyz
 1588815944	Makyen	(?:(?:bola|88)[\W_]*+)?tangkas(?:[\W_]*+(?:terbaik|\d++|[\da-f]{4,}+))*
+1588821778	Makyen	ketobodytoneinaustralia(?#facebook.com)
