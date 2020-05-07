@@ -1,6 +1,7 @@
 # coding=utf-8
 import os
 import pickle
+import sys
 import zlib
 import base64
 from datetime import datetime
@@ -15,7 +16,7 @@ import regex
 from parsing import api_parameter_from_link, post_id_from_link
 from globalvars import GlobalVars
 import blacklists
-from helpers import ErrorLogs
+from helpers import ErrorLogs, log, log_exception
 
 last_feedbacked = None
 PICKLE_STORAGE = "pickles/"
@@ -496,7 +497,17 @@ def get_user_ids_on_notification_list(chat_site, room_id, se_site):
 
 def get_user_names_on_notification_list(chat_site, room_id, se_site, client):
     names = []
-    current_users = client._br.get_current_users_in_room(room_id)
+    try:
+        current_users = client._br.get_current_users_in_room(room_id)
+    except Exception:
+        # ChatExchange had a problem getting the current users. This shouldn't be allowed to
+        # cause us to crash, as it's on the path we take for going into standby.
+        # It should be noted that this *could* be caused by a discontinuity between room_id and
+        # client.
+        log_exception(*sys.exc_info())
+        log('warn', 'ChatExchange failed to get current users. See Error log for more details. Tried '
+                    'client.host: {}:: room: {}:: passed chat_site: {}'.format(client.host, room_id, chat_site))
+        current_users = []
 
     for i, always in get_user_ids_on_notification_list(chat_site, room_id, se_site):
         if always:
