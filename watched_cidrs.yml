@@ -582,6 +582,7 @@ items:
 - comment: random spam sites but many FPs
   disable: true
   ip: 216.239.38.21
+- ip: 216.58.207.243
 - ip: 23.185.0.4
 - ip: 23.227.38.32
 - comment: lots of *.myshopify.com sites, some legit / FP
@@ -630,6 +631,7 @@ items:
 - ip: 45.113.122.178
 - ip: 45.113.122.66
 - ip: 45.114.245.189
+- ip: 45.35.56.98
 - ip: 45.77.109.123
 - ip: 45.77.251.125
 - ip: 45.79.212.71
