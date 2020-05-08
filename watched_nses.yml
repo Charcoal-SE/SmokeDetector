@@ -173,6 +173,9 @@ items:
   - lynn.ns.cloudflare.com.
 - ns:
   - brenda.ns.cloudflare.com.
+  - curt.ns.cloudflare.com.
+- ns:
+  - brenda.ns.cloudflare.com.
   - merlin.ns.cloudflare.com.
 - ns:
   - brenda.ns.cloudflare.com.
