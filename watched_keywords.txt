@@ -20201,3 +20201,4 @@
 1588968285	Makyen	shahtaaj55(?:@gmail\.com)?
 1588969217	Makyen	depobos(?!ku\.best\b)(?!1\.club\b)(?!ku\.xyz\b)(?!ku\.vip\b)(?!ss\.(?:xyz|biz|club|live|vip)\b)(?:[a-z\d-]*+(?:\.[a-z\d-]++)?)?
 1588969245	Makyen	depobos1\.club
+1588969272	Makyen	depobosku\.xyz
