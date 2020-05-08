@@ -20198,3 +20198,4 @@
 1588967895	Makyen	(?:agen[\W_]*+)?nova88(?!(?<=(?:[^\w-]|^)nova88)\.(?:network|services|rocks))
 1588967943	Makyen	nova88\.network
 1588967978	Makyen	nova88\.services
+1588968010	Makyen	nova88\.rocks
