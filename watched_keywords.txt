@@ -20181,3 +20181,4 @@
 1588937756	Makyen	images\.yantinglife\.com
 1588937782	Makyen	digitalvisi\.com
 1588937808	Makyen	mytaxe\.uk
+1588937834	Makyen	getvitalketo(?#facebook.com)
