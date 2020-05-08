@@ -20107,7 +20107,6 @@
 1588758628	Daniil	mygreatlearning\.com
 1588759245	Daniil	kosei\.com\.vn
 1588761073	Daniil	(?-i:ketobodytoneisrael)
-1588761793	tripleee	ketomegamart\.com
 1588762669	Daniil	earthhacker200(?:@gmail\.com)?
 1588766200	tripleee	deviceinindia\.com
 1588766398	Machavity	visit\.guide
