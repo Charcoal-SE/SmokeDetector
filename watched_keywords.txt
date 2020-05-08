@@ -20182,3 +20182,4 @@
 1588937782	Makyen	digitalvisi\.com
 1588937808	Makyen	mytaxe\.uk
 1588937834	Makyen	getvitalketo(?#facebook.com)
+1588937867	Makyen	(?-i:8Rdq)(?#lnkclik.com)
