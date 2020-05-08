@@ -531,6 +531,9 @@ items:
   - lorna.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
 - ns:
+  - lynn.ns.cloudflare.com.
+  - mira.ns.cloudflare.com.
+- ns:
   - major.ns.cloudflare.com.
   - rosa.ns.cloudflare.com.
 - ns:
