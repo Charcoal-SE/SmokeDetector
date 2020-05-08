@@ -20199,4 +20199,3 @@
 1588967978	Makyen	nova88\.services
 1588968010	Makyen	nova88\.rocks
 1588968285	Makyen	shahtaaj55(?:@gmail\.com)?
-1588969122	Makyen	depobos(?!ku\.best\b)(?!1\.club\b)(?!ku\.xyz\b)(?!ku\.vip\b)(?!ss\.(?:xyz|biz|club|live|vip)\b)(?:[a-z\d-]*+\.[a-z\d-]*+)?
