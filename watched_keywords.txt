@@ -20195,3 +20195,4 @@
 1588965956	Makyen	depobosss\.vip
 1588965983	Makyen	depobosss(?!\.(?:xyz|biz|club|live|vip))
 1588967597	Makyen	depobosku\.best
+1588967895	Makyen	(?:agen[\W_]*+)?nova88(?!(?<=(?:[^\w-]|^)nova88)\.(?:network|services|rocks))
