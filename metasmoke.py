@@ -134,8 +134,9 @@ class Metasmoke:
         elif "commit_status" in message:
             c = message["commit_status"]
             sha = c["commit_sha"][:7]
-            if c["commit_sha"] == sp.check_output(["git", "log", "-1", "--pretty=%H"]).decode('utf-8').strip():
-                return  # Same rev, nothing to do
+            recent_commits = sp.check_output(["git", "log", "-50", "--pretty=%H"]).decode('utf-8').strip().split('\n')
+            if c["commit_sha"] in recent_commits:
+                return  # Same rev, or earlier rev (e.g. when watching things faster than CI completes), nothing to do
 
             if c["status"] == "success":
                 if "autopull" in c["commit_message"] or c["commit_message"].startswith("!") or \
