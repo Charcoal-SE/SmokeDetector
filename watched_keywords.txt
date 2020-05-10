@@ -20221,6 +20221,5 @@
 1589066318	Makyen	animekisa\.tv
 1589067040	Makyen	omoogunspellcaster\.wixsite\.com
 1589067063	Makyen	omooguntempleofanswer(?:@gmail\.com)?
-1589067089	Makyen	d(?:octor)r[\W_]*+omoogun(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1589067480	Makyen	animesepisodes(?!\.com)
 1589067509	Makyen	animesepisodes\.com
