@@ -20227,3 +20227,4 @@
 1589098991	Makyen	bestappsfinder\.com
 1589099016	Makyen	wefindgames\.com
 1589099042	Makyen	lilsubs\.com
+1589099068	Makyen	whatsapp[\W_]*+status[\W_]*+saver
