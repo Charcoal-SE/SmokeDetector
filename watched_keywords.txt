@@ -20230,3 +20230,4 @@
 1589099068	Makyen	whatsapp[\W_]*+status[\W_]*+saver
 1589099093	Makyen	impactwrenchguides\.com
 1589099118	Makyen	code2test\.com
+1589122137	Glorfindel	flipepic
