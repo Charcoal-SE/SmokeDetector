@@ -20224,3 +20224,4 @@
 1589067480	Makyen	animesepisodes(?!\.com)
 1589067509	Makyen	animesepisodes\.com
 1589086489	Makyen	d(?:octor)?r[\W_]*+omoogun(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1589098991	Makyen	bestappsfinder\.com
