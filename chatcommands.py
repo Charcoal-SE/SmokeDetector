@@ -2151,7 +2151,7 @@ def why(msg):
         if why_info:
             return why_info
         else:
-            raise CmdException("There is no `why` data for that user (anymore).")
+            raise CmdException("I don't have the `why` data for that post (anymore?). You should be able to find it on metasmoke.")
 
 
 # noinspection PyIncorrectDocstring,PyUnusedLocal
