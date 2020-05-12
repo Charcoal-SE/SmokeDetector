@@ -558,6 +558,9 @@ items:
   - megan.ns.cloudflare.com.
   - rajeev.ns.cloudflare.com.
 - ns:
+  - mira.ns.cloudflare.com.
+  - sergi.ns.cloudflare.com.
+- ns:
   - naomi.ns.cloudflare.com.
   - tim.ns.cloudflare.com.
 - ns:
