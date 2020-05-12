@@ -19133,7 +19133,6 @@
 1585902751	Makyen	hempmarketreport\.com
 1585902776	Makyen	patriot[\W_]*+supreme[\W_]*+cbd(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1585902804	Makyen	flipper\.vn
-1585902831	Makyen	wordpresserror500\.com
 1585910276	tripleee	realesson\.com
 1585910803	tripleee	dmoose\.com
 1585910973	tripleee	indobola303\.fun
