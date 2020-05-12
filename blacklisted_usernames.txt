@@ -310,3 +310,4 @@ lustresparasala
 \bbikash[\W_]*+kumar[\W_]*+(?:yadav|shom)\b
 (?-i:^Cindy Blake$)
 (?-i:^Marieromig$)
+(?-i:^wperror500$)
