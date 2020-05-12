@@ -184,6 +184,9 @@ items:
   - bruce.ns.cloudflare.com.
   - chan.ns.cloudflare.com.
 - ns:
+  - bruce.ns.cloudflare.com.
+  - mira.ns.cloudflare.com.
+- ns:
   - burt.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
 - ns:
