@@ -20297,3 +20297,4 @@
 1589276855	tripleee	(?-i:2Fl02DwcZsU)(?# youtube)
 1589276923	Glorfindel	icarview
 1589281693	tripleee	medjedel\.com
+1589285903	tripleee	(?-i:^jackson logan$)
