@@ -20312,3 +20312,4 @@
 1589314592	Makyen	mqs[\W_]*+health[\W_]*+site(?!\.com(?<=mqshealthsite\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1589315292	Makyen	irmarasikaslotlive22\.blogspot
 1589315320	Makyen	bonusterbukti(?#sites.google.com)
+1589315344	Makyen	irmarasika(?:@gmail\.com)?
