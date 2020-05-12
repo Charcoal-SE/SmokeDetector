@@ -309,3 +309,4 @@ lustresparasala
 (?-i:^Ajna Digital$)
 \bbikash[\W_]*+kumar[\W_]*+(?:yadav|shom)\b
 (?-i:^Cindy Blake$)
+(?-i:^Marieromig$)
