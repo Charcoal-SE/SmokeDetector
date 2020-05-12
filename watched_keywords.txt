@@ -20309,3 +20309,4 @@
 1589314517	Makyen	icarvisions\.com
 1589314541	Makyen	mqshealthsite\.com
 1589314566	Makyen	mqsworldsite\.blogspot
+1589314592	Makyen	mqs[\W_]*+health[\W_]*+site(?!\.com(?<=mqshealthsite\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
