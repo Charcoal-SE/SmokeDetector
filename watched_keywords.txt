@@ -17962,7 +17962,6 @@
 1582787108	Shree	wsneconsulting\.com
 1582790093	double-beep	internetleadstraining\.com
 1582791596	Shree	businesstrends\.com\.pk
-1582797505	Eliah Kagan	insta\W*hard(?:\W*on)?
 1582797646	Eliah Kagan	choidaga\.net
 1582797738	Eliah Kagan	pianoshop\.com\.vn
 1582797873	Eliah Kagan	ufa24hrs\.com
