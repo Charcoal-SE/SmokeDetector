@@ -83,11 +83,11 @@ def init(username, password, try_cookies=True):
                     if site in cookies and cookies[site] is not None:
                         client.login_with_cookie(cookies[site])
                         logged_in = True
-                        log('debug', 'Logged in using cached cookies')
+                        log('debug', 'chat.{}: Logged in using cached cookies'.format(site))
                 except LoginError as e:
                     exc_type, exc_obj, exc_tb = sys.exc_info()
-                    log('debug', 'Login error {}: {}'.format(exc_type.__name__, exc_obj))
-                    log('debug', 'Falling back to credential-based login')
+                    log('debug', 'chat.{}: Login error {}: {}'.format(site, exc_type.__name__, exc_obj))
+                    log('debug', 'chat.{}: Falling back to credential-based login'.format(site))
                     del cookies[site]
                     datahandling.dump_cookies()
 
@@ -98,7 +98,7 @@ def init(username, password, try_cookies=True):
                     break
                 except Exception as e:
                     exc_type, exc_obj, exc_tb = sys.exc_info()
-                    log('debug', 'Login error {}: {}'.format(exc_type.__name__, exc_obj))
+                    log('debug', 'chat.{}: Login error {}: {}'.format(site, exc_type.__name__, exc_obj))
             else:
                 raise Exception("Failed to log into " + site + ", max retries exceeded")
 
