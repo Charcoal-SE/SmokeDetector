@@ -20322,3 +20322,4 @@
 1589347433	tripleee	chandigarh[\_]*+career[\W_]*+group(?!\.in)
 1589348186	tripleee	acceptrequests\.com
 1589348311	tripleee	acceptrequest\.com
+1589350510	Makyen	getbefitketocut(?#facebook.com)
