@@ -20331,3 +20331,4 @@
 1589356993	tripleee	dailyworx\.com
 1589359173	Daniil	xosoplus\.com
 1589359289	Daniil	electricalhindime\.in
+1589360567	tripleee	xosoplus(?!\.com)
