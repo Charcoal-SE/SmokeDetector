@@ -441,6 +441,9 @@ items:
   - jean.ns.cloudflare.com.
   - piotr.ns.cloudflare.com.
 - ns:
+  - jeremy.ns.cloudflare.com.
+  - katja.ns.cloudflare.com.
+- ns:
   - jerome.ns.cloudflare.com.
   - jessica.ns.cloudflare.com.
 - ns:
