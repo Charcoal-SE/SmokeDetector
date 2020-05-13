@@ -2281,3 +2281,4 @@ instant[\W_]*+boost[\W_]*+brain(?:[\W_]*+(?:formula|pill|review|\d++|[\da-f]{4,}
 live[\W_]*+temp[\W_]*pro
 utopia[\W_]*+p2p
 keto[\W_]*+genix(?:[\W_]*+(?:pills|uk|\d++|[\da-f]{4,}+))*
+insta[\W_]*+hard(?:[\W_]*+on)?
