@@ -20321,3 +20321,4 @@
 1589347402	tripleee	chandigarhcareergroup\.in
 1589347433	tripleee	chandigarh[\_]*+career[\W_]*+group(?!\.in)
 1589348186	tripleee	acceptrequests\.com
+1589348311	tripleee	acceptrequest\.com
