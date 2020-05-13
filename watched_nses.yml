@@ -94,6 +94,9 @@ items:
   - apollo.ns.cloudflare.com.
   - michelle.ns.cloudflare.com.
 - ns:
+  - april.ns.cloudflare.com.
+  - max.ns.cloudflare.com.
+- ns:
   - arch.ns.cloudflare.com.
   - bella.ns.cloudflare.com.
 - ns:
