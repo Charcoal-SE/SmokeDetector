@@ -444,6 +444,9 @@ items:
   - jeremy.ns.cloudflare.com.
   - katja.ns.cloudflare.com.
 - ns:
+  - jeremy.ns.cloudflare.com.
+  - yolanda.ns.cloudflare.com.
+- ns:
   - jerome.ns.cloudflare.com.
   - jessica.ns.cloudflare.com.
 - ns:
