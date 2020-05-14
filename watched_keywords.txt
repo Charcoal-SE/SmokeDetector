@@ -20371,3 +20371,4 @@
 1589458844	tripleee	ufacetimeforpc\.com
 1589459760	tripleee	maya[\W_]*+developer_?(?# fiverr)
 1589469715	Makyen	kasratshala\.com
+1589486741	Makyen	mr[\W_]*+carlos[\W_]*+ellison(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
