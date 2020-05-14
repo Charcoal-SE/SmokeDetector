@@ -20370,3 +20370,4 @@
 1589458738	tripleee	prism-me\.com
 1589458844	tripleee	ufacetimeforpc\.com
 1589459760	tripleee	maya[\W_]*+developer_?(?# fiverr)
+1589469715	Makyen	kasratshala\.com
