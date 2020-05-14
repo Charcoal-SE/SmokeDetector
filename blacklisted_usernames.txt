@@ -312,3 +312,4 @@ lustresparasala
 (?-i:^Marieromig$)
 (?-i:^wperror500$)
 (?-i:^pankaj maurya$)
+^retail[\W_]*+clouds?$
