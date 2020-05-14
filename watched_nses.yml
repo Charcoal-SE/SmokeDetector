@@ -82,6 +82,9 @@ items:
   - amy.ns.cloudflare.com.
   - matt.ns.cloudflare.com.
 - ns:
+  - anastasia.ns.cloudflare.com.
+  - rory.ns.cloudflare.com.
+- ns:
   - andy.ns.cloudflare.com.
   - leah.ns.cloudflare.com.
 - ns:
