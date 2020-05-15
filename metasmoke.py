@@ -33,10 +33,16 @@ import metasmoke_cache
 
 
 MAX_FAILURES = 10  # Preservative, 10 errors = MS down
+NO_ACTIVITY_PINGS_TO_STANDBY = 8
+NO_ACTIVITY_PINGS_TO_REPORT = 4
 
 
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
 class Metasmoke:
+    status_pings_since_scan_activity = 0
+    last_ping_scan_time = 0
+    last_ping_posts_scanned = 0
+
     @staticmethod
     def connect_websocket():
         GlobalVars.metasmoke_ws = websocket.create_connection(GlobalVars.metasmoke_ws_host,
@@ -521,3 +527,37 @@ class Metasmoke:
         GlobalVars.metasmoke_failures -= 1
         if GlobalVars.metasmoke_failures < 0:
             GlobalVars.metasmoke_failures = 0
+
+    @staticmethod
+    def send_status_ping_and_verify_scanning_if_active():
+        in_standby_mode = GlobalVars.standby_mode or GlobalVars.no_se_activity_scan
+        if not in_standby_mode:
+            # This is the active instance, so should be scanning. If it's not scanning, then report or go to standby.
+
+            # We're not changing the scan stats, so shouldn't need a lock.
+            current_scan_time = GlobalVars.post_scan_time
+            current_posts_scanned = GlobalVars.num_posts_scanned
+            if current_scan_time == Metasmoke.last_ping_scan_time \
+                    and current_posts_scanned == Metasmoke.last_ping_posts_scanned:
+                # There's been no actvity since the last ping.
+                Metasmoke.status_pings_since_scan_activity += 1
+                if Metasmoke.status_pings_since_scan_activity >= NO_ACTIVITY_PINGS_TO_STANDBY:
+                    # Assume something is very wrong. Report to debug rooms and go into standby mode.
+                    error_message = "There's been no scan activity for {} status pings. Going into standby." \
+                                    .format(Metasmoke.status_pings_since_scan_activity)
+                    log('error', error_message)
+                    chatcommunicate.tell_rooms_with("debug", error_message)
+                    GlobalVars.standby_mode = True
+                    # Let MS know immediately, to lessen potential wait time (e.g. if we fail to reboot).
+                    Metasmoke.send_status_ping()
+                    time.sleep(8)
+                    exit_mode("standby")
+                elif Metasmoke.status_pings_since_scan_activity >= NO_ACTIVITY_PINGS_TO_REPORT:
+                    # Something might be wrong. Let people in debug rooms know.
+                    status_message = "There's been no scan activity for {} status pings. There may be a problem." \
+                                     .format(Metasmoke.status_pings_since_scan_activity)
+                    log('warning', status_message)
+                    chatcommunicate.tell_rooms_with("debug", status_message)
+            else:
+                Metasmoke.status_pings_since_scan_activity = 0
+        Metasmoke.send_status_ping()
