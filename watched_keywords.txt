@@ -19942,7 +19942,6 @@
 1588339591	Daniil	digitalsigner\.pulkitsoft\.com
 1588347326	Machavity	helpstounderstand\.com
 1588350990	Makyen	illuminatiworldrich02(?:@gmail\.com)?
-1588351013	Makyen	illuminatiwordoffame12(?:@gmail\.com)?
 1588351045	Makyen	(?-i:TvNWweQ9ZkA)(?#youtu.be)
 1588351072	Makyen	amazon-profit\.com
 1588351098	Makyen	cid\.5fcd9501fbeae87
