@@ -20386,3 +20386,4 @@
 1589526019	tripleee	freeringtonesbase\.com
 1589526043	tripleee	1tool\.net
 1589526069	tripleee	smartsol\.vn
+1589526093	tripleee	qrcode-xtool\.com
