@@ -19645,7 +19645,6 @@
 1587626219	tripleee	myra[\W_]*+(?:dental[\W_]*+)?clinic?
 1587628431	tripleee	gps[\W_]*+jammer
 1587629058	tripleee	serverless360\.com
-1587629089	tripleee	askmeoffers\.com
 1587631150	tripleee	fasynovel\.com
 1587631271	Makyen	wellness[\W_]*+farmers(?:[\W_]*+(?:cbd|lavender|oil|\d++|[\da-f]{4,}+))*
 1587631291	Makyen	revenueriver\.co
