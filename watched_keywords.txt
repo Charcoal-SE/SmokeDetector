@@ -20169,7 +20169,6 @@
 1588937652	Makyen	(?:mrs[\W_]*+)?frederica[\W_]*+alonso(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*(?:[\W_]*+gmail\.com)?
 1588937679	Makyen	pdx[\W_]*+male[\W_]*+enhancement(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1588937756	Makyen	images\.yantinglife\.com
-1588937782	Makyen	digitalvisi\.com
 1588937808	Makyen	mytaxe\.uk
 1588937834	Makyen	getvitalketo(?#facebook.com)
 1588937867	Makyen	(?-i:8Rdq)(?#lnkclik.com)
