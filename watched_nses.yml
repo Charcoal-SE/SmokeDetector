@@ -199,6 +199,9 @@ items:
   - carol.ns.cloudflare.com.
   - guy.ns.cloudflare.com.
 - ns:
+  - casey.ns.cloudflare.com.
+  - harlee.ns.cloudflare.com.
+- ns:
   - chad.ns.cloudflare.com.
   - elaine.ns.cloudflare.com.
 - ns:
