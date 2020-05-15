@@ -20388,3 +20388,4 @@
 1589526069	tripleee	smartsol\.vn
 1589526093	tripleee	qrcode-xtool\.com
 1589526191	tripleee	chigaitoi
+1589529190	Shree	kindlehelpguides\.com
