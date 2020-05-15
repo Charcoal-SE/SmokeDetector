@@ -313,3 +313,4 @@ lustresparasala
 (?-i:^wperror500$)
 (?-i:^pankaj maurya$)
 ^retail[\W_]*+clouds?$
+(?-i:^Tony Wong$)
