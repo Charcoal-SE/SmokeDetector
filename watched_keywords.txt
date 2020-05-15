@@ -20385,3 +20385,4 @@
 1589521308	tripleee	unik[\W_]*+global[\W_]*+services(?!\.com)
 1589526019	tripleee	freeringtonesbase\.com
 1589526043	tripleee	1tool\.net
+1589526069	tripleee	smartsol\.vn
