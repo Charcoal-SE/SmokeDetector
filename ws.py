@@ -233,7 +233,7 @@ metasmoke_ws_t.start()
 while not GlobalVars.no_se_activity_scan:
     try:
         if not metasmoke_ws_t.is_alive():
-            log('error','metasmoke_ws_t is dead')
+            log('error', 'metasmoke_ws_t is dead')
             # do something else, like trying to restart it
         a = ws.recv()
         if a is not None and a != "":
