@@ -82,7 +82,8 @@ class Metasmoke:
                 if not has_succeeded:
                     failed_connection_attempts += 1
                     if failed_connection_attempts > MAX_MS_WEBSOCKET_RETRIES:
-                        chatcommunicate.tell_rooms_with("debug", "Cannot initiate MS websocket. metasmoke_ws_t is now dead.")
+                        chatcommunicate.tell_rooms_with("debug", "Cannot initiate MS websocket." +
+                                                        "  metasmoke_ws_t is now dead.")
                         log('warning', "Cannot initiate MS websocket. metasmoke_ws_t is now dead.")
                         break
                     else:
