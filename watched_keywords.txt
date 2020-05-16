@@ -20412,7 +20412,6 @@
 1589631192	Daniil	(?-i:Apetamin)
 1589631376	Daniil	(?-i:^shamim islam$)
 1589631509	Daniil	reynoldshelp\.ca
-1589631895	Daniil	(?-i:Nervexol)
 1589632091	Glorfindel	androidfist\.com
 1589640603	Machavity	trainings\.com
 1589644890	Makyen	funnypictures\.com\.ng
