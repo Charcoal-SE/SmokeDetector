@@ -399,9 +399,9 @@ class Metasmoke:
             log('warning', "Metasmoke is down, not sending statistics")
             return
         # Get current apiquota from globalvars
-        GlobalVars.api_request_lock.acquire()
+        GlobalVars.apiquota_rw_lock.acquire()
         current_apiquota = GlobalVars.apiquota
-        GlobalVars.api_request_lock.release()
+        GlobalVars.apiquota_rw_lock.release()
 
         GlobalVars.posts_scan_stats_lock.acquire()
         if GlobalVars.post_scan_time != 0:

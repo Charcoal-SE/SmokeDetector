@@ -949,9 +949,9 @@ def apiquota():
     Report how many API hits remain for the day
     :return: A string
     """
-    GlobalVars.api_request_lock.acquire()
+    GlobalVars.apiquota_rw_lock.acquire()
     current_apiquota = GlobalVars.apiquota
-    GlobalVars.api_request_lock.release()
+    GlobalVars.apiquota_rw_lock.release()
 
     return "The current API quota remaining is {}.".format(current_apiquota)
 

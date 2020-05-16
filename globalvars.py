@@ -128,6 +128,7 @@ class GlobalVars:
     no_se_activity_scan = False
 
     api_request_lock = threading.Lock()
+    apiquota_rw_lock = threading.Lock()
 
     num_posts_scanned = 0
     post_scan_time = 0
