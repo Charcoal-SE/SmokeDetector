@@ -273,7 +273,7 @@ class Metasmoke:
         threshold = 1
         GlobalVars.posts_scan_stats_lock.acquire()
         if (GlobalVars.num_posts_scanned < threshold):
-            chatcommunicate.tell_rooms_with("debug", \
+            chatcommunicate.tell_rooms_with("debug", 
                                             "Only {} posts scanned".format(GlobalVars.num_posts_scanned) + \
                                             " in the last minute. Something might be wrong.")
         GlobalVars.posts_scan_stats_lock.release()
