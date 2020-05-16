@@ -20399,3 +20399,4 @@
 1589614097	Makyen	org\.ikconopensipdialer
 1589614122	Makyen	kurtislaytony(?#twitter.com)
 1589614147	Makyen	(?-i:e-1589528167)(?#paper.li)
+1589616333	Makyen	seoclerk\.com
