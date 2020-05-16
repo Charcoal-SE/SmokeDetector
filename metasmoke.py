@@ -57,7 +57,7 @@ class Metasmoke:
     @staticmethod
     def init_websocket():
         has_succeeded = False
-        failed_connection_attemps = 0
+        failed_connection_attempts = 0
         while GlobalVars.metasmoke_key != "":
             try:
                 Metasmoke.connect_websocket()
@@ -85,7 +85,7 @@ class Metasmoke:
                         log('warning', "Cannot initiate MS websocket. metasmoke_ws_t is now dead.")
                         break
                     else:
-                        #Wait and hopefully network issues will be solved
+                        # Wait and hopefully network issues will be solved
                         time.sleep(10)
                 else:
                     time.sleep(10)
