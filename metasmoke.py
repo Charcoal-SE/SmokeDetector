@@ -58,7 +58,7 @@ class Metasmoke:
     def init_websocket():
         has_succeeded = False
         failed_connection_attempts = 0
-        while GlobalVars.metasmoke_key != "":
+        while GlobalVars.metasmoke_key != "" and GlobalVars.metasmoke_ws_host != "":
             try:
                 Metasmoke.connect_websocket()
                 has_succeeded = True
@@ -82,6 +82,7 @@ class Metasmoke:
                 if not has_succeeded:
                     failed_connection_attempts += 1
                     if failed_connection_attempts > MAX_MS_WEBSOCKET_RETRIES:
+                        chatcommunicate.tell_rooms_with("debug", "Cannot initiate MS websocket. metasmoke_ws_t is now dead.")
                         log('warning', "Cannot initiate MS websocket. metasmoke_ws_t is now dead.")
                         break
                     else:
