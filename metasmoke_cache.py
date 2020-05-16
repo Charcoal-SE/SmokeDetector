@@ -3,6 +3,7 @@ import datahandling
 import metasmoke
 import globalvars
 import tasks
+from helpers import log
 
 
 class MetasmokeCache:
