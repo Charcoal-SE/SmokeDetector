@@ -205,14 +205,20 @@ def setup_websocket(attempt, max_attempts):
         return None
 
 
+def init_websocket(max_tries):
+    for tries in range(1, 1 + max_tries, 1):
+        ws = setup_websocket(tries, max_tries)
+        if ws:
+            break
+    else:
+        log('error', 'Max retries exceeded. Exiting, maybe a restart will kick things.')
+        exit_mode("reboot")
+
+    return ws
+
+
 max_tries = 5
-for tries in range(1, 1 + max_tries, 1):
-    ws = setup_websocket(tries, max_tries)
-    if ws:
-        break
-else:
-    log('error', 'Max retries exceeded. Exiting, maybe a restart will kick things.')
-    exit_mode("reboot")
+ws = init_websocket(max_tries)
 
 GlobalVars.deletion_watcher = DeletionWatcher()
 
@@ -258,8 +264,8 @@ while not GlobalVars.no_se_activity_scan:
         if seconds < 180 and exc_type not in {websocket.WebSocketConnectionClosedException, requests.ConnectionError}:
             # noinspection PyProtectedMember
             exit_mode("early_exception")
-        ws = websocket.create_connection("ws://qa.sockets.stackexchange.com/")
-        ws.send("155-questions-active")
+        max_tries = 5
+        ws = init_websocket(max_tries)
 
         chatcommunicate.tell_rooms_with("debug", "Recovered from `" + exception_only + "`")
 
