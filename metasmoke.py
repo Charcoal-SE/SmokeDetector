@@ -402,7 +402,7 @@ class Metasmoke:
         GlobalVars.api_request_lock.acquire()
         current_apiquota = GlobalVars.apiquota
         GlobalVars.api_request_lock.release()
-        
+
         GlobalVars.posts_scan_stats_lock.acquire()
         if GlobalVars.post_scan_time != 0:
             posts_per_second = GlobalVars.num_posts_scanned / GlobalVars.post_scan_time
