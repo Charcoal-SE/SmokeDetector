@@ -952,7 +952,7 @@ def apiquota():
     GlobalVars.api_request_lock.acquire()
     current_apiquota = GlobalVars.apiquota
     GlobalVars.api_request_lock.release()
-    
+
     return "The current API quota remaining is {}.".format(current_apiquota)
 
 
