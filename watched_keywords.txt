@@ -20396,3 +20396,4 @@
 1589613970	Makyen	(?-i:1vVoT\.png)
 1589614019	Makyen	ikcon[\W_]*+infotech(?!\.com(?<=ikconinfotech\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1589614072	Makyen	ikconinfotech\.com
+1589614097	Makyen	org\.ikconopensipdialer
