@@ -1962,7 +1962,7 @@ create_rule("Chinese character in {}", r"(?i)\p{Script=Han}.*\p{Script=Han}.*\p{
 create_rule("Hindi character in {}", r"(?i)\p{Script=Devanagari}",
             sites=["hinduism.stackexchange.com"], body=False)
 # English text on non-English site: rus.SE only
-create_rule("English text in {} on a localized site", r"(?i)^[a-z0-9_\W]*[a-z]{3}[a-z0-9_\W]*$",
+create_rule("English text in {} on a localized site", r"(?i)^[\w\W]*[a-z]{3}(?![^<>]{0,16}>)[\w\W]*$",
             all=False, sites=["rus.stackexchange.com"], stripcodeblocks=True)
 # Roof repair
 create_rule("bad keyword in {}", r"(?is)roof repair",
