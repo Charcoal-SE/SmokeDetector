@@ -20395,3 +20395,4 @@
 1589613946	Makyen	american[\W_]*+liberty[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1589613970	Makyen	(?-i:1vVoT\.png)
 1589614019	Makyen	ikcon[\W_]*+infotech(?!\.com(?<=ikconinfotech\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1589614072	Makyen	ikconinfotech\.com
