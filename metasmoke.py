@@ -398,16 +398,20 @@ class Metasmoke:
         if GlobalVars.metasmoke_down:
             log('warning', "Metasmoke is down, not sending statistics")
             return
-
+        # Get current apiquota from globalvars
+        GlobalVars.api_request_lock.acquire()
+        current_apiquota = GlobalVars.apiquota
+        GlobalVars.api_request_lock.release()
+        
         GlobalVars.posts_scan_stats_lock.acquire()
         if GlobalVars.post_scan_time != 0:
             posts_per_second = GlobalVars.num_posts_scanned / GlobalVars.post_scan_time
             payload = {'key': GlobalVars.metasmoke_key,
-                       'statistic': {'posts_scanned': GlobalVars.num_posts_scanned, 'api_quota': GlobalVars.apiquota,
+                       'statistic': {'posts_scanned': GlobalVars.num_posts_scanned, 'api_quota': current_apiquota,
                                      'post_scan_rate': posts_per_second}}
         else:
             payload = {'key': GlobalVars.metasmoke_key,
-                       'statistic': {'posts_scanned': GlobalVars.num_posts_scanned, 'api_quota': GlobalVars.apiquota}}
+                       'statistic': {'posts_scanned': GlobalVars.num_posts_scanned, 'api_quota': current_apiquota}}
 
         GlobalVars.post_scan_time = 0
         GlobalVars.num_posts_scanned = 0
