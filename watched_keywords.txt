@@ -20418,3 +20418,4 @@
 1589649278	Makyen	vssraipur\.com
 1589649374	Makyen	venkateshwar[\W_]*+signature[\W_]*+school(?!\.com(?<=venkateshwarsignatureschool\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1589650367	Makyen	nervexol(?:[\W_]*+(?:review|pill|au|australia|\d++|[\da-f]{4,}+)s?)*
+1589658026	Makyen	mynewsfit\.com
