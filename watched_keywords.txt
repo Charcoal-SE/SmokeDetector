@@ -20418,4 +20418,3 @@
 1589649251	Makyen	venkateshwarsignatureschool\.com
 1589649278	Makyen	vssraipur\.com
 1589649374	Makyen	venkateshwar[\W_]*+signature[\W_]*+school(?!\.com(?<=venkateshwarsignatureschool\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
-1589649438	Makyen	nervexol(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+))*
