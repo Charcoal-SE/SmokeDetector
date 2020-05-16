@@ -20397,3 +20397,4 @@
 1589614019	Makyen	ikcon[\W_]*+infotech(?!\.com(?<=ikconinfotech\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1589614072	Makyen	ikconinfotech\.com
 1589614097	Makyen	org\.ikconopensipdialer
+1589614122	Makyen	kurtislaytony(?#twitter.com)
