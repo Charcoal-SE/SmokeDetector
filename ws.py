@@ -40,6 +40,8 @@ from tasks import Tasks
 import chatcommands
 
 
+MAX_SE_WEBSOCKET_RETRIES = 5
+
 if os.path.isfile("plugin.py"):
     try:
         import plugin
@@ -205,20 +207,23 @@ def setup_websocket(attempt, max_attempts):
         return None
 
 
-def init_websocket(max_tries):
+def init_se_websocket_or_reboot(max_tries, tell_debug_room_on_error=False):
     for tries in range(1, 1 + max_tries, 1):
         ws = setup_websocket(tries, max_tries)
         if ws:
             break
     else:
-        log('error', 'Max retries exceeded. Exiting, maybe a restart will kick things.')
+        error_message = 'SE WebSocket: Max retries exceeded. Exiting, maybe a restart will kick things.'
+        log('error', error_message)
+        if tell_debug_room_on_error:
+            chatcommunicate.tell_rooms_with("debug", error_message)
+            time.sleep(6)  # Make it more likely the message is actually sent to the rooms prior to rebooting.
         exit_mode("reboot")
 
     return ws
 
 
-max_tries = 5
-ws = init_websocket(max_tries)
+ws = init_se_websocket_or_reboot(MAX_SE_WEBSOCKET_RETRIES)
 
 GlobalVars.deletion_watcher = DeletionWatcher()
 
@@ -264,8 +269,7 @@ while not GlobalVars.no_se_activity_scan:
         if seconds < 180 and exc_type not in {websocket.WebSocketConnectionClosedException, requests.ConnectionError}:
             # noinspection PyProtectedMember
             exit_mode("early_exception")
-        max_tries = 5
-        ws = init_websocket(max_tries)
+        ws = init_se_websocket_or_reboot(MAX_SE_WEBSOCKET_RETRIES, tell_debug_room_on_error=True)
 
         chatcommunicate.tell_rooms_with("debug", "Recovered from `" + exception_only + "`")
 
