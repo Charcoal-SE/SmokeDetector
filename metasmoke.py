@@ -269,6 +269,13 @@ class Metasmoke:
 
     @staticmethod
     def send_status_ping():
+        # If scanned 0 post, complain in chat.
+        threshold = 1
+        GlobalVars.posts_scan_stats_lock.acquire()
+        if (GlobalVars.num_posts_scanned < threshold):
+            chatcommunicate.tell_rooms_with("debug","Only {} posts scanned in the last minute. Something might be wrong.".format(GlobalVars.num_posts_scanned))
+        GlobalVars.posts_scan_stats_lock.release()
+
         if GlobalVars.metasmoke_host is None:
             log('info', 'Attempted to send status ping but metasmoke_host is undefined. Not sent.')
             return
