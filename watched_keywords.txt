@@ -20425,3 +20425,4 @@
 1589697261	Nisse Engström	sabt-mollasadra\.com
 1589699835	Nisse Engström	itechbeast\.com
 1589706374	Makyen	genesisconstruction\.com
+1589706399	Makyen	genesis[\W_]*+construction(?!\.com(?<=genesisconstruction\.com))
