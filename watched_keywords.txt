@@ -20428,3 +20428,4 @@
 1589706399	Makyen	genesis[\W_]*+construction(?!\.com(?<=genesisconstruction\.com))
 1589720200	Daniil	karlut75(?:@gmail\.com)?
 1589721618	Daniil	elmosoft\.net
+1589726721	Makyen	drivethelife\.com
