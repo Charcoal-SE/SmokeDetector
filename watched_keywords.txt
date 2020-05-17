@@ -20421,3 +20421,4 @@
 1589658026	Makyen	mynewsfit\.com
 1589682960	Makyen	[a-z_]*+(?:1_*+)?859[\W_]*+567[\W_]*+9005[a-z_]*+
 1589689052	Makyen	f2autosaigon\.com
+1589692577	Makyen	infosehat\.family
