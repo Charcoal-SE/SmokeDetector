@@ -20450,3 +20450,4 @@
 1589802594	tripleee	intersetmedia\.com
 1589804353	Daniil	pharmafranchiseworld\.com
 1589804681	tripleee	tas\.co\.in
+1589805617	tripleee	(?-i:^Tushar Prajapati$)
