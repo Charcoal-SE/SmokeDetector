@@ -20445,3 +20445,4 @@
 1589786316	Makyen	gyanmatrix\.com
 1589788314	tripleee	geek[\W_]*+squad(?:[\W_]*+(?:tech[\W_]*+)?support)?\d*
 1589791017	tripleee	pakansanat\.ir
+1589801192	Daniil	startuppaisa\.com
