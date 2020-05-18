@@ -2286,3 +2286,4 @@ instant[\W_]*+keto(?:[\W_]*+(?:ca|canada|\d++|[\da-f]{4,}+))*
 raydia
 illuminatiwordoffame12(?:@gmail\.com)?
 kanavance
+prime[\W_]*+trt(?!\.official(?<=prime\.trt\.official))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
