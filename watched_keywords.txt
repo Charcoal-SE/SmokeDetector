@@ -20446,3 +20446,4 @@
 1589780178	tripleee	tvservicecentrekolkata\.com
 1589784327	tripleee	vinsfertility\.com
 1589786289	Makyen	vins[\W_]*+fertility(?!\.com(?<=vinsfertility\.com))
+1589786316	Makyen	gyanmatrix\.com
