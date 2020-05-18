@@ -112,6 +112,9 @@ items:
   - ariella.ns.cloudflare.com.
   - lewis.ns.cloudflare.com.
 - ns:
+  - arnold.ns.cloudflare.com.
+  - fay.ns.cloudflare.com.
+- ns:
   - aron.ns.cloudflare.com.
   - kurt.ns.cloudflare.com.
 - ns:
