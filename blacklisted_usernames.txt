@@ -315,4 +315,3 @@ lustresparasala
 ^retail[\W_]*+clouds?$
 (?-i:^Tony Wong$)
 (?-i:^Add Hunters$)
-(?-i:^Tushar Prajapati$)
