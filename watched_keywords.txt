@@ -20453,3 +20453,4 @@
 1589805617	tripleee	(?-i:^Tushar Prajapati$)
 1589805888	tripleee	Paras[\W_]*+Anugrah
 1589809737	Daniil	sythe\.org
+1589810322	Daniil	techijournal\.com
