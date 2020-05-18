@@ -20458,3 +20458,4 @@
 1589819542	Zoe	sattaking\.care
 1589823301	Glorfindel	professional-ai\.com
 1589828125	Kulfy	thecoraltech\.com
+1589832657	Makyen	green[\W_]*+cre?st(?:[\W_]*+(?:oil|cbd|\d++|[\da-f]{4,}+))*
