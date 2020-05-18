@@ -20459,3 +20459,6 @@
 1589823301	Glorfindel	professional-ai\.com
 1589828125	Kulfy	thecoraltech\.com
 1589832657	Makyen	green[\W_]*+cre?st(?:[\W_]*+(?:oil|cbd|\d++|[\da-f]{4,}+))*
+1589838753	Makyen	deftonline\.com
+1589838754	Makyen	multimeter-uses-hindi\.com
+1589838755	Makyen	taxi17070\.se
