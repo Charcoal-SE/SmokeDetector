@@ -22,6 +22,9 @@ items:
   - ada.ns.cloudflare.com.
   - norm.ns.cloudflare.com.
 - ns:
+  - adam.ns.cloudflare.com.
+  - emily.ns.cloudflare.com.
+- ns:
   - addilyn.ns.cloudflare.com.
   - mack.ns.cloudflare.com.
 - ns:
