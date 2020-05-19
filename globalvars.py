@@ -129,9 +129,72 @@ class GlobalVars:
 
     api_request_lock = threading.Lock()
 
-    num_posts_scanned = 0
-    post_scan_time = 0
-    posts_scan_stats_lock = threading.Lock()
+    class PostScanStat:
+        """ Tracking post scanning data """
+        # Last change was on 19 May 2020.
+        num_posts_scanned = 0
+        post_scan_time = 0
+        snap_num_posts_scanned = 0
+        snap_post_scan_time = 0
+        rw_lock = threading.Lock()
+
+        @staticmethod
+        def add_stat(posts_scanned, scan_time):
+            """ Adding post scanning data """
+            GlobalVars.PostScanStat.rw_lock.acquire()
+            GlobalVars.PostScanStat.num_posts_scanned += posts_scanned
+            GlobalVars.PostScanStat.post_scan_time += scan_time
+            GlobalVars.PostScanStat.rw_lock.release()
+
+        @staticmethod
+        def get_stat():
+            """ Getting post scanning statistics """
+            GlobalVars.PostScanStat.rw_lock.acquire()
+            posts_scanned = GlobalVars.PostScanStat.num_posts_scanned
+            scan_time = GlobalVars.PostScanStat.post_scan_time
+            GlobalVars.PostScanStat.rw_lock.release()
+            if scan_time == 0:
+                posts_per_second = None
+            else:
+                posts_per_second = posts_scanned / scan_time
+            return (posts_scanned, scan_time, posts_per_second)
+
+        @staticmethod
+        def snap():
+            """ Take a snapshot of current stat """
+            GlobalVars.PostScanStat.rw_lock.acquire()
+            GlobalVars.PostScanStat.snap_num_posts_scanned = GlobalVars.PostScanStat.num_posts_scanned
+            GlobalVars.PostScanStat.snap_post_scan_time = GlobalVars.PostScanStat.post_scan_time
+            GlobalVars.PostScanStat.rw_lock.release()
+
+        @staticmethod
+        def get_snap():
+            """ Get snapshot data """
+            GlobalVars.PostScanStat.rw_lock.acquire()
+            snap_posts_scanned = GlobalVars.PostScanStat.snap_num_posts_scanned
+            snap_scan_time = GlobalVars.PostScanStat.snap_post_scan_time
+            GlobalVars.PostScanStat.rw_lock.release()
+            if snap_scan_time == 0:
+                snap_posts_per_second = None
+            else:
+                snap_posts_per_second = snap_posts_scanned / snap_scan_time
+            return (snap_posts_scanned, snap_scan_time, snap_posts_per_second)
+
+        @staticmethod
+        def reset_stat():
+            """ Resetting post scanning data """
+            GlobalVars.PostScanStat.rw_lock.acquire()
+            GlobalVars.PostScanStat.num_posts_scanned = 0
+            GlobalVars.PostScanStat.post_scan_time = 0
+            GlobalVars.PostScanStat.rw_lock.release()
+
+        @staticmethod
+        def reset_snap():
+            """ Resetting snapshot data """
+            GlobalVars.PostScanStat.rw_lock.acquire()
+            GlobalVars.PostScanStat.snap_num_posts_scanned = 0
+            GlobalVars.PostScanStat.snap_post_scan_time = 0
+            GlobalVars.PostScanStat.rw_lock.release()
 
     config_parser = RawConfigParser()
 
@@ -223,6 +286,8 @@ class GlobalVars:
             "at [rev {}]({}/commit/{}) (running on {})".format(
                 GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
                 GlobalVars.commit.id, GlobalVars.location)
+        GlobalVars.PostScanStat.reset_stat()
+        GlobalVars.PostScanStat.reset_snap()
 
 
 GlobalVars.reload()

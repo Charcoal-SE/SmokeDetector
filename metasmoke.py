@@ -40,8 +40,6 @@ NO_ACTIVITY_PINGS_TO_REPORT = 4
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
 class Metasmoke:
     status_pings_since_scan_activity = 0
-    last_ping_scan_time = 0
-    last_ping_posts_scanned = 0
 
     @staticmethod
     def connect_websocket():
@@ -399,19 +397,18 @@ class Metasmoke:
             log('warning', "Metasmoke is down, not sending statistics")
             return
 
-        GlobalVars.posts_scan_stats_lock.acquire()
-        if GlobalVars.post_scan_time != 0:
-            posts_per_second = GlobalVars.num_posts_scanned / GlobalVars.post_scan_time
+        (posts_scanned, scan_time, posts_per_second) = GlobalVars.PostScanStat.get_stat()
+        if posts_per_second:
             payload = {'key': GlobalVars.metasmoke_key,
-                       'statistic': {'posts_scanned': GlobalVars.num_posts_scanned, 'api_quota': GlobalVars.apiquota,
+                       'statistic': {'posts_scanned': posts_scanned,
+                                     'api_quota': GlobalVars.apiquota,
                                      'post_scan_rate': posts_per_second}}
         else:
             payload = {'key': GlobalVars.metasmoke_key,
-                       'statistic': {'posts_scanned': GlobalVars.num_posts_scanned, 'api_quota': GlobalVars.apiquota}}
+                       'statistic': {'posts_scanned': posts_scanned,
+                                     'api_quota': GlobalVars.apiquota}}
 
-        GlobalVars.post_scan_time = 0
-        GlobalVars.num_posts_scanned = 0
-        GlobalVars.posts_scan_stats_lock.release()
+        GlobalVars.PostScanStat.reset_stat()
 
         headers = {'Content-type': 'application/json'}
 
@@ -533,12 +530,7 @@ class Metasmoke:
         in_standby_mode = GlobalVars.standby_mode or GlobalVars.no_se_activity_scan
         if not in_standby_mode:
             # This is the active instance, so should be scanning. If it's not scanning, then report or go to standby.
-
-            # We're not changing the scan stats, so shouldn't need a lock.
-            current_scan_time = GlobalVars.post_scan_time
-            current_posts_scanned = GlobalVars.num_posts_scanned
-            if current_scan_time == Metasmoke.last_ping_scan_time \
-                    and current_posts_scanned == Metasmoke.last_ping_posts_scanned:
+            if GlobalVars.PostScanStat.get_stat() == GlobalVars.PostScanStat.get_snap():
                 # There's been no actvity since the last ping.
                 Metasmoke.status_pings_since_scan_activity += 1
                 if Metasmoke.status_pings_since_scan_activity >= NO_ACTIVITY_PINGS_TO_STANDBY:
@@ -560,4 +552,5 @@ class Metasmoke:
                     chatcommunicate.tell_rooms_with("debug", status_message)
             else:
                 Metasmoke.status_pings_since_scan_activity = 0
+                GlobalVars.PostScanStat.snap()
         Metasmoke.send_status_ping()

@@ -383,8 +383,6 @@ class BodyFetcher:
                 log('error', "Exception handling answers:", e)
 
         end_time = time.time()
-        GlobalVars.posts_scan_stats_lock.acquire()
-        GlobalVars.num_posts_scanned += num_scanned
-        GlobalVars.post_scan_time += end_time - start_time
-        GlobalVars.posts_scan_stats_lock.release()
+        scan_time = end_time - start_time
+        GlobalVars.PostScanStat.add_stat(num_scanned, scan_time)
         return
