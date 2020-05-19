@@ -20470,3 +20470,4 @@
 1589873033	tripleee	nicciskincare\.com
 1589873478	tripleee	askmehere\.info
 1589873956	tripleee	(?-i:^Hidendollar$)
+1589875328	Makyen	cialix(?:[\W_]*+(?:enhancement|male|\d++|[\da-f]{4,}+))*
