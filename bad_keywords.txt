@@ -2288,3 +2288,4 @@ illuminatiwordoffame12(?:@gmail\.com)?
 kanavance
 prime[\W_]*+trt(?!\.official(?<=prime\.trt\.official))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 veyomax(?:[\W_]*+rx)?
+hemp[\W_]*+max[\W_]*+lab
