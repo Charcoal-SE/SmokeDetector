@@ -19596,7 +19596,6 @@
 1587469736	tripleee	247geeky\.org
 1587473164	tripleee	tru[\W_]*+virility
 1587474381	Daniil	topadmissionessay\.com
-1587474841	Makyen	w3onlineshopping\.com
 1587493596	Makyen	(?-i:2TlNEFM)(?#bit.ly)
 1587493622	Makyen	wewriteessay\.co\.uk
 1587495044	Makyen	(?-i:nxfXUhHg8Z4)(?#youtu.be)
