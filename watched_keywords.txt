@@ -20380,7 +20380,7 @@
 1589560004	Machavity	mhrubel_41
 1589560078	Machavity	menzi74@gmail\.com
 1589566239	Makyen	rvblinds\.com
-1589567600	Makyen	charity\.gofundme\.com
+1589567600	Makyen	charity\.gofundme\.com(?!/o/en/campaign)
 1589600227	Makyen	petblowingmachine\.com
 1589613946	Makyen	american[\W_]*+liberty[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1589613970	Makyen	(?-i:1vVoT\.png)
