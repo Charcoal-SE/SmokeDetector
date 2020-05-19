@@ -20469,3 +20469,4 @@
 1589872998	tripleee	dynaptsolutions\.com
 1589873033	tripleee	nicciskincare\.com
 1589873478	tripleee	askmehere\.info
+1589873956	tripleee	(?-i:^Hidendollar$)
