@@ -20475,3 +20475,4 @@
 1589926120	Makyen	rabiulislm(?:@gmail\.com)?
 1589926145	Makyen	(?-i:1LdNaqjBTeY3Ajv7mof5caAmGN8cNcNYNu)
 1589926171	Makyen	financo6ytrzaoqg\.onion
+1589926199	Makyen	financialoasis(?!@tutanota\.com)(?:[\W_]*+(?:at[\W_]*+)?protonmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
