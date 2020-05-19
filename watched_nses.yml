@@ -507,6 +507,9 @@ items:
   - karl.ns.cloudflare.com.
   - uma.ns.cloudflare.com.
 - ns:
+  - kay.ns.cloudflare.com.
+  - peyton.ns.cloudflare.com.
+- ns:
   - keanu.ns.cloudflare.com.
   - perla.ns.cloudflare.com.
 - ns:
