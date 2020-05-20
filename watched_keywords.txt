@@ -20500,3 +20500,4 @@
 1590003653	Makyen	digitalsupreme\.in
 1590003750	Makyen	digital[\W_]*+supreme(?!\.in(?<=digitalsupreme\.in))
 1590007271	user12986714	insuranceella\.com
+1590012375	user12986714	raydia[\w\W]{0,5}skincare
