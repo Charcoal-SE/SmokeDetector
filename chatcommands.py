@@ -928,8 +928,8 @@ def amiprivileged(msg):
 
 
 # noinspection PyIncorrectDocstring,
-@command(whole_msg=True)
-def amicodeprivileged(msg):
+@command(whole_msg=True, aliases=["amicodeprivileged"])
+def amiblacklistprivileged(msg):
     """
     Tells user whether or not they have blacklister privileges
     :param msg:
