@@ -154,7 +154,6 @@ class Metasmoke:
                     a = GlobalVars.metasmoke_ws.recv()
                     try:
                         data = json.loads(a)
-                        GlobalVars.MSStatus.set_last_ping()
                         Metasmoke.handle_websocket_data(data)
                         GlobalVars.MSStatus.succeeded()
                     except ConnectionError:
@@ -390,7 +389,6 @@ class Metasmoke:
 
             try:
                 response = response.json()
-                GlobalVars.MSStatus.set_last_ping()  # Otherwise the ping watcher will exit(10)
 
                 if response.get('pull_update', False):
                     log('info', "Received pull command from MS ping response")

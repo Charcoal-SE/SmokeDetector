@@ -52,20 +52,17 @@ Tracking metasmoke status.
 - `failed()`: Indicate a metasmoke connection failure.
 - `succeeded()`: Indicate a metasmoke connection success.
 - `get_failure_count()`: Get metasmoke connection failure counter value. The counter counts consecutive failures.
-- `get_last_ping()`: Get time for last status ping to metasmoke. If no time was previously set, returns `None`. Otherwise returns last ping time set as class `datetime.datetime`.
-- `set_last_ping()`: Set time for last status ping to current time.
 - `reset_ms_status()`: Reset class `GlobalVars.ms_status` to default values.
 ### Thread safety  
 Yes.  
 ### Notes on usage  
 - Metasmoke counter represents consecutive metasmoke failures.
 ### Implementation  
-This class is implemented with 3 static variables and 1 lock.  
+This class is implemented with 2 static variables and 1 lock.  
 #### Details  
 ##### Attributes  
 - `ms_is_up`: Whether or not metasmoke is up.
 - `counter`: Metasmoke connection failure counter.
-- `last_ping_time`: Time for last status ping to metasmoke.
 - `rw_lock`: Lock. Controlling access to `ms_is_up`, `failure_count` and `last_ping_time`.
 ##### Methods  
 - `set_up()`: Private to `metasmoke.py`. Obtain `rw_lock`. Set `ms_is_up` to `True`. Release `rw_lock`.
@@ -75,12 +72,9 @@ This class is implemented with 3 static variables and 1 lock.
 - `failed()`: Obtain `rw_lock`. Increase `counter` by `1`. Release `rw_lock`.
 - `succeeded()`: Obtain `rw_lock`. Set `counter` to `0`. Release `rw_lock`.
 - `get_failure_count()`: Obtain `rw_lock`. Read `counter` into `current_counter`. Release `rw_lock`. Return `current_failure_count`.
-- `get_last_ping()`: Obtain `rw_lock`. Read `last_ping_time` into `last_ping`. Release `rw_lock`. Return `last_ping`.
-- `set_last_ping()`: Set `last_ping` to `datetime.utcnow()`. Obtain `rw_lock`. Decide if `last_ping_time` is earlier than `last_ping`. If yes, set `last_ping_time` to `last_ping`. Release `rw_lock`.  
 - `reset_ms_status`: Obtain `rw_lock`. Set `ms_is_up` to `True`. Set `counter` to `0`. Set `last_ping_time` to `None`. Release `rw_lock`.
 #### Considerations  
 - `is_down()` is implemented to call `is_up()`, so maintainance tasks only need to be performed on `is_up()`.
-- Buffer is used in `set_last_ping()`, as it is supposed to set `last_ping_time` to the time it is called, rather than to the time it succeeded in obtaining the lock.
 ### Known bugs  
 - None.
 > Last change in this section was on 20 May 2020.

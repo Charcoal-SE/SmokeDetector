@@ -214,7 +214,6 @@ class GlobalVars:
         # Last change was on 20 May 2020.
         ms_is_up = True
         counter = 0
-        last_ping_time = None
         rw_lock = threading.Lock()
 
         @staticmethod
@@ -246,6 +245,9 @@ class GlobalVars:
             """ Query if metasmoke status is down """
             return not GlobalVars.MSStatus.ms_is_up
 
+        # Why implement failed() and succeeded() here, as they will only be called in metasmoke.py?
+        # Because get_failure_count() need to be exposed to global, so it is more convenient
+        # to implement failed() and succeeded() here.
         @staticmethod
         def failed():
             """ Indicate a metasmoke connection failure """
@@ -269,30 +271,11 @@ class GlobalVars:
             return failure_count
 
         @staticmethod
-        def get_last_ping():
-            """ Get last metasmoke status ping time """
-            GlobalVars.MSStatus.rw_lock.acquire()
-            last_ping = GlobalVars.MSStatus.last_ping_time
-            GlobalVars.MSStatus.rw_lock.release()
-            return last_ping
-
-        @staticmethod
-        def set_last_ping():
-            """ Set last metasmoke status ping time to now """
-            last_ping = datetime.utcnow()
-            # Use buffer last_ping as getting locks needs time, causing inaccuracies
-            GlobalVars.MSStatus.rw_lock.acquire()
-            if GlobalVars.MSStatus.last_ping_time < last_ping:
-                GlobalVars.MSStatus.last_ping_time = last_ping
-            GlobalVars.MSStatus.rw_lock.release()
-
-        @staticmethod
         def reset_ms_status():
             """ Reset class GlobalVars.MSStatus to default values """
             GlobalVars.MSStatus.rw_lock.acquire()
             GlobalVars.MSStatus.ms_is_up = True
             GlobalVars.MSStatus.counter = 0
-            GlobalVars.MSStatus.last_ping_time = None
             GlobalVars.MSStatus.rw_lock.release()
 
     chatexchange_u = config.get("ChatExchangeU")
