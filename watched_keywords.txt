@@ -20498,3 +20498,4 @@
 1589984138	Makyen	connect[\W_]*+infosoft(?!\.com(?<=connectinfosoft\.com))
 1589990217	Machavity	sarkarijob\.cc
 1590003653	Makyen	digitalsupreme\.in
+1590003750	Makyen	digital[\W_]*+supreme(?!\.in(?<=digitalsupreme\.in))
