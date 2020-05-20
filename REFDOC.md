@@ -44,7 +44,7 @@ This class is implemented with 4 static variables and 1 lock.
 ### Known bugs  
 - None
 > Last change in this section was on 19 May 2020.  
-## Class GlobalVars.ms_status  
+## Class GlobalVars.MSStatus  
 Tracking metasmoke status.  
 ### Public interface  
 - `is_up()`: Query if metasmoke is up. Returns `True` if metasmoke is up and `False` otherwise.
@@ -72,7 +72,7 @@ This class is implemented with 2 static variables and 1 lock.
 - `failed()`: Obtain `rw_lock`. Increase `counter` by `1`. Release `rw_lock`.
 - `succeeded()`: Obtain `rw_lock`. Set `counter` to `0`. Release `rw_lock`.
 - `get_failure_count()`: Obtain `rw_lock`. Read `counter` into `current_counter`. Release `rw_lock`. Return `current_failure_count`.
-- `reset_ms_status`: Obtain `rw_lock`. Set `ms_is_up` to `True`. Set `counter` to `0`. Set `last_ping_time` to `None`. Release `rw_lock`.
+- `reset_ms_status`: Obtain `rw_lock`. Set `ms_is_up` to `True`. Set `counter` to `0`. Release `rw_lock`.
 #### Considerations  
 - `is_down()` is implemented to call `is_up()`, so maintainance tasks only need to be performed on `is_up()`.
 ### Known bugs  
