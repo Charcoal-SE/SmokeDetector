@@ -20499,3 +20499,4 @@
 1589990217	Machavity	sarkarijob\.cc
 1590003653	Makyen	digitalsupreme\.in
 1590003750	Makyen	digital[\W_]*+supreme(?!\.in(?<=digitalsupreme\.in))
+1590007271	user12986714	insuranceella\.com
