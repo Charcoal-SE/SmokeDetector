@@ -44,3 +44,94 @@ This class is implemented with 4 static variables and 1 lock.
 ### Known bugs  
 - None
 > Last change in this section was on 19 May 2020.  
+## Class GlobalVars.ms_status  
+Tracking metasmoke status.  
+### Public interface  
+- `is_up()`: Query if metasmoke is up. Returns `True` if metasmoke is up and `False` otherwise.
+- `is_down()`: Query if metasmoke is down. Returns `True` if metasmoke is down and `False` otherwise.
+- `failed()`: Indicate a metasmoke connection failure.
+- `succeeded()`: Indicate a metasmoke connection success.
+- `get_failure_count()`: Get metasmoke connection failure counter value. The counter counts consecutive failures.
+- `get_last_ping()`: Get time for last status ping to metasmoke. If no time was previously set, returns `None`. Otherwise returns last ping time set as class `datetime.datetime`.
+- `set_last_ping()`: Set time for last status ping to current time.
+- `reset_ms_status()`: Reset class `GlobalVars.ms_status` to default values.
+### Thread safety  
+Yes.  
+### Notes on usage  
+- Metasmoke counter represents consecutive metasmoke failures.
+### Implementation  
+This class is implemented with 3 static variables and 1 lock.  
+#### Details  
+##### Attributes  
+- `ms_is_up`: Whether or not metasmoke is up.
+- `counter`: Metasmoke connection failure counter.
+- `last_ping_time`: Time for last status ping to metasmoke.
+- `rw_lock`: Lock. Controlling access to `ms_is_up`, `failure_count` and `last_ping_time`.
+##### Methods  
+- `set_up()`: Private to `metasmoke.py`. Obtain `rw_lock`. Set `ms_is_up` to `True`. Release `rw_lock`.
+- `set_down()`: Private to `metasmoke.py`. Obtain `rw_lock`. Set `ms_is_up` to `False`. Release `rw_lock`.
+- `is_up()`: Obtain `rw_lock`. Read `ms_is_up` into `current_ms_status`. Release `rw_lock`. Return `current_ms_status`.
+- `is_down()`: Call `is_up()` and return the inverted returned value.
+- `failed()`: Obtain `rw_lock`. Increase `counter` by `1`. Release `rw_lock`.
+- `succeeded()`: Obtain `rw_lock`. Set `counter` to `0`. Release `rw_lock`.
+- `get_failure_count()`: Obtain `rw_lock`. Read `counter` into `current_counter`. Release `rw_lock`. Return `current_failure_count`.
+- `get_last_ping()`: Obtain `rw_lock`. Read `last_ping_time` into `last_ping`. Release `rw_lock`. Return `last_ping`.
+- `set_last_ping()`: Set `last_ping` to `datetime.utcnow()`. Obtain `rw_lock`. Decide if `last_ping_time` is earlier than `last_ping`. If yes, set `last_ping_time` to `last_ping`. Release `rw_lock`.  
+- `reset_ms_status`: Obtain `rw_lock`. Set `ms_is_up` to `True`. Set `counter` to `0`. Set `last_ping_time` to `None`. Release `rw_lock`.
+#### Considerations  
+- `is_down()` is implemented to call `is_up()`, so maintainance tasks only need to be performed on `is_up()`.
+- Buffer is used in `set_last_ping()`, as it is supposed to set `last_ping_time` to the time it is called, rather than to the time it succeeded in obtaining the lock.
+### Known bugs  
+- None.
+> Last change in this section was on 20 May 2020.
+# File metasmoke.py  
+## Class Metasmoke  
+> Note: the documentation of this class is not yet completed.
+### Subclasses  
+- `AutoSwitch`
+### Public interface  
+- `ms_up()`: Switch metasmoke status to up.
+- `ms_down()`: Switch metasmoke status to down.
+> Not completed yet.
+### Thread safety  
+Unknown. The component currently documented in public interface is thread safe.  
+### Notes on usage  
+- Unless there are good reasons, always call `Metasmoke.ms_up()` and `Metasmoke.ms_down()` instead of `GlobalVars.MSStatus.set_up` and `GlobalVars.MSStatus.set_down()`. The former is a wrapper of the latter which offers logging and chat messages.
+### Implementation  
+> Not completed yet.
+### Known bugs  
+- None.
+> Last change in this section was on 20 May 2020.
+## Class Metasmoke.AutoSwitch  
+Automatically switch metasmoke status.
+### Public interface  
+- `to_off()`: Indicate a status ping failure.
+- `to_on()`: Indicate a status ping success.
+- `switch_auto(on)`: Turn on or off auto switch. If `on` is `True`, auto switch is turned on. Otherwise auto switch is turned off.
+- `reset_switch()`: Reset class `Metasmoke.AutoSwitch` to default values.
+### Thread safety  
+Yes.  
+### Notes on usage  
+- Failures or successes contributing to auto switching of metasmoke status should be those of status ping. Other failures or successes should not trigger auto switch.
+### Implementation  
+This class is implemented with 2 constants, 2 static variables and 1 lock.  
+#### Details
+##### Attributes  
+- `MAX_FAILURES`: Maximum failures before metasmoke status is switched down.
+- `MAX_SUCCESSES`: Maximum successes before metasmoke status is switched up.
+- `counter`: Consecutive failure and success counter. A negative value represents successes while a positive value represents failures.
+- `auto`: Whether or not to perform auto switch.
+- `rw_lock`: Lock. Controlling access to `counter` and `auto`.
+##### Methods  
+- `to_off()`: Obtain `rw_lock`. Decide if `counter` is negative. If yes, set `counter` to `0`. Increase `counter` by `1`. Read `counter` into `current_counter`. Read `auto` into `current_auto`. Release `rw_lock`. Decide if `current_counter` is greater than `MAX_FAILURES`, metasmoke status is up, and `current_auto` is `True`. If yes, issue a message to chat and call `ms_down()`.
+- `to_on()`: Obtain `rw_lock`. Decide if `counter` is positive. If yes, set `counter` to `0`. Decrease `counter` by `1`. Read `-counter` into `current_counter`. Read `auto` into `current_auto`. Release `rw_lock`. Decide if `current_counter` is greater than `MAX_SUCCESSES`, metasmoke status is down, and `current_auto` is `True`. If yes, issue a message to chat and call `ms_up()`.
+- `switch_auto(on)`: Obtain `rw_lock`. Set `auto` to `on`. Release `rw_lock`.
+- `reset_switch()`: Obtain `rw_lock`. Set `counter` to `0`. Set `auto` to `True`. Release `rw_lock`.
+#### Considerations  
+- Only status ping failures and successes should count, as otherwise it will be unbalanced since after metasmoke is declared down, only status pings are sent. However this cannot be enforced within the class, so please take this into consideration when calling `to_on()` and `to_off()`.
+### Known bugs  
+- None.
+> Last change in this section was on 20 May 2020.
+# Special cases
+## File socketscience.py, in class SocketScience
+- On line 78 and 87, `GlobalVars.MSStatus.set_up()` and `GlobalVars.MSStatus.set_down()` is called. This is to prevent circular import between `Metasmoke` and `SocketScience`. (20 May 2020)

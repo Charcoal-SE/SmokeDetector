@@ -32,7 +32,6 @@ from socketscience import SocketScience
 import metasmoke_cache
 
 
-MAX_FAILURES = 10  # Preservative, 10 errors = MS down
 NO_ACTIVITY_PINGS_TO_STANDBY = 8
 NO_ACTIVITY_PINGS_TO_REPORT = 4
 
@@ -40,6 +39,99 @@ NO_ACTIVITY_PINGS_TO_REPORT = 4
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
 class Metasmoke:
     status_pings_since_scan_activity = 0
+
+    class AutoSwitch:
+        """ Automatically switch metasmoke status """
+        # Last change was on 20 May 2020.
+        MAX_FAILURES = 10  # 10 failures == ms down
+        MAX_SUCCESSES = 1  # 1 success == ms up
+        counter = 0
+        auto = True
+        rw_lock = threading.Lock()
+
+        @staticmethod
+        def to_off():
+            """ Road to switching metasmoke down """
+            Metasmoke.AutoSwitch.rw_lock.acquire()
+            if Metasmoke.AutoSwitch.counter < 0:
+                # Consecutive counter. Switch sign.
+                Metasmoke.AutoSwitch.counter = 0
+            Metasmoke.AutoSwitch.counter += 1
+            current_counter = Metasmoke.AutoSwitch.counter
+            current_auto = Metasmoke.AutoSwitch.auto
+            Metasmoke.AutoSwitch.rw_lock.release()
+            # MAX_FAILURES is constant so no lock.
+            if current_counter > Metasmoke.AutoSwitch.MAX_FAILURES and\
+               GlobalVars.MSStatus.is_up() and current_auto:
+                log("warning", "Last {} connections to metasmoke failed".format(Metasmoke.AutoSwitch.counter) +
+                               " Setting metasmoke status to down.")
+                chatcommunicate.tell_rooms_with("debug", "**Warning**. {}:".format(GlobalVars.location) +
+                                                         " Last {} connection to metasmoke".format(current_counter) +
+                                                         " failed. Setting metasmoke status to **down**.")
+                Metasmoke.ms_down()
+
+        @staticmethod
+        def to_on():
+            """ Road to switching metasmoke up """
+            Metasmoke.AutoSwitch.rw_lock.acquire()
+            if Metasmoke.AutoSwitch.counter > 0:
+                # Consecutive counter. Switch sign.
+                Metasmoke.AutoSwitch.counter = 0
+            Metasmoke.AutoSwitch.counter -= 1
+            current_counter = -Metasmoke.AutoSwitch.counter
+            current_auto = Metasmoke.AutoSwitch.auto
+            # Negative values for success
+            Metasmoke.AutoSwitch.rw_lock.release()
+            # MAX_SUCCESSES is constant so no lock.
+            if current_counter > Metasmoke.AutoSwitch.MAX_SUCCESSES and\
+               GlobalVars.MSStatus.is_down() and current_auto:
+                # Why use warning? Because some action may be needed if people don't think metasmoke is up.
+                log("warning", "Last {} connections to metasmoke succeeded".format(Metasmoke.AutoSwitch.counter) +
+                               " Setting metasmoke status to up.")
+                chatcommunicate.tell_rooms_with("debug", "**Warning**. {}:".format(GlobalVars.location) +
+                                                         " Last {} connection to metasmoke".format(current_counter) +
+                                                         " succeeded. Setting metasmoke status to **up**.")
+                Metasmoke.ms_up()
+
+        @staticmethod
+        def switch_auto(on):
+            Metasmoke.AutoSwitch.rw_lock.acquire()
+            Metasmoke.AutoSwitch.auto = on
+            Metasmoke.AutoSwitch.rw_lock.release()
+            if on:
+                switch_auto_msg = "Metasmoke status autoswitch is now enabled."
+            else:
+                switch_auto_msg = "Metasmoke status autoswitch is now disabled."
+            log("info", switch_auto_msg)
+            chatcommunicate.tell_rooms_with("debug", switch_auto_msg)
+
+        @staticmethod
+        def reset_switch():
+            """ Reset class Metasmoke.AutoSwitch to default values """
+            Metasmoke.AutoSwitch.rw_lock.acquire()
+            Metasmoke.AutoSwitch.counter = 0
+            Metasmoke.Autoswitch.auto = True
+            Metasmoke.Autoswitch.rw_lock.release()
+
+    @staticmethod
+    def ms_up():
+        """ Switch metasmoke status to up """
+        # Last change was on 20 May 2020.
+        # These comments are to be removed once documentation
+        # for class Metasmoke as a whole is completed.
+        log("info", "Metasmoke status is now set to up.")
+        chatcommunicate.tell_rooms_with("debug", "Metasmoke status is now set to up.")
+        GlobalVars.MSStatus.set_up()
+
+    @staticmethod
+    def ms_down():
+        """ Switch metasmoke status to down """
+        # Last change was on 20 May 2020.
+        # These comments are to be removed once documentation
+        # for class Metasmoke as a whole is completed.
+        log("info", "Metasmoke status is now set to down.")
+        chatcommunicate.tell_rooms_with("debug", "Metasmoke status is now set to down.")
+        GlobalVars.MSStatus.set_down()
 
     @staticmethod
     def connect_websocket():
@@ -62,18 +154,18 @@ class Metasmoke:
                     a = GlobalVars.metasmoke_ws.recv()
                     try:
                         data = json.loads(a)
-                        GlobalVars.metasmoke_last_ping_time = datetime.utcnow()
+                        GlobalVars.MSStatus.set_last_ping()
                         Metasmoke.handle_websocket_data(data)
-                        Metasmoke.reset_failure_count()
+                        GlobalVars.MSStatus.succeeded()
                     except ConnectionError:
                         raise
                     except Exception as e:
                         Metasmoke.connect_websocket()
-                        GlobalVars.metasmoke_failures += 1
+                        GlobalVars.MSStatus.failed()
                         log('error', e, f=True)
                         traceback.print_exc()
             except Exception:
-                GlobalVars.metasmoke_failures += 1
+                GlobalVars.MSStatus.failed()
                 log('error', "Couldn't bind to MS websocket")
                 if not has_succeeded:
                     break
@@ -193,7 +285,7 @@ class Metasmoke:
         if GlobalVars.metasmoke_host is None:
             log('info', 'Attempted to send stats but metasmoke_host is undefined. Ignoring.')
             return
-        elif GlobalVars.metasmoke_down:
+        elif GlobalVars.MSStatus.is_down():
             log('warning', "Metasmoke down, not sending stats.")
             return
 
@@ -222,7 +314,7 @@ class Metasmoke:
         if GlobalVars.metasmoke_host is None:
             log('info', 'Received chat feedback but metasmoke_host is undefined. Ignoring.')
             return
-        elif GlobalVars.metasmoke_down:
+        elif GlobalVars.MSStatus.is_down():
             log('warning', "Metasmoke is down, not sending feedback")
             return
 
@@ -251,7 +343,7 @@ class Metasmoke:
         if GlobalVars.metasmoke_host is None:
             log('info', 'Attempted to send deletion data but metasmoke_host is undefined. Ignoring.')
             return
-        elif GlobalVars.metasmoke_down:
+        elif GlobalVars.MSStatus.is_down():
             log('warning', "Metasmoke is down, not sending deletion stats")
             return
 
@@ -276,7 +368,7 @@ class Metasmoke:
         if GlobalVars.metasmoke_host is None:
             log('info', 'Attempted to send status ping but metasmoke_host is undefined. Not sent.')
             return
-        elif GlobalVars.metasmoke_down:
+        elif GlobalVars.MSStatus.is_down():
             payload = {
                 "location": GlobalVars.location,
                 "timestamp": time.time()
@@ -298,7 +390,7 @@ class Metasmoke:
 
             try:
                 response = response.json()
-                GlobalVars.metasmoke_last_ping_time = datetime.utcnow()  # Otherwise the ping watcher will exit(10)
+                GlobalVars.MSStatus.set_last_ping()  # Otherwise the ping watcher will exit(10)
 
                 if response.get('pull_update', False):
                     log('info', "Received pull command from MS ping response")
@@ -329,7 +421,7 @@ class Metasmoke:
 
     @staticmethod
     def update_code_privileged_users_list():
-        if GlobalVars.metasmoke_down:
+        if GlobalVars.MSStatus.is_down():
             log('warning', "Metasmoke is down, can't update code privilege list")
             return
 
@@ -393,7 +485,7 @@ class Metasmoke:
 
     @staticmethod
     def send_statistics():
-        if GlobalVars.metasmoke_down:
+        if GlobalVars.MSStatus.is_down():
             log('warning', "Metasmoke is down, not sending statistics")
             return
 
@@ -489,7 +581,7 @@ class Metasmoke:
     @staticmethod
     def request_sender(method):
         def func(url, *args, ignore_down=False, **kwargs):
-            if not GlobalVars.metasmoke_host or (GlobalVars.metasmoke_down and not ignore_down):
+            if not GlobalVars.metasmoke_host or (GlobalVars.MSStatus.is_down() and not ignore_down):
                 return None
 
             if 'timeout' not in kwargs:
@@ -499,31 +591,23 @@ class Metasmoke:
             try:
                 response = method(GlobalVars.metasmoke_host + url, *args, **kwargs)
             except Exception:
-                GlobalVars.metasmoke_failures += 1
-                if GlobalVars.metasmoke_failures >= MAX_FAILURES and not GlobalVars.metasmoke_down:
-                    GlobalVars.metasmoke_down = True
-                    chatcommunicate.tell_rooms_with(
-                        'debug', '**Warning**: {}: {} latest connections to '
-                        'metasmoke have failed. Disabling metasmoke'.format(
-                            GlobalVars.location, GlobalVars.metasmoke_failures))
+                GlobalVars.MSStatus.failed()
+                if ignore_down:
+                    # Means that this is a status ping
+                    Metasmoke.AutoSwitch.to_off()
                 # No need to log here because it's re-raised
                 raise  # Maintain minimal difference to the original get/post methods
             else:
-                GlobalVars.metasmoke_failures -= 1
-                if GlobalVars.metasmoke_failures < 0:
-                    GlobalVars.metasmoke_failures = 0
+                GlobalVars.MSStatus.succeeded()
+                if ignore_down:
+                    # Means that this is a status ping
+                    Metasmoke.AutoSwitch.to_on()
 
             return response
         return func
 
     get = request_sender.__func__(requests.get)
     post = request_sender.__func__(requests.post)
-
-    @staticmethod
-    def reset_failure_count():  # For use in other places
-        GlobalVars.metasmoke_failures -= 1
-        if GlobalVars.metasmoke_failures < 0:
-            GlobalVars.metasmoke_failures = 0
 
     @staticmethod
     def send_status_ping_and_verify_scanning_if_active():

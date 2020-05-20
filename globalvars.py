@@ -70,7 +70,6 @@ class GlobalVars:
     api_backoff_time = 0
     deletion_watcher = None
 
-    metasmoke_last_ping_time = datetime.utcnow()
     not_privileged_warning = \
         "You are not a privileged user. Please see " \
         "[the privileges wiki page](https://charcoal-se.org/smokey/Privileges) for " \
@@ -210,9 +209,91 @@ class GlobalVars:
 
     location = config.get("location", "Continuous Integration")
 
-    metasmoke_ws = None
-    metasmoke_down = False
-    metasmoke_failures = 0  # Consecutive count, not cumulative
+    class MSStatus:
+        """ Tracking metasmoke status """
+        # Last change was on 20 May 2020.
+        ms_is_up = True
+        counter = 0
+        last_ping_time = None
+        rw_lock = threading.Lock()
+
+        @staticmethod
+        def set_up():
+            """ Set metasmoke status to up """
+            # Private to metasmoke.py
+            GlobalVars.MSStatus.rw_lock.acquire()
+            GlobalVars.MSStatus.ms_is_up = True
+            GlobalVars.MSStatus.rw_lock.release()
+
+        @staticmethod
+        def set_down():
+            """ Set metasmoke status to down """
+            # Private to metasmoke.py
+            GlobalVars.MSStatus.rw_lock.acquire()
+            GlobalVars.MSStatus.ms_is_up = False
+            GlobalVars.MSStatus.rw_lock.release()
+
+        @staticmethod
+        def is_up():
+            """ Query if metasmoke status is up """
+            GlobalVars.MSStatus.rw_lock.acquire()
+            current_ms_status = GlobalVars.MSStatus.ms_is_up
+            GlobalVars.MSStatus.rw_lock.release()
+            return current_ms_status
+
+        @staticmethod
+        def is_down():
+            """ Query if metasmoke status is down """
+            return not GlobalVars.MSStatus.ms_is_up
+
+        @staticmethod
+        def failed():
+            """ Indicate a metasmoke connection failure """
+            GlobalVars.MSStatus.rw_lock.acquire()
+            GlobalVars.MSStatus.counter += 1
+            GlobalVars.MSStatus.rw_lock.release()
+
+        @staticmethod
+        def succeeded():
+            """ Indicate a metasmoke connection success """
+            GlobalVars.MSStatus.rw_lock.acquire()
+            GlobalVars.MSStatus.counter = 0
+            GlobalVars.MSStatus.rw_lock.release()
+
+        @staticmethod
+        def get_failure_count():
+            """ Get consecutive metasmoke connection failure count """
+            GlobalVars.MSStatus.rw_lock.acquire()
+            failure_count = GlobalVars.MSStatus.counter
+            GlobalVars.MSStatus.rw_lock.release()
+            return failure_count
+
+        @staticmethod
+        def get_last_ping():
+            """ Get last metasmoke status ping time """
+            GlobalVars.MSStatus.rw_lock.acquire()
+            last_ping = GlobalVars.MSStatus.last_ping_time
+            GlobalVars.MSStatus.rw_lock.release()
+            return last_ping
+
+        @staticmethod
+        def set_last_ping():
+            """ Set last metasmoke status ping time to now """
+            last_ping = datetime.utcnow()
+            # Use buffer last_ping as getting locks needs time, causing inaccuracies
+            GlobalVars.MSStatus.rw_lock.acquire()
+            if GlobalVars.MSStatus.last_ping_time < last_ping:
+                GlobalVars.MSStatus.last_ping_time = last_ping
+            GlobalVars.MSStatus.rw_lock.release()
+
+        @staticmethod
+        def reset_ms_status():
+            """ Reset class GlobalVars.MSStatus to default values """
+            GlobalVars.MSStatus.rw_lock.acquire()
+            GlobalVars.MSStatus.ms_is_up = True
+            GlobalVars.MSStatus.counter = 0
+            GlobalVars.MSStatus.last_ping_time = None
+            GlobalVars.MSStatus.rw_lock.release()
 
     chatexchange_u = config.get("ChatExchangeU")
     chatexchange_p = config.get("ChatExchangeP")
@@ -288,6 +369,7 @@ class GlobalVars:
                 GlobalVars.commit.id, GlobalVars.location)
         GlobalVars.PostScanStat.reset_stat()
         GlobalVars.PostScanStat.reset_snap()
+        GlobalVars.MSStatus.reset_ms_status()
 
 
 GlobalVars.reload()
