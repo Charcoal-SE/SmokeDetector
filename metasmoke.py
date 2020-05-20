@@ -332,7 +332,7 @@ class Metasmoke:
     @staticmethod
     def update_code_privileged_users_list():
         if GlobalVars.metasmoke_down:
-            log('warning', "Metasmoke is down, can't update code privilege list")
+            log('warning', "Metasmoke is down, can't update blacklist manager privilege list")
             return
 
         payload = {'key': GlobalVars.metasmoke_key}

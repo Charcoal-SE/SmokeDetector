@@ -174,13 +174,13 @@ class GitManager:
                     url, pr_num = response["html_url"], response["number"]
                     if metasmoke_down:
                         return (True,
-                                "MS is not reachable, so I can't see if you have code privileges, but I've "
-                                "[created PR#{1} for you]({0}).".format(
+                                "MS is not reachable, so I can't see if you have blacklist manager privileges, but "
+                                "I've [created PR#{1} for you]({0}).".format(
                                     url, pr_num))
                     else:
                         return (True,
-                                "You don't have code privileges, but I've [created PR#{1} for you]({0}).".format(
-                                    url, pr_num))
+                                "You don't have blacklist manager privileges, but I've [created PR#{1} for you]({0})."
+                                .format(url, pr_num))
 
                 except KeyError:
                     git.checkout("deploy")  # Return to deploy

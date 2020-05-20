@@ -247,7 +247,7 @@ def test_approve(monkeypatch):
 
     # Prevent from attempting to check privileges with Metasmoke
     monkeypatch.setattr(GlobalVars, "code_privileged_users", [])
-    assert chatcommands.approve(8888, original_msg=msg).startswith("You need code privileges")
+    assert chatcommands.approve(8888, original_msg=msg).startswith("You need blacklist manager privileges")
 
     monkeypatch.setattr(GlobalVars, "code_privileged_users", [('stackexchange.com', 121520)])
     with monkeypatch.context() as m:

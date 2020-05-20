@@ -367,7 +367,7 @@ def do_blacklist(blacklist_type, msg, force=False):
     try:
         code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
     except (requests.exceptions.ConnectionError, ValueError, TypeError):
-        code_permissions = False  # Because we need the system to assume that we don't have code privs.
+        code_permissions = False  # Because we need the system to assume that we don't have blacklister privs.
         metasmoke_down = True
 
     _status, result = GitManager.add_to_blacklist(
@@ -487,7 +487,7 @@ def unblacklist(msg, item, alias_used="unwatch"):
 def approve(msg, pr_id):
     code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
     if not code_permissions:
-        raise CmdException("You need code privileges to approve pull requests")
+        raise CmdException("You need blacklist manager privileges to approve pull requests")
 
     # Forward this, because checks are better placed in gitmanager.py
     try:
@@ -496,7 +496,7 @@ def approve(msg, pr_id):
             msg._client.host, msg.owner.id)
         comment = "[Approved]({}) by [{}]({}) in {}\n\n![Approved with SmokeyApprove]({})".format(
             message_url, msg.owner.name, chat_user_profile_link, msg.room.name,
-            # The image of (code-admins|approved) from PullApprove
+            # The image of (blacklisters|approved) from PullApprove
             "https://camo.githubusercontent.com/7d7689a88a6788541a0a87c6605c4fdc2475569f/68747470733a2f2f696d672e"
             "736869656c64732e696f2f62616467652f626c61636b6c6973746572732d617070726f7665642d627269676874677265656e")
         message = GitManager.merge_pull_request(pr_id, comment)
@@ -844,7 +844,7 @@ def sync_remote(msg, alias_used='pull-sync'):
     :return: A string containing a response message
     """
     if not is_code_privileged(msg._client.host, msg.owner.id):
-        raise CmdException("You don't have code privileges to run this command.")
+        raise CmdException("You don't have blacklist manager privileges to run this command.")
     if 'force' not in alias_used:
         raise CmdException("This command is deprecated, append `-force` if you really need to do that.")
 
@@ -862,7 +862,7 @@ def sync_remote_hard(msg, alias_used='pull-sync-hard'):
     :return: A string containing a response message or None
     """
     if not is_code_privileged(msg._client.host, msg.owner.id):
-        raise CmdException("You don't have code privileges to run this command.")
+        raise CmdException("You don't have blacklist manager privileges, which are required to run this command.")
 
     git_response = GitManager.sync_remote_hard()[1]
     # Not enough information is passed to commands to send an actual reply. Thus, the reboot
@@ -931,15 +931,15 @@ def amiprivileged(msg):
 @command(whole_msg=True)
 def amicodeprivileged(msg):
     """
-    Tells user whether or not they have code privileges
+    Tells user whether or not they have blacklister privileges
     :param msg:
     :return: A string
     """
     update_code_privileged_users_list()
     if is_code_privileged(msg._client.host, msg.owner.id):
-        return "\u2713 You are a code-privileged user."
+        return "\u2713 You are a blacklist manager privileged user."
 
-    return "\u2573 No, you are not a code-privileged user."
+    return "\u2573 No, you are not a blacklist manager privileged user."
 
 
 # noinspection PyIncorrectDocstring
