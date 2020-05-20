@@ -1577,7 +1577,7 @@ safflower\W?oil
 ramsedave121(?:@gma?il\.com)?
 (?:meg|test)adrox
 unique(?:\W|doc)?producers?
-skin ?care
+skin *care
 herbal ?care
 relief\W?hemp\W?cbd
 andro[ -]dna
