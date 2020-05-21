@@ -243,7 +243,7 @@ class GlobalVars:
         @staticmethod
         def is_down():
             """ Query if metasmoke status is down """
-            return not GlobalVars.MSStatus.ms_is_up
+            return not GlobalVars.MSStatus.is_up()
 
         # Why implement failed() and succeeded() here, as they will only be called in metasmoke.py?
         # Because get_failure_count() need to be exposed to global, so it is more convenient
