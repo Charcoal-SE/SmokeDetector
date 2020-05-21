@@ -20506,3 +20506,4 @@
 1590047595	double-beep	nut-china\.com
 1590049307	Daniil	Kumbhat[\W_]*+(bazaar|group|brothers|\d++|[\da-f]{4,}+)
 1590057596	Daniil	chinaglobalmobility\.org
+1590064492	Machavity	wifi-extsetup\.com
