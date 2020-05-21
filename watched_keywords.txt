@@ -20145,7 +20145,6 @@
 1588931114	tripleee	keto[\W_]*+melt
 1588932546	tripleee	sahacoolingcentre\.com
 1588933578	tripleee	(?-i:^Osama Zulfiqar)
-1588935010	tripleee	w-ww-office\.com
 1588936521	tripleee	purchase-real-and-fake-documents\.com
 1588937652	Makyen	(?:mrs[\W_]*+)?frederica[\W_]*+alonso(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*(?:[\W_]*+gmail\.com)?
 1588937679	Makyen	pdx[\W_]*+male[\W_]*+enhancement(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
