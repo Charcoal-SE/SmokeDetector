@@ -95,6 +95,7 @@ class Metasmoke:
 
         @staticmethod
         def switch_auto(on):
+            """ Enable or disable auto status switch """
             Metasmoke.AutoSwitch.rw_lock.acquire()
             Metasmoke.AutoSwitch.auto = on
             Metasmoke.AutoSwitch.rw_lock.release()
