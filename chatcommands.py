@@ -741,19 +741,23 @@ def metasmoke(msg, alias_used):
     if alias_used == "ms-down":
         Metasmoke.AutoSwitch.switch_auto(True)
         Metasmoke.ms_down()
-        return ""
+        return "Successfully set metasmoke status to **down**." +\
+               " Automatic metasmoke status switch is currently **enabled**."
     if alias_used == "ms-up":
         Metasmoke.AutoSwitch.switch_auto(True)
         Metasmoke.ms_up()
-        return ""
+        return "Successfully set metasmoke status to **up**." +\
+               " Automatic metasmoke status switch is currently **enabled**."
     if alias_used == "ms-down-force":
         Metasmoke.AutoSwitch.switch_auto(False)
         Metasmoke.ms_down()
-        return ""
+        return "Successfully set metasmoke status to **down**." +\
+               " Automatic metasmoke status switch is currently **disabled**."
     if alias_used == "ms-up-force":
         Metasmoke.AutoSwitch.switch_auto(False)
         Metasmoke.ms_up()
-        return ""
+        return "Successfully set metasmoke status to **up**." +\
+               " Automatic metasmoke status switch is currently **disabled**."
     raise CmdException("Bad command alias. Blame a developer.")
 
 
