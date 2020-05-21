@@ -20146,7 +20146,6 @@
 1588932546	tripleee	sahacoolingcentre\.com
 1588933578	tripleee	(?-i:^Osama Zulfiqar)
 1588935010	tripleee	w-ww-office\.com
-1588935139	tripleee	help-mcafee\.me
 1588935173	tripleee	w-w-w-mcafee\.com
 1588936521	tripleee	purchase-real-and-fake-documents\.com
 1588937652	Makyen	(?:mrs[\W_]*+)?frederica[\W_]*+alonso(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*(?:[\W_]*+gmail\.com)?
