@@ -20501,3 +20501,4 @@
 1590003750	Makyen	digital[\W_]*+supreme(?!\.in(?<=digitalsupreme\.in))
 1590007271	user12986714	insuranceella\.com
 1590014381	Makyen	casinogames-realmoney\.com
+1590033990	Makyen	friendztravel\.com
