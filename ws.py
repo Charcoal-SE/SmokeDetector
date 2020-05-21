@@ -90,7 +90,7 @@ if not GlobalVars.metasmoke_ws_host:
 # noinspection PyProtectedMember
 def restart_automatically():
     Metasmoke.send_statistics()
-    chatcommunicate.tell_rooms_with("debug", "Executing automatic scheduled reboot.")
+    chatcommunicate.tell_rooms_with("debug", "{}: Executing automatic scheduled reboot.".format(GlobalVars.location))
     time.sleep(6)
     exit_mode("reboot")
 
