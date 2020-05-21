@@ -20503,3 +20503,4 @@
 1590014381	Makyen	casinogames-realmoney\.com
 1590033990	Makyen	friendztravel\.com
 1590036399	Makyen	chinafreezers\.com
+1590041889	Makyen	flawless[\W_]*+lush[\W_]*+skin(?:[\W_]*+(?:official|buy|review|\d++|[\da-f]{4,}+))*
