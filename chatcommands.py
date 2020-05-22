@@ -359,6 +359,8 @@ def do_blacklist(blacklist_type, msg, force=False):
     append_force_to_do = "; append `-force` if you really want to do that."
 
     pattern = get_pattern_from_content_source(msg)
+    blacklistkey = Blacklist.resolve(blacklist_id)
+    blacklist = GlobalVars.git_black_watch_lists[blacklistkey]
 
     has_u202d = ""
     if '\u202d' in pattern:
@@ -367,7 +369,7 @@ def do_blacklist(blacklist_type, msg, force=False):
             " - in most cases, you don't want that")
 
     has_unescaped_dot = ""
-    if "number" not in blacklist_type:
+    if blacklist.regextype():
         # Test for . without \., but not in comments.
         test_for_unescaped_dot = regex.sub(r"(?<!\\)\(\?\#[^\)]*\)", "", pattern)  # remove comments
         # Remove character sets, where . doesn't need to be escaped.
@@ -383,16 +385,18 @@ def do_blacklist(blacklist_type, msg, force=False):
             raise CmdException("That pattern is probably too broad, refusing to commit.")
 
     if not force:
-        if "number" in blacklist_type or \
-                regex.match(r'(?:\[a-z_]\*)?(?:\(\?:)?\d+(?:[][\\W_*()?:]+\d+)+(?:\[a-z_]\*)?$', pattern):
+        if blacklist.numbertype() or regex.match(
+            r'(?:\[a-z_]\*)?(?:\(\?:)?\d+(?:[][\\W_*()?:]+\d+)+(?:\[a-z_]\*)?$',
+                pattern):
             is_phone = True
         else:
             is_phone = False
 
-        is_watchlist = bool("watch" in blacklist_type)
+        is_watchlist = blacklist.watchtype()
 
         concretized_pattern = get_test_text_from_regex(pattern)
 
+        # reasons = blacklist.already_caught(concretized_pattern)
         for username in False, True:
             reasons = check_blacklist(
                 concretized_pattern, is_username=username, is_watchlist=is_watchlist, is_phone=is_phone)
@@ -419,7 +423,7 @@ def do_blacklist(blacklist_type, msg, force=False):
         metasmoke_down = True
 
     _status, result = GitManager.add_to_blacklist(
-        blacklist=blacklist_type,
+        blacklist=blacklist_id,
         item_to_blacklist=pattern,
         username=msg.owner.name,
         chat_profile_link=chat_user_profile_link,
@@ -448,14 +452,12 @@ def do_blacklist(blacklist_type, msg, force=False):
 
 
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=True, give_name=True, aliases=["blacklist-keyword",
-                                                                        "blacklist-website",
-                                                                        "blacklist-username",
-                                                                        "blacklist-number",
-                                                                        "blacklist-keyword-force",
-                                                                        "blacklist-website-force",
-                                                                        "blacklist-username-force",
-                                                                        "blacklist-number-force"])
+@command(str, whole_msg=True, privileged=True, give_name=True,
+         aliases=["blacklist-keyword", "blacklist-keyword-force",
+                  "blacklist-website", "blacklist-website-force",
+                  "blacklist-username", "blacklist-username-force",
+                  "blacklist-number", "blacklist-number-force",
+                  "blacklist-ip", "blacklist-ns"])  # "blacklist-asn",
 def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     """
     Adds a pattern to the blacklist and commits/pushes to GitHub
@@ -463,14 +465,15 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     :param pattern:
     :return: A string
     """
-    parts = alias_used.split("-")
-    return do_blacklist(parts[1], msg, force=len(parts) > 2)
+    blacklist_id = alias_used.replace("-force", "").replace("-", "_")
+    return do_blacklist(blacklist_id, msg, force=alias_used.split("-")[-1] == "force")
 
 
 # noinspection PyIncorrectDocstring
 @command(str, whole_msg=True, privileged=True, give_name=True,
          aliases=["watch-keyword", "watch-force", "watch-keyword-force",
-                  "watch-number", "watch-number-force"])
+                  "watch-number", "watch-number-force",
+                  "watch-ip", "watch-ns", "watch-asn"])  # "watch-ns-pair",
 def watch(msg, pattern, alias_used="watch"):
     """
     Adds a pattern to the watched keywords list and commits/pushes to GitHub
@@ -478,12 +481,12 @@ def watch(msg, pattern, alias_used="watch"):
     :param pattern:
     :return: A string
     """
+    blacklist_id = alias_used.replace("-force", "").replace("-", "_")
+    return do_blacklist(blacklist_id, msg, force=alias_used.split("-")[-1] == "force")
 
-    return do_blacklist("watch_number" if "number" in alias_used else "watch_keyword",
-                        msg, force=alias_used.split("-")[-1] == "force")
 
-
-@command(str, whole_msg=True, privileged=True, give_name=True, aliases=["unwatch"])
+@command(str, whole_msg=True, privileged=True, give_name=True,
+         aliases=["unwatch"])  # "unwatch-ns", "unwatch-asn", "unwatch-ip"
 def unblacklist(msg, item, alias_used="unwatch"):
     """
     Removes a pattern from watchlist/blacklist and commits/pushes to GitHub
