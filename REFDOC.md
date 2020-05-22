@@ -7,14 +7,16 @@
 
 > Note: methods return `None` unless noted otherwise.  
 
-> Warning: if the last change time indicated in this documentation is earlier than that indicated in corresponding code sections, this documentation is out of sync (and hence almost useless).
+> Warning: if the last change time indicated in this documentation is earlier
+than that indicated in corresponding code sections, this documentation is out of sync (and hence almost useless).
 
 # File globalvars.py  
 ## Class GlobalVars.PostScanStat  
 Tracking post scanning data.  
 ### Public interface  
 - `add_stat(posts_scanned, scan_time)`: Add `posts_scanned` to total numbers of posts scanned. Add `scan_time` to total time spent on scanning.
-- `get_stat()`: Get total numbers of posts scanned, total time spent on scanning and posts scanned per second. If total time spent is zero, posts scanned per second is set to `None`. Returns a tuple `(posts_scanned, scan_time, posts_per_second)`.
+- `get_stat()`: Get total numbers of posts scanned, total time spent on scanning and posts scanned per second.
+If total time spent is zero, posts scanned per second is set to `None`. Returns a tuple `(posts_scanned, scan_time, posts_per_second)`.
 - `snap()`: Take a snapshot of current post scanning data. Will overwrite last snapshot.
 - `get_snap()`: Get the snapshot of post scanning data.
 - `reset_stat()`: Reset post scanning data, which includes total numbers of posts scanned and total time spent on scanning to `0`.
@@ -34,9 +36,13 @@ This class is implemented with 4 static variables and 1 lock.
 - `rw_lock`: Lock. Controlling access to `num_posts_scanned`, `post_scan_time`, `snap_num_posts_scanned` and `snap_post_scan_time`.
 ##### Methods  
 - `add_stat(posts_scanned, scan_time)`: Obtain `rw_lock`. Add `posts_scanned` and `scan_time` to `num_posts_scanned` and `post_scan_time`. Release `rw_lock`.
-- `get_stat()`: Obtain `rw_lock`. Read `num_posts_scanned` into `posts_scanned`. Read `post_scan_time` into `scan_time`. Release `rw_lock`. Decide if `scan_time` is `0`. If yes, set `posts_per_second` to `None`. Otherwise calculate `posts_per_second` as `posts_scanned` divided by `scan_time`. Return a tuple `(posts_scanned, scan_time, posts_per_second)`.
+- `get_stat()`: Obtain `rw_lock`. Read `num_posts_scanned` into `posts_scanned`. Read `post_scan_time` into `scan_time`. Release `rw_lock`.
+Decide if `scan_time` is `0`. If yes, set `posts_per_second` to `None`. Otherwise calculate `posts_per_second` as `posts_scanned` divided by `scan_time`.
+Return a tuple `(posts_scanned, scan_time, posts_per_second)`.
 - `snap()`: Obtain `rw_lock`. Set `snap_num_posts_scanned` to `num_posts_scanned`. Set `snap_post_scan_time` to `post_scan_time`. Release `rw_lock`.
-- `get_snap()`: Obtain `rw_lock`. Read `snap_num_posts_scanned` into `snap_posts_scanned`. Read `snap_post_scan_time` into `snap_scan_time`. Release `rw_lock`. Decide if `snap_scan_time` is `0`. If yes, set `snap_posts_per_second` to `None`. Otherwise calculate `snap_posts_per_second` as `snap_posts_scanned` divided by `snap_scan_time`. Return a tuple `(snap_posts_scanned, snap_scan_time, snap_posts_per_second)`.
+- `get_snap()`: Obtain `rw_lock`. Read `snap_num_posts_scanned` into `snap_posts_scanned`. Read `snap_post_scan_time` into `snap_scan_time`. Release `rw_lock`.
+Decide if `snap_scan_time` is `0`. If yes, set `snap_posts_per_second` to `None`. Otherwise calculate `snap_posts_per_second` as `snap_posts_scanned` divided by `snap_scan_time`.
+Return a tuple `(snap_posts_scanned, snap_scan_time, snap_posts_per_second)`.
 - `reset_stat()`: Obtain `rw_lock`. Set `num_posts_scanned` and `post_scan_time` to `0`. Release `rw_lock`.
 - `reset_snap()`: Obtain `rw_lock`. Set `snap_num_posts_scanned` and `snap_post_scan_time` to `0`. Release `rw_lock`.
 #### Considerations  
@@ -90,7 +96,8 @@ This class is implemented with 2 static variables and 1 lock.
 ### Thread safety  
 Unknown. The component currently documented in public interface is thread safe.  
 ### Notes on usage  
-- Unless there are good reasons, always call `Metasmoke.ms_up()` and `Metasmoke.ms_down()` instead of `GlobalVars.MSStatus.set_up` and `GlobalVars.MSStatus.set_down()`. The former is a wrapper of the latter which offers logging and chat messages.
+- Unless there are good reasons, always call `Metasmoke.ms_up()` and `Metasmoke.ms_down()` instead of `GlobalVars.MSStatus.set_up` and `GlobalVars.MSStatus.set_down()`.
+The former is a wrapper of the latter which offers logging and chat messages.
 ### Implementation  
 > Not completed yet.
 ### Known bugs  
@@ -117,12 +124,15 @@ This class is implemented with 2 constants, 2 static variables and 1 lock.
 - `auto`: Whether or not to perform auto switch.
 - `rw_lock`: Lock. Controlling access to `counter` and `auto`.
 ##### Methods  
-- `to_off()`: Obtain `rw_lock`. Decide if `counter` is negative. If yes, set `counter` to `0`. Increase `counter` by `1`. Read `counter` into `current_counter`. Read `auto` into `current_auto`. Release `rw_lock`. Decide if `current_counter` is greater than `MAX_FAILURES`, metasmoke status is up, and `current_auto` is `True`. If yes, issue a message to chat and call `ms_down()`.
-- `to_on()`: Obtain `rw_lock`. Decide if `counter` is positive. If yes, set `counter` to `0`. Decrease `counter` by `1`. Read `-counter` into `current_counter`. Read `auto` into `current_auto`. Release `rw_lock`. Decide if `current_counter` is greater than `MAX_SUCCESSES`, metasmoke status is down, and `current_auto` is `True`. If yes, issue a message to chat and call `ms_up()`.
+- `to_off()`: Obtain `rw_lock`. Decide if `counter` is negative. If yes, set `counter` to `0`. Increase `counter` by `1`. Read `counter` into `current_counter`. Read `auto` into `current_auto`. Release `rw_lock`.
+Decide if `current_counter` is greater than `MAX_FAILURES`, metasmoke status is up, and `current_auto` is `True`. If yes, issue a message to chat and call `ms_down()`.
+- `to_on()`: Obtain `rw_lock`. Decide if `counter` is positive. If yes, set `counter` to `0`. Decrease `counter` by `1`. Read `-counter` into `current_counter`. Read `auto` into `current_auto`. Release `rw_lock`.
+Decide if `current_counter` is greater than `MAX_SUCCESSES`, metasmoke status is down, and `current_auto` is `True`. If yes, issue a message to chat and call `ms_up()`.
 - `switch_auto(on)`: Obtain `rw_lock`. Set `auto` to `on`. Release `rw_lock`.
 - `reset_switch()`: Obtain `rw_lock`. Set `counter` to `0`. Set `auto` to `True`. Release `rw_lock`.
 #### Considerations  
-- Only status ping failures and successes should count, as otherwise it will be unbalanced since after metasmoke is declared down, only status pings are sent. However this cannot be enforced within the class, so please take this into consideration when calling `to_on()` and `to_off()`.
+- Only status ping failures and successes should count, as otherwise it will be unbalanced since after metasmoke is declared down, only status pings are sent.
+However this cannot be enforced within the class, so please take this into consideration when calling `to_on()` and `to_off()`.
 ### Known bugs  
 - None.
 > Last change in this section was on 20 May 2020.
