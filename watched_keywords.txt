@@ -3780,7 +3780,6 @@
 1528928062	Makyen	saftysign\.ir
 1528929073	Makyen	como-superar-una-ruptura\.com
 1528949991	tripleee	flixstar\.net
-1528952699	gparyani	clickbait
 1528957305	iBug	cryptonhash\.com
 1528957387	tripleee	closers\W?credits
 1528961066	Glorfindel	zuvoo\.com
