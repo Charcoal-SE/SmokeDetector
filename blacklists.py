@@ -430,7 +430,7 @@ class Blacklist(list):
         return self._parser.add(item)
 
     def delete(self, item):
-        return self._parser.remove(item)
+        return self._parser.delete(item)
 
     def each(self, with_info=False):
         return self._parser.each(with_info=with_info)
