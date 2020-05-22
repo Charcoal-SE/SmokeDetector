@@ -316,3 +316,4 @@ lustresparasala
 (?-i:^Tony Wong$)
 (?-i:^Add Hunters$)
 ^techmartin$
+(?-i:^Rathva Dinesh$)
