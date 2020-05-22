@@ -139,12 +139,9 @@ class TSVDictParser(BlacklistParser):
                         self._filename, lineno, err))
                     continue
                 if what[0] != "#":
-                    """
                     yield WhoWhatWhenString(
-                        who=by_whom, when=when,
-                        filename=self._filename, lineno=lineno, what)
-                    """
-                    yield WhoWhatWhenString(seq=what, who=by_whom, when=when, filename=self._filename, lineno=lineno)
+                        seq=what, who=by_whom, when=when,
+                        filename=self._filename, lineno=lineno)
 
     def add(self, item: Union[str, WhoWhatWhenString]):
         with open(self._filename, 'a+', encoding='utf-8') as f:
@@ -276,7 +273,15 @@ class YAMLParserCIDR(BlacklistParser):
         for item in self._parse():
             self._validate(item)
 
+    def _add_format(self, item):
+        """
+        Accept a new entry to add as a simple string; return the expected format for add()
+        """
+        return {self.SCHEMA_PRIKEY: item}
+
     def add(self, item):
+        if isinstance(item, str):
+            item = self._add_format(item)
         self._validate(item)
         prikey = self.SCHEMA_PRIKEY
 
@@ -290,6 +295,8 @@ class YAMLParserCIDR(BlacklistParser):
         self._write(add_callback)
 
     def delete(self, item):
+        if isinstance(item, str):
+            item = self._add_format(item)
         prikey = self.SCHEMA_PRIKEY
 
         def delete_callback(d):
