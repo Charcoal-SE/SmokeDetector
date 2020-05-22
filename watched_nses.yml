@@ -38,6 +38,9 @@ items:
   - amit.ns.cloudflare.com.
 - ns:
   - adrian.ns.cloudflare.com.
+  - ben.ns.cloudflare.com.
+- ns:
+  - adrian.ns.cloudflare.com.
   - nick.ns.cloudflare.com.
 - ns:
   - aida.ns.cloudflare.com.
