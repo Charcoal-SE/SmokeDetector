@@ -359,37 +359,40 @@ class FindSpam:
         # See PR 2322 for the reason of (?:^|\b) and (?:\b|$)
         # (?w:\b) is also useful
         cls.rule_bad_keywords.regex = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
-            "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb))
+            "|".join(GlobalVars.git_black_watch_lists['bad_keywords']),
+            "|".join(bad_keywords_nwb))
         try:
             del cls.rule_bad_keywords.compiled_regex
         except AttributeError:
             pass
         cls.rule_bad_keywords.sanity_check()
         cls.rule_watched_keywords.regex = r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format(
-            "|".join(GlobalVars.watched_keywords))
+            "|".join(GlobalVars.git_black_watch_lists['watched_keywords']))
         try:
             del cls.rule_watched_keywords.compiled_regex
         except AttributeError:
             pass
         cls.rule_watched_keywords.sanity_check()
         cls.rule_blacklisted_websites.regex = r"(?i)({})".format(
-            "|".join(GlobalVars.blacklisted_websites))
+            "|".join(GlobalVars.git_black_watch_lists['blacklisted_websites']))
         try:
             del cls.rule_blacklisted_websites.compiled_regex
         except AttributeError:
             pass
         cls.rule_blacklisted_websites.sanity_check()
         cls.rule_blacklisted_usernames.regex = r"(?i)({})".format(
-            "|".join(GlobalVars.blacklisted_usernames))
+            "|".join(GlobalVars.git_black_watch_lists['blacklisted_usernames']))
         try:
             del cls.rule_blacklisted_usernames.compiled_regex
         except AttributeError:
             pass
         cls.rule_blacklisted_usernames.sanity_check()
-        GlobalVars.blacklisted_numbers, GlobalVars.blacklisted_numbers_normalized = \
-            process_numlist(GlobalVars.blacklisted_numbers)
-        GlobalVars.watched_numbers, GlobalVars.watched_numbers_normalized = \
-            process_numlist(GlobalVars.watched_numbers)
+        GlobalVars.git_black_watch_lists['blacklisted_numbers'], \
+            GlobalVars.blacklisted_numbers_normalized = \
+            process_numlist(GlobalVars.git_black_watch_lists['blacklisted_numbers'])
+        GlobalVars.git_black_watch_lists['watched_numbers'], \
+            GlobalVars.watched_numbers_normalized = \
+            process_numlist(GlobalVars.git_black_watch_lists['watched_numbers'])
         log('debug', "Global blacklists loaded")
 
     @staticmethod
@@ -761,7 +764,7 @@ def process_numlist(numlist):
 def check_blacklisted_numbers(s, site):
     return check_numbers(
         s,
-        GlobalVars.blacklisted_numbers,
+        GlobalVars.git_black_watch_lists['blacklisted_numbers'],
         GlobalVars.blacklisted_numbers_normalized
     )
 
@@ -770,7 +773,7 @@ def check_blacklisted_numbers(s, site):
 def check_watched_numbers(s, site):
     return check_numbers(
         s,
-        GlobalVars.watched_numbers,
+        GlobalVars.git_black_watch_lists['watched_numbers'],
         GlobalVars.watched_numbers_normalized
     )
 
@@ -1133,7 +1136,8 @@ def ns_is_host(s, site):
 
 @create_rule("bad NS for domain in {}", body_summary=True, stripcodeblocks=True)
 def bad_ns_for_url_domain(s, site):
-    return ns_for_url_domain(s, site, GlobalVars.blacklisted_nses)
+    return ns_for_url_domain(
+        s, site, GlobalVars.git_black_watch_lists['blacklisted_nses'])
 
 
 # This applies to all answers, and non-SO questions
@@ -1141,7 +1145,8 @@ def bad_ns_for_url_domain(s, site):
              sites=["stackoverflow.com"])
 @create_rule("potentially bad NS for domain in {}", body_summary=True, stripcodeblocks=True, question=False)
 def watched_ns_for_url_domain(s, site):
-    return ns_for_url_domain(s, site, GlobalVars.watched_nses)
+    return ns_for_url_domain(
+        s, site, GlobalVars.git_black_watch_lists['watched_nses'])
 
 
 def ip_for_url_host(s, site, ip_list):
@@ -1165,7 +1170,8 @@ def ip_for_url_host(s, site, ip_list):
 @create_rule("potentially bad IP for hostname in {}",
              stripcodeblocks=True, body_summary=True)
 def watched_ip_for_url_hostname(s, site):
-    return ip_for_url_host(s, site, GlobalVars.watched_cidrs)
+    return ip_for_url_host(
+        s, site, GlobalVars.git_black_watch_lists['watched_cidrs'])
 
 
 @create_rule("bad IP for hostname in {}",
@@ -1173,7 +1179,7 @@ def watched_ip_for_url_hostname(s, site):
 def bad_ip_for_url_hostname(s, site):
     return ip_for_url_host(
         s, site,
-        GlobalVars.blacklisted_cidrs)
+        GlobalVars.git_black_watch_lists['blacklisted_cidrs'])
 
 
 def asn_for_url_host(s, site, asn_list):
@@ -1197,7 +1203,8 @@ def asn_for_url_host(s, site, asn_list):
 
 @create_rule("potentially bad ASN for hostname in {}", body_summary=True, stripcodeblocks=True)
 def watched_asn_for_url_hostname(s, site):
-    return asn_for_url_host(s, site, GlobalVars.watched_asns)
+    return asn_for_url_host(
+        s, site, GlobalVars.git_black_watch_lists['watched_asns'])
 
 
 @create_rule("offensive {} detected", body_summary=True, max_rep=101, max_score=2, stripcodeblocks=True)
