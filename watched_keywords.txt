@@ -20538,3 +20538,4 @@
 1590143164	tripleee	vir?maxryn
 1590143465	tripleee	shadman[\W_]*+trade(?:[\W_]*+international)?
 1590145850	tripleee	faraoncasino-klub\.com
+1590145933	tripleee	besthookahflavors\.com
