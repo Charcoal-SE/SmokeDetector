@@ -13947,7 +13947,6 @@
 1572694190	Makyen	thenutritionsclinic\.com
 1572694217	Makyen	thenutritionsclinic(?!\.com)
 1572704310	double-beep	pustudy\.com
-1572711908	Daniil	fast2earn\.com
 1572717339	Makyen	igsinstitute\.in
 1572736530	Machavity	tardodty\.com
 1572749562	Makyen	solitaire\.onl
