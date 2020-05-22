@@ -20539,3 +20539,4 @@
 1590143465	tripleee	shadman[\W_]*+trade(?:[\W_]*+international)?
 1590145850	tripleee	faraoncasino-klub\.com
 1590145933	tripleee	besthookahflavors\.com
+1590147829	tripleee	poojaescorts\.in
