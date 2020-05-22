@@ -311,7 +311,6 @@ lustresparasala
 (?-i:^Cindy Blake$)
 (?-i:^Marieromig$)
 (?-i:^wperror500$)
-(?-i:^pankaj maurya$)
 ^retail[\W_]*+clouds?$
 (?-i:^Tony Wong$)
 (?-i:^Add Hunters$)
