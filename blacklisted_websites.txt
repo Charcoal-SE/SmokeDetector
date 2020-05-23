@@ -3496,7 +3496,7 @@ realbraindumps\.com
 acvplusketo\.info
 slimfitpills\.com
 geekshelplinenumber\.com
-productscop\.com
+productscop[\W_]*+com
 contactemailssupport\.com
 router-reset\.com
 healthyfalcon\.com
