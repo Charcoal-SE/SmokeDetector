@@ -323,7 +323,8 @@ def do_blacklist(blacklist_type, msg, force=False):
     try:
         pattern = rebuild_str(msg.content_source.split(" ", 1)[1])
     except IndexError:
-        raise CmdException("An invalid pattern was provided, please check your command.")
+        raise CmdException("An invalid pattern was provided, please check your command." +
+                           " The pattern is: {}".format(msg.content_source))
 
     has_unescaped_dot = ""
     if "number" not in blacklist_type:
