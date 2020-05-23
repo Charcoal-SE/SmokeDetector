@@ -20558,3 +20558,4 @@
 1590232018	Glorfindel	blockchain-connect\.io
 1590232297	Glorfindel	gitagged\.com
 1590232323	Glorfindel	gi\W*tagged
+1590235205	Kulfy	biggboss14latestepisode\.com
