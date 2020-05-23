@@ -446,8 +446,12 @@ class Metasmoke:
                       "text": msg[:1].upper() + msg[1:],  # Capitalise the first letter of the comment
                       "chat_user_id": user.id,
                       "chat_host": user._client.host}
-
-            Metasmoke.post("/api/v2.0/comments/post/{}".format(ms_id), params=params)
+            try:
+                Metasmoke.post("/api/v2.0/comments/post/{}".format(ms_id), params=params)
+            except Exception as e:
+                log("error", "Error when sending auto comment: {}".format(e))
+        else:
+            log("error", "Cannot send auto comment.")
 
     @staticmethod
     def get_post_bodies_from_ms(post_url):
