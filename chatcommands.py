@@ -320,7 +320,11 @@ def do_blacklist(blacklist_type, msg, force=False):
                                                                      id=msg.owner.id)
     append_force_to_do = "; append `-force` if you really want to do that."
 
-    pattern = rebuild_str(msg.content_source.split(" ", 1)[1])
+    try:
+        pattern = rebuild_str(msg.content_source.split(" ", 1)[1])
+    except IndexError:
+        raise CmdException("An invalid pattern was provided, please check your command.")
+
     has_unescaped_dot = ""
     if "number" not in blacklist_type:
         # Test for . without \., but not in comments.
