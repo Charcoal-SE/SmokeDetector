@@ -20550,3 +20550,4 @@
 1590212168	Nisse Engström	parsian-shop\.com
 1590217414	Makyen	dissertation-texas\.com
 1590217663	Makyen	healthstore(?<=medium\.com/@healthstore)
+1590217889	Makyen	moneypip\.com
