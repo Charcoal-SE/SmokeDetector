@@ -20564,3 +20564,4 @@
 1590252350	Makyen	pereykhrizjayce\.wixsite\.com
 1590254039	Makyen	henan[\W_]*+huawei(?:[\W_]*+(?:aluminum|co|ltd))*
 1590254064	Makyen	(?-i:HWALU)
+1590254094	Makyen	xpertin\.com
