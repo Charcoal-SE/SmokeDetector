@@ -20563,3 +20563,4 @@
 1590247179	Daniil	chocolaty\.in
 1590252350	Makyen	pereykhrizjayce\.wixsite\.com
 1590254039	Makyen	henan[\W_]*+huawei(?:[\W_]*+(?:aluminum|co|ltd))*
+1590254064	Makyen	(?-i:HWALU)
