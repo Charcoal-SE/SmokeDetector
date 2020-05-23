@@ -20566,3 +20566,4 @@
 1590254064	Makyen	(?-i:HWALU)
 1590254094	Makyen	xpertin\.com
 1590254248	Makyen	xpertin(?!\.com)
+1590254278	Makyen	technofolio99\.blogspot
