@@ -46,7 +46,8 @@ Return a tuple `(snap_posts_scanned, snap_scan_time, snap_posts_per_second)`.
 - `reset_stat()`: Obtain `rw_lock`. Set `num_posts_scanned` and `post_scan_time` to `0`. Release `rw_lock`.
 - `reset_snap()`: Obtain `rw_lock`. Set `snap_num_posts_scanned` and `snap_post_scan_time` to `0`. Release `rw_lock`.
 #### Considerations  
-- Both read and write operations are lock protected, as it is necessary to perform thread safe write and to prevent reading while another thread is writing.
+- Both read and write operations are lock protected,
+as it is necessary to perform thread safe write and to prevent reading while another thread is writing.
 ### Known bugs  
 - None
 > Last change in this section was on 19 May 2020.  
@@ -96,7 +97,8 @@ This class is implemented with 2 static variables and 1 lock.
 ### Thread safety  
 Unknown. The component currently documented in public interface is thread safe.  
 ### Notes on usage  
-- Unless there are good reasons, always call `Metasmoke.ms_up()` and `Metasmoke.ms_down()` instead of `GlobalVars.MSStatus.set_up` and `GlobalVars.MSStatus.set_down()`.
+- Unless there are good reasons, always call `Metasmoke.ms_up()` and `Metasmoke.ms_down()`
+instead of `GlobalVars.MSStatus.set_up()` and `GlobalVars.MSStatus.set_down()`.
 The former is a wrapper of the latter which offers logging and chat messages.
 ### Implementation  
 > Not completed yet.
@@ -108,34 +110,44 @@ Automatically switch metasmoke status.
 ### Public interface  
 - `to_off()`: Indicate a status ping failure.
 - `to_on()`: Indicate a status ping success.
-- `switch_auto(on)`: Turn on or off auto switch. If `on` is `True`, auto switch is turned on. Otherwise auto switch is turned off.
+- `switch_auto(on)`: Turn on or off auto switch.
+If `on` is `True`, auto switch is turned on. Otherwise auto switch is turned off.
 - `reset_switch()`: Reset class `Metasmoke.AutoSwitch` to default values.
 ### Thread safety  
 Yes.  
 ### Notes on usage  
-- Failures or successes contributing to auto switching of metasmoke status should be those of status ping. Other failures or successes should not trigger auto switch.
+- Failures or successes contributing to auto switching of metasmoke status should be those of status ping.
+Other failures or successes should not trigger auto switch.
 ### Implementation  
 This class is implemented with 2 constants, 2 static variables and 1 lock.  
 #### Details
 ##### Attributes  
 - `MAX_FAILURES`: Maximum failures before metasmoke status is switched down.
 - `MAX_SUCCESSES`: Maximum successes before metasmoke status is switched up.
-- `counter`: Consecutive failure and success counter. A negative value represents successes while a positive value represents failures.
+- `counter`: Consecutive failure and success counter.
+A negative value represents successes while a positive value represents failures.
 - `auto`: Whether or not to perform auto switch.
 - `rw_lock`: Lock. Controlling access to `counter` and `auto`.
 ##### Methods  
-- `to_off()`: Obtain `rw_lock`. Decide if `counter` is negative. If yes, set `counter` to `0`. Increase `counter` by `1`. Read `counter` into `current_counter`. Read `auto` into `current_auto`. Release `rw_lock`.
-Decide if `current_counter` is greater than `MAX_FAILURES`, metasmoke status is up, and `current_auto` is `True`. If yes, issue a message to chat and call `ms_down()`.
-- `to_on()`: Obtain `rw_lock`. Decide if `counter` is positive. If yes, set `counter` to `0`. Decrease `counter` by `1`. Read `-counter` into `current_counter`. Read `auto` into `current_auto`. Release `rw_lock`.
-Decide if `current_counter` is greater than `MAX_SUCCESSES`, metasmoke status is down, and `current_auto` is `True`. If yes, issue a message to chat and call `ms_up()`.
+- `to_off()`: Obtain `rw_lock`. Decide if `counter` is negative. If yes, set `counter` to `0`.
+Increase `counter` by `1`. Read `counter` into `current_counter`. Read `auto` into `current_auto`. Release `rw_lock`.
+Decide if `current_counter` is greater than `MAX_FAILURES`, metasmoke status is up, and `current_auto` is `True`.
+If yes, issue a message to chat and call `ms_down()`.
+- `to_on()`: Obtain `rw_lock`. Decide if `counter` is positive. If yes, set `counter` to `0`.
+Decrease `counter` by `1`. Read `-counter` into `current_counter`. Read `auto` into `current_auto`. Release `rw_lock`.
+Decide if `current_counter` is greater than `MAX_SUCCESSES`, metasmoke status is down, and `current_auto` is `True`.
+If yes, issue a message to chat and call `ms_up()`.
 - `switch_auto(on)`: Obtain `rw_lock`. Set `auto` to `on`. Release `rw_lock`.
 - `reset_switch()`: Obtain `rw_lock`. Set `counter` to `0`. Set `auto` to `True`. Release `rw_lock`.
 #### Considerations  
-- Only status ping failures and successes should count, as otherwise it will be unbalanced since after metasmoke is declared down, only status pings are sent.
-However this cannot be enforced within the class, so please take this into consideration when calling `to_on()` and `to_off()`.
+- Only status ping failures and successes should count, as otherwise it will be unbalanced
+since after metasmoke is declared down, only status pings are sent.
+However this cannot be enforced within the class,
+so please take this into consideration when calling `to_on()` and `to_off()`.
 ### Known bugs  
 - None.
 > Last change in this section was on 20 May 2020.
 # Special cases
 ## File socketscience.py, in class SocketScience
-- On line 78 and 87, `GlobalVars.MSStatus.set_up()` and `GlobalVars.MSStatus.set_down()` is called. This is to prevent circular import between `Metasmoke` and `SocketScience`. (20 May 2020)
+- On line 78 and 87, `GlobalVars.MSStatus.set_up()` and `GlobalVars.MSStatus.set_down()` is called.
+This is to prevent circular import between `Metasmoke` and `SocketScience`. (20 May 2020)
