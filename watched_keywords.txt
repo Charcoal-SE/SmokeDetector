@@ -20549,3 +20549,4 @@
 1590206739	NobodyNada - Reinstate Monica	laoc\.org
 1590212168	Nisse Engström	parsian-shop\.com
 1590217414	Makyen	dissertation-texas\.com
+1590217663	Makyen	healthstore(?<=medium\.com/@healthstore)
