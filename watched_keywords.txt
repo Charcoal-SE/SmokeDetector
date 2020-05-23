@@ -20557,3 +20557,4 @@
 1590225665	Nisse Engström	yneed\.co\.uk
 1590232018	Glorfindel	blockchain-connect\.io
 1590232297	Glorfindel	gitagged\.com
+1590232323	Glorfindel	gi\W*tagged
