@@ -20587,3 +20587,4 @@
 1590357191	Makyen	penningtonprimarycare\.com
 1590357219	Makyen	pennington[\W_]*+primary[\W_]*+care(?!\.com(?<=penningtonprimarycare\.com))
 1590357246	Makyen	techynickk\.com
+1590359083	Daniil	josesoal(?<=\bmedium\.com/@josesoal)
