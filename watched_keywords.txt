@@ -20573,3 +20573,4 @@
 1590292347	NobodyNada - Reinstate Monica	lian07555@gmail\.com
 1590300435	Makyen	(?-i:IL6Nj\.png)
 1590300672	Makyen	linklayereducation\.com
+1590300696	Makyen	linklayer[\W_]*+education(?!\.com(?<=linklayereducation\.com))
