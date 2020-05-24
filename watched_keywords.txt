@@ -20576,3 +20576,4 @@
 1590300696	Makyen	linklayer[\W_]*+education(?!\.com(?<=linklayereducation\.com))
 1590315389	Makyen	lacartes\.com
 1590315419	Makyen	driverless\.wonderhowto\.com
+1590322535	Glorfindel	cdrforea\.com
