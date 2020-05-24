@@ -20585,3 +20585,4 @@
 1590351305	Makyen	lida[\W_]*zayıflama[\W_]*hapı
 1590356342	Makyen	jasonanonymoushacker\.wordpress\.com
 1590357165	Makyen	thecomputhub\.blogspot
+1590357191	Makyen	penningtonprimarycare\.com
