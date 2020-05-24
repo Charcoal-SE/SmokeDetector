@@ -15042,7 +15042,6 @@
 1576106757	Makyen	allnetflixhd
 1576112939	Makyen	computerworm\.hacker(?:[\W_]*+(?:at[\W_]*+)?hotmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1576121323	Makyen	yloan\.io
-1576127925	Makyen	healthyaustralia\.com\.au
 1576133250	Shree	xundola\.com
 1576133316	Shree	cbldc\.io
 1576133465	Shree	tophealthvitamins\.co
