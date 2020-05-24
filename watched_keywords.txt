@@ -20583,3 +20583,4 @@
 1590341851	Daniil	@josesoal
 1590347596	Robert Columbia	javaprintln\.com
 1590350363	user12986714	lidakmdali\.com
+1590351305	Makyen	lida[\W_]*zayıflama[\W_]*hapı
