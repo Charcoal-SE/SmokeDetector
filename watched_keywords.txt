@@ -20586,3 +20586,4 @@
 1590356342	Makyen	jasonanonymoushacker\.wordpress\.com
 1590357165	Makyen	thecomputhub\.blogspot
 1590357191	Makyen	penningtonprimarycare\.com
+1590357219	Makyen	pennington[\W_]*+primary[\W_]*+care(?!\.com(?<=penningtonprimarycare\.com))
