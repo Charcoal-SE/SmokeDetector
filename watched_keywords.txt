@@ -20575,3 +20575,4 @@
 1590300672	Makyen	linklayereducation\.com
 1590300696	Makyen	linklayer[\W_]*+education(?!\.com(?<=linklayereducation\.com))
 1590315389	Makyen	lacartes\.com
+1590315419	Makyen	driverless\.wonderhowto\.com
