@@ -1699,7 +1699,7 @@ alvera\W?tone
 green\W?force(?:\W?keto)?
 quick\W?burn(?:\W?keto)?
 vital[\W_]*+keto(?:[\W_]*+(?:belgium|review|client|schweiz|\d++|[\da-f]{4,}+)s?)*
-slim\W?select(?:\W?keto)?
+slim[\W_]*+select[\W_]*+keto
 zederex
 azur\W?derma
 capillique
