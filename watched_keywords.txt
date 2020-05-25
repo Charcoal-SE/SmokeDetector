@@ -20609,3 +20609,4 @@
 1590417356	Daniil	m\.shahiri\.m(?:@gmail\.com)?
 1590431730	Makyen	(?-i:paxguru)(?#bit.ly)
 1590431755	Makyen	paxful\.guru
+1590435976	Makyen	sandiptrivedi\.com
