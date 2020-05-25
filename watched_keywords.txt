@@ -20593,3 +20593,4 @@
 1590382042	tripleee	liu[\W_]*+rui[\W_]*+min
 1590382113	tripleee	刘睿敏
 1590384710	tripleee	mandalatantra\.com\.br
+1590384739	tripleee	reikicuritiba\.com\.br
