@@ -214,6 +214,9 @@ def init_se_websocket_or_reboot(max_tries, tell_debug_room_on_error=False):
         ws = setup_websocket(tries, max_tries)
         if ws:
             break
+        else:
+            # Wait and hopefully network issues will be solved
+            time.sleep(10)
     else:
         error_message = 'SE WebSocket: Max retries exceeded. Exiting, maybe a restart will kick things.'
         log('error', error_message)
