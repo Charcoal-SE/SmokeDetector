@@ -58,7 +58,7 @@ class Metasmoke:
     def init_websocket():
         has_succeeded = False
         failed_connection_attempts = 0
-        while GlobalVars.metasmoke_key != "" and GlobalVars.metasmoke_ws_host != "":
+        while GlobalVars.metasmoke_key and GlobalVars.metasmoke_ws_host:
             try:
                 Metasmoke.connect_websocket()
                 has_succeeded = True
