@@ -456,37 +456,6 @@ class Blacklist(list):
     def filename(self):
         return self._filename
 
-    def already_caught(self, string_to_test):
-        """
-        Test a candidate string; return a list of reasons if it is already
-        caught.
-
-        The method not_reject_reasons returns a list of reasons which do not
-        cause a rejection to be returned; in other words, they are removed
-        from the reasons.
-        """
-        ownerdict = {'display_name': 'Valid username',
-                     'reputation': 1, 'link': ''}
-        querydict = {'title': 'Valid title', 'body': 'Valid body',
-                     'owner': None, 'site': "", 'IsAnswer': None, 'score': 0}
-        reasons = set()
-        for answerp in False, True:
-            for userp in False, True:
-                owner = ownerdict.copy()
-                question = querydict.copy()
-                if userp:
-                    owner['display_name'] = string_to_test
-                else:
-                    question['body'] = string_to_test
-                question['owner'] = owner
-                question['IsAnswer'] = answerp
-                verdicts, _ = findspam.FindSpam.test_post(question)
-                reasons.update(set(verdicts))
-
-        filter_out = self.not_reject_reasons()
-        return [reason for reason in reasons
-                if all([x not in reason.lower() for x in filter_out])]
-
     def not_reject_reasons(self):
         """
         Which reasons should be filtered out when deciding whether something

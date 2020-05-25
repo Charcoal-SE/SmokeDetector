@@ -343,7 +343,39 @@ def get_test_text_from_regex(pattern):
     return pattern
 
 
-def do_blacklist(blacklist_type, msg, force=False):
+def _already_caught(blacklist, string_to_test):
+    """
+    Test a candidate string; return a list of reasons if it is already
+    caught.
+
+    The blacklist's method not_reject_reasons returns a list of reasons which
+    do not cause a rejection to be returned; in other words, they are removed
+    from the reasons.
+    """
+    ownerdict = {'display_name': 'Valid username',
+                 'reputation': 1, 'link': ''}
+    querydict = {'title': 'Valid title (at least 10 characters)',
+                 'body': 'Valid body (also more than 10 characters)',
+                 'owner': None, 'site': "", 'IsAnswer': None, 'score': 0}
+    reasons = set()
+    for answerp in False, True:
+        for userp in False, True:
+            owner = ownerdict.copy()
+            question = querydict.copy()
+            if userp:
+                owner['display_name'] = string_to_test
+            else:
+                question['body'] = string_to_test
+            question['owner'] = owner
+            question['IsAnswer'] = answerp
+            verdicts, _ = findspam.FindSpam.test_post(Post(api_response=question))
+            reasons.update(set(verdicts))
+
+    filter_out = blacklist.not_reject_reasons()
+    return list(filter(lambda x: x not in filter_out, reasons))
+
+
+def do_blacklist(blacklist_id, msg, force=False):
     """
     Adds a string to the website blacklist and commits/pushes to GitHub
     :param raw_pattern:
@@ -396,17 +428,14 @@ def do_blacklist(blacklist_type, msg, force=False):
 
         concretized_pattern = get_test_text_from_regex(pattern)
 
-        # reasons = blacklist.already_caught(concretized_pattern)
-        for username in False, True:
-            reasons = check_blacklist(
-                concretized_pattern, is_username=username, is_watchlist=is_watchlist, is_phone=is_phone)
-
-            if reasons:
-                has_u202d = "; in addition, " + has_u202d.lower() if has_u202d else ""
-                has_unescaped_dot = "; in addition, " + has_unescaped_dot.lower() if has_unescaped_dot else ""
-                raise CmdException(
-                    "That pattern looks like it's already caught by " +
-                    format_blacklist_reasons(reasons) + has_unescaped_dot + has_u202d + append_force_to_do)
+        reasons = _already_caught(blacklist, concretized_pattern)
+        if reasons:
+            has_u202d = "; in addition, " + has_u202d.lower() if has_u202d else ""
+            has_unescaped_dot = "; in addition, " + has_unescaped_dot.lower() \
+                if has_unescaped_dot else ""
+            raise CmdException(
+                "That pattern looks like it's already caught by " +
+                format_blacklist_reasons(reasons) + has_unescaped_dot + has_u202d + append_force_to_do)
 
         if has_u202d:
             raise CmdException(has_u202d + has_unescaped_dot + append_force_to_do)
