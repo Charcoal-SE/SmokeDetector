@@ -20524,7 +20524,6 @@
 1590137561	Makyen	(?-i:1ASi3\.jpg)
 1590137607	Makyen	(?-i:FBjU0)(?#q.gs)
 1590137633	Makyen	(?-i:Paex2\.png)
-1590137659	Makyen	helm\.sh
 1590140576	tripleee	gomcafee\.com
 1590140602	tripleee	sortmcafee\.com
 1590141301	tripleee	livewebinar\.com
