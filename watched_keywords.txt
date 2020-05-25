@@ -20590,3 +20590,4 @@
 1590364396	Daniil	pagerhackconsult[s_]*247(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1590381943	tripleee	bytedance\.com
 1590381984	tripleee	tik[\W_]*+tok[\W_]*+monetization
+1590382042	tripleee	liu[\W_]*+rui[\W_]*+min
