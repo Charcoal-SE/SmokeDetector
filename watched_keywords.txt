@@ -10528,7 +10528,6 @@
 1560985230	Machavity	scottloanhomeplc
 1560985292	Makyen	ttmdonation(?:@gmail\.com)?
 1560995687	Makyen	solutionhome\d+(?:@gmail\.com)?(?#solutionhome10 seen)
-1561001294	Makyen	nexgenitsolutions\.in
 1561007786	tripleee	caprincekathuriaclasses\.com
 1561009968	Makyen	(?-i:q7jnoq)
 1561010026	Makyen	(?-i:qEKEuEFvc3A)
