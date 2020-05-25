@@ -32,6 +32,7 @@ from socketscience import SocketScience
 import metasmoke_cache
 
 
+MAX_MS_WEBSOCKET_RETRIES = 5
 MAX_FAILURES = 10  # Preservative, 10 errors = MS down
 NO_ACTIVITY_PINGS_TO_STANDBY = 8
 NO_ACTIVITY_PINGS_TO_REPORT = 4
@@ -56,7 +57,8 @@ class Metasmoke:
     @staticmethod
     def init_websocket():
         has_succeeded = False
-        while GlobalVars.metasmoke_key != "":
+        failed_connection_attempts = 0
+        while GlobalVars.metasmoke_key != "" and GlobalVars.metasmoke_ws_host != "":
             try:
                 Metasmoke.connect_websocket()
                 has_succeeded = True
@@ -78,7 +80,16 @@ class Metasmoke:
                 GlobalVars.metasmoke_failures += 1
                 log('error', "Couldn't bind to MS websocket")
                 if not has_succeeded:
-                    break
+                    failed_connection_attempts += 1
+                    if failed_connection_attempts > MAX_MS_WEBSOCKET_RETRIES:
+                        chatcommunicate.tell_rooms_with("debug", "Cannot initiate MS websocket." +
+                                                        "  Manual `!!/reboot` is required once MS is up")
+                        log('warning', "Cannot initiate MS websocket." +
+                            " init_websocket() in metasmoke.py is terminating.")
+                        break
+                    else:
+                        # Wait and hopefully network issues will be solved
+                        time.sleep(10)
                 else:
                     time.sleep(10)
 
