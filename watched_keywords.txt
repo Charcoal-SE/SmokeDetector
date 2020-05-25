@@ -20601,3 +20601,4 @@
 1590393158	tripleee	bitdataconversion\.com
 1590394041	tripleee	it-seo\.pp\.ua
 1590397548	tripleee	yourdishwasherguide\.com
+1590406143	tripleee	(?-i:^Jack Sparrow$)
