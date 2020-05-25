@@ -1618,6 +1618,7 @@ def allspam(msg, url):
     :return:
     """
 
+    output = []
     api_key = 'IAkbitmze4B8KpacUfLqkw(('
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
@@ -1735,12 +1736,27 @@ def allspam(msg, url):
         batch = ""
         if len(user_posts) > 1:
             batch = " (batch report: post {} out of {})".format(index, len(user_posts))
+        if has_already_been_posted(post.site, post.post_id, post.title) and not is_false_positive(
+                (post.post_id, post.site)):
+            if GlobalVars.metasmoke_key is not None:
+                se_link = to_protocol_relative(post.post_url)
+                ms_link = resolve_ms_link(se_link) or to_metasmoke_link(se_link)
+                output.append(batch + " Already recently reported [ [MS]({}) ]".format(ms_link))
+                continue
+            else:
+                output.append(batch + " Already recently reported")
+                continue
         handle_spam(post=Post(api_response=post.as_dict),
                     reasons=["Manually reported " + post.post_type + batch],
                     why=why_info)
         time.sleep(2)  # Should this be implemented differently?
     if len(user_posts) > 2:
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
+
+    if len(output):
+        return "\n".join(output)
+    else:
+        return None
 
 
 def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
