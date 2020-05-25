@@ -20595,3 +20595,4 @@
 1590384710	tripleee	mandalatantra\.com\.br
 1590384739	tripleee	reikicuritiba\.com\.br
 1590384766	tripleee	cristaispuroencanto\.com\.br
+1590384792	tripleee	parvatiartigosindianos\.com\.br
