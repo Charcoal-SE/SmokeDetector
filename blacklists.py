@@ -223,13 +223,20 @@ class YAMLParserCIDR(BlacklistParser):
     def parse(self):
         return [item[self.SCHEMA_PRIKEY] for item in self._parse()]
 
+    @classmethod
+    def _sortkey(cls, item):
+        itemkey = item[cls.SCHEMA_PRIKEY]
+        if isinstance(itemkey, list):
+            itemkey = '\x00'.join(itemkey)
+        return itemkey
+
     def _write(self, callback):
         d = {
             'Schema': self.SCHEMA_VARIANT,
             'Schema_version': self.SCHEMA_VERSION,
             'items': sorted(
                 self._parse(keep_disabled=True),
-                key=lambda x: x[self.SCHEMA_PRIKEY])
+                key=self.__class__._sortkey)
         }
         callback(d)
         with open(self._filename, 'w', encoding='utf-8') as f:
