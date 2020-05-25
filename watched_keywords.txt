@@ -20383,7 +20383,6 @@
 1589617834	Makyen	nzisd\.co\.nz
 1589617860	Makyen	maxlabca16(?#gumroad.com)
 1589617915	Makyen	(?-i:EOEqj\.jpg)
-1589619848	Makyen	buy24x7online\.com
 1589622558	Makyen	usmovies24\.com
 1589627431	Makyen	thestandarddaily\.com
 1589631083	Daniil	apetaminstore\.co\.uk
