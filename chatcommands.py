@@ -1844,7 +1844,7 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
             comment = report_info + scan_why.lstrip()
             handle_spam(post=post, reasons=scan_reasons, why=comment)
             if custom_reason:
-                Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by, url=url, after=300)
+                Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by, url=url, after=15)
             continue
 
         # scan_spam == False
@@ -1864,7 +1864,7 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
                         reasons=["Manually reported " + post_data.post_type + batch],
                         why=comment)
             if custom_reason:
-                Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by, url=url, after=300)
+                Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by, url=url, after=15)
             continue
 
         # scan_spam == False and "scan"
