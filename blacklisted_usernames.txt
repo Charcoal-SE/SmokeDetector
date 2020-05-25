@@ -320,4 +320,3 @@ lustresparasala
 (?-i:^Kavitha Mba$)
 (?-i:^Erric Ravi$)
 (?-i:^nexgenitsolutions$)
-(?-i:^Jack Sparrow$)
