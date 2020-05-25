@@ -22,7 +22,7 @@ else:
     from sh import ErrorReturnCode as GitError
 
 from helpers import log, log_exception, only_blacklists_changed
-from blacklists import *
+from blacklists import Blacklist
 
 
 def _anchor(str_to_anchor, blacklist_type):
