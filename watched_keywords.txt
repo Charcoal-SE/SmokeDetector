@@ -20592,3 +20592,4 @@
 1590381984	tripleee	tik[\W_]*+tok[\W_]*+monetization
 1590382042	tripleee	liu[\W_]*+rui[\W_]*+min
 1590382113	tripleee	刘睿敏
+1590384710	tripleee	mandalatantra\.com\.br
