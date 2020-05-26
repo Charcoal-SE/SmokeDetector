@@ -9,17 +9,17 @@ import math
 
 
 def main():
-    queue_timings = {}
+    queue_data = {}
     if os.path.isfile("bodyfetcherQueueTimings.txt"):
         with open("bodyfetcherQueueTimings.txt", mode="r", encoding="utf-8") as stat_file:
             for stat_line in stat_file:
                 time_str, site_str = stat_line.split(" ", 1)
                 site = site_str[:-1]
                 time_in_queue = float(time_str)
-                if site in queue_timings:
-                    queue_timings[site].append(time_in_queue)
+                if site in queue_data:
+                    queue_data[site].append(time_in_queue)
                 else:
-                    queue_timings[site] = [time_in_queue]
+                    queue_data[site] = [time_in_queue]
 
         print("SITE,MIN,MAX,AVG,Q1,MEDIAN,Q3,STDDEV,COUNT,98P_MIN,98P_MAX")
         # noinspection PyUnboundLocalVariable
