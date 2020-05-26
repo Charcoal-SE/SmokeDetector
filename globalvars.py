@@ -130,7 +130,6 @@ class GlobalVars:
 
     class PostScanStat:
         """ Tracking post scanning data """
-        # Last change was on 19 May 2020.
         num_posts_scanned = 0
         post_scan_time = 0
         snap_num_posts_scanned = 0
@@ -205,7 +204,6 @@ class GlobalVars:
 
     class MSStatus:
         """ Tracking metasmoke status """
-        # Last change was on 20 May 2020.
         ms_is_up = True
         counter = 0
         rw_lock = threading.Lock()

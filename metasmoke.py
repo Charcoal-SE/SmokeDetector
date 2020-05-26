@@ -42,7 +42,6 @@ class Metasmoke:
 
     class AutoSwitch:
         """ Automatically switch metasmoke status """
-        # Last change was on 20 May 2020.
         MAX_FAILURES = 10  # 10 failures == ms down
         MAX_SUCCESSES = 1  # 1 success == ms up
         counter = 0
@@ -113,7 +112,6 @@ class Metasmoke:
     @staticmethod
     def ms_up():
         """ Switch metasmoke status to up """
-        # Last change was on 20 May 2020.
         # These comments are to be removed once documentation
         # for class Metasmoke as a whole is completed.
         log("info", "Metasmoke status is now set to up.")
@@ -123,7 +121,6 @@ class Metasmoke:
     @staticmethod
     def ms_down():
         """ Switch metasmoke status to down """
-        # Last change was on 20 May 2020.
         # These comments are to be removed once documentation
         # for class Metasmoke as a whole is completed.
         log("info", "Metasmoke status is now set to down.")
