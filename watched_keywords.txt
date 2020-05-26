@@ -20625,3 +20625,4 @@
 1590456550	Makyen	patchmaker\.com
 1590453140	user12986714	justnobz\.com
 1590459786	Makyen	tokyoghoulmask\.com
+1590463518	Makyen	dredidiaherbalhome(?!\.wixsite\.com)(?:@gmail\.com)?
