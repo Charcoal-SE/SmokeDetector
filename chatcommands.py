@@ -1636,26 +1636,10 @@ def report(msg, args, alias_used="report"):
                            "which would slow down reports.".format(alias_used))
 
     output = []
-    shortlinks = []
     for url in urls:
-        shortlink = url_to_shortlink(url)
-        # Validate shortlink
-        if not shortlink:
-            output.append("[Post]({}): Invalid url.".format(url))
-        elif shortlink in shortlinks:
-            output.append("[Post]({}): Duplicate url.".format(url))
-        else:
-            shortlinks.append(shortlink)
-            # Fetch post data by API
-            post_data = api_get_post(rebuild_str(shortlink))
-            if post_data is None:
-                return "[Post]({}): Invalid url.".format(url)
-            if post_data is False:
-                return "[Post]({}): No data fetched from API. It may have been deleted.".format(url)
-            # Report that post
-            current_output = report_post(post_data, msg.owner, msg.room.name, message_url, alias_used, custom_reason)
-            if current_output:
-                output.append(current_output)
+        current_output = report_post(url, msg.owner, msg.room.name, message_url, alias_used, custom_reason)
+        if current_output:
+            output.append(current_output)
 
     if len(output):
         if 1 < len(urls) > output.count("\n") + 1:
@@ -1684,7 +1668,7 @@ def allspam(msg, url, alias_used="allspam"):
     if user is None:
         raise CmdException("[User]({}): Invalid url.".format(url))
     user_sites = []
-    user_posts = []
+    user_post_urls = []
     # Detect whether link is to network profile or site profile
     if user[1] == 'stackexchange.com':
         # Respect backoffs etc
@@ -1714,7 +1698,7 @@ def allspam(msg, url, alias_used="allspam"):
                 user_sites.append((site['user_id'], get_api_sitename_from_url(site['site_url'])))
     else:
         user_sites.append((user[0], get_api_sitename_from_url(user[1])))
-    # Fetch posts
+    # Fetch post urls
     for u_id, u_site in user_sites:
         # Respect backoffs etc
         GlobalVars.api_request_lock.acquire()
@@ -1743,68 +1727,29 @@ def allspam(msg, url, alias_used="allspam"):
             # Hence raise an exception and quit the process
             raise CmdException("The specified user's reputation is abnormally high. Please consider flagging for "
                                "moderator attention, otherwise use !!/report on the posts individually.")
-        # Add blacklisted user - use most downvoted post as post URL
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
-        add_blacklisted_user(user, message_url, sorted(posts, key=lambda x: x['score'])[0]['owner']['link'])
-        output = []
-        # TODO: Postdata refactor, figure out a better way to use apigetpost
+        # We would ignore other data given by the API response
+        # The reduction in duplicated code worth a few more API requests
         for post in posts:
-            # Manually construct post_data (need to be changed; see TODO above)
-            post_data = PostData()
-            post_data.post_id = post['post_id']
-            post_data.post_url = url_to_shortlink(post['link'])
-            *discard, post_data.site, post_data.post_type = fetch_post_id_and_site_from_url(
-                url_to_shortlink(post['link']))
-            post_data.title = unescape(post['title'])
-            post_data.owner_name = unescape(post['owner']['display_name'])
-            post_data.owner_url = post['owner']['link']
-            post_data.owner_rep = post['owner']['reputation']
-            post_data.body = post['body']
-            post_data.score = post['score']
-            post_data.up_vote_count = post['up_vote_count']
-            post_data.down_vote_count = post['down_vote_count']
-            if post_data.post_type == "answer":
-                # Annoyingly we have to make another request to get the question ID, since it is only returned by the
-                # /answers route
-                # Respect backoffs etc
-                GlobalVars.api_request_lock.acquire()
-                if GlobalVars.api_backoff_time > time.time():
-                    time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
-                # Fetch posts
-                req_url = "https://api.stackexchange.com/2.2/answers/{}".format(post['post_id'])
-                params = {
-                    'filter': '!*Jxb9s5EOrE51WK*',
-                    'key': api_key,
-                    'site': u_site
-                }
-                answer_res = requests.get(req_url, params=params).json()
-                if "backoff" in answer_res:
-                    if GlobalVars.api_backoff_time < time.time() + answer_res["backoff"]:
-                        GlobalVars.api_backoff_time = time.time() + answer_res["backoff"]
-                GlobalVars.api_request_lock.release()
-                # Finally, set the attribute
-                post_data.question_id = answer_res['items'][0]['question_id']
-                post_data.is_answer = True
-            # Add the post to report queue
-            user_posts.append(post_data)
-    if len(user_posts) == 0:
+            user_post_urls.append(post['link'])
+    if len(user_post_urls) == 0:
         raise CmdException("The user has no post yet.")
-    if len(user_posts) > 15:
+    if len(user_post_urls) > 15:
         raise CmdException("The specified user has an abnormally high number of spam posts. Please consider flagging "
                            "for moderator attention, otherwise use !!/report on the posts individually.")
-    # Report posts
-    for current_post_data in user_posts:
+
+    for current_url in user_post_urls:
         # Report that post
-        current_output = report_post(current_post_data, msg.owner, msg.room.name, message_url, operation, custom_reason)
+        current_output = report_post(current_url, msg.owner, msg.room.name, message_url, operation, custom_reason)
         if current_output:
             output.append(current_output)
-    if len(user_posts) > 2:
+    if len(user_post_urls) > 2:
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
     if len(output):
         return "\n".join(output)
 
 
-def report_post(post_data, reported_by, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
+def report_post(url, reported_by, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
     """ Scan or report a single post """
     reporter_name = reported_by.name
     operation = operation or "report"
@@ -1829,6 +1774,18 @@ def report_post(post_data, reported_by, reported_in=None, blacklist_by=None, ope
         reason_str = ""
 
     report_info = "Post manually {}{}{}.\n\n".format(action_str, from_str, reason_str)
+
+    # Generate shortlink from url
+    shortlink = url_to_shortlink(url)
+    if not shortlink:
+        return "[Post]({}): Invalid url.".format(url)
+
+    # Fetch post data by API
+    post_data = api_get_post(rebuild_str(shortlink))
+    if post_data is None:
+        return "[Post]({}): Invalid url.".format(url)
+    if post_data is False:
+        return "[Post]({}): No data fetched from API. It may have been deleted.".format(url)
 
     abs_url = post_data.post_url
     url = to_protocol_relative(abs_url)
