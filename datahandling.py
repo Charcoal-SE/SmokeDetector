@@ -114,8 +114,6 @@ def load_files():
         GlobalVars.bodyfetcher.queue = _load_pickle("bodyfetcherQueue.p", encoding='utf-8')
     if _has_pickle("bodyfetcherMaxIds.p"):
         GlobalVars.bodyfetcher.previous_max_ids = _load_pickle("bodyfetcherMaxIds.p", encoding='utf-8')
-    if _has_pickle("bodyfetcherQueueTimings.p"):
-        GlobalVars.bodyfetcher.queue_timings = _load_pickle("bodyfetcherQueueTimings.p", encoding='utf-8')
     if _has_pickle("codePrivileges.p"):
         GlobalVars.code_privileged_users = _load_pickle("codePrivileges.p", encoding='utf-8')
     if _has_pickle("reasonWeights.p"):
@@ -340,8 +338,12 @@ def store_bodyfetcher_max_ids():
     _dump_pickle("bodyfetcherMaxIds.p", GlobalVars.bodyfetcher.previous_max_ids)
 
 
-def store_queue_timings():
-    _dump_pickle("bodyfetcherQueueTimings.p", GlobalVars.bodyfetcher.queue_timings)
+def add_queue_timing_data(site, time_in_queue):
+    with open("bodyfetcherQueueTimings.txt", mode="a", encoding="utf-8") as stat_file:
+        # Use .txt for cross platform compatibility
+        stat_file.write("{} {}\n".format(time_in_queue, site))
+        # time_in_queue comes first as it is an integer
+        # and hence won't contain any whitespace or trailing ones
 
 
 # methods that help avoiding reposting alerts:

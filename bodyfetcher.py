@@ -1,7 +1,7 @@
 # coding=utf-8
 from spamhandling import handle_spam, check_if_spam
 from datahandling import (add_or_update_api_data, clear_api_data, store_bodyfetcher_queue, store_bodyfetcher_max_ids,
-                          store_queue_timings)
+                          add_queue_timing_data)
 from chatcommunicate import tell_rooms_with
 from globalvars import GlobalVars
 from operator import itemgetter
@@ -137,23 +137,13 @@ class BodyFetcher:
                 GlobalVars.flovis.stage('bodyfetcher/api_request', site, post_id,
                                         {'site': site, 'posts': list(new_posts.keys())})
 
-        self.queue_timing_modify_lock.acquire()
+        # Add queue timing data
         post_add_times = [v for k, v in new_posts.items()]
         pop_time = datetime.utcnow()
-
         for add_time in post_add_times:
-            try:
-                seconds_in_queue = (pop_time - add_time).total_seconds()
-                if site in self.queue_timings:
-                    self.queue_timings[site].append(seconds_in_queue)
-                else:
-                    self.queue_timings[site] = [seconds_in_queue]
-            except KeyError:  # XXX: Any other possible exception?
-                continue  # Skip to next item if we've got invalid data or missing values.
+            seconds_in_queue = (pop_time - add_time).total_seconds()
+            add_queue_timing_data(site, seconds_in_queue)
 
-        store_queue_timings()
-
-        self.queue_timing_modify_lock.release()
         self.max_ids_modify_lock.acquire()
 
         if site in self.previous_max_ids and max(new_post_ids) > self.previous_max_ids[site]:
