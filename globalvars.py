@@ -127,11 +127,12 @@ class GlobalVars:
     standby_mode = False
     no_se_activity_scan = False
 
-    api_request_lock = threading.Lock()
+    api_request_lock = threading.Lock()  # Get this lock before making API requests
+    apiquota_rw_lock = threading.Lock()  # Get this lock before reading/writing apiquota
 
     num_posts_scanned = 0
     post_scan_time = 0
-    posts_scan_stats_lock = threading.Lock()
+    posts_scan_stats_lock = threading.Lock()  # Get this lock before reading/writing the above two
 
     config_parser = RawConfigParser()
 

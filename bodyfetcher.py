@@ -248,6 +248,7 @@ class BodyFetcher:
         self.api_data_lock.release()
 
         message_hq = ""
+        GlobalVars.apiquota_rw_lock.acquire()
         if "quota_remaining" in response:
             if response["quota_remaining"] - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0:
                 tell_rooms_with("debug", "API quota rolled over with {0} requests remaining. "
@@ -272,6 +273,7 @@ class BodyFetcher:
             GlobalVars.apiquota = response["quota_remaining"]
         else:
             message_hq = "The quota_remaining property was not in the API response."
+        GlobalVars.apiquota_rw_lock.release()
 
         if "error_message" in response:
             message_hq += " Error: {} at {} UTC.".format(response["error_message"], time_request_made)
