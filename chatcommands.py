@@ -1705,7 +1705,7 @@ def allspam(msg, url, alias_used="allspam"):
         if 'items' not in res or len(res['items']) == 0:
             raise CmdException("The specified user does not appear to exist.")
         if res['has_more']:
-            # Too many posts
+            # Too many accounts
             raise CmdException("The specified user has an abnormally high number of accounts. Please consider flagging "
                                "for moderator attention, otherwise use !!/report on the user's posts individually.")
         # Add accounts with posts
@@ -1714,7 +1714,6 @@ def allspam(msg, url, alias_used="allspam"):
                 user_sites.append((site['user_id'], get_api_sitename_from_url(site['site_url'])))
     else:
         user_sites.append((user[0], get_api_sitename_from_url(user[1])))
-    total_posts = 0  # Tracking total amount of posts by that user
     # Fetch posts
     for u_id, u_site in user_sites:
         # Respect backoffs etc
@@ -1764,14 +1763,42 @@ def allspam(msg, url, alias_used="allspam"):
             post_data.score = post['score']
             post_data.up_vote_count = post['up_vote_count']
             post_data.down_vote_count = post['down_vote_count']
-            # Report that post
-            current_output = report_post(post_data, msg.owner, msg.room.name, message_url, operation, custom_reason)
-            if current_output:
-                output.append(current_output)
-            total_posts += 1
-    if total_posts == 0:
+            if post_data.post_type == "answer":
+                # Annoyingly we have to make another request to get the question ID, since it is only returned by the
+                # /answers route
+                # Respect backoffs etc
+                GlobalVars.api_request_lock.acquire()
+                if GlobalVars.api_backoff_time > time.time():
+                    time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
+                # Fetch posts
+                req_url = "https://api.stackexchange.com/2.2/answers/{}".format(post['post_id'])
+                params = {
+                    'filter': '!*Jxb9s5EOrE51WK*',
+                    'key': api_key,
+                    'site': u_site
+                }
+                answer_res = requests.get(req_url, params=params).json()
+                if "backoff" in answer_res:
+                    if GlobalVars.api_backoff_time < time.time() + answer_res["backoff"]:
+                        GlobalVars.api_backoff_time = time.time() + answer_res["backoff"]
+                GlobalVars.api_request_lock.release()
+                # Finally, set the attribute
+                post_data.question_id = answer_res['items'][0]['question_id']
+                post_data.is_answer = True
+            # Add the post to report queue
+            user_posts.append(post_data)
+    if len(user_posts) == 0:
         raise CmdException("The user has no post yet.")
-    if total_posts > 2:
+    if len(user_posts) > 15:
+        raise CmdException("The specified user has an abnormally high number of spam posts. Please consider flagging "
+                           "for moderator attention, otherwise use !!/report on the posts individually.")
+    # Report posts
+    for current_post_data in user_posts:
+        # Report that post
+        current_output = report_post(current_post_data, msg.owner, msg.room.name, message_url, operation, custom_reason)
+        if current_output:
+            output.append(current_output)
+    if len(user_posts) > 2:
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
     if len(output):
         return "\n".join(output)
@@ -1806,7 +1833,7 @@ def report_post(post_data, reported_by, reported_in=None, blacklist_by=None, ope
     abs_url = post_data.post_url
     url = to_protocol_relative(abs_url)
 
-    if have_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_forced:
+    if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_forced:
         # Recently reported and is not forced
         if GlobalVars.metasmoke_key is not None:
             ms_link = resolve_ms_link(url) or to_metasmoke_link(url)
@@ -1859,7 +1886,7 @@ def report_post(post_data, reported_by, reported_in=None, blacklist_by=None, ope
         else:
             processed_why = report_info + "This post would not have been caught otherwise."
         handle_spam(post=post,  # Reported posts are always treated as spam.
-                    reasons=["Manually reported" + post_data.post_type],
+                    reasons=["Manually reported " + post_data.post_type],
                     why=processed_why)
         if custom_reason:
             Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by, url=url, after=15)
@@ -1870,12 +1897,10 @@ def report_post(post_data, reported_by, reported_in=None, blacklist_by=None, ope
     # Also the operation must be either "scan" or "scan-force"
     if scan_why:
         # Post is ignored
-        output.append("[Post]({}): Looks like spam but is ignored.".format(abs_url))
-        return None
+        return "[Post]({}): Looks like spam but is ignored.".format(abs_url)
     else:
         # Is not spam
-        output.append("[Post]({}): Does not look like spam.".format(abs_url))
-        return None
+        return "[Post]({}): Does not look like spam.".format(abs_url)
 
 
 @command(str, str, privileged=True, whole_msg=True)

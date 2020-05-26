@@ -289,7 +289,7 @@ def test_report(handle_spam):
             "id": 1337
         })
 
-        assert chatcommands.report("test", original_msg=msg, alias_used="report") == "Post 1: That does not look like a valid post URL."
+        assert chatcommands.report("test", original_msg=msg, alias_used="report") == "[Post](test): Invalid url."
 
         assert chatcommands.report("one two three four five plus-an-extra", original_msg=msg, alias_used="report") == (
             "To avoid SmokeDetector reporting posts too slowly, you can report at most 5 posts at a time. This is to avoid "
@@ -300,11 +300,11 @@ def test_report(handle_spam):
         #     .startswith("You cannot provide multiple custom report reasons.")
 
         assert chatcommands.report('https://stackoverflow.com/q/1', original_msg=msg) == \
-            "Post 1: Could not find data for this post in the API. It may already have been deleted."
+            "[Post](https://stackoverflow.com/q/1): No data fetched from API. It may have been deleted."
 
         # Valid post
         assert chatcommands.report('https://stackoverflow.com/a/1732454', original_msg=msg, alias_used="scan") == \
-            "Post 1: This does not look like spam"
+            "[Post](https://stackoverflow.com/a/1732454): Does not look like spam."
         assert chatcommands.report('https://stackoverflow.com/a/1732454 "~o.O~"', original_msg=msg, alias_used="report") is None
 
         _, call = handle_spam.call_args_list[-1]
@@ -338,7 +338,7 @@ def test_report(handle_spam):
 
         # Don't re-report
         GlobalVars.latest_questions = [('stackoverflow.com', '1732454', 'RegEx match open tags except XHTML self-contained tags')]
-        assert chatcommands.report('https://stackoverflow.com/a/1732454', original_msg=msg).startswith("Post 1: Already recently reported")
+        assert chatcommands.report('https://stackoverflow.com/a/1732454', original_msg=msg).startswith("[Post](https://stackoverflow.com/a/1732454): Already recently reported")
 
         # Can use report command multiple times in 30s if only one URL was used
         assert chatcommands.report('https://stackoverflow.com/q/1732348', original_msg=msg, alias_used="report") is None
@@ -369,7 +369,7 @@ def test_allspam(handle_spam):
             "id": 1337
         })
 
-        assert chatcommands.allspam("test", original_msg=msg) == "That doesn't look like a valid user URL."
+        assert chatcommands.allspam("test", original_msg=msg) == "[User](test): Invalid url."
 
         # If this code lasts long enough to fail, I'll be happy
         assert chatcommands.allspam("https://stackexchange.com/users/10000000000", original_msg=msg) == \
@@ -391,10 +391,10 @@ def test_allspam(handle_spam):
         )
 
         assert chatcommands.allspam("https://stackexchange.com/users/12108751", original_msg=msg) == \
-            "The specified user hasn't posted anything."
+            "The user has no post yet."
 
         assert chatcommands.allspam("https://stackoverflow.com/users/8846458", original_msg=msg) == \
-            "The specified user has no posts on this site."
+            "The user has no post yet."
 
         # This test is for users with <100rep but >15 posts
         # If this breaks in the future because the below user eventually gets 100 rep (highly unlikely), use the following
@@ -412,16 +412,26 @@ def test_allspam(handle_spam):
         _, call = handle_spam.call_args_list[0]
         assert isinstance(call["post"], Post)
         assert call["reasons"] == ["Manually reported answer"]
-        assert call["why"] == "User manually reported by *ArtOfCode* in room *Charcoal HQ*.\n"
+        assert call["why"].startswith(
+            "Post manually reported by user *ArtOfCode* in room *Charcoal HQ*."
+            "\n\nThis post would not have been caught otherwise."
+        )
 
         handle_spam.reset_mock()
+
         assert chatcommands.allspam("https://meta.stackexchange.com/users/373807", original_msg=msg) is None
 
         assert handle_spam.call_count == 1
         _, call = handle_spam.call_args_list[0]
         assert isinstance(call["post"], Post)
-        assert call["reasons"] == ["Manually reported answer"]
-        assert call["why"] == "User manually reported by *ArtOfCode* in room *Charcoal HQ*.\n"
+        # We expect "blacklisted user" here, as the blacklist is dumped to a pickle
+        # Hence when the pickle is loaded again, the user is blacklisted again
+        assert call["reasons"] == ["blacklisted user"]
+        # There is no "This post would have also been caught for:" as the reported post
+        # is not manually ignored or marked as fp
+        assert call["why"].startswith(
+            "Post manually reported by user *ArtOfCode* in room *Charcoal HQ*."
+        )
 
     finally:
         GlobalVars.blacklisted_users.clear()
