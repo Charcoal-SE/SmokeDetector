@@ -20628,3 +20628,4 @@
 1590463518	Makyen	dredidiaherbalhome(?!\.wixsite\.com)(?:@gmail\.com)?
 1590463544	Makyen	clarakat8(?:@gmail\.com)?
 1590463569	Makyen	d(?:octo)?r[\W_]*+edidia
+1590463591	Makyen	dredidiaherbalhome\.wixsite\.com
