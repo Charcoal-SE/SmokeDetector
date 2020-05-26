@@ -223,6 +223,8 @@ def get_pattern_from_content_source(msg):
         raise CmdException("An invalid pattern was provided, please check your command. Was the command edited?")
 
 
+# FIXME: dead code?
+# def check_blacklist(string_to_test, BLACKLIST):
 def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
     # Test the string and provide a warning message if it is already caught.
     if is_username:
