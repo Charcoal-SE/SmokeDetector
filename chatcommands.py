@@ -1738,6 +1738,7 @@ def allspam(msg, url, alias_used="allspam"):
         raise CmdException("The specified user has an abnormally high number of spam posts. Please consider flagging "
                            "for moderator attention, otherwise use !!/report on the posts individually.")
 
+    output = []
     for current_url in user_post_urls:
         # Report that post
         current_output = report_post(current_url, msg.owner, msg.room.name, message_url, operation, custom_reason)
