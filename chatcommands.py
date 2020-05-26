@@ -1601,12 +1601,9 @@ def invite(msg, room_id, roles):
 @command(str, whole_msg=True, privileged=False, give_name=True,
          aliases=["scan", "scan-force", "report-force", "report-direct"])
 def report(msg, args, alias_used="report"):
-    """
-    Report a post (or posts)
-    :param msg:
-    :return: A string (or None)
-    """
-    if not is_privileged(msg.owner, msg.room) and alias_used != "scan":
+    """ Scan or report posts (wrapper) """
+    if alias_used != "scan" and not is_privileged(msg.owner, msg.room):
+        # Only "scan" is allowed for non-privileged users
         raise CmdException(GlobalVars.not_privileged_warning)
 
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
@@ -1616,8 +1613,6 @@ def report(msg, args, alias_used="report"):
                            "slowing SmokeDetector down due to rate-limiting, you have to "
                            "wait 30 seconds after you've reported multiple posts in "
                            "one go.".format(alias_used, wait))
-
-    alias_used = alias_used or "report"
 
     argsraw = args.split(' "', 1)
     urls = argsraw[0].split(' ')
@@ -1640,25 +1635,43 @@ def report(msg, args, alias_used="report"):
                            "SmokeDetector's chat messages getting rate-limited too much, "
                            "which would slow down reports.".format(alias_used))
 
-    # report_posts(urls, reported_by_owner, reported_in, blacklist_by, operation="report", custom_reason=None):
-    output = report_posts(urls, msg.owner, msg.room.name, message_url, alias_used, custom_reason)
+    output = []
+    shortlinks = []
+    for url in urls:
+        shortlink = url_to_shortlink(url)
+        # Validate shortlink
+        if not shortlink:
+            output.append("[Post]({}): Invalid url.".format(url))
+        elif shortlink in shortlinks:
+            output.append("[Post]({}): Duplicate url.".format(url))
+        else:
+            shortlinks.append(shortlink)
+            # Fetch post data by API
+            post_data = api_get_post(rebuild_str(shortlink))
+            if post_data is None:
+                return "[Post]({}): Invalid url.".format(url)
+            if post_data is False:
+                return "[Post]({}): No data fetched from API. It may have been deleted.".format(url)
+            # Report that post
+            current_output = report_post(post_data, msg.owner, msg.room.name, message_url, alias_used, custom_reason)
+            if current_output:
+                output.append(current_output)
 
-    if output:
+    if len(output):
         if 1 < len(urls) > output.count("\n") + 1:
             add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
-        return output
+        return "\n".join(output)
 
 
-# noinspection PyIncorrectDocstring,PyUnusedLocal
-@command(str, whole_msg=True, privileged=True, aliases=['reportuser'])
-def allspam(msg, url):
-    """
-    Reports all of a user's posts as spam
-    :param msg:
-    :param url: A user profile URL
-    :return:
-    """
-
+@command(str, whole_msg=True, privileged=True, give_name=True,
+         aliases=["reportuser", "reportuser-force", "allspam-force"])
+def allspam(msg, url, alias_used="allspam"):
+    """ Report all posts of a user """
+    if alias_used in {"reportuser", "allspam"}:
+        operation = "report"
+    else:
+        operation = "report-force"
+    custom_reason = None  # TODO: allow custom reasons
     api_key = 'IAkbitmze4B8KpacUfLqkw(('
     crn, wait = can_report_now(msg.owner.id, msg._client.host)
     if not crn:
@@ -1669,7 +1682,7 @@ def allspam(msg, url):
                            "one go.".format(wait))
     user = get_user_from_url(url)
     if user is None:
-        raise CmdException("That doesn't look like a valid user URL.")
+        raise CmdException("[User]({}): Invalid url.".format(url))
     user_sites = []
     user_posts = []
     # Detect whether link is to network profile or site profile
@@ -1692,6 +1705,7 @@ def allspam(msg, url):
         if 'items' not in res or len(res['items']) == 0:
             raise CmdException("The specified user does not appear to exist.")
         if res['has_more']:
+            # Too many posts
             raise CmdException("The specified user has an abnormally high number of accounts. Please consider flagging "
                                "for moderator attention, otherwise use !!/report on the user's posts individually.")
         # Add accounts with posts
@@ -1700,6 +1714,7 @@ def allspam(msg, url):
                 user_sites.append((site['user_id'], get_api_sitename_from_url(site['site_url'])))
     else:
         user_sites.append((user[0], get_api_sitename_from_url(user[1])))
+    total_posts = 0  # Tracking total amount of posts by that user
     # Fetch posts
     for u_id, u_site in user_sites:
         # Respect backoffs etc
@@ -1719,16 +1734,23 @@ def allspam(msg, url):
                 GlobalVars.api_backoff_time = time.time() + res["backoff"]
         GlobalVars.api_request_lock.release()
         if 'items' not in res or len(res['items']) == 0:
-            raise CmdException("The specified user has no posts on this site.")
+            # The user has no post on this site.
+            # Move on to the next site.
+            continue
         posts = res['items']
         if posts[0]['owner']['reputation'] > 100:
+            # High reputation on one site indicates that the user
+            # is unlikely a spammer on other sites.
+            # Hence raise an exception and quit the process
             raise CmdException("The specified user's reputation is abnormally high. Please consider flagging for "
                                "moderator attention, otherwise use !!/report on the posts individually.")
         # Add blacklisted user - use most downvoted post as post URL
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
         add_blacklisted_user(user, message_url, sorted(posts, key=lambda x: x['score'])[0]['owner']['link'])
+        output = []
         # TODO: Postdata refactor, figure out a better way to use apigetpost
         for post in posts:
+            # Manually construct post_data (need to be changed; see TODO above)
             post_data = PostData()
             post_data.post_id = post['post_id']
             post_data.post_url = url_to_shortlink(post['link'])
@@ -1742,196 +1764,118 @@ def allspam(msg, url):
             post_data.score = post['score']
             post_data.up_vote_count = post['up_vote_count']
             post_data.down_vote_count = post['down_vote_count']
-            if post_data.post_type == "answer":
-                # Annoyingly we have to make another request to get the question ID, since it is only returned by the
-                # /answers route
-                # Respect backoffs etc
-                GlobalVars.api_request_lock.acquire()
-                if GlobalVars.api_backoff_time > time.time():
-                    time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
-                # Fetch posts
-                req_url = "https://api.stackexchange.com/2.2/answers/{}".format(post['post_id'])
-                params = {
-                    'filter': '!*Jxb9s5EOrE51WK*',
-                    'key': api_key,
-                    'site': u_site
-                }
-                answer_res = requests.get(req_url, params=params).json()
-                if "backoff" in answer_res:
-                    if GlobalVars.api_backoff_time < time.time() + answer_res["backoff"]:
-                        GlobalVars.api_backoff_time = time.time() + answer_res["backoff"]
-                GlobalVars.api_request_lock.release()
-                # Finally, set the attribute
-                post_data.question_id = answer_res['items'][0]['question_id']
-                post_data.is_answer = True
-            user_posts.append(post_data)
-    if len(user_posts) == 0:
-        raise CmdException("The specified user hasn't posted anything.")
-    if len(user_posts) > 15:
-        raise CmdException("The specified user has an abnormally high number of spam posts. Please consider flagging "
-                           "for moderator attention, otherwise use !!/report on the posts individually.")
-    why_info = u"User manually reported by *{}* in room *{}*.\n".format(msg.owner.name, msg.room.name)
-    # Handle all posts
-    for index, post in enumerate(user_posts, start=1):
-        batch = ""
-        if len(user_posts) > 1:
-            batch = " (batch report: post {} out of {})".format(index, len(user_posts))
-        handle_spam(post=Post(api_response=post.as_dict),
-                    reasons=["Manually reported " + post.post_type + batch],
-                    why=why_info)
-        time.sleep(2)  # Should this be implemented differently?
-    if len(user_posts) > 2:
+            # Report that post
+            current_output = report_post(post_data, msg.owner, msg.room.name, message_url, operation, custom_reason)
+            if current_output:
+                output.append(current_output)
+            total_posts += 1
+    if total_posts == 0:
+        raise CmdException("The user has no post yet.")
+    if total_posts > 2:
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
-
-
-def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
-    """
-    Reports a list of URLs
-    :param urls: A list of URLs
-    :param reported_by_owner: The chatexchange User record for the user that reported the URLs.
-    :param reported_in: The name of the room in which the URLs were reported, or True if reported by the MS API.
-    :param blacklist_by: String of the URL for the transcript of the chat message causing the report.
-    :param operation: String of which operation is being performed (e.g. report, scan, report-force, scan-force)
-    :param custom_reason: String of the custom reason why the URLs are being reported.
-    :return: String: the in-chat repsponse
-    """
-    reported_by_name = reported_by_owner.name
-    operation = operation or "report"
-    is_forced = operation in {"scan-force", "report-force", "report-direct"}
-    if operation == "scan-force":
-        operation = "scan"
-    action_done = "scanned" if operation == "scan" else "reported"
-    if reported_in is None:
-        reported_from = " by *{}*".format(reported_by_name)
-    elif reported_in is True:
-        reported_from = " by *{}* from the metasmoke API".format(reported_by_name)
-    else:
-        reported_from = " by user *{}* in room *{}*".format(reported_by_name, reported_in)
-
-    if custom_reason:
-        with_reason = " with reason: *{}*".format(custom_reason)
-    else:
-        with_reason = ""
-
-    report_info = "Post manually {}{}{}.\n\n".format(action_done, reported_from, with_reason)
-
-    normalized_urls = []
-    for url in urls:
-        t = url_to_shortlink(url)
-        if not t:
-            normalized_urls.append("That does not look like a valid post URL.")
-        elif t not in normalized_urls:
-            normalized_urls.append(t)
-        else:
-            normalized_urls.append("A duplicate URL was provided.")
-    urls = normalized_urls
-
-    users_to_blacklist = []
-    output = []
-
-    for index, url in enumerate(urls, start=1):
-        if not url.startswith("http://") and not url.startswith("https://"):
-            # Return the bad URL directly.
-            output.append("Post {}: {}".format(index, url))
-            continue
-
-        post_data = api_get_post(rebuild_str(url))
-
-        if post_data is None:
-            output.append("Post {}: That does not look like a valid post URL.".format(index))
-            continue
-
-        if post_data is False:
-            output.append("Post {}: Could not find data for this post in the API. "
-                          "It may already have been deleted.".format(index))
-            continue
-
-        if has_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_false_positive(
-                (post_data.post_id, post_data.site)) and not is_forced:
-            # Don't re-report if the post wasn't marked as a false positive. If it was marked as a false positive,
-            # this re-report might be attempting to correct that/fix a mistake/etc.
-
-            if GlobalVars.metasmoke_key is not None:
-                se_link = to_protocol_relative(post_data.post_url)
-                ms_link = resolve_ms_link(se_link) or to_metasmoke_link(se_link)
-                output.append("Post {}: Already recently reported [ [MS]({}) ]".format(index, ms_link))
-                continue
-            else:
-                output.append("Post {}: Already recently reported".format(index))
-                continue
-
-        url = to_protocol_relative(post_data.post_url)
-        post = Post(api_response=post_data.as_dict)
-        user = get_user_from_url(post_data.owner_url)
-
-        if fetch_post_id_and_site_from_url(url)[2] == "answer":
-            parent_data = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
-            post._is_answer = True
-            post._parent = Post(api_response=parent_data.as_dict)
-
-        # if operation == "report-direct":
-        #     scan_spam, scan_reasons, scan_why = False, [], ""
-        # else:
-        if True:
-            scan_spam, scan_reasons, scan_why = check_if_spam(post)  # Scan it first
-
-        if operation in {"report", "report-force"}:  # Force blacklist user even if !!/report falls back to scan
-            if user is not None:
-                users_to_blacklist.append((user, blacklist_by, post_data.post_url))
-
-        # scan_spam == False indicates that the post is not spam, but it is also set to False
-        # when the post is spam, but has been previously reported. In that case, the scan_reasons
-        # is a tuple with what would be the list of reasons as the first entry and what would
-        # be the why as the second. This converts that output back into what they would be
-        # if the post wasn't previously reported for the cases where we want to process it
-        # as such.
-        # Expand real scan results from dirty returm value when not "!!/scan"
-        # Presence of "scan_why" indicates the post IS spam but ignored
-        if (operation != "scan" or is_forced) and (not scan_spam) and scan_why:
-            scan_spam = True
-            scan_reasons, scan_why = scan_reasons
-
-        # Always handle if reported
-        if scan_spam and operation != "report-direct":
-            comment = report_info + scan_why.lstrip()
-            handle_spam(post=post, reasons=scan_reasons, why=comment)
-            if custom_reason:
-                Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by_owner, url=url, after=15)
-            continue
-
-        # scan_spam == False
-        if operation in {"report", "report-force", "report-direct"}:
-            batch = ""
-            if len(urls) > 1:
-                batch = " (batch report: post {} out of {})".format(index, len(urls))
-
-            if scan_spam:
-                why_append = "This post would have also been caught for: " + ", ".join(scan_reasons).capitalize() + \
-                    '\n' + scan_why
-            else:
-                why_append = "This post would not have been caught otherwise."
-
-            comment = report_info + why_append
-            handle_spam(post=post,
-                        reasons=["Manually reported " + post_data.post_type + batch],
-                        why=comment)
-            if custom_reason:
-                Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by_owner, url=url, after=15)
-            continue
-
-        # scan_spam == False and "scan"
-        else:
-            if scan_why:
-                output.append("Post {}: Looks like spam but not reported: {}".format(index, scan_why.capitalize()))
-            else:
-                output.append("Post {}: This does not look like spam".format(index))
-
-    for item in users_to_blacklist:
-        add_blacklisted_user(*item)
-
     if len(output):
         return "\n".join(output)
-    return None
+
+
+def report_post(post_data, reported_by, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
+    """ Scan or report a single post """
+    reporter_name = reported_by.name
+    operation = operation or "report"
+    is_forced = operation in {"scan-force", "report-force", "report-direct"}
+
+    # Format report_info
+    if operation in {"scan", "scan-force"}:
+        action_str = "scanned"
+    else:
+        action_str = "reported"
+
+    if reported_in is None:
+        from_str = " by *{}*".format(reporter_name)
+    elif reported_in is True:
+        from_str = " by *{}* from the metasmoke API".format(reporter_name)
+    else:
+        from_str = " by user *{}* in room *{}*".format(reporter_name, reported_in)
+
+    if custom_reason:
+        reason_str = " with reason: *{}*".format(custom_reason)
+    else:
+        reason_str = ""
+
+    report_info = "Post manually {}{}{}.\n\n".format(action_str, from_str, reason_str)
+
+    abs_url = post_data.post_url
+    url = to_protocol_relative(abs_url)
+
+    if have_already_been_posted(post_data.site, post_data.post_id, post_data.title) and not is_forced:
+        # Recently reported and is not forced
+        if GlobalVars.metasmoke_key is not None:
+            ms_link = resolve_ms_link(url) or to_metasmoke_link(url)
+            # Post custom_reason as MS comment if exists
+            if custom_reason:
+                Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by, url=url, after=15)
+            return "[Post]({}): Already recently reported [ [MS]({}) ]".format(abs_url, ms_link)
+        else:
+            return "[Post]({}): Already recently reported".format(abs_url)
+
+    post = Post(api_response=post_data.as_dict)
+    user = get_user_from_url(post_data.owner_url)
+
+    if fetch_post_id_and_site_from_url(url)[2] == "answer":
+        # If the post is an answer, another API call need to be made
+        # to fetch its parent post
+        parent_data = api_get_post("https://{}/q/{}".format(post.post_site, post_data.question_id))
+        post._is_answer = True
+        post._parent = Post(api_response=parent_data.as_dict)
+
+    scan_spam, scan_reasons, scan_why = check_if_spam(post)  # Scan it first
+    if operation in {"report", "report-force"}:
+        # if operation is "report" or "report-force", blacklist the user
+        if user is not None:
+            add_blacklisted_user(user, blacklist_by, post_data.post_url)
+
+    if (operation != "scan") and not scan_spam and scan_why:
+        # The post is spam, but is manually ignored.
+        # More doc available in check_if_spam()
+        # In such cases, if operation is not just scan, we will treat the post as spam.
+        scan_spam = True
+        scan_reasons, scan_why = scan_reasons
+
+    if scan_spam and operation != "report-direct":
+        # The post is spam
+        processed_why = report_info + scan_why.lstrip()  # Add additional info
+        handle_spam(post=post, reasons=scan_reasons, why=processed_why)
+        if custom_reason:
+            Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by, url=url, after=15)
+        return None
+
+    # From this point on we are sure that either the operation is "report-direct"
+    # Or the post is not treated as spam by the system (scan_spam is False)
+    # The latter case may be that the operation is simply scan and the post is spam but ignored
+    if operation in {"report", "report-force", "report-direct"}:
+        if scan_spam:
+            # The operation is "report-direct"
+            processed_why = report_info + "This post would have also been caught for: " + \
+                ", ".join(scan_reasons).capitalize() + '\n' + scan_why
+        else:
+            processed_why = report_info + "This post would not have been caught otherwise."
+        handle_spam(post=post,  # Reported posts are always treated as spam.
+                    reasons=["Manually reported" + post_data.post_type],
+                    why=processed_why)
+        if custom_reason:
+            Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by, url=url, after=15)
+        return None
+
+    # At this point, either the post is not spam
+    # Or it is manually ignored
+    # Also the operation must be either "scan" or "scan-force"
+    if scan_why:
+        # Post is ignored
+        output.append("[Post]({}): Looks like spam but is ignored.".format(abs_url))
+        return None
+    else:
+        # Is not spam
+        output.append("[Post]({}): Does not look like spam.".format(abs_url))
+        return None
 
 
 @command(str, str, privileged=True, whole_msg=True)
