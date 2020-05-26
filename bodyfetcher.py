@@ -225,74 +225,78 @@ class BodyFetcher:
         time.sleep(3)
 
         GlobalVars.api_request_lock.acquire()
-        # Respect backoff, if we were given one
-        if GlobalVars.api_backoff_time > time.time():
-            time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
         try:
-            time_request_made = datetime.utcnow().strftime('%H:%M:%S')
-            response = requests.get(url, params=params, timeout=20).json()
-        except (requests.exceptions.Timeout, requests.ConnectionError, Exception):
-            # Any failure in the request being made (timeout or otherwise) should be added back to
-            # the queue.
-            self.queue_modify_lock.acquire()
-            if site in self.queue:
-                self.queue[site].update(new_posts)
-            else:
-                self.queue[site] = new_posts
-            self.queue_modify_lock.release()
+            # Respect backoff, if we were given one
+            if GlobalVars.api_backoff_time > time.time():
+                time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
+            try:
+                time_request_made = datetime.utcnow().strftime('%H:%M:%S')
+                response = requests.get(url, params=params, timeout=20).json()
+            except (requests.exceptions.Timeout, requests.ConnectionError, Exception):
+                # Any failure in the request being made (timeout or otherwise) should be added back to
+                # the queue.
+                self.queue_modify_lock.acquire()
+                if site in self.queue:
+                    self.queue[site].update(new_posts)
+                else:
+                    self.queue[site] = new_posts
+                self.queue_modify_lock.release()
+                GlobalVars.api_request_lock.release()
+                return
+
+            self.api_data_lock.acquire()
+            add_or_update_api_data(site)
+            self.api_data_lock.release()
+
+            message_hq = ""
+            GlobalVars.apiquota_rw_lock.acquire()
+            try:
+                if "quota_remaining" in response:
+                    if response["quota_remaining"] - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0:
+                        tell_rooms_with("debug", "API quota rolled over with {0} requests remaining. "
+                                                 "Current quota: {1}.".format(GlobalVars.apiquota,
+                                                                              response["quota_remaining"]))
+
+                        sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1),
+                                                       reverse=True)
+                        api_quota_used_per_site = ""
+                        for site_name, quota_used in sorted_calls_per_site:
+                            sanatized_site_name = site_name.replace('.com', '').replace('.stackexchange', '')
+                            api_quota_used_per_site += sanatized_site_name + ": {0}\n".format(str(quota_used))
+                        api_quota_used_per_site = api_quota_used_per_site.strip()
+
+                        tell_rooms_with("debug", api_quota_used_per_site)
+                        clear_api_data()
+                    if response["quota_remaining"] == 0:
+                        tell_rooms_with("debug", "API reports no quota left!  May be a glitch.")
+                        tell_rooms_with("debug", str(response))  # No code format for now?
+                    if GlobalVars.apiquota == -1:
+                        tell_rooms_with("debug", "Restart: API quota is {quota}."
+                                                 .format(quota=response["quota_remaining"]))
+                    GlobalVars.apiquota = response["quota_remaining"]
+                else:
+                    message_hq = "The quota_remaining property was not in the API response."
+                GlobalVars.apiquota_rw_lock.release()
+            except Exception:
+                GlobalVars.apiquota_rw_lock.release()
+                raise
+
+            if "error_message" in response:
+                message_hq += " Error: {} at {} UTC.".format(response["error_message"], time_request_made)
+                if "error_id" in response and response["error_id"] == 502:
+                    if GlobalVars.api_backoff_time < time.time() + 12:  # Add a backoff of 10 + 2 seconds as a default
+                        GlobalVars.api_backoff_time = time.time() + 12
+                message_hq += " Backing off on requests for the next 12 seconds."
+                message_hq += " Previous URL: `{}`".format(url)
+
+            if "backoff" in response:
+                if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
+                    GlobalVars.api_backoff_time = time.time() + response["backoff"]
+
             GlobalVars.api_request_lock.release()
-            return
-
-        self.api_data_lock.acquire()
-        add_or_update_api_data(site)
-        self.api_data_lock.release()
-
-        message_hq = ""
-        GlobalVars.apiquota_rw_lock.acquire()
-        try:
-            if "quota_remaining" in response:
-                if response["quota_remaining"] - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0:
-                    tell_rooms_with("debug", "API quota rolled over with {0} requests remaining. "
-                                             "Current quota: {1}.".format(GlobalVars.apiquota,
-                                                                          response["quota_remaining"]))
-
-                    sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1),
-                                                   reverse=True)
-                    api_quota_used_per_site = ""
-                    for site_name, quota_used in sorted_calls_per_site:
-                        sanatized_site_name = site_name.replace('.com', '').replace('.stackexchange', '')
-                        api_quota_used_per_site += sanatized_site_name + ": {0}\n".format(str(quota_used))
-                    api_quota_used_per_site = api_quota_used_per_site.strip()
-
-                    tell_rooms_with("debug", api_quota_used_per_site)
-                    clear_api_data()
-                if response["quota_remaining"] == 0:
-                    tell_rooms_with("debug", "API reports no quota left!  May be a glitch.")
-                    tell_rooms_with("debug", str(response))  # No code format for now?
-                if GlobalVars.apiquota == -1:
-                    tell_rooms_with("debug", "Restart: API quota is {quota}."
-                                             .format(quota=response["quota_remaining"]))
-                GlobalVars.apiquota = response["quota_remaining"]
-            else:
-                message_hq = "The quota_remaining property was not in the API response."
-            GlobalVars.apiquota_rw_lock.release()
         except Exception:
-            GlobalVars.apiquota_rw_lock.release()
+            GlobalVars.api_request_lock.release()
             raise
-
-        if "error_message" in response:
-            message_hq += " Error: {} at {} UTC.".format(response["error_message"], time_request_made)
-            if "error_id" in response and response["error_id"] == 502:
-                if GlobalVars.api_backoff_time < time.time() + 12:  # Add a backoff of 10 + 2 seconds as a default
-                    GlobalVars.api_backoff_time = time.time() + 12
-            message_hq += " Backing off on requests for the next 12 seconds."
-            message_hq += " Previous URL: `{}`".format(url)
-
-        if "backoff" in response:
-            if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
-                GlobalVars.api_backoff_time = time.time() + response["backoff"]
-
-        GlobalVars.api_request_lock.release()
 
         if len(message_hq) > 0 and "site is required" not in message_hq:
             tell_rooms_with("debug", message_hq.strip())
