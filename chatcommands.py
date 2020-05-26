@@ -738,27 +738,15 @@ def metasmoke(msg, alias_used):
     if not is_privileged(msg.owner, msg.room):
         raise CmdException(GlobalVars.not_privileged_warning)
 
-    if alias_used == "ms-down":
-        Metasmoke.AutoSwitch.switch_auto(True)
-        Metasmoke.ms_down()
-        return "Successfully set metasmoke status to **down**." +\
-               " Automatic metasmoke status switch is currently **enabled**."
-    if alias_used == "ms-up":
-        Metasmoke.AutoSwitch.switch_auto(True)
+    to_up = "up" in alias_used
+    forced = "force" in alias_used
+    Metasmoke.AutoSwitch.switch_auto(not forced)
+    if to_up:
         Metasmoke.ms_up()
-        return "Successfully set metasmoke status to **up**." +\
-               " Automatic metasmoke status switch is currently **enabled**."
-    if alias_used == "ms-down-force":
-        Metasmoke.AutoSwitch.switch_auto(False)
+    else:
         Metasmoke.ms_down()
-        return "Successfully set metasmoke status to **down**." +\
-               " Automatic metasmoke status switch is currently **disabled**."
-    if alias_used == "ms-up-force":
-        Metasmoke.AutoSwitch.switch_auto(False)
-        Metasmoke.ms_up()
-        return "Successfully set metasmoke status to **up**." +\
-               " Automatic metasmoke status switch is currently **disabled**."
-    raise CmdException("Bad command alias. Blame a developer.")
+    return "Successfully set metasmoke status to **{}**.".format("up" if to_up else "down") +\
+           " Automatic metasmoke status switch is currently **{}abled**.".format("dis" if forced else "en")
 
 
 # noinspection PyIncorrectDocstring
