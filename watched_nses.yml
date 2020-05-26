@@ -170,6 +170,9 @@ items:
   - guss.ns.cloudflare.com.
 - ns:
   - bonnie.ns.cloudflare.com.
+  - jason.ns.cloudflare.com.
+- ns:
+  - bonnie.ns.cloudflare.com.!
   - tim.ns.cloudflare.com.
 - ns:
   - bonnie.ns.cloudflare.com.
