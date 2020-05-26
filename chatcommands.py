@@ -1785,6 +1785,16 @@ def allspam(msg, url):
 
 
 def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
+    """
+    Reports a list of URLs
+    :param urls: A list of URLs
+    :param reported_by_owner: The chatexchange User record for the user that reported the URLs.
+    :param reported_in: The name of the room in which the URLs were reported, or True if reported by the MS API.
+    :param blacklist_by: String of the URL for the transcript of the chat message causing the report.
+    :param operation: String of which operation is being performed (e.g. report, scan, report-force, scan-force)
+    :param custom_reason: String of the custom reason why the URLs are being reported.
+    :return: String: the in-chat repsponse
+    """
     reported_by_name = reported_by_owner.name
     operation = operation or "report"
     is_forced = operation in {"scan-force", "report-force", "report-direct"}
