@@ -276,10 +276,8 @@ class BodyFetcher:
                     GlobalVars.apiquota = response["quota_remaining"]
                 else:
                     message_hq = "The quota_remaining property was not in the API response."
+            finally:
                 GlobalVars.apiquota_rw_lock.release()
-            except Exception:
-                GlobalVars.apiquota_rw_lock.release()
-                raise
 
             if "error_message" in response:
                 message_hq += " Error: {} at {} UTC.".format(response["error_message"], time_request_made)
@@ -293,10 +291,8 @@ class BodyFetcher:
                 if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
                     GlobalVars.api_backoff_time = time.time() + response["backoff"]
 
+        finally:
             GlobalVars.api_request_lock.release()
-        except Exception:
-            GlobalVars.api_request_lock.release()
-            raise
 
         if len(message_hq) > 0 and "site is required" not in message_hq:
             tell_rooms_with("debug", message_hq.strip())
