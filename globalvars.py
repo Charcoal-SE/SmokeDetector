@@ -140,18 +140,16 @@ class GlobalVars:
         @staticmethod
         def add_stat(posts_scanned, scan_time):
             """ Adding post scanning data """
-            GlobalVars.PostScanStat.rw_lock.acquire()
-            GlobalVars.PostScanStat.num_posts_scanned += posts_scanned
-            GlobalVars.PostScanStat.post_scan_time += scan_time
-            GlobalVars.PostScanStat.rw_lock.release()
+            with GlobalVars.PostScanStat.rw_lock:
+                GlobalVars.PostScanStat.num_posts_scanned += posts_scanned
+                GlobalVars.PostScanStat.post_scan_time += scan_time
 
         @staticmethod
         def get_stat():
             """ Getting post scanning statistics """
-            GlobalVars.PostScanStat.rw_lock.acquire()
-            posts_scanned = GlobalVars.PostScanStat.num_posts_scanned
-            scan_time = GlobalVars.PostScanStat.post_scan_time
-            GlobalVars.PostScanStat.rw_lock.release()
+            with GlobalVars.PostScanStat.rw_lock:
+                posts_scanned = GlobalVars.PostScanStat.num_posts_scanned
+                scan_time = GlobalVars.PostScanStat.post_scan_time
             if scan_time == 0:
                 posts_per_second = None
             else:
@@ -161,18 +159,16 @@ class GlobalVars:
         @staticmethod
         def snap():
             """ Take a snapshot of current stat """
-            GlobalVars.PostScanStat.rw_lock.acquire()
-            GlobalVars.PostScanStat.snap_num_posts_scanned = GlobalVars.PostScanStat.num_posts_scanned
-            GlobalVars.PostScanStat.snap_post_scan_time = GlobalVars.PostScanStat.post_scan_time
-            GlobalVars.PostScanStat.rw_lock.release()
+            with GlobalVars.PostScanStat.rw_lock:
+                GlobalVars.PostScanStat.snap_num_posts_scanned = GlobalVars.PostScanStat.num_posts_scanned
+                GlobalVars.PostScanStat.snap_post_scan_time = GlobalVars.PostScanStat.post_scan_time
 
         @staticmethod
         def get_snap():
             """ Get snapshot data """
-            GlobalVars.PostScanStat.rw_lock.acquire()
-            snap_posts_scanned = GlobalVars.PostScanStat.snap_num_posts_scanned
-            snap_scan_time = GlobalVars.PostScanStat.snap_post_scan_time
-            GlobalVars.PostScanStat.rw_lock.release()
+            with GlobalVars.PostScanStat.rw_lock:
+                snap_posts_scanned = GlobalVars.PostScanStat.snap_num_posts_scanned
+                snap_scan_time = GlobalVars.PostScanStat.snap_post_scan_time
             if snap_scan_time == 0:
                 snap_posts_per_second = None
             else:
@@ -182,18 +178,16 @@ class GlobalVars:
         @staticmethod
         def reset_stat():
             """ Resetting post scanning data """
-            GlobalVars.PostScanStat.rw_lock.acquire()
-            GlobalVars.PostScanStat.num_posts_scanned = 0
-            GlobalVars.PostScanStat.post_scan_time = 0
-            GlobalVars.PostScanStat.rw_lock.release()
+            with GlobalVars.PostScanStat.rw_lock:
+                GlobalVars.PostScanStat.num_posts_scanned = 0
+                GlobalVars.PostScanStat.post_scan_time = 0
 
         @staticmethod
         def reset_snap():
             """ Resetting snapshot data """
-            GlobalVars.PostScanStat.rw_lock.acquire()
-            GlobalVars.PostScanStat.snap_num_posts_scanned = 0
-            GlobalVars.PostScanStat.snap_post_scan_time = 0
-            GlobalVars.PostScanStat.rw_lock.release()
+            with GlobalVars.PostScanStat.rw_lock:
+                GlobalVars.PostScanStat.snap_num_posts_scanned = 0
+                GlobalVars.PostScanStat.snap_post_scan_time = 0
 
     config_parser = RawConfigParser()
 
@@ -220,24 +214,21 @@ class GlobalVars:
         def set_up():
             """ Set metasmoke status to up """
             # Private to metasmoke.py
-            GlobalVars.MSStatus.rw_lock.acquire()
-            GlobalVars.MSStatus.ms_is_up = True
-            GlobalVars.MSStatus.rw_lock.release()
+            with GlobalVars.MSStatus.rw_lock:
+                GlobalVars.MSStatus.ms_is_up = True
 
         @staticmethod
         def set_down():
             """ Set metasmoke status to down """
             # Private to metasmoke.py
-            GlobalVars.MSStatus.rw_lock.acquire()
-            GlobalVars.MSStatus.ms_is_up = False
-            GlobalVars.MSStatus.rw_lock.release()
+            with GlobalVars.MSStatus.rw_lock:
+                GlobalVars.MSStatus.ms_is_up = False
 
         @staticmethod
         def is_up():
             """ Query if metasmoke status is up """
-            GlobalVars.MSStatus.rw_lock.acquire()
-            current_ms_status = GlobalVars.MSStatus.ms_is_up
-            GlobalVars.MSStatus.rw_lock.release()
+            with GlobalVars.MSStatus.rw_lock:
+                current_ms_status = GlobalVars.MSStatus.ms_is_up
             return current_ms_status
 
         @staticmethod
@@ -251,32 +242,28 @@ class GlobalVars:
         @staticmethod
         def failed():
             """ Indicate a metasmoke connection failure """
-            GlobalVars.MSStatus.rw_lock.acquire()
-            GlobalVars.MSStatus.counter += 1
-            GlobalVars.MSStatus.rw_lock.release()
+            with GlobalVars.MSStatus.rw_lock:
+                GlobalVars.MSStatus.counter += 1
 
         @staticmethod
         def succeeded():
             """ Indicate a metasmoke connection success """
-            GlobalVars.MSStatus.rw_lock.acquire()
-            GlobalVars.MSStatus.counter = 0
-            GlobalVars.MSStatus.rw_lock.release()
+            with GlobalVars.MSStatus.rw_lock:
+                GlobalVars.MSStatus.counter = 0
 
         @staticmethod
         def get_failure_count():
             """ Get consecutive metasmoke connection failure count """
-            GlobalVars.MSStatus.rw_lock.acquire()
-            failure_count = GlobalVars.MSStatus.counter
-            GlobalVars.MSStatus.rw_lock.release()
+            with GlobalVars.MSStatus.rw_lock:
+                failure_count = GlobalVars.MSStatus.counter
             return failure_count
 
         @staticmethod
         def reset_ms_status():
             """ Reset class GlobalVars.MSStatus to default values """
-            GlobalVars.MSStatus.rw_lock.acquire()
-            GlobalVars.MSStatus.ms_is_up = True
-            GlobalVars.MSStatus.counter = 0
-            GlobalVars.MSStatus.rw_lock.release()
+            with GlobalVars.MSStatus.rw_lock:
+                GlobalVars.MSStatus.ms_is_up = True
+                GlobalVars.MSStatus.counter = 0
 
     chatexchange_u = config.get("ChatExchangeU")
     chatexchange_p = config.get("ChatExchangeP")

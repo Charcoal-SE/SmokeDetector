@@ -52,14 +52,13 @@ class Metasmoke:
         @staticmethod
         def to_off():
             """ Road to switching metasmoke down """
-            Metasmoke.AutoSwitch.rw_lock.acquire()
-            if Metasmoke.AutoSwitch.counter < 0:
-                # Consecutive counter. Switch sign.
-                Metasmoke.AutoSwitch.counter = 0
-            Metasmoke.AutoSwitch.counter += 1
-            current_counter = Metasmoke.AutoSwitch.counter
-            current_auto = Metasmoke.AutoSwitch.auto
-            Metasmoke.AutoSwitch.rw_lock.release()
+            with Metasmoke.AutoSwitch.rw_lock:
+                if Metasmoke.AutoSwitch.counter < 0:
+                    # Consecutive counter. Switch sign.
+                    Metasmoke.AutoSwitch.counter = 0
+                Metasmoke.AutoSwitch.counter += 1
+                current_counter = Metasmoke.AutoSwitch.counter
+                current_auto = Metasmoke.AutoSwitch.auto
             # MAX_FAILURES is constant so no lock.
             if current_counter > Metasmoke.AutoSwitch.MAX_FAILURES and\
                GlobalVars.MSStatus.is_up() and current_auto:
@@ -73,15 +72,14 @@ class Metasmoke:
         @staticmethod
         def to_on():
             """ Road to switching metasmoke up """
-            Metasmoke.AutoSwitch.rw_lock.acquire()
-            if Metasmoke.AutoSwitch.counter > 0:
-                # Consecutive counter. Switch sign.
-                Metasmoke.AutoSwitch.counter = 0
-            Metasmoke.AutoSwitch.counter -= 1
-            current_counter = -Metasmoke.AutoSwitch.counter
-            current_auto = Metasmoke.AutoSwitch.auto
-            # Negative values for success
-            Metasmoke.AutoSwitch.rw_lock.release()
+            with Metasmoke.AutoSwitch.rw_lock:
+                if Metasmoke.AutoSwitch.counter > 0:
+                    # Consecutive counter. Switch sign.
+                    Metasmoke.AutoSwitch.counter = 0
+                Metasmoke.AutoSwitch.counter -= 1
+                # Negative values for success
+                current_counter = -Metasmoke.AutoSwitch.counter
+                current_auto = Metasmoke.AutoSwitch.auto
             # MAX_SUCCESSES is constant so no lock.
             if current_counter > Metasmoke.AutoSwitch.MAX_SUCCESSES and\
                GlobalVars.MSStatus.is_down() and current_auto:
@@ -96,9 +94,8 @@ class Metasmoke:
         @staticmethod
         def switch_auto(on):
             """ Enable or disable auto status switch """
-            Metasmoke.AutoSwitch.rw_lock.acquire()
-            Metasmoke.AutoSwitch.auto = on
-            Metasmoke.AutoSwitch.rw_lock.release()
+            with Metasmoke.AutoSwitch.rw_lock:
+                Metasmoke.AutoSwitch.auto = on
             if on:
                 switch_auto_msg = "Metasmoke status autoswitch is now enabled."
             else:
@@ -109,10 +106,9 @@ class Metasmoke:
         @staticmethod
         def reset_switch():
             """ Reset class Metasmoke.AutoSwitch to default values """
-            Metasmoke.AutoSwitch.rw_lock.acquire()
-            Metasmoke.AutoSwitch.counter = 0
-            Metasmoke.Autoswitch.auto = True
-            Metasmoke.Autoswitch.rw_lock.release()
+            with Metasmoke.AutoSwitch.rw_lock:
+                Metasmoke.AutoSwitch.counter = 0
+                Metasmoke.Autoswitch.auto = True
 
     @staticmethod
     def ms_up():
