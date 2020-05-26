@@ -20634,3 +20634,4 @@
 1590471705	Makyen	babadoctorjamesomonzokpia(?:@gmail\.com)?
 1590471756	Makyen	d(?:octo)?r[\W_]*+omonzokpia
 1590471857	tripleee	tinhtd\.info
+1590473796	Makyen	collegeinit\.com
