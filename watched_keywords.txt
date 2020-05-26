@@ -20639,3 +20639,4 @@
 1590475979	Makyen	total[\W_]*+enhance[\W_]*+rx
 1590482684	Makyen	thetechtoys\.com
 1590482709	Makyen	rxsafemed\.com
+1590482736	Makyen	amozonpill\.net
