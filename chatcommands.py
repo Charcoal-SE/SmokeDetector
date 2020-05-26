@@ -1640,8 +1640,8 @@ def report(msg, args, alias_used="report"):
                            "SmokeDetector's chat messages getting rate-limited too much, "
                            "which would slow down reports.".format(alias_used))
 
-    # report_posts(urls, reported_by, reported_in, blacklist_by, operation="report", custom_reason=None):
-    output = report_posts(urls, msg.owner.name, msg.room.name, message_url, alias_used, custom_reason)
+    # report_posts(urls, reported_by_owner, reported_in, blacklist_by, operation="report", custom_reason=None):
+    output = report_posts(urls, msg.owner, msg.room.name, message_url, alias_used, custom_reason)
 
     if output:
         if 1 < len(urls) > output.count("\n") + 1:
@@ -1784,18 +1784,19 @@ def allspam(msg, url):
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
 
 
-def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
+def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
+    reported_by_name = reported_by_owner.name
     operation = operation or "report"
     is_forced = operation in {"scan-force", "report-force", "report-direct"}
     if operation == "scan-force":
         operation = "scan"
     action_done = "scanned" if operation == "scan" else "reported"
     if reported_in is None:
-        reported_from = " by *{}*".format(reported_by)
+        reported_from = " by *{}*".format(reported_by_name)
     elif reported_in is True:
-        reported_from = " by *{}* from the metasmoke API".format(reported_by)
+        reported_from = " by *{}* from the metasmoke API".format(reported_by_name)
     else:
-        reported_from = " by user *{}* in room *{}*".format(reported_by, reported_in)
+        reported_from = " by user *{}* in room *{}*".format(reported_by_name, reported_in)
 
     if custom_reason:
         with_reason = " with reason: *{}*".format(custom_reason)
@@ -1885,7 +1886,7 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
             comment = report_info + scan_why.lstrip()
             handle_spam(post=post, reasons=scan_reasons, why=comment)
             if custom_reason:
-                Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by, url=url, after=15)
+                Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by_owner, url=url, after=15)
             continue
 
         # scan_spam == False
@@ -1905,7 +1906,7 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
                         reasons=["Manually reported " + post_data.post_type + batch],
                         why=comment)
             if custom_reason:
-                Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by, url=url, after=15)
+                Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by_owner, url=url, after=15)
             continue
 
         # scan_spam == False and "scan"
