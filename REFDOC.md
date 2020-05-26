@@ -7,6 +7,9 @@
 
 > Note: methods return `None` unless noted otherwise.  
 
+> Note: for implementation details involving lock operations, `acquire ... release`
+may be implemented as either `acquire ... release`, `acquire try ... finally`, or `with ...`.
+
 > Warning: if the last change time indicated in this documentation is earlier
 than that indicated in corresponding code sections, this documentation is out of sync (and hence almost useless).
 
