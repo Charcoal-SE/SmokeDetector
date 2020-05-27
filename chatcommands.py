@@ -740,11 +740,11 @@ def metasmoke(msg, alias_used):
 
     to_up = "up" in alias_used
     forced = "force" in alias_used
-    Metasmoke.AutoSwitch.switch_auto(not forced)
+    Metasmoke.AutoSwitch.enable_autoswitch(not forced)
     if to_up:
-        Metasmoke.ms_up()
+        Metasmoke.set_ms_up()
     else:
-        Metasmoke.ms_down()
+        Metasmoke.set_ms_down()
     return "Successfully set metasmoke status to **{}**.".format("up" if to_up else "down") +\
            " Automatic metasmoke status switch is currently **{}abled**.".format("dis" if forced else "en")
 

@@ -132,8 +132,6 @@ class GlobalVars:
         """ Tracking post scanning data """
         num_posts_scanned = 0
         post_scan_time = 0
-        snap_num_posts_scanned = 0
-        snap_post_scan_time = 0
         rw_lock = threading.Lock()
 
         @staticmethod
@@ -156,37 +154,11 @@ class GlobalVars:
             return (posts_scanned, scan_time, posts_per_second)
 
         @staticmethod
-        def snap():
-            """ Take a snapshot of current stat """
-            with GlobalVars.PostScanStat.rw_lock:
-                GlobalVars.PostScanStat.snap_num_posts_scanned = GlobalVars.PostScanStat.num_posts_scanned
-                GlobalVars.PostScanStat.snap_post_scan_time = GlobalVars.PostScanStat.post_scan_time
-
-        @staticmethod
-        def get_snap():
-            """ Get snapshot data """
-            with GlobalVars.PostScanStat.rw_lock:
-                snap_posts_scanned = GlobalVars.PostScanStat.snap_num_posts_scanned
-                snap_scan_time = GlobalVars.PostScanStat.snap_post_scan_time
-            if snap_scan_time == 0:
-                snap_posts_per_second = None
-            else:
-                snap_posts_per_second = snap_posts_scanned / snap_scan_time
-            return (snap_posts_scanned, snap_scan_time, snap_posts_per_second)
-
-        @staticmethod
         def reset_stat():
             """ Resetting post scanning data """
             with GlobalVars.PostScanStat.rw_lock:
                 GlobalVars.PostScanStat.num_posts_scanned = 0
                 GlobalVars.PostScanStat.post_scan_time = 0
-
-        @staticmethod
-        def reset_snap():
-            """ Resetting snapshot data """
-            with GlobalVars.PostScanStat.rw_lock:
-                GlobalVars.PostScanStat.snap_num_posts_scanned = 0
-                GlobalVars.PostScanStat.snap_post_scan_time = 0
 
     config_parser = RawConfigParser()
 
@@ -336,7 +308,6 @@ class GlobalVars:
                 GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
                 GlobalVars.commit.id, GlobalVars.location)
         GlobalVars.PostScanStat.reset_stat()
-        GlobalVars.PostScanStat.reset_snap()
         GlobalVars.MSStatus.reset_ms_status()
 
 
