@@ -414,8 +414,12 @@ items:
 - ip: 148.72.209.159
 - ip: 148.72.211.163
 - ip: 148.72.88.29
-- ip: 151.101.1.195
-- ip: 151.101.65.195
+- comment: lots of FPs, including api.flutter.dev
+  disable: true
+  ip: 151.101.1.195
+- comment: lots of FPs, including api.flutter.dev
+  disable: true
+  ip: 151.101.65.195
 - ip: 152.44.41.151
 - ip: 153.92.6.131
 - ip: 155.254.21.129
