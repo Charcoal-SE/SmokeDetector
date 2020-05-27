@@ -556,6 +556,9 @@ items:
   - pat.ns.cloudflare.com.
 - ns:
   - kurt.ns.cloudflare.com.
+  - riya.ns.cloudflare.com.
+- ns:
+  - kurt.ns.cloudflare.com.
   - tricia.ns.cloudflare.com.
 - ns:
   - lady.ns.cloudflare.com.
