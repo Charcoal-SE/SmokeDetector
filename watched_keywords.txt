@@ -20664,3 +20664,4 @@
 1590563929	Glorfindel	theagency-international\.com
 1590564502	tripleee	tobacare\.com
 1590564842	Makyen	tobacare(?!\.com)
+1590565607	Glorfindel	(?-i:kAHU8MnsqDE)(?#YouTube)
