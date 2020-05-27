@@ -1383,10 +1383,11 @@ def bisect(msg, s):
     bookended_regexes = []
     non_bookended_regexes = []
     regexes = []
-    non_bookended_regexes.extend(Blacklist(Blacklist.USERNAMES).each(True))
-    non_bookended_regexes.extend(Blacklist(Blacklist.WEBSITES).each(True))
-    bookended_regexes.extend(Blacklist(Blacklist.KEYWORDS).each(True))
-    bookended_regexes.extend(Blacklist(Blacklist.WATCHED_KEYWORDS).each(True))
+    globalbl = GlobalVars.git_black_watch_lists
+    non_bookended_regexes.extend(globalbl['blacklisted_usernames'].each(True))
+    non_bookended_regexes.extend(globalbl['blacklisted_websites'].each(True))
+    bookended_regexes.extend(globalbl['bad_keywords'].each(True))
+    bookended_regexes.extend(globalbl['watched_keywords'].each(True))
 
     if msg is not None:
         minimally_validate_content_source(msg)
@@ -1426,8 +1427,9 @@ def bisect_number(msg, s):
     normalized = regex.sub(r"\D", "", number)
 
     # Assume raw number strings don't duplicate
-    numbers = dict(Blacklist(Blacklist.NUMBERS).each(True))
-    numbers.update(Blacklist(Blacklist.WATCHED_NUMBERS).each(True))
+    globalbl = GlobalVars.git_black_watch_lists
+    numbers = dict(globalbl['blacklisted_numbers'].each(True))
+    numbers.update(globalbl['watched_numbers'].each(True))
     # But normalized numbers surely duplicate
     normalized_numbers = collections.defaultdict(list)
     for item, info in numbers.items():
