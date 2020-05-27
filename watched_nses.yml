@@ -636,6 +636,9 @@ items:
   - mira.ns.cloudflare.com.
   - sergi.ns.cloudflare.com.
 - ns:
+  - molly.ns.cloudflare.com.
+  - rudy.ns.cloudflare.com.
+- ns:
   - naomi.ns.cloudflare.com.
   - tim.ns.cloudflare.com.
 - ns:
