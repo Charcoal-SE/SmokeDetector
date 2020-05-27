@@ -20652,3 +20652,4 @@
 1590544590	user12986714	oraclehacksunlimited(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1590547401	Machavity	gettaurus\.in
 1590561125	Makyen	d(?:octo)?r[\W_]*+ehbos(?:@gamil\.com)?
+1590561153	Makyen	vaso[\W_]*+prime(?:[\W_]*+(?:rx|\d++|[\da-f]{4,}+))*
