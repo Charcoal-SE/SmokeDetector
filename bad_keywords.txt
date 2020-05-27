@@ -2290,3 +2290,4 @@ prime[\W_]*+trt(?!\.official(?<=prime\.trt\.official))(?:[\W_]*+(?:\d++|[\da-f]{
 veyomax(?:[\W_]*+rx)?
 hemp[\W_]*+max[\W_]*+lab
 trim[\W_]*+fast[\W_]*+keto(?:[\W_]*+(?:australia|au|shark|tank|\d++|[\da-f]{4,}+))*
+ketokor
