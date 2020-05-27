@@ -20653,3 +20653,4 @@
 1590547401	Machavity	gettaurus\.in
 1590561125	Makyen	d(?:octo)?r[\W_]*+ehbos(?:@gamil\.com)?
 1590561153	Makyen	vaso[\W_]*+prime(?:[\W_]*+(?:rx|\d++|[\da-f]{4,}+))*
+1590561183	Makyen	readhostingreviews\.com
