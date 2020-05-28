@@ -20696,3 +20696,4 @@
 1590635740	Makyen	(?:info[\W_]*+(?:at[\W_]*+)?)?assetrefundteam(?:[\W_]*+(?:dot[\W_]*+)?com)(?#obfuscated assetrefundteam.com with potential email)
 1590636929	tripleee	whatsappgrouplinks\.org
 1590642256	tripleee	dubai-cleaners\.com
+1590644410	Makyen	workforwin\.com
