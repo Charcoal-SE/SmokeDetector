@@ -20698,3 +20698,4 @@
 1590642256	tripleee	dubai-cleaners\.com
 1590644410	Makyen	workforwin\.com
 1590644451	Makyen	avancer[\W_]*+corporation(?!\.com(?<=avancercorp\.com)\b)
+1590644554	Makyen	avancercorp\.com
