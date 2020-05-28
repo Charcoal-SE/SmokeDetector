@@ -321,3 +321,4 @@ lustresparasala
 (?-i:^Erric Ravi$)
 (?-i:^nexgenitsolutions$)
 (?-i:^SSSUUU$)
+(?-i:^Training basket$)
