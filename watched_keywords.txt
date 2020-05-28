@@ -20720,3 +20720,4 @@
 1590679184	Machavity	windows10pdf\.com
 1590681956	Machavity	(?-i:3eqElvy)(?#url shortener)
 1590684612	Daniil	divyansh\.singh(?:@jktech\.com)?
+1590685654	Daniil	befantastictoday\.com
