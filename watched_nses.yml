@@ -31,6 +31,9 @@ items:
   - adel.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
+  - adelaide.ns.cloudflare.com.
+  - aldo.ns.cloudflare.com.
+- ns:
   - adi.ns.cloudflare.com.
   - miles.ns.cloudflare.com.
 - ns:
