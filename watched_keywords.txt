@@ -20525,7 +20525,6 @@
 1590142504	Glorfindel	aawimpact\.com
 1590142554	Makyen	andro[\W_]*+science(?:[\W_]*+(?:enhancement|male|\d++|[\da-f]{4,}+))*
 1590142579	Makyen	kacateknologi\.com
-1590143164	tripleee	vir?maxryn
 1590143465	tripleee	shadman[\W_]*+trade(?:[\W_]*+international)?
 1590145850	tripleee	faraoncasino-klub\.com
 1590145933	tripleee	besthookahflavors\.com
