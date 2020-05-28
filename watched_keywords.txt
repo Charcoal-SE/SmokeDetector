@@ -20715,3 +20715,4 @@
 1590654304	tripleee	norxovernight\.com
 1590654621	tripleee	(?-i:[a-z]\d+mg$)
 1590657696	tripleee	whats[\W_]*+app[\W_]*+group[\W_]*+links?
+1590658292	tripleee	mortgagesmortgages\.ca
