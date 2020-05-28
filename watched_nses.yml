@@ -85,6 +85,9 @@ items:
   - ali.ns.cloudflare.com.
   - gerald.ns.cloudflare.com.
 - ns:
+  - alice.ns.cloudflare.com.
+  - weston.ns.cloudflare.com.
+- ns:
   - alla.ns.cloudflare.com.
   - ed.ns.cloudflare.com.
 - ns:
