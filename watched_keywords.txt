@@ -20719,3 +20719,4 @@
 1590670780	Jeff Schaller	tellthebell\.one
 1590679184	Machavity	windows10pdf\.com
 1590681956	Machavity	(?-i:3eqElvy)(?#url shortener)
+1590684612	Daniil	divyansh\.singh(?:@jktech\.com)?
