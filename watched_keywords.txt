@@ -20695,3 +20695,4 @@
 1590635294	Makyen	uwell(?(DEFINE)(?<uwellwords>(?:selling|caliburn|koko|crown|pod|system|vape|starter|kit|\d+mah|\dml)))(?:[\W_]*+(?P>uwellwords)s?)(?:[\W_]*+(?:(?P>uwellwords)|\d++|[\da-f]{4,})s?)*
 1590635740	Makyen	(?:info[\W_]*+(?:at[\W_]*+)?)?assetrefundteam(?:[\W_]*+(?:dot[\W_]*+)?com)(?#obfuscated assetrefundteam.com with potential email)
 1590636929	tripleee	whatsappgrouplinks\.org
+1590642256	tripleee	dubai-cleaners\.com
