@@ -20718,3 +20718,4 @@
 1590661504	tripleee	friv3\.icu
 1590670780	Jeff Schaller	tellthebell\.one
 1590679184	Machavity	windows10pdf\.com
+1590681956	Machavity	(?-i:3eqElvy)(?#url shortener)
