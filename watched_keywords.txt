@@ -20700,3 +20700,4 @@
 1590644451	Makyen	avancer[\W_]*+corporation(?!\.com(?<=avancercorp\.com)\b)
 1590644554	Makyen	avancercorp\.com
 1590644653	Makyen	des-by\.com
+1590644680	Makyen	afikur786a
