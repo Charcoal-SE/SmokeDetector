@@ -20725,3 +20725,4 @@
 1590730212	Makyen	jasapkv168\.com
 1590730238	Makyen	jasapkv168(?!\.com)
 1590734992	tripleee	comprosition\.com
+1590735165	tripleee	blank[\W_]*+atm[\W_]*+master\d*
