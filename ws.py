@@ -47,7 +47,7 @@ if os.path.isfile("plugin.py"):
         import plugin
     except Exception:
         exc_type, exc_obj, exc_tb = sys.exc_info()
-        error_msg = "{}: {}\n".format(exc_type.__name__, exc_obj, traceback.format_tb(exc_tb))
+        error_msg = "{}: {}\n{}".format(exc_type.__name__, exc_obj, traceback.format_tb(exc_tb))
         log('warning', "Error while importing plugin:\n" + error_msg)
         # Ignore and move on
 
