@@ -610,6 +610,9 @@ items:
   - seth.ns.cloudflare.com.
 - ns:
   - lorna.ns.cloudflare.com.
+  - rodney.ns.cloudflare.com.
+- ns:
+  - lorna.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
 - ns:
   - lynn.ns.cloudflare.com.
