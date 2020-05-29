@@ -20730,3 +20730,4 @@
 1590738019	Makyen	letestnews\.co\.in
 1590738046	Makyen	adzlyrics\.com
 1590738074	Makyen	myganalyrics\.com
+1590738669	tripleee	botscoupon\.com
