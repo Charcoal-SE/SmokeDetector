@@ -20723,3 +20723,4 @@
 1590685654	Daniil	befantastictoday\.com
 1590714973	Makyen	readersmagnet\.com
 1590730212	Makyen	jasapkv168\.com
+1590730238	Makyen	jasapkv168(?!\.com)
