@@ -18425,7 +18425,6 @@
 1583927952	Shree	triplyn\.com
 1583927987	tripleee	domyassignmentforme\.com
 1583928615	tripleee	getaprotection\.com
-1583928792	Shree	propertyhuntergroup\.com
 1583928859	tripleee	addhunters
 1583930090	tripleee	thenutracafe\.com
 1583930116	tripleee	safe[\W_]*+mask[\W_]*+pro
