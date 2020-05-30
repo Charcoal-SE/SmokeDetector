@@ -20756,3 +20756,4 @@
 1590875770	Makyen	homemakerguide\.com
 1590875796	Makyen	liberator[\W_]*+x2
 1590875823	Makyen	mutuelles-retraites\.fr
+1590875988	Makyen	mycfavisit\.onl
