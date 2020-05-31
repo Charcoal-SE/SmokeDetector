@@ -20764,3 +20764,4 @@
 1590907164	Makyen	autolinkscreditservices(?:@hotmail\.com)?
 1590907593	Makyen	gx[\W_]*+smartwatch(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+)s?)*
 1590907685	Makyen	esalesanalyst\.com
+1590926047	Mithical	palmitate
