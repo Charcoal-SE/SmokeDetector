@@ -4406,7 +4406,7 @@
 1532054290	Makyen	britishtheopen\.de
 1532054299	Makyen	drochesolutiontempel(?:@gmail\.com)?
 1532054546	Makyen	oche\W*herbal\W*cream
-1532054899	Makyen	^.{1,15}?cream(?<!icecream)(?<!ice[\W_]cream)(?<!^bluescream)(?<!^bluscream)(?<!\bscream)(?<!^colorscream)(?<!\bhellscream)(?<!^wolfscream)(?<!^eyescream)(?<!^starscream)(?<!^olscream)(?<!^dreamcream)(?<!^stealthscream)(?<!^krispycream)(?<!^cameocream)(?<!^coffeewithcream)(?<!^soft cream)(?<!^handcream)(?<!^doughnut facecream)(?<!^doncream)(?<!^Mayocream)(?<!^willcream)$(?#add additional exclusions as more legit users are detected)
+1532054899	Makyen	^.{1,15}?cream(?<!icecream)(?<!ice[\W_]cream)(?<!^bluescream)(?<!^bluscream)(?<!\bscream)(?<!^colorscream)(?<!\bhellscream)(?<!^wolfscream)(?<!^eyescream)(?<!^starscream)(?<!^olscream)(?<!^dreamcream)(?<!^stealthscream)(?<!^krispycream)(?<!^cameocream)(?<!^coffeewithcream)(?<!^soft cream)(?<!^handcream)(?<!^doughnut facecream)(?<!^doncream)(?<!^Mayocream)(?<!^willcream)(?<!^bfdicream)(?<!^coder_scream)(?<!^confused_scream)(?<!^ice7cream)(?<!^iscream)(?<!^isecream)(?<!^mikacream)(?<!^paul cream)(?<!^sadscream)(?<!^spinescream)(?<!^sscream)(?<!^testscream)(?<!^whipcream)(?<!^whyscream)$(?#add additional exclusions as more legit users are detected)
 1532057688	Makyen	customer-carehelpline\.com
 1532057699	Makyen	[a-z_]*(?:1_*)?844[\W_]*794[\W_]*2729[a-z_]*
 1532066355	Makyen	[a-z_]*080[\W_]*3506[\W_]*1723[a-z_]*
