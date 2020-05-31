@@ -253,7 +253,6 @@ quran[\W_]*+for[\W_]*+kids
 ^Robert Will$
 (?-i:^rockzzz ajay$)
 (?-i:^insightssuccess$)
-(?-i:^James William$)
 (?-i:^Daniel Pham$)
 (?-i:^Sunday$)
 (?-i:^sowmya g$)
