@@ -20762,3 +20762,4 @@
 1590876128	Makyen	belgieitworld\.site123\.me
 1590883903	Makyen	vadimwebhack(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1590907164	Makyen	autolinkscreditservices(?:@hotmail\.com)?
+1590907593	Makyen	gx[\W_]*+smartwatch(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+)s?)*
