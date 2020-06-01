@@ -612,6 +612,9 @@ items:
   - lorna.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
 - ns:
+  - luciana.ns.cloudflare.com.
+  - yichun.ns.cloudflare.com.
+- ns:
   - lynn.ns.cloudflare.com.
   - mira.ns.cloudflare.com.
 - ns:
