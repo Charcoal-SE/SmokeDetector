@@ -19832,7 +19832,6 @@
 1588159609	Daniil	(?-i:pcb-zhao-6337471a6)(?# LinkedIn ID)
 1588159628	tripleee	lzjpcb\.com
 1588162223	Daniil	dumpsforsure\.com
-1588163604	tripleee	arovanti(?:[\W_]*+(?:cream|creme|review|\d++|[\da-f]{4,}+))*
 1588163869	Glorfindel	filehippos\.net
 1588168274	Makyen	(?-i:Ultimateaffiliatemarketingcourse)(?#bit.ly)
 1588168534	Makyen	virtus[\W_]*+strong(?:[\W_]*+(?:ca|canada|\d++|[\da-f]{4,}+))*

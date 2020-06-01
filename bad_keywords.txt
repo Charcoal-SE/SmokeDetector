@@ -2293,3 +2293,4 @@ ketokor
 vision[\W_]*+20
 vir?maxryn(?:[\W_]*+(?:review|malep?|enhancement|upgrade|\d++|[\da-f]{4,}+)s?)*
 Priest Ade
+arovanti(?:[\W_]*+(?:cream|creme|review|\d++|[\da-f]{4,}+))*
