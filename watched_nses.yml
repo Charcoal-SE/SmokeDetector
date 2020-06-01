@@ -56,6 +56,9 @@ items:
   - lloyd.ns.cloudflare.com.
 - ns:
   - aiden.ns.cloudflare.com.
+  - amber.ns.cloudflare.com.
+- ns:
+  - aiden.ns.cloudflare.com.
   - leah.ns.cloudflare.com.
 - ns:
   - ajay.ns.cloudflare.com.
