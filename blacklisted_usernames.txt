@@ -322,5 +322,3 @@ lustresparasala
 (?-i:^SSSUUU$)
 (?-i:^Training basket$)
 (?-i:^kyler walter$)
-pediatric[\W_]*+on[\W_]*+call
-(top|best) mattress
