@@ -20799,3 +20799,4 @@
 1591017365	ArtOfCode	topmattressguide\.com
 1591019549	Makyen	wellbeing[\W_]*+labs
 1591019578	Makyen	vayare\.ir
+1591023616	Machavity	digitaleguide\.com
