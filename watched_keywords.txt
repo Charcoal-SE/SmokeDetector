@@ -20800,3 +20800,4 @@
 1591019549	Makyen	wellbeing[\W_]*+labs
 1591019578	Makyen	vayare\.ir
 1591023616	Machavity	digitaleguide\.com
+1591030535	Machavity	paygonline\.vip
