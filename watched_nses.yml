@@ -769,8 +769,6 @@ items:
   ns: namedc.com.
 - ns: wixdns.net.
 - ns: a2hosting.com.
-- ns: md-in-20.webhostbox.net.
-- ns: md-in-51.webhostbox.net.
 - ns: cybercastco.com.
 - ns: web4africa.com.
 - comment: no longer responding 2020-04-02
@@ -895,9 +893,6 @@ items:
   ns: goatcr.com.
 - ns: insightssuccess.com.
 - ns: onebyhosting.com.
-- ns:
-  - cns2015.webhostbox.net.
-  - cns2016.webhostbox.net.
 - ns: privatesever.com.
 - ns:
   - ns1.cp-48.bigrockservers.com.
@@ -966,6 +961,9 @@ items:
 - ns: stackdns.com.
 - ns: permainanceme.online.
 - ns: resourcesofnet.net.
+- ns:
+  - cns2015.webhostbox.net.
+  - cns2016.webhostbox.net.
 - ns: bh-63.webhostbox.net.
 - ns: bh-74.webhostbox.net.
 - ns: bh-ht-10.webhostbox.net.
@@ -974,6 +972,9 @@ items:
 - ns: bh-in-10.webhostbox.net.
 - ns: bh-in-31.webhostbox.net.
 - ns: bh-in-33.webhostbox.net.
+- ns: cp-in-12.webhostbox.net.
+- ns: md-in-20.webhostbox.net.
+- ns: md-in-51.webhostbox.net.
 - ns: bigrock.in.
 - ns: exweme.com.
 - ns: ifcondition.com.
