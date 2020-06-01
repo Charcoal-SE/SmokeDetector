@@ -20798,3 +20798,4 @@
 1591014063	tripleee	netspeed\.live
 1591017365	ArtOfCode	topmattressguide\.com
 1591019549	Makyen	wellbeing[\W_]*+labs
+1591019578	Makyen	vayare\.ir
