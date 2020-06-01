@@ -5,7 +5,7 @@ items:
   ns: namecheaphosting.com.
 - ns:
   - abby.ns.cloudflare.com.
-  - rick.ns.cloudflare.com
+  - rick.ns.cloudflare.com.
 - ns:
   - abby.ns.cloudflare.com.
   - tom.ns.cloudflare.com.
