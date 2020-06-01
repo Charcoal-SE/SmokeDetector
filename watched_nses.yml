@@ -839,7 +839,6 @@ items:
 - ns: crazydomains.com.
 - ns: servers-servers.com.
 - ns: vhostplatform.com.
-- ns: ocpdns.com.
 - ns: wpxhosting.com.
 - ns: hostpapa.com.
   comment: lots of FPs but also many TP posts which would otherwise not have been found
