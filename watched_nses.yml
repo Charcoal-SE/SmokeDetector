@@ -259,9 +259,6 @@ items:
   - chuck.ns.cloudflare.com.
   - vida.ns.cloudflare.com.
 - ns:
-  - clark.ns.cloudflare.com.
-  - kiki.ns.cloudflare.com.
-- ns:
   - coco.ns.cloudflare.com.
   - duke.ns.cloudflare.com.
 - ns:
