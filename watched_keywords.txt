@@ -20822,3 +20822,4 @@
 1591084520	Makyen	toui69\.com
 1591096407	tripleee	vanshveda\.com
 1591102909	Daniil	exportgenius\.in
+1591103418	tripleee	export[\W_]*+genius(?!\.in)
