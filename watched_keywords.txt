@@ -20834,3 +20834,4 @@
 1591127730	Makyen	dank(?:[\W_]*+(?:vape|cart(?:ridge)?)s?)+
 1591132013	Makyen	arabxn\.com
 1591132066	Makyen	appzoro\.com
+1591137914	Makyen	bestchairreview\.com
