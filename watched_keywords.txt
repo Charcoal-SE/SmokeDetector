@@ -20833,3 +20833,4 @@
 1591127705	Makyen	dankvapesofficialaccount
 1591127730	Makyen	dank(?:[\W_]*+(?:vape|cart(?:ridge)?)s?)+
 1591132013	Makyen	arabxn\.com
+1591132066	Makyen	appzoro\.com
