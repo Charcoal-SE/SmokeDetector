@@ -46,7 +46,6 @@ class BodyFetcher:
     api_data_lock = threading.Lock()
     queue_modify_lock = threading.Lock()
     max_ids_modify_lock = threading.Lock()
-    queue_timing_modify_lock = threading.Lock()
 
     def add_to_queue(self, post, should_check_site=False):
         try:
