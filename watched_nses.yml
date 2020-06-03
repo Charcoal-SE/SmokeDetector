@@ -544,6 +544,9 @@ items:
   - phil.ns.cloudflare.com.
 - ns:
   - karl.ns.cloudflare.com.
+  - katja.ns.cloudflare.com.
+- ns:
+  - karl.ns.cloudflare.com.
   - uma.ns.cloudflare.com.
 - ns:
   - kay.ns.cloudflare.com.
