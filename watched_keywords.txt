@@ -20869,3 +20869,4 @@
 1591211389	user12986714	tutorialsmate\.com
 1591213977	Makyen	contsorp\.com\.ng
 1591217901	Makyen	exoticfonts\.com
+1591220851	Makyen	gfinotify\.info
