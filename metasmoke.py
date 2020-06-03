@@ -3,6 +3,7 @@ import json
 import requests
 import importlib  # for .reload()
 from globalvars import GlobalVars
+exit_mode = GlobalVars.exit_mode
 import threading
 # noinspection PyPackageRequirements
 import websocket
@@ -24,7 +25,7 @@ import apigetpost
 import spamhandling
 import classes
 import chatcommunicate
-from helpers import log, exit_mode, only_blacklists_changed, \
+from helpers import log, only_blacklists_changed, \
     only_modules_changed, blacklist_integrity_check, reload_modules
 from gitmanager import GitManager
 import findspam

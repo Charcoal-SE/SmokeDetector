@@ -18,12 +18,11 @@ from glob import glob
 import sqlite3
 
 
-def exit_mode(*args, code=0):
+def exit_mode(*args, standby_mode, code=0):
     args = set(args)
 
     if not (args & {'standby', 'no_standby'}):
-        from globalvars import GlobalVars
-        standby = 'standby' if GlobalVars.standby_mode else 'no_standby'
+        standby = 'standby' if standby_mode else 'no_standby'
         args.add(standby)
 
     with open("exit.txt", "w", encoding="utf-8") as f:

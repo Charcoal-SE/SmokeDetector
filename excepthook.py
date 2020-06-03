@@ -7,8 +7,9 @@ import sys
 # noinspection PyPackageRequirements
 from websocket import WebSocketConnectionClosedException
 import requests
-from helpers import exit_mode, log, log_exception
+from helpers import log, log_exception
 from globalvars import GlobalVars
+exit_mode = GlobalVars.exit_mode
 
 
 # noinspection PyProtectedMember

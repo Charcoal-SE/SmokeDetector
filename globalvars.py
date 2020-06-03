@@ -19,6 +19,8 @@ if 'windows' in platform.platform().lower():
 else:
     from sh.contrib import git
 
+from helpers import exit_mode
+
 
 CommitInfo = namedtuple('CommitInfo', ['id', 'id_full', 'author', 'message'])
 
@@ -179,6 +181,18 @@ class GlobalVars:
     chatmessage_prefix = "[{}]({})".format(bot_name, bot_repository)
 
     valid_content = """This is a totally valid post that should never be caught. Any blacklist or watchlist item that triggers on this item should be avoided. java.io.BbbCccDddException: nothing wrong found. class Safe { perfect valid code(int float &#%$*v a b c =+ /* - 0 1 2 3 456789.EFGQ} English 中文Français Español Português Italiano Deustch ~@#%*-_/'()?!:;" vvv kkk www sss ttt mmm absolute std::adjacent_find (power).each do |s| bbb end ert zal l gsopsq kdowhs@ xjwk* %_sooqmzb xjwpqpxnf.  Please don't blacklist disk-partition.com, it's a valid domain (though it also gets spammed rather frequently)."""  # noqa: E501
+
+    need_cleanup = []
+    need_cleanup_list_lock = threading.Lock()
+    terminate = threading.Event()
+
+    @staticmethod
+    def exit_mode(*args, code=0):
+        GlobalVars.terminate.set()
+        with GlobalVars.need_cleanup_list_lock:
+            for item in GlobalVars.need_cleanup:
+                item.wait()
+            exit_mode(args, GlobalVars.standby_mode, code)
 
     @staticmethod
     def reload():

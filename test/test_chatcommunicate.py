@@ -114,7 +114,7 @@ def test_init(room_config, client_constructor, thread):
     client_constructor.assert_any_call("stackoverflow.com")
     client_constructor.assert_any_call("meta.stackexchange.com")
 
-    assert thread.call_count == 2
+    assert thread.call_count == 3
     thread.assert_any_call(name="pickle ---rick--- runner", target=chatcommunicate.pickle_last_messages, daemon=True)
     thread.assert_any_call(name="message sender", target=chatcommunicate.send_messages, daemon=True)
 
@@ -145,7 +145,7 @@ def test_init(room_config, client_constructor, thread):
     client_constructor.assert_any_call("stackoverflow.com")
     client_constructor.assert_any_call("meta.stackexchange.com")
 
-    assert thread.call_count == 2
+    assert thread.call_count == 3
     thread.assert_any_call(name="pickle ---rick--- runner", target=chatcommunicate.pickle_last_messages, daemon=True)
     thread.assert_any_call(name="message sender", target=chatcommunicate.send_messages, daemon=True)
 

@@ -4,6 +4,7 @@ from chatcommunicate import add_room, block_room, CmdException, command, get_rep
     tell_rooms, tell_rooms_with, get_message
 # noinspection PyUnresolvedReferences
 from globalvars import GlobalVars
+exit_mode = GlobalVars.exit_mode
 import findspam
 # noinspection PyUnresolvedReferences
 from datetime import datetime
@@ -26,7 +27,7 @@ from html import unescape
 from ast import literal_eval
 # noinspection PyCompatibility
 import regex
-from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, \
+from helpers import only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, \
     reload_modules, chunk_list
 from classes import Post
 from classes.feedback import *

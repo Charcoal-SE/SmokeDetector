@@ -63,6 +63,39 @@ _msg_queue = queue.Queue()
 _pickle_run = threading.Event()
 
 
+# Ignore flake8 warning as this class is intended to be private.
+class _cleanup:  # noqa: N801
+    """ Utilities for cleaning up """
+    _counter = 0
+    _cv = threading.Condition(lock=threading.Lock())
+    terminate = threading.Event()
+    cleanup_finished = threading.Event()
+
+    @staticmethod
+    def t_started():
+        """ Indicate a new thread is started. """
+        with _cleanup._cv:
+            _cleanup._counter += 1
+
+    @staticmethod
+    def t_stopped():
+        """ Indicate a thread terminated. """
+        with _cleanup._cv:
+            if _cleanup._counter > 0:
+                _cleanup._counter -= 1
+            else:
+                raise ValueError("More threads terminated than started.")
+            _cleanup._cv.notify()
+
+    @staticmethod
+    def wait_t_terminate():
+        _cleanup.terminate.set()
+        with _cleanup._cv:
+            while _cleanup._counter != 0:
+                _cleanup._cv.wait()
+        return
+
+
 def init(username, password, try_cookies=True):
     global _clients
     global _rooms
@@ -119,11 +152,30 @@ def init(username, password, try_cookies=True):
             except EOFError:
                 pass
 
+    if os.path.isfile("messageQueue.p"):
+        with open("messageQueue.p", "rb") as queue_file:
+            try:
+                _msg_queue = pickle.load(queue_file)
+            except EOFError:
+                pass
+
+    with GlobalVars.need_cleanup_list_lock:
+        GlobalVars.need_cleanup.append(_cleanup.cleanup_finished)
+
     threading.Thread(name="pickle ---rick--- runner", target=pickle_last_messages, daemon=True).start()
     threading.Thread(name="message sender", target=send_messages, daemon=True).start()
+    threading.Thread(name="exit watcher", target=exit_watcher, daemon=True).start()
 
     if try_cookies:
         datahandling.dump_cookies()
+
+
+def exit_watcher():
+    GlobalVars.terminate.wait()
+    _cleanup.wait_t_terminate()
+    with open("messageQueue.p", "wb") as pickle_file:
+        pickle.dump(_msg_queue, pickle_file)
+    _cleanup.cleanup_finished.set()
 
 
 def join_command_rooms():
@@ -199,16 +251,20 @@ def add_room(room, roles):
 
 
 def pickle_last_messages():
-    while True:
+    _cleanup.t_started()
+    while not _cleanup.terminate.isSet():
         _pickle_run.wait()
         _pickle_run.clear()
 
         with open("messageData.p", "wb") as pickle_file:
             pickle.dump(_last_messages, pickle_file)
 
+    _cleanup.t_stopped()
+
 
 def send_messages():
-    while True:
+    _cleanup.t_started()
+    while not _cleanup.terminate.isSet():
         room, msg, report_data = _msg_queue.get()
         if len(msg) > 500 and "\n" not in msg:
             log('warn', 'Discarded the following message because it was over 500 characters')
@@ -254,6 +310,8 @@ def send_messages():
                 full_retries += 1
 
         _msg_queue.task_done()
+
+    _cleanup.t_stopped()
 
 
 def on_msg(msg, client):
@@ -322,6 +380,9 @@ def tell_rooms_without(prop, msg, notify_site="", report_data=None):
 
 def tell_rooms(msg, has, hasnt, notify_site="", report_data=None):
     global _rooms
+
+    if _cleanup.terminate.isSet():
+        return  # To prevent writing to _msg_queue while dumping
 
     msg = msg.rstrip()
     target_rooms = set()

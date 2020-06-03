@@ -24,6 +24,7 @@ import chatcommunicate
 from datetime import datetime
 from spamhandling import check_if_spam_json
 from globalvars import GlobalVars
+exit_mode = GlobalVars.exit_mode
 from datahandling import _load_pickle, PICKLE_STORAGE, load_files, filter_auto_ignored_posts
 from metasmoke import Metasmoke
 from metasmoke_cache import MetasmokeCache
@@ -33,7 +34,7 @@ import time
 import requests
 # noinspection PyPackageRequirements
 from tld.utils import update_tld_names, TldIOError
-from helpers import exit_mode, log, Helpers, log_exception
+from helpers import log, Helpers, log_exception
 from flovis import Flovis
 from tasks import Tasks
 
