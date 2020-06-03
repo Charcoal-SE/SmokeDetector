@@ -353,6 +353,9 @@ items:
   - mimi.ns.cloudflare.com.
 - ns:
   - dolly.ns.cloudflare.com.
+  - hans.ns.cloudflare.com.
+- ns:
+  - dolly.ns.cloudflare.com.
   - logan.ns.cloudflare.com.
 - ns:
   - dora.ns.cloudflare.com.
