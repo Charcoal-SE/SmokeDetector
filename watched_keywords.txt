@@ -19936,7 +19936,6 @@
 1588445595	Makyen	abcdefghijklmnopqrstuvwxyz0123456789\.org
 1588445661	Makyen	freshprimeketosis\.wixsite\.com
 1588445747	Makyen	(?-i:4-XBQ3gKaM)(?#youtu.be)
-1588445769	Makyen	fresh[\W_]*+prime[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1588445828	Makyen	tophealthbrand\.wordpress\.com
 1588445880	Makyen	haadii2005(?:@gmail\.com)?
 1588445908	Makyen	mohamedelauzei(?:@gmail\.com)?
