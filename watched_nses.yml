@@ -217,6 +217,9 @@ items:
   - brenda.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
+  - brian.ns.cloudflare.com.
+  - dalary.ns.cloudflare.com.
+- ns:
   - bruce.ns.cloudflare.com.
   - chan.ns.cloudflare.com.
 - ns:
