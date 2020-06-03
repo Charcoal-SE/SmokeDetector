@@ -19047,7 +19047,6 @@
 1585710432	Makyen	fightingscams(?:[\W_]*+(?:at[\W_]*+)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1585715967	tripleee	wondercap\.com
 1585716336	tripleee	p2play88\.org
-1585716691	tripleee	handyman-dubai\.com
 1585724077	tripleee	healthmadebig\.blogspot\.com
 1585732112	tripleee	nousinfosystems\.com
 1585733497	Nisse Engström	mbmc\.at
