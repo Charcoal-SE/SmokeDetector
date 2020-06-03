@@ -20850,3 +20850,4 @@
 1591159128	tripleee	6wresearch(?!\.com)
 1591161372	Makyen	downloadfilehere\.com
 1591161398	Makyen	domain[\W_]*+nerdz
+1591163874	Makyen	skpencerkill
