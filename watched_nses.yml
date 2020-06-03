@@ -373,6 +373,9 @@ items:
   - duke.ns.cloudflare.com.
   - wally.ns.cloudflare.com.
 - ns:
+  - ed.ns.cloudflare.com.
+  - kara.ns.cloudflare.com.
+- ns:
   - elinore.ns.cloudflare.com.
   - sam.ns.cloudflare.com.
 - ns:
