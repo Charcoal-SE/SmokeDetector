@@ -20851,3 +20851,4 @@
 1591161372	Makyen	downloadfilehere\.com
 1591161398	Makyen	domain[\W_]*+nerdz
 1591163874	Makyen	skpencerkill
+1591163904	Makyen	(?-i:biKaANZ_vHU)(?#youtu.be)
