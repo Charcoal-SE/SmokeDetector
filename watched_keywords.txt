@@ -18195,7 +18195,6 @@
 1583388195	tripleee	selectmytutor\.co\.uk
 1583390535	Makyen	agil[\W_]*+flex[\W_]*+france(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1583391058	Makyen	supplementstore4u(?!\.com)
-1583391079	Makyen	supplementstore4u\.com
 1583391836	Makyen	puravida(?:[\W_]*+(?:care|cream|skin))(?:[\W_]*+(?:care|cream|skin|\d++|[\da-f]{4,}+))*
 1583391942	Makyen	dokterkandunganmuda\.blogspot
 1583393534	Makyen	instafollowers\.co
