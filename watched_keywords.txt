@@ -20882,3 +20882,4 @@
 1591247519	Glorfindel	life30on\.blogspot\.com
 1591247970	user12986714	if\W*+you?\W*+\w{0,30}?\W*+(?:not|n'?t)\W*+(?:\w++[^\w,]*+){0,20}+,\W*+(?:\w++\W*+){0,20}?shut\W*+up
 1591254128	Makyen	nutraxyn(?:[\W_]*+(?:usa|official|\d++|[\da-f]{4,}+))*
+1591254152	tripleee	sexual[\W_]*+endurance
