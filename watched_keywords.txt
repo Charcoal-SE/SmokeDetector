@@ -20873,3 +20873,4 @@
 1591226314	Daniil	fastesaletter\.com
 1591227328	user12986714	real[\W_]*+estate[\W_]*+hunters?
 1591230568	Makyen	reliable[\W_]*+hacker
+1591239436	user12986714	if you (?:cannot|can't|cant)[\w ]+,[\w ]+shut up
