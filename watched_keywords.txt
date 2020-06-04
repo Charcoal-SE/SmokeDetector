@@ -20875,3 +20875,4 @@
 1591230568	Makyen	reliable[\W_]*+hacker
 1591243147	user12986714	better-talents\.com
 1591243874	Makyen	mystudyguru\.in
+1591244469	user12986714	if\W*+you?\W*+\w+\W*+(?:not|n'?t)\W*+(?:\w++[^\w,]*+){0,20}+,\W*+(?:\w++\W*+){0,20}?shut\W*+up
