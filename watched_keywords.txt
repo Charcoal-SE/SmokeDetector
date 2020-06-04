@@ -20879,3 +20879,4 @@
 1591245266	user12986714	finaldesk\.co\.in
 1591245452	Makyen	centerpost[\W_]*+media
 1591247273	tripleee	finaldesk(?!\.co\.in)
+1591247519	Glorfindel	life30on\.blogspot\.com
