@@ -20897,3 +20897,4 @@
 1591287302	Machavity	bimedis(?:\.com)?
 1591290991	Machavity	peopleready\.com
 1591291037	Machavity	naldridge@(?:peoplescout\.com)?
+1591291106	Machavity	Universal[\W_]learner
