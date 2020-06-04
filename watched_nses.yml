@@ -370,6 +370,9 @@ items:
   - dora.ns.cloudflare.com.
   - woz.ns.cloudflare.com.
 - ns:
+  - drew.ns.cloudflare.com.
+  - jo.ns.cloudflare.com.
+- ns:
   - duke.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
 - ns:
