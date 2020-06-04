@@ -20062,7 +20062,7 @@
 1588755511	tripleee	myhomeware\.com\.au
 1588757253	tripleee	holisticdg\.com
 1588757588	tripleee	checkordering\.net
-1588757778	tripleee	property[\W_]*+hunter
+1588757778	tripleee	property[\W_]*+hunters?
 1588758628	Daniil	mygreatlearning\.com
 1588759245	Daniil	kosei\.com\.vn
 1588761073	Daniil	(?-i:ketobodytoneisrael)
