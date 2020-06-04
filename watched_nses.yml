@@ -142,6 +142,9 @@ items:
   - aron.ns.cloudflare.com.
   - max.ns.cloudflare.com.
 - ns:
+  - aron.ns.cloudflare.com.
+  - mustafa.ns.cloudflare.com.
+- ns:
   - art.ns.cloudflare.com.
   - sharon.ns.cloudflare.com.
 - ns:
