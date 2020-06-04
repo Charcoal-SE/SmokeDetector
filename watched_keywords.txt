@@ -20887,3 +20887,4 @@
 1591267384	tripleee	eqvn\.edu\.vn
 1591267612	tripleee	wellnesscarepills(?!\.com)[\W_]*+com
 1591267768	tripleee	thedatagiantgroup\.co\.uk
+1591272455	tripleee	clashcoder\.tech
