@@ -20871,4 +20871,4 @@
 1591217901	Makyen	exoticfonts\.com
 1591220851	Makyen	gfinotify\.info
 1591226314	Daniil	fastesaletter\.com
-1591227328	user12986714	(?i)real[\W_]*estate[\W_]*hunters?
+1591227328	user12986714	real[\W_]*+estate[\W_]*+hunters?
