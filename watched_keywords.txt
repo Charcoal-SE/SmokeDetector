@@ -20880,3 +20880,4 @@
 1591245452	Makyen	centerpost[\W_]*+media
 1591247273	tripleee	finaldesk(?!\.co\.in)
 1591247519	Glorfindel	life30on\.blogspot\.com
+1591247970	user12986714	if\W*+you?\W*+\w{0,30}?\W*+(?:not|n'?t)\W*+(?:\w++[^\w,]*+){0,20}+,\W*+(?:\w++\W*+){0,20}?shut\W*+up
