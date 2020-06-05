@@ -11606,7 +11606,7 @@
 1564702501	Machavity	api\.coincap\.io
 1564718488	Makyen	freeview\.com\.au
 1564724562	Makyen	topdeal99651635
-1564724816	Makyen	claim\W*yours\w*here
+1564724816	Makyen	claim[\W_]*+yours[\W_]*+here
 1564724840	Makyen	meteretarow
 1564726674	tripleee	seo\W?agency
 1564727830	Glorfindel	datahelpsoftware\.com
