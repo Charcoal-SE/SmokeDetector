@@ -20922,3 +20922,4 @@
 1591348893	Glorfindel	nepaltrekkingroutes\.com
 1591353167	Daniil	maxpanda\.com
 1591355166	tripleee	portalquery\.com
+1591355380	tripleee	tsangshu\.singapore(?# @medium)
