@@ -30,7 +30,7 @@ class GitHubManager:
     repo = GlobalVars.bot_repo_slug
 
     @classmethod
-    def call_api(cls, method, url, payload):
+    def call_api(cls, method, route, payload):
         """ Perform API calls. """
         if isinstance(payload, dict):
             payload = json.dumps(payload)
