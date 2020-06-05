@@ -30,36 +30,49 @@ class GitHubManager:
     repo = GlobalVars.bot_repo_slug
 
     @classmethod
-    def create_pull_request(cls, payload):
-        """
-        Creates a pull request on GitHub, returns the json'd response
-        """
+    def call_api(cls, method, url, payload):
+        """ Perform API calls. """
         if isinstance(payload, dict):
             payload = json.dumps(payload)
-        response = requests.post("https://api.github.com/repos/{}/pulls".format(cls.repo),
-                                 auth=cls.auth, data=payload)
-        return response.json()
+
+        response = None
+        if method == "GET":
+            response = requests.get(route, auth=cls.auth, data=payload)
+        if method == "POST":
+            response = requests.post(route, auth=cls.auth, data=payload)
+        if method == "PUT":
+            response = requests.put(route, auth=cls.auth, data=payload)
+        if method == "PATCH":
+            response = requests.patch(route, auth=cls.auth, data=payload)
+
+        if response:
+            return response.json()
+        else:
+            return None
+
+    @classmethod
+    def create_pull_request(cls, payload):
+        """ Create pull requests. """
+        url = "https://api.github.com/repos/{}/pulls".format(cls.repo)
+        return cls.call_api("POST", url, payload)
 
     @classmethod
     def update_pull_request(cls, pr_id, payload):
+        """ Update pull requests' status (open/closed). """
         url = "https://api.github.com/repos/{}/pulls/{}".format(cls.repo, pr_id)
-        if isinstance(payload, dict):
-            payload = json.dumps(payload)
-        requests.patch(url, auth=cls.auth, data=payload)
+        return cls.call_api("PATCH", url, payload)
 
     @classmethod
     def merge_pull_request(cls, pr_id, payload):
+        """ Merge pull requests. """
         url = "https://api.github.com/repos/{}/pulls/{}/merge".format(cls.repo, pr_id)
-        if isinstance(payload, dict):
-            payload = json.dumps(payload)
-        requests.put(url, auth=cls.auth, data=payload)
+        return cls.call_api("PUT", url, payload)
 
     @classmethod
     def comment_on_thread(cls, thread_id, body):
+        """ Post comments on threads. """
         url = "https://api.github.com/repos/{}/issues/{}/comments".format(cls.repo, thread_id)
-        payload = json.dumps({'body': body})
-        response = requests.post(url, auth=cls.auth, data=payload)
-        return response.json()
+        return cls.call_api("POST", url, payload)
 
 
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
