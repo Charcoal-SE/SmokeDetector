@@ -57,6 +57,12 @@ class GitHubManager:
         return cls.call_api("POST", url, payload)
 
     @classmethod
+    def get_pull_request(cls, payload):
+        """ Get pull requests info. """
+        url = "https://api.github.com/repos/{}/pulls/{}".format(cls.repo, pr_id)
+        return cls.call_api("GET", url, payload)
+
+    @classmethod
     def update_pull_request(cls, pr_id, payload):
         """ Update pull requests' status (open/closed). """
         url = "https://api.github.com/repos/{}/pulls/{}".format(cls.repo, pr_id)
@@ -78,6 +84,20 @@ class GitHubManager:
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
 class GitManager:
     gitmanager_lock = Lock()
+
+    @staticmethod
+    def _check_smokey_pr(response):
+        """ Check if the pull request is opened by SmokeDetector, given the API response. """
+        if not response:
+            raise ConnectionError("Cannot connect to GitHub API")
+        pr_info = response.json()
+        if pr_info["user"]["login"] != "SmokeDetector":
+            raise ValueError("PR #{} is not created by me, so I can't approve it.".format(pr_id))
+        if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
+            raise ValueError("PR description is malformed. Blame a developer.")
+        if pr_info["state"] != "open":
+            raise ValueError("PR #{} is not currently open, so I won't merge it.".format(pr_id))
+        return pr_info['head']['ref']
 
     @staticmethod
     def get_origin_or_auth():
@@ -321,43 +341,27 @@ class GitManager:
 
     @classmethod
     def merge_pull_request(cls, pr_id, comment=""):
-        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
-        if not response:
-            raise ConnectionError("Cannot connect to GitHub API")
-        pr_info = response.json()
-        if pr_info["user"]["login"] != "SmokeDetector":
-            raise ValueError("PR #{} is not created by me, so I can't approve it.".format(pr_id))
-        if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
-            raise ValueError("PR description is malformed. Blame a developer.")
-        if pr_info["state"] != "open":
-            raise ValueError("PR #{} is not currently open, so I won't merge it.".format(pr_id))
-        ref = pr_info['head']['ref']
+        """ Merge SmokeDetector pull requests. """
+        branch = cls._check_smokey_pr(GitHubManager.get_pull_request(pr_id, None))
 
         if comment:  # Post comment if present
             GitHubManager.comment_on_thread(pr_id, comment)
 
         payload = {"commit_message": "-autopull"}
         GitHubManager.merge_pull_request(pr_id, payload)
+        # GitUtils.del_branch(branch)
 
     @classmethod
     def reject_pull_request(cls, pr_id, comment=""):
-        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
-        if not response:
-            raise ConnectionError("Cannot connect to GitHub API")
-        pr_info = response.json()
-        if pr_info["user"]["login"] != "SmokeDetector":
-            raise ValueError("PR #{} is not created by me, so I can't reject it.".format(pr_id))
-        if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
-            raise ValueError("PR description is malformed. Blame a developer.")
-        if pr_info["state"] != "open":
-            raise ValueError("PR #{} is not currently open, so I won't reject it.".format(pr_id))
-        ref = pr_info['head']['ref']
+        """ Reject SmokeDetector pull requests. """
+        branch = cls._check_smokey_pr(GitHubManager.get_pull_request(pr_id, None))
 
         if comment:  # Post comment if present
             GitHubManager.comment_on_thread(pr_id, comment)
 
         payload = {"state": "closed"}
         GitHubManager.update_pull_request(pr_id, payload)
+        # GitUtils.del_branch(branch)
 
     @staticmethod
     def prepare_git_for_operation(blacklist_file_name):
