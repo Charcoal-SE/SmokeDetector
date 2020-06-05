@@ -324,3 +324,4 @@ lustresparasala
 (?-i:^kyler walter$)
 (?-i:^bailing$)
 (?-i:^Pediatric Oncall$)
+(?-i:^mrdev$)
