@@ -348,8 +348,13 @@ class GitManager:
             GitHubManager.comment_on_thread(pr_id, comment)
 
         payload = {"commit_message": "-autopull"}
-        GitHubManager.merge_pull_request(pr_id, payload)
-        # GitUtils.del_branch(branch)
+        response = GitHubManager.merge_pull_request(pr_id, payload)
+        if response:
+            if response.json()["message"] == "Pull Request successfully merged":
+                # GitUtils.del_branch(branch)
+                return "Pull request #{} successfully merged.".format(pr_id)
+
+        raise RuntimeError("Merging pull request #{} failed. Manual merging required.".format(pr_id))
 
     @classmethod
     def reject_pull_request(cls, pr_id, comment=""):
@@ -360,8 +365,13 @@ class GitManager:
             GitHubManager.comment_on_thread(pr_id, comment)
 
         payload = {"state": "closed"}
-        GitHubManager.update_pull_request(pr_id, payload)
-        # GitUtils.del_branch(branch)
+        response = GitHubManager.update_pull_request(pr_id, payload)
+        if response:
+            if response.json()["state"] == "closed":
+                # GitUtils.del_branch(branch)
+                return "Pull request #{} closed.".format(pr_id)
+
+        raise RuntimeError("Closing pull request #{} failed. Manual operations required.".format(pr_id))
 
     @staticmethod
     def prepare_git_for_operation(blacklist_file_name):

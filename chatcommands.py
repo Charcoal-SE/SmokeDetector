@@ -540,7 +540,7 @@ def reject(msg, pr_id, custom_comment):
             msg._client.host, msg.owner.id)
         comment = "[Rejected]({}) by [{}]({}) in {}{}.".format(
             message_url, msg.owner.name, chat_user_profile_link, msg.room.name, custom_comment_str)
-        GitManager.reject_pull_request(pr_id, comment)
+        return GitManager.reject_pull_request(pr_id, comment)
     except Exception as e:
         raise CmdException(str(e))
 
