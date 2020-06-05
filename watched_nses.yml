@@ -124,6 +124,9 @@ items:
   - aragorn.ns.cloudflare.com.
   - may.ns.cloudflare.com.
 - ns:
+  - aragorn.ns.cloudflare.com.
+  - rachel.ns.cloudflare.com.
+- ns:
   - arch.ns.cloudflare.com.
   - bella.ns.cloudflare.com.
 - ns:
