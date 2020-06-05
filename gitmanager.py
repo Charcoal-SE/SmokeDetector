@@ -23,6 +23,7 @@ else:
 
 from helpers import log, log_exception, only_blacklists_changed
 from blacklists import *
+from tasks import Tasks
 
 
 class GitHubManager:
@@ -81,10 +82,23 @@ class GitHubManager:
         return cls.call_api("POST", url, payload)
 
 
+class GitUtils:
+    """ Git related utilities. """
+    git_op_lock = threading.Lock()
+
+    @staticmethod
+    def delete_branch(branch):
+        """ Delete a git branch. """
+        with GitUtils.git_op_lock:
+            try:
+                git.branch("-D", branch)
+            except GitError:
+                # It is okay branch deletion failed. Just log and move on.
+                log("warning", "Deleting branch {} failed. Manual actions required.".format(branch))
+
+
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
 class GitManager:
-    gitmanager_lock = Lock()
-
     @staticmethod
     def _check_smokey_pr(response):
         """ Check if the pull request is opened by SmokeDetector, given the API response. """
@@ -143,8 +157,8 @@ class GitManager:
         blacklister = Blacklist(blacklist_type)
         blacklist_file_name = blacklist_type[0]
 
+        GitUtils.git_op_lock.acquire()
         try:
-            cls.gitmanager_lock.acquire()
             status, message = cls.prepare_git_for_operation(blacklist_file_name)
             if not status:
                 return (False, message)
@@ -257,7 +271,7 @@ class GitManager:
         finally:
             # Always return to `deploy` branch when done with anything.
             git.checkout("deploy")
-            cls.gitmanager_lock.release()
+            GitUtils.git_op_lock.release()
 
         if op == 'blacklist':
             return (True, "Blacklisted `{0}`".format(item))
@@ -275,8 +289,8 @@ class GitManager:
                 return False, "Ask a blacklist manager to run that for you. Use `!!/whois blacklister` to find " \
                               "out who's here."
 
+        GitUtils.git_op_lock.acquire()
         try:
-            cls.gitmanager_lock.acquire()
             git.checkout("master")
 
             if blacklist_type == "watch":
@@ -334,7 +348,7 @@ class GitManager:
             return False, 'Git operations failed for unspecified reasons.'
         finally:
             git.checkout('deploy')
-            cls.gitmanager_lock.release()
+            GitUtils.git_op_lock.release()
 
         # With no exception raised, list_type should be set
         return True, 'Removed `{}` from {}'.format(item, list_type)
@@ -351,7 +365,7 @@ class GitManager:
         response = GitHubManager.merge_pull_request(pr_id, payload)
         if response:
             if response.json()["message"] == "Pull Request successfully merged":
-                # GitUtils.del_branch(branch)
+                Tasks.later(GitUtils.delete_branch, branch, after=300)  # It is not urgent to delete the branch
                 return "Pull request #{} successfully merged.".format(pr_id)
 
         raise RuntimeError("Merging pull request #{} failed. Manual merging required.".format(pr_id))
@@ -368,7 +382,7 @@ class GitManager:
         response = GitHubManager.update_pull_request(pr_id, payload)
         if response:
             if response.json()["state"] == "closed":
-                # GitUtils.del_branch(branch)
+                Tasks.later(GitUtils.delete_branch, branch, after=300)  # It is not urgent to delete the branch
                 return "Pull request #{} closed.".format(pr_id)
 
         raise RuntimeError("Closing pull request #{} failed. Manual operations required.".format(pr_id))
