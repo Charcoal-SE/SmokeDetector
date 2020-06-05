@@ -5,7 +5,7 @@ import platform
 import time
 import json
 from datetime import datetime
-from threading import Lock
+import threading
 
 import regex
 import requests
