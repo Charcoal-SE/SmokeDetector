@@ -20909,3 +20909,4 @@
 1591330745	Eliah Kagan	technologymagazines\.net
 1591332628	Makyen	caf-global\.com
 1591332753	Makyen	silentinfotech\.com
+1591335814	Makyen	nexuscore\.io
