@@ -48,6 +48,13 @@ class GitHubManager:
         requests.patch(url, auth=cls.auth, data=payload)
 
     @classmethod
+    def merge_pull_request(cls, pr_id, payload):
+        url = "https://api.github.com/repos/{}/pulls/{}/merge".format(cls.repo, pr_id)
+        if isinstance(payload, dict):
+            payload = json.dumps(payload)
+        requests.put(url, auth=cls.auth, data=payload)
+
+    @classmethod
     def comment_on_thread(cls, thread_id, body):
         url = "https://api.github.com/repos/{}/issues/{}/comments".format(cls.repo, thread_id)
         payload = json.dumps({'body': body})
@@ -316,28 +323,8 @@ class GitManager:
         if comment:  # Post comment if present
             GitHubManager.comment_on_thread(pr_id, comment)
 
-        try:
-            # Remote checks passed, good to go here
-            cls.gitmanager_lock.acquire()
-            git.checkout('master')
-            origin_or_auth = cls.get_origin_or_auth()
-            git.fetch(origin_or_auth, '+refs/pull/{}/head'.format(pr_id))
-            git("-c", "user.name=" + GlobalVars.git_name,
-                "-c", "user.email=" + GlobalVars.git_email,
-                "merge",
-                'FETCH_HEAD', '--no-ff', '-m', 'Merge pull request #{} from {}/{}'.format(
-                    pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref))
-            git.push(origin_or_auth, 'master')
-            try:
-                git.push('-d', origin_or_auth, ref)
-            except GitError as e:
-                # TODO: PR merged, but branch deletion has something wrong, generate some text
-                pass
-            return "Merged pull request [#{0}](https://github.com/{1}/pull/{0}).".format(
-                pr_id, GlobalVars.bot_repo_slug)
-        finally:
-            git.checkout('deploy')
-            cls.gitmanager_lock.release()
+        payload = {"commit_message": "-autopull"}
+        GitHubManager.merge_pull_request(pr_id, payload)
 
     @classmethod
     def reject_pull_request(cls, pr_id, comment=""):
