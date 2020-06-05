@@ -483,20 +483,24 @@ def unblacklist(msg, item, alias_used="unwatch"):
     return result
 
 
-@command(int, privileged=True, whole_msg=True)
-def approve(msg, pr_id):
+@command(int, str, arity=(1,2), privileged=True, whole_msg=True)
+def approve(msg, pr_id, custom_comment):
     code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
     if not code_permissions:
         raise CmdException("You need code privileges to approve pull requests")
+
+    custom_comment_str = ""
+    if custom_comment is not None:
+        custom_comment_str = " with comment *{}*".format(custom_comment)
 
     # Forward this, because checks are better placed in gitmanager.py
     try:
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
         chat_user_profile_link = "https://chat.{}/users/{}".format(
             msg._client.host, msg.owner.id)
-        comment = "[Approved]({}) by [{}]({}) in {}\n\n![Approved with SmokeyApprove]({})".format(
-            message_url, msg.owner.name, chat_user_profile_link, msg.room.name,
-            # The image of (code-admins|approved) from PullApprove
+        comment = "[Approved]({}) by [{}]({}) in {}{}.\n\n![Approved with SmokeyApprove]({})".format(
+            message_url, msg.owner.name, chat_user_profile_link, msg.room.name, custom_comment_str,
+            # The image of (blacklisters|approved) from PullApprove
             "https://camo.githubusercontent.com/7d7689a88a6788541a0a87c6605c4fdc2475569f/68747470733a2f2f696d672e"
             "736869656c64732e696f2f62616467652f626c61636b6c6973746572732d617070726f7665642d627269676874677265656e")
         message = GitManager.merge_pull_request(pr_id, comment)
@@ -515,6 +519,28 @@ def approve(msg, pr_id):
             except Exception:
                 pass
         return message
+    except Exception as e:
+        raise CmdException(str(e))
+
+
+@command(int, str, arity=(1,2), privileged=True, whole_msg=True, aliases=["close"])
+def reject(msg, pr_id, custom_comment):
+    """ Reject PRs opened by SmokeDetector. """
+    code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
+    if not code_permissions:
+        raise CmdException("You need code privileges to approve pull requests")
+
+    custom_comment_str = ""
+    if custom_comment is not None:
+        custom_comment_str = " with comment *{}*".format(custom_comment)
+
+    try:
+        message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
+        chat_user_profile_link = "https://chat.{}/users/{}".format(
+            msg._client.host, msg.owner.id)
+        comment = "[Rejected]({}) by [{}]({}) in {}{}.".format(
+            message_url, msg.owner.name, chat_user_profile_link, msg.room.name, custom_comment_str)
+        GitManager.reject_pull_request(pr_id, comment)
     except Exception as e:
         raise CmdException(str(e))
 
@@ -575,7 +601,7 @@ def coffee(msg, other_user):
     :return: A string
     """
     if other_user is None:
-        return "*brews a cup of {} for @{}*".format(random.choice(COFFEES), msg.owner.name.replace(" ", ""))
+        return "*brews a cup of {} for {}*".format(random.choice(COFFEES), msg.owner.name.replace(" ", ""))
     else:
         other_user = regex.sub(r'^@*|\b\s.{1,}', '', other_user)
         return "*brews a cup of {} for @{}*".format(random.choice(COFFEES), other_user)
@@ -605,7 +631,7 @@ def tea(msg, other_user):
     """
 
     if other_user is None:
-        return "*brews a cup of {} tea for @{}*".format(random.choice(TEAS), msg.owner.name.replace(" ", ""))
+        return "*brews a cup of {} tea for {}*".format(random.choice(TEAS), msg.owner.name.replace(" ", ""))
     else:
         other_user = regex.sub(r'^@*|\b\s.{1,}', '', other_user)
         return "*brews a cup of {} tea for @{}*".format(random.choice(TEAS), other_user)

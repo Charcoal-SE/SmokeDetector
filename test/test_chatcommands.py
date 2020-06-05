@@ -32,7 +32,7 @@ def test_coffee():
     msg = Fake({"owner": {"name": "El'endia Starman"}})
 
     coffees = "\\*brews a cup of ({}) for ".format("|".join(chatcommands.COFFEES))
-    assert regex.match(coffees + "@El'endiaStarman\\*", chatcommands.coffee(None, original_msg=msg))
+    assert regex.match(coffees + "El'endiaStarman\\*", chatcommands.coffee(None, original_msg=msg))
     assert regex.match(coffees + "@angussidney\\*", chatcommands.coffee("angussidney"))
 
 
@@ -40,7 +40,7 @@ def test_tea():
     msg = Fake({"owner": {"name": "El'endia Starman"}})
 
     teas = "\\*brews a cup of ({}) tea for ".format("|".join(chatcommands.TEAS))
-    assert regex.match(teas + "@El'endiaStarman\\*", chatcommands.tea(None, original_msg=msg))
+    assert regex.match(teas + "El'endiaStarman\\*", chatcommands.tea(None, original_msg=msg))
     assert regex.match(teas + "@angussidney\\*", chatcommands.tea("angussidney"))
 
 
@@ -247,16 +247,16 @@ def test_approve(monkeypatch):
 
     # Prevent from attempting to check privileges with Metasmoke
     monkeypatch.setattr(GlobalVars, "code_privileged_users", [])
-    assert chatcommands.approve(8888, original_msg=msg).startswith("You need code privileges")
+    assert chatcommands.approve(8888, None, original_msg=msg).startswith("You need code privileges")
 
     monkeypatch.setattr(GlobalVars, "code_privileged_users", [('stackexchange.com', 121520)])
     with monkeypatch.context() as m:
         # Oh no GitHub is down
         original_get = requests.get
         m.setattr("requests.get", lambda *args, **kwargs: None)
-        assert chatcommands.approve(8888, original_msg=msg) == "Cannot connect to GitHub API"
+        assert chatcommands.approve(8888, None, original_msg=msg) == "Cannot connect to GitHub API"
         m.setattr("requests.get", original_get)
-    assert chatcommands.approve(2518, original_msg=msg)[:8] in {"PR #2518", "Cannot c"}
+    assert chatcommands.approve(2518, None, original_msg=msg)[:8] in {"PR #2518", "Cannot c"}
 
 
 @patch("chatcommands.handle_spam")

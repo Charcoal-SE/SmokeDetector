@@ -41,6 +41,13 @@ class GitHubManager:
         return response.json()
 
     @classmethod
+    def update_pull_request(cls, pr_id, payload):
+        url = "https://api.github.com/repos/{}/pulls/{}".format(cls.repo, pr_id)
+        if isinstance(payload, dict):
+            payload = json.dumps(payload)
+        requests.patch(url, auth=cls.auth, data=payload)
+
+    @classmethod
     def comment_on_thread(cls, thread_id, body):
         url = "https://api.github.com/repos/{}/issues/{}/comments".format(cls.repo, thread_id)
         payload = json.dumps({'body': body})
@@ -306,7 +313,7 @@ class GitManager:
             raise ValueError("PR #{} is not currently open, so I won't merge it.".format(pr_id))
         ref = pr_info['head']['ref']
 
-        if comment:  # yay we have comments now
+        if comment:  # Post comment if present
             GitHubManager.comment_on_thread(pr_id, comment)
 
         try:
@@ -331,6 +338,26 @@ class GitManager:
         finally:
             git.checkout('deploy')
             cls.gitmanager_lock.release()
+
+    @classmethod
+    def reject_pull_request(cls, pr_id, comment=""):
+        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
+        if not response:
+            raise ConnectionError("Cannot connect to GitHub API")
+        pr_info = response.json()
+        if pr_info["user"]["login"] != "SmokeDetector":
+            raise ValueError("PR #{} is not created by me, so I can't reject it.".format(pr_id))
+        if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
+            raise ValueError("PR description is malformed. Blame a developer.")
+        if pr_info["state"] != "open":
+            raise ValueError("PR #{} is not currently open, so I won't reject it.".format(pr_id))
+        ref = pr_info['head']['ref']
+
+        if comment:  # Post comment if present
+            GitHubManager.comment_on_thread(pr_id, comment)
+
+        payload = {"state": "closed"}
+        GitHubManager.update_pull_request(pr_id, payload)
 
     @staticmethod
     def prepare_git_for_operation(blacklist_file_name):
