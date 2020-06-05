@@ -483,7 +483,7 @@ def unblacklist(msg, item, alias_used="unwatch"):
     return result
 
 
-@command(int, str, arity=(1,2), privileged=True, whole_msg=True)
+@command(int, str, arity=(1, 2), privileged=True, whole_msg=True)
 def approve(msg, pr_id, custom_comment):
     code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
     if not code_permissions:
@@ -523,7 +523,7 @@ def approve(msg, pr_id, custom_comment):
         raise CmdException(str(e))
 
 
-@command(int, str, arity=(1,2), privileged=True, whole_msg=True, aliases=["close"])
+@command(int, str, arity=(1, 2), privileged=True, whole_msg=True, aliases=["close"])
 def reject(msg, pr_id, custom_comment):
     """ Reject PRs opened by SmokeDetector. """
     code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
