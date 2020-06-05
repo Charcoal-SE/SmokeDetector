@@ -57,7 +57,7 @@ class GitHubManager:
         return cls.call_api("POST", url, payload)
 
     @classmethod
-    def get_pull_request(cls, payload):
+    def get_pull_request(cls, pr_id, payload):
         """ Get pull requests info. """
         url = "https://api.github.com/repos/{}/pulls/{}".format(cls.repo, pr_id)
         return cls.call_api("GET", url, payload)
