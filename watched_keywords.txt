@@ -20955,3 +20955,4 @@
 1591453088	user12986714	towardanswer\.wordpress
 1591471470	NobodyNada	gilaliga\.com
 1591471502	NobodyNada	gilaliga(?!\.com)
+1591482882	Makyen	blog\.vu-review\.com
