@@ -20943,3 +20943,4 @@
 1591387742	user12986714	wuwablog\.blogspot
 1591392339	NobodyNada	rock\W?hard(?:\W?bull)?
 1591397940	user12986714	muhammadhamaeel\.com
+1591406932	Makyen	sarahbartontrades(?:@gmail\.com)?
