@@ -368,8 +368,7 @@ def do_blacklist(blacklist_type, msg, force=False):
             has_unescaped_dot = 'The regex contains an unescaped "`.`"; in most cases, it should be "`\\.`"'
 
         try:
-            r = regex.compile(findspam.format_with_city_list(pattern))
-            # r = regex.compile(pattern, city=findspam.city_list, ignore_unused=True)
+            r = regex.compile(pattern, city=findspam.city_list, ignore_unused=True)
         except regex._regex_core.error:
             raise CmdException("An invalid pattern was provided, please check your command.")
         if r.search(GlobalVars.valid_content) is not None:
@@ -1243,10 +1242,10 @@ def test(content, alias_used="test"):
 
 def bisect_regex(s, regexes, bookend=True, timeout=None):
     regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)(?:{})"
-    formatted_regex = findspam.format_with_city_list(regex_to_format.format("|".join([r for r, i in regexes])))
+    formatted_regex = regex_to_format.format("|".join([r for r, i in regexes]))
     start_time = time.time()
     try:
-        compiled = regex.compile(formatted_regex)
+        compiled = regex.compile(formatted_regex, city=findspam.city_list, ignore_unused=True)
         match = compiled.search(s, timeout=timeout)
     except Exception:
         # Log wich regex caused the error:
@@ -1274,7 +1273,7 @@ def bisect_regex_one_by_one(test_text, regexes, bookend=True, timeout=None):
     regex_to_format = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:$|\b|(?w:\b))" if bookend else r"(?i)(?:{})"
     results = []
     for expresion in regexes:
-        compiled = regex.compile(findspam.format_with_city_list(regex_to_format.format(expresion[0])))
+        compiled = regex.compile(regex_to_format.format(expresion[0]), city=findspam.city_list, ignore_unused=True)
         match = compiled.search(test_text, timeout=timeout)
         if match:
             results.append(expresion)

@@ -295,7 +295,7 @@ class Rule:
             try:
                 compiled_regex = self.compiled_regex
             except AttributeError:
-                compiled_regex = regex.compile(format_with_city_list(self.regex), regex.UNICODE)
+                compiled_regex = regex.compile(self.regex, regex.UNICODE, city=city_list, ignore_unused=True)
                 self.compiled_regex = compiled_regex
                 regex.purge()  # Don't keep the regex in the cache.
 
@@ -935,7 +935,7 @@ def keyword_link(s, site):   # thanking keyword and a link in the same short ans
 @create_rule("bad keyword in link text in {}", title=False, stripcodeblocks=True)
 def bad_link_text(s, site):   # suspicious text of a hyperlink
     s = regex.sub("</?(?:strong|em)>", "", s)  # remove font tags
-    keywords = regex.compile(format_with_city_list(
+    keywords = regex.compile(
         r"(?isu)"
         r"\b(buy|cheap) |live[ -]?stream|"
         r"\bmake (money|\$)|"
@@ -945,7 +945,7 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
         r"(?:phone|hotline|helpline)? ?numbers?\b|"
         r"(best|make|full|hd|software|cell|data|media)[\w ]{1,20}"
         r"" r"(online|service|company|agency|repair|recovery|school|universit(?:y|ies)|college)|"
-        r"\b(writing (service|help)|essay (writing|tips))"))
+        r"\b(writing (service|help)|essay (writing|tips))", city=city_list, ignore_unused=True)
     links = regex.compile(r'nofollow(?: noreferrer)?">([^<]*)(?=</a>)', regex.UNICODE).findall(s)
     business = regex.compile(
         r"(?i)(^| )(airlines?|apple|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
@@ -1869,12 +1869,6 @@ city_list = [
     # buyabans.com spammer uses creative variations
     "Sri Lanka", "Srilanka", "Srilankan",
 ]
-city_list_as_group = '(?:{})'.format('|'.join(city_list))
-city_list_sub_regex = regex.compile(r'\\L<city>', regex.UNICODE)
-
-
-def format_with_city_list(regex_text):
-    return regex.sub(city_list_sub_regex, city_list_as_group, regex_text)
 
 
 ################################################################################
