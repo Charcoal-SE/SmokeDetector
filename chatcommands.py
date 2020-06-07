@@ -747,8 +747,8 @@ def metasmoke(msg, alias_used):
         Metasmoke.set_ms_up()
     else:
         Metasmoke.set_ms_down()
-    return "Successfully set metasmoke status to **{}**.".format("up" if to_up else "down") +\
-           " Automatic metasmoke status switch is currently **{}abled**.".format("dis" if forced else "en")
+    return "Metasmoke status is now: **{}**;".format("up" if to_up else "down") +\
+           " Auto status switch: **{}abled**.".format("dis" if forced else "en")
 
 
 # noinspection PyIncorrectDocstring
@@ -759,7 +759,7 @@ def info():
     :return: A string
     """
     return "I'm " + GlobalVars.chatmessage_prefix +\
-           " a bot that detects spam and offensive posts on the network and"\
+           ", a bot that detects spam and offensive posts on the network and"\
            " posts alerts to chat."\
            " [A command list is available here](https://charcoal-se.org/smokey/Commands)."
 
