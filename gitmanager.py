@@ -28,7 +28,7 @@ from blacklists import *
 def _anchor(str_to_anchor, blacklist_type):
     """ Anchor a string according to the operation. """
     if blacklist_type in {Blacklist.WATCHED_KEYWORDS, Blacklist.KEYWORDS}:
-        return "(?s:\b" + str_to_anchor + "\b)"
+        return r"(?s:\b" + str_to_anchor + r"\b)"
     else:
         return str_to_anchor
 
@@ -171,8 +171,8 @@ class GitManager:
                                    ".\n"
                                    "<!-- METASMOKE-BLACKLIST-{8} {4} -->".format(
                                        username, chat_profile_link, op, blacklist,                # 0 1 2 3
-                                       _anchor(item, blacklist_type), ms_search_option,           # 4 5
-                                       quote_plus(item),                                          # 6
+                                       item, ms_search_option,                                    # 4 5
+                                       quote_plus(_anchor(item, blacklist_type)),                 # 6
                                        quote_plus(item.replace("\\W", " ").replace("\\.", ".")),  # 7
                                        blacklist.upper()),                                        # 8
                            "head": branch,
