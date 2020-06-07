@@ -43,8 +43,8 @@ class Metasmoke:
 
     class AutoSwitch:
         """ Automatically switch metasmoke status """
-        MAX_FAILURES = 10  # 10 failures == ms down
-        MAX_SUCCESSES = 1  # 1 success == ms up
+        MAX_FAILURES = 10  # More than 10 failures == ms down
+        MAX_SUCCESSES = 1  # More than 1 success == ms up
         ping_failure_counter = 0  # Negative values indicate consecutive successes
         autoswitch_is_on = True
         rw_lock = threading.Lock()
