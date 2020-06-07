@@ -57,7 +57,7 @@ class Metasmoke:
                     # Consecutive counter. Switch sign.
                     Metasmoke.AutoSwitch.ping_failure_counter = 0
                 Metasmoke.AutoSwitch.ping_failure_counter += 1
-                current_counter = Metasmoke.AutoSwitch.counter
+                current_counter = Metasmoke.AutoSwitch.ping_failure_counter
                 current_auto = Metasmoke.AutoSwitch.autoswitch_is_on
             # MAX_FAILURES is constant so no lock.
             if current_counter > Metasmoke.AutoSwitch.MAX_FAILURES and\
@@ -104,7 +104,7 @@ class Metasmoke:
         def reset_switch():
             """ Reset class Metasmoke.AutoSwitch to default values """
             with Metasmoke.AutoSwitch.rw_lock:
-                Metasmoke.AutoSwitch.counter = 0
+                Metasmoke.AutoSwitch.ping_failure_counter = 0
                 Metasmoke.AutoSwitch.autoswitch_is_on = True
 
     @staticmethod
