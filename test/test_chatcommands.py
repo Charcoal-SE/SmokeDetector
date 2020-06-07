@@ -128,7 +128,7 @@ def test_hats(date):
 
 def test_info():
     assert chatcommands.info() == "I'm " + GlobalVars.chatmessage_prefix +\
-        " a bot that detects spam and offensive posts on the network and"\
+        ", a bot that detects spam and offensive posts on the network and"\
         " posts alerts to chat."\
         " [A command list is available here](https://charcoal-se.org/smokey/Commands)."
 
