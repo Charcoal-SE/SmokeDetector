@@ -64,10 +64,6 @@ def test_alive():
     assert chatcommands.alive() in chatcommands.ALIVE_MSG
 
 
-def test_location():
-    assert chatcommands.location() == GlobalVars.location
-
-
 def test_version():
     assert chatcommands.version() == '{id} [{commit_name}]({repository}/commit/{commit_code})'.format(
         id=GlobalVars.location, commit_name=GlobalVars.commit_with_author_escaped,
