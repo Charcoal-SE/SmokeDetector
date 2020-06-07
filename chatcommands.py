@@ -734,12 +734,14 @@ def metasmoke(msg, alias_used):
             return status_text[0]
         else:
             return status_text[1]
+
     # The next aliases/functionalities require privilege
     if not is_privileged(msg.owner, msg.room):
         raise CmdException(GlobalVars.not_privileged_warning)
 
     to_up = "up" in alias_used
     forced = "force" in alias_used
+    Metasmoke.AutoSwitch.reset_switch()  # If manually switched, reset the internal counter
     Metasmoke.AutoSwitch.enable_autoswitch(not forced)
     if to_up:
         Metasmoke.set_ms_up()
