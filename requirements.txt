@@ -8,7 +8,7 @@ websocket-client>=0.54.0
 coverage>=4.5.1
 pytest>=4.1.0
 phonenumbers>=8.8.11
-flake8~=3.6.0
+flake8~=3.8.0
 pep8-naming==0.7.0
 regex>=2018.2.21
 termcolor>=1.1.0

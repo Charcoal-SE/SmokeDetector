@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.6-stretch
+      - image: circleci/python:3.8-buster
     branches:
       ignore: deploy
     steps:
@@ -12,6 +12,7 @@ jobs:
       - run:
           name: install python dependencies in venv
           command: |
+            ssh-keyscan github.com >> ~/.ssh/known_hosts
             python3 -m venv env
             env/bin/pip3 install -r requirements.txt --upgrade
             env/bin/pip3 install -r user_requirements.txt --upgrade
