@@ -25,6 +25,14 @@ from helpers import log, log_exception, only_blacklists_changed
 from blacklists import *
 
 
+def _anchor(str_to_anchor, blacklist_type):
+    """ Anchor a string according to the operation. """
+    if blacklist_type in {Blacklist.WATCHED_KEYWORDS, Blacklist.KEYWORDS}:
+        return "(?s:\b" + str_to_anchor + "\b)"
+    else:
+        return str_to_anchor
+
+
 class GitHubManager:
     auth = HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password)
     repo = GlobalVars.bot_repo_slug
@@ -163,7 +171,7 @@ class GitManager:
                                    ".\n"
                                    "<!-- METASMOKE-BLACKLIST-{8} {4} -->".format(
                                        username, chat_profile_link, op, blacklist,                # 0 1 2 3
-                                       item, ms_search_option,                                    # 4 5
+                                       _anchor(item, blacklist_type), ms_search_option,           # 4 5
                                        quote_plus(item),                                          # 6
                                        quote_plus(item.replace("\\W", " ").replace("\\.", ".")),  # 7
                                        blacklist.upper()),                                        # 8
