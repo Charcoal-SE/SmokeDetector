@@ -172,7 +172,7 @@ class GitManager:
                                    "<!-- METASMOKE-BLACKLIST-{8} {4} -->".format(
                                        username, chat_profile_link, op, blacklist,                # 0 1 2 3
                                        item, ms_search_option,                                    # 4 5
-                                       _anchor(item, blacklist_type),                             # 6
+                                       quote_plus(_anchor(item, blacklist_type)),                 # 6
                                        quote_plus(item.replace("\\W", " ").replace("\\.", ".")),  # 7
                                        blacklist.upper()),                                        # 8
                            "head": branch,
