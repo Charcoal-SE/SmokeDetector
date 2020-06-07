@@ -1369,6 +1369,9 @@ def threads():
     :return: A string
     """
 
+    # Note: One may see multiple threads named "message_sender", and they are started by ChatExchange,
+    # one for each chat server.
+    # The one started by SmokeDetector is named "message sender", without the underscore.
     threads_list = ["{ident}: {name}".format(ident=t.ident, name=t.name) for t in threading.enumerate()]
 
     return "\n".join(threads_list)
