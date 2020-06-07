@@ -24,6 +24,10 @@ from fake import Fake
 from unittest.mock import patch
 
 
+def dummy_tell_rooms_with(dummy1, dummy2):
+    pass
+
+
 def test_null():
     assert chatcommands.null() is None
 
@@ -128,7 +132,7 @@ def test_hats(date):
 
 def test_info():
     assert chatcommands.info() == "I'm " + GlobalVars.chatmessage_prefix +\
-        " a bot that detects spam and offensive posts on the network and"\
+        ", a bot that detects spam and offensive posts on the network and"\
         " posts alerts to chat."\
         " [A command list is available here](https://charcoal-se.org/smokey/Commands)."
 
@@ -567,6 +571,8 @@ def test_whitelisted_users():
 
 
 def test_metasmoke():
+    orig_tell_rooms_with = chatcommunicate.tell_rooms_with
+    chatcommunicate.tell_rooms_with = dummy_tell_rooms_with
     msg = Fake({
         "owner": {
             "name": "ArtOfCode",
@@ -585,12 +591,13 @@ def test_metasmoke():
     })
     msg_source = "metasmoke is {}. Current failure count: {} " + "({id})".format(id=GlobalVars.location)
 
-    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-up") == "metasmoke is now considered up."
+    chatcommands.metasmoke(original_msg=msg, alias_used="ms-up")
+    assert GlobalVars.MSStatus.is_up()
+    chatcommands.metasmoke(original_msg=msg, alias_used="ms-down")
+    assert GlobalVars.MSStatus.is_down()
+    GlobalVars.MSStatus.reset_ms_status()
     assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-status") == msg_source.format("up", 0)
-    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-down") == "metasmoke is now considered down."
-    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-status") == msg_source.format("down", 999)
-    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-up") == "metasmoke is now considered up."
-    assert chatcommands.metasmoke(original_msg=msg, alias_used="ms-status") == msg_source.format("up", 0)
+    chatcommunicate.tell_rooms_with = orig_tell_rooms_with
 
 
 @pytest.mark.skipif(os.path.isfile("notifications.p"), reason="shouldn't overwrite file")

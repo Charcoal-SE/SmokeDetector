@@ -753,29 +753,36 @@ def errorlogs(count):
     return fetch_lines_from_error_log(count or 2)
 
 
-@command(whole_msg=True, aliases=["ms-status", "ms-down", "ms-up"], give_name=True)
+@command(whole_msg=True, aliases=["ms-status", "ms-down", "ms-up", "ms-down-force", "ms-up-force"], give_name=True)
 def metasmoke(msg, alias_used):
     if alias_used in {"metasmoke", "ms-status"}:
         status_text = [
-            "metasmoke is up. Current failure count: {} ({id})".format(GlobalVars.metasmoke_failures,
+            "metasmoke is up. Current failure count: {} ({id})".format(GlobalVars.MSStatus.get_failure_count(),
                                                                        id=GlobalVars.location),
-            "metasmoke is down. Current failure count: {} ({id})".format(GlobalVars.metasmoke_failures,
+            "metasmoke is down. Current failure count: {} ({id})".format(GlobalVars.MSStatus.get_failure_count(),
                                                                          id=GlobalVars.location),
         ]
-        return status_text[GlobalVars.metasmoke_down]
+        if GlobalVars.MSStatus.is_up():
+            # True = 1 and False = 0 is a legacy feature
+            # Better not to use them
+            return status_text[0]
+        else:
+            return status_text[1]
+
     # The next aliases/functionalities require privilege
     if not is_privileged(msg.owner, msg.room):
         raise CmdException(GlobalVars.not_privileged_warning)
 
-    if alias_used == "ms-down":
-        GlobalVars.metasmoke_down = True
-        GlobalVars.metasmoke_failures = 999
-        return "metasmoke is now considered down."
-    if alias_used == "ms-up":
-        GlobalVars.metasmoke_down = False
-        GlobalVars.metasmoke_failures = 0
-        return "metasmoke is now considered up."
-    raise CmdException("Bad command alias. Blame a developer.")
+    to_up = "up" in alias_used
+    forced = "force" in alias_used
+    Metasmoke.AutoSwitch.reset_switch()  # If manually switched, reset the internal counter
+    Metasmoke.AutoSwitch.enable_autoswitch(not forced)
+    if to_up:
+        Metasmoke.set_ms_up()
+    else:
+        Metasmoke.set_ms_down()
+    return "Metasmoke status is now: **{}**;".format("up" if to_up else "down") +\
+           " Auto status switch: **{}abled**.".format("dis" if forced else "en")
 
 
 # noinspection PyIncorrectDocstring
@@ -786,7 +793,7 @@ def info():
     :return: A string
     """
     return "I'm " + GlobalVars.chatmessage_prefix +\
-           " a bot that detects spam and offensive posts on the network and"\
+           ", a bot that detects spam and offensive posts on the network and"\
            " posts alerts to chat."\
            " [A command list is available here](https://charcoal-se.org/smokey/Commands)."
 

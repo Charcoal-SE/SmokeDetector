@@ -70,7 +70,6 @@ class GlobalVars:
     api_backoff_time = 0
     deletion_watcher = None
 
-    metasmoke_last_ping_time = datetime.utcnow()
     not_privileged_warning = \
         "You are not a privileged user. Please see " \
         "[the privileges wiki page](https://charcoal-se.org/smokey/Privileges) for " \
@@ -130,9 +129,37 @@ class GlobalVars:
     api_request_lock = threading.Lock()  # Get this lock before making API requests
     apiquota_rw_lock = threading.Lock()  # Get this lock before reading/writing apiquota
 
-    num_posts_scanned = 0
-    post_scan_time = 0
-    posts_scan_stats_lock = threading.Lock()  # Get this lock before reading/writing the above two
+    class PostScanStat:
+        """ Tracking post scanning data """
+        num_posts_scanned = 0
+        post_scan_time = 0
+        rw_lock = threading.Lock()
+
+        @staticmethod
+        def add_stat(posts_scanned, scan_time):
+            """ Adding post scanning data """
+            with GlobalVars.PostScanStat.rw_lock:
+                GlobalVars.PostScanStat.num_posts_scanned += posts_scanned
+                GlobalVars.PostScanStat.post_scan_time += scan_time
+
+        @staticmethod
+        def get_stat():
+            """ Getting post scanning statistics """
+            with GlobalVars.PostScanStat.rw_lock:
+                posts_scanned = GlobalVars.PostScanStat.num_posts_scanned
+                scan_time = GlobalVars.PostScanStat.post_scan_time
+            if scan_time == 0:
+                posts_per_second = None
+            else:
+                posts_per_second = posts_scanned / scan_time
+            return (posts_scanned, scan_time, posts_per_second)
+
+        @staticmethod
+        def reset_stat():
+            """ Resetting post scanning data """
+            with GlobalVars.PostScanStat.rw_lock:
+                GlobalVars.PostScanStat.num_posts_scanned = 0
+                GlobalVars.PostScanStat.post_scan_time = 0
 
     config_parser = RawConfigParser()
 
@@ -148,9 +175,66 @@ class GlobalVars:
 
     location = config.get("location", "Continuous Integration")
 
-    metasmoke_ws = None
-    metasmoke_down = False
-    metasmoke_failures = 0  # Consecutive count, not cumulative
+    class MSStatus:
+        """ Tracking metasmoke status """
+        ms_is_up = True
+        counter = 0
+        rw_lock = threading.Lock()
+
+        @staticmethod
+        def set_up():
+            """ Set metasmoke status to up """
+            # Private to metasmoke.py
+            with GlobalVars.MSStatus.rw_lock:
+                GlobalVars.MSStatus.ms_is_up = True
+
+        @staticmethod
+        def set_down():
+            """ Set metasmoke status to down """
+            # Private to metasmoke.py
+            with GlobalVars.MSStatus.rw_lock:
+                GlobalVars.MSStatus.ms_is_up = False
+
+        @staticmethod
+        def is_up():
+            """ Query if metasmoke status is up """
+            with GlobalVars.MSStatus.rw_lock:
+                current_ms_status = GlobalVars.MSStatus.ms_is_up
+            return current_ms_status
+
+        @staticmethod
+        def is_down():
+            """ Query if metasmoke status is down """
+            return not GlobalVars.MSStatus.is_up()
+
+        # Why implement failed() and succeeded() here, as they will only be called in metasmoke.py?
+        # Because get_failure_count() need to be exposed to global, so it is more convenient
+        # to implement failed() and succeeded() here.
+        @staticmethod
+        def failed():
+            """ Indicate a metasmoke connection failure """
+            with GlobalVars.MSStatus.rw_lock:
+                GlobalVars.MSStatus.counter += 1
+
+        @staticmethod
+        def succeeded():
+            """ Indicate a metasmoke connection success """
+            with GlobalVars.MSStatus.rw_lock:
+                GlobalVars.MSStatus.counter = 0
+
+        @staticmethod
+        def get_failure_count():
+            """ Get consecutive metasmoke connection failure count """
+            with GlobalVars.MSStatus.rw_lock:
+                failure_count = GlobalVars.MSStatus.counter
+            return failure_count
+
+        @staticmethod
+        def reset_ms_status():
+            """ Reset class GlobalVars.MSStatus to default values """
+            with GlobalVars.MSStatus.rw_lock:
+                GlobalVars.MSStatus.ms_is_up = True
+                GlobalVars.MSStatus.counter = 0
 
     chatexchange_u = config.get("ChatExchangeU")
     chatexchange_p = config.get("ChatExchangeP")
@@ -224,6 +308,8 @@ class GlobalVars:
             "at [rev {}]({}/commit/{}) (running on {})".format(
                 GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
                 GlobalVars.commit.id, GlobalVars.location)
+        GlobalVars.PostScanStat.reset_stat()
+        GlobalVars.MSStatus.reset_ms_status()
 
 
 GlobalVars.reload()
