@@ -126,7 +126,8 @@ class GlobalVars:
     standby_mode = False
     no_se_activity_scan = False
 
-    api_request_lock = threading.Lock()
+    api_request_lock = threading.Lock()  # Get this lock before making API requests
+    apiquota_rw_lock = threading.Lock()  # Get this lock before reading/writing apiquota
 
     class PostScanStat:
         """ Tracking post scanning data """

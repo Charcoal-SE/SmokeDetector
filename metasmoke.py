@@ -32,6 +32,8 @@ from socketscience import SocketScience
 import metasmoke_cache
 
 
+MAX_MS_WEBSOCKET_RETRIES = 5
+MAX_FAILURES = 10  # Preservative, 10 errors = MS down
 NO_ACTIVITY_PINGS_TO_STANDBY = 8
 NO_ACTIVITY_PINGS_TO_REPORT = 4
 
@@ -150,7 +152,8 @@ class Metasmoke:
     @staticmethod
     def init_websocket():
         has_succeeded = False
-        while GlobalVars.metasmoke_key != "":
+        failed_connection_attempts = 0
+        while GlobalVars.metasmoke_key and GlobalVars.metasmoke_ws_host:
             try:
                 Metasmoke.connect_websocket()
                 has_succeeded = True
@@ -171,7 +174,16 @@ class Metasmoke:
                 GlobalVars.MSStatus.failed()
                 log('error', "Couldn't bind to MS websocket")
                 if not has_succeeded:
-                    break
+                    failed_connection_attempts += 1
+                    if failed_connection_attempts > MAX_MS_WEBSOCKET_RETRIES:
+                        chatcommunicate.tell_rooms_with("debug", "Cannot initiate MS websocket." +
+                                                        "  Manual `!!/reboot` is required once MS is up")
+                        log('warning', "Cannot initiate MS websocket." +
+                            " init_websocket() in metasmoke.py is terminating.")
+                        break
+                    else:
+                        # Wait and hopefully network issues will be solved
+                        time.sleep(10)
                 else:
                     time.sleep(10)
 
@@ -424,7 +436,7 @@ class Metasmoke:
     @staticmethod
     def update_code_privileged_users_list():
         if GlobalVars.MSStatus.is_down():
-            log('warning', "Metasmoke is down, can't update code privilege list")
+            log('warning', "Metasmoke is down, can't update blacklist manager privilege list")
             return
 
         payload = {'key': GlobalVars.metasmoke_key}
@@ -490,11 +502,15 @@ class Metasmoke:
         if GlobalVars.MSStatus.is_down():
             log('warning', "Metasmoke is down, not sending statistics")
             return
+        # Get current apiquota from globalvars
+        GlobalVars.apiquota_rw_lock.acquire()
+        current_apiquota = GlobalVars.apiquota
+        GlobalVars.apiquota_rw_lock.release()
 
         posts_scanned, scan_time, posts_per_second = GlobalVars.PostScanStat.get_stat()
         payload = {'key': GlobalVars.metasmoke_key,
                    'statistic': {'posts_scanned': posts_scanned,
-                                 'api_quota': GlobalVars.apiquota}}
+                                 'api_quota': current_apiquota}}
         if posts_per_second:
             # Send scan rate as well, if applicable.
             payload['statistic']['post_scan_rate'] = posts_per_second

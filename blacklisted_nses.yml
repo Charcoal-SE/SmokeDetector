@@ -29,6 +29,9 @@ items:
   - chip.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
 - ns:
+  - clark.ns.cloudflare.com.
+  - kiki.ns.cloudflare.com.
+- ns:
   - elliot.ns.cloudflare.com.
   - sue.ns.cloudflare.com.
 - ns:
@@ -69,3 +72,5 @@ items:
 - ns: md-19.webhostbox.net.
 - ns: ukm14.siteground.biz.
 - ns: my-wifiextnet.net.
+- ns: doodledigital.net.
+- ns: ocpdns.com.

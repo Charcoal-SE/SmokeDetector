@@ -3,6 +3,7 @@ import datahandling
 import metasmoke
 import globalvars
 import tasks
+from helpers import log
 
 
 class MetasmokeCache:
@@ -53,7 +54,11 @@ class MetasmokeCache:
             return value, cache_status
         elif value is None and generator is not None:
             # Cache miss, but we have a generator available so we can gen a value and return that.
-            value = generator()
+            try:
+                value = generator()
+            except Exception:
+                # Already logged in generator() so no need to log again
+                return None, 'MISS-NOGEN'
             MetasmokeCache.insert(key, value, expiry)
             tasks.Tasks.do(dump_cache_data)
             return value, 'HIT-GENERATED'
@@ -83,7 +88,11 @@ class MetasmokeCache:
 
             items = []
             while True:
-                resp = metasmoke.Metasmoke.get(uri, params=params)
+                try:
+                    resp = metasmoke.Metasmoke.get(uri, params=params)
+                except Exception as e:
+                    log('warning', e)
+                    raise
                 if resp is None or not resp.ok:
                     break
                 else:
