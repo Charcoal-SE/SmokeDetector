@@ -20967,3 +20967,4 @@
 1591517248	Makyen	(?-i:47157d6a51c7b977cf168941987ba0e7)
 1591517274	Makyen	granite[\W_]*+me
 1591517300	Makyen	srs-gis\.ir
+1591522676	Makyen	ibikri\.com
