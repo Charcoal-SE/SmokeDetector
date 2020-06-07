@@ -28,7 +28,7 @@ from blacklists import *
 def _anchor(str_to_anchor, blacklist_type):
     """ Anchor a string according to the operation. """
     if blacklist_type in {Blacklist.WATCHED_KEYWORDS, Blacklist.KEYWORDS}:
-        return "(?s:\b" + str_to_anchor + "\b)"
+        return r"(?s:\b" + str_to_anchor + r"\b)"
     else:
         return str_to_anchor
 
