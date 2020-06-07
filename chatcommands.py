@@ -943,7 +943,8 @@ def reboot(msg, alias_used="reboot"):
     :return: None
     """
     if alias_used in {"reboot", "restart"}:
-        tell_rooms("Goodbye, cruel world", ("debug", (msg._client.host, msg.room.id)), ())
+        tell_rooms("{}: Goodbye, cruel world".format(GlobalVars.location),
+                   ("debug", (msg._client.host, msg.room.id)), ())
         time.sleep(3)
         exit_mode("reboot")
     elif alias_used in {"reload"}:
@@ -1043,7 +1044,8 @@ def stappit(msg, location_search):
     :return: None
     """
     if location_search is None or location_search.lower() in GlobalVars.location.lower():
-        tell_rooms("Goodbye, cruel world", ((msg._client.host, msg.room.id)), ())
+        tell_rooms("{}: Goodbye, cruel world".format(GlobalVars.location),
+                   ((msg._client.host, msg.room.id)), ())
 
         time.sleep(3)
         exit_mode("shutdown", code=6)
