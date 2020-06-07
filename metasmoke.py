@@ -479,16 +479,13 @@ class Metasmoke:
             log('warning', "Metasmoke is down, not sending statistics")
             return
 
-        (posts_scanned, scan_time, posts_per_second) = GlobalVars.PostScanStat.get_stat()
+        posts_scanned, scan_time, posts_per_second = GlobalVars.PostScanStat.get_stat()
+        payload = {'key': GlobalVars.metasmoke_key,
+                   'statistic': {'posts_scanned': posts_scanned,
+                                 'api_quota': GlobalVars.apiquota}}
         if posts_per_second:
-            payload = {'key': GlobalVars.metasmoke_key,
-                       'statistic': {'posts_scanned': posts_scanned,
-                                     'api_quota': GlobalVars.apiquota,
-                                     'post_scan_rate': posts_per_second}}
-        else:
-            payload = {'key': GlobalVars.metasmoke_key,
-                       'statistic': {'posts_scanned': posts_scanned,
-                                     'api_quota': GlobalVars.apiquota}}
+            # Send scan rate as well, if applicable.
+            payload['statistic']['post_scan_rate'] = posts_per_second
 
         GlobalVars.PostScanStat.reset_stat()
 
