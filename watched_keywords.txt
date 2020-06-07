@@ -20963,3 +20963,4 @@
 1591504926	user12986714	(?-i:bFC-_eHhf6o)(?#youtu.be)
 1591505480	Makyen	customer[\W_]*+care[\W_]*+number(?<=nobroker[\W_]*+customer[\W_]*+care[\W_]*+number)
 1591508125	Makyen	androscience\.info
+1591508694	user12986714	!$
