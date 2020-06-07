@@ -2265,6 +2265,14 @@ create_rule("potentially bad keyword in {}",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=False, body=False, title=False,
             max_rep=93, max_score=1)
-
+# Link at beginning of post; pulled from watchlist
+create_rule("link at beginning of {}",
+            r'^\s*<p>\s*(?:</?\w+/?>\s*)*<a href="(?!(?:[a-z]+:)?//(?:[^" >/.]*\.)*(?:(?:quora|medium'
+            r'|googleusercontent|youtube|microsoft|unity3d|wso|merriam-webster|oracle|magento|example'
+            r'l|apple|google|github|imgur|stackexchange|stackoverflow|serverfault|superuser|askubuntu)\.com'
+            r'|(?:(?:lvcharts|php|jsfiddle|mathoverflow)\.net)|github\.io|youtu\.be|edu|(?:(?:arxiv|drupal'
+            r'|python|isc|khronos|mongodb|open-std|dartlang|apache|pydata|gnu|js|wordpress|wikipedia)\.org))'
+            r'[/\"])\W*(?![\W\w]*?</(?:code|blockquote)>)',
+            title=False, username=False, body=True)
 
 FindSpam.reload_blacklists()
