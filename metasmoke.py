@@ -62,10 +62,10 @@ class Metasmoke:
             # MAX_FAILURES is constant so no lock.
             if current_counter > Metasmoke.AutoSwitch.MAX_FAILURES and\
                GlobalVars.MSStatus.is_up() and current_auto:
-                log("warning", "Last {} connections to metasmoke failed".format(current_counter) +
+                log("warning", "Last {} connection(s) to metasmoke failed".format(current_counter) +
                                " Setting metasmoke status to down.")
-                chatcommunicate.tell_rooms_with("debug", "**Warning**. {}:".format(GlobalVars.location) +
-                                                         " Last {} connection to metasmoke".format(current_counter) +
+                chatcommunicate.tell_rooms_with("debug", "**Warning**. {}: ".format(GlobalVars.location) +
+                                                         "Last {} connection(s) to metasmoke".format(current_counter) +
                                                          " failed. Setting metasmoke status to **down**.")
                 Metasmoke.set_ms_down()
 
@@ -84,21 +84,26 @@ class Metasmoke:
             if current_counter > Metasmoke.AutoSwitch.MAX_SUCCESSES and\
                GlobalVars.MSStatus.is_down() and current_auto:
                 # Why use warning? Because some action may be needed if people don't think metasmoke is up.
-                log("warning", "Last {} connections to metasmoke succeeded".format(current_counter) +
+                log("warning", "Last {} connection(s) to metasmoke succeeded".format(current_counter) +
                                " Setting metasmoke status to up.")
-                chatcommunicate.tell_rooms_with("debug", "**Notice**. {}:".format(GlobalVars.location) +
-                                                         " Last {} connection to metasmoke".format(current_counter) +
+                chatcommunicate.tell_rooms_with("debug", "**Notice**. {}: ".format(GlobalVars.location) +
+                                                         "Last {} connection(s) to metasmoke".format(current_counter) +
                                                          " succeeded. Setting metasmoke status to **up**.")
                 Metasmoke.set_ms_up()
 
         @staticmethod
         def enable_autoswitch(to_enable):
             """ Enable or disable auto status switch """
+            switch_auto_msg = ""
             with Metasmoke.AutoSwitch.rw_lock:
-                Metasmoke.AutoSwitch.autoswitch_is_on = to_enable
-            switch_auto_msg = "Metasmoke status autoswitch is now {}abled.".format("en" if to_enable else "dis")
-            log("info", switch_auto_msg)
-            chatcommunicate.tell_rooms_with("debug", switch_auto_msg)
+                if Metasmoke.AutoSwitch.autoswitch_is_on is not to_enable:
+                    # Log and post chat message only if there really is a change.
+                    switch_auto_msg = "Metasmoke status autoswitch is now {}abled.".format("en" if to_enable else "dis")
+                    Metasmoke.AutoSwitch.autoswitch_is_on = to_enable
+
+            if switch_auto_msg:
+                log("info", switch_auto_msg)
+                chatcommunicate.tell_rooms_with("debug", switch_auto_msg)
 
         @staticmethod
         def reset_switch():
@@ -110,20 +115,27 @@ class Metasmoke:
     @staticmethod
     def set_ms_up():
         """ Switch metasmoke status to up """
-        # These comments are to be removed once documentation
-        # for class Metasmoke as a whole is completed.
-        log("info", "Metasmoke status is now set to up.")
-        chatcommunicate.tell_rooms_with("debug", "Metasmoke status is now set to up.")
-        GlobalVars.MSStatus.set_up()
+        ms_up_msg = ""
+        if GlobalVars.MSStatus.is_down():
+            ms_up_msg = "Metasmoke status is now set to up."
+            GlobalVars.MSStatus.set_up()
+
+        # We must first set metasmoke to up, then say that metasmoke is up, not the other way around.
+        if ms_up_msg:
+            log("info", ms_up_msg)
+            chatcommunicate.tell_rooms_with("debug", ms_up_msg)
 
     @staticmethod
     def set_ms_down():
         """ Switch metasmoke status to down """
-        # These comments are to be removed once documentation
-        # for class Metasmoke as a whole is completed.
-        log("info", "Metasmoke status is now set to down.")
-        chatcommunicate.tell_rooms_with("debug", "Metasmoke status is now set to down.")
-        GlobalVars.MSStatus.set_down()
+        ms_down_msg = ""
+        if GlobalVars.MSStatus.is_up():
+            ms_down_msg = "Metasmoke status is now set to down."
+            GlobalVars.MSStatus.set_down()
+
+        if ms_down_msg:
+            log("info", ms_down_msg)
+            chatcommunicate.tell_rooms_with("debug", ms_down_msg)
 
     @staticmethod
     def connect_websocket():
