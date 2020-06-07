@@ -728,7 +728,7 @@ def metasmoke(msg, alias_used):
             "metasmoke is down. Current failure count: {} ({id})".format(GlobalVars.MSStatus.get_failure_count(),
                                                                          id=GlobalVars.location),
         ]
-        if GlobalVars.MSStatus.is_up:
+        if GlobalVars.MSStatus.is_up():
             # True = 1 and False = 0 is a legacy feature
             # Better not to use them
             return status_text[0]
