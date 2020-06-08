@@ -308,8 +308,8 @@ class GlobalVars:
             "at [rev {}]({}/commit/{}) (running on {})".format(
                 GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
                 GlobalVars.commit.id, GlobalVars.location)
-        GlobalVars.PostScanStat.reset_stat()
-        GlobalVars.MSStatus.reset_ms_status()
 
 
+GlobalVars.PostScanStat.reset_stat()
+GlobalVars.MSStatus.reset_ms_status()
 GlobalVars.reload()
