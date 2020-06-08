@@ -324,3 +324,4 @@ lustresparasala
 (?-i:^kyler walter$)
 (?-i:^bailing$)
 (?-i:^mrdev$)
+(?-i:^Pediatric[\W_]*+On[\W_]*+[Cc]all$)
