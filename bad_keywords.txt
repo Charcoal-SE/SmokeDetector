@@ -2121,7 +2121,6 @@ acv[\W_]*+plus
 renegade[\W_]*+meta(?:[\W_]*+pro)?
 ultra[\W_]*+cbd[\W_]*+extract(?:[\W_]*+(?:australia|au|\d++|[\da-f]{4,}+))*
 cyberghost475(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
-gedeon(?:[\W_]*+keto)?
 RCMB[\W_]*+college
 (?:bhb[\W_]*+)?keto[\W_]*+phin(?:[\W_]*+bhb)?
 puri[\W_]*+hair(?!(?<=purihair)101\.hatenablog\.com)(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
