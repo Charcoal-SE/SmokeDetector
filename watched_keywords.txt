@@ -20741,7 +20741,6 @@
 1590871430	Makyen	european[\W_]*+finance[\W_]*+group
 1590875744	Makyen	meripustak\.com
 1590875770	Makyen	homemakerguide\.com
-1590875796	Makyen	liberator[\W_]*+x2
 1590875823	Makyen	mutuelles-retraites\.fr
 1590875988	Makyen	mycfavisit\.onl
 1590876015	Makyen	point-of-view\.org
