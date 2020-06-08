@@ -20998,5 +20998,4 @@
 1591597303	tripleee	canon-printer-support-numbers\.com
 1591599542	tripleee	(?-i:^Dipsikha Jain$)
 1591602845	tripleee	customercarenumberof\.in
-1591603046	tripleee	(?-i:30k65Ow)(?# bit.ly)
 1591603082	tripleee	homelody-fr\.com

@@ -2295,3 +2295,4 @@ arovanti(?:[\W_]*+(?:cream|creme|review|\d++|[\da-f]{4,}+))*
 fresh[\W_]*+prime[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 granite[\W_]*+(?:male|pills)
 liberator[\W_]*+x2
+(?-i:30k65Ow)(?# bit.ly)
