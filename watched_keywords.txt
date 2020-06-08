@@ -20997,3 +20997,4 @@
 1591593856	tripleee	dqfansurvey\.us
 1591595943	user12986714	clearviewplasticsurgery\.com
 1591597303	tripleee	canon-printer-support-numbers\.com
+1591597462	user12986714	[\w-]{1,30}-support-numbers\.com
