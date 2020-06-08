@@ -325,3 +325,4 @@ lustresparasala
 (?-i:^bailing$)
 (?-i:^mrdev$)
 (?-i:^Pediatric[\W_]*+On[\W_]*+[Cc]all$)
+(?-i:^Yasir Nawaz$)
