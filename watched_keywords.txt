@@ -21033,3 +21033,4 @@
 1591705818	tripleee	globaltechhninza\.com
 1591706221	tripleee	plus[\W_]*+academic(?!\.com)
 1591706425	tripleee	clemens|\W_]*+dox
+1591713881	Machavity	aquilaclouds\.com
