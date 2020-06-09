@@ -6953,7 +6953,6 @@
 1544324468	Makyen	anonymous\W*(?:dot\W*)?squadd\W*(?:at\W*)?gmail\W*(?:dot\W*)?com(?#Obfuscated anonymous.squadd@gmail.com)
 1544337679	Shree	voodoospell\d*(?:@gmail\.com)
 1544351547	Makyen	^\s*<p>\s*(?:</?\w+/?>\s*)*<a href="(?:(?:[a-z]+:)?//(?:[^" >/.]*\.)*(?:youtube\.com|youtu\.be)[/"])\W*(?![\W\w]*?</(?:code|blockquote)>)(?#Separate start with youtube watch; lower TP rate, but most TP are not otherwise detected)
-1544351575	Makyen	^\s*<p>\s*(?:</?\w+/?>\s*)*<a href="(?!(?:[a-z]+:)?//(?:[^" >/.]*\.)*(?:(?:quora|medium|googleusercontent|youtube|microsoft|unity3d|wso|merriam-webster|oracle|magento|example|apple|google|github|imgur|stackexchange|stackoverflow|serverfault|superuser|askubuntu)\.com|(?:(?:lvcharts|php|jsfiddle|mathoverflow)\.net)|github\.io|youtu\.be|edu|(?:(?:arxiv|drupal|python|isc|khronos|mongodb|open-std|dartlang|apache|pydata|gnu|js|wordpress|wikipedia)\.org))[/"])\W*(?![\W\w]*?</(?:code|blockquote)>)
 1544398401	Makyen	swftoapkconverter\.com
 1544406739	Makyen	batikprasetyo\.com
 1544406846	Makyen	batikaqila\.com
