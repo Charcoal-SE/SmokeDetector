@@ -17672,7 +17672,6 @@
 1582180837	Makyen	blinkhealths\.com
 1582180866	Makyen	blinkhealths(?!\.com)
 1582180934	Makyen	(?-i:4YXmyXslQ-U)(?#youtu.be)
-1582180958	Makyen	genericambienonline\.com
 1582180981	Makyen	usapharmacyworld\.com
 1582181001	Makyen	reviewmypills\.tumblr\.com
 1582181839	Makyen	onlinemedzpharmacy\.com
