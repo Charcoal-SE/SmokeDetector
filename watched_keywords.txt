@@ -16002,7 +16002,6 @@
 1578490393	Eliah Kagan	spectraplaza\.com
 1578490469	Eliah Kagan	wowpencils\.com
 1578490590	Eliah Kagan	gocryptowise\.com
-1578490614	Eliah Kagan	coinmarketcap\.com(?<!api\.coinmarketcap\.com)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1578535932	Eliah Kagan	businessmasteratwood\.com
 1578540034	Eliah Kagan	phattarapongsutheemon
 1578540326	Eliah Kagan	weedshopinc\.com
