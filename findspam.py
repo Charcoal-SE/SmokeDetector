@@ -2274,6 +2274,6 @@ create_rule("link at beginning of {}",
             r'|python|isc|khronos|mongodb|open-std|dartlang|apache|pydata|gnu|js|wordpress|wikipedia)\.org))'
             r'[/\"])\W*(?![\W\w]*?</(?:code|blockquote)>)',
             title=False, username=False, body=True,
-            max_re=32, max_score=1)
+            max_rep=32, max_score=1)
 
 FindSpam.reload_blacklists()
