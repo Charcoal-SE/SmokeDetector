@@ -8,7 +8,7 @@
 > Note: methods return `None` unless noted otherwise.  
 
 > Note: for implementation details involving lock operations, `acquire ... release`
-may be implemented as either `acquire ... release`, `acquire try ... finally`, or `with ...`.
+is implemented using `with`  
 
 # File globalvars.py  
 ## Class GlobalVars.PostScanStat  
@@ -99,6 +99,8 @@ Automatically switch metasmoke status.
 - `ping_succeeded()`: Indicate a status ping success.
 - `enable_autoswitch(to_enable)`: Turn on or off auto switch.
 If `on` is `True`, auto switch is turned on. Otherwise auto switch is turned off.
+- `get_ping_failure()`: Get the count of consecutive ping failures.
+Negative value indicates consecutive ping successes.
 - `reset_switch()`: Reset class `Metasmoke.AutoSwitch` to default values.
 ### Thread safety  
 Yes.  
@@ -125,6 +127,7 @@ Decrease `ping_failure_counter` by `1`. Read `-ping_failure_counter` into `curre
 Decide if `current_counter` is greater than `MAX_SUCCESSES`, metasmoke status is down, and `current_auto` is `True`.
 If yes, issue a message to chat and call `ms_up()`.
 - `enable_autoswitch(to_enable)`: Obtain `rw_lock`. Set `autoswitch_is_on` to `to_enable`. Release `rw_lock`.
+- `get_ping_failure()`: Obtain `rw_lock`. Return `ping_failure_counter`. Release `rw_lock`.
 - `reset_switch()`: Obtain `rw_lock`. Set `ping_failure_counter` to `0`. Set `autoswitch_is_on` to `True`. Release `rw_lock`.
 #### Considerations  
 - Only status ping failures and successes should count for turning metasmoke on and off,

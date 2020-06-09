@@ -785,6 +785,26 @@ def metasmoke(msg, alias_used):
            " Auto status switch: **{}abled**.".format("dis" if forced else "en")
 
 
+@command(aliases=["scan-stat", "statistics"])
+def stat():
+    """ Return post scan statistics. """
+    posts_scanned, scan_time, posts_per_second = GlobalVars.PostScanStat.get_stat()
+    stat_msg = "Posts scanned: {}; Scan time: {}".format(posts_scanned, scan_time)
+
+    rate_msg = ""
+    if posts_per_second:
+        rate_msg = "; Posts scanned per second: {}".format(posts_per_second)
+
+    return stat_msg + rate_msg
+
+
+@command(aliases=["counter", "internal-counter", "ping-failure"])
+def ping_failure_counter():
+    """ Return ping failure counter value of Metasmoke: AutoSwitch. """
+    counter = Metasmoke.AutoSwitch.get_ping_failure()
+    return "Current ping failure counter value: {}".format(counter)
+
+
 # noinspection PyIncorrectDocstring
 @command(aliases=["commands", "help"])
 def info():

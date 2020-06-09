@@ -108,6 +108,12 @@ class Metasmoke:
                 chatcommunicate.tell_rooms_with("debug", switch_auto_msg)
 
         @staticmethod
+        def get_ping_failure():
+            """ Get ping failure count. Negative number is ping success count. """
+            with Metasmoke.AutoSwitch.rw_lock:
+                return Metasmoke.AutoSwitch.ping_failure_counter
+
+        @staticmethod
         def reset_switch():
             """ Reset class Metasmoke.AutoSwitch to default values """
             with Metasmoke.AutoSwitch.rw_lock:
