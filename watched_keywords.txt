@@ -5422,7 +5422,6 @@
 1536974826	Makyen	pcbindex .{0,80}\b(?:2006|china)
 1536974839	Makyen	busybeefitness\.ca
 1536989009	Makyen	naturalherbalremedyblog\.wordpress\.com
-1536991174	Makyen	ratemds\.com
 1536994904	Makyen	realdealdocumentation@protonmail\.com
 1536995523	Makyen	realdeal-docs\.com
 1536995605	Makyen	ndsreporting\.com
