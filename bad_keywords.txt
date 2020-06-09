@@ -2297,3 +2297,4 @@ liberator[\W_]*+x2
 (?-i:30k65Ow)(?# bit.ly)
 gedeon[\W_]*+keto
 keto[\W_]*+gedeon
+vital[\W_]*+synergy(?:[\W_]*+keto)?

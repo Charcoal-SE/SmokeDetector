@@ -20909,7 +20909,6 @@
 1591335897	tripleee	javelin[\W_]*+(?:male|pills?)
 1591336564	Makyen	netchorus\.com
 1591342998	Makyen	getvitalsynergyketo(?#facebook.com)
-1591343272	tripleee	vital[\W_]*+synergy(?:[\W_]*+keto)?
 1591343686	tripleee	crestwooddentalky\.com
 1591344037	tripleee	sweepstakesoffers\.com
 1591345113	Makyen	(?-i:uI0CfX2ePD0)(?#youtu.be)
