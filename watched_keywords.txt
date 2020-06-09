@@ -19488,7 +19488,6 @@
 1587214947	Makyen	klariecannacare\.com
 1587219049	Makyen	churchofsataninitiationtemple(?:@gmail\.com)?
 1587219870	Makyen	krishitool\.com
-1587220099	Makyen	saddatruck\.com
 1587220251	Makyen	rehab-quotes\.online
 1587229880	Makyen	(?-i:BENJAMIN DOUGLAS)
 1587229933	Makyen	douglasloanfirm2(?:@gmail\.com)?
