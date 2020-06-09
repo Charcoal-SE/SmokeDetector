@@ -20015,7 +20015,6 @@
 1588665894	tripleee	thecallgirlsdelhi\.com
 1588665912	tripleee	highprofile-escorts\.com
 1588666275	Makyen	orolante[\W_]*+cleanse(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
-1588666542	Makyen	sadda[\W_]*+truck(?!\.com(?<=saddatruck\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1588667202	Makyen	(?-i:33glV\.jpg)
 1588667228	Makyen	(?-i:CD0KtpMpPOc)(?#youtu.be)
 1588667255	Makyen	campingstovereviews\.com
