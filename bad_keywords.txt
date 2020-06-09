@@ -1867,7 +1867,7 @@ keto\W?flex(?:\W?diet)?
 slim\W?look(?:\Wforskolin)?
 retinol\W?re
 entramax
-billhackwizard(?:\W*+(?:at\W*+)?gmail\W*+(?:dot\W*+)?com)?(?#hacker, partially obfuscated email)
+b[\W_]*+i[\W_]*+l[\W_]*+l[\W_]*+h[\W_]*+a[\W_]*+c[\W_]*+k[\W_]*+w[\W_]*+i[\W_]*+z[\W_]*+a[\W_]*+r[\W_]*+d(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?(?#hacker, obfuscated email)
 momentrim
 neural\W?fusion(?:\W?brain)?
 keto\W?zen(?:\W?diet)?
