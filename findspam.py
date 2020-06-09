@@ -2269,10 +2269,11 @@ create_rule("potentially bad keyword in {}",
 create_rule("link at beginning of {}",
             r'^\s*<p>\s*(?:</?\w+/?>\s*)*<a href="(?!(?:[a-z]+:)?//(?:[^" >/.]*\.)*(?:(?:quora|medium'
             r'|googleusercontent|youtube|microsoft|unity3d|wso|merriam-webster|oracle|magento|example'
-            r'l|apple|google|github|imgur|stackexchange|stackoverflow|serverfault|superuser|askubuntu)\.com'
+            r'|apple|google|github|imgur|stackexchange|stackoverflow|serverfault|superuser|askubuntu)\.com'
             r'|(?:(?:lvcharts|php|jsfiddle|mathoverflow)\.net)|github\.io|youtu\.be|edu|(?:(?:arxiv|drupal'
             r'|python|isc|khronos|mongodb|open-std|dartlang|apache|pydata|gnu|js|wordpress|wikipedia)\.org))'
             r'[/\"])\W*(?![\W\w]*?</(?:code|blockquote)>)',
-            title=False, username=False, body=True)
+            title=False, username=False, body=True,
+            max_re=32, max_score=1)
 
 FindSpam.reload_blacklists()
