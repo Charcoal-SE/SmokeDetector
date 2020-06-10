@@ -1752,6 +1752,18 @@ def allspam(msg, url, alias_used="allspam"):
 
 def report_post(url, reported_by, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
     """ Scan or report a single post """
+    # Arguments:
+    # - url: url to the post being reported (string)
+    # - reported_by: user reporting the post (ChatExchange user object)
+    # - reported_in: room in which the post is reported (integer for chatroom,
+    #    True for MS API, or None)
+    # - blacklist_by: the chat transcript url of the report chat msg (string)
+    # - operation: Operation to perform (string, shall be in
+    #    {"scan", "scan-force", "report", "report-force" or "report-direct"})
+    # - custom_reason: a custom reason why to report the post (string or None)
+    # Returns:
+    # - None or a string containing the message to reply to the reporter
+
     reporter_name = reported_by.name
     operation = operation or "report"
     is_forced = operation in {"scan-force", "report-force", "report-direct"}
