@@ -20691,7 +20691,6 @@
 1590645270	Makyen	prepaidgiftbalance\.one
 1590648659	Makyen	techxiphoid\.com
 1590651752	tripleee	jodhpurjaisalmer\.com
-1590654621	tripleee	(?-i:[a-z]\d+mg$)
 1590657696	tripleee	whats[\W_]*+app[\W_]*+group[\W_]*+links?
 1590658292	tripleee	mortgagesmortgages\.ca
 1590661504	tripleee	friv3\.icu
