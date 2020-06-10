@@ -647,7 +647,7 @@ items:
 - ns:
   - lee.ns.cloudflare.com.
   - megan.ns.cloudflare.com.
-- ns_
+- ns:
   - lennon.ns.cloudflare.com.
   - melina.ns.cloudflare.com.
 - ns:
