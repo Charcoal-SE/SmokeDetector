@@ -21062,3 +21062,4 @@
 1591775427	tripleee	(?-i:^IPTV GTV$)
 1591783494	tripleee	imlasapk\.fun
 1591793224	tripleee	peryourhealth\.icu
+1591795194	user12986714	pdfdoctor\.com
