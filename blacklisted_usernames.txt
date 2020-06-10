@@ -330,3 +330,4 @@ lustresparasala
 (?-i:^Robert john$)
 (?-i:^wyd1014$)
 ^sadda[\W_]*+truck(?:\.com)?$
+(?-i:^Jake Syd$)
