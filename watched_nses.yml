@@ -137,6 +137,9 @@ items:
   - lewis.ns.cloudflare.com.
 - ns:
   - arnold.ns.cloudflare.com.
+  - elsa.ns.cloudflare.com.
+- ns:
+  - arnold.ns.cloudflare.com.
   - fay.ns.cloudflare.com.
 - ns:
   - aron.ns.cloudflare.com.
