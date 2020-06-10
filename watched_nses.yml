@@ -645,6 +645,9 @@ items:
   - laura.ns.cloudflare.com.
   - terin.ns.cloudflare.com.
 - ns:
+  - lee.ns.cloudflare.com.
+  - megan.ns.cloudflare.com.
+- ns_
   - lennon.ns.cloudflare.com.
   - melina.ns.cloudflare.com.
 - ns:
