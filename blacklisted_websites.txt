@@ -839,7 +839,7 @@ kerneltraining\.com
 magento-attribute\.com
 hitslimbody\.com
 academicwriter\.co\.uk
-intl\.aliyun\.com
+\b(?<![^\W_]-)intl\.aliyun\.com(?![.-][^\W_])\b
 brainfireadvice\.com
 gonetech\.net
 tipstune\.net
@@ -1844,7 +1844,7 @@ francesupplements\.fr
 essayvikings\.com
 youtubetomp3converter\.world
 freemp3download\.club
-gardensnursery\.com 
+gardensnursery\.com
 traditionessaysonline\.com
 e621\.net
 probuztech\.com
