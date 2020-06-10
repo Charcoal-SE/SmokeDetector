@@ -153,12 +153,14 @@ def init(username, password, try_cookies=True):
                 pass
 
     if os.path.isfile("messageQueue.p"):
+        # Restore previous session, if exists
         with open("messageQueue.p", "rb") as queue_file:
             try:
                 _msg_queue = pickle.load(queue_file)
             except EOFError:
                 pass
 
+    # Tell GlobalVars that this process needs cleaning up.
     with GlobalVars.need_cleanup_list_lock:
         GlobalVars.need_cleanup.append(_cleanup.cleanup_finished)
 
@@ -171,6 +173,7 @@ def init(username, password, try_cookies=True):
 
 
 def exit_watcher():
+    """ Watch for the program termination event and dump current session at exit. """
     GlobalVars.terminate.wait()
     _cleanup.wait_t_terminate()
     with open("messageQueue.p", "wb") as pickle_file:
