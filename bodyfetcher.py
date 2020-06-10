@@ -59,31 +59,30 @@ class BodyFetcher:
         post_id = d["id"]
         if (post_id == 3122 or post_id == 51812) and site_base == "meta.stackexchange.com":
             return  # don't check meta sandbox, it's full of weird posts
-        self.queue_modify_lock.acquire()
-        if site_base not in self.queue:
-            self.queue[site_base] = {}
+        with self.queue_modify_lock:
+            if site_base not in self.queue:
+                self.queue[site_base] = {}
 
-        # Something about how the queue is being filled is storing Post IDs in a list.
-        # So, if we get here we need to make sure that the correct types are paseed.
-        #
-        # If the item in self.queue[site_base] is a dict, do nothing.
-        # If the item in self.queue[site_base] is not a dict but is a list or a tuple, then convert to dict and
-        # then replace the list or tuple with the dict.
-        # If the item in self.queue[site_base] is neither a dict or a list, then explode.
-        if type(self.queue[site_base]) is dict:
-            pass
-        elif type(self.queue[site_base]) is not dict and type(self.queue[site_base]) in [list, tuple]:
-            post_list_dict = {}
-            for post_list_id in self.queue[site_base]:
-                post_list_dict[post_list_id] = None
-            self.queue[site_base] = post_list_dict
-        else:
-            raise TypeError("A non-iterable is in the queue item for a given site, this will cause errors!")
+            # Something about how the queue is being filled is storing Post IDs in a list.
+            # So, if we get here we need to make sure that the correct types are paseed.
+            #
+            # If the item in self.queue[site_base] is a dict, do nothing.
+            # If the item in self.queue[site_base] is not a dict but is a list or a tuple, then convert to dict and
+            # then replace the list or tuple with the dict.
+            # If the item in self.queue[site_base] is neither a dict or a list, then explode.
+            if type(self.queue[site_base]) is dict:
+                pass
+            elif type(self.queue[site_base]) is not dict and type(self.queue[site_base]) in [list, tuple]:
+                post_list_dict = {}
+                for post_list_id in self.queue[site_base]:
+                    post_list_dict[post_list_id] = None
+                self.queue[site_base] = post_list_dict
+            else:
+                raise TypeError("A non-iterable is in the queue item for a given site, this will cause errors!")
 
-        # This line only works if we are using a dict in the self.queue[site_base] object, which we should be with
-        # the previous conversion code.
-        self.queue[site_base][str(post_id)] = datetime.utcnow()
-        self.queue_modify_lock.release()
+            # This line only works if we are using a dict in the self.queue[site_base] object, which we should be with
+            # the previous conversion code.
+            self.queue[site_base][str(post_id)] = datetime.utcnow()
 
         if GlobalVars.flovis is not None:
             GlobalVars.flovis.stage('bodyfetcher/enqueued', site_base, post_id,
@@ -113,9 +112,8 @@ class BodyFetcher:
                 return
 
         # We're not making an API request, so explicitly store the queue
-        self.queue_modify_lock.acquire()
-        store_bodyfetcher_queue()
-        self.queue_modify_lock.release()
+        with self.queue_modify_lock:
+            store_bodyfetcher_queue()
 
     def print_queue(self):
         return '\n'.join(["{0}: {1}".format(key, str(len(values))) for (key, values) in self.queue.items()])
@@ -124,10 +122,9 @@ class BodyFetcher:
         if site not in self.queue:
             return
 
-        self.queue_modify_lock.acquire()
-        new_posts = self.queue.pop(site)
-        store_bodyfetcher_queue()
-        self.queue_modify_lock.release()
+        with self.queue_modify_lock:
+            new_posts = self.queue.pop(site)
+            store_bodyfetcher_queue()
 
         new_post_ids = [int(k) for k in new_posts.keys()]
 
@@ -143,34 +140,31 @@ class BodyFetcher:
             seconds_in_queue = (pop_time - add_time).total_seconds()
             add_queue_timing_data(site, seconds_in_queue)
 
-        self.max_ids_modify_lock.acquire()
+        with self.max_ids_modify_lock:
+            if site in self.previous_max_ids and max(new_post_ids) > self.previous_max_ids[site]:
+                previous_max_id = self.previous_max_ids[site]
+                intermediate_posts = range(previous_max_id + 1, max(new_post_ids))
 
-        if site in self.previous_max_ids and max(new_post_ids) > self.previous_max_ids[site]:
-            previous_max_id = self.previous_max_ids[site]
-            intermediate_posts = range(previous_max_id + 1, max(new_post_ids))
+                # We don't want to go over the 100-post API cutoff, so take the last
+                # (100-len(new_post_ids)) from intermediate_posts
 
-            # We don't want to go over the 100-post API cutoff, so take the last
-            # (100-len(new_post_ids)) from intermediate_posts
+                intermediate_posts = intermediate_posts[(100 - len(new_post_ids)):]
 
-            intermediate_posts = intermediate_posts[(100 - len(new_post_ids)):]
+                # new_post_ids could contain edited posts, so merge it back in
+                combined = chain(intermediate_posts, new_post_ids)
 
-            # new_post_ids could contain edited posts, so merge it back in
-            combined = chain(intermediate_posts, new_post_ids)
+                # Could be duplicates, so uniquify
+                posts = list(set(combined))
+            else:
+                posts = new_post_ids
 
-            # Could be duplicates, so uniquify
-            posts = list(set(combined))
-        else:
-            posts = new_post_ids
-
-        try:
-            if max(new_post_ids) > self.previous_max_ids[site]:
+            try:
+                if max(new_post_ids) > self.previous_max_ids[site]:
+                    self.previous_max_ids[site] = max(new_post_ids)
+                    store_bodyfetcher_max_ids()
+            except KeyError:
                 self.previous_max_ids[site] = max(new_post_ids)
                 store_bodyfetcher_max_ids()
-        except KeyError:
-            self.previous_max_ids[site] = max(new_post_ids)
-            store_bodyfetcher_max_ids()
-
-        self.max_ids_modify_lock.release()
 
         log('debug', "New IDs / Hybrid Intermediate IDs for {}:".format(site))
         if len(new_post_ids) > 30:
@@ -213,68 +207,65 @@ class BodyFetcher:
         # wait to make sure API has/updates post data
         time.sleep(3)
 
-        GlobalVars.api_request_lock.acquire()
-        # Respect backoff, if we were given one
-        if GlobalVars.api_backoff_time > time.time():
-            time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
-        try:
-            time_request_made = datetime.utcnow().strftime('%H:%M:%S')
-            response = requests.get(url, params=params, timeout=20).json()
-        except (requests.exceptions.Timeout, requests.ConnectionError, Exception):
-            # Any failure in the request being made (timeout or otherwise) should be added back to
-            # the queue.
-            self.queue_modify_lock.acquire()
-            if site in self.queue:
-                self.queue[site].update(new_posts)
-            else:
-                self.queue[site] = new_posts
-            self.queue_modify_lock.release()
-            GlobalVars.api_request_lock.release()
-            return
+        with GlobalVars.api_request_lock:
+            # Respect backoff, if we were given one
+            if GlobalVars.api_backoff_time > time.time():
+                time.sleep(GlobalVars.api_backoff_time - time.time() + 2)
+            try:
+                time_request_made = datetime.utcnow().strftime('%H:%M:%S')
+                response = requests.get(url, params=params, timeout=20).json()
+            except (requests.exceptions.Timeout, requests.ConnectionError, Exception):
+                # Any failure in the request being made (timeout or otherwise) should be added back to
+                # the queue.
+                with self.queue_modify_lock:
+                    if site in self.queue:
+                        self.queue[site].update(new_posts)
+                    else:
+                        self.queue[site] = new_posts
+                return
 
-        self.api_data_lock.acquire()
-        add_or_update_api_data(site)
-        self.api_data_lock.release()
+            with self.api_data_lock:
+                add_or_update_api_data(site)
 
-        message_hq = ""
-        if "quota_remaining" in response:
-            if response["quota_remaining"] - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0:
-                tell_rooms_with("debug", "API quota rolled over with {0} requests remaining. "
-                                         "Current quota: {1}.".format(GlobalVars.apiquota,
-                                                                      response["quota_remaining"]))
+            message_hq = ""
+            with GlobalVars.apiquota_rw_lock:
+                if "quota_remaining" in response:
+                    if response["quota_remaining"] - GlobalVars.apiquota >= 5000 and GlobalVars.apiquota >= 0:
+                        tell_rooms_with("debug", "API quota rolled over with {0} requests remaining. "
+                                                 "Current quota: {1}.".format(GlobalVars.apiquota,
+                                                                              response["quota_remaining"]))
 
-                sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1), reverse=True)
-                api_quota_used_per_site = ""
-                for site_name, quota_used in sorted_calls_per_site:
-                    sanatized_site_name = site_name.replace('.com', '').replace('.stackexchange', '')
-                    api_quota_used_per_site += sanatized_site_name + ": {0}\n".format(str(quota_used))
-                api_quota_used_per_site = api_quota_used_per_site.strip()
+                        sorted_calls_per_site = sorted(GlobalVars.api_calls_per_site.items(), key=itemgetter(1),
+                                                       reverse=True)
+                        api_quota_used_per_site = ""
+                        for site_name, quota_used in sorted_calls_per_site:
+                            sanatized_site_name = site_name.replace('.com', '').replace('.stackexchange', '')
+                            api_quota_used_per_site += sanatized_site_name + ": {0}\n".format(str(quota_used))
+                        api_quota_used_per_site = api_quota_used_per_site.strip()
 
-                tell_rooms_with("debug", api_quota_used_per_site)
-                clear_api_data()
-            if response["quota_remaining"] == 0:
-                tell_rooms_with("debug", "API reports no quota left!  May be a glitch.")
-                tell_rooms_with("debug", str(response))  # No code format for now?
-            if GlobalVars.apiquota == -1:
-                tell_rooms_with("debug", "Restart: API quota is {quota}."
-                                         .format(quota=response["quota_remaining"]))
-            GlobalVars.apiquota = response["quota_remaining"]
-        else:
-            message_hq = "The quota_remaining property was not in the API response."
+                        tell_rooms_with("debug", api_quota_used_per_site)
+                        clear_api_data()
+                    if response["quota_remaining"] == 0:
+                        tell_rooms_with("debug", "API reports no quota left!  May be a glitch.")
+                        tell_rooms_with("debug", str(response))  # No code format for now?
+                    if GlobalVars.apiquota == -1:
+                        tell_rooms_with("debug", "Restart: API quota is {quota}."
+                                                 .format(quota=response["quota_remaining"]))
+                    GlobalVars.apiquota = response["quota_remaining"]
+                else:
+                    message_hq = "The quota_remaining property was not in the API response."
 
-        if "error_message" in response:
-            message_hq += " Error: {} at {} UTC.".format(response["error_message"], time_request_made)
-            if "error_id" in response and response["error_id"] == 502:
-                if GlobalVars.api_backoff_time < time.time() + 12:  # Add a backoff of 10 + 2 seconds as a default
-                    GlobalVars.api_backoff_time = time.time() + 12
-            message_hq += " Backing off on requests for the next 12 seconds."
-            message_hq += " Previous URL: `{}`".format(url)
+            if "error_message" in response:
+                message_hq += " Error: {} at {} UTC.".format(response["error_message"], time_request_made)
+                if "error_id" in response and response["error_id"] == 502:
+                    if GlobalVars.api_backoff_time < time.time() + 12:  # Add a backoff of 10 + 2 seconds as a default
+                        GlobalVars.api_backoff_time = time.time() + 12
+                message_hq += " Backing off on requests for the next 12 seconds."
+                message_hq += " Previous URL: `{}`".format(url)
 
-        if "backoff" in response:
-            if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
-                GlobalVars.api_backoff_time = time.time() + response["backoff"]
-
-        GlobalVars.api_request_lock.release()
+            if "backoff" in response:
+                if GlobalVars.api_backoff_time < time.time() + response["backoff"]:
+                    GlobalVars.api_backoff_time = time.time() + response["backoff"]
 
         if len(message_hq) > 0 and "site is required" not in message_hq:
             tell_rooms_with("debug", message_hq.strip())
@@ -372,8 +363,6 @@ class BodyFetcher:
                 log('error', "Exception handling answers:", e)
 
         end_time = time.time()
-        GlobalVars.posts_scan_stats_lock.acquire()
-        GlobalVars.num_posts_scanned += num_scanned
-        GlobalVars.post_scan_time += end_time - start_time
-        GlobalVars.posts_scan_stats_lock.release()
+        scan_time = end_time - start_time
+        GlobalVars.PostScanStat.add_stat(num_scanned, scan_time)
         return

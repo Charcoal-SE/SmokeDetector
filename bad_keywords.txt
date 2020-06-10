@@ -303,7 +303,6 @@ best\Wbrite\Wsmile
 lunexia
 biotivia
 juvexil
-palmitate
 testoflex
 qugenix
 regal\Wslim
@@ -592,7 +591,7 @@ Deepak\W?Ahirwar
 grovitex
 annibol
 renewiderm
-acethinker
+acethinker(?!\.com)
 testo\Wmax
 povella
 Poraxin\WRX
@@ -1177,7 +1176,6 @@ dermology
 prime\W?energy
 fxx\W?me
 mega\W?boost\W?intense\W?xl
-rock\W?hard(?:\W?bull)?
 detox\W?my\W?mac
 oxinova
 steel\W?rx
@@ -1577,7 +1575,7 @@ safflower\W?oil
 ramsedave121(?:@gma?il\.com)?
 (?:meg|test)adrox
 unique(?:\W|doc)?producers?
-skin ?care
+skin *care
 herbal ?care
 relief\W?hemp\W?cbd
 andro[ -]dna
@@ -1662,7 +1660,6 @@ perfect\W?keto(?:\W?base)?
 protec\W?vital(?:\W?plus)?
 abcya
 adam4adam
-filehippo
 magnum\W?pump(?:\W?xr)?
 retro\W?vigor
 mct\W?oil
@@ -1699,7 +1696,7 @@ alvera\W?tone
 green\W?force(?:\W?keto)?
 quick\W?burn(?:\W?keto)?
 vital[\W_]*+keto(?:[\W_]*+(?:belgium|review|client|schweiz|\d++|[\da-f]{4,}+)s?)*
-slim\W?select(?:\W?keto)?
+slim[\W_]*+select[\W_]*+keto
 zederex
 azur\W?derma
 capillique
@@ -1870,7 +1867,7 @@ keto\W?flex(?:\W?diet)?
 slim\W?look(?:\Wforskolin)?
 retinol\W?re
 entramax
-billhackwizard(?:\W*+(?:at\W*+)?gmail\W*+(?:dot\W*+)?com)?(?#hacker, partially obfuscated email)
+b[\W_]*+i[\W_]*+l[\W_]*+l[\W_]*+h[\W_]*+a[\W_]*+c[\W_]*+k[\W_]*+w[\W_]*+i[\W_]*+z[\W_]*+a[\W_]*+r[\W_]*+d(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?(?#hacker, obfuscated email)
 momentrim
 neural\W?fusion(?:\W?brain)?
 keto\W?zen(?:\W?diet)?
@@ -2124,7 +2121,6 @@ acv[\W_]*+plus
 renegade[\W_]*+meta(?:[\W_]*+pro)?
 ultra[\W_]*+cbd[\W_]*+extract(?:[\W_]*+(?:australia|au|\d++|[\da-f]{4,}+))*
 cyberghost475(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
-gedeon(?:[\W_]*+keto)?
 RCMB[\W_]*+college
 (?:bhb[\W_]*+)?keto[\W_]*+phin(?:[\W_]*+bhb)?
 puri[\W_]*+hair(?!(?<=purihair)101\.hatenablog\.com)(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
@@ -2283,8 +2279,24 @@ utopia[\W_]*+p2p
 keto[\W_]*+genix(?:[\W_]*+(?:pills|uk|\d++|[\da-f]{4,}+))*
 insta[\W_]*+hard(?:[\W_]*+on)?
 instant[\W_]*+keto(?:[\W_]*+(?:ca|canada|\d++|[\da-f]{4,}+))*
-raydia
+raydia(?:[\W_]*+(?:care|cream|creme|skin|raydia|anti|aging|review|\d++|[\da-f]{4,}+)s?)*
 illuminatiwordoffame12(?:@gmail\.com)?
 kanavance
 prime[\W_]*+trt(?!\.official(?<=prime\.trt\.official))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 veyomax(?:[\W_]*+rx)?
+hemp[\W_]*+max[\W_]*+lab
+trim[\W_]*+fast[\W_]*+keto(?:[\W_]*+(?:australia|au|shark|tank|\d++|[\da-f]{4,}+))*
+ketokor
+vision[\W_]*+20
+vir?maxryn(?:[\W_]*+(?:review|malep?|enhancement|upgrade|\d++|[\da-f]{4,}+)s?)*
+Priest Ade
+arovanti(?:[\W_]*+(?:cream|creme|review|\d++|[\da-f]{4,}+))*
+fresh[\W_]*+prime[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+granite[\W_]*+(?:male|pills)
+liberator[\W_]*+x2
+(?-i:30k65Ow)(?# bit.ly)
+gedeon[\W_]*+keto
+keto[\W_]*+gedeon
+vital[\W_]*+synergy(?:[\W_]*+keto)?
+sadda[\W_]*+truck(?!\.com(?<=saddatruck\.com))(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+virtus

@@ -504,7 +504,7 @@ def levenshtein(s1, s2):
     return previous_row[-1]
 
 
-@create_rule("misleading link", title=False, max_rep=10, max_score=1, stripcodeblocks=True)
+@create_rule("misleading link", title=False, max_rep=11, max_score=1, stripcodeblocks=True)
 def misleading_link(s, site):
     # Regex that finds the href value and the link text from an HTML <a>, if the link text
     # doesn't contain a '<' or space.
@@ -723,7 +723,7 @@ def process_numlist(numlist):
     return processed, normalized
 
 
-@create_rule("bad phone number in {}", body_summary=True, max_rep=5, max_score=1, stripcodeblocks=True)
+@create_rule("bad phone number in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=True)
 def check_blacklisted_numbers(s, site):
     return check_numbers(
         s,
@@ -732,7 +732,7 @@ def check_blacklisted_numbers(s, site):
     )
 
 
-@create_rule("potentially bad keyword in {}", body_summary=True, max_rep=5, max_score=1, stripcodeblocks=True)
+@create_rule("potentially bad keyword in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=True)
 def check_watched_numbers(s, site):
     return check_numbers(
         s,
@@ -799,7 +799,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
 
 # Pattern-matching product name: three keywords in a row at least once, or two in a row at least twice
 @create_rule("pattern-matching product name in {}", body_summary=True, stripcodeblocks=True, answer=False,
-             max_rep=4, max_score=1)
+             max_rep=12, max_score=1)
 def pattern_product_name(s, site):
     required_keywords = [
         "Testo(?:sterone)?s?", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Forskolin", "Diet", "Slim", "Serum",
@@ -1179,7 +1179,7 @@ def username_similar_website(post):
         return False, False, False, ""
 
 
-@create_rule("single character over used in post", max_rep=20, body_summary=True,
+@create_rule("single character over used in post", max_rep=22, body_summary=True,
              all=False, sites=["judaism.stackexchange.com"])
 def character_utilization_ratio(s, site):
     s = strip_urls_and_tags(s)
@@ -1352,7 +1352,7 @@ def get_domain(s, full=False):
     return domain
 
 
-# create_rule("answer similar to existing answer on post", whole_post=True, max_rep=50
+# create_rule("answer similar to existing answer on post", whole_post=True, max_rep=52
 #             all=True, sites=["codegolf.stackexchange.com"])
 def similar_answer(post):
     if not post.parent:
@@ -1378,7 +1378,7 @@ def strip_urls_and_tags(s):
     return URL_REGEX.sub("", TAG_REGEX.sub("", s))
 
 
-@create_rule("mostly punctuation marks in {}", max_rep=50,
+@create_rule("mostly punctuation marks in {}", max_rep=52,
              sites=["math.stackexchange.com", "mathoverflow.net", "codegolf.stackexchange.com"])
 def mostly_punctuations(s, site):
     # Strip code blocks here rather than with `stripcodeblocks` so we get the length of the whole post in s
@@ -1806,7 +1806,7 @@ city_list = [
     "Nagpur", "Nainital", "Nashik", "Neemrana", "Noida",
     "Patna", "Pune",
     "Raipur", "Rajkot", "Ramnagar", "Rishikesh", "Rohini",
-    "Surat",
+    "Sonipat", "Surat",
     "Telangana", "Tiruchi", "Tiruchirappalli", "Thane",
     "Trichinopoly", "Trichy", "Trivandrum", "Thiruvananthapuram",
     "Udaipur", "Uttarakhand",
@@ -1836,12 +1836,12 @@ def format_with_city_list(regex_text):
 # General blacklists, regex will be filled at the reload_blacklist() call at the bottom
 FindSpam.rule_bad_keywords = create_rule("bad keyword in {}", regex="",
                                          username=True, body_summary=True,
-                                         max_rep=4, max_score=1, skip_creation_sanity_check=True)
+                                         max_rep=32, max_score=1, skip_creation_sanity_check=True)
 FindSpam.rule_watched_keywords = create_rule("potentially bad keyword in {}", regex="",
                                              username=True, body_summary=True,
-                                             max_rep=30, max_score=1, skip_creation_sanity_check=True)
+                                             max_rep=32, max_score=1, skip_creation_sanity_check=True)
 FindSpam.rule_blacklisted_websites = create_rule("blacklisted website in {}", regex="", body_summary=True,
-                                                 max_rep=50, max_score=5, skip_creation_sanity_check=True)
+                                                 max_rep=52, max_score=5, skip_creation_sanity_check=True)
 FindSpam.rule_blacklisted_usernames = create_rule("blacklisted username", regex="",
                                                   title=False, body=False, username=True,
                                                   skip_creation_sanity_check=True)
@@ -1859,29 +1859,29 @@ create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\
                    'biology.stackexchange.com',
                    'stackoverflow.com'],
             username=True, body_summary=True,
-            max_rep=4, max_score=1)
+            max_rep=32, max_score=1)
 # Blacklist keto(?:nes?)?, but exempt Chemistry. Was a watch added by iBug on 1533209512.
 # Stack Overflow, but not in code
 create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)", all=False, stripcodeblocks=True,
             sites=['stackoverflow.com'],
             username=True, body_summary=True,
-            max_rep=4, max_score=1)
+            max_rep=32, max_score=1)
 # Watch keto(?:nes?)? on sites where it's not blacklisted, exempt Chemistry. Was a watch added by iBug on 1533209512.
 create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)", all=False,
             sites=['medicalsciences.stackexchange.com',
                    'fitness.stackexchange.com',
                    'biology.stackexchange.com'],
             username=True, body_summary=True,
-            max_rep=30, max_score=1)
+            max_rep=32, max_score=1)
 # Watch (?-i:SEO|seo)$, but exempt Webmasters for titles, but not usernames. Was a watch by iBug on 1541730383. (pt1)
 create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo)$",
             sites=['webmasters.stackexchange.com'],
             title=True, body=False, username=False,
-            max_rep=30, max_score=1)
+            max_rep=32, max_score=1)
 # Watch (?-i:SEO|seo)$, but exempt Webmasters for titles, but not usernames. Was a watch by iBug on 1541730383. (pt2)
 create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo)$",
             title=False, body=False, username=True,
-            max_rep=30, max_score=1)
+            max_rep=32, max_score=1)
 
 # Bad keywords in titles and usernames, all sites
 create_rule("bad keyword in {}",
@@ -1912,14 +1912,14 @@ create_rule("potentially bad keyword in {}",
             body=False)
 create_rule("bad keyword in {}",
             r'(?i)[\w\s]{0,20}help(?: a)?(?: weak)? postgraduate student(?: to)? write(?: a)? book\??',
-            body=False, max_rep=20, max_score=2)
+            body=False, max_rep=22, max_score=2)
 # Requested by Mithrandir 2019-03-08
 create_rule("potentially bad keyword in {}", r'^v\w{3,5}\Wkumar$',
             title=False, body=False, username=True,
             all=False, sites=['scifi.stackexchange.com'])
 # Eltima: Nested lookarounds for length limit
 create_rule("bad keyword in {}", r"(?is)\beltima(?<=^(?=.{0,750}$).*)",
-            title=False, max_rep=50)
+            title=False, max_rep=52)
 create_rule("bad keyword in {}",
             r"(?i)\b(?:(?:beauty|skin|health|face|eye)[- ]?(?:serum|therapy|hydration|tip|renewal|shop|store|lyft|"
             r"product|strateg(?:y|ies)|gel|lotion|cream|treatment|method|school|expert)|fat ?burn(?:er|ing)?|"
@@ -2013,7 +2013,7 @@ create_rule("pattern-matching website in {}",
             r"[\w-]*?\.(?:com|co\.|net|org|info|in\W)",
             sites=["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
                    "skeptics.stackexchange.com", "bicycles.stackexchange.com"],
-            username=True, body_summary=True, max_rep=4, max_score=2)
+            username=True, body_summary=True, max_rep=22, max_score=2)
 # Links preceded by arrows >>>
 create_rule("link following arrow in {}",
             r"(?is)(?:>>+|[@:]+>+|==\s*>+|={4,}|===>+|= = =|Read More|Click Here).{0,20}"
@@ -2130,12 +2130,12 @@ create_rule("offensive {} detected",
 create_rule("numbers-only title",
             r"^(?=.*[0-9])[^\pL]*$",
             sites=["math.stackexchange.com"],
-            body=False, max_rep=50, max_score=5)
+            body=False, max_rep=52, max_score=5)
 # Parenting troll
 create_rule("bad keyword in {}",
             r"(?i)\b(erica|jeff|er1ca|spam|moderator)\b",
             all=False, sites=["parenting.stackexchange.com"],
-            title=False, body_summary=True, max_rep=50)
+            title=False, body_summary=True, max_rep=52)
 # Code Review troll
 create_rule("bad keyword in {}",
             r"JAMAL",
@@ -2167,7 +2167,7 @@ create_rule('link inside deeply nested blockquotes',
 create_rule("title ends with comma",
             r".*\,$",
             all=False, sites=['interpersonal.stackexchange.com'],
-            body=False, max_rep=50)
+            body=False, max_rep=52)
 # Title starts and ends with a forward slash
 create_rule("title starts and ends with a forward slash",
             r"^\/.*\/$",
@@ -2265,6 +2265,15 @@ create_rule("potentially bad keyword in {}",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=False, body=False, title=False,
             max_rep=93, max_score=1)
-
+# Link at beginning of post; pulled from watchlist
+create_rule("link at beginning of {}",
+            r'^\s*<p>\s*(?:</?\w+/?>\s*)*<a href="(?!(?:[a-z]+:)?//(?:[^" >/.]*\.)*(?:(?:quora|medium'
+            r'|googleusercontent|youtube|microsoft|unity3d|wso|merriam-webster|oracle|magento|example'
+            r'|apple|google|github|imgur|stackexchange|stackoverflow|serverfault|superuser|askubuntu)\.com'
+            r'|(?:(?:lvcharts|php|jsfiddle|mathoverflow)\.net)|github\.io|youtu\.be|edu|(?:(?:arxiv|drupal'
+            r'|python|isc|khronos|mongodb|open-std|dartlang|apache|pydata|gnu|js|wordpress|wikipedia)\.org))'
+            r'[/\"])\W*(?![\W\w]*?</(?:code|blockquote)>)',
+            title=False, username=False, body=True,
+            max_rep=32, max_score=1)
 
 FindSpam.reload_blacklists()
