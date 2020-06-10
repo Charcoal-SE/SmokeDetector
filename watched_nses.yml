@@ -154,9 +154,6 @@ items:
   - arya.ns.cloudflare.com.
   - paul.ns.cloudflare.com.
 - ns:
-  - asa.ns.cloudflare.com.
-  - plato.ns.cloudflare.com.
-- ns:
   - ashley.ns.cloudflare.com.
   - lee.ns.cloudflare.com.
 - ns:
