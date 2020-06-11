@@ -21084,3 +21084,4 @@
 1591862875	tripleee	(?-i:9zIiFl69QoE)(?# youtube)
 1591862920	tripleee	health[\W_]*+stores\d*
 1591862953	tripleee	femme[\W_]*+genix
+1591863892	tripleee	howtoisolve\.com
