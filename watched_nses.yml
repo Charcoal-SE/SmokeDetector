@@ -729,6 +729,9 @@ items:
   - neil.ns.cloudflare.com.
   - tricia.ns.cloudflare.com.
 - ns:
+  - noah.ns.cloudflare.com.
+  - ophelia.ns.cloudflare.com.
+- ns:
   - norm.ns.cloudflare.com.
   - olga.ns.cloudflare.com.
 - ns:
