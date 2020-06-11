@@ -21090,3 +21090,4 @@
 1591869431	tripleee	clash[\W_]*+coder(?!\.tech)
 1591869545	Daniil	NextraOne
 1591874130	Daniil	Kilahzzcolourful(?:@gmail\.com)?
+1591874708	Daniil	modelinmumbai\.in
