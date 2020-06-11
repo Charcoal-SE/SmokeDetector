@@ -81,6 +81,7 @@ items:
   comment: 11/100 over a yeasr
   disable: true
 - asn: '56110'
+- asn: '58640'
 - asn: '59253'
 - asn: '59922'
 - asn: '62134'
