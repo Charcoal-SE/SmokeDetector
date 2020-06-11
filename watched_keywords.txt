@@ -21089,3 +21089,4 @@
 1591866068	Daniil	RailRestro
 1591869312	tripleee	glasgow-media\.biz
 1591869431	tripleee	clash[\W_]*+coder(?!\.tech)
+1591869545	Daniil	NextraOne
