@@ -21118,3 +21118,4 @@
 1591949922	Makyen	kasino
 1591950054	tripleee	(?-i:^Jeremy Zucker$)
 1591951717	Makyen	chethansairkishna(?:@gmail\.com)?
+1591953485	tripleee	mindcard\.in
