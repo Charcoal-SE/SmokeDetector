@@ -21120,3 +21120,4 @@
 1591953485	tripleee	mindcard\.in
 1591953581	tripleee	lepto[\W_]*+connect
 1591954417	tripleee	icdramatv\.com
+1591955492	tripleee	nsslaptopservicecenter\.in
