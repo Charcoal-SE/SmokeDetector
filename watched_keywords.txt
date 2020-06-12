@@ -9756,7 +9756,6 @@
 1557799347	Makyen	princeidialu(?:@outlook\.com)?
 1557799428	Makyen	android-premium-apps\.blogspot\.com
 1557811955	tripleee	unique-elevators\.com
-1557813880	tripleee	ceat
 1557819198	tripleee	4MyResearch\.com
 1557820018	tripleee	sarmedia\.in
 1557825357	tripleee	ithelpforemailandsoftware\.wordpress
