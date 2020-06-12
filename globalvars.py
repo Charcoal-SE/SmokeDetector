@@ -15,7 +15,7 @@ import subprocess as sp
 import platform
 if 'windows' in platform.platform().lower():
     # noinspection PyPep8Naming
-    from classes._Git_Windows import git, GitError
+    from _Git_Windows import git, GitError
 else:
     from sh.contrib import git
 

@@ -16,7 +16,7 @@ import types
 import requests
 if GlobalVars.on_windows:
     # noinspection PyPep8Naming
-    from classes._Git_Windows import git
+    from _Git_Windows import git
 else:
     from sh.contrib import git
 

@@ -187,7 +187,7 @@ core_files = {
     "gitmanager.py", "globalvars.py", "helpers.py", "metasmoke.py", "nocrash.py", "parsing.py",
     "spamhandling.py", "socketscience.py", "tasks.py", "ws.py",
 
-    "classes/feedback.py", "classes/_Git_Windows.py", "classes/__init__.py", "classes/_Post.py",
+    "classes/feedback.py", "_Git_Windows.py", "classes/__init__.py", "classes/_Post.py",
 
     # Before these are made reloadable
     "rooms.yml",
