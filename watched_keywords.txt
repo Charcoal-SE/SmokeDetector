@@ -21105,3 +21105,4 @@
 1591914459	user12986714	hack into any atm machine
 1591925563	Daniil	quickbooksdiagnostic\.tools
 1591929118	NobodyNada	bikini-bombshell\.com
+1591929157	NobodyNada	bikini\W*bombshell(?!\.com)
