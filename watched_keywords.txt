@@ -12559,7 +12559,6 @@
 1567534776	Makyen	zmovies\.me
 1567534784	Makyen	123gomovieshub\.co
 1567538476	Makyen	pekanbaruriau\.webflow\.io
-1567574613	tripleee	anujjindal\.in
 1567588696	Makyen	wwwnortonactivate\.org (?#Yes, with the www)
 1567588837	Makyen	nortonactivate\.org
 1567590247	Makyen	wholestack\.in
