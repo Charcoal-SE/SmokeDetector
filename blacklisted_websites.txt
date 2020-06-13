@@ -3024,7 +3024,7 @@ ketohour\.com
 marketresearchfuture\.com
 nutrifitsupplements\.com
 emailsaccountrecovery\.com
-paper\.li
+\b(?<![^\W_]-)paper\.li(?![.-][^\W_])\b
 medicfitonline\.store
 tripnetra\.com
 supplementsworld\.org
