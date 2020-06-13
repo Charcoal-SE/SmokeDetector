@@ -21155,3 +21155,4 @@
 1592062904	Daniil	oxbridgeassignments\.co\.uk
 1592062978	Daniil	(?-i:W1G 0DB)(?#Spammer postcode)
 1592070147	user12986714	(?-i:KRmd2sUxI98)(?#youtube.com)
+1592074820	user12986714	mysolutioncafe\.blogspot
