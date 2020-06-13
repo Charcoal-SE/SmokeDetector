@@ -20952,7 +20952,6 @@
 1591522676	Makyen	ibikri\.com
 1591535229	Daniil	freebacklinkgenerator\.net
 1591545607	Daniil	techyez\.com
-1591545951	Makyen	thelonglasting\.com
 1591547691	Makyen	(?-i:aZn6QdzFXys)(?#youtu.be)
 1591547719	Makyen	wandalone(?#gumroad.com)
 1591547744	Makyen	201581196879064(?# form.jotform.com)
