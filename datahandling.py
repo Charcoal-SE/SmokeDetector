@@ -16,7 +16,7 @@ import regex
 from parsing import api_parameter_from_link, post_id_from_link
 from globalvars import GlobalVars
 import blacklists
-from helpers import ErrorLogs, log, log_exception
+from helpers import ErrorLogs, log, log_exception, redact_passwords
 
 last_feedbacked = None
 PICKLE_STORAGE = "pickles/"
@@ -377,7 +377,7 @@ def fetch_lines_from_error_log(count):
             name, message, tb)
         for time, name, message, tb in logs])
     if s:
-        return s
+        return redact_password(s)
     else:
         return "The fetched log is empty."
 

@@ -110,8 +110,8 @@ def expand_shorthand_link(s):
 def redact_passwords(value):
     value = str(value)
     if GlobalVars.github_password:
-        value = value.replace(GlobalVars.github_password, "[GitHub PASSWORD REDACTED]") \
-                     .replace(quote(GlobalVars.github_password), "[GitHub PASSWORD REDACTED]")
+        value = value.replace(GlobalVars.github_password, "[GITHUB PASSWORD REDACTED]") \
+                     .replace(quote(GlobalVars.github_password), "[GITHUB PASSWORD REDACTED]")
     if GlobalVars.chatexchange_p:
         value = value.replace(GlobalVars.chatexchange_p, "[CHAT PASSWORD REDACTED]") \
                      .replace(quote(GlobalVars.chatexchange_p), "[CHAT PASSWORD REDACTED]")
