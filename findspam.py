@@ -1597,7 +1597,7 @@ bad_keywords_nwb = [  # "nwb" == "no word boundary"
     "anti[- ]?aging",
     "(?:ultra|berry|body)[ -]?ketone",
     "(?:cogni|oro)[ -]?(?:lift|plex)",
-    "(?:skin|face|eye)[- ]?(?:serum|therapy|hydration|tip|renewal|gel|lotion|cream)",
+    "(?:skin|face(?<!interface)(?<!surface)|eye)[- ]?(?:serum|therapy|hydration|tip|renewal|gel|lotion|cream)",
     r"\bnutra(?!l(?:|y|ity|i[sz]ing|i[sz]ed?)s?\b)",
     r"contact (?:me|us)\W*<a ",
     "ecoflex",
