@@ -21160,7 +21160,6 @@
 1592093919	Makyen	delaneys\.space
 1592093933	Makyen	bitcoinplatform\.com
 1592093949	Makyen	free\.cc
-1592093967	Makyen	incatalog\.kz
 1592093992	Makyen	kodaktif\.com
 1592094008	Makyen	hannah@goodhometime\.com
 1592094024	Makyen	apcomingfuturetrends\.blogspot

@@ -3636,3 +3636,4 @@ mapupdates\.org
 anujjindal\.in
 thelonglasting\.com
 \b(?<![^\W_]-)adfoc\.us/\d+
+incatalog\.kz
