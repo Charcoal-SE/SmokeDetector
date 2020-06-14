@@ -1608,18 +1608,18 @@ bad_keywords_nwb = [  # "nwb" == "no word boundary"
     "tapsi ?sarkar",
 
     r"(?:"
-    r"networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing"
-    r"|salesforce|joomla"
+    "" r"networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing"
+    "" r"|salesforce|joomla"
     r")"
     r"(?: certification)? (?:courses?|training)(?=.{0,25}</a>)",
 
     r"(?:"
-    r"design|development|compan(?:y|ies)|agen(?:ts?|c(?:y|ies))|expert|institute|classes|schools?"
-    r"|colleges?|universit(?:y|ies)|training|courses?|jobs?|automation|sex|services?|kindergarten"
+    "" r"design|development|compan(?:y|ies)|agen(?:ts?|c(?:y|ies))|expert|institute|classes|schools?"
+    "" r"|colleges?|universit(?:y|ies)|training|courses?|jobs?|automation|sex|services?|kindergarten"
     r")"
     r"\W*+(?:center|centre|institute|work|provider)?"
-
     r"(?:\b.{1,8}\b)?\L<city>\b",
+
     r"\b\L<city>(?:\b.{1,8}\b)?(?:tour)",  # TODO: Populate this "after city" keyword list
     u"Ｃ[Ｏ0]Ｍ",
     "sunergetic",
@@ -1633,37 +1633,41 @@ bad_keywords_nwb = [  # "nwb" == "no word boundary"
 # Patterns: the top four lines are the most straightforward, matching any site with this string in domain name
 pattern_websites = [
     r"(?:"
-    r"enstella|recoverysoftware|removevirus|support(?:number|help|quickbooks)|techhelp|calltech|exclusive"
-    r"|onlineshop|video(?:course|classes|tutorial(?!s))|vipmodel|porn(?<!wordporn)|wholesale|inboxmachine"
-    r"|(?:get|buy)cheap|escort|diploma|gov(?:t|ernment)jobs|extramoney|earnathome|spell(?:caster|specialist)|profits"
-    r"|seo-?(?:tool|service|trick|market)|onsale|fat(?:burn|loss)|(?:\.|//|best)cheap|online-?(?:training|solution)"
-    r"|\bbabasupport\b|movieshook|where\w*to\w*buy"
-    r"|norton(?!\.com(?<=[^\da-z-]norton\.com))"
+    "" r"enstella|recoverysoftware|removevirus|support(?:number|help|quickbooks)|techhelp|calltech|exclusive"
+    "" r"|onlineshop|video(?:course|classes|tutorial(?!s))|vipmodel|porn(?<!wordporn)|wholesale|inboxmachine"
+    "" r"|(?:get|buy)cheap|escort|diploma|gov(?:t|ernment)jobs|extramoney|earnathome|spell(?:caster|specialist)|profits"
+    "" r"|seo-?(?:tool|service|trick|market)|onsale|fat(?:burn|loss)|(?:\.|//|best)cheap|online-?(?:training|solution)"
+    "" r"|\bbabasupport\b|movieshook|where\w*to\w*buy"
+    "" r"|norton(?!\.com(?<=[^\da-z-]norton\.com))"
     r")"
     r"[\w-]*+\.(?:com?|net|org|in(?:\W|fo)|us|ir|wordpress|blogspot|tumblr|webs(?=\.)|info)",
 
     r"(?:"
-    r"replica(?!t)|rs\d?gold|rssong|runescapegold|maxgain|e-cash|mothers?day|phone-?number|fullmovie|tvstream"
-    r"|trainingin|dissertation|(?:placement|research)-?(?:paper|statement|essay)|digitalmarketing|infocampus|freetrial"
-    r"|cracked\w{3}|bestmover|relocation|\w{4}mortgage|revenue|testo[-bsx]|cleanse|cleansing|detox|suppl[ei]ment"
-    r"|loan|herbal|serum|lift(?:eye|skin)|(?:skin|eye)lift|luma(?:genex|lift)|renuva|svelme|santeavis|wrinkle|topcare"
+    "" r"replica(?!t)|rs\d?gold|rssong|runescapegold|maxgain|e-cash|mothers?day|phone-?number|fullmovie|tvstream"
+    "" r"|trainingin|dissertation"
+    "" r"|(?:placement|research)-?(?:paper|statement|essay)"
+    "" r"|digitalmarketing|infocampus|freetrial"
+    "" r"|cracked\w{3}|bestmover|relocation|\w{4}mortgage|revenue|testo[-bsx]|cleanse|cleansing|detox|suppl[ei]ment"
+    "" r"|loan|herbal|serum"
+    "" r"|lift(?:eye|skin)|(?:skin|eye)lift"
+    "" r"|luma(?:genex|lift)|renuva|svelme|santeavis|wrinkle|topcare"
     r")"
     r"[\w-]*+\.(?:com?|net|org|in(?:\W|fo)|us|ir|wordpress|blogspot|tumblr|webs(?=\.)|info)",
 
     r"(?:"
-    r"drivingschool|crack-?serial|serial-?(?:key|crack)|freecrack|appsfor(?:pc|mac)|probiotic|remedies|heathcare"
-    r"|sideeffect|meatspin|packers\S{0,3}movers|(?:buy|sell)\S{0,12}cvv|goatse|burnfat|gronkaffe|muskel"
-    r"|tes(?:tos)?terone|nitric(?:storm|oxide)|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|slimbody"
-    r"|slimatrex|moist|lefair|derma(?![nt])|xtrm|factorx|nitro(?<!appnitro)(?!us)|endorev|ketone"
+    "" r"drivingschool|crack-?serial|serial-?(?:key|crack)|freecrack|appsfor(?:pc|mac)|probiotic|remedies|heathcare"
+    "" r"|sideeffect|meatspin|packers\S{0,3}movers|(?:buy|sell)\S{0,12}cvv|goatse|burnfat|gronkaffe|muskel"
+    "" r"|tes(?:tos)?terone|nitric(?:storm|oxide)|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|slimbody"
+    "" r"|slimatrex|moist|lefair|derma(?![nt])|xtrm|factorx|nitro(?<!appnitro)(?!us)|endorev|ketone"
     r")"
     r"[\w-]*+\.(?:com?|net|org|in(?:\W|fo)|us|ir|wordpress|blogspot|tumblr|webs(?=\.)|info)",
 
     r"(?:"
-    r"moving|\w{10}spell|[\w-]{3}password|\w{5}deal(?<!greatfurnituredeal)|\w{5}facts(?<!nfoodfacts)|\w\dfacts"
-    r"|\Btoyshop"
-    r"|[\w-]{5}cheats"
-    r"|[\w-]{6}girls(?<!djangogirls)(?!\.org(?:$|[/?]))"
-    r"|clothing|shoes(?:inc)?|cheatcode|cracks|credits|-wallet|refunds|truo?ng|viet|trang"
+    "" r"moving|\w{10}spell|[\w-]{3}password|\w{5}deal(?<!greatfurnituredeal)|\w{5}facts(?<!nfoodfacts)|\w\dfacts"
+    "" r"|\Btoyshop"
+    "" r"|[\w-]{5}cheats"
+    "" r"|[\w-]{6}girls(?<!djangogirls)(?!\.org(?:$|[/?]))"
+    "" r"|clothing|shoes(?:inc)?|cheatcode|cracks|credits|-wallet|refunds|truo?ng|viet|trang"
     r")"
     r"\.(?:co|net|org|in(?:\W|fo)|us)",
 
@@ -1680,8 +1684,8 @@ pattern_websites = [
     r"[\w-](?:giveaway|jackets|supplys|male)\.com",
 
     r"(?:"
-    r"(?:essay|resume|click2)\w{6,}"
-    r"|(?:essays|(?:research|term)paper|examcollection|[\w-]{5}writing|writing[\w-]{5})[\w-]*+"
+    "" r"(?:essay|resume|click2)\w{6,}"
+    "" r"|(?:essays|(?:research|term)paper|examcollection|[\w-]{5}writing|writing[\w-]{5})[\w-]*+"
     r")"
     r"\.(?:com?|net|org|in(?:\W|fo)|us|us)",
 
@@ -1728,26 +1732,32 @@ pattern_websites = [
 
     # (?:keyword)(?:something)(?:keyword)(?:something).(?:something)
     r"(?:"
-    r"acai|advance|aging|alpha|beauty|belle|beta|biotic|body|boost(?! solution)|brain(?!tree)|burn|colon"
-    r"|[^s]cream|cr[eè]me|derma|ecig|eye|face(?!book)|fat|formula|geniu[sx]|grow|hair|health|herbal|ideal|luminous"
-    r"|male|medical|medicare|muscle|natura|no2|nutrition|optimal|pearl|perfect|phyto|probio|rejuven|revive|ripped"
-    r"|rx|scam|shred|skin|slim|super|testo|[/.]top|trim|[/.]try|ultra|ultra|vapor|vita|weight|wellness|xplode|yoga"
-    r"|young|youth"
+    "" r"acai|advance|aging|alpha|beauty|belle|beta|biotic|body|boost(?! solution)|brain(?!tree)|burn"
+    "" r"|colon|[^s]cream|cr[eè]me|derma|ecig|eye|face(?!book)|fat|formula|geniu[sx]|grow"
+    "" r"|hair|health|herbal|ideal|luminous"
+    "" r"|male|medical|medicare|muscle|natura|no2|nutrition|optimal|pearl|perfect|phyto|probio"
+    "" r"|rejuven|revive|ripped|rx|scam|shred|skin|slim|super"
+    "" r"|testo|[/.]top|trim|[/.]try|ultra|ultra|vapor|vita|weight|wellness|xplode|yoga"
+    "" r"|young|youth"
     r")"
     r"[\w]{0,20}"
     r"(?:"
-    r"about|advi[sc]|assess|blog|brazil|canada|care|center|centre|chat|complex(?!ity)"
-    r"|congress|consult|critic|critique|cure|denmark|discussion|doctor|dose|essence|essential|extract|fact|formula"
-    r"|france|funct?ion|genix|guide|help|idea|info|jacked|l[iy]ft|mag|market|max|mexico|norway|nutrition|order|plus"
-    r"|points|policy|potency|power|practice|pro|program|report|review|rewind|site|slim|solution|suppl(?:y|ier)|sweden"
-    r"|tip|trial|try|world|zone"
+    "" r"about|advi[sc]|assess|blog|brazil"
+    "" r"|canada|care|center|centre|chat|complex(?!ity)|congress|consult|critic|critique|cure"
+    "" r"|denmark|discussion|doctor|dose"
+    "" r"|essence|essential|extract|fact|formula|france|funct?ion"
+    "" r"|genix|guide|help|idea|info|jacked|l[iy]ft"
+    "" r"|mag|market|max|mexico|norway|nutrition|order|plus"
+    "" r"|points|policy|potency|power|practice|pro|program"
+    "" r"|report|review|rewind|site|slim|solution|suppl(?:y|ier)|sweden"
+    "" r"|tip|trial|try|world|zone"
     r")"
     r"[.\w-]{0,12}"
     r"\.(?:co|net|org|in(?:\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
 
     r"(?:"
-    r"\w{11}(?:idea|income|sale)|\w{6}(?:advice|problog|review)"
-    r"(?<!notebookadvice)(?<!notebookproblog)(?<!notebookreview)"
+    "" r"\w{11}(?:idea|income|sale)|\w{6}(?:advice|problog|review)"
+    "" r"(?<!notebookadvice)(?<!notebookproblog)(?<!notebookreview)"
     r")"
     r"s?"
     r"\.(?:co|net|in(?:\W|fo)|us)",
