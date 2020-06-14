@@ -21177,3 +21177,4 @@
 1592094297	Makyen	kozynets-volodymyr\.pp\.ua
 1592094314	Makyen	smartlandscap\.(?:ir|irwww)
 1592098558	Makyen	adfoc\.us
+1592098574	Makyen	51786275041918(?#adfoc.us)
