@@ -67,7 +67,7 @@ class ErrorLogs:
     def fetch_last(cls, n):
         db = cls.get_db()
         cursor = db.execute("SELECT * FROM error_logs ORDER BY time DESC LIMIT ?", (int(n),))
-        data = redact_passwords(cursor.fetchall())
+        data = cursor.fetchall()
         return data
 
     @classmethod
@@ -80,7 +80,7 @@ class ErrorLogs:
             "DELETE FROM error_logs WHERE time IN "
             "(SELECT time FROM error_logs ORDER BY time DESC LIMIT -1 OFFSET ?)", (int(n),))
         db.commit()
-        data = redact_passwords(cursor.fetchall())
+        data = cursor.fetchall()
         return data
 
 
