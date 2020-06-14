@@ -21175,3 +21175,4 @@
 1592094264	Makyen	integrated[\W_]*+assessment[\W_]*+services
 1592094280	Makyen	wayforpay\.com
 1592094297	Makyen	kozynets-volodymyr\.pp\.ua
+1592094314	Makyen	smartlandscap\.(?:ir|irwww)
