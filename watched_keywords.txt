@@ -21178,3 +21178,4 @@
 1592094314	Makyen	smartlandscap\.(?:ir|irwww)
 1592098574	Makyen	51786275041918(?#adfoc.us)
 1592100034	user12986714	focusfactor\.com
+1592112575	user12986714	freetechport\.com
