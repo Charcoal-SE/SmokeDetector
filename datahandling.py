@@ -377,7 +377,7 @@ def fetch_lines_from_error_log(count):
             name, message, tb)
         for time, name, message, tb in logs])
     if s:
-        return redact_password(s)
+        return redact_passwords(s)
     else:
         return "The fetched log is empty."
 
