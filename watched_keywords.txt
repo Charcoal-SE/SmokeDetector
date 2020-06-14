@@ -21181,3 +21181,4 @@
 1592112575	user12986714	freetechport\.com
 1592122594	Makyen	14038928(?<=cryptotabbrowser\.com/14038928)
 1592125561	Makyen	dmrush\.com
+1592125616	Makyen	alantaylorroofing\.com
