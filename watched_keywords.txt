@@ -21182,3 +21182,4 @@
 1592122594	Makyen	14038928(?<=cryptotabbrowser\.com/14038928)
 1592125561	Makyen	dmrush\.com
 1592125616	Makyen	alantaylorroofing\.com
+1592143595	Glorfindel	5factum\.com
