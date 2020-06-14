@@ -21179,3 +21179,4 @@
 1592098574	Makyen	51786275041918(?#adfoc.us)
 1592100034	user12986714	focusfactor\.com
 1592112575	user12986714	freetechport\.com
+1592122594	Makyen	14038928(?<=cryptotabbrowser\.com/14038928)
