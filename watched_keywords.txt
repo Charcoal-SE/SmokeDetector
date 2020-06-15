@@ -17000,7 +17000,6 @@
 1580669889	Eliah Kagan	thepackageshub\.com
 1580679631	Jenayah	freejob\.info
 1580683454	Makyen	robinson\.buckler(?:[\W_]*+(?:at[\W_]*+)?yahoo(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
-1580687657	Eliah Kagan	robinson\W*buckler
 1580688070	Eliah Kagan	rollysmith919(?:@gmail\.com)?
 1580688108	Eliah Kagan	mark74565
 1580688141	Eliah Kagan	Express224477
