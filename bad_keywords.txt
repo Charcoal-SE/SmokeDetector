@@ -2212,8 +2212,8 @@ n1gg3r
 blackline[\W_]*+edge(?:[\W_]*+(?:uk|australia|\d++|[\da-f]{4,}+))*
 gladwev(?!\.com)
 d(?:octo)?r[\W_]*oduduwa
-liebespuppen
-sexpuppen
+liebespuppen?
+sexpuppen?
 oxy[\W_]*+br(?:ea?)?th(?:[\W_]*+pro(?:(?!\.)[\W_]+info)?)?
 oko[\W_]*+watt
 kehamilan
