@@ -21204,3 +21204,4 @@
 1592242744	Daniil	(?-i:Elsner Technologies)
 1592245019	Daniil	trendyoo\.in
 1592245039	Daniil	trendyoo
+1592245182	Daniil	trendyoo(?:\.in)?
