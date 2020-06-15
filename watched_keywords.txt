@@ -21196,3 +21196,4 @@
 1592231725	Machavity	machinerypicks\.com
 1592234016	Makyen	watumie[\W_]*+uwapendao
 1592234031	Makyen	(?-i:0Ajvd\.gif)
+1592234224	Machavity	kabukimask\.com
