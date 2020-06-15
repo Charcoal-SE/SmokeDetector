@@ -21202,3 +21202,4 @@
 1592236074	Daniil	vision[\s_-]*+20
 1592236587	Machavity	facebook\.com/groups/Yuregen
 1592242744	Daniil	(?-i:Elsner Technologies)
+1592245019	Daniil	trendyoo\.in
