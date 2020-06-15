@@ -21199,3 +21199,4 @@
 1592234224	Machavity	kabukimask\.com
 1592234395	Makyen	champu\.in
 1592235882	Machavity	sfirmware\.com
+1592236074	Daniil	vision[\s_-]*+20
