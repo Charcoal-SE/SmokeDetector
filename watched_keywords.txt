@@ -14191,7 +14191,7 @@
 1573636139	Makyen	504492810407710(?#Facebook event)
 1573638063	Makyen	johnsonilluminatirich(?:@gmail\.com)?
 1573638879	tripleee	kisansatta\.com
-1573642853	tripleee	per[\W_]*+mana
+1573642853	tripleee	per[\W_]+mana
 1573645871	tripleee	cannablend
 1573647152	Shree	hiveply\.com
 1573649774	tripleee	sportszilla\.org
