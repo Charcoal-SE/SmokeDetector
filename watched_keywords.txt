@@ -21195,3 +21195,4 @@
 1592229378	Daniil	(?-i:ketosis)
 1592231725	Machavity	machinerypicks\.com
 1592234016	Makyen	watumie[\W_]*+uwapendao
+1592234031	Makyen	(?-i:0Ajvd\.gif)
