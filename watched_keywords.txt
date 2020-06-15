@@ -21208,3 +21208,4 @@
 1592251613	Daniil	trendyoo\.in
 1592251666	Daniil	trendyoo
 1592252603	user12986714	lovespace
+1592253358	Daniil	Robinsonbuckler(?:[\W_]*+(?:at[\W_]*+)?yahoo(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
