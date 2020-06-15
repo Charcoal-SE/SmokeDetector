@@ -21194,3 +21194,4 @@
 1592228992	Daniil	Fixlocal(?#no case sensitive flag as the user used this name with two different capitalisations)
 1592229378	Daniil	(?-i:ketosis)
 1592231725	Machavity	machinerypicks\.com
+1592234016	Makyen	watumie[\W_]*+uwapendao
