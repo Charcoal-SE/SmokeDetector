@@ -21204,3 +21204,4 @@
 1592242744	Daniil	(?-i:Elsner Technologies)
 1592245182	Daniil	trendyoo(?:\.in)?
 1592248654	Makyen	(?-i:ejoG0)(?#shorturl.at)
+1592248679	Makyen	nykdaily\.com
