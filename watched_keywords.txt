@@ -21140,7 +21140,6 @@
 1592031427	user12986714	money87\.com
 1592032530	Makyen	needlead\.business\.site
 1592033923	Makyen	xtremeads\.in
-1592036314	Glorfindel	iasiso-gulf\.com
 1592040301	Makyen	wj995311(?:@gmail\.com)?
 1592041323	Eliah Kagan	barakatalan\.com
 1592041884	Makyen	barakatalan(?!\.com)
