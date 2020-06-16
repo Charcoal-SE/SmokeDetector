@@ -21227,3 +21227,4 @@
 1592320106	user12986714	caodangyduochcm\.vn
 1592252578	user12986714	bystored\.com
 1592321927	user12986714	cryptoatmhacker\d*+
+1592329127	user12986714	cryptoatmhacker\d*+(?!@gmail\.com)
