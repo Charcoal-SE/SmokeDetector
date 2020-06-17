@@ -21240,3 +21240,4 @@
 1592382294	Daniil	(?-i:Safestore)
 1592382338	Daniil	luggagehero\.com
 1592382436	Daniil	accessstorage\.com
+1592382916	Daniil	(?-i:(C|c)itystasher)
