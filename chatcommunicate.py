@@ -574,6 +574,9 @@ def dispatch_reply_command(msg, reply, full_cmd, comment=True):
         assert min_arity == 1
 
         if max_arity == 1:
+            if args:
+                # Ignore, as the reply is likely not intended as a command.
+                return None
             return func(msg, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
         elif max_arity == 2:
             return func(msg, args, original_msg=reply, alias_used=cmd, quiet_action=quiet_action)
