@@ -397,7 +397,7 @@ def test_on_msg(get_last_messages, post_msg):
             },
 
             "id": 1000,
-            "content": "@SmokeDetector why   "
+            "content": "@SmokeDetector why"
         }
     }, spec=chatcommunicate.events.MessageEdited)
 
