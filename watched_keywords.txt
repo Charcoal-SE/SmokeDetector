@@ -21230,3 +21230,4 @@
 1592329318	Machavity	mykfcexperience\.online
 1592321847	user12986714	^(?-i:Atm Card)$
 1592334067	Glorfindel	toevolution\.com(?<!autoevolution\.com)
+1592362391	Sonic the Stay-Home Hedgehog	com\.gomin\.slideshowmaker
