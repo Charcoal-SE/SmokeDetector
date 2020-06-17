@@ -21254,3 +21254,4 @@
 1592435673	Makyen	beddington[\W_]*+minicabs
 1592435690	Makyen	handyblocker
 1592435961	Makyen	(?-i:sJqjb\.jpg)
+1592435991	Makyen	bzfuture(?!\.com)
