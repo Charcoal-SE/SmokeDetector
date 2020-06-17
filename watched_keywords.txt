@@ -21240,3 +21240,4 @@
 1592382338	Daniil	luggagehero\.com
 1592382436	Daniil	accessstorage\.com
 1592385619	Makyen	neat-and-net\.com
+1592386858	Daniil	(?:info@)?citystasher\.com
