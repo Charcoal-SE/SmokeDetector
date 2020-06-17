@@ -21237,3 +21237,4 @@
 1592369128	user12986714	purchasetheme\.com
 1592381622	Daniil	appblaze\.com
 1592382161	Daniil	(?-i:citystasher)
+1592382246	Daniil	info(?:@citystasher\.com)?
