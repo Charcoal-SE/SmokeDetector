@@ -21236,7 +21236,6 @@
 1592377367	Makyen	adsct\.com\.au
 1592369128	user12986714	purchasetheme\.com
 1592381622	Daniil	appblaze\.com
-1592382161	Daniil	(?-i:citystasher)
 1592382246	Daniil	info(?:@citystasher\.com)?
 1592382294	Daniil	(?-i:Safestore)
 1592382338	Daniil	luggagehero\.com
