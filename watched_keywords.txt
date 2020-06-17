@@ -21239,5 +21239,4 @@
 1592382294	Daniil	(?-i:Safestore)
 1592382338	Daniil	luggagehero\.com
 1592382436	Daniil	accessstorage\.com
-1592384028	Daniil	[Cc]itystash(?!\.com)
 1592385619	Makyen	neat-and-net\.com
