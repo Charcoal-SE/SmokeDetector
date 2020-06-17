@@ -21238,3 +21238,4 @@
 1592381622	Daniil	appblaze\.com
 1592382161	Daniil	(?-i:citystasher)
 1592382246	Daniil	info(?:@citystasher\.com)?
+1592382277	Daniil	(?-i:safestore)
