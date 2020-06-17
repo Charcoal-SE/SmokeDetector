@@ -1380,7 +1380,7 @@ keto\W?elite(?:\W?diet)?
 maestro\W?goslin
 phen375
 Navari\W?Testo
-spectrum\W?cbd
+(?:full[\W_]*+)?spectrum[\W_]*+cbd(?:[\W_]*+oil)?
 testo\W?e\W?force
 btcc?ngame
 [a-z_]*+(?:1_*+)?404[\W_]*+400[\W_]*+4210[a-z_]*+
