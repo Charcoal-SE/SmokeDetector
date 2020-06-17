@@ -2302,3 +2302,4 @@ virtus
 besthackersworld58(?:@gmail\.com)?
 silikonpuppe
 robinson\W*buckler
+\byallalabs\.com[-\w\/="]*+(?:<((?:\/?(?:b|blockquote|code|del|dd|dl|dt|em|h[123]|i|kbd|li|p|s|sup|sub|strong|strike|ul|br|hr))|(?:\/(?:a|div|img|ol|pre|span))|(?:a|div|img|ol|pre|span)\b.*?)\s*\/?>)*+$
