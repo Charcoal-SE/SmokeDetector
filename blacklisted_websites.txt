@@ -3637,3 +3637,4 @@ anujjindal\.in
 thelonglasting\.com
 \b(?<![^\W_]-)adfoc\.us/\d+
 incatalog\.kz
+bakingreview\.com
