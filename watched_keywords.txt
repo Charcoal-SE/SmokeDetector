@@ -20995,7 +20995,7 @@
 1591653229	Makyen	flashplayerfaq\.com
 1591653252	Makyen	bluebird[\W_]*+digital[\W_]*+marketing
 1591653278	Makyen	shobhit\.singh02
-1591653305	Makyen	wa\.me
+1591653305	Makyen	wa\.me/(?:\+|%2b)?(?!123456)\d+
 1591653785	Makyen	bluebirddms\.com
 1591653815	Makyen	informationtech\.co\.in
 1591657688	Makyen	globalnetdocuments\.com
