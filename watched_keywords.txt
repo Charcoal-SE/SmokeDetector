@@ -21294,3 +21294,4 @@
 1592554015	Daniil	stylishcostcalculator\.com
 1592555799	Makyen	google_ad_client(?=\s*+:)
 1592558436	Makyen	com\.slappslab\.street\.view\.findroutes\.nearbyplaces
+1592558493	Makyen	testo360[\W_]*+ultra(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
