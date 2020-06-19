@@ -21296,3 +21296,4 @@
 1592558436	Makyen	com\.slappslab\.street\.view\.findroutes\.nearbyplaces
 1592558493	Makyen	testo360[\W_]*+ultra(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1592566191	Daniil	atharvasystem\.com
+1592567752	Makyen	(?-i:bestfinancialmarket)(?#t.me)
