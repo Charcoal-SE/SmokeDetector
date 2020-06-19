@@ -21291,3 +21291,4 @@
 1592551014	Makyen	hpprinterdrivers\.support
 1592551637	Makyen	aolmailx\.com
 1592551867	Makyen	echineselearning\.com
+1592554015	Daniil	stylishcostcalculator\.com
