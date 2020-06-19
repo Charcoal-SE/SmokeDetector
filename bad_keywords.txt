@@ -2257,7 +2257,7 @@ cygucciferhigh(?:@gmail\.com)?
 emagtramina
 (?-i:a99d8\.jpg)
 Kamagra
-primal[\W_]*+grow(?:[\W_]*+pro)?
+primal[\W_]*+grow(?:[\W_]*+(?:pro|p|male|enhancement|usa?|\d++|[\da-f]{4,}+))*
 (?-i:2VjqXm9)(?#on.mktw.net)
 (?-i:j0qcnz)(?# tiny.cc)
 phalogenics
