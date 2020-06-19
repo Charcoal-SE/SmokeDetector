@@ -21304,3 +21304,4 @@
 1592597254	Daniil	cricgenie\.in
 1592601155	Daniil	@cbb40292(?<=medium\.com/@cbb40292/1866-297-5818-jetblue-reservations-number-promo-code-jet50-db55b15cdc3b)
 1592601751	Daniil	@cbb40292(?<=\bmedium\.com/@cbb40292/1866-297-5818-jetblue-reservations-number-promo-code-jet50-db55b15cdc3b)
+1592606703	Daniil	cbb40292(?<=\bmedium\.com/@cbb40292)
