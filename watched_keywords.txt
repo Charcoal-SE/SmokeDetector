@@ -21293,3 +21293,4 @@
 1592551867	Makyen	echineselearning\.com
 1592554015	Daniil	stylishcostcalculator\.com
 1592555799	Makyen	google_ad_client(?=\s*+:)
+1592558436	Makyen	com\.slappslab\.street\.view\.findroutes\.nearbyplaces
