@@ -21324,3 +21324,4 @@
 1592652213	Makyen	pid=0000748962(?#onestore.co.kr)
 1592652229	Makyen	apps[\W_]*+(?:dot[\W_]*+)?qoo[\W_]*+app[\W_]*+(?:dot[\W_]*+)?com
 1592655459	Makyen	(?-i:fKpoangQ7m8)(?#YouTube)
+1592655475	Makyen	com\.dragonsworkshop\.sunsetdown(?#play.google.com)
