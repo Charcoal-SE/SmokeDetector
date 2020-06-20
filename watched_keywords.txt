@@ -21346,3 +21346,4 @@
 1592672775	user12986714	doctorjinasuka\.wordpress
 1592677770	Jeff Schaller	onlinemarketing-leben\.de
 1592683977	user12986714	rapidapi\.com\/api29-api29-default
+1592684555	user12986714	rapidapi\.com\/(?:\w|[\-])*?api29(?:\w|[\-])*+
