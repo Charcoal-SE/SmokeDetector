@@ -21336,3 +21336,4 @@
 1592656580	Makyen	(?-i:2PACX-1vQmPuraVGs3JWhmVIOGWC9E90uOODdy9d2kmfiPFAS-1rwqXA208UhaIG4QGrs_oMGP8r4NtlqXyuqP)
 1592656594	Makyen	techomconsulting\.com
 1592656613	Makyen	reliablehacker\d+(?:@gmail\.com)?(?#seen: reliablehacker06)
+1592656660	Makyen	techom[\W_]*+consulting(?!\.com(?<=techomconsulting\.com))
