@@ -21348,3 +21348,4 @@
 1592684573	NobodyNada	rapidapi\.com\/(?:\w|[\-])*?api29(?:\w|[\-])*+
 1592684592	Daniil	samsungfirmware\.net
 1592693709	Makyen	techviewz\.com
+1592693900	Makyen	artelliq\.com
