@@ -21320,3 +21320,4 @@
 1592649470	Makyen	accounting[\W_]*+pro[\W_]*+advisor(?!\.net(?<=accountingproadvisor\.net))
 1592650971	Makyen	accountinghomeworkhelps\.com
 1592650986	Makyen	economicsassignmentshelp\.com
+1592652198	Makyen	onestore[\W_]*+(?:dot[\W_]*+)?co[\W_]*+(?:dot[\W_]*+)?kr
