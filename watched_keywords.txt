@@ -21319,3 +21319,4 @@
 1592649454	Makyen	accountingproadvisor\.net
 1592649470	Makyen	accounting[\W_]*+pro[\W_]*+advisor(?!\.net(?<=accountingproadvisor\.net))
 1592650971	Makyen	accountinghomeworkhelps\.com
+1592650986	Makyen	economicsassignmentshelp\.com
