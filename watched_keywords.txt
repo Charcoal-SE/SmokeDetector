@@ -21346,3 +21346,4 @@
 1592672775	user12986714	doctorjinasuka\.wordpress
 1592677770	Jeff Schaller	onlinemarketing-leben\.de
 1592684573	NobodyNada	rapidapi\.com\/(?:\w|[\-])*?api29(?:\w|[\-])*+
+1592684592	Daniil	samsungfirmware\.net
