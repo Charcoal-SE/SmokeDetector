@@ -21328,3 +21328,4 @@
 1592655490	Makyen	(?-i:sunset-hardcore/id1511298871)(?#apps.apple.com)
 1592655506	Makyen	(?-i:sunsetha)(?#galaxy.store)
 1592655530	Makyen	(?-i:C102411217)(?#appgallery7.huawei.com)
+1592655544	Makyen	en/app/14052(?#apps.qoo-app.com)
