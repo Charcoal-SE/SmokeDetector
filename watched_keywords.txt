@@ -21325,3 +21325,4 @@
 1592652229	Makyen	apps[\W_]*+(?:dot[\W_]*+)?qoo[\W_]*+app[\W_]*+(?:dot[\W_]*+)?com
 1592655459	Makyen	(?-i:fKpoangQ7m8)(?#YouTube)
 1592655475	Makyen	com\.dragonsworkshop\.sunsetdown(?#play.google.com)
+1592655490	Makyen	(?-i:sunset-hardcore/id1511298871)(?#apps.apple.com)
