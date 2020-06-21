@@ -6740,7 +6740,6 @@
 1543320077	Shree	ariamedtour\.com
 1543326380	tripleee	padkala\.com
 1543328112	tripleee	allitexpert\.com
-1543337438	Makyen	\W*<a (?!href="https://i\.stack\.imgur\.com/)[^>]+>(?:[^<]|<[^/]|</[^a])*error code 0x[0-9a-f]+(?#Error code in link text)
 1543344548	NobodyNada	driversupport\.com
 1543345421	Makyen	realnotesonly(?:@gmail\.com)?
 1543345549	Makyen	abhisheksharma\.online
