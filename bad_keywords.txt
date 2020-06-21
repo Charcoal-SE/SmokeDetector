@@ -2305,3 +2305,4 @@ robinson\W*buckler
 Elsner\WTechnologies
 car\W*+(?:rental\W*+)?dubai
 outscraper(?!\.com)
+pip3?\W*+install\W*+google-services-api
