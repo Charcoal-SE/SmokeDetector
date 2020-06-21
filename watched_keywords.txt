@@ -21357,3 +21357,4 @@
 1592714146	Makyen	baktmarketing\.com
 1592714161	Makyen	bakt[\W_]*+marketing(?!\.com(?<=baktmarketing\.com))
 1592715417	NobodyNada	google-services-api(?#pip package by Outscraper)
+1592715431	user12986714	^(?-i:vlad\d*+)$
