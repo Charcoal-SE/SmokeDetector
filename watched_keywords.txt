@@ -21352,3 +21352,4 @@
 1592696767	user12986714	\w{0,30}assign(?:ments?)?\W*+helps?\.[\w\.]*+
 1592694617	user12986714	easycodeforall\.com
 1592695765	user12986714	theclassictools\.com
+1592695949	user12986714	theosnews\.xyz
