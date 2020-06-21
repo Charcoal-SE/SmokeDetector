@@ -21366,3 +21366,4 @@
 1592759823	user12986714	dosya\.pro
 1592764844	NobodyNada	mydigitalfiling\.in
 1592768150	NobodyNada	\W*<a (?!href="https://i\.stack\.imgur\.com/)[^>]+>(?:[^<]|<[^/]|</[^a])*error code 0x[0-9a-f]+(?#Error code in link text; originally watched by Makyen in 7fe8a07178 but moved to the end so more specific website watches will appear in the why data)
+1592769322	Daniil	ericahess(?<=jotform\.com/ericahess)
