@@ -21359,3 +21359,4 @@
 1592715417	NobodyNada	google-services-api(?#pip package by Outscraper)
 1592723034	Makyen	topgistextra\.com
 1592726875	Makyen	cunhoalonso(?:@gmail\.com)?
+1592741326	Daniil	excelexpertblog\.blogspot\.com
