@@ -1698,9 +1698,9 @@ pattern_websites = [
     # The following may have been intended to include (?:yahoo|gmail|hotmail|outlook|office|microsoft)?[\w-]{0,10}
     # But, the regex made that superfluous.
     r"http\S*?"
-    r"(?:accounts?+|tech|customers?+|supports?+|services?+|phones?|helps?+)"
+    r"(?:accounts?+|tech|customers?+|supports?+|services?+|phones?+|helps?+)"
     r"[\w-]{0,10}"
-    r"(?:services?+|cares?+|helps?+|recover(?:y|ies)|supports?|phones?|numbers?+)",
+    r"(?:services?+|cares?+|helps?+|recover(?:y|ies)|supports?+|phones?+|numbers?+)",
 
     r"http\S*?(?:essay|resume|thesis|dissertation|paper)-?writing",
     r"fix[\w-]*?(?:files?|tool(?:box)?)\.com",
