@@ -2304,3 +2304,4 @@ silikonpuppe
 robinson\W*buckler
 Elsner\WTechnologies
 car\W*+(?:rental\W*+)?dubai
+outscraper(?!\.com)
