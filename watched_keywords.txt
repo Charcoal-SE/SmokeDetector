@@ -21396,3 +21396,4 @@
 1592850607	user12986714	originalweedshop(?!\.com)(?:@gmail\.com)?
 1592852441	Makyen	madpartycrew\.com
 1592852458	Makyen	pubcrawl\.madrid
+1592852478	Makyen	mejoresdiscotecas\.madrid
