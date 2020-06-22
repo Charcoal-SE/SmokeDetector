@@ -36,15 +36,7 @@ class GitHubManager:
         if isinstance(payload, dict):
             payload = json.dumps(payload)
 
-        response = None
-        if method == "GET":
-            response = requests.get(route, auth=cls.auth, data=payload)
-        if method == "POST":
-            response = requests.post(route, auth=cls.auth, data=payload)
-        if method == "PUT":
-            response = requests.put(route, auth=cls.auth, data=payload)
-        if method == "PATCH":
-            response = requests.patch(route, auth=cls.auth, data=payload)
+        response = requests.request(method, route, auth=cls.auth, data=payload)
 
         if response:
             return response.json()
