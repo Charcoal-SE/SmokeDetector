@@ -38,6 +38,7 @@ BODY_TITLE_SIMILAR_RATIO = 0.90
 CHARACTER_USE_RATIO = 0.42
 PUNCTUATION_RATIO = 0.42
 REPEATED_CHARACTER_RATIO = 0.20
+IMG_TXT_R_THRES = 0.7
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
 RE_COMPILE = regex.compile(EXCEPTION_RE)
 COMMON_MALFORMED_PROTOCOLS = [
@@ -606,7 +607,6 @@ def len_img_block(string):
 
 @create_rule("post is mostly images", title=False, max_rep=10000, max_score=10000)
 def mostly_img(s, site):
-    IMG_TXT_R_THRES = 0.7
     s_len_img = len_img_block(s)
     if len(s_len_img) / len(s) > IMG_TXT_R_THRES:
         return True, "{} of the post is html image blocks".format(len(s_len_img) / len(s))
