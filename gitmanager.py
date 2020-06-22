@@ -38,10 +38,7 @@ class GitHubManager:
 
         response = requests.request(method, route, auth=cls.auth, data=payload)
 
-        if response:
-            return response.json()
-        else:
-            return None
+        return response
 
     @classmethod
     def create_pull_request(cls, payload):
