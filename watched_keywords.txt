@@ -21392,4 +21392,3 @@
 1592843503	Daniil	(?-i:QuickBooks UK VAT Dealer)
 1592844359	user12986714	tagpk\.com
 1592850289	Machavity	originalweedshop\.com
-1592850319	user12986714	originalweedshop(?:@gmail\.com)?(?!\.com)
