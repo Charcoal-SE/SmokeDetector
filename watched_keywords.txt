@@ -21394,3 +21394,4 @@
 1592850289	Machavity	originalweedshop\.com
 1592850319	user12986714	originalweedshop(?:@gmail\.com)?(?!\.com)
 1592850607	user12986714	originalweedshop(?!\.com)(?:@gmail\.com)?
+1592852441	Makyen	madpartycrew\.com
