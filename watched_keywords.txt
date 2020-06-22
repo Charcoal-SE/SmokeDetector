@@ -21398,3 +21398,4 @@
 1592852458	Makyen	pubcrawl\.madrid
 1592852478	Makyen	mejoresdiscotecas\.madrid
 1592852498	Makyen	jaypedia\.com
+1592852573	Makyen	ambitious-brand\.com
