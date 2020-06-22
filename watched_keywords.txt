@@ -21376,3 +21376,4 @@
 1592812482	Makyen	aladan\.com\.tr
 1592816146	Makyen	techjaadu\.com
 1592816637	Makyen	mobilemall\.pk
+1592817776	Makyen	codezup\.com
