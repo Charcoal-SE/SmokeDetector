@@ -356,12 +356,16 @@ class GitManager:
 
         payload = {"commit_message": "-autopull"}
         response = GitHubManager.merge_pull_request(pr_id, payload)
-        if response:
-            if response.json()["message"] == "Pull Request successfully merged":
+        try:
+            if response.json()["merged"]:
                 Tasks.later(GitUtils.delete_branch, branch, after=300)  # It is not urgent to delete the branch
-                return "Pull request #{} successfully merged.".format(pr_id)
+            else:
+                raise ValueError("Merging failure.")
+        except Exception:
+            raise RuntimeError("Merging pull request #{} failed. Manual merging required.".format(pr_id))
 
-        raise RuntimeError("Merging pull request #{} failed. Manual merging required.".format(pr_id))
+        return "Pull request #{} successfully merged.".format(pr_id)
+
 
     @classmethod
     def reject_pull_request(cls, pr_id, comment=""):
