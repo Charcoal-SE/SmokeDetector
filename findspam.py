@@ -609,7 +609,7 @@ def len_img_block(string):
 def mostly_img(s, site):
     s_len_img = len_img_block(s)
     if s_len_img / len(s) > IMG_TXT_R_THRES:
-        return True, "{} of the post is html image blocks".format(len(s_len_img) / len(s))
+        return True, "{} of the post is html image blocks".format(s_len_img / len(s))
     return False, ""
 
 
