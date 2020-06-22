@@ -595,6 +595,24 @@ def has_few_characters(s, site):
     return False, ""
 
 
+def len_img_block(string):
+    """ Strip image html block from a string. """
+    all_oc = re.findall(r'<img[^>]*+>', string)
+    tot_len = 0
+    for oc in all_oc:
+        tot_len += len(oc)
+    return tot_len
+
+
+@create_rule("post is mostly images", title=False, max_rep=10000, max_score=10000)
+def mostly_img(s, site):
+    IMG_TXT_R_THRES = 0.7
+    s_len_img = len_img_block(s)
+    if len(s_len_img) / len(s) > IMG_TXT_R_THRES:
+        return True, "{} of the post is html image blocks".format(len(s_len_img) / len(s))
+    return False, ""
+
+
 # noinspection PyUnusedLocal,PyMissingTypeHints
 @create_rule("repeating characters in {}", stripcodeblocks=True, max_rep=10000, max_score=10000)
 def has_repeating_characters(s, site):
