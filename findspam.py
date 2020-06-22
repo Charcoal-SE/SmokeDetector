@@ -597,7 +597,7 @@ def has_few_characters(s, site):
 
 def len_img_block(string):
     """ Length of image html blocks from a string. """
-    all_oc = re.findall(r'<img[^>]*+>', string)
+    all_oc = regex.findall(r'<img[^>]*+>', string)
     tot_len = 0
     for oc in all_oc:
         tot_len += len(oc)
