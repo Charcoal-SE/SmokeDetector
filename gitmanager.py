@@ -68,7 +68,7 @@ class GitHubManager:
         return cls.call_api("PUT", url, payload)
 
     @classmethod
-    def comment_on_thread(cls, thread_id, body):
+    def comment_on_thread(cls, thread_id, payload):
         """ Post comments on threads. """
         url = "https://api.github.com/repos/{}/issues/{}/comments".format(cls.repo, thread_id)
         return cls.call_api("POST", url, payload)
@@ -351,7 +351,8 @@ class GitManager:
         branch = cls._check_smokey_pr(GitHubManager.get_pull_request(pr_id, None))
 
         if comment:  # Post comment if present
-            GitHubManager.comment_on_thread(pr_id, comment)
+            payload = json.dumps({'body': body})
+            GitHubManager.comment_on_thread(pr_id, payload)
 
         payload = {"commit_message": "-autopull"}
         response = GitHubManager.merge_pull_request(pr_id, payload)
@@ -368,7 +369,8 @@ class GitManager:
         branch = cls._check_smokey_pr(GitHubManager.get_pull_request(pr_id, None))
 
         if comment:  # Post comment if present
-            GitHubManager.comment_on_thread(pr_id, comment)
+            payload = json.dumps({'body': body})
+            GitHubManager.comment_on_thread(pr_id, payload)
 
         payload = {"state": "closed"}
         response = GitHubManager.update_pull_request(pr_id, payload)
