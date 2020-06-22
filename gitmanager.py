@@ -363,7 +363,6 @@ class GitManager:
 
         return "Pull request #{} successfully merged.".format(pr_id)
 
-
     @classmethod
     def reject_pull_request(cls, pr_id, comment=""):
         """ Reject SmokeDetector pull requests. """
