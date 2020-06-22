@@ -837,16 +837,6 @@ def welcome(msg, other_user):
         raise CmdException(w_msg.format(room=msg.room.name, user=" @" + other_user, me=GlobalVars.chatmessage_prefix))
 
 
-# noinspection PyIncorrectDocstring
-@command()
-def location():
-    """
-    Returns the current location the application is running from
-    :return: A string with current location
-    """
-    return GlobalVars.location
-
-
 # noinspection PyIncorrectDocstring,PyProtectedMember
 @command(privileged=True)
 def master():
@@ -1398,7 +1388,7 @@ def threads():
 
 
 # noinspection PyIncorrectDocstring
-@command(aliases=["rev", "ver"])
+@command(aliases=["rev", "ver", "location"])
 def version():
     """
     Returns the current version of the application
