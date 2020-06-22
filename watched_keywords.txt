@@ -21375,3 +21375,4 @@
 1592810117	Makyen	flybuilds\.com
 1592812482	Makyen	aladan\.com\.tr
 1592816146	Makyen	techjaadu\.com
+1592816637	Makyen	mobilemall\.pk
