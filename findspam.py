@@ -608,7 +608,7 @@ def len_img_block(string):
 @create_rule("post is mostly images", title=False, max_rep=10000, max_score=10000)
 def mostly_img(s, site):
     s_len_img = len_img_block(s)
-    if len(s_len_img) / len(s) > IMG_TXT_R_THRES:
+    if s_len_img / len(s) > IMG_TXT_R_THRES:
         return True, "{} of the post is html image blocks".format(len(s_len_img) / len(s))
     return False, ""
 
