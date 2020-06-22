@@ -6740,7 +6740,7 @@
 1543320077	Shree	ariamedtour\.com
 1543326380	tripleee	padkala\.com
 1543328112	tripleee	allitexpert\.com
-1543337438	Makyen	error code 0x(?<=<a href="(?!(?:https?:\/\/%20)?https?:\/\/(?:i\.stack\.imgur\.com|(?:[a-z\d-]+\.)*(?:stackexchange\.com|stackoverflow\.com|serverfault\.com|superuser\.com|askubuntu\.com|stackapps\.com|mathoverflow\.net|microsoft.com))\/)[^>]+>(?:[^<]|<[^\/]|<\/[^a])*error code 0x)[0-9a-f]+(?#Error code in link text; converted to look-behind at approx 1592786830)
+1543337438	Makyen	error code 0x(?<=<a href="(?!(?:https?:\/\/%20)?https?:\/\/(?:i\.stack\.imgur\.com|(?:[a-z\d-]+\.)*(?:stackexchange\.com|stackoverflow\.com|serverfault\.com|superuser\.com|askubuntu\.com|stackapps\.com|mathoverflow\.net|microsoft\.com))\/)[^>]+>(?:[^<]|<[^\/]|<\/[^a])*error code 0x)[0-9a-f]+(?#Error code in link text; converted to look-behind at approx 1592786830)
 1543344548	NobodyNada	driversupport\.com
 1543345421	Makyen	realnotesonly(?:@gmail\.com)?
 1543345549	Makyen	abhisheksharma\.online
