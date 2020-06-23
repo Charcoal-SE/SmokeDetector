@@ -19727,7 +19727,6 @@
 1587963631	tripleee	cinema[\W_]*+poker(?![\W_]*+online)
 1587963892	tripleee	luatkhanhphong\.vn
 1587967429	tripleee	muskanpatel\.com
-1587969064	tripleee	acemoneytransfer\.com
 1587969424	tripleee	smilingpawspets\.com
 1587971877	tripleee	embetronicx\.com
 1587977073	tripleee	pythonprotectcode\.com
