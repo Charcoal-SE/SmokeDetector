@@ -21414,3 +21414,4 @@
 1592900683	Daniil	qiuratu\.com
 1592900803	Daniil	iuse\.tech
 1592903114	Daniil	fizfy(?!\.com)?
+1592910229	Daniil	translator\.techzhackz\.com
