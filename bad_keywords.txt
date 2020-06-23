@@ -2307,3 +2307,4 @@ car\W*+(?:rental\W*+)?dubai
 outscraper(?!\.com)
 pip3?\W*+install\W*+google-services-api
 (?-i:google-services-api-pyhton)
+(?-i:(V|v)irmaxryn)
