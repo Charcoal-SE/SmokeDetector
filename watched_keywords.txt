@@ -21415,3 +21415,4 @@
 1592900803	Daniil	iuse\.tech
 1592903114	Daniil	fizfy(?!\.com)?
 1592910229	Daniil	translator\.techzhackz\.com
+1592911368	Daniil	elektroniksigaravip2\.com
