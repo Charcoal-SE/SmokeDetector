@@ -1296,7 +1296,8 @@ def bisect(msg, s):
     bookended_regexes.extend(Blacklist(Blacklist.KEYWORDS).each(True))
     bookended_regexes.extend(Blacklist(Blacklist.WATCHED_KEYWORDS).each(True))
 
-    minimally_validate_content_source(msg)
+    if msg is not None:
+        minimally_validate_content_source(msg)
 
     try:
         s = rebuild_str(get_pattern_from_content_source(msg))
