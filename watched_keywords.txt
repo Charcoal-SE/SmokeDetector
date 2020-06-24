@@ -21446,3 +21446,4 @@
 1593004930	rene	companyurlfinder\.com
 1593012561	Machavity	ustv247\.tv
 1592953785	Sonic the Masked Werehog	(?-i:^90 98$)
+1593018243	Makyen	send[\W_]*+money[\W_]*+to[\W_]*+ghana
