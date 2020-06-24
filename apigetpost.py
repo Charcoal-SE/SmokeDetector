@@ -63,7 +63,7 @@ def api_get_post(post_url):
     post_id, site, post_type = d
     if post_type == "answer":
         api_filter = r"!4z6S)cPO)zvpuDWsWTAUW(kaV6K6thsqi1tlYa"
-    elif post_type == "question"
+    elif post_type == "question":
         api_filter = r"!m)9.UaQrI5-DZXtlTpWhv2HroYRgS3dPhv.2vxV7fpGT*27rEHM.BKV1"
     else:
         raise ValueError("Unknown post type: {}".format(post_type))
