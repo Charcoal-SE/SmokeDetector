@@ -18,7 +18,7 @@ class Post:
 
         self._body = ""
         self._body_is_summary = False
-        self._markdown = ""
+        self._markdown = None
         self._is_answer = False
         self._owner_rep = 1
         self._parent = None  # If not None, _is_answer should be 'true' because there would then be a parent post.
