@@ -21456,3 +21456,4 @@
 1593072014	Makyen	vidagenex(?:[\W_]*+(?:keto|burn|\d++|[\da-f]{5,}+)s?)*
 1593090888	Makyen	foyr[\W_]*+neo
 1593090906	Makyen	todayters(?!\.com)
+1593090923	Makyen	todayters\.com
