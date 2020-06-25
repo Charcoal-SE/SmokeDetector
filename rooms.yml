@@ -164,6 +164,7 @@ stackexchange.com:
       - 17876926 # user12986714
       - 18017074 # Ian Campbell
       - 72095    # Ryan M
+      - 93089    # doppelgreener
 
   65945:  # Charcoal Test
     commands: true
