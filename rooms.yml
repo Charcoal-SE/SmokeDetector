@@ -617,3 +617,9 @@ stackoverflow.com:
       inherit:
         site: stackexchange.com
         room: 11540
+        
+  109836:  # Chat Restricted
+      commands: false
+      msg_types:
+        - site-gaming.stackexchange.com
+        - offensive-mask   
