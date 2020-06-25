@@ -340,6 +340,13 @@ stackexchange.com:
       inherit:
         site: stackexchange.com
         room: 11540
+        
+  109836:  # Chat Restricted
+    commands: false
+    msg_types:
+        - site-gaming.stackexchange.com
+        - site-gaming.meta.stackexchange.com
+        - offensive-mask  
 
 meta.stackexchange.com:
   89:  # Tavern on the Meta
@@ -616,10 +623,4 @@ stackoverflow.com:
     privileges:
       inherit:
         site: stackexchange.com
-        room: 11540
-        
-  109836:  # Chat Restricted
-      commands: false
-      msg_types:
-        - site-gaming.stackexchange.com
-        - offensive-mask   
+        room: 11540 
