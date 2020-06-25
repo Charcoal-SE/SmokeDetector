@@ -18456,7 +18456,6 @@
 1584016795	tripleee	qldcashforcars\.com\.au
 1584016994	tripleee	(?-i:5QMeXZ8zkjI)(?#youtube)
 1584024742	tripleee	churchofjesuschrist\.org
-1584027065	Makyen	myapklab\.com
 1584034305	tripleee	e-scraper\.com
 1584034374	tripleee	apprentus\.fr
 1584045484	Eliah Kagan	calculatored(?!\.com)
