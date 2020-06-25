@@ -1895,10 +1895,21 @@ create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo
 
 # Bad keywords in titles and usernames, all sites
 create_rule("bad keyword in {}",
-            r"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|"
-            r"kisn)\b)(?=.*?care).*products?\b|(?=.*?packer).*mover|(online|certification).*?training|"
-            r"\bvs\b.*\b(live|vivo)\b|(?<!can |uld )\bwe offer\b|payday loan|смотреть.*онлайн|"
-            r"watch\b.{0,50}(online|episode|free\b)|episode.{0,50}\bsub\b",
+            r"(?i)"
+            r"^(?:"
+            "" r"(?=.*?\b(?:online|hd)\b)"
+            "" r"(?=.*?(?:free|full|unlimited))"
+            "" r".*?movies?\b"
+            r")"
+            r"|(?=.*?\b(?:acai|kisn)\b)(?=.*?care).*products?\b"
+            r"|(?=.*?packer).*mover"
+            r"|(online|certification).*?training"
+            r"|\bvs\b.*\b(live|vivo)\b"
+            r"|(?<!can |uld )\bwe offer\b"
+            r"|payday loan"
+            r"|смотреть.*онлайн"
+            r"|watch\b.{0,50}(online|episode|free\b)"
+            r"|episode.{0,50}\bsub\b",
             title=True, body=False, username=True)
 # Car insurance spammers (username only)
 create_rule("bad keyword in {}", r"car\Win",
