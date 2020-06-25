@@ -21453,3 +21453,4 @@
 1593067489	Glorfindel	techbams\.com
 1593069625	Makyen	suprams\.com
 1593069805	Makyen	koreanische[\W_]*+kosmetik
+1593072014	Makyen	vidagenex(?:[\W_]*+(?:keto|burn|\d++|[\da-f]{5,}+)s?)*
