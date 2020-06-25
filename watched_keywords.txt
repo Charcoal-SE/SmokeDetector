@@ -21454,3 +21454,4 @@
 1593069625	Makyen	suprams\.com
 1593069805	Makyen	koreanische[\W_]*+kosmetik
 1593072014	Makyen	vidagenex(?:[\W_]*+(?:keto|burn|\d++|[\da-f]{5,}+)s?)*
+1593090888	Makyen	foyr[\W_]*+neo
