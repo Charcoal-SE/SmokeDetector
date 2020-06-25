@@ -21448,3 +21448,4 @@
 1592953785	Sonic the Masked Werehog	(?-i:^90 98$)
 1593018243	Makyen	send[\W_]*+money[\W_]*+to[\W_]*+ghana
 1593037513	Daniil	(?-i:Washington Guns)
+1593060680	Makyen	andwebtraffic\.org
