@@ -21486,3 +21486,4 @@
 1593160531	Daniil	(?-i:ATTRACTION SPELLS & LOVE BINDING SPELLS)
 1593160553	Daniil	spiritualhealingpowers\.co\.za
 1593164366	Daniil	qqasean99\.com
+1593179336	Makyen	ultra[\W_]*+testo(?:[\W_]*+(?:extra|male|\d++|[\da-f]{5,}+)s?)*
