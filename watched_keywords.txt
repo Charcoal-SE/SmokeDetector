@@ -21491,3 +21491,4 @@
 1593181657	Jeff Schaller	fox200\.com
 1593187067	Makyen	million[\W_]*+money(?:[\W_]*+(?:clone|script)s?)*
 1593191489	Makyen	indianwordpressexperts\.com
+1593193485	Daniil	 (?-i:@G3tr1ch)(#?Telegram)
