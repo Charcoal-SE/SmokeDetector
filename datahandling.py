@@ -186,8 +186,11 @@ def is_code_privileged(site, user_id):
     if GlobalVars.code_privileged_users is None:
         update_code_privileged_users_list()
 
-    # For now, disable the moderator override on code/blacklist changes
-    return (site, user_id) in GlobalVars.code_privileged_users
+    try:
+        # For now, disable the moderator override on code/blacklist changes
+        return (site, user_id) in GlobalVars.code_privileged_users
+    except TypeError:
+        return False
 
 
 def update_reason_weights():
