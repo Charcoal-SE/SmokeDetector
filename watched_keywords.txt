@@ -21484,3 +21484,4 @@
 1593160110	Daniil	wesignature\.com
 1593160262	Daniil	wesignature(?!\.com)
 1593160531	Daniil	(?-i:ATTRACTION SPELLS & LOVE BINDING SPELLS)
+1593160553	Daniil	spiritualhealingpowers\.co\.za
