@@ -21482,3 +21482,4 @@
 1593159177	Daniil	(?-i:End of (L|l)ease Melbourne)
 1593160084	Daniil	serhiipuzyrov\.com
 1593160110	Daniil	wesignature\.com
+1593160262	Daniil	wesignature(?!\.com)
