@@ -21489,3 +21489,4 @@
 1593179336	Makyen	ultra[\W_]*+testo(?:[\W_]*+(?:extra|male|\d++|[\da-f]{5,}+)s?)*
 1593180104	Makyen	aolcustomercarenumberusa\.blogspot
 1593181657	Jeff Schaller	fox200\.com
+1593187067	Makyen	million[\W_]*+money(?:[\W_]*+(?:clone|script)s?)*
