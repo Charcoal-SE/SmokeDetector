@@ -21497,3 +21497,4 @@
 1593199024	Makyen	lagooffice(?!\.com)
 1593199039	Makyen	lagooffice\.com
 1593202718	Eliah Kagan	surprisegenie\.com
+1593203767	Makyen	jodete(?#Spanish offensive)
