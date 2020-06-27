@@ -20423,7 +20423,7 @@
 1589873033	tripleee	nicciskincare\.com
 1589873478	tripleee	askmehere\.info
 1589873956	tripleee	(?-i:^Hidendollar$)
-1589875328	Makyen	cialix(?:[\W_]*+(?:enhancement|male|\d++|[\da-f]{4,}+))*
+1589875328	Makyen	cialix(?!=\.nation2\.com)(?!=\.jimdofree\.com)(?!=\.webgarden\.com)(?:[\W_]*+(?:enhancement|male|\d++|[\da-f]{4,}+))*
 1589876453	Makyen	jnniNozAt41Y_
 1589880844	tripleee	(?-i:^Wowdesk Inc$)
 1589884197	Glorfindel	examlinkup\.com
