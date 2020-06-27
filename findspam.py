@@ -1894,23 +1894,37 @@ create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo
             max_rep=32, max_score=1)
 
 # Bad keywords in titles and usernames, all sites
+# %TP: 2020-06-27 01:00UTC: ~97.65%TP
+# Title Results: 2925/TP:2864/FP:60/NAA:0
+# Username Results: 54/TP:45/FP:6/NAA:3
 create_rule("bad keyword in {}",
             r"(?i)"
             r"^(?:"
-            "" r"(?=.*?\b(?:online|hd)\b)"
-            "" r"(?=.*?(?:free|full|unlimited))"
-            "" r".*?movies?\b"
+            "" r"(?=.{0,150}?\b(?:online|hd)\b)"
+            "" r"(?=.{0,150}?(?:free|full|unlimited))"
+            "" r".{0,150}?movies?\b"
             r")"
-            r"|(?=.*?\b(?:acai|kisn)\b)(?=.*?care).*products?\b"
-            r"|(?=.*?packer).*mover"
-            r"|(online|certification).*?training"
-            r"|\bvs\b.*\b(live|vivo)\b"
-            r"|(?<!can |uld )\bwe offer\b"
-            r"|payday loan"
-            r"|смотреть.*онлайн"
-            r"|watch\b.{0,50}(online|episode|free\b)"
-            r"|episode.{0,50}\bsub\b",
-            title=True, body=False, username=True)
+            r"|^(?=.{0,150}?skin).{0,150}(?:care|product)s?\b"
+            r"|^(?=.{0,150}?packer).{0,150}mover"
+            r"|(online|certification).{0,150}?training",
+            title=True, body=False, username=True,
+            max_rep=32, max_score=1)
+
+# Potentially bad keywords in titles and usernames, all sites
+# Not suffient %TP for blacklist: 2020-06-27 01:00UTC: ~77.59%TP
+# Title Results: 398/TP:312/FP:81/NAA:3
+# Username Results: 17/TP:10/FP:8/NAA:0
+create_rule("potentially bad keyword in {}",
+            r"(?i)"
+            r"\bvs\b(?![\W_]*+(?:code|mvc)\b).{0,150}\b(live|vivo)\b"
+            r"|\bwe offer(?<!(?:can |uld )we offer)\b"
+            r"|payday[\W_]*+loan"
+            r"|смотреть.{0,150}онлайн"
+            r"|watch\b.{0,150}(online|episode|free\b)"
+            r"|episode.{0,150}\bsub\b",
+            title=True, body=False, username=True,
+            max_rep=32, max_score=1)
+
 # Car insurance spammers (username only)
 create_rule("bad keyword in {}", r"car\Win",
             all=False, sites=['superuser.com', 'puzzling.stackexchange.com'],
