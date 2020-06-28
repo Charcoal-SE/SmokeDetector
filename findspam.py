@@ -38,6 +38,7 @@ BODY_TITLE_SIMILAR_RATIO = 0.90
 CHARACTER_USE_RATIO = 0.42
 PUNCTUATION_RATIO = 0.42
 REPEATED_CHARACTER_RATIO = 0.20
+IMG_TXT_R_THRES = 0.7
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
 RE_COMPILE = regex.compile(EXCEPTION_RE)
 COMMON_MALFORMED_PROTOCOLS = [
@@ -592,6 +593,27 @@ def has_few_characters(s, site):
             # Special case for Math.SE: Uniques case may trigger false-positives.
             return False, ""
         return True, "Contains {} unique character{}".format(uniques, "s" if uniques >= 2 else "")
+    return False, ""
+
+
+def len_img_block(string):
+    """ Length of image html blocks from a string. """
+    all_oc = regex.findall(r'<img[^>]*+>', string)
+    tot_len = 0
+    for oc in all_oc:
+        tot_len += len(oc)
+    return tot_len
+
+
+# max_score=2 to prevent voting fraud
+@create_rule("post is mostly images", title=False, max_rep=201, max_score=2)
+def mostly_img(s, site):
+    if len(s) == 0:
+        return False, ""
+
+    s_len_img = len_img_block(s)
+    if s_len_img / len(s) > IMG_TXT_R_THRES:
+        return True, "{} of the post is html image blocks".format(s_len_img / len(s))
     return False, ""
 
 
