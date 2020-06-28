@@ -331,3 +331,4 @@ lustresparasala
 ^sadda[\W_]*+truck(?:\.com)?$
 (?-i:^Jake Syd$)
 ^(?-i:jeffrey)\W*(?-i:cage)$
+^no\W*one$
