@@ -296,7 +296,7 @@ def on_msg(msg, client):
         if result:
             s = ":{}\n{}" if "\n" not in result and len(result) >= 488 else ":{} {}"
             _msg_queue.put((room_data, s.format(message.id, result), None))
-    elif message.content.startswith("!!/"):
+    elif message.content.startswith("!!/") or message.content.lower().startswith("sh "):
         result = dispatch_command(message)
 
         if result:
