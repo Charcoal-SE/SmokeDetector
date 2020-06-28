@@ -183,6 +183,9 @@ stackexchange.com:
     watcher: true
     msg_types:
       - site-askubuntu.com
+      - site-site-askubuntu.com
+      - experimental-site-askubuntu.com
+      - experimental-site-meta.askubuntu.com
       - offensive-mask
 
   2165:  # CRUDE
