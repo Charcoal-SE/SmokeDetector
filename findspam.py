@@ -2310,5 +2310,11 @@ create_rule("link at beginning of {}",
             r'[/\"])[^"]*+"(?![\W\w]*?</(?:code|blockquote)>)',
             title=False, username=False, body=True,
             max_rep=32, max_score=1)
+# MSE: Watch for usernames
+create_rule("potentially bad keyword in {}",
+            r"^no one$",
+            all=False, sites=["meta.stackexchange.com"],
+            username=True, body_summary=False, body=False, title=False,
+            max_rep=33, max_score=1)
 
 FindSpam.reload_blacklists()
