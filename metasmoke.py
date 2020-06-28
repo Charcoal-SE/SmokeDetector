@@ -205,7 +205,14 @@ class Metasmoke:
             return
 
         if "message" in message:
-            chatcommunicate.tell_rooms_with("metasmoke", message['message'])
+            from_ms = message['message']
+            if (from_ms.startswith("[ [charcoal-se.github.io](https://github.com/Charcoal-SE/charcoal-se.github.io) ]"
+                                   " continuous-integration/travis-ci/push")):
+                from_ms = from_ms.replace(": ",
+                                          ", or the [SD wiki](//git.io/vyDZv)"
+                                          " ([history](//github.com/Charcoal-SE/SmokeDetector/wiki/_history)): ", 1)
+                from_ms = from_ms.replace("https:", "")
+            chatcommunicate.tell_rooms_with("metasmoke", from_ms)
         elif "autoflag_fp" in message:
             event = message["autoflag_fp"]
 
