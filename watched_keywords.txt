@@ -21520,3 +21520,4 @@
 1593301579	Makyen	ehizeleherbalhome(?:@gmail\.com)?
 1593306324	Makyen	8bityard\.com
 1593313885	Makyen	fyers[\W_]*+demat(?:[\W_]*+(?:account|free|investment|online|trading|platform)s?)*
+1593313901	Makyen	fyers\.co\.in
