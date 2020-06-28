@@ -514,6 +514,12 @@ def get_message(id, host="stackexchange.com"):
 
 def dispatch_command(msg):
     command_parts = GlobalVars.parser.unescape(msg.content).split(" ", 1)
+    try:
+        if command_parts[0] == 'sh':
+            command_parts = command_parts[1].split(" ", 1)
+            command_parts[0] = "!!/" + command_parts[0]
+    except IndexError:
+        return "sh: No command provided"
 
     if len(command_parts) == 2:
         cmd, args = command_parts
