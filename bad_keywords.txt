@@ -2309,3 +2309,4 @@ pip3?\W*+install\W*+google-services-api
 (?-i:google-services-api-pyhton)
 (?:get[\W_]*+)?vidagenex(?:[\W_]*+(?:keto|burn|\d++|[\da-f]{5,}+)s?)*
 (?-i:cru70e)
+shrinkme\.io(?<!blog\.shrinkme\.io)(?!\/auth\/signup|\/build\/css\/dashboard\.min\.css|\/cdn-cgi\/(?:l\/email-protection|styles\/cf\.errors\.css)|\/modern_theme\/build\/css\/styles\.min\.css|\/pages\/(?:faq|payment-proof|privacy|terms)\/payout-rates)
