@@ -605,7 +605,7 @@ def len_img_block(string):
     return tot_len
 
 
-@create_rule("post is mostly images", title=False, max_rep=10000, max_score=10000)
+@create_rule("post is mostly images", title=False)
 def mostly_img(s, site):
     if len(s) == 0:
         return False, ""
