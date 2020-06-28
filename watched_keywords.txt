@@ -21522,3 +21522,4 @@
 1593313885	Makyen	fyers[\W_]*+demat(?:[\W_]*+(?:account|free|investment|online|trading|platform)s?)*
 1593313901	Makyen	fyers\.co\.in
 1593324261	user12986714	accounts?\W*+get(?:t?ing)?\W*+(?:delet|destroy)ed
+1593324611	user12986714	(?:used\W*+to\W*+|python(?:2|3)?\W*+(?:newbies?\W*+)?)troll(?:ing)?
