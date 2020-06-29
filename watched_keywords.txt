@@ -21559,3 +21559,4 @@
 1593446086	Makyen	freybetgiris\.online
 1593446102	Makyen	freybet
 1593448767	user12986714	minervainstitute\.in
+1593452171	user12986714	nass?\W*+cleaners?(?!\.com)
