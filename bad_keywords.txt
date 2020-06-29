@@ -1792,7 +1792,7 @@ alpha\W?hrd
 pods\W?vape
 idermabalm
 livewave\W*+tv\W*+antenna
-infatica
+infatica(?!\.io)
 king\W?servers
 kamadex
 advcnd
