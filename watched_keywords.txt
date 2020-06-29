@@ -21567,6 +21567,6 @@
 1593450030	user12986714	(?-i:guP-N-B0vDE)(?#youtu.be)
 1593449850	user12986714	we\W*+provides?\W*+(?:\w*+(?:\W|\r|\n)*+){0,6}services?
 1593450878	user12986714	triclara(?!\.com)
-1593454205	user12986714	nass?[\W_]*+cleaners?+(?!\.com(?<=nasscleaners\.com))
+1593454205	user12986714	nass?[\W_]*+cleaners?+(?!\.com(?<=nascleaners\.com))
 1593470156	user12986714	bitcointechnologist(?:@gmail\.com)?
 1593473124	user12986714	(?-i:HF2TaZtFOL4)(?#youtu.be)
