@@ -21558,3 +21558,4 @@
 1593441524	Daniil	(?-i:dhyani solutions)
 1593446086	Makyen	freybetgiris\.online
 1593446102	Makyen	freybet
+1593449241	user12986714	(?:(?:(?:(?:\W|\n|\r)*+\w*+){1,5}(?:\W|\n|\r)*+)development){5,10000}
