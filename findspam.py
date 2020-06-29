@@ -1162,6 +1162,12 @@ def is_offensive_post(s, site):
         return True, FindSpam.match_infos(matches)
     return False, ""
 
+@create_rule("user unregistered or non-existent", title=False, whole_post=True)
+def user_unregistered_or_non_existent(post):
+    if post.user_type in {"unregistered", "does_not_exist"}
+        return True, "user_type is {}".format(post.user_type)
+
+    return False, ""
 
 @create_rule("username similar to website in {}", title=False, body_summary=True, question=False, whole_post=True)
 def username_similar_website(post):

@@ -28,6 +28,7 @@ class Post:
         self._title = ""
         self._user_name = ""
         self._user_url = ""
+        self._user_type = ""
         self._votes = {'downvotes': None, 'upvotes': None}
         self._edited = False
 
@@ -51,7 +52,8 @@ class Post:
         dataset = ['title=' + self.title, 'body=' + self.body, 'user_name=' + self.user_name,
                    'user_url=' + self.user_url, 'post_site=' + self.post_site, 'post_id=' + self.post_id,
                    'is_answer=' + str(self.is_answer), 'body_is_summary=' + str(self.body_is_summary),
-                   'owner_rep=' + str(self.owner_rep), 'post_score=' + str(self.post_score)]
+                   'owner_rep=' + str(self.owner_rep), 'user_type=' + self.user_type,
+                   'post_score=' + str(self.post_score)]
         return "%s(%s)" % (type_name, ', '.join(dataset))
 
     def __setitem__(self, key, item):
@@ -140,7 +142,8 @@ class Post:
             'owner': {
                 'display_name': '_user_name',
                 'link': '_user_url',
-                'reputation': '_owner_rep'
+                'reputation': '_owner_rep',
+                'user_type': '_user_type'
             },
             'question_id': '_post_id',
             'answer_id': '_post_id',
@@ -249,6 +252,10 @@ class Post:
     @property
     def user_url(self):
         return str(self._user_url)
+
+    @property
+    def user_type(self):
+        return str(self._user_type)
 
     @property
     def up_vote_count(self):
