@@ -1403,12 +1403,15 @@ def strip_urls_and_tags(s):
 @create_rule("mostly punctuation marks in {}", max_rep=52,
              sites=["math.stackexchange.com", "mathoverflow.net", "codegolf.stackexchange.com"])
 def mostly_punctuations(s, site):
-    # Strip code blocks here rather than with `stripcodeblocks` so we get the length of the whole post in s
+    # Strip code blocks here rather than with `stripcodeblocks` so we get the length of the whole post in s.
     body = regex.sub(r"(?s)<pre([\w=\" -]*)?>.*?</pre>", "", s)
     body = regex.sub(r"(?s)<code>.*?</code>", "", body)
     body = strip_urls_and_tags(body)
     s = strip_urls_and_tags(s)
     if len(s) < 15:
+        return False, ""
+    # Don't detect a couple of common ways for people to try to include tables (reduces FP by ~20%).
+    if regex.search(r"(?:(?:----+|====+)[+|]+){2}", s):
         return False, ""
 
     punct_re = regex.compile(r"[[:punct:]]")
