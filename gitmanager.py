@@ -113,7 +113,10 @@ class GitManager:
 
     @classmethod
     def add_to_blacklist(cls, blacklist='', item_to_blacklist='', username='', chat_profile_link='',
-                         code_permissions=False, metasmoke_down=False):
+                         code_permissions=False, metasmoke_down=False, requester=None):
+        if requester:
+            username = requester.name  # username argument is deprecated. Use requester instead.
+
         if blacklist == "":
             return (False, 'GitManager: blacklist is not defined. Blame a developer.')
 
@@ -231,6 +234,8 @@ class GitManager:
                         return (True,
                                 "You don't have code privileges, but I've [created PR#{1} for you]({0}).".format(
                                     url, pr_num))
+
+                    GlobalVars.pr_requester_info[pr_num] = requester
 
                 except KeyError:
                     git.checkout("deploy")  # Return to deploy

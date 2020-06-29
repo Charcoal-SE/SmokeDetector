@@ -164,6 +164,8 @@ class GlobalVars:
     github_username = config.get("github_username")
     github_password = config.get("github_password")
 
+    pr_requester_info = dict()
+
     perspective_key = config.get("perspective_key")
 
     flovis_host = config.get("flovis_host")

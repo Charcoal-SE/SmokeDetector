@@ -373,10 +373,11 @@ def do_blacklist(blacklist_type, msg, force=False):
     _status, result = GitManager.add_to_blacklist(
         blacklist=blacklist_type,
         item_to_blacklist=pattern,
-        username=msg.owner.name,
+        username=msg.owner.name,  # Deprecated, use requester.name instead
         chat_profile_link=chat_user_profile_link,
         code_permissions=code_permissions,
-        metasmoke_down=metasmoke_down
+        metasmoke_down=metasmoke_down,
+        requester=msg.owner
     )
 
     if not _status:
@@ -527,8 +528,10 @@ def approve(msg, pr_id, custom_comment):
 def reject(msg, pr_id, custom_comment):
     """ Reject PRs opened by SmokeDetector. """
     code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
-    if not code_permissions:
-        raise CmdException("You need blacklist manager privileges to approve pull requests")
+    not_pr_requester = pr_id not in GlobalVars.pr_requester_info or GlobalVars.pr_requester_info[pr_id] != msg.owner.id
+    if not code_permissions and not_pr_requester:
+        raise CmdException("You need blacklist manager privileges or" +
+                           " to be the requester of the PR to reject pull requests")
 
     custom_comment_str = ""
     if custom_comment is not None:
