@@ -903,7 +903,7 @@ def pattern_email(s, site):
 def keyword_link(s, site):   # thanking keyword and a link in the same short answer
     if len(s) > 400:
         return False, ""
-    link = regex.compile(r'(?i)<a href="https?://[\w_-]++').search(s)
+    link = regex.compile(r'(?i)<a href="https?://\S++').search(s)
     if not link or is_whitelisted_website(link.group(0)):
         return False, ""
     praise = regex.compile(r"(?i)\b(?:nice|good|interesting|helpful|great|amazing) (?:article|blog|post|information)\b|"
