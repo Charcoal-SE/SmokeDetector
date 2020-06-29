@@ -21538,3 +21538,4 @@
 1593403132	Makyen	(?-i:eKHox\.jpg)
 1593409113	tripleee	services[\W_]*+rpa
 1593409438	tripleee	advancedplumbing\.ca
+1593405581	user12986714	deleted?\W*+(?:as\W*+)?(?:spam|rude|offensive)
