@@ -21570,3 +21570,4 @@
 1593454205	user12986714	nass?[\W_]*+cleaners?+(?!\.com(?<=nasscleaners\.com))
 1593470156	user12986714	bitcointechnologist(?:@gmail\.com)?
 1593473124	user12986714	(?-i:HF2TaZtFOL4)(?#youtu.be)
+1593474668	user12986714	visit my channel
