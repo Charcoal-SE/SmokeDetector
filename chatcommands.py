@@ -528,7 +528,7 @@ def reject(msg, pr_id, custom_comment):
     """ Reject PRs opened by SmokeDetector. """
     code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
     if not code_permissions:
-        raise CmdException("You need code privileges to approve pull requests")
+        raise CmdException("You need blacklist manager privileges to approve pull requests")
 
     custom_comment_str = ""
     if custom_comment is not None:
