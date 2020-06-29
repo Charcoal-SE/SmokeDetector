@@ -2052,7 +2052,7 @@ create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?:(?:poker|casino)\W*on
 # Category: Suspicious links
 # Suspicious sites 1
 create_rule("pattern-matching website in {}",
-            r"(?i)(?:{})(?![^>]*<)".format("|".join(pattern_websites)),
+            r"(?i)(?:{})(?![^>]*<)".format(r"\b" + r"\b|\b".join(pattern_websites) + r"\b"),
             stripcodeblocks=True, body_summary=True, max_score=1)
 # Suspicious sites 2
 create_rule("pattern-matching website in {}",
