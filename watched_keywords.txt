@@ -21560,3 +21560,4 @@
 1593446102	Makyen	freybet
 1593448767	user12986714	minervainstitute\.in
 1593449054	user12986714	technolaoder
+1593454205	user12986714	nass?[\W_]*+cleaners?+(?!\.com(?<=nasscleaners\.com))
