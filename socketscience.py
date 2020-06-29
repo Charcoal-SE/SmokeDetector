@@ -71,12 +71,20 @@ class SocketScience:
             if content["metasmoke_state"] == "down":
                 log('info', "{} says metasmoke is down, switching to active ping monitoring."
                             .format(content["location"]))
-                GlobalVars.metasmoke_down = True
+                chatcommunicate.tell_rooms_with("debug", "{} says metasmoke is down,".format(content["location"]) +
+                                                         " switching to active ping monitoring.")
+                # This is an exception, to prevent circular import.
+                # Other classes should not do the same. Always use Metasmoke.ms_down(). (20 May 2020)
+                GlobalVars.MSStatus.set_down()
                 Tasks.later(SocketScience.check_recent_pings, after=90)
 
             if content["metasmoke_state"] == "up":
                 log('info', '{} says metasmoke is up, disabling ping monitoring.'.format(content["location"]))
-                GlobalVars.metasmoke_down = False
+                chatcommunicate.tell_rooms_with("debug", "{} says metasmoke is up,".format(content["location"]) +
+                                                         " disabling ping monitoring.")
+                # This is an exception, to prevent circular import.
+                # Other classes should not do the same. Always use Metasmoke.ms_up(). (20 May 2020)
+                GlobalVars.MSStatus.set_up()
 
         if "ping" in content:
             cls._pings.append({"timestamp": content["ping"], "location": content["location"]})

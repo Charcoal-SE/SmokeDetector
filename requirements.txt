@@ -1,4 +1,4 @@
-git+https://github.com/ArtOfCode-/ChatExchange.git@6d9644dd39630f61333e84ef4dff470a1e7260fa
+git+https://github.com/ArtOfCode-/ChatExchange.git@44f8e1a90b7a83caec544fefe81261253423ddf6
 pbs>=0.110
 packaging>=16.8
 appdirs>=1.4.3
@@ -8,9 +8,9 @@ websocket-client>=0.54.0
 coverage>=4.5.1
 pytest>=4.1.0
 phonenumbers>=8.8.11
-flake8~=3.6.0
+flake8~=3.8.0
 pep8-naming==0.7.0
-regex>=2018.2.21
+regex>=2020.6.8
 termcolor>=1.1.0
 sh>=1.12.14
 typing>=3.6.4

@@ -47,7 +47,7 @@ if os.path.isfile("plugin.py"):
         import plugin
     except Exception:
         exc_type, exc_obj, exc_tb = sys.exc_info()
-        error_msg = "{}: {}\n".format(exc_type.__name__, exc_obj, traceback.format_tb(exc_tb))
+        error_msg = "{}: {}\n{}".format(exc_type.__name__, exc_obj, traceback.format_tb(exc_tb))
         log('warning', "Error while importing plugin:\n" + error_msg)
         # Ignore and move on
 
@@ -90,6 +90,8 @@ if not GlobalVars.metasmoke_ws_host:
 # noinspection PyProtectedMember
 def restart_automatically():
     Metasmoke.send_statistics()
+    chatcommunicate.tell_rooms_with("debug", "{}: Executing automatic scheduled reboot.".format(GlobalVars.location))
+    time.sleep(6)
     exit_mode("reboot")
 
 
@@ -212,6 +214,9 @@ def init_se_websocket_or_reboot(max_tries, tell_debug_room_on_error=False):
         ws = setup_websocket(tries, max_tries)
         if ws:
             break
+        else:
+            # Wait and hopefully network issues will be solved
+            time.sleep(10)
     else:
         error_message = 'SE WebSocket: Max retries exceeded. Exiting, maybe a restart will kick things.'
         log('error', error_message)

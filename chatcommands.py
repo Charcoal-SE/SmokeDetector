@@ -186,6 +186,36 @@ def blacklist(_):
                        "Remember to escape dots in URLs using \\.")
 
 
+def minimally_validate_content_source(msg):
+    """
+    Raises a CmdException if the msg.content and msg.content_source don't match to the first space (i.e. same command).
+    """
+    # If the chat message has been edited or deleted, then content_source can be invalid, or
+    # even a completely different command. Checking that it's for the same command covers the deleted
+    # message case and that we don't use arguments intended for a different command. This is, however,
+    # not a full re-validation. It just covers the most common case, and the definite problem of using
+    # the arguments intended for one command with another one.
+    # For more information, see the discussion starting with:
+    # https://chat.stackexchange.com/transcript/11540?m=54465107#54465107
+    if msg.content.split(" ")[0] != msg.content_source.split(" ")[0]:
+        raise CmdException("There was a problem with this command. Was the chat message edited or deleted?")
+
+
+def get_pattern_from_content_source(msg):
+    """
+    Returns a string containing the raw chat message content, except for the !!/command .
+    :return: A string
+    """
+    try:
+        return msg.content_source.split(" ", 1)[1]
+    except IndexError:
+        # If there's nothing after the space, then raise an error. The chat message may have been edited or deleted,
+        # but the deleted case is normally handled in minimally_validate_content_source(), which should be called first.
+        # For more information, see the discussion starting with:
+        # https://chat.stackexchange.com/transcript/11540?m=54465107#54465107
+        raise CmdException("An invalid pattern was provided, please check your command. Was the command edited?")
+
+
 def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
     # Test the string and provide a warning message if it is already caught.
     if is_username:
@@ -316,11 +346,13 @@ def do_blacklist(blacklist_type, msg, force=False):
     :return: A string
     """
 
+    minimally_validate_content_source(msg)
     chat_user_profile_link = "https://chat.{host}/users/{id}".format(host=msg._client.host,
                                                                      id=msg.owner.id)
     append_force_to_do = "; append `-force` if you really want to do that."
 
-    pattern = rebuild_str(msg.content_source.split(" ", 1)[1])
+    pattern = get_pattern_from_content_source(msg)
+
     has_unescaped_dot = ""
     if "number" not in blacklist_type:
         # Test for . without \., but not in comments.
@@ -367,7 +399,7 @@ def do_blacklist(blacklist_type, msg, force=False):
     try:
         code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
     except (requests.exceptions.ConnectionError, ValueError, TypeError):
-        code_permissions = False  # Because we need the system to assume that we don't have code privs.
+        code_permissions = False  # Because we need the system to assume that we don't have blacklister privs.
         metasmoke_down = True
 
     _status, result = GitManager.add_to_blacklist(
@@ -452,6 +484,8 @@ def unblacklist(msg, item, alias_used="unwatch"):
     else:
         raise CmdException("Invalid blacklist type.")
 
+    minimally_validate_content_source(msg)
+
     metasmoke_down = False
     try:
         code_privs = is_code_privileged(msg._client.host, msg.owner.id)
@@ -459,7 +493,7 @@ def unblacklist(msg, item, alias_used="unwatch"):
         code_privs = False
         metasmoke_down = True
 
-    pattern = msg.content_source.split(" ", 1)[1]
+    pattern = get_pattern_from_content_source(msg)
     _status, result = GitManager.remove_from_blacklist(
         rebuild_str(pattern), msg.owner.name, blacklist_type,
         code_privileged=code_privs, metasmoke_down=metasmoke_down)
@@ -488,7 +522,7 @@ def unblacklist(msg, item, alias_used="unwatch"):
 def approve(msg, pr_id, custom_comment):
     code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
     if not code_permissions:
-        raise CmdException("You need code privileges to approve pull requests")
+        raise CmdException("You need blacklist manager privileges to approve pull requests")
 
     custom_comment_str = ""
     if custom_comment is not None:
@@ -748,29 +782,56 @@ def errorlogs(count):
     return fetch_lines_from_error_log(count or 2)
 
 
-@command(whole_msg=True, aliases=["ms-status", "ms-down", "ms-up"], give_name=True)
+@command(whole_msg=True, aliases=["ms-status", "ms-down", "ms-up", "ms-down-force", "ms-up-force"], give_name=True)
 def metasmoke(msg, alias_used):
     if alias_used in {"metasmoke", "ms-status"}:
         status_text = [
-            "metasmoke is up. Current failure count: {} ({id})".format(GlobalVars.metasmoke_failures,
+            "metasmoke is up. Current failure count: {} ({id})".format(GlobalVars.MSStatus.get_failure_count(),
                                                                        id=GlobalVars.location),
-            "metasmoke is down. Current failure count: {} ({id})".format(GlobalVars.metasmoke_failures,
+            "metasmoke is down. Current failure count: {} ({id})".format(GlobalVars.MSStatus.get_failure_count(),
                                                                          id=GlobalVars.location),
         ]
-        return status_text[GlobalVars.metasmoke_down]
+        if GlobalVars.MSStatus.is_up():
+            # True = 1 and False = 0 is a legacy feature
+            # Better not to use them
+            return status_text[0]
+        else:
+            return status_text[1]
+
     # The next aliases/functionalities require privilege
     if not is_privileged(msg.owner, msg.room):
         raise CmdException(GlobalVars.not_privileged_warning)
 
-    if alias_used == "ms-down":
-        GlobalVars.metasmoke_down = True
-        GlobalVars.metasmoke_failures = 999
-        return "metasmoke is now considered down."
-    if alias_used == "ms-up":
-        GlobalVars.metasmoke_down = False
-        GlobalVars.metasmoke_failures = 0
-        return "metasmoke is now considered up."
-    raise CmdException("Bad command alias. Blame a developer.")
+    to_up = "up" in alias_used
+    forced = "force" in alias_used
+    Metasmoke.AutoSwitch.reset_switch()  # If manually switched, reset the internal counter
+    Metasmoke.AutoSwitch.enable_autoswitch(not forced)
+    if to_up:
+        Metasmoke.set_ms_up()
+    else:
+        Metasmoke.set_ms_down()
+    return "Metasmoke status is now: **{}**;".format("up" if to_up else "down") +\
+           " Auto status switch: **{}abled**.".format("dis" if forced else "en")
+
+
+@command(aliases=["scan-stat", "statistics"])
+def stat():
+    """ Return post scan statistics. """
+    posts_scanned, scan_time, posts_per_second = GlobalVars.PostScanStat.get_stat()
+    stat_msg = "Posts scanned: {}; Scan time: {}".format(posts_scanned, scan_time)
+
+    rate_msg = ""
+    if posts_per_second:
+        rate_msg = "; Posts scanned per second: {}".format(posts_per_second)
+
+    return stat_msg + rate_msg
+
+
+@command(aliases=["counter", "internal-counter", "ping-failure"])
+def ping_failure_counter():
+    """ Return ping failure counter value of Metasmoke: AutoSwitch. """
+    counter = Metasmoke.AutoSwitch.get_ping_failure()
+    return "Current ping failure counter value: {}".format(counter)
 
 
 # noinspection PyIncorrectDocstring
@@ -781,7 +842,7 @@ def info():
     :return: A string
     """
     return "I'm " + GlobalVars.chatmessage_prefix +\
-           " a bot that detects spam and offensive posts on the network and"\
+           ", a bot that detects spam and offensive posts on the network and"\
            " posts alerts to chat."\
            " [A command list is available here](https://charcoal-se.org/smokey/Commands)."
 
@@ -803,16 +864,6 @@ def welcome(msg, other_user):
     else:
         other_user = regex.sub(r'^@*|\b\s.{1,}', '', other_user)
         raise CmdException(w_msg.format(room=msg.room.name, user=" @" + other_user, me=GlobalVars.chatmessage_prefix))
-
-
-# noinspection PyIncorrectDocstring
-@command()
-def location():
-    """
-    Returns the current location the application is running from
-    :return: A string with current location
-    """
-    return GlobalVars.location
 
 
 # noinspection PyIncorrectDocstring,PyProtectedMember
@@ -873,7 +924,7 @@ def sync_remote(msg, alias_used='pull-sync'):
     :return: A string containing a response message
     """
     if not is_code_privileged(msg._client.host, msg.owner.id):
-        raise CmdException("You don't have code privileges to run this command.")
+        raise CmdException("You don't have blacklist manager privileges to run this command.")
     if 'force' not in alias_used:
         raise CmdException("This command is deprecated, append `-force` if you really need to do that.")
 
@@ -891,7 +942,7 @@ def sync_remote_hard(msg, alias_used='pull-sync-hard'):
     :return: A string containing a response message or None
     """
     if not is_code_privileged(msg._client.host, msg.owner.id):
-        raise CmdException("You don't have code privileges to run this command.")
+        raise CmdException("You don't have blacklist manager privileges, which are required to run this command.")
 
     git_response = GitManager.sync_remote_hard()[1]
     # Not enough information is passed to commands to send an actual reply. Thus, the reboot
@@ -931,7 +982,8 @@ def reboot(msg, alias_used="reboot"):
     :return: None
     """
     if alias_used in {"reboot", "restart"}:
-        tell_rooms("Goodbye, cruel world", ("debug", (msg._client.host, msg.room.id)), ())
+        tell_rooms("{}: Goodbye, cruel world".format(GlobalVars.location),
+                   ("debug", (msg._client.host, msg.room.id)), ())
         time.sleep(3)
         exit_mode("reboot")
     elif alias_used in {"reload"}:
@@ -957,18 +1009,18 @@ def amiprivileged(msg):
 
 
 # noinspection PyIncorrectDocstring,
-@command(whole_msg=True)
-def amicodeprivileged(msg):
+@command(whole_msg=True, aliases=["amicodeprivileged", "amiblacklisterprivileged", "amiblacklistmanagerprivileged"])
+def amiblacklistprivileged(msg):
     """
-    Tells user whether or not they have code privileges
+    Tells user whether or not they have blacklister privileges
     :param msg:
     :return: A string
     """
     update_code_privileged_users_list()
     if is_code_privileged(msg._client.host, msg.owner.id):
-        return "\u2713 You are a code-privileged user."
+        return "\u2713 You are a blacklist manager privileged user."
 
-    return "\u2573 No, you are not a code-privileged user."
+    return "\u2573 No, you are not a blacklist manager privileged user."
 
 
 # noinspection PyIncorrectDocstring
@@ -978,7 +1030,11 @@ def apiquota():
     Report how many API hits remain for the day
     :return: A string
     """
-    return "The current API quota remaining is {}.".format(GlobalVars.apiquota)
+    GlobalVars.apiquota_rw_lock.acquire()
+    current_apiquota = GlobalVars.apiquota
+    GlobalVars.apiquota_rw_lock.release()
+
+    return "The current API quota remaining is {}.".format(current_apiquota)
 
 
 # noinspection PyIncorrectDocstring
@@ -1027,7 +1083,8 @@ def stappit(msg, location_search):
     :return: None
     """
     if location_search is None or location_search.lower() in GlobalVars.location.lower():
-        tell_rooms("Goodbye, cruel world", ((msg._client.host, msg.room.id)), ())
+        tell_rooms("{}: Goodbye, cruel world".format(GlobalVars.location),
+                   ((msg._client.host, msg.room.id)), ())
 
         time.sleep(3)
         exit_mode("shutdown", code=6)
@@ -1268,8 +1325,11 @@ def bisect(msg, s):
     bookended_regexes.extend(Blacklist(Blacklist.KEYWORDS).each(True))
     bookended_regexes.extend(Blacklist(Blacklist.WATCHED_KEYWORDS).each(True))
 
+    if msg is not None:
+        minimally_validate_content_source(msg)
+
     try:
-        s = rebuild_str(msg.content_source.split(" ", 1)[1])
+        s = rebuild_str(get_pattern_from_content_source(msg))
     except AttributeError:
         pass
     # A timeout of 1 second is about 50 times longer than we're currently seeing. It should give
@@ -1295,8 +1355,9 @@ def bisect(msg, s):
 
 @command(str, privileged=True, whole_msg=True, aliases=['what-number'])
 def bisect_number(msg, s):
+    minimally_validate_content_source(msg)
     try:
-        number = rebuild_str(msg.content_source.split(" ", 1)[1])
+        number = rebuild_str(get_pattern_from_content_source(msg))
     except AttributeError:
         pass
     normalized = regex.sub(r"\D", "", number)
@@ -1320,23 +1381,23 @@ def bisect_number(msg, s):
         normalized_match.remove(verbatim_match)
         if normalized_match:
             l, f = verbatim_match
-            response = "Matched verbatim on line {} of {}, and also normalized on".format(l, f)
+            response = "Matched verbatim on line {0} of {1}, and also normalized on".format(l, f)
             for l, f in normalized_match:
-                response += "\n- line {} of {}".format(l, f)
+                response += "\n- line {0} of {1}".format(l, f)
             return response
         else:
             l, f = verbatim_match
-            return "Matched verbatim on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1})".format(
-                "", l, f, GlobalVars.bot_repo_slug, GlobalVars.commit.id)
+            return "Matched verbatim on [line {0} of {1}](https://github.com/{2}/blob/{3}/{1}#L{0})".format(
+                l, f, GlobalVars.bot_repo_slug, GlobalVars.commit.id)
     else:
         if len(normalized_match) == 1:
             l, f = normalized_match[0]
             return "Not matched verbatim, but normalized on " \
-                   "[line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1})".format(
-                       "", l, f, GlobalVars.bot_repo_slug, GlobalVars.commit.id)
+                   "[line {0} of {1}](https://github.com/{2}/blob/{3}/{1}#L{0})".format(
+                       l, f, GlobalVars.bot_repo_slug, GlobalVars.commit.id)
         response = "Not matched verbatim, but normalized on"
         for l, f in normalized_match:
-            response += "\n- line {} of {}".format(l, f)
+            response += "\n- line {0} of {1}".format(l, f)
         return response
 
 
@@ -1348,13 +1409,16 @@ def threads():
     :return: A string
     """
 
+    # Note: One may see multiple threads named "message_sender", and they are started by ChatExchange,
+    # one for each chat server.
+    # The one started by SmokeDetector is named "message sender", without the underscore.
     threads_list = ["{ident}: {name}".format(ident=t.ident, name=t.name) for t in threading.enumerate()]
 
     return "\n".join(threads_list)
 
 
 # noinspection PyIncorrectDocstring
-@command(aliases=["rev", "ver"])
+@command(aliases=["rev", "ver", "location"])
 def version():
     """
     Returns the current version of the application
@@ -1628,8 +1692,8 @@ def report(msg, args, alias_used="report"):
                            "SmokeDetector's chat messages getting rate-limited too much, "
                            "which would slow down reports.".format(alias_used))
 
-    # report_posts(urls, reported_by, reported_in, blacklist_by, operation="report", custom_reason=None):
-    output = report_posts(urls, msg.owner.name, msg.room.name, message_url, alias_used, custom_reason)
+    # report_posts(urls, reported_by_owner, reported_in, blacklist_by, operation="report", custom_reason=None):
+    output = report_posts(urls, msg.owner, msg.room.name, message_url, alias_used, custom_reason)
 
     if output:
         if 1 < len(urls) > output.count("\n") + 1:
@@ -1772,18 +1836,29 @@ def allspam(msg, url):
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
 
 
-def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
+def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
+    """
+    Reports a list of URLs
+    :param urls: A list of URLs
+    :param reported_by_owner: The chatexchange User record for the user that reported the URLs.
+    :param reported_in: The name of the room in which the URLs were reported, or True if reported by the MS API.
+    :param blacklist_by: String of the URL for the transcript of the chat message causing the report.
+    :param operation: String of which operation is being performed (e.g. report, scan, report-force, scan-force)
+    :param custom_reason: String of the custom reason why the URLs are being reported.
+    :return: String: the in-chat repsponse
+    """
+    reported_by_name = reported_by_owner.name
     operation = operation or "report"
     is_forced = operation in {"scan-force", "report-force", "report-direct"}
     if operation == "scan-force":
         operation = "scan"
     action_done = "scanned" if operation == "scan" else "reported"
     if reported_in is None:
-        reported_from = " by *{}*".format(reported_by)
+        reported_from = " by *{}*".format(reported_by_name)
     elif reported_in is True:
-        reported_from = " by *{}* from the metasmoke API".format(reported_by)
+        reported_from = " by *{}* from the metasmoke API".format(reported_by_name)
     else:
-        reported_from = " by user *{}* in room *{}*".format(reported_by, reported_in)
+        reported_from = " by user *{}* in room *{}*".format(reported_by_name, reported_in)
 
     if custom_reason:
         with_reason = " with reason: *{}*".format(custom_reason)
@@ -1872,7 +1947,8 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
         if scan_spam and operation != "report-direct":
             comment = report_info + scan_why.lstrip()
             handle_spam(post=post, reasons=scan_reasons, why=comment)
-            Tasks.later(Metasmoke.post_auto_comment, comment, reported_by, url=url, after=300)
+            if custom_reason:
+                Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by_owner, url=url, after=15)
             continue
 
         # scan_spam == False
@@ -1891,7 +1967,8 @@ def report_posts(urls, reported_by, reported_in=None, blacklist_by=None, operati
             handle_spam(post=post,
                         reasons=["Manually reported " + post_data.post_type + batch],
                         why=comment)
-            Tasks.later(Metasmoke.post_auto_comment, comment, reported_by, url=url, after=300)
+            if custom_reason:
+                Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by_owner, url=url, after=15)
             continue
 
         # scan_spam == False and "scan"
@@ -1940,6 +2017,7 @@ def load_data(msg_id):
     msg = get_message(msg_id)
     if msg.owner.id != 120914:  # TODO: implement an is_self() in chatcommunicate, don't use magic numbers
         raise CmdException("Message owner is not SmokeDetector, refusing to load")
+    minimally_validate_content_source(msg)
     try:
         SmokeyTransfer.load(msg.content_source)
     except ValueError as e:

@@ -14,7 +14,7 @@ on_windows = 'windows' in platform.platform().lower()
 
 if on_windows:
     # noinspection PyPep8Naming
-    from classes._Git_Windows import git
+    from _Git_Windows import git
 else:
     from sh.contrib import git
 
@@ -25,10 +25,10 @@ if tuple(int(x) for x in platform.python_version_tuple()) < (3, 5, 0):
 # on for subprocess calls.
 PY_EXECUTABLE = sys.executable
 
-# Log to errorlog.txt so that !!/errorlogs shows us restarts
+# Log to errorLog.txt so that the file shows reboots
 logging_format_string = '%(asctime)s:%(levelname)s:%(message)s'
 logging.basicConfig(
-    filename='errorlog.txt',
+    filename='errorLog.txt',
     level=logging.INFO,
     format=logging_format_string)
 logging.Formatter.converter = gmtime

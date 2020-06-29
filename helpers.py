@@ -16,13 +16,14 @@ import requests
 import regex
 from glob import glob
 import sqlite3
+from urllib.parse import quote
+from globalvars import GlobalVars
 
 
 def exit_mode(*args, code=0):
     args = set(args)
 
     if not (args & {'standby', 'no_standby'}):
-        from globalvars import GlobalVars
         standby = 'standby' if GlobalVars.standby_mode else 'no_standby'
         args.add(standby)
 
@@ -54,6 +55,9 @@ class ErrorLogs:
 
     @classmethod
     def add(cls, time, classname, message, traceback):
+        classname = redact_passwords(classname)
+        message = redact_passwords(message)
+        traceback = redact_passwords(traceback)
         db = cls.get_db()
         db.execute("INSERT INTO error_logs VALUES (?, ?, ?, ?)",
                    (time, classname, message, traceback))
@@ -103,6 +107,17 @@ def expand_shorthand_link(s):
     return s
 
 
+def redact_passwords(value):
+    value = str(value)
+    if GlobalVars.github_password:
+        value = value.replace(GlobalVars.github_password, "[GITHUB PASSWORD REDACTED]") \
+                     .replace(quote(GlobalVars.github_password), "[GITHUB PASSWORD REDACTED]")
+    if GlobalVars.chatexchange_p:
+        value = value.replace(GlobalVars.chatexchange_p, "[CHAT PASSWORD REDACTED]") \
+                     .replace(quote(GlobalVars.chatexchange_p), "[CHAT PASSWORD REDACTED]")
+    return value
+
+
 # noinspection PyMissingTypeHints
 def log(log_level, *args, f=False):
     levels = {
@@ -118,14 +133,14 @@ def log(log_level, *args, f=False):
         return
 
     color = levels[log_level][1] if log_level in levels else 'white'
-    log_str = "{} {}".format(colored("[{}]".format(datetime.utcnow().isoformat()[11:-3]),
-                                     color, attrs=['bold']),
-                             "  ".join([str(x) for x in args]))
+    log_str = redact_passwords("{} {}".format(colored("[{}]".format(datetime.utcnow().isoformat()[11:-3]),
+                                                      color, attrs=['bold']),
+                                              "  ".join([str(x) for x in args])))
     print(log_str, file=sys.stderr)
 
     if level == 3:
         exc_tb = sys.exc_info()[2]
-        print("".join(traceback.format_tb(exc_tb)), file=sys.stderr)
+        print(redact_passwords("".join(traceback.format_tb(exc_tb))), file=sys.stderr)
 
     if f:  # Also to file
         log_file(log_level, *args)
@@ -141,8 +156,8 @@ def log_file(log_level, *args):
     if levels[log_level] < Helpers.min_log_level:
         return
 
-    log_str = "[{}] {}: {}".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"), log_level.upper(),
-                                   "  ".join([str(x) for x in args]))
+    log_str = redact_passwords("[{}] {}: {}".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S"),
+                                                    log_level.upper(), "  ".join([str(x) for x in args])))
     with open("errorLogs.txt", "a", encoding="utf-8") as f:
         print(log_str, file=f)
 
@@ -152,6 +167,7 @@ def log_exception(exctype, value, tb, f=False):
     tr = ''.join(traceback.format_tb(tb))
     exception_only = ''.join(traceback.format_exception_only(exctype, value)).strip()
     logged_msg = "{exception}\n{now} UTC\n{row}\n\n".format(exception=exception_only, now=now, row=tr)
+    # Redacting passwords happens in log() and ErrorLogs.add().
     log('error', logged_msg, f=f)
     ErrorLogs.add(now.timestamp(), exctype.__name__, str(value), tr)
 
@@ -171,7 +187,7 @@ core_files = {
     "gitmanager.py", "globalvars.py", "helpers.py", "metasmoke.py", "nocrash.py", "parsing.py",
     "spamhandling.py", "socketscience.py", "tasks.py", "ws.py",
 
-    "classes/feedback.py", "classes/_Git_Windows.py", "classes/__init__.py", "classes/_Post.py",
+    "classes/feedback.py", "_Git_Windows.py", "classes/__init__.py", "classes/_Post.py",
 
     # Before these are made reloadable
     "rooms.yml",

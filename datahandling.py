@@ -16,7 +16,7 @@ import regex
 from parsing import api_parameter_from_link, post_id_from_link
 from globalvars import GlobalVars
 import blacklists
-from helpers import ErrorLogs, log, log_exception
+from helpers import ErrorLogs, log, log_exception, redact_passwords
 
 last_feedbacked = None
 PICKLE_STORAGE = "pickles/"
@@ -186,8 +186,11 @@ def is_code_privileged(site, user_id):
     if GlobalVars.code_privileged_users is None:
         update_code_privileged_users_list()
 
-    # For now, disable the moderator override on code/blacklist changes
-    return (site, user_id) in GlobalVars.code_privileged_users
+    try:
+        # For now, disable the moderator override on code/blacklist changes
+        return (site, user_id) in GlobalVars.code_privileged_users
+    except TypeError:
+        return False
 
 
 def update_reason_weights():
@@ -377,7 +380,7 @@ def fetch_lines_from_error_log(count):
             name, message, tb)
         for time, name, message, tb in logs])
     if s:
-        return s
+        return redact_passwords(s)
     else:
         return "The fetched log is empty."
 

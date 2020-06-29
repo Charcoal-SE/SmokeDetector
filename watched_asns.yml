@@ -31,6 +31,7 @@ items:
   disable: true
 - asn: '24778'
 - asn: '27176'
+- asn: '29066'
 - asn: '29073'
 - asn: '31083'
   comment: 21/97 over a year
@@ -81,6 +82,7 @@ items:
   comment: 11/100 over a yeasr
   disable: true
 - asn: '56110'
+- asn: '58640'
 - asn: '59253'
 - asn: '59922'
 - asn: '62134'

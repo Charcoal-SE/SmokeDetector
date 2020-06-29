@@ -38,6 +38,7 @@ BODY_TITLE_SIMILAR_RATIO = 0.90
 CHARACTER_USE_RATIO = 0.42
 PUNCTUATION_RATIO = 0.42
 REPEATED_CHARACTER_RATIO = 0.20
+IMG_TXT_R_THRES = 0.7
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
 RE_COMPILE = regex.compile(EXCEPTION_RE)
 COMMON_MALFORMED_PROTOCOLS = [
@@ -504,7 +505,7 @@ def levenshtein(s1, s2):
     return previous_row[-1]
 
 
-@create_rule("misleading link", title=False, max_rep=10, max_score=1, stripcodeblocks=True)
+@create_rule("misleading link", title=False, max_rep=11, max_score=1, stripcodeblocks=True)
 def misleading_link(s, site):
     # Regex that finds the href value and the link text from an HTML <a>, if the link text
     # doesn't contain a '<' or space.
@@ -595,6 +596,27 @@ def has_few_characters(s, site):
     return False, ""
 
 
+def len_img_block(string):
+    """ Length of image html blocks from a string. """
+    all_oc = regex.findall(r'<img[^>]*+>', string)
+    tot_len = 0
+    for oc in all_oc:
+        tot_len += len(oc)
+    return tot_len
+
+
+# max_score=2 to prevent voting fraud
+@create_rule("post is mostly images", title=False, max_rep=201, max_score=2)
+def mostly_img(s, site):
+    if len(s) == 0:
+        return False, ""
+
+    s_len_img = len_img_block(s)
+    if s_len_img / len(s) > IMG_TXT_R_THRES:
+        return True, "{} of the post is html image blocks".format(s_len_img / len(s))
+    return False, ""
+
+
 # noinspection PyUnusedLocal,PyMissingTypeHints
 @create_rule("repeating characters in {}", stripcodeblocks=True, max_rep=10000, max_score=10000)
 def has_repeating_characters(s, site):
@@ -603,6 +625,9 @@ def has_repeating_characters(s, site):
         return False, ""
     s = regex.sub(URL_REGEX, "", s)  # Strip URLs for this check
     if not s:
+        return False, ""
+    # Don't detect a couple of common ways for people to try to include tables (reduces FP by ~20%).
+    if regex.search(r"(?:(?:----+|====+)[+|]+){2}", s):
         return False, ""
     # matches = regex.compile(r"([^\s_.,?!=~*/0-9-])(\1{9,})", regex.UNICODE).findall(s)
     matches = regex.compile(r"([^\s\d_.])(\1{9,})", regex.UNICODE).findall(s)
@@ -723,7 +748,7 @@ def process_numlist(numlist):
     return processed, normalized
 
 
-@create_rule("bad phone number in {}", body_summary=True, max_rep=5, max_score=1, stripcodeblocks=True)
+@create_rule("bad phone number in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=True)
 def check_blacklisted_numbers(s, site):
     return check_numbers(
         s,
@@ -732,7 +757,7 @@ def check_blacklisted_numbers(s, site):
     )
 
 
-@create_rule("potentially bad keyword in {}", body_summary=True, max_rep=5, max_score=1, stripcodeblocks=True)
+@create_rule("potentially bad keyword in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=True)
 def check_watched_numbers(s, site):
     return check_numbers(
         s,
@@ -799,7 +824,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
 
 # Pattern-matching product name: three keywords in a row at least once, or two in a row at least twice
 @create_rule("pattern-matching product name in {}", body_summary=True, stripcodeblocks=True, answer=False,
-             max_rep=4, max_score=1)
+             max_rep=12, max_score=1)
 def pattern_product_name(s, site):
     required_keywords = [
         "Testo(?:sterone)?s?", "Derma?(?:pholia)?", "Garcinia", "Cambogia", "Forskolin", "Diet", "Slim", "Serum",
@@ -1179,7 +1204,7 @@ def username_similar_website(post):
         return False, False, False, ""
 
 
-@create_rule("single character over used in post", max_rep=20, body_summary=True,
+@create_rule("single character over used in post", max_rep=22, body_summary=True,
              all=False, sites=["judaism.stackexchange.com"])
 def character_utilization_ratio(s, site):
     s = strip_urls_and_tags(s)
@@ -1238,7 +1263,7 @@ def post_hosts(post, check_tld=False):
     Return list of hostnames from the post_links() output.
 
     With check_tld=True, check if the links have valid TLDs; abandon and
-    return an empty result if too many don't (limit is currently hardcoded
+    return an empty result if too many do not (limit is currently hardcoded
     at 3 invalid links).
 
     Augment LINK_CACHE with parsed hostnames.
@@ -1352,7 +1377,7 @@ def get_domain(s, full=False):
     return domain
 
 
-# create_rule("answer similar to existing answer on post", whole_post=True, max_rep=50
+# create_rule("answer similar to existing answer on post", whole_post=True, max_rep=52
 #             all=True, sites=["codegolf.stackexchange.com"])
 def similar_answer(post):
     if not post.parent:
@@ -1378,15 +1403,18 @@ def strip_urls_and_tags(s):
     return URL_REGEX.sub("", TAG_REGEX.sub("", s))
 
 
-@create_rule("mostly punctuation marks in {}", max_rep=50,
+@create_rule("mostly punctuation marks in {}", max_rep=52,
              sites=["math.stackexchange.com", "mathoverflow.net", "codegolf.stackexchange.com"])
 def mostly_punctuations(s, site):
-    # Strip code blocks here rather than with `stripcodeblocks` so we get the length of the whole post in s
+    # Strip code blocks here rather than with `stripcodeblocks` so we get the length of the whole post in s.
     body = regex.sub(r"(?s)<pre([\w=\" -]*)?>.*?</pre>", "", s)
     body = regex.sub(r"(?s)<code>.*?</code>", "", body)
     body = strip_urls_and_tags(body)
     s = strip_urls_and_tags(s)
     if len(s) < 15:
+        return False, ""
+    # Don't detect a couple of common ways for people to try to include tables (reduces FP by ~20%).
+    if regex.search(r"(?:(?:----+|====+)[+|]+){2}", s):
         return False, ""
 
     punct_re = regex.compile(r"[[:punct:]]")
@@ -1597,7 +1625,7 @@ bad_keywords_nwb = [  # "nwb" == "no word boundary"
     "anti[- ]?aging",
     "(?:ultra|berry|body)[ -]?ketone",
     "(?:cogni|oro)[ -]?(?:lift|plex)",
-    "(?:skin|face|eye)[- ]?(?:serum|therapy|hydration|tip|renewal|gel|lotion|cream)",
+    "(?:skin|face(?<!interface)(?<!surface)|eye)[- ]?(?:serum|therapy|hydration|tip|renewal|gel|lotion|cream)",
     r"\bnutra(?!l(?:|y|ity|i[sz]ing|i[sz]ed?)s?\b)",
     r"contact (?:me|us)\W*<a ",
     "ecoflex",
@@ -1608,18 +1636,18 @@ bad_keywords_nwb = [  # "nwb" == "no word boundary"
     "tapsi ?sarkar",
 
     r"(?:"
-    r"networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing"
-    r"|salesforce|joomla"
+    "" r"networking|cisco|sas|hadoop|mapreduce|oracle|dba|php|sql|javascript|js|java|designing|marketing"
+    "" r"|salesforce|joomla"
     r")"
     r"(?: certification)? (?:courses?|training)(?=.{0,25}</a>)",
 
     r"(?:"
-    r"design|development|compan(?:y|ies)|agen(?:ts?|c(?:y|ies))|expert|institute|classes|schools?"
-    r"|colleges?|universit(?:y|ies)|training|courses?|jobs?|automation|sex|services?|kindergarten"
+    "" r"design|development|compan(?:y|ies)|agen(?:ts?|c(?:y|ies))|expert|institute|classes|schools?"
+    "" r"|colleges?|universit(?:y|ies)|training|courses?|jobs?|automation|sex|services?|kindergarten"
     r")"
     r"\W*+(?:center|centre|institute|work|provider)?"
-
     r"(?:\b.{1,8}\b)?\L<city>\b",
+
     r"\b\L<city>(?:\b.{1,8}\b)?(?:tour)",  # TODO: Populate this "after city" keyword list
     u"Ｃ[Ｏ0]Ｍ",
     "sunergetic",
@@ -1633,37 +1661,41 @@ bad_keywords_nwb = [  # "nwb" == "no word boundary"
 # Patterns: the top four lines are the most straightforward, matching any site with this string in domain name
 pattern_websites = [
     r"(?:"
-    r"enstella|recoverysoftware|removevirus|support(?:number|help|quickbooks)|techhelp|calltech|exclusive"
-    r"|onlineshop|video(?:course|classes|tutorial(?!s))|vipmodel|porn(?<!wordporn)|wholesale|inboxmachine"
-    r"|(?:get|buy)cheap|escort|diploma|gov(?:t|ernment)jobs|extramoney|earnathome|spell(?:caster|specialist)|profits"
-    r"|seo-?(?:tool|service|trick|market)|onsale|fat(?:burn|loss)|(?:\.|//|best)cheap|online-?(?:training|solution)"
-    r"|\bbabasupport\b|movieshook|where\w*to\w*buy"
-    r"|norton(?!\.com(?<=[^\da-z-]norton\.com))"
+    "" r"enstella|recoverysoftware|removevirus|support(?:number|help|quickbooks)|techhelp|calltech|exclusive"
+    "" r"|onlineshop|video(?:course|classes|tutorial(?!s))|vipmodel|porn(?<!wordporn)|wholesale|inboxmachine"
+    "" r"|(?:get|buy)cheap|escort|diploma|gov(?:t|ernment)jobs|extramoney|earnathome|spell(?:caster|specialist)|profits"
+    "" r"|seo-?(?:tool|service|trick|market)|onsale|fat(?:burn|loss)|(?:\.|//|best)cheap|online-?(?:training|solution)"
+    "" r"|\bbabasupport\b|movieshook|where\w*to\w*buy"
+    "" r"|norton(?!\.com(?<=[^\da-z-]norton\.com))"
     r")"
     r"[\w-]*+\.(?:com?|net|org|in(?:\W|fo)|us|ir|wordpress|blogspot|tumblr|webs(?=\.)|info)",
 
     r"(?:"
-    r"replica(?!t)|rs\d?gold|rssong|runescapegold|maxgain|e-cash|mothers?day|phone-?number|fullmovie|tvstream"
-    r"|trainingin|dissertation|(?:placement|research)-?(?:paper|statement|essay)|digitalmarketing|infocampus|freetrial"
-    r"|cracked\w{3}|bestmover|relocation|\w{4}mortgage|revenue|testo[-bsx]|cleanse|cleansing|detox|suppl[ei]ment"
-    r"|loan|herbal|serum|lift(?:eye|skin)|(?:skin|eye)lift|luma(?:genex|lift)|renuva|svelme|santeavis|wrinkle|topcare"
+    "" r"replica(?!t)|rs\d?gold|rssong|runescapegold|maxgain|e-cash|mothers?day|phone-?number|fullmovie|tvstream"
+    "" r"|trainingin|dissertation"
+    "" r"|(?:placement|research)-?(?:paper|statement|essay)"
+    "" r"|digitalmarketing|infocampus|freetrial"
+    "" r"|cracked\w{3}|bestmover|relocation|\w{4}mortgage|revenue|testo[-bsx]|cleanse|cleansing|detox|suppl[ei]ment"
+    "" r"|loan|herbal|serum"
+    "" r"|lift(?:eye|skin)|(?:skin|eye)lift"
+    "" r"|luma(?:genex|lift)|renuva|svelme|santeavis|wrinkle|topcare"
     r")"
     r"[\w-]*+\.(?:com?|net|org|in(?:\W|fo)|us|ir|wordpress|blogspot|tumblr|webs(?=\.)|info)",
 
     r"(?:"
-    r"drivingschool|crack-?serial|serial-?(?:key|crack)|freecrack|appsfor(?:pc|mac)|probiotic|remedies|heathcare"
-    r"|sideeffect|meatspin|packers\S{0,3}movers|(?:buy|sell)\S{0,12}cvv|goatse|burnfat|gronkaffe|muskel"
-    r"|tes(?:tos)?terone|nitric(?:storm|oxide)|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|slimbody"
-    r"|slimatrex|moist|lefair|derma(?![nt])|xtrm|factorx|nitro(?<!appnitro)(?!us)|endorev|ketone"
+    "" r"drivingschool|crack-?serial|serial-?(?:key|crack)|freecrack|appsfor(?:pc|mac)|probiotic|remedies|heathcare"
+    "" r"|sideeffect|meatspin|packers\S{0,3}movers|(?:buy|sell)\S{0,12}cvv|goatse|burnfat|gronkaffe|muskel"
+    "" r"|tes(?:tos)?terone|nitric(?:storm|oxide)|masculin|menhealth|intohealth|babaji|spellcaster|potentbody|slimbody"
+    "" r"|slimatrex|moist|lefair|derma(?![nt])|xtrm|factorx|nitro(?<!appnitro)(?!us)|endorev|ketone"
     r")"
     r"[\w-]*+\.(?:com?|net|org|in(?:\W|fo)|us|ir|wordpress|blogspot|tumblr|webs(?=\.)|info)",
 
     r"(?:"
-    r"moving|\w{10}spell|[\w-]{3}password|\w{5}deal(?<!greatfurnituredeal)|\w{5}facts(?<!nfoodfacts)|\w\dfacts"
-    r"|\Btoyshop"
-    r"|[\w-]{5}cheats"
-    r"|[\w-]{6}girls(?<!djangogirls)(?!\.org(?:$|[/?]))"
-    r"|clothing|shoes(?:inc)?|cheatcode|cracks|credits|-wallet|refunds|truo?ng|viet|trang"
+    "" r"moving|\w{10}spell|[\w-]{3}password|\w{5}deal(?<!greatfurnituredeal)|\w{5}facts(?<!nfoodfacts)|\w\dfacts"
+    "" r"|\Btoyshop"
+    "" r"|[\w-]{5}cheats"
+    "" r"|[\w-]{6}girls(?<!djangogirls)(?!\.org(?:$|[/?]))"
+    "" r"|clothing|shoes(?:inc)?|cheatcode|cracks|credits|-wallet|refunds|truo?ng|viet|trang"
     r")"
     r"\.(?:co|net|org|in(?:\W|fo)|us)",
 
@@ -1680,8 +1712,8 @@ pattern_websites = [
     r"[\w-](?:giveaway|jackets|supplys|male)\.com",
 
     r"(?:"
-    r"(?:essay|resume|click2)\w{6,}"
-    r"|(?:essays|(?:research|term)paper|examcollection|[\w-]{5}writing|writing[\w-]{5})[\w-]*+"
+    "" r"(?:essay|resume|click2)\w{6,}"
+    "" r"|(?:essays|(?:research|term)paper|examcollection|[\w-]{5}writing|writing[\w-]{5})[\w-]*+"
     r")"
     r"\.(?:com?|net|org|in(?:\W|fo)|us|us)",
 
@@ -1694,9 +1726,9 @@ pattern_websites = [
     # The following may have been intended to include (?:yahoo|gmail|hotmail|outlook|office|microsoft)?[\w-]{0,10}
     # But, the regex made that superfluous.
     r"http\S*?"
-    r"(?:account|tech|customer|support|service|phone|help)"
+    r"(?:accounts?+|tech|customers?+|supports?+|services?+|phones?+|helps?+)"
     r"[\w-]{0,10}"
-    r"(?:service|care|help|recovery|support|phone|number)",
+    r"(?:services?+|cares?+|helps?+|recover(?:y|ies)?+|supports?+|phones?+|numbers?+)",
 
     r"http\S*?(?:essay|resume|thesis|dissertation|paper)-?writing",
     r"fix[\w-]*?(?:files?|tool(?:box)?)\.com",
@@ -1728,26 +1760,32 @@ pattern_websites = [
 
     # (?:keyword)(?:something)(?:keyword)(?:something).(?:something)
     r"(?:"
-    r"acai|advance|aging|alpha|beauty|belle|beta|biotic|body|boost(?! solution)|brain(?!tree)|burn|colon"
-    r"|[^s]cream|cr[eè]me|derma|ecig|eye|face(?!book)|fat|formula|geniu[sx]|grow|hair|health|herbal|ideal|luminous"
-    r"|male|medical|medicare|muscle|natura|no2|nutrition|optimal|pearl|perfect|phyto|probio|rejuven|revive|ripped"
-    r"|rx|scam|shred|skin|slim|super|testo|[/.]top|trim|[/.]try|ultra|ultra|vapor|vita|weight|wellness|xplode|yoga"
-    r"|young|youth"
+    "" r"acai|advance|aging|alpha|beauty|belle|beta|biotic|body|boost(?! solution)|brain(?!tree)|burn"
+    "" r"|colon|[^s]cream|cr[eè]me|derma|ecig|eye|face(?!book)|fat|formula|geniu[sx]|grow"
+    "" r"|hair|health|herbal|ideal|luminous"
+    "" r"|male|medical|medicare|muscle|natura|no2|nutrition|optimal|pearl|perfect|phyto|probio"
+    "" r"|rejuven|revive|ripped|rx|scam|shred|skin|slim|super"
+    "" r"|testo|[/.]top|trim|[/.]try|ultra|ultra|vapor|vita|weight|wellness|xplode|yoga"
+    "" r"|young|youth"
     r")"
     r"[\w]{0,20}"
     r"(?:"
-    r"about|advi[sc]|assess|blog|brazil|canada|care|center|centre|chat|complex(?!ity)"
-    r"|congress|consult|critic|critique|cure|denmark|discussion|doctor|dose|essence|essential|extract|fact|formula"
-    r"|france|funct?ion|genix|guide|help|idea|info|jacked|l[iy]ft|mag|market|max|mexico|norway|nutrition|order|plus"
-    r"|points|policy|potency|power|practice|pro|program|report|review|rewind|site|slim|solution|suppl(?:y|ier)|sweden"
-    r"|tip|trial|try|world|zone"
+    "" r"about|advi[sc]|assess|blog|brazil"
+    "" r"|canada|care|center|centre|chat|complex(?!ity)|congress|consult|critic|critique|cure"
+    "" r"|denmark|discussion|doctor|dose"
+    "" r"|essence|essential|extract|fact|formula|france|funct?ion"
+    "" r"|genix|guide|help|idea|info|jacked|l[iy]ft"
+    "" r"|mag|market|max|mexico|norway|nutrition|order|plus"
+    "" r"|points|policy|potency|power|practice|pro|program"
+    "" r"|report|review|rewind|site|slim|solution|suppl(?:y|ier)|sweden"
+    "" r"|tip|trial|try|world|zone"
     r")"
     r"[.\w-]{0,12}"
     r"\.(?:co|net|org|in(?:\W|fo)|us|wordpress|blogspot|tumblr|webs\.)",
 
     r"(?:"
-    r"\w{11}(?:idea|income|sale)|\w{6}(?:advice|problog|review)"
-    r"(?<!notebookadvice)(?<!notebookproblog)(?<!notebookreview)"
+    "" r"\w{11}(?:idea|income|sale)|\w{6}(?:advice|problog|review)"
+    "" r"(?<!notebookadvice)(?<!notebookproblog)(?<!notebookreview)"
     r")"
     r"s?"
     r"\.(?:co|net|in(?:\W|fo)|us)",
@@ -1806,7 +1844,7 @@ city_list = [
     "Nagpur", "Nainital", "Nashik", "Neemrana", "Noida",
     "Patna", "Pune",
     "Raipur", "Rajkot", "Ramnagar", "Rishikesh", "Rohini",
-    "Surat",
+    "Sonipat", "Surat",
     "Telangana", "Tiruchi", "Tiruchirappalli", "Thane",
     "Trichinopoly", "Trichy", "Trivandrum", "Thiruvananthapuram",
     "Udaipur", "Uttarakhand",
@@ -1836,12 +1874,12 @@ def format_with_city_list(regex_text):
 # General blacklists, regex will be filled at the reload_blacklist() call at the bottom
 FindSpam.rule_bad_keywords = create_rule("bad keyword in {}", regex="",
                                          username=True, body_summary=True,
-                                         max_rep=4, max_score=1, skip_creation_sanity_check=True)
+                                         max_rep=32, max_score=1, skip_creation_sanity_check=True)
 FindSpam.rule_watched_keywords = create_rule("potentially bad keyword in {}", regex="",
                                              username=True, body_summary=True,
-                                             max_rep=30, max_score=1, skip_creation_sanity_check=True)
+                                             max_rep=32, max_score=1, skip_creation_sanity_check=True)
 FindSpam.rule_blacklisted_websites = create_rule("blacklisted website in {}", regex="", body_summary=True,
-                                                 max_rep=50, max_score=5, skip_creation_sanity_check=True)
+                                                 max_rep=52, max_score=5, skip_creation_sanity_check=True)
 FindSpam.rule_blacklisted_usernames = create_rule("blacklisted username", regex="",
                                                   title=False, body=False, username=True,
                                                   skip_creation_sanity_check=True)
@@ -1859,37 +1897,62 @@ create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\
                    'biology.stackexchange.com',
                    'stackoverflow.com'],
             username=True, body_summary=True,
-            max_rep=4, max_score=1)
+            max_rep=32, max_score=1)
 # Blacklist keto(?:nes?)?, but exempt Chemistry. Was a watch added by iBug on 1533209512.
 # Stack Overflow, but not in code
 create_rule("bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)", all=False, stripcodeblocks=True,
             sites=['stackoverflow.com'],
             username=True, body_summary=True,
-            max_rep=4, max_score=1)
+            max_rep=32, max_score=1)
 # Watch keto(?:nes?)? on sites where it's not blacklisted, exempt Chemistry. Was a watch added by iBug on 1533209512.
 create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))keto(?:nes?)?(?:\b|(?w:\b)|$)", all=False,
             sites=['medicalsciences.stackexchange.com',
                    'fitness.stackexchange.com',
                    'biology.stackexchange.com'],
             username=True, body_summary=True,
-            max_rep=30, max_score=1)
+            max_rep=32, max_score=1)
 # Watch (?-i:SEO|seo)$, but exempt Webmasters for titles, but not usernames. Was a watch by iBug on 1541730383. (pt1)
 create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo)$",
             sites=['webmasters.stackexchange.com'],
             title=True, body=False, username=False,
-            max_rep=30, max_score=1)
+            max_rep=32, max_score=1)
 # Watch (?-i:SEO|seo)$, but exempt Webmasters for titles, but not usernames. Was a watch by iBug on 1541730383. (pt2)
 create_rule("potentially bad keyword in {}", r"(?is)(?:^|\b|(?w:\b))(?-i:SEO|seo)$",
             title=False, body=False, username=True,
-            max_rep=30, max_score=1)
+            max_rep=32, max_score=1)
 
 # Bad keywords in titles and usernames, all sites
+# %TP: 2020-06-27 01:00UTC: ~97.65%TP
+# Title Results: 2925/TP:2864/FP:60/NAA:0
+# Username Results: 54/TP:45/FP:6/NAA:3
 create_rule("bad keyword in {}",
-            r"(?i)^(?:(?=.*?\b(?:online|hd)\b)(?=.*?(?:free|full|unlimited)).*?movies?\b)|(?=.*?\b(?:acai|"
-            r"kisn)\b)(?=.*?care).*products?\b|(?=.*?packer).*mover|(online|certification).*?training|"
-            r"\bvs\b.*\b(live|vivo)\b|(?<!can |uld )\bwe offer\b|payday loan|смотреть.*онлайн|"
-            r"watch\b.{0,50}(online|episode|free\b)|episode.{0,50}\bsub\b",
-            title=True, body=False, username=True)
+            r"(?i)"
+            r"^(?:"
+            "" r"(?=.{0,150}?\b(?:online|hd)\b)"
+            "" r"(?=.{0,150}?(?:free|full|unlimited))"
+            "" r".{0,150}?movies?\b"
+            r")"
+            r"|^(?=.{0,150}?skin).{0,150}(?:care|product)s?\b"
+            r"|^(?=.{0,150}?packer).{0,150}mover"
+            r"|(online|certification).{0,150}?training",
+            title=True, body=False, username=True,
+            max_rep=32, max_score=1)
+
+# Potentially bad keywords in titles and usernames, all sites
+# Not suffient %TP for blacklist: 2020-06-27 01:00UTC: ~77.59%TP
+# Title Results: 398/TP:312/FP:81/NAA:3
+# Username Results: 17/TP:10/FP:8/NAA:0
+create_rule("potentially bad keyword in {}",
+            r"(?i)"
+            r"\bvs\b(?![\W_]*+(?:code|mvc)\b).{0,150}\b(live|vivo)\b"
+            r"|\bwe offer(?<!(?:can |uld )we offer)\b"
+            r"|payday[\W_]*+loan"
+            r"|смотреть.{0,150}онлайн"
+            r"|watch\b.{0,150}(online|episode|free\b)"
+            r"|episode.{0,150}\bsub\b",
+            title=True, body=False, username=True,
+            max_rep=32, max_score=1)
+
 # Car insurance spammers (username only)
 create_rule("bad keyword in {}", r"car\Win",
             all=False, sites=['superuser.com', 'puzzling.stackexchange.com'],
@@ -1912,14 +1975,14 @@ create_rule("potentially bad keyword in {}",
             body=False)
 create_rule("bad keyword in {}",
             r'(?i)[\w\s]{0,20}help(?: a)?(?: weak)? postgraduate student(?: to)? write(?: a)? book\??',
-            body=False, max_rep=20, max_score=2)
+            body=False, max_rep=22, max_score=2)
 # Requested by Mithrandir 2019-03-08
 create_rule("potentially bad keyword in {}", r'^v\w{3,5}\Wkumar$',
             title=False, body=False, username=True,
             all=False, sites=['scifi.stackexchange.com'])
 # Eltima: Nested lookarounds for length limit
 create_rule("bad keyword in {}", r"(?is)\beltima(?<=^(?=.{0,750}$).*)",
-            title=False, max_rep=50)
+            title=False, max_rep=52)
 create_rule("bad keyword in {}",
             r"(?i)\b(?:(?:beauty|skin|health|face|eye)[- ]?(?:serum|therapy|hydration|tip|renewal|shop|store|lyft|"
             r"product|strateg(?:y|ies)|gel|lotion|cream|treatment|method|school|expert)|fat ?burn(?:er|ing)?|"
@@ -2013,7 +2076,7 @@ create_rule("pattern-matching website in {}",
             r"[\w-]*?\.(?:com|co\.|net|org|info|in\W)",
             sites=["fitness.stackexchange.com", "biology.stackexchange.com", "medicalsciences.stackexchange.com",
                    "skeptics.stackexchange.com", "bicycles.stackexchange.com"],
-            username=True, body_summary=True, max_rep=4, max_score=2)
+            username=True, body_summary=True, max_rep=22, max_score=2)
 # Links preceded by arrows >>>
 create_rule("link following arrow in {}",
             r"(?is)(?:>>+|[@:]+>+|==\s*>+|={4,}|===>+|= = =|Read More|Click Here).{0,20}"
@@ -2130,12 +2193,12 @@ create_rule("offensive {} detected",
 create_rule("numbers-only title",
             r"^(?=.*[0-9])[^\pL]*$",
             sites=["math.stackexchange.com"],
-            body=False, max_rep=50, max_score=5)
+            body=False, max_rep=52, max_score=5)
 # Parenting troll
 create_rule("bad keyword in {}",
             r"(?i)\b(erica|jeff|er1ca|spam|moderator)\b",
             all=False, sites=["parenting.stackexchange.com"],
-            title=False, body_summary=True, max_rep=50)
+            title=False, body_summary=True, max_rep=52)
 # Code Review troll
 create_rule("bad keyword in {}",
             r"JAMAL",
@@ -2167,7 +2230,7 @@ create_rule('link inside deeply nested blockquotes',
 create_rule("title ends with comma",
             r".*\,$",
             all=False, sites=['interpersonal.stackexchange.com'],
-            body=False, max_rep=50)
+            body=False, max_rep=52)
 # Title starts and ends with a forward slash
 create_rule("title starts and ends with a forward slash",
             r"^\/.*\/$",
@@ -2265,6 +2328,21 @@ create_rule("potentially bad keyword in {}",
             all=False, sites=["workplace.stackexchange.com", "workplace.meta.stackexchange.com"],
             username=True, body_summary=False, body=False, title=False,
             max_rep=93, max_score=1)
-
+# Link at beginning of post; pulled from watchlist
+create_rule("link at beginning of {}",
+            r'(?is)^\s*<p>\s*(?:</?\w+/?>\s*)*<a href="(?!(?:[a-z]+:)?//(?:[^" >/.]*\.)*(?:(?:quora|medium'
+            r'|googleusercontent|youtube|microsoft|unity3d|wso|merriam-webster|oracle|magento|example'
+            r'|apple|google|github|imgur|stackexchange|stackoverflow|serverfault|superuser|askubuntu)\.com'
+            r'|(?:(?:lvcharts|php|jsfiddle|mathoverflow)\.net)|github\.io|youtu\.be|edu|(?:(?:arxiv|drupal'
+            r'|python|isc|khronos|mongodb|open-std|dartlang|apache|pydata|gnu|js|wordpress|wikipedia)\.org))'
+            r'[/\"])[^"]*+"(?![\W\w]*?</(?:code|blockquote)>)',
+            title=False, username=False, body=True,
+            max_rep=32, max_score=1)
+# MSE: Watch for usernames
+create_rule("potentially bad keyword in {}",
+            r"^no one$",
+            all=False, sites=["meta.stackexchange.com"],
+            username=True, body_summary=False, body=False, title=False,
+            max_rep=33, max_score=1)
 
 FindSpam.reload_blacklists()

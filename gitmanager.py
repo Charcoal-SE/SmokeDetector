@@ -16,7 +16,7 @@ from urllib.parse import quote
 from globalvars import GlobalVars
 if GlobalVars.on_windows:
     # noinspection PyPep8Naming
-    from classes._Git_Windows import git, GitError
+    from _Git_Windows import git, GitError
 else:
     from sh.contrib import git
     from sh import ErrorReturnCode as GitError
@@ -24,6 +24,14 @@ else:
 from helpers import log, log_exception, only_blacklists_changed
 from blacklists import *
 from tasks import Tasks
+
+
+def _anchor(str_to_anchor, blacklist_type):
+    """ Anchor a string according to the operation. """
+    if blacklist_type in {Blacklist.WATCHED_KEYWORDS, Blacklist.KEYWORDS}:
+        return r"(?s:\b" + str_to_anchor + r"\b)"
+    else:
+        return str_to_anchor
 
 
 class GitHubManager:
@@ -210,11 +218,14 @@ class GitManager:
                 payload = {"title": "{0}: {1} {2}".format(username, op.title(), item),
                            "body": "[{0}]({1}) requests the {2} of the {3} `{4}`. See the MS search [here]"
                                    "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6}) and the "
-                                   "Stack Exchange search [here](https://stackexchange.com/search?q=%22{7}%22).\n"
+                                   "Stack Exchange search [in text](https://stackexchange.com/search?q=%22{7}%22)"
+                                   ", [in URLs](https://stackexchange.com/search?q=url%3A%22{7}%22)"
+                                   ", and [in code](https://stackexchange.com/search?q=code%3A%22{7}%22)"
+                                   ".\n"
                                    "<!-- METASMOKE-BLACKLIST-{8} {4} -->".format(
                                        username, chat_profile_link, op, blacklist,                # 0 1 2 3
                                        item, ms_search_option,                                    # 4 5
-                                       quote_plus(item),                                          # 6
+                                       quote_plus(_anchor(item, blacklist_type)),                 # 6
                                        quote_plus(item.replace("\\W", " ").replace("\\.", ".")),  # 7
                                        blacklist.upper()),                                        # 8
                            "head": branch,
@@ -227,13 +238,13 @@ class GitManager:
                     url, pr_num = response["html_url"], response["number"]
                     if metasmoke_down:
                         return (True,
-                                "MS is not reachable, so I can't see if you have code privileges, but I've "
-                                "[created PR#{1} for you]({0}).".format(
+                                "MS is not reachable, so I can't see if you have blacklist manager privileges, but "
+                                "I've [created PR#{1} for you]({0}).".format(
                                     url, pr_num))
                     else:
                         return (True,
-                                "You don't have code privileges, but I've [created PR#{1} for you]({0}).".format(
-                                    url, pr_num))
+                                "You don't have blacklist manager privileges, but I've [created PR#{1} for you]({0})."
+                                .format(url, pr_num))
 
                     GlobalVars.pr_requester_info[pr_num] = requester
 
