@@ -1164,7 +1164,7 @@ def is_offensive_post(s, site):
 
 @create_rule("user unregistered or non-existent", title=False, whole_post=True)
 def user_unregistered_or_non_existent(post):
-    if post.user_type in {"unregistered", "does_not_exist"}
+    if post.user_type in {"unregistered", "does_not_exist"}:
         return True, "user_type is {}".format(post.user_type)
 
     return False, ""
