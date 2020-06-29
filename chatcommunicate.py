@@ -517,9 +517,11 @@ def dispatch_command(msg):
     try:
         if command_parts[0] == 'sh':
             command_parts = command_parts[1].split(" ", 1)
-            command_parts[0] = "!!/" + command_parts[0]
+        else:
+            command_parts[0] = command_parts[0][3:]
     except IndexError:
-        return "sh: No command provided"
+        return "Invalid command: Use either `!!/cmd_name` or `sh cmd_name`" +\
+               " to run command `cmd_name`."
 
     if len(command_parts) == 2:
         cmd, args = command_parts
@@ -527,10 +529,10 @@ def dispatch_command(msg):
         cmd, = command_parts
         args = ""
 
-    if len(cmd) == 3:
+    if cmd == "":
         return
 
-    command_name = cmd[3:].lower()
+    command_name = cmd.lower()
 
     quiet_action = command_name[-1] == "-"
     command_name = regex.sub(r"[[:punct:]]*$", "", command_name).replace("_", "-")
