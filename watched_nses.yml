@@ -699,6 +699,9 @@ items:
   - meera.ns.cloudflare.com.
   - skip.ns.cloudflare.com.
 - ns:
+  - meera.ns.cloudflare.com.
+  - zahir.ns.cloudflare.com.
+- ns:
   - meg.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
