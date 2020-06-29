@@ -21553,3 +21553,4 @@
 1593428510	tripleee	pokerstars\.it
 1593428531	tripleee	agentpokerqq\.org
 1593428933	tripleee	linuxploit\.com
+1593428948	tripleee	linuxploit(?!\.com)
