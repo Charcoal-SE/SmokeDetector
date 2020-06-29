@@ -626,6 +626,9 @@ def has_repeating_characters(s, site):
     s = regex.sub(URL_REGEX, "", s)  # Strip URLs for this check
     if not s:
         return False, ""
+    # Don't detect a couple of common ways for people to try to include tables (reduces FP by ~20%).
+    if regex.search(r"(?:(?:----+|====+)[+|]+){2}", s):
+        return False, ""
     # matches = regex.compile(r"([^\s_.,?!=~*/0-9-])(\1{9,})", regex.UNICODE).findall(s)
     matches = regex.compile(r"([^\s\d_.])(\1{9,})", regex.UNICODE).findall(s)
     match = "".join(["".join(match) for match in matches])
