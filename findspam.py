@@ -1260,7 +1260,7 @@ def post_hosts(post, check_tld=False):
     Return list of hostnames from the post_links() output.
 
     With check_tld=True, check if the links have valid TLDs; abandon and
-    return an empty result if too many don't (limit is currently hardcoded
+    return an empty result if too many do not (limit is currently hardcoded
     at 3 invalid links).
 
     Augment LINK_CACHE with parsed hostnames.
