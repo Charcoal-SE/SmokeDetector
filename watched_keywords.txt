@@ -21542,3 +21542,4 @@
 1593405581	user12986714	deleted?\W*+(?:as\W*+)?(?:spam|rude|offensive)
 1593412015	Makyen	kickassanime\.rs
 1593412736	Makyen	onlineessayhelp\.co\.uk
+1593414724	Makyen	infatica\.io
