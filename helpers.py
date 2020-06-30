@@ -16,7 +16,7 @@ import requests
 import regex
 from glob import glob
 import sqlite3
-from urllib.parse import quote
+from urllib.parse import quote, quote_plus
 from globalvars import GlobalVars
 
 
@@ -108,13 +108,21 @@ def expand_shorthand_link(s):
 
 
 def redact_passwords(value):
+    def redact(text, redact_str, replace_with):
+        if redact_str:
+            return text.replace(redact_str, replace_with) \
+                       .replace(quote(redact_str), replace_with) \
+                       .replace(quote_plus(redact_str), replace_with)
+        return text
+
     value = str(value)
-    if GlobalVars.github_password:
-        value = value.replace(GlobalVars.github_password, "[GITHUB PASSWORD REDACTED]") \
-                     .replace(quote(GlobalVars.github_password), "[GITHUB PASSWORD REDACTED]")
-    if GlobalVars.chatexchange_p:
-        value = value.replace(GlobalVars.chatexchange_p, "[CHAT PASSWORD REDACTED]") \
-                     .replace(quote(GlobalVars.chatexchange_p), "[CHAT PASSWORD REDACTED]")
+    # Generic redaction of URLs with http, https, and ftp schemes
+    value = regex.sub(r"((?:https?|ftp):\/\/)[^@:\/]*:[^@:\/]*(?=@)", r"\1[REDACTED URL USERNAME AND PASSWORD]", value)
+    # In case these are somewhere else.
+    value = redact(value, GlobalVars.github_password, "[GITHUB PASSWORD REDACTED]")
+    value = redact(value, GlobalVars.chatexchange_p, "[CHAT PASSWORD REDACTED]")
+    value = redact(value, GlobalVars.metasmoke_key, "[METASMOKE KEY REDACTED]")
+    value = redact(value, GlobalVars.perspective_key, "[PERSPECTIVE KEY REDACTED]")
     return value
 
 
