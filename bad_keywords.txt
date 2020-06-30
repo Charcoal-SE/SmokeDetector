@@ -2309,3 +2309,4 @@ pip3?\W*+install\W*+google-services-api
 (?-i:google-services-api-pyhton)
 (?:get[\W_]*+)?vidagenex(?:[\W_]*+(?:keto|burn|\d++|[\da-f]{5,}+)s?)*
 (?-i:cru70e)
+blaux[\W_]*+(?:portable[\W_]*+)?ac
