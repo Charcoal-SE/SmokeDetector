@@ -2271,4 +2271,4 @@ def dig(domain):
     if not regex.match(r'^[\w-\.]+$', domain):
         return "I'm afraid I can't do that."
     else:
-        return subprocess.check_output("dig +short a {}".format(domain).split())
+        return subprocess.check_output("dig +short a {}".format(domain).split()).decode('utf-8')
