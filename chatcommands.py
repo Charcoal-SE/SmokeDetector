@@ -207,7 +207,11 @@ def get_pattern_from_content_source(msg):
     :return: A string
     """
     try:
-        return msg.content_source.split(" ", 1)[1]
+        msg_parts = msg.content_source.split(" ", 1)
+        if msg_parts[0] == "sdc":
+            return msg_parts[1].split(" ", 1)[1]
+        else:
+            return msg_parts[1]
     except IndexError:
         # If there's nothing after the space, then raise an error. The chat message may have been edited or deleted,
         # but the deleted case is normally handled in minimally_validate_content_source(), which should be called first.
