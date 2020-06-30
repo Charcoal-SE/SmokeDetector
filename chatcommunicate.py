@@ -296,7 +296,7 @@ def on_msg(msg, client):
         if result:
             s = ":{}\n{}" if "\n" not in result and len(result) >= 488 else ":{} {}"
             _msg_queue.put((room_data, s.format(message.id, result), None))
-    elif message.content.startswith("!!/"):
+    elif message.content.startswith("!!/") or message.content.lower().startswith("sdc "):
         result = dispatch_command(message)
 
         if result:
@@ -514,6 +514,14 @@ def get_message(id, host="stackexchange.com"):
 
 def dispatch_command(msg):
     command_parts = GlobalVars.parser.unescape(msg.content).split(" ", 1)
+    try:
+        if command_parts[0] == 'sdc':
+            command_parts = command_parts[1].split(" ", 1)
+        else:
+            command_parts[0] = command_parts[0][3:]
+    except IndexError:
+        return "Invalid command: Use either `!!/cmd_name` or `sdc cmd_name`" +\
+               " to run command `cmd_name`."
 
     if len(command_parts) == 2:
         cmd, args = command_parts
@@ -521,10 +529,10 @@ def dispatch_command(msg):
         cmd, = command_parts
         args = ""
 
-    if len(cmd) == 3:
+    if cmd == "":
         return
 
-    command_name = cmd[3:].lower()
+    command_name = cmd.lower()
 
     quiet_action = command_name[-1] == "-"
     command_name = regex.sub(r"[[:punct:]]*$", "", command_name).replace("_", "-")
