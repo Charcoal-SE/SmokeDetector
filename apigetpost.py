@@ -95,7 +95,10 @@ def api_get_post(post_url):
         post_data.owner_name = html.unescape(item['owner']['display_name'])
         post_data.owner_url = item['owner']['link']
         post_data.owner_rep = item['owner']['reputation']
-        post_data.user_type = item['owner']['user_type']
+        if 'user_type' in item['owner']:
+            post_data.user_type = item['owner']['user_type']
+        else:
+            post_data.user_type = ""
     else:
         post_data.owner_name = ""
         post_data.owner_url = ""
