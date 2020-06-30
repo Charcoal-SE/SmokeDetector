@@ -68,7 +68,7 @@ def api_get_post(post_url):
         api_filter = r"!FdmhxNRjn0vYtGOu3FfS5xSwvL"
     else:
         assert post_type == "question"
-        api_filter = r"!DEPw4-PqDduRmCwMBNAxrCdSZl81364qitC3TebCzqyF4-y*r2L"
+        api_filter = r"!6CZQf(qSUihha(umy.3BLMYd_)V_-0ZxD46VJ_b_5_G(1(fdHqC8z6JPG7X"
 
     request_url = "https://api.stackexchange.com/2.2/{}s/{}".format(post_type, post_id)
     params = {
