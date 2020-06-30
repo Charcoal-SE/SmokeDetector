@@ -21576,3 +21576,4 @@
 1593494748	Makyen	itspell\.com
 1593494770	Makyen	it[\W_]*+spell[\W_]*+technology
 1593499435	Makyen	9animestv\.com
+1593499452	Makyen	deunoposte\.ikeadubaionline\.com
