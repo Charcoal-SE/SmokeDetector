@@ -1166,7 +1166,7 @@ def is_offensive_post(s, site):
 
 @create_rule("user unregistered or non-existent with non-default username", title=False, whole_post=True)
 def user_unregistered_or_non_existent(post):
-    if (time.time() - post.creation_date) > OLD_POST_THRESHOLD:
+    if (time.time() - post.creation_date) > OLD_POST_THRES:
         return False, False, False, ""
 
     if post.user_type == "does_not_exist":
@@ -1174,7 +1174,7 @@ def user_unregistered_or_non_existent(post):
 
     if post.user_type == "unregistered":
         if regex.match(r"^user\d++$", post.user_name) is not None:
-            return False, True, False, "unregistered user with non-default user_name {}".format(post.user_type, post.user_name)
+            return False, True, False, "unregistered user with non-default user_name {}".format(post.user_name)
 
     return False, False, False, ""
 
