@@ -15,6 +15,7 @@ class PostData:
         self.owner_url = None
         self.owner_name = None
         self.owner_rep = None
+        self.user_type = None
         self.title = None
         self.body = None
         self.score = None
@@ -30,7 +31,8 @@ class PostData:
         dictdata = {
             'title': self.title,
             'body': self.body,
-            'owner': {'display_name': self.owner_name, 'link': self.owner_url, 'reputation': self.owner_rep},
+            'owner': {'display_name': self.owner_name, 'link': self.owner_url,
+                      'reputation': self.owner_rep, 'user_type': self.user_type},
             'site': self.site,
             'question_id': self.post_id,
             'link': self.post_url,
@@ -38,6 +40,7 @@ class PostData:
             'up_vote_count': self.up_vote_count,
             'down_vote_count': self.down_vote_count,
             'edited': (self.creation_date != self.last_edit_date),
+            'creation_date': self.creation_date,
             'IsAnswer': getattr(self, 'IsAnswer', False),
         }
 
@@ -92,10 +95,12 @@ def api_get_post(post_url):
         post_data.owner_name = html.unescape(item['owner']['display_name'])
         post_data.owner_url = item['owner']['link']
         post_data.owner_rep = item['owner']['reputation']
+        post_data.user_type = item['owner']['user_type']
     else:
         post_data.owner_name = ""
         post_data.owner_url = ""
         post_data.owner_rep = 1
+        post_data.user_type = ""
     post_data.site = site
     post_data.body = item['body']
     post_data.score = item['score']
