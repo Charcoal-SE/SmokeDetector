@@ -1169,9 +1169,12 @@ def user_unregistered_or_non_existent(post):
     if (time.time() - post.creation_date) > OLD_POST_THRESHOLD:
         return False, False, False, ""
 
-    if post.user_type in {"unregistered", "does_not_exist"}:
+    if post.user_type == "does_not_exist":
+        return False, True, False, "user is deleted"
+
+    if post.user_type == "unregistered":
         if regex.match(r"^user\d++$", post.user_name) is not None:
-            return False, True, False, "user_type is {}, user_name is {}".format(post.user_type, post.user_name)
+            return False, True, False, "unregistered user with non-default user_name {}".format(post.user_type, post.user_name)
 
     return False, False, False, ""
 
