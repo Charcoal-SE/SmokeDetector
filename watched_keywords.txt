@@ -21593,3 +21593,4 @@
 1593450354	user12986714	covid\W*+(?:19\W*+)?test(?:ing)?\W*+kits?
 1593514653	tripleee	seamantravel\.club
 1593514753	Daniil	(?-i:Seaman Travel Club)
+1593515140	Glorfindel	bitdroplet\.com
