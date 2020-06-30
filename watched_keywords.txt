@@ -21574,3 +21574,4 @@
 1593487653	Makyen	pesapak\.com
 1593493902	Makyen	microdigisoft\.com
 1593494748	Makyen	itspell\.com
+1593494770	Makyen	it[\W_]*+spell[\W_]*+technology
