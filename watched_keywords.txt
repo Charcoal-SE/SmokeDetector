@@ -21583,3 +21583,4 @@
 1593499522	Makyen	(?-i:ZogNjp)(?#fiverr.com)
 1593499540	Makyen	(?-i:UCDuU6yNcl1-41IcGUDeXgKQ)(?#YouTube channel)
 1593502317	Makyen	skydiscovery\.com\.au
+1593502503	Makyen	myaukni(?<=@myaukni)
