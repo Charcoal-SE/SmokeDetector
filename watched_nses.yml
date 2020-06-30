@@ -884,7 +884,6 @@ items:
 - ns: hostgator.in.
 - ns: hostspicy.com.
 - ns: ewebguru.com.
-- ns: solidhosting.pro.
 - ns: dnsowl.com.
 - ns: elitegifthouse.com.
 - comment: no longer responding 2020-04-02
@@ -980,7 +979,6 @@ items:
 - ns: elsner.com.
 - ns: dnschamp.com.
 - ns: gohostgator.com.
-- ns: trouble-free.net.
 - ns: mycyberhosting.com.
 - ns: webnode.com.
 - ns: printdns.com.
@@ -1013,7 +1011,6 @@ items:
 - ns: c0d3host.com.
 - ns: improvmx.com.
 - ns: paramountinfosystem.com.
-- ns: server.plus.
 - ns: absas.net.
 - ns: profiwebspace.at.
 - ns: speedydns.net.
@@ -1079,3 +1076,4 @@ items:
 - ns: cms500.com.
 - ns: servers800.com.
 - ns: our-websites.com.
+- ns: 100ws.com.

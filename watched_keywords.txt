@@ -21567,4 +21567,29 @@
 1593450030	user12986714	(?-i:guP-N-B0vDE)(?#youtu.be)
 1593449850	user12986714	we\W*+provides?\W*+(?:\w*+(?:\W|\r|\n)*+){0,6}services?
 1593450878	user12986714	triclara(?!\.com)
-1593454205	user12986714	nass?[\W_]*+cleaners?+(?!\.com(?<=nasscleaners\.com))
+1593454205	user12986714	nass?[\W_]*+cleaners?+(?!\.com(?<=nascleaners\.com))
+1593470156	user12986714	bitcointechnologist(?:@gmail\.com)?
+1593473124	user12986714	(?-i:HF2TaZtFOL4)(?#youtu.be)
+1593477330	Makyen	nascleaners\.com\.au
+1593487653	Makyen	pesapak\.com
+1593493902	Makyen	microdigisoft\.com
+1593494748	Makyen	itspell\.com
+1593494770	Makyen	it[\W_]*+spell[\W_]*+technology
+1593499435	Makyen	9animestv\.com
+1593499452	Makyen	deunoposte\.ikeadubaionline\.com
+1593499469	Makyen	(?-i:aadikhan27)(?#fiverr.com)
+1593499489	Makyen	(?-i:GPkm67)(?#fiverr.com)
+1593499506	Makyen	(?-i:ZogNrl)(?#fiverr.com)
+1593499522	Makyen	(?-i:ZogNjp)(?#fiverr.com)
+1593499540	Makyen	(?-i:UCDuU6yNcl1-41IcGUDeXgKQ)(?#YouTube channel)
+1593502317	Makyen	skydiscovery\.com\.au
+1593502503	Makyen	myaukni(?<=@myaukni)
+1593505040	Makyen	probiotic[\W_]*+t[\W_]*+50
+1593505129	Makyen	contactcustomerservice\.net
+1593449773	user12986714	lead(?:ing)?\W*+providers?\W*+of
+1593509316	tripleee	knightwood
+1593511093	tripleee	legaldocsa2z\.com
+1593449678	user12986714	enterprises?\W*+resources?\W*+plan(?:ning)?
+1593450354	user12986714	covid\W*+(?:19\W*+)?test(?:ing)?\W*+kits?
+1593514653	tripleee	seamantravel\.club
+1593514753	Daniil	(?-i:Seaman Travel Club)

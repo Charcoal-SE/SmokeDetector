@@ -333,4 +333,3 @@ lustresparasala
 ^(?-i:jeffrey)\W*(?-i:cage)$
 (?-i:^Digital India$)
 (?-i:^Light[\W_]*+[Hh]ouse$)
-^Umesh Singh‭$

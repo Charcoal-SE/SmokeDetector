@@ -908,10 +908,10 @@ def keyword_link(s, site):   # thanking keyword and a link in the same short ans
         return False, ""
     praise = regex.compile(r"(?i)\b(?:nice|good|interesting|helpful|great|amazing) (?:article|blog|post|information)\b|"
                            r"very useful").search(s)
-    thanks = regex.compile(r"(?i)\b(?:appreciate|than(k|ks|x)|gratidão)\b").search(s)
+    thanks = regex.compile(r"(?i)\b(?:appreciate|than(?:k|ks|x)|gratidão)\b").search(s)
     keyword = regex.compile(r"(?i)\b(?:I really appreciate|many thanks?|thanks? a lot|thank you (?:very|for)|"
                             r"than(?:ks|x) for (?:sharing|this|your)|dear forum members|(?:very (?:informative|useful)|"
-                            r"stumbled upon (?:your|this)|wonderful|visit my) (?:blog|site|website))\b").search(s)
+                            r"stumbled upon (?:your|this)|wonderful|visit my) (?:blog|site|website|channel))\b").search(s)
     if link and keyword:
         return True, u"Keyword *{}* with link {}".format(keyword.group(0), link.group(0))
     if link and thanks and praise:
