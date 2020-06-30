@@ -31,6 +31,7 @@ class Post:
         self._user_type = ""
         self._votes = {'downvotes': None, 'upvotes': None}
         self._edited = False
+        self._creation_date = 0
 
         if parent is not None:
             if not isinstance(parent, Post):
@@ -53,7 +54,7 @@ class Post:
                    'user_url=' + self.user_url, 'post_site=' + self.post_site, 'post_id=' + self.post_id,
                    'is_answer=' + str(self.is_answer), 'body_is_summary=' + str(self.body_is_summary),
                    'owner_rep=' + str(self.owner_rep), 'user_type=' + self.user_type,
-                   'post_score=' + str(self.post_score)]
+                   'post_score=' + str(self.post_score), 'creation_date=' + str(self.creation_date)]
         return "%s(%s)" % (type_name, ', '.join(dataset))
 
     def __setitem__(self, key, item):
@@ -148,6 +149,7 @@ class Post:
             'question_id': '_post_id',
             'answer_id': '_post_id',
             'edited': '_edited',
+            'creation_date': '_creation_date',
         }
 
         self._process_element_mapping(element_map, response, is_api_response=True)
@@ -272,3 +274,7 @@ class Post:
     @property
     def edited(self):
         return self._edited
+
+    @property
+    def creation_date(self):
+        return self._creation_date
