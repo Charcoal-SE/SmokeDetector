@@ -906,12 +906,25 @@ def keyword_link(s, site):   # thanking keyword and a link in the same short ans
     link = regex.compile(r'(?i)<a href="https?://\S++').search(s)
     if not link or is_whitelisted_website(link.group(0)):
         return False, ""
-    praise = regex.compile(r"(?i)\b(?:nice|good|interesting|helpful|great|amazing) (?:article|blog|post|information)\b|"
-                           r"very useful").search(s)
+    praise = regex.compile(r"(?i)\b(?:nice|good|interesting|helpful|great|amazing) (?:article|blog|post|information)\b"
+                           r"|very useful").search(s)
     thanks = regex.compile(r"(?i)\b(?:appreciate|than(?:k|ks|x)|gratidão)\b").search(s)
-    keyword = regex.compile(r"(?i)\b(?:I really appreciate|many thanks?|thanks? a lot|thank you (?:very|for)|"
-                            r"than(?:ks|x) for (?:sharing|this|your)|dear forum members|(?:very (?:informative|useful)|"
-                            r"stumbled upon (?:your|this)|wonderful|visit my) (?:blog|site|website|channel))\b").search(s)
+    keyword_regex_text = r"(?i)\b" \
+                         r"(?:" \
+                         "" r"I really appreciate" \
+                         "" r"|many thanks" \
+                         "" r"|thanks a lot" \
+                         "" r"|thank you (?:very|for)" \
+                         "" r"|than(?:ks|x) for (?:sharing|this|your)" \
+                         "" r"|dear forum members" \
+                         "" r"|(?:" \
+                         "" "" r"very (?:informative|useful)" \
+                         "" "" r"|stumbled upon (?:your|this)" \
+                         "" "" r"|wonderful" \
+                         "" "" r"|visit my" \
+                         "" r") (?:blog|site|website|channel)" \
+                         r")\b"
+    keyword = regex.compile(keyword_regex_text).search(s)
     if link and keyword:
         return True, u"Keyword *{}* with link {}".format(keyword.group(0), link.group(0))
     if link and thanks and praise:
