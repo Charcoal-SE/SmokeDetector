@@ -34,6 +34,7 @@ LINK_CACHE = dict()
 LEVEN_DOMAIN_DISTANCE = 3
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
+OLD_POST_THRES = 21600  # 6 hours
 BODY_TITLE_SIMILAR_RATIO = 0.90
 CHARACTER_USE_RATIO = 0.42
 PUNCTUATION_RATIO = 0.42
@@ -1163,10 +1164,14 @@ def is_offensive_post(s, site):
     return False, ""
 
 
-@create_rule("user unregistered or non-existent", title=False, whole_post=True)
+@create_rule("user unregistered or non-existent with non-default username", title=False, whole_post=True)
 def user_unregistered_or_non_existent(post):
+    if (time.time() - post.creation_date) > OLD_POST_THRESHOLD:
+        return False, False, False, ""
+
     if post.user_type in {"unregistered", "does_not_exist"}:
-        return False, True, False, "user_type is {}".format(post.user_type)
+        if regex.match(r"^user\d++$", post.user_name) is not None:
+            return False, True, False, "user_type is {}, user_name is {}".format(post.user_type, post.user_name)
 
     return False, False, False, ""
 
