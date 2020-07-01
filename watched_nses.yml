@@ -490,6 +490,9 @@ items:
   - liz.ns.cloudflare.com.
 - ns:
   - hal.ns.cloudflare.com.
+  - tani.ns.cloudflare.com.
+- ns:
+  - hal.ns.cloudflare.com.
   - tegan.ns.cloudflare.com.
 - ns:
   - hugh.ns.cloudflare.com.
