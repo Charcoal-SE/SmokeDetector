@@ -110,6 +110,9 @@ items:
   - leah.ns.cloudflare.com.
 - ns:
   - anirban.ns.cloudflare.com.
+  - dee.ns.cloudflare.com.
+- ns:
+  - abirban.ns.cloudflare.com.
   - janet.ns.cloudflare.com.
 - ns:
   - anna.ns.cloudflare.com.
