@@ -95,15 +95,16 @@ def api_get_post(post_url):
         post_data.owner_name = html.unescape(item['owner']['display_name'])
         post_data.owner_url = item['owner']['link']
         post_data.owner_rep = item['owner']['reputation']
-        if 'user_type' in item['owner']:
-            post_data.user_type = item['owner']['user_type']
-        else:
-            post_data.user_type = ""
     else:
-        post_data.owner_name = ""
+        post_data.owner_name = ""  # Warning: deprecated. Use .user_type field to decide if the user is deleted.
         post_data.owner_url = ""
         post_data.owner_rep = 1
+
+    if 'owner' in item and 'user_type' in item['owner']:
+        post_data.user_type = item['owner']['user_type']
+    else:
         post_data.user_type = ""
+
     post_data.site = site
     post_data.body = item['body']
     post_data.score = item['score']
