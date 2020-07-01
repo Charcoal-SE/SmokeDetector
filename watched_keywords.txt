@@ -19716,7 +19716,6 @@
 1587922912	Makyen	(?-i:3eMDMxg)(?#bit.ly)
 1587925486	Makyen	mespressinfo\.com
 1587925611	Glorfindel	cenpostmedia\.com
-1587926089	Makyen	whopills\.com
 1587926967	Makyen	tempwatch
 1587932174	Glorfindel	zoomscred\.com
 1587961430	tripleee	wuxiaworld\.online
