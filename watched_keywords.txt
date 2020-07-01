@@ -21614,3 +21614,4 @@
 1593610210	Daniil	chesssources\.com
 1593611163	Machavity	(?-i:^Plus Academic$)
 1593616021	Makyen	mamere08libiran\.wixsite\.com
+1593616186	Machavity	mamere08libiran(?#wixsite)
