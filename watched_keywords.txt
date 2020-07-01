@@ -21613,3 +21613,4 @@
 1593601419	Daniil	code2engineer\.com
 1593604166	tripleee	usersadvice\.com
 1593610210	Daniil	chesssources\.com
+1593611163	Machavity	(?-i:^Plus Academic$)
