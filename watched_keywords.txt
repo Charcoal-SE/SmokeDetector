@@ -21606,3 +21606,4 @@
 1593555757	user12986714	mageplugins\.com
 1593563874	Makyen	qatestingtrainings\.com
 1593575577	tripleee	tunepat\.com
+1593583217	Makyen	openstudy\.co\.in
