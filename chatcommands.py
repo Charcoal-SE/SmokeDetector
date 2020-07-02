@@ -1666,7 +1666,7 @@ def allspam(msg, url, alias_used="allspam"):
                            "one go.".format(wait))
     user = get_user_from_url(url)
     if user is None:
-        raise CmdException("[User]({}): Invalid url.".format(url))
+        raise CmdException("User {}: Invalid url.".format(url))
     user_sites = []
     user_post_urls = []
     # Detect whether link is to network profile or site profile
@@ -1791,14 +1791,14 @@ def report_post(url, reported_by, reported_in=None, blacklist_by=None, operation
     # Generate shortlink from url
     shortlink = url_to_shortlink(url)
     if not shortlink:
-        return "[Post]({}): Invalid url.".format(url)
+        return "Post {}: Invalid url.".format(url)
 
     # Fetch post data by API
     post_data = api_get_post(rebuild_str(shortlink))
     if post_data is None:
-        return "[Post]({}): Invalid url.".format(url)
+        return "Post {}: Invalid url.".format(url)
     if post_data is False:
-        return "[Post]({}): No data fetched from API. It may have been deleted.".format(url)
+        return "Post {}: No data fetched from API. It may have been deleted.".format(url)
 
     abs_url = post_data.post_url
     url = to_protocol_relative(abs_url)
@@ -1810,9 +1810,9 @@ def report_post(url, reported_by, reported_in=None, blacklist_by=None, operation
             # Post custom_reason as MS comment if exists
             if custom_reason:
                 Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by, url=url, after=15)
-            return "[Post]({}): Already recently reported [ [MS]({}) ]".format(abs_url, ms_link)
+            return "Post {}: Already recently reported [ [MS]({}) ]".format(abs_url, ms_link)
         else:
-            return "[Post]({}): Already recently reported".format(abs_url)
+            return "Post {}: Already recently reported".format(abs_url)
 
     post = Post(api_response=post_data.as_dict)
     user = get_user_from_url(post_data.owner_url)
@@ -1867,10 +1867,10 @@ def report_post(url, reported_by, reported_in=None, blacklist_by=None, operation
     # Also the operation must be either "scan" or "scan-force"
     if scan_why:
         # Post is ignored
-        return "[Post]({}): Looks like spam but is ignored.".format(abs_url)
+        return "Post {}: Looks like spam but is ignored.".format(abs_url)
     else:
         # Is not spam
-        return "[Post]({}): Does not look like spam.".format(abs_url)
+        return "Post {}: Does not look like spam.".format(abs_url)
 
 
 @command(str, str, privileged=True, whole_msg=True)
