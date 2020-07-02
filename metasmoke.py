@@ -580,6 +580,8 @@ class Metasmoke:
             response = Metasmoke.get('/api/v2.0/posts/urls', params=payload).json()
         except AttributeError:
             return None
+        except json.decoder.JSONDecodeError:
+            return None
         except Exception as e:
             log('error', '{}: {}'.format(type(e).__name__, e))
             log_exception(*sys.exc_info())
