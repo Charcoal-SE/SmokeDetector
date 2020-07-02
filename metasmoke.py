@@ -25,7 +25,7 @@ import spamhandling
 import classes
 import chatcommunicate
 from helpers import log, exit_mode, only_blacklists_changed, \
-    only_modules_changed, blacklist_integrity_check, reload_modules
+    only_modules_changed, blacklist_integrity_check, reload_modules, log_exception
 from gitmanager import GitManager
 import findspam
 from socketscience import SocketScience
@@ -579,6 +579,13 @@ class Metasmoke:
         try:
             response = Metasmoke.get('/api/v2.0/posts/urls', params=payload).json()
         except AttributeError:
+            return None
+        except Exception as e:
+            log('error', '{}: {}'.format(type(e).__name__, e))
+            log_exception(*sys.exc_info())
+            exception_only = ''.join(traceback.format_exception_only(type(e), e)).strip()
+            chatcommunicate.tell_rooms_with("debug",
+                                            "In getting MS post information, recovered from `" + exception_only + "`")
             return None
 
         return response['items']
