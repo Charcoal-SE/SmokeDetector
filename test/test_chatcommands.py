@@ -411,7 +411,7 @@ def test_allspam(handle_spam):
         assert handle_spam.call_count == 1
         _, call = handle_spam.call_args_list[0]
         assert isinstance(call["post"], Post)
-        assert call["reasons"] == ["Manually reported answer"]
+        assert call["reasons"] == ["Manually reported answer (Batch report by ArtOfCode)"]
         assert call["why"].startswith(
             "Post manually reported by user *ArtOfCode* in room *Charcoal HQ*."
             "\n\nThis post would not have been caught otherwise."
