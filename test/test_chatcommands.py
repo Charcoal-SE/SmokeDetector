@@ -289,7 +289,7 @@ def test_report(handle_spam):
             "id": 1337
         })
 
-        assert chatcommands.report("test", original_msg=msg, alias_used="report") == "[Post](test): Invalid url."
+        assert chatcommands.report("test", original_msg=msg, alias_used="report") == "Post test: Invalid url."
 
         assert chatcommands.report("one two three four five plus-an-extra", original_msg=msg, alias_used="report") == (
             "To avoid SmokeDetector reporting posts too slowly, you can report at most 5 posts at a time. This is to avoid "
@@ -300,11 +300,11 @@ def test_report(handle_spam):
         #     .startswith("You cannot provide multiple custom report reasons.")
 
         assert chatcommands.report('https://stackoverflow.com/q/1', original_msg=msg) == \
-            "[Post](https://stackoverflow.com/q/1): No data fetched from API. It may have been deleted."
+            "Post https://stackoverflow.com/q/1: No data fetched from API. It may have been deleted."
 
         # Valid post
         assert chatcommands.report('https://stackoverflow.com/a/1732454', original_msg=msg, alias_used="scan") == \
-            "[Post](https://stackoverflow.com/a/1732454): Does not look like spam."
+            "Post https://stackoverflow.com/a/1732454: Does not look like spam."
         assert chatcommands.report('https://stackoverflow.com/a/1732454 "~o.O~"', original_msg=msg, alias_used="report") is None
 
         _, call = handle_spam.call_args_list[-1]
@@ -338,7 +338,7 @@ def test_report(handle_spam):
 
         # Don't re-report
         GlobalVars.latest_questions = [('stackoverflow.com', '1732454', 'RegEx match open tags except XHTML self-contained tags')]
-        assert chatcommands.report('https://stackoverflow.com/a/1732454', original_msg=msg).startswith("[Post](https://stackoverflow.com/a/1732454): Already recently reported")
+        assert chatcommands.report('https://stackoverflow.com/a/1732454', original_msg=msg).startswith("Post https://stackoverflow.com/a/1732454: Already recently reported")
 
         # Can use report command multiple times in 30s if only one URL was used
         assert chatcommands.report('https://stackoverflow.com/q/1732348', original_msg=msg, alias_used="report") is None
@@ -369,7 +369,7 @@ def test_allspam(handle_spam):
             "id": 1337
         })
 
-        assert chatcommands.allspam("test", original_msg=msg) == "[User](test): Invalid url."
+        assert chatcommands.allspam("test", original_msg=msg) == "User test: Invalid url."
 
         # If this code lasts long enough to fail, I'll be happy
         assert chatcommands.allspam("https://stackexchange.com/users/10000000000", original_msg=msg) == \
