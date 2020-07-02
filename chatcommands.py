@@ -1637,7 +1637,9 @@ def report(msg, args, alias_used="report"):
 
     output = []
     for url in urls:
-        current_output = report_post(url, msg.owner, msg.room.name, message_url, alias_used, custom_reason)
+        current_output = report_post(url, msg.owner, msg.room.name,
+                                     message_url, False,  # Blacklist user
+                                     alias_used, custom_reason)
         if current_output:
             output.append(current_output)
 
@@ -1739,18 +1741,30 @@ def allspam(msg, url, alias_used="allspam"):
                            "for moderator attention, otherwise use !!/report on the posts individually.")
 
     output = []
-    for current_url in user_post_urls:
+    for current_url in user_post_urls[:-1]:
         # Report that post
-        current_output = report_post(current_url, msg.owner, msg.room.name, message_url, operation, custom_reason)
+        current_output = report_post(current_url, msg.owner, msg.room.name,
+                                     message_url, True,  # No blacklist user
+                                     operation, custom_reason)
         if current_output:
             output.append(current_output)
+
+    # Blacklist the user at the last reported post
+    current_output = report_post(user_post_urls[-1], msg.owner, msg.room.name,
+                                 message_url, False,  # Blacklist user
+                                 operation, custom_reason)
+    if current_output:
+        output.append(current_output)
+
     if len(user_post_urls) > 2:
         add_or_update_multiple_reporter(msg.owner.id, msg._client.host, time.time())
     if len(output):
         return "\n".join(output)
 
 
-def report_post(url, reported_by, reported_in=None, blacklist_by=None, operation="report", custom_reason=None):
+def report_post(url, reported_by, reported_in=None,
+                blacklist_by=None, no_blacklist_user=False,
+                operation="report", custom_reason=None):
     """ Scan or report a single post """
     # Arguments:
     # - url: url to the post being reported (string)
@@ -1827,7 +1841,7 @@ def report_post(url, reported_by, reported_in=None, blacklist_by=None, operation
     scan_spam, scan_reasons, scan_why = check_if_spam(post)  # Scan it first
     if operation in {"report", "report-force"}:
         # if operation is "report" or "report-force", blacklist the user
-        if user is not None:
+        if user is not None and not no_blacklist_user:
             add_blacklisted_user(user, blacklist_by, post_data.post_url)
 
     if (operation != "scan") and not scan_spam and scan_why:
