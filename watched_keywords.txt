@@ -21644,3 +21644,4 @@
 1593689031	tripleee	vfx[\W_]*+(?:college|degree|training|institutes)s?
 1593692689	tripleee	zlovema(?# medium.com)
 1593695263	Eliah Kagan	apkdoor\.com
+1593697990	Makyen	shivashrestha1\.com\.np
