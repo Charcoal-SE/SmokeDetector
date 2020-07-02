@@ -334,3 +334,4 @@ lustresparasala
 (?-i:^Digital India$)
 (?-i:^Light[\W_]*+[Hh]ouse$)
 (?-i:^Gitpac Consultancy Service$)
+(?-i:^Yogesh Sambare$)
