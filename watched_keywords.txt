@@ -21637,3 +21637,4 @@
 1593672116	Makyen	bs[\W_]*+broadcast(?!\.com(?<=bsbroadcast\.com))
 1593675683	Makyen	(?-i:IveFs0SiBXc)(?#youtu.be)
 1593676435	Daniil	makeourmoments\.com
+1593682807	Daniil	yalla-gomla\.com
