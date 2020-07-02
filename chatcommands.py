@@ -1637,7 +1637,7 @@ def report(msg, args, alias_used="report"):
 
     output = []
     for url in urls:
-        current_output = report_post(url, msg.owner, msg.room.name,
+        current_output = report_post(url, msg.owner, msg.room.name, "",
                                      message_url, False,  # Blacklist user
                                      alias_used, custom_reason)
         if current_output:
@@ -1741,16 +1741,17 @@ def allspam(msg, url, alias_used="allspam"):
                            "for moderator attention, otherwise use !!/report on the posts individually.")
 
     output = []
+    allspam_prefix = "(Batch report by {})".format(msg.owner)
     for current_url in user_post_urls[:-1]:
         # Report that post
-        current_output = report_post(current_url, msg.owner, msg.room.name,
+        current_output = report_post(current_url, msg.owner, msg.room.name, allspam_prefix,
                                      message_url, True,  # No blacklist user
                                      operation, custom_reason)
         if current_output:
             output.append(current_output)
 
     # Blacklist the user at the last reported post
-    current_output = report_post(user_post_urls[-1], msg.owner, msg.room.name,
+    current_output = report_post(user_post_urls[-1], msg.owner, msg.room.name, allspam_prefix,
                                  message_url, False,  # Blacklist user
                                  operation, custom_reason)
     if current_output:
@@ -1762,7 +1763,7 @@ def allspam(msg, url, alias_used="allspam"):
         return "\n".join(output)
 
 
-def report_post(url, reported_by, reported_in=None,
+def report_post(url, reported_by, reported_in=None, prefix="",
                 blacklist_by=None, no_blacklist_user=False,
                 operation="report", custom_reason=None):
     """ Scan or report a single post """
@@ -1870,7 +1871,7 @@ def report_post(url, reported_by, reported_in=None,
         else:
             processed_why = report_info + "This post would not have been caught otherwise."
         handle_spam(post=post,  # Reported posts are always treated as spam.
-                    reasons=["Manually reported " + post_data.post_type],
+                    reasons=["Manually reported " + post_data.post_type + prefix],
                     why=processed_why)
         if custom_reason:
             Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by, url=url, after=15)
