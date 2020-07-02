@@ -21640,3 +21640,4 @@
 1593682807	Daniil	yalla-gomla\.com
 1593683120	tripleee	(?-i:UCy6feo5KZ3vHtd3xcYEws6g)(?# youtube)
 1593683447	tripleee	codeo(?!token\.com|wallet\.online)[\W_]*?(?:token|wallet)
+1593683463	tripleee	codeotoken\.com
