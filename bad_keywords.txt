@@ -2261,7 +2261,6 @@ primal[\W_]*+grow(?:[\W_]*+(?:pro|p|male|enhancement|usa?|\d++|[\da-f]{4,}+))*
 (?-i:2VjqXm9)(?#on.mktw.net)
 (?-i:j0qcnz)(?# tiny.cc)
 phalogenics
-barxbuddy(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+))*
 unichrone(?!\.(?:com|net))
 thermosense[\W_]*+thermometer(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 ieltswithoutexam\W*(?:at\W*)?yahoo\W*(?:dot\W*)?com
