@@ -20369,7 +20369,6 @@
 1589720200	Daniil	karlut75(?:@gmail\.com)?
 1589721618	Daniil	elmosoft\.net
 1589726721	Makyen	drivethelife\.com
-1589726795	Makyen	covidabout\.com
 1589726819	Makyen	labmaxca17(?#gumroad.com)
 1589726846	Makyen	crictime\.su
 1589727818	Makyen	getcompanydetails\.com
