@@ -1741,7 +1741,7 @@ def allspam(msg, url, alias_used="allspam"):
                            "for moderator attention, otherwise use !!/report on the posts individually.")
 
     output = []
-    allspam_prefix = "(Batch report by {})".format(msg.owner)
+    allspam_prefix = " (Batch report by {})".format(msg.owner.name)
     for current_url in user_post_urls[:-1]:
         # Report that post
         current_output = report_post(current_url, msg.owner, msg.room.name, allspam_prefix,
