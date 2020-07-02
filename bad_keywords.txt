@@ -2310,3 +2310,4 @@ pip3?\W*+install\W*+google-services-api
 (?:get[\W_]*+)?vidagenex(?:[\W_]*+(?:keto|burn|\d++|[\da-f]{5,}+)s?)*
 (?-i:cru70e)
 blaux[\W_]*+(?:portable[\W_]*+)?ac
+sonoma[\W_]*+valley[\W_]*+cbd
