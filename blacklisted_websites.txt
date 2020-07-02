@@ -3647,3 +3647,4 @@ shrinkme\.io(?<!blog\.shrinkme\.io)(?!\/auth\/signup|\/build\/css\/dashboard\.mi
 whopills\.com
 eshopsync\.com
 fyers\.co\.in
+meripadhai\.com
