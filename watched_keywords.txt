@@ -21195,7 +21195,6 @@
 1592253552	Daniil	pflugfelder\.de
 1592286880	Makyen	klevvrtech\.com
 1592298586	Daniil	issues\.wenzhixin\.net\.cn
-1592298840	Daniil	utah\.instructure\.com
 1592298967	Daniil	CoolCatCole(?:@earthlink\.net)?
 1592299182	Daniil	(?-i:ISO OMAN)
 1592301416	Daniil	daftar-slotonline\.com
