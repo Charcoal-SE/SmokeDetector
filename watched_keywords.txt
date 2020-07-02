@@ -21624,3 +21624,4 @@
 1593635535	Makyen	scifiarts\.tumblr\.com
 1593635112	user12986714	kleeja\.org
 1593651493	Makyen	masonrygrandrapids(?!\.com)(?:@gmail\.com)?
+1593651509	Makyen	masonrygrandrapids\.com
