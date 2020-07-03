@@ -32,7 +32,8 @@ from socketscience import SocketScience
 import metasmoke_cache
 
 
-MAX_MS_WEBSOCKET_RETRIES = 5
+MS_WEBSOCKET_LONG_INTERVAL = 60
+MAX_MS_WEBSOCKET_RETRIES_TO_LONG_INTERVAL = 5
 MAX_FAILURES = 10  # Preservative, 10 errors = MS down
 NO_ACTIVITY_PINGS_TO_REBOOT = 3
 NO_ACTIVITY_PINGS_TO_STANDBY = 5  # This is effectively disabled
@@ -172,24 +173,26 @@ class Metasmoke:
                         data = json.loads(a)
                         Metasmoke.handle_websocket_data(data)
                         GlobalVars.MSStatus.succeeded()
+                        failed_connection_attempts = 0
                     except ConnectionError:
                         raise
                     except Exception as e:
-                        Metasmoke.connect_websocket()
+                        log('error', '{}: {}'.format(type(e).__name__, e))
+                        log_exception(*sys.exc_info())
                         GlobalVars.MSStatus.failed()
-                        log('error', e, f=True)
-                        traceback.print_exc()
+                        Metasmoke.connect_websocket()
             except Exception:
                 GlobalVars.MSStatus.failed()
                 log('error', "Couldn't bind to MS websocket")
                 if not has_succeeded:
                     failed_connection_attempts += 1
-                    if failed_connection_attempts > MAX_MS_WEBSOCKET_RETRIES:
-                        chatcommunicate.tell_rooms_with("debug", "Cannot initiate MS websocket." +
-                                                        "  Manual `!!/reboot` is required once MS is up")
-                        log('warning', "Cannot initiate MS websocket." +
-                            " init_websocket() in metasmoke.py is terminating.")
-                        break
+                    if failed_connection_attempts == MAX_MS_WEBSOCKET_RETRIES_TO_LONG_INTERVAL:
+                        chatcommunicate.tell_rooms_with("debug", "Cannot initiate MS websocket."
+                                                                 " Continuing to retry at longer intervals.")
+                        log('warning', "Cannot initiate MS websocket."
+                                       " Continuing to retry at longer intervals.")
+                    if failed_connection_attempts >= MAX_MS_WEBSOCKET_RETRIES_TO_LONG_INTERVAL:
+                        time.sleep(MS_WEBSOCKET_LONG_INTERVAL)
                     else:
                         # Wait and hopefully network issues will be solved
                         time.sleep(10)
