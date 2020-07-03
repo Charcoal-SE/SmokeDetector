@@ -21662,3 +21662,4 @@
 1593759127	tripleee	time4servers\.com
 1593760643	tripleee	etrolley\.weebly\.com
 1593760661	tripleee	etrolley(?!\.weebly)
+1593760678	tripleee	buypmpwithoutexams\.com
