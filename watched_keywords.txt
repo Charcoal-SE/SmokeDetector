@@ -14573,7 +14573,7 @@
 1574835807	tripleee	^\s*geek\s*squad\s*$
 1574835959	tripleee	treasuretripin\.com
 1574836625	Makyen	faisalyousif000
-1574838045	tripleee	ambica
+1574838045	tripleee	ambica[\W_]*+corporation
 1574838230	tripleee	accounterrorfixer\.com
 1574838983	Makyen	(?-i:B4M4KZuhJkf)
 1574839003	Makyen	kidumi\.co\.il
