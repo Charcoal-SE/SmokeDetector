@@ -21656,3 +21656,4 @@
 1593745285	Makyen	auntie[\W_]*+reviews(?!\.com(?<=auntiereviews\.com))
 1593750957	tripleee	pumpadvisor\.com
 1593753627	Makyen	buygenericpills\.com
+1593754494	Makyen	kurtis[\W_]*+manufacturers
