@@ -699,6 +699,9 @@ items:
   - major.ns.cloudflare.com.
   - rosa.ns.cloudflare.com.
 - ns:
+  - malcolm.ns.cloudflare.com.
+  - sureena.ns.cloudflare.com.
+- ns:
   - marge.ns.cloudflare.com.
   - skip.ns.cloudflare.com.
 - ns:
