@@ -337,3 +337,4 @@ lustresparasala
 (?-i:^Yogesh Sambare$)
 (?-i:^Wowdesk Inc$)
 (?-i:^ASH Green$)
+^(?-i:(Bike Rental in|(Joes|Jazz) Car Rental) Goa)$
