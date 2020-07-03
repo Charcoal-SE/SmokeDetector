@@ -21674,3 +21674,4 @@
 1593772538	Daniil	awslagi\.com
 1593775183	Daniil	essaytigers\.co\.uk
 1593775272	Daniil	essaytigers(?!\.co\.uk)
+1593779103	Daniil	jazzcarrental\.com
