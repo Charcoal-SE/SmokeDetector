@@ -21577,7 +21577,6 @@
 1593505040	Makyen	probiotic[\W_]*+t[\W_]*+50
 1593505129	Makyen	contactcustomerservice\.net
 1593449773	user12986714	lead(?:ing)?\W*+providers?\W*+of
-1593509316	tripleee	knightwood
 1593511093	tripleee	legaldocsa2z\.com
 1593449678	user12986714	enterprises?\W*+resources?\W*+plan(?:ning)?
 1593450354	user12986714	covid\W*+(?:19\W*+)?test(?:ing)?\W*+kits?

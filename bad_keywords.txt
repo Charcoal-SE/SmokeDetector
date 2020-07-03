@@ -2311,3 +2311,4 @@ pip3?\W*+install\W*+google-services-api
 blaux[\W_]*+(?:portable[\W_]*+)?ac
 sonoma[\W_]*+valley[\W_]*+cbd
 barx[\W_]*+buddy(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+))*
+knightwood
