@@ -21661,3 +21661,4 @@
 1593758673	tripleee	kurtis?[\W_]*+manufacturers?
 1593759127	tripleee	time4servers\.com
 1593760643	tripleee	etrolley\.weebly\.com
+1593760661	tripleee	etrolley(?!\.weebly)
