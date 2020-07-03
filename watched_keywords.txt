@@ -21659,3 +21659,4 @@
 1593754494	Makyen	kurtis[\W_]*+manufacturers
 1593754417	user12986714	vyavsay\.com
 1593758485	tripleee	mercy[\W_]*+brown\d*(?:(?:[\W_]*+at)?[\W_]*+gmail(?:[\W_]*+dot)?[\W_]*+com)?
+1593758673	tripleee	kurtis?[\W_]*+manufacturers?
