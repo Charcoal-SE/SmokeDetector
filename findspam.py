@@ -598,7 +598,7 @@ def has_few_characters(s, site):
 
 def len_img_block(string):
     """ Length of image html blocks from a string. """
-    all_oc = regex.findall(r'<img[^>]*+>', string)
+    all_oc = regex.findall(r'<img\s[^<>]*+>', string)
     tot_len = 0
     for oc in all_oc:
         tot_len += len(oc)
@@ -613,7 +613,7 @@ def mostly_img(s, site):
 
     s_len_img = len_img_block(s)
     if s_len_img / len(s) > IMG_TXT_R_THRES:
-        return True, "{} of the post is html image blocks".format(s_len_img / len(s))
+        return True, "{:.4f} of the post is html image blocks".format(s_len_img / len(s))
     return False, ""
 
 
