@@ -21695,3 +21695,4 @@
 1593840729	Makyen	researcher/3747805
 1593843776	Makyen	irankohan\.ir
 1593844041	Makyen	probio[\W_]*+lite(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
+1593855381	Glorfindel	Brindavan\W*College
