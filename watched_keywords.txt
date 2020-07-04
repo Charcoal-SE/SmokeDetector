@@ -21700,3 +21700,4 @@
 1593875247	Makyen	apkwind\.com
 1593894994	Makyen	theweldinghelmet\.com
 1593903438	Makyen	xeedevelopers\.com
+1593903455	Makyen	xee[\W_]*+developers(?!\.com(?<=xeedevelopers\.com))
