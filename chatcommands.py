@@ -1736,7 +1736,7 @@ def allspam(msg, url):
         # Fetch posts
         request_url = "https://api.stackexchange.com/2.2/users/{}/posts".format(u_id)
         params = {
-            'filter': '!*0S0--txpIwJHBnEqJR9px_-b(4TI_dAeSMiPUcCA',
+            'filter': '!fsv5ng(IaK_MBkZYCDWuA.U2DqLwdl*YEL_',
             'key': api_key,
             'site': u_site
         }
