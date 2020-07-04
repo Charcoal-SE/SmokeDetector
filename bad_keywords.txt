@@ -148,7 +148,7 @@ call\W?girls?
 youth\W?serum
 explosive\W?muscles?
 zyntix
-genbrain
+genbrain(?:[\W_]*+(?:review|pills|\d++|[\da-f]{5,}+)s?)*
 (?:teeth|tooth)\W(?:lighten|whiten|brighten|shin)(?:er|ing)?
 (?:lighten|whiten|brighten|shin)(?:e|er|ing|ed)?\W(?:teeth|tooth|kit)
 xtest\W(?:muscle|reviews?)
