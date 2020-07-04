@@ -35,9 +35,9 @@ import metasmoke_cache
 MS_WEBSOCKET_LONG_INTERVAL = 60
 MAX_MS_WEBSOCKET_RETRIES_TO_LONG_INTERVAL = 5
 MAX_FAILURES = 10  # Preservative, 10 errors = MS down
-NO_ACTIVITY_PINGS_TO_REBOOT = 3
+NO_ACTIVITY_PINGS_TO_REBOOT = 4
 NO_ACTIVITY_PINGS_TO_STANDBY = 5  # This is effectively disabled
-NO_ACTIVITY_PINGS_TO_REPORT = 2
+NO_ACTIVITY_PINGS_TO_REPORT = 3
 
 
 # noinspection PyClassHasNoInit,PyBroadException,PyUnresolvedReferences,PyProtectedMember
