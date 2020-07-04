@@ -208,7 +208,7 @@ class BodyFetcher:
 
         url = "https://api.stackexchange.com/2.2/questions{}".format(question_modifier)
         params = {
-            'filter': '!*xq08dCDNr)PlxxXfaN8ntivx(BPlY_8XASyXLX-J7F-)VK*Q3KTJVkvp*',
+            'filter': '!1rs)sUKylwB)8isvCRk.xNu71LnaxjnPS12*pX*CEOKbPFwVFdHNxiMa7GIVgzDAwMa',
             'key': 'IAkbitmze4B8KpacUfLqkw((',
             'site': site
         }
