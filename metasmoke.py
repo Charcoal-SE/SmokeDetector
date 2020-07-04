@@ -314,7 +314,7 @@ class Metasmoke:
                 metasmoke_cache.MetasmokeCache.delete('whitelisted-domains')
 
     @staticmethod
-    def send_stats_on_post(title, link, reasons, body, username, user_link, why, owner_rep,
+    def send_stats_on_post(title, link, reasons, body, markdown, username, user_link, why, owner_rep,
                            post_score, up_vote_count, down_vote_count):
         if GlobalVars.metasmoke_host is None:
             log('info', 'Attempted to send stats but metasmoke_host is undefined. Ignoring.')
@@ -329,8 +329,8 @@ class Metasmoke:
             if len(why) > 4096:
                 why = why[:2048] + ' ... ' + why[-2043:]  # Basic maths
 
-            post = {'title': title, 'link': link, 'reasons': reasons,
-                    'body': body, 'username': username, 'user_link': user_link,
+            post = {'title': title, 'link': link, 'reasons': reasons, 'body': body, 'markdown': markdown,
+                    'username': username, 'user_link': user_link,
                     'why': why, 'user_reputation': owner_rep, 'score': post_score,
                     'upvote_count': up_vote_count, 'downvote_count': down_vote_count}
 

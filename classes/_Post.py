@@ -18,6 +18,7 @@ class Post:
 
         self._body = ""
         self._body_is_summary = False
+        self._markdown = None
         self._is_answer = False
         self._owner_rep = 1
         self._parent = None  # If not None, _is_answer should be 'true' because there would then be a parent post.
@@ -115,6 +116,8 @@ class Post:
 
         self._title = html.unescape(response["title"])
         self._body = html.unescape(response["body"])
+        if "body_markdown" in response:
+            self._markdown = html.unescape(response["body_markdown"])
 
         if "IsAnswer" in response and response["IsAnswer"] is True:
             self._is_answer = True
@@ -193,6 +196,10 @@ class Post:
     @property
     def body_is_summary(self):
         return bool(self._body_is_summary)
+
+    @property
+    def markdown(self):
+        return str(self._markdown)
 
     @property
     def is_answer(self):
