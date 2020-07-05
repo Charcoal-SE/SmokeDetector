@@ -199,7 +199,7 @@ class Post:
 
     @property
     def markdown(self):
-        return str(self._markdown)
+        return self._markdown
 
     @property
     def is_answer(self):
