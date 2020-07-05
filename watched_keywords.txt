@@ -21703,3 +21703,4 @@
 1593903455	Makyen	xee[\W_]*+developers(?!\.com(?<=xeedevelopers\.com))
 1593919544	Makyen	(?-i:furqanraajput001)(?#medium.com)
 1593929526	Makyen	freetechmate\.com
+1593937033	Glorfindel	allhindilyrics\.com
