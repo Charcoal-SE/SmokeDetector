@@ -21715,3 +21715,4 @@
 1593984393	Makyen	drakereherbalcure(?!\.wixsite\.com)(?:@gmail(?:\.com)?)?
 1593984412	Makyen	drakereremedy\.blogspot
 1593984427	Makyen	d(?:octo)?r[\W_]*+akere
+1593984438	Makyen	drakereherbalcure\.wixsite\.com
