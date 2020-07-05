@@ -21702,3 +21702,4 @@
 1593903438	Makyen	xeedevelopers\.com
 1593903455	Makyen	xee[\W_]*+developers(?!\.com(?<=xeedevelopers\.com))
 1593919544	Makyen	(?-i:furqanraajput001)(?#medium.com)
+1593926406	Sonic the Masked Werehog	freetechmate\.com
