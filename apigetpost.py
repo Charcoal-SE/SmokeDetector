@@ -17,6 +17,7 @@ class PostData:
         self.owner_rep = None
         self.title = None
         self.body = None
+        self.markdown = None
         self.score = None
         self.up_vote_count = None
         self.down_vote_count = None
@@ -30,6 +31,7 @@ class PostData:
         dictdata = {
             'title': self.title,
             'body': self.body,
+            'markdown': self.markdown,
             'owner': {'display_name': self.owner_name, 'link': self.owner_url, 'reputation': self.owner_rep},
             'site': self.site,
             'question_id': self.post_id,
