@@ -21713,3 +21713,4 @@
 1593951853	Daniil	(?-i:HostingSite)
 1593953491	Daniil	github\.com/AndyObtiva/
 1593984393	Makyen	drakereherbalcure(?!\.wixsite\.com)(?:@gmail(?:\.com)?)?
+1593984412	Makyen	drakereremedy\.blogspot
