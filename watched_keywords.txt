@@ -21729,3 +21729,4 @@
 1594019192	Makyen	hemp[\W_]*+gummies(?:[\W_]*+(?:ca|canada|\d++|[\da-f]{5,}+)s?)*
 1594021656	Makyen	peidagroup\.com
 1594021672	Makyen	peida[\W_]*+(?:machinery[\W_]*+)?group(?!\.com(?<=peidagroup\.com))(?:[\W_]*+(?:co|ltd))*
+1594021686	Makyen	008618855615637(?#Whatsapp)
