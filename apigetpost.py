@@ -101,6 +101,7 @@ def api_get_post(post_url):
         post_data.owner_rep = 1
     post_data.site = site
     post_data.body = item['body']
+    post_data.markdown = item['body_markdown']
     post_data.score = item['score']
     post_data.up_vote_count = item['up_vote_count']
     post_data.down_vote_count = item['down_vote_count']
