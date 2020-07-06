@@ -21728,3 +21728,4 @@
 1594019108	Makyen	zoho[\W_]*+consultants
 1594019192	Makyen	hemp[\W_]*+gummies(?:[\W_]*+(?:ca|canada|\d++|[\da-f]{5,}+)s?)*
 1594021656	Makyen	peidagroup\.com
+1594021672	Makyen	peida[\W_]*+(?:machinery[\W_]*+)?group(?!\.com(?<=peidagroup\.com))(?:[\W_]*+(?:co|ltd))*
