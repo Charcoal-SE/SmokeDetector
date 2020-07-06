@@ -21722,3 +21722,4 @@
 1594012600	Makyen	công\s*+ty\s*+nhân\s*+đạt
 1594012615	Makyen	xaydungnhandat\.com\.vn
 1594015572	Makyen	pure[\W_]*+crave[\W_]*+keto
+1594018894	Makyen	tecsmash\.com
