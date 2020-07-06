@@ -9721,7 +9721,6 @@
 1557590744	Makyen	cicghost\W*(?:at\W*)?protonmail\W*(?:dot\W*)?com
 1557632237	Makyen	cmhelpline\.in
 1557633130	Machavity	coinb\.(?:in|dev)
-1557633349	Machavity	medium\.com/@cryptofun
 1557649423	Shree	amazon-flipkart\.com
 1557662720	Shree	fonebucks\.com
 1557666652	Machavity	helmykediri\.com
