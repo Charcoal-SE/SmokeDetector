@@ -590,8 +590,8 @@ class Metasmoke:
             log('error', '{}: {}'.format(type(e).__name__, e))
             log_exception(*sys.exc_info())
             exception_only = ''.join(traceback.format_exception_only(type(e), e)).strip()
-            chatcommunicate.tell_rooms_with("debug",
-                                            "In getting MS post information, recovered from `" + exception_only + "`")
+            chatcommunicate.tell_rooms_with("debug", "{}: In getting MS post information, recovered from `{}`"
+                                                     .format(GlobalVars.location, exception_only))
             return None
 
         return response['items']

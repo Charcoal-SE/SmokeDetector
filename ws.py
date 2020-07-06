@@ -276,7 +276,8 @@ while not GlobalVars.no_se_activity_scan:
             exit_mode("early_exception")
         ws = init_se_websocket_or_reboot(MAX_SE_WEBSOCKET_RETRIES, tell_debug_room_on_error=True)
 
-        chatcommunicate.tell_rooms_with("debug", "Recovered from `" + exception_only + "`")
+        chatcommunicate.tell_rooms_with("debug", "{}: SE WebSocket: recovered from `{}`"
+                                                 .format(GlobalVars.location, exception_only))
 
 while GlobalVars.no_se_activity_scan:
     # Sleep for longer than the automatic restart
