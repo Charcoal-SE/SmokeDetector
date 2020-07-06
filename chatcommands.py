@@ -1815,14 +1815,17 @@ def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, o
     """
     Reports a list of URLs
     :param urls: A list of URLs
-    :param reported_by_owner: The chatexchange User record for the user that reported the URLs.
+    :param reported_by_owner: The chatexchange User record for the user that reported the URLs, or a str.
     :param reported_in: The name of the room in which the URLs were reported, or True if reported by the MS API.
     :param blacklist_by: String of the URL for the transcript of the chat message causing the report.
     :param operation: String of which operation is being performed (e.g. report, scan, report-force, scan-force)
     :param custom_reason: String of the custom reason why the URLs are being reported.
     :return: String: the in-chat repsponse
     """
-    reported_by_name = reported_by_owner.name
+    # Use reported_by_owner.name (ChatExchange user record) unless reported_by_owner is a
+    # str (e.g.  reports from the MS WebSocket).  If reported_by_owner isn't a ChatExchange
+    # user record, we can't add the custom_reason as an MS comment later.
+    reported_by_name = reported_by_owner if type(reported_by_owner) is str else reported_by_owner.name
     operation = operation or "report"
     is_forced = operation in {"scan-force", "report-force", "report-direct"}
     if operation == "scan-force":
@@ -1922,7 +1925,7 @@ def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, o
         if scan_spam and operation != "report-direct":
             comment = report_info + scan_why.lstrip()
             handle_spam(post=post, reasons=scan_reasons, why=comment)
-            if custom_reason:
+            if custom_reason and type(reported_by_owner) is not str:
                 Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by_owner, url=url, after=15)
             continue
 
@@ -1942,7 +1945,7 @@ def report_posts(urls, reported_by_owner, reported_in=None, blacklist_by=None, o
             handle_spam(post=post,
                         reasons=["Manually reported " + post_data.post_type + batch],
                         why=comment)
-            if custom_reason:
+            if custom_reason and type(reported_by_owner) is not str:
                 Tasks.later(Metasmoke.post_auto_comment, custom_reason, reported_by_owner, url=url, after=15)
             continue
 
