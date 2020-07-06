@@ -21720,3 +21720,4 @@
 1594009866	Makyen	health4fitness\.org
 1594011683	Makyen	equivital\.com
 1594012600	Makyen	công\s*+ty\s*+nhân\s*+đạt
+1594012615	Makyen	xaydungnhandat\.com\.vn
