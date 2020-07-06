@@ -21723,3 +21723,4 @@
 1594012615	Makyen	xaydungnhandat\.com\.vn
 1594015572	Makyen	pure[\W_]*+crave[\W_]*+keto
 1594018894	Makyen	tecsmash\.com
+1594018914	Makyen	asigo[\W_]*+system[\W_]*+review
