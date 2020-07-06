@@ -21731,3 +21731,4 @@
 1594021672	Makyen	peida[\W_]*+(?:machinery[\W_]*+)?group(?!\.com(?<=peidagroup\.com))(?:[\W_]*+(?:co|ltd))*
 1594021686	Makyen	008618855615637(?#Whatsapp)
 1594021701	Makyen	beck\.liu1(?#skype)
+1594023502	Makyen	stopwatch360\.com
