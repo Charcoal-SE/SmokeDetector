@@ -21741,3 +21741,4 @@
 1594079868	Makyen	bezawysex\.info
 1594087709	Makyen	ekpen[\W_]*+mark(?:[\W_]*+(?:lender|finance|lim(?:ited)?|\d++|[\da-f]{5,}+)s?)*
 1594089978	Makyen	happywheels8\.com
+1594091281	Makyen	bitcoins-cashout\.com
