@@ -21752,3 +21752,4 @@
 1594105177	Makyen	kingmodapk\.com
 1594105194	Makyen	king[\W_]*+mod[\W_]*+apk(?!\.com(?<=kingmodapk\.com))
 1594106086	Makyen	jualboileridm\.com
+1594106719	Makyen	kestrel-aviation\.com
