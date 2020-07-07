@@ -117,9 +117,9 @@ class Post:
         self._title = html.unescape(response["title"])
         self._body = html.unescape(response["body"])
         if "body_markdown" in response:
-            self._markdown = html.unescape(response["body_markdown"])
+            self._markdown = response["body_markdown"]
         elif "markdown" in response:
-            self._markdown = html.unescape(response["markdown"])
+            self._markdown = response["markdown"]
 
         if "IsAnswer" in response and response["IsAnswer"] is True:
             self._is_answer = True
