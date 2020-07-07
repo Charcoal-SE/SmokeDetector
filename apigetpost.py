@@ -17,7 +17,7 @@ class PostData:
         self.owner_rep = None
         self.title = None
         self.body = None
-        self.markdown = None
+        self.body_markdown = None
         self.score = None
         self.up_vote_count = None
         self.down_vote_count = None
@@ -31,7 +31,7 @@ class PostData:
         dictdata = {
             'title': self.title,
             'body': self.body,
-            'markdown': self.markdown,
+            'body_markdown': self.body_markdown,
             'owner': {'display_name': self.owner_name, 'link': self.owner_url, 'reputation': self.owner_rep},
             'site': self.site,
             'question_id': self.post_id,
@@ -101,7 +101,7 @@ def api_get_post(post_url):
         post_data.owner_rep = 1
     post_data.site = site
     post_data.body = item['body']
-    post_data.markdown = item['body_markdown']
+    post_data.body_markdown = item['body_markdown']
     post_data.score = item['score']
     post_data.up_vote_count = item['up_vote_count']
     post_data.down_vote_count = item['down_vote_count']
