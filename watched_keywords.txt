@@ -21739,3 +21739,4 @@
 1594068251	Makyen	xafargames\.com
 1594071465	Makyen	(?-i:M1cN569zzG2Y5M8q8)(?#forms.gle)
 1594079868	Makyen	bezawysex\.info
+1594087709	Makyen	ekpen[\W_]*+mark(?:[\W_]*+(?:lender|finance|lim(?:ited)?|\d++|[\da-f]{5,}+)s?)*
