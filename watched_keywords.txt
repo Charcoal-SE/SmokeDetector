@@ -21766,3 +21766,4 @@
 1594160309	Makyen	play-story-creator\.com
 1594166627	Makyen	orlandojourney\.com
 1594171323	Jeff Schaller	amlouned\.wordpress\.com
+1594171538	Eliah Kagan	classifieds\.usatoday\.com
