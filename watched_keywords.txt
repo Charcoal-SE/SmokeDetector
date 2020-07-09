@@ -21792,3 +21792,4 @@
 1594258721	Makyen	jacqueline\.fabre44(?:@gmail\.com)?
 1594264731	Makyen	(?-i:2ZO9Wli)(?#bit.ly)
 1594265043	Makyen	singorama\.com
+1594267532	Makyen	alliedeprs\.com
