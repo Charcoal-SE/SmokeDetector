@@ -21805,3 +21805,4 @@
 1594320263	Makyen	sagorresearchchems\.com
 1594320279	Makyen	sagor[\W_]*+research[\W_]*+chems(?!\.com(?<=sagorresearchchems\.com))(?:@gmail\.com)?
 1594320295	Makyen	clearviewinstitute\.com
+1594320315	Makyen	husys\.com
