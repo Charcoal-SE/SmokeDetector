@@ -21796,3 +21796,4 @@
 1594269952	Makyen	boltonrefunders(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1594300615	Machavity	apkburner\.com
 1594304608	Machavity	buraqtech\.net
+1594318593	Makyen	vakafx\.com
