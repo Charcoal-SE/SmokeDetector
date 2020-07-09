@@ -4127,7 +4127,8 @@
 1530767940	iBug	bestmattressesreviews\.com
 1530771474	Makyen	garmin-map-updates\.com
 1530774762	Tetsuya Yamamoto	reecoupons\.com
-1530776351	Tetsuya Yamamoto	[J|j]ade\W?[T|t]ailor
+1530776351	Tetsuya Yamamoto	jade[\W_]*tailor(?!\.webs\.com(?<=jadetailor\.webs\.com))
+1530776352	Tetsuya Yamamoto	jadetailor\.webs\.com
 1530777419	Tetsuya Yamamoto	carjumpstarterreview\.com
 1530778077	Tetsuya Yamamoto	udtasocialnews
 1530794320	Glorfindel	inhibidorjammer\.com
