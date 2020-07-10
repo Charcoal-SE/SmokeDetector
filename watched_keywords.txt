@@ -21348,7 +21348,6 @@
 1592741341	Daniil	alljobalert\.info
 1592746146	Daniil	thestudyiq\.com
 1592746161	Daniil	(?-i:The Study IQ‭)
-1592753988	Daniil	jotform\.com
 1592759823	user12986714	dosya\.pro
 1592764844	NobodyNada	mydigitalfiling\.in
 1592769322	Daniil	ericahess(?<=jotform\.com/ericahess)
