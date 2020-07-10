@@ -21827,3 +21827,4 @@
 1594377656	Daniil	(?-i:zippichipwireless)(?#Facebook)
 1594392711	Machavity	 dignityrecoveryinc(?!\.org)
 1594392755	Machavity	dignityrecoveryinc\.org
+1594395970	Makyen	jotform\.com(?=/[\w-])(?!/(?:build|jsform|help|dropbox)[ /"])(?#Originally a straight domain watch by Daniil at 1592753988)
