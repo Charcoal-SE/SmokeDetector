@@ -21829,3 +21829,4 @@
 1594395970	Makyen	jotform\.com(?=/[\w-])(?!/(?:build|jsform|help|dropbox)[ /"])(?#Originally a straight domain watch by Daniil at 1592753988)
 1594398293	Makyen	mcafeeweeb\.simplesite\.com
 1594410953	Machavity	apkfiles\.xyz
+1594414383	Makyen	greenmetric\.uma\.ac\.id
