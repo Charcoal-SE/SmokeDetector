@@ -21831,3 +21831,4 @@
 1594410953	Machavity	apkfiles\.xyz
 1594414383	Makyen	greenmetric\.uma\.ac\.id
 1594414400	Makyen	tracerstudy\.uma\.ac\.id
+1594434535	Makyen	asmibanquet\.com
