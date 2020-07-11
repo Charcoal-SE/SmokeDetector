@@ -21832,3 +21832,4 @@
 1594414383	Makyen	greenmetric\.uma\.ac\.id
 1594414400	Makyen	tracerstudy\.uma\.ac\.id
 1594434535	Makyen	asmibanquet\.com
+1594434551	Makyen	chefsender\.com
