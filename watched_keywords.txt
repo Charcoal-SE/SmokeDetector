@@ -17137,7 +17137,6 @@
 1580964621	Makyen	instagramcloneapps\.com
 1580964645	Makyen	instagram[\W_]*+clone[\W_]*+apps(?!\.com(?<=instagramcloneapps\.com))
 1580967688	Shree	androidblue\.com
-1580967730	Eliah Kagan	infocampus\.co\.in
 1580968293	Eliah Kagan	faxitfast\.com
 1580969009	Makyen	blockchainexpert\.uk
 1580969510	tripleee	ecstatictrend\.com
