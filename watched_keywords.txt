@@ -21866,3 +21866,4 @@
 1594586695	Daniil	bestmedico\.co
 1594593011	Makyen	test[\W_]*+bodz
 1594593045	Makyen	thomasoscarblackatmcard(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+1594595010	user12986714	^(?-i:[A-Z0-9]{10,100})$(?#Long and all caps username)
