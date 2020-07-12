@@ -21860,3 +21860,4 @@
 1594517247	Makyen	davidmillerper(?:@gmail\.com)?
 1594520890	Makyen	alexblackisback(?:@hotmail\.com)?
 1594523059	Makyen	perfectscreens\.in
+1594525570	user12986714	moderators?\W*+(?:[\w]{0,10}+\W*+){0,10}(?:ab|mis)us(?:es?|ing)
