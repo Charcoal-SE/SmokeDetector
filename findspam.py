@@ -1552,7 +1552,7 @@ covid_likely_troll = r"(?-i:millions?|thousands?|global|(?:organ|lung|respirator
 covid_data = r"(?-i:regression|calculat(?:e|ion)|gis|(?:coronavirus|covid(?:-?19)?)\W*+data|google\W*+trends|worldometer|" +\
              r"api|script|parse|scrape|json|statistic(?:s|al)?|oscillat(?:e|ion)|growth\W*+rate|death\W*+rate)"
 covid_research = r"(?-i:hypothe(?:si(?:s|ze)|tical)|redsivir|biochemistry|chemistry|biology|computer\W*+(?:science|engineering)|" +\
-                 r"epidemiology|science|math(?:ematics)?|simulation|model(?:ling)?|r\W*+0\W*|research|bioengineering|genetic|rna)"
+                 r"epidemiology|science|math(?:ematics)?|simulation|model(?:ling)?|r\W*+0\W*+|research|bioengineering|genetic|rna)"
 
 covid_data_sites = ["stackoverflow.com", "stats.stackexchange.com", "math.stackexchange.com", "mathoverflow.com",
                     "cs.stackexchange.com", "biology.stackexchange.com", "chemistry.stackexchange.com",
@@ -1587,9 +1587,9 @@ def covid_troll(s, site):
 
     # Note: all magic numbers below will be adjusted according to detection accuracy.
     p_troll = len(l_likely_troll)
-    if len(p_syndrome) > 1:
+    if len(l_syndrome) > 1:
         p_troll *= 1.5  # More likely trolling if having multiple "syndromes"
-        if len(p_location) > 1:
+        if len(l_location) > 1:
             p_troll *= 1.2  # More likely trolling if mentioned multiple cities in addition
     if site not in covid_data_sites and site not in covid_research_sites:
         p_troll *= 2  # More likely trolling if not posted on related sites
