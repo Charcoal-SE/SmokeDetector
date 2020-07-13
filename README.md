@@ -62,7 +62,7 @@ git checkout deploy
 
 python3 -m venv env
 env/bin/pip3 install -r requirements.txt --upgrade
-env/bin/pip3 install --user -r user_requirements.txt --upgrade
+env/bin/pip3 install -r user_requirements.txt --upgrade
 ```
 
 Next, copy the config file and edit as said above.
