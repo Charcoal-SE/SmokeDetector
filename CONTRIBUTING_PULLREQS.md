@@ -1,7 +1,7 @@
 ### Requirements when making Code Changes (NOT watchlist/blacklist changes)
 
 When you are making pull requests to the code base for SmokeDetector, the
-Charcoal team needs he pull request to contain enough information for us to 
+Charcoal team needs the pull request to contain enough information for us to 
 quickly review things without requiring in-depth code analysis.
 
 **As such, a pull request that suggests code changes** (NOT blacklist or 
@@ -15,7 +15,8 @@ watchlist changes) must have all or most of the following information:
    
 Pull requests that do not have ample information attached to them for 
 justification, etc. may be rejected or may be put on hold until we get more 
-information. Failure to provide ample information must 
+information. Failure to provide ample information will result in delayed 
+processing times.
 
 ### Requirements when making Watchlist/Blacklist changes
 
