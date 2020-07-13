@@ -1541,6 +1541,74 @@ def body_starts_with_title(post):
     return False, False, False, ""
 
 
+# ---Start section---
+# This section should be removed in the future.
+covid_keyword = r"(?-i:covid(?:-?19)?|corona\W*+virus|pendamic|epidemic)"
+covid_location = r"(?-i:china|america|wu\W*+han|he\W*+bei|new\W*+york)"
+covid_syndrome = r"(?-i:hospitalized?|respirat(?ory|ion)|oxygen\W*+saturation|fever|septics?\W*+shock)"
+covid_likely_troll = r"(?-i:millions?|thousands?|global|(?:organ|lung|respiratory)\W*+failure|septics?\W*+shock|trump|" +\
+                     r"natural\W*+remedy|severe|(?:in|not\W*+)effective|useless|died?|hospital(?:ize)?|test(?:s|ing)|free|cheap" +\
+                     r"end\W*+of\W*+world|punish(?:ment)?|greatest|best)"
+covid_data = r"(?-i:regression|calculat(?:e|ion)|gis|(?:coronavirus|covid(?:-?19)?)\W*+data|google\W*+trends|worldometer|" +\
+             r"api|script|parse|scrape|json|statistic(?:s|al)?|oscillat(?:e|ion)|growth\W*+rate|death\W*+rate)"
+covid_research = r"(?-i:hypothe(?:si(?:s|ze)|tical)|redsivir|biochemistry|chemistry|biology|computer\W*+(?:science|engineering)|" +\
+                 r"epidemiology|science|math(?:ematics)?|simulation|model(?:ling)?|r\W*+0\W*|research|bioengineering|genetic|rna)"
+
+covid_data_sites = ["stackoverflow.com", "stats.stackexchange.com", "math.stackexchange.com", "mathoverflow.com",
+                    "cs.stackexchange.com", "biology.stackexchange.com", "chemistry.stackexchange.com",
+                    "physics.stackexchange.com", "datascience.stackexchange.com", "bioinformatics.stackexchange.com"]
+covid_research_sites = ["biology.stackexchange.com", "chemistry.stackexchange.com",
+                        "physics.stackexchange.com", "bioinformatics.stackexchange.com"]
+
+r_keyword = regex.compile(covid_keyword)
+r_location = regex.compile(covid_location)
+r_syndrome = regex.compile(covid_syndrome)
+r_likely_troll = regex.compile(covid_likely_troll)
+r_data = regex.compile(covid_data)
+r_research = regex.compile(covid_research)
+
+COVID_TROLLING_THRES = 1.5
+
+
+@create_rule("potential covid-19 trolling", title=False)
+def covid_troll(s, site):
+    # See if related
+    l_keyword = r_keyword.findall(s)
+    l_syndrome = r_syndrome.findall(s)
+
+    if len(l_keyword) + len(l_syndrome) < len(s) / 500:
+        # Unlikely related
+        return False, ""
+
+    l_location = r_location.findall(s)
+    l_likely_troll = r_likely_troll.findall(s)
+    l_data = r_data.findall(s)
+    l_research = r_research.findall(s)
+
+    # Note: all magic numbers below will be adjusted according to detection accuracy.
+    p_troll = len(l_likely_troll)
+    if len(p_syndrome) > 1:
+        p_troll *= 1.5  # More likely trolling if having multiple "syndromes"
+        if len(p_location) > 1:
+            p_troll *= 1.2  # More likely trolling if mentioned multiple cities in addition
+    if site not in covid_data_sites and site not in covid_research_sites:
+        p_troll *= 2  # More likely trolling if not posted on related sites
+
+    p_data = len(l_data)
+    if site in covid_data_sites:
+        p_data *= 2.5  # More likely legitimate if posted on data sites
+
+    p_research = len(l_research)
+    if site in covid_research_sites:
+        p_research *= 2.5  # More likely legitimate if posted on research sites
+
+    if p_troll / (p_data + p_research) > COVID_TROLLING_THRES:
+        return True, "weight: {:.4f}".format(p_troll / (p_data + p_research))
+    else:
+        return False, ""
+# ---End section---
+
+
 @create_rule("luncheon meat detected", title=False, max_rep=21,
              all=False, sites=["stackoverflow.com"])
 def luncheon_meat(s, site):  # Random "signature" like asdfghjkl
