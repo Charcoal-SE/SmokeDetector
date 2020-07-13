@@ -44,5 +44,3 @@ before_deploy:
   - sudo chown -R $USER.$USER /home/travis/.cache
   - rm -f /home/travis/.cache/pip/log/debug.log
   - rm -rf /home/travis/.cache/pip/http
-after_success:
-  - coveralls
