@@ -22,3 +22,8 @@ able to contribute to more easily:
  - we have a bunch of [userscripts](https://github.com/Charcoal-SE/userscripts) that we use - those are in JavaScript
  
 TL;DR: If you'd like to help out with Charcoal, drop into chat and we'll be able to find you something to do.
+
+**If you are making a pull request for code changes** you must adhere to specific guidelines.  Please refer to the 
+`CONTRIBUTING_PULLREQS.md` file for details on what we require in pull requests for code changes to properly review the request. Pull 
+requests without these requirements may be rejected or require additional information from the original filer until we get details about 
+the request
