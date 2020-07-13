@@ -1545,10 +1545,10 @@ def body_starts_with_title(post):
 # This section should be removed in the future.
 covid_keyword = r"(?-i:covid(?:-?19)?|corona\W*+virus|pendamic|epidemic)"
 covid_location = r"(?-i:china|america|wu\W*+han|he\W*+bei|new\W*+york)"
-covid_syndrome = r"(?-i:hospitalized?|respirat(?ory|ion)|oxygen\W*+saturation|fever|septics?\W*+shock)"
-covid_likely_troll = r"(?-i:millions?|thousands?|global|(?:organ|lung|respiratory)\W*+failure|septics?\W*+shock|trump|" +\
-                     r"natural\W*+remedy|severe|(?:in|not\W*+)effective|useless|died?|hospital(?:ize)?|test(?:s|ing)|free|cheap" +\
-                     r"end\W*+of\W*+world|punish(?:ment)?|greatest|best)"
+covid_syndrome = r"(?-i:hospitalized?|respirat(?:ory|ion)|oxygen\W*+saturation|fever|septics?\W*+shock)"
+covid_likely_troll = r"(?-i:millions?|thousands?|global|(?:organ|lung|respiratory)\W*+failure|septics?\W*+shock|" +\
+                     r"natural\W*+remedy|severe|(?:in|not\W*+)effective|useless|died?|hospital(?:ize)?|test(?:s|ing)|" +\
+                     r"end\W*+of\W*+world|punish(?:ment)?|greatest|best|free|cheap|trump)"
 covid_data = r"(?-i:regression|calculat(?:e|ion)|gis|(?:coronavirus|covid(?:-?19)?)\W*+data|google\W*+trends|worldometer|" +\
              r"api|script|parse|scrape|json|statistic(?:s|al)?|oscillat(?:e|ion)|growth\W*+rate|death\W*+rate)"
 covid_research = r"(?-i:hypothe(?:si(?:s|ze)|tical)|redsivir|biochemistry|chemistry|biology|computer\W*+(?:science|engineering)|" +\
