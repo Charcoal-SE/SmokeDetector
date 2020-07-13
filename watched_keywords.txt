@@ -21886,3 +21886,4 @@
 1594644095	Machavity	mycoworkingspace\.org
 1594650444	Machavity	bloggdesk\.com
 1594658420	Makyen	fitnessimage\.com\.au
+1594654366	user12986714	^(?-i:[A-Z0-9]{10,30})$(?#Long and all caps username)
