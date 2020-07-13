@@ -1578,7 +1578,7 @@ def covid_troll(s, site):
     l_keyword = r_keyword.findall(s)
     l_syndrome = r_syndrome.findall(s)
 
-    if len(l_keyword) + len(l_syndrome) < len(s) / 500:
+    if len(l_keyword) + len(l_syndrome) < len(s) / 100 or len(s) == 0:
         # Unlikely related
         return False, ""
 
@@ -1604,8 +1604,8 @@ def covid_troll(s, site):
     if site in covid_research_sites:
         p_research *= 2.5  # More likely legitimate if posted on research sites
 
-    if p_troll / (p_data + p_research) > COVID_TROLLING_THRES:
-        return True, "weight: {:.4f}".format(p_troll / (p_data + p_research))
+    if p_troll / (p_data + p_research + 1) > COVID_TROLLING_THRES:
+        return True, "weight: {:.4f}".format(p_troll / (p_data + p_research + 1))
     else:
         return False, ""
 # ---End section---
