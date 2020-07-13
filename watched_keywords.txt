@@ -21885,3 +21885,4 @@
 1594636718	Eliah Kagan	drpositivehomeopathy\.com
 1594644095	Machavity	mycoworkingspace\.org
 1594650444	Machavity	bloggdesk\.com
+1594653779	user12986714	covid(?:-?19)?|corona\W*+virus|pendamic|epidemic|hospitalized?|respirat(?:ory|ion)|oxygen\W*+saturation|fever|septics?\W*+shock|(?:organ|lung)\W*failures?(?#Data collection for covid-19 trolling detection)
