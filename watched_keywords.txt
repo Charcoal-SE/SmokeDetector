@@ -21919,3 +21919,4 @@
 1594761099	user12986714	datalastic(?!\.com)
 1594766222	Makyen	githelp\.io
 1594766275	Makyen	so_xcodes(?<=githelp\.io/h/so_xcodes)
+1594768030	user12986714	ihtambnafsak\.com
