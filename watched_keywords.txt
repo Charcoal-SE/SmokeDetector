@@ -21915,3 +21915,4 @@
 1594750976	Machavity	libonomy\.com
 1594756781	Machavity	pestcontrolbd\.net
 1594756604	user12986714	call\W*+now(?=[^\d]{0,20}+\d)
+1594761099	user12986714	datalastic(?!\.com)
