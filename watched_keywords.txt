@@ -21902,3 +21902,4 @@
 1594709938	Makyen	slender[\W_]*+lyfe(?:[\W_]*+(?:keto|review|\d++|[\da-f]{5,}+)s?)*
 1594714199	Makyen	phdbox\.edu\.in
 1594720527	Eliah Kagan	godigitalsignature\.com
+1594720561	Eliah Kagan	dewancash\.me
