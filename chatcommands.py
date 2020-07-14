@@ -341,7 +341,7 @@ def get_test_text_from_regex(pattern):
     return pattern
 
 
-def do_blacklist(blacklist_type, msg, force=False):
+def do_blacklist(blacklist_type, msg, force=False, direct=False):
     """
     Adds a string to the website blacklist and commits/pushes to GitHub
     :param raw_pattern:
@@ -408,6 +408,7 @@ def do_blacklist(blacklist_type, msg, force=False):
 
     _status, result = GitManager.add_to_blacklist(
         blacklist=blacklist_type,
+        is_direct=direct,
         item_to_blacklist=pattern,
         username=msg.owner.name,
         chat_profile_link=chat_user_profile_link,
@@ -437,9 +438,11 @@ def do_blacklist(blacklist_type, msg, force=False):
 
 # noinspection PyIncorrectDocstring
 @command(str, whole_msg=True, privileged=True, give_name=True, aliases=["blacklist-keyword",
+                                                                        "blacklist-website-direct",
                                                                         "blacklist-website",
                                                                         "blacklist-username",
                                                                         "blacklist-number",
+                                                                        "blacklist-website-direct-force",
                                                                         "blacklist-keyword-force",
                                                                         "blacklist-website-force",
                                                                         "blacklist-username-force",
@@ -452,8 +455,9 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     :return: A string
     """
 
-    parts = alias_used.split("-")
-    return do_blacklist(parts[1], msg, force=len(parts) > 2)
+    # force == blacklist even if already caught
+    # direct == no processing on the blacklist expr
+    return do_blacklist(parts[1], msg, force="force" in alias_used, direct="direct" in alias_used)
 
 
 # noinspection PyIncorrectDocstring

@@ -70,7 +70,8 @@ class GitManager:
             return "origin"
 
     @classmethod
-    def add_to_blacklist(cls, blacklist='', item_to_blacklist='', username='', chat_profile_link='',
+    def add_to_blacklist(cls, blacklist='', is_direct=False, item_to_blacklist='',
+                         username='', chat_profile_link='',
                          code_permissions=False, metasmoke_down=False):
         if blacklist == "":
             return (False, 'GitManager: blacklist is not defined. Blame a developer.')
@@ -119,6 +120,10 @@ class GitManager:
             else:
                 op = 'blacklist'
                 item = item_to_blacklist
+                if blacklist_type == Blacklist.WEBSITES and not is_direct:
+                    # Blacklist website and is not direct -> anchor expr
+                    item = r"\b" + item + r"\b"
+                    item_to_blacklist = item
 
             exists, line = blacklister.exists(item_to_blacklist)
             if exists:
