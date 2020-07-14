@@ -2235,7 +2235,7 @@ hyper[\W_]*+plus
 emerald[\W_]*+essence(?:[\W_]*+(?:oil|cbd|review|\d++|[\da-f]{4,}+)s?)*
 arouza?(?:[\W_]*+ultimate)?
 bitcoin[\W_]*+revolution
-(?-i:iDealshare[\W_]++VideoGo)
+(?:iDealshare|VideoGo)(?:[\W_]*+(?:iDealshare|VideoGo))*
 formax[\W_]*+lean
 thedigizones(?!\.com)
 Regional\s+College\s+of\s+Management\s+Bangalore
