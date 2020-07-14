@@ -12479,7 +12479,6 @@
 1567274304	Makyen	certificatesnoexams\.page\.tl
 1567274432	Makyen	victoriahaagan(?:@yahoo\.com)?
 1567274581	Makyen	dermacort(?:[\W_]*+(?:cream|uk|united|kingdom|thusly|\d+))*
-1567309520	Stormblessed	anydesk\.com
 1567310765	Makyen	site-1945931-3387-1202\.mystrikingly\.com
 1567310796	Makyen	https-topwellnessblog-com
 1567322654	Makyen	(?-i:tASMYqUQiU4)
