@@ -21939,3 +21939,4 @@
 1594807892	Daniil	mylescars\.com
 1594808131	John Dvorak	indiagift\.in
 1594808233	Daniil	mirandoacuenca\.es
+1594808251	Daniil	mirandoacuenca(?!\.com)
