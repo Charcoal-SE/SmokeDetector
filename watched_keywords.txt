@@ -21945,3 +21945,4 @@
 1594817257	Daniil	einfach-umzug\.com
 1594817302	Daniil	einfach\Wumzug(!\.com)
 1594817936	Daniil	(?:usmanovoilandgas60[\W_]*+(?:at[\W_]*+)?)?mail(?:[\W_]*+(?:dot[\W_]*+)?ru)(#? obfuscated usmanovoilandgas60@mail.ru)
+1594818309	Daniil	fundayholidays\.com
