@@ -21927,3 +21927,4 @@
 1594774800	Eliah Kagan	shopefe\.blogspot
 1594774845	Eliah Kagan	laptopunderbudget\.com
 1594775340	Makyen	(?-i:emmy_bodex)(?#fiverr.com)
+1594781295	Machavity	(?-i:^GudReview$)
