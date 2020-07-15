@@ -122,7 +122,7 @@ class GitManager:
                 item = item_to_blacklist
                 if blacklist_type == Blacklist.WEBSITES and not is_direct:
                     # Blacklist website and is not direct -> anchor expr
-                    item = r"\b" + item + r"\b"
+                    item = r"\b(?<![^\W_]-)" + item + r"(?![.-][^\W_])\b"
                     item_to_blacklist = item
 
             exists, line = blacklister.exists(item_to_blacklist)
