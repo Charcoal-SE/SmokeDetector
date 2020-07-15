@@ -21949,3 +21949,4 @@
 1594818599	Daniil	browseinfo\.in
 1594818616	Daniil	browseinfo(?!\.in)
 1594822520	Makyen	fbdon\.com
+1594822789	Makyen	d(?:octo)?r[\W_]*+okpodo
