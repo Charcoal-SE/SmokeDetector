@@ -21961,3 +21961,4 @@
 1594833764	user12986714	sachinajmeraclasses\.com
 1594835032	Makyen	tarun\.singh(?=@coolbootsmedia\.com)
 1594835049	Makyen	coolbootsmedia\.com
+1594840955	Daniil	(?-i:2Zy7Ozc)(?#bit.ly)
