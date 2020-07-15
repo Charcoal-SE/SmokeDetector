@@ -23,7 +23,7 @@ def get_user_from_url(url):
         return None
 
 
-# noinspection PyBroadException
+# noinspection PyBroadException,PyMissingTypeHints
 def get_api_sitename_from_url(url):
     match = regex.compile(r"(?:https?:)?(?://)?([\w.]+)/?").search(url)
     if match is None:
@@ -35,6 +35,7 @@ def get_api_sitename_from_url(url):
         return None
 
 
+# noinspection PyMissingTypeHints
 def api_parameter_from_link(link):
     match = regex.compile(
         r'((?:meta\.)?(?:(?:(?:math|(?:\w{2}\.)?stack)overflow|askubuntu|superuser|serverfault)|\w+)'
@@ -58,6 +59,7 @@ def api_parameter_from_link(link):
         return None
 
 
+# noinspection PyMissingTypeHints
 def post_id_from_link(link):
     match = regex.compile(r'(?:https?:)?//[^/]+/\w+/(\d+)').search(link)
     if match:
@@ -66,6 +68,7 @@ def post_id_from_link(link):
         return None
 
 
+# noinspection PyMissingTypeHints
 def to_metasmoke_link(post_url, protocol=True):
     return "{}//m.erwaysoftware.com/posts/uid/{}/{}".format(
         "https:" if protocol else "", api_parameter_from_link(post_url),
