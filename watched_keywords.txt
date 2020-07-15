@@ -18470,7 +18470,6 @@
 1584078630	Makyen	(?-i:nw8OQea)(?#firsturl.de)
 1584080414	Makyen	(?-i:_k-ILhqEcHs)(?#youtu.be)
 1584080464	Makyen	mosquitoguyinc\.com
-1584080735	Makyen	ghostrifles\.com
 1584084578	tripleee	sataware\.com
 1584084607	tripleee	yourstory\.com
 1584085207	Makyen	new[\W_]*+hoodia(?:[\W_]*+(?:reduction|weight|\d++|[\da-f]{4,}+))*
