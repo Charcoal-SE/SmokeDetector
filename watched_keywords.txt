@@ -21940,3 +21940,4 @@
 1594808131	John Dvorak	indiagift\.in
 1594808233	Daniil	mirandoacuenca\.es
 1594808251	Daniil	mirandoacuenca(?!\.com)
+1594808370	Daniil	newblogvip\.com
