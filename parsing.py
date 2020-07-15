@@ -67,11 +67,7 @@ def post_id_from_link(link):
 
 
 def to_metasmoke_link(post_url, protocol=True):
-    # TEMPORARILY disable shortURL because of DNS/HTTPS issues - teward, 2020-07-15
-    # return "{}//m.erwaysoftware.com/posts/uid/{}/{}".format(
-    #     "https:" if protocol else "", api_parameter_from_link(post_url),
-    #     post_id_from_link(post_url))
-    return "{}//metasmoke.erwaysoftware.com/posts/uid/{}/{}".format(
+    return "{}//m.erwaysoftware.com/posts/uid/{}/{}".format(
         "https:" if protocol else "", api_parameter_from_link(post_url),
         post_id_from_link(post_url))
 
