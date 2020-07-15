@@ -21943,3 +21943,4 @@
 1594808659	Daniil	stylesadviser\.com
 1594815629	Machavity	youngevity\.me
 1594817257	Daniil	einfach-umzug\.com
+1594817302	Daniil	einfach\Wumzug(!\.com)
