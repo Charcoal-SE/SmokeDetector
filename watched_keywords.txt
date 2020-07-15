@@ -18780,7 +18780,6 @@
 1584710584	Machavity	humanitiesconference\.com
 1584711444	tripleee	winxdesigner\.com
 1584712957	Machavity	^sophia\Wworld$
-1584713252	WELZ	einfach\Wumzug
 1584717879	Makyen	iluminatihood123(?:@gmail\.com)?
 1584725020	Jenayah	techpoil\.com
 1584730391	Kulfy	foolsvilla\.blogspot\.com
