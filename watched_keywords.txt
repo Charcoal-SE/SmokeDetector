@@ -21953,3 +21953,4 @@
 1594822810	Makyen	dr\.okpodosolutionhome(?:@gmail\.com)?
 1594822828	Makyen	okpodosolutionhome\.blogspot
 1594822908	Machavity	evolinestore\.com
+1594822870	Jeff Schaller	technobridge\.in
