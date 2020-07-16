@@ -321,7 +321,8 @@ class GitManager:
         string = string.replace("\\", "")
         is_watchlist = "watch" in pr_info["title"]
         is_phone = string.isdigit()
-        reasons = chatcommands.check_blacklist(string, is_username = False, is_watchlist = is_watchlist, is_phone = is_phone)
+        reasons = chatcommands.check_blacklist(string, is_username = False, is_watchlist = is_watchlist, 
+                                               is_phone = is_phone)
         if reasons:
             raise CmdException("Duplicate entry")
 
