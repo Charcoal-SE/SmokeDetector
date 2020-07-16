@@ -317,7 +317,7 @@ class GitManager:
             raise ValueError("PR #{} is not currently open, so I won't merge it.".format(pr_id))
         string = pr_info["title"]
         ref = pr_info['head']['ref']
-        string = regex.match(".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", str).group(1)
+        string = regex.match(r".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", str).group(1)
         string = string.replace("\\", "")
         is_watchlist = "watch" in pr_info["title"]
         is_phone = string.isdigit()
