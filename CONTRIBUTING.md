@@ -27,3 +27,7 @@ TL;DR: If you'd like to help out with Charcoal, drop into chat and we'll be able
 `CONTRIBUTING_PULLREQS.md` file for details on what we require in pull requests for code changes to properly review the request. Pull 
 requests without these requirements may be rejected or require additional information from the original filer until we get details about 
 the request
+
+**If you believe you have found a security flaw**, then report the flaw to security@charcoal-se.org with details of what you believe the 
+flaw is and how you came to the conclusion.  **DO NOT** share any issues that are potentially security vulnerabilitites as public issues 
+or through public unsecure mediums.
