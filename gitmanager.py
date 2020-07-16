@@ -346,9 +346,11 @@ class GitManager:
     @staticmethod
     def get_watch_content(pr_id):
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
-        if not response:
+        file = requests.get("https://api.github.com/repos/{}/pulls/{}/files".format(GlobalVars.bot_repo_slug, pr_id))
+        if not response or not file:
             raise ConnectionError("Cannot connect to GitHub API")
         pr_info = response.json()
+        modified_file = file.json()
         if pr_info["user"]["login"] != "SmokeDetector":
             raise ValueError("PR #{} is not created by me, so I can't approve it.".format(pr_id))
         if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
@@ -359,7 +361,7 @@ class GitManager:
         string = pr_into["title"]
         string = regex.match(r".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", str).group(1)
         string = string.replace("\\", "")
-        return string
+        return string, modified_file["filename"]
 
     @staticmethod
     def prepare_git_for_operation(blacklist_file_name):
