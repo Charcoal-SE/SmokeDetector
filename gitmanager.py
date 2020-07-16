@@ -6,7 +6,7 @@ import time
 import json
 from datetime import datetime
 from threading import Lock
-import chatcommands
+import chatcommands.check_blacklist
 
 import regex
 import requests
