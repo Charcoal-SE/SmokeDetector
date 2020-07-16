@@ -31,6 +31,7 @@ from helpers import exit_mode, only_blacklists_changed, only_modules_changed, lo
     reload_modules, chunk_list
 from classes import Post
 from classes.feedback import *
+from classes.dnsresolver import dns_resolve
 from tasks import Tasks
 
 
@@ -2262,3 +2263,18 @@ def autoflagged(msg):
         return "That post was automatically flagged, using flags from: {}.".format(", ".join(names))
     else:
         return "That post was **not** automatically flagged by metasmoke."
+
+    
+    @command(str, privileged=True)
+    def dig(domain):
+        """
+        Runs a DNS query using pydns and returns the
+        list of A and AAAA records as output.
+        :param domain: the domain to get DNS records for
+        :return: A comma-separated string of IPs
+        """
+        results = dns_resolve(domain)
+        if results:
+            return ", ".join(result for result in results)
+        else:
+            return "No data found."
