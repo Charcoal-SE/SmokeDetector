@@ -14,7 +14,7 @@ from metasmoke import Metasmoke
 from blacklists import load_blacklists, Blacklist
 from parsing import *
 from spamhandling import check_if_spam, handle_spam
-from gitmanager import *
+import gitmanager
 import threading
 import random
 import requests
