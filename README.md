@@ -69,6 +69,11 @@ Next, copy the config file and edit as said above.
 To run SmokeDetector in this virtual environment, use
 `env/bin/python3 nocrash.py`.
 
+[Note: On Macs, it may be necessary to remove the `--user` option from the last
+`pip3` command line in the above instructions. However, the `--user` option is known to
+be necessary on other platforms. Further testing is necessary to resolve
+the discrepancy.]
+
 ### Docker setup
 
 Running in a [Docker container](https://www.docker.com/resources/what-container)
