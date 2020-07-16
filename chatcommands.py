@@ -529,6 +529,11 @@ def approve(msg, pr_id):
 
     # Forward this, because checks are better placed in gitmanager.py
     try:
+        content=GitManager.get_watch_content(pr_id)
+        check_blacklist(content, False, not content.isdigit(), content.isdigit())
+        if reasons:
+            raise CmdException("PR content already watched")
+            return None
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
         chat_user_profile_link = "https://chat.{}/users/{}".format(
             msg._client.host, msg.owner.id)
