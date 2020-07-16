@@ -529,8 +529,8 @@ def approve(msg, pr_id):
 
     # Forward this, because checks are better placed in gitmanager.py
     try:
-        content=GitManager.get_watch_content(pr_id)
-        check_blacklist(content, False, not content.isdigit(), content.isdigit())
+        content = GitManager.get_watch_content(pr_id)
+        reasons = check_blacklist(content, False, not content.isdigit(), content.isdigit())
         if reasons:
             raise CmdException("PR content already watched")
             return None
