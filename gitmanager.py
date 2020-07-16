@@ -353,7 +353,7 @@ class GitManager:
             if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
                 raise ValueError("PR description is malformed. Blame a developer.")
             string = pr_into["title"]
-            string = regex.match(".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", str).group(1)
+            string = regex.match(r".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", str).group(1)
             string = string.replace("\\", "")
             return string
 
