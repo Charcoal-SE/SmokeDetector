@@ -2262,19 +2262,3 @@ def autoflagged(msg):
         return "That post was automatically flagged, using flags from: {}.".format(", ".join(names))
     else:
         return "That post was **not** automatically flagged by metasmoke."
-
-
-@command(str, privileged=True)
-def dig(domain):
-    """
-    Runs dig +short a <domain> and returns the output.
-    :param domain: the domain to dig A records for
-    :return: A string
-    """
-    # Naive injection-prevention attempt by limiting <domain> to only characters that could
-    # reasonably appear in a domain. That plus the fact that this is privileged should be
-    # sufficient protection.
-    if not regex.match(r'^[\w-\.]+$', domain):
-        return "I'm afraid I can't do that."
-    else:
-        return subprocess.check_output("dig +short a {}".format(domain).split()).decode('utf-8')
