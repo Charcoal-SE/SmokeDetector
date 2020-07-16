@@ -343,19 +343,19 @@ class GitManager:
             git.checkout('deploy')
             cls.gitmanager_lock.release()
 
-        @classmethod
-        def get_watch_content(pr_id):
-            response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
-            if not response:
-                raise ConnectionError("Cannot connect to GitHub API")
-            pr_info = response.json()
+    @classmethod
+    def get_watch_content(pr_id):
+        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
+        if not response:
+            raise ConnectionError("Cannot connect to GitHub API")
+        pr_info = response.json()
 
-            if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
-                raise ValueError("PR description is malformed. Blame a developer.")
-            string = pr_into["title"]
-            string = regex.match(r".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", str).group(1)
-            string = string.replace("\\", "")
-            return string
+        if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
+            raise ValueError("PR description is malformed. Blame a developer.")
+        string = pr_into["title"]
+        string = regex.match(r".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", str).group(1)
+        string = string.replace("\\", "")
+        return string
 
     @staticmethod
     def prepare_git_for_operation(blacklist_file_name):
