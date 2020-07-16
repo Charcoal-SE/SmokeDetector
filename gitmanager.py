@@ -305,12 +305,6 @@ class GitManager:
 
     @classmethod
     def merge_pull_request(cls, pr_id, comment=""):
-
-        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
-
-            string=regex.match(".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", str).group(1)
-            string=string.replace("\\", "")
-            return string
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
         if not response:
             raise ConnectionError("Cannot connect to GitHub API")
