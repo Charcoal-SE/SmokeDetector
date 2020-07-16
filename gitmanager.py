@@ -343,7 +343,7 @@ class GitManager:
             git.checkout('deploy')
             cls.gitmanager_lock.release()
 
-    @classmethod
+    @staticmethod
     def get_watch_content(pr_id):
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
         if not response:
