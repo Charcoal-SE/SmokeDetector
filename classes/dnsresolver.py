@@ -1,6 +1,8 @@
 import dns
 import dns.resolver
 import dns.rdatatype
+from typing import Union, List
+
 
 class DNSResolver(dns.resolver.Resolver):
 
@@ -18,9 +20,9 @@ class DNSResolver(dns.resolver.Resolver):
             elif isinstance(nameservers, list):
                 self.nameservers = nameservers
             else:
-                # Fallback to using Google DNS servers
                 self.nameservers = ['8.8.8.8, 8.8.4.4']
-                
+
+
 def dns_resolve(domain: str, resolver: DNSResolver = DNSResolver(configure=True)) -> list:
     addrs = []
 
