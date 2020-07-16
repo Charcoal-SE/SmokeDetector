@@ -305,6 +305,12 @@ class GitManager:
 
     @classmethod
     def merge_pull_request(cls, pr_id, comment=""):
+
+        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
+
+            string=regex.match(".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", str).group(1)
+            string=string.replace("\\", "")
+            return string
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
         if not response:
             raise ConnectionError("Cannot connect to GitHub API")
@@ -315,7 +321,15 @@ class GitManager:
             raise ValueError("PR description is malformed. Blame a developer.")
         if pr_info["state"] != "open":
             raise ValueError("PR #{} is not currently open, so I won't merge it.".format(pr_id))
+        string = pr_info["title"]
         ref = pr_info['head']['ref']
+        string = regex.match(".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", str).group(1)
+        string = string.replace("\\", "")
+        is_watchlist = "watch" in pr_info["title"]
+        is_phone = string.isdigit()
+        reasons = chatcommands.check_blacklist(string, is_username = False, is_watchlist = is_watchlist, is_phone = is_phone)
+        if reasons:
+            raise CmdException("Duplicate entry")
 
         if comment:  # yay we have comments now
             GitHubManager.comment_on_thread(pr_id, comment)
@@ -343,25 +357,19 @@ class GitManager:
             git.checkout('deploy')
             cls.gitmanager_lock.release()
 
-    @staticmethod
-    def get_watch_content(pr_id):
-        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
-        file = requests.get("https://api.github.com/repos/{}/pulls/{}/files".format(GlobalVars.bot_repo_slug, pr_id))
-        if not response or not file:
-            raise ConnectionError("Cannot connect to GitHub API")
-        pr_info = response.json()
-        modified_file = file.json()
-        if pr_info["user"]["login"] != "SmokeDetector":
-            raise ValueError("PR #{} is not created by me, so I can't approve it.".format(pr_id))
-        if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
-            raise ValueError("PR description is malformed. Blame a developer.")
-        if pr_info["state"] != "open":
-            raise ValueError("PR #{} is not currently open, so I won't merge it.".format(pr_id))
-        ref = pr_info['head']['ref']
-        string = pr_into["title"]
-        string = regex.match(r".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", str).group(1)
-        string = string.replace("\\", "")
-        return string, modified_file["filename"]
+        @classmethod
+        def get_watch_content(pr_id):
+            response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
+            if not response:
+                raise ConnectionError("Cannot connect to GitHub API")
+            pr_info = response.json()
+
+            if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
+                raise ValueError("PR description is malformed. Blame a developer.")
+            string=pr_into["title"]
+            string=regex.match(".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", str).group(1)
+            string=string.replace("\\", "")
+            return string
 
     @staticmethod
     def prepare_git_for_operation(blacklist_file_name):
