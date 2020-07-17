@@ -350,37 +350,37 @@ class FindSpam:
         # See PR 2322 for the reason of (?:^|\b) and (?:\b|$)
         # (?w:\b) is also useful
         cls.rule_bad_keywords.regex = r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)|{}".format(
-            "|".join(GlobalVars.bad_keywords), "|".join(bad_keywords_nwb))
+            "|".join(reversed(GlobalVars.bad_keywords)), "|".join(bad_keywords_nwb))
         try:
             del cls.rule_bad_keywords.compiled_regex
         except AttributeError:
             pass
         cls.rule_bad_keywords.sanity_check()
         cls.rule_watched_keywords.regex = r'(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)'.format(
-            "|".join(GlobalVars.watched_keywords.keys()))
+            "|".join(reversed(GlobalVars.watched_keywords.keys())))
         try:
             del cls.rule_watched_keywords.compiled_regex
         except AttributeError:
             pass
         cls.rule_watched_keywords.sanity_check()
         cls.rule_blacklisted_websites.regex = r"(?i)({})".format(
-            "|".join(GlobalVars.blacklisted_websites))
+            "|".join(reversed(GlobalVars.blacklisted_websites)))
         try:
             del cls.rule_blacklisted_websites.compiled_regex
         except AttributeError:
             pass
         cls.rule_blacklisted_websites.sanity_check()
         cls.rule_blacklisted_usernames.regex = r"(?i)({})".format(
-            "|".join(GlobalVars.blacklisted_usernames))
+            "|".join(reversed(GlobalVars.blacklisted_usernames)))
         try:
             del cls.rule_blacklisted_usernames.compiled_regex
         except AttributeError:
             pass
         cls.rule_blacklisted_usernames.sanity_check()
         GlobalVars.blacklisted_numbers, GlobalVars.blacklisted_numbers_normalized = \
-            process_numlist(GlobalVars.blacklisted_numbers)
+            process_numlist(reversed(GlobalVars.blacklisted_numbers))
         GlobalVars.watched_numbers, GlobalVars.watched_numbers_normalized = \
-            process_numlist(GlobalVars.watched_numbers)
+            process_numlist(reversed(GlobalVars.watched_numbers))
         log('debug', "Global blacklists loaded")
 
     @staticmethod
