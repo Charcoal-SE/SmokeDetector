@@ -21991,3 +21991,4 @@
 1594985735	Daniil	kytero\.com
 1594987181	Machavity	shia[\W_]*asks
 1594987627	Daniil	form\.jotform\.com
+1594988160	Jeff Schaller	ukrainiantvcompany\.com
