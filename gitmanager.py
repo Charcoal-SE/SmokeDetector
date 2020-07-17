@@ -306,12 +306,9 @@ class GitManager:
     @classmethod
     def merge_pull_request(cls, pr_id, comment=""):
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
-        file = requests.get("https://api.github.com/repos/{}/pulls/{}/files".format(GlobalVars.bot_repo_slug, pr_id))
         if not response:
             raise ConnectionError("Cannot connect to GitHub API")
         pr_info = response.json()
-        file = file.json()
-        file = file["filename"]
         if pr_info["user"]["login"] != "SmokeDetector":
             raise ValueError("PR #{} is not created by me, so I can't approve it.".format(pr_id))
         if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
@@ -319,6 +316,7 @@ class GitManager:
         if pr_info["state"] != "open":
             raise ValueError("PR #{} is not currently open, so I won't merge it.".format(pr_id))
         string = pr_info["title"]
+        file = pr_info["filename"]
         ref = pr_info['head']['ref']
         string = regex.match(r".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", str).group(1)
         string = string.replace("\\", "")
@@ -342,19 +340,20 @@ class GitManager:
             ms_search_option = "&body="
         else:
             raise CmdException('GitManager: blacklist is not recognized. Blame a developer.')
+        now = str(int(time.time()))
         blacklister = Blacklist(blacklist_type)
         blacklist_file_name = blacklist_type[0]
-        try:
-            if blacklist_type in {Blacklist.WATCHED_KEYWORDS, Blacklist.WATCHED_NUMBERS}:
-                op = 'watch'
-                item = item_to_blacklist
-                item_to_blacklist = "\t".join([now, username, item])
-            else:
-                op = 'blacklist'
-                item = item_to_blacklist
-            exists, line = blacklister.exists(item_to_blacklist)
-            if exists:
-                raise CmdException('Already {}ed on line {} of {}'.format(op, line, blacklist_file_name))
+        username=''
+        if blacklist_type in {Blacklist.WATCHED_KEYWORDS, Blacklist.WATCHED_NUMBERS}:
+            op = 'watch'
+            item = string
+            item_to_blacklist = "\t".join([now, username, item])
+        else:
+            op = 'blacklist'
+            item = string
+        exists, line = blacklister.exists(item_to_blacklist)
+        if exists:
+            raise CmdException('Already {}ed on line {} of {}'.format(op, line, file))
         if comment:  # yay we have comments now
             GitHubManager.comment_on_thread(pr_id, comment)
         try:
