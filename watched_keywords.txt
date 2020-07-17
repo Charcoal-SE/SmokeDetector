@@ -21992,3 +21992,4 @@
 1594987181	Machavity	shia[\W_]*asks
 1594987627	Daniil	form\.jotform\.com
 1594988160	Jeff Schaller	ukrainiantvcompany\.com
+1594989418	Daniil	cmdchallenge\.com
