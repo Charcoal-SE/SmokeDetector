@@ -2313,3 +2313,4 @@ sonoma[\W_]*+valley[\W_]*+cbd
 barx[\W_]*+buddy(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+))*
 knightwood
 fyers[\W_]*+demat(?:[\W_]*+(?:account|free|investment|online|trading|platform)s?)*
+test2
