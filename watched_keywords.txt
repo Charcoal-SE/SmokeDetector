@@ -21995,3 +21995,4 @@
 1594989418	Daniil	cmdchallenge\.com
 1594990041	Daniil	iairtickets\.com
 1594990060	Daniil	(?-i:Allegiant Airlines)
+1594992530	Daniil	technologycounter\.com
