@@ -355,8 +355,6 @@ class GitManager:
             exists, line = blacklister.exists(item_to_blacklist)
             if exists:
                 raise CmdException('Already {}ed on line {} of {}'.format(op, line, blacklist_file_name))
-        if reasons:
-            raise CmdException("Duplicate entry")
         if comment:  # yay we have comments now
             GitHubManager.comment_on_thread(pr_id, comment)
         try:
