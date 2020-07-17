@@ -21996,3 +21996,4 @@
 1594990041	Daniil	iairtickets\.com
 1594990060	Daniil	(?-i:Allegiant Airlines)
 1594992530	Daniil	technologycounter\.com
+1594993312	Daniil	(?:brainhackers[\W_]*+(?:at[\W_]*+)?)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)(#? obfuscated brainhackers@aol.com)
