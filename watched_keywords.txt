@@ -21998,3 +21998,4 @@
 1594992530	Daniil	technologycounter\.com
 1594993312	Daniil	(?:brainhackers[\W_]*+(?:at[\W_]*+)?)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)(#? obfuscated brainhackers@aol.com)
 1594994918	Machavity	bestiefood\.com
+1594995601	Daniil	cboinfotech\.com
