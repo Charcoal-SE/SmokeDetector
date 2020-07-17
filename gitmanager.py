@@ -306,9 +306,11 @@ class GitManager:
     @classmethod
     def merge_pull_request(cls, pr_id, comment=""):
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
-        if not response:
+        files = requests.get("https://api.github.com/repos/{}/pulls/{}/files".format(GlobalVars.bot_repo_slug, pr_id))
+        if not response or not files:
             raise ConnectionError("Cannot connect to GitHub API")
         pr_info = response.json()
+        files_info = files.json()
         if pr_info["user"]["login"] != "SmokeDetector":
             raise ValueError("PR #{} is not created by me, so I can't approve it.".format(pr_id))
         if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
@@ -316,7 +318,7 @@ class GitManager:
         if pr_info["state"] != "open":
             raise ValueError("PR #{} is not currently open, so I won't merge it.".format(pr_id))
         string = pr_info["title"]
-        file = pr_info["filename"]
+        file = files_info["filename"]
         ref = pr_info['head']['ref']
         string = regex.match(r".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", str).group(1)
         string = string.replace("\\", "")
