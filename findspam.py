@@ -608,12 +608,19 @@ def len_img_block(string):
 # max_score=2 to prevent voting fraud
 @create_rule("post is mostly images", title=False, max_rep=201, max_score=2)
 def mostly_img(s, site):
-    if len(s) == 0:
+    s_len_orig = len(s)
+    if s_len_orig == 0:
         return False, ""
 
+    # Strip code blocks manually. This should be removed once feature
+    # https://chat.stackexchange.com/transcript/message/54842978
+    # get implemented.
+    s = regex.sub("(?s)<pre>.*?</pre>", "\nstripped pre\n", s)
+    s = regex.sub("(?s)<code>.*?</code>", "\nstripped code\n", s)
+
     s_len_img = len_img_block(s)
-    if s_len_img / len(s) > IMG_TXT_R_THRES:
-        return True, "{:.4f} of the post is html image blocks".format(s_len_img / len(s))
+    if s_len_img / s_len_orig > IMG_TXT_R_THRES:
+        return True, "{:.4f} of the post is html image blocks".format(s_len_img / s_len_orig)
     return False, ""
 
 
