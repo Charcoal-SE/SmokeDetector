@@ -343,7 +343,7 @@ class GitManager:
         now = str(int(time.time()))
         blacklister = Blacklist(blacklist_type)
         blacklist_file_name = blacklist_type[0]
-        username=''
+        username = ''
         if blacklist_type in {Blacklist.WATCHED_KEYWORDS, Blacklist.WATCHED_NUMBERS}:
             op = 'watch'
             item = string
