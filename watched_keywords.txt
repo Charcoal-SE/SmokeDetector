@@ -21977,4 +21977,3 @@
 1594886374	Daniil	poecurrency\.com
 1594886841	Daniil	Askmeoffers(?!\.com)
 1594889771	Daniil	chronodivers\.com
-1594981596	Daniil	test\.com
