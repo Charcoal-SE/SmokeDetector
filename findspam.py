@@ -378,9 +378,9 @@ class FindSpam:
             pass
         cls.rule_blacklisted_usernames.sanity_check()
         GlobalVars.blacklisted_numbers, GlobalVars.blacklisted_numbers_normalized = \
-            process_numlist(reversed(GlobalVars.blacklisted_numbers))
+            process_numlist(GlobalVars.blacklisted_numbers)
         GlobalVars.watched_numbers, GlobalVars.watched_numbers_normalized = \
-            process_numlist(reversed(GlobalVars.watched_numbers))
+            process_numlist(GlobalVars.watched_numbers)
         log('debug', "Global blacklists loaded")
 
     @staticmethod
