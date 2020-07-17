@@ -322,7 +322,6 @@ class GitManager:
         ref = pr_info['head']['ref']
         string = regex.match(r".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", str).group(1)
         string = string.replace("\\", "")
-        
         if file == "blacklisted_websites.txt":
             blacklist_type = Blacklist.WEBSITES
             ms_search_option = "&body_is_regex=1&body="
@@ -343,12 +342,9 @@ class GitManager:
             ms_search_option = "&body="
         else:
             raise CmdException('GitManager: blacklist is not recognized. Blame a developer.')
-
         blacklister = Blacklist(blacklist_type)
         blacklist_file_name = blacklist_type[0]
-
         try:
-            
             if blacklist_type in {Blacklist.WATCHED_KEYWORDS, Blacklist.WATCHED_NUMBERS}:
                 op = 'watch'
                 item = item_to_blacklist
@@ -356,16 +352,13 @@ class GitManager:
             else:
                 op = 'blacklist'
                 item = item_to_blacklist
-
             exists, line = blacklister.exists(item_to_blacklist)
             if exists:
                 raise CmdException('Already {}ed on line {} of {}'.format(op, line, blacklist_file_name))
         if reasons:
             raise CmdException("Duplicate entry")
-
         if comment:  # yay we have comments now
             GitHubManager.comment_on_thread(pr_id, comment)
-
         try:
             # Remote checks passed, good to go here
             cls.gitmanager_lock.acquire()
