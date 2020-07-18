@@ -22011,3 +22011,4 @@
 1595078715	Daniil	theenterprisegroupllc\.com
 1595078813	Daniil	factocert(?!\.com)
 1595078828	Daniil	factocert\.com
+1595078859	Daniil	stevemindmagicien\.fr
