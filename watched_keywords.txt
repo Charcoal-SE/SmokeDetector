@@ -13749,7 +13749,6 @@
 1571985826	Makyen	napollo
 1571986761	Makyen	famaga[\W_]*+group
 1571986773	Makyen	famaga\.com
-1571987607	Glorfindel	factocert
 1571989761	Makyen	larisjations
 1571989774	Makyen	neural-network-trading-bot
 1571989785	Makyen	(?-i:YTNNTRBT)
