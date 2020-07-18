@@ -1,0 +1,54 @@
+name: build
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version:
+          - 3.5
+          - 3.8
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Setup cache for Bundler
+      id: cache
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    - name: Install dependencies
+      run: |
+        pip3 install -U wheel pip
+        pip3 install -U -r requirements.txt -r user_requirements.txt pytest-cov coveralls
+        python3 -W default::Warning -m pytest \
+          --cov=chatcommunicate \
+          --cov=findspam \
+          --cov=globalvars \
+          --cov=spamhandling \
+          --cov=datahandling \
+          --cov=chatcommands \
+          --cov=helpers \
+          test
+    - name: Lint tests
+      run: flake8 --config=tox_tests.ini test/
+    - name: Lint classes
+      run: flake8 --config=tox_classes.ini classes/
+    - name: Lint code
+      run: flake8 ./
+    - name: Pytest
+      run: |
+    - name: Coveralls
+      run: coveralls
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
