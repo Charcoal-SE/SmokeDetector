@@ -22032,4 +22032,3 @@
 1595172981	Makyen	(?-i:iOV_vZW52bk)(?#youtu.be)
 1595173685	Daniil	pikwy\.com
 1595176699	Machavity	sprinkledata\.com
-1595176748	Machavity	Sprinkle\W*Data
