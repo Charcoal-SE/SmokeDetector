@@ -22028,3 +22028,4 @@
 1595148581	Makyen	atlantis[\W_]*+aquaventure
 1595149256	Makyen	facetextart\.com
 1595149483	Makyen	msiafterburner\.site
+1595172960	Makyen	superdeveloppeur\.wordpress\.com
