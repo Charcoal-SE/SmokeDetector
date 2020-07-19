@@ -22024,3 +22024,4 @@
 1595131477	Makyen	(?-i:32yv0is)(?#bit.ly)
 1595133093	Makyen	bestreview\w*
 1595146694	Makyen	bloodbalanceadvancedformulaus\.blogspot
+1595148312	Makyen	(?-i:thedefendersavengers)(?#sites.google.com)
