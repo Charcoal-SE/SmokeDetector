@@ -22026,3 +22026,4 @@
 1595148312	Makyen	(?-i:thedefendersavengers)(?#sites.google.com)
 1595148560	Makyen	summadx
 1595148581	Makyen	atlantis[\W_]*+aquaventure
+1595149256	Makyen	facetextart\.com
