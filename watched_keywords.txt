@@ -22034,3 +22034,4 @@
 1595176699	Machavity	sprinkledata\.com
 1595177135	Machavity	sprinkle[\W_]*+data(?!\.com(?<=sprinkledata\.com))
 1595176330	user12986714	printernational\.co\.uk
+1595095423	user12986714	mysfdcninja\.blogspot
