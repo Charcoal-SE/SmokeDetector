@@ -22030,3 +22030,4 @@
 1595149483	Makyen	msiafterburner\.site
 1595172960	Makyen	superdeveloppeur\.wordpress\.com
 1595172981	Makyen	(?-i:iOV_vZW52bk)(?#youtu.be)
+1595173685	Daniil	pikwy\.com
