@@ -959,7 +959,6 @@ healthynaval\.com
 rhinorx90eveningblog\.com
 helix6garciniareview\.com
 thirumalaads\.com
-bestreview\w*
 potentmuscles\.com
 laserscheap\.com
 legalresolved\.com
