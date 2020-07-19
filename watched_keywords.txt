@@ -22025,3 +22025,4 @@
 1595133093	Makyen	bestreview\w*
 1595146694	Makyen	bloodbalanceadvancedformulaus\.blogspot
 1595148312	Makyen	(?-i:thedefendersavengers)(?#sites.google.com)
+1595148560	Makyen	summadx
