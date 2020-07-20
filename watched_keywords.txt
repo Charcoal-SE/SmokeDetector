@@ -22045,3 +22045,4 @@
 1595188199	Machavity	^Tarapada$
 1595224771	Makyen	digital[\W_]*+vignan
 1595230067	Makyen	myersasbestosremoval\.com
+1595233138	Makyen	beggar\.news
