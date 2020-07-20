@@ -22053,7 +22053,6 @@
 1595244649	Jeff Schaller	valuementor\.com
 1595246262	Machavity	adderallwiki\.org
 1595252580	Machavity	(?-i:30fXtai)(?#bitly)
-1595253430	Machavity	(?-i:4XAKj\.png)(?#NSFW uploaded image)
 1595253768	Spevacus	motorparts\.co\.in
 1595224318	gparyani	com\.dar\.guns\.mods
 1595224339	gparyani	studiomcpe\.dragonmodapp\.jjj
