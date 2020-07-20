@@ -22075,3 +22075,4 @@
 1595283649	Eliah Kagan	(?-i:XTDm7wKxfQg)(?#youtu.be)
 1595283667	Eliah Kagan	zebvela\.com
 1595284320	NobodyNada	digisoft\.host
+1595287810	Makyen	webs900[\W_]*+tutanota[\W_]*+com(?#partially obfuscated email address)
