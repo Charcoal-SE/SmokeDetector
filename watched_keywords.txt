@@ -22048,3 +22048,4 @@
 1595233138	Makyen	beggar\.news
 1595233156	Makyen	beggar[\W_]*+news(?<!beggar\.news)
 1595233173	Makyen	ivisarussia\.com
+1595244649	Jeff Schaller	valuementor\.com
