@@ -22078,3 +22078,4 @@
 1595287810	Makyen	webs900[\W_]*+tutanota[\W_]*+com(?#partially obfuscated email address)
 1595291793	Jeff Schaller	soikeo7ball\.com
 1595304292	Ian Campbell	yawot\.com
+1595306737	NobodyNada	novelstamil\.com
