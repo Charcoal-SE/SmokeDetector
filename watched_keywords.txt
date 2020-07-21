@@ -22092,4 +22092,3 @@
 1595325287	Eliah Kagan	zolostays\.com
 1595333933	Machavity	harioffice\.com
 1595334006	Machavity	blogpostexamples\.com
-1595334127	Machavity	speakerdeck\.com
