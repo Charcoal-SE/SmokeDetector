@@ -22077,3 +22077,4 @@
 1595284320	NobodyNada	digisoft\.host
 1595287810	Makyen	webs900[\W_]*+tutanota[\W_]*+com(?#partially obfuscated email address)
 1595291793	Jeff Schaller	soikeo7ball\.com
+1595296387	Undo	yet-another-test\.com
