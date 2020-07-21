@@ -202,7 +202,7 @@ class GitManager:
                                     url, pr_num, GitHubManager.still_using_usernames_nudge))
                     else:
                         return (True,
-                                "You don't have blacklist manager privileges,"
+                                "You don't have blacklist manager privileges, "
                                 "but I've [created PR#{1} for you]({0}).{2}"
                                 .format(url, pr_num, GitHubManager.still_using_usernames_nudge))
 
