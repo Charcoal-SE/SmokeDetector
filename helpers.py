@@ -120,6 +120,7 @@ def redact_passwords(value):
     value = regex.sub(r"((?:https?|ftp):\/\/)[^@:\/]*:[^@:\/]*(?=@)", r"\1[REDACTED URL USERNAME AND PASSWORD]", value)
     # In case these are somewhere else.
     value = redact(value, GlobalVars.github_password, "[GITHUB PASSWORD REDACTED]")
+    value = redact(value, GlobalVars.github_access_token, "[GITHUB ACCESS TOKEN REDACTED]")
     value = redact(value, GlobalVars.chatexchange_p, "[CHAT PASSWORD REDACTED]")
     value = redact(value, GlobalVars.metasmoke_key, "[METASMOKE KEY REDACTED]")
     value = redact(value, GlobalVars.perspective_key, "[PERSPECTIVE KEY REDACTED]")

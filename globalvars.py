@@ -248,6 +248,7 @@ class GlobalVars:
 
     github_username = config.get("github_username")
     github_password = config.get("github_password")
+    github_access_token = config.get("github_access_token")
 
     perspective_key = config.get("perspective_key")
 

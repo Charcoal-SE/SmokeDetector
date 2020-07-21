@@ -34,7 +34,17 @@ def _anchor(str_to_anchor, blacklist_type):
 
 
 class GitHubManager:
-    auth = HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password)
+    still_using_usernames = GlobalVars.github_access_token is None
+
+    if still_using_usernames:
+        still_using_usernames_nudge = " By the way, tell my owner to [set up personal access tokens]" \
+                                      "(//chat.stackexchange.com/transcript/message/55007870#55007870)" \
+                                      " when they have time :)"
+        auth_args = {"auth": HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password)}
+    else:
+        still_using_usernames_nudge = None
+        auth_args = {"headers": {'Authorization': 'token {}'.format(GlobalVars.github_access_token)}}
+
     repo = GlobalVars.bot_repo_slug
 
     @classmethod
@@ -45,14 +55,14 @@ class GitHubManager:
         if isinstance(payload, dict):
             payload = json.dumps(payload)
         response = requests.post("https://api.github.com/repos/{}/pulls".format(cls.repo),
-                                 auth=cls.auth, data=payload)
+                                 data=payload, **cls.auth_args)
         return response.json()
 
     @classmethod
     def comment_on_thread(cls, thread_id, body):
         url = "https://api.github.com/repos/{}/issues/{}/comments".format(cls.repo, thread_id)
         payload = json.dumps({'body': body})
-        response = requests.post(url, auth=cls.auth, data=payload)
+        response = requests.post(url, data=payload, **cls.auth_args)
         return response.json()
 
 
@@ -159,8 +169,9 @@ class GitManager:
                 git.push(origin_or_auth, branch)
                 git.checkout("master")
 
-                if GlobalVars.github_username is None or GlobalVars.github_password is None:
-                    return (False, "Tell someone to set a GH password")
+                if ((GlobalVars.github_username is None or GlobalVars.github_password is None)
+                        and (GlobalVars.github_access_token is None)):
+                    return (False, "Tell someone to set a GH token")
 
                 payload = {"title": "{0}: {1} {2}".format(username, op.title(), item),
                            "body": "[{0}]({1}) requests the {2} of the {3} `{4}`. See the MS search [here]"
@@ -183,15 +194,17 @@ class GitManager:
                     git.checkout("deploy")  # Return to deploy, pending the accept of the PR in Master.
                     git.branch('-D', branch)  # Delete the branch in the local git tree since we're done with it.
                     url, pr_num = response["html_url"], response["number"]
+
                     if metasmoke_down:
                         return (True,
                                 "MS is not reachable, so I can't see if you have blacklist manager privileges, but "
-                                "I've [created PR#{1} for you]({0}).".format(
-                                    url, pr_num))
+                                "I've [created PR#{1} for you]({0}).{2}".format(
+                                    url, pr_num, GitHubManager.still_using_usernames_nudge))
                     else:
                         return (True,
-                                "You don't have blacklist manager privileges, but I've [created PR#{1} for you]({0})."
-                                .format(url, pr_num))
+                                "You don't have blacklist manager privileges,"
+                                "but I've [created PR#{1} for you]({0}).{2}"
+                                .format(url, pr_num, GitHubManager.still_using_usernames_nudge))
 
                 except KeyError:
                     git.checkout("deploy")  # Return to deploy
