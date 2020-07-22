@@ -22112,3 +22112,4 @@
 1595378280	Machavity	spiritualattack\.org
 1595380148	Jeff Schaller	softreo\.com
 1594966936	user12986714	ubotstudio\.com(?#from https://stackoverflow.com/questions/42802260/removing-reverse-duplicate-rows-r/62947643#62947643)
+1595361063	user12986714	pfxstudio21(?#cross site spam)
