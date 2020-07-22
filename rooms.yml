@@ -332,6 +332,21 @@ stackexchange.com:
       - site-spanish.stackexchange.com
       - offensive-mask
 
+  106445:  # No Smoking in the Office
+    commands: true
+
+    msg_types:
+      - site-workplace.stackexchange.com
+      - site-workplace.meta.stackexchange.com
+      - experimental-site-workplace.stackexchange.com
+      - experimental-site-workplace.meta.stackexchange.com
+      - offensive-mask
+
+    privileges:
+      inherit:
+        site: stackexchange.com
+        room: 11540
+
   109836:  # Chat Restricted
     commands: true
     msg_types:
