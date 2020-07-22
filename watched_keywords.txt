@@ -22115,3 +22115,4 @@
 1595361063	user12986714	pfxstudio21(?#cross site spam)
 1595353817	user12986714	survey\.wi\.in\.tum\.de
 1595399877	NobodyNada	newstpointer\.xyz
+1595399891	NobodyNada	awhacker\.com
