@@ -14720,7 +14720,6 @@
 1575262060	Nisse Engström	onlinejigsawpuzzles\.co
 1575262090	Nisse Engström	ataribreakout\.online
 1575262167	Nisse Engström	drivingdirectionss\.com
-1575262273	Nisse Engström	mapquest-drivingdirections\.com
 1575262344	Nisse Engström	shell-shockers\.online
 1575269727	tripleee	supportmywifiext\.net
 1575270488	Makyen	(?-i:EWP7w\.png)
