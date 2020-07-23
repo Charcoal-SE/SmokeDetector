@@ -8119,7 +8119,6 @@
 1550667556	Glorfindel	digifutura\.com
 1550669267	tripleee	clonesoftech\.com
 1550680791	bertieb	howtomergepstfiles\.com
-1550682677	tripleee	dafont
 1550693784	Makyen	192168ll\.onl
 1550694654	Makyen	homepage-kampen\.de
 1550706328	Makyen	recovermycrypto27(?:\W*(?:at\W*)?g\W*m\W*a\W*i\W*l\W*(?:dot\W*)?c\W*o\W*m)?
