@@ -22145,3 +22145,4 @@
 1595511653	Makyen	(?-i:biorexinonsharktank)(?#sites.google.com)
 1595511672	Makyen	hackingsnippet\.blogspot
 1595511714	Makyen	bilimyurt\.com
+1595511734	Makyen	androidsdkoffline\.blogspot
