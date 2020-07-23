@@ -22130,3 +22130,4 @@
 1595464272	Makyen	dailynetupdate\.blogspot
 1595471209	Makyen	thietkenha\.pro
 1595477251	Eliah Kagan	bestgardenoutdoor\.com
+1595478672	Makyen	dafont(?<=appsync\.biz/dafont)
