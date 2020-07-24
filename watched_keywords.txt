@@ -22159,3 +22159,4 @@
 1595573680	Sonic the Masked Werehog	nhahanghuongsen\.com\.vn
 1595594773	Eliah Kagan	sawda\W*+(?:finance|capital)
 1595595724	Eliah Kagan	bestseo\.com\.pk
+1595609276	Makyen	bananki\.pl
