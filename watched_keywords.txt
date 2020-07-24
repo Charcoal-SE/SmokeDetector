@@ -22158,3 +22158,10 @@
 1595568934	Makyen	(?:happy|cheerful)?[\W_]*+honey[\W_]*+(?:cream|skin)s?(?:[\W_]*+(?:cream|skin|\d++|[\da-f]{5,}+)s?)*
 1595573680	Sonic the Masked Werehog	nhahanghuongsen\.com\.vn
 1595577472	Mast	topcomputersciencedegree\.com
+1595594773	Eliah Kagan	sawda\W*+(?:finance|capital)
+1595595724	Eliah Kagan	bestseo\.com\.pk
+1595609276	Makyen	bananki\.pl
+1595614400	Jeff Schaller	videoaudiodownloader\.com
+1595614676	Machavity	woodenalley\.com
+1595614613	Spevacus	pali-beach-resort\.com
+1595589941	Jeff Schaller	quickfitautos\.com

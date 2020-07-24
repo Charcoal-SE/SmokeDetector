@@ -606,7 +606,10 @@ stackoverflow.com:
 
     msg_types:
       - site-stackoverflow.com
-      - offensive-mask
+      - site-meta.stackoverflow.com
+      - experimental-site-stackoverflow.com
+      - experimental-site-meta.stackoverflow.com
+      - no-offensive-mask
 
     privileges:
       - 270038   # Floern
