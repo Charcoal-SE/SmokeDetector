@@ -22158,3 +22158,4 @@
 1595568934	Makyen	(?:happy|cheerful)?[\W_]*+honey[\W_]*+(?:cream|skin)s?(?:[\W_]*+(?:cream|skin|\d++|[\da-f]{5,}+)s?)*
 1595573680	Sonic the Masked Werehog	nhahanghuongsen\.com\.vn
 1595594773	Eliah Kagan	sawda\W*+(?:finance|capital)
+1595595724	Eliah Kagan	bestseo\.com\.pk
