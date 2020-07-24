@@ -42,7 +42,7 @@ class GitHubManager:
                                       " when they have time :)"
         auth_args = {"auth": HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password)}
     else:
-        still_using_usernames_nudge = None
+        still_using_usernames_nudge = ""
         auth_args = {"headers": {'Authorization': 'token {}'.format(GlobalVars.github_access_token)}}
 
     repo = GlobalVars.bot_repo_slug
