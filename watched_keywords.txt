@@ -22170,3 +22170,4 @@
 1595656581	Makyen	colossal[\W_]*+cbd[\W_]*+oil
 1595677233	Makyen	(?-i:ketopurebruleurdegraisseavis)(?#sites.google.com)
 1595677251	Makyen	droneviewmlbb\.4webku\.com
+1595677266	Makyen	rtl-theme\.com
