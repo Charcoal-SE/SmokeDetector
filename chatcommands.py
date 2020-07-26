@@ -2043,6 +2043,12 @@ def delete(msg):
                "`sd delete-force`. See [this note on message deletion]"\
                "(https://charcoal-se.org/smokey/Commands"\
                "#a-note-on-message-deletion) for more details."
+    elif msg.room.id == 11540:
+        return "Messages here are usually kept as records."\
+               "If you really need to delete a report, please use "\
+               "`sd delete-force`. See [this note on message deletion]"\
+               "(https://charcoal-se.org/smokey/Commands"\
+               "#a-note-on-message-deletion) for more details."
     else:
         try:
             msg.delete()
