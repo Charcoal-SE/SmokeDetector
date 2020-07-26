@@ -22198,3 +22198,4 @@
 1595793990	Eliah Kagan	xmcapitalgroup\.com
 1595794005	Eliah Kagan	xmcapitalgroup(?!\.com)
 1595794026	Eliah Kagan	(?-i:4WV3xBYTF7g)(?#YouTube)
+1595799769	Nisse Engström	gigdoll\.com
