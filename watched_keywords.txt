@@ -22211,3 +22211,4 @@
 1595835156	tripleee	voyage\s*+watch(?:er(?!\.com))?
 1595835213	tripleee	gluco\W*+flow
 1595831368	Cody Gray	phdsc\.org
+1595835875	tripleee	feasycom\.com
