@@ -507,6 +507,9 @@ items:
   - hal.ns.cloudflare.com.
   - tegan.ns.cloudflare.com.
 - ns:
+  - hope.ns.cloudflare.com.
+  - terin.ns.cloudflare.com.
+- ns:
   - hugh.ns.cloudflare.com.
   - lina.ns.cloudflare.com.
 - ns:
