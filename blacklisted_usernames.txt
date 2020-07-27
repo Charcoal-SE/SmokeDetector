@@ -341,3 +341,4 @@ lustresparasala
 (?-i:^Faina Dsouza$)
 (?-i:^Linden Goorge$)
 (?-i:^vanaja nsr$)
+(?-i:^svrtechnologies$)
