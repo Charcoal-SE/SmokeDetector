@@ -306,8 +306,8 @@ class GitManager:
     @classmethod
     def merge_pull_request(cls, pr_id, comment=""):
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
-        files = requests.get("https://api.github.com/repos/{}/pulls/{}/files".format(GlobalVars.bot_repo_slug, pr_id))
-        if not response or not files:
+        files_list = requests.get("https://api.github.com/repos/{}/pulls/{}/files".format(GlobalVars.bot_repo_slug, pr_id))
+        if not response or not files_list:
             raise ConnectionError("Cannot connect to GitHub API")
         pr_info = response.json()
         files_info = files.json()
@@ -317,34 +317,33 @@ class GitManager:
             raise ValueError("PR description is malformed. Blame a developer.")
         if pr_info["state"] != "open":
             raise ValueError("PR #{} is not currently open, so I won't merge it.".format(pr_id))
-        string = pr_info["title"]
-        file = files_info[0]["filename"]
-        print(file)
+        pr_string = pr_info["title"]
+        file_modified = files_info[0]["filename"]
         ref = pr_info['head']['ref']
-        string1 = regex.match(r".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", string).group(1)
-        username = regex.match(r".*(?=:)", string).group(0)
-        if file == "blacklisted_websites.txt":
+        requested_pr_string = regex.match(r".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", string).group(1)
+        username_of_pr_requester = regex.match(r".*(?=:)", string).group(0)
+        if file_modified == "blacklisted_websites.txt":
             blacklist_type = Blacklist.WEBSITES
-        elif file == "bad_keywords.txt":
+        elif file_modified == "bad_keywords.txt":
             blacklist_type = Blacklist.WEBSITES
-        elif file == "blacklisted_usernames.txt":
+        elif file_modified == "blacklisted_usernames.txt":
             blacklist_type = Blacklist.USERNAMES
-        elif file == "blacklisted_numbers.txt":
+        elif file_modified == "blacklisted_numbers.txt":
             blacklist_type = Blacklist.NUMBERS
-        elif file == "watched_keywords.txt":
+        elif file_modified == "watched_keywords.txt":
             blacklist_type = Blacklist.WATCHED_KEYWORDS
-        elif file == "watched_numbers.txt":
+        elif file_modified == "watched_numbers.txt":
             blacklist_type = Blacklist.WATCHED_NUMBERS
         else:
             raise CmdException('GitManager: blacklist is not recognized. Blame a developer.')
         try:
             blacklister = Blacklist(blacklist_type)
             blacklist_file_name = blacklist_type[0]
-            item_to_blacklist = string
+            item_to_blacklist = requested_pr_string
             if blacklist_type in {Blacklist.WATCHED_KEYWORDS, Blacklist.WATCHED_NUMBERS}:
                 op = 'watch'
                 item = item_to_blacklist
-                item_to_blacklist = "\t".join([now, username, item])
+                item_to_blacklist = "\t".join([now, username_of_pr_requester, item])
             else:
                 op = 'blacklist'
                 item = item_to_blacklist
