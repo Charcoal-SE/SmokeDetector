@@ -340,3 +340,4 @@ lustresparasala
 (?-i:(^Bike Rental in|(Joes|Jazz) Car Rental) Goa$)
 (?-i:^Faina Dsouza$)
 (?-i:^Linden Goorge$)
+(?-i:^vanaja nsr$)
