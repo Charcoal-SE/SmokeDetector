@@ -311,7 +311,7 @@ class GitManager:
         if not response or not files_list:
             raise ConnectionError("Cannot connect to GitHub API")
         pr_info = response.json()
-        files_info = files.json()
+        files_info = files_list.json()
         if pr_info["user"]["login"] != "SmokeDetector":
             raise ValueError("PR #{} is not created by me, so I can't approve it.".format(pr_id))
         if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
