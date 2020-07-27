@@ -306,7 +306,8 @@ class GitManager:
     @classmethod
     def merge_pull_request(cls, pr_id, comment=""):
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
-        files_list = requests.get("https://api.github.com/repos/{}/pulls/{}/files".format(GlobalVars.bot_repo_slug, pr_id))
+        files_list = requests.get("https://api.github.com/repos/{}/pulls/{}/files"
+                                  .format(GlobalVars.bot_repo_slug, pr_id))
         if not response or not files_list:
             raise ConnectionError("Cannot connect to GitHub API")
         pr_info = response.json()
