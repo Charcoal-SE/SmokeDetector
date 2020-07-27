@@ -22209,3 +22209,4 @@
 1595826805	Makyen	alfuhod\.com
 1595835091	tripleee	voyagewatch\.com
 1595835156	tripleee	voyage\s*+watch(?:er(?!\.com))?
+1595835213	tripleee	gluco\W*+flow
