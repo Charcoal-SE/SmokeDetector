@@ -2037,9 +2037,9 @@ def delete(msg):
     """
 
     post_data = get_report_data(msg)
-    if post_data and msg.room.id == 11540:
-        return "Reports from SmokeDetector in Charcoal HQ are generally kept "\
-               "as records. If you really need to delete a report, please use "\
+    if msg.room.id == 11540:
+        return "Messages/reports from SmokeDetector in Charcoal HQ are generally kept "\
+               "as records. If you really need to delete a message, please use "\
                "`sd delete-force`. See [this note on message deletion]"\
                "(https://charcoal-se.org/smokey/Commands"\
                "#a-note-on-message-deletion) for more details."
