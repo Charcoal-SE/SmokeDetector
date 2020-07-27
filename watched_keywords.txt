@@ -22165,7 +22165,6 @@
 1595589941	Jeff Schaller	quickfitautos\.com
 1595644774	Makyen	bitcoinprofit\.app
 1595654826	Makyen	sildaxin(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
-1595655333	Nisse Engström	sauvewomen\.com
 1595656581	Makyen	colossal[\W_]*+cbd[\W_]*+oil
 1595677233	Makyen	(?-i:ketopurebruleurdegraisseavis)(?#sites.google.com)
 1595677251	Makyen	droneviewmlbb\.4webku\.com
