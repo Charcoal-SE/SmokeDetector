@@ -321,8 +321,8 @@ class GitManager:
         pr_string = pr_info["title"]
         file_modified = files_info[0]["filename"]
         ref = pr_info['head']['ref']
-        requested_pr_string = regex.match(r".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", string).group(1)
-        username_of_pr_requester = regex.match(r".*(?=:)", string).group(0)
+        requested_pr_string = regex.match(r".*?: \S+ (.*?)(?:\Z|\s*\(\?#)", pr_string).group(1)
+        username_of_pr_requester = regex.match(r".*(?=:)", pr_string).group(0)
         if file_modified == "blacklisted_websites.txt":
             blacklist_type = Blacklist.WEBSITES
         elif file_modified == "bad_keywords.txt":
