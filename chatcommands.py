@@ -574,7 +574,7 @@ def reject(msg, args, alias_used="reject"):
     except IndexError:
         reason = ''
 
-    message_url = "https://chat.{0}/transcript/{1}?m={2}".format(msg._client.host, msg.room.id, msg.id)    
+    message_url = "https://chat.{0}/transcript/{1}?m={2}".format(msg._client.host, msg.room.id, msg.id)
     force = alias_used.split("-")[-1] == "force"
     code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
     if not code_permissions:
