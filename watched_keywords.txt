@@ -21626,7 +21626,6 @@
 1593706436	Makyen	forumpakistan\.com
 1593708814	Makyen	marshallshutters\.co\.uk
 1593715181	Machavity	mywifiext-local\.us
-1593718186	Mithical	dabulaholdings\.com
 1593745250	Makyen	lavino\.com\.my
 1593745267	Makyen	auntiereviews\.com
 1593745285	Makyen	auntie[\W_]*+reviews(?!\.com(?<=auntiereviews\.com))
