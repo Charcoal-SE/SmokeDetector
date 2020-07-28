@@ -84,8 +84,9 @@ class GitHubManager:
         """ Update pull requests' status (open/closed). """
         url = "https://api.github.com/repos/{}/pulls/{}".format(cls.repo, pr_id)
         return cls.call_api("PATCH", url, payload)
-    
+
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
+
 class GitManager:
     gitmanager_lock = Lock()
 
@@ -374,7 +375,7 @@ class GitManager:
         finally:
             git.checkout('deploy')
             cls.gitmanager_lock.release()
-            
+       
     @classmethod
     def reject_pull_request(cls, pr_id, comment=""):
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
@@ -401,10 +402,9 @@ class GitManager:
             if response.json()["state"] == "closed":
                 git.push('-d', origin_or_auth, ref)
                 return "Closed pull request [#{0}](https://github.com/{1}/pull/{0}).".format(
-                pr_id, GlobalVars.bot_repo_slug)
+                        pr_id, GlobalVars.bot_repo_slug)
 
         raise RuntimeError("Closing pull request #{} failed. Manual operations required.".format(pr_id))
-
 
     @staticmethod
     def prepare_git_for_operation(blacklist_file_name):
