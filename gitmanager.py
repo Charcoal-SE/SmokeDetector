@@ -376,7 +376,7 @@ class GitManager:
         finally:
             git.checkout('deploy')
             cls.gitmanager_lock.release()
-       
+
     @classmethod
     def reject_pull_request(cls, pr_id, comment=""):
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
