@@ -2035,6 +2035,7 @@ def delete(msg):
     :param msg:
     :return: None
     """
+
     if msg.room.id == 11540:
         return "Messages/reports from SmokeDetector in Charcoal HQ are generally kept "\
                "as records. If you really need to delete a message, please use "\
