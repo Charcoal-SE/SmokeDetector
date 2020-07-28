@@ -557,6 +557,46 @@ def approve(msg, pr_id):
         raise CmdException(str(e))
 
 
+@command(str, privileged=True, whole_msg=True, give_name=True, aliases=["close", "reject-force", "close-force"])
+def reject(msg, args, alias_used="reject"):
+    argsraw = args.split(' "', 1)
+    try:
+        pr_id = int(argsraw[0].split(' ')[0])
+    except ValueError:
+        reason = ''
+        pr_id = int(args.split(' ')[2])
+    try:
+        # Custom handle trailing quotation marks at the end of the custom reason, which could happen.
+        if argsraw[1][-1] == '"':
+            reason = argsraw[1][:-1]
+        else:
+            reason = argsraw[1]
+    except IndexError:
+        reason = ''
+
+    message_url = "https://chat.{0}/transcript/{1}?m={2}".format(msg._client.host, msg.room.id, msg.id)
+    force = alias_used.split("-")[-1] == "force"
+    code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
+    if not code_permissions:
+        raise CmdException("You need blacklist manager privileges to reject pull requests")
+    if len(reason) < 20 and not force:
+        raise CmdException("Please provide an adequate reason for rejection so the user"
+                           " can learn from their mistakes. Use `-force` to force the reject")
+    # Forward this, because checks are better placed in gitmanager.py
+    try:
+        message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
+        chat_user_profile_link = "https://chat.{}/users/{}".format(
+            msg._client.host, msg.owner.id)
+        comment = "[Rejected]({}) by [{}]({}) in {}. Reason provided: '{}'\n\n![Rejected with SmokeyReject]({})".format(
+            message_url, msg.owner.name, chat_user_profile_link, msg.room.name,
+            reason,
+            "https://raster.shields.io/badge/blacklisters-rejected-red.png")
+        message = GitManager.reject_pull_request(pr_id, comment)
+        return message
+    except Exception as e:
+        raise CmdException(str(e))
+
+
 @command(privileged=True, aliases=["remote-diff"])
 def remotediff():
     will_require_full_restart = "SmokeDetector will require a full restart to pull changes: " \
