@@ -587,9 +587,15 @@ def reject(msg, args, alias_used="reject"):
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
         chat_user_profile_link = "https://chat.{}/users/{}".format(
             msg._client.host, msg.owner.id)
+        if comment != '':
         comment = "[Rejected]({}) by [{}]({}) in {}. Reason provided: '{}'\n\n![Rejected with SmokeyReject]({})".format(
             message_url, msg.owner.name, chat_user_profile_link, msg.room.name,
             reason,
+            "https://camo.githubusercontent.com/77d8d14b9016e415d36453f27ccbe06d47ef5ae2/68747470733a2f2f7261737465722e"
+            "736869656c64732e696f2f62616467652f626c61636b6c6973746572732d72656a65637465642d7265642e706e67")
+        else:
+            comment = "[Rejected]({}) by [{}]({}) in {}. No reason provided.\n\n![Rejected with SmokeyReject]({})".format(
+            message_url, msg.owner.name, chat_user_profile_link, msg.room.name,
             "https://camo.githubusercontent.com/77d8d14b9016e415d36453f27ccbe06d47ef5ae2/68747470733a2f2f7261737465722e"
             "736869656c64732e696f2f62616467652f626c61636b6c6973746572732d72656a65637465642d7265642e706e67")
         message = GitManager.reject_pull_request(pr_id, comment)
