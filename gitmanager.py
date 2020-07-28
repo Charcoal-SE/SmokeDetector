@@ -87,6 +87,7 @@ class GitHubManager:
 
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
 
+
 class GitManager:
     gitmanager_lock = Lock()
 
@@ -402,7 +403,7 @@ class GitManager:
             if response.json()["state"] == "closed":
                 git.push('-d', origin_or_auth, ref)
                 return "Closed pull request [#{0}](https://github.com/{1}/pull/{0}).".format(
-                        pr_id, GlobalVars.bot_repo_slug)
+                    pr_id, GlobalVars.bot_repo_slug)
 
         raise RuntimeError("Closing pull request #{} failed. Manual operations required.".format(pr_id))
 
