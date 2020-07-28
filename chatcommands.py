@@ -590,7 +590,7 @@ def reject(msg, args, alias_used="reject"):
     try:
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
         chat_user_profile_link = "https://chat.{}/users/{}".format(msg._client.host, msg.owner.id)
-        if comment != '':
+        if reason != '':
             comment = "[Rejected]({}) by [{}]({}) in {}. Reason provided: " \
                       "'{}'\n\n![Rejected with SmokeyReject]({})"
             comment = comment.format(
