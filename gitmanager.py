@@ -34,6 +34,8 @@ def _anchor(str_to_anchor, blacklist_type):
 
 
 class GitHubManager:
+    auth = HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password)
+    repo = GlobalVars.bot_repo_slug
     still_using_usernames = GlobalVars.github_access_token is None
 
     if still_using_usernames:
@@ -45,7 +47,13 @@ class GitHubManager:
         still_using_usernames_nudge = ""
         auth_args = {"headers": {'Authorization': 'token {}'.format(GlobalVars.github_access_token)}}
 
-    repo = GlobalVars.bot_repo_slug
+    @classmethod
+    def call_api(cls, method, route, payload):
+        """ Perform API calls. """
+        if isinstance(payload, dict):
+            payload = json.dumps(payload)
+        response = requests.request(method, route, auth=cls.auth, data=payload)
+        return response
 
     @classmethod
     def create_pull_request(cls, payload):
@@ -65,7 +73,18 @@ class GitHubManager:
         response = requests.post(url, data=payload, **cls.auth_args)
         return response.json()
 
+    @classmethod
+    def get_pull_request(cls, pr_id, payload):
+        """ Get pull requests info. """
+        url = "https://api.github.com/repos/{}/pulls/{}".format(cls.repo, pr_id)
+        return cls.call_api("GET", url, payload)
 
+    @classmethod
+    def update_pull_request(cls, pr_id, payload):
+        """ Update pull requests' status (open/closed). """
+        url = "https://api.github.com/repos/{}/pulls/{}".format(cls.repo, pr_id)
+        return cls.call_api("PATCH", url, payload)
+    
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
 class GitManager:
     gitmanager_lock = Lock()
@@ -356,31 +375,77 @@ class GitManager:
             git.checkout('deploy')
             cls.gitmanager_lock.release()
 
-    @staticmethod
-    def prepare_git_for_operation(blacklist_file_name):
+
+    @classmethod
+    def merge_pull_request(cls, pr_id, comment=""):
+        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
+        if not response:
+            raise ConnectionError("Cannot connect to GitHub API")
+        pr_info = response.json()
+        if pr_info["user"]["login"] != "SmokeDetector":
+            raise ValueError("PR #{} is not created by me, so I can't approve it.".format(pr_id))
+        if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
+            raise ValueError("PR description is malformed. Blame a developer.")
+        if pr_info["state"] != "open":
+            raise ValueError("PR #{} is not currently open, so I won't merge it.".format(pr_id))
+        ref = pr_info['head']['ref']
+
+        if comment:  # yay we have comments now
+            GitHubManager.comment_on_thread(pr_id, comment)
+
         try:
+            # Remote checks passed, good to go here
+            cls.gitmanager_lock.acquire()
             git.checkout('master')
-            git.remote.update()
-            git.reset('--hard', 'origin/master')
-        except GitError as e:
-            if GlobalVars.on_windows:
-                return False, "Not doing this, we're on Windows."
-            log_exception(*sys.exc_info())
-            return False, "`git pull` has failed. This shouldn't happen. Details have been logged."
+            origin_or_auth = cls.get_origin_or_auth()
+            git.fetch(origin_or_auth, '+refs/pull/{}/head'.format(pr_id))
+            git("-c", "user.name=" + GlobalVars.git_name,
+                "-c", "user.email=" + GlobalVars.git_email,
+                "merge",
+                'FETCH_HEAD', '--no-ff', '-m', 'Merge pull request #{} from {}/{}'.format(
+                    pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref))
+            git.push(origin_or_auth, 'master')
+            try:
+                git.push('-d', origin_or_auth, ref)
+            except GitError as e:
+                # TODO: PR merged, but branch deletion has something wrong, generate some text
+                pass
+            return "Merged pull request [#{0}](https://github.com/{1}/pull/{0}).".format(
+                pr_id, GlobalVars.bot_repo_slug)
+        finally:
+            git.checkout('deploy')
+            cls.gitmanager_lock.release()
 
-        if GlobalVars.on_windows:
-            remote_ref = git.rev_parse("refs/remotes/origin/master").strip()
-            local_ref = git.rev_parse("master").strip()
-        else:
-            remote_ref = git("rev-parse", "refs/remotes/origin/master").strip()
-            local_ref = git("rev-parse", "master").strip()
-        if local_ref != remote_ref:
-            local_log = git.log(r"--pretty=`[%h]` *%cn*: %s", "-1", str(local_ref)).strip()
-            remote_log = git.log(r"--pretty=`[%h]` *%cn*: %s", "-1", str(remote_ref)).strip()
-            return False, "HEAD isn't at tip of origin's master branch (local {}, remote {})".format(
-                local_log, remote_log)
+    @classmethod
+    def reject_pull_request(cls, pr_id, comment=""):
+        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
+        if not response:
+            raise ConnectionError("Cannot connect to GitHub API")
+        pr_info = response.json()
+        if pr_info["user"]["login"] != "SmokeDetector":
+            raise ValueError("PR #{} is not created by me, so I can't reject it.".format(pr_id))
+        if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
+            raise ValueError("PR description is malformed. Blame a developer.")
+        if pr_info["state"] != "open":
+            raise ValueError("PR #{} is not currently open, so I won't close it.".format(pr_id))
+        ref = pr_info['head']['ref']
 
-        return True, None
+        if comment:  # yay we have comments now
+            GitHubManager.comment_on_thread(pr_id, comment)
+
+        cls.gitmanager_lock.acquire()
+        origin_or_auth = cls.get_origin_or_auth()
+        git.fetch(origin_or_auth, '+refs/pull/{}/head'.format(pr_id))
+        payload = {"state": "closed"}
+        response = GitHubManager.update_pull_request(pr_id, payload)
+        if response:
+            if response.json()["state"] == "closed":
+                git.push('-d', origin_or_auth, ref)
+                return "Closed pull request [#{0}](https://github.com/{1}/pull/{0}).".format(
+                pr_id, GlobalVars.bot_repo_slug)
+
+        raise RuntimeError("Closing pull request #{} failed. Manual operations required.".format(pr_id))
+
 
     @staticmethod
     def current_git_status():
