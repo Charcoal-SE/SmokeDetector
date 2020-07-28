@@ -587,7 +587,7 @@ def reject(msg, args, alias_used="reject"):
             msg._client.host, msg.owner.id)
         comment = "[Rejected]({}) by [{}]({}) in {} Reason provided: '{}'\n\n![Rejected with SmokeyReject]({})".format(
             message_url, msg.owner.name, chat_user_profile_link, msg.room.name,
-            args,
+            reason,
             "https://raster.shields.io/badge/blacklisters-rejected-red.png")
         message = GitManager.reject_pull_request(pr_id, comment)
         return message
