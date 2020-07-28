@@ -15528,7 +15528,6 @@
 1577393413	Makyen	drokosun55(?:@gmail\.com)?
 1577394510	Eliah Kagan	portal4fitness(?!\.com)(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1577397083	Makyen	24x7assignmenthelp\.com
-1577397103	Makyen	yubico\.com
 1577396042	Eliah Kagan	maccrack\.club
 1577396069	Eliah Kagan	cracksystem\.com
 1577396080	Eliah Kagan	adobecrack\.com
