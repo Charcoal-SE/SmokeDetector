@@ -53,6 +53,9 @@ items:
   - lloyd.ns.cloudflare.com.
   - reza.ns.cloudflare.com.
 - ns:
+  - stan.ns.cloudflare.com.
+  - vera.ns.cloudflare.com.
+- ns:
   - terin.ns.cloudflare.com.
   - tess.ns.cloudflare.com.
 - ns: 247support-number.com.

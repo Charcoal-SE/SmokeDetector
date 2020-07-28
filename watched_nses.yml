@@ -804,9 +804,6 @@ items:
   - simon.ns.cloudflare.com.
   - zoe.ns.cloudflare.com.
 - ns:
-  - stan.ns.cloudflare.com.
-  - vera.ns.cloudflare.com.
-- ns:
   - sue.ns.cloudflare.com.
   - thomas.ns.cloudflare.com.
 - comment: FPs, don't blacklist
