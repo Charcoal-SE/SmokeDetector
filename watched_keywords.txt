@@ -7553,7 +7553,6 @@
 1547799385	tripleee	printercustomerservice\d*\.blogspot
 1547800389	Glorfindel	pp\.io
 1547800448	tripleee	borxi\.com
-1547800853	tripleee	ztable\.net
 1547804967	Makyen	emergingindiagroup\.com
 1547806068	tripleee	(?:arlo(?<!^arlo)(?! zarate$)|arlo[\W_]*+(?:security|phone|pro|baby|camera|netgear|hub|app|login|base|integration|tech|contact|support|account)s?)
 1547811516	tripleee	mcafeeactivate\.website
