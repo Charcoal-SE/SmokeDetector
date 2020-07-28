@@ -417,12 +417,52 @@ class GitManager:
             cls.gitmanager_lock.release()
 
     @classmethod
-    def reject_pull_request(cls, pr_id, comment=""):
+    def merge_pull_request(cls, pr_id, comment=""):
         response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
         if not response:
             raise ConnectionError("Cannot connect to GitHub API")
         pr_info = response.json()
         if pr_info["user"]["login"] != "SmokeDetector":
+            raise ValueError("PR #{} is not created by me, so I can't approve it.".format(pr_id))
+        if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
+            raise ValueError("PR description is malformed. Blame a developer.")
+        if pr_info["state"] != "open":
+            raise ValueError("PR #{} is not currently open, so I won't merge it.".format(pr_id))
+        ref = pr_info['head']['ref']
+
+        if comment:  # yay we have comments now
+            GitHubManager.comment_on_thread(pr_id, comment)
+
+        try:
+            # Remote checks passed, good to go here
+            cls.gitmanager_lock.acquire()
+            git.checkout('master')
+            origin_or_auth = cls.get_origin_or_auth()
+            git.fetch(origin_or_auth, '+refs/pull/{}/head'.format(pr_id))
+            git("-c", "user.name=" + GlobalVars.git_name,
+                "-c", "user.email=" + GlobalVars.git_email,
+                "merge",
+                'FETCH_HEAD', '--no-ff', '-m', 'Merge pull request #{} from {}/{}'.format(
+                    pr_id, GlobalVars.bot_repo_slug.split("/")[0], ref))
+            git.push(origin_or_auth, 'master')
+            try:
+                git.push('-d', origin_or_auth, ref)
+            except GitError as e:
+                # TODO: PR merged, but branch deletion has something wrong, generate some text
+                pass
+            return "Merged pull request [#{0}](https://github.com/{1}/pull/{0}).".format(
+                pr_id, GlobalVars.bot_repo_slug)
+        finally:
+            git.checkout('deploy')
+            cls.gitmanager_lock.release()
+
+    @classmethod
+    def reject_pull_request(cls, pr_id, comment=""):
+        response = requests.get("https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id))
+        if not response:
+            raise ConnectionError("Cannot connect to GitHub API")
+        pr_info = response.json()
+        if pr_info["user"]["login"] != "Daniil-SD":
             raise ValueError("PR #{} is not created by me, so I can't reject it.".format(pr_id))
         if "<!-- METASMOKE-BLACKLIST" not in pr_info["body"]:
             raise ValueError("PR description is malformed. Blame a developer.")
@@ -446,6 +486,32 @@ class GitManager:
 
         raise RuntimeError("Closing pull request #{} failed. Manual operations required.".format(pr_id))
 
+
+    @staticmethod
+    def prepare_git_for_operation(blacklist_file_name):
+        try:
+            git.checkout('master')
+            git.remote.update()
+            git.reset('--hard', 'origin/master')
+        except GitError as e:
+            if GlobalVars.on_windows:
+                return False, "Not doing this, we're on Windows."
+            log_exception(*sys.exc_info())
+            return False, "`git pull` has failed. This shouldn't happen. Details have been logged."
+
+        if GlobalVars.on_windows:
+            remote_ref = git.rev_parse("refs/remotes/origin/master").strip()
+            local_ref = git.rev_parse("master").strip()
+        else:
+            remote_ref = git("rev-parse", "refs/remotes/origin/master").strip()
+            local_ref = git("rev-parse", "master").strip()
+        if local_ref != remote_ref:
+            local_log = git.log(r"--pretty=`[%h]` *%cn*: %s", "-1", str(local_ref)).strip()
+            remote_log = git.log(r"--pretty=`[%h]` *%cn*: %s", "-1", str(remote_ref)).strip()
+            return False, "HEAD isn't at tip of origin's master branch (local {}, remote {})".format(
+                local_log, remote_log)
+
+        return True, None
 
     @staticmethod
     def current_git_status():
