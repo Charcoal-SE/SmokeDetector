@@ -585,7 +585,7 @@ def reject(msg, args, alias_used="reject"):
         message_url = "https://chat.{}/transcript/{}?m={}".format(msg._client.host, msg.room.id, msg.id)
         chat_user_profile_link = "https://chat.{}/users/{}".format(
             msg._client.host, msg.owner.id)
-        comment = "[Rejected]({}) by [{}]({}) in {} Reason provided: '{}'\n\n![Rejected with SmokeyReject]({})".format(
+        comment = "[Rejected]({}) by [{}]({}) in {}. Reason provided: '{}'\n\n![Rejected with SmokeyReject]({})".format(
             message_url, msg.owner.name, chat_user_profile_link, msg.room.name,
             reason,
             "https://raster.shields.io/badge/blacklisters-rejected-red.png")
