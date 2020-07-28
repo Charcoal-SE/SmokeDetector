@@ -17,6 +17,9 @@ items:
   - asa.ns.cloudflare.com.
   - plato.ns.cloudflare.com.
 - ns:
+  - bart.ns.cloudflare.com.
+  - lady.ns.cloudflare.com.
+- ns:
   - braden.ns.cloudflare.com.
   - georgia.ns.cloudflare.com.
 - ns:

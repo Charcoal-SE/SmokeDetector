@@ -169,9 +169,6 @@ items:
   - barbara.ns.cloudflare.com.
   - logan.ns.cloudflare.com.
 - ns:
-  - bart.ns.cloudflare.com.
-  - lady.ns.cloudflare.com.
-- ns:
   - beau.ns.cloudflare.com.
   - jasmine.ns.cloudflare.com.
 - ns:
