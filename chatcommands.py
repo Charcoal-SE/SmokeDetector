@@ -555,8 +555,8 @@ def approve(msg, pr_id):
         return message
     except Exception as e:
         raise CmdException(str(e))
-        
-        
+
+
 @command(str, privileged=True, whole_msg=True, give_name=True, aliases=["close", "reject-force", "close-force"])
 def reject(msg, args, alias_used="reject"):
     argsraw = args.split(' "', 1)
@@ -575,11 +575,11 @@ def reject(msg, args, alias_used="reject"):
         reason = ''
 
     message_url = "https://chat.{0}/transcript/{1}?m={2}".format(msg._client.host, msg.room.id, msg.id)    
-    force=alias_used.split("-")[-1] == "force"
+    force = alias_used.split("-")[-1] == "force"
     code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
     if not code_permissions:
         raise CmdException("You need blacklist manager privileges to reject pull requests")
-    if len(reason)<20 and not force:
+    if len(reason) < 20 and not force:
         raise CmdException("Please provide an adequate reason for rejection so the user"
                            " can learn from their mistakes. Use `-force` to force the reject")
     # Forward this, because checks are better placed in gitmanager.py
@@ -596,7 +596,7 @@ def reject(msg, args, alias_used="reject"):
     except Exception as e:
         raise CmdException(str(e))
 
-        
+
 @command(privileged=True, aliases=["remote-diff"])
 def remotediff():
     will_require_full_restart = "SmokeDetector will require a full restart to pull changes: " \
