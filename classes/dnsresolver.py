@@ -26,12 +26,20 @@ class DNSResolver(dns.resolver.Resolver):
 def dns_resolve(domain: str, resolver: DNSResolver = DNSResolver(configure=True)) -> list:
     addrs = []
 
-    for answer in resolver.query(domain, 'A').response.answer:
-        for item in answer:
-            addrs.append(item.address)
+    try:
+        for answer in resolver.query(domain, 'A').response.answer:
+            for item in answer:
+                if item.rdtype == dns.rdatatype.A:
+                    addrs.append(item.address)
+    except dns.resolver.NoAnswer:
+        pass
 
-    for answer in resolver.query(domain, 'AAAA').response.answer:
-        for item in answer:
-            addrs.append(item.address)
+    try:
+        for answer in resolver.query(domain, 'AAAA').response.answer:
+            for item in answer:
+                if item.rdtype == dns.rdatatype.AAAA:
+                    addrs.append(item.address)
+    except dns.resolver.NoAnswer:
+        pass
 
     return addrs
