@@ -18195,7 +18195,6 @@
 1583440481	Das_Geek	familytreemakersupport\.us
 1583441419	Byte Commander	aircartapp\.com
 1583445091	Makyen	kaitai\.io
-1583446048	Eliah Kagan	w3school\.com
 1583446206	Eliah Kagan	pepgra\.com
 1583452933	Makyen	andrewmoreau54(?:@gmail\.com)?
 1583452969	Makyen	quick[\W_]*+recovery[\W_]*+agents
