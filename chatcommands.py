@@ -2264,17 +2264,18 @@ def autoflagged(msg):
     else:
         return "That post was **not** automatically flagged by metasmoke."
 
-    
-    @command(str, privileged=True)
-    def dig(domain):
-        """
-        Runs a DNS query using pydns and returns the
-        list of A and AAAA records as output.
-        :param domain: the domain to get DNS records for
-        :return: A comma-separated string of IPs
-        """
-        results = dns_resolve(domain)
-        if results:
-            return ", ".join(result for result in results)
-        else:
-            return "No data found."
+
+# noinspection PyMissingTypeHints
+@command(str, privileged=True)
+def dig(domain):
+    """
+    Runs a DNS query using pydns and returns the
+    list of A and AAAA records as output.
+    :param domain: the domain to get DNS records for
+    :return: A comma-separated string of IPs
+    """
+    results = dns_resolve(domain)
+    if results:
+        return ", ".join(result for result in results)
+    else:
+        return "No data found."
