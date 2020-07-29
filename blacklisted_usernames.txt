@@ -344,3 +344,4 @@ lustresparasala
 (?-i:^svrtechnologies$)
 (?-i:^bon bon$)
 drivingdirectionss\.com
+(?-i:^Shiv Gupta$)
