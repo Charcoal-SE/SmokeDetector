@@ -1115,3 +1115,6 @@ items:
 - ns: za-dns.com.
 - ns: factocert.com.
 - ns: reg.ru.
+- ns:
+  - ns1.hosting.reg.ru.
+  - ns2.hosting.reg.ru.
