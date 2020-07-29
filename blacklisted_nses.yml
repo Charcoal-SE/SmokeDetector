@@ -50,6 +50,9 @@ items:
   - lee.ns.cloudflare.com.
   - ulla.ns.cloudflare.com.
 - ns:
+  - linda.ns.cloudflare.com.
+  - ned.ns.cloudflare.com.
+- ns:
   - lloyd.ns.cloudflare.com.
   - reza.ns.cloudflare.com.
 - ns:
