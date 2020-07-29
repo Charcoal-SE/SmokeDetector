@@ -780,6 +780,9 @@ items:
   - pablo.ns.cloudflare.com.
   - pola.ns.cloudflare.com.
 - ns:
+  - plato.ns.cloudflare.com.
+  - rafe.ns.cloudflare.com.
+- ns:
   - princess.ns.cloudflare.com.
   - rene.ns.cloudflare.com.
 - ns:
