@@ -45,4 +45,5 @@ before_deploy:
   - rm -f /home/travis/.cache/pip/log/debug.log
   - rm -rf /home/travis/.cache/pip/http
 after_success:
-  - coveralls
+  # coveralls
+  - /bin/true

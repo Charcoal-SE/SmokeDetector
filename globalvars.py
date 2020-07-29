@@ -265,15 +265,15 @@ class GlobalVars:
 
     valid_content = """This is a totally valid post that should never be caught. Any blacklist or watchlist item that triggers on this item should be avoided. java.io.BbbCccDddException: nothing wrong found. class Safe { perfect valid code(int float &#%$*v a b c =+ /* - 0 1 2 3 456789.EFGQ} English 中文Français Español Português Italiano Deustch ~@#%*-_/'()?!:;" vvv kkk www sss ttt mmm absolute std::adjacent_find (power).each do |s| bbb end ert zal l gsopsq kdowhs@ xjwk* %_sooqmzb xjwpqpxnf.  Please don't blacklist disk-partition.com, it's a valid domain (though it also gets spammed rather frequently)."""  # noqa: E501
 
-    @staticmethod
-    def reload():
-        GlobalVars.commit = commit = git_commit_info()
+    @classmethod
+    def reload(cls):
+        cls.commit = commit = git_commit_info()
 
-        GlobalVars.commit_with_author = "`{}` ({}: {})".format(
+        cls.commit_with_author = "`{}` ({}: {})".format(
             commit.id, commit.author, commit.message)
 
         # We don't want to escape `[` and `]` when they are within code.
-        split_commit_with_author = GlobalVars.commit_with_author.split('`')
+        split_commit_with_author = cls.commit_with_author.split('`')
         split_length = len(split_commit_with_author)
         for index in range(0, split_length, 2):
             split_commit_with_author[index] = split_commit_with_author[index].replace('[', '\\[').replace(']', '\\]')
@@ -282,32 +282,32 @@ class GlobalVars:
         if not split_length % 2:
             split_commit_with_author[-1] = split_commit_with_author[-1].replace('[', '\\[').replace(']', '\\]')
 
-        GlobalVars.commit_with_author_escaped = '`'.join(split_commit_with_author)
+        cls.commit_with_author_escaped = '`'.join(split_commit_with_author)
 
-        GlobalVars.on_branch = git_ref()
-        GlobalVars.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
-            GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
-            GlobalVars.commit.id, GlobalVars.location, platform.python_version())
-        GlobalVars.s_reverted = \
+        cls.on_branch = git_ref()
+        cls.s = "[ {} ] SmokeDetector started at [rev {}]({}/commit/{}) (running on {}, Python {})".format(
+            cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
+            cls.commit.id, cls.location, platform.python_version())
+        cls.s_reverted = \
             "[ {} ] SmokeDetector started in [reverted mode](" \
             "https://charcoal-se.org/smokey/SmokeDetector-Statuses#reverted-mode) " \
             "at [rev {}]({}/commit/{}) (running on {})".format(
-                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
-                GlobalVars.commit.id, GlobalVars.location)
-        GlobalVars.s_norestart_blacklists = \
+                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
+                cls.commit.id, cls.location)
+        cls.s_norestart_blacklists = \
             "[ {} ] Blacklists reloaded at [rev {}]({}/commit/{}) (running on {})".format(
-                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
-                GlobalVars.commit.id, GlobalVars.location)
-        GlobalVars.s_norestart_findspam = \
+                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
+                cls.commit.id, cls.location)
+        cls.s_norestart_findspam = \
             "[ {} ] FindSpam module reloaded at [rev {}]({}/commit/{}) (running on {})".format(
-                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
-                GlobalVars.commit.id, GlobalVars.location)
-        GlobalVars.standby_message = \
+                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
+                cls.commit.id, cls.location)
+        cls.standby_message = \
             "[ {} ] SmokeDetector started in [standby mode](" \
             "https://charcoal-se.org/smokey/SmokeDetector-Statuses#standby-mode) " \
             "at [rev {}]({}/commit/{}) (running on {})".format(
-                GlobalVars.chatmessage_prefix, GlobalVars.commit_with_author_escaped, GlobalVars.bot_repository,
-                GlobalVars.commit.id, GlobalVars.location)
+                cls.chatmessage_prefix, cls.commit_with_author_escaped, cls.bot_repository,
+                cls.commit.id, cls.location)
 
 
 GlobalVars.PostScanStat.reset_stat()

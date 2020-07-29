@@ -13749,7 +13749,6 @@
 1571985826	Makyen	napollo
 1571986761	Makyen	famaga[\W_]*+group
 1571986773	Makyen	famaga\.com
-1571987607	Glorfindel	factocert
 1571989761	Makyen	larisjations
 1571989774	Makyen	neural-network-trading-bot
 1571989785	Makyen	(?-i:YTNNTRBT)
@@ -21979,3 +21978,46 @@
 1594889771	Daniil	chronodivers\.com
 1594906863	Daniil	zaibis(?!\.com)
 1594927187	user12986714	198\.54\.115\.127
+1594973069	Daniil	(?-i:3eFRRLo)(?#bit.ly)
+1594973602	Daniil	brazilsoybeansuppliers\.com
+1594970760	user12986714	iascertification\.com
+1594967254	user12986714	salesdirector\.ai
+1594974301	Daniil	laracasts\.com
+1594951367	user12986714	game79zone\.com
+1594979539	Daniil	edbalance\.com
+1594981160	Daniil	appsinvo\.com
+1594985589	Daniil	skncosmetics\.com
+1594985735	Daniil	kytero\.com
+1594987181	Machavity	shia[\W_]*asks
+1594987627	Daniil	form\.jotform\.com
+1594988160	Jeff Schaller	ukrainiantvcompany\.com
+1594989418	Daniil	cmdchallenge\.com
+1594990041	Daniil	iairtickets\.com
+1594990060	Daniil	(?-i:Allegiant Airlines)
+1594992530	Daniil	technologycounter\.com
+1594993312	Daniil	(?:brainhackers[\W_]*+(?:at[\W_]*+)?)?aol(?:[\W_]*+(?:dot[\W_]*+)?com)(#? obfuscated brainhackers@aol.com)
+1594994918	Machavity	bestiefood\.com
+1594995601	Daniil	cboinfotech\.com
+1594997455	Daniil	amazing\.populiser\.com
+1595003517	Makyen	tehrankelaymer\.com
+1595011150	Makyen	(?-i:C3MJFLQ)(?#surveymonkey.com)
+1595024950	Daniil	bigteeth\.ltd
+1595047203	Makyen	nspgov\.in
+1595047218	Makyen	howtogetdealership\.in
+1595047098	user12986714	powertoolsgudie\.com
+1595056164	Makyen	jointn-11us\.blogspot
+1595061219	Makyen	testoultracostarica\.co\.cr
+1595078693	Daniil	houstonembroideryservice\.com
+1595078715	Daniil	theenterprisegroupllc\.com
+1595078813	Daniil	factocert(?!\.com)
+1595078828	Daniil	factocert\.com
+1595078859	Daniil	stevemindmagicien\.fr
+1595079582	Daniil	digitalgurunow\.co\.uk
+1595080068	Eliah Kagan	recruitmentpastquestions\.com\.ng
+1595080084	Eliah Kagan	americainfoblog\.com
+1595084541	Eliah Kagan	lasercut24\.net
+1595086170	Daniil	rossmanngroup\.com
+1595086222	Daniil	whiteruntz\.co
+1595086255	Daniil	lasercut24(?!\.net)
+1595088058	Daniil	computerservicesltd\.com
+1595107148	Makyen	harshvishwakarma\.xyz
