@@ -2190,7 +2190,7 @@ fithub
 moore\W*+finance
 shareit[\W_]++for[\W_]++pc
 vasoplexx
-Joyoshare
+Joyoshare(?!\.com)
 satta[\W_]*+king(?!\.care)(?:[\W_]*+care)?
 (?:super\W*+)?vidalista
 susancampbel11(?#telegram)
