@@ -22221,7 +22221,6 @@
 1595871743	Eliah Kagan	futuresolarwa\.com\.au
 1595871762	Eliah Kagan	oneclout\.com
 1595878182	Makyen	drtokubotemple(?:@gmail\.com)?
-1595914089	Sonic the Masked Werehog	dectaphinrx
 1595915648	tripleee	womensbeautyoffers\.com
 1595915833	tripleee	kana\W*+drops
 1595914137	Cody Gray	faxlist\.me
