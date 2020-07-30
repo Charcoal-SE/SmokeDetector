@@ -15381,7 +15381,6 @@
 1577130446	Eliah Kagan	abokiplay\.com
 1577133550	Makyen	obataborsi-jawatimur\.webflow\.io
 1577138795	Makyen	silver[\W_]*+note[\W_]*+keto(?:[\W_]*+(?:diet|review|\d++|[\da-f]{4,}+)s?)*
-1577138810	Makyen	ultra[\W_]*+thermo(?:[\W_]*+(?:keto|diet|review|\d++|[\da-f]{4,}+)s?)*
 1577138824	Makyen	facts4supplement\.hatenablog\.com
 1577138838	Makyen	gailmongo\.hatenablog\.com
 1577138870	Makyen	(?-i:XaNZb\.png)
