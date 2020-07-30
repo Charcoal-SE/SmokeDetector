@@ -1703,7 +1703,7 @@ capillique
 sera\W?chews
 best *+offer\W*<a href
 keto\W?supply
-treasurebox
+treasurebox(?!\.com)
 andro\W?boost(?:\W?x)?
 pro\W?testo\W?elite
 urogenx
