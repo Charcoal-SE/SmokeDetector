@@ -52,7 +52,7 @@ def null():
 @command(str, whole_msg=True, privileged=True)
 def addblu(msg, user):
     """
-    Adds a user to site whitelist
+    Adds a user to site blacklist
     :param msg: ChatExchange message
     :param user:
     :return: A string
