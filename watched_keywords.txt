@@ -9922,7 +9922,6 @@
 1558421995	tripleee	oalib\.com
 1558424964	tripleee	padang\.co
 1558425068	tripleee	aiforsea\.com
-1558425985	Glorfindel	noteburner\.com
 1558426065	Glorfindel	m4vgear\.com
 1558426138	Glorfindel	panfone\.com
 1558428270	tripleee	flashcarda\.com
