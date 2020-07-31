@@ -22288,3 +22288,4 @@
 1596119549	Daniil	treasurebox\.com
 1596136207	Machavity	publicfinanceinternational\.org
 1596146298	NobodyNada	butt? crack effluent
+1596157274	user12986714	([\w.+-]{5,}+@[\w.+-]{3,}+)\W*+(?:\1\W*+){3,}+(?#repeated emails with no separation char. This regex can result in high CPU usage and is not O_n)
