@@ -22303,3 +22303,4 @@
 1596196402	tripleee	healthtrendspills\.com
 1596196448	tripleee	mammoth[\W_]*+male
 1596196576	doppelgreener	franklinfencingcompany\.com
+1596199002	tripleee	magnum[\W_]*+xt
