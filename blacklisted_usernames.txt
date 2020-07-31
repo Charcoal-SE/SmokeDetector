@@ -282,7 +282,6 @@ DailyRaiseQuestion
 (?-i:^Alex Tony$)
 (?-i:^Mritunjay Jadon$)
 (?-i:^jammertech$)
-(?-i:^Kavita$)
 (?-i:^Leeten Smith$)
 ^bert[\W_]*+linsheng‭$
 (?-i:^keyword out$)
