@@ -347,3 +347,4 @@ drivingdirectionss\.com
 (?-i:^olive allen$)
 (?-i:^Alexavier Miller$)
 ^lovejit$
+^kavita$
