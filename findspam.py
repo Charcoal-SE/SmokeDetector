@@ -1865,7 +1865,7 @@ city_list = [
     # not in India
     "Dubai", "Lusail", "Portland",
     # yes, these aren't cities but...
-    "India", "Malaysia", "Pakistan", "Qatar",
+    "Abu Dhabi", "Abudhabi", "India", "Malaysia", "Pakistan", "Qatar",
     # buyabans.com spammer uses creative variations
     "Sri Lanka", "Srilanka", "Srilankan",
 ]
