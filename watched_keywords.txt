@@ -22305,3 +22305,4 @@
 1596196576	doppelgreener	franklinfencingcompany\.com
 1596199002	tripleee	magnum[\W_]*+xt
 1596203605	tripleee	tomedes\.com
+1596211202	Machavity	amasty\.com
