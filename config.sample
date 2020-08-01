@@ -13,6 +13,8 @@ location=location_here
 # metasmoke_key=gibberish_here
 
 # Set GitHub keys
+# git_username=SmokeDetector
+# git_useremail=smokey@erwaysoftware.com
 # github_username=username@domain.com
 # github_password=p@55w0rd
 # github_access_token=some_token
