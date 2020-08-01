@@ -22314,3 +22314,4 @@
 1596266825	Makyen	thefirstreviews\.com
 1596267125	Makyen	visagepurcream\.wixsite\.com
 1596267158	Makyen	visage[\W_]*+pur(?!cream\.wixsite\.com(?<=visagepurcream\.wixsite\.com))(?:[\W_]*+(?:cream|care|skin|\d++|[\da-f]{5,}+)s?)*
+1596267192	Makyen	(?-i:magnumxtmaleenhancement)(?#sites.google.com)
