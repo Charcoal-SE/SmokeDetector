@@ -1417,7 +1417,7 @@ def strip_urls_and_tags(s):
 
 
 @create_rule("mostly punctuation marks in {}", max_rep=52,
-             sites=["stats.stackexchange.com","math.stackexchange.com", "mathoverflow.net", "codegolf.stackexchange.com"])
+             sites=["stats.stackexchange.com", "math.stackexchange.com", "mathoverflow.net", "codegolf.stackexchange.com"])
 def mostly_punctuations(s, site):
     # Strip code blocks here rather than with `stripcodeblocks` so we get the length of the whole post in s.
     body = regex.sub(r"(?s)<pre([\w=\" -]*)?>.*?</pre>", "", s)
