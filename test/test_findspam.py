@@ -72,9 +72,9 @@ from helpers import log
     ('Should not be caught: http://example.com', '', '', 'drupal.stackexchange.com', False, False, False),
     ('Should not be caught: https://www.example.com', '', '', 'drupal.stackexchange.com', False, False, False),
     ('Should not be caught: something@example.com', '', '', 'drupal.stackexchange.com', False, False, False),
-    ('Title here', '<img src="http://example.com/11111111111.jpg" alt="my image">', '', 'stackoverflow.com', False, False, True),
-    ('Title here', '<img src="http://example.com/11111111111111.jpg" alt="my image" />', '', 'stackoverflow.com', False, False, True),
-    ('Title here', '<a href="http://example.com/11111111111111.html">page</a>', '', 'stackoverflow.com', False, False, False),
+    ('Title here', '<img src="http://example.com/11111111111.jpg" alt="my image">', '', 'askubuntu.com', False, False, True),
+    ('Title here', '<img src="http://example.com/11111111111111.jpg" alt="my image" />', '', 'askubuntu.com', False, False, True),
+    ('Title here', '<a href="http://example.com/11111111111111.html">page</a>', '', 'askubuntu.com', False, False, False),
     ('Error: 2147467259', '', '', 'stackoverflow.com', False, False, False),
     ('Max limit on number of concurrent ajax request', """<p>Php java script boring yaaarrr <a href="http://www.price-buy.com/" rel="nofollow noreferrer">Price-Buy.com</a> </p>""", 'Price Buy', 'stackoverflow.com', True, True, True),
     ('Proof of onward travel in Japan?', """<p>The best solution to overcome the problem of your travel<a href="https://i.stack.imgur.com/eS6WQ.jpg" rel="nofollow noreferrer"><img src="https://i.stack.imgur.com/eS6WQ.jpg" alt="enter image description here"></a></p>
