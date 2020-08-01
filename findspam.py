@@ -606,7 +606,8 @@ def len_img_block(string):
 
 
 # max_score=2 to prevent voting fraud
-@create_rule("post is mostly images", title=False, max_rep=201, max_score=2, sites=["stackoverflow.com", "math.stackexchange.com", "mathoverflow.net", "stats.stackexchange.com"])
+@create_rule("post is mostly images", title=False, max_rep=201, max_score=2, sites=[
+    "stackoverflow.com", "math.stackexchange.com", "mathoverflow.net", "stats.stackexchange.com"])
 def mostly_img(s, site):
     if len(s) == 0:
         return False, ""
@@ -1416,8 +1417,9 @@ def strip_urls_and_tags(s):
     return URL_REGEX.sub("", TAG_REGEX.sub("", s))
 
 
-@create_rule("mostly punctuation marks in {}", max_rep=52,
-             sites=["stats.stackexchange.com", "math.stackexchange.com", "mathoverflow.net", "codegolf.stackexchange.com"])
+@create_rule("mostly punctuation marks in {}", max_rep=52, sites=[
+    "stats.stackexchange.com", "math.stackexchange.com",
+    "mathoverflow.net", "codegolf.stackexchange.com"])
 def mostly_punctuations(s, site):
     # Strip code blocks here rather than with `stripcodeblocks` so we get the length of the whole post in s.
     body = regex.sub(r"(?s)<pre([\w=\" -]*)?>.*?</pre>", "", s)
