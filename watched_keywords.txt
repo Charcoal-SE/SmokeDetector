@@ -22329,3 +22329,4 @@
 1596345409	NobodyNada	Could\snot\sdetermine\sjava\sversion\sfrom\s'14\.0\.2'
 1596349603	Nisse Engström	techthebite\.com
 1596353685	Nisse Engström	emagrecersaudeideal\.com
+1596357247	Criggie	wordtopdf\.ltd
