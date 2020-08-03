@@ -6250,7 +6250,6 @@
 1540964187	Makyen	drokukutemple(?:@gmail\.com)?
 1540966357	Makyen	supplements?cost(?!\.com)
 1540967613	Shree	phphelp\.net
-1540970683	Makyen	debonisdental\.com
 1540973189	Glorfindel	romio\W*ringbell
 1540974578	Shree	eniyianimasyonfilmleri\.com
 1540975409	tripleee	jewish\W+people(?:\W+\w+){0,3}\W+kill(?#Pittsburgh holocaust kook)
