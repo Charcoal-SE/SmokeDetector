@@ -897,7 +897,7 @@ royal\W?kiraz
 simply\W?flawless\W?cream
 trim\W?fit
 apple\W?stem\W?cell
-(?<=/)hdt(?=[-/<"]|$)
+hdt[\W_]*+male[\W_]*+enhancement
 (?<=/)vcor(?=[-/<"]|$)
 brain\W?360
 rejuvilane
