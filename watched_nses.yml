@@ -167,6 +167,9 @@ items:
   - lee.ns.cloudflare.com.
 - ns:
   - barbara.ns.cloudflare.com.
+  - jack.ns.cloudflare.com.
+- ns:
+  - barbara.ns.cloudflare.com.
   - logan.ns.cloudflare.com.
 - ns:
   - beau.ns.cloudflare.com.
