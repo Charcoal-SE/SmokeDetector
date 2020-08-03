@@ -348,3 +348,4 @@ drivingdirectionss\.com
 (?-i:^Alexavier Miller$)
 ^lovejit$
 ^kavita$
+(?-i:^Stefanie Mills$)
