@@ -729,7 +729,6 @@ lejuve
 endozyn
 boost\W?rx
 euphoria\W?anti\W?aging
-r\Whub
 liquid\W?tree
 le\W?juve
 Pure\W?Radiance
