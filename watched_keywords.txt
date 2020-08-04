@@ -22367,3 +22367,4 @@
 1596542436	tripleee	(?-i:^jack henry$)
 1596547145	Machavity	(?-i:wTmFilUkClY)(?#Youtube NAA pattern)
 1596549302	Nisse Engström	makemydayapp\.com
+1596550342	tripleee	apkfinds\.com
