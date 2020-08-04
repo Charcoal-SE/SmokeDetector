@@ -2315,3 +2315,4 @@ dectaphin\W*+rx
 ultra[\W_]*+thermo(?:[\W_]*+(?:keto|diet|review|cleanse|\d++|[\da-f]{4,}+)s?)*
 treasurebox(?!\.com)
 peak[\W_]*+wellness\d*+
+r\Whub(?!\.io)
