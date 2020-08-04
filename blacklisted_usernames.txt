@@ -349,3 +349,4 @@ drivingdirectionss\.com
 ^lovejit$
 ^kavita$
 (?-i:^Stefanie Mills$)
+(?-i:^xosoplus$)
