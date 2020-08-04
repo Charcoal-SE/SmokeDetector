@@ -359,6 +359,9 @@ items:
   - sofia.ns.cloudflare.com.
 - ns:
   - deb.ns.cloudflare.com.
+  - drew.ns.cloudflare.com.
+- ns:
+  - deb.ns.cloudflare.com.
   - malcolm.ns.cloudflare.com.
 - ns:
   - dee.ns.cloudflare.com.
