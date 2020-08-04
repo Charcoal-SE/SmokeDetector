@@ -22365,3 +22365,4 @@
 1596538539	tripleee	pamenar\.co
 1596540882	tripleee	eurofix\.io
 1596542436	tripleee	(?-i:^jack henry$)
+1596547145	Machavity	(?-i:wTmFilUkClY)(?#Youtube NAA pattern)
