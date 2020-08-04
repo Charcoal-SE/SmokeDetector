@@ -350,3 +350,4 @@ drivingdirectionss\.com
 ^kavita$
 (?-i:^Stefanie Mills$)
 (?-i:^xosoplus$)
+(?-i:^kobedoll$)
