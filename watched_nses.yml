@@ -912,6 +912,9 @@ items:
 - ns: lfmserver.com.
 - ns: symbolhostpremiumdns.com.
 - ns: hostgator.in.
+- ns:
+  - ns6423.hostgator.com.
+  - ns6424.hostgator.com.
 - ns: hostspicy.com.
 - ns: ewebguru.com.
 - ns: dnsowl.com.
