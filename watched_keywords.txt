@@ -22374,3 +22374,4 @@
 1596561231	Spevacus	wonfe\.com
 1596562330	Makyen	systoolsgroup\.com
 1596591317	NobodyNada	air-dispersion-modeling-aermod(?#udemy.com)
+1596591336	NobodyNada	AERMOD25(?#udemy.com)
