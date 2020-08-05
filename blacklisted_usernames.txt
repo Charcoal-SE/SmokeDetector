@@ -352,3 +352,4 @@ drivingdirectionss\.com
 (?-i:^xosoplus$)
 (?-i:^kobedoll$)
 (?-i:^ghostrifles01$)
+(?-i:^shreyasehgal$)
