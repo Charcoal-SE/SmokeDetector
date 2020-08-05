@@ -22395,3 +22395,4 @@
 1596626705	tripleee	bengaluru[\W_]*+university
 1596626980	tripleee	placetoboost\.com
 1596629044	tripleee	fireandice\.co\.uk
+1596633381	Mast	spotifyapkpremium\.net
