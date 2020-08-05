@@ -22379,3 +22379,4 @@
 1596599128	Makyen	(?-i:staminaxmaleusa)(?#sites.google.com)
 1596599144	Makyen	(?-i:Staminax-Male-230422428115818)(?#facebook.com)
 1596599161	Makyen	(?-i:staminaxlongsex)(?#sites.google.com)
+1596599177	Makyen	staminax(?!longsex(?<=staminaxlongsex))(?!maleusa(?<=staminaxmaleusa))(?!-Male-230422428115818(?<=Staminax-Male-230422428115818))(?:[\W_]*+(?:male|long|sex|usa|\d++|[\da-f]{5,}+)s?)*
