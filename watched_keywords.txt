@@ -7499,7 +7499,6 @@
 1547584970	Glorfindel	ovo\.fyi
 1547585201	Glorfindel	discord\.software
 1547585211	Glorfindel	xender\.vip
-1547585220	Glorfindel	omegle\.onl
 1547591099	Makyen	dr\W*okopko
 1547604162	Makyen	goldeneagletrader\.com
 1547620269	Tetsuya Yamamoto	celcomindia\.com
