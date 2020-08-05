@@ -22393,3 +22393,4 @@
 1596623124	tripleee	advology(?:[\W_]*+solution(?!\.com))?
 1596623578	tripleee	puravidabracelets\.com
 1596626705	tripleee	bengaluru[\W_]*+university
+1596626980	tripleee	placetoboost\.com
