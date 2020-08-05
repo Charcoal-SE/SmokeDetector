@@ -8,6 +8,9 @@ items:
   - ns1.md-99.bigrockservers.com.
   - ns2.md-99.bigrockservers.com.
 - ns:
+  - adrian.ns.cloudflare.com.
+  - ben.ns.cloudflare.com.
+- ns:
   - apollo.ns.cloudflare.com.
   - liz.ns.cloudflare.com.
 - ns:
