@@ -631,7 +631,7 @@ def nonsense(s, site):
     probability = [float(s.count(x)) / len(s) for x in s]
     entropy_per_char = -sum([x * math.log2(x) for x in probability]) / len(s)
 
-    if entropy_per_char < ENTROPY_TOO_LOW or entropy_per_char > ENTROPY_TOO_HIGH
+    if entropy_per_char < ENTROPY_TOO_LOW or entropy_per_char > ENTROPY_TOO_HIGH:
         return True, "Entropy per char is {:.4f}".format(entropy_per_char)
     return False, ""
 
