@@ -12713,7 +12713,6 @@
 1568298833	Machavity	cojective\.online
 1568298857	Machavity	sunflaker\.com
 1568301958	Daniil	haydash\.com
-1568323899	Makyen	audext\.com
 1568323908	Makyen	golpokobitarkutir\.blogspot\.com
 1568323917	Makyen	gingersoftware\.com
 1568343280	Makyen	eventdex\.com
