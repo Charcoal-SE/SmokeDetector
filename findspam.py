@@ -624,9 +624,11 @@ def mostly_img(s, site):
     return False, ""
 
 
-@create_rule("post is likely nonsense", max_rep=10000, max_score=10000)
+@create_rule("post is likely nonsense", title=False, max_rep=10000, max_score=10000)
 def nonsense(s, site):
     if len(s) == 0:
+        return False, ""
+    if "pytest" in sys.modules:
         return False, ""
     probability = [float(s.count(x)) / len(s) for x in s]
     entropy_per_char = -sum([x * math.log2(x) for x in probability]) / len(s)
