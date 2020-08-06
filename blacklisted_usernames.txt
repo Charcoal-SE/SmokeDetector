@@ -353,3 +353,4 @@ drivingdirectionss\.com
 (?-i:^kobedoll$)
 (?-i:^ghostrifles01$)
 (?-i:^shreyasehgal$)
+(?-i:^Hank Sauri$)

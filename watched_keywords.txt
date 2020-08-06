@@ -22319,7 +22319,6 @@
 1596307304	Daniil	(?-i:sp2728)(#?GitHub)
 1596307337	Daniil	saikiran1298(?:@gmail\.com)?
 1596325680	NobodyNada	impressorahpdrivers\.com
-1596339260	NobodyNada	(?-i:^Hank Sauri$)
 1596345409	NobodyNada	Could\snot\sdetermine\sjava\sversion\sfrom\s'14\.0\.2'
 1596349603	Nisse Engström	techthebite\.com
 1596353685	Nisse Engström	emagrecersaudeideal\.com
