@@ -22415,3 +22415,4 @@
 1596706604	tripleee	\A.*\bBangalore(?# tripleee's experiment)
 1596706653	tripleee	thebestpickers\.com
 1596708340	tripleee	dr-seo\.ir
+1596711466	tripleee	mavisohbet\.org
