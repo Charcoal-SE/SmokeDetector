@@ -161,6 +161,9 @@ items:
   - paul.ns.cloudflare.com.
 - ns:
   - ashley.ns.cloudflare.com.
+  - clyde.ns.cloudflare.com.
+- ns:
+  - ashley.ns.cloudflare.com.
   - lee.ns.cloudflare.com.
 - ns:
   - barbara.ns.cloudflare.com.
