@@ -22406,3 +22406,4 @@
 1596695938	Mast	search[\W_]*+engine[\W_]*+marketing
 1596700838	tripleee	vpnproxymaster\.com
 1596696578	Mast	hashgaurd
+1596702130	tripleee	vigxex
