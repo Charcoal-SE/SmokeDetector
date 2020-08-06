@@ -22410,7 +22410,7 @@
 1596704356	tripleee	uaedesertsafari\.com
 1596704372	tripleee	desertsafaritour\.ae
 1596704388	tripleee	arabiannightsafari\.com
-1596706604	tripleee	\A.*\bBangalore(?# tripleee's experiment)
+1596706604	tripleee	\A(?!<p>)(?=.{30,150}+\Z).*\bBangalore(?# tripleee's experiment)
 1596706653	tripleee	thebestpickers\.com
 1596708340	tripleee	dr-seo\.ir
 1596711466	tripleee	mavisohbet\.org
