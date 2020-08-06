@@ -2318,4 +2318,3 @@ peak[\W_]*+wellness\d*+
 r\Whub(?!\.io)
 Brindavan\W*College
 vigxex
-.{20,}(on|for) Roku
