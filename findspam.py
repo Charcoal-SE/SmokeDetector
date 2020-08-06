@@ -617,6 +617,19 @@ def mostly_img(s, site):
     return False, ""
 
 
+@create_rule("post is likely nonsense", max_rep=10000, max_score=10000)
+def nonsense(s, site):
+    probability = [float(s.count(x)) / len(s) for x in s]
+    entropy_per_char = -sum([x * math.log2(x) for x in probability]) / len(s)
+
+    if x < 1.5 or x > 3:
+        # Average English entropy per letter is 2.6
+        # Since space and punctuations are not excluded, the value will be lower
+        # Too high or too low entropy indicates gibberish
+        return True, "Entropy per char is {:.4f}".format(x)
+    return False, ""
+
+
 # noinspection PyUnusedLocal,PyMissingTypeHints
 @create_rule("repeating characters in {}", stripcodeblocks=True, max_rep=10000, max_score=10000)
 def has_repeating_characters(s, site):
