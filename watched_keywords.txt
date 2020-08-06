@@ -22414,3 +22414,4 @@
 1596704388	tripleee	arabiannightsafari\.com
 1596706604	tripleee	\A.*\bBangalore(?# tripleee's experiment)
 1596706653	tripleee	thebestpickers\.com
+1596708340	tripleee	dr-seo\.ir
