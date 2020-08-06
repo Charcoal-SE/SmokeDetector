@@ -22413,3 +22413,4 @@
 1596704372	tripleee	desertsafaritour\.ae
 1596704388	tripleee	arabiannightsafari\.com
 1596706604	tripleee	\A.*\bBangalore(?# tripleee's experiment)
+1596706653	tripleee	thebestpickers\.com
