@@ -39,6 +39,13 @@ CHARACTER_USE_RATIO = 0.42
 PUNCTUATION_RATIO = 0.42
 REPEATED_CHARACTER_RATIO = 0.20
 IMG_TXT_R_THRES = 0.7
+
+# Average English entropy per letter is 2.6
+# Since space and punctuations are not excluded, the value will be lower
+# Too high or too low entropy indicates gibberish
+ENTROPY_TOO_LOW = 1.5
+ENTROPY_TOO_HIGH = 3.0
+
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
 RE_COMPILE = regex.compile(EXCEPTION_RE)
 COMMON_MALFORMED_PROTOCOLS = [
@@ -619,13 +626,12 @@ def mostly_img(s, site):
 
 @create_rule("post is likely nonsense", max_rep=10000, max_score=10000)
 def nonsense(s, site):
+    if len(s) == 0:
+        return False, ""
     probability = [float(s.count(x)) / len(s) for x in s]
     entropy_per_char = -sum([x * math.log2(x) for x in probability]) / len(s)
 
-    if entropy_per_char < 1.5 or entropy_per_char > 3:
-        # Average English entropy per letter is 2.6
-        # Since space and punctuations are not excluded, the value will be lower
-        # Too high or too low entropy indicates gibberish
+    if entropy_per_char < ENTROPY_TOO_LOW or entropy_per_char > ENTROPY_TOO_HIGH
         return True, "Entropy per char is {:.4f}".format(entropy_per_char)
     return False, ""
 
