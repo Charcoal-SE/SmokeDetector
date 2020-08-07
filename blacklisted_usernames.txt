@@ -360,3 +360,4 @@ drivingdirectionss\.com
 (?-i:^Sharath Raju$)
 (?-i:^Niko Tech$)
 (?-i:^jack henry$)
+(?-i:^IAS QATAR$)
