@@ -22454,3 +22454,4 @@
 1596824935	Makyen	drabu7demons(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1596826586	Makyen	addtalentsolutions\.com
 1596828373	Machavity	wizardsoft\.nl
+1596828528	Machavity	wizardsoft(?!\.nl)
