@@ -22455,3 +22455,4 @@
 1596826586	Makyen	addtalentsolutions\.com
 1596828373	Machavity	wizardsoft\.nl
 1596828528	Machavity	wizardsoft(?!\.nl)
+1596830289	Machavity	(?-i:^Anthony Dwayne Chapelle‭$)
