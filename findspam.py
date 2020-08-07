@@ -607,7 +607,7 @@ def len_img_block(string):
 
 # max_score=2 to prevent voting fraud
 @create_rule("post is mostly images", title=False, max_rep=201, max_score=2, sites=[
-    "stackoverflow.com", "math.stackexchange.com", "mathoverflow.net", "stats.stackexchange.com"])
+    "math.stackexchange.com", "mathoverflow.net", "stats.stackexchange.com"])
 def mostly_img(s, site):
     if len(s) == 0:
         return False, ""
