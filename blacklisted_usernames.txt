@@ -355,3 +355,4 @@ drivingdirectionss\.com
 (?-i:^shreyasehgal$)
 (?-i:^Hank Sauri$)
 (?-i:^ANKIT SHARMA$)
+(?-i:^Danush Shetty$)
