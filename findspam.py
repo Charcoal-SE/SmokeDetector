@@ -635,7 +635,7 @@ def mostly_img(s, site):
                     "hinduism.stackexchange.com", "judaism.stackexchange.com",
                     "buddhism.stackexchange.com", "chinese.stackexchange.com",
                     "french.stackexchange.com", "spanish.stackexchange.com",
-                    "portuguese.stackexchange.com", "korean.stackexchange.com", 
+                    "portuguese.stackexchange.com", "korean.stackexchange.com",
                     "ukrainian.stackexchange.com", "italian.stackexchange.com"],
              max_rep=10000, max_score=10000)
 def nonsense(s, site):
