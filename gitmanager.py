@@ -34,7 +34,6 @@ def _anchor(str_to_anchor, blacklist_type):
 
 
 class GitHubManager:
-    repo = GlobalVars.bot_repo_slug
     still_using_usernames = GlobalVars.github_access_token is None
 
     if still_using_usernames:
@@ -61,13 +60,13 @@ class GitHubManager:
         """
         if isinstance(payload, dict):
             payload = json.dumps(payload)
-        response = requests.post("https://api.github.com/repos/{}/pulls".format(cls.repo),
+        response = requests.post("https://api.github.com/repos/{}/pulls".format(GlobalVars.bot_repo_slug),
                                  data=payload, **cls.auth_args)
         return response.json()
 
     @classmethod
     def comment_on_thread(cls, thread_id, body):
-        url = "https://api.github.com/repos/{}/issues/{}/comments".format(cls.repo, thread_id)
+        url = "https://api.github.com/repos/{}/issues/{}/comments".format(GlobalVars.bot_repo_slug, thread_id)
         payload = json.dumps({'body': body})
         response = requests.post(url, data=payload, **cls.auth_args)
         return response.json()
@@ -75,13 +74,13 @@ class GitHubManager:
     @classmethod
     def get_pull_request(cls, pr_id, payload):
         """ Get pull requests info. """
-        url = "https://api.github.com/repos/{}/pulls/{}".format(cls.repo, pr_id)
+        url = "https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id)
         return cls.call_api("GET", url, payload)
 
     @classmethod
     def update_pull_request(cls, pr_id, payload):
         """ Update pull requests' status (open/closed). """
-        url = "https://api.github.com/repos/{}/pulls/{}".format(cls.repo, pr_id)
+        url = "https://api.github.com/repos/{}/pulls/{}".format(GlobalVars.bot_repo_slug, pr_id)
         return cls.call_api("PATCH", url, payload)
 
 # noinspection PyRedundantParentheses,PyClassHasNoInit,PyBroadException
