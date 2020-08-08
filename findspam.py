@@ -40,11 +40,14 @@ PUNCTUATION_RATIO = 0.42
 REPEATED_CHARACTER_RATIO = 0.20
 IMG_TXT_R_THRES = 0.7
 
-# Average English entropy per letter is 2.6
-# Since space and punctuations are not excluded, the value will be lower
-# Too high or too low entropy indicates gibberish
-ENTROPY_TOO_LOW = 1.5
-ENTROPY_TOO_HIGH = 3.0
+# >>> statistics.mean(result)
+# 0.20483261275004847
+# >>> statistics.median(result)
+# 0.20223865427238322
+# >>> statistics.stdev(result)
+# 0.031230117152319384
+ENTROPY_TOO_LOW = 0.15
+ENTROPY_TOO_HIGH = 0.25
 
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
 RE_COMPILE = regex.compile(EXCEPTION_RE)
