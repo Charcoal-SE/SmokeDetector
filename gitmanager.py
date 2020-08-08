@@ -34,7 +34,6 @@ def _anchor(str_to_anchor, blacklist_type):
 
 
 class GitHubManager:
-    auth = HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password)
     repo = GlobalVars.bot_repo_slug
     still_using_usernames = GlobalVars.github_access_token is None
 
