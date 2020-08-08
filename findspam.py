@@ -627,7 +627,8 @@ def mostly_img(s, site):
     return False, ""
 
 
-@create_rule("post is likely nonsense", title=False, max_rep=10000, max_score=10000)
+@create_rule("post is likely nonsense", title=False, sites=["codegolf.stackexchange.com"],
+             max_rep=10000, max_score=10000)
 def nonsense(s, site):
     if len(s) == 0:
         return False, ""
