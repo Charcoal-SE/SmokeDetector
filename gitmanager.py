@@ -34,7 +34,6 @@ def _anchor(str_to_anchor, blacklist_type):
 
 
 class GitHubManager:
-    auth = HTTPBasicAuth(GlobalVars.github_username, GlobalVars.github_password)
     repo = GlobalVars.bot_repo_slug
     still_using_usernames = GlobalVars.github_access_token is None
 
@@ -52,7 +51,7 @@ class GitHubManager:
         """ Perform API calls. """
         if isinstance(payload, dict):
             payload = json.dumps(payload)
-        response = requests.request(method, route, auth=cls.auth, data=payload)
+        response = requests.request(method, route, data=payload, **cls.auth_args)
         return response
 
     @classmethod
