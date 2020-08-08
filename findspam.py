@@ -627,13 +627,17 @@ def mostly_img(s, site):
     return False, ""
 
 
-@create_rule("post is likely nonsense", title=False, sites=["codegolf.stackexchange.com",
-    "stackoverflow.com", "ja.stackoverflow.com", "pt.stackoverflow.com", "es.stackoverflow.com",
-    "islam.stackexchange.com", "japanese.stackexchange.com", "anime.stackexchange.com",
-    "hinduism.stackexchange.com", "judaism.stackexchange.com", "buddhism.stackexchange.com",
-    "chinese.stackexchange.com", "french.stackexchange.com", "spanish.stackexchange.com",
-    "portuguese.stackexchange.com", "codegolf.stackexchange.com", "korean.stackexchange.com",
-    "ukrainian.stackexchange.com"], max_rep=10000, max_score=10000)
+@create_rule("post is likely nonsense", title=False,
+             sites=["codegolf.stackexchange.com",
+                    "stackoverflow.com", "ja.stackoverflow.com", "pt.stackoverflow.com",
+                    "es.stackoverflow.com", "islam.stackexchange.com",
+                    "japanese.stackexchange.com", "anime.stackexchange.com",
+                    "hinduism.stackexchange.com", "judaism.stackexchange.com",
+                    "buddhism.stackexchange.com", "chinese.stackexchange.com",
+                    "french.stackexchange.com", "spanish.stackexchange.com",
+                    "portuguese.stackexchange.com", "korean.stackexchange.com", 
+                    "ukrainian.stackexchange.com", "italian.stackexchange.com"],
+             max_rep=10000, max_score=10000)
 def nonsense(s, site):
     if len(s) == 0:
         return False, ""
