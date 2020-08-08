@@ -22471,3 +22471,4 @@
 1596911885	Makyen	mahrima[\W_]*+brotherhood
 1596912182	Daniil	designserviceasia\.com
 1596913845	Glorfindel	Anthony\W*Dwayne\W*Chapelle
+1596919936	Daniil	v8propaganda\.com\.br
