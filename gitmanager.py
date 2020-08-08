@@ -52,7 +52,7 @@ class GitHubManager:
         """ Perform API calls. """
         if isinstance(payload, dict):
             payload = json.dumps(payload)
-        response = requests.request(method, route, auth=cls.auth, data=payload)
+        response = requests.request(method, route, data=payload, **cls.auth_args)
         return response
 
     @classmethod
