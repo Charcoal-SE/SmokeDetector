@@ -22473,3 +22473,4 @@
 1596913845	Glorfindel	Anthony\W*Dwayne\W*Chapelle
 1596919936	Daniil	v8propaganda\.com\.br
 1596934973	Makyen	revealfortomorrow\.com
+1596934990	Makyen	(?-i:2PxRoRo)(?#bit.ly)
