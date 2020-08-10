@@ -2319,3 +2319,4 @@ r\Whub(?!\.io)
 Brindavan\W*College
 vigxex
 wellness[\W_]*+cbd
+hair[\W_]*+la[\W_]*+vie
