@@ -18194,7 +18194,6 @@
 1583460137	Makyen	assignmentexperts\.co\.uk
 1583460162	Makyen	paperwriter\.co\.uk
 1583464602	Eliah Kagan	laptopdriverdownloadha\.blogspot
-1583464676	Eliah Kagan	linsheng\.com
 1583464725	Eliah Kagan	linsheng(?!\.com)
 1583465645	Eliah Kagan	protegerjavascript\.com
 1583470833	Shree	tourism-rajasthan\.com
