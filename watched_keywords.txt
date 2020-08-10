@@ -22492,3 +22492,4 @@
 1597048792	tripleee	zolo[\W_]*+stays(?!\.com)
 1597048896	tripleee	noble[\W_]*+student(?!\.com)
 1597049601	tripleee	gomechanic\.in
+1597050877	tripleee	joinaslicagents\.in
