@@ -22495,3 +22495,4 @@
 1597055304	tripleee	fizfy(?!\.com| Solutions)
 1597055721	tripleee	techbylws\.com
 1597055763	tripleee	le[\W_]*+regime(?:[\W_]*+keto)?
+1597060924	tripleee	india-iws\.in
