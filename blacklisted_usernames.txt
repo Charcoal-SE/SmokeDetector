@@ -361,3 +361,4 @@ drivingdirectionss\.com
 (?-i:^Niko Tech$)
 (?-i:^jack henry$)
 (?-i:^IAS QATAR$)
+(?-i:^Michael John$)
