@@ -22489,3 +22489,4 @@
 1597041403	tripleee	atozketodiet\.com
 1597048350	Eliah Kagan	noblestudent\.com
 1597048756	tripleee	sneed\.in
+1597048792	tripleee	zolo[\W_]*+stays(?!\.com)
