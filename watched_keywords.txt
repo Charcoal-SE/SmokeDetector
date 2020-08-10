@@ -22490,3 +22490,4 @@
 1597039833	tripleee	aadi[\W_]*+web[\W_]*+solutions(?!\.com)
 1597041370	tripleee	buildingandinteriors\.com
 1597041403	tripleee	atozketodiet\.com
+1597042892	Mast	wellness.cbd
