@@ -89,6 +89,9 @@ items:
   - gerald.ns.cloudflare.com.
 - ns:
   - alice.ns.cloudflare.com.
+  - seth.ns.cloudflare.com.
+- ns:
+  - alice.ns.cloudflare.com.
   - weston.ns.cloudflare.com.
 - ns:
   - alla.ns.cloudflare.com.
