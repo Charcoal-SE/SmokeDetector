@@ -365,3 +365,4 @@ drivingdirectionss\.com
 (?-i:^Aman Samadhiya$)
 (?-i:^zodiac208$)
 ^bert[\W_]*+linsheng$
+(?-i:^Fizfy Solutions$)
