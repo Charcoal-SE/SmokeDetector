@@ -674,7 +674,7 @@ items:
 - ns:
   - lara.ns.cloudflare.com.
   - tim.ns.cloudflare.com.
-- ns_
+- ns:
   - lars.ns.cloudflare.com.
   - nadia.ns.cloudflare.com.
 - ns:
