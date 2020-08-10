@@ -22484,4 +22484,3 @@
 1597004198	Makyen	commharbor\.com
 1597004214	Makyen	commerce[\W_]*+harbor(?:[\W_]*+(?:fze|\d++|[\da-f]{5,}+)s?)*
 1596958340	Cody Gray	isc888-isc123\.com
-1597024487	Jeff Schaller	vapehop\.com
