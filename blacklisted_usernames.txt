@@ -362,3 +362,4 @@ drivingdirectionss\.com
 (?-i:^jack henry$)
 (?-i:^IAS QATAR$)
 (?-i:^Michael John$)
+(?-i:^Aman Samadhiya$)
