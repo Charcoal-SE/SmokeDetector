@@ -633,6 +633,9 @@ items:
   - kia.ns.cloudflare.com.
   - noah.ns.cloudflare.com.
 - ns:
+  - kianchau.ns.cloudflare.com.
+  - tara.ns.cloudflare.com.
+- ns:
   - kip.ns.cloudflare.com.
   - vita.ns.cloudflare.com.
 - ns:
