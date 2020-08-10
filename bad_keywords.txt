@@ -2318,3 +2318,4 @@ peak[\W_]*+wellness\d*+
 r\Whub(?!\.io)
 Brindavan\W*College
 vigxex
+wellness[\W_]*+cbd
