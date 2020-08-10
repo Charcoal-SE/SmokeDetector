@@ -22493,3 +22493,4 @@
 1597052463	tripleee	halal[\W_]*+certification
 1597052920	tripleee	(?-i:^Naeem Ahmad$)
 1597055304	tripleee	fizfy(?!\.com| Solutions)
+1597055721	tripleee	techbylws\.com
