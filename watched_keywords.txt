@@ -22497,3 +22497,4 @@
 1597060924	tripleee	india-iws\.in
 1597062049	Mast	knowscape\.org
 1597063717	tripleee	anytimestrength\.com
+1597063840	tripleee	anytimestrength(?!\.com)
