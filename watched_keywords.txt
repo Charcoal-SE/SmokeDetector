@@ -22499,3 +22499,4 @@
 1597063717	tripleee	anytimestrength\.com
 1597063840	tripleee	anytimestrength(?!\.com)
 1597079048	Daniil	totosite365\.info
+1597082464	Jeff Schaller	empirecrack\.com
