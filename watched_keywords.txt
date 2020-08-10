@@ -22490,3 +22490,4 @@
 1597048350	Eliah Kagan	noblestudent\.com
 1597048756	tripleee	sneed\.in
 1597048792	tripleee	zolo[\W_]*+stays(?!\.com)
+1597048896	tripleee	noble[\W_]*+student(?!\.com)
