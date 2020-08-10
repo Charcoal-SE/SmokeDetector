@@ -9344,7 +9344,6 @@
 1556004268	tripleee	ketooffers\.com
 1556007315	double-beep	codeash\.com
 1556008811	Shree	winebro\.net
-1556012340	tripleee	hair\W?la\W?vie
 1556012370	tripleee	la\W?vie\W?hair
 1556014638	Shree	kanpurize\.com
 1556020199	Makyen	newest-websites\.com
