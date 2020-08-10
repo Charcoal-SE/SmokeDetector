@@ -22493,3 +22493,4 @@
 1597049601	tripleee	gomechanic\.in
 1597050877	tripleee	joinaslicagents\.in
 1597052463	tripleee	halal[\W_]*+certification
+1597052920	tripleee	(?-i:^Naeem Ahmad$)
