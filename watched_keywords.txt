@@ -21863,7 +21863,6 @@
 1594700148	Makyen	androxene(?:[\W_]*+(?:enhancement|male|\d++|[\da-f]{5,}+)s?)*
 1594700183	Makyen	(?-i:RtdTk\.jpg)
 1594700199	Makyen	(?-i:Mjyej\.jpg)
-1594703939	Makyen	tractorjunction\.com
 1594707030	Makyen	(?-i:0oJmZHhHerc)(?#youtu.be)
 1594708311	Makyen	pakmarriagebureau\.com
 1594708327	Makyen	pakistan[\W_]*+marriage[\W_]*+bureau
