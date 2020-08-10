@@ -6168,7 +6168,6 @@
 1540557948	Erik the Outgolfer	amritshairnbeauty\.com
 1540564979	Makyen	paytosmm\.com
 1540568223	Makyen	suzufilm\.com
-1540568349	Makyen	hexnode\.com
 1540568745	Makyen	lamb-mei\.com
 1540573986	Erik the Outgolfer	ecotechepoxy\.com
 1540574103	Erik the Outgolfer	(?:facebook|fb)\.com/EpoxyPaint(?:Flooring)?(?:InBangladesh)?
