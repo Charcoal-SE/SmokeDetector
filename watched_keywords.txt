@@ -22488,3 +22488,4 @@
 1597034732	tripleee	ce[\W_]*+marking[\W_]*+certification
 1597037466	tripleee	roadtripplanner\.io
 1597039787	tripleee	aadiwebsolutions\.com
+1597039833	tripleee	aadi[\W_]*+web[\W_]*+solutions(?!\.com)
