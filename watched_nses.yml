@@ -94,6 +94,9 @@ items:
   - alice.ns.cloudflare.com.
   - weston.ns.cloudflare.com.
 - ns:
+  - alina.ns.cloudflare.com.
+  - max.ns.cloudflare.com.
+- ns:
   - alla.ns.cloudflare.com.
   - ed.ns.cloudflare.com.
 - ns:
