@@ -22506,3 +22506,4 @@
 1597123220	NobodyNada	the-amber-park-condo\.com
 1597123235	NobodyNada	 the-m-condominium\.com\.sg
 1597123252	NobodyNada	 the-dairy-farm-residences-condo\.com
+1597123287	NobodyNada	river\W*front\W*residences?
