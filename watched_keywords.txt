@@ -22509,3 +22509,4 @@
 1597123287	NobodyNada	river\W*front\W*residences?
 1597123939	Makyen	winrsgold\.com
 1597123956	Makyen	shriv[\W_]*+commedia(?:[\W_]*+(?:solutions|it|\d++|[\da-f]{5,}+)s?)*
+1597125967	tripleee	(?-i:9vsr_ZhP0RA)(?# youtube)
