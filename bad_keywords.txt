@@ -2322,3 +2322,4 @@ wellness[\W_]*+cbd
 hair[\W_]*+la[\W_]*+vie
 oscarwhitehackersworld(?:@gmail\.com)?
 I want to join occult for money ritual
+SPIRITUAL[\W_]*+GRANDMASTER
