@@ -52,6 +52,9 @@ items:
   - aida.ns.cloudflare.com.
   - lloyd.ns.cloudflare.com.
 - ns:
+  - aida.ns.cloudflare.com.
+  - mitch.ns.cloudflare.com.
+- ns:
   - aiden.ns.cloudflare.com.
   - amber.ns.cloudflare.com.
 - ns:
