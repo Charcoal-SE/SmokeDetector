@@ -714,6 +714,9 @@ items:
   - lia.ns.cloudflare.com.
   - pete.ns.cloudflare.com.
 - ns:
+  - lila.ns.cloudflare.com.
+  - sri.ns.cloudflare.com.
+- ns:
   - lily.ns.cloudflare.com.
   - wesley.ns.cloudflare.com.
 - ns:
