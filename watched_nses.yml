@@ -341,6 +341,9 @@ items:
   - sue.ns.cloudflare.com.
 - ns:
   - dana.ns.cloudflare.com.
+  - jerome.ns.cloudflare.com.
+- ns:
+  - dana.ns.cloudflare.com.
   - kirk.ns.cloudflare.com.
 - ns:
   - dana.ns.cloudflare.com.
