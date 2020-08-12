@@ -22540,3 +22540,4 @@
 1597213776	Makyen	bpxgna8tg6oczx2pybbinw
 1597218236	Mast	flexclip
 1597219806	Mast	peaceful-chandrasekhar-9a1b9a\.netlify\.app
+1597220873	tripleee	(?-i:^Ruth True$)
