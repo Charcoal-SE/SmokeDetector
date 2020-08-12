@@ -13749,7 +13749,6 @@
 1572033463	Makyen	astroindusoot\.com
 1572033475	Makyen	intellirise
 1572033485	Makyen	cleverlabs
-1572033557	Glorfindel	procracksoft\.com
 1572062487	Makyen	(?:muie|la\s+naiba|păsărică)(?#Romanian offensive)
 1572062500	Makyen	gicseh\.com
 1572062511	Makyen	usbullionreserve\.com
