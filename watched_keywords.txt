@@ -22252,7 +22252,6 @@
 1596093560	Makyen	testo360[\W_]*+argentina
 1596093808	tripleee	beno\.biz
 1596093484	Sonic the Masked Werehog	pillsfact\.com
-1596095844	Makyen	eclipse[\W_]*+keto[\W_]*+avis
 1596095909	Makyen	bestcargurus\.com
 1596097828	Nisse Engström	indiancallgirlindubai\.com
 1596102390	Daniil	typingdna\.com
