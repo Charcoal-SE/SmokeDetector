@@ -22530,3 +22530,4 @@
 1597165597	tripleee	topspying\.com
 1597202841	tripleee	sixfigureincomepermonth\.blogspot\.com
 1597203169	tripleee	vmix[\W_]*+(?:[\d.]+[\W_]*+)?crack
+1597204858	tripleee	escuela[\W_]*+tech(?:nologies)?
