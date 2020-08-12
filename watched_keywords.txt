@@ -22547,3 +22547,4 @@
 1597231349	Mast	marthacrowdy(?:@gmail\.com)?
 1597232080	Makyen	digivyas\.com
 1597232206	tripleee	(?:2f)?digivyas(?<!\bdigivyas\.com)
+1597235080	tripleee	pakainfo\.com
