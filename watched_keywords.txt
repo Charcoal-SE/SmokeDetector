@@ -22533,3 +22533,4 @@
 1597204858	tripleee	escuela[\W_]*+tech(?:nologies)?
 1597204886	tripleee	(?-i:^7ny44cW5-Fo)(?# youtube)
 1597209543	tripleee	puri[\W_]*+skin
+1597212605	tripleee	gbapps\.info
