@@ -22551,3 +22551,4 @@
 1597233484	Mast	quickplumberssanantonio\.com
 1597235175	tripleee	placementindia\.com
 1597235759	tripleee	(?-i:^pvtweetsv(?:ie)w\w*$)
+1597238732	Mast	discreetarmsdealer\.com
