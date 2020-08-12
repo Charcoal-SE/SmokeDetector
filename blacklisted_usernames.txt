@@ -368,3 +368,4 @@ drivingdirectionss\.com
 (?-i:^Fizfy Solutions$)
 (?-i:^Denni Jenni$)
 (?-i:^Iso KUWAIT$)
+(?-i:^Marco Desouza$)
