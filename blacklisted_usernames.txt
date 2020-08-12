@@ -367,3 +367,4 @@ drivingdirectionss\.com
 ^bert[\W_]*+linsheng$
 (?-i:^Fizfy Solutions$)
 (?-i:^Denni Jenni$)
+(?-i:^Iso KUWAIT$)
