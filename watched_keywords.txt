@@ -22592,3 +22592,4 @@
 1597330159	Jeff Schaller	webgostarangilan\.com
 1597331390	Machavity	poseidonia\.healthcare
 1597333875	Makyen	bpmtechguru\.in
+1597334758	Daniil	webgostarangilan(?!\.com)
