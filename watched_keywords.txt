@@ -22587,3 +22587,4 @@
 1597315175	tripleee	archer[\W_]*mech(?!\.com|anical)\w*+
 1597317378	Mast	bcomtimetable\.in
 1597318927	tripleee	stunquotes\.com
+1597320245	tripleee	gclubfree\.com
