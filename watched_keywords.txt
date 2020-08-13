@@ -22586,3 +22586,4 @@
 1597313341	Daniil	ivd24immobilien\.de
 1597315025	tripleee	archermech\.com
 1597315175	tripleee	archer[\W_]*mech(?!\.com|anical)\w*+
+1597317378	Mast	bcomtimetable\.in
