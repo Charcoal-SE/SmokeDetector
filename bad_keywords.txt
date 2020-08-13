@@ -2324,3 +2324,4 @@ oscarwhitehackersworld(?:@gmail\.com)?
 I want to join occult for money ritual
 SPIRITUAL[\W_]*+GRANDMASTER
 eclipse[\W_]*+keto[\W_]*+avis
+streetinsider\.com\/(FMR\+Wire\/|SI\+Newswire)
