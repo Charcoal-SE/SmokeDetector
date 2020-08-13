@@ -22594,3 +22594,4 @@
 1597333875	Makyen	bpmtechguru\.in
 1597334758	Daniil	webgostarangilan(?!\.com)
 1597335351	Daniil	oz\s*paper\s*help(?!\.com)
+1597335906	Daniil	cobufarms\.com
