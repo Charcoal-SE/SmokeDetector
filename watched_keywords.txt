@@ -22576,3 +22576,4 @@
 1597304836	tripleee	(?-i:3gwRuVc)(?# bit.ly)
 1597304915	tripleee	(?-i:HMkmfUxvi9A)(?# youtube)
 1597304932	tripleee	smartscore\.software
+1597304968	tripleee	tamga\.shinyapps\.io
