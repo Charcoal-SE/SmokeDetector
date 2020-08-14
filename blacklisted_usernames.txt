@@ -372,3 +372,4 @@ drivingdirectionss\.com
 (?-i:^Ankit Rathi$)
 (?-i:^zega logo$)
 (?-i:^shreyasehgal‭$)
+(?-i:^sehgalshreya$)
