@@ -22634,3 +22634,4 @@
 1597421224	Daniil	textellent(?!\.com)
 1597421254	Daniil	snl\s*virtual\s*assistance(?!\.com)
 1597421332	Daniil	limsophianicole\.wixsite\.com
+1597421359	Daniil	tanmaybagla(?:@gmail\.com)?
