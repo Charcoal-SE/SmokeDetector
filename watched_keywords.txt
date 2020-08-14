@@ -22620,3 +22620,4 @@
 1597420324	Daniil	sharp\s*(and|&)\s*fellows(?!\.com)
 1597420436	Daniil	Technical Instruction for (Quality Control|qc) and (Quality Assurance|qa)
 1597420720	Daniil	chmac\s*crack(?!\.com)
+1597420957	Daniil	cracksad\.com
