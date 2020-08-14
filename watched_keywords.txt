@@ -22632,3 +22632,4 @@
 1597421147	Daniil	zyanpc(?!\.com)
 1597421165	Daniil	cracksray(?!\.com)
 1597421224	Daniil	textellent(?!\.com)
+1597421254	Daniil	snl\s*virtual\s*assistance(?!\.com)
