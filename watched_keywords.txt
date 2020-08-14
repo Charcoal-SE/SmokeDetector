@@ -22601,3 +22601,4 @@
 1597343748	Mast	dammam-clean\.com
 1597350052	Mast	blueturtle\.co\.za
 1597372768	Machavity	hwsecurity\.dev
+1597391691	tripleee	(?-i:^PRYSM$)
