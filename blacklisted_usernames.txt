@@ -374,3 +374,4 @@ drivingdirectionss\.com
 (?-i:^shreyasehgal‭$)
 (?-i:^sehgalshreya$)
 Pound\W*define\W*MACRO
+(?-i:^Anthony\W*+Dwayne\W*+Chapelle$)
