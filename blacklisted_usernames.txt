@@ -373,5 +373,4 @@ drivingdirectionss\.com
 (?-i:^zega logo$)
 (?-i:^shreyasehgal‭$)
 (?-i:^sehgalshreya$)
-Anthony\W*+Dwayne\W*+Chapelle
 Pound\W*define\W*MACRO
