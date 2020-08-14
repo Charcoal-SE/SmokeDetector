@@ -837,9 +837,6 @@ items:
   - sam.ns.cloudflare.com.
   - vera.ns.cloudflare.com.
 - ns:
-  - sam.ns.cloudflare.com.
-  - zara.ns.cloudflare.com.
-- ns:
   - sara.ns.cloudflare.com.
   - seth.ns.cloudflare.com.
 - ns:
