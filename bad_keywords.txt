@@ -2327,3 +2327,4 @@ eclipse[\W_]*+keto[\W_]*+avis
 streetinsider\.com\/(FMR\+Wire\/|SI\+Newswire)
 provitalize
 nutrabodz[\W_]*+keto
+\bsurge(?:r(?:y|ies)|ons?)\W*+(?:\w*+\W*+){0,10}assault(?:s|ing|ed)?\b
