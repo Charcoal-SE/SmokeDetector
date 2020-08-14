@@ -370,3 +370,4 @@ drivingdirectionss\.com
 (?-i:^Iso KUWAIT$)
 (?-i:^Marco Desouza$)
 (?-i:^Ankit Rathi$)
+(?-i:^zega logo$)
