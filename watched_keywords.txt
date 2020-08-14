@@ -13110,7 +13110,6 @@
 1569585298	tripleee	mr\W*mark\W*moss
 1569586427	tripleee	marksignalprofits(?# screen shot from Catija)
 1569601627	Makyen	hackstronauticxx(@gmail\.com)?
-1569601710	Machavity	(?-i:^zega logo$)
 1569602162	Makyen	sppspp71(@gmail\.com)?
 1569608150	Makyen	debonairacacdemy\.wordpress\.com
 1569608333	Makyen	(?-i:vJ315n4a-gc)
