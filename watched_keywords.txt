@@ -22620,3 +22620,4 @@
 1597414586	Spevacus	cracksray\.com
 1597340810	Mast	teshuzi\.com
 1597420324	Daniil	sharp\s*(and|&)\s*fellows(?!\.com)
+1597420436	Daniil	Technical Instruction for (Quality Control|qc) and (Quality Assurance|qa)
