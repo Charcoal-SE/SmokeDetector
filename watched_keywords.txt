@@ -22604,3 +22604,4 @@
 1597391691	tripleee	(?-i:^PRYSM$)
 1597391757	tripleee	prysm(?<!(?-i:^PRYSM$))
 1597391912	tripleee	phonegnome\.com
+1597392370	tripleee	dctech\.club
