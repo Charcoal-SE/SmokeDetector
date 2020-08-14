@@ -22622,3 +22622,4 @@
 1597420720	Daniil	chmac\s*crack(?!\.com)
 1597420957	Daniil	cracksad\.com
 1597420973	Daniil	cracksad(?!\.com)
+1597421012	Daniil	zsactivatorskey\.com
