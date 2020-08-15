@@ -22642,3 +22642,4 @@
 1597446333	Daniil	ahmednurjimale5(?:@gmail\.com)?
 1597453973	Daniil	sanjosedetailingpros\.com
 1597455614	user12986714	qualtrics\.com\/jfe\/form(?=\/)(?#survey is spam)
+1597468892	user12986714	delete.*spammer(?<=^.{13,50})(?=.{0,50}$)
