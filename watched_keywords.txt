@@ -22641,3 +22641,4 @@
 1597445409	Daniil	mariapiagratton\.com
 1597446333	Daniil	ahmednurjimale5(?:@gmail\.com)?
 1597453973	Daniil	sanjosedetailingpros\.com
+1597455614	user12986714	qualtrics\.com\/jfe\/form(?=\/)(?#survey is spam)
