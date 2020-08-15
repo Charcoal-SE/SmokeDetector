@@ -2328,3 +2328,4 @@ streetinsider\.com\/(FMR\+Wire\/|SI\+Newswire)
 provitalize
 nutrabodz[\W_]*+keto
 surge(?:r(?:y|ies)|ons?)\W*+(?:\w*+\W*+){0,10}assault(?:s|ing|ed)?
+trekking\W*+in\W*+nepal
