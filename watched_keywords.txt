@@ -14443,7 +14443,6 @@
 1574425294	tripleee	ufascr\.com
 1574429159	Machavity	samseocarner(?:@gmail\.com)?
 1574433654	Das_Geek	cryptocrow\.net
-1574433732	Das_Geek	jammer-mart\.com
 1574453788	Makyen	onlinethacker4hire(?:@gmail\.com)?
 1574453893	Makyen	(?-i:CpggB8YndCr0viRwrqTl5L)
 1574473465	Makyen	lifemotivation\.net
