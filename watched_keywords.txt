@@ -22655,3 +22655,4 @@
 1597564444	Makyen	(?:zauramoa[\W_]*+)?madhaldija(?:[\W_]*+brotherhood)?
 1597608562	Makyen	imaginea\.com(?<!labs\.imaginea\.com)(?<!blog\.imaginea\.com)
 1597608725	Makyen	traveldocsonline\.com
+1597639852	tripleee	multantvhd\.com
