@@ -22665,3 +22665,4 @@
 1597646069	tripleee	the[\W_]*+sms[\W_]*+empire[\W_]*+(?!\.com)\w*+
 1597647432	tripleee	nova[\W_]*+keto[\_]*+avis
 1597649814	tripleee	 aaaenos‭(?!\.com)
+1597650167	Mast	technobizzar\.com
