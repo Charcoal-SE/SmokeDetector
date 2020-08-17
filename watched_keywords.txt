@@ -22676,3 +22676,4 @@
 1597649857	Mast	priya\s+submissions
 1597660746	tripleee	colorexpertsindia\.com
 1597661295	Daniil	activationpage\.com
+1597661374	Daniil	(?:Install)? McAfee (?:with )?activation code
