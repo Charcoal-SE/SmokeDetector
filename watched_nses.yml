@@ -869,6 +869,9 @@ items:
   ns:
   - ns09.domaincontrol.com.
   - ns10.domaincontrol.com.
+- ns:
+  - ns27.domaincontrol.com.
+  - ns28.domaincontrol.com.
 - comment: FPs, don't blacklist
   ns:
   - ns43.domaincontrol.com.
