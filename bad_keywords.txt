@@ -2329,3 +2329,4 @@ provitalize
 nutrabodz[\W_]*+keto
 surge(?:r(?:y|ies)|ons?)\W*+(?:\w*+\W*+){0,10}assault(?:s|ing|ed)?
 (?-i:IELTS certificate without exam)(?#Please leave the "without exam" on this blacklist as there are legitimate cases where an "IELTS certificate" may be asked about, e.g. on Travel.SE or Academia.SE)
+magnum[\W_]*+xt
