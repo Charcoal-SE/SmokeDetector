@@ -22663,3 +22663,4 @@
 1597645585	tripleee	ipl[\W_]*+2020
 1597645807	tripleee	justinchauffeurs\.co\.uk
 1597646033	tripleee	thesmsempire\.com
+1597646069	tripleee	the[\W_]*+sms[\W_]*+empire[\W_]*+(?!\.com)\w*+
