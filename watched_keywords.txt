@@ -22695,3 +22695,4 @@
 1597695719	Eliah Kagan	gaplek?\W*+qq
 1597696075	Eliah Kagan	thedailyaloe\.com
 1597725179	tripleee	unicom\.co\.uk
+1597725502	tripleee	wizardcharles\d*(?:[\W_]*(?:at[W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
