@@ -774,6 +774,9 @@ items:
   - marty.ns.cloudflare.com.
   - mimi.ns.cloudflare.com.
 - ns:
+  - mary.ns.cloudflare.com.
+  - plato.ns.cloudflare.com.
+- ns:
   - matt.ns.cloudflare.com.
   - nina.ns.cloudflare.com.
 - ns:
