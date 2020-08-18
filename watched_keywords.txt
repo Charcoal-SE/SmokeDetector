@@ -22718,3 +22718,4 @@
 1597744193	tripleee	leadgle\.com
 1597744584	tripleee	techsmagic\.com
 1597746149	tripleee	hottentcamping\.com
+1597746402	tripleee	webiators(?!\.com)
