@@ -22722,3 +22722,4 @@
 1597749050	tripleee	zinavo(?!\.com)
 1597750870	Mast	pcpapa\.net
 1597751753	tripleee	cameratico\.com
+1597753527	tripleee	(?-i:^Solo Org$)
