@@ -22514,7 +22514,6 @@
 1597155904	Jeff Schaller	hornvstszyufight\.live
 1597148739	Jeff Schaller	teqhow\.com
 1597144360	Mast	acakid\.com
-1597157468	Makyen	trim[\W_]*+maxx[\W_]*+keto(?:[\W_]*+(?:ingredients|\d++|[\da-f]{5,}+)s?)*
 1597162146	tripleee	(?-i:^mamahawa$)
 1597165597	tripleee	topspying\.com
 1597202841	tripleee	sixfigureincomepermonth\.blogspot\.com
