@@ -373,6 +373,9 @@ items:
   - dean.ns.cloudflare.com.
   - sofia.ns.cloudflare.com.
 - ns:
+  - dean.ns.cloudflare.com.
+  - wanda.ns.cloudflare.com.
+- ns:
   - deb.ns.cloudflare.com.
   - drew.ns.cloudflare.com.
 - ns:
