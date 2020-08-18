@@ -379,3 +379,4 @@ Pound\W*define\W*MACRO
 90\W*+98
 (?-i:^Stoersender Gps$)
 (?-i:^Sheligiibs40$)
+(?-i:^ISO UAE$)
