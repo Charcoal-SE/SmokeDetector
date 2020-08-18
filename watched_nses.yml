@@ -621,6 +621,9 @@ items:
   - jessica.ns.cloudflare.com.
   - kirk.ns.cloudflare.com.
 - ns:
+  - jewel.ns.cloudflare.com.
+  - wesley.ns.cloudflare.com.
+- ns:
   - jim.ns.cloudflare.com.
   - nadia.ns.cloudflare.com.
 - ns:
