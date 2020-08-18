@@ -442,6 +442,9 @@ items:
   - elliot.ns.cloudflare.com.
   - lila.ns.cloudflare.com.
 - ns:
+  - elliot.ns.cloudflare.com.
+  - liv.ns.cloudflare.com.
+- ns:
   - elma.ns.cloudflare.com.
   - hank.ns.cloudflare.com.
 - ns:
