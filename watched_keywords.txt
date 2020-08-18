@@ -22708,3 +22708,4 @@
 1597736370	tripleee	 Nida[\W_]*+FY20
 1597739409	tripleee	180\.215\.14\.113
 1597739607	tripleee	mudah[\W_]*+menang
+1597738402	Mast	live222th\.com
