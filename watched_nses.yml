@@ -738,6 +738,9 @@ items:
   - lia.ns.cloudflare.com.
   - pete.ns.cloudflare.com.
 - ns:
+  - lia.ns.cloudflare.com.
+  - vick.ns.cloudflare.com.
+- ns:
   - lila.ns.cloudflare.com.
   - sri.ns.cloudflare.com.
 - ns:
