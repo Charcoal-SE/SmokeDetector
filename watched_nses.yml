@@ -922,7 +922,9 @@ items:
 - ns:
   - ns75.domaincontrol.com.
   - ns76.domaincontrol.com.
-- ns:
+- comment: significant FPs; retired 2020-08-19
+  disable: true
+  ns:
   - ns77.domaincontrol.com.
   - ns78.domaincontrol.com.
 - ns: supercloudapps.com.
