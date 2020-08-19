@@ -22735,3 +22735,4 @@
 1597817936	tripleee	(?-i:aeuyS)(?# shorturl.at)
 1597821035	Makyen	biolife[\W_]*+keto(?:[\W_]*+(?:in|italian?|\d++|[\da-f]{5,}+)s?)*
 1597821778	tripleee	myglobalpharma\.com
+1597821795	tripleee	kissanimes\.tv
