@@ -22747,3 +22747,4 @@
 1597839861	doppelgreener	digitalserviceusa\.com
 1597850277	Das_Geek	avto-skup\.com\.ua
 1597850300	Das_Geek	autovykup\.com\.ua
+1597852853	tripleee	ayushnigam[\W_]*+sairam(?:[\W_]*+gmail[\W_]*+(?:dot[\W_]*+)?com)?
