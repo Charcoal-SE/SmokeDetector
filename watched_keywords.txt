@@ -22749,6 +22749,5 @@
 1597851396	Spevacus	jaipurdentalimplants\.com
 1597852853	tripleee	ayushnigam[\W_]*+sairam(?:[\W_]*+gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1597860408	tripleee	(?-i:^San-Mak$)
-1597866936	Daniil	ani(?:@chessify\.me)?
 1597867003	Daniil	chessify\.me
 1597869061	Daniil	b-broma\.com
