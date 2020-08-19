@@ -22742,3 +22742,4 @@
 1597835532	tripleee	mink[\W_]*+hair[\W_]*+mall(?!\.com)
 1597838539	tripleee	learnopenerp\.blogspot\.com
 1597838997	tripleee	ineedtrip\.com
+1597839066	tripleee	(?-i:UCe1HLY1HCK7lE2_xYP6hsgg)(?# youtube)
