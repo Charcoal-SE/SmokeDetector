@@ -22732,3 +22732,4 @@
 1597811649	Makyen	(?-i:8Kq0I\.png)
 1597814157	tripleee	probuyer\.cu\.ma
 1597817884	tripleee	autopartbazaar\.com
+1597817936	tripleee	(?-i:aeuyS)(?# shorturl.at)
