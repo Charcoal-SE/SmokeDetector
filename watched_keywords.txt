@@ -22743,3 +22743,4 @@
 1597838539	tripleee	learnopenerp\.blogspot\.com
 1597838997	tripleee	ineedtrip\.com
 1597839066	tripleee	(?-i:UCe1HLY1HCK7lE2_xYP6hsgg)(?# youtube)
+1597839163	tripleee	subscribe[\W_]*+(?:\w+[\W_]*+)?channel(?<!subscribechannel)
