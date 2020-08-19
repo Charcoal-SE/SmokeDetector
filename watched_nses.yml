@@ -331,6 +331,9 @@ items:
   - curt.ns.cloudflare.com.
   - jean.ns.cloudflare.com.
 - ns:
+  - dahlia.ns.cloudflare.com.
+  - max.ns.cloudflare.com.
+- ns:
   - damon.ns.cloudflare.com.
   - naomi.ns.cloudflare.com.
 - ns:
