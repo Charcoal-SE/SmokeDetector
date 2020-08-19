@@ -2332,3 +2332,4 @@ magnum[\W_]*+xt
 trim[\W_]*+maxx[\W_]*+keto(?:[\W_]*+(?:ingredients|\d++|[\da-f]{5,}+)s?)*
 canzana
 canzana[\W_]*+cbd[\W_]*+(?:uk[\W_]*)?oil(?:[\W_]*+uk)?
+summadx

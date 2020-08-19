@@ -21984,7 +21984,6 @@
 1595133093	Makyen	bestreview\w*
 1595146694	Makyen	bloodbalanceadvancedformulaus\.blogspot
 1595148312	Makyen	(?-i:thedefendersavengers)(?#sites.google.com)
-1595148560	Makyen	summadx
 1595148581	Makyen	atlantis[\W_]*+aquaventure
 1595149256	Makyen	facetextart\.com
 1595149483	Makyen	msiafterburner\.site
