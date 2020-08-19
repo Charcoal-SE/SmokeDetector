@@ -6855,7 +6855,6 @@
 1543835734	Shree	facebooknumbersupport\.com
 1543836897	Shree	trackinghunt\.com
 1543839727	Makyen	t-nation\.com
-1543840054	Makyen	cloudways\.com
 1543860705	Makyen	dietplan1\.com
 1543864541	Makyen	dietplan[a-z0-9-]+\.(?<!usa\.)com(?#dietplan.com and dietplanusa.com are already blacklisted)
 1543880555	Makyen	heavenmanga\.com
