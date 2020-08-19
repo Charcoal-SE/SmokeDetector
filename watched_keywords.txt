@@ -22739,3 +22739,4 @@
 1597834941	doppelgreener	crackshaven\.com
 1597835049	doppelgreener	rateking\.com
 1597835327	tripleee	minkhairmall\.com
+1597835532	tripleee	mink[\W_]*+hair[\W_]*+mall(?!\.com)
