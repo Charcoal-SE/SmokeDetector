@@ -22746,3 +22746,4 @@
 1597839163	tripleee	subscribe[\W_]*+(?:\w+[\W_]*+)?channel(?<!subscribechannel)
 1597839861	doppelgreener	digitalserviceusa\.com
 1597850277	Das_Geek	avto-skup\.com\.ua
+1597850300	Das_Geek	autovykup\.com\.ua
