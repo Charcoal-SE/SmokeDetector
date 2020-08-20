@@ -22777,3 +22777,4 @@
 1597924102	Mast	condor-sw-firmware\.blogspot\.com
 1597936010	Spevacus	caythuocdangian\.vn
 1597936244	Ryan M	caythuocdangianofficial(?:@gmail\.com)?
+1597928593	Mast	retailoria\.com
