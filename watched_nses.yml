@@ -194,6 +194,9 @@ items:
   - duke.ns.cloudflare.com.
 - ns:
   - ben.ns.cloudflare.com.
+  - chloe.ns.cloudflare.com.
+- ns:
+  - ben.ns.cloudflare.com.
   - kami.ns.cloudflare.com.
 - ns:
   - beth.ns.cloudflare.com.
