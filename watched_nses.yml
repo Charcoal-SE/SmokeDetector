@@ -471,6 +471,9 @@ items:
   - elsa.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
 - ns:
+  - eoin.ns.cloudflare.com.
+  - joselyn.ns.cloudflare.com.
+- ns:
   - eric.ns.cloudflare.com.
   - michelle.ns.cloudflare.com.
 - ns:
