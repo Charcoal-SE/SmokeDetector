@@ -12,7 +12,7 @@ from helpers import log
 def load_blacklists():
     bwdict = GlobalVars.git_black_watch_lists
 
-    bwdict['bad_keywords'] = Blacklist(
+    bwdict['bad_keywords'] = KeywordBlacklist(
         'bad_keywords.txt', BasicListParser)
     bwdict['watched_keywords'] = Watchlist(
         'watched_keywords.txt', TSVDictParser)
@@ -514,6 +514,12 @@ class Blacklist(list):
         """
         return False
 
+    def anchor(self, item):
+        """
+        Create an anchored string for this blacklist type.
+        """
+        return item
+
     def watchtype(self):
         """
         Whether this is a watchlist instead of a blacklist.
@@ -549,6 +555,14 @@ class WatchMixin:
         return True
 
 
+class KeywordMixin:
+    """
+    Mixin for keyword lists; redefines anchor() to add bookens.
+    """
+    def anchor(self, item):
+        return r"(?s:\b" + item + r"\b)"
+
+
 class UserMixin:
     """
     Mixin to create username class behavior from a base class
@@ -580,7 +594,11 @@ class PhoneMixin(NetMixin):
         return "body="
 
 
-class Watchlist(WatchMixin, Blacklist):
+class KeywordBlacklist(KeywordMixin, Blacklist):
+    pass
+
+
+class Watchlist(KeywordMixin, WatchMixin, Blacklist):
     pass
 
 
