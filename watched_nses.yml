@@ -723,6 +723,9 @@ items:
   - kurt.ns.cloudflare.com.
   - tricia.ns.cloudflare.com.
 - ns:
+  - kyree.ns.cloudflare.com.
+  - summer.ns.cloudflare.com.
+- ns:
   - lady.ns.cloudflare.com.
   - mitch.ns.cloudflare.com.
 - ns:
