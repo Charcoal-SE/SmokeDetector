@@ -915,6 +915,9 @@ items:
   ns:
   - ns43.domaincontrol.com.
   - ns44.domaincontrol.com.
+- ns:
+  - ns45.domaincontrol.com.
+  - ns46.domaincontrol.com.
 - comment: FPs, don't blacklist
   ns:
   - ns57.domaincontrol.com.
