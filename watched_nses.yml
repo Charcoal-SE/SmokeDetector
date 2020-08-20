@@ -597,6 +597,9 @@ items:
   - ivy.ns.cloudflare.com.
   - simon.ns.cloudflare.com.
 - ns:
+  - jacqueline.ns.cloudflare.com.
+  - nitin.ns.cloudflare.com.
+- ns:
   - jade.ns.cloudflare.com.
   - josh.ns.cloudflare.com.
 - ns:
