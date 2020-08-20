@@ -187,6 +187,9 @@ items:
   - barbara.ns.cloudflare.com.
   - logan.ns.cloudflare.com.
 - ns:
+  - barbara.ns.cloudflare.com.
+  - roan.ns.cloudflare.com.
+- ns:
   - beau.ns.cloudflare.com.
   - jasmine.ns.cloudflare.com.
 - ns:
