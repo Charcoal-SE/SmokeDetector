@@ -22783,3 +22783,4 @@
 1597943646	tripleee	gomehere\.com
 1597943910	tripleee	^digital[\W_]*+service[\W_]*+\w*+\d*+$
 1597945429	tripleee	getfree-robux\.com
+1597947069	tripleee	(?-i:UCvm2Gp6ci-RYOdUxGBKzdvA)(?# youtube)
