@@ -374,7 +374,7 @@ drivingdirectionss\.com
 (?-i:^sehgalshreya$)
 Pound\W*define\W*MACRO
 (?-i:^Anthony\W*+Dwayne\W*+Chapelle$)
-90\W*+98
+(?!<^user\d{5,})90\W*+98
 (?-i:^Stoersender Gps$)
 (?-i:^Sheligiibs40$)
 (?-i:^ISO UAE$)
