@@ -22791,3 +22791,4 @@
 1597989628	Mast	forcrack\.com
 1597989668	Mast	crackred\.com
 1597990484	tripleee	cpntradelines\.com
+1597997488	Mast	(?-i:^Laker Builders Merchant$)
