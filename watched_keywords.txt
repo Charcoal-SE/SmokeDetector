@@ -22793,3 +22793,4 @@
 1597990484	tripleee	cpntradelines\.com
 1597999123	Daniil	(?-i:^Best\s*Agencies(?!\.co\.uk)$)
 1597997488	Mast	(?-i:^Laker Builders Merchant$)
+1597997227	Mast	minhaconexao\.net\.br
