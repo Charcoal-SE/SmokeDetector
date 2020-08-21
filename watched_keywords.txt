@@ -22795,3 +22795,4 @@
 1597997488	Mast	(?-i:^Laker Builders Merchant$)
 1597997227	Mast	minhaconexao\.net\.br
 1597997186	Mast	quixy\.com
+1597989397	Mast	interiorworks\.ae
