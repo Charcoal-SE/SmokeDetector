@@ -22805,3 +22805,4 @@
 1598006731	tripleee	boutiqueviking\.fr
 1598007661	Mast	chris[\W_]*+weatherley(?:@two11recruitment\.com)?
 1598021008	Jenayah	wrapcart\.com
+1598021807	Spevacus	secureotech\.com
