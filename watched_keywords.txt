@@ -22813,3 +22813,4 @@
 1598096535	Mast	idtech\.discuforum\.info
 1598111761	Makyen	jasoncooperr257(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1598112404	Makyen	sakura\.waeochabok(?:@gmail\.com)?
+1598112418	Makyen	chorokin(?:@gmail\.com)?
