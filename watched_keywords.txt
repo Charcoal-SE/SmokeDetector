@@ -22827,3 +22827,4 @@
 1598215491	ArtOfCode	leadsnonstop\.co\.uk
 1598215505	ArtOfCode	(?-i:UC3KWT9dTpFLi0S0vJTWuCJg)(?# youtube)
 1598215522	ArtOfCode	securitycrypto\.info
+1598215543	ArtOfCode	egydevs2020(?:@gmail\.com)?
