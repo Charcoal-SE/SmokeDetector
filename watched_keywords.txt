@@ -22817,3 +22817,4 @@
 1598112797	Makyen	invinciblehacker247(?:@gmail\.com)?
 1598122522	Makyen	sumitthakur209(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1598135083	Makyen	certsquestions\.com
+1598145939	Makyen	com\.signifium(?#company specifier for android products)
