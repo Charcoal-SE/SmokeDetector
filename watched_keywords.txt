@@ -22830,3 +22830,4 @@
 1598215543	ArtOfCode	egydevs2020(?:@gmail\.com)?
 1598215563	ArtOfCode	(?-i:cZzsspvI1A8)(?# youtube)
 1598215580	ArtOfCode	ywbawa(?:@gmail\.com)?
+1598215597	ArtOfCode	dumbshit(?:s)?
