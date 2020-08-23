@@ -22820,5 +22820,4 @@
 1598173884	Mast	contact(?:[\W_]*+a)?(?:[\W_]*+reliable)?[\W_]*+hacker
 1598178550	Daniil	862843076(?:@qq\.com)?
 1598179073	Daniil	(?<!\d{6,}@)qq\.com
-1598182245	Daniil	1916901490@(?:qq\.com)?
 1598182273	Daniil	1916901490(?:@qq\.com)?
