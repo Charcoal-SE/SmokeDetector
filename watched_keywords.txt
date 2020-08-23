@@ -22826,3 +22826,4 @@
 1598215470	ArtOfCode	ixxex\.me
 1598215491	ArtOfCode	leadsnonstop\.co\.uk
 1598215505	ArtOfCode	(?-i:UC3KWT9dTpFLi0S0vJTWuCJg)(?# youtube)
+1598215522	ArtOfCode	securitycrypto\.info
