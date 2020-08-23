@@ -22819,3 +22819,4 @@
 1598145939	Makyen	com\.signifium(?#company specifier for android products)
 1598145958	Makyen	search[\W_]*+adaccount
 1598156420	Makyen	jimwalterilluminati(?:@gmail\.com)?
+1598169452	Mast	dumbshit(?:s)?
