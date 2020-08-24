@@ -22831,3 +22831,4 @@
 1598215597	ArtOfCode	dumbshit(?:s)?
 1598215611	ArtOfCode	patentediguidaitalianaonline\.com
 1598245244	tripleee	corywestropp\.com
+1598249405	tripleee	(?!jammer-mart\.com)[\w\d\-]*jammer[\w\d\-]*\.com?
