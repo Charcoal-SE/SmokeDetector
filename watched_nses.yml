@@ -1267,3 +1267,6 @@ items:
 - ns: hostingsrv.xyz.
 - ns: hostingviet.vn.
 - ns: dnsireland.com.
+- ns:
+  - sdns2.ovh.ca.
+  - vps284337.vps.ovh.ca.
