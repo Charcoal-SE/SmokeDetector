@@ -2334,3 +2334,4 @@ canzana[\W_]*+cbd[\W_]*+(?:uk[\W_]*)?oil(?:[\W_]*+uk)?
 summadx
 Bruleur
 virtus(?:[\W_]*+(?:strong|testo|boost|pro|ca|canada))+
+shed[\W_]*+(?:\d{0,2})?[\W_]*+pounds[\W_]*+rapidly
