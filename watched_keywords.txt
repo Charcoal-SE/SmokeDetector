@@ -18786,7 +18786,6 @@
 1584921585	Makyen	ampatentdrawings\.com
 1584938657	Nisse Engström	bestproductsbuyonlinebd\.blogspot\.com
 1584939748	Nisse Engström	achievementinmotion\.com
-1584946079	tripleee	plagiarism-removal\.com
 1584946167	tripleee	imarticus(?:[\W_]*+learning)?
 1584957124	tripleee	(?:(?:3GA|3GP|AIFF|ASF|AU|AVCHD|Apple Lossless|Apple ProRes|CAF|DVR|F4V|FLV|M2T|M2TS|M4A|M4B|M4V|MKV|MOD|MOV|MPC|MTS|MVI|MXF|OGV|QCP|R3D|RA|RMVB|SHN|TOD|TS|TTA|VOB|VOC|WTV|WebM), ){5,}
 1584959037	tripleee	nagpurescorts\.in
