@@ -6137,7 +6137,6 @@
 1540458795	Tetsuya Yamamoto	allonlineshopbd\.com
 1540462769	doppelspooker	hotmailpassword\d{0,3}\.weebly\.com
 1540462811	doppelspooker	[\w\d]*password[\w\d]*\.weebly\.com
-1540463955	doppelspooker	[\w\d\-]*jammer[\w\d\-]*\.com?
 1540485449	Erik the Outgolfer	sweetandcute\.com
 1540487480	Erik the Outgolfer	homeopathybd\.com
 1540491812	Makyen	segfy\.com
