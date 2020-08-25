@@ -22591,7 +22591,7 @@
 1597392931	tripleee	(?-i:^rocky mosan$)
 1597393045	tripleee	(?-i:^/CDN\+Newswire/)(?# another streetinsider.com service)
 1597396924	tripleee	essayswriting\.org
-1597403061	tripleee	<a href="https?://(?:!0\.|10\.|127\.|169\.254\.|172\.(?:[12]\d|3[01])\.|192\.168\.|2(?:2[4-9]|[3-5]\d)\.)\d+\.\d+\.\d+\.\d+"
+1597403061	tripleee	https?://(?:!0\.|10\.|127\.|169\.254\.|172\.(?:[12]\d|3[01])\.|192\.168\.|2(?:2[4-9]|[3-5]\d)\.)\d+\.\d+\.\d+\.\d+
 1597403095	tripleee	138\.197\.11\.113
 1597403744	tripleee	theoffsetsmoker\.com
 1597403927	tripleee	homegardenscare\.com
@@ -22604,7 +22604,7 @@
 1597414586	Spevacus	cracksray\.com
 1597340810	Mast	teshuzi\.com
 1597420324	Daniil	sharp\s*(and|&)\s*fellows(?!\.com)
-1597420436	Daniil	Technical Instruction for (Quality Control|qc) and (Quality Assurance|qa)
+1597420436	Daniil	technical instruction for (?:quality control|qc) and (?:quality assurance|qa)
 1597420720	Daniil	chmac\s*crack(?!\.com)
 1597420957	Daniil	cracksad\.com
 1597420973	Daniil	cracksad(?!\.com)
@@ -22666,7 +22666,7 @@
 1597660746	tripleee	colorexpertsindia\.com
 1597661295	Daniil	activationpage\.com
 1597661374	Daniil	(?:Install)? McAfee (?:with )?activation code
-1597664024	Mast	Vaibhav[\W_]*+Inter[\W_]*+Deco
+1597664024	Mast	vaibhav[\W_]*+inter[\W_]*+deco
 1597665184	tripleee	pritna\.com
 1597665236	tripleee	hebstreits\.com
 1597666233	tripleee	glammpop\.com
@@ -22694,7 +22694,7 @@
 1597733868	tripleee	(?-i:EmGDDe)(?# fiverr)
 1597733906	tripleee	3d[\W_]*+product[\W_]*+mockup
 1597733938	tripleee	w88hnvn\.com
-1597736370	tripleee	 Nida[\W_]*+FY20
+1597736370	tripleee	 nida[\W_]*+fy20
 1597739409	tripleee	180\.215\.14\.113
 1597739607	tripleee	mudah[\W_]*+menang
 1597738402	Mast	live222th\.com
@@ -22726,7 +22726,7 @@
 1597821778	tripleee	myglobalpharma\.com
 1597821795	tripleee	kissanimes\.tv
 1597821908	tripleee	linuxgrow\.com
-1597824255	Glorfindel	Kate's\W*Clothing
+1597824255	Glorfindel	kate's\W*clothing
 1597826588	tripleee	ramotion\.com
 1597834941	doppelgreener	crackshaven\.com
 1597835049	doppelgreener	rateking\.com
@@ -22827,7 +22827,7 @@
 1598215543	ArtOfCode	egydevs2020(?:@gmail\.com)?
 1598215563	ArtOfCode	(?-i:cZzsspvI1A8)(?# youtube)
 1598215580	ArtOfCode	ywbawa(?:@gmail\.com)?
-1598215597	ArtOfCode	dumbshit(?:s)?
+1598215597	ArtOfCode	dumbshits?
 1598215611	ArtOfCode	patentediguidaitalianaonline\.com
 1598245244	tripleee	corywestropp\.com
 1598249405	tripleee	(?!jammer-mart\.com)[\w\d\-]*jammer[\w\d\-]*\.com?
@@ -22838,7 +22838,7 @@
 1598255102	Makyen	zedichorah[\W_]*+brotherhood
 1598256067	Mast	illuminatiwealth6666(?:@gmail\.com)?
 1598256573	tripleee	almagideon[\W_]*+brotherhood
-1598256630	Mast	SACRED[\W_]*+OCCULT
+1598256630	Mast	sacred[\W_]*+occult
 1598256912	tripleee	irsaa\.com
 1598262540	tripleee	ourunbiasedreview\.blogspot\.com
 1598263946	Mast	sprintzeal\.com
