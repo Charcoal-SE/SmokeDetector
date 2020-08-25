@@ -22863,3 +22863,4 @@
 1598329575	tripleee	prime[\W_]*+service
 1598330295	tripleee	beexpensive\.in
 1598333062	tripleee	rngfurnitures\.com
+1598335595	tripleee	newtheblog\.com
