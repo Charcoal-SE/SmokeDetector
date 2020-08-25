@@ -22895,3 +22895,4 @@
 1598370909	Mast	market-scanner\.ru
 1598371138	Daniil	ukraine\.com\.ua
 1598372588	Daniil	 app\.candidatezip\.com
+1598372637	Daniil	(?<!app\.)candidatezip\.com
