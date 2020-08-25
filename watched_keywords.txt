@@ -22875,3 +22875,4 @@
 1598345176	Ryan M	word-unscrambler\.io
 1598343796	Mast	imalentstore\.com
 1598344042	Mast	(?-i:^Imalent Flashlight$)
+1598344215	Mast	Imalent[\W_]*+MS18
