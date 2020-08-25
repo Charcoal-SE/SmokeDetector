@@ -22893,3 +22893,4 @@
 1598359678	Daniil	psychologymentorship\.slack\.com
 1598363312	Mast	(?-i:IlU-zDU6aQ0)(?# youtube)
 1598365424	Spevacus	forktestlab\.com
+1598370909	Mast	market-scanner\.ru
