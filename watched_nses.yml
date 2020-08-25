@@ -1041,6 +1041,9 @@ items:
 - ns:
   - ns6423.hostgator.com.
   - ns6424.hostgator.com.
+- ns:
+  - ns8021.hostgator.com.
+  - ns8022.hostgator.com.
 - ns: hostspicy.com.
 - ns: ewebguru.com.
 - ns: dnsowl.com.
