@@ -939,6 +939,9 @@ items:
 - ns:
   - ns45.domaincontrol.com.
   - ns46.domaincontrol.com.
+- ns:
+  - ns55.domaincontrol.com.
+  - ns56.domaincontrol.com.
 - comment: FPs, don't blacklist
   ns:
   - ns57.domaincontrol.com.
