@@ -22895,3 +22895,4 @@
 1598365424	Spevacus	forktestlab\.com
 1598370909	Mast	market-scanner\.ru
 1598371138	Daniil	ukraine\.com\.ua
+1598372588	Daniil	 app\.candidatezip\.com
