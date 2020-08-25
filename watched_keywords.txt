@@ -22877,3 +22877,4 @@
 1598344042	Mast	(?-i:^Imalent Flashlight$)
 1598344215	Mast	Imalent[\W_]*+MS18
 1598343556	Mast	Matlab[\W_]*+Assignment[\W_]*+Experts
+1598343609	Mast	fortyreviews\.com
