@@ -22894,3 +22894,4 @@
 1598363312	Mast	(?-i:IlU-zDU6aQ0)(?# youtube)
 1598365424	Spevacus	forktestlab\.com
 1598370909	Mast	market-scanner\.ru
+1598371138	Daniil	ukraine\.com\.ua
