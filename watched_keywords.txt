@@ -22868,3 +22868,4 @@
 1598336156	tripleee	livebid(?!\.in)
 1598339108	tripleee	organicwastecompostermachine\.com
 1598339434	tripleee	vital[\W_]*+flow
+1598339968	Mast	stitchcompany\.in
