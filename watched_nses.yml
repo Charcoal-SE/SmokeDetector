@@ -927,6 +927,9 @@ items:
   - ns09.domaincontrol.com.
   - ns10.domaincontrol.com.
 - ns:
+  - ns15.domaincontrol.com.
+  - ns16.domaincontrol.com.
+- ns:
   - ns27.domaincontrol.com.
   - ns28.domaincontrol.com.
 - ns:
