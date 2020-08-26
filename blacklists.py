@@ -485,8 +485,8 @@ class Blacklist(list):
             "potentially bad asn",
             "potentially problematic",
             "potentially bad ip"]
-        filter_out.append(self._watch_not_reject_reasons())
-        filter_out.append(self._phone_not_reject_reasons())
+        filter_out.extend(self._watch_not_reject_reasons())
+        filter_out.extend(self._phone_not_reject_reasons())
         return filter_out
 
     def _watch_not_reject_reasons(self):
@@ -592,7 +592,7 @@ class PhoneMixin(NetMixin):
     """
     Mixin to create phone number class behavior from a base class
     """
-    def additional_filtered_out_reasons(self):
+    def _phone_not_reject_reasons(self):
         return ["mostly non-latin", "phone number detected",
                 "messaging number detected"]
 

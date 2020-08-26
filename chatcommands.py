@@ -374,7 +374,9 @@ def _already_caught(blacklist, string_to_test):
             reasons.update(set(verdicts))
 
     filter_out = blacklist.not_reject_reasons()
-    return list(filter(lambda x: x not in filter_out, reasons))
+    return list(filter(
+        lambda x: all(reason.lower() not in x.lower()
+                      for reason in filter_out), reasons))
 
 
 def do_blacklist(blacklist_id, msg, force=False):
