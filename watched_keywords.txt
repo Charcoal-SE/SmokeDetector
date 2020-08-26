@@ -22903,3 +22903,4 @@
 1598402131	Makyen	d(?:octo)?r[\W_]*+agbafor
 1598403370	Makyen	seochicagoil\.com
 1598403385	Makyen	seo[\W_]*+chicago[\W_]*+il(?!\.com(?<=seochicagoil\.com))
+1598408593	Jeff Schaller	webuniversal\.pe
