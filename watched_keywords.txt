@@ -22905,3 +22905,4 @@
 1598403385	Makyen	seo[\W_]*+chicago[\W_]*+il(?!\.com(?<=seochicagoil\.com))
 1598408593	Jeff Schaller	webuniversal\.pe
 1598424973	Makyen	anyfullform\.com
+1598448634	Machavity	abnaelaraby\.com
