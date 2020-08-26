@@ -139,7 +139,10 @@ class GitManager:
                         watch_removed.append(watcher.filename())
                         watcher.delete(item_to_blacklist)
 
-            blacklister.add(item_to_blacklist)
+            try:
+                blacklister.add(item_to_blacklist)
+            except ValueError as exc:
+                return False, exc
 
             branch = "auto-blacklist-{0}".format(now)
             git.checkout("-b", branch)

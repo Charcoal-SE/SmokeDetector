@@ -272,6 +272,7 @@ class YAMLParserCIDR(BlacklistParser):
                     'Field "mask" must be between 0 and 32: {0}'.format(
                         item['cidr']['mask']))
             '''
+            return True
         else:
             raise ValueError(
                 'Item needs to have an "ip" member field: {0!r}'.format(item))
@@ -289,7 +290,11 @@ class YAMLParserCIDR(BlacklistParser):
     def add(self, item):
         if isinstance(item, str):
             item = self._add_format(item)
-        self._validate(item)
+        try:
+            self._validate(item)
+        except Exception as err:
+            raise ValueError('Validation of {0} failed: {1}'.format(item, err))
+
         prikey = self.SCHEMA_PRIKEY
 
         def add_callback(d):
@@ -360,15 +365,19 @@ class YAMLParserNS(YAMLParserCIDR):
                     ns, ','.join(x.to_text() for x in addr)))
             except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
                 if not item.get('pass', None):
-                    soa = dns.resolver.query(ns, 'soa')
-                    log('debug', '{0} has no A record; SOA is {1}'.format(
-                        ns, ';'.join(s.to_text() for s in soa)))
+                    try:
+                        soa = dns.resolver.query(ns, 'soa')
+                        log('debug', '{0} has no A record; SOA is {1}'.format(
+                            ns, ';'.join(s.to_text() for s in soa)))
+                        return False
+                    except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
+                        raise ValueError('{0} has no A record or SOA record'.format(ns))
             except dns.resolver.NoNameservers:
                 if not item.get('pass', None):
-                    log('warn', '{0} has no available servers to service DNS '
-                                'request.'.format(ns))
+                    raise ValueError(
+                        '{0} has no available servers to service DNS request.'.format(ns))
             except dns.resolver.Timeout:
-                log('warn', '{0}: DNS lookup timed out.'.format(ns))
+                raise ValueError('{0}: DNS lookup timed out.'.format(ns))
             return True
 
         host_regex = regex.compile(r'^([a-z0-9][-a-z0-9]*\.){2,}$')
