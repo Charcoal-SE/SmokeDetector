@@ -22922,3 +22922,4 @@
 1598449224	Mast	petshealth\.ae
 1598449135	Mast	elaraby-decor\.com
 1598437623	Mast	wwivirtualacademy\.com
+1598437568	Mast	shoppingwithdeals\.com
