@@ -505,6 +505,8 @@ def watch(msg, pattern, alias_used="watch"):
     :return: A string
     """
     blacklist_id = alias_used.replace("-force", "").replace("-", "_")
+    if blacklist_id == "watch":
+        blacklist_id = "watch-keyword"
     return do_blacklist(blacklist_id, msg, force=alias_used.split("-")[-1] == "force")
 
 
