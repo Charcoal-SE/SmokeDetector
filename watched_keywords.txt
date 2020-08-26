@@ -22909,3 +22909,4 @@
 1598449899	Mast	carenician\.com
 1598450307	Machavity	w\W*w\W*w\W*\.\W*mayakaherbalclinic\.\W*c\W*o\W*m
 1598455011	tripleee	range[\W_]*+xtd
+1598455069	tripleee	canzana[\W_]*+pro
