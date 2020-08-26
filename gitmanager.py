@@ -142,6 +142,8 @@ class GitManager:
             try:
                 blacklister.add(item_to_blacklist)
             except ValueError as exc:
+                for rollback_watch in watch_removed:
+                    git.restore(rollback_watch)
                 return False, exc
 
             branch = "auto-blacklist-{0}".format(now)
