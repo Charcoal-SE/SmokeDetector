@@ -1288,7 +1288,9 @@ items:
 - ns: digitechwebdesignhosting.com.
 - ns: tmd.cloud.
 - ns: onlinerack.com.
-- ns: hostingsrv.xyz.
+- comment: no longer resolves 2020-08-27
+  disable: true
+  ns: hostingsrv.xyz.
 - ns: hostingviet.vn.
 - ns: dnsireland.com.
 - ns:
