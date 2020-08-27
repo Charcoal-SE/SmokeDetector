@@ -792,6 +792,9 @@ items:
   - liv.ns.cloudflare.com.
   - seth.ns.cloudflare.com.
 - ns:
+  - lloyd.ns.cloudflare.com.
+  - phoenix.ns.cloudflare.com.
+- ns:
   - logan.ns.cloudflare.com.
   - nena.ns.cloudflare.com.
 - ns:
