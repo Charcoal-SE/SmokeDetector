@@ -22945,3 +22945,4 @@
 1598529734	Mast	kaizen[\W_]*+smart[\W_]*+watch
 1598530651	Mast	tradologie\.com
 1598534171	Mast	samsungrefrigeratorservicecenterinhyderabad\.com
+1598540724	Jeff Schaller	vinayaknetralaya\.org
