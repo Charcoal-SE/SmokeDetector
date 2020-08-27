@@ -22929,3 +22929,4 @@
 1598505084	user12986714	<strong>[^<]*+<a href
 1598511200	tripleee	findfacts\.in
 1598511298	tripleee	embedded-work\.com
+1598511963	tripleee	(?-i:^james rise$)
