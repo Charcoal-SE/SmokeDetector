@@ -22933,3 +22933,4 @@
 1598515813	Makyen	mrcannabisshop\.com
 1598424585	Jenayah	namaztime\.xyz
 1598517040	Daniil	studypeep\.com
+1598517056	Daniil	studypeep(?!\.com)
