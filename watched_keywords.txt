@@ -19277,7 +19277,6 @@
 1586631686	Makyen	gomibet\.com
 1586634209	Makyen	gadgetscane\.com
 1586634235	Makyen	omglancers\.com
-1586637028	Makyen	buzzsocial\.ca
 1586643430	Makyen	pcivault\.io
 1586645703	Makyen	shikaku-sh\.hatenablog\.com
 1586653323	Makyen	mainpoker99\.com
