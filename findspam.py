@@ -3,7 +3,6 @@
 
 import sys
 import math
-import regex
 from difflib import SequenceMatcher
 from urllib.parse import urlparse, unquote_plus
 from itertools import chain
@@ -13,6 +12,7 @@ import time
 import os
 import os.path as path
 
+import regex
 # noinspection PyPackageRequirements
 import tld
 # noinspection PyPackageRequirements
@@ -27,6 +27,11 @@ import metasmoke_cache
 from globalvars import GlobalVars
 import blacklists
 
+
+if tuple(int(x) for x in regex.__version__.split('.')) < (2, 5, 82):
+    raise ImportError(
+        'Need regex >= 2020.6.8 (internal version number 2.5.82; got %s)' %
+        regex.__version__)
 
 TLD_CACHE = []
 DNS_CACHE = dict()
