@@ -1152,7 +1152,9 @@ items:
 - ns: cloudhostdns.net.
 - ns: elsner.com.
 - ns: dnschamp.com.
-- ns: gohostgator.com.
+- comment: no longer resolves 2020-08-27
+  disable: true
+  ns: gohostgator.com.
 - ns: mycyberhosting.com.
 - ns: webnode.com.
 - ns: printdns.com.
