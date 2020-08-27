@@ -490,7 +490,8 @@ def do_blacklist(blacklist_id, msg, force=False):
                   "blacklist-website", "blacklist-website-force",
                   "blacklist-username", "blacklist-username-force",
                   "blacklist-number", "blacklist-number-force",
-                  "blacklist-ip", "blacklist-ns"])  # "blacklist-asn",
+                  "blacklist-ip", "blacklist-ip-force",
+                  "blacklist-ns", "blacklist-ns-force"])  # "blacklist-asn",
 def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     """
     Adds a pattern to the blacklist and commits/pushes to GitHub
@@ -506,7 +507,9 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
 @command(str, whole_msg=True, privileged=True, give_name=True,
          aliases=["watch-keyword", "watch-force", "watch-keyword-force",
                   "watch-number", "watch-number-force",
-                  "watch-ip", "watch-ns", "watch-asn"])  # "watch-ns-pair",
+                  "watch-ip", "watch-ip-force",
+                  "watch-ns", "watch-ns-force",
+                  "watch-asn", "watch-asn-force"])  # "watch-ns-set",
 def watch(msg, pattern, alias_used="watch"):
     """
     Adds a pattern to the watched keywords list and commits/pushes to GitHub
@@ -520,8 +523,7 @@ def watch(msg, pattern, alias_used="watch"):
     return do_blacklist(blacklist_id, msg, force=alias_used.split("-")[-1] == "force")
 
 
-@command(str, whole_msg=True, privileged=True, give_name=True,
-         aliases=["unwatch"])  # "unwatch-ns", "unwatch-asn", "unwatch-ip"
+@command(str, whole_msg=True, privileged=True, give_name=True, aliases=["unwatch"])
 def unblacklist(msg, item, alias_used="unwatch"):
     """
     Removes a pattern from watchlist/blacklist and commits/pushes to GitHub
