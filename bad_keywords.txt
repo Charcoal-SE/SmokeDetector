@@ -2336,3 +2336,4 @@ Bruleur
 virtus(?:[\W_]*+(?:strong|testo|boost|pro|ca|canada))+
 shed[\W_]*+(?:\d{0,2})?[\W_]*+pounds[\W_]*+rapidly
 (?:official[\W_]*+)?mill[\W_]*+creek[\W_]*+keto
+dewa[\W_]*+poker
