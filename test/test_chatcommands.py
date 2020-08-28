@@ -278,7 +278,7 @@ def test_reject(monkeypatch):
 
     # Prevent from attempting to check privileges with Metasmoke
     monkeypatch.setattr(GlobalVars, "code_privileged_users", [])
-    assert chatcommands.reject('8888 "test"', original_msg=msg).startswith("You need blacklist manager privileges")
+    assert chatcommands.reject('8888 "test"', original_msg=msg, alias_used="reject").startswith("You need blacklist manager privileges")
 
     monkeypatch.setattr(GlobalVars, "code_privileged_users", [('stackexchange.com', 121520)])
     with monkeypatch.context() as m:
@@ -287,7 +287,7 @@ def test_reject(monkeypatch):
         m.setattr("requests.get", lambda *args, **kwargs: None)
         assert chatcommands.reject('8888 "test"', original_msg=msg, alias_used="reject-force") == "Cannot connect to GitHub API"
         m.setattr("requests.get", original_get)
-    assert chatcommands.reject('2518 "test"', original_msg=msg).startswith("Please provide")
+    assert chatcommands.reject('2518 "test"', original_msg=msg, alias_used="close").startswith("Please provide")
 
 
 @patch("chatcommands.handle_spam")
