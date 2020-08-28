@@ -22969,3 +22969,4 @@
 1598598353	Mast	luckydrawwinnername\.in
 1598598533	Mast	snapdeal[\W_]*+lucky[\W_]*+draw[\W_]*+winners
 1598607234	Makyen	(?-i:myunbiasedreview)(?#sites.google.com)
+1598607384	Makyen	hiprofileescortahmedabad\.com
