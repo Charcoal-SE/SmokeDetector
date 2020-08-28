@@ -22981,3 +22981,4 @@
 1598621658	Mast	(?-i:2ExnuL5)(?# bit.ly)
 1598615677	Mast	omnviainteriors\.com
 1598601722	Mast	physiogo\.com
+1598606471	Mast	researchcorridor\.com
