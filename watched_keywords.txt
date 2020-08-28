@@ -22967,3 +22967,4 @@
 1598596648	Mast	telecomate\.com
 1598596937	Mast	tradeoptionsindex\.com
 1598598353	Mast	luckydrawwinnername\.in
+1598598533	Mast	snapdeal[\W_]*+lucky[\W_]*+draw[\W_]*+winners
