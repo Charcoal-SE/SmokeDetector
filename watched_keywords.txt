@@ -22827,7 +22827,6 @@
 1598215611	ArtOfCode	patentediguidaitalianaonline\.com
 1598245244	tripleee	corywestropp\.com
 1598249405	tripleee	(?!jammer-mart\.com)[\w\d\-]*jammer[\w\d\-]*\.com?
-1598252135	tripleee	(?:official[\W_]*+)?mill[\W_]*+creek(?:[\W_]*+keto)?
 1598254328	Mast	electricsmokeres\.com
 1598254192	Mast	kerishdp365\.com
 1598254348	Mast	khudothiecoparkhanoi\.com
