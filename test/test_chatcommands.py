@@ -287,7 +287,7 @@ def test_reject(monkeypatch):
         m.setattr("requests.get", lambda *args, **kwargs: None)
         assert chatcommands.reject('8888 "test"', original_msg=msg, alias_used="reject-force") == "Cannot connect to GitHub API"
         m.setattr("requests.get", original_get)
-    assert chatcommands.reject('2518 "test"', original_msg=msg)[:8] in {"Please p", "Cannot c"}
+    assert chatcommands.reject('2518 "test"', original_msg=msg).startswith("Please provide")
 
 
 @patch("chatcommands.handle_spam")
