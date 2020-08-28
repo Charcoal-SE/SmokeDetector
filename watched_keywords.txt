@@ -22954,3 +22954,4 @@
 1598575025	Makyen	paloalto[\W_]*+secure(?!\.com(?<=paloaltosecure\.com))
 1598575042	Makyen	findfacts[\W_]*+innovation[\W_]*+centre(?:[\W_]*+pvt[\W_]*+ltd)?
 1598575057	Makyen	sbobetmu\.co
+1598575078	Makyen	142\.4\.5\.46
