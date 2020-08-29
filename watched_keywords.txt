@@ -23003,3 +23003,4 @@
 1598694017	Makyen	(?-i:ultrathermoketonz)(?#sites.google.com)
 1598694454	Makyen	le[\W_]*+regime[\W_]*+keto(?:[\W_]*+(?:avis|france|\d++|[\da-f]{5,}+)s?)*
 1598710166	Daniil	apksforfree(?!\.com)
+1598710347	Daniil	(?-i:bitcoineraapp)(?#Google Sites)
