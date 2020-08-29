@@ -20743,7 +20743,6 @@
 1591127678	Makyen	420junglez\.com
 1591127705	Makyen	dankvapesofficialaccount
 1591127730	Makyen	dank(?:[\W_]*+(?:vape|cart(?:ridge)?)s?)+
-1591132013	Makyen	arabxn\.com
 1591132066	Makyen	appzoro\.com
 1591137914	Makyen	bestchairreview\.com
 1591137939	Makyen	10hoth\.com
