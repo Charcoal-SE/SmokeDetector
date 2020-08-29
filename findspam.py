@@ -1186,7 +1186,7 @@ def is_offensive_post(s, site):
 
     # https://regex101.com/r/EI2yLQ/1
     offensive = regex.compile(
-        r"(?is)\b((?:(?:ur\Wm[ou]m|(yo)?u suck|[8B]={3,}[D>)]\s*[.~]*|nigg[aeu][rh]?|(ass\W?|a|a-)hole|"
+        r"(?is)\b((?:(?:ur\Wm[ou]m|(yo)?u suck|[8B]={3,}[D>)]\s*[.~]*|n[il]gg[aeu][rh]?|(ass\W?|a|a-)hole|"
         r"daf[au][qk]|(?<!brain)(mother|mutha)?f\W*u\W*c?\W*k+(a|ing?|e?[rd]| *off+| *(you|ye|u)(rself)?|"
         r" u+|tard)?|(bul+)?shit(t?er|head)?|(yo)?u(r|'?re)? (gay|scum)|dickhead|(?:fur)?fa+g+(?:ot)?s?\b|"
         r"pedo(?!bapt|dont|log|mete?r|troph)|fascis[tm]s?|cocksuck(e?[rd])?|"
