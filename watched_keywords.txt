@@ -10773,7 +10773,6 @@
 1562045829	Makyen	amranichauffeurs\.com
 1562049164	Shree	albawadimetals\.com
 1562050268	Makyen	nikesa\W*row
-1562050288	Makyen	7z\W*password\W*recovery
 1562050308	Makyen	(?-i:yl94k\.png)
 1562053132	Glorfindel	excellentwebworld\.com
 1562053698	Makyen	Illuminesse
