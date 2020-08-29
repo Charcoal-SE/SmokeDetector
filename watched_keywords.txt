@@ -23015,3 +23015,4 @@
 1598722944	Makyen	rjspret\.com
 1598728760	Daniil	draft\W*beer\W*intelligence(?!\.com)
 1598728780	Daniil	draftbeerintelligence\.com
+1598730416	Daniil	chiuer(?!\.com)
