@@ -23004,3 +23004,4 @@
 1598694454	Makyen	le[\W_]*+regime[\W_]*+keto(?:[\W_]*+(?:avis|france|\d++|[\da-f]{5,}+)s?)*
 1598710166	Daniil	apksforfree(?!\.com)
 1598710347	Daniil	(?-i:bitcoineraapp)(?#Google Sites)
+1598710193	Mast	court[\W_]*+case[\W_]*+spells
