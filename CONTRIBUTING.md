@@ -2,7 +2,7 @@ New contributors are always welcome to Charcoal projects. Contributions to Charc
 code contributions. You could also:
 
  - write documentation
- - [feed back](https://charcoal-se.org/smokey/Feedback-Guidance) on spam detections in
+ - [feedback](https://charcoal-se.org/smokey/Feedback-Guidance) on spam detections in
    [Charcoal HQ](https://chat.stackexchange.com/rooms/11540)
  - [review](https://metasmoke.erwaysoftware.com/review/posts) old spam detections
  - help [maintain our blacklists](https://charcoal-se.org/smokey/Privileges#code-admin-aka-blacklister-ms)
