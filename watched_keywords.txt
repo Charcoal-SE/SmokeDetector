@@ -23007,3 +23007,4 @@
 1598710193	Mast	court[\W_]*+case[\W_]*+spells
 1598709986	Mast	apksforfree\.com
 1598703175	Mast	greentrustcashapplication\.com
+1598701726	Mast	mywifiextsolutions\.com
