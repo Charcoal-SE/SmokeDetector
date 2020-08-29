@@ -23017,3 +23017,4 @@
 1598728780	Daniil	draftbeerintelligence\.com
 1598730416	Daniil	chiuer(?!\.com)
 1598730883	Daniil	salesforcesas(?!\.home\.blog)
+1598736171	Mast	uixlibrary\.com
