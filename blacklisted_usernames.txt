@@ -252,7 +252,6 @@ quran[\W_]*+for[\W_]*+kids
 (?-i:^rockzzz ajay$)
 (?-i:^insightssuccess$)
 (?-i:^Daniel Pham$)
-(?-i:^Sunday$)
 (?-i:^sowmya g$)
 (?-i:^Sheeba Karan$)
 (?-i:^ekeeda engineering$)
