@@ -22968,7 +22968,6 @@
 1598607234	Makyen	(?-i:myunbiasedreview)(?#sites.google.com)
 1598607384	Makyen	hiprofileescortahmedabad\.com
 1598607431	Makyen	madamsilpa1
-1598608464	Makyen	tequality\.tech
 1598612666	Daniil	writeessaytoday\.com(?<!info@writeessaytoday\.com)
 1598613456	Daniil	info@writeessaytoday\.com
 1598617574	Machavity	sports11team\.com
