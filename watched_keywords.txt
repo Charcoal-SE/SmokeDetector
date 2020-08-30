@@ -23031,3 +23031,4 @@
 1598809184	Makyen	(?:cur+[\W_]+r*ency|cur*[\W_]+r+ency)
 1598809457	Makyen	(?-i:Efjabcz)(?#cutt.ly)
 1598809474	Makyen	(?-i:shibazi96)(?#fiverr.com)
+1598815946	Mast	(?-i:26929a9aeee0de7d8f3bbe69e835536f)(?#apnews.com)
