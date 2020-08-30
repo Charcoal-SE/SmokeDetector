@@ -110,7 +110,7 @@ class GitManager:
             return (False, 'GitManager: item_to_blacklist is not defined. Blame a developer.')
 
         # item_to_blacklist = item_to_blacklist.replace("\\s", " ")
-
+        anchoredItem = quote_plus(_anchor(item, blacklist_type))
         if blacklist == "website":
             blacklist_type = Blacklist.WEBSITES
             ms_search_option = "&body_is_regex=1&body="
@@ -126,7 +126,7 @@ class GitManager:
         elif blacklist == "watch_keyword":
             blacklist_type = Blacklist.WATCHED_KEYWORDS
             ms_search_option = "&or_search=1&body_is_regex=1&body={1}&title_is_regex=1" \
-            "&title={1}&username_is_regex=1&username=".format(quote_plus(_anchor(item, blacklist_type)))
+            "&title={1}&username_is_regex=1&username=".format(anchoredItem)
         elif blacklist == "watch_number":
             blacklist_type = Blacklist.WATCHED_NUMBERS
             ms_search_option = "&body="
@@ -204,8 +204,7 @@ class GitManager:
                                    ".\n"
                                    "<!-- METASMOKE-BLACKLIST-{8} {4} -->".format(
                                        username, chat_profile_link, op, blacklist,                # 0 1 2 3
-                                       item, ms_search_option,                                    # 4 5
-                                       quote_plus(_anchor(item, blacklist_type)),                 # 6
+                                       item, ms_search_option, anchoredItem,                      # 4 5 6
                                        quote_plus(item.replace("\\W", " ").replace("\\.", ".")),  # 7
                                        blacklist.upper()),                                        # 8
                            "head": branch,
