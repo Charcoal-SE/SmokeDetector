@@ -110,7 +110,6 @@ class GitManager:
             return (False, 'GitManager: item_to_blacklist is not defined. Blame a developer.')
 
         # item_to_blacklist = item_to_blacklist.replace("\\s", " ")
-        anchored = quote_plus(_anchor(item, blacklist_type))
         if blacklist == "website":
             blacklist_type = Blacklist.WEBSITES
             ms_search_option = "&body_is_regex=1&body="
@@ -125,6 +124,8 @@ class GitManager:
             ms_search_option = "&body="
         elif blacklist == "watch_keyword":
             blacklist_type = Blacklist.WATCHED_KEYWORDS
+            item = item_to_blacklist
+            anchored = quote_plus(_anchor(item, blacklist_type))
             ms_search_option = "&or_search=1&body_is_regex=1&body={0}&title_is_regex=1" \
                                "&title={0}&username_is_regex=1&username=".format(anchored)
         elif blacklist == "watch_number":
