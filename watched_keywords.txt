@@ -23024,3 +23024,4 @@
 1598762958	Makyen	totalinvestmentcompany(?:@gmail\.com)?
 1598776523	Mast	reiger\.raymond(?:@gmail\.com)?
 1598775978	Mast	trippycode\.com
+1598778978	Mast	endocannabinoid[\W_]*+framework
