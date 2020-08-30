@@ -126,7 +126,7 @@ class GitManager:
         elif blacklist == "watch_keyword":
             blacklist_type = Blacklist.WATCHED_KEYWORDS
             ms_search_option = "&or_search=1&body_is_regex=1&body={0}&title_is_regex=1" \
-            "&title={0}&username_is_regex=1&username=".format(anchored)
+                               "&title={0}&username_is_regex=1&username=".format(anchored)
         elif blacklist == "watch_number":
             blacklist_type = Blacklist.WATCHED_NUMBERS
             ms_search_option = "&body="
