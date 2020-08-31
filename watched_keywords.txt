@@ -23056,3 +23056,4 @@
 1598858790	tripleee	dechmont\.ae
 1598859981	Mast	(?-i:^Mindstick$)
 1598860863	Glorfindel	mailvita
+1598864349	Mast	(?-i:^Windows Techupdates$)
