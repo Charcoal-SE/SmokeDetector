@@ -23073,3 +23073,4 @@
 1598907913	Mast	dotnetfollower\.com
 1598864178	Kulfy	windowstechupdates\.com
 1598913470	Daniil	chanakyamath[\W_]*+gmail[\W_]*+com
+1598913508	Daniil	dmessages(?!\.com)
