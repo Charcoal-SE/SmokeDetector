@@ -221,6 +221,9 @@ items:
   - rose.ns.cloudflare.com.
 - ns:
   - bonnie.ns.cloudflare.com.
+  - buck.ns.cloudflare.com.
+- ns:
+  - bonnie.ns.cloudflare.com.
   - chad.ns.cloudflare.com.
 - ns:
   - bonnie.ns.cloudflare.com.
