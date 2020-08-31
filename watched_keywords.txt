@@ -14191,7 +14191,6 @@
 1573720100	tripleee	nychandymans\.com
 1573723929	tripleee	botayit\.com
 1573731040	tripleee	yardandgardenserviceshamilton\.ca
-1573732091	tripleee	meldaresearch\.com
 1573735325	tripleee	prestigeprimrosehills\.gen\.in
 1573737792	tripleee	(?:black|teen)[\W_]*+woft
 1573739559	Makyen	instaketosharktank\.wixsite\.com
