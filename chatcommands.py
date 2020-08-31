@@ -558,6 +558,12 @@ def approve(msg, pr_id):
         raise CmdException(str(e))
 
 
+@command(int, privileged=True, whole_msg=True)
+def aapprove(msg, pr_id):
+    threading.Thread(name="async-approve", target=approve.__func__, args=(msg, pr_id)).start
+    return "Job started asynchronously."
+
+
 @command(str, privileged=True, whole_msg=True, give_name=True, aliases=["close", "reject-force", "close-force"])
 def reject(msg, args, alias_used="reject"):
     argsraw = args.split(' "', 1)
@@ -599,6 +605,12 @@ def reject(msg, args, alias_used="reject"):
         return message
     except Exception as e:
         raise CmdException(str(e))
+
+
+@command(str, privileged=True, whole_msg=True, give_name=True, aliases=["aclose", "areject-force", "aclose-force"])
+def areject(msg, args, alias_used="areject"):
+    threading.Thread(name="async-reject", target=reject.__func__, args=(msg, args, alias_used[1:])).start
+    return "Job started asynchronously."
 
 
 @command(privileged=True, aliases=["remote-diff"])
