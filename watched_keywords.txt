@@ -23067,3 +23067,4 @@
 1598881506	Spevacus	proactivehealthgroup\.ca
 1598885023	Machavity	gmfadmission\.in
 1598889589	tripleee	buyucoin(?!\.com)
+1598892851	tripleee	(?-i:wvrFTTFQ58c)(?# youtube)
