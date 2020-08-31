@@ -23068,3 +23068,4 @@
 1598889589	tripleee	buyucoin(?!\.com)
 1598892851	tripleee	(?-i:wvrFTTFQ58c)(?# youtube)
 1598892883	tripleee	info999\.gq
+1598895534	tripleee	alokbadatia\.com
