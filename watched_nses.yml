@@ -516,6 +516,9 @@ items:
   - gene.ns.cloudflare.com.
   - graham.ns.cloudflare.com.
 - ns:
+  - george.ns.cloudflare.com.
+  - lady.ns.cloudflare.com.
+- ns:
   - gerald.ns.cloudflare.com.
   - melissa.ns.cloudflare.com.
 - ns:
