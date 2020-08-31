@@ -23055,3 +23055,4 @@
 1598858214	Mast	godrej[\W_]*+vikhroli
 1598858693	tripleee	deadlinenews\.co\.uk
 1598858790	tripleee	dechmont\.ae
+1598859981	Mast	(?-i:^Mindstick$)
