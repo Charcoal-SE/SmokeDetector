@@ -560,7 +560,7 @@ def approve(msg, pr_id):
 
 @command(int, privileged=True, whole_msg=True)
 def aapprove(msg, pr_id):
-    threading.Thread(name="async-approve", target=approve.__func__, args=(msg, pr_id)).start
+    threading.Thread(name="async-approve", target=approve.__func__, args=(msg, pr_id)).start()
     return "Job started asynchronously."
 
 
@@ -609,7 +609,7 @@ def reject(msg, args, alias_used="reject"):
 
 @command(str, privileged=True, whole_msg=True, give_name=True, aliases=["aclose", "areject-force", "aclose-force"])
 def areject(msg, args, alias_used="areject"):
-    threading.Thread(name="async-reject", target=reject.__func__, args=(msg, args, alias_used[1:])).start
+    threading.Thread(name="async-reject", target=reject.__func__, args=(msg, args, alias_used[1:])).start()
     return "Job started asynchronously."
 
 
