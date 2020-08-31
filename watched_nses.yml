@@ -1282,7 +1282,9 @@ items:
 - ns: worldemart.com.
 - ns: chinahoster.com.
 - ns: niagahoster.com.
-- ns: megabytesserver.com.
+- comment: no longer responding 2020-08-31
+  disable: true
+  ns: megabytesserver.com.
 - ns: cms500.com.
 - ns: servers800.com.
 - ns: our-websites.com.
