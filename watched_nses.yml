@@ -1241,6 +1241,7 @@ items:
 - ns: exweme.com.
 - ns: ifcondition.com.
 - ns: c13707.sgvps.net.
+- ns: c22487.sgvps.net.
 - comment: no longer resolves 2020-08-27
   disable: true
   ns: guruapk.com.
