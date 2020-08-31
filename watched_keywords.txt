@@ -19739,7 +19739,6 @@
 1588138121	Makyen	pcheckup\.com
 1588139143	Makyen	china-xingsheng\.net
 1588140299	Makyen	jitutogel\.net
-1588142822	Makyen	invigor[\W_]*+max(?:[\W_]*+(?:testosterone|\d++|[\da-f]{4,}+))*
 1588143246	tripleee	neo-christianity\.blogspot\.com
 1588144972	Makyen	(?-i:2YaZsNA)(?#bit.ly)
 1588144997	Makyen	musikproduktion-musicproduction\.com
