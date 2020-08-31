@@ -29,6 +29,9 @@ items:
   - brenda.ns.cloudflare.com.
   - merlin.ns.cloudflare.com.
 - ns:
+  - boyd.ns.cloudflare.com.
+  - jasmine.ns.cloudflare.com.
+- ns:
   - burt.ns.cloudflare.com.
   - naomi.ns.cloudflare.com.
 - ns:
