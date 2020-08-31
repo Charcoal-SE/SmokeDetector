@@ -23066,4 +23066,3 @@
 1598879947	tripleee	the[\W_]*+daily[\W_]*+info
 1598881506	Spevacus	proactivehealthgroup\.ca
 1598885023	Machavity	gmfadmission\.in
-1598889539	tripleee	buyUCoin
