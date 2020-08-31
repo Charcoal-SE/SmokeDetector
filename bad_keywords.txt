@@ -2339,3 +2339,4 @@ shed[\W_]*+(?:\d{0,2})?[\W_]*+pounds[\W_]*+rapidly
 dewa[\W_]*+poker
 7z\W*password\W*recovery
 invigor[\W_]*+max(?:[\W_]*+(?:testosterone|\d++|[\da-f]{4,}+))*
+fat[\W_]*+burners[\s_]+
