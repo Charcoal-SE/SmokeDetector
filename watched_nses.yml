@@ -705,6 +705,9 @@ items:
   - kayleigh.ns.cloudflare.com.
   - kipp.ns.cloudflare.com.
 - ns:
+  - kayleigh.ns.cloudflare.com.
+  - ruben.ns.cloudflare.com.
+- ns:
   - keanu.ns.cloudflare.com.
   - perla.ns.cloudflare.com.
 - ns:
