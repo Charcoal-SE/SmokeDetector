@@ -466,6 +466,9 @@ items:
   - elliot.ns.cloudflare.com.
   - liv.ns.cloudflare.com.
 - ns:
+  - elly.ns.cloudflare.com.
+  - remy.ns.cloudflare.com.
+- ns:
   - elma.ns.cloudflare.com.
   - hank.ns.cloudflare.com.
 - ns:
