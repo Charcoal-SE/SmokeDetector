@@ -1,12 +1,12 @@
 Schema: yaml_ns
 Schema_version: '2019120601'
 items:
-- ns:
-  - ns1.md-95.bigrockservers.com.
-  - ns2.md-95.bigrockservers.com.
-- ns:
-  - ns1.md-99.bigrockservers.com.
-  - ns2.md-99.bigrockservers.com.
+- comment: no longer responding 2020-11-11
+  disable: true
+  ns: 247support-number.com.
+- comment: no longer in DNS 2020-04-02
+  disable: true
+  ns: aapkeaajanese.website.
 - ns:
   - adrian.ns.cloudflare.com.
   - ben.ns.cloudflare.com.
@@ -23,17 +23,18 @@ items:
   - bart.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
 - ns:
+  - boyd.ns.cloudflare.com.
+  - jasmine.ns.cloudflare.com.
+- ns:
   - braden.ns.cloudflare.com.
   - georgia.ns.cloudflare.com.
 - ns:
   - brenda.ns.cloudflare.com.
   - merlin.ns.cloudflare.com.
 - ns:
-  - boyd.ns.cloudflare.com.
-  - jasmine.ns.cloudflare.com.
-- ns:
   - burt.ns.cloudflare.com.
   - naomi.ns.cloudflare.com.
+- ns: c67050.sgvps.net.
 - ns:
   - cass.ns.cloudflare.com.
   - justin.ns.cloudflare.com.
@@ -43,24 +44,47 @@ items:
 - ns:
   - clark.ns.cloudflare.com.
   - kiki.ns.cloudflare.com.
+- ns: ddos-guard.net.
+- ns: dnsdomen.com.
+- ns: doodledigital.net.
 - ns:
   - elliot.ns.cloudflare.com.
   - sue.ns.cloudflare.com.
+- ns: escortdomain.net.
+- ns: fcomet.com.
 - ns:
   - george.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
+- ns: healthymum.org.
 - ns:
   - jay.ns.cloudflare.com.
   - jule.ns.cloudflare.com.
 - ns:
   - lee.ns.cloudflare.com.
   - ulla.ns.cloudflare.com.
+- ns: letter.org.in.
 - ns:
   - linda.ns.cloudflare.com.
   - ned.ns.cloudflare.com.
 - ns:
   - lloyd.ns.cloudflare.com.
   - reza.ns.cloudflare.com.
+- ns: md-19.webhostbox.net.
+- ns: my-wifiextnet.net.
+- ns: myassignmenthelp.co.uk.
+- ns:
+  - ns1.md-95.bigrockservers.com.
+  - ns2.md-95.bigrockservers.com.
+- ns:
+  - ns1.md-99.bigrockservers.com.
+  - ns2.md-99.bigrockservers.com.
+- ns: ocpdns.com.
+- ns: orangewebsite.com.
+- ns: pakihosting.com.
+- ns: promoocodes.com.
+- ns: siteground.asia.
+- ns: socialmonkee.com.
+- ns: stackpathdns.net.
 - ns:
   - ned.ns.cloudflare.com.
   - paris.ns.cloudflare.com.
@@ -70,31 +94,7 @@ items:
 - ns:
   - terin.ns.cloudflare.com.
   - tess.ns.cloudflare.com.
-- comment: no longer responding 2020-11-11
-  disable: true
-  ns: 247support-number.com.
-- ns: promoocodes.com.
-- ns: myassignmenthelp.co.uk.
-- ns: socialmonkee.com.
-- comment: no longer in DNS 2020-04-02
-  disable: true
-  ns: aapkeaajanese.website.
-- ns: healthymum.org.
-- ns: escortdomain.net.
-- ns: dnsdomen.com.
-- ns: letter.org.in.
+- ns: ukm14.siteground.biz.
 - comment: no longer in DNS 2020-04-02
   disable: true
   ns: utecho.com.
-- ns: siteground.asia.
-- ns: ddos-guard.net.
-- ns: orangewebsite.com.
-- ns: fcomet.com.
-- ns: stackpathdns.net.
-- ns: pakihosting.com.
-- ns: md-19.webhostbox.net.
-- ns: ukm14.siteground.biz.
-- ns: my-wifiextnet.net.
-- ns: doodledigital.net.
-- ns: ocpdns.com.
-- ns: c67050.sgvps.net.
