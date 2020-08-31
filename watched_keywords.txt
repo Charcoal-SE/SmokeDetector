@@ -23075,3 +23075,4 @@
 1598913470	Daniil	chanakyamath[\W_]*+gmail[\W_]*+com
 1598913508	Daniil	dmessages(?!\.com)
 1598914873	Spevacus	lattemachinehub\.com
+1598915930	Daniil	sealights\.io
