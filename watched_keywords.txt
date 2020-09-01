@@ -23090,3 +23090,4 @@
 1598949687	Daniil	(?-i:PowerVolt)
 1598949783	Daniil	newsronic(?!\.com)
 1598951429	tripleee	onnextinterio\.com
+1598954301	Mast	react[\W_]*+native[\W_]*+development[\W_]*+services
