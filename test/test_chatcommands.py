@@ -14,14 +14,9 @@ import pytest
 import regex
 import types
 import requests
-if GlobalVars.on_windows:
-    # noinspection PyPep8Naming
-    from _Git_Windows import git
-else:
-    from sh.contrib import git
 
 from fake import Fake
-from unittest.mock import patch
+from unittest.mock import patch, MagicMock
 
 
 def dummy_tell_rooms_with(dummy1, dummy2):
@@ -187,7 +182,6 @@ def test_deprecated_blacklist():
     assert chatcommands.blacklist("").startswith("The `!!/blacklist` command has been deprecated.")
 
 
-@pytest.mark.skipif(GlobalVars.on_branch != "master", reason="avoid branch checkout")
 def test_watch(monkeypatch):
     # XXX TODO: expand
     def wrap_watch(pattern, force=False):
@@ -208,34 +202,34 @@ def test_watch(monkeypatch):
 
         return chatcommands.watch(pattern, alias_used=cmd, original_msg=msg)
 
+    # Prevent from actually modifying git state
+    monkeypatch.setattr("gitmanager.git", MagicMock())
+
     # Prevent from attempting to check privileges with Metasmoke
     monkeypatch.setattr(GlobalVars, "code_privileged_users", [1, 161943])
 
-    try:
-        # Invalid regex
-        resp = wrap_watch(r'?')
-        assert "An invalid pattern was provided" in resp
+    # Invalid regex
+    resp = wrap_watch(r'?')
+    assert "An invalid pattern was provided" in resp
 
-        # This is one of the perpetually condemned spam domains, blacklisted forever
-        resp = wrap_watch(r'israelbigmarket')
-        assert "That pattern looks like it's already caught" in resp
+    # This is one of the perpetually condemned spam domains, blacklisted forever
+    resp = wrap_watch(r'israelbigmarket')
+    assert "That pattern looks like it's already caught" in resp
 
-        # The phone number here is the first one in this format in bad_keywords.txt
-        resp = wrap_watch(r'[a-z_]*(?:1_*)?913[\W_]*608[\W_]*4584[a-z_]*')
-        assert "Mostly non-latin" not in resp
-        assert "Bad keyword in answer" in resp
-        assert "Bad keyword in body" in resp
+    # The phone number here is the first one in this format in bad_keywords.txt
+    resp = wrap_watch(r'[a-z_]*(?:1_*)?913[\W_]*608[\W_]*4584[a-z_]*')
+    assert "Mostly non-latin" not in resp
+    assert "Bad keyword in answer" in resp
+    assert "Bad keyword in body" in resp
 
-        # XXX TODO: figure out how to trigger duplicate entry separately
-        monkeypatch.setattr("chatcommunicate.is_privileged", lambda *args: True)
-        monkeypatch.setattr("gitmanager.GitManager.prepare_git_for_operation", lambda *args: (True, None))
+    # XXX TODO: figure out how to trigger duplicate entry separately
+    monkeypatch.setattr("chatcommunicate.is_privileged", lambda *args: True)
+    monkeypatch.setattr("gitmanager.GitManager.prepare_git_for_operation", lambda *args: (True, None))
 
-        assert wrap_watch("trimfire", True).startswith("Already watched")
+    assert wrap_watch("trimfire", True).startswith("Already watched")
 
-        monkeypatch.setattr("gitmanager.GitManager.add_to_blacklist", lambda *args, **kwargs: (True, "Hahaha"))
-        assert wrap_watch("male enhancement", True) == "Hahaha"
-    finally:
-        git.checkout("master")
+    monkeypatch.setattr("gitmanager.GitManager.add_to_blacklist", lambda *args, **kwargs: (True, "Hahaha"))
+    assert wrap_watch("male enhancement", True) == "Hahaha"
 
 
 def test_approve(monkeypatch):
