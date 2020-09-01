@@ -3706,3 +3706,4 @@ programs2code\.com
 meldaresearch\.com
 quicktranscriptionservice\.com
 (?-i:d680adc632091138ed9fd09659e15dc9)(?#apnews.com)
+zobuz\.com
