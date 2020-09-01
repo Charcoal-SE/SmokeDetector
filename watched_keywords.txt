@@ -23096,3 +23096,4 @@
 1598957618	tripleee	whirlpoolwashingmachineservicecenterinhyderabad\.com
 1598957782	Daniil	whirlpool\W*washing\W*machine\W*service\W*centre\W*in\W*hyderabad(?!\.com)
 1598958335	Daniil	bulk\W*cheap\W*ammo(?!\.com)
+1598958622	Daniil	enjoyxoxo\.com
