@@ -103,7 +103,7 @@ def test_bisect():
     assert chatcommands.bisect(None, original_msg=msg) == r"Matched by `essayssos\.com` on [line 1 of watched_keywords.txt](https://github.com/{}/blob/{}/watched_keywords.txt#L1)".format(GlobalVars.bot_repo_slug, GlobalVars.commit.id)
 
     test_text = "OoOasdfghjklOoO"
-    msg.content_source = "!!/bisect {}".format(test_text)
+    msg.content_source = "sdc bisect {}".format(test_text)
     msg.content = msg.content_source
     assert chatcommands.bisect(None, original_msg=msg) == r"{!r} is not caught by a blacklist or watchlist item.".format(test_text)
 
@@ -184,8 +184,8 @@ def test_deprecated_blacklist():
 
 def test_watch(monkeypatch):
     # XXX TODO: expand
-    def wrap_watch(pattern, force=False):
-        cmd = 'watch{0}'.format('-force' if force else '')
+    def wrap_watch(pattern, suffix='', prefix='!!/'):
+        cmd = 'watch{0}'.format(suffix)
         msg = Fake({
             "_client": {
                 "host": "stackexchange.com",
@@ -195,7 +195,7 @@ def test_watch(monkeypatch):
             "room": {"id": 11540, "get_current_user_ids": lambda: [161943]},
             # Ouch, this is iffy
             # Prevent an error from deep inside do_blacklist
-            "content_source": '!!/{0} {1}'.format(cmd, pattern)
+            "content_source": '{0}{1} {2}'.format(prefix, cmd, pattern)
         })
         msg.content = msg.content_source
         msg.room._client = msg._client
@@ -207,6 +207,7 @@ def test_watch(monkeypatch):
 
     # Prevent from attempting to check privileges with Metasmoke
     monkeypatch.setattr(GlobalVars, "code_privileged_users", [1, 161943])
+    GlobalVars.github_access_token = "FAKE_ACCESS_TOKEN__TEST_CHATCOMMANDS"
 
     # Invalid regex
     resp = wrap_watch(r'?')
@@ -222,14 +223,21 @@ def test_watch(monkeypatch):
     assert "Bad keyword in answer" in resp
     assert "Bad keyword in body" in resp
 
+    for prefix in ('!!/', 'sdc '):
+        resp = wrap_watch('github.com', suffix='-ns', prefix=prefix)
+        assert resp.startswith("Validation of {'ns': 'github.com'} failed:")
+
     # XXX TODO: figure out how to trigger duplicate entry separately
     monkeypatch.setattr("chatcommunicate.is_privileged", lambda *args: True)
     monkeypatch.setattr("gitmanager.GitManager.prepare_git_for_operation", lambda *args: (True, None))
 
-    assert wrap_watch("trimfire", True).startswith("Already watched")
+    assert wrap_watch("trimfire", suffix='-force').startswith("Already watched")
 
     monkeypatch.setattr("gitmanager.GitManager.add_to_blacklist", lambda *args, **kwargs: (True, "Hahaha"))
-    assert wrap_watch("male enhancement", True) == "Hahaha"
+    assert wrap_watch("male enhancement", suffix='-force') == "Hahaha"
+
+    for prefix in ('!!/', 'sdc '):
+        assert wrap_watch('github.com', suffix='-ns', prefix=prefix) == "Hahaha"
 
 
 def test_approve(monkeypatch):
