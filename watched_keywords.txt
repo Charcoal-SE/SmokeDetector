@@ -23095,4 +23095,3 @@
 1598954301	Mast	react[\W_]*+native[\W_]*+development[\W_]*+services
 1598957618	tripleee	whirlpoolwashingmachineservicecenterinhyderabad\.com
 1598957782	Daniil	whirlpool\W*washing\W*machine\W*service\W*centre\W*in\W*hyderabad(?!\.com)
-1598958293	Daniil	bulk\W*cheap\W*ammo
