@@ -23098,3 +23098,4 @@
 1598958335	Daniil	bulk\W*cheap\W*ammo(?!\.com)
 1598958622	Daniil	enjoyxoxo\.com
 1598958639	Daniil	enjoyxoxo(?!\.com)
+1598959074	Daniil	primoms\.com
