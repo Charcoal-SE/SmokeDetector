@@ -2340,3 +2340,4 @@ dewa[\W_]*+poker
 7z\W*password\W*recovery
 invigor[\W_]*+max(?:[\W_]*+(?:testosterone|\d++|[\da-f]{4,}+))*
 endocannabinoid[\W_]*+framework
+ISO\W*+\d*+\W*+(?:\w*+\W*+){0,5}(?:course|cert|exam|test)
