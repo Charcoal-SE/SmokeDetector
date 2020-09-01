@@ -23082,4 +23082,3 @@
 1598938874	tripleee	chinafreight\.com
 1598939324	tripleee	al[\W_]*+rhman
 1598940990	Mast	laptop[\W_]*+repair[\W_]*+dubai
-1598944402	tripleee	ok[\W_]*+wow(?:[\W_]*+keto)?
