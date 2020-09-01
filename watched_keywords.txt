@@ -23088,3 +23088,4 @@
 1598947308	Mast	newsronic\.com
 1598949434	Mast	powervolt[\W_]*+energy[\W_]*+saver[\W_]*+review
 1598949687	Daniil	(?-i:PowerVolt)
+1598949783	Daniil	newsronic(?!\.com)
