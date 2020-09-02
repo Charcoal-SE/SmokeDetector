@@ -179,6 +179,14 @@ def is_auto_ignored_post(postid_site_tuple):
 
 def update_code_privileged_users_list():
     metasmoke.Metasmoke.update_code_privileged_users_list()
+    # GlobalVars.code_privileged_users can now be a set, or may still be None.
+    if GlobalVars.code_privileged_users is None:
+        if len(GlobalVars.config_blacklisters) > 0:
+            # Only change away from None if there are pre-configured blacklisters
+            GlobalVars.code_privileged_users = set(GlobalVars.config_blacklisters)
+    else:
+        # Add the users in the config file, if any
+        GlobalVars.code_privileged_users.update(GlobalVars.config_blacklisters)
     _dump_pickle("codePrivileges.p", GlobalVars.code_privileged_users)
 
 
