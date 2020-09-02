@@ -17574,12 +17574,11 @@
 1582094450	Shree	moneymakar\.com
 1582094754	Shree	technotanveer\.com
 1582094966	Shree	skype-support\.com
-1582095331	Shree	(?-i:WyOYe54wXww)(?#youtube)
+1582095331	Shree	(?-i:WyOYe54wXww)(?#YouTube)
 1582096047	Shree	420reap\.com
 1582103893	Shree	web-services\.co\.in
 1582103996	Shree	hotstreaming\.site
 1582104586	Shree	codextent\.com
-1582105767	Eliah Kagan	(?-i:WyOYe54wXww)(?#YouTube)
 1582105825	Eliah Kagan	(?-i:0lG1OyLKKYA)(?#youtu.be)
 1582105881	Eliah Kagan	(?-i:DxuhRXiZ9sA)(?#youtu.be)
 1582106021	Eliah Kagan	sujhaw\.in
@@ -18185,7 +18184,6 @@
 1583483907	tripleee	powerfulvoodoomagicspells\.com
 1583484732	tripleee	humanitiestuition\.sg
 1583487557	Shree	privatejetcardcomparisons\.com
-1583487644	Shree	(?-i:I7WRk7uSA1w)(?#youtube)
 1583494951	Shree	techeadway\.com
 1583495810	tripleee	atithipalace\.com
 1583496618	Shree	vananvoiceover\.com
@@ -23125,4 +23123,3 @@
 1599032194	Mast	mygradechecker\.com
 1599034548	Daniil	apkoptions\.com
 1599036244	tripleee	lush[\W_]*+lift
-1599037029	tripleee	myimmigrationhelp\.com
