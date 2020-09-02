@@ -23121,3 +23121,4 @@
 1599029953	Makyen	eclipse[\W_]*+keto[\W_]*+formula
 1599032194	Mast	mygradechecker\.com
 1599034548	Daniil	apkoptions\.com
+1599043361	tripleee	husys(?!\.com)
