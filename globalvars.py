@@ -258,6 +258,25 @@ class GlobalVars:
     # Miscellaneous
     log_time_format = config.get("log_time_format", "%H:%M:%S")
 
+    # Blacklist privileged users from config
+    se_blacklisters = regex.sub(r"[^\d,]", "", config.get("se_blacklisters", "")).split(",")
+    mse_blacklisters = regex.sub(r"[^\d,]", "", config.get("mse_blacklisters", "")).split(",")
+    so_blacklisters = regex.sub(r"[^\d,]", "", config.get("so_blacklisters", "")).split(",")
+
+    # Create a set of blacklisters equivalent to what's used in code_privileged_users.
+    config_blacklisters = set()
+    for id in se_blacklisters:
+        if id:
+            config_blacklisters.add(("stackexchange.com", int(id)))
+
+    for id in mse_blacklisters:
+        if id:
+            config_blacklisters.add(("meta.stackexchange.com", int(id)))
+
+    for id in so_blacklisters:
+        if id:
+            config_blacklisters.add(("stackoverflow.com", int(id)))
+
     # environ_or_none replaced by os.environ.get (essentially dict.get)
     bot_name = os.environ.get("SMOKEDETECTOR_NAME", git_name)
     bot_repo_slug = os.environ.get("SMOKEDETECTOR_REPO", git_user_repo)
