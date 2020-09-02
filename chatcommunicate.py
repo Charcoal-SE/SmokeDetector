@@ -296,9 +296,7 @@ def on_msg(msg, client):
         if result:
             s = ":{}\n{}" if "\n" not in result and len(result) >= 488 else ":{} {}"
             _msg_queue.put((room_data, s.format(message.id, result), None))
-    elif message.content.lower().startswith(("!!/", "sdc ")):
-        if not message.content.startswith('!!/'):
-            message.content = message.content.replace('sdc ', '!!/', 1)
+    elif message.content.startswith("!!/") or message.content.lower().startswith("sdc "):
         result = dispatch_command(message)
 
         if result:
@@ -517,7 +515,10 @@ def get_message(id, host="stackexchange.com"):
 def dispatch_command(msg):
     command_parts = GlobalVars.parser.unescape(msg.content).split(" ", 1)
     try:
-        command_parts[0] = command_parts[0][3:]
+        if command_parts[0] == 'sdc':
+            command_parts = command_parts[1].split(" ", 1)
+        else:
+            command_parts[0] = command_parts[0][3:]
     except IndexError:
         return "Invalid command: Use either `!!/cmd_name` or `sdc cmd_name`" +\
                " to run command `cmd_name`."
