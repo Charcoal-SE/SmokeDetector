@@ -45,6 +45,7 @@ PUNCTUATION_RATIO = 0.42
 REPEATED_CHARACTER_RATIO = 0.20
 IMG_TXT_R_THRES = 0.7
 OLD_VIDEO_THRES = 5
+OLD_MEDIUM_POST_THRES = 7
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
 RE_COMPILE = regex.compile(EXCEPTION_RE)
 COMMON_MALFORMED_PROTOCOLS = [
@@ -651,6 +652,18 @@ def new_video(s, site):
                            r'Jul|Aug|Sep|Oct|Nov|Dec)[a-z]? (\d++), (\d++)"}',
                            OLD_VIDEO_THRES,
                            "Video")
+
+
+@create_rule("Newly posted medium post")
+def new_medium_post(s, site):
+    medium_links_core = regex.findall(r"medium\.com\/@[\w-]*+\/[\w-]*+", s)
+    medium_links = ["https://" + x for x in medium_links_core]
+    return scrap_and_check(medium_links,
+                           r'<a class="bh bi at au av aw ax ay az ba fu bd bl bm" rel="noopener" ' +
+                           r'href="[^"]*+">(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]? ' +
+                           r'(\d++), (\d++)<\/a>',
+                           OLD_MEDIUM_POST_THRES,
+                           "Medium post")
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
