@@ -22390,7 +22390,6 @@
 1596782899	tripleee	syspree(?!\.com)
 1596785652	tripleee	All India Council for Technical Education \(AICTE\)
 1596785945	tripleee	significant connected promise
-1596785973	tripleee	(?-i:^Anupama$)
 1596786266	tripleee	techsquiral\.io
 1596787867	Mast	qaprovider\.com
 1596788984	tripleee	with over a time of greatness
