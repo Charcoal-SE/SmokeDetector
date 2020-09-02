@@ -199,8 +199,8 @@ def normalize_and_minimally_validate_content_source(msg):
     # the arguments intended for one command with another one.
     # For more information, see the discussion starting with:
     # https://chat.stackexchange.com/transcript/11540?m=54465107#54465107
-    if not message.content_source.startswith('!!/'):
-        message.content_source = '!!/{0}'.format(message.content_source[3:].lstrip())
+    if not msg.content_source.startswith('!!/'):
+        msg.content_source = '!!/{0}'.format(msg.content_source[3:].lstrip())
     if msg.content.split(" ")[0] != msg.content_source.split(" ")[0]:
         raise CmdException("There was a problem with this command. Was the chat message edited or deleted?")
 
