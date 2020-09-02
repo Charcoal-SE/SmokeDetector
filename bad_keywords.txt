@@ -2341,3 +2341,4 @@ dewa[\W_]*+poker
 invigor[\W_]*+max(?:[\W_]*+(?:testosterone|\d++|[\da-f]{4,}+))*
 endocannabinoid[\W_]*+framework
 delhi[\W_]*+escorts
+androxene(?:[\W_]*+(?:enhancement|male|\d++|[\da-f]{5,}+)s?)*
