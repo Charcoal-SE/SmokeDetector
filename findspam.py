@@ -623,27 +623,34 @@ def mostly_img(s, site):
     return False, ""
 
 
+def is_recent(date, now, thres):
+    return now.year == int(date[2]) and now.strftime("%b") == date[0] and now.day <= int(date[1]) + thres
+
+
+def scrap_and_check(url_list, date_regex, thres, thing):
+    now = datetime.now()
+    for link in url_list:
+        try:
+            resp = requests.get(link).text
+            date = regex.findall(date_regex, resp)
+            if len(date) == 1 and is_recent(date[0], now, thres):
+                return True, "{} is posted on {} {}, {}".format(thing, date[0], date[1], date[2])
+        except Exception:
+            pass
+    return False, ""
+
+
 @create_rule("Newly posted youtube video")
 def new_video(s, site):
     # Youtube ID regex is by brunodles, https://stackoverflow.com/a/31711517
     youtube_ids = regex.findall(r"(?:https?:\/\/)?(?:www\.)?youtu\.?be(?:\.com)?\/" +
                                 r"?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?", s)
     youtube_links = ["https://" + x for x in youtube_ids]
-    for link in youtube_links:
-        try:
-            resp = requests.get(link).text
-            date = regex.findall(r'"dateText":{"simpleText":"(Jan|Feb|Mar|Apr|May|Jun|' +
-                                 r'Jul|Aug|Sep|Oct|Nov|Dec)[a-z]? (\d++), (\d++)"}', resp)
-            if len(date) == 1:
-                # This condition should always be true, but it is here just in case
-                date = date[0]
-                now = datetime.now()
-                if now.year == int(date[2]) and now.strftime("%b") == date[0]:
-                    if now.day <= int(date[1]) + OLD_VIDEO_THRES:
-                        return True, "Video is posted on {} {}, {}".format(date[0], date[1], date[2])
-        except Exception:
-            return False, ""
-    return False, ""
+    return scrap_and_check(youtube_links,
+                           r'"dateText":{"simpleText":"(Jan|Feb|Mar|Apr|May|Jun|' +
+                           r'Jul|Aug|Sep|Oct|Nov|Dec)[a-z]? (\d++), (\d++)"}',
+                           OLD_VIDEO_THRES,
+                           "Video")
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
