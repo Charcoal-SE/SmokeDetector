@@ -625,7 +625,10 @@ def mostly_img(s, site):
 
 @create_rule("Newly posted youtube video")
 def new_video(s, site):
-    youtube_links = regex.findall(r"https:\/\/youtu\.be\/[a-zA-Z0-9]*+", s)
+    # Youtube ID regex is by brunodles, https://stackoverflow.com/a/31711517
+    youtube_ids = regex.findall(r"(?:https?:\/\/)?(?:www\.)?youtu\.?be(?:\.com)?\/" +
+                                r"?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?", s)
+    youtube_links = ["https://" + x for x in youtube_ids]
     for link in youtube_links:
         try:
             resp = requests.get(link).text
