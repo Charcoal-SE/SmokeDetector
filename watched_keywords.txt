@@ -23123,3 +23123,4 @@
 1599034548	Daniil	apkoptions\.com
 1599043361	tripleee	husys(?!\.com)
 1599044502	tripleee	sapnaescorts\.com
+1599046247	Daniil	(?-i:Logo\W*In\W*15\W*Minutes)(?!\.com)
