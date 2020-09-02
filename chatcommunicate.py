@@ -298,7 +298,7 @@ def on_msg(msg, client):
             _msg_queue.put((room_data, s.format(message.id, result), None))
     elif message.content.lower().startswith(("!!/", "sdc ")):
         if not message.content.startswith('!!/'):
-            message.content = message.content.replace('sdc ', '!!/', 1)
+            message.content = '!!/{0}'.format(message.content[3:].lstrip())
         result = dispatch_command(message)
 
         if result:
