@@ -629,9 +629,9 @@ def new_video(s, site):
     youtube_links = regex.findall(r"https:\/\/youtu\.be\/[a-zA-Z0-9]*+", s)
     for link in youtube_links:
         try:
-            resp = Requests.get(link).text
+            resp = requests.get(link).text
             date = regex.findall(r'"dateText":{"simpleText":"(Jan|Feb|Mar|Apr|May|Jun|' +
-                                 'Jul|Aug|Sep|Oct|Nov|Dec)[a-z]? (\d++), (\d++)"}', resp)
+                                 r'Jul|Aug|Sep|Oct|Nov|Dec)[a-z]? (\d++), (\d++)"}', resp)
             if len(date) == 1:
                 # This condition should always be true, but it is here just in case
                 date = date[0]
