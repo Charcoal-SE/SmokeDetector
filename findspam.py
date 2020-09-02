@@ -11,7 +11,6 @@ from datetime import datetime
 import time
 import os
 import os.path as path
-import requests
 
 import regex
 # noinspection PyPackageRequirements
