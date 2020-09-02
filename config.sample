@@ -21,3 +21,8 @@ location=location_here
 
 # Perspective API key
 # perspective_key=some_key
+
+# Manually add blacklist privileged users (primarily for testing):
+# se_blacklisters=<comma separated list of user IDs on chat.stackexchange>
+# mse_blacklisters=<comma separated list of user IDs on meta.chat.stackexchange>
+# so_blacklisters=<comma separated list of user IDs on chat.stackoverflow>
