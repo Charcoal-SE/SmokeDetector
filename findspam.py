@@ -11,6 +11,7 @@ from datetime import datetime
 import time
 import os
 import os.path as path
+import requests
 
 import regex
 # noinspection PyPackageRequirements
@@ -44,6 +45,7 @@ CHARACTER_USE_RATIO = 0.42
 PUNCTUATION_RATIO = 0.42
 REPEATED_CHARACTER_RATIO = 0.20
 IMG_TXT_R_THRES = 0.7
+OLD_VIDEO_THRES = 5
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
 RE_COMPILE = regex.compile(EXCEPTION_RE)
 COMMON_MALFORMED_PROTOCOLS = [
@@ -621,6 +623,25 @@ def mostly_img(s, site):
         return True, "{:.4f} of the post is html image blocks".format(s_len_img / len(s))
     return False, ""
 
+
+@create_rule("Newly posted youtube video")
+def new_video(s, site):
+    youtube_links = regex.findall(r"https:\/\/youtu\.be\/[a-zA-Z0-9]*+", s)
+    for link in youtube_links:
+        try:
+            resp = Requests.get(link).text
+            date = regex.findall(r'"dateText":{"simpleText":"(Jan|Feb|Mar|Apr|May|Jun|' +
+                                 'Jul|Aug|Sep|Oct|Nov|Dec)[a-z]? (\d++), (\d++)"}', resp)
+            if len(date) == 1:
+                # This condition should always be true, but it is here just in case
+                date = date[0]
+                now = datetime.now()
+                if now.year == int(date[2]) and now.strftime("%b") == date[0]:
+                    if now.day <= int(date[1]) + OLD_VIDEO_THRES:
+                        return True, "Video is posted on {} {}, {}".format(date[0], date[1], date[2])
+        except Exception:
+            return False, ""
+    return False, ""
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
 @create_rule("repeating characters in {}", stripcodeblocks=True, max_rep=10000, max_score=10000)
