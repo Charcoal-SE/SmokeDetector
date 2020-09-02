@@ -188,7 +188,7 @@ def blacklist(_):
                        "Remember to escape dots in URLs using \\.")
 
 
-def minimally_validate_content_source(msg):
+def normalize_and_minimally_validate_content_source(msg):
     """
     Raises a CmdException if the msg.content and msg.content_source don't match to the first space (i.e. same command).
     """
@@ -199,6 +199,8 @@ def minimally_validate_content_source(msg):
     # the arguments intended for one command with another one.
     # For more information, see the discussion starting with:
     # https://chat.stackexchange.com/transcript/11540?m=54465107#54465107
+    if not message.content_source.startswith('!!/'):
+        message.content_source = '!!/{0}'.format(message.content_source[3:].lstrip())
     if msg.content.split(" ")[0] != msg.content_source.split(" ")[0]:
         raise CmdException("There was a problem with this command. Was the chat message edited or deleted?")
 
@@ -216,7 +218,8 @@ def get_pattern_from_content_source(msg):
             return msg_parts[1]
     except IndexError:
         # If there's nothing after the space, then raise an error. The chat message may have been edited or deleted,
-        # but the deleted case is normally handled in minimally_validate_content_source(), which should be called first.
+        # but the deleted case is normally handled in normalize_and_minimally_validate_content_source(), which should be
+        # called first.
         # For more information, see the discussion starting with:
         # https://chat.stackexchange.com/transcript/11540?m=54465107#54465107
         raise CmdException("An invalid pattern was provided, please check your command. Was the command edited?")
@@ -352,7 +355,7 @@ def do_blacklist(blacklist_type, msg, force=False):
     :return: A string
     """
 
-    minimally_validate_content_source(msg)
+    normalize_and_minimally_validate_content_source(msg)
     chat_user_profile_link = "https://chat.{host}/users/{id}".format(host=msg._client.host,
                                                                      id=msg.owner.id)
     append_force_to_do = "; append `-force` if you really want to do that."
@@ -488,7 +491,7 @@ def unblacklist(msg, item, alias_used="unwatch"):
     else:
         raise CmdException("Invalid blacklist type.")
 
-    minimally_validate_content_source(msg)
+    normalize_and_minimally_validate_content_source(msg)
 
     metasmoke_down = False
     try:
@@ -1345,7 +1348,7 @@ def bisect(msg, s):
     bookended_regexes.extend(Blacklist(Blacklist.WATCHED_KEYWORDS).each(True))
 
     if msg is not None:
-        minimally_validate_content_source(msg)
+        normalize_and_minimally_validate_content_source(msg)
 
     try:
         s = rebuild_str(get_pattern_from_content_source(msg))
@@ -1374,7 +1377,7 @@ def bisect(msg, s):
 
 @command(str, privileged=True, whole_msg=True, aliases=['what-number'])
 def bisect_number(msg, s):
-    minimally_validate_content_source(msg)
+    normalize_and_minimally_validate_content_source(msg)
     try:
         number = rebuild_str(get_pattern_from_content_source(msg))
     except AttributeError:
@@ -2039,7 +2042,7 @@ def load_data(msg_id):
     msg = get_message(msg_id)
     if msg.owner.id != 120914:  # TODO: implement an is_self() in chatcommunicate, don't use magic numbers
         raise CmdException("Message owner is not SmokeDetector, refusing to load")
-    minimally_validate_content_source(msg)
+    normalize_and_minimally_validate_content_source(msg)
     try:
         SmokeyTransfer.load(msg.content_source)
     except ValueError as e:
