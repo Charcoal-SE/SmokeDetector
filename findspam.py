@@ -643,6 +643,7 @@ def new_video(s, site):
             return False, ""
     return False, ""
 
+
 # noinspection PyUnusedLocal,PyMissingTypeHints
 @create_rule("repeating characters in {}", stripcodeblocks=True, max_rep=10000, max_score=10000)
 def has_repeating_characters(s, site):
