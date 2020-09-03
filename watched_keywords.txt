@@ -23142,3 +23142,4 @@
 1599111426	Ryan M	syrotech\.com
 1599111426	Ryan M	syrotech(?:!\.com)
 1599115362	Makyen	(?-i:scocs\.uet)(?#facebook.com)
+1599116628	tripleee	sir[\W_]*+syed[\W_]*+college
