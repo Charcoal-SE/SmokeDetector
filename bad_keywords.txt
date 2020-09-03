@@ -2342,3 +2342,4 @@ endocannabinoid[\W_]*+framework
 delhi[\W_]*+escorts
 androxene(?:[\W_]*+(?:enhancement|male|\d++|[\da-f]{5,}+)s?)*
 lush[\W_]*+lift
+alpha[\W_]*+male[\W_]*+ex
