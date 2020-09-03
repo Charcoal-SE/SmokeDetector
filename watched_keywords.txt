@@ -23149,3 +23149,4 @@
 1599117426	Mast	subsmovies\.club
 1599118047	Mast	back[\W_]*+to[\W_]*+school[\W_]*+promo
 1599118400	tripleee	buddyloan\.in
+1599118516	tripleee	buddy[\W_]*+loan(?!\.in)
