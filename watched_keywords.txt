@@ -23134,3 +23134,4 @@
 1599108295	tripleee	resultsguru\.in
 1599110955	tripleee	ssd[\W_]*+solution
 1599113609	Makyen	pages\.shopbase\.com
+1599113624	Makyen	(?-i:UCUO8Sya_HwsZOvByMbhcr-w)(?#YouTube channel)
