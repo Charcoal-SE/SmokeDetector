@@ -17118,7 +17118,6 @@
 1581002623	Machavity	cards\.app
 1581012618	Das_Geek	domzik\.com
 1581012870	Machavity	jorgebrasilico(?:@gmail\.com)?
-1581015732	Eliah Kagan	logixgenetics
 1581015757	Eliah Kagan	halal-business-marketing\.com
 1581015806	Eliah Kagan	(?-i:HrQRIRNo2A4)(?#YouTube)
 1581015877	Eliah Kagan	(?-i:7WGjoXFGZts)(?#youtu.be)
