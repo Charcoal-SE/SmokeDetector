@@ -23152,3 +23152,4 @@
 1599118516	tripleee	buddy[\W_]*+loan(?!\.in)
 1599119183	Makyen	berkah[\W_]*+advertising[\W_]*+bandung
 1599119199	Makyen	offer4cart\.com
+1599119215	Makyen	myfitnessclubb\.com
