@@ -646,7 +646,7 @@ def new_video(s, site):
     # Youtube ID regex is by brunodles, https://stackoverflow.com/a/31711517
     youtube_ids = regex.findall(r"(?:https?:\/\/)?(?:www\.)?youtu\.?be(?:\.com)?\/" +
                                 r"?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?", s)
-    youtube_links = ["https://" + x for x in youtube_ids]
+    youtube_links = ["https://youtu.be/" + x for x in youtube_ids]
     return scrap_and_check(youtube_links,
                            r'"dateText":{"simpleText":"(Jan|Feb|Mar|Apr|May|Jun|' +
                            r'Jul|Aug|Sep|Oct|Nov|Dec)[a-z]? (\d++), (\d++)"}',
