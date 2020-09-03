@@ -23132,3 +23132,4 @@
 1599077755	Spevacus	ifu-institut\.at
 1599090477	Makyen	fabuloushacker01(?:@gmail\.com)?
 1599108295	tripleee	resultsguru\.in
+1599110955	tripleee	ssd[\W_]*+solution
