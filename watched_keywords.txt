@@ -23144,3 +23144,4 @@
 1599115362	Makyen	(?-i:scocs\.uet)(?#facebook.com)
 1599116628	tripleee	sir[\W_]*+syed[\W_]*+college
 1599116720	tripleee	pezeshka\.com
+1599117426	Mast	subsmovies\.club
