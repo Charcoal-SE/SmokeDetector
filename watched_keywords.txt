@@ -23136,3 +23136,4 @@
 1599113609	Makyen	pages\.shopbase\.com
 1599113624	Makyen	(?-i:UCUO8Sya_HwsZOvByMbhcr-w)(?#YouTube channel)
 1599113676	Makyen	msx6[\W_]*+germany
+1599114335	Makyen	green[\W_]*+ape(?:[\W_]*+(?:oil|cbd|\d++|[\da-f]{5,}+)s?)*
