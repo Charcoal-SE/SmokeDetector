@@ -23135,3 +23135,4 @@
 1599110955	tripleee	ssd[\W_]*+solution
 1599113609	Makyen	pages\.shopbase\.com
 1599113624	Makyen	(?-i:UCUO8Sya_HwsZOvByMbhcr-w)(?#YouTube channel)
+1599113676	Makyen	msx6[\W_]*+germany
