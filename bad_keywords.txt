@@ -353,7 +353,6 @@ retinolla
 focused\Win\Wbrain
 wrinkle\Wreducer?
 active\Wbrightening
-alpha\W?male(?:\W?ex)?
 hotcyberlord
 luxlift
 erectimax
