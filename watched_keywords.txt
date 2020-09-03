@@ -23157,3 +23157,4 @@
 1599122733	Daniil	(?-i:4XHPx\.jpg)
 1599122922	Daniil	memory\W*filming(?!\.co\.uk)
 1599122940	Daniil	memoryfilming\.co\.uk
+1599124712	Makyen	nova[\W_]*+keto[\W_]*+france
