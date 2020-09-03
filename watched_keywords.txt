@@ -23148,3 +23148,4 @@
 1599117624	Mast	biostem
 1599117426	Mast	subsmovies\.club
 1599118047	Mast	back[\W_]*+to[\W_]*+school[\W_]*+promo
+1599118400	tripleee	buddyloan\.in
