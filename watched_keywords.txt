@@ -23138,3 +23138,4 @@
 1599113676	Makyen	msx6[\W_]*+germany
 1599114335	Makyen	green[\W_]*+ape(?:[\W_]*+(?:oil|cbd|\d++|[\da-f]{5,}+)s?)*
 1599114410	Makyen	pleasesavemylife20(?:@gmail\.com)?
+1599112456	Mast	deepdivejava91\.blogspot\.com
