@@ -16757,7 +16757,6 @@
 1580220390	Eliah Kagan	ratnaprabhadentalclinic\.com
 1580221064	Eliah Kagan	sinetecautomation\.com
 1580221097	Eliah Kagan	(?-i:olDQKy39hxQ)(?#youtu.be)
-1580221296	Eliah Kagan	bikash[\W_]*+kumar(?![\W_]*+(?:yadav|shom))
 1580221394	Eliah Kagan	organicslive\.com
 1580221425	Eliah Kagan	organicsliveofficial\.blogspot
 1580221466	Eliah Kagan	organics[\W_]*live
