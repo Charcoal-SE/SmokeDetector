@@ -22828,7 +22828,6 @@
 1598268124	tripleee	(?-i:happymoni20)
 1598269907	tripleee	krishidirect\.com
 1598269985	tripleee	wp[\W_]*+agents?
-1598275912	tripleee	nutanix
 1598276703	tripleee	(?-i:W0fVUS0aHss)(?# youtube)
 1598280439	Mast	(?-i:833-XtGqZlg)(?# youtube)
 1598281324	tripleee	textpound\.blogspot\.com
