@@ -23179,3 +23179,4 @@
 1599200923	tripleee	apnews\.com/[0-9a-f]{32}
 1599201933	Mast	(?-i:HhHFwJEtC7M)(?# youtube)
 1599203912	Mast	seriousbeautyprofessionals\.com
+1599203963	Mast	serious[\W_]*+beauty[\W_]*+professionals(?!\.com)
