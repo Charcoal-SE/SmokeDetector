@@ -23180,3 +23180,4 @@
 1599201933	Mast	(?-i:HhHFwJEtC7M)(?# youtube)
 1599203912	Mast	seriousbeautyprofessionals\.com
 1599203963	Mast	serious[\W_]*+beauty[\W_]*+professionals(?!\.com)
+1599205997	Mast	bittersweetherbals\.com
