@@ -23178,3 +23178,4 @@
 1599200881	Mast	(?-i:66ee4434d7a0d89bcd6f94c236eb7397)(?#apnews.com)
 1599200923	tripleee	apnews\.com/[0-9a-f]{32}
 1599201933	Mast	(?-i:HhHFwJEtC7M)(?# youtube)
+1599204467	Mast	serious[\W_]*+beauty[\W_]*+professionals(?!\.com)
