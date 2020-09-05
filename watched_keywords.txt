@@ -23203,3 +23203,4 @@
 1599272297	Makyen	(?-i:2udXojf_bTQ)(?#YouTube)
 1599274604	Makyen	eltima(?<=^(?=\.{0,750}+$)\.*)
 1599275421	Machavity	tempatcetaku\.com
+1599279804	Makyen	(?-i:cl4855)(?#medium.com)
