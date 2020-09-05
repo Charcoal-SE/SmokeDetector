@@ -23187,3 +23187,4 @@
 1599243362	Makyen	linkviet\.xyz(?#Pay per click link shortener)
 1599248422	Spevacus	awarenessfoundation\.in
 1599269155	Makyen	amannvl\.me
+1599269172	Makyen	(?-i:L8-8b8BBR5U)(?#youtu.be)
