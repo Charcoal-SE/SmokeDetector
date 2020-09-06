@@ -635,7 +635,8 @@ def scrap_and_check(url_list, date_regex, thres, thing):
             resp = requests.get(link).text
             date = regex.findall(date_regex, resp)
             if len(date) == 1 and is_recent(date[0], now, thres):
-                return True, "{} is posted on {} {}, {}".format(thing, date[0], date[1], date[2])
+                return True, "{} is posted on {} {}, {}".format(thing, date[0][0],
+                                                                date[0][1], date[0][2])
         except Exception:
             pass
     return False, ""
