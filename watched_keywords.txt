@@ -23225,3 +23225,4 @@
 1599417328	Mast	shibbirit\.com
 1599409132	Mast	vbucks
 1599405816	Mast	illegal[\W_]*+public[\W_]*+wifi[\W_]*+on[\W_]*+my[\W_]*+private[\W_]*+home
+1599404941	Mast	pcmalwaretips\.com
