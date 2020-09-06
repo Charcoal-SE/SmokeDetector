@@ -276,7 +276,6 @@ DailyRaiseQuestion
 (?-i:^barbieshrimp$)
 ^Imaginea$
 (?-i:^Manglada Tech$)
-(?-i:^abhishek jain$)
 (?-i:^Alex Tony$)
 (?-i:^Mritunjay Jadon$)
 (?-i:^jammertech$)
