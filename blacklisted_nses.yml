@@ -62,6 +62,9 @@ items:
   - lloyd.ns.cloudflare.com.
   - reza.ns.cloudflare.com.
 - ns:
+  - ned.ns.cloudflare.com.
+  - paris.ns.cloudflare.com.
+- ns:
   - stan.ns.cloudflare.com.
   - vera.ns.cloudflare.com.
 - ns:

@@ -876,9 +876,6 @@ items:
   - naomi.ns.cloudflare.com.
   - tim.ns.cloudflare.com.
 - ns:
-  - ned.ns.cloudflare.com.
-  - paris.ns.cloudflare.com.
-- ns:
   - neil.ns.cloudflare.com.
   - tricia.ns.cloudflare.com.
 - ns:
