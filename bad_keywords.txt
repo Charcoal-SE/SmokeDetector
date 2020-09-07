@@ -2345,3 +2345,4 @@ lush[\W_]*+lift
 alpha[\W_]*+male[\W_]*+ex
 logixgenetics
 (?-i:myunbiasedreview)(?#sites.google.com)
+leptoconnect
