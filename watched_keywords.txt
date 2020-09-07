@@ -23237,3 +23237,4 @@
 1599464318	Mast	flyundervpn\.com
 1599463995	Mast	(?-i:c3b63dbae3e890119a19d4596b1a3fcf)(?#apnews)
 1599464476	tripleee	smallscalemachinery\.com
+1599464493	tripleee	service\.elsevier\.com
