@@ -23239,3 +23239,4 @@
 1599464476	tripleee	smallscalemachinery\.com
 1599464493	tripleee	service\.elsevier\.com
 1599464991	tripleee	seintellect\.com
+1599465009	tripleee	se[\W_]*+intellect(?!\.com)
