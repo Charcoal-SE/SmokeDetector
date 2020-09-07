@@ -23235,3 +23235,4 @@
 1599462973	tripleee	book[\W_]*+of[\W_]*+matches
 1599463524	tripleee	heathbliss\.com
 1599464318	Mast	flyundervpn\.com
+1599463995	Mast	(?-i:c3b63dbae3e890119a19d4596b1a3fcf)(?#apnews)
