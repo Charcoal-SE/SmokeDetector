@@ -23242,3 +23242,4 @@
 1599465009	tripleee	se[\W_]*+intellect(?!\.com)
 1599465036	tripleee	gotquestions\.org
 1599468982	Kulfy	vingle\.net
+1599471823	Mast	promocodeslive\.com
