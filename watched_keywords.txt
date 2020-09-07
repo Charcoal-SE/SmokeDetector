@@ -23234,3 +23234,4 @@
 1599462495	Mast	coffee-statistics\.com
 1599462973	tripleee	book[\W_]*+of[\W_]*+matches
 1599463524	tripleee	heathbliss\.com
+1599464318	Mast	flyundervpn\.com
