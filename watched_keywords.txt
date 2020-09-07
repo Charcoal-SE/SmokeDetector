@@ -23138,7 +23138,6 @@
 1599118400	tripleee	buddyloan\.in
 1599118516	tripleee	buddy[\W_]*+loan(?!\.in)
 1599119183	Makyen	berkah[\W_]*+advertising[\W_]*+bandung
-1599119215	Makyen	myfitnessclubb\.com
 1599120197	Makyen	richestsoft\.com
 1599120357	Makyen	(?-i:ketoxpbhb)(?#sites.google.com)
 1599121068	Mast	(?-i:^RichestSoft$)
