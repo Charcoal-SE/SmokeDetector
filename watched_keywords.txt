@@ -23240,3 +23240,4 @@
 1599464493	tripleee	service\.elsevier\.com
 1599464991	tripleee	seintellect\.com
 1599465009	tripleee	se[\W_]*+intellect(?!\.com)
+1599465036	tripleee	gotquestions\.org
