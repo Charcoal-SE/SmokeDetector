@@ -23257,3 +23257,4 @@
 1599518652	Makyen	aulakhkrupinder(?:@gmail\.com)?
 1599523881	Makyen	marvinlovespell011(?:@gmail\.com)?
 1599534833	Makyen	dakhoayhocquocte(?!\.com)
+1599534850	Makyen	dakhoayhocquocte\.com
