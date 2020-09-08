@@ -1971,7 +1971,7 @@ cyberhelp\d*+(?:\W*+(?:(?:at|via)\W*+)?gmail(?:\W*+(?:dot\W*+)?com)?)?
 (?:simply|simple)[\W_]*+fit\W*+keto(?:[\W_]*+\d++)*
 alpha[\W_]*+femme(?:[\W_]*+(?:keto|genix|ca|united|kingdom|uk|com|pill|\d++|[\da-f]{4,}+)s?)*
 keto\W*+jolt(?:\W*+(?:favorings?|reviews?|diet|\d+))*
-keto[\W_]*+body(?!tone\.com(?<=keto-bodytone\.com))(?!toneofficial\.com(?<=ketobodytoneofficial\.com))(?!toneofficielfrance(?<=facebook\.com/ketobodytoneofficielfrance))(?!toneofficialpage(?<=facebook\.com/ketobodytoneofficialpage))(?!toneusa(?<=sites\.google\.com/site/ketobodytoneusa))(?!toneofficialfrance\.tumblr\.com(?<=ketobodytoneofficialfrance\.tumblr\.com))(?:[\W_]*+(?:tone|avis|france|fr|web|review|offici[ae]l|page|usa|\d++|[\da-f]{4,}+))*
+keto[\W_]*+body(?!tone\.com(?<=keto-bodytone\.com))(?!toneofficial\.com(?<=ketobodytoneofficial\.com))(?!toneofficielfrance(?<=facebook\.com/ketobodytoneofficielfrance))(?!toneofficialpage(?<=facebook\.com/ketobodytoneofficialpage))(?!toneusa(?<=sites\.google\.com/site/ketobodytoneusa))(?!toneofficialfrance\.tumblr\.com(?<=ketobodytoneofficialfrance\.tumblr\.com))(?:[\W_]*+(?:tone|avis|france|fr|web|review|offici[ae]l|page|usa|pill|\d++|[\da-f]{4,}+)s?)*
 safe\W*+meds\W*+keto(?:\W*+burn)?
 ezytone(?:\W?detox(?:\W?patch)?)?
 aegis\W*vitality(?:\W*+(?:keto|prior|\d++))*
