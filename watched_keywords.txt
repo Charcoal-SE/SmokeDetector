@@ -23265,3 +23265,4 @@
 1599545953	Makyen	بوتاکس
 1599548977	tripleee	tru[\W_]*+optima
 1599549628	tripleee	iconmart\.ca
+1599556010	tripleee	elegantshowers\.com\.au
