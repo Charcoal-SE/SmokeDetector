@@ -23263,3 +23263,4 @@
 1599544778	tripleee	primal[\W_]*+edge
 1599545884	Makyen	avinaclinic\.com
 1599545953	Makyen	بوتاکس
+1599548977	tripleee	tru[\W_]*+optima
