@@ -23262,3 +23262,4 @@
 1599537557	Makyen	thevipsite\.com
 1599541293	Makyen	yhn777\.com
 1599544778	tripleee	primal[\W_]*+edge
+1599545884	Makyen	avinaclinic\.com
