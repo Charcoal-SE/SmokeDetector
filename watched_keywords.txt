@@ -23278,3 +23278,4 @@
 1599573877	Mast	nsrtech\.xyz
 1599576827	Mast	your[\W_]*+website[\W_]*+is[\W_]*+very[\W_]*+amazing
 1599586701	Makyen	lyricsauto\.com
+1599590623	Thomas Ward	slavaguide\.(com|net|org|info|xyz|biz)(?# Potential new troll uses this site with .com but commonly also abused domains are the other TLDs in this match)
