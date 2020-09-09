@@ -2346,3 +2346,4 @@ alpha[\W_]*+male[\W_]*+ex
 logixgenetics
 (?-i:myunbiasedreview)(?#sites.google.com)
 leptoconnect
+blood[\W_]*+balance[\W_]*+advanced[\W_]*+formula
