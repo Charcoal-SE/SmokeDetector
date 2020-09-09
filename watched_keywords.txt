@@ -23288,3 +23288,4 @@
 1599629140	Makyen	viapro[\W_]*+maxx
 1599629906	Makyen	trickyui\.blogspot
 1599631237	Makyen	all[\W_]*+star[\W_]*+dental[\W_]*+academy(?!\.com(?<=allstardentalacademy\.com))
+1599630552	Mast	allstardentalacademy\.com
