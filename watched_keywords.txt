@@ -23290,3 +23290,4 @@
 1599631237	Makyen	all[\W_]*+star[\W_]*+dental[\W_]*+academy(?!\.com(?<=allstardentalacademy\.com))
 1599630552	Mast	allstardentalacademy\.com
 1599633278	tripleee	thewispy\.com
+1599634640	tripleee	(?-i:^jack miller$)
