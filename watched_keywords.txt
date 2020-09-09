@@ -5190,7 +5190,6 @@
 1535846782	Makyen	hokibet99\.cc
 1535846797	Makyen	nexiabet\.cc
 1535846803	Makyen	rfbet99\.cc
-1535846814	Makyen	startpage\.com
 1535868944	iBug	sexcomic\.org
 1535874046	Glorfindel	bankbalanceenquiry\.club
 1535883584	Glorfindel	medliever\W?cbd?
@@ -14563,7 +14562,6 @@
 1574848788	Makyen	gmailloginm\.co
 1574850404	tripleee	agratajcitytour\.com
 1574850506	tripleee	asiscarpio\.com
-1574850919	Makyen	envyusmoisturizer\.com
 1574851692	tripleee	diginfoexpert\.com
 1574852082	tripleee	classytechnosoft\.com
 1574852100	tripleee	pricekhojo\.com
@@ -23275,7 +23273,25 @@
 1599568556	tripleee	korean-drama-list\.com
 1599568617	tripleee	jiolocalhtml\.com
 1599569999	tripleee	royaltiles\.eu
+1599573094	Mast	big[\W_]*+data[\W_]*+in[\W_]*+pune
 1599573877	Mast	nsrtech\.xyz
 1599576827	Mast	your[\W_]*+website[\W_]*+is[\W_]*+very[\W_]*+amazing
 1599586701	Makyen	lyricsauto\.com
 1599587100	Spevacus	bagyatech\.com
+1599590623	Thomas Ward	slavaguide\.(com|net|org|info|xyz|biz)(?# Potential new troll uses this site with .com but commonly also abused domains are the other TLDs in this match)
+1599606807	Spevacus	getfastpackaging\.com
+1599601974	Jeff Schaller	gramvi\.com
+1599611880	NobodyNada	vndrink\.com
+1599621169	Machavity	spinbackup\.com
+1599623580	Makyen	1herbs\.com
+1599623596	Makyen	1herbs(?!\.com)
+1599623644	Makyen	gregory[\W_]*+porter[\W_]*+all[\W_]*+rise[\W_]*+t[\W_]*+shirt
+1599629140	Makyen	viapro[\W_]*+maxx
+1599629906	Makyen	trickyui\.blogspot
+1599631237	Makyen	all[\W_]*+star[\W_]*+dental[\W_]*+academy(?!\.com(?<=allstardentalacademy\.com))
+1599630552	Mast	allstardentalacademy\.com
+1599633278	tripleee	thewispy\.com
+1599634640	tripleee	(?-i:^jack miller$)
+1599635077	Makyen	dinneregg\.com
+1599637904	tripleee	futuremarketinsights\.com
+1599638188	tripleee	bixeltechnologies\.com
