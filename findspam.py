@@ -657,7 +657,7 @@ def new_video(s, site):
 
 @create_rule("Newly posted medium post")
 def new_medium_post(s, site):
-    medium_links_core = regex.findall(r"medium\.com\/@[\w-]*+\/[\w-]*+", s)
+    medium_links_core = regex.findall(r"medium\.com\/@?[\w-]*+\/[\w-]*+", s)
     medium_links = ["https://" + x for x in medium_links_core]
     return scrap_and_check(medium_links,
                            r'<a class="bh bi at au av aw ax ay az ba fu bd bl bm" rel="noopener" ' +
