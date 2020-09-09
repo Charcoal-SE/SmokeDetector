@@ -392,16 +392,16 @@ class GitManager:
         if comment:  # yay we have comments now
             GitHubManager.comment_on_thread(pr_id, comment)
 
-        cls.gitmanager_lock.acquire()
-        origin_or_auth = cls.get_origin_or_auth()
-        git.fetch(origin_or_auth, '+refs/pull/{}/head'.format(pr_id))
-        payload = {"state": "closed"}
-        response = GitHubManager.update_pull_request(pr_id, payload)
-        if response:
-            if response.json()["state"] == "closed":
-                git.push('-d', origin_or_auth, ref)
-                return "Closed pull request [#{0}](https://github.com/{1}/pull/{0}).".format(
-                    pr_id, GlobalVars.bot_repo_slug)
+        with cls.gitmanager_lock:
+            origin_or_auth = cls.get_origin_or_auth()
+            git.fetch(origin_or_auth, '+refs/pull/{}/head'.format(pr_id))
+            payload = {"state": "closed"}
+            response = GitHubManager.update_pull_request(pr_id, payload)
+            if response:
+                if response.json()["state"] == "closed":
+                    git.push('-d', origin_or_auth, ref)
+                    return "Closed pull request [#{0}](https://github.com/{1}/pull/{0}).".format(
+                        pr_id, GlobalVars.bot_repo_slug)
 
         raise RuntimeError("Closing pull request #{} failed. Manual operations required.".format(pr_id))
 
