@@ -23307,3 +23307,4 @@
 1599664245	user12986714	cách sử dụng chi tiết
 1599664574	user12986714	(?-i:6WL-gG3-Hzg)(?#youtu.be)
 1599664872	tripleee	turbo[\W_]*+erp(?!\.in)
+1599665162	tripleee	goodcontentnews\.com
