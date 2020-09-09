@@ -23292,3 +23292,4 @@
 1599634640	tripleee	(?-i:^jack miller$)
 1599635077	Makyen	dinneregg\.com
 1599637904	tripleee	futuremarketinsights\.com
+1599638188	tripleee	bixeltechnologies\.com
