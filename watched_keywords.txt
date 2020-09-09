@@ -23283,3 +23283,4 @@
 1599611880	NobodyNada	vndrink\.com
 1599621169	Machavity	spinbackup\.com
 1599623580	Makyen	1herbs\.com
+1599623596	Makyen	1herbs(?!\.com)
