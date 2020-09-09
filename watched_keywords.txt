@@ -23298,3 +23298,4 @@
 1599585289	Dharman	(?-i:JaClA57ChVI)(?#YouTube)
 1599633644	Mast	thewispy(?!\.com)
 1599637456	Mast	acerola[\W_]*+extract
+1599637628	Mast	(?-i:8b302e5ffe3597005f5e636216d4aa79)(?#apnews.com)
