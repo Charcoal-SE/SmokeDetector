@@ -23348,3 +23348,4 @@
 1599742906	tripleee	(?-i:^Liam Smith$)
 1599742960	tripleee	(?-i:^bikash sahu$)
 1599743583	Mast	premium[\W_]*+hemp[\W_]*+flower
+1599745304	Spevacus	newamericanstore\.com
