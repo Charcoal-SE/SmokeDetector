@@ -23349,3 +23349,4 @@
 1599742960	tripleee	(?-i:^bikash sahu$)
 1599743583	Mast	premium[\W_]*+hemp[\W_]*+flower
 1599745304	Spevacus	newamericanstore\.com
+1599761242	Ryan M	advancedpaints\.co\.uk
