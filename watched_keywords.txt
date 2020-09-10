@@ -23343,3 +23343,4 @@
 1599738317	tripleee	cloudtechtiq(?!\.com)
 1599737541	Jeff Schaller	auroravista\.tech
 1599738062	Mast	destroyerbit(?:@gmail\.com)?
+1599740632	tripleee	thegta5android\.com
