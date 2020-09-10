@@ -23318,3 +23318,4 @@
 1599712520	Makyen	(?-i:biolifeketoavisforum)(?#sites.google.com)
 1599713131	tripleee	apprient\.com
 1599713568	Makyen	alpha[\W_]*+visage(?:[\W_]*+(?:cream|\d++|[\da-f]{5,}+)s?)*
+1599714072	Makyen	efyca\.vn
