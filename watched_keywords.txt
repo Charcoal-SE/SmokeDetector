@@ -13260,7 +13260,6 @@
 1570270166	Nisse Engström	onhaxcrack\.me
 1570275275	Kulfy	pinorest\.rozblog\.com
 1570275382	Kulfy	nowsazan\.parsiblog\.com
-1570291953	JoErNanO	fetchbus\.com
 1570306640	Makyen	customwritings\.com
 1570306661	Makyen	customwritings(?!\.com)
 1570314468	Makyen	mihmansho\.com
