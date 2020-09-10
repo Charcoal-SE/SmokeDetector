@@ -23310,3 +23310,4 @@
 1599665162	tripleee	goodcontentnews\.com
 1599678473	Makyen	(?:qalam(?:[\W_]*+(?:luxury|fountain)){2}|(?:(?:luxury|fountain)[\W_]*+){2}qalam|(?:(?:luxury|fountain)[\W_]*+)+qalam(?:[\W_]*+(?:luxury|fountain))+)
 1599682052	Machavity	djsoundtop\.com
+1599703785	Makyen	testpreparation\.pk
