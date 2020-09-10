@@ -383,3 +383,4 @@ Pound\W*define\W*MACRO
 (?-i:^PURUSOTTAM NATH$)
 (?-i:^Bakera IT‭$)
 (?-i:^Akansha Yadav$)
+(?-i:^priya submissions$)
