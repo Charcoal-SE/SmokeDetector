@@ -23319,3 +23319,4 @@
 1599713131	tripleee	apprient\.com
 1599713568	Makyen	alpha[\W_]*+visage(?:[\W_]*+(?:cream|\d++|[\da-f]{5,}+)s?)*
 1599714072	Makyen	efyca\.vn
+1599715157	tripleee	steel[\W_]*+bite[\W_]*+pro
