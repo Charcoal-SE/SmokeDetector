@@ -23372,3 +23372,4 @@
 1599814956	Mast	cosmos[\W_]*+atom[\W_]*+token
 1599816477	Mast	mydock365\.com
 1599816904	Mast	iron[\W_]*+stack[\W_]*+pro
+1599818369	Mast	(?-i:66ee4434d7a0d89bcd6f94c236eb739)(?#apnews.com)
