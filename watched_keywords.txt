@@ -23383,3 +23383,4 @@
 1599843373	Daniil	medzino\.com
 1599843390	Daniil	medzino(?!\.com)
 1599851369	Thomas Ward	apnews\.com
+1599860735	Machavity	1tpe\.net
