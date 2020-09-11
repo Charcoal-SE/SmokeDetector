@@ -23,6 +23,7 @@ import os
 import time
 import collections
 import subprocess
+import traceback
 from html import unescape
 from ast import literal_eval
 # noinspection PyCompatibility
@@ -1434,6 +1435,26 @@ def threads():
     threads_list = ["{ident}: {name}".format(ident=t.ident, name=t.name) for t in threading.enumerate()]
 
     return "\n".join(threads_list)
+
+
+# noinspection PyIncorrectDocstring
+@command(int, whole_msg=True, aliases=["traceback"])
+def backtrace(msg, thread_id):
+    """
+    Returns the backtrace of a given thread, for debugging
+    :return: A string
+    """
+
+    try:
+        # We can't post a code-formatted reply, so post a code-formatted message
+        # followed by a reply.
+        response = "\n".join(traceback.format_stack(sys._current_frames()[thread_id]))
+        response = "    " + response.replace("\n", "\n    ")
+        tell_rooms(response, ((msg._client.host, msg.room.id),), ())
+        return "^"
+    except KeyError:
+        raise CmdException("No such thread " + str(thread_id) + "; use !!/threads for a list " +
+                           " of running threads.")
 
 
 # noinspection PyIncorrectDocstring
