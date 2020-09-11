@@ -23379,3 +23379,4 @@
 1599820800	double-beep	jslsleepers\.co\.uk
 1599818369	Mast	(?-i:66ee4434d7a0d89bcd6f94c236eb739)(?#apnews.com)
 1599840190	Machavity	downloadlinkedinvideo\.com
+1599842618	Daniil	hwrig\.com
