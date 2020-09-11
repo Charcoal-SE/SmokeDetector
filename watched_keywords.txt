@@ -23381,3 +23381,4 @@
 1599840190	Machavity	downloadlinkedinvideo\.com
 1599842618	Daniil	hwrig\.com
 1599843373	Daniil	medzino\.com
+1599843390	Daniil	medzino(?!\.com)
