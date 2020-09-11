@@ -236,6 +236,10 @@ class Metasmoke:
                                        ("no-site-" + event["site"],), notify_site="/autoflag_fp")
         elif "exit" in message:
             exit_mode(code=message["exit"])
+        elif "everything_is_broken" in message:
+            if message["everything_is_broken"] is True:
+                exit_mode("shutdown")
+        '''
         elif "blacklist" in message:
             ids = (message['blacklist']['uid'], message['blacklist']['site'])
 
@@ -317,12 +321,10 @@ class Metasmoke:
                     "failed.".format(ci_link=c["ci_url"], repo=GlobalVars.bot_repo_slug, commit_sha=sha)
 
                 chatcommunicate.tell_rooms_with("debug", s, notify_site="/ci")
-        elif "everything_is_broken" in message:
-            if message["everything_is_broken"] is True:
-                exit_mode("shutdown")
         elif "domain_whitelist" in message:
             if message["domain_whitelist"] == "refresh":
                 metasmoke_cache.MetasmokeCache.delete('whitelisted-domains')
+        '''
 
     @staticmethod
     def add_call_to_metasmoke_queue(method_name, ms_ajax_timestamp, data):
