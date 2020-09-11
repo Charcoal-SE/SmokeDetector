@@ -452,6 +452,8 @@ class Metasmoke:
 
     @staticmethod
     def send_status_ping():
+        # This is going to just sit watching the MS WebSocket, so there's no need to send pings.
+        return
         if GlobalVars.metasmoke_host is None:
             log('info', 'Attempted to send status ping but metasmoke_host is undefined. Not sent.')
             return
@@ -716,6 +718,8 @@ class Metasmoke:
 
     @staticmethod
     def send_status_ping_and_verify_scanning_if_active():
+        # This is going to just sit watching the MS WebSocket, so there's no need to send pings.
+        return
         def reboot_or_standby(action):
             error_message = "There's been no scan activity for {} status pings. Going to {}." \
                             .format(Metasmoke.status_pings_since_scan_activity, action)
