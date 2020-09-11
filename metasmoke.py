@@ -211,6 +211,8 @@ class Metasmoke:
             return
 
         if "message" in message:
+            # Temporarily allow this to be handled by the MS relay instance
+            return
             from_ms = message['message']
             if (from_ms.startswith("[ [charcoal-se.github.io](https://github.com/Charcoal-SE/charcoal-se.github.io) ]"
                                    " continuous-integration/travis-ci/push")):
@@ -220,6 +222,8 @@ class Metasmoke:
                 from_ms = from_ms.replace("https:", "")
             chatcommunicate.tell_rooms_with("metasmoke", from_ms)
         elif "autoflag_fp" in message:
+            # Temporarily allow this to be handled by the MS relay instance
+            return
             event = message["autoflag_fp"]
 
             chatcommunicate.tell_rooms(event["message"], ("debug", "site-" + event["site"]),
