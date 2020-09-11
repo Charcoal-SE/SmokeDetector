@@ -21187,7 +21187,6 @@
 1592461981	Nisse Engström	affordableeditors\.com
 1592462411	Nisse Engström	quickpaydayonline\.com
 1592464194	Makyen	toolbox\.iskysoft\.com
-1592468875	Makyen	(?-i:5afb4214fedfd1df458d00ac5d427882)(?#apnews.com)
 1592488168	Machavity	computersciencejunction\.in
 1592493498	Machavity	(?-i:1U0_DTfspwo)(?#Youtube)
 1592504061	Machavity	rajabursa\.asia
@@ -23000,23 +22999,7 @@
 1598809184	Makyen	(?:cur+[\W_]+r*ency|cur*[\W_]+r+ency)
 1598809457	Makyen	(?-i:Efjabcz)(?#cutt.ly)
 1598809474	Makyen	(?-i:shibazi96)(?#fiverr.com)
-1598816175	Makyen	(?-i:15e82a07a128ce9c635cb1a16c0e6d0b)(?#apnews.com)
-1598816190	Makyen	(?-i:15ead586c78a28461bfa02d4966ec744)(?#apnews.com)
-1598816206	Makyen	(?-i:236a4605a35bfd7898217cecdd79841a)(?#apnews.com)
-1598816222	Makyen	(?-i:26929a9aeee0de7d8f3bbe69e835536f)(?#apnews.com)
-1598815985	Mast	(?-i:ceb0476c868ecb2836afb52dd3f000ed)(?#apnews.com)
-1598816246	Makyen	(?-i:283413c30ea9cbe98995d2c213436f88)(?#apnews.com)
-1598816261	Makyen	(?-i:2ff1e22245edb5018748c9e304f10299)(?#apnews.com)
-1598815961	Mast	(?-i:b50c13ff26095a5320b1cbd5d0015823)(?#apnews.com)
-1598816286	Makyen	(?-i:6995d324aa03e46a92fa32127ef72c5c)(?#apnews.com)
-1598816302	Makyen	(?-i:9dc6458d4ed13745a14303cb23a827e3)(?#apnews.com)
-1598816334	Makyen	(?-i:9e77c499c900882c62519d0fc92e8fdc)(?#apnews.com)
-1598816351	Makyen	(?-i:b45f1c9174cc43885cf9bfad0904adee)(?#apnews.com)
-1598816367	Makyen	(?-i:b45f1c9174cc43885cf9bfad0904adeeS)(?#apnews.com)
-1598816389	Makyen	(?-i:d20c6545ce7a7616279a82f48204a913)(?#apnews.com)
-1598816420	Makyen	(?-i:daf3d2f324392622255881181488e369)(?#apnews.com)
 1598802064	Jeff Schaller	harikoirala
-1598816899	Makyen	(?-i:ef917e2bdd7d1410d8fe6e95c3518363)(?#apnews.com)
 1598849795	tripleee	thesagenext\.com
 1598852735	tripleee	bestgroupweb\.com
 1598854504	tripleee	perfectcorp\.com
@@ -23156,8 +23139,6 @@
 1599182171	Makyen	cloudanonymoushacking247(?:@gmail\.com)?
 1599192723	tripleee	bestwinsite\.com
 1599200704	tripleee	uusoccer\.ru
-1599200881	Mast	(?-i:66ee4434d7a0d89bcd6f94c236eb7397)(?#apnews.com)
-1599200923	tripleee	apnews\.com/[0-9a-f]{32}
 1599201933	Mast	(?-i:HhHFwJEtC7M)(?# youtube)
 1599203912	Mast	seriousbeautyprofessionals\.com
 1599203963	Mast	serious[\W_]*+beauty[\W_]*+professionals(?!\.com)
@@ -23194,7 +23175,6 @@
 1599290454	Makyen	(?-i:ketotrimviews)(?#sites.google.com)
 1599290469	Makyen	researcher/3873468(?#publons.com)
 1599290493	Makyen	islide-powerpoint\.com
-1599290674	Mast	(?-i:f8af2d23de89b7627069e51d1e969bcd)(?#apnews.com)
 1599277931	Jeff Schaller	nantikanlah\.com
 1599299535	Mast	dawateislami\.net
 1599298392	Mast	fitnesscarenow\.com
@@ -23215,7 +23195,6 @@
 1599404941	Mast	pcmalwaretips\.com
 1599398291	Mast	youtube[\W_]*+kanalımın
 1599331766	Robert Columbia	coinchargeback\.com
-1599317545	Mast	(?-i:d8ef82dd09d3b11674ef9c2a70890b41)(?#apnews.com)
 1599303584	Mast	ukknowledge\.com
 1599435951	Makyen	booktaxiairport\.com\.au
 1599456261	Makyen	hackengineexpert(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
@@ -23225,7 +23204,6 @@
 1599462495	Mast	coffee-statistics\.com
 1599462973	tripleee	book[\W_]*+of[\W_]*+matches
 1599464318	Mast	flyundervpn\.com
-1599463995	Mast	(?-i:c3b63dbae3e890119a19d4596b1a3fcf)(?#apnews)
 1599464476	tripleee	smallscalemachinery\.com
 1599464493	tripleee	service\.elsevier\.com
 1599464991	tripleee	seintellect\.com
@@ -23291,7 +23269,6 @@
 1599585289	Dharman	(?-i:JaClA57ChVI)(?#YouTube)
 1599633644	Mast	thewispy(?!\.com)
 1599637456	Mast	acerola[\W_]*+extract
-1599637628	Mast	(?-i:8b302e5ffe3597005f5e636216d4aa79)(?#apnews.com)
 1599639437	Mast	itmanagedsolution\.co\.uk
 1599642359	Mast	nareshit\.com
 1599643942	tripleee	wfmj\.com
@@ -23367,17 +23344,14 @@
 1599806274	Ryan M	orycry\.top
 1599807222	Ryan M	bestboxingshoes\.com
 1599814162	Mithical	truflexen
-1599814741	Mast	(?-i:5774b06d7bb11a6c355c214cd673d5da)(?#apnews.com)
 1599814956	Mast	cosmos[\W_]*+atom[\W_]*+token
 1599816477	Mast	mydock365\.com
 1599816904	Mast	iron[\W_]*+stack[\W_]*+pro
 1599820025	Mast	talhamanzoor2\.blogspot\.com
 1599820112	Ryan M	claybag\.com
 1599817270	Mast	cairnhouseflorida\.com
-1599817495	Mast	(?-i:516fa837a68593a055e7a16b0e4934ed)(?#apnews.com)
 1599819978	Mast	(?-i:35xYbDI)(?# bit.ly)
 1599820800	double-beep	jslsleepers\.co\.uk
-1599818369	Mast	(?-i:66ee4434d7a0d89bcd6f94c236eb739)(?#apnews.com)
 1599840190	Machavity	downloadlinkedinvideo\.com
 1599842618	Daniil	hwrig\.com
 1599843373	Daniil	medzino\.com
