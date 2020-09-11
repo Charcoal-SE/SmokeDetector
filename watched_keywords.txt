@@ -23375,3 +23375,4 @@
 1599820112	Ryan M	claybag\.com
 1599817270	Mast	cairnhouseflorida\.com
 1599817495	Mast	(?-i:516fa837a68593a055e7a16b0e4934ed)(?#apnews.com)
+1599819978	Mast	(?-i:35xYbDI)(?# bit.ly)
