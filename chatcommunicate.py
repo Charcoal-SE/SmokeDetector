@@ -283,25 +283,13 @@ def on_msg(msg, client):
                 strip_mention = regex.sub("^(<span class=(\"|')mention(\"|')>)?@.*?(</span>)? ", "", message.content)
                 cmd = GlobalVars.parser.unescape(strip_mention)
 
-                result = dispatch_reply_command(message.parent, message, cmd)
-
-                if result:
-                    s = ":{}\n{}" if "\n" not in result and len(result) >= 488 else ":{} {}"
-                    _msg_queue.put((room_data, s.format(message.id, result), None))
+                async_dispatch_command(message, room_data, dispatch_reply_command, message.parent, message, cmd)
         except ValueError:
             pass
     elif message.content.lower().startswith("sd "):
-        result = dispatch_shorthand_command(message)
-
-        if result:
-            s = ":{}\n{}" if "\n" not in result and len(result) >= 488 else ":{} {}"
-            _msg_queue.put((room_data, s.format(message.id, result), None))
+        async_dispatch_command(message, room_data, dispatch_shorthand_command, message)
     elif message.content.startswith("!!/") or message.content.lower().startswith("sdc "):
-        result = dispatch_command(message)
-
-        if result:
-            s = ":{}\n{}" if "\n" not in result and len(result) >= 488 else ":{} {}"
-            _msg_queue.put((room_data, s.format(message.id, result), None))
+        async_dispatch_command(message, room_data, dispatch_command, message)
     elif classes.feedback.FEEDBACK_REGEX.search(message.content) \
             and is_privileged(message.owner, message.room) and datahandling.last_feedbacked:
         ids, expires_in = datahandling.last_feedbacked
@@ -628,3 +616,26 @@ def dispatch_shorthand_command(msg):
 
     if should_return_output:
         return "\n".join(output)
+
+
+def async_dispatch_command(msg, room_data, func, *args, **kwargs):
+    def timer_callback():
+        warning_msg = (":" + str(msg.id) + " Warning: This command has been running " +
+                       "for over 60 seconds; it may be stuck/deadlocked. You can check " +
+                       "on its status with `!!/backtrace " + str(cmd_thread.ident) + "` " +
+                       "or you can terminate it with a reboot.")
+        tell_rooms(warning_msg, ((msg._client.host, msg.room.id),), ())
+
+    def command_callback():
+        result = func(*args, **kwargs)
+
+        if result:
+            s = ":{}\n{}" if "\n" not in result and len(result) >= 488 else ":{} {}"
+            _msg_queue.put((room_data, s.format(msg.id, result), None))
+
+        timer.cancel()
+
+    timer = threading.Timer(60, timer_callback)
+    cmd_thread = threading.Thread(name="command " + msg.content, daemon=True, target=command_callback)
+    timer.start()
+    cmd_thread.start()
