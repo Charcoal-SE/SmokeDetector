@@ -441,7 +441,7 @@ def test_on_msg(get_last_messages, post_msg):
         }, spec=chatcommunicate.events.MessageEdited)
 
         chatcommunicate._reply_commands["why"] = (mock_command, (0, 0))
-         
+
         # threading.excepthook is only available on python >= 3.8. Just skip
         # this part of the test if we're running on an earlier version, since
         # we'll test the later version anyway in CI.
