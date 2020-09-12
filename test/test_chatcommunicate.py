@@ -220,6 +220,7 @@ def test_on_msg(get_last_messages, post_msg):
     all_timers = []
     timeout_immediately = False
     orig_timer = threading.Timer
+
     def create_timer(*args, **kwargs):
         if timeout_immediately:
             # replace interval argument with 0.1s
@@ -292,7 +293,7 @@ def test_on_msg(get_last_messages, post_msg):
                 "content": "!!/a_command",
                 "_client": client
             }
-        }, spec=chatcommunicate.events.MessagePosted) 
+        }, spec=chatcommunicate.events.MessagePosted)
         mock_command = Mock(side_effect=lambda *_, **kwargs: "hi" if not kwargs["quiet_action"] else "")
         chatcommunicate._prefix_commands["a-command"] = (mock_command, (0, 0))
 
