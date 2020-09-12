@@ -19560,7 +19560,6 @@
 1587664906	Makyen	materials-today\.com
 1587665439	Machavity	aimlocatingva\.com
 1587666079	Machavity	newsilkroad\.club
-1587668458	Machavity	zee\.gl
 1587672126	Machavity	apkers\.in
 1587672910	Makyen	(?-i:bxit)(?<=zee\.gl/bxit)
 1587676075	Makyen	showbox\.red
