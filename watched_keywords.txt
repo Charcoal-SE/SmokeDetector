@@ -12579,7 +12579,6 @@
 1567785348	Machavity	shazebict\.com
 1567789379	Makyen	nuvoketosisreviews\.blogspot\.com
 1567789398	Makyen	showtheway\.io
-1567789468	Makyen	devman\d+(?:@gmail[\W_]*com)?
 1567805380	Makyen	procv\.biz
 1567805401	Makyen	(?-i:RTJxCzLJ5mTv9BuJ9)
 1567814754	Makyen	(?-i:XrLntq9KCYBuRVdSA)
