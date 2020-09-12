@@ -722,6 +722,7 @@ class Metasmoke:
     def send_status_ping_and_verify_scanning_if_active():
         # This is going to just sit watching the MS WebSocket, so there's no need to send pings.
         return
+
         def reboot_or_standby(action):
             error_message = "There's been no scan activity for {} status pings. Going to {}." \
                             .format(Metasmoke.status_pings_since_scan_activity, action)
