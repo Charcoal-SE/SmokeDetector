@@ -212,245 +212,307 @@ def test_message_sender(pickle_rick):
 @patch("chatcommunicate._msg_queue.put")
 @patch("chatcommunicate.get_last_messages")
 def test_on_msg(get_last_messages, post_msg):
-    client = Fake({
-        "_br": {
-            "user_id": 1337
-        },
+    # Since commands are processed asynchronously, we need to be able to wait until the background thread
+    # completes before checking the results. We could do this by patching Thread, but this gets difficult
+    # because Timer is a subclass of Thread, and the polymorphism creates problems. Instead, we can patch
+    # Timer in order to collect all of the deadlock timers. Then, we can wait for the background threads
+    # simply by waiting for the deadlock timers to either complete or be cancelled.
+    all_timers = []
+    timeout_immediately = False
+    orig_timer = threading.Timer
+    def create_timer(*args, **kwargs):
+        if timeout_immediately:
+            # replace interval argument with 0.1s
+            args = (0.1,) + args[1:]
+        result = orig_timer(*args, **kwargs)
+        all_timers.append(result)
+        return result
 
-        "host": "stackexchange.com"
-    })
-
-    room_data = chatcommunicate.RoomData(Mock(), -1, False)
-    chatcommunicate._rooms[("stackexchange.com", 11540)] = room_data
-
-    chatcommunicate.on_msg(Fake({}, spec=chatcommunicate.events.MessageStarred), None)  # don't reply to events we don't care about
-
-    msg1 = Fake({
-        "message": {
-            "room": {
-                "id": 11540,
+    with patch("threading.Timer", wraps=create_timer):
+        client = Fake({
+            "_br": {
+                "user_id": 1337
             },
 
-            "owner": {
-                "id": 1,
-            },
+            "host": "stackexchange.com"
+        })
 
-            "parent": None,
-            "content": "shoutouts to simpleflips"
-        }
-    }, spec=chatcommunicate.events.MessagePosted)
+        room_data = chatcommunicate.RoomData(Mock(), -1, False)
+        chatcommunicate._rooms[("stackexchange.com", 11540)] = room_data
 
-    chatcommunicate.on_msg(msg1, client)
+        chatcommunicate.on_msg(Fake({}, spec=chatcommunicate.events.MessageStarred), None)  # don't reply to events we don't care about
 
-    msg2 = Fake({
-        "message": {
-            "room": {
-                "id": 11540
-            },
+        msg1 = Fake({
+            "message": {
+                "room": {
+                    "id": 11540,
+                },
 
-            "owner": {
-                "id": 1337
-            },
-
-            "id": 999,
-            "parent": None,
-            "content": "!!/not_actually_a_command"
-        }
-    }, spec=chatcommunicate.events.MessagePosted)
-
-    chatcommunicate.on_msg(msg2, client)
-
-    msg3 = Fake({
-        "message": {
-            "room": {
-                "id": 11540,
-            },
-
-            "owner": {
-                "id": 1
-            },
-
-            "id": 999,
-            "parent": None,
-            "content": "!!/a_command"
-        }
-    }, spec=chatcommunicate.events.MessagePosted)
-
-    mock_command = Mock(side_effect=lambda *_, **kwargs: "hi" if not kwargs["quiet_action"] else "")
-    chatcommunicate._prefix_commands["a-command"] = (mock_command, (0, 0))
-
-    chatcommunicate.on_msg(msg3, client)
-
-    assert post_msg.call_count == 1
-    assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
-    mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a-command", quiet_action=False)
-
-    post_msg.reset_mock()
-    mock_command.reset_mock()
-
-    msg3.message.content = "!!/a_command-"
-    chatcommunicate.on_msg(msg3, client)
-
-    post_msg.assert_not_called()
-    mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a-command", quiet_action=True)
-
-    post_msg.reset_mock()
-    mock_command.reset_mock()
-
-    chatcommunicate._prefix_commands["a-command"] = (mock_command, (0, 1))
-    chatcommunicate.on_msg(msg3, client)
-
-    post_msg.assert_not_called()
-    mock_command.assert_called_once_with(None, original_msg=msg3.message, alias_used="a-command", quiet_action=True)
-
-    post_msg.reset_mock()
-    mock_command.reset_mock()
-
-    msg3.message.content = "!!/a-command 1 2 3"
-    chatcommunicate.on_msg(msg3, client)
-
-    assert post_msg.call_count == 1
-    assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
-    mock_command.assert_called_once_with("1 2 3", original_msg=msg3.message, alias_used="a-command", quiet_action=False)
-
-    post_msg.reset_mock()
-    mock_command.reset_mock()
-
-    chatcommunicate._prefix_commands["a-command"] = (mock_command, (1, 2))
-
-    msg3.message.content = "!!/a-command"
-    chatcommunicate.on_msg(msg3, client)
-
-    assert post_msg.call_count == 1
-    assert post_msg.call_args_list[0][0][0][1] == ":999 Too few arguments."
-    mock_command.assert_not_called()
-
-    post_msg.reset_mock()
-    mock_command.reset_mock()
-
-    msg3.message.content = "!!/a-command 1 2 oatmeal"
-    chatcommunicate.on_msg(msg3, client)
-
-    assert post_msg.call_count == 1
-    assert post_msg.call_args_list[0][0][0][1] == ":999 Too many arguments."
-    mock_command.assert_not_called()
-
-    post_msg.reset_mock()
-    mock_command.reset_mock()
-
-    msg3.message.content = "!!/a-command- 1 2"
-    chatcommunicate.on_msg(msg3, client)
-
-    post_msg.assert_not_called()
-    mock_command.assert_called_once_with("1", "2", original_msg=msg3.message, alias_used="a-command", quiet_action=True)
-
-    post_msg.reset_mock()
-    mock_command.reset_mock()
-
-    msg3.message.content = "!!/a-command 3"
-    chatcommunicate.on_msg(msg3, client)
-
-    assert post_msg.call_count == 1
-    assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
-    mock_command.assert_called_once_with("3", None, original_msg=msg3.message, alias_used="a-command", quiet_action=False)
-
-    post_msg.reset_mock()
-    mock_command.reset_mock()
-
-    msg4 = Fake({
-        "message": {
-            "room": {
-                "id": 11540,
-            },
-
-            "owner": {
-                "id": 1
-            },
-
-            "parent": {
                 "owner": {
-                    "id": 2
-                }
-            },
+                    "id": 1,
+                },
 
-            "id": 1000,
-            "content": "asdf"
-        }
-    }, spec=chatcommunicate.events.MessageEdited)
+                "parent": None,
+                "content": "shoutouts to simpleflips"
+            }
+        }, spec=chatcommunicate.events.MessagePosted)
 
-    chatcommunicate.on_msg(msg4, client)
+        chatcommunicate.on_msg(msg1, client)
 
-    msg5 = Fake({
-        "message": {
-            "room": {
-                "id": 11540,
-            },
+        msg2 = Fake({
+            "message": {
+                "room": {
+                    "id": 11540
+                },
 
-            "owner": {
-                "id": 1
-            },
-
-            "parent": {
                 "owner": {
                     "id": 1337
-                }
-            },
+                },
 
-            "id": 1000,
-            "content": "@SmokeDetector why   "
-        }
-    }, spec=chatcommunicate.events.MessageEdited)
+                "id": 999,
+                "parent": None,
+                "content": "!!/not_actually_a_command"
+            }
+        }, spec=chatcommunicate.events.MessagePosted)
 
-    chatcommunicate._reply_commands["why"] = (mock_command, (0, 0))
+        chatcommunicate.on_msg(msg2, client)
 
-    threw_exception = False
+        msg3 = Fake({
+            "message": {
+                "room": {
+                    "id": 11540,
+                },
 
-    try:
+                "owner": {
+                    "id": 1
+                },
+
+                "id": 999,
+                "parent": None,
+                "content": "!!/a_command",
+                "_client": client
+            }
+        }, spec=chatcommunicate.events.MessagePosted) 
+        mock_command = Mock(side_effect=lambda *_, **kwargs: "hi" if not kwargs["quiet_action"] else "")
+        chatcommunicate._prefix_commands["a-command"] = (mock_command, (0, 0))
+
+        chatcommunicate.on_msg(msg3, client)
+        for timer in all_timers:
+            timer.join()
+
+        assert post_msg.call_count == 1
+        assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
+        mock_command.assert_called_once_with(original_msg=msg3.message, alias_used="a-command", quiet_action=False)
+
+        post_msg.reset_mock()
+        mock_command.reset_mock()
+
+        msg4 = msg3
+
+        msg4.message.content = "!!/a_command-"
+        chatcommunicate.on_msg(msg4, client)
+        for timer in all_timers:
+            timer.join()
+
+        post_msg.assert_not_called()
+        mock_command.assert_called_once_with(original_msg=msg4.message, alias_used="a-command", quiet_action=True)
+
+        post_msg.reset_mock()
+        mock_command.reset_mock()
+
+        chatcommunicate._prefix_commands["a-command"] = (mock_command, (0, 1))
+        chatcommunicate.on_msg(msg4, client)
+        for timer in all_timers:
+            timer.join()
+
+        post_msg.assert_not_called()
+        mock_command.assert_called_once_with(None, original_msg=msg4.message, alias_used="a-command", quiet_action=True)
+
+        post_msg.reset_mock()
+        mock_command.reset_mock()
+
+        msg4.message.content = "!!/a-command 1 2 3"
+        chatcommunicate.on_msg(msg4, client)
+        for timer in all_timers:
+            timer.join()
+
+        assert post_msg.call_count == 1
+        assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
+        mock_command.assert_called_once_with("1 2 3", original_msg=msg4.message, alias_used="a-command", quiet_action=False)
+
+        post_msg.reset_mock()
+        mock_command.reset_mock()
+
+        chatcommunicate._prefix_commands["a-command"] = (mock_command, (1, 2))
+
+        msg4.message.content = "!!/a-command"
+        chatcommunicate.on_msg(msg4, client)
+        for timer in all_timers:
+            timer.join()
+
+        assert post_msg.call_count == 1
+        assert post_msg.call_args_list[0][0][0][1] == ":999 Too few arguments."
+        mock_command.assert_not_called()
+
+        post_msg.reset_mock()
+        mock_command.reset_mock()
+
+        msg4.message.content = "!!/a-command 1 2 oatmeal"
+        chatcommunicate.on_msg(msg4, client)
+        for timer in all_timers:
+            timer.join()
+
+        assert post_msg.call_count == 1
+        assert post_msg.call_args_list[0][0][0][1] == ":999 Too many arguments."
+        mock_command.assert_not_called()
+
+        post_msg.reset_mock()
+        mock_command.reset_mock()
+
+        msg4.message.content = "!!/a-command- 1 2"
+        chatcommunicate.on_msg(msg4, client)
+        for timer in all_timers:
+            timer.join()
+
+        post_msg.assert_not_called()
+        mock_command.assert_called_once_with("1", "2", original_msg=msg4.message, alias_used="a-command", quiet_action=True)
+
+        post_msg.reset_mock()
+        mock_command.reset_mock()
+
+        msg4.message.content = "!!/a-command 3"
+        chatcommunicate.on_msg(msg4, client)
+        for timer in all_timers:
+            timer.join()
+
+        assert post_msg.call_count == 1
+        assert post_msg.call_args_list[0][0][0][1] == ":999 hi"
+        mock_command.assert_called_once_with("3", None, original_msg=msg4.message, alias_used="a-command", quiet_action=False)
+
+        post_msg.reset_mock()
+        mock_command.reset_mock()
+
+        msg5 = Fake({
+            "message": {
+                "room": {
+                    "id": 11540,
+                },
+
+                "owner": {
+                    "id": 1
+                },
+
+                "parent": {
+                    "owner": {
+                        "id": 2
+                    }
+                },
+
+                "id": 1000,
+                "content": "asdf"
+            }
+        }, spec=chatcommunicate.events.MessageEdited)
+
         chatcommunicate.on_msg(msg5, client)
-    except AssertionError:
-        threw_exception = True
+        for timer in all_timers:
+            timer.join()
 
-    assert threw_exception
-    mock_command.assert_not_called()
-    post_msg.assert_not_called()
+        msg6 = Fake({
+            "message": {
+                "room": {
+                    "id": 11540,
+                },
 
-    chatcommunicate._reply_commands["why"] = (mock_command, (1, 1))
-    chatcommunicate.on_msg(msg5, client)
+                "owner": {
+                    "id": 1
+                },
 
-    assert post_msg.call_count == 1
-    assert post_msg.call_args_list[0][0][0][1] == ":1000 hi"
-    mock_command.assert_called_once_with(msg5.message.parent, original_msg=msg5.message, alias_used="why", quiet_action=False)
+                "parent": {
+                    "owner": {
+                        "id": 1337
+                    }
+                },
 
-    post_msg.reset_mock()
-    mock_command.reset_mock()
+                "id": 1000,
+                "content": "@SmokeDetector why   "
+            }
+        }, spec=chatcommunicate.events.MessageEdited)
 
-    msg5.message.content = "@SmokeDetector why@!@#-"
-    chatcommunicate.on_msg(msg5, client)
+        chatcommunicate._reply_commands["why"] = (mock_command, (0, 0))
 
-    post_msg.assert_not_called()
-    mock_command.assert_called_once_with(msg5.message.parent, original_msg=msg5.message, alias_used="why", quiet_action=True)
+        threw_exception = False
 
-    msg6 = Fake({
-        "message": {
-            "room": {
-                "id": 11540,
-            },
+        def excepthook(*args):
+            nonlocal threw_exception
+            threw_exception = True
+        old_excepthook = threading.excepthook
+        threading.excepthook = excepthook
+        chatcommunicate.on_msg(msg6, client)
+        for timer in all_timers:
+            timer.join()
 
-            "owner": {
-                "id": 1
-            },
+        assert threw_exception
+        mock_command.assert_not_called()
+        post_msg.assert_not_called()
+        threading.excepthook = old_excepthook
 
-            "id": 1000,
-            "parent": None,
-            "content": "sd why - 2why 2why- 2- why- "
-        }
-    }, spec=chatcommunicate.events.MessageEdited)
+        chatcommunicate._reply_commands["why"] = (mock_command, (1, 1))
+        chatcommunicate.on_msg(msg6, client)
+        for timer in all_timers:
+            timer.join()
 
-    get_last_messages.side_effect = lambda _, num: (Fake({"id": i}) for i in range(num))
-    chatcommunicate.on_msg(msg6, client)
+        assert post_msg.call_count == 1
+        assert post_msg.call_args_list[0][0][0][1] == ":1000 hi"
+        mock_command.assert_called_once_with(msg6.message.parent, original_msg=msg6.message, alias_used="why", quiet_action=False)
 
-    assert post_msg.call_count == 1
-    assert post_msg.call_args_list[0][0][0][1] == ":1000 [:0] hi\n[:1] <skipped>\n[:2] hi\n[:3] hi\n[:4] <processed without return value>\n[:5] <processed without return value>\n[:6] <skipped>\n[:7] <skipped>\n[:8] <processed without return value>"
+        post_msg.reset_mock()
+        mock_command.reset_mock()
+
+        msg6.message.content = "@SmokeDetector why@!@#-"
+        chatcommunicate.on_msg(msg6, client)
+        for timer in all_timers:
+            timer.join()
+
+        post_msg.assert_not_called()
+        mock_command.assert_called_once_with(msg6.message.parent, original_msg=msg6.message, alias_used="why", quiet_action=True)
+
+        msg7 = Fake({
+            "message": {
+                "room": {
+                    "id": 11540,
+                },
+
+                "owner": {
+                    "id": 1
+                },
+
+                "id": 1000,
+                "parent": None,
+                "content": "sd why - 2why 2why- 2- why- "
+            }
+        }, spec=chatcommunicate.events.MessageEdited)
+
+        get_last_messages.side_effect = lambda _, num: (Fake({"id": i}) for i in range(num))
+        chatcommunicate.on_msg(msg7, client)
+        for timer in all_timers:
+            timer.join()
+
+        assert post_msg.call_count == 1
+        assert post_msg.call_args_list[0][0][0][1] == ":1000 [:0] hi\n[:1] <skipped>\n[:2] hi\n[:3] hi\n[:4] <processed without return value>\n[:5] <processed without return value>\n[:6] <skipped>\n[:7] <skipped>\n[:8] <processed without return value>"
+
+        post_msg.reset_mock()
+        # Ensure we detect a deadlocked command
+        mock_command = Mock(side_effect=lambda *_, **__: time.sleep(3600))
+        chatcommunicate._prefix_commands["a-command"] = (mock_command, (0, 0))
+
+        timeout_immediately = True
+        chatcommunicate.on_msg(msg3, client)
+        for timer in all_timers:
+            timer.join()
+
+        assert mock_command.call_count == 1
+        assert post_msg.call_count == 1
+        assert "over 60 seconds" in post_msg.call_args_list[0][0][0][1]
 
 
 def test_message_type():
