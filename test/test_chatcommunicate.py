@@ -11,6 +11,7 @@ import os.path
 import pytest
 import threading
 import time
+import sys
 import yaml
 
 from fake import Fake
@@ -440,22 +441,27 @@ def test_on_msg(get_last_messages, post_msg):
         }, spec=chatcommunicate.events.MessageEdited)
 
         chatcommunicate._reply_commands["why"] = (mock_command, (0, 0))
+         
+        # threading.excepthook is only available on python >= 3.8. Just skip
+        # this part of the test if we're running on an earlier version, since
+        # we'll test the later version anyway in CI.
 
-        threw_exception = False
+        if sys.version_info >= (3, 8, 0):
+            threw_exception = False
 
-        def excepthook(*args):
-            nonlocal threw_exception
-            threw_exception = True
-        old_excepthook = threading.excepthook
-        threading.excepthook = excepthook
-        chatcommunicate.on_msg(msg6, client)
-        for timer in all_timers:
-            timer.join()
+            def excepthook(*args):
+                nonlocal threw_exception
+                threw_exception = True
+            old_excepthook = threading.excepthook
+            threading.excepthook = excepthook
+            chatcommunicate.on_msg(msg6, client)
+            for timer in all_timers:
+                timer.join()
 
-        assert threw_exception
-        mock_command.assert_not_called()
-        post_msg.assert_not_called()
-        threading.excepthook = old_excepthook
+            assert threw_exception
+            mock_command.assert_not_called()
+            post_msg.assert_not_called()
+            threading.excepthook = old_excepthook
 
         chatcommunicate._reply_commands["why"] = (mock_command, (1, 1))
         chatcommunicate.on_msg(msg6, client)
