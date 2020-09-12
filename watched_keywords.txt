@@ -23392,3 +23392,4 @@
 1599888617	Makyen	nutrifix[\W_]*+diet(?:[\W_]*+(?:keto|shark|tank|\d++|[\da-f]{5,}+)s?)*
 1599890229	NobodyNada	exploreonevietnam\.com
 1599890527	NobodyNada	invigorzen
+1599891673	NobodyNada	digihost\.in
