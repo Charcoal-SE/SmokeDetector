@@ -23390,4 +23390,3 @@
 1599822226	Mast	pinoylambingantambayan\.net
 1599888556	NobodyNada	pinoy
 1599888617	Makyen	nutrifix[\W_]*+diet(?:[\W_]*+(?:keto|shark|tank|\d++|[\da-f]{5,}+)s?)*
-1599890200	NobodyNada	exploreonevietnam
