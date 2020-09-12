@@ -627,13 +627,16 @@ def async_dispatch_command(msg, room_data, func, *args, **kwargs):
         tell_rooms(warning_msg, ((msg._client.host, msg.room.id),), ())
 
     def command_callback():
-        result = func(*args, **kwargs)
+        try:
+            result = func(*args, **kwargs)
 
-        if result:
-            s = ":{}\n{}" if "\n" not in result and len(result) >= 488 else ":{} {}"
-            _msg_queue.put((room_data, s.format(msg.id, result), None))
-
-        timer.cancel()
+            if result:
+                s = ":{}\n{}" if "\n" not in result and len(result) >= 488 else ":{} {}"
+                _msg_queue.put((room_data, s.format(msg.id, result), None))
+        except:
+            raise
+        finally:
+            timer.cancel()
 
     timer = threading.Timer(60, timer_callback)
     cmd_thread = threading.Thread(name="command " + msg.content, daemon=True, target=command_callback)
