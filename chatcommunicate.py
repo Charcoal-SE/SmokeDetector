@@ -633,7 +633,7 @@ def async_dispatch_command(msg, room_data, func, *args, **kwargs):
             if result:
                 s = ":{}\n{}" if "\n" not in result and len(result) >= 488 else ":{} {}"
                 _msg_queue.put((room_data, s.format(msg.id, result), None))
-        except:
+        except Exception:
             raise
         finally:
             timer.cancel()
