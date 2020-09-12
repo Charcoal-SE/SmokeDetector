@@ -23397,3 +23397,4 @@
 1599896488	Makyen	creditcard[\W_]*+top[\W_]*+deals(?!\.com(?<=creditcardtopdeals\.com))
 1599897349	Mast	lilachbullock\.com
 1599900949	Makyen	glucafix(?:[\W_]*+(?:review|price|ingredient|of|advanced|weight|loss|formula|pill|\d++|[\da-f]{5,}+)s?)*
+1599924223	Machavity	groupdocs\.com
