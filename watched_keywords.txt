@@ -23397,3 +23397,4 @@
 1599924223	Machavity	groupdocs\.com
 1599937037	NobodyNada	apkinstallation\.com
 1599953635	Daniil	ielts\Wcertificates?(?! without exam)
+1599965015	user12986714	<a href="[^"]*+">\s*+<\/a>(?#0 char or whitespace links)
