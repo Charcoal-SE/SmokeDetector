@@ -229,17 +229,17 @@ class Metasmoke:
             # Use protocol-relative links
             from_ms = sub(r"\]\((?<!\\\]\()https?://", "](//", from_ms)
             chatcommunicate.tell_rooms_with("metasmoke", from_ms)
-        elif "autoflag_fp" in message:
-            event = message["autoflag_fp"]
-
-            chatcommunicate.tell_rooms(event["message"], ("debug", "site-" + event["site"]),
-                                       ("no-site-" + event["site"],), notify_site="/autoflag_fp")
         elif "exit" in message:
             exit_mode(code=message["exit"])
         elif "everything_is_broken" in message:
             if message["everything_is_broken"] is True:
                 exit_mode("shutdown")
         '''
+        elif "autoflag_fp" in message:
+            event = message["autoflag_fp"]
+
+            chatcommunicate.tell_rooms(event["message"], ("debug", "site-" + event["site"]),
+                                       ("no-site-" + event["site"],), notify_site="/autoflag_fp")
         elif "blacklist" in message:
             ids = (message['blacklist']['uid'], message['blacklist']['site'])
 
