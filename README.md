@@ -51,7 +51,7 @@ when running from `nocrash.py`, it will be restarted.
 
 Running in a [virtual environment](https://docs.python.org/3/tutorial/venv.html)
 is a good way to isolate dependency packages from your local system.
-To set up SmokeDetector in a virtual environment, please use
+To set up SmokeDetector in a virtual environment, you can use
 
 ```shell
 git clone https://github.com/Charcoal-SE/SmokeDetector.git
@@ -69,10 +69,12 @@ Next, copy the config file and edit as said above.
 To run SmokeDetector in this virtual environment, use
 `env/bin/python3 nocrash.py`.
 
-[Note: On Macs, it may be necessary to remove the `--user` option from the last
-`pip3` command line in the above instructions. However, the `--user` option is known to
-be necessary on other platforms. Further testing is necessary to resolve
-the discrepancy.]
+[Note: On some systems (e.g. Mac's and Linux), some circumstances may
+require the `--user` option be removed from the last `pip3` 
+command line in the above instructions. However, the `--user` option is 
+known to be necessary in other circumstances. Further testing is 
+necessary to resolve the discrepancy.]
+
 
 ### Docker setup
 
