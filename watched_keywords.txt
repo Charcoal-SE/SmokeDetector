@@ -23416,3 +23416,4 @@
 1600008887	user12986714	PressDesk24(?!\.com)
 1600008921	user12986714	best news portal
 1600008973	user12986714	directionsproperty\.com
+1600025714	Mast	joshuabenloancompany(?:@gmail\.com)?
