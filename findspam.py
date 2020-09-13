@@ -624,7 +624,7 @@ def mostly_img(s, site):
 
 @create_rule("invisible link in {}", max_rep=11, stripcodeblocks=True)
 def invisible_link(s, site):
-    occurences = regex.findall(r'<a href="(?!(?:(?:https?:)?\/\/)?i.stack.imgur.com\/)[^"]*+"[^<>]*+>\s*+<\/a>', s)
+    occurences = regex.findall(r'<a href="(?!(?:(?:https?:)?\/\/)?i.stack.imgur.com\/)[^<"]*+"[^<>]*+>\s*+<\/a>', s)
     if len(occurences):
         return True, "{} occurences: {}".format(len(occurences), ", ".join(occurences))
     return False, ""
