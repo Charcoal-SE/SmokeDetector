@@ -23453,3 +23453,4 @@
 1600085400	Mast	my[\W_]*+services[\W_]*+includes?
 1600085976	Mast	kvm-avindia\.co\.in
 1600085428	Mast	automobiler\.tech
+1600083883	Mast	aalpha\.net
