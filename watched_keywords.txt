@@ -23271,7 +23271,6 @@
 1599623580	Makyen	1herbs\.com
 1599623596	Makyen	1herbs(?!\.com)
 1599623644	Makyen	gregory[\W_]*+porter[\W_]*+all[\W_]*+rise[\W_]*+t[\W_]*+shirt
-1599629140	Makyen	viapro[\W_]*+maxx
 1599629906	Makyen	trickyui\.blogspot
 1599631237	Makyen	all[\W_]*+star[\W_]*+dental[\W_]*+academy(?!\.com(?<=allstardentalacademy\.com))
 1599630552	Mast	allstardentalacademy\.com
