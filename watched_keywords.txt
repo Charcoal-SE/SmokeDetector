@@ -23420,3 +23420,4 @@
 1600048291	Daniel Widdis	javadream\.in
 1600059468	tripleee	qualnex
 1600059577	tripleee	risoulaser\.com
+1600059593	tripleee	risoulaser(?!\.com)
