@@ -23433,3 +23433,4 @@
 1600063637	Makyen	larry[\W_]*+s[\W_]*+poker[\W_]*+club
 1600065644	tripleee	adina\.com\.vn
 1600068005	Mast	talkpoints\.org
+1600068963	tripleee	(?-i:^John Balvin$)
