@@ -23421,3 +23421,4 @@
 1600059577	tripleee	risoulaser\.com
 1600059593	tripleee	risoulaser(?!\.com)
 1600061266	tripleee	primary[\W_]*+remedy(?:[\W_]*+cbd)?
+1600061405	tripleee	prompturgentcare\.net
