@@ -23434,3 +23434,4 @@
 1600065644	tripleee	adina\.com\.vn
 1600068005	Mast	talkpoints\.org
 1600068963	tripleee	(?-i:^John Balvin$)
+1600070075	Makyen	(?:keto[\W_]*+)?nutrifix(?:[\W_]*+(?:nutrifix|keto|\d++|[\da-f]{5,}+))*
