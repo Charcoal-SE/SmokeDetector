@@ -23439,3 +23439,4 @@
 1600077949	Mast	(?-i:rIddu96tDYE)(?#youtu.be)
 1600077819	Mast	releaf[\W_]*+ease[\W_]*+cbd
 1600009009	user12986714	جرين افنيو العاصمة الادارية
+1600074041	Mast	ketopremiere\.info
