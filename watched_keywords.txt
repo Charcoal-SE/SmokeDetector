@@ -23454,3 +23454,4 @@
 1600085428	Mast	automobiler\.tech
 1600083883	Mast	aalpha\.net
 1600086158	tripleee	marketing[\W_]*+846
+1600096596	Spevacus	beautywellness\.in
