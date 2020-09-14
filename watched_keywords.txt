@@ -23436,3 +23436,4 @@
 1600068963	tripleee	(?-i:^John Balvin$)
 1600070075	Makyen	(?:keto[\W_]*+)?nutrifix(?:[\W_]*+(?:nutrifix|keto|\d++|[\da-f]{5,}+))*
 1600075609	Makyen	(?-i:healthyaustraliareview)(?#sites.google.com)
+1600077819	Mast	releaf[\W_]*+ease[\W_]*+cbd
