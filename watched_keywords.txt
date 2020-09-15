@@ -23506,3 +23506,4 @@
 1600191483	Makyen	(?-i:2f91758485a36c5afc0380a731a53956)(?#apnews.com)
 1600191891	Makyen	cannwell[\W_]*+triple[\W_]*+c
 1600185193	Rubiksmoose	thinksmall\.me
+1600190655	user12986714	(?-i:Sa7ndxKnUmA)(?#youtu.be)
