@@ -23491,3 +23491,4 @@
 1600185167	Daniil	jpeg-repair(?!\.com)
 1600155032	Mast	blogergoods\.com
 1600155136	Mast	blogergoods(?!\.com)
+1600168666	Ryan M	phpridles\.com
