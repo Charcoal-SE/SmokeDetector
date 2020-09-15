@@ -3129,7 +3129,6 @@ dio\d+\W*(?:,|\.)\W*n\W*e\W*t
 콜걸(?#call girl; needs to not be \b bookended)
 supplementvilla\.com
 ketodietviews\.com
-clck\.ru
 add2cartsupplements\.com
 adviceduniya\.com
 androidioscheats\.com
