@@ -2351,3 +2351,4 @@ probio[\W_]*+lite(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
 viapro[\W_]*+maxx
 fabuloushacker\d*+@gmail\.com
 (?-i:ISO OMAN)
+keto[\W_]*+body[\W_]*+trim(?:[\W_]*+(?:ca(?:nada)?|diet[\W_]*+pill|review|\d++|[\da-f]{5,}+)s?)*
