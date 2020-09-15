@@ -23460,3 +23460,4 @@
 1600138177	Spevacus	webcontentonline\.com
 1600140012	NobodyNada	tetrisgame\.co
 1600142322	NobodyNada	siapurboexpress(?#facebook.com)
+1600144317	NobodyNada	ghanatalksradio\.com
