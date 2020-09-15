@@ -10703,7 +10703,6 @@
 1561720902	Makyen	rapidtoneusa
 1561720922	Makyen	kamilwebsolutions\.ae
 1561720942	Makyen	(?-i:CEa1aKMKcF0)
-1561720959	Makyen	edb\W*recovery\W*software
 1561720979	Makyen	cxs\.one
 1561720999	Makyen	codexsys\.in
 1561721036	Makyen	absolute\W*keto\W*reviews
