@@ -23486,3 +23486,4 @@
 1600154361	Mast	webscreenscraping\.com
 1600180456	Daniil	sizznet\.online
 1600185116	Daniil	myphotorepair\.com
+1600185133	Daniil	my\W*photo\W*repair(?!\.com)
