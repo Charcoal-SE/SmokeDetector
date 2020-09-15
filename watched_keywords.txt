@@ -23489,3 +23489,4 @@
 1600185133	Daniil	my\W*photo\W*repair(?!\.com)
 1600185150	Daniil	jpeg-repair\.com
 1600185167	Daniil	jpeg-repair(?!\.com)
+1600185193	Rubiksmoose	thinksmall\.me
