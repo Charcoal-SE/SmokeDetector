@@ -23459,3 +23459,4 @@
 1600136218	Makyen	phat[\W_]*+knuts
 1600138177	Spevacus	webcontentonline\.com
 1600140012	NobodyNada	tetrisgame\.co
+1600142322	NobodyNada	siapurboexpress(?#facebook.com)
