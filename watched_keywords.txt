@@ -23478,3 +23478,4 @@
 1600164120	Mast	authenticcounterfeit\.com
 1600164137	Mast	counterfeitmoneyonline\.net
 1600161675	Mast	24hoursmedia\.com
+1600161093	Mast	iexponet\.com
