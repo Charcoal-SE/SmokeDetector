@@ -22984,7 +22984,6 @@
 1598789322	Mast	(?-i:_ijCGwCD3Ys)(?# youtube)
 1598791029	Mast	chicofactorys(?:@hotmail\.com)?
 1598805883	Makyen	bren-maroe\.myshopify\.com
-1598805902	Makyen	funnelsmegasoft\.unaux\.com
 1598805919	Makyen	(?-i:httpfunnelsmegasoftunauxcom)(?#sites.google.com)
 1598809184	Makyen	(?:cur+[\W_]+r*ency|cur*[\W_]+r+ency)
 1598809457	Makyen	(?-i:Efjabcz)(?#cutt.ly)
