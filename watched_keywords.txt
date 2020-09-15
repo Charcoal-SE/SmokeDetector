@@ -23510,3 +23510,4 @@
 1600191452	Mast	muarapromil\.com
 1600196282	Glorfindel	hazemag\.com
 1600209168	Makyen	steve[\W_]*+carlson[\W_]*+loan[\W_]*+company(?:@gmail\.com)?
+1600209253	Makyen	(?-i:Stevecarlson)(?<=\bt\.me/Stevecarlson)(?#t.me)
