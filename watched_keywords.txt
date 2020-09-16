@@ -23521,3 +23521,4 @@
 1600235809	tripleee	jubablanglamare(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1600236448	tripleee	(?-i:2ZGYGI4)(?# bit.ly)
 1600237289	Mast	(?-i:officialtruvalastsouthafrica)(?#sites.google.com)
+1600238638	Mast	\dealanddeals\.pk
