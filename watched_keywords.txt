@@ -23523,3 +23523,4 @@
 1600239172	Mast	opss39[\W_]*+net
 1600240015	Mast	movieloverhd\.com
 1600240338	tripleee	dumps4free\.com
+1600240836	Mast	(?-i:^kirankumarpaita$)
