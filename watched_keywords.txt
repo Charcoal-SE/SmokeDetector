@@ -23543,3 +23543,4 @@
 1600264721	Mast	binance[\W_]*+clone
 1600265608	Mast	(?-i:webeelab)(?#t.me)
 1600273260	Mast	melhorsite\.xyz
+1600279720	Spevacus	avasystemssignals\.com
