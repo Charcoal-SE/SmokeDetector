@@ -23548,3 +23548,4 @@
 1600287047	NobodyNada	beat(?:|s|ing)[\W_]*+[\w']*+[\W_]*meat
 1600283544	Rubiksmoose	jscurious\.com
 1600294510	Daniil	live:support_60864(?#Skype)
+1600294570	Daniil	live\:support_60864(?#Skype)
