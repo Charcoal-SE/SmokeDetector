@@ -6244,7 +6244,6 @@
 1540973189	Glorfindel	romio\W*ringbell
 1540974578	Shree	eniyianimasyonfilmleri\.com
 1540975409	tripleee	jewish\W+people(?:\W+\w+){0,3}\W+kill(?#Pittsburgh holocaust kook)
-1540982509	Shree	ozpaperhelp\.com
 1540982563	Shree	ozpaperhelp(?!\.com)(?:@gmail\.com)?
 1540988813	Shree	suvinindiabelow10lakhs\.com
 1540996223	iBug	TravelAgentAdvantage\.com
