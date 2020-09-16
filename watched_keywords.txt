@@ -23519,3 +23519,4 @@
 1600228557	Makyen	 warriorplus\.com
 1600230161	Makyen	(?-i:9GwBDe)(?#fiverr.com)
 1600230430	Mast	himalayanadventuretreks\.com
+1600234787	Makyen	ciagenix(?:[\W_]*+(?:retinol|uk|\d++|[\da-f]{5,}+)s?)*
