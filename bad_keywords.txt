@@ -2345,7 +2345,6 @@ lush[\W_]*+lift
 alpha[\W_]*+male[\W_]*+ex
 logixgenetics
 (?-i:myunbiasedreview)(?#sites.google.com)
-leptoconnect
 blood[\W_]*+balance[\W_]*+advanced?[\W_]*+formula
 probio[\W_]*+lite(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
 viapro[\W_]*+maxx
