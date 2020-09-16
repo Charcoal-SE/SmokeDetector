@@ -23522,3 +23522,4 @@
 1600236448	tripleee	(?-i:2ZGYGI4)(?# bit.ly)
 1600237289	Mast	(?-i:officialtruvalastsouthafrica)(?#sites.google.com)
 1600238638	Mast	\dealanddeals\.pk
+1600238658	Mast	dealanddeals\.pk
