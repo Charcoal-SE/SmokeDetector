@@ -23513,3 +23513,4 @@
 1600209253	Makyen	(?-i:Stevecarlson)(?<=\bt\.me/Stevecarlson)(?#t.me)
 1600194080	Spevacus	airconcare\.com\.bd
 1600213089	Rubiksmoose	sangham\.net
+1600218381	Machavity	^jack\W*meoff$
