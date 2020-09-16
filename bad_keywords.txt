@@ -2354,3 +2354,4 @@ keto[\W_]*+body[\W_]*+trim(?:[\W_]*+(?:ca(?:nada)?|diet[\W_]*+pill|review|\d++|[
 edb[\W_]*+recovery[\W_]*+software
 lepto[\W_]*+connect
 kurtis?[\W_]*+manufacturers?
+coinjoker
