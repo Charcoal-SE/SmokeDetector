@@ -23538,3 +23538,4 @@
 1600255540	Mast	roku[\W_]*+streaming[\W_]*+player
 1600255559	Eliah Kagan	iasiso-middleeast\.com
 1600255870	Mast	unitedstateusadccovid19(?:@gmail\.com)?
+1600259617	Mast	lucep\.com
