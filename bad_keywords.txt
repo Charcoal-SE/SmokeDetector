@@ -2352,3 +2352,4 @@ fabuloushacker\d*+@gmail\.com
 (?-i:ISO OMAN)
 keto[\W_]*+body[\W_]*+trim(?:[\W_]*+(?:ca(?:nada)?|diet[\W_]*+pill|review|\d++|[\da-f]{5,}+)s?)*
 edb[\W_]*+recovery[\W_]*+software
+lepto[\W_]*+connect
