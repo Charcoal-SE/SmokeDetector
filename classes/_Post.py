@@ -17,6 +17,7 @@ class Post:
         # type: (AnyStr, dict, Post) -> None
 
         self._body = ""
+        self._body_escaped = ""
         self._body_is_summary = False
         self._markdown = None
         self._is_answer = False
@@ -114,6 +115,7 @@ class Post:
         if "title" not in response or "body" not in response:
             return
 
+        self._body_escaped = response["body"]
         self._title = html.unescape(response["title"])
         self._body = html.unescape(response["body"])
         if "body_markdown" in response and response["body_markdown"] is not None:
@@ -196,6 +198,10 @@ class Post:
     @property
     def body_is_summary(self):
         return bool(self._body_is_summary)
+
+    @property
+    def body_escaped(self):
+        return str(self._body_escaped)
 
     @property
     def markdown(self):
