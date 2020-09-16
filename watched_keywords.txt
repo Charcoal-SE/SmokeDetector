@@ -23525,3 +23525,4 @@
 1600240836	Mast	(?-i:^kirankumarpaita$)
 1600242147	Mast	cannabisgrowingcanada\.com
 1600244566	Ryan M	tech4allbymanishsaini(?# blogspot.com)
+1600245387	Ryan M	farhad-gallery\.com
