@@ -23541,3 +23541,4 @@
 1600264229	Mast	coorgpackage\.com
 1600264292	Mast	coorgpackage(?!\.com)
 1600264721	Mast	binance[\W_]*+clone
+1600265608	Mast	(?-i:webeelab)(?#t.me)
