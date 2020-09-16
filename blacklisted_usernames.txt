@@ -215,7 +215,7 @@ quickbooks
 (?-i:^k.?h?a.?d.?.?i.?m h.?u.?s.?s.?a.?i[mn]$)
 (?-i:^Mary Skula$)
 (?-i:^Pandora Service$)
-(?-i:^Angela Yui‭$)
+(?-i:^Angela Yui$)
 (?-i:^mari devleadz$)
 (?-i:^khadim$)
 (-i:^Vishnu Jangid$)
@@ -280,7 +280,7 @@ DailyRaiseQuestion
 (?-i:^Mritunjay Jadon$)
 (?-i:^jammertech$)
 (?-i:^Leeten Smith$)
-^bert[\W_]*+linsheng‭$
+^bert[\W_]*+linsheng$
 (?-i:^keyword out$)
 (?-i:^mehdi rezghi$)
 (?-i:^Renu KumAri$)
@@ -368,7 +368,6 @@ drivingdirectionss\.com
 (?-i:^Marco Desouza$)
 (?-i:^Ankit Rathi$)
 (?-i:^zega logo$)
-(?-i:^shreyasehgal‭$)
 (?-i:^sehgalshreya$)
 Pound\W*define\W*MACRO
 (?-i:^Anthony\W*+Dwayne\W*+Chapelle$)
@@ -381,7 +380,7 @@ Pound\W*define\W*MACRO
 (?-i:^Bella Gorden$)
 (?-i:^Languager$)
 (?-i:^PURUSOTTAM NATH$)
-(?-i:^Bakera IT‭$)
+(?-i:^Bakera IT$)
 (?-i:^Akansha Yadav$)
 (?-i:^priya submissions$)
 (?-i:^sunny garg$)
