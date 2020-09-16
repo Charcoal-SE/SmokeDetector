@@ -23544,3 +23544,4 @@
 1600265608	Mast	(?-i:webeelab)(?#t.me)
 1600273260	Mast	melhorsite\.xyz
 1600279720	Spevacus	avasystemssignals\.com
+1600285200	Daniil	cmdrecruitment\.com
