@@ -3415,7 +3415,6 @@
 1527138247	tripleee	\W*ｏｋｄｂ７９\W*
 1527142090	Makyen	\W*(?:안마|마사지|알몸사진|애인대행)\W*
 1527142633	Tetsuya Yamamoto	exploresrilanka\.com
-1527144445	Makyen	\w*h+a+\W*h+a+\W*h+a+\w*(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1527145181	Tetsuya Yamamoto	phpinterview\.in
 1527146048	Glorfindel	positivesingles
 1527146782	Glorfindel	zaptechsolutions\.com
