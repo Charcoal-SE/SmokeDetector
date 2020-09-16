@@ -23515,3 +23515,4 @@
 1600213089	Rubiksmoose	sangham\.net
 1600218381	Machavity	^jack\W*meoff$
 1600221545	Ian Campbell	lifecoachlj\.com
+1600228541	Makyen	lifecoachlj(?!\.com)
