@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # noinspection PyCompatibility
 
+import bs4
 import sys
 import math
 from difflib import SequenceMatcher
@@ -1626,6 +1627,23 @@ def religion_troll(s, site):
     ]
     offensive = any(regex.search(x, s) for x in regexes)
     return offensive, 'Potential religion site troll post' if offensive else ''
+
+
+# TODO: Rule Constructor after Rule class is tweaked
+def zerolength_whitespace_nonprintable_link(s, site):
+    # Returns 'True' if there is a zero length link in here.
+    bs = bs4.BeautifulSoup(s, 'html.parser')
+    cases = []
+    for link in bs.find_all('a'):
+        if '<img ' in str(link):
+            # Image embeds in links are not zero-length for this case.
+            continue  # Do nothing, continue checking links.
+        if len(link.text) == 0:
+            cases.append(str(link))
+        if link.text.isspace() or not link.text.isprintable():
+            cases.append(str(link))
+
+    return cases, 'Zero-length, whitespace-only, or nonprintable link' if cases else ''
 
 
 # TODO: migrate this old stub
