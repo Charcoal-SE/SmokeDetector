@@ -2355,3 +2355,4 @@ edb[\W_]*+recovery[\W_]*+software
 lepto[\W_]*+connect
 kurtis?[\W_]*+manufacturers?
 coinjoker
+ciagenix(?:[\W_]*+(?:retinol|uk|\d++|[\da-f]{5,}+)s?)*

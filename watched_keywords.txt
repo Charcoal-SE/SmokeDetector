@@ -23511,7 +23511,6 @@
 1600228557	Makyen	 warriorplus\.com
 1600230161	Makyen	(?-i:9GwBDe)(?#fiverr.com)
 1600230430	Mast	himalayanadventuretreks\.com
-1600234787	Makyen	ciagenix(?:[\W_]*+(?:retinol|uk|\d++|[\da-f]{5,}+)s?)*
 1600235809	tripleee	jubablanglamare(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1600236448	tripleee	(?-i:2ZGYGI4)(?# bit.ly)
 1600237289	Mast	(?-i:officialtruvalastsouthafrica)(?#sites.google.com)
