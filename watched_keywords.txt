@@ -23557,3 +23557,4 @@
 1600322594	Makyen	(?:info@)?luxuryusacars\.com
 1600323423	Makyen	contentnewsly\.com
 1600324800	tripleee	carsstore\.xyz
+1600325055	tripleee	coydoll(?!\.com)
