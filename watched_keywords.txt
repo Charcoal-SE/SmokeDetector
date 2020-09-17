@@ -23577,3 +23577,4 @@
 1600281179	Rubiksmoose	info-4geek\.com
 1600272872	Rubiksmoose	itsedupoint\.com
 1600353595	Mast	rankifyweb\.com
+1600355331	Mast	growmag\.asia
