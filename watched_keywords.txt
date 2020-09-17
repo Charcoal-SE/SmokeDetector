@@ -23550,3 +23550,4 @@
 1600294510	Daniil	live:support_60864(?#Skype)
 1600307681	Spevacus	rewa\.tech
 1600309289	Makyen	supremetechhacker(?:@gmail\.com)?
+1600312601	Ryan M	(?:pretty|very|super|kind(?:a| of)|(?:tha|i)t'?s|so)\W*gay
