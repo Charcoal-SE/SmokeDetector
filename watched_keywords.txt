@@ -23571,3 +23571,4 @@
 1600342503	Mast	souravsirclasses\.com
 1600342538	Mast	souravsirclasses(?:@gmail\.com)?
 1600342568	Mast	bangladeshsurvey\.com
+1600342610	Mast	bangladeshsurvey(?!\.com)
