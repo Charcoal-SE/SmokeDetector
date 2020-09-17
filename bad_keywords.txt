@@ -2215,7 +2215,7 @@ oxy[\W_]*+br(?:ea?)?th(?:[\W_]*+pro(?:(?!\.)[\W_]+info)?)?
 oko[\W_]*+watt
 kehamilan
 d(?:octo)?r[\W_]*+olorun(?:@gmail\.com)?
-slimy[\W_]*+meds?
+slimy[\W_]*+meds?(?:[\W_]*+(?:premium|austria|weight|decrease|phenomenon|\d++|[\da-f]{5,}+)s?)*
 störsender
 churchofilluminatiinitiation(?:@gmail\.com)?
 bangalore[\W_]*+university
