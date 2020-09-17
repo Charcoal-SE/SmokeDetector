@@ -23552,3 +23552,4 @@
 1600309289	Makyen	supremetechhacker(?:@gmail\.com)?
 1600312915	Ryan M	(?:pretty|very|super|kind(?:a| of)|(?:tha|i)t'?s|so)\W*+gay
 1600319040	K.Dᴀᴠɪs	laktotechlabs\.com
+1600319880	Makyen	keto[\W_]*+premiere[\W_]*+finland
