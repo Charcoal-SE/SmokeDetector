@@ -23554,3 +23554,4 @@
 1600319040	K.Dᴀᴠɪs	laktotechlabs\.com
 1600319880	Makyen	keto[\W_]*+premiere[\W_]*+finland
 1600320793	gparyani	sshline\.com
+1600322594	Makyen	(?:info@)?luxuryusacars\.com
