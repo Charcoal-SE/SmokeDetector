@@ -23599,3 +23599,4 @@
 1600417489	Makyen	(?-i:4a7cf81fd0357ec98c125f37ac2a6fc4)(?#apnews.com)
 1600417507	Mast	laktotech[\W_]*+labs(?!\.com)
 1600417521	Makyen	5f64555eb108e\.site123\.me
+1600417889	Mast	teletype\.in
