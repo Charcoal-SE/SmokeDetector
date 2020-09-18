@@ -23595,3 +23595,4 @@
 1600412161	Mast	moodle[\W_]*+media(?!\.com)
 1600413832	gparyani	ad-martvietnam\.com
 1600414294	Mast	zanducare\.com
+1600417470	Makyen	keto[\W_]*+super[\W_]*+powder
