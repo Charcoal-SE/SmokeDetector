@@ -23588,3 +23588,4 @@
 1600410335	Mast	ashstyles\.com
 1600411847	Makyen	(?-i:1c12a94359f4be0e3660df5ff164ba2f)(?#apnews.com)
 1600411861	Makyen	alpha[\W_]*+evolution[\W_]*+keto
+1600411884	Mast	ts-newswire
