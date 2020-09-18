@@ -23597,3 +23597,4 @@
 1600414294	Mast	zanducare\.com
 1600417470	Makyen	keto[\W_]*+super[\W_]*+powder
 1600417489	Makyen	(?-i:4a7cf81fd0357ec98c125f37ac2a6fc4)(?#apnews.com)
+1600417507	Mast	laktotech[\W_]*+labs(?!\.com)
