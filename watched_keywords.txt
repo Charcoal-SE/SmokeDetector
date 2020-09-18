@@ -23587,3 +23587,4 @@
 1600406232	Makyen	(?:offici[ae]l[\W_]*+)keto[\W_]*+premiere(?:[\W_]*+(?:australia|spain|\d++|[\da-f]{5,}+)s?)*
 1600410335	Mast	ashstyles\.com
 1600411847	Makyen	(?-i:1c12a94359f4be0e3660df5ff164ba2f)(?#apnews.com)
+1600411861	Makyen	alpha[\W_]*+evolution[\W_]*+keto
