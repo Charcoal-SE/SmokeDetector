@@ -23603,3 +23603,4 @@
 1600418972	Mast	purijankari\.in
 1600419439	Mast	hack[\W_]*+\w*+[\W_]*+fb[\W_]*+account
 1600419948	Mast	(?-i:^Adina Việt Nam$)
+1600429486	Kulfy	pushtry
