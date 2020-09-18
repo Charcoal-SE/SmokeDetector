@@ -23594,3 +23594,4 @@
 1600412110	Mast	moodlemedia\.com
 1600412161	Mast	moodle[\W_]*+media(?!\.com)
 1600413832	gparyani	ad-martvietnam\.com
+1600414294	Mast	zanducare\.com
