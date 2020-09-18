@@ -23584,4 +23584,3 @@
 1600367538	Machavity	premiumcvv\.com
 1600371656	Makyen	imoprizebox
 1600375032	Thomas Ward	screwlinux\.com
-1600406120	Makyen	keto[\W_]*+premiere(?:[\W_]*+(?:australia|\d++|[\da-f]{5,}+)s?)*
