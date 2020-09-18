@@ -23600,3 +23600,4 @@
 1600417507	Mast	laktotech[\W_]*+labs(?!\.com)
 1600417521	Makyen	5f64555eb108e\.site123\.me
 1600417889	Mast	teletype\.in
+1600418972	Mast	purijankari\.in
