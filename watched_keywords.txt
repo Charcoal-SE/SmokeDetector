@@ -23610,3 +23610,4 @@
 1600449015	Mast	sigmacontainer\.ca
 1600492089	Makyen	truvalast(?:[\W_]*+(?:australia|\d++|[\da-f]{5,}+)s?)*
 1600497217	Makyen	abtextgenerator\.com
+1600497233	Makyen	abfancytext\.com
