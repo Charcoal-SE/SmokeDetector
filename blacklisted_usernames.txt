@@ -383,3 +383,4 @@ Pound\W*define\W*MACRO
 (?-i:^Akansha Yadav$)
 (?-i:^priya submissions$)
 (?-i:^sunny garg$)
+(?-i:^Newsronic$)
