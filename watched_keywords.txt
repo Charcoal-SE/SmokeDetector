@@ -23624,3 +23624,4 @@
 1600529408	Mast	similarblogger\.wordpress\.com
 1600529592	Mast	justmashup\.com
 1600529629	Mast	justmashup(?!\.com)
+1600539546	Makyen	опасный[\W_]*+код
