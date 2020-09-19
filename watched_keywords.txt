@@ -23612,3 +23612,4 @@
 1600497217	Makyen	abtextgenerator\.com
 1600497233	Makyen	abfancytext\.com
 1600497330	Makyen	bellacouve[\W_]*+cream
+1600497509	Makyen	sigsync(?!\.com)
