@@ -23614,3 +23614,4 @@
 1600497330	Makyen	bellacouve[\W_]*+cream
 1600497509	Makyen	sigsync(?!\.com)
 1600503537	Makyen	bahraichsoftware(?!\.pythonanywhere\.com)
+1600504068	Makyen	luxitools\.com
