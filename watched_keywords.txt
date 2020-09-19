@@ -23616,3 +23616,4 @@
 1600504068	Makyen	luxitools\.com
 1600507939	double-beep	vpnblade\.com
 1600508682	Kulfy	darkhackerworld\.com
+1600370152	Spevacus	forbasis\.com
