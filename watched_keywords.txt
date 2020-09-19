@@ -23609,3 +23609,4 @@
 1600445957	Mast	technologyreviews24\.com
 1600449015	Mast	sigmacontainer\.ca
 1600492089	Makyen	truvalast(?:[\W_]*+(?:australia|\d++|[\da-f]{5,}+)s?)*
+1600497217	Makyen	abtextgenerator\.com
