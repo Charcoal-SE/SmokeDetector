@@ -1388,7 +1388,6 @@ keto\W?kara
 XexLift
 [a-z_]*+(?:1_*+)?800[\W_]*+277[\W_]*+6571[a-z_]*+
 naturnica
-g\W?force\W?x
 radiantly\W?slim
 hocasino
 [a-z_]*+(?:1_*+)?877[\W_]*+521[\W_]*+2086[a-z_]*+
