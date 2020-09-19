@@ -9867,7 +9867,7 @@
 1558351231	doppelgreener	order now
 1558351288	doppelgreener	shop now
 1558351365	doppelgreener	special offer
-1569875927	ArtOfCode	(?:order|shop|special)\W(?:today|now|offer)(?<!order\Worder)
+1569875927	ArtOfCode	(?:order|shop|special)\W(?:today|now|offer)(?<!order\Worder)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1558352212	tripleee	untappedreviews\.com
 1558354955	tripleee	whatpeopleswant\.com
 1558356650	tripleee	padharo\.co
