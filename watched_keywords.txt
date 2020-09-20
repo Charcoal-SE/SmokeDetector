@@ -4921,7 +4921,6 @@
 1534584959	Makyen	errosupport\.com
 1534589409	Zoe	dailyneeds247\.com
 1534593079	Zoe	pst\W*compress
-1534597825	doppelgreener	hacking services
 1534584575	bertieb	allahlocket\.in
 1534714736	Makyen	queenspalace\.com
 1534717883	Tetsuya Yamamoto	dailymails\.org
