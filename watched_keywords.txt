@@ -23663,3 +23663,4 @@
 1600702972	Makyen	crowlingo\.com
 1600703011	Makyen	jeremie\.zimmer(?<=medium\.com/@jeremie\.zimmer)
 1600705685	Makyen	natcoffoloud\.com
+1600710049	Spevacus	drugruger\.com
