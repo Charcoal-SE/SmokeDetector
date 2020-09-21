@@ -23655,3 +23655,4 @@
 1600680261	Mast	mrmichaelsonhackingatm(?:@gmail\.com)?
 1600680441	Mast	hack[\W_]*+and[\W_]*+take[\W_]*+money
 1600680895	Mast	georgiavsarkansasfootball\.live
+1600683202	Mast	wildcardsslcertificate\.com
