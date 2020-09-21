@@ -23652,3 +23652,4 @@
 1600671469	Makyen	creamy[\W_]*+animation(?!\.com(?<=creamyanimation\.com))
 1600673661	Mast	myhappify\.com
 1600677834	Mast	marriagecounselingalt\.com
+1600680261	Mast	mrmichaelsonhackingatm(?:@gmail\.com)?
