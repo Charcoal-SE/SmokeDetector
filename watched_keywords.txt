@@ -23653,3 +23653,4 @@
 1600673661	Mast	myhappify\.com
 1600677834	Mast	marriagecounselingalt\.com
 1600680261	Mast	mrmichaelsonhackingatm(?:@gmail\.com)?
+1600680441	Mast	hack[\W_]*+and[\W_]*+take[\W_]*+money
