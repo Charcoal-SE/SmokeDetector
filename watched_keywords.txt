@@ -23658,3 +23658,4 @@
 1600683202	Mast	wildcardsslcertificate\.com
 1600693536	Spevacus	giantpharmacyltd\.com
 1600693592	Spevacus	gridhosting\.co
+1600693639	Spevacus	theemailshop\.com
