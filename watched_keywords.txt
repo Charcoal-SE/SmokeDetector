@@ -23651,3 +23651,4 @@
 1600671381	Makyen	best[\W_]*+shapewears(?!\.com(?<=bestshapewears\.com))(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1600671452	Makyen	creamyanimation\.com
 1600671469	Makyen	creamy[\W_]*+animation(?!\.com(?<=creamyanimation\.com))
+1600673661	Mast	myhappify\.com
