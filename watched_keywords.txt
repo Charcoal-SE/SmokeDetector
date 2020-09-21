@@ -23648,3 +23648,4 @@
 1600670005	Mast	freetiktok\.com
 1600671260	Makyen	writingcreek\.com
 1600671365	Makyen	bestshapewears\.com
+1600671381	Makyen	best[\W_]*+shapewears(?!\.com(?<=bestshapewears\.com))(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
