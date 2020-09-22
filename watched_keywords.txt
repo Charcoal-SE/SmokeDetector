@@ -23686,3 +23686,4 @@
 1600763249	Mast	(?-i:^Kinemaster Mod Apk$)
 1600771907	Jeff Schaller	uniquesubmission\.com
 1600772463	Mast	netilly\.com
+1600771391	Jeff Schaller	repairbazar\.com
