@@ -23675,3 +23675,4 @@
 1600752748	Makyen	worldclasseducations\.com
 1600756163	Mast	(?-i:^callsmaster$)
 1600756264	Mast	coinpriceiq\.com
+1600699065	Spevacus	secnhack\.in
