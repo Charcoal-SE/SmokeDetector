@@ -23671,3 +23671,4 @@
 1600723915	NobodyNada	ROBLOXGAMER123
 1600724139	NobodyNada	free[\W_]*+(?:v|[rdb]o)[\W_]*+bu[cksx]+
 1600733390	Daniel Widdis	matchertech\.com
+1600751814	Makyen	callsmaster\.com
