@@ -23700,3 +23700,4 @@
 1600805208	Mast	bizloadsolutions\.wordpress\.com
 1600782868	Spevacus	cosmeticsreviewsworld\.com
 1600787480	Spevacus	lisakimberly(?:@gmail\.com)?
+1600789849	Spevacus	ehotelsreviews\.com
