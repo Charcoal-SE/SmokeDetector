@@ -23269,7 +23269,6 @@
 1599639437	Mast	itmanagedsolution\.co\.uk
 1599642359	Mast	nareshit\.com
 1599651784	Eliah Kagan	2028end\.com
-1599650856	Jeff Schaller	fnetrade\.com
 1599664245	user12986714	cách sử dụng chi tiết
 1599664574	user12986714	(?-i:6WL-gG3-Hzg)(?#youtu.be)
 1599664872	tripleee	turbo[\W_]*+erp(?!\.in)
