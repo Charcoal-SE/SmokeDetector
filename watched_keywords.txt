@@ -23721,3 +23721,4 @@
 1600845501	tripleee	ranairfandr
 1600845632	Makyen	fue[\W_]*+hair(?:[\W_]*+(?:transplant|surgery|\d++|[\da-f]{5,}+)s?)*
 1600845652	Makyen	hairtransplantinpakistanislamabad(?#youtube.com)
+1600845671	Makyen	hairtransplantisb(?#instagram.com)
