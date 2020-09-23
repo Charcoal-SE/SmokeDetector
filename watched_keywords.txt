@@ -23714,3 +23714,4 @@
 1600844764	Mast	mayab40\.com
 1600845392	tripleee	jabazaar\.com
 1600845412	tripleee	inspiredelements\.co\.uk
+1600845429	tripleee	inspired[\W_]*+elements(?!\.co\.uk)
