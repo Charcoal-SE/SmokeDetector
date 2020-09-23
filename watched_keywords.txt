@@ -23737,3 +23737,4 @@
 1600858986	Jeff Schaller	a821680401\.x\.yupoo\.com
 1600859891	Mast	computertrickstips\.com
 1600860001	Mast	healthverbs\.com
+1600861785	Mast	alltecinfo\.com
