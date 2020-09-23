@@ -14088,7 +14088,6 @@
 1573494396	Makyen	aircleaners\.com
 1573494541	Makyen	glatks\.eu5\.org
 1573494605	Makyen	notabug\.org/GLAT
-1573494987	Machavity	snappymovie\.com
 1573499058	Machavity	infplans\.com
 1573499712	Stormblessed	skyalerts\.io
 1573502685	Makyen	casino[\W_]*+oyunlarından
