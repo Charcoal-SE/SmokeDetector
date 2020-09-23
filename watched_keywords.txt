@@ -23716,3 +23716,4 @@
 1600845412	tripleee	inspiredelements\.co\.uk
 1600845429	tripleee	inspired[\W_]*+elements(?!\.co\.uk)
 1600845445	tripleee	emma3258(?# tumblr)
+1600845469	tripleee	drranairfan\.com
