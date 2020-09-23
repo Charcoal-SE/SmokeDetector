@@ -23726,3 +23726,4 @@
 1600847942	tripleee	fetch[\W_]*+rewards
 1600848055	tripleee	australianopaldirect\.com
 1600855297	tripleee	garminsmapupdates\.com
+1600855527	Ryan M	technofizi\.net
