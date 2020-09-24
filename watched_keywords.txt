@@ -23753,3 +23753,4 @@
 1600923622	Ryan M	essencemarketing\.com\.au
 1600926927	Makyen	(?-i:ultrathermoketonzreviews)(?#sites.google.com)
 1600931119	Mast	heatmachinery\.com
+1600938799	Mast	(?-i:^Pro Gamer Tips$)
