@@ -2358,3 +2358,4 @@ ciagenix(?:[\W_]*+(?:retinol|uk|\d++|[\da-f]{5,}+)s?)*
 (?-i:ISO BAHRAIN)
 hacking[\W_]*+services
 devops[\W_]*+online[\W_]*+training
+hosting[\W_]*+ultraso(?!\.com)
