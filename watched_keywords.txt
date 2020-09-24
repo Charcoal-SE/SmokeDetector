@@ -23775,3 +23775,4 @@
 1600951720	Spevacus	furnituretransfercompany\.com
 1600956870	Spevacus	theglobx\.com
 1600968837	Mast	(?-i:DaftarDistributorNASA)(?#bit.ly)
+1600983071	Makyen	jedfernandez\.com
