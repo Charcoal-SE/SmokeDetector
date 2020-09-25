@@ -23784,3 +23784,4 @@
 1601014866	Makyen	david[\W_]*+attenborough[\W_]*+cbd[\W_]*+uk
 1601014896	Makyen	(?-i:healthcaresuplements)(?#sites.google.com)
 1601015982	Daniel Widdis	socialboostershop\.com
+1601016074	Daniel Widdis	akruti\.co\.in
