@@ -23787,3 +23787,4 @@
 1601016074	Daniel Widdis	akruti\.co\.in
 1601016811	Makyen	(?:get[\W_]*+)?keto[\W_]*+premiere(?:[\W_]*+(?:sweden|\d++|[\da-f]{5,}+)s?)*
 1601016975	Makyen	keto[\W_]*+core[\W_]*+max(?:[\W_]*+(?:order|\d++|[\da-f]{5,}+)s?)*
+1601019027	Makyen	eugica\.vn
