@@ -23791,3 +23791,4 @@
 1601020365	Mast	vinayak[\W_]*+netralaya(?!\.org)
 1601020440	Makyen	cryptocove\.io
 1601021498	Makyen	uchaai\.com
+1601035184	Jeff Schaller	quellxcode\.com\.au
