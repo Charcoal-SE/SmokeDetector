@@ -23781,3 +23781,4 @@
 1601013473	NobodyNada	info-savvy\.com
 1601013674	Mast	meshdynamics\.io
 1601013838	Mast	venky\.ganti(?:@meshdynamics\.io)?
+1601014866	Makyen	david[\W_]*+attenborough[\W_]*+cbd[\W_]*+uk
