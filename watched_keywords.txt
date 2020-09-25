@@ -23785,3 +23785,4 @@
 1601014896	Makyen	(?-i:healthcaresuplements)(?#sites.google.com)
 1601015982	Daniel Widdis	socialboostershop\.com
 1601016074	Daniel Widdis	akruti\.co\.in
+1601016811	Makyen	(?:get[\W_]*+)?keto[\W_]*+premiere(?:[\W_]*+(?:sweden|\d++|[\da-f]{5,}+)s?)*
