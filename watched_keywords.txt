@@ -23795,3 +23795,4 @@
 1601038725	Spevacus	bangaloreupvcwindows\.in
 1601038785	Spevacus	bangaloreupvcp(?:@gmail\.com)?
 1601041263	Mast	hbloom\.freshdesk\.com
+1601041708	Spevacus	syghtglass\.com
