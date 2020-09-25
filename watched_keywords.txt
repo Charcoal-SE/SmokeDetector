@@ -23793,3 +23793,4 @@
 1601021498	Makyen	uchaai\.com
 1601035184	Jeff Schaller	quellxcode\.com\.au
 1601038725	Spevacus	bangaloreupvcwindows\.in
+1601038785	Spevacus	bangaloreupvcp(?:@gmail\.com)?
