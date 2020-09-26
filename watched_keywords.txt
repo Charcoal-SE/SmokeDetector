@@ -23804,3 +23804,4 @@
 1601122064	Mast	davidattenboroughcbd(?#sites.google.com)
 1601122116	Mast	david[\W_]*+attenborough[\W_]*+cbd
 1601055781	Spevacus	deepseaatlanticna\.com
+1600912225	Ryan M	coursecompare\.ca
