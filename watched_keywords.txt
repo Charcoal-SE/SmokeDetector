@@ -23798,3 +23798,4 @@
 1601041708	Spevacus	syghtglass\.com
 1601042697	Mast	viral481\.com
 1601097291	Makyen	keto[\W_]*+burning(?:[\W_]*+(?:australia|\d++|[\da-f]{5,}+)s?)*
+1601100647	Sonic the Masked Werehog	mowersboy\.com
