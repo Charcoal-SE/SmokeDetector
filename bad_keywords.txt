@@ -2359,3 +2359,4 @@ ciagenix(?:[\W_]*+(?:retinol|uk|\d++|[\da-f]{5,}+)s?)*
 hacking[\W_]*+services
 devops[\W_]*+online[\W_]*+training
 hosting[\W_]*+ultraso(?!\.com)
+semenax
