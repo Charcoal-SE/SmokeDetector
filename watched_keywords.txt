@@ -23803,3 +23803,4 @@
 1601117066	Mast	suckhoesinhlyaz\.blogspot\.com
 1601122064	Mast	davidattenboroughcbd(?#sites.google.com)
 1601122116	Mast	david[\W_]*+attenborough[\W_]*+cbd
+1601055781	Spevacus	deepseaatlanticna\.com
