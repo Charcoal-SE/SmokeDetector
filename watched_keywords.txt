@@ -23822,3 +23822,4 @@
 1601228725	Makyen	readwebpage\.com
 1601228754	Makyen	udemydegree\.com
 1601234729	Machavity	chariotproject\.eu
+1601234754	Machavity	decoder-project\.eu
