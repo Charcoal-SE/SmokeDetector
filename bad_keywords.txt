@@ -2359,3 +2359,4 @@ hacking[\W_]*+services
 devops[\W_]*+online[\W_]*+training
 hosting[\W_]*+ultraso(?!\.com)
 semenax
+streetinsider\.com\/(FMR\+Wire\/|(SI|CDN)\+Newswire)
