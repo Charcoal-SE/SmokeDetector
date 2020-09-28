@@ -384,3 +384,4 @@ Pound\W*define\W*MACRO
 (?-i:^priya submissions$)
 (?-i:^sunny garg$)
 (?-i:^Newsronic$)
+(?-i:^jack miller$)
