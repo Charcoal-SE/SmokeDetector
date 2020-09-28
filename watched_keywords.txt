@@ -23843,3 +23843,4 @@
 1601315160	Mast	dr[\W_]*+ikhile
 1601316826	tripleee	westerneclassifieds\.com
 1601316849	tripleee	travelkickz\.com
+1601316866	tripleee	travel[\W_]*+kickz(?!\.com)
