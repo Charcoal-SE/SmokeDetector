@@ -23839,3 +23839,4 @@
 1601308303	tripleee	websume\.in
 1601311745	Makyen	hypergh[\W_]*+14x
 1601314581	Mast	glovoapp\.com
+1601314794	Mast	solutiontemple27(?:@gmail\.com)?
