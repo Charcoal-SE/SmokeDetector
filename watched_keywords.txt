@@ -23862,3 +23862,4 @@
 1601361019	Makyen	prosultan\.in
 1601362053	tripleee	daily-bangladesh\.com
 1601362069	tripleee	daily[\W_]*+bangladesh(?!\.com)
+1601362342	Mast	sites\.google\.com\/site\/oveskincarecream
