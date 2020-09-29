@@ -23865,3 +23865,4 @@
 1601362342	Mast	sites\.google\.com\/site\/oveskincarecream
 1601362772	Makyen	businessmenuguide\.com
 1601367129	tripleee	nextnecklace\.com
+1601367163	tripleee	chandakagro(?!\.com)
