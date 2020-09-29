@@ -23861,3 +23861,4 @@
 1601360923	Makyen	ayurvedic
 1601361019	Makyen	prosultan\.in
 1601362053	tripleee	daily-bangladesh\.com
+1601362069	tripleee	daily[\W_]*+bangladesh(?!\.com)
