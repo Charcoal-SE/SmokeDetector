@@ -23882,3 +23882,4 @@
 1601377717	Mast	philivoorhees7(?:@gmail\.com)?
 1601378374	tripleee	trendmicrobestbuy\.com
 1601379469	Mast	tapijtenkelim\.nl
+1601379583	Mast	tapijtenkelim(?!\.nl)
