@@ -23860,3 +23860,4 @@
 1601360871	Makyen	horizon[\W_]*+keto[\W_]*+burn(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
 1601360923	Makyen	ayurvedic
 1601361019	Makyen	prosultan\.in
+1601362053	tripleee	daily-bangladesh\.com
