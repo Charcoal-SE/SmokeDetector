@@ -23891,4 +23891,3 @@
 1601399890	tripleee	volgatigris\.com
 1601439884	Undo	betfame\.com
 1601442649	tripleee	infobus
-1601442783	tripleee	(-i:^Monimix$)
