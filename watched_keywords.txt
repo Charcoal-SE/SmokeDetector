@@ -23902,3 +23902,4 @@
 1601461504	Mithical	kaydia
 1601463141	tripleee	kitchensty\.com
 1601463495	tripleee	vanityliving\.com
+1601463511	tripleee	vanity[\W_]*+living(?!\.com)
