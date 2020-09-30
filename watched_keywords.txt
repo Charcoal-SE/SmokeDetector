@@ -23894,3 +23894,4 @@
 1601442828	tripleee	(?-i:^Monimix$)
 1601443978	Makyen	acv[\W_]*+burn(?:[\W_]*+(?:south|africa|\d++|[\da-f]{5,}+)s?)*
 1601452228	tripleee	hotairstenter\.com
+1601454349	tripleee	pa10t\.com
