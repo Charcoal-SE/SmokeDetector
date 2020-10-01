@@ -23914,3 +23914,4 @@
 1601530748	tripleee	hokosoko\.com
 1601532352	Makyen	routerportal\.com
 1601532370	Makyen	financialeditorial\.com
+1601532744	Makyen	(?-i:lsampath999)(?#medium.com)
