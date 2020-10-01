@@ -2365,3 +2365,4 @@ anti[\W_]*+ageing[\W_]*+cream
 ayurvedic[\W_]*+treatments?
 invigor[\W_]*+zen
 money\s*ritual
+algon[\W_]*+korah[\W_]*+brotherhood
