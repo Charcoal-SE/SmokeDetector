@@ -2366,3 +2366,4 @@ ayurvedic[\W_]*+treatments?
 invigor[\W_]*+zen
 money\s*ritual
 algon[\W_]*+korah[\W_]*+brotherhood
+(?-i:3kHoUSQ)(?#bit.ly)
