@@ -23938,3 +23938,4 @@
 1601645712	Spevacus	joistrepair\.com
 1601647607	Spevacus	descargarvideopad\.com
 1601642822	Jeff Schaller	directory-nation\.com
+1601657943	Spevacus	firmware-file\.in
