@@ -23955,3 +23955,4 @@
 1601725255	Ryan M	jantareview\.com
 1601725297	Ryan M	yellowpagesnepal\.com
 1601730232	Mast	hack[\W_]*+wordpress[\W_]*+blog
+1601732784	Jeff Schaller	sites\.google\.com/site/primaledgemaxpills
