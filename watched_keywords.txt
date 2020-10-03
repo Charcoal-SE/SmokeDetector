@@ -23952,3 +23952,4 @@
 1601725356	Ryan M	nybizlisting\.com
 1601725323	Ryan M	nepalyp\.com
 1601725232	Ryan M	revealnepal\.com
+1601725255	Ryan M	jantareview\.com
