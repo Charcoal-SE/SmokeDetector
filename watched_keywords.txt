@@ -23650,7 +23650,6 @@
 1600710049	Spevacus	drugruger\.com
 1600711369	Spevacus	homeheavenz\.com
 1600715243	Mast	stocktipsandethicalhacking2020(?:@gmail\.com)?
-1600721948	NobodyNada	^.{0,15}sex.{0,15}$(?#SU troll)
 1600723844	Spevacus	vbuksgenerator\.com
 1600723899	NobodyNada	bux\.dev
 1600723915	NobodyNada	ROBLOXGAMER123
