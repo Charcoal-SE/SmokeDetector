@@ -42,7 +42,6 @@ groups:
       - WELZ-gh
       - DasGeek
       - EliahKagan
-      - Xnero-ai
       - rschrieken
     author_approval:
       ignored: true
