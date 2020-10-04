@@ -23965,3 +23965,4 @@
 1601803222	Mast	times-mt\.com
 1601803347	Mast	(?-i:HienGoKu)(?# youtube channel)
 1601803500	Mast	techzama\.com
+1601803682	Mast	(?-i:Bitcoin_recovery)(?# telegram)
