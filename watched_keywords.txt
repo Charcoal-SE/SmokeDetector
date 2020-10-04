@@ -23966,3 +23966,4 @@
 1601803347	Mast	(?-i:HienGoKu)(?# youtube channel)
 1601803500	Mast	techzama\.com
 1601803682	Mast	(?-i:Bitcoin_recovery)(?# telegram)
+1601816103	Victor VosMottor	lumigo\.io
