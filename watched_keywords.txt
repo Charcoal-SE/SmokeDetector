@@ -23960,3 +23960,4 @@
 1601745786	NobodyNada	(?:.{3})?playerschampionsh(?:.{1,8})?(?#corrected typo, originally watched by Mith on 2018-05-10)
 1601747106	Mast	asvi\.biz
 1601749742	Victor VosMottor	lotterycritic\.com
+1601781536	Makyen	assterefundteam(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
