@@ -23987,3 +23987,4 @@
 1601906159	Spevacus	alledmedicines\.com
 1601902827	Spevacus	amogue\.com
 1601902444	Spevacus	eryamanotokiralama\.com\.tr
+1601902291	Spevacus	spotlightglobalservices(?:@gmail\.com)?
