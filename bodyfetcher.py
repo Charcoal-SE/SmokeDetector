@@ -134,7 +134,7 @@ class BodyFetcher:
                                         {'site': site, 'posts': list(new_posts.keys())})
 
         # Add queue timing data
-        with queue_timing_modify_lock:
+        with self.queue_timing_modify_lock:
             post_add_times = [v for k, v in new_posts.items()]
             pop_time = datetime.utcnow()
             for add_time in post_add_times:
