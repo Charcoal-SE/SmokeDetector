@@ -20,7 +20,6 @@ from itertools import chain
 class BodyFetcher:
     queue = {}
     previous_max_ids = {}
-    queue_timings = {}
 
     special_cases = {
         "pt.stackoverflow.com": 10,
