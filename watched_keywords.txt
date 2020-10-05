@@ -23970,3 +23970,4 @@
 1601833749	Makyen	enkeldigital\.scroll-faster
 1601839277	Robert Columbia	delphican\.com
 1601842107	NobodyNada	beautifulnotifications\.com
+1601874863	Makyen	(?:official[\W_]*+)?max[\W_]*+prime[\W_]*+labs
