@@ -16535,7 +16535,6 @@
 1579771682	tripleee	opinionstage\.com
 1579774348	tripleee	elementary[\W_]*+travel
 1579774398	tripleee	collegewrestling2020\.live
-1579775481	Shree	calendly\.com
 1579777436	tripleee	sumadhuraaspireaurum\.com
 1579779276	tripleee	cigarsmokey\.com
 1579779504	tripleee	evangelicaloutreach\.org
