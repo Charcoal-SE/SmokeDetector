@@ -2368,3 +2368,4 @@ money\s*ritual
 algon[\W_]*+korah[\W_]*+brotherhood
 (?-i:3kHoUSQ)(?#bit.ly)
 newsronic(?!\.com)
+heathbliss(?!\.com)
