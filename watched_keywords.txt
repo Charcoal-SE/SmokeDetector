@@ -23997,3 +23997,4 @@
 1601968294	Ryan M	blog\.certificationskart\.com
 1601970915	tripleee	jav\.vin
 1601981294	tripleee	longevity[\W_]*+activators?
+1601981325	tripleee	resultz[\W_]*+boost
