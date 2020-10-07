@@ -212,7 +212,7 @@ class Metasmoke:
             chatcommunicate.tell_rooms(event["message"], ("debug", "site-" + event["site"]),
                                        ("no-site-" + event["site"],), notify_site="/autoflag_fp")
         elif "exit" in message:
-            os._exit(message["exit"])
+            exit_mode(message["exit"])
         elif "blacklist" in message:
             ids = (message['blacklist']['uid'], message['blacklist']['site'])
 
