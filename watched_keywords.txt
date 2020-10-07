@@ -16635,7 +16635,6 @@
 1579971363	Eliah Kagan	zohabd\.com
 1579978101	Machavity	hulk\W*pills
 1579992330	Makyen	kshanance(?:@gmail\.com)?
-1580006897	Makyen	samsmithcyberhost(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1580011756	Makyen	avg\.com-retail\.net
 1580034948	double-beep	alsuntranslation\.com
 1580035126	double-beep	pokerampm\.xyz
