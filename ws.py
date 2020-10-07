@@ -90,6 +90,7 @@ if not GlobalVars.metasmoke_ws_host:
 # Register actually_add_queue_timings_data hook
 atexit.register(actually_add_queue_timings_data)
 
+
 # noinspection PyProtectedMember
 def restart_automatically():
     Metasmoke.send_statistics()
