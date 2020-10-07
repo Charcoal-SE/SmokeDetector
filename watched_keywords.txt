@@ -24007,3 +24007,4 @@
 1602027406	Spevacus	ufa24h\.co
 1602045229	tripleee	coin[\W_]*+price[\W_]*+iq(?!\.com)
 1602052214	tripleee	wellnesspitch\.com
+1602055888	tripleee	ctrustglobal\.com
