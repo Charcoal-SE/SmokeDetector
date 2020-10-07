@@ -22,6 +22,7 @@ last_feedbacked = None
 PICKLE_STORAGE = "pickles/"
 
 queue_timings_data = list()
+FLUSH_TIMINGS_THRES = 128
 
 
 class Any:
@@ -344,6 +345,9 @@ def add_queue_timing_data(site, time_in_queue):
     queue_timings_data.append("{} {}".format(site, time_in_queue))
     # time_in_queue comes first as it is an integer
     # and hence won't contain any whitespace or trailing ones
+    if len(queue_timings_data) >= FLUSH_TIMINGS_THRES:
+        actually_add_queue_timings_data()
+        queue_timings_data = list()
 
 
 def actually_add_queue_timings_data():
