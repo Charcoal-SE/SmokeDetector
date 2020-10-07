@@ -385,3 +385,4 @@ Pound\W*define\W*MACRO
 (?-i:^sunny garg$)
 (?-i:^Newsronic$)
 (?-i:^jack miller$)
+(?-i:^ctrustglobal$)
