@@ -342,6 +342,7 @@ def store_bodyfetcher_max_ids():
 
 
 def add_queue_timing_data(site, time_in_queue):
+    global queue_timings_data
     queue_timings_data.append("{} {}".format(site, time_in_queue))
     # time_in_queue comes first as it is an integer
     # and hence won't contain any whitespace or trailing ones
