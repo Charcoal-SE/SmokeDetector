@@ -14,6 +14,7 @@ install_thread_excepthook()
 # test it thoroughly.
 
 import os
+import atexit
 import platform
 # noinspection PyPackageRequirements
 import websocket
@@ -24,7 +25,7 @@ import chatcommunicate
 from datetime import datetime
 from spamhandling import check_if_spam_json
 from globalvars import GlobalVars
-from datahandling import _load_pickle, PICKLE_STORAGE, load_files, filter_auto_ignored_posts
+from datahandling import _load_pickle, PICKLE_STORAGE, load_files, filter_auto_ignored_posts, actually_add_queue_timings_data
 from metasmoke import Metasmoke
 from metasmoke_cache import MetasmokeCache
 from deletionwatcher import DeletionWatcher
@@ -86,6 +87,8 @@ if not GlobalVars.metasmoke_key:
 if not GlobalVars.metasmoke_ws_host:
     log('info', "No metasmoke websocket host found, which is okay if you're anti-websocket")
 
+# Register actually_add_queue_timings_data hook
+atexit.register(actually_add_queue_timings_data)
 
 # noinspection PyProtectedMember
 def restart_automatically():
