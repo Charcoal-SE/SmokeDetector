@@ -40,14 +40,15 @@ PUNCTUATION_RATIO = 0.42
 REPEATED_CHARACTER_RATIO = 0.20
 IMG_TXT_R_THRES = 0.7
 
-# >>> statistics.mean(result)
-# 0.20483261275004847
-# >>> statistics.median(result)
-# 0.20223865427238322
-# >>> statistics.stdev(result)
-# 0.031230117152319384
-ENTROPY_TOO_LOW = 0.14
-ENTROPY_TOO_HIGH = 0.26
+# >>> statistics.mean(fp_data)
+# 4.69588761500174
+# >>> statistics.median(fp_data)
+# 4.693311429330979
+# >>> statistics.stdev(fp_data)
+# 0.3192297382531828
+# The following constants are calculated using 2stdev
+ENTROPY_TOO_LOW = 4.05
+ENTROPY_TOO_HIGH = 5.33
 
 EXCEPTION_RE = r"^Domain (.*) didn't .*!$"
 RE_COMPILE = regex.compile(EXCEPTION_RE)
@@ -628,7 +629,7 @@ def mostly_img(s, site):
 
 
 @create_rule("post is likely nonsense", title=False,
-             sites=["codegolf.stackexchange.com",
+             sites=["codegolf.stackexchange.com", "ru.stackoverflow.com",
                     "stackoverflow.com", "ja.stackoverflow.com", "pt.stackoverflow.com",
                     "es.stackoverflow.com", "islam.stackexchange.com",
                     "japanese.stackexchange.com", "anime.stackexchange.com",
@@ -644,7 +645,7 @@ def nonsense(s, site):
     if "pytest" in sys.modules:
         return False, ""
     probability = [float(s.count(x)) / len(s) for x in s]
-    entropy_per_char = -sum([x * math.log2(x) for x in probability]) / len(s)
+    entropy_per_char = -sum([math.log2(x) for x in probability]) / len(s)
 
     if entropy_per_char < ENTROPY_TOO_LOW or entropy_per_char > ENTROPY_TOO_HIGH:
         return True, "Entropy per char is {:.4f}".format(entropy_per_char)
