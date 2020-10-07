@@ -26,7 +26,7 @@ from datetime import datetime
 from spamhandling import check_if_spam_json
 from globalvars import GlobalVars
 from datahandling import (_load_pickle, PICKLE_STORAGE, load_files,
-filter_auto_ignored_posts, actually_add_queue_timings_data)
+                          filter_auto_ignored_posts, actually_add_queue_timings_data)
 from metasmoke import Metasmoke
 from metasmoke_cache import MetasmokeCache
 from deletionwatcher import DeletionWatcher
