@@ -23969,7 +23969,6 @@
 1601879464	tripleee	office-settup\.com
 1601879511	Makyen	sansonetworks\.com
 1601879596	tripleee	utmios-solution\.com
-1601879947	Rubiksmoose	igmguru\.com
 1601876163	Daniel Widdis	howtouselinux\.com
 1601881069	Makyen	zdcracks\.com
 1601880304	Rubiksmoose	tempotravellerrentindelhi\.com
