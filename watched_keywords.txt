@@ -24018,3 +24018,4 @@
 1602093963	NobodyNada	safetylensusa\.com
 1602096186	Spevacus	selcousa\.com
 1602131684	tripleee	poker\w+99
+1602134654	Makyen	david[\W_]*+attenborough[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:reveiw|\d++|[\da-f]{5,}+)s?)*
