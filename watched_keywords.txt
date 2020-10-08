@@ -24024,3 +24024,4 @@
 1602145427	tripleee	apsaraofindia\.com
 1602147254	tripleee	(?-i:^Jdth$)
 1602148572	tripleee	semnaitik\.com
+1602148847	tripleee	finnstats\.com
