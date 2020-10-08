@@ -24020,3 +24020,4 @@
 1602134654	Makyen	david[\W_]*+attenborough[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:reveiw|\d++|[\da-f]{5,}+)s?)*
 1602135866	tripleee	trusttechbd\.com
 1602142507	tripleee	lovelifesolution\.com
+1602143908	tripleee	https?://199\.192\.
