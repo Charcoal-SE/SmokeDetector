@@ -2370,3 +2370,4 @@ algon[\W_]*+korah[\W_]*+brotherhood
 newsronic(?!\.com)
 heathbliss(?!\.com)
 samsmithcyberhost(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+(?:get[\W_]*+)?keto[\W_]*+premiere(?!\.info(?<=ketopremiere\.info))(?:[\W_]*+(?:sweden|south|africa|guru|pill|price|sale|for|finland|updated|fl|malaysia|nederland|review|france|ireland|nz|new|zealand|za|united|kingdom|capsule|supplement|diet(?:ary)?|in|australia|dischem|espana|spain|visit|web|site|and|tank|shark|\d++|[\da-f]{5,}+)s?)*
