@@ -24022,3 +24022,4 @@
 1602142507	tripleee	lovelifesolution\.com
 1602143908	tripleee	https?://199\.192\.
 1602145427	tripleee	apsaraofindia\.com
+1602147254	tripleee	(?-i:^Jdth$)
