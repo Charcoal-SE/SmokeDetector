@@ -24023,3 +24023,4 @@
 1602143908	tripleee	https?://199\.192\.
 1602145427	tripleee	apsaraofindia\.com
 1602147254	tripleee	(?-i:^Jdth$)
+1602148572	tripleee	semnaitik\.com
