@@ -16587,7 +16587,6 @@
 1579868304	Eliah Kagan	(?-i:2ZIT8ht)(?#bit.ly redirector)
 1579870313	Eliah Kagan	contactbook\.app
 1579873849	Eliah Kagan	mamamponye\.com
-1579876637	Eliah Kagan	pill?ow(?:\W+pill?ow)+
 1579876875	Eliah Kagan	question\W+for\W+you\W+oo+h+
 1579877290	Makyen	johngava80(?:@gmail\.com)?
 1579879757	Das_Geek	prophetrabbispelltemple(?:@gmail\.com)?
