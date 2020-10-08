@@ -24019,3 +24019,4 @@
 1602131684	tripleee	poker\w+99
 1602134654	Makyen	david[\W_]*+attenborough[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:reveiw|\d++|[\da-f]{5,}+)s?)*
 1602135866	tripleee	trusttechbd\.com
+1602142507	tripleee	lovelifesolution\.com
