@@ -386,3 +386,4 @@ Pound\W*define\W*MACRO
 (?-i:^Newsronic$)
 (?-i:^jack miller$)
 (?-i:^ctrustglobal$)
+(?-i:^aryaan khan$)
