@@ -24037,3 +24037,4 @@
 1602216899	Mast	amnon18\.com
 1602217497	Mast	cyb3rnub\.com
 1602217540	Mast	cyb3rnub(?:@gmail\.com)?
+1602218160	Mast	scamwatch\.tech
