@@ -24052,3 +24052,4 @@
 1602235604	tripleee	internetinff\.wordpress\.com
 1602236211	Makyen	pastortips\.com
 1602240194	tripleee	elbencho
+1602240552	tripleee	art chapel
