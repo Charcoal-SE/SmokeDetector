@@ -24067,3 +24067,4 @@
 1602314198	Mast	đồng[\W_]*+hồ
 1602314253	NobodyNada	pcbonline\.com
 1602319402	Mast	campusglues\.com
+1602319436	Mast	campusglues(?!\.com)
