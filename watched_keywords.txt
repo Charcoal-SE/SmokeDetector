@@ -17676,7 +17676,6 @@
 1582353058	Makyen	thestepchange\.com
 1582353083	Makyen	idreampost\.com
 1582353630	Makyen	next[\W_]*+form[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
-1582353872	Makyen	gf4central\.com
 1582354967	Makyen	essence[\W_]*+cbd(?:[\W_]*+(?:review|\d++|[\da-f]{4,}+))*
 1582357176	Makyen	doisongphapluat\.com
 1582357199	Makyen	rajkumarsdentistry\.in
