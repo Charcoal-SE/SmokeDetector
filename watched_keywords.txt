@@ -17682,7 +17682,6 @@
 1582357255	Makyen	(?-i:ULAHHQnjXDg)(?#youtu.be)
 1582357279	Makyen	(?-i:RMTWeXqJIWA)(?#youtu.be)
 1582357301	Makyen	kaishywations
-1582358224	Makyen	kgx[\W_]*+keto(?:ne)?(?:[\W_]*+(?:advanced|w|\d++|[\da-f]{4,}+))*
 1582358319	Makyen	transferwesternunion623(?:@gmail\.com)?
 1582359127	Makyen	debtreliefsupport\.org
 1582360770	Makyen	allassignmenthelp(?!\.com)
