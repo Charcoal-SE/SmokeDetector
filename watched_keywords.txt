@@ -24074,6 +24074,5 @@
 1602377303	Ryan M	thetechguru\.com
 1602380149	Ryan M	cellboosteraustralia\.com
 1602380202	Spevacus	metonec\.com
-1602380434	Ryan M	(?<!img\.)icons8\.com
 1602380738	Ryan M	unlock\.zone
 1602381207	Ryan M	\://[\w\-]*(?:tube?|music|vid|video)[\w\-]++\.zone/
