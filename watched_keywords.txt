@@ -24077,3 +24077,4 @@
 1602380738	Ryan M	unlock\.zone
 1602381207	Ryan M	\://[\w\-]*(?:tube?|music|vid|video)[\w\-]++\.zone/
 1602382724	Ryan M	icons8\.com(?<!img\.icons8\.com)
+1602398293	Nisse Engström	pawanshastri\.com
