@@ -13465,7 +13465,6 @@
 1571133980	double-beep	dekhojadu\.co
 1571136813	Makyen	lightmv\.cn
 1571136826	Makyen	gisandchips\.org
-1571136838	Makyen	opencollective\.com
 1571155710	Makyen	smular\.com
 1571155722	Makyen	(?-i:kwISmy5q0L4)
 1571155736	Makyen	oliveruncarow
