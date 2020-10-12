@@ -24100,3 +24100,4 @@
 1602517944	Mast	allonlineservice\.com
 1602517972	Mast	allonlineservices(?!\.com)
 1602523595	Spevacus	ufcmmafight\.com
+1602533493	Spevacus	dekrian\.com
