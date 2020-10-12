@@ -24090,3 +24090,4 @@
 1602503587	Ryan M	outsourcesoftwaretesting\.com
 1602504576	Ryan M	guniguru\.com
 1602506027	Spevacus	businesssitelisting\.com
+1602506681	Spevacus	locationscloud\.com
