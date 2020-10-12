@@ -22104,7 +22104,6 @@
 1595831368	Cody Gray	phdsc\.org
 1595835875	tripleee	feasycom\.com
 1595835914	tripleee	newforceltd\.com
-1595836087	tripleee	white\W*+led
 1595836126	tripleee	packersservices\.in
 1595836177	tripleee	dndgaragedoors\.com\.au
 1595836195	tripleee	uqrious\.in
