@@ -24092,3 +24092,4 @@
 1602506027	Spevacus	businesssitelisting\.com
 1602506681	Spevacus	locationscloud\.com
 1602506697	Spevacus	certsdone\.com
+1602508433	Spevacus	indianyellowpages\.com
