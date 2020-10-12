@@ -2373,3 +2373,4 @@ samsmithcyberhost(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 (?:get[\W_]*+)?keto[\W_]*+premiere(?!\.info(?<=ketopremiere\.info))(?:[\W_]*+(?:sweden|south|africa|guru|pill|price|sale|for|finland|updated|fl|malaysia|nederland|review|france|ireland|nz|new|zealand|za|united|kingdom|capsule|supplement|diet(?:ary)?|in|australia|dischem|espana|spain|visit|web|site|and|tank|shark|\d++|[\da-f]{5,}+)s?)*
 max[\W_]*+force[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 kgx[\W_]*+keto(?:ne)?(?:[\W_]*+(?:advanced|w|pill|review|read|diet|ingredients|where|to|buy|usa|number|one|no1|loss|weight|in|price|offer|special|benefit|can|reduce|new|and|keto(?:ne)?|kgx|\d++|[\da-f]{4,}+)s?)*
+open-(?<=openfileextension\.com\/open-)\w++-file
