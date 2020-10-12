@@ -24095,3 +24095,4 @@
 1602509291	Victor VosMottor	holyprofweb\.com\.ng
 1602510175	Ryan M	ibhaat\.com
 1602511847	Ryan M	opencollective\.com/\S*(?:keto|cream|pills|hair|serum|review|slim|male)[\w\-]*+
+1602512371	Spevacus	blogtech\.us
