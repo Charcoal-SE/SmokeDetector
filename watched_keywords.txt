@@ -24097,3 +24097,4 @@
 1602511847	Ryan M	opencollective\.com/\S*(?:keto|cream|pills|hair|serum|review|slim|male)[\w\-]*+
 1602512371	Spevacus	blogtech\.us
 1602512992	Ryan M	hvacdiscountstore\.com
+1602517822	Victor VosMottor	\+7\s?966\s?072\s?68\s?98
