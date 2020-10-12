@@ -2321,3 +2321,44 @@ def dig(domain):
         return ", ".join(result for result in results)
     else:
         return "No data found."
+    
+    
+@command(aliases=['man', 'manual', 'what-is'])
+def whatis(command_name):
+    all_commands = {
+        'alive': 'Replies a random message taken from a list so you can see that SmokeDetector is still running.',
+        'live': 'Replies a random message taken from a list so you can see that SmokeDetector is still running.',
+        'status': 'Shows the UTC date when SmokeDetector started running.',
+        'ms-status': 'Shows the status of metasmoke. If SmokeDetector is unable to communicate with metasmoke, then SmokeDetector will assume that metasmoke is down and continue processing posts and reporting them into chat without attempting to communicate with metasmoke.',
+        'ping-failure-counter': 'Shows the counter value used for metasmoke status auto switch. A negative value indicates consecutive successes while a positive value indicates consecutive failures. This is to be distinguished with the failure count shown by ms-status.',
+        'stat': 'Shows post scanning statistics.',
+        'rev': 'Shows the running Git revision.',
+        'ver': 'See rev ;)',
+        'help': 'Shows a small help message about SmokeDetector.',
+        'info': 'See help',
+        'commands': 'See help',
+        'apiquota': 'Shows the remaining API quota of SmokeDetector.',
+        'queuestatus': 'Shows the queue status of BodyFetcher.',
+        'blame': 'Chooses randomly from a list of people who have talked recently in the room.',
+        'location': 'Replies with the current location, as set in the config file.',
+        'test': 'args: site=<site_domain> <string>. Runs <string> against the filter as if it appeared in a question title, body, or username. To test specifically, use test-a for answer, test-q for question body, test-t for title, or test-u for username. Note that the site is optional. If site is present, the command will use filters for that site.',
+        'isblu': 'Checks if a user is blacklisted Two formats are accepted: <profile_URL> or <user_ID> <site_name>',
+        'iswlu': 'Checks if a user is whitelisted. Two formats are accepted: <profile_URL> or <user_ID> <site_name>',
+        'whoami': 'Replies with the bot’s user id for that site',
+        'whois admin': 'Replies with a list of admins (and who’s currently in the room).',
+        'whois blacklister': 'Replies with a list of blacklisters (and who’s currently in the room). Aliases for blacklister include: blacklist_manger, blacklisters, code_admin, and codeadmins.',
+        'amiprivileged': 'Lets you know if you are in the list of privileged users',
+        'amiblacklistprivileged': 'Lets you know whether or not you have blacklist manager privileges (i.e. you can blacklist without approval)',
+        'notify': 'args <chatroom_ID_number> <site_domain>. Tells SmokeDetector to ping you, in the given chatroom, when a post is reported on the given site.',
+        'unnotify': 'args: <chatroom_ID_number> <site_domain>. Cancels the previously set notification. Also, accepts the silent mode suffix (-).',
+        'unnotify-all': 'Removes all notifications.',
+        'willbenotified': 'args: <chatroom_ID_number> <site_domain>. Reports whether you will be pinged, in the given room, about spam on the given site.',
+        'allnotificationsites': 'args: <chatroom_ID_number>. Shows all sites that you will be pinged for in the given room.',
+        'scan': 'args: <post URL 1> [<post URL 2> [...<post URL 5>]] ["custom scan reason"]. Directs SmokeDetector to scan a post. This is useful when you’re not sure if a post is spam and don’t want to report it. Smokey will go through all the usual processes of scanning a post and report it if it’s spam, and will tell you that it’s not spam otherwise. If you’re sure it’s spam but it isn’t being caught, use report instead. A custom scan reason may be supplied. If you include a custom reason, it’s required to be enclosed in double quotation marks (e.g. "custom scan reason").'
+    }
+    docs = all_commands.get(command_name.replace('!!/', ''))
+    if docs:
+        return docs
+    else:
+        raise CmdException('No such command: ' + command_name)
+
