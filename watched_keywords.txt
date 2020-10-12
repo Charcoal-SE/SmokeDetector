@@ -24098,3 +24098,4 @@
 1602512371	Spevacus	blogtech\.us
 1602512992	Ryan M	hvacdiscountstore\.com
 1602517944	Mast	allonlineservice\.com
+1602517972	Mast	allonlineservices(?!\.com)
