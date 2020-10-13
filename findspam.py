@@ -644,6 +644,7 @@ def nonsense(s, site):
         return False, ""
     if "pytest" in sys.modules:
         return False, ""
+    s = regex.sub(r"\s\s+", " ", s)
     probability = [float(s.count(x)) / len(s) for x in s]
     entropy_per_char = -sum([math.log2(x) for x in probability]) / len(s)
 
