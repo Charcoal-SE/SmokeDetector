@@ -24110,3 +24110,4 @@
 1602565822	Ryan M	office4\.uk\.net
 1602571277	Ryan M	facebook\.com(?<!developers\.facebook\.com)(?<!graph\.facebook\.com)/\S*(?:keto|cream|pills|hair|serum|review|slim|male)[\w\-]*+
 1602571489	Ryan M	Biogrowth[\W_]*+(?:pills|male)
+1602571892	Ryan M	howtohelping\.com
