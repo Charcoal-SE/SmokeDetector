@@ -24119,3 +24119,4 @@
 1602590912	Victor VosMottor	libomaxmaleperformancebuy(?#sites.google.com)
 1602591834	Ryan M	(?:my|your)\W++cheating\W++(?:husband|wife|spouse)
 1602594107	Ryan M	daftar\w*+.{0,40}(?:poker|situs|slot|joker|games)\w*
+1602606596	NobodyNada	vape-abudhabi\.com
