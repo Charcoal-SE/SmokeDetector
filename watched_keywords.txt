@@ -18104,7 +18104,6 @@
 1583393659	Makyen	(?-i:UVWudP_JBKc)(?#youtu.be)
 1583394959	Makyen	ideal[\W_]*+slim(?:[\W_]*+(?:italy|recensioni|\d++|[\da-f]{4,}+))*
 1583397514	tripleee	visasforindia\.in
-1583398769	tripleee	society[\W_]*+now(?!\.in)
 1583402014	Shree	laloge\.com
 1583406573	tripleee	futureconnectgroup\.com
 1583406602	tripleee	future[\W_]*+connect(?:[\W_]*+training)?
