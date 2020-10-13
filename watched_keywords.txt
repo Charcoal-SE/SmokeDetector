@@ -6147,7 +6147,6 @@
 1540540830	Makyen	technicalsupportforantivirus\.com
 1540542725	Makyen	(?:belinda@)?crovellbio\.com(?#email and domain)
 1540543465	Glorfindel	chcsi\.org
-1540547290	Erik the Outgolfer	folivora\.ai
 1540548168	Erik the Outgolfer	Igesame
 1540548594	Erik the Outgolfer	techtoogle\.com
 1540554142	tripleee	csrservices\.wordpress
