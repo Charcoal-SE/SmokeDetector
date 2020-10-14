@@ -2374,3 +2374,4 @@ max[\W_]*+force[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 kgx[\W_]*+keto(?:ne)?(?:[\W_]*+(?:advanced|w|pill|review|read|diet|ingredients|where|to|buy|usa|number|one|no1|loss|weight|in|price|offer|special|benefit|can|reduce|new|and|keto(?:ne)?|kgx|\d++|[\da-f]{4,}+)s?)*
 open-(?<=openfileextension\.com\/open-)\w++-file
 escorts[\W_]*+services
+escorts[\W_]*+services?
