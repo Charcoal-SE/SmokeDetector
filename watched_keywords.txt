@@ -24132,3 +24132,4 @@
 1602654769	NobodyNada	printersmag\.co\.uk
 1602657434	Ryan M	sumer\Wk
 1602659141	Makyen	godrej[\W_]*+properties
+1602661331	Ryan M	^cool_guy8\d$
