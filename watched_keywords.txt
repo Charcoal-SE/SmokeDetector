@@ -24136,3 +24136,4 @@
 1602662665	Ryan M	garmin-com-express\.support
 1602662964	Ryan M	sbsgroup\.com\.sg
 1602663260	Ryan M	pizzaddiction\.sg
+1602664582	Ryan M	fashionworld\.co\.za
