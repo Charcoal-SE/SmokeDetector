@@ -1360,7 +1360,7 @@ pyrazine
 alpha\W?rise
 premier\W?diet(?:\W?keto)?
 intelliboost\W?iq
-delhi\W*+escort
+delhi[\W_]*+escorts?
 sphere\W?labs
 epson-printer(?!-utility)
 norton-setup
@@ -2337,7 +2337,6 @@ dewa[\W_]*+poker
 7z\W*password\W*recovery
 invigor[\W_]*+max(?:[\W_]*+(?:testosterone|\d++|[\da-f]{4,}+))*
 endocannabinoid[\W_]*+framework
-delhi[\W_]*+escorts
 androxene(?:[\W_]*+(?:enhancement|male|\d++|[\da-f]{5,}+)s?)*
 lush[\W_]*+lift
 alpha[\W_]*+male[\W_]*+ex
