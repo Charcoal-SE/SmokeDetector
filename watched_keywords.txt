@@ -24151,3 +24151,4 @@
 1602693525	Spevacus	nulavance\.info
 1602698087	Makyen	seo[\W_]*+sri[\W_]*+lanka
 1602699095	Spevacus	crackedvst\.net
+1602699509	Makyen	plugin-torrent\.com
