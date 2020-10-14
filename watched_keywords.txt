@@ -8447,7 +8447,6 @@
 1552469156	tripleee	iimcat2018\.in
 1552469223	tripleee	pureautomate\.com
 1552469274	tripleee	pureibooking\.com
-1552470160	tripleee	nmat
 1552473697	tripleee	tonyfox\.co\.uk
 1552475656	tripleee	chesskart\.com
 1552476153	tripleee	hotelsavy\.com
