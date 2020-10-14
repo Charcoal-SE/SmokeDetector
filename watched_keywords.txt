@@ -10625,7 +10625,6 @@
 1561527661	Makyen	netdevv\.com
 1561527680	Makyen	(?-i:nFTec5q)
 1561527698	Makyen	netdevv1
-1561527716	Makyen	patreon\.com
 1561528448	Makyen	votofel-force\.com
 1561529642	Makyen	mead-treadwell
 1561531103	Makyen	VDCEBOOKS
