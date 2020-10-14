@@ -24134,3 +24134,4 @@
 1602659141	Makyen	godrej[\W_]*+properties
 1602661331	Ryan M	^cool_guy8\d$
 1602662665	Ryan M	garmin-com-express\.support
+1602662964	Ryan M	sbsgroup\.com\.sg
