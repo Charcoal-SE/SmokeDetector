@@ -83,7 +83,6 @@
 1496038730	tripleee	govtjobsrch\.com
 1496052391	tripleee	skincare\W?panama
 1496054040	Mithrandir	esteworld\.com
-1496056127	tripleee	60167569133
 1496056308	tripleee	iranmember\.com
 1496056593	Mithrandir	lg916\.com
 1496059924	Mithrandir	ipharmascience\.com
