@@ -24130,3 +24130,4 @@
 1602644750	Daniel Widdis	businesssitebook\.com
 1602645084	Ryan M	free-robuxgenerator\.com
 1602651922	Ryan M	patreon\.com/(?=\w)(?!api)(?!oauth2)(?!core-js)(?!zloirock)(?!deluge_cas)(?!nesdis)(?# add others found in log output)
+1602652966	rene	effecttee\.com
