@@ -24174,3 +24174,4 @@
 1602754215	Ryan M	perfmatrix\.com
 1602754458	Ryan M	edumeet\.in
 1602754569	Ryan M	lindensys\.com
+1602756981	Ryan M	benzinga\.com/\S*(?:keto|cream|pills|hair|serum|review|slim|male)[\w\-]*+
