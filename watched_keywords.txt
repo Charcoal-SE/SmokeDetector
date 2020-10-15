@@ -24176,3 +24176,4 @@
 1602756981	Ryan M	benzinga\.com/\S*(?:keto|cream|pills|hair|serum|review|slim|male)[\w\-]*+
 1602760395	Ryan M	ratesapi\.io(?<!api\.ratesapi\.io)(?!/api)
 1602760686	Ryan M	mr\.bet
+1602762416	Jeff Schaller	code\.tsue\.uz
