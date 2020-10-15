@@ -23496,7 +23496,6 @@
 1600255559	Eliah Kagan	iasiso-middleeast\.com
 1600255870	Mast	unitedstateusadccovid19(?:@gmail\.com)?
 1600259617	Mast	lucep\.com
-1600260027	tripleee	(?-i:^Petter Bell$)
 1600261674	Mast	websenorllc\.com
 1600264229	Mast	coorgpackage\.com
 1600264292	Mast	coorgpackage(?!\.com)
