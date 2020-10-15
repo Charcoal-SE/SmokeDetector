@@ -1077,7 +1077,9 @@ items:
   ns: teclab.info.
 - ns: jawatankosong.biz.
 - ns: isnpk.com.
-- ns: tigerexpertz.com.
+- comment: no longer responding 2020-10-15
+  disable: true
+  ns: tigerexpertz.com.
 - ns: cloudnstools.com.
 - ns: turnkeywebspace.com.
 - ns: namedc.com.
