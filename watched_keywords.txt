@@ -13326,7 +13326,6 @@
 1570680000	tripleee	amgodata\.com
 1570680036	Makyen	(?-i:4UXEkeQybn8)
 1570680063	Makyen	uyonlinecare\.com
-1570680079	Makyen	heartbeat\.fritz\.ai
 1570680087	Makyen	gemcraft\.in(?:@gmail\.com)
 1570680096	Makyen	(?-i:hBjOM\.jpg)
 1570680105	Makyen	support@graywhale\.me
