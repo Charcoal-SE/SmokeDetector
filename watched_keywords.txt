@@ -24194,3 +24194,4 @@
 1602828520	Ryan M	mega[\W_]++web[\W_]++design
 1602834549	Ryan M	codeandpixels\.net
 1602839692	Ryan M	utobo\.com
+1602840293	Ryan M	medium\.com/@loginradius
