@@ -24202,3 +24202,4 @@
 1602849234	Ryan M	dịch[\W_]*+vụ[\W_]*+seo
 1602853165	Ryan M	rich[\W_]*+herbs[\W_]*+foundation
 1602853288	Ryan M	yesornogenerator\.com
+1602853398	Mast	findgoodproduct\.com
