@@ -24200,3 +24200,4 @@
 1602846780	Ryan M	servicemycar\.ae
 1602847951	Ryan M	enjoyincity\.in
 1602849234	Ryan M	dịch[\W_]*+vụ[\W_]*+seo
+1602853165	Ryan M	rich[\W_]*+herbs[\W_]*+foundation
