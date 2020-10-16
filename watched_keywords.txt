@@ -24197,3 +24197,4 @@
 1602840293	Ryan M	medium\.com/@loginradius
 1602840560	Ryan M	omega[\W_]*+softwares
 1602843258	Ryan M	zeropromosi(?!\.com)
+1602843404	Ryan M	utobo(?!\.com)
