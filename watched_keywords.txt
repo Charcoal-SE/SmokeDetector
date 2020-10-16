@@ -24197,3 +24197,4 @@
 1602840560	Ryan M	omega[\W_]*+softwares
 1602843258	Ryan M	zeropromosi(?!\.com)
 1602843404	Ryan M	utobo(?!\.com)
+1602845330	Ryan M	^(?-i:Ayushi Abstar‭)$
