@@ -24189,3 +24189,4 @@
 1602811083	Makyen	chinacenter\.umn\.edu
 1602812762	NobodyNada	fre+[\W_]*+(?:v|[rdb]o)[\W_]*+bu[cksx]+(?![\W_*+]generator)(?#free vbucks/robucks/etc !generator)
 1602812779	NobodyNada	(?:fre+[\W_]*+)?(?:v|[rdb]o)[\W_]*+bu[cksx]+[\W_]*+generator(?#{free}? vbucks/robucks/etc generator)
+1602813313	NobodyNada	(?:fre+[\W_]*+)f[oa]rtni[ghte]+[\W_]*+(?:fre+[\W_]*+)?skins?[\W_]*+(?:fre+)?(?#fortnite skins, possibly free)
