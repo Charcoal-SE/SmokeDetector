@@ -24209,3 +24209,4 @@
 1602908767	Ryan M	(?:your|my)\W(?:di|co)[ck]+s?(?<!dic)(?<!coc)
 1602913913	NobodyNada	mylifemyroad\.com
 1602921294	Ryan M	distributorbanradial\.com
+1602921608	Ryan M	inforesepmasakansederhana\.com
