@@ -24213,3 +24213,4 @@
 1602923420	Makyen	synapse[\W_]*+xt
 1602925843	Ryan M	jewish collaborat(?:ors|ion)
 1602927500	Ryan M	(?-i:THE[\W_]*+(?:HECK|HELL|SHIT))
+1602927990	Ryan M	(?:islam(?:ic)?|muslims?|gays?|jew(?:s|ish)?)\W++(\w+\W++){0,6}(?:cancer|plague|pox|bane|vermin)
