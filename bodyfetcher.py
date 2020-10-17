@@ -158,7 +158,7 @@ class BodyFetcher:
                 # We don't want to go over the 100-post API cutoff, so take the last
                 # (100-len(new_post_ids)) from intermediate_posts
 
-                intermediate_posts = intermediate_posts[(100 - len(new_post_ids)):]
+                intermediate_posts = intermediate_posts[-(100 - len(new_post_ids)):]
 
                 # new_post_ids could contain edited posts, so merge it back in
                 combined = chain(intermediate_posts, new_post_ids)
