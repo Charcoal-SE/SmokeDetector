@@ -278,7 +278,10 @@ class BodyFetcher:
                     GlobalVars.api_backoff_time = time.time() + response["backoff"]
 
         if len(message_hq) > 0 and "site is required" not in message_hq:
-            tell_rooms_with("debug", message_hq.strip())
+            message_hq = message_hq.strip()
+            if len(message_hq) > 500:
+                message_hq = "\n" + message_hq
+            tell_rooms_with("debug", message_hq)
 
         if "items" not in response:
             return
