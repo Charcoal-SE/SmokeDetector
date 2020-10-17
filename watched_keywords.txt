@@ -24207,3 +24207,4 @@
 1602876982	Victor VosMottor	americapressblankatmcard(?:@gmail\.com)
 1602880283	Jeff Schaller	kyliefashions\.com
 1602893943	Ryan M	(?-i:Directory\WReport)
+1602908767	Ryan M	(?:your|my)\W(?:di|co)[ck]+s?(?<!dic)(?<!coc)
