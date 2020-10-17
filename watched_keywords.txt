@@ -24215,3 +24215,4 @@
 1602927500	Ryan M	(?-i:THE[\W_]*+(?:HECK|HELL|SHIT))
 1602927990	Ryan M	(?:islam(?:ic)?|muslims?|gays?|jew(?:s|ish)?)\W++(\w+\W++){0,6}(?:cancer|plague|pox|bane|vermin)
 1602928520	Ryan M	jew.{0,10}killed.{0,20}(?:jesus|lord|christ)
+1602929573	Ryan M	chinks?\b.{0,30}\bkill(?:ed)?|kill(?:ed)?\b.{0,30}\bchinks?
