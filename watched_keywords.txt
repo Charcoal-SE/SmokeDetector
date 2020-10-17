@@ -24208,3 +24208,4 @@
 1602893943	Ryan M	(?-i:Directory\WReport)
 1602908767	Ryan M	(?:your|my)\W(?:di|co)[ck]+s?(?<!dic)(?<!coc)
 1602913913	NobodyNada	mylifemyroad\.com
+1602920519	Sonic the Masked Werehog	nowgoal1\.com
