@@ -1320,7 +1320,6 @@
 1509461917	tripleee	deal4ask\.com
 1509462108	tripleee	09971333795
 1509465505	Glorfindel	lovemykittens\.com
-1509492890	Byte Commander	directory\Wreport
 1509512622	tripleee	mysoft\W(?:studio|youtube|ytd)
 1509528171	tripleee	pathfinder-character-sheet\.com
 1509532881	tripleee	sunshineskinclinic\.com
