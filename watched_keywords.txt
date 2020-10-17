@@ -24218,3 +24218,4 @@
 1602929573	Ryan M	chinks?\b.{0,30}\bkill(?:ed)?|kill(?:ed)?\b.{0,30}\bchinks?
 1602931132	Mast	(?-i:^OneTeamSoftware$)
 1602920519	Sonic the Masked Werehog	nowgoal1\.com
+1602935114	Ryan M	lakeviewfinancialltd(?:@gmail\.com)?
