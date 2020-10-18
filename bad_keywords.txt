@@ -2375,3 +2375,4 @@ kgx[\W_]*+keto(?:ne)?(?:[\W_]*+(?:advanced|w|pill|review|read|diet|ingredients|w
 open-(?<=openfileextension\.com\/open-)\w++-file
 escorts?[\W_]*+service(?!(?:[^<]|<(?!\/?code>))*+<\/code>)s?
 oz\s*paper\s*help(?!\.com)
+dollar\W?rain

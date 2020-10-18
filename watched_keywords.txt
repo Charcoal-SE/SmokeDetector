@@ -12674,7 +12674,6 @@
 1568350278	tripleee	search\W*tempest
 1568353331	Makyen	duaistikharaforlove\.com
 1568356099	tripleee	digitalduniyas\.com
-1568364198	tripleee	dollar\W?rain
 1568370051	double-beep	dubaibusinesssetup\.ae
 1568370897	tripleee	3ritechnologies\.com
 1568372811	double-beep	jiganet\.com
