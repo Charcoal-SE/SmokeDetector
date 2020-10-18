@@ -24233,3 +24233,4 @@
 1603011528	Victor VosMottor	ntechway\.com
 1603012183	Victor VosMottor	tryshift\.com
 1603034864	Mast	facebook[\W_]*+to[\W_]*+earn[\W_]*+money
+1603039396	Mast	create[\W_]*+money[\W_]*+at[\W_]*+home
