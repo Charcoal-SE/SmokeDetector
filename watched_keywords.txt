@@ -5499,7 +5499,6 @@
 1537490822	Tetsuya Yamamoto	eijazah\.com
 1537500813	Tetsuya Yamamoto	qxorm\.com
 1537507207	Shree	wholesaledestinations\.com
-1537510858	tripleee	TextPlain
 1537511072	tripleee	marketsandmarkets\.com
 1537513118	Glorfindel	sinranpack\.com
 1537513500	Makyen	[a-z_]*86[\W_]*551[\W_]*62570198[a-z_]*(?#sinranpack.com)
