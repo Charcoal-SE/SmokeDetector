@@ -24230,3 +24230,4 @@
 1602995041	Ryan M	daftarmaindomino\.co
 1603007119	Makyen	open-(?P<openfilequotes>\w+)-file\/"">open-\k<openfilequotes>-file
 1603007602	Makyen	primepornreview\.com
+1603007619	Makyen	primepornreview(?!\.com)
