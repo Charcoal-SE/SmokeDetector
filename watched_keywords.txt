@@ -24237,3 +24237,4 @@
 1603064761	Makyen	realtechgeek\.com
 1603075131	Makyen	chinadebitbank
 1603075151	Makyen	angelbaby[\W_]*+x
+1603075167	Makyen	bbb101\.101(?:[\W_]*+(?:at[\W_]*+)?yandex(?:[\W_]*+(?:dot[\W_]*+)?ru)?)?
