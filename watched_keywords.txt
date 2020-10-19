@@ -24268,3 +24268,4 @@
 1603115770	Victor VosMottor	theadultproxy\.com
 1603124723	Machavity	qualitycounterfeitvendor\.com
 1603128294	Spevacus	turbodigitalmarketing\.com
+1603129760	Makyen	lucky[\W_]*+patcher(?!\.pro(?<=luckypatcher\.pro))(?!\.cam(?<=luckypatcher\.cam))
