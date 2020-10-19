@@ -24256,3 +24256,4 @@
 1603091628	Mast	rokutechnicalsupportnumber\.com
 1603091881	Mast	(?-i:S31qQPlnP44)(?#youtu.be)
 1603092366	Makyen	prime[\W_]*+green[\W_]*+cbd[\W_]*+oil
+1603094531	tripleee	american[\W_]*+pickers(?:[\W_]*+cbd)?
