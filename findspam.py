@@ -70,7 +70,7 @@ URL_SHORTENER_REGEX_FRAGMENT = r"(?:{})".format('|'.join(regex.escape(site) for 
     '9nl.me', 'adf.ly', 'adfoc.us', 'adyou.co', 'alturl.com', 'amzn.to',
     'bfy.tw', 'bit.do', 'bit.ly', 'bluenik.com', 'buff.ly',
     'cl.ly', 'clkmein.com', 'dyo.gs', 'fb.me', 'goo.gl',  # doctored; see below
-    'is.gd', 'j.mp', 'ow.ly', 'post.ly', 'rurl.us', 'surl.cn.com'
+    'is.gd', 'j.mp', 'ow.ly', 'post.ly', 'rurl.us', 'surl.cn.com',
     't.co', 'tiny.cc', 'tinyurl.com', 'tr.im', 'tgig.ir',
     'wp.me', 'xurl.es'
 )))
