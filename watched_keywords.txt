@@ -24246,3 +24246,4 @@
 1603075282	Makyen	pastefs\.com/pid/173530
 1603075298	Makyen	銀聯
 1603075311	Makyen	簽證
+1603075325	Makyen	萬事達卡
