@@ -24259,3 +24259,4 @@
 1603094531	tripleee	american[\W_]*+pickers(?:[\W_]*+cbd)?
 1603095553	Ryan M	bestrecheck\.com
 1603095583	Ryan M	saritha-splendor\.com
+1603098021	Mast	pakistantravelguide\.pk
