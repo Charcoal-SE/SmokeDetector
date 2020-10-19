@@ -24239,3 +24239,4 @@
 1603075151	Makyen	angelbaby[\W_]*+x
 1603075167	Makyen	bbb101\.101(?:[\W_]*+(?:at[\W_]*+)?yandex(?:[\W_]*+(?:dot[\W_]*+)?ru)?)?
 1603075182	Makyen	bbb101(?!\.101)
+1603075200	Makyen	bbbatmcard
