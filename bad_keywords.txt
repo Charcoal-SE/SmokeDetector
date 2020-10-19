@@ -2376,3 +2376,4 @@ open-(?<=openfileextension\.com\/open-)\w++-file
 escorts?[\W_]*+service(?!(?:[^<]|<(?!\/?code>))*+<\/code>)s?
 oz\s*paper\s*help(?!\.com)
 dollar\W?rain
+cannativa(?:[\W_]*+cbd)?(?:[\W_]*+oil)?
