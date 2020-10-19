@@ -24264,3 +24264,4 @@
 1603105464	tripleee	dutch-bulbs\.com
 1603106377	Mast	ghampo[\W_]*+consultium[\W_]*+ghana
 1603108521	tripleee	fxhubs\.com
+1603108555	tripleee	researchpapers247\.com
