@@ -20136,7 +20136,6 @@
 1589315344	Makyen	irmarasika(?:@gmail\.com)?
 1589315367	Makyen	ayurani2019\.wixsite\.com
 1589321420	Daniil	swharden\.com
-1589321850	Daniil	(?-i:scottplot)
 1589344012	tripleee	theversetech\.com
 1589344287	tripleee	theugcnet\.blogspot\.com
 1589344373	tripleee	cstcbd\.com
