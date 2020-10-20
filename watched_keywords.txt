@@ -24293,3 +24293,4 @@
 1603189235	Ryan M	vision(?<!play-services-vision)[\s_-]*+20
 1603189747	Ryan M	\w*tpoint\.com(?<!javatpoint\.com)(?<!spreadsheetpoint\.com)
 1603191167	tripleee	branddiscount\.co\.uk
+1603192068	tripleee	northcarolinagutterscompany\.com
