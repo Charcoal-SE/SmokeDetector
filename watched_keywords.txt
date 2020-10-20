@@ -24294,3 +24294,4 @@
 1603189747	Ryan M	\w*tpoint\.com(?<!javatpoint\.com)(?<!spreadsheetpoint\.com)
 1603191167	tripleee	branddiscount\.co\.uk
 1603192068	tripleee	northcarolinagutterscompany\.com
+1603194693	Jeff Schaller	indianapolis\.bedpage\.com
