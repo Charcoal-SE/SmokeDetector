@@ -10241,7 +10241,6 @@
 1560009738	Machavity	joggingaddiction\.com
 1560018288	Makyen	dridahosasolutioncenter(?:@gmail\.com)?
 1560019383	Makyen	one\W*(?:p\W*)*eight\W*(?:p\W*)*six\W*(?:p\W*)*six\W*(?:p\W*)*nine\W*(?:p\W*)*four\W*(?:p\W*)*zero\W*(?:p\W*)*zero\W*(?:p\W*)*zero\W*(?:p\W*)*zero\W*(?:p\W*)*five
-1560019402	Makyen	(?:zero|one|two|three|four|five|six|seven|eight|nine|ten)(?:\W*(?:p\W*)*(?:zero|one|two|three|four|five|six|seven|eight|nine|ten)){8,}(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1560028765	Makyen	(?-i:UC2VeOYu81k7gkQwd6lLnUQQ)(?#youtube channel)
 1560049245	Machavity	etutorialspoint\.com
 1560055992	Makyen	smartkela\.com
