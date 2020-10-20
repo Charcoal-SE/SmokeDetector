@@ -579,7 +579,7 @@ def reject(msg, args, alias_used="reject"):
     if not code_permissions:
         raise CmdException("You need blacklist manager privileges to reject pull requests")
     if len(reason) < 20 and not force:
-        raise CmdException("Please provide an adequate reason for rejection so the user"
+        raise CmdException("Please provide an adequate reason for rejection (at least 20 characters long) so the user"
                            " can learn from their mistakes. Use `-force` to force the reject")
     rejected_image = "https://camo.githubusercontent.com/" \
                      "77d8d14b9016e415d36453f27ccbe06d47ef5ae2/68747470733a" \
