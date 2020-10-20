@@ -6291,7 +6291,6 @@
 1541186710	Erik the Outgolfer	Jacksonwaltonloancompany@gmail\.com
 1541189533	Erik the Outgolfer	thecustomercarenumber\.com
 1541205570	Tetsuya Yamamoto	essaywebs\.com
-1541214718	iBug	\w*(?<!java)tpoint\.com
 1541230661	Makyen	(?:100%\W*|money\W*back\W*)+.{0,20}guarant\w*
 1541240227	Erik the Outgolfer	dumpsprofessor\.us
 1541246622	Erik the Outgolfer	pensacolaautosalvage\.com
