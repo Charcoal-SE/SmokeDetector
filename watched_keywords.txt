@@ -9823,7 +9823,7 @@
 1558324320	Makyen	drakokoba(?:@gmail\.com)?
 1558324339	Makyen	coinfinanceproinvestors
 1558324359	Makyen	xp-pen\.com
-1558327807	Makyen	(?:mother)?f(?:\W*[au])+[ck]+(?<!fa[ck])(?:er|ed|ing?)?s?
+1558327807	Makyen	(?:mother)?f[au]++[ck]{2,}(?:er|ed|ing?)?s?
 1558328202	tripleee	argeseanul\.com
 1558328543	tripleee	r\W*a\W*p\W*e
 1558328830	Makyen	R\W*A\W*(?:Y\W*)?P\W*I\W*S\W*T
