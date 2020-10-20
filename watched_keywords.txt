@@ -24305,3 +24305,4 @@
 1603205494	Spevacus	bestsewingmachinereview\.com
 1603208786	NobodyNada	conservationconstructionofdallas\.com
 1603233989	Ryan M	food[\W_]*+service(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+1603236671	Ryan M	(?:top|best).{0,50}in 20\d\d
