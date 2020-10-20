@@ -24273,3 +24273,4 @@
 1603138816	Mast	hacker[\W_]*+for[\W_]*+hire
 1603157046	Ryan M	(?:zero|one|two|three|four|five|six|seven|eight|nine|ten)(?!.*three\W++four\W++five\W++six\W++seven\W++eight\W++nine)(?:\W++(?:p\W++)*(?:zero|one|two|three|four|five|six|seven|eight|nine|ten)){8,}(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1603161076	Ryan M	brought[\W_]*+my[\W_]*+(?:husband|wife)[\W_]*+back
+1603161569	Makyen	drstanlyspelltemple(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
