@@ -24291,3 +24291,4 @@
 1603185527	Ryan M	fixallerror\.com
 1603186968	Ryan M	qr-creator\.blogspot\.com
 1603189235	Ryan M	vision(?<!play-services-vision)[\s_-]*+20
+1603189747	Ryan M	\w*tpoint\.com(?<!javatpoint\.com)(?<!spreadsheetpoint\.com)
