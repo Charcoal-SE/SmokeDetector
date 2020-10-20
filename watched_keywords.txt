@@ -22737,7 +22737,6 @@
 1598256573	tripleee	almagideon[\W_]*+brotherhood
 1598256630	Mast	sacred[\W_]*+occult
 1598256912	tripleee	irsaa\.com
-1598263946	Mast	sprintzeal\.com
 1598266661	tripleee	xperria\.com
 1598266696	tripleee	toptentopic\.online
 1598268124	tripleee	(?-i:happymoni20)
