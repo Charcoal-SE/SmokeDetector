@@ -6192,7 +6192,6 @@
 1540817876	tripleee	wp\.pl
 1540817892	tripleee	rankify\d+
 1540832338	Glorfindel	ligaqq
-1540844047	Glorfindel	fiverr\.com
 1540865212	Makyen	shopelegance\.co\.uk
 1540865949	Tetsuya Yamamoto	makoislandsite\.com
 1540866382	Tetsuya Yamamoto	fonelab\.com
