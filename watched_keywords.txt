@@ -24283,3 +24283,4 @@
 1603174860	Makyen	(?:official[\W_]*+)?maxx[\W_]*+labs[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:shark|tank|\d++|[\da-f]{5,}+)s?)*
 1603175043	Mast	alizasolutions\.com
 1603175182	Mast	antivirus-blogs\.com
+1603175236	Mast	ypquest\.com
