@@ -24274,3 +24274,4 @@
 1603161569	Makyen	drstanlyspelltemple(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1603162658	Ryan M	(?:zero|one|two|three|four|five|six|seven|eight|nine|ten)\b(?!.{0,25}three\W++four\W++five\W++six\W++seven\W++eight\W++nine)(?:\W++(?:p\W++)*+(?:zero|one|two|three|four|five|six|seven|eight|nine|ten)){8,}+(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1603163661	Ryan M	fiverr\.com/\w++(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+1603165440	Ryan M	easy[\W_]*+ways?[\W_]*+(\w++[\W_]*+){0,4}make[\W_]*+money
