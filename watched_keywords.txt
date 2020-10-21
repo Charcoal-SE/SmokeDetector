@@ -24310,3 +24310,4 @@
 1603242871	Ryan M	(?:Google|Facebook).{0,50}(?:\$\s*+\d++|\d++\s*+\$).{0,20}(?:hour|day|week|month)|(?:\$\s*+\d++|\d++\s*+\$).{0,20}(?:hour|day|week|month).{0,50}(?:Google|Facebook)
 1603245956	Ryan M	afoagroservices\.com
 1603250233	Ryan M	^(?-i:jheones)$
+1603250256	Ryan M	homedust\.com
