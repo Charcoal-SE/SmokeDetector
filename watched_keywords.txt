@@ -23373,7 +23373,6 @@
 1599942738	user12986714	(?-i:6CS0e1MHB7Y)(?#youtu.be)
 1600023154	Mast	activebonorum\.com
 1600079263	Makyen	mighty[\W_]*+leaf[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:best|oil|to|live|a|healthy|buy|\d++|[\da-f]{5,}+)s?)*
-1600080516	tripleee	truvalast\.info
 1600085400	Mast	my[\W_]*+services[\W_]*+includes?
 1600085976	Mast	kvm-avindia\.co\.in
 1600085428	Mast	automobiler\.tech
