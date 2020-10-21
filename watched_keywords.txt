@@ -24308,3 +24308,4 @@
 1603236671	Ryan M	(?:top|best).{0,50}in 20\d\d
 1603237467	Ryan M	alivegeek\.com
 1603242025	Ryan M	mtouch[\W_]*+labs
+1603242871	Ryan M	(?:Google|Facebook).{0,50}(?:\$\s*+\d++|\d++\s*+\$).{0,20}(?:hour|day|week|month)|(?:\$\s*+\d++|\d++\s*+\$).{0,20}(?:hour|day|week|month).{0,50}(?:Google|Facebook)
