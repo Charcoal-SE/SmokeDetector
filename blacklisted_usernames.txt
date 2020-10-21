@@ -391,3 +391,4 @@ Pound\W*define\W*MACRO
 ^(?-i:HAGASU)$
 (?-i:^sudharshan V$)
 (?-i:^adrian awadis$)
+(?-i:^Mia Walker$)
