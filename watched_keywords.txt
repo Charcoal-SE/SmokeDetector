@@ -24318,3 +24318,4 @@
 1603260147	Ryan M	topproductsreviewer\.com
 1603262809	tripleee	master-container\.com
 1603263636	Ryan M	meticore
+1603264028	Ryan M	vitality\s+fuel
