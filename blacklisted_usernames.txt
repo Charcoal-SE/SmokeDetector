@@ -390,3 +390,4 @@ Pound\W*define\W*MACRO
 (?-i:^Petter Bell$)
 ^(?-i:HAGASU)$
 (?-i:^sudharshan V$)
+(?-i:^adrian awadis$)
