@@ -24320,3 +24320,4 @@
 1603265177	Makyen	kevin[\W_]*+costner[\W_]*+cbd(?:[\W_]*+(?:oil|\d++|[\da-f]{5,}+)s?)*
 1603265776	tripleee	(?-i:^zen wang$)
 1603266479	Ryan M	mymoneybook\.in
+1603267402	Makyen	tutorsbot\.com
