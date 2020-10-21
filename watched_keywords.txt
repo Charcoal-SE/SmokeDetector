@@ -24318,3 +24318,4 @@
 1603263636	Ryan M	meticore
 1603264024	Ryan M	vitality\s+fuel
 1603265177	Makyen	kevin[\W_]*+costner[\W_]*+cbd(?:[\W_]*+(?:oil|\d++|[\da-f]{5,}+)s?)*
+1603265776	tripleee	(?-i:^zen wang$)
