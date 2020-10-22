@@ -24344,3 +24344,4 @@
 1603306424	Jeff Schaller	sexybaccarat\.kickoffbets\.com
 1603308508	Mast	makelifefair\.weebly\.com
 1603325993	Ryan M	muscle\W++(?:\w++\W++)?boost(?:er)?
+1603326034	Ryan M	ampk[\W_]*+activators
