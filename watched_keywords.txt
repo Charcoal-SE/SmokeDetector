@@ -24366,4 +24366,3 @@
 1603360885	Victor VosMottor	city-cleaner\.com
 1603367440	Victor VosMottor	chjahan\.website
 1603368336	tripleee	pakworkforce\.com
-1603369630	Ryan M	(?:best|top|great(?:est)|must\W?see)\W++(?:\w++\W++){0,3}movies\W++(?:\w++\W++){0,5}(?:20\d\d|all time)
