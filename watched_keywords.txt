@@ -3493,7 +3493,6 @@
 1527577907	Glorfindel	coverfox\.com
 1527578566	Zoe	scholeacademy\.pk
 1527581106	doppelgreener	bookbazooka\.com
-1527584470	Makyen	\W*강남\W*
 1527585738	Makyen	saltitsolutions\.com
 1527586095	Byte Commander	wordpressdevelopmentservicess\.wordpress\.com
 1527586275	Byte Commander	iq\W?infotech
