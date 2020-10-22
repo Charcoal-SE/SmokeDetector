@@ -24351,3 +24351,4 @@
 1603348039	Ryan M	deliver(?:ing|s)?\b.{0,30}\bexperiences?
 1603348263	Sonic the Masked Werehog	yaantra\.com
 1603349043	Glorfindel	weighbridgemanufacturers\.in
+1603349339	Ryan M	services?\b.{0,15}(?:(?:fast(?:est|er)?|reliable|budget|cheap)\b.{0,15}){2,}|(?:(?:fast(?:est|er)?|reliable|budget|cheap)\b.{0,15}){2,}\bservices?
