@@ -326,7 +326,6 @@ shtylm\.com
 drilluobetemple\.webs
 creative-proteomics
 revommerce\.com
-opendatascience\.com
 123trainings
 (?:bestof|beta)cheat\.com
 surejob\.in
