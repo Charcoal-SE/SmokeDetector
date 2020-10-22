@@ -24347,3 +24347,4 @@
 1603326204	Ryan M	cell[\W_]*+activators?
 1603342143	tripleee	tongbet\.com
 1603342160	tripleee	tongbetcom
+1603346307	Makyen	pec\.resultonline\.pk
