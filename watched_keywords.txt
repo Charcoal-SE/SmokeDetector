@@ -5888,7 +5888,6 @@
 1539288489	Makyen	rajabokeponline17\.blogspot\.com
 1539288815	Makyen	d\W*r\W*(?:d\W*o\W*t\W*)?a\W*m\W*i\W*g\W*o\W*7\W*1(?:\W*(?:a\W*t\W*)?y\W*a\W*h\W*o\W*o\W*(?:d\W*o\W*t\W*)?c\W*o\W*m)?(?#obfuscated email + text: dr.amigo71)
 1539292668	gparyani	trucos-para\.com
-1539299588	Makyen	ledger\W*(?:customer\W*)? support
 1539302638	Makyen	lentbitcoin\.com
 1539307830	Tetsuya Yamamoto	banehforoosh\.com
 1539308517	Tetsuya Yamamoto	nidicareers\.com
