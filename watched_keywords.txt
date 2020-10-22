@@ -7422,7 +7422,6 @@
 1547282680	Makyen	apexessays\.com
 1547284414	Makyen	creatingchangela\.com
 1547287087	Glorfindel	mywifiext\.ca
-1547336410	Makyen	(?<!^)(?-i:AMPK)(?!$)
 1547344958	Makyen	brucedavid004(?:@gmail\.com)?
 1547350133	Makyen	techsolina\.com
 1547363043	Makyen	happyeasterimagesz\.com
