@@ -24345,3 +24345,4 @@
 1603308508	Mast	makelifefair\.weebly\.com
 1603325993	Ryan M	muscle\W++(?:\w++\W++)?boost(?:er)?
 1603326034	Ryan M	ampk[\W_]*+activators
+1603326204	Ryan M	cell[\W_]*+activators?
