@@ -24360,3 +24360,4 @@
 1603357623	Ryan M	visetech(?!\.org)
 1603357953	Ryan M	goharddrive\.com
 1603358007	Ryan M	smartfinil\.com
+1603358124	Ryan M	^Manohar\W?Parakh‭$
