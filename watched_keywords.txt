@@ -6187,7 +6187,6 @@
 1540813257	gparyani	officialfiling\.com
 1540816980	JoErNanO	ezidrive\.in
 1540817447	JoErNanO	imperial-car-rental\.com
-1540817876	tripleee	wp\.pl
 1540817892	tripleee	rankify\d+
 1540832338	Glorfindel	ligaqq
 1540865212	Makyen	shopelegance\.co\.uk
