@@ -24369,3 +24369,4 @@
 1603371758	tripleee	roomfurnisher\.com
 1603372734	Mast	best[\W_]*+(hindi|bollywood)[\W_]*+(?:\w{1,12}[\W_]*+)?movies?
 1603376481	Spevacus	hpsloyalty\.in
+1603377605	Spevacus	opendatascience\.com
