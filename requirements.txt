@@ -10,7 +10,11 @@ pytest>=4.1.0
 phonenumbers>=8.8.11
 flake8~=3.8.0
 pep8-naming==0.7.0
-regex>=2020.6.8
+#regex: as of version 2020.10.22 explicitly compiled patterns are not cached.
+#  Prior to using >= 2020.10.22, the impact needs investigation and probably
+#  substantial rewrites in all affcted code.
+#  A bit more information: https://bitbucket.org/mrabarnett/mrab-regex/issues/387/compilaton-flag-to-avoid-storing-compiled
+regex>=2020.6.8,<2020.10.22
 termcolor>=1.1.0
 sh>=1.12.14
 typing>=3.6.4
