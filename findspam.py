@@ -67,12 +67,35 @@ WHITELISTED_WEBSITES_REGEX = regex.compile(r"(?i)upload|\b(?:{})\b".format("|".j
     r"jsfiddle\.net", r"codepen\.io", "pastebin", r"nltk\.org", r"xahlee\.info", r"ergoemacs\.org"
 ] + [se_dom.replace(".", r"\.") for se_dom in SE_SITES_DOMAINS])))
 URL_SHORTENER_REGEX_FRAGMENT = r"(?:{})".format('|'.join(regex.escape(site) for site in (
-    '9nl.me', 'adf.ly', 'adfoc.us', 'adyou.co', 'alturl.com', 'amzn.to',
-    'bfy.tw', 'bit.do', 'bit.ly', 'bluenik.com', 'buff.ly',
-    'cl.ly', 'clkmein.com', 'dyo.gs', 'fb.me', 'goo.gl',  # doctored; see below
-    'is.gd', 'j.mp', 'ow.ly', 'post.ly', 'rurl.us', 'surl.cn.com',
-    't.co', 'tiny.cc', 'tinyurl.com', 'tr.im', 'tgig.ir',
-    'wp.me', 'xurl.es'
+    '9nl.me',
+    'adf.ly',
+    'adfoc.us',
+    'adyou.co',
+    'alturl.com',
+    'amzn.to',
+    'bfy.tw',
+    'bit.do',
+    'bit.ly',
+    'bluenik.com',
+    'buff.ly',
+    'cl.ly',
+    'clkmein.com',
+    'dyo.gs',
+    'fb.me',
+    'goo.gl', # doctored; see below
+    'is.gd',
+    'j.mp',
+    'ow.ly',
+    'post.ly',
+    'rurl.us',
+    'surl.cn.com',
+    't.co',
+    'tgig.ir',
+    'tiny.cc',
+    'tinyurl.com',
+    'tr.im',
+    'wp.me',
+    'xurl.es',
 )))
 # Special case for goo.gl; update the escaped regex with some actual non-escaped regex
 # to exclude anything like goo.gl/maps/...
