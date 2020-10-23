@@ -74,7 +74,7 @@ URL_SHORTENER_REGEX_FRAGMENT = r"(?:{})".format('|'.join(regex.escape(site) for 
     'is.gd', 'j.mp', 'jfi.uno', 'lnkd.in', 'murl.com', 'n9.cl', 'numl.org', 'oeis.org',
     'oke.io', 'ow.ly', 'post.ly', 'rb.gy', 'rplg.co', 'rurl.us', 'seo.app', 'snip.ly',
     'surl.cn.com', 't.co', 'tgig.ir', 'tiny.cc', 'tinyurl.com', 'tr.im', 'u3d.as', 'wa.me',
-    'we.tl', 'wn.nr', 'wp.me', 'xurl.es', 'zee.gl'
+    'we.tl', 'wn.nr', 'wp.me', 'xurl.es' 'zee.gl'
 )))
 # Special case for goo.gl; update the escaped regex with some actual non-escaped regex
 # to exclude anything like goo.gl/maps/...
