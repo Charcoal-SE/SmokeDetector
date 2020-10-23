@@ -24399,3 +24399,4 @@
 1603438457	Ryan M	(?:top|leading|best) (?:\w++\W++){0,2}(?:(?:app|development)\W++)++company
 1603440053	Ryan M	bostonaviationacademy\.com
 1603440484	Ryan M	word-combinator\.com
+1603445628	tripleee	kudatogel
