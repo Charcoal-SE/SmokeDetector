@@ -24386,3 +24386,4 @@
 1603425939	Ryan M	seindotravel\.com
 1603426534	Ryan M	novusimmigrationdelhi\.com
 1603426651	Ryan M	trusted (\w++\W++){0,3}consultants
+1603427504	Ryan M	jtgsystemswebdesign(?#facebook.com)
