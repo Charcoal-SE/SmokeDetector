@@ -798,7 +798,7 @@ def has_customer_service(s, site):  # flexible detection of customer service
 
 
 # Bad health-related keywords in titles, health sites are exempt
-@create_rule("bad keyword in {}", body=False, all=False, sites=[
+@create_rule("health-themed spam in {}", body=False, all=False, sites=[
     "stackoverflow.com", "superuser.com", "askubuntu.com", "drupal.stackexchange.com",
     "meta.stackexchange.com", "security.stackexchange.com", "webapps.stackexchange.com",
     "apple.stackexchange.com", "graphicdesign.stackexchange.com", "workplace.stackexchange.com",
@@ -827,7 +827,7 @@ def has_health(s, site):   # flexible detection of health spam in titles
     if score >= 8:
         match_objects = [organ, condition, goal, remedy, boast, other]
         words = [match.group(0) for match in match_objects if match]
-        return True, u"Health-themed spam (score {}). Keywords: *{}*".format(score, ", ".join(words).lower())
+        return True, u"Score {}: Keywords: *{}*".format(score, ", ".join(words).lower())
     return False, ""
 
 
