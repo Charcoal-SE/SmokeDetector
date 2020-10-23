@@ -69,7 +69,7 @@ WHITELISTED_WEBSITES_REGEX = regex.compile(r"(?i)upload|\b(?:{})\b".format("|".j
 URL_SHORTENER_REGEX_FRAGMENT = r"(?:{})".format('|'.join(regex.escape(site) for site in (
     '0i.is', '1th.me', '9nl.me', 'adf.ly', 'adfoc.us', 'adyou.co', 'alturl.com', 'amzn.to',
     'bfy.tw', 'bit.do', 'bit.ly', 'bluenik.com', 'buff.ly', 'chng.it', 'ckk.ai', 'cl.ly',
-    'clck.ru', 'clk.ink', 'clkmein.com', 'cutt.ly', 'dyo.gs', 'fb.me', 'gg.gg',
+    'clck.ru', 'clk.ink', 'clkmein.com', 'cutt.ly', 'dyo.gs', 'fb.me', 'gg.gg', 'ibb.co',
     'goo.gl',  # doctored; see below
     'is.gd', 'j.mp', 'jfi.uno', 'lnkd.in', 'murl.com', 'n9.cl', 'numl.org', 'oeis.org',
     'oke.io', 'ow.ly', 'post.ly', 'rb.gy', 'rplg.co', 'rurl.us', 'seo.app', 'snip.ly',
