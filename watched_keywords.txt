@@ -24389,3 +24389,4 @@
 1603427536	Ryan M	JTG[\W_]*+Systems
 1603428424	Mast	best[\W_]*+(?:hindi|bollywood)[\W_]*+(?:\w{1,12}[\W_]*+)?movies?
 1603429209	tripleee	coffee-channel\.com
+1603429564	Ryan M	smallespresso\.com
