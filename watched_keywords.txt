@@ -21687,7 +21687,6 @@
 1594434568	Makyen	bytemart\.org
 1594434584	Makyen	jobs\.edu\.eu
 1594434629	Makyen	ratonhnakes\.myshopify\.com
-1594434644	Makyen	customboxesworld\.co\.uk
 1594434660	Makyen	tools4recovery\.com
 1594434677	Makyen	filesrepairtool\.com
 1594434693	Makyen	recoverfilesdownload\.com
