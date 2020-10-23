@@ -779,17 +779,19 @@ def check_watched_numbers(s, site):
 @create_rule("potentially bad keyword in {}", all=False, sites=[
     "askubuntu.com", "webapps.stackexchange.com", "webmasters.stackexchange.com"])
 def customer_support_phrase(s, site):  # flexible detection of customer service
-    shortened = s[0:300].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
-    shortened = regex.sub(r"[^A-Za-z0-9\s]", "", s)   # deobfuscate
-    phrase = regex.compile(r"(tech(nical)? support)|((support|service|contact|help(line)?) (telephone|phone|"
-                           r"number))").search(shortened)
-    # We don't want to double-detect phrases which the bad keywords list already detects.
+    # We don't want to double-detect phrases which the bad keywords list already detects,
+    # so we remove anything that matches those from the string to test.
     excluded = regex.compile(r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)".format(
         "|".join([
             # This list contains entries from the bad keywords list which we shouldn't double-detect.
+            # Entries here need to be manually kept in sync with what's in the bad_keywords.txt.
             r"(?:support|service|helpline)(?:[\W_]*+phone)?[\W_]*+numbers?+(?<=^.{0,225})",
-        ]))).search(s)
-    if phrase and not excluded:
+        ]))).sub('', s)
+    shortened = excluded[0:300].lower()  # If applied to body, use just the beginning: otherwise many false positives.
+    shortened = regex.sub(r"[^A-Za-z0-9\s]", "", shortened)   # deobfuscate
+    phrase = regex.compile(r"(tech(nical)? support)|((support|service|contact|help(line)?) (telephone|phone|"
+                           r"number))").search(shortened)
+    if phrase:
         return True, u"Key phrase: *{}*".format(phrase.group(0))
     return False, ""
 
