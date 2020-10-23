@@ -24387,3 +24387,4 @@
 1603426534	Ryan M	novusimmigrationdelhi\.com
 1603426651	Ryan M	trusted (\w++\W++){0,3}consultants
 1603427504	Ryan M	jtgsystemswebdesign(?#facebook.com)
+1603427536	Ryan M	JTG[\W_]*+Systems
