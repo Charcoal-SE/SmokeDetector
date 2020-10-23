@@ -24394,3 +24394,4 @@
 1603437467	Glorfindel	kitchenapparatus\.com
 1603437660	tripleee	learnovita\.com
 1603438011	tripleee	hostingfacts\.net
+1603438043	tripleee	hosting[\W_]*+facts(?!\.net)
