@@ -24397,3 +24397,4 @@
 1603438043	tripleee	hosting[\W_]*+facts(?!\.net)
 1603438109	tripleee	sraboxing\.com
 1603438457	Ryan M	(?:top|leading|best) (?:\w++\W++){0,2}(?:(?:app|development)\W++)++company
+1603440053	Ryan M	bostonaviationacademy\.com
