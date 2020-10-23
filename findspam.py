@@ -776,7 +776,7 @@ def check_watched_numbers(s, site):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-@create_rule("customer support phrase in {}", all=False, sites=[
+@create_rule("potentially bad keyword in {}", all=False, sites=[
     "askubuntu.com", "webapps.stackexchange.com", "webmasters.stackexchange.com"])
 def customer_support_phrase(s, site):  # flexible detection of customer service
     shortened = s[0:300].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
