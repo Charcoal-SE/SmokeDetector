@@ -24382,3 +24382,4 @@
 1603413129	Ryan M	trusted (\w++\W++){0,3}trading platform
 1603417628	Ryan M	shikshaniti\.com
 1603417952	Ryan M	echocommunicator\.com
+1603419487	Ryan M	writeulearn\.com
