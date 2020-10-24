@@ -392,3 +392,4 @@ Pound\W*define\W*MACRO
 (?-i:^adrian awadis$)
 (?-i:^Mia Walker$)
 ^Charcoal[\W_]*+HQ$
+^charcoal$
