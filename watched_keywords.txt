@@ -3713,7 +3713,7 @@
 1528703699	Zoe	composite\W*hacks?
 1528705087	Zoe	buffett\W*financial
 1528705267	Zoe	we\W*are\W*granting\W*loans
-1528710729	Glorfindel	chat\.stackexchange\.com/rooms/11540/charcoal-hq
+1528710729	Glorfindel	chat\.stackexchange\.com/rooms/11540
 1528711470	Glorfindel	TechClouds\W?pro\W?
 1528720641	Zoe	thedevicehelp\.com
 1528720826	Zoe	100status\.com
@@ -24426,3 +24426,6 @@
 1603555106	Spevacus	movies-us\.xyz
 1603555121	Spevacus	lifehealthsource\.com
 1603566039	NobodyNada	CryptoDredge
+1603566825	NobodyNada	^Charcoal\w*+(?=.{0,32}$)
+1603566955	NobodyNada	erwaysoftware\.com
+1603567362	NobodyNada	strong>spam
