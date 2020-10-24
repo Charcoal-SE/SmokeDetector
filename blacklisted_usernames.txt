@@ -391,5 +391,4 @@ Pound\W*define\W*MACRO
 (?-i:^sudharshan V$)
 (?-i:^adrian awadis$)
 (?-i:^Mia Walker$)
-^Charcoal[\W_]*+HQ$
-^charcoal$
+^charcoal(?:[\W_]*+(?:hq|project))?$
