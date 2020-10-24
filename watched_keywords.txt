@@ -24420,3 +24420,4 @@
 1603542768	Mast	bang[\W_]*+tekso
 1603542916	Mast	tmg-clothing\.com
 1603543083	Mast	wiki87\.com
+1603550572	Glorfindel	windowcrack\.com
