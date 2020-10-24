@@ -24429,3 +24429,4 @@
 1603566825	NobodyNada	^Charcoal\w*+(?=.{0,32}$)
 1603566955	NobodyNada	erwaysoftware\.com
 1603567362	NobodyNada	strong>spam
+1603568778	Makyen	peoplesdentalclinic\.com
