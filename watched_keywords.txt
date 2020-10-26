@@ -24463,3 +24463,4 @@
 1603732250	tripleee	final[\W_]*+ank
 1603733304	Mast	(?-i:^Ulric kaka$)
 1603738900	Machavity	trucoat\.us
+1603751807	Jeff Schaller	immersify\.co\.uk
