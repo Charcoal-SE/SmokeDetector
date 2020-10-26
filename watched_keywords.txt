@@ -24447,3 +24447,4 @@
 1603697399	Makyen	jason[\W_]*+bateman[\W_]*+[ac]bd(?:[\W_]*+(?:buy|\d++|[\da-f]{5,}+)s?)*
 1603697733	Makyen	keygenbro\.com
 1603699792	tripleee	k12\.instructure\.com
+1603703080	tripleee	officialgalaxyrose\.com
