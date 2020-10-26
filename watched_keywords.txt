@@ -24461,3 +24461,4 @@
 1603721615	Spevacus	webwut\.com
 1603732141	Spevacus	fontkhojo\.in
 1603732250	tripleee	final[\W_]*+ank
+1603733304	Mast	(?-i:^Ulric kaka$)
