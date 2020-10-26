@@ -393,3 +393,4 @@ Pound\W*define\W*MACRO
 (?-i:^Mia Walker$)
 ^charcoal(?:[\W_]*+(?:hq|project))?$
 (?-i:^DariaMonsk$)
+^optimus[\W_]*+fox$
