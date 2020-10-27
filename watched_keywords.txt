@@ -24474,3 +24474,4 @@
 1603779732	Makyen	tony[\W_]*+romo[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1603782054	Makyen	nulavance[\W_]*+cream(?:[\W_]*+(?:care|skin|\d++|[\da-f]{5,}+)s?)*
 1603782107	Makyen	australisvietnam\.com
+1603782204	Makyen	maylocnuocannhien\.com
