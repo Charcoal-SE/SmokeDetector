@@ -24500,3 +24500,4 @@
 1603810463	Mast	hassib-maslah\.medium\.com
 1603816428	Machavity	getoncrm\.com
 1603823796	Spevacus	kartechify\.com
+1603841467	Makyen	spamprivate(?!\.com)
