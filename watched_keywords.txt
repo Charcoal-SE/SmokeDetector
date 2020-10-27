@@ -24468,3 +24468,4 @@
 1603765762	Machavity	mapcite\.com
 1603765887	Ryan M	SF[\W_]*+180[\W_]*+Brain|180[\W_]*+Brain[\W_]*+SF
 1603768252	Ryan M	lutoreteam
+1603776399	Makyen	gosnippets\.com
