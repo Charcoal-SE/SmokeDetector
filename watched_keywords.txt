@@ -24464,3 +24464,4 @@
 1603733304	Mast	(?-i:^Ulric kaka$)
 1603738900	Machavity	trucoat\.us
 1603751807	Jeff Schaller	immersify\.co\.uk
+1603758593	Someone_Evil	webnews21\.com
