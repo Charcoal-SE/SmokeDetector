@@ -811,7 +811,7 @@
 1504789259	tripleee	corintdesign\.tumblr\.com
 1504847330	tripleee	hypoclense
 1504854896	tripleee	wewilltransportit\.com
-1504855612	tripleee	surveymonkey\.com(?<!developer\.surveymonkey\.com)
+1504855612	tripleee	surveymonkey\.com(?=/\w)(?<!developer\.surveymonkey\.com)(?<!api\.surveymonkey\.com)(?<!help\.surveymonkey\.com)(?<!widget\.surveymonkey\.com)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1504857133	tripleee	fa9099\.com
 1504857441	tripleee	webcamfan4good
 1504861999	tripleee	parentingpod\.com
