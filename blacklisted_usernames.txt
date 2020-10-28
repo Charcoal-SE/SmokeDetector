@@ -394,3 +394,4 @@ Pound\W*define\W*MACRO
 ^charcoal(?:[\W_]*+(?:hq|project))?$
 (?-i:^DariaMonsk$)
 ^optimus[\W_]*+fox$
+(?-i:^M sohail$)
