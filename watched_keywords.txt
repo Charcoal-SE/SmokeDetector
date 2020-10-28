@@ -24514,3 +24514,4 @@
 1603873587	tripleee	smart[\W_]*+brain(?:[\W_]*+canada)?\d*
 1603874179	Ryan M	prompthelp\.us
 1603875656	tripleee	freespinsnodep\.com
+1603880815	tripleee	xecurify\.com
