@@ -24247,7 +24247,6 @@
 1603128294	Spevacus	turbodigitalmarketing\.com
 1603129760	Makyen	lucky[\W_]*+patcher(?!\.pro(?<=luckypatcher\.pro))(?!\.cam(?<=luckypatcher\.cam))
 1603131661	Spevacus	techforguru\.com
-1603138659	Mast	hackingsetting50(?:@gmail\.com)?
 1603138816	Mast	hacker[\W_]*+for[\W_]*+hire
 1603161076	Ryan M	brought[\W_]*+my[\W_]*+(?:husband|wife)[\W_]*+back
 1603161569	Makyen	drstanlyspelltemple(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
