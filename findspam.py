@@ -776,14 +776,31 @@ def check_watched_numbers(s, site):
 
 
 # noinspection PyUnusedLocal,PyMissingTypeHints
-@create_rule("bad keyword in {}")
-def has_customer_service(s, site):  # flexible detection of customer service
+@create_rule("potentially bad keyword in {}", all=False, sites=[
+    "askubuntu.com", "webapps.stackexchange.com", "webmasters.stackexchange.com"])
+def customer_support_phrase(s, site):  # flexible detection of customer service
+    # We don't want to double-detect phrases which the bad keywords list already detects,
+    # so we remove anything that matches those from the string to test.
+    excluded = regex.compile(r"(?is)(?:^|\b|(?w:\b))(?:{})(?:\b|(?w:\b)|$)".format(
+        "|".join([
+            # This list contains entries from the bad keywords list which we shouldn't double-detect.
+            # Entries here need to be manually kept in sync with what's in the bad_keywords.txt.
+            r"(?:support|service|helpline)(?:[\W_]*+phone)?[\W_]*+numbers?+(?<=^.{0,225})",
+        ]))).sub('', s)
+    shortened = excluded[0:300].lower()  # If applied to body, use just the beginning: otherwise many false positives.
+    shortened = regex.sub(r"[^A-Za-z0-9\s]", "", shortened)   # deobfuscate
+    phrase = regex.compile(r"(tech(nical)? support)|((support|service|contact|help(line)?) (telephone|phone|"
+                           r"number))").search(shortened)
+    if phrase:
+        return True, u"Key phrase: *{}*".format(phrase.group(0))
+    return False, ""
+
+
+# noinspection PyUnusedLocal,PyMissingTypeHints
+@create_rule("scam aimed at customers in {}")
+def scam_aimed_at_customers(s, site):  # Scams aimed at customers of specific companies or industries
     s = s[0:300].lower()   # if applied to body, the beginning should be enough: otherwise many false positives
     s = regex.sub(r"[^A-Za-z0-9\s]", "", s)   # deobfuscate
-    phrase = regex.compile(r"(tech(nical)? support)|((support|service|contact|help(line)?) (telephone|phone|"
-                           r"number))").search(s)
-    if phrase and site in ["askubuntu.com", "webapps.stackexchange.com", "webmasters.stackexchange.com"]:
-        return True, u"Key phrase: *{}*".format(phrase.group(0))
     business = regex.compile(
         r"(?i)\b(airlines?|apple|AVG|BT|netflix|dell|Delta|epson|facebook|gmail|google|hotmail|hp|"
         r"lexmark|mcafee|microsoft|norton|out[l1]ook|quickbooks|sage|windows?|yahoo)\b").search(s)
@@ -793,7 +810,7 @@ def has_customer_service(s, site):  # flexible detection of customer service
                                  r"contact|tech|technical|telephone|number)\b").findall(s)
         if len(set(keywords)) >= 2:
             matches = ", ".join(["".join(match) for match in keywords])
-            return True, u"Scam aimed at *{}* customers. Keywords: *{}*".format(business.group(0), matches)
+            return True, u"Targeting *{}* customers. Keywords: *{}*".format(business.group(0), matches)
     return False, ""
 
 
