@@ -24522,3 +24522,4 @@
 1603850146	Robert Columbia	getenroute\.io
 1603889314	Spevacus	twobarefeet\.co\.uk
 1603891177	Machavity	^haroldcoyer$
+1603895083	Jeff Schaller	krd\.ru
