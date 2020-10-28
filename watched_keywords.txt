@@ -24318,7 +24318,6 @@
 1603270282	tripleee	poker88
 1603270385	tripleee	bandar66
 1603271349	Makyen	ketopremierediet\.info
-1603276204	tripleee	digit-it\.com
 1603276834	tripleee	100001\.onl
 1603276851	tripleee	\b\d+\.onl
 1603277152	tripleee	priceinpakistan\.net
