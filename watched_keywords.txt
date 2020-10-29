@@ -24539,3 +24539,4 @@
 1603953251	Ryan M	lj[\W_]*+video[\W_]*+downloader
 1603953280	Ryan M	scrollmediatech\.wordpress\.com
 1603953692	Ryan M	fontchanger\.co
+1603954774	Ryan M	25796765(?#codecanyon.net)
