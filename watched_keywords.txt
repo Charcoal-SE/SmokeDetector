@@ -24555,3 +24555,4 @@
 1603979996	Mast	20\d\d[\W_]*+download[\W_]*+offers?
 1603980449	Spevacus	bestpickvacuum\.com
 1603980536	Mast	best[\W_]*+pick[\W_]*+vacuum(?!\.com)
+1603980711	Mast	cannabis[\W_]*+market[\W_]*+center
