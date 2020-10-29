@@ -24547,3 +24547,4 @@
 1603957431	tripleee	ffxiv[\W_]*+gil
 1603957734	Ryan M	trickyworlds\.com
 1603967202	tripleee	essayreviews247\.com
+1603968235	tripleee	develux\.com
