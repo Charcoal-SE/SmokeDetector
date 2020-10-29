@@ -24538,3 +24538,4 @@
 1603952989	Ryan M	calgovcouncil\.org(?#currently appears to be hacked by keto spammers, remove this watch if it looks anything like a government website when you check it)
 1603953251	Ryan M	lj[\W_]*+video[\W_]*+downloader
 1603953280	Ryan M	scrollmediatech\.wordpress\.com
+1603953692	Ryan M	fontchanger\.co
