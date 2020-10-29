@@ -2381,3 +2381,4 @@ a href="https://charcoal-se.org/" rel="nofollow noreferrer">(?:<\w+>)*https://ch
 mcafeecomactivation(?#sites.google.com)
 nulavance
 hackingsetting50(?:@gmail\.com)?
+/g-suite/"(?<=bol7\.com/g-suite/")
