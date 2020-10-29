@@ -10,9 +10,12 @@ watchlist changes) must have all or most of the following information:
 1. What does your pull request change or introduce to the project?
 2. What is the justification for the inclusion of your Pull Request (or, what 
    problem does it solve?)
-3. What does your code (if new) actually do? Summarize what your new code 
-   does (either within the code via comments, via the Git commit message, or
-   with your Pull Request)
+3. Write meaningful commit messages (i.e. do **not** use GitHub's default
+   "Update foo.py" commit message). A commit message must give a brief (but
+   thorough) explanation of what your change does and *why*. See [How to
+   write a Git commit message](https://chris.beams.io/posts/git-commit/).
+   Also include a complete explanation and justification of your proposed
+   changes in the body of your pull request.
 4. Include comments in your code to help guide reviewers through what
    you intend for the sub-portions of your code to be doing. It's a
    _lot_ easier to review code when you have a general idea of what
