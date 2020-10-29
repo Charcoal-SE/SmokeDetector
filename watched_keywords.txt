@@ -24535,3 +24535,4 @@
 1603949388	tripleee	snowandhike\.com\.au
 1603952191	Ryan M	whitebitcoins?(?!\.io)
 1603952378	tripleee	samuelthomaslaw\.com
+1603952989	Ryan M	calgovcouncil\.org(?#currently appears to be hacked by keto spammers, remove this watch if it looks anything like a government website when you check it)
