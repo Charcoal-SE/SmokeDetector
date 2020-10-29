@@ -10,8 +10,12 @@ watchlist changes) must have all or most of the following information:
 1. What does your pull request change or introduce to the project?
 2. What is the justification for the inclusion of your Pull Request (or, what 
    problem does it solve?)
-3. What does your code (if new) actually do?  Summarize what your new code 
-   does (either within the code via comments or with your Pull Request)
+3. Write meaningful commit messages (i.e. do **not** use GitHub's default
+   "Update foo.py" commit message). A commit message must give a brief (but
+   thorough) explanation of what your change does and *why*. See [How to
+   write a Git commit message](https://chris.beams.io/posts/git-commit/).
+   Also include a complete explanation and justification of your proposed
+   changes in the body of your pull request.
 4. Include comments in your code to help guide reviewers through what
    you intend for the sub-portions of your code to be doing. It's a
    _lot_ easier to review code when you have a general idea of what
@@ -35,7 +39,7 @@ watchlist changes) must have all or most of the following information:
    to merging. Obviously, the more extensive the change, the more testing
    is desirable. The testing required can be anywhere between none to
    quite a bit, depending on the changes being made.
-   
+
 Pull requests that do not have ample information attached to them for 
 justification, etc. may be rejected or may be put on hold until we get more 
 information. Failure to provide ample information will result in delayed 
@@ -45,7 +49,7 @@ processing times.
 
 Changes to watchlists or blacklists are simpler to process. A simple 
 justification for why it should be included/changed is all you really need,
-unless the change or regex(es) are complex. However, if it's that complex,
+unless the changes or regex(es) are complex. However, if it's that complex,
 then a watchlist entry may not be the most appropriate way to implement
 the detection. OTOH, that doesn't preclude using the watchlist to gather
 data.
