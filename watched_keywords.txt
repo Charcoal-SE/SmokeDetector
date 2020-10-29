@@ -24534,3 +24534,4 @@
 1603942793	Ryan M	optimizeall\.com
 1603949388	tripleee	snowandhike\.com\.au
 1603952191	Ryan M	whitebitcoins?(?!\.io)
+1603952378	tripleee	samuelthomaslaw\.com
