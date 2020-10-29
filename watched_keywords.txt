@@ -24558,3 +24558,4 @@
 1603980711	Mast	cannabis[\W_]*+market[\W_]*+center
 1603991566	Spevacus	androidjam\.com
 1603992036	Spevacus	gfsnap\.tk
+1603994344	Spevacus	writemyessays\.me
