@@ -221,7 +221,6 @@ raw\Wpower\Wxl
 pantothen
 argireline
 brick\Wmuscle
-234\W*+[89][01]\d\W*+\d{3}\W*+\d{4,10}(?#comment:234\W*+(?:8032214238|8167873816|8102960248|8149470344|8133873774|8073673757|9055637784|8135790702|9051442970)
 vividermix
 dsn\Wpre\Wworkout
 1(?<=\+1)5402277725
