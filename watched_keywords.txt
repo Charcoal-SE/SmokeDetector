@@ -24553,3 +24553,4 @@
 1603977333	Spevacus	rbsland\.com
 1603978508	Mast	machine[\W_]*+embroidery[\W_]*+services
 1603979996	Mast	20\d\d[\W_]*+download[\W_]*+offers?
+1603980449	Spevacus	bestpickvacuum\.com
