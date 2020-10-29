@@ -1323,7 +1323,6 @@ vigenix
 salus\W?defense
 livali
 slim\W?force
-/g-suite/"
 (?:black\W?)?cumin\W?oil
 grow\W?ultra
 dxn\W?code\W?strike
