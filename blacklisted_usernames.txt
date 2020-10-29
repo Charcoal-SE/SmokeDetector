@@ -395,3 +395,4 @@ Pound\W*define\W*MACRO
 (?-i:^DariaMonsk$)
 ^optimus[\W_]*+fox$
 (?-i:^M sohail$)
+(?-i:^salman khushi$)
