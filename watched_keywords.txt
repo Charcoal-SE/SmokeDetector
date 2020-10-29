@@ -24557,3 +24557,4 @@
 1603980536	Mast	best[\W_]*+pick[\W_]*+vacuum(?!\.com)
 1603980711	Mast	cannabis[\W_]*+market[\W_]*+center
 1603991566	Spevacus	androidjam\.com
+1603992036	Spevacus	gfsnap\.tk
