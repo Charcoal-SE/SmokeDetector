@@ -7485,7 +7485,6 @@
 1547637959	tripleee	get-lyrics\.net
 1547640164	Shree	infigic\.com
 1547640253	Shree	jinnieworld\.net
-1547641186	Shree	williampenn\.net
 1547656749	iBug	a(?!lt=\S{0,5}?hole)(?!nswer)\S{0,8}?h(?<!wh)ole(?!(?:[^<]|<(?!\/?code>))*+<\/code>)s*+
 1546687415	Nisse Engström	cablesforless\.com
 1547658787	Makyen	techoleaksofficial\.com
