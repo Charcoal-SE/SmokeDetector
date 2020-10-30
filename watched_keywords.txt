@@ -24579,3 +24579,4 @@
 1604072100	Jeff Schaller	kck\.st/35CC11M
 1604073230	Jeff Schaller	itouchkiosk\.com
 1604077914	Mast	sayed[\W_]*+mudassar[\W_]*+akbar
+1604082084	Mast	kdcrafts\.com
