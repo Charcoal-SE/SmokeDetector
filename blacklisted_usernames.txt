@@ -396,3 +396,4 @@ Pound\W*define\W*MACRO
 ^optimus[\W_]*+fox$
 (?-i:^M sohail$)
 (?-i:^salman khushi$)
+(?-i:^GamesDApp$)
