@@ -23159,7 +23159,6 @@
 1599534850	Makyen	dakhoayhocquocte\.com
 1599535735	Makyen	topnhacaiuytin\.net
 1599537557	Makyen	thevipsite\.com
-1599541293	Makyen	yhn777\.com
 1599544778	tripleee	primal[\W_]*+edge
 1599545884	Makyen	avinaclinic\.com
 1599545953	Makyen	بوتاکس
