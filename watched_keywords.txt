@@ -24575,3 +24575,4 @@
 1604053087	tripleee	agilefingers\.com
 1604053166	tripleee	informationpapa\.com
 1604053263	Mast	southwest[\W_]*+airlines[\W_]*+reservation
+1604057375	tripleee	blacksattakings\.com
