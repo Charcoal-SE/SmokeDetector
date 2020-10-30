@@ -24581,3 +24581,4 @@
 1604077914	Mast	sayed[\W_]*+mudassar[\W_]*+akbar
 1604082084	Mast	kdcrafts\.com
 1604082334	Mast	click[\W_]*+here[\W_]*+to[\W_]*+buy
+1604089243	Machavity	seacadtech\.com
