@@ -24566,3 +24566,4 @@
 1604037848	tripleee	teluscare\.com
 1604039772	tripleee	capitalnumbers\.com
 1604041140	Makyen	199\.192\.27\.100
+1604041234	Makyen	keto[\W_]*+premiere[\W_]*+norge(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
