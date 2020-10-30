@@ -2382,3 +2382,4 @@ nulavance
 hackingsetting50(?:@gmail\.com)?
 /g-suite/"(?<=bol7\.com/g-suite/")
 234\W*+(?:80|81|90)\d\W*+\d{3}\W*+\d{4,5}
+edb[\W_]*+mails

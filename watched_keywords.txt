@@ -16531,7 +16531,6 @@
 1579843902	Makyen	(?-i:H9yQDx1Qg8k)(?#YouTube)
 1579844309	Makyen	(?-i:phKa4utCFTE)(?#youtu.be)
 1579844336	Makyen	glamour[\W_]*+skin[\W_]*+cream(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
-1579848096	tripleee	edb[\W_]*+mails
 1579849738	Shree	logicmojo\.com
 1579849771	tripleee	delighterp\.com
 1579850825	tripleee	taxiyatri\.com
