@@ -24559,3 +24559,4 @@
 1603992036	Spevacus	gfsnap\.tk
 1603994344	Spevacus	writemyessays\.me
 1604004020	Jeff Schaller	bestpetcity\.com
+1604027747	Ryan M	six[\W_]*+sigma[\W_]*+certification
