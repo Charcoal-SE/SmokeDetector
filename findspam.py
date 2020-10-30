@@ -1884,7 +1884,7 @@ city_list = [
     "Patna", "Pune",
     "Raipur", "Rajkot", "Ramnagar", "Rishikesh", "Rohini",
     "Sonipat", "Surat",
-    "Telangana", "Tiruchi", "Tiruchirappalli", "Thane",
+    "Telangana", "Tiruchi", "Tiruchirappalli", "Tirupati", "Thane",
     "Trichinopoly", "Trichy", "Trivandrum", "Thiruvananthapuram",
     "Udaipur", "Uttarakhand",
     "Visakhapatnam", "Worli",
