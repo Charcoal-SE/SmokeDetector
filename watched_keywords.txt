@@ -24583,3 +24583,4 @@
 1604082334	Mast	click[\W_]*+here[\W_]*+to[\W_]*+buy
 1604089243	Machavity	seacadtech\.com
 1604119269	Ryan M	romslover\.club
+1604119556	Ryan M	patenteinternazionale95(?:@gmail\.com)?
