@@ -24592,3 +24592,4 @@
 1604136728	Ryan M	mod[\W_]*+apk
 1604136932	Ryan M	itechway\.net
 1604136953	Ryan M	getmodapks\.com
+1604137140	Ryan M	kinemasterdown\.com
