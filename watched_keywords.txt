@@ -24611,3 +24611,4 @@
 1604228477	rene	friendlycaptcha\.com
 1604237405	Nisse Engström	newsotime\.com
 1604243121	Jeff Schaller	theglobalkos
+1604243142	Jeff Schaller	Leroysteckler
