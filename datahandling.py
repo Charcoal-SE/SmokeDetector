@@ -113,7 +113,7 @@ def load_files():
     if _has_pickle("apiCalls.pickle"):
         GlobalVars.api_calls_per_site = _load_pickle("apiCalls.pickle", encoding='utf-8')
         # Remove the incorrectly named pickle file.
-        _remove_pickle("apiCalls.pickle", encoding='utf-8')
+        _remove_pickle("apiCalls.pickle")
         # Put the pickle in the "correct" file, from which it will be immediately reloaded.
         _dump_pickle("apiCalls.p", GlobalVars.api_calls_per_site)
     if _has_pickle("apiCalls.p"):
