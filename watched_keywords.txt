@@ -24634,3 +24634,4 @@
 1604304226	tripleee	cctvprice-bangladesh\.com
 1604305366	tripleee	bodimetrics\.com
 1604306069	tripleee	unityadsjob\.com
+1604306266	tripleee	paywao\.com
