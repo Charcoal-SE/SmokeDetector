@@ -108,6 +108,14 @@ def load_files():
         GlobalVars.notifications = _load_pickle("notifications.p", encoding='utf-8')
     if _has_pickle("whyData.p"):
         GlobalVars.why_data = _load_pickle("whyData.p", encoding='utf-8')
+    # Switch from apiCalls.pickle to apiCalls.p
+    # Correction was on 2020-11-02. Handling the apiCalls.pickle file should be able to be removed shortly thereafter.
+    if _has_pickle("apiCalls.pickle"):
+        GlobalVars.api_calls_per_site = _load_pickle("apiCalls.pickle", encoding='utf-8')
+        # Remove the incorrectly named pickle file.
+        _remove_pickle("apiCalls.pickle", encoding='utf-8')
+        # Put the pickle in the "correct" file, from which it will be immediately reloaded.
+        _dump_pickle("apiCalls.p", GlobalVars.api_calls_per_site)
     if _has_pickle("apiCalls.p"):
         GlobalVars.api_calls_per_site = _load_pickle("apiCalls.p", encoding='utf-8')
     if _has_pickle("bodyfetcherQueue.p"):
@@ -335,12 +343,12 @@ def add_or_update_api_data(site):
         GlobalVars.api_calls_per_site[site] += 1
     else:
         GlobalVars.api_calls_per_site[site] = 1
-    _dump_pickle("apiCalls.pickle", GlobalVars.api_calls_per_site)
+    _dump_pickle("apiCalls.p", GlobalVars.api_calls_per_site)
 
 
 def clear_api_data():
     GlobalVars.api_calls_per_site = {}
-    _dump_pickle("apiCalls.pickle", GlobalVars.api_calls_per_site)
+    _dump_pickle("apiCalls.p", GlobalVars.api_calls_per_site)
 
 
 def store_bodyfetcher_queue():
