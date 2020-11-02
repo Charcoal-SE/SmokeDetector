@@ -340,7 +340,7 @@ male\Wenhancement
 tl900\Wheadlamp
 zytek(?:xl)?
 biodermrx
-le\Wreel
+le[\W_]*+reel(?:(?:[\W_]*+(?:site|review|serum|skin)s?)|(?=<(?<=>le\sreel<)))(?:[\W_]*+(?:site|review|serum|skin|\d++|[\da-f]{5,}+)s?)*
 epifresh
 snail\Wsecret
 pensida
