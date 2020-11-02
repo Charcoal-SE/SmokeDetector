@@ -24644,3 +24644,4 @@
 1604321938	Kulfy	astrosakha\.com
 1604233120	Victor VosMottor	incracked\.com
 1604325258	Machavity	microsoft\.com/[\w\-/]*/ftp-manager-pro
+1604325303	Machavity	deskshare\.com
