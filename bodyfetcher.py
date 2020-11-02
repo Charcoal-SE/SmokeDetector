@@ -22,17 +22,51 @@ class BodyFetcher:
     previous_max_ids = {}
     queue_timings = {}
 
+    # special_cases are the minimum number of posts, for each of the specified sites, which
+    # need to be in the queue prior to feching posts.
+    # The number of questions we fetch each day per site is the total of
+    #   new questions + new answers + edits.
+    # Stack Overflow is handled specially. It's know that some SO edits/new posts don't
+    #   appear on the WebSocket.
+    # Queue depths were last comprehensively adjusted on 2015-12-30.
     special_cases = {
-        "pt.stackoverflow.com": 10,
-        "ru.stackoverflow.com": 10,
-        "blender.stackexchange.com": 5,
-        "codereview.stackexchange.com": 5,
-        "es.stackoverflow.com": 5,
-        "stackoverflow.com": 3,
-        "stats.stackexchange.com": 5,
-        "tex.stackexchange.com": 5,
-        "magento.stackexchange.com": 3,
-        "gis.stackexchange.com": 3
+        # 2020-11-02:
+        # Request numbers pre 2020-11-02 are very low due to a now fixed bug.
+        #
+        #                                                                pre                   sum of requests
+        #                                               questions    2020-11-02   2020-02-19    2020-10-28 to
+        #                                                per day       setting     requests      2020-11-02
+        "stackoverflow.com": 3,                     # _  6,816            3          360            4,365
+        # "math.stackexchange.com": ,               # _    596            1          473            6,346
+        "ru.stackoverflow.com": 10,                 # _    230           10           13              145
+        # "askubuntu.com": ,                        # _    140            1           88            1,199
+        "es.stackoverflow.com": 5,                  # _    138            5           25              225
+        # "superuser.com": ,                        # _    122            1           87            1,038
+        # "physics.stackexchange.com": ,            # _     90            1           76            1,161
+        "stats.stackexchange.com": 5,               # _     82            5           16              151
+        "pt.stackoverflow.com": 10,                 # _     73           10            7               75
+        # "unix.stackexchange.com": ,               # _     72            1           76              772
+        # "electronics.stackexchange.com": ,        # _     69            1           46              723
+        # "serverfault.com": ,                      # _     62            1           43              582
+        "tex.stackexchange.com": 5,                 # _     60            5            8               98
+        "blender.stackexchange.com": 5,             # _     59            5            8               85
+        # "salesforce.stackexchange.com": ,         # _     49            1           47              472
+        "gis.stackexchange.com": 3,                 # _     46            3           15              166
+        # "mathoverflow.net" (time_sensitive)       # _     37            -           33              511
+        # "english.stackexchange.com": ,            # _     36            1           34              382
+        "magento.stackexchange.com": 3,             # _     34            3            5               93
+        # "ell.stackexchange.com": ,                # _     33            1           24              365
+        # "wordpress.stackexchange.com": ,          # _     29            1           30              283
+        # "apple.stackexchange.com": ,              # _     29            1           46              294
+        # "diy.stackexchange.com": ,                # _     26            1           24              306
+        # "mathematica.stackexchange.com": ,        # _     25            1           21              384
+        # "dba.stackexchange.com": ,                # _     23            1           31              343
+        # "datascience.stackexchange.com": ,        # _     21            1           17              220
+        # "chemistry.stackexchange.com": ,          # _     20            1           20              140
+        # "security.stackexchange.com": ,           # _     18            1           15              238
+        "codereview.stackexchange.com": 5,          # _     18            5            2               39
+        #  The only reason this is the cut-off is that it was the last in the existing list
+        #    as of 2020-11-01.
     }
 
     time_sensitive = ["security.stackexchange.com", "movies.stackexchange.com",
