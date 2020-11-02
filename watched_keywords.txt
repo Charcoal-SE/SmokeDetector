@@ -24612,3 +24612,4 @@
 1604237405	Nisse Engström	newsotime\.com
 1604243121	Jeff Schaller	theglobalkos
 1604243142	Jeff Schaller	Leroysteckler
+1604281908	Ryan M	billhallman\.com
