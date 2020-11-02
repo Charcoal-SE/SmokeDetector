@@ -24632,3 +24632,4 @@
 1604298711	Makyen	iqbody\.com
 1604299620	Makyen	testonyx(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
 1604304226	tripleee	cctvprice-bangladesh\.com
+1604305366	tripleee	bodimetrics\.com
