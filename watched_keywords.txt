@@ -24658,3 +24658,4 @@
 1604386145	tripleee	klay[\W_]*+thompson[\W_]*+cbd[\W_]*+oil
 1604389452	tripleee	maxibutt
 1604389506	tripleee	harga
+1604389780	Ryan M	theleaker\.com
