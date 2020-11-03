@@ -24674,3 +24674,4 @@
 1604407952	Ryan M	rechargesafe\.com
 1604410196	Ryan M	complete[\W_]*+med[\W_]*+online
 1604410765	Spevacus	bullmarket\.solutions
+1604411318	Kulfy	intagames
