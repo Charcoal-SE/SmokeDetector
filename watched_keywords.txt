@@ -24647,3 +24647,4 @@
 1604325303	Machavity	deskshare\.com
 1604325813	tripleee	essaypapers\.reviews
 1604325830	tripleee	myyellowbiz\.com
+1604372255	Makyen	(?-i:^joy clark$)
