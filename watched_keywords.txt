@@ -24663,3 +24663,4 @@
 1604392360	tripleee	chatuchak\.vn
 1604392865	tripleee	opdigitalsolutions\.com
 1604392909	tripleee	on[\W_]*+point[\W_]*+digital[\W_]*+solutions
+1604393983	Makyen	vigor[\W_]*+male[\W_]*+xlp
