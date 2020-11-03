@@ -24677,4 +24677,3 @@
 1604418968	Jeff Schaller	bestmassagechairdesign\.com
 1604424783	NobodyNada	al-dirassa\.com
 1604427391	Makyen	divine[\W_]*+ease[\W_]*+cbd(?:[\W_]*+(?:australia|au|\d++|[\da-f]{5,}+)s?)*
-1604430274	Makyen	(?-i:FCkUJ3FOB1I)(?#youtu.be)
