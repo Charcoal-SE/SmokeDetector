@@ -397,4 +397,3 @@ Pound\W*define\W*MACRO
 (?-i:^M sohail$)
 (?-i:^salman khushi$)
 (?-i:^GamesDApp$)
-(?-i:^joy clark$)
