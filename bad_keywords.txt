@@ -2384,3 +2384,4 @@ hackingsetting50(?:@gmail\.com)?
 234\W*+(?:80|81|90)\d\W*+\d{3}\W*+\d{4,5}
 edb[\W_]*+mails
 jason[\W_]*+bateman[\W_]*+[ac]bd(?:[\W_]*+(?:buy|oil|result|\d++|[\da-f]{5,}+)s?)*
+cenforce
