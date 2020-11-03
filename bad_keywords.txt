@@ -2385,3 +2385,4 @@ hackingsetting50(?:@gmail\.com)?
 edb[\W_]*+mails
 jason[\W_]*+bateman[\W_]*+[ac]bd(?:[\W_]*+(?:buy|oil|result|\d++|[\da-f]{5,}+)s?)*
 cenforce
+fast[\W_]*+fit(?:[\W_]*+(?:keto|buy|reviews?|\d+))*
