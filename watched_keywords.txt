@@ -24687,3 +24687,4 @@
 1604486278	tripleee	(?-i:3e32mL)(?# fiverr)
 1604486311	tripleee	photos-x\.com
 1604488538	tripleee	milarose\.store
+1604489772	tripleee	milarose(?!\.store)
