@@ -24689,3 +24689,4 @@
 1604488538	tripleee	milarose\.store
 1604489772	tripleee	milarose(?!\.store)
 1604490933	tripleee	bitfera(?# deviantart)
+1604492084	tripleee	nauc\.info
