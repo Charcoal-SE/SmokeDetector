@@ -2387,3 +2387,4 @@ jason[\W_]*+bateman[\W_]*+[ac]bd(?:[\W_]*+(?:buy|oil|result|\d++|[\da-f]{5,}+)s?
 cenforce
 fast[\W_]*+fit(?:[\W_]*+(?:keto|buy|reviews?|\d+))*
 (?-i:FCkUJ3FOB1I)(?#youtu.be)
+visage[\W_]*+pur(?!cream\.wixsite\.com(?<=visagepurcream\.wixsite\.com))(?:[\W_]*+(?:cream|care|skin|\d++|[\da-f]{5,}+)s?)*
