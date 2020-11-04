@@ -19969,7 +19969,6 @@
 1588903821	Makyen	odumejetemple(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1588903848	Makyen	d(?:octo)?r[\W_]*+odumeje
 1588903872	Makyen	westvalary(?:@gmail\.com)?
-1588904925	NobodyNada - Reinstate Monica	mmoexp\.com
 1588917134	tripleee	nect\.co
 1588923182	tripleee	duanamaz\.com
 1588931114	tripleee	keto[\W_]*+melt
