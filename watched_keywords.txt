@@ -24693,3 +24693,4 @@
 1604492104	tripleee	buyactive\.com
 1604492154	tripleee	flat[\W_]*+belly[\W_]*+tonic
 1604496316	tripleee	precisebposolution\.com
+1604496367	tripleee	gundogtrainingforum\.co\.uk
