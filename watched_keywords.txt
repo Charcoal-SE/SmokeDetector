@@ -17541,7 +17541,6 @@
 1582178063	Makyen	microtklearning(?#twitter.com)
 1582178085	Makyen	(?-i:5gKYe\.jpg)
 1582178109	Makyen	(?-i:CV5L9\.jpg)
-1582178132	Makyen	ivc-services\.com
 1582178173	Makyen	165\.22\.133\.171
 1582180769	Makyen	keto[\W_]*+engaged[\W_]*+diet(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1582180792	Makyen	skintone4you(?!\.com)
