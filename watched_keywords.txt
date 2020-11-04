@@ -24683,3 +24683,4 @@
 1604474858	tripleee	tesmino\.com
 1604476843	Ryan M	^(?-i:[A-Z][a-z]{8,}+)0?18$
 1604478231	tripleee	viskytech\.com
+1604479653	tripleee	hpsupportassistantme\.com
