@@ -24678,3 +24678,4 @@
 1604427391	Makyen	divine[\W_]*+ease[\W_]*+cbd(?:[\W_]*+(?:australia|au|\d++|[\da-f]{5,}+)s?)*
 1604452484	Ryan M	cursosepromocoes\.com
 1604463663	Makyen	anonymous_ccs?
+1604469254	tripleee	barobjects\.com
