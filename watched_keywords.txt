@@ -24681,3 +24681,4 @@
 1604470649	tripleee	kirk[\W_]*+cameron[\W_]*+cbd[\W_]*+oil
 1604473885	Ryan M	cannagenix
 1604474858	tripleee	tesmino\.com
+1604476843	Ryan M	^(?-i:[A-Z][a-z]{8,}+)0?18$
