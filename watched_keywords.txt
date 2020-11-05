@@ -5151,7 +5151,6 @@
 1535715728	micsthepick	iqtestonline\.net
 1535719884	iBug	wordpressdeveloperonline\.com
 1535734753	Thomas Ward	Evil-?Droid
-1535741855	doppelgreener	base\.info
 1535741894	Makyen	seeingwithsound\.com
 1535741902	Makyen	vOICe\.vOICe
 1535762647	Makyen	achthackers\.wordpress\.com
