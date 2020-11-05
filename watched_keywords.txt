@@ -24713,3 +24713,4 @@
 1604561826	tripleee	poker[\W_]*+kaget
 1604562788	tripleee	sparkvibez\.com\.ng
 1604562832	tripleee	nanoairmask\.com
+1604562850	tripleee	nano[\W_]*+air[\W_]*+mask(?!\.com)
