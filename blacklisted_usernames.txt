@@ -401,3 +401,4 @@ Pound\W*define\W*MACRO
 (?-i:^aleena12345$)
 (?-i:^keygen bro$)
 (?-i:^Amile Institute$)
+(?-i:^tritansolutions$)
