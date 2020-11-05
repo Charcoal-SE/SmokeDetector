@@ -24722,3 +24722,4 @@
 1604573767	Makyen	clangpowertools\.com
 1604574203	tripleee	bussinessmedia\.com
 1604576238	tripleee	pristonglobal\.com
+1604576265	tripleee	priston[\W_]*+global(?!\.com)
