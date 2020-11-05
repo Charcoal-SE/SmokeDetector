@@ -400,3 +400,4 @@ Pound\W*define\W*MACRO
 (?-i:^Chhotes Indian Food$)
 (?-i:^aleena12345$)
 (?-i:^keygen bro$)
+(?-i:^Amile Institute$)
