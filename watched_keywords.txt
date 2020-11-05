@@ -24702,3 +24702,4 @@
 1604525492	Makyen	hackingloop\d*(?:[\W_]*+(?:a[\W_]*+t[\W_]*+)?g[\W_]*+m[\W_]*+a[\W_]*+i[\W_]*+l(?:[\W_]*+(?:d[\W_]*+o[\W_]*+t[\W_]*+)?c[\W_]*+o[\W_]*+m)?)?
 1604545835	Ryan M	bloglifenews\.com
 1604549957	Ryan M	arjunstarz
+1604552802	tripleee	wayne[\W_]*+gretzky[\W_]*+cbd[\W_]*+oil
