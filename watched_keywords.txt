@@ -24729,3 +24729,4 @@
 1604580722	Jeff Schaller	portalgps\.com\.br
 1604580741	Jeff Schaller	support\.bookshout\.com
 1604583906	Spevacus	https?://base\.info
+1604585285	Spevacus	youcanlearnanything105\.com
