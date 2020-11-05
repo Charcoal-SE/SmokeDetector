@@ -24723,3 +24723,4 @@
 1604574203	tripleee	bussinessmedia\.com
 1604576238	tripleee	pristonglobal\.com
 1604576265	tripleee	priston[\W_]*+global(?!\.com)
+1604576673	tripleee	google[\W_]*+play[\W_]*+cards[\W_]*+bot
