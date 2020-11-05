@@ -24711,3 +24711,4 @@
 1604558697	Ryan M	bioglass[\W_]*+mci|mci[\W_]*+bioglass
 1604561129	tripleee	argus[\W_]*+(?:embedded[\W_]*+)?systems
 1604561826	tripleee	poker[\W_]*+kaget
+1604562788	tripleee	sparkvibez\.com\.ng
