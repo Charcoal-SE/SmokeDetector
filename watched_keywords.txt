@@ -24730,3 +24730,4 @@
 1604580741	Jeff Schaller	support\.bookshout\.com
 1604583906	Spevacus	https?://base\.info
 1604585285	Spevacus	youcanlearnanything105\.com
+1604583698	Victor VosMottor	89233370720\/YYamskikh(?:@yandex\.ru)
