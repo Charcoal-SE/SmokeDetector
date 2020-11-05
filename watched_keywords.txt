@@ -24716,3 +24716,4 @@
 1604562850	tripleee	nano[\W_]*+air[\W_]*+mask(?!\.com)
 1604563716	tripleee	healthygo\.in
 1604567271	tripleee	radicalbohemiandigital\.com
+1604570053	tripleee	(?-i:^anjali tiwari$)
