@@ -402,3 +402,4 @@ Pound\W*define\W*MACRO
 (?-i:^keygen bro$)
 (?-i:^Amile Institute$)
 (?-i:^tritansolutions$)
+Mar(?:ikya|y)\W*Skula
