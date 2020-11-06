@@ -24753,3 +24753,4 @@
 1604656140	tripleee	techvake\.com
 1604659434	tripleee	creative[\W_]*+blast
 1604661027	tripleee	gobrainwiz\.in
+1604661045	tripleee	gobrar?inwiz(?!\.in)
