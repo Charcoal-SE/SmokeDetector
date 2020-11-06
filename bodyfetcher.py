@@ -37,24 +37,24 @@ class BodyFetcher:
         #                                               questions    2020-11-02   2020-02-19    2020-10-28 to
         #                                                per day       setting     requests      2020-11-02
         "stackoverflow.com": 3,                     # _  6,816            3          360            4,365
-        "math.stackexchange.com": 3,                # _    596            1          473            6,346
-        "ru.stackoverflow.com": 3,                  # _    230           10           13              145
+        "math.stackexchange.com": 2,                # _    596            1          473            6,346
+        "ru.stackoverflow.com": 2,                  # _    230           10           13              145
         # "askubuntu.com": ,                        # _    140            1           88            1,199
-        "es.stackoverflow.com": 3,                  # _    138            5           25              225
+        "es.stackoverflow.com": 2,                  # _    138            5           25              225
         # "superuser.com": ,                        # _    122            1           87            1,038
         # "physics.stackexchange.com": ,            # _     90            1           76            1,161
-        "stats.stackexchange.com": 3,               # _     82            5           16              151
-        "pt.stackoverflow.com": 3,                  # _     73           10            7               75
+        "stats.stackexchange.com": 2,               # _     82            5           16              151
+        "pt.stackoverflow.com": 2,                  # _     73           10            7               75
         # "unix.stackexchange.com": ,               # _     72            1           76              772
         # "electronics.stackexchange.com": ,        # _     69            1           46              723
         # "serverfault.com": ,                      # _     62            1           43              582
-        "tex.stackexchange.com": 3,                 # _     60            5            8               98
-        "blender.stackexchange.com": 3,             # _     59            5            8               85
+        "tex.stackexchange.com": 2,                 # _     60            5            8               98
+        "blender.stackexchange.com": 2,             # _     59            5            8               85
         # "salesforce.stackexchange.com": ,         # _     49            1           47              472
-        "gis.stackexchange.com": 3,                 # _     46            3           15              166
+        "gis.stackexchange.com": 2,                 # _     46            3           15              166
         # "mathoverflow.net" (time_sensitive)       # _     37            -           33              511
         # "english.stackexchange.com": ,            # _     36            1           34              382
-        "magento.stackexchange.com": 3,             # _     34            3            5               93
+        "magento.stackexchange.com": 2,             # _     34            3            5               93
         # "ell.stackexchange.com": ,                # _     33            1           24              365
         # "wordpress.stackexchange.com": ,          # _     29            1           30              283
         # "apple.stackexchange.com": ,              # _     29            1           46              294
