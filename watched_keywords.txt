@@ -24755,3 +24755,4 @@
 1604661027	tripleee	gobrainwiz\.in
 1604661045	tripleee	gobrar?inwiz(?!\.in)
 1604664363	tripleee	documentcloud\.adobe\.com
+1604665499	tripleee	vellko\.com
