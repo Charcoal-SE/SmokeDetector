@@ -2387,3 +2387,4 @@ fast[\W_]*+fit(?:[\W_]*+(?:keto|buy|reviews?|\d+))*
 (?-i:FCkUJ3FOB1I)(?#youtu.be)
 visage[\W_]*+pur(?!cream\.wixsite\.com(?<=visagepurcream\.wixsite\.com))(?:[\W_]*+(?:cream|care|skin|\d++|[\da-f]{5,}+)s?)*
 (?:contact|call) us (?:today|now)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+obat(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
