@@ -1301,7 +1301,9 @@ items:
   - ns2.hosting.reg.ru.
 - ns: 22.cn.
 - ns: supremedns.com.
-- ns: privateserverpk.com.
+- comment: no longer responding 2020-11-06
+  disable: true
+  ns: privateserverpk.com.
 - ns: dns-diy.net.
 - ns: sekershell.net.
 - ns: supremebox.com.
