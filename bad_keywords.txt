@@ -2388,3 +2388,4 @@ fast[\W_]*+fit(?:[\W_]*+(?:keto|buy|reviews?|\d+))*
 visage[\W_]*+pur(?!cream\.wixsite\.com(?<=visagepurcream\.wixsite\.com))(?:[\W_]*+(?:cream|care|skin|\d++|[\da-f]{5,}+)s?)*
 (?:contact|call) us (?:today|now)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 obat(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+truvalast(?:[\W_]*+(?:australia|new|zealand|south|africa|az|za|uk|enhancement|male|testo|booster|avis|pill|review|buy|\d++|[\da-f]{5,}+)s?)*
