@@ -1568,7 +1568,7 @@ def body_starts_with_title(post):
 
 
 @create_rule("luncheon meat detected", title=False, max_rep=21,
-             all=False, sites=["stackoverflow.com"])
+             all=False, sites=["stackoverflow.com", "superuser.com"])
 def luncheon_meat(s, site):  # Random "signature" like asdfghjkl
     s = regex.search(r"<p>\s*?(\S{8,})\s*?</p>$", s.lower())
 
