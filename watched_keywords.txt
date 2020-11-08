@@ -24783,3 +24783,4 @@
 1604855515	Makyen	sadistic[\W_]*+mind[\W_]*+games
 1604855618	Makyen	c:\\Users\\John doe\\Desktop\\Libreoffice_7\.0\.3_win_x64\.msi
 1604855693	Makyen	scantype[\W_]*+3[\W_]*+flag
+1604855978	Makyen	(?:mentally[\W_]*+ill[\W_]*+)?rogue[\W_]*+moderator
