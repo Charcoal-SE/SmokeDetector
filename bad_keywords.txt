@@ -2391,3 +2391,4 @@ obat(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 truvalast(?:[\W_]*+(?:australia|new|zealand|south|africa|az|za|uk|enhancement|male|testo|booster|avis|pill|review|buy|\d++|[\da-f]{5,}+)s?)*
 /(?<=\.\w{1,5}/)(?!(?:\w+-keto|keto-\w+\b)(?:["/< ]|$))(?:[^<?&\/ "]+\/)*(?:[\w-]+-keto[\w-]*|keto-[\w-]+)[^<?& "]*(?=["/< ]|$)(?#expanded product name like keto-xx in URL path)(?#Was watched on 1561929557: 2019-06-30T14:19:17Z)
 mentally[\W_]*+ill[\W_]*+rogue[\W_]*+moderator
+force[\W_]*+windows[\W_]*+defender[\W_]*+to[\W_]*+scan[\W_]*+a[\W_]*+single[\W_]*+file[\W_]*+instead[\W_]*+of[\W_]*+scanning[\W_]*+the[\W_]*+entire[\W_]*+system
