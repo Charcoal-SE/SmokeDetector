@@ -24785,3 +24785,4 @@
 1604856647	Makyen	scantype[\W_]*+3
 1604890880	Makyen	superpages\.uk\.com
 1604895602	Nisse Engström	wordcounter\.tools
+1604897968	Nisse Engström	skystarcleaning\.com
