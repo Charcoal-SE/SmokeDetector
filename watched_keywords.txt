@@ -5746,7 +5746,6 @@
 1538646129	Glorfindel	toppik\W*hair
 1538652924	Shree	hhpsoftware\.com
 1538653859	tripleee	[a-z_]*0?11[\W_]*4290[\W_]*8899[a-z_]*
-1538655456	tripleee	staxx+
 1538656303	Shree	datarecoverysupports\.com
 1538657172	tripleee	[a-z_]*(?:1_*)?844[\W_]*517[\W_]*9751[a-z_]*
 1538698644	Makyen	08106997786(?#whatsapp & text)
