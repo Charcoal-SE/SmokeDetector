@@ -403,3 +403,4 @@ Pound\W*define\W*MACRO
 (?-i:^Amile Institute$)
 (?-i:^tritansolutions$)
 Mar(?:ikya|y)\W*Skula
+(?-i:^user266417$)
