@@ -24795,3 +24795,4 @@
 1604912507	tripleee	chocolatemelangeur\.com
 1604915122	tripleee	thanhhuongshop\.com
 1604916760	tripleee	getmecrack\.com
+1604916780	tripleee	portabledownloads\.com
