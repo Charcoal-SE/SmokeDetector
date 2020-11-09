@@ -24814,3 +24814,4 @@
 1604947351	Ryan M	hack(?:er)?\b.{0,50}\b(?:call|contact|texts|phone|(?:(?:text|messages?|call|phone|logs?)\W*+){2,}+)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1604951088	Ryan M	stackpk\.com
 1604951678	Ryan M	donghochat8668\.com
+1604951770	Ryan M	marvelofficial\.com
