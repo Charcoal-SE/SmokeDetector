@@ -403,3 +403,4 @@ Pound\W*define\W*MACRO
 Mar(?:ikya|y)\W*Skula
 (?-i:^user266417$)
 (?-i:^key gen$)
+^(?-i:JoeClark)$
