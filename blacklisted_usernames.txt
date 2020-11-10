@@ -43,7 +43,6 @@ shitfuck
 ^ling xing$
 printers?\W?driver
 ^689 Cloud$
-JoeClark
 ^Gracia\W?Ryan\d*$
 ^Juliet Bell$
 ^Prasanta Shee$
