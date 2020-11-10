@@ -1073,7 +1073,9 @@ items:
 - ns: hostspicy.com.
 - ns: ewebguru.com.
 - ns: dnsowl.com.
-- ns: elitegifthouse.com.
+- comment: no longer responding 2020-11-10
+  disable: true
+  ns: elitegifthouse.com.
 - comment: no longer responding 2020-04-02
   disable: true
   ns: teclab.info.
