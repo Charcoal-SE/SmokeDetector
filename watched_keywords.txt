@@ -24829,3 +24829,4 @@
 1604991170	Ryan M	brandpromotions
 1604991187	tripleee	brand\.com\.au
 1604993769	tripleee	assetzpropertymarq\.com
+1604995881	tripleee	promoshop\.com\.au
