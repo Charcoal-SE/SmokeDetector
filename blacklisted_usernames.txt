@@ -328,7 +328,6 @@ lustresparasala
 (?-i:^Jake Syd$)
 ^(?-i:jeffrey)\W*(?-i:cage)$
 (?-i:^Digital India$)
-(?-i:^Light[\W_]*+[Hh]ouse$)
 (?-i:^Gitpac Consultancy Service$)
 (?-i:^Yogesh Sambare$)
 (?-i:^Wowdesk Inc$)
