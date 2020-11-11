@@ -24861,3 +24861,4 @@
 1605080219	tripleee	essaywritersrank\.com
 1605080349	Ryan M	hacker\b.{0,40}\b(?:track|spy)
 1605080534	Makyen	canvas\.elsevier\.com
+1605080557	Makyen	eportfolios
