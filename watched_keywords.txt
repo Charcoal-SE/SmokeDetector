@@ -24860,3 +24860,4 @@
 1605080136	Ryan M	spy on\b.{0,20}\bphone
 1605080219	tripleee	essaywritersrank\.com
 1605080349	Ryan M	hacker\b.{0,40}\b(?:track|spy)
+1605080534	Makyen	canvas\.elsevier\.com
