@@ -24852,3 +24852,4 @@
 1605054554	Ryan M	www\.behance\.net/\w++(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1605059047	Ryan M	jovian\b.{0,100}(?:testosterone|supplement|hormone)\w*+
 1605068923	tripleee	cloudpowerall\.com
+1605076213	tripleee	instructure\.com
