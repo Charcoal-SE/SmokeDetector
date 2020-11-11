@@ -24866,3 +24866,4 @@
 1605081504	Makyen	keto[\W_]*+xp(?!diet\.com(?<=ketoxpdiet\.com))(?:[\W_]*+(?:diet|pill|\d++|[\da-f]{5,}+)s?)*
 1605081817	Ryan M	howtogalaxy\.com
 1605082779	Ryan M	uber clone
+1605083191	Ryan M	Skype:\W*+(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
