@@ -8737,7 +8737,6 @@
 1553668000	tripleee	rs4uk\.com
 1553669556	tripleee	databaseserviceprovider\.com
 1553669683	tripleee	firstcall\.co\.in
-1553674348	tripleee	uber\W?clone
 1553682673	tripleee	fleetquid\.co\.uk
 1553683545	tripleee	erankita\.ml
 1553686351	tripleee	happyeasterweek\.org
