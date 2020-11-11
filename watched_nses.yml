@@ -1128,7 +1128,9 @@ items:
   ns: asurawebhosting.com.
 - ns: dnspod.net.
 - ns: hostwhitelabel.com.
-- ns: xpertns.com.
+- comment: no longer responding 2020-11-11
+  disable: true
+  ns: xpertns.com.
 - ns: site4now.net.
 - ns:
   - vip1.alidns.com.
