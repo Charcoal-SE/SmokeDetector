@@ -1225,7 +1225,9 @@ items:
 - ns: hostinger.vn.
 - ns: hostnac.com.
 - ns: iserverplanet.net.
-- ns: usm1804.sgded.com.
+- comment: no longer responding 2020-11-11
+  disable: true
+  ns: usm1804.sgded.com.
 - ns: stackdns.com.
 - ns: permainanceme.online.
 - ns: resourcesofnet.net.
