@@ -24850,3 +24850,4 @@
 1605043364	Spevacus	qassim-sa\.com
 1605046125	Makyen	maxeffect\.ir
 1605054554	Ryan M	www\.behance\.net/\w++(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
+1605059047	Ryan M	jovian\b.{0,100}(?:testosterone|supplement|hormone)\w*+
