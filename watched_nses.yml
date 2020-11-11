@@ -1052,7 +1052,9 @@ items:
   ns: dynamicnetips.com.
 - ns: w3softech.com.
 - ns: blockchainhelp.pro.
-- ns: specializedtest.com.
+- comment: no longer responding 2020-11-11
+  disable: true
+  ns: specializedtest.com.
 - ns: macsol.co.in.
 - comment: 37/216 over 6 months
   disable: true
