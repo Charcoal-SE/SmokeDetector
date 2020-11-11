@@ -70,7 +70,9 @@ items:
 - ns:
   - terin.ns.cloudflare.com.
   - tess.ns.cloudflare.com.
-- ns: 247support-number.com.
+- comment: no longer responding 2020-11-11
+  disable: true
+  ns: 247support-number.com.
 - ns: promoocodes.com.
 - ns: myassignmenthelp.co.uk.
 - ns: socialmonkee.com.
