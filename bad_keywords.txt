@@ -2391,3 +2391,4 @@ truvalast(?:[\W_]*+(?:australia|new|zealand|south|africa|az|za|uk|enhancement|ma
 mentally[\W_]*+ill[\W_]*+rogue[\W_]*+moderator
 force[\W_]*+windows[\W_]*+defender[\W_]*+to[\W_]*+scan[\W_]*+a[\W_]*+single[\W_]*+file[\W_]*+instead[\W_]*+of[\W_]*+scanning[\W_]*+the[\W_]*+entire[\W_]*+system
 donna belle
+diva[\W_]*trim(?:[\W_]*+keto)?
