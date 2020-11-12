@@ -24901,3 +24901,4 @@ spgtechnologies\.com
 1605170407	tripleee	suryatendamembrane\.com
 1605170484	tripleee	tenda[\W_]*+membrane
 1605171939	tripleee	salesaladin\.com
+1605171964	tripleee	elmex\.net
