@@ -22,7 +22,15 @@ else:
     from sh import ErrorReturnCode as GitError
 
 from helpers import log, log_exception, only_blacklists_changed
-from blacklists import Blacklist
+from blacklists import *
+
+
+def _anchor(str_to_anchor, blacklist_type):
+    """ Anchor a string according to the operation. """
+    if blacklist_type in {Blacklist.WATCHED_KEYWORDS, Blacklist.KEYWORDS}:
+        return r"(?s:\b" + str_to_anchor + r"\b)"
+    else:
+        return str_to_anchor
 
 
 class GitHubManager:
@@ -91,8 +99,7 @@ class GitManager:
             return "origin"
 
     @classmethod
-    def add_to_blacklist(cls, blacklist='', item_to_blacklist='',
-                         username='', chat_profile_link='',
+    def add_to_blacklist(cls, blacklist='', item_to_blacklist='', username='', chat_profile_link='',
                          code_permissions=False, metasmoke_down=False):
         if blacklist == "":
             return (False, 'GitManager: blacklist is not defined. Blame a developer.')
@@ -102,14 +109,29 @@ class GitManager:
 
         # item_to_blacklist = item_to_blacklist.replace("\\s", " ")
 
-        try:
-            blacklist_id = Blacklist.resolve(blacklist)
-            log('debug', 'Resolved %s to blacklist id %s' % (blacklist, blacklist_id))
-        except KeyError:
+        if blacklist == "website":
+            blacklist_type = Blacklist.WEBSITES
+            ms_search_option = "&body_is_regex=1&body="
+        elif blacklist == "keyword":
+            blacklist_type = Blacklist.KEYWORDS
+            ms_search_option = "&body_is_regex=1&body="
+        elif blacklist == "username":
+            blacklist_type = Blacklist.USERNAMES
+            ms_search_option = "&username_is_regex=1&username="
+        elif blacklist == "number":
+            blacklist_type = Blacklist.NUMBERS
+            ms_search_option = "&body="
+        elif blacklist == "watch_keyword":
+            blacklist_type = Blacklist.WATCHED_KEYWORDS
+            ms_search_option = "&body_is_regex=1&body="
+        elif blacklist == "watch_number":
+            blacklist_type = Blacklist.WATCHED_NUMBERS
+            ms_search_option = "&body="
+        else:
             return (False, 'GitManager: blacklist is not recognized. Blame a developer.')
 
-        blacklister = GlobalVars.git_black_watch_lists[blacklist_id]
-        blacklist_file_name = blacklister.filename()
+        blacklister = Blacklist(blacklist_type)
+        blacklist_file_name = blacklist_type[0]
 
         try:
             cls.gitmanager_lock.acquire()
@@ -119,32 +141,27 @@ class GitManager:
 
             now = str(int(time.time()))
 
-            if blacklister.watchtype():
+            if blacklist_type in {Blacklist.WATCHED_KEYWORDS, Blacklist.WATCHED_NUMBERS}:
                 op = 'watch'
+                item = item_to_blacklist
+                item_to_blacklist = "\t".join([now, username, item])
             else:
                 op = 'blacklist'
+                item = item_to_blacklist
 
             exists, line = blacklister.exists(item_to_blacklist)
             if exists:
-                return (False, 'Already {}ed on line {} of {}'.format(
-                    op, line, blacklist_file_name))
+                return (False, 'Already {}ed on line {} of {}'.format(op, line, blacklist_file_name))
 
-            watch_removed = []
-            if not blacklister.watchtype():
-                for watcher in GlobalVars.git_black_watch_lists.values():
-                    if not watcher.watchtype():
-                        continue
-                    watched, where = watcher.exists(item_to_blacklist)
-                    if watched:
-                        watch_removed.append(watcher.filename())
-                        watcher.delete(item_to_blacklist)
+            watch_removed = False
+            if blacklist_type not in {Blacklist.WATCHED_KEYWORDS, Blacklist.WATCHED_NUMBERS}:
+                for watcher_type in {Blacklist.WATCHED_KEYWORDS, Blacklist.WATCHED_NUMBERS}:
+                    watcher = Blacklist(watcher_type)
+                    if watcher.exists(item_to_blacklist):
+                        watch_removed = True
+                        watcher.remove(item_to_blacklist)
 
-            try:
-                blacklister.add(item_to_blacklist)
-            except ValueError as exc:
-                for rollback_watch in watch_removed:
-                    git.restore(rollback_watch)
-                return False, exc
+            blacklister.add(item_to_blacklist)
 
             branch = "auto-blacklist-{0}".format(now)
             git.checkout("-b", branch)
@@ -152,14 +169,14 @@ class GitManager:
             git.reset("HEAD")
 
             git.add(blacklist_file_name)
-            for watchname in watch_removed:
-                git.add(watchname)
+            if watch_removed:
+                git.add('watched_keywords.txt', 'watched_numbers.txt')
 
             git("-c", "user.name=" + GlobalVars.git_name,
                 "-c", "user.email=" + GlobalVars.git_email,
                 "commit",
                 "--author={} <{}>".format(GlobalVars.git_name, GlobalVars.git_email),
-                "-m", "Auto {0} of `{1}` by {2}".format(op, item_to_blacklist, username))
+                "-m", "Auto {0} of `{1}` by {2}".format(op, item, username))
 
             origin_or_auth = cls.get_origin_or_auth()
             if code_permissions:
@@ -175,22 +192,21 @@ class GitManager:
                         and (GlobalVars.github_access_token is None)):
                     return (False, "Tell someone to set a GH token")
 
-                payload = {"title": "{0}: {1} {2}".format(
-                    username, op.title(), item_to_blacklist),
-                    "body": "[{0}]({1}) requests the {2} of the {3} `{4}`. See the MS search [here]"
-                    "({5}{6}) and the "
-                    "Stack Exchange search [in text](https://stackexchange.com/search?q=%22{7}%22)"
-                    ", [in URLs](https://stackexchange.com/search?q=url%3A%22{7}%22)"
-                    ", and [in code](https://stackexchange.com/search?q=code%3A%22{7}%22)"
-                    ".\n"
-                    "<!-- METASMOKE-BLACKLIST-{8} {4} -->".format(
-                        username, chat_profile_link, op, blacklist,                # 0 1 2 3
-                        item_to_blacklist, blacklister.ms_search_url(),                         # 4 5
-                        quote_plus(blacklister.anchor(item_to_blacklist)),                      # 6
-                        quote_plus(item_to_blacklist.replace("\\W", " ").replace("\\.", ".")),  # 7
-                        blacklist_id.upper()),                                        # 8
-                    "head": branch,
-                    "base": "master"}
+                payload = {"title": "{0}: {1} {2}".format(username, op.title(), item),
+                           "body": "[{0}]({1}) requests the {2} of the {3} `{4}`. See the MS search [here]"
+                                   "(https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{5}{6}) and the "
+                                   "Stack Exchange search [in text](https://stackexchange.com/search?q=%22{7}%22)"
+                                   ", [in URLs](https://stackexchange.com/search?q=url%3A%22{7}%22)"
+                                   ", and [in code](https://stackexchange.com/search?q=code%3A%22{7}%22)"
+                                   ".\n"
+                                   "<!-- METASMOKE-BLACKLIST-{8} {4} -->".format(
+                                       username, chat_profile_link, op, blacklist,                # 0 1 2 3
+                                       item, ms_search_option,                                    # 4 5
+                                       quote_plus(_anchor(item, blacklist_type)),                 # 6
+                                       quote_plus(item.replace("\\W", " ").replace("\\.", ".")),  # 7
+                                       blacklist.upper()),                                        # 8
+                           "head": branch,
+                           "base": "master"}
                 response = GitHubManager.create_pull_request(payload)
                 log('debug', response)
                 try:
@@ -240,13 +256,12 @@ class GitManager:
             cls.gitmanager_lock.release()
 
         if op == 'blacklist':
-            return (True, "Blacklisted `{0}`".format(item_to_blacklist))
+            return (True, "Blacklisted `{0}`".format(item))
         elif op == 'watch':
-            return (True, "Added `{0}` to watchlist".format(item_to_blacklist))
+            return (True, "Added `{0}` to watchlist".format(item))
 
     @classmethod
-    def remove_from_blacklist(cls, item, username, blacklist_type="",
-                              code_privileged=False, metasmoke_down=False):
+    def remove_from_blacklist(cls, item, username, blacklist_type="", code_privileged=False, metasmoke_down=False):
         if not code_privileged:
             if metasmoke_down:
                 return False, "MS is offline, and I can't determine if you are a blacklist manager or not. " \
@@ -261,21 +276,20 @@ class GitManager:
             git.checkout("master")
 
             if blacklist_type == "watch":
+                blacklists = [Blacklist.WATCHED_KEYWORDS, Blacklist.WATCHED_NUMBERS]
                 list_type = "watchlist"
             elif blacklist_type == "blacklist":
+                blacklists = [Blacklist.KEYWORDS, Blacklist.WEBSITES, Blacklist.USERNAMES, Blacklist.NUMBERS]
                 list_type = "blacklist"
             else:
                 return False, "`blacklist_type` not set, blame a developer."
 
-            blacklists = []
-            for bwlist in GlobalVars.git_black_watch_lists.values():
-                if (blacklist_type == "watch") == bwlist.watchtype():
-                    blacklists.append(bwlist)
+            for blacklist in blacklists:
+                file_name = blacklist[0]
+                manager = Blacklist(blacklist)
 
-            for candidate in blacklists:
-                exists, _line = candidate.exists(item)
+                exists, _line = manager.exists(item)
                 if exists:
-                    file_name = candidate.filename()
                     break
 
             if not exists:
@@ -289,7 +303,7 @@ class GitManager:
             git.checkout('-b', branch)
             git.reset('HEAD')
 
-            candidate.delete(item)
+            manager.remove(item)
 
             git.add(file_name)
             git("-c", "user.name=" + GlobalVars.git_name,

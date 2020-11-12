@@ -6,7 +6,7 @@ from os import unlink
 
 import pytest
 
-from blacklists import *
+from blacklists import Blacklist, YAMLParserCIDR, YAMLParserASN, YAMLParserNS
 from helpers import files_changed, blacklist_integrity_check
 
 
@@ -27,8 +27,8 @@ def test_remote_diff():
     assert not files_changed(false_diff, file_set)
 
 
-def yaml_validate_existing(cls, filename, parser):
-    return cls(filename, parser).validate()
+def yaml_validate_existing(filename, cls):
+    return Blacklist((filename, cls)).validate()
 
 
 def test_yaml_blacklist():
@@ -41,7 +41,7 @@ def test_yaml_blacklist():
                 {'ip': '2.3.4.5', 'disable': True},
                 {'ip': '3.4.5.6', 'comment': 'comment'},
             ]}, y)
-    blacklist = NetWatchlist('test_ip.yml', YAMLParserCIDR)
+    blacklist = Blacklist(('test_ip.yml', YAMLParserCIDR))
     with pytest.raises(ValueError) as e:
         blacklist.add('1.3.34')
     with pytest.raises(ValueError) as e:
@@ -51,17 +51,17 @@ def test_yaml_blacklist():
     with pytest.raises(ValueError) as e:
         blacklist.add({'ip': '2.3.4.5'})
     with pytest.raises(ValueError) as e:
-        blacklist.delete({'ip': '34.45.56.67'})
+        blacklist.remove({'ip': '34.45.56.67'})
     blacklist.add({'ip': '1.3.4.5'})
     assert '1.2.3.4' in blacklist.parse()
     assert '2.3.4.5' not in blacklist.parse()
     assert '3.4.5.6' in blacklist.parse()
-    blacklist.delete({'ip': '3.4.5.6'})
+    blacklist.remove({'ip': '3.4.5.6'})
     assert '3.4.5.6' not in blacklist.parse()
     unlink('test_ip.yml')
 
-    yaml_validate_existing(NetBlacklist, 'blacklisted_cidrs.yml', YAMLParserCIDR)
-    yaml_validate_existing(NetWatchlist, 'watched_cidrs.yml', YAMLParserCIDR)
+    yaml_validate_existing('blacklisted_cidrs.yml', YAMLParserCIDR)
+    yaml_validate_existing('watched_cidrs.yml', YAMLParserCIDR)
 
 
 def test_yaml_asn():
@@ -74,7 +74,7 @@ def test_yaml_asn():
                 {'asn': '234', 'disable': True},
                 {'asn': '345', 'comment': 'comment'},
             ]}, y)
-    blacklist = NetBlacklist('test_asn.yml', YAMLParserASN)
+    blacklist = Blacklist(('test_asn.yml', YAMLParserASN))
     with pytest.raises(ValueError) as e:
         blacklist.add('123')
     with pytest.raises(ValueError) as e:
@@ -84,15 +84,15 @@ def test_yaml_asn():
     with pytest.raises(ValueError) as e:
         blacklist.add({'asn': '234'})
     with pytest.raises(ValueError) as e:
-        blacklist.delete({'asn': '9897'})
+        blacklist.remove({'asn': '9897'})
     assert '123' in blacklist.parse()
     assert '234' not in blacklist.parse()
     assert '345' in blacklist.parse()
-    blacklist.delete({'asn': '345'})
+    blacklist.remove({'asn': '345'})
     assert '345' not in blacklist.parse()
     unlink('test_asn.yml')
 
-    yaml_validate_existing(NetWatchlist, 'watched_asns.yml', YAMLParserASN)
+    yaml_validate_existing('watched_asns.yml', YAMLParserASN)
 
 
 def test_yaml_nses():
@@ -105,7 +105,7 @@ def test_yaml_nses():
                 {'ns': 'example.net.', 'disable': True},
                 {'ns': 'example.org.', 'comment': 'comment'},
             ]}, y)
-    blacklist = NetBlacklist('test_nses.yml', YAMLParserNS)
+    blacklist = Blacklist(('test_nses.yml', YAMLParserNS))
     assert 'example.com.' in blacklist.parse()
     assert 'EXAMPLE.COM.' not in blacklist.parse()
     with pytest.raises(ValueError) as e:
@@ -114,9 +114,9 @@ def test_yaml_nses():
         blacklist.add({'ns': 'EXAMPLE.COM.'})
     assert 'example.net.' not in blacklist.parse()
     assert 'example.org.' in blacklist.parse()
-    blacklist.delete({'ns': 'example.org.'})
+    blacklist.remove({'ns': 'example.org.'})
     assert 'example.org.' not in blacklist.parse()
     unlink('test_nses.yml')
 
-    yaml_validate_existing(NetBlacklist, 'blacklisted_nses.yml', YAMLParserNS)
-    yaml_validate_existing(NetWatchlist, 'watched_nses.yml', YAMLParserNS)
+    yaml_validate_existing('blacklisted_nses.yml', YAMLParserNS)
+    yaml_validate_existing('watched_nses.yml', YAMLParserNS)

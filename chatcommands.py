@@ -1,25 +1,12 @@
 # coding=utf-8
 # noinspection PyUnresolvedReferences
-from datetime import datetime
-import threading
-import random
-import requests
-import sys
-import os
-import time
-import collections
-from html import unescape
-from ast import literal_eval
-
-# noinspection PyCompatibility
-import regex
-
-# noinspection PyUnresolvedReferences
-from chatcommunicate import add_room, block_room, CmdException, command, get_report_data, \
-    is_privileged, message, tell_rooms, tell_rooms_with, get_message
+from chatcommunicate import add_room, block_room, CmdException, command, get_report_data, is_privileged, message, \
+    tell_rooms, tell_rooms_with, get_message
 # noinspection PyUnresolvedReferences
 from globalvars import GlobalVars
 import findspam
+# noinspection PyUnresolvedReferences
+from datetime import datetime
 from apigetpost import api_get_post, PostData
 import datahandling
 from datahandling import *
@@ -28,8 +15,20 @@ from blacklists import load_blacklists, Blacklist
 from parsing import *
 from spamhandling import check_if_spam, handle_spam
 from gitmanager import GitManager
-from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, \
-    expand_shorthand_link, reload_modules, chunk_list
+import threading
+import random
+import requests
+import sys
+import os
+import time
+import collections
+import subprocess
+from html import unescape
+from ast import literal_eval
+# noinspection PyCompatibility
+import regex
+from helpers import exit_mode, only_blacklists_changed, only_modules_changed, log, expand_shorthand_link, \
+    reload_modules, chunk_list
 from classes import Post
 from classes.feedback import *
 from classes.dnsresolver import dns_resolve
@@ -223,8 +222,6 @@ def get_pattern_from_content_source(msg):
         raise CmdException("An invalid pattern was provided, please check your command. Was the command edited?")
 
 
-# FIXME: dead code?
-# def check_blacklist(string_to_test, BLACKLIST):
 def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
     # Test the string and provide a warning message if it is already caught.
     if is_username:
@@ -345,41 +342,7 @@ def get_test_text_from_regex(pattern):
     return pattern
 
 
-def _already_caught(blacklist, string_to_test):
-    """
-    Test a candidate string; return a list of reasons if it is already
-    caught.
-
-    The blacklist's method not_reject_reasons returns a list of reasons which
-    do not cause a rejection to be returned; in other words, they are removed
-    from the reasons.
-    """
-    ownerdict = {'display_name': 'Valid username',
-                 'reputation': 1, 'link': ''}
-    querydict = {'title': 'Valid title (at least 10 characters)',
-                 'body': 'Valid body (also more than 10 characters)',
-                 'owner': None, 'site': "", 'IsAnswer': None, 'score': 0}
-    reasons = set()
-    for answerp in False, True:
-        for userp in False, True:
-            owner = ownerdict.copy()
-            question = querydict.copy()
-            if userp:
-                owner['display_name'] = string_to_test
-            else:
-                question['body'] = string_to_test
-            question['owner'] = owner
-            question['IsAnswer'] = answerp
-            verdicts, _ = findspam.FindSpam.test_post(Post(api_response=question))
-            reasons.update(set(verdicts))
-
-    filter_out = blacklist.not_reject_reasons()
-    return list(filter(
-        lambda x: all(reason.lower() not in x.lower()
-                      for reason in filter_out), reasons))
-
-
-def do_blacklist(blacklist_id, msg, force=False):
+def do_blacklist(blacklist_type, msg, force=False):
     """
     Adds a string to the website blacklist and commits/pushes to GitHub
     :param raw_pattern:
@@ -394,12 +357,10 @@ def do_blacklist(blacklist_id, msg, force=False):
                                                                      id=msg.owner.id)
     append_force_to_do = "; append `-force` if you really want to do that."
 
-    blacklistkey = Blacklist.resolve(blacklist_id)
-    blacklist = GlobalVars.git_black_watch_lists[blacklistkey]
-
     pattern = get_pattern_from_content_source(msg)
+
     has_unescaped_dot = ""
-    if blacklist.regextype():
+    if "number" not in blacklist_type:
         # Test for . without \., but not in comments.
         test_for_unescaped_dot = regex.sub(r"(?<!\\)\(\?\#[^\)]*\)", "", pattern)  # remove comments
         # Remove character sets, where . doesn't need to be escaped.
@@ -415,24 +376,25 @@ def do_blacklist(blacklist_id, msg, force=False):
             raise CmdException("That pattern is probably too broad, refusing to commit.")
 
     if not force:
-        if blacklist.numbertype() or regex.match(
-            r'(?:\[a-z_]\*)?(?:\(\?:)?\d+(?:[][\\W_*()?:]+\d+)+(?:\[a-z_]\*)?$',
-                pattern):
+        if "number" in blacklist_type or \
+                regex.match(r'(?:\[a-z_]\*)?(?:\(\?:)?\d+(?:[][\\W_*()?:]+\d+)+(?:\[a-z_]\*)?$', pattern):
             is_phone = True
         else:
             is_phone = False
 
-        is_watchlist = blacklist.watchtype()
+        is_watchlist = bool("watch" in blacklist_type)
 
         concretized_pattern = get_test_text_from_regex(pattern)
 
-        reasons = _already_caught(blacklist, concretized_pattern)
-        if reasons:
-            has_unescaped_dot = "; in addition, " + has_unescaped_dot.lower() \
-                if has_unescaped_dot else ""
-            raise CmdException(
-                "That pattern looks like it's already caught by " +
-                format_blacklist_reasons(reasons) + has_unescaped_dot + append_force_to_do)
+        for username in False, True:
+            reasons = check_blacklist(
+                concretized_pattern, is_username=username, is_watchlist=is_watchlist, is_phone=is_phone)
+
+            if reasons:
+                has_unescaped_dot = "; in addition, " + has_unescaped_dot.lower() if has_unescaped_dot else ""
+                raise CmdException(
+                    "That pattern looks like it's already caught by " +
+                    format_blacklist_reasons(reasons) + has_unescaped_dot + append_force_to_do)
 
         if has_unescaped_dot:
             raise CmdException(has_unescaped_dot + append_force_to_do)
@@ -446,7 +408,7 @@ def do_blacklist(blacklist_id, msg, force=False):
         metasmoke_down = True
 
     _status, result = GitManager.add_to_blacklist(
-        blacklist=blacklist_id,
+        blacklist=blacklist_type,
         item_to_blacklist=pattern,
         username=msg.owner.name,
         chat_profile_link=chat_user_profile_link,
@@ -475,13 +437,14 @@ def do_blacklist(blacklist_id, msg, force=False):
 
 
 # noinspection PyIncorrectDocstring
-@command(str, whole_msg=True, privileged=True, give_name=True,
-         aliases=["blacklist-keyword", "blacklist-keyword-force",
-                  "blacklist-website", "blacklist-website-force",
-                  "blacklist-username", "blacklist-username-force",
-                  "blacklist-number", "blacklist-number-force",
-                  "blacklist-ip", "blacklist-ip-force",
-                  "blacklist-ns", "blacklist-ns-force"])  # "blacklist-asn",
+@command(str, whole_msg=True, privileged=True, give_name=True, aliases=["blacklist-keyword",
+                                                                        "blacklist-website",
+                                                                        "blacklist-username",
+                                                                        "blacklist-number",
+                                                                        "blacklist-keyword-force",
+                                                                        "blacklist-website-force",
+                                                                        "blacklist-username-force",
+                                                                        "blacklist-number-force"])
 def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     """
     Adds a pattern to the blacklist and commits/pushes to GitHub
@@ -489,17 +452,15 @@ def blacklist_keyword(msg, pattern, alias_used="blacklist-keyword"):
     :param pattern:
     :return: A string
     """
-    blacklist_id = alias_used.replace("-force", "").replace("-", "_")
-    return do_blacklist(blacklist_id, msg, force=alias_used.split("-")[-1] == "force")
+
+    parts = alias_used.split("-")
+    return do_blacklist(parts[1], msg, force=len(parts) > 2)
 
 
 # noinspection PyIncorrectDocstring
 @command(str, whole_msg=True, privileged=True, give_name=True,
          aliases=["watch-keyword", "watch-force", "watch-keyword-force",
-                  "watch-number", "watch-number-force",
-                  "watch-ip", "watch-ip-force",
-                  "watch-ns", "watch-ns-force",
-                  "watch-asn", "watch-asn-force"])  # "watch-ns-set",
+                  "watch-number", "watch-number-force"])
 def watch(msg, pattern, alias_used="watch"):
     """
     Adds a pattern to the watched keywords list and commits/pushes to GitHub
@@ -507,10 +468,9 @@ def watch(msg, pattern, alias_used="watch"):
     :param pattern:
     :return: A string
     """
-    blacklist_id = alias_used.replace("-force", "").replace("-", "_")
-    if blacklist_id == "watch":
-        blacklist_id = "watch-keyword"
-    return do_blacklist(blacklist_id, msg, force=alias_used.split("-")[-1] == "force")
+
+    return do_blacklist("watch_number" if "number" in alias_used else "watch_keyword",
+                        msg, force=alias_used.split("-")[-1] == "force")
 
 
 @command(str, whole_msg=True, privileged=True, give_name=True, aliases=["unwatch"])
@@ -1379,11 +1339,10 @@ def bisect(msg, s):
     bookended_regexes = []
     non_bookended_regexes = []
     regexes = []
-    globalbl = GlobalVars.git_black_watch_lists
-    non_bookended_regexes.extend(globalbl['blacklisted_usernames'].each(True))
-    non_bookended_regexes.extend(globalbl['blacklisted_websites'].each(True))
-    bookended_regexes.extend(globalbl['bad_keywords'].each(True))
-    bookended_regexes.extend(globalbl['watched_keywords'].each(True))
+    non_bookended_regexes.extend(Blacklist(Blacklist.USERNAMES).each(True))
+    non_bookended_regexes.extend(Blacklist(Blacklist.WEBSITES).each(True))
+    bookended_regexes.extend(Blacklist(Blacklist.KEYWORDS).each(True))
+    bookended_regexes.extend(Blacklist(Blacklist.WATCHED_KEYWORDS).each(True))
 
     if msg is not None:
         minimally_validate_content_source(msg)
@@ -1423,9 +1382,8 @@ def bisect_number(msg, s):
     normalized = regex.sub(r"\D", "", number)
 
     # Assume raw number strings don't duplicate
-    globalbl = GlobalVars.git_black_watch_lists
-    numbers = dict(globalbl['blacklisted_numbers'].each(True))
-    numbers.update(globalbl['watched_numbers'].each(True))
+    numbers = dict(Blacklist(Blacklist.NUMBERS).each(True))
+    numbers.update(Blacklist(Blacklist.WATCHED_NUMBERS).each(True))
     # But normalized numbers surely duplicate
     normalized_numbers = collections.defaultdict(list)
     for item, info in numbers.items():
