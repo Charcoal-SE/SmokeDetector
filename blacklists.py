@@ -73,6 +73,9 @@ class BasicListParser(BlacklistParser):
                     for line in f if len(line.rstrip()) > 0 and line[0] != '#']
 
     def add(self, item: str, **kwargs):
+        self._add(item)
+
+    def _add(self, item: str):
         with open(self._filename, 'a+', encoding='utf-8') as f:
             last_char = f.read()[-1:]
             if last_char not in ['', '\n']:
@@ -160,17 +163,20 @@ class TSVDictParser(BlacklistParser):
         if listed:
             raise ValueError('Item already listed on %s line %i' % (self._filename, where))
 
+    def _add(self, item: str):
+        with open(self._filename, 'a+', encoding='utf-8') as f:
+            last_char = f.read()[-1:]
+            if last_char not in ['', '\n']:
+                item = '\n' + item
+            f.write(item + '\n')
+
     def add(self, item: Union[str, WhoWhatWhenString], **kwargs):
         if isinstance(item, str) and 'who' in kwargs and 'when' in kwargs:
             item = WhoWhatWhenString(item, kwargs['who'], kwargs['when'])
         if isinstance(item, WhoWhatWhenString):
             item = '{}\t{}\t{}'.format(item.when(), item.who(), item)
         self._validate(item)
-        with open(self._filename, 'a+', encoding='utf-8') as f:
-            last_char = f.read()[-1:]
-            if last_char not in ['', '\n']:
-                item = '\n' + item
-            f.write(item + '\n')
+        self._add(item)
 
     def delete(self, item: Union[str, WhoWhatWhenString]):
         there, _ = self.exists(item)
@@ -310,14 +316,7 @@ class YAMLParserCIDR(BlacklistParser):
         """
         return {self.SCHEMA_PRIKEY: item}
 
-    def add(self, item, **kwargs):
-        if isinstance(item, str):
-            item = self._add_format(item)
-        try:
-            self._validate(item)
-        except Exception as err:
-            raise ValueError('Validation of {0} failed: {1}'.format(item, err))
-
+    def _add(self, item):
         prikey = self.SCHEMA_PRIKEY
 
         def add_callback(d):
@@ -328,6 +327,15 @@ class YAMLParserCIDR(BlacklistParser):
             d['items'].append(item)
 
         self._write(add_callback)
+
+    def add(self, item, **kwargs):
+        if isinstance(item, str):
+            item = self._add_format(item)
+        try:
+            self._validate(item)
+        except Exception as err:
+            raise ValueError('Validation of {0} failed: {1}'.format(item, err))
+        self._add(item)
 
     def delete(self, item):
         if isinstance(item, str):
