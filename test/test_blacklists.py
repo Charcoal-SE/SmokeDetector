@@ -139,6 +139,21 @@ def test_tsv_watchlist():
         watchlist.add('five six')
     watchlist.add('five six', who='tripleee', when=1495006490)
     assert 'five six' in watchlist.parse()
+    with pytest.raises(ValueError) as e:
+        watchlist.delete('eight nine')
+    whether, where = watchlist.exists('five six')
+    assert whether
+    assert where == 3
+    watchlist.delete('three four')
+    parsed = watchlist.parse()
+    for item in watchlist.each():
+        print('#', item)
+    assert 'one two' in parsed
+    assert 'five six' in parsed
+    assert 'three four' not in parsed
+    whether, where = watchlist.exists('five six')
+    assert whether
+    assert where == 2
     unlink('test_watched_keywords.txt')
 
 
