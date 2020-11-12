@@ -533,6 +533,9 @@ items:
 - ns: ekkum.com.
 - ns:
   - elinore.ns.cloudflare.com.
+  - igor.ns.cloudflare.com.
+- ns:
+  - elinore.ns.cloudflare.com.
   - sam.ns.cloudflare.com.
 - comment: no longer responding 2020-11-10
   disable: true
