@@ -255,7 +255,7 @@ quran[\W_]*+for[\W_]*+kids
 (?-i:^Sheeba Karan$)
 (?-i:^ekeeda engineering$)
 omysexydoll
-sexdollxing‭
+sexdollxing
 oxybr(?:ea?)?th(?:(?<=\Boxybr(?:ea?)?th)|\B)
 (?-i:^Dhara Jain$)
 (?-i:^meemu jose$)
