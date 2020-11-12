@@ -1412,8 +1412,6 @@ def bisect(msg, s):
     if not matching:
         return "{!r} is not caught by a blacklist or watchlist item.".format(s)
 
-    print('matching: {}'.format(matching))
-    print('len(matching): {}'.format(len(matching)))
     if len(matching) == 1:
         r, (l, f) = matching[0]
         return "Matched by `{0}` on [line {1} of {2}](https://github.com/{3}/blob/{4}/{2}#L{1})".format(
