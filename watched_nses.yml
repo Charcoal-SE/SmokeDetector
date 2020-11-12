@@ -461,6 +461,9 @@ items:
   - kara.ns.cloudflare.com.
 - ns:
   - elinore.ns.cloudflare.com.
+  - igor.ns.cloudflare.com.
+- ns:
+  - elinore.ns.cloudflare.com.
   - sam.ns.cloudflare.com.
 - ns:
   - elliot.ns.cloudflare.com.
