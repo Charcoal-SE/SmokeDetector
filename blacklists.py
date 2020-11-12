@@ -612,13 +612,16 @@ class NetMixin:
         return False
 
 
-class PhoneMixin(NetMixin):
+class PhoneMixin:
     """
     Mixin to create phone number class behavior from a base class
     """
     def _phone_not_reject_reasons(self):
         return ["mostly non-latin", "phone number detected",
                 "messaging number detected"]
+
+    def regextype(self):
+        return False
 
     def numbertype(self):
         return True
