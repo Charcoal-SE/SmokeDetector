@@ -320,11 +320,19 @@ class YAMLParserCIDR(BlacklistParser):
         prikey = self.SCHEMA_PRIKEY
 
         def add_callback(d):
+            items = []
+            added = False
             for compare in d['items']:
-                if compare[prikey] == item[prikey]:
+                if compare[prikey] < item[prikey]:
+                    pass
+                elif compare[prikey] == item[prikey]:
                     raise ValueError('{0} already in list {1}'.format(
                         item[prikey], d['items']))
-            d['items'].append(item)
+                elif not added:
+                    items.append(item)
+                    added = True
+                items.append(compare)
+            d['items'] = items
 
         self._write(add_callback)
 
