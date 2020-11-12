@@ -140,7 +140,7 @@ class GitManager:
                         watcher.delete(item_to_blacklist)
 
             try:
-                blacklister.add(item_to_blacklist)
+                blacklister.add(item_to_blacklist, who=username, when=now)
             except ValueError as exc:
                 for rollback_watch in watch_removed:
                     git.restore(rollback_watch)
