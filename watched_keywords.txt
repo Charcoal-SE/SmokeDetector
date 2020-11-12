@@ -1734,7 +1734,6 @@
 1512482467	Federico	YEADOMAIN
 1512483260	tripleee	seoexperts\.ae
 1512487922	Federico	socialwander\.com
-1512488031	Federico	epicfollowers\.co
 1512498256	DJMcMayhem	SapamaCash
 1512505545	Glorfindel	.{0,10}keroncong.{0,10}\.blogspot\.co
 1512549833	Glorfindel	selenium-webdriver\.com
