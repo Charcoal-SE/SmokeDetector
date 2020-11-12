@@ -8,6 +8,7 @@ import pytest
 
 from blacklists import *
 from helpers import files_changed, blacklist_integrity_check
+from globalvars import GlobalVars
 
 
 def test_blacklist_integrity():
@@ -169,3 +170,14 @@ def test_keyword_blacklist():
     assert whether
     assert where == 1
     unlink('test_blacklist.txt')
+
+
+def test_blacklist_enumeration():
+    load_blacklists()
+    for bwl in GlobalVars.git_black_watch_lists.values():
+        if not hasattr(bwl, 'watchtype'):
+            raise ValueError('%s (%s) has no .watchtype()' % (
+                bwl._filename, type(bwl)))
+        if not hasattr(bwl, 'each'):
+            raise ValueError('%s (%s) has no .each()' % (
+                bwl._filename, type(bwl)))
