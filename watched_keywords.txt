@@ -16698,7 +16698,6 @@
 1580246714	Eliah Kagan	hp-support-assistant\.us
 1580267966	Makyen	roundworldstory\.com
 1580267992	Makyen	financialagencyofficial(?:@gmail\.com)?
-1580269442	Eliah Kagan	hashcat64
 1580274839	tripleee	aresearchguide\.com
 1580280460	tripleee	infobets\.net
 1580280597	tripleee	powertechpollutioncontrols\.co\.in
