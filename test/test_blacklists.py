@@ -120,3 +120,22 @@ def test_yaml_nses():
 
     yaml_validate_existing(NetBlacklist, 'blacklisted_nses.yml', YAMLParserNS)
     yaml_validate_existing(NetWatchlist, 'watched_nses.yml', YAMLParserNS)
+
+
+def test_tsv_watchlist():
+    with open('test_watched_keywords.txt', 'w') as t:
+        t.write('\t'.join(['1495006487', 'tripleee', 'one two\n']))
+        t.write('\t'.join(['1495006488', 'tripleee', 'three four\n']))
+    watchlist = Watchlist('test_watched_keywords.txt', TSVDictParser)
+    parsed = list(watchlist.parse())
+    assert 'one two' in parsed
+    assert 'one' not in parsed
+    assert 'three four' in parsed
+    assert 'five six' not in parsed
+    with pytest.raises(ValueError) as e:
+        watchlist.add('one two', who='tripleee', when=1495006489)
+    with pytest.raises(ValueError) as e:
+        watchlist.add('five six')
+    watchlist.add('five six', who='tripleee', when=1495006490)
+    assert 'five six' in watchlist.parse()
+    unlink('test_watched_keywords.txt')
