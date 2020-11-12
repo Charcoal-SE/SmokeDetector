@@ -10,18 +10,32 @@ from helpers import log
 
 
 def load_blacklists():
-    GlobalVars.bad_keywords = Blacklist(Blacklist.KEYWORDS).parse()
-    GlobalVars.watched_keywords = Blacklist(Blacklist.WATCHED_KEYWORDS).parse()
-    GlobalVars.blacklisted_websites = Blacklist(Blacklist.WEBSITES).parse()
-    GlobalVars.blacklisted_usernames = Blacklist(Blacklist.USERNAMES).parse()
-    GlobalVars.blacklisted_numbers = Blacklist(Blacklist.NUMBERS).parse()
-    GlobalVars.watched_numbers = Blacklist(Blacklist.WATCHED_NUMBERS).parse()
-    GlobalVars.blacklisted_nses = Blacklist(Blacklist.NSES).parse()
-    GlobalVars.watched_nses = Blacklist(Blacklist.WATCHED_NSES).parse()
-    GlobalVars.blacklisted_cidrs = Blacklist(Blacklist.CIDRS).parse()
-    GlobalVars.watched_cidrs = Blacklist(Blacklist.WATCHED_CIDRS).parse()
-    # GlobalVars.blacklisted_asns = Blacklist(Blacklist.ASNS).parse()
-    GlobalVars.watched_asns = Blacklist(Blacklist.WATCHED_ASNS).parse()
+    bwdict = GlobalVars.git_black_watch_lists
+
+    bwdict['bad_keywords'] = KeywordBlacklist(
+        'bad_keywords.txt', BasicListParser)
+    bwdict['watched_keywords'] = Watchlist(
+        'watched_keywords.txt', TSVDictParser)
+    bwdict['blacklisted_websites'] = Blacklist(
+        'blacklisted_websites.txt', BasicListParser)
+    bwdict['blacklisted_usernames'] = UserBlacklist(
+        'blacklisted_usernames.txt', BasicListParser)
+    bwdict['blacklisted_numbers'] = PhoneBlacklist(
+        'blacklisted_numbers.txt', BasicListParser)
+    bwdict['watched_numbers'] = PhoneWatchlist(
+        'watched_numbers.txt', TSVDictParser)
+    bwdict['blacklisted_nses'] = NetBlacklist(
+        'blacklisted_nses.yml', YAMLParserNS)
+    bwdict['watched_nses'] = NetWatchlist(
+        'watched_nses.yml', YAMLParserNS)
+    bwdict['blacklisted_cidrs'] = NetBlacklist(
+        'blacklisted_cidrs.yml', YAMLParserCIDR)
+    bwdict['watched_cidrs'] = NetWatchlist(
+        'watched_cidrs.yml', YAMLParserCIDR)
+    # bwdict['blacklisted_asns'] = NetBlacklist(
+    #    'blacklisted_asns.yml', YAMLParserASN)
+    bwdict['watched_asns'] = NetWatchlist(
+        'watched_asns.yml', YAMLParserASN)
 
 
 class BlacklistParser:
@@ -29,12 +43,12 @@ class BlacklistParser:
         self._filename = filename
 
     def parse(self):
-        return None
+        return []
 
     def add(self, item):
         pass
 
-    def remove(self, item):
+    def delete(self, item):
         pass
 
     def exists(self, item):
@@ -60,7 +74,7 @@ class BasicListParser(BlacklistParser):
                 item = '\n' + item
             f.write(item + '\n')
 
-    def remove(self, item: str):
+    def delete(self, item: str):
         with open(self._filename, 'r+', encoding='utf-8') as f:
             items = f.readlines()
             items = [x for x in items if item not in x]
@@ -70,13 +84,11 @@ class BasicListParser(BlacklistParser):
 
     def each(self, with_info=False):
         # info = (filename, lineno)
-        if with_info:
-            with open(self._filename, 'r', encoding='utf-8') as f:
-                for i, line in enumerate(f, start=1):
+        with open(self._filename, 'r', encoding='utf-8') as f:
+            for i, line in enumerate(f, start=1):
+                if with_info:
                     yield line.rstrip("\n"), (i, self._filename)
-        else:
-            with open(self._filename, 'r', encoding='utf-8') as f:
-                for line in f:
+                else:
                     yield line.rstrip("\n")
 
     def exists(self, item: str):
@@ -91,9 +103,31 @@ class BasicListParser(BlacklistParser):
         return False, -1
 
 
+class WhoWhatWhenString(str):
+    """
+    str wrapper with additional attributes for TSVDictParser to generate
+    """
+    def __new__(cls, seq, who, when, filename, lineno, *args, **kwargs):
+        self = super().__new__(cls, seq, *args, **kwargs)
+        self._who = who
+        self._when = when
+        self._filename = filename
+        self._lineno = lineno
+        return self
+
+    def when(self):
+        return self._when
+
+    def who(self):
+        return self._who
+
+
 class TSVDictParser(BlacklistParser):
+    """
+    Parser for 3-column TSV file with "when" (Unix timestamp), "who", and
+    "what" fields.
+    """
     def parse(self):
-        dct = {}
         with open(self._filename, 'r', encoding='utf-8') as f:
             for lineno, line in enumerate(f, 1):
                 if regex.compile(r'^\s*(?:#|$)').match(line):
@@ -101,51 +135,47 @@ class TSVDictParser(BlacklistParser):
                 try:
                     when, by_whom, what = line.rstrip().split('\t')
                 except ValueError as err:
-                    log('error', '{0}:{1}:{2}'.format(self._filename, lineno, err))
+                    log('error', '{0}:{1}:{2}'.format(
+                        self._filename, lineno, err))
                     continue
                 if what[0] != "#":
-                    dct[what] = {'when': when, 'by': by_whom}
+                    yield WhoWhatWhenString(
+                        seq=what, who=by_whom, when=when,
+                        filename=self._filename, lineno=lineno)
 
-        return dct
-
-    def add(self, item: Union[str, dict]):
+    def add(self, item: Union[str, WhoWhatWhenString]):
         with open(self._filename, 'a+', encoding='utf-8') as f:
-            if isinstance(item, dict):
-                item = '{}\t{}\t{}'.format(item[0], item[1], item[2])
+            if isinstance(item, WhoWhatWhenString):
+                item = '{}\t{}\t{}'.format(item.when(), item.who(), item)
             last_char = f.read()[-1:]
             if last_char not in ['', '\n']:
                 item = '\n' + item
             f.write(item + '\n')
 
-    def remove(self, item: Union[str, dict]):
-        if isinstance(item, dict):
-            item = item[2]
-
+    def delete(self, item: Union[str, WhoWhatWhenString]):
         with open(self._filename, 'r+', encoding='utf-8') as f:
             items = f.readlines()
-            items = [x for x in items if ('\t' not in x) or
-                     (len(x.split('\t')) == 3 and x.split('\t')[2].strip() != item)]
+            items = [
+                x for x in items if ('\t' not in x) or
+                (len(x.split('\t')) == 3 and x.split('\t')[2].strip() != item)]
             f.seek(0)
             f.truncate()
             f.writelines(items)
 
     def each(self, with_info=False):
         # info = (filename, lineno)
-        if with_info:
-            with open(self._filename, 'r', encoding='utf-8') as f:
-                for i, line in enumerate(f, start=1):
-                    if line.count('\t') == 2:
-                        yield line.rstrip("\n").split('\t')[2], (i, self._filename)
-        else:
-            with open(self._filename, 'r', encoding='utf-8') as f:
-                for line in f:
-                    if line.count('\t') == 2:
+        with open(self._filename, 'r', encoding='utf-8') as f:
+            for i, line in enumerate(f, start=1):
+                if line.count('\t') == 2:
+                    if with_info:
+                        yield line.rstrip("\n").split('\t')[2], (
+                            i, self._filename)
+                    else:
                         yield line.rstrip("\n").split('\t')[2]
 
-    def exists(self, item: Union[str, dict]):
-        if isinstance(item, dict):
-            item = item[2]
-        item = item.split('\t')[-1]
+    def exists(self, item: Union[str, WhoWhatWhenString]):
+        if not isinstance(item, WhoWhatWhenString):
+            item = item.split('\t')[-1]
 
         with open(self._filename, 'r', encoding='utf-8') as f:
             lines = f.readlines()
@@ -161,7 +191,8 @@ class TSVDictParser(BlacklistParser):
 
 class YAMLParserCIDR(BlacklistParser):
     """
-    YAML parser for IP blacklist (name suggests we should move to proper CIDR eventually).
+    YAML parser for IP blacklist (name suggests we should move to proper
+    CIDR eventually).
 
     Base class for parsers for YAML files with simple schema validation.
     """
@@ -177,11 +208,13 @@ class YAMLParserCIDR(BlacklistParser):
         with open(self._filename, 'r', encoding='utf-8') as f:
             y = yaml.safe_load(f)
         if y['Schema'] != self.SCHEMA_VARIANT:
-            raise ValueError('Schema variant: got {0}, but expected {1}'.format(
-                y['Schema'], self.SCHEMA_VARIANT))
+            raise ValueError(
+                'Schema variant: got {0}, but expected {1}'.format(
+                    y['Schema'], self.SCHEMA_VARIANT))
         if y['Schema_version'] > self.SCHEMA_VERSION:
-            raise ValueError('Schema version {0} is bigger than supported {1}'.format(
-                y['Schema_version'], self.SCHEMA_VERSION))
+            raise ValueError(
+                'Schema version {0} is bigger than supported {1}'.format(
+                    y['Schema_version'], self.SCHEMA_VERSION))
         for item in y['items']:
             if not keep_disabled and item.get('disable'):
                 continue
@@ -190,13 +223,20 @@ class YAMLParserCIDR(BlacklistParser):
     def parse(self):
         return [item[self.SCHEMA_PRIKEY] for item in self._parse()]
 
+    @classmethod
+    def _sortkey(cls, item):
+        itemkey = item[cls.SCHEMA_PRIKEY]
+        if isinstance(itemkey, list):
+            itemkey = '\x00'.join(itemkey)
+        return itemkey
+
     def _write(self, callback):
         d = {
             'Schema': self.SCHEMA_VARIANT,
             'Schema_version': self.SCHEMA_VERSION,
             'items': sorted(
                 self._parse(keep_disabled=True),
-                key=lambda x: x[self.SCHEMA_PRIKEY])
+                key=self.__class__._sortkey)
         }
         callback(d)
         with open(self._filename, 'w', encoding='utf-8') as f:
@@ -210,32 +250,51 @@ class YAMLParserCIDR(BlacklistParser):
 
         if 'ip' in item:
             if not ip_regex.match(item['ip']):
-                raise ValueError('Field "ip" is not a valid IP address: {0}'.format(
-                    item['ip']))
+                raise ValueError(
+                    'Field "ip" is not a valid IP address: {0}'.format(
+                        item['ip']))
             '''
             if 'cidr' in item:
                 raise ValueError(
-                    'Cannot have both "ip" and "cidr" members: {0!r}'.format(item))
+                    'Cannot have both "ip" and "cidr" members: {0!r}'.format(
+                        item))
         elif 'cidr' in item:
             if not 'base' in item['cidr'] or not 'mask' in item['cidr']:
-                raise ValueError('Field "cidr" must have members "base" and "mask"')
+                raise ValueError(
+                    'Field "cidr" must have members "base" and "mask"')
             if not ip_regex.match(item['cidr']['base']):
-                raise ValueError('Field "base" is not a valid IP address: {0}'.format(
-                    item['cidr']['base']))
+                raise ValueError(
+                    'Field "base" is not a valid IP address: {0}'.format(
+                        item['cidr']['base']))
             mask = int(item['cidr']['mask'])
             if mask < 0 or mask > 32:
-                raise ValueError('Field "mask" must be between 0 and 32: {0}'.format(
-                    item['cidr']['mask']))
+                raise ValueError(
+                    'Field "mask" must be between 0 and 32: {0}'.format(
+                        item['cidr']['mask']))
             '''
+            return True
         else:
-            raise ValueError('Item needs to have an "ip" member field: {0!r}'.format(item))
+            raise ValueError(
+                'Item needs to have an "ip" member field: {0!r}'.format(item))
 
     def validate(self):
         for item in self._parse():
             self._validate(item)
 
+    def _add_format(self, item):
+        """
+        Accept a new entry to add as a simple string; return the expected format for add()
+        """
+        return {self.SCHEMA_PRIKEY: item}
+
     def add(self, item):
-        self._validate(item)
+        if isinstance(item, str):
+            item = self._add_format(item)
+        try:
+            self._validate(item)
+        except Exception as err:
+            raise ValueError('Validation of {0} failed: {1}'.format(item, err))
+
         prikey = self.SCHEMA_PRIKEY
 
         def add_callback(d):
@@ -247,10 +306,12 @@ class YAMLParserCIDR(BlacklistParser):
 
         self._write(add_callback)
 
-    def remove(self, item):
+    def delete(self, item):
+        if isinstance(item, str):
+            item = self._add_format(item)
         prikey = self.SCHEMA_PRIKEY
 
-        def remove_callback(d):
+        def delete_callback(d):
             for i, compare in enumerate(d['items']):
                 if compare[prikey] == item[prikey]:
                     break
@@ -259,7 +320,7 @@ class YAMLParserCIDR(BlacklistParser):
                     item[prikey], d['items']))
             del d['items'][i]
 
-        self._write(remove_callback)
+        self._write(delete_callback)
 
     # FIXME: enumerate gets YAML item array index, not line number
     def each(self, with_info=False):
@@ -271,7 +332,7 @@ class YAMLParserCIDR(BlacklistParser):
 
     def exists(self, item):
         item = item.lower()
-        for i, rec in self.each(with_info=True):
+        for rec, i in self.each(with_info=True):
             if item == rec:
                 return True, i
         return False, -1
@@ -294,7 +355,8 @@ class YAMLParserNS(YAMLParserCIDR):
         def item_check(ns):
             if not host_regex.match(ns):
                 raise ValueError(
-                    '{0} does not look like a valid host name'.format(item['ns']))
+                    '{0} does not look like a valid host name'.format(
+                        item['ns']))
             if item.get('disable', None):
                 return False
             try:
@@ -303,20 +365,25 @@ class YAMLParserNS(YAMLParserCIDR):
                     ns, ','.join(x.to_text() for x in addr)))
             except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
                 if not item.get('pass', None):
-                    soa = dns.resolver.query(ns, 'soa')
-                    log('debug', '{0} has no A record; SOA is {1}'.format(
-                        ns, ';'.join(s.to_text() for s in soa)))
+                    try:
+                        soa = dns.resolver.query(ns, 'soa')
+                        log('debug', '{0} has no A record; SOA is {1}'.format(
+                            ns, ';'.join(s.to_text() for s in soa)))
+                        return False
+                    except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
+                        raise ValueError('{0} has no A record or SOA record'.format(ns))
             except dns.resolver.NoNameservers:
                 if not item.get('pass', None):
-                    log('warn', '{0} has no available servers to service DNS '
-                                'request.'.format(ns))
+                    raise ValueError(
+                        '{0} has no available servers to service DNS request.'.format(ns))
             except dns.resolver.Timeout:
-                log('warn', '{0}: DNS lookup timed out.'.format(ns))
+                raise ValueError('{0}: DNS lookup timed out.'.format(ns))
             return True
 
         host_regex = regex.compile(r'^([a-z0-9][-a-z0-9]*\.){2,}$')
         if 'ns' not in item:
-            raise ValueError('Item must have member field "ns": {0!r}'.format(item))
+            raise ValueError(
+                'Item must have member field "ns": {0!r}'.format(item))
         if isinstance(item['ns'], str):
             return item_check(item['ns'])
         elif isinstance(item['ns'], list):
@@ -327,8 +394,8 @@ class YAMLParserNS(YAMLParserCIDR):
             return accept
         else:
             raise ValueError(
-                'Member "ns" must be either string or list of strings: {0!r}'.format(
-                    item['ns']))
+                'Member "ns" must be either string or list of strings: '
+                '{0!r}'.format(item['ns']))
 
 
 class YAMLParserASN(YAMLParserCIDR):
@@ -340,29 +407,44 @@ class YAMLParserASN(YAMLParserCIDR):
 
     def _validate(self, item):
         if 'asn' not in item:
-            raise ValueError('Item must have member field "asn": {0!r}'.format(item))
+            raise ValueError(
+                'Item must have member field "asn": {0!r}'.format(item))
         asn = int(item['asn'])
-        if asn <= 0 or asn >= 4200000000 or 64496 <= asn <= 131071 or asn == 23456:
+        if asn <= 0 or asn >= 4200000000 or \
+                64496 <= asn <= 131071 or asn == 23456:
             raise ValueError('Not a valid public AS number: {0}'.format(asn))
 
 
-class Blacklist:
-    KEYWORDS = ('bad_keywords.txt', BasicListParser)
-    WEBSITES = ('blacklisted_websites.txt', BasicListParser)
-    USERNAMES = ('blacklisted_usernames.txt', BasicListParser)
-    NUMBERS = ('blacklisted_numbers.txt', BasicListParser)
-    WATCHED_KEYWORDS = ('watched_keywords.txt', TSVDictParser)
-    WATCHED_NUMBERS = ('watched_numbers.txt', TSVDictParser)
-    NSES = ('blacklisted_nses.yml', YAMLParserNS)
-    WATCHED_NSES = ('watched_nses.yml', YAMLParserNS)
-    CIDRS = ('blacklisted_cidrs.yml', YAMLParserCIDR)
-    WATCHED_CIDRS = ('watched_cidrs.yml', YAMLParserCIDR)
-    # ASNS = ('blacklisted_asns.yml', YAMLParserASN)
-    WATCHED_ASNS = ('watched_asns.yml', YAMLParserASN)
+class Blacklist(list):
+    def __init__(self, filename, cls):
+        self._filename = filename
+        self._cls = cls
+        self._parser = cls(filename)
+        super().__init__(self._parser.parse())
 
-    def __init__(self, type):
-        self._filename = type[0]
-        self._parser = type[1](self._filename)
+    @staticmethod
+    def resolve(identifier):
+        """
+        Map identifier to the corresponding key in GlobalVars.git_black_watch_lists
+        """
+        mapping = {
+            'keyword': 'keywords',
+            'number': 'numbers',
+            'phone': 'numbers',
+            'asn': 'asns',
+            'ip': 'cidrs',
+            'ns': 'nses',
+        }
+        if 'watch' in identifier:
+            prefix = 'watched'
+        elif 'keyword' in identifier:
+            prefix = 'bad'
+        else:
+            prefix = 'blacklisted'
+        for term, suffix in mapping.items():
+            if term in identifier:
+                return '%s_%s' % (prefix, suffix)
+        raise KeyError('Blacklists.resolve(): Could not resolve %s' % identifier)
 
     def parse(self):
         return self._parser.parse()
@@ -370,8 +452,8 @@ class Blacklist:
     def add(self, item):
         return self._parser.add(item)
 
-    def remove(self, item):
-        return self._parser.remove(item)
+    def delete(self, item):
+        return self._parser.delete(item)
 
     def each(self, with_info=False):
         return self._parser.each(with_info=with_info)
@@ -381,3 +463,193 @@ class Blacklist:
 
     def validate(self):
         return self._parser.validate()
+
+    #
+
+    def parserclass(self):
+        return self._cls
+
+    def filename(self):
+        return self._filename
+
+    def not_reject_reasons(self):
+        """
+        Which reasons should be filtered out when deciding whether something
+        is not acceptable to add to a blacklist?
+
+        Called by the already_caught method; provides hooks for the
+        WatchMixin and PhoneMixin classes.
+        """
+        filter_out = [
+            "potentially bad ns",
+            "potentially bad asn",
+            "potentially problematic",
+            "potentially bad ip"]
+        filter_out.extend(self._watch_not_reject_reasons())
+        filter_out.extend(self._phone_not_reject_reasons())
+        return filter_out
+
+    def _watch_not_reject_reasons(self):
+        """
+        Return extended reasons to reject a blacklist addition for watch
+        lists.
+
+        No-op in the base class; populated in WatchMixin.
+        """
+        return []
+
+    def _phone_not_reject_reasons(self):
+        """
+        Return additional reasons to reject a blacklist addition for phone
+        lists.
+
+        No-op in the base class; populated in PhoneMixin.
+        """
+        return []
+
+    def regextype(self):
+        """
+        Whether to perform regex validation etc on candidate patterns.
+
+        True in the base class; overridden by NetMixin and PhoneMixin.
+        """
+        return True
+
+    def numbertype(self):
+        """
+        Whether to perform phone number normalizations.
+
+        False in the base class; overridden by PhoneMixin.
+        """
+        return False
+
+    def anchor(self, item):
+        """
+        Create an anchored string for this blacklist type.
+        """
+        return item
+
+    def watchtype(self):
+        """
+        Whether this is a watchlist instead of a blacklist.
+
+        False in the base class; overridden by WatchMixin.
+        """
+        return False
+
+    def _ms_search_url_tail(self):
+        """
+        Class-specific URL tail for ms_search_url() method.
+        """
+        return "body_is_regex=1&body="
+
+    def ms_search_url(self):
+        """
+        Return URL to use for Metasmoke search.
+
+        Subclasses will want to override the _ms_search_url_tail method.
+        """
+        return 'https://metasmoke.erwaysoftware.com/search?utf8=%E2%9C%93{0}'.format(
+            self._ms_search_url_tail())
+
+
+class WatchMixin:
+    """
+    Mixin to create watch behavior from a base class
+    """
+    def _watch_not_reject_reasons(self):
+        return ["potentially bad keyword"]
+
+    def watchtype(self):
+        return True
+
+
+class KeywordMixin:
+    """
+    Mixin for keyword lists; redefines anchor() to add bookens.
+    """
+    def anchor(self, item):
+        return r"(?s:\b" + item + r"\b)"
+
+
+class UserMixin:
+    """
+    Mixin to create username class behavior from a base class
+    """
+    def _ms_search_url_tail(self):
+        return "username_is_regex=1&username="
+
+
+class NetMixin:
+    """
+    Mixin for net resources (hostname labels, IP addresses, etc)
+    """
+    def regextype(self):
+        return False
+
+
+class PhoneMixin(NetMixin):
+    """
+    Mixin to create phone number class behavior from a base class
+    """
+    def _phone_not_reject_reasons(self):
+        return ["mostly non-latin", "phone number detected",
+                "messaging number detected"]
+
+    def numbertype(self):
+        return True
+
+    def _ms_search_url_tail(self):
+        return "body="
+
+
+class KeywordBlacklist(KeywordMixin, Blacklist):
+    pass
+
+
+class Watchlist(KeywordMixin, WatchMixin, Blacklist):
+    pass
+
+
+class UserBlacklist(UserMixin, Blacklist):
+    pass
+
+
+class UserWatchlist(UserMixin, WatchMixin, Blacklist):
+    pass
+
+
+class NetBlacklist(NetMixin, Blacklist):
+    pass
+
+
+class NetWatchlist(NetMixin, WatchMixin, Blacklist):
+    pass
+
+
+class PhoneBlacklist(PhoneMixin, Blacklist):
+    pass
+
+
+class PhoneWatchlist(PhoneMixin, WatchMixin, Blacklist):
+    pass
+
+
+'''
+if __name__ == '__main__':
+    load_blacklists()
+    blacklist_id = Blacklist.resolve('watch-ip')
+    print(blacklist_id)
+    blacklister = GlobalVars.git_black_watch_lists[blacklist_id]
+    exists, line = blacklister.exists('103.10.200.62')
+    print(exists, line)
+    print('****')
+# """
+    for name, bwlist in GlobalVars.git_black_watch_lists.items():
+        print('{0} type: {1}'.format(name, type(bwlist)))
+        for method in ('regextype', 'numbertype', 'watchtype', 'not_reject_reasons'):
+            print('{0}.{1}() = {2}'.format(bwlist.filename(), method, getattr(bwlist, method)()))
+        for item in bwlist.each():
+            print('each[0]: %r' % item)
+            break
+'''

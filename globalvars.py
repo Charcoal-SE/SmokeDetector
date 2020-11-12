@@ -54,14 +54,7 @@ class GlobalVars:
     false_positives = []
     whitelisted_users = set()
     blacklisted_users = dict()
-    blacklisted_usernames = []
-    blacklisted_websites = []
-    blacklisted_numbers = []
-    watched_numbers = []
-    blacklisted_numbers_normalized = None
-    watched_numbers_normalized = None
-    bad_keywords = []
-    watched_keywords = {}
+    git_black_watch_lists = dict()
     ignored_posts = []
     auto_ignored_posts = []
     startup_utc_date = datetime.utcnow()
