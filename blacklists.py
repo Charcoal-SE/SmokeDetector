@@ -45,7 +45,7 @@ class BlacklistParser:
     def parse(self):
         return []
 
-    def add(self, item):
+    def add(self, item, **kwargs):
         pass
 
     def delete(self, item):
@@ -67,7 +67,7 @@ class BasicListParser(BlacklistParser):
             return [self._normalize(line)
                     for line in f if len(line.rstrip()) > 0 and line[0] != '#']
 
-    def add(self, item: str):
+    def add(self, item: str, **kwargs):
         with open(self._filename, 'a+', encoding='utf-8') as f:
             last_char = f.read()[-1:]
             if last_char not in ['', '\n']:
@@ -107,7 +107,7 @@ class WhoWhatWhenString(str):
     """
     str wrapper with additional attributes for TSVDictParser to generate
     """
-    def __new__(cls, seq, who, when, filename, lineno, *args, **kwargs):
+    def __new__(cls, seq, who, when, filename=None, lineno=None, *args, **kwargs):
         self = super().__new__(cls, seq, *args, **kwargs)
         self._who = who
         self._when = when
@@ -143,10 +143,25 @@ class TSVDictParser(BlacklistParser):
                         seq=what, who=by_whom, when=when,
                         filename=self._filename, lineno=lineno)
 
-    def add(self, item: Union[str, WhoWhatWhenString]):
+    def _validate(self, item: str):
+        fields = item.split('\t')
+        if len(fields) != 3:
+            raise ValueError('Format error: TSVDict expects three fields, tab separated')
+        try:
+            _ = int(fields[0])
+        except ValueError:
+            raise ValueError('Format error: first field must be numeric timestamp')
+        listed, where = self.exists(fields[2])
+        if listed:
+            raise ValueError('Item already listed on %s line %i' % (self._filename, where))
+
+    def add(self, item: Union[str, WhoWhatWhenString], **kwargs):
+        if isinstance(item, str) and 'who' in kwargs and 'when' in kwargs:
+            item = WhoWhatWhenString(item, kwargs['who'], kwargs['when'])
+        if isinstance(item, WhoWhatWhenString):
+            item = '{}\t{}\t{}'.format(item.when(), item.who(), item)
+        self._validate(item)
         with open(self._filename, 'a+', encoding='utf-8') as f:
-            if isinstance(item, WhoWhatWhenString):
-                item = '{}\t{}\t{}'.format(item.when(), item.who(), item)
             last_char = f.read()[-1:]
             if last_char not in ['', '\n']:
                 item = '\n' + item
@@ -287,7 +302,7 @@ class YAMLParserCIDR(BlacklistParser):
         """
         return {self.SCHEMA_PRIKEY: item}
 
-    def add(self, item):
+    def add(self, item, **kwargs):
         if isinstance(item, str):
             item = self._add_format(item)
         try:
@@ -449,8 +464,8 @@ class Blacklist(list):
     def parse(self):
         return self._parser.parse()
 
-    def add(self, item):
-        return self._parser.add(item)
+    def add(self, item, **kwargs):
+        return self._parser.add(item, **kwargs)
 
     def delete(self, item):
         return self._parser.delete(item)
