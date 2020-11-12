@@ -132,7 +132,7 @@ class GitManager:
             watch_removed = []
             if not blacklister.watchtype():
                 for watcher in GlobalVars.git_black_watch_lists.values():
-                    if not watcher.watchtype():
+                    if not hasattr(watcher, 'watchtype') or not watcher.watchtype():
                         continue
                     watched, where = watcher.exists(item_to_blacklist)
                     if watched:
