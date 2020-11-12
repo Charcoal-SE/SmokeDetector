@@ -24895,3 +24895,5 @@
 1605162239	tripleee	worldtechnicians\.com
 1605162429	tripleee	airlinesupports\.com
 burburinho\.com
+1605164462	tripleee	burburinho\.com
+spgtechnologies\.com
