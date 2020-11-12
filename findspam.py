@@ -1667,7 +1667,6 @@ bad_keywords_nwb = [  # "nwb" == "no word boundary"
     "(?:skin|face(?<!interface)(?<!surface)|eye)[- ]?(?:serum|therapy|hydration|tip|renewal|gel|lotion|cream)",
     r"\bnutra(?!l(?:|y|ity|i[sz]ing|i[sz]ed?)s?\b)",
     r"contact (?:me|us)\W*<a ",
-    "ecoflex",
     r"\brsgold",
     "packers.{0,15}(?:movers|logistic)(?:.{0,25}</a>)",
     "(?:brain|breast|male|penile|penis)[- ]?(?:enhance|enlarge|improve|boost|plus|peak)(?:ment)?",
