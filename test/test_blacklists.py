@@ -112,8 +112,18 @@ def test_yaml_nses():
         blacklist.add({'ns': 'example.com.'})
     with pytest.raises(ValueError) as e:
         blacklist.add({'ns': 'EXAMPLE.COM.'})
-    assert 'example.net.' not in blacklist.parse()
-    assert 'example.org.' in blacklist.parse()
+    with pytest.raises(ValueError) as e:
+        blacklist.add({'ns': 'example.at'})
+    blacklist.add({'ns': 'example.at.'})
+    whether, where = blacklist.exists('example.at')
+    assert not whether
+    assert where == -1  # is this really the least surprising result?
+    whether, where = blacklist.exists('example.at.')
+    assert whether
+    assert where == (1, 'test_nses.yml')
+    parsed = blacklist.parse()
+    assert 'example.net.' not in parsed
+    assert 'example.org.' in parsed
     blacklist.delete({'ns': 'example.org.'})
     assert 'example.org.' not in blacklist.parse()
     unlink('test_nses.yml')
