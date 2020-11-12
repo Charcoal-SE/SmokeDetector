@@ -22,7 +22,7 @@ else:
     from sh import ErrorReturnCode as GitError
 
 from helpers import log, log_exception, only_blacklists_changed
-from blacklists import Blacklist
+from blacklists import Blacklist, enumerate_git_blacklists
 
 
 class GitHubManager:
@@ -268,7 +268,7 @@ class GitManager:
                 return False, "`blacklist_type` not set, blame a developer."
 
             blacklists = []
-            for bwlist in GlobalVars.git_black_watch_lists.values():
+            for bwlist in enumerate_git_blacklists():
                 if (blacklist_type == "watch") == bwlist.watchtype():
                     blacklists.append(bwlist)
 
