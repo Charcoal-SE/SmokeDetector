@@ -168,6 +168,9 @@ class TSVDictParser(BlacklistParser):
             f.write(item + '\n')
 
     def delete(self, item: Union[str, WhoWhatWhenString]):
+        there, _ = self.exists(item)
+        if not there:
+            raise ValueError('item %s not found' % item)
         with open(self._filename, 'r+', encoding='utf-8') as f:
             items = f.readlines()
             items = [
