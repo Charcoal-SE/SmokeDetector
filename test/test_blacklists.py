@@ -139,3 +139,22 @@ def test_tsv_watchlist():
     watchlist.add('five six', who='tripleee', when=1495006490)
     assert 'five six' in watchlist.parse()
     unlink('test_watched_keywords.txt')
+
+
+def test_keyword_blacklist():
+    with open('test_blacklist.txt', 'w') as t:
+        t.write('one two\n')
+        t.write('three four\n')
+    blacklist = KeywordBlacklist('test_blacklist.txt', BasicListParser)
+    parsed = blacklist.parse()
+    assert 'one two' in parsed
+    assert 'one' not in parsed
+    assert 'three four' in parsed
+    assert 'five six' not in parsed
+    #with pytest.raises(ValueError) as e:
+    #    blacklist.add('*invalid regex[')
+    #with pytest.raises(ValueError) as e:
+    #    blacklist.add('one two')
+    blacklist.add('five six')
+    assert 'five six' in blacklist.parse()
+    unlink('test_blacklist.txt')
