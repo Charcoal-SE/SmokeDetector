@@ -16366,7 +16366,7 @@
 1579576032	Eliah Kagan	bestlaptopshub\.com
 1579576225	Eliah Kagan	landumatt(?:@gmail\.com)?
 1579585282	Shree	apolonrugs\.com
-1579585744	tripleee	(?-i:^franzink‭$)
+1579585744	tripleee	(?-i:^franzink$)
 1579586348	Makyen	(?-i:e7m205ZIxBE)
 1579586384	Makyen	apolon[\W_]*+rugs(?!\.com(?<=apolonrugs\.com))
 1579586415	Makyen	mydigital[\W_]*+housing
@@ -18186,7 +18186,7 @@
 1583700175	Makyen	trailblazer\.me
 1583700198	Makyen	welcome15053
 1583719925	Machavity	oispice\.com
-1583719979	Machavity	(?-i:Dogcat\WZzs‭)
+1583719979	Machavity	(?-i:Dogcat\WZzs)
 1583722184	Makyen	gsmorigin\.com
 1583729483	Makyen	d(?:octo)?r[\W_]*+arans[\W_]*+turnner
 1583729506	Makyen	lyricsloobs\.com
@@ -18273,7 +18273,7 @@
 1583928859	tripleee	addhunters
 1583930090	tripleee	thenutracafe\.com
 1583930116	tripleee	safe[\W_]*+mask[\W_]*+pro
-1583930460	tripleee	DennisvanderGeest‭
+1583930460	tripleee	DennisvanderGeest
 1583942401	Makyen	(?-i:ZEyCUkuHOB0)(?#youtu.be)
 1583942424	Makyen	whatsappstatusquotesbest\.blogspot
 1583942449	Makyen	superstarsbio\.com
@@ -18898,7 +18898,7 @@
 1585746199	Makyen	zeenatrend\.com
 1585746223	Makyen	nativevanilla\.com
 1585746367	Machavity	(?-i:B06VY4S9V2)
-1585748495	Machavity	^Renu KumAri‭$
+1585748495	Machavity	^Renu KumAri$
 1585748656	Machavity	wa-web\.net
 1585764017	Makyen	signalspal\.com
 1585770536	Machavity	wordpress\.org/plugins/country-state-city-auto-dropdown
@@ -21185,7 +21185,7 @@
 1592741326	Daniil	excelexpertblog\.blogspot\.com
 1592741341	Daniil	alljobalert\.info
 1592746146	Daniil	thestudyiq\.com
-1592746161	Daniil	(?-i:The Study IQ‭)
+1592746161	Daniil	(?-i:The Study IQ)
 1592759823	user12986714	dosya\.pro
 1592764844	NobodyNada	mydigitalfiling\.in
 1592769322	Daniil	ericahess(?<=jotform\.com/ericahess)
@@ -21294,7 +21294,7 @@
 1593104360	Machavity	ACE\WMoney\WTransfer
 1593104475	Makyen	palmastationery\.com
 1593105576	Machavity	(?-i:^William Penn$)
-1593112614	Machavity	(?-i:^nicklon khokhar‭$)
+1593112614	Machavity	(?-i:^nicklon khokhar$)
 1593140255	Machavity	(?-i:^Ahmed Aniss$)
 1593144138	Makyen	(?-i:j-mT3B2LPy4)(?#youtu.be)
 1593159177	Daniil	(?-i:End of (L|l)ease Melbourne)
@@ -22291,7 +22291,7 @@
 1596826586	Makyen	addtalentsolutions\.com
 1596828373	Machavity	wizardsoft\.nl
 1596828528	Machavity	wizardsoft(?!\.nl)
-1596830289	Machavity	(?-i:^Anthony Dwayne Chapelle‭$)
+1596830289	Machavity	(?-i:^Anthony Dwayne Chapelle$)
 1596860965	Makyen	nhacchuong888(?:@gmail\.com)?
 1596860985	Makyen	tainhacchuong\.net
 1596861002	Makyen	(?-i:tainhacchuong)(?#facebook.com)
@@ -22513,7 +22513,7 @@
 1597646033	tripleee	thesmsempire\.com
 1597646069	tripleee	the[\W_]*+sms[\W_]*+empire[\W_]*+(?!\.com)\w*+
 1597647432	tripleee	nova[\W_]*+keto[\_]*+avis
-1597649814	tripleee	aaaenos‭(?!\.com)
+1597649814	tripleee	aaaenos(?!\.com)
 1597650167	Mast	technobizzar\.com
 1597652175	tripleee	nozlapp\.com
 1597652958	tripleee	installmalwarebytes\.org
@@ -23446,7 +23446,7 @@
 1600324800	tripleee	carsstore\.xyz
 1600325055	tripleee	coydoll(?!\.com)
 1600326078	tripleee	(?-i:YCMRZkCDUN0)(?# youtube)
-1600326567	tripleee	venbadeepika934‭
+1600326567	tripleee	venbadeepika934
 1600330238	Mast	bloggingvalue\.com
 1600330318	Mast	engineer\.adnanalam(?:@gmail\.com)?
 1600331679	tripleee	alpha[\W_]*+jym
@@ -24314,7 +24314,7 @@
 1603357623	Ryan M	visetech(?!\.org)
 1603357953	Ryan M	goharddrive\.com
 1603358007	Ryan M	smartfinil\.com
-1603358124	Ryan M	^Manohar\W?Parakh‭$
+1603358124	Ryan M	^Manohar\W?Parakh$
 1603358210	Ryan M	Etizolam
 1603359247	Makyen	p[\W_]*+s[\W_]*+s[\W_]*+39[\W_]*+(?:dot[\W_]*+)?net
 1603360885	Victor VosMottor	city-cleaner\.com
