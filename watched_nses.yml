@@ -1,20 +1,14 @@
 Schema: yaml_ns
 Schema_version: '2019120601'
 items:
-- ns: 100ws.com.
-- ns: 22.cn.
-- ns: 256gbserver.com.
-- ns: a2hosting.com.
-- comment: timeout 2020-04-08
-  disable: true
-  ns: aakibuki.com.
+- comment: has FPs, don't blacklist again
+  ns: namecheaphosting.com.
 - ns:
   - abby.ns.cloudflare.com.
   - rick.ns.cloudflare.com.
 - ns:
   - abby.ns.cloudflare.com.
   - tom.ns.cloudflare.com.
-- ns: absas.net.
 - ns:
   - ada.ns.cloudflare.com.
   - arch.ns.cloudflare.com.
@@ -174,7 +168,6 @@ items:
 - ns:
   - aron.ns.cloudflare.com.
   - mustafa.ns.cloudflare.com.
-- ns: arrowbigapps.com.
 - ns:
   - art.ns.cloudflare.com.
   - sharon.ns.cloudflare.com.
@@ -190,10 +183,6 @@ items:
 - ns:
   - ashley.ns.cloudflare.com.
   - lee.ns.cloudflare.com.
-- comment: no longer responding 2020-04-02
-  disable: true
-  ns: asurawebhosting.com.
-- ns: ayurhealthtips.com.
 - ns:
   - barbara.ns.cloudflare.com.
   - jack.ns.cloudflare.com.
@@ -224,21 +213,6 @@ items:
 - ns:
   - betty.ns.cloudflare.com.
   - ken.ns.cloudflare.com.
-- ns: bh-63.webhostbox.net.
-- ns: bh-74.webhostbox.net.
-- ns: bh-ht-10.webhostbox.net.
-- ns: bh-ht-11.webhostbox.net.
-- ns: bh-ht-3.webhostbox.net.
-- ns: bh-ht-7.webhostbox.net.
-- ns: bh-in-10.webhostbox.net.
-- ns: bh-in-31.webhostbox.net.
-- ns: bh-in-33.webhostbox.net.
-- ns: bigcommerce.com.
-- ns: bigrock.in.
-- ns: biswasit.com.
-- ns: blackhostbd.com.
-- ns: blockchainhelp.pro.
-- ns: bluella.net.
 - ns:
   - bob.ns.cloudflare.com.
   - dee.ns.cloudflare.com.
@@ -305,12 +279,6 @@ items:
 - ns:
   - burt.ns.cloudflare.com.
   - lola.ns.cloudflare.com.
-- ns: c0d3host.com.
-- ns: c13707.sgvps.net.
-- comment: no longer resolves 2020-10-24
-  disable: true
-  ns: c22487.sgvps.net.
-- ns: cabanova.net.
 - ns:
   - candy.ns.cloudflare.com.
   - karl.ns.cloudflare.com.
@@ -320,8 +288,6 @@ items:
 - ns:
   - casey.ns.cloudflare.com.
   - harlee.ns.cloudflare.com.
-- ns: cetpainfotech.com.
-- ns: cetpajobs.com.
 - ns:
   - chad.ns.cloudflare.com.
   - elaine.ns.cloudflare.com.
@@ -340,7 +306,6 @@ items:
 - ns:
   - cheryl.ns.cloudflare.com.
   - guy.ns.cloudflare.com.
-- ns: chinahoster.com.
 - ns:
   - chip.ns.cloudflare.com.
   - cruz.ns.cloudflare.com.
@@ -359,18 +324,6 @@ items:
 - ns:
   - cleo.ns.cloudflare.com.
   - leah.ns.cloudflare.com.
-- ns: cloudhostdns.net.
-- ns: cloudns.io.
-- ns: cloudnstools.com.
-- ns: cms500.com.
-- ns:
-  - cns1.bigrock.com.
-  - cns2.bigrock.com.
-- comment: 5/9 over 7 months, all TPs overlap with other rules (2020-08-18)
-  disable: true
-  ns:
-  - cns2015.webhostbox.net.
-  - cns2016.webhostbox.net.
 - ns:
   - coco.ns.cloudflare.com.
   - duke.ns.cloudflare.com.
@@ -380,8 +333,6 @@ items:
 - ns:
   - coco.ns.cloudflare.com.
   - jerry.ns.cloudflare.com.
-- ns: contabo.net.
-- ns: controlmyvps.com.au.
 - ns:
   - cory.ns.cloudflare.com.
   - lana.ns.cloudflare.com.
@@ -391,14 +342,9 @@ items:
 - ns:
   - cory.ns.cloudflare.com.
   - rachel.ns.cloudflare.com.
-- ns: cp-32.webhostbox.net.
-- ns: cp-in-12.webhostbox.net.
-- ns: crazydomains.com.
-- ns: crystalregistry.com.
 - ns:
   - curt.ns.cloudflare.com.
   - jean.ns.cloudflare.com.
-- ns: cybercastco.com.
 - ns:
   - dahlia.ns.cloudflare.com.
   - max.ns.cloudflare.com.
@@ -444,7 +390,6 @@ items:
 - ns:
   - dawn.ns.cloudflare.com.
   - dom.ns.cloudflare.com.
-- ns: dctshosting.com.
 - ns:
   - dean.ns.cloudflare.com.
   - sofia.ns.cloudflare.com.
@@ -457,7 +402,6 @@ items:
 - ns:
   - deb.ns.cloudflare.com.
   - malcolm.ns.cloudflare.com.
-- ns: dedaddy.com.
 - ns:
   - dee.ns.cloudflare.com.
   - evan.ns.cloudflare.com.
@@ -476,24 +420,12 @@ items:
 - ns:
   - desi.ns.cloudflare.com.
   - terry.ns.cloudflare.com.
-- ns: digitechwebdesignhosting.com.
 - ns:
   - dilbert.ns.cloudflare.com.
   - meg.ns.cloudflare.com.
 - ns:
   - dilbert.ns.cloudflare.com.
   - mimi.ns.cloudflare.com.
-- ns: directory92.com.
-- ns: dns-diy.com.
-- ns: dns-diy.net.
-- comment: timeout 2020-04-02
-  disable: true
-  ns: dns-parking.net.
-- ns: dnschamp.com.
-- ns: dnsfornet.com.
-- ns: dnsireland.com.
-- ns: dnsowl.com.
-- ns: dnspod.net.
 - ns:
   - dolly.ns.cloudflare.com.
   - hans.ns.cloudflare.com.
@@ -521,25 +453,18 @@ items:
 - ns:
   - duke.ns.cloudflare.com.
   - wally.ns.cloudflare.com.
-- comment: lo longer responding 2020-04-02
-  disable: true
-  ns: dynamicnetips.com.
 - ns:
   - earl.ns.cloudflare.com.
   - grace.ns.cloudflare.com.
 - ns:
   - ed.ns.cloudflare.com.
   - kara.ns.cloudflare.com.
-- ns: ekkum.com.
 - ns:
   - elinore.ns.cloudflare.com.
   - igor.ns.cloudflare.com.
 - ns:
   - elinore.ns.cloudflare.com.
   - sam.ns.cloudflare.com.
-- comment: no longer responding 2020-11-10
-  disable: true
-  ns: elitegifthouse.com.
 - ns:
   - elliot.ns.cloudflare.com.
   - lila.ns.cloudflare.com.
@@ -563,7 +488,6 @@ items:
   ns:
   - elsa.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
-- ns: elsner.com.
 - ns:
   - eoin.ns.cloudflare.com.
   - joselyn.ns.cloudflare.com.
@@ -588,13 +512,6 @@ items:
 - ns:
   - eva.ns.cloudflare.com.
   - pete.ns.cloudflare.com.
-- ns: ewebguru.com.
-- ns: exaltedsolutions.com.
-- ns: exweme.com.
-- ns: factocert.com.
-- comment: 9/39 over a year
-  disable: true
-  ns: fatcow.com.
 - ns:
   - felicity.ns.cloudflare.com.
   - lily.ns.cloudflare.com.
@@ -604,16 +521,12 @@ items:
 - ns:
   - fiona.ns.cloudflare.com.
   - rajeev.ns.cloudflare.com.
-- ns: flaunt7.com.
-- ns: freehostia.com.
 - ns:
   - gail.ns.cloudflare.com.
   - lynn.ns.cloudflare.com.
 - ns:
   - gene.ns.cloudflare.com.
   - graham.ns.cloudflare.com.
-- ns: genhost.in.
-- ns: genxwhosting.com.
 - ns:
   - george.ns.cloudflare.com.
   - lady.ns.cloudflare.com.
@@ -629,17 +542,9 @@ items:
 - ns:
   - gina.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
-- ns: giow1065.siteground.us.
 - ns:
   - glen.ns.cloudflare.com.
   - jean.ns.cloudflare.com.
-- ns: globat.com.
-- comment: timeout 2020-04-02
-  disable: true
-  ns: goatcr.com.
-- comment: no longer resolves 2020-08-27
-  disable: true
-  ns: gohostgator.com.
 - ns:
   - grace.ns.cloudflare.com.
   - quentin.ns.cloudflare.com.
@@ -649,7 +554,6 @@ items:
 - ns:
   - graham.ns.cloudflare.com.
   - tina.ns.cloudflare.com.
-- ns: greengeeks.com.
 - ns:
   - greg.ns.cloudflare.com.
   - hera.ns.cloudflare.com.
@@ -662,13 +566,9 @@ items:
 - ns:
   - greg.ns.cloudflare.com.
   - reza.ns.cloudflare.com.
-- comment: no longer resolves 2020-08-27
-  disable: true
-  ns: guruapk.com.
 - ns:
   - guy.ns.cloudflare.com.
   - molly.ns.cloudflare.com.
-- ns: guzelhosting.com.
 - ns:
   - hal.ns.cloudflare.com.
   - liz.ns.cloudflare.com.
@@ -679,66 +579,23 @@ items:
   - hal.ns.cloudflare.com.
   - tegan.ns.cloudflare.com.
 - ns:
-  - hal.ns.cloudflare.com.
-  - tia.ns.cloudflare.com.
-- comment: has FPs, don't move to blacklist
-  ns: hawkhost.com.
-- ns:
-  - heather.ns.cloudflare.com.
-  - west.ns.cloudflare.com.
-- ns: herosite.pro.
-- ns: hichina.com.
-- ns: himalayanwebinfo.com.
-- ns:
   - hope.ns.cloudflare.com.
   - terin.ns.cloudflare.com.
-- ns: host.com.pk.
-- ns: hostblast.net.
-- ns: hostcloudstore.com.
-- ns: hosterpk.com.
-- ns: hostgator.in.
-- ns: hosting24.com.
-- ns: hostinger.in.
-- ns: hostinger.vn.
-- comment: no longer resolves 2020-08-27
-  disable: true
-  ns: hostingsrv.xyz.
-- ns: hostingviet.vn.
-- ns: hostmonster.com.
-- ns: hostnac.com.
-- ns: hostomy.net.
-- comment: lots of FPs but also many TP posts which would otherwise not have been
-    found
-  ns: hostpapa.com.
-- ns: hostsailor.com.
-- ns: hostspicy.com.
-- ns: hostwhitelabel.com.
-- comment: 21/291 over 8 months (some weight 1)
-  disable: true
-  ns: hover.com.
 - ns:
   - hugh.ns.cloudflare.com.
   - lina.ns.cloudflare.com.
-- ns: i2waves.com.
+- ns:
+  - hal.ns.cloudflare.com.
+  - tia.ns.cloudflare.com.
+- ns:
+  - heather.ns.cloudflare.com.
+  - west.ns.cloudflare.com.
 - ns:
   - ian.ns.cloudflare.com.
   - melissa.ns.cloudflare.com.
-- ns: idhostinger.com.
-- ns: idwebhost.id.
-- ns: ifcondition.com.
-- ns: ihc.ru.
-- ns: imanagewebs.com.
-- ns: improvmx.com.
 - ns:
   - ines.ns.cloudflare.com.
   - terin.ns.cloudflare.com.
-- ns: inet.vn.
-- comment: 37/216 over 6 months
-  disable: true
-  ns: inmotionhosting.com.
-- ns: insightssuccess.com.
-- ns: intersmartsolution.com.
-- ns: ipage.com.
 - ns:
   - iris.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
@@ -751,15 +608,12 @@ items:
 - ns:
   - isaac.ns.cloudflare.com.
   - tia.ns.cloudflare.com.
-- ns: iserverplanet.net.
 - ns:
   - isla.ns.cloudflare.com.
   - jeremy.ns.cloudflare.com.
-- ns: isnpk.com.
 - ns:
   - ivy.ns.cloudflare.com.
   - simon.ns.cloudflare.com.
-- ns: iwantmyname.net.
 - ns:
   - jacqueline.ns.cloudflare.com.
   - nitin.ns.cloudflare.com.
@@ -775,7 +629,6 @@ items:
 - ns:
   - janet.ns.cloudflare.com.
   - lou.ns.cloudflare.com.
-- ns: jawatankosong.biz.
 - ns:
   - jean.ns.cloudflare.com.
   - lee.ns.cloudflare.com.
@@ -833,9 +686,6 @@ items:
 - ns:
   - june.ns.cloudflare.com.
   - scott.ns.cloudflare.com.
-- comment: 14/52 over a year
-  disable: true
-  ns: justhost.com.
 - ns:
   - justin.ns.cloudflare.com.
   - vita.ns.cloudflare.com.
@@ -926,7 +776,6 @@ items:
 - ns:
   - laura.ns.cloudflare.com.
   - terin.ns.cloudflare.com.
-- ns: layerip.com.
 - ns:
   - leanna.ns.cloudflare.com.
   - marek.ns.cloudflare.com.
@@ -942,7 +791,6 @@ items:
 - ns:
   - lex.ns.cloudflare.com.
   - tori.ns.cloudflare.com.
-- ns: lfmserver.com.
 - ns:
   - lia.ns.cloudflare.com.
   - pete.ns.cloudflare.com.
@@ -961,11 +809,9 @@ items:
 - ns:
   - lloyd.ns.cloudflare.com.
   - phoenix.ns.cloudflare.com.
-- ns: loanwalle.com.
 - ns:
   - logan.ns.cloudflare.com.
   - nena.ns.cloudflare.com.
-- ns: loopbyte.com.
 - ns:
   - lorna.ns.cloudflare.com.
   - rodney.ns.cloudflare.com.
@@ -978,8 +824,6 @@ items:
 - ns:
   - lynn.ns.cloudflare.com.
   - mira.ns.cloudflare.com.
-- ns: m76.siteground.biz.
-- ns: macsol.co.in.
 - ns:
   - major.ns.cloudflare.com.
   - rosa.ns.cloudflare.com.
@@ -1001,22 +845,12 @@ items:
 - ns:
   - mary.ns.cloudflare.com.
   - plato.ns.cloudflare.com.
-- ns: matbao.com.
-- ns: matbao.vn.
-- ns: matkaparivar.in.
 - ns:
   - matt.ns.cloudflare.com.
   - nina.ns.cloudflare.com.
 - ns:
   - max.ns.cloudflare.com.
   - uma.ns.cloudflare.com.
-- ns: mbah.men.
-- ns: md-31.webhostbox.net.
-- ns: md-63.webhostbox.net.
-- ns: md-89.webhostbox.net.
-- ns: md-in-20.webhostbox.net.
-- ns: md-in-51.webhostbox.net.
-- ns: md-in-57.webhostbox.net.
 - ns:
   - meera.ns.cloudflare.com.
   - skip.ns.cloudflare.com.
@@ -1026,9 +860,6 @@ items:
 - ns:
   - meg.ns.cloudflare.com.
   - theo.ns.cloudflare.com.
-- comment: no longer responding 2020-08-31
-  disable: true
-  ns: megabytesserver.com.
 - ns:
   - megan.ns.cloudflare.com.
   - rajeev.ns.cloudflare.com.
@@ -1041,40 +872,18 @@ items:
 - ns:
   - michelle.ns.cloudflare.com.
   - rob.ns.cloudflare.com.
-- comment: FPs, don't blacklist
-  ns: mihanwebhost.com.
 - ns:
   - mira.ns.cloudflare.com.
   - sergi.ns.cloudflare.com.
-- ns: mochahost.com.
 - ns:
   - molly.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
-- comment: does not exist, but is claimed by muthoottumini.com
-  ns: multicshost.com.
-  pass: true
-- ns: mycyberhosting.com.
-- ns: myhostadmin.net.
-- ns: myhostindia.com.
-- ns: mywahosting.com.
-- comment: has FPs, don't blacklist again
-  ns: namecheaphosting.com.
-- comment: no longer responding 2020-04-02
-  disable: true
-  ns: namedc.com.
-- ns: namedc.com.
-- ns: nanosupercloud.com.
 - ns:
   - naomi.ns.cloudflare.com.
   - tim.ns.cloudflare.com.
 - ns:
   - neil.ns.cloudflare.com.
   - tricia.ns.cloudflare.com.
-- ns: net4india.com.
-- ns: netafraz.com.
-- ns: netmagicians.com.
-- ns: nettigritty.net.
-- ns: niagahoster.com.
 - ns:
   - noah.ns.cloudflare.com.
   - ophelia.ns.cloudflare.com.
@@ -1085,6 +894,53 @@ items:
   - novalee.ns.cloudflare.com.
   - paul.ns.cloudflare.com.
 - ns:
+  - olga.ns.cloudflare.com.
+  - seth.ns.cloudflare.com.
+- ns:
+  - pablo.ns.cloudflare.com.
+  - paris.ns.cloudflare.com.
+- ns:
+  - pablo.ns.cloudflare.com.
+  - pola.ns.cloudflare.com.
+- ns:
+  - plato.ns.cloudflare.com.
+  - rafe.ns.cloudflare.com.
+- ns:
+  - princess.ns.cloudflare.com.
+  - rene.ns.cloudflare.com.
+- ns:
+  - raina.ns.cloudflare.com.
+  - zac.ns.cloudflare.com.
+- ns:
+  - rita.ns.cloudflare.com.
+  - rocky.ns.cloudflare.com.
+- ns:
+  - rita.ns.cloudflare.com.
+  - west.ns.cloudflare.com.
+- ns:
+  - sam.ns.cloudflare.com.
+  - vera.ns.cloudflare.com.
+- ns:
+  - sara.ns.cloudflare.com.
+  - seth.ns.cloudflare.com.
+- ns:
+  - sara.ns.cloudflare.com.
+  - theo.ns.cloudflare.com.
+- ns:
+  - simon.ns.cloudflare.com.
+  - zoe.ns.cloudflare.com.
+- ns:
+  - sue.ns.cloudflare.com.
+  - thomas.ns.cloudflare.com.
+- comment: FPs, don't blacklist
+  ns: mihanwebhost.com.
+- ns: offshoreracks.com.
+- ns: sathyats.net.
+- comment: no longer responding 2020-04-02
+  disable: true
+  ns: shared-host.org.
+- ns: web.com.ph.
+- ns:
   - ns01.domaincontrol.com.
   - ns02.domaincontrol.com.
 - comment: FPs, don't blacklist
@@ -1092,17 +948,8 @@ items:
   - ns09.domaincontrol.com.
   - ns10.domaincontrol.com.
 - ns:
-  - ns1.cp-48.bigrockservers.com.
-  - ns2.cp-48.bigrockservers.com.
-- ns:
-  - ns1.hosting.reg.ru.
-  - ns2.hosting.reg.ru.
-- ns:
   - ns15.domaincontrol.com.
   - ns16.domaincontrol.com.
-- ns:
-  - ns16225425293.a2dns.com.
-  - ns16225425298.a2dns.com.
 - ns:
   - ns27.domaincontrol.com.
   - ns28.domaincontrol.com.
@@ -1127,12 +974,6 @@ items:
   - ns59.domaincontrol.com.
   - ns60.domaincontrol.com.
 - ns:
-  - ns6175.hostgator.com.
-  - ns6176.hostgator.com.
-- ns:
-  - ns6423.hostgator.com.
-  - ns6424.hostgator.com.
-- ns:
   - ns67.domaincontrol.com.
   - ns68.domaincontrol.com.
 - ns:
@@ -1152,185 +993,346 @@ items:
   ns:
   - ns77.domaincontrol.com.
   - ns78.domaincontrol.com.
-- ns:
-  - ns8021.hostgator.com.
-  - ns8022.hostgator.com.
-- ns: ocyber.us.
-- ns: offshoreracks.com.
+- ns: supercloudapps.com.
+- comment: 64/169 over a year
+  disable: true
+  ns: vultr.com.
+- ns: directory92.com.
 - ns: offshoric.com.
-- ns:
-  - olga.ns.cloudflare.com.
-  - seth.ns.cloudflare.com.
-- ns: omnilinks.net.
-- ns: onebyhosting.com.
+- ns: freehostia.com.
+- comment: has FPs, don't move to blacklist
+  ns: hawkhost.com.
+- comment: 29/64 over a year
+  disable: true
+  ns: syrahost.com.
+- ns: greengeeks.com.
+- ns: supportaus.com.
+- ns: 256gbserver.com.
 - comment: no longer responding 2020-04-02
   disable: true
-  ns: onlinemenshop.com.
-- ns: onlinerack.com.
-- ns: osplabs.com.
-- ns: our-websites.com.
+  ns: solutionsinfini.org.
 - ns: ownmyserver.com.
-- ns:
-  - pablo.ns.cloudflare.com.
-  - paris.ns.cloudflare.com.
-- ns:
-  - pablo.ns.cloudflare.com.
-  - pola.ns.cloudflare.com.
-- ns: paramountinfosystem.com.
-- ns: pavietnam.vn.
-- ns: pcerror-fix.com.
-- ns: permainanceme.online.
-- ns: phase8.net.
-- ns:
-  - plato.ns.cloudflare.com.
-  - rafe.ns.cloudflare.com.
-- ns: practicetestnetworks.com.
-- ns:
-  - princess.ns.cloudflare.com.
-  - rene.ns.cloudflare.com.
-- ns: printdns.com.
-- ns: privateserverpk.com.
-- ns: privatesever.com.
-- ns: profiwebspace.at.
+- ns: websitewelcome.com.
+- comment: 9/39 over a year
+  disable: true
+  ns: fatcow.com.
+- ns: vedigitize.us.
+- ns: serverpars.com.
+- comment: no longer responding 2020-04-02
+  disable: true
+  ns: namedc.com.
+- ns: wixdns.net.
+- ns: a2hosting.com.
+- ns: cybercastco.com.
+- ns: web4africa.com.
 - comment: no longer responding 2020-04-02
   disable: true
   ns: puredownloads.website.
-- ns: quantilytics.org.
+- ns: hostblast.net.
+- ns: webhouse.sk.
+- ns: guzelhosting.com.
+- ns: solidhosting.pro.
+- comment: 14/52 over a year
+  disable: true
+  ns: justhost.com.
+- ns: stupidblogger.com.
+- comment: no longer responding 2020-11-06
+  disable: true
+  ns: omnilinks.net.
+- ns: servconfig.com.
+- comment: unlike siteground.asia, this gets significant FPs, but also some weight 1; see also subdomains
+  ns: siteground.biz.
+- ns: giow1065.siteground.us.
+- ns: m76.siteground.biz.
+- ns: cetpainfotech.com.
+- comment: no longer responding 2020-04-02
+  disable: true
+  ns: sttdns.com.
+- comment: 21/291 over 8 months (some weight 1)
+  disable: true
+  ns: hover.com.
+- ns: stechsky.com.
+- ns: loopbyte.com.
+- comment: lo longer responding 2020-04-02
+  disable: true
+  ns: dynamicnetips.com.
+- ns: w3softech.com.
+- ns: blockchainhelp.pro.
+- comment: no longer responding 2020-11-11
+  disable: true
+  ns: specializedtest.com.
+- ns: macsol.co.in.
+- comment: 37/216 over 6 months
+  disable: true
+  ns: inmotionhosting.com.
+- ns: myhostindia.com.
+- ns: lfmserver.com.
+- ns: symbolhostpremiumdns.com.
+- ns: hostgator.in.
+- ns:
+  - ns6175.hostgator.com.
+  - ns6176.hostgator.com.
+- ns:
+  - ns6423.hostgator.com.
+  - ns6424.hostgator.com.
+- ns:
+  - ns8021.hostgator.com.
+  - ns8022.hostgator.com.
+- ns: hostspicy.com.
+- ns: ewebguru.com.
+- ns: dnsowl.com.
+- comment: no longer responding 2020-11-10
+  disable: true
+  ns: elitegifthouse.com.
+- comment: no longer responding 2020-04-02
+  disable: true
+  ns: teclab.info.
+- ns: jawatankosong.biz.
+- ns: isnpk.com.
+- comment: no longer responding 2020-10-15
+  disable: true
+  ns: tigerexpertz.com.
+- ns: cloudnstools.com.
+- ns: turnkeywebspace.com.
+- ns: namedc.com.
+- ns: hostinger.in.
+- ns: idhostinger.com.
+- ns: site5.com.
+- ns: zonedns.vn.
+- ns: cetpajobs.com.
+- ns: thesecurededicatedserver.com.
+- ns: ipage.com.
+- ns: rumahweb.com.
+- ns: rumahweb.net.
+- ns: rumahweb.org.
+- ns: rumahweb.biz.
+- ns: contabo.net.
+- ns: crazydomains.com.
+- ns: servers-servers.com.
+- ns: vhostplatform.com.
+- ns: wpxhosting.com.
+- ns: hostpapa.com.
+  comment: lots of FPs but also many TP posts which would otherwise not have been found
+- ns: zonode.com.
+- ns: cabanova.net.
+- ns: server.plus.
+- ns: securehostdns.com.
+- ns: net4india.com.
+- ns: hostsailor.com.
+- ns: mbah.men.
+- ns: nanosupercloud.com.
+- ns: himalayanwebinfo.com.
+- ns: imanagewebs.com.
+- ns: xincache.com.
+- ns: ui-dns.com.
+- ns: supercp.com.
+- ns: crystalregistry.com.
+- ns: herosite.pro.
+- ns: trouble-free.net.
+- comment: no longer responding 2020-04-02
+  disable: true
+  ns: asurawebhosting.com.
+- ns: dnspod.net.
+- ns: hostwhitelabel.com.
+- comment: no longer responding 2020-11-11
+  disable: true
+  ns: xpertns.com.
+- ns: site4now.net.
+- ns:
+  - vip1.alidns.com.
+  - vip2.alidns.com.
+- ns: globat.com.
+- ns: idwebhost.id.
+- ns:
+  - ns16225425293.a2dns.com.
+  - ns16225425298.a2dns.com.
+- ns: flaunt7.com.
+- ns: ihc.ru.
 - ns: r53.com.ua.
+- ns: biswasit.com.
+- ns: serverhostgroup.com.
+- comment: no longer responding 2020-04-07
+  disable: true
+  ns: websitepixel.co.in.
+- ns: v9hosting.com.
+- ns: hosterpk.com.
+- comment: no longer responding 2020-04-02
+  disable: true
+  ns: onlinemenshop.com.
+- ns: mywahosting.com.
+- comment: timeout 2020-04-02
+  disable: true
+  ns: goatcr.com.
+- ns: insightssuccess.com.
+- ns: onebyhosting.com.
+- ns: privatesever.com.
 - ns:
-  - raina.ns.cloudflare.com.
-  - zac.ns.cloudflare.com.
-- ns: reg.ru.
+  - ns1.cp-48.bigrockservers.com.
+  - ns2.cp-48.bigrockservers.com.
+- ns:
+  - cns1.bigrock.com.
+  - cns2.bigrock.com.
+- ns: tenten.vn.
+- ns:
+  - rush.easydns.com.
+  - nirvana.easydns.net.
+  - motorhead.easydns.org.
+- comment: timeout 2020-04-08
+  disable: true
+  ns: aakibuki.com.
+- ns: cloudhostdns.net.
+- ns: elsner.com.
+- ns: dnschamp.com.
+- comment: no longer resolves 2020-08-27
+  disable: true
+  ns: gohostgator.com.
+- ns: mycyberhosting.com.
+- ns: webnode.com.
+- ns: printdns.com.
+- ns: websiteserverbox.com.
+- ns: loanwalle.com.
+- ns: mochahost.com.
+- ns: v-sys.org.
+- ns: vtdesignz.com.
+- ns: dnsfornet.com.
+- ns: uberhost.in.
+- ns: hichina.com.
+- ns: pavietnam.vn.
+- comment: timeout 2020-04-02
+  disable: true
+  ns: dns-parking.net.
+- ns: host.com.pk.
+- ns: genxwhosting.com.
+- ns: phase8.net.
+- ns: bigcommerce.com.
+- ns: dns-diy.com.
+- comment: does not exist, but is claimed by muthoottumini.com
+  pass: true
+  ns: multicshost.com.
+- ns: webzinfotech.in.
+- ns: bluella.net.
+- ns: osplabs.com.
+- ns: hostomy.net.
+- ns: hosting24.com.
+- ns: nettigritty.net.
+- ns: c0d3host.com.
+- ns: improvmx.com.
+- ns: paramountinfosystem.com.
+- ns: absas.net.
+- ns: profiwebspace.at.
+- ns: speedydns.net.
+- ns: webhost.pro.
+- ns: inet.vn.
+- ns: visiondns.net.
+- ns: matkaparivar.in.
+- ns: vdns.vn.
+- ns: ocyber.us.
+- ns: layerip.com.
+- ns: matbao.com.
+- ns: matbao.vn.
+- ns: hostinger.vn.
+- ns: hostnac.com.
+- ns: iserverplanet.net.
+- comment: no longer responding 2020-11-11
+  disable: true
+  ns: usm1804.sgded.com.
+- ns: stackdns.com.
+- ns: permainanceme.online.
 - ns: resourcesofnet.net.
-- ns:
-  - rita.ns.cloudflare.com.
-  - rocky.ns.cloudflare.com.
-- ns:
-  - rita.ns.cloudflare.com.
-  - west.ns.cloudflare.com.
+- comment: 5/9 over 7 months, all TPs overlap with other rules (2020-08-18)
+  disable: true
+  ns:
+  - cns2015.webhostbox.net.
+  - cns2016.webhostbox.net.
 - ns:
   - rns15.webhostbox.net.
   - rns16.webhostbox.net.
 - ns:
   - rns7.webhostbox.net.
   - rns8.webhostbox.net.
-- ns: rumahweb.biz.
-- ns: rumahweb.com.
-- ns: rumahweb.net.
-- ns: rumahweb.org.
+- ns: bh-63.webhostbox.net.
+- ns: bh-74.webhostbox.net.
+- ns: bh-ht-10.webhostbox.net.
+- ns: bh-ht-11.webhostbox.net.
+- ns: bh-ht-3.webhostbox.net.
+- ns: bh-ht-7.webhostbox.net.
+- ns: bh-in-10.webhostbox.net.
+- ns: bh-in-31.webhostbox.net.
+- ns: bh-in-33.webhostbox.net.
+- ns: cp-32.webhostbox.net.
+- ns: cp-in-12.webhostbox.net.
+- ns: md-31.webhostbox.net.
+- ns: md-63.webhostbox.net.
+- ns: md-89.webhostbox.net.
+- ns: md-in-20.webhostbox.net.
+- ns: md-in-51.webhostbox.net.
+- ns: md-in-57.webhostbox.net.
+- ns: bigrock.in.
+- ns: exweme.com.
+- ns: ifcondition.com.
+- ns: c13707.sgvps.net.
+- comment: no longer resolves 2020-10-24
+  disable: true
+  ns: c22487.sgvps.net.
+- comment: no longer resolves 2020-08-27
+  disable: true
+  ns: guruapk.com.
+- ns: netafraz.com.
+- ns: tidalworld.com.
+- ns: hostcloudstore.com.
+- ns: controlmyvps.com.au.
+- ns: wyservers.com.
+- ns: w3gb.com.
+- ns: ekkum.com.
+- ns: practicetestnetworks.com.
+- ns: quantilytics.org.
+- ns: netmagicians.com.
+- ns: cloudns.io.
+- ns: stablehost.com.
+- ns: dedaddy.com.
+- ns: i2waves.com.
+- ns: myhostadmin.net.
+- ns: pcerror-fix.com.
+- ns: intersmartsolution.com.
+- ns: blackhostbd.com.
+- ns: arrowbigapps.com.
+- ns: worldemart.com.
+- ns: chinahoster.com.
+- ns: niagahoster.com.
+- comment: no longer responding 2020-08-31
+  disable: true
+  ns: megabytesserver.com.
+- ns: cms500.com.
+- ns: servers800.com.
+- ns: our-websites.com.
+- ns: 100ws.com.
+- ns: exaltedsolutions.com.
+- ns: za-dns.com.
+- ns: factocert.com.
+- ns: reg.ru.
 - ns:
-  - rush.easydns.com.
-  - nirvana.easydns.net.
-  - motorhead.easydns.org.
-- ns:
-  - sam.ns.cloudflare.com.
-  - vera.ns.cloudflare.com.
-- ns:
-  - sara.ns.cloudflare.com.
-  - seth.ns.cloudflare.com.
-- ns:
-  - sara.ns.cloudflare.com.
-  - theo.ns.cloudflare.com.
-- ns: sathyats.net.
+  - ns1.hosting.reg.ru.
+  - ns2.hosting.reg.ru.
+- ns: 22.cn.
+- ns: supremedns.com.
+- comment: no longer responding 2020-11-06
+  disable: true
+  ns: privateserverpk.com.
+- ns: dns-diy.net.
+- ns: sekershell.net.
+- ns: supremebox.com.
+- ns: genhost.in.
+- ns: ayurhealthtips.com.
+- ns: hostmonster.com.
+- ns: dctshosting.com.
+- ns: digitechwebdesignhosting.com.
+- ns: tmd.cloud.
+- ns: onlinerack.com.
+- comment: no longer resolves 2020-08-27
+  disable: true
+  ns: hostingsrv.xyz.
+- ns: hostingviet.vn.
+- ns: dnsireland.com.
 - ns:
   - sdns2.ovh.ca.
-- ns: securehostdns.com.
-- ns: sekershell.net.
-- ns: servconfig.com.
-- ns: server.plus.
-- ns: serverhostgroup.com.
-- ns: serverpars.com.
-- ns: servers-servers.com.
-- ns: servers800.com.
-- comment: no longer responding 2020-04-02
-  disable: true
-  ns: shared-host.org.
-- ns:
-  - simon.ns.cloudflare.com.
-  - zoe.ns.cloudflare.com.
-- ns: site4now.net.
-- ns: site5.com.
-- comment: unlike siteground.asia, this gets significant FPs, but also some weight
-    1; see also subdomains
-  ns: siteground.biz.
-- ns: solidhosting.pro.
-- comment: no longer responding 2020-04-02
-  disable: true
-  ns: solutionsinfini.org.
-- comment: no longer responding 2020-11-11
-  disable: true
-  ns: specializedtest.com.
-- ns: speedydns.net.
-- ns: stablehost.com.
-- ns: stackdns.com.
-- ns: stechsky.com.
-- comment: no longer responding 2020-04-02
-  disable: true
-  ns: sttdns.com.
-- ns: stupidblogger.com.
-- ns:
-  - sue.ns.cloudflare.com.
-  - thomas.ns.cloudflare.com.
-- ns: supercloudapps.com.
-- ns: supercp.com.
-- ns: supportaus.com.
-- ns: supremebox.com.
-- ns: supremedns.com.
-- ns: symbolhostpremiumdns.com.
-- comment: 29/64 over a year
-  disable: true
-  ns: syrahost.com.
-- comment: no longer responding 2020-04-02
-  disable: true
-  ns: teclab.info.
-- ns: tenten.vn.
-- ns: thesecurededicatedserver.com.
-- ns: tidalworld.com.
-- comment: no longer responding 2020-10-15
-  disable: true
-  ns: tigerexpertz.com.
-- ns: tmd.cloud.
-- ns: trouble-free.net.
-- ns: turnkeywebspace.com.
-- ns: uberhost.in.
-- ns: ui-dns.com.
-- comment: no longer responding 2020-11-11
-  disable: true
-  ns: usm1804.sgded.com.
-- ns: v-sys.org.
-- ns: v9hosting.com.
-- ns: vdns.vn.
-- ns: vedigitize.us.
-- ns: vhostplatform.com.
-- ns:
-  - vip1.alidns.com.
-  - vip2.alidns.com.
-- ns: visiondns.net.
-- ns: vtdesignz.com.
-- comment: 64/169 over a year
-  disable: true
-  ns: vultr.com.
-- ns: w3gb.com.
-- ns: w3softech.com.
-- ns: web.com.ph.
-- ns: web4africa.com.
-- ns: webhost.pro.
-- ns: webhouse.sk.
-- ns: webnode.com.
-- comment: no longer responding 2020-04-07
-  disable: true
-  ns: websitepixel.co.in.
-- ns: websiteserverbox.com.
-- ns: websitewelcome.com.
-- ns: webzinfotech.in.
-- ns: wixdns.net.
-- ns: worldemart.com.
-- ns: wpxhosting.com.
-- ns: wyservers.com.
-- ns: xincache.com.
-- comment: no longer responding 2020-11-11
-  disable: true
-  ns: xpertns.com.
-- ns: za-dns.com.
-- ns: zonedns.vn.
-- ns: zonode.com.
+- ns: iwantmyname.net.

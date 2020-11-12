@@ -1,9 +1,13 @@
 Schema: yaml_asn
 Schema_version: '2019120601'
 items:
+- asn: '3223'
+- asn: '3842'
+  comment: 122/284 over 1 year
+  disable: true
+- asn: '3595'
+- asn: '8622'
 - asn: '12488'
-- asn: '133296'
-- asn: '133711'
 - asn: '16509'
   comment: FPs; do not watch
   disable: true
@@ -13,24 +17,19 @@ items:
 - asn: '19318'
   comment: ' 67/162 over a year'
   disable: true
-- asn: '197695'
 - asn: '19969'
-- asn: '200000'
 - asn: '20013'
   comment: FPs; do not watch
   disable: true
-- asn: '203226'
-- asn: '206349'
 - asn: '22612'
   comment: Moderate FPs, don't double up
   disable: true
 - asn: '23352'
-- asn: '24778'
 - asn: '25697'
-- asn: '262254'
 - asn: '26496'
   comment: Massive FPs; do not watch
   disable: true
+- asn: '24778'
 - asn: '27176'
 - asn: '29066'
 - asn: '29073'
@@ -40,7 +39,6 @@ items:
 - asn: '31863'
   comment: 32/76 over a year
   disable: true
-- asn: '3223'
 - asn: '32244'
   comment: 164/714 over 7 months
   disable: true
@@ -49,7 +47,6 @@ items:
   comment: 32/173 over a year
   disable: true
 - asn: '35916'
-- asn: '3595'
 - asn: '36024'
   comment: 1/49 over a year, do not add back
   disable: true
@@ -59,11 +56,6 @@ items:
 - asn: '36352'
   comment: 48/140 over a year
   disable: true
-- asn: '3842'
-  comment: 122/284 over 1 year
-  disable: true
-- asn: '393960'
-- asn: '395970'
 - asn: '40676'
   comment: 61/132 over a year
   disable: true
@@ -98,4 +90,12 @@ items:
 - asn: '62731'
 - asn: '63068'
 - asn: '63410'
-- asn: '8622'
+- asn: '133296'
+- asn: '133711'
+- asn: '197695'
+- asn: '200000'
+- asn: '203226'
+- asn: '206349'
+- asn: '262254'
+- asn: '393960'
+- asn: '395970'
