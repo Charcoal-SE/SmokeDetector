@@ -21001,7 +21001,6 @@
 1592094214	Makyen	(?-i:63AbZ\.png)
 1592094249	Makyen	buccaneersvssaintsgame\.com
 1592094264	Makyen	integrated[\W_]*+assessment[\W_]*+services
-1592094280	Makyen	wayforpay\.com
 1592094297	Makyen	kozynets-volodymyr\.pp\.ua
 1592094314	Makyen	smartlandscap\.(?:ir|irwww)
 1592098574	Makyen	51786275041918(?#adfoc.us)
