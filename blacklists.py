@@ -473,6 +473,12 @@ class Blacklist(list):
     def delete(self, item):
         return self._parser.delete(item)
 
+    def remove(self, item):
+        """
+        Prevent callers from invoking bare .remove()
+        """
+        raise AttributeError('.remove() method disabled (did you mean .delete()?)')
+
     def each(self, with_info=False):
         return self._parser.each(with_info=with_info)
 
