@@ -990,6 +990,9 @@ items:
   - marge.ns.cloudflare.com.
   - skip.ns.cloudflare.com.
 - ns:
+  - marlowe.ns.cloudflare.com.
+  - salvador.ns.cloudflare.com.
+- ns:
   - mark.ns.cloudflare.com.
   - wanda.ns.cloudflare.com.
 - ns:
