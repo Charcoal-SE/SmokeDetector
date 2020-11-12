@@ -151,9 +151,9 @@ def test_keyword_blacklist():
     assert 'one' not in parsed
     assert 'three four' in parsed
     assert 'five six' not in parsed
-    #with pytest.raises(ValueError) as e:
+    # with pytest.raises(ValueError) as e:
     #    blacklist.add('*invalid regex[')
-    #with pytest.raises(ValueError) as e:
+    # with pytest.raises(ValueError) as e:
     #    blacklist.add('one two')
     blacklist.add('five six')
     assert 'five six' in blacklist.parse()
