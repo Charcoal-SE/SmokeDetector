@@ -126,6 +126,8 @@ class GitManager:
 
             exists, line = blacklister.exists(item_to_blacklist)
             if exists:
+                if isinstance(line, tuple):
+                    line, blacklist_file_name = line
                 return (False, 'Already {}ed on line {} of {}'.format(
                     op, line, blacklist_file_name))
 
