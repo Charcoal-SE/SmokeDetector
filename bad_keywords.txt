@@ -2393,3 +2393,4 @@ force[\W_]*+windows[\W_]*+defender[\W_]*+to[\W_]*+scan[\W_]*+a[\W_]*+single[\W_]
 donna belle
 diva[\W_]*trim(?:[\W_]*+keto)?
 cannagenix
+qqq(?<=z)
