@@ -132,7 +132,7 @@ class GitManager:
             watch_removed = []
             if not blacklister.watchtype():
                 for watcher in GlobalVars.git_black_watch_lists.values():
-                    if not hasattr(watcher, 'watchtype') or not watcher.watchtype():
+                    if not watcher.watchtype():
                         continue
                     watched, where = watcher.exists(item_to_blacklist)
                     if watched:
@@ -140,7 +140,7 @@ class GitManager:
                         watcher.delete(item_to_blacklist)
 
             try:
-                blacklister.add(item_to_blacklist, who=username, when=now)
+                blacklister.add(item_to_blacklist)
             except ValueError as exc:
                 for rollback_watch in watch_removed:
                     git.restore(rollback_watch)
