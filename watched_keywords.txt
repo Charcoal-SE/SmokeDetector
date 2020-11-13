@@ -24921,3 +24921,4 @@
 1605247482	Ryan M	sendgb\.com(?!/\w+)(?# spam for SendGB itself, but not files hosted there)
 1605247578	tripleee	genericvilla\.com
 1605248871	Makyen	himsedpills\.com
+1605251101	Ryan M	^salih[\W_]*+agenter$
