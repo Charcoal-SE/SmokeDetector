@@ -24919,3 +24919,4 @@
 1605242443	Makyen	pegasushackingservice(?:@gmail\.com)?
 1605242667	Ryan M	modapkclub\.com
 1605245828	Ryan M	bookmywizard\.com
+1605247482	Ryan M	sendgb\.com(?!/\w+)(?# spam for SendGB itself, but not files hosted there)
