@@ -24923,3 +24923,4 @@
 1605251101	Ryan M	^salih[\W_]*+agenter$
 1605251219	Ryan M	Agenter(?!\.com)
 1605251283	tripleee	(?-i:^Sagar$)
+1605251437	Ryan M	make[\W_]*+money[\W_]*+from[\W_]*+home
