@@ -24955,3 +24955,4 @@
 1605461247	Makyen	wizard[\W_]*+charles[\W_]*+group[\W_]*+hackers(?!\.com(?<=wizardcharlesgrouphackers\.com))
 1605461265	Makyen	(?:info@)?wizardcharlesgrouphackers\.com
 1605462963	Makyen	cardr\.com
+1605463105	Makyen	(?-i:f9pOz\.gif)
