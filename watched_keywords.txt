@@ -24958,3 +24958,4 @@
 1605463105	Makyen	(?-i:f9pOz\.gif)
 1605463130	Makyen	yenilikseninle\.com
 1605467731	Makyen	tjsport\.xyz
+1605484680	Makyen	cyberdev49(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
