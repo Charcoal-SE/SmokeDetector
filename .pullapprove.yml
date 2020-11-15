@@ -11,44 +11,43 @@ groups:
   blacklisters:
     required: 1
     users:
-      - angussidney
+      - AWegnerGitHub  # Andy
       - Aralun  # Kyll
       - ArtOfCode-
-      - AWegnerGitHub  # Andy
-      - bwDraco
       - ByteCommander
       - CalvT
-      - double-beep
-      - ferrybig
+      - DasGeek
+      - EliahKagan
       - Fortunate-MAN  # Ashish Ahuja
       - Glorfindel83
-      - honnza  # Jan Dvorak
-      - iBug
       - K-Davis1
       - LunarWatcher # Zoe AKA Princess Luna
       - Machavity
-      - magisch
       - Makyen
-      - metasmoke
+      - MastSE
       - NobodyNada
+      - Spevacus
+      - ThatRyanPerson # Ryan M
+      - Undo1
+      - WELZ-gh
+      - angussidney
+      - bertiebaggio # Rob Hallam
+      - bwDraco
+      - double-beep
+      - ferrybig
+      - honnza  # Jan Dvorak
+      - iBug
+      - jeffschaller # Jeff Schaller
+      - magisch
+      - metasmoke
       - paper1111
       - quartata
+      - rschrieken
       - spacemonaut # doppelgreener
       - superplane39  # Mithrandir
       - surajrao
       - teward
       - tripleee
-      - Undo1
-      - WELZ-gh
-      - DasGeek
-      - EliahKagan
-      - rschrieken
-      - machavity # Joel Hutchinson
-      - bertiebaggio # Rob Hallam
-      - jeffschaller # Jeff Schaller
-      - Spevacus
-      - MastSE
-      - ThatRyanPerson # Ryan M
     author_approval:
       ignored: true
     reject_value: -1
