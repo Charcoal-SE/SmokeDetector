@@ -24954,3 +24954,4 @@
 1605440532	Jeff Schaller	hmix13\.medium\.com
 1605461247	Makyen	wizard[\W_]*+charles[\W_]*+group[\W_]*+hackers(?!\.com(?<=wizardcharlesgrouphackers\.com))
 1605461265	Makyen	(?:info@)?wizardcharlesgrouphackers\.com
+1605462963	Makyen	cardr\.com
