@@ -43,9 +43,9 @@ groups:
       - DasGeek
       - EliahKagan
       - rschrieken
-      - Joel Hutchinson # machavity
-      - Rob Hallam # bertiebaggio
-      - Jeff Schaller # jeffschaller
+      - machavity # Joel Hutchinson
+      - bertiebaggio # Rob Hallam
+      - jeffschaller # Jeff Schaller
       - Spevacus
       - MastSE
       - ThatRyanPerson # Ryan M
