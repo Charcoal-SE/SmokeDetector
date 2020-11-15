@@ -43,6 +43,12 @@ groups:
       - DasGeek
       - EliahKagan
       - rschrieken
+      - Joel Hutchinson # machavity
+      - Rob Hallam # bertiebaggio
+      - Jeff Schaller # jeffschaller
+      - Spevacus
+      - MastSE
+      - ThatRyanPerson # Ryan M
     author_approval:
       ignored: true
     reject_value: -1
