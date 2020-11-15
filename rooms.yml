@@ -439,7 +439,7 @@ meta.stackexchange.com:
         - 3717584  # josliber
         - 2591787  # Sam
 
-  1181:
+  1181:  # The Fire Department
     commands: true
 
     msg_types:
@@ -456,6 +456,9 @@ meta.stackexchange.com:
       - 297701   # Thomas Ward
       - 281857   # rene
       - 5869449  # angussidney
+      - 1703573  # Undo
+      - 468289   # tripleee
+      - 4657998  # Makyen
 
 
 stackoverflow.com:
