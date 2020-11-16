@@ -404,3 +404,4 @@ Mar(?:ikya|y)\W*Skula
 (?-i:^user266417$)
 (?-i:^key gen$)
 ^(?-i:JoeClark)$
+^w11stop\.com$
