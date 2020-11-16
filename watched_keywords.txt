@@ -24464,7 +24464,6 @@
 1603862047	tripleee	(?-i:-GNC0wpsH-k)(?# youtube)
 1603868064	Sonic the K-Day Hedgehog	chamsocweb247\.vn
 1603872827	tripleee	palline\.com\.sg
-1603872891	tripleee	tuckeat\.com
 1603873020	tripleee	lumiman\.com
 1603873511	tripleee	vigor[\W_]*+smart(?:[\W_]*+pills?)(?:[\W_]*+official)?(?:[\W_]*+buy)?\d*
 1603873587	tripleee	smart[\W_]*+brain(?:[\W_]*+canada)?\d*
