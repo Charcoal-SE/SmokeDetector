@@ -224,8 +224,8 @@ def test_watch(monkeypatch):
     assert "Bad keyword in body" in resp
 
     for prefix in ('!!/', 'sdc '):
-        resp = wrap_watch('github.com', suffix='-ns', prefix=prefix)
-        assert resp.startswith("Validation of {'ns': 'github.com'} failed:")
+        resp = wrap_watch('github.com..', suffix='-ns', prefix=prefix)
+        assert resp.startswith("Validation of {'ns': 'github.com..'} failed:")
 
     # XXX TODO: figure out how to trigger duplicate entry separately
     monkeypatch.setattr("chatcommunicate.is_privileged", lambda *args: True)
