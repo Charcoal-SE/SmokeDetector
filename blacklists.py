@@ -390,6 +390,14 @@ class YAMLParserNS(YAMLParserCIDR):
         """
         return item.rstrip().lower()
 
+    def _add_format(self, item):
+        """
+        Add dot if missing
+        """
+        if not item.endswith('.'):
+            item = item + '.'
+        return {self.SCHEMA_PRIKEY: item}
+
     def _validate(self, item):
         def item_check(ns):
             if not host_regex.match(ns):
