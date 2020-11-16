@@ -8,6 +8,7 @@ import pytest
 
 from blacklists import *
 from helpers import files_changed, blacklist_integrity_check
+from findspam import FindSpam
 
 
 def test_blacklist_integrity():
@@ -204,3 +205,12 @@ def test_blacklist_enumeration():
         if not hasattr(bwl, 'each'):
             raise ValueError('%s (%s) has no .each()' % (
                 bwl._filename, type(bwl)))
+
+
+def test_load_reload():
+    load_blacklists()
+    saved = GlobalVars.git_black_watch_lists.copy()
+    FindSpam.reload_blacklists()
+    for bwl in saved:
+        assert isinstance(GlobalVars.git_black_watch_lists[bwl], type(saved[bwl]))
+        assert saved[bwl] == GlobalVars.git_black_watch_lists[bwl]
