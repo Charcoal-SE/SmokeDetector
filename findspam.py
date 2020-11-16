@@ -387,11 +387,9 @@ class FindSpam:
         except AttributeError:
             pass
         cls.rule_blacklisted_usernames.sanity_check()
-        GlobalVars.git_black_watch_lists['blacklisted_numbers'], \
-            GlobalVars.blacklisted_numbers_normalized = \
+        GlobalVars.blacklisted_numbers_normalized = \
             process_numlist(GlobalVars.git_black_watch_lists['blacklisted_numbers'])
-        GlobalVars.git_black_watch_lists['watched_numbers'], \
-            GlobalVars.watched_numbers_normalized = \
+        GlobalVars.watched_numbers_normalized = \
             process_numlist(GlobalVars.git_black_watch_lists['watched_numbers'])
         log('debug', "Global blacklists loaded")
 
@@ -755,9 +753,8 @@ def check_numbers(s, numlist, numlist_normalized=None):
 
 
 def process_numlist(numlist):
-    processed = set(numlist)  # Sets are faster than Hong Kong journalists!
     normalized = {regex.sub(r"\D", "", entry) for entry in numlist}
-    return processed, normalized
+    return normalized
 
 
 @create_rule("bad phone number in {}", body_summary=True, max_rep=32, max_score=1, stripcodeblocks=True)
