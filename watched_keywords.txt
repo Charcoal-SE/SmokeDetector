@@ -24997,3 +24997,4 @@
 1605631433	tripleee	your[\W_]*+455
 1605634179	tripleee	Wesley(?<=<i>\s*Wesley)
 1605636086	tripleee	dotnetlearn\.com/fa/Article
+1605639835	Makyen	(?-i:952cd38772)(?#fiverr.com)
