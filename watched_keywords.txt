@@ -24979,3 +24979,4 @@
 1605601358	tripleee	ohgood\.vn
 1605604068	tripleee	topnzcasinos\.co\.nz
 1605605048	tripleee	if-elsesolution\.com
+1605605217	tripleee	(?-i:^Francis$)
