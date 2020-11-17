@@ -409,3 +409,4 @@ Mar(?:ikya|y)\W*Skula
 (?-i:^joy clark$)
 (?-i:^Rabitechno$)
 (?-i:^gospeedcheck$)
+Wes.ey\W*Atwood
