@@ -24992,7 +24992,6 @@
 1605625105	tripleee	(?-i:^Wesley Atwood?$)
 1605626194	tripleee	moderation team
 1605626325	Spevacus	crucialkali\.blogspot
-1605628160	tripleee	<i>\s*Wesley
 1605628660	tripleee	(?!Wesley)[WWwѡᎳＷｗ](?:[3€eEeÈÉÊËéêëĒēĔĕĖėĘĚěΕЕеᎬＥｅ]|e.?)[s$SsЅѕՏႽᏚ𐐠𵠠Ｓｓ][l1£LlʟιاᏞⅬⅼＬｌ](?:[3€eEeÈÉÊËéêëĒēĔĕĖėĘĚěΕЕеᎬＥｅ]|e.?)(?:[yYyʏΥγуҮＹｙ]|y.?)
 1605630300	tripleee	dexsins\.com
 1605631433	tripleee	your[\W_]*+455
