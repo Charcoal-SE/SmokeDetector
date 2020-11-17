@@ -24377,7 +24377,6 @@
 1603553622	Makyen	biramjih\.blogspot
 1603555085	Spevacus	jobs87\.com
 1603555106	Spevacus	movies-us\.xyz
-1603555121	Spevacus	lifehealthsource\.com
 1603566039	NobodyNada	CryptoDredge
 1603566825	NobodyNada	^Charcoal\w*+(?=.{0,32}$)
 1603566955	NobodyNada	erwaysoftware\.com
