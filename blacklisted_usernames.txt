@@ -406,3 +406,4 @@ Mar(?:ikya|y)\W*Skula
 ^(?-i:JoeClark)$
 ^w11stop\.com$
 (?-i:^salihagenter$)
+(?-i:^joy clark$)
