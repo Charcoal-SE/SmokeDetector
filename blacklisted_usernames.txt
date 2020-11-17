@@ -408,3 +408,4 @@ Mar(?:ikya|y)\W*Skula
 (?-i:^salihagenter$)
 (?-i:^joy clark$)
 (?-i:^Rabitechno$)
+(?-i:^gospeedcheck$)
