@@ -25005,3 +25005,4 @@
 1605683203	Ryan M	arlo[\W_]*+(?:security|phone|pro|baby|camera|netgear|hub|app|login|base|integration|tech|contact|support|account)s?
 1605685456	Ryan M	drakonoved\.org
 1605692094	tripleee	callgirldelhincr\.com
+1605692423	tripleee	(?-i:^sifars$)
