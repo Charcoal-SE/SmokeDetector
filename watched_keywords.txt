@@ -23235,7 +23235,6 @@
 1599814162	Mithical	truflexen
 1599814741	Mast	(?-i:5774b06d7bb11a6c355c214cd673d5da)(?#apnews.com)
 1599814956	Mast	cosmos[\W_]*+atom[\W_]*+token
-1599816477	Mast	mydock365\.com
 1599816904	Mast	iron[\W_]*+stack[\W_]*+pro
 1599820025	Mast	talhamanzoor2\.blogspot\.com
 1599820112	Ryan M	claybag\.com
