@@ -25025,3 +25025,4 @@
 1605696832	tripleee	oduduwa(?<!(?:cheif|d(?:octo)?r)[\W_]+oduduwa)
 1605697192	tripleee	(?-i:cid\.bb534496aa95aec5)(?#skype)
 1605697282	tripleee	financeandstrategyltd(?:[\W_]*(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
+1605699877	Makyen	prysmsystems\.com
