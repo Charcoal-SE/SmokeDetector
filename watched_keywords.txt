@@ -25036,3 +25036,4 @@
 1605708731	tripleee	eascode\.com
 1605709120	tripleee	(?-i:^excel maps$)
 1605709434	Spevacus	neverlessa1wear\.com
+1605709535	Spevacus	gyanipandit\.com
