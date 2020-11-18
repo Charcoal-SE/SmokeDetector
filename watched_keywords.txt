@@ -15378,7 +15378,6 @@
 1577335418	Makyen	(?:films?|complets?|regarder(?:s|es)?|t[ée]l[ée]chargements|en\s*ligne|gratuits?|diffusion|courant)(?:[\W_]*+\w+){0,5}(?:[\W_]*+(?:films?|complets?|regarder(?:s|es)?|t[ée]l[ée]chargements|en\s*ligne|gratuits?|diffusion|courant)){2,}(?#French verion)
 1577338751	Shree	makepassportphoto\.com
 1577339554	Shree	contactusa-directory\.com
-1577339773	Makyen	dr[\W_]*+oselumen(?:@gmail\.com)?
 1577340434	Makyen	cerisea-medica01
 1577340448	Makyen	ukzfred\.hatenablog\.com
 1577342371	Eliah Kagan	routerlognnet\.us
