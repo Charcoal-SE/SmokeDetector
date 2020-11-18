@@ -24998,3 +24998,4 @@
 1605634179	tripleee	Wesley(?<=<i>\s*Wesley)
 1605636086	tripleee	dotnetlearn\.com/fa/Article
 1605639835	Makyen	(?-i:952cd38772)(?#fiverr.com)
+1605657870	Jeff Schaller	seedfinancial\.edu\.np
