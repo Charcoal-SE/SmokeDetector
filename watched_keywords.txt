@@ -7509,7 +7509,6 @@
 1547800389	Glorfindel	pp\.io
 1547800448	tripleee	borxi\.com
 1547804967	Makyen	emergingindiagroup\.com
-1547806068	tripleee	(?:arlo(?<!^arlo)(?! zarate$)|arlo[\W_]*+(?:security|phone|pro|baby|camera|netgear|hub|app|login|base|integration|tech|contact|support|account)s?)
 1547811516	tripleee	mcafeeactivate\.website
 1547811629	Shree	adpost4u\.com
 1547811842	tripleee	lookchup\.com
