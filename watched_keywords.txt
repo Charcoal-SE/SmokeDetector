@@ -25027,3 +25027,4 @@
 1605697282	tripleee	financeandstrategyltd(?:[\W_]*(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1605699877	Makyen	prysmsystems\.com
 1605699954	tripleee	klocrix\.com
+1605700976	Jeff Schaller	essayedge\.com
