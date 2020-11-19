@@ -406,7 +406,7 @@ def get_report_data(message):
 
 def is_privileged(user, room):
     # print(_privileges)
-    return user.id in _privileges[(room._client.host, room.id)] or (user.is_moderator and user.id != 435118)
+    return user.id in _privileges[(room._client.host, room.id)] or user.is_moderator
 
 
 def block_room(room_id, site, time):
