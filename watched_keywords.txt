@@ -24907,7 +24907,6 @@
 1605247578	tripleee	genericvilla\.com
 1605248871	Makyen	himsedpills\.com
 1605251219	Ryan M	Agenter(?!\.com)
-1605251283	tripleee	(?-i:^Sagar$)
 1605251437	Ryan M	make[\W_]*+money[\W_]*+from[\W_]*+home
 1605253334	Ryan M	aglowpackers\.com
 1605253547	Ryan M	dealmarkaz\.pk
