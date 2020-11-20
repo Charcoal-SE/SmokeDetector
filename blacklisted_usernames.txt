@@ -410,3 +410,4 @@ Mar(?:ikya|y)\W*Skula
 (?-i:^Rabitechno$)
 (?-i:^gospeedcheck$)
 Wes.ey\W*Atwood
+^harold\W*coyer$
