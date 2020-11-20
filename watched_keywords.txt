@@ -25072,3 +25072,4 @@
 1605864105	Ryan M	leva[\W_]*+cbd
 1605874840	Jeff Schaller	srisanjeevniedu\.com
 1605884576	Spevacus	spincity-games\.com
+1605884798	Spevacus	healthgardeners\.com
