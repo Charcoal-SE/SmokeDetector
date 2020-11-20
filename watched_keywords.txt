@@ -25069,3 +25069,4 @@
 1605859138	Ryan M	UaFtxFcT_4(?# YouTube video)
 1605859953	Ryan M	mldatasciences\.com
 1605860240	Ryan M	mysolutionwellbeing\.com
+1605864105	Ryan M	leva[\W_]*+cbd
