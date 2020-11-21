@@ -66,5 +66,6 @@ jobs:
         git remote set-branches --add origin deploy
         git fetch --all --depth=5
     - name: Push to deploy
+      continue-on-error: true
       run: |
-        git push origin +HEAD:deploy
+        git push origin HEAD:deploy
