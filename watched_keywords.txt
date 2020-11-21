@@ -25099,3 +25099,4 @@
 1605958713	Ryan M	whatiswhatis\.com
 1605958749	Ryan M	tmehra1006(?:@gmail\.com)?
 1605958874	Ryan M	^(?-i:WhatisWhatis)$
+1605960773	Ryan M	novinvoip\.com
