@@ -62,3 +62,12 @@ jobs:
       run: |
         echo -e "## Coverage Report\n" >> "$GITHUB_STEP_SUMMARY"
         coverage report --format=markdown -m >> "$GITHUB_STEP_SUMMARY"
+
+  release:
+    if: ${{ github.ref == 'master' }}
+    needs: build
+    steps:
+    - uses: actions/checkout@v7
+    - name: Push to deploy
+      run: |
+        git push origin +HEAD:deploy
