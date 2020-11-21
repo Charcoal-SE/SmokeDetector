@@ -69,5 +69,6 @@ jobs:
     steps:
     - uses: actions/checkout@v7
     - name: Push to deploy
+      continue-on-error: true
       run: |
-        git push origin +HEAD:deploy
+        git push origin HEAD:deploy
