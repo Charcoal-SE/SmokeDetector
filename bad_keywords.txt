@@ -1881,7 +1881,6 @@ errorcode0x(?:\.com)(?#abuse keyword blacklist to get 3 detections on persistent
 elijahcapitals(?:@gmail.com)?
 pure\W?life\W?keto
 power\W*+efficiency\W*+guide(?:\W?system)(?:\W*+reviews?)?
-peak\W?x(?:\W?keto)?
 keto\W?xcg
 cbd\W?nutrition(?:\W?(?:gummies|tincture\W?oil))?
 best\W?forex
