@@ -25106,3 +25106,4 @@
 1605966630	Ryan M	solix[\W_]*+cloud
 1605968541	Ryan M	brillassignment
 1605981172	Makyen	cracksoftwaress\.com
+1606043145	Nisse Engström	weldinginfocenter\.com
