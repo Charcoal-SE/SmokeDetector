@@ -25122,3 +25122,4 @@
 1606126913	Makyen	green[\W_]*+vibration[\W_]*+keto(?:[\W_]*+(?:pills|diet|\d++|[\da-f]{5,}+)s?)*
 1606126933	Makyen	livematka\.co
 1606129173	tripleee	henryharvin\.com
+1606130909	tripleee	functioncube\.com
