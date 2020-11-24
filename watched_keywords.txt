@@ -25140,3 +25140,4 @@
 1606202919	tripleee	shaneperrymarketing\.com
 1606203080	tripleee	protopblogger\.com
 1606203125	tripleee	liquormasters\.com\.au
+1606206786	tripleee	bajaj[\W_]*+finance
