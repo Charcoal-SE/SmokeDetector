@@ -25133,3 +25133,4 @@
 1606198946	Makyen	fitburn[\W_]*+keto(?:[\W_]*+(?:reviews|\d++|[\da-f]{5,}+)s?)*
 1606195710	Cody Gray	johnnythehealer\.com
 1606199662	Makyen	aktiv[\W_]*+keto(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
+1606200750	Makyen	greekwings\.com
