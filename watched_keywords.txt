@@ -24966,7 +24966,6 @@
 1605601358	tripleee	ohgood\.vn
 1605604068	tripleee	topnzcasinos\.co\.nz
 1605605048	tripleee	if-elsesolution\.com
-1605605217	tripleee	(?-i:^Francis$)
 1605608477	Jeff Schaller	newdawnawning\.net
 1605614198	tripleee	monalikakkar\.com
 1605614222	tripleee	klantenservicebelgies\.com
