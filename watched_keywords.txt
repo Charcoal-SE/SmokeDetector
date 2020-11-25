@@ -25170,4 +25170,3 @@
 1606326314	tripleee	atha2015
 1606326955	Jeff Schaller	isetech\.co
 1606327575	tripleee	ketogen[\W_]*+tropfen
-1606327625	tripleee	hohle[\W_]*+der[\W_]*+l(?:oe?|ö)wen
