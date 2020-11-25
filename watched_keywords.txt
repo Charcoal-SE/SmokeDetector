@@ -12061,7 +12061,6 @@
 1566449907	Shree	jkdnsolution\.com
 1566450994	Makyen	cinderella[\W_]*solution(?:[\W_]*(?:review|\d+))*
 1566451014	Makyen	ultimatediethack\.com
-1566452226	Shree	curvearro\.com
 1566453992	Makyen	jemilorow
 1566454001	Makyen	(?-i:ANg5CdtHnuQ)
 1566454012	Makyen	Chebees
