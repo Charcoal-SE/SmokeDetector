@@ -24848,7 +24848,6 @@
 1605100235	tripleee	airslate\.com
 1605100269	tripleee	akveo\.com
 1605100346	tripleee	nexxytech\.com
-1605102964	Machavity	^(?-i:Ann\W*Watson)$
 1605104172	Mast	^(?-i:Mojae)$
 1605104406	Spevacus	adibian724\.ir
 1605109511	tripleee	bizcommunity\.com
