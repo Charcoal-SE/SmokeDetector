@@ -25201,3 +25201,4 @@
 1606456370	tripleee	testprepkart\.com
 1606457678	tripleee	renediazphotography\.com
 1606458425	Makyen	officed+\.uk\.net
+1606458935	Makyen	mtouch[\W_]*+labs(?!\.com(?<=mtouchlabs\.com))
