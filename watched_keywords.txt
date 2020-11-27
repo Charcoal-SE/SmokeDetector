@@ -23539,7 +23539,6 @@
 1600703011	Makyen	jeremie\.zimmer(?<=medium\.com/@jeremie\.zimmer)
 1600705685	Makyen	natcoffoloud\.com
 1600710049	Spevacus	drugruger\.com
-1600711369	Spevacus	homeheavenz\.com
 1600715243	Mast	stocktipsandethicalhacking2020(?:@gmail\.com)?
 1600723844	Spevacus	vbuksgenerator\.com
 1600723899	NobodyNada	bux\.dev
