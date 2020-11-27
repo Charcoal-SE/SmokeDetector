@@ -25195,3 +25195,4 @@
 1606440570	Makyen	d(?:octo)?r[\W_]*+godday
 1606443032	Makyen	rajawaliqq\.my\.id
 1606454135	Makyen	viaradaxx(?:[\W_]*+(?:reviews|\d++|[\da-f]{5,}+)s?)*
+1606455920	Makyen	m2activate\.co\.uk
