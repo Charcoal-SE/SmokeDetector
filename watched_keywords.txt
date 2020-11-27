@@ -25217,3 +25217,4 @@
 1606514081	Makyen	crackpropc\.com
 1606514100	Makyen	crackpropc(?!\.com)
 1606519201	Makyen	hack\.truth77(?:@gmail\.com)?
+1606519468	Makyen	asad[\W_]*+shaukat[\W_]*+ali(?!\.com(?<=asadshaukatali\.com))
