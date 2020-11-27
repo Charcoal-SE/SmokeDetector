@@ -2396,3 +2396,4 @@ cheif[\W_]*+oduduwa
 dr[\W_]*+oselumen(?:@gmail\.com)?
 peak[\s\-]?x(?:\W?keto)?
 h(?:oe?|ö)hle[\W_]*+der[\W_]*+l(?:oe?|ö)wen
+(?:buzzer)?huntbuzzer
