@@ -25194,3 +25194,4 @@
 1606417137	tripleee	shasthokotha\.xyz
 1606439738	Makyen	(?-i:4TY5k\.png)
 1606440518	Makyen	goddayspiritualhome(?:@gmail\.com)?
+1606440570	Makyen	d(?:octo)?r[\W_]*+godday
