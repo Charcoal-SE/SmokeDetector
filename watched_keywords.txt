@@ -25228,3 +25228,4 @@
 1606553113	Ryan M	free[\W_]*+disney[\W_]*+plus
 1606553196	Ryan M	jdailytalk
 1606562200	Mast	6dollaressay\.com
+1606562577	Mast	carzout\.com
