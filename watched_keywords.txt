@@ -25237,3 +25237,4 @@
 1606583757	Mast	apksclub\.com
 1606584608	Mast	optimal[\W_]*+recovery[\W_]*+dot[\W_]*+org
 1606595643	Mast	bitdegree\.org
+1606595781	Mast	cryptominertips\.com
