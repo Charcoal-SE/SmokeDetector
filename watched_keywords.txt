@@ -25226,3 +25226,4 @@
 1606542772	Makyen	exponenta-bc\.com
 1606544827	Makyen	kankusta[\W_]*+duo(?:[\W_]*+(?:slovakia|\d++|[\da-f]{5,}+)s?)*
 1606553113	Ryan M	free[\W_]*+disney[\W_]*+plus
+1606553196	Ryan M	jdailytalk
