@@ -25221,3 +25221,4 @@
 1606528819	Sonic the K-Day Hedgehog	cryptocoinlatest
 1606536324	Makyen	infinite[\W_]*+force[\W_]*+xl
 1606536362	Makyen	health[\W_]*+power[\W_]*+supplement
+1606538709	Makyen	kavin2john\.medium\.com
