@@ -25223,3 +25223,4 @@
 1606536362	Makyen	health[\W_]*+power[\W_]*+supplement
 1606538709	Makyen	kavin2john\.medium\.com
 1606542677	Makyen	pro[\W_]*+essay[\W_]*+writing[\W_]*+service(?!\.pk(?<=proessaywritingservice\.pk))
+1606542772	Makyen	exponenta-bc\.com
