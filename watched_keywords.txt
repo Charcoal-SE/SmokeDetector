@@ -25240,3 +25240,4 @@
 1606595781	Mast	cryptominertips\.com
 1606650592	rene	playpianotips\.com
 1606661749	Mast	naijanex\.com\.ng
+1606661903	Mast	myco[\W_]*+nuker
