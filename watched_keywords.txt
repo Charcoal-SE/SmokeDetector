@@ -25241,3 +25241,4 @@
 1606650592	rene	playpianotips\.com
 1606661749	Mast	naijanex\.com\.ng
 1606661903	Mast	myco[\W_]*+nuker
+1606663987	Mast	gamerequirments\.com
