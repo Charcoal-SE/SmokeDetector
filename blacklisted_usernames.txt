@@ -413,3 +413,4 @@ Wes.ey\W*Atwood
 96\W*+94(?!<^user\d{5,})
 (?-i:^Ann Watson$)
 (?-i:^Wesley call me this way$)
+(?-i:^Welsey Atwood$)
