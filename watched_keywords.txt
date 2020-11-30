@@ -25275,3 +25275,4 @@
 1606755376	tripleee	redot\.com
 1606755416	tripleee	redot_?com
 1606756698	tripleee	cmbc\.be
+1606757020	Mithical	^.{0,13}Wesley.{0,13}$
