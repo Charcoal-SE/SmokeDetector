@@ -213,12 +213,6 @@ stackexchange.com:
       - site-parenting.stackexchange.com
       - offensive-mask
 
-  8089:  # mempool
-    commands: false
-    msg_types:
-      - site-bitcoin.stackexchange.com
-      - offensive-mask
-
   468:  # V'dibarta Bam
     commands: false
     msg_types:
