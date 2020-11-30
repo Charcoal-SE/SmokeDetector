@@ -25128,7 +25128,6 @@
 1606199662	Makyen	aktiv[\W_]*+keto(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
 1606200750	Makyen	greekwings\.com
 1606200820	tripleee	academicswritingservice\.co\.uk
-1606202198	Makyen	proessaywritingservice\.pk
 1606202884	tripleee	gudangkomik\.com
 1606202919	tripleee	shaneperrymarketing\.com
 1606203080	tripleee	protopblogger\.com
