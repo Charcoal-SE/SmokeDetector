@@ -25272,3 +25272,4 @@
 1606746675	Mast	best[\W_]*+survey[\W_]*+sites
 1606749816	Mast	sites\.google\.com\/site\/id10047100052
 1606749978	tripleee	cashflows571(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
+1606755376	tripleee	redot\.com
