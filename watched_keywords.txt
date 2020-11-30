@@ -25263,3 +25263,4 @@
 1606728240	tripleee	dycables\.com
 1606737010	tripleee	xtremeinjector\.com
 1606737585	tripleee	betbuilder\.com
+1606738475	Jeff Schaller	downloadwap\.com
