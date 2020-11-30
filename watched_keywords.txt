@@ -25278,5 +25278,5 @@
 1606757020	Mithical	^.{0,13}Wesley.{0,13}$
 1606757125	Victor VosMottor	Your buddy Wesley
 1606763587	Spevacus	pinjaradrama\.com
-1606770480	NobodyNada	(?-i:<BR><BR>)
+1606770480	NobodyNada	(?-i:BR><BR(?<=<BR><BR)(?=>))
 1606770639	Victor VosMottor	s1ut
