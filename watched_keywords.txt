@@ -25255,6 +25255,5 @@
 1606671209	Makyen	senviet20(?:@gmail\.com)?
 1606713262	Mast	vialophin
 1606713361	Mast	lmovers\.ae
-1606716266	Makyen	healthynutrishop\.com
 1606717667	Mast	hashmoon\.us
 1606718002	Makyen	poolwiseliving\.com\.au
