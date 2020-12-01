@@ -25314,3 +25314,4 @@
 1606836246	tripleee	this is \w+ and I am an? (?:qualifi|licens)ed
 1606838049	Makyen	ceiwei\.com
 1606840678	tripleee	jiwandhara\.com
+1606841815	tripleee	\\/\\/3[15]+3y
