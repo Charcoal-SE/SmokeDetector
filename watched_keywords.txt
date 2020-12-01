@@ -25313,3 +25313,4 @@
 1606834583	Makyen	download it (?:right )?now and check this out for yourself(?#photo copyright scam)
 1606836246	tripleee	this is \w+ and I am an? (?:qualifi|licens)ed
 1606838049	Makyen	ceiwei\.com
+1606840678	tripleee	jiwandhara\.com
