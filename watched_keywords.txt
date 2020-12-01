@@ -24973,7 +24973,7 @@
 1605625105	tripleee	(?-i:^Wesley Atwood?$)
 1605626194	tripleee	moderation team
 1605626325	Spevacus	crucialkali\.blogspot
-1605628660	tripleee	[WѡᎳＷｗ](?!(?<=W)(?:ea?sley|ensley|elsley|eksley|exley))(?:[3€ÈÉÊËéêëĒēĔĕĖėĘĚěΕЕеᎬＥｅ]|e.?)[s$ЅՏႽᏚР堠Ｓｓl1£ʟιاᏞⅬⅼＬｌ]{1,2}(?:[3€ÈÉÊËéêëĒēĔĕĖėĘĚěΕЕеᎬＥｅ]|e.?)(?:[ʏΥγуҮＹｙ]|y.?)
+1605628660	tripleee	(?:[WѡᎳＷｗ](?!(?<=W)(?:ea?sley|ensley|elsley|eksley|exley)))?(?:[3€ÈÉÊËéêëĒēĔĕĖėĘĚěΕЕеᎬＥｅ](?:(?<=[WѡᎳＷｗ][3€ÈÉÊËéêëĒēĔĕĖėĘĚěΕЕеᎬＥｅ])|(?<=\\\/\\\/[3€ÈÉÊËéêëĒēĔĕĖėĘĚěΕЕеᎬＥｅ]))|e(?:(?<=[WѡᎳＷｗ]e)|(?<=\\\/\\\/e)).?)[s$ЅՏႽᏚР堠Ｓｓl1£ʟιاᏞⅬⅼＬｌ]{1,2}(?:[3€ÈÉÊËéêëĒēĔĕĖėĘĚěΕЕеᎬＥｅ]|e.?)(?:[ʏΥγуҮＹｙ]|y.?)
 1605630300	tripleee	dexsins\.com
 1605631433	tripleee	your[\W_]*+455
 1605634179	tripleee	Wesley(?<=<i>\s*Wesley)
@@ -25313,6 +25313,5 @@
 1606836246	tripleee	this is \w+ and I am an? (?:qualifi|licens)ed
 1606838049	Makyen	ceiwei\.com
 1606840678	tripleee	jiwandhara\.com
-1606841815	tripleee	\\/\\/3[15]+3y
 1606849323	tripleee	yourdomainbritish\.xyz
 1606849341	Machavity	cutle\.co
