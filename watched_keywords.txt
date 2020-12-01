@@ -25298,3 +25298,4 @@
 1606811673	tripleee	huboftutorials\.com
 1606814426	tripleee	sbbth\.com
 1606814495	tripleee	autosbbth
+1606818004	tripleee	urlzs\.com
