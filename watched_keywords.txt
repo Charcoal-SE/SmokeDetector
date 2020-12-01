@@ -25279,3 +25279,4 @@
 1606757125	Victor VosMottor	Your buddy Wesley
 1606763587	Spevacus	pinjaradrama\.com
 1606770480	NobodyNada	(?-i:BR><BR(?<=<BR><BR)(?=>))
+1606784945	Jeff Schaller	yanrefitness\.com
