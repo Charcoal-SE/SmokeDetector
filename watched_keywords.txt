@@ -25324,3 +25324,4 @@
 1606880599	Makyen	terrilyn[\W_]*+lillerd(?!\.wixsite\.com(?<=terrilynlillerd\.wixsite\.com))
 1606880621	Makyen	(?-i:nulavancecreme)(?#sites.google.com)
 1606880632	Makyen	terrilynlillerd\.wixsite\.com
+1606880887	Jeff Schaller	blog360\.vn
