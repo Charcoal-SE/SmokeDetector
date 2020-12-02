@@ -25320,3 +25320,4 @@
 1606862222	Makyen	cyber[\W_]*+gurus
 1606864007	bmike	telnum\.net
 1606873047	Makyen	jrtraders
+1606880583	Makyen	blood[\W_]*+pressure[\W_]*+911(?:[\W_]*+(?:review|phytage|lab|\d++|[\da-f]{5,}+)s?)*
