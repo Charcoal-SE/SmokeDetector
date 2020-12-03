@@ -23667,7 +23667,6 @@
 1601038725	Spevacus	bangaloreupvcwindows\.in
 1601038785	Spevacus	bangaloreupvcp(?:@gmail\.com)?
 1601041263	Mast	hbloom\.freshdesk\.com
-1601041708	Spevacus	syghtglass\.com
 1601042697	Mast	viral481\.com
 1601097291	Makyen	keto[\W_]*+burning(?:[\W_]*+(?:australia|\d++|[\da-f]{5,}+)s?)*
 1601116719	Mast	filmyduniya\.in
