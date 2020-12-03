@@ -25340,3 +25340,4 @@
 1606931038	Spevacus	shopipersia\.com
 1606938958	Machavity	rgray\.io
 1606960517	Ryan M	niqqa
+1606960807	NobodyNada	sites\.google\.com\S*/(?:google)?drive/\S*+(?#sites.google.com masquerading as drive.google.com)
