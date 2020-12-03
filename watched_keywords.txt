@@ -12167,7 +12167,7 @@
 1566672245	Makyen	dunescorts\.in
 1566672294	Makyen	dunescortservice\.com
 1566675413	double-beep	nashreonline\.com
-1566696023	Makyen	(?<=[\s</.-])(?-i:MONEY)(?=\s*[\w(),:;.&/\\<?!£$€-])
+1566696023	Makyen	(?-i:MONEY)(?<=[\s</.-]MONEY)(?=\s*[\w(),:;.&/\\<?!£$€-])(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1566699593	Makyen	(?-i:AAAAAER1kBgdJKJDbx7XIw)
 1566706276	Makyen	guidenepal(?:@gmail\.com)?
 1566707607	Makyen	disability-card\.com
