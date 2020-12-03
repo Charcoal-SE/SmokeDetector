@@ -2399,3 +2399,4 @@ h(?:oe?|ö)hle[\W_]*+der[\W_]*+l(?:oe?|ö)wen
 (?:buzzer)?huntbuzzer
 viaradaxx(?:[\W_]*+(?:reviews|\d++|[\da-f]{5,}+)s?)*
 vialophin
+this is \w+ and I am an? \w+ (?:photographer|illustrator)(?:and (?:photographer|illustrator))?
