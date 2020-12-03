@@ -25346,3 +25346,4 @@
 1606973983	Makyen	macro-supreme-keto-44\.webselfsite\.net
 1606974081	Makyen	macro[\W_]*+supreme[\W_]*+keto(?!-44\.webselfsite\.net(?<=macro-supreme-keto-44\.webselfsite\.net))(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
 1606974136	Makyen	webselfsite\.net
+1606978833	tripleee	facepdf\.com
