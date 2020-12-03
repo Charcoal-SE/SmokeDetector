@@ -25344,3 +25344,4 @@
 1606973817	Makyen	manor[\W_]*+tower[\W_]*+lao[\W_]*+cai
 1606973836	Makyen	meeyland\.com
 1606973882	Makyen	macro[\W_]*+supreme[\W_]*+keto(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
+1606973983	Makyen	macro-supreme-keto-44\.webselfsite\.net
