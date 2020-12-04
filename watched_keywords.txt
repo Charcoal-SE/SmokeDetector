@@ -25365,3 +25365,4 @@
 1607048724	NobodyNada	sites\.google\.com/view/id\d++(?!/google/drive/file/downloads/storage)
 1607048775	Spevacus	getmonita\.io
 1607049124	NobodyNada	sites\.google\.com\S*/(?:google)?drive/(?:file/downloads/storage)?+(?<!sites\.google\.com/view/id\d++/google/drive/file/downloads/storage)(?#sites.google.com masquerading as drive.google.com)
+1607052385	Makyen	newtopfree\.com
