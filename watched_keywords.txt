@@ -25364,3 +25364,4 @@
 1607041274	Makyen	farmslik\.com
 1607041298	Makyen	loudslik\.com
 1607048724	NobodyNada	sites\.google\.com/view/id\d++(?!/google/drive/file/downloads/storage)
+1607048775	Spevacus	getmonita\.io
