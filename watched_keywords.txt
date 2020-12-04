@@ -1203,7 +1203,6 @@
 1508767429	bwDraco	movieboxappz\.com
 1508772404	tripleee	cassiopeiastudio\.com
 1508777497	bwDraco	collision\W?express
-1508791180	Mithrandir	fdsfs
 1508817954	Suraj Rao	tutorialslife\.com
 1508818670	tripleee	(?:1\W*)?518\W*855\W*8838
 1508819107	tripleee	(?:1\W*)?415\W*689\W*5065
