@@ -25352,7 +25352,6 @@
 1606996465	tripleee	adequatetravel\.com
 1606996533	Ryan M	this is \w+ and I am an? (?:qualified|licensed|professional|certified)(?! (?:photographer|illustrator))(?# keywords in lookahead are blacklisted)
 1606997028	Ryan M	motoservicecenterinbangalore\.com
-1606998935	Makyen	sites\.google\.com/view/id\d+
 1606998952	Makyen	helpforbank\.com
 1607007431	Spevacus	apkzoon\.com
 1607008499	Spevacus	sexgo\.in
