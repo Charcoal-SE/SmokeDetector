@@ -7577,7 +7577,6 @@
 1548143541	Makyen	fileapps\.net
 1548148320	Tetsuya Yamamoto	vilina\.in
 1548149570	Makyen	pcbeducation\.com
-1548150199	Tetsuya Yamamoto	script-o-rama\.com
 1548153469	Makyen	hostdrop\.eu
 1548163254	tripleee	marblehill\.co\.uk
 1548163299	tripleee	travelocar\.com
