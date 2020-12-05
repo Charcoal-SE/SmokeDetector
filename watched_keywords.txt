@@ -25392,3 +25392,4 @@
 1607171619	Mast	senior\.ua
 1607188014	Makyen	crypto[\W_]*+scam[\W_]*+solution
 1607188029	Makyen	one[\W_]*+six[\W_]*+one[\W_]*+nine[\W_]*+three[\W_]*+twenty[\W_]*+five[\W_]*+seven[\W_]*+one[\W_]*+four
+1607193288	Spevacus	fitnessadviser\.in
