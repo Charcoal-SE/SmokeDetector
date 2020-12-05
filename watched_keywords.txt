@@ -25390,3 +25390,4 @@
 1607155522	Makyen	academicswritingservice\.com
 1607170272	Cody Gray	smarttechguys\.com
 1607171619	Mast	senior\.ua
+1607188014	Makyen	crypto[\W_]*+scam[\W_]*+solution
