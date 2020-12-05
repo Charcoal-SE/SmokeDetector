@@ -25386,3 +25386,4 @@
 1607098717	Spevacus	dalesac\.com
 1607132154	Makyen	jeux4all\.com
 1607139674	Spevacus	andromama\.com
+1607146298	Makyen	erecerxyn(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
