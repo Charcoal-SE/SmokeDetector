@@ -414,3 +414,4 @@ Wes.ey\W*Atwood
 (?-i:^Ann Watson$)
 (?-i:^Wesley call me this way$)
 (?-i:^Welsey Atwood$)
+^security\W*through\W*obscurity
