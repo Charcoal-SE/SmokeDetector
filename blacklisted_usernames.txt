@@ -414,3 +414,4 @@ Wes.ey\W*Atwood
 (?-i:^Ann Watson$)
 (?-i:^Wesley call me this way$)
 (?-i:^Welsey Atwood$)
+s[3e]*c(?:[uü]|\[_\])*r[1i]*ty\W*thr[0o]*ugh\W*(?:[o0]*(?:b|13)*s?cur[1i]*ty|.*W\.?A)
