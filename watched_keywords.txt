@@ -25421,3 +25421,4 @@
 1607331570	Ryan M	harga(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1607339243	Glorfindel	greatinnovus\.com
 1607339742	tripleee	sociallegy\.com
+1607339832	tripleee	soundbarscan\.com
