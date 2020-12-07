@@ -25428,3 +25428,4 @@
 1607348257	Spevacus	gosmartagro\.com
 1607348686	tripleee	jemrare\.com
 1607350744	tripleee	(?-i:1Ky5Yr)(?# fiverr)
+1607352398	Zoe	com\.blink\.flashlight\.controller\.b\.c\.moto\.flash\.app
