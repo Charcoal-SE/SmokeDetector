@@ -23735,7 +23735,6 @@
 1601367163	tripleee	chandakagro(?!\.com)
 1601371136	Glorfindel	fittingguy\.com
 1601371539	Victor VosMottor	mysystem-mechanic\.com
-1601369520	Victor VosMottor	flipkart\.com
 1601312670	Kulfy	aveebaba\.com
 1601027480	Victor VosMottor	jok3r\.us
 1601374634	K.Dᴀᴠɪs	jok3rshop
