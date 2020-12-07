@@ -25409,3 +25409,4 @@
 1607297385	Spevacus	slot-online\.eu\.org
 1607308093	Spevacus	batdongsan\.kiengiang\.vn
 1607308845	Spevacus	iget4free\.com
+1607319755	Makyen	tony[\W_]*+hawk[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:review|and|where|to|buy|\d++|[\da-f]{5,}+)s?)*
