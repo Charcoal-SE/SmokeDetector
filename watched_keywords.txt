@@ -25412,3 +25412,4 @@
 1607319755	Makyen	tony[\W_]*+hawk[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:review|and|where|to|buy|\d++|[\da-f]{5,}+)s?)*
 1607322737	Makyen	remedy[\W_]*+leaf[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
 1607324732	Makyen	doodem\.io
+1607325511	Makyen	supplementscare\.co\.za
