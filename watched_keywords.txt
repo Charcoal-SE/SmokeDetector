@@ -25418,3 +25418,4 @@
 1607326711	Makyen	(?-i:0r59qSWPH1g)(?#youtu.be)
 1607326796	Makyen	(?-i:CVrcNFPn5n7AjDAho2TvtP)(?#chat.whatsapp.com)
 1607326814	Makyen	aap[\W_]*+sab[\W_]*+hamari
+1607326972	Makyen	(?-i:w5poez)(?#rb.gy)
