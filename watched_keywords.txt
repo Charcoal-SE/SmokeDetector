@@ -25452,3 +25452,4 @@
 1607435392	Spevacus	thepublicmantra\.com
 1607436498	Jeff Schaller	giga-bits\.com
 1607439106	Spevacus	ftp-mac\.com
+1607439583	Zoe	(?:\\_?/\W*|w)*[.\W]*(?:[eé3]+\W*(?:[s5]\W*|[l1]\W*)+[eé3]\W*.?|.*[a@]t?(?:\\_?/\W*|w)*\W*[0oøuüôöõ]{2}\W*d)+
