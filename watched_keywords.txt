@@ -5571,7 +5571,6 @@
 1537928787	Tetsuya Yamamoto	aluminum-producer\.com
 1537934211	Makyen	HH5EDxCEOwEp0pLIO28AmQ(?#t.me/joinchat)
 1537934223	Makyen	metatip\.org
-1537934231	Makyen	bitcointalk\.org
 1537934236	Makyen	explorer\.mvs\.org
 1537934242	Makyen	nesilguvenlik\.com
 1537934248	Makyen	online-tvchannel\.org
