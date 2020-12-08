@@ -25340,7 +25340,6 @@
 1606982377	Ryan M	UC4qpDjn1Q2FPqOUz2W7jFig(?# YouTube channel)
 1606988145	tripleee	adisafarms\.com
 1606988179	tripleee	besenior\.ir
-1606993043	tripleee	(?-i:^Mel$)
 1606996465	tripleee	adequatetravel\.com
 1606996533	Ryan M	this is \w+ and I am an? (?:qualified|licensed|professional|certified)(?! (?:photographer|illustrator))(?# keywords in lookahead are blacklisted)
 1606997028	Ryan M	motoservicecenterinbangalore\.com
