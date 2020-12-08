@@ -25449,3 +25449,4 @@
 1607434261	Spevacus	gplonly\.com
 1607434434	Zoe	bazinga\.ae
 1607434885	Spevacus	ucc\.com
+1607435392	Spevacus	thepublicmantra\.com
