@@ -25446,3 +25446,4 @@
 1607432904	Spevacus	clippingpathview\.com
 1607433283	Spevacus	aerocityincall\.com
 1607433392	Spevacus	studentsofeconomics\.com
+1607434261	Spevacus	gplonly\.com
