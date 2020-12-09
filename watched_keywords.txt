@@ -25479,3 +25479,4 @@
 1607536778	Makyen	com\.seds\.tyrnik
 1607536797	Makyen	kach\.pro
 1607541056	Mast	residentadvisor\.net
+1607541559	Spevacus	cordic-bibliography\.blogspot
