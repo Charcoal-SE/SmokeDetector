@@ -25469,3 +25469,4 @@
 1607501919	tripleee	usalocksmithinc\.com
 1607504835	Zoe	captchas\.io
 1607513617	tripleee	bookmyflightticket\.com
+1607513801	tripleee	vitaitexpert\.com
