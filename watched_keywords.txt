@@ -25487,3 +25487,4 @@
 1607555694	cigien	kennethhome\.com\.au
 1607560308	Spevacus	mercatoday\.com
 1607570361	Makyen	proskills[\W_]*+edushala(?!\.com(?<=proskillsedushala\.com))
+1607570378	Makyen	proskillsedushala\.com
