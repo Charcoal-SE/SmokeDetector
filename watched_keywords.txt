@@ -25495,3 +25495,4 @@
 1607580858	tripleee	kodlogs\.com
 1607581784	Makyen	verywellweightloss\.com
 1607583379	Makyen	energy[\W_]*+saver[\W_]*+pro
+1607584638	Makyen	gymmanufacturersindia\.com
