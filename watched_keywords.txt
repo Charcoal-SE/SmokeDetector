@@ -25501,3 +25501,4 @@
 1607586328	tripleee	mssqltips\.com
 1607587796	tripleee	dubaimachines\.com
 1607592719	tripleee	exceed-team\.com
+1607592737	tripleee	globaldezigns\.com
