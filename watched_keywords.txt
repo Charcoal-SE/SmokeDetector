@@ -25488,3 +25488,4 @@
 1607560308	Spevacus	mercatoday\.com
 1607570361	Makyen	proskills[\W_]*+edushala(?!\.com(?<=proskillsedushala\.com))
 1607570378	Makyen	proskillsedushala\.com
+1607570398	Makyen	cybershield[\W_]*+technologies(?:[\W_]*+(?:pvt|ltd|\d++|[\da-f]{5,}+)s?)*
