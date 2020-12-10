@@ -25506,3 +25506,4 @@
 1607596728	tripleee	socialflydigital\.com
 1607599067	Makyen	green[\W_]*+estates[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:order|review|\d++|[\da-f]{5,}+)s?)*
 1607606281	tripleee	dasidime\.in
+1607607922	Spevacus	ijset\.in
