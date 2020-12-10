@@ -25496,3 +25496,4 @@
 1607581784	Makyen	verywellweightloss\.com
 1607583379	Makyen	energy[\W_]*+saver[\W_]*+pro
 1607584638	Makyen	gymmanufacturersindia\.com
+1607585155	rene	maps123\.net
