@@ -25500,3 +25500,4 @@
 1607586008	tripleee	try[\W_]++to[\W_]++explore[\W_]++the[\W_]++new[\W_]++microsoft
 1607586328	tripleee	mssqltips\.com
 1607587796	tripleee	dubaimachines\.com
+1607592719	tripleee	exceed-team\.com
