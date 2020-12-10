@@ -25497,7 +25497,7 @@
 1607583379	Makyen	energy[\W_]*+saver[\W_]*+pro
 1607584638	Makyen	gymmanufacturersindia\.com
 1607585155	rene	maps123\.net
-1607586008	tripleee	try[\W_]++to[\W_]++explore[\W_]++the[\W_]++new[\W_]++microsoft
+1607586008	tripleee	try\s*+to\s*+explore\s*+the\s*+new\s*+"(?:<a\s*+href="https://docs.microsoft.com/en-us/answers/[^"]*+"\s*+rel="[^"]*+">)?Microsoft\s*+Q&A
 1607586328	tripleee	mssqltips\.com
 1607587796	tripleee	dubaimachines\.com
 1607592719	tripleee	exceed-team\.com
