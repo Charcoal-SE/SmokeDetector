@@ -25513,3 +25513,4 @@
 1607664174	tripleee	alsafarahservices\.com
 1607664191	tripleee	alsafarah[\W_]*+services(?!\.com)
 1607666937	Makyen	timesofnews24x7\.com
+1607666954	Makyen	dominx(?:[\W_]*+(?:enhancement|male|review|\d++|[\da-f]{5,}+)s?)*
