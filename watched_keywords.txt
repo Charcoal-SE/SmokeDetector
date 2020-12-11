@@ -25524,3 +25524,4 @@
 1607685637	cigien	7searchppc\.com
 1607691221	cigien	filesrecoverytools\.com
 1607696398	Spevacus	(?-i:^Joy Miller$)
+1607698691	cigien	wikitechproducts\.com
