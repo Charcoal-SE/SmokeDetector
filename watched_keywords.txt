@@ -25547,3 +25547,4 @@
 1607799864	Mast	richardprycewizard7(?:@gmail\.com)?
 1607801283	Mast	(?-i:^Innovation Discoveries$)
 1607782254	cigien	randmcnallygpsupdates\.com
+1607781646	cigien	wearebeginner\.com
