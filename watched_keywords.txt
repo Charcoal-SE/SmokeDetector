@@ -25537,3 +25537,4 @@
 1607764967	cigien	wikibiofacts\.com
 1607765105	Cody Gray	kredibankalar\.com
 1607765923	Cody Gray	digitalmarketers\.biz
+1607767575	Makyen	vytalyze(?:[\W_]*+(?:cbd|order|buy|oil|\d++|[\da-f]{5,}+)s?)*
