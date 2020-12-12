@@ -19516,7 +19516,7 @@
 1587837893	Makyen	first[\W_]*+person[\W_]*+science(?!\.com(?<=firstpersonscience\.podbean\.com))(?:[\W_]*+(?:podcast|\d++|[\da-f]{4,}+))*
 1587837917	Makyen	firstpersonscience\.podbean\.com
 1587838114	Makyen	(?:(?:revitali[sz](?:e[dr]?s?|ing)|moisturi[sz](?:e[dr]?s?|ing))[\W_]*+){2,}
-1587841503	Makyen	hemp[\W_]*+ex[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
+1587841503	Makyen	(?:gvp[\W_]*+)?hemp[\W_]*+ex[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1587844693	Makyen	reliant[\W_]*+keto(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1587847030	Nisse Engström	works35\.com
 1587851775	Nisse Engström	gem1music\.com
