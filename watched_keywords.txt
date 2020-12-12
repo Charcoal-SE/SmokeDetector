@@ -25546,3 +25546,4 @@
 1607799721	Mast	samcovina\.vn
 1607799864	Mast	richardprycewizard7(?:@gmail\.com)?
 1607801283	Mast	(?-i:^Innovation Discoveries$)
+1607782254	cigien	randmcnallygpsupdates\.com
