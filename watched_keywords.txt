@@ -25536,3 +25536,4 @@
 1607763484	Makyen	dominxt(?:[\W_]*+(?:muscle|building|review|buy|\d++|[\da-f]{5,}+)s?)*
 1607764967	cigien	wikibiofacts\.com
 1607765105	Cody Gray	kredibankalar\.com
+1607765930	cigien	digitalmarketers\.biz
