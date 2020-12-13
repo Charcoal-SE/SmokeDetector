@@ -25562,3 +25562,4 @@
 1607871854	cigien	banlampra\.ac\.th
 1607879301	cigien	drwazobiatemple
 1607873454	cigien	gamecarddelivery\.com
+1607896901	Makyen	directfbhelps(?:[\W_]*+(?:at[\W_]*+)?outlook(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
