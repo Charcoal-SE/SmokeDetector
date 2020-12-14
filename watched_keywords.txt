@@ -18902,7 +18902,6 @@
 1585830550	tripleee	hostimul\.com
 1585831169	Makyen	(?-i:CfIar\.jpg)
 1585834557	Machavity	wowdesk\.com
-1585836007	Machavity	cybertechhub100(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1585841982	Machavity	downloadalexa-app\.com
 1585847813	tripleee	swag(?:ing|ers?)
 1585848573	tripleee	blackpods1\.com
