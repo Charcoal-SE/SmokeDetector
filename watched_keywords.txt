@@ -25572,3 +25572,4 @@
 1607928672	Ryan M	^.{0,30}your (?:mother|mom).{0,30}$
 1607929214	Ryan M	twexpresscars\.co\.uk
 1607930600	tripleee	eyesight[\W_]*+max
+1607930623	tripleee	nananke\.com
