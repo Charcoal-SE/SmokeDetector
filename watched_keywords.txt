@@ -25575,3 +25575,4 @@
 1607930623	tripleee	nananke\.com
 1607930765	tripleee	iron[\W_]*+slim(?:[\W_]*+(?:keto|diet))*
 1607934056	tripleee	thaoduocducthinh\.com
+1607934515	tripleee	evidya\.in
