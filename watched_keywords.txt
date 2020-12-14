@@ -25580,3 +25580,4 @@
 1607938406	tripleee	tool-rocket\.com
 1607943945	tripleee	mondaymorningmediaquarterback\.com
 1607943985	tripleee	swilearn\.com
+1607944226	tripleee	(?-i:^Drew Stelward$)
