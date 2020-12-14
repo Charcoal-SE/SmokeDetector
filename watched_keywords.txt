@@ -25595,3 +25595,4 @@
 1607982732	Jeff Schaller	securecapitalsolutions\.com
 1607986325	Makyen	(?-i:3a0CWcZ)(?#bit.ly)
 1607986448	Makyen	bythebuyers(?!\.com(?<=bythebuyers\.com))(?:@gmail\.com)?
+1607986464	Makyen	bythebuyers\.com
