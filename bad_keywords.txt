@@ -2081,7 +2081,7 @@ clinxx
 vitariche
 new[\W_]*+user[\W_]*+peasants?
 insta[\W_]*+keto
-intelliflare[\W_]*+iq
+intelliflare[\W_]*+iq(?:[\W_]*+booster)?
 2019/10/31/what-is-simple-linear-model/
 ogbefunhearlingtemple(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 cyberfiles\.hacker(?:@gmail\.com)?
