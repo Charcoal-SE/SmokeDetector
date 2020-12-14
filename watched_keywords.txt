@@ -25573,3 +25573,4 @@
 1607929214	Ryan M	twexpresscars\.co\.uk
 1607930600	tripleee	eyesight[\W_]*+max
 1607930623	tripleee	nananke\.com
+1607930765	tripleee	iron[\W_]*+slim(?:[\W_]*+(?:keto|diet))*
