@@ -25569,3 +25569,4 @@
 1607927185	tripleee	inoxsteelindia\.net
 1607927216	Ryan M	writemyessaysuk\.co\.uk
 1607928494	tripleee	247camerahelp\.com
+1607928672	Ryan M	^.{0,30}your (?:mother|mom).{0,30}$
