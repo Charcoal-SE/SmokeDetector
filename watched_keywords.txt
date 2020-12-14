@@ -25571,3 +25571,4 @@
 1607928494	tripleee	247camerahelp\.com
 1607928672	Ryan M	^.{0,30}your (?:mother|mom).{0,30}$
 1607929214	Ryan M	twexpresscars\.co\.uk
+1607930600	tripleee	eyesight[\W_]*+max
