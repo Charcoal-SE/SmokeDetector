@@ -14730,7 +14730,7 @@
 1575575997	Makyen	sologenic\.com
 1575576020	Makyen	(?-i:1FAIpQLSdcpIL-u2FsqBZj0ikG7UyJe3l9If7sVr7MdTpVnINQJJbsQg)(?#Google Docs)
 1575576042	Makyen	fleur[\W_]*+alpha(?:[\W_]*+(?:cream|creme|in|canada|ca|\d++|[\da-f]{4,}+)s?)*
-1575576061	Makyen	prime[\W_]*+natural(?:[\W_]*+(?:oil|cbd|\d++|[\da-f]{4,}+)s?)*
+1575576061	Makyen	prime[\W_]*+natural(?![\W_]*+(?:number|factor))(?:[\W_]*+(?:oil|cbd|\d++|[\da-f]{4,}+)s?)*
 1575576308	Makyen	illumia[\W_]*+cream(?:[\W_]*+(?:canada|ca|\d++|[\da-f]{4,}+)s?)*
 1575576324	Makyen	(?-i:8j20mP9lcVM)
 1575576342	Makyen	darkweb\.com
