@@ -25613,3 +25613,4 @@
 1608042497	Spevacus	menshairstyleslist\.com
 1608049059	tripleee	whatwebcando\.today
 1608049653	Mast	bestbeardtrimmer2021\.com
+1608049771	Mast	(?-i:^origamistudios$)
