@@ -25598,3 +25598,4 @@
 1607986464	Makyen	bythebuyers\.com
 1608003620	cigien	eyellowiki\.com
 1608005104	Yatin	2kmtcentral\.com
+1608015668	Makyen	mandime[\W_]*+harde(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
