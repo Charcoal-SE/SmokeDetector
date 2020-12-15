@@ -963,7 +963,9 @@ def bad_link_text(s, site):   # suspicious text of a hyperlink
     s = regex.sub("</?(?:strong|em)>", "", s)  # remove font tags
     keywords = regex.compile(
         r"(?isu)"
-        r"\b(buy|cheap) |live[ -]?stream|"
+        r"sites\.google\.com/view/id\d++/google/?drive/file/downloads/storage|"
+        r"\b(buy|cheap) |"
+        r"live[ -]?stream|"
         r"\bmake (money|\$)|"
         r"\b(porno?|(whole)?sale|coins|luxury|coupons?|essays?|in \L<city>)\b|"
         r"\b\L<city>(?:\b.{1,20}\b)?(service|escort|call girls?)|"
