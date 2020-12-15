@@ -25599,3 +25599,4 @@
 1608003620	cigien	eyellowiki\.com
 1608005104	Yatin	2kmtcentral\.com
 1608015668	Makyen	mandime[\W_]*+harde(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
+1608015722	tripleee	newspiner\.com
