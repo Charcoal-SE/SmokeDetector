@@ -25603,4 +25603,3 @@
 1608015739	Makyen	(?:get[\W_]*+)?savage[\W_]*+grow[\W_]*+plus(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1608017911	Makyen	mizzy[\W_]*+(?:reviews|price)(?:[\W_]*+(?:in|india|\d++|[\da-f]{5,}+)s?)*
 1608017829	cigien	healthywellness\.in
-1608019178	tripleee	ipsnews\.net
