@@ -25486,7 +25486,6 @@
 1607570361	Makyen	proskills[\W_]*+edushala(?!\.com(?<=proskillsedushala\.com))
 1607570378	Makyen	proskillsedushala\.com
 1607570398	Makyen	cybershield[\W_]*+technologies(?:[\W_]*+(?:pvt|ltd|\d++|[\da-f]{5,}+)s?)*
-1607575042	Makyen	fitnesscaremart\.com
 1607577827	Mast	borellisecuritysoftware\.com
 1607579962	cigien	contentbestonline\.com
 1607580858	tripleee	kodlogs\.com
