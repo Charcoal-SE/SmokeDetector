@@ -25610,3 +25610,4 @@
 1608031907	tripleee	pharma[\W_]*+bloom(?:[\W_]*+cbd)?
 1608032449	tripleee	l2e-global\.com
 1608034063	Ryan M	appsquadz\.com
+1608042497	Spevacus	menshairstyleslist\.com
