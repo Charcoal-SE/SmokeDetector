@@ -25614,3 +25614,4 @@
 1608049059	tripleee	whatwebcando\.today
 1608049653	Mast	bestbeardtrimmer2021\.com
 1608049771	Mast	(?-i:^origamistudios$)
+1608050435	tripleee	(?-i:kavin2john)(?# medium.com)
