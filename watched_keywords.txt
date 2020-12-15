@@ -25600,3 +25600,4 @@
 1608005104	Yatin	2kmtcentral\.com
 1608015668	Makyen	mandime[\W_]*+harde(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1608015722	tripleee	newspiner\.com
+1608015739	Makyen	(?:get[\W_]*+)?savage[\W_]*+grow[\W_]*+plus(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
