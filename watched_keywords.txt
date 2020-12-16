@@ -25633,3 +25633,4 @@
 1608112528	tripleee	milkbaby\.com\.au
 1608112941	Jeff Schaller	naturalketodiets\.com
 1608114618	tripleee	govtjobpost\.in
+1608114737	tripleee	govtjob(?!(?:kb|s(?:assam|post|rch))\.com|alertindia)
