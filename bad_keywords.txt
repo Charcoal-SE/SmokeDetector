@@ -2402,3 +2402,4 @@ vialophin
 this is \w+ and I am an? \w+ (?:photographer|illustrator)(?:and (?:photographer|illustrator))?
 erecerxyn
 cybertechhub100(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
+cogni[\W_]*+brain(?:[\W_]*+max)?
