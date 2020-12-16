@@ -25624,3 +25624,4 @@
 1608098259	tripleee	192routerlogin\.com
 1608099037	cigien	helpsyahoo\.com
 1608100249	tripleee	magespider\.com
+1608100269	tripleee	magespider(?!\.com)
