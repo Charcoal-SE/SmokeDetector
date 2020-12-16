@@ -25626,3 +25626,4 @@
 1608100249	tripleee	magespider\.com
 1608100269	tripleee	magespider(?!\.com)
 1608105215	Glorfindel	^Fji\sA$
+1608107225	tripleee	cogni[\W_]*+brain(?:[\W_]*+max)?
