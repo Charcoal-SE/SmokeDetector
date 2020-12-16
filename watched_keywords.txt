@@ -25628,3 +25628,4 @@
 1608105215	Glorfindel	^Fji\sA$
 1608107225	tripleee	cogni[\W_]*+brain(?:[\W_]*+max)?
 1608107542	tripleee	oflox\.com
+1608108451	tripleee	vasundharavision\.com
