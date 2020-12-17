@@ -876,6 +876,9 @@ items:
   - mira.ns.cloudflare.com.
   - sergi.ns.cloudflare.com.
 - ns:
+  - mitchell.ns.cloudflare.com.
+  - nancy.ns.cloudflare.com.
+- ns:
   - molly.ns.cloudflare.com.
   - rudy.ns.cloudflare.com.
 - ns:
