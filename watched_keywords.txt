@@ -25655,4 +25655,3 @@
 1608226580	Spevacus	youradultworld\.com
 1608238840	cigien	scrumlotus\.com
 1608238356	cigien	vajica\.com
-1608242988	Spevacus	(?-i:fLVNy)(?#bit.ly)
