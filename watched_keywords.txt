@@ -25675,3 +25675,4 @@
 1608276970	Makyen	tommy[\W_]*+chong[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
 1608271956	cigien	hnewyear\.com
 1608274631	cigien	ez2kmt\.com
+1608279553	cigien	(?-i:e5f1sAk889g)(?#YouTube)
