@@ -25670,3 +25670,4 @@
 1608276908	Makyen	ceremony[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
 1608276918	Makyen	mark[\W_]*+levin[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
 1608276929	Makyen	canadian[\W_]*+extracts[\W_]*+hemp(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
+1608276945	Makyen	anderson[\W_]*+cooper[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
