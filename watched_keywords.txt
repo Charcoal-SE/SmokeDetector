@@ -25667,3 +25667,4 @@
 1608272854	Cody Gray	soft365setup\.com
 1608275639	Makyen	homebuildmortgage\.com
 1608276882	Makyen	healing[\W_]*+green[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
+1608276908	Makyen	ceremony[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
