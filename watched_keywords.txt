@@ -23840,7 +23840,6 @@
 1601839277	Robert Columbia	delphican\.com
 1601842107	NobodyNada	beautifulnotifications\.com
 1601874863	Makyen	(?:official[\W_]*+)?max[\W_]*+prime[\W_]*+labs
-1601879464	tripleee	office-settup\.com
 1601879511	Makyen	sansonetworks\.com
 1601879596	tripleee	utmios-solution\.com
 1601876163	Daniel Widdis	howtouselinux\.com
