@@ -25672,3 +25672,4 @@
 1608276929	Makyen	canadian[\W_]*+extracts[\W_]*+hemp(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
 1608276945	Makyen	anderson[\W_]*+cooper[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
 1608276957	Makyen	organic[\W_]*+recover[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
+1608276970	Makyen	tommy[\W_]*+chong[\W_]*+cbd(?:[\W_]*+(?:store|oil|review|order|hemp|buy|online|\d++|[\da-f]{5,}+)s?)*
