@@ -2405,3 +2405,4 @@ cybertechhub100(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 cogni[\W_]*+brain(?:[\W_]*+max)?
 synapse[\W_]*+xt
 dominxt(?:[\W_]*+(?:muscle|building|review|buy|\d++|[\da-f]{5,}+)s?)*
+(?-i:fLVNy)(?#bit.do)
