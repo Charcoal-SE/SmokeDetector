@@ -24718,7 +24718,6 @@
 1604846792	Makyen	ммц-москва\.рф
 1604846812	Makyen	xn----8sbf5aiabq1a0c\.xn--p1ai
 1604853745	Makyen	aiven\.io
-1604853767	Makyen	summarylover\.com
 1604854252	Makyen	(?-i:k5MNyW3)(?#ibb.co)
 1604855515	Makyen	sadistic[\W_]*+mind[\W_]*+games
 1604855618	Makyen	c:\\Users\\John doe\\Desktop\\Libreoffice_7\.0\.3_win_x64\.msi
