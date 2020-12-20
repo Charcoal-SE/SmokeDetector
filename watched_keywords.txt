@@ -25725,3 +25725,4 @@
 1608416129	Spevacus	neptune\.ai\/blog
 1608437373	Spevacus	freefitdiet\.com
 1608439956	Spevacus	chanbuz\.com
+1608445220	cigien	quotesforfriend\.com
