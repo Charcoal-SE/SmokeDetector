@@ -25739,3 +25739,4 @@
 1608531520	tripleee	advancetech\.co\.in
 1608531560	tripleee	advance[\W_]*+tech(?!\.co\.in)
 1608533493	Makyen	mike[\W_]*+wolfe[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
+1608543880	tripleee	viagrawholesaler\.com
