@@ -3837,3 +3837,4 @@ b︆︆i︆︆t\.︆+do(?#contains non-printing characters; blacklisting only an
 twrpupdate\.com
 summarylover\.com
 g︆+g\.︆+g︆*g(?#contains non-printing characters; blacklisting only an obfuscated version of the domain)
+menshealthtime\.com
