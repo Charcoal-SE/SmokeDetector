@@ -25749,3 +25749,4 @@
 1608552240	tripleee	(?-i:yaHcanOBCMY)(?# youtube)
 1608552408	tripleee	software[\W_]*+study
 1608555399	Zoe	socialprawn\.com
+1608557889	tripleee	drypython
