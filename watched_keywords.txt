@@ -25733,3 +25733,4 @@
 1608494999	Makyen	[\s.>]*✅✅+\W*
 1608513173	cigien	veriforma\.com
 1608528420	Makyen	com\.rs\.indira(?#play.google.com)
+1608528438	Makyen	indira[\W_]*+securities
