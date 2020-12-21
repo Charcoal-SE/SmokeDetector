@@ -25741,3 +25741,4 @@
 1608533493	Makyen	mike[\W_]*+wolfe[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1608543880	tripleee	viagrawholesaler\.com
 1608543914	tripleee	specfurn\.com\.au
+1608545804	cigien	yotonos\.com
