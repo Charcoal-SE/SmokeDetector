@@ -25736,3 +25736,4 @@
 1608528438	Makyen	indira[\W_]*+securities
 1608528548	tripleee	trade[\W_]*+insta
 1608530333	tripleee	perfectdatasolutions\.com
+1608531520	tripleee	advancetech\.co\.in
