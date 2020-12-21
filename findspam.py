@@ -1037,7 +1037,9 @@ def dns_query(label, qtype):
         return DNS_CACHE[(label, qtype)]['result']
     try:
         starttime = datetime.utcnow()
-        answer = dns.resolver.query(label, qtype)
+        # Switched from dns.resolver.query
+        # See also https://github.com/rthalley/dnspython/issues/581
+        answer = dns.resolver.resolve(label, qtype)
     except dns.exception.DNSException as exc:
         if str(exc).startswith('None of DNS query names exist:'):
             log('debug', 'DNS label {0} not found; skipping'.format(label))
