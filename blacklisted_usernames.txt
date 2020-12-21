@@ -305,7 +305,6 @@ lustresparasala
 (?-i:^Marieromig$)
 (?-i:^wperror500$)
 ^retail[\W_]*+clouds?$
-(?-i:^Tony Wong$)
 (?-i:^Add Hunters$)
 ^techmartin$
 (?-i:^Rathva Dinesh$)
