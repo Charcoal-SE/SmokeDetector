@@ -25734,3 +25734,4 @@
 1608513173	cigien	veriforma\.com
 1608528420	Makyen	com\.rs\.indira(?#play.google.com)
 1608528438	Makyen	indira[\W_]*+securities
+1608528548	tripleee	trade[\W_]*+insta
