@@ -10819,7 +10819,6 @@
 1562345288	Makyen	mcafeecomactivateretailcard\.com
 1562346172	Makyen	(?-i:twSUz4Zh9cY)
 1562355411	Makyen	filehorse\.com
-1562369774	Makyen	atm\.tecnology(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1562374142	Makyen	dr\.oyalospellhome(?:@hotmail\.com)?
 1562382288	Machavity	magetop\.com
 1562390646	Makyen	^MrHimmler$

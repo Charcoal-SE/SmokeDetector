@@ -2408,3 +2408,4 @@ dominxt(?:[\W_]*+(?:muscle|building|review|buy|\d++|[\da-f]{5,}+)s?)*
 (?-i:fLVNy)(?#bit.do)
 (?:get[\W_]*+)?savage[\W_]*+grow[\W_]*+plus(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 epson[\W_]*+error[\W_]*+code[\W_]*+0x[\da-f]{2}
+atm\.tecnology(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
