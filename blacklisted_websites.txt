@@ -3840,3 +3840,4 @@ g︆+g\.︆+g︆*g(?#contains non-printing characters; blacklisting only an obfu
 menshealthtime\.com
 cbdoilsbrand\.com
 iexponet\.com
+learn-logic\.org
