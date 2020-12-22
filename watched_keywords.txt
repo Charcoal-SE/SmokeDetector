@@ -25764,3 +25764,4 @@
 1608581087	Ryan M	ttok\.online
 1608584670	Spevacus	33rapfemp3\.com
 1608596550	Makyen	(?-i:^TREND TOP$)
+1608604888	ppwater	(?i)kala(\s*)jadu(?-i:).*
