@@ -4420,7 +4420,6 @@
 1532231516	Makyen	areazipcode\.org
 1532236865	Makyen	[a-z_]*91[\W_]*9587[\W_]*650[\W_]*908[a-z_]*
 1532251704	Makyen	ptvnbabaji(?:@gmail\.com)?
-1532251751	Makyen	qaclickacademy\.com
 1532252139	Makyen	intelligeme101
 1532252157	Makyen	sino-5000\.com
 1532276470	Makyen	24hwritemyessay\.com
