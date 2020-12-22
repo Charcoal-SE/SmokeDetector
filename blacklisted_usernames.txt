@@ -413,6 +413,5 @@ Wes.ey\W*Atwood
 (?-i:^Ann Watson$)
 (?-i:^Wesley call me this way$)
 (?-i:^Welsey Atwood$)
-[s5]+[3eé]*c(?:[uü]|\[_\])*r[1i]*t.*\W*t[4h]*r[0oøuüôöõ]*[uü]*g[4h]*\W*(?:[o0øuüôöõ]*(?:b|13)*[s5]+?c[uü]*r[1i]*t[yé]*|.*W\.?A)
 (?-i:^TracySaree$)
 (?-i:^Ayush Antiwal$)
