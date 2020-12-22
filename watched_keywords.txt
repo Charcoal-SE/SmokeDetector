@@ -7628,7 +7628,6 @@
 1548333738	tripleee	hatenablog\.com
 1548338654	tripleee	allitfeed\.com
 1548338517	Machavity	plumbwize\.ca
-1548347447	tripleee	faircom\.com
 1548385313	Tetsuya Yamamoto	likigram\.com
 1548391985	Sonic the Introverted Hedgehog	Homeocare International
 1548396179	Tetsuya Yamamoto	toolsbaer\.com
