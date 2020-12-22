@@ -2406,3 +2406,4 @@ cogni[\W_]*+brain(?:[\W_]*+max)?
 synapse[\W_]*+xt
 dominxt(?:[\W_]*+(?:muscle|building|review|buy|\d++|[\da-f]{5,}+)s?)*
 (?-i:fLVNy)(?#bit.do)
+(?:get[\W_]*+)?savage[\W_]*+grow[\W_]*+plus(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
