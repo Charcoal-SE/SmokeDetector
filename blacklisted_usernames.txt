@@ -420,3 +420,4 @@ Wes.ey\W*Atwood
 (?-i:^J\. David Velleman$)
 (?-i:^Anna21dj$)
 (?-i:^New J$)
+(?-i:^Ella Mark$)
