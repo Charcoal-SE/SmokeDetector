@@ -25810,3 +25810,4 @@
 1608711024	Glorfindel	knifesgeek\.com
 1608711582	tripleee	amoyshare\.com
 1608711983	tripleee	(?-i: nkn41)(?# gg.gg redirect)
+1608714297	tripleee	akshartours\.us
