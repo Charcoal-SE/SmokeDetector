@@ -25801,3 +25801,4 @@
 1608688502	Spevacus	[\s.>]*★★+\W*
 1608688890	Spevacus	[\s.>]*❤❤+\W*
 1608690565	ppwater	[\s.>]*⚡⚡+\W*
+1608697965	Ryan M	peak[\W_]*+surge
