@@ -25778,7 +25778,6 @@
 1608635223	Cody Gray	sonneriepro\.com
 1608635409	tripleee	fitskinstore\.com
 1608636047	tripleee	stzgists\.com
-1608638635	tripleee	(?-i:^New J$)
 1608639987	Ryan M	up4growth\.com
 1608642632	Jeff Schaller	Treatassignmenthelp
 1608642936	Jeff Schaller	biocardin-cijena\.launchrock\.com

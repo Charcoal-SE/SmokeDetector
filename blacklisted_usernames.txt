@@ -419,3 +419,4 @@ Wes.ey\W*Atwood
 (?-i:^Cann0t pr0v1d3 4 n4m3$)
 (?-i:^J\. David Velleman$)
 (?-i:^Anna21dj$)
+(?-i:^New J$)
