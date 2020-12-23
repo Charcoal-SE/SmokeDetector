@@ -25769,7 +25769,6 @@
 1608621887	Cody Gray	soyentrepreneur\.com
 1608623407	tripleee	alternate\.parts
 1608624977	tripleee	employcoder\.com
-1608626638	tripleee	(?-i:sFbK)(?# v.ht redirect)
 1608626872	tripleee	topvoucherscode\.co\.uk
 1608630068	Cody Gray	topcookman\.angelfire\.com
 1608632936	Cody Gray	softenica\.com
