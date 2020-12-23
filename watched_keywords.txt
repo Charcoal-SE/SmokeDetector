@@ -25802,3 +25802,4 @@
 1608684010	Sonic the Curiouser Hedgehog	aisakya\.in
 1608688475	Spevacus	[\s.>]*➤➤+\W*
 1608688502	Spevacus	[\s.>]*★★+\W*
+1608688890	Spevacus	[\s.>]*❤❤+\W*
