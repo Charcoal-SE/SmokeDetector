@@ -9815,7 +9815,6 @@
 1558348922	tripleee	optimusforexreview\.com
 1558350948	tripleee	goldcoastmotorcycles\.com
 1558351047	tripleee	halki\W?diabetes
-1558351365	doppelgreener	special offer
 1569875927	ArtOfCode	(?:order|shop|special)\W(?:today|now|offer)(?<!order\Worder)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1558352212	tripleee	untappedreviews\.com
 1558354955	tripleee	whatpeopleswant\.com
