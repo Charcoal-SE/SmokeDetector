@@ -25800,3 +25800,4 @@
 1608668926	Ryan M	(?-i:BLOGIC)
 1608669643	Ryan M	bluehost\.com/track
 1608684010	Sonic the Curiouser Hedgehog	aisakya\.in
+1608688475	Spevacus	[\s.>]*➤➤+\W*
