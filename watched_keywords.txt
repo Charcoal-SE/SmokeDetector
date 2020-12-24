@@ -24376,7 +24376,6 @@
 1603733304	Mast	(?-i:^Ulric kaka$)
 1603738900	Machavity	trucoat\.us
 1603751807	Jeff Schaller	immersify\.co\.uk
-1603758593	Someone_Evil	webnews21\.com
 1603650937	Robert Columbia	passwordwrench\.com
 1603765762	Machavity	mapcite\.com
 1603765887	Ryan M	SF[\W_]*+180[\W_]*+Brain|180[\W_]*+Brain[\W_]*+SF
