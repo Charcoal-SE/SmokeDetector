@@ -25844,3 +25844,4 @@
 1608830675	Makyen	converteu\.com
 1608831166	Yatin	netgearsetup\.com
 1608832973	Makyen	mobitsoultions\.com
+1608832990	Makyen	mobit[\W_]*+soultions(?!\.com(?<=mobitsoultions\.com))
