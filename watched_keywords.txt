@@ -25837,3 +25837,4 @@
 1608795273	cigien	uaevisaonline\.com
 1608798927	Cody Gray	dreamcast\.in
 1608807151	Yatin	31west\.net
+1608814784	ppwater	[\s.>]*\(｡❤‿❤｡\)+\W*
