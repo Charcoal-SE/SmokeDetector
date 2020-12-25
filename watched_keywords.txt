@@ -25849,3 +25849,4 @@
 1608885509	rene	vanmfc\.net
 1608919608	Makyen	bestprinterhelp\.com
 1608921264	Mast	newmeaccelerator\.com
+1608921312	Mast	(?-i:^newmeaccelerator site$)
