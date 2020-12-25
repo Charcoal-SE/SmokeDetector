@@ -25846,3 +25846,4 @@
 1608832973	Makyen	mobitsoultions\.com
 1608832990	Makyen	mobit[\W_]*+soultions(?!\.com(?<=mobitsoultions\.com))
 1608856492	Makyen	onobunwinhome(?:@gmail\.com)?
+1608871003	cigien	taxitaisaigon\.vn
