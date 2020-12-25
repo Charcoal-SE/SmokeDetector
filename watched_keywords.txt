@@ -25851,3 +25851,4 @@
 1608921264	Mast	newmeaccelerator\.com
 1608921312	Mast	(?-i:^newmeaccelerator site$)
 1608922593	Makyen	laravelwithfirebase\.blogspot
+1608871003	cigien	taxitaisaigon\.vn
