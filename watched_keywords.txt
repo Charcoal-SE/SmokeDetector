@@ -25852,3 +25852,4 @@
 1608921312	Mast	(?-i:^newmeaccelerator site$)
 1608922593	Makyen	laravelwithfirebase\.blogspot
 1608871003	cigien	taxitaisaigon\.vn
+1608949828	Makyen	ectipakistan\.com
