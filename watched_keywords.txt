@@ -25714,7 +25714,6 @@
 1608445220	cigien	quotesforfriend\.com
 1608489759	cigien	zivoke\.com
 1608490483	Spevacus	bitcoinrecoverlord(?:@gmail\.com)?
-1608494999	Makyen	[\s.>]*✅✅+\W*
 1608513173	cigien	veriforma\.com
 1608528420	Makyen	com\.rs\.indira(?#play.google.com)
 1608528438	Makyen	indira[\W_]*+securities
