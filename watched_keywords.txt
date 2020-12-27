@@ -16624,7 +16624,6 @@
 1580179421	Makyen	alexwallet49(?:@gmail\.com)?
 1580179989	Eliah Kagan	drawboard\.com
 1580180300	Eliah Kagan	(?:bitcoine?|btc)s?\W+rewarde?s?
-1580186120	Eliah Kagan	mastershareprice\.com
 1580186280	Eliah Kagan	excelr(?!\.com)
 1580187267	Shree	mainpasaran4d\.org
 1580190317	Makyen	(?-i:vkdFJhIvaSg)(?#youtu.be)
