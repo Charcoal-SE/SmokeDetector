@@ -23237,7 +23237,6 @@
 1599896488	Makyen	creditcard[\W_]*+top[\W_]*+deals(?!\.com(?<=creditcardtopdeals\.com))
 1599897349	Mast	lilachbullock\.com
 1599900949	Makyen	glucafix(?:[\W_]*+(?:review|price|ingredient|of|advanced|weight|loss|formula|pill|\d++|[\da-f]{5,}+)s?)*
-1599924223	Machavity	groupdocs\.com
 1599953635	Daniil	ielts\Wcertificates?(?! without exam)
 1599970923	Sonic the Masked Werehog	jobeducationbd\.com
 1599988270	tripleee	probolit
