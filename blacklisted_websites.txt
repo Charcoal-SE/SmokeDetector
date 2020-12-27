@@ -3847,3 +3847,4 @@ webnews21\.com
 bagcottage\.com
 swiflearn\.com
 howtodiscuss\.com
+l︆+s︆+t\.︆*t︆*o(?#contains non-printing characters; blacklisting only an obfuscated version of the domain)
