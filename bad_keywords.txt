@@ -2411,3 +2411,4 @@ atm\.tecnology(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 (?-i:sFbK)(?#v.ht)
 primal[\W_]*+trt
 vytalyze(?:[\W_]*+(?:cbd|order|buy|oil|\d++|[\da-f]{5,}+)s?)*
+[\s.>]*⚡⚡+\W*

@@ -25790,7 +25790,6 @@
 1608688475	Spevacus	[\s.>]*➤➤+\W*
 1608688502	Spevacus	[\s.>]*★★+\W*
 1608688890	Spevacus	[\s.>]*❤❤+\W*
-1608690565	ppwater	[\s.>]*⚡⚡+\W*
 1608697965	Ryan M	peak[\W_]*+surge
 1608698563	Ryan M	casinotructuyen\.vn
 1608701718	Ryan M	AZ-104 exam
