@@ -25897,3 +25897,4 @@
 1609142502	tripleee	circuitvpn\.com
 1609149937	tripleee	repeatertplink\.net
 1609150367	tripleee	appicsoftwares\.com
+1609128769	cigien	(?-i:^Joshrichards78$)
