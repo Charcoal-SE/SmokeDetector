@@ -1919,8 +1919,7 @@ FindSpam.rule_blacklisted_usernames = create_rule("blacklisted username", regex=
                                                   skip_creation_sanity_check=True)
 
 # gratis near the beginning of post or in title, SoftwareRecs and es.stackoverflow.com are exempt
-create_rule("potentially bad keyword in {}", r"(?is)gratis\b(?<=^.{0,200}\bgratis\b)"
-,
+create_rule("potentially bad keyword in {}", r"(?is)gratis\b(?<=^.{0,200}\bgratis\b)",
             sites=['softwarerecs.stackexchange.com', 'es.stackoverflow.com'],
             body_summary=True, max_rep=11)
 # Blacklist keto(?:nes?)?, but exempt Chemistry. Was a watch added by iBug on 1533209512.
