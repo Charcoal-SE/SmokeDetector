@@ -3849,3 +3849,4 @@ swiflearn\.com
 howtodiscuss\.com
 l︆+s︆+t\.︆*t︆*o(?#contains non-printing characters; blacklisting only an obfuscated version of the domain)
 buy2health\.com
+seolinkworld\.com
