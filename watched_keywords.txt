@@ -23748,7 +23748,6 @@
 1601463141	tripleee	kitchensty\.com
 1601463495	tripleee	vanityliving\.com
 1601463511	tripleee	vanity[\W_]*+living(?!\.com)
-1601479931	Makyen	buy2health\.com
 1601481073	Machavity	plumberbuckscounty\.com
 1601504809	Makyen	gurumaragy[\W_]*+brother(?:hood)?
 1601504835	Makyen	(?-i:PLDVHqYteFtBvoC4KcP6C3BRT88RmQckqV)
