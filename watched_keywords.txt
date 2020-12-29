@@ -25931,3 +25931,4 @@
 1609228777	tripleee	(?-i:UqsfGy)(?# kutt.it redirect)
 1609228618	cigien	(?-i:fMdEm)(?# bit.do)
 1609228818	tripleee	antier[\W_]*+solutions
+1609205400	cigien	beseductiv\.com
