@@ -25938,3 +25938,4 @@
 1609255163	Spevacus	dinhcongcanh272(?:@gmail\.com)?
 1609255866	Spevacus	gamesapkworld\.com
 1609262106	Mast	ajinomoto\.com(?!\.hk)
+1609272246	Makyen	thepawdynasty\.com
