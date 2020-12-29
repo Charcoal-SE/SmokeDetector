@@ -25928,3 +25928,4 @@
 1609225363	tripleee	ketoxo(?:[\W_]*+pro)?(?:[\W_]*+slim)?
 1609228458	Mast	(?-i:^SabrineSinglee$)
 1609228753	tripleee	kutt\.it
+1609228777	tripleee	(?-i:UqsfGy)(?# kutt.it redirect)
