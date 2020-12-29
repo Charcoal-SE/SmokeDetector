@@ -25925,7 +25925,6 @@
 1609211584	cigien	alpinols\.ch
 1609221465	tripleee	weixin_\d+(?# https://blog.csdn.net/)
 1609223627	cigien	groupxit\.com
-1609225363	tripleee	ketoxo(?:[\W_]*+pro)?(?:[\W_]*+slim)?
 1609228458	Mast	(?-i:^SabrineSinglee$)
 1609228753	tripleee	kutt\.it
 1609228777	tripleee	(?-i:UqsfGy)(?# kutt.it redirect)
