@@ -15640,7 +15640,6 @@
 1577987280	double-beep	fany\.ro
 1577987304	double-beep	cfrcalatori\.ro
 1577987337	double-beep	blueairweb\.com
-1577987544	double-beep	rome2rio\.com
 1577988304	Makyen	workpage627(?:@gmail\.com)?
 1577995945	Machavity	mamaspellscaster\.doodlekit\.com
 1577996002	Makyen	usalostlovespellswordwidelluminati\.blogspot
