@@ -25965,3 +25965,4 @@
 1609320314	ppwater	dazhuo\.ir
 1609310677	cigien	ipsky-tech\.com
 1609312112	cigien	lambangnhanh\.com
+1609320483	cigien	bloom[\W_]*+green[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
