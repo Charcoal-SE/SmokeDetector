@@ -25940,3 +25940,4 @@
 1609262106	Mast	ajinomoto\.com(?!\.hk)
 1609272246	Makyen	thepawdynasty\.com
 1609272264	Makyen	the[\W_]*+paw[\W_]*+dynasty(?!\.com(?<=thepawdynasty\.com))
+1609295032	Ryan M	boranebb\.medium\.com
