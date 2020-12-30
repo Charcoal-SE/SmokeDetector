@@ -2414,3 +2414,4 @@ vytalyze(?:[\W_]*+(?:cbd|order|buy|oil|\d++|[\da-f]{5,}+)s?)*
 [\s.>]*⚡⚡+\W*
 [\s.>]*✅✅+\W*
 ketoxo(?:[\W_]*+pro)?(?:[\W_]*+slim)?
+bloom[\W_]*+green(?:[\W_]*+cbd)?(?:[\W_]*+oil)?
