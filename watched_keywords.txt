@@ -25958,3 +25958,4 @@
 1609312827	Makyen	hydracort(?:[\W_]*+(?:serum|united|kingdom|uk|\d++|[\da-f]{5,}+)s?)*
 1609314413	cigien	softwareunplugged\.com
 1609313746	cigien	martechlive\.com
+1609315539	Cody Gray	lootahperfumes\.ae
