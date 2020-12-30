@@ -25957,3 +25957,4 @@
 1609312785	Makyen	tincture[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1609312800	Makyen	lester[\W_]*+holt[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
 1609312827	Makyen	hydracort(?:[\W_]*+(?:serum|united|kingdom|uk|\d++|[\da-f]{5,}+)s?)*
+1609314413	cigien	softwareunplugged\.com
