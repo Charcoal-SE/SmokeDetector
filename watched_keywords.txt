@@ -25954,3 +25954,4 @@
 1609310911	Makyen	dll-box\.com
 1609312753	Makyen	amarose(?:[\W_]*+(?:boosting|moisturizer|\d++|[\da-f]{5,}+)s?)*
 1609312772	Makyen	lumostat(?:[\W_]*+(?:cream|\d++|[\da-f]{5,}+)s?)*
+1609312785	Makyen	tincture[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
