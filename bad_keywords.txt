@@ -533,7 +533,6 @@ power\W?testo
 alpha[\W_]*testo(?!-boost-42\.webself\.net(?<=alpha-testo-boost-42\.webself\.net))(?!-boost-x\.com(?<=alpha-testo-boost-x\.com))(?:[\W_]*(?:boost?|male|size|enhancement|formula|x|\d+|[\da-f]{4,}))*
 alpha[\W_]*+testo(?!-boost-42\.webself\.net(?<=alpha-testo-boost-42\.webself\.net))(?!-boost-x\.com(?<=alpha-testo-boost-x\.com))(?:[\W_]*+(?:boost?|male|size|enhancement|formula|\d+|[\da-f]{4,}+))*
 clevastin
-xymax
 neuro\W?boost
 prostagenix
 shred\W?(?:fx|xl)
