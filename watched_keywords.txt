@@ -25942,3 +25942,4 @@
 1609272264	Makyen	the[\W_]*+paw[\W_]*+dynasty(?!\.com(?<=thepawdynasty\.com))
 1609295032	Ryan M	boranebb\.medium\.com
 1609298893	Makyen	guelphfamilydentistry\.ca
+1609305076	cigien	adultfunlist\.com
