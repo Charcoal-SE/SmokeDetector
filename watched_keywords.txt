@@ -25994,3 +25994,4 @@
 1609420533	ppwater	trademarkterminal\.com
 1609421527	Spevacus	netligy\.com
 1609425301	Glorfindel	pointpay\.io
+1609436204	Jeff Schaller	linuxways\.net
