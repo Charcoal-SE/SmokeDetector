@@ -532,7 +532,7 @@ def unblacklist(msg, item, alias_used="unwatch"):
     return result
 
 
-@command(int, privileged=True, whole_msg=True)
+@command(int, privileged=True, whole_msg=True, aliases=["accept"])
 def approve(msg, pr_id):
     code_permissions = is_code_privileged(msg._client.host, msg.owner.id)
     if not code_permissions:
