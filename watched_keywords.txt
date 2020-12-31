@@ -25980,3 +25980,4 @@
 1609394159	cigien	nyc-movers-packers\.blogspot
 1609397768	Ryan M	fiverr\.com(?=/\w++(?!(?:[^<]|<(?!\/?code>))*+<\/code>)|$)
 1609398352	tripleee	nordic[\W_]*+oil(?:[\W_]*+cbd)?(?:[\W_]*+oi?l)?\d*+
+1609401979	Mast	(?-i:^SK Trainings$)
