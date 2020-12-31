@@ -94,7 +94,9 @@ items:
 - ns: pakihosting.com.
 - ns: md-19.webhostbox.net.
 - ns: ukm14.siteground.biz.
-- ns: my-wifiextnet.net.
+- comment: no longer in DNS 2020-12-30
+  disable: true
+  ns: my-wifiextnet.net.
 - ns: doodledigital.net.
 - ns: ocpdns.com.
 - ns: c67050.sgvps.net.
