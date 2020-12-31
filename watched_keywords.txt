@@ -25983,3 +25983,4 @@
 1609401979	Mast	(?-i:^SK Trainings$)
 1609403513	Makyen	domin[\W_]*+xt(?:[\W_]*+(?:pill|order|official|\d++|[\da-f]{5,}+)s?)*
 1609404905	tripleee	moduleszone\.com
+1609404823	ppwater	greatlivings\.com
