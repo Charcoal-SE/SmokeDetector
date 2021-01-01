@@ -12398,7 +12398,7 @@
 1567355763	Makyen	healthlinesplus\.com
 1567368755	double-beep	warrensinvestors(?:@gmail\.com)
 1567361419	Stormblessed	bitrush
-1567369817	Makyen	(?<=fiverr\.com/)modern_writer
+1567369817	Makyen	modern_writer(?<=fiverr\.com/modern_writer)
 1567395005	Makyen	fastnewsfeed\.com
 1567395014	Makyen	grpsinternational\.com
 1567395024	Makyen	(?-i:UCjEADaiyImb8BIkMmwLTpEA)(?#YouTube channel)
@@ -12533,7 +12533,7 @@
 1567861150	Makyen	(?-i:7QmUG32Zrjk)
 1567861259	Makyen	pcasta\.com
 1567865052	Makyen	yesxenmagme\.tumblr\.com
-1567885092	Makyen	(?<=fiverr\.com/)shuvonill
+1567885092	Makyen	shuvonill(?<=fiverr\.com/shuvonill)
 1567886772	Makyen	infobazaar\.000webhostapp\.com
 1567908366	Machavity	wp-safepassword
 1567908548	Makyen	(?-i:Vg7KW\.png)
