@@ -120,6 +120,15 @@ ASN_WHITELISTED_WEBSITES = [
     # Added to prevent having 3 detections on just the domain.
     "writingexplained.org", "eitren.com"]
 
+# Specific hostname whitelist for the "*bad IP for hostname in {}" detections (i.e. for ip_for_url_host)
+# Hostnames should be all lowercase, as the hostnames are obtained from
+# urlparse().hostname, which lowercases the hostname.
+WHITELISTED_IP_HOSTNAMES = [
+    "model.fit",
+    "paint.net",
+]
+
+
 if GlobalVars.perspective_key:
     PERSPECTIVE = "https://commentanalyzer.googleapis.com/v1alpha1/comments:analyze?key=" + GlobalVars.perspective_key
     PERSPECTIVE_THRESHOLD = 0.85  # conservative
@@ -1149,6 +1158,8 @@ def watched_ns_for_url_domain(s, site):
 def ip_for_url_host(s, site, ip_list):
     # ######## FIXME: code duplication
     for hostname in post_hosts(s, check_tld=True):
+        if hostname in WHITELISTED_IP_HOSTNAMES:
+            continue
         a = dns_query(hostname, 'a')
         if a is not None:
             # ######## TODO: allow blocking of IP ranges with regex or CIDR
