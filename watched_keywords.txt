@@ -394,7 +394,7 @@
 1500196630	Glorfindel	nomadrental\.com
 1500213472	tripleee	tipsstuff\.tk
 1500223391	Glorfindel	sosnovkino\.info
-1500223700	tripleee	t\.me(?=/)(?<=/t\.me)
+1500223700	tripleee	t\.me(?=/)(?<=/t\.me)(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1500261717	NobodyNada	heaterable\.com
 1500263279	tripleee	13626975607
 1500264026	tripleee	2885291930
