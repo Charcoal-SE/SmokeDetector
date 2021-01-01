@@ -7842,7 +7842,7 @@
 1549517568	Tetsuya Yamamoto	exafluence\.com
 1549519988	Tetsuya Yamamoto	seotoolserp\.com
 1549521277	Tetsuya Yamamoto	dlmlanguagelab\.com
-1549521294	iBug	best(?<=<a[^>*]>\W*best)
+1549521294	iBug	best(?<=<a[^>]*>\W*best)(?#best as first word in link text; fixed 1609526651)
 1549522385	Tetsuya Yamamoto	tc-ww\.com
 1549525288	Wai Ha Lee	thenewsgeeks\.com
 1549528565	Shree	glorioushimalaya\.com
