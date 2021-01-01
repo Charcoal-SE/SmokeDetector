@@ -120,11 +120,18 @@ ASN_WHITELISTED_WEBSITES = [
     # Added to prevent having 3 detections on just the domain.
     "writingexplained.org", "eitren.com"]
 
-# Specific hostname whitelist for the "*bad IP for hostname in {}" detections (i.e. for ip_for_url_host)
+# Hostname whitelist for the "*bad IP for hostname in {}" detections (i.e. for ip_for_url_host)
 # Hostnames should be all lowercase, as the hostnames are obtained from
 # urlparse().hostname, which lowercases the hostname.
 WHITELISTED_IP_HOSTNAMES = [
     "model.fit",
+    "paint.net",
+]
+
+# Hostname whitelist for the "*bad NS for domain in {}" detections (i.e. for ns_for_url_domain)
+# Hostnames should be all lowercase, as the hostnames are obtained from
+# urlparse().hostname, which lowercases the hostname.
+WHITELISTED_NS_HOSTNAMES = [
     "paint.net",
 ]
 
@@ -1094,9 +1101,13 @@ def ns_for_url_domain(s, site, nslist):
 
     domains = []
     for hostname in post_hosts(s, check_tld=True):
+        if hostname in WHITELISTED_NS_HOSTNAMES:
+            continue
         domains.append(get_domain(hostname, full=True))
 
     for domain in set(domains):
+        if domain in WHITELISTED_NS_HOSTNAMES:
+            continue
         ns = dns_query(domain, 'ns')
         if ns is not None:
             nameservers = set([server.target.to_text().lower() for server in ns])
