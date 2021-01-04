@@ -261,6 +261,7 @@ WHITELISTED_NS_HOSTNAMES = [
     "pointclouds.org",
     "programming.vip",
     "qgistutorials.com",
+    "qt.io",
     "quasar.dev",
     "raspberrytips.com",
     "rcompanion.org",
