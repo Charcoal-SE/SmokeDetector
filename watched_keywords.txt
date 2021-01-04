@@ -26053,3 +26053,4 @@
 1609762645	tripleee	web[\W_]*+hostech
 1609765618	Spevacus	softwaredeveloperspro\.com
 1609771797	Spevacus	pak-poetry\.com
+1609774916	Spevacus	techohalic\.com
