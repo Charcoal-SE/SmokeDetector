@@ -25299,7 +25299,6 @@
 1606973836	Makyen	meeyland\.com
 1606973983	Makyen	macro-supreme-keto-44\.webselfsite\.net
 1606974081	Makyen	macro[\W_]*+supreme[\W_]*+keto(?!-44\.webselfsite\.net(?<=macro-supreme-keto-44\.webselfsite\.net))(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
-1606974136	Makyen	webselfsite\.net
 1606978833	tripleee	facepdf\.com
 1606979779	tripleee	bestblockja\.com
 1606980607	Glorfindel	(the)?colourmo(o|n)n
