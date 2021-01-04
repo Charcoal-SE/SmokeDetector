@@ -26041,3 +26041,4 @@
 1609572731	cigien	(?-i:_cBOBJ2z9LA)(?#youtu.be)
 1609573581	cigien	don[\W_]*+lemon[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:order|\d++|[\da-f]{5,}+)s?)*
 1609739815	tripleee	webviotechnologies\.com
+1609741340	tripleee	createadatingapp\.com
