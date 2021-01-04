@@ -26055,3 +26055,4 @@
 1609771797	Spevacus	pak-poetry\.com
 1609774916	Spevacus	techohalic\.com
 1609777022	Spevacus	theappsolutions\.com
+1609778365	Spevacus	nationalcapex\.com
