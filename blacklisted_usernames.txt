@@ -426,3 +426,4 @@ Wes.ey\W*Atwood
 So face the music
 (?-i:^Franklin Josh$)
 (?-i:^gian tapia fuertes$)
+(?-i:^felishia green$)
