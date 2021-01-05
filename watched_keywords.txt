@@ -26073,3 +26073,4 @@
 1609845914	cigien	thewebfactory\.us
 1609845460	cigien	pinoyflixteleserye\.su
 1609847141	cigien	thejumblesolver\.com
+1609848225	cigien	optimum[\W_]*+blaze(?:[\W_]*+(?:order|buy|official|\d++|[\da-f]{5,}+)s?)*
