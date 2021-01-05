@@ -429,4 +429,3 @@ So face the music
 (?-i:^felishia green$)
 (?-i:^jys2020$)
 (?-i:^longpanda$)
-(?-i:^Malik Waqas$)
