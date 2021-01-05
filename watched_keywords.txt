@@ -26075,3 +26075,4 @@
 1609848225	cigien	optimum[\W_]*+blaze(?:[\W_]*+(?:order|buy|official|\d++|[\da-f]{5,}+)s?)*
 1609848799	cigien	faraitfusion\.com
 1609851974	Spevacus	ababeelmoversuae\.com
+1609852029	tripleee	zuariinfra\.com
