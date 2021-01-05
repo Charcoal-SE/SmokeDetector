@@ -2415,3 +2415,4 @@ vytalyze(?:[\W_]*+(?:cbd|order|buy|oil|\d++|[\da-f]{5,}+)s?)*
 ketoxo(?:[\W_]*+pro)?(?:[\W_]*+slim)?
 bloom[\W_]*+green(?:[\W_]*+cbd)?(?:[\W_]*+oil)?
 don[\W_]*+lemon[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:order|\d++|[\da-f]{5,}+)s?)*
+(like|drives|local)[\W_]*+CloudMounter(?:[\W_*]+drives)?[\W_*]+(which|including|that[\W_*]+includes)
