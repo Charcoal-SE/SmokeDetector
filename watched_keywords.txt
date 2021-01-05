@@ -26068,3 +26068,4 @@
 1609833343	tripleee	decagon[\W_]*+scaffolding
 1609833382	tripleee	arforms[\W_]*+lite
 1609842456	tripleee	dollarexcel\.com
+1609842575	tripleee	fotislaw\.com
