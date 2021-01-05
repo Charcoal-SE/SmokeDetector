@@ -428,3 +428,4 @@ So face the music
 (?-i:^gian tapia fuertes$)
 (?-i:^felishia green$)
 (?-i:^jys2020$)
+(?-i:^longpanda$)
