@@ -26092,3 +26092,4 @@
 1609868892	Spevacus	(like|drives|local)[\W_]*+CloudMounter(?:[\W_*]+drives)?[\W_*]+(which|including|that[\W_*]+includes)
 1609868820	Ollie	abhiarts\.in
 1609877396	Spevacus	onlineduplicatebills\.com
+1609879066	Spevacus	(?-i:2nPzn)(?#jpst.it)
