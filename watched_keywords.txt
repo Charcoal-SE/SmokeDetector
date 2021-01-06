@@ -26118,3 +26118,4 @@
 1609971569	cigien	britishcouncil\.idp(?:@yahoo\.com)?
 1609971952	Makyen	pmpexamquestions
 1609971980	Makyen	d(?:octo)?r[\W_]*+emwanta(?:@gmail\.com)?
+1609973205	Makyen	global[\W_]*+kos
