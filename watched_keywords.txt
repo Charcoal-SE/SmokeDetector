@@ -26108,3 +26108,4 @@
 1609916154	cigien	(?-i:T2QnSad1GGc)(?#youtu.be)
 1609940181	Spevacus	androidsharks\.com
 1609940219	Spevacus	ocanalytica\.com
+1609949582	Mast	lucid[\W_]*+[\W_]*+shield[\W_]*+reviews?
