@@ -26104,3 +26104,4 @@
 1609925194	cigien	whitelabelmarketplace\.co\.uk
 1609916965	cigien	sumitron\.com
 1609910701	cigien	xttblog\.com
+1609910333	cigien	technews786\.com
