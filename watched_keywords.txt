@@ -26110,3 +26110,4 @@
 1609940219	Spevacus	ocanalytica\.com
 1609949582	Mast	lucid[\W_]*+[\W_]*+shield[\W_]*+reviews?
 1609950056	Spevacus	casinowonderland\.net
+1609954626	Spevacus	bestlovestatus\.net
