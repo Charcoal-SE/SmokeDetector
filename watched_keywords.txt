@@ -26094,3 +26094,4 @@
 1609877396	Spevacus	onlineduplicatebills\.com
 1609879066	Spevacus	(?-i:2nPzn)(?#jpst.it)
 1609879740	Spevacus	coachellasbestdates\.com
+1609893769	Makyen	sauronhealingsorcerer(?:@(?:gmail|hotmail)\.com)?
