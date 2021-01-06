@@ -26118,3 +26118,4 @@
 1609971952	Makyen	pmpexamquestions
 1609971980	Makyen	d(?:octo)?r[\W_]*+emwanta(?:@gmail\.com)?
 1609973205	Makyen	global[\W_]*+kos
+1609976197	cigien	meeradatascience\.wordpress\.com
