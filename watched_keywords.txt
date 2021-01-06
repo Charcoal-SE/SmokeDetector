@@ -26095,3 +26095,4 @@
 1609879066	Spevacus	(?-i:2nPzn)(?#jpst.it)
 1609879740	Spevacus	coachellasbestdates\.com
 1609893769	Makyen	sauronhealingsorcerer(?:@(?:gmail|hotmail)\.com)?
+1609916583	cigien	cbd[\W_]*+turmeric[\W_]*+canada(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
