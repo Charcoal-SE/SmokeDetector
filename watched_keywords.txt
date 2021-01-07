@@ -26120,3 +26120,4 @@
 1609973205	Makyen	global[\W_]*+kos
 1609976197	cigien	meeradatascience\.wordpress\.com
 1609985144	Makyen	kredoll\.com
+1609997107	cigien	boulder[\W_]*+farms[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
