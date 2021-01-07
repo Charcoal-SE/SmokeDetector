@@ -25578,7 +25578,6 @@
 1608042497	Spevacus	menshairstyleslist\.com
 1608049059	tripleee	whatwebcando\.today
 1608049653	Mast	bestbeardtrimmer2021\.com
-1608049771	Mast	(?-i:^origamistudios$)
 1608050435	tripleee	(?-i:kavin2john)(?# medium.com)
 1608059795	tripleee	emmamaria66\.com
 1608071317	Spevacus	cheap-cigarettes\.co
