@@ -26126,3 +26126,4 @@
 1609916446	cigien	kristen[\W_]*+bell[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1609916583	cigien	cbd[\W_]*+turmeric[\W_]*+canada(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1609985676	cigien	bitcoinsv\.com
+1609990233	cigien	(?:info@)?haochee\.com
