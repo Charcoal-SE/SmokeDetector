@@ -26135,3 +26135,4 @@
 1609997107	cigien	boulder[\W_]*+farms[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1609994202	cigien	motherboardinfo\.com
 1610000630	cigien	duck[\W_]*+dynasty[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:official|store|\d++|[\da-f]{5,}+)s?)*
+1610003036	tripleee	jiomarts\.xyz
