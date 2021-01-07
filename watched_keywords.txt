@@ -26132,3 +26132,4 @@
 1609994000	cigien	zengliyang\.wordpress
 1609996426	cigien	theinspirespy\.com
 1609999732	tripleee	contact-customer-service\.net
+1609997107	cigien	boulder[\W_]*+farms[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
