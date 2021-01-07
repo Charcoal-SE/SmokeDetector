@@ -26127,3 +26127,4 @@
 1609916583	cigien	cbd[\W_]*+turmeric[\W_]*+canada(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1609985676	cigien	bitcoinsv\.com
 1609990233	cigien	(?:info@)?haochee\.com
+1609999643	tripleee	5530
