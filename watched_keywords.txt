@@ -26122,3 +26122,4 @@
 1609985144	Makyen	kredoll\.com
 1609998586	cigien	gotarticle\.com
 1609901335	cigien	(?-i:Lz1Fcv2k6RI)(?#youtu.be)
+1609915210	cigien	canna[\W_]*+organic[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
