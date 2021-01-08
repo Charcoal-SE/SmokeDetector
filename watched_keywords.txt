@@ -26160,3 +26160,4 @@
 1610084545	Makyen	organic[\W_]*+relief[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1610084595	Makyen	mobilerepairingcourses\.com
 1610084923	tripleee	thủ tục thành lập
+1610085028	tripleee	công ty luật
