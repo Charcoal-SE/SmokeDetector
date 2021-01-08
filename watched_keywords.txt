@@ -26170,3 +26170,4 @@
 1610094918	Makyen	stag[\W_]*+performance[\W_]*+testosterone[\W_]*+booster(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1610096107	Makyen	mbbs[\W_]*+in[\W_]*+georgia
 1610097555	Makyen	(?-i:nomikhan153)(?#fiverr.com)
+1610099289	cigien	northern[\W_]*+sense[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
