@@ -26169,3 +26169,4 @@
 1610092271	Makyen	eleburic\.com
 1610093388	tripleee	[?&]utm_campaign=
 1610093435	tripleee	lcntercume\.com
+1610094918	Makyen	stag[\W_]*+performance[\W_]*+testosterone[\W_]*+booster(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
