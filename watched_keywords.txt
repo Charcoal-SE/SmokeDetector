@@ -26179,3 +26179,4 @@
 1610074762	ppwater	[\s.>]*😍😍+\W*
 1610101787	tripleee	mediablindspot\.com
 1610102705	cigien	theomegacode\.com
+1610103570	cigien	muthooth\.finance(?:@gmail\.com)?
