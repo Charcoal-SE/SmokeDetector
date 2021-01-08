@@ -26165,3 +26165,4 @@
 1610087828	Makyen	keto[\W_]*+wave(?:[\W_]*+(?:store|official|\d++|[\da-f]{5,}+)s?)*
 1610091482	Makyen	gurusattaking\.com
 1610091723	Makyen	chinnica\.net
+1610092061	tripleee	scholarlywriteups\.com
