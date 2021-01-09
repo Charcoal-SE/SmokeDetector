@@ -24681,7 +24681,6 @@
 1604732642	Makyen	buyrealfollows\.com
 1604732658	Makyen	replica\.donghochat8668\.com
 1604732675	Makyen	getacos\.com
-1604732686	Makyen	reeves[\W_]*+cbd[\W_]*+oil
 1604750105	Mast	dr\.[\W_]*+todd[\W_]*+website
 1604763522	Spevacus	e-startuprajasthan\.com
 1604768819	Makyen	notairedenis\.voyer(?:@gmail\.com)?
