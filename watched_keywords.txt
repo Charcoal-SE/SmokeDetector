@@ -26209,3 +26209,4 @@
 1610195543	Cody Gray	learning\.itexperttraining\.com
 1610208886	Makyen	d(?:octo)?r[\W_]*+zabaza
 1610217567	Spevacus	atlasmountainbike\.com
+1610223714	Glorfindel	linuxbubble\.in
