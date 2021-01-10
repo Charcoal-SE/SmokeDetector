@@ -26216,3 +26216,4 @@
 1610249971	Makyen	534823bf3cf6ed948e2b7ec4bf1c12db665bc71dd0d8fe710fe8eae01eebaa65
 1610250935	Spevacus	oklifecare\.com
 1610262648	Makyen	rell\.com
+1610262663	Makyen	wakeupnow(?:@yahoo\.com)?
