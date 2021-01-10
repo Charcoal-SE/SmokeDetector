@@ -26219,3 +26219,4 @@
 1610262663	Makyen	wakeupnow(?:@yahoo\.com)?
 1610267168	cigien	logicindia\.net
 1610267671	cigien	androidalexa\.com
+1610267700	cigien	techriki\.tech
