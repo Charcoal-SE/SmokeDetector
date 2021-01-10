@@ -26212,3 +26212,4 @@
 1610223714	Glorfindel	linuxbubble\.in
 1610224308	Makyen	ligabet24\.renderforestsites\.com
 1610224326	Makyen	ligabet24(?!\.renderforestsites\.com)
+1610243305	cigien	lookmovie\.io
