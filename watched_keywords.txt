@@ -26250,3 +26250,4 @@
 1610363172	cigien	invatechs\.com
 1610361409	cigien	phoenix\.selise\.ch
 1610360442	cigien	full4kmovies\.com
+1610360184	cigien	frontenderguy(?<=medium\.com/@frontenderguy)
