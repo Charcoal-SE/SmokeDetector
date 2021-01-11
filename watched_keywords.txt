@@ -12506,7 +12506,6 @@
 1567766305	Jeff Schaller	github\.com/gnu-linux-activation-technologies
 1567771826	double-beep	showbox\.kim
 1567784296	Machavity	signpath\.io
-1567785348	Machavity	shazebict\.com
 1567789379	Makyen	nuvoketosisreviews\.blogspot\.com
 1567789398	Makyen	showtheway\.io
 1567805380	Makyen	procv\.biz
