@@ -26239,3 +26239,4 @@
 1610344353	tripleee	com\.hotvpn
 1610344369	tripleee	ufo_vpn
 1610342532	cigien	samptelenergy\.com
+1610338349	Yatin	thuoctaydactri\.com
