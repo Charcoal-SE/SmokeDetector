@@ -340,7 +340,6 @@ drivingdirectionss\.com
 (?-i:^olive allen$)
 (?-i:^Alexavier Miller$)
 ^lovejit$
-^kavita$
 (?-i:^Stefanie Mills$)
 (?-i:^xosoplus$)
 (?-i:^kobedoll$)
