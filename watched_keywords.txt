@@ -26242,3 +26242,4 @@
 1610344546	cigien	cannaful[\W_]*+valley[\W_]*+cbd[\W_]*+reviews(?:[\W_]*+(?:buy|\d++|[\da-f]{5,}+)s?)*
 1610345087	tripleee	wedgatematrimony\.com
 1610345081	cigien	wedgatematrimony\.com
+1610345397	tripleee	zigya\.com
