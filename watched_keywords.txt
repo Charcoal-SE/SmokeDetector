@@ -26241,3 +26241,4 @@
 1610246442	cigien	natur(?:e|al)[\W_]*+relief[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1610344546	cigien	cannaful[\W_]*+valley[\W_]*+cbd[\W_]*+reviews(?:[\W_]*+(?:buy|\d++|[\da-f]{5,}+)s?)*
 1610345397	tripleee	zigya\.com
+1610345730	Makyen	wedgatematrimony\.com
