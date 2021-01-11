@@ -24872,7 +24872,6 @@
 1605363773	Jeff Schaller	scp096\.co
 1605369843	Mast	bestprojector2021\.com
 1605377555	Makyen	onwardticketvisa\.com
-1605378347	Jeff Schaller	247sports\.com
 1605380735	Mast	(?-i:^dimachaerus$) # troll, history of offensive posts
 1605395427	Ryan M	vceoreteconvert\.com
 1605416659	Makyen	bulksmsdelhincr\.com
