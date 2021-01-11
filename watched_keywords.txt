@@ -26243,3 +26243,4 @@
 1610345730	Makyen	wedgatematrimony\.com
 1610347140	tripleee	topz\.edu\.vn
 1610348440	cigien	examsaway\.com
+1610350383	cigien	martha[\W_]*+stewart[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
