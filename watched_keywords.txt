@@ -16107,7 +16107,6 @@
 1579018822	Das_Geek	paypal\.me
 1579034022	Eliah Kagan	pb\.online
 1579066478	Makyen	get-youtube-video-thumbnail-image\.com
-1579066502	Makyen	tktech\.vn
 1579066596	Makyen	naturecraveketoofficial(?#sites.google.com)
 1579066614	Makyen	hectorcater\.pen\.io
 1579066630	Makyen	@hectorcater(?!\.pen\.io)
