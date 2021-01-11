@@ -298,12 +298,12 @@ class YAMLParserNS(YAMLParserCIDR):
             if item.get('disable', None):
                 return False
             try:
-                addr = dns.resolver.query(ns, 'a')
+                addr = dns.resolver.resolve(ns, 'a', search=True)
                 log('debug', '{0} resolved to {1}'.format(
                     ns, ','.join(x.to_text() for x in addr)))
             except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
                 if not item.get('pass', None):
-                    soa = dns.resolver.query(ns, 'soa')
+                    soa = dns.resolver.resolve(ns, 'soa', search=True)
                     log('debug', '{0} has no A record; SOA is {1}'.format(
                         ns, ';'.join(s.to_text() for s in soa)))
             except dns.resolver.NoNameservers:
