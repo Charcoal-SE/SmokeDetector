@@ -26252,3 +26252,4 @@
 1610360442	cigien	full4kmovies\.com
 1610360184	cigien	frontenderguy(?<=medium\.com/@frontenderguy)
 1610359979	cigien	agrobloggers\.com
+1610365856	cigien	sattachart\.co
