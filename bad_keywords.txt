@@ -2416,3 +2416,4 @@ ketoxo(?:[\W_]*+pro)?(?:[\W_]*+slim)?
 bloom[\W_]*+green(?:[\W_]*+cbd)?(?:[\W_]*+oil)?
 don[\W_]*+lemon[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:order|\d++|[\da-f]{5,}+)s?)*
 (?:keanu[\W_]*+)?reeves[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
+cannaful[\W_]*+valley[\W_]*+cbd(?:[\W_]*+(?:review|oil|buy|\d++|[\da-f]{5,}+)s?)*
