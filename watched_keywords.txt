@@ -26253,3 +26253,4 @@
 1610360184	cigien	frontenderguy(?<=medium\.com/@frontenderguy)
 1610359979	cigien	agrobloggers\.com
 1610365856	cigien	sattachart\.co
+1610367491	cigien	internet-marketing\.company
