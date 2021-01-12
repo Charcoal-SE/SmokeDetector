@@ -25160,7 +25160,6 @@
 1606500226	Makyen	live-online-tvchannel\.blogspot
 1606514081	Makyen	crackpropc\.com
 1606514100	Makyen	crackpropc(?!\.com)
-1606519201	Makyen	hack\.truth77(?:@gmail\.com)?
 1606519468	Makyen	asad[\W_]*+shaukat[\W_]*+ali(?!\.com(?<=asadshaukatali\.com))
 1606528819	Sonic the K-Day Hedgehog	cryptocoinlatest
 1606536324	Makyen	infinite[\W_]*+force[\W_]*+xl
