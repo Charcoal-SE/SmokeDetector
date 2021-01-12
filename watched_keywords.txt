@@ -26285,3 +26285,4 @@
 1610439505	tripleee	bizzoelife\.com
 1610443035	cigien	brilliance[\W_]*+new[\W_]*+skin(?:[\W_]*+(?:cream|ca|\d++|[\da-f]{5,}+)s?)*
 1610443088	cigien	(?-i:xOKDRRqXTeY)(?#youtu.be)
+1610443258	cigien	greg[\W_]*+gutfeld[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
