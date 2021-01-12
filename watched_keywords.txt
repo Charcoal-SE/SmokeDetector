@@ -26285,3 +26285,4 @@
 1610443258	cigien	greg[\W_]*+gutfeld[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1610446095	tripleee	pcloudy\.com
 1610446974	cigien	wearableworld\.co
+1610448064	tripleee	center42\.tech
