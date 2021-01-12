@@ -26300,3 +26300,4 @@
 1610483288	Spevacus	anycard\.games
 1610486201	cigien	keepfitspot\.com
 1610488049	cigien	besttabletsguide\.com
+1610488563	cigien	sadik-dev\.medium\.com
