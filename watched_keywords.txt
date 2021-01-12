@@ -26294,3 +26294,4 @@
 1610454165	tripleee	dummyevm\.com
 1610457523	cigien	tetra[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1610462155	cigien	moodle_task(?:@litdps\.de)?
+1610469749	Spevacus	freelancetechnique\.com
