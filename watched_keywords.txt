@@ -26292,3 +26292,4 @@
 1610453634	tripleee	nextideatech\.com
 1610453652	tripleee	innovationm\.com
 1610454165	tripleee	dummyevm\.com
+1610457523	cigien	tetra[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
