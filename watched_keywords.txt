@@ -24954,7 +24954,6 @@
 1605693910	Makyen	androiddata-recovery\.com
 1605695692	Makyen	(?-i:pediaadvise)(?#sites.google.com)
 1605695709	Makyen	ketoyou
-1605695766	Makyen	peace[\W_]*+cbd[\W_]*+oil
 1605695907	tripleee	ameyamarketing\.com
 1605695932	Makyen	nature[\W_]*+tonics[\W_]*+keto
 1605696832	tripleee	oduduwa(?<!(?:cheif|d(?:octo)?r)[\W_]+oduduwa)
