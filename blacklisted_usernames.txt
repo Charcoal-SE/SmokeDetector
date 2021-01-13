@@ -428,3 +428,4 @@ So face the music
 (?-i:^longpanda$)
 (?-i:^origamistudios$)
 (?-i:^upsaves energy$)
+(?-i:^RCMB Banglore$)
