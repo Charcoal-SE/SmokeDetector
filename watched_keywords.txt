@@ -26305,3 +26305,4 @@
 1610514488	cigien	warrior[\W_]*+keto(?:[\W_]*+(?:canada|\d++|[\da-f]{5,}+)s?)*
 1610518148	cigien	bill[\W_]*+maher[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:tincture|\d++|[\da-f]{5,}+)s?)*
 1610523348	tripleee	worlddata\.ai
+1610526623	cigien	solvermax\.com
