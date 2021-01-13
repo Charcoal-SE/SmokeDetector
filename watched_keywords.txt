@@ -21047,7 +21047,6 @@
 1592436114	Makyen	(?-i:nwX6JX1nSP8)(?#youtu.be)
 1592436131	Makyen	socialexplainer\.com
 1592436167	Makyen	(?-i:A7eDc\.png)
-1592436187	Makyen	digitalindiagov\.in
 1592436201	Makyen	(?-i:tyj_dh7OHH4)(?#youtu.be)
 1592436218	Makyen	jeremyormier(?#twitter.com)
 1592436233	Makyen	inventive9\.com
@@ -23069,7 +23068,6 @@
 1599473188	tripleee	glamm[\W_]*+pop(?!\.com)
 1599482052	Mast	svgator\.com
 1599483184	Mast	debtquest\.com
-1599477005	Mast	scraperapi\.com
 1599480427	Mast	merestone\.com
 1599480577	Mast	comparecloud\.in
 1599486339	Mast	laptopified\.com
@@ -24466,7 +24464,6 @@
 1604044284	tripleee	furnitureadda\.com
 1604045279	tripleee	hiyajewellers\.com
 1604046564	tripleee	bc\.game
-1604050058	tripleee	upsavesenergy\.com
 1604053087	tripleee	agilefingers\.com
 1604053166	tripleee	informationpapa\.com
 1604053263	Mast	southwest[\W_]*+airlines[\W_]*+reservation
@@ -24954,7 +24951,6 @@
 1605693910	Makyen	androiddata-recovery\.com
 1605695692	Makyen	(?-i:pediaadvise)(?#sites.google.com)
 1605695709	Makyen	ketoyou
-1605695766	Makyen	peace[\W_]*+cbd[\W_]*+oil
 1605695907	tripleee	ameyamarketing\.com
 1605695932	Makyen	nature[\W_]*+tonics[\W_]*+keto
 1605696832	tripleee	oduduwa(?<!(?:cheif|d(?:octo)?r)[\W_]+oduduwa)
@@ -25394,7 +25390,6 @@
 1607404139	Cody Gray	projectarticle\.com
 1607413301	tripleee	(?-i:37J52tN)(?# bit.ly)
 1607413354	tripleee	madanswer\.com
-1607413394	tripleee	safehealth24x7\.com
 1607416821	tripleee	(?-i:3n8JLAh)(?# bit.ly)
 1607420004	Makyen	pennysaviour\.com
 1607420100	Makyen	nefoundations\.com
@@ -25492,7 +25487,6 @@
 1607765105	Cody Gray	kredibankalar\.com
 1607765923	Cody Gray	digitalmarketers\.biz
 1607771178	cigien	mayoornoida\.net
-1607771259	cigien	healthonlinecare\.com
 1607777229	Mast	nutrigolabreviews\.com
 1607783662	Mast	sktrainings\.com
 1607788654	Mast	heil\Whitler
@@ -26029,8 +26023,6 @@
 1609744137	cigien	worldescortshub\.com
 1609746752	cigien	koldkraft\.com
 1609748375	ppwater	theoneshotketo\.com
-1609748451	tripleee	searchyourway\.com
-1609749345	cigien	skintonecream4you\.com
 1609749469	cigien	(?-i:XStBqNmqlcQ)(?#youtu.be)
 1609754741	tripleee	regoo\.com
 1609754911	tripleee	freefireguru\.in
@@ -26280,3 +26272,35 @@
 1610424006	Yatin	iowndolphins\.xyz
 1610387506	Yatin	audd\.io
 1610436359	Cody Gray	securiumsolutions\.com
+1610437340	Glorfindel	autofun\.co\.th
+1610437648	Cody Gray	rmcedu\.com
+1610437707	Cody Gray	pcbmake\.com
+1610439505	tripleee	bizzoelife\.com
+1610443035	cigien	brilliance[\W_]*+new[\W_]*+skin(?:[\W_]*+(?:cream|ca|\d++|[\da-f]{5,}+)s?)*
+1610443088	cigien	(?-i:xOKDRRqXTeY)(?#youtu.be)
+1610443258	cigien	greg[\W_]*+gutfeld[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
+1610446095	tripleee	pcloudy\.com
+1610446974	cigien	wearableworld\.co
+1610448064	tripleee	center42\.tech
+1610448998	cigien	(?-i:iMz9YkDbQ)(?#fb.me/e)
+1610449151	cigien	ksachospitals\.com
+1610452362	Yatin	courseafter12th\.com
+1610453634	tripleee	nextideatech\.com
+1610453652	tripleee	innovationm\.com
+1610454165	tripleee	dummyevm\.com
+1610457523	cigien	tetra[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
+1610462155	cigien	moodle_task(?:@litdps\.de)?
+1610469749	Spevacus	freelancetechnique\.com
+1610474062	Ollie	goldbee\.com
+1610476129	Spevacus	mayweathervspul\.com
+1610480366	Spevacus	scraperapi\.com\/pricing
+1610483288	Spevacus	anycard\.games
+1610486201	cigien	keepfitspot\.com
+1610488049	cigien	besttabletsguide\.com
+1610488563	cigien	sadik-dev\.medium\.com
+1610493382	Makyen	khalifklenton(?:@gmail\.com)?
+1610510238	cigien	museumfacts\.co\.uk
+1610511974	cigien	typingspeedtestonline\.com
+1610514371	cigien	(?-i:QgKrg5Q6b5rLWa7GA)(?#forms.gle)
+1610514488	cigien	warrior[\W_]*+keto(?:[\W_]*+(?:canada|\d++|[\da-f]{5,}+)s?)*
+1610518148	cigien	bill[\W_]*+maher[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:tincture|\d++|[\da-f]{5,}+)s?)*
