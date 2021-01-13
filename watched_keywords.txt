@@ -24464,7 +24464,6 @@
 1604044284	tripleee	furnitureadda\.com
 1604045279	tripleee	hiyajewellers\.com
 1604046564	tripleee	bc\.game
-1604050058	tripleee	upsavesenergy\.com
 1604053087	tripleee	agilefingers\.com
 1604053166	tripleee	informationpapa\.com
 1604053263	Mast	southwest[\W_]*+airlines[\W_]*+reservation
