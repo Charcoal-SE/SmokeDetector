@@ -10671,7 +10671,6 @@
 1561834381	Makyen	(?-i:N0keg\.jpg)
 1561834399	Makyen	ag7144427(?:@gmail\.com)?
 1561882214	Nisse Engström	bookishrestaurant\.com
-1561904692	Sonic the Anonymous WizHog	bbbootstrap\.com
 1561927733	Makyen	nutrifitsupplementsscamgmailcom
 1561927770	Makyen	gupivurewo
 1561927838	Makyen	nutri\W*fit\W*supplements(?!\.com(?<=nutrifitsupplements\.com))(?:\W*web)?
