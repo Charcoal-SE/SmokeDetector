@@ -26336,3 +26336,4 @@
 1610609767	Cody Gray	(?-i:q5yxIzs5Wug)(?#youtube)
 1610611021	tripleee	h[oó]a[\W_]*+ch[aấ]t[\W_]*+r[uử]a[\W_]*+xe
 1610611193	tripleee	sabscars\.co\.uk
+1610611212	tripleee	sabscars(?!\.co\.uk)
