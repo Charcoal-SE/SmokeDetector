@@ -26346,3 +26346,4 @@
 1610618726	cigien	akaimetal\.com
 1610620749	cigien	golaunche\.com
 1610622623	cigien	lyte[\W_]*+advanced[\W_]*+keto[\W_]*+pills(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
+1610626910	cigien	bestairpurifier2021\.com
