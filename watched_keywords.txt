@@ -22838,7 +22838,6 @@
 1598816190	Makyen	(?-i:15ead586c78a28461bfa02d4966ec744)(?#apnews.com)
 1598816206	Makyen	(?-i:236a4605a35bfd7898217cecdd79841a)(?#apnews.com)
 1598816222	Makyen	(?-i:26929a9aeee0de7d8f3bbe69e835536f)(?#apnews.com)
-1598815985	Mast	(?-i:ceb0476c868ecb2836afb52dd3f000ed)(?#apnews.com)
 1598816246	Makyen	(?-i:283413c30ea9cbe98995d2c213436f88)(?#apnews.com)
 1598816261	Makyen	(?-i:2ff1e22245edb5018748c9e304f10299)(?#apnews.com)
 1598815961	Mast	(?-i:b50c13ff26095a5320b1cbd5d0015823)(?#apnews.com)
