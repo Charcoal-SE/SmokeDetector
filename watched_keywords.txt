@@ -26329,3 +26329,4 @@
 1610606553	tripleee	homepetusa\.com
 1610606608	tripleee	(?-i:69fU72GxTuA)(?# youtube)
 1610606771	tripleee	mw[\W_]*+tech
+1610607205	tripleee	international[\W_]*+panaacea
