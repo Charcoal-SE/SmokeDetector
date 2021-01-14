@@ -26334,3 +26334,4 @@
 1610607663	cigien	mf[\W_]*+doom[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1610609336	Yatin	dienmayhoanglien\.vn
 1610609767	Cody Gray	(?-i:q5yxIzs5Wug)(?#youtube)
+1610611021	tripleee	h[oó]a[\W_]*+ch[aấ]t[\W_]*+r[uử]a[\W_]*+xe
