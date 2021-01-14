@@ -26330,3 +26330,4 @@
 1610606608	tripleee	(?-i:69fU72GxTuA)(?# youtube)
 1610606771	tripleee	mw[\W_]*+tech
 1610607205	tripleee	international[\W_]*+panaacea
+1610607480	cigien	daisy[\W_]*+may[\W_]*+cooper[\W_]*+keto(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
