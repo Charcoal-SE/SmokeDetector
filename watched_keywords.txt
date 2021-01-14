@@ -25662,7 +25662,6 @@
 1608367658	Makyen	hemp[\W_]*+max[\W_]*+lab[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:body|pain|canada|\d++|[\da-f]{5,}+)s?)*
 1608368865	Makyen	eigenfruit\.nl
 1608376481	Yatin	wikiengage\.com
-1608376204	Yatin	spottingpro\.com
 1608375025	Yatin	papislot\.com
 1608373926	Cody Gray	bongda360\.org
 1608364735	Cody Gray	instantpotreview\.us
