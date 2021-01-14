@@ -178,7 +178,6 @@ image\Wrevive
 cognishield
 spartagen
 blackcore
-xiphos
 muscle\Wforce\Wfx
 vitanoria
 vlamorous
