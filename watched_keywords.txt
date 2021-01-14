@@ -26328,3 +26328,4 @@
 1610603015	cigien	salesforceninjacom\.wordpress
 1610606553	tripleee	homepetusa\.com
 1610606608	tripleee	(?-i:69fU72GxTuA)(?# youtube)
+1610606771	tripleee	mw[\W_]*+tech
