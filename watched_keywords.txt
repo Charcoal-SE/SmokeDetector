@@ -26365,3 +26365,4 @@
 1610704085	cigien	walkertimonthy(?<=medium\.com/@walkertimonthy)
 1610705567	cigien	drbest\.in
 1610706484	Glorfindel	Encore\W+DT
+1610707214	cigien	herbal[\W_]*+(?:grown|native)(?:[\W_]*+(?:cbd|oil|\d++|[\da-f]{5,}+)s?)*
