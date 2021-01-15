@@ -26363,3 +26363,4 @@
 1610697148	tripleee	recursivearts\.com
 1610700034	Yatin	thesuperarticle\.com
 1610701108	cigien	gearsireview\.com
+1610704085	cigien	walkertimonthy(?<=medium\.com/@walkertimonthy)
