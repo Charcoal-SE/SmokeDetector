@@ -431,3 +431,4 @@ So face the music
 (?-i:^RCMB Banglore$)
 (?-i:^Lovejit Chauhan$)
 (?-i:^Khalif Klenton swifts$)
+(?-i:^eSoftToolsNSFtoPSTConvert$)
