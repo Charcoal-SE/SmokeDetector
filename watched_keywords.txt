@@ -26365,3 +26365,4 @@
 1610701108	cigien	gearsireview\.com
 1610704085	cigien	walkertimonthy(?<=medium\.com/@walkertimonthy)
 1610705567	cigien	drbest\.in
+1610706484	Glorfindel	Encore\W+DT
