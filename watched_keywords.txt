@@ -26374,3 +26374,4 @@
 1610717336	Spevacus	v2nwork\.com
 1610717510	Spevacus	pall-review\.com
 1610724548	Spevacus	classicgeneratorpower\.com
+1610749102	Spevacus	courses\.bangimo\.com
