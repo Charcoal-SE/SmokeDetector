@@ -26359,3 +26359,4 @@
 1610661726	cigien	improv\.mx
 1610663436	cigien	esolem-production\.com
 1610663467	cigien	esolem-production(?!\.com)
+1610671277	cigien	clippingpathfix\.com
