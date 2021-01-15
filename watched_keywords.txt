@@ -26360,3 +26360,4 @@
 1610671277	cigien	clippingpathfix\.com
 1610692844	cigien	prismleadindia\.in
 1610694208	cigien	humboldt[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
+1610695283	tripleee	uptodrivers\.com
