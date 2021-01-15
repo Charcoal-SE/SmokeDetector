@@ -429,3 +429,4 @@ So face the music
 (?-i:^origamistudios$)
 (?-i:^upsaves energy$)
 (?-i:^RCMB Banglore$)
+(?-i:^Lovejit Chauhan$)
