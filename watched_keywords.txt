@@ -26362,3 +26362,4 @@
 1610695627	cigien	finddeviceinfo\.com
 1610697148	tripleee	recursivearts\.com
 1610700034	Yatin	thesuperarticle\.com
+1610701108	cigien	gearsireview\.com
