@@ -26358,3 +26358,4 @@
 1610663436	cigien	esolem-production\.com
 1610663467	cigien	esolem-production(?!\.com)
 1610671277	cigien	clippingpathfix\.com
+1610692844	cigien	prismleadindia\.in
