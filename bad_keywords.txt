@@ -2419,3 +2419,4 @@ cannaful[\W_]*+valley[\W_]*+cbd(?:[\W_]*+(?:review|oil|buy|\d++|[\da-f]{5,}+)s?)
 hack\.truth77(?:@gmail\.com)?
 peace[\W_]*+cbd[\W_]*+oil
 (?-i:ceb0476c868ecb2836afb52dd3f000ed)(?#apnews.com)
+khalifklenton(?:@gmail\.com)?
