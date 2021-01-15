@@ -24068,7 +24068,6 @@
 1602853165	Ryan M	rich[\W_]*+herbs[\W_]*+foundation
 1602853288	Ryan M	yesornogenerator\.com
 1602853398	Mast	findgoodproduct\.com
-1602854859	Jeff Schaller	aakash\.ac\.in
 1602856347	Jeff Schaller	bangaloretomysorecab\.com
 1602860906	Spevacus	nutrapillsneed\.ezyro\.com
 1602862196	Mast	lelangan[\W_]*+khusus
