@@ -26366,3 +26366,4 @@
 1610705567	cigien	drbest\.in
 1610706484	Glorfindel	Encore\W+DT
 1610707214	cigien	herbal[\W_]*+(?:grown|native)(?:[\W_]*+(?:cbd|oil|\d++|[\da-f]{5,}+)s?)*
+1610708829	cigien	firsthealth24x7\.com
