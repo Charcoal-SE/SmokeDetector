@@ -26378,3 +26378,4 @@
 1610749629	Spevacus	montegobayphotographer\.com
 1610749651	Spevacus	livelimerecords\.com
 1610762465	cigien	(?-i:GermanAizek)(?#github)
+1610774659	Makyen	ultra[\W_]*+x[\W_]*+boost(?:[\W_]*+(?:supplement|diet|\d++|[\da-f]{5,}+)s?)*
