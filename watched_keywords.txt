@@ -26393,3 +26393,4 @@
 1610789163	cigien	norman[\W_]*+reedus[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1610790036	Cody Gray	havecamerawilltravel\.com
 1610792216	cigien	jeevangupta\.com
+1610793162	cigien	bestdehumidifier2021\.com
