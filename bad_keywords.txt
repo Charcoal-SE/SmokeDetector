@@ -2421,4 +2421,3 @@ peace[\W_]*+cbd[\W_]*+oil
 (?-i:ceb0476c868ecb2836afb52dd3f000ed)(?#apnews.com)
 khalifklenton(?:@gmail\.com)?
 isoverge[\W_]*+keto(?:[\W_]*+(?:genic|buy|order|official|diet|review|pill|\d++|[\da-f]{5,}+)s?)*
-herbal[\W_]*+(?:grown|native)(?:[\W_]*+(?:cbd|oil|order|price|\d++|[\da-f]{5,}+)s?)*
