@@ -26401,3 +26401,4 @@
 1610806946	cigien	biowellnessx[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
 1610826064	Makyen	philtrat\.org
 1610845263	Jeff Schaller	allreviewsmarket\.com
+1610852790	cigien	globalsms\.io
