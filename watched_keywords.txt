@@ -10349,7 +10349,6 @@
 1560618115	Makyen	qwas\.ca
 1560658735	angussidney	geometryhub\.net(?#Temporarily watching to make sure the user doesn't promote their site any further)
 1560659473	Makyen	best\W*in\W*the\W*world\W*pack\W*drake\W*shirts?
-1560674945	Makyen	supplementsonlinestore\.com
 1560681037	double-beep	thenationalskincentre\.com
 1560722235	Makyen	williamsloans\d+(?:@yandex\.com)?(?#williamsloans6@yandex.com seen)
 1560744227	Nisse Engström	LoveCorner\.ph
