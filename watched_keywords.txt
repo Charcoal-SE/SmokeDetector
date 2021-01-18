@@ -26429,3 +26429,4 @@
 1610954165	cigien	ten[\W_]*+acres[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
 1610954328	Yatin	reiolo\.sitey\.me
 1610954989	cigien	geehii[\W_]*+keto(?:[\W_]*+(?:pill|review|\d++|[\da-f]{5,}+)s?)*
+1610954941	Yatin	roohanielaj\.com
