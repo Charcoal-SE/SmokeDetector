@@ -26424,3 +26424,4 @@
 1610949928	Yatin	mritsolution\.net
 1610949954	Yatin	plcpasswordunlocksoftware\.com
 1610951448	Yatin	myfitnessweb\.com
+1610952159	Makyen	ten[\W_]*+acres[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
