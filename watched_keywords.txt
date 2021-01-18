@@ -26427,3 +26427,4 @@
 1610952705	cigien	symbolsname\.com
 1610953049	Yatin	uklivestreaming\.blogspot
 1610951824	Yatin	iroidtechnologies\.com
+1610954165	cigien	ten[\W_]*+acres[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
