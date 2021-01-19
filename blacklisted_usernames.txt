@@ -433,3 +433,4 @@ So face the music
 (?-i:^Khalif Klenton swifts$)
 (?-i:^eSoftToolsNSFtoPSTConvert$)
 (?-i:^franca calab$)
+(?-i:^Sagar Maurya$)
