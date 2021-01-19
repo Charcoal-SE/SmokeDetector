@@ -2424,3 +2424,4 @@ isoverge[\W_]*+keto(?:[\W_]*+(?:genic|buy|order|official|diet|review|pill|\d++|[
 herbal[\W_]*+native[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 herbal[\W_]*+grown[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:order|price|\d++|[\da-f]{5,}+)s?)*
 xcellerate(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)+
+templeofanswer(?:@hotmail\.co\.uk)?

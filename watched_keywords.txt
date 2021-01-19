@@ -10630,7 +10630,6 @@
 1561701408	Shree	assertive-media\.co\.uk
 1561706298	Makyen	rivexa\W*plus
 1561706334	Makyen	dealmecoupon\.com
-1561708752	Makyen	templeofanswer(?:@hotmail\.co\.uk)?
 1561708771	Makyen	gogbetsg\.com
 1561708789	Makyen	captionz\.biz
 1561712379	Shree	prohindiblogger\.com
