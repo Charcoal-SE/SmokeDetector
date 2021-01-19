@@ -26461,3 +26461,4 @@
 1611035864	tripleee	apnews\.com/press-release/kisspr
 1611035907	tripleee	studytonight\.com
 1611038961	cigien	humboldts[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
+1611040444	cigien	instantreviewsguide\.com
