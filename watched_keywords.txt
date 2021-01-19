@@ -26472,3 +26472,4 @@
 1611051579	cigien	(?-i:3p1uFxo)(?#bit.ly)
 1611053441	cigien	speckpro\.com
 1611054229	tripleee	tespoin\.com
+1611056293	tripleee	6wresearch(?!\.com|(?-i:(?<=6Wresearch) Market Intelligence$))
