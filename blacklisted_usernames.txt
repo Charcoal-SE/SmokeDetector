@@ -434,3 +434,4 @@ So face the music
 (?-i:^eSoftToolsNSFtoPSTConvert$)
 (?-i:^franca calab$)
 (?-i:^Sagar Maurya$)
+(?-i:^6Wresearch Market Intelligence$)
