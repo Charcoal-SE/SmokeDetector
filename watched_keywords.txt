@@ -26463,3 +26463,4 @@
 1611038961	cigien	humboldts[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
 1611040444	cigien	instantreviewsguide\.com
 1611041216	tripleee	customerservicehelp-number\.net
+1611041989	cigien	qualityenergy\.com\.au
