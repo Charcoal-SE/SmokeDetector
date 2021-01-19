@@ -26459,3 +26459,4 @@
 1611033571	cigien	maujitrip\.com
 1611033591	cigien	maujitrip(?!\.com)
 1611035864	tripleee	apnews\.com/press-release/kisspr
+1611035907	tripleee	studytonight\.com
