@@ -26469,3 +26469,4 @@
 1611048009	cigien	a2zairportparking\.co\.uk
 1611049857	cigien	clothingandsale\.com
 1611050816	cigien	centralparksohna\.com
+1611051376	cigien	kaniktools(?:@gmail\.com)?
