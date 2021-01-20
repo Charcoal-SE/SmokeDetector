@@ -23091,7 +23091,6 @@
 1599606807	Spevacus	getfastpackaging\.com
 1599601974	Jeff Schaller	gramvi\.com
 1599611880	NobodyNada	vndrink\.com
-1599621169	Machavity	spinbackup\.com
 1599623580	Makyen	1herbs\.com
 1599623596	Makyen	1herbs(?!\.com)
 1599623644	Makyen	gregory[\W_]*+porter[\W_]*+all[\W_]*+rise[\W_]*+t[\W_]*+shirt
