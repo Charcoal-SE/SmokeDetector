@@ -20357,7 +20357,6 @@
 1590393158	tripleee	bitdataconversion\.com
 1590394041	tripleee	it-seo\.pp\.ua
 1590397548	tripleee	yourdishwasherguide\.com
-1590406143	tripleee	(?-i:^Jack Sparrow$)
 1590407578	Makyen	american[\W_]*+liberty[\W_]*+cbd(?:[\W_]*+(?:\d++|[\da-f]{4,}+))*
 1590413364	Daniil	pixalive\.me
 1590415237	Daniil	nishant\.prasad(?<=medium\.com/@nishant\.prasad)
