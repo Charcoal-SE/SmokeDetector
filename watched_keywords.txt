@@ -26487,3 +26487,4 @@
 1611099930	Ollie	turkiyeyapayzeka\.com
 1611106015	cigien	go(?:[\W_]*+(?:ahead|and|to)?)*+ban[\W_]*+me
 1611115046	Ryan M	3696f3daed4e(?# uxplanet.org)
+1611118069	tripleee	abbs\.edu\.in
