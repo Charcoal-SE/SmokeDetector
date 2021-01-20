@@ -26496,3 +26496,4 @@
 1611126683	cigien	jaguarsoftwareindia\.com
 1611126735	Ryan M	sharmaacademy\.com
 1611127240	cigien	duro[\W_]*+xl(?:[\W_]*+(?:male|review|enhancement|\d++|[\da-f]{5,}+)s?)*
+1611127461	Ryan M	top[\W_]*+\d++\b.{0,50}\bcompanies
