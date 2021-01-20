@@ -26515,3 +26515,4 @@
 1611148294	Spevacus	constructionnews\.co\.in
 1611145221	Yatin	disclosure\.substack\.com
 1611145375	Yatin	(?-i:UCYvin_F73BoNJ_VibPvtSjg)(?# youtube)
+1611149074	Spevacus	orthopatna\.com
