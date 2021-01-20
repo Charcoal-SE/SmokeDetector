@@ -26495,3 +26495,4 @@
 1611126225	Cody Gray	hotrospro(?:@gmail\.com)?
 1611126683	cigien	jaguarsoftwareindia\.com
 1611126735	Ryan M	sharmaacademy\.com
+1611127240	cigien	duro[\W_]*+xl(?:[\W_]*+(?:male|review|enhancement|\d++|[\da-f]{5,}+)s?)*
