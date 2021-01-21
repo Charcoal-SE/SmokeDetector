@@ -26531,3 +26531,4 @@
 1611144891	Yatin	unitedexchange\.io
 1611210917	cigien	reditcoins\.com
 1611211733	Yatin	advisorwellness\.org
+1611211875	cigien	happy[\W_]*+dance[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
