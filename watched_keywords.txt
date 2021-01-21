@@ -26534,3 +26534,4 @@
 1611211875	cigien	happy[\W_]*+dance[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
 1611211896	Cody Gray	globaltensiles\.com
 1611212129	Cody Gray	chemzone\.co\.in
+1611212853	Makyen	sobujmandal801(?:@gmail\.com)?
