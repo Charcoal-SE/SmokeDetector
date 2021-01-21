@@ -26546,3 +26546,4 @@
 1611215378	cigien	vlucht(en)?volgen\.(com|nl)
 1611215411	cigien	vliegtuigenvolgen\.nl
 1611215428	cigien	flugeverfolgen\.de
+1611217037	cigien	instasafe\.com
