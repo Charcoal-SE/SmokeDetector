@@ -26541,3 +26541,4 @@
 1611214049	Cody Gray	clinicpills66(?:@gmail\.com)?
 1611211645	Yatin	keto-bodytone-australia-44\.webself\.net
 1611214304	cigien	vita\W+balance
+1611214959	Makyen	maricanna[\W_]*+rx(?:[\W_]*+(?:oil|cbd|buy|order|\d++|[\da-f]{5,}+)s?)*
