@@ -26564,3 +26564,4 @@
 1611228647	cigien	ignite[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
 1611231194	Ryan M	a2zrecruitments2021(?:@gmail\.com)?
 1611234319	tripleee	study4u\.xyz
+1611234337	tripleee	new-iphone\.com
