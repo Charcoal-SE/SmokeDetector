@@ -418,7 +418,6 @@ Wes.ey\W*Atwood
 (?-i:^Anna21dj$)
 (?-i:^New J$)
 (?-i:^Ella Mark$)
-(?:it\W*(?:'?s|is))?\W*(?:\\_?/\W*|w)+[\.\W]*(?:[eé3_ëêẽ]+\W*(?:[s5]\W*[l1]\W*|[l1]\W*[s5]\W*)+[eé3_ëêẽ]\W*.?)\W*(?:.*[a@]t?(?:\\_?/\W*|w)*\W*[0oøuüôöõ]{2}\W*d)?
 (?:y(?:ou?|[eé3_ëêẽ]).*|ban.*|c[4a]n\W*'?\W*n[0oøuüôöõ]?t.*)d[uü]des?$
 So face the music
 (?-i:^Franklin Josh$)
