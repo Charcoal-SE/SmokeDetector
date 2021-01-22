@@ -26586,3 +26586,4 @@
 1611299452	Cody Gray	jiandajx\.com
 1611299983	cigien	agenpkv\.8b\.io
 1611300134	tripleee	icreativez\.com
+1611300150	tripleee	icreativez(?!\.com)
