@@ -26579,3 +26579,4 @@
 1611290470	Ryan M	cheapestsoftware\.org
 1611294060	Cody Gray	digitalakki\.com
 1611294251	tripleee	adgroups
+1611294268	tripleee	akash[\W_]*+digital[\W_]*+groups?
