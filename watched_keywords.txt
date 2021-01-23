@@ -26615,3 +26615,4 @@
 1611381701	cigien	tlab\W*global
 1611382757	cigien	racha?el[\W_]*+ray[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
 1611383011	Makyen	helpinhomework(?!\.org)
+1611391091	cigien	geizer\W*tony\W*edwardo(?:\W*consultant\W*com)?
