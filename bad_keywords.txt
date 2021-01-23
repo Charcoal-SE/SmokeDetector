@@ -2427,3 +2427,4 @@ xcellerate(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)+
 templeofanswer(?:@hotmail\.co\.uk)?
 whenri18@googlemail\.com
 ^Which B-schools are the best for MBA\?$
+annabiol[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:review|price|avis|fr|france|uk|united|kingdom|belgium|pharmacie|en|\d++|[\da-f]{5,}+)s?)*
