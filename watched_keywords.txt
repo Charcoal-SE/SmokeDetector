@@ -26614,3 +26614,4 @@
 1611380475	cigien	lekshmanmj\.blogspot
 1611381198	Yatin	tlabglobal\.com
 1611381701	cigien	tlab\W*global
+1611382757	cigien	racha?el[\W_]*+ray[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
