@@ -26636,3 +26636,4 @@
 1611476315	cigien	cooling-tower\.ir
 1611477224	Cody Gray	padmazon\.com(\.bd)?
 1611478922	cigien	padmazon(?!\.com)
+1611489493	cigien	geizer\W*tony\W*edwardo(?:[\W_]*+(?:at[\W_]*+)?consultant(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
