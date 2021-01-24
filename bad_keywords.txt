@@ -2391,7 +2391,6 @@ diva[\W_]*trim(?:[\W_]*+keto)?
 cannagenix
 cheif[\W_]*+oduduwa
 dr[\W_]*+oselumen(?:@gmail\.com)?
-peak[\s\-]?x(?:\W?keto)?
 h(?:oe?|ö)hle[\W_]*+der[\W_]*+l(?:oe?|ö)wen
 (?:buzzer)?huntbuzzer
 viaradaxx(?:[\W_]*+(?:reviews|\d++|[\da-f]{5,}+)s?)*
