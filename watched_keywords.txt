@@ -26634,4 +26634,3 @@
 1611454987	cigien	sors-ai\.info
 1611466314	Makyen	umirbek1307(?:@gmail\.com)?
 1611476315	cigien	cooling-tower\.ir
-1611477153	cigien	padmazon\.com\.bd
