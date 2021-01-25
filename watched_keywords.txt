@@ -26668,3 +26668,4 @@
 1611601499	Mast	via[\W_]*+our[\W_]*+whatsapp
 1611604655	cigien	brewmart\.co\.uk
 1611604881	cigien	electrotechguide\.com
+1611614344	cigien	(?-i:Wj0aYjx)(?#cutt.ly)
