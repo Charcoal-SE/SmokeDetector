@@ -251,7 +251,7 @@ pcre_comment = regex.compile(r"\(\?#(?<!(?:[^\\]|^)(?:\\\\)*\\\(\?#)[^)]*\)")
 
 def blacklist_integrity_check():
     bl_files = glob('bad_*.txt') + glob('blacklisted_*.txt') + glob('watched_*.txt')
-    seen = dict()
+    seen = {}
     errors = []
     for bl_file in bl_files:
         with open(bl_file, 'r', encoding="utf-8") as lines:

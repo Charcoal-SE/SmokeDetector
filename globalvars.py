@@ -53,7 +53,7 @@ class GlobalVars:
 
     false_positives = []
     whitelisted_users = set()
-    blacklisted_users = dict()
+    blacklisted_users = {}
     blacklisted_usernames = []
     blacklisted_websites = []
     blacklisted_numbers = []
