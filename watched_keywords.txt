@@ -26659,3 +26659,4 @@
 1611565860	cigien	mobileloserme(?:@gmail\.com)?
 1611567915	cigien	shivani-jadhav2812\.medium\.com
 1611568734	tripleee	(?-i:xnzvui)(?# snip.ly)
+1611569064	cigien	revolveai\.com
