@@ -42,7 +42,8 @@ class BlacklistParser:
 
 
 class BasicListParser(BlacklistParser):
-    def _normalize(self, input):
+    @staticmethod
+    def _normalize(input):
         """
         Wrapper to normalize a value. Default method just calls .rstrip()
         """
@@ -202,7 +203,8 @@ class YAMLParserCIDR(BlacklistParser):
         with open(self._filename, 'w', encoding='utf-8') as f:
             yaml.dump(d, f)
 
-    def _validate(self, item):
+    @staticmethod
+    def _validate(item):
         ip_regex = regex.compile(r'''
             (?(DEFINE)(?P<octet>
               0|1[0-9]{0,2}|2(?:[0-4][0-9]?)?|25[0-5]?|2[6-9]|[3-9][0-9]?))
@@ -284,7 +286,8 @@ class YAMLParserNS(YAMLParserCIDR):
     SCHEMA_VARIANT = 'yaml_ns'
     SCHEMA_PRIKEY = 'ns'
 
-    def _normalize(self, item):
+    @staticmethod
+    def _normalize(item):
         """
         Normalize to lower case
         """
