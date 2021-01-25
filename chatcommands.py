@@ -261,7 +261,7 @@ def check_blacklist(string_to_test, is_username, is_watchlist, is_phone):
     filter_out.extend(["pattern-matching email", "pattern-matching website", "bad keyword with email",
                        "bad ns for domain", "bad ip for hostname"])
     if filter_out:
-        reasons = [reason for reason in reasons if all([x not in reason.lower() for x in filter_out])]
+        reasons = [reason for reason in reasons if all(x not in reason.lower() for x in filter_out)]
 
     return reasons
 
