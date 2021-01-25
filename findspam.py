@@ -34,8 +34,8 @@ if tuple(int(x) for x in regex.__version__.split('.')) < (2, 5, 82):
         regex.__version__)
 
 TLD_CACHE = []
-DNS_CACHE = dict()
-LINK_CACHE = dict()
+DNS_CACHE = {}
+LINK_CACHE = {}
 LEVEN_DOMAIN_DISTANCE = 3
 SIMILAR_THRESHOLD = 0.95
 SIMILAR_ANSWER_THRESHOLD = 0.7
