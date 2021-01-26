@@ -436,3 +436,4 @@ So face the music
 (?-i:^6Wresearch Market Intelligence$)
 (?-i:cheapjammer$)
 (?-i:^precisejammers$)
+^treasurebox$
