@@ -26739,3 +26739,4 @@
 1611771069	cigien	gold[\W_]*+top[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:buy|store|order|\d++|[\da-f]{5,}+)s?)*
 1611771883	cigien	ajanabha(?!\.com)
 1611780649	Makyen	antiabenedicta\.medium\.com
+1611781550	Nisse Engström	macbookrepairsdubai\.ae
