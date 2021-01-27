@@ -2359,7 +2359,7 @@ create_rule("one-character link in {}",
 create_rule("linked punctuation in {}",
             r'(?iu)rel="nofollow( noreferrer)?">(?!><>)\W+</a>',
             sites=["codegolf.stackexchange.com"],
-            title=False, stripcodeblocks=True, max_rep=11, max_score=1, question=False)
+            title=False, stripcodeblocks=True, max_rep=11, max_score=1)
 # URL in title, some sites are exempt
 create_rule("URL in title",
             r"(?i)https?://(?!(www\.)?(example|domain)\.(com|net|org))[a-zA-Z0-9_.-]+\.[a-zA-Z]{2,4}|"
