@@ -26720,3 +26720,4 @@
 1611734390	cigien	com\.free_vpn\.super_vpn\.safe_vpn(?#play.google.com)
 1611737188	Ryan M	eznpc\.com
 1611737639	tripleee	eznpc(?!\.com)
+1611741320	tripleee	gmbsport\.com
