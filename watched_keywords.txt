@@ -26714,4 +26714,3 @@
 1611727267	Ryan M	netboard\.me
 1611728443	cigien	gcbuying\.com
 1611728469	cigien	fizamemon4456(?:@gmail\.com)?
-1611729436	cigien	harrelson'?s[\W_]*+own(?:[\W_]*+(?:cbd|buy|order|\d++|[\da-f]{5,}+)s?)*
