@@ -26710,3 +26710,4 @@
 1611720440	Spevacus	kryptolights\.com
 1611722616	cigien	menclube\.com
 1611722734	cigien	ᴍᴇɴᴄʟᴜʙᴇ\.ᴄᴏᴍ
+1611723527	cigien	truly[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
