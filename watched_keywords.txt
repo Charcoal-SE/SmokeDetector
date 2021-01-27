@@ -26722,3 +26722,4 @@
 1611737639	tripleee	eznpc(?!\.com)
 1611741320	tripleee	gmbsport\.com
 1611742013	tripleee	dtravelplus\.com
+1611742360	tripleee	alphainfolab\.com
