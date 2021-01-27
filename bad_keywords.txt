@@ -2431,3 +2431,4 @@ ten[\W_]*+acres[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
 peak\W?x\W?keto
 max\W?peak\W?xl
 vital\W?peak\W?xt
+real[\W_]*+tone[\W_]*+keto(?:[\W_]*+(?:canada|ca|diet|review|buy|order|\d++|[\da-f]{5,}+)s?)*
