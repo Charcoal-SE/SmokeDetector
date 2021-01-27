@@ -26718,3 +26718,4 @@
 1611729845	cigien	ontario[\W_]*+farms(?:[\W_]*+(?:canada|ca|hemp|cbd|oil|buy|order|\d++|[\da-f]{5,}+)s?)*
 1611730079	cigien	vosshop(?!\.uk)
 1611734390	cigien	com\.free_vpn\.super_vpn\.safe_vpn(?#play.google.com)
+1611737188	Ryan M	eznpc\.com
