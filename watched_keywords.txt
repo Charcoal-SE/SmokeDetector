@@ -26723,3 +26723,4 @@
 1611741320	tripleee	gmbsport\.com
 1611742013	tripleee	dtravelplus\.com
 1611742360	tripleee	alphainfolab\.com
+1611742581	Makyen	directmbainfo\.com
