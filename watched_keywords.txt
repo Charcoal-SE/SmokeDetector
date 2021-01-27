@@ -26737,3 +26737,4 @@
 1611767739	cigien	origami-website\.netlify\.app
 1611768005	cigien	thetechiefind\.com
 1611771069	cigien	gold[\W_]*+top[\W_]*+cbd[\W_]*+gummies(?:[\W_]*+(?:buy|store|order|\d++|[\da-f]{5,}+)s?)*
+1611771883	cigien	ajanabha(?!\.com)
