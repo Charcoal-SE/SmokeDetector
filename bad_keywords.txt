@@ -2432,3 +2432,4 @@ peak\W?x\W?keto
 max\W?peak\W?xl
 vital\W?peak\W?xt
 real[\W_]*+tone[\W_]*+keto(?:[\W_]*+(?:canada|ca|diet|review|buy|order|\d++|[\da-f]{5,}+)s?)*
+slim[\W_]*+origin(?:[\W_]*+keto)?(?:[\W_]*+pills?)?(?:[\W_]*+offers?)?(?:[\W_]*+official[\W_]*+web[\W_]*+site)?
