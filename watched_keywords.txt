@@ -26750,3 +26750,4 @@
 1611814636	Cody Gray	(?:info\.)?vuindia(?:@ecaglobal\.com(?:\.au)?)?
 1611814739	Ryan M	21yunbox(?!\.com)
 1611816174	Ryan M	a href="[^"]+\b-(?:error|freezing)\b/"[^>]++>[^<]+ (?:error|freezing)
+1611816502	Ryan M	a href="[^"]+/how-to[^/"]+/?"[^>]++>(?-i:how to)
