@@ -26743,3 +26743,4 @@
 1611796691	cigien	spermieskalle84(?:@gmail\.com)?
 1611800173	cigien	fastnewsfree(?:@gmail\.com|\.blogspot)?
 1611809520	cigien	joel[\W_]*+osteen[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
+1611812411	Cody Gray	happybelatedbirthdays\.com
