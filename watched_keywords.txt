@@ -26409,7 +26409,6 @@
 1610953049	Yatin	uklivestreaming\.blogspot
 1610951824	Yatin	iroidtechnologies\.com
 1610954328	Yatin	reiolo\.sitey\.me
-1610954989	cigien	geehii[\W_]*+keto(?:[\W_]*+(?:pill|review|\d++|[\da-f]{5,}+)s?)*
 1610954941	Yatin	roohanielaj\.com
 1610961636	cigien	router-setting\.com
 1610962588	Yatin	itssoftservice\.com
