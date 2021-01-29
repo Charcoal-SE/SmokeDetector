@@ -26778,3 +26778,4 @@
 1611888084	cigien	technocupid\.com
 1611890756	cigien	digitaltechhack(?:er)?(?:[\W_]*+(?:at[\W_]*+)?gmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1611893637	cigien	crackcut\.com
+1611893659	cigien	crackfair\.com
