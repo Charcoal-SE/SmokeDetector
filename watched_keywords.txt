@@ -26798,3 +26798,4 @@
 1611925796	Jeff Schaller	mariaelectricals\.com
 1611926048	Jeff Schaller	propliners\.in
 1611926538	tripleee	buybestsewingmachine\.blogspot\.com
+1611926583	tripleee	cheap[\W_]*+best[\W_]*+sewing[\W_]*+machine
