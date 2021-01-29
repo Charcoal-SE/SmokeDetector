@@ -18792,7 +18792,6 @@
 1585518900	Makyen	blackhart1(?:[\W_]*+(?:at[\W_]*+)?protonmail(?:[\W_]*+(?:dot[\W_]*+)?com)?)?
 1585530374	Makyen	(?-i:wWvKVzaHeGI)(?#YouTube)
 1585538411	tripleee	gyroroue-shop\.fr
-1585540891	tripleee	keyquery\.com
 1585541325	tripleee	aol[\W_]*+help
 1585543910	tripleee	vayudoot\.in
 1585544016	tripleee	binnakuri\.com
