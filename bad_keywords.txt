@@ -2436,3 +2436,4 @@ slim[\W_]*+origin(?:[\W_]*+keto)?(?:[\W_]*+pills?)?(?:[\W_]*+offers?)?(?:[\W_]*+
 infinite[\W_]*+force[\W_]*+xl
 green[\W_]*+vibration[\W_]*+keto(?:[\W_]*+(?:pill|diet|\d++|[\da-f]{5,}+)s?)*
 geehii[\W_]*+keto(?:[\W_]*+(?:pill|review|\d++|[\da-f]{5,}+)s?)*
+jocosa[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*

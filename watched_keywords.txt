@@ -26477,7 +26477,6 @@
 1611118069	tripleee	abbs\.edu\.in
 1611119675	cigien	govreports\.com\.au
 1611123978	tripleee	infyseo\.com
-1611124009	cigien	jocosa[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1611125632	cigien	herlihyfamilylaw\.com
 1611126058	Cody Gray	spro\.vn
 1611126074	Cody Gray	may-thao-vo
