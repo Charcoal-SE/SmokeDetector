@@ -26782,3 +26782,4 @@
 1611904542	cigien	scotty[\W_]*+sire(?:[\W_]*+(?:oil|cbd|buy|order|\d++|[\da-f]{5,}+)s?)*
 1611905449	cigien	rstensile\.com
 1611906119	Makyen	(?-i:Y3DpO\.jpg)
+1611907613	cigien	manaegg\.com
