@@ -26819,3 +26819,4 @@
 1611997152	Yatin	steelnik
 1611997196	Cody Gray	mobileprice-bangladesh\.com
 1611997837	cigien	chris[\W_]*+harrison[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
+1611998520	Yatin	samcovina\.com
