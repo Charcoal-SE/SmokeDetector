@@ -26829,3 +26829,4 @@
 1612003486	Cody Gray	(?-i:5Aa5GQ)(?# fiverr)
 1612004109	Cody Gray	shutter[\W_]*evolve(?:\.com)?
 1612005087	Cody Gray	infinite\W*restore\W*moisturizer
+1612007208	Yatin	dlldownloader\.com
