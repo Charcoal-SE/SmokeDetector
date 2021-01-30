@@ -26800,3 +26800,4 @@
 1611926538	tripleee	buybestsewingmachine\.blogspot\.com
 1611926583	tripleee	cheap[\W_]*+best[\W_]*+sewing[\W_]*+machine
 1611981082	cigien	matjrk\.com
+1611983162	cigien	gkaccess\.com
