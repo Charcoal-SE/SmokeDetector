@@ -26830,3 +26830,4 @@
 1612004109	Cody Gray	shutter[\W_]*evolve(?:\.com)?
 1612005087	Cody Gray	infinite\W*restore\W*moisturizer
 1612009607	Yatin	mobearing\.com
+1612010293	Cody Gray	expressolutiondocs\.com
