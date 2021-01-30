@@ -26825,6 +26825,5 @@
 1612002947	Cody Gray	(?-i:SpNIH\.png)
 1612003238	cigien	renu[\W_]*+health(?:[\W_]*+(?:oil|cbd|review|\d++|[\da-f]{5,}+)s?)*
 1612003309	Yatin	alqurankarim\.net
-1612003410	Yatin	shutterevolve\.com
 1612003462	cigien	(?-i:3adg7Vb)(?#bit.ly)
 1612003486	Cody Gray	(?-i:5Aa5GQ)(?# fiverr)
