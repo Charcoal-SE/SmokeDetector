@@ -26880,3 +26880,4 @@
 1612217607	cigien	clemalphafinance(?:@gmail\.com)?
 1612217851	Makyen	d(?:octo)?r[\W_]*+clem[\W_]*+alpha
 1612220197	Makyen	confirm-online-identity-verification-form\.my\.id
+1612222105	cigien	cleofxhub\.com
