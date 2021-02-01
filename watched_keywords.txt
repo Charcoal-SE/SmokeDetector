@@ -26861,3 +26861,4 @@
 1612169523	cigien	bx-zone\.com
 1612169922	cigien	goassignmenthelp\.com\.au
 1612170558	cigien	leaf[\W_]*+lab[\W_]*+pro(?:[\W_]*+(?:oil|cbd|\d++|[\da-f]{5,}+)s?)*
+1612170841	cigien	cheyenne[\W_]*+valley[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
