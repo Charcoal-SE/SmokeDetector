@@ -26878,3 +26878,4 @@
 1612216268	cigien	atozglazing\.com
 1612216545	cigien	tescoapp\.com
 1612217607	cigien	clemalphafinance(?:@gmail\.com)?
+1612217851	Makyen	d(?:octo)?r[\W_]*+clem[\W_]*+alpha
