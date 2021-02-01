@@ -26866,3 +26866,4 @@
 1612173240	tripleee	digigrains(?!\.com)
 1612174561	cigien	banimode\.com
 1612174896	cigien	multivitamincare\.org
+1612174920	cigien	multivitamincare(?!\.org)
