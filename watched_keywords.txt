@@ -26864,3 +26864,4 @@
 1612170841	cigien	cheyenne[\W_]*+valley[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
 1612171794	cigien	bayu\.hafif\.dms(?:@gmail\.com)?
 1612173240	tripleee	digigrains(?!\.com)
+1612174561	cigien	banimode\.com
