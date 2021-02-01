@@ -26877,3 +26877,4 @@
 1612216168	cigien	(?-i:2NU3rejWeightloss)(?#bit.ly)
 1612216268	cigien	atozglazing\.com
 1612216545	cigien	tescoapp\.com
+1612217607	cigien	clemalphafinance(?:@gmail\.com)?
