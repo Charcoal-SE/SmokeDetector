@@ -26868,3 +26868,4 @@
 1612174896	cigien	multivitamincare\.org
 1612174920	cigien	multivitamincare(?!\.org)
 1612175943	tripleee	eroticbangaloreescorts\.com
+1612180452	tripleee	joel[\W_]*+osteen[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:\d++|[\da-f]{5,}+)s?)*
