@@ -26896,3 +26896,4 @@
 1612249931	Cody Gray	magemonkeys\.com
 1612249976	Cody Gray	hire\W*magento\W*developer
 1612250869	Cody Gray	touchpromote\.com
+1612250905	Cody Gray	builder\.bsecure\.pk
