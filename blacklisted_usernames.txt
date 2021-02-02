@@ -437,3 +437,4 @@ So face the music
 (?-i:cheapjammer$)
 (?-i:^precisejammers$)
 ^treasurebox$
+(?-i:^Internetto Trollio$)
