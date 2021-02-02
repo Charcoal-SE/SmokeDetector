@@ -25625,7 +25625,6 @@
 1608331150	Makyen	(?-i:QNK6KW8)
 1608332713	Makyen	(?-i:P5GT)(?<=\bv︆︆\.ht/P5GT)
 1608335184	cigien	hackperfectlord(?:@gmail\.com)?
-1608345743	cigien	kiperline\.com
 1608352828	Makyen	lija\.akter
 1608356287	Makyen	androcharge(?:[\W_]*+(?:enhancement|male|pills|official|muscle|\d++|[\da-f]{5,}+)s?)*
 1608367647	Makyen	alex[\W_]*+trebek[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:review|\d++|[\da-f]{5,}+)s?)*
