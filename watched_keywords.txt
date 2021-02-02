@@ -26911,3 +26911,4 @@
 1612259418	cigien	napa[\W_]*+farms[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
 1612262905	tripleee	millionairesgroup\.in
 1612278671	Jeff Schaller	altadefiniziones\.net
+1612281031	cigien	bitcoin-bude\.de
