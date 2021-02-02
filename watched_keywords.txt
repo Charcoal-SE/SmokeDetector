@@ -26909,3 +26909,4 @@
 1612257607	cigien	wazehrahe\.pk
 1612258481	tripleee	topcbdonline\.com
 1612259418	cigien	napa[\W_]*+farms[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
+1612262905	tripleee	millionairesgroup\.in
