@@ -26901,3 +26901,4 @@
 1612253378	cigien	msviswanathviolin\.com
 1612254217	Cody Gray	kota\W*tiger(?:@gmail\.com)?
 1612254420	cigien	fundwave\.com
+1612254832	cigien	(?-i:iWRITE)
