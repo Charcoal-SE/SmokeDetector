@@ -26916,3 +26916,4 @@
 1612285333	Makyen	crack[\W_]*+cool(?!(?!\.com)(?<=crackcool(?!\.com)))
 1612296412	cigien	mylocationrightnow\.com
 1612297299	cigien	nexxadigital\.com
+1612298375	cigien	nimbleappgenie\.com
