@@ -26883,3 +26883,4 @@
 1612222105	cigien	cleofxhub\.com
 1612223409	cigien	(?-i:UC4pmdUJsLy5OT50GIrlXxsw)(?#youtube channel)
 1612226100	cigien	bdtechnosolution\.com
+1612232450	cigien	awsbytes\.com
