@@ -26905,3 +26905,4 @@
 1612254959	tripleee	digital[\W_]*+edze(?!\.com)
 1612254982	tripleee	digitaledze\.com
 1612255766	cigien	pipe-iran\.ir
+1612256927	cigien	joxys\.com
