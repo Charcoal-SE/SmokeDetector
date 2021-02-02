@@ -26913,3 +26913,4 @@
 1612278671	Jeff Schaller	altadefiniziones\.net
 1612281031	cigien	bitcoin-bude\.de
 1612281684	cigien	networthflow\.com
+1612285333	Makyen	crack[\W_]*+cool(?!(?!\.com)(?<=crackcool(?!\.com)))
