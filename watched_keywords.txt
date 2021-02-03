@@ -26946,3 +26946,4 @@
 1612357435	tripleee	globaldocuments\d+(?:[\W_]*+(?:at[\W_]*+)?gmail[\W_]*+(?:dot[\W_]*+)?com)?
 1612359056	Spevacus	trialsolution\.co
 1612359427	Spevacus	dreamsoftinfotech\.com
+1612359734	Spevacus	computerspacebd\.com
