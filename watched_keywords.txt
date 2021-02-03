@@ -26930,3 +26930,4 @@
 1612331543	cigien	howwiki\.org
 1612332460	cigien	caritashospital\.org
 1612332641	tripleee	caritas[\W_]*+hospital(?!\.org)
+1612336384	tripleee	digitallabz\.ca
