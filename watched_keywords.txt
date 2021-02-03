@@ -26934,3 +26934,4 @@
 1612341518	cigien	(?-i:xdTjSPW7uU4)(?#youtu.be)
 1612341629	Makyen	crack[\W_]*+cool(?!\.com(?<=crackcool\.com))
 1612342541	cigien	hashalot\.io
+1612342719	cigien	nimble[\W_]*+app[\W_]*+genie(?!\.com(?<=nimbleappgenie\.com))
