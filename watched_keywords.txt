@@ -26929,3 +26929,4 @@
 1612330792	cigien	indiadataentryhelp\.com
 1612331543	cigien	howwiki\.org
 1612332460	cigien	caritashospital\.org
+1612332641	tripleee	caritas[\W_]*+hospital(?!\.org)
