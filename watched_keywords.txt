@@ -26940,3 +26940,4 @@
 1612349794	tripleee	thehealthconnection\.blog
 1612350140	tripleee	spydetectiveagency\.com
 1612350804	tripleee	itcources\.com
+1612357115	tripleee	destiny\.photocollagemaker
