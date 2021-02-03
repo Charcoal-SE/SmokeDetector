@@ -25372,7 +25372,6 @@
 1607434885	Spevacus	ucc\.com
 1607435392	Spevacus	thepublicmantra\.com
 1607436498	Jeff Schaller	giga-bits\.com
-1607439106	Spevacus	ftp-mac\.com
 1607440891	Zoe	h[0oøuüôöõ][l1][t7]\W*j[4aåà]cks[0oøuüôöõ]n
 1607441280	Zoe	sh[0oøuüôöõ]g{2,}9
 1607443656	Zoe	y(?:[0oøuüôöõ]{2}|[3eé]+)\W*kn[0oøuüôöõ]w\W*wh[0oøuüôöõ]'?\W*i?s?\W*(?:\_?/\W*|w)+r[1i]t[1i]ng?\W*it
