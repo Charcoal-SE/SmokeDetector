@@ -26951,3 +26951,4 @@
 1612364516	cigien	dealdrop\.com
 1612366050	cigien	spy[\W_]*+detective[\W_]*+agency(?!\.com(?<=spydetectiveagency\.com))
 1612366348	cigien	(?:info@)?originalandlegallyregistereddrivinglicense\.com
+1612369788	cigien	hrsoftbd(?!\.com)
