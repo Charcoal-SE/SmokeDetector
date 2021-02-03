@@ -26936,3 +26936,4 @@
 1612342719	cigien	nimble[\W_]*+app[\W_]*+genie(?!\.com(?<=nimbleappgenie\.com))
 1612344997	cigien	helen_michell1961(?:@hotmail\.com)?
 1612347618	tripleee	hrsoftbd\.com
+1612349712	tripleee	schluesseldienst24-regensburg\.de
