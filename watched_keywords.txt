@@ -26932,3 +26932,4 @@
 1612336384	tripleee	digitallabz\.ca
 1612341025	cigien	digitallabz(?!\.ca)
 1612341434	cigien	bryan[\W_]*+candy
+1612341518	cigien	(?-i:xdTjSPW7uU4)(?#youtu.be)
