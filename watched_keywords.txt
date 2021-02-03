@@ -26949,3 +26949,4 @@
 1612362928	cigien	bargainlow\.com
 1612362991	cigien	studentsfactory\.co
 1612364516	cigien	dealdrop\.com
+1612366050	cigien	spy[\W_]*+detective[\W_]*+agency(?!\.com(?<=spydetectiveagency\.com))
