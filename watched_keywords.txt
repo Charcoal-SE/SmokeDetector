@@ -26962,3 +26962,4 @@
 1612423319	tripleee	godsofseo\.com
 1612426598	Cody Gray	0ZeroAuthority(?#twitter)
 1612426686	Cody Gray	sireisokunth(?:@gmail\.com)?
+1612428687	cigien	jewelry(?:own|at|as)?diy(?:f|ad|a)?\.com
