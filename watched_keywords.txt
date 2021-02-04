@@ -26956,3 +26956,4 @@
 1612414120	cigien	joinfreehold\.com
 1612417712	cigien	organic[\W_]*+line[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:uk|united|kingdom|\d++|[\da-f]{5,}+)s?)*
 1612418661	cigien	airlinesdatechange\.com
+1612422561	cigien	aglowiditsolutions\.com
