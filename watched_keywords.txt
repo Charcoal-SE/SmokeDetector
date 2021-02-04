@@ -26964,5 +26964,4 @@
 1612428687	cigien	jewelry(?:own|at|as)?diy(?:f|ad|a)?\.com
 1612428707	cigien	jewelrycyber\.com
 1612429975	cigien	dataempires\.com
-1612430027	cigien	dataempires(?!\.com)
 1612430135	Ryan M	[asdfghjkl;' ]{10}(?! {10})[asdfghjkl;' ]{40,}(?<! {10})(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
