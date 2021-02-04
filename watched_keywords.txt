@@ -26967,3 +26967,4 @@
 1612430135	Ryan M	[asdfghjkl;' ]{10}(?! {10})[asdfghjkl;' ]{40,}(?<! {10})(?!(?:[^<]|<(?!\/?code>))*+<\/code>)
 1612430726	tripleee	data[\W_]*+empires(?!\.com)
 1612431273	cigien	natures?[\W_]*+method[\W_]*+cbd(?:[\W_]*+(?:uk|oil|australia|\d++|[\da-f]{5,}+)s?)*
+1612431707	cigien	oracledumpsfree\.com
