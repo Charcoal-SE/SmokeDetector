@@ -26975,3 +26975,4 @@
 1612454219	cigien	symbioenergy\.co\.uk
 1612455677	cigien	elabhouse\.com
 1612455700	cigien	elabhouse(?!\.com)
+1612458972	Mast	ispirer[\W_]*+mnmtk
