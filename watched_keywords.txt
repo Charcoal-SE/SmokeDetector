@@ -25353,7 +25353,6 @@
 1607364792	Machavity	mindgems\.com
 1607366294	Spevacus	horoscopelovemoney\.com
 1607370719	Spevacus	niknesh\.ir
-1607392458	Ryan M	(?-i:^Mel$)
 1607392479	Ryan M	howtofixit\.net
 1607400778	Spevacus	deltacoupon\.com
 1607404139	Cody Gray	projectarticle\.com
