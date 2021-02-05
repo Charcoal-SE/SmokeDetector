@@ -27007,3 +27007,4 @@
 1612532285	Machavity	transparencymarketresearch\.com
 1612533733	Xnero	gasgrills\.bravesites\.com
 1612534508	Yatin	instacash\.com
+1612538340	Yatin	Psychic[\W_]+ttega
