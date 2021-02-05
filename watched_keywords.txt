@@ -26977,3 +26977,4 @@
 1612458972	Mast	ispirer[\W_]*+mnmtk
 1612462335	cigien	sewmisfits\.com
 1612473572	Ollie	sattamaster\.in
+1612488823	cigien	runners\.equoplatform\.com
