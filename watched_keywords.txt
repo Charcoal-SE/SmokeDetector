@@ -26997,3 +26997,4 @@
 1612514434	Makyen	inrsymbol\.in
 1612514458	Makyen	flarespeech\.com
 1612514475	Glorfindel	newssack\.com
+1612516463	cigien	folmag\.com
