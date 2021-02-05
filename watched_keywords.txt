@@ -26999,3 +26999,4 @@
 1612514475	Glorfindel	newssack\.com
 1612516463	cigien	folmag\.com
 1612518131	tripleee	amiytech\.com
+1612520976	cigien	phil[\W_]*+mickelson[\W_]*+cbd[\W_]*+oil(?:[\W_]*+(?:buy|order|\d++|[\da-f]{5,}+)s?)*
